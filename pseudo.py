@@ -13,6 +13,54 @@ WHITELIST_STARTS = [
     if line.strip()
 ]
 
+BAD_METHOD_STARTS = {
+    "sub_",
+    "_",
+    ".",
+    "il2",
+    "DataIO",
+    "nullsub_",
+    "Newtonsoft",
+    "MS",
+    "Unity",
+    "System",
+    "<>",
+    "Firebase",
+    "PlayMaker",
+    "HutongGames",
+    "CriStructMemory",
+    "CriMana",
+    "FingerEventDetector",
+    "GestureRecognizerTS",
+    "PlatformSupport",
+    "JsonManager",
+    "Org.BouncyCastle",
+    "LitJson",
+    "TweenFOV",
+    "XWeaponTrail",
+    "Xft",
+    "WellFired",
+    "UniWebView",
+    "ContinuousGestureRecognizer",
+    "CriAtom",
+    "SimpleAnimation",
+    "Mono",
+    "Microsoft",
+    "DiscreteGestureRecognizer",
+    "FingerGestures",
+    "TBQuickSetup",
+    "CStateManager",
+    "GameObjectExtensions",
+    "BetterList",
+    "NGUITools",
+    "UITweener",
+    "CFSM",
+}
+
+BAD_METHOD_STARTS.update(
+    x for x in proj_home.joinpath("01_class_names.txt").read_text().splitlines() if x
+)
+
 
 def bad_method(method: str) -> bool:
     for x in WHITELIST_STARTS:
@@ -23,7 +71,10 @@ def bad_method(method: str) -> bool:
             or method.startswith(x + "<")
         ):
             return False
-    return True
+    for x in BAD_METHOD_STARTS:
+        if method.startswith(x):
+            return True
+    return False
 
 
 def get_time() -> str:
@@ -45,6 +96,7 @@ def generate_pseudocode(save_folder: Path):
 
     for index, func_ea in enumerate(functions):
         flags = idc.get_func_flags(func_ea)
+
         if flags & idc.FUNC_LIB or flags & idc.FUNC_THUNK:
             continue  # Skip library functions and thunks
         func_name = idaapi.get_func_name(func_ea)
@@ -53,8 +105,12 @@ def generate_pseudocode(save_folder: Path):
         print(
             f"[{index+1}/{length}] Decompiling function at 0x{func_ea:X} ({func_name})"
         )
-        cfunc = idaapi.decompile(func_ea)
-        lines = cfunc.get_pseudocode()
+        try:
+            cfunc = idaapi.decompile(func_ea)
+            lines = cfunc.get_pseudocode()
+        except Exception as e:
+            print(f"failed decompiling: {e}")
+            continue
         lines = [idaapi.tag_remove(line.line) for line in lines]
         cls_name = get_top_class(func_name)
         all_codes.setdefault(cls_name, {})[func_name] = "\n".join(lines)

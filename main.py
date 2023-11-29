@@ -2,6 +2,7 @@ import argparse
 import json
 import re
 import subprocess
+import time
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -14,9 +15,13 @@ def dum_json(obj, fp):
     return data
 
 
+def load_json(fp):
+    return json.loads(Path(fp).read_text())
+
+
 def download_apk():
     apk_folder: Path = Path(__file__).resolve().parent / "apk"
-    resp = httpx.get("https://fgo.bigcereal.com/apk/current_ver.json")
+    resp = httpx.get(f"https://fgo.bigcereal.com/apk/current_ver.json?v={int(time.time())}")
     ver: str = resp.json()["JP"]
     apk_fn = f"com.aniplex.fategrandorder.v{ver}.apk"
     apk_fp = apk_folder / ver / apk_fn
@@ -78,14 +83,14 @@ def get_class_names(dump_folder: Path, output_fp: Path):
     script_fp = dump_folder / "script.json"
     script_data = json.loads(script_fp.read_text(encoding="gbk"))
     dum_json(script_data, script_fp.parent / "script2.json")
-    all_cls_names: set[str] = set()
+    all_cls_names: list[str] = []
     sep = re.compile(r"[<\.\$]")
     for item in script_data["ScriptMethod"]:
         method: str = item["Name"]
         cls_name = sep.split(method)[0]
-        if cls_name:
-            all_cls_names.add(cls_name)
-    output_fp.write_text("\n".join(sorted(all_cls_names)), "utf8")
+        if cls_name and cls_name not in all_cls_names:
+            all_cls_names.append(cls_name)
+    output_fp.write_text("\n".join(all_cls_names), "utf8")
     return all_cls_names
 
 
@@ -97,7 +102,11 @@ def main(il2cppdumper: str):
     extract_apk(apk_fp, apk_folder)
     dump_cs(apk_folder, il2cppdumper, dump_folder)
     get_class_names(dump_folder, pwd / "01_class_names.txt")
-
+    stringliterals:dict = load_json(dump_folder/'stringliteral.json')
+    stringliterals2 = {}
+    for index, item in enumerate(stringliterals):
+        stringliterals2[f'StringLiteral_{index+1}']=item['value']
+    dum_json(stringliterals2, pwd/'04_stringliteral.json')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download apk and run il2cppdump")
