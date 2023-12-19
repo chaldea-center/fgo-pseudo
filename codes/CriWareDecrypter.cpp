@@ -28,7 +28,12 @@ int32_t __fastcall CriWareDecrypter__CRIWARE3D9A5BE6(
     v11[4] = 0x200000000LL;
     v12 = 24;
     v13 = 0;
-    qword_40F0330 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD))sub_B17480(v11);
+    qword_40F0330 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD))sub_B17480(
+                                                                              v11,
+                                                                              enable_mana_decryption,
+                                                                              func,
+                                                                              obj,
+                                                                              method);
   }
   v9 = sub_B17478(func, enable_mana_decryption, func, *(_QWORD *)&obj, method);
   return qword_40F0330(enable_atom_decryption, enable_mana_decryption, v9, v5);

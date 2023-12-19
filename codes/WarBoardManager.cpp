@@ -35770,11 +35770,12 @@ void __fastcall __noreturn WarBoardManager__GetCommandCodeAssetNames_d__232__Sys
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__GetCommandCodeAssetNames_d__232_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__GetCommandCodeAssetNames_d__232_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -36180,11 +36181,12 @@ void __fastcall __noreturn WarBoardManager__InitPartyMenu_d__432__System_Collect
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__InitPartyMenu_d__432_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__InitPartyMenu_d__432_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -36857,11 +36859,12 @@ void __fastcall __noreturn WarBoardManager__InitializeOnPartOfPopupControl_d__49
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__InitializeOnPartOfPopupControl_d__492_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__InitializeOnPartOfPopupControl_d__492_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -37375,11 +37378,12 @@ void __fastcall __noreturn WarBoardManager__NonBlockTaskExecute_d__522__System_C
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__NonBlockTaskExecute_d__522_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__NonBlockTaskExecute_d__522_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -37542,11 +37546,12 @@ void __fastcall __noreturn WarBoardManager__ReloadBuffIconAtlas_d__493__System_C
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__ReloadBuffIconAtlas_d__493_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__ReloadBuffIconAtlas_d__493_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -37713,11 +37718,12 @@ void __fastcall __noreturn WarBoardManager__ReplaceEffectSimplePopup_d__491__Sys
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__ReplaceEffectSimplePopup_d__491_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__ReplaceEffectSimplePopup_d__491_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -37884,11 +37890,12 @@ void __fastcall __noreturn WarBoardManager__ReplaceItemSimplePopup_d__489__Syste
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__ReplaceItemSimplePopup_d__489_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__ReplaceItemSimplePopup_d__489_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -38055,11 +38062,12 @@ void __fastcall __noreturn WarBoardManager__ReplaceServantSimplePopup_d__488__Sy
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__ReplaceServantSimplePopup_d__488_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__ReplaceServantSimplePopup_d__488_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -38226,11 +38234,12 @@ void __fastcall __noreturn WarBoardManager__ReplaceWallSimplePopup_d__490__Syste
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__ReplaceWallSimplePopup_d__490_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__ReplaceWallSimplePopup_d__490_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -38860,11 +38869,12 @@ void __fastcall __noreturn WarBoardManager__TaskExecute_d__521__System_Collectio
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__TaskExecute_d__521_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__TaskExecute_d__521_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -51655,11 +51665,12 @@ void __fastcall __noreturn WarBoardManager__coInitialize_d__73__System_Collectio
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__coInitialize_d__73_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__coInitialize_d__73_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -51776,11 +51787,12 @@ void __fastcall __noreturn WarBoardManager__coResume_d__75__System_Collections_I
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_WarBoardManager__coResume_d__75_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_WarBoardManager__coResume_d__75_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 

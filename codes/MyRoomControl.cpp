@@ -10523,11 +10523,12 @@ void __fastcall __noreturn MyRoomControl__CaptureServant_d__350__System_Collecti
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_MyRoomControl__CaptureServant_d__350_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_MyRoomControl__CaptureServant_d__350_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -10653,11 +10654,14 @@ void __fastcall __noreturn MyRoomControl__CoWaitForConstructingRecordWithServant
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_MyRoomControl__CoWaitForConstructingRecordWithServant_d__253_System_Collections_IEnumerator_Reset__);
+  sub_B17000(
+    &Method_MyRoomControl__CoWaitForConstructingRecordWithServant_d__253_System_Collections_IEnumerator_Reset__,
+    v8);
   sub_B170A0();
 }
 
@@ -10789,11 +10793,12 @@ void __fastcall __noreturn MyRoomControl__InitMaterialOnBackground_d__247__Syste
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_MyRoomControl__InitMaterialOnBackground_d__247_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_MyRoomControl__InitMaterialOnBackground_d__247_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -10955,11 +10960,12 @@ void __fastcall __noreturn MyRoomControl__InitServantMenu_d__250__System_Collect
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_MyRoomControl__InitServantMenu_d__250_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_MyRoomControl__InitServantMenu_d__250_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -11638,11 +11644,12 @@ void __fastcall __noreturn MyRoomControl__LoadMultipleServant_d__330__System_Col
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_MyRoomControl__LoadMultipleServant_d__330_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_MyRoomControl__LoadMultipleServant_d__330_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -12075,11 +12082,12 @@ void __fastcall __noreturn MyRoomControl__LoadPhotoCampaignServant_d__348__Syste
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_MyRoomControl__LoadPhotoCampaignServant_d__348_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_MyRoomControl__LoadPhotoCampaignServant_d__348_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -12285,11 +12293,12 @@ void __fastcall __noreturn MyRoomControl__StartCameraEffect_d__352__System_Colle
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_MyRoomControl__StartCameraEffect_d__352_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_MyRoomControl__StartCameraEffect_d__352_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -13667,11 +13676,12 @@ void __fastcall __noreturn MyRoomControl__initMaterial_d__248__System_Collection
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_MyRoomControl__initMaterial_d__248_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_MyRoomControl__initMaterial_d__248_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -14462,11 +14472,12 @@ void __fastcall __noreturn MyRoomControl__svtVoicePlayAct_d__293__System_Collect
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_MyRoomControl__svtVoicePlayAct_d__293_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_MyRoomControl__svtVoicePlayAct_d__293_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 

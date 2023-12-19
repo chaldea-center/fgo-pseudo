@@ -3668,11 +3668,12 @@ void __fastcall __noreturn BasicHelper__DelayCall_d__35__System_Collections_IEnu
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_BasicHelper__DelayCall_d__35_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_BasicHelper__DelayCall_d__35_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -3796,11 +3797,14 @@ void __fastcall __noreturn BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgu
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument__System_Collections_IEnumerator_Reset__);
+  sub_B17000(
+    &Method_BasicHelper__DelayCall_d__36_ShowAllEx_DamageFuncArgument__System_Collections_IEnumerator_Reset__,
+    v8);
   sub_B170A0();
 }
 
@@ -3906,11 +3910,12 @@ void __fastcall __noreturn BasicHelper__DelayCall_d__36_object___System_Collecti
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_BasicHelper__DelayCall_d__36_object__System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_BasicHelper__DelayCall_d__36_object__System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -4019,11 +4024,12 @@ void __fastcall __noreturn BasicHelper__RealDelayCall_d__37__System_Collections_
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_BasicHelper__RealDelayCall_d__37_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_BasicHelper__RealDelayCall_d__37_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -4134,11 +4140,12 @@ void __fastcall __noreturn BasicHelper__RealDelayCall_d__38_object___System_Coll
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_BasicHelper__RealDelayCall_d__38_object__System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_BasicHelper__RealDelayCall_d__38_object__System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -4291,11 +4298,12 @@ void __fastcall __noreturn BasicHelper__ToIterator_d__31_float___System_Collecti
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_BasicHelper__ToIterator_d__31_float__System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_BasicHelper__ToIterator_d__31_float__System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -4465,11 +4473,12 @@ void __fastcall __noreturn BasicHelper__ToIterator_d__31_object___System_Collect
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_BasicHelper__ToIterator_d__31_object__System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_BasicHelper__ToIterator_d__31_object__System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -4571,11 +4580,12 @@ void __fastcall __noreturn BasicHelper__WaitForEndOfFrameCall_d__43__System_Coll
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_BasicHelper__WaitForEndOfFrameCall_d__43_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_BasicHelper__WaitForEndOfFrameCall_d__43_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 

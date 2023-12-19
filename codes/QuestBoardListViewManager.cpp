@@ -7103,11 +7103,12 @@ void __fastcall __noreturn QuestBoardListViewManager__CoroutineLoadAsset_d__135_
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_QuestBoardListViewManager__CoroutineLoadAsset_d__135_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_QuestBoardListViewManager__CoroutineLoadAsset_d__135_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -7198,11 +7199,12 @@ void __fastcall __noreturn QuestBoardListViewManager__WaitFinish_d__95__System_C
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_QuestBoardListViewManager__WaitFinish_d__95_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_QuestBoardListViewManager__WaitFinish_d__95_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 

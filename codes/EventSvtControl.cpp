@@ -1659,9 +1659,11 @@ void __fastcall EventSvtControl__playPurchaseVoice(
   __int64 v56; // x3
   __int64 v57; // x4
   System_Exception_o *v58; // x19
-  System_String_o *v59; // x0
-  System_Collections_Generic_List_Enumerator_T__o v60; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v61; // [xsp+20h] [xbp-60h] BYREF
+  __int64 v59; // x1
+  System_String_o *v60; // x0
+  __int64 v61; // x1
+  System_Collections_Generic_List_Enumerator_T__o v62; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v63; // [xsp+20h] [xbp-60h] BYREF
 
   if ( (byte_40F9BA4 & 1) == 0 )
   {
@@ -1680,7 +1682,7 @@ void __fastcall EventSvtControl__playPurchaseVoice(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
     byte_40F9BA4 = 1;
   }
-  memset(&v61, 0, sizeof(v61));
+  memset(&v63, 0, sizeof(v63));
   if ( this->fields.player )
     EventSvtControl__stopVoice(this, *(const MethodInfo **)&svtId);
   voiceListShop = this->fields.voiceListShop;
@@ -1688,11 +1690,11 @@ void __fastcall EventSvtControl__playPurchaseVoice(
   {
     if ( voiceListShop->fields._size <= 0 )
     {
-      v53 = sub_B17000(&System_Exception_TypeInfo);
+      v53 = sub_B17000(&System_Exception_TypeInfo, *(_QWORD *)&svtId);
       v58 = (System_Exception_o *)sub_B170CC(v53, v54, v55, v56, v57);
-      v59 = (System_String_o *)sub_B17000(&StringLiteral_23715);
-      System_Exception___ctor_15880420(v58, v59, 0LL);
-      sub_B17000(&Method_EventSvtControl_playPurchaseVoice__);
+      v60 = (System_String_o *)sub_B17000(&StringLiteral_23715, v59);
+      System_Exception___ctor_15880420(v58, v60, 0LL);
+      sub_B17000(&Method_EventSvtControl_playPurchaseVoice__, v61);
       sub_B170A0();
     }
     this->fields.callbackStopVoice = callback;
@@ -1724,26 +1726,26 @@ void __fastcall EventSvtControl__playPurchaseVoice(
       goto LABEL_33;
     v31 = (VoicePlayCondMaster_o *)MasterData_WarQuestSelectionMaster;
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-      &v60,
+      &v62,
       (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this->fields.voiceListShop,
       (const MethodInfo_2F26B54 *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
-    v61 = v60;
+    v63 = v62;
     while ( 1 )
     {
       v32 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-              &v61,
+              &v63,
               (const MethodInfo_2074054 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
       if ( !v32 )
         break;
-      current = v61.fields.current;
-      if ( !v61.fields.current )
+      current = v63.fields.current;
+      if ( !v63.fields.current )
         sub_B170D4();
-      if ( !LODWORD(v61.fields.current[1].monitor) )
+      if ( !LODWORD(v63.fields.current[1].monitor) )
       {
         sub_B17100(v32, v33, v34);
         sub_B170A0();
       }
-      klass = v61.fields.current[2].klass;
+      klass = v63.fields.current[2].klass;
       if ( !klass )
         sub_B170D4();
       if ( !v31 )
@@ -1763,7 +1765,7 @@ void __fastcall EventSvtControl__playPurchaseVoice(
       }
     }
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-      &v61,
+      &v63,
       (const MethodInfo_2074050 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
     v41 = (System_Random_o *)sub_B170CC(System_Random_TypeInfo, v37, v38, v39, v40);
     System_Random___ctor(v41, 0LL);

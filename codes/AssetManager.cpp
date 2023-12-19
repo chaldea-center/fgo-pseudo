@@ -2992,38 +2992,41 @@ void __fastcall AssetManager__LateUpdate(AssetManager_o *this, const MethodInfo 
   struct System_Collections_Generic_Dictionary_string__AssetData__o *v27; // x0
   float v28; // s0
   System_String_o *Path; // x20
+  __int64 v30; // x1
   int64_t FreeSize; // x20
-  ManagerConfig_c *v31; // x0
-  AssetManager_c *v32; // x0
+  ManagerConfig_c *v32; // x0
   AssetManager_c *v33; // x0
   AssetManager_c *v34; // x0
+  AssetManager_c *v35; // x0
   System_String_o *createCacheListFileName; // x20
   System_Text_Encoding_o *UTF8; // x22
-  __int64 v37; // x1
-  __int64 v38; // x2
-  __int64 v39; // x3
-  __int64 v40; // x4
-  System_IO_StreamWriter_o *v41; // x21
-  AssetManager_c *v42; // x0
+  __int64 v38; // x1
+  __int64 v39; // x2
+  __int64 v40; // x3
+  __int64 v41; // x4
+  System_IO_StreamWriter_o *v42; // x21
   AssetManager_c *v43; // x0
   AssetManager_c *v44; // x0
   AssetManager_c *v45; // x0
-  System_Int32_array **v46; // x1
-  System_String_array **v47; // x2
-  System_String_array **v48; // x3
-  System_Boolean_array **v49; // x4
-  System_Int32_array **v50; // x5
-  System_Int32_array *v51; // x6
-  System_Int32_array *v52; // x7
-  __int64 v53; // x0
-  __int64 v54; // x1
-  __int64 v55; // x2
-  __int64 v56; // x3
-  __int64 v57; // x4
-  System_IO_IOException_o *v58; // x20
-  System_String_o *v59; // x0
-  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v60; // [xsp+18h] [xbp-68h] BYREF
-  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v61; // [xsp+30h] [xbp-50h] BYREF
+  AssetManager_c *v46; // x0
+  System_Int32_array **v47; // x1
+  System_String_array **v48; // x2
+  System_String_array **v49; // x3
+  System_Boolean_array **v50; // x4
+  System_Int32_array **v51; // x5
+  System_Int32_array *v52; // x6
+  System_Int32_array *v53; // x7
+  __int64 v54; // x0
+  __int64 v55; // x1
+  __int64 v56; // x2
+  __int64 v57; // x3
+  __int64 v58; // x4
+  System_IO_IOException_o *v59; // x20
+  __int64 v60; // x1
+  System_String_o *v61; // x0
+  __int64 v62; // x1
+  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v63; // [xsp+18h] [xbp-68h] BYREF
+  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v64; // [xsp+30h] [xbp-50h] BYREF
 
   if ( (byte_40FCA5A & 1) == 0 )
   {
@@ -3055,7 +3058,7 @@ void __fastcall AssetManager__LateUpdate(AssetManager_o *this, const MethodInfo 
     sub_B16FFC(&StringLiteral_1, v21);
     byte_40FCA5A = 1;
   }
-  memset(&v61, 0, sizeof(v61));
+  memset(&v64, 0, sizeof(v64));
   assetResourceDic = this->fields.assetResourceDic;
   if ( !assetResourceDic )
     goto LABEL_58;
@@ -3065,22 +3068,22 @@ void __fastcall AssetManager__LateUpdate(AssetManager_o *this, const MethodInfo 
   if ( !Values )
     goto LABEL_58;
   System_Collections_Generic_Dictionary_ValueCollection_XmlQualifiedName__SchemaEntity___GetEnumerator(
-    &v60,
+    &v63,
     Values,
     (const MethodInfo_22866D8 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   v24 = 0;
-  v61 = v60;
+  v64 = v63;
   while ( System_Collections_Generic_Dictionary_ValueCollection_Enumerator_XmlQualifiedName__SchemaEntity___MoveNext(
-            &v61,
+            &v64,
             (const MethodInfo_26BE610 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__) )
   {
-    if ( !v61.fields.currentValue )
+    if ( !v64.fields.currentValue )
       sub_B170D4();
-    if ( !HIDWORD(v61.fields.currentValue[5].klass) && v61.fields.currentValue[4].monitor )
-      v24 |= AssetData__ReleaseData((AssetData_o *)v61.fields.currentValue, v25);
+    if ( !HIDWORD(v64.fields.currentValue[5].klass) && v64.fields.currentValue[4].monitor )
+      v24 |= AssetData__ReleaseData((AssetData_o *)v64.fields.currentValue, v25);
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_XmlQualifiedName__SchemaEntity___Dispose(
-    &v61,
+    &v64,
     (const MethodInfo_26BE60C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
   if ( (v24 & 1) != 0 )
     AssetManager__RequestUnloadUnusedAssets(this, 0LL, v26);
@@ -3106,101 +3109,101 @@ LABEL_58:
       FreeSize = CommonServicePluginScript__GetFreeSize(Path, 0LL);
       if ( FreeSize >= 1 )
       {
-        v31 = ManagerConfig_TypeInfo;
+        v32 = ManagerConfig_TypeInfo;
         if ( (BYTE3(ManagerConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !ManagerConfig_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-          v31 = ManagerConfig_TypeInfo;
+          v32 = ManagerConfig_TypeInfo;
         }
-        if ( FreeSize < v31->static_fields->LIMIT_FREE_SIZE )
+        if ( FreeSize < v32->static_fields->LIMIT_FREE_SIZE )
         {
-          v53 = sub_B17000(&System_IO_IOException_TypeInfo);
-          v58 = (System_IO_IOException_o *)sub_B170CC(v53, v54, v55, v56, v57);
-          v59 = (System_String_o *)sub_B17000(&StringLiteral_5301);
-          System_IO_IOException___ctor_38265584(v58, v59, 0LL);
-          sub_B17000(&Method_AssetManager_LateUpdate__);
+          v54 = sub_B17000(&System_IO_IOException_TypeInfo, v30);
+          v59 = (System_IO_IOException_o *)sub_B170CC(v54, v55, v56, v57, v58);
+          v61 = (System_String_o *)sub_B17000(&StringLiteral_5301, v60);
+          System_IO_IOException___ctor_38265584(v59, v61, 0LL);
+          sub_B17000(&Method_AssetManager_LateUpdate__, v62);
           sub_B170A0();
         }
       }
-      v32 = AssetManager_TypeInfo;
+      v33 = AssetManager_TypeInfo;
       if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AssetManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-        v32 = AssetManager_TypeInfo;
-      }
-      if ( System_IO_File__Exists(v32->static_fields->createCacheListFileName, 0LL) )
-      {
         v33 = AssetManager_TypeInfo;
+      }
+      if ( System_IO_File__Exists(v33->static_fields->createCacheListFileName, 0LL) )
+      {
+        v34 = AssetManager_TypeInfo;
         if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !AssetManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          v33 = AssetManager_TypeInfo;
+          v34 = AssetManager_TypeInfo;
         }
-        System_IO_File__Delete(v33->static_fields->createCacheListFileName, 0LL);
+        System_IO_File__Delete(v34->static_fields->createCacheListFileName, 0LL);
       }
-      v34 = AssetManager_TypeInfo;
+      v35 = AssetManager_TypeInfo;
       if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AssetManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-        v34 = AssetManager_TypeInfo;
+        v35 = AssetManager_TypeInfo;
       }
-      createCacheListFileName = v34->static_fields->createCacheListFileName;
+      createCacheListFileName = v35->static_fields->createCacheListFileName;
       UTF8 = System_Text_Encoding__get_UTF8(0LL);
-      v41 = (System_IO_StreamWriter_o *)sub_B170CC(System_IO_StreamWriter_TypeInfo, v37, v38, v39, v40);
-      System_IO_StreamWriter___ctor_43794204(v41, createCacheListFileName, 0, UTF8, 0LL);
-      if ( !v41 )
+      v42 = (System_IO_StreamWriter_o *)sub_B170CC(System_IO_StreamWriter_TypeInfo, v38, v39, v40, v41);
+      System_IO_StreamWriter___ctor_43794204(v42, createCacheListFileName, 0, UTF8, 0LL);
+      if ( !v42 )
         sub_B170D4();
-      ((void (__fastcall *)(System_IO_StreamWriter_o *, _QWORD, Il2CppMethodPointer))v41->klass->vtable._16_Write.method)(
-        v41,
+      ((void (__fastcall *)(System_IO_StreamWriter_o *, _QWORD, Il2CppMethodPointer))v42->klass->vtable._16_Write.method)(
+        v42,
         *(_QWORD *)&this->fields.requestWriteCounter,
-        v41->klass->vtable._17_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_StreamWriter_o *, Il2CppMethodPointer))v41->klass->vtable._8_Close.method)(
-        v41,
-        v41->klass->vtable._9_Dispose.methodPtr);
+        v42->klass->vtable._17_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_StreamWriter_o *, Il2CppMethodPointer))v42->klass->vtable._8_Close.method)(
+        v42,
+        v42->klass->vtable._9_Dispose.methodPtr);
       if ( System_IO_File__Exists(AssetManager_TypeInfo->static_fields->backCacheListFileName, 0LL) )
       {
-        v42 = AssetManager_TypeInfo;
-        if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-          && !AssetManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          v42 = AssetManager_TypeInfo;
-        }
-        System_IO_File__Delete(v42->static_fields->backCacheListFileName, 0LL);
-      }
-      v43 = AssetManager_TypeInfo;
-      if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !AssetManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
         v43 = AssetManager_TypeInfo;
-      }
-      if ( System_IO_File__Exists(v43->static_fields->cacheListFileName, 0LL) )
-      {
-        v44 = AssetManager_TypeInfo;
         if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !AssetManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          v44 = AssetManager_TypeInfo;
+          v43 = AssetManager_TypeInfo;
         }
-        System_IO_File__Move(v44->static_fields->cacheListFileName, v44->static_fields->backCacheListFileName, 0LL);
+        System_IO_File__Delete(v43->static_fields->backCacheListFileName, 0LL);
       }
-      v45 = AssetManager_TypeInfo;
+      v44 = AssetManager_TypeInfo;
       if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AssetManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-        v45 = AssetManager_TypeInfo;
+        v44 = AssetManager_TypeInfo;
       }
-      System_IO_File__Move(v45->static_fields->createCacheListFileName, v45->static_fields->cacheListFileName, 0LL);
-      v46 = (System_Int32_array **)StringLiteral_1;
+      if ( System_IO_File__Exists(v44->static_fields->cacheListFileName, 0LL) )
+      {
+        v45 = AssetManager_TypeInfo;
+        if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+          && !AssetManager_TypeInfo->_2.cctor_finished )
+        {
+          j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+          v45 = AssetManager_TypeInfo;
+        }
+        System_IO_File__Move(v45->static_fields->cacheListFileName, v45->static_fields->backCacheListFileName, 0LL);
+      }
+      v46 = AssetManager_TypeInfo;
+      if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+        && !AssetManager_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+        v46 = AssetManager_TypeInfo;
+      }
+      System_IO_File__Move(v46->static_fields->createCacheListFileName, v46->static_fields->cacheListFileName, 0LL);
+      v47 = (System_Int32_array **)StringLiteral_1;
       *(_QWORD *)&this->fields.requestWriteCounter = StringLiteral_1;
-      sub_B16F98((BattleServantConfConponent_o *)&this->fields.requestWriteCounter, v46, v47, v48, v49, v50, v51, v52);
+      sub_B16F98((BattleServantConfConponent_o *)&this->fields.requestWriteCounter, v47, v48, v49, v50, v51, v52, v53);
       LODWORD(this->fields.processingAssetLoaderList) = -1082130432;
     }
   }
@@ -7358,11 +7361,12 @@ void __fastcall __noreturn AssetManager__DelayLoadStart_d__148__System_Collectio
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_AssetManager__DelayLoadStart_d__148_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_AssetManager__DelayLoadStart_d__148_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -7737,11 +7741,14 @@ void __fastcall __noreturn AssetManager__DownloadAssetStorageAttributeWithCheckD
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__117_System_Collections_IEnumerator_Reset__);
+  sub_B17000(
+    &Method_AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__117_System_Collections_IEnumerator_Reset__,
+    v8);
   sub_B170A0();
 }
 
@@ -9493,11 +9500,12 @@ void __fastcall __noreturn AssetManager__InitCR_d__130__System_Collections_IEnum
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_AssetManager__InitCR_d__130_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_AssetManager__InitCR_d__130_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -9623,11 +9631,12 @@ void __fastcall __noreturn AssetManager__WaitForExecutionUnloadUnuseAssets_d__41
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_AssetManager__WaitForExecutionUnloadUnuseAssets_d__41_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_AssetManager__WaitForExecutionUnloadUnuseAssets_d__41_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 
@@ -9943,11 +9952,12 @@ void __fastcall __noreturn AssetManager__coUnloadUnusedAssets_d__137__System_Col
   __int64 v5; // x3
   __int64 v6; // x4
   System_NotSupportedException_o *v7; // x0
+  __int64 v8; // x1
 
-  v2 = sub_B17000(&System_NotSupportedException_TypeInfo);
+  v2 = sub_B17000(&System_NotSupportedException_TypeInfo, method);
   v7 = (System_NotSupportedException_o *)sub_B170CC(v2, v3, v4, v5, v6);
   System_NotSupportedException___ctor(v7, 0LL);
-  sub_B17000(&Method_AssetManager__coUnloadUnusedAssets_d__137_System_Collections_IEnumerator_Reset__);
+  sub_B17000(&Method_AssetManager__coUnloadUnusedAssets_d__137_System_Collections_IEnumerator_Reset__, v8);
   sub_B170A0();
 }
 

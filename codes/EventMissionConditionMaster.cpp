@@ -799,54 +799,55 @@ void __fastcall EventMissionConditionMaster__OnListChangedImplementation(
   __int64 v17; // x3
   __int64 v18; // x4
   System_NotImplementedException_o *v19; // x0
-  __int64 v20; // x21
-  __int64 v21; // x8
-  unsigned __int64 v22; // x10
-  int *v23; // x11
-  __int64 v24; // x0
-  __int64 v25; // x8
-  unsigned __int64 v26; // x10
-  System_Collections_IEnumerator_c **v27; // x11
-  __int64 v28; // x0
+  __int64 v20; // x1
+  __int64 v21; // x21
+  __int64 v22; // x8
+  unsigned __int64 v23; // x10
+  int *v24; // x11
+  __int64 v25; // x0
+  __int64 v26; // x8
+  unsigned __int64 v27; // x10
+  System_Collections_IEnumerator_c **v28; // x11
   __int64 v29; // x0
-  EventMissionConditionEntity_o *v30; // x22
-  __int64 v31; // x8
-  __int64 v32; // x10
-  const MethodInfo *v33; // x2
-  __int64 v34; // x0
-  __int64 v35; // x8
-  __int64 v36; // x21
-  unsigned __int64 v37; // x10
-  int *v38; // x11
-  __int64 v39; // x0
+  __int64 v30; // x0
+  EventMissionConditionEntity_o *v31; // x22
+  __int64 v32; // x8
+  __int64 v33; // x10
+  const MethodInfo *v34; // x2
+  __int64 v35; // x0
+  __int64 v36; // x8
+  __int64 v37; // x21
+  unsigned __int64 v38; // x10
+  int *v39; // x11
+  __int64 v40; // x0
   struct System_Collections_IList_o *newItems; // x20
-  System_Collections_IList_c *v41; // x8
-  unsigned __int64 v42; // x10
-  int32_t *v43; // x11
-  __int64 v44; // x0
-  __int64 v45; // x20
-  __int64 v46; // x8
-  unsigned __int64 v47; // x10
-  int *v48; // x11
-  __int64 v49; // x0
-  __int64 v50; // x8
-  unsigned __int64 v51; // x10
-  System_Collections_IEnumerator_c **v52; // x11
-  __int64 v53; // x0
+  System_Collections_IList_c *v42; // x8
+  unsigned __int64 v43; // x10
+  int32_t *v44; // x11
+  __int64 v45; // x0
+  __int64 v46; // x20
+  __int64 v47; // x8
+  unsigned __int64 v48; // x10
+  int *v49; // x11
+  __int64 v50; // x0
+  __int64 v51; // x8
+  unsigned __int64 v52; // x10
+  System_Collections_IEnumerator_c **v53; // x11
   __int64 v54; // x0
-  EventMissionConditionEntity_o *v55; // x21
-  __int64 v56; // x8
-  __int64 v57; // x10
-  const MethodInfo *v58; // x2
-  int v59; // w23
-  __int64 v60; // x0
-  __int64 v61; // x8
-  __int64 v62; // x20
-  unsigned __int64 v63; // x10
-  int *v64; // x11
-  __int64 v65; // x0
-  int v66[2]; // [xsp+0h] [xbp-40h]
-  int v67; // [xsp+8h] [xbp-38h]
+  __int64 v55; // x0
+  EventMissionConditionEntity_o *v56; // x21
+  __int64 v57; // x8
+  __int64 v58; // x10
+  const MethodInfo *v59; // x2
+  int v60; // w23
+  __int64 v61; // x0
+  __int64 v62; // x8
+  __int64 v63; // x20
+  unsigned __int64 v64; // x10
+  int *v65; // x11
+  __int64 v66; // x0
+  int v67[2]; // [xsp+0h] [xbp-40h]
+  int v68; // [xsp+8h] [xbp-38h]
 
   if ( (byte_40F88C7 & 1) == 0 )
   {
@@ -856,7 +857,7 @@ void __fastcall EventMissionConditionMaster__OnListChangedImplementation(
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v7);
     byte_40F88C7 = 1;
   }
-  v67 = 0;
+  v68 = 0;
   if ( !e )
     sub_B170D4();
   action = e->fields._action;
@@ -866,10 +867,10 @@ void __fastcall EventMissionConditionMaster__OnListChangedImplementation(
       return;
     if ( action != 4 )
     {
-      v14 = sub_B17000(&System_NotImplementedException_TypeInfo);
+      v14 = sub_B17000(&System_NotImplementedException_TypeInfo, e);
       v19 = (System_NotImplementedException_o *)sub_B170CC(v14, v15, v16, v17, v18);
       System_NotImplementedException___ctor(v19, 0LL);
-      sub_B17000(&Method_EventMissionConditionMaster_OnListChangedImplementation__);
+      sub_B17000(&Method_EventMissionConditionMaster_OnListChangedImplementation__, v20);
       sub_B170A0();
     }
     goto LABEL_81;
@@ -896,207 +897,207 @@ void __fastcall EventMissionConditionMaster__OnListChangedImplementation(
 LABEL_10:
       p_method = sub_AAFEF8(e->fields._oldItems, System_Collections_IEnumerable_TypeInfo, 0LL);
     }
-    v20 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))p_method)(
+    v21 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))p_method)(
             oldItems,
             *(_QWORD *)(p_method + 8));
-    if ( !v20 )
+    if ( !v21 )
       sub_B170D4();
     while ( 1 )
     {
-      v21 = *(_QWORD *)v20;
-      if ( *(_WORD *)(*(_QWORD *)v20 + 298LL) )
+      v22 = *(_QWORD *)v21;
+      if ( *(_WORD *)(*(_QWORD *)v21 + 298LL) )
       {
-        v22 = 0LL;
-        v23 = (int *)(*(_QWORD *)(v21 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v23 - 1) != System_Collections_IEnumerator_TypeInfo )
+        v23 = 0LL;
+        v24 = (int *)(*(_QWORD *)(v22 + 176) + 8LL);
+        while ( *((System_Collections_IEnumerator_c **)v24 - 1) != System_Collections_IEnumerator_TypeInfo )
         {
-          ++v22;
-          v23 += 4;
-          if ( v22 >= *(unsigned __int16 *)(*(_QWORD *)v20 + 298LL) )
+          ++v23;
+          v24 += 4;
+          if ( v23 >= *(unsigned __int16 *)(*(_QWORD *)v21 + 298LL) )
             goto LABEL_21;
         }
-        v24 = v21 + 16LL * *v23 + 312;
+        v25 = v22 + 16LL * *v24 + 312;
       }
       else
       {
 LABEL_21:
-        v24 = sub_AAFEF8(v20, System_Collections_IEnumerator_TypeInfo, 0LL);
+        v25 = sub_AAFEF8(v21, System_Collections_IEnumerator_TypeInfo, 0LL);
       }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v20, *(_QWORD *)(v24 + 8)) & 1) == 0 )
+      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v25)(v21, *(_QWORD *)(v25 + 8)) & 1) == 0 )
         break;
-      v25 = *(_QWORD *)v20;
-      if ( *(_WORD *)(*(_QWORD *)v20 + 298LL) )
+      v26 = *(_QWORD *)v21;
+      if ( *(_WORD *)(*(_QWORD *)v21 + 298LL) )
       {
-        v26 = 0LL;
-        v27 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v25 + 176) + 8LL);
-        while ( *(v27 - 1) != System_Collections_IEnumerator_TypeInfo )
+        v27 = 0LL;
+        v28 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v26 + 176) + 8LL);
+        while ( *(v28 - 1) != System_Collections_IEnumerator_TypeInfo )
         {
-          ++v26;
-          v27 += 2;
-          if ( v26 >= *(unsigned __int16 *)(*(_QWORD *)v20 + 298LL) )
+          ++v27;
+          v28 += 2;
+          if ( v27 >= *(unsigned __int16 *)(*(_QWORD *)v21 + 298LL) )
             goto LABEL_28;
         }
-        v28 = v25 + 16LL * (*(_DWORD *)v27 + 1) + 312;
+        v29 = v26 + 16LL * (*(_DWORD *)v28 + 1) + 312;
       }
       else
       {
 LABEL_28:
-        v28 = sub_AAFEF8(v20, System_Collections_IEnumerator_TypeInfo, 1LL);
+        v29 = sub_AAFEF8(v21, System_Collections_IEnumerator_TypeInfo, 1LL);
       }
-      v29 = (*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v20, *(_QWORD *)(v28 + 8));
-      v30 = (EventMissionConditionEntity_o *)v29;
-      if ( v29 )
+      v30 = (*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v21, *(_QWORD *)(v29 + 8));
+      v31 = (EventMissionConditionEntity_o *)v30;
+      if ( v30 )
       {
-        v31 = *(_QWORD *)v29;
-        v32 = *(&EventMissionConditionEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(unsigned __int8 *)(*(_QWORD *)v29 + 300LL) >= (unsigned int)v32
-          && *(EventMissionConditionEntity_c **)(*(_QWORD *)(v31 + 200) + 8 * v32 - 8) == EventMissionConditionEntity_TypeInfo )
+        v32 = *(_QWORD *)v30;
+        v33 = *(&EventMissionConditionEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(unsigned __int8 *)(*(_QWORD *)v30 + 300LL) >= (unsigned int)v33
+          && *(EventMissionConditionEntity_c **)(*(_QWORD *)(v32 + 200) + 8 * v33 - 8) == EventMissionConditionEntity_TypeInfo )
         {
-          if ( (*(__int64 (__fastcall **)(__int64, _QWORD))(v31 + 376))(v29, *(_QWORD *)(v31 + 384)) )
-            EventMissionConditionMaster__RemoveMissionIdToEventMissionConditionEntityListDictionary(this, v30, v33);
+          if ( (*(__int64 (__fastcall **)(__int64, _QWORD))(v32 + 376))(v30, *(_QWORD *)(v32 + 384)) )
+            EventMissionConditionMaster__RemoveMissionIdToEventMissionConditionEntityListDictionary(this, v31, v34);
         }
       }
     }
-    v66[0] = 117;
-    v67 = 1;
-    v34 = sub_B170BC(v20, System_IDisposable_TypeInfo);
-    if ( v34 )
+    v67[0] = 117;
+    v68 = 1;
+    v35 = sub_B170BC(v21, System_IDisposable_TypeInfo);
+    if ( v35 )
     {
-      v35 = *(_QWORD *)v34;
-      v36 = v34;
-      if ( *(_WORD *)(*(_QWORD *)v34 + 298LL) )
+      v36 = *(_QWORD *)v35;
+      v37 = v35;
+      if ( *(_WORD *)(*(_QWORD *)v35 + 298LL) )
       {
-        v37 = 0LL;
-        v38 = (int *)(*(_QWORD *)(v35 + 176) + 8LL);
-        while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
+        v38 = 0LL;
+        v39 = (int *)(*(_QWORD *)(v36 + 176) + 8LL);
+        while ( *((System_IDisposable_c **)v39 - 1) != System_IDisposable_TypeInfo )
         {
-          ++v37;
-          v38 += 4;
-          if ( v37 >= *(unsigned __int16 *)(*(_QWORD *)v34 + 298LL) )
+          ++v38;
+          v39 += 4;
+          if ( v38 >= *(unsigned __int16 *)(*(_QWORD *)v35 + 298LL) )
             goto LABEL_40;
         }
-        v39 = v35 + 16LL * *v38 + 312;
+        v40 = v36 + 16LL * *v39 + 312;
       }
       else
       {
 LABEL_40:
-        v39 = sub_AAFEF8(v34, System_IDisposable_TypeInfo, 0LL);
+        v40 = sub_AAFEF8(v35, System_IDisposable_TypeInfo, 0LL);
       }
-      (*(void (__fastcall **)(__int64, _QWORD))v39)(v36, *(_QWORD *)(v39 + 8));
+      (*(void (__fastcall **)(__int64, _QWORD))v40)(v37, *(_QWORD *)(v40 + 8));
     }
-    v67 = 0;
+    v68 = 0;
   }
   newItems = e->fields._newItems;
   if ( newItems )
   {
-    v41 = newItems->klass;
+    v42 = newItems->klass;
     if ( *(_WORD *)&newItems->klass->_2.bitflags1 )
     {
-      v42 = 0LL;
-      v43 = &v41->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_IEnumerable_c **)v43 - 1) != System_Collections_IEnumerable_TypeInfo )
+      v43 = 0LL;
+      v44 = &v42->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_IEnumerable_c **)v44 - 1) != System_Collections_IEnumerable_TypeInfo )
       {
-        ++v42;
-        v43 += 4;
-        if ( v42 >= *(unsigned __int16 *)&newItems->klass->_2.bitflags1 )
+        ++v43;
+        v44 += 4;
+        if ( v43 >= *(unsigned __int16 *)&newItems->klass->_2.bitflags1 )
           goto LABEL_49;
       }
-      v44 = (__int64)&v41->vtable[*v43].method;
+      v45 = (__int64)&v42->vtable[*v44].method;
     }
     else
     {
 LABEL_49:
-      v44 = sub_AAFEF8(newItems, System_Collections_IEnumerable_TypeInfo, 0LL);
+      v45 = sub_AAFEF8(newItems, System_Collections_IEnumerable_TypeInfo, 0LL);
     }
-    v45 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))v44)(newItems, *(_QWORD *)(v44 + 8));
-    if ( !v45 )
+    v46 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))v45)(newItems, *(_QWORD *)(v45 + 8));
+    if ( !v46 )
       sub_B170D4();
     while ( 1 )
     {
-      v46 = *(_QWORD *)v45;
-      if ( *(_WORD *)(*(_QWORD *)v45 + 298LL) )
+      v47 = *(_QWORD *)v46;
+      if ( *(_WORD *)(*(_QWORD *)v46 + 298LL) )
       {
-        v47 = 0LL;
-        v48 = (int *)(*(_QWORD *)(v46 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v48 - 1) != System_Collections_IEnumerator_TypeInfo )
+        v48 = 0LL;
+        v49 = (int *)(*(_QWORD *)(v47 + 176) + 8LL);
+        while ( *((System_Collections_IEnumerator_c **)v49 - 1) != System_Collections_IEnumerator_TypeInfo )
         {
-          ++v47;
-          v48 += 4;
-          if ( v47 >= *(unsigned __int16 *)(*(_QWORD *)v45 + 298LL) )
+          ++v48;
+          v49 += 4;
+          if ( v48 >= *(unsigned __int16 *)(*(_QWORD *)v46 + 298LL) )
             goto LABEL_56;
         }
-        v49 = v46 + 16LL * *v48 + 312;
+        v50 = v47 + 16LL * *v49 + 312;
       }
       else
       {
 LABEL_56:
-        v49 = sub_AAFEF8(v45, System_Collections_IEnumerator_TypeInfo, 0LL);
+        v50 = sub_AAFEF8(v46, System_Collections_IEnumerator_TypeInfo, 0LL);
       }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v49)(v45, *(_QWORD *)(v49 + 8)) & 1) == 0 )
+      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v50)(v46, *(_QWORD *)(v50 + 8)) & 1) == 0 )
         break;
-      v50 = *(_QWORD *)v45;
-      if ( *(_WORD *)(*(_QWORD *)v45 + 298LL) )
+      v51 = *(_QWORD *)v46;
+      if ( *(_WORD *)(*(_QWORD *)v46 + 298LL) )
       {
-        v51 = 0LL;
-        v52 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v50 + 176) + 8LL);
-        while ( *(v52 - 1) != System_Collections_IEnumerator_TypeInfo )
+        v52 = 0LL;
+        v53 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v51 + 176) + 8LL);
+        while ( *(v53 - 1) != System_Collections_IEnumerator_TypeInfo )
         {
-          ++v51;
-          v52 += 2;
-          if ( v51 >= *(unsigned __int16 *)(*(_QWORD *)v45 + 298LL) )
+          ++v52;
+          v53 += 2;
+          if ( v52 >= *(unsigned __int16 *)(*(_QWORD *)v46 + 298LL) )
             goto LABEL_63;
         }
-        v53 = v50 + 16LL * (*(_DWORD *)v52 + 1) + 312;
+        v54 = v51 + 16LL * (*(_DWORD *)v53 + 1) + 312;
       }
       else
       {
 LABEL_63:
-        v53 = sub_AAFEF8(v45, System_Collections_IEnumerator_TypeInfo, 1LL);
+        v54 = sub_AAFEF8(v46, System_Collections_IEnumerator_TypeInfo, 1LL);
       }
-      v54 = (*(__int64 (__fastcall **)(__int64, _QWORD))v53)(v45, *(_QWORD *)(v53 + 8));
-      v55 = (EventMissionConditionEntity_o *)v54;
-      if ( v54 )
+      v55 = (*(__int64 (__fastcall **)(__int64, _QWORD))v54)(v46, *(_QWORD *)(v54 + 8));
+      v56 = (EventMissionConditionEntity_o *)v55;
+      if ( v55 )
       {
-        v56 = *(_QWORD *)v54;
-        v57 = *(&EventMissionConditionEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(unsigned __int8 *)(*(_QWORD *)v54 + 300LL) >= (unsigned int)v57
-          && *(EventMissionConditionEntity_c **)(*(_QWORD *)(v56 + 200) + 8 * v57 - 8) == EventMissionConditionEntity_TypeInfo
-          && (*(__int64 (__fastcall **)(__int64, _QWORD))(v56 + 376))(v54, *(_QWORD *)(v56 + 384)) )
+        v57 = *(_QWORD *)v55;
+        v58 = *(&EventMissionConditionEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(unsigned __int8 *)(*(_QWORD *)v55 + 300LL) >= (unsigned int)v58
+          && *(EventMissionConditionEntity_c **)(*(_QWORD *)(v57 + 200) + 8 * v58 - 8) == EventMissionConditionEntity_TypeInfo
+          && (*(__int64 (__fastcall **)(__int64, _QWORD))(v57 + 376))(v55, *(_QWORD *)(v57 + 384)) )
         {
-          EventMissionConditionMaster__AddMissionIdToEventMissionConditionEntityListDictionary(this, v55, v58);
+          EventMissionConditionMaster__AddMissionIdToEventMissionConditionEntityListDictionary(this, v56, v59);
         }
       }
     }
-    v66[0] = 213;
-    v59 = ++v67;
-    v60 = sub_B170BC(v45, System_IDisposable_TypeInfo);
-    if ( v60 )
+    v67[0] = 213;
+    v60 = ++v68;
+    v61 = sub_B170BC(v46, System_IDisposable_TypeInfo);
+    if ( v61 )
     {
-      v61 = *(_QWORD *)v60;
-      v62 = v60;
-      if ( *(_WORD *)(*(_QWORD *)v60 + 298LL) )
+      v62 = *(_QWORD *)v61;
+      v63 = v61;
+      if ( *(_WORD *)(*(_QWORD *)v61 + 298LL) )
       {
-        v63 = 0LL;
-        v64 = (int *)(*(_QWORD *)(v61 + 176) + 8LL);
-        while ( *((System_IDisposable_c **)v64 - 1) != System_IDisposable_TypeInfo )
+        v64 = 0LL;
+        v65 = (int *)(*(_QWORD *)(v62 + 176) + 8LL);
+        while ( *((System_IDisposable_c **)v65 - 1) != System_IDisposable_TypeInfo )
         {
-          ++v63;
-          v64 += 4;
-          if ( v63 >= *(unsigned __int16 *)(*(_QWORD *)v60 + 298LL) )
+          ++v64;
+          v65 += 4;
+          if ( v64 >= *(unsigned __int16 *)(*(_QWORD *)v61 + 298LL) )
             goto LABEL_75;
         }
-        v65 = v61 + 16LL * *v64 + 312;
+        v66 = v62 + 16LL * *v65 + 312;
       }
       else
       {
 LABEL_75:
-        v65 = sub_AAFEF8(v60, System_IDisposable_TypeInfo, 0LL);
+        v66 = sub_AAFEF8(v61, System_IDisposable_TypeInfo, 0LL);
       }
-      (*(void (__fastcall **)(__int64, _QWORD))v65)(v62, *(_QWORD *)(v65 + 8));
+      (*(void (__fastcall **)(__int64, _QWORD))v66)(v63, *(_QWORD *)(v66 + 8));
     }
-    if ( v59 && v66[v59 - 1] == 213 )
+    if ( v60 && v67[v60 - 1] == 213 )
     {
-      v67 = v59 - 1;
+      v68 = v60 - 1;
       return;
     }
 LABEL_81:

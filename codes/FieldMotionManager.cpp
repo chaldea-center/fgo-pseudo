@@ -807,14 +807,17 @@ void __fastcall FieldMotionManager__PlayBattleAction(
   struct BattleFieldMotionComponent_array *v18; // x8
   BattleFieldMotionComponent_o *v19; // x0
   System_String_o *v20; // x19
-  System_String_o *v21; // x0
-  System_String_o *v22; // x19
-  __int64 v23; // x0
+  __int64 v21; // x1
+  System_String_o *v22; // x0
+  System_String_o *v23; // x19
   __int64 v24; // x1
-  __int64 v25; // x2
-  __int64 v26; // x3
-  __int64 v27; // x4
-  UnityEngine_UnityException_o *v28; // x0
+  __int64 v25; // x0
+  __int64 v26; // x1
+  __int64 v27; // x2
+  __int64 v28; // x3
+  __int64 v29; // x4
+  UnityEngine_UnityException_o *v30; // x0
+  __int64 v31; // x1
   BattleActionData_o *badata; // [xsp+8h] [xbp-58h]
 
   if ( (byte_40F8E69 & 1) == 0 )
@@ -833,13 +836,13 @@ void __fastcall FieldMotionManager__PlayBattleAction(
   if ( (int)(max_length - 1) < 0 )
   {
 LABEL_23:
-    v20 = (System_String_o *)sub_B17000(&StringLiteral_242);
-    v21 = (System_String_o *)sub_B17000(&StringLiteral_219);
-    v22 = System_String__Concat_43746016(v20, v10, v21, 0LL);
-    v23 = sub_B17000(&UnityEngine_UnityException_TypeInfo);
-    v28 = (UnityEngine_UnityException_o *)sub_B170CC(v23, v24, v25, v26, v27);
-    UnityEngine_UnityException___ctor_49532044(v28, v22, 0LL);
-    sub_B17000(&Method_FieldMotionManager_PlayBattleAction__);
+    v20 = (System_String_o *)sub_B17000(&StringLiteral_242, v6);
+    v22 = (System_String_o *)sub_B17000(&StringLiteral_219, v21);
+    v23 = System_String__Concat_43746016(v20, v10, v22, 0LL);
+    v25 = sub_B17000(&UnityEngine_UnityException_TypeInfo, v24);
+    v30 = (UnityEngine_UnityException_o *)sub_B170CC(v25, v26, v27, v28, v29);
+    UnityEngine_UnityException___ctor_49532044(v30, v23, 0LL);
+    sub_B17000(&Method_FieldMotionManager_PlayBattleAction__, v31);
     sub_B170A0();
   }
   v12 = max_length - 2;

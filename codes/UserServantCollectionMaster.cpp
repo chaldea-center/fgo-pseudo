@@ -476,15 +476,16 @@ void __fastcall UserServantCollectionMaster__OnListChangedImplementation(
   __int64 v7; // x3
   __int64 v8; // x4
   System_NotImplementedException_o *v9; // x0
+  __int64 v10; // x1
 
   if ( !e )
     goto LABEL_5;
   if ( e->fields._action > 4u )
   {
-    v4 = sub_B17000(&System_NotImplementedException_TypeInfo);
+    v4 = sub_B17000(&System_NotImplementedException_TypeInfo, e);
     v9 = (System_NotImplementedException_o *)sub_B170CC(v4, v5, v6, v7, v8);
     System_NotImplementedException___ctor(v9, 0LL);
-    sub_B17000(&Method_UserServantCollectionMaster_OnListChangedImplementation__);
+    sub_B17000(&Method_UserServantCollectionMaster_OnListChangedImplementation__, v10);
     sub_B170A0();
   }
   cachedUserServantCollectionEntityData = this->fields.cachedUserServantCollectionEntityData;

@@ -460,56 +460,57 @@ void __fastcall DataMasterBase__OnListChanged(
   __int64 v20; // x3
   __int64 v21; // x4
   System_NotImplementedException_o *v22; // x0
-  __int64 v23; // x21
-  __int64 v24; // x8
-  unsigned __int64 v25; // x10
-  int *v26; // x11
-  __int64 v27; // x0
-  __int64 v28; // x8
-  unsigned __int64 v29; // x10
-  System_Collections_IEnumerator_c **v30; // x11
-  __int64 v31; // x0
+  __int64 v23; // x1
+  __int64 v24; // x21
+  __int64 v25; // x8
+  unsigned __int64 v26; // x10
+  int *v27; // x11
+  __int64 v28; // x0
+  __int64 v29; // x8
+  unsigned __int64 v30; // x10
+  System_Collections_IEnumerator_c **v31; // x11
   __int64 v32; // x0
-  __int64 v33; // x22
-  __int64 v34; // x8
-  __int64 v35; // x10
+  __int64 v33; // x0
+  __int64 v34; // x22
+  __int64 v35; // x8
+  __int64 v36; // x10
   struct System_Collections_Generic_Dictionary_string__DataEntityBase__o *lookup; // x23
-  System_Xml_XmlQualifiedName_o *v37; // x1
-  __int64 v38; // x0
-  __int64 v39; // x8
-  __int64 v40; // x21
-  unsigned __int64 v41; // x10
-  int *v42; // x11
-  __int64 v43; // x0
+  System_Xml_XmlQualifiedName_o *v38; // x1
+  __int64 v39; // x0
+  __int64 v40; // x8
+  __int64 v41; // x21
+  unsigned __int64 v42; // x10
+  int *v43; // x11
+  __int64 v44; // x0
   struct System_Collections_IList_o *newItems; // x21
-  System_Collections_IList_c *v45; // x8
-  unsigned __int64 v46; // x10
-  int32_t *v47; // x11
-  __int64 v48; // x0
-  __int64 v49; // x21
-  __int64 v50; // x8
-  unsigned __int64 v51; // x10
-  int *v52; // x11
-  __int64 v53; // x0
-  __int64 v54; // x8
-  unsigned __int64 v55; // x10
-  System_Collections_IEnumerator_c **v56; // x11
-  __int64 v57; // x0
+  System_Collections_IList_c *v46; // x8
+  unsigned __int64 v47; // x10
+  int32_t *v48; // x11
+  __int64 v49; // x0
+  __int64 v50; // x21
+  __int64 v51; // x8
+  unsigned __int64 v52; // x10
+  int *v53; // x11
+  __int64 v54; // x0
+  __int64 v55; // x8
+  unsigned __int64 v56; // x10
+  System_Collections_IEnumerator_c **v57; // x11
   __int64 v58; // x0
-  System_Xml_Schema_XmlSchemaObject_o *v59; // x22
-  __int64 v60; // x8
-  __int64 v61; // x10
-  struct System_Collections_Generic_Dictionary_string__DataEntityBase__o *v62; // x23
-  System_Xml_XmlQualifiedName_o *v63; // x1
-  int v64; // w24
-  __int64 v65; // x0
-  __int64 v66; // x8
-  __int64 v67; // x21
-  unsigned __int64 v68; // x10
-  int *v69; // x11
-  __int64 v70; // x0
-  int v71[2]; // [xsp+0h] [xbp-60h]
-  int v72; // [xsp+8h] [xbp-58h]
+  __int64 v59; // x0
+  System_Xml_Schema_XmlSchemaObject_o *v60; // x22
+  __int64 v61; // x8
+  __int64 v62; // x10
+  struct System_Collections_Generic_Dictionary_string__DataEntityBase__o *v63; // x23
+  System_Xml_XmlQualifiedName_o *v64; // x1
+  int v65; // w24
+  __int64 v66; // x0
+  __int64 v67; // x8
+  __int64 v68; // x21
+  unsigned __int64 v69; // x10
+  int *v70; // x11
+  __int64 v71; // x0
+  int v72[2]; // [xsp+0h] [xbp-60h]
+  int v73; // [xsp+8h] [xbp-58h]
 
   if ( (byte_40FB446 & 1) == 0 )
   {
@@ -521,7 +522,7 @@ void __fastcall DataMasterBase__OnListChanged(
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v10);
     byte_40FB446 = 1;
   }
-  v72 = 0;
+  v73 = 0;
   if ( this->fields._lookup )
   {
     if ( !e )
@@ -533,10 +534,10 @@ void __fastcall DataMasterBase__OnListChanged(
       {
         if ( action != 4 )
         {
-          v17 = sub_B17000(&System_NotImplementedException_TypeInfo);
+          v17 = sub_B17000(&System_NotImplementedException_TypeInfo, sender);
           v22 = (System_NotImplementedException_o *)sub_B170CC(v17, v18, v19, v20, v21);
           System_NotImplementedException___ctor(v22, 0LL);
-          sub_B17000(&Method_DataMasterBase_OnListChanged__);
+          sub_B17000(&Method_DataMasterBase_OnListChanged__, v23);
           sub_B170A0();
         }
         goto LABEL_84;
@@ -566,228 +567,228 @@ void __fastcall DataMasterBase__OnListChanged(
 LABEL_11:
           p_method = sub_AAFEF8(e->fields._oldItems, System_Collections_IEnumerable_TypeInfo, 0LL);
         }
-        v23 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))p_method)(
+        v24 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))p_method)(
                 oldItems,
                 *(_QWORD *)(p_method + 8));
-        if ( !v23 )
+        if ( !v24 )
           sub_B170D4();
         while ( 1 )
         {
-          v24 = *(_QWORD *)v23;
-          if ( *(_WORD *)(*(_QWORD *)v23 + 298LL) )
+          v25 = *(_QWORD *)v24;
+          if ( *(_WORD *)(*(_QWORD *)v24 + 298LL) )
           {
-            v25 = 0LL;
-            v26 = (int *)(*(_QWORD *)(v24 + 176) + 8LL);
-            while ( *((System_Collections_IEnumerator_c **)v26 - 1) != System_Collections_IEnumerator_TypeInfo )
+            v26 = 0LL;
+            v27 = (int *)(*(_QWORD *)(v25 + 176) + 8LL);
+            while ( *((System_Collections_IEnumerator_c **)v27 - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              ++v25;
-              v26 += 4;
-              if ( v25 >= *(unsigned __int16 *)(*(_QWORD *)v23 + 298LL) )
+              ++v26;
+              v27 += 4;
+              if ( v26 >= *(unsigned __int16 *)(*(_QWORD *)v24 + 298LL) )
                 goto LABEL_22;
             }
-            v27 = v24 + 16LL * *v26 + 312;
+            v28 = v25 + 16LL * *v27 + 312;
           }
           else
           {
 LABEL_22:
-            v27 = sub_AAFEF8(v23, System_Collections_IEnumerator_TypeInfo, 0LL);
+            v28 = sub_AAFEF8(v24, System_Collections_IEnumerator_TypeInfo, 0LL);
           }
-          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v27)(v23, *(_QWORD *)(v27 + 8)) & 1) == 0 )
+          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v24, *(_QWORD *)(v28 + 8)) & 1) == 0 )
             break;
-          v28 = *(_QWORD *)v23;
-          if ( *(_WORD *)(*(_QWORD *)v23 + 298LL) )
+          v29 = *(_QWORD *)v24;
+          if ( *(_WORD *)(*(_QWORD *)v24 + 298LL) )
           {
-            v29 = 0LL;
-            v30 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v28 + 176) + 8LL);
-            while ( *(v30 - 1) != System_Collections_IEnumerator_TypeInfo )
+            v30 = 0LL;
+            v31 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v29 + 176) + 8LL);
+            while ( *(v31 - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              ++v29;
-              v30 += 2;
-              if ( v29 >= *(unsigned __int16 *)(*(_QWORD *)v23 + 298LL) )
+              ++v30;
+              v31 += 2;
+              if ( v30 >= *(unsigned __int16 *)(*(_QWORD *)v24 + 298LL) )
                 goto LABEL_29;
             }
-            v31 = v28 + 16LL * (*(_DWORD *)v30 + 1) + 312;
+            v32 = v29 + 16LL * (*(_DWORD *)v31 + 1) + 312;
           }
           else
           {
 LABEL_29:
-            v31 = sub_AAFEF8(v23, System_Collections_IEnumerator_TypeInfo, 1LL);
+            v32 = sub_AAFEF8(v24, System_Collections_IEnumerator_TypeInfo, 1LL);
           }
-          v32 = (*(__int64 (__fastcall **)(__int64, _QWORD))v31)(v23, *(_QWORD *)(v31 + 8));
-          v33 = v32;
-          if ( v32 )
+          v33 = (*(__int64 (__fastcall **)(__int64, _QWORD))v32)(v24, *(_QWORD *)(v32 + 8));
+          v34 = v33;
+          if ( v33 )
           {
-            v34 = *(_QWORD *)v32;
-            v35 = *(&DataEntityBase_TypeInfo->_2.bitflags2 + 1);
-            if ( *(unsigned __int8 *)(*(_QWORD *)v32 + 300LL) >= (unsigned int)v35
-              && *(DataEntityBase_c **)(*(_QWORD *)(v34 + 200) + 8 * v35 - 8) == DataEntityBase_TypeInfo
-              && (*(__int64 (__fastcall **)(__int64, _QWORD))(v34 + 376))(v32, *(_QWORD *)(v34 + 384)) )
+            v35 = *(_QWORD *)v33;
+            v36 = *(&DataEntityBase_TypeInfo->_2.bitflags2 + 1);
+            if ( *(unsigned __int8 *)(*(_QWORD *)v33 + 300LL) >= (unsigned int)v36
+              && *(DataEntityBase_c **)(*(_QWORD *)(v35 + 200) + 8 * v36 - 8) == DataEntityBase_TypeInfo
+              && (*(__int64 (__fastcall **)(__int64, _QWORD))(v35 + 376))(v33, *(_QWORD *)(v35 + 384)) )
             {
               lookup = this->fields._lookup;
-              v37 = (System_Xml_XmlQualifiedName_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v33 + 376LL))(
-                                                       v33,
-                                                       *(_QWORD *)(*(_QWORD *)v33 + 384LL));
+              v38 = (System_Xml_XmlQualifiedName_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v34 + 376LL))(
+                                                       v34,
+                                                       *(_QWORD *)(*(_QWORD *)v34 + 384LL));
               if ( !lookup )
                 sub_B170D4();
               System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Remove(
                 (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)lookup,
-                v37,
+                v38,
                 (const MethodInfo_2DA5684 *)Method_System_Collections_Generic_Dictionary_string__DataEntityBase__Remove__);
             }
           }
         }
-        v71[0] = 139;
-        v72 = 1;
-        v38 = sub_B170BC(v23, System_IDisposable_TypeInfo);
-        if ( v38 )
+        v72[0] = 139;
+        v73 = 1;
+        v39 = sub_B170BC(v24, System_IDisposable_TypeInfo);
+        if ( v39 )
         {
-          v39 = *(_QWORD *)v38;
-          v40 = v38;
-          if ( *(_WORD *)(*(_QWORD *)v38 + 298LL) )
+          v40 = *(_QWORD *)v39;
+          v41 = v39;
+          if ( *(_WORD *)(*(_QWORD *)v39 + 298LL) )
           {
-            v41 = 0LL;
-            v42 = (int *)(*(_QWORD *)(v39 + 176) + 8LL);
-            while ( *((System_IDisposable_c **)v42 - 1) != System_IDisposable_TypeInfo )
+            v42 = 0LL;
+            v43 = (int *)(*(_QWORD *)(v40 + 176) + 8LL);
+            while ( *((System_IDisposable_c **)v43 - 1) != System_IDisposable_TypeInfo )
             {
-              ++v41;
-              v42 += 4;
-              if ( v41 >= *(unsigned __int16 *)(*(_QWORD *)v38 + 298LL) )
+              ++v42;
+              v43 += 4;
+              if ( v42 >= *(unsigned __int16 *)(*(_QWORD *)v39 + 298LL) )
                 goto LABEL_42;
             }
-            v43 = v39 + 16LL * *v42 + 312;
+            v44 = v40 + 16LL * *v43 + 312;
           }
           else
           {
 LABEL_42:
-            v43 = sub_AAFEF8(v38, System_IDisposable_TypeInfo, 0LL);
+            v44 = sub_AAFEF8(v39, System_IDisposable_TypeInfo, 0LL);
           }
-          (*(void (__fastcall **)(__int64, _QWORD))v43)(v40, *(_QWORD *)(v43 + 8));
+          (*(void (__fastcall **)(__int64, _QWORD))v44)(v41, *(_QWORD *)(v44 + 8));
         }
-        v72 = 0;
+        v73 = 0;
       }
       newItems = e->fields._newItems;
       if ( newItems )
       {
-        v45 = newItems->klass;
+        v46 = newItems->klass;
         if ( *(_WORD *)&newItems->klass->_2.bitflags1 )
         {
-          v46 = 0LL;
-          v47 = &v45->_1.interfaceOffsets->offset;
-          while ( *((System_Collections_IEnumerable_c **)v47 - 1) != System_Collections_IEnumerable_TypeInfo )
+          v47 = 0LL;
+          v48 = &v46->_1.interfaceOffsets->offset;
+          while ( *((System_Collections_IEnumerable_c **)v48 - 1) != System_Collections_IEnumerable_TypeInfo )
           {
-            ++v46;
-            v47 += 4;
-            if ( v46 >= *(unsigned __int16 *)&newItems->klass->_2.bitflags1 )
+            ++v47;
+            v48 += 4;
+            if ( v47 >= *(unsigned __int16 *)&newItems->klass->_2.bitflags1 )
               goto LABEL_51;
           }
-          v48 = (__int64)&v45->vtable[*v47].method;
+          v49 = (__int64)&v46->vtable[*v48].method;
         }
         else
         {
 LABEL_51:
-          v48 = sub_AAFEF8(e->fields._newItems, System_Collections_IEnumerable_TypeInfo, 0LL);
+          v49 = sub_AAFEF8(e->fields._newItems, System_Collections_IEnumerable_TypeInfo, 0LL);
         }
-        v49 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))v48)(
+        v50 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))v49)(
                 newItems,
-                *(_QWORD *)(v48 + 8));
-        if ( !v49 )
+                *(_QWORD *)(v49 + 8));
+        if ( !v50 )
           sub_B170D4();
         while ( 1 )
         {
-          v50 = *(_QWORD *)v49;
-          if ( *(_WORD *)(*(_QWORD *)v49 + 298LL) )
+          v51 = *(_QWORD *)v50;
+          if ( *(_WORD *)(*(_QWORD *)v50 + 298LL) )
           {
-            v51 = 0LL;
-            v52 = (int *)(*(_QWORD *)(v50 + 176) + 8LL);
-            while ( *((System_Collections_IEnumerator_c **)v52 - 1) != System_Collections_IEnumerator_TypeInfo )
+            v52 = 0LL;
+            v53 = (int *)(*(_QWORD *)(v51 + 176) + 8LL);
+            while ( *((System_Collections_IEnumerator_c **)v53 - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              ++v51;
-              v52 += 4;
-              if ( v51 >= *(unsigned __int16 *)(*(_QWORD *)v49 + 298LL) )
+              ++v52;
+              v53 += 4;
+              if ( v52 >= *(unsigned __int16 *)(*(_QWORD *)v50 + 298LL) )
                 goto LABEL_58;
             }
-            v53 = v50 + 16LL * *v52 + 312;
+            v54 = v51 + 16LL * *v53 + 312;
           }
           else
           {
 LABEL_58:
-            v53 = sub_AAFEF8(v49, System_Collections_IEnumerator_TypeInfo, 0LL);
+            v54 = sub_AAFEF8(v50, System_Collections_IEnumerator_TypeInfo, 0LL);
           }
-          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v53)(v49, *(_QWORD *)(v53 + 8)) & 1) == 0 )
+          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v54)(v50, *(_QWORD *)(v54 + 8)) & 1) == 0 )
             break;
-          v54 = *(_QWORD *)v49;
-          if ( *(_WORD *)(*(_QWORD *)v49 + 298LL) )
+          v55 = *(_QWORD *)v50;
+          if ( *(_WORD *)(*(_QWORD *)v50 + 298LL) )
           {
-            v55 = 0LL;
-            v56 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v54 + 176) + 8LL);
-            while ( *(v56 - 1) != System_Collections_IEnumerator_TypeInfo )
+            v56 = 0LL;
+            v57 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v55 + 176) + 8LL);
+            while ( *(v57 - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              ++v55;
-              v56 += 2;
-              if ( v55 >= *(unsigned __int16 *)(*(_QWORD *)v49 + 298LL) )
+              ++v56;
+              v57 += 2;
+              if ( v56 >= *(unsigned __int16 *)(*(_QWORD *)v50 + 298LL) )
                 goto LABEL_65;
             }
-            v57 = v54 + 16LL * (*(_DWORD *)v56 + 1) + 312;
+            v58 = v55 + 16LL * (*(_DWORD *)v57 + 1) + 312;
           }
           else
           {
 LABEL_65:
-            v57 = sub_AAFEF8(v49, System_Collections_IEnumerator_TypeInfo, 1LL);
+            v58 = sub_AAFEF8(v50, System_Collections_IEnumerator_TypeInfo, 1LL);
           }
-          v58 = (*(__int64 (__fastcall **)(__int64, _QWORD))v57)(v49, *(_QWORD *)(v57 + 8));
-          v59 = (System_Xml_Schema_XmlSchemaObject_o *)v58;
-          if ( v58 )
+          v59 = (*(__int64 (__fastcall **)(__int64, _QWORD))v58)(v50, *(_QWORD *)(v58 + 8));
+          v60 = (System_Xml_Schema_XmlSchemaObject_o *)v59;
+          if ( v59 )
           {
-            v60 = *(_QWORD *)v58;
-            v61 = *(&DataEntityBase_TypeInfo->_2.bitflags2 + 1);
-            if ( *(unsigned __int8 *)(*(_QWORD *)v58 + 300LL) >= (unsigned int)v61
-              && *(DataEntityBase_c **)(*(_QWORD *)(v60 + 200) + 8 * v61 - 8) == DataEntityBase_TypeInfo
-              && (*(__int64 (__fastcall **)(__int64, _QWORD))(v60 + 376))(v58, *(_QWORD *)(v60 + 384)) )
+            v61 = *(_QWORD *)v59;
+            v62 = *(&DataEntityBase_TypeInfo->_2.bitflags2 + 1);
+            if ( *(unsigned __int8 *)(*(_QWORD *)v59 + 300LL) >= (unsigned int)v62
+              && *(DataEntityBase_c **)(*(_QWORD *)(v61 + 200) + 8 * v62 - 8) == DataEntityBase_TypeInfo
+              && (*(__int64 (__fastcall **)(__int64, _QWORD))(v61 + 376))(v59, *(_QWORD *)(v61 + 384)) )
             {
-              v62 = this->fields._lookup;
-              v63 = (System_Xml_XmlQualifiedName_o *)((__int64 (__fastcall *)(System_Xml_Schema_XmlSchemaObject_o *, Il2CppMethodPointer))v59->klass->vtable._4_OnAdd.method)(
-                                                       v59,
-                                                       v59->klass->vtable._5_OnRemove.methodPtr);
-              if ( !v62 )
+              v63 = this->fields._lookup;
+              v64 = (System_Xml_XmlQualifiedName_o *)((__int64 (__fastcall *)(System_Xml_Schema_XmlSchemaObject_o *, Il2CppMethodPointer))v60->klass->vtable._4_OnAdd.method)(
+                                                       v60,
+                                                       v60->klass->vtable._5_OnRemove.methodPtr);
+              if ( !v63 )
                 sub_B170D4();
               System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
-                (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v62,
-                v63,
-                v59,
+                (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v63,
+                v64,
+                v60,
                 (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__DataEntityBase__set_Item__);
             }
           }
         }
-        v71[0] = 248;
-        v64 = ++v72;
-        v65 = sub_B170BC(v49, System_IDisposable_TypeInfo);
-        if ( v65 )
+        v72[0] = 248;
+        v65 = ++v73;
+        v66 = sub_B170BC(v50, System_IDisposable_TypeInfo);
+        if ( v66 )
         {
-          v66 = *(_QWORD *)v65;
-          v67 = v65;
-          if ( *(_WORD *)(*(_QWORD *)v65 + 298LL) )
+          v67 = *(_QWORD *)v66;
+          v68 = v66;
+          if ( *(_WORD *)(*(_QWORD *)v66 + 298LL) )
           {
-            v68 = 0LL;
-            v69 = (int *)(*(_QWORD *)(v66 + 176) + 8LL);
-            while ( *((System_IDisposable_c **)v69 - 1) != System_IDisposable_TypeInfo )
+            v69 = 0LL;
+            v70 = (int *)(*(_QWORD *)(v67 + 176) + 8LL);
+            while ( *((System_IDisposable_c **)v70 - 1) != System_IDisposable_TypeInfo )
             {
-              ++v68;
-              v69 += 4;
-              if ( v68 >= *(unsigned __int16 *)(*(_QWORD *)v65 + 298LL) )
+              ++v69;
+              v70 += 4;
+              if ( v69 >= *(unsigned __int16 *)(*(_QWORD *)v66 + 298LL) )
                 goto LABEL_78;
             }
-            v70 = v66 + 16LL * *v69 + 312;
+            v71 = v67 + 16LL * *v70 + 312;
           }
           else
           {
 LABEL_78:
-            v70 = sub_AAFEF8(v65, System_IDisposable_TypeInfo, 0LL);
+            v71 = sub_AAFEF8(v66, System_IDisposable_TypeInfo, 0LL);
           }
-          (*(void (__fastcall **)(__int64, _QWORD))v70)(v67, *(_QWORD *)(v70 + 8));
+          (*(void (__fastcall **)(__int64, _QWORD))v71)(v68, *(_QWORD *)(v71 + 8));
         }
-        if ( v64 && v71[v64 - 1] == 248 )
+        if ( v65 && v72[v65 - 1] == 248 )
         {
-          v72 = v64 - 1;
+          v73 = v65 - 1;
           goto LABEL_85;
         }
 LABEL_84:
@@ -1722,18 +1723,21 @@ DataEntityBase_array *__fastcall DataMasterBase__directGetList(
   __int64 v15; // x3
   __int64 v16; // x4
   DataIO_Runtime_Deserializer_o *v17; // x21
-  DataEntityBase_array *v18; // x20
+  __int64 v18; // x1
+  DataEntityBase_array *v19; // x20
   System_IO_MemoryStream_c *klass; // x8
-  unsigned __int64 v20; // x10
+  unsigned __int64 v21; // x10
   int32_t *p_offset; // x11
-  __int64 v22; // x0
-  __int64 v24; // x0
-  __int64 v25; // x1
-  __int64 v26; // x2
-  __int64 v27; // x3
-  __int64 v28; // x4
-  System_FormatException_o *v29; // x20
-  System_String_o *v30; // x0
+  __int64 v23; // x0
+  __int64 v25; // x0
+  __int64 v26; // x1
+  __int64 v27; // x2
+  __int64 v28; // x3
+  __int64 v29; // x4
+  System_FormatException_o *v30; // x20
+  __int64 v31; // x1
+  System_String_o *v32; // x0
+  __int64 v33; // x1
 
   if ( (byte_40FB437 & 1) == 0 )
   {
@@ -1754,18 +1758,18 @@ DataEntityBase_array *__fastcall DataMasterBase__directGetList(
   DataIO_Runtime_Deserializer___ctor(v17, seriazlier, 0LL);
   if ( !v17 )
     sub_B170D4();
-  v18 = DataIO_Runtime_Deserializer__DispatchDeserialize(
+  v19 = DataIO_Runtime_Deserializer__DispatchDeserialize(
           v17,
           this->fields._MasterName_k__BackingField,
           (System_IO_Stream_o *)v11,
           0LL);
-  if ( !v18 )
+  if ( !v19 )
   {
-    v24 = sub_B17000(&System_FormatException_TypeInfo);
-    v29 = (System_FormatException_o *)sub_B170CC(v24, v25, v26, v27, v28);
-    v30 = (System_String_o *)sub_B17000(&StringLiteral_18933);
-    System_FormatException___ctor_42829508(v29, v30, 0LL);
-    sub_B17000(&Method_DataMasterBase_directGetList__);
+    v25 = sub_B17000(&System_FormatException_TypeInfo, v18);
+    v30 = (System_FormatException_o *)sub_B170CC(v25, v26, v27, v28, v29);
+    v32 = (System_String_o *)sub_B17000(&StringLiteral_18933, v31);
+    System_FormatException___ctor_42829508(v30, v32, 0LL);
+    sub_B17000(&Method_DataMasterBase_directGetList__, v33);
     sub_B170A0();
   }
   if ( v11 )
@@ -1773,25 +1777,25 @@ DataEntityBase_array *__fastcall DataMasterBase__directGetList(
     klass = v11->klass;
     if ( *(_WORD *)&v11->klass->_2.bitflags1 )
     {
-      v20 = 0LL;
+      v21 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        ++v20;
+        ++v21;
         p_offset += 4;
-        if ( v20 >= *(unsigned __int16 *)&v11->klass->_2.bitflags1 )
+        if ( v21 >= *(unsigned __int16 *)&v11->klass->_2.bitflags1 )
           goto LABEL_10;
       }
-      v22 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+      v23 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
     }
     else
     {
 LABEL_10:
-      v22 = sub_AAFEF8(v11, System_IDisposable_TypeInfo, 0LL);
+      v23 = sub_AAFEF8(v11, System_IDisposable_TypeInfo, 0LL);
     }
-    (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v22)(v11, *(_QWORD *)(v22 + 8));
+    (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v23)(v11, *(_QWORD *)(v23 + 8));
   }
-  return v18;
+  return v19;
 }
 
 
