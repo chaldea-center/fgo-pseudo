@@ -10,11 +10,11 @@ void __fastcall SoundPlayerListViewManager___ctor(SoundPlayerListViewManager_o *
 
   if ( (byte_40F9D31 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5832, method);
+    sub_B16FFC(&StringLiteral_5832/*"Effect/Soundplayer"*/, method);
     byte_40F9D31 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_5832;
-  this->fields.EFFECT_ASSET_PATH_NAME = (struct System_String_o *)StringLiteral_5832;
+  v9 = (System_Int32_array **)StringLiteral_5832/*"Effect/Soundplayer"*/;
+  this->fields.EFFECT_ASSET_PATH_NAME = (struct System_String_o *)StringLiteral_5832/*"Effect/Soundplayer"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.EFFECT_ASSET_PATH_NAME, v9, v2, v3, v4, v5, v6, v7);
   ListViewManager___ctor((ListViewManager_o *)this, 0LL);
 }
@@ -127,7 +127,7 @@ void __fastcall SoundPlayerListViewManager__CreateList(SoundPlayerListViewManage
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
     sub_B16FFC(&SoundPlayerListViewItem_TypeInfo, v17);
     sub_B16FFC(&Method_SoundPlayerListViewManager_CompareBgmEntity__, v18);
-    sub_B16FFC(&StringLiteral_18140, v19);
+    sub_B16FFC(&StringLiteral_18140/*"ef_soundplay"*/, v19);
     byte_40F9D27 = 1;
   }
   p_playEffect = &this->fields.playEffect;
@@ -144,7 +144,7 @@ void __fastcall SoundPlayerListViewManager__CreateList(SoundPlayerListViewManage
   }
   if ( UnityEngine_Object__op_Equality(playEffect, 0LL, 0LL) )
   {
-    EffetData = SoundPlayerListViewManager__getEffetData(this, (System_String_o *)StringLiteral_18140, v22);
+    EffetData = SoundPlayerListViewManager__getEffetData(this, (System_String_o *)StringLiteral_18140/*"ef_soundplay"*/, v22);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -413,7 +413,7 @@ void __fastcall SoundPlayerListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_SoundPlayerListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40F9D2E = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -428,7 +428,7 @@ void __fastcall SoundPlayerListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -498,7 +498,7 @@ void __fastcall SoundPlayerListViewManager__RequestListObject_24871488(
     sub_B16FFC(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_SoundPlayerListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_SoundPlayerListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40F9D2F = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -513,7 +513,7 @@ void __fastcall SoundPlayerListViewManager__RequestListObject_24871488(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

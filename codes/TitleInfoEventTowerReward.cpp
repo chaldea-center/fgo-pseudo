@@ -32,22 +32,22 @@ void __fastcall TitleInfoEventTowerReward___cctor(const MethodInfo *method)
   if ( (byte_40F8409 & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventTowerReward_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_22654, v8);
-    sub_B16FFC(&StringLiteral_16702, v9);
-    sub_B16FFC(&StringLiteral_2642, v10);
+    sub_B16FFC(&StringLiteral_22654/*"tower_{0}_{1}"*/, v8);
+    sub_B16FFC(&StringLiteral_16702/*"bit_floor_reward"*/, v9);
+    sub_B16FFC(&StringLiteral_2642/*"Back/back{0:D5}"*/, v10);
     byte_40F8409 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TitleInfoEventTowerReward_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_22654;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22654;
+  v12 = (System_Int32_array **)StringLiteral_22654/*"tower_{0}_{1}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22654/*"tower_{0}_{1}"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = TitleInfoEventTowerReward_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_2642;
-  v13->SPRITE_NAME_BG = (struct System_String_o *)StringLiteral_2642;
+  v14 = (System_Int32_array **)StringLiteral_2642/*"Back/back{0:D5}"*/;
+  v13->SPRITE_NAME_BG = (struct System_String_o *)StringLiteral_2642/*"Back/back{0:D5}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->SPRITE_NAME_BG, v14, v15, v16, v17, v18, v19, v20);
   v21 = TitleInfoEventTowerReward_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_16702;
-  v21->CLIP_NAME_TOWER_REWARD = (struct System_String_o *)StringLiteral_16702;
+  v22 = (System_Int32_array **)StringLiteral_16702/*"bit_floor_reward"*/;
+  v21->CLIP_NAME_TOWER_REWARD = (struct System_String_o *)StringLiteral_16702/*"bit_floor_reward"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->CLIP_NAME_TOWER_REWARD, v22, v23, v24, v25, v26, v27, v28);
 }
 
@@ -155,7 +155,7 @@ void __fastcall TitleInfoEventTowerReward__EndPlayVoice(TitleInfoEventTowerRewar
   if ( (byte_40F8403 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, method);
-    this = (TitleInfoEventTowerReward_o *)sub_B16FFC(&StringLiteral_10661, v4);
+    this = (TitleInfoEventTowerReward_o *)sub_B16FFC(&StringLiteral_10661/*"PlayVoice"*/, v4);
     byte_40F8403 = 1;
   }
   playCnt = v3->fields.playCnt;
@@ -181,7 +181,7 @@ LABEL_12:
       sub_B170D4();
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)v3,
-      (System_String_o *)StringLiteral_10661,
+      (System_String_o *)StringLiteral_10661/*"PlayVoice"*/,
       v9->fields.delay,
       0LL);
   }
@@ -706,11 +706,11 @@ void __fastcall TitleInfoEventTowerReward__Open(
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v24);
     sub_B16FFC(&Method_TitleInfoEventTowerReward_OnLoadEndBG__, v25);
     sub_B16FFC(&TitleInfoEventTowerReward_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_26, v27);
-    sub_B16FFC(&StringLiteral_5723, v28);
-    sub_B16FFC(&StringLiteral_10877, v29);
-    sub_B16FFC(&StringLiteral_15842, v30);
-    sub_B16FFC(&StringLiteral_5724, v31);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v27);
+    sub_B16FFC(&StringLiteral_5723/*"EVENT_TOWER_REWARD_GET"*/, v28);
+    sub_B16FFC(&StringLiteral_10877/*"QUEST_CLEAR_COSTUME_GET"*/, v29);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v30);
+    sub_B16FFC(&StringLiteral_5724/*"EVENT_TOWER_REWARD_GET_2"*/, v31);
     byte_40F83FE = 1;
   }
   nameText = 0LL;
@@ -896,7 +896,7 @@ LABEL_146:
   v78 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
   v79 = System_String__Concat_43823436(
           (Il2CppObject *)CLIP_NAME_TOWER_REWARD,
-          (Il2CppObject *)StringLiteral_15842,
+          (Il2CppObject *)StringLiteral_15842/*"_"*/,
           v78,
           0LL);
   simpleAnimation = (UnityEngine_Object_o *)this->fields.simpleAnimation;
@@ -1069,7 +1069,7 @@ LABEL_75:
       {
         if ( !v122 )
           goto LABEL_146;
-        appended = System_Text_StringBuilder__Append_41914240(v122, (System_String_o *)StringLiteral_26, 0LL);
+        appended = System_Text_StringBuilder__Append_41914240(v122, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
       }
       if ( (unsigned int)v126 >= v121->max_length )
         goto LABEL_147;
@@ -1089,7 +1089,7 @@ LABEL_75:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v130 = (System_String_o *)StringLiteral_10877;
+        v130 = (System_String_o *)StringLiteral_10877/*"QUEST_CLEAR_COSTUME_GET"*/;
       }
       else
       {
@@ -1100,7 +1100,7 @@ LABEL_75:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v132 = LocalizationManager__Get((System_String_o *)StringLiteral_5723, 0LL);
+          v132 = LocalizationManager__Get((System_String_o *)StringLiteral_5723/*"EVENT_TOWER_REWARD_GET"*/, 0LL);
           if ( !v122 )
             goto LABEL_146;
           appended = System_Text_StringBuilder__AppendFormat_41920792(
@@ -1116,7 +1116,7 @@ LABEL_75:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v130 = (System_String_o *)StringLiteral_5724;
+        v130 = (System_String_o *)StringLiteral_5724/*"EVENT_TOWER_REWARD_GET_2"*/;
       }
       v131 = LocalizationManager__Get(v130, 0LL);
       if ( !v122 )
@@ -1819,7 +1819,7 @@ void __fastcall TitleInfoEventTowerReward___OnLoadEndSvt_b__31_0(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
     sub_B16FFC(&SoundManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_12995, v9);
+    sub_B16FFC(&StringLiteral_12995/*"StartVoice"*/, v9);
     byte_40F840A = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -1833,7 +1833,7 @@ void __fastcall TitleInfoEventTowerReward___OnLoadEndSvt_b__31_0(
   CommonUI__maskFadein(Instance, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_12995,
+    (System_String_o *)StringLiteral_12995/*"StartVoice"*/,
     this->fields.voiceStartTime,
     0LL);
   eventTowerReward = this->fields.eventTowerReward;

@@ -211,18 +211,18 @@ void __fastcall AvalonNotificationManager__OnApplicationFocus(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v35);
     sub_B16FFC(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v36);
     sub_B16FFC(&SingletonTemplate_clsQuestCheck__TypeInfo, v37);
-    sub_B16FFC(&StringLiteral_16303, v38);
-    sub_B16FFC(&StringLiteral_9301, v39);
-    sub_B16FFC(&StringLiteral_21770, v40);
-    sub_B16FFC(&StringLiteral_21017, v41);
-    sub_B16FFC(&StringLiteral_9302, v42);
-    sub_B16FFC(&StringLiteral_9300, v43);
-    sub_B16FFC(&StringLiteral_9305, v44);
-    sub_B16FFC(&StringLiteral_9303, v45);
-    sub_B16FFC(&StringLiteral_9304, v46);
-    sub_B16FFC(&StringLiteral_21020, v47);
-    sub_B16FFC(&StringLiteral_21019, v48);
-    sub_B16FFC(&StringLiteral_21018, v49);
+    sub_B16FFC(&StringLiteral_16303/*"ap_max"*/, v38);
+    sub_B16FFC(&StringLiteral_9301/*"NOTIFICATION_COMPLETE_EXPEDITION_MESSAGE"*/, v39);
+    sub_B16FFC(&StringLiteral_21770/*"rp_max"*/, v40);
+    sub_B16FFC(&StringLiteral_21017/*"no_expedition_{0}"*/, v41);
+    sub_B16FFC(&StringLiteral_9302/*"NOTIFICATION_COMPLETE_HARVEST_MESSAGE"*/, v42);
+    sub_B16FFC(&StringLiteral_9300/*"NOTIFICATION_AP_RECOVER_MESSAGE"*/, v43);
+    sub_B16FFC(&StringLiteral_9305/*"NOTIFICATION_RP_RECOVER_MESSAGE"*/, v44);
+    sub_B16FFC(&StringLiteral_9303/*"NOTIFICATION_COMPLETE_OPERATION_MESSAGE"*/, v45);
+    sub_B16FFC(&StringLiteral_9304/*"NOTIFICATION_FATIGUE_RECOVER_MESSAGE"*/, v46);
+    sub_B16FFC(&StringLiteral_21020/*"no_operation_{0}"*/, v47);
+    sub_B16FFC(&StringLiteral_21019/*"no_harvest_{0}"*/, v48);
+    sub_B16FFC(&StringLiteral_21018/*"no_fatigue"*/, v49);
     byte_40F6E83 = 1;
   }
   entity = 0LL;
@@ -276,8 +276,8 @@ void __fastcall AvalonNotificationManager__OnApplicationFocus(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v55 = LocalizationManager__Get((System_String_o *)StringLiteral_9300, 0LL);
-          NotificationPluginScript__SetLocalNotification(v54, v55, (System_String_o *)StringLiteral_16303, 0LL);
+          v55 = LocalizationManager__Get((System_String_o *)StringLiteral_9300/*"NOTIFICATION_AP_RECOVER_MESSAGE"*/, 0LL);
+          NotificationPluginScript__SetLocalNotification(v54, v55, (System_String_o *)StringLiteral_16303/*"ap_max"*/, 0LL);
         }
       }
       if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -306,8 +306,8 @@ void __fastcall AvalonNotificationManager__OnApplicationFocus(
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v60 = LocalizationManager__Get((System_String_o *)StringLiteral_9305, 0LL);
-            NotificationPluginScript__SetLocalNotification(v57, v60, (System_String_o *)StringLiteral_21770, 0LL);
+            v60 = LocalizationManager__Get((System_String_o *)StringLiteral_9305/*"NOTIFICATION_RP_RECOVER_MESSAGE"*/, 0LL);
+            NotificationPluginScript__SetLocalNotification(v57, v60, (System_String_o *)StringLiteral_21770/*"rp_max"*/, 0LL);
           }
         }
       }
@@ -330,8 +330,8 @@ void __fastcall AvalonNotificationManager__OnApplicationFocus(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v65 = LocalizationManager__Get((System_String_o *)StringLiteral_9304, 0LL);
-          NotificationPluginScript__SetLocalNotification(v64, v65, (System_String_o *)StringLiteral_21018, 0LL);
+          v65 = LocalizationManager__Get((System_String_o *)StringLiteral_9304/*"NOTIFICATION_FATIGUE_RECOVER_MESSAGE"*/, 0LL);
+          NotificationPluginScript__SetLocalNotification(v64, v65, (System_String_o *)StringLiteral_21018/*"no_fatigue"*/, 0LL);
         }
       }
       if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -446,11 +446,11 @@ LABEL_160:
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v81 = LocalizationManager__Get((System_String_o *)StringLiteral_9303, 0LL);
+                        v81 = LocalizationManager__Get((System_String_o *)StringLiteral_9303/*"NOTIFICATION_COMPLETE_OPERATION_MESSAGE"*/, 0LL);
                         v82 = System_String__Format(v81, (Il2CppObject *)v88->fields.name, 0LL);
                         *(_DWORD *)v144 = v141;
                         v83 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, v144);
-                        v84 = System_String__Format((System_String_o *)StringLiteral_21020, v83, 0LL);
+                        v84 = System_String__Format((System_String_o *)StringLiteral_21020/*"no_operation_{0}"*/, v83, 0LL);
                         NotificationPluginScript__SetLocalNotification(v80, v82, v84, 0LL);
                         LODWORD(v141) = v141 + 1;
                       }
@@ -592,11 +592,11 @@ LABEL_108:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v109 = LocalizationManager__Get((System_String_o *)StringLiteral_9302, 0LL);
+                  v109 = LocalizationManager__Get((System_String_o *)StringLiteral_9302/*"NOTIFICATION_COMPLETE_HARVEST_MESSAGE"*/, 0LL);
                   v110 = System_String__Format(v109, (Il2CppObject *)v108->fields.name, 0LL);
                   *(_DWORD *)v144 = v142;
                   v111 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, v144);
-                  v112 = System_String__Format((System_String_o *)StringLiteral_21019, v111, 0LL);
+                  v112 = System_String__Format((System_String_o *)StringLiteral_21019/*"no_harvest_{0}"*/, v111, 0LL);
                   NotificationPluginScript__SetLocalNotification((int32_t)v103, v110, v112, 0LL);
                   ++v142;
                 }
@@ -720,11 +720,11 @@ LABEL_108:
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v136 = LocalizationManager__Get((System_String_o *)StringLiteral_9301, 0LL);
+                    v136 = LocalizationManager__Get((System_String_o *)StringLiteral_9301/*"NOTIFICATION_COMPLETE_EXPEDITION_MESSAGE"*/, 0LL);
                     v137 = System_String__Format_43739268(v136, v135[3], v132[3], 0LL);
                     *(_DWORD *)v144 = v119;
                     v138 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, v144);
-                    v139 = System_String__Format((System_String_o *)StringLiteral_21017, v138, 0LL);
+                    v139 = System_String__Format((System_String_o *)StringLiteral_21017/*"no_expedition_{0}"*/, v138, 0LL);
                     NotificationPluginScript__SetLocalNotification(v129, v137, v139, 0LL);
                     ++v119;
                   }

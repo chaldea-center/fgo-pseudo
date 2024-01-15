@@ -217,31 +217,31 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
   if ( (byte_40F6ED0 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_728, v4);
-    sub_B16FFC(&StringLiteral_725, v5);
-    sub_B16FFC(&StringLiteral_729, v6);
-    sub_B16FFC(&StringLiteral_723, v7);
-    sub_B16FFC(&StringLiteral_19311, v8);
-    sub_B16FFC(&StringLiteral_720, v9);
-    sub_B16FFC(&StringLiteral_733, v10);
-    sub_B16FFC(&StringLiteral_724, v11);
-    sub_B16FFC(&StringLiteral_730, v12);
-    sub_B16FFC(&StringLiteral_731, v13);
-    sub_B16FFC(&StringLiteral_719, v14);
-    sub_B16FFC(&StringLiteral_721, v15);
+    sub_B16FFC(&StringLiteral_728/*", name:"*/, v4);
+    sub_B16FFC(&StringLiteral_725/*", googleShopId:"*/, v5);
+    sub_B16FFC(&StringLiteral_729/*", numDetail:"*/, v6);
+    sub_B16FFC(&StringLiteral_723/*", closeAt:"*/, v7);
+    sub_B16FFC(&StringLiteral_19311/*"id:"*/, v8);
+    sub_B16FFC(&StringLiteral_720/*", appleShopId:"*/, v9);
+    sub_B16FFC(&StringLiteral_733/*", stoneNum:"*/, v10);
+    sub_B16FFC(&StringLiteral_724/*", googlePrice:"*/, v11);
+    sub_B16FFC(&StringLiteral_730/*", openAt:"*/, v12);
+    sub_B16FFC(&StringLiteral_731/*", priceDetail:"*/, v13);
+    sub_B16FFC(&StringLiteral_719/*", applePrice:"*/, v14);
+    sub_B16FFC(&StringLiteral_721/*", auShopId:"*/, v15);
     byte_40F6ED0 = 1;
   }
   v16 = sub_B17014(string___TypeInfo, 24LL, v2);
   if ( !v16 )
     sub_B170D4();
   v23 = (System_String_array *)v16;
-  v24 = (System_String_o *)StringLiteral_19311;
-  if ( StringLiteral_19311 )
+  v24 = (System_String_o *)StringLiteral_19311/*"id:"*/;
+  if ( StringLiteral_19311/*"id:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_19311, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_19311/*"id:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_19311;
+    v25 = (System_Int32_array **)StringLiteral_19311/*"id:"*/;
   }
   else
   {
@@ -264,13 +264,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[1] = (System_String_o *)v32;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[1], v32, v17, v27, v28, v29, v30, v31);
-  v24 = (System_String_o *)StringLiteral_728;
-  if ( StringLiteral_728 )
+  v24 = (System_String_o *)StringLiteral_728/*", name:"*/;
+  if ( StringLiteral_728/*", name:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_728, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_728/*", name:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_728;
+    v25 = (System_Int32_array **)StringLiteral_728/*", name:"*/;
   }
   else
   {
@@ -291,13 +291,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[3] = (System_String_o *)name;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[3], name, v17, v38, v39, v40, v41, v42);
-  v24 = (System_String_o *)StringLiteral_720;
-  if ( StringLiteral_720 )
+  v24 = (System_String_o *)StringLiteral_720/*", appleShopId:"*/;
+  if ( StringLiteral_720/*", appleShopId:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_720, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_720/*", appleShopId:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_720;
+    v25 = (System_Int32_array **)StringLiteral_720/*", appleShopId:"*/;
   }
   else
   {
@@ -318,13 +318,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[5] = (System_String_o *)appleShopId;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[5], appleShopId, v17, v49, v50, v51, v52, v53);
-  v24 = (System_String_o *)StringLiteral_725;
-  if ( StringLiteral_725 )
+  v24 = (System_String_o *)StringLiteral_725/*", googleShopId:"*/;
+  if ( StringLiteral_725/*", googleShopId:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_725, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_725/*", googleShopId:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_725;
+    v25 = (System_Int32_array **)StringLiteral_725/*", googleShopId:"*/;
   }
   else
   {
@@ -345,13 +345,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[7] = (System_String_o *)googleShopId;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[7], googleShopId, v17, v60, v61, v62, v63, v64);
-  v24 = (System_String_o *)StringLiteral_721;
-  if ( StringLiteral_721 )
+  v24 = (System_String_o *)StringLiteral_721/*", auShopId:"*/;
+  if ( StringLiteral_721/*", auShopId:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_721, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_721/*", auShopId:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_721;
+    v25 = (System_Int32_array **)StringLiteral_721/*", auShopId:"*/;
   }
   else
   {
@@ -372,13 +372,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[9] = (System_String_o *)auShopId;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[9], auShopId, v17, v71, v72, v73, v74, v75);
-  v24 = (System_String_o *)StringLiteral_719;
-  if ( StringLiteral_719 )
+  v24 = (System_String_o *)StringLiteral_719/*", applePrice:"*/;
+  if ( StringLiteral_719/*", applePrice:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_719, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_719/*", applePrice:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_719;
+    v25 = (System_Int32_array **)StringLiteral_719/*", applePrice:"*/;
   }
   else
   {
@@ -400,13 +400,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[11] = (System_String_o *)v87;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[11], v87, v17, v82, v83, v84, v85, v86);
-  v24 = (System_String_o *)StringLiteral_724;
-  if ( StringLiteral_724 )
+  v24 = (System_String_o *)StringLiteral_724/*", googlePrice:"*/;
+  if ( StringLiteral_724/*", googlePrice:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_724, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_724/*", googlePrice:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_724;
+    v25 = (System_Int32_array **)StringLiteral_724/*", googlePrice:"*/;
   }
   else
   {
@@ -428,13 +428,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[13] = (System_String_o *)v98;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[13], v98, v17, v93, v94, v95, v96, v97);
-  v24 = (System_String_o *)StringLiteral_733;
-  if ( StringLiteral_733 )
+  v24 = (System_String_o *)StringLiteral_733/*", stoneNum:"*/;
+  if ( StringLiteral_733/*", stoneNum:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_733, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_733/*", stoneNum:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_733;
+    v25 = (System_Int32_array **)StringLiteral_733/*", stoneNum:"*/;
   }
   else
   {
@@ -456,13 +456,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[15] = (System_String_o *)v109;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[15], v109, v17, v104, v105, v106, v107, v108);
-  v24 = (System_String_o *)StringLiteral_729;
-  if ( StringLiteral_729 )
+  v24 = (System_String_o *)StringLiteral_729/*", numDetail:"*/;
+  if ( StringLiteral_729/*", numDetail:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_729, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_729/*", numDetail:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_729;
+    v25 = (System_Int32_array **)StringLiteral_729/*", numDetail:"*/;
   }
   else
   {
@@ -483,13 +483,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[17] = (System_String_o *)numDetail;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[17], numDetail, v17, v115, v116, v117, v118, v119);
-  v24 = (System_String_o *)StringLiteral_731;
-  if ( StringLiteral_731 )
+  v24 = (System_String_o *)StringLiteral_731/*", priceDetail:"*/;
+  if ( StringLiteral_731/*", priceDetail:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_731, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_731/*", priceDetail:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_731;
+    v25 = (System_Int32_array **)StringLiteral_731/*", priceDetail:"*/;
   }
   else
   {
@@ -510,13 +510,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[19] = (System_String_o *)priceDetail;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[19], priceDetail, v17, v126, v127, v128, v129, v130);
-  v24 = (System_String_o *)StringLiteral_730;
-  if ( StringLiteral_730 )
+  v24 = (System_String_o *)StringLiteral_730/*", openAt:"*/;
+  if ( StringLiteral_730/*", openAt:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_730, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_730/*", openAt:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_730;
+    v25 = (System_Int32_array **)StringLiteral_730/*", openAt:"*/;
   }
   else
   {
@@ -538,13 +538,13 @@ System_String_o *__fastcall BankShopEntity__ToString(BankShopEntity_o *this, con
     goto LABEL_101;
   v23->m_Items[21] = (System_String_o *)v142;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[21], v142, v17, v137, v138, v139, v140, v141);
-  v24 = (System_String_o *)StringLiteral_723;
-  if ( StringLiteral_723 )
+  v24 = (System_String_o *)StringLiteral_723/*", closeAt:"*/;
+  if ( StringLiteral_723/*", closeAt:"*/ )
   {
-    v24 = (System_String_o *)sub_B170BC(StringLiteral_723, v23->obj.klass->_1.element_class);
+    v24 = (System_String_o *)sub_B170BC(StringLiteral_723/*", closeAt:"*/, v23->obj.klass->_1.element_class);
     if ( !v24 )
       goto LABEL_102;
-    v25 = (System_Int32_array **)StringLiteral_723;
+    v25 = (System_Int32_array **)StringLiteral_723/*", closeAt:"*/;
   }
   else
   {

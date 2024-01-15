@@ -169,7 +169,7 @@ void __fastcall FortificationWarningDialogComponent__OnClickDecide(
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FA77A = 1;
   }
   if ( this->fields.state == 2 )
@@ -225,7 +225,7 @@ LABEL_25:
       {
         slot = v18->fields.slot;
         v20 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v14, v15, v16, v17);
-        SceneJumpInfo___ctor_29748100(v20, (System_String_o *)StringLiteral_1, EventID, slot + 1, 0LL);
+        SceneJumpInfo___ctor_29748100(v20, (System_String_o *)StringLiteral_1/*""*/, EventID, slot + 1, 0LL);
         if ( v20 )
         {
           SceneJumpInfo__SetReturnNowScene(v20, 0LL);
@@ -275,11 +275,11 @@ void __fastcall FortificationWarningDialogComponent__Open(
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_FortificationWarningDialogComponent__Open_b__11_0__, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_6409, v5);
-    sub_B16FFC(&StringLiteral_6422, v6);
-    sub_B16FFC(&StringLiteral_3252, v7);
-    sub_B16FFC(&StringLiteral_6421, v8);
-    sub_B16FFC(&StringLiteral_6420, v9);
+    sub_B16FFC(&StringLiteral_6409/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/, v5);
+    sub_B16FFC(&StringLiteral_6422/*"FORTIFICATION_WARNING_DIALOG_TITLE"*/, v6);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v7);
+    sub_B16FFC(&StringLiteral_6421/*"FORTIFICATION_WARNING_DIALOG_DESCRIPTION"*/, v8);
+    sub_B16FFC(&StringLiteral_6420/*"FORTIFICATION_WARNING_DIALOG_CHECKBOX"*/, v9);
     byte_40FA778 = 1;
   }
   if ( !this->fields.state )
@@ -290,25 +290,25 @@ void __fastcall FortificationWarningDialogComponent__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_6422, 0LL);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_6422/*"FORTIFICATION_WARNING_DIALOG_TITLE"*/, 0LL);
     if ( !titleLb )
       goto LABEL_13;
     UILabel__set_text(titleLb, v11, 0LL);
     descriptionLb = this->fields.descriptionLb;
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_6421, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_6421/*"FORTIFICATION_WARNING_DIALOG_DESCRIPTION"*/, 0LL);
     if ( !descriptionLb )
       goto LABEL_13;
     UILabel__set_text(descriptionLb, v13, 0LL);
     checkBoxLb = this->fields.checkBoxLb;
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_6420, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_6420/*"FORTIFICATION_WARNING_DIALOG_CHECKBOX"*/, 0LL);
     if ( !checkBoxLb
       || (UILabel__set_text(checkBoxLb, v15, 0LL),
           decideButtonLb = this->fields.decideButtonLb,
-          v17 = LocalizationManager__Get((System_String_o *)StringLiteral_6409, 0LL),
+          v17 = LocalizationManager__Get((System_String_o *)StringLiteral_6409/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/, 0LL),
           !decideButtonLb)
       || (UILabel__set_text(decideButtonLb, v17, 0LL),
           cancelButtonLb = this->fields.cancelButtonLb,
-          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL),
+          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
           !cancelButtonLb) )
     {
 LABEL_13:

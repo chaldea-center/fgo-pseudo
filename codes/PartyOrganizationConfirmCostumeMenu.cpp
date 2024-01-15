@@ -134,19 +134,19 @@ void __fastcall PartyOrganizationConfirmCostumeMenu__Init(
 
   if ( (byte_40FDC1F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FDC1F = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -241,9 +241,9 @@ void __fastcall PartyOrganizationConfirmCostumeMenu__Open(
     sub_B16FFC(&Method_PartyOrganizationConfirmCostumeMenu_EndOpen__, v18);
     sub_B16FFC(&PartyOrganizationConfirmItemDraw_TypeInfo, v19);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
-    sub_B16FFC(&StringLiteral_10213, v21);
-    sub_B16FFC(&StringLiteral_10214, v22);
-    sub_B16FFC(&StringLiteral_10215, v23);
+    sub_B16FFC(&StringLiteral_10213/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_CLOSE"*/, v21);
+    sub_B16FFC(&StringLiteral_10214/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_MESSAGE"*/, v22);
+    sub_B16FFC(&StringLiteral_10215/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_TITLE"*/, v23);
     byte_40FDC20 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
@@ -328,12 +328,12 @@ LABEL_24:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10215, 0LL);
+              v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10215/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_TITLE"*/, 0LL);
               if ( titleLabel )
               {
                 UILabel__set_text(titleLabel, v41, 0LL);
                 messageLabel = this->fields.messageLabel;
-                v43 = LocalizationManager__Get((System_String_o *)StringLiteral_10214, 0LL);
+                v43 = LocalizationManager__Get((System_String_o *)StringLiteral_10214/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_MESSAGE"*/, 0LL);
                 if ( item )
                 {
                   v45 = v43;
@@ -344,7 +344,7 @@ LABEL_24:
                   {
                     UILabel__set_text(messageLabel, v49, 0LL);
                     closeLabel = this->fields.closeLabel;
-                    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_10213, 0LL);
+                    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_10213/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_CLOSE"*/, 0LL);
                     if ( closeLabel )
                     {
                       UILabel__set_text(closeLabel, v51, 0LL);

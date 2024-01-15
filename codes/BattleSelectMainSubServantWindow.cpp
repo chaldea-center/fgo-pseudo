@@ -270,7 +270,7 @@ void __fastcall BattleSelectMainSubServantWindow__SetServantData(
     sub_B16FFC(&Method_BattleSelectMainSubServantWindow_selectSvt__, mainList);
     sub_B16FFC(&BattleSelectServantComponent_CallBack_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_2416, v9);
+    sub_B16FFC(&StringLiteral_2416/*"BATTLE_DIALOG_SELECTMAINSUB_SERVANT"*/, v9);
     byte_40F753C = 1;
   }
   title_label = this->fields.title_label;
@@ -279,7 +279,7 @@ void __fastcall BattleSelectMainSubServantWindow__SetServantData(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_2416, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_2416/*"BATTLE_DIALOG_SELECTMAINSUB_SERVANT"*/, 0LL);
   if ( !title_label )
     goto LABEL_40;
   UILabel__set_text(title_label, v11, 0LL);
@@ -460,10 +460,10 @@ System_String_o *__fastcall BattleSelectMainSubServantWindow__get_closeBtnPath(
 {
   if ( (byte_40F7542 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12944, method);
+    sub_B16FFC(&StringLiteral_12944/*"Sprite"*/, method);
     byte_40F7542 = 1;
   }
-  return (System_String_o *)StringLiteral_12944;
+  return (System_String_o *)StringLiteral_12944/*"Sprite"*/;
 }
 
 
@@ -496,8 +496,8 @@ void __fastcall BattleSelectMainSubServantWindow__onActionButton(
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_2504, v7);
-    sub_B16FFC(&StringLiteral_2505, v8);
+    sub_B16FFC(&StringLiteral_2504/*"BATTLE_SELECTSUBERROR_NOSELECT_CONF"*/, v7);
+    sub_B16FFC(&StringLiteral_2505/*"BATTLE_SELECTSUBERROR_NOSELECT_TITLE"*/, v8);
     byte_40F753F = 1;
   }
   if ( !this->fields.isSelected )
@@ -511,8 +511,8 @@ void __fastcall BattleSelectMainSubServantWindow__onActionButton(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2505, 0LL);
-      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2504, 0LL);
+      v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2505/*"BATTLE_SELECTSUBERROR_NOSELECT_TITLE"*/, 0LL);
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2504/*"BATTLE_SELECTSUBERROR_NOSELECT_CONF"*/, 0LL);
       v19 = (NotificationDialog_ClickDelegate_o *)sub_B170CC(
                                                     NotificationDialog_ClickDelegate_TypeInfo,
                                                     v15,

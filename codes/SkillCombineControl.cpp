@@ -202,9 +202,9 @@ void __fastcall SkillCombineControl__InitDispCombineInfo(SkillCombineControl_o *
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_8812, v7);
-    sub_B16FFC(&StringLiteral_8814, v8);
-    sub_B16FFC(&StringLiteral_9242, v9);
+    sub_B16FFC(&StringLiteral_8812/*"MSG_PRESELECT_BASE_SVT"*/, v7);
+    sub_B16FFC(&StringLiteral_8814/*"MSG_SKILL_SELECT"*/, v8);
+    sub_B16FFC(&StringLiteral_9242/*"NEED_QP_INFO"*/, v9);
     byte_40F91EC = 1;
   }
   preSelectBaseLb = this->fields.preSelectBaseLb;
@@ -213,7 +213,7 @@ void __fastcall SkillCombineControl__InitDispCombineInfo(SkillCombineControl_o *
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8812, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8812/*"MSG_PRESELECT_BASE_SVT"*/, 0LL);
   if ( !preSelectBaseLb )
     goto LABEL_32;
   UILabel__set_text(preSelectBaseLb, v11, 0LL);
@@ -234,12 +234,12 @@ void __fastcall SkillCombineControl__InitDispCombineInfo(SkillCombineControl_o *
   UnityEngine_GameObject__SetActive(selectSkillInfo, 0, 0LL);
   SkillCombineControl__SetHaveQpInfo(this, v16);
   selectSkillHelpLb = this->fields.selectSkillHelpLb;
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_8814, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_8814/*"MSG_SKILL_SELECT"*/, 0LL);
   if ( !selectSkillHelpLb )
     goto LABEL_32;
   UILabel__set_text(selectSkillHelpLb, v18, 0LL);
   needQpLb = this->fields.needQpLb;
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_9242, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_9242/*"NEED_QP_INFO"*/, 0LL);
   if ( !needQpLb )
     goto LABEL_32;
   UILabel__set_text(needQpLb, v20, 0LL);
@@ -348,7 +348,7 @@ void __fastcall SkillCombineControl__InitSvtSkillCombine(SkillCombineControl_o *
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoData__get_Count__, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_17083, v8);
+    sub_B16FFC(&StringLiteral_17083/*"buttontxt_synthesis"*/, v8);
     byte_40F91EB = 1;
   }
   memset(&v36, 0, sizeof(v36));
@@ -364,7 +364,7 @@ void __fastcall SkillCombineControl__InitSvtSkillCombine(SkillCombineControl_o *
   combineTxtImg = this->fields.combineTxtImg;
   if ( !combineTxtImg )
     goto LABEL_30;
-  UISprite__set_spriteName(combineTxtImg, (System_String_o *)StringLiteral_17083, 0LL);
+  UISprite__set_spriteName(combineTxtImg, (System_String_o *)StringLiteral_17083/*"buttontxt_synthesis"*/, 0LL);
   v13 = this->fields.combineTxtImg;
   if ( !v13 )
     goto LABEL_30;
@@ -455,7 +455,7 @@ void __fastcall SkillCombineControl__OnClickExeCombine(SkillCombineControl_o *th
   if ( (byte_40F91F5 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3326, v3);
+    sub_B16FFC(&StringLiteral_3326/*"CONFIRM_TITLE_SKILL_COMBINE"*/, v3);
     byte_40F91F5 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -463,7 +463,7 @@ void __fastcall SkillCombineControl__OnClickExeCombine(SkillCombineControl_o *th
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3326, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3326/*"CONFIRM_TITLE_SKILL_COMBINE"*/, 0LL);
   if ( !this->fields.exeCombineDlg )
     sub_B170D4();
   SetRarityDialogControl__SetSkillNpCombineInfo(this->fields.exeCombineDlg, this->fields.lvUpData, v4, 0LL);
@@ -764,7 +764,7 @@ void __fastcall SkillCombineControl__SetCombineSkillList(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
     sub_B16FFC(&Method_SkillCombineControl_OnClickInfo__, v19);
-    sub_B16FFC(&StringLiteral_746, v20);
+    sub_B16FFC(&StringLiteral_746/*"-"*/, v20);
     byte_40F91F1 = 1;
   }
   if ( !v8 )
@@ -864,7 +864,7 @@ LABEL_36:
         {
           IconId = 400;
           maxLv = 10;
-          v54 = (System_String_o *)StringLiteral_746;
+          v54 = (System_String_o *)StringLiteral_746/*"-"*/;
         }
         v55 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !v55 )
@@ -1028,7 +1028,7 @@ void __fastcall SkillCombineControl__SetHaveQpInfo(SkillCombineControl_o *this, 
 
   if ( (byte_40F91ED & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9236, method);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, method);
     byte_40F91ED = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -1036,7 +1036,7 @@ void __fastcall SkillCombineControl__SetHaveQpInfo(SkillCombineControl_o *this, 
     || (this->fields.haveQpVal = SelfUserGame->fields.qp,
         p_haveQpVal = &this->fields.haveQpVal,
         v5 = (UILabel_o *)*((_QWORD *)p_haveQpVal - 10),
-        v6 = System_Int32__ToString_38275808((int32_t)p_haveQpVal, (System_String_o *)StringLiteral_9236, 0LL),
+        v6 = System_Int32__ToString_38275808((int32_t)p_haveQpVal, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL),
         !v5) )
   {
     sub_B170D4();
@@ -1137,8 +1137,8 @@ void __fastcall SkillCombineControl__SetStateInfoMsg(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, *(_QWORD *)&state);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_7255, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_7255/*"INFO_MSG_SKILLUP"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F91F6 = 1;
   }
   detailInfoLb = (UnityEngine_Component_o *)this->fields.detailInfoLb;
@@ -1159,7 +1159,7 @@ void __fastcall SkillCombineControl__SetStateInfoMsg(
   UIWidget__set_color(v10, v16, 0LL);
   if ( state )
   {
-    v14 = (System_String_o *)StringLiteral_1;
+    v14 = (System_String_o *)StringLiteral_1/*""*/;
   }
   else
   {
@@ -1168,7 +1168,7 @@ void __fastcall SkillCombineControl__SetStateInfoMsg(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_7255, 0LL);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_7255/*"INFO_MSG_SKILLUP"*/, 0LL);
   }
   v15 = this->fields.detailInfoLb;
   if ( !v15 )
@@ -1347,14 +1347,14 @@ void __fastcall SkillCombineControl__SetSvtSkillCombineData(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v19);
     sub_B16FFC(&SetLevelUpData_TypeInfo, v20);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    sub_B16FFC(&StringLiteral_5746, v22);
-    sub_B16FFC(&StringLiteral_17083, v23);
-    sub_B16FFC(&StringLiteral_9236, v24);
-    sub_B16FFC(&StringLiteral_12161, v25);
-    sub_B16FFC(&StringLiteral_12162, v26);
-    sub_B16FFC(&StringLiteral_1, v27);
-    sub_B16FFC(&StringLiteral_17081, v28);
-    this = (SkillCombineControl_o *)sub_B16FFC(&StringLiteral_951, v29);
+    sub_B16FFC(&StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/, v22);
+    sub_B16FFC(&StringLiteral_17083/*"buttontxt_synthesis"*/, v23);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v24);
+    sub_B16FFC(&StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/, v25);
+    sub_B16FFC(&StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, v26);
+    sub_B16FFC(&StringLiteral_1/*""*/, v27);
+    sub_B16FFC(&StringLiteral_17081/*"buttontxt_notsynthesis"*/, v28);
+    this = (SkillCombineControl_o *)sub_B16FFC(&StringLiteral_951/*"0"*/, v29);
     byte_40F91F3 = 1;
   }
   memset(&methoda.klass, 0, 24);
@@ -1398,7 +1398,7 @@ LABEL_98:
     }
     else
     {
-      Name = (System_String_o *)StringLiteral_1;
+      Name = (System_String_o *)StringLiteral_1/*""*/;
       maxLv = 10;
     }
     v41 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -1455,14 +1455,14 @@ LABEL_98:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v54 = LocalizationManager__Get((System_String_o *)StringLiteral_5746, 0LL);
+    v54 = LocalizationManager__Get((System_String_o *)StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/, 0LL);
     if ( v34 < maxLv )
     {
       v56 = v54;
       combineTxtImg = v4->fields.combineTxtImg;
       if ( combineTxtImg )
       {
-        UISprite__set_spriteName(combineTxtImg, (System_String_o *)StringLiteral_17083, 0LL);
+        UISprite__set_spriteName(combineTxtImg, (System_String_o *)StringLiteral_17083/*"buttontxt_synthesis"*/, 0LL);
         v58 = v4->fields.combineTxtImg;
         if ( v58 )
         {
@@ -1544,7 +1544,7 @@ LABEL_98:
                             (const MethodInfo_2074050 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
                         }
                         qpLb = v4->fields.qpLb;
-                        v76 = System_Int32__ToString_38275808((int)v4 + 228, (System_String_o *)StringLiteral_9236, 0LL);
+                        v76 = System_Int32__ToString_38275808((int)v4 + 228, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
                         if ( qpLb )
                         {
                           v145 = v50;
@@ -1603,7 +1603,7 @@ LABEL_98:
                                 {
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
-                                v93 = LocalizationManager__Get((System_String_o *)StringLiteral_12162, 0LL);
+                                v93 = LocalizationManager__Get((System_String_o *)StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, 0LL);
                                 v94 = (UIWidget_o *)v4->fields.qpLb;
                                 *(_QWORD *)&methoda.token = v93;
                                 *(UnityEngine_Color_o *)&v95 = UnityEngine_Color__get_red(0LL);
@@ -1622,7 +1622,7 @@ LABEL_98:
                                 {
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
-                                v99 = LocalizationManager__Get((System_String_o *)StringLiteral_12161, 0LL);
+                                v99 = LocalizationManager__Get((System_String_o *)StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/, 0LL);
                                 v4->fields._IsExeCombine_k__BackingField = 0;
                               }
                               SkillCombineControl__SetExeBtnState(v4, v90);
@@ -1656,8 +1656,8 @@ LABEL_98:
                                       v120 = *p_lvUpData;
                                       if ( *p_lvUpData )
                                       {
-                                        v121 = (System_Int32_array **)StringLiteral_1;
-                                        v120->fields.targetRuby = (struct System_String_o *)StringLiteral_1;
+                                        v121 = (System_Int32_array **)StringLiteral_1/*""*/;
+                                        v120->fields.targetRuby = (struct System_String_o *)StringLiteral_1/*""*/;
                                         sub_B16F98(
                                           (BattleServantConfConponent_o *)&v120->fields.targetRuby,
                                           v121,
@@ -1737,7 +1737,7 @@ LABEL_97:
     v136 = v4->fields.qpLb;
     if ( !v136 )
       goto LABEL_97;
-    UILabel__set_text(v136, (System_String_o *)StringLiteral_951, 0LL);
+    UILabel__set_text(v136, (System_String_o *)StringLiteral_951/*"0"*/, 0LL);
     v137 = (UIWidget_o *)v4->fields.qpLb;
     *(UnityEngine_Color_o *)&v138 = UnityEngine_Color__get_white(0LL);
     if ( !v137 )
@@ -1746,7 +1746,7 @@ LABEL_97:
     v142 = v4->fields.combineTxtImg;
     if ( !v142 )
       goto LABEL_97;
-    UISprite__set_spriteName(v142, (System_String_o *)StringLiteral_17081, 0LL);
+    UISprite__set_spriteName(v142, (System_String_o *)StringLiteral_17081/*"buttontxt_notsynthesis"*/, 0LL);
     v143 = v4->fields.combineTxtImg;
     if ( !v143 )
       goto LABEL_97;

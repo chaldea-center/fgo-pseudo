@@ -372,11 +372,11 @@ void __fastcall InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
     sub_B16FFC(&object___TypeInfo, v8);
     sub_B16FFC(&SoundManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_11048, v10);
-    sub_B16FFC(&StringLiteral_12016, v11);
-    sub_B16FFC(&StringLiteral_12015, v12);
-    sub_B16FFC(&StringLiteral_11047, v13);
-    sub_B16FFC(&StringLiteral_12014, v14);
+    sub_B16FFC(&StringLiteral_11048/*"RESET_BIRTHDAY_CONFIRM_TITLE"*/, v10);
+    sub_B16FFC(&StringLiteral_12016/*"SET_BIRTHDAY_CONFIRM_TITLE"*/, v11);
+    sub_B16FFC(&StringLiteral_12015/*"SET_BIRTHDAY_CONFIRM_NOTICE"*/, v12);
+    sub_B16FFC(&StringLiteral_11047/*"RESET_BIRTHDAY_CONFIRM_MESSAGE"*/, v13);
+    sub_B16FFC(&StringLiteral_12014/*"SET_BIRTHDAY_CONFIRM_MESSAGE"*/, v14);
     byte_40FC190 = 1;
   }
   dateData = 0LL;
@@ -437,8 +437,8 @@ void __fastcall InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11048, 0LL);
-      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11047, 0LL);
+      v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11048/*"RESET_BIRTHDAY_CONFIRM_TITLE"*/, 0LL);
+      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11047/*"RESET_BIRTHDAY_CONFIRM_MESSAGE"*/, 0LL);
       v32 = (System_Object_array *)sub_B17014(object___TypeInfo, 4LL, v31);
       v103.fields.dateData = (uint64_t)&dateData;
       Month = (InputUserBirthDayWindow_o *)System_DateTime__get_Month(v103, 0LL);
@@ -519,7 +519,7 @@ void __fastcall InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o
       v32->m_Items[3] = (Il2CppObject *)v76;
       sub_B16F98((BattleServantConfConponent_o *)&v32->m_Items[3], v76, v70, v71, v72, v73, v74, v75);
       v77 = System_String__Format_43822456(v30, v32, 0LL);
-      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_12015, 0LL);
+      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_12015/*"SET_BIRTHDAY_CONFIRM_NOTICE"*/, 0LL);
       v83 = (InputUserBirthDayConfirmWindow_CallbackFunc_o *)sub_B170CC(
                                                                InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo,
                                                                v79,
@@ -558,14 +558,14 @@ void __fastcall InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v87 = LocalizationManager__Get((System_String_o *)StringLiteral_12016, 0LL);
-      v88 = LocalizationManager__Get((System_String_o *)StringLiteral_12014, 0LL);
+      v87 = LocalizationManager__Get((System_String_o *)StringLiteral_12016/*"SET_BIRTHDAY_CONFIRM_TITLE"*/, 0LL);
+      v88 = LocalizationManager__Get((System_String_o *)StringLiteral_12014/*"SET_BIRTHDAY_CONFIRM_MESSAGE"*/, 0LL);
       LODWORD(v100) = v17;
       v89 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v100);
       v99 = v20;
       v90 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v99);
       v91 = System_String__Format_43739268(v88, v89, v90, 0LL);
-      v92 = LocalizationManager__Get((System_String_o *)StringLiteral_12015, 0LL);
+      v92 = LocalizationManager__Get((System_String_o *)StringLiteral_12015/*"SET_BIRTHDAY_CONFIRM_NOTICE"*/, 0LL);
       v97 = (InputUserBirthDayConfirmWindow_CallbackFunc_o *)sub_B170CC(
                                                                InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo,
                                                                v93,
@@ -672,11 +672,11 @@ void __fastcall InputUserBirthDayWindow__OpenInputBirthDayWindow(
     sub_B16FFC(&Method_InputUserBirthDayWindow_EndOpen__, v7);
     sub_B16FFC(&int___TypeInfo, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_7269, v10);
-    sub_B16FFC(&StringLiteral_7270, v11);
-    sub_B16FFC(&StringLiteral_11050, v12);
-    sub_B16FFC(&StringLiteral_7271, v13);
-    sub_B16FFC(&StringLiteral_11049, v14);
+    sub_B16FFC(&StringLiteral_7269/*"INPUT_BIRTHDAY_INFO"*/, v10);
+    sub_B16FFC(&StringLiteral_7270/*"INPUT_BIRTHDAY_NOTICE"*/, v11);
+    sub_B16FFC(&StringLiteral_11050/*"RESET_BIRTHDAY_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_7271/*"INPUT_BIRTHDAY_TITLE"*/, v13);
+    sub_B16FFC(&StringLiteral_11049/*"RESET_BIRTHDAY_NOTICE"*/, v14);
     byte_40FC18C = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -702,9 +702,9 @@ void __fastcall InputUserBirthDayWindow__OpenInputBirthDayWindow(
   titleLb = this->fields.titleLb;
   this->fields.isResetBirthday = IsOpen;
   if ( IsOpen )
-    v25 = (System_String_o **)&StringLiteral_11050;
+    v25 = (System_String_o **)&StringLiteral_11050/*"RESET_BIRTHDAY_TITLE"*/;
   else
-    v25 = (System_String_o **)&StringLiteral_7271;
+    v25 = (System_String_o **)&StringLiteral_7271/*"INPUT_BIRTHDAY_TITLE"*/;
   v26 = *v25;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -716,12 +716,12 @@ void __fastcall InputUserBirthDayWindow__OpenInputBirthDayWindow(
     goto LABEL_27;
   UILabel__set_text(titleLb, v27, 0LL);
   inputInfoLb = this->fields.inputInfoLb;
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_7269, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_7269/*"INPUT_BIRTHDAY_INFO"*/, 0LL);
   if ( !inputInfoLb )
     goto LABEL_27;
   UILabel__set_text(inputInfoLb, v29, 0LL);
   noticeLb = this->fields.noticeLb;
-  v31 = (System_String_o **)(this->fields.isResetBirthday ? &StringLiteral_11049 : &StringLiteral_7270);
+  v31 = (System_String_o **)(this->fields.isResetBirthday ? &StringLiteral_11049/*"RESET_BIRTHDAY_NOTICE"*/ : &StringLiteral_7270/*"INPUT_BIRTHDAY_NOTICE"*/);
   v32 = *v31;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -834,12 +834,12 @@ System_String_o *__fastcall InputUserBirthDayWindow__getPaddingBirthday(
   v6 = num;
   if ( (byte_40FC193 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_81, *(_QWORD *)&num);
+    sub_B16FFC(&StringLiteral_81/*"  "*/, *(_QWORD *)&num);
     byte_40FC193 = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v6, 0LL);
   if ( num <= 9 )
-    return System_String__Concat_43743732((System_String_o *)StringLiteral_81, v4, 0LL);
+    return System_String__Concat_43743732((System_String_o *)StringLiteral_81/*"  "*/, v4, 0LL);
   return v4;
 }
 
@@ -850,10 +850,10 @@ System_String_o *__fastcall InputUserBirthDayWindow__get_closeBtnPath(
 {
   if ( (byte_40FC192 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2730, method);
+    sub_B16FFC(&StringLiteral_2730/*"BaseWindow/CancleBtn"*/, method);
     byte_40FC192 = 1;
   }
-  return (System_String_o *)StringLiteral_2730;
+  return (System_String_o *)StringLiteral_2730/*"BaseWindow/CancleBtn"*/;
 }
 
 

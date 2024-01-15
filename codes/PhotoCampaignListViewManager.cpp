@@ -19,11 +19,11 @@ void __fastcall PhotoCampaignListViewManager___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&ListViewSort_TypeInfo, v1);
     sub_B16FFC(&PhotoCampaignListViewManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_10612, v6);
+    sub_B16FFC(&StringLiteral_10612/*"PhotoCampaign1"*/, v6);
     byte_40F8F55 = 1;
   }
   v7 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_10612, 3, 0, 0LL);
+  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_10612/*"PhotoCampaign1"*/, 3, 0, 0LL);
   static_fields = (BattleServantConfConponent_o *)PhotoCampaignListViewManager_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v7;
   sub_B16F98(static_fields, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
@@ -246,11 +246,11 @@ void __fastcall PhotoCampaignListViewManager__CreateList(
     sub_B16FFC(&Method_PhotoCampaignListViewManager___c__DisplayClass24_0__CreateList_b__0__, v21);
     sub_B16FFC(&Method_PhotoCampaignListViewManager___c__DisplayClass24_0__CreateList_b__1__, v22);
     sub_B16FFC(&PhotoCampaignListViewManager___c__DisplayClass24_0_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_11651, v24);
-    sub_B16FFC(&StringLiteral_11618, v25);
-    sub_B16FFC(&StringLiteral_11842, v26);
-    sub_B16FFC(&StringLiteral_12003, v27);
-    sub_B16FFC(&StringLiteral_12413, v28);
+    sub_B16FFC(&StringLiteral_11651/*"SERVANT_EQUIP_EMPTY"*/, v24);
+    sub_B16FFC(&StringLiteral_11618/*"SERVANT_ALL_EMPTY"*/, v25);
+    sub_B16FFC(&StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, v26);
+    sub_B16FFC(&StringLiteral_12003/*"SERVANT_TAKE"*/, v27);
+    sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v28);
     byte_40F8F40 = 1;
   }
   equipIdList = 0LL;
@@ -300,9 +300,9 @@ void __fastcall PhotoCampaignListViewManager__CreateList(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  LocalizationManager__Get((System_String_o *)StringLiteral_12003, 0LL);
+  LocalizationManager__Get((System_String_o *)StringLiteral_12003/*"SERVANT_TAKE"*/, 0LL);
   v50 = PhotoCampaignListViewManager_TypeInfo;
-  v51 = StringLiteral_11651;
+  v51 = StringLiteral_11651/*"SERVANT_EQUIP_EMPTY"*/;
   if ( (BYTE3(PhotoCampaignListViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !PhotoCampaignListViewManager_TypeInfo->_2.cctor_finished )
   {
@@ -345,7 +345,7 @@ void __fastcall PhotoCampaignListViewManager__CreateList(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v60 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+    v60 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
     if ( !v42 )
       goto LABEL_78;
     v61 = v60;
@@ -419,7 +419,7 @@ LABEL_43:
   PhotoCampaignListViewManager__SelectedUsrSvtModifyItem(this, usrSvtId, v58);
   emptyMessageLabel = (UnityEngine_Object_o *)this->fields.emptyMessageLabel;
   if ( *(_QWORD *)&v42->max_length )
-    v82 = (System_String_o *)StringLiteral_11842;
+    v82 = (System_String_o *)StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/;
   else
     v82 = v112;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1948,7 +1948,7 @@ void __fastcall PhotoCampaignListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_PhotoCampaignListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_PhotoCampaignListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_PhotoCampaignListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40F8F45 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -1963,7 +1963,7 @@ void __fastcall PhotoCampaignListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2160,8 +2160,8 @@ void __fastcall PhotoCampaignListViewManager__SetFilterButtonImage(
 
   if ( (byte_40F8F4A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16927, method);
-    sub_B16FFC(&StringLiteral_16926, v3);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, method);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v3);
     byte_40F8F4A = 1;
   }
   sort = this->fields.sort;
@@ -2170,9 +2170,9 @@ void __fastcall PhotoCampaignListViewManager__SetFilterButtonImage(
   {
     sub_B170D4();
   }
-  v7 = (System_String_o **)&StringLiteral_16926;
+  v7 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
   if ( !v6 )
-    v7 = (System_String_o **)&StringLiteral_16927;
+    v7 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
   UISprite__set_spriteName(filterSprite, *v7, 0LL);
 }
 
@@ -2319,12 +2319,12 @@ void __fastcall PhotoCampaignListViewManager__SetSortButtonImage(
   if ( (byte_40F8F4E & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_17038, v4);
-    sub_B16FFC(&StringLiteral_16995, v5);
-    sub_B16FFC(&StringLiteral_16985, v6);
-    sub_B16FFC(&StringLiteral_17002, v7);
-    sub_B16FFC(&StringLiteral_16952, v8);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v4);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v5);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v6);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v7);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v8);
     byte_40F8F4E = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -2361,7 +2361,7 @@ void __fastcall PhotoCampaignListViewManager__SetSortButtonImage(
         sortExplanationSprite = this->fields.sortExplanationSprite;
         if ( sortExplanationSprite )
         {
-          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
           UISprite__set_spriteName(sortExplanationSprite, *v17, 0LL);
           v18 = this->fields.sort;
           if ( v18 )
@@ -2370,8 +2370,8 @@ void __fastcall PhotoCampaignListViewManager__SetSortButtonImage(
             if ( v19 )
             {
               isAscendingOrder = v18->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16952;
-              v22 = (System_String_o **)&StringLiteral_16955;
+              v21 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+              v22 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
 LABEL_32:
               if ( isAscendingOrder )
                 v26 = v21;
@@ -2388,7 +2388,7 @@ LABEL_32:
         v23 = this->fields.sortExplanationSprite;
         if ( v23 )
         {
-          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
           UISprite__set_spriteName(v23, *v24, 0LL);
           v25 = this->fields.sort;
           if ( v25 )
@@ -2397,8 +2397,8 @@ LABEL_32:
             if ( v19 )
             {
               isAscendingOrder = v25->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16955;
-              v22 = (System_String_o **)&StringLiteral_16952;
+              v21 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+              v22 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
               goto LABEL_32;
             }
           }

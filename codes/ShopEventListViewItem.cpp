@@ -255,11 +255,11 @@ System_String_o *__fastcall ShopEventListViewItem__ToString(ShopEventListViewIte
 
   if ( (byte_40FF87E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8228, method);
+    sub_B16FFC(&StringLiteral_8228/*"Item "*/, method);
     byte_40FF87E = 1;
   }
   NameText = ShopEventListViewItem__get_NameText(this, method);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_8228, NameText, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_8228/*"Item "*/, NameText, 0LL);
 }
 
 
@@ -380,14 +380,14 @@ System_String_o *__fastcall ShopEventListViewItem__get_NameText(
 
   if ( (byte_40FF87C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, method);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, method);
     byte_40FF87C = 1;
   }
   eventEntity = this->fields.eventEntity;
   if ( eventEntity )
     return EventEntity__getEventName(eventEntity, 0LL);
   else
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
 }
 
 

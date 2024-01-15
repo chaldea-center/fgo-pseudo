@@ -537,8 +537,8 @@ void __fastcall WarBoardSimplePopupElementBuff__SetUp_28199296(
   {
     sub_B16FFC(&int_TypeInfo, effectData);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_22155, v6);
-    sub_B16FFC(&StringLiteral_22153, v7);
+    sub_B16FFC(&StringLiteral_22155/*"square{0:D3}"*/, v6);
+    sub_B16FFC(&StringLiteral_22153/*"squares"*/, v7);
     byte_40FBAB9 = 1;
   }
   effectIconId = 0;
@@ -604,7 +604,7 @@ void __fastcall WarBoardSimplePopupElementBuff__SetUp_28199296(
                               {
                                 if ( v26 )
                                 {
-                                  v29 = (System_String_o *)StringLiteral_22153;
+                                  v29 = (System_String_o *)StringLiteral_22153/*"squares"*/;
                                   goto LABEL_23;
                                 }
                               }
@@ -612,7 +612,7 @@ void __fastcall WarBoardSimplePopupElementBuff__SetUp_28199296(
                               {
                                 imageId_k__BackingField = v24->fields._imageId_k__BackingField;
                                 v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageId_k__BackingField);
-                                v28 = System_String__Format((System_String_o *)StringLiteral_22155, v27, 0LL);
+                                v28 = System_String__Format((System_String_o *)StringLiteral_22155/*"square{0:D3}"*/, v27, 0LL);
                                 if ( v26 )
                                 {
                                   v29 = v28;

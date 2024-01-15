@@ -353,9 +353,9 @@ void __fastcall PhotoCampaignListViewItemDraw__SetMaskInfo(
   if ( (byte_40F8F39 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_11584, v5);
-    sub_B16FFC(&StringLiteral_11607, v6);
-    sub_B16FFC(&StringLiteral_10404, v7);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v5);
+    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
+    sub_B16FFC(&StringLiteral_10404/*"PHOTO_SERVANT_SELECTED_SERVANT"*/, v7);
     byte_40F8F39 = 1;
   }
   if ( !item )
@@ -386,7 +386,7 @@ void __fastcall PhotoCampaignListViewItemDraw__SetMaskInfo(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v14 = &StringLiteral_10404;
+        v14 = &StringLiteral_10404/*"PHOTO_SERVANT_SELECTED_SERVANT"*/;
         goto LABEL_35;
       }
       if ( !item->fields.isSelectedSvtId && !item->fields.isSelectedMax )
@@ -413,7 +413,7 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = &StringLiteral_11584;
+    v14 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
     goto LABEL_35;
   }
   userSvtEntity = item->fields.userSvtEntity;
@@ -439,7 +439,7 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = &StringLiteral_11607;
+    v14 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_35:
     v23 = LocalizationManager__Get((System_String_o *)*v14, 0LL);
     if ( v13 )

@@ -25,10 +25,10 @@ System_String_o *__fastcall BattleTDConfWIndowComponent__get_closeBtnPath(
 {
   if ( (byte_40FCD86 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4024, method);
+    sub_B16FFC(&StringLiteral_4024/*"Close"*/, method);
     byte_40FCD86 = 1;
   }
-  return (System_String_o *)StringLiteral_4024;
+  return (System_String_o *)StringLiteral_4024/*"Close"*/;
 }
 
 
@@ -100,9 +100,9 @@ void __fastcall BattleTDConfWIndowComponent__setData(
     sub_B16FFC(&int_TypeInfo, v16);
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_B16FFC(&StringLiteral_9356, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
-    sub_B16FFC(&StringLiteral_8654, v21);
+    sub_B16FFC(&StringLiteral_9356/*"NP_UNKNOWN"*/, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
+    sub_B16FFC(&StringLiteral_8654/*"MAX {0}%"*/, v21);
     byte_40FCD85 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -151,14 +151,14 @@ void __fastcall BattleTDConfWIndowComponent__setData(
   v32 = System_Int32__ToString((int32_t)&lva, 0LL);
   if ( !lvLabel )
     goto LABEL_50;
-  v33 = v32 ? v32 : (System_String_o *)StringLiteral_1;
+  v33 = v32 ? v32 : (System_String_o *)StringLiteral_1/*""*/;
   UILabel__set_text(lvLabel, v33, 0LL);
   if ( !v29 )
     goto LABEL_50;
   maxParLbal = this->fields.maxParLbal;
   v58 = 100 * v29->fields.gaugeCount;
   v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v58);
-  v36 = System_String__Format((System_String_o *)StringLiteral_8654, v35, 0LL);
+  v36 = System_String__Format((System_String_o *)StringLiteral_8654/*"MAX {0}%"*/, v35, 0LL);
   WrapControlText__textAdjust(maxParLbal, v36, 22, 0, 0, 0LL);
   confLabel = (UIWidget_o *)this->fields.confLabel;
   if ( (BYTE3(BattleTDConfWIndowComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -215,7 +215,7 @@ void __fastcall BattleTDConfWIndowComponent__setData(
   {
     if ( !v48 )
       goto LABEL_50;
-    p_mText = (System_String_o **)&StringLiteral_1;
+    p_mText = (System_String_o **)&StringLiteral_1/*""*/;
   }
   UILabel__set_text(v48, *p_mText, 0LL);
   unknownNpLabel = this->fields.unknownNpLabel;
@@ -226,13 +226,13 @@ void __fastcall BattleTDConfWIndowComponent__setData(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_9356, 0LL);
+    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_9356/*"NP_UNKNOWN"*/, 0LL);
     if ( unknownNpLabel )
       goto LABEL_44;
 LABEL_50:
     sub_B170D4();
   }
-  v51 = (System_String_o *)StringLiteral_1;
+  v51 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !unknownNpLabel )
     goto LABEL_50;
 LABEL_44:

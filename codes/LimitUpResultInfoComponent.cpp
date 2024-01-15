@@ -71,7 +71,7 @@ void __fastcall LimitUpResultInfoComponent__Setup(
   if ( (byte_40FCC36 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, title);
-    sub_B16FFC(&StringLiteral_20151, v7);
+    sub_B16FFC(&StringLiteral_20151/*"line_whiteAlpha"*/, v7);
     byte_40FCC36 = 1;
   }
   titleLabel = this->fields.titleLabel;
@@ -86,5 +86,5 @@ void __fastcall LimitUpResultInfoComponent__Setup(
   lineSprite = this->fields.lineSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_20151, 0LL);
+  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_20151/*"line_whiteAlpha"*/, 0LL);
 }

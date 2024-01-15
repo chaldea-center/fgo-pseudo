@@ -939,7 +939,7 @@ void __fastcall ServantRewardAction__Setup_28279456(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v20);
     sub_B16FFC(&Method_ServantRewardAction__Setup_b__52_0__, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_B16FFC(&StringLiteral_6802, v23);
+    sub_B16FFC(&StringLiteral_6802/*"GACHA_EFFECT_SVT_NUM"*/, v23);
     byte_40FBBA9 = 1;
   }
   if ( usrSvtEntity
@@ -1116,7 +1116,7 @@ LABEL_42:
                             {
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                             }
-                            v80 = LocalizationManager__Get((System_String_o *)StringLiteral_6802, 0LL);
+                            v80 = LocalizationManager__Get((System_String_o *)StringLiteral_6802/*"GACHA_EFFECT_SVT_NUM"*/, 0LL);
                             servantNum = this->fields.servantNum;
                             v81 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &servantNum);
                             v82 = System_String__Format(v80, v81, 0LL);
@@ -3260,9 +3260,9 @@ void __fastcall ServantRewardAction_StateTouchWait__begin(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
     sub_B16FFC(&Method_ServantRewardAction_StateTouchWait__begin_b__1_0__, v12);
-    sub_B16FFC(&StringLiteral_12409, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
-    sub_B16FFC(&StringLiteral_12408, v15);
+    sub_B16FFC(&StringLiteral_12409/*"SUMMON_SERVANT_MATERIAL_TD_GET_TITLE"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
+    sub_B16FFC(&StringLiteral_12408/*"SUMMON_SERVANT_MATERIAL_TD_GET_MESSAGE"*/, v15);
     byte_40F7654 = 1;
   }
   entity = 0LL;
@@ -3281,7 +3281,7 @@ void __fastcall ServantRewardAction_StateTouchWait__begin(
     userSvtEntity = that->fields.userSvtEntity;
     if ( !userSvtEntity )
       goto LABEL_28;
-    v19 = (System_String_o *)StringLiteral_1;
+    v19 = (System_String_o *)StringLiteral_1/*""*/;
     EventServant_21459540 = UserServantEntity__getEventServant_21459540(userSvtEntity, 1, 0LL);
     if ( EventServant_21459540
       && (v21 = EventServant_21459540,
@@ -3311,7 +3311,7 @@ void __fastcall ServantRewardAction_StateTouchWait__begin(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12408, 0LL);
+      v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12408/*"SUMMON_SERVANT_MATERIAL_TD_GET_MESSAGE"*/, 0LL);
       if ( !entity )
         goto LABEL_28;
       v26 = v25;
@@ -3327,7 +3327,7 @@ LABEL_21:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_12409, 0LL);
+    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_12409/*"SUMMON_SERVANT_MATERIAL_TD_GET_TITLE"*/, 0LL);
     this->fields.isWaitCloseDialog = 1;
     v30 = v29;
     v31 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);

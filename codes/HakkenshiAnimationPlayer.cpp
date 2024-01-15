@@ -23,17 +23,17 @@ void __fastcall HakkenshiAnimationPlayer___cctor(const MethodInfo *method)
   if ( (byte_40FC14A & 1) == 0 )
   {
     sub_B16FFC(&HakkenshiAnimationPlayer_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_22233, v8);
-    sub_B16FFC(&StringLiteral_22232, v9);
+    sub_B16FFC(&StringLiteral_22233/*"stay_dog_{0}_loop"*/, v8);
+    sub_B16FFC(&StringLiteral_22232/*"stay_dog_{0}_action"*/, v9);
     byte_40FC14A = 1;
   }
   static_fields = (BattleServantConfConponent_o *)HakkenshiAnimationPlayer_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_22233;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22233;
+  v11 = (System_Int32_array **)StringLiteral_22233/*"stay_dog_{0}_loop"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22233/*"stay_dog_{0}_loop"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = HakkenshiAnimationPlayer_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_22232;
-  v12->HAKKENSHI_ACTION_ANIM_NAME = (struct System_String_o *)StringLiteral_22232;
+  v13 = (System_Int32_array **)StringLiteral_22232/*"stay_dog_{0}_action"*/;
+  v12->HAKKENSHI_ACTION_ANIM_NAME = (struct System_String_o *)StringLiteral_22232/*"stay_dog_{0}_action"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->HAKKENSHI_ACTION_ANIM_NAME, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -85,7 +85,7 @@ void __fastcall HakkenshiAnimationPlayer__OnReleaseEvent(HakkenshiAnimationPlaye
   if ( (byte_40FC148 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10659, v3);
+    sub_B16FFC(&StringLiteral_10659/*"PlayStayAnim"*/, v3);
     byte_40FC148 = 1;
   }
   stayDogAnimation = (UnityEngine_Object_o *)this->fields.stayDogAnimation;
@@ -97,7 +97,7 @@ void __fastcall HakkenshiAnimationPlayer__OnReleaseEvent(HakkenshiAnimationPlaye
   if ( !UnityEngine_Object__op_Equality(stayDogAnimation, 0LL, 0LL) )
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10659,
+      (System_String_o *)StringLiteral_10659/*"PlayStayAnim"*/,
       this->fields.localPositionX,
       0LL);
 }
@@ -107,13 +107,13 @@ void __fastcall HakkenshiAnimationPlayer__OnTouchEvent(HakkenshiAnimationPlayer_
 {
   if ( (byte_40FC147 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10659, method);
+    sub_B16FFC(&StringLiteral_10659/*"PlayStayAnim"*/, method);
     byte_40FC147 = 1;
   }
   this->fields.state = 1;
   UnityEngine_MonoBehaviour__CancelInvoke_34803564(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10659,
+    (System_String_o *)StringLiteral_10659/*"PlayStayAnim"*/,
     0LL);
 }
 

@@ -31,10 +31,10 @@ System_String_o *__fastcall EarthPoint__GetEffectName(EarthPoint_o *this, const 
 {
   if ( (byte_40FBD11 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18111, method);
+    sub_B16FFC(&StringLiteral_18111/*"ef_difference11"*/, method);
     byte_40FBD11 = 1;
   }
-  return (System_String_o *)StringLiteral_18111;
+  return (System_String_o *)StringLiteral_18111/*"ef_difference11"*/;
 }
 
 

@@ -192,7 +192,7 @@ void __fastcall SetVolumeControl__getChangeVoiceValue(SetVolumeControl_o *this, 
   {
     sub_B16FFC(&OptionManager_TypeInfo, method);
     sub_B16FFC(&SoundManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_22552, v4);
+    sub_B16FFC(&StringLiteral_22552/*"testVoice"*/, v4);
     byte_40FF351 = 1;
   }
   voiceValueTxt = this->fields.voiceValueTxt;
@@ -221,7 +221,7 @@ void __fastcall SetVolumeControl__getChangeVoiceValue(SetVolumeControl_o *this, 
       {
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
-      SoundManager__playVoice((System_String_o *)StringLiteral_22552, 0LL);
+      SoundManager__playVoice((System_String_o *)StringLiteral_22552/*"testVoice"*/, 0LL);
     }
   }
 }
@@ -264,12 +264,12 @@ void __fastcall SetVolumeControl__initSetVolume(SetVolumeControl_o *this, const 
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&OptionManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9792, v4);
-    sub_B16FFC(&StringLiteral_9789, v5);
-    sub_B16FFC(&StringLiteral_9791, v6);
-    sub_B16FFC(&StringLiteral_9779, v7);
-    sub_B16FFC(&StringLiteral_9749, v8);
-    sub_B16FFC(&StringLiteral_9790, v9);
+    sub_B16FFC(&StringLiteral_9792/*"OPTION_VOLUME_MUTE_INFO"*/, v4);
+    sub_B16FFC(&StringLiteral_9789/*"OPTION_VOICE"*/, v5);
+    sub_B16FFC(&StringLiteral_9791/*"OPTION_VOLUME_MUTE_EXPLANATION"*/, v6);
+    sub_B16FFC(&StringLiteral_9779/*"OPTION_SE"*/, v7);
+    sub_B16FFC(&StringLiteral_9749/*"OPTION_BGM"*/, v8);
+    sub_B16FFC(&StringLiteral_9790/*"OPTION_VOLUME_MUTE"*/, v9);
     byte_40FF34B = 1;
   }
   bgmSilder = (UILabel_o *)this->fields.bgmSilder;
@@ -278,32 +278,32 @@ void __fastcall SetVolumeControl__initSetVolume(SetVolumeControl_o *this, const 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_9749, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_9749/*"OPTION_BGM"*/, 0LL);
   if ( !bgmSilder )
     goto LABEL_19;
   UILabel__set_text(bgmSilder, v11, 0LL);
   seSilder = (UILabel_o *)this->fields.seSilder;
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_9779, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_9779/*"OPTION_SE"*/, 0LL);
   if ( !seSilder )
     goto LABEL_19;
   UILabel__set_text(seSilder, v13, 0LL);
   voiceSilder = (UILabel_o *)this->fields.voiceSilder;
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_9789, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_9789/*"OPTION_VOICE"*/, 0LL);
   if ( !voiceSilder )
     goto LABEL_19;
   UILabel__set_text(voiceSilder, v15, 0LL);
   muteBtnInfoTxt = this->fields.muteBtnInfoTxt;
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_9790, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_9790/*"OPTION_VOLUME_MUTE"*/, 0LL);
   if ( !muteBtnInfoTxt )
     goto LABEL_19;
   UILabel__set_text(muteBtnInfoTxt, v17, 0LL);
   muteMaskExpTxt = this->fields.muteMaskExpTxt;
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_9792, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_9792/*"OPTION_VOLUME_MUTE_INFO"*/, 0LL);
   if ( !muteMaskExpTxt )
     goto LABEL_19;
   UILabel__set_text(muteMaskExpTxt, v19, 0LL);
   v20 = *(UILabel_o **)&this->fields.bgmValue;
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_9791, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_9791/*"OPTION_VOLUME_MUTE_EXPLANATION"*/, 0LL);
   if ( !v20 )
     goto LABEL_19;
   UILabel__set_text(v20, v21, 0LL);
@@ -369,8 +369,8 @@ void __fastcall SetVolumeControl__muteSetting(SetVolumeControl_o *this, const Me
   {
     sub_B16FFC(&OptionManager_TypeInfo, method);
     sub_B16FFC(&SetVolumeControl_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_16940, v4);
-    sub_B16FFC(&StringLiteral_16939, v5);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, v4);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v5);
     byte_40FF355 = 1;
   }
   muteMask = this->fields.muteMask;
@@ -378,7 +378,7 @@ void __fastcall SetVolumeControl__muteSetting(SetVolumeControl_o *this, const Me
     goto LABEL_34;
   if ( BYTE4(this[1].klass) )
   {
-    UIButton__set_normalSprite((UIButton_o *)muteMask, (System_String_o *)StringLiteral_16940, 0LL);
+    UIButton__set_normalSprite((UIButton_o *)muteMask, (System_String_o *)StringLiteral_16940/*"btn_on"*/, 0LL);
     muteBtnTxt = (UnityEngine_GameObject_o *)this->fields.muteBtnTxt;
     if ( muteBtnTxt )
     {
@@ -433,7 +433,7 @@ void __fastcall SetVolumeControl__muteSetting(SetVolumeControl_o *this, const Me
 LABEL_34:
     sub_B170D4();
   }
-  UIButton__set_normalSprite((UIButton_o *)muteMask, (System_String_o *)StringLiteral_16939, 0LL);
+  UIButton__set_normalSprite((UIButton_o *)muteMask, (System_String_o *)StringLiteral_16939/*"btn_off"*/, 0LL);
   v16 = (UnityEngine_GameObject_o *)this->fields.muteBtnTxt;
   if ( !v16 )
     goto LABEL_34;

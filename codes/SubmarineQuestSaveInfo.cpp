@@ -194,7 +194,7 @@ System_String_o *__fastcall SubmarineQuestSaveInfo__GetSaveValue(
   if ( (byte_40F7CA5 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_698, v4);
+    sub_B16FFC(&StringLiteral_698/*","*/, v4);
     byte_40F7CA5 = 1;
   }
   v54[0] = 0;
@@ -214,13 +214,13 @@ System_String_o *__fastcall SubmarineQuestSaveInfo__GetSaveValue(
     goto LABEL_37;
   v5->m_Items[0] = (System_String_o *)v14;
   sub_B16F98((BattleServantConfConponent_o *)v5->m_Items, v14, v8, v9, v10, v11, v12, v13);
-  v6 = (System_String_o *)StringLiteral_698;
-  if ( StringLiteral_698 )
+  v6 = (System_String_o *)StringLiteral_698/*","*/;
+  if ( StringLiteral_698/*","*/ )
   {
-    v6 = (System_String_o *)sub_B170BC(StringLiteral_698, v5->obj.klass->_1.element_class);
+    v6 = (System_String_o *)sub_B170BC(StringLiteral_698/*","*/, v5->obj.klass->_1.element_class);
     if ( !v6 )
       goto LABEL_38;
-    v7 = (System_Int32_array **)StringLiteral_698;
+    v7 = (System_Int32_array **)StringLiteral_698/*","*/;
   }
   else
   {
@@ -243,13 +243,13 @@ System_String_o *__fastcall SubmarineQuestSaveInfo__GetSaveValue(
     goto LABEL_37;
   v5->m_Items[2] = (System_String_o *)v25;
   sub_B16F98((BattleServantConfConponent_o *)&v5->m_Items[2], v25, v8, v20, v21, v22, v23, v24);
-  v6 = (System_String_o *)StringLiteral_698;
-  if ( StringLiteral_698 )
+  v6 = (System_String_o *)StringLiteral_698/*","*/;
+  if ( StringLiteral_698/*","*/ )
   {
-    v6 = (System_String_o *)sub_B170BC(StringLiteral_698, v5->obj.klass->_1.element_class);
+    v6 = (System_String_o *)sub_B170BC(StringLiteral_698/*","*/, v5->obj.klass->_1.element_class);
     if ( !v6 )
       goto LABEL_38;
-    v7 = (System_Int32_array **)StringLiteral_698;
+    v7 = (System_Int32_array **)StringLiteral_698/*","*/;
   }
   else
   {
@@ -272,13 +272,13 @@ System_String_o *__fastcall SubmarineQuestSaveInfo__GetSaveValue(
     goto LABEL_37;
   v5->m_Items[4] = (System_String_o *)v36;
   sub_B16F98((BattleServantConfConponent_o *)&v5->m_Items[4], v36, v8, v31, v32, v33, v34, v35);
-  v6 = (System_String_o *)StringLiteral_698;
-  if ( StringLiteral_698 )
+  v6 = (System_String_o *)StringLiteral_698/*","*/;
+  if ( StringLiteral_698/*","*/ )
   {
-    v6 = (System_String_o *)sub_B170BC(StringLiteral_698, v5->obj.klass->_1.element_class);
+    v6 = (System_String_o *)sub_B170BC(StringLiteral_698/*","*/, v5->obj.klass->_1.element_class);
     if ( !v6 )
       goto LABEL_38;
-    v7 = (System_Int32_array **)StringLiteral_698;
+    v7 = (System_Int32_array **)StringLiteral_698/*","*/;
   }
   else
   {
@@ -305,13 +305,13 @@ LABEL_38:
     goto LABEL_37;
   v5->m_Items[6] = (System_String_o *)v47;
   sub_B16F98((BattleServantConfConponent_o *)&v5->m_Items[6], v47, v8, v42, v43, v44, v45, v46);
-  v6 = (System_String_o *)StringLiteral_698;
-  if ( StringLiteral_698 )
+  v6 = (System_String_o *)StringLiteral_698/*","*/;
+  if ( StringLiteral_698/*","*/ )
   {
-    v6 = (System_String_o *)sub_B170BC(StringLiteral_698, v5->obj.klass->_1.element_class);
+    v6 = (System_String_o *)sub_B170BC(StringLiteral_698/*","*/, v5->obj.klass->_1.element_class);
     if ( v6 )
     {
-      v7 = (System_Int32_array **)StringLiteral_698;
+      v7 = (System_Int32_array **)StringLiteral_698/*","*/;
       goto LABEL_35;
     }
     goto LABEL_38;

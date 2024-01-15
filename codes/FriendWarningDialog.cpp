@@ -120,17 +120,17 @@ void __fastcall FriendWarningDialog__Init(FriendWarningDialog_o *this, const Met
 
   if ( (byte_40FB2A2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FB2A2 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -245,20 +245,20 @@ void __fastcall FriendWarningDialog__Open(
     sub_B16FFC(&int_TypeInfo, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_6448, v18);
-    sub_B16FFC(&StringLiteral_6452, v19);
-    sub_B16FFC(&StringLiteral_6447, v20);
-    sub_B16FFC(&StringLiteral_6455, v21);
-    sub_B16FFC(&StringLiteral_6445, v22);
-    sub_B16FFC(&StringLiteral_6456, v23);
-    sub_B16FFC(&StringLiteral_6446, v24);
-    sub_B16FFC(&StringLiteral_6449, v25);
-    sub_B16FFC(&StringLiteral_6385, v26);
-    sub_B16FFC(&StringLiteral_6451, v27);
-    sub_B16FFC(&StringLiteral_6454, v28);
-    sub_B16FFC(&StringLiteral_6453, v29);
-    sub_B16FFC(&StringLiteral_6386, v30);
-    sub_B16FFC(&StringLiteral_6450, v31);
+    sub_B16FFC(&StringLiteral_6448/*"FRIEND_NO_FRIEND_MESSAGE"*/, v18);
+    sub_B16FFC(&StringLiteral_6452/*"FRIEND_NO_OFFER_MESSAGE"*/, v19);
+    sub_B16FFC(&StringLiteral_6447/*"FRIEND_NO_FRIEND_CLOSE"*/, v20);
+    sub_B16FFC(&StringLiteral_6455/*"FRIEND_NO_STRING_CLOSE"*/, v21);
+    sub_B16FFC(&StringLiteral_6445/*"FRIEND_MAX_FRIEND_CLOSE"*/, v22);
+    sub_B16FFC(&StringLiteral_6456/*"FRIEND_NO_STRING_MESSAGE"*/, v23);
+    sub_B16FFC(&StringLiteral_6446/*"FRIEND_MAX_FRIEND_MESSAGE"*/, v24);
+    sub_B16FFC(&StringLiteral_6449/*"FRIEND_NO_OFFERED_CLOSE"*/, v25);
+    sub_B16FFC(&StringLiteral_6385/*"FOLLOW_MAX_CLOSE"*/, v26);
+    sub_B16FFC(&StringLiteral_6451/*"FRIEND_NO_OFFER_CLOSE"*/, v27);
+    sub_B16FFC(&StringLiteral_6454/*"FRIEND_NO_SEARCH_MESSAGE"*/, v28);
+    sub_B16FFC(&StringLiteral_6453/*"FRIEND_NO_SEARCH_CLOSE"*/, v29);
+    sub_B16FFC(&StringLiteral_6386/*"FOLLOW_MAX_MESSAGE"*/, v30);
+    sub_B16FFC(&StringLiteral_6450/*"FRIEND_NO_OFFERED_MESSAGE"*/, v31);
     byte_40FB2A3 = 1;
   }
   if ( !this->fields.state )
@@ -297,7 +297,7 @@ void __fastcall FriendWarningDialog__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v43 = LocalizationManager__Get((System_String_o *)StringLiteral_6446, 0LL);
+        v43 = LocalizationManager__Get((System_String_o *)StringLiteral_6446/*"FRIEND_MAX_FRIEND_MESSAGE"*/, 0LL);
         if ( !v42 )
           goto LABEL_54;
         v44 = v43;
@@ -313,7 +313,7 @@ void __fastcall FriendWarningDialog__Open(
           goto LABEL_54;
         UILabel__set_text(messageLabel, v48, 0LL);
         closeLabel = this->fields.closeLabel;
-        v50 = &StringLiteral_6445;
+        v50 = &StringLiteral_6445/*"FRIEND_MAX_FRIEND_CLOSE"*/;
         break;
       case 2:
         v53 = this->fields.messageLabel;
@@ -322,12 +322,12 @@ void __fastcall FriendWarningDialog__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v54 = LocalizationManager__Get((System_String_o *)StringLiteral_6454, 0LL);
+        v54 = LocalizationManager__Get((System_String_o *)StringLiteral_6454/*"FRIEND_NO_SEARCH_MESSAGE"*/, 0LL);
         if ( !v53 )
           goto LABEL_54;
         UILabel__set_text(v53, v54, 0LL);
         closeLabel = this->fields.closeLabel;
-        v50 = &StringLiteral_6453;
+        v50 = &StringLiteral_6453/*"FRIEND_NO_SEARCH_CLOSE"*/;
         break;
       case 3:
         v55 = this->fields.messageLabel;
@@ -336,12 +336,12 @@ void __fastcall FriendWarningDialog__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v56 = LocalizationManager__Get((System_String_o *)StringLiteral_6456, 0LL);
+        v56 = LocalizationManager__Get((System_String_o *)StringLiteral_6456/*"FRIEND_NO_STRING_MESSAGE"*/, 0LL);
         if ( !v55 )
           goto LABEL_54;
         UILabel__set_text(v55, v56, 0LL);
         closeLabel = this->fields.closeLabel;
-        v50 = &StringLiteral_6455;
+        v50 = &StringLiteral_6455/*"FRIEND_NO_STRING_CLOSE"*/;
         break;
       case 4:
         v57 = this->fields.messageLabel;
@@ -350,12 +350,12 @@ void __fastcall FriendWarningDialog__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v58 = LocalizationManager__Get((System_String_o *)StringLiteral_6452, 0LL);
+        v58 = LocalizationManager__Get((System_String_o *)StringLiteral_6452/*"FRIEND_NO_OFFER_MESSAGE"*/, 0LL);
         if ( !v57 )
           goto LABEL_54;
         UILabel__set_text(v57, v58, 0LL);
         closeLabel = this->fields.closeLabel;
-        v50 = &StringLiteral_6451;
+        v50 = &StringLiteral_6451/*"FRIEND_NO_OFFER_CLOSE"*/;
         break;
       case 5:
         v51 = this->fields.messageLabel;
@@ -364,12 +364,12 @@ void __fastcall FriendWarningDialog__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v52 = LocalizationManager__Get((System_String_o *)StringLiteral_6450, 0LL);
+        v52 = LocalizationManager__Get((System_String_o *)StringLiteral_6450/*"FRIEND_NO_OFFERED_MESSAGE"*/, 0LL);
         if ( !v51 )
           goto LABEL_54;
         UILabel__set_text(v51, v52, 0LL);
         closeLabel = this->fields.closeLabel;
-        v50 = &StringLiteral_6449;
+        v50 = &StringLiteral_6449/*"FRIEND_NO_OFFERED_CLOSE"*/;
         break;
       case 6:
         v59 = this->fields.messageLabel;
@@ -378,12 +378,12 @@ void __fastcall FriendWarningDialog__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_6448, 0LL);
+        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_6448/*"FRIEND_NO_FRIEND_MESSAGE"*/, 0LL);
         if ( !v59 )
           goto LABEL_54;
         UILabel__set_text(v59, v60, 0LL);
         closeLabel = this->fields.closeLabel;
-        v50 = &StringLiteral_6447;
+        v50 = &StringLiteral_6447/*"FRIEND_NO_FRIEND_CLOSE"*/;
         break;
       case 7:
         v61 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -399,7 +399,7 @@ void __fastcall FriendWarningDialog__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v65 = LocalizationManager__Get((System_String_o *)StringLiteral_6386, 0LL);
+        v65 = LocalizationManager__Get((System_String_o *)StringLiteral_6386/*"FOLLOW_MAX_MESSAGE"*/, 0LL);
         if ( !v64 )
           goto LABEL_54;
         v66 = v65;
@@ -419,7 +419,7 @@ void __fastcall FriendWarningDialog__Open(
           goto LABEL_54;
         UILabel__set_text(v63, v70, 0LL);
         closeLabel = this->fields.closeLabel;
-        v50 = &StringLiteral_6385;
+        v50 = &StringLiteral_6385/*"FOLLOW_MAX_CLOSE"*/;
         break;
       default:
         goto LABEL_52;
@@ -486,10 +486,10 @@ System_String_o *__fastcall FriendWarningDialog__get_closeBtnPath(
 {
   if ( (byte_40FB2A6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4203, method);
+    sub_B16FFC(&StringLiteral_4203/*"ConfirmWindow/CloseButton"*/, method);
     byte_40FB2A6 = 1;
   }
-  return (System_String_o *)StringLiteral_4203;
+  return (System_String_o *)StringLiteral_4203/*"ConfirmWindow/CloseButton"*/;
 }
 
 

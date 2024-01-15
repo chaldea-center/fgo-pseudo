@@ -333,8 +333,8 @@ void __fastcall RecipeRewardDialogComponent__OnClickSwitchShowMode(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_22700, v8);
-    sub_B16FFC(&StringLiteral_22702, v9);
+    sub_B16FFC(&StringLiteral_22700/*"treasurechest_btn"*/, v8);
+    sub_B16FFC(&StringLiteral_22702/*"treasurechest_btn_on"*/, v9);
     byte_40F82DB = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -345,7 +345,7 @@ void __fastcall RecipeRewardDialogComponent__OnClickSwitchShowMode(
   this->fields.isShowPossessionNum = !isShowPossessionNum;
   if ( !viewChangeButton )
     goto LABEL_30;
-  v12 = isShowPossessionNum ? (System_String_o **)&StringLiteral_22700 : (System_String_o **)&StringLiteral_22702;
+  v12 = isShowPossessionNum ? (System_String_o **)&StringLiteral_22700/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_22702/*"treasurechest_btn_on"*/;
   UIButton__set_normalSprite(viewChangeButton, *v12, 0LL);
   v13 = (UnityEngine_Component_o *)this->fields.viewChangeButton;
   if ( !v13 )
@@ -612,16 +612,16 @@ void __fastcall RecipeRewardDialogComponent__Open(
     sub_B16FFC(&Method_RecipeRewardDialogComponent___c__DisplayClass43_0__Open_b__0__, v32);
     sub_B16FFC(&Method_RecipeRewardDialogComponent___c__DisplayClass43_0__Open_b__1__, v33);
     sub_B16FFC(&RecipeRewardDialogComponent___c__DisplayClass43_0_TypeInfo, v34);
-    sub_B16FFC(&StringLiteral_13406, v35);
-    sub_B16FFC(&StringLiteral_11007, v36);
-    sub_B16FFC(&StringLiteral_11011, v37);
-    sub_B16FFC(&StringLiteral_690, v38);
-    sub_B16FFC(&StringLiteral_11005, v39);
-    sub_B16FFC(&StringLiteral_22700, v40);
-    sub_B16FFC(&StringLiteral_13405, v41);
-    sub_B16FFC(&StringLiteral_2468, v42);
-    sub_B16FFC(&StringLiteral_22706, v43);
-    sub_B16FFC(&StringLiteral_11012, v44);
+    sub_B16FFC(&StringLiteral_13406/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/, v35);
+    sub_B16FFC(&StringLiteral_11007/*"RECIPE_EVENT_ITEM_GET_DIALOG_TITLE"*/, v36);
+    sub_B16FFC(&StringLiteral_11011/*"RECIPE_EVENT_TOTAL_POINT_NUM"*/, v37);
+    sub_B16FFC(&StringLiteral_690/*"+"*/, v38);
+    sub_B16FFC(&StringLiteral_11005/*"RECIPE_EVENT_GET_POINT_NUM"*/, v39);
+    sub_B16FFC(&StringLiteral_22700/*"treasurechest_btn"*/, v40);
+    sub_B16FFC(&StringLiteral_13405/*"TUTORIAL_IMAGE_DIALOG_CLOSE"*/, v41);
+    sub_B16FFC(&StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v42);
+    sub_B16FFC(&StringLiteral_22706/*"treasurechest_img_bg_reward"*/, v43);
+    sub_B16FFC(&StringLiteral_11012/*"RECIPE_REWARD_DIALOG_VIEW_CHANGE"*/, v44);
     byte_40F82D4 = 1;
   }
   v45 = sub_B170CC(
@@ -647,7 +647,7 @@ void __fastcall RecipeRewardDialogComponent__Open(
                               (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_22700, 0LL);
+  AtlasManager__SetEventUI((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_22700/*"treasurechest_btn"*/, 0LL);
   this->fields.getEffect = getEffect;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.getEffect,
@@ -724,7 +724,7 @@ void __fastcall RecipeRewardDialogComponent__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v87 = LocalizationManager__Get((System_String_o *)StringLiteral_11007, 0LL);
+  v87 = LocalizationManager__Get((System_String_o *)StringLiteral_11007/*"RECIPE_EVENT_ITEM_GET_DIALOG_TITLE"*/, 0LL);
   if ( !eventRecipeEntity )
     goto LABEL_58;
   v88 = System_String__Format(v87, (Il2CppObject *)eventRecipeEntity->fields.name, 0LL);
@@ -737,12 +737,12 @@ void __fastcall RecipeRewardDialogComponent__Open(
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetItem(totalEventPointIcon, eventPointItemId, 0LL);
   AtlasManager__SetItem(this->fields.getEventPointIcon, eventRecipeEntity->fields.eventPointItemId, 0LL);
-  AtlasManager__SetEventUI(this->fields.totalEventPointBg, (System_String_o *)StringLiteral_22706, 0LL);
-  AtlasManager__SetEventUI(this->fields.getEventPointBg, (System_String_o *)StringLiteral_22706, 0LL);
+  AtlasManager__SetEventUI(this->fields.totalEventPointBg, (System_String_o *)StringLiteral_22706/*"treasurechest_img_bg_reward"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.getEventPointBg, (System_String_o *)StringLiteral_22706/*"treasurechest_img_bg_reward"*/, 0LL);
   v91 = this->fields.viewChangeButton;
   if ( !v91 )
     goto LABEL_58;
-  UIButton__set_normalSprite(v91, (System_String_o *)StringLiteral_22700, 0LL);
+  UIButton__set_normalSprite(v91, (System_String_o *)StringLiteral_22700/*"treasurechest_btn"*/, 0LL);
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
     goto LABEL_58;
@@ -756,21 +756,21 @@ void __fastcall RecipeRewardDialogComponent__Open(
     *(UnityEngine_Color_o *)&viewChangeButtonLabelEffectColors->m_Items[0].fields.g,
     0LL);
   v97 = this->fields.viewChangeButtonLabel;
-  v98 = LocalizationManager__Get((System_String_o *)StringLiteral_11012, 0LL);
+  v98 = LocalizationManager__Get((System_String_o *)StringLiteral_11012/*"RECIPE_REWARD_DIALOG_VIEW_CHANGE"*/, 0LL);
   if ( !v97 )
     goto LABEL_58;
   UILabel__set_text(v97, v98, 0LL);
   getTitleLabel = this->fields.getTitleLabel;
-  v100 = LocalizationManager__Get((System_String_o *)StringLiteral_11005, 0LL);
+  v100 = LocalizationManager__Get((System_String_o *)StringLiteral_11005/*"RECIPE_EVENT_GET_POINT_NUM"*/, 0LL);
   if ( !getTitleLabel )
     goto LABEL_58;
   UILabel__set_text(getTitleLabel, v100, 0LL);
   getNumLabel = this->fields.getNumLabel;
-  v102 = LocalizationManager__Get((System_String_o *)StringLiteral_2468, 0LL);
+  v102 = LocalizationManager__Get((System_String_o *)StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
   v164 = this->fields.maxPlayCnt * eventRecipeEntity->fields.eventPointNum;
   v103 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v164);
   v104 = System_String__Format(v102, v103, 0LL);
-  v105 = System_String__Concat_43743732((System_String_o *)StringLiteral_690, v104, 0LL);
+  v105 = System_String__Concat_43743732((System_String_o *)StringLiteral_690/*"+"*/, v104, 0LL);
   if ( !getNumLabel )
     goto LABEL_58;
   UILabel__set_text(getNumLabel, v105, 0LL);
@@ -779,12 +779,12 @@ void __fastcall RecipeRewardDialogComponent__Open(
   EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(eventRecipeGiftEntity->fields.eventId, 0LL);
   totalTitleLabel = this->fields.totalTitleLabel;
   v108 = EventPointNoGroup;
-  v109 = LocalizationManager__Get((System_String_o *)StringLiteral_11011, 0LL);
+  v109 = LocalizationManager__Get((System_String_o *)StringLiteral_11011/*"RECIPE_EVENT_TOTAL_POINT_NUM"*/, 0LL);
   if ( !totalTitleLabel )
     goto LABEL_58;
   UILabel__set_text(totalTitleLabel, v109, 0LL);
   totalNumLabel = this->fields.totalNumLabel;
-  v111 = LocalizationManager__Get((System_String_o *)StringLiteral_2468, 0LL);
+  v111 = LocalizationManager__Get((System_String_o *)StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
   v163 = v108;
   v112 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v163);
   v113 = System_String__Format(v111, v112, 0LL);
@@ -881,7 +881,7 @@ LABEL_59:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v145 = &StringLiteral_13406;
+    v145 = &StringLiteral_13406/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/;
   }
   else
   {
@@ -890,7 +890,7 @@ LABEL_59:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v145 = &StringLiteral_13405;
+    v145 = &StringLiteral_13405/*"TUTORIAL_IMAGE_DIALOG_CLOSE"*/;
   }
   v146 = LocalizationManager__Get((System_String_o *)*v145, 0LL);
   if ( !v144
@@ -2408,13 +2408,13 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass43_0___Open_b__2(
 
   if ( (byte_40F7416 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12986, method);
+    sub_B16FFC(&StringLiteral_12986/*"StartDisp"*/, method);
     byte_40F7416 = 1;
   }
   _4__this = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
   if ( !_4__this )
     sub_B170D4();
-  UnityEngine_MonoBehaviour__StartCoroutine(_4__this, (System_String_o *)StringLiteral_12986, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine(_4__this, (System_String_o *)StringLiteral_12986/*"StartDisp"*/, 0LL);
 }
 
 
@@ -2486,7 +2486,7 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass44_0___SetResultDat
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, v8);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_19305, v11);
+    sub_B16FFC(&StringLiteral_19305/*"icon_{0}"*/, v11);
     byte_40F7417 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -2597,7 +2597,7 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass44_0___SetResultDat
   v45 = (UISprite_o *)v42;
   iconId = eventRecipeEntity->fields.iconId;
   v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-  v47 = System_String__Format((System_String_o *)StringLiteral_19305, v46, 0LL);
+  v47 = System_String__Format((System_String_o *)StringLiteral_19305/*"icon_{0}"*/, v46, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI_28584872(eventId, v45, v47, 0LL);

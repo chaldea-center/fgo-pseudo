@@ -52,8 +52,8 @@ void __fastcall EventHeelPortraitListViewItemDraw__SetItem(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, item);
     sub_B16FFC(&System_Convert_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21417, v6);
-    sub_B16FFC(&StringLiteral_19246, v7);
+    sub_B16FFC(&StringLiteral_21417/*"portrait_unknown"*/, v6);
+    sub_B16FFC(&StringLiteral_19246/*"icon_common_new01"*/, v7);
     byte_40FB6A6 = 1;
   }
   if ( !item )
@@ -75,7 +75,7 @@ void __fastcall EventHeelPortraitListViewItemDraw__SetItem(
   else
   {
     p_Entity_k__BackingField = &item->fields._Entity_k__BackingField;
-    v11 = (System_String_o *)StringLiteral_21417;
+    v11 = (System_String_o *)StringLiteral_21417/*"portrait_unknown"*/;
   }
   if ( !*p_Entity_k__BackingField )
 LABEL_23:
@@ -98,7 +98,7 @@ LABEL_23:
   v15 = this->fields.newImgSprite;
   if ( !v15 )
     goto LABEL_23;
-  ShiningIconComponent__Set_33652672(v15, (System_String_o *)StringLiteral_19246, 0LL);
+  ShiningIconComponent__Set_33652672(v15, (System_String_o *)StringLiteral_19246/*"icon_common_new01"*/, 0LL);
   v16 = (UnityEngine_Component_o *)this->fields.newImgSprite;
   if ( !v16 )
     goto LABEL_23;

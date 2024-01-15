@@ -472,7 +472,7 @@ void __fastcall StandFigureBack__Fadein(StandFigureBack_o *this, System_Action_o
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, callback);
     sub_B16FFC(&StandFigureBack_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_5941, v11);
+    sub_B16FFC(&StringLiteral_5941/*"EndFadein"*/, v11);
     byte_40FAE49 = 1;
   }
   this->fields.baseCallbackFunc = callback;
@@ -534,8 +534,8 @@ void __fastcall StandFigureBack__Fadein(StandFigureBack_o *this, System_Action_o
               v20 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
               v19->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v20;
               sub_B16F98((BattleServantConfConponent_o *)&v19->fields.eventReceiver, v20, v21, v22, v23, v24, v25, v26);
-              v27 = (System_Int32_array **)StringLiteral_5941;
-              v19->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5941;
+              v27 = (System_Int32_array **)StringLiteral_5941/*"EndFadein"*/;
+              v19->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5941/*"EndFadein"*/;
               sub_B16F98(
                 (BattleServantConfConponent_o *)&v19->fields.callWhenFinished,
                 v27,
@@ -614,7 +614,7 @@ void __fastcall StandFigureBack__Fadeout(StandFigureBack_o *this, System_Action_
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, callback);
     sub_B16FFC(&StandFigureBack_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_5942, v11);
+    sub_B16FFC(&StringLiteral_5942/*"EndFadeout"*/, v11);
     byte_40FAE4A = 1;
   }
   this->fields.baseCallbackFunc = callback;
@@ -694,8 +694,8 @@ void __fastcall StandFigureBack__Fadeout(StandFigureBack_o *this, System_Action_
             v30 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
             v29->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v30;
             sub_B16F98((BattleServantConfConponent_o *)&v29->fields.eventReceiver, v30, v31, v32, v33, v34, v35, v36);
-            v37 = (System_Int32_array **)StringLiteral_5942;
-            v29->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5942;
+            v37 = (System_Int32_array **)StringLiteral_5942/*"EndFadeout"*/;
+            v29->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5942/*"EndFadeout"*/;
             sub_B16F98((BattleServantConfConponent_o *)&v29->fields.callWhenFinished, v37, v38, v39, v40, v41, v42, v43);
             return;
           }

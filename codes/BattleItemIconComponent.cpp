@@ -8,13 +8,13 @@ void __fastcall BattleItemIconComponent___ctor(BattleItemIconComponent_o *this, 
   if ( (byte_40F734B & 1) == 0 )
   {
     sub_B16FFC(&ItemIconComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_690, v3);
+    sub_B16FFC(&StringLiteral_690/*"+"*/, v3);
     byte_40F734B = 1;
   }
   yellow = UnityEngine_Color__get_yellow(0LL);
   this->fields.addCountColor.fields.rgba = UnityEngine_Color32__op_Implicit(yellow, 0LL).fields.rgba;
-  v4 = StringLiteral_690;
-  this->fields.addCountStr = (struct System_String_o *)StringLiteral_690;
+  v4 = StringLiteral_690/*"+"*/;
+  this->fields.addCountStr = (struct System_String_o *)StringLiteral_690/*"+"*/;
   sub_B16F98(&this->fields.addCountStr, v4);
   v6 = UnityEngine_Color__get_yellow(0LL);
   this->fields.nowAddCountColor.fields.rgba = UnityEngine_Color32__op_Implicit(v6, 0LL).fields.rgba;
@@ -129,10 +129,10 @@ void __fastcall BattleItemIconComponent__setCounterLabel(
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&type);
     sub_B16FFC(&object___TypeInfo, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_23556, v11);
-    sub_B16FFC(&StringLiteral_15766, v12);
-    sub_B16FFC(&StringLiteral_23555, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_23556/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/, v11);
+    sub_B16FFC(&StringLiteral_15766/*"[{0}]({1}{2:#,0})[-]"*/, v12);
+    sub_B16FFC(&StringLiteral_23555/*"{0}{1:#,0}"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40F734A = 1;
   }
   counterLabel = (UnityEngine_Object_o *)this->fields.counterLabel;
@@ -196,7 +196,7 @@ void __fastcall BattleItemIconComponent__setCounterLabel(
               {
                 v30->m_Items[4] = v33;
                 sub_B16F98(&v30->m_Items[4], v33);
-                v34 = System_String__Format_43822456((System_String_o *)StringLiteral_23556, v30, 0LL);
+                v34 = System_String__Format_43822456((System_String_o *)StringLiteral_23556/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/, v30, 0LL);
                 if ( !v24 )
                   goto LABEL_37;
                 v35 = v34;
@@ -221,7 +221,7 @@ LABEL_38:
   v18 = this->fields.counterLabel;
   if ( (count & 0x80000000) != 0 )
   {
-    v21 = (System_String_o *)StringLiteral_1;
+    v21 = (System_String_o *)StringLiteral_1/*""*/;
     if ( !v18 )
       goto LABEL_37;
   }
@@ -230,7 +230,7 @@ LABEL_38:
     v19 = (Il2CppObject *)v17;
     v45 = count;
     v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45);
-    v21 = System_String__Format_43739268((System_String_o *)StringLiteral_23555, v19, v20, 0LL);
+    v21 = System_String__Format_43739268((System_String_o *)StringLiteral_23555/*"{0}{1:#,0}"*/, v19, v20, 0LL);
     if ( !v18 )
 LABEL_37:
       sub_B170D4();
@@ -249,7 +249,7 @@ LABEL_37:
     v41 = (Il2CppObject *)v39;
     v45 = addCount;
     v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45);
-    v43 = System_String__Format_43744796((System_String_o *)StringLiteral_15766, v41, v40, v42, 0LL);
+    v43 = System_String__Format_43744796((System_String_o *)StringLiteral_15766/*"[{0}]({1}{2:#,0})[-]"*/, v41, v40, v42, 0LL);
     v35 = System_String__Concat_43743732(mText, v43, 0LL);
     v36 = v37;
     goto LABEL_35;

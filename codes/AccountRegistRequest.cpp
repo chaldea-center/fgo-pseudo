@@ -29,7 +29,7 @@ System_String_o *__fastcall AccountRegistRequest__getMockData(AccountRegistReque
   if ( (byte_40F7E15 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9125, v2);
+    sub_B16FFC(&StringLiteral_9125/*"MockAccountRegistRequest"*/, v2);
     byte_40F7E15 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -37,7 +37,7 @@ System_String_o *__fastcall AccountRegistRequest__getMockData(AccountRegistReque
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9125, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9125/*"MockAccountRegistRequest"*/, 0LL);
 }
 
 
@@ -49,7 +49,7 @@ System_String_o *__fastcall AccountRegistRequest__getURL(AccountRegistRequest_o 
   if ( (byte_40F7E14 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16165, v2);
+    sub_B16FFC(&StringLiteral_16165/*"account/regist"*/, v2);
     byte_40F7E14 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -58,7 +58,7 @@ System_String_o *__fastcall AccountRegistRequest__getURL(AccountRegistRequest_o 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_16165, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_16165/*"account/regist"*/, 0LL);
 }
 
 
@@ -92,11 +92,11 @@ void __fastcall AccountRegistRequest__requestCompleted(
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
-    sub_B16FFC(&StringLiteral_16464, v8);
-    sub_B16FFC(&StringLiteral_20980, v9);
-    sub_B16FFC(&StringLiteral_21854, v10);
-    sub_B16FFC(&StringLiteral_22948, v11);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
+    sub_B16FFC(&StringLiteral_16464/*"authKey"*/, v8);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v9);
+    sub_B16FFC(&StringLiteral_21854/*"secretKey"*/, v10);
+    sub_B16FFC(&StringLiteral_22948/*"userId"*/, v11);
     byte_40F7E16 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -111,7 +111,7 @@ void __fastcall AccountRegistRequest__requestCompleted(
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v13->fields.success,
-             (System_Type_o *)StringLiteral_22948,
+             (System_Type_o *)StringLiteral_22948/*"userId"*/,
              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_17;
@@ -120,7 +120,7 @@ void __fastcall AccountRegistRequest__requestCompleted(
                                Item->klass->vtable[4].methodPtr);
     v17 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
             success,
-            (System_Type_o *)StringLiteral_16464,
+            (System_Type_o *)StringLiteral_16464/*"authKey"*/,
             (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !v17
       || (v18 = (System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))v17->klass->vtable[3].method)(
@@ -128,7 +128,7 @@ void __fastcall AccountRegistRequest__requestCompleted(
                                      v17->klass->vtable[4].methodPtr),
           (v19 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                    success,
-                   (System_Type_o *)StringLiteral_21854,
+                   (System_Type_o *)StringLiteral_21854/*"secretKey"*/,
                    (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL)
       || (v20 = (System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))v19->klass->vtable[3].method)(
                                      v19,
@@ -141,11 +141,11 @@ LABEL_17:
       sub_B170D4();
     }
     NetworkManager__WriteAuth(v22, 0LL);
-    v23 = (System_String_o **)&StringLiteral_21129;
+    v23 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
   }
   else
   {
-    v23 = (System_String_o **)&StringLiteral_20980;
+    v23 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, *v23, 0LL);
 }

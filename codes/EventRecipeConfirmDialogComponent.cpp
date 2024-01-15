@@ -234,8 +234,8 @@ void __fastcall EventRecipeConfirmDialogComponent__CallOnDecide(
     sub_B16FFC(&Method_EventRecipeConfirmDialogComponent_CallBackPresentBoxOverDialog__, v7);
     sub_B16FFC(&int_TypeInfo, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_10992, v10);
-    this = (EventRecipeConfirmDialogComponent_o *)sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_10992/*"RECIPE_CHECK_PRESEN_NUM_TXT"*/, v10);
+    this = (EventRecipeConfirmDialogComponent_o *)sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F60FC = 1;
   }
   if ( v4->fields.onDecide )
@@ -253,7 +253,7 @@ void __fastcall EventRecipeConfirmDialogComponent__CallOnDecide(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v20 = LocalizationManager__Get((System_String_o *)StringLiteral_10992, 0LL);
+        v20 = LocalizationManager__Get((System_String_o *)StringLiteral_10992/*"RECIPE_CHECK_PRESEN_NUM_TXT"*/, 0LL);
         v21 = BalanceConfig_TypeInfo;
         if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -279,7 +279,7 @@ void __fastcall EventRecipeConfirmDialogComponent__CallOnDecide(
           0LL);
         if ( presentBoxOverDlg )
         {
-          PresentBoxOverDialog__Open(presentBoxOverDlg, (System_String_o *)StringLiteral_1, v25, v30, 0, 0LL);
+          PresentBoxOverDialog__Open(presentBoxOverDlg, (System_String_o *)StringLiteral_1/*""*/, v25, v30, 0, 0LL);
           goto LABEL_14;
         }
       }
@@ -1249,13 +1249,13 @@ void __fastcall EventRecipeConfirmDialogComponent__Open(
     sub_B16FFC(&System_Collections_Generic_List_GameObject__TypeInfo, v20);
     sub_B16FFC(&LocalizationManager_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_B16FFC(&StringLiteral_11000, v23);
-    sub_B16FFC(&StringLiteral_10998, v24);
-    sub_B16FFC(&StringLiteral_19305, v25);
-    sub_B16FFC(&StringLiteral_10999, v26);
-    sub_B16FFC(&StringLiteral_10997, v27);
-    sub_B16FFC(&StringLiteral_3254, v28);
-    sub_B16FFC(&StringLiteral_3251, v29);
+    sub_B16FFC(&StringLiteral_11000/*"RECIPE_CONFIRM_DIALOG_TOP_MESSAGE"*/, v23);
+    sub_B16FFC(&StringLiteral_10998/*"RECIPE_CONFIRM_DIALOG_REWARD_LIST_TITLE"*/, v24);
+    sub_B16FFC(&StringLiteral_19305/*"icon_{0}"*/, v25);
+    sub_B16FFC(&StringLiteral_10999/*"RECIPE_CONFIRM_DIALOG_TITLE"*/, v26);
+    sub_B16FFC(&StringLiteral_10997/*"RECIPE_CONFIRM_DIALOG_REWARD_LIST_DESCRIPTION"*/, v27);
+    sub_B16FFC(&StringLiteral_3254/*"COMMON_CONFIRM_EXECUTE"*/, v28);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v29);
     byte_40F60F0 = 1;
   }
   if ( !this->fields.state )
@@ -1340,7 +1340,7 @@ void __fastcall EventRecipeConfirmDialogComponent__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v68 = LocalizationManager__Get((System_String_o *)StringLiteral_10999, 0LL);
+    v68 = LocalizationManager__Get((System_String_o *)StringLiteral_10999/*"RECIPE_CONFIRM_DIALOG_TITLE"*/, 0LL);
     if ( !*p_eventRecipeEntity )
       goto LABEL_24;
     v69 = System_String__Format(v68, (Il2CppObject *)(*p_eventRecipeEntity)->fields.name, 0LL);
@@ -1353,7 +1353,7 @@ void __fastcall EventRecipeConfirmDialogComponent__Open(
     eventItemIcon = this->fields.eventItemIcon;
     iconId = eventRecipeEntity->fields.iconId;
     v72 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-    v73 = System_String__Format((System_String_o *)StringLiteral_19305, v72, 0LL);
+    v73 = System_String__Format((System_String_o *)StringLiteral_19305/*"icon_{0}"*/, v72, 0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {
@@ -1361,12 +1361,12 @@ void __fastcall EventRecipeConfirmDialogComponent__Open(
     }
     AtlasManager__SetEventUI_28584872(eventId, eventItemIcon, v73, 0LL);
     cancelButtonLb = this->fields.cancelButtonLb;
-    v75 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+    v75 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
     if ( !cancelButtonLb )
       goto LABEL_24;
     UILabel__set_text(cancelButtonLb, v75, 0LL);
     decideButtonLb = this->fields.decideButtonLb;
-    v77 = LocalizationManager__Get((System_String_o *)StringLiteral_3254, 0LL);
+    v77 = LocalizationManager__Get((System_String_o *)StringLiteral_3254/*"COMMON_CONFIRM_EXECUTE"*/, 0LL);
     if ( !decideButtonLb )
       goto LABEL_24;
     UILabel__set_text(decideButtonLb, v77, 0LL);
@@ -1411,15 +1411,15 @@ void __fastcall EventRecipeConfirmDialogComponent__Open(
     EventRecipeConfirmDialogComponent__InitItemSlider(this, v97);
     EventRecipeConfirmDialogComponent__SetExchangeBase(this, v98);
     rewardListTitleLb = this->fields.rewardListTitleLb;
-    v100 = LocalizationManager__Get((System_String_o *)StringLiteral_10998, 0LL);
+    v100 = LocalizationManager__Get((System_String_o *)StringLiteral_10998/*"RECIPE_CONFIRM_DIALOG_REWARD_LIST_TITLE"*/, 0LL);
     if ( !rewardListTitleLb
       || (UILabel__set_text(rewardListTitleLb, v100, 0LL),
           rewardListDescriptionLb = this->fields.rewardListDescriptionLb,
-          v102 = LocalizationManager__Get((System_String_o *)StringLiteral_10997, 0LL),
+          v102 = LocalizationManager__Get((System_String_o *)StringLiteral_10997/*"RECIPE_CONFIRM_DIALOG_REWARD_LIST_DESCRIPTION"*/, 0LL),
           !rewardListDescriptionLb)
       || (UILabel__set_text(rewardListDescriptionLb, v102, 0LL),
           topLabel = this->fields.topLabel,
-          v104 = LocalizationManager__Get((System_String_o *)StringLiteral_11000, 0LL),
+          v104 = LocalizationManager__Get((System_String_o *)StringLiteral_11000/*"RECIPE_CONFIRM_DIALOG_TOP_MESSAGE"*/, 0LL),
           !topLabel) )
     {
 LABEL_24:
@@ -1547,11 +1547,11 @@ void __fastcall EventRecipeConfirmDialogComponent__SetExchangeBase(
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&Method_System_Linq_Enumerable_Contains_bool___, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_10994, v5);
-    sub_B16FFC(&StringLiteral_11001, v6);
-    sub_B16FFC(&StringLiteral_10993, v7);
-    sub_B16FFC(&StringLiteral_10996, v8);
-    sub_B16FFC(&StringLiteral_10995, v9);
+    sub_B16FFC(&StringLiteral_10994/*"RECIPE_CONFIRM_DIALOG_DESTINATION_POINT_NAME"*/, v5);
+    sub_B16FFC(&StringLiteral_11001/*"RECIPE_CONFIRM_DIALOG_WARNIG_MESSAGE"*/, v6);
+    sub_B16FFC(&StringLiteral_10993/*"RECIPE_CONFIRM_DIALOG_DESTINATION_LABEL"*/, v7);
+    sub_B16FFC(&StringLiteral_10996/*"RECIPE_CONFIRM_DIALOG_ORIGIN_LABEL"*/, v8);
+    sub_B16FFC(&StringLiteral_10995/*"RECIPE_CONFIRM_DIALOG_KIND"*/, v9);
     byte_40F60F3 = 1;
   }
   warningLb = this->fields.warningLb;
@@ -1560,7 +1560,7 @@ void __fastcall EventRecipeConfirmDialogComponent__SetExchangeBase(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11001, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11001/*"RECIPE_CONFIRM_DIALOG_WARNIG_MESSAGE"*/, 0LL);
   if ( !warningLb )
     goto LABEL_124;
   UILabel__set_text(warningLb, v11, 0LL);
@@ -1590,7 +1590,7 @@ void __fastcall EventRecipeConfirmDialogComponent__SetExchangeBase(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10996, 0LL);
+      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10996/*"RECIPE_CONFIRM_DIALOG_ORIGIN_LABEL"*/, 0LL);
       if ( !exchangeOriginLb )
         goto LABEL_124;
       UILabel__set_text(exchangeOriginLb, v19, 0LL);
@@ -1688,7 +1688,7 @@ void __fastcall EventRecipeConfirmDialogComponent__SetExchangeBase(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v49 = LocalizationManager__Get((System_String_o *)StringLiteral_10995, 0LL);
+      v49 = LocalizationManager__Get((System_String_o *)StringLiteral_10995/*"RECIPE_CONFIRM_DIALOG_KIND"*/, 0LL);
       if ( !v48 )
         goto LABEL_124;
       UILabel__set_text(v48, v49, 0LL);
@@ -1719,7 +1719,7 @@ void __fastcall EventRecipeConfirmDialogComponent__SetExchangeBase(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v55 = LocalizationManager__Get((System_String_o *)StringLiteral_10996, 0LL);
+        v55 = LocalizationManager__Get((System_String_o *)StringLiteral_10996/*"RECIPE_CONFIRM_DIALOG_ORIGIN_LABEL"*/, 0LL);
         if ( !exchangeOriginLb2 )
           break;
         UILabel__set_text(exchangeOriginLb2, v55, 0LL);
@@ -1821,7 +1821,7 @@ LABEL_125:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v82 = LocalizationManager__Get((System_String_o *)StringLiteral_10995, 0LL);
+        v82 = LocalizationManager__Get((System_String_o *)StringLiteral_10995/*"RECIPE_CONFIRM_DIALOG_KIND"*/, 0LL);
         if ( !v81 )
           break;
         UILabel__set_text(v81, v82, 0LL);
@@ -1850,7 +1850,7 @@ LABEL_103:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v86 = LocalizationManager__Get((System_String_o *)StringLiteral_10993, 0LL);
+  v86 = LocalizationManager__Get((System_String_o *)StringLiteral_10993/*"RECIPE_CONFIRM_DIALOG_DESTINATION_LABEL"*/, 0LL);
   if ( !exchangeDestinationLb )
     goto LABEL_124;
   UILabel__set_text(exchangeDestinationLb, v86, 0LL);
@@ -1866,7 +1866,7 @@ LABEL_103:
     goto LABEL_124;
   UILabel__set_text(exchangeDestinationItemCount, v91, 0LL);
   exchangeDestinationCountKind = this->fields.exchangeDestinationCountKind;
-  v93 = LocalizationManager__Get((System_String_o *)StringLiteral_10995, 0LL);
+  v93 = LocalizationManager__Get((System_String_o *)StringLiteral_10995/*"RECIPE_CONFIRM_DIALOG_KIND"*/, 0LL);
   if ( !exchangeDestinationCountKind )
     goto LABEL_124;
   UILabel__set_text(exchangeDestinationCountKind, v93, 0LL);
@@ -1875,7 +1875,7 @@ LABEL_103:
     goto LABEL_124;
   AtlasManager__SetItem(this->fields.exchangeDestinationPointIcon, eventRecipeEntity->fields.eventPointItemId, 0LL);
   exchangeDestinationPointName = this->fields.exchangeDestinationPointName;
-  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_10994, 0LL);
+  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_10994/*"RECIPE_CONFIRM_DIALOG_DESTINATION_POINT_NAME"*/, 0LL);
   if ( !exchangeDestinationPointName )
     goto LABEL_124;
   UILabel__set_text(exchangeDestinationPointName, v96, 0LL);
@@ -2538,8 +2538,8 @@ void __fastcall EventRecipeConfirmDialogComponent___c__DisplayClass62_0___CheckS
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_12612, v4);
-    sub_B16FFC(&StringLiteral_12651, v5);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v4);
+    sub_B16FFC(&StringLiteral_12651/*"ServantCombine"*/, v5);
     byte_40F702A = 1;
   }
   result = this->fields.result;
@@ -2548,7 +2548,7 @@ void __fastcall EventRecipeConfirmDialogComponent___c__DisplayClass62_0___CheckS
     case 2:
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v12 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v16, v17, v18, v19);
-      SceneJumpInfo___ctor_29748028(v12, (System_String_o *)StringLiteral_12612, 0, 0LL);
+      SceneJumpInfo___ctor_29748028(v12, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 0, 0LL);
       if ( Instance )
       {
         v13 = 22;
@@ -2570,7 +2570,7 @@ LABEL_13:
     case 0:
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v12 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v8, v9, v10, v11);
-      SceneJumpInfo___ctor_29747932(v12, (System_String_o *)StringLiteral_12651, 0LL);
+      SceneJumpInfo___ctor_29747932(v12, (System_String_o *)StringLiteral_12651/*"ServantCombine"*/, 0LL);
       if ( Instance )
       {
         v13 = 32;
@@ -2621,9 +2621,9 @@ void __fastcall EventRecipeConfirmDialogComponent___c__DisplayClass62_1___CheckS
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_12655, v4);
-    sub_B16FFC(&StringLiteral_12612, v5);
-    sub_B16FFC(&StringLiteral_12654, v6);
+    sub_B16FFC(&StringLiteral_12655/*"ServantEquipList"*/, v4);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v5);
+    sub_B16FFC(&StringLiteral_12654/*"ServantEQCombine"*/, v6);
     byte_40F702B = 1;
   }
   result = this->fields.result;
@@ -2632,7 +2632,7 @@ void __fastcall EventRecipeConfirmDialogComponent___c__DisplayClass62_1___CheckS
     case 2:
       Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v13 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v19, v20, v21, v22);
-      SceneJumpInfo___ctor_29748028(v13, (System_String_o *)StringLiteral_12612, 1, 0LL);
+      SceneJumpInfo___ctor_29748028(v13, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 1, 0LL);
       if ( Instance )
       {
         v14 = 22;
@@ -2642,7 +2642,7 @@ void __fastcall EventRecipeConfirmDialogComponent___c__DisplayClass62_1___CheckS
     case 1:
       Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v13 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v15, v16, v17, v18);
-      SceneJumpInfo___ctor_29747932(v13, (System_String_o *)StringLiteral_12655, 0LL);
+      SceneJumpInfo___ctor_29747932(v13, (System_String_o *)StringLiteral_12655/*"ServantEquipList"*/, 0LL);
       if ( Instance )
       {
         v14 = 71;
@@ -2653,7 +2653,7 @@ LABEL_14:
     case 0:
       Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v13 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v9, v10, v11, v12);
-      SceneJumpInfo___ctor_29747932(v13, (System_String_o *)StringLiteral_12654, 0LL);
+      SceneJumpInfo___ctor_29747932(v13, (System_String_o *)StringLiteral_12654/*"ServantEQCombine"*/, 0LL);
       if ( Instance )
       {
         v14 = 32;
@@ -2691,14 +2691,14 @@ void __fastcall EventRecipeConfirmDialogComponent___c__DisplayClass62_2___CheckS
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_12612, v4);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v4);
     byte_40F702C = 1;
   }
   if ( this->fields.result == 2 )
   {
     Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     v10 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v6, v7, v8, v9);
-    SceneJumpInfo___ctor_29748028(v10, (System_String_o *)StringLiteral_12612, 2, 0LL);
+    SceneJumpInfo___ctor_29748028(v10, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 2, 0LL);
     if ( !Instance )
       sub_B170D4();
     AvalonSceneManager__transitionScene(Instance, 22, 1, (Il2CppObject *)v10, 0LL);

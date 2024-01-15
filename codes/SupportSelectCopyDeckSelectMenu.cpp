@@ -192,9 +192,9 @@ void __fastcall SupportSelectCopyDeckSelectMenu__Open(
     sub_B16FFC(&System_Action_TypeInfo, targetDeckList);
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
     sub_B16FFC(&Method_SupportSelectCopyDeckSelectMenu_OnFinishedOpen__, v12);
-    sub_B16FFC(&StringLiteral_12461, v13);
-    sub_B16FFC(&StringLiteral_12460, v14);
-    sub_B16FFC(&StringLiteral_12462, v15);
+    sub_B16FFC(&StringLiteral_12461/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_MESSAGE"*/, v13);
+    sub_B16FFC(&StringLiteral_12460/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_CANCEL"*/, v14);
+    sub_B16FFC(&StringLiteral_12462/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_TITLE"*/, v15);
     byte_40FD507 = 1;
   }
   if ( this->fields.currentState == 2 )
@@ -222,15 +222,15 @@ void __fastcall SupportSelectCopyDeckSelectMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12462, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12462/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_TITLE"*/, 0LL);
     if ( !titleLabel
       || (UILabel__set_text(titleLabel, v22, 0LL),
           messageLabel = this->fields.messageLabel,
-          v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12461, 0LL),
+          v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12461/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_MESSAGE"*/, 0LL),
           !messageLabel)
       || (UILabel__set_text(messageLabel, v24, 0LL),
           cancelButtonLabel = this->fields.cancelButtonLabel,
-          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12460, 0LL),
+          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12460/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_CANCEL"*/, 0LL),
           !cancelButtonLabel) )
     {
 LABEL_15:
@@ -302,10 +302,10 @@ System_String_o *__fastcall SupportSelectCopyDeckSelectMenu__get_closeBtnPath(
 {
   if ( (byte_40FD50C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2728, method);
+    sub_B16FFC(&StringLiteral_2728/*"BaseWindow/CacnelButton"*/, method);
     byte_40FD50C = 1;
   }
-  return (System_String_o *)StringLiteral_2728;
+  return (System_String_o *)StringLiteral_2728/*"BaseWindow/CacnelButton"*/;
 }
 
 

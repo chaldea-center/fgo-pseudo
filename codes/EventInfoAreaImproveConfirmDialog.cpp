@@ -99,13 +99,13 @@ void __fastcall EventInfoAreaImproveConfirmDialog__Init(
   if ( (byte_40FB6B2 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_5524, v3);
-    sub_B16FFC(&StringLiteral_5528, v4);
-    sub_B16FFC(&StringLiteral_3251, v5);
-    sub_B16FFC(&StringLiteral_5523, v6);
-    sub_B16FFC(&StringLiteral_5525, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
-    sub_B16FFC(&StringLiteral_5526, v9);
+    sub_B16FFC(&StringLiteral_5524/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CONSUME_ITEM_TITLE"*/, v3);
+    sub_B16FFC(&StringLiteral_5528/*"EVENT_AREA_IMPROVE_DECIDE_BUTTON"*/, v4);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v5);
+    sub_B16FFC(&StringLiteral_5523/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CAUTION"*/, v6);
+    sub_B16FFC(&StringLiteral_5525/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_MESSAGE"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
+    sub_B16FFC(&StringLiteral_5526/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_SUBTITLE"*/, v9);
     byte_40FB6B2 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -113,37 +113,37 @@ void __fastcall EventInfoAreaImproveConfirmDialog__Init(
   this->fields.isClose = 0;
   if ( !titleLabel )
     goto LABEL_14;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideLabel = this->fields.decideLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5528, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5528/*"EVENT_AREA_IMPROVE_DECIDE_BUTTON"*/, 0LL);
   if ( !decideLabel )
     goto LABEL_14;
   UILabel__set_text(decideLabel, v12, 0LL);
   cancelLabel = this->fields.cancelLabel;
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelLabel )
     goto LABEL_14;
   UILabel__set_text(cancelLabel, v14, 0LL);
   messageLabel = this->fields.messageLabel;
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_5525, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_5525/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_14;
   UILabel__set_text(messageLabel, v16, 0LL);
   cautionMessageLabel = this->fields.cautionMessageLabel;
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_5523, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_5523/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CAUTION"*/, 0LL);
   if ( !cautionMessageLabel
     || (UILabel__set_text(cautionMessageLabel, v18, 0LL),
         subTitleLabel = this->fields.subTitleLabel,
-        v20 = LocalizationManager__Get((System_String_o *)StringLiteral_5526, 0LL),
+        v20 = LocalizationManager__Get((System_String_o *)StringLiteral_5526/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_SUBTITLE"*/, 0LL),
         !subTitleLabel)
     || (UILabel__set_text(subTitleLabel, v20, 0LL),
         consumeItemTitle = this->fields.consumeItemTitle,
-        v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5524, 0LL),
+        v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5524/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CONSUME_ITEM_TITLE"*/, 0LL),
         !consumeItemTitle) )
   {
 LABEL_14:
@@ -330,7 +330,7 @@ void __fastcall EventInfoAreaImproveConfirmDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_EventInfoAreaImproveConfirmDialog___c__DisplayClass14_0__Open_b__0__, v15);
     sub_B16FFC(&EventInfoAreaImproveConfirmDialog___c__DisplayClass14_0_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_5527, v17);
+    sub_B16FFC(&StringLiteral_5527/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_TITLE"*/, v17);
     byte_40FB6B3 = 1;
   }
   v18 = sub_B170CC(
@@ -403,7 +403,7 @@ void __fastcall EventInfoAreaImproveConfirmDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v53 = LocalizationManager__Get((System_String_o *)StringLiteral_5527, 0LL);
+    v53 = LocalizationManager__Get((System_String_o *)StringLiteral_5527/*"EVENT_AREA_IMPROVE_CONFIRM_DIALOG_TITLE"*/, 0LL);
     v54 = System_String__Format(v53, &v39->fields.basePanelList->obj, 0LL);
     if ( titleLabel )
     {

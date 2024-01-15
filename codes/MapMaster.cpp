@@ -104,54 +104,54 @@ void __fastcall MapMaster___cctor(const MethodInfo *method)
   if ( (byte_40FB5F9 & 1) == 0 )
   {
     sub_B16FFC(&MapMaster_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18675, v8);
-    sub_B16FFC(&StringLiteral_21645, v9);
-    sub_B16FFC(&StringLiteral_17114, v10);
-    sub_B16FFC(&StringLiteral_20284, v11);
-    sub_B16FFC(&StringLiteral_20287, v12);
-    sub_B16FFC(&StringLiteral_22128, v13);
-    sub_B16FFC(&StringLiteral_21281, v14);
-    sub_B16FFC(&StringLiteral_1166, v15);
-    sub_B16FFC(&StringLiteral_20285, v16);
-    sub_B16FFC(&StringLiteral_18676, v17);
-    sub_B16FFC(&StringLiteral_20286, v18);
+    sub_B16FFC(&StringLiteral_18675/*"firstEffectTime"*/, v8);
+    sub_B16FFC(&StringLiteral_21645/*"referrerMapId"*/, v9);
+    sub_B16FFC(&StringLiteral_17114/*"camera2DResetDuration"*/, v10);
+    sub_B16FFC(&StringLiteral_20284/*"mapCameraMoveEasingType"*/, v11);
+    sub_B16FFC(&StringLiteral_20287/*"mapCameraMoveTimeLogarithmBase"*/, v12);
+    sub_B16FFC(&StringLiteral_22128/*"spotScale"*/, v13);
+    sub_B16FFC(&StringLiteral_21281/*"overwriteMapAssetId"*/, v14);
+    sub_B16FFC(&StringLiteral_1166/*"3dModelFlag"*/, v15);
+    sub_B16FFC(&StringLiteral_20285/*"mapCameraMoveTimeCoefficient"*/, v16);
+    sub_B16FFC(&StringLiteral_18676/*"firstEffectType"*/, v17);
+    sub_B16FFC(&StringLiteral_20286/*"mapCameraMoveTimeConstant"*/, v18);
     byte_40FB5F9 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)MapMaster_TypeInfo->static_fields;
-  v20 = (System_Int32_array **)StringLiteral_18676;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18676;
+  v20 = (System_Int32_array **)StringLiteral_18676/*"firstEffectType"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18676/*"firstEffectType"*/;
   sub_B16F98(static_fields, v20, v2, v3, v4, v5, v6, v7);
   v21 = MapMaster_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_18675;
-  v21->SCRIPT_KEY_FADE_TIME = (struct System_String_o *)StringLiteral_18675;
+  v22 = (System_Int32_array **)StringLiteral_18675/*"firstEffectTime"*/;
+  v21->SCRIPT_KEY_FADE_TIME = (struct System_String_o *)StringLiteral_18675/*"firstEffectTime"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->SCRIPT_KEY_FADE_TIME, v22, v23, v24, v25, v26, v27, v28);
   v29 = MapMaster_TypeInfo->static_fields;
-  v30 = (System_Int32_array **)StringLiteral_21645;
-  v29->SCRIPT_KEY_REFERRER_MAP_ID = (struct System_String_o *)StringLiteral_21645;
+  v30 = (System_Int32_array **)StringLiteral_21645/*"referrerMapId"*/;
+  v29->SCRIPT_KEY_REFERRER_MAP_ID = (struct System_String_o *)StringLiteral_21645/*"referrerMapId"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v29->SCRIPT_KEY_REFERRER_MAP_ID, v30, v31, v32, v33, v34, v35, v36);
   v37 = MapMaster_TypeInfo->static_fields;
-  v38 = (System_Int32_array **)StringLiteral_21281;
-  v37->SCRIPT_KEY_OVERWRITE_MAP_ASSET_ID = (struct System_String_o *)StringLiteral_21281;
+  v38 = (System_Int32_array **)StringLiteral_21281/*"overwriteMapAssetId"*/;
+  v37->SCRIPT_KEY_OVERWRITE_MAP_ASSET_ID = (struct System_String_o *)StringLiteral_21281/*"overwriteMapAssetId"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v37->SCRIPT_KEY_OVERWRITE_MAP_ASSET_ID, v38, v39, v40, v41, v42, v43, v44);
   v45 = MapMaster_TypeInfo->static_fields;
-  v46 = (System_Int32_array **)StringLiteral_1166;
-  v45->SCRIPT_KEY_ON_MAP_MODEL = (struct System_String_o *)StringLiteral_1166;
+  v46 = (System_Int32_array **)StringLiteral_1166/*"3dModelFlag"*/;
+  v45->SCRIPT_KEY_ON_MAP_MODEL = (struct System_String_o *)StringLiteral_1166/*"3dModelFlag"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v45->SCRIPT_KEY_ON_MAP_MODEL, v46, v47, v48, v49, v50, v51, v52);
   v53 = MapMaster_TypeInfo->static_fields;
-  v54 = (System_Int32_array **)StringLiteral_22128;
-  v53->SPOT_SCALE = (struct System_String_o *)StringLiteral_22128;
+  v54 = (System_Int32_array **)StringLiteral_22128/*"spotScale"*/;
+  v53->SPOT_SCALE = (struct System_String_o *)StringLiteral_22128/*"spotScale"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v53->SPOT_SCALE, v54, v55, v56, v57, v58, v59, v60);
   v61 = MapMaster_TypeInfo->static_fields;
-  v62 = (System_Int32_array **)StringLiteral_20286;
-  v61->MAP_CAMERA_MOVE_TIME_CONSTANT = (struct System_String_o *)StringLiteral_20286;
+  v62 = (System_Int32_array **)StringLiteral_20286/*"mapCameraMoveTimeConstant"*/;
+  v61->MAP_CAMERA_MOVE_TIME_CONSTANT = (struct System_String_o *)StringLiteral_20286/*"mapCameraMoveTimeConstant"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v61->MAP_CAMERA_MOVE_TIME_CONSTANT, v62, v63, v64, v65, v66, v67, v68);
   v69 = MapMaster_TypeInfo->static_fields;
-  v70 = (System_Int32_array **)StringLiteral_20285;
-  v69->MAP_CAMERA_MOVE_TIME_COEFFICIENT = (struct System_String_o *)StringLiteral_20285;
+  v70 = (System_Int32_array **)StringLiteral_20285/*"mapCameraMoveTimeCoefficient"*/;
+  v69->MAP_CAMERA_MOVE_TIME_COEFFICIENT = (struct System_String_o *)StringLiteral_20285/*"mapCameraMoveTimeCoefficient"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v69->MAP_CAMERA_MOVE_TIME_COEFFICIENT, v70, v71, v72, v73, v74, v75, v76);
   v77 = MapMaster_TypeInfo->static_fields;
-  v78 = (System_Int32_array **)StringLiteral_20287;
-  v77->MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE = (struct System_String_o *)StringLiteral_20287;
+  v78 = (System_Int32_array **)StringLiteral_20287/*"mapCameraMoveTimeLogarithmBase"*/;
+  v77->MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE = (struct System_String_o *)StringLiteral_20287/*"mapCameraMoveTimeLogarithmBase"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v77->MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE,
     v78,
@@ -162,12 +162,12 @@ void __fastcall MapMaster___cctor(const MethodInfo *method)
     v83,
     v84);
   v85 = MapMaster_TypeInfo->static_fields;
-  v86 = (System_Int32_array **)StringLiteral_20284;
-  v85->MAP_CAMERA_MOVE_TIME_EASING_TYPE = (struct System_String_o *)StringLiteral_20284;
+  v86 = (System_Int32_array **)StringLiteral_20284/*"mapCameraMoveEasingType"*/;
+  v85->MAP_CAMERA_MOVE_TIME_EASING_TYPE = (struct System_String_o *)StringLiteral_20284/*"mapCameraMoveEasingType"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v85->MAP_CAMERA_MOVE_TIME_EASING_TYPE, v86, v87, v88, v89, v90, v91, v92);
   v93 = MapMaster_TypeInfo->static_fields;
-  v94 = (System_Int32_array **)StringLiteral_17114;
-  v93->CAMERA2D_RESET_DURATION = (struct System_String_o *)StringLiteral_17114;
+  v94 = (System_Int32_array **)StringLiteral_17114/*"camera2DResetDuration"*/;
+  v93->CAMERA2D_RESET_DURATION = (struct System_String_o *)StringLiteral_17114/*"camera2DResetDuration"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v93->CAMERA2D_RESET_DURATION, v94, v95, v96, v97, v98, v99, v100);
 }
 

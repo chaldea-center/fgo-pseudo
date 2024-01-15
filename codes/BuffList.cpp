@@ -3429,10 +3429,10 @@ bool __fastcall BuffList__IsConstantMasterIndvAddBuffActive(const MethodInfo *me
 
   if ( (byte_40FB4EF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8815, v1);
+    sub_B16FFC(&StringLiteral_8815/*"MST_BUFF_INDV_ADD_BUFF_ACTIVE"*/, v1);
     byte_40FB4EF = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_8815, 0LL) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_8815/*"MST_BUFF_INDV_ADD_BUFF_ACTIVE"*/, 0LL) == 1;
 }
 
 
@@ -3918,9 +3918,9 @@ void __fastcall BuffList_BaseInvokeCond___ctor(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int_____ctor__, isSelfSide);
     sub_B16FFC(&System_Collections_Generic_Dictionary_BuffList_INVOKE_COND_TYPE__int____TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_12610, v8);
-    sub_B16FFC(&StringLiteral_10086, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_12610/*"Self"*/, v8);
+    sub_B16FFC(&StringLiteral_10086/*"Opponent"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F70A7 = 1;
   }
   v11 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B170CC(
@@ -3942,13 +3942,13 @@ void __fastcall BuffList_BaseInvokeCond___ctor(
     v15,
     v16,
     v17);
-  v18 = (System_Int32_array **)StringLiteral_1;
-  this->fields.targetSideStr = (struct System_String_o *)StringLiteral_1;
+  v18 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.targetSideStr = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.targetSideStr, v18, v19, v20, v21, v22, v23, v24);
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v31 = (struct System_String_o **)&StringLiteral_12610;
+  v31 = (struct System_String_o **)&StringLiteral_12610/*"Self"*/;
   if ( !isSelfSide )
-    v31 = (struct System_String_o **)&StringLiteral_10086;
+    v31 = (struct System_String_o **)&StringLiteral_10086/*"Opponent"*/;
   if ( !this )
     sub_B170D4();
   v32 = *v31;
@@ -4119,10 +4119,10 @@ System_String_o *__fastcall BuffList_BaseInvokeCond__get_BuffTypeCondKeyName(
 {
   if ( (byte_40F70A6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3925, method);
+    sub_B16FFC(&StringLiteral_3925/*"Check{0}BuffTypes"*/, method);
     byte_40F70A6 = 1;
   }
-  return System_String__Format((System_String_o *)StringLiteral_3925, (Il2CppObject *)this->fields.targetSideStr, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_3925/*"Check{0}BuffTypes"*/, (Il2CppObject *)this->fields.targetSideStr, 0LL);
 }
 
 

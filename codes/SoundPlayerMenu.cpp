@@ -14,12 +14,12 @@ void __fastcall SoundPlayerMenu___cctor(const MethodInfo *method)
   if ( (byte_40F9D51 & 1) == 0 )
   {
     sub_B16FFC(&SoundPlayerMenu_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_12870, v8);
+    sub_B16FFC(&StringLiteral_12870/*"SoundPlayerNewKey"*/, v8);
     byte_40F9D51 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)SoundPlayerMenu_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_12870;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_12870;
+  v10 = (System_Int32_array **)StringLiteral_12870/*"SoundPlayerNewKey"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_12870/*"SoundPlayerNewKey"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -53,12 +53,12 @@ void __fastcall SoundPlayerMenu___ctor(SoundPlayerMenu_o *this, const MethodInfo
     sub_B16FFC(&BaseMenu_TypeInfo, method);
     sub_B16FFC(&Method_System_Collections_Generic_List_int___ctor__, v9);
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F9D50 = 1;
   }
   *(_QWORD *)&this->fields.LISTENING_TIME = 0x141200000LL;
-  v12 = (System_Int32_array **)StringLiteral_1;
-  this->fields.playSoundName = (struct System_String_o *)StringLiteral_1;
+  v12 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.playSoundName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.playSoundName, v12, v2, v3, v4, v5, v6, v7);
   v17 = (System_Collections_Generic_List_int__o *)sub_B170CC(
                                                     System_Collections_Generic_List_int__TypeInfo,
@@ -158,14 +158,14 @@ void __fastcall SoundPlayerMenu__Init(SoundPlayerMenu_o *this, const MethodInfo 
 
   if ( (byte_40F9D3D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9D3D = 1;
   }
   this->fields.retTrialListening = 0LL;
   this->fields.state = 0;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.retTrialListening, 0LL, v2, v3, v4, v5, v6, v7);
-  v9 = (System_Int32_array **)StringLiteral_1;
-  this->fields.backupBgmName = (struct System_String_o *)StringLiteral_1;
+  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.backupBgmName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.backupBgmName, v9, v10, v11, v12, v13, v14, v15);
   soundPlayerListViewManager = (ListViewManager_o *)this->fields.soundPlayerListViewManager;
   if ( !soundPlayerListViewManager
@@ -308,14 +308,14 @@ void __fastcall SoundPlayerMenu__OnSelectSound(
         }
         if ( (byte_40F9D1C & 1) == 0 )
         {
-          sub_B16FFC(&StringLiteral_1, v28);
+          sub_B16FFC(&StringLiteral_1/*""*/, v28);
           byte_40F9D1C = 1;
         }
         v36 = v16->fields.bgmEntity;
         if ( v36 )
           p_fileName = &v36->fields.fileName;
         else
-          p_fileName = (struct System_String_o **)&StringLiteral_1;
+          p_fileName = (struct System_String_o **)&StringLiteral_1/*""*/;
         v38 = *p_fileName;
         this->fields.playSoundName = *p_fileName;
         sub_B16F98(
@@ -506,7 +506,7 @@ void __fastcall SoundPlayerMenu__analyzeNewList(SoundPlayerMenu_o *this, const M
     sub_B16FFC(&Method_System_Collections_Generic_List_int__Add__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__Clear__, v4);
     sub_B16FFC(&SoundPlayerMenu_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F9D3F = 1;
   }
   v7 = SoundPlayerMenu_TypeInfo;
@@ -518,7 +518,7 @@ void __fastcall SoundPlayerMenu__analyzeNewList(SoundPlayerMenu_o *this, const M
   }
   String = UnityEngine_PlayerPrefs__GetString(
              v7->static_fields->SOUND_PLAYER_NEW_KEY,
-             (System_String_o *)StringLiteral_1,
+             (System_String_o *)StringLiteral_1/*""*/,
              0LL);
   if ( !System_String__IsNullOrEmpty(String, 0LL) )
   {
@@ -809,17 +809,17 @@ void __fastcall SoundPlayerMenu__createOpenDlg(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
     sub_B16FFC(&Method_SoundPlayerMenu_openCheckDlgCallback__, v13);
     sub_B16FFC(&string___TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_26, v15);
-    sub_B16FFC(&StringLiteral_12228, v16);
-    sub_B16FFC(&StringLiteral_12226, v17);
-    sub_B16FFC(&StringLiteral_12224, v18);
-    sub_B16FFC(&StringLiteral_12227, v19);
-    sub_B16FFC(&StringLiteral_12222, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
-    sub_B16FFC(&StringLiteral_67, v22);
-    sub_B16FFC(&StringLiteral_12225, v23);
-    sub_B16FFC(&StringLiteral_12233, v24);
-    sub_B16FFC(&StringLiteral_12223, v25);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v15);
+    sub_B16FFC(&StringLiteral_12228/*"SOUNDPLAYER_OPEN_CHECK"*/, v16);
+    sub_B16FFC(&StringLiteral_12226/*"SOUNDPLAYER_ITEM_COST_WARNING"*/, v17);
+    sub_B16FFC(&StringLiteral_12224/*"SOUNDPLAYER_DIALOG_OK"*/, v18);
+    sub_B16FFC(&StringLiteral_12227/*"SOUNDPLAYER_ITEM_DISP"*/, v19);
+    sub_B16FFC(&StringLiteral_12222/*"SOUNDPLAYER_DIALOG_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
+    sub_B16FFC(&StringLiteral_67/*"\r"*/, v22);
+    sub_B16FFC(&StringLiteral_12225/*"SOUNDPLAYER_HAVE_ITEM_NUM"*/, v23);
+    sub_B16FFC(&StringLiteral_12233/*"SOUNDPLAYER_SOUND_OPEN_TITLE"*/, v24);
+    sub_B16FFC(&StringLiteral_12223/*"SOUNDPLAYER_DIALOG_MIDDLE"*/, v25);
     byte_40F9D4F = 1;
   }
   entity = 0LL;
@@ -834,22 +834,22 @@ void __fastcall SoundPlayerMenu__createOpenDlg(
     goto LABEL_58;
   v28 = System_String__Replace_43750968(
           name,
-          (System_String_o *)StringLiteral_67,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_67/*"\r"*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   if ( !v28 )
     goto LABEL_58;
   v29 = (Il2CppObject *)System_String__Replace_43750968(
                           v28,
-                          (System_String_o *)StringLiteral_26,
-                          (System_String_o *)StringLiteral_1,
+                          (System_String_o *)StringLiteral_26/*"\n"*/,
+                          (System_String_o *)StringLiteral_1/*""*/,
                           0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12233, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12233/*"SOUNDPLAYER_SOUND_OPEN_TITLE"*/, 0LL);
   v31 = System_String__Format(v30, v29, 0LL);
   v32 = item->fields.bgmEntity;
   v33 = v31;
@@ -874,7 +874,7 @@ void __fastcall SoundPlayerMenu__createOpenDlg(
           (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !v32 || !MasterData_WarQuestSelectionMaster )
     goto LABEL_58;
-  v40 = (System_String_o *)StringLiteral_1;
+  v40 = (System_String_o *)StringLiteral_1/*""*/;
   v41 = (UserItemMaster_o *)v39;
   object = (Il2CppObject *)this;
   if ( !DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
@@ -894,7 +894,7 @@ void __fastcall SoundPlayerMenu__createOpenDlg(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  ItemData = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12225, 0LL);
+  ItemData = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12225/*"SOUNDPLAYER_HAVE_ITEM_NUM"*/, 0LL);
   v45 = entity;
   if ( !entity || (v46 = entity->fields.name) == 0LL )
 LABEL_58:
@@ -994,10 +994,10 @@ LABEL_58:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v61 = LocalizationManager__Get((System_String_o *)StringLiteral_12227, 0LL);
+        v61 = LocalizationManager__Get((System_String_o *)StringLiteral_12227/*"SOUNDPLAYER_ITEM_DISP"*/, 0LL);
         v62 = System_String__Format_43739268(v61, *(Il2CppObject **)(v54 + 24), v59, 0LL);
         v51 = System_String__Concat_43743732(v51, v62, 0LL);
-        v63 = LocalizationManager__Get((System_String_o *)StringLiteral_12227, 0LL);
+        v63 = LocalizationManager__Get((System_String_o *)StringLiteral_12227/*"SOUNDPLAYER_ITEM_DISP"*/, 0LL);
         v64 = System_String__Format_43739268(v63, *(Il2CppObject **)(v54 + 24), CountText, 0LL);
         ItemData = (__int64)System_String__Concat_43743732(v40, v64, 0LL);
         v40 = (System_String_o *)ItemData;
@@ -1016,7 +1016,7 @@ LABEL_58:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v66 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_12226, 0LL);
+  v66 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_12226/*"SOUNDPLAYER_ITEM_COST_WARNING"*/, 0LL);
   v65 = v49 & 1;
 LABEL_66:
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1024,7 +1024,7 @@ LABEL_66:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v67 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_12228, 0LL);
+  v67 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_12228/*"SOUNDPLAYER_OPEN_CHECK"*/, 0LL);
   ItemData = sub_B17014(string___TypeInfo, 5LL, v68);
   if ( !ItemData )
     goto LABEL_58;
@@ -1088,9 +1088,9 @@ LABEL_88:
   v74->m_Items[4] = (System_String_o *)v67;
   sub_B16F98((BattleServantConfConponent_o *)&v74->m_Items[4], v67, v44, v90, v91, v92, v93, v94);
   v95 = System_String__Concat_43823856(v74, 0LL);
-  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_12222, 0LL);
-  v97 = LocalizationManager__Get((System_String_o *)StringLiteral_12223, 0LL);
-  v98 = LocalizationManager__Get((System_String_o *)StringLiteral_12224, 0LL);
+  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_12222/*"SOUNDPLAYER_DIALOG_CANCEL"*/, 0LL);
+  v97 = LocalizationManager__Get((System_String_o *)StringLiteral_12223/*"SOUNDPLAYER_DIALOG_MIDDLE"*/, 0LL);
+  v98 = LocalizationManager__Get((System_String_o *)StringLiteral_12224/*"SOUNDPLAYER_DIALOG_OK"*/, 0LL);
   v99 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v104 = (TripleButtonDlgComponent_CallbackFunc_o *)sub_B170CC(
                                                       TripleButtonDlgComponent_CallbackFunc_TypeInfo,
@@ -1130,7 +1130,7 @@ void __fastcall SoundPlayerMenu__createSelectEffect(SoundPlayerMenu_o *this, con
   {
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_18138, v4);
+    sub_B16FFC(&StringLiteral_18138/*"ef_soundchoice"*/, v4);
     byte_40F9D44 = 1;
   }
   SoundPlayerMenu__releaseSelectEffect(this, method);
@@ -1148,7 +1148,7 @@ void __fastcall SoundPlayerMenu__createSelectEffect(SoundPlayerMenu_o *this, con
       goto LABEL_18;
     EffetData = SoundPlayerListViewManager__getEffetData(
                   soundPlayerListViewManager,
-                  (System_String_o *)StringLiteral_18138,
+                  (System_String_o *)StringLiteral_18138/*"ef_soundchoice"*/,
                   v7);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1278,11 +1278,11 @@ void __fastcall SoundPlayerMenu__endPurchaseRequest(
     sub_B16FFC(&Method_SoundPlayerMenu_OnSelectSound__, v10);
     sub_B16FFC(&Method_SoundPlayerMenu___c__DisplayClass36_0__endPurchaseRequest_b__0__, v11);
     sub_B16FFC(&SoundPlayerMenu___c__DisplayClass36_0_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_26, v13);
-    sub_B16FFC(&StringLiteral_12232, v14);
-    sub_B16FFC(&StringLiteral_20980, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
-    sub_B16FFC(&StringLiteral_67, v17);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v13);
+    sub_B16FFC(&StringLiteral_12232/*"SOUNDPLAYER_SOUND_OPEN"*/, v14);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
+    sub_B16FFC(&StringLiteral_67/*"\r"*/, v17);
     byte_40F9D4A = 1;
   }
   v18 = sub_B170CC(SoundPlayerMenu___c__DisplayClass36_0_TypeInfo, result, method, v3, v4);
@@ -1291,7 +1291,7 @@ void __fastcall SoundPlayerMenu__endPurchaseRequest(
     goto LABEL_17;
   *(_QWORD *)(v18 + 16) = this;
   sub_B16F98((BattleServantConfConponent_o *)(v18 + 16), (System_Int32_array **)this, v19, v20, v21, v22, v23, v24);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     SoundPlayerMenu__detachSelectEffect(this, v25);
     soundPlayerListViewManager = this->fields.soundPlayerListViewManager;
@@ -1343,22 +1343,22 @@ LABEL_17:
     goto LABEL_17;
   v51 = System_String__Replace_43750968(
           v50,
-          (System_String_o *)StringLiteral_67,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_67/*"\r"*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   if ( !v51 )
     goto LABEL_17;
   v52 = (Il2CppObject *)System_String__Replace_43750968(
                           v51,
-                          (System_String_o *)StringLiteral_26,
-                          (System_String_o *)StringLiteral_1,
+                          (System_String_o *)StringLiteral_26/*"\n"*/,
+                          (System_String_o *)StringLiteral_1/*""*/,
                           0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_12232, 0LL);
+  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_12232/*"SOUNDPLAYER_SOUND_OPEN"*/, 0LL);
   v54 = System_String__Format(v53, v52, 0LL);
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v60 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v56, v57, v58, v59);
@@ -1371,7 +1371,7 @@ LABEL_17:
     goto LABEL_17;
   CommonUI__OpenNotificationDialog(
     Instance,
-    (System_String_o *)StringLiteral_1,
+    (System_String_o *)StringLiteral_1/*""*/,
     v54,
     v60,
     -1,
@@ -1458,7 +1458,7 @@ void __fastcall SoundPlayerMenu__inputNewList(SoundPlayerMenu_o *this, const Met
     sub_B16FFC(&Method_System_Collections_Generic_List_int__get_Item__, v4);
     sub_B16FFC(&SoundPlayerMenu_TypeInfo, v5);
     sub_B16FFC(&string___TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_698, v7);
+    sub_B16FFC(&StringLiteral_698/*","*/, v7);
     byte_40F9D40 = 1;
   }
   v25 = 0;
@@ -1504,7 +1504,7 @@ LABEL_19:
       m_Items = (BattleServantConfConponent_o *)((char *)m_Items + 8);
     }
     while ( (__int64)v11 < size );
-    v23 = System_String__Join((System_String_o *)StringLiteral_698, v10, 0LL);
+    v23 = System_String__Join((System_String_o *)StringLiteral_698/*","*/, v10, 0LL);
     v24 = SoundPlayerMenu_TypeInfo;
     if ( (BYTE3(SoundPlayerMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundPlayerMenu_TypeInfo->_2.cctor_finished )
@@ -1855,12 +1855,12 @@ void __fastcall SoundPlayerMenu__resetPlaySoundData(SoundPlayerMenu_o *this, con
 
   if ( (byte_40F9D3E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9D3E = 1;
   }
   this->fields.playSoundIdx = -1;
-  v9 = (System_Int32_array **)StringLiteral_1;
-  this->fields.playSoundName = (struct System_String_o *)StringLiteral_1;
+  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.playSoundName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.playSoundName, v9, v2, v3, v4, v5, v6, v7);
 }
 
@@ -1888,8 +1888,8 @@ void __fastcall SoundPlayerMenu__setCanPlaySoundDisp(SoundPlayerMenu_o *this, co
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_12229, v4);
-    sub_B16FFC(&StringLiteral_12230, v5);
+    sub_B16FFC(&StringLiteral_12229/*"SOUNDPLAYER_SOUND_CAN_PLAY_MAX"*/, v4);
+    sub_B16FFC(&StringLiteral_12230/*"SOUNDPLAYER_SOUND_CAN_PLAY_NUM"*/, v5);
     byte_40F9D49 = 1;
   }
   canPlaySoundStr = this->fields.canPlaySoundStr;
@@ -1898,12 +1898,12 @@ void __fastcall SoundPlayerMenu__setCanPlaySoundDisp(SoundPlayerMenu_o *this, co
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_12229, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_12229/*"SOUNDPLAYER_SOUND_CAN_PLAY_MAX"*/, 0LL);
   if ( !canPlaySoundStr )
     goto LABEL_11;
   UILabel__set_text(canPlaySoundStr, v7, 0LL);
   canPlaySoundCnt = this->fields.canPlaySoundCnt;
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12230, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12230/*"SOUNDPLAYER_SOUND_CAN_PLAY_NUM"*/, 0LL);
   soundPlayerListViewManager = this->fields.soundPlayerListViewManager;
   if ( !soundPlayerListViewManager )
     goto LABEL_11;
@@ -1955,7 +1955,7 @@ void __fastcall SoundPlayerMenu__stopTrialListening(SoundPlayerMenu_o *this, con
   {
     sub_B16FFC(&BgmManager_TypeInfo, method);
     sub_B16FFC(&SoundManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F9D4D = 1;
   }
   retTrialListening = this->fields.retTrialListening;
@@ -1992,8 +1992,8 @@ void __fastcall SoundPlayerMenu__stopTrialListening(SoundPlayerMenu_o *this, con
         }
         SoundManager__playBgm(klass, v17);
       }
-      v25 = (System_Int32_array **)StringLiteral_1;
-      p_backupBgmName->klass = (BattleServantConfConponent_c *)StringLiteral_1;
+      v25 = (System_Int32_array **)StringLiteral_1/*""*/;
+      p_backupBgmName->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
       sub_B16F98(p_backupBgmName, v25, v18, v19, v20, v21, v22, v23);
     }
   }
@@ -2306,7 +2306,7 @@ void __fastcall SoundPlayerMenu___c__DisplayClass34_0___openCheckDlgCallback_b__
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
     sub_B16FFC(&Method_SoundPlayerMenu_endPurchaseRequest__, v8);
-    sub_B16FFC(&StringLiteral_21129, v9);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v9);
     byte_40F7A2F = 1;
   }
   item = this->fields.item;
@@ -2345,7 +2345,7 @@ LABEL_14:
   }
   if ( !_4__this )
     goto LABEL_14;
-  SoundPlayerMenu__endPurchaseRequest((SoundPlayerMenu_o *)_4__this, (System_String_o *)StringLiteral_21129, 0LL);
+  SoundPlayerMenu__endPurchaseRequest((SoundPlayerMenu_o *)_4__this, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL);
 }
 
 
@@ -2489,7 +2489,7 @@ bool __fastcall SoundPlayerMenu__busyWaitStopBgm_d__41__MoveNext(
     sub_B16FFC(&Method_SoundPlayerMenu___c__busyWaitStopBgm_b__41_0__, v8);
     sub_B16FFC(&SoundPlayerMenu___c_TypeInfo, v9);
     sub_B16FFC(&UnityEngine_WaitUntil_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F7A31 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -2517,8 +2517,8 @@ bool __fastcall SoundPlayerMenu__busyWaitStopBgm_d__41__MoveNext(
       }
       SoundManager__playBgm(klass, 0LL);
     }
-    v43 = (System_Int32_array **)StringLiteral_1;
-    p_backupBgmName->klass = (BattleServantConfConponent_c *)StringLiteral_1;
+    v43 = (System_Int32_array **)StringLiteral_1/*""*/;
+    p_backupBgmName->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
     sub_B16F98(p_backupBgmName, v43, v36, v37, v38, v39, v40, v41);
     return 0;
   }

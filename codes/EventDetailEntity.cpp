@@ -14,12 +14,12 @@ void __fastcall EventDetailEntity___cctor(const MethodInfo *method)
   if ( (byte_40FC62C & 1) == 0 )
   {
     sub_B16FFC(&EventDetailEntity_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_6174, v8);
+    sub_B16FFC(&StringLiteral_6174/*"EventServantFatigue/{0}"*/, v8);
     byte_40FC62C = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventDetailEntity_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_6174;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6174;
+  v10 = (System_Int32_array **)StringLiteral_6174/*"EventServantFatigue/{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6174/*"EventServantFatigue/{0}"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   EventDetailEntity_TypeInfo->static_fields->DATA_DEFAULT_ID = 2;
 }
@@ -52,14 +52,14 @@ System_String_o *__fastcall EventDetailEntity__GetCondMessage(EventDetailEntity_
 
   if ( (byte_40FC624 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21286, method);
-    sub_B16FFC(&StringLiteral_21287, v4);
+    sub_B16FFC(&StringLiteral_21286/*"overwriteRewardMessageCommonReleaseId"*/, method);
+    sub_B16FFC(&StringLiteral_21287/*"overwriteRewardMessageId"*/, v4);
     byte_40FC624 = 1;
   }
   OverwriteMessage = EventDetailEntity__GetOverwriteMessage(
                        this,
-                       (System_String_o *)StringLiteral_21286,
-                       (System_String_o *)StringLiteral_21287,
+                       (System_String_o *)StringLiteral_21286/*"overwriteRewardMessageCommonReleaseId"*/,
+                       (System_String_o *)StringLiteral_21287/*"overwriteRewardMessageId"*/,
                        v2);
   if ( System_String__IsNullOrEmpty(OverwriteMessage, 0LL) )
     return this->fields.condMessage;
@@ -75,10 +75,10 @@ System_String_o *__fastcall EventDetailEntity__GetFloorRewardPrefabName(
 
   if ( (byte_40FC617 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6698, method);
+    sub_B16FFC(&StringLiteral_6698/*"FloorRewardPrefabName"*/, method);
     byte_40FC617 = 1;
   }
-  return EventDetailEntity__GetStringFromScript(this, (System_String_o *)StringLiteral_6698, v2);
+  return EventDetailEntity__GetStringFromScript(this, (System_String_o *)StringLiteral_6698/*"FloorRewardPrefabName"*/, v2);
 }
 
 
@@ -88,10 +88,10 @@ int32_t __fastcall EventDetailEntity__GetFortificationBasePoint(EventDetailEntit
 
   if ( (byte_40FC621 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18781, method);
+    sub_B16FFC(&StringLiteral_18781/*"fortificationBasePoint"*/, method);
     byte_40FC621 = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18781, v2);
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18781/*"fortificationBasePoint"*/, v2);
 }
 
 
@@ -101,10 +101,10 @@ int32_t __fastcall EventDetailEntity__GetFortificationLvPoint(EventDetailEntity_
 
   if ( (byte_40FC622 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18782, method);
+    sub_B16FFC(&StringLiteral_18782/*"fortificationLvPoint"*/, method);
     byte_40FC622 = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18782, v2);
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18782/*"fortificationLvPoint"*/, v2);
 }
 
 
@@ -134,10 +134,10 @@ System_Collections_Generic_List_int__o *__fastcall EventDetailEntity__GetIgnoreC
     sub_B16FFC(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__, v6);
     sub_B16FFC(&Method_System_Func_List_object___List_int____ctor__, v7);
     sub_B16FFC(&System_Func_List_object___List_int___TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_19331, v9);
+    sub_B16FFC(&StringLiteral_19331/*"ignoreCommandAssistQuestIds"*/, v9);
     byte_40FC629 = 1;
   }
-  v10 = (System_String_o *)StringLiteral_19331;
+  v10 = (System_String_o *)StringLiteral_19331/*"ignoreCommandAssistQuestIds"*/;
   v11 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *)sub_B170CC(
                                                                                           System_Func_List_object___List_int___TypeInfo,
                                                                                           method,
@@ -266,9 +266,9 @@ EventDetailEntity_ChangeLoadAnimationInfo_array *__fastcall EventDetailEntity__G
     sub_B16FFC(&Method_System_Collections_Generic_List_EventDetailEntity_ChangeLoadAnimationInfo___ctor__, v10);
     sub_B16FFC(&System_Collections_Generic_List_object__TypeInfo, v11);
     sub_B16FFC(&System_Collections_Generic_List_EventDetailEntity_ChangeLoadAnimationInfo__TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_17548, v13);
-    sub_B16FFC(&StringLiteral_17213, v14);
-    sub_B16FFC(&StringLiteral_16284, v15);
+    sub_B16FFC(&StringLiteral_17548/*"commonReleaseId"*/, v13);
+    sub_B16FFC(&StringLiteral_17213/*"changeLoadAnimations"*/, v14);
+    sub_B16FFC(&StringLiteral_16284/*"animationId"*/, v15);
     byte_40FC61D = 1;
   }
   result = (EventDetailEntity_ChangeLoadAnimationInfo_array *)this->fields.script;
@@ -276,7 +276,7 @@ EventDetailEntity_ChangeLoadAnimationInfo_array *__fastcall EventDetailEntity__G
   {
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_17213,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_17213/*"changeLoadAnimations"*/,
            (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       script = this->fields.script;
@@ -285,7 +285,7 @@ EventDetailEntity_ChangeLoadAnimationInfo_array *__fastcall EventDetailEntity__G
       v18 = (const MethodInfo_2DA3B54 **)&Method_System_Collections_Generic_Dictionary_string__object__get_Item__;
       Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)script,
-               (System_Type_o *)StringLiteral_17213,
+               (System_Type_o *)StringLiteral_17213/*"changeLoadAnimations"*/,
                (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !Item )
         goto LABEL_30;
@@ -306,7 +306,7 @@ EventDetailEntity_ChangeLoadAnimationInfo_array *__fastcall EventDetailEntity__G
       v30 = *(_QWORD *)&v21->max_length;
       if ( (int)v30 >= 1 )
       {
-        v31 = (System_Xml_XmlQualifiedName_o **)&StringLiteral_16284;
+        v31 = (System_Xml_XmlQualifiedName_o **)&StringLiteral_16284/*"animationId"*/;
         v32 = 0LL;
         m_Items = v21->m_Items;
         do
@@ -325,7 +325,7 @@ EventDetailEntity_ChangeLoadAnimationInfo_array *__fastcall EventDetailEntity__G
             {
               v27 = System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
                       (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)m_Items[v32],
-                      (System_Xml_XmlQualifiedName_o *)StringLiteral_17548,
+                      (System_Xml_XmlQualifiedName_o *)StringLiteral_17548/*"commonReleaseId"*/,
                       (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
               if ( v27 )
               {
@@ -337,7 +337,7 @@ EventDetailEntity_ChangeLoadAnimationInfo_array *__fastcall EventDetailEntity__G
                 {
                   v36 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                           (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v34,
-                          (System_Type_o *)StringLiteral_17548,
+                          (System_Type_o *)StringLiteral_17548/*"commonReleaseId"*/,
                           *v18);
                   if ( !v36 )
                     goto LABEL_30;
@@ -416,10 +416,10 @@ System_String_o *__fastcall EventDetailEntity__GetOverwriteMessage(
   {
     sub_B16FFC(&CondType_TypeInfo, messageCommonReleaseKey);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FC623 = 1;
   }
-  v9 = (System_String_o *)StringLiteral_1;
+  v9 = (System_String_o *)StringLiteral_1/*""*/;
   IntFromScript = EventDetailEntity__GetIntFromScript(this, messageCommonReleaseKey, (const MethodInfo *)messageKey);
   if ( !IntFromScript )
     return v9;
@@ -446,10 +446,10 @@ int32_t __fastcall EventDetailEntity__GetOverwriteRewardCondCommonReleaseId(
 
   if ( (byte_40FC626 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21285, method);
+    sub_B16FFC(&StringLiteral_21285/*"overwriteRewardCondCommonReleaseId"*/, method);
     byte_40FC626 = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21285, v2);
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21285/*"overwriteRewardCondCommonReleaseId"*/, v2);
 }
 
 
@@ -461,10 +461,10 @@ int32_t __fastcall EventDetailEntity__GetOverwriteShopCondCommonReleaseId(
 
   if ( (byte_40FC627 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21290, method);
+    sub_B16FFC(&StringLiteral_21290/*"overwriteShopCondCommonReleaseId"*/, method);
     byte_40FC627 = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21290, v2);
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21290/*"overwriteShopCondCommonReleaseId"*/, v2);
 }
 
 
@@ -474,10 +474,10 @@ int32_t __fastcall EventDetailEntity__GetRandomMissionMaxNum(EventDetailEntity_o
 
   if ( (byte_40FC61E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21604, method);
+    sub_B16FFC(&StringLiteral_21604/*"randomMissionMaxNum"*/, method);
     byte_40FC61E = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21604, v2);
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21604/*"randomMissionMaxNum"*/, v2);
 }
 
 
@@ -516,16 +516,16 @@ EventDetailEntity_ReplaceEventRewardBtnLogoInfo_o *__fastcall EventDetailEntity_
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
     sub_B16FFC(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v5);
     sub_B16FFC(&EventDetailEntity_ReplaceEventRewardBtnLogoInfo_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_18405, v7);
-    sub_B16FFC(&StringLiteral_17548, v8);
-    sub_B16FFC(&StringLiteral_21681, v9);
+    sub_B16FFC(&StringLiteral_18405/*"eventLogoId"*/, v7);
+    sub_B16FFC(&StringLiteral_17548/*"commonReleaseId"*/, v8);
+    sub_B16FFC(&StringLiteral_21681/*"replaceEventRewardBtnLogoInfo"*/, v9);
     byte_40FC620 = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_21681,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_21681/*"replaceEventRewardBtnLogoInfo"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return 0LL;
@@ -535,14 +535,14 @@ EventDetailEntity_ReplaceEventRewardBtnLogoInfo_o *__fastcall EventDetailEntity_
     goto LABEL_20;
   if ( !System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
           (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v11,
-          (System_Type_o *)StringLiteral_21681,
+          (System_Type_o *)StringLiteral_21681/*"replaceEventRewardBtnLogoInfo"*/,
           (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__) )
     return 0LL;
   v12 = this->fields.script;
   if ( !v12
     || (Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                  (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v12,
-                 (System_Type_o *)StringLiteral_21681,
+                 (System_Type_o *)StringLiteral_21681/*"replaceEventRewardBtnLogoInfo"*/,
                  (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL
     || (v14 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Item,
         v15 = *(&System_Collections_Generic_Dictionary_string__object__TypeInfo->_2.bitflags2 + 1),
@@ -554,18 +554,18 @@ LABEL_20:
   }
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Item,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_17548,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_17548/*"commonReleaseId"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           v14,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_18405,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_18405/*"eventLogoId"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return 0LL;
   }
   v16 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
           (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v14,
-          (System_Type_o *)StringLiteral_17548,
+          (System_Type_o *)StringLiteral_17548/*"commonReleaseId"*/,
           (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !v16 )
     goto LABEL_20;
@@ -580,7 +580,7 @@ LABEL_20:
   v18 = System_Convert__ToInt32_41746964(v17, 0LL);
   v19 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                           (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v14,
-                          (System_Type_o *)StringLiteral_18405,
+                          (System_Type_o *)StringLiteral_18405/*"eventLogoId"*/,
                           (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   v20 = System_Convert__ToInt32(v19, 0LL);
   v25 = (EventDetailEntity_ReplaceEventRewardBtnLogoInfo_o *)sub_B170CC(
@@ -646,10 +646,10 @@ int32_t __fastcall EventDetailEntity__GetServantFatigueId(EventDetailEntity_o *t
 
   if ( (byte_40FC61C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12659, method);
+    sub_B16FFC(&StringLiteral_12659/*"ServantFatigueId"*/, method);
     byte_40FC61C = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_12659, v2);
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_12659/*"ServantFatigueId"*/, v2);
 }
 
 
@@ -661,14 +661,14 @@ System_String_o *__fastcall EventDetailEntity__GetShopCondMessage(EventDetailEnt
 
   if ( (byte_40FC625 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21292, method);
-    sub_B16FFC(&StringLiteral_21291, v4);
+    sub_B16FFC(&StringLiteral_21292/*"overwriteShopMessageId"*/, method);
+    sub_B16FFC(&StringLiteral_21291/*"overwriteShopMessageCommonReleaseId"*/, v4);
     byte_40FC625 = 1;
   }
   OverwriteMessage = EventDetailEntity__GetOverwriteMessage(
                        this,
-                       (System_String_o *)StringLiteral_21291,
-                       (System_String_o *)StringLiteral_21292,
+                       (System_String_o *)StringLiteral_21291/*"overwriteShopMessageCommonReleaseId"*/,
+                       (System_String_o *)StringLiteral_21292/*"overwriteShopMessageId"*/,
                        v2);
   if ( System_String__IsNullOrEmpty(OverwriteMessage, 0LL) )
     return this->fields.shopCondMessage;
@@ -718,10 +718,10 @@ int32_t __fastcall EventDetailEntity__GetUseDiceSpotId(EventDetailEntity_o *this
 
   if ( (byte_40FC61A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22886, method);
+    sub_B16FFC(&StringLiteral_22886/*"useDiceSpotId"*/, method);
     byte_40FC61A = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22886, v2);
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22886/*"useDiceSpotId"*/, v2);
 }
 
 
@@ -767,10 +767,10 @@ bool __fastcall EventDetailEntity__IsEventCircleProgress(EventDetailEntity_o *th
 
   if ( (byte_40FC62A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19848, method);
+    sub_B16FFC(&StringLiteral_19848/*"isEventCircleProgress"*/, method);
     byte_40FC62A = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19848, v2) > 0;
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19848/*"isEventCircleProgress"*/, v2) > 0;
 }
 
 
@@ -780,10 +780,10 @@ bool __fastcall EventDetailEntity__IsEventCommandAssist(EventDetailEntity_o *thi
 
   if ( (byte_40FC628 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19849, method);
+    sub_B16FFC(&StringLiteral_19849/*"isEventCommandAssist"*/, method);
     byte_40FC628 = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19849, v2) > 0;
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19849/*"isEventCommandAssist"*/, v2) > 0;
 }
 
 
@@ -835,10 +835,10 @@ bool __fastcall EventDetailEntity__IsEventUiCushion(EventDetailEntity_o *this, c
 
   if ( (byte_40FC61F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18414, method);
+    sub_B16FFC(&StringLiteral_18414/*"eventUiCushion"*/, method);
     byte_40FC61F = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18414, v2) > 0;
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18414/*"eventUiCushion"*/, v2) > 0;
 }
 
 
@@ -908,10 +908,10 @@ bool __fastcall EventDetailEntity__IsPersonalBoss(EventDetailEntity_o *this, con
 
   if ( (byte_40FC616 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19861, method);
+    sub_B16FFC(&StringLiteral_19861/*"isPersonalRaid"*/, method);
     byte_40FC616 = 1;
   }
-  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19861, v2) > 0;
+  return EventDetailEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19861/*"isPersonalRaid"*/, v2) > 0;
 }
 
 

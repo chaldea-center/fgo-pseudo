@@ -64,11 +64,11 @@ void __fastcall WarBoardPlayingUIController__Awake(WarBoardPlayingUIController_o
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_GameObject___, v5);
-    sub_B16FFC(&StringLiteral_6717, v6);
+    sub_B16FFC(&StringLiteral_6717/*"Fonts/FGO-NumberFont-02"*/, v6);
     byte_40FBA38 = 1;
   }
   UIAtlas = (UnityEngine_GameObject_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                          (System_String_o *)StringLiteral_6717,
+                                          (System_String_o *)StringLiteral_6717/*"Fonts/FGO-NumberFont-02"*/,
                                           (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_GameObject___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -699,9 +699,9 @@ void __fastcall WarBoardPlayingUIController__SetActionPoint(
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&current);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_15211, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
-    sub_B16FFC(&StringLiteral_15210, v9);
+    sub_B16FFC(&StringLiteral_15211/*"WARBOARD_PARTY_ORGANIZATION_COST_SPLIT"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
+    sub_B16FFC(&StringLiteral_15210/*"WARBOARD_PARTY_ORGANIZATION_COST_OVER_COLOR"*/, v9);
     byte_40FBA3B = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
@@ -767,7 +767,7 @@ LABEL_16:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_15211, 0LL);
+      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_15211/*"WARBOARD_PARTY_ORGANIZATION_COST_SPLIT"*/, 0LL);
       if ( !v20 )
         goto LABEL_48;
       UILabel__set_text(v20, v21, 0LL);
@@ -800,7 +800,7 @@ LABEL_16:
       {
         if ( WarBoardManager__EnableAction((WarBoardManager_o *)v27, 0LL) )
         {
-          v28 = (System_String_o *)StringLiteral_1;
+          v28 = (System_String_o *)StringLiteral_1/*""*/;
         }
         else
         {
@@ -809,7 +809,7 @@ LABEL_16:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v28 = LocalizationManager__Get((System_String_o *)StringLiteral_15210, 0LL);
+          v28 = LocalizationManager__Get((System_String_o *)StringLiteral_15210/*"WARBOARD_PARTY_ORGANIZATION_COST_OVER_COLOR"*/, 0LL);
         }
         v29 = System_Int32__ToString((int32_t)&v33, 0LL);
         v30 = System_String__Concat_43743732(v28, v29, 0LL);
@@ -1021,7 +1021,7 @@ void __fastcall WarBoardPlayingUIController__SetTurn(
   {
     sub_B16FFC(&int_TypeInfo, isPlayer);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_15235, v8);
+    sub_B16FFC(&StringLiteral_15235/*"WARBOARD_TURN_BASE"*/, v8);
     byte_40FBA3E = 1;
   }
   playerTurnRoot = this->fields.playerTurnRoot;
@@ -1037,7 +1037,7 @@ void __fastcall WarBoardPlayingUIController__SetTurn(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_15235, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_15235/*"WARBOARD_TURN_BASE"*/, 0LL);
   v16 = turnCount;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
   v13 = System_String__Format(v11, v12, 0LL);
@@ -1064,10 +1064,10 @@ void __fastcall WarBoardPlayingUIController__SuspendResponse(
   if ( (byte_40FBA45 & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, response);
-    sub_B16FFC(&StringLiteral_20980, v4);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v4);
     byte_40FBA45 = 1;
   }
-  if ( !System_String__op_Equality(response, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(response, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !Instance )
@@ -1100,7 +1100,7 @@ void __fastcall WarBoardPlayingUIController__Update(WarBoardPlayingUIController_
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_19255, v4);
+    sub_B16FFC(&StringLiteral_19255/*"icon_drop_item_{0:00}"*/, v4);
     byte_40FBA41 = 1;
   }
   v18 = 0;
@@ -1127,7 +1127,7 @@ void __fastcall WarBoardPlayingUIController__Update(WarBoardPlayingUIController_
     || (getTreasureIcon = this->fields.getTreasureIcon,
         ExpensiveIcon = WarBoardData__GetExpensiveIcon(v13, 0LL),
         v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &ExpensiveIcon),
-        v16 = System_String__Format((System_String_o *)StringLiteral_19255, v15, 0LL),
+        v16 = System_String__Format((System_String_o *)StringLiteral_19255/*"icon_drop_item_{0:00}"*/, v15, 0LL),
         !getTreasureIcon) )
   {
 LABEL_11:

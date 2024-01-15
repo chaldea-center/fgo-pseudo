@@ -520,12 +520,12 @@ System_String_o *__fastcall SupportServantEquipServantItem__get_NameText(
   if ( (byte_40FD9F2 & 1) == 0 )
   {
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18326, v3);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v3);
     byte_40FD9F2 = 1;
   }
   servantEntity = this->fields.servantEntity;
   if ( !servantEntity )
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
   userServantEntity = this->fields.userServantEntity;
   if ( userServantEntity )
   {

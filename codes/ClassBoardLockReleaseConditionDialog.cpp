@@ -144,10 +144,10 @@ void __fastcall ClassBoardLockReleaseConditionDialog__Open(
     sub_B16FFC(&Method_ClassBoardLockReleaseConditionDialog_EndOpen__, v13);
     sub_B16FFC(&IClassBoardSquareModel_TypeInfo, v14);
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_3014, v16);
-    sub_B16FFC(&StringLiteral_3013, v17);
-    sub_B16FFC(&StringLiteral_3011, v18);
-    sub_B16FFC(&StringLiteral_3012, v19);
+    sub_B16FFC(&StringLiteral_3014/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_TITLE"*/, v16);
+    sub_B16FFC(&StringLiteral_3013/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_BEFORE"*/, v17);
+    sub_B16FFC(&StringLiteral_3011/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_DECIDE"*/, v18);
+    sub_B16FFC(&StringLiteral_3012/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_AFTER"*/, v19);
     byte_40FB988 = 1;
   }
   this->fields.classBoardSquare = square;
@@ -192,7 +192,7 @@ void __fastcall ClassBoardLockReleaseConditionDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3014, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3014/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_37;
   UILabel__set_text(titleLabel, v30, 0LL);
@@ -238,7 +238,7 @@ LABEL_20:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v40 = &StringLiteral_3012;
+    v40 = &StringLiteral_3012/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_AFTER"*/;
   }
   else
   {
@@ -247,7 +247,7 @@ LABEL_20:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v40 = &StringLiteral_3013;
+    v40 = &StringLiteral_3013/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_EXPLANATION_BEFORE"*/;
   }
   v41 = LocalizationManager__Get((System_String_o *)*v40, 0LL);
   if ( !explanationLabel )
@@ -259,7 +259,7 @@ LABEL_20:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_3011, 0LL);
+  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_3011/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_DIALOG_DECIDE"*/, 0LL);
   if ( !closeBtnLabel )
 LABEL_37:
     sub_B170D4();
@@ -278,8 +278,8 @@ System_String_o *__fastcall ClassBoardLockReleaseConditionDialog__get_closeBtnPa
 {
   if ( (byte_40FB98B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15415, method);
+    sub_B16FFC(&StringLiteral_15415/*"Window/CloseBtn"*/, method);
     byte_40FB98B = 1;
   }
-  return (System_String_o *)StringLiteral_15415;
+  return (System_String_o *)StringLiteral_15415/*"Window/CloseBtn"*/;
 }

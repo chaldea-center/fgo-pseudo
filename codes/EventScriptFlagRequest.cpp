@@ -15,12 +15,12 @@ void __fastcall EventScriptFlagRequest__beginRequest(
 
   if ( (byte_40FD142 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18403, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_18685, v7);
+    sub_B16FFC(&StringLiteral_18403/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_B16FFC(&StringLiteral_18685/*"flagId"*/, v7);
     byte_40FD142 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18403, eventId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18685, flagId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18403/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18685/*"flagId"*/, flagId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -33,7 +33,7 @@ System_String_o *__fastcall EventScriptFlagRequest__getURL(EventScriptFlagReques
   if ( (byte_40FD141 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18397, v2);
+    sub_B16FFC(&StringLiteral_18397/*"event/scriptFlag"*/, v2);
     byte_40FD141 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -42,7 +42,7 @@ System_String_o *__fastcall EventScriptFlagRequest__getURL(EventScriptFlagReques
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18397, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18397/*"event/scriptFlag"*/, 0LL);
 }
 
 

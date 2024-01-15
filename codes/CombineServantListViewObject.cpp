@@ -444,9 +444,9 @@ void __fastcall CombineServantListViewObject__OnClickSelect(
     sub_B16FFC(&CombineServantListViewItem_TypeInfo, method);
     sub_B16FFC(&CombineServantListViewManager_TypeInfo, v4);
     sub_B16FFC(&SoundManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_9937, v6);
-    sub_B16FFC(&StringLiteral_9939, v7);
-    sub_B16FFC(&StringLiteral_9941, v8);
+    sub_B16FFC(&StringLiteral_9937/*"OnClickSelectBase"*/, v6);
+    sub_B16FFC(&StringLiteral_9939/*"OnClickSelectMaterial"*/, v7);
+    sub_B16FFC(&StringLiteral_9941/*"OnClickSelectPush"*/, v8);
     byte_40FA510 = 1;
   }
   linkItem = (CombineServantListViewItem_o *)this->fields.linkItem;
@@ -563,7 +563,7 @@ LABEL_42:
               v21 = (UnityEngine_Component_o *)this->fields.manager;
               if ( !v21 )
                 goto LABEL_61;
-              v22 = &StringLiteral_9939;
+              v22 = &StringLiteral_9939/*"OnClickSelectMaterial"*/;
               goto LABEL_37;
             case 2:
             case 4:
@@ -574,7 +574,7 @@ LABEL_35:
                 v21 = (UnityEngine_Component_o *)this->fields.manager;
                 if ( v21 )
                 {
-                  v22 = &StringLiteral_9937;
+                  v22 = &StringLiteral_9937/*"OnClickSelectBase"*/;
                   goto LABEL_37;
                 }
                 goto LABEL_61;
@@ -592,7 +592,7 @@ LABEL_26:
           v21 = (UnityEngine_Component_o *)this->fields.manager;
           if ( v21 )
           {
-            v22 = &StringLiteral_9941;
+            v22 = &StringLiteral_9941/*"OnClickSelectPush"*/;
 LABEL_37:
             UnityEngine_Component__SendMessage(v21, (System_String_o *)*v22, (Il2CppObject *)this, 0LL);
             return;
@@ -729,8 +729,8 @@ void __fastcall CombineServantListViewObject__OnLongPush(
   {
     sub_B16FFC(&CombineServantListViewItem_TypeInfo, method);
     sub_B16FFC(&CombineServantListViewManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_9991, v5);
-    sub_B16FFC(&StringLiteral_10009, v6);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, v5);
+    sub_B16FFC(&StringLiteral_10009/*"OnPressCancel"*/, v6);
     byte_40FA511 = 1;
   }
   linkItem = this->fields.linkItem;
@@ -771,13 +771,13 @@ void __fastcall CombineServantListViewObject__OnLongPush(
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
           if ( gameObject )
           {
-            UnityEngine_GameObject__SendMessage_40693392(gameObject, (System_String_o *)StringLiteral_10009, 0LL);
+            UnityEngine_GameObject__SendMessage_40693392(gameObject, (System_String_o *)StringLiteral_10009/*"OnPressCancel"*/, 0LL);
             v13 = (UnityEngine_Component_o *)this->fields.manager;
             if ( v13 )
             {
               UnityEngine_Component__SendMessage(
                 v13,
-                (System_String_o *)StringLiteral_9991,
+                (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/,
                 (Il2CppObject *)this->fields.linkItem,
                 0LL);
               return;
@@ -815,8 +815,8 @@ void __fastcall CombineServantListViewObject__OnLongRelease(
   {
     sub_B16FFC(&CombineServantListViewManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9991, v4);
-    sub_B16FFC(&StringLiteral_3546, v5);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, v4);
+    sub_B16FFC(&StringLiteral_3546/*"CancelDragEnd"*/, v5);
     byte_40FA513 = 1;
   }
   if ( this->fields.linkItem )
@@ -845,14 +845,14 @@ void __fastcall CombineServantListViewObject__OnLongRelease(
           return;
         UnityEngine_Component__SendMessage_40674196(
           (UnityEngine_Component_o *)manager,
-          (System_String_o *)StringLiteral_3546,
+          (System_String_o *)StringLiteral_3546/*"CancelDragEnd"*/,
           0LL);
         v10 = (UnityEngine_Component_o *)this->fields.manager;
         if ( v10 )
         {
           UnityEngine_Component__SendMessage(
             v10,
-            (System_String_o *)StringLiteral_9991,
+            (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/,
             (Il2CppObject *)this->fields.linkItem,
             0LL);
           return;
@@ -1104,7 +1104,7 @@ System_String_o *__fastcall CombineServantListViewObject__ToString(
   if ( (byte_40FA50F & 1) == 0 )
   {
     sub_B16FFC(&CombineServantListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40FA50F = 1;
   }
   v13 = 0.0;
@@ -1123,7 +1123,7 @@ System_String_o *__fastcall CombineServantListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

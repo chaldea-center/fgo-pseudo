@@ -84,39 +84,39 @@ void __fastcall SummonEffectComponent___cctor(const MethodInfo *method)
   if ( (byte_40FBFFD & 1) == 0 )
   {
     sub_B16FFC(&SummonEffectComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_22352, v8);
-    sub_B16FFC(&StringLiteral_22350, v9);
-    sub_B16FFC(&StringLiteral_6909, v10);
-    sub_B16FFC(&StringLiteral_22351, v11);
-    sub_B16FFC(&StringLiteral_22349, v12);
-    sub_B16FFC(&StringLiteral_11247, v13);
-    sub_B16FFC(&StringLiteral_14993, v14);
-    sub_B16FFC(&StringLiteral_7594, v15);
+    sub_B16FFC(&StringLiteral_22352/*"summon_up_04"*/, v8);
+    sub_B16FFC(&StringLiteral_22350/*"summon_up_02"*/, v9);
+    sub_B16FFC(&StringLiteral_6909/*"GetAnimationName"*/, v10);
+    sub_B16FFC(&StringLiteral_22351/*"summon_up_03"*/, v11);
+    sub_B16FFC(&StringLiteral_22349/*"summon_up_01"*/, v12);
+    sub_B16FFC(&StringLiteral_11247/*"RarityAnimationName"*/, v13);
+    sub_B16FFC(&StringLiteral_14993/*"UpAnimationName"*/, v14);
+    sub_B16FFC(&StringLiteral_7594/*"InitializeAnimationName"*/, v15);
     byte_40FBFFD = 1;
   }
   static_fields = (BattleServantConfConponent_o *)SummonEffectComponent_TypeInfo->static_fields;
-  v17 = (System_Int32_array **)StringLiteral_22349;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22349;
+  v17 = (System_Int32_array **)StringLiteral_22349/*"summon_up_01"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22349/*"summon_up_01"*/;
   sub_B16F98(static_fields, v17, v2, v3, v4, v5, v6, v7);
   v18 = SummonEffectComponent_TypeInfo->static_fields;
-  v19 = (System_Int32_array **)StringLiteral_22350;
-  v18->RANKUP_TO_SILVER_ANIMATION = (struct System_String_o *)StringLiteral_22350;
+  v19 = (System_Int32_array **)StringLiteral_22350/*"summon_up_02"*/;
+  v18->RANKUP_TO_SILVER_ANIMATION = (struct System_String_o *)StringLiteral_22350/*"summon_up_02"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v18->RANKUP_TO_SILVER_ANIMATION, v19, v20, v21, v22, v23, v24, v25);
   v26 = SummonEffectComponent_TypeInfo->static_fields;
-  v27 = (System_Int32_array **)StringLiteral_22351;
-  v26->RANKUP_TO_GOLD_ANIMATION = (struct System_String_o *)StringLiteral_22351;
+  v27 = (System_Int32_array **)StringLiteral_22351/*"summon_up_03"*/;
+  v26->RANKUP_TO_GOLD_ANIMATION = (struct System_String_o *)StringLiteral_22351/*"summon_up_03"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v26->RANKUP_TO_GOLD_ANIMATION, v27, v28, v29, v30, v31, v32, v33);
   v34 = SummonEffectComponent_TypeInfo->static_fields;
-  v35 = (System_Int32_array **)StringLiteral_22352;
-  v34->RANKUP_COMMANDCODE_ANIMATION = (struct System_String_o *)StringLiteral_22352;
+  v35 = (System_Int32_array **)StringLiteral_22352/*"summon_up_04"*/;
+  v34->RANKUP_COMMANDCODE_ANIMATION = (struct System_String_o *)StringLiteral_22352/*"summon_up_04"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v34->RANKUP_COMMANDCODE_ANIMATION, v35, v36, v37, v38, v39, v40, v41);
   v42 = SummonEffectComponent_TypeInfo->static_fields;
-  v43 = (System_Int32_array **)StringLiteral_14993;
-  v42->FSM_VARIABLE_UP_ANIMATION_NAME = (struct System_String_o *)StringLiteral_14993;
+  v43 = (System_Int32_array **)StringLiteral_14993/*"UpAnimationName"*/;
+  v42->FSM_VARIABLE_UP_ANIMATION_NAME = (struct System_String_o *)StringLiteral_14993/*"UpAnimationName"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v42->FSM_VARIABLE_UP_ANIMATION_NAME, v43, v44, v45, v46, v47, v48, v49);
   v50 = SummonEffectComponent_TypeInfo->static_fields;
-  v51 = (System_Int32_array **)StringLiteral_7594;
-  v50->FSM_VARIABLE_INITIALIZE_ANIMATION_NAME = (struct System_String_o *)StringLiteral_7594;
+  v51 = (System_Int32_array **)StringLiteral_7594/*"InitializeAnimationName"*/;
+  v50->FSM_VARIABLE_INITIALIZE_ANIMATION_NAME = (struct System_String_o *)StringLiteral_7594/*"InitializeAnimationName"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v50->FSM_VARIABLE_INITIALIZE_ANIMATION_NAME,
     v51,
@@ -127,8 +127,8 @@ void __fastcall SummonEffectComponent___cctor(const MethodInfo *method)
     v56,
     v57);
   v58 = SummonEffectComponent_TypeInfo->static_fields;
-  v59 = (System_Int32_array **)StringLiteral_11247;
-  v58->FSM_VARIABLE_RARITY_ANIMATION_NAME = (struct System_String_o *)StringLiteral_11247;
+  v59 = (System_Int32_array **)StringLiteral_11247/*"RarityAnimationName"*/;
+  v58->FSM_VARIABLE_RARITY_ANIMATION_NAME = (struct System_String_o *)StringLiteral_11247/*"RarityAnimationName"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v58->FSM_VARIABLE_RARITY_ANIMATION_NAME,
     v59,
@@ -139,8 +139,8 @@ void __fastcall SummonEffectComponent___cctor(const MethodInfo *method)
     v64,
     v65);
   v66 = SummonEffectComponent_TypeInfo->static_fields;
-  v67 = (System_Int32_array **)StringLiteral_6909;
-  v66->FSM_VARIABLE_GET_ANIMATION_NAME = (struct System_String_o *)StringLiteral_6909;
+  v67 = (System_Int32_array **)StringLiteral_6909/*"GetAnimationName"*/;
+  v66->FSM_VARIABLE_GET_ANIMATION_NAME = (struct System_String_o *)StringLiteral_6909/*"GetAnimationName"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v66->FSM_VARIABLE_GET_ANIMATION_NAME, v67, v68, v69, v70, v71, v72, v73);
   v74 = SummonEffectComponent_TypeInfo->static_fields;
   v74->rarityToColor = 0LL;
@@ -171,7 +171,7 @@ void __fastcall SummonEffectComponent___ctor(SummonEffectComponent_o *this, cons
   if ( (byte_40FBFFC & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FBFFC = 1;
   }
   v5 = (struct System_Int32_array *)sub_B17014(int___TypeInfo, 2LL, v2);
@@ -194,8 +194,8 @@ void __fastcall SummonEffectComponent___ctor(SummonEffectComponent_o *this, cons
     v9,
     v10,
     v11);
-  v13 = (System_Int32_array **)StringLiteral_1;
-  this->fields.effAnimName = (struct System_String_o *)StringLiteral_1;
+  v13 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.effAnimName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.effAnimName, v13, v14, v15, v16, v17, v18, v19);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -331,7 +331,7 @@ void __fastcall SummonEffectComponent__CompleteCallback(SummonEffectComponent_o 
   if ( (byte_40FBFF6 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, method);
-    sub_B16FFC(&StringLiteral_12012, v3);
+    sub_B16FFC(&StringLiteral_12012/*"SETUP_DONE"*/, v3);
     byte_40FBFF6 = 1;
   }
   counterMax = this->fields._counterMax;
@@ -344,7 +344,7 @@ void __fastcall SummonEffectComponent__CompleteCallback(SummonEffectComponent_o 
                                                   (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
     if ( !Component_WebViewObject )
       sub_B170D4();
-    PlayMakerFSM__SendEvent(Component_WebViewObject, (System_String_o *)StringLiteral_12012, 0LL);
+    PlayMakerFSM__SendEvent(Component_WebViewObject, (System_String_o *)StringLiteral_12012/*"SETUP_DONE"*/, 0LL);
   }
 }
 
@@ -462,9 +462,9 @@ void __fastcall SummonEffectComponent__InitSummonEffect(SummonEffectComponent_o 
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
     sub_B16FFC(&Method_SummonEffectComponent_OnCharaGraphLoadDone__, v15);
     sub_B16FFC(&SummonEffectComponent_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_8150, v17);
-    sub_B16FFC(&StringLiteral_17652, v18);
-    sub_B16FFC(&StringLiteral_13102, v19);
+    sub_B16FFC(&StringLiteral_8150/*"IsNoSkip"*/, v17);
+    sub_B16FFC(&StringLiteral_17652/*"countMax"*/, v18);
+    sub_B16FFC(&StringLiteral_13102/*"SummonEffectAnimation"*/, v19);
     byte_40FBFEF = 1;
   }
   memset(&v66, 0, sizeof(v66));
@@ -477,7 +477,7 @@ void __fastcall SummonEffectComponent__InitSummonEffect(SummonEffectComponent_o 
   FsmVariables = PlayMakerFSM__get_FsmVariables(Component_WebViewObject, 0LL);
   if ( !FsmVariables )
     goto LABEL_32;
-  FsmInt = HutongGames_PlayMaker_FsmVariables__GetFsmInt(FsmVariables, (System_String_o *)StringLiteral_17652, 0LL);
+  FsmInt = HutongGames_PlayMaker_FsmVariables__GetFsmInt(FsmVariables, (System_String_o *)StringLiteral_17652/*"countMax"*/, 0LL);
   SummonInfos = this->fields.SummonInfos;
   if ( !SummonInfos )
     goto LABEL_32;
@@ -487,14 +487,14 @@ void __fastcall SummonEffectComponent__InitSummonEffect(SummonEffectComponent_o 
   v25 = PlayMakerFSM__get_FsmVariables(v21, 0LL);
   if ( !v25 )
     goto LABEL_32;
-  FsmBool = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v25, (System_String_o *)StringLiteral_8150, 0LL);
+  FsmBool = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v25, (System_String_o *)StringLiteral_8150/*"IsNoSkip"*/, 0LL);
   if ( !FsmBool )
     goto LABEL_32;
   FsmBool->fields.value = this->fields.isNoSkip;
   v27 = PlayMakerFSM__get_FsmVariables(v21, 0LL);
   if ( !v27 )
     goto LABEL_32;
-  FsmGameObject = HutongGames_PlayMaker_FsmVariables__GetFsmGameObject(v27, (System_String_o *)StringLiteral_13102, 0LL);
+  FsmGameObject = HutongGames_PlayMaker_FsmVariables__GetFsmGameObject(v27, (System_String_o *)StringLiteral_13102/*"SummonEffectAnimation"*/, 0LL);
   if ( !FsmGameObject )
     goto LABEL_32;
   Value = HutongGames_PlayMaker_FsmGameObject__get_Value(FsmGameObject, 0LL);
@@ -670,7 +670,7 @@ void __fastcall SummonEffectComponent__OnCharaGraphLoadDone(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, loadData);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_7267, v5);
+    sub_B16FFC(&StringLiteral_7267/*"INIT_DONE"*/, v5);
     byte_40FBFF0 = 1;
   }
   v6 = this->fields.DownloadCounter - 1;
@@ -686,7 +686,7 @@ void __fastcall SummonEffectComponent__OnCharaGraphLoadDone(
     {
       sub_B170D4();
     }
-    PlayMakerFSM__SendEvent(Component_WebViewObject, (System_String_o *)StringLiteral_7267, 0LL);
+    PlayMakerFSM__SendEvent(Component_WebViewObject, (System_String_o *)StringLiteral_7267/*"INIT_DONE"*/, 0LL);
   }
 }
 
@@ -699,7 +699,7 @@ void __fastcall SummonEffectComponent__OnClickSkipEvent(SummonEffectComponent_o 
   if ( (byte_40FBFFB & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, method);
-    sub_B16FFC(&StringLiteral_5699, v3);
+    sub_B16FFC(&StringLiteral_5699/*"EVENT_SKIP"*/, v3);
     byte_40FBFFB = 1;
   }
   if ( !this->fields.isNoSkipAll )
@@ -709,7 +709,7 @@ void __fastcall SummonEffectComponent__OnClickSkipEvent(SummonEffectComponent_o 
                                                   (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
     if ( !Component_WebViewObject )
       sub_B170D4();
-    PlayMakerFSM__SendEvent(Component_WebViewObject, (System_String_o *)StringLiteral_5699, 0LL);
+    PlayMakerFSM__SendEvent(Component_WebViewObject, (System_String_o *)StringLiteral_5699/*"EVENT_SKIP"*/, 0LL);
   }
 }
 
@@ -812,7 +812,7 @@ void __fastcall SummonEffectComponent__SetUpAnimation(SummonEffectComponent_o *t
     sub_B16FFC(&Method_System_Collections_Generic_List_string__get_Count__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_string__get_Item__, v4);
     sub_B16FFC(&SummonEffectComponent_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11234, v6);
+    sub_B16FFC(&StringLiteral_11234/*"Rank"*/, v6);
     byte_40FBFF7 = 1;
   }
   Component_WebViewObject = (PlayMakerFSM_o *)UnityEngine_Component__GetComponent_WebViewObject_(
@@ -823,7 +823,7 @@ void __fastcall SummonEffectComponent__SetUpAnimation(SummonEffectComponent_o *t
         (FsmVariables = PlayMakerFSM__get_FsmVariables(Component_WebViewObject, 0LL)) == 0LL)
     || (FsmInt = HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                    FsmVariables,
-                   (System_String_o *)StringLiteral_11234,
+                   (System_String_o *)StringLiteral_11234/*"Rank"*/,
                    0LL)) == 0LL )
   {
 LABEL_22:
@@ -900,7 +900,7 @@ void __fastcall SummonEffectComponent__SetUpInitializeAnimation(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, method);
     sub_B16FFC(&SummonEffectComponent_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_7260, v4);
+    sub_B16FFC(&StringLiteral_7260/*"INITIALIZE_ANIMATION"*/, v4);
     byte_40FBFF8 = 1;
   }
   Component_WebViewObject = (PlayMakerFSM_o *)UnityEngine_Component__GetComponent_WebViewObject_(
@@ -926,7 +926,7 @@ LABEL_11:
   }
   Value = HutongGames_PlayMaker_FsmString__get_Value(FsmString, 0LL);
   if ( !System_String__IsNullOrEmpty(Value, 0LL) )
-    PlayMakerFSM__SendEvent(v6, (System_String_o *)StringLiteral_7260, 0LL);
+    PlayMakerFSM__SendEvent(v6, (System_String_o *)StringLiteral_7260/*"INITIALIZE_ANIMATION"*/, 0LL);
 }
 
 
@@ -1332,15 +1332,15 @@ void __fastcall SummonEffectComponent__UpdateCardParam(SummonEffectComponent_o *
     sub_B16FFC(&Method_System_Collections_Generic_List_SummonEffectComponent_SummonInfo__get_Item__, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
     sub_B16FFC(&SummonEffectComponent_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8149, v6);
-    sub_B16FFC(&StringLiteral_17651, v7);
-    sub_B16FFC(&StringLiteral_8162, v8);
-    sub_B16FFC(&StringLiteral_8166, v9);
-    sub_B16FFC(&StringLiteral_8493, v10);
-    sub_B16FFC(&StringLiteral_9667, v11);
-    sub_B16FFC(&StringLiteral_3879, v12);
-    sub_B16FFC(&StringLiteral_11245, v13);
-    sub_B16FFC(&StringLiteral_12661, v14);
+    sub_B16FFC(&StringLiteral_8149/*"IsNewCard"*/, v6);
+    sub_B16FFC(&StringLiteral_17651/*"countIndex"*/, v7);
+    sub_B16FFC(&StringLiteral_8162/*"IsRankUp"*/, v8);
+    sub_B16FFC(&StringLiteral_8166/*"IsSkipStop"*/, v9);
+    sub_B16FFC(&StringLiteral_8493/*"LimitCount"*/, v10);
+    sub_B16FFC(&StringLiteral_9667/*"NoticeRarity"*/, v11);
+    sub_B16FFC(&StringLiteral_3879/*"CardType"*/, v12);
+    sub_B16FFC(&StringLiteral_11245/*"Rarity"*/, v13);
+    sub_B16FFC(&StringLiteral_12661/*"ServantId"*/, v14);
     byte_40FBFF3 = 1;
   }
   this->fields.isNoSkipAll = 0;
@@ -1353,7 +1353,7 @@ void __fastcall SummonEffectComponent__UpdateCardParam(SummonEffectComponent_o *
   FsmVariables = PlayMakerFSM__get_FsmVariables(Component_WebViewObject, 0LL);
   if ( !FsmVariables )
     goto LABEL_82;
-  FsmInt = HutongGames_PlayMaker_FsmVariables__GetFsmInt(FsmVariables, (System_String_o *)StringLiteral_17651, 0LL);
+  FsmInt = HutongGames_PlayMaker_FsmVariables__GetFsmInt(FsmVariables, (System_String_o *)StringLiteral_17651/*"countIndex"*/, 0LL);
   if ( !FsmInt )
     goto LABEL_82;
   Value = HutongGames_PlayMaker_FsmInt__get_Value(FsmInt, 0LL);
@@ -1433,28 +1433,28 @@ void __fastcall SummonEffectComponent__UpdateCardParam(SummonEffectComponent_o *
   v43 = PlayMakerFSM__get_FsmVariables(v16, 0LL);
   if ( !v43 )
     goto LABEL_82;
-  v44 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v43, (System_String_o *)StringLiteral_12661, 0LL);
+  v44 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v43, (System_String_o *)StringLiteral_12661/*"ServantId"*/, 0LL);
   if ( !v44 )
     goto LABEL_82;
   v44->fields.value = ServantId;
   v45 = PlayMakerFSM__get_FsmVariables(v16, 0LL);
   if ( !v45 )
     goto LABEL_82;
-  v46 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v45, (System_String_o *)StringLiteral_8493, 0LL);
+  v46 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v45, (System_String_o *)StringLiteral_8493/*"LimitCount"*/, 0LL);
   if ( !v46 )
     goto LABEL_82;
   v46->fields.value = LimitCount;
   v47 = PlayMakerFSM__get_FsmVariables(v16, 0LL);
   if ( !v47 )
     goto LABEL_82;
-  FsmBool = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v47, (System_String_o *)StringLiteral_8162, 0LL);
+  FsmBool = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v47, (System_String_o *)StringLiteral_8162/*"IsRankUp"*/, 0LL);
   if ( !FsmBool )
     goto LABEL_82;
   FsmBool->fields.value = IsRankUp;
   v49 = PlayMakerFSM__get_FsmVariables(v16, 0LL);
   if ( !v49 )
     goto LABEL_82;
-  v50 = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v49, (System_String_o *)StringLiteral_8166, 0LL);
+  v50 = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v49, (System_String_o *)StringLiteral_8166/*"IsSkipStop"*/, 0LL);
   if ( !v50 )
     goto LABEL_82;
   v50->fields.value = IsSkipStop;
@@ -1499,21 +1499,21 @@ void __fastcall SummonEffectComponent__UpdateCardParam(SummonEffectComponent_o *
   v75 = PlayMakerFSM__get_FsmVariables(v16, 0LL);
   if ( !v75 )
     goto LABEL_82;
-  v76 = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v75, (System_String_o *)StringLiteral_8149, 0LL);
+  v76 = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v75, (System_String_o *)StringLiteral_8149/*"IsNewCard"*/, 0LL);
   if ( !v76 )
     goto LABEL_82;
   v76->fields.value = v90 || Rarity == 0;
   v77 = PlayMakerFSM__get_FsmVariables(v16, 0LL);
   if ( !v77 )
     goto LABEL_82;
-  v78 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v77, (System_String_o *)StringLiteral_9667, 0LL);
+  v78 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v77, (System_String_o *)StringLiteral_9667/*"NoticeRarity"*/, 0LL);
   if ( !v78 )
     goto LABEL_82;
   v78->fields.value = NoticeRarity;
   v79 = PlayMakerFSM__get_FsmVariables(v16, 0LL);
   if ( !v79 )
     goto LABEL_82;
-  v80 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v79, (System_String_o *)StringLiteral_3879, 0LL);
+  v80 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v79, (System_String_o *)StringLiteral_3879/*"CardType"*/, 0LL);
   if ( !v80 )
     goto LABEL_82;
   v80->fields.value = CardType;
@@ -1524,7 +1524,7 @@ void __fastcall SummonEffectComponent__UpdateCardParam(SummonEffectComponent_o *
   v82 = PlayMakerFSM__get_FsmVariables(v16, 0LL);
   if ( !v82 )
     goto LABEL_82;
-  v83 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v82, (System_String_o *)StringLiteral_11245, 0LL);
+  v83 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v82, (System_String_o *)StringLiteral_11245/*"Rarity"*/, 0LL);
   if ( !v83 )
     goto LABEL_82;
   v83->fields.value = v81;
@@ -2141,30 +2141,30 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
     sub_B16FFC(&SummonEffectComponent___c__DisplayClass45_2_TypeInfo, v51);
     sub_B16FFC(&Method_SummonEffectComponent___c__DisplayClass45_3__UpdateCardTexture_b__9__, v52);
     sub_B16FFC(&SummonEffectComponent___c__DisplayClass45_3_TypeInfo, v53);
-    sub_B16FFC(&StringLiteral_3875, v54);
-    sub_B16FFC(&StringLiteral_3876, v55);
-    sub_B16FFC(&StringLiteral_3867, v56);
-    sub_B16FFC(&StringLiteral_8149, v57);
-    sub_B16FFC(&StringLiteral_3874, v58);
-    sub_B16FFC(&StringLiteral_4095, v59);
-    sub_B16FFC(&StringLiteral_2343, v60);
-    sub_B16FFC(&StringLiteral_11234, v61);
-    sub_B16FFC(&StringLiteral_17651, v62);
-    sub_B16FFC(&StringLiteral_13100, v63);
-    sub_B16FFC(&StringLiteral_21611, v64);
-    sub_B16FFC(&StringLiteral_8162, v65);
-    sub_B16FFC(&StringLiteral_15843, v66);
-    sub_B16FFC(&StringLiteral_4094, v67);
-    sub_B16FFC(&StringLiteral_8166, v68);
-    sub_B16FFC(&StringLiteral_8493, v69);
-    sub_B16FFC(&StringLiteral_9667, v70);
-    sub_B16FFC(&StringLiteral_2342, v71);
-    sub_B16FFC(&StringLiteral_3879, v72);
-    sub_B16FFC(&StringLiteral_3873, v73);
-    sub_B16FFC(&StringLiteral_3868, v74);
-    sub_B16FFC(&StringLiteral_22343, v75);
-    sub_B16FFC(&StringLiteral_11245, v76);
-    sub_B16FFC(&StringLiteral_12661, v77);
+    sub_B16FFC(&StringLiteral_3875/*"CardScale"*/, v54);
+    sub_B16FFC(&StringLiteral_3876/*"CardSecondName"*/, v55);
+    sub_B16FFC(&StringLiteral_3867/*"CardFirstName"*/, v56);
+    sub_B16FFC(&StringLiteral_8149/*"IsNewCard"*/, v57);
+    sub_B16FFC(&StringLiteral_3874/*"CardRotName"*/, v58);
+    sub_B16FFC(&StringLiteral_4095/*"CodeCardRarity02"*/, v59);
+    sub_B16FFC(&StringLiteral_2343/*"BACKSIDE_SVT_EQUIP_IMAGE_ID"*/, v60);
+    sub_B16FFC(&StringLiteral_11234/*"Rank"*/, v61);
+    sub_B16FFC(&StringLiteral_17651/*"countIndex"*/, v62);
+    sub_B16FFC(&StringLiteral_13100/*"SummonEffect"*/, v63);
+    sub_B16FFC(&StringLiteral_21611/*"rarity"*/, v64);
+    sub_B16FFC(&StringLiteral_8162/*"IsRankUp"*/, v65);
+    sub_B16FFC(&StringLiteral_15843/*"_0"*/, v66);
+    sub_B16FFC(&StringLiteral_4094/*"CodeCardRarity"*/, v67);
+    sub_B16FFC(&StringLiteral_8166/*"IsSkipStop"*/, v68);
+    sub_B16FFC(&StringLiteral_8493/*"LimitCount"*/, v69);
+    sub_B16FFC(&StringLiteral_9667/*"NoticeRarity"*/, v70);
+    sub_B16FFC(&StringLiteral_2342/*"BACKSIDE_CLASS_IMAGE_ID"*/, v71);
+    sub_B16FFC(&StringLiteral_3879/*"CardType"*/, v72);
+    sub_B16FFC(&StringLiteral_3873/*"CardNodeName"*/, v73);
+    sub_B16FFC(&StringLiteral_3868/*"CardFirstPeelName"*/, v74);
+    sub_B16FFC(&StringLiteral_22343/*"summon_rarity_0"*/, v75);
+    sub_B16FFC(&StringLiteral_11245/*"Rarity"*/, v76);
+    sub_B16FFC(&StringLiteral_12661/*"ServantId"*/, v77);
     byte_40FBFF4 = 1;
   }
   entity = 0LL;
@@ -2185,7 +2185,7 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
   FsmVariables = PlayMakerFSM__get_FsmVariables(Component_WebViewObject, 0LL);
   if ( !FsmVariables )
     goto LABEL_393;
-  FsmInt = HutongGames_PlayMaker_FsmVariables__GetFsmInt(FsmVariables, (System_String_o *)StringLiteral_17651, 0LL);
+  FsmInt = HutongGames_PlayMaker_FsmVariables__GetFsmInt(FsmVariables, (System_String_o *)StringLiteral_17651/*"countIndex"*/, 0LL);
   if ( !FsmInt )
     goto LABEL_393;
   Value = HutongGames_PlayMaker_FsmInt__get_Value(FsmInt, 0LL);
@@ -2295,28 +2295,28 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
   v126 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v126 )
     goto LABEL_393;
-  v127 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v126, (System_String_o *)StringLiteral_12661, 0LL);
+  v127 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v126, (System_String_o *)StringLiteral_12661/*"ServantId"*/, 0LL);
   if ( !v127 )
     goto LABEL_393;
   v127->fields.value = svtId;
   v128 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v128 )
     goto LABEL_393;
-  v129 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v128, (System_String_o *)StringLiteral_8493, 0LL);
+  v129 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v128, (System_String_o *)StringLiteral_8493/*"LimitCount"*/, 0LL);
   if ( !v129 )
     goto LABEL_393;
   v129->fields.value = limitCount;
   v130 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v130 )
     goto LABEL_393;
-  FsmBool = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v130, (System_String_o *)StringLiteral_8162, 0LL);
+  FsmBool = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v130, (System_String_o *)StringLiteral_8162/*"IsRankUp"*/, 0LL);
   if ( !FsmBool )
     goto LABEL_393;
   FsmBool->fields.value = IsRankUp;
   v132 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v132 )
     goto LABEL_393;
-  v133 = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v132, (System_String_o *)StringLiteral_8166, 0LL);
+  v133 = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v132, (System_String_o *)StringLiteral_8166/*"IsSkipStop"*/, 0LL);
   if ( !v133 )
     goto LABEL_393;
   v133->fields.value = IsSkipStop;
@@ -2339,21 +2339,21 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
   v142 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v142 )
     goto LABEL_393;
-  v143 = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v142, (System_String_o *)StringLiteral_8149, 0LL);
+  v143 = HutongGames_PlayMaker_FsmVariables__GetFsmBool(v142, (System_String_o *)StringLiteral_8149/*"IsNewCard"*/, 0LL);
   if ( !v143 )
     goto LABEL_393;
   v143->fields.value = IsNewCard || key == 0;
   v144 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v144 )
     goto LABEL_393;
-  v145 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v144, (System_String_o *)StringLiteral_9667, 0LL);
+  v145 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v144, (System_String_o *)StringLiteral_9667/*"NoticeRarity"*/, 0LL);
   if ( !v145 )
     goto LABEL_393;
   v145->fields.value = NoticeRarity;
   v146 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v146 )
     goto LABEL_393;
-  v147 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v146, (System_String_o *)StringLiteral_3879, 0LL);
+  v147 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v146, (System_String_o *)StringLiteral_3879/*"CardType"*/, 0LL);
   if ( !v147 )
     goto LABEL_393;
   v147->fields.value = *(_DWORD *)(v78 + 56);
@@ -2364,7 +2364,7 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
   v149 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v149 )
     goto LABEL_393;
-  v150 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v149, (System_String_o *)StringLiteral_11245, 0LL);
+  v150 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v149, (System_String_o *)StringLiteral_11245/*"Rarity"*/, 0LL);
   if ( !v150 )
     goto LABEL_393;
   v150->fields.value = v148;
@@ -2382,7 +2382,7 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
            0LL);
   v513 = v148;
   v153 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v513);
-  v154 = (System_Int32_array **)System_String__Concat((Il2CppObject *)StringLiteral_22343, v153, 0LL);
+  v154 = (System_Int32_array **)System_String__Concat((Il2CppObject *)StringLiteral_22343/*"summon_rarity_0"*/, v153, 0LL);
   if ( !v152 )
     goto LABEL_393;
   v152->fields.value = (struct System_String_o *)v154;
@@ -2393,7 +2393,7 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
   v505 = userServantId;
   FsmGameObject = HutongGames_PlayMaker_FsmVariables__GetFsmGameObject(
                     v161,
-                    (System_String_o *)StringLiteral_13100,
+                    (System_String_o *)StringLiteral_13100/*"SummonEffect"*/,
                     0LL);
   if ( !FsmGameObject )
     goto LABEL_393;
@@ -2412,21 +2412,21 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
   v171 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v171 )
     goto LABEL_393;
-  v172 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v171, (System_String_o *)StringLiteral_3873, 0LL);
+  v172 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v171, (System_String_o *)StringLiteral_3873/*"CardNodeName"*/, 0LL);
   if ( !v172 )
     goto LABEL_393;
   v173 = HutongGames_PlayMaker_FsmString__get_Value(v172, 0LL);
   v174 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v174 )
     goto LABEL_393;
-  FsmFloat = HutongGames_PlayMaker_FsmVariables__GetFsmFloat(v174, (System_String_o *)StringLiteral_3875, 0LL);
+  FsmFloat = HutongGames_PlayMaker_FsmVariables__GetFsmFloat(v174, (System_String_o *)StringLiteral_3875/*"CardScale"*/, 0LL);
   if ( !FsmFloat )
     goto LABEL_393;
   v176 = HutongGames_PlayMaker_FsmFloat__get_Value(FsmFloat, 0LL);
   v177 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v177 )
     goto LABEL_393;
-  v178 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v177, (System_String_o *)StringLiteral_3867, 0LL);
+  v178 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v177, (System_String_o *)StringLiteral_3867/*"CardFirstName"*/, 0LL);
   if ( !v178 )
     goto LABEL_393;
   v179 = (System_Int32_array **)HutongGames_PlayMaker_FsmString__get_Value(v178, 0LL);
@@ -2435,7 +2435,7 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
   v186 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v186 )
     goto LABEL_393;
-  v187 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v186, (System_String_o *)StringLiteral_3868, 0LL);
+  v187 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v186, (System_String_o *)StringLiteral_3868/*"CardFirstPeelName"*/, 0LL);
   if ( !v187 )
     goto LABEL_393;
   v188 = (System_Int32_array **)HutongGames_PlayMaker_FsmString__get_Value(v187, 0LL);
@@ -2444,7 +2444,7 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
   v195 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v195 )
     goto LABEL_393;
-  v196 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v195, (System_String_o *)StringLiteral_3876, 0LL);
+  v196 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v195, (System_String_o *)StringLiteral_3876/*"CardSecondName"*/, 0LL);
   if ( !v196 )
     goto LABEL_393;
   v197 = (System_Int32_array **)HutongGames_PlayMaker_FsmString__get_Value(v196, 0LL);
@@ -2453,7 +2453,7 @@ void __fastcall SummonEffectComponent__UpdateCardTexture(SummonEffectComponent_o
   v204 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v204 )
     goto LABEL_393;
-  v205 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v204, (System_String_o *)StringLiteral_3874, 0LL);
+  v205 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v204, (System_String_o *)StringLiteral_3874/*"CardRotName"*/, 0LL);
   if ( !v205 )
     goto LABEL_393;
   v206 = (System_Int32_array **)HutongGames_PlayMaker_FsmString__get_Value(v205, 0LL);
@@ -2656,7 +2656,7 @@ LABEL_121:
             v284 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
             if ( v284 )
             {
-              v285 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v284, (System_String_o *)StringLiteral_4094, 0LL);
+              v285 = HutongGames_PlayMaker_FsmVariables__GetFsmString(v284, (System_String_o *)StringLiteral_4094/*"CodeCardRarity"*/, 0LL);
               if ( v285 )
               {
                 v286 = HutongGames_PlayMaker_FsmString__get_Value(v285, 0LL);
@@ -2665,7 +2665,7 @@ LABEL_121:
                 {
                   v288 = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                            v287,
-                           (System_String_o *)StringLiteral_4095,
+                           (System_String_o *)StringLiteral_4095/*"CodeCardRarity02"*/,
                            0LL);
                   if ( v288 )
                   {
@@ -2710,7 +2710,7 @@ LABEL_121:
                                         goto LABEL_394;
                                       v306 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                                v305,
-                                               (System_String_o *)StringLiteral_11234,
+                                               (System_String_o *)StringLiteral_11234/*"Rank"*/,
                                                0LL);
                                       if ( v241 )
                                       {
@@ -2781,7 +2781,7 @@ LABEL_394:
                                       {
                                         v322 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                                  v321,
-                                                 (System_String_o *)StringLiteral_11234,
+                                                 (System_String_o *)StringLiteral_11234/*"Rank"*/,
                                                  0LL);
                                         if ( v322 )
                                         {
@@ -2793,9 +2793,9 @@ LABEL_394:
                                             UnityEngine_GameObject__SetActive(v323, 1, 0LL);
                                             v324 = System_Int32__ToString((int32_t)&v514, 0LL);
                                             v325 = System_String__Concat_43746016(
-                                                     (System_String_o *)StringLiteral_21611,
+                                                     (System_String_o *)StringLiteral_21611/*"rarity"*/,
                                                      v324,
-                                                     (System_String_o *)StringLiteral_15843,
+                                                     (System_String_o *)StringLiteral_15843/*"_0"*/,
                                                      0LL);
                                             if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                                               && !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -2812,9 +2812,9 @@ LABEL_394:
                                               UnityEngine_GameObject__SetActive(v326, 1, 0LL);
                                               v327 = System_Int32__ToString((int32_t)&v514, 0LL);
                                               v328 = System_String__Concat_43746016(
-                                                       (System_String_o *)StringLiteral_21611,
+                                                       (System_String_o *)StringLiteral_21611/*"rarity"*/,
                                                        v327,
-                                                       (System_String_o *)StringLiteral_15843,
+                                                       (System_String_o *)StringLiteral_15843/*"_0"*/,
                                                        0LL);
                                               AtlasManager__SetCharaGraphaOption((UISprite_o *)v298, v328, 0LL);
                                               ((void (__fastcall *)(UnityEngine_Component_o *, void *))v298->klass[2]._1.typeMetadataHandle)(
@@ -3023,7 +3023,7 @@ LABEL_358:
                                                               {
                                                                 v389 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                                                          v388,
-                                                                         (System_String_o *)StringLiteral_11234,
+                                                                         (System_String_o *)StringLiteral_11234/*"Rank"*/,
                                                                          0LL);
                                                                 if ( v237 == -1 )
                                                                 {
@@ -3087,7 +3087,7 @@ LABEL_358:
                                                                     1,
                                                                     0LL);
                                                                   *(_DWORD *)(v378 + 20) = ConstantMaster__getValue(
-                                                                                             (System_String_o *)StringLiteral_2342,
+                                                                                             (System_String_o *)StringLiteral_2342/*"BACKSIDE_CLASS_IMAGE_ID"*/,
                                                                                              0LL);
                                                                   v481 = (DesignCardManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
                                                                   if ( v481 )
@@ -3210,7 +3210,7 @@ LABEL_358:
                                                             {
                                                               v451 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                                                        v450,
-                                                                       (System_String_o *)StringLiteral_11234,
+                                                                       (System_String_o *)StringLiteral_11234/*"Rank"*/,
                                                                        0LL);
                                                               if ( !v451 )
                                                                 goto LABEL_394;
@@ -3269,8 +3269,8 @@ LABEL_358:
                                                               if ( !monitor )
                                                                 goto LABEL_394;
                                                               v463 = (System_String_o **)(monitor[14] == 1
-                                                                                        ? &StringLiteral_2343
-                                                                                        : &StringLiteral_2342);
+                                                                                        ? &StringLiteral_2343/*"BACKSIDE_SVT_EQUIP_IMAGE_ID"*/
+                                                                                        : &StringLiteral_2342/*"BACKSIDE_CLASS_IMAGE_ID"*/);
                                                               *(_DWORD *)(v442 + 16) = ConstantMaster__getValue(
                                                                                          *v463,
                                                                                          0LL);
@@ -3573,7 +3573,7 @@ LABEL_269:
     v405 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
     if ( !v405 )
       goto LABEL_393;
-    v406 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v405, (System_String_o *)StringLiteral_9667, 0LL);
+    v406 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v405, (System_String_o *)StringLiteral_9667/*"NoticeRarity"*/, 0LL);
     if ( !v406 )
       goto LABEL_393;
     v406->fields.value = 3;
@@ -3678,7 +3678,7 @@ LABEL_305:
   v419 = PlayMakerFSM__get_FsmVariables(v86, 0LL);
   if ( !v419 )
     goto LABEL_393;
-  v420 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v419, (System_String_o *)StringLiteral_3879, 0LL);
+  v420 = HutongGames_PlayMaker_FsmVariables__GetFsmInt(v419, (System_String_o *)StringLiteral_3879/*"CardType"*/, 0LL);
   if ( !v420 )
     goto LABEL_393;
   v420->fields.value = 4;
@@ -3742,7 +3742,7 @@ void __fastcall SummonEffectComponent___endAnimation_b__43_0(SummonEffectCompone
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_5468, v4);
+    sub_B16FFC(&StringLiteral_5468/*"END_FADE"*/, v4);
     byte_40FBFFE = 1;
   }
   p_effect = &this->fields.effect;
@@ -3769,7 +3769,7 @@ void __fastcall SummonEffectComponent___endAnimation_b__43_0(SummonEffectCompone
                                                 (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
   if ( !Component_WebViewObject )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(Component_WebViewObject, (System_String_o *)StringLiteral_5468, 0LL);
+  PlayMakerFSM__SendEvent(Component_WebViewObject, (System_String_o *)StringLiteral_5468/*"END_FADE"*/, 0LL);
 }
 
 
@@ -4020,7 +4020,7 @@ void __fastcall SummonEffectComponent___c__DisplayClass45_0___UpdateCardTexture_
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UITexture___, d);
     sub_B16FFC(&UnityEngine_Material_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_4501, v7);
+    sub_B16FFC(&StringLiteral_4501/*"Custom/Sprite-MasterFigure (SoftClip)"*/, v7);
     byte_40F7A89 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -4040,7 +4040,7 @@ void __fastcall SummonEffectComponent___c__DisplayClass45_0___UpdateCardTexture_
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                               (UnityEngine_Component_o *)NodeFromName,
                               (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UITexture___);
-  v14 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4501, 0LL);
+  v14 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4501/*"Custom/Sprite-MasterFigure (SoftClip)"*/, 0LL);
   v19 = (UnityEngine_Material_o *)sub_B170CC(UnityEngine_Material_TypeInfo, v15, v16, v17, v18);
   UnityEngine_Material___ctor(v19, v14, 0LL);
   if ( !Component_WebViewObject
@@ -4439,8 +4439,8 @@ void __fastcall SummonEffectComponent___c__DisplayClass45_3___UpdateCardTexture_
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UITexture___, d);
     sub_B16FFC(&UnityEngine_Material_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_14954, v7);
-    sub_B16FFC(&StringLiteral_4501, v8);
+    sub_B16FFC(&StringLiteral_14954/*"Unlit/Transparent Colored"*/, v7);
+    sub_B16FFC(&StringLiteral_4501/*"Custom/Sprite-MasterFigure (SoftClip)"*/, v8);
     byte_40F7A8E = 1;
   }
   CS___8__locals3 = this->fields.CS___8__locals3;
@@ -4479,7 +4479,7 @@ void __fastcall SummonEffectComponent___c__DisplayClass45_3___UpdateCardTexture_
   if ( !v20 )
     goto LABEL_22;
   v21 = Component_WebViewObject;
-  v22 = (System_String_o **)(v20->fields.cardType == 1 ? &StringLiteral_4501 : &StringLiteral_14954);
+  v22 = (System_String_o **)(v20->fields.cardType == 1 ? &StringLiteral_4501/*"Custom/Sprite-MasterFigure (SoftClip)"*/ : &StringLiteral_14954/*"Unlit/Transparent Colored"*/);
   v23 = UnityEngine_Shader__Find(*v22, 0LL);
   v28 = (UnityEngine_Material_o *)sub_B170CC(UnityEngine_Material_TypeInfo, v24, v25, v26, v27);
   UnityEngine_Material___ctor(v28, v23, 0LL);

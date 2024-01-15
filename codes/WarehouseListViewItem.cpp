@@ -2149,10 +2149,10 @@ System_String_o *__fastcall WarehouseListViewItem__get_ImageName(
 {
   if ( (byte_40FA99A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FA99A = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -2365,12 +2365,12 @@ System_String_o *__fastcall WarehouseListViewItem__get_NameText(
   if ( (byte_40FA999 & 1) == 0 )
   {
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18326, v3);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v3);
     byte_40FA999 = 1;
   }
   servantEntity = this->fields.servantEntity;
   if ( !servantEntity )
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
   userServantEntity = this->fields.userServantEntity;
   if ( userServantEntity )
   {

@@ -12,15 +12,15 @@ void __fastcall EventUiValueEntity___ctor(EventUiValueEntity_o *this, const Meth
   if ( (byte_40F9C33 & 1) == 0 )
   {
     sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F9C33 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
     (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
-  v4 = (System_Int32_array **)StringLiteral_1;
-  this->fields.value = (struct System_String_o *)StringLiteral_1;
+  v4 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.value, v4, v5, v6, v7, v8, v9, v10);
   this->fields.priority = 0;
 }

@@ -152,7 +152,7 @@ bool __fastcall BuffMaster__TryGetDisplayCardBottomImageName(
   {
     sub_B16FFC(&Method_BasicHelper_GetValue_string___, name);
     sub_B16FFC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v9);
-    sub_B16FFC(&StringLiteral_5310, v10);
+    sub_B16FFC(&StringLiteral_5310/*"DisplayCardBottomImageName"*/, v10);
     byte_40FB4F6 = 1;
   }
   entity = 0LL;
@@ -168,7 +168,7 @@ bool __fastcall BuffMaster__TryGetDisplayCardBottomImageName(
       sub_B170D4();
     Value_string = BasicHelper__GetValue_string_(
                      *(System_Collections_Generic_Dictionary_string__object__o **)&entity->fields.eventId,
-                     (System_String_o *)StringLiteral_5310,
+                     (System_String_o *)StringLiteral_5310/*"DisplayCardBottomImageName"*/,
                      defName,
                      (const MethodInfo_18B7D04 *)Method_BasicHelper_GetValue_string___);
   }

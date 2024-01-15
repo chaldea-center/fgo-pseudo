@@ -161,7 +161,7 @@ System_String_o *__fastcall TopHomeRequest__getMockData(TopHomeRequest_o *this, 
   if ( (byte_40FB7EE & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9138, v2);
+    sub_B16FFC(&StringLiteral_9138/*"MockTopLoginRequest"*/, v2);
     byte_40FB7EE = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -169,7 +169,7 @@ System_String_o *__fastcall TopHomeRequest__getMockData(TopHomeRequest_o *this, 
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9138, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9138/*"MockTopLoginRequest"*/, 0LL);
 }
 
 
@@ -181,7 +181,7 @@ System_String_o *__fastcall TopHomeRequest__getURL(TopHomeRequest_o *this, const
   if ( (byte_40FB7ED & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19085, v2);
+    sub_B16FFC(&StringLiteral_19085/*"home/top"*/, v2);
     byte_40FB7ED = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -190,7 +190,7 @@ System_String_o *__fastcall TopHomeRequest__getURL(TopHomeRequest_o *this, const
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_19085, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_19085/*"home/top"*/, 0LL);
 }
 
 
@@ -237,8 +237,8 @@ void __fastcall TopHomeRequest__requestCompleted(
     sub_B16FFC(&JsonManager_TypeInfo, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
     sub_B16FFC(&TopHomeRequest_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
-    sub_B16FFC(&StringLiteral_20980, v8);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v8);
     byte_40FB7F5 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -261,7 +261,7 @@ void __fastcall TopHomeRequest__requestCompleted(
     TopHomeRequest_TypeInfo->static_fields->accessTimeUpdateEventMap = 0LL;
     v15->static_fields->nextRefreshTime = 0LL;
     v15->static_fields->lastRefreshTime = 0LL;
-    v16 = (System_String_o **)&StringLiteral_20980;
+    v16 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
     goto LABEL_20;
   }
   v11 = TopHomeRequest_TypeInfo;
@@ -274,7 +274,7 @@ void __fastcall TopHomeRequest__requestCompleted(
   success = (Il2CppObject *)v10->fields.success;
   if ( !success )
   {
-    v16 = (System_String_o **)&StringLiteral_21129;
+    v16 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
 LABEL_20:
     v13 = *v16;
     goto LABEL_21;

@@ -65,7 +65,7 @@ void __fastcall SetBoxGachaResourceControl__SetLimitReset(
 
   if ( (byte_40FC35C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_352, isReset);
+    sub_B16FFC(&StringLiteral_352/*"#4C4C4C"*/, isReset);
     byte_40FC35C = 1;
   }
   v17 = 0uLL;
@@ -81,7 +81,7 @@ void __fastcall SetBoxGachaResourceControl__SetLimitReset(
     goto LABEL_18;
   UnityEngine_Behaviour__set_enabled(v6, isReset, 0LL);
   v7 = isReset ? 0 : 3;
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_352, (UnityEngine_Color_o *)&v17, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_352/*"#4C4C4C"*/, (UnityEngine_Color_o *)&v17, 0LL);
   v8 = this->fields.oneBoxGachaBtn;
   if ( !v8 )
     goto LABEL_18;

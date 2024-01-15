@@ -407,8 +407,8 @@ void __fastcall EventUpValIconComponent__SetParam(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v12);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_18460, v14);
-    this = (EventUpValIconComponent_o *)sub_B16FFC(&StringLiteral_18461, v15);
+    sub_B16FFC(&StringLiteral_18460/*"event_logo_mini_"*/, v14);
+    this = (EventUpValIconComponent_o *)sub_B16FFC(&StringLiteral_18461/*"event_logo_mini_80368"*/, v15);
     byte_40F9C39 = 1;
   }
   methoda.return_type = 0LL;
@@ -624,12 +624,12 @@ LABEL_31:
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      v73 = (System_String_o *)StringLiteral_18461;
+      v73 = (System_String_o *)StringLiteral_18461/*"event_logo_mini_80368"*/;
     }
     else
     {
       v75 = System_Int32__ToString((int)v17 + 16, 0LL);
-      v73 = System_String__Concat_43743732((System_String_o *)StringLiteral_18460, v75, 0LL);
+      v73 = System_String__Concat_43743732((System_String_o *)StringLiteral_18460/*"event_logo_mini_"*/, v75, 0LL);
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
       {

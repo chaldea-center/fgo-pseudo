@@ -26,10 +26,10 @@ System_String_o *__fastcall GiftDetailEntity__GetOverwritePhaseRewardImageId(
 
   if ( (byte_40FC114 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21372, method);
+    sub_B16FFC(&StringLiteral_21372/*"phaseRewardImageId"*/, method);
     byte_40FC114 = 1;
   }
-  ScriptValue = GiftDetailEntity__GetScriptValue(this, (System_String_o *)StringLiteral_21372, v2);
+  ScriptValue = GiftDetailEntity__GetScriptValue(this, (System_String_o *)StringLiteral_21372/*"phaseRewardImageId"*/, v2);
   if ( !ScriptValue )
     sub_B170D4();
   return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))ScriptValue->klass->vtable[3].method)(

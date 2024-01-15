@@ -370,33 +370,33 @@ void __fastcall CheckMaterialSvtEquippedDialog__Init(CheckMaterialSvtEquippedDia
 
   if ( (byte_40FAF2C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FAF2C = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_16;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   upperLabel = this->fields.upperLabel;
   if ( !upperLabel )
     goto LABEL_16;
-  UILabel__set_text(upperLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(upperLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   lowerLabel = this->fields.lowerLabel;
   if ( !lowerLabel )
     goto LABEL_16;
-  UILabel__set_text(lowerLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(lowerLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideLabel = this->fields.decideLabel;
   if ( !decideLabel )
     goto LABEL_16;
-  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   cancelLabel = this->fields.cancelLabel;
   if ( !cancelLabel )
     goto LABEL_16;
-  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( !closeLabel )
     goto LABEL_16;
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideButton = (UnityEngine_Component_o *)this->fields.decideButton;
   if ( !decideButton
     || (gameObject = UnityEngine_Component__get_gameObject(decideButton, 0LL)) == 0LL
@@ -747,9 +747,9 @@ void __fastcall CheckMaterialSvtEquippedDialog__Open(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v27);
     sub_B16FFC(&Method_CheckMaterialSvtEquippedDialog___c__Open_b__20_0__, v28);
     sub_B16FFC(&CheckMaterialSvtEquippedDialog___c_TypeInfo, v29);
-    sub_B16FFC(&StringLiteral_3176, v30);
-    sub_B16FFC(&StringLiteral_3177, v31);
-    sub_B16FFC(&StringLiteral_3329, v32);
+    sub_B16FFC(&StringLiteral_3176/*"COMBINE_LAST_EQUIP_CMD_SVT_INFO"*/, v30);
+    sub_B16FFC(&StringLiteral_3177/*"COMBINE_LAST_EQUIP_CMD_SVT_MESSAGE"*/, v31);
+    sub_B16FFC(&StringLiteral_3329/*"CONFIRM_TITLE_SVT_COMBINE"*/, v32);
     byte_40FAF2D = 1;
   }
   memset(&v85, 0, sizeof(v85));
@@ -781,17 +781,17 @@ void __fastcall CheckMaterialSvtEquippedDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3329, 0LL);
+    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3329/*"CONFIRM_TITLE_SVT_COMBINE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_51;
     UILabel__set_text(titleLabel, v36, 0LL);
     upperLabel = this->fields.upperLabel;
-    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3176, 0LL);
+    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3176/*"COMBINE_LAST_EQUIP_CMD_SVT_INFO"*/, 0LL);
     if ( !upperLabel )
       goto LABEL_51;
     UILabel__set_text(upperLabel, v38, 0LL);
     lowerLabel = this->fields.lowerLabel;
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3177, 0LL);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3177/*"COMBINE_LAST_EQUIP_CMD_SVT_MESSAGE"*/, 0LL);
     if ( !lowerLabel )
       goto LABEL_51;
     UILabel__set_text(lowerLabel, v40, 0LL);
@@ -990,8 +990,8 @@ void __fastcall CheckMaterialSvtEquippedDialog__OpenCommandCodeRemoveResult(
     sub_B16FFC(&Method_System_Linq_Enumerable_ToList_long___, v12);
     sub_B16FFC(&Method_System_Collections_Generic_List_long__get_Count__, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_3234, v15);
-    sub_B16FFC(&StringLiteral_3235, v16);
+    sub_B16FFC(&StringLiteral_3234/*"COMMAND_CODE_REMOVE_RESULT_MESSAGE"*/, v15);
+    sub_B16FFC(&StringLiteral_3235/*"COMMAND_CODE_REMOVE_RESULT_TITLE"*/, v16);
     byte_40FAF2E = 1;
   }
   lastSvtCommandCodeList = this->fields.lastSvtCommandCodeList;
@@ -1035,12 +1035,12 @@ void __fastcall CheckMaterialSvtEquippedDialog__OpenCommandCodeRemoveResult(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3235, 0LL);
+      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3235/*"COMMAND_CODE_REMOVE_RESULT_TITLE"*/, 0LL);
       if ( titleLabel )
       {
         UILabel__set_text(titleLabel, v28, 0LL);
         lowerLabel = this->fields.lowerLabel;
-        v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3234, 0LL);
+        v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3234/*"COMMAND_CODE_REMOVE_RESULT_MESSAGE"*/, 0LL);
         if ( lowerLabel )
         {
           UILabel__set_text(lowerLabel, v30, 0LL);
@@ -1133,9 +1133,9 @@ void __fastcall CheckMaterialSvtEquippedDialog__SetObjActive(
   if ( (byte_40FAF3B & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, isOneButton);
-    sub_B16FFC(&StringLiteral_3253, v5);
-    sub_B16FFC(&StringLiteral_3251, v6);
-    sub_B16FFC(&StringLiteral_3252, v7);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v5);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v6);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v7);
     byte_40FAF3B = 1;
   }
   decideButton = (UnityEngine_Component_o *)this->fields.decideButton;
@@ -1165,15 +1165,15 @@ void __fastcall CheckMaterialSvtEquippedDialog__SetObjActive(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideLabel
     || (UILabel__set_text(decideLabel, v15, 0LL),
         cancelLabel = this->fields.cancelLabel,
-        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, v17, 0LL),
         closeLabel = this->fields.closeLabel,
-        v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL),
+        v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
         !closeLabel) )
   {
 LABEL_16:

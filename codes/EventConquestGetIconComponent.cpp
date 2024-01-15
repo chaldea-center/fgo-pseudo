@@ -67,9 +67,9 @@ void __fastcall EventConquestGetIconComponent__setPossessionCounterLabel(
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_5579, v12);
-    sub_B16FFC(&StringLiteral_5580, v13);
-    sub_B16FFC(&StringLiteral_5585, v14);
+    sub_B16FFC(&StringLiteral_5579/*"EVENT_CONQUEST_GET_COUNT_LABEL"*/, v12);
+    sub_B16FFC(&StringLiteral_5580/*"EVENT_CONQUEST_GET_ITEM_FORMAT"*/, v13);
+    sub_B16FFC(&StringLiteral_5585/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/, v14);
     byte_40FC5DF = 1;
   }
   possessionCounterLabel = (UnityEngine_Object_o *)this->fields.possessionCounterLabel;
@@ -87,7 +87,7 @@ void __fastcall EventConquestGetIconComponent__setPossessionCounterLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5585, 0LL);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5585/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/, 0LL);
     v48 = getCount;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v48);
     if ( !v20 )
@@ -102,7 +102,7 @@ void __fastcall EventConquestGetIconComponent__setPossessionCounterLabel(
     UILabel__set_text(counterLabel, v24, 0LL);
     v29 = (System_Text_StringBuilder_o *)sub_B170CC(System_Text_StringBuilder_TypeInfo, v25, v26, v27, v28);
     System_Text_StringBuilder___ctor(v29, 0LL);
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_5580, 0LL);
+    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_5580/*"EVENT_CONQUEST_GET_ITEM_FORMAT"*/, 0LL);
     v47 = posCount;
     v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v47);
     if ( !v29 )
@@ -139,7 +139,7 @@ void __fastcall EventConquestGetIconComponent__setPossessionCounterLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_5579, 0LL);
+    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_5579/*"EVENT_CONQUEST_GET_COUNT_LABEL"*/, 0LL);
     if ( !possessionNameLabel
       || (UILabel__set_text(possessionNameLabel, v41, 0LL),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL)

@@ -1075,11 +1075,11 @@ System_String_o *__fastcall SupportServantEquipListViewItem__ToString(
 
   if ( (byte_40FD2C3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10120, method);
+    sub_B16FFC(&StringLiteral_10120/*"Other "*/, method);
     byte_40FD2C3 = 1;
   }
   NameText = SupportServantEquipListViewItem__get_NameText(this, method);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_10120, NameText, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_10120/*"Other "*/, NameText, 0LL);
 }
 
 
@@ -1280,12 +1280,12 @@ System_String_o *__fastcall SupportServantEquipListViewItem__get_NameText(
   if ( (byte_40FD2C1 & 1) == 0 )
   {
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18326, v3);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v3);
     byte_40FD2C1 = 1;
   }
   servantEntity = this->fields.servantEntity;
   if ( !servantEntity )
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
   userSvtEntity = this->fields.userSvtEntity;
   if ( userSvtEntity )
   {

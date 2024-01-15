@@ -121,9 +121,9 @@ void __fastcall SetScenarioControl__initSetValue(SetScenarioControl_o *this, con
     sub_B16FFC(&BalanceConfig_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
     sub_B16FFC(&OptionManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_9775, v5);
-    sub_B16FFC(&StringLiteral_9773, v6);
-    sub_B16FFC(&StringLiteral_9776, v7);
+    sub_B16FFC(&StringLiteral_9775/*"OPTION_SCENARIO_SPEED"*/, v5);
+    sub_B16FFC(&StringLiteral_9773/*"OPTION_SCENARIO_COMMENT"*/, v6);
+    sub_B16FFC(&StringLiteral_9776/*"OPTION_SCENARIO_TEXTWAIT_SPEED"*/, v7);
     byte_40FF30A = 1;
   }
   scenarioSpeedSlider = (UILabel_o *)this->fields.scenarioSpeedSlider;
@@ -132,17 +132,17 @@ void __fastcall SetScenarioControl__initSetValue(SetScenarioControl_o *this, con
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9775, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9775/*"OPTION_SCENARIO_SPEED"*/, 0LL);
   if ( !scenarioSpeedSlider )
     goto LABEL_20;
   UILabel__set_text(scenarioSpeedSlider, v9, 0LL);
   scenarioTextWaitSlider = (UILabel_o *)this->fields.scenarioTextWaitSlider;
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_9776, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_9776/*"OPTION_SCENARIO_TEXTWAIT_SPEED"*/, 0LL);
   if ( !scenarioTextWaitSlider )
     goto LABEL_20;
   UILabel__set_text(scenarioTextWaitSlider, v11, 0LL);
   v12 = *(UILabel_o **)&this->fields.scenarioSpeedStep;
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_9773, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_9773/*"OPTION_SCENARIO_COMMENT"*/, 0LL);
   if ( !v12 )
     goto LABEL_20;
   UILabel__set_text(v12, v13, 0LL);
@@ -219,20 +219,20 @@ void __fastcall SetScenarioControl__setChangeScenarioSpeedText(SetScenarioContro
   if ( (byte_40FF30C & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6301, v3);
-    sub_B16FFC(&StringLiteral_9778, v4);
+    sub_B16FFC(&StringLiteral_6301/*"F2"*/, v3);
+    sub_B16FFC(&StringLiteral_9778/*"OPTION_SCENARIO_UNIT"*/, v4);
     byte_40FF30C = 1;
   }
   scenarioTextWaitTimeSecondValue = this->fields.scenarioTextWaitTimeSecondValue;
   scenarioTextWaitTxt = this->fields.scenarioTextWaitTxt;
   *(float *)&format.klass = (float)UnityEngine_Mathf__CeilToInt(scenarioTextWaitTimeSecondValue * 1000.0, 0LL) / 1000.0;
-  v7 = System_Single__ToString_43730404(*(float *)&format.klass, &format, (const MethodInfo *)StringLiteral_6301);
+  v7 = System_Single__ToString_43730404(*(float *)&format.klass, &format, (const MethodInfo *)StringLiteral_6301/*"F2"*/);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_9778, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_9778/*"OPTION_SCENARIO_UNIT"*/, 0LL);
   v9 = System_String__Concat_43743732(v7, v8, 0LL);
   if ( !scenarioTextWaitTxt )
     sub_B170D4();
@@ -348,20 +348,20 @@ void __fastcall SetScenarioControl__setScenarioTextWaitTimeSecond(SetScenarioCon
   if ( (byte_40FF30E & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6301, v3);
-    sub_B16FFC(&StringLiteral_9778, v4);
+    sub_B16FFC(&StringLiteral_6301/*"F2"*/, v3);
+    sub_B16FFC(&StringLiteral_9778/*"OPTION_SCENARIO_UNIT"*/, v4);
     byte_40FF30E = 1;
   }
   v5 = *((float *)&this[1].klass + 1);
   scenarioCommentTxt = this->fields.scenarioCommentTxt;
   *(float *)&format.klass = (float)UnityEngine_Mathf__RoundToInt(v5 * 1000.0, 0LL) / 1000.0;
-  v7 = System_Single__ToString_43730404(*(float *)&format.klass, &format, (const MethodInfo *)StringLiteral_6301);
+  v7 = System_Single__ToString_43730404(*(float *)&format.klass, &format, (const MethodInfo *)StringLiteral_6301/*"F2"*/);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_9778, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_9778/*"OPTION_SCENARIO_UNIT"*/, 0LL);
   v9 = System_String__Concat_43743732(v7, v8, 0LL);
   if ( !scenarioCommentTxt )
     sub_B170D4();

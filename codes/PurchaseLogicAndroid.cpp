@@ -14,12 +14,12 @@ void __fastcall PurchaseLogicAndroid___cctor(const MethodInfo *method)
   if ( (byte_40FA08D & 1) == 0 )
   {
     sub_B16FFC(&PurchaseLogicAndroid_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_14897, v8);
+    sub_B16FFC(&StringLiteral_14897/*"UnityPurchasingInitializeFailedCount"*/, v8);
     byte_40FA08D = 1;
   }
   static_fields = (BattleServantConfConponent_o *)PurchaseLogicAndroid_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_14897;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_14897;
+  v10 = (System_Int32_array **)StringLiteral_14897/*"UnityPurchasingInitializeFailedCount"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_14897/*"UnityPurchasingInitializeFailedCount"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   PurchaseLogicAndroid_TypeInfo->static_fields->MAX_COUNT_FOR_INITIALIZE_FAILED = 1000;
 }
@@ -48,8 +48,8 @@ void __fastcall PurchaseLogicAndroid__DisableCrashReporterOnInitialize(
     sub_B16FFC(&Method_System_Action_string__Invoke__, method);
     sub_B16FFC(&PurchaseLogicAndroid_TypeInfo, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_252, v5);
-    sub_B16FFC(&StringLiteral_15698, v6);
+    sub_B16FFC(&StringLiteral_252/*" rateToSend:"*/, v5);
+    sub_B16FFC(&StringLiteral_15698/*"[UnityIAP]unityPurchasingInitializeFailedCount:"*/, v6);
     byte_40FA08A = 1;
   }
   _8[0] = 0LL;
@@ -69,9 +69,9 @@ void __fastcall PurchaseLogicAndroid__DisableCrashReporterOnInitialize(
     v10 = System_Int32__ToString((int32_t)_8 + 4, 0LL);
     v12 = System_Single__ToString(v11, (const MethodInfo *)_8);
     v13 = System_String__Concat_43747144(
-            (System_String_o *)StringLiteral_15698,
+            (System_String_o *)StringLiteral_15698/*"[UnityIAP]unityPurchasingInitializeFailedCount:"*/,
             v10,
-            (System_String_o *)StringLiteral_252,
+            (System_String_o *)StringLiteral_252/*" rateToSend:"*/,
             v12,
             0LL);
     if ( !logOutputAction )
@@ -248,10 +248,10 @@ PurchaseLogic_ReceiptContents_o *__fastcall PurchaseLogicAndroid__ExtractReceipt
     sub_B16FFC(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v6);
     sub_B16FFC(&PurchaseLogic_ReceiptContents_TypeInfo, v7);
     sub_B16FFC(&string_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_19995, v9);
-    sub_B16FFC(&StringLiteral_10592, v10);
-    sub_B16FFC(&StringLiteral_22032, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_19995/*"json"*/, v9);
+    sub_B16FFC(&StringLiteral_10592/*"Payload"*/, v10);
+    sub_B16FFC(&StringLiteral_22032/*"signature"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FA081 = 1;
   }
   v46 = 0LL;
@@ -273,7 +273,7 @@ PurchaseLogic_ReceiptContents_o *__fastcall PurchaseLogicAndroid__ExtractReceipt
   }
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v15,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_10592,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_10592/*"Payload"*/,
     &value,
     (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
   if ( value )
@@ -288,12 +288,12 @@ PurchaseLogic_ReceiptContents_o *__fastcall PurchaseLogicAndroid__ExtractReceipt
     || (System_Collections_Generic_Dictionary_string__object__c *)v18->klass->_2.typeHierarchy[v20 - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo
     || (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v18,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_19995,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_19995/*"json"*/,
           &v46,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
         System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           v19,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_22032,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_22032/*"signature"*/,
           &v45,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
         !v14) )
@@ -330,14 +330,14 @@ LABEL_31:
   sub_B16F98((BattleServantConfConponent_o *)(v14 + 24), v34, v28, v29, v30, v31, v32, v33);
   if ( !*(_QWORD *)(v14 + 16) )
   {
-    v42 = (System_Int32_array **)StringLiteral_1;
-    *(_QWORD *)(v14 + 16) = StringLiteral_1;
+    v42 = (System_Int32_array **)StringLiteral_1/*""*/;
+    *(_QWORD *)(v14 + 16) = StringLiteral_1/*""*/;
     sub_B16F98((BattleServantConfConponent_o *)(v14 + 16), v42, v36, v37, v38, v39, v40, v41);
   }
   if ( !*v35 )
   {
-    v43 = (System_Int32_array **)StringLiteral_1;
-    *v35 = StringLiteral_1;
+    v43 = (System_Int32_array **)StringLiteral_1/*""*/;
+    *v35 = StringLiteral_1/*""*/;
     sub_B16F98((BattleServantConfConponent_o *)(v14 + 24), v43, v36, v37, v38, v39, v40, v41);
   }
   return (PurchaseLogic_ReceiptContents_o *)v14;
@@ -662,8 +662,8 @@ void __fastcall PurchaseLogicAndroid__SetObfuscatedAccountId(
     sub_B16FFC(&Method_System_Action_string__Invoke__, builder);
     sub_B16FFC(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___, v5);
     sub_B16FFC(&UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_22800, v7);
-    sub_B16FFC(&StringLiteral_638, v8);
+    sub_B16FFC(&StringLiteral_22800/*"unexpected obfuscatedAccountId:"*/, v7);
+    sub_B16FFC(&StringLiteral_638/*"(null)"*/, v8);
     byte_40FA083 = 1;
   }
   if ( UnityEngine_Application__get_platform(0LL) == 11 )
@@ -687,8 +687,8 @@ void __fastcall PurchaseLogicAndroid__SetObfuscatedAccountId(
       if ( cachedObfuscatedAccountId )
         v13 = cachedObfuscatedAccountId;
       else
-        v13 = (System_String_o *)StringLiteral_638;
-      v14 = System_String__Concat_43743732((System_String_o *)StringLiteral_22800, v13, 0LL);
+        v13 = (System_String_o *)StringLiteral_638/*"(null)"*/;
+      v14 = System_String__Concat_43743732((System_String_o *)StringLiteral_22800/*"unexpected obfuscatedAccountId:"*/, v13, 0LL);
       if ( logErrorOutputAction )
       {
         System_Action_Uri___Invoke(

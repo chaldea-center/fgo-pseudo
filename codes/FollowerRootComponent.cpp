@@ -28,11 +28,11 @@ void __fastcall FollowerRootComponent___ctor(FollowerRootComponent_o *this, cons
 
   if ( (byte_40F8F01 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F8F01 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_1;
-  this->fields.backupBgmName = (struct System_String_o *)StringLiteral_1;
+  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.backupBgmName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.backupBgmName, v9, v2, v3, v4, v5, v6, v7);
   SceneRootComponent___ctor((SceneRootComponent_o *)this, 0LL);
 }
@@ -47,13 +47,13 @@ void __fastcall FollowerRootComponent__CallbackFollowerList(
 
   if ( (byte_40F8EE8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, result);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, result);
     byte_40F8EE8 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
 }
 
 
@@ -206,7 +206,7 @@ void __fastcall FollowerRootComponent__EndCloseTutorialArrow(FollowerRootCompone
 
   if ( (byte_40F8EFA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8700, method);
+    sub_B16FFC(&StringLiteral_8700/*"MENU_SELECT_ITEM"*/, method);
     byte_40F8EFA = 1;
   }
   tutorialMaskBase2 = this->fields.tutorialMaskBase2;
@@ -218,7 +218,7 @@ void __fastcall FollowerRootComponent__EndCloseTutorialArrow(FollowerRootCompone
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8700, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8700/*"MENU_SELECT_ITEM"*/, 0LL);
 }
 
 
@@ -846,9 +846,9 @@ void __fastcall FollowerRootComponent__Init(FollowerRootComponent_o *this, const
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v9);
     sub_B16FFC(&Method_FollowerRootComponent___c__Init_b__45_0__, v10);
     sub_B16FFC(&FollowerRootComponent___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_8700, v12);
-    sub_B16FFC(&StringLiteral_10317, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_8700/*"MENU_SELECT_ITEM"*/, v12);
+    sub_B16FFC(&StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40F8EE9 = 1;
   }
   if ( !this->fields.state )
@@ -921,7 +921,7 @@ LABEL_13:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v35 = LocalizationManager__Get((System_String_o *)StringLiteral_10317, 0LL);
+            v35 = LocalizationManager__Get((System_String_o *)StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, 0LL);
             v36 = FollowerRootComponent___c_TypeInfo;
             if ( (BYTE3(FollowerRootComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !FollowerRootComponent___c_TypeInfo->_2.cctor_finished )
@@ -931,7 +931,7 @@ LABEL_13:
             }
             static_fields = v36->static_fields;
             _9__45_0 = static_fields->__9__45_0;
-            v39 = (System_String_o *)StringLiteral_1;
+            v39 = (System_String_o *)StringLiteral_1/*""*/;
             if ( !_9__45_0 )
             {
               if ( (BYTE3(v36->vtable._0_Equals.methodPtr) & 4) != 0 && !v36->_2.cctor_finished )
@@ -976,7 +976,7 @@ LABEL_41:
     this->fields.selectItemNum = -1;
     if ( !myFSM )
       goto LABEL_41;
-    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8700, 0LL);
+    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8700/*"MENU_SELECT_ITEM"*/, 0LL);
   }
 }
 
@@ -1065,14 +1065,14 @@ void __fastcall FollowerRootComponent__OnClickBack(FollowerRootComponent_o *this
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v14);
     sub_B16FFC(&SoundManager_TypeInfo, v15);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_6357, v17);
-    sub_B16FFC(&StringLiteral_3034, v18);
-    sub_B16FFC(&StringLiteral_6356, v19);
-    sub_B16FFC(&StringLiteral_6355, v20);
-    sub_B16FFC(&StringLiteral_3255, v21);
-    sub_B16FFC(&StringLiteral_3258, v22);
-    sub_B16FFC(&StringLiteral_1, v23);
-    sub_B16FFC(&StringLiteral_3035, v24);
+    sub_B16FFC(&StringLiteral_6357/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME_AP0"*/, v17);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v18);
+    sub_B16FFC(&StringLiteral_6356/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME"*/, v19);
+    sub_B16FFC(&StringLiteral_6355/*"FOLLOWER_SELECT_BACK_TITLE"*/, v20);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v21);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v22);
+    sub_B16FFC(&StringLiteral_1/*""*/, v23);
+    sub_B16FFC(&StringLiteral_3035/*"CLICK_BACK_BATTLE_SETUP"*/, v24);
     byte_40F8EFB = 1;
   }
   if ( this->fields.state == 3 && !this->fields.tutorialState )
@@ -1130,7 +1130,7 @@ void __fastcall FollowerRootComponent__OnClickBack(FollowerRootComponent_o *this
               myFSM = this->fields.myFSM;
               if ( myFSM )
               {
-                PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034, 0LL);
+                PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
                 transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v29, 0LL);
                 if ( transform )
                 {
@@ -1204,7 +1204,7 @@ LABEL_79:
             v50 = this->fields.myFSM;
             if ( !v50 )
               goto LABEL_75;
-            v51 = &StringLiteral_3035;
+            v51 = &StringLiteral_3035/*"CLICK_BACK_BATTLE_SETUP"*/;
           }
           else
           {
@@ -1212,7 +1212,7 @@ LABEL_79:
             v50 = this->fields.myFSM;
             if ( !v50 )
               goto LABEL_75;
-            v51 = &StringLiteral_3034;
+            v51 = &StringLiteral_3034/*"CLICK_BACK"*/;
           }
           PlayMakerFSM__SendEvent(v50, (System_String_o *)*v51, 0LL);
           return;
@@ -1239,7 +1239,7 @@ LABEL_79:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v55 = &StringLiteral_6357;
+          v55 = &StringLiteral_6357/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME_AP0"*/;
         }
         else
         {
@@ -1248,7 +1248,7 @@ LABEL_79:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v55 = &StringLiteral_6356;
+          v55 = &StringLiteral_6356/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME"*/;
         }
         v56 = LocalizationManager__Get((System_String_o *)*v55, 0LL);
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1256,10 +1256,10 @@ LABEL_79:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v57 = LocalizationManager__Get((System_String_o *)StringLiteral_6355, 0LL);
+        v57 = LocalizationManager__Get((System_String_o *)StringLiteral_6355/*"FOLLOWER_SELECT_BACK_TITLE"*/, 0LL);
         v58 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+        v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
         v65 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                        CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                        v61,
@@ -1358,8 +1358,8 @@ void __fastcall FollowerRootComponent__OnMoveEnd(FollowerRootComponent_o *this, 
     sub_B16FFC(&Method_FollowerRootComponent_OnSelectFollowerItem__, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_13454, v10);
-    sub_B16FFC(&StringLiteral_13453, v11);
+    sub_B16FFC(&StringLiteral_13454/*"TUTORIAL_MESSAGE_FOLLOWER2"*/, v10);
+    sub_B16FFC(&StringLiteral_13453/*"TUTORIAL_MESSAGE_FOLLOWER1"*/, v11);
     byte_40F8EF5 = 1;
   }
   if ( this->fields.state == 2 )
@@ -1435,7 +1435,7 @@ void __fastcall FollowerRootComponent__OnMoveEnd(FollowerRootComponent_o *this, 
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_13454, 0LL);
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_13454/*"TUTORIAL_MESSAGE_FOLLOWER2"*/, 0LL);
       v19 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v37, v38, v39, v40);
       v20 = &Method_FollowerRootComponent_EndTutorialFollowerGuideNotification2__;
 LABEL_25:
@@ -1457,7 +1457,7 @@ LABEL_27:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_13453, 0LL);
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_13453/*"TUTORIAL_MESSAGE_FOLLOWER1"*/, 0LL);
       v19 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v15, v16, v17, v18);
       v20 = &Method_FollowerRootComponent_EndTutorialFollowerGuideNotification1__;
       goto LABEL_25;
@@ -1687,17 +1687,17 @@ void __fastcall FollowerRootComponent__OnSelectFollowerItem(
     sub_B16FFC(&SoundManager_TypeInfo, v30);
     sub_B16FFC(&Method_FollowerRootComponent___c__OnSelectFollowerItem_b__60_0__, v31);
     sub_B16FFC(&FollowerRootComponent___c_TypeInfo, v32);
-    sub_B16FFC(&StringLiteral_6380, v33);
-    sub_B16FFC(&StringLiteral_8700, v34);
-    sub_B16FFC(&StringLiteral_8709, v35);
-    sub_B16FFC(&StringLiteral_6377, v36);
-    sub_B16FFC(&StringLiteral_80, v37);
-    sub_B16FFC(&StringLiteral_6378, v38);
-    sub_B16FFC(&StringLiteral_10317, v39);
-    sub_B16FFC(&StringLiteral_8603, v40);
-    sub_B16FFC(&StringLiteral_2508, v41);
-    sub_B16FFC(&StringLiteral_1, v42);
-    sub_B16FFC(&StringLiteral_6379, v43);
+    sub_B16FFC(&StringLiteral_6380/*"FOLLOWER_SELECT_REFRESH_TITLE"*/, v33);
+    sub_B16FFC(&StringLiteral_8700/*"MENU_SELECT_ITEM"*/, v34);
+    sub_B16FFC(&StringLiteral_8709/*"MENU_SHOW_SUPPORT"*/, v35);
+    sub_B16FFC(&StringLiteral_6377/*"FOLLOWER_SELECT_REFRESH_MESSAGE"*/, v36);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v37);
+    sub_B16FFC(&StringLiteral_6378/*"FOLLOWER_SELECT_REFRESH_REST_MESSAGE"*/, v38);
+    sub_B16FFC(&StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v39);
+    sub_B16FFC(&StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, v40);
+    sub_B16FFC(&StringLiteral_2508/*"BATTLE_SKILLCHARGETURN"*/, v41);
+    sub_B16FFC(&StringLiteral_1/*""*/, v42);
+    sub_B16FFC(&StringLiteral_6379/*"FOLLOWER_SELECT_REFRESH_REST_TITLE"*/, v43);
     byte_40F8EF6 = 1;
   }
   v187 = 0LL;
@@ -1786,12 +1786,12 @@ void __fastcall FollowerRootComponent__OnSelectFollowerItem(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v80 = LocalizationManager__Get((System_String_o *)StringLiteral_8603, 0LL);
+        v80 = LocalizationManager__Get((System_String_o *)StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
         lv = v71->fields.lv;
         v81 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
         v82 = System_String__Format(v80, v81, 0LL);
-        v186 = System_String__Concat_43746016(v79, (System_String_o *)StringLiteral_80, v82, 0LL);
-        v83 = LocalizationManager__Get((System_String_o *)StringLiteral_2508, 0LL);
+        v186 = System_String__Concat_43746016(v79, (System_String_o *)StringLiteral_80/*" "*/, v82, 0LL);
+        v83 = LocalizationManager__Get((System_String_o *)StringLiteral_2508/*"BATTLE_SKILLCHARGETURN"*/, 0LL);
         if ( !v78 )
           goto LABEL_203;
         v84 = v83;
@@ -1861,7 +1861,7 @@ LABEL_180:
           myFSM = this->fields.myFSM;
           if ( myFSM )
           {
-            v130 = &StringLiteral_8709;
+            v130 = &StringLiteral_8709/*"MENU_SHOW_SUPPORT"*/;
             goto LABEL_182;
           }
           goto LABEL_203;
@@ -2039,8 +2039,8 @@ LABEL_175:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v91 = LocalizationManager__Get((System_String_o *)StringLiteral_6380, 0LL);
-          v92 = LocalizationManager__Get((System_String_o *)StringLiteral_6377, 0LL);
+          v91 = LocalizationManager__Get((System_String_o *)StringLiteral_6380/*"FOLLOWER_SELECT_REFRESH_TITLE"*/, 0LL);
+          v92 = LocalizationManager__Get((System_String_o *)StringLiteral_6377/*"FOLLOWER_SELECT_REFRESH_MESSAGE"*/, 0LL);
           v97 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                          CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                          v93,
@@ -2081,8 +2081,8 @@ LABEL_175:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v132 = LocalizationManager__Get((System_String_o *)StringLiteral_6379, 0LL);
-          v133 = LocalizationManager__Get((System_String_o *)StringLiteral_6378, 0LL);
+          v132 = LocalizationManager__Get((System_String_o *)StringLiteral_6379/*"FOLLOWER_SELECT_REFRESH_REST_TITLE"*/, 0LL);
+          v133 = LocalizationManager__Get((System_String_o *)StringLiteral_6378/*"FOLLOWER_SELECT_REFRESH_REST_MESSAGE"*/, 0LL);
           v138 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v134, v135, v136, v137);
           System_Action___ctor(v138, (Il2CppObject *)this, Method_FollowerRootComponent_EndRefreshRest__, 0LL);
           if ( v131 )
@@ -2148,18 +2148,18 @@ LABEL_204:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v57 = LocalizationManager__Get((System_String_o *)StringLiteral_8603, 0LL);
+        v57 = LocalizationManager__Get((System_String_o *)StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
         lv = v52->fields.lv;
         v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
         v59 = System_String__Format(v57, v58, 0LL);
-        name = System_String__Concat_43746016(v56, (System_String_o *)StringLiteral_80, v59, 0LL);
+        name = System_String__Concat_43746016(v56, (System_String_o *)StringLiteral_80/*" "*/, v59, 0LL);
         v60 = this->fields.tutorialMode;
         v61 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !v61 )
           goto LABEL_203;
         v63 = detail;
         v62 = name;
-        v64 = (System_String_o *)StringLiteral_1;
+        v64 = (System_String_o *)StringLiteral_1/*""*/;
         if ( v60 != 3 )
           goto LABEL_150;
         goto LABEL_55;
@@ -2207,7 +2207,7 @@ LABEL_204:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v161 = LocalizationManager__Get((System_String_o *)StringLiteral_10317, 0LL);
+          v161 = LocalizationManager__Get((System_String_o *)StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, 0LL);
           v162 = FollowerRootComponent___c_TypeInfo;
           if ( (BYTE3(FollowerRootComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !FollowerRootComponent___c_TypeInfo->_2.cctor_finished )
@@ -2217,7 +2217,7 @@ LABEL_204:
           }
           static_fields = v162->static_fields;
           _9__60_0 = static_fields->__9__60_0;
-          v165 = (System_String_o *)StringLiteral_1;
+          v165 = (System_String_o *)StringLiteral_1/*""*/;
           if ( !_9__60_0 )
           {
             if ( (BYTE3(v162->vtable._0_Equals.methodPtr) & 4) != 0 && !v162->_2.cctor_finished )
@@ -2285,7 +2285,7 @@ LABEL_129:
           myFSM = this->fields.myFSM;
           if ( myFSM )
           {
-            v130 = &StringLiteral_8700;
+            v130 = &StringLiteral_8700/*"MENU_SELECT_ITEM"*/;
 LABEL_182:
             PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v130, 0LL);
             return;
@@ -2357,7 +2357,7 @@ void __fastcall FollowerRootComponent__PlayBGM(FollowerRootComponent_o *this, co
     sub_B16FFC(&DataManager_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
     sub_B16FFC(&SoundManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F8EDF = 1;
   }
   entity = 0LL;
@@ -2404,7 +2404,7 @@ void __fastcall FollowerRootComponent__PlayBGM(FollowerRootComponent_o *this, co
         v20 = (BgmMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_BgmMaster___);
         if ( !v20 )
           goto LABEL_67;
-        BgmFileName = BgmMaster__GetBgmFileName(v20, v19, (System_String_o *)StringLiteral_1, 0LL);
+        BgmFileName = BgmMaster__GetBgmFileName(v20, v19, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       }
       if ( !entity )
         goto LABEL_67;
@@ -2488,7 +2488,7 @@ LABEL_37:
                 {
                   v30 = QuestEntity__GetBgmName(QuestEntity, v29->fields.warId, 0LL);
                   if ( !v30
-                    || (MainBgmName = v30, System_String__op_Equality(v30, (System_String_o *)StringLiteral_1, 0LL)) )
+                    || (MainBgmName = v30, System_String__op_Equality(v30, (System_String_o *)StringLiteral_1/*""*/, 0LL)) )
                   {
                     if ( (BYTE3(BgmManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                       && !BgmManager_TypeInfo->_2.cctor_finished )
@@ -2580,7 +2580,7 @@ void __fastcall FollowerRootComponent__RequestFollowerList(FollowerRootComponent
     sub_B16FFC(&Method_NetworkManager_getRequest_FollowerListRequest___, v6);
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_11043, v9);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v9);
     byte_40F8EE7 = 1;
   }
   v10 = (NetworkManager_ResultCallbackFunc_o *)sub_B170CC(
@@ -2612,7 +2612,7 @@ void __fastcall FollowerRootComponent__RequestFollowerList(FollowerRootComponent
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
       return;
     }
 LABEL_13:
@@ -3908,7 +3908,7 @@ void __fastcall FollowerRootComponent___OnClickBack_b__65_0(
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_3034, v6);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v6);
     byte_40F8F03 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -3939,7 +3939,7 @@ void __fastcall FollowerRootComponent___OnClickBack_b__65_0(
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
       return;
     }
 LABEL_16:
@@ -4676,10 +4676,10 @@ void __fastcall FollowerRootComponent__beginStartUp(
     sub_B16FFC(&RandomLimitCountManager_TypeInfo, v20);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
     sub_B16FFC(&TutorialFlag_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_13478, v23);
-    sub_B16FFC(&StringLiteral_13479, v24);
-    sub_B16FFC(&StringLiteral_6358, v25);
-    sub_B16FFC(&StringLiteral_1, v26);
+    sub_B16FFC(&StringLiteral_13478/*"TUTORIAL_SUPPORT_QUEST_ID"*/, v23);
+    sub_B16FFC(&StringLiteral_13479/*"TUTORIAL_SUPPORT_QUEST_PHASE"*/, v24);
+    sub_B16FFC(&StringLiteral_6358/*"FOLLOWER_SELECT_EXPLANATION2"*/, v25);
+    sub_B16FFC(&StringLiteral_1/*""*/, v26);
     byte_40F8EDE = 1;
   }
   if ( data
@@ -4757,7 +4757,7 @@ void __fastcall FollowerRootComponent__beginStartUp(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_6358, 0LL);
+  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_6358/*"FOLLOWER_SELECT_EXPLANATION2"*/, 0LL);
   if ( !infomationLabel )
     goto LABEL_93;
   UILabel__set_text(infomationLabel, v45, 0LL);
@@ -4809,13 +4809,13 @@ LABEL_36:
     if ( !MasterData_WarQuestSelectionMaster )
       goto LABEL_93;
     v53 = MasterData_WarQuestSelectionMaster;
-    Value = ConstantMaster__GetValue(MasterData_WarQuestSelectionMaster, (System_String_o *)StringLiteral_13478, 0LL);
+    Value = ConstantMaster__GetValue(MasterData_WarQuestSelectionMaster, (System_String_o *)StringLiteral_13478/*"TUTORIAL_SUPPORT_QUEST_ID"*/, 0LL);
     v55 = *p_battleSetupInfo;
     if ( !*p_battleSetupInfo )
       goto LABEL_93;
     if ( v55->fields.questId == Value )
     {
-      v56 = ConstantMaster__GetValue(v53, (System_String_o *)StringLiteral_13479, 0LL);
+      v56 = ConstantMaster__GetValue(v53, (System_String_o *)StringLiteral_13479/*"TUTORIAL_SUPPORT_QUEST_PHASE"*/, 0LL);
       v55 = *p_battleSetupInfo;
       if ( !*p_battleSetupInfo )
         goto LABEL_93;
@@ -4836,7 +4836,7 @@ LABEL_36:
     *(_QWORD *)&this->fields.tutorialMode = 0x100000002LL;
     if ( !v57 )
       goto LABEL_93;
-    UILabel__set_text(v57, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v57, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     v55 = *p_battleSetupInfo;
     if ( !*p_battleSetupInfo )
       goto LABEL_93;

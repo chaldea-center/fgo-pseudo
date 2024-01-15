@@ -79,12 +79,12 @@ void __fastcall ServantBonusFilterEquipListViewItemDraw__SetButton(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_11860, v4);
-    sub_B16FFC(&StringLiteral_3270, v5);
-    sub_B16FFC(&StringLiteral_3269, v6);
-    sub_B16FFC(&StringLiteral_11861, v7);
-    sub_B16FFC(&StringLiteral_16905, v8);
-    sub_B16FFC(&StringLiteral_16910, v9);
+    sub_B16FFC(&StringLiteral_11860/*"SERVANT_SORT_INDIVIDUAL_DISPLAY"*/, v4);
+    sub_B16FFC(&StringLiteral_3270/*"COMMON_ON"*/, v5);
+    sub_B16FFC(&StringLiteral_3269/*"COMMON_OFF"*/, v6);
+    sub_B16FFC(&StringLiteral_11861/*"SERVANT_SORT_INDIVIDUAL_NOT_DISPLAY"*/, v7);
+    sub_B16FFC(&StringLiteral_16905/*"btn_bg_off"*/, v8);
+    sub_B16FFC(&StringLiteral_16910/*"btn_bg_on"*/, v9);
     byte_40F9491 = 1;
   }
   changeDisplayButton = (UnityEngine_Component_o *)this->fields.changeDisplayButton;
@@ -98,7 +98,7 @@ void __fastcall ServantBonusFilterEquipListViewItemDraw__SetButton(
     goto LABEL_47;
   if ( !isButtonOn )
   {
-    UISprite__set_spriteName((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_16910, 0LL);
+    UISprite__set_spriteName((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_16910/*"btn_bg_on"*/, 0LL);
     buttonLabel = this->fields.buttonLabel;
     if ( this->fields.isButtonLabelOnOff )
     {
@@ -107,7 +107,7 @@ void __fastcall ServantBonusFilterEquipListViewItemDraw__SetButton(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v16 = &StringLiteral_3270;
+      v16 = &StringLiteral_3270/*"COMMON_ON"*/;
     }
     else
     {
@@ -116,7 +116,7 @@ void __fastcall ServantBonusFilterEquipListViewItemDraw__SetButton(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v16 = &StringLiteral_11860;
+      v16 = &StringLiteral_11860/*"SERVANT_SORT_INDIVIDUAL_DISPLAY"*/;
     }
     v26 = LocalizationManager__Get((System_String_o *)*v16, 0LL);
     if ( buttonLabel )
@@ -153,7 +153,7 @@ void __fastcall ServantBonusFilterEquipListViewItemDraw__SetButton(
 LABEL_47:
     sub_B170D4();
   }
-  UISprite__set_spriteName((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_16905, 0LL);
+  UISprite__set_spriteName((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_16905/*"btn_bg_off"*/, 0LL);
   v13 = this->fields.buttonLabel;
   if ( this->fields.isButtonLabelOnOff )
   {
@@ -162,7 +162,7 @@ LABEL_47:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = &StringLiteral_3269;
+    v14 = &StringLiteral_3269/*"COMMON_OFF"*/;
   }
   else
   {
@@ -171,7 +171,7 @@ LABEL_47:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = &StringLiteral_11861;
+    v14 = &StringLiteral_11861/*"SERVANT_SORT_INDIVIDUAL_NOT_DISPLAY"*/;
   }
   v17 = LocalizationManager__Get((System_String_o *)*v14, 0LL);
   if ( !v13 )
@@ -267,11 +267,11 @@ void __fastcall ServantBonusFilterEquipListViewItemDraw__SetItem(
   v13 = idx;
   if ( (byte_40F948C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2825, *(_QWORD *)&idx);
+    sub_B16FFC(&StringLiteral_2825/*"BonusFilterEquipId"*/, *(_QWORD *)&idx);
     byte_40F948C = 1;
   }
   v10 = System_Int32__ToString((int32_t)&v13, 0LL);
-  v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_2825, v10, 0LL);
+  v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_2825/*"BonusFilterEquipId"*/, v10, 0LL);
   ServantBonusFilterEquipListViewItemDraw__SetItem_23829624(this, equipEntity, eventUpValInfos, skillInfos, v11, v12);
 }
 
@@ -402,7 +402,7 @@ void __fastcall ServantBonusFilterEquipListViewItemDraw__SetItem_23829624(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v22);
     sub_B16FFC(&Method_ServantBonusFilterEquipListViewItemDraw___c__SetItem_b__12_0__, v23);
     sub_B16FFC(&ServantBonusFilterEquipListViewItemDraw___c_TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_114, v25);
+    sub_B16FFC(&StringLiteral_114/*" + "*/, v25);
     byte_40F948D = 1;
   }
   memset(&v106, 0, sizeof(v106));
@@ -522,7 +522,7 @@ LABEL_63:
             break;
           v72 = System_String__Concat_43746016(
                   skillTextLabel->fields.mText,
-                  (System_String_o *)StringLiteral_114,
+                  (System_String_o *)StringLiteral_114/*" + "*/,
                   v73->fields.title,
                   0LL);
         }
@@ -668,11 +668,11 @@ void __fastcall ServantBonusFilterEquipListViewItemDraw__SetItem_23831296(
   v11 = idx;
   if ( (byte_40F948E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2827, *(_QWORD *)&idx);
+    sub_B16FFC(&StringLiteral_2827/*"BonusFilterGroupId"*/, *(_QWORD *)&idx);
     byte_40F948E = 1;
   }
   v8 = System_Int32__ToString((int32_t)&v11, 0LL);
-  v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_2827, v8, 0LL);
+  v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_2827/*"BonusFilterGroupId"*/, v8, 0LL);
   ServantBonusFilterEquipListViewItemDraw__SetItem_23831444(this, eventIdList, filterGroupId, v9, v10);
 }
 

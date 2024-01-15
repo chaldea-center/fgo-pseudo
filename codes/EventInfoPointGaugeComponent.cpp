@@ -28,8 +28,8 @@ void __fastcall EventInfoPointGaugeComponent__Awake(EventInfoPointGaugeComponent
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&BalanceConfig_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_18468, v10);
-    sub_B16FFC(&StringLiteral_18416, v11);
+    sub_B16FFC(&StringLiteral_18468/*"event_point_bar"*/, v10);
+    sub_B16FFC(&StringLiteral_18416/*"event_bg_bar"*/, v11);
     byte_40FA13D = 1;
   }
   *(_QWORD *)&this->fields.maxPoint = 0LL;
@@ -48,13 +48,13 @@ void __fastcall EventInfoPointGaugeComponent__Awake(EventInfoPointGaugeComponent
   gaugeBarSprite = this->fields.gaugeBarSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(gaugeBarSprite, (System_String_o *)StringLiteral_18416, 0LL);
+  AtlasManager__SetEventSprite(gaugeBarSprite, (System_String_o *)StringLiteral_18416/*"event_bg_bar"*/, 0LL);
   v15 = this->fields.gaugeBarSprite;
   if ( !v15
     || (((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v15->klass->vtable._33_MakePixelPerfect.method)(
           v15,
           v15->klass->vtable._34_get_minWidth.methodPtr),
-        AtlasManager__SetEventSprite(this->fields.gaugeFrameSprite, (System_String_o *)StringLiteral_18468, 0LL),
+        AtlasManager__SetEventSprite(this->fields.gaugeFrameSprite, (System_String_o *)StringLiteral_18468/*"event_point_bar"*/, 0LL),
         (gaugeFrameSprite = this->fields.gaugeFrameSprite) == 0LL)
     || (((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))gaugeFrameSprite->klass->vtable._33_MakePixelPerfect.method)(
           gaugeFrameSprite,
@@ -93,8 +93,8 @@ void __fastcall EventInfoPointGaugeComponent__ChangeDispGauge(
   if ( (byte_40FA140 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&gaugeState);
-    sub_B16FFC(&StringLiteral_18439, v5);
-    sub_B16FFC(&StringLiteral_18435, v6);
+    sub_B16FFC(&StringLiteral_18439/*"event_frame_"*/, v5);
+    sub_B16FFC(&StringLiteral_18435/*"event_emblem_icon_"*/, v6);
     byte_40FA140 = 1;
   }
   v18 = 0;
@@ -111,7 +111,7 @@ void __fastcall EventInfoPointGaugeComponent__ChangeDispGauge(
       gaugeObj = this->fields.gaugeObj;
       v18 = gaugeState;
       v10 = System_Int32__ToString((int32_t)&v18, 0LL);
-      v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_18435, v10, 0LL);
+      v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_18435/*"event_emblem_icon_"*/, v10, 0LL);
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
       {
@@ -127,7 +127,7 @@ void __fastcall EventInfoPointGaugeComponent__ChangeDispGauge(
         addEffectNameList = (UISprite_o *)this->fields.addEffectNameList;
         v18 = gaugeState;
         v14 = System_Int32__ToString((int32_t)&v18, 0LL);
-        v15 = System_String__Concat_43743732((System_String_o *)StringLiteral_18439, v14, 0LL);
+        v15 = System_String__Concat_43743732((System_String_o *)StringLiteral_18439/*"event_frame_"*/, v14, 0LL);
         AtlasManager__SetEventSprite(addEffectNameList, v15, 0LL);
         v16 = this->fields.addEffectNameList;
         if ( v16 )
@@ -176,7 +176,7 @@ TweenHeight_o *__fastcall EventInfoPointGaugeComponent__CreateGaugeAnime(
     sub_B16FFC(&EventDelegate_TypeInfo, *(_QWORD *)&startHeight);
     sub_B16FFC(&Method_UnityEngine_GameObject_AddComponent_TweenHeight___, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventDelegate__Add__, v8);
-    sub_B16FFC(&StringLiteral_5943, v9);
+    sub_B16FFC(&StringLiteral_5943/*"EndGaugeAnime"*/, v9);
     byte_40FA13E = 1;
   }
   gaugeFrameSprite = (UnityEngine_Component_o *)this->fields.gaugeFrameSprite;
@@ -198,7 +198,7 @@ TweenHeight_o *__fastcall EventInfoPointGaugeComponent__CreateGaugeAnime(
         EventDelegate___ctor_29412928(
           v19,
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_5943,
+          (System_String_o *)StringLiteral_5943/*"EndGaugeAnime"*/,
           0LL),
         !klass) )
   {

@@ -89,7 +89,7 @@ void __fastcall BattleResultPopupWindowComponent__EndCloseCallback(
 
   if ( (byte_40FA401 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5481, method);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, method);
     byte_40FA401 = 1;
   }
   callbackClose = this->fields.callbackClose;
@@ -99,7 +99,7 @@ void __fastcall BattleResultPopupWindowComponent__EndCloseCallback(
   if ( !rootObj )
     sub_B170D4();
   UnityEngine_GameObject__SetActive(rootObj, 0, 0LL);
-  BattleResultPopupWindowComponent__SendFsmEvent(this, (System_String_o *)StringLiteral_5481, v5);
+  BattleResultPopupWindowComponent__SendFsmEvent(this, (System_String_o *)StringLiteral_5481/*"END_PROC"*/, v5);
 }
 
 
@@ -229,7 +229,7 @@ void __fastcall BattleResultPopupWindowComponent__OpenPreProcess(
 
   if ( (byte_40FA3FE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FA3FE = 1;
   }
   rootObj = this->fields.rootObj;
@@ -239,13 +239,13 @@ void __fastcall BattleResultPopupWindowComponent__OpenPreProcess(
   v6 = BattleResultPopupWindowComponent__PlayTargetSimpleAnimation(
          v4,
          this->fields.titleSimpleAnim,
-         (System_String_o *)StringLiteral_1,
+         (System_String_o *)StringLiteral_1/*""*/,
          v5);
   if ( !v6 )
     BattleResultPopupWindowComponent__PlayTargetAnimation(
       (BattleResultPopupWindowComponent_o *)v6,
       this->fields.titleAnim,
-      (System_String_o *)StringLiteral_1,
+      (System_String_o *)StringLiteral_1/*""*/,
       v7);
 }
 

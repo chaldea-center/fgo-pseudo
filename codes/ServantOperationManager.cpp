@@ -273,7 +273,7 @@ void __fastcall ServantOperationManager__CreateList(
     sub_B16FFC(&int_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_12413, v10);
+    sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v10);
     byte_40FD755 = 1;
   }
   *(_QWORD *)servantEquipSum = 0LL;
@@ -348,7 +348,7 @@ void __fastcall ServantOperationManager__CreateList(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   TotalSum_k__BackingField = this->fields._TotalSum_k__BackingField;
   v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &TotalSum_k__BackingField);
   SelectMax_k__BackingField = this->fields._SelectMax_k__BackingField;
@@ -1233,11 +1233,11 @@ void __fastcall ServantOperationManager__OnClickDecide(ServantOperationManager_o
     sub_B16FFC(&SoundManager_TypeInfo, v27);
     sub_B16FFC(&Method_ServantOperationManager___c__DisplayClass44_0__OnClickDecide_b__0__, v28);
     sub_B16FFC(&ServantOperationManager___c__DisplayClass44_0_TypeInfo, v29);
-    sub_B16FFC(&StringLiteral_5739, v30);
-    sub_B16FFC(&StringLiteral_3255, v31);
-    sub_B16FFC(&StringLiteral_3258, v32);
-    sub_B16FFC(&StringLiteral_5737, v33);
-    sub_B16FFC(&StringLiteral_1, v34);
+    sub_B16FFC(&StringLiteral_5739/*"EXCHANGE_CAMPAIGN_SELL_MSG"*/, v30);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v31);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v32);
+    sub_B16FFC(&StringLiteral_5737/*"EXCHANGE_CAMPAIGN_NOTICE_MSG_TITLE"*/, v33);
+    sub_B16FFC(&StringLiteral_1/*""*/, v34);
     byte_40FD759 = 1;
   }
   memset(&v130, 0, sizeof(v130));
@@ -1416,13 +1416,13 @@ LABEL_76:
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
       SoundManager__playSystemSe(0, 0LL);
-      v103 = (Il2CppObject *)StringLiteral_1;
+      v103 = (Il2CppObject *)StringLiteral_1/*""*/;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v104 = LocalizationManager__Get((System_String_o *)StringLiteral_5737, 0LL);
+      v104 = LocalizationManager__Get((System_String_o *)StringLiteral_5737/*"EXCHANGE_CAMPAIGN_NOTICE_MSG_TITLE"*/, 0LL);
       if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !DataManager_TypeInfo->_2.cctor_finished )
       {
@@ -1451,11 +1451,11 @@ LABEL_76:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v108 = LocalizationManager__Get((System_String_o *)StringLiteral_5739, 0LL);
+        v108 = LocalizationManager__Get((System_String_o *)StringLiteral_5739/*"EXCHANGE_CAMPAIGN_SELL_MSG"*/, 0LL);
         v109 = System_String__Format_43739268(v108, v103, v103, 0LL);
         v110 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v111 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-        v112 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+        v111 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+        v112 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
         v117 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                         CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                         v113,
@@ -1940,7 +1940,7 @@ void __fastcall ServantOperationManager__ReleaseAll(ServantOperationManager_o *t
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    this = (ServantOperationManager_o *)sub_B16FFC(&StringLiteral_12413, v5);
+    this = (ServantOperationManager_o *)sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v5);
     byte_40FD761 = 1;
   }
   servantOperationListViewManager = v3->fields.servantOperationListViewManager;
@@ -1976,7 +1976,7 @@ LABEL_9:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   TotalSum_k__BackingField = v3->fields._TotalSum_k__BackingField;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &TotalSum_k__BackingField);
   SelectMax_k__BackingField = v3->fields._SelectMax_k__BackingField;

@@ -41,7 +41,7 @@ void __fastcall SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o
 
   if ( (byte_40F7CBA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3947, method);
+    sub_B16FFC(&StringLiteral_3947/*"ChrVoice_"*/, method);
     byte_40F7CBA = 1;
   }
   this->fields.assetName = 0LL;
@@ -56,7 +56,7 @@ void __fastcall SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o
     if ( !*(_QWORD *)&vcNameList->max_length )
       return;
     v16 = System_Int32__ToString((int)this + 28, 0LL);
-    v17 = System_String__Concat_43743732((System_String_o *)StringLiteral_3947, v16, 0LL);
+    v17 = System_String__Concat_43743732((System_String_o *)StringLiteral_3947/*"ChrVoice_"*/, v16, 0LL);
     this->fields.assetName = v17;
     sub_B16F98(
       (BattleServantConfConponent_o *)&this->fields.assetName,

@@ -31,9 +31,9 @@ void __fastcall EventInfoHarvestCautionDialog__Init(EventInfoHarvestCautionDialo
   if ( (byte_40FA122 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3251, v3);
-    sub_B16FFC(&StringLiteral_5613, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v3);
+    sub_B16FFC(&StringLiteral_5613/*"EVENT_HARVEST_CAUTION_DECIDE_BUTTON"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FA122 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -41,18 +41,18 @@ void __fastcall EventInfoHarvestCautionDialog__Init(EventInfoHarvestCautionDialo
   this->fields.isClose = 0;
   if ( !titleLabel )
     goto LABEL_10;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideLabel = this->fields.decideLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5613, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5613/*"EVENT_HARVEST_CAUTION_DECIDE_BUTTON"*/, 0LL);
   if ( !decideLabel
     || (UILabel__set_text(decideLabel, v8, 0LL),
         cancelLabel = this->fields.cancelLabel,
-        v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+        v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
         !cancelLabel) )
   {
 LABEL_10:
@@ -188,8 +188,8 @@ void __fastcall EventInfoHarvestCautionDialog__Open(
     sub_B16FFC(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_5614, v16);
-    sub_B16FFC(&StringLiteral_19038, v17);
+    sub_B16FFC(&StringLiteral_5614/*"EVENT_HARVEST_CAUTION_TITLE"*/, v16);
+    sub_B16FFC(&StringLiteral_19038/*"harvestGrowthBeforeQuestId"*/, v17);
     byte_40FA123 = 1;
   }
   EventInfoHarvestCautionDialog__Init(this, *(const MethodInfo **)&questId);
@@ -211,7 +211,7 @@ void __fastcall EventInfoHarvestCautionDialog__Open(
   Entity = QuestPhaseMaster__GetEntity(v21, questId, questPhase, 0LL);
   if ( !Entity )
     goto LABEL_18;
-  ScriptIntParam = QuestPhaseEntity__getScriptIntParam(Entity, (System_String_o *)StringLiteral_19038, -1, 0LL);
+  ScriptIntParam = QuestPhaseEntity__getScriptIntParam(Entity, (System_String_o *)StringLiteral_19038/*"harvestGrowthBeforeQuestId"*/, -1, 0LL);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_18;
   QuestEntity = QuestMaster__getQuestEntity(MasterData_WarQuestSelectionMaster, ScriptIntParam, 0LL);
@@ -234,7 +234,7 @@ void __fastcall EventInfoHarvestCautionDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_5614, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_5614/*"EVENT_HARVEST_CAUTION_TITLE"*/, 0LL);
   if ( !v29
     || (v31 = System_String__Format(v30, (Il2CppObject *)v29->fields.name, 0LL), !titleLabel)
     || (UILabel__set_text(titleLabel, v31, 0LL), (messageLabel = this->fields.messageLabel) == 0LL) )

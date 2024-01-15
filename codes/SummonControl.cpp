@@ -24,20 +24,20 @@ void __fastcall SummonControl___cctor(const MethodInfo *method)
   if ( (byte_40FBFDA & 1) == 0 )
   {
     sub_B16FFC(&SummonControl_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19301, v8);
-    sub_B16FFC(&StringLiteral_2838, v9);
+    sub_B16FFC(&StringLiteral_19301/*"icon_summon_arrow2"*/, v8);
+    sub_B16FFC(&StringLiteral_2838/*"BonusSelectSummonSaveKey"*/, v9);
     byte_40FBFDA = 1;
   }
   SummonControl_TypeInfo->static_fields->FRIEND_POINT_SUMMON_ID = 1;
   static_fields = SummonControl_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_2838;
-  static_fields->BONUS_SELECTSUMMON_SAVEKEY = (struct System_String_o *)StringLiteral_2838;
+  v11 = (System_Int32_array **)StringLiteral_2838/*"BonusSelectSummonSaveKey"*/;
+  static_fields->BONUS_SELECTSUMMON_SAVEKEY = (struct System_String_o *)StringLiteral_2838/*"BonusSelectSummonSaveKey"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->BONUS_SELECTSUMMON_SAVEKEY, v11, v2, v3, v4, v5, v6, v7);
   v12 = SummonControl_TypeInfo;
   SummonControl_TypeInfo->static_fields->COLOR_VAL = 0.375;
   v13 = v12->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_19301;
-  v13->ARROW_SPRITE_NAME = (struct System_String_o *)StringLiteral_19301;
+  v14 = (System_Int32_array **)StringLiteral_19301/*"icon_summon_arrow2"*/;
+  v13->ARROW_SPRITE_NAME = (struct System_String_o *)StringLiteral_19301/*"icon_summon_arrow2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->ARROW_SPRITE_NAME, v14, v15, v16, v17, v18, v19, v20);
 }
 
@@ -109,8 +109,8 @@ void __fastcall SummonControl___ctor(SummonControl_o *this, const MethodInfo *me
     sub_B16FFC(&Method_System_Collections_Generic_List_VaildGachaInfo___ctor__, v7);
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v8);
     sub_B16FFC(&System_Collections_Generic_List_VaildGachaInfo__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_18877, v10);
-    sub_B16FFC(&StringLiteral_6775, v11);
+    sub_B16FFC(&StringLiteral_18877/*"gachaIds"*/, v10);
+    sub_B16FFC(&StringLiteral_6775/*"FrequencyType"*/, v11);
     byte_40FBFD9 = 1;
   }
   v58.fields.m_XMin = -120.0;
@@ -139,11 +139,11 @@ void __fastcall SummonControl___ctor(SummonControl_o *this, const MethodInfo *me
   UnityEngine_Rect___ctor(v60, v16, v17, v18, v19, (const MethodInfo *)&v56);
   *(_OWORD *)&this->fields.TUTORIAL_FORMATION_ARROW_RECT.fields.m_YMin = v56;
   *(_QWORD *)&this->fields.TUTORIAL_FORMATION_ARROW_POS.fields.y = 0xC3200000C385C000LL;
-  v20 = (System_Int32_array **)StringLiteral_18877;
-  this->fields.DETAIL_SCRIPT_IDS = (struct System_String_o *)StringLiteral_18877;
+  v20 = (System_Int32_array **)StringLiteral_18877/*"gachaIds"*/;
+  this->fields.DETAIL_SCRIPT_IDS = (struct System_String_o *)StringLiteral_18877/*"gachaIds"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.DETAIL_SCRIPT_IDS, v20, v21, v22, v23, v24, v25, v26);
-  v27 = (System_Int32_array **)StringLiteral_6775;
-  this->fields.DETAIL_SCRIPT_TYPE = (struct System_String_o *)StringLiteral_6775;
+  v27 = (System_Int32_array **)StringLiteral_6775/*"FrequencyType"*/;
+  this->fields.DETAIL_SCRIPT_TYPE = (struct System_String_o *)StringLiteral_6775/*"FrequencyType"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.DETAIL_SCRIPT_TYPE, v27, v28, v29, v30, v31, v32, v33);
   v38 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_VaildGachaInfo__TypeInfo,
@@ -434,7 +434,7 @@ void __fastcall SummonControl__BonusSelectSummonConfirmResult(
 
   if ( (byte_40FBFA1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3039, result);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, result);
     byte_40FBFA1 = 1;
   }
   selectBonusData = 0LL;
@@ -475,7 +475,7 @@ LABEL_13:
   fsm = this->fields.fsm;
   if ( !fsm )
     goto LABEL_13;
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
 }
 
 
@@ -509,8 +509,8 @@ bool __fastcall SummonControl__CheckFriendPointSummonUpdate(SummonControl_o *thi
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&Method_SummonControl_SummonSceneRefresh__, v7);
-    sub_B16FFC(&StringLiteral_14666, v8);
-    sub_B16FFC(&StringLiteral_14665, v9);
+    sub_B16FFC(&StringLiteral_14666/*"UPDATE_FRIENDPOINT_GACHA_ERROR_TITLE"*/, v8);
+    sub_B16FFC(&StringLiteral_14665/*"UPDATE_FRIENDPOINT_GACHA_ERROR"*/, v9);
     byte_40FBFA4 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -530,8 +530,8 @@ bool __fastcall SummonControl__CheckFriendPointSummonUpdate(SummonControl_o *thi
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_14666, 0LL);
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_14665, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_14666/*"UPDATE_FRIENDPOINT_GACHA_ERROR_TITLE"*/, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_14665/*"UPDATE_FRIENDPOINT_GACHA_ERROR"*/, 0LL);
   v20 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v16, v17, v18, v19);
   System_Action___ctor(v20, (Il2CppObject *)this, Method_SummonControl_SummonSceneRefresh__, 0LL);
   if ( !v13 )
@@ -585,8 +585,8 @@ void __fastcall SummonControl__CheckIncIdx(SummonControl_o *this, const MethodIn
 
   if ( (byte_40FBFC3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9269, method);
-    sub_B16FFC(&StringLiteral_6332, v3);
+    sub_B16FFC(&StringLiteral_9269/*"NEXT_SVT"*/, method);
+    sub_B16FFC(&StringLiteral_6332/*"FINAL_SVT"*/, v3);
     byte_40FBFC3 = 1;
   }
   gachaResInfoList = this->fields.gachaResInfoList;
@@ -595,9 +595,9 @@ void __fastcall SummonControl__CheckIncIdx(SummonControl_o *this, const MethodIn
   if ( !gachaResInfoList || (fsm = this->fields.fsm) == 0LL )
     sub_B170D4();
   if ( v5 >= (signed int)gachaResInfoList->max_length )
-    v7 = &StringLiteral_6332;
+    v7 = &StringLiteral_6332/*"FINAL_SVT"*/;
   else
-    v7 = &StringLiteral_9269;
+    v7 = &StringLiteral_9269/*"NEXT_SVT"*/;
   PlayMakerFSM__SendEvent(fsm, (System_String_o *)*v7, 0LL);
 }
 
@@ -789,17 +789,17 @@ void __fastcall SummonControl__CheckReturnTransition(SummonControl_o *this, cons
 
   if ( (byte_40FBFD8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11096, method);
-    sub_B16FFC(&StringLiteral_11098, v3);
+    sub_B16FFC(&StringLiteral_11096/*"RETURN_MAIN"*/, method);
+    sub_B16FFC(&StringLiteral_11098/*"RETURN_RESULT"*/, v3);
     byte_40FBFD8 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
     sub_B170D4();
   if ( this->fields.isResult )
-    v5 = &StringLiteral_11098;
+    v5 = &StringLiteral_11098/*"RETURN_RESULT"*/;
   else
-    v5 = &StringLiteral_11096;
+    v5 = &StringLiteral_11096/*"RETURN_MAIN"*/;
   PlayMakerFSM__SendEvent(fsm, (System_String_o *)*v5, 0LL);
 }
 
@@ -1048,7 +1048,7 @@ void __fastcall SummonControl__ConfirmMessageOpen(SummonControl_o *this, bool re
     sub_B16FFC(&Method_SummonControl_confirmCautionResult__, v15);
     sub_B16FFC(&BonusSelectSummonConfirmDialog_TryGetBonusSelectData_TypeInfo, v16);
     sub_B16FFC(&BonusSelectSummonMsgInfo_TryGetBonusSelectData_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_3039, v18);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v18);
     byte_40FBFA9 = 1;
   }
   confirmDlgInfo = this->fields.confirmDlgInfo;
@@ -1137,7 +1137,7 @@ void __fastcall SummonControl__ConfirmMessageOpen(SummonControl_o *this, bool re
             fsm = this->fields.fsm;
             if ( fsm )
             {
-              PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+              PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
               return;
             }
           }
@@ -1296,13 +1296,13 @@ void __fastcall SummonControl__EndCloseDialogCallBack(SummonControl_o *this, con
 
   if ( (byte_40FBFBE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3080, method);
+    sub_B16FFC(&StringLiteral_3080/*"CLOSE"*/, method);
     byte_40FBFBE = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3080, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3080/*"CLOSE"*/, 0LL);
 }
 
 
@@ -1316,10 +1316,10 @@ void __fastcall SummonControl__EndRequestStoneFragmentsShop(
 
   if ( (byte_40FBF9B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20980, result);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, result);
     byte_40FBF9B = 1;
   }
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     SummonControl__CloseStoneFragmentsExchangeDialog(this, v5);
   }
@@ -1643,9 +1643,9 @@ void __fastcall SummonControl__LoadBannerEnd(SummonControl_o *this, AssetData_o 
 
   if ( (byte_40FBF68 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6309, data);
-    sub_B16FFC(&StringLiteral_16960, v10);
-    sub_B16FFC(&StringLiteral_5469, v11);
+    sub_B16FFC(&StringLiteral_6309/*"FAIL_LOAD"*/, data);
+    sub_B16FFC(&StringLiteral_16960/*"btn_sumonhistory"*/, v10);
+    sub_B16FFC(&StringLiteral_5469/*"END_LOAD"*/, v11);
     byte_40FBF68 = 1;
   }
   if ( !data )
@@ -1653,7 +1653,7 @@ void __fastcall SummonControl__LoadBannerEnd(SummonControl_o *this, AssetData_o 
     fsm = this->fields.fsm;
     if ( !fsm )
       goto LABEL_9;
-    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_6309, 0LL);
+    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_6309/*"FAIL_LOAD"*/, 0LL);
   }
   this->fields.bannerAssetData = data;
   sub_B16F98(
@@ -1668,8 +1668,8 @@ void __fastcall SummonControl__LoadBannerEnd(SummonControl_o *this, AssetData_o 
   SummonControl__createSummonInfo(this, v13);
   SummonControl__setPositionByWarId(this, v14);
   SummonControl__ResetArrowTween(this, v15);
-  v16 = (System_String_o *)StringLiteral_16960;
-  v18 = SummonControl__searchBannerImg(this, (System_String_o *)StringLiteral_16960, v17);
+  v16 = (System_String_o *)StringLiteral_16960/*"btn_sumonhistory"*/;
+  v18 = SummonControl__searchBannerImg(this, (System_String_o *)StringLiteral_16960/*"btn_sumonhistory"*/, v17);
   if ( !this->fields.summonInfoCtr
     || (SummonInfoControl__SetSummonHistorySprite(this->fields.summonInfoCtr, v18, v16, 0LL),
         (v19 = this->fields.fsm) == 0LL) )
@@ -1677,7 +1677,7 @@ void __fastcall SummonControl__LoadBannerEnd(SummonControl_o *this, AssetData_o 
 LABEL_9:
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(v19, (System_String_o *)StringLiteral_5469, 0LL);
+  PlayMakerFSM__SendEvent(v19, (System_String_o *)StringLiteral_5469/*"END_LOAD"*/, 0LL);
 }
 
 
@@ -1724,7 +1724,7 @@ void __fastcall SummonControl__OnCenterOnChildFinished(SummonControl_o *this, co
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_GachaBannerComponent___, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_2940, v4);
+    sub_B16FFC(&StringLiteral_2940/*"CHANGE_BANNER"*/, v4);
     byte_40FBF76 = 1;
   }
   centerChild = this->fields.centerChild;
@@ -1824,7 +1824,7 @@ LABEL_30:
             fsm = this->fields.fsm;
             if ( fsm )
             {
-              PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_2940, 0LL);
+              PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_2940/*"CHANGE_BANNER"*/, 0LL);
               return;
             }
           }
@@ -1956,13 +1956,13 @@ void __fastcall SummonControl__OnClickBack(SummonControl_o *this, const MethodIn
 
   if ( (byte_40FBFD1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3034, method);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, method);
     byte_40FBFD1 = 1;
   }
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     sub_B170D4();
-  TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_3034, 0LL);
+  TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
 }
 
 
@@ -2085,7 +2085,7 @@ void __fastcall SummonControl__OnClickMiniBanner(SummonControl_o *this, int32_t 
   if ( (byte_40FBF7B & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, *(_QWORD *)&moveIdx);
-    sub_B16FFC(&StringLiteral_12737, v5);
+    sub_B16FFC(&StringLiteral_12737/*"SetBannerCenter"*/, v5);
     byte_40FBF7B = 1;
   }
   if ( this->fields.currentMoveIdx != moveIdx )
@@ -2108,7 +2108,7 @@ void __fastcall SummonControl__OnClickMiniBanner(SummonControl_o *this, int32_t 
     UnityEngine_Behaviour__set_enabled(summonMBannerRightArrowBtn, 0, 0LL);
     UnityEngine_MonoBehaviour__CancelInvoke_34803564(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_12737,
+      (System_String_o *)StringLiteral_12737/*"SetBannerCenter"*/,
       0LL);
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -2158,7 +2158,7 @@ void __fastcall SummonControl__OnClickStoneFragmentsExchangeButton(SummonControl
   if ( (byte_40FBF97 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3039, v3);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v3);
     byte_40FBF97 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -2172,7 +2172,7 @@ void __fastcall SummonControl__OnClickStoneFragmentsExchangeButton(SummonControl
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
   SummonControl__OpenFragmentsExchangeDialog(this, v7);
 }
 
@@ -2245,12 +2245,12 @@ void __fastcall SummonControl__OnDragStarted(SummonControl_o *this, const Method
 
   if ( (byte_40FBF75 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12737, method);
+    sub_B16FFC(&StringLiteral_12737/*"SetBannerCenter"*/, method);
     byte_40FBF75 = 1;
   }
   UnityEngine_MonoBehaviour__CancelInvoke_34803564(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_12737,
+    (System_String_o *)StringLiteral_12737/*"SetBannerCenter"*/,
     0LL);
   summonInfoCtr = this->fields.summonInfoCtr;
   if ( !summonInfoCtr
@@ -2630,17 +2630,17 @@ void __fastcall SummonControl__SendEventRequestNg(SummonControl_o *this, const M
 
   if ( (byte_40FBFB1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11041, method);
-    sub_B16FFC(&StringLiteral_11042, v3);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, method);
+    sub_B16FFC(&StringLiteral_11042/*"REQUEST_NG_RESULT"*/, v3);
     byte_40FBFB1 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
     sub_B170D4();
   if ( this->fields.isResult )
-    v5 = &StringLiteral_11042;
+    v5 = &StringLiteral_11042/*"REQUEST_NG_RESULT"*/;
   else
-    v5 = &StringLiteral_11041;
+    v5 = &StringLiteral_11041/*"REQUEST_NG"*/;
   PlayMakerFSM__SendEvent(fsm, (System_String_o *)*v5, 0LL);
 }
 
@@ -2847,13 +2847,13 @@ void __fastcall SummonControl__SetDispBgParts(SummonControl_o *this, bool isDisp
   if ( (byte_40FBFB4 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, isDisp);
-    sub_B16FFC(&StringLiteral_17194, v5);
-    sub_B16FFC(&StringLiteral_21746, v6);
-    sub_B16FFC(&StringLiteral_21747, v7);
-    sub_B16FFC(&StringLiteral_21748, v8);
-    sub_B16FFC(&StringLiteral_21745, v9);
-    sub_B16FFC(&StringLiteral_21749, v10);
-    sub_B16FFC(&StringLiteral_21744, v11);
+    sub_B16FFC(&StringLiteral_17194/*"center_glow"*/, v5);
+    sub_B16FFC(&StringLiteral_21746/*"ring_gard1_3"*/, v6);
+    sub_B16FFC(&StringLiteral_21747/*"ring_gard2_1"*/, v7);
+    sub_B16FFC(&StringLiteral_21748/*"ring_gard2_2"*/, v8);
+    sub_B16FFC(&StringLiteral_21745/*"ring_gard1_2"*/, v9);
+    sub_B16FFC(&StringLiteral_21749/*"ring_gard2_3"*/, v10);
+    sub_B16FFC(&StringLiteral_21744/*"ring_gard1_1"*/, v11);
     byte_40FBFB4 = 1;
   }
   v12 = sub_B17014(string___TypeInfo, 7LL, method);
@@ -2861,13 +2861,13 @@ void __fastcall SummonControl__SetDispBgParts(SummonControl_o *this, bool isDisp
 LABEL_47:
     sub_B170D4();
   v19 = v12;
-  v20 = StringLiteral_21744;
-  if ( StringLiteral_21744 )
+  v20 = StringLiteral_21744/*"ring_gard1_1"*/;
+  if ( StringLiteral_21744/*"ring_gard1_1"*/ )
   {
-    v20 = sub_B170BC(StringLiteral_21744, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
+    v20 = sub_B170BC(StringLiteral_21744/*"ring_gard1_1"*/, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
     if ( !v20 )
       goto LABEL_49;
-    v21 = (System_Int32_array **)StringLiteral_21744;
+    v21 = (System_Int32_array **)StringLiteral_21744/*"ring_gard1_1"*/;
   }
   else
   {
@@ -2877,13 +2877,13 @@ LABEL_47:
     goto LABEL_48;
   *(_QWORD *)(v19 + 32) = v21;
   sub_B16F98((BattleServantConfConponent_o *)(v19 + 32), v21, v13, v14, v15, v16, v17, v18);
-  v20 = StringLiteral_21745;
-  if ( StringLiteral_21745 )
+  v20 = StringLiteral_21745/*"ring_gard1_2"*/;
+  if ( StringLiteral_21745/*"ring_gard1_2"*/ )
   {
-    v20 = sub_B170BC(StringLiteral_21745, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
+    v20 = sub_B170BC(StringLiteral_21745/*"ring_gard1_2"*/, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
     if ( !v20 )
       goto LABEL_49;
-    v21 = (System_Int32_array **)StringLiteral_21745;
+    v21 = (System_Int32_array **)StringLiteral_21745/*"ring_gard1_2"*/;
   }
   else
   {
@@ -2893,13 +2893,13 @@ LABEL_47:
     goto LABEL_48;
   *(_QWORD *)(v19 + 40) = v21;
   sub_B16F98((BattleServantConfConponent_o *)(v19 + 40), v21, v13, v22, v23, v24, v25, v26);
-  v20 = StringLiteral_21746;
-  if ( StringLiteral_21746 )
+  v20 = StringLiteral_21746/*"ring_gard1_3"*/;
+  if ( StringLiteral_21746/*"ring_gard1_3"*/ )
   {
-    v20 = sub_B170BC(StringLiteral_21746, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
+    v20 = sub_B170BC(StringLiteral_21746/*"ring_gard1_3"*/, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
     if ( !v20 )
       goto LABEL_49;
-    v21 = (System_Int32_array **)StringLiteral_21746;
+    v21 = (System_Int32_array **)StringLiteral_21746/*"ring_gard1_3"*/;
   }
   else
   {
@@ -2909,13 +2909,13 @@ LABEL_47:
     goto LABEL_48;
   *(_QWORD *)(v19 + 48) = v21;
   sub_B16F98((BattleServantConfConponent_o *)(v19 + 48), v21, v13, v27, v28, v29, v30, v31);
-  v20 = StringLiteral_21747;
-  if ( StringLiteral_21747 )
+  v20 = StringLiteral_21747/*"ring_gard2_1"*/;
+  if ( StringLiteral_21747/*"ring_gard2_1"*/ )
   {
-    v20 = sub_B170BC(StringLiteral_21747, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
+    v20 = sub_B170BC(StringLiteral_21747/*"ring_gard2_1"*/, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
     if ( !v20 )
       goto LABEL_49;
-    v21 = (System_Int32_array **)StringLiteral_21747;
+    v21 = (System_Int32_array **)StringLiteral_21747/*"ring_gard2_1"*/;
   }
   else
   {
@@ -2925,13 +2925,13 @@ LABEL_47:
     goto LABEL_48;
   *(_QWORD *)(v19 + 56) = v21;
   sub_B16F98((BattleServantConfConponent_o *)(v19 + 56), v21, v13, v32, v33, v34, v35, v36);
-  v20 = StringLiteral_21748;
-  if ( StringLiteral_21748 )
+  v20 = StringLiteral_21748/*"ring_gard2_2"*/;
+  if ( StringLiteral_21748/*"ring_gard2_2"*/ )
   {
-    v20 = sub_B170BC(StringLiteral_21748, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
+    v20 = sub_B170BC(StringLiteral_21748/*"ring_gard2_2"*/, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
     if ( !v20 )
       goto LABEL_49;
-    v21 = (System_Int32_array **)StringLiteral_21748;
+    v21 = (System_Int32_array **)StringLiteral_21748/*"ring_gard2_2"*/;
   }
   else
   {
@@ -2941,13 +2941,13 @@ LABEL_47:
     goto LABEL_48;
   *(_QWORD *)(v19 + 64) = v21;
   sub_B16F98((BattleServantConfConponent_o *)(v19 + 64), v21, v13, v37, v38, v39, v40, v41);
-  v20 = StringLiteral_21749;
-  if ( StringLiteral_21749 )
+  v20 = StringLiteral_21749/*"ring_gard2_3"*/;
+  if ( StringLiteral_21749/*"ring_gard2_3"*/ )
   {
-    v20 = sub_B170BC(StringLiteral_21749, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
+    v20 = sub_B170BC(StringLiteral_21749/*"ring_gard2_3"*/, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
     if ( !v20 )
       goto LABEL_49;
-    v21 = (System_Int32_array **)StringLiteral_21749;
+    v21 = (System_Int32_array **)StringLiteral_21749/*"ring_gard2_3"*/;
   }
   else
   {
@@ -2957,13 +2957,13 @@ LABEL_47:
     goto LABEL_48;
   *(_QWORD *)(v19 + 72) = v21;
   sub_B16F98((BattleServantConfConponent_o *)(v19 + 72), v21, v13, v42, v43, v44, v45, v46);
-  v20 = StringLiteral_17194;
-  if ( StringLiteral_17194 )
+  v20 = StringLiteral_17194/*"center_glow"*/;
+  if ( StringLiteral_17194/*"center_glow"*/ )
   {
-    v20 = sub_B170BC(StringLiteral_17194, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
+    v20 = sub_B170BC(StringLiteral_17194/*"center_glow"*/, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
     if ( v20 )
     {
-      v21 = (System_Int32_array **)StringLiteral_17194;
+      v21 = (System_Int32_array **)StringLiteral_17194/*"center_glow"*/;
       goto LABEL_38;
     }
 LABEL_49:
@@ -3093,7 +3093,7 @@ void __fastcall SummonControl__SetupFragmentsExchangeButton(SummonControl_o *thi
     sub_B16FFC(&DataManager_TypeInfo, v5);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v6);
     sub_B16FFC(&MasterMissionComponent_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_16922, v8);
+    sub_B16FFC(&StringLiteral_16922/*"btn_event_3"*/, v8);
     byte_40FBF96 = 1;
   }
   v26 = 0LL;
@@ -3105,7 +3105,7 @@ void __fastcall SummonControl__SetupFragmentsExchangeButton(SummonControl_o *thi
                                             (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner(Component_srcLineSprite, (System_String_o *)StringLiteral_16922, 0LL);
+  AtlasManager__SetBanner(Component_srcLineSprite, (System_String_o *)StringLiteral_16922/*"btn_event_3"*/, 0LL);
   AtlasManager__SetItem(this->fields.stoneIcon, 6, 0LL);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
@@ -3446,13 +3446,13 @@ void __fastcall SummonControl___OnEndSummonEffect_b__280_0(SummonControl_o *this
 
   if ( (byte_40FBFE9 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5468, method);
+    sub_B16FFC(&StringLiteral_5468/*"END_FADE"*/, method);
     byte_40FBFE9 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5468, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5468/*"END_FADE"*/, 0LL);
 }
 
 
@@ -3539,7 +3539,7 @@ void __fastcall SummonControl___executeEnhanceTresureDevice_b__268_0(
   {
     sub_B16FFC(&AvalonSceneManager_TypeInfo, isDecide);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_5467, v5);
+    sub_B16FFC(&StringLiteral_5467/*"END_EFFECT"*/, v5);
     byte_40FBFE8 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -3554,7 +3554,7 @@ void __fastcall SummonControl___executeEnhanceTresureDevice_b__268_0(
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5467, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5467/*"END_EFFECT"*/, 0LL);
 }
 
 
@@ -3564,13 +3564,13 @@ void __fastcall SummonControl___loadAssetsForSummon_b__231_0(SummonControl_o *th
 
   if ( (byte_40FBFE2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12294, method);
+    sub_B16FFC(&StringLiteral_12294/*"START_GACHA"*/, method);
     byte_40FBFE2 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12294, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12294/*"START_GACHA"*/, 0LL);
 }
 
 
@@ -3623,7 +3623,7 @@ void __fastcall SummonControl___resetResultList_b__263_0(SummonControl_o *this, 
   {
     sub_B16FFC(&AvalonSceneManager_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_5485, v4);
+    sub_B16FFC(&StringLiteral_5485/*"END_SUMMON"*/, v4);
     byte_40FBFE7 = 1;
   }
   summonResultInfo = this->fields.summonResultInfo;
@@ -3640,7 +3640,7 @@ void __fastcall SummonControl___resetResultList_b__263_0(SummonControl_o *this, 
   fsm = this->fields.fsm;
   if ( !fsm )
     goto LABEL_12;
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5485, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5485/*"END_SUMMON"*/, 0LL);
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -3660,12 +3660,12 @@ void __fastcall SummonControl___setChangeSummonInfo_b__178_0(SummonControl_o *th
 
   if ( (byte_40FBFDF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12737, method);
+    sub_B16FFC(&StringLiteral_12737/*"SetBannerCenter"*/, method);
     byte_40FBFDF = 1;
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_12737,
+    (System_String_o *)StringLiteral_12737/*"SetBannerCenter"*/,
     0.1,
     0LL);
   maskObject = this->fields.maskObject;
@@ -3690,13 +3690,13 @@ void __fastcall SummonControl___setUserResourceDisp_b__154_0(
   if ( (byte_40FBFDE & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&stoneCount);
-    sub_B16FFC(&StringLiteral_23433, v5);
+    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v5);
     byte_40FBFDE = 1;
   }
   currentStoneNumLb = this->fields.currentStoneNumLb;
   v9 = stoneCount;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-  v8 = System_String__Format((System_String_o *)StringLiteral_23433, v7, 0LL);
+  v8 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v7, 0LL);
   if ( !currentStoneNumLb )
     sub_B170D4();
   UILabel__set_text(currentStoneNumLb, v8, 0LL);
@@ -4033,9 +4033,9 @@ void __fastcall SummonControl___showSummonEffect_b__238_0(SummonControl_o *this,
     sub_B16FFC(&Method_WeightRate_int__getTotalWeight__, v26);
     sub_B16FFC(&Method_WeightRate_int__setWeight__, v27);
     sub_B16FFC(&WeightRate_int__TypeInfo, v28);
-    sub_B16FFC(&StringLiteral_5480, v29);
-    sub_B16FFC(&StringLiteral_12410, v30);
-    sub_B16FFC(&StringLiteral_2545, v31);
+    sub_B16FFC(&StringLiteral_5480/*"END_PREPARATION"*/, v29);
+    sub_B16FFC(&StringLiteral_12410/*"SUMMON_SKIP_STOP_SERVANT_IDS"*/, v30);
+    sub_B16FFC(&StringLiteral_2545/*"BGM_SUMMON_1"*/, v31);
     byte_40FBFE3 = 1;
   }
   maskObject = this->fields.maskObject;
@@ -4051,7 +4051,7 @@ void __fastcall SummonControl___showSummonEffect_b__238_0(SummonControl_o *this,
   SummonControl__clearResultList(this, v36);
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playBgm((System_String_o *)StringLiteral_2545, 0LL);
+  SoundManager__playBgm((System_String_o *)StringLiteral_2545/*"BGM_SUMMON_1"*/, 0LL);
   summonInstance = (UnityEngine_Component_o *)this->fields.summonInstance;
   if ( !summonInstance )
     goto LABEL_90;
@@ -4130,7 +4130,7 @@ LABEL_16:
                                  (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ConstantStrMaster___);
   if ( !v58 )
     goto LABEL_90;
-  Value = ConstantStrMaster__GetValue(v58, (System_String_o *)StringLiteral_12410, 0LL);
+  Value = ConstantStrMaster__GetValue(v58, (System_String_o *)StringLiteral_12410/*"SUMMON_SKIP_STOP_SERVANT_IDS"*/, 0LL);
   if ( Value )
   {
     v61 = Value;
@@ -4415,7 +4415,7 @@ LABEL_91:
   if ( !fsm )
 LABEL_90:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5480, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5480/*"END_PREPARATION"*/, 0LL);
 }
 
 
@@ -4492,13 +4492,13 @@ void __fastcall SummonControl___showSvtTalk_b__245_0(SummonControl_o *this, cons
 
   if ( (byte_40FBFE4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3061, method);
+    sub_B16FFC(&StringLiteral_3061/*"CLICK_OK"*/, method);
     byte_40FBFE4 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3061, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3061/*"CLICK_OK"*/, 0LL);
 }
 
 
@@ -4611,24 +4611,24 @@ void __fastcall SummonControl__callbackGachaDraw(
   {
     sub_B16FFC(&Method_JsonManager_DeserializeArray_SummonControl_resData___, result);
     sub_B16FFC(&JsonManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11043, v6);
-    sub_B16FFC(&StringLiteral_20980, v7);
-    sub_B16FFC(&StringLiteral_15571, v8);
-    sub_B16FFC(&StringLiteral_15807, v9);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v7);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v8);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v9);
     byte_40FBFB0 = 1;
   }
   if ( !result )
     goto LABEL_23;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL)
-    || System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL)
+    || System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     SummonControl__SendEventRequestNg(this, v10);
     return;
   }
   v11 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -4726,7 +4726,7 @@ LABEL_24:
 LABEL_23:
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_11043, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
 }
 
 
@@ -4739,13 +4739,13 @@ void __fastcall SummonControl__callbackTutorialSet(
 
   if ( (byte_40FBFB3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, result);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, result);
     byte_40FBFB3 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_11043, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
 }
 
 
@@ -4784,7 +4784,7 @@ void __fastcall SummonControl__checkEnhanceTresureDevice(SummonControl_o *this, 
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
     sub_B16FFC(&Method_SummonControl___c__DisplayClass267_0__checkEnhanceTresureDevice_b__0__, v8);
     sub_B16FFC(&SummonControl___c__DisplayClass267_0_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_9326, v10);
+    sub_B16FFC(&StringLiteral_9326/*"NO_EXIST"*/, v10);
     byte_40FBFCA = 1;
   }
   v11 = sub_B170CC(SummonControl___c__DisplayClass267_0_TypeInfo, method, v2, v3, v4);
@@ -4821,7 +4821,7 @@ LABEL_12:
   fsm = this->fields.fsm;
   if ( !fsm )
     goto LABEL_12;
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_9326, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_9326/*"NO_EXIST"*/, 0LL);
 }
 
 
@@ -4831,7 +4831,7 @@ void __fastcall SummonControl__checkEnhanceTresureDeviceNotNewSvt(SummonControl_
 
   if ( (byte_40FBFC8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9326, method);
+    sub_B16FFC(&StringLiteral_9326/*"NO_EXIST"*/, method);
     byte_40FBFC8 = 1;
   }
   if ( this->fields.resType == 2 )
@@ -4839,7 +4839,7 @@ void __fastcall SummonControl__checkEnhanceTresureDeviceNotNewSvt(SummonControl_
     fsm = this->fields.fsm;
     if ( !fsm )
       sub_B170D4();
-    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_9326, 0LL);
+    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_9326/*"NO_EXIST"*/, 0LL);
   }
   else
   {
@@ -4895,7 +4895,7 @@ void __fastcall SummonControl__checkEnhanceTresureDeviceSingle(SummonControl_o *
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
     sub_B16FFC(&Method_SummonControl___c__DisplayClass266_0__checkEnhanceTresureDeviceSingle_b__0__, v10);
     sub_B16FFC(&SummonControl___c__DisplayClass266_0_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_9326, v12);
+    sub_B16FFC(&StringLiteral_9326/*"NO_EXIST"*/, v12);
     byte_40FBFC9 = 1;
   }
   v13 = sub_B170CC(SummonControl___c__DisplayClass266_0_TypeInfo, method, v2, v3, v4);
@@ -4955,7 +4955,7 @@ LABEL_17:
   fsm = this->fields.fsm;
   if ( !fsm )
     goto LABEL_17;
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_9326, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_9326/*"NO_EXIST"*/, 0LL);
 }
 
 
@@ -4970,9 +4970,9 @@ void __fastcall SummonControl__checkGachaResource(SummonControl_o *this, const M
 
   if ( (byte_40FBF8F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2971, method);
-    sub_B16FFC(&StringLiteral_12185, v3);
-    sub_B16FFC(&StringLiteral_2968, v4);
+    sub_B16FFC(&StringLiteral_2971/*"CHECK_STONE"*/, method);
+    sub_B16FFC(&StringLiteral_12185/*"SHOW_CONFIRM_DLG"*/, v3);
+    sub_B16FFC(&StringLiteral_2968/*"CHECK_POINT"*/, v4);
     byte_40FBF8F = 1;
   }
   gachaParamData = this->fields.gachaParamData;
@@ -4986,7 +4986,7 @@ LABEL_15:
       fsm = this->fields.fsm;
       if ( !fsm )
         goto LABEL_15;
-      v7 = &StringLiteral_2971;
+      v7 = &StringLiteral_2971/*"CHECK_STONE"*/;
       break;
     case 3:
       summonInfoCtr = this->fields.summonInfoCtr;
@@ -4997,9 +4997,9 @@ LABEL_15:
         goto LABEL_15;
       if ( summonInfoCtr->fields.isFree )
 LABEL_12:
-        v7 = &StringLiteral_12185;
+        v7 = &StringLiteral_12185/*"SHOW_CONFIRM_DLG"*/;
       else
-        v7 = &StringLiteral_2968;
+        v7 = &StringLiteral_2968/*"CHECK_POINT"*/;
       break;
     case 5:
       fsm = this->fields.fsm;
@@ -5020,13 +5020,13 @@ void __fastcall SummonControl__checkGetSvtNum(SummonControl_o *this, const Metho
 
   if ( (byte_40FBFB7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6847, method);
+    sub_B16FFC(&StringLiteral_6847/*"GET_MULTI"*/, method);
     byte_40FBFB7 = 1;
   }
   maskBgObject = this->fields.maskBgObject;
   if ( !maskBgObject || (UnityEngine_GameObject__SetActive(maskBgObject, 0, 0LL), (fsm = this->fields.fsm) == 0LL) )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_6847, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_6847/*"GET_MULTI"*/, 0LL);
 }
 
 
@@ -5076,8 +5076,8 @@ void __fastcall SummonControl__checkIsNewSvt(SummonControl_o *this, const Method
   v3 = this;
   if ( (byte_40FBFB8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9267, method);
-    this = (SummonControl_o *)sub_B16FFC(&StringLiteral_6860, v4);
+    sub_B16FFC(&StringLiteral_9267/*"NEW_SVT"*/, method);
+    this = (SummonControl_o *)sub_B16FFC(&StringLiteral_6860/*"GO_BACK"*/, v4);
     byte_40FBFB8 = 1;
   }
   gachaResInfoList = v3->fields.gachaResInfoList;
@@ -5098,7 +5098,7 @@ void __fastcall SummonControl__checkIsNewSvt(SummonControl_o *this, const Method
     fsm = v3->fields.fsm;
     if ( fsm )
     {
-      v9 = &StringLiteral_9267;
+      v9 = &StringLiteral_9267/*"NEW_SVT"*/;
       goto LABEL_13;
     }
 LABEL_14:
@@ -5107,7 +5107,7 @@ LABEL_14:
   fsm = v3->fields.fsm;
   if ( !fsm )
     goto LABEL_14;
-  v9 = &StringLiteral_6860;
+  v9 = &StringLiteral_6860/*"GO_BACK"*/;
 LABEL_13:
   PlayMakerFSM__SendEvent(fsm, (System_String_o *)*v9, 0LL);
 }
@@ -5172,9 +5172,9 @@ void __fastcall SummonControl__checkIsNewSvtNum(SummonControl_o *this, const Met
   if ( (byte_40FBFC1 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_int__Add__, method);
-    sub_B16FFC(&StringLiteral_9716, v4);
-    sub_B16FFC(&StringLiteral_6332, v5);
-    this = (SummonControl_o *)sub_B16FFC(&StringLiteral_9267, v6);
+    sub_B16FFC(&StringLiteral_9716/*"OLD_SVT"*/, v4);
+    sub_B16FFC(&StringLiteral_6332/*"FINAL_SVT"*/, v5);
+    this = (SummonControl_o *)sub_B16FFC(&StringLiteral_9267/*"NEW_SVT"*/, v6);
     byte_40FBFC1 = 1;
   }
   gachaResInfoList = v3->fields.gachaResInfoList;
@@ -5187,7 +5187,7 @@ void __fastcall SummonControl__checkIsNewSvtNum(SummonControl_o *this, const Met
     fsm = v3->fields.fsm;
     if ( fsm )
     {
-      v11 = &StringLiteral_6332;
+      v11 = &StringLiteral_6332/*"FINAL_SVT"*/;
 LABEL_15:
       v15 = (System_String_o *)*v11;
       goto LABEL_16;
@@ -5207,7 +5207,7 @@ LABEL_15:
     fsm = v3->fields.fsm;
     if ( fsm )
     {
-      v11 = &StringLiteral_9716;
+      v11 = &StringLiteral_9716/*"OLD_SVT"*/;
       goto LABEL_15;
     }
 LABEL_19:
@@ -5220,12 +5220,12 @@ LABEL_19:
   if ( v14 )
   {
     fsm = v3->fields.fsm;
-    v15 = (System_String_o *)StringLiteral_9716;
+    v15 = (System_String_o *)StringLiteral_9716/*"OLD_SVT"*/;
 LABEL_16:
     PlayMakerFSM__SendEvent(fsm, v15, 0LL);
     return;
   }
-  PlayMakerFSM__SendEvent(v3->fields.fsm, (System_String_o *)StringLiteral_9267, 0LL);
+  PlayMakerFSM__SendEvent(v3->fields.fsm, (System_String_o *)StringLiteral_9267/*"NEW_SVT"*/, 0LL);
   befSvtList = v3->fields.befSvtList;
   if ( !befSvtList )
     goto LABEL_19;
@@ -5336,8 +5336,8 @@ void __fastcall SummonControl__checkSummonTutorial(SummonControl_o *this, const 
     sub_B16FFC(&AvalonSceneManager_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
     sub_B16FFC(&TutorialFlag_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_3033, v5);
-    sub_B16FFC(&StringLiteral_11099, v6);
+    sub_B16FFC(&StringLiteral_3033/*"CLEAR_TUTORIAL"*/, v5);
+    sub_B16FFC(&StringLiteral_11099/*"RETURN_TUTORIAL"*/, v6);
     byte_40FBF61 = 1;
   }
   if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -5438,7 +5438,7 @@ LABEL_33:
       fsm = this->fields.fsm;
       if ( !fsm )
         goto LABEL_56;
-      v9 = &StringLiteral_3033;
+      v9 = &StringLiteral_3033/*"CLEAR_TUTORIAL"*/;
       goto LABEL_47;
     }
     this->fields.isDoneSecTutorial = 0;
@@ -5452,7 +5452,7 @@ LABEL_50:
   this->fields.isDoneTutorial = 0;
   if ( !fsm )
     goto LABEL_56;
-  v9 = &StringLiteral_11099;
+  v9 = &StringLiteral_11099/*"RETURN_TUTORIAL"*/;
 LABEL_47:
   PlayMakerFSM__SendEvent(fsm, (System_String_o *)*v9, 0LL);
 LABEL_51:
@@ -5540,8 +5540,8 @@ void __fastcall SummonControl__checkUserServantNum(SummonControl_o *this, const 
     sub_B16FFC(&Method_SummonControl_closeShotCommandCodeFrameDlg__, v8);
     sub_B16FFC(&Method_SummonControl_closeShotSvtEqFrameDlg__, v9);
     sub_B16FFC(&Method_SummonControl_closeShotSvtFrameDlg__, v10);
-    sub_B16FFC(&StringLiteral_6441, v11);
-    sub_B16FFC(&StringLiteral_2969, v12);
+    sub_B16FFC(&StringLiteral_6441/*"FRIEND_GACHA_ADD_LIMIT"*/, v11);
+    sub_B16FFC(&StringLiteral_2969/*"CHECK_RESOURCE"*/, v12);
     byte_40FBF87 = 1;
   }
   *(_QWORD *)servantEquipSum = 0LL;
@@ -5576,7 +5576,7 @@ void __fastcall SummonControl__checkUserServantNum(SummonControl_o *this, const 
                                                              (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ConstantMaster___);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_44;
-  Value = ConstantMaster__GetValue(MasterData_WarQuestSelectionMaster, (System_String_o *)StringLiteral_6441, 0LL);
+  Value = ConstantMaster__GetValue(MasterData_WarQuestSelectionMaster, (System_String_o *)StringLiteral_6441/*"FRIEND_GACHA_ADD_LIMIT"*/, 0LL);
   if ( Value >= 1 )
   {
     svtKeep += Value;
@@ -5608,7 +5608,7 @@ LABEL_22:
     fsm = this->fields.fsm;
     if ( fsm )
     {
-      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_2969, 0LL);
+      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_2969/*"CHECK_RESOURCE"*/, 0LL);
       return;
     }
 LABEL_44:
@@ -5742,7 +5742,7 @@ void __fastcall SummonControl__checkUsrFriendPoint(SummonControl_o *this, const 
     sub_B16FFC(&Method_DataManager_GetMasterData_TblUserMaster___, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v4);
     sub_B16FFC(&Method_SummonControl_closeShotPointDlg__, v5);
-    sub_B16FFC(&StringLiteral_12185, v6);
+    sub_B16FFC(&StringLiteral_12185/*"SHOW_CONFIRM_DLG"*/, v6);
     byte_40FBF90 = 1;
   }
   v7 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
@@ -5797,7 +5797,7 @@ LABEL_17:
   fsm = this->fields.fsm;
   if ( !fsm )
     goto LABEL_17;
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12185, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12185/*"SHOW_CONFIRM_DLG"*/, 0LL);
 }
 
 
@@ -5831,7 +5831,7 @@ void __fastcall SummonControl__checkUsrStoneNum(SummonControl_o *this, const Met
   {
     sub_B16FFC(&SummonConfirmDlgComponent_CallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_SummonControl_closeShotStoneDlg__, v6);
-    sub_B16FFC(&StringLiteral_12185, v7);
+    sub_B16FFC(&StringLiteral_12185/*"SHOW_CONFIRM_DLG"*/, v7);
     byte_40FBF92 = 1;
   }
   gachaParamData = this->fields.gachaParamData;
@@ -5858,7 +5858,7 @@ void __fastcall SummonControl__checkUsrStoneNum(SummonControl_o *this, const Met
     fsm = this->fields.fsm;
     if ( !fsm )
       goto LABEL_16;
-    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12185, 0LL);
+    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12185/*"SHOW_CONFIRM_DLG"*/, 0LL);
   }
   else
   {
@@ -6328,8 +6328,8 @@ void __fastcall SummonControl__closeShotCommandCodeFrameDlg(
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_12612, v8);
-    sub_B16FFC(&StringLiteral_3039, v9);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v8);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v9);
     byte_40FBF8A = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -6347,10 +6347,10 @@ void __fastcall SummonControl__closeShotCommandCodeFrameDlg(
     fsm = this->fields.fsm;
     if ( fsm )
     {
-      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
       v12 = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v17 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v13, v14, v15, v16);
-      SceneJumpInfo___ctor_29748028(v17, (System_String_o *)StringLiteral_12612, 2, 0LL);
+      SceneJumpInfo___ctor_29748028(v17, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 2, 0LL);
       if ( v12 )
       {
         AvalonSceneManager__transitionScene(v12, 22, 1, (Il2CppObject *)v17, 0LL);
@@ -6369,7 +6369,7 @@ LABEL_16:
   v18 = this->fields.fsm;
   if ( !v18 )
     goto LABEL_16;
-  PlayMakerFSM__SendEvent(v18, (System_String_o *)StringLiteral_3039, 0LL);
+  PlayMakerFSM__SendEvent(v18, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
 }
 
 
@@ -6383,7 +6383,7 @@ void __fastcall SummonControl__closeShotPointDlg(SummonControl_o *this, bool res
   if ( (byte_40FBF91 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, res);
-    sub_B16FFC(&StringLiteral_3039, v4);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v4);
     byte_40FBF91 = 1;
   }
   confirmDlgInfo = this->fields.confirmDlgInfo;
@@ -6397,7 +6397,7 @@ void __fastcall SummonControl__closeShotPointDlg(SummonControl_o *this, bool res
   if ( !fsm )
 LABEL_9:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
 }
 
 
@@ -6414,8 +6414,8 @@ void __fastcall SummonControl__closeShotStoneDlg(SummonControl_o *this, bool res
   if ( (byte_40FBF93 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, res);
-    sub_B16FFC(&StringLiteral_3039, v5);
-    sub_B16FFC(&StringLiteral_6862, v6);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v5);
+    sub_B16FFC(&StringLiteral_6862/*"GO_BUY_STONE"*/, v6);
     byte_40FBF93 = 1;
   }
   confirmDlgInfo = this->fields.confirmDlgInfo;
@@ -6437,7 +6437,7 @@ void __fastcall SummonControl__closeShotStoneDlg(SummonControl_o *this, bool res
     fsm = this->fields.fsm;
     if ( fsm )
     {
-      v10 = &StringLiteral_3039;
+      v10 = &StringLiteral_3039/*"CLICK_CANCEL"*/;
       goto LABEL_16;
     }
 LABEL_17:
@@ -6452,7 +6452,7 @@ LABEL_17:
   fsm = this->fields.fsm;
   if ( !fsm )
     goto LABEL_17;
-  v10 = &StringLiteral_6862;
+  v10 = &StringLiteral_6862/*"GO_BUY_STONE"*/;
 LABEL_16:
   PlayMakerFSM__SendEvent(fsm, (System_String_o *)*v10, 0LL);
 }
@@ -6495,10 +6495,10 @@ void __fastcall SummonControl__closeShotSvtEqFrameDlg(SummonControl_o *this, int
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_12655, v8);
-    sub_B16FFC(&StringLiteral_12612, v9);
-    sub_B16FFC(&StringLiteral_12654, v10);
-    sub_B16FFC(&StringLiteral_3039, v11);
+    sub_B16FFC(&StringLiteral_12655/*"ServantEquipList"*/, v8);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v9);
+    sub_B16FFC(&StringLiteral_12654/*"ServantEQCombine"*/, v10);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v11);
     byte_40FBF89 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -6517,10 +6517,10 @@ void __fastcall SummonControl__closeShotSvtEqFrameDlg(SummonControl_o *this, int
       fsm = this->fields.fsm;
       if ( fsm )
       {
-        PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+        PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
         v14 = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
         v19 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v22, v23, v24, v25);
-        SceneJumpInfo___ctor_29748028(v19, (System_String_o *)StringLiteral_12612, 1, 0LL);
+        SceneJumpInfo___ctor_29748028(v19, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 1, 0LL);
         if ( v14 )
         {
           v20 = 22;
@@ -6539,10 +6539,10 @@ LABEL_31:
       v26 = this->fields.fsm;
       if ( v26 )
       {
-        PlayMakerFSM__SendEvent(v26, (System_String_o *)StringLiteral_3039, 0LL);
+        PlayMakerFSM__SendEvent(v26, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
         v14 = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
         v19 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v27, v28, v29, v30);
-        SceneJumpInfo___ctor_29747932(v19, (System_String_o *)StringLiteral_12655, 0LL);
+        SceneJumpInfo___ctor_29747932(v19, (System_String_o *)StringLiteral_12655/*"ServantEquipList"*/, 0LL);
         if ( v14 )
         {
           v20 = 71;
@@ -6560,10 +6560,10 @@ LABEL_31:
       v13 = this->fields.fsm;
       if ( v13 )
       {
-        PlayMakerFSM__SendEvent(v13, (System_String_o *)StringLiteral_3039, 0LL);
+        PlayMakerFSM__SendEvent(v13, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
         v14 = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
         v19 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v15, v16, v17, v18);
-        SceneJumpInfo___ctor_29747932(v19, (System_String_o *)StringLiteral_12654, 0LL);
+        SceneJumpInfo___ctor_29747932(v19, (System_String_o *)StringLiteral_12654/*"ServantEQCombine"*/, 0LL);
         if ( v14 )
         {
           v20 = 32;
@@ -6580,7 +6580,7 @@ LABEL_25:
   v31 = this->fields.fsm;
   if ( !v31 )
     goto LABEL_31;
-  PlayMakerFSM__SendEvent(v31, (System_String_o *)StringLiteral_3039, 0LL);
+  PlayMakerFSM__SendEvent(v31, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
 }
 
 
@@ -6618,9 +6618,9 @@ void __fastcall SummonControl__closeShotSvtFrameDlg(SummonControl_o *this, int32
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_12612, v8);
-    sub_B16FFC(&StringLiteral_12651, v9);
-    sub_B16FFC(&StringLiteral_3039, v10);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v8);
+    sub_B16FFC(&StringLiteral_12651/*"ServantCombine"*/, v9);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v10);
     byte_40FBF88 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -6639,10 +6639,10 @@ void __fastcall SummonControl__closeShotSvtFrameDlg(SummonControl_o *this, int32
       fsm = this->fields.fsm;
       if ( fsm )
       {
-        PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+        PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
         v13 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
         v18 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v21, v22, v23, v24);
-        SceneJumpInfo___ctor_29748028(v18, (System_String_o *)StringLiteral_12612, 0, 0LL);
+        SceneJumpInfo___ctor_29748028(v18, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 0, 0LL);
         if ( v13 )
         {
           v19 = 22;
@@ -6661,7 +6661,7 @@ LABEL_32:
       v27 = this->fields.fsm;
       if ( v27 )
       {
-        PlayMakerFSM__SendEvent(v27, (System_String_o *)StringLiteral_3039, 0LL);
+        PlayMakerFSM__SendEvent(v27, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
         v25 = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
         if ( v25 )
         {
@@ -6681,10 +6681,10 @@ LABEL_32:
       v12 = this->fields.fsm;
       if ( v12 )
       {
-        PlayMakerFSM__SendEvent(v12, (System_String_o *)StringLiteral_3039, 0LL);
+        PlayMakerFSM__SendEvent(v12, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
         v13 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
         v18 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v14, v15, v16, v17);
-        SceneJumpInfo___ctor_29747932(v18, (System_String_o *)StringLiteral_12651, 0LL);
+        SceneJumpInfo___ctor_29747932(v18, (System_String_o *)StringLiteral_12651/*"ServantCombine"*/, 0LL);
         if ( v13 )
         {
           v19 = 32;
@@ -6704,7 +6704,7 @@ LABEL_26:
   v28 = this->fields.fsm;
   if ( !v28 )
     goto LABEL_32;
-  PlayMakerFSM__SendEvent(v28, (System_String_o *)StringLiteral_3039, 0LL);
+  PlayMakerFSM__SendEvent(v28, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
 }
 
 
@@ -6757,7 +6757,7 @@ void __fastcall SummonControl__confirmCautionResult(SummonControl_o *this, bool 
     sub_B16FFC(&Method_SummonControl_SetDispBtn__, v10);
     sub_B16FFC(&Method_SummonControl_TryGetSelectBonusDataInfo__, v11);
     sub_B16FFC(&BonusSelectSummonConfirmDialog_TryGetBonusSelectData_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_3039, v13);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v13);
     byte_40FBFAB = 1;
   }
   cautionDlgInfo = this->fields.cautionDlgInfo;
@@ -6846,7 +6846,7 @@ void __fastcall SummonControl__confirmCautionResult(SummonControl_o *this, bool 
             fsm = this->fields.fsm;
             if ( fsm )
             {
-              PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+              PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
               return;
             }
           }
@@ -6875,7 +6875,7 @@ void __fastcall SummonControl__confirmResult(SummonControl_o *this, bool res, co
   if ( (byte_40FBFAA & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, res);
-    sub_B16FFC(&StringLiteral_3039, v5);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v5);
     byte_40FBFAA = 1;
   }
   confirmDlgInfo = this->fields.confirmDlgInfo;
@@ -6893,7 +6893,7 @@ void __fastcall SummonControl__confirmResult(SummonControl_o *this, bool res, co
     fsm = this->fields.fsm;
     if ( fsm )
     {
-      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
       return;
     }
 LABEL_14:
@@ -7189,12 +7189,12 @@ void __fastcall SummonControl__createSummonInfo(SummonControl_o *this, const Met
     sub_B16FFC(&Method_SummonControl_OnClickMiniBanner__, v25);
     sub_B16FFC(&Method_SummonControl_OnDragStarted__, v26);
     sub_B16FFC(&Method_SummonControl_exeSummon__, v27);
-    sub_B16FFC(&StringLiteral_19564, v28);
-    sub_B16FFC(&StringLiteral_19566, v29);
-    sub_B16FFC(&StringLiteral_19565, v30);
-    sub_B16FFC(&StringLiteral_1, v31);
-    sub_B16FFC(&StringLiteral_1004, v32);
-    sub_B16FFC(&StringLiteral_951, v33);
+    sub_B16FFC(&StringLiteral_19564/*"img_summon_"*/, v28);
+    sub_B16FFC(&StringLiteral_19566/*"img_summon_mini_236"*/, v29);
+    sub_B16FFC(&StringLiteral_19565/*"img_summon_mini_"*/, v30);
+    sub_B16FFC(&StringLiteral_1/*""*/, v31);
+    sub_B16FFC(&StringLiteral_1004/*"1"*/, v32);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v33);
     byte_40FBF73 = 1;
   }
   v264 = 0;
@@ -7456,12 +7456,12 @@ LABEL_121:
           v177 = v162 + 1;
           v264 = v162 + 1;
           v178 = System_Int32__ToString((int32_t)&v264, 0LL);
-          v179 = System_String__Concat_43743732((System_String_o *)StringLiteral_951, v178, 0LL);
+          v179 = System_String__Concat_43743732((System_String_o *)StringLiteral_951/*"0"*/, v178, 0LL);
           UnityEngine_Object__set_name((UnityEngine_Object_o *)v166, v179, 0LL);
           if ( v264 >= 10 )
           {
             v180 = System_Int32__ToString((int32_t)&v264, 0LL);
-            v181 = System_String__Concat_43743732((System_String_o *)StringLiteral_1004, v180, 0LL);
+            v181 = System_String__Concat_43743732((System_String_o *)StringLiteral_1004/*"1"*/, v180, 0LL);
             UnityEngine_Object__set_name((UnityEngine_Object_o *)v166, v181, 0LL);
           }
           Component_srcLineSprite = (EventMissionProgressRequest_Argument_ProgressData_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
@@ -7487,7 +7487,7 @@ LABEL_121:
           if ( !v188 )
             break;
           v189 = System_Int32__ToString((int)v188 + 40, 0LL);
-          v190 = System_String__Concat_43743732((System_String_o *)StringLiteral_19564, v189, 0LL);
+          v190 = System_String__Concat_43743732((System_String_o *)StringLiteral_19564/*"img_summon_"*/, v189, 0LL);
           v192 = SummonControl__searchBannerImg(this, v190, v191);
           v193 = this->fields.vaildGachaList;
           if ( !v193 )
@@ -7504,7 +7504,7 @@ LABEL_121:
           v196 = UnityEngine_Object__op_Equality(v194, 0LL, 0LL);
           if ( !v183 )
             break;
-          v197 = v196 ? (System_String_o *)StringLiteral_1 : v190;
+          v197 = v196 ? (System_String_o *)StringLiteral_1/*""*/ : v190;
           GachaBannerComponent__setBannerGachaInfo(
             v183,
             v195,
@@ -7558,7 +7558,7 @@ LABEL_121:
           if ( !v216 )
             break;
           v217 = System_Int32__ToString((int)v216 + 40, 0LL);
-          v218 = System_String__Concat_43743732((System_String_o *)StringLiteral_19565, v217, 0LL);
+          v218 = System_String__Concat_43743732((System_String_o *)StringLiteral_19565/*"img_summon_mini_"*/, v217, 0LL);
           v220 = (UnityEngine_Object_o *)SummonControl__searchBannerImg(this, v218, v219);
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -7567,10 +7567,10 @@ LABEL_121:
           }
           if ( UnityEngine_Object__op_Equality(v220, 0LL, 0LL) )
           {
-            v218 = (System_String_o *)StringLiteral_19566;
+            v218 = (System_String_o *)StringLiteral_19566/*"img_summon_mini_236"*/;
             v220 = (UnityEngine_Object_o *)SummonControl__searchBannerImg(
                                              this,
-                                             (System_String_o *)StringLiteral_19566,
+                                             (System_String_o *)StringLiteral_19566/*"img_summon_mini_236"*/,
                                              v221);
             if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -7578,7 +7578,7 @@ LABEL_121:
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             }
             if ( UnityEngine_Object__op_Equality(v220, 0LL, 0LL) )
-              v218 = (System_String_o *)StringLiteral_1;
+              v218 = (System_String_o *)StringLiteral_1/*""*/;
           }
           v222 = (UnityEngine_Component_o *)this->fields.summonMBannerScrollView;
           if ( !v222 )
@@ -7856,9 +7856,9 @@ void __fastcall SummonControl__endPurchaseStone(SummonControl_o *this, int32_t r
   if ( (byte_40FBF95 & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, *(_QWORD *)&result);
-    sub_B16FFC(&StringLiteral_10515, v5);
-    sub_B16FFC(&StringLiteral_10514, v6);
-    sub_B16FFC(&StringLiteral_10516, v7);
+    sub_B16FFC(&StringLiteral_10515/*"PURCHASE_ERROR"*/, v5);
+    sub_B16FFC(&StringLiteral_10514/*"PURCHASE_CANCEL"*/, v6);
+    sub_B16FFC(&StringLiteral_10516/*"PURCHASE_OK"*/, v7);
     byte_40FBF95 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -7874,19 +7874,19 @@ LABEL_12:
       fsm = this->fields.fsm;
       if ( !fsm )
         goto LABEL_12;
-      v10 = &StringLiteral_10514;
+      v10 = &StringLiteral_10514/*"PURCHASE_CANCEL"*/;
       break;
     case 1:
       fsm = this->fields.fsm;
       if ( !fsm )
         goto LABEL_12;
-      v10 = &StringLiteral_10515;
+      v10 = &StringLiteral_10515/*"PURCHASE_ERROR"*/;
       break;
     case 2:
       fsm = this->fields.fsm;
       if ( !fsm )
         goto LABEL_12;
-      v10 = &StringLiteral_10516;
+      v10 = &StringLiteral_10516/*"PURCHASE_OK"*/;
       break;
     default:
       return;
@@ -7908,9 +7908,9 @@ void __fastcall SummonControl__endPurchaseSvtEqFrame(SummonControl_o *this, int3
   if ( (byte_40FBF8E & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, *(_QWORD *)&result);
-    sub_B16FFC(&StringLiteral_10515, v5);
-    sub_B16FFC(&StringLiteral_10514, v6);
-    sub_B16FFC(&StringLiteral_10516, v7);
+    sub_B16FFC(&StringLiteral_10515/*"PURCHASE_ERROR"*/, v5);
+    sub_B16FFC(&StringLiteral_10514/*"PURCHASE_CANCEL"*/, v6);
+    sub_B16FFC(&StringLiteral_10516/*"PURCHASE_OK"*/, v7);
     byte_40FBF8E = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -7923,7 +7923,7 @@ void __fastcall SummonControl__endPurchaseSvtEqFrame(SummonControl_o *this, int3
       fsm = this->fields.fsm;
       if ( fsm )
       {
-        v10 = &StringLiteral_10514;
+        v10 = &StringLiteral_10514/*"PURCHASE_CANCEL"*/;
         goto LABEL_13;
       }
       goto LABEL_15;
@@ -7931,7 +7931,7 @@ void __fastcall SummonControl__endPurchaseSvtEqFrame(SummonControl_o *this, int3
       fsm = this->fields.fsm;
       if ( fsm )
       {
-        v10 = &StringLiteral_10515;
+        v10 = &StringLiteral_10515/*"PURCHASE_ERROR"*/;
         goto LABEL_13;
       }
 LABEL_15:
@@ -7940,7 +7940,7 @@ LABEL_15:
       fsm = this->fields.fsm;
       if ( fsm )
       {
-        v10 = &StringLiteral_10516;
+        v10 = &StringLiteral_10516/*"PURCHASE_OK"*/;
 LABEL_13:
         PlayMakerFSM__SendEvent(fsm, (System_String_o *)*v10, 0LL);
         return;
@@ -7963,9 +7963,9 @@ void __fastcall SummonControl__endPurchaseSvtFrame(SummonControl_o *this, int32_
   if ( (byte_40FBF8C & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, *(_QWORD *)&result);
-    sub_B16FFC(&StringLiteral_10515, v5);
-    sub_B16FFC(&StringLiteral_10514, v6);
-    sub_B16FFC(&StringLiteral_10516, v7);
+    sub_B16FFC(&StringLiteral_10515/*"PURCHASE_ERROR"*/, v5);
+    sub_B16FFC(&StringLiteral_10514/*"PURCHASE_CANCEL"*/, v6);
+    sub_B16FFC(&StringLiteral_10516/*"PURCHASE_OK"*/, v7);
     byte_40FBF8C = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -7978,7 +7978,7 @@ void __fastcall SummonControl__endPurchaseSvtFrame(SummonControl_o *this, int32_
       fsm = this->fields.fsm;
       if ( fsm )
       {
-        v10 = &StringLiteral_10514;
+        v10 = &StringLiteral_10514/*"PURCHASE_CANCEL"*/;
         goto LABEL_13;
       }
       goto LABEL_15;
@@ -7986,7 +7986,7 @@ void __fastcall SummonControl__endPurchaseSvtFrame(SummonControl_o *this, int32_
       fsm = this->fields.fsm;
       if ( fsm )
       {
-        v10 = &StringLiteral_10515;
+        v10 = &StringLiteral_10515/*"PURCHASE_ERROR"*/;
         goto LABEL_13;
       }
 LABEL_15:
@@ -7995,7 +7995,7 @@ LABEL_15:
       fsm = this->fields.fsm;
       if ( fsm )
       {
-        v10 = &StringLiteral_10516;
+        v10 = &StringLiteral_10516/*"PURCHASE_OK"*/;
 LABEL_13:
         PlayMakerFSM__SendEvent(fsm, (System_String_o *)*v10, 0LL);
         return;
@@ -8125,7 +8125,7 @@ void __fastcall SummonControl__exeSummon(
 
   if ( (byte_40FBF86 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2970, paramData);
+    sub_B16FFC(&StringLiteral_2970/*"CHECK_SERVANT_FRAME"*/, paramData);
     byte_40FBF86 = 1;
   }
   SummonControl__setTutorialCtrEnable(this, 0, method);
@@ -8155,7 +8155,7 @@ LABEL_9:
   fsm = this->fields.fsm;
   if ( !fsm )
     goto LABEL_9;
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_2970, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_2970/*"CHECK_SERVANT_FRAME"*/, 0LL);
 }
 
 
@@ -8328,7 +8328,7 @@ void __fastcall SummonControl__friendSummonConfirmResult(SummonControl_o *this, 
   if ( (byte_40FBFA7 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, res);
-    sub_B16FFC(&StringLiteral_3039, v5);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v5);
     byte_40FBFA7 = 1;
   }
   confirmDlgInfo = this->fields.confirmDlgInfo;
@@ -8346,7 +8346,7 @@ void __fastcall SummonControl__friendSummonConfirmResult(SummonControl_o *this, 
     fsm = this->fields.fsm;
     if ( fsm )
     {
-      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
       return;
     }
 LABEL_14:
@@ -8843,7 +8843,7 @@ void __fastcall SummonControl__limitManaConfirmResult(SummonControl_o *this, int
   if ( (byte_40FBFD7 & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, *(_QWORD *)&res);
-    sub_B16FFC(&StringLiteral_3039, v5);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v5);
     byte_40FBFD7 = 1;
   }
   limitWarningDlgInfo = this->fields.limitWarningDlgInfo;
@@ -8864,7 +8864,7 @@ LABEL_9:
   fsm = this->fields.fsm;
   if ( !fsm )
     goto LABEL_9;
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
 }
 
 
@@ -8906,7 +8906,7 @@ void __fastcall SummonControl__limitQpConfirmResult(SummonControl_o *this, int32
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v7);
     sub_B16FFC(&Method_SummonControl_limitManaConfirmResult__, v8);
     sub_B16FFC(&Method_SummonControl_showConfirmDlg__, v9);
-    sub_B16FFC(&StringLiteral_3039, v10);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v10);
     byte_40FBFD6 = 1;
   }
   limitWarningDlgInfo = this->fields.limitWarningDlgInfo;
@@ -8978,7 +8978,7 @@ LABEL_22:
     fsm = this->fields.fsm;
     if ( !fsm )
       goto LABEL_22;
-    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039, 0LL);
+    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
   }
 }
 
@@ -9058,7 +9058,7 @@ void __fastcall SummonControl__onClickChangeBanner(SummonControl_o *this, const 
   if ( (byte_40FBF7D & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12737, v3);
+    sub_B16FFC(&StringLiteral_12737/*"SetBannerCenter"*/, v3);
     byte_40FBF7D = 1;
   }
   if ( !this->fields.isDragging )
@@ -9081,7 +9081,7 @@ void __fastcall SummonControl__onClickChangeBanner(SummonControl_o *this, const 
     UnityEngine_Behaviour__set_enabled(summonMBannerRightArrowBtn, 0, 0LL);
     UnityEngine_MonoBehaviour__CancelInvoke_34803564(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_12737,
+      (System_String_o *)StringLiteral_12737/*"SetBannerCenter"*/,
       0LL);
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -9155,7 +9155,7 @@ void __fastcall SummonControl__onClickLeftChangeBanner(SummonControl_o *this, co
   if ( (byte_40FBF7E & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12737, v3);
+    sub_B16FFC(&StringLiteral_12737/*"SetBannerCenter"*/, v3);
     byte_40FBF7E = 1;
   }
   if ( !this->fields.isDragging )
@@ -9178,7 +9178,7 @@ void __fastcall SummonControl__onClickLeftChangeBanner(SummonControl_o *this, co
     UnityEngine_Behaviour__set_enabled(summonMBannerRightArrowBtn, 0, 0LL);
     UnityEngine_MonoBehaviour__CancelInvoke_34803564(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_12737,
+      (System_String_o *)StringLiteral_12737/*"SetBannerCenter"*/,
       0LL);
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -9273,7 +9273,7 @@ void __fastcall SummonControl__openAfterSummonInfo(SummonControl_o *this, const 
     sub_B16FFC(&Method_SummonControl__openAfterSummonInfo_b__146_1__, v5);
     sub_B16FFC(&Method_SummonControl___c__openAfterSummonInfo_b__146_0__, v6);
     sub_B16FFC(&SummonControl___c_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_13463, v8);
+    sub_B16FFC(&StringLiteral_13463/*"TUTORIAL_MESSAGE_SUMMON2"*/, v8);
     byte_40FBF64 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -9282,7 +9282,7 @@ void __fastcall SummonControl__openAfterSummonInfo(SummonControl_o *this, const 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13463, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13463/*"TUTORIAL_MESSAGE_SUMMON2"*/, 0LL);
   TUTORIAL_MENU_ARROW_POS_FS = SummonControl__get_TUTORIAL_MENU_ARROW_POS_FS(this, v11);
   TUTORIAL_MENU_ARROW_RECT_FS = SummonControl__get_TUTORIAL_MENU_ARROW_RECT_FS(this, v13);
   m_XMin = TUTORIAL_MENU_ARROW_RECT_FS.fields.m_XMin;
@@ -9350,13 +9350,13 @@ void __fastcall SummonControl__openSummonExeArrow(SummonControl_o *this, const M
 
   if ( (byte_40FBF63 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3033, method);
+    sub_B16FFC(&StringLiteral_3033/*"CLEAR_TUTORIAL"*/, method);
     byte_40FBF63 = 1;
   }
   tutorialArrowObj = this->fields.tutorialArrowObj;
   if ( !tutorialArrowObj
     || (UnityEngine_GameObject__SetActive(tutorialArrowObj, 1, 0LL), (fsm = this->fields.fsm) == 0LL)
-    || (PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3033, 0LL),
+    || (PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3033/*"CLEAR_TUTORIAL"*/, 0LL),
         (summonInfoCtr = this->fields.summonInfoCtr) == 0LL) )
   {
     sub_B170D4();
@@ -9651,7 +9651,7 @@ void __fastcall SummonControl__procTutorialFlg(SummonControl_o *this, const Meth
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v8);
     sub_B16FFC(&Method_SummonControl_callbackTutorialSet__, v9);
-    sub_B16FFC(&StringLiteral_11043, v10);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v10);
     byte_40FBFB2 = 1;
   }
   if ( !this->fields.isDoneTutorial && this->fields.tutorialKind == 2 )
@@ -9687,7 +9687,7 @@ LABEL_13:
   fsm = this->fields.fsm;
   if ( !fsm )
     goto LABEL_13;
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_11043, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
 }
 
 
@@ -10147,8 +10147,8 @@ void __fastcall SummonControl__requestGachaDraw(SummonControl_o *this, const Met
     sub_B16FFC(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v6);
     sub_B16FFC(&SingletonTemplate_MissionNotifyManager__TypeInfo, v7);
     sub_B16FFC(&Method_SummonControl_callbackGachaDraw__, v8);
-    sub_B16FFC(&StringLiteral_132, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_132/*" : "*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FBFAF = 1;
   }
   maskObject = this->fields.maskObject;
@@ -10182,7 +10182,7 @@ void __fastcall SummonControl__requestGachaDraw(SummonControl_o *this, const Met
   storyAdjustIds = gachaParamData->fields.storyAdjustIds;
   p_obj = &gachaParamData->fields.selectBonusList->obj;
   v28 = Request_WarBoardWallAttackRequest;
-  selectBonusListData = (System_String_o *)StringLiteral_1;
+  selectBonusListData = (System_String_o *)StringLiteral_1/*""*/;
   if ( storyAdjustIds )
   {
     v30 = *(_QWORD *)&storyAdjustIds->max_length;
@@ -10205,7 +10205,7 @@ void __fastcall SummonControl__requestGachaDraw(SummonControl_o *this, const Met
           Request_WarBoardWallAttackRequest = (GachaDrawRequest_o *)System_String__Concat_43746016(
                                                                       selectBonusListData,
                                                                       v33,
-                                                                      (System_String_o *)StringLiteral_132,
+                                                                      (System_String_o *)StringLiteral_132/*" : "*/,
                                                                       0LL);
           LODWORD(v30) = storyAdjustIds->max_length;
           ++v31;
@@ -10213,7 +10213,7 @@ void __fastcall SummonControl__requestGachaDraw(SummonControl_o *this, const Met
           v32 += 4;
         }
         while ( (__int64)v31 < (int)v30 );
-        selectBonusListData = (System_String_o *)StringLiteral_1;
+        selectBonusListData = (System_String_o *)StringLiteral_1/*""*/;
         warId = v35;
         gachaTime = v36;
       }
@@ -11435,11 +11435,11 @@ void __fastcall SummonControl__setSummonData(SummonControl_o *this, const Method
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v9);
     sub_B16FFC(&Method_SummonControl_LoadBannerEnd__, v10);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_12388, v12);
-    sub_B16FFC(&StringLiteral_13098, v13);
-    sub_B16FFC(&StringLiteral_6309, v14);
-    sub_B16FFC(&StringLiteral_19430, v15);
-    sub_B16FFC(&StringLiteral_19356, v16);
+    sub_B16FFC(&StringLiteral_12388/*"SUMMON_HELP_MESSAGE"*/, v12);
+    sub_B16FFC(&StringLiteral_13098/*"SummonBanners/DownloadSummonBanner"*/, v13);
+    sub_B16FFC(&StringLiteral_6309/*"FAIL_LOAD"*/, v14);
+    sub_B16FFC(&StringLiteral_19430/*"img_line_summon"*/, v15);
+    sub_B16FFC(&StringLiteral_19356/*"img_bg_banner"*/, v16);
     byte_40FBF67 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -11481,8 +11481,8 @@ void __fastcall SummonControl__setSummonData(SummonControl_o *this, const Method
   this->fields.getSvtIdx = 0;
   *(_QWORD *)&this->fields.currentIdx = 0LL;
   *(_WORD *)&this->fields.isDoneTutorial = 257;
-  v26 = (System_Int32_array **)StringLiteral_13098;
-  this->fields.assetPath = (struct System_String_o *)StringLiteral_13098;
+  v26 = (System_Int32_array **)StringLiteral_13098/*"SummonBanners/DownloadSummonBanner"*/;
+  this->fields.assetPath = (struct System_String_o *)StringLiteral_13098/*"SummonBanners/DownloadSummonBanner"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.assetPath, v26, v27, v28, v29, v30, v31, v32);
   summonHelpLabel = this->fields.summonHelpLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -11490,7 +11490,7 @@ void __fastcall SummonControl__setSummonData(SummonControl_o *this, const Method
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_12388, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_12388/*"SUMMON_HELP_MESSAGE"*/, 0LL);
   if ( !summonHelpLabel )
     goto LABEL_52;
   UILabel__set_text(summonHelpLabel, v34, 0LL);
@@ -11584,14 +11584,14 @@ void __fastcall SummonControl__setSummonData(SummonControl_o *this, const Method
   summonMBannerLineSprite = this->fields.summonMBannerLineSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(summonMBannerLineSprite, (System_String_o *)StringLiteral_19430, 0LL);
+  AtlasManager__SetEventSprite(summonMBannerLineSprite, (System_String_o *)StringLiteral_19430/*"img_line_summon"*/, 0LL);
   v75 = this->fields.summonMBannerLineSprite;
   if ( !v75 )
     goto LABEL_52;
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v75->klass->vtable._33_MakePixelPerfect.method)(
     v75,
     v75->klass->vtable._34_get_minWidth.methodPtr);
-  AtlasManager__SetEventSprite(this->fields.summonMBannerBgSprite, (System_String_o *)StringLiteral_19356, 0LL);
+  AtlasManager__SetEventSprite(this->fields.summonMBannerBgSprite, (System_String_o *)StringLiteral_19356/*"img_bg_banner"*/, 0LL);
   summonMBannerScrollView = this->fields.summonMBannerScrollView;
   if ( !summonMBannerScrollView )
     goto LABEL_52;
@@ -11604,7 +11604,7 @@ void __fastcall SummonControl__setSummonData(SummonControl_o *this, const Method
     fsm = this->fields.fsm;
     if ( fsm )
     {
-      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_6309, 0LL);
+      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_6309/*"FAIL_LOAD"*/, 0LL);
       return;
     }
 LABEL_52:
@@ -11659,8 +11659,8 @@ void __fastcall SummonControl__setSummonResultList(SummonControl_o *this, const 
     sub_B16FFC(&TutorialFlag_TypeInfo, v6);
     sub_B16FFC(&Method_SummonControl___c__setSummonResultList_b__255_0__, v7);
     sub_B16FFC(&SummonControl___c_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_9326, v9);
-    sub_B16FFC(&StringLiteral_12188, v10);
+    sub_B16FFC(&StringLiteral_9326/*"NO_EXIST"*/, v9);
+    sub_B16FFC(&StringLiteral_12188/*"SHOW_TALK"*/, v10);
     byte_40FBFC0 = 1;
   }
   if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -11726,10 +11726,10 @@ void __fastcall SummonControl__setSummonResultList(SummonControl_o *this, const 
     goto LABEL_31;
   if ( this->fields.resType == 2 )
   {
-    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12188, 0LL);
+    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12188/*"SHOW_TALK"*/, 0LL);
     return;
   }
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_9326, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_9326/*"NO_EXIST"*/, 0LL);
   if ( (BYTE3(SingletonTemplate_MissionNotifyManager__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !SingletonTemplate_MissionNotifyManager__TypeInfo->_2.cctor_finished )
   {
@@ -11901,7 +11901,7 @@ void __fastcall SummonControl__setUserResourceDisp(SummonControl_o *this, const 
     sub_B16FFC(&DataManager_TypeInfo, v6);
     sub_B16FFC(&int_TypeInfo, v7);
     sub_B16FFC(&Method_SummonControl__setUserResourceDisp_b__154_0__, v8);
-    sub_B16FFC(&StringLiteral_23433, v9);
+    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v9);
     byte_40FBF6C = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -11922,7 +11922,7 @@ void __fastcall SummonControl__setUserResourceDisp(SummonControl_o *this, const 
   currentStoneNumLb = this->fields.currentStoneNumLb;
   stone = userGameEntity->fields.stone;
   v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &stone);
-  v21 = System_String__Format((System_String_o *)StringLiteral_23433, v20, 0LL);
+  v21 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v20, 0LL);
   if ( !currentStoneNumLb )
     goto LABEL_22;
   UILabel__set_text(currentStoneNumLb, v21, 0LL);
@@ -11947,7 +11947,7 @@ void __fastcall SummonControl__setUserResourceDisp(SummonControl_o *this, const 
   currentPointNumLb = this->fields.currentPointNumLb;
   friendPoint = UserData->fields.friendPoint;
   v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &friendPoint);
-  v32 = System_String__Format((System_String_o *)StringLiteral_23433, v31, 0LL);
+  v32 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v31, 0LL);
   if ( !currentPointNumLb )
     goto LABEL_22;
   UILabel__set_text(currentPointNumLb, v32, 0LL);
@@ -11968,7 +11968,7 @@ void __fastcall SummonControl__setUserResourceDisp(SummonControl_o *this, const 
     goto LABEL_22;
   UserStoneFragmentNum = UserItemMaster__GetUserStoneFragmentNum(v38, 0LL);
   v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &UserStoneFragmentNum);
-  v40 = System_String__Format((System_String_o *)StringLiteral_23433, v39, 0LL);
+  v40 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v39, 0LL);
   if ( !currentFragmentNumLb )
     goto LABEL_22;
   UILabel__set_text(currentFragmentNumLb, v40, 0LL);
@@ -13480,7 +13480,7 @@ void __fastcall SummonControl__showSvtTalk(SummonControl_o *this, const MethodIn
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
     sub_B16FFC(&Method_SummonControl__showSvtTalk_b__245_0__, v13);
     sub_B16FFC(&Method_SummonControl_close__, v14);
-    sub_B16FFC(&StringLiteral_3061, v15);
+    sub_B16FFC(&StringLiteral_3061/*"CLICK_OK"*/, v15);
     byte_40FBFB9 = 1;
   }
   entity = 0LL;
@@ -13537,7 +13537,7 @@ LABEL_17:
       fsm = this->fields.fsm;
       if ( fsm )
       {
-        PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3061, 0LL);
+        PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3061/*"CLICK_OK"*/, 0LL);
         return;
       }
       goto LABEL_42;
@@ -13866,7 +13866,7 @@ bool __fastcall SummonControl__WaitBattleChrLoad_d__247__MoveNext(
   {
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_WaitForEndOfFrame_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_3061, v7);
+    sub_B16FFC(&StringLiteral_3061/*"CLICK_OK"*/, v7);
     byte_40F7A87 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -13933,7 +13933,7 @@ bool __fastcall SummonControl__WaitBattleChrLoad_d__247__MoveNext(
   if ( !fsm )
 LABEL_21:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3061, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3061/*"CLICK_OK"*/, 0LL);
   return 0;
 }
 
@@ -14120,7 +14120,7 @@ void __fastcall SummonControl___c__DisplayClass148_0___openSvtEqInfo_b__0(
     sub_B16FFC(&Method_NetworkManager_getRequest_TutorialSetRequest___, v4);
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&TutorialFlag_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_3033, v7);
+    sub_B16FFC(&StringLiteral_3033/*"CLEAR_TUTORIAL"*/, v7);
     byte_40F7A83 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -14176,7 +14176,7 @@ void __fastcall SummonControl___c__DisplayClass148_0___openSvtEqInfo_b__0(
   if ( !_4__this || (fsm = _4__this->fields.fsm) == 0LL )
 LABEL_27:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3033, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_3033/*"CLEAR_TUTORIAL"*/, 0LL);
 }
 
 
@@ -14198,7 +14198,7 @@ void __fastcall SummonControl___c__DisplayClass266_0___checkEnhanceTresureDevice
 
   if ( (byte_40F7A84 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5741, method);
+    sub_B16FFC(&StringLiteral_5741/*"EXECUTE"*/, method);
     byte_40F7A84 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -14208,7 +14208,7 @@ void __fastcall SummonControl___c__DisplayClass266_0___checkEnhanceTresureDevice
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5741, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5741/*"EXECUTE"*/, 0LL);
 }
 
 
@@ -14230,7 +14230,7 @@ void __fastcall SummonControl___c__DisplayClass267_0___checkEnhanceTresureDevice
 
   if ( (byte_40F7A85 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5741, method);
+    sub_B16FFC(&StringLiteral_5741/*"EXECUTE"*/, method);
     byte_40F7A85 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -14240,7 +14240,7 @@ void __fastcall SummonControl___c__DisplayClass267_0___checkEnhanceTresureDevice
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5741, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5741/*"EXECUTE"*/, 0LL);
 }
 
 

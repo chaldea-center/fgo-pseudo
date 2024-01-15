@@ -44,23 +44,23 @@ void __fastcall SlotEffectComponent___ctor(SlotEffectComponent_o *this, const Me
   if ( (byte_40F9C85 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12675, v9);
-    sub_B16FFC(&StringLiteral_16073, v10);
-    sub_B16FFC(&StringLiteral_16093, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_12675/*"Servants"*/, v9);
+    sub_B16FFC(&StringLiteral_16073/*"_blurOnOff"*/, v10);
+    sub_B16FFC(&StringLiteral_16093/*"_mapIdVal"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F9C85 = 1;
   }
-  v13 = (System_Int32_array **)StringLiteral_12675;
-  this->fields.voiceTypeName = (struct System_String_o *)StringLiteral_12675;
+  v13 = (System_Int32_array **)StringLiteral_12675/*"Servants"*/;
+  this->fields.voiceTypeName = (struct System_String_o *)StringLiteral_12675/*"Servants"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.voiceTypeName, v13, v2, v3, v4, v5, v6, v7);
-  v14 = (System_Int32_array **)StringLiteral_16093;
-  this->fields.reelUvIdKey = (struct System_String_o *)StringLiteral_16093;
+  v14 = (System_Int32_array **)StringLiteral_16093/*"_mapIdVal"*/;
+  this->fields.reelUvIdKey = (struct System_String_o *)StringLiteral_16093/*"_mapIdVal"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.reelUvIdKey, v14, v15, v16, v17, v18, v19, v20);
-  v21 = (System_Int32_array **)StringLiteral_16073;
-  this->fields.reelBlurKey = (struct System_String_o *)StringLiteral_16073;
+  v21 = (System_Int32_array **)StringLiteral_16073/*"_blurOnOff"*/;
+  this->fields.reelBlurKey = (struct System_String_o *)StringLiteral_16073/*"_blurOnOff"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.reelBlurKey, v21, v22, v23, v24, v25, v26, v27);
-  v28 = (System_Int32_array **)StringLiteral_1;
-  this->fields.voiceDataStr = (struct System_String_o *)StringLiteral_1;
+  v28 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.voiceDataStr = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.voiceDataStr, v28, v29, v30, v31, v32, v33, v34);
   v36 = (struct System_String_array *)sub_B17014(string___TypeInfo, 0LL, v35);
   this->fields.voiceIdArray = v36;
@@ -419,14 +419,14 @@ void __fastcall SlotEffectComponent__SetGimmick(
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v21);
     sub_B16FFC(&SoundManager_TypeInfo, v22);
     sub_B16FFC(&string___TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_23549, v24);
-    sub_B16FFC(&StringLiteral_23083, v25);
+    sub_B16FFC(&StringLiteral_23549/*"{0}_{1}"*/, v24);
+    sub_B16FFC(&StringLiteral_23083/*"voice"*/, v25);
     byte_40F9C7E = 1;
   }
   voiceTypeName = (Il2CppObject *)this->fields.voiceTypeName;
   v80 = svtId;
   v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v80);
-  v28 = System_String__Format_43739268((System_String_o *)StringLiteral_23549, voiceTypeName, v27, 0LL);
+  v28 = System_String__Format_43739268((System_String_o *)StringLiteral_23549/*"{0}_{1}"*/, voiceTypeName, v27, 0LL);
   this->fields.voiceDataStr = v28;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.voiceDataStr,
@@ -519,7 +519,7 @@ LABEL_40:
     (const MethodInfo_2F260E0 *)Method_System_Collections_Generic_List_object__Clear__);
   Item = (System_Collections_Generic_List_T__o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                                                    v52,
-                                                   (System_Type_o *)StringLiteral_23083,
+                                                   (System_Type_o *)StringLiteral_23083/*"voice"*/,
                                                    (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( Item )
   {
@@ -648,7 +648,7 @@ void __fastcall SlotEffectComponent__StartGimmick(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v10);
     sub_B16FFC(&int_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_23557, v13);
+    sub_B16FFC(&StringLiteral_23557/*"{0}{1}"*/, v13);
     byte_40F9C81 = 1;
   }
   this->fields.endCallback = animCallback;
@@ -664,7 +664,7 @@ void __fastcall SlotEffectComponent__StartGimmick(
   animationName = (Il2CppObject *)this->fields.animationName;
   animationType = this->fields.animationType;
   v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &animationType);
-  v16 = System_String__Format_43739268((System_String_o *)StringLiteral_23557, animationName, v15, 0LL);
+  v16 = System_String__Format_43739268((System_String_o *)StringLiteral_23557/*"{0}{1}"*/, animationName, v15, 0LL);
   Component_WebViewObject = (SimpleAnimation_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                    (UnityEngine_Component_o *)this,
                                                    (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);

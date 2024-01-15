@@ -47,10 +47,10 @@ System_String_array *__fastcall EventTutorialEntity__GetBeforeActionSetupVals(
 {
   if ( (byte_40F9C00 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16621, method);
+    sub_B16FFC(&StringLiteral_16621/*"beforeActionSetup"*/, method);
     byte_40F9C00 = 1;
   }
-  return EntityScriptUtil__GetStringArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16621, 0LL);
+  return EntityScriptUtil__GetStringArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16621/*"beforeActionSetup"*/, 0LL);
 }
 
 
@@ -60,10 +60,10 @@ System_String_array *__fastcall EventTutorialEntity__GetBeforeActionVals(
 {
   if ( (byte_40F9BFF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16622, method);
+    sub_B16FFC(&StringLiteral_16622/*"beforeActionVals"*/, method);
     byte_40F9BFF = 1;
   }
-  return EntityScriptUtil__GetStringArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16622, 0LL);
+  return EntityScriptUtil__GetStringArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16622/*"beforeActionVals"*/, 0LL);
 }
 
 
@@ -77,10 +77,10 @@ bool __fastcall EventTutorialEntity__HasBeforeAction(EventTutorialEntity_o *this
 {
   if ( (byte_40F9BFE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16622, method);
+    sub_B16FFC(&StringLiteral_16622/*"beforeActionVals"*/, method);
     byte_40F9BFE = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_16622, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_16622/*"beforeActionVals"*/, 0LL);
 }
 
 
@@ -460,9 +460,9 @@ void __fastcall EventTutorialEntity__TextTutorialChain(
     sub_B16FFC(&Method_EventTutorialEntity___c__DisplayClass24_0__TextTutorialChain_b__4__, v15);
     sub_B16FFC(&Method_EventTutorialEntity___c__DisplayClass24_0__TextTutorialChain_b__5__, v16);
     sub_B16FFC(&EventTutorialEntity___c__DisplayClass24_0_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_20123, v18);
-    sub_B16FFC(&StringLiteral_21740, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
+    sub_B16FFC(&StringLiteral_20123/*"left"*/, v18);
+    sub_B16FFC(&StringLiteral_21740/*"right"*/, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
     byte_40F9BFD = 1;
   }
   v21 = sub_B170CC(EventTutorialEntity___c__DisplayClass24_0_TypeInfo, *(_QWORD *)&idx, callback, method, v4);
@@ -658,7 +658,7 @@ LABEL_40:
       }
       IsNullOrEmpty = (WebViewManager_o *)BasicHelper__EqualExceptNullOrEmpty(
                                             v105->fields.textAlign,
-                                            (System_String_o *)StringLiteral_20123,
+                                            (System_String_o *)StringLiteral_20123/*"left"*/,
                                             0LL);
       if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
       {
@@ -675,7 +675,7 @@ LABEL_40:
         v112 = v110->m_Items[v111];
         if ( !v112 )
           goto LABEL_78;
-        if ( BasicHelper__EqualExceptNullOrEmpty(v112->fields.textAlign, (System_String_o *)StringLiteral_21740, 0LL) )
+        if ( BasicHelper__EqualExceptNullOrEmpty(v112->fields.textAlign, (System_String_o *)StringLiteral_21740/*"right"*/, 0LL) )
           v109 = 3;
         else
           v109 = 2;
@@ -754,7 +754,7 @@ LABEL_79:
         goto LABEL_78;
       CommonUI__OpenNotificationDialog_18238444(
         v84,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         v83,
         v85,
         v44,
@@ -862,9 +862,9 @@ System_Int32_array_array *__fastcall EventTutorialEntity__getTargets(
     sub_B16FFC(&int_____TypeInfo, v7);
     sub_B16FFC(&Method_EventTutorialEntity___c__getTargets_b__16_0__, v8);
     sub_B16FFC(&EventTutorialEntity___c_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_15571, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
-    sub_B16FFC(&StringLiteral_15807, v12);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v12);
     byte_40F9BF7 = 1;
   }
   targetIds = this->fields.targetIds;
@@ -890,15 +890,15 @@ LABEL_26:
     {
       v23 = System_String__Replace_43750968(
               v22,
-              (System_String_o *)StringLiteral_15571,
-              (System_String_o *)StringLiteral_1,
+              (System_String_o *)StringLiteral_15571/*"["*/,
+              (System_String_o *)StringLiteral_1/*""*/,
               0LL);
       if ( v23 )
       {
         v24 = System_String__Replace_43750968(
                 v23,
-                (System_String_o *)StringLiteral_15807,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_15807/*"]"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         v14 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v25);
         if ( v14 )

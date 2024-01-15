@@ -376,8 +376,8 @@ System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_Ski
     sub_B16FFC(&Method_ClassBoardBaseDialog___c__GetOpenSkillListLocal_b__28_0__, v54);
     sub_B16FFC(&Method_ClassBoardBaseDialog___c__GetOpenSkillListLocal_b__28_1__, v55);
     sub_B16FFC(&ClassBoardBaseDialog___c_TypeInfo, v56);
-    sub_B16FFC(&StringLiteral_698, v57);
-    sub_B16FFC(&StringLiteral_1, v58);
+    sub_B16FFC(&StringLiteral_698/*","*/, v57);
+    sub_B16FFC(&StringLiteral_1/*""*/, v58);
     byte_40FAF97 = 1;
   }
   v230 = 0LL;
@@ -478,7 +478,7 @@ LABEL_22:
                   if ( !v230 )
                     break;
                   v76 = System_String__Join_int_(
-                          (System_String_o *)StringLiteral_698,
+                          (System_String_o *)StringLiteral_698/*","*/,
                           (System_Collections_Generic_IEnumerable_T__o *)v230->fields.funcId,
                           (const MethodInfo_224FA24 *)Method_System_String_Join_int___);
                   if ( !v217 )
@@ -613,7 +613,7 @@ LABEL_22:
                      0LL) )
               {
                 v98 = System_String__Join_int_(
-                        (System_String_o *)StringLiteral_698,
+                        (System_String_o *)StringLiteral_698/*","*/,
                         (System_Collections_Generic_IEnumerable_T__o *)current[3].klass,
                         (const MethodInfo_224FA24 *)Method_System_String_Join_int___);
                 if ( !v92 )
@@ -763,7 +763,7 @@ LABEL_70:
       data = v225.fields.current.fields.value[1].klass->_1.byval_arg.data;
       if ( !data )
         sub_B170D4();
-      v138 = (System_String_o *)StringLiteral_1;
+      v138 = (System_String_o *)StringLiteral_1/*""*/;
       if ( data[3] )
       {
         v139 = data[3];
@@ -1169,16 +1169,16 @@ System_String_o *__fastcall ClassBoardBaseDialog__ReplaceFractionFormat(
 
   if ( (byte_40FAF98 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23581, funcVals);
-    sub_B16FFC(&StringLiteral_23377, v5);
-    sub_B16FFC(&StringLiteral_23312, v6);
-    sub_B16FFC(&StringLiteral_23311, v7);
-    sub_B16FFC(&StringLiteral_23602, v8);
-    sub_B16FFC(&StringLiteral_23584, v9);
-    sub_B16FFC(&StringLiteral_23582, v10);
-    sub_B16FFC(&StringLiteral_23310, v11);
-    sub_B16FFC(&StringLiteral_23313, v12);
-    sub_B16FFC(&StringLiteral_23583, v13);
+    sub_B16FFC(&StringLiteral_23581/*"{x"*/, funcVals);
+    sub_B16FFC(&StringLiteral_23377/*"{"*/, v5);
+    sub_B16FFC(&StringLiteral_23312/*"xx}"*/, v6);
+    sub_B16FFC(&StringLiteral_23311/*"xxx}"*/, v7);
+    sub_B16FFC(&StringLiteral_23602/*"}"*/, v8);
+    sub_B16FFC(&StringLiteral_23584/*"{xxxx"*/, v9);
+    sub_B16FFC(&StringLiteral_23582/*"{xx"*/, v10);
+    sub_B16FFC(&StringLiteral_23310/*"xxxx}"*/, v11);
+    sub_B16FFC(&StringLiteral_23313/*"x}"*/, v12);
+    sub_B16FFC(&StringLiteral_23583/*"{xxx"*/, v13);
     byte_40FAF98 = 1;
   }
   v58 = 0LL;
@@ -1194,57 +1194,57 @@ System_String_o *__fastcall ClassBoardBaseDialog__ReplaceFractionFormat(
         {
           v15 = System_Int32__ToString((int32_t)&v58 + 4, 0LL);
           v16 = System_String__Concat_43746016(
-                  (System_String_o *)StringLiteral_23377,
+                  (System_String_o *)StringLiteral_23377/*"{"*/,
                   v15,
-                  (System_String_o *)StringLiteral_23310,
+                  (System_String_o *)StringLiteral_23310/*"xxxx}"*/,
                   0LL);
           v17 = System_Int32__ToString((int32_t)&v58 + 4, 0LL);
           v18 = System_String__Concat_43746016(
-                  (System_String_o *)StringLiteral_23377,
+                  (System_String_o *)StringLiteral_23377/*"{"*/,
                   v17,
-                  (System_String_o *)StringLiteral_23311,
+                  (System_String_o *)StringLiteral_23311/*"xxx}"*/,
                   0LL);
           v19 = System_Int32__ToString((int32_t)&v58 + 4, 0LL);
           v20 = System_String__Concat_43746016(
-                  (System_String_o *)StringLiteral_23377,
+                  (System_String_o *)StringLiteral_23377/*"{"*/,
                   v19,
-                  (System_String_o *)StringLiteral_23312,
+                  (System_String_o *)StringLiteral_23312/*"xx}"*/,
                   0LL);
           v21 = System_Int32__ToString((int32_t)&v58 + 4, 0LL);
           v22 = System_String__Concat_43746016(
-                  (System_String_o *)StringLiteral_23377,
+                  (System_String_o *)StringLiteral_23377/*"{"*/,
                   v21,
-                  (System_String_o *)StringLiteral_23313,
+                  (System_String_o *)StringLiteral_23313/*"x}"*/,
                   0LL);
           v23 = System_Int32__ToString((int32_t)&v58 + 4, 0LL);
           v24 = System_String__Concat_43746016(
-                  (System_String_o *)StringLiteral_23377,
+                  (System_String_o *)StringLiteral_23377/*"{"*/,
                   v23,
-                  (System_String_o *)StringLiteral_23602,
+                  (System_String_o *)StringLiteral_23602/*"}"*/,
                   0LL);
           v25 = System_Int32__ToString((int32_t)&v58 + 4, 0LL);
           v26 = System_String__Concat_43746016(
-                  (System_String_o *)StringLiteral_23581,
+                  (System_String_o *)StringLiteral_23581/*"{x"*/,
                   v25,
-                  (System_String_o *)StringLiteral_23602,
+                  (System_String_o *)StringLiteral_23602/*"}"*/,
                   0LL);
           v27 = System_Int32__ToString((int32_t)&v58 + 4, 0LL);
           v28 = System_String__Concat_43746016(
-                  (System_String_o *)StringLiteral_23582,
+                  (System_String_o *)StringLiteral_23582/*"{xx"*/,
                   v27,
-                  (System_String_o *)StringLiteral_23602,
+                  (System_String_o *)StringLiteral_23602/*"}"*/,
                   0LL);
           v29 = System_Int32__ToString((int32_t)&v58 + 4, 0LL);
           oldValue = System_String__Concat_43746016(
-                       (System_String_o *)StringLiteral_23583,
+                       (System_String_o *)StringLiteral_23583/*"{xxx"*/,
                        v29,
-                       (System_String_o *)StringLiteral_23602,
+                       (System_String_o *)StringLiteral_23602/*"}"*/,
                        0LL);
           v30 = System_Int32__ToString((int32_t)&v58 + 4, 0LL);
           v31 = System_String__Concat_43746016(
-                  (System_String_o *)StringLiteral_23584,
+                  (System_String_o *)StringLiteral_23584/*"{xxxx"*/,
                   v30,
-                  (System_String_o *)StringLiteral_23602,
+                  (System_String_o *)StringLiteral_23602/*"}"*/,
                   0LL);
           if ( HIDWORD(v58) >= funcVals->max_length )
             goto LABEL_26;
@@ -1436,11 +1436,11 @@ void __fastcall ClassBoardBaseDialog__SetQpLabel(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&needNum);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_2992, v6);
-    sub_B16FFC(&StringLiteral_2994, v7);
-    sub_B16FFC(&StringLiteral_2991, v8);
-    sub_B16FFC(&StringLiteral_2993, v9);
-    sub_B16FFC(&StringLiteral_2989, v10);
+    sub_B16FFC(&StringLiteral_2992/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED_QP_LABEL_SHORTAGE"*/, v6);
+    sub_B16FFC(&StringLiteral_2994/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED_QP_NUM_SHORTAGE"*/, v7);
+    sub_B16FFC(&StringLiteral_2991/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED_QP_LABEL"*/, v8);
+    sub_B16FFC(&StringLiteral_2993/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED_QP_NUM"*/, v9);
+    sub_B16FFC(&StringLiteral_2989/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE_QP_LABEL"*/, v10);
     byte_40FAF94 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -1455,12 +1455,12 @@ void __fastcall ClassBoardBaseDialog__SetQpLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2991, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2991/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED_QP_LABEL"*/, 0LL);
     if ( itemQpLabel )
     {
       UILabel__set_text(itemQpLabel, v18, 0LL);
       itemQpNum = this->fields.itemQpNum;
-      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2993, 0LL);
+      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2993/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED_QP_NUM"*/, 0LL);
       v30 = needNum;
       v17 = &v30;
       goto LABEL_15;
@@ -1473,12 +1473,12 @@ LABEL_24:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2992, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2992/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED_QP_LABEL_SHORTAGE"*/, 0LL);
   if ( !itemQpLabel )
     goto LABEL_24;
   UILabel__set_text(itemQpLabel, v14, 0LL);
   itemQpNum = this->fields.itemQpNum;
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2994, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2994/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED_QP_NUM_SHORTAGE"*/, 0LL);
   v17 = &v31;
   v31 = needNum;
 LABEL_15:
@@ -1493,12 +1493,12 @@ LABEL_15:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_2989, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_2989/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE_QP_LABEL"*/, 0LL);
   if ( !itemHaveQpLabel )
     goto LABEL_24;
   UILabel__set_text(itemHaveQpLabel, v22, 0LL);
   itemHaveQpNum = this->fields.itemHaveQpNum;
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2993, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2993/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED_QP_NUM"*/, 0LL);
   v29 = qp;
   v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29);
   v26 = System_String__Format(v24, v25, 0LL);
@@ -1901,7 +1901,7 @@ bool __fastcall ClassBoardBaseDialog__SetUpItemList(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v15);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_2987, v18);
+    sub_B16FFC(&StringLiteral_2987/*"CLASS_BOARD_DIALOG_ITEM_INFO"*/, v18);
     byte_40FAF93 = 1;
   }
   itemInfoLabel = (UnityEngine_Object_o *)this->fields.itemInfoLabel;
@@ -1918,7 +1918,7 @@ bool __fastcall ClassBoardBaseDialog__SetUpItemList(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_2987, 0LL);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_2987/*"CLASS_BOARD_DIALOG_ITEM_INFO"*/, 0LL);
     if ( !v20 )
       goto LABEL_82;
     UILabel__set_text(v20, v21, 0LL);

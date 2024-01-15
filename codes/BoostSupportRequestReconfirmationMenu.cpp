@@ -244,10 +244,10 @@ void __fastcall BoostSupportRequestReconfirmationMenu__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&OptionManager_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_2575, v16);
-    sub_B16FFC(&StringLiteral_2592, v17);
-    sub_B16FFC(&StringLiteral_2573, v18);
-    sub_B16FFC(&StringLiteral_3259, v19);
+    sub_B16FFC(&StringLiteral_2575/*"BOOST_ITEM_USE_CONFIRM_DECIDE"*/, v16);
+    sub_B16FFC(&StringLiteral_2592/*"BOOST_SUPPORT_REQUEST_USE_RECONFIRMATION_MENU_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_2573/*"BOOST_ITEM_USE_CANCEL"*/, v18);
+    sub_B16FFC(&StringLiteral_3259/*"COMMON_CONSUME_DESCRIPTION_TITLE"*/, v19);
     byte_40FB18C = 1;
   }
   this->fields.callbackFunc = callback;
@@ -282,7 +282,7 @@ void __fastcall BoostSupportRequestReconfirmationMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_2592, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_2592/*"BOOST_SUPPORT_REQUEST_USE_RECONFIRMATION_MENU_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_31;
   UILabel__set_text(titleLabel, v27, 0LL);
@@ -327,7 +327,7 @@ void __fastcall BoostSupportRequestReconfirmationMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_3259, 0LL);
+  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_3259/*"COMMON_CONSUME_DESCRIPTION_TITLE"*/, 0LL);
   if ( !consumptionLabel )
     goto LABEL_31;
   UILabel__set_text(consumptionLabel, v39, 0LL);
@@ -349,11 +349,11 @@ void __fastcall BoostSupportRequestReconfirmationMenu__Open(
   IdEntityList = CommonConsumeMaster__GetIdEntityList(v43, boostEntity->fields.commonConsumeId, 0LL);
   BoostSupportRequestReconfirmationMenu__setConsumeItemIconList(this, IdEntityList, v45);
   decideLabel = this->fields.decideLabel;
-  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_2575, 0LL);
+  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_2575/*"BOOST_ITEM_USE_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideLabel
     || (UILabel__set_text(decideLabel, v47, 0LL),
         cancelLabel = this->fields.cancelLabel,
-        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_2573, 0LL),
+        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_2573/*"BOOST_ITEM_USE_CANCEL"*/, 0LL),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, v49, 0LL),
         (v50 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
@@ -556,7 +556,7 @@ void __fastcall BoostSupportRequestReconfirmationMenu__setConsumeItemIconList(
   if ( (byte_40FB18D & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, commonConsumeEntityList);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FB18D = 1;
   }
   v47 = 0;
@@ -658,7 +658,7 @@ void __fastcall BoostSupportRequestReconfirmationMenu__setConsumeItemIconList(
       v36 = *(UILabel_o **)((char *)&v35->obj.klass + v33);
       if ( v36 )
       {
-        UILabel__set_text(v36, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(v36, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         v37 = *p_itemIcon;
         if ( *p_itemIcon )
         {

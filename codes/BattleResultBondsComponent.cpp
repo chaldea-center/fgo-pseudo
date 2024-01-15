@@ -24,8 +24,8 @@ void __fastcall BattleResultBondsComponent___cctor(const MethodInfo *method)
   if ( (byte_40FA8E7 & 1) == 0 )
   {
     sub_B16FFC(&BattleResultBondsComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_6932, v8);
-    sub_B16FFC(&StringLiteral_6921, v9);
+    sub_B16FFC(&StringLiteral_6932/*"GetNewSvt"*/, v8);
+    sub_B16FFC(&StringLiteral_6921/*"GetExistSvt"*/, v9);
     byte_40FA8E7 = 1;
   }
   BattleResultBondsComponent_TypeInfo->static_fields->SVT_GAP_5 = 178.0;
@@ -34,12 +34,12 @@ void __fastcall BattleResultBondsComponent___cctor(const MethodInfo *method)
   BattleResultBondsComponent_TypeInfo->static_fields->CONF_LABEL_MAX_WIDTH = 464;
   v10->static_fields->CONF_SERVANT_COIN_PLUS_HEIGHT = 18;
   static_fields = v10->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_6932;
-  static_fields->GET_NEW_SVT_KEY = (struct System_String_o *)StringLiteral_6932;
+  v12 = (System_Int32_array **)StringLiteral_6932/*"GetNewSvt"*/;
+  static_fields->GET_NEW_SVT_KEY = (struct System_String_o *)StringLiteral_6932/*"GetNewSvt"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->GET_NEW_SVT_KEY, v12, v2, v3, v4, v5, v6, v7);
   v13 = BattleResultBondsComponent_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_6921;
-  v13->GET_EXIST_SVT_KEY = (struct System_String_o *)StringLiteral_6921;
+  v14 = (System_Int32_array **)StringLiteral_6921/*"GetExistSvt"*/;
+  v13->GET_EXIST_SVT_KEY = (struct System_String_o *)StringLiteral_6921/*"GetExistSvt"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->GET_EXIST_SVT_KEY, v14, v15, v16, v17, v18, v19, v20);
 }
 
@@ -246,8 +246,8 @@ void __fastcall BattleResultBondsComponent__CheckFormalJoin(
     sub_B16FFC(&Method_BattleResultBondsComponent___c__DisplayClass62_0__CheckFormalJoin_b__1__, v16);
     sub_B16FFC(&BattleResultBondsComponent___c__DisplayClass62_0_TypeInfo, v17);
     sub_B16FFC(&BattleResultBondsComponent___c_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_12382, v19);
-    sub_B16FFC(&StringLiteral_17937, v20);
+    sub_B16FFC(&StringLiteral_12382/*"SUMMON_EVENT_SERVANT_TITLE_GET"*/, v19);
+    sub_B16FFC(&StringLiteral_17937/*"dialogIgnoreTime"*/, v20);
     byte_40FA8D8 = 1;
   }
   entity = 0LL;
@@ -275,7 +275,7 @@ LABEL_49:
         goto LABEL_49;
       if ( v29->fields.isNew )
       {
-        UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_17937, 1, 0LL);
+        UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_17937/*"dialogIgnoreTime"*/, 1, 0LL);
         UnityEngine_PlayerPrefs__Save(0LL);
       }
       else
@@ -406,7 +406,7 @@ LABEL_50:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v75 = LocalizationManager__Get((System_String_o *)StringLiteral_12382, 0LL);
+              v75 = LocalizationManager__Get((System_String_o *)StringLiteral_12382/*"SUMMON_EVENT_SERVANT_TITLE_GET"*/, 0LL);
               v76 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
               Message = EventServantEntity__GetGetMessage(EventServant, 0LL);
               if ( !v76 )
@@ -464,13 +464,13 @@ void __fastcall BattleResultBondsComponent__CloseBondUpRoot(
 
   if ( (byte_40FA8E5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5481, method);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, method);
     byte_40FA8E5 = 1;
   }
   upRoot = this->fields.upRoot;
   if ( !upRoot || (UnityEngine_GameObject__SetActive(upRoot, 0, 0LL), (myFsm = this->fields.myFsm) == 0LL) )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481/*"END_PROC"*/, 0LL);
 }
 
 
@@ -1172,8 +1172,8 @@ void __fastcall BattleResultBondsComponent__Open(BattleResultBondsComponent_o *t
     sub_B16FFC(&System_Func_BattleResultBondsIconComponent__bool__TypeInfo, v6);
     sub_B16FFC(&Method_BattleResultBondsComponent___c__Open_b__53_0__, v7);
     sub_B16FFC(&BattleResultBondsComponent___c_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_5477, v9);
-    sub_B16FFC(&StringLiteral_12204, v10);
+    sub_B16FFC(&StringLiteral_5477/*"END_OPEN"*/, v9);
+    sub_B16FFC(&StringLiteral_12204/*"SKIP"*/, v10);
     byte_40FA8D4 = 1;
   }
   BondsIconArray = BattleResultBondsComponent__GetBondsIconArray(this, method);
@@ -1242,7 +1242,7 @@ void __fastcall BattleResultBondsComponent__Open(BattleResultBondsComponent_o *t
         myFsm = this->fields.myFsm;
         if ( myFsm )
         {
-          v35 = &StringLiteral_5477;
+          v35 = &StringLiteral_5477/*"END_OPEN"*/;
           goto LABEL_21;
         }
       }
@@ -1253,7 +1253,7 @@ LABEL_22:
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     goto LABEL_22;
-  v35 = &StringLiteral_12204;
+  v35 = &StringLiteral_12204/*"SKIP"*/;
 LABEL_21:
   PlayMakerFSM__SendEvent(myFsm, (System_String_o *)*v35, 0LL);
 }
@@ -1356,13 +1356,13 @@ void __fastcall BattleResultBondsComponent__OpenEnd(BattleResultBondsComponent_o
     sub_B16FFC(&SeManager_TypeInfo, v3);
     sub_B16FFC(&float_TypeInfo, v4);
     sub_B16FFC(&SoundManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_18842, v6);
-    sub_B16FFC(&StringLiteral_22584, v7);
-    sub_B16FFC(&StringLiteral_21182, v8);
-    sub_B16FFC(&StringLiteral_15009, v9);
-    sub_B16FFC(&StringLiteral_22621, v10);
-    sub_B16FFC(&StringLiteral_18670, v11);
-    sub_B16FFC(&StringLiteral_21173, v12);
+    sub_B16FFC(&StringLiteral_18842/*"from"*/, v6);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v7);
+    sub_B16FFC(&StringLiteral_21182/*"onupdate"*/, v8);
+    sub_B16FFC(&StringLiteral_15009/*"UpdateValue"*/, v9);
+    sub_B16FFC(&StringLiteral_22621/*"to"*/, v10);
+    sub_B16FFC(&StringLiteral_18670/*"finishUpdateValue"*/, v11);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v12);
     sub_B16FFC(&iTween_TypeInfo, v13);
     byte_40FA8D5 = 1;
   }
@@ -1374,15 +1374,15 @@ void __fastcall BattleResultBondsComponent__OpenEnd(BattleResultBondsComponent_o
 LABEL_68:
     sub_B170D4();
   v23 = (System_Object_array *)v16;
-  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_18842;
-  if ( StringLiteral_18842 )
+  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_18842/*"from"*/;
+  if ( StringLiteral_18842/*"from"*/ )
   {
     BondsIconArray = (BattleResultBondsIconComponent_array *)sub_B170BC(
-                                                               StringLiteral_18842,
+                                                               StringLiteral_18842/*"from"*/,
                                                                v23->obj.klass->_1.element_class);
     if ( !BondsIconArray )
       goto LABEL_69;
-    v25 = (System_Int32_array **)StringLiteral_18842;
+    v25 = (System_Int32_array **)StringLiteral_18842/*"from"*/;
   }
   else
   {
@@ -1407,15 +1407,15 @@ LABEL_68:
     goto LABEL_67;
   v23->m_Items[1] = (Il2CppObject *)v31;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[1], v31, v17, v26, v27, v28, v29, v30);
-  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_22621;
-  if ( StringLiteral_22621 )
+  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_22621/*"to"*/;
+  if ( StringLiteral_22621/*"to"*/ )
   {
     BondsIconArray = (BattleResultBondsIconComponent_array *)sub_B170BC(
-                                                               StringLiteral_22621,
+                                                               StringLiteral_22621/*"to"*/,
                                                                v23->obj.klass->_1.element_class);
     if ( !BondsIconArray )
       goto LABEL_69;
-    v25 = (System_Int32_array **)StringLiteral_22621;
+    v25 = (System_Int32_array **)StringLiteral_22621/*"to"*/;
   }
   else
   {
@@ -1440,15 +1440,15 @@ LABEL_68:
     goto LABEL_67;
   v23->m_Items[3] = (Il2CppObject *)v42;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[3], v42, v17, v37, v38, v39, v40, v41);
-  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_21182;
-  if ( StringLiteral_21182 )
+  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_21182/*"onupdate"*/;
+  if ( StringLiteral_21182/*"onupdate"*/ )
   {
     BondsIconArray = (BattleResultBondsIconComponent_array *)sub_B170BC(
-                                                               StringLiteral_21182,
+                                                               StringLiteral_21182/*"onupdate"*/,
                                                                v23->obj.klass->_1.element_class);
     if ( !BondsIconArray )
       goto LABEL_69;
-    v25 = (System_Int32_array **)StringLiteral_21182;
+    v25 = (System_Int32_array **)StringLiteral_21182/*"onupdate"*/;
   }
   else
   {
@@ -1458,15 +1458,15 @@ LABEL_68:
     goto LABEL_67;
   v23->m_Items[4] = (Il2CppObject *)v25;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[4], v25, v17, v43, v44, v45, v46, v47);
-  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_15009;
-  if ( StringLiteral_15009 )
+  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_15009/*"UpdateValue"*/;
+  if ( StringLiteral_15009/*"UpdateValue"*/ )
   {
     BondsIconArray = (BattleResultBondsIconComponent_array *)sub_B170BC(
-                                                               StringLiteral_15009,
+                                                               StringLiteral_15009/*"UpdateValue"*/,
                                                                v23->obj.klass->_1.element_class);
     if ( !BondsIconArray )
       goto LABEL_69;
-    v25 = (System_Int32_array **)StringLiteral_15009;
+    v25 = (System_Int32_array **)StringLiteral_15009/*"UpdateValue"*/;
   }
   else
   {
@@ -1476,15 +1476,15 @@ LABEL_68:
     goto LABEL_67;
   v23->m_Items[5] = (Il2CppObject *)v25;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[5], v25, v17, v48, v49, v50, v51, v52);
-  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_21173;
-  if ( StringLiteral_21173 )
+  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_21173/*"oncomplete"*/;
+  if ( StringLiteral_21173/*"oncomplete"*/ )
   {
     BondsIconArray = (BattleResultBondsIconComponent_array *)sub_B170BC(
-                                                               StringLiteral_21173,
+                                                               StringLiteral_21173/*"oncomplete"*/,
                                                                v23->obj.klass->_1.element_class);
     if ( !BondsIconArray )
       goto LABEL_69;
-    v25 = (System_Int32_array **)StringLiteral_21173;
+    v25 = (System_Int32_array **)StringLiteral_21173/*"oncomplete"*/;
   }
   else
   {
@@ -1494,15 +1494,15 @@ LABEL_68:
     goto LABEL_67;
   v23->m_Items[6] = (Il2CppObject *)v25;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[6], v25, v17, v53, v54, v55, v56, v57);
-  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_18670;
-  if ( StringLiteral_18670 )
+  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_18670/*"finishUpdateValue"*/;
+  if ( StringLiteral_18670/*"finishUpdateValue"*/ )
   {
     BondsIconArray = (BattleResultBondsIconComponent_array *)sub_B170BC(
-                                                               StringLiteral_18670,
+                                                               StringLiteral_18670/*"finishUpdateValue"*/,
                                                                v23->obj.klass->_1.element_class);
     if ( !BondsIconArray )
       goto LABEL_69;
-    v25 = (System_Int32_array **)StringLiteral_18670;
+    v25 = (System_Int32_array **)StringLiteral_18670/*"finishUpdateValue"*/;
   }
   else
   {
@@ -1512,15 +1512,15 @@ LABEL_68:
     goto LABEL_67;
   v23->m_Items[7] = (Il2CppObject *)v25;
   sub_B16F98((BattleServantConfConponent_o *)&v23->m_Items[7], v25, v17, v58, v59, v60, v61, v62);
-  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_22584;
-  if ( StringLiteral_22584 )
+  BondsIconArray = (BattleResultBondsIconComponent_array *)StringLiteral_22584/*"time"*/;
+  if ( StringLiteral_22584/*"time"*/ )
   {
     BondsIconArray = (BattleResultBondsIconComponent_array *)sub_B170BC(
-                                                               StringLiteral_22584,
+                                                               StringLiteral_22584/*"time"*/,
                                                                v23->obj.klass->_1.element_class);
     if ( !BondsIconArray )
       goto LABEL_69;
-    v25 = (System_Int32_array **)StringLiteral_22584;
+    v25 = (System_Int32_array **)StringLiteral_22584/*"time"*/;
   }
   else
   {
@@ -2827,7 +2827,7 @@ void __fastcall BattleResultBondsComponent__addConfObject(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponentInChildren_UISprite___, v15);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, v16);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_16761, v18);
+    sub_B16FFC(&StringLiteral_16761/*"bit_reward_shine02"*/, v18);
     byte_40FA8D9 = 1;
   }
   Object = BaseMonoBehaviour__createObject(
@@ -2914,7 +2914,7 @@ void __fastcall BattleResultBondsComponent__addConfObject(
       this,
       this->fields.resultAssetData,
       (UISprite_o *)v24,
-      (System_String_o *)StringLiteral_16761,
+      (System_String_o *)StringLiteral_16761/*"bit_reward_shine02"*/,
       v26);
     if ( ComponentInChildren_Dropdown_DropdownItem )
     {
@@ -3091,10 +3091,10 @@ void __fastcall BattleResultBondsComponent__checkBondsUp(BattleResultBondsCompon
     sub_B16FFC(&BattleResultBondsComponent___c__DisplayClass61_0_TypeInfo, v14);
     sub_B16FFC(&Method_BattleResultBondsComponent___c__DisplayClass61_1__checkBondsUp_b__0__, v15);
     sub_B16FFC(&BattleResultBondsComponent___c__DisplayClass61_1_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_16747, v17);
-    sub_B16FFC(&StringLiteral_3080, v18);
-    sub_B16FFC(&StringLiteral_5481, v19);
-    sub_B16FFC(&StringLiteral_3082, v20);
+    sub_B16FFC(&StringLiteral_16747/*"bit_result_levelup01"*/, v17);
+    sub_B16FFC(&StringLiteral_3080/*"CLOSE"*/, v18);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, v19);
+    sub_B16FFC(&StringLiteral_3082/*"CLOSE_BOND_UP_ROOT"*/, v20);
     byte_40FA8D7 = 1;
   }
   memset(&v111, 0, sizeof(v111));
@@ -3124,15 +3124,15 @@ void __fastcall BattleResultBondsComponent__checkBondsUp(BattleResultBondsCompon
         if ( !myFsm )
           goto LABEL_70;
         if ( this->fields.isMultiDeck )
-          v46 = &StringLiteral_3082;
+          v46 = &StringLiteral_3082/*"CLOSE_BOND_UP_ROOT"*/;
         else
-          v46 = &StringLiteral_5481;
+          v46 = &StringLiteral_5481/*"END_PROC"*/;
       }
       else
       {
         if ( !myFsm )
           goto LABEL_70;
-        v46 = &StringLiteral_3080;
+        v46 = &StringLiteral_3080/*"CLOSE"*/;
       }
       PlayMakerFSM__SendEvent(myFsm, (System_String_o *)*v46, 0LL);
       return;
@@ -3208,7 +3208,7 @@ LABEL_32:
     v60 = this->fields.levelUpSimpleAnim;
     if ( v60 )
     {
-      Item = SimpleAnimation__get_Item(v60, (System_String_o *)StringLiteral_16747, 0LL);
+      Item = SimpleAnimation__get_Item(v60, (System_String_o *)StringLiteral_16747/*"bit_result_levelup01"*/, 0LL);
       if ( Item )
       {
         klass = Item->klass;
@@ -3235,7 +3235,7 @@ LABEL_43:
         v76 = this->fields.levelUpSimpleAnim;
         if ( v76 )
         {
-          v36 = SimpleAnimation__Play_16380456(v76, (System_String_o *)StringLiteral_16747, 0LL);
+          v36 = SimpleAnimation__Play_16380456(v76, (System_String_o *)StringLiteral_16747/*"bit_result_levelup01"*/, 0LL);
           goto LABEL_55;
         }
       }
@@ -3255,14 +3255,14 @@ LABEL_70:
     v73 = this->fields.levelUpAnim;
     if ( !v73 )
       goto LABEL_70;
-    v74 = UnityEngine_Animation__get_Item(v73, (System_String_o *)StringLiteral_16747, 0LL);
+    v74 = UnityEngine_Animation__get_Item(v73, (System_String_o *)StringLiteral_16747/*"bit_result_levelup01"*/, 0LL);
     if ( !v74 )
       goto LABEL_70;
     UnityEngine_AnimationState__set_time(v74, 0.0, 0LL);
     v75 = this->fields.levelUpAnim;
     if ( !v75 )
       goto LABEL_70;
-    v36 = UnityEngine_Animation__Play_49744236(v75, (System_String_o *)StringLiteral_16747, 0LL);
+    v36 = UnityEngine_Animation__Play_49744236(v75, (System_String_o *)StringLiteral_16747/*"bit_result_levelup01"*/, 0LL);
   }
 LABEL_55:
   v77 = *v54;
@@ -3537,7 +3537,7 @@ void __fastcall BattleResultBondsComponent__endClose(BattleResultBondsComponent_
   if ( (byte_40FA8E1 & 1) == 0 )
   {
     sub_B16FFC(&OptionManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_5481, v9);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, v9);
     byte_40FA8E1 = 1;
   }
   this->fields.resultAssetData = 0LL;
@@ -3586,7 +3586,7 @@ LABEL_15:
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     goto LABEL_18;
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481/*"END_PROC"*/, 0LL);
 }
 
 
@@ -3598,13 +3598,13 @@ void __fastcall BattleResultBondsComponent__endCloseBondUp(
 
   if ( (byte_40FA8DF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5481, method);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, method);
     byte_40FA8DF = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481/*"END_PROC"*/, 0LL);
 }
 
 
@@ -3777,14 +3777,14 @@ void __fastcall BattleResultBondsComponent__endMoveFigure(BattleResultBondsCompo
     sub_B16FFC(&SingletonTemplate_clsQuestCheck__TypeInfo, v30);
     sub_B16FFC(&SoundManager_TypeInfo, v31);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v32);
-    sub_B16FFC(&StringLiteral_11069, v33);
-    sub_B16FFC(&StringLiteral_11072, v34);
-    sub_B16FFC(&StringLiteral_11071, v35);
-    sub_B16FFC(&StringLiteral_11068, v36);
-    sub_B16FFC(&StringLiteral_11066, v37);
-    sub_B16FFC(&StringLiteral_23480, v38);
-    sub_B16FFC(&StringLiteral_1, v39);
-    sub_B16FFC(&StringLiteral_11067, v40);
+    sub_B16FFC(&StringLiteral_11069/*"RESULT_BOUNDS_OPENQUEST"*/, v33);
+    sub_B16FFC(&StringLiteral_11072/*"RESULT_BOUNDS_UPDATE_MATERIAL_SG"*/, v34);
+    sub_B16FFC(&StringLiteral_11071/*"RESULT_BOUNDS_UPDATE_MATERIAL"*/, v35);
+    sub_B16FFC(&StringLiteral_11068/*"RESULT_BOUNDS_GET_COIN_NAME"*/, v36);
+    sub_B16FFC(&StringLiteral_11066/*"RESULT_BOUNDS_GETVOICE"*/, v37);
+    sub_B16FFC(&StringLiteral_23480/*"{0} {1}"*/, v38);
+    sub_B16FFC(&StringLiteral_1/*""*/, v39);
+    sub_B16FFC(&StringLiteral_11067/*"RESULT_BOUNDS_GET_COIN_COUNT"*/, v40);
     byte_40FA8DB = 1;
   }
   memset(&v136, 0, sizeof(v136));
@@ -3833,7 +3833,7 @@ void __fastcall BattleResultBondsComponent__endMoveFigure(BattleResultBondsCompo
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v50 = LocalizationManager__Get((System_String_o *)StringLiteral_11069, 0LL);
+      v50 = LocalizationManager__Get((System_String_o *)StringLiteral_11069/*"RESULT_BOUNDS_OPENQUEST"*/, 0LL);
       if ( !current )
         sub_B170D4();
       v51 = v50;
@@ -3883,7 +3883,7 @@ void __fastcall BattleResultBondsComponent__endMoveFigure(BattleResultBondsCompo
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v60 = LocalizationManager__Get((System_String_o *)StringLiteral_11072, 0LL);
+    v60 = LocalizationManager__Get((System_String_o *)StringLiteral_11072/*"RESULT_BOUNDS_UPDATE_MATERIAL_SG"*/, 0LL);
     BattleResultBondsComponent__addConfObject(this, v60, (float)v48 * 22.0, -1, 0, 1, v61);
     v48 += 4;
   }
@@ -3905,7 +3905,7 @@ void __fastcall BattleResultBondsComponent__endMoveFigure(BattleResultBondsCompo
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v62 = LocalizationManager__Get((System_String_o *)StringLiteral_11071, 0LL);
+      v62 = LocalizationManager__Get((System_String_o *)StringLiteral_11071/*"RESULT_BOUNDS_UPDATE_MATERIAL"*/, 0LL);
       BattleResultBondsComponent__addConfObject(this, v62, (float)v48 * 22.0, -1, 0, 0, v63);
       v48 += 2;
     }
@@ -3920,7 +3920,7 @@ void __fastcall BattleResultBondsComponent__endMoveFigure(BattleResultBondsCompo
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v69 = LocalizationManager__Get((System_String_o *)StringLiteral_11066, 0LL);
+    v69 = LocalizationManager__Get((System_String_o *)StringLiteral_11066/*"RESULT_BOUNDS_GETVOICE"*/, 0LL);
     BattleResultBondsComponent__addConfObject(this, v69, (float)v48 * 22.0, -1, 0, 0, v70);
     v48 += 2;
   }
@@ -3977,7 +3977,7 @@ void __fastcall BattleResultBondsComponent__endMoveFigure(BattleResultBondsCompo
           if ( GiftEntity__isQp(v83, 0LL) )
           {
             nameText = countText;
-            countText = (System_String_o *)StringLiteral_1;
+            countText = (System_String_o *)StringLiteral_1/*""*/;
           }
           if ( v83->fields.type == 2 )
           {
@@ -3994,7 +3994,7 @@ void __fastcall BattleResultBondsComponent__endMoveFigure(BattleResultBondsCompo
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v85 = LocalizationManager__Get((System_String_o *)StringLiteral_11067, 0LL);
+              v85 = LocalizationManager__Get((System_String_o *)StringLiteral_11067/*"RESULT_BOUNDS_GET_COIN_COUNT"*/, 0LL);
               LODWORD(v133.fields.list) = v83->fields.num;
               v86 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v133);
               countText = System_String__Format(v85, v86, 0LL);
@@ -4061,7 +4061,7 @@ void __fastcall BattleResultBondsComponent__endMoveFigure(BattleResultBondsCompo
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v99 = LocalizationManager__Get((System_String_o *)StringLiteral_11068, 0LL);
+                v99 = LocalizationManager__Get((System_String_o *)StringLiteral_11068/*"RESULT_BOUNDS_GET_COIN_NAME"*/, 0LL);
                 nameText = System_String__Format_43739268(v99, (Il2CppObject *)nameText, Name, 0LL);
               }
               v97 = 1;
@@ -4071,7 +4071,7 @@ void __fastcall BattleResultBondsComponent__endMoveFigure(BattleResultBondsCompo
               v97 = 0;
             }
             v100 = System_String__Format_43739268(
-                     (System_String_o *)StringLiteral_23480,
+                     (System_String_o *)StringLiteral_23480/*"{0} {1}"*/,
                      (Il2CppObject *)nameText,
                      (Il2CppObject *)countText,
                      0LL);
@@ -4081,7 +4081,7 @@ void __fastcall BattleResultBondsComponent__endMoveFigure(BattleResultBondsCompo
           else
           {
             v95 = System_String__Format_43739268(
-                    (System_String_o *)StringLiteral_23480,
+                    (System_String_o *)StringLiteral_23480/*"{0} {1}"*/,
                     (Il2CppObject *)nameText,
                     (Il2CppObject *)countText,
                     0LL);
@@ -4216,7 +4216,7 @@ void __fastcall BattleResultBondsComponent__finishUpdateValue(
 
   if ( (byte_40FA8D6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9268, method);
+    sub_B16FFC(&StringLiteral_9268/*"NEXT"*/, method);
     sub_B16FFC(&iTween_TypeInfo, v3);
     byte_40FA8D6 = 1;
   }
@@ -4267,7 +4267,7 @@ LABEL_14:
   this->fields.bondsCountUp = 0;
   if ( !myFsm )
     goto LABEL_19;
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9268, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9268/*"NEXT"*/, 0LL);
 }
 
 
@@ -4372,7 +4372,7 @@ void __fastcall BattleResultBondsComponent__openedBondUp(BattleResultBondsCompon
 
   if ( (byte_40FA8DC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5477, method);
+    sub_B16FFC(&StringLiteral_5477/*"END_OPEN"*/, method);
     byte_40FA8DC = 1;
   }
   parentComp = this->fields.parentComp;
@@ -4382,7 +4382,7 @@ void __fastcall BattleResultBondsComponent__openedBondUp(BattleResultBondsCompon
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5477, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5477/*"END_OPEN"*/, 0LL);
 }
 
 
@@ -4587,13 +4587,13 @@ void __fastcall BattleResultBondsComponent___c__DisplayClass61_1___checkBondsUp_
     sub_B16FFC(&object___TypeInfo, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
     sub_B16FFC(&float_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23222, v6);
-    sub_B16FFC(&StringLiteral_9721, v7);
-    sub_B16FFC(&StringLiteral_22584, v8);
-    sub_B16FFC(&StringLiteral_21175, v9);
-    sub_B16FFC(&StringLiteral_18286, v10);
-    sub_B16FFC(&StringLiteral_19885, v11);
-    sub_B16FFC(&StringLiteral_21173, v12);
+    sub_B16FFC(&StringLiteral_23222/*"x"*/, v6);
+    sub_B16FFC(&StringLiteral_9721/*"OPEN"*/, v7);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v8);
+    sub_B16FFC(&StringLiteral_21175/*"oncompletetarget"*/, v9);
+    sub_B16FFC(&StringLiteral_18286/*"endMoveFigure"*/, v10);
+    sub_B16FFC(&StringLiteral_19885/*"islocal"*/, v11);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v12);
     sub_B16FFC(&iTween_TypeInfo, v13);
     byte_40F7182 = 1;
   }
@@ -4634,13 +4634,13 @@ void __fastcall BattleResultBondsComponent___c__DisplayClass61_1___checkBondsUp_
   if ( !v25 )
     goto LABEL_73;
   v27 = (System_Object_array *)v25;
-  v28 = (UnityEngine_GameObject_o *)StringLiteral_23222;
-  if ( StringLiteral_23222 )
+  v28 = (UnityEngine_GameObject_o *)StringLiteral_23222/*"x"*/;
+  if ( StringLiteral_23222/*"x"*/ )
   {
-    v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_23222, v27->obj.klass->_1.element_class);
+    v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_23222/*"x"*/, v27->obj.klass->_1.element_class);
     if ( !v28 )
       goto LABEL_75;
-    v29 = StringLiteral_23222;
+    v29 = StringLiteral_23222/*"x"*/;
   }
   else
   {
@@ -4663,13 +4663,13 @@ void __fastcall BattleResultBondsComponent___c__DisplayClass61_1___checkBondsUp_
     goto LABEL_74;
   v27->m_Items[1] = v30;
   sub_B16F98(&v27->m_Items[1], v30);
-  v28 = (UnityEngine_GameObject_o *)StringLiteral_22584;
-  if ( StringLiteral_22584 )
+  v28 = (UnityEngine_GameObject_o *)StringLiteral_22584/*"time"*/;
+  if ( StringLiteral_22584/*"time"*/ )
   {
-    v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_22584, v27->obj.klass->_1.element_class);
+    v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_22584/*"time"*/, v27->obj.klass->_1.element_class);
     if ( !v28 )
       goto LABEL_75;
-    v29 = StringLiteral_22584;
+    v29 = StringLiteral_22584/*"time"*/;
   }
   else
   {
@@ -4692,13 +4692,13 @@ void __fastcall BattleResultBondsComponent___c__DisplayClass61_1___checkBondsUp_
     goto LABEL_74;
   v27->m_Items[3] = v31;
   sub_B16F98(&v27->m_Items[3], v31);
-  v28 = (UnityEngine_GameObject_o *)StringLiteral_19885;
-  if ( StringLiteral_19885 )
+  v28 = (UnityEngine_GameObject_o *)StringLiteral_19885/*"islocal"*/;
+  if ( StringLiteral_19885/*"islocal"*/ )
   {
-    v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_19885, v27->obj.klass->_1.element_class);
+    v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_19885/*"islocal"*/, v27->obj.klass->_1.element_class);
     if ( !v28 )
       goto LABEL_75;
-    v29 = StringLiteral_19885;
+    v29 = StringLiteral_19885/*"islocal"*/;
   }
   else
   {
@@ -4721,13 +4721,13 @@ void __fastcall BattleResultBondsComponent___c__DisplayClass61_1___checkBondsUp_
     goto LABEL_74;
   v27->m_Items[5] = v32;
   sub_B16F98(&v27->m_Items[5], v32);
-  v28 = (UnityEngine_GameObject_o *)StringLiteral_21175;
-  if ( StringLiteral_21175 )
+  v28 = (UnityEngine_GameObject_o *)StringLiteral_21175/*"oncompletetarget"*/;
+  if ( StringLiteral_21175/*"oncompletetarget"*/ )
   {
-    v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_21175, v27->obj.klass->_1.element_class);
+    v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_21175/*"oncompletetarget"*/, v27->obj.klass->_1.element_class);
     if ( !v28 )
       goto LABEL_75;
-    v29 = StringLiteral_21175;
+    v29 = StringLiteral_21175/*"oncompletetarget"*/;
   }
   else
   {
@@ -4753,13 +4753,13 @@ LABEL_73:
     goto LABEL_74;
   v27->m_Items[7] = v35;
   sub_B16F98(&v27->m_Items[7], v35);
-  v28 = (UnityEngine_GameObject_o *)StringLiteral_21173;
-  if ( StringLiteral_21173 )
+  v28 = (UnityEngine_GameObject_o *)StringLiteral_21173/*"oncomplete"*/;
+  if ( StringLiteral_21173/*"oncomplete"*/ )
   {
-    v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_21173, v27->obj.klass->_1.element_class);
+    v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_21173/*"oncomplete"*/, v27->obj.klass->_1.element_class);
     if ( !v28 )
       goto LABEL_75;
-    v29 = StringLiteral_21173;
+    v29 = StringLiteral_21173/*"oncomplete"*/;
   }
   else
   {
@@ -4769,20 +4769,20 @@ LABEL_73:
     goto LABEL_74;
   v27->m_Items[8] = (Il2CppObject *)v29;
   sub_B16F98(&v27->m_Items[8], v29);
-  v28 = (UnityEngine_GameObject_o *)StringLiteral_18286;
-  if ( !StringLiteral_18286 )
+  v28 = (UnityEngine_GameObject_o *)StringLiteral_18286/*"endMoveFigure"*/;
+  if ( !StringLiteral_18286/*"endMoveFigure"*/ )
   {
     v29 = 0LL;
     goto LABEL_58;
   }
-  v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_18286, v27->obj.klass->_1.element_class);
+  v28 = (UnityEngine_GameObject_o *)sub_B170BC(StringLiteral_18286/*"endMoveFigure"*/, v27->obj.klass->_1.element_class);
   if ( !v28 )
   {
 LABEL_75:
     sub_B170F4();
     sub_B170A0();
   }
-  v29 = StringLiteral_18286;
+  v29 = StringLiteral_18286/*"endMoveFigure"*/;
 LABEL_58:
   if ( v27->max_length <= 9 )
     goto LABEL_74;
@@ -4809,7 +4809,7 @@ LABEL_63:
   myFsm = v40->fields.myFsm;
   if ( !myFsm )
     goto LABEL_73;
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9721, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9721/*"OPEN"*/, 0LL);
   v42 = this->fields.CS___8__locals1;
   if ( !v42 )
     goto LABEL_73;

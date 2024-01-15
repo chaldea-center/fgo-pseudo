@@ -18,10 +18,10 @@ WarBoardUserMasterData_o *__fastcall WarBoardUserMasterData__FromJson(System_Str
   {
     sub_B16FFC(&Method_JsonManager_DeserializeArray_WarBoardUserMasterData___, method);
     sub_B16FFC(&JsonManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_15764, v4);
+    sub_B16FFC(&StringLiteral_15764/*"[{0}]"*/, v4);
     byte_40FA90E = 1;
   }
-  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_15764, (Il2CppObject *)json, 0LL);
+  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_15764/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   result = (WarBoardUserMasterData_o *)JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(

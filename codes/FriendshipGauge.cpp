@@ -126,7 +126,7 @@ void __fastcall FriendshipGauge__ChangeGaugeData(
     sub_B16FFC(&Method_DataManager_GetMasterData_FriendshipMaster___, *(_QWORD *)&friendshipId);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_19377, v10);
+    sub_B16FFC(&StringLiteral_19377/*"img_bondsgage_point"*/, v10);
     byte_40FB2BF = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -178,7 +178,7 @@ LABEL_36:
                                                 (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( !Component_srcLineSprite )
         goto LABEL_36;
-      UISprite__set_spriteName(Component_srcLineSprite, (System_String_o *)StringLiteral_19377, 0LL);
+      UISprite__set_spriteName(Component_srcLineSprite, (System_String_o *)StringLiteral_19377/*"img_bondsgage_point"*/, 0LL);
     }
     else
     {

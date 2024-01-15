@@ -71,26 +71,26 @@ void __fastcall CombineLimitUpWarningDialog__Init(CombineLimitUpWarningDialog_o 
   {
     sub_B16FFC(&Method_CombineLimitUpWarningDialog_OnSliderDragFinished__, method);
     sub_B16FFC(&UIProgressBar_OnDragFinished_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F9923 = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
   if ( !titleLabel )
     goto LABEL_12;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   warningLabel = this->fields.warningLabel;
   if ( !warningLabel )
     goto LABEL_12;
-  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
   if ( !decideButtonLabel )
     goto LABEL_12;
-  UILabel__set_text(decideButtonLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(decideButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
   if ( !cancelButtonLabel )
     goto LABEL_12;
-  UILabel__set_text(cancelButtonLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v9 = (UIWidget_o *)this->fields.titleLabel;
   *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__get_white(0LL);
   if ( !v9 )
@@ -223,7 +223,7 @@ void __fastcall CombineLimitUpWarningDialog__OnEnable(CombineLimitUpWarningDialo
   if ( (byte_40F9928 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15422, v3);
+    sub_B16FFC(&StringLiteral_15422/*"Window/Objects/Buttons/CancelButton"*/, v3);
     byte_40F9928 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -232,7 +232,7 @@ void __fastcall CombineLimitUpWarningDialog__OnEnable(CombineLimitUpWarningDialo
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15422, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15422/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
 }
 
 
@@ -308,11 +308,11 @@ void __fastcall CombineLimitUpWarningDialog__Open(
     sub_B16FFC(&System_Action_TypeInfo, closeCallback);
     sub_B16FFC(&Method_CombineLimitUpWarningDialog_EndOpen__, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_8353, v7);
-    sub_B16FFC(&StringLiteral_8352, v8);
-    sub_B16FFC(&StringLiteral_3253, v9);
-    sub_B16FFC(&StringLiteral_8354, v10);
-    sub_B16FFC(&StringLiteral_3251, v11);
+    sub_B16FFC(&StringLiteral_8353/*"LIMITUP_CHECK_COMBINE_TITLE"*/, v7);
+    sub_B16FFC(&StringLiteral_8352/*"LIMITUP_CHECK_COMBINE_BODY"*/, v8);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v9);
+    sub_B16FFC(&StringLiteral_8354/*"LIMITUP_CHECK_WARNING_SLIDER"*/, v10);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v11);
     byte_40F9925 = 1;
   }
   CombineLimitUpWarningDialog__Init(this, (const MethodInfo *)closeCallback);
@@ -332,25 +332,25 @@ void __fastcall CombineLimitUpWarningDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_8353, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_8353/*"LIMITUP_CHECK_COMBINE_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_12;
   UILabel__set_text(titleLabel, v19, 0LL);
   warningLabel = this->fields.warningLabel;
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_8352, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_8352/*"LIMITUP_CHECK_COMBINE_BODY"*/, 0LL);
   if ( !warningLabel )
     goto LABEL_12;
   UILabel__set_text(warningLabel, v21, 0LL);
   reInforeceLabel = this->fields.reInforeceLabel;
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8354, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8354/*"LIMITUP_CHECK_WARNING_SLIDER"*/, 0LL);
   if ( !reInforeceLabel
     || (UILabel__set_text(reInforeceLabel, v23, 0LL),
         decideButtonLabel = this->fields.decideButtonLabel,
-        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL),
+        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL),
         !decideButtonLabel)
     || (UILabel__set_text(decideButtonLabel, v25, 0LL),
         cancelButtonLabel = this->fields.cancelButtonLabel,
-        v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+        v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
         !cancelButtonLabel) )
   {
 LABEL_12:
@@ -383,16 +383,16 @@ void __fastcall CombineLimitUpWarningDialog__SetSlider(
 
   if ( (byte_40F9924 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19559, sliderOn);
-    sub_B16FFC(&StringLiteral_19558, v5);
+    sub_B16FFC(&StringLiteral_19559/*"img_slider_thumb_locked"*/, sliderOn);
+    sub_B16FFC(&StringLiteral_19558/*"img_slider_thumb"*/, v5);
     byte_40F9924 = 1;
   }
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_16;
-  v7 = (System_String_o **)&StringLiteral_19558;
+  v7 = (System_String_o **)&StringLiteral_19558/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v7 = (System_String_o **)&StringLiteral_19559;
+    v7 = (System_String_o **)&StringLiteral_19559/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, *v7, 0LL);
   decideButton = this->fields.decideButton;
   if ( sliderOn )

@@ -30,7 +30,7 @@ void __fastcall CharaErasureEffectComponent__EffectResume(
 
   if ( (byte_40FCFBF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9967, method);
+    sub_B16FFC(&StringLiteral_9967/*"OnEndEffect"*/, method);
     byte_40FCFBF = 1;
   }
   klass = this->klass;
@@ -48,8 +48,8 @@ void __fastcall CharaErasureEffectComponent__EffectResume(
   v7 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v6->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v7;
   sub_B16F98((BattleServantConfConponent_o *)&v6->fields.eventReceiver, v7, v8, v9, v10, v11, v12, v13);
-  v14 = (System_Int32_array **)StringLiteral_9967;
-  v6->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9967;
+  v14 = (System_Int32_array **)StringLiteral_9967/*"OnEndEffect"*/;
+  v6->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9967/*"OnEndEffect"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v6->fields.callWhenFinished, v14, v15, v16, v17, v18, v19, v20);
 }
 
@@ -131,8 +131,8 @@ void __fastcall CharaErasureEffectComponent__ErasureStart(
     sub_B16FFC(&CommonEffectManager_TypeInfo, v10);
     sub_B16FFC(&CommonEffectLoadComponent_LoadEndHandler_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_13498, v13);
-    sub_B16FFC(&StringLiteral_4506, v14);
+    sub_B16FFC(&StringLiteral_13498/*"Talk/"*/, v13);
+    sub_B16FFC(&StringLiteral_4506/*"Custom/Sprite-ScriptActionFigureErasure"*/, v14);
     byte_40FCFBE = 1;
   }
   p_figure = (UIStandFigureRender_o **)&this->fields.figure;
@@ -156,7 +156,7 @@ void __fastcall CharaErasureEffectComponent__ErasureStart(
   this->fields.addVolume = 0.2;
   if ( !v17 )
     goto LABEL_30;
-  UIStandFigureRender__SetSharder(v17, (System_String_o *)StringLiteral_4506, 0LL);
+  UIStandFigureRender__SetSharder(v17, (System_String_o *)StringLiteral_4506/*"Custom/Sprite-ScriptActionFigureErasure"*/, 0LL);
   if ( !*p_figure )
     goto LABEL_30;
   UIStandFigureRender__SetFilterColor(*p_figure, this->fields.erasureColor, 0LL);
@@ -213,7 +213,7 @@ LABEL_30:
   v40.fields.z = v24;
   UnityEngine_Transform__set_localPosition(v32, v40, 0LL);
   v33 = this->fields.subEffectBase;
-  v34 = System_String__Concat_43743732((System_String_o *)StringLiteral_13498, this->fields.subEffectName, 0LL);
+  v34 = System_String__Concat_43743732((System_String_o *)StringLiteral_13498/*"Talk/"*/, this->fields.subEffectName, 0LL);
   v39 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_B170CC(
                                                         CommonEffectLoadComponent_LoadEndHandler_TypeInfo,
                                                         v35,

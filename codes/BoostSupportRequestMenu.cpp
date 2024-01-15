@@ -14,12 +14,12 @@ void __fastcall BoostSupportRequestMenu___cctor(const MethodInfo *method)
   if ( (byte_40FB189 & 1) == 0 )
   {
     sub_B16FFC(&BoostSupportRequestMenu_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11019, v8);
+    sub_B16FFC(&StringLiteral_11019/*"RECOMMENDED_ICON"*/, v8);
     byte_40FB189 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BoostSupportRequestMenu_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_11019;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_11019;
+  v10 = (System_Int32_array **)StringLiteral_11019/*"RECOMMENDED_ICON"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_11019/*"RECOMMENDED_ICON"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -269,8 +269,8 @@ void __fastcall BoostSupportRequestMenu__OnClickSetupConfirm(BoostSupportRequest
   if ( (byte_40FB186 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16940, v3);
-    sub_B16FFC(&StringLiteral_16939, v4);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, v3);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v4);
     byte_40FB186 = 1;
   }
   if ( this->fields.state == 2 )
@@ -287,9 +287,9 @@ void __fastcall BoostSupportRequestMenu__OnClickSetupConfirm(BoostSupportRequest
     if ( !setupConfirmSprite )
       sub_B170D4();
     if ( isBoostItemUseConfirm )
-      v7 = &StringLiteral_16939;
+      v7 = &StringLiteral_16939/*"btn_off"*/;
     else
-      v7 = &StringLiteral_16940;
+      v7 = &StringLiteral_16940/*"btn_on"*/;
     UISprite__set_spriteName(setupConfirmSprite, (System_String_o *)*v7, 0LL);
   }
 }
@@ -585,13 +585,13 @@ void __fastcall BoostSupportRequestMenu__Open(
     sub_B16FFC(&SingletonTemplate_BoostFunctionUtility__TypeInfo, v35);
     sub_B16FFC(&SoundManager_TypeInfo, v36);
     sub_B16FFC(&UserItemEntity___TypeInfo, v37);
-    sub_B16FFC(&StringLiteral_2587, v38);
-    sub_B16FFC(&StringLiteral_16940, v39);
-    sub_B16FFC(&StringLiteral_3252, v40);
-    sub_B16FFC(&StringLiteral_2593, v41);
-    sub_B16FFC(&StringLiteral_2586, v42);
-    sub_B16FFC(&StringLiteral_2589, v43);
-    sub_B16FFC(&StringLiteral_16939, v44);
+    sub_B16FFC(&StringLiteral_2587/*"BOOST_SUPPORT_REQUEST_USE_DETAIL_SUPPORT_REQUEST"*/, v38);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, v39);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v40);
+    sub_B16FFC(&StringLiteral_2593/*"BOOST_SUPPORT_REQUEST_USE_TITLE_SUPPORT_REQUEST"*/, v41);
+    sub_B16FFC(&StringLiteral_2586/*"BOOST_SUPPORT_REQUEST_USE_DECIDE"*/, v42);
+    sub_B16FFC(&StringLiteral_2589/*"BOOST_SUPPORT_REQUEST_USE_OPTION_SUPPORT_REQUEST"*/, v43);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v44);
     byte_40FB17F = 1;
   }
   memset(&v135, 0, sizeof(v135));
@@ -617,27 +617,27 @@ void __fastcall BoostSupportRequestMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v46 = LocalizationManager__Get((System_String_o *)StringLiteral_2593, 0LL);
+  v46 = LocalizationManager__Get((System_String_o *)StringLiteral_2593/*"BOOST_SUPPORT_REQUEST_USE_TITLE_SUPPORT_REQUEST"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_87;
   UILabel__set_text(titleLabel, v46, 0LL);
   titleDetailLabel = this->fields.titleDetailLabel;
-  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_2587, 0LL);
+  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_2587/*"BOOST_SUPPORT_REQUEST_USE_DETAIL_SUPPORT_REQUEST"*/, 0LL);
   if ( !titleDetailLabel )
     goto LABEL_87;
   UILabel__set_text(titleDetailLabel, v48, 0LL);
   useConfirmOptionLabel = this->fields.useConfirmOptionLabel;
-  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_2589, 0LL);
+  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_2589/*"BOOST_SUPPORT_REQUEST_USE_OPTION_SUPPORT_REQUEST"*/, 0LL);
   if ( !useConfirmOptionLabel )
     goto LABEL_87;
   UILabel__set_text(useConfirmOptionLabel, v50, 0LL);
   decideLabel = this->fields.decideLabel;
-  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_2586, 0LL);
+  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_2586/*"BOOST_SUPPORT_REQUEST_USE_DECIDE"*/, 0LL);
   if ( !decideLabel )
     goto LABEL_87;
   UILabel__set_text(decideLabel, v52, 0LL);
   cancelLabel = this->fields.cancelLabel;
-  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !cancelLabel )
     goto LABEL_87;
   UILabel__set_text(cancelLabel, v54, 0LL);
@@ -906,9 +906,9 @@ LABEL_74:
   if ( !setupConfirmSprite )
     goto LABEL_87;
   if ( v132->fields.isBoostItemUseConfirm )
-    v125 = &StringLiteral_16940;
+    v125 = &StringLiteral_16940/*"btn_on"*/;
   else
-    v125 = &StringLiteral_16939;
+    v125 = &StringLiteral_16939/*"btn_off"*/;
   UISprite__set_spriteName(setupConfirmSprite, (System_String_o *)*v125, 0LL);
   if ( !isRetryBattle )
   {

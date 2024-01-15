@@ -14,12 +14,12 @@ void __fastcall MotionInfo___cctor(const MethodInfo *method)
   if ( (byte_40F7D64 & 1) == 0 )
   {
     sub_B16FFC(&MotionInfo_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F7D64 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)MotionInfo_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_1;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   MotionInfo_TypeInfo->static_fields->hitNum = 0;
 }
@@ -47,25 +47,25 @@ System_String_o *__fastcall MotionInfo__GetTypeName(MotionInfo_o *this, int32_t 
   v9 = type;
   if ( (byte_40F7D63 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23734, *(_QWORD *)&type);
-    sub_B16FFC(&StringLiteral_23720, v4);
-    sub_B16FFC(&StringLiteral_23712, v5);
-    sub_B16FFC(&StringLiteral_23716, v6);
+    sub_B16FFC(&StringLiteral_23734/*"バスター"*/, *(_QWORD *)&type);
+    sub_B16FFC(&StringLiteral_23720/*"クイック"*/, v4);
+    sub_B16FFC(&StringLiteral_23712/*"アーツ"*/, v5);
+    sub_B16FFC(&StringLiteral_23716/*"エクストラ"*/, v6);
     byte_40F7D63 = 1;
   }
   switch ( BattleCommand__getType(type, 0LL) )
   {
     case 1:
-      v7 = &StringLiteral_23712;
+      v7 = &StringLiteral_23712/*"アーツ"*/;
       goto LABEL_9;
     case 2:
-      v7 = &StringLiteral_23734;
+      v7 = &StringLiteral_23734/*"バスター"*/;
       goto LABEL_9;
     case 3:
-      v7 = &StringLiteral_23720;
+      v7 = &StringLiteral_23720/*"クイック"*/;
       goto LABEL_9;
     case 4:
-      v7 = &StringLiteral_23716;
+      v7 = &StringLiteral_23716/*"エクストラ"*/;
 LABEL_9:
       result = (System_String_o *)*v7;
       break;
@@ -219,11 +219,11 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
     sub_B16FFC(&UnityEngine_GUI_TypeInfo, method);
     sub_B16FFC(&MotionInfo_TypeInfo, v4);
     sub_B16FFC(&string___TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23703, v6);
-    sub_B16FFC(&StringLiteral_23704, v7);
-    sub_B16FFC(&StringLiteral_23701, v8);
-    sub_B16FFC(&StringLiteral_23702, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_23703/*"【モーションID】"*/, v6);
+    sub_B16FFC(&StringLiteral_23704/*"【名前】"*/, v7);
+    sub_B16FFC(&StringLiteral_23701/*"【カード属性】"*/, v8);
+    sub_B16FFC(&StringLiteral_23702/*"【ヒット数】"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F7D62 = 1;
   }
   HIDWORD(var40.klass) = 0;
@@ -231,7 +231,7 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
   {
     HIDWORD(var40.klass) = 0;
     v11 = MotionInfo_TypeInfo;
-    TypeName = (System_Int32_array **)StringLiteral_1;
+    TypeName = (System_Int32_array **)StringLiteral_1/*""*/;
     if ( (BYTE3(MotionInfo_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !MotionInfo_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(MotionInfo_TypeInfo);
@@ -284,13 +284,13 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
           goto LABEL_95;
         v15->m_Items[0] = (System_String_o *)v24;
         sub_B16F98((BattleServantConfConponent_o *)v15->m_Items, v24, v18, v19, v20, v21, v22, v23);
-        NewLine = (void *)StringLiteral_23704;
-        if ( StringLiteral_23704 )
+        NewLine = (void *)StringLiteral_23704/*"【名前】"*/;
+        if ( StringLiteral_23704/*"【名前】"*/ )
         {
-          NewLine = (void *)sub_B170BC(StringLiteral_23704, v15->obj.klass->_1.element_class);
+          NewLine = (void *)sub_B170BC(StringLiteral_23704/*"【名前】"*/, v15->obj.klass->_1.element_class);
           if ( !NewLine )
             goto LABEL_96;
-          v17 = (System_Int32_array **)StringLiteral_23704;
+          v17 = (System_Int32_array **)StringLiteral_23704/*"【名前】"*/;
         }
         else
         {
@@ -338,13 +338,13 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
                   goto LABEL_95;
                 v15->m_Items[5] = (System_String_o *)v53;
                 sub_B16F98((BattleServantConfConponent_o *)&v15->m_Items[5], v53, v18, v48, v49, v50, v51, v52);
-                NewLine = (void *)StringLiteral_23703;
-                if ( StringLiteral_23703 )
+                NewLine = (void *)StringLiteral_23703/*"【モーションID】"*/;
+                if ( StringLiteral_23703/*"【モーションID】"*/ )
                 {
-                  NewLine = (void *)sub_B170BC(StringLiteral_23703, v15->obj.klass->_1.element_class);
+                  NewLine = (void *)sub_B170BC(StringLiteral_23703/*"【モーションID】"*/, v15->obj.klass->_1.element_class);
                   if ( !NewLine )
                     goto LABEL_96;
-                  v17 = (System_Int32_array **)StringLiteral_23703;
+                  v17 = (System_Int32_array **)StringLiteral_23703/*"【モーションID】"*/;
                 }
                 else
                 {
@@ -386,13 +386,13 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
                           goto LABEL_95;
                         v15->m_Items[10] = (System_String_o *)v82;
                         sub_B16F98((BattleServantConfConponent_o *)&v15->m_Items[10], v82, v18, v77, v78, v79, v80, v81);
-                        NewLine = (void *)StringLiteral_23702;
-                        if ( StringLiteral_23702 )
+                        NewLine = (void *)StringLiteral_23702/*"【ヒット数】"*/;
+                        if ( StringLiteral_23702/*"【ヒット数】"*/ )
                         {
-                          NewLine = (void *)sub_B170BC(StringLiteral_23702, v15->obj.klass->_1.element_class);
+                          NewLine = (void *)sub_B170BC(StringLiteral_23702/*"【ヒット数】"*/, v15->obj.klass->_1.element_class);
                           if ( !NewLine )
                             goto LABEL_96;
-                          v17 = (System_Int32_array **)StringLiteral_23702;
+                          v17 = (System_Int32_array **)StringLiteral_23702/*"【ヒット数】"*/;
                         }
                         else
                         {
@@ -470,13 +470,13 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
                                   v108,
                                   v109,
                                   v110);
-                                NewLine = (void *)StringLiteral_23701;
-                                if ( StringLiteral_23701 )
+                                NewLine = (void *)StringLiteral_23701/*"【カード属性】"*/;
+                                if ( StringLiteral_23701/*"【カード属性】"*/ )
                                 {
-                                  NewLine = (void *)sub_B170BC(StringLiteral_23701, v15->obj.klass->_1.element_class);
+                                  NewLine = (void *)sub_B170BC(StringLiteral_23701/*"【カード属性】"*/, v15->obj.klass->_1.element_class);
                                   if ( !NewLine )
                                     goto LABEL_96;
-                                  v17 = (System_Int32_array **)StringLiteral_23701;
+                                  v17 = (System_Int32_array **)StringLiteral_23701/*"【カード属性】"*/;
                                 }
                                 else
                                 {

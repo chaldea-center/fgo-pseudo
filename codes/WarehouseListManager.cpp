@@ -68,7 +68,7 @@ void __fastcall WarehouseListManager__CreateList(
     sub_B16FFC(&int_TypeInfo, v9);
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_12413, v12);
+    sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v12);
     byte_40FA96D = 1;
   }
   this->fields.kind = kind;
@@ -236,7 +236,7 @@ LABEL_22:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   v54 = this->fields.baseServantSum;
   v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v54);
   baseServantKeep = this->fields.baseServantKeep;
@@ -246,7 +246,7 @@ LABEL_22:
     goto LABEL_52;
   UILabel__set_text(servantTabLabel, v41, 0LL);
   servantEquipTabLabel = this->fields.servantEquipTabLabel;
-  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   baseEquipSumNF = this->fields.baseEquipSumNF;
   v44 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &baseEquipSumNF);
   baseEquipKeep = this->fields.baseEquipKeep;
@@ -778,8 +778,8 @@ void __fastcall WarehouseListManager__RefrashListDisp(WarehouseListManager_o *th
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_12414, v4);
-    sub_B16FFC(&StringLiteral_12413, v5);
+    sub_B16FFC(&StringLiteral_12414/*"SUM_OVER_INFO"*/, v4);
+    sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v5);
     byte_40FA96E = 1;
   }
   *(_QWORD *)friendShipSum = 0LL;
@@ -821,9 +821,9 @@ void __fastcall WarehouseListManager__RefrashListDisp(WarehouseListManager_o *th
     decideButton->klass->vtable._15_OnPress.methodPtr);
   WarehouseListManager__UpdateSelectDoneLabel(this, v15);
   sendDataLabel = this->fields.sendDataLabel;
-  v17 = (System_String_o **)&StringLiteral_12414;
+  v17 = (System_String_o **)&StringLiteral_12414/*"SUM_OVER_INFO"*/;
   if ( !v13 )
-    v17 = (System_String_o **)&StringLiteral_12413;
+    v17 = (System_String_o **)&StringLiteral_12413/*"SUM_INFO"*/;
   v18 = *v17;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1016,8 +1016,8 @@ void __fastcall WarehouseListManager__UpdateSelectDoneLabel(WarehouseListManager
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_12414, v4);
-    sub_B16FFC(&StringLiteral_12413, v5);
+    sub_B16FFC(&StringLiteral_12414/*"SUM_OVER_INFO"*/, v4);
+    sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v5);
     byte_40FA96F = 1;
   }
   *(_QWORD *)friendShipSum = 0LL;
@@ -1047,9 +1047,9 @@ LABEL_11:
   WarehouseListManager__GetSelectItemNum(this, &friendShipSum[1], friendShipSum, v9);
   v10 = this->fields.selectDoneLabel;
   if ( this->fields.totalSum - friendShipSum[0] <= this->fields.sendMax )
-    v11 = (System_String_o **)&StringLiteral_12413;
+    v11 = (System_String_o **)&StringLiteral_12413/*"SUM_INFO"*/;
   else
-    v11 = (System_String_o **)&StringLiteral_12414;
+    v11 = (System_String_o **)&StringLiteral_12414/*"SUM_OVER_INFO"*/;
   v12 = *v11;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )

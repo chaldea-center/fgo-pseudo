@@ -26,7 +26,7 @@ void __fastcall EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o 
   if ( (byte_40FC4EB & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_2204, v3);
+    sub_B16FFC(&StringLiteral_2204/*"AutoPlayView"*/, v3);
     byte_40FC4EB = 1;
   }
   AutoPlayMode = this->fields.AutoPlayMode;
@@ -53,7 +53,7 @@ LABEL_22:
 LABEL_18:
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_2204,
+        (System_String_o *)StringLiteral_2204/*"AutoPlayView"*/,
         this->fields.AutoPlayInterval,
         0LL);
       return;
@@ -162,7 +162,7 @@ void __fastcall EquipGraphViewModeState__OnClickQuickAutoPlayButton(
 
   if ( (byte_40FC4EA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6755, isSetting);
+    sub_B16FFC(&StringLiteral_6755/*"FowardView"*/, isSetting);
     byte_40FC4EA = 1;
   }
   if ( !isSetting )
@@ -181,7 +181,7 @@ void __fastcall EquipGraphViewModeState__OnClickQuickAutoPlayButton(
       UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0LL);
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_6755,
+        (System_String_o *)StringLiteral_6755/*"FowardView"*/,
         this->fields.AutoPlayInterval,
         0LL);
       return;

@@ -57,9 +57,9 @@ System_String_o *__fastcall UserPresentBoxEntity__GetCountText(
   v14 = num;
   if ( (byte_40F9786 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_690, *(_QWORD *)&gType);
-    sub_B16FFC(&StringLiteral_9236, v7);
-    sub_B16FFC(&StringLiteral_23611, v8);
+    sub_B16FFC(&StringLiteral_690/*"+"*/, *(_QWORD *)&gType);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v7);
+    sub_B16FFC(&StringLiteral_23611/*"×"*/, v8);
     byte_40F9786 = 1;
   }
   if ( gType == 2 )
@@ -72,11 +72,11 @@ System_String_o *__fastcall UserPresentBoxEntity__GetCountText(
   {
     IsCountableWithPlus = (unsigned int)(gType - 3) < 2;
   }
-  v10 = &StringLiteral_690;
+  v10 = &StringLiteral_690/*"+"*/;
   if ( !IsCountableWithPlus )
-    v10 = &StringLiteral_23611;
+    v10 = &StringLiteral_23611/*"×"*/;
   v11 = (System_String_o *)*v10;
-  v12 = System_Int32__ToString_38275808((int32_t)&v14, (System_String_o *)StringLiteral_9236, 0LL);
+  v12 = System_Int32__ToString_38275808((int32_t)&v14, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   return System_String__Concat_43743732(v11, v12, 0LL);
 }
 
@@ -169,10 +169,10 @@ void __fastcall UserPresentBoxEntity__GetInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v19);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v20);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    sub_B16FFC(&StringLiteral_6430, v22);
-    sub_B16FFC(&StringLiteral_14682, v23);
-    sub_B16FFC(&StringLiteral_8726, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
+    sub_B16FFC(&StringLiteral_6430/*"FRIENDSHIP_NAME"*/, v22);
+    sub_B16FFC(&StringLiteral_14682/*"USER_EXP_NAME"*/, v23);
+    sub_B16FFC(&StringLiteral_8726/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
     byte_40F9783 = 1;
   }
   switch ( this->fields.giftType )
@@ -223,7 +223,7 @@ void __fastcall UserPresentBoxEntity__GetInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v66 = &StringLiteral_6430;
+      v66 = &StringLiteral_6430/*"FRIENDSHIP_NAME"*/;
       goto LABEL_37;
     case 4:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -231,7 +231,7 @@ void __fastcall UserPresentBoxEntity__GetInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v66 = &StringLiteral_14682;
+      v66 = &StringLiteral_14682/*"USER_EXP_NAME"*/;
 LABEL_37:
       Name = LocalizationManager__Get((System_String_o *)*v66, 0LL);
       goto LABEL_50;
@@ -268,7 +268,7 @@ LABEL_37:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v42 = LocalizationManager__Get((System_String_o *)StringLiteral_8726, 0LL);
+      v42 = LocalizationManager__Get((System_String_o *)StringLiteral_8726/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/, 0LL);
       if ( !v41 )
         goto LABEL_53;
       unknownNameText = System_String__Format(v42, (Il2CppObject *)v41->fields.name, 0LL);
@@ -336,8 +336,8 @@ LABEL_24:
         v5,
         v6,
         v7);
-      *countText = (System_String_o *)StringLiteral_1;
-      v49 = (System_String_o *)StringLiteral_1;
+      *countText = (System_String_o *)StringLiteral_1/*""*/;
+      v49 = (System_String_o *)StringLiteral_1/*""*/;
       break;
   }
   sub_B16F98((BattleServantConfConponent_o *)countText, (System_Int32_array **)v49, v43, v44, v45, v46, v47, v48);

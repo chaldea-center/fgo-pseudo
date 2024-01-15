@@ -28,8 +28,8 @@ void __fastcall EventSvtControl__EndPlay(EventSvtControl_o *this, const MethodIn
   v8 = this;
   if ( (byte_40F9BA7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22380, method);
-    this = (EventSvtControl_o *)sub_B16FFC(&StringLiteral_5479, v9);
+    sub_B16FFC(&StringLiteral_22380/*"svtVoicePlay"*/, method);
+    this = (EventSvtControl_o *)sub_B16FFC(&StringLiteral_5479/*"END_PLAY"*/, v9);
     byte_40F9BA7 = 1;
   }
   if ( !v8->fields.isDead )
@@ -50,7 +50,7 @@ void __fastcall EventSvtControl__EndPlay(EventSvtControl_o *this, const MethodIn
         {
           UnityEngine_MonoBehaviour__Invoke(
             (UnityEngine_MonoBehaviour_o *)v8,
-            (System_String_o *)StringLiteral_22380,
+            (System_String_o *)StringLiteral_22380/*"svtVoicePlay"*/,
             v12->fields.delay,
             0LL);
           return;
@@ -89,7 +89,7 @@ LABEL_17:
         fsm = v8->fields.fsm;
         if ( !fsm )
           goto LABEL_17;
-        PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5479, 0LL);
+        PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5479/*"END_PLAY"*/, 0LL);
       }
     }
   }
@@ -1692,7 +1692,7 @@ void __fastcall EventSvtControl__playPurchaseVoice(
     {
       v53 = sub_B17000(&System_Exception_TypeInfo, *(_QWORD *)&svtId);
       v58 = (System_Exception_o *)sub_B170CC(v53, v54, v55, v56, v57);
-      v60 = (System_String_o *)sub_B17000(&StringLiteral_23715, v59);
+      v60 = (System_String_o *)sub_B17000(&StringLiteral_23715/*"イベントショップ購入時のSvtVoiceマスタが適切に設定されていません。"*/, v59);
       System_Exception___ctor_15880420(v58, v60, 0LL);
       sub_B17000(&Method_EventSvtControl_playPurchaseVoice__, v61);
       sub_B170A0();
@@ -2578,7 +2578,7 @@ void __fastcall EventSvtControl__stopVoice(EventSvtControl_o *this, const Method
   if ( (byte_40F9BA8 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_22380, v3);
+    sub_B16FFC(&StringLiteral_22380/*"svtVoicePlay"*/, v3);
     byte_40F9BA8 = 1;
   }
   p_player = &this->fields.player;
@@ -2603,7 +2603,7 @@ void __fastcall EventSvtControl__stopVoice(EventSvtControl_o *this, const Method
   }
   UnityEngine_MonoBehaviour__CancelInvoke_34803564(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_22380,
+    (System_String_o *)StringLiteral_22380/*"svtVoicePlay"*/,
     0LL);
 }
 

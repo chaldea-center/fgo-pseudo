@@ -21,10 +21,10 @@ int32_t __fastcall AiActEntity__GetNoTargetNoActionType(AiActEntity_o *this, con
 {
   if ( (byte_40F7EB6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21014, method);
+    sub_B16FFC(&StringLiteral_21014/*"noTargetNoActionType"*/, method);
     byte_40F7EB6 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21014, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21014/*"noTargetNoActionType"*/, 0, 0LL);
 }
 
 
@@ -32,10 +32,10 @@ bool __fastcall AiActEntity__IsIncludeDeathSvt(AiActEntity_o *this, const Method
 {
   if ( (byte_40F7EB4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19692, method);
+    sub_B16FFC(&StringLiteral_19692/*"includeDeathSvt"*/, method);
     byte_40F7EB4 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_19692, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_19692/*"includeDeathSvt"*/, 0LL);
 }
 
 
@@ -46,12 +46,12 @@ bool __fastcall AiActEntity__TryGetMultiIndividuality(
 {
   if ( (byte_40F7EB5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_7559, resValues);
+    sub_B16FFC(&StringLiteral_7559/*"Individuality"*/, resValues);
     byte_40F7EB5 = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_7559,
+           (System_String_o *)StringLiteral_7559/*"Individuality"*/,
            resValues,
            0LL);
 }

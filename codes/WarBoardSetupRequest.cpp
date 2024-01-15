@@ -116,20 +116,20 @@ void __fastcall WarBoardSetupRequest__beginRequest(
     sub_B16FFC(&Method_WarBoardSetupRequest___c__beginRequest_b__1_1__, v24);
     sub_B16FFC(&Method_WarBoardSetupRequest___c__beginRequest_b__1_2__, v25);
     sub_B16FFC(&WarBoardSetupRequest___c_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_22171, v27);
-    sub_B16FFC(&StringLiteral_22151, v28);
-    sub_B16FFC(&StringLiteral_22915, v29);
-    sub_B16FFC(&StringLiteral_22972, v30);
-    sub_B16FFC(&StringLiteral_21522, v31);
-    sub_B16FFC(&StringLiteral_22974, v32);
-    sub_B16FFC(&StringLiteral_21520, v33);
-    sub_B16FFC(&StringLiteral_698, v34);
-    sub_B16FFC(&StringLiteral_15764, v35);
+    sub_B16FFC(&StringLiteral_22171/*"stageId"*/, v27);
+    sub_B16FFC(&StringLiteral_22151/*"squareIndexes"*/, v28);
+    sub_B16FFC(&StringLiteral_22915/*"userEquipId"*/, v29);
+    sub_B16FFC(&StringLiteral_22972/*"userSvtEquips"*/, v30);
+    sub_B16FFC(&StringLiteral_21522/*"questPhase"*/, v31);
+    sub_B16FFC(&StringLiteral_22974/*"userSvtIds"*/, v32);
+    sub_B16FFC(&StringLiteral_21520/*"questId"*/, v33);
+    sub_B16FFC(&StringLiteral_698/*","*/, v34);
+    sub_B16FFC(&StringLiteral_15764/*"[{0}]"*/, v35);
     byte_40FBAAC = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22171, stageId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21520, questId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21522, questPhase, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22171/*"stageId"*/, stageId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21520/*"questId"*/, questId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21522/*"questPhase"*/, questPhase, 0LL);
   v40 = WarBoardSetupRequest___c_TypeInfo;
   if ( (BYTE3(WarBoardSetupRequest___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !WarBoardSetupRequest___c_TypeInfo->_2.cctor_finished )
@@ -139,10 +139,10 @@ void __fastcall WarBoardSetupRequest__beginRequest(
   }
   static_fields = v40->static_fields;
   _9__1_0 = (System_Func_int__BattleActionData_SideEffectData__o *)static_fields->__9__1_0;
-  v43 = (System_String_o *)StringLiteral_698;
-  v44 = (System_String_o *)StringLiteral_15764;
+  v43 = (System_String_o *)StringLiteral_698/*","*/;
+  v44 = (System_String_o *)StringLiteral_15764/*"[{0}]"*/;
   data = userEquipId;
-  v45 = (System_String_o *)StringLiteral_22151;
+  v45 = (System_String_o *)StringLiteral_22151/*"squareIndexes"*/;
   if ( !_9__1_0 )
   {
     if ( (BYTE3(v40->vtable._0_Equals.methodPtr) & 4) != 0 && !v40->_2.cctor_finished )
@@ -194,10 +194,10 @@ void __fastcall WarBoardSetupRequest__beginRequest(
     v62 = WarBoardSetupRequest___c_TypeInfo;
   }
   v63 = v62->static_fields;
-  v64 = (System_String_o *)StringLiteral_15764;
+  v64 = (System_String_o *)StringLiteral_15764/*"[{0}]"*/;
   _9__1_1 = (System_Func_long__SellServantRequest_UseSvtHash__o *)v63->__9__1_1;
-  v66 = (System_String_o *)StringLiteral_698;
-  v67 = (System_String_o *)StringLiteral_22974;
+  v66 = (System_String_o *)StringLiteral_698/*","*/;
+  v67 = (System_String_o *)StringLiteral_22974/*"userSvtIds"*/;
   if ( !_9__1_1 )
   {
     if ( (BYTE3(v62->vtable._0_Equals.methodPtr) & 4) != 0 && !v62->_2.cctor_finished )
@@ -247,10 +247,10 @@ void __fastcall WarBoardSetupRequest__beginRequest(
     v84 = WarBoardSetupRequest___c_TypeInfo;
   }
   v85 = v84->static_fields;
-  v86 = (System_String_o *)StringLiteral_15764;
+  v86 = (System_String_o *)StringLiteral_15764/*"[{0}]"*/;
   _9__1_2 = (System_Func_long__SellServantRequest_UseSvtHash__o *)v85->__9__1_2;
-  v88 = (System_String_o *)StringLiteral_698;
-  v89 = (System_String_o *)StringLiteral_22972;
+  v88 = (System_String_o *)StringLiteral_698/*","*/;
+  v89 = (System_String_o *)StringLiteral_22972/*"userSvtEquips"*/;
   if ( !_9__1_2 )
   {
     if ( (BYTE3(v84->vtable._0_Equals.methodPtr) & 4) != 0 && !v84->_2.cctor_finished )
@@ -292,7 +292,7 @@ void __fastcall WarBoardSetupRequest__beginRequest(
   v100 = (Il2CppObject *)System_String__Join(v88, v99, 0LL);
   v101 = System_String__Format(v86, v100, 0LL);
   RequestBase__addField_30957164((RequestBase_o *)this, v89, v101, 0LL);
-  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_22915, data, 0LL);
+  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_22915/*"userEquipId"*/, data, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -305,7 +305,7 @@ System_String_o *__fastcall WarBoardSetupRequest__getURL(WarBoardSetupRequest_o 
   if ( (byte_40FBAAB & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23115, v2);
+    sub_B16FFC(&StringLiteral_23115/*"warBoard/setup"*/, v2);
     byte_40FBAAB = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -314,7 +314,7 @@ System_String_o *__fastcall WarBoardSetupRequest__getURL(WarBoardSetupRequest_o 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_23115, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_23115/*"warBoard/setup"*/, 0LL);
 }
 
 
@@ -341,8 +341,8 @@ void __fastcall WarBoardSetupRequest__requestCompleted(
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
     sub_B16FFC(&JsonManager_TypeInfo, v6);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_20980, v8);
-    sub_B16FFC(&StringLiteral_23121, v9);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v8);
+    sub_B16FFC(&StringLiteral_23121/*"warBoardData"*/, v9);
     byte_40FBAAD = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -357,12 +357,12 @@ void __fastcall WarBoardSetupRequest__requestCompleted(
   {
     Item = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                              success,
-                             (System_Type_o *)StringLiteral_23121,
+                             (System_Type_o *)StringLiteral_23121/*"warBoardData"*/,
                              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v14 = RequestBase__UnpackToMessagePack((RequestBase_o *)this, Item, 0LL);
     System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
       (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-      (System_Xml_XmlQualifiedName_o *)StringLiteral_23121,
+      (System_Xml_XmlQualifiedName_o *)StringLiteral_23121/*"warBoardData"*/,
       (System_Xml_Schema_XmlSchemaObject_o *)v14,
       (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -371,7 +371,7 @@ void __fastcall WarBoardSetupRequest__requestCompleted(
   }
   else
   {
-    v15 = (System_String_o *)StringLiteral_20980;
+    v15 = (System_String_o *)StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v15, 0LL);
 }

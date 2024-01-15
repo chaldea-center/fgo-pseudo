@@ -216,7 +216,7 @@ void __fastcall BattleInfoMessageComponent__setSkillText(
   if ( (byte_40F732C & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, str);
-    this = (BattleInfoMessageComponent_o *)sub_B16FFC(&StringLiteral_2515, v6);
+    this = (BattleInfoMessageComponent_o *)sub_B16FFC(&StringLiteral_2515/*"BATTLE_SKILL_NAME_LEVEL"*/, v6);
     byte_40F732C = 1;
   }
   textLabel = v5->fields.textLabel;
@@ -233,7 +233,7 @@ void __fastcall BattleInfoMessageComponent__setSkillText(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_2515, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_2515/*"BATTLE_SKILL_NAME_LEVEL"*/, 0LL);
   v10 = (Il2CppObject *)System_Int32__ToString((int32_t)&v12, 0LL);
   v11 = System_String__Format_43739268(v9, (Il2CppObject *)str, v10, 0LL);
   if ( !v8 )

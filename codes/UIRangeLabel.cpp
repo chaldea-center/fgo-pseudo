@@ -15,14 +15,14 @@ void __fastcall UIRangeLabel__Clear(UIRangeLabel_o *this, const MethodInfo *meth
   if ( (byte_4102066 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_4102066 = 1;
   }
   UIRangeLabel__InitParam(this, method);
   textLabel = this->fields.textLabel;
   if ( !textLabel )
     goto LABEL_11;
-  UILabel__set_text(textLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(textLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )

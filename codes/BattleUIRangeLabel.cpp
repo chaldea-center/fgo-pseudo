@@ -183,7 +183,7 @@ void __fastcall BattleUIRangeLabel__SetAdjustLabelOffset(
 
   if ( (byte_40FCD8D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, text);
+    sub_B16FFC(&StringLiteral_1/*""*/, text);
     byte_40FCD8D = 1;
   }
   UIRangeLabel__Set((UIRangeLabel_o *)this, text, iconName, isIconPixelPerfect, damageCritical, 0LL);
@@ -281,7 +281,7 @@ LABEL_26:
   if ( !text )
     goto LABEL_34;
   v32 = gameObject;
-  v33 = System_String__Equals_43731072(text, (System_String_o *)StringLiteral_1, 0LL);
+  v33 = System_String__Equals_43731072(text, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !v32 )
     goto LABEL_34;
   UnityEngine_GameObject__SetActive(v32, !v33, 0LL);

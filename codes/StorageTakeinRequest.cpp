@@ -21,7 +21,7 @@ void __fastcall StorageTakeinRequest__beginRequest(
   {
     sub_B16FFC(&System_Convert_TypeInfo, userSvtIds);
     sub_B16FFC(&MiniMessagePack_MiniMessagePacker_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_22974, v8);
+    sub_B16FFC(&StringLiteral_22974/*"userSvtIds"*/, v8);
     byte_40F7C0B = 1;
   }
   v9 = (MiniMessagePack_MiniMessagePacker_o *)sub_B170CC(
@@ -40,7 +40,7 @@ void __fastcall StorageTakeinRequest__beginRequest(
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
   v11 = System_Convert__ToBase64String(v10, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_22974, v11, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_22974/*"userSvtIds"*/, v11, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -53,7 +53,7 @@ System_String_o *__fastcall StorageTakeinRequest__getURL(StorageTakeinRequest_o 
   if ( (byte_40F7C0A & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_22241, v2);
+    sub_B16FFC(&StringLiteral_22241/*"storage/takein"*/, v2);
     byte_40F7C0A = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -62,7 +62,7 @@ System_String_o *__fastcall StorageTakeinRequest__getURL(StorageTakeinRequest_o 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_22241, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_22241/*"storage/takein"*/, 0LL);
 }
 
 
@@ -82,7 +82,7 @@ void __fastcall StorageTakeinRequest__requestCompleted(
   {
     sub_B16FFC(&JsonManager_TypeInfo, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40F7C0C = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -101,7 +101,7 @@ void __fastcall StorageTakeinRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_20980;
+    v10 = (System_String_o *)StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

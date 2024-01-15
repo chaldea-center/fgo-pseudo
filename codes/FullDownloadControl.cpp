@@ -17,8 +17,8 @@ void __fastcall FullDownloadControl__Init(FullDownloadControl_o *this, const Met
   if ( (byte_40FB2E3 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6508, v3);
-    sub_B16FFC(&StringLiteral_6509, v4);
+    sub_B16FFC(&StringLiteral_6508/*"FULLDOWNLOAD_INFO_DETAIL_TXT"*/, v3);
+    sub_B16FFC(&StringLiteral_6509/*"FULLDOWNLOAD_INFO_TXT"*/, v4);
     byte_40FB2E3 = 1;
   }
   infoDetailLb = this->fields.infoDetailLb;
@@ -27,11 +27,11 @@ void __fastcall FullDownloadControl__Init(FullDownloadControl_o *this, const Met
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_6509, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_6509/*"FULLDOWNLOAD_INFO_TXT"*/, 0LL);
   if ( !infoDetailLb
     || (UILabel__set_text(infoDetailLb, v6, 0LL),
         maskObj = this->fields.maskObj,
-        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6508, 0LL),
+        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6508/*"FULLDOWNLOAD_INFO_DETAIL_TXT"*/, 0LL),
         !maskObj)
     || (UILabel__set_text((UILabel_o *)maskObj, v8, 0LL), (klass = this[1].klass) == 0LL) )
   {
@@ -95,12 +95,12 @@ void __fastcall FullDownloadControl__OnClickFullDl(FullDownloadControl_o *this, 
     sub_B16FFC(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
     sub_B16FFC(&SoundManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_3339, v10);
-    sub_B16FFC(&StringLiteral_6505, v11);
-    sub_B16FFC(&StringLiteral_6506, v12);
-    sub_B16FFC(&StringLiteral_6507, v13);
-    sub_B16FFC(&StringLiteral_3251, v14);
-    sub_B16FFC(&StringLiteral_1, v15);
+    sub_B16FFC(&StringLiteral_3339/*"CONNECT_LATEST_MESSAGE"*/, v10);
+    sub_B16FFC(&StringLiteral_6505/*"FULLDOWNLOAD_CONFIRM_DECIDE"*/, v11);
+    sub_B16FFC(&StringLiteral_6506/*"FULLDOWNLOAD_CONFIRM_MSG"*/, v12);
+    sub_B16FFC(&StringLiteral_6507/*"FULLDOWNLOAD_CONFIRM_TITLE"*/, v13);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v15);
     byte_40FB2E4 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -129,15 +129,15 @@ void __fastcall FullDownloadControl__OnClickFullDl(FullDownloadControl_o *this, 
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_6507, 0LL);
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_6506, 0LL);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_6507/*"FULLDOWNLOAD_CONFIRM_TITLE"*/, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_6506/*"FULLDOWNLOAD_CONFIRM_MSG"*/, 0LL);
     v23 = (AssetManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
     if ( v23 )
     {
       v24 = (Il2CppObject *)AssetManager__ConvertDownloadSizeToString(v23, (double)v20, 0LL);
       v25 = System_String__Format(v22, v24, 0LL);
-      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_6505, 0LL);
-      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_6505/*"FULLDOWNLOAD_CONFIRM_DECIDE"*/, 0LL);
+      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
       v28 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v33 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                      CommonConfirmDialog_ClickDelegate_TypeInfo,
@@ -161,12 +161,12 @@ LABEL_21:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3339, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3339/*"CONNECT_LATEST_MESSAGE"*/, 0LL);
   v40 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v36, v37, v38, v39);
   System_Action___ctor(v40, (Il2CppObject *)this, Method_FullDownloadControl_endDownLoad__, 0LL);
   if ( !v34 )
     goto LABEL_21;
-  CommonUI__OpenNotificationDialog(v34, (System_String_o *)StringLiteral_1, v35, v40, -1, 0, 0, 0, 0, 0, 0, 0, 0LL, 0LL);
+  CommonUI__OpenNotificationDialog(v34, (System_String_o *)StringLiteral_1/*""*/, v35, v40, -1, 0, 0, 0, 0, 0, 0, 0, 0LL, 0LL);
 }
 
 

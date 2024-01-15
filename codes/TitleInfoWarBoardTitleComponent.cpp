@@ -8,12 +8,12 @@ void __fastcall TitleInfoWarBoardTitleComponent___cctor(const MethodInfo *method
   if ( (byte_40F8466 & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoWarBoardTitleComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_3423, v2);
+    sub_B16FFC(&StringLiteral_3423/*"CRIMovie/CRIMoviePlayerWithPanel"*/, v2);
     byte_40F8466 = 1;
   }
   static_fields = TitleInfoWarBoardTitleComponent_TypeInfo->static_fields;
-  v4 = StringLiteral_3423;
-  static_fields->MOVIE_PLAYER_OBJECT_PATH = (struct System_String_o *)StringLiteral_3423;
+  v4 = StringLiteral_3423/*"CRIMovie/CRIMoviePlayerWithPanel"*/;
+  static_fields->MOVIE_PLAYER_OBJECT_PATH = (struct System_String_o *)StringLiteral_3423/*"CRIMovie/CRIMoviePlayerWithPanel"*/;
   sub_B16F98(static_fields, v4);
 }
 
@@ -26,13 +26,13 @@ void __fastcall TitleInfoWarBoardTitleComponent___ctor(
 
   if ( (byte_40F8465 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F8465 = 1;
   }
   this->fields.TitleFadeOutPlayTime = 1.0;
   *(_QWORD *)&this->fields.BgmFadeOutPlayTime = 0x400000003F800000LL;
-  v3 = StringLiteral_1;
-  this->fields.movieName = (struct System_String_o *)StringLiteral_1;
+  v3 = StringLiteral_1/*""*/;
+  this->fields.movieName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields.movieName, v3);
   this->fields.moviePlayerDepth = 100;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
@@ -342,10 +342,10 @@ System_String_o *__fastcall TitleInfoWarBoardTitleComponent__CreateMoviePath(
 {
   if ( (byte_40F845F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9183, movieName);
+    sub_B16FFC(&StringLiteral_9183/*"Movie/{0}.usm"*/, movieName);
     byte_40F845F = 1;
   }
-  return System_String__Format((System_String_o *)StringLiteral_9183, (Il2CppObject *)movieName, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_9183/*"Movie/{0}.usm"*/, (Il2CppObject *)movieName, 0LL);
 }
 
 
@@ -555,7 +555,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__OnEnable(
   if ( (byte_40F8464 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_2644, v3);
+    sub_B16FFC(&StringLiteral_2644/*"BackAnchor/BtnBg"*/, v3);
     byte_40F8464 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -564,7 +564,7 @@ void __fastcall TitleInfoWarBoardTitleComponent__OnEnable(
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_2644, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_2644/*"BackAnchor/BtnBg"*/, 0LL);
 }
 
 
@@ -1018,8 +1018,8 @@ void __fastcall TitleInfoWarBoardTitleComponent__Setup(
     sub_B16FFC(&Method_TitleInfoWarBoardTitleComponent___c__DisplayClass31_0__Setup_b__0__, v24);
     sub_B16FFC(&TitleInfoWarBoardTitleComponent___c__DisplayClass31_0_TypeInfo, v25);
     sub_B16FFC(&WarBoardMovieHistoryManager_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_23756, v27);
-    sub_B16FFC(&StringLiteral_1, v28);
+    sub_B16FFC(&StringLiteral_23756/*"仮"*/, v27);
+    sub_B16FFC(&StringLiteral_1/*""*/, v28);
     byte_40F8455 = 1;
   }
   entity = 0LL;
@@ -1040,8 +1040,8 @@ void __fastcall TitleInfoWarBoardTitleComponent__Setup(
   this->fields.warBoardQuestEntity = warBoardQuestEnt;
   p_warBoardQuestEntity = &this->fields.warBoardQuestEntity;
   sub_B16F98(&this->fields.warBoardQuestEntity, warBoardQuestEnt);
-  v31 = StringLiteral_1;
-  this->fields.bgmName = (struct System_String_o *)StringLiteral_1;
+  v31 = StringLiteral_1/*""*/;
+  this->fields.bgmName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields.bgmName, v31);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -1183,7 +1183,7 @@ LABEL_77:
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   if ( !v78 )
     goto LABEL_77;
-  v55 = (System_String_o *)StringLiteral_23756;
+  v55 = (System_String_o *)StringLiteral_23756/*"仮"*/;
   QuestName = QuestEntity__getQuestName((QuestEntity_o *)v78, 0LL);
   if ( !v78 )
     goto LABEL_77;
@@ -1303,19 +1303,19 @@ void __fastcall TitleInfoWarBoardTitleComponent__StartTitleEffect(
 
   if ( (byte_40F8458 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6519, method);
-    sub_B16FFC(&StringLiteral_10628, v3);
+    sub_B16FFC(&StringLiteral_6519/*"FadeOutBGM"*/, method);
+    sub_B16FFC(&StringLiteral_10628/*"PlayBGM"*/, v3);
     byte_40F8458 = 1;
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6519,
+    (System_String_o *)StringLiteral_6519/*"FadeOutBGM"*/,
     this->fields.BgmFadeOutStartTime,
     0LL);
   if ( !System_String__IsNullOrEmpty(this->fields.bgmName, 0LL) )
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10628,
+      (System_String_o *)StringLiteral_10628/*"PlayBGM"*/,
       this->fields.BgmPlayStartTime,
       0LL);
   TitleInfoWarBoardTitleComponent__SetState(this, 3, v4);

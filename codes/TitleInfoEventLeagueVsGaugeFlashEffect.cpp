@@ -82,7 +82,7 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__setup(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&joinGroupId);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_B16FFC(&StringLiteral_16777, v12);
+    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_B16FFC(&StringLiteral_16777/*"bit_vs_gauge_flash_"*/, v12);
     byte_40FDFD4 = 1;
   }
   if ( point1 == point2 )
@@ -120,7 +120,7 @@ LABEL_34:
   UIProgressBar__set_value(v19, v14, 0LL);
   v36 = joinGroupId;
   v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v36);
-  v21 = System_String__Concat((Il2CppObject *)StringLiteral_16777, v20, 0LL);
+  v21 = System_String__Concat((Il2CppObject *)StringLiteral_16777/*"bit_vs_gauge_flash_"*/, v20, 0LL);
   gaugeSimpleAnim = (UnityEngine_Object_o *)v10->fields.gaugeSimpleAnim;
   v23 = v21;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

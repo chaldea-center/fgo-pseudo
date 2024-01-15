@@ -34,7 +34,7 @@ void __fastcall UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, con
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_15950, v4);
+    sub_B16FFC(&StringLiteral_15950/*"_MainTex"*/, v4);
     byte_40FE43A = 1;
   }
   Component_WebViewObject = (UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
@@ -52,7 +52,7 @@ void __fastcall UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, con
     material = UnityEngine_Renderer__get_material(Component_WebViewObject, 0LL);
     if ( !material )
       goto LABEL_13;
-    if ( UnityEngine_Material__HasProperty_40721564(material, (System_String_o *)StringLiteral_15950, 0LL) )
+    if ( UnityEngine_Material__HasProperty_40721564(material, (System_String_o *)StringLiteral_15950/*"_MainTex"*/, 0LL) )
     {
       time = UnityEngine_Time__get_time(0LL);
       v8 = UnityEngine_Mathf__Repeat(time * this->fields.offsetYPerSec, 1.0, 0LL);
@@ -63,7 +63,7 @@ void __fastcall UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, con
       {
         v12.fields.x = v8;
         v12.fields.y = v10;
-        UnityEngine_Material__SetTextureOffset(v11, (System_String_o *)StringLiteral_15950, v12, 0LL);
+        UnityEngine_Material__SetTextureOffset(v11, (System_String_o *)StringLiteral_15950/*"_MainTex"*/, v12, 0LL);
         return;
       }
 LABEL_13:

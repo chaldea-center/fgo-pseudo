@@ -153,7 +153,7 @@ void __fastcall HeelPortraitDetailDialogComponent__Open(
     sub_B16FFC(&System_Convert_TypeInfo, v8);
     sub_B16FFC(&Method_HeelPortraitDetailDialogComponent_EndOpen__, v9);
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_3252, v11);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v11);
     byte_40FC154 = 1;
   }
   if ( !this->fields.state )
@@ -230,7 +230,7 @@ void __fastcall HeelPortraitDetailDialogComponent__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( cancelButtonLb )
     {
       UILabel__set_text(cancelButtonLb, v36, 0LL);

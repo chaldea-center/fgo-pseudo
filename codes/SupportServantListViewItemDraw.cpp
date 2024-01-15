@@ -110,7 +110,7 @@ void __fastcall SupportServantListViewItemDraw__AdvanceWarningLabel(
     sub_B16FFC(&Method_System_Collections_Generic_List_SupportServantListViewItemDraw__get_Count__, method);
     sub_B16FFC(&Method_System_Collections_Generic_List_SupportServantListViewItemDraw__get_Item__, v4);
     sub_B16FFC(&SupportServantListViewItemDraw_TypeInfo, v5);
-    this = (SupportServantListViewItemDraw_o *)sub_B16FFC(&StringLiteral_1, v6);
+    this = (SupportServantListViewItemDraw_o *)sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FDA0C = 1;
   }
   warningLabelTexts = v3->fields.warningLabelTexts;
@@ -251,7 +251,7 @@ LABEL_42:
 LABEL_49:
     sub_B170D4();
   }
-  UILabel__set_text((UILabel_o *)warningLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text((UILabel_o *)warningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v34 = v3->fields.warningLabel;
   if ( !v34 )
     goto LABEL_49;
@@ -309,13 +309,13 @@ System_String_o *__fastcall SupportServantListViewItemDraw__GetWarningText(
   if ( (byte_40FDA0A & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_11584, v6);
-    sub_B16FFC(&StringLiteral_11607, v7);
-    sub_B16FFC(&StringLiteral_11594, v8);
-    sub_B16FFC(&StringLiteral_12499, v9);
-    sub_B16FFC(&StringLiteral_12449, v10);
-    sub_B16FFC(&StringLiteral_10375, v11);
-    sub_B16FFC(&StringLiteral_10376, v12);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v6);
+    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v7);
+    sub_B16FFC(&StringLiteral_11594/*"SELECT_NO_SORTIE"*/, v8);
+    sub_B16FFC(&StringLiteral_12499/*"SUPPORT_SELECT_USE_SUPPORT"*/, v9);
+    sub_B16FFC(&StringLiteral_12449/*"SUPPORT_SELECT_ALREADY_SET"*/, v10);
+    sub_B16FFC(&StringLiteral_10375/*"PARTY_ORGANIZATION_SERVANT_REMOVE_LEADER"*/, v11);
+    sub_B16FFC(&StringLiteral_10376/*"PARTY_ORGANIZATION_SERVANT_SAME_SERVANT"*/, v12);
     byte_40FDA0A = 1;
   }
   if ( !item )
@@ -329,7 +329,7 @@ System_String_o *__fastcall SupportServantListViewItemDraw__GetWarningText(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_11584;
+      v13 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
       return LocalizationManager__Get((System_String_o *)*v13, 0LL);
     }
     if ( item->fields.isEventJoin )
@@ -340,7 +340,7 @@ LABEL_15:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_11607;
+      v13 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
       return LocalizationManager__Get((System_String_o *)*v13, 0LL);
     }
     return 0LL;
@@ -354,7 +354,7 @@ LABEL_15:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_10375;
+      v13 = &StringLiteral_10375/*"PARTY_ORGANIZATION_SERVANT_REMOVE_LEADER"*/;
       return LocalizationManager__Get((System_String_o *)*v13, 0LL);
     }
     if ( !SupportServantListViewItem__get_IsCanNotSelectHeroine(item, (const MethodInfo *)item) )
@@ -365,7 +365,7 @@ LABEL_20:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = &StringLiteral_11594;
+    v13 = &StringLiteral_11594/*"SELECT_NO_SORTIE"*/;
     return LocalizationManager__Get((System_String_o *)*v13, 0LL);
   }
   if ( SupportServantListViewItem__get_IsCanNotSelectHeroine(item, (const MethodInfo *)item) )
@@ -377,7 +377,7 @@ LABEL_20:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = &StringLiteral_10376;
+    v13 = &StringLiteral_10376/*"PARTY_ORGANIZATION_SERVANT_SAME_SERVANT"*/;
     return LocalizationManager__Get((System_String_o *)*v13, 0LL);
   }
   if ( SupportServantListViewItem__get_IsUseServant(item, v14) )
@@ -387,7 +387,7 @@ LABEL_20:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = &StringLiteral_12499;
+    v13 = &StringLiteral_12499/*"SUPPORT_SELECT_USE_SUPPORT"*/;
     return LocalizationManager__Get((System_String_o *)*v13, 0LL);
   }
   if ( item->fields.isEventJoin )
@@ -399,7 +399,7 @@ LABEL_20:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_12449, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_12449/*"SUPPORT_SELECT_ALREADY_SET"*/, 0LL);
   useSet = item->fields.useSet;
   v18 = v16;
   v19 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(useSet, 0LL);
@@ -842,9 +842,9 @@ void __fastcall SupportServantListViewItemDraw__SetWarning(
     sub_B16FFC(&float_TypeInfo, v16);
     sub_B16FFC(&SupportServantListViewItemDraw_TypeInfo, v17);
     sub_B16FFC(&SupportServantListViewItemDraw_WarningLabelText_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_11591, v19);
-    sub_B16FFC(&StringLiteral_11583, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_11591/*"SELECT_FP_NUM_UP"*/, v19);
+    sub_B16FFC(&StringLiteral_11583/*"SELECT_BONUS_SKILL_INVALID"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40FDA09 = 1;
   }
   v22 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -867,7 +867,7 @@ void __fastcall SupportServantListViewItemDraw__SetWarning(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_11591, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_11591/*"SELECT_FP_NUM_UP"*/, 0LL);
     v28 = (double)v26 / 1000.0;
     *((float *)&methoda.return_type + 1) = v28;
     v29 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, (char *)&methoda.return_type + 4);
@@ -915,7 +915,7 @@ void __fastcall SupportServantListViewItemDraw__SetWarning(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_11583, 0LL);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_11583/*"SELECT_BONUS_SKILL_INVALID"*/, 0LL);
     v48 = (SupportServantListViewItemDraw_WarningLabelText_o *)sub_B170CC(
                                                                  SupportServantListViewItemDraw_WarningLabelText_TypeInfo,
                                                                  v44,
@@ -976,7 +976,7 @@ void __fastcall SupportServantListViewItemDraw__SetWarning(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v65 = LocalizationManager__Get((System_String_o *)StringLiteral_11583, 0LL);
+      v65 = LocalizationManager__Get((System_String_o *)StringLiteral_11583/*"SELECT_BONUS_SKILL_INVALID"*/, 0LL);
       v70 = (SupportServantListViewItemDraw_WarningLabelText_o *)sub_B170CC(
                                                                    SupportServantListViewItemDraw_WarningLabelText_TypeInfo,
                                                                    v66,
@@ -1039,7 +1039,7 @@ LABEL_81:
         v80 = this->fields.warningLabel;
         if ( v80 )
         {
-          UILabel__set_text(v80, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(v80, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           return;
         }
       }

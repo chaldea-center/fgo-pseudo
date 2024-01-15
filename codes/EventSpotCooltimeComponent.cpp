@@ -527,8 +527,8 @@ void __fastcall EventSpotCooltimeComponent__Initialize(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_SpotCooltimeRewardDialog___, v11);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_12938, v14);
-    sub_B16FFC(&StringLiteral_8909, v15);
+    sub_B16FFC(&StringLiteral_12938/*"SpotCooltimeRewardDialog"*/, v14);
+    sub_B16FFC(&StringLiteral_8909/*"MapGimmickEffect_SpotCooltimeInfo"*/, v15);
     byte_40FD1DD = 1;
   }
   this->fields.eventId = eventId;
@@ -541,7 +541,7 @@ void __fastcall EventSpotCooltimeComponent__Initialize(
     goto LABEL_21;
   Object_WarBoardWaitTimeSetting = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                         assetData,
-                                                                        (System_String_o *)StringLiteral_8909,
+                                                                        (System_String_o *)StringLiteral_8909/*"MapGimmickEffect_SpotCooltimeInfo"*/,
                                                                         (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   this->fields.spotCooltimeInfoPrefab = Object_WarBoardWaitTimeSetting;
   sub_B16F98(
@@ -564,7 +564,7 @@ void __fastcall EventSpotCooltimeComponent__Initialize(
   {
     v26 = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                       assetData,
-                                                      (System_String_o *)StringLiteral_12938,
+                                                      (System_String_o *)StringLiteral_12938/*"SpotCooltimeRewardDialog"*/,
                                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -743,18 +743,18 @@ void __fastcall EventSpotCooltimeComponent__Response(
     sub_B16FFC(&SoundManager_TypeInfo, v9);
     sub_B16FFC(&Method_EventSpotCooltimeComponent___c__Response_b__20_0__, v10);
     sub_B16FFC(&EventSpotCooltimeComponent___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_16373, v12);
-    sub_B16FFC(&StringLiteral_20980, v13);
-    sub_B16FFC(&StringLiteral_15571, v14);
-    sub_B16FFC(&StringLiteral_15807, v15);
+    sub_B16FFC(&StringLiteral_16373/*"ar192"*/, v12);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v13);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v14);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v15);
     byte_40FD1E0 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     v18 = (Il2CppObject *)System_String__Concat_43746016(
-                            (System_String_o *)StringLiteral_15571,
+                            (System_String_o *)StringLiteral_15571/*"["*/,
                             result,
-                            (System_String_o *)StringLiteral_15807,
+                            (System_String_o *)StringLiteral_15807/*"]"*/,
                             0LL);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -782,7 +782,7 @@ void __fastcall EventSpotCooltimeComponent__Response(
       {
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
-      v19 = SoundManager__playSe((System_String_o *)StringLiteral_16373, 0LL);
+      v19 = SoundManager__playSe((System_String_o *)StringLiteral_16373/*"ar192"*/, 0LL);
       if ( *((_DWORD *)v22 + 6) )
       {
         v27 = v22[4];
@@ -1103,8 +1103,8 @@ void __fastcall EventSpotCooltimeComponent___c__DisplayClass26_0___CheckServantS
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_12612, v4);
-    sub_B16FFC(&StringLiteral_12651, v5);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v4);
+    sub_B16FFC(&StringLiteral_12651/*"ServantCombine"*/, v5);
     byte_40F7068 = 1;
   }
   result = this->fields.result;
@@ -1113,7 +1113,7 @@ void __fastcall EventSpotCooltimeComponent___c__DisplayClass26_0___CheckServantS
     case 2:
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v12 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v16, v17, v18, v19);
-      SceneJumpInfo___ctor_29748028(v12, (System_String_o *)StringLiteral_12612, 0, 0LL);
+      SceneJumpInfo___ctor_29748028(v12, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 0, 0LL);
       if ( Instance )
       {
         v13 = 22;
@@ -1135,7 +1135,7 @@ LABEL_13:
     case 0:
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v12 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v8, v9, v10, v11);
-      SceneJumpInfo___ctor_29747932(v12, (System_String_o *)StringLiteral_12651, 0LL);
+      SceneJumpInfo___ctor_29747932(v12, (System_String_o *)StringLiteral_12651/*"ServantCombine"*/, 0LL);
       if ( Instance )
       {
         v13 = 32;

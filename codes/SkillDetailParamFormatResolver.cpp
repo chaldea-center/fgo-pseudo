@@ -60,7 +60,7 @@ void __fastcall SkillDetailParamFormatResolver___cctor(const MethodInfo *method)
     sub_B16FFC(&SkillDetailParamFormatResolver_NumericFormatData_TypeInfo, v7);
     sub_B16FFC(&System_Text_RegularExpressions_Regex_TypeInfo, v8);
     sub_B16FFC(&SkillDetailParamFormatResolver_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_15806, v10);
+    sub_B16FFC(&StringLiteral_15806/*"\\{\\{([0-9_]{1,5}):(\\w+):(\\w{1,2})\\}\\}"*/, v10);
     byte_40F9203 = 1;
   }
   v11 = (System_Text_RegularExpressions_Regex_o *)sub_B170CC(
@@ -69,7 +69,7 @@ void __fastcall SkillDetailParamFormatResolver___cctor(const MethodInfo *method)
                                                     v2,
                                                     v3,
                                                     v4);
-  System_Text_RegularExpressions_Regex___ctor_16010916(v11, (System_String_o *)StringLiteral_15806, 8, 0LL);
+  System_Text_RegularExpressions_Regex___ctor_16010916(v11, (System_String_o *)StringLiteral_15806/*"\\{\\{([0-9_]{1,5}):(\\w+):(\\w{1,2})\\}\\}"*/, 8, 0LL);
   static_fields = (BattleServantConfConponent_o *)SkillDetailParamFormatResolver_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v11;
   sub_B16F98(static_fields, (System_Int32_array **)v11, v13, v14, v15, v16, v17, v18);
@@ -167,7 +167,7 @@ System_String_o *__fastcall SkillDetailParamFormatResolver__Apply(
     sub_B16FFC(&SkillDetailParamFormatResolver_TypeInfo, v7);
     sub_B16FFC(&Method_SkillDetailParamFormatResolver___c__DisplayClass11_0__Apply_g__Evaluator_0__, v8);
     sub_B16FFC(&SkillDetailParamFormatResolver___c__DisplayClass11_0_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_23585, v10);
+    sub_B16FFC(&StringLiteral_23585/*"{{"*/, v10);
     byte_40F91FD = 1;
   }
   v11 = sub_B170CC(SkillDetailParamFormatResolver___c__DisplayClass11_0_TypeInfo, skillLvEntity, method, v3, v4);
@@ -188,7 +188,7 @@ System_String_o *__fastcall SkillDetailParamFormatResolver__Apply(
     v17);
   if ( !detailText )
     goto LABEL_12;
-  if ( System_String__Contains(detailText, (System_String_o *)StringLiteral_23585, 0LL) )
+  if ( System_String__Contains(detailText, (System_String_o *)StringLiteral_23585/*"{{"*/, 0LL) )
   {
     *(_QWORD *)(v11 + 16) = 0LL;
     sub_B16F98((BattleServantConfConponent_o *)(v11 + 16), 0LL, v18, v19, v20, v21, v22, v23);
@@ -252,7 +252,7 @@ System_String_o *__fastcall SkillDetailParamFormatResolver__ApplyGivenValues(
     sub_B16FFC(&SkillDetailParamFormatResolver_TypeInfo, v7);
     sub_B16FFC(&Method_SkillDetailParamFormatResolver___c__DisplayClass12_0__ApplyGivenValues_g__Evaluator_0__, v8);
     sub_B16FFC(&SkillDetailParamFormatResolver___c__DisplayClass12_0_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_23585, v10);
+    sub_B16FFC(&StringLiteral_23585/*"{{"*/, v10);
     byte_40F91FE = 1;
   }
   v11 = sub_B170CC(SkillDetailParamFormatResolver___c__DisplayClass12_0_TypeInfo, values, method, v3, v4);
@@ -265,7 +265,7 @@ System_String_o *__fastcall SkillDetailParamFormatResolver__ApplyGivenValues(
   sub_B16F98((BattleServantConfConponent_o *)(v11 + 16), (System_Int32_array **)values, v12, v13, v14, v15, v16, v17);
   if ( !detailText )
     goto LABEL_12;
-  if ( System_String__Contains(detailText, (System_String_o *)StringLiteral_23585, 0LL) )
+  if ( System_String__Contains(detailText, (System_String_o *)StringLiteral_23585/*"{{"*/, 0LL) )
   {
     v22 = SkillDetailParamFormatResolver_TypeInfo;
     if ( (BYTE3(SkillDetailParamFormatResolver_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -312,7 +312,7 @@ void __fastcall SkillDetailParamFormatResolver__AssertFailed(
   if ( (byte_40F9202 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, ent);
-    sub_B16FFC(&StringLiteral_12831, v5);
+    sub_B16FFC(&StringLiteral_12831/*"SkillId({0}),Lv({1}),DetailId({2})"*/, v5);
     byte_40F9202 = 1;
   }
   if ( matchObj )
@@ -328,7 +328,7 @@ void __fastcall SkillDetailParamFormatResolver__AssertFailed(
         v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
         skillDetailId = ent->fields.skillDetailId;
         v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &skillDetailId);
-        System_String__Format_43744796((System_String_o *)StringLiteral_12831, v7, v8, v9, 0LL);
+        System_String__Format_43744796((System_String_o *)StringLiteral_12831/*"SkillId({0}),Lv({1}),DetailId({2})"*/, v7, v8, v9, 0LL);
       }
     }
   }
@@ -421,8 +421,8 @@ bool __fastcall SkillDetailParamFormatResolver__TryGetFuncParamValue(
   if ( (byte_40F9200 & 1) == 0 )
   {
     sub_B16FFC(&SkillDetailParamFormatResolver_TypeInfo, valsKeyStr);
-    sub_B16FFC(&StringLiteral_15820, v7);
-    sub_B16FFC(&StringLiteral_22365, v8);
+    sub_B16FFC(&StringLiteral_15820/*"]が取れませんでした"*/, v7);
+    sub_B16FFC(&StringLiteral_22365/*"svalsから["*/, v8);
     byte_40F9200 = 1;
   }
   *value = 0;
@@ -431,9 +431,9 @@ bool __fastcall SkillDetailParamFormatResolver__TryGetFuncParamValue(
     if ( DataVals__TryGetParamByValsKey(vals, valsKeyStr, value, 0LL) )
       return 1;
     v16 = (System_Int32_array **)System_String__Concat_43746016(
-                                   (System_String_o *)StringLiteral_22365,
+                                   (System_String_o *)StringLiteral_22365/*"svalsから["*/,
                                    valsKeyStr,
-                                   (System_String_o *)StringLiteral_15820,
+                                   (System_String_o *)StringLiteral_15820/*"]が取れませんでした"*/,
                                    0LL);
     v17 = SkillDetailParamFormatResolver_TypeInfo;
     if ( (BYTE3(SkillDetailParamFormatResolver_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -538,9 +538,9 @@ bool __fastcall SkillDetailParamFormatResolver__TryGetNumericFormat(
     sub_B16FFC(&SkillDetailParamFormatResolver_TypeInfo, v13);
     sub_B16FFC(&Method_SkillDetailParamFormatResolver___c__TryGetNumericFormat_b__15_0__, v14);
     sub_B16FFC(&SkillDetailParamFormatResolver___c_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_23770, v16);
-    sub_B16FFC(&StringLiteral_23782, v17);
-    sub_B16FFC(&StringLiteral_698, v18);
+    sub_B16FFC(&StringLiteral_23770/*"指定可能な少数点以下の桁数は({0}～{1})です"*/, v16);
+    sub_B16FFC(&StringLiteral_23782/*"未定義フォーマット[{0}]\n指定可能なフォーマットは[{1}]です"*/, v17);
+    sub_B16FFC(&StringLiteral_698/*","*/, v18);
     byte_40F9201 = 1;
   }
   *fractionalDigit = 0;
@@ -585,7 +585,7 @@ bool __fastcall SkillDetailParamFormatResolver__TryGetNumericFormat(
       }
       static_fields = v36->static_fields;
       _9__15_0 = static_fields->__9__15_0;
-      v39 = (System_String_o *)StringLiteral_698;
+      v39 = (System_String_o *)StringLiteral_698/*","*/;
       if ( !_9__15_0 )
       {
         if ( (BYTE3(v36->vtable._0_Equals.methodPtr) & 4) != 0 && !v36->_2.cctor_finished )
@@ -619,7 +619,7 @@ bool __fastcall SkillDetailParamFormatResolver__TryGetNumericFormat(
       v49 = System_String__Join_43799176(v39, v48, 0LL);
       v64 = System_String__get_Chars(formatKey, 0, 0LL);
       v50 = j_il2cpp_value_box_0(char_TypeInfo, &v64);
-      v26 = &StringLiteral_23782;
+      v26 = &StringLiteral_23782/*"未定義フォーマット[{0}]\n指定可能なフォーマットは[{1}]です"*/;
       v28 = (Il2CppObject *)v50;
       v27 = (Il2CppObject *)v49;
       goto LABEL_25;
@@ -638,7 +638,7 @@ LABEL_31:
     v24 = j_il2cpp_value_box_0(int_TypeInfo, &v63);
     v62 = 3;
     v25 = j_il2cpp_value_box_0(int_TypeInfo, &v62);
-    v26 = &StringLiteral_23770;
+    v26 = &StringLiteral_23770/*"指定可能な少数点以下の桁数は({0}～{1})です"*/;
     v27 = (Il2CppObject *)v25;
     v28 = (Il2CppObject *)v24;
 LABEL_25:
@@ -745,8 +745,8 @@ DataVals_o *__fastcall SkillDetailParamFormatResolver_DataValsHierarchyCache__Ge
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__DataVals____ContainsKey__, v13);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__DataVals____get_Item__, v14);
     sub_B16FFC(&int_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_23550, v16);
-    sub_B16FFC(&StringLiteral_23573, v17);
+    sub_B16FFC(&StringLiteral_23550/*"{0}_{1})に該当する効果が存在しません"*/, v16);
+    sub_B16FFC(&StringLiteral_23573/*"{0}番目の効果が存在しません"*/, v17);
     byte_40F7A01 = 1;
   }
   *errorMessage = 0LL;
@@ -794,7 +794,7 @@ DataVals_o *__fastcall SkillDetailParamFormatResolver_DataValsHierarchyCache__Ge
           v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51);
           v50 = endFuncIndex + 1;
           v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-          v29 = System_String__Format_43739268((System_String_o *)StringLiteral_23550, v27, v28, 0LL);
+          v29 = System_String__Format_43739268((System_String_o *)StringLiteral_23550/*"{0}_{1})に該当する効果が存在しません"*/, v27, v28, 0LL);
           *errorMessage = v29;
           sub_B16F98(
             (BattleServantConfConponent_o *)errorMessage,
@@ -837,7 +837,7 @@ LABEL_17:
   {
     v52 = funcIndex + 1;
     v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-    v40 = System_String__Format((System_String_o *)StringLiteral_23573, v39, 0LL);
+    v40 = System_String__Format((System_String_o *)StringLiteral_23573/*"{0}番目の効果が存在しません"*/, v39, 0LL);
     *errorMessage = v40;
     sub_B16F98((BattleServantConfConponent_o *)errorMessage, (System_Int32_array **)v40, v41, v42, v43, v44, v45, v46);
     return 0LL;
@@ -1017,7 +1017,7 @@ System_String_o *__fastcall SkillDetailParamFormatResolver_NumericFormatData__Co
   if ( (byte_40F7A05 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&value);
-    sub_B16FFC(&StringLiteral_18865, v7);
+    sub_B16FFC(&StringLiteral_18865/*"f{0}"*/, v7);
     byte_40F7A05 = 1;
   }
   format.klass = 0LL;
@@ -1033,7 +1033,7 @@ System_String_o *__fastcall SkillDetailParamFormatResolver_NumericFormatData__Co
     *(double *)&format.klass = (double)value / (double)shiftDigit;
     v17 = fractionalDigit;
     v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
-    v10 = System_String__Format((System_String_o *)StringLiteral_18865, v9, 0LL);
+    v10 = System_String__Format((System_String_o *)StringLiteral_18865/*"f{0}"*/, v9, 0LL);
     v12 = System_Double__ToString_43691524(v11, &format, (const MethodInfo *)v10);
   }
   v14 = v12;
@@ -1079,7 +1079,7 @@ System_String_o *__fastcall SkillDetailParamFormatResolver_NumericFormatData__ge
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, v1);
     sub_B16FFC(&SkillDetailParamFormatResolver_NumericFormatData_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_6513, v3);
+    sub_B16FFC(&StringLiteral_6513/*"FUNC_VALUE_PERCENT"*/, v3);
     byte_40F7A03 = 1;
   }
   percentStr = (System_Int32_array **)SkillDetailParamFormatResolver_NumericFormatData_TypeInfo->static_fields->percentStr;
@@ -1090,7 +1090,7 @@ System_String_o *__fastcall SkillDetailParamFormatResolver_NumericFormatData__ge
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    percentStr = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_6513, 0LL);
+    percentStr = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_6513/*"FUNC_VALUE_PERCENT"*/, 0LL);
     static_fields = (BattleServantConfConponent_o *)SkillDetailParamFormatResolver_NumericFormatData_TypeInfo->static_fields;
     static_fields->klass = (BattleServantConfConponent_c *)percentStr;
     sub_B16F98(static_fields, percentStr, v6, v7, v8, v9, v10, v11);

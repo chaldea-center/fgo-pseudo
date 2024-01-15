@@ -56,8 +56,8 @@ void __fastcall CharaAppearanceEffectComponent__AppearanceStart(
     sub_B16FFC(&CommonEffectManager_TypeInfo, v11);
     sub_B16FFC(&CommonEffectLoadComponent_LoadEndHandler_TypeInfo, v12);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_13498, v14);
-    sub_B16FFC(&StringLiteral_4506, v15);
+    sub_B16FFC(&StringLiteral_13498/*"Talk/"*/, v14);
+    sub_B16FFC(&StringLiteral_4506/*"Custom/Sprite-ScriptActionFigureErasure"*/, v15);
     byte_40FCFAC = 1;
   }
   p_figure = (UIStandFigureRender_o **)&this->fields.figure;
@@ -81,7 +81,7 @@ void __fastcall CharaAppearanceEffectComponent__AppearanceStart(
   this->fields.addVolume = 1.2039;
   if ( !v18 )
     goto LABEL_36;
-  UIStandFigureRender__SetSharder(v18, (System_String_o *)StringLiteral_4506, 0LL);
+  UIStandFigureRender__SetSharder(v18, (System_String_o *)StringLiteral_4506/*"Custom/Sprite-ScriptActionFigureErasure"*/, 0LL);
   if ( !*p_figure )
     goto LABEL_36;
   UIStandFigureRender__SetFilterColor(*p_figure, this->fields.erasureColor, 0LL);
@@ -151,7 +151,7 @@ LABEL_36:
   v42.fields.z = v26;
   UnityEngine_Transform__set_localPosition(v34, v42, 0LL);
   v35 = this->fields.subEffectBase;
-  v36 = System_String__Concat_43743732((System_String_o *)StringLiteral_13498, this->fields.subEffectName, 0LL);
+  v36 = System_String__Concat_43743732((System_String_o *)StringLiteral_13498/*"Talk/"*/, this->fields.subEffectName, 0LL);
   v41 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_B170CC(
                                                         CommonEffectLoadComponent_LoadEndHandler_TypeInfo,
                                                         v37,
@@ -197,7 +197,7 @@ void __fastcall CharaAppearanceEffectComponent__EffectResume(
 
   if ( (byte_40FCFAD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9967, method);
+    sub_B16FFC(&StringLiteral_9967/*"OnEndEffect"*/, method);
     byte_40FCFAD = 1;
   }
   klass = this->klass;
@@ -215,8 +215,8 @@ void __fastcall CharaAppearanceEffectComponent__EffectResume(
   v7 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v6->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v7;
   sub_B16F98((BattleServantConfConponent_o *)&v6->fields.eventReceiver, v7, v8, v9, v10, v11, v12, v13);
-  v14 = (System_Int32_array **)StringLiteral_9967;
-  v6->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9967;
+  v14 = (System_Int32_array **)StringLiteral_9967/*"OnEndEffect"*/;
+  v6->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9967/*"OnEndEffect"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v6->fields.callWhenFinished, v14, v15, v16, v17, v18, v19, v20);
 }
 

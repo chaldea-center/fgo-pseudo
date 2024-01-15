@@ -178,19 +178,19 @@ void __fastcall PartyListViewItemDraw__SetItem(
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v9);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_18854, v11);
-    sub_B16FFC(&StringLiteral_12281, v12);
-    sub_B16FFC(&StringLiteral_18775, v13);
-    sub_B16FFC(&StringLiteral_18772, v14);
+    sub_B16FFC(&StringLiteral_18854/*"func_group_icon_1009_starting"*/, v11);
+    sub_B16FFC(&StringLiteral_12281/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_18775/*"formation_support_bg"*/, v13);
+    sub_B16FFC(&StringLiteral_18772/*"formation_member_bg"*/, v14);
     byte_40FDDA6 = 1;
   }
   if ( item && mode )
   {
     questRestrictionInfo = item->fields.questRestrictionInfo;
     baseSprite = this->fields.baseSprite;
-    v17 = (System_String_o **)&StringLiteral_18772;
+    v17 = (System_String_o **)&StringLiteral_18772/*"formation_member_bg"*/;
     if ( questRestrictionInfo && QuestRestrictionInfo__IsSupportOnly(questRestrictionInfo, 0LL) )
-      v17 = (System_String_o **)&StringLiteral_18775;
+      v17 = (System_String_o **)&StringLiteral_18775/*"formation_support_bg"*/;
     if ( !baseSprite )
       goto LABEL_62;
     UISprite__set_spriteName(baseSprite, *v17, 0LL);
@@ -319,19 +319,19 @@ LABEL_63:
               {
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
               }
-              AtlasManager__SetEventUI(startingMemberFriendshipUpSprite, (System_String_o *)StringLiteral_18854, 0LL);
+              AtlasManager__SetEventUI(startingMemberFriendshipUpSprite, (System_String_o *)StringLiteral_18854/*"func_group_icon_1009_starting"*/, 0LL);
               v48 = this->fields.startingMemberFriendshipUpLabel;
               if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !LocalizationManager_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12281, 0LL);
+              v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12281/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
               if ( v48 )
               {
                 UILabel__set_text(v48, v49, 0LL);
                 v50 = this->fields.startingMemberFriendshipUpLabelOver;
-                v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12281, 0LL);
+                v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12281/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
                 if ( v50 )
                 {
                   UILabel__set_text(v50, v51, 0LL);

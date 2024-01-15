@@ -164,12 +164,12 @@ void __fastcall NoTitleDialog__Init(NoTitleDialog_o *this, const MethodInfo *met
   if ( (byte_40F9334 & 1) == 0 )
   {
     sub_B16FFC(&NoTitleDialog_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F9334 = 1;
   }
-  NoTitleDialog__SetLabelText(this, this->fields.messageLabel, (System_String_o *)StringLiteral_1, v2);
-  NoTitleDialog__SetLabelText(this, this->fields.buttonDecideLabel, (System_String_o *)StringLiteral_1, v5);
-  NoTitleDialog__SetLabelText(this, this->fields.buttonCancelLabel, (System_String_o *)StringLiteral_1, v6);
+  NoTitleDialog__SetLabelText(this, this->fields.messageLabel, (System_String_o *)StringLiteral_1/*""*/, v2);
+  NoTitleDialog__SetLabelText(this, this->fields.buttonDecideLabel, (System_String_o *)StringLiteral_1/*""*/, v5);
+  NoTitleDialog__SetLabelText(this, this->fields.buttonCancelLabel, (System_String_o *)StringLiteral_1/*""*/, v6);
   window = (UIWidget_o *)this->fields.window;
   if ( (BYTE3(NoTitleDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NoTitleDialog_TypeInfo->_2.cctor_finished )
@@ -334,7 +334,7 @@ void __fastcall NoTitleDialog__Open(
     sub_B16FFC(&System_Action_TypeInfo, message);
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, v11);
     sub_B16FFC(&Method_NoTitleDialog_EndOpen__, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40F9335 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -353,7 +353,7 @@ void __fastcall NoTitleDialog__Open(
     v20);
   if ( !this )
     goto LABEL_13;
-  v22 = message ? message : (System_String_o *)StringLiteral_1;
+  v22 = message ? message : (System_String_o *)StringLiteral_1/*""*/;
   NoTitleDialog__SetLabelText(this, this->fields.messageLabel, v22, v21);
   NoTitleDialog__SetLabelText(this, this->fields.buttonDecideLabel, decideTxt, v23);
   NoTitleDialog__SetLabelText(this, this->fields.buttonCancelLabel, cancleTxt, v24);

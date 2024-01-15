@@ -44,23 +44,23 @@ void __fastcall SpendLimitMenu___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&SpendLimitMenu_TypeInfo, v1);
     sub_B16FFC(&string___TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1676, v4);
-    sub_B16FFC(&StringLiteral_1672, v5);
-    sub_B16FFC(&StringLiteral_1674, v6);
-    sub_B16FFC(&StringLiteral_1675, v7);
+    sub_B16FFC(&StringLiteral_1676/*"AGE_VEIFICATION_TYPE3"*/, v4);
+    sub_B16FFC(&StringLiteral_1672/*"AGE_VEIFICATION_NONE"*/, v5);
+    sub_B16FFC(&StringLiteral_1674/*"AGE_VEIFICATION_TYPE1"*/, v6);
+    sub_B16FFC(&StringLiteral_1675/*"AGE_VEIFICATION_TYPE2"*/, v7);
     byte_40F9D95 = 1;
   }
   v8 = sub_B17014(string___TypeInfo, 4LL, v2);
   if ( !v8 )
     sub_B170D4();
   v15 = (System_Int32_array **)v8;
-  v16 = StringLiteral_1672;
-  if ( StringLiteral_1672 )
+  v16 = StringLiteral_1672/*"AGE_VEIFICATION_NONE"*/;
+  if ( StringLiteral_1672/*"AGE_VEIFICATION_NONE"*/ )
   {
-    v16 = sub_B170BC(StringLiteral_1672, *(_QWORD *)&(*v15)->m_Items[9]);
+    v16 = sub_B170BC(StringLiteral_1672/*"AGE_VEIFICATION_NONE"*/, *(_QWORD *)&(*v15)->m_Items[9]);
     if ( !v16 )
       goto LABEL_26;
-    v17 = (System_Int32_array **)StringLiteral_1672;
+    v17 = (System_Int32_array **)StringLiteral_1672/*"AGE_VEIFICATION_NONE"*/;
   }
   else
   {
@@ -70,13 +70,13 @@ void __fastcall SpendLimitMenu___cctor(const MethodInfo *method)
     goto LABEL_25;
   v15[4] = (System_Int32_array *)v17;
   sub_B16F98((BattleServantConfConponent_o *)(v15 + 4), v17, v9, v10, v11, v12, v13, v14);
-  v16 = StringLiteral_1674;
-  if ( StringLiteral_1674 )
+  v16 = StringLiteral_1674/*"AGE_VEIFICATION_TYPE1"*/;
+  if ( StringLiteral_1674/*"AGE_VEIFICATION_TYPE1"*/ )
   {
-    v16 = sub_B170BC(StringLiteral_1674, *(_QWORD *)&(*v15)->m_Items[9]);
+    v16 = sub_B170BC(StringLiteral_1674/*"AGE_VEIFICATION_TYPE1"*/, *(_QWORD *)&(*v15)->m_Items[9]);
     if ( !v16 )
       goto LABEL_26;
-    v17 = (System_Int32_array **)StringLiteral_1674;
+    v17 = (System_Int32_array **)StringLiteral_1674/*"AGE_VEIFICATION_TYPE1"*/;
   }
   else
   {
@@ -86,13 +86,13 @@ void __fastcall SpendLimitMenu___cctor(const MethodInfo *method)
     goto LABEL_25;
   v15[5] = (System_Int32_array *)v17;
   sub_B16F98((BattleServantConfConponent_o *)(v15 + 5), v17, v9, v18, v19, v20, v21, v22);
-  v16 = StringLiteral_1675;
-  if ( StringLiteral_1675 )
+  v16 = StringLiteral_1675/*"AGE_VEIFICATION_TYPE2"*/;
+  if ( StringLiteral_1675/*"AGE_VEIFICATION_TYPE2"*/ )
   {
-    v16 = sub_B170BC(StringLiteral_1675, *(_QWORD *)&(*v15)->m_Items[9]);
+    v16 = sub_B170BC(StringLiteral_1675/*"AGE_VEIFICATION_TYPE2"*/, *(_QWORD *)&(*v15)->m_Items[9]);
     if ( !v16 )
       goto LABEL_26;
-    v17 = (System_Int32_array **)StringLiteral_1675;
+    v17 = (System_Int32_array **)StringLiteral_1675/*"AGE_VEIFICATION_TYPE2"*/;
   }
   else
   {
@@ -102,13 +102,13 @@ void __fastcall SpendLimitMenu___cctor(const MethodInfo *method)
     goto LABEL_25;
   v15[6] = (System_Int32_array *)v17;
   sub_B16F98((BattleServantConfConponent_o *)(v15 + 6), v17, v9, v23, v24, v25, v26, v27);
-  v16 = StringLiteral_1676;
-  if ( StringLiteral_1676 )
+  v16 = StringLiteral_1676/*"AGE_VEIFICATION_TYPE3"*/;
+  if ( StringLiteral_1676/*"AGE_VEIFICATION_TYPE3"*/ )
   {
-    v16 = sub_B170BC(StringLiteral_1676, *(_QWORD *)&(*v15)->m_Items[9]);
+    v16 = sub_B170BC(StringLiteral_1676/*"AGE_VEIFICATION_TYPE3"*/, *(_QWORD *)&(*v15)->m_Items[9]);
     if ( v16 )
     {
-      v17 = (System_Int32_array **)StringLiteral_1676;
+      v17 = (System_Int32_array **)StringLiteral_1676/*"AGE_VEIFICATION_TYPE3"*/;
       goto LABEL_23;
     }
 LABEL_26:
@@ -255,19 +255,19 @@ void __fastcall SpendLimitMenu__Init(SpendLimitMenu_o *this, const MethodInfo *m
 
   if ( (byte_40F9D8F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9D8F = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -378,9 +378,9 @@ void __fastcall SpendLimitMenu__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
     sub_B16FFC(&Method_SpendLimitMenu_EndOpen__, v13);
     sub_B16FFC(&SpendLimitMenu_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_12240, v15);
-    sub_B16FFC(&StringLiteral_12241, v16);
-    sub_B16FFC(&StringLiteral_12242, v17);
+    sub_B16FFC(&StringLiteral_12240/*"SPEND_LIMIT_CLOSE"*/, v15);
+    sub_B16FFC(&StringLiteral_12241/*"SPEND_LIMIT_MESSAGE"*/, v16);
+    sub_B16FFC(&StringLiteral_12242/*"SPEND_LIMIT_TITLE"*/, v17);
     byte_40F9D90 = 1;
   }
   state = this->fields.state;
@@ -428,12 +428,12 @@ void __fastcall SpendLimitMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_12242, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_12242/*"SPEND_LIMIT_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_23;
     UILabel__set_text(titleLabel, v23, 0LL);
     messageLabel = this->fields.messageLabel;
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12241, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12241/*"SPEND_LIMIT_MESSAGE"*/, 0LL);
     v28 = v25;
     v29 = SpendLimitMenu_TypeInfo;
     if ( (BYTE3(SpendLimitMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -456,7 +456,7 @@ void __fastcall SpendLimitMenu__Open(
     if ( !messageLabel
       || (UILabel__set_text(messageLabel, v33, 0LL),
           closeLabel = this->fields.closeLabel,
-          v35 = LocalizationManager__Get((System_String_o *)StringLiteral_12240, 0LL),
+          v35 = LocalizationManager__Get((System_String_o *)StringLiteral_12240/*"SPEND_LIMIT_CLOSE"*/, 0LL),
           !closeLabel) )
     {
 LABEL_23:
@@ -517,10 +517,10 @@ System_String_o *__fastcall SpendLimitMenu__get_closeBtnPath(SpendLimitMenu_o *t
 {
   if ( (byte_40F9D93 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15416, method);
+    sub_B16FFC(&StringLiteral_15416/*"Window/CloseButton"*/, method);
     byte_40F9D93 = 1;
   }
-  return (System_String_o *)StringLiteral_15416;
+  return (System_String_o *)StringLiteral_15416/*"Window/CloseButton"*/;
 }
 
 

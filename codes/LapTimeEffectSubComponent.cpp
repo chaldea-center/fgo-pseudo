@@ -30,9 +30,9 @@ void __fastcall LapTimeEffectSubComponent__RecvParam(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, param);
     sub_B16FFC(&RaceResultEffectParam_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_10966, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
-    sub_B16FFC(&StringLiteral_5667, v8);
+    sub_B16FFC(&StringLiteral_10966/*"RACE_TARGET_GOAL_RANK"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
+    sub_B16FFC(&StringLiteral_5667/*"EVENT_RACE_RESULT_TIME_NONE"*/, v8);
     byte_40FC21C = 1;
   }
   if ( param
@@ -42,7 +42,7 @@ void __fastcall LapTimeEffectSubComponent__RecvParam(
     && v12[6] >= 5 )
   {
     v13 = *((_QWORD *)v12 + 7);
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_10966, 0LL);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_10966/*"RACE_TARGET_GOAL_RANK"*/, 0LL);
     if ( v13 <= (int)Value )
     {
       monitor = param[1].monitor;
@@ -73,7 +73,7 @@ LABEL_24:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      LapTime = LocalizationManager__Get((System_String_o *)StringLiteral_5667, 0LL);
+      LapTime = LocalizationManager__Get((System_String_o *)StringLiteral_5667/*"EVENT_RACE_RESULT_TIME_NONE"*/, 0LL);
       if ( !label )
         goto LABEL_24;
     }
@@ -85,7 +85,7 @@ LABEL_24:
     v10 = this->fields.label;
     if ( !v10 )
       goto LABEL_24;
-    v11 = (System_String_o *)StringLiteral_1;
+    v11 = (System_String_o *)StringLiteral_1/*""*/;
   }
   UILabel__set_text(v10, v11, 0LL);
 }

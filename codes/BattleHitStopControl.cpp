@@ -159,8 +159,8 @@ bool __fastcall BattleHitStopControl__stopwaitCor_d__5__MoveNext(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v6);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_21714, v8);
-    sub_B16FFC(&StringLiteral_22237, v9);
+    sub_B16FFC(&StringLiteral_21714/*"resumeAnimation"*/, v8);
+    sub_B16FFC(&StringLiteral_22237/*"stopAnimation"*/, v9);
     byte_40F8519 = 1;
   }
   memset(&i, 0, sizeof(i));
@@ -184,7 +184,7 @@ bool __fastcall BattleHitStopControl__stopwaitCor_d__5__MoveNext(
                 (const MethodInfo_2074054 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
               UnityEngine_GameObject__SendMessage_40693392(
                 (UnityEngine_GameObject_o *)i.fields.current,
-                (System_String_o *)StringLiteral_21714,
+                (System_String_o *)StringLiteral_21714/*"resumeAnimation"*/,
                 0LL) )
         {
           if ( !i.fields.current )
@@ -238,7 +238,7 @@ LABEL_27:
           (const MethodInfo_2074054 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
         UnityEngine_GameObject__SendMessage_40693392(
           (UnityEngine_GameObject_o *)i.fields.current,
-          (System_String_o *)StringLiteral_22237,
+          (System_String_o *)StringLiteral_22237/*"stopAnimation"*/,
           0LL) )
   {
     if ( !i.fields.current )

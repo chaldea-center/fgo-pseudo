@@ -17,14 +17,14 @@ void __fastcall EventExpeditionStartRequest__beginRequest(
 
   if ( (byte_40FC692 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18403, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_18562, v9);
-    sub_B16FFC(&StringLiteral_21381, v10);
+    sub_B16FFC(&StringLiteral_18403/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_B16FFC(&StringLiteral_18562/*"expeditionIdx"*/, v9);
+    sub_B16FFC(&StringLiteral_21381/*"pieceIdx"*/, v10);
     byte_40FC692 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18403, eventId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18562, expeditionIdx, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21381, pieceIdx, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18403/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18562/*"expeditionIdx"*/, expeditionIdx, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21381/*"pieceIdx"*/, pieceIdx, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -39,7 +39,7 @@ System_String_o *__fastcall EventExpeditionStartRequest__getURL(
   if ( (byte_40FC691 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18389, v2);
+    sub_B16FFC(&StringLiteral_18389/*"event/expeditionStart"*/, v2);
     byte_40FC691 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -48,7 +48,7 @@ System_String_o *__fastcall EventExpeditionStartRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18389, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18389/*"event/expeditionStart"*/, 0LL);
 }
 
 

@@ -505,15 +505,15 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_6368, v5);
-    sub_B16FFC(&StringLiteral_6369, v6);
-    sub_B16FFC(&StringLiteral_6370, v7);
-    sub_B16FFC(&StringLiteral_6372, v8);
-    sub_B16FFC(&StringLiteral_6366, v9);
-    sub_B16FFC(&StringLiteral_6365, v10);
-    sub_B16FFC(&StringLiteral_6373, v11);
-    sub_B16FFC(&StringLiteral_6371, v12);
-    this = (RestrictionEntity_o *)sub_B16FFC(&StringLiteral_6367, v13);
+    sub_B16FFC(&StringLiteral_6368/*"FOLLOWER_SELECT_QUEST_RESTRICTION_MY_SERVANT_NUM_MAIN_TITLE"*/, v5);
+    sub_B16FFC(&StringLiteral_6369/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE"*/, v6);
+    sub_B16FFC(&StringLiteral_6370/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE"*/, v7);
+    sub_B16FFC(&StringLiteral_6372/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE"*/, v8);
+    sub_B16FFC(&StringLiteral_6366/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE_TITLE"*/, v9);
+    sub_B16FFC(&StringLiteral_6365/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION_MAIN_TITLE"*/, v10);
+    sub_B16FFC(&StringLiteral_6373/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE"*/, v11);
+    sub_B16FFC(&StringLiteral_6371/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, v12);
+    this = (RestrictionEntity_o *)sub_B16FFC(&StringLiteral_6367/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION_TITLE"*/, v13);
     byte_40FC831 = 1;
   }
   switch ( v3->fields.type )
@@ -524,7 +524,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = &StringLiteral_6370;
+      v14 = &StringLiteral_6370/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE"*/;
       goto LABEL_40;
     case 6:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -532,7 +532,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = &StringLiteral_6372;
+      v14 = &StringLiteral_6372/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE"*/;
       goto LABEL_40;
     case 7:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -540,7 +540,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = &StringLiteral_6367;
+      v14 = &StringLiteral_6367/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION_TITLE"*/;
       goto LABEL_40;
     case 8:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -548,7 +548,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = &StringLiteral_6365;
+      v14 = &StringLiteral_6365/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION_MAIN_TITLE"*/;
       goto LABEL_40;
     case 9:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -556,7 +556,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = &StringLiteral_6366;
+      v14 = &StringLiteral_6366/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE_TITLE"*/;
       goto LABEL_40;
     case 0xA:
       targetVals = v3->fields.targetVals;
@@ -578,7 +578,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_6369, 0LL);
+      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_6369/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE"*/, 0LL);
       name = v3->fields.name;
       v22 = v20;
       v25 = v17;
@@ -591,7 +591,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = &StringLiteral_6368;
+      v14 = &StringLiteral_6368/*"FOLLOWER_SELECT_QUEST_RESTRICTION_MY_SERVANT_NUM_MAIN_TITLE"*/;
       goto LABEL_40;
     case 0xF:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -599,7 +599,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = &StringLiteral_6373;
+      v14 = &StringLiteral_6373/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE"*/;
       goto LABEL_40;
     default:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -607,7 +607,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = &StringLiteral_6371;
+      v14 = &StringLiteral_6371/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/;
 LABEL_40:
       v18 = LocalizationManager__Get((System_String_o *)*v14, 0LL);
       return System_String__Format(v18, (Il2CppObject *)v3->fields.name, 0LL);

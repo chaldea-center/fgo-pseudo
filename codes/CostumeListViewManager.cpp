@@ -349,7 +349,7 @@ void __fastcall CostumeListViewManager__RequestListObject(
     sub_B16FFC(&Method_CostumeListViewManager_OnMoveEnd__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_CostumeListViewObject__get_Count__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_CostumeListViewObject__get_Item__, v9);
-    sub_B16FFC(&StringLiteral_10004, v10);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v10);
     byte_40FBDCE = 1;
   }
   ObjectList = CostumeListViewManager__get_ObjectList(this, *(const MethodInfo **)&mode);
@@ -362,7 +362,7 @@ void __fastcall CostumeListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }

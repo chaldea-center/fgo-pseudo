@@ -147,16 +147,16 @@ void __fastcall ContinueDeviceDispMenu__Init(ContinueDeviceDispMenu_o *this, con
 
   if ( (byte_40FBD8B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FBD8B = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL)
-    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
     sub_B170D4();
@@ -216,7 +216,7 @@ void __fastcall ContinueDeviceDispMenu__OnClickCopy(ContinueDeviceDispMenu_o *th
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_3356, v8);
+    sub_B16FFC(&StringLiteral_3356/*"CONTINUE_DEVICE_DIALOG_MESSAGE1"*/, v8);
     byte_40FBD8E = 1;
   }
   if ( this->fields.state == 2 )
@@ -240,7 +240,7 @@ void __fastcall ContinueDeviceDispMenu__OnClickCopy(ContinueDeviceDispMenu_o *th
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3356, 0LL);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3356/*"CONTINUE_DEVICE_DIALOG_MESSAGE1"*/, 0LL);
     v16 = (NotificationDialog_ClickDelegate_o *)sub_B170CC(
                                                   NotificationDialog_ClickDelegate_TypeInfo,
                                                   v12,
@@ -353,13 +353,13 @@ void __fastcall ContinueDeviceDispMenu__Open(
     sub_B16FFC(&System_Action_TypeInfo, code);
     sub_B16FFC(&Method_ContinueDeviceDispMenu_EndOpen__, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_26, v13);
-    sub_B16FFC(&StringLiteral_3361, v14);
-    sub_B16FFC(&StringLiteral_3357, v15);
-    sub_B16FFC(&StringLiteral_3360, v16);
-    sub_B16FFC(&StringLiteral_3359, v17);
-    sub_B16FFC(&StringLiteral_3358, v18);
-    sub_B16FFC(&StringLiteral_3374, v19);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v13);
+    sub_B16FFC(&StringLiteral_3361/*"CONTINUE_DEVICE_DISP_TITLE"*/, v14);
+    sub_B16FFC(&StringLiteral_3357/*"CONTINUE_DEVICE_DISP_CANCEL"*/, v15);
+    sub_B16FFC(&StringLiteral_3360/*"CONTINUE_DEVICE_DISP_EXPLANATIOIN2"*/, v16);
+    sub_B16FFC(&StringLiteral_3359/*"CONTINUE_DEVICE_DISP_DECIDE"*/, v17);
+    sub_B16FFC(&StringLiteral_3358/*"CONTINUE_DEVICE_DISP_COPY"*/, v18);
+    sub_B16FFC(&StringLiteral_3374/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/, v19);
     byte_40FBD8C = 1;
   }
   state = this->fields.state;
@@ -406,28 +406,28 @@ void __fastcall ContinueDeviceDispMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3361, 0LL);
+    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3361/*"CONTINUE_DEVICE_DISP_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_17;
     UILabel__set_text(titleLabel, v28, 0LL);
     explanation2Label = this->fields.explanation2Label;
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3360, 0LL);
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3374, 0LL);
-    v32 = System_String__Concat_43746016(v30, (System_String_o *)StringLiteral_26, v31, 0LL);
+    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3360/*"CONTINUE_DEVICE_DISP_EXPLANATIOIN2"*/, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3374/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/, 0LL);
+    v32 = System_String__Concat_43746016(v30, (System_String_o *)StringLiteral_26/*"\n"*/, v31, 0LL);
     if ( !explanation2Label )
       goto LABEL_17;
     UILabel__set_text(explanation2Label, v32, 0LL);
     copyLabel = this->fields.copyLabel;
-    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3358, 0LL);
+    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3358/*"CONTINUE_DEVICE_DISP_COPY"*/, 0LL);
     if ( !copyLabel )
       goto LABEL_17;
     UILabel__set_text(copyLabel, v34, 0LL);
     decideLabel = this->fields.decideLabel;
-    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3359, 0LL);
+    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3359/*"CONTINUE_DEVICE_DISP_DECIDE"*/, 0LL);
     if ( !decideLabel
       || (UILabel__set_text(decideLabel, v36, 0LL),
           cancelLabel = this->fields.cancelLabel,
-          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3357, 0LL),
+          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3357/*"CONTINUE_DEVICE_DISP_CANCEL"*/, 0LL),
           !cancelLabel)
       || (UILabel__set_text(cancelLabel, v38, 0LL), (continueCodeLabel = this->fields.continueCodeLabel) == 0LL) )
     {

@@ -1392,13 +1392,13 @@ void __fastcall FriendRootComponent__CheckHelpUI(FriendRootComponent_o *this, co
   if ( (byte_40FD954 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6444, v3);
-    sub_B16FFC(&StringLiteral_6442, v4);
+    sub_B16FFC(&StringLiteral_6444/*"FRIEND_LOCK_HELP_TEXT"*/, v3);
+    sub_B16FFC(&StringLiteral_6442/*"FRIEND_HELP_TEXT"*/, v4);
     byte_40FD954 = 1;
   }
-  v5 = (System_String_o **)&StringLiteral_6442;
+  v5 = (System_String_o **)&StringLiteral_6442/*"FRIEND_HELP_TEXT"*/;
   if ( this->fields.isActiveModeKindButtons && this->fields.currentModeKind == 1 )
-    v5 = (System_String_o **)&StringLiteral_6444;
+    v5 = (System_String_o **)&StringLiteral_6444/*"FRIEND_LOCK_HELP_TEXT"*/;
   v6 = *v5;
   helpLabel = this->fields.helpLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1449,10 +1449,10 @@ void __fastcall FriendRootComponent__CheckModeKind(FriendRootComponent_o *this, 
     sub_B16FFC(&Method_DataManager_GetMasterData_TblFriendMaster___, method);
     sub_B16FFC(&Method_DataManager_GetMasterData_UserFollowMaster___, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_17060, v5);
-    sub_B16FFC(&StringLiteral_17066, v6);
-    sub_B16FFC(&StringLiteral_17065, v7);
-    sub_B16FFC(&StringLiteral_17059, v8);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v5);
+    sub_B16FFC(&StringLiteral_17066/*"button_infocheck_unreg"*/, v6);
+    sub_B16FFC(&StringLiteral_17065/*"button_infocheck_reg"*/, v7);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v8);
     byte_40FD989 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -1529,13 +1529,13 @@ LABEL_30:
 LABEL_21:
   currentModeKind = this->fields.currentModeKind;
   modeUserDetailSprite = this->fields.modeUserDetailSprite;
-  v27 = (System_String_o **)&StringLiteral_17059;
+  v27 = (System_String_o **)&StringLiteral_17059/*"button_alllock_reg"*/;
   if ( currentModeKind != 1 )
-    v27 = (System_String_o **)&StringLiteral_17060;
+    v27 = (System_String_o **)&StringLiteral_17060/*"button_alllock_unreg"*/;
   if ( !modeUserDetailSprite )
     goto LABEL_30;
   v28 = *v27;
-  v29 = (System_String_o **)(currentModeKind ? &StringLiteral_17066 : &StringLiteral_17065);
+  v29 = (System_String_o **)(currentModeKind ? &StringLiteral_17066/*"button_infocheck_unreg"*/ : &StringLiteral_17065/*"button_infocheck_reg"*/);
   UISprite__set_spriteName(modeUserDetailSprite, *v29, 0LL);
   modeEditLockSprite = this->fields.modeEditLockSprite;
   if ( !modeEditLockSprite )
@@ -1555,9 +1555,9 @@ bool __fastcall FriendRootComponent__CheckTabKind(FriendRootComponent_o *this, c
 
   if ( (byte_40FD958 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8690, method);
-    sub_B16FFC(&StringLiteral_8692, v3);
-    sub_B16FFC(&StringLiteral_8693, v4);
+    sub_B16FFC(&StringLiteral_8690/*"MENU_OPERATION_FRIEND"*/, method);
+    sub_B16FFC(&StringLiteral_8692/*"MENU_OPERATION_OFFERED"*/, v3);
+    sub_B16FFC(&StringLiteral_8693/*"MENU_OPERATION_SEARCH"*/, v4);
     byte_40FD958 = 1;
   }
   if ( !byte_40FD9BD )
@@ -1579,7 +1579,7 @@ bool __fastcall FriendRootComponent__CheckTabKind(FriendRootComponent_o *this, c
       myFSM = this->fields.myFSM;
       if ( myFSM )
       {
-        v8 = &StringLiteral_8693;
+        v8 = &StringLiteral_8693/*"MENU_OPERATION_SEARCH"*/;
         goto LABEL_17;
       }
       goto LABEL_19;
@@ -1587,7 +1587,7 @@ bool __fastcall FriendRootComponent__CheckTabKind(FriendRootComponent_o *this, c
       myFSM = this->fields.myFSM;
       if ( myFSM )
       {
-        v8 = &StringLiteral_8692;
+        v8 = &StringLiteral_8692/*"MENU_OPERATION_OFFERED"*/;
         goto LABEL_17;
       }
 LABEL_19:
@@ -1596,7 +1596,7 @@ LABEL_19:
       myFSM = this->fields.myFSM;
       if ( myFSM )
       {
-        v8 = &StringLiteral_8690;
+        v8 = &StringLiteral_8690/*"MENU_OPERATION_FRIEND"*/;
 LABEL_17:
         PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v8, 0LL);
         return 1;
@@ -1877,13 +1877,13 @@ void __fastcall FriendRootComponent__EndMaxFollowWarningOfferConfirm(
 
   if ( (byte_40FD9A1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8687, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, isDecide);
     byte_40FD9A1 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
 }
 
 
@@ -1958,13 +1958,13 @@ void __fastcall FriendRootComponent__EndMaxFriendWarningOfferConfirm(
 
   if ( (byte_40FD996 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8687, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, isDecide);
     byte_40FD996 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
 }
 
 
@@ -1989,7 +1989,7 @@ void __fastcall FriendRootComponent__EndNoSearchWarning(
   {
     sub_B16FFC(&FriendSearchMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_FriendRootComponent_OnSelectSearchFriend__, v4);
-    sub_B16FFC(&StringLiteral_11041, v5);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v5);
     byte_40FD983 = 1;
   }
   friendWarningDialog = this->fields.friendWarningDialog;
@@ -2008,7 +2008,7 @@ void __fastcall FriendRootComponent__EndNoSearchWarning(
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -2047,18 +2047,18 @@ void __fastcall FriendRootComponent__EndRequestFollowAssign(
     sub_B16FFC(&Method_FriendRootComponent_OnEndRequestDialog__, v7);
     sub_B16FFC(&JsonManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_11043, v10);
-    sub_B16FFC(&StringLiteral_11041, v11);
-    sub_B16FFC(&StringLiteral_20980, v12);
-    sub_B16FFC(&StringLiteral_20390, v13);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v10);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v11);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v12);
+    sub_B16FFC(&StringLiteral_20390/*"message"*/, v13);
     byte_40FD9A4 = 1;
   }
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      v19 = &StringLiteral_11041;
+      v19 = &StringLiteral_11041/*"REQUEST_NG"*/;
       goto LABEL_15;
     }
 LABEL_18:
@@ -2072,12 +2072,12 @@ LABEL_18:
   v15 = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)Dictionary;
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_20390,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_20390/*"message"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_11;
   Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
            v15,
-           (System_Type_o *)StringLiteral_20390,
+           (System_Type_o *)StringLiteral_20390/*"message"*/,
            (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
     goto LABEL_18;
@@ -2090,7 +2090,7 @@ LABEL_11:
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      v19 = &StringLiteral_11043;
+      v19 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_15:
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v19, 0LL);
       return;
@@ -2165,18 +2165,18 @@ void __fastcall FriendRootComponent__EndRequestFollowRemove(
     sub_B16FFC(&Method_FriendRootComponent_OnEndRequestDialog__, v7);
     sub_B16FFC(&JsonManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_11043, v10);
-    sub_B16FFC(&StringLiteral_11041, v11);
-    sub_B16FFC(&StringLiteral_20980, v12);
-    sub_B16FFC(&StringLiteral_20390, v13);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v10);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v11);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v12);
+    sub_B16FFC(&StringLiteral_20390/*"message"*/, v13);
     byte_40FD9AD = 1;
   }
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      v19 = &StringLiteral_11041;
+      v19 = &StringLiteral_11041/*"REQUEST_NG"*/;
       goto LABEL_15;
     }
 LABEL_18:
@@ -2190,12 +2190,12 @@ LABEL_18:
   v15 = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)Dictionary;
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_20390,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_20390/*"message"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_11;
   Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
            v15,
-           (System_Type_o *)StringLiteral_20390,
+           (System_Type_o *)StringLiteral_20390/*"message"*/,
            (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
     goto LABEL_18;
@@ -2208,7 +2208,7 @@ LABEL_11:
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      v19 = &StringLiteral_11043;
+      v19 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_15:
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v19, 0LL);
       return;
@@ -2283,19 +2283,19 @@ void __fastcall FriendRootComponent__EndRequestFriend(
     sub_B16FFC(&Method_FriendRootComponent_OnEndRequestDialog__, v7);
     sub_B16FFC(&JsonManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_11043, v10);
-    sub_B16FFC(&StringLiteral_11041, v11);
-    sub_B16FFC(&StringLiteral_20980, v12);
-    sub_B16FFC(&StringLiteral_20390, v13);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v10);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v11);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v12);
+    sub_B16FFC(&StringLiteral_20390/*"message"*/, v13);
     byte_40FD97E = 1;
   }
   MainMenuBar__UpdateNoticeNumber(0LL);
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      v19 = &StringLiteral_11041;
+      v19 = &StringLiteral_11041/*"REQUEST_NG"*/;
       goto LABEL_15;
     }
 LABEL_18:
@@ -2309,12 +2309,12 @@ LABEL_18:
   v15 = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)Dictionary;
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_20390,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_20390/*"message"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_11;
   Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
            v15,
-           (System_Type_o *)StringLiteral_20390,
+           (System_Type_o *)StringLiteral_20390/*"message"*/,
            (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
     goto LABEL_18;
@@ -2327,7 +2327,7 @@ LABEL_11:
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      v19 = &StringLiteral_11043;
+      v19 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_15:
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v19, 0LL);
       return;
@@ -2397,12 +2397,12 @@ void __fastcall FriendRootComponent__EndRequestFriendProfile(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_OtherUserGameMaster___, result);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_11043, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
-    sub_B16FFC(&StringLiteral_11041, v8);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v8);
     byte_40FD981 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
     goto LABEL_11;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -2428,7 +2428,7 @@ LABEL_11:
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      v23 = &StringLiteral_11041;
+      v23 = &StringLiteral_11041/*"REQUEST_NG"*/;
       goto LABEL_13;
     }
 LABEL_14:
@@ -2454,7 +2454,7 @@ LABEL_14:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_14;
-  v23 = &StringLiteral_11043;
+  v23 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_13:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v23, 0LL);
 }
@@ -2653,7 +2653,7 @@ void __fastcall FriendRootComponent__FriendLockRequst(
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v13);
     sub_B16FFC(&Method_FriendRootComponent___c__DisplayClass109_0__FriendLockRequst_b__0__, v14);
     sub_B16FFC(&FriendRootComponent___c__DisplayClass109_0_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_21129, v16);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v16);
     byte_40FD98F = 1;
   }
   v17 = sub_B170CC(FriendRootComponent___c__DisplayClass109_0_TypeInfo, onFinishedRequest, method, v3, v4);
@@ -2837,7 +2837,7 @@ LABEL_37:
   }
   ActionExtensions__Call_BlankEarth_QAARotateEarthResponse_(
     *(System_Action_T__o **)(v17 + 32),
-    (BlankEarth_QAARotateEarthResponse_o *)StringLiteral_21129,
+    (BlankEarth_QAARotateEarthResponse_o *)StringLiteral_21129/*"ok"*/,
     (const MethodInfo_2D39F2C *)Method_ActionExtensions_Call_string___);
 }
 
@@ -3207,13 +3207,13 @@ void __fastcall FriendRootComponent__OnEndRequestDialog(
   if ( (byte_40FD97F & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    sub_B16FFC(&StringLiteral_11043, v4);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v4);
     byte_40FD97F = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance || (CommonUI__CloseNotificationDialog(Instance, 0LL), (myFSM = this->fields.myFSM) == 0LL) )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
 }
 
 
@@ -3288,7 +3288,7 @@ void __fastcall FriendRootComponent__OnMoveEnd(FriendRootComponent_o *this, cons
     sub_B16FFC(&FriendSearchMenu_CallbackFunc_TypeInfo, v6);
     sub_B16FFC(&Method_FriendRootComponent_OnSelectFriendItem__, v7);
     sub_B16FFC(&Method_FriendRootComponent_OnSelectSearchFriend__, v8);
-    this = (FriendRootComponent_o *)sub_B16FFC(&StringLiteral_5461, v9);
+    this = (FriendRootComponent_o *)sub_B16FFC(&StringLiteral_5461/*"END_ACTION"*/, v9);
     byte_40FD984 = 1;
   }
   switch ( v5->fields.state )
@@ -3472,7 +3472,7 @@ LABEL_21:
   if ( !myFSM )
 LABEL_30:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461/*"END_ACTION"*/, 0LL);
 }
 
 
@@ -3638,16 +3638,16 @@ void __fastcall FriendRootComponent__OnSelectFriendItem(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v20);
     sub_B16FFC(&SoundManager_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_8701, v22);
-    sub_B16FFC(&StringLiteral_80, v23);
-    sub_B16FFC(&StringLiteral_8707, v24);
-    sub_B16FFC(&StringLiteral_8702, v25);
-    sub_B16FFC(&StringLiteral_8603, v26);
-    sub_B16FFC(&StringLiteral_8704, v27);
-    sub_B16FFC(&StringLiteral_2508, v28);
-    sub_B16FFC(&StringLiteral_8705, v29);
-    sub_B16FFC(&StringLiteral_1, v30);
-    sub_B16FFC(&StringLiteral_8706, v31);
+    sub_B16FFC(&StringLiteral_8701/*"MENU_SELECT_ITEM_ACCEPT"*/, v22);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v23);
+    sub_B16FFC(&StringLiteral_8707/*"MENU_SELECT_ITEM_REMOVE_FOLLOW"*/, v24);
+    sub_B16FFC(&StringLiteral_8702/*"MENU_SELECT_ITEM_CANCEL"*/, v25);
+    sub_B16FFC(&StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, v26);
+    sub_B16FFC(&StringLiteral_8704/*"MENU_SELECT_ITEM_OFFER"*/, v27);
+    sub_B16FFC(&StringLiteral_2508/*"BATTLE_SKILLCHARGETURN"*/, v28);
+    sub_B16FFC(&StringLiteral_8705/*"MENU_SELECT_ITEM_REJECT"*/, v29);
+    sub_B16FFC(&StringLiteral_1/*""*/, v30);
+    sub_B16FFC(&StringLiteral_8706/*"MENU_SELECT_ITEM_REMOVE"*/, v31);
     byte_40FD994 = 1;
   }
   v140 = 0LL;
@@ -3741,12 +3741,12 @@ void __fastcall FriendRootComponent__OnSelectFriendItem(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v77 = LocalizationManager__Get((System_String_o *)StringLiteral_8603, 0LL);
+      v77 = LocalizationManager__Get((System_String_o *)StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
       lv = v68->fields.lv;
       v78 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
       v79 = System_String__Format(v77, v78, 0LL);
-      v140 = System_String__Concat_43746016(v76, (System_String_o *)StringLiteral_80, v79, 0LL);
-      v80 = LocalizationManager__Get((System_String_o *)StringLiteral_2508, 0LL);
+      v140 = System_String__Concat_43746016(v76, (System_String_o *)StringLiteral_80/*" "*/, v79, 0LL);
+      v80 = LocalizationManager__Get((System_String_o *)StringLiteral_2508/*"BATTLE_SKILLCHARGETURN"*/, 0LL);
       if ( !v75 )
         goto LABEL_151;
       v81 = v80;
@@ -3777,7 +3777,7 @@ void __fastcall FriendRootComponent__OnSelectFriendItem(
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_151;
-      v85 = &StringLiteral_8704;
+      v85 = &StringLiteral_8704/*"MENU_SELECT_ITEM_OFFER"*/;
       goto LABEL_143;
     case 5:
       if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3817,7 +3817,7 @@ LABEL_151:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_151;
-      v85 = &StringLiteral_8701;
+      v85 = &StringLiteral_8701/*"MENU_SELECT_ITEM_ACCEPT"*/;
 LABEL_143:
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v85, 0LL);
       return;
@@ -3831,7 +3831,7 @@ LABEL_143:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_151;
-      v85 = &StringLiteral_8705;
+      v85 = &StringLiteral_8705/*"MENU_SELECT_ITEM_REJECT"*/;
       goto LABEL_143;
     case 7:
       if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3843,7 +3843,7 @@ LABEL_143:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_151;
-      v85 = &StringLiteral_8702;
+      v85 = &StringLiteral_8702/*"MENU_SELECT_ITEM_CANCEL"*/;
       goto LABEL_143;
     case 8:
       if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3863,9 +3863,9 @@ LABEL_143:
       if ( !myFSM )
         goto LABEL_151;
       if ( v89->fields.kind == 9 )
-        v85 = &StringLiteral_8707;
+        v85 = &StringLiteral_8707/*"MENU_SELECT_ITEM_REMOVE_FOLLOW"*/;
       else
-        v85 = &StringLiteral_8706;
+        v85 = &StringLiteral_8706/*"MENU_SELECT_ITEM_REMOVE"*/;
       goto LABEL_143;
     case 11:
       if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3980,17 +3980,17 @@ LABEL_143:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v51 = LocalizationManager__Get((System_String_o *)StringLiteral_8603, 0LL);
+        v51 = LocalizationManager__Get((System_String_o *)StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
         lv = v45->fields.lv;
         v52 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
         v53 = System_String__Format(v51, v52, 0LL);
-        name = System_String__Concat_43746016(v50, (System_String_o *)StringLiteral_80, v53, 0LL);
+        name = System_String__Concat_43746016(v50, (System_String_o *)StringLiteral_80/*" "*/, v53, 0LL);
         v54 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !v54 )
           goto LABEL_151;
         v56 = detail;
         v55 = name;
-        v57 = (System_String_o *)StringLiteral_1;
+        v57 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_58:
         CommonUI__OpenDetailLongInfoDialog(v54, v55, v57, v56, 1, 0, 0LL);
       }
@@ -4125,9 +4125,9 @@ void __fastcall FriendRootComponent__OnSelectOffer(
 
   if ( (byte_40FD99E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8703, *(_QWORD *)&state);
-    sub_B16FFC(&StringLiteral_8704, v7);
-    sub_B16FFC(&StringLiteral_8687, v8);
+    sub_B16FFC(&StringLiteral_8703/*"MENU_SELECT_ITEM_FOLLOW"*/, *(_QWORD *)&state);
+    sub_B16FFC(&StringLiteral_8704/*"MENU_SELECT_ITEM_OFFER"*/, v7);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v8);
     byte_40FD99E = 1;
   }
   classButtonControl = this->fields.classButtonControl;
@@ -4139,7 +4139,7 @@ void __fastcall FriendRootComponent__OnSelectOffer(
   {
     if ( myFSM )
     {
-      v11 = &StringLiteral_8704;
+      v11 = &StringLiteral_8704/*"MENU_SELECT_ITEM_OFFER"*/;
       goto LABEL_11;
     }
 LABEL_12:
@@ -4148,9 +4148,9 @@ LABEL_12:
   if ( !myFSM )
     goto LABEL_12;
   if ( state == 3 )
-    v11 = &StringLiteral_8703;
+    v11 = &StringLiteral_8703/*"MENU_SELECT_ITEM_FOLLOW"*/;
   else
-    v11 = &StringLiteral_8687;
+    v11 = &StringLiteral_8687/*"MENU_CANCEL"*/;
 LABEL_11:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v11, 0LL);
 }
@@ -4173,8 +4173,8 @@ void __fastcall FriendRootComponent__OnSelectSearchFriend(
 
   if ( (byte_40FD99D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v11);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v11);
     byte_40FD99D = 1;
   }
   this->fields.selectFriendCode = friendCode;
@@ -4190,9 +4190,9 @@ void __fastcall FriendRootComponent__OnSelectSearchFriend(
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  v13 = &StringLiteral_8688;
+  v13 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   if ( !isDecide )
-    v13 = &StringLiteral_8687;
+    v13 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v13, 0LL);
 }
 
@@ -4268,7 +4268,7 @@ void __fastcall FriendRootComponent__RefreshInfo(FriendRootComponent_o *this, co
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_6477, v8);
+    sub_B16FFC(&StringLiteral_6477/*"FRIEND_SHOW_INFOMATION"*/, v8);
     byte_40FD95A = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -4291,7 +4291,7 @@ void __fastcall FriendRootComponent__RefreshInfo(FriendRootComponent_o *this, co
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_6477, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_6477/*"FRIEND_SHOW_INFOMATION"*/, 0LL);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_18;
   v17 = v16;
@@ -4307,7 +4307,7 @@ void __fastcall FriendRootComponent__RefreshInfo(FriendRootComponent_o *this, co
     goto LABEL_18;
   UILabel__set_text(friendCountLabel, v21, 0LL);
   followCountLabel = this->fields.followCountLabel;
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_6477, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_6477/*"FRIEND_SHOW_INFOMATION"*/, 0LL);
   if ( !v15 )
     goto LABEL_18;
   v24 = v23;
@@ -4399,14 +4399,14 @@ void __fastcall FriendRootComponent__RefreshTab(FriendRootComponent_o *this, con
 
   if ( (byte_40FD959 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16994, method);
-    sub_B16FFC(&StringLiteral_16993, v3);
-    sub_B16FFC(&StringLiteral_16895, v4);
-    sub_B16FFC(&StringLiteral_16992, v5);
-    sub_B16FFC(&StringLiteral_16990, v6);
-    sub_B16FFC(&StringLiteral_16991, v7);
-    sub_B16FFC(&StringLiteral_16989, v8);
-    sub_B16FFC(&StringLiteral_16910, v9);
+    sub_B16FFC(&StringLiteral_16994/*"btn_txt_friendsearch_on"*/, method);
+    sub_B16FFC(&StringLiteral_16993/*"btn_txt_friendsearch_off"*/, v3);
+    sub_B16FFC(&StringLiteral_16895/*"btn_bg_09"*/, v4);
+    sub_B16FFC(&StringLiteral_16992/*"btn_txt_friendrequest_on"*/, v5);
+    sub_B16FFC(&StringLiteral_16990/*"btn_txt_friendlist_on"*/, v6);
+    sub_B16FFC(&StringLiteral_16991/*"btn_txt_friendrequest_off"*/, v7);
+    sub_B16FFC(&StringLiteral_16989/*"btn_txt_friendlist_off"*/, v8);
+    sub_B16FFC(&StringLiteral_16910/*"btn_bg_on"*/, v9);
     byte_40FD959 = 1;
   }
   if ( !byte_40FD9BD )
@@ -4460,27 +4460,27 @@ void __fastcall FriendRootComponent__RefreshTab(FriendRootComponent_o *this, con
     tabFriendTitleSprite = this->fields.tabFriendTitleSprite;
     if ( !tabFriendTitleSprite )
       goto LABEL_63;
-    UISprite__set_spriteName(tabFriendTitleSprite, (System_String_o *)StringLiteral_16989, 0LL);
+    UISprite__set_spriteName(tabFriendTitleSprite, (System_String_o *)StringLiteral_16989/*"btn_txt_friendlist_off"*/, 0LL);
     tabOfferedTitleSprite = this->fields.tabOfferedTitleSprite;
     if ( !tabOfferedTitleSprite )
       goto LABEL_63;
-    UISprite__set_spriteName(tabOfferedTitleSprite, (System_String_o *)StringLiteral_16991, 0LL);
+    UISprite__set_spriteName(tabOfferedTitleSprite, (System_String_o *)StringLiteral_16991/*"btn_txt_friendrequest_off"*/, 0LL);
     tabSearchTitleSprite = this->fields.tabSearchTitleSprite;
     if ( !tabSearchTitleSprite )
       goto LABEL_63;
-    UISprite__set_spriteName(tabSearchTitleSprite, (System_String_o *)StringLiteral_16994, 0LL);
+    UISprite__set_spriteName(tabSearchTitleSprite, (System_String_o *)StringLiteral_16994/*"btn_txt_friendsearch_on"*/, 0LL);
     tabFriendSprite = this->fields.tabFriendSprite;
     if ( !tabFriendSprite )
       goto LABEL_63;
-    UISprite__set_spriteName(tabFriendSprite, (System_String_o *)StringLiteral_16895, 0LL);
+    UISprite__set_spriteName(tabFriendSprite, (System_String_o *)StringLiteral_16895/*"btn_bg_09"*/, 0LL);
     tabOfferedSprite = this->fields.tabOfferedSprite;
     if ( !tabOfferedSprite )
       goto LABEL_63;
-    UISprite__set_spriteName(tabOfferedSprite, (System_String_o *)StringLiteral_16895, 0LL);
+    UISprite__set_spriteName(tabOfferedSprite, (System_String_o *)StringLiteral_16895/*"btn_bg_09"*/, 0LL);
     tabSearchSprite = this->fields.tabSearchSprite;
     if ( !tabSearchSprite )
       goto LABEL_63;
-    v36 = (System_String_o *)StringLiteral_16910;
+    v36 = (System_String_o *)StringLiteral_16910/*"btn_bg_on"*/;
   }
   else
   {
@@ -4522,23 +4522,23 @@ void __fastcall FriendRootComponent__RefreshTab(FriendRootComponent_o *this, con
       v43 = this->fields.tabFriendTitleSprite;
       if ( !v43 )
         goto LABEL_63;
-      UISprite__set_spriteName(v43, (System_String_o *)StringLiteral_16989, 0LL);
+      UISprite__set_spriteName(v43, (System_String_o *)StringLiteral_16989/*"btn_txt_friendlist_off"*/, 0LL);
       v44 = this->fields.tabOfferedTitleSprite;
       if ( !v44 )
         goto LABEL_63;
-      UISprite__set_spriteName(v44, (System_String_o *)StringLiteral_16992, 0LL);
+      UISprite__set_spriteName(v44, (System_String_o *)StringLiteral_16992/*"btn_txt_friendrequest_on"*/, 0LL);
       v45 = this->fields.tabSearchTitleSprite;
       if ( !v45 )
         goto LABEL_63;
-      UISprite__set_spriteName(v45, (System_String_o *)StringLiteral_16993, 0LL);
+      UISprite__set_spriteName(v45, (System_String_o *)StringLiteral_16993/*"btn_txt_friendsearch_off"*/, 0LL);
       v46 = this->fields.tabFriendSprite;
       if ( !v46 )
         goto LABEL_63;
-      UISprite__set_spriteName(v46, (System_String_o *)StringLiteral_16895, 0LL);
+      UISprite__set_spriteName(v46, (System_String_o *)StringLiteral_16895/*"btn_bg_09"*/, 0LL);
       v22 = this->fields.tabOfferedSprite;
       if ( !v22 )
         goto LABEL_63;
-      v23 = (System_String_o *)StringLiteral_16910;
+      v23 = (System_String_o *)StringLiteral_16910/*"btn_bg_on"*/;
     }
     else
     {
@@ -4580,29 +4580,29 @@ void __fastcall FriendRootComponent__RefreshTab(FriendRootComponent_o *this, con
       v18 = this->fields.tabFriendTitleSprite;
       if ( !v18 )
         goto LABEL_63;
-      UISprite__set_spriteName(v18, (System_String_o *)StringLiteral_16990, 0LL);
+      UISprite__set_spriteName(v18, (System_String_o *)StringLiteral_16990/*"btn_txt_friendlist_on"*/, 0LL);
       v19 = this->fields.tabOfferedTitleSprite;
       if ( !v19 )
         goto LABEL_63;
-      UISprite__set_spriteName(v19, (System_String_o *)StringLiteral_16991, 0LL);
+      UISprite__set_spriteName(v19, (System_String_o *)StringLiteral_16991/*"btn_txt_friendrequest_off"*/, 0LL);
       v20 = this->fields.tabSearchTitleSprite;
       if ( !v20 )
         goto LABEL_63;
-      UISprite__set_spriteName(v20, (System_String_o *)StringLiteral_16993, 0LL);
+      UISprite__set_spriteName(v20, (System_String_o *)StringLiteral_16993/*"btn_txt_friendsearch_off"*/, 0LL);
       v21 = this->fields.tabFriendSprite;
       if ( !v21 )
         goto LABEL_63;
-      UISprite__set_spriteName(v21, (System_String_o *)StringLiteral_16910, 0LL);
+      UISprite__set_spriteName(v21, (System_String_o *)StringLiteral_16910/*"btn_bg_on"*/, 0LL);
       v22 = this->fields.tabOfferedSprite;
       if ( !v22 )
         goto LABEL_63;
-      v23 = (System_String_o *)StringLiteral_16895;
+      v23 = (System_String_o *)StringLiteral_16895/*"btn_bg_09"*/;
     }
     UISprite__set_spriteName(v22, v23, 0LL);
     tabSearchSprite = this->fields.tabSearchSprite;
     if ( !tabSearchSprite )
       goto LABEL_63;
-    v36 = (System_String_o *)StringLiteral_16895;
+    v36 = (System_String_o *)StringLiteral_16895/*"btn_bg_09"*/;
   }
   UISprite__set_spriteName(tabSearchSprite, v36, 0LL);
   v47 = this->fields.tabFriendButton;
@@ -4682,7 +4682,7 @@ void __fastcall FriendRootComponent__RequestFollowAssign(FriendRootComponent_o *
     sub_B16FFC(&Method_NetworkManager_getRequest_FollowAssignRequest___, v6);
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_11041, v9);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v9);
     byte_40FD9A3 = 1;
   }
   if ( this->fields.selectFriendEntity )
@@ -4718,7 +4718,7 @@ LABEL_12:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_12;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -4778,7 +4778,7 @@ void __fastcall FriendRootComponent__RequestFriendAccept(FriendRootComponent_o *
     sub_B16FFC(&Method_NetworkManager_getRequest_FriendAcceptRequest___, v4);
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_11041, v7);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v7);
     byte_40FD97A = 1;
   }
   operationItemListViewManager = this->fields.operationItemListViewManager;
@@ -4821,7 +4821,7 @@ LABEL_13:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_13;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -4849,7 +4849,7 @@ void __fastcall FriendRootComponent__RequestFriendCancel(FriendRootComponent_o *
     sub_B16FFC(&Method_NetworkManager_getRequest_FriendCancelRequest___, v4);
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_11041, v7);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v7);
     byte_40FD97C = 1;
   }
   operationItemListViewManager = this->fields.operationItemListViewManager;
@@ -4892,7 +4892,7 @@ LABEL_13:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_13;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -4917,7 +4917,7 @@ void __fastcall FriendRootComponent__RequestFriendOffer(FriendRootComponent_o *t
     sub_B16FFC(&Method_NetworkManager_getRequest_FriendOfferRequest___, v6);
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_11041, v9);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v9);
     byte_40FD978 = 1;
   }
   if ( this->fields.selectFriendEntity )
@@ -4953,7 +4953,7 @@ LABEL_12:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_12;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -5025,9 +5025,9 @@ void __fastcall FriendRootComponent__RequestFriendProfile(FriendRootComponent_o 
     sub_B16FFC(&Method_NetworkManager_getRequest_ProfileTopRequest___, v11);
     sub_B16FFC(&NetworkManager_TypeInfo, v12);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_80, v14);
-    sub_B16FFC(&StringLiteral_11041, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v14);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40FD980 = 1;
   }
   selectFriendCode = this->fields.selectFriendCode;
@@ -5035,10 +5035,10 @@ void __fastcall FriendRootComponent__RequestFriendProfile(FriendRootComponent_o 
   {
     v18 = System_String__Replace_43750968(
             selectFriendCode,
-            (System_String_o *)StringLiteral_80,
-            (System_String_o *)StringLiteral_1,
+            (System_String_o *)StringLiteral_80/*" "*/,
+            (System_String_o *)StringLiteral_1/*""*/,
             0LL);
-    if ( System_String__op_Inequality(v18, (System_String_o *)StringLiteral_1, 0LL) )
+    if ( System_String__op_Inequality(v18, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     {
       v23 = (NetworkManager_ResultCallbackFunc_o *)sub_B170CC(
                                                      NetworkManager_ResultCallbackFunc_TypeInfo,
@@ -5088,7 +5088,7 @@ LABEL_14:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_14;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -5120,7 +5120,7 @@ void __fastcall FriendRootComponent__RequestFriendReject(FriendRootComponent_o *
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_11041, v8);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v8);
     byte_40FD97B = 1;
   }
   operationItemListViewManager = this->fields.operationItemListViewManager;
@@ -5168,7 +5168,7 @@ LABEL_14:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_14;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -5258,8 +5258,8 @@ void __fastcall FriendRootComponent__SelectFollowConfirm(FriendRootComponent_o *
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_1679, v12);
-    sub_B16FFC(&StringLiteral_1678, v13);
+    sub_B16FFC(&StringLiteral_1679/*"ALREADY_FOLLOWED_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_1678/*"ALREADY_FOLLOWED_MESSAGE"*/, v13);
     byte_40FD99F = 1;
   }
   if ( this->fields.state == 23 )
@@ -5319,8 +5319,8 @@ void __fastcall FriendRootComponent__SelectFollowConfirm(FriendRootComponent_o *
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v29 = LocalizationManager__Get((System_String_o *)StringLiteral_1679, 0LL);
-            v30 = LocalizationManager__Get((System_String_o *)StringLiteral_1678, 0LL);
+            v29 = LocalizationManager__Get((System_String_o *)StringLiteral_1679/*"ALREADY_FOLLOWED_TITLE"*/, 0LL);
+            v30 = LocalizationManager__Get((System_String_o *)StringLiteral_1678/*"ALREADY_FOLLOWED_MESSAGE"*/, 0LL);
             v35 = (NotificationDialog_ClickDelegate_o *)sub_B170CC(
                                                           NotificationDialog_ClickDelegate_TypeInfo,
                                                           v31,
@@ -5823,7 +5823,7 @@ void __fastcall FriendRootComponent__SelectSearchFriend(FriendRootComponent_o *t
 
   if ( (byte_40FD963 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5461, method);
+    sub_B16FFC(&StringLiteral_5461/*"END_ACTION"*/, method);
     byte_40FD963 = 1;
   }
   if ( this->fields.state == 1 )
@@ -5837,7 +5837,7 @@ void __fastcall FriendRootComponent__SelectSearchFriend(FriendRootComponent_o *t
     myFSM = this->fields.myFSM;
     if ( !myFSM )
       sub_B170D4();
-    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461, 0LL);
+    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461/*"END_ACTION"*/, 0LL);
   }
 }
 
@@ -5870,7 +5870,7 @@ void __fastcall FriendRootComponent__SelectShowFriend(FriendRootComponent_o *thi
   {
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_FriendRootComponent_OnMoveEnd__, v3);
-    sub_B16FFC(&StringLiteral_5461, v4);
+    sub_B16FFC(&StringLiteral_5461/*"END_ACTION"*/, v4);
     byte_40FD95B = 1;
   }
   if ( this->fields.state == 1 )
@@ -5919,7 +5919,7 @@ LABEL_12:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_12;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461/*"END_ACTION"*/, 0LL);
 }
 
 
@@ -6015,7 +6015,7 @@ void __fastcall FriendRootComponent__SelectShowOffered(FriendRootComponent_o *th
   {
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_FriendRootComponent_OnMoveEnd__, v3);
-    sub_B16FFC(&StringLiteral_5461, v4);
+    sub_B16FFC(&StringLiteral_5461/*"END_ACTION"*/, v4);
     byte_40FD95F = 1;
   }
   if ( this->fields.state == 1 )
@@ -6064,7 +6064,7 @@ LABEL_12:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_12;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461/*"END_ACTION"*/, 0LL);
 }
 
 
@@ -6240,16 +6240,16 @@ void __fastcall FriendRootComponent__SelectedFollowOfferConfirm(
 
   if ( (byte_40FD9A2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40FD9A2 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  v7 = &StringLiteral_8688;
+  v7 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   if ( !isDecide )
-    v7 = &StringLiteral_8687;
+    v7 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v7, 0LL);
 }
 
@@ -6266,16 +6266,16 @@ void __fastcall FriendRootComponent__SelectedFollowRemoveConfirm(
 
   if ( (byte_40FD99C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40FD99C = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  v7 = &StringLiteral_8688;
+  v7 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   if ( !isDecide )
-    v7 = &StringLiteral_8687;
+    v7 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v7, 0LL);
 }
 
@@ -6292,16 +6292,16 @@ void __fastcall FriendRootComponent__SelectedFriendAcceptConfirm(
 
   if ( (byte_40FD998 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40FD998 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  v7 = &StringLiteral_8688;
+  v7 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   if ( !isDecide )
-    v7 = &StringLiteral_8687;
+    v7 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v7, 0LL);
 }
 
@@ -6318,16 +6318,16 @@ void __fastcall FriendRootComponent__SelectedFriendCancelConfirm(
 
   if ( (byte_40FD99A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40FD99A = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  v7 = &StringLiteral_8688;
+  v7 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   if ( !isDecide )
-    v7 = &StringLiteral_8687;
+    v7 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v7, 0LL);
 }
 
@@ -6344,16 +6344,16 @@ void __fastcall FriendRootComponent__SelectedFriendOfferConfirm(
 
   if ( (byte_40FD997 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40FD997 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  v7 = &StringLiteral_8688;
+  v7 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   if ( !isDecide )
-    v7 = &StringLiteral_8687;
+    v7 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v7, 0LL);
 }
 
@@ -6370,16 +6370,16 @@ void __fastcall FriendRootComponent__SelectedFriendRejectConfirm(
 
   if ( (byte_40FD999 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40FD999 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  v7 = &StringLiteral_8688;
+  v7 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   if ( !isDecide )
-    v7 = &StringLiteral_8687;
+    v7 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v7, 0LL);
 }
 
@@ -6396,16 +6396,16 @@ void __fastcall FriendRootComponent__SelectedFriendRemoveConfirm(
 
   if ( (byte_40FD99B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40FD99B = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  v7 = &StringLiteral_8688;
+  v7 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   if ( !isDecide )
-    v7 = &StringLiteral_8687;
+    v7 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v7, 0LL);
 }
 
@@ -6495,7 +6495,7 @@ void __fastcall FriendRootComponent__ShowSearchResult(FriendRootComponent_o *thi
     sub_B16FFC(&Method_FriendRootComponent_OnSelectOffer__, v8);
     sub_B16FFC(&Method_FriendRootComponent_OnSelectSearchFriend__, v9);
     sub_B16FFC(&Method_FriendRootComponent_ShowSearchResult__, v10);
-    sub_B16FFC(&StringLiteral_5461, v11);
+    sub_B16FFC(&StringLiteral_5461/*"END_ACTION"*/, v11);
     byte_40FD965 = 1;
   }
   if ( this->fields.state == 23 )
@@ -6553,7 +6553,7 @@ void __fastcall FriendRootComponent__ShowSearchResult(FriendRootComponent_o *thi
 LABEL_14:
       sub_B170D4();
     }
-    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461, 0LL);
+    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461/*"END_ACTION"*/, 0LL);
     EventTutorialMaster__CheckTutorial(-1, 50, 0LL, 0, 0, 0, 0, 0LL);
   }
 }
@@ -6647,12 +6647,12 @@ void __fastcall FriendRootComponent___OnClickBack_b__96_0(
     sub_B16FFC(&Method_System_Action_string___ctor__, result);
     sub_B16FFC(&System_Action_string__TypeInfo, v5);
     sub_B16FFC(&Method_FriendRootComponent__OnClickBack_b__96_1__, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
     byte_40FD9B2 = 1;
   }
   if ( !result )
     sub_B170D4();
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     v12 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B170CC(
                                                                                  System_Action_string__TypeInfo,
@@ -6681,13 +6681,13 @@ void __fastcall FriendRootComponent___OnClickBack_b__96_1(
 
   if ( (byte_40FD9B3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21129, res);
-    sub_B16FFC(&StringLiteral_3034, v5);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, res);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v5);
     byte_40FD9B3 = 1;
   }
   if ( !res )
     goto LABEL_9;
-  if ( System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     friendSearchMenu = this->fields.friendSearchMenu;
     if ( friendSearchMenu )
@@ -6696,7 +6696,7 @@ void __fastcall FriendRootComponent___OnClickBack_b__96_1(
       myFSM = this->fields.myFSM;
       if ( myFSM )
       {
-        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034, 0LL);
+        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
         return;
       }
     }
@@ -6717,12 +6717,12 @@ void __fastcall FriendRootComponent___OnClickModeUserDetail_b__98_0(
   if ( (byte_40FD9B6 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, res);
-    sub_B16FFC(&StringLiteral_21129, v5);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
     byte_40FD9B6 = 1;
   }
   if ( !res )
     sub_B170D4();
-  if ( System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -6757,13 +6757,13 @@ void __fastcall FriendRootComponent___OnClickTabFriend_b__105_0(
   if ( (byte_40FD9B7 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, res);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_3074, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_3074/*"CLICK_TAB"*/, v6);
     byte_40FD9B7 = 1;
   }
   if ( !res )
     goto LABEL_23;
-  if ( !System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( !System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
     return;
   state = this->fields.state;
   if ( state <= 9 )
@@ -6786,7 +6786,7 @@ LABEL_16:
       myFSM = this->fields.myFSM;
       if ( myFSM )
       {
-        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3074, 0LL);
+        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3074/*"CLICK_TAB"*/, 0LL);
         return;
       }
     }
@@ -6836,12 +6836,12 @@ void __fastcall FriendRootComponent___OnClickTabOffered_b__106_0(
     sub_B16FFC(&Method_System_Action_string___ctor__, result);
     sub_B16FFC(&System_Action_string__TypeInfo, v5);
     sub_B16FFC(&Method_FriendRootComponent__OnClickTabOffered_b__106_1__, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
     byte_40FD9B8 = 1;
   }
   if ( !result )
     sub_B170D4();
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     v12 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B170CC(
                                                                                  System_Action_string__TypeInfo,
@@ -6880,13 +6880,13 @@ void __fastcall FriendRootComponent___OnClickTabOffered_b__106_1(
   if ( (byte_40FD9B9 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, res);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_3074, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_3074/*"CLICK_TAB"*/, v6);
     byte_40FD9B9 = 1;
   }
   if ( !res )
     goto LABEL_23;
-  if ( !System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( !System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
     return;
   state = this->fields.state;
   if ( state <= 9 )
@@ -6909,7 +6909,7 @@ LABEL_16:
       myFSM = this->fields.myFSM;
       if ( myFSM )
       {
-        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3074, 0LL);
+        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3074/*"CLICK_TAB"*/, 0LL);
         return;
       }
     }
@@ -6959,12 +6959,12 @@ void __fastcall FriendRootComponent___OnClickTabSearch_b__107_0(
     sub_B16FFC(&Method_System_Action_string___ctor__, result);
     sub_B16FFC(&System_Action_string__TypeInfo, v5);
     sub_B16FFC(&Method_FriendRootComponent__OnClickTabSearch_b__107_1__, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
     byte_40FD9BA = 1;
   }
   if ( !result )
     sub_B170D4();
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     v12 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B170CC(
                                                                                  System_Action_string__TypeInfo,
@@ -6999,13 +6999,13 @@ void __fastcall FriendRootComponent___OnClickTabSearch_b__107_1(
   if ( (byte_40FD9BB & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, res);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_3074, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_3074/*"CLICK_TAB"*/, v6);
     byte_40FD9BB = 1;
   }
   if ( !res )
     goto LABEL_18;
-  if ( !System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( !System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
     return;
   state = this->fields.state;
   if ( state > 9 )
@@ -7032,7 +7032,7 @@ LABEL_11:
       myFSM = this->fields.myFSM;
       if ( myFSM )
       {
-        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3074, 0LL);
+        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3074/*"CLICK_TAB"*/, 0LL);
         return;
       }
     }
@@ -7073,13 +7073,13 @@ void __fastcall FriendRootComponent___RequestFollowRemove_b__139_0(
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_21129, v9);
-    sub_B16FFC(&StringLiteral_11041, v10);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v9);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v10);
     byte_40FD9BC = 1;
   }
   if ( !res )
     goto LABEL_16;
-  if ( System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     operationItemListViewManager = this->fields.operationItemListViewManager;
     if ( !operationItemListViewManager )
@@ -7130,7 +7130,7 @@ LABEL_16:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_16;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -7163,13 +7163,13 @@ void __fastcall FriendRootComponent___RequestFriendOffer2_b__84_0(
     sub_B16FFC(&Method_NetworkManager_getRequest_FriendOfferRequest___, v5);
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_21129, v8);
-    sub_B16FFC(&StringLiteral_11041, v9);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v8);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v9);
     byte_40FD9B0 = 1;
   }
   if ( !res )
     goto LABEL_15;
-  if ( System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     operationItemListViewManager = this->fields.operationItemListViewManager;
     if ( !operationItemListViewManager )
@@ -7212,7 +7212,7 @@ LABEL_15:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_15;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -7248,13 +7248,13 @@ void __fastcall FriendRootComponent___RequestFriendRemove_b__88_0(
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_21129, v9);
-    sub_B16FFC(&StringLiteral_11041, v10);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v9);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v10);
     byte_40FD9B1 = 1;
   }
   if ( !res )
     goto LABEL_16;
-  if ( System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     operationItemListViewManager = this->fields.operationItemListViewManager;
     if ( !operationItemListViewManager )
@@ -7305,7 +7305,7 @@ LABEL_16:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_16;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -7331,13 +7331,13 @@ void __fastcall FriendRootComponent___afterMainMenubarSelect_b__97_0(
     sub_B16FFC(&Method_System_Action_string___ctor__, result);
     sub_B16FFC(&System_Action_string__TypeInfo, v5);
     sub_B16FFC(&Method_FriendRootComponent__afterMainMenubarSelect_b__97_1__, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
-    sub_B16FFC(&StringLiteral_11041, v8);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v8);
     byte_40FD9B4 = 1;
   }
   if ( !result )
     goto LABEL_8;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     v13 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B170CC(
                                                                                  System_Action_string__TypeInfo,
@@ -7357,7 +7357,7 @@ void __fastcall FriendRootComponent___afterMainMenubarSelect_b__97_0(
   if ( !myFSM )
 LABEL_8:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -7374,21 +7374,21 @@ void __fastcall FriendRootComponent___afterMainMenubarSelect_b__97_1(
 
   if ( (byte_40FD9B5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, res);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_11041, v6);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, res);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v6);
     byte_40FD9B5 = 1;
   }
   if ( !res
-    || (v7 = System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129, 0LL),
+    || (v7 = System_String__Equals_43731072(res, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL),
         (myFSM = this->fields.myFSM) == 0LL) )
   {
     sub_B170D4();
   }
   if ( v7 )
-    v9 = &StringLiteral_11043;
+    v9 = &StringLiteral_11043/*"REQUEST_OK"*/;
   else
-    v9 = &StringLiteral_11041;
+    v9 = &StringLiteral_11041/*"REQUEST_NG"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v9, 0LL);
 }
 
@@ -7796,7 +7796,7 @@ void __fastcall FriendRootComponent__messageDispChangeRequest(
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v12);
     sub_B16FFC(&Method_FriendRootComponent___c__DisplayClass108_0__messageDispChangeRequest_b__0__, v13);
     sub_B16FFC(&FriendRootComponent___c__DisplayClass108_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_21129, v15);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v15);
     byte_40FD98E = 1;
   }
   v16 = sub_B170CC(FriendRootComponent___c__DisplayClass108_0_TypeInfo, callback, method, v3, v4);
@@ -7908,7 +7908,7 @@ LABEL_19:
   }
   else if ( *v23 )
   {
-    FriendRootComponent_messageRequestCallback__Invoke(*v23, (System_String_o *)StringLiteral_21129, 0LL);
+    FriendRootComponent_messageRequestCallback__Invoke(*v23, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL);
   }
 }
 
@@ -7983,10 +7983,10 @@ void __fastcall FriendRootComponent___c__DisplayClass109_0___FriendLockRequst_b_
   if ( (byte_40F68CD & 1) == 0 )
   {
     sub_B16FFC(&Method_ActionExtensions_Call_string___, result);
-    sub_B16FFC(&StringLiteral_21129, v5);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
     byte_40F68CD = 1;
   }
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_21129, 0LL) && this->fields.sum >= 1 )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) && this->fields.sum >= 1 )
   {
     v6 = 0;
     do

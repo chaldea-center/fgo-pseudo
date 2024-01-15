@@ -204,10 +204,10 @@ System_String_o *__fastcall PlayerServantNoblePhantasmUsageData__ConvertToJsonSt
     sub_B16FFC(
       &Method_System_Collections_Generic_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Value__,
       v10);
-    sub_B16FFC(&StringLiteral_22376, v11);
-    sub_B16FFC(&StringLiteral_21876, v12);
-    sub_B16FFC(&StringLiteral_18721, v13);
-    sub_B16FFC(&StringLiteral_16185, v14);
+    sub_B16FFC(&StringLiteral_22376/*"svtId"*/, v11);
+    sub_B16FFC(&StringLiteral_21876/*"seqId"*/, v12);
+    sub_B16FFC(&StringLiteral_18721/*"followerType"*/, v13);
+    sub_B16FFC(&StringLiteral_16185/*"addCount"*/, v14);
     byte_40F8FB7 = 1;
   }
   usageDictionary = this->fields.usageDictionary;
@@ -248,21 +248,21 @@ System_String_o *__fastcall PlayerServantNoblePhantasmUsageData__ConvertToJsonSt
         break;
       System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
         v30,
-        (System_Xml_XmlQualifiedName_o *)StringLiteral_22376,
+        (System_Xml_XmlQualifiedName_o *)StringLiteral_22376/*"svtId"*/,
         v31,
         (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
       v47 = HIDWORD(v23);
       v32 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v47);
       System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
         v30,
-        (System_Xml_XmlQualifiedName_o *)StringLiteral_18721,
+        (System_Xml_XmlQualifiedName_o *)StringLiteral_18721/*"followerType"*/,
         v32,
         (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
       v46 = seqId;
       v33 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v46);
       System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
         v30,
-        (System_Xml_XmlQualifiedName_o *)StringLiteral_21876,
+        (System_Xml_XmlQualifiedName_o *)StringLiteral_21876/*"seqId"*/,
         v33,
         (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
       if ( !value )
@@ -271,7 +271,7 @@ System_String_o *__fastcall PlayerServantNoblePhantasmUsageData__ConvertToJsonSt
       v34 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &useCount);
       System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
         v30,
-        (System_Xml_XmlQualifiedName_o *)StringLiteral_16185,
+        (System_Xml_XmlQualifiedName_o *)StringLiteral_16185/*"addCount"*/,
         v34,
         (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
       if ( !v19 )

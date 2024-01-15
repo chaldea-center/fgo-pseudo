@@ -50,8 +50,8 @@ void __fastcall SummonResultComponent__CheckLimitOver(SummonResultComponent_o *t
   if ( (byte_40FD4B7 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_5485, v3);
-    sub_B16FFC(&StringLiteral_8370, v4);
+    sub_B16FFC(&StringLiteral_5485/*"END_SUMMON"*/, v3);
+    sub_B16FFC(&StringLiteral_8370/*"LIMIT_OVER"*/, v4);
     byte_40FD4B7 = 1;
   }
   fsm = this->fields.fsm;
@@ -59,7 +59,7 @@ void __fastcall SummonResultComponent__CheckLimitOver(SummonResultComponent_o *t
     sub_B170D4();
   if ( this->fields.isLimitOver )
   {
-    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_8370, 0LL);
+    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_8370/*"LIMIT_OVER"*/, 0LL);
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
     {
@@ -69,7 +69,7 @@ void __fastcall SummonResultComponent__CheckLimitOver(SummonResultComponent_o *t
   }
   else
   {
-    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5485, 0LL);
+    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5485/*"END_SUMMON"*/, 0LL);
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
     {
@@ -274,29 +274,29 @@ bool __fastcall SummonResultComponent__GetIsBonusGift(
     sub_B16FFC(&int_TypeInfo, v17);
     sub_B16FFC(&LocalizationManager_TypeInfo, v18);
     sub_B16FFC(&SummonResultComponent_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_12370, v20);
-    sub_B16FFC(&StringLiteral_12373, v21);
-    sub_B16FFC(&StringLiteral_12375, v22);
-    sub_B16FFC(&StringLiteral_12374, v23);
-    sub_B16FFC(&StringLiteral_12371, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
-    sub_B16FFC(&StringLiteral_12372, v26);
+    sub_B16FFC(&StringLiteral_12370/*"SUMMON_BOUNS_ITEMS_GIFTS_MAX_MSG"*/, v20);
+    sub_B16FFC(&StringLiteral_12373/*"SUMMON_BOUNS_ITEM_GIFTS_SEND_BOX_MSG"*/, v21);
+    sub_B16FFC(&StringLiteral_12375/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, v22);
+    sub_B16FFC(&StringLiteral_12374/*"SUMMON_BOUNS_ITEM_GIFTS_SEND_BOX_TITLE"*/, v23);
+    sub_B16FFC(&StringLiteral_12371/*"SUMMON_BOUNS_ITEMS_GIFTS_MSG"*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
+    sub_B16FFC(&StringLiteral_12372/*"SUMMON_BOUNS_ITEM_GIFTS_MAX_TITLE"*/, v26);
     byte_40FD4AE = 1;
   }
-  *title = (System_String_o *)StringLiteral_1;
+  *title = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)title,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     (System_String_array **)message,
     (System_String_array **)pos_x,
     (System_Boolean_array **)giftEntity,
     (System_Int32_array **)itemEntity,
     *(System_Int32_array **)&giftResultType,
     *(System_Int32_array **)&giftBonusType);
-  *message = (System_String_o *)StringLiteral_1;
+  *message = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)message,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     v27,
     v28,
     v29,
@@ -319,7 +319,7 @@ bool __fastcall SummonResultComponent__GetIsBonusGift(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_12372, 0LL);
+        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_12372/*"SUMMON_BOUNS_ITEM_GIFTS_MAX_TITLE"*/, 0LL);
         v61 = (_QWORD **)Method_System_Array_Empty_object___;
         v62 = **((_QWORD **)Method_System_Array_Empty_object___ + 6);
         v63 = *(_WORD *)(v62 + 306);
@@ -347,7 +347,7 @@ bool __fastcall SummonResultComponent__GetIsBonusGift(
         v67 = System_String__Format_43822456(v60, **(System_Object_array ***)(v66 + 184), 0LL);
         *title = v67;
         sub_B16F98((BattleServantConfConponent_o *)title, (System_Int32_array **)v67, v68, v69, v70, v71, v72, v73);
-        v74 = LocalizationManager__Get((System_String_o *)StringLiteral_12370, 0LL);
+        v74 = LocalizationManager__Get((System_String_o *)StringLiteral_12370/*"SUMMON_BOUNS_ITEMS_GIFTS_MAX_MSG"*/, 0LL);
         num = giftEntity->fields.num;
         v75 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num);
         v76 = System_String__Format(v74, v75, 0LL);
@@ -369,10 +369,10 @@ bool __fastcall SummonResultComponent__GetIsBonusGift(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v84 = LocalizationManager__Get((System_String_o *)StringLiteral_12375, 0LL);
+        v84 = LocalizationManager__Get((System_String_o *)StringLiteral_12375/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, 0LL);
         *title = v84;
         sub_B16F98((BattleServantConfConponent_o *)title, (System_Int32_array **)v84, v85, v86, v87, v88, v89, v90);
-        v91 = LocalizationManager__Get((System_String_o *)StringLiteral_12371, 0LL);
+        v91 = LocalizationManager__Get((System_String_o *)StringLiteral_12371/*"SUMMON_BOUNS_ITEMS_GIFTS_MSG"*/, 0LL);
         v101 = giftEntity->fields.num;
         v92 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v101);
         v93 = System_String__Format(v91, v92, 0LL);
@@ -397,7 +397,7 @@ bool __fastcall SummonResultComponent__GetIsBonusGift(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12374, 0LL);
+      v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12374/*"SUMMON_BOUNS_ITEM_GIFTS_SEND_BOX_TITLE"*/, 0LL);
       v37 = (_QWORD **)Method_System_Array_Empty_object___;
       v38 = **((_QWORD **)Method_System_Array_Empty_object___ + 6);
       v39 = *(_WORD *)(v38 + 306);
@@ -425,7 +425,7 @@ bool __fastcall SummonResultComponent__GetIsBonusGift(
       v43 = System_String__Format_43822456(v36, **(System_Object_array ***)(v42 + 184), 0LL);
       *title = v43;
       sub_B16F98((BattleServantConfConponent_o *)title, (System_Int32_array **)v43, v44, v45, v46, v47, v48, v49);
-      v50 = LocalizationManager__Get((System_String_o *)StringLiteral_12373, 0LL);
+      v50 = LocalizationManager__Get((System_String_o *)StringLiteral_12373/*"SUMMON_BOUNS_ITEM_GIFTS_SEND_BOX_MSG"*/, 0LL);
       v51 = System_String__Format(v50, (Il2CppObject *)itemEntity->fields.name, 0LL);
       *message = v51;
       sub_B16F98((BattleServantConfConponent_o *)message, (System_Int32_array **)v51, v52, v53, v54, v55, v56, v57);
@@ -597,7 +597,7 @@ void __fastcall SummonResultComponent__clearResultList(SummonResultComponent_o *
   if ( (byte_40FD4B5 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FD4B5 = 1;
   }
   fstGrid = (UnityEngine_Component_o *)this->fields.fstGrid;
@@ -673,7 +673,7 @@ LABEL_13:
   autoSaleMsgLb = this->fields.autoSaleMsgLb;
   if ( !autoSaleMsgLb )
     goto LABEL_26;
-  UILabel__set_text(autoSaleMsgLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(autoSaleMsgLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -902,9 +902,9 @@ void __fastcall SummonResultComponent__initGachaResultList(
     sub_B16FFC(&Method_SummonResultComponent_showResCcDetail__, v23);
     sub_B16FFC(&Method_SummonResultComponent_showResSvtDetail__, v24);
     sub_B16FFC(&SummonResultComponent_TypeInfo, v25);
-    sub_B16FFC(&StringLiteral_12384, v26);
-    sub_B16FFC(&StringLiteral_12406, v27);
-    sub_B16FFC(&StringLiteral_1, v28);
+    sub_B16FFC(&StringLiteral_12384/*"SUMMON_EXTRA_ITEM_GIFTS_MSG"*/, v26);
+    sub_B16FFC(&StringLiteral_12406/*"SUMMON_RESULT_AUTOSALE_MSG"*/, v27);
+    sub_B16FFC(&StringLiteral_1/*""*/, v28);
     byte_40FD4AC = 1;
   }
   message = 0LL;
@@ -1211,7 +1211,7 @@ LABEL_63:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v116 = LocalizationManager__Get((System_String_o *)StringLiteral_12406, 0LL);
+      v116 = LocalizationManager__Get((System_String_o *)StringLiteral_12406/*"SUMMON_RESULT_AUTOSALE_MSG"*/, 0LL);
       if ( !autoSaleMsgLb )
         goto LABEL_194;
       v117 = v116;
@@ -1223,7 +1223,7 @@ LABEL_63:
       v118 = this->fields.autoSaleMsgLb;
       if ( !v118 )
         goto LABEL_194;
-      v117 = (System_String_o *)StringLiteral_1;
+      v117 = (System_String_o *)StringLiteral_1/*""*/;
     }
     UILabel__set_text(v118, v117, 0LL);
   }
@@ -1237,15 +1237,15 @@ LABEL_63:
   extraGiftMsgLb = this->fields.extraGiftMsgLb;
   if ( !extraGiftMsgLb )
     goto LABEL_194;
-  UILabel__set_text(extraGiftMsgLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(extraGiftMsgLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   extraGiftMsg2Lb = this->fields.extraGiftMsg2Lb;
   if ( !extraGiftMsg2Lb )
     goto LABEL_194;
-  UILabel__set_text(extraGiftMsg2Lb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(extraGiftMsg2Lb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   extraGiftTitleLb = this->fields.extraGiftTitleLb;
   if ( !extraGiftTitleLb )
     goto LABEL_194;
-  UILabel__set_text(extraGiftTitleLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(extraGiftTitleLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( extraGiftIds )
   {
     if ( gachaExtraGiftList )
@@ -1254,8 +1254,8 @@ LABEL_63:
       if ( v124 )
       {
         pos_x = 0.0;
-        message = (System_String_o *)StringLiteral_1;
-        title = (System_String_o *)StringLiteral_1;
+        message = (System_String_o *)StringLiteral_1/*""*/;
+        title = (System_String_o *)StringLiteral_1/*""*/;
         if ( (_DWORD)v124 == 1 )
         {
           Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -1581,7 +1581,7 @@ LABEL_198:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v178 = LocalizationManager__Get((System_String_o *)StringLiteral_12384, 0LL);
+          v178 = LocalizationManager__Get((System_String_o *)StringLiteral_12384/*"SUMMON_EXTRA_ITEM_GIFTS_MSG"*/, 0LL);
           if ( !this->fields.extraGiftMsgLb )
             goto LABEL_194;
           UILabel__set_text(this->fields.extraGiftMsgLb, v178, 0LL);
@@ -1611,7 +1611,7 @@ void __fastcall SummonResultComponent__onClickNext(SummonResultComponent_o *this
 
   if ( (byte_40FD4B6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12188, method);
+    sub_B16FFC(&StringLiteral_12188/*"SHOW_TALK"*/, method);
     byte_40FD4B6 = 1;
   }
   if ( this->fields.dispType != 1 )
@@ -1619,7 +1619,7 @@ void __fastcall SummonResultComponent__onClickNext(SummonResultComponent_o *this
     fsm = this->fields.fsm;
     if ( !fsm )
       sub_B170D4();
-    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12188, 0LL);
+    PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12188/*"SHOW_TALK"*/, 0LL);
   }
 }
 
@@ -1942,14 +1942,14 @@ void __fastcall SummonResultComponent__setListByType(
     sub_B16FFC(&SummonResultComponent_TypeInfo, v27);
     sub_B16FFC(&TutorialFlag_TypeInfo, v28);
     sub_B16FFC(&UserGachaMaster_TypeInfo, v29);
-    sub_B16FFC(&StringLiteral_12356, v30);
-    sub_B16FFC(&StringLiteral_12175, v31);
-    sub_B16FFC(&StringLiteral_12386, v32);
-    sub_B16FFC(&StringLiteral_12180, v33);
-    sub_B16FFC(&StringLiteral_12390, v34);
-    sub_B16FFC(&StringLiteral_12412, v35);
-    sub_B16FFC(&StringLiteral_12166, v36);
-    sub_B16FFC(&StringLiteral_3376, v37);
+    sub_B16FFC(&StringLiteral_12356/*"SUMMON_APPEND_END"*/, v30);
+    sub_B16FFC(&StringLiteral_12175/*"SHORT_SERVANT_FORMATION"*/, v31);
+    sub_B16FFC(&StringLiteral_12386/*"SUMMON_FREE_10_BTN"*/, v32);
+    sub_B16FFC(&StringLiteral_12180/*"SHORT_SERVANT_SELL"*/, v33);
+    sub_B16FFC(&StringLiteral_12390/*"SUMMON_LIMIT_OVER_BTN"*/, v34);
+    sub_B16FFC(&StringLiteral_12412/*"SUMMON_TICKET_END"*/, v35);
+    sub_B16FFC(&StringLiteral_12166/*"SHORT_SERVANT_COMBINE"*/, v36);
+    sub_B16FFC(&StringLiteral_3376/*"CONTINUE_SUMMON_BTN"*/, v37);
     byte_40FD4AD = 1;
   }
   methoda.genericMethod = 0LL;
@@ -1971,20 +1971,20 @@ void __fastcall SummonResultComponent__setListByType(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3376, 0LL);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3376/*"CONTINUE_SUMMON_BTN"*/, 0LL);
     formationBtnLabel = this->fields.formationBtnLabel;
     v42 = v40;
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_12175, 0LL);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_12175/*"SHORT_SERVANT_FORMATION"*/, 0LL);
     if ( !formationBtnLabel )
       goto LABEL_198;
     UILabel__set_text(formationBtnLabel, v43, 0LL);
     combineBtnLabel = this->fields.combineBtnLabel;
-    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_12166, 0LL);
+    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_12166/*"SHORT_SERVANT_COMBINE"*/, 0LL);
     if ( !combineBtnLabel )
       goto LABEL_198;
     UILabel__set_text(combineBtnLabel, v45, 0LL);
     sellBtnLabel = this->fields.sellBtnLabel;
-    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_12180, 0LL);
+    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_12180/*"SHORT_SERVANT_SELL"*/, 0LL);
     if ( !sellBtnLabel )
       goto LABEL_198;
     UILabel__set_text(sellBtnLabel, v47, 0LL);
@@ -2109,7 +2109,7 @@ void __fastcall SummonResultComponent__setListByType(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v94 = LocalizationManager__Get((System_String_o *)StringLiteral_12390, 0LL);
+        v94 = LocalizationManager__Get((System_String_o *)StringLiteral_12390/*"SUMMON_LIMIT_OVER_BTN"*/, 0LL);
         if ( !methoda.return_type )
           goto LABEL_198;
         v95 = v94;
@@ -2161,7 +2161,7 @@ LABEL_57:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v95 = LocalizationManager__Get((System_String_o *)StringLiteral_12356, 0LL);
+              v95 = LocalizationManager__Get((System_String_o *)StringLiteral_12356/*"SUMMON_APPEND_END"*/, 0LL);
             }
 LABEL_129:
             v153 = (UnityEngine_Behaviour_o *)this->fields.summonBtn;
@@ -2447,7 +2447,7 @@ LABEL_163:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v167 = LocalizationManager__Get((System_String_o *)StringLiteral_12386, 0LL);
+          v167 = LocalizationManager__Get((System_String_o *)StringLiteral_12386/*"SUMMON_FREE_10_BTN"*/, 0LL);
           if ( !v166 )
             goto LABEL_198;
           UILabel__set_text(v166, v167, 0LL);
@@ -2601,7 +2601,7 @@ LABEL_100:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v138 = LocalizationManager__Get((System_String_o *)StringLiteral_12412, 0LL);
+        v138 = LocalizationManager__Get((System_String_o *)StringLiteral_12412/*"SUMMON_TICKET_END"*/, 0LL);
         if ( !v137 )
           goto LABEL_198;
         v139 = v138;
@@ -2657,8 +2657,8 @@ void __fastcall SummonResultComponent__setSvtNum(SummonResultComponent_o *this, 
     sub_B16FFC(&Method_DataManager_GetMasterData_UserServantMaster___, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_6998, v6);
-    sub_B16FFC(&StringLiteral_6997, v7);
+    sub_B16FFC(&StringLiteral_6998/*"HAVE_SVT_NUM_TITLE"*/, v6);
+    sub_B16FFC(&StringLiteral_6997/*"HAVE_SVTEQ_NUM_TITLE"*/, v7);
     byte_40FD4B1 = 1;
   }
   svtKeep = 0;
@@ -2707,7 +2707,7 @@ void __fastcall SummonResultComponent__setSvtNum(SummonResultComponent_o *this, 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_6998, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_6998/*"HAVE_SVT_NUM_TITLE"*/, 0LL);
   if ( !svtTitleLb )
     goto LABEL_25;
   UILabel__set_text(svtTitleLb, v16, 0LL);
@@ -2722,7 +2722,7 @@ void __fastcall SummonResultComponent__setSvtNum(SummonResultComponent_o *this, 
     goto LABEL_25;
   UILabel__set_text(svtMaxLb, v20, 0LL);
   svtEqTitleLb = this->fields.svtEqTitleLb;
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_6997, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_6997/*"HAVE_SVTEQ_NUM_TITLE"*/, 0LL);
   if ( !svtEqTitleLb )
     goto LABEL_25;
   UILabel__set_text(svtEqTitleLb, v22, 0LL);

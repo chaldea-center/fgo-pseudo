@@ -118,12 +118,12 @@ int32_t __fastcall BuffConvertEntity__GetOverwritePopupColorFromIndex(
   if ( (byte_40FB4B1 & 1) == 0 )
   {
     sub_B16FFC(&Method_BuffConvertEntity_GetParamFromIndex_int___, *(_QWORD *)&index);
-    sub_B16FFC(&StringLiteral_10160, v7);
+    sub_B16FFC(&StringLiteral_10160/*"OverwritePopupColor"*/, v7);
     byte_40FB4B1 = 1;
   }
   result = BuffConvertEntity__GetParamFromIndex_int_(
              this,
-             (System_String_o *)StringLiteral_10160,
+             (System_String_o *)StringLiteral_10160/*"OverwritePopupColor"*/,
              index,
              def,
              (const MethodInfo_18BADF0 *)Method_BuffConvertEntity_GetParamFromIndex_int___);
@@ -146,12 +146,12 @@ System_String_o *__fastcall BuffConvertEntity__GetOverwritePopupTextFromIndex(
   if ( (byte_40FB4B0 & 1) == 0 )
   {
     sub_B16FFC(&Method_BuffConvertEntity_GetParamFromIndex_string___, *(_QWORD *)&index);
-    sub_B16FFC(&StringLiteral_10161, v7);
+    sub_B16FFC(&StringLiteral_10161/*"OverwritePopupText"*/, v7);
     byte_40FB4B0 = 1;
   }
   ParamFromIndex_string = BuffConvertEntity__GetParamFromIndex_string_(
                             this,
-                            (System_String_o *)StringLiteral_10161,
+                            (System_String_o *)StringLiteral_10161/*"OverwritePopupText"*/,
                             index,
                             def,
                             (const MethodInfo_18BB038 *)Method_BuffConvertEntity_GetParamFromIndex_string___);

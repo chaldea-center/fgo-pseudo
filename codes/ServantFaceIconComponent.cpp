@@ -235,14 +235,14 @@ void __fastcall ServantFaceIconComponent__Blank(ServantFaceIconComponent_o *this
 
   if ( (byte_40FD0A4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19397, method);
+    sub_B16FFC(&StringLiteral_19397/*"img_commonbg_02"*/, method);
     byte_40FD0A4 = 1;
   }
   ServantFaceIconComponent__Clear(this, method);
   frameSprite = this->fields.frameSprite;
   if ( !frameSprite )
     sub_B170D4();
-  UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_19397, 0LL);
+  UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_19397/*"img_commonbg_02"*/, 0LL);
 }
 
 
@@ -994,14 +994,14 @@ void __fastcall ServantFaceIconComponent__NoMount(ServantFaceIconComponent_o *th
 
   if ( (byte_40FD0A5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19417, method);
+    sub_B16FFC(&StringLiteral_19417/*"img_frames_nodata"*/, method);
     byte_40FD0A5 = 1;
   }
   ServantFaceIconComponent__Clear(this, method);
   backSprite = this->fields.backSprite;
   if ( !backSprite )
     sub_B170D4();
-  UISprite__set_spriteName(backSprite, (System_String_o *)StringLiteral_19417, 0LL);
+  UISprite__set_spriteName(backSprite, (System_String_o *)StringLiteral_19417/*"img_frames_nodata"*/, 0LL);
 }
 
 
@@ -1011,14 +1011,14 @@ void __fastcall ServantFaceIconComponent__NoMount_Support(ServantFaceIconCompone
 
   if ( (byte_40FD0A6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19418, method);
+    sub_B16FFC(&StringLiteral_19418/*"img_frames_nodata3"*/, method);
     byte_40FD0A6 = 1;
   }
   ServantFaceIconComponent__Clear(this, method);
   backSprite = this->fields.backSprite;
   if ( !backSprite )
     sub_B170D4();
-  UISprite__set_spriteName(backSprite, (System_String_o *)StringLiteral_19418, 0LL);
+  UISprite__set_spriteName(backSprite, (System_String_o *)StringLiteral_19418/*"img_frames_nodata3"*/, 0LL);
 }
 
 
@@ -1525,8 +1525,8 @@ void __fastcall ServantFaceIconComponent__SetCommandCode(
     sub_B16FFC(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v15);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_19417, v18);
-    sub_B16FFC(&StringLiteral_19246, v19);
+    sub_B16FFC(&StringLiteral_19417/*"img_frames_nodata"*/, v18);
+    sub_B16FFC(&StringLiteral_19246/*"icon_common_new01"*/, v19);
     byte_40FD0B8 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -1587,7 +1587,7 @@ LABEL_66:
     v27 = this->fields.backSprite;
     if ( !v27 )
       goto LABEL_66;
-    UISprite__set_spriteName(v27, (System_String_o *)StringLiteral_19417, 0LL);
+    UISprite__set_spriteName(v27, (System_String_o *)StringLiteral_19417/*"img_frames_nodata"*/, 0LL);
     faceSprite = this->fields.faceSprite;
     if ( !faceSprite )
       goto LABEL_66;
@@ -1670,7 +1670,7 @@ LABEL_66:
       v50 = this->fields.shiningIcon;
       if ( v50 )
       {
-        ShiningIconComponent__Set_33652672(v50, (System_String_o *)StringLiteral_19246, 0LL);
+        ShiningIconComponent__Set_33652672(v50, (System_String_o *)StringLiteral_19246/*"icon_common_new01"*/, 0LL);
         goto LABEL_57;
       }
     }
@@ -1745,8 +1745,8 @@ void __fastcall ServantFaceIconComponent__SetCostumeIcon(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, svtCostumeEntity);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_22382, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_22382/*"svt_costume_icon_"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FD0CE = 1;
   }
   costumeIconSprite = (UnityEngine_Object_o *)this->fields.costumeIconSprite;
@@ -1760,7 +1760,7 @@ void __fastcall ServantFaceIconComponent__SetCostumeIcon(
     v9 = this->fields.costumeIconSprite;
     if ( !v9 )
       goto LABEL_23;
-    UISprite__set_spriteName(v9, (System_String_o *)StringLiteral_1, 0LL);
+    UISprite__set_spriteName(v9, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     v10 = (UnityEngine_Behaviour_o *)this->fields.costumeIconSprite;
     if ( !v10 )
       goto LABEL_23;
@@ -1773,7 +1773,7 @@ void __fastcall ServantFaceIconComponent__SetCostumeIcon(
       {
         v13 = this->fields.costumeIconSprite;
         v14 = System_Int32__ToString(v11, 0LL);
-        v15 = System_String__Concat_43743732((System_String_o *)StringLiteral_22382, v14, 0LL);
+        v15 = System_String__Concat_43743732((System_String_o *)StringLiteral_22382/*"svt_costume_icon_"*/, v14, 0LL);
         if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !AtlasManager_TypeInfo->_2.cctor_finished )
         {
@@ -2475,7 +2475,7 @@ void __fastcall ServantFaceIconComponent__SetEventBonus(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
     sub_B16FFC(&Rarity_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B16FFC(&StringLiteral_20173, v11);
+    sub_B16FFC(&StringLiteral_20173/*"listframes_shadow"*/, v11);
     byte_40FD0B7 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -2496,7 +2496,7 @@ void __fastcall ServantFaceIconComponent__SetEventBonus(
   frameSprite = this->fields.frameSprite;
   if ( !frameSprite )
     goto LABEL_60;
-  UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173, 0LL);
+  UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173/*"listframes_shadow"*/, 0LL);
   AtlasManager__SetServantType(this->fields.typeSprite, 6, v17, 0, 0LL);
   equipSprite = (UnityEngine_Object_o *)this->fields.equipSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3421,10 +3421,10 @@ void __fastcall ServantFaceIconComponent__Set_30702780(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v29);
     sub_B16FFC(&ServantFaceIconComponent_TypeInfo, v30);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v31);
-    sub_B16FFC(&StringLiteral_19417, v32);
-    sub_B16FFC(&StringLiteral_19246, v33);
-    sub_B16FFC(&StringLiteral_20173, v34);
-    sub_B16FFC(&StringLiteral_19266, v35);
+    sub_B16FFC(&StringLiteral_19417/*"img_frames_nodata"*/, v32);
+    sub_B16FFC(&StringLiteral_19246/*"icon_common_new01"*/, v33);
+    sub_B16FFC(&StringLiteral_20173/*"listframes_shadow"*/, v34);
+    sub_B16FFC(&StringLiteral_19266/*"icon_eventjoin_01"*/, v35);
     byte_40FD0B6 = 1;
   }
   rarity = 0;
@@ -3530,7 +3530,7 @@ LABEL_32:
       backSprite = this->fields.backSprite;
       if ( !backSprite )
         goto LABEL_134;
-      UISprite__set_spriteName(backSprite, (System_String_o *)StringLiteral_19417, 0LL);
+      UISprite__set_spriteName(backSprite, (System_String_o *)StringLiteral_19417/*"img_frames_nodata"*/, 0LL);
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
       {
@@ -3631,7 +3631,7 @@ LABEL_57:
         v68 = this->fields.shiningIcon;
         if ( !v68 )
           goto LABEL_134;
-        v69 = &StringLiteral_19266;
+        v69 = &StringLiteral_19266/*"icon_eventjoin_01"*/;
 LABEL_98:
         ShiningIconComponent__Set_33652672(v68, (System_String_o *)*v69, 0LL);
         goto LABEL_99;
@@ -3641,7 +3641,7 @@ LABEL_98:
         v68 = this->fields.shiningIcon;
         if ( !v68 )
           goto LABEL_134;
-        v69 = &StringLiteral_19246;
+        v69 = &StringLiteral_19246/*"icon_common_new01"*/;
         goto LABEL_98;
       }
       v67 = this->fields.shiningIcon;
@@ -3705,7 +3705,7 @@ LABEL_55:
       v59 = this->fields.frameSprite;
       if ( !v59 )
         goto LABEL_134;
-      UISprite__set_spriteName(v59, (System_String_o *)StringLiteral_20173, 0LL);
+      UISprite__set_spriteName(v59, (System_String_o *)StringLiteral_20173/*"listframes_shadow"*/, 0LL);
       AtlasManager__SetServantType(this->fields.typeSprite, *(&v39->fields.startType + 1), FrameType, startType, 0LL);
       goto LABEL_57;
     case 6:
@@ -3732,7 +3732,7 @@ LABEL_55:
       v76 = this->fields.frameSprite;
       if ( !v76 )
         goto LABEL_134;
-      UISprite__set_spriteName(v76, (System_String_o *)StringLiteral_20173, 0LL);
+      UISprite__set_spriteName(v76, (System_String_o *)StringLiteral_20173/*"listframes_shadow"*/, 0LL);
       AtlasManager__SetServantType(this->fields.typeSprite, *(&v39->fields.startType + 1), FrameType, startType, 0LL);
       v77 = (UnityEngine_Object_o *)this->fields.equipSprite;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

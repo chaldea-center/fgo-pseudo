@@ -15,10 +15,10 @@ System_String_o *__fastcall BattleSealedCommandWindowComponent__get_closeBtnPath
 {
   if ( (byte_40F7531 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16919, method);
+    sub_B16FFC(&StringLiteral_16919/*"btn_close"*/, method);
     byte_40F7531 = 1;
   }
-  return (System_String_o *)StringLiteral_16919;
+  return (System_String_o *)StringLiteral_16919/*"btn_close"*/;
 }
 
 

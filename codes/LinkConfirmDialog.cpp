@@ -165,14 +165,14 @@ void __fastcall LinkConfirmDialog__Init(LinkConfirmDialog_o *this, const MethodI
 
   if ( (byte_40FCC3D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FCC3D = 1;
   }
   if ( !this->fields.refuseInit )
   {
     LinkConfirmDialog__Release(this, method);
-    v3 = (System_Int32_array **)StringLiteral_1;
-    this->fields.linkUrl = (struct System_String_o *)StringLiteral_1;
+    v3 = (System_Int32_array **)StringLiteral_1/*""*/;
+    this->fields.linkUrl = (struct System_String_o *)StringLiteral_1/*""*/;
     sub_B16F98((BattleServantConfConponent_o *)&this->fields.linkUrl, v3, v4, v5, v6, v7, v8, v9);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
@@ -305,9 +305,9 @@ void __fastcall LinkConfirmDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v19);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v20);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v21);
-    sub_B16FFC(&StringLiteral_3252, v22);
-    sub_B16FFC(&StringLiteral_3257, v23);
-    sub_B16FFC(&StringLiteral_1, v24);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v22);
+    sub_B16FFC(&StringLiteral_3257/*"COMMON_CONFIRM_TO_WEBVIEW"*/, v23);
+    sub_B16FFC(&StringLiteral_1/*""*/, v24);
     byte_40FCC3E = 1;
   }
   TargetPanel = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
@@ -368,7 +368,7 @@ void __fastcall LinkConfirmDialog__Open(
     v37 = this->fields.messageLabel;
     if ( !v37 )
       goto LABEL_67;
-    v38 = message ? message : (System_String_o *)StringLiteral_1;
+    v38 = message ? message : (System_String_o *)StringLiteral_1/*""*/;
     WrapControlText__textAdjust(v37, v38, v37->fields.mFontSize, 0, 0, 0LL);
     v39 = (UnityEngine_Component_o *)this->fields.messageLabel;
     if ( !v39 )
@@ -443,7 +443,7 @@ void __fastcall LinkConfirmDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3257, 0LL);
+    v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3257/*"COMMON_CONFIRM_TO_WEBVIEW"*/, 0LL);
     if ( !v67 )
       goto LABEL_67;
     UILabel__set_text(v67, v68, 0LL);
@@ -462,7 +462,7 @@ void __fastcall LinkConfirmDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v71 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+    v71 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( !v70 )
       goto LABEL_67;
     UILabel__set_text(v70, v71, 0LL);
@@ -541,7 +541,7 @@ void __fastcall LinkConfirmDialog__Release(LinkConfirmDialog_o *this, const Meth
     sub_B16FFC(&Method_System_Collections_Generic_List_LinkableTexture__get_Item__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_LinkableSprite__get_Item__, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FCC42 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
@@ -555,7 +555,7 @@ void __fastcall LinkConfirmDialog__Release(LinkConfirmDialog_o *this, const Meth
     v11 = this->fields.messageLabel;
     if ( !v11 )
       goto LABEL_60;
-    UILabel__set_text(v11, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v11, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   okBtnLabel = (UnityEngine_Object_o *)this->fields.okBtnLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -568,7 +568,7 @@ void __fastcall LinkConfirmDialog__Release(LinkConfirmDialog_o *this, const Meth
     v13 = this->fields.okBtnLabel;
     if ( !v13 )
       goto LABEL_60;
-    UILabel__set_text(v13, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   cancelBtnLabel = (UnityEngine_Object_o *)this->fields.cancelBtnLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -581,7 +581,7 @@ void __fastcall LinkConfirmDialog__Release(LinkConfirmDialog_o *this, const Meth
     v16 = this->fields.cancelBtnLabel;
     if ( !v16 )
       goto LABEL_60;
-    UILabel__set_text(v16, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v16, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   LinkConfirmDialog__DestroyBannerWWW(this, v15);
   lnkTexture = (UnityEngine_Object_o *)this->fields.lnkTexture;
@@ -1203,8 +1203,8 @@ bool __fastcall LinkConfirmDialog__StartDownloadBanner_d__35__MoveNext(
     sub_B16FFC(&Method_LinkConfirmDialog___c__DisplayClass35_0__StartDownloadBanner_b__0__, v11);
     sub_B16FFC(&LinkConfirmDialog___c__DisplayClass35_0_TypeInfo, v12);
     sub_B16FFC(&UnityEngine_Networking_UnityWebRequest_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
-    sub_B16FFC(&StringLiteral_9264, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
+    sub_B16FFC(&StringLiteral_9264/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, v15);
     byte_40F6901 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -1312,7 +1312,7 @@ LABEL_31:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v90 = LocalizationManager__Get((System_String_o *)StringLiteral_9264, 0LL);
+      v90 = LocalizationManager__Get((System_String_o *)StringLiteral_9264/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
       v91 = (Il2CppObject *)this->fields.__8__1;
       v92 = v90;
       v97 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v93, v94, v95, v96);
@@ -1323,7 +1323,7 @@ LABEL_31:
         0LL);
       if ( Instance )
       {
-        CommonUI__OpenRetryDialog(Instance, (System_String_o *)StringLiteral_1, v92, v97, 0, 0LL);
+        CommonUI__OpenRetryDialog(Instance, (System_String_o *)StringLiteral_1/*""*/, v92, v97, 0, 0LL);
 LABEL_42:
         _4__this->fields.refuseInit = 0;
         LinkConfirmDialog__DestroyBannerWWW(_4__this, 0LL);

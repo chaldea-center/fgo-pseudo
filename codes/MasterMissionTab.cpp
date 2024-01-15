@@ -19,18 +19,18 @@ System_String_o *__fastcall MasterMissionTab__GetButtonSpriteName(
 
   if ( (byte_40FCB3A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16913, isOn);
-    sub_B16FFC(&StringLiteral_16908, v5);
-    sub_B16FFC(&StringLiteral_16909, v6);
-    sub_B16FFC(&StringLiteral_16914, v7);
+    sub_B16FFC(&StringLiteral_16913/*"btn_bg_on_4"*/, isOn);
+    sub_B16FFC(&StringLiteral_16908/*"btn_bg_off_4"*/, v5);
+    sub_B16FFC(&StringLiteral_16909/*"btn_bg_off_5"*/, v6);
+    sub_B16FFC(&StringLiteral_16914/*"btn_bg_on_5"*/, v7);
     byte_40FCB3A = 1;
   }
-  v8 = (System_String_o **)&StringLiteral_16909;
+  v8 = (System_String_o **)&StringLiteral_16909/*"btn_bg_off_5"*/;
   if ( isOn )
-    v8 = (System_String_o **)&StringLiteral_16914;
-  v9 = &StringLiteral_16908;
+    v8 = (System_String_o **)&StringLiteral_16914/*"btn_bg_on_5"*/;
+  v9 = &StringLiteral_16908/*"btn_bg_off_4"*/;
   if ( isOn )
-    v9 = &StringLiteral_16913;
+    v9 = &StringLiteral_16913/*"btn_bg_on_4"*/;
   if ( this->fields.isSmall )
     v10 = v8;
   else

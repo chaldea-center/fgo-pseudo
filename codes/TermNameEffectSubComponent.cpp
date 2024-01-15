@@ -28,7 +28,7 @@ void __fastcall TermNameEffectSubComponent__RecvParam(
     sub_B16FFC(&Method_DataManager_GetMasterData_EventRaceMaster___, param);
     sub_B16FFC(&RaceResultEffectParam_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F6C65 = 1;
   }
   entity = 0LL;
@@ -78,7 +78,7 @@ LABEL_18:
   label = this->fields.label;
   if ( !label )
     goto LABEL_18;
-  name = (System_String_o *)StringLiteral_1;
+  name = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_8:
   UILabel__set_text(label, name, 0LL);
 }

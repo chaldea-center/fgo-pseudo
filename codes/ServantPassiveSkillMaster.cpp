@@ -468,12 +468,12 @@ System_String_o *__fastcall ServantPassiveSkillMaster__getPriorityKey(
   v7 = num;
   if ( (byte_40FBB5F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1223, *(_QWORD *)&svtId);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, *(_QWORD *)&svtId);
     byte_40FBB5F = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v8, 0LL);
   v5 = System_Int32__ToString((int32_t)&v7, 0LL);
-  return System_String__Concat_43746016(v4, (System_String_o *)StringLiteral_1223, v5, 0LL);
+  return System_String__Concat_43746016(v4, (System_String_o *)StringLiteral_1223/*":"*/, v5, 0LL);
 }
 
 

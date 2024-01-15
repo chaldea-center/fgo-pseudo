@@ -141,16 +141,16 @@ void __fastcall PartyOrganizationEventPointMenu__Init(
 
   if ( (byte_40FDC77 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FDC77 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL)
-    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (eventPointListViewManager = this->fields.eventPointListViewManager) == 0LL) )
   {
     sub_B170D4();
@@ -228,8 +228,8 @@ void __fastcall PartyOrganizationEventPointMenu__Open(
     sub_B16FFC(&System_Action_TypeInfo, setupInfo);
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
     sub_B16FFC(&Method_PartyOrganizationEventPointMenu_EndOpen__, v12);
-    sub_B16FFC(&StringLiteral_10302, v13);
-    sub_B16FFC(&StringLiteral_10308, v14);
+    sub_B16FFC(&StringLiteral_10302/*"PARTY_ORGANIZATION_EVENT_MEMBER_CLOSE"*/, v13);
+    sub_B16FFC(&StringLiteral_10308/*"PARTY_ORGANIZATION_EVENT_MEMBER_TITLE"*/, v14);
     byte_40FDC78 = 1;
   }
   if ( !this->fields.state )
@@ -254,11 +254,11 @@ void __fastcall PartyOrganizationEventPointMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_10308, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_10308/*"PARTY_ORGANIZATION_EVENT_MEMBER_TITLE"*/, 0LL);
     if ( !titleLabel
       || (UILabel__set_text(titleLabel, v17, 0LL),
           closeLabel = this->fields.closeLabel,
-          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10302, 0LL),
+          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10302/*"PARTY_ORGANIZATION_EVENT_MEMBER_CLOSE"*/, 0LL),
           !closeLabel)
       || (UILabel__set_text(closeLabel, v19, 0LL),
           (eventPointListViewManager = this->fields.eventPointListViewManager) == 0LL) )
@@ -323,10 +323,10 @@ System_String_o *__fastcall PartyOrganizationEventPointMenu__get_closeBtnPath(
 {
   if ( (byte_40FDC7B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2733, method);
+    sub_B16FFC(&StringLiteral_2733/*"BaseWindow/CloseButton"*/, method);
     byte_40FDC7B = 1;
   }
-  return (System_String_o *)StringLiteral_2733;
+  return (System_String_o *)StringLiteral_2733/*"BaseWindow/CloseButton"*/;
 }
 
 

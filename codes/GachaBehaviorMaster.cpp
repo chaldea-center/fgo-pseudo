@@ -77,23 +77,23 @@ void __fastcall GachaBehaviorMaster___cctor(const MethodInfo *method)
   if ( (byte_40FB357 & 1) == 0 )
   {
     sub_B16FFC(&GachaBehaviorMaster_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11239, v8);
-    sub_B16FFC(&StringLiteral_11236, v9);
-    sub_B16FFC(&StringLiteral_11238, v10);
-    sub_B16FFC(&StringLiteral_11246, v11);
-    sub_B16FFC(&StringLiteral_11240, v12);
-    sub_B16FFC(&StringLiteral_11237, v13);
-    sub_B16FFC(&StringLiteral_6908, v14);
-    sub_B16FFC(&StringLiteral_7593, v15);
+    sub_B16FFC(&StringLiteral_11239/*"RankupBeforeClassImageId"*/, v8);
+    sub_B16FFC(&StringLiteral_11236/*"RankupAfterClassImageId"*/, v9);
+    sub_B16FFC(&StringLiteral_11238/*"RankupAnimation"*/, v10);
+    sub_B16FFC(&StringLiteral_11246/*"RarityAnimation"*/, v11);
+    sub_B16FFC(&StringLiteral_11240/*"RankupBeforeRarity"*/, v12);
+    sub_B16FFC(&StringLiteral_11237/*"RankupAfterRarity"*/, v13);
+    sub_B16FFC(&StringLiteral_6908/*"GetAnimation"*/, v14);
+    sub_B16FFC(&StringLiteral_7593/*"InitializeAnimation"*/, v15);
     byte_40FB357 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)GachaBehaviorMaster_TypeInfo->static_fields;
-  v17 = (System_Int32_array **)StringLiteral_11238;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_11238;
+  v17 = (System_Int32_array **)StringLiteral_11238/*"RankupAnimation"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_11238/*"RankupAnimation"*/;
   sub_B16F98(static_fields, v17, v2, v3, v4, v5, v6, v7);
   v18 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v19 = (System_Int32_array **)StringLiteral_11239;
-  v18->SCRIPT_KEY_RANKUP_BEFORE_CLASS_IMAGE_ID = (struct System_String_o *)StringLiteral_11239;
+  v19 = (System_Int32_array **)StringLiteral_11239/*"RankupBeforeClassImageId"*/;
+  v18->SCRIPT_KEY_RANKUP_BEFORE_CLASS_IMAGE_ID = (struct System_String_o *)StringLiteral_11239/*"RankupBeforeClassImageId"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v18->SCRIPT_KEY_RANKUP_BEFORE_CLASS_IMAGE_ID,
     v19,
@@ -104,12 +104,12 @@ void __fastcall GachaBehaviorMaster___cctor(const MethodInfo *method)
     v24,
     v25);
   v26 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v27 = (System_Int32_array **)StringLiteral_11240;
-  v26->SCRIPT_KEY_RANKUP_BEFORE_RARITY = (struct System_String_o *)StringLiteral_11240;
+  v27 = (System_Int32_array **)StringLiteral_11240/*"RankupBeforeRarity"*/;
+  v26->SCRIPT_KEY_RANKUP_BEFORE_RARITY = (struct System_String_o *)StringLiteral_11240/*"RankupBeforeRarity"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v26->SCRIPT_KEY_RANKUP_BEFORE_RARITY, v27, v28, v29, v30, v31, v32, v33);
   v34 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v35 = (System_Int32_array **)StringLiteral_11236;
-  v34->SCRIPT_KEY_RANKUP_AFTER_CLASS_IMAGE_ID = (struct System_String_o *)StringLiteral_11236;
+  v35 = (System_Int32_array **)StringLiteral_11236/*"RankupAfterClassImageId"*/;
+  v34->SCRIPT_KEY_RANKUP_AFTER_CLASS_IMAGE_ID = (struct System_String_o *)StringLiteral_11236/*"RankupAfterClassImageId"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v34->SCRIPT_KEY_RANKUP_AFTER_CLASS_IMAGE_ID,
     v35,
@@ -120,20 +120,20 @@ void __fastcall GachaBehaviorMaster___cctor(const MethodInfo *method)
     v40,
     v41);
   v42 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v43 = (System_Int32_array **)StringLiteral_11237;
-  v42->SCRIPT_KEY_RANKUP_AFTER_RARITY = (struct System_String_o *)StringLiteral_11237;
+  v43 = (System_Int32_array **)StringLiteral_11237/*"RankupAfterRarity"*/;
+  v42->SCRIPT_KEY_RANKUP_AFTER_RARITY = (struct System_String_o *)StringLiteral_11237/*"RankupAfterRarity"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v42->SCRIPT_KEY_RANKUP_AFTER_RARITY, v43, v44, v45, v46, v47, v48, v49);
   v50 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v51 = (System_Int32_array **)StringLiteral_11246;
-  v50->SCRIPT_KEY_RARITY_ANIMATION = (struct System_String_o *)StringLiteral_11246;
+  v51 = (System_Int32_array **)StringLiteral_11246/*"RarityAnimation"*/;
+  v50->SCRIPT_KEY_RARITY_ANIMATION = (struct System_String_o *)StringLiteral_11246/*"RarityAnimation"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v50->SCRIPT_KEY_RARITY_ANIMATION, v51, v52, v53, v54, v55, v56, v57);
   v58 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v59 = (System_Int32_array **)StringLiteral_6908;
-  v58->SCRIPT_KEY_GET_ANIMATION = (struct System_String_o *)StringLiteral_6908;
+  v59 = (System_Int32_array **)StringLiteral_6908/*"GetAnimation"*/;
+  v58->SCRIPT_KEY_GET_ANIMATION = (struct System_String_o *)StringLiteral_6908/*"GetAnimation"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v58->SCRIPT_KEY_GET_ANIMATION, v59, v60, v61, v62, v63, v64, v65);
   v66 = GachaBehaviorMaster_TypeInfo->static_fields;
-  v67 = (System_Int32_array **)StringLiteral_7593;
-  v66->SCRIPT_KEY_INITIALIZE_ANIMATION = (struct System_String_o *)StringLiteral_7593;
+  v67 = (System_Int32_array **)StringLiteral_7593/*"InitializeAnimation"*/;
+  v66->SCRIPT_KEY_INITIALIZE_ANIMATION = (struct System_String_o *)StringLiteral_7593/*"InitializeAnimation"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v66->SCRIPT_KEY_INITIALIZE_ANIMATION, v67, v68, v69, v70, v71, v72, v73);
 }
 

@@ -703,10 +703,10 @@ void __fastcall ServantLeaderInfo__GetAppendPassiveSkillInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
     sub_B16FFC(&string___TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_26, v18);
-    sub_B16FFC(&StringLiteral_3296, v19);
-    sub_B16FFC(&StringLiteral_3284, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v18);
+    sub_B16FFC(&StringLiteral_3296/*"COND_TYPE_TITLE"*/, v19);
+    sub_B16FFC(&StringLiteral_3284/*"COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40FC7BF = 1;
   }
   v175 = (BattleServantConfConponent_o *)lvList;
@@ -905,7 +905,7 @@ LABEL_86:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          Entity = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3296, 0LL);
+          Entity = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3296/*"COND_TYPE_TITLE"*/, 0LL);
           if ( !v118 )
             goto LABEL_84;
           v124 = (System_Int32_array **)Entity;
@@ -925,7 +925,7 @@ LABEL_86:
             goto LABEL_84;
           if ( v78 >= v126->max_length )
             goto LABEL_85;
-          Entity = System_String__op_Inequality(v126->m_Items[v78], (System_String_o *)StringLiteral_1, 0LL);
+          Entity = System_String__op_Inequality(v126->m_Items[v78], (System_String_o *)StringLiteral_1/*""*/, 0LL);
           if ( (Entity & 1) != 0 )
           {
             v127 = *explanationList;
@@ -938,7 +938,7 @@ LABEL_86:
             v128 = (BattleServantConfConponent_o *)((char *)v128 + 32);
             v130 = (System_Int32_array **)System_String__Concat_43743732(
                                             call_openComp,
-                                            (System_String_o *)StringLiteral_26,
+                                            (System_String_o *)StringLiteral_26/*"\n"*/,
                                             0LL);
             v128->klass = (BattleServantConfConponent_c *)v130;
             sub_B16F98(v128, v130, v131, v132, v133, v134, v135, v136);
@@ -957,7 +957,7 @@ LABEL_86:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v142 = LocalizationManager__Get((System_String_o *)StringLiteral_3284, 0LL);
+          v142 = LocalizationManager__Get((System_String_o *)StringLiteral_3284/*"COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE"*/, 0LL);
           v143 = (System_Int32_array **)System_String__Concat_43743732(v139, v142, 0LL);
           v140->klass = (BattleServantConfConponent_c *)v143;
           sub_B16F98(v140, v143, v144, v145, v146, v147, v148, v149);
@@ -1179,10 +1179,10 @@ void __fastcall ServantLeaderInfo__GetAppendPassiveSkillInfoForNpc(
     sub_B16FFC(&int___TypeInfo, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&string___TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_26, v18);
-    sub_B16FFC(&StringLiteral_3296, v19);
-    sub_B16FFC(&StringLiteral_3284, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v18);
+    sub_B16FFC(&StringLiteral_3296/*"COND_TYPE_TITLE"*/, v19);
+    sub_B16FFC(&StringLiteral_3284/*"COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40FC7C0 = 1;
   }
   appendPassiveSkill = this->fields.appendPassiveSkill;
@@ -1310,7 +1310,7 @@ LABEL_77:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          Master_WarQuestSelectionMaster = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3296, 0LL);
+          Master_WarQuestSelectionMaster = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3296/*"COND_TYPE_TITLE"*/, 0LL);
           if ( !v107 )
             break;
           v113 = (System_Int32_array **)Master_WarQuestSelectionMaster;
@@ -1333,7 +1333,7 @@ LABEL_77:
             goto LABEL_76;
           Master_WarQuestSelectionMaster = System_String__op_Inequality(
                                              *(System_String_o **)((char *)&v114->obj.klass + v68),
-                                             (System_String_o *)StringLiteral_1,
+                                             (System_String_o *)StringLiteral_1/*""*/,
                                              0LL);
           if ( (Master_WarQuestSelectionMaster & 1) != 0 )
           {
@@ -1345,7 +1345,7 @@ LABEL_77:
             v116 = (BattleServantConfConponent_o *)((char *)v115 + v68);
             v117 = (System_Int32_array **)System_String__Concat_43743732(
                                             *(System_String_o **)((char *)&v115->obj.klass + v68),
-                                            (System_String_o *)StringLiteral_26,
+                                            (System_String_o *)StringLiteral_26/*"\n"*/,
                                             0LL);
             v116->klass = (BattleServantConfConponent_c *)v117;
             sub_B16F98(v116, v117, v118, v119, v120, v121, v122, v123);
@@ -1365,7 +1365,7 @@ LABEL_76:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v126 = LocalizationManager__Get((System_String_o *)StringLiteral_3284, 0LL);
+          v126 = LocalizationManager__Get((System_String_o *)StringLiteral_3284/*"COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE"*/, 0LL);
           v127 = (System_Int32_array **)System_String__Concat_43743732(v125, v126, 0LL);
           *(Il2CppClass **)((char *)&v124->obj.klass + v68) = (Il2CppClass *)v127;
           sub_B16F98((BattleServantConfConponent_o *)((char *)v124 + v68), v127, v128, v129, v130, v131, v132, v133);

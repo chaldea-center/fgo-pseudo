@@ -118,7 +118,7 @@ void __fastcall SummonResultInfoComponent__setResultData(
     sub_B16FFC(&LocalizationManager_TypeInfo, v23);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v24);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
-    sub_B16FFC(&StringLiteral_12407, v26);
+    sub_B16FFC(&StringLiteral_12407/*"SUMMON_RESULT_COIN_FORMAT"*/, v26);
     byte_40FD4BA = 1;
   }
   entity = 0LL;
@@ -318,7 +318,7 @@ LABEL_53:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v67 = LocalizationManager__Get((System_String_o *)StringLiteral_12407, 0LL);
+            v67 = LocalizationManager__Get((System_String_o *)StringLiteral_12407/*"SUMMON_RESULT_COIN_FORMAT"*/, 0LL);
             svtCoinNum = data->fields.svtCoinNum;
             v68 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtCoinNum);
             v69 = System_String__Format(v67, v68, 0LL);

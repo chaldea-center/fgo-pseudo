@@ -53,7 +53,7 @@ System_String_o *__fastcall EventMissionProgressRequest__getURL(
   if ( (byte_40FABD1 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18406, v2);
+    sub_B16FFC(&StringLiteral_18406/*"eventMission/progress"*/, v2);
     byte_40FABD1 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -62,7 +62,7 @@ System_String_o *__fastcall EventMissionProgressRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18406, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18406/*"eventMission/progress"*/, 0LL);
 }
 
 
@@ -210,13 +210,13 @@ System_Collections_Generic_List_ValueTuple_string__string___o *__fastcall EventM
     sub_B16FFC(&Method_System_Collections_Generic_List_ValueTuple_string__string____ctor__, v15);
     sub_B16FFC(&System_Collections_Generic_List_ValueTuple_string__string___TypeInfo, v16);
     sub_B16FFC(&Method_System_ValueTuple_string__string___ctor__, v17);
-    sub_B16FFC(&StringLiteral_20444, v18);
-    sub_B16FFC(&StringLiteral_18403, v19);
-    sub_B16FFC(&StringLiteral_17864, v20);
-    sub_B16FFC(&StringLiteral_22515, v21);
-    sub_B16FFC(&StringLiteral_20447, v22);
-    sub_B16FFC(&StringLiteral_21457, v23);
-    sub_B16FFC(&StringLiteral_16185, v24);
+    sub_B16FFC(&StringLiteral_20444/*"missionConditionDetailId"*/, v18);
+    sub_B16FFC(&StringLiteral_18403/*"eventId"*/, v19);
+    sub_B16FFC(&StringLiteral_17864/*"deemedTime"*/, v20);
+    sub_B16FFC(&StringLiteral_22515/*"targetId"*/, v21);
+    sub_B16FFC(&StringLiteral_20447/*"missionTargetId"*/, v22);
+    sub_B16FFC(&StringLiteral_21457/*"progress"*/, v23);
+    sub_B16FFC(&StringLiteral_16185/*"addCount"*/, v24);
     byte_40F7002 = 1;
   }
   v25 = (System_Collections_Generic_List_ValueTuple_string__string___o *)sub_B170CC(
@@ -234,7 +234,7 @@ System_Collections_Generic_List_ValueTuple_string__string___o *__fastcall EventM
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v27 = JsonManager__toJson(v26, 0, 0, 0LL);
   v77.fields.Item1 = (struct System_Net_ServicePointScheduler_ConnectionGroup_o *)&v75;
-  v77.fields.Item2 = (struct System_Net_WebOperation_o *)StringLiteral_17864;
+  v77.fields.Item2 = (struct System_Net_WebOperation_o *)StringLiteral_17864/*"deemedTime"*/;
   v75.fields.Item1 = 0LL;
   v75.fields.Item2 = 0LL;
   System_ValueTuple_ServicePointScheduler_ConnectionGroup__WebOperation____ctor(
@@ -360,35 +360,35 @@ LABEL_28:
         {
           System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
             v54,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_20447,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_20447/*"missionTargetId"*/,
             v55,
             (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
           LODWORD(deemedTime) = v49[5];
           v56 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &deemedTime);
           System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
             v54,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_20444,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_20444/*"missionConditionDetailId"*/,
             v56,
             (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
           v74 = v49[6];
           v57 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v74);
           System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
             v54,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_22515,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_22515/*"targetId"*/,
             v57,
             (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
           v73 = v49[7];
           v58 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v73);
           System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
             v54,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_18403,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_18403/*"eventId"*/,
             v58,
             (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
           v72 = v49[8];
           v59 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v72);
           System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
             v54,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_16185,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_16185/*"addCount"*/,
             v59,
             (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
           if ( v38 )
@@ -429,7 +429,7 @@ LABEL_28:
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v69 = JsonManager__toJson((Il2CppObject *)v38, 0, 0, 0LL);
   v78.fields.Item1 = (struct System_Net_ServicePointScheduler_ConnectionGroup_o *)&v75;
-  v78.fields.Item2 = (struct System_Net_WebOperation_o *)StringLiteral_21457;
+  v78.fields.Item2 = (struct System_Net_WebOperation_o *)StringLiteral_21457/*"progress"*/;
   v75 = (System_ValueTuple_string__string__o)0LL;
   System_ValueTuple_ServicePointScheduler_ConnectionGroup__WebOperation____ctor(
     v78,

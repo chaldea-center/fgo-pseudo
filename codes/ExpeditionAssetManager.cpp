@@ -22,23 +22,23 @@ void __fastcall ExpeditionAssetManager___ctor(ExpeditionAssetManager_o *this, co
   if ( (byte_40FACEE & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6187, v4);
+    sub_B16FFC(&StringLiteral_6187/*"EventUI/Prefabs/80381"*/, v4);
     byte_40FACEE = 1;
   }
   v5 = sub_B17014(string___TypeInfo, 1LL, v2);
   if ( !v5 )
     sub_B170D4();
   v12 = (struct System_String_array *)v5;
-  v13 = StringLiteral_6187;
-  if ( StringLiteral_6187 )
+  v13 = StringLiteral_6187/*"EventUI/Prefabs/80381"*/;
+  if ( StringLiteral_6187/*"EventUI/Prefabs/80381"*/ )
   {
-    v13 = sub_B170BC(StringLiteral_6187, v12->obj.klass->_1.element_class);
+    v13 = sub_B170BC(StringLiteral_6187/*"EventUI/Prefabs/80381"*/, v12->obj.klass->_1.element_class);
     if ( !v13 )
     {
       sub_B170F4(0LL);
       sub_B170A0();
     }
-    v14 = (System_Int32_array **)StringLiteral_6187;
+    v14 = (System_Int32_array **)StringLiteral_6187/*"EventUI/Prefabs/80381"*/;
   }
   else
   {
@@ -1520,27 +1520,27 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, v5);
     sub_B16FFC(&AtlasManager_TypeInfo, v6);
     sub_B16FFC(&Method_ExpeditionAssetManager___c__DisplayClass85_0__GetAssets_b__1__, v7);
-    sub_B16FFC(&StringLiteral_6261, v8);
-    sub_B16FFC(&StringLiteral_22224, v9);
-    sub_B16FFC(&StringLiteral_16762, v10);
-    sub_B16FFC(&StringLiteral_6264, v11);
-    sub_B16FFC(&StringLiteral_6263, v12);
-    sub_B16FFC(&StringLiteral_16692, v13);
-    sub_B16FFC(&StringLiteral_22228, v14);
-    sub_B16FFC(&StringLiteral_16767, v15);
-    sub_B16FFC(&StringLiteral_16765, v16);
-    sub_B16FFC(&StringLiteral_16764, v17);
-    sub_B16FFC(&StringLiteral_22231, v18);
-    sub_B16FFC(&StringLiteral_16696, v19);
-    sub_B16FFC(&StringLiteral_22225, v20);
-    sub_B16FFC(&StringLiteral_22226, v21);
-    sub_B16FFC(&StringLiteral_22230, v22);
-    sub_B16FFC(&StringLiteral_16763, v23);
-    sub_B16FFC(&StringLiteral_22227, v24);
-    sub_B16FFC(&StringLiteral_22229, v25);
-    sub_B16FFC(&StringLiteral_16769, v26);
-    sub_B16FFC(&StringLiteral_16766, v27);
-    sub_B16FFC(&StringLiteral_16768, v28);
+    sub_B16FFC(&StringLiteral_6261/*"ExpeditionConfirmDialog"*/, v8);
+    sub_B16FFC(&StringLiteral_22224/*"stay_dog_10"*/, v9);
+    sub_B16FFC(&StringLiteral_16762/*"bit_runningdog_10"*/, v10);
+    sub_B16FFC(&StringLiteral_6264/*"ExpeditionRewardDialog"*/, v11);
+    sub_B16FFC(&StringLiteral_6263/*"ExpeditionPointRewardDialog"*/, v12);
+    sub_B16FFC(&StringLiteral_16692/*"bit_expedition_finish"*/, v13);
+    sub_B16FFC(&StringLiteral_22228/*"stay_dog_50"*/, v14);
+    sub_B16FFC(&StringLiteral_16767/*"bit_runningdog_60"*/, v15);
+    sub_B16FFC(&StringLiteral_16765/*"bit_runningdog_40"*/, v16);
+    sub_B16FFC(&StringLiteral_16764/*"bit_runningdog_30"*/, v17);
+    sub_B16FFC(&StringLiteral_22231/*"stay_dog_80"*/, v18);
+    sub_B16FFC(&StringLiteral_16696/*"bit_expedition_start"*/, v19);
+    sub_B16FFC(&StringLiteral_22225/*"stay_dog_20"*/, v20);
+    sub_B16FFC(&StringLiteral_22226/*"stay_dog_30"*/, v21);
+    sub_B16FFC(&StringLiteral_22230/*"stay_dog_70"*/, v22);
+    sub_B16FFC(&StringLiteral_16763/*"bit_runningdog_20"*/, v23);
+    sub_B16FFC(&StringLiteral_22227/*"stay_dog_40"*/, v24);
+    sub_B16FFC(&StringLiteral_22229/*"stay_dog_60"*/, v25);
+    sub_B16FFC(&StringLiteral_16769/*"bit_runningdog_80"*/, v26);
+    sub_B16FFC(&StringLiteral_16766/*"bit_runningdog_50"*/, v27);
+    sub_B16FFC(&StringLiteral_16768/*"bit_runningdog_70"*/, v28);
     byte_40F7080 = 1;
   }
   p_fields = &this->fields;
@@ -1549,7 +1549,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
     goto LABEL_31;
   Object_WarBoardWaitTimeSetting = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                             assetData,
-                                                            (System_String_o *)StringLiteral_22224,
+                                                            (System_String_o *)StringLiteral_22224/*"stay_dog_10"*/,
                                                             (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !_4__this )
     goto LABEL_31;
@@ -1566,7 +1566,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v38 = p_fields->__4__this;
   v39 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  assetData,
-                                 (System_String_o *)StringLiteral_22225,
+                                 (System_String_o *)StringLiteral_22225/*"stay_dog_20"*/,
                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v38 )
     goto LABEL_31;
@@ -1583,7 +1583,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v46 = p_fields->__4__this;
   v47 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  assetData,
-                                 (System_String_o *)StringLiteral_22226,
+                                 (System_String_o *)StringLiteral_22226/*"stay_dog_30"*/,
                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v46 )
     goto LABEL_31;
@@ -1600,7 +1600,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v54 = p_fields->__4__this;
   v55 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  assetData,
-                                 (System_String_o *)StringLiteral_22227,
+                                 (System_String_o *)StringLiteral_22227/*"stay_dog_40"*/,
                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v54 )
     goto LABEL_31;
@@ -1617,7 +1617,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v62 = p_fields->__4__this;
   v63 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  assetData,
-                                 (System_String_o *)StringLiteral_22228,
+                                 (System_String_o *)StringLiteral_22228/*"stay_dog_50"*/,
                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v62 )
     goto LABEL_31;
@@ -1634,7 +1634,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v70 = p_fields->__4__this;
   v71 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  assetData,
-                                 (System_String_o *)StringLiteral_22229,
+                                 (System_String_o *)StringLiteral_22229/*"stay_dog_60"*/,
                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v70 )
     goto LABEL_31;
@@ -1651,7 +1651,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v78 = p_fields->__4__this;
   v79 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  assetData,
-                                 (System_String_o *)StringLiteral_22230,
+                                 (System_String_o *)StringLiteral_22230/*"stay_dog_70"*/,
                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v78 )
     goto LABEL_31;
@@ -1668,7 +1668,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v86 = p_fields->__4__this;
   v87 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  assetData,
-                                 (System_String_o *)StringLiteral_22231,
+                                 (System_String_o *)StringLiteral_22231/*"stay_dog_80"*/,
                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v86 )
     goto LABEL_31;
@@ -1685,7 +1685,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v94 = p_fields->__4__this;
   v95 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  assetData,
-                                 (System_String_o *)StringLiteral_6261,
+                                 (System_String_o *)StringLiteral_6261/*"ExpeditionConfirmDialog"*/,
                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v94 )
     goto LABEL_31;
@@ -1702,7 +1702,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v102 = p_fields->__4__this;
   v103 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_6264,
+                                  (System_String_o *)StringLiteral_6264/*"ExpeditionRewardDialog"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v102 )
     goto LABEL_31;
@@ -1719,7 +1719,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v110 = p_fields->__4__this;
   v111 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_6263,
+                                  (System_String_o *)StringLiteral_6263/*"ExpeditionPointRewardDialog"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v110 )
     goto LABEL_31;
@@ -1736,7 +1736,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v118 = p_fields->__4__this;
   v119 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_16696,
+                                  (System_String_o *)StringLiteral_16696/*"bit_expedition_start"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v118 )
     goto LABEL_31;
@@ -1753,7 +1753,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v126 = p_fields->__4__this;
   v127 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_16692,
+                                  (System_String_o *)StringLiteral_16692/*"bit_expedition_finish"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v126 )
     goto LABEL_31;
@@ -1770,7 +1770,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v134 = p_fields->__4__this;
   v135 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_16762,
+                                  (System_String_o *)StringLiteral_16762/*"bit_runningdog_10"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v134 )
     goto LABEL_31;
@@ -1787,7 +1787,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v142 = p_fields->__4__this;
   v143 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_16763,
+                                  (System_String_o *)StringLiteral_16763/*"bit_runningdog_20"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v142 )
     goto LABEL_31;
@@ -1804,7 +1804,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v150 = p_fields->__4__this;
   v151 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_16764,
+                                  (System_String_o *)StringLiteral_16764/*"bit_runningdog_30"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v150 )
     goto LABEL_31;
@@ -1821,7 +1821,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v158 = p_fields->__4__this;
   v159 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_16765,
+                                  (System_String_o *)StringLiteral_16765/*"bit_runningdog_40"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v158 )
     goto LABEL_31;
@@ -1838,7 +1838,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v166 = p_fields->__4__this;
   v167 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_16766,
+                                  (System_String_o *)StringLiteral_16766/*"bit_runningdog_50"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v166 )
     goto LABEL_31;
@@ -1855,7 +1855,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v174 = p_fields->__4__this;
   v175 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_16767,
+                                  (System_String_o *)StringLiteral_16767/*"bit_runningdog_60"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v174 )
     goto LABEL_31;
@@ -1872,7 +1872,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
   v182 = p_fields->__4__this;
   v183 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                   assetData,
-                                  (System_String_o *)StringLiteral_16768,
+                                  (System_String_o *)StringLiteral_16768/*"bit_runningdog_70"*/,
                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v182
     || (v182->fields._efRunHakkenshi70_k__BackingField = (struct UnityEngine_GameObject_o *)v183,
@@ -1888,7 +1888,7 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
         v190 = p_fields->__4__this,
         v191 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                         assetData,
-                                        (System_String_o *)StringLiteral_16769,
+                                        (System_String_o *)StringLiteral_16769/*"bit_runningdog_80"*/,
                                         (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784),
         !v190) )
   {

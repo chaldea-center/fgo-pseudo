@@ -115,7 +115,7 @@ void __fastcall FortificationNotifyDialog__OnClickDecide(FortificationNotifyDial
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FA770 = 1;
   }
   if ( this->fields.state == 2 )
@@ -171,7 +171,7 @@ LABEL_25:
       {
         slot = v18->fields.slot;
         v20 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v14, v15, v16, v17);
-        SceneJumpInfo___ctor_29748100(v20, (System_String_o *)StringLiteral_1, EventID, slot + 1, 0LL);
+        SceneJumpInfo___ctor_29748100(v20, (System_String_o *)StringLiteral_1/*""*/, EventID, slot + 1, 0LL);
         if ( v20 )
         {
           SceneJumpInfo__SetReturnNowScene(v20, 0LL);
@@ -219,8 +219,8 @@ void __fastcall FortificationNotifyDialog__Open(
     sub_B16FFC(&System_Action_TypeInfo, message);
     sub_B16FFC(&Method_FortificationNotifyDialog__Open_b__9_0__, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_6409, v13);
-    sub_B16FFC(&StringLiteral_3252, v14);
+    sub_B16FFC(&StringLiteral_6409/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/, v13);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v14);
     byte_40FA76F = 1;
   }
   if ( !this->fields.state )
@@ -245,11 +245,11 @@ void __fastcall FortificationNotifyDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_6409, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_6409/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/, 0LL);
     if ( !decideButtonLb
       || (UILabel__set_text(decideButtonLb, v17, 0LL),
           cancelButtonLb = this->fields.cancelButtonLb,
-          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL),
+          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
           !cancelButtonLb) )
     {
 LABEL_11:

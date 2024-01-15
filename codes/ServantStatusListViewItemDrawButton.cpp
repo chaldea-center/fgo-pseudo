@@ -39,9 +39,9 @@ void __fastcall ServantStatusListViewItemDrawButton___cctor(const MethodInfo *me
   {
     sub_B16FFC(&ServantStatusListViewItemDrawButton_TypeInfo, v1);
     sub_B16FFC(&string___TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_11991, v4);
-    sub_B16FFC(&StringLiteral_11989, v5);
-    sub_B16FFC(&StringLiteral_11985, v6);
+    sub_B16FFC(&StringLiteral_11991/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, v4);
+    sub_B16FFC(&StringLiteral_11989/*"SERVANT_STATUS_TD_SPEED_FREE"*/, v5);
+    sub_B16FFC(&StringLiteral_11985/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, v6);
     byte_40FDE88 = 1;
   }
   ServantStatusListViewItemDrawButton_TypeInfo->static_fields->TITLE_LABEL_BASE_WIDTH = 120;
@@ -53,13 +53,13 @@ void __fastcall ServantStatusListViewItemDrawButton___cctor(const MethodInfo *me
   if ( !v8 )
     sub_B170D4();
   v15 = (System_Int32_array **)v8;
-  v16 = StringLiteral_11989;
-  if ( StringLiteral_11989 )
+  v16 = StringLiteral_11989/*"SERVANT_STATUS_TD_SPEED_FREE"*/;
+  if ( StringLiteral_11989/*"SERVANT_STATUS_TD_SPEED_FREE"*/ )
   {
-    v16 = sub_B170BC(StringLiteral_11989, *(_QWORD *)&(*v15)->m_Items[9]);
+    v16 = sub_B170BC(StringLiteral_11989/*"SERVANT_STATUS_TD_SPEED_FREE"*/, *(_QWORD *)&(*v15)->m_Items[9]);
     if ( !v16 )
       goto LABEL_21;
-    v17 = (System_Int32_array **)StringLiteral_11989;
+    v17 = (System_Int32_array **)StringLiteral_11989/*"SERVANT_STATUS_TD_SPEED_FREE"*/;
   }
   else
   {
@@ -69,13 +69,13 @@ void __fastcall ServantStatusListViewItemDrawButton___cctor(const MethodInfo *me
     goto LABEL_20;
   v15[4] = (System_Int32_array *)v17;
   sub_B16F98((BattleServantConfConponent_o *)(v15 + 4), v17, v9, v10, v11, v12, v13, v14);
-  v16 = StringLiteral_11985;
-  if ( StringLiteral_11985 )
+  v16 = StringLiteral_11985/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/;
+  if ( StringLiteral_11985/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/ )
   {
-    v16 = sub_B170BC(StringLiteral_11985, *(_QWORD *)&(*v15)->m_Items[9]);
+    v16 = sub_B170BC(StringLiteral_11985/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, *(_QWORD *)&(*v15)->m_Items[9]);
     if ( !v16 )
       goto LABEL_21;
-    v17 = (System_Int32_array **)StringLiteral_11985;
+    v17 = (System_Int32_array **)StringLiteral_11985/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/;
   }
   else
   {
@@ -85,13 +85,13 @@ void __fastcall ServantStatusListViewItemDrawButton___cctor(const MethodInfo *me
     goto LABEL_20;
   v15[5] = (System_Int32_array *)v17;
   sub_B16F98((BattleServantConfConponent_o *)(v15 + 5), v17, v9, v18, v19, v20, v21, v22);
-  v16 = StringLiteral_11991;
-  if ( StringLiteral_11991 )
+  v16 = StringLiteral_11991/*"SERVANT_STATUS_TD_SPEED_TWICE"*/;
+  if ( StringLiteral_11991/*"SERVANT_STATUS_TD_SPEED_TWICE"*/ )
   {
-    v16 = sub_B170BC(StringLiteral_11991, *(_QWORD *)&(*v15)->m_Items[9]);
+    v16 = sub_B170BC(StringLiteral_11991/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, *(_QWORD *)&(*v15)->m_Items[9]);
     if ( v16 )
     {
-      v17 = (System_Int32_array **)StringLiteral_11991;
+      v17 = (System_Int32_array **)StringLiteral_11991/*"SERVANT_STATUS_TD_SPEED_TWICE"*/;
       goto LABEL_18;
     }
 LABEL_21:
@@ -291,12 +291,12 @@ void __fastcall ServantStatusListViewItemDrawButton__SetItem(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&ServantStatusListViewItemDrawButton_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_11908, v8);
-    sub_B16FFC(&StringLiteral_19649, v9);
-    sub_B16FFC(&StringLiteral_11910, v10);
-    sub_B16FFC(&StringLiteral_19588, v11);
-    sub_B16FFC(&StringLiteral_11990, v12);
-    sub_B16FFC(&StringLiteral_11909, v13);
+    sub_B16FFC(&StringLiteral_11908/*"SERVANT_STATUS_BATTLE_VOICE_AFTER"*/, v8);
+    sub_B16FFC(&StringLiteral_19649/*"img_txt_npspeed"*/, v9);
+    sub_B16FFC(&StringLiteral_11910/*"SERVANT_STATUS_BATTLE_VOICE_MESSAGE"*/, v10);
+    sub_B16FFC(&StringLiteral_19588/*"img_txt_battlevoice"*/, v11);
+    sub_B16FFC(&StringLiteral_11990/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, v12);
+    sub_B16FFC(&StringLiteral_11909/*"SERVANT_STATUS_BATTLE_VOICE_BEFORE"*/, v13);
     byte_40FDE87 = 1;
   }
   ServantStatusListViewItemDrawButtonsBase__SetItem(
@@ -345,7 +345,7 @@ void __fastcall ServantStatusListViewItemDrawButton__SetItem(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v46 = LocalizationManager__Get((System_String_o *)StringLiteral_11990, 0LL);
+      v46 = LocalizationManager__Get((System_String_o *)StringLiteral_11990/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0LL);
       if ( !tdSpeedRangeLabelList )
         goto LABEL_41;
       UILabel__set_text(tdSpeedRangeLabelList, v46, 0LL);
@@ -401,7 +401,7 @@ void __fastcall ServantStatusListViewItemDrawButton__SetItem(
       v36 = v63;
       if ( !v63 )
         goto LABEL_41;
-      v39 = &StringLiteral_19649;
+      v39 = &StringLiteral_19649/*"img_txt_npspeed"*/;
     }
     else
     {
@@ -453,7 +453,7 @@ void __fastcall ServantStatusListViewItemDrawButton__SetItem(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11908, 0LL);
+      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11908/*"SERVANT_STATUS_BATTLE_VOICE_AFTER"*/, 0LL);
       if ( !v27 )
         goto LABEL_41;
       UIRangeLabel__Set(v27, v28, 0LL, 1, 0, 0LL);
@@ -467,7 +467,7 @@ LABEL_60:
         sub_B170A0();
       }
       v30 = (UIRangeLabel_o *)v29->m_Items[1];
-      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_11909, 0LL);
+      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_11909/*"SERVANT_STATUS_BATTLE_VOICE_BEFORE"*/, 0LL);
       if ( !v30 )
         goto LABEL_41;
       UIRangeLabel__Set(v30, v31, 0LL, 1, 0, 0LL);
@@ -476,7 +476,7 @@ LABEL_60:
         goto LABEL_41;
       UIWidget__set_height(v32, 20, 0LL);
       v33 = (UILabel_o *)this->fields.tdSpeedRangeLabelList;
-      v34 = LocalizationManager__Get((System_String_o *)StringLiteral_11910, 0LL);
+      v34 = LocalizationManager__Get((System_String_o *)StringLiteral_11910/*"SERVANT_STATUS_BATTLE_VOICE_MESSAGE"*/, 0LL);
       if ( !v33 )
         goto LABEL_41;
       UILabel__set_text(v33, v34, 0LL);
@@ -489,7 +489,7 @@ LABEL_60:
       v36 = v38;
       if ( !v38 )
         goto LABEL_41;
-      v39 = &StringLiteral_19588;
+      v39 = &StringLiteral_19588/*"img_txt_battlevoice"*/;
     }
     UISprite__set_spriteName(v36, (System_String_o *)*v39, 0LL);
 LABEL_58:

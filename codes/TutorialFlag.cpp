@@ -81,49 +81,49 @@ void __fastcall TutorialFlag___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__, v8);
     sub_B16FFC(&System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo, v9);
     sub_B16FFC(&TutorialFlag_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_13413, v11);
-    sub_B16FFC(&StringLiteral_13426, v12);
-    sub_B16FFC(&StringLiteral_13408, v13);
-    sub_B16FFC(&StringLiteral_13424, v14);
-    sub_B16FFC(&StringLiteral_13412, v15);
-    sub_B16FFC(&StringLiteral_13422, v16);
-    sub_B16FFC(&StringLiteral_14518, v17);
-    sub_B16FFC(&StringLiteral_13409, v18);
-    sub_B16FFC(&StringLiteral_14521, v19);
-    sub_B16FFC(&StringLiteral_13416, v20);
-    sub_B16FFC(&StringLiteral_14519, v21);
-    sub_B16FFC(&StringLiteral_13415, v22);
-    sub_B16FFC(&StringLiteral_13411, v23);
-    sub_B16FFC(&StringLiteral_13421, v24);
-    sub_B16FFC(&StringLiteral_13428, v25);
-    sub_B16FFC(&StringLiteral_13429, v26);
-    sub_B16FFC(&StringLiteral_13427, v27);
-    sub_B16FFC(&StringLiteral_13420, v28);
-    sub_B16FFC(&StringLiteral_14520, v29);
-    sub_B16FFC(&StringLiteral_13423, v30);
-    sub_B16FFC(&StringLiteral_13414, v31);
-    sub_B16FFC(&StringLiteral_13419, v32);
-    sub_B16FFC(&StringLiteral_13410, v33);
-    sub_B16FFC(&StringLiteral_13425, v34);
-    sub_B16FFC(&StringLiteral_13417, v35);
-    sub_B16FFC(&StringLiteral_13418, v36);
+    sub_B16FFC(&StringLiteral_13413/*"TUTORIAL_LABEL_EVENT_GACHA"*/, v11);
+    sub_B16FFC(&StringLiteral_13426/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/, v12);
+    sub_B16FFC(&StringLiteral_13408/*"TUTORIAL_LABEL_COMBINE"*/, v13);
+    sub_B16FFC(&StringLiteral_13424/*"TUTORIAL_LABEL_RAID2_BATTLE"*/, v14);
+    sub_B16FFC(&StringLiteral_13412/*"TUTORIAL_LABEL_END"*/, v15);
+    sub_B16FFC(&StringLiteral_13422/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/, v16);
+    sub_B16FFC(&StringLiteral_14518/*"TutorialFlagConfigId"*/, v17);
+    sub_B16FFC(&StringLiteral_13409/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/, v18);
+    sub_B16FFC(&StringLiteral_14521/*"TutorialFlagProgress"*/, v19);
+    sub_B16FFC(&StringLiteral_13416/*"TUTORIAL_LABEL_FAVORITE1"*/, v20);
+    sub_B16FFC(&StringLiteral_14519/*"TutorialFlagGachaId"*/, v21);
+    sub_B16FFC(&StringLiteral_13415/*"TUTORIAL_LABEL_EVENT_REWARD"*/, v22);
+    sub_B16FFC(&StringLiteral_13411/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/, v23);
+    sub_B16FFC(&StringLiteral_13421/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/, v24);
+    sub_B16FFC(&StringLiteral_13428/*"TUTORIAL_LABEL_STONE_GACHA"*/, v25);
+    sub_B16FFC(&StringLiteral_13429/*"TUTORIAL_LABEL_SVT_LEAVE"*/, v26);
+    sub_B16FFC(&StringLiteral_13427/*"TUTORIAL_LABEL_SHOP"*/, v27);
+    sub_B16FFC(&StringLiteral_13420/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/, v28);
+    sub_B16FFC(&StringLiteral_14520/*"TutorialFlagLocalId"*/, v29);
+    sub_B16FFC(&StringLiteral_13423/*"TUTORIAL_LABEL_MASHU_CHANGE"*/, v30);
+    sub_B16FFC(&StringLiteral_13414/*"TUTORIAL_LABEL_EVENT_MISSION"*/, v31);
+    sub_B16FFC(&StringLiteral_13419/*"TUTORIAL_LABEL_GACHA_SCENE"*/, v32);
+    sub_B16FFC(&StringLiteral_13410/*"TUTORIAL_LABEL_DECK_SCENE"*/, v33);
+    sub_B16FFC(&StringLiteral_13425/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/, v34);
+    sub_B16FFC(&StringLiteral_13417/*"TUTORIAL_LABEL_FAVORITE2"*/, v35);
+    sub_B16FFC(&StringLiteral_13418/*"TUTORIAL_LABEL_FES"*/, v36);
     byte_40FB91D = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TutorialFlag_TypeInfo->static_fields;
-  v38 = (System_Int32_array **)StringLiteral_14521;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_14521;
+  v38 = (System_Int32_array **)StringLiteral_14521/*"TutorialFlagProgress"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_14521/*"TutorialFlagProgress"*/;
   sub_B16F98(static_fields, v38, v2, v3, v4, v5, v6, v7);
   v39 = TutorialFlag_TypeInfo->static_fields;
-  v40 = (System_Int32_array **)StringLiteral_14520;
-  v39->SAVE_KEY2 = (struct System_String_o *)StringLiteral_14520;
+  v40 = (System_Int32_array **)StringLiteral_14520/*"TutorialFlagLocalId"*/;
+  v39->SAVE_KEY2 = (struct System_String_o *)StringLiteral_14520/*"TutorialFlagLocalId"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v39->SAVE_KEY2, v40, v41, v42, v43, v44, v45, v46);
   v47 = TutorialFlag_TypeInfo->static_fields;
-  v48 = (System_Int32_array **)StringLiteral_14518;
-  v47->SAVE_KEY3 = (struct System_String_o *)StringLiteral_14518;
+  v48 = (System_Int32_array **)StringLiteral_14518/*"TutorialFlagConfigId"*/;
+  v47->SAVE_KEY3 = (struct System_String_o *)StringLiteral_14518/*"TutorialFlagConfigId"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v47->SAVE_KEY3, v48, v49, v50, v51, v52, v53, v54);
   v55 = TutorialFlag_TypeInfo->static_fields;
-  v56 = (System_Int32_array **)StringLiteral_14519;
-  v55->SAVE_KEY4 = (struct System_String_o *)StringLiteral_14519;
+  v56 = (System_Int32_array **)StringLiteral_14519/*"TutorialFlagGachaId"*/;
+  v55->SAVE_KEY4 = (struct System_String_o *)StringLiteral_14519/*"TutorialFlagGachaId"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v55->SAVE_KEY4, v56, v57, v58, v59, v60, v61, v62);
   v67 = (System_Collections_Generic_Dictionary_Type__ReadType__o *)sub_B170CC(
                                                                      System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo,
@@ -138,112 +138,112 @@ void __fastcall TutorialFlag___cctor(const MethodInfo *method)
     sub_B170D4();
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13428,
+    (System_Type_o *)StringLiteral_13428/*"TUTORIAL_LABEL_STONE_GACHA"*/,
     101,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13412,
+    (System_Type_o *)StringLiteral_13412/*"TUTORIAL_LABEL_END"*/,
     102,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13427,
+    (System_Type_o *)StringLiteral_13427/*"TUTORIAL_LABEL_SHOP"*/,
     103,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13408,
+    (System_Type_o *)StringLiteral_13408/*"TUTORIAL_LABEL_COMBINE"*/,
     104,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13416,
+    (System_Type_o *)StringLiteral_13416/*"TUTORIAL_LABEL_FAVORITE1"*/,
     105,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13417,
+    (System_Type_o *)StringLiteral_13417/*"TUTORIAL_LABEL_FAVORITE2"*/,
     106,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13419,
+    (System_Type_o *)StringLiteral_13419/*"TUTORIAL_LABEL_GACHA_SCENE"*/,
     107,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13420,
+    (System_Type_o *)StringLiteral_13420/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/,
     108,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13410,
+    (System_Type_o *)StringLiteral_13410/*"TUTORIAL_LABEL_DECK_SCENE"*/,
     109,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13411,
+    (System_Type_o *)StringLiteral_13411/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/,
     110,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13413,
+    (System_Type_o *)StringLiteral_13413/*"TUTORIAL_LABEL_EVENT_GACHA"*/,
     111,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13415,
+    (System_Type_o *)StringLiteral_13415/*"TUTORIAL_LABEL_EVENT_REWARD"*/,
     112,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13409,
+    (System_Type_o *)StringLiteral_13409/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/,
     113,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13414,
+    (System_Type_o *)StringLiteral_13414/*"TUTORIAL_LABEL_EVENT_MISSION"*/,
     114,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13423,
+    (System_Type_o *)StringLiteral_13423/*"TUTORIAL_LABEL_MASHU_CHANGE"*/,
     115,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13421,
+    (System_Type_o *)StringLiteral_13421/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/,
     117,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13422,
+    (System_Type_o *)StringLiteral_13422/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/,
     118,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13424,
+    (System_Type_o *)StringLiteral_13424/*"TUTORIAL_LABEL_RAID2_BATTLE"*/,
     120,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13426,
+    (System_Type_o *)StringLiteral_13426/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/,
     121,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13425,
+    (System_Type_o *)StringLiteral_13425/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/,
     122,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13429,
+    (System_Type_o *)StringLiteral_13429/*"TUTORIAL_LABEL_SVT_LEAVE"*/,
     126,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode___Add(
     (System_Collections_Generic_Dictionary_Type__PrimitiveTypeCode__o *)v67,
-    (System_Type_o *)StringLiteral_13418,
+    (System_Type_o *)StringLiteral_13418/*"TUTORIAL_LABEL_FES"*/,
     127,
     (const MethodInfo_2D9FEEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   v68 = TutorialFlag_TypeInfo->static_fields;

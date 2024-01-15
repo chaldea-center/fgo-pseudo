@@ -403,8 +403,8 @@ void __fastcall ServantStatusListViewItemDrawEquip__SetItem(
     sub_B16FFC(&ServantStatusListViewItemDrawEquip_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v10);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_11917, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_11917/*"SERVANT_STATUS_EXPLANATION_EQUIP_ICON"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FDE96 = 1;
   }
   *(_QWORD *)exp = 0LL;
@@ -419,7 +419,7 @@ void __fastcall ServantStatusListViewItemDrawEquip__SetItem(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11917, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11917/*"SERVANT_STATUS_EXPLANATION_EQUIP_ICON"*/, 0LL);
   if ( !nameRangeLabel )
     goto LABEL_181;
   UILabel__set_text((UILabel_o *)nameRangeLabel, v15, 0LL);
@@ -486,7 +486,7 @@ LABEL_26:
   }
   else
   {
-    Name = (System_String_o *)StringLiteral_1;
+    Name = (System_String_o *)StringLiteral_1/*""*/;
     if ( !levelLabel )
       goto LABEL_181;
   }

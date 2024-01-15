@@ -80,10 +80,10 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
     sub_B16FFC(&int_TypeInfo, v9);
     sub_B16FFC(&object___TypeInfo, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_15842, v12);
-    sub_B16FFC(&StringLiteral_2743, v13);
-    sub_B16FFC(&StringLiteral_2758, v14);
-    sub_B16FFC(&StringLiteral_19110, v15);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v12);
+    sub_B16FFC(&StringLiteral_2743/*"Battle/Common"*/, v13);
+    sub_B16FFC(&StringLiteral_2758/*"BattleAssetUIAtlas"*/, v14);
+    sub_B16FFC(&StringLiteral_19110/*"hp_gauge_"*/, v15);
     byte_40F8A02 = 1;
   }
   if ( !this->fields.isSuperBossNormal || this->fields.isSuperBossShift )
@@ -93,12 +93,12 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2743, 0LL);
+    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2743/*"Battle/Common"*/, 0LL);
     if ( !AssetStorage )
       goto LABEL_73;
     Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                    AssetStorage,
-                                                                   (System_String_o *)StringLiteral_2758,
+                                                                   (System_String_o *)StringLiteral_2758/*"BattleAssetUIAtlas"*/,
                                                                    (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     if ( !Object_WarBoardWaitTimeSetting )
       goto LABEL_73;
@@ -119,13 +119,13 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
       if ( !v24 )
         goto LABEL_73;
       v26 = (System_Object_array *)v24;
-      v27 = StringLiteral_19110;
-      if ( StringLiteral_19110 )
+      v27 = StringLiteral_19110/*"hp_gauge_"*/;
+      if ( StringLiteral_19110/*"hp_gauge_"*/ )
       {
-        v27 = sub_B170BC(StringLiteral_19110, v26->obj.klass->_1.element_class);
+        v27 = sub_B170BC(StringLiteral_19110/*"hp_gauge_"*/, v26->obj.klass->_1.element_class);
         if ( !v27 )
           goto LABEL_75;
-        v28 = StringLiteral_19110;
+        v28 = StringLiteral_19110/*"hp_gauge_"*/;
       }
       else
       {
@@ -148,13 +148,13 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
         goto LABEL_74;
       v26->m_Items[1] = v39;
       sub_B16F98(&v26->m_Items[1], v39);
-      v27 = StringLiteral_15842;
-      if ( StringLiteral_15842 )
+      v27 = StringLiteral_15842/*"_"*/;
+      if ( StringLiteral_15842/*"_"*/ )
       {
-        v27 = sub_B170BC(StringLiteral_15842, v26->obj.klass->_1.element_class);
+        v27 = sub_B170BC(StringLiteral_15842/*"_"*/, v26->obj.klass->_1.element_class);
         if ( !v27 )
           goto LABEL_75;
-        v28 = StringLiteral_15842;
+        v28 = StringLiteral_15842/*"_"*/;
       }
       else
       {
@@ -198,13 +198,13 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
         if ( !v46 )
           goto LABEL_73;
         v47 = (System_Object_array *)v46;
-        v27 = StringLiteral_19110;
-        if ( StringLiteral_19110 )
+        v27 = StringLiteral_19110/*"hp_gauge_"*/;
+        if ( StringLiteral_19110/*"hp_gauge_"*/ )
         {
-          v27 = sub_B170BC(StringLiteral_19110, v47->obj.klass->_1.element_class);
+          v27 = sub_B170BC(StringLiteral_19110/*"hp_gauge_"*/, v47->obj.klass->_1.element_class);
           if ( !v27 )
             goto LABEL_75;
-          v28 = StringLiteral_19110;
+          v28 = StringLiteral_19110/*"hp_gauge_"*/;
         }
         else
         {
@@ -223,13 +223,13 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
             goto LABEL_74;
           v47->m_Items[1] = v48;
           sub_B16F98(&v47->m_Items[1], v48);
-          v27 = StringLiteral_15842;
-          if ( StringLiteral_15842 )
+          v27 = StringLiteral_15842/*"_"*/;
+          if ( StringLiteral_15842/*"_"*/ )
           {
-            v27 = sub_B170BC(StringLiteral_15842, v47->obj.klass->_1.element_class);
+            v27 = sub_B170BC(StringLiteral_15842/*"_"*/, v47->obj.klass->_1.element_class);
             if ( !v27 )
               goto LABEL_75;
-            v28 = StringLiteral_15842;
+            v28 = StringLiteral_15842/*"_"*/;
           }
           else
           {
@@ -371,16 +371,16 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&type);
     sub_B16FFC(&object___TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_15842, v9);
-    sub_B16FFC(&StringLiteral_19109, v10);
-    sub_B16FFC(&StringLiteral_19110, v11);
-    sub_B16FFC(&StringLiteral_19108, v12);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v9);
+    sub_B16FFC(&StringLiteral_19109/*"hp_frame_"*/, v10);
+    sub_B16FFC(&StringLiteral_19110/*"hp_gauge_"*/, v11);
+    sub_B16FFC(&StringLiteral_19108/*"hp_damage_"*/, v12);
     byte_40F8A03 = 1;
   }
   hpframe = this->fields.hpframe;
   v47 = type;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v47);
-  v15 = System_String__Concat((Il2CppObject *)StringLiteral_19109, v14, 0LL);
+  v15 = System_String__Concat((Il2CppObject *)StringLiteral_19109/*"hp_frame_"*/, v14, 0LL);
   if ( !hpframe )
     goto LABEL_66;
   UISprite__set_spriteName(hpframe, v15, 0LL);
@@ -389,13 +389,13 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
   if ( !v18 )
     goto LABEL_66;
   v20 = (System_Object_array *)v18;
-  v21 = StringLiteral_19110;
-  if ( StringLiteral_19110 )
+  v21 = StringLiteral_19110/*"hp_gauge_"*/;
+  if ( StringLiteral_19110/*"hp_gauge_"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19110, v20->obj.klass->_1.element_class);
+    v21 = sub_B170BC(StringLiteral_19110/*"hp_gauge_"*/, v20->obj.klass->_1.element_class);
     if ( !v21 )
       goto LABEL_65;
-    v22 = StringLiteral_19110;
+    v22 = StringLiteral_19110/*"hp_gauge_"*/;
   }
   else
   {
@@ -418,13 +418,13 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
     goto LABEL_64;
   v20->m_Items[1] = v23;
   sub_B16F98(&v20->m_Items[1], v23);
-  v21 = StringLiteral_15842;
-  if ( StringLiteral_15842 )
+  v21 = StringLiteral_15842/*"_"*/;
+  if ( StringLiteral_15842/*"_"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_15842, v20->obj.klass->_1.element_class);
+    v21 = sub_B170BC(StringLiteral_15842/*"_"*/, v20->obj.klass->_1.element_class);
     if ( !v21 )
       goto LABEL_65;
-    v22 = StringLiteral_15842;
+    v22 = StringLiteral_15842/*"_"*/;
   }
   else
   {
@@ -458,13 +458,13 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
   if ( !v30 )
     goto LABEL_66;
   v31 = (System_Object_array *)v30;
-  v21 = StringLiteral_19108;
-  if ( StringLiteral_19108 )
+  v21 = StringLiteral_19108/*"hp_damage_"*/;
+  if ( StringLiteral_19108/*"hp_damage_"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19108, v31->obj.klass->_1.element_class);
+    v21 = sub_B170BC(StringLiteral_19108/*"hp_damage_"*/, v31->obj.klass->_1.element_class);
     if ( !v21 )
       goto LABEL_65;
-    v22 = StringLiteral_19108;
+    v22 = StringLiteral_19108/*"hp_damage_"*/;
   }
   else
   {
@@ -487,13 +487,13 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
     goto LABEL_64;
   v31->m_Items[1] = v32;
   sub_B16F98(&v31->m_Items[1], v32);
-  v21 = StringLiteral_15842;
-  if ( StringLiteral_15842 )
+  v21 = StringLiteral_15842/*"_"*/;
+  if ( StringLiteral_15842/*"_"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_15842, v31->obj.klass->_1.element_class);
+    v21 = sub_B170BC(StringLiteral_15842/*"_"*/, v31->obj.klass->_1.element_class);
     if ( !v21 )
       goto LABEL_65;
-    v22 = StringLiteral_15842;
+    v22 = StringLiteral_15842/*"_"*/;
   }
   else
   {
@@ -533,13 +533,13 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
     if ( !v38 )
       goto LABEL_66;
     v39 = (System_Object_array *)v38;
-    v21 = StringLiteral_19110;
-    if ( StringLiteral_19110 )
+    v21 = StringLiteral_19110/*"hp_gauge_"*/;
+    if ( StringLiteral_19110/*"hp_gauge_"*/ )
     {
-      v21 = sub_B170BC(StringLiteral_19110, v39->obj.klass->_1.element_class);
+      v21 = sub_B170BC(StringLiteral_19110/*"hp_gauge_"*/, v39->obj.klass->_1.element_class);
       if ( !v21 )
         goto LABEL_65;
-      v22 = StringLiteral_19110;
+      v22 = StringLiteral_19110/*"hp_gauge_"*/;
     }
     else
     {
@@ -558,13 +558,13 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
         goto LABEL_64;
       v39->m_Items[1] = v40;
       sub_B16F98(&v39->m_Items[1], v40);
-      v21 = StringLiteral_15842;
-      if ( StringLiteral_15842 )
+      v21 = StringLiteral_15842/*"_"*/;
+      if ( StringLiteral_15842/*"_"*/ )
       {
-        v21 = sub_B170BC(StringLiteral_15842, v39->obj.klass->_1.element_class);
+        v21 = sub_B170BC(StringLiteral_15842/*"_"*/, v39->obj.klass->_1.element_class);
         if ( !v21 )
           goto LABEL_65;
-        v22 = StringLiteral_15842;
+        v22 = StringLiteral_15842/*"_"*/;
       }
       else
       {
@@ -636,23 +636,23 @@ void __fastcall BattleServantChangeBarComponent__setMpFrames(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&type);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20505, v6);
-    sub_B16FFC(&StringLiteral_18303, v7);
-    sub_B16FFC(&StringLiteral_20506, v8);
-    sub_B16FFC(&StringLiteral_20504, v9);
+    sub_B16FFC(&StringLiteral_20505/*"mp_framebg_"*/, v6);
+    sub_B16FFC(&StringLiteral_18303/*"enemymp_"*/, v7);
+    sub_B16FFC(&StringLiteral_20506/*"mp_mark_"*/, v8);
+    sub_B16FFC(&StringLiteral_20504/*"mp_frame_"*/, v9);
     byte_40F8A04 = 1;
   }
   hpframe = this->fields.hpframe;
   v25 = type;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25);
-  v12 = System_String__Concat((Il2CppObject *)StringLiteral_20504, v11, 0LL);
+  v12 = System_String__Concat((Il2CppObject *)StringLiteral_20504/*"mp_frame_"*/, v11, 0LL);
   if ( !hpframe )
     goto LABEL_18;
   UISprite__set_spriteName(hpframe, v12, 0LL);
   frontHpBart = this->fields.frontHpBart;
   v24 = type;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
-  v15 = System_String__Concat((Il2CppObject *)StringLiteral_18303, v14, 0LL);
+  v15 = System_String__Concat((Il2CppObject *)StringLiteral_18303/*"enemymp_"*/, v14, 0LL);
   if ( !frontHpBart )
     goto LABEL_18;
   UISprite__set_spriteName(frontHpBart, v15, 0LL);
@@ -667,7 +667,7 @@ void __fastcall BattleServantChangeBarComponent__setMpFrames(
     v17 = this->fields.splitSprite;
     v25 = type;
     v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25);
-    v19 = System_String__Concat((Il2CppObject *)StringLiteral_20506, v18, 0LL);
+    v19 = System_String__Concat((Il2CppObject *)StringLiteral_20506/*"mp_mark_"*/, v18, 0LL);
     if ( !v17 )
       goto LABEL_18;
     UISprite__set_spriteName(v17, v19, 0LL);
@@ -683,7 +683,7 @@ void __fastcall BattleServantChangeBarComponent__setMpFrames(
     v21 = this->fields.backHpBar;
     v25 = type;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25);
-    v23 = System_String__Concat((Il2CppObject *)StringLiteral_20505, v22, 0LL);
+    v23 = System_String__Concat((Il2CppObject *)StringLiteral_20505/*"mp_framebg_"*/, v22, 0LL);
     if ( v21 )
     {
       UISprite__set_spriteName(v21, v23, 0LL);

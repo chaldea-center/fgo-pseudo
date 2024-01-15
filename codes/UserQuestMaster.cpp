@@ -223,7 +223,7 @@ QuestEntity_o *__fastcall UserQuestMaster__GetLatestMainScenarioLastQuest(
     sub_B16FFC(&UserQuestMaster___c__DisplayClass11_0_TypeInfo, v30);
     sub_B16FFC(&UserQuestMaster___c_TypeInfo, v31);
     sub_B16FFC(&UserQuestEntity_TypeInfo, v32);
-    sub_B16FFC(&StringLiteral_2956, v33);
+    sub_B16FFC(&StringLiteral_2956/*"CHAPTER_F_END_ID"*/, v33);
     byte_40F80EE = 1;
   }
   memset(&v106, 0, sizeof(v106));
@@ -251,7 +251,7 @@ QuestEntity_o *__fastcall UserQuestMaster__GetLatestMainScenarioLastQuest(
                               (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ConstantMaster___);
   if ( !v42 )
     goto LABEL_78;
-  Value = ConstantMaster__GetValue(v42, (System_String_o *)StringLiteral_2956, 0LL);
+  Value = ConstantMaster__GetValue(v42, (System_String_o *)StringLiteral_2956/*"CHAPTER_F_END_ID"*/, 0LL);
   v44 = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   v101 = Value;
   if ( !v44 )
@@ -637,7 +637,7 @@ QuestEntity_o *__fastcall UserQuestMaster__GetMainScenarioLatestClear(
     sub_B16FFC(&UserQuestMaster___c__DisplayClass10_0_TypeInfo, v30);
     sub_B16FFC(&UserQuestMaster___c_TypeInfo, v31);
     sub_B16FFC(&UserQuestEntity_TypeInfo, v32);
-    sub_B16FFC(&StringLiteral_2956, v33);
+    sub_B16FFC(&StringLiteral_2956/*"CHAPTER_F_END_ID"*/, v33);
     byte_40F80ED = 1;
   }
   memset(&v106, 0, sizeof(v106));
@@ -665,7 +665,7 @@ QuestEntity_o *__fastcall UserQuestMaster__GetMainScenarioLatestClear(
                               (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ConstantMaster___);
   if ( !v42 )
     goto LABEL_77;
-  Value = ConstantMaster__GetValue(v42, (System_String_o *)StringLiteral_2956, 0LL);
+  Value = ConstantMaster__GetValue(v42, (System_String_o *)StringLiteral_2956/*"CHAPTER_F_END_ID"*/, 0LL);
   v44 = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   v101 = Value;
   if ( !v44 )
@@ -1036,7 +1036,7 @@ int32_t __fastcall UserQuestMaster__getChallengeCountsFromId(
   {
     sub_B16FFC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, userId);
     sub_B16FFC(&UserQuestEntity_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1223, v7);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v7);
     byte_40F80E9 = 1;
   }
   v31 = 0LL;
@@ -1044,7 +1044,7 @@ int32_t __fastcall UserQuestMaster__getChallengeCountsFromId(
   {
     this->fields.oldId = userId;
     v8 = System_Int64__ToString((int64_t)&v33, 0LL);
-    v9 = System_String__Concat_43743732(v8, (System_String_o *)StringLiteral_1223, 0LL);
+    v9 = System_String__Concat_43743732(v8, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
     this->fields.userIdString = v9;
     sub_B16F98(
       (BattleServantConfConponent_o *)&this->fields.userIdString,
@@ -1239,7 +1239,7 @@ int32_t __fastcall UserQuestMaster__getClearCountsFromId(
   {
     sub_B16FFC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, userId);
     sub_B16FFC(&UserQuestEntity_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1223, v7);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v7);
     byte_40F80EB = 1;
   }
   v31 = 0LL;
@@ -1247,7 +1247,7 @@ int32_t __fastcall UserQuestMaster__getClearCountsFromId(
   {
     this->fields.oldId = userId;
     v8 = System_Int64__ToString((int64_t)&v33, 0LL);
-    v9 = System_String__Concat_43743732(v8, (System_String_o *)StringLiteral_1223, 0LL);
+    v9 = System_String__Concat_43743732(v8, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
     this->fields.userIdString = v9;
     sub_B16F98(
       (BattleServantConfConponent_o *)&this->fields.userIdString,
@@ -1444,14 +1444,14 @@ UserQuestEntity_o *__fastcall UserQuestMaster__getEntityFromId(
   {
     sub_B16FFC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, userId);
     sub_B16FFC(&UserQuestEntity_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1223, v7);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v7);
     byte_40F80E8 = 1;
   }
   if ( this->fields.oldId != userId )
   {
     this->fields.oldId = userId;
     v8 = System_Int64__ToString((int64_t)&v34, 0LL);
-    v9 = System_String__Concat_43743732(v8, (System_String_o *)StringLiteral_1223, 0LL);
+    v9 = System_String__Concat_43743732(v8, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
     this->fields.userIdString = v9;
     sub_B16F98(
       (BattleServantConfConponent_o *)&this->fields.userIdString,

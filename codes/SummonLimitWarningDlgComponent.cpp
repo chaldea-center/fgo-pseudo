@@ -117,7 +117,7 @@ void __fastcall SummonLimitWarningDlgComponent__Init(SummonLimitWarningDlgCompon
 
   if ( (byte_40FD49E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FD49E = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -127,48 +127,48 @@ void __fastcall SummonLimitWarningDlgComponent__Init(SummonLimitWarningDlgCompon
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_17;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   msgLabel = this->fields.msgLabel;
   if ( !msgLabel )
     goto LABEL_17;
-  UILabel__set_text(msgLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(msgLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   titleLabel2 = this->fields.titleLabel2;
   if ( !titleLabel2 )
     goto LABEL_17;
-  UILabel__set_text(titleLabel2, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel2, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   warningLabel = this->fields.warningLabel;
   if ( !warningLabel )
     goto LABEL_17;
-  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   confirmLabel = this->fields.confirmLabel;
   if ( !confirmLabel )
     goto LABEL_17;
-  UILabel__set_text(confirmLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(confirmLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   qpLabel = this->fields.qpLabel;
   if ( !qpLabel )
     goto LABEL_17;
-  UILabel__set_text(qpLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(qpLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideLabel = this->fields.decideLabel;
   if ( !decideLabel )
     goto LABEL_17;
-  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   otherLabel = this->fields.otherLabel;
   if ( !otherLabel )
     goto LABEL_17;
-  UILabel__set_text(otherLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(otherLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   cancelLabel = this->fields.cancelLabel;
   if ( !cancelLabel
-    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (otherLabel2 = this->fields.otherLabel2) == 0LL)
-    || (UILabel__set_text(otherLabel2, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(otherLabel2, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel2 = this->fields.cancelLabel2) == 0LL)
-    || (UILabel__set_text(cancelLabel2, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelLabel2, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (settingLabel = this->fields.settingLabel) == 0LL) )
   {
 LABEL_17:
     sub_B170D4();
   }
-  UILabel__set_text(settingLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(settingLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -384,11 +384,11 @@ void __fastcall SummonLimitWarningDlgComponent__OpenManaWarning(
     sub_B16FFC(&int_TypeInfo, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_SummonLimitWarningDlgComponent_EndOpen__, v10);
-    sub_B16FFC(&StringLiteral_12392, v11);
-    sub_B16FFC(&StringLiteral_12357, v12);
-    sub_B16FFC(&StringLiteral_12393, v13);
-    sub_B16FFC(&StringLiteral_12391, v14);
-    sub_B16FFC(&StringLiteral_12394, v15);
+    sub_B16FFC(&StringLiteral_12392/*"SUMMON_MANA_LIMIT_WARNING_DECIDE"*/, v11);
+    sub_B16FFC(&StringLiteral_12357/*"SUMMON_AUTOSALE_BUTTON"*/, v12);
+    sub_B16FFC(&StringLiteral_12393/*"SUMMON_MANA_LIMIT_WARNING_MSG"*/, v13);
+    sub_B16FFC(&StringLiteral_12391/*"SUMMON_LIMIT_WARNING_CANCEL"*/, v14);
+    sub_B16FFC(&StringLiteral_12394/*"SUMMON_MANA_LIMIT_WARNING_TITLE"*/, v15);
     byte_40FD4A0 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -499,12 +499,12 @@ void __fastcall SummonLimitWarningDlgComponent__OpenManaWarning(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_12394, 0LL);
+  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_12394/*"SUMMON_MANA_LIMIT_WARNING_TITLE"*/, 0LL);
   if ( !v52 )
     goto LABEL_39;
   UILabel__set_text(v52, v53, 0LL);
   v54 = this->fields.msgLabel;
-  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_12393, 0LL);
+  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_12393/*"SUMMON_MANA_LIMIT_WARNING_MSG"*/, 0LL);
   if ( !v30 )
     goto LABEL_39;
   v56 = v55;
@@ -524,15 +524,15 @@ void __fastcall SummonLimitWarningDlgComponent__OpenManaWarning(
     goto LABEL_39;
   UILabel__set_text(v54, v60, 0LL);
   otherLabel = this->fields.otherLabel;
-  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_12392, 0LL);
+  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_12392/*"SUMMON_MANA_LIMIT_WARNING_DECIDE"*/, 0LL);
   if ( !otherLabel
     || (UILabel__set_text(otherLabel, v62, 0LL),
         cancelLabel = this->fields.cancelLabel,
-        v64 = LocalizationManager__Get((System_String_o *)StringLiteral_12391, 0LL),
+        v64 = LocalizationManager__Get((System_String_o *)StringLiteral_12391/*"SUMMON_LIMIT_WARNING_CANCEL"*/, 0LL),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, v64, 0LL),
         settingLabel = this->fields.settingLabel,
-        v66 = LocalizationManager__Get((System_String_o *)StringLiteral_12357, 0LL),
+        v66 = LocalizationManager__Get((System_String_o *)StringLiteral_12357/*"SUMMON_AUTOSALE_BUTTON"*/, 0LL),
         !settingLabel) )
   {
 LABEL_39:
@@ -644,14 +644,14 @@ void __fastcall SummonLimitWarningDlgComponent__OpenQpWarning(
     sub_B16FFC(&int_TypeInfo, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_SummonLimitWarningDlgComponent_EndOpen__, v10);
-    sub_B16FFC(&StringLiteral_12357, v11);
-    sub_B16FFC(&StringLiteral_12401, v12);
-    sub_B16FFC(&StringLiteral_12399, v13);
-    sub_B16FFC(&StringLiteral_3253, v14);
-    sub_B16FFC(&StringLiteral_12404, v15);
-    sub_B16FFC(&StringLiteral_12391, v16);
-    sub_B16FFC(&StringLiteral_12402, v17);
-    sub_B16FFC(&StringLiteral_12400, v18);
+    sub_B16FFC(&StringLiteral_12357/*"SUMMON_AUTOSALE_BUTTON"*/, v11);
+    sub_B16FFC(&StringLiteral_12401/*"SUMMON_QP_LIMIT_WARNING_MSG"*/, v12);
+    sub_B16FFC(&StringLiteral_12399/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/, v13);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v14);
+    sub_B16FFC(&StringLiteral_12404/*"SUMMON_QP_LIMIT_WARNING_WARNING"*/, v15);
+    sub_B16FFC(&StringLiteral_12391/*"SUMMON_LIMIT_WARNING_CANCEL"*/, v16);
+    sub_B16FFC(&StringLiteral_12402/*"SUMMON_QP_LIMIT_WARNING_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_12400/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/, v18);
     byte_40FD49F = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -777,22 +777,22 @@ void __fastcall SummonLimitWarningDlgComponent__OpenQpWarning(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_12402, 0LL);
+  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_12402/*"SUMMON_QP_LIMIT_WARNING_TITLE"*/, 0LL);
   if ( !v61 )
     goto LABEL_45;
   UILabel__set_text(v61, v62, 0LL);
   v63 = this->fields.warningLabel;
-  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_12404, 0LL);
+  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_12404/*"SUMMON_QP_LIMIT_WARNING_WARNING"*/, 0LL);
   if ( !v63 )
     goto LABEL_45;
   UILabel__set_text(v63, v64, 0LL);
   v65 = this->fields.confirmLabel;
-  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_12399, 0LL);
+  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_12399/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/, 0LL);
   if ( !v65 )
     goto LABEL_45;
   UILabel__set_text(v65, v66, 0LL);
   v67 = this->fields.qpLabel;
-  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_12401, 0LL);
+  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_12401/*"SUMMON_QP_LIMIT_WARNING_MSG"*/, 0LL);
   if ( !v33 )
     goto LABEL_45;
   v69 = v68;
@@ -812,20 +812,20 @@ void __fastcall SummonLimitWarningDlgComponent__OpenQpWarning(
     goto LABEL_45;
   UILabel__set_text(v67, v73, 0LL);
   decideLabel = this->fields.decideLabel;
-  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideLabel )
     goto LABEL_45;
   UILabel__set_text(decideLabel, v75, 0LL);
   otherLabel2 = this->fields.otherLabel2;
-  v77 = LocalizationManager__Get((System_String_o *)StringLiteral_12400, 0LL);
+  v77 = LocalizationManager__Get((System_String_o *)StringLiteral_12400/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/, 0LL);
   if ( !otherLabel2
     || (UILabel__set_text(otherLabel2, v77, 0LL),
         cancelLabel2 = this->fields.cancelLabel2,
-        v79 = LocalizationManager__Get((System_String_o *)StringLiteral_12391, 0LL),
+        v79 = LocalizationManager__Get((System_String_o *)StringLiteral_12391/*"SUMMON_LIMIT_WARNING_CANCEL"*/, 0LL),
         !cancelLabel2)
     || (UILabel__set_text(cancelLabel2, v79, 0LL),
         settingLabel = this->fields.settingLabel,
-        v81 = LocalizationManager__Get((System_String_o *)StringLiteral_12357, 0LL),
+        v81 = LocalizationManager__Get((System_String_o *)StringLiteral_12357/*"SUMMON_AUTOSALE_BUTTON"*/, 0LL),
         !settingLabel) )
   {
 LABEL_45:
@@ -937,14 +937,14 @@ void __fastcall SummonLimitWarningDlgComponent__OpenQpWarning2(
     sub_B16FFC(&int_TypeInfo, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_SummonLimitWarningDlgComponent_EndOpen__, v10);
-    sub_B16FFC(&StringLiteral_12405, v11);
-    sub_B16FFC(&StringLiteral_12357, v12);
-    sub_B16FFC(&StringLiteral_12401, v13);
-    sub_B16FFC(&StringLiteral_12403, v14);
-    sub_B16FFC(&StringLiteral_12399, v15);
-    sub_B16FFC(&StringLiteral_3253, v16);
-    sub_B16FFC(&StringLiteral_12391, v17);
-    sub_B16FFC(&StringLiteral_12400, v18);
+    sub_B16FFC(&StringLiteral_12405/*"SUMMON_QP_LIMIT_WARNING_WARNING2"*/, v11);
+    sub_B16FFC(&StringLiteral_12357/*"SUMMON_AUTOSALE_BUTTON"*/, v12);
+    sub_B16FFC(&StringLiteral_12401/*"SUMMON_QP_LIMIT_WARNING_MSG"*/, v13);
+    sub_B16FFC(&StringLiteral_12403/*"SUMMON_QP_LIMIT_WARNING_TITLE2"*/, v14);
+    sub_B16FFC(&StringLiteral_12399/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/, v15);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v16);
+    sub_B16FFC(&StringLiteral_12391/*"SUMMON_LIMIT_WARNING_CANCEL"*/, v17);
+    sub_B16FFC(&StringLiteral_12400/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/, v18);
     byte_40FD4A1 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -1070,22 +1070,22 @@ void __fastcall SummonLimitWarningDlgComponent__OpenQpWarning2(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_12403, 0LL);
+  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_12403/*"SUMMON_QP_LIMIT_WARNING_TITLE2"*/, 0LL);
   if ( !v61 )
     goto LABEL_45;
   UILabel__set_text(v61, v62, 0LL);
   v63 = this->fields.warningLabel;
-  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_12405, 0LL);
+  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_12405/*"SUMMON_QP_LIMIT_WARNING_WARNING2"*/, 0LL);
   if ( !v63 )
     goto LABEL_45;
   UILabel__set_text(v63, v64, 0LL);
   v65 = this->fields.confirmLabel;
-  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_12399, 0LL);
+  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_12399/*"SUMMON_QP_LIMIT_WARNING_CONFIRM"*/, 0LL);
   if ( !v65 )
     goto LABEL_45;
   UILabel__set_text(v65, v66, 0LL);
   v67 = this->fields.qpLabel;
-  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_12401, 0LL);
+  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_12401/*"SUMMON_QP_LIMIT_WARNING_MSG"*/, 0LL);
   if ( !v33 )
     goto LABEL_45;
   v69 = v68;
@@ -1105,20 +1105,20 @@ void __fastcall SummonLimitWarningDlgComponent__OpenQpWarning2(
     goto LABEL_45;
   UILabel__set_text(v67, v73, 0LL);
   decideLabel = this->fields.decideLabel;
-  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideLabel )
     goto LABEL_45;
   UILabel__set_text(decideLabel, v75, 0LL);
   otherLabel2 = this->fields.otherLabel2;
-  v77 = LocalizationManager__Get((System_String_o *)StringLiteral_12400, 0LL);
+  v77 = LocalizationManager__Get((System_String_o *)StringLiteral_12400/*"SUMMON_QP_LIMIT_WARNING_DECIDE"*/, 0LL);
   if ( !otherLabel2
     || (UILabel__set_text(otherLabel2, v77, 0LL),
         cancelLabel2 = this->fields.cancelLabel2,
-        v79 = LocalizationManager__Get((System_String_o *)StringLiteral_12391, 0LL),
+        v79 = LocalizationManager__Get((System_String_o *)StringLiteral_12391/*"SUMMON_LIMIT_WARNING_CANCEL"*/, 0LL),
         !cancelLabel2)
     || (UILabel__set_text(cancelLabel2, v79, 0LL),
         settingLabel = this->fields.settingLabel,
-        v81 = LocalizationManager__Get((System_String_o *)StringLiteral_12357, 0LL),
+        v81 = LocalizationManager__Get((System_String_o *)StringLiteral_12357/*"SUMMON_AUTOSALE_BUTTON"*/, 0LL),
         !settingLabel) )
   {
 LABEL_45:

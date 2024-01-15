@@ -163,9 +163,9 @@ System_Int32_array_array *__fastcall DialogMessageEntity__getTargets(
     sub_B16FFC(&int_____TypeInfo, v7);
     sub_B16FFC(&Method_DialogMessageEntity___c__getTargets_b__10_0__, v8);
     sub_B16FFC(&DialogMessageEntity___c_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_15571, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
-    sub_B16FFC(&StringLiteral_15807, v12);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v12);
     byte_40FBC73 = 1;
   }
   targetIds = this->fields.targetIds;
@@ -191,15 +191,15 @@ LABEL_26:
     {
       v23 = System_String__Replace_43750968(
               v22,
-              (System_String_o *)StringLiteral_15571,
-              (System_String_o *)StringLiteral_1,
+              (System_String_o *)StringLiteral_15571/*"["*/,
+              (System_String_o *)StringLiteral_1/*""*/,
               0LL);
       if ( v23 )
       {
         v24 = System_String__Replace_43750968(
                 v23,
-                (System_String_o *)StringLiteral_15807,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_15807/*"]"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         v14 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v25);
         if ( v14 )

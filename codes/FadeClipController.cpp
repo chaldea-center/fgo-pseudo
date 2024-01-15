@@ -19,24 +19,24 @@ void __fastcall FadeClipController___cctor(const MethodInfo *method)
   if ( (byte_40F9F95 & 1) == 0 )
   {
     sub_B16FFC(&FadeClipController_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_15922, v2);
-    sub_B16FFC(&StringLiteral_15920, v3);
-    sub_B16FFC(&StringLiteral_15907, v4);
-    sub_B16FFC(&StringLiteral_15919, v5);
+    sub_B16FFC(&StringLiteral_15922/*"_FadeParam"*/, v2);
+    sub_B16FFC(&StringLiteral_15920/*"_FadeDegreeTo"*/, v3);
+    sub_B16FFC(&StringLiteral_15907/*"_FADE_CLIP"*/, v4);
+    sub_B16FFC(&StringLiteral_15919/*"_FadeDegreeFrom"*/, v5);
     byte_40F9F95 = 1;
   }
   FadeClipController_TypeInfo->static_fields->FADE_PARAM_ID = UnityEngine_Shader__PropertyToID(
-                                                                (System_String_o *)StringLiteral_15922,
+                                                                (System_String_o *)StringLiteral_15922/*"_FadeParam"*/,
                                                                 0LL);
   FadeClipController_TypeInfo->static_fields->FADE_DEGREE_FROM_ID = UnityEngine_Shader__PropertyToID(
-                                                                      (System_String_o *)StringLiteral_15919,
+                                                                      (System_String_o *)StringLiteral_15919/*"_FadeDegreeFrom"*/,
                                                                       0LL);
-  v6 = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_15920, 0LL);
+  v6 = UnityEngine_Shader__PropertyToID((System_String_o *)StringLiteral_15920/*"_FadeDegreeTo"*/, 0LL);
   v7 = FadeClipController_TypeInfo;
   FadeClipController_TypeInfo->static_fields->FADE_DEGREE_TO_ID = v6;
   static_fields = v7->static_fields;
-  v9 = (System_Int32_array **)StringLiteral_15907;
-  static_fields->FADE_CLIP_ID = (struct System_String_o *)StringLiteral_15907;
+  v9 = (System_Int32_array **)StringLiteral_15907/*"_FADE_CLIP"*/;
+  static_fields->FADE_CLIP_ID = (struct System_String_o *)StringLiteral_15907/*"_FADE_CLIP"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->FADE_CLIP_ID, v9, v10, v11, v12, v13, v14, v15);
 }
 

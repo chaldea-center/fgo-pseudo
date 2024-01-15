@@ -117,7 +117,7 @@ ServantStatusFlavorTextListViewObject_o *__fastcall ServantStatusFlavorTextListV
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusFlavorTextListViewObject__Add__, v7);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_410192B = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -143,7 +143,7 @@ ServantStatusFlavorTextListViewObject_o *__fastcall ServantStatusFlavorTextListV
             0,
             1,
             0,
-            (System_String_o *)StringLiteral_1,
+            (System_String_o *)StringLiteral_1/*""*/,
             0,
             v14),
           (objectList = this->fields.objectList) == 0LL) )
@@ -434,7 +434,7 @@ void __fastcall ServantStatusFlavorTextListViewManager__CreateList(
     sub_B16FFC(&ServantStatusFlavorTextListViewManager_ServantProfile_TypeInfo, v18);
     sub_B16FFC(&Method_ServantStatusFlavorTextListViewManager_OnChangeScrollBarValue__, v19);
     sub_B16FFC(&Method_UIScrollView_OnScrollBar__, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_4101924 = 1;
   }
   basePositon.fields.z = 0.0;
@@ -569,7 +569,7 @@ void __fastcall ServantStatusFlavorTextListViewManager__CreateList(
         0,
         1,
         0,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         0,
         v67);
       ServantStatusFlavorTextListViewManager__SetObjectPosition(this, &basePositon, v68, v69);
@@ -1212,11 +1212,11 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewManager__GetCondition
     sub_B16FFC(&Method_DataManager_GetMaster_ServantCommentAddMaster___, svtCommentEntity);
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11941, v6);
-    sub_B16FFC(&StringLiteral_15909, v7);
-    sub_B16FFC(&StringLiteral_15908, v8);
-    sub_B16FFC(&StringLiteral_3283, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_11941/*"SERVANT_STATUS_PROFILE_CONDITION"*/, v6);
+    sub_B16FFC(&StringLiteral_15909/*"_FLAVOR2"*/, v7);
+    sub_B16FFC(&StringLiteral_15908/*"_FLAVOR"*/, v8);
+    sub_B16FFC(&StringLiteral_3283/*"COND_TYPE_AND_FLAVOR2"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_4101925 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -1232,14 +1232,14 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewManager__GetCondition
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11941, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11941/*"SERVANT_STATUS_PROFILE_CONDITION"*/, 0LL);
     if ( v12 )
     {
       v14 = v13;
       ConditionString = ServantCommentAddMaster__GetConditionString(
                           v12,
-                          (System_String_o *)StringLiteral_15908,
-                          (System_String_o *)StringLiteral_15909,
+                          (System_String_o *)StringLiteral_15908/*"_FLAVOR"*/,
+                          (System_String_o *)StringLiteral_15909/*"_FLAVOR2"*/,
                           svtCommentEntity->fields.svtId,
                           svtCommentEntity->fields.id,
                           svtCommentEntity->fields.priority,
@@ -1269,16 +1269,16 @@ LABEL_40:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_11941, 0LL);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_11941/*"SERVANT_STATUS_PROFILE_CONDITION"*/, 0LL);
     ConditionString = ServantCommentEntity__GetConditiontext(
                         svtCommentEntity,
-                        (System_String_o *)StringLiteral_15908,
+                        (System_String_o *)StringLiteral_15908/*"_FLAVOR"*/,
                         0LL);
     goto LABEL_33;
   }
   Conditiontext = (Il2CppObject *)ServantCommentEntity__GetConditiontext(
                                     svtCommentEntity,
-                                    (System_String_o *)StringLiteral_15909,
+                                    (System_String_o *)StringLiteral_15909/*"_FLAVOR2"*/,
                                     0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1304,7 +1304,7 @@ LABEL_40:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v21 = (System_String_o *)StringLiteral_11941;
+    v21 = (System_String_o *)StringLiteral_11941/*"SERVANT_STATUS_PROFILE_CONDITION"*/;
   }
   else
   {
@@ -1313,7 +1313,7 @@ LABEL_40:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3283, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3283/*"COND_TYPE_AND_FLAVOR2"*/, 0LL);
     v23 = System_String__Concat_43743732((System_String_o *)Conditiontext, v22, 0LL);
     svtId = svtCommentEntity->fields.svtId;
     id = svtCommentEntity->fields.id;
@@ -1321,15 +1321,15 @@ LABEL_40:
     v27 = v23;
     v28 = ServantCommentAddMaster__GetConditionString(
             v12,
-            (System_String_o *)StringLiteral_15908,
-            (System_String_o *)StringLiteral_15909,
+            (System_String_o *)StringLiteral_15908/*"_FLAVOR"*/,
+            (System_String_o *)StringLiteral_15909/*"_FLAVOR2"*/,
             svtId,
             id,
             priority,
             -1,
             0LL);
     Conditiontext = (Il2CppObject *)System_String__Concat_43743732(v27, v28, 0LL);
-    v21 = (System_String_o *)StringLiteral_11941;
+    v21 = (System_String_o *)StringLiteral_11941/*"SERVANT_STATUS_PROFILE_CONDITION"*/;
   }
   v14 = LocalizationManager__Get(v21, 0LL);
   return System_String__Format(v14, Conditiontext, 0LL);
@@ -1579,7 +1579,7 @@ void __fastcall ServantStatusFlavorTextListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusFlavorTextListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusFlavorTextListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_ServantStatusFlavorTextListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_410192E = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -1592,7 +1592,7 @@ void __fastcall ServantStatusFlavorTextListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -1665,7 +1665,7 @@ void __fastcall ServantStatusFlavorTextListViewManager__RequestListObject_366356
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusFlavorTextListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusFlavorTextListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_ServantStatusFlavorTextListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_410192F = 1;
   }
   memset(&v22, 0, sizeof(v22));
@@ -1678,7 +1678,7 @@ void __fastcall ServantStatusFlavorTextListViewManager__RequestListObject_366356
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2105,7 +2105,7 @@ void __fastcall ServantStatusFlavorTextListViewManager__UpdateParameter(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusFlavorTextListViewObject__GetEnumerator__, v11);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusFlavorTextListViewObject__get_Count__, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_4101932 = 1;
   }
   memset(&v33, 0, sizeof(v33));
@@ -2148,7 +2148,7 @@ LABEL_29:
              (ServantStatusFlavorTextListViewObject_o *)v33.fields.current,
              v20) == 5 )
       {
-        CondTitle = ServantLimitAddEntity__GetCondTitle(v18, (System_String_o *)StringLiteral_1, 0LL);
+        CondTitle = ServantLimitAddEntity__GetCondTitle(v18, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         ServantStatusFlavorTextListViewObject__SetCondTitle(current, CondTitle, v23);
         OverwriteServantParameter = ServantLimitAddEntity__GetOverwriteServantParameter(v18, 0LL);
         if ( OverwriteServantParameter && (int)OverwriteServantParameter->max_length >= 6 )

@@ -102,14 +102,14 @@ void __fastcall EventBoardGameTokenInfoDialog__Init(EventBoardGameTokenInfoDialo
 
   if ( (byte_40FC536 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FC536 = 1;
   }
   this->fields.eventAtlas = 0LL;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.eventAtlas, 0LL, v2, v3, v4, v5, v6, v7);
   tokenNameLabel = this->fields.tokenNameLabel;
   if ( !tokenNameLabel
-    || (UILabel__set_text(tokenNameLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(tokenNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
     sub_B170D4();
@@ -137,7 +137,7 @@ void __fastcall EventBoardGameTokenInfoDialog__OpenInfo(
   if ( (byte_40FC537 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponentInChildren_EventBoardGameTokenItem___, item);
-    sub_B16FFC(&StringLiteral_22627, v5);
+    sub_B16FFC(&StringLiteral_22627/*"token_balloon"*/, v5);
     byte_40FC537 = 1;
   }
   if ( !this->fields.state )
@@ -149,7 +149,7 @@ void __fastcall EventBoardGameTokenInfoDialog__OpenInfo(
     bgImage = this->fields.bgImage;
     if ( !bgImage
       || (UISprite__set_atlas(bgImage, this->fields.eventAtlas, 0LL), (v8 = this->fields.bgImage) == 0LL)
-      || (UISprite__set_spriteName(v8, (System_String_o *)StringLiteral_22627, 0LL), !item)
+      || (UISprite__set_spriteName(v8, (System_String_o *)StringLiteral_22627/*"token_balloon"*/, 0LL), !item)
       || (tokenNameLabel = this->fields.tokenNameLabel) == 0LL
       || (UILabel__set_text(tokenNameLabel, item->fields.tokenName, 0LL), (tokenPrefab = this->fields.tokenPrefab) == 0LL)
       || (ComponentInChildren_Dropdown_DropdownItem = UnityEngine_GameObject__GetComponentInChildren_Dropdown_DropdownItem_(

@@ -406,8 +406,8 @@ void __fastcall WaveBattleWaveServantInfoItem__SetItem(
     sub_B16FFC(&long___TypeInfo, v20);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_B16FFC(&StringLiteral_18773, v23);
-    sub_B16FFC(&StringLiteral_20381, v24);
+    sub_B16FFC(&StringLiteral_18773/*"formation_select_small"*/, v23);
+    sub_B16FFC(&StringLiteral_20381/*"member_txt_"*/, v24);
     byte_40F6774 = 1;
   }
   entity = 0LL;
@@ -451,7 +451,7 @@ void __fastcall WaveBattleWaveServantInfoItem__SetItem(
   numberSprite = this->fields.numberSprite;
   v92 = idx + 1;
   v46 = System_Int32__ToString((int32_t)&v92, 0LL);
-  v47 = System_String__Concat_43743732((System_String_o *)StringLiteral_20381, v46, 0LL);
+  v47 = System_String__Concat_43743732((System_String_o *)StringLiteral_20381/*"member_txt_"*/, v46, 0LL);
   if ( !numberSprite )
     goto LABEL_57;
   UISprite__set_spriteName(numberSprite, v47, 0LL);
@@ -486,7 +486,7 @@ LABEL_36:
         {
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         }
-        v53 = AtlasManager__SetPartyOrganizationImage(v75, (System_String_o *)StringLiteral_18773, 0LL);
+        v53 = AtlasManager__SetPartyOrganizationImage(v75, (System_String_o *)StringLiteral_18773/*"formation_select_small"*/, 0LL);
         if ( *p_servantData )
         {
           (*p_servantData)->fields.userSvtId = 0LL;

@@ -137,12 +137,12 @@ bool __fastcall BattleLogicFunctionProcess_BaseFunctionTypeProcess__checkCommonC
   {
     sub_B16FFC(&int___TypeInfo, action);
     sub_B16FFC(&FuncList_TYPE_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_93, v8);
-    sub_B16FFC(&StringLiteral_92, v9);
-    sub_B16FFC(&StringLiteral_213, v10);
-    sub_B16FFC(&StringLiteral_91, v11);
-    sub_B16FFC(&StringLiteral_90, v12);
-    sub_B16FFC(&StringLiteral_89, v13);
+    sub_B16FFC(&StringLiteral_93/*"  => targetId : "*/, v8);
+    sub_B16FFC(&StringLiteral_92/*"  <= no Target"*/, v9);
+    sub_B16FFC(&StringLiteral_213/*" funcEnt.funcType : "*/, v10);
+    sub_B16FFC(&StringLiteral_91/*"  <= no Individuality"*/, v11);
+    sub_B16FFC(&StringLiteral_90/*"  <= is No applyTarget "*/, v12);
+    sub_B16FFC(&StringLiteral_89/*"  <= is Dead"*/, v13);
     byte_40F9DAB = 1;
   }
   *(_QWORD *)uniqueId = 0LL;
@@ -167,9 +167,9 @@ bool __fastcall BattleLogicFunctionProcess_BaseFunctionTypeProcess__checkCommonC
                              v18,
                              *(_QWORD *)(*(_QWORD *)v18 + 368LL));
   uniqueId[0] = *(_DWORD *)j_il2cpp_object_unbox_0(v19);
-  System_String__Concat_43743732((System_String_o *)StringLiteral_213, v20, 0LL);
+  System_String__Concat_43743732((System_String_o *)StringLiteral_213/*" funcEnt.funcType : "*/, v20, 0LL);
   v21 = System_Int32__ToString((int32_t)&uniqueId[1], 0LL);
-  System_String__Concat_43743732((System_String_o *)StringLiteral_93, v21, 0LL);
+  System_String__Concat_43743732((System_String_o *)StringLiteral_93/*"  => targetId : "*/, v21, 0LL);
   WrapTarget_k__BackingField = funcTarget->fields._WrapTarget_k__BackingField;
   if ( !WrapTarget_k__BackingField )
     goto LABEL_61;
@@ -563,18 +563,18 @@ bool __fastcall BattleLogicFunctionProcess_CommonAddStateProcess__CheckCondition
     sub_B16FFC(&Method_System_Collections_Generic_List_int__get_Count__, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&BuffList_TYPE_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_12318, v10);
-    sub_B16FFC(&StringLiteral_19836, v11);
-    sub_B16FFC(&StringLiteral_19835, v12);
-    sub_B16FFC(&StringLiteral_2436, v13);
-    sub_B16FFC(&StringLiteral_19837, v14);
-    sub_B16FFC(&StringLiteral_17330, v15);
-    sub_B16FFC(&StringLiteral_186, v16);
-    sub_B16FFC(&StringLiteral_181, v17);
-    sub_B16FFC(&StringLiteral_133, v18);
-    sub_B16FFC(&StringLiteral_17331, v19);
-    sub_B16FFC(&StringLiteral_17329, v20);
-    sub_B16FFC(&StringLiteral_17866, v21);
+    sub_B16FFC(&StringLiteral_12318/*"STATUS_UP_BUFF"*/, v10);
+    sub_B16FFC(&StringLiteral_19836/*"is same Group "*/, v11);
+    sub_B16FFC(&StringLiteral_19835/*"is rate over "*/, v12);
+    sub_B16FFC(&StringLiteral_2436/*"BATTLE_GUARD_FUNCTION"*/, v13);
+    sub_B16FFC(&StringLiteral_19837/*"is same Limit "*/, v14);
+    sub_B16FFC(&StringLiteral_17330/*"check--Group( "*/, v15);
+    sub_B16FFC(&StringLiteral_186/*" buff : "*/, v16);
+    sub_B16FFC(&StringLiteral_181/*" avoid buff "*/, v17);
+    sub_B16FFC(&StringLiteral_133/*" < "*/, v18);
+    sub_B16FFC(&StringLiteral_17331/*"check--Rate( "*/, v19);
+    sub_B16FFC(&StringLiteral_17329/*"check-- SameBuffLimit"*/, v20);
+    sub_B16FFC(&StringLiteral_17866/*"defRate"*/, v21);
     byte_40F9DAE = 1;
   }
   memset(&methoda, 0, 24);
@@ -637,7 +637,7 @@ LABEL_29:
                              v35,
                              *(_QWORD *)(*(_QWORD *)v35 + 368LL));
   HIDWORD(methoda.methodPointer) = *(_DWORD *)j_il2cpp_object_unbox_0(v36);
-  System_String__Concat_43743732((System_String_o *)StringLiteral_186, v37, 0LL);
+  System_String__Concat_43743732((System_String_o *)StringLiteral_186/*" buff : "*/, v37, 0LL);
   vals = v34->fields.vals;
   ParamArray = DataVals__GetParamArray(dataVals_k__BackingField, 112, 0LL);
   v40 = CommonFunction__JoinIndiv(vals, ParamArray, 0LL);
@@ -772,13 +772,13 @@ LABEL_36:
 LABEL_49:
   *(float *)&methoda.methodPointer = (float)DataVals__GetParam(dataVals_k__BackingField, 0, 0, 0LL);
   v61 = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
-  System_String__Concat_43743732((System_String_o *)StringLiteral_17866, v61, 0LL);
+  System_String__Concat_43743732((System_String_o *)StringLiteral_17866/*"defRate"*/, v61, 0LL);
   v62 = System_Int32__ToString((int32_t)&methoda.invoker_method + 4, 0LL);
   v63 = System_Int32__ToString((int32_t)&methoda.invoker_method, 0LL);
   System_String__Concat_43747144(
-    (System_String_o *)StringLiteral_17331,
+    (System_String_o *)StringLiteral_17331/*"check--Rate( "*/,
     v62,
-    (System_String_o *)StringLiteral_133,
+    (System_String_o *)StringLiteral_133/*" < "*/,
     v63,
     0LL);
   if ( DataVals__isSameBuffLimit(dataVals_k__BackingField, 0LL) )
@@ -803,7 +803,7 @@ LABEL_49:
           (unsigned int)action->fields.actorId,
           funcTarget->klass->vtable._12_CheckConvertBuffData.methodPtr);
   v67 = System_Int32__ToString((int)v34 + 72, 0LL);
-  System_String__Concat_43743732((System_String_o *)StringLiteral_17330, v67, 0LL);
+  System_String__Concat_43743732((System_String_o *)StringLiteral_17330/*"check--Group( "*/, v67, 0LL);
   if ( !v66 )
   {
     v69 = BuffEntity__isCheckGroup(v34, 0LL);
@@ -837,12 +837,12 @@ LABEL_49:
   {
     funcTarget->fields.invalidText = 0LL;
     sub_B16F98((BattleServantConfConponent_o *)&funcTarget->fields.invalidText, 0LL, v71, v72, v73, v74, v75, v76);
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_12318, 0LL);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_12318/*"STATUS_UP_BUFF"*/, 0LL);
     if ( SHIDWORD(methoda.invoker_method) < 1000 )
     {
 LABEL_72:
       v90 = System_Int32__ToString((int32_t)&methoda.invoker_method, 0LL);
-      System_String__Concat_43743732((System_String_o *)StringLiteral_19835, v90, 0LL);
+      System_String__Concat_43743732((System_String_o *)StringLiteral_19835/*"is rate over "*/, v90, 0LL);
       result = 0;
       v50 = 2;
       goto LABEL_29;
@@ -865,7 +865,7 @@ LABEL_72:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v83 = LocalizationManager__Get((System_String_o *)StringLiteral_2436, 0LL);
+        v83 = LocalizationManager__Get((System_String_o *)StringLiteral_2436/*"BATTLE_GUARD_FUNCTION"*/, 0LL);
         funcTarget->fields.invalidText = v83;
         sub_B16F98(
           (BattleServantConfConponent_o *)&funcTarget->fields.invalidText,
@@ -1704,7 +1704,7 @@ bool __fastcall BattleLogicFunctionProcess_CommonFunctionTypeProcess__checkCondi
   if ( (byte_40F9DB6 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, action);
-    sub_B16FFC(&StringLiteral_2436, v7);
+    sub_B16FFC(&StringLiteral_2436/*"BATTLE_GUARD_FUNCTION"*/, v7);
     byte_40F9DB6 = 1;
   }
   isDisplayLastFuncInvalid = 0;
@@ -1779,7 +1779,7 @@ bool __fastcall BattleLogicFunctionProcess_CommonFunctionTypeProcess__checkCondi
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v27 = LocalizationManager__Get((System_String_o *)StringLiteral_2436, 0LL);
+          v27 = LocalizationManager__Get((System_String_o *)StringLiteral_2436/*"BATTLE_GUARD_FUNCTION"*/, 0LL);
           funcTarget->fields.invalidText = v27;
           p_invalidText = &funcTarget->fields.invalidText;
         }
@@ -1817,7 +1817,7 @@ bool __fastcall BattleLogicFunctionProcess_CommonFunctionTypeProcess__checkCondi
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v27 = LocalizationManager__Get((System_String_o *)StringLiteral_2436, 0LL);
+                v27 = LocalizationManager__Get((System_String_o *)StringLiteral_2436/*"BATTLE_GUARD_FUNCTION"*/, 0LL);
               }
             }
           }
@@ -4182,7 +4182,7 @@ bool __fastcall BattleLogicFunctionProcess_MoveToLastSubMemberProcess__HasRefuse
     sub_B16FFC(&Method_System_Linq_Enumerable_Cast_BuffList_TYPE___, v4);
     sub_B16FFC(&Method_System_Linq_Enumerable_ToArray_BuffList_TYPE___, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_8794, v7);
+    sub_B16FFC(&StringLiteral_8794/*"MOVE_TO_SUBMEMBER_REFUSE_BUFF_TYPE"*/, v7);
     byte_40F9DC6 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -4195,7 +4195,7 @@ bool __fastcall BattleLogicFunctionProcess_MoveToLastSubMemberProcess__HasRefuse
     goto LABEL_13;
   ValueArray = (System_Collections_IEnumerable_o *)ConstantStrMaster__GetValueArray(
                                                      MasterData_WarQuestSelectionMaster,
-                                                     (System_String_o *)StringLiteral_8794,
+                                                     (System_String_o *)StringLiteral_8794/*"MOVE_TO_SUBMEMBER_REFUSE_BUFF_TYPE"*/,
                                                      0LL,
                                                      0LL);
   if ( !ValueArray )

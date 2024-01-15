@@ -165,14 +165,14 @@ EventPointGroupEntity_o *__fastcall EventPointGroupMaster__getEntity(
   {
     sub_B16FFC(&Method_DataMasterBase_getEntityFromKey_EventPointGroupEntity___, *(_QWORD *)&event_id);
     sub_B16FFC(&int_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1223, v8);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v8);
     byte_40FAC29 = 1;
   }
   v14 = event_id;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
   v13 = group_id;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
-  v11 = System_String__Concat_43823436(v9, (Il2CppObject *)StringLiteral_1223, v10, 0LL);
+  v11 = System_String__Concat_43823436(v9, (Il2CppObject *)StringLiteral_1223/*":"*/, v10, 0LL);
   return (EventPointGroupEntity_o *)DataMasterBase__getEntityFromKey_object_(
                                       (DataMasterBase_o *)this,
                                       v11,

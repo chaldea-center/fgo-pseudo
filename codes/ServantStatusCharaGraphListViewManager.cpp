@@ -422,13 +422,13 @@ void __fastcall ServantStatusCharaGraphListViewManager__CreateList(
     sub_B16FFC(&ServantStatusCharaGraphListViewItem_TypeInfo, v12);
     sub_B16FFC(&Method_ServantStatusCharaGraphListViewManager_AfterScrollCallback__, v13);
     sub_B16FFC(&Method_ServantStatusCharaGraphListViewManager_OnFinishedChangeCharaGraph__, v14);
-    sub_B16FFC(&StringLiteral_1, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v15);
     byte_40F872F = 1;
   }
   debugScaleLabel = this->fields.debugScaleLabel;
   if ( !debugScaleLabel )
     goto LABEL_54;
-  UILabel__set_text(debugScaleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(debugScaleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !mainInfo )
     goto LABEL_54;
   if ( mainInfo->fields.isConvertOverwriteImage )
@@ -632,14 +632,14 @@ void __fastcall ServantStatusCharaGraphListViewManager__DestroyList(
 
   if ( (byte_40F8730 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F8730 = 1;
   }
   ListViewManager__DestroyList((ListViewManager_o *)this, 0LL);
   debugScaleLabel = this->fields.debugScaleLabel;
   if ( !debugScaleLabel )
     sub_B170D4();
-  UILabel__set_text(debugScaleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(debugScaleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -1884,7 +1884,7 @@ void __fastcall ServantStatusCharaGraphListViewManager__OnDragUpdate(
   {
     sub_B16FFC(&System_Math_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9171, v4);
+    sub_B16FFC(&StringLiteral_9171/*"Mouse ScrollWheel"*/, v4);
     byte_40F873D = 1;
   }
   methoda.methodPointer = 0LL;
@@ -2133,7 +2133,7 @@ LABEL_58:
         }
         v147 = z;
         if ( v44 && IsAbleToPinch )
-          Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9171, 0LL);
+          Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9171/*"Mouse ScrollWheel"*/, 0LL);
         else
           Axis = 0.0;
         MouseButton = UnityEngine_Input__GetMouseButton(0, 0LL);
@@ -2917,7 +2917,7 @@ void __fastcall ServantStatusCharaGraphListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusCharaGraphListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusCharaGraphListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_ServantStatusCharaGraphListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40F8735 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -2932,7 +2932,7 @@ void __fastcall ServantStatusCharaGraphListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -3004,7 +3004,7 @@ void __fastcall ServantStatusCharaGraphListViewManager__RequestListObject_223656
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusCharaGraphListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusCharaGraphListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_ServantStatusCharaGraphListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40F8736 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -3019,7 +3019,7 @@ void __fastcall ServantStatusCharaGraphListViewManager__RequestListObject_223656
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

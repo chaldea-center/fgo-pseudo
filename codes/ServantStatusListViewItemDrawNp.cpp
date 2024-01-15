@@ -306,7 +306,7 @@ void __fastcall ServantStatusListViewItemDrawNp__SetItem(
     sub_B16FFC(&ServantStatusListViewItemDrawNp_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v12);
     sub_B16FFC(&TreasureDvcInfo_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FDEA7 = 1;
   }
   LODWORD(this->fields.baseButton) = mode;
@@ -506,8 +506,8 @@ LABEL_99:
         *(_DWORD *)(*(_QWORD *)p_isStart + 16LL),
         0,
         0,
-        (System_String_o *)StringLiteral_1,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
+        (System_String_o *)StringLiteral_1/*""*/,
         0,
         0LL);
       v52 = this->fields.tdInfo;

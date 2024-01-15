@@ -300,8 +300,8 @@ void __fastcall SupportServantEquipListViewObject__OnClickSelect(
   if ( (byte_40FD9EC & 1) == 0 )
   {
     sub_B16FFC(&SupportServantEquipListViewItem_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9938, v3);
-    sub_B16FFC(&StringLiteral_21148, v4);
+    sub_B16FFC(&StringLiteral_9938/*"OnClickSelectListView"*/, v3);
+    sub_B16FFC(&StringLiteral_21148/*"onClickSelectedItem"*/, v4);
     byte_40FD9EC = 1;
   }
   linkItem = this->fields.linkItem;
@@ -321,9 +321,9 @@ void __fastcall SupportServantEquipListViewObject__OnClickSelect(
       sub_B170D4();
     }
     if ( CanNotSelect )
-      v9 = &StringLiteral_21148;
+      v9 = &StringLiteral_21148/*"onClickSelectedItem"*/;
     else
-      v9 = &StringLiteral_9938;
+      v9 = &StringLiteral_9938/*"OnClickSelectListView"*/;
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)this->fields.manager,
       (System_String_o *)*v9,
@@ -383,7 +383,7 @@ void __fastcall SupportServantEquipListViewObject__OnLongPush(
 
   if ( (byte_40FD9ED & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9991, method);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, method);
     byte_40FD9ED = 1;
   }
   if ( this->fields.linkItem )
@@ -391,7 +391,7 @@ void __fastcall SupportServantEquipListViewObject__OnLongPush(
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9991, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -540,7 +540,7 @@ System_String_o *__fastcall SupportServantEquipListViewObject__ToString(
   if ( (byte_40FD9EE & 1) == 0 )
   {
     sub_B16FFC(&SupportServantEquipListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40FD9EE = 1;
   }
   v13 = 0.0;
@@ -559,7 +559,7 @@ System_String_o *__fastcall SupportServantEquipListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

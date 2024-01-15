@@ -38,7 +38,7 @@ void __fastcall ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&consumptionNumber);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_10896, v5);
+    sub_B16FFC(&StringLiteral_10896/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, v5);
     byte_40FC1EA = 1;
   }
   consumptionNumberLabel = (UnityEngine_Object_o *)this->fields.consumptionNumberLabel;
@@ -55,7 +55,7 @@ void __fastcall ItemIconWithConsumptionNumberComponent__SetConsumptionNumber(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10896, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10896/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, 0LL);
     v9 = (Il2CppObject *)System_Int32__ToString((int32_t)&v12, 0LL);
     v10 = System_String__Format(v8, v9, 0LL);
     if ( !v7 || (UILabel__set_text(v7, v10, 0LL), (v11 = this->fields.consumptionNumberLabel) == 0LL) )

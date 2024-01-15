@@ -14,12 +14,12 @@ void __fastcall EventSuperBossMaster___cctor(const MethodInfo *method)
   if ( (byte_40F9BA0 & 1) == 0 )
   {
     sub_B16FFC(&EventSuperBossMaster_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_5715, v8);
+    sub_B16FFC(&StringLiteral_5715/*"EVENT_SUPERBOSS_ENCOUNTER_{0}_{1}"*/, v8);
     byte_40F9BA0 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventSuperBossMaster_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_5715;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5715;
+  v10 = (System_Int32_array **)StringLiteral_5715/*"EVENT_SUPERBOSS_ENCOUNTER_{0}_{1}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5715/*"EVENT_SUPERBOSS_ENCOUNTER_{0}_{1}"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 

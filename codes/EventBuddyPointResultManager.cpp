@@ -59,33 +59,33 @@ void __fastcall EventBuddyPointResultManager___cctor(const MethodInfo *method)
   if ( (byte_40FC59C & 1) == 0 )
   {
     sub_B16FFC(&EventBuddyPointResultManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_2865, v8);
-    sub_B16FFC(&StringLiteral_2535, v9);
-    sub_B16FFC(&StringLiteral_2536, v10);
-    sub_B16FFC(&StringLiteral_17042, v11);
-    sub_B16FFC(&StringLiteral_6183, v12);
-    sub_B16FFC(&StringLiteral_16674, v13);
+    sub_B16FFC(&StringLiteral_2865/*"BuddyResultEventUI"*/, v8);
+    sub_B16FFC(&StringLiteral_2535/*"BEST_BUDDY_POINT_RESULT"*/, v9);
+    sub_B16FFC(&StringLiteral_2536/*"BEST_BUDDY_RESULT_REPLAY_DIALOG"*/, v10);
+    sub_B16FFC(&StringLiteral_17042/*"buddy_bg_at"*/, v11);
+    sub_B16FFC(&StringLiteral_6183/*"EventUI/Prefabs"*/, v12);
+    sub_B16FFC(&StringLiteral_16674/*"bit_buddy_result"*/, v13);
     byte_40FC59C = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventBuddyPointResultManager_TypeInfo->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_6183;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6183;
+  v15 = (System_Int32_array **)StringLiteral_6183/*"EventUI/Prefabs"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6183/*"EventUI/Prefabs"*/;
   sub_B16F98(static_fields, v15, v2, v3, v4, v5, v6, v7);
   v16 = EventBuddyPointResultManager_TypeInfo->static_fields;
-  v17 = (System_Int32_array **)StringLiteral_16674;
-  v16->BUDDY_POINT_RESULT_PREFAB = (struct System_String_o *)StringLiteral_16674;
+  v17 = (System_Int32_array **)StringLiteral_16674/*"bit_buddy_result"*/;
+  v16->BUDDY_POINT_RESULT_PREFAB = (struct System_String_o *)StringLiteral_16674/*"bit_buddy_result"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v16->BUDDY_POINT_RESULT_PREFAB, v17, v18, v19, v20, v21, v22, v23);
   v24 = EventBuddyPointResultManager_TypeInfo->static_fields;
-  v25 = (System_Int32_array **)StringLiteral_17042;
-  v24->BUDDY_RESULT_ATLAS = (struct System_String_o *)StringLiteral_17042;
+  v25 = (System_Int32_array **)StringLiteral_17042/*"buddy_bg_at"*/;
+  v24->BUDDY_RESULT_ATLAS = (struct System_String_o *)StringLiteral_17042/*"buddy_bg_at"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v24->BUDDY_RESULT_ATLAS, v25, v26, v27, v28, v29, v30, v31);
   v32 = EventBuddyPointResultManager_TypeInfo->static_fields;
-  v33 = (System_Int32_array **)StringLiteral_2535;
-  v32->SAVEKEY_BEST_BUDDY_POINT_RESULT = (struct System_String_o *)StringLiteral_2535;
+  v33 = (System_Int32_array **)StringLiteral_2535/*"BEST_BUDDY_POINT_RESULT"*/;
+  v32->SAVEKEY_BEST_BUDDY_POINT_RESULT = (struct System_String_o *)StringLiteral_2535/*"BEST_BUDDY_POINT_RESULT"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v32->SAVEKEY_BEST_BUDDY_POINT_RESULT, v33, v34, v35, v36, v37, v38, v39);
   v40 = EventBuddyPointResultManager_TypeInfo->static_fields;
-  v41 = (System_Int32_array **)StringLiteral_2536;
-  v40->SAVEKEY_BEST_BUDDY_RESULT_REPLAY_DIALOG = (struct System_String_o *)StringLiteral_2536;
+  v41 = (System_Int32_array **)StringLiteral_2536/*"BEST_BUDDY_RESULT_REPLAY_DIALOG"*/;
+  v40->SAVEKEY_BEST_BUDDY_RESULT_REPLAY_DIALOG = (struct System_String_o *)StringLiteral_2536/*"BEST_BUDDY_RESULT_REPLAY_DIALOG"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v40->SAVEKEY_BEST_BUDDY_RESULT_REPLAY_DIALOG,
     v41,
@@ -96,8 +96,8 @@ void __fastcall EventBuddyPointResultManager___cctor(const MethodInfo *method)
     v46,
     v47);
   v48 = EventBuddyPointResultManager_TypeInfo->static_fields;
-  v49 = (System_Int32_array **)StringLiteral_2865;
-  v48->BUDDY_RESULT_UI_PREFAB = (struct System_String_o *)StringLiteral_2865;
+  v49 = (System_Int32_array **)StringLiteral_2865/*"BuddyResultEventUI"*/;
+  v48->BUDDY_RESULT_UI_PREFAB = (struct System_String_o *)StringLiteral_2865/*"BuddyResultEventUI"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v48->BUDDY_RESULT_UI_PREFAB, v49, v50, v51, v52, v53, v54, v55);
 }
 
@@ -243,12 +243,12 @@ System_String_o *__fastcall EventBuddyPointResultManager__GetSaveKey(
   if ( (byte_40FC598 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, keyBase);
-    sub_B16FFC(&StringLiteral_23549, v6);
+    sub_B16FFC(&StringLiteral_23549/*"{0}_{1}"*/, v6);
     byte_40FC598 = 1;
   }
   v9 = eventId;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-  return System_String__Format_43739268((System_String_o *)StringLiteral_23549, (Il2CppObject *)keyBase, v7, 0LL);
+  return System_String__Format_43739268((System_String_o *)StringLiteral_23549/*"{0}_{1}"*/, (Il2CppObject *)keyBase, v7, 0LL);
 }
 
 
@@ -459,7 +459,7 @@ bool __fastcall EventBuddyPointResultManager__LoadAssetData(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v10);
     sub_B16FFC(&Method_EventBuddyPointResultManager___c__DisplayClass14_0__LoadAssetData_b__0__, v11);
     sub_B16FFC(&EventBuddyPointResultManager___c__DisplayClass14_0_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_23516, v13);
+    sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, v13);
     byte_40FC58C = 1;
   }
   v14 = sub_B170CC(
@@ -487,7 +487,7 @@ bool __fastcall EventBuddyPointResultManager__LoadAssetData(
   EVENT_UI_ASSET_PATH = (Il2CppObject *)v27->static_fields->EVENT_UI_ASSET_PATH;
   v37 = eventId;
   v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37);
-  v30 = System_String__Format_43739268((System_String_o *)StringLiteral_23516, EVENT_UI_ASSET_PATH, v29, 0LL);
+  v30 = System_String__Format_43739268((System_String_o *)StringLiteral_23516/*"{0}/{1}"*/, EVENT_UI_ASSET_PATH, v29, 0LL);
   v35 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v31, v32, v33, v34);
   AssetLoader_LoadEndDataHandler___ctor(
     v35,

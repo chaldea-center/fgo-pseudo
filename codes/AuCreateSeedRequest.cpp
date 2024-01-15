@@ -12,7 +12,7 @@ System_String_o *__fastcall AuCreateSeedRequest__getURL(AuCreateSeedRequest_o *t
   if ( (byte_40FBF2F & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_22012, v2);
+    sub_B16FFC(&StringLiteral_22012/*"shop/createSeed"*/, v2);
     byte_40FBF2F = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -21,7 +21,7 @@ System_String_o *__fastcall AuCreateSeedRequest__getURL(AuCreateSeedRequest_o *t
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_22012, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_22012/*"shop/createSeed"*/, 0LL);
 }
 
 
@@ -51,7 +51,7 @@ void __fastcall AuCreateSeedRequest__requestCompleted(
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, responseList);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v5);
     sub_B16FFC(&string_TypeInfo, v6);
-    this = (AuCreateSeedRequest_o *)sub_B16FFC(&StringLiteral_21856, v7);
+    this = (AuCreateSeedRequest_o *)sub_B16FFC(&StringLiteral_21856/*"seed"*/, v7);
     byte_40FBF30 = 1;
   }
   value = 0LL;
@@ -90,7 +90,7 @@ LABEL_16:
           goto LABEL_19;
         this = (AuCreateSeedRequest_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
                                           data,
-                                          (System_Xml_XmlQualifiedName_o *)StringLiteral_21856,
+                                          (System_Xml_XmlQualifiedName_o *)StringLiteral_21856/*"seed"*/,
                                           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
@@ -99,7 +99,7 @@ LABEL_16:
             goto LABEL_19;
           this = (AuCreateSeedRequest_o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
                                             v13,
-                                            (System_Xml_XmlQualifiedName_o *)StringLiteral_21856,
+                                            (System_Xml_XmlQualifiedName_o *)StringLiteral_21856/*"seed"*/,
                                             &value,
                                             (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
           if ( ((unsigned __int8)this & 1) != 0 )

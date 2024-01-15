@@ -80,15 +80,15 @@ void __fastcall FSUtility___cctor(const MethodInfo *method)
     sub_B16FFC(&FSUtility_TypeInfo, v9);
     sub_B16FFC(&int___TypeInfo, v10);
     sub_B16FFC(&string___TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_6791, v12);
+    sub_B16FFC(&StringLiteral_6791/*"FullScreen/FSUtilityList"*/, v12);
     byte_40F9F8E = 1;
   }
   FSUtility_TypeInfo->static_fields->RATIO_VISTA = 2.0;
   v13 = FSUtility_TypeInfo;
   FSUtility_TypeInfo->static_fields->RATIO_SCOPE = 2.3333;
   static_fields = v13->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_6791;
-  static_fields->FS_UTILITY_LIST_PATH = (struct System_String_o *)StringLiteral_6791;
+  v15 = (System_Int32_array **)StringLiteral_6791/*"FullScreen/FSUtilityList"*/;
+  static_fields->FS_UTILITY_LIST_PATH = (struct System_String_o *)StringLiteral_6791/*"FullScreen/FSUtilityList"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->FS_UTILITY_LIST_PATH, v15, v2, v3, v4, v5, v6, v7);
   v17 = (System_Int32_array **)sub_B17014(int___TypeInfo, 0LL, v16);
   v18 = FSUtility_TypeInfo->static_fields;
@@ -262,8 +262,8 @@ float __fastcall FSUtility__GetBackFSOffsetY(System_String_o *fileName, const Me
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__float__ContainsKey__, method);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__float__get_Item__, v3);
     sub_B16FFC(&FSUtility_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_2641, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_2641/*"Back/back"*/, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F9F83 = 1;
   }
   result = -1;
@@ -271,8 +271,8 @@ float __fastcall FSUtility__GetBackFSOffsetY(System_String_o *fileName, const Me
     goto LABEL_16;
   v7 = System_String__Replace_43750968(
          fileName,
-         (System_String_o *)StringLiteral_2641,
-         (System_String_o *)StringLiteral_1,
+         (System_String_o *)StringLiteral_2641/*"Back/back"*/,
+         (System_String_o *)StringLiteral_1/*""*/,
          0LL);
   v8 = 0.0;
   if ( System_Int32__TryParse(v7, &result, 0LL) )
@@ -483,8 +483,8 @@ bool __fastcall FSUtility__IsFullScreenBack(System_String_o *fileName, const Met
   if ( (byte_40F9F81 & 1) == 0 )
   {
     sub_B16FFC(&FSUtility_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_2641, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_2641/*"Back/back"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F9F81 = 1;
   }
   result = -1;
@@ -492,8 +492,8 @@ bool __fastcall FSUtility__IsFullScreenBack(System_String_o *fileName, const Met
     sub_B170D4();
   v5 = System_String__Replace_43750968(
          fileName,
-         (System_String_o *)StringLiteral_2641,
-         (System_String_o *)StringLiteral_1,
+         (System_String_o *)StringLiteral_2641/*"Back/back"*/,
+         (System_String_o *)StringLiteral_1/*""*/,
          0LL);
   if ( System_Int32__TryParse(v5, &result, 0LL) )
   {
@@ -628,8 +628,8 @@ bool __fastcall FSUtility__IsFullScreenMovie(System_String_o *fileName, const Me
     sub_B16FFC(&BalanceConfig_TypeInfo, method);
     sub_B16FFC(&FSUtility_TypeInfo, v3);
     sub_B16FFC(&System_Text_RegularExpressions_Regex_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_872, v5);
-    sub_B16FFC(&StringLiteral_20914, v6);
+    sub_B16FFC(&StringLiteral_872/*"/(?<name>[^/]*?)\\.[Uu][Ss][Mm]$"*/, v5);
+    sub_B16FFC(&StringLiteral_20914/*"name"*/, v6);
     byte_40F9F85 = 1;
   }
   if ( (BYTE3(System_Text_RegularExpressions_Regex_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -639,7 +639,7 @@ bool __fastcall FSUtility__IsFullScreenMovie(System_String_o *fileName, const Me
   }
   v7 = (System_Text_RegularExpressions_Group_o *)System_Text_RegularExpressions_Regex__Match(
                                                    fileName,
-                                                   (System_String_o *)StringLiteral_872,
+                                                   (System_String_o *)StringLiteral_872/*"/(?<name>[^/]*?)\\.[Uu][Ss][Mm]$"*/,
                                                    0LL);
   if ( !v7 )
     goto LABEL_35;
@@ -653,7 +653,7 @@ bool __fastcall FSUtility__IsFullScreenMovie(System_String_o *fileName, const Me
     goto LABEL_35;
   Item_36906384 = (System_Text_RegularExpressions_Capture_o *)System_Text_RegularExpressions_GroupCollection__get_Item_36906384(
                                                                 v9,
-                                                                (System_String_o *)StringLiteral_20914,
+                                                                (System_String_o *)StringLiteral_20914/*"name"*/,
                                                                 0LL);
   if ( !Item_36906384 )
     goto LABEL_35;

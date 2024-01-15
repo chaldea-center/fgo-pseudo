@@ -87,9 +87,9 @@ void __fastcall CommandSpellObjectComponent__setData(
     sub_B16FFC(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_14700, v16);
-    sub_B16FFC(&StringLiteral_3243, v17);
-    sub_B16FFC(&StringLiteral_8623, v18);
+    sub_B16FFC(&StringLiteral_14700/*"USE_MASTER_SPELL"*/, v16);
+    sub_B16FFC(&StringLiteral_3243/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/, v17);
+    sub_B16FFC(&StringLiteral_8623/*"MASTER_SPELL_UNIT"*/, v18);
     byte_40FA5F9 = 1;
   }
   this->fields.Id = Id;
@@ -123,14 +123,14 @@ void __fastcall CommandSpellObjectComponent__setData(
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
   v26 = &v22->fields.id + 1;
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_14700, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_14700/*"USE_MASTER_SPELL"*/, 0LL);
   v28 = System_Int32__ToString((int)v22 + 20, 0LL);
   v29 = System_String__Concat_43743732(v27, v28, 0LL);
   if ( !label_count )
     goto LABEL_31;
   UILabel__set_text(label_count, v29, 0LL);
   unitLabel = this->fields.unitLabel;
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8623, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8623/*"MASTER_SPELL_UNIT"*/, 0LL);
   if ( !unitLabel )
     goto LABEL_31;
   UILabel__set_text(unitLabel, v31, 0LL);
@@ -162,7 +162,7 @@ void __fastcall CommandSpellObjectComponent__setData(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3243, 0LL);
+          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3243/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/, 0LL);
           v39 = System_String__Concat_43743732(mText, v38, 0LL);
           UILabel__set_text(v36, v39, 0LL);
           goto LABEL_30;

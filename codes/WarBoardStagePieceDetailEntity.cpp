@@ -80,10 +80,10 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetDeadEffectType(
 
   if ( (byte_40FBB20 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17847, method);
+    sub_B16FFC(&StringLiteral_17847/*"deadEffect"*/, method);
     byte_40FBB20 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_17847, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_17847/*"deadEffect"*/, 0, v2);
 }
 
 
@@ -95,10 +95,10 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetMoveAfterAttackType(
 
   if ( (byte_40FBB21 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21007, method);
+    sub_B16FFC(&StringLiteral_21007/*"noMoveAfterAttack"*/, method);
     byte_40FBB21 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21007, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21007/*"noMoveAfterAttack"*/, 0, v2);
 }
 
 
@@ -110,10 +110,10 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetMovedAfterDefendType(
 
   if ( (byte_40FBB22 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21010, method);
+    sub_B16FFC(&StringLiteral_21010/*"noMovedAfterDefend"*/, method);
     byte_40FBB22 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21010, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21010/*"noMovedAfterDefend"*/, 0, v2);
 }
 
 
@@ -125,10 +125,10 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteAttackCost(
 
   if ( (byte_40FBB1E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21262, method);
+    sub_B16FFC(&StringLiteral_21262/*"overwriteAttackCost"*/, method);
     byte_40FBB1E = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21262, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21262/*"overwriteAttackCost"*/, -1, v2);
 }
 
 
@@ -140,10 +140,10 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteBaseActionPoint(
 
   if ( (byte_40FBB1D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21263, method);
+    sub_B16FFC(&StringLiteral_21263/*"overwriteBaseActionPoint"*/, method);
     byte_40FBB1D = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21263, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21263/*"overwriteBaseActionPoint"*/, -1, v2);
 }
 
 
@@ -155,10 +155,10 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteMoveCost(
 
   if ( (byte_40FBB1F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21282, method);
+    sub_B16FFC(&StringLiteral_21282/*"overwriteMoveCost"*/, method);
     byte_40FBB1F = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21282, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21282/*"overwriteMoveCost"*/, -1, v2);
 }
 
 
@@ -181,10 +181,10 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteWallAttackCost(
 
   if ( (byte_40FBB1C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21295, method);
+    sub_B16FFC(&StringLiteral_21295/*"overwriteWallAttackCost"*/, method);
     byte_40FBB1C = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21295, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21295/*"overwriteWallAttackCost"*/, -1, v2);
 }
 
 
@@ -213,10 +213,10 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__getRoleType(
 
   if ( (byte_40FBB1B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23122, method);
+    sub_B16FFC(&StringLiteral_23122/*"warBoardSvtDetail"*/, method);
     byte_40FBB1B = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_23122, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_23122/*"warBoardSvtDetail"*/, 0, v2);
 }
 
 

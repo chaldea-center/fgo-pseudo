@@ -123,18 +123,18 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&NetworkManager_TypeInfo, v18);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_1151, v20);
-    sub_B16FFC(&StringLiteral_1102, v21);
-    sub_B16FFC(&StringLiteral_6841, v22);
-    sub_B16FFC(&StringLiteral_23861, v23);
-    sub_B16FFC(&StringLiteral_23860, v24);
-    sub_B16FFC(&StringLiteral_23858, v25);
-    sub_B16FFC(&StringLiteral_1169, v26);
-    sub_B16FFC(&StringLiteral_23862, v27);
-    sub_B16FFC(&StringLiteral_6840, v28);
-    sub_B16FFC(&StringLiteral_23859, v29);
-    sub_B16FFC(&StringLiteral_1004, v30);
-    sub_B16FFC(&StringLiteral_1184, v31);
+    sub_B16FFC(&StringLiteral_1151/*"3"*/, v20);
+    sub_B16FFC(&StringLiteral_1102/*"2"*/, v21);
+    sub_B16FFC(&StringLiteral_6841/*"GET_FRIEND_POINT_SERVANT_NAME_NORARE"*/, v22);
+    sub_B16FFC(&StringLiteral_23861/*"４"*/, v23);
+    sub_B16FFC(&StringLiteral_23860/*"３"*/, v24);
+    sub_B16FFC(&StringLiteral_23858/*"１"*/, v25);
+    sub_B16FFC(&StringLiteral_1169/*"4"*/, v26);
+    sub_B16FFC(&StringLiteral_23862/*"５"*/, v27);
+    sub_B16FFC(&StringLiteral_6840/*"GET_FRIEND_POINT_SERVANT_NAME"*/, v28);
+    sub_B16FFC(&StringLiteral_23859/*"２"*/, v29);
+    sub_B16FFC(&StringLiteral_1004/*"1"*/, v30);
+    sub_B16FFC(&StringLiteral_1184/*"5"*/, v31);
     byte_40FD948 = 1;
   }
   entity = 0LL;
@@ -186,36 +186,36 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
       goto LABEL_69;
     v44 = System_String__Replace_43750968(
             v43,
-            (System_String_o *)StringLiteral_1004,
-            (System_String_o *)StringLiteral_23858,
+            (System_String_o *)StringLiteral_1004/*"1"*/,
+            (System_String_o *)StringLiteral_23858/*"１"*/,
             0LL);
     if ( !v44 )
       goto LABEL_69;
     v45 = System_String__Replace_43750968(
             v44,
-            (System_String_o *)StringLiteral_1102,
-            (System_String_o *)StringLiteral_23859,
+            (System_String_o *)StringLiteral_1102/*"2"*/,
+            (System_String_o *)StringLiteral_23859/*"２"*/,
             0LL);
     if ( !v45 )
       goto LABEL_69;
     v46 = System_String__Replace_43750968(
             v45,
-            (System_String_o *)StringLiteral_1151,
-            (System_String_o *)StringLiteral_23860,
+            (System_String_o *)StringLiteral_1151/*"3"*/,
+            (System_String_o *)StringLiteral_23860/*"３"*/,
             0LL);
     if ( !v46 )
       goto LABEL_69;
     v47 = System_String__Replace_43750968(
             v46,
-            (System_String_o *)StringLiteral_1169,
-            (System_String_o *)StringLiteral_23861,
+            (System_String_o *)StringLiteral_1169/*"4"*/,
+            (System_String_o *)StringLiteral_23861/*"４"*/,
             0LL);
     if ( !v47 )
       goto LABEL_69;
     v48 = (Il2CppObject *)System_String__Replace_43750968(
                             v47,
-                            (System_String_o *)StringLiteral_1184,
-                            (System_String_o *)StringLiteral_23862,
+                            (System_String_o *)StringLiteral_1184/*"5"*/,
+                            (System_String_o *)StringLiteral_23862/*"５"*/,
                             0LL);
     if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -257,7 +257,7 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v64 = LocalizationManager__Get((System_String_o *)StringLiteral_6840, 0LL);
+    v64 = LocalizationManager__Get((System_String_o *)StringLiteral_6840/*"GET_FRIEND_POINT_SERVANT_NAME"*/, 0LL);
     if ( !entity
       || (v65 = v64, Name = ServantEntity__getName((ServantEntity_o *)entity, v53, -1, 0LL), !entity)
       || (v67 = (Il2CppObject *)Name,
@@ -283,7 +283,7 @@ LABEL_69:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v56 = LocalizationManager__Get((System_String_o *)StringLiteral_6841, 0LL);
+    v56 = LocalizationManager__Get((System_String_o *)StringLiteral_6841/*"GET_FRIEND_POINT_SERVANT_NAME_NORARE"*/, 0LL);
     if ( !entity )
       goto LABEL_69;
     v57 = v56;

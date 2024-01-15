@@ -34,13 +34,13 @@ void __fastcall SkillListTreasureDeviceComponent__Clear(
   if ( (byte_40F9243 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F9243 = 1;
   }
   skillLevelListLabel = this->fields.skillLevelListLabel;
   if ( !skillLevelListLabel )
     goto LABEL_17;
-  UILabel__set_text(skillLevelListLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(skillLevelListLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   treasureDeviceIconLabel = (UnityEngine_Object_o *)this->fields.treasureDeviceIconLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -65,7 +65,7 @@ void __fastcall SkillListTreasureDeviceComponent__Clear(
     v8 = this->fields.skillIconSprite;
     if ( v8 )
     {
-      UISprite__set_spriteName(v8, (System_String_o *)StringLiteral_1, 0LL);
+      UISprite__set_spriteName(v8, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       return;
     }
 LABEL_17:
@@ -132,7 +132,7 @@ void __fastcall SkillListTreasureDeviceComponent__Set(
     sub_B16FFC(&AtlasManager_TypeInfo, skillLevelListText);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
     sub_B16FFC(&SkillListTreasureDeviceComponent_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_19290, v15);
+    sub_B16FFC(&StringLiteral_19290/*"icon_skill_mini"*/, v15);
     byte_40F9244 = 1;
   }
   if ( System_String__IsNullOrEmpty(skillLevelListText, 0LL) )
@@ -218,7 +218,7 @@ LABEL_47:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(v42, (System_String_o *)StringLiteral_19290, 0LL);
+    AtlasManager__SetEventSprite(v42, (System_String_o *)StringLiteral_19290/*"icon_skill_mini"*/, 0LL);
     v43 = this->fields.skillIconSprite;
     if ( !v43 )
       goto LABEL_47;

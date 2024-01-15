@@ -594,7 +594,7 @@ bool __fastcall MaterialEventLogServantListViewItem__SetSortValue(
 
   if ( (byte_40F7B4C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, sort);
+    sub_B16FFC(&StringLiteral_1/*""*/, sort);
     byte_40F7B4C = 1;
   }
   isDummy = this->fields.isDummy;
@@ -612,8 +612,8 @@ bool __fastcall MaterialEventLogServantListViewItem__SetSortValue(
   this->fields.sortValue0 = 0LL;
   this->fields.sortValue0B = 0LL;
   this->fields.sortValue1 = index;
-  v12 = (System_Int32_array **)StringLiteral_1;
-  this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1;
+  v12 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.sortStr1,
     v12,

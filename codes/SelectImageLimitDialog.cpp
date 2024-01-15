@@ -213,25 +213,25 @@ void __fastcall SelectImageLimitDialog__Init(SelectImageLimitDialog_o *this, con
     sub_B16FFC(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_int___ctor__, v4);
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FE1C0 = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
   if ( !titleLabel )
     goto LABEL_11;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   warningLabel = this->fields.warningLabel;
   if ( !warningLabel )
     goto LABEL_11;
-  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
   if ( !decideButtonLabel )
     goto LABEL_11;
-  UILabel__set_text(decideButtonLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(decideButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
   if ( !cancelButtonLabel
-    || (UILabel__set_text(cancelButtonLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (selectImageLimitListViewManager = this->fields.selectImageLimitListViewManager) == 0LL)
     || (SelectImageLimitListViewManager__DestroyList(selectImageLimitListViewManager, v11),
         v13 = (UIWidget_o *)this->fields.titleLabel,
@@ -319,8 +319,8 @@ void __fastcall SelectImageLimitDialog__LoadImageLimitData(SelectImageLimitDialo
     sub_B16FFC(&JsonManager_TypeInfo, v7);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__, v9);
-    sub_B16FFC(&StringLiteral_10613, v10);
-    sub_B16FFC(&StringLiteral_9203, v11);
+    sub_B16FFC(&StringLiteral_10613/*"PhotoCampaignSelectImageLimit"*/, v10);
+    sub_B16FFC(&StringLiteral_9203/*"MultipleViewSelectImageLimit"*/, v11);
     byte_40FE1C8 = 1;
   }
   *(_QWORD *)result = 0LL;
@@ -328,14 +328,14 @@ void __fastcall SelectImageLimitDialog__LoadImageLimitData(SelectImageLimitDialo
   eventType = this->fields.eventType;
   if ( eventType == 24 )
   {
-    v14 = &StringLiteral_9203;
+    v14 = &StringLiteral_9203/*"MultipleViewSelectImageLimit"*/;
   }
   else
   {
     String = 0LL;
     if ( eventType != 26 )
       goto LABEL_8;
-    v14 = &StringLiteral_10613;
+    v14 = &StringLiteral_10613/*"PhotoCampaignSelectImageLimit"*/;
   }
   String = UnityEngine_PlayerPrefs__GetString((System_String_o *)*v14, 0LL, 0LL);
 LABEL_8:
@@ -577,7 +577,7 @@ void __fastcall SelectImageLimitDialog__OnEnable(SelectImageLimitDialog_o *this,
   if ( (byte_40FE1C6 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15422, v3);
+    sub_B16FFC(&StringLiteral_15422/*"Window/Objects/Buttons/CancelButton"*/, v3);
     byte_40FE1C6 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -586,7 +586,7 @@ void __fastcall SelectImageLimitDialog__OnEnable(SelectImageLimitDialog_o *this,
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15422, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15422/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
 }
 
 
@@ -681,12 +681,12 @@ void __fastcall SelectImageLimitDialog__OpenImageLimit(
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&Method_SelectImageLimitDialog_EndOpen__, v17);
     sub_B16FFC(&Method_SelectImageLimitDialog_OnClickImageLimit__, v18);
-    sub_B16FFC(&StringLiteral_3253, v19);
-    sub_B16FFC(&StringLiteral_3251, v20);
-    sub_B16FFC(&StringLiteral_8825, v21);
-    sub_B16FFC(&StringLiteral_10405, v22);
-    sub_B16FFC(&StringLiteral_10406, v23);
-    sub_B16FFC(&StringLiteral_8826, v24);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v19);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_8825/*"MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_TITLE_"*/, v21);
+    sub_B16FFC(&StringLiteral_10405/*"PHOTO_SERVANT_SELECT_IMAGE_DIALOG_TITLE"*/, v22);
+    sub_B16FFC(&StringLiteral_10406/*"PHOTO_SERVANT_SELECT_IMAGE_DIALOG_WARNING"*/, v23);
+    sub_B16FFC(&StringLiteral_8826/*"MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_WARNING_"*/, v24);
     byte_40FE1C1 = 1;
   }
   SelectImageLimitDialog__Init(this, *(const MethodInfo **)&eventType);
@@ -779,12 +779,12 @@ void __fastcall SelectImageLimitDialog__OpenImageLimit(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v69 = LocalizationManager__Get((System_String_o *)StringLiteral_10405, 0LL);
+    v69 = LocalizationManager__Get((System_String_o *)StringLiteral_10405/*"PHOTO_SERVANT_SELECT_IMAGE_DIALOG_TITLE"*/, 0LL);
     if ( titleLabel )
     {
       UILabel__set_text(titleLabel, v69, 0LL);
       warningLabel = this->fields.warningLabel;
-      v67 = (System_String_o *)StringLiteral_10406;
+      v67 = (System_String_o *)StringLiteral_10406/*"PHOTO_SERVANT_SELECT_IMAGE_DIALOG_WARNING"*/;
       goto LABEL_23;
     }
 LABEL_31:
@@ -794,7 +794,7 @@ LABEL_31:
     goto LABEL_25;
   v61 = this->fields.titleLabel;
   v62 = System_Int32__ToString((int32_t)&v80, 0LL);
-  v63 = System_String__Concat_43743732((System_String_o *)StringLiteral_8825, v62, 0LL);
+  v63 = System_String__Concat_43743732((System_String_o *)StringLiteral_8825/*"MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_TITLE_"*/, v62, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -806,7 +806,7 @@ LABEL_31:
   UILabel__set_text(v61, v64, 0LL);
   warningLabel = this->fields.warningLabel;
   v66 = System_Int32__ToString((int32_t)&v80, 0LL);
-  v67 = System_String__Concat_43743732((System_String_o *)StringLiteral_8826, v66, 0LL);
+  v67 = System_String__Concat_43743732((System_String_o *)StringLiteral_8826/*"MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_WARNING_"*/, v66, 0LL);
 LABEL_23:
   v70 = LocalizationManager__Get(v67, 0LL);
   if ( !warningLabel )
@@ -819,12 +819,12 @@ LABEL_25:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v72 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v72 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_31;
   UILabel__set_text(decideButtonLabel, v72, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_31;
   UILabel__set_text(cancelButtonLabel, v74, 0LL);
@@ -876,8 +876,8 @@ void __fastcall SelectImageLimitDialog__SaveImageLimitData(SelectImageLimitDialo
     sub_B16FFC(&JsonManager_TypeInfo, v13);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Key__, v14);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__, v15);
-    sub_B16FFC(&StringLiteral_10613, v16);
-    sub_B16FFC(&StringLiteral_9203, v17);
+    sub_B16FFC(&StringLiteral_10613/*"PhotoCampaignSelectImageLimit"*/, v16);
+    sub_B16FFC(&StringLiteral_9203/*"MultipleViewSelectImageLimit"*/, v17);
     byte_40FE1C7 = 1;
   }
   memset(&v27, 0, 32);
@@ -928,7 +928,7 @@ void __fastcall SelectImageLimitDialog__SaveImageLimitData(SelectImageLimitDialo
     eventType = this->fields.eventType;
     if ( eventType == 26 )
     {
-      v25 = &StringLiteral_10613;
+      v25 = &StringLiteral_10613/*"PhotoCampaignSelectImageLimit"*/;
     }
     else
     {
@@ -938,7 +938,7 @@ LABEL_17:
         UnityEngine_PlayerPrefs__Save(0LL);
         return;
       }
-      v25 = &StringLiteral_9203;
+      v25 = &StringLiteral_9203/*"MultipleViewSelectImageLimit"*/;
     }
     UnityEngine_PlayerPrefs__SetString((System_String_o *)*v25, v23, 0LL);
     goto LABEL_17;

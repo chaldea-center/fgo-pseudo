@@ -156,14 +156,14 @@ void __fastcall PartyOrganizationCommandCardMenu__Init(
 
   if ( (byte_40FDC0F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FDC0F = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL)
-    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (compatibilitySprite = this->fields.compatibilitySprite) == 0LL) )
   {
     sub_B170D4();
@@ -242,8 +242,8 @@ void __fastcall PartyOrganizationCommandCardMenu__Open(
     sub_B16FFC(&AtlasManager_TypeInfo, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
     sub_B16FFC(&Method_PartyOrganizationCommandCardMenu_EndOpen__, v13);
-    sub_B16FFC(&StringLiteral_10183, v14);
-    sub_B16FFC(&StringLiteral_10182, v15);
+    sub_B16FFC(&StringLiteral_10183/*"PARTY_ORGANIZATION_COMMAND_CARD_TITLE"*/, v14);
+    sub_B16FFC(&StringLiteral_10182/*"PARTY_ORGANIZATION_COMMAND_CARD_CLOSE"*/, v15);
     byte_40FDC10 = 1;
   }
   if ( !this->fields.state )
@@ -299,11 +299,11 @@ void __fastcall PartyOrganizationCommandCardMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_10183, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_10183/*"PARTY_ORGANIZATION_COMMAND_CARD_TITLE"*/, 0LL);
     if ( !titleLabel
       || (UILabel__set_text(titleLabel, v27, 0LL),
           closeLabel = this->fields.closeLabel,
-          v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10182, 0LL),
+          v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10182/*"PARTY_ORGANIZATION_COMMAND_CARD_CLOSE"*/, 0LL),
           !closeLabel) )
     {
 LABEL_13:
@@ -373,10 +373,10 @@ System_String_o *__fastcall PartyOrganizationCommandCardMenu__get_closeBtnPath(
 {
   if ( (byte_40FDC13 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2733, method);
+    sub_B16FFC(&StringLiteral_2733/*"BaseWindow/CloseButton"*/, method);
     byte_40FDC13 = 1;
   }
-  return (System_String_o *)StringLiteral_2733;
+  return (System_String_o *)StringLiteral_2733/*"BaseWindow/CloseButton"*/;
 }
 
 

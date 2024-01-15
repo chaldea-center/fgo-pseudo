@@ -23,17 +23,17 @@ void __fastcall QuestInformationListViewManager___cctor(const MethodInfo *method
   if ( (byte_40F95CE & 1) == 0 )
   {
     sub_B16FFC(&QuestInformationListViewManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_14955, v8);
-    sub_B16FFC(&StringLiteral_4520, v9);
+    sub_B16FFC(&StringLiteral_14955/*"Unlit/Transparent Colored_Choco"*/, v8);
+    sub_B16FFC(&StringLiteral_4520/*"Custom/SpriteWithMask_Choco"*/, v9);
     byte_40F95CE = 1;
   }
   static_fields = (BattleServantConfConponent_o *)QuestInformationListViewManager_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_14955;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_14955;
+  v11 = (System_Int32_array **)StringLiteral_14955/*"Unlit/Transparent Colored_Choco"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_14955/*"Unlit/Transparent Colored_Choco"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = QuestInformationListViewManager_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_4520;
-  v12->CHOCO_SHADER_SP = (struct System_String_o *)StringLiteral_4520;
+  v13 = (System_Int32_array **)StringLiteral_4520/*"Custom/SpriteWithMask_Choco"*/;
+  v12->CHOCO_SHADER_SP = (struct System_String_o *)StringLiteral_4520/*"Custom/SpriteWithMask_Choco"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->CHOCO_SHADER_SP, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -293,7 +293,7 @@ void __fastcall QuestInformationListViewManager__CreateEnemyList(
     sub_B16FFC(&QuestInformationListViewManager___c__DisplayClass33_0_TypeInfo, v24);
     sub_B16FFC(&ViewEnemyEntity___TypeInfo, v25);
     sub_B16FFC(&ViewEnemyEntity_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_12679, v27);
+    sub_B16FFC(&StringLiteral_12679/*"Servants/Commands/"*/, v27);
     byte_40F95C8 = 1;
   }
   v125 = 0LL;
@@ -449,7 +449,7 @@ LABEL_35:
           if ( !v125 )
             goto LABEL_68;
           v101 = System_Int32__ToString((int)v125 + 36, 0LL);
-          v102 = System_String__Concat_43743732((System_String_o *)StringLiteral_12679, v101, 0LL);
+          v102 = System_String__Concat_43743732((System_String_o *)StringLiteral_12679/*"Servants/Commands/"*/, v101, 0LL);
           if ( !v122 )
             goto LABEL_68;
           if ( !System_Collections_Generic_List_WarBoardManager_TaskList___Contains(
@@ -927,8 +927,8 @@ UnityEngine_Material_o *__fastcall QuestInformationListViewManager__NewChocoMate
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&QuestInformationListViewManager_TypeInfo, v4);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_Texture2D___, v5);
-    sub_B16FFC(&StringLiteral_15875, v6);
-    sub_B16FFC(&StringLiteral_12773, v7);
+    sub_B16FFC(&StringLiteral_15875/*"_ChocoTex"*/, v6);
+    sub_B16FFC(&StringLiteral_12773/*"Shaders/ChocoMap"*/, v7);
     byte_40F95CD = 1;
   }
   mChocoMaterialSp = (UnityEngine_Object_o *)this->fields.mChocoMaterialSp;
@@ -950,7 +950,7 @@ UnityEngine_Material_o *__fastcall QuestInformationListViewManager__NewChocoMate
     if ( UnityEngine_Object__op_Equality(mChocoTex, 0LL, 0LL) )
     {
       UIAtlas = (System_Int32_array **)UnityEngine_Resources__Load_UIAtlas_(
-                                         (System_String_o *)StringLiteral_12773,
+                                         (System_String_o *)StringLiteral_12773/*"Shaders/ChocoMap"*/,
                                          (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_Texture2D___);
       p_mChocoTex->klass = (BattleServantConfConponent_c *)UIAtlas;
       sub_B16F98(p_mChocoTex, UIAtlas, v13, v14, v15, v16, v17, v18);
@@ -971,7 +971,7 @@ UnityEngine_Material_o *__fastcall QuestInformationListViewManager__NewChocoMate
       sub_B170D4();
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)p_mChocoMaterialSp->klass,
-      (System_String_o *)StringLiteral_15875,
+      (System_String_o *)StringLiteral_15875/*"_ChocoTex"*/,
       (UnityEngine_Texture_o *)p_mChocoTex->klass,
       0LL);
   }
@@ -1019,8 +1019,8 @@ UnityEngine_Material_o *__fastcall QuestInformationListViewManager__NewChocoMate
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&QuestInformationListViewManager_TypeInfo, v4);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_Texture2D___, v5);
-    sub_B16FFC(&StringLiteral_15875, v6);
-    sub_B16FFC(&StringLiteral_12773, v7);
+    sub_B16FFC(&StringLiteral_15875/*"_ChocoTex"*/, v6);
+    sub_B16FFC(&StringLiteral_12773/*"Shaders/ChocoMap"*/, v7);
     byte_40F95CC = 1;
   }
   mChocoMaterialTx = (UnityEngine_Object_o *)this->fields.mChocoMaterialTx;
@@ -1042,7 +1042,7 @@ UnityEngine_Material_o *__fastcall QuestInformationListViewManager__NewChocoMate
     if ( UnityEngine_Object__op_Equality(mChocoTex, 0LL, 0LL) )
     {
       UIAtlas = (System_Int32_array **)UnityEngine_Resources__Load_UIAtlas_(
-                                         (System_String_o *)StringLiteral_12773,
+                                         (System_String_o *)StringLiteral_12773/*"Shaders/ChocoMap"*/,
                                          (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_Texture2D___);
       p_mChocoTex->klass = (BattleServantConfConponent_c *)UIAtlas;
       sub_B16F98(p_mChocoTex, UIAtlas, v13, v14, v15, v16, v17, v18);
@@ -1063,7 +1063,7 @@ UnityEngine_Material_o *__fastcall QuestInformationListViewManager__NewChocoMate
       sub_B170D4();
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)p_mChocoMaterialTx->klass,
-      (System_String_o *)StringLiteral_15875,
+      (System_String_o *)StringLiteral_15875/*"_ChocoTex"*/,
       (UnityEngine_Texture_o *)p_mChocoTex->klass,
       0LL);
   }

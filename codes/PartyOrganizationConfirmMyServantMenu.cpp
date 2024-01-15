@@ -149,26 +149,26 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__Init(
 
   if ( (byte_40FDC49 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FDC49 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_9;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL)
-    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL) )
   {
 LABEL_9:
     sub_B170D4();
   }
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -407,19 +407,19 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__Open(
     sub_B16FFC(&PartyOrganizationListViewItem_TypeInfo, v27);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v28);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v29);
-    sub_B16FFC(&StringLiteral_26, v30);
-    sub_B16FFC(&StringLiteral_10268, v31);
-    sub_B16FFC(&StringLiteral_10216, v32);
-    sub_B16FFC(&StringLiteral_10273, v33);
-    sub_B16FFC(&StringLiteral_10266, v34);
-    sub_B16FFC(&StringLiteral_10269, v35);
-    sub_B16FFC(&StringLiteral_10272, v36);
-    sub_B16FFC(&StringLiteral_10270, v37);
-    sub_B16FFC(&StringLiteral_10274, v38);
-    sub_B16FFC(&StringLiteral_10267, v39);
-    sub_B16FFC(&StringLiteral_10217, v40);
-    sub_B16FFC(&StringLiteral_10218, v41);
-    sub_B16FFC(&StringLiteral_10271, v42);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v30);
+    sub_B16FFC(&StringLiteral_10268/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_TITLE"*/, v31);
+    sub_B16FFC(&StringLiteral_10216/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_END"*/, v32);
+    sub_B16FFC(&StringLiteral_10273/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_MESSAGE"*/, v33);
+    sub_B16FFC(&StringLiteral_10266/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_CLOSE"*/, v34);
+    sub_B16FFC(&StringLiteral_10269/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_CLOSE"*/, v35);
+    sub_B16FFC(&StringLiteral_10272/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_CLOSE"*/, v36);
+    sub_B16FFC(&StringLiteral_10270/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_MESSAGE"*/, v37);
+    sub_B16FFC(&StringLiteral_10274/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_TITLE"*/, v38);
+    sub_B16FFC(&StringLiteral_10267/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_MESSAGE"*/, v39);
+    sub_B16FFC(&StringLiteral_10217/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_SPLIT"*/, v40);
+    sub_B16FFC(&StringLiteral_10218/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_START"*/, v41);
+    sub_B16FFC(&StringLiteral_10271/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_TITLE"*/, v42);
     byte_40FDC4A = 1;
   }
   entity = 0LL;
@@ -674,24 +674,24 @@ LABEL_68:
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v88 = LocalizationManager__Get((System_String_o *)StringLiteral_10217, 0LL);
+                    v88 = LocalizationManager__Get((System_String_o *)StringLiteral_10217/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_SPLIT"*/, 0LL);
                     if ( !v48 )
                       goto LABEL_139;
                     System_Text_StringBuilder__Append_41914240(v48, v88, 0LL);
-                    System_Text_StringBuilder__Append_41914240(v48, (System_String_o *)StringLiteral_26, 0LL);
+                    System_Text_StringBuilder__Append_41914240(v48, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
                   }
                   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                     && !LocalizationManager_TypeInfo->_2.cctor_finished )
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v89 = LocalizationManager__Get((System_String_o *)StringLiteral_10218, 0LL);
+                  v89 = LocalizationManager__Get((System_String_o *)StringLiteral_10218/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_START"*/, 0LL);
                   if ( !v48 )
                     goto LABEL_139;
                   System_Text_StringBuilder__Append_41914240(v48, v89, 0LL);
                   SvtNameText = PartyOrganizationListViewItem__get_SvtNameText(v87, v90);
                   System_Text_StringBuilder__Append_41914240(v48, SvtNameText, 0LL);
-                  v92 = LocalizationManager__Get((System_String_o *)StringLiteral_10216, 0LL);
+                  v92 = LocalizationManager__Get((System_String_o *)StringLiteral_10216/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_END"*/, 0LL);
                   System_Text_StringBuilder__Append_41914240(v48, v92, 0LL);
                   if ( !v65 )
                     goto LABEL_139;
@@ -783,18 +783,18 @@ LABEL_137:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v108 = LocalizationManager__Get((System_String_o *)StringLiteral_10271, 0LL);
+      v108 = LocalizationManager__Get((System_String_o *)StringLiteral_10271/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_TITLE"*/, 0LL);
       if ( !titleLabel )
         goto LABEL_139;
       UILabel__set_text(titleLabel, v108, 0LL);
       v109 = v128->fields.messageLabel;
-      v110 = LocalizationManager__Get((System_String_o *)StringLiteral_10270, 0LL);
+      v110 = LocalizationManager__Get((System_String_o *)StringLiteral_10270/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_MESSAGE"*/, 0LL);
       v111 = System_String__Format(v110, v106, 0LL);
       if ( !v109 )
         goto LABEL_139;
       UILabel__set_text(v109, v111, 0LL);
       closeLabel = v128->fields.closeLabel;
-      v113 = &StringLiteral_10269;
+      v113 = &StringLiteral_10269/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_CLOSE"*/;
     }
     else
     {
@@ -808,7 +808,7 @@ LABEL_137:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v115 = LocalizationManager__Get((System_String_o *)StringLiteral_10268, 0LL);
+        v115 = LocalizationManager__Get((System_String_o *)StringLiteral_10268/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_TITLE"*/, 0LL);
         if ( !v114 )
           goto LABEL_139;
         UILabel__set_text(v114, v115, 0LL);
@@ -820,7 +820,7 @@ LABEL_137:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v117 = LocalizationManager__Get((System_String_o *)StringLiteral_10267, 0LL);
+          v117 = LocalizationManager__Get((System_String_o *)StringLiteral_10267/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_MESSAGE"*/, 0LL);
           DialogMessageMySvtPos = System_String__Format(v117, v106, 0LL);
           if ( !v116 )
             goto LABEL_139;
@@ -838,7 +838,7 @@ LABEL_137:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v113 = &StringLiteral_10266;
+        v113 = &StringLiteral_10266/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_CLOSE"*/;
       }
       else
       {
@@ -847,7 +847,7 @@ LABEL_137:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v119 = LocalizationManager__Get((System_String_o *)StringLiteral_10274, 0LL);
+        v119 = LocalizationManager__Get((System_String_o *)StringLiteral_10274/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_TITLE"*/, 0LL);
         if ( !v114 )
           goto LABEL_139;
         UILabel__set_text(v114, v119, 0LL);
@@ -859,7 +859,7 @@ LABEL_137:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v121 = LocalizationManager__Get((System_String_o *)StringLiteral_10273, 0LL);
+          v121 = LocalizationManager__Get((System_String_o *)StringLiteral_10273/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_MESSAGE"*/, 0LL);
           DialogMessageSvtPos = System_String__Format(v121, v106, 0LL);
           if ( !v120 )
             goto LABEL_139;
@@ -877,7 +877,7 @@ LABEL_137:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v113 = &StringLiteral_10272;
+        v113 = &StringLiteral_10272/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_CLOSE"*/;
       }
     }
     v123 = LocalizationManager__Get((System_String_o *)*v113, 0LL);

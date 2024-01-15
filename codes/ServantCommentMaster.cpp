@@ -278,7 +278,7 @@ ServantCommentEntity_array *__fastcall ServantCommentMaster__GetEntityListWithIm
     sub_B16FFC(&ServantCommentEntity_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
     sub_B16FFC(&string___TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_1223, v17);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v17);
     byte_40FCEAA = 1;
   }
   v85 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -316,13 +316,13 @@ LABEL_72:
         goto LABEL_71;
       v19->m_Items[0] = (System_String_o *)v28;
       sub_B16F98((BattleServantConfConponent_o *)v19->m_Items, v28, v22, v23, v24, v25, v26, v27);
-      v20 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v20 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v20 = (System_String_o *)sub_B170BC(StringLiteral_1223, v19->obj.klass->_1.element_class);
+        v20 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v19->obj.klass->_1.element_class);
         if ( !v20 )
           goto LABEL_72;
-        v21 = (System_Int32_array **)StringLiteral_1223;
+        v21 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -344,13 +344,13 @@ LABEL_72:
         goto LABEL_71;
       v19->m_Items[2] = (System_String_o *)v45;
       sub_B16F98((BattleServantConfConponent_o *)&v19->m_Items[2], v45, v22, v40, v41, v42, v43, v44);
-      v20 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v20 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v20 = (System_String_o *)sub_B170BC(StringLiteral_1223, v19->obj.klass->_1.element_class);
+        v20 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v19->obj.klass->_1.element_class);
         if ( !v20 )
           goto LABEL_72;
-        v21 = (System_Int32_array **)StringLiteral_1223;
+        v21 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -639,7 +639,7 @@ ServantCommentEntity_array *__fastcall ServantCommentMaster__GetEntityList_30493
     sub_B16FFC(&ServantCommentEntity_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
     sub_B16FFC(&string___TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_1223, v19);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v19);
     byte_40FCEA9 = 1;
   }
   v20 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -677,13 +677,13 @@ LABEL_75:
         goto LABEL_73;
       v22->m_Items[0] = (System_String_o *)v31;
       sub_B16F98((BattleServantConfConponent_o *)v22->m_Items, v31, v25, v26, v27, v28, v29, v30);
-      v23 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v23 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v23 = (System_String_o *)sub_B170BC(StringLiteral_1223, v22->obj.klass->_1.element_class);
+        v23 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v22->obj.klass->_1.element_class);
         if ( !v23 )
           goto LABEL_75;
-        v24 = (System_Int32_array **)StringLiteral_1223;
+        v24 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -705,13 +705,13 @@ LABEL_75:
         goto LABEL_73;
       v22->m_Items[2] = (System_String_o *)v43;
       sub_B16F98((BattleServantConfConponent_o *)&v22->m_Items[2], v43, v25, v38, v39, v40, v41, v42);
-      v23 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v23 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v23 = (System_String_o *)sub_B170BC(StringLiteral_1223, v22->obj.klass->_1.element_class);
+        v23 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v22->obj.klass->_1.element_class);
         if ( !v23 )
           goto LABEL_75;
-        v24 = (System_Int32_array **)StringLiteral_1223;
+        v24 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -1026,7 +1026,7 @@ bool __fastcall ServantCommentMaster__GetNewList(
     sub_B16FFC(&ServantCommentEntity_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
     sub_B16FFC(&string___TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_1223, v19);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v19);
     byte_40FCEAF = 1;
   }
   v107 = 0LL;
@@ -1106,13 +1106,13 @@ LABEL_80:
         goto LABEL_78;
       v33->m_Items[0] = (System_String_o *)v42;
       sub_B16F98((BattleServantConfConponent_o *)v33->m_Items, v42, v36, v37, v38, v39, v40, v41);
-      ImageLimit = (void *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      ImageLimit = (void *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        ImageLimit = (void *)sub_B170BC(StringLiteral_1223, v33->obj.klass->_1.element_class);
+        ImageLimit = (void *)sub_B170BC(StringLiteral_1223/*":"*/, v33->obj.klass->_1.element_class);
         if ( !ImageLimit )
           goto LABEL_80;
-        v35 = (System_Int32_array **)StringLiteral_1223;
+        v35 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -1134,13 +1134,13 @@ LABEL_80:
         goto LABEL_78;
       v33->m_Items[2] = (System_String_o *)v54;
       sub_B16F98((BattleServantConfConponent_o *)&v33->m_Items[2], v54, v36, v49, v50, v51, v52, v53);
-      ImageLimit = (void *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      ImageLimit = (void *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        ImageLimit = (void *)sub_B170BC(StringLiteral_1223, v33->obj.klass->_1.element_class);
+        ImageLimit = (void *)sub_B170BC(StringLiteral_1223/*":"*/, v33->obj.klass->_1.element_class);
         if ( !ImageLimit )
           goto LABEL_80;
-        v35 = (System_Int32_array **)StringLiteral_1223;
+        v35 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -1394,7 +1394,7 @@ System_Collections_Generic_List_ServantCommentEntity__o *__fastcall ServantComme
     sub_B16FFC(&System_Collections_Generic_List_ServantCommentEntity__TypeInfo, v9);
     sub_B16FFC(&ServantCommentEntity_TypeInfo, v10);
     sub_B16FFC(&string___TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1223, v12);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v12);
     byte_40FCEB2 = 1;
   }
   priorityList = 0LL;
@@ -1436,13 +1436,13 @@ LABEL_55:
         goto LABEL_54;
       v18->m_Items[0] = (System_String_o *)v27;
       sub_B16F98((BattleServantConfConponent_o *)v18->m_Items, v27, v21, v22, v23, v24, v25, v26);
-      v19 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v19 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v19 = (System_String_o *)sub_B170BC(StringLiteral_1223, v18->obj.klass->_1.element_class);
+        v19 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v18->obj.klass->_1.element_class);
         if ( !v19 )
           goto LABEL_55;
-        v20 = (System_Int32_array **)StringLiteral_1223;
+        v20 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -1468,13 +1468,13 @@ LABEL_55:
         goto LABEL_54;
       v18->m_Items[2] = (System_String_o *)v38;
       sub_B16F98((BattleServantConfConponent_o *)&v18->m_Items[2], v38, v21, v33, v34, v35, v36, v37);
-      v19 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v19 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v19 = (System_String_o *)sub_B170BC(StringLiteral_1223, v18->obj.klass->_1.element_class);
+        v19 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v18->obj.klass->_1.element_class);
         if ( !v19 )
           goto LABEL_55;
-        v20 = (System_Int32_array **)StringLiteral_1223;
+        v20 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -1674,7 +1674,7 @@ ServantCommentEntity_array *__fastcall ServantCommentMaster__GetOpenEntitiyList(
     sub_B16FFC(&System_Collections_Generic_List_ServantCommentEntity__TypeInfo, v9);
     sub_B16FFC(&ServantCommentEntity_TypeInfo, v10);
     sub_B16FFC(&string___TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1223, v12);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v12);
     byte_40FCEAB = 1;
   }
   v13 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -1712,13 +1712,13 @@ LABEL_58:
         goto LABEL_56;
       v15->m_Items[0] = (System_String_o *)v24;
       sub_B16F98((BattleServantConfConponent_o *)v15->m_Items, v24, v18, v19, v20, v21, v22, v23);
-      v16 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v16 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v16 = (System_String_o *)sub_B170BC(StringLiteral_1223, v15->obj.klass->_1.element_class);
+        v16 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v15->obj.klass->_1.element_class);
         if ( !v16 )
           goto LABEL_58;
-        v17 = (System_Int32_array **)StringLiteral_1223;
+        v17 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -1740,13 +1740,13 @@ LABEL_58:
         goto LABEL_56;
       v15->m_Items[2] = (System_String_o *)v36;
       sub_B16F98((BattleServantConfConponent_o *)&v15->m_Items[2], v36, v18, v31, v32, v33, v34, v35);
-      v16 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v16 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v16 = (System_String_o *)sub_B170BC(StringLiteral_1223, v15->obj.klass->_1.element_class);
+        v16 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v15->obj.klass->_1.element_class);
         if ( !v16 )
           goto LABEL_58;
-        v17 = (System_Int32_array **)StringLiteral_1223;
+        v17 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -2296,7 +2296,7 @@ bool __fastcall ServantCommentMaster__IsNew(ServantCommentMaster_o *this, int32_
     sub_B16FFC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, *(_QWORD *)&svtId);
     sub_B16FFC(&ServantCommentEntity_TypeInfo, v4);
     sub_B16FFC(&string___TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1223, v6);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v6);
     byte_40FCEAE = 1;
   }
   v62 = 0;
@@ -2326,13 +2326,13 @@ LABEL_57:
         goto LABEL_55;
       v7->m_Items[0] = (System_String_o *)v16;
       sub_B16F98((BattleServantConfConponent_o *)v7->m_Items, v16, v10, v11, v12, v13, v14, v15);
-      v8 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v8 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v8 = (System_String_o *)sub_B170BC(StringLiteral_1223, v7->obj.klass->_1.element_class);
+        v8 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v7->obj.klass->_1.element_class);
         if ( !v8 )
           goto LABEL_57;
-        v9 = (System_Int32_array **)StringLiteral_1223;
+        v9 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -2354,13 +2354,13 @@ LABEL_57:
         goto LABEL_55;
       v7->m_Items[2] = (System_String_o *)v28;
       sub_B16F98((BattleServantConfConponent_o *)&v7->m_Items[2], v28, v10, v23, v24, v25, v26, v27);
-      v8 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v8 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v8 = (System_String_o *)sub_B170BC(StringLiteral_1223, v7->obj.klass->_1.element_class);
+        v8 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v7->obj.klass->_1.element_class);
         if ( !v8 )
           goto LABEL_57;
-        v9 = (System_Int32_array **)StringLiteral_1223;
+        v9 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -2753,10 +2753,10 @@ void __fastcall ServantCommentMaster__OpenSaintGraphProfileChange(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
     sub_B16FFC(&Method_ServantCommentMaster___c__DisplayClass16_0__OpenSaintGraphProfileChange_b__0__, v15);
     sub_B16FFC(&ServantCommentMaster___c__DisplayClass16_0_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_10872, v17);
-    sub_B16FFC(&StringLiteral_10871, v18);
-    sub_B16FFC(&StringLiteral_1, v19);
-    sub_B16FFC(&StringLiteral_10869, v20);
+    sub_B16FFC(&StringLiteral_10872/*"QUEST_CLEAR_CHANGE_ACTION_COLLECTION_SG"*/, v17);
+    sub_B16FFC(&StringLiteral_10871/*"QUEST_CLEAR_CHANGE_ACTION_COLLECTION_OPEN_DETAIL"*/, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v19);
+    sub_B16FFC(&StringLiteral_10869/*"QUEST_CLEAR_CHANGE_ACTION_COLLECTION_CLOSE"*/, v20);
     byte_40FCEB4 = 1;
   }
   entity = 0LL;
@@ -2798,15 +2798,15 @@ void __fastcall ServantCommentMaster__OpenSaintGraphProfileChange(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_10872, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_10872/*"QUEST_CLEAR_CHANGE_ACTION_COLLECTION_SG"*/, 0LL);
   if ( !entity )
     goto LABEL_17;
   v36 = v35;
   Name = (Il2CppObject *)ServantEntity__getName((ServantEntity_o *)entity, *(_DWORD *)(v21 + 28), -1, 0LL);
   v38 = System_String__Format(v36, Name, 0LL);
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_10871, 0LL);
-  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10869, 0LL);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_10871/*"QUEST_CLEAR_CHANGE_ACTION_COLLECTION_OPEN_DETAIL"*/, 0LL);
+  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10869/*"QUEST_CLEAR_CHANGE_ACTION_COLLECTION_CLOSE"*/, 0LL);
   v46 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v42,
@@ -2828,7 +2828,7 @@ LABEL_17:
     sub_B170D4();
   CommonUI__OpenConfirmDialogOnFade(
     Instance,
-    (System_String_o *)StringLiteral_1,
+    (System_String_o *)StringLiteral_1/*""*/,
     v38,
     v40,
     v41,

@@ -209,10 +209,10 @@ void __fastcall MaterialEventLogServantListViewManager__SetFilterButtonImage(
 
   if ( (byte_40F7B50 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16892, method);
-    sub_B16FFC(&StringLiteral_16893, v3);
-    sub_B16FFC(&StringLiteral_360, v4);
-    sub_B16FFC(&StringLiteral_347, v5);
+    sub_B16FFC(&StringLiteral_16892/*"btn_bg_05"*/, method);
+    sub_B16FFC(&StringLiteral_16893/*"btn_bg_06"*/, v3);
+    sub_B16FFC(&StringLiteral_360/*"#FE4545"*/, v4);
+    sub_B16FFC(&StringLiteral_347/*"#000000"*/, v5);
     byte_40F7B50 = 1;
   }
   *(_QWORD *)&v12.fields.r = 0LL;
@@ -220,15 +220,15 @@ void __fastcall MaterialEventLogServantListViewManager__SetFilterButtonImage(
   sort = this->fields.sort;
   if ( !sort || (v7 = ListViewSort__CheckFilterDefaultAll(sort, -1, 0LL), !this->fields.filterSprite) )
     sub_B170D4();
-  v8 = (System_String_o **)&StringLiteral_16892;
+  v8 = (System_String_o **)&StringLiteral_16892/*"btn_bg_05"*/;
   v9 = !v7;
   filterSprite = this->fields.filterSprite;
   if ( v9 )
-    v8 = (System_String_o **)&StringLiteral_16893;
+    v8 = (System_String_o **)&StringLiteral_16893/*"btn_bg_06"*/;
   if ( v9 )
-    v11 = (System_String_o **)&StringLiteral_360;
+    v11 = (System_String_o **)&StringLiteral_360/*"#FE4545"*/;
   else
-    v11 = (System_String_o **)&StringLiteral_347;
+    v11 = (System_String_o **)&StringLiteral_347/*"#000000"*/;
   UISprite__set_spriteName(filterSprite, *v8, 0LL);
   *(_QWORD *)&v12.fields.r = 0LL;
   *(_QWORD *)&v12.fields.b = 0LL;

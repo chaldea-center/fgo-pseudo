@@ -45,8 +45,8 @@ EventInfoAssistLevelCounterComponent_o *__fastcall EventInfoAssistLevelCounterCo
   {
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_EventInfoAssistLevelCounterComponent___, ent);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_585, v6);
-    sub_B16FFC(&StringLiteral_651, v7);
+    sub_B16FFC(&StringLiteral_585/*"("*/, v6);
+    sub_B16FFC(&StringLiteral_651/*")"*/, v7);
     byte_40FB6E4 = 1;
   }
   baseAssistLevelPrefab = (UnityEngine_UI_Dropdown_DropdownItem_o *)this->fields.baseAssistLevelPrefab;
@@ -69,9 +69,9 @@ EventInfoAssistLevelCounterComponent_o *__fastcall EventInfoAssistLevelCounterCo
           !ent)
       || (v13 = System_String__Concat_43747144(
                   name,
-                  (System_String_o *)StringLiteral_585,
+                  (System_String_o *)StringLiteral_585/*"("*/,
                   ent->fields.value,
-                  (System_String_o *)StringLiteral_651,
+                  (System_String_o *)StringLiteral_651/*")"*/,
                   0LL),
           !v11)
       || (UnityEngine_Object__set_name(v11, v13, 0LL),

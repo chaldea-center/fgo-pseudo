@@ -147,12 +147,12 @@ void __fastcall SoundPlayerListViewItemDraw__applyUi(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, item);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_16942, v6);
-    sub_B16FFC(&StringLiteral_19560, v7);
-    sub_B16FFC(&StringLiteral_12231, v8);
-    sub_B16FFC(&StringLiteral_16941, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
-    sub_B16FFC(&StringLiteral_19561, v11);
+    sub_B16FFC(&StringLiteral_16942/*"btn_playmusic_on"*/, v6);
+    sub_B16FFC(&StringLiteral_19560/*"img_soundplayer_listoff01"*/, v7);
+    sub_B16FFC(&StringLiteral_12231/*"SOUNDPLAYER_SOUND_NAME"*/, v8);
+    sub_B16FFC(&StringLiteral_16941/*"btn_playmusic_off"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
+    sub_B16FFC(&StringLiteral_19561/*"img_soundplayer_listoff02"*/, v11);
     byte_40F9D1E = 1;
   }
   if ( !item )
@@ -161,9 +161,9 @@ void __fastcall SoundPlayerListViewItemDraw__applyUi(
   if ( !playIcon )
     goto LABEL_67;
   if ( item->fields._isPlaySound_k__BackingField )
-    v13 = (System_String_o **)&StringLiteral_16942;
+    v13 = (System_String_o **)&StringLiteral_16942/*"btn_playmusic_on"*/;
   else
-    v13 = (System_String_o **)&StringLiteral_16941;
+    v13 = (System_String_o **)&StringLiteral_16941/*"btn_playmusic_off"*/;
   UISprite__set_spriteName(playIcon, *v13, 0LL);
   if ( item->fields._isPlaySound_k__BackingField )
   {
@@ -206,7 +206,7 @@ void __fastcall SoundPlayerListViewItemDraw__applyUi(
             v37 = this->fields.blackMask;
             if ( v37 )
             {
-              UISprite__set_spriteName(v37, (System_String_o *)StringLiteral_19561, 0LL);
+              UISprite__set_spriteName(v37, (System_String_o *)StringLiteral_19561/*"img_soundplayer_listoff02"*/, 0LL);
               v38 = (UIWidget_o *)this->fields.blackMask;
               if ( v38 )
               {
@@ -215,7 +215,7 @@ void __fastcall SoundPlayerListViewItemDraw__applyUi(
                 titleLabel = this->fields.titleLabel;
                 if ( titleLabel )
                 {
-                  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+                  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
                   itemInfoParent = (UnityEngine_Component_o *)this->fields.itemInfoParent;
                   if ( itemInfoParent )
                   {
@@ -262,7 +262,7 @@ LABEL_44:
               v48 = this->fields.blackMask;
               if ( !v48 )
                 goto LABEL_67;
-              UISprite__set_spriteName(v48, (System_String_o *)StringLiteral_19560, 0LL);
+              UISprite__set_spriteName(v48, (System_String_o *)StringLiteral_19560/*"img_soundplayer_listoff01"*/, 0LL);
               v49 = (UIWidget_o *)this->fields.blackMask;
               if ( !v49 )
                 goto LABEL_67;
@@ -282,20 +282,20 @@ LABEL_44:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v55 = LocalizationManager__Get((System_String_o *)StringLiteral_12231, 0LL);
+            v55 = LocalizationManager__Get((System_String_o *)StringLiteral_12231/*"SOUNDPLAYER_SOUND_NAME"*/, 0LL);
             if ( (byte_40F9D1B & 1) == 0 )
             {
-              sub_B16FFC(&StringLiteral_1, v54);
+              sub_B16FFC(&StringLiteral_1/*""*/, v54);
               byte_40F9D1B = 1;
             }
             v56 = item->fields.bgmEntity;
-            v57 = v56 ? (Il2CppObject **)&v56->fields.name : (Il2CppObject **)&StringLiteral_1;
+            v57 = v56 ? (Il2CppObject **)&v56->fields.name : (Il2CppObject **)&StringLiteral_1/*""*/;
             v58 = System_String__Format(v55, *v57, 0LL);
             WrapControlText__fontSizeAdjust(v53, v58, this->fields.TITLE_FONT_SIZE, 0LL);
             v59 = this->fields.infoLabel;
             if ( v59 )
             {
-              UILabel__set_text(v59, (System_String_o *)StringLiteral_1, 0LL);
+              UILabel__set_text(v59, (System_String_o *)StringLiteral_1/*""*/, 0LL);
               return;
             }
           }
@@ -328,17 +328,17 @@ LABEL_67:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12231, 0LL);
+                v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12231/*"SOUNDPLAYER_SOUND_NAME"*/, 0LL);
                 if ( (byte_40F9D1B & 1) == 0 )
                 {
-                  sub_B16FFC(&StringLiteral_1, v26);
+                  sub_B16FFC(&StringLiteral_1/*""*/, v26);
                   byte_40F9D1B = 1;
                 }
                 v28 = item->fields.bgmEntity;
                 if ( v28 )
                   p_name = (Il2CppObject **)&v28->fields.name;
                 else
-                  p_name = (Il2CppObject **)&StringLiteral_1;
+                  p_name = (Il2CppObject **)&StringLiteral_1/*""*/;
                 v30 = System_String__Format(v27, *p_name, 0LL);
                 NOT_OPEN_STR_FONT_SIZE = this->fields.TITLE_FONT_SIZE;
                 notOpenStr = v30;
@@ -629,7 +629,7 @@ void __fastcall SoundPlayerListViewItemDraw__startOpenAnim(
     sub_B16FFC(&Method_SoundPlayerListViewItemDraw___c__DisplayClass21_0__startOpenAnim_b__0__, v12);
     sub_B16FFC(&Method_SoundPlayerListViewItemDraw___c__DisplayClass21_0__startOpenAnim_b__1__, v13);
     sub_B16FFC(&SoundPlayerListViewItemDraw___c__DisplayClass21_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_18139, v15);
+    sub_B16FFC(&StringLiteral_18139/*"ef_soundopen"*/, v15);
     byte_40F9D20 = 1;
   }
   v16 = sub_B170CC(SoundPlayerListViewItemDraw___c__DisplayClass21_0_TypeInfo, mgr, item, endCallback, method);
@@ -653,7 +653,7 @@ void __fastcall SoundPlayerListViewItemDraw__startOpenAnim(
   {
     if ( !mgr )
       goto LABEL_16;
-    EffetData = SoundPlayerListViewManager__getEffetData(mgr, (System_String_o *)StringLiteral_18139, v31);
+    EffetData = SoundPlayerListViewManager__getEffetData(mgr, (System_String_o *)StringLiteral_18139/*"ef_soundopen"*/, v31);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {

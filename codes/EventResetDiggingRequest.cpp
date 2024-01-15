@@ -15,12 +15,12 @@ void __fastcall EventResetDiggingRequest__beginRequest(
 
   if ( (byte_40F612A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18403, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_16386, v7);
+    sub_B16FFC(&StringLiteral_18403/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_B16FFC(&StringLiteral_16386/*"areaNum"*/, v7);
     byte_40F612A = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18403, eventId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16386, areaNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18403/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16386/*"areaNum"*/, areaNum, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -35,7 +35,7 @@ System_String_o *__fastcall EventResetDiggingRequest__getURL(
   if ( (byte_40F6129 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18395, v2);
+    sub_B16FFC(&StringLiteral_18395/*"event/resetDigging"*/, v2);
     byte_40F6129 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -44,7 +44,7 @@ System_String_o *__fastcall EventResetDiggingRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18395, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18395/*"event/resetDigging"*/, 0LL);
 }
 
 

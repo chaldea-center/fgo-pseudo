@@ -83,7 +83,7 @@ System_String_o *__fastcall EventEntity__FinishTimeString(
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
     sub_B16FFC(&object___TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_4587, v8);
+    sub_B16FFC(&StringLiteral_4587/*"DISP_TIMESTR_FORMAT"*/, v8);
     byte_40FC645 = 1;
   }
   dateData = 0LL;
@@ -102,7 +102,7 @@ System_String_o *__fastcall EventEntity__FinishTimeString(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_4587, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_4587/*"DISP_TIMESTR_FORMAT"*/, 0LL);
   v13 = (System_Object_array *)sub_B17014(object___TypeInfo, 5LL, v12);
   v54.fields.dateData = (uint64_t)&dateData;
   Year = System_DateTime__get_Year(v54, 0LL);
@@ -838,11 +838,11 @@ System_String_o *__fastcall EventEntity__getPurchaseShopBannerName(
 {
   if ( (byte_40FC643 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21570, bannerName);
+    sub_B16FFC(&StringLiteral_21570/*"r"*/, bannerName);
     byte_40FC643 = 1;
   }
   if ( EventEntity__isPurchaseEventOpen(this, (const MethodInfo *)bannerName) )
-    return System_String__Concat_43743732(bannerName, (System_String_o *)StringLiteral_21570, 0LL);
+    return System_String__Concat_43743732(bannerName, (System_String_o *)StringLiteral_21570/*"r"*/, 0LL);
   else
     return bannerName;
 }

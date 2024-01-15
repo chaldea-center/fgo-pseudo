@@ -145,8 +145,8 @@ void __fastcall MyRoomSvtControl__EndPlay(MyRoomSvtControl_o *this, const Method
   if ( (byte_40F9B8A & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_22380, v3);
-    sub_B16FFC(&StringLiteral_5479, v4);
+    sub_B16FFC(&StringLiteral_22380/*"svtVoicePlay"*/, v3);
+    sub_B16FFC(&StringLiteral_5479/*"END_PLAY"*/, v4);
     byte_40F9B8A = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -179,7 +179,7 @@ void __fastcall MyRoomSvtControl__EndPlay(MyRoomSvtControl_o *this, const Method
       v18 = this->fields.fsm;
       if ( v18 )
       {
-        PlayMakerFSM__SendEvent(v18, (System_String_o *)StringLiteral_5479, 0LL);
+        PlayMakerFSM__SendEvent(v18, (System_String_o *)StringLiteral_5479/*"END_PLAY"*/, 0LL);
         return;
       }
     }
@@ -198,7 +198,7 @@ void __fastcall MyRoomSvtControl__EndPlay(MyRoomSvtControl_o *this, const Method
         {
           UnityEngine_MonoBehaviour__Invoke(
             (UnityEngine_MonoBehaviour_o *)this,
-            (System_String_o *)StringLiteral_22380,
+            (System_String_o *)StringLiteral_22380/*"svtVoicePlay"*/,
             v15->fields.delay,
             0LL);
           return;

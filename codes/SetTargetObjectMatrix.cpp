@@ -122,7 +122,7 @@ void __fastcall SetTargetObjectMatrix__updateMatrix(SetTargetObjectMatrix_o *thi
   if ( (byte_40FF336 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16115, v3);
+    sub_B16FFC(&StringLiteral_16115/*"_targetMatrix"*/, v3);
     byte_40FF336 = 1;
   }
   memset(v16, 0, sizeof(v16));
@@ -160,7 +160,7 @@ void __fastcall SetTargetObjectMatrix__updateMatrix(SetTargetObjectMatrix_o *thi
             if ( material )
             {
               v10 = &v13;
-              v11 = (System_String_o *)StringLiteral_16115;
+              v11 = (System_String_o *)StringLiteral_16115/*"_targetMatrix"*/;
               v13 = v15;
               goto LABEL_20;
             }
@@ -178,7 +178,7 @@ void __fastcall SetTargetObjectMatrix__updateMatrix(SetTargetObjectMatrix_o *thi
             if ( material )
             {
               v10 = &v14;
-              v11 = (System_String_o *)StringLiteral_16115;
+              v11 = (System_String_o *)StringLiteral_16115/*"_targetMatrix"*/;
               v14 = v15;
 LABEL_20:
               UnityEngine_Material__SetMatrix(material, v11, v10, 0LL);

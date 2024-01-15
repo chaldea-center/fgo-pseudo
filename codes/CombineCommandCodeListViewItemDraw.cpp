@@ -16,7 +16,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetInput(
 
   if ( (byte_40F9AB8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1004, item);
+    sub_B16FFC(&StringLiteral_1004/*"1"*/, item);
     byte_40F9AB8 = 1;
   }
   if ( item )
@@ -30,7 +30,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetInput(
       selectNumLabel = this->fields.selectNumLabel;
       if ( selectNumLabel )
       {
-        UILabel__set_text(selectNumLabel, (System_String_o *)StringLiteral_1004, 0LL);
+        UILabel__set_text(selectNumLabel, (System_String_o *)StringLiteral_1004/*"1"*/, 0LL);
         return;
       }
 LABEL_10:
@@ -71,9 +71,9 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
   if ( (byte_40F9AB7 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_9318, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
-    sub_B16FFC(&StringLiteral_1004, v9);
+    sub_B16FFC(&StringLiteral_9318/*"NOT_SELECT_MAX_EQUIP"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
+    sub_B16FFC(&StringLiteral_1004/*"1"*/, v9);
     byte_40F9AB7 = 1;
   }
   if ( item && mode )
@@ -115,7 +115,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
     maskLabel = this->fields.maskLabel;
     if ( !maskLabel )
       goto LABEL_33;
-    UILabel__set_text(maskLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(maskLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     equippedInfo = this->fields.equippedInfo;
     if ( !equippedInfo )
       goto LABEL_33;
@@ -137,7 +137,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v23 = LocalizationManager__Get((System_String_o *)StringLiteral_9318, 0LL);
+        v23 = LocalizationManager__Get((System_String_o *)StringLiteral_9318/*"NOT_SELECT_MAX_EQUIP"*/, 0LL);
         if ( !v22 )
           goto LABEL_33;
         UILabel__set_text(v22, v23, 0LL);
@@ -165,7 +165,7 @@ void __fastcall CombineCommandCodeListViewItemDraw__SetItem(
         selectNumLabel = this->fields.selectNumLabel;
         if ( selectNumLabel )
         {
-          UILabel__set_text(selectNumLabel, (System_String_o *)StringLiteral_1004, 0LL);
+          UILabel__set_text(selectNumLabel, (System_String_o *)StringLiteral_1004/*"1"*/, 0LL);
           return;
         }
       }

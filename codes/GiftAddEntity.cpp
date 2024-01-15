@@ -65,10 +65,10 @@ System_String_o *__fastcall GiftAddEntity__GetOverwriteDetailText(GiftAddEntity_
   if ( (byte_40FC105 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21270, v4);
+    sub_B16FFC(&StringLiteral_21270/*"overwriteDetailText"*/, v4);
     byte_40FC105 = 1;
   }
-  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_21270, v2);
+  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_21270/*"overwriteDetailText"*/, v2);
   if ( result )
   {
     if ( result->klass != string_TypeInfo )
@@ -94,10 +94,10 @@ System_String_o *__fastcall GiftAddEntity__GetOverwriteTreasureEffectId(
   if ( (byte_40FC104 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21294, v4);
+    sub_B16FFC(&StringLiteral_21294/*"overwriteTreasureEffectId"*/, v4);
     byte_40FC104 = 1;
   }
-  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_21294, v2);
+  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_21294/*"overwriteTreasureEffectId"*/, v2);
   if ( result )
   {
     if ( result->klass != string_TypeInfo )

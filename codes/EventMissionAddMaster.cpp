@@ -92,8 +92,8 @@ System_String_o *__fastcall EventMissionAddMaster__GetEventMissionChangeRewardIc
     sub_B16FFC(&Method_System_Collections_Generic_List_EventMissionAddEntity__Sort__, v15);
     sub_B16FFC(&Method_EventMissionAddMaster___c__GetEventMissionChangeRewardIcon_b__4_0__, v16);
     sub_B16FFC(&EventMissionAddMaster___c_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_1, v18);
-    sub_B16FFC(&StringLiteral_1004, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v18);
+    sub_B16FFC(&StringLiteral_1004/*"1"*/, v19);
     byte_40F88AC = 1;
   }
   memset(&v44, 0, sizeof(v44));
@@ -175,7 +175,7 @@ System_String_o *__fastcall EventMissionAddMaster__GetEventMissionChangeRewardIc
         break;
     }
   }
-  v40 = (System_String_o *)StringLiteral_1;
+  v40 = (System_String_o *)StringLiteral_1/*""*/;
   if ( HIDWORD(current[2].monitor) )
   {
     v40 = System_Int32__ToString((int)current + 44, 0LL);
@@ -187,7 +187,7 @@ System_String_o *__fastcall EventMissionAddMaster__GetEventMissionChangeRewardIc
   v41 = 3;
   if ( !System_String__IsNullOrEmpty(v40, 0LL) && notifyIcon )
   {
-    v40 = System_String__Concat_43743732(v40, (System_String_o *)StringLiteral_1004, 0LL);
+    v40 = System_String__Concat_43743732(v40, (System_String_o *)StringLiteral_1004/*"1"*/, 0LL);
     v41 = 3;
   }
 LABEL_23:

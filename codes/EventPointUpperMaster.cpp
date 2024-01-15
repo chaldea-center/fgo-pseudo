@@ -265,10 +265,10 @@ int32_t __fastcall EventPointUpperMaster__getPointUpper(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_EventPointUpperReleaseMaster___, *(_QWORD *)&eventId);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_8659, v8);
+    sub_B16FFC(&StringLiteral_8659/*"MAX_EVENT_POINT"*/, v8);
     byte_40FAC6F = 1;
   }
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8659, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8659/*"MAX_EVENT_POINT"*/, 0LL);
   List = EventPointUpperMaster__getList(this, eventId, groupId, v10);
   if ( !List )
     goto LABEL_23;

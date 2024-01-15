@@ -72,11 +72,11 @@ System_String_o *__fastcall UserSupportDeckMaster__getDeckName(
   if ( (byte_40FF702 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, *(_QWORD *)&deckId);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FF702 = 1;
   }
   entity = 0LL;
-  v6 = (System_String_o *)StringLiteral_1;
+  v6 = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {

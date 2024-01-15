@@ -260,15 +260,15 @@ void __fastcall SupportSelectEditMenu__Open(
     sub_B16FFC(&System_Action_TypeInfo, deckData);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
     sub_B16FFC(&Method_SupportSelectEditMenu_OnFinishedOpen__, v13);
-    sub_B16FFC(&StringLiteral_12479, v14);
-    sub_B16FFC(&StringLiteral_12476, v15);
-    sub_B16FFC(&StringLiteral_12477, v16);
-    sub_B16FFC(&StringLiteral_12482, v17);
-    sub_B16FFC(&StringLiteral_12480, v18);
-    sub_B16FFC(&StringLiteral_12478, v19);
-    sub_B16FFC(&StringLiteral_12475, v20);
-    sub_B16FFC(&StringLiteral_12474, v21);
-    sub_B16FFC(&StringLiteral_12481, v22);
+    sub_B16FFC(&StringLiteral_12479/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_EQUIP"*/, v14);
+    sub_B16FFC(&StringLiteral_12476/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_COPY"*/, v15);
+    sub_B16FFC(&StringLiteral_12477/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_INIT_ALL"*/, v16);
+    sub_B16FFC(&StringLiteral_12482/*"SUPPORT_SELECT_EDIT_MENU_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_12480/*"SUPPORT_SELECT_EDIT_MENU_DECK_NAME"*/, v18);
+    sub_B16FFC(&StringLiteral_12478/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_ALL"*/, v19);
+    sub_B16FFC(&StringLiteral_12475/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CHANGE_DECK_NAME"*/, v20);
+    sub_B16FFC(&StringLiteral_12474/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CANCEL"*/, v21);
+    sub_B16FFC(&StringLiteral_12481/*"SUPPORT_SELECT_EDIT_MENU_MESSAGE"*/, v22);
     byte_40FD51A = 1;
   }
   if ( deckData && this->fields.currentState == 2 )
@@ -293,18 +293,18 @@ void __fastcall SupportSelectEditMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12482, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12482/*"SUPPORT_SELECT_EDIT_MENU_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_33;
     UILabel__set_text(titleLabel, v25, 0LL);
     supportNameLabel = this->fields.supportNameLabel;
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12480, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12480/*"SUPPORT_SELECT_EDIT_MENU_DECK_NAME"*/, 0LL);
     v28 = System_String__Format(v27, (Il2CppObject *)deckData->fields._deckName_k__BackingField, 0LL);
     if ( !supportNameLabel )
       goto LABEL_33;
     UILabel__set_text(supportNameLabel, v28, 0LL);
     messageLabel = this->fields.messageLabel;
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12481, 0LL);
+    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12481/*"SUPPORT_SELECT_EDIT_MENU_MESSAGE"*/, 0LL);
     if ( !messageLabel )
       goto LABEL_33;
     UILabel__set_text(messageLabel, v30, 0LL);
@@ -320,7 +320,7 @@ void __fastcall SupportSelectEditMenu__Open(
                                        v31,
                                        1LL,
                                        copyButton->klass->vtable._15_OnPress.methodPtr);
-    SupportSelectEditMenu__SetButtonText(v33, this->fields.copyButton, (System_String_o *)StringLiteral_12476, v34);
+    SupportSelectEditMenu__SetButtonText(v33, this->fields.copyButton, (System_String_o *)StringLiteral_12476/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_COPY"*/, v34);
     IsEmpty = SupportServantData__IsEmpty(deckData, 0LL);
     removeAllButton = this->fields.removeAllButton;
     if ( !removeAllButton )
@@ -334,7 +334,7 @@ void __fastcall SupportSelectEditMenu__Open(
                                        v37,
                                        1LL,
                                        removeAllButton->klass->vtable._15_OnPress.methodPtr);
-    SupportSelectEditMenu__SetButtonText(v38, this->fields.removeAllButton, (System_String_o *)StringLiteral_12478, v39);
+    SupportSelectEditMenu__SetButtonText(v38, this->fields.removeAllButton, (System_String_o *)StringLiteral_12478/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_ALL"*/, v39);
     v40 = SupportServantData__IsEmpty(deckData, 0LL);
     v41 = 0LL;
     if ( v40 )
@@ -352,7 +352,7 @@ void __fastcall SupportSelectEditMenu__Open(
                                        v41,
                                        1LL,
                                        initAllButton->klass->vtable._15_OnPress.methodPtr);
-    SupportSelectEditMenu__SetButtonText(v43, this->fields.initAllButton, (System_String_o *)StringLiteral_12477, v44);
+    SupportSelectEditMenu__SetButtonText(v43, this->fields.initAllButton, (System_String_o *)StringLiteral_12477/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_INIT_ALL"*/, v44);
     EquipSum = SupportServantData__getEquipSum(deckData, 0LL);
     removeEquipButton = this->fields.removeEquipButton;
     if ( !removeEquipButton )
@@ -366,7 +366,7 @@ void __fastcall SupportSelectEditMenu__Open(
     SupportSelectEditMenu__SetButtonText(
       v48,
       this->fields.removeEquipButton,
-      (System_String_o *)StringLiteral_12479,
+      (System_String_o *)StringLiteral_12479/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_EQUIP"*/,
       v49);
     changeNameButton = this->fields.changeNameButton;
     if ( !changeNameButton )
@@ -376,9 +376,9 @@ LABEL_33:
     SupportSelectEditMenu__SetButtonText(
       v51,
       this->fields.changeNameButton,
-      (System_String_o *)StringLiteral_12475,
+      (System_String_o *)StringLiteral_12475/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CHANGE_DECK_NAME"*/,
       v52);
-    SupportSelectEditMenu__SetButtonText(v53, this->fields.cancelButton, (System_String_o *)StringLiteral_12474, v54);
+    SupportSelectEditMenu__SetButtonText(v53, this->fields.cancelButton, (System_String_o *)StringLiteral_12474/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CANCEL"*/, v54);
     this->fields.currentState = 0;
     v59 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v55, v56, v57, v58);
     System_Action___ctor(v59, (Il2CppObject *)this, Method_SupportSelectEditMenu_OnFinishedOpen__, 0LL);

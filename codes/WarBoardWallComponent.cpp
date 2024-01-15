@@ -23,17 +23,17 @@ void __fastcall WarBoardWallComponent___cctor(const MethodInfo *method)
   if ( (byte_40FA92A & 1) == 0 )
   {
     sub_B16FFC(&WarBoardWallComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19680, v8);
-    sub_B16FFC(&StringLiteral_2854, v9);
+    sub_B16FFC(&StringLiteral_19680/*"img_wall_{0}"*/, v8);
+    sub_B16FFC(&StringLiteral_2854/*"BreakWall_{0:00}"*/, v9);
     byte_40FA92A = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarBoardWallComponent_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_19680;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19680;
+  v11 = (System_Int32_array **)StringLiteral_19680/*"img_wall_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19680/*"img_wall_{0}"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = WarBoardWallComponent_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_2854;
-  v12->BREAK_ANIMATION_NAME = (struct System_String_o *)StringLiteral_2854;
+  v13 = (System_Int32_array **)StringLiteral_2854/*"BreakWall_{0:00}"*/;
+  v12->BREAK_ANIMATION_NAME = (struct System_String_o *)StringLiteral_2854/*"BreakWall_{0:00}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->BREAK_ANIMATION_NAME, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -901,7 +901,7 @@ void __fastcall WarBoardWallComponent__OnShowDamagePopup(
     sub_B16FFC(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__, v9);
     sub_B16FFC(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_18113, v12);
+    sub_B16FFC(&StringLiteral_18113/*"ef_dm_base"*/, v12);
     byte_40FA929 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -921,7 +921,7 @@ void __fastcall WarBoardWallComponent__OnShowDamagePopup(
     if ( !System_String__IsNullOrEmpty(popText, 0LL) )
       WarBoardWallComponent__CreateEffectText(
         this,
-        (System_String_o *)StringLiteral_18113,
+        (System_String_o *)StringLiteral_18113/*"ef_dm_base"*/,
         popText,
         popTextColor,
         (System_Collections_Generic_List_WarBoardTaskBase__o *)v18,

@@ -51,7 +51,7 @@ System_String_o *__fastcall ShopReleaseEntity__GetPreparationConditionText(
   if ( (byte_40FB77B & 1) == 0 )
   {
     sub_B16FFC(&CondType_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FB77B = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.closedMessage, 0LL) )
@@ -60,7 +60,7 @@ System_String_o *__fastcall ShopReleaseEntity__GetPreparationConditionText(
   condValue = ShopReleaseEntity__get_condValue(this, v4);
   if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__OpenConditionText(condType, condValue, (System_String_o *)StringLiteral_1, 0LL);
+  return CondType__OpenConditionText(condType, condValue, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 

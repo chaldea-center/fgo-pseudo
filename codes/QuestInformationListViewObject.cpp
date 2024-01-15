@@ -394,7 +394,7 @@ System_String_o *__fastcall QuestInformationListViewObject__ToString(
   {
     sub_B16FFC(&QuestInformationListViewItemDraw_DispMode_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Vector3_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_80, v4);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v4);
     byte_40F95D7 = 1;
   }
   dispMode = this->fields.dispMode;
@@ -404,7 +404,7 @@ System_String_o *__fastcall QuestInformationListViewObject__ToString(
   v10 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v11 = z;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v10);
-  return System_String__Concat_43823436(v7, (Il2CppObject *)StringLiteral_80, v8, 0LL);
+  return System_String__Concat_43823436(v7, (Il2CppObject *)StringLiteral_80/*" "*/, v8, 0LL);
 }
 
 

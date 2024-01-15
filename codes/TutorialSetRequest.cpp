@@ -9,10 +9,10 @@ void __fastcall TutorialSetRequest__beginRequest(TutorialSetRequest_o *this, int
 {
   if ( (byte_4106CA6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18685, *(_QWORD *)&flagId);
+    sub_B16FFC(&StringLiteral_18685/*"flagId"*/, *(_QWORD *)&flagId);
     byte_4106CA6 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18685, flagId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18685/*"flagId"*/, flagId, 0LL);
   this->fields.FlagId = flagId;
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
@@ -22,10 +22,10 @@ System_String_o *__fastcall TutorialSetRequest__getMockData(TutorialSetRequest_o
 {
   if ( (byte_4106CA5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_4106CA5 = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -37,7 +37,7 @@ System_String_o *__fastcall TutorialSetRequest__getURL(TutorialSetRequest_o *thi
   if ( (byte_4106CA4 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_22732, v2);
+    sub_B16FFC(&StringLiteral_22732/*"tutorial/set"*/, v2);
     byte_4106CA4 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -46,7 +46,7 @@ System_String_o *__fastcall TutorialSetRequest__getURL(TutorialSetRequest_o *thi
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_22732, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_22732/*"tutorial/set"*/, 0LL);
 }
 
 
@@ -65,8 +65,8 @@ void __fastcall TutorialSetRequest__requestCompleted(
   {
     sub_B16FFC(&ResponseCommandKind_TypeInfo, responseList);
     sub_B16FFC(&TopHomeRequest_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21129, v6);
-    sub_B16FFC(&StringLiteral_20980, v7);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v7);
     byte_4106CA7 = 1;
   }
   if ( (BYTE3(TopHomeRequest_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -82,8 +82,8 @@ void __fastcall TutorialSetRequest__requestCompleted(
   }
   v8 = ResponseCommandKind__SearchData(35, responseList, 0LL);
   if ( v8 && ResponseData__checkError_30924960(v8, 0LL) )
-    v9 = (System_String_o **)&StringLiteral_21129;
+    v9 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
   else
-    v9 = (System_String_o **)&StringLiteral_20980;
+    v9 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, *v9, 0LL);
 }

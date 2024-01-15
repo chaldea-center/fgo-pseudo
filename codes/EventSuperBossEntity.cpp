@@ -50,32 +50,32 @@ void __fastcall EventSuperBossEntity___cctor(const MethodInfo *method)
   if ( (byte_40FD207 & 1) == 0 )
   {
     sub_B16FFC(&EventSuperBossEntity_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_22779, v8);
-    sub_B16FFC(&StringLiteral_22776, v9);
-    sub_B16FFC(&StringLiteral_22775, v10);
-    sub_B16FFC(&StringLiteral_22777, v11);
-    sub_B16FFC(&StringLiteral_22778, v12);
+    sub_B16FFC(&StringLiteral_22779/*"ui_start_quest_phase"*/, v8);
+    sub_B16FFC(&StringLiteral_22776/*"ui_end_quest_phase"*/, v9);
+    sub_B16FFC(&StringLiteral_22775/*"ui_end_quest_id"*/, v10);
+    sub_B16FFC(&StringLiteral_22777/*"ui_hidden"*/, v11);
+    sub_B16FFC(&StringLiteral_22778/*"ui_start_quest_id"*/, v12);
     byte_40FD207 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventSuperBossEntity_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_22778;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22778;
+  v14 = (System_Int32_array **)StringLiteral_22778/*"ui_start_quest_id"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22778/*"ui_start_quest_id"*/;
   sub_B16F98(static_fields, v14, v2, v3, v4, v5, v6, v7);
   v15 = EventSuperBossEntity_TypeInfo->static_fields;
-  v16 = (System_Int32_array **)StringLiteral_22779;
-  v15->UI_START_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_22779;
+  v16 = (System_Int32_array **)StringLiteral_22779/*"ui_start_quest_phase"*/;
+  v15->UI_START_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_22779/*"ui_start_quest_phase"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v15->UI_START_QUEST_PHASE_KEY, v16, v17, v18, v19, v20, v21, v22);
   v23 = EventSuperBossEntity_TypeInfo->static_fields;
-  v24 = (System_Int32_array **)StringLiteral_22775;
-  v23->UI_END_QUEST_ID_KEY = (struct System_String_o *)StringLiteral_22775;
+  v24 = (System_Int32_array **)StringLiteral_22775/*"ui_end_quest_id"*/;
+  v23->UI_END_QUEST_ID_KEY = (struct System_String_o *)StringLiteral_22775/*"ui_end_quest_id"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v23->UI_END_QUEST_ID_KEY, v24, v25, v26, v27, v28, v29, v30);
   v31 = EventSuperBossEntity_TypeInfo->static_fields;
-  v32 = (System_Int32_array **)StringLiteral_22776;
-  v31->UI_END_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_22776;
+  v32 = (System_Int32_array **)StringLiteral_22776/*"ui_end_quest_phase"*/;
+  v31->UI_END_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_22776/*"ui_end_quest_phase"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v31->UI_END_QUEST_PHASE_KEY, v32, v33, v34, v35, v36, v37, v38);
   v39 = EventSuperBossEntity_TypeInfo->static_fields;
-  v40 = (System_Int32_array **)StringLiteral_22777;
-  v39->UI_HIDDEN = (struct System_String_o *)StringLiteral_22777;
+  v40 = (System_Int32_array **)StringLiteral_22777/*"ui_hidden"*/;
+  v39->UI_HIDDEN = (struct System_String_o *)StringLiteral_22777/*"ui_hidden"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v39->UI_HIDDEN, v40, v41, v42, v43, v44, v45, v46);
 }
 
@@ -239,7 +239,7 @@ System_Int64_array *__fastcall EventSuperBossEntity__GetBreakGaugeHpList(
     sub_B16FFC(&Method_System_Collections_Generic_List_object__get_Count__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_object__get_Item__, v7);
     sub_B16FFC(&System_Collections_Generic_List_object__TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_16864, v9);
+    sub_B16FFC(&StringLiteral_16864/*"breakGaugeHp"*/, v9);
     byte_40FD205 = 1;
   }
   script = this->fields.script;
@@ -247,7 +247,7 @@ System_Int64_array *__fastcall EventSuperBossEntity__GetBreakGaugeHpList(
     goto LABEL_24;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_16864,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_16864/*"breakGaugeHp"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v12 = this->fields.script;
@@ -255,7 +255,7 @@ System_Int64_array *__fastcall EventSuperBossEntity__GetBreakGaugeHpList(
       goto LABEL_24;
     Item = (int *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                     (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v12,
-                    (System_Type_o *)StringLiteral_16864,
+                    (System_Type_o *)StringLiteral_16864/*"breakGaugeHp"*/,
                     (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_24;

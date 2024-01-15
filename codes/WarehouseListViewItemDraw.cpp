@@ -52,7 +52,7 @@ void __fastcall WarehouseListViewItemDraw__SetDisp(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_21736, v8);
+    sub_B16FFC(&StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, v8);
     byte_40FA99E = 1;
   }
   WarehouseListViewItemDraw__SetWarning(this, item, (const MethodInfo *)isSelectEnable);
@@ -167,7 +167,7 @@ void __fastcall WarehouseListViewItemDraw__SetDisp(
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      AtlasManager__SetEventSprite(v30, (System_String_o *)StringLiteral_21736, 0LL);
+      AtlasManager__SetEventSprite(v30, (System_String_o *)StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, 0LL);
       if ( item->fields.isNeedAdjustIconLabelScale )
       {
         v31 = this->fields.servantFaceIcon;
@@ -291,7 +291,7 @@ void __fastcall WarehouseListViewItemDraw__SetItem(
   if ( (byte_40FA99B & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FA99B = 1;
   }
   if ( item && mode )
@@ -375,15 +375,15 @@ void __fastcall WarehouseListViewItemDraw__SetItem(
       fortificationNameLabel = this->fields.fortificationNameLabel;
       if ( fortificationNameLabel )
       {
-        UILabel__set_text(fortificationNameLabel, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(fortificationNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         fortificationDetailNameLabel = this->fields.fortificationDetailNameLabel;
         if ( fortificationDetailNameLabel )
         {
-          UILabel__set_text(fortificationDetailNameLabel, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(fortificationDetailNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           fortificationAppointmentLabel = this->fields.fortificationAppointmentLabel;
           if ( fortificationAppointmentLabel )
           {
-            UILabel__set_text(fortificationAppointmentLabel, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(fortificationAppointmentLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
             WarehouseListViewItemDraw__SetDisp(this, item, isSelectEnable, v24);
             return;
           }
@@ -436,24 +436,24 @@ void __fastcall WarehouseListViewItemDraw__SetWarning(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_6395, v6);
-    sub_B16FFC(&StringLiteral_11589, v7);
-    sub_B16FFC(&StringLiteral_12446, v8);
-    sub_B16FFC(&StringLiteral_3266, v9);
-    sub_B16FFC(&StringLiteral_11606, v10);
-    sub_B16FFC(&StringLiteral_11584, v11);
-    sub_B16FFC(&StringLiteral_11607, v12);
-    sub_B16FFC(&StringLiteral_11603, v13);
-    sub_B16FFC(&StringLiteral_11604, v14);
-    sub_B16FFC(&StringLiteral_12431, v15);
-    sub_B16FFC(&StringLiteral_3265, v16);
-    sub_B16FFC(&StringLiteral_1, v17);
-    sub_B16FFC(&StringLiteral_11605, v18);
+    sub_B16FFC(&StringLiteral_6395/*"FORTIFICATION_APPOINTMENT"*/, v6);
+    sub_B16FFC(&StringLiteral_11589/*"SELECT_FAVORITE"*/, v7);
+    sub_B16FFC(&StringLiteral_12446/*"SUPPORT_MEMBER"*/, v8);
+    sub_B16FFC(&StringLiteral_3266/*"COMMON_FATIGURE_RECOVERY"*/, v9);
+    sub_B16FFC(&StringLiteral_11606/*"SELECT_PUSH"*/, v10);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v11);
+    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v12);
+    sub_B16FFC(&StringLiteral_11603/*"SELECT_PARTY"*/, v13);
+    sub_B16FFC(&StringLiteral_11604/*"SELECT_PARTY_EQUIP"*/, v14);
+    sub_B16FFC(&StringLiteral_12431/*"SUPPORT_EQUIP"*/, v15);
+    sub_B16FFC(&StringLiteral_3265/*"COMMON_EQUIP_USED"*/, v16);
+    sub_B16FFC(&StringLiteral_1/*""*/, v17);
+    sub_B16FFC(&StringLiteral_11605/*"SELECT_PROTECTED_EVENT_SVT"*/, v18);
     byte_40FA99C = 1;
   }
   if ( !item )
     goto LABEL_94;
-  v19 = (System_String_o *)StringLiteral_1;
+  v19 = (System_String_o *)StringLiteral_1/*""*/;
   if ( item->fields.isPushMode )
   {
     if ( item->fields.isEnabled )
@@ -466,7 +466,7 @@ LABEL_7:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v20 = &StringLiteral_3266;
+      v20 = &StringLiteral_3266/*"COMMON_FATIGURE_RECOVERY"*/;
       goto LABEL_36;
     }
     v21 = LocalizationManager_TypeInfo;
@@ -492,7 +492,7 @@ LABEL_34:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v20 = &StringLiteral_11606;
+    v20 = &StringLiteral_11606/*"SELECT_PUSH"*/;
     goto LABEL_36;
   }
   attribute = item->fields.attribute;
@@ -504,7 +504,7 @@ LABEL_34:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) == 0 )
       {
 LABEL_24:
-        v20 = &StringLiteral_11607;
+        v20 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_36:
         v19 = LocalizationManager__Get((System_String_o *)*v20, 0LL);
         goto LABEL_37;
@@ -518,7 +518,7 @@ LABEL_22:
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) == 0 )
     {
 LABEL_35:
-      v20 = &StringLiteral_11584;
+      v20 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
       goto LABEL_36;
     }
     goto LABEL_33;
@@ -530,7 +530,7 @@ LABEL_35:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v20 = &StringLiteral_11589;
+    v20 = &StringLiteral_11589/*"SELECT_FAVORITE"*/;
     goto LABEL_36;
   }
   if ( item->fields.isPartyEquip )
@@ -540,7 +540,7 @@ LABEL_35:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v20 = &StringLiteral_11604;
+    v20 = &StringLiteral_11604/*"SELECT_PARTY_EQUIP"*/;
     goto LABEL_36;
   }
   if ( (item->fields.partyIndex & 0x80000000) == 0 )
@@ -550,7 +550,7 @@ LABEL_35:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v20 = &StringLiteral_11603;
+    v20 = &StringLiteral_11603/*"SELECT_PARTY"*/;
     goto LABEL_36;
   }
   if ( item->fields.isUseSupport )
@@ -560,7 +560,7 @@ LABEL_35:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v20 = &StringLiteral_12446;
+    v20 = &StringLiteral_12446/*"SUPPORT_MEMBER"*/;
     goto LABEL_36;
   }
   if ( item->fields.isUseSupportEquip )
@@ -570,7 +570,7 @@ LABEL_35:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v20 = &StringLiteral_12431;
+    v20 = &StringLiteral_12431/*"SUPPORT_EQUIP"*/;
     goto LABEL_36;
   }
   if ( item->fields.isUse )
@@ -580,7 +580,7 @@ LABEL_35:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v20 = &StringLiteral_3265;
+    v20 = &StringLiteral_3265/*"COMMON_EQUIP_USED"*/;
     goto LABEL_36;
   }
   if ( item->fields.isFatigueRecovery )
@@ -608,7 +608,7 @@ LABEL_35:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_6395, 0LL);
+    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_6395/*"FORTIFICATION_APPOINTMENT"*/, 0LL);
     if ( !fortificationAppointmentLabel )
       goto LABEL_94;
     UILabel__set_text(fortificationAppointmentLabel, v30, 0LL);
@@ -638,7 +638,7 @@ LABEL_35:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v20 = &StringLiteral_11605;
+          v20 = &StringLiteral_11605/*"SELECT_PROTECTED_EVENT_SVT"*/;
           goto LABEL_36;
         }
         if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) == 0
@@ -649,7 +649,7 @@ LABEL_35:
         v21 = LocalizationManager_TypeInfo;
         goto LABEL_34;
       }
-      v19 = (System_String_o *)StringLiteral_1;
+      v19 = (System_String_o *)StringLiteral_1/*""*/;
     }
   }
 LABEL_37:

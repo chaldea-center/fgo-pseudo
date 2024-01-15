@@ -208,7 +208,7 @@ System_String_o *__fastcall SubmarineUnreleasedScanSaveInfo__GetSaveValue(
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v12);
     sub_B16FFC(&Method_SubmarineUnreleasedScanSaveInfo___c__GetSaveValue_b__9_0__, v13);
     sub_B16FFC(&SubmarineUnreleasedScanSaveInfo___c_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_698, v15);
+    sub_B16FFC(&StringLiteral_698/*","*/, v15);
     byte_40F7CE3 = 1;
   }
   EventId_k__BackingField = 0;
@@ -282,7 +282,7 @@ System_String_o *__fastcall SubmarineUnreleasedScanSaveInfo__GetSaveValue(
   v36 = (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                  (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v34,
                                  (const MethodInfo_2F27E24 *)Method_System_Collections_Generic_List_string__ToArray__);
-  return System_String__Join((System_String_o *)StringLiteral_698, v36, 0LL);
+  return System_String__Join((System_String_o *)StringLiteral_698/*","*/, v36, 0LL);
 }
 
 

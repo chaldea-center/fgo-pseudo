@@ -225,7 +225,7 @@ void __fastcall WarBoardObjectAnimationEvent__SetDispBgDiff(
   {
     sub_B16FFC(&char___TypeInfo, value);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_14493, v5);
+    sub_B16FFC(&StringLiteral_14493/*"True"*/, v5);
     byte_40F8587 = 1;
   }
   result = 0;
@@ -251,7 +251,7 @@ LABEL_18:
     while ( v13 + 1 < v11->max_length )
     {
       v16 = (System_String_o **)(&v11->obj.klass + v13);
-      Instance = (WebViewManager_o *)System_String__op_Equality(v16[5], (System_String_o *)StringLiteral_14493, 0LL);
+      Instance = (WebViewManager_o *)System_String__op_Equality(v16[5], (System_String_o *)StringLiteral_14493/*"True"*/, 0LL);
       if ( v13 >= v11->max_length )
         break;
       v17 = (char)Instance;

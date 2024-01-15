@@ -14,12 +14,12 @@ void __fastcall UserDeleteReservationEntity___cctor(const MethodInfo *method)
   if ( (byte_40FAB1C & 1) == 0 )
   {
     sub_B16FFC(&UserDeleteReservationEntity_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_15036, v8);
+    sub_B16FFC(&StringLiteral_15036/*"UserDeleteFlag"*/, v8);
     byte_40FAB1C = 1;
   }
   static_fields = (BattleServantConfConponent_o *)UserDeleteReservationEntity_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_15036;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_15036;
+  v10 = (System_Int32_array **)StringLiteral_15036/*"UserDeleteFlag"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_15036/*"UserDeleteFlag"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 

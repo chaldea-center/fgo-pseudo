@@ -43,27 +43,27 @@ void __fastcall TextLabelScrollDialog__Init(TextLabelScrollDialog_o *this, const
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_3253, v4);
-    sub_B16FFC(&StringLiteral_3252, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v4);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F7218 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_19;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_19;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_19;
   UILabel__set_text(closeLabel, v10, 0LL);
@@ -81,7 +81,7 @@ void __fastcall TextLabelScrollDialog__Init(TextLabelScrollDialog_o *this, const
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
     if ( v18 )
     {
       UILabel__set_text(v18, v19, 0LL);
@@ -319,8 +319,8 @@ System_String_o *__fastcall TextLabelScrollDialog__get_closeBtnPath(
 {
   if ( (byte_40F721C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15416, method);
+    sub_B16FFC(&StringLiteral_15416/*"Window/CloseButton"*/, method);
     byte_40F721C = 1;
   }
-  return (System_String_o *)StringLiteral_15416;
+  return (System_String_o *)StringLiteral_15416/*"Window/CloseButton"*/;
 }

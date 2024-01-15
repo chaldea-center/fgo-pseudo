@@ -38,9 +38,9 @@ void __fastcall FriendCodeComponent__ChangeDispState(
   if ( (byte_40FA78A & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&state);
-    sub_B16FFC(&StringLiteral_14685, v7);
-    sub_B16FFC(&StringLiteral_14686, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_14685/*"USER_FRIEND_CODE"*/, v7);
+    sub_B16FFC(&StringLiteral_14686/*"USER_FRIEND_CODE_HIDDEN"*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FA78A = 1;
   }
   switch ( state )
@@ -52,7 +52,7 @@ void __fastcall FriendCodeComponent__ChangeDispState(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_14685, 0LL);
+      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_14685/*"USER_FRIEND_CODE"*/, 0LL);
       v22 = System_String__Format(v21, (Il2CppObject *)code, 0LL);
       if ( !friendCodeLabel )
         goto LABEL_21;
@@ -70,8 +70,8 @@ LABEL_18:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v15 = LocalizationManager__Get((System_String_o *)StringLiteral_14685, 0LL);
-      v16 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_14686, 0LL);
+      v15 = LocalizationManager__Get((System_String_o *)StringLiteral_14685/*"USER_FRIEND_CODE"*/, 0LL);
+      v16 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_14686/*"USER_FRIEND_CODE_HIDDEN"*/, 0LL);
       v17 = System_String__Format(v15, v16, 0LL);
       if ( !v14 )
         goto LABEL_21;
@@ -82,7 +82,7 @@ LABEL_18:
       v10 = this->fields.friendCodeLabel;
       if ( v10 )
       {
-        UILabel__set_text(v10, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(v10, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         v12 = this;
         v13 = 0;
 LABEL_19:

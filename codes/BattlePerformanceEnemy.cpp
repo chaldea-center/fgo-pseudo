@@ -1320,7 +1320,7 @@ void __fastcall BattlePerformanceEnemy__setTargetIcon(
   if ( (byte_40FC318 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, svtdata);
-    this = (BattlePerformanceEnemy_o *)sub_B16FFC(&StringLiteral_18255, v9);
+    this = (BattlePerformanceEnemy_o *)sub_B16FFC(&StringLiteral_18255/*"en_target01"*/, v9);
     byte_40FC318 = 1;
   }
   svtHeadUpList = v8->fields.svtHeadUpList;
@@ -1356,7 +1356,7 @@ void __fastcall BattlePerformanceEnemy__setTargetIcon(
         transform = UnityEngine_GameObject__get_transform(target, 0LL),
         this = (BattlePerformanceEnemy_o *)TransformHelper__getNodeFromLvName(
                                              transform,
-                                             (System_String_o *)StringLiteral_18255,
+                                             (System_String_o *)StringLiteral_18255/*"en_target01"*/,
                                              -1,
                                              0,
                                              0LL),

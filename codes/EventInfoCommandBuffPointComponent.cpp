@@ -468,9 +468,9 @@ void __fastcall EventInfoCommandBuffPointComponent__UpdatePoint(
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&System_Math_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_5635, v9);
-    sub_B16FFC(&StringLiteral_5577, v10);
-    this = (EventInfoCommandBuffPointComponent_o *)sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, v9);
+    sub_B16FFC(&StringLiteral_5577/*"EVENT_COMMAND_BUFF_POINT_COUNT_STOP"*/, v10);
+    this = (EventInfoCommandBuffPointComponent_o *)sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FA0ED = 1;
   }
   nextEventPointBuff = 0LL;
@@ -518,7 +518,7 @@ void __fastcall EventInfoCommandBuffPointComponent__UpdatePoint(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_5635, 0LL);
+    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
     point = v3->fields.point;
     v22 = v20;
     v23 = BalanceConfig_TypeInfo;
@@ -554,7 +554,7 @@ void __fastcall EventInfoCommandBuffPointComponent__UpdatePoint(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    EventPointInfo = LocalizationManager__GetEventPointInfo(0, value, (System_String_o *)StringLiteral_1, 0, 0LL);
+    EventPointInfo = LocalizationManager__GetEventPointInfo(0, value, (System_String_o *)StringLiteral_1/*""*/, 0, 0LL);
     if ( !v29 )
       goto LABEL_55;
     UILabel__set_text(v29, EventPointInfo, 0LL);
@@ -591,7 +591,7 @@ void __fastcall EventInfoCommandBuffPointComponent__UpdatePoint(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v39 = LocalizationManager__Get((System_String_o *)StringLiteral_5635, 0LL);
+      v39 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
       v42 = System_Math__Min_44464240(
               v38,
               EventInfoCommandBuffPointComponent_TypeInfo->static_fields->USER_EVENT_POINT_REST_MAX,
@@ -613,7 +613,7 @@ LABEL_49:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v41 = LocalizationManager__Get((System_String_o *)StringLiteral_5577, 0LL);
+      v41 = LocalizationManager__Get((System_String_o *)StringLiteral_5577/*"EVENT_COMMAND_BUFF_POINT_COUNT_STOP"*/, 0LL);
       if ( v37 )
         goto LABEL_49;
     }

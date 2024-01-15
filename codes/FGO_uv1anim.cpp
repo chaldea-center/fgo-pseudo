@@ -21,7 +21,7 @@ void __fastcall FGO_uv1anim__Start(FGO_uv1anim_o *this, const MethodInfo *method
   if ( (byte_40F9F70 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_B16FFC(&StringLiteral_16009, v3);
+    sub_B16FFC(&StringLiteral_16009/*"_SubTex"*/, v3);
     byte_40F9F70 = 1;
   }
   Component_WebViewObject = (struct UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
@@ -42,7 +42,7 @@ void __fastcall FGO_uv1anim__Start(FGO_uv1anim_o *this, const MethodInfo *method
     sub_B170D4();
   UnityEngine_Material__SetTextureOffset(
     material,
-    (System_String_o *)StringLiteral_16009,
+    (System_String_o *)StringLiteral_16009/*"_SubTex"*/,
     *(UnityEngine_Vector2_o *)&this->fields.m_Offset.fields.y,
     0LL);
 }
@@ -55,7 +55,7 @@ void __fastcall FGO_uv1anim__Update(FGO_uv1anim_o *this, const MethodInfo *metho
 
   if ( (byte_40F9F71 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16009, method);
+    sub_B16FFC(&StringLiteral_16009/*"_SubTex"*/, method);
     byte_40F9F71 = 1;
   }
   renderer = this->fields._renderer;
@@ -63,7 +63,7 @@ void __fastcall FGO_uv1anim__Update(FGO_uv1anim_o *this, const MethodInfo *metho
     sub_B170D4();
   UnityEngine_Material__SetTextureOffset(
     material,
-    (System_String_o *)StringLiteral_16009,
+    (System_String_o *)StringLiteral_16009/*"_SubTex"*/,
     *(UnityEngine_Vector2_o *)&this->fields.m_Offset.fields.y,
     0LL);
 }

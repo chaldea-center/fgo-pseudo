@@ -163,7 +163,7 @@ void __fastcall WarBoardServantEquipSimpleDialogComponent__Init(
   if ( (byte_40FBA7F & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3252, v3);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v3);
     byte_40FBA7F = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -177,7 +177,7 @@ void __fastcall WarBoardServantEquipSimpleDialogComponent__Init(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeButtonLabel )
 LABEL_9:
     sub_B170D4();
@@ -349,8 +349,8 @@ void __fastcall WarBoardServantEquipSimpleDialogComponent__SetUp(
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v11);
     sub_B16FFC(&SoundManager_TypeInfo, v12);
     sub_B16FFC(&Method_WarBoardServantEquipSimpleDialogComponent__SetUp_b__9_0__, v13);
-    sub_B16FFC(&StringLiteral_23445, v14);
-    this = (WarBoardServantEquipSimpleDialogComponent_o *)sub_B16FFC(&StringLiteral_1, v15);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v14);
+    this = (WarBoardServantEquipSimpleDialogComponent_o *)sub_B16FFC(&StringLiteral_1/*""*/, v15);
     byte_40FBA80 = 1;
   }
   v79 = 0LL;
@@ -433,7 +433,7 @@ void __fastcall WarBoardServantEquipSimpleDialogComponent__SetUp(
         v29 = v28->m_Items[v17];
         if ( !v29 )
           goto LABEL_116;
-        UILabel__set_text(v29, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(v29, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       }
       equipSkillDetailLabelList = v4->fields.equipSkillDetailLabelList;
       if ( !equipSkillDetailLabelList )
@@ -457,7 +457,7 @@ void __fastcall WarBoardServantEquipSimpleDialogComponent__SetUp(
         v33 = v32->m_Items[v17];
         if ( !v33 )
           goto LABEL_116;
-        UILabel__set_text(v33, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(v33, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       }
       skillBaseList = v4->fields.skillBaseList;
       ++v17;
@@ -556,7 +556,7 @@ void __fastcall WarBoardServantEquipSimpleDialogComponent__SetUp(
                         goto LABEL_116;
                       v54 = (UILabel_o *)monitor[v48 + 4];
                       Name = (Il2CppObject *)SkillEntity__getName((SkillEntity_o *)v79, 0LL);
-                      v56 = System_String__Format((System_String_o *)StringLiteral_23445, Name, 0LL);
+                      v56 = System_String__Format((System_String_o *)StringLiteral_23445/*"{0}"*/, Name, 0LL);
                       if ( !v54 )
                         goto LABEL_116;
                       UILabel__set_text(v54, v56, 0LL);
@@ -695,8 +695,8 @@ System_String_o *__fastcall WarBoardServantEquipSimpleDialogComponent__get_close
 {
   if ( (byte_40FBA84 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15416, method);
+    sub_B16FFC(&StringLiteral_15416/*"Window/CloseButton"*/, method);
     byte_40FBA84 = 1;
   }
-  return (System_String_o *)StringLiteral_15416;
+  return (System_String_o *)StringLiteral_15416/*"Window/CloseButton"*/;
 }

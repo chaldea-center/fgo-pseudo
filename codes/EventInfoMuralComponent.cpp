@@ -10,11 +10,11 @@ void __fastcall EventInfoMuralComponent___ctor(EventInfoMuralComponent_o *this, 
 
   if ( (byte_40FA13C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17041, method);
+    sub_B16FFC(&StringLiteral_17041/*"btn_wallpainting"*/, method);
     byte_40FA13C = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_17041;
-  this->fields.buttonSpriteName = (struct System_String_o *)StringLiteral_17041;
+  v9 = (System_Int32_array **)StringLiteral_17041/*"btn_wallpainting"*/;
+  this->fields.buttonSpriteName = (struct System_String_o *)StringLiteral_17041/*"btn_wallpainting"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.buttonSpriteName, v9, v2, v3, v4, v5, v6, v7);
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0LL);
 }

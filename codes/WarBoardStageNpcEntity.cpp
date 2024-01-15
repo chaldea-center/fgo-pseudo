@@ -43,7 +43,7 @@ void __fastcall WarBoardStageNpcEntity___ctor(WarBoardStageNpcEntity_o *this, co
   if ( (byte_40FBB0C & 1) == 0 )
   {
     sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FBB0C = 1;
   }
   DataEntityBase_string____ctor(
@@ -51,8 +51,8 @@ void __fastcall WarBoardStageNpcEntity___ctor(WarBoardStageNpcEntity_o *this, co
     (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.stageId = 0LL;
   this->fields.groupId = 0;
-  v4 = (System_Int32_array **)StringLiteral_1;
-  this->fields.masterName = (struct System_String_o *)StringLiteral_1;
+  v4 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.masterName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.masterName, v4, v5, v6, v7, v8, v9, v10);
   this->fields.masterImageId = 0;
   this->fields.servants = 0LL;
@@ -254,7 +254,7 @@ System_Int32_array *__fastcall WarBoardStageNpcEntity__GetDefenseTarget(
   if ( (byte_40FBB11 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Array_Empty_int___, method);
-    sub_B16FFC(&StringLiteral_17877, v4);
+    sub_B16FFC(&StringLiteral_17877/*"defenseTarget"*/, v4);
     byte_40FBB11 = 1;
   }
   v5 = (_QWORD **)Method_System_Array_Empty_int___;
@@ -283,7 +283,7 @@ System_Int32_array *__fastcall WarBoardStageNpcEntity__GetDefenseTarget(
     sub_AAFCFC(*v5[6]);
   return WarBoardStageNpcEntity__getScriptIntArrayParam(
            this,
-           (System_String_o *)StringLiteral_17877,
+           (System_String_o *)StringLiteral_17877/*"defenseTarget"*/,
            **(System_Int32_array ***)(v10 + 184),
            v2);
 }
@@ -494,7 +494,7 @@ int32_t __fastcall WarBoardStageNpcEntity___c___getScriptIntArrayParam_b__22_0(
 
   if ( (byte_40F7880 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, x);
+    sub_B16FFC(&StringLiteral_1/*""*/, x);
     byte_40F7880 = 1;
   }
   if ( x )
@@ -505,6 +505,6 @@ int32_t __fastcall WarBoardStageNpcEntity___c___getScriptIntArrayParam_b__22_0(
   else
     v4 = 0LL;
   if ( !v4 )
-    v4 = (System_String_o *)StringLiteral_1;
+    v4 = (System_String_o *)StringLiteral_1/*""*/;
   return System_Int32__Parse(v4, 0LL);
 }

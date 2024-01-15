@@ -23,17 +23,17 @@ void __fastcall BattleBoostItemInfoData___cctor(const MethodInfo *method)
   if ( (byte_40FD3AD & 1) == 0 )
   {
     sub_B16FFC(&BattleBoostItemInfoData_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_2571, v8);
-    sub_B16FFC(&StringLiteral_2572, v9);
+    sub_B16FFC(&StringLiteral_2571/*"BOOST_EFFECT_ICON"*/, v8);
+    sub_B16FFC(&StringLiteral_2572/*"BOOST_EFFECT_TIMING"*/, v9);
     byte_40FD3AD = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BattleBoostItemInfoData_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_2571;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2571;
+  v11 = (System_Int32_array **)StringLiteral_2571/*"BOOST_EFFECT_ICON"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2571/*"BOOST_EFFECT_ICON"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = BattleBoostItemInfoData_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_2572;
-  v12->KEY_SCRIPT_BOOST_EFFECT_TIMING = (struct System_String_o *)StringLiteral_2572;
+  v13 = (System_Int32_array **)StringLiteral_2572/*"BOOST_EFFECT_TIMING"*/;
+  v12->KEY_SCRIPT_BOOST_EFFECT_TIMING = (struct System_String_o *)StringLiteral_2572/*"BOOST_EFFECT_TIMING"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->KEY_SCRIPT_BOOST_EFFECT_TIMING, v13, v14, v15, v16, v17, v18, v19);
 }
 

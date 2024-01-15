@@ -32,22 +32,22 @@ void __fastcall ClassBoardUtility___cctor(const MethodInfo *method)
   if ( (byte_40FBA2B & 1) == 0 )
   {
     sub_B16FFC(&ClassBoardUtility_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_12540, v8);
-    sub_B16FFC(&StringLiteral_22059, v9);
-    sub_B16FFC(&StringLiteral_17751, v10);
+    sub_B16FFC(&StringLiteral_12540/*"SavePlayedClassBoardBaseRelease"*/, v8);
+    sub_B16FFC(&StringLiteral_22059/*"skill_{0:D5}"*/, v9);
+    sub_B16FFC(&StringLiteral_17751/*"cs_{0:D4}{1}"*/, v10);
     byte_40FBA2B = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ClassBoardUtility_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_17751;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17751;
+  v12 = (System_Int32_array **)StringLiteral_17751/*"cs_{0:D4}{1}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17751/*"cs_{0:D4}{1}"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = ClassBoardUtility_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_22059;
-  v13->passiveSkillIconFormat = (struct System_String_o *)StringLiteral_22059;
+  v14 = (System_Int32_array **)StringLiteral_22059/*"skill_{0:D5}"*/;
+  v13->passiveSkillIconFormat = (struct System_String_o *)StringLiteral_22059/*"skill_{0:D5}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->passiveSkillIconFormat, v14, v15, v16, v17, v18, v19, v20);
   v21 = ClassBoardUtility_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_12540;
-  v21->savePlayedClassBoardBaseReleaseKey = (struct System_String_o *)StringLiteral_12540;
+  v22 = (System_Int32_array **)StringLiteral_12540/*"SavePlayedClassBoardBaseRelease"*/;
+  v21->savePlayedClassBoardBaseReleaseKey = (struct System_String_o *)StringLiteral_12540/*"SavePlayedClassBoardBaseRelease"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v21->savePlayedClassBoardBaseReleaseKey,
     v22,
@@ -319,7 +319,7 @@ void __fastcall ClassBoardUtility__SavePlayedClassBaseReleaseEffect(
     sub_B16FFC(&Method_System_String_Join_int___, v12);
     sub_B16FFC(&Method_ClassBoardUtility___c__SavePlayedClassBaseReleaseEffect_b__6_0__, v13);
     sub_B16FFC(&ClassBoardUtility___c_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_698, v15);
+    sub_B16FFC(&StringLiteral_698/*","*/, v15);
     byte_40FBA2A = 1;
   }
   v16 = ClassBoardUtility_TypeInfo;
@@ -451,7 +451,7 @@ LABEL_28:
   }
   savePlayedClassBoardBaseReleaseKey = v46->static_fields->savePlayedClassBoardBaseReleaseKey;
   v48 = System_String__Join_int_(
-          (System_String_o *)StringLiteral_698,
+          (System_String_o *)StringLiteral_698/*","*/,
           (System_Collections_Generic_IEnumerable_T__o *)v22,
           (const MethodInfo_224FA24 *)Method_System_String_Join_int___);
   UnityEngine_PlayerPrefs__SetString(savePlayedClassBoardBaseReleaseKey, v48, 0LL);

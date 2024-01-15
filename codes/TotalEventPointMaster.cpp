@@ -172,7 +172,7 @@ int64_t __fastcall TotalEventPointMaster__GetPoint(
     sub_B16FFC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, *(_QWORD *)&eventId);
     sub_B16FFC(&string___TypeInfo, v6);
     sub_B16FFC(&TotalEventPointEntity_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1223, v8);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v8);
     byte_40FB810 = 1;
   }
   v9 = (System_String_array *)sub_B17014(string___TypeInfo, 5LL, *(_QWORD *)&periodId);
@@ -190,13 +190,13 @@ int64_t __fastcall TotalEventPointMaster__GetPoint(
     goto LABEL_44;
   v9->m_Items[0] = (System_String_o *)v18;
   sub_B16F98((BattleServantConfConponent_o *)v9->m_Items, v18, v12, v13, v14, v15, v16, v17);
-  v10 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v10 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v10 = (System_String_o *)sub_B170BC(StringLiteral_1223, v9->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_46;
-    v11 = (System_Int32_array **)StringLiteral_1223;
+    v11 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -218,13 +218,13 @@ int64_t __fastcall TotalEventPointMaster__GetPoint(
     goto LABEL_44;
   v9->m_Items[2] = (System_String_o *)v29;
   sub_B16F98((BattleServantConfConponent_o *)&v9->m_Items[2], v29, v12, v24, v25, v26, v27, v28);
-  v10 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v10 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v10 = (System_String_o *)sub_B170BC(StringLiteral_1223, v9->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_46;
-    v11 = (System_Int32_array **)StringLiteral_1223;
+    v11 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {

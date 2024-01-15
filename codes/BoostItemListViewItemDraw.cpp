@@ -66,8 +66,8 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     sub_B16FFC(&BalanceConfig_TypeInfo, item);
     sub_B16FFC(&BoostItemListViewItemDraw_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_3440, v9);
-    sub_B16FFC(&StringLiteral_19280, v10);
+    sub_B16FFC(&StringLiteral_3440/*"CURRENT_NUM_TXT"*/, v9);
+    sub_B16FFC(&StringLiteral_19280/*"icon_race_"*/, v10);
     byte_40FB145 = 1;
   }
   v42 = 0;
@@ -97,7 +97,7 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3440, 0LL);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3440/*"CURRENT_NUM_TXT"*/, 0LL);
     if ( !infoLabel )
       goto LABEL_37;
     UILabel__set_text(infoLabel, v16, 0LL);
@@ -109,7 +109,7 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     nameLabel = this->fields.nameLabel;
     if ( (byte_40FB141 & 1) == 0 )
     {
-      sub_B16FFC(&StringLiteral_18326, v20);
+      sub_B16FFC(&StringLiteral_18326/*"error"*/, v20);
       byte_40FB141 = 1;
     }
     if ( !nameLabel )
@@ -118,7 +118,7 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     if ( v22 )
       p_name = &v22->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_18326;
+      p_name = (System_String_o **)&StringLiteral_18326/*"error"*/;
     UILabel__set_text(nameLabel, *p_name, 0LL);
     detailLabel = this->fields.detailLabel;
     SkillText = BoostItemListViewItem__get_SkillText(item, v25);
@@ -142,7 +142,7 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     if ( magnification >= 2 )
     {
       v32 = System_Int32__ToString((int32_t)&v42, 0LL);
-      v31 = System_String__Concat_43743732((System_String_o *)StringLiteral_19280, v32, 0LL);
+      v31 = System_String__Concat_43743732((System_String_o *)StringLiteral_19280/*"icon_race_"*/, v32, 0LL);
     }
     if ( !magnificationSprite )
 LABEL_37:

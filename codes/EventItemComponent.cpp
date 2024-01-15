@@ -14,12 +14,12 @@ void __fastcall EventItemComponent___cctor(const MethodInfo *method)
   if ( (byte_40F8835 & 1) == 0 )
   {
     sub_B16FFC(&EventItemComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19551, v8);
+    sub_B16FFC(&StringLiteral_19551/*"img_shopbg04"*/, v8);
     byte_40F8835 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventItemComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_19551;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19551;
+  v10 = (System_Int32_array **)StringLiteral_19551/*"img_shopbg04"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19551/*"img_shopbg04"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -48,7 +48,7 @@ void __fastcall EventItemComponent__Awake(EventItemComponent_o *this, const Meth
     sub_B16FFC(&EventItemComponent_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_UIAtlas___, v4);
-    sub_B16FFC(&StringLiteral_12783, v5);
+    sub_B16FFC(&StringLiteral_12783/*"Shop/Atlas/ShopAtlas"*/, v5);
     byte_40F882A = 1;
   }
   baseSp = (UnityEngine_Object_o *)this->fields.baseSp;
@@ -72,7 +72,7 @@ void __fastcall EventItemComponent__Awake(EventItemComponent_o *this, const Meth
     {
       v9 = this->fields.baseSp;
       UIAtlas = UnityEngine_Resources__Load_UIAtlas_(
-                  (System_String_o *)StringLiteral_12783,
+                  (System_String_o *)StringLiteral_12783/*"Shop/Atlas/ShopAtlas"*/,
                   (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_UIAtlas___);
       if ( v9 )
       {
@@ -112,19 +112,19 @@ void __fastcall EventItemComponent__Clear(EventItemComponent_o *this, const Meth
 
   if ( (byte_40F882C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F882C = 1;
   }
   baseObject = this->fields.baseObject;
   if ( !baseObject
     || (UnityEngine_GameObject__SetActive(baseObject, 0, 0LL), (itemIcon = this->fields.itemIcon) == 0LL)
     || (ItemIconComponent__Clear(itemIcon, 0LL), (dataLabel = this->fields.dataLabel) == 0LL)
-    || (UILabel__set_text(dataLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(dataLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (textLabel = this->fields.textLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(textLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(textLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -405,7 +405,7 @@ void __fastcall EventItemComponent__SetDailyMissionEvent(
     sub_B16FFC(&Method_DataManager_GetMasterData_EventMissionMaster___, *(_QWORD *)&eventId);
     sub_B16FFC(&Method_DataManager_GetMasterData_UserEventMissionMaster___, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_871, v7);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v7);
     byte_40F8831 = 1;
   }
   DailyMissionAchiveNum = 0;
@@ -471,7 +471,7 @@ void __fastcall EventItemComponent__SetDailyMissionEvent(
                                     eventId,
                                     0LL),
           v24 = System_Int32__ToString((int32_t)&DailyMissionAchiveNum, 0LL),
-          v25 = System_String__Concat_43746016(v23, (System_String_o *)StringLiteral_871, v24, 0LL),
+          v25 = System_String__Concat_43746016(v23, (System_String_o *)StringLiteral_871/*"/"*/, v24, 0LL),
           !v21) )
     {
 LABEL_21:
@@ -526,8 +526,8 @@ void __fastcall EventItemComponent__SetGroupPointEvent(
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&NetworkManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_18403, v10);
-    sub_B16FFC(&StringLiteral_18402, v11);
+    sub_B16FFC(&StringLiteral_18403/*"eventId"*/, v10);
+    sub_B16FFC(&StringLiteral_18402/*"eventGroupId"*/, v11);
     byte_40F882E = 1;
   }
   entity = 0LL;
@@ -589,11 +589,11 @@ void __fastcall EventItemComponent__SetGroupPointEvent(
   {
     if ( entity )
     {
-      Script = ItemEntity__getScript((ItemEntity_o *)entity, (System_String_o *)StringLiteral_18403, 0, 0LL);
+      Script = ItemEntity__getScript((ItemEntity_o *)entity, (System_String_o *)StringLiteral_18403/*"eventId"*/, 0, 0LL);
       if ( entity )
       {
         v25 = Script;
-        v26 = ItemEntity__getScript((ItemEntity_o *)entity, (System_String_o *)StringLiteral_18402, 0, 0LL);
+        v26 = ItemEntity__getScript((ItemEntity_o *)entity, (System_String_o *)StringLiteral_18402/*"eventGroupId"*/, 0, 0LL);
         v27 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( v27 )
         {
@@ -667,7 +667,7 @@ void __fastcall EventItemComponent__SetMissionEvent(
     sub_B16FFC(&Method_DataManager_GetMasterData_EventMissionMaster___, *(_QWORD *)&eventId);
     sub_B16FFC(&Method_DataManager_GetMasterData_UserEventMissionMaster___, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_871, v7);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v7);
     byte_40F8830 = 1;
   }
   v27 = 0LL;
@@ -733,7 +733,7 @@ void __fastcall EventItemComponent__SetMissionEvent(
       || (v24 = v23,
           LODWORD(v27) = *(_QWORD *)&EventMissionList->max_length,
           v25 = System_Int32__ToString((int32_t)&v27, 0LL),
-          v26 = System_String__Concat_43746016(v24, (System_String_o *)StringLiteral_871, v25, 0LL),
+          v26 = System_String__Concat_43746016(v24, (System_String_o *)StringLiteral_871/*"/"*/, v25, 0LL),
           !v22) )
     {
 LABEL_21:

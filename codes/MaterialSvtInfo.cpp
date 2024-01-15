@@ -117,8 +117,8 @@ void __fastcall MaterialSvtInfo__checkIsLimitTarget(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, baseData);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_11514, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_11514/*"SAME_SVTEQUIP_COMBINE"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F7B7D = 1;
   }
   if ( !baseData )
@@ -144,7 +144,7 @@ void __fastcall MaterialSvtInfo__checkIsLimitTarget(
     {
       if ( statusLb )
       {
-        v16 = (System_String_o *)StringLiteral_1;
+        v16 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_19:
         UILabel__set_text(statusLb, v16, 0LL);
         return;
@@ -157,7 +157,7 @@ LABEL_19:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11514, 0LL);
+      v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11514/*"SAME_SVTEQUIP_COMBINE"*/, 0LL);
       if ( statusLb )
       {
         v16 = v17;
@@ -227,7 +227,7 @@ void __fastcall MaterialSvtInfo__setMaterialSvtInfo(
     sub_B16FFC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v15);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_1, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v18);
     byte_40F7B7C = 1;
   }
   this->fields.index = idx;
@@ -275,7 +275,7 @@ void __fastcall MaterialSvtInfo__setMaterialSvtInfo(
   ServantFaceIconComponent__Set_30705604(svtFaseIconComp, selectUsrSvtId, this->fields.iconLabelInfo, 0LL, 0LL);
   statusLb = this->fields.statusLb;
   if ( !statusLb
-    || (UILabel__set_text(statusLb, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(statusLb, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (v35 = (UnityEngine_Component_o *)this->fields.statusLb) == 0LL)
     || (gameObject = UnityEngine_Component__get_gameObject(v35, 0LL)) == 0LL
     || (UnityEngine_GameObject__SetActive(gameObject, isShowStatus, 0LL),

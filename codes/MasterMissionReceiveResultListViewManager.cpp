@@ -79,7 +79,7 @@ void __fastcall MasterMissionReceiveResultListViewManager__CreateList(
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
     sub_B16FFC(&MasterMissionReceiveResultListViewItem_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_8619, v13);
+    sub_B16FFC(&StringLiteral_8619/*"MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT"*/, v13);
     byte_40FB277 = 1;
   }
   nameText = 0LL;
@@ -115,7 +115,7 @@ void __fastcall MasterMissionReceiveResultListViewManager__CreateList(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  GiftListById = LocalizationManager__Get((System_String_o *)StringLiteral_8619, 0LL);
+  GiftListById = LocalizationManager__Get((System_String_o *)StringLiteral_8619/*"MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT"*/, 0LL);
   if ( !EventMissionList_26591260 )
     goto LABEL_34;
   max_length = EventMissionList_26591260->max_length;

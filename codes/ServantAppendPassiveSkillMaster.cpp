@@ -66,12 +66,12 @@ System_String_o *__fastcall ServantAppendPassiveSkillMaster__CreateTempKey(
   v7 = num;
   if ( (byte_40F93F0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1223, *(_QWORD *)&svtId);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, *(_QWORD *)&svtId);
     byte_40F93F0 = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v8, 0LL);
   v5 = System_Int32__ToString((int32_t)&v7, 0LL);
-  return System_String__Concat_43746016(v4, (System_String_o *)StringLiteral_1223, v5, 0LL);
+  return System_String__Concat_43746016(v4, (System_String_o *)StringLiteral_1223/*":"*/, v5, 0LL);
 }
 
 
@@ -223,10 +223,10 @@ void __fastcall ServantAppendPassiveSkillMaster__GetAppendPassiveSkillInfo(
     sub_B16FFC(&int___TypeInfo, v22);
     sub_B16FFC(&LocalizationManager_TypeInfo, v23);
     sub_B16FFC(&string___TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_26, v25);
-    sub_B16FFC(&StringLiteral_3296, v26);
-    sub_B16FFC(&StringLiteral_3284, v27);
-    sub_B16FFC(&StringLiteral_1, v28);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v25);
+    sub_B16FFC(&StringLiteral_3296/*"COND_TYPE_TITLE"*/, v26);
+    sub_B16FFC(&StringLiteral_3284/*"COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE"*/, v27);
+    sub_B16FFC(&StringLiteral_1/*""*/, v28);
     byte_40F93F4 = 1;
   }
   v135 = 0LL;
@@ -354,7 +354,7 @@ LABEL_69:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v82 = LocalizationManager__Get((System_String_o *)StringLiteral_3296, 0LL);
+          v82 = LocalizationManager__Get((System_String_o *)StringLiteral_3296/*"COND_TYPE_TITLE"*/, 0LL);
           if ( !v101 )
             goto LABEL_69;
           v107 = (System_Int32_array **)v82;
@@ -378,7 +378,7 @@ LABEL_69:
             break;
           v82 = (System_String_o *)System_String__op_Inequality(
                                      *(System_String_o **)((char *)&v108->obj.klass + v87),
-                                     (System_String_o *)StringLiteral_1,
+                                     (System_String_o *)StringLiteral_1/*""*/,
                                      0LL);
           if ( ((unsigned __int8)v82 & 1) != 0 )
           {
@@ -390,7 +390,7 @@ LABEL_69:
             v110 = (BattleServantConfConponent_o *)((char *)v109 + v87);
             v111 = (System_Int32_array **)System_String__Concat_43743732(
                                             *(System_String_o **)((char *)&v109->obj.klass + v87),
-                                            (System_String_o *)StringLiteral_26,
+                                            (System_String_o *)StringLiteral_26/*"\n"*/,
                                             0LL);
             v110->klass = (BattleServantConfConponent_c *)v111;
             sub_B16F98(v110, v111, v112, v113, v114, v115, v116, v117);
@@ -406,7 +406,7 @@ LABEL_69:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v120 = LocalizationManager__Get((System_String_o *)StringLiteral_3284, 0LL);
+          v120 = LocalizationManager__Get((System_String_o *)StringLiteral_3284/*"COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE"*/, 0LL);
           v121 = (System_Int32_array **)System_String__Concat_43743732(v119, v120, 0LL);
           *(Il2CppClass **)((char *)&v118->obj.klass + v87) = (Il2CppClass *)v121;
           sub_B16F98((BattleServantConfConponent_o *)((char *)v118 + v87), v121, v122, v123, v124, v125, v126, v127);
@@ -586,10 +586,10 @@ void __fastcall ServantAppendPassiveSkillMaster__GetAppendPassiveSkillInfo_23785
     sub_B16FFC(&int___TypeInfo, v20);
     sub_B16FFC(&LocalizationManager_TypeInfo, v21);
     sub_B16FFC(&string___TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_26, v23);
-    sub_B16FFC(&StringLiteral_3296, v24);
-    sub_B16FFC(&StringLiteral_3284, v25);
-    sub_B16FFC(&StringLiteral_1, v26);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v23);
+    sub_B16FFC(&StringLiteral_3296/*"COND_TYPE_TITLE"*/, v24);
+    sub_B16FFC(&StringLiteral_3284/*"COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE"*/, v25);
+    sub_B16FFC(&StringLiteral_1/*""*/, v26);
     byte_40F93F6 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -682,7 +682,7 @@ LABEL_57:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3296, 0LL);
+          v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3296/*"COND_TYPE_TITLE"*/, 0LL);
           if ( !v85 )
             goto LABEL_57;
           v91 = (System_Int32_array **)v70;
@@ -706,7 +706,7 @@ LABEL_57:
             break;
           v70 = (System_String_o *)System_String__op_Inequality(
                                      *(System_String_o **)((char *)&v92->obj.klass + v76),
-                                     (System_String_o *)StringLiteral_1,
+                                     (System_String_o *)StringLiteral_1/*""*/,
                                      0LL);
           if ( ((unsigned __int8)v70 & 1) != 0 )
           {
@@ -718,7 +718,7 @@ LABEL_57:
             v94 = (BattleServantConfConponent_o *)((char *)v93 + v76);
             v95 = (System_Int32_array **)System_String__Concat_43743732(
                                            *(System_String_o **)((char *)&v93->obj.klass + v76),
-                                           (System_String_o *)StringLiteral_26,
+                                           (System_String_o *)StringLiteral_26/*"\n"*/,
                                            0LL);
             v94->klass = (BattleServantConfConponent_c *)v95;
             sub_B16F98(v94, v95, v96, v97, v98, v99, v100, v101);
@@ -734,7 +734,7 @@ LABEL_57:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v104 = LocalizationManager__Get((System_String_o *)StringLiteral_3284, 0LL);
+          v104 = LocalizationManager__Get((System_String_o *)StringLiteral_3284/*"COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE"*/, 0LL);
           v105 = (System_Int32_array **)System_String__Concat_43743732(v103, v104, 0LL);
           *(Il2CppClass **)((char *)&v102->obj.klass + v76) = (Il2CppClass *)v105;
           sub_B16F98((BattleServantConfConponent_o *)((char *)v102 + v76), v105, v106, v107, v108, v109, v110, v111);

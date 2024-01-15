@@ -421,7 +421,7 @@ void __fastcall UserGameActRecoverMenu__Open(
     sub_B16FFC(&Method_UserGameActRecoverMenu_EndMaxFrameConfirm__, v14);
     sub_B16FFC(&Method_UserGameActRecoverMenu_EndNoShopConfirm__, v15);
     sub_B16FFC(&Method_UserGameActRecoverMenu_EndRecoverUserGameActConfirm__, v16);
-    sub_B16FFC(&StringLiteral_10004, v17);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v17);
     byte_40F96E8 = 1;
   }
   if ( !this->fields.state )
@@ -585,7 +585,7 @@ LABEL_24:
     UserGameActRecoverConfirmMenu__Open(v49, v48, v52, v53, v47);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.1,
       0LL);
   }

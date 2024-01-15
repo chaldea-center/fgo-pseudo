@@ -40,24 +40,24 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
   if ( (byte_40FCEE2 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9569, v4);
-    sub_B16FFC(&StringLiteral_14874, v5);
-    sub_B16FFC(&StringLiteral_9570, v6);
-    sub_B16FFC(&StringLiteral_2768, v7);
-    sub_B16FFC(&StringLiteral_14873, v8);
+    sub_B16FFC(&StringLiteral_9569/*"NobleStartPos_enemy"*/, v4);
+    sub_B16FFC(&StringLiteral_14874/*"Unit_Player2"*/, v5);
+    sub_B16FFC(&StringLiteral_9570/*"NobleStartPos_player"*/, v6);
+    sub_B16FFC(&StringLiteral_2768/*"BattleFazeCameraPos"*/, v7);
+    sub_B16FFC(&StringLiteral_14873/*"Unit_Enemy2"*/, v8);
     byte_40FCEE2 = 1;
   }
   v9 = sub_B17014(string___TypeInfo, 5LL, v2);
   if ( !v9 )
     sub_B170D4();
   v16 = v9;
-  v17 = StringLiteral_14874;
-  if ( StringLiteral_14874 )
+  v17 = StringLiteral_14874/*"Unit_Player2"*/;
+  if ( StringLiteral_14874/*"Unit_Player2"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_14874, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+    v17 = sub_B170BC(StringLiteral_14874/*"Unit_Player2"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
     if ( !v17 )
       goto LABEL_32;
-    v18 = (System_Int32_array **)StringLiteral_14874;
+    v18 = (System_Int32_array **)StringLiteral_14874/*"Unit_Player2"*/;
   }
   else
   {
@@ -67,13 +67,13 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
     goto LABEL_31;
   *(_QWORD *)(v16 + 32) = v18;
   sub_B16F98((BattleServantConfConponent_o *)(v16 + 32), v18, v10, v11, v12, v13, v14, v15);
-  v17 = StringLiteral_14873;
-  if ( StringLiteral_14873 )
+  v17 = StringLiteral_14873/*"Unit_Enemy2"*/;
+  if ( StringLiteral_14873/*"Unit_Enemy2"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_14873, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+    v17 = sub_B170BC(StringLiteral_14873/*"Unit_Enemy2"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
     if ( !v17 )
       goto LABEL_32;
-    v18 = (System_Int32_array **)StringLiteral_14873;
+    v18 = (System_Int32_array **)StringLiteral_14873/*"Unit_Enemy2"*/;
   }
   else
   {
@@ -83,13 +83,13 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
     goto LABEL_31;
   *(_QWORD *)(v16 + 40) = v18;
   sub_B16F98((BattleServantConfConponent_o *)(v16 + 40), v18, v10, v19, v20, v21, v22, v23);
-  v17 = StringLiteral_9570;
-  if ( StringLiteral_9570 )
+  v17 = StringLiteral_9570/*"NobleStartPos_player"*/;
+  if ( StringLiteral_9570/*"NobleStartPos_player"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_9570, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+    v17 = sub_B170BC(StringLiteral_9570/*"NobleStartPos_player"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
     if ( !v17 )
       goto LABEL_32;
-    v18 = (System_Int32_array **)StringLiteral_9570;
+    v18 = (System_Int32_array **)StringLiteral_9570/*"NobleStartPos_player"*/;
   }
   else
   {
@@ -99,13 +99,13 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
     goto LABEL_31;
   *(_QWORD *)(v16 + 48) = v18;
   sub_B16F98((BattleServantConfConponent_o *)(v16 + 48), v18, v10, v24, v25, v26, v27, v28);
-  v17 = StringLiteral_9569;
-  if ( StringLiteral_9569 )
+  v17 = StringLiteral_9569/*"NobleStartPos_enemy"*/;
+  if ( StringLiteral_9569/*"NobleStartPos_enemy"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_9569, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+    v17 = sub_B170BC(StringLiteral_9569/*"NobleStartPos_enemy"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
     if ( !v17 )
       goto LABEL_32;
-    v18 = (System_Int32_array **)StringLiteral_9569;
+    v18 = (System_Int32_array **)StringLiteral_9569/*"NobleStartPos_enemy"*/;
   }
   else
   {
@@ -115,20 +115,20 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
     goto LABEL_31;
   *(_QWORD *)(v16 + 56) = v18;
   sub_B16F98((BattleServantConfConponent_o *)(v16 + 56), v18, v10, v29, v30, v31, v32, v33);
-  v17 = StringLiteral_2768;
-  if ( !StringLiteral_2768 )
+  v17 = StringLiteral_2768/*"BattleFazeCameraPos"*/;
+  if ( !StringLiteral_2768/*"BattleFazeCameraPos"*/ )
   {
     v18 = 0LL;
     goto LABEL_28;
   }
-  v17 = sub_B170BC(StringLiteral_2768, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
+  v17 = sub_B170BC(StringLiteral_2768/*"BattleFazeCameraPos"*/, *(_QWORD *)(*(_QWORD *)v16 + 64LL));
   if ( !v17 )
   {
 LABEL_32:
     sub_B170F4(v17);
     sub_B170A0();
   }
-  v18 = (System_Int32_array **)StringLiteral_2768;
+  v18 = (System_Int32_array **)StringLiteral_2768/*"BattleFazeCameraPos"*/;
 LABEL_28:
   if ( *(_DWORD *)(v16 + 24) <= 4u
     || (*(_QWORD *)(v16 + 64) = v18,

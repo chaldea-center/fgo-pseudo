@@ -127,7 +127,7 @@ void __fastcall CuttingEffectComponent__EffectResume(CuttingEffectComponent_o *t
 
   if ( (byte_40FB3D1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9967, method);
+    sub_B16FFC(&StringLiteral_9967/*"OnEndEffect"*/, method);
     byte_40FB3D1 = 1;
   }
   leftMeshRenderer = (UnityEngine_Component_o *)this->fields.leftMeshRenderer;
@@ -177,8 +177,8 @@ LABEL_12:
   v22->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v25;
   p_eventReceiver = &v22->fields.eventReceiver;
   sub_B16F98((BattleServantConfConponent_o *)p_eventReceiver, v25, v27, v28, v29, v30, v31, v32);
-  v33 = (System_Int32_array **)StringLiteral_9967;
-  p_eventReceiver[1] = (struct UnityEngine_GameObject_o *)StringLiteral_9967;
+  v33 = (System_Int32_array **)StringLiteral_9967/*"OnEndEffect"*/;
+  p_eventReceiver[1] = (struct UnityEngine_GameObject_o *)StringLiteral_9967/*"OnEndEffect"*/;
   sub_B16F98((BattleServantConfConponent_o *)(p_eventReceiver + 1), v33, v34, v35, v36, v37, v38, v39);
 }
 

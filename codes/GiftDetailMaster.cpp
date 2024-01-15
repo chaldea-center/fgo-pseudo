@@ -25,7 +25,7 @@ System_String_o *__fastcall GiftDetailMaster__GetOverwriteImageIdByQuestPhaseRew
   if ( (byte_40FC117 & 1) == 0 )
   {
     sub_B16FFC(&Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__, *(_QWORD *)&giftId);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FC117 = 1;
   }
   entity = 0LL;
@@ -34,7 +34,7 @@ System_String_o *__fastcall GiftDetailMaster__GetOverwriteImageIdByQuestPhaseRew
           &entity,
           giftId,
           (const MethodInfo_266F3E4 *)Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__) )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( !entity )
     sub_B170D4();
   return GiftDetailEntity__GetOverwritePhaseRewardImageId((GiftDetailEntity_o *)entity, v6);

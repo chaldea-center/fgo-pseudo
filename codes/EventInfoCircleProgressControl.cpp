@@ -32,18 +32,18 @@ void __fastcall EventInfoCircleProgressControl___cctor(const MethodInfo *method)
   if ( (byte_40FB71E & 1) == 0 )
   {
     sub_B16FFC(&EventInfoCircleProgressControl_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_3950, v8);
-    sub_B16FFC(&StringLiteral_3952, v9);
-    sub_B16FFC(&StringLiteral_3951, v10);
+    sub_B16FFC(&StringLiteral_3950/*"CircleProgressData_"*/, v8);
+    sub_B16FFC(&StringLiteral_3952/*"CircleProgressTitleState_"*/, v9);
+    sub_B16FFC(&StringLiteral_3951/*"CircleProgressExtraData_"*/, v10);
     byte_40FB71E = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventInfoCircleProgressControl_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_3952;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_3952;
+  v12 = (System_Int32_array **)StringLiteral_3952/*"CircleProgressTitleState_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_3952/*"CircleProgressTitleState_"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = EventInfoCircleProgressControl_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_3950;
-  v13->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA = (struct System_String_o *)StringLiteral_3950;
+  v14 = (System_Int32_array **)StringLiteral_3950/*"CircleProgressData_"*/;
+  v13->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA = (struct System_String_o *)StringLiteral_3950/*"CircleProgressData_"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v13->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA,
     v14,
@@ -54,8 +54,8 @@ void __fastcall EventInfoCircleProgressControl___cctor(const MethodInfo *method)
     v19,
     v20);
   v21 = EventInfoCircleProgressControl_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_3951;
-  v21->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = (struct System_String_o *)StringLiteral_3951;
+  v22 = (System_Int32_array **)StringLiteral_3951/*"CircleProgressExtraData_"*/;
+  v21->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = (struct System_String_o *)StringLiteral_3951/*"CircleProgressExtraData_"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v21->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA,
     v22,
@@ -1063,7 +1063,7 @@ void __fastcall EventInfoCircleProgressControl__InsertMuralButton(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_Animation___, endAction);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_9205, v7);
+    sub_B16FFC(&StringLiteral_9205/*"MuralButton_in"*/, v7);
     byte_40FB71C = 1;
   }
   muralButtonObject = (UnityEngine_Object_o *)this->fields.muralButtonObject;
@@ -1150,7 +1150,7 @@ LABEL_28:
 LABEL_27:
   UnityEngine_Animation__Play_49744236(
     (UnityEngine_Animation_o *)Component_srcLineSprite,
-    (System_String_o *)StringLiteral_9205,
+    (System_String_o *)StringLiteral_9205/*"MuralButton_in"*/,
     0LL);
 }
 
@@ -1332,7 +1332,7 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressData(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&Method_EventInfoCircleProgressControl___c__DisplayClass43_0__LoadProgressData_b__0__, v10);
     sub_B16FFC(&EventInfoCircleProgressControl___c__DisplayClass43_0_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FB710 = 1;
   }
   ent = 0LL;
@@ -1353,7 +1353,7 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressData(
   SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA = v14->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA;
   v16 = System_Int32__ToString((int32_t)&eventIda, 0LL);
   v17 = System_String__Concat_43743732(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_DATA, v16, 0LL);
-  String = UnityEngine_PlayerPrefs__GetString(v17, (System_String_o *)StringLiteral_1, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(v17, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(String, 0LL);
   if ( (IsNullOrEmpty & 1) != 0 )
   {
@@ -1674,7 +1674,7 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressExtraData(
   {
     sub_B16FFC(&char___TypeInfo, *(_QWORD *)&eventId);
     sub_B16FFC(&EventInfoCircleProgressControl_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FB711 = 1;
   }
   ent = 0LL;
@@ -1689,7 +1689,7 @@ void __fastcall EventInfoCircleProgressControl__LoadProgressExtraData(
   SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA = v6->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA;
   v8 = System_Int32__ToString((int32_t)&eventIda, 0LL);
   v9 = System_String__Concat_43743732(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_EXTRA_DATA, v8, 0LL);
-  String = UnityEngine_PlayerPrefs__GetString(v9, (System_String_o *)StringLiteral_1, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(v9, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( System_String__IsNullOrEmpty(String, 0LL) )
   {
     extraCircleProgres = this->fields.extraCircleProgres;
@@ -1914,7 +1914,7 @@ void __fastcall EventInfoCircleProgressControl__LoadTitleState(
   if ( (byte_40FB70F & 1) == 0 )
   {
     sub_B16FFC(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FB70F = 1;
   }
   v5 = EventInfoCircleProgressControl_TypeInfo;
@@ -1927,7 +1927,7 @@ void __fastcall EventInfoCircleProgressControl__LoadTitleState(
   SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE = v5->static_fields->SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE;
   v7 = System_Int32__ToString((int32_t)&v13, 0LL);
   v8 = System_String__Concat_43743732(SAVE_KEY_PREFIX_CIRCLE_PROGRESS_TITLE_STATE, v7, 0LL);
-  String = UnityEngine_PlayerPrefs__GetString(v8, (System_String_o *)StringLiteral_1, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(v8, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( System_String__IsNullOrEmpty(String, 0LL) )
   {
     IsBackDrawState = EventInfoCircleProgressControl__IsBackDrawState(this, v10);
@@ -2089,7 +2089,7 @@ void __fastcall EventInfoCircleProgressControl__PlayAnim(
     sub_B16FFC(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__3__, v14);
     sub_B16FFC(&Method_EventInfoCircleProgressControl___c__DisplayClass35_0__PlayAnim_b__4__, v15);
     sub_B16FFC(&EventInfoCircleProgressControl___c__DisplayClass35_0_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_16679, v17);
+    sub_B16FFC(&StringLiteral_16679/*"bit_circlemeter_rotate"*/, v17);
     byte_40FB709 = 1;
   }
   v18 = sub_B170CC(
@@ -2281,7 +2281,7 @@ LABEL_45:
       v89);
     UnityEngine_Animation__Play_49744236(
       (UnityEngine_Animation_o *)Component_srcLineSprite,
-      (System_String_o *)StringLiteral_16679,
+      (System_String_o *)StringLiteral_16679/*"bit_circlemeter_rotate"*/,
       0LL);
   }
 }
@@ -2503,8 +2503,8 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressData(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Count__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoCircleProgressControl_ProgressData__get_Item__, v7);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1223, v9);
-    sub_B16FFC(&StringLiteral_698, v10);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v9);
+    sub_B16FFC(&StringLiteral_698/*","*/, v10);
     byte_40FB715 = 1;
   }
   v40 = 0;
@@ -2531,7 +2531,7 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressData(
       {
         if ( !v13 )
           break;
-        System_Text_StringBuilder__Append_41914240(v13, (System_String_o *)StringLiteral_698, 0LL);
+        System_Text_StringBuilder__Append_41914240(v13, (System_String_o *)StringLiteral_698/*","*/, 0LL);
       }
       v15 = this->fields.progressDataList;
       if ( !v15 )
@@ -2547,7 +2547,7 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressData(
       if ( !v13 )
         break;
       System_Text_StringBuilder__Append_41914240(v13, v18, 0LL);
-      System_Text_StringBuilder__Append_41914240(v13, (System_String_o *)StringLiteral_1223, 0LL);
+      System_Text_StringBuilder__Append_41914240(v13, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
       v19 = this->fields.progressDataList;
       if ( !v19 )
         break;
@@ -2559,7 +2559,7 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressData(
       v39 = *(_QWORD *)(v20 + 32);
       v21 = System_Int64__ToString((int64_t)&v39, 0LL);
       System_Text_StringBuilder__Append_41914240(v13, v21, 0LL);
-      System_Text_StringBuilder__Append_41914240(v13, (System_String_o *)StringLiteral_1223, 0LL);
+      System_Text_StringBuilder__Append_41914240(v13, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
       v22 = this->fields.progressDataList;
       if ( !v22 )
         break;
@@ -2571,7 +2571,7 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressData(
       v38 = *(int *)(v23 + 44);
       v24 = System_Int64__ToString((int64_t)&v38, 0LL);
       System_Text_StringBuilder__Append_41914240(v13, v24, 0LL);
-      System_Text_StringBuilder__Append_41914240(v13, (System_String_o *)StringLiteral_1223, 0LL);
+      System_Text_StringBuilder__Append_41914240(v13, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
       v25 = this->fields.progressDataList;
       if ( !v25 )
         break;
@@ -2583,7 +2583,7 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressData(
       HIDWORD(v37) = *(_DWORD *)(v26 + 52);
       v27 = System_Int32__ToString((int32_t)&v37 + 4, 0LL);
       System_Text_StringBuilder__Append_41914240(v13, v27, 0LL);
-      System_Text_StringBuilder__Append_41914240(v13, (System_String_o *)StringLiteral_1223, 0LL);
+      System_Text_StringBuilder__Append_41914240(v13, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
       v28 = this->fields.progressDataList;
       if ( !v28 )
         break;
@@ -2661,7 +2661,7 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressExtraData(
   {
     sub_B16FFC(&EventInfoCircleProgressControl_TypeInfo, *(_QWORD *)&eventId);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1223, v7);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v7);
     byte_40FB716 = 1;
   }
   Id = 0;
@@ -2684,27 +2684,27 @@ void __fastcall EventInfoCircleProgressControl__SaveProgressExtraData(
   if ( !v8 )
     goto LABEL_13;
   System_Text_StringBuilder__Append_41914240(v8, v10, 0LL);
-  System_Text_StringBuilder__Append_41914240(v8, (System_String_o *)StringLiteral_1223, 0LL);
+  System_Text_StringBuilder__Append_41914240(v8, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
   v11 = this->fields.progressExtraData;
   if ( !v11 )
     goto LABEL_13;
   OldPoint = v11->fields.OldPoint;
   v12 = System_Int64__ToString((int64_t)&OldPoint, 0LL);
   System_Text_StringBuilder__Append_41914240(v8, v12, 0LL);
-  System_Text_StringBuilder__Append_41914240(v8, (System_String_o *)StringLiteral_1223, 0LL);
+  System_Text_StringBuilder__Append_41914240(v8, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
   v13 = this->fields.progressExtraData;
   if ( !v13 )
     goto LABEL_13;
   OldLevel = v13->fields.OldLevel;
   v14 = System_Int64__ToString((int64_t)&OldLevel, 0LL);
   System_Text_StringBuilder__Append_41914240(v8, v14, 0LL);
-  System_Text_StringBuilder__Append_41914240(v8, (System_String_o *)StringLiteral_1223, 0LL);
+  System_Text_StringBuilder__Append_41914240(v8, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
   v15 = this->fields.progressExtraData;
   if ( !v15
     || (HIDWORD(v26) = v15->fields.OldDispState,
         v16 = System_Int32__ToString((int32_t)&v26 + 4, 0LL),
         System_Text_StringBuilder__Append_41914240(v8, v16, 0LL),
-        System_Text_StringBuilder__Append_41914240(v8, (System_String_o *)StringLiteral_1223, 0LL),
+        System_Text_StringBuilder__Append_41914240(v8, (System_String_o *)StringLiteral_1223/*":"*/, 0LL),
         (v17 = this->fields.progressExtraData) == 0LL) )
   {
 LABEL_13:
@@ -2713,7 +2713,7 @@ LABEL_13:
   LODWORD(v26) = v17->fields.IsOldCompleted;
   v18 = System_Int32__ToString((int32_t)&v26, 0LL);
   System_Text_StringBuilder__Append_41914240(v8, v18, 0LL);
-  System_Text_StringBuilder__Append_41914240(v8, (System_String_o *)StringLiteral_1223, 0LL);
+  System_Text_StringBuilder__Append_41914240(v8, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
   extraCircleState = this->fields.extraCircleState;
   v19 = System_Int32__ToString((int32_t)&extraCircleState, 0LL);
   System_Text_StringBuilder__Append_41914240(v8, v19, 0LL);

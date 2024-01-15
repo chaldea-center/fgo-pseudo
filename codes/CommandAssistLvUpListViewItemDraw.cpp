@@ -61,8 +61,8 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
     sub_B16FFC(&DataManager_TypeInfo, v6);
     sub_B16FFC(&int_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_8348, v9);
-    sub_B16FFC(&StringLiteral_5576, v10);
+    sub_B16FFC(&StringLiteral_8348/*"LEVEL_INFO"*/, v9);
+    sub_B16FFC(&StringLiteral_5576/*"EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT"*/, v10);
     byte_40FA537 = 1;
   }
   IconImageId_k__BackingField = 0;
@@ -103,7 +103,7 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5576, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5576/*"EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT"*/, 0LL);
   if ( !v14 )
     goto LABEL_21;
   v22 = v21;
@@ -114,7 +114,7 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
     goto LABEL_21;
   UILabel__set_text(levelLabel, v24, 0LL);
   beforeLevelLabel = this->fields.beforeLevelLabel;
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_8348, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LEVEL_INFO"*/, 0LL);
   v44 = v14->fields.lv - 1;
   v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44);
   v28 = System_String__Format(v26, v27, 0LL);
@@ -123,7 +123,7 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
   UILabel__set_text(beforeLevelLabel, v28, 0LL);
   detailLabel = this->fields.detailLabel;
   Detail_k__BackingField = item->fields._Detail_k__BackingField;
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8348, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LEVEL_INFO"*/, 0LL);
   v43 = v14->fields.lv;
   v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v43);
   v33 = (Il2CppObject *)System_String__Format(v31, v32, 0LL);
@@ -131,7 +131,7 @@ void __fastcall CommandAssistLvUpListViewItemDraw__UpdateUi(
   WrapControlText__textAdjust(detailLabel, v34, 16, 0, 0, 0LL);
   beforeDetailLabel = this->fields.beforeDetailLabel;
   BeforeDetail_k__BackingField = item->fields._BeforeDetail_k__BackingField;
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_8348, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LEVEL_INFO"*/, 0LL);
   v42 = v14->fields.lv - 1;
   v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42);
   v39 = (Il2CppObject *)System_String__Format(v37, v38, 0LL);

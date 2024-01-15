@@ -124,19 +124,19 @@ void __fastcall FriendOperationConfirmMenu__Init(FriendOperationConfirmMenu_o *t
 
   if ( (byte_40FD8D5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FD8D5 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -272,27 +272,27 @@ void __fastcall FriendOperationConfirmMenu__Open(
     sub_B16FFC(&System_Action_TypeInfo, *(_QWORD *)&kind);
     sub_B16FFC(&Method_FriendOperationConfirmMenu_EndOpen__, v12);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_6470, v14);
-    sub_B16FFC(&StringLiteral_6432, v15);
-    sub_B16FFC(&StringLiteral_6472, v16);
-    sub_B16FFC(&StringLiteral_6469, v17);
-    sub_B16FFC(&StringLiteral_6392, v18);
-    sub_B16FFC(&StringLiteral_6434, v19);
-    sub_B16FFC(&StringLiteral_6468, v20);
-    sub_B16FFC(&StringLiteral_6433, v21);
-    sub_B16FFC(&StringLiteral_6438, v22);
-    sub_B16FFC(&StringLiteral_6457, v23);
-    sub_B16FFC(&StringLiteral_6393, v24);
-    sub_B16FFC(&StringLiteral_6436, v25);
-    sub_B16FFC(&StringLiteral_6471, v26);
-    sub_B16FFC(&StringLiteral_6388, v27);
-    sub_B16FFC(&StringLiteral_6391, v28);
-    sub_B16FFC(&StringLiteral_6458, v29);
-    sub_B16FFC(&StringLiteral_6389, v30);
-    sub_B16FFC(&StringLiteral_6390, v31);
-    sub_B16FFC(&StringLiteral_6459, v32);
-    sub_B16FFC(&StringLiteral_6437, v33);
-    sub_B16FFC(&StringLiteral_6467, v34);
+    sub_B16FFC(&StringLiteral_6470/*"FRIEND_REMOVE_CANCEL"*/, v14);
+    sub_B16FFC(&StringLiteral_6432/*"FRIEND_ACCEPT_CANCEL"*/, v15);
+    sub_B16FFC(&StringLiteral_6472/*"FRIEND_REMOVE_MESSAGE"*/, v16);
+    sub_B16FFC(&StringLiteral_6469/*"FRIEND_REJECT_MESSAGE"*/, v17);
+    sub_B16FFC(&StringLiteral_6392/*"FOLLOW_REMOVE_DECIDE"*/, v18);
+    sub_B16FFC(&StringLiteral_6434/*"FRIEND_ACCEPT_MESSAGE"*/, v19);
+    sub_B16FFC(&StringLiteral_6468/*"FRIEND_REJECT_DECIDE"*/, v20);
+    sub_B16FFC(&StringLiteral_6433/*"FRIEND_ACCEPT_DECIDE"*/, v21);
+    sub_B16FFC(&StringLiteral_6438/*"FRIEND_CANCEL_MESSAGE"*/, v22);
+    sub_B16FFC(&StringLiteral_6457/*"FRIEND_OFFER_CANCEL"*/, v23);
+    sub_B16FFC(&StringLiteral_6393/*"FOLLOW_REMOVE_MESSAGE"*/, v24);
+    sub_B16FFC(&StringLiteral_6436/*"FRIEND_CANCEL_CANCEL"*/, v25);
+    sub_B16FFC(&StringLiteral_6471/*"FRIEND_REMOVE_DECIDE"*/, v26);
+    sub_B16FFC(&StringLiteral_6388/*"FOLLOW_OFFER_CANCEL"*/, v27);
+    sub_B16FFC(&StringLiteral_6391/*"FOLLOW_REMOVE_CANCEL"*/, v28);
+    sub_B16FFC(&StringLiteral_6458/*"FRIEND_OFFER_DECIDE"*/, v29);
+    sub_B16FFC(&StringLiteral_6389/*"FOLLOW_OFFER_DECIDE"*/, v30);
+    sub_B16FFC(&StringLiteral_6390/*"FOLLOW_OFFER_MESSAGE"*/, v31);
+    sub_B16FFC(&StringLiteral_6459/*"FRIEND_OFFER_MESSAGE"*/, v32);
+    sub_B16FFC(&StringLiteral_6437/*"FRIEND_CANCEL_DECIDE"*/, v33);
+    sub_B16FFC(&StringLiteral_6467/*"FRIEND_REJECT_CANCEL"*/, v34);
     byte_40FD8D6 = 1;
   }
   if ( !this->fields.state )
@@ -320,7 +320,7 @@ void __fastcall FriendOperationConfirmMenu__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_6459, 0LL);
+        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_6459/*"FRIEND_OFFER_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_58;
         v42 = System_String__Format(v41, (Il2CppObject *)entity->fields.userName, 0LL);
@@ -328,12 +328,12 @@ void __fastcall FriendOperationConfirmMenu__Open(
           goto LABEL_58;
         UILabel__set_text(messageLabel, v42, 0LL);
         decideLabel = this->fields.decideLabel;
-        v44 = LocalizationManager__Get((System_String_o *)StringLiteral_6458, 0LL);
+        v44 = LocalizationManager__Get((System_String_o *)StringLiteral_6458/*"FRIEND_OFFER_DECIDE"*/, 0LL);
         if ( !decideLabel )
           goto LABEL_58;
         UILabel__set_text(decideLabel, v44, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v46 = &StringLiteral_6457;
+        v46 = &StringLiteral_6457/*"FRIEND_OFFER_CANCEL"*/;
         break;
       case 2:
         v47 = this->fields.messageLabel;
@@ -342,7 +342,7 @@ void __fastcall FriendOperationConfirmMenu__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v48 = LocalizationManager__Get((System_String_o *)StringLiteral_6434, 0LL);
+        v48 = LocalizationManager__Get((System_String_o *)StringLiteral_6434/*"FRIEND_ACCEPT_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_58;
         v49 = System_String__Format(v48, (Il2CppObject *)entity->fields.userName, 0LL);
@@ -350,12 +350,12 @@ void __fastcall FriendOperationConfirmMenu__Open(
           goto LABEL_58;
         UILabel__set_text(v47, v49, 0LL);
         v50 = this->fields.decideLabel;
-        v51 = LocalizationManager__Get((System_String_o *)StringLiteral_6433, 0LL);
+        v51 = LocalizationManager__Get((System_String_o *)StringLiteral_6433/*"FRIEND_ACCEPT_DECIDE"*/, 0LL);
         if ( !v50 )
           goto LABEL_58;
         UILabel__set_text(v50, v51, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v46 = &StringLiteral_6432;
+        v46 = &StringLiteral_6432/*"FRIEND_ACCEPT_CANCEL"*/;
         break;
       case 3:
         v52 = this->fields.messageLabel;
@@ -364,7 +364,7 @@ void __fastcall FriendOperationConfirmMenu__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v53 = LocalizationManager__Get((System_String_o *)StringLiteral_6469, 0LL);
+        v53 = LocalizationManager__Get((System_String_o *)StringLiteral_6469/*"FRIEND_REJECT_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_58;
         v54 = System_String__Format(v53, (Il2CppObject *)entity->fields.userName, 0LL);
@@ -372,12 +372,12 @@ void __fastcall FriendOperationConfirmMenu__Open(
           goto LABEL_58;
         UILabel__set_text(v52, v54, 0LL);
         v55 = this->fields.decideLabel;
-        v56 = LocalizationManager__Get((System_String_o *)StringLiteral_6468, 0LL);
+        v56 = LocalizationManager__Get((System_String_o *)StringLiteral_6468/*"FRIEND_REJECT_DECIDE"*/, 0LL);
         if ( !v55 )
           goto LABEL_58;
         UILabel__set_text(v55, v56, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v46 = &StringLiteral_6467;
+        v46 = &StringLiteral_6467/*"FRIEND_REJECT_CANCEL"*/;
         break;
       case 4:
         v57 = this->fields.messageLabel;
@@ -386,7 +386,7 @@ void __fastcall FriendOperationConfirmMenu__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v58 = LocalizationManager__Get((System_String_o *)StringLiteral_6438, 0LL);
+        v58 = LocalizationManager__Get((System_String_o *)StringLiteral_6438/*"FRIEND_CANCEL_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_58;
         v59 = System_String__Format(v58, (Il2CppObject *)entity->fields.userName, 0LL);
@@ -394,12 +394,12 @@ void __fastcall FriendOperationConfirmMenu__Open(
           goto LABEL_58;
         UILabel__set_text(v57, v59, 0LL);
         v60 = this->fields.decideLabel;
-        v61 = LocalizationManager__Get((System_String_o *)StringLiteral_6437, 0LL);
+        v61 = LocalizationManager__Get((System_String_o *)StringLiteral_6437/*"FRIEND_CANCEL_DECIDE"*/, 0LL);
         if ( !v60 )
           goto LABEL_58;
         UILabel__set_text(v60, v61, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v46 = &StringLiteral_6436;
+        v46 = &StringLiteral_6436/*"FRIEND_CANCEL_CANCEL"*/;
         break;
       case 5:
         v62 = this->fields.messageLabel;
@@ -408,7 +408,7 @@ void __fastcall FriendOperationConfirmMenu__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v63 = LocalizationManager__Get((System_String_o *)StringLiteral_6472, 0LL);
+        v63 = LocalizationManager__Get((System_String_o *)StringLiteral_6472/*"FRIEND_REMOVE_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_58;
         v64 = System_String__Format(v63, (Il2CppObject *)entity->fields.userName, 0LL);
@@ -416,12 +416,12 @@ void __fastcall FriendOperationConfirmMenu__Open(
           goto LABEL_58;
         UILabel__set_text(v62, v64, 0LL);
         v65 = this->fields.decideLabel;
-        v66 = LocalizationManager__Get((System_String_o *)StringLiteral_6471, 0LL);
+        v66 = LocalizationManager__Get((System_String_o *)StringLiteral_6471/*"FRIEND_REMOVE_DECIDE"*/, 0LL);
         if ( !v65 )
           goto LABEL_58;
         UILabel__set_text(v65, v66, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v46 = &StringLiteral_6470;
+        v46 = &StringLiteral_6470/*"FRIEND_REMOVE_CANCEL"*/;
         break;
       case 6:
         v67 = this->fields.messageLabel;
@@ -430,7 +430,7 @@ void __fastcall FriendOperationConfirmMenu__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v68 = LocalizationManager__Get((System_String_o *)StringLiteral_6390, 0LL);
+        v68 = LocalizationManager__Get((System_String_o *)StringLiteral_6390/*"FOLLOW_OFFER_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_58;
         v69 = System_String__Format(v68, (Il2CppObject *)entity->fields.userName, 0LL);
@@ -438,12 +438,12 @@ void __fastcall FriendOperationConfirmMenu__Open(
           goto LABEL_58;
         UILabel__set_text(v67, v69, 0LL);
         v70 = this->fields.decideLabel;
-        v71 = LocalizationManager__Get((System_String_o *)StringLiteral_6389, 0LL);
+        v71 = LocalizationManager__Get((System_String_o *)StringLiteral_6389/*"FOLLOW_OFFER_DECIDE"*/, 0LL);
         if ( !v70 )
           goto LABEL_58;
         UILabel__set_text(v70, v71, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v46 = &StringLiteral_6388;
+        v46 = &StringLiteral_6388/*"FOLLOW_OFFER_CANCEL"*/;
         break;
       case 7:
         v72 = this->fields.messageLabel;
@@ -452,7 +452,7 @@ void __fastcall FriendOperationConfirmMenu__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v73 = LocalizationManager__Get((System_String_o *)StringLiteral_6393, 0LL);
+        v73 = LocalizationManager__Get((System_String_o *)StringLiteral_6393/*"FOLLOW_REMOVE_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_58;
         v74 = System_String__Format(v73, (Il2CppObject *)entity->fields.userName, 0LL);
@@ -460,12 +460,12 @@ void __fastcall FriendOperationConfirmMenu__Open(
           goto LABEL_58;
         UILabel__set_text(v72, v74, 0LL);
         v75 = this->fields.decideLabel;
-        v76 = LocalizationManager__Get((System_String_o *)StringLiteral_6392, 0LL);
+        v76 = LocalizationManager__Get((System_String_o *)StringLiteral_6392/*"FOLLOW_REMOVE_DECIDE"*/, 0LL);
         if ( !v75 )
           goto LABEL_58;
         UILabel__set_text(v75, v76, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v46 = &StringLiteral_6391;
+        v46 = &StringLiteral_6391/*"FOLLOW_REMOVE_CANCEL"*/;
         break;
       default:
         goto LABEL_57;
@@ -532,10 +532,10 @@ System_String_o *__fastcall FriendOperationConfirmMenu__get_closeBtnPath(
 {
   if ( (byte_40FD8DA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4202, method);
+    sub_B16FFC(&StringLiteral_4202/*"ConfirmWindow/CancelButton"*/, method);
     byte_40FD8DA = 1;
   }
-  return (System_String_o *)StringLiteral_4202;
+  return (System_String_o *)StringLiteral_4202/*"ConfirmWindow/CancelButton"*/;
 }
 
 

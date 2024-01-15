@@ -30,12 +30,12 @@ void __fastcall CombineResultFormManager___cctor(const MethodInfo *method)
     sub_B16FFC(&CombineResultFormManager_TypeInfo, v1);
     sub_B16FFC(&Method_System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList___ctor__, v8);
     sub_B16FFC(&System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_6598, v10);
+    sub_B16FFC(&StringLiteral_6598/*"Fgo_20201104"*/, v10);
     byte_40F9E28 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)CombineResultFormManager_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_6598;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6598;
+  v12 = (System_Int32_array **)StringLiteral_6598/*"Fgo_20201104"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6598/*"Fgo_20201104"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v17 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_CombineResultFormManager_svtUnplayedVoiceList__TypeInfo,
@@ -144,7 +144,7 @@ System_String_o *__fastcall CombineResultFormManager__GetSaveFileName(const Meth
   {
     sub_B16FFC(&AndroidUtil_TypeInfo, v1);
     sub_B16FFC(&DatFileName_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_871, v3);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v3);
     byte_40F9E20 = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
@@ -153,7 +153,7 @@ System_String_o *__fastcall CombineResultFormManager__GetSaveFileName(const Meth
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(4, 0LL);
-  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871, FileName, 0LL);
+  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871/*"/"*/, FileName, 0LL);
 }
 
 

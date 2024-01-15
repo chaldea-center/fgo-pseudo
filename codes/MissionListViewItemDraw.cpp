@@ -151,7 +151,7 @@ System_String_o *__fastcall MissionListViewItemDraw__GetTimeText(
   if ( (byte_40F7BF0 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, timrStr);
-    sub_B16FFC(&StringLiteral_80, v5);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v5);
     byte_40F7BF0 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -160,7 +160,7 @@ System_String_o *__fastcall MissionListViewItemDraw__GetTimeText(
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
   v6 = LocalizationManager__Get(key, 0LL);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, timrStr, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, timrStr, 0LL);
 }
 
 
@@ -321,7 +321,7 @@ void __fastcall MissionListViewItemDraw__SetBoardImage(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, missionListviewItem);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_4555, v6);
+    sub_B16FFC(&StringLiteral_4555/*"DEFAULT_LOCK_BOARD_GROUP_ID"*/, v6);
     byte_40F7BEF = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
@@ -340,7 +340,7 @@ void __fastcall MissionListViewItemDraw__SetBoardImage(
             this->klass->vtable._8_SetRewardStatusImg.methodPtr) & 1) != 0
       && missionListviewItem->fields.progStatus <= 1u )
     {
-      bannerGroupId = ConstantMaster__getValue((System_String_o *)StringLiteral_4555, 0LL);
+      bannerGroupId = ConstantMaster__getValue((System_String_o *)StringLiteral_4555/*"DEFAULT_LOCK_BOARD_GROUP_ID"*/, 0LL);
     }
     v9 = this->fields.baseSprite;
     baseAtlas = this->fields.baseAtlas;
@@ -1082,8 +1082,8 @@ void __fastcall MissionListViewItemDraw__UpdateDispResTime(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, missionListViewItem);
     sub_B16FFC(&MissionListViewItemDraw_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_13348, v7);
-    sub_B16FFC(&StringLiteral_13336, v8);
+    sub_B16FFC(&StringLiteral_13348/*"TIME_REST_QUEST"*/, v7);
+    sub_B16FFC(&StringLiteral_13336/*"TIME_REST_ACHIVE"*/, v8);
     byte_40F7BF1 = 1;
   }
   if ( !missionListViewItem )
@@ -1109,7 +1109,7 @@ void __fastcall MissionListViewItemDraw__UpdateDispResTime(
     {
       j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
     }
-    v15 = &StringLiteral_13336;
+    v15 = &StringLiteral_13336/*"TIME_REST_ACHIVE"*/;
   }
   else
   {
@@ -1125,7 +1125,7 @@ void __fastcall MissionListViewItemDraw__UpdateDispResTime(
     {
       j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
     }
-    v15 = &StringLiteral_13348;
+    v15 = &StringLiteral_13348/*"TIME_REST_QUEST"*/;
   }
   TimeText = MissionListViewItemDraw__GetTimeText((System_String_o *)*v15, RestTime, v13);
   if ( !resTimeLb )

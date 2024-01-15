@@ -102,7 +102,7 @@ void __fastcall WarehouseRootComponent__Init(WarehouseRootComponent_o *this, con
   {
     sub_B16FFC(&WarehouseListMenu_CallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_WarehouseRootComponent_OnSelectWarehouseList__, v6);
-    sub_B16FFC(&StringLiteral_12655, v7);
+    sub_B16FFC(&StringLiteral_12655/*"ServantEquipList"*/, v7);
     byte_40F6724 = 1;
   }
   if ( !this->fields.state )
@@ -111,7 +111,7 @@ void __fastcall WarehouseRootComponent__Init(WarehouseRootComponent_o *this, con
     this->fields.state = 1;
     if ( transitionData )
     {
-      v9 = System_String__op_Equality(transitionData->fields.name, (System_String_o *)StringLiteral_12655, 0LL);
+      v9 = System_String__op_Equality(transitionData->fields.name, (System_String_o *)StringLiteral_12655/*"ServantEquipList"*/, 0LL);
       warehouseListMenu = this->fields.warehouseListMenu;
       setupInfo = this->fields.setupInfo;
       v12 = v9;

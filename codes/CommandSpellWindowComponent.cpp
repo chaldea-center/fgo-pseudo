@@ -246,10 +246,10 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpell(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
     sub_B16FFC(&Method_CommandSpellWindowComponent___c__InitializeCommandSpell_b__39_0__, v24);
     sub_B16FFC(&CommandSpellWindowComponent___c_TypeInfo, v25);
-    sub_B16FFC(&StringLiteral_15311, v26);
-    sub_B16FFC(&StringLiteral_15310, v27);
-    sub_B16FFC(&StringLiteral_2373, v28);
-    sub_B16FFC(&StringLiteral_3242, v29);
+    sub_B16FFC(&StringLiteral_15311/*"WINDOWTITLE_COMMANDSPELL_NO_BATTLE"*/, v26);
+    sub_B16FFC(&StringLiteral_15310/*"WINDOWTITLE_COMMANDSPELL_BATTLE"*/, v27);
+    sub_B16FFC(&StringLiteral_2373/*"BATTLE_CHECKUSE_COMMANDSPELL"*/, v28);
+    sub_B16FFC(&StringLiteral_3242/*"COMMAND_SPELL_ADD_FUNCTION_CAUTION_TEXT"*/, v29);
     byte_40F6539 = 1;
   }
   memset(&v92, 0, sizeof(v92));
@@ -293,12 +293,12 @@ void __fastcall CommandSpellWindowComponent__InitializeCommandSpell(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_2373, 0LL);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_2373/*"BATTLE_CHECKUSE_COMMANDSPELL"*/, 0LL);
   if ( !checkuselabel )
     goto LABEL_81;
   UILabel__set_text(checkuselabel, v40, 0LL);
   classBoardCautionLabel = this->fields.classBoardCautionLabel;
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_3242, 0LL);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_3242/*"COMMAND_SPELL_ADD_FUNCTION_CAUTION_TEXT"*/, 0LL);
   if ( !classBoardCautionLabel )
     goto LABEL_81;
   UILabel__set_text(classBoardCautionLabel, v42, 0LL);
@@ -520,7 +520,7 @@ LABEL_67:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v89 = &StringLiteral_15310;
+    v89 = &StringLiteral_15310/*"WINDOWTITLE_COMMANDSPELL_BATTLE"*/;
   }
   else
   {
@@ -530,7 +530,7 @@ LABEL_67:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v89 = &StringLiteral_15311;
+    v89 = &StringLiteral_15311/*"WINDOWTITLE_COMMANDSPELL_NO_BATTLE"*/;
   }
   v90 = LocalizationManager__Get((System_String_o *)*v89, 0LL);
   if ( !titleLabel )
@@ -712,7 +712,7 @@ void __fastcall CommandSpellWindowComponent__Open(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_CommandSpellObjectComponent___, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F653B = 1;
   }
   memset(&v28, 0, sizeof(v28));
@@ -730,7 +730,7 @@ void __fastcall CommandSpellWindowComponent__Open(
   if ( v15 )
     v16 = v15;
   else
-    v16 = (System_String_o *)StringLiteral_1;
+    v16 = (System_String_o *)StringLiteral_1/*""*/;
   UILabel__set_text(label_count, v16, 0LL);
   if ( this->fields.mode == 1 )
   {
@@ -1059,7 +1059,7 @@ UnityEngine_GameObject_o *__fastcall CommandSpellWindowComponent__get_closeBtnOb
   if ( (byte_40F653F & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponentsInChildren_UIMessageButton___, method);
-    sub_B16FFC(&StringLiteral_12944, v3);
+    sub_B16FFC(&StringLiteral_12944/*"Sprite"*/, v3);
     byte_40F653F = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -1092,7 +1092,7 @@ LABEL_14:
     if ( !gameObject )
       goto LABEL_14;
     name = UnityEngine_Object__get_name(gameObject, 0LL);
-    ComponentsInChildren_WarBoardControlPlayTalkUiComponent = (WarBoardControlPlayTalkUiComponent_array *)System_String__op_Equality(name, (System_String_o *)StringLiteral_12944, 0LL);
+    ComponentsInChildren_WarBoardControlPlayTalkUiComponent = (WarBoardControlPlayTalkUiComponent_array *)System_String__op_Equality(name, (System_String_o *)StringLiteral_12944/*"Sprite"*/, 0LL);
     if ( ((unsigned __int8)ComponentsInChildren_WarBoardControlPlayTalkUiComponent & 1) != 0 )
       break;
     max_length = v9->max_length;

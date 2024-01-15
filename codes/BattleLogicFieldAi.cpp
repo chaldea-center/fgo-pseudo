@@ -1605,7 +1605,7 @@ BattleLogicTask_array *__fastcall BattleLogicFieldAi__procAiAct(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
     sub_B16FFC(&Method_WeightRate_int___ctor__, v20);
     sub_B16FFC(&WeightRate_int__TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_8758, v22);
+    sub_B16FFC(&StringLiteral_8758/*"MOTION_"*/, v22);
     byte_40FCDBF = 1;
   }
   ActionValue = 0;
@@ -1817,7 +1817,7 @@ LABEL_48:
     (BattleLogicTask_o *)v64,
     v73);
   v74 = System_Int32__ToString((int32_t)&ActionValue, 0LL);
-  v75 = System_String__Concat_43743732((System_String_o *)StringLiteral_8758, v74, 0LL);
+  v75 = System_String__Concat_43743732((System_String_o *)StringLiteral_8758/*"MOTION_"*/, v74, 0LL);
   BattleLogicTask__SetPlayFieldMotion((BattleLogicTask_o *)v64, v75, 0LL);
   logic = this->fields.logic;
   if ( !logic )

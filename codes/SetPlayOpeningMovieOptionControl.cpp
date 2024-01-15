@@ -27,26 +27,26 @@ void __fastcall SetPlayOpeningMovieOptionControl__Init(
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
     sub_B16FFC(&OptionManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_9761, v5);
-    sub_B16FFC(&StringLiteral_19652, v6);
-    sub_B16FFC(&StringLiteral_9762, v7);
+    sub_B16FFC(&StringLiteral_9761/*"OPTION_NOT_PLAY_OPENING_MOVIE"*/, v5);
+    sub_B16FFC(&StringLiteral_19652/*"img_txt_playopening"*/, v6);
+    sub_B16FFC(&StringLiteral_9762/*"OPTION_NOT_PLAY_OPENING_MOVIE_INFO"*/, v7);
     byte_40FC3E4 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetMyRoomImage((UISprite_o *)titleLabel, (System_String_o *)StringLiteral_19652, 0LL);
+  AtlasManager__SetMyRoomImage((UISprite_o *)titleLabel, (System_String_o *)StringLiteral_19652/*"img_txt_playopening"*/, 0LL);
   infoLabel = this->fields.infoLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_9761, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_9761/*"OPTION_NOT_PLAY_OPENING_MOVIE"*/, 0LL);
   if ( !infoLabel
     || (UILabel__set_text(infoLabel, v10, 0LL),
         switchButton = (UILabel_o *)this->fields.switchButton,
-        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_9762, 0LL),
+        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_9762/*"OPTION_NOT_PLAY_OPENING_MOVIE_INFO"*/, 0LL),
         !switchButton) )
   {
     sub_B170D4();
@@ -119,16 +119,16 @@ void __fastcall SetPlayOpeningMovieOptionControl__RefreshDisplay(
 
   if ( (byte_40FC3E5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40FC3E5 = 1;
   }
   v4 = *(UIButton_o **)&this->fields.flag;
   if ( !v4 )
     sub_B170D4();
   if ( LOBYTE(this[1].klass) )
-    v5 = &StringLiteral_16940;
+    v5 = &StringLiteral_16940/*"btn_on"*/;
   else
-    v5 = &StringLiteral_16939;
+    v5 = &StringLiteral_16939/*"btn_off"*/;
   UIButton__set_normalSprite(v4, (System_String_o *)*v5, 0LL);
 }

@@ -63,8 +63,8 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
     sub_B16FFC(&int_TypeInfo, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_3193, v11);
-    sub_B16FFC(&StringLiteral_3252, v12);
+    sub_B16FFC(&StringLiteral_3193/*"COMMAND_ASSIST_NAME"*/, v11);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v12);
     byte_40F697B = 1;
   }
   commandAssistNameLabel = (UnityEngine_Object_o *)this->fields.commandAssistNameLabel;
@@ -136,7 +136,7 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3193, 0LL);
+                v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3193/*"COMMAND_ASSIST_NAME"*/, 0LL);
                 name = (Il2CppObject *)v23->fields.name;
                 v29 = v27;
                 lv = v23->fields.lv;
@@ -182,7 +182,7 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+              v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
               if ( v39 )
               {
                 UILabel__set_text(v39, v40, 0LL);
@@ -225,8 +225,8 @@ System_String_o *__fastcall BattleCommandAssistDetailWindowComponent__get_closeB
 {
   if ( (byte_40F697C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17410, method);
+    sub_B16FFC(&StringLiteral_17410/*"closeBtn"*/, method);
     byte_40F697C = 1;
   }
-  return (System_String_o *)StringLiteral_17410;
+  return (System_String_o *)StringLiteral_17410/*"closeBtn"*/;
 }

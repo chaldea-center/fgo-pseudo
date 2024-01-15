@@ -492,7 +492,7 @@ void __fastcall EventTowerListViewManager__RequestInto(EventTowerListViewManager
     sub_B16FFC(&Method_EventTowerListViewManager_OnMoveEnd__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Count__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Item__, v5);
-    sub_B16FFC(&StringLiteral_10004, v6);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v6);
     byte_40F9BC0 = 1;
   }
   ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0LL);
@@ -537,7 +537,7 @@ LABEL_14:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       this->fields.listInDelay + 0.5,
       0LL);
   }
@@ -576,7 +576,7 @@ void __fastcall EventTowerListViewManager__RequestListObject(
     sub_B16FFC(&Method_EventTowerListViewManager_OnMoveEnd__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Count__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventTowerListViewObject__get_Item__, v9);
-    sub_B16FFC(&StringLiteral_10004, v10);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v10);
     byte_40F9BBF = 1;
   }
   ObjectList = EventTowerListViewManager__get_ObjectList(this, *(const MethodInfo **)&mode);
@@ -589,7 +589,7 @@ void __fastcall EventTowerListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -666,7 +666,7 @@ void __fastcall EventTowerListViewManager__SetMode_24562724(
   if ( (byte_40F9BBE & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&mode);
-    sub_B16FFC(&StringLiteral_11393, v5);
+    sub_B16FFC(&StringLiteral_11393/*"RequestInto"*/, v5);
     byte_40F9BBE = 1;
   }
   this->fields.initMode = mode;
@@ -691,7 +691,7 @@ void __fastcall EventTowerListViewManager__SetMode_24562724(
       }
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_11393,
+        (System_String_o *)StringLiteral_11393/*"RequestInto"*/,
         0.0,
         0LL);
       break;

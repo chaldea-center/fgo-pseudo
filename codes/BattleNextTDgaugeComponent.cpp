@@ -27,9 +27,9 @@ void __fastcall BattleNextTDgaugeComponent__changeGauge(
   if ( (byte_40F6AF3 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, *(_QWORD *)&index);
-    sub_B16FFC(&StringLiteral_19250, v7);
-    sub_B16FFC(&StringLiteral_19252, v8);
-    this = (BattleNextTDgaugeComponent_o *)sub_B16FFC(&StringLiteral_19251, v9);
+    sub_B16FFC(&StringLiteral_19250/*"icon_count_01"*/, v7);
+    sub_B16FFC(&StringLiteral_19252/*"icon_count_bg"*/, v8);
+    this = (BattleNextTDgaugeComponent_o *)sub_B16FFC(&StringLiteral_19251/*"icon_count_02"*/, v9);
     byte_40F6AF3 = 1;
   }
   gaugeList = v6->fields.gaugeList;
@@ -50,7 +50,7 @@ void __fastcall BattleNextTDgaugeComponent__changeGauge(
                                                       (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
             if ( Component_srcLineSprite )
             {
-              v14 = &StringLiteral_19251;
+              v14 = &StringLiteral_19251/*"icon_count_02"*/;
 LABEL_17:
               UISprite__set_spriteName(Component_srcLineSprite, (System_String_o *)*v14, 0LL);
               return;
@@ -70,9 +70,9 @@ LABEL_17:
           if ( Component_srcLineSprite )
           {
             if ( type == 1 )
-              v14 = &StringLiteral_19250;
+              v14 = &StringLiteral_19250/*"icon_count_01"*/;
             else
-              v14 = &StringLiteral_19252;
+              v14 = &StringLiteral_19252/*"icon_count_bg"*/;
             goto LABEL_17;
           }
         }

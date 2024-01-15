@@ -102,7 +102,7 @@ void __fastcall BattleActionData___ctor(BattleActionData_o *this, const MethodIn
     sub_B16FFC(&System_Collections_Generic_List_Target_PlayerTypeFlag__TypeInfo, v16);
     sub_B16FFC(&System_Collections_Generic_List_KeyValuePair_int__int___TypeInfo, v17);
     sub_B16FFC(&System_Collections_Generic_List_BattleActionData__TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_1, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v19);
     byte_40F6F8E = 1;
   }
   *(_QWORD *)&this->fields.motionId = -1LL;
@@ -191,8 +191,8 @@ void __fastcall BattleActionData___ctor(BattleActionData_o *this, const MethodIn
     (const MethodInfo_26752A4 *)Method_System_Collections_Generic_Dictionary_KeyValuePair_BattleServantData__Action_BattleBuffData_BuffData____List_BattleBuffData_BuffData____ctor__);
   this->fields._IntervalBuffDict_k__BackingField = (struct System_Collections_Generic_Dictionary_KeyValuePair_BattleServantData__Action_BattleBuffData_BuffData____List_BattleBuffData_BuffData___o *)v50;
   sub_B16F98(&this->fields._IntervalBuffDict_k__BackingField, v50);
-  v51 = StringLiteral_1;
-  this->fields.skillCutInMessage = (struct System_String_o *)StringLiteral_1;
+  v51 = StringLiteral_1/*""*/;
+  this->fields.skillCutInMessage = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields.skillCutInMessage, v51);
   v56 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_BattleActionData__TypeInfo,
@@ -7046,10 +7046,10 @@ System_String_o *__fastcall BattleActionData__toCutinName(BattleActionData_o *th
   if ( (byte_40F6F6F & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18158, v3);
-    sub_B16FFC(&StringLiteral_18157, v4);
-    sub_B16FFC(&StringLiteral_18165, v5);
-    sub_B16FFC(&StringLiteral_18167, v6);
+    sub_B16FFC(&StringLiteral_18158/*"effect/BitEffect/bit_buster{0:00}"*/, v3);
+    sub_B16FFC(&StringLiteral_18157/*"effect/BitEffect/bit_arts{0:00}"*/, v4);
+    sub_B16FFC(&StringLiteral_18165/*"effect/BitEffect/bit_flash02"*/, v5);
+    sub_B16FFC(&StringLiteral_18167/*"effect/BitEffect/bit_quick{0:00}"*/, v6);
     byte_40F6F6F = 1;
   }
   type = this->fields.type;
@@ -7058,20 +7058,20 @@ System_String_o *__fastcall BattleActionData__toCutinName(BattleActionData_o *th
     case 1:
       v12 = 1;
       v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12);
-      v9 = &StringLiteral_18157;
+      v9 = &StringLiteral_18157/*"effect/BitEffect/bit_arts{0:00}"*/;
       return System_String__Format((System_String_o *)*v9, v8, 0LL);
     case 3:
       v11 = 1;
       v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11);
-      v9 = &StringLiteral_18167;
+      v9 = &StringLiteral_18167/*"effect/BitEffect/bit_quick{0:00}"*/;
       return System_String__Format((System_String_o *)*v9, v8, 0LL);
     case 2:
       v13 = 1;
       v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
-      v9 = &StringLiteral_18158;
+      v9 = &StringLiteral_18158/*"effect/BitEffect/bit_buster{0:00}"*/;
       return System_String__Format((System_String_o *)*v9, v8, 0LL);
     case 4:
-      return (System_String_o *)StringLiteral_18165;
+      return (System_String_o *)StringLiteral_18165/*"effect/BitEffect/bit_flash02"*/;
     default:
       return 0LL;
   }
@@ -7444,15 +7444,15 @@ BattleServantHpShiftComponent_EffectData_o *__fastcall BattleActionData_BaseShif
   if ( (byte_40F916A & 1) == 0 )
   {
     sub_B16FFC(&BattleServantHpShiftComponent_EffectData_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19115, v5);
+    sub_B16FFC(&StringLiteral_19115/*"hp_iconeffect_before_1_"*/, v5);
     byte_40F916A = 1;
   }
   v6 = sub_B170CC(BattleServantHpShiftComponent_EffectData_TypeInfo, method, v2, v3, v4);
   BattleServantHpShiftComponent_EffectData___ctor((BattleServantHpShiftComponent_EffectData_o *)v6, 0LL);
   if ( !v6 )
     sub_B170D4();
-  v13 = (System_Int32_array **)StringLiteral_19115;
-  *(_QWORD *)(v6 + 24) = StringLiteral_19115;
+  v13 = (System_Int32_array **)StringLiteral_19115/*"hp_iconeffect_before_1_"*/;
+  *(_QWORD *)(v6 + 24) = StringLiteral_19115/*"hp_iconeffect_before_1_"*/;
   sub_B16F98((BattleServantConfConponent_o *)(v6 + 24), v13, v7, v8, v9, v10, v11, v12);
   return (BattleServantHpShiftComponent_EffectData_o *)v6;
 }
@@ -7994,14 +7994,14 @@ void __fastcall BattleActionData_BuffData__SetCheckHideWhenDeadInfo(
   if ( (byte_40F916E & 1) == 0 )
   {
     sub_B16FFC(&DataVals_TypeInfo, vals);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F916E = 1;
   }
   this->fields._IsCheckHideWhenDead_k__BackingField = 1;
   if ( !v8 )
   {
     v8 = (DataVals_o *)sub_B170CC(DataVals_TypeInfo, vals, method, v3, v4);
-    DataVals___ctor(v8, (System_String_o *)StringLiteral_1, 0LL);
+    DataVals___ctor(v8, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   this->fields.dataVals = v8;
   sub_B16F98(
@@ -8414,10 +8414,10 @@ void __fastcall BattleActionData_DisplayMessageData___ctor(
     sub_B16FFC(&Method_System_Func_string__int___ctor__, v12);
     sub_B16FFC(&System_Func_string__int__TypeInfo, v13);
     sub_B16FFC(&string___TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_14370, v15);
-    sub_B16FFC(&StringLiteral_2722, v16);
-    sub_B16FFC(&StringLiteral_9031, v17);
-    sub_B16FFC(&StringLiteral_7687, v18);
+    sub_B16FFC(&StringLiteral_14370/*"TimePerChara"*/, v15);
+    sub_B16FFC(&StringLiteral_2722/*"BaseTime"*/, v16);
+    sub_B16FFC(&StringLiteral_9031/*"MessageType"*/, v17);
+    sub_B16FFC(&StringLiteral_7687/*"Interval"*/, v18);
     byte_40F9174 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -8457,7 +8457,7 @@ LABEL_16:
                   v29);
   ScriptInt = (BattleActionData_DisplayMessageData_o *)BattleMessageEntity__GetScriptInt(
                                                          ent,
-                                                         (System_String_o *)StringLiteral_7687,
+                                                         (System_String_o *)StringLiteral_7687/*"Interval"*/,
                                                          DefInterval,
                                                          0LL);
   this->fields.interval = (int)ScriptInt;
@@ -8469,7 +8469,7 @@ LABEL_16:
                   v33);
   v35 = (BattleActionData_DisplayMessageData_o *)BattleMessageEntity__GetScriptInt(
                                                    ent,
-                                                   (System_String_o *)StringLiteral_2722,
+                                                   (System_String_o *)StringLiteral_2722/*"BaseTime"*/,
                                                    DefBaseTime,
                                                    0LL);
   this->fields.baseTime = (int)v35;
@@ -8481,7 +8481,7 @@ LABEL_16:
                       v37);
   this->fields.timePerChara = BattleMessageEntity__GetScriptInt(
                                 ent,
-                                (System_String_o *)StringLiteral_14370,
+                                (System_String_o *)StringLiteral_14370/*"TimePerChara"*/,
                                 DefTimePerChara,
                                 0LL);
   Messages_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields._Messages_k__BackingField;
@@ -8506,7 +8506,7 @@ LABEL_16:
     MessageType_k__BackingField = 0LL;
   this->fields._MessageType_k__BackingField = BattleMessageEntity__GetScriptInt(
                                                 ent,
-                                                (System_String_o *)StringLiteral_9031,
+                                                (System_String_o *)StringLiteral_9031/*"MessageType"*/,
                                                 MessageType_k__BackingField,
                                                 0LL);
 }
@@ -8521,14 +8521,14 @@ int32_t __fastcall BattleActionData_DisplayMessageData__GetDefBaseTime(
 {
   if ( (byte_40F9176 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2451, constMst);
+    sub_B16FFC(&StringLiteral_2451/*"BATTLE_MSG_BASE_TIME"*/, constMst);
     byte_40F9176 = 1;
   }
   if ( preMsg )
     return preMsg->fields.baseTime;
   if ( !constMst )
     sub_B170D4();
-  return ConstantMaster__GetValue_28461932(constMst, (System_String_o *)StringLiteral_2451, 1000, 0LL);
+  return ConstantMaster__GetValue_28461932(constMst, (System_String_o *)StringLiteral_2451/*"BATTLE_MSG_BASE_TIME"*/, 1000, 0LL);
 }
 
 
@@ -8541,14 +8541,14 @@ int32_t __fastcall BattleActionData_DisplayMessageData__GetDefInterval(
 {
   if ( (byte_40F9175 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2452, constMst);
+    sub_B16FFC(&StringLiteral_2452/*"BATTLE_MSG_INTERVAL"*/, constMst);
     byte_40F9175 = 1;
   }
   if ( preMsg )
     return preMsg->fields.interval;
   if ( !constMst )
     sub_B170D4();
-  return ConstantMaster__GetValue_28461932(constMst, (System_String_o *)StringLiteral_2452, 250, 0LL);
+  return ConstantMaster__GetValue_28461932(constMst, (System_String_o *)StringLiteral_2452/*"BATTLE_MSG_INTERVAL"*/, 250, 0LL);
 }
 
 
@@ -8561,14 +8561,14 @@ int32_t __fastcall BattleActionData_DisplayMessageData__GetDefTimePerChara(
 {
   if ( (byte_40F9177 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2523, constMst);
+    sub_B16FFC(&StringLiteral_2523/*"BATTLE_TIME_PER_CHARA"*/, constMst);
     byte_40F9177 = 1;
   }
   if ( preMsg )
     return preMsg->fields.timePerChara;
   if ( !constMst )
     sub_B170D4();
-  return ConstantMaster__GetValue_28461932(constMst, (System_String_o *)StringLiteral_2523, 15, 0LL);
+  return ConstantMaster__GetValue_28461932(constMst, (System_String_o *)StringLiteral_2523/*"BATTLE_TIME_PER_CHARA"*/, 15, 0LL);
 }
 
 
@@ -8769,15 +8769,15 @@ BattleServantHpShiftComponent_EffectData_o *__fastcall BattleActionData_DownShif
   if ( (byte_40F917B & 1) == 0 )
   {
     sub_B16FFC(&BattleServantHpShiftComponent_EffectData_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19114, v5);
+    sub_B16FFC(&StringLiteral_19114/*"hp_iconeffect_1_"*/, v5);
     byte_40F917B = 1;
   }
   v6 = sub_B170CC(BattleServantHpShiftComponent_EffectData_TypeInfo, method, v2, v3, v4);
   BattleServantHpShiftComponent_EffectData___ctor((BattleServantHpShiftComponent_EffectData_o *)v6, 0LL);
   if ( !v6 )
     sub_B170D4();
-  v13 = (System_Int32_array **)StringLiteral_19114;
-  *(_QWORD *)(v6 + 24) = StringLiteral_19114;
+  v13 = (System_Int32_array **)StringLiteral_19114/*"hp_iconeffect_1_"*/;
+  *(_QWORD *)(v6 + 24) = StringLiteral_19114/*"hp_iconeffect_1_"*/;
   sub_B16F98((BattleServantConfConponent_o *)(v6 + 24), v13, v7, v8, v9, v10, v11, v12);
   return (BattleServantHpShiftComponent_EffectData_o *)v6;
 }
@@ -8825,10 +8825,10 @@ System_String_o *__fastcall BattleActionData_DownShiftGaugeData__get_Motion(
 {
   if ( (byte_40F9179 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8778, method);
+    sub_B16FFC(&StringLiteral_8778/*"MOTION_SHIFT_GAUGE_DOWN"*/, method);
     byte_40F9179 = 1;
   }
-  return (System_String_o *)StringLiteral_8778;
+  return (System_String_o *)StringLiteral_8778/*"MOTION_SHIFT_GAUGE_DOWN"*/;
 }
 
 
@@ -9497,15 +9497,15 @@ BattleServantHpShiftComponent_EffectData_o *__fastcall BattleActionData_UpShiftG
   if ( (byte_40F9183 & 1) == 0 )
   {
     sub_B16FFC(&BattleServantHpShiftComponent_EffectData_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19113, v5);
+    sub_B16FFC(&StringLiteral_19113/*"hp_iconcharge_1_"*/, v5);
     byte_40F9183 = 1;
   }
   v6 = sub_B170CC(BattleServantHpShiftComponent_EffectData_TypeInfo, method, v2, v3, v4);
   BattleServantHpShiftComponent_EffectData___ctor((BattleServantHpShiftComponent_EffectData_o *)v6, 0LL);
   if ( !v6 )
     sub_B170D4();
-  v13 = (System_Int32_array **)StringLiteral_19113;
-  *(_QWORD *)(v6 + 24) = StringLiteral_19113;
+  v13 = (System_Int32_array **)StringLiteral_19113/*"hp_iconcharge_1_"*/;
+  *(_QWORD *)(v6 + 24) = StringLiteral_19113/*"hp_iconcharge_1_"*/;
   sub_B16F98((BattleServantConfConponent_o *)(v6 + 24), v13, v7, v8, v9, v10, v11, v12);
   return (BattleServantHpShiftComponent_EffectData_o *)v6;
 }
@@ -9561,10 +9561,10 @@ System_String_o *__fastcall BattleActionData_UpShiftGaugeData__get_Motion(
 {
   if ( (byte_40F9181 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8779, method);
+    sub_B16FFC(&StringLiteral_8779/*"MOTION_SHIFT_GAUGE_UP"*/, method);
     byte_40F9181 = 1;
   }
-  return (System_String_o *)StringLiteral_8779;
+  return (System_String_o *)StringLiteral_8779/*"MOTION_SHIFT_GAUGE_UP"*/;
 }
 
 

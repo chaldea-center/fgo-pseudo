@@ -203,7 +203,7 @@ void __fastcall ShopBuyItemListViewObject__EventMove(ShopBuyItemListViewObject_o
   if ( (byte_40FF81E & 1) == 0 )
   {
     sub_B16FFC(&ListViewObject_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6160, v4);
+    sub_B16FFC(&StringLiteral_6160/*"EventMoveFinish"*/, v4);
     byte_40FF81E = 1;
   }
   TargetPosition = ShopBuyItemListViewObject__GetTargetPosition(this, this->fields.initMode, v2);
@@ -229,8 +229,8 @@ void __fastcall ShopBuyItemListViewObject__EventMove(ShopBuyItemListViewObject_o
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v11->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v11->fields.eventReceiver, gameObject, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Int32_array **)StringLiteral_6160;
-  v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6160;
+  v19 = (System_Int32_array **)StringLiteral_6160/*"EventMoveFinish"*/;
+  v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6160/*"EventMoveFinish"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v11->fields.callWhenFinished, v19, v20, v21, v22, v23, v24, v25);
 }
 
@@ -296,7 +296,7 @@ void __fastcall ShopBuyItemListViewObject__EventStart(
   if ( (byte_40FF81D & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_ShopBuyItemListViewObject___, *(_QWORD *)&initMode);
-    sub_B16FFC(&StringLiteral_6158, v7);
+    sub_B16FFC(&StringLiteral_6158/*"EventMove"*/, v7);
     byte_40FF81D = 1;
   }
   this->fields.isBusy = 1;
@@ -331,7 +331,7 @@ void __fastcall ShopBuyItemListViewObject__EventStart(
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v21, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6158,
+    (System_String_o *)StringLiteral_6158/*"EventMove"*/,
     delay,
     0LL);
 }
@@ -1039,7 +1039,7 @@ int32_t __fastcall ShopBuyItemListViewObject__ShowOtherInfomation(
     sub_B16FFC(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, item);
     sub_B16FFC(&Method_ShopBuyItemListViewObject_EndShowItemDetailDialog__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_9280, v7);
+    sub_B16FFC(&StringLiteral_9280/*"NONE"*/, v7);
     byte_40FF824 = 1;
   }
   if ( !item )
@@ -1052,7 +1052,7 @@ int32_t __fastcall ShopBuyItemListViewObject__ShowOtherInfomation(
   v9 = item->fields._Shop_k__BackingField;
   if ( !v9 )
     goto LABEL_12;
-  if ( System_String__op_Equality(v9->fields.infoMessage, (System_String_o *)StringLiteral_9280, 0LL) )
+  if ( System_String__op_Equality(v9->fields.infoMessage, (System_String_o *)StringLiteral_9280/*"NONE"*/, 0LL) )
     return -1;
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   NameText = ShopBuyItemListViewItem__get_NameText(item, v12);
@@ -1233,7 +1233,7 @@ System_String_o *__fastcall ShopBuyItemListViewObject__ToString(
   if ( (byte_40FF82A & 1) == 0 )
   {
     sub_B16FFC(&ShopBuyItemListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40FF82A = 1;
   }
   v13 = 0.0;
@@ -1252,7 +1252,7 @@ System_String_o *__fastcall ShopBuyItemListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

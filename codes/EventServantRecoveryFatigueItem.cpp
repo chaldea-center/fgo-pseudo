@@ -23,17 +23,17 @@ void __fastcall EventServantRecoveryFatigueItem___cctor(const MethodInfo *method
   if ( (byte_40FD1CC & 1) == 0 )
   {
     sub_B16FFC(&EventServantRecoveryFatigueItem_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16475, v8);
-    sub_B16FFC(&StringLiteral_18502, v9);
+    sub_B16FFC(&StringLiteral_16475/*"available_0"*/, v8);
+    sub_B16FFC(&StringLiteral_18502/*"event_recvoer_servant_bg02"*/, v9);
     byte_40FD1CC = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventServantRecoveryFatigueItem_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_18502;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18502;
+  v11 = (System_Int32_array **)StringLiteral_18502/*"event_recvoer_servant_bg02"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18502/*"event_recvoer_servant_bg02"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = EventServantRecoveryFatigueItem_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_16475;
-  v12->OPEN_CLIP_NAME = (struct System_String_o *)StringLiteral_16475;
+  v13 = (System_Int32_array **)StringLiteral_16475/*"available_0"*/;
+  v12->OPEN_CLIP_NAME = (struct System_String_o *)StringLiteral_16475/*"available_0"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->OPEN_CLIP_NAME, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -513,7 +513,7 @@ void __fastcall EventServantRecoveryFatigueItem__SetServantInfo(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v19);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    sub_B16FFC(&StringLiteral_11712, v22);
+    sub_B16FFC(&StringLiteral_11712/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/, v22);
     byte_40FD1C7 = 1;
   }
   recoverAt = 0LL;
@@ -629,7 +629,7 @@ void __fastcall EventServantRecoveryFatigueItem__SetServantInfo(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v72 = LocalizationManager__Get((System_String_o *)StringLiteral_11712, 0LL);
+        v72 = LocalizationManager__Get((System_String_o *)StringLiteral_11712/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/, 0LL);
         v73 = System_String__Format(v72, (Il2CppObject *)RestTime4, 0LL);
         if ( !fatigueRecoveryTimeLabel )
           goto LABEL_78;
@@ -824,7 +824,7 @@ void __fastcall EventServantRecoveryFatigueItem__UpdateDisp(
   if ( (byte_40FD1C8 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_11712, v3);
+    sub_B16FFC(&StringLiteral_11712/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/, v3);
     byte_40FD1C8 = 1;
   }
   fatigueTime = this->fields.fatigueTime;
@@ -856,7 +856,7 @@ LABEL_15:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11712, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11712/*"SERVANT_RECOVERY_FATIGUE_REST_TIME"*/, 0LL);
   v10 = System_String__Format(v9, (Il2CppObject *)RestTime4, 0LL);
   if ( !v8 )
     goto LABEL_15;

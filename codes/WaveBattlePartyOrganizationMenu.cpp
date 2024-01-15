@@ -907,7 +907,7 @@ void __fastcall WaveBattlePartyOrganizationMenu__Open(
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v20);
     sub_B16FFC(&Method_WaveBattlePartyOrganizationMenu_EndOpen__, v21);
     sub_B16FFC(&Method_WaveBattlePartyOrganizationMenu_OnSelectWavePartyList__, v22);
-    sub_B16FFC(&StringLiteral_17080, v23);
+    sub_B16FFC(&StringLiteral_17080/*"buttontxt_formation_20"*/, v23);
     byte_40F674A = 1;
   }
   entity = 0LL;
@@ -1000,7 +1000,7 @@ void __fastcall WaveBattlePartyOrganizationMenu__Open(
               }
               AtlasManager__SetPartyOrganizationImage(
                 classInfoSpriteOrganization,
-                (System_String_o *)StringLiteral_17080,
+                (System_String_o *)StringLiteral_17080/*"buttontxt_formation_20"*/,
                 0LL);
               IsHintDialog = WaveBattlePartyOrganizationMenu__IsHintDialog(this, &isEvery, v43);
               if ( this->fields.hintDialogButton )
@@ -1235,7 +1235,7 @@ void __fastcall WaveBattlePartyOrganizationMenu__ShowHintDialogButton(
     sub_B16FFC(&Method_DataManager_GetMaster_QuestPhaseMaster___, v3);
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F674C = 1;
   }
   v18 = 0LL;
@@ -1245,7 +1245,7 @@ void __fastcall WaveBattlePartyOrganizationMenu__ShowHintDialogButton(
     goto LABEL_25;
   questId = questRestrictionInfo->fields.questId;
   questPhase = questRestrictionInfo->fields.questPhase;
-  message = (System_String_o *)StringLiteral_1;
+  message = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
   Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_QuestHintMaster___);

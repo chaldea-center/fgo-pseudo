@@ -30,25 +30,25 @@ void __fastcall EventTreasureBoxPanelComponent__GetTreasureBoxEventEnableTime(
   if ( (byte_40F9BE3 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_13316, v3);
-    sub_B16FFC(&StringLiteral_80, v4);
-    sub_B16FFC(&StringLiteral_15679, v5);
-    sub_B16FFC(&StringLiteral_15675, v6);
-    sub_B16FFC(&StringLiteral_13324, v7);
-    sub_B16FFC(&StringLiteral_13338, v8);
+    sub_B16FFC(&StringLiteral_13316/*"TIME_OVER_EVENTREWARD"*/, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v4);
+    sub_B16FFC(&StringLiteral_15679/*"[FFFF00,FFFF00]"*/, v5);
+    sub_B16FFC(&StringLiteral_15675/*"[E1A545,FEEF99]"*/, v6);
+    sub_B16FFC(&StringLiteral_13324/*"TIME_REST2_TIMEOVER"*/, v7);
+    sub_B16FFC(&StringLiteral_13338/*"TIME_REST_EVENTREWARD"*/, v8);
     byte_40F9BE3 = 1;
   }
   eventEndTime = this->fields.eventEndTime;
-  v10 = (System_String_o *)StringLiteral_15675;
+  v10 = (System_String_o *)StringLiteral_15675/*"[E1A545,FEEF99]"*/;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
   RestTime2 = LocalizationManager__GetRestTime2(eventEndTime, -1LL, 0LL);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_13324, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_13324/*"TIME_REST2_TIMEOVER"*/, 0LL);
   v13 = System_String__op_Equality(RestTime2, v12, 0LL);
-  v14 = (System_String_o *)StringLiteral_15679;
+  v14 = (System_String_o *)StringLiteral_15679/*"[FFFF00,FFFF00]"*/;
   if ( v13 )
   {
     if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -56,7 +56,7 @@ void __fastcall EventTreasureBoxPanelComponent__GetTreasureBoxEventEnableTime(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = &StringLiteral_13316;
+    v15 = &StringLiteral_13316/*"TIME_OVER_EVENTREWARD"*/;
   }
   else
   {
@@ -65,13 +65,13 @@ void __fastcall EventTreasureBoxPanelComponent__GetTreasureBoxEventEnableTime(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = &StringLiteral_13338;
+    v15 = &StringLiteral_13338/*"TIME_REST_EVENTREWARD"*/;
   }
   v16 = LocalizationManager__Get((System_String_o *)*v15, 0LL);
   v17 = System_String__Concat_43743732(v10, v16, 0LL);
   v18 = System_String__Concat_43743732(v14, RestTime2, 0LL);
   treasureBoxEndTimeLabel = this->fields.treasureBoxEndTimeLabel;
-  v20 = System_String__Concat_43746016(v17, (System_String_o *)StringLiteral_80, v18, 0LL);
+  v20 = System_String__Concat_43746016(v17, (System_String_o *)StringLiteral_80/*" "*/, v18, 0LL);
   if ( !treasureBoxEndTimeLabel )
     sub_B170D4();
   UILabel__set_text(treasureBoxEndTimeLabel, v20, 0LL);
@@ -196,10 +196,10 @@ void __fastcall EventTreasureBoxPanelComponent__Init(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
     sub_B16FFC(&Method_EventTreasureBoxPanelComponent___c__DisplayClass26_0__Init_b__0__, v21);
     sub_B16FFC(&EventTreasureBoxPanelComponent___c__DisplayClass26_0_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_13391, v23);
-    sub_B16FFC(&StringLiteral_13390, v24);
-    sub_B16FFC(&StringLiteral_13382, v25);
-    sub_B16FFC(&StringLiteral_1, v26);
+    sub_B16FFC(&StringLiteral_13391/*"TREASURE_BOX_USER_EVENT_ITEM"*/, v23);
+    sub_B16FFC(&StringLiteral_13390/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, v24);
+    sub_B16FFC(&StringLiteral_13382/*"TREASURE_BOX_DRAW_TEXT"*/, v25);
+    sub_B16FFC(&StringLiteral_1/*""*/, v26);
     byte_40F9BE1 = 1;
   }
   entity = 0LL;
@@ -236,17 +236,17 @@ void __fastcall EventTreasureBoxPanelComponent__Init(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_13391, 0LL);
+  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_13391/*"TREASURE_BOX_USER_EVENT_ITEM"*/, 0LL);
   if ( !userEventItemLb )
     goto LABEL_38;
   UILabel__set_text(userEventItemLb, v47, 0LL);
   payEventItemLb = this->fields.payEventItemLb;
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_13390, 0LL);
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_13390/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, 0LL);
   if ( !payEventItemLb )
     goto LABEL_38;
   UILabel__set_text(payEventItemLb, v49, 0LL);
   drawBtnLb = this->fields.drawBtnLb;
-  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_13382, 0LL);
+  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_13382/*"TREASURE_BOX_DRAW_TEXT"*/, 0LL);
   if ( !drawBtnLb )
     goto LABEL_38;
   UILabel__set_text(drawBtnLb, v51, 0LL);
@@ -313,7 +313,7 @@ void __fastcall EventTreasureBoxPanelComponent__Init(
   }
   else
   {
-    p_age = (struct System_String_o **)&StringLiteral_1;
+    p_age = (struct System_String_o **)&StringLiteral_1/*""*/;
   }
   v87 = *p_age;
   this->fields.itemName = *p_age;
@@ -567,9 +567,9 @@ void __fastcall EventTreasureBoxPanelComponent__Response(
     sub_B16FFC(&Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__0__, v13);
     sub_B16FFC(&Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__1__, v14);
     sub_B16FFC(&EventTreasureBoxPanelComponent___c__DisplayClass36_0_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_20980, v16);
-    sub_B16FFC(&StringLiteral_15571, v17);
-    sub_B16FFC(&StringLiteral_15807, v18);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v16);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v17);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v18);
     byte_40F9BEB = 1;
   }
   v19 = sub_B170CC(EventTreasureBoxPanelComponent___c__DisplayClass36_0_TypeInfo, result, method, v3, v4);
@@ -580,7 +580,7 @@ void __fastcall EventTreasureBoxPanelComponent__Response(
     goto LABEL_35;
   *(_QWORD *)(v19 + 16) = this;
   sub_B16F98((BattleServantConfConponent_o *)(v19 + 16), (System_Int32_array **)this, v20, v21, v22, v23, v24, v25);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     return;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -619,9 +619,9 @@ void __fastcall EventTreasureBoxPanelComponent__Response(
     goto LABEL_35;
   TreasureBoxBulkBuyConfirmMenu__Close(treasureBoxBuyWindow, 0LL);
   v34 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -718,13 +718,13 @@ void __fastcall EventTreasureBoxPanelComponent__SetEventEnableTime(
 {
   if ( (byte_40F9BE2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6947, method);
+    sub_B16FFC(&StringLiteral_6947/*"GetTreasureBoxEventEnableTime"*/, method);
     byte_40F9BE2 = 1;
   }
   EventTreasureBoxPanelComponent__GetTreasureBoxEventEnableTime(this, method);
   UnityEngine_MonoBehaviour__InvokeRepeating(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6947,
+    (System_String_o *)StringLiteral_6947/*"GetTreasureBoxEventEnableTime"*/,
     1.0,
     1.0,
     0LL);
@@ -1005,7 +1005,7 @@ void __fastcall EventTreasureBoxPanelComponent__loadTreasureBoxEffect(
     sub_B16FFC(&AssetManager_TypeInfo, method);
     sub_B16FFC(&Method_EventTreasureBoxPanelComponent_endloadEffect__, v6);
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_5842, v8);
+    sub_B16FFC(&StringLiteral_5842/*"Effect/TreasureBox"*/, v8);
     byte_40F9BE5 = 1;
   }
   v9 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, method, v2, v3, v4);
@@ -1016,7 +1016,7 @@ void __fastcall EventTreasureBoxPanelComponent__loadTreasureBoxEffect(
     0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5842, v9, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5842/*"Effect/TreasureBox"*/, v9, 1, 0LL);
 }
 
 
@@ -1071,13 +1071,13 @@ void __fastcall EventTreasureBoxPanelComponent___c__DisplayClass26_0___Init_b__0
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v3);
     sub_B16FFC(&int_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_22703, v5);
-    sub_B16FFC(&StringLiteral_22705, v6);
-    sub_B16FFC(&StringLiteral_22701, v7);
-    sub_B16FFC(&StringLiteral_22709, v8);
-    sub_B16FFC(&StringLiteral_22699, v9);
-    sub_B16FFC(&StringLiteral_22707, v10);
-    sub_B16FFC(&StringLiteral_22708, v11);
+    sub_B16FFC(&StringLiteral_22703/*"treasurechest_btn_open"*/, v5);
+    sub_B16FFC(&StringLiteral_22705/*"treasurechest_img_bg"*/, v6);
+    sub_B16FFC(&StringLiteral_22701/*"treasurechest_btn_info"*/, v7);
+    sub_B16FFC(&StringLiteral_22709/*"treasurechest_img_line"*/, v8);
+    sub_B16FFC(&StringLiteral_22699/*"treasurechest_bg_{0}"*/, v9);
+    sub_B16FFC(&StringLiteral_22707/*"treasurechest_img_frame_0{0}b"*/, v10);
+    sub_B16FFC(&StringLiteral_22708/*"treasurechest_img_frame_0{0}f"*/, v11);
     byte_40F706E = 1;
   }
   _4__this = this->fields.__4__this;
@@ -1091,7 +1091,7 @@ void __fastcall EventTreasureBoxPanelComponent___c__DisplayClass26_0___Init_b__0
                                             (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(Component_srcLineSprite, (System_String_o *)StringLiteral_22703, 0LL);
+  AtlasManager__SetEventUI(Component_srcLineSprite, (System_String_o *)StringLiteral_22703/*"treasurechest_btn_open"*/, 0LL);
   v15 = this->fields.__4__this;
   if ( !v15 )
     goto LABEL_18;
@@ -1101,7 +1101,7 @@ void __fastcall EventTreasureBoxPanelComponent___c__DisplayClass26_0___Init_b__0
   treasureBoxBg = v15->fields.treasureBoxBg;
   v35 = ent->fields.idx + 1;
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
-  v19 = System_String__Format((System_String_o *)StringLiteral_22699, v18, 0LL);
+  v19 = System_String__Format((System_String_o *)StringLiteral_22699/*"treasurechest_bg_{0}"*/, v18, 0LL);
   AtlasManager__SetEventUI(treasureBoxBg, v19, 0LL);
   v20 = this->fields.__4__this;
   if ( !v20 )
@@ -1112,7 +1112,7 @@ void __fastcall EventTreasureBoxPanelComponent___c__DisplayClass26_0___Init_b__0
   treasureIconFrameFront = v20->fields.treasureIconFrameFront;
   v34 = v21->fields.idx + 1;
   v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34);
-  v24 = System_String__Format((System_String_o *)StringLiteral_22708, v23, 0LL);
+  v24 = System_String__Format((System_String_o *)StringLiteral_22708/*"treasurechest_img_frame_0{0}f"*/, v23, 0LL);
   AtlasManager__SetEventUI(treasureIconFrameFront, v24, 0LL);
   v25 = this->fields.__4__this;
   if ( !v25 )
@@ -1123,19 +1123,19 @@ void __fastcall EventTreasureBoxPanelComponent___c__DisplayClass26_0___Init_b__0
   treasureIconFrameBack = v25->fields.treasureIconFrameBack;
   v33 = v26->fields.idx + 1;
   v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33);
-  v29 = System_String__Format((System_String_o *)StringLiteral_22707, v28, 0LL);
+  v29 = System_String__Format((System_String_o *)StringLiteral_22707/*"treasurechest_img_frame_0{0}b"*/, v28, 0LL);
   AtlasManager__SetEventUI(treasureIconFrameBack, v29, 0LL);
   v30 = this->fields.__4__this;
   if ( !v30
-    || (AtlasManager__SetEventUI(v30->fields.eventItemRootBg, (System_String_o *)StringLiteral_22705, 0LL),
+    || (AtlasManager__SetEventUI(v30->fields.eventItemRootBg, (System_String_o *)StringLiteral_22705/*"treasurechest_img_bg"*/, 0LL),
         (v31 = this->fields.__4__this) == 0LL)
-    || (AtlasManager__SetEventUI(v31->fields.treasureBoxDetailBtn, (System_String_o *)StringLiteral_22701, 0LL),
+    || (AtlasManager__SetEventUI(v31->fields.treasureBoxDetailBtn, (System_String_o *)StringLiteral_22701/*"treasurechest_btn_info"*/, 0LL),
         (v32 = this->fields.__4__this) == 0LL) )
   {
 LABEL_18:
     sub_B170D4();
   }
-  AtlasManager__SetEventUI(v32->fields.treasureBoxLine, (System_String_o *)StringLiteral_22709, 0LL);
+  AtlasManager__SetEventUI(v32->fields.treasureBoxLine, (System_String_o *)StringLiteral_22709/*"treasurechest_img_line"*/, 0LL);
 }
 
 

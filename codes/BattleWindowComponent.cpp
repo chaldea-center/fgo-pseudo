@@ -68,14 +68,14 @@ void __fastcall BattleWindowComponent__Close(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
     sub_B16FFC(&float_TypeInfo, v14);
     sub_B16FFC(&UnityEngine_Vector3_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_18046, v16);
-    sub_B16FFC(&StringLiteral_4175, v17);
-    sub_B16FFC(&StringLiteral_22584, v18);
-    sub_B16FFC(&StringLiteral_21175, v19);
-    sub_B16FFC(&StringLiteral_21419, v20);
-    sub_B16FFC(&StringLiteral_19856, v21);
-    sub_B16FFC(&StringLiteral_21173, v22);
-    sub_B16FFC(&StringLiteral_21803, v23);
+    sub_B16FFC(&StringLiteral_18046/*"easetype"*/, v16);
+    sub_B16FFC(&StringLiteral_4175/*"CompClose"*/, v17);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v18);
+    sub_B16FFC(&StringLiteral_21175/*"oncompletetarget"*/, v19);
+    sub_B16FFC(&StringLiteral_21419/*"position"*/, v20);
+    sub_B16FFC(&StringLiteral_19856/*"isLocal"*/, v21);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v22);
+    sub_B16FFC(&StringLiteral_21803/*"scale"*/, v23);
     sub_B16FFC(&iTween_TypeInfo, v24);
     byte_40F9022 = 1;
   }
@@ -107,25 +107,25 @@ void __fastcall BattleWindowComponent__Close(
     {
       ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
         v32,
-        StringLiteral_19856,
+        StringLiteral_19856/*"isLocal"*/,
         v33,
         v32->klass->vtable._24_Clear.methodPtr);
       v34 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
         v32,
-        StringLiteral_21175,
+        StringLiteral_21175/*"oncompletetarget"*/,
         v34,
         v32->klass->vtable._24_Clear.methodPtr);
       ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
         v32,
-        StringLiteral_21173,
-        StringLiteral_4175,
+        StringLiteral_21173/*"oncomplete"*/,
+        StringLiteral_4175/*"CompClose"*/,
         v32->klass->vtable._24_Clear.methodPtr);
       *(float *)v51 = this->fields.movetime;
       v35 = j_il2cpp_value_box_0(float_TypeInfo, v51);
       ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
         v32,
-        StringLiteral_22584,
+        StringLiteral_22584/*"time"*/,
         v35,
         v32->klass->vtable._24_Clear.methodPtr);
       type = this->fields.type;
@@ -138,14 +138,14 @@ void __fastcall BattleWindowComponent__Close(
           v48 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v51);
           ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
             v32,
-            StringLiteral_21803,
+            StringLiteral_21803/*"scale"*/,
             v48,
             v32->klass->vtable._24_Clear.methodPtr);
           v52 = 26;
           v49 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v52);
           ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
             v32,
-            StringLiteral_18046,
+            StringLiteral_18046/*"easetype"*/,
             v49,
             v32->klass->vtable._24_Clear.methodPtr);
           v50 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -161,14 +161,14 @@ void __fastcall BattleWindowComponent__Close(
           v38 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v51);
           ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
             v32,
-            StringLiteral_21419,
+            StringLiteral_21419/*"position"*/,
             v38,
             v32->klass->vtable._24_Clear.methodPtr);
           v52 = 26;
           v39 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v52);
           ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
             v32,
-            StringLiteral_18046,
+            StringLiteral_18046/*"easetype"*/,
             v39,
             v32->klass->vtable._24_Clear.methodPtr);
           v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -183,14 +183,14 @@ void __fastcall BattleWindowComponent__Close(
       v41 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v51);
       ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
         v32,
-        StringLiteral_21803,
+        StringLiteral_21803/*"scale"*/,
         v41,
         v32->klass->vtable._24_Clear.methodPtr);
       v52 = 26;
       v42 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v52);
       ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v32->klass->vtable._23_Add.method)(
         v32,
-        StringLiteral_18046,
+        StringLiteral_18046/*"easetype"*/,
         v42,
         v32->klass->vtable._24_Clear.methodPtr);
       v43 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -415,14 +415,14 @@ void __fastcall BattleWindowComponent__Open(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
     sub_B16FFC(&float_TypeInfo, v14);
     sub_B16FFC(&UnityEngine_Vector3_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_18046, v16);
-    sub_B16FFC(&StringLiteral_22584, v17);
-    sub_B16FFC(&StringLiteral_21175, v18);
-    sub_B16FFC(&StringLiteral_21419, v19);
-    sub_B16FFC(&StringLiteral_19856, v20);
-    sub_B16FFC(&StringLiteral_21173, v21);
-    sub_B16FFC(&StringLiteral_4176, v22);
-    sub_B16FFC(&StringLiteral_21803, v23);
+    sub_B16FFC(&StringLiteral_18046/*"easetype"*/, v16);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v17);
+    sub_B16FFC(&StringLiteral_21175/*"oncompletetarget"*/, v18);
+    sub_B16FFC(&StringLiteral_21419/*"position"*/, v19);
+    sub_B16FFC(&StringLiteral_19856/*"isLocal"*/, v20);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v21);
+    sub_B16FFC(&StringLiteral_4176/*"CompOpen"*/, v22);
+    sub_B16FFC(&StringLiteral_21803/*"scale"*/, v23);
     sub_B16FFC(&iTween_TypeInfo, v24);
     byte_40F9021 = 1;
   }
@@ -459,25 +459,25 @@ void __fastcall BattleWindowComponent__Open(
     goto LABEL_35;
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_19856,
+    StringLiteral_19856/*"isLocal"*/,
     v34,
     v33->klass->vtable._24_Clear.methodPtr);
   v35 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_21175,
+    StringLiteral_21175/*"oncompletetarget"*/,
     v35,
     v33->klass->vtable._24_Clear.methodPtr);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_21173,
-    StringLiteral_4176,
+    StringLiteral_21173/*"oncomplete"*/,
+    StringLiteral_4176/*"CompOpen"*/,
     v33->klass->vtable._24_Clear.methodPtr);
   *(float *)v61 = this->fields.movetime;
   v36 = j_il2cpp_value_box_0(float_TypeInfo, v61);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_22584,
+    StringLiteral_22584/*"time"*/,
     v36,
     v33->klass->vtable._24_Clear.methodPtr);
   type = this->fields.type;
@@ -493,14 +493,14 @@ void __fastcall BattleWindowComponent__Open(
         v39 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v61);
         ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
           v33,
-          StringLiteral_21419,
+          StringLiteral_21419/*"position"*/,
           v39,
           v33->klass->vtable._24_Clear.methodPtr);
         v60 = 27;
         v40 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v60);
         ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
           v33,
-          StringLiteral_18046,
+          StringLiteral_18046/*"easetype"*/,
           v40,
           v33->klass->vtable._24_Clear.methodPtr);
         v41 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -520,14 +520,14 @@ void __fastcall BattleWindowComponent__Open(
       v57 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v61);
       ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
         v33,
-        StringLiteral_21803,
+        StringLiteral_21803/*"scale"*/,
         v57,
         v33->klass->vtable._24_Clear.methodPtr);
       v60 = 27;
       v58 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v60);
       ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
         v33,
-        StringLiteral_18046,
+        StringLiteral_18046/*"easetype"*/,
         v58,
         v33->klass->vtable._24_Clear.methodPtr);
       v59 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -549,14 +549,14 @@ LABEL_35:
   v46 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, v61);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_21803,
+    StringLiteral_21803/*"scale"*/,
     v46,
     v33->klass->vtable._24_Clear.methodPtr);
   v60 = 27;
   v47 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v60);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_18046,
+    StringLiteral_18046/*"easetype"*/,
     v47,
     v33->klass->vtable._24_Clear.methodPtr);
   v48 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -611,10 +611,10 @@ System_String_o *__fastcall BattleWindowComponent__get_closeBtnPath(
 {
   if ( (byte_40F901F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F901F = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 

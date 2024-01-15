@@ -35,7 +35,7 @@ Il2CppObject *__fastcall BaseCore__CreateEarthPoint_object_(
   {
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, *(_QWORD *)&warId);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_5786, v12);
+    sub_B16FFC(&StringLiteral_5786/*"EarthPoint_"*/, v12);
     byte_40FA637 = 1;
   }
   mEarthPointPrefab = this->fields.mEarthPointPrefab;
@@ -53,7 +53,7 @@ Il2CppObject *__fastcall BaseCore__CreateEarthPoint_object_(
   if ( !v16
     || (transform = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(v16, 0LL),
         v18 = System_Int32__ToString((int32_t)&v21, 0LL),
-        v19 = System_String__Concat_43743732((System_String_o *)StringLiteral_5786, v18, 0LL),
+        v19 = System_String__Concat_43743732((System_String_o *)StringLiteral_5786/*"EarthPoint_"*/, v18, 0LL),
         !transform) )
   {
     sub_B170D4();
@@ -147,7 +147,7 @@ BaseEarthPoint_o *__fastcall BaseCore__GetEarthPoint(BaseCore_o *this, int32_t w
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BaseEarthPoint___, *(_QWORD *)&warId);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_5786, v5);
+    sub_B16FFC(&StringLiteral_5786/*"EarthPoint_"*/, v5);
     byte_40F6EF4 = 1;
   }
   mEarthPointRoot = this->fields.mEarthPointRoot;
@@ -155,7 +155,7 @@ BaseEarthPoint_o *__fastcall BaseCore__GetEarthPoint(BaseCore_o *this, int32_t w
     goto LABEL_13;
   transform = UnityEngine_GameObject__get_transform(mEarthPointRoot, 0LL);
   v8 = System_Int32__ToString((int32_t)&v14, 0LL);
-  v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_5786, v8, 0LL);
+  v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_5786/*"EarthPoint_"*/, v8, 0LL);
   if ( !transform )
     goto LABEL_13;
   v10 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, v9, 0LL);

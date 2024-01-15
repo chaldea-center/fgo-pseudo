@@ -570,10 +570,10 @@ void __fastcall BattleServantConfConponent__GetAppendSkillInfo(
     sub_B16FFC(&int___TypeInfo, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&string___TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_26, v18);
-    sub_B16FFC(&StringLiteral_3296, v19);
-    sub_B16FFC(&StringLiteral_3284, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v18);
+    sub_B16FFC(&StringLiteral_3296/*"COND_TYPE_TITLE"*/, v19);
+    sub_B16FFC(&StringLiteral_3284/*"COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40F8A0F = 1;
   }
   if ( releaseSkillIds
@@ -740,7 +740,7 @@ LABEL_85:
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
             Master_WarQuestSelectionMaster = (__int64)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_3296,
+                                                        (System_String_o *)StringLiteral_3296/*"COND_TYPE_TITLE"*/,
                                                         0LL);
             if ( !v111 )
               goto LABEL_84;
@@ -765,7 +765,7 @@ LABEL_84:
               break;
             Master_WarQuestSelectionMaster = System_String__op_Inequality(
                                                *(System_String_o **)((char *)&v118->obj.klass + v70),
-                                               (System_String_o *)StringLiteral_1,
+                                               (System_String_o *)StringLiteral_1/*""*/,
                                                0LL);
             if ( (Master_WarQuestSelectionMaster & 1) != 0 )
             {
@@ -777,7 +777,7 @@ LABEL_84:
               v120 = (BattleServantConfConponent_o *)((char *)v119 + v70);
               v121 = (System_Int32_array **)System_String__Concat_43743732(
                                               *(System_String_o **)((char *)&v119->obj.klass + v70),
-                                              (System_String_o *)StringLiteral_26,
+                                              (System_String_o *)StringLiteral_26/*"\n"*/,
                                               0LL);
               v120->klass = (BattleServantConfConponent_c *)v121;
               sub_B16F98(v120, v121, v122, v123, v124, v125, v126, v127);
@@ -793,7 +793,7 @@ LABEL_84:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v130 = LocalizationManager__Get((System_String_o *)StringLiteral_3284, 0LL);
+            v130 = LocalizationManager__Get((System_String_o *)StringLiteral_3284/*"COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE"*/, 0LL);
             v96 = (System_Int32_array **)System_String__Concat_43743732(v129, v130, 0LL);
             v95 = (BattleServantConfConponent_o *)((char *)v128 + v70);
             *(Il2CppClass **)((char *)&v128->obj.klass + v70) = (Il2CppClass *)v96;
@@ -838,13 +838,13 @@ LABEL_84:
           if ( !*explanationList )
             goto LABEL_84;
           releaseStateList = v170;
-          Master_WarQuestSelectionMaster = (__int64)StringLiteral_1;
-          if ( StringLiteral_1 )
+          Master_WarQuestSelectionMaster = (__int64)StringLiteral_1/*""*/;
+          if ( StringLiteral_1/*""*/ )
           {
-            Master_WarQuestSelectionMaster = sub_B170BC(StringLiteral_1, v104->obj.klass->_1.element_class);
+            Master_WarQuestSelectionMaster = sub_B170BC(StringLiteral_1/*""*/, v104->obj.klass->_1.element_class);
             if ( !Master_WarQuestSelectionMaster )
               goto LABEL_85;
-            v63 = (System_Int32_array **)StringLiteral_1;
+            v63 = (System_Int32_array **)StringLiteral_1/*""*/;
           }
           else
           {
@@ -945,7 +945,7 @@ void __fastcall BattleServantConfConponent__Initialize(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_2437, v8);
+    sub_B16FFC(&StringLiteral_2437/*"BATTLE_HASNOT_TD"*/, v8);
     byte_40F8A09 = 1;
   }
   this->fields.data = data;
@@ -1017,7 +1017,7 @@ LABEL_34:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2437, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2437/*"BATTLE_HASNOT_TD"*/, 0LL);
   if ( !havenotTdLabel )
     goto LABEL_34;
   UILabel__set_text(havenotTdLabel, v23, 0LL);
@@ -1048,12 +1048,12 @@ bool __fastcall BattleServantConfConponent__IsLastOpenServantAbility(
 {
   if ( (byte_40F8A15 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2774, method);
+    sub_B16FFC(&StringLiteral_2774/*"BattleServantDetailTab"*/, method);
     byte_40F8A15 = 1;
   }
-  return !UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_2774, 0LL)
-      || !UnityEngine_PlayerPrefs__GetInt_34836848((System_String_o *)StringLiteral_2774, 0LL)
-      || UnityEngine_PlayerPrefs__GetInt_34836848((System_String_o *)StringLiteral_2774, 0LL) != 1;
+  return !UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_2774/*"BattleServantDetailTab"*/, 0LL)
+      || !UnityEngine_PlayerPrefs__GetInt_34836848((System_String_o *)StringLiteral_2774/*"BattleServantDetailTab"*/, 0LL)
+      || UnityEngine_PlayerPrefs__GetInt_34836848((System_String_o *)StringLiteral_2774/*"BattleServantDetailTab"*/, 0LL) != 1;
 }
 
 
@@ -1203,11 +1203,11 @@ void __fastcall BattleServantConfConponent__OnClickServantAbility(
   if ( (byte_40F8A16 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16911, v3);
-    sub_B16FFC(&StringLiteral_16906, v4);
-    sub_B16FFC(&StringLiteral_17025, v5);
-    sub_B16FFC(&StringLiteral_2774, v6);
-    this = (BattleServantConfConponent_o *)sub_B16FFC(&StringLiteral_17023, v7);
+    sub_B16FFC(&StringLiteral_16911/*"btn_bg_on_1"*/, v3);
+    sub_B16FFC(&StringLiteral_16906/*"btn_bg_off_1"*/, v4);
+    sub_B16FFC(&StringLiteral_17025/*"btn_txt_servant_states_off"*/, v5);
+    sub_B16FFC(&StringLiteral_2774/*"BattleServantDetailTab"*/, v6);
+    this = (BattleServantConfConponent_o *)sub_B16FFC(&StringLiteral_17023/*"btn_txt_servant_property_on"*/, v7);
     byte_40F8A16 = 1;
   }
   if ( !v2->fields.isOpenAfter )
@@ -1240,11 +1240,11 @@ void __fastcall BattleServantConfConponent__OnClickServantAbility(
   AbillityBtn = v2->fields.AbillityBtn;
   if ( !AbillityBtn )
     goto LABEL_21;
-  UIButton__set_normalSprite(AbillityBtn, (System_String_o *)StringLiteral_16911, 0LL);
+  UIButton__set_normalSprite(AbillityBtn, (System_String_o *)StringLiteral_16911/*"btn_bg_on_1"*/, 0LL);
   AbillityName = v2->fields.AbillityName;
   if ( !AbillityName )
     goto LABEL_21;
-  UISprite__set_spriteName(AbillityName, (System_String_o *)StringLiteral_17023, 0LL);
+  UISprite__set_spriteName(AbillityName, (System_String_o *)StringLiteral_17023/*"btn_txt_servant_property_on"*/, 0LL);
   BattleServantStateObj = v2->fields.BattleServantStateObj;
   if ( !BattleServantStateObj )
     goto LABEL_21;
@@ -1253,14 +1253,14 @@ void __fastcall BattleServantConfConponent__OnClickServantAbility(
   if ( !StateTab
     || (UnityEngine_GameObject__SetActive(StateTab, 0, 0LL), (StateBtnBg = v2->fields.StateBtnBg) == 0LL)
     || (UnityEngine_GameObject__SetActive(StateBtnBg, 1, 0LL), (StateBtn = v2->fields.StateBtn) == 0LL)
-    || (UIButton__set_normalSprite(StateBtn, (System_String_o *)StringLiteral_16906, 0LL),
+    || (UIButton__set_normalSprite(StateBtn, (System_String_o *)StringLiteral_16906/*"btn_bg_off_1"*/, 0LL),
         (StateName = v2->fields.StateName) == 0LL) )
   {
 LABEL_21:
     sub_B170D4();
   }
-  UISprite__set_spriteName(StateName, (System_String_o *)StringLiteral_17025, 0LL);
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_2774, 0, 0LL);
+  UISprite__set_spriteName(StateName, (System_String_o *)StringLiteral_17025/*"btn_txt_servant_states_off"*/, 0LL);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_2774/*"BattleServantDetailTab"*/, 0, 0LL);
 }
 
 
@@ -1289,11 +1289,11 @@ void __fastcall BattleServantConfConponent__OnClickServantState(
   if ( (byte_40F8A17 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16911, v3);
-    sub_B16FFC(&StringLiteral_17026, v4);
-    sub_B16FFC(&StringLiteral_17022, v5);
-    sub_B16FFC(&StringLiteral_16906, v6);
-    this = (BattleServantConfConponent_o *)sub_B16FFC(&StringLiteral_2774, v7);
+    sub_B16FFC(&StringLiteral_16911/*"btn_bg_on_1"*/, v3);
+    sub_B16FFC(&StringLiteral_17026/*"btn_txt_servant_states_on"*/, v4);
+    sub_B16FFC(&StringLiteral_17022/*"btn_txt_servant_property_off"*/, v5);
+    sub_B16FFC(&StringLiteral_16906/*"btn_bg_off_1"*/, v6);
+    this = (BattleServantConfConponent_o *)sub_B16FFC(&StringLiteral_2774/*"BattleServantDetailTab"*/, v7);
     byte_40F8A17 = 1;
   }
   if ( !v2->fields.isOpenAfter )
@@ -1326,11 +1326,11 @@ void __fastcall BattleServantConfConponent__OnClickServantState(
   AbillityBtn = v2->fields.AbillityBtn;
   if ( !AbillityBtn )
     goto LABEL_22;
-  UIButton__set_normalSprite(AbillityBtn, (System_String_o *)StringLiteral_16906, 0LL);
+  UIButton__set_normalSprite(AbillityBtn, (System_String_o *)StringLiteral_16906/*"btn_bg_off_1"*/, 0LL);
   AbillityName = v2->fields.AbillityName;
   if ( !AbillityName )
     goto LABEL_22;
-  UISprite__set_spriteName(AbillityName, (System_String_o *)StringLiteral_17022, 0LL);
+  UISprite__set_spriteName(AbillityName, (System_String_o *)StringLiteral_17022/*"btn_txt_servant_property_off"*/, 0LL);
   BattleServantStateObj = v2->fields.BattleServantStateObj;
   if ( !BattleServantStateObj )
     goto LABEL_22;
@@ -1339,14 +1339,14 @@ void __fastcall BattleServantConfConponent__OnClickServantState(
   if ( !StateTab
     || (UnityEngine_GameObject__SetActive(StateTab, 1, 0LL), (StateBtnBg = v2->fields.StateBtnBg) == 0LL)
     || (UnityEngine_GameObject__SetActive(StateBtnBg, 0, 0LL), (StateBtn = v2->fields.StateBtn) == 0LL)
-    || (UIButton__set_normalSprite(StateBtn, (System_String_o *)StringLiteral_16911, 0LL),
+    || (UIButton__set_normalSprite(StateBtn, (System_String_o *)StringLiteral_16911/*"btn_bg_on_1"*/, 0LL),
         (StateName = v2->fields.StateName) == 0LL) )
   {
 LABEL_22:
     sub_B170D4();
   }
-  UISprite__set_spriteName(StateName, (System_String_o *)StringLiteral_17026, 0LL);
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_2774, 1, 0LL);
+  UISprite__set_spriteName(StateName, (System_String_o *)StringLiteral_17026/*"btn_txt_servant_states_on"*/, 0LL);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_2774/*"BattleServantDetailTab"*/, 1, 0LL);
 }
 
 
@@ -1597,7 +1597,7 @@ void __fastcall BattleServantConfConponent__SetAppendSkillList(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_19611, v12);
+    sub_B16FFC(&StringLiteral_19611/*"img_txt_extraskill"*/, v12);
     byte_40F8A0E = 1;
   }
   titleList = 0LL;
@@ -1653,7 +1653,7 @@ void __fastcall BattleServantConfConponent__SetAppendSkillList(
   v20 = this->fields.AppendSkillTitle;
   if ( !v20 )
     goto LABEL_100;
-  UISprite__set_spriteName(v20, (System_String_o *)StringLiteral_19611, 0LL);
+  UISprite__set_spriteName(v20, (System_String_o *)StringLiteral_19611/*"img_txt_extraskill"*/, 0LL);
   v21 = this->fields.AppendSkillTitle;
   if ( !v21 )
     goto LABEL_100;
@@ -1946,18 +1946,18 @@ bool __fastcall BattleServantConfConponent__SetAtlas(BattleServantConfConponent_
     sub_B16FFC(&AssetManager_TypeInfo, v3);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v4);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_2743, v6);
-    sub_B16FFC(&StringLiteral_2758, v7);
+    sub_B16FFC(&StringLiteral_2743/*"Battle/Common"*/, v6);
+    sub_B16FFC(&StringLiteral_2758/*"BattleAssetUIAtlas"*/, v7);
     byte_40F8A18 = 1;
   }
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2743, 0LL);
+  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2743/*"Battle/Common"*/, 0LL);
   if ( !AssetStorage )
     goto LABEL_14;
   Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                  AssetStorage,
-                                                                 (System_String_o *)StringLiteral_2758,
+                                                                 (System_String_o *)StringLiteral_2758/*"BattleAssetUIAtlas"*/,
                                                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2002,7 +2002,7 @@ void __fastcall BattleServantConfConponent__SetClassBoardSkillList(
   if ( (byte_40F8A1A & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_20387, v3);
+    sub_B16FFC(&StringLiteral_20387/*"menu_txt_class_score"*/, v3);
     byte_40F8A1A = 1;
   }
   classBoardSkillObj = (UnityEngine_Object_o *)this->fields.classBoardSkillObj;
@@ -2037,7 +2037,7 @@ void __fastcall BattleServantConfConponent__SetClassBoardSkillList(
         ((void (__fastcall *)(struct BattleServantClassBoardSkillEffectListComponent_o *, struct UIAtlas_o *, __int64, Il2CppMethodPointer))v10->klass->vtable._5_SetSkillTitle.method)(
           v10,
           this->fields.BattleAssetUIAtlas,
-          StringLiteral_20387,
+          StringLiteral_20387/*"menu_txt_class_score"*/,
           v10->klass->vtable._6_SetSkillInfoObject.methodPtr);
         v12 = this->fields.classBoardSkillObj;
         if ( v12 )
@@ -2155,7 +2155,7 @@ void __fastcall BattleServantConfConponent__SetClassSkillList(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_19598, v12);
+    sub_B16FFC(&StringLiteral_19598/*"img_txt_classskill"*/, v12);
     byte_40F8A0D = 1;
   }
   v83 = 0LL;
@@ -2212,7 +2212,7 @@ void __fastcall BattleServantConfConponent__SetClassSkillList(
   v22 = this->fields.ClassSkillTitle;
   if ( !v22 )
     goto LABEL_46;
-  UISprite__set_spriteName(v22, (System_String_o *)StringLiteral_19598, 0LL);
+  UISprite__set_spriteName(v22, (System_String_o *)StringLiteral_19598/*"img_txt_classskill"*/, 0LL);
   v23 = this->fields.ClassSkillTitle;
   if ( !v23 )
     goto LABEL_46;
@@ -2692,7 +2692,7 @@ void __fastcall BattleServantConfConponent__SetCommandCodeSkillList(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
     sub_B16FFC(&Method_BattleServantConfConponent___c__SetCommandCodeSkillList_b__79_0__, v13);
     sub_B16FFC(&BattleServantConfConponent___c_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_2407, v15);
+    sub_B16FFC(&StringLiteral_2407/*"BATTLE_DIALOG_DETAIL_NOCOMMANDCODE"*/, v15);
     byte_40F8A11 = 1;
   }
   idList = 0LL;
@@ -2803,7 +2803,7 @@ LABEL_91:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v78 = LocalizationManager__Get((System_String_o *)StringLiteral_2407, 0LL);
+    v78 = LocalizationManager__Get((System_String_o *)StringLiteral_2407/*"BATTLE_DIALOG_DETAIL_NOCOMMANDCODE"*/, 0LL);
     if ( NoCommandCodeLabel )
     {
       UILabel__set_text(NoCommandCodeLabel, v78, 0LL);
@@ -3027,23 +3027,23 @@ System_String_o *__fastcall BattleServantConfConponent__get_closeBtnPath(
   if ( (byte_40F8A19 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_17409, v3);
-    sub_B16FFC(&StringLiteral_14466, v4);
+    sub_B16FFC(&StringLiteral_17409/*"close"*/, v3);
+    sub_B16FFC(&StringLiteral_14466/*"Top/close"*/, v4);
     byte_40F8A19 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     sub_B170D4();
-  v6 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_14466, 0LL);
+  v6 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_14466/*"Top/close"*/, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
   v7 = UnityEngine_Object__op_Inequality(v6, 0LL, 0LL);
-  v8 = &StringLiteral_17409;
+  v8 = &StringLiteral_17409/*"close"*/;
   if ( v7 )
-    v8 = &StringLiteral_14466;
+    v8 = &StringLiteral_14466/*"Top/close"*/;
   return (System_String_o *)*v8;
 }
 
@@ -3239,10 +3239,10 @@ void __fastcall BattleServantConfConponent__setConfData(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_B16FFC(&StringLiteral_9356, v19);
-    sub_B16FFC(&StringLiteral_23395, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
-    sub_B16FFC(&StringLiteral_8960, v22);
+    sub_B16FFC(&StringLiteral_9356/*"NP_UNKNOWN"*/, v19);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
+    sub_B16FFC(&StringLiteral_8960/*"Max {0}%"*/, v22);
     byte_40F8A0A = 1;
   }
   lv = 0;
@@ -3301,7 +3301,7 @@ void __fastcall BattleServantConfConponent__setConfData(
       v34 = this->fields.atklabel;
       atk = v33->fields.atk;
       v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &atk);
-      v36 = System_String__Format((System_String_o *)StringLiteral_23395, v35, 0LL);
+      v36 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v35, 0LL);
       if ( !v34 )
         goto LABEL_171;
       UILabel__set_text(v34, v36, 0LL);
@@ -3449,7 +3449,7 @@ void __fastcall BattleServantConfConponent__setConfData(
                 if ( !this->fields.maxNp )
                   goto LABEL_171;
                 v62 = Entity;
-                UILabel__set_text(this->fields.maxNp, (System_String_o *)StringLiteral_1, 0LL);
+                UILabel__set_text(this->fields.maxNp, (System_String_o *)StringLiteral_1/*""*/, 0LL);
                 if ( v62 )
                 {
                   npdetail = (UIWidget_o *)this->fields.npdetail;
@@ -3476,7 +3476,7 @@ void __fastcall BattleServantConfConponent__setConfData(
                   maxNp = this->fields.maxNp;
                   v135 = 100 * v62->fields.gaugeCount;
                   v67 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v135);
-                  v68 = System_String__Format((System_String_o *)StringLiteral_8960, v67, 0LL);
+                  v68 = System_String__Format((System_String_o *)StringLiteral_8960/*"Max {0}%"*/, v67, 0LL);
                   if ( !maxNp )
                     goto LABEL_171;
                   UILabel__set_text(maxNp, v68, 0LL);
@@ -3504,7 +3504,7 @@ void __fastcall BattleServantConfConponent__setConfData(
                 if ( v71 )
                   v72 = v71;
                 else
-                  v72 = (System_String_o *)StringLiteral_1;
+                  v72 = (System_String_o *)StringLiteral_1/*""*/;
                 UILabel__set_text(nplevel, v72, 0LL);
                 v73 = (UnityEngine_Object_o *)this->fields.data;
                 if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3560,7 +3560,7 @@ void __fastcall BattleServantConfConponent__setConfData(
                                 {
                                   if ( !v102 )
                                     goto LABEL_171;
-                                  p_mText = (System_String_o **)&StringLiteral_1;
+                                  p_mText = (System_String_o **)&StringLiteral_1/*""*/;
                                 }
                                 UILabel__set_text(v102, *p_mText, 0LL);
                                 unknownNp = (UnityEngine_Object_o *)this->fields.unknownNp;
@@ -3574,7 +3574,7 @@ void __fastcall BattleServantConfConponent__setConfData(
                                   v105 = this->fields.unknownNp;
                                   if ( IsNpDetailActive )
                                   {
-                                    v106 = (System_String_o *)StringLiteral_1;
+                                    v106 = (System_String_o *)StringLiteral_1/*""*/;
                                     if ( !v105 )
                                       goto LABEL_171;
                                   }
@@ -3585,7 +3585,7 @@ void __fastcall BattleServantConfConponent__setConfData(
                                     {
                                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                     }
-                                    v106 = LocalizationManager__Get((System_String_o *)StringLiteral_9356, 0LL);
+                                    v106 = LocalizationManager__Get((System_String_o *)StringLiteral_9356/*"NP_UNKNOWN"*/, 0LL);
                                     if ( !v105 )
                                       goto LABEL_171;
                                   }

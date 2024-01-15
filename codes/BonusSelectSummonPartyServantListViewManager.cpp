@@ -57,14 +57,14 @@ void __fastcall BonusSelectSummonPartyServantListViewManager___cctor(const Metho
   {
     sub_B16FFC(&BonusSelectSummonPartyServantListViewManager_TypeInfo, v1);
     sub_B16FFC(&ListViewSort_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1102, v9);
-    sub_B16FFC(&StringLiteral_2836, v10);
-    sub_B16FFC(&StringLiteral_1004, v11);
+    sub_B16FFC(&StringLiteral_1102/*"2"*/, v9);
+    sub_B16FFC(&StringLiteral_2836/*"BonusSelectSummonPartyServant"*/, v10);
+    sub_B16FFC(&StringLiteral_1004/*"1"*/, v11);
     byte_40FB127 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BonusSelectSummonPartyServantListViewManager_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_2836;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2836;
+  v13 = (System_Int32_array **)StringLiteral_2836/*"BonusSelectSummonPartyServant"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2836/*"BonusSelectSummonPartyServant"*/;
   sub_B16F98(static_fields, v13, v2, v3, v4, v5, v6, v7);
   SORT_SAVE_KEY = BonusSelectSummonPartyServantListViewManager_TypeInfo->static_fields->SORT_SAVE_KEY;
   v19 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v15, v16, v17, v18);
@@ -82,7 +82,7 @@ void __fastcall BonusSelectSummonPartyServantListViewManager___cctor(const Metho
     v26);
   v27 = System_String__Concat_43743732(
           BonusSelectSummonPartyServantListViewManager_TypeInfo->static_fields->SORT_SAVE_KEY,
-          (System_String_o *)StringLiteral_1004,
+          (System_String_o *)StringLiteral_1004/*"1"*/,
           0LL);
   v32 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v28, v29, v30, v31);
   ListViewSort___ctor_30208480(v32, v27, 27, 0, 0LL);
@@ -99,7 +99,7 @@ void __fastcall BonusSelectSummonPartyServantListViewManager___cctor(const Metho
     v39);
   v40 = System_String__Concat_43743732(
           BonusSelectSummonPartyServantListViewManager_TypeInfo->static_fields->SORT_SAVE_KEY,
-          (System_String_o *)StringLiteral_1102,
+          (System_String_o *)StringLiteral_1102/*"2"*/,
           0LL);
   v45 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v41, v42, v43, v44);
   ListViewSort___ctor_30208480(v45, v40, 27, 0, 0LL);
@@ -345,7 +345,7 @@ void __fastcall BonusSelectSummonPartyServantListViewManager__CreateList(
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&Method_BonusSelectSummonPartyServantListViewManager___c__DisplayClass17_0__CreateList_b__0__, v17);
     sub_B16FFC(&BonusSelectSummonPartyServantListViewManager___c__DisplayClass17_0_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_11842, v19);
+    sub_B16FFC(&StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, v19);
     byte_40FB116 = 1;
   }
   gachaBonusSelectLineupEntities = 0LL;
@@ -548,7 +548,7 @@ LABEL_60:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v81 = LocalizationManager__Get((System_String_o *)StringLiteral_11842, 0LL);
+  v81 = LocalizationManager__Get((System_String_o *)StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
 LABEL_59:
     sub_B170D4();
@@ -1253,8 +1253,8 @@ void __fastcall BonusSelectSummonPartyServantListViewManager__SetFilterButtonIma
 
   if ( (byte_40FB118 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16927, method);
-    sub_B16FFC(&StringLiteral_16926, v3);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, method);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v3);
     byte_40FB118 = 1;
   }
   partyServantSelectMenu = this->fields.partyServantSelectMenu;
@@ -1287,9 +1287,9 @@ LABEL_14:
   v13 = ListViewSort__CheckBonusSelectSummonFilterDefaultAll(sort, v7, -1, 0LL);
   if ( !filterSprite )
     goto LABEL_19;
-  v14 = (System_String_o **)&StringLiteral_16926;
+  v14 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
   if ( !v13 )
-    v14 = (System_String_o **)&StringLiteral_16927;
+    v14 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
   UISprite__set_spriteName(filterSprite, *v14, 0LL);
 }
 
@@ -1382,17 +1382,17 @@ void __fastcall BonusSelectSummonPartyServantListViewManager__UpdateAscendingOrd
 
   if ( (byte_40FB119 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17038, method);
-    sub_B16FFC(&StringLiteral_16985, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, method);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v3);
     byte_40FB119 = 1;
   }
   sort = this->fields.sort;
   if ( !sort || (sortExplanationSprite = this->fields.sortExplanationSprite) == 0LL )
     sub_B170D4();
   if ( sort->fields.isAscendingOrder )
-    v6 = (System_String_o **)&StringLiteral_17038;
+    v6 = (System_String_o **)&StringLiteral_17038/*"btn_txt_up"*/;
   else
-    v6 = (System_String_o **)&StringLiteral_16985;
+    v6 = (System_String_o **)&StringLiteral_16985/*"btn_txt_down"*/;
   UISprite__set_spriteName(sortExplanationSprite, *v6, 0LL);
 }
 

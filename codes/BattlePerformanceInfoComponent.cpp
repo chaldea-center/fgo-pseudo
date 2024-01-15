@@ -248,7 +248,7 @@ void __fastcall BattlePerformanceInfoComponent__drawTime(
   {
     sub_B16FFC(&int_TypeInfo, showTimeSeconds);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_2460, v6);
+    sub_B16FFC(&StringLiteral_2460/*"BATTLE_RAID_REMAINING_TIME"*/, v6);
     byte_40FA821 = 1;
   }
   v29 = 0LL;
@@ -260,7 +260,7 @@ void __fastcall BattlePerformanceInfoComponent__drawTime(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2460, 0LL);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2460/*"BATTLE_RAID_REMAINING_TIME"*/, 0LL);
     v28 = 0;
     v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
     Minutes = 0;
@@ -288,7 +288,7 @@ LABEL_20:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_2460, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_2460/*"BATTLE_RAID_REMAINING_TIME"*/, 0LL);
   v28 = v9;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
   v31.fields._ticks = (int64_t)&v29;
@@ -688,8 +688,8 @@ void __fastcall BattlePerformanceInfoComponent__setShowElapsedTurn(
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&state);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_2432, v9);
-    sub_B16FFC(&StringLiteral_2524, v10);
+    sub_B16FFC(&StringLiteral_2432/*"BATTLE_ELAPSED_TURN"*/, v9);
+    sub_B16FFC(&StringLiteral_2524/*"BATTLE_TOTALELAPSED_TURN"*/, v10);
     byte_40FA81F = 1;
   }
   nokoriTurnObject = (UnityEngine_Object_o *)this->fields.nokoriTurnObject;
@@ -721,7 +721,7 @@ void __fastcall BattlePerformanceInfoComponent__setShowElapsedTurn(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2524, 0LL);
+      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2524/*"BATTLE_TOTALELAPSED_TURN"*/, 0LL);
       v20 = now;
       v17 = &v20;
     }
@@ -735,7 +735,7 @@ void __fastcall BattlePerformanceInfoComponent__setShowElapsedTurn(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2432, 0LL);
+      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2432/*"BATTLE_ELAPSED_TURN"*/, 0LL);
       v17 = &v21;
       v21 = now;
     }
@@ -777,8 +777,8 @@ void __fastcall BattlePerformanceInfoComponent__setShowLimitTurn(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&now);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_2527, v10);
-    sub_B16FFC(&StringLiteral_2461, v11);
+    sub_B16FFC(&StringLiteral_2527/*"BATTLE_WARBOARD_REMAINING"*/, v10);
+    sub_B16FFC(&StringLiteral_2461/*"BATTLE_RAID_REMAINING_TURN"*/, v11);
     byte_40FA81E = 1;
   }
   v23 = 0;
@@ -814,7 +814,7 @@ void __fastcall BattlePerformanceInfoComponent__setShowLimitTurn(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v19 = &StringLiteral_2527;
+      v19 = &StringLiteral_2527/*"BATTLE_WARBOARD_REMAINING"*/;
     }
     else
     {
@@ -823,7 +823,7 @@ void __fastcall BattlePerformanceInfoComponent__setShowLimitTurn(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v19 = &StringLiteral_2461;
+      v19 = &StringLiteral_2461/*"BATTLE_RAID_REMAINING_TURN"*/;
     }
     v20 = LocalizationManager__Get((System_String_o *)*v19, 0LL);
     v21 = (Il2CppObject *)System_Int32__ToString((int32_t)&v23, 0LL);
@@ -912,7 +912,7 @@ void __fastcall BattlePerformanceInfoComponent__setShowWave(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&now);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_23428, v10);
+    sub_B16FFC(&StringLiteral_23428/*"{0:D}"*/, v10);
     byte_40FA823 = 1;
   }
   waveShowObject = (UnityEngine_Object_o *)this->fields.waveShowObject;
@@ -930,13 +930,13 @@ void __fastcall BattlePerformanceInfoComponent__setShowWave(
     nowWaveLabel = this->fields.nowWaveLabel;
     v21 = now + 1;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
-    v15 = System_String__Format((System_String_o *)StringLiteral_23428, v14, 0LL);
+    v15 = System_String__Format((System_String_o *)StringLiteral_23428/*"{0:D}"*/, v14, 0LL);
     if ( !nowWaveLabel
       || (UILabel__set_text(nowWaveLabel, v15, 0LL),
           maxWaveLabel = this->fields.maxWaveLabel,
           v20 = max + 1,
           v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20),
-          v18 = System_String__Format((System_String_o *)StringLiteral_23428, v17, 0LL),
+          v18 = System_String__Format((System_String_o *)StringLiteral_23428/*"{0:D}"*/, v17, 0LL),
           !maxWaveLabel)
       || (UILabel__set_text(maxWaveLabel, v18, 0LL), !data) )
     {
@@ -970,7 +970,7 @@ void __fastcall BattlePerformanceInfoComponent__setStockSprite(
   if ( (byte_40FA825 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&index);
-    sub_B16FFC(&StringLiteral_19253, v5);
+    sub_B16FFC(&StringLiteral_19253/*"icon_drop_item_0"*/, v5);
     byte_40FA825 = 1;
   }
   stockPSrpite = (UnityEngine_Behaviour_o *)this->fields.stockPSrpite;
@@ -981,7 +981,7 @@ void __fastcall BattlePerformanceInfoComponent__setStockSprite(
         stockSprite = this->fields.stockSprite,
         v15 = index / 3 + 1,
         v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15),
-        v10 = System_String__Concat((Il2CppObject *)StringLiteral_19253, v9, 0LL),
+        v10 = System_String__Concat((Il2CppObject *)StringLiteral_19253/*"icon_drop_item_0"*/, v9, 0LL),
         !stockSprite) )
   {
 LABEL_14:
@@ -1249,9 +1249,9 @@ void __fastcall BattlePerformanceInfoComponent__updateNokoriEnemyCount(
   {
     sub_B16FFC(&int_TypeInfo, bData);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_2527, v6);
-    sub_B16FFC(&StringLiteral_2456, v7);
-    sub_B16FFC(&StringLiteral_23783, v8);
+    sub_B16FFC(&StringLiteral_2527/*"BATTLE_WARBOARD_REMAINING"*/, v6);
+    sub_B16FFC(&StringLiteral_2456/*"BATTLE_NOKORIENEMY"*/, v7);
+    sub_B16FFC(&StringLiteral_23783/*"残り{0:#,0}体"*/, v8);
     byte_40FA822 = 1;
   }
   v28 = 0;
@@ -1296,12 +1296,12 @@ LABEL_12:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2527, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2527/*"BATTLE_WARBOARD_REMAINING"*/, 0LL);
     v19 = System_Int32__ToString((int32_t)&v28, 0LL);
   }
   else
   {
-    v20 = (System_String_o *)StringLiteral_2456;
+    v20 = (System_String_o *)StringLiteral_2456/*"BATTLE_NOKORIENEMY"*/;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
@@ -1317,7 +1317,7 @@ LABEL_12:
     {
       v26 = EnemyCountStartValue_k__BackingField;
       v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26);
-      v24 = (System_String_o *)StringLiteral_23783;
+      v24 = (System_String_o *)StringLiteral_23783/*"残り{0:#,0}体"*/;
       goto LABEL_25;
     }
     v27 = EnemyCountStartValue_k__BackingField;

@@ -33,8 +33,8 @@ void __fastcall SvtCombineResultWindowComponent___cctor(const MethodInfo *method
   if ( (byte_40FDA70 & 1) == 0 )
   {
     sub_B16FFC(&SvtCombineResultWindowComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_4136, v6);
-    sub_B16FFC(&StringLiteral_951, v7);
+    sub_B16FFC(&StringLiteral_4136/*"Combine/"*/, v6);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v7);
     byte_40FDA70 = 1;
   }
   v8 = 1065185444;
@@ -44,16 +44,16 @@ void __fastcall SvtCombineResultWindowComponent___cctor(const MethodInfo *method
   UnityEngine_Color___ctor_40666012(*(UnityEngine_Color_o *)(&v2 - 3), v3, v4, v5, (const MethodInfo *)&v28);
   SvtCombineResultWindowComponent_TypeInfo->static_fields->COLOR_VAL = v28;
   static_fields = SvtCombineResultWindowComponent_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_4136;
-  static_fields->TUTORIAL_FOLDER = (struct System_String_o *)StringLiteral_4136;
+  v12 = (System_Int32_array **)StringLiteral_4136/*"Combine/"*/;
+  static_fields->TUTORIAL_FOLDER = (struct System_String_o *)StringLiteral_4136/*"Combine/"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->TUTORIAL_FOLDER, v12, v13, v14, v15, v16, v17, v18);
   v19 = SvtCombineResultWindowComponent_TypeInfo;
   SvtCombineResultWindowComponent_TypeInfo->static_fields->SVT_COMBINE_LIMITUP_DOUBLE_TUTORIAL = 25;
   v19->static_fields->SVT_COMBINE_LIMITUP_HP_TUTORIAL = 26;
   v19->static_fields->SVT_COMBINE_LIMITUP_ATK_TUTORIAL = 27;
   v20 = v19->static_fields;
-  v21 = (System_Int32_array **)StringLiteral_951;
-  v20->INIT_VAL_TXT = (struct System_String_o *)StringLiteral_951;
+  v21 = (System_Int32_array **)StringLiteral_951/*"0"*/;
+  v20->INIT_VAL_TXT = (struct System_String_o *)StringLiteral_951/*"0"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v20->INIT_VAL_TXT, v21, v22, v23, v24, v25, v26, v27);
 }
 
@@ -415,7 +415,7 @@ void __fastcall SvtCombineResultWindowComponent__InitStateInfo(
   if ( (byte_40FDA5A & 1) == 0 )
   {
     sub_B16FFC(&SvtCombineResultWindowComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FDA5A = 1;
   }
   currentLvLb = this->fields.currentLvLb;
@@ -481,7 +481,7 @@ void __fastcall SvtCombineResultWindowComponent__InitStateInfo(
   currentAdjustHpMaxLabel = this->fields.currentAdjustHpMaxLabel;
   if ( !currentAdjustHpMaxLabel )
     goto LABEL_37;
-  UILabel__set_text(currentAdjustHpMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentAdjustHpMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   currentAdjustAtkIconLabel = this->fields.currentAdjustAtkIconLabel;
   if ( !currentAdjustAtkIconLabel )
     goto LABEL_37;
@@ -489,7 +489,7 @@ void __fastcall SvtCombineResultWindowComponent__InitStateInfo(
   currentAdjustAtkMaxLabel = this->fields.currentAdjustAtkMaxLabel;
   if ( !currentAdjustAtkMaxLabel )
     goto LABEL_37;
-  UILabel__set_text(currentAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   resLvLb = this->fields.resLvLb;
   if ( !resLvLb )
     goto LABEL_37;
@@ -533,14 +533,14 @@ void __fastcall SvtCombineResultWindowComponent__InitStateInfo(
   resAdjustHpIconLabel = this->fields.resAdjustHpIconLabel;
   if ( !resAdjustHpIconLabel
     || (UIIconLabel__Clear(resAdjustHpIconLabel, 0LL), (resAdjustHpMaxLabel = this->fields.resAdjustHpMaxLabel) == 0LL)
-    || (UILabel__set_text(resAdjustHpMaxLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(resAdjustHpMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (resAdjustAtkIconLabel = this->fields.resAdjustAtkIconLabel) == 0LL)
     || (UIIconLabel__Clear(resAdjustAtkIconLabel, 0LL), (resAdjustAtkMaxLabel = this->fields.resAdjustAtkMaxLabel) == 0LL) )
   {
 LABEL_37:
     sub_B170D4();
   }
-  UILabel__set_text(resAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(resAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   *(_WORD *)&this->fields.isAtkLimitUp = 0;
 }
 
@@ -608,7 +608,7 @@ void __fastcall SvtCombineResultWindowComponent__UpdateValue(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
     sub_B16FFC(&SoundManager_TypeInfo, v5);
     sub_B16FFC(&SvtCombineResultWindowComponent_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_9236, v7);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v7);
     byte_40FDA63 = 1;
   }
   *(_QWORD *)afterHp = 0LL;
@@ -716,7 +716,7 @@ void __fastcall SvtCombineResultWindowComponent__UpdateValue(
     if ( this->fields.isEqCombine )
     {
       resSvtEqHpLb = this->fields.resSvtEqHpLb;
-      v34 = System_Int32__ToString_38275808((int32_t)afterHp, (System_String_o *)StringLiteral_9236, 0LL);
+      v34 = System_Int32__ToString_38275808((int32_t)afterHp, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
       if ( !resSvtEqHpLb )
         goto LABEL_56;
       UILabel__set_text(resSvtEqHpLb, v34, 0LL);
@@ -724,7 +724,7 @@ void __fastcall SvtCombineResultWindowComponent__UpdateValue(
     else
     {
       resHpLb = this->fields.resHpLb;
-      v36 = System_Int32__ToString_38275808((int32_t)afterHp, (System_String_o *)StringLiteral_9236, 0LL);
+      v36 = System_Int32__ToString_38275808((int32_t)afterHp, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
       if ( !resHpLb )
         goto LABEL_56;
       UILabel__set_text(resHpLb, v36, 0LL);
@@ -747,7 +747,7 @@ void __fastcall SvtCombineResultWindowComponent__UpdateValue(
   if ( this->fields.isEqCombine )
   {
     resSvtEqAtkLb = this->fields.resSvtEqAtkLb;
-    v41 = System_Int32__ToString_38275808((int32_t)&afterAtk, (System_String_o *)StringLiteral_9236, 0LL);
+    v41 = System_Int32__ToString_38275808((int32_t)&afterAtk, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
     if ( !resSvtEqAtkLb )
       goto LABEL_56;
     UILabel__set_text(resSvtEqAtkLb, v41, 0LL);
@@ -755,7 +755,7 @@ void __fastcall SvtCombineResultWindowComponent__UpdateValue(
   else
   {
     resAtkLb = this->fields.resAtkLb;
-    v43 = System_Int32__ToString_38275808((int32_t)&afterAtk, (System_String_o *)StringLiteral_9236, 0LL);
+    v43 = System_Int32__ToString_38275808((int32_t)&afterAtk, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
     if ( !resAtkLb )
       goto LABEL_56;
     UILabel__set_text(resAtkLb, v43, 0LL);
@@ -818,8 +818,8 @@ void __fastcall SvtCombineResultWindowComponent__checkGetSkill(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, v4);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_6848, v7);
-    sub_B16FFC(&StringLiteral_6850, v8);
+    sub_B16FFC(&StringLiteral_6848/*"GET_SKILL_NAME"*/, v7);
+    sub_B16FFC(&StringLiteral_6850/*"GET_SKILL_TITLE"*/, v8);
     byte_40FDA67 = 1;
   }
   baseUsrSvtData = this->fields.baseUsrSvtData;
@@ -878,12 +878,12 @@ LABEL_26:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_6850, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_6850/*"GET_SKILL_TITLE"*/, 0LL);
   if ( !skillGetInfoTitle )
     goto LABEL_27;
   UILabel__set_text(skillGetInfoTitle, v26, 0LL);
   skillGetInfoDetail = this->fields.skillGetInfoDetail;
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_6848, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_6848/*"GET_SKILL_NAME"*/, 0LL);
   if ( !v25
     || (v29 = v28,
         Name = (Il2CppObject *)SkillEntity__getName(v25, 0LL),
@@ -971,9 +971,9 @@ void __fastcall SvtCombineResultWindowComponent__checkQuestOpen(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
     sub_B16FFC(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v15);
     sub_B16FFC(&SingletonTemplate_clsQuestCheck__TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_9743, v17);
-    sub_B16FFC(&StringLiteral_9730, v18);
-    sub_B16FFC(&StringLiteral_9733, v19);
+    sub_B16FFC(&StringLiteral_9743/*"OPEN_STORY_QUEST_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_9730/*"OPEN_EVENT_QUEST_NAME"*/, v18);
+    sub_B16FFC(&StringLiteral_9733/*"OPEN_HERO_QUEST_TITLE"*/, v19);
     byte_40FDA66 = 1;
   }
   this->fields.isOpenQuest = 0;
@@ -1016,11 +1016,11 @@ void __fastcall SvtCombineResultWindowComponent__checkQuestOpen(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_9743, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_9743/*"OPEN_STORY_QUEST_TITLE"*/, 0LL);
   if ( !storyQuestInfoTitle
     || (UILabel__set_text(storyQuestInfoTitle, v30, 0LL),
         heroQuestInfoTitle = this->fields.heroQuestInfoTitle,
-        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_9733, 0LL),
+        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_9733/*"OPEN_HERO_QUEST_TITLE"*/, 0LL),
         !heroQuestInfoTitle) )
   {
 LABEL_51:
@@ -1064,7 +1064,7 @@ LABEL_51:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v49 = LocalizationManager__Get((System_String_o *)StringLiteral_9730, 0LL);
+          v49 = LocalizationManager__Get((System_String_o *)StringLiteral_9730/*"OPEN_EVENT_QUEST_NAME"*/, 0LL);
           v50 = System_String__Format(v49, (Il2CppObject *)v39->fields.age, 0LL);
           if ( !heroQuestInfoDetail )
             goto LABEL_51;
@@ -1085,7 +1085,7 @@ LABEL_51:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v41 = LocalizationManager__Get((System_String_o *)StringLiteral_9730, 0LL);
+          v41 = LocalizationManager__Get((System_String_o *)StringLiteral_9730/*"OPEN_EVENT_QUEST_NAME"*/, 0LL);
           v42 = System_String__Format(v41, (Il2CppObject *)v39->fields.age, 0LL);
           if ( !storyQuestInfoDetail )
             goto LABEL_51;
@@ -1113,7 +1113,7 @@ LABEL_49:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v46 = LocalizationManager__Get((System_String_o *)StringLiteral_9730, 0LL);
+      v46 = LocalizationManager__Get((System_String_o *)StringLiteral_9730/*"OPEN_EVENT_QUEST_NAME"*/, 0LL);
       v47 = System_String__Format(v46, (Il2CppObject *)v39->fields.age, 0LL);
       if ( !eventQuestInfoDetail )
         goto LABEL_51;
@@ -1624,7 +1624,7 @@ void __fastcall SvtCombineResultWindowComponent__setBaseAdjustInfo(
   if ( (byte_40FDA5D & 1) == 0 )
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FDA5D = 1;
   }
   baseUsrSvtData = this->fields.baseUsrSvtData;
@@ -1675,7 +1675,7 @@ void __fastcall SvtCombineResultWindowComponent__setBaseAdjustInfo(
   currentAdjustHpMaxLabel = this->fields.currentAdjustHpMaxLabel;
   if ( !currentAdjustHpMaxLabel )
     goto LABEL_25;
-  UILabel__set_text(currentAdjustHpMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentAdjustHpMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   SvtCombineResultWindowComponent__setResAdjustHpInfo(this, this->fields.baseUsrSvtData, v12);
   v13 = this->fields.baseUsrSvtData;
   if ( !v13 )
@@ -1708,7 +1708,7 @@ void __fastcall SvtCombineResultWindowComponent__setBaseAdjustInfo(
 LABEL_25:
     sub_B170D4();
   }
-  UILabel__set_text(currentAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   SvtCombineResultWindowComponent__setResAdjustAtkInfo(this, this->fields.baseUsrSvtData, v19);
 }
 
@@ -1847,8 +1847,8 @@ void __fastcall SvtCombineResultWindowComponent__setBefResultState(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, v5);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
     sub_B16FFC(&Method_SvtCombineResultWindowComponent_EndOpen__, v7);
-    sub_B16FFC(&StringLiteral_340, v8);
-    sub_B16FFC(&StringLiteral_9236, v9);
+    sub_B16FFC(&StringLiteral_340/*"#,0"*/, v8);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v9);
     byte_40FDA5B = 1;
   }
   *(_QWORD *)lateExp = 0LL;
@@ -1992,7 +1992,7 @@ void __fastcall SvtCombineResultWindowComponent__setBefResultState(
     goto LABEL_49;
   UIProgressBar__set_value(currentExpBar, barExp, 0LL);
   currentExpValLb = this->fields.currentExpValLb;
-  v84 = System_Int32__ToString_38275808((int32_t)lateExp, (System_String_o *)StringLiteral_340, 0LL);
+  v84 = System_Int32__ToString_38275808((int32_t)lateExp, (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
   if ( !currentExpValLb )
     goto LABEL_49;
   UILabel__set_text(currentExpValLb, v84, 0LL);
@@ -2054,7 +2054,7 @@ void __fastcall SvtCombineResultWindowComponent__setBefResultState(
   if ( !v105 )
     goto LABEL_49;
   currentHpLb = this->fields.currentHpLb;
-  v107 = System_Int32__ToString_38275808((int)v105 + 268, (System_String_o *)StringLiteral_9236, 0LL);
+  v107 = System_Int32__ToString_38275808((int)v105 + 268, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !currentHpLb )
     goto LABEL_49;
   UILabel__set_text(currentHpLb, v107, 0LL);
@@ -2062,7 +2062,7 @@ void __fastcall SvtCombineResultWindowComponent__setBefResultState(
   if ( !v108 )
     goto LABEL_49;
   v109 = this->fields.resHpLb;
-  v110 = System_Int32__ToString_38275808((int)v108 + 268, (System_String_o *)StringLiteral_9236, 0LL);
+  v110 = System_Int32__ToString_38275808((int)v108 + 268, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !v109 )
     goto LABEL_49;
   UILabel__set_text(v109, v110, 0LL);
@@ -2070,7 +2070,7 @@ void __fastcall SvtCombineResultWindowComponent__setBefResultState(
   if ( !v111 )
     goto LABEL_49;
   currentAtkLb = this->fields.currentAtkLb;
-  v113 = System_Int32__ToString_38275808((int)v111 + 264, (System_String_o *)StringLiteral_9236, 0LL);
+  v113 = System_Int32__ToString_38275808((int)v111 + 264, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !currentAtkLb )
     goto LABEL_49;
   UILabel__set_text(currentAtkLb, v113, 0LL);
@@ -2078,7 +2078,7 @@ void __fastcall SvtCombineResultWindowComponent__setBefResultState(
   if ( !v114 )
     goto LABEL_49;
   v115 = this->fields.resAtkLb;
-  v116 = System_Int32__ToString_38275808((int)v114 + 264, (System_String_o *)StringLiteral_9236, 0LL);
+  v116 = System_Int32__ToString_38275808((int)v114 + 264, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !v115 )
     goto LABEL_49;
   UILabel__set_text(v115, v116, 0LL);
@@ -2309,9 +2309,9 @@ void __fastcall SvtCombineResultWindowComponent__setBefSvtEqResultState(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
     sub_B16FFC(&Method_SvtCombineResultWindowComponent_EndOpen__, v17);
     sub_B16FFC(&SvtCombineResultWindowComponent_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_340, v19);
-    sub_B16FFC(&StringLiteral_9236, v20);
-    sub_B16FFC(&StringLiteral_4142, v21);
+    sub_B16FFC(&StringLiteral_340/*"#,0"*/, v19);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v20);
+    sub_B16FFC(&StringLiteral_4142/*"CombineSuccessEffect_{0:D2}"*/, v21);
     byte_40FDA5C = 1;
   }
   *(_QWORD *)lateExp = 0LL;
@@ -2455,7 +2455,7 @@ void __fastcall SvtCombineResultWindowComponent__setBefSvtEqResultState(
     goto LABEL_96;
   UIProgressBar__set_value(currentSvtEqExpBar, barExp, 0LL);
   currentSvtEqExpValLb = this->fields.currentSvtEqExpValLb;
-  v96 = System_Int32__ToString_38275808((int32_t)lateExp, (System_String_o *)StringLiteral_340, 0LL);
+  v96 = System_Int32__ToString_38275808((int32_t)lateExp, (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
   if ( !currentSvtEqExpValLb )
     goto LABEL_96;
   UILabel__set_text(currentSvtEqExpValLb, v96, 0LL);
@@ -2517,7 +2517,7 @@ void __fastcall SvtCombineResultWindowComponent__setBefSvtEqResultState(
   if ( !v117 )
     goto LABEL_96;
   currentSvtEqHpLb = this->fields.currentSvtEqHpLb;
-  v119 = System_Int32__ToString_38275808((int)v117 + 268, (System_String_o *)StringLiteral_9236, 0LL);
+  v119 = System_Int32__ToString_38275808((int)v117 + 268, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !currentSvtEqHpLb )
     goto LABEL_96;
   UILabel__set_text(currentSvtEqHpLb, v119, 0LL);
@@ -2525,7 +2525,7 @@ void __fastcall SvtCombineResultWindowComponent__setBefSvtEqResultState(
   if ( !v120 )
     goto LABEL_96;
   v121 = this->fields.resSvtEqHpLb;
-  v122 = System_Int32__ToString_38275808((int)v120 + 268, (System_String_o *)StringLiteral_9236, 0LL);
+  v122 = System_Int32__ToString_38275808((int)v120 + 268, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !v121 )
     goto LABEL_96;
   UILabel__set_text(v121, v122, 0LL);
@@ -2533,7 +2533,7 @@ void __fastcall SvtCombineResultWindowComponent__setBefSvtEqResultState(
   if ( !v123 )
     goto LABEL_96;
   currentSvtEqAtkLb = this->fields.currentSvtEqAtkLb;
-  v125 = System_Int32__ToString_38275808((int)v123 + 264, (System_String_o *)StringLiteral_9236, 0LL);
+  v125 = System_Int32__ToString_38275808((int)v123 + 264, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !currentSvtEqAtkLb )
     goto LABEL_96;
   UILabel__set_text(currentSvtEqAtkLb, v125, 0LL);
@@ -2541,17 +2541,17 @@ void __fastcall SvtCombineResultWindowComponent__setBefSvtEqResultState(
   if ( !v126 )
     goto LABEL_96;
   v127 = this->fields.resSvtEqAtkLb;
-  v128 = System_Int32__ToString_38275808((int)v126 + 264, (System_String_o *)StringLiteral_9236, 0LL);
+  v128 = System_Int32__ToString_38275808((int)v126 + 264, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !v127 )
     goto LABEL_96;
   UILabel__set_text(v127, v128, 0LL);
   normalExpLb = this->fields.normalExpLb;
-  v130 = System_Int32__ToString_38275808((int32_t)&v189, (System_String_o *)StringLiteral_9236, 0LL);
+  v130 = System_Int32__ToString_38275808((int32_t)&v189, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !normalExpLb )
     goto LABEL_96;
   UILabel__set_text(normalExpLb, v130, 0LL);
   normalExpOverSpLb = this->fields.normalExpOverSpLb;
-  v132 = System_Int32__ToString_38275808((int32_t)&v189, (System_String_o *)StringLiteral_9236, 0LL);
+  v132 = System_Int32__ToString_38275808((int32_t)&v189, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !normalExpOverSpLb )
     goto LABEL_96;
   UILabel__set_text(normalExpOverSpLb, v132, 0LL);
@@ -2640,7 +2640,7 @@ void __fastcall SvtCombineResultWindowComponent__setBefSvtEqResultState(
     goto LABEL_96;
   m_stringLength = v151->fields.m_stringLength;
   v152 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_stringLength);
-  v153 = System_String__Format((System_String_o *)StringLiteral_4142, v152, 0LL);
+  v153 = System_String__Format((System_String_o *)StringLiteral_4142/*"CombineSuccessEffect_{0:D2}"*/, v152, 0LL);
   if ( !this->fields.dispNodeObj )
     goto LABEL_96;
   v154 = v153;
@@ -2688,7 +2688,7 @@ LABEL_96:
   }
 LABEL_89:
   addExpLb = this->fields.addExpLb;
-  v167 = System_Int32__ToString_38275808((int32_t)&v188, (System_String_o *)StringLiteral_9236, 0LL);
+  v167 = System_Int32__ToString_38275808((int32_t)&v188, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !addExpLb )
     goto LABEL_96;
   UILabel__set_text(addExpLb, v167, 0LL);
@@ -2807,7 +2807,7 @@ void __fastcall SvtCombineResultWindowComponent__setResAdjustAtkInfo(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, targetData);
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FDA5F = 1;
   }
   resAdjustAtkIconLabel = (UnityEngine_Component_o *)this->fields.resAdjustAtkIconLabel;
@@ -2878,7 +2878,7 @@ void __fastcall SvtCombineResultWindowComponent__setResAdjustAtkInfo(
   if ( !resAdjustAtkMaxLabel )
 LABEL_23:
     sub_B170D4();
-  UILabel__set_text(resAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(resAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -2910,7 +2910,7 @@ void __fastcall SvtCombineResultWindowComponent__setResAdjustHpInfo(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, targetData);
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FDA5E = 1;
   }
   resAdjustHpIconLabel = (UnityEngine_Component_o *)this->fields.resAdjustHpIconLabel;
@@ -2981,7 +2981,7 @@ void __fastcall SvtCombineResultWindowComponent__setResAdjustHpInfo(
   if ( !resAdjustHpMaxLabel )
 LABEL_23:
     sub_B170D4();
-  UILabel__set_text(resAdjustHpMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(resAdjustHpMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -3272,17 +3272,17 @@ void __fastcall SvtCombineResultWindowComponent__showGetExp(
     sub_B16FFC(&float_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
     sub_B16FFC(&SvtCombineResultWindowComponent_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_18842, v15);
-    sub_B16FFC(&StringLiteral_8663, v16);
-    sub_B16FFC(&StringLiteral_22584, v17);
-    sub_B16FFC(&StringLiteral_5927, v18);
-    sub_B16FFC(&StringLiteral_21182, v19);
-    sub_B16FFC(&StringLiteral_15009, v20);
-    sub_B16FFC(&StringLiteral_9236, v21);
-    sub_B16FFC(&StringLiteral_22621, v22);
-    sub_B16FFC(&StringLiteral_12994, v23);
-    sub_B16FFC(&StringLiteral_21179, v24);
-    sub_B16FFC(&StringLiteral_21173, v25);
+    sub_B16FFC(&StringLiteral_18842/*"from"*/, v15);
+    sub_B16FFC(&StringLiteral_8663/*"MAX_LVUP_TXT"*/, v16);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v17);
+    sub_B16FFC(&StringLiteral_5927/*"EndDisp"*/, v18);
+    sub_B16FFC(&StringLiteral_21182/*"onupdate"*/, v19);
+    sub_B16FFC(&StringLiteral_15009/*"UpdateValue"*/, v20);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v21);
+    sub_B16FFC(&StringLiteral_22621/*"to"*/, v22);
+    sub_B16FFC(&StringLiteral_12994/*"StartUpdateValue"*/, v23);
+    sub_B16FFC(&StringLiteral_21179/*"onstart"*/, v24);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v25);
     sub_B16FFC(&iTween_TypeInfo, v26);
     byte_40FDA61 = 1;
   }
@@ -3346,13 +3346,13 @@ void __fastcall SvtCombineResultWindowComponent__showGetExp(
   if ( !v51 )
     goto LABEL_96;
   v58 = (System_Object_array *)v51;
-  v59 = StringLiteral_18842;
-  if ( StringLiteral_18842 )
+  v59 = StringLiteral_18842/*"from"*/;
+  if ( StringLiteral_18842/*"from"*/ )
   {
-    v59 = sub_B170BC(StringLiteral_18842, v58->obj.klass->_1.element_class);
+    v59 = sub_B170BC(StringLiteral_18842/*"from"*/, v58->obj.klass->_1.element_class);
     if ( !v59 )
       goto LABEL_124;
-    v60 = (System_Int32_array **)StringLiteral_18842;
+    v60 = (System_Int32_array **)StringLiteral_18842/*"from"*/;
   }
   else
   {
@@ -3375,13 +3375,13 @@ void __fastcall SvtCombineResultWindowComponent__showGetExp(
     goto LABEL_123;
   v58->m_Items[1] = (Il2CppObject *)v66;
   sub_B16F98((BattleServantConfConponent_o *)&v58->m_Items[1], v66, v52, v61, v62, v63, v64, v65);
-  v59 = StringLiteral_22621;
-  if ( StringLiteral_22621 )
+  v59 = StringLiteral_22621/*"to"*/;
+  if ( StringLiteral_22621/*"to"*/ )
   {
-    v59 = sub_B170BC(StringLiteral_22621, v58->obj.klass->_1.element_class);
+    v59 = sub_B170BC(StringLiteral_22621/*"to"*/, v58->obj.klass->_1.element_class);
     if ( !v59 )
       goto LABEL_124;
-    v60 = (System_Int32_array **)StringLiteral_22621;
+    v60 = (System_Int32_array **)StringLiteral_22621/*"to"*/;
   }
   else
   {
@@ -3404,13 +3404,13 @@ void __fastcall SvtCombineResultWindowComponent__showGetExp(
     goto LABEL_123;
   v58->m_Items[3] = (Il2CppObject *)v77;
   sub_B16F98((BattleServantConfConponent_o *)&v58->m_Items[3], v77, v52, v72, v73, v74, v75, v76);
-  v59 = StringLiteral_21179;
-  if ( StringLiteral_21179 )
+  v59 = StringLiteral_21179/*"onstart"*/;
+  if ( StringLiteral_21179/*"onstart"*/ )
   {
-    v59 = sub_B170BC(StringLiteral_21179, v58->obj.klass->_1.element_class);
+    v59 = sub_B170BC(StringLiteral_21179/*"onstart"*/, v58->obj.klass->_1.element_class);
     if ( !v59 )
       goto LABEL_124;
-    v60 = (System_Int32_array **)StringLiteral_21179;
+    v60 = (System_Int32_array **)StringLiteral_21179/*"onstart"*/;
   }
   else
   {
@@ -3420,13 +3420,13 @@ void __fastcall SvtCombineResultWindowComponent__showGetExp(
     goto LABEL_123;
   v58->m_Items[4] = (Il2CppObject *)v60;
   sub_B16F98((BattleServantConfConponent_o *)&v58->m_Items[4], v60, v52, v78, v79, v80, v81, v82);
-  v59 = StringLiteral_12994;
-  if ( StringLiteral_12994 )
+  v59 = StringLiteral_12994/*"StartUpdateValue"*/;
+  if ( StringLiteral_12994/*"StartUpdateValue"*/ )
   {
-    v59 = sub_B170BC(StringLiteral_12994, v58->obj.klass->_1.element_class);
+    v59 = sub_B170BC(StringLiteral_12994/*"StartUpdateValue"*/, v58->obj.klass->_1.element_class);
     if ( !v59 )
       goto LABEL_124;
-    v60 = (System_Int32_array **)StringLiteral_12994;
+    v60 = (System_Int32_array **)StringLiteral_12994/*"StartUpdateValue"*/;
   }
   else
   {
@@ -3436,13 +3436,13 @@ void __fastcall SvtCombineResultWindowComponent__showGetExp(
     goto LABEL_123;
   v58->m_Items[5] = (Il2CppObject *)v60;
   sub_B16F98((BattleServantConfConponent_o *)&v58->m_Items[5], v60, v52, v83, v84, v85, v86, v87);
-  v59 = StringLiteral_21182;
-  if ( StringLiteral_21182 )
+  v59 = StringLiteral_21182/*"onupdate"*/;
+  if ( StringLiteral_21182/*"onupdate"*/ )
   {
-    v59 = sub_B170BC(StringLiteral_21182, v58->obj.klass->_1.element_class);
+    v59 = sub_B170BC(StringLiteral_21182/*"onupdate"*/, v58->obj.klass->_1.element_class);
     if ( !v59 )
       goto LABEL_124;
-    v60 = (System_Int32_array **)StringLiteral_21182;
+    v60 = (System_Int32_array **)StringLiteral_21182/*"onupdate"*/;
   }
   else
   {
@@ -3452,13 +3452,13 @@ void __fastcall SvtCombineResultWindowComponent__showGetExp(
     goto LABEL_123;
   v58->m_Items[6] = (Il2CppObject *)v60;
   sub_B16F98((BattleServantConfConponent_o *)&v58->m_Items[6], v60, v52, v88, v89, v90, v91, v92);
-  v59 = StringLiteral_15009;
-  if ( StringLiteral_15009 )
+  v59 = StringLiteral_15009/*"UpdateValue"*/;
+  if ( StringLiteral_15009/*"UpdateValue"*/ )
   {
-    v59 = sub_B170BC(StringLiteral_15009, v58->obj.klass->_1.element_class);
+    v59 = sub_B170BC(StringLiteral_15009/*"UpdateValue"*/, v58->obj.klass->_1.element_class);
     if ( !v59 )
       goto LABEL_124;
-    v60 = (System_Int32_array **)StringLiteral_15009;
+    v60 = (System_Int32_array **)StringLiteral_15009/*"UpdateValue"*/;
   }
   else
   {
@@ -3468,13 +3468,13 @@ void __fastcall SvtCombineResultWindowComponent__showGetExp(
     goto LABEL_123;
   v58->m_Items[7] = (Il2CppObject *)v60;
   sub_B16F98((BattleServantConfConponent_o *)&v58->m_Items[7], v60, v52, v93, v94, v95, v96, v97);
-  v59 = StringLiteral_21173;
-  if ( StringLiteral_21173 )
+  v59 = StringLiteral_21173/*"oncomplete"*/;
+  if ( StringLiteral_21173/*"oncomplete"*/ )
   {
-    v59 = sub_B170BC(StringLiteral_21173, v58->obj.klass->_1.element_class);
+    v59 = sub_B170BC(StringLiteral_21173/*"oncomplete"*/, v58->obj.klass->_1.element_class);
     if ( !v59 )
       goto LABEL_124;
-    v60 = (System_Int32_array **)StringLiteral_21173;
+    v60 = (System_Int32_array **)StringLiteral_21173/*"oncomplete"*/;
   }
   else
   {
@@ -3484,13 +3484,13 @@ void __fastcall SvtCombineResultWindowComponent__showGetExp(
     goto LABEL_123;
   v58->m_Items[8] = (Il2CppObject *)v60;
   sub_B16F98((BattleServantConfConponent_o *)&v58->m_Items[8], v60, v52, v98, v99, v100, v101, v102);
-  v59 = StringLiteral_5927;
-  if ( StringLiteral_5927 )
+  v59 = StringLiteral_5927/*"EndDisp"*/;
+  if ( StringLiteral_5927/*"EndDisp"*/ )
   {
-    v59 = sub_B170BC(StringLiteral_5927, v58->obj.klass->_1.element_class);
+    v59 = sub_B170BC(StringLiteral_5927/*"EndDisp"*/, v58->obj.klass->_1.element_class);
     if ( !v59 )
       goto LABEL_124;
-    v60 = (System_Int32_array **)StringLiteral_5927;
+    v60 = (System_Int32_array **)StringLiteral_5927/*"EndDisp"*/;
   }
   else
   {
@@ -3500,13 +3500,13 @@ void __fastcall SvtCombineResultWindowComponent__showGetExp(
     goto LABEL_123;
   v58->m_Items[9] = (Il2CppObject *)v60;
   sub_B16F98((BattleServantConfConponent_o *)&v58->m_Items[9], v60, v52, v103, v104, v105, v106, v107);
-  v59 = StringLiteral_22584;
-  if ( StringLiteral_22584 )
+  v59 = StringLiteral_22584/*"time"*/;
+  if ( StringLiteral_22584/*"time"*/ )
   {
-    v59 = sub_B170BC(StringLiteral_22584, v58->obj.klass->_1.element_class);
+    v59 = sub_B170BC(StringLiteral_22584/*"time"*/, v58->obj.klass->_1.element_class);
     if ( !v59 )
       goto LABEL_124;
-    v60 = (System_Int32_array **)StringLiteral_22584;
+    v60 = (System_Int32_array **)StringLiteral_22584/*"time"*/;
   }
   else
   {
@@ -3568,7 +3568,7 @@ LABEL_123:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v125 = LocalizationManager__Get((System_String_o *)StringLiteral_8663, 0LL);
+    v125 = LocalizationManager__Get((System_String_o *)StringLiteral_8663/*"MAX_LVUP_TXT"*/, 0LL);
     baseLvMax = this->fields.baseLvMax;
     v126 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &baseLvMax);
     resLvMax = this->fields.resLvMax;
@@ -3636,7 +3636,7 @@ LABEL_123:
     if ( this->fields.isEqCombine )
     {
       resSvtEqHpLb = this->fields.resSvtEqHpLb;
-      v142 = System_Int32__ToString_38275808(v140, (System_String_o *)StringLiteral_9236, 0LL);
+      v142 = System_Int32__ToString_38275808(v140, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
       if ( !resSvtEqHpLb )
         goto LABEL_96;
       UILabel__set_text(resSvtEqHpLb, v142, 0LL);
@@ -3644,7 +3644,7 @@ LABEL_123:
     else
     {
       resHpLb = this->fields.resHpLb;
-      v144 = System_Int32__ToString_38275808(v140, (System_String_o *)StringLiteral_9236, 0LL);
+      v144 = System_Int32__ToString_38275808(v140, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
       if ( !resHpLb )
         goto LABEL_96;
       UILabel__set_text(resHpLb, v144, 0LL);
@@ -3668,7 +3668,7 @@ LABEL_123:
   if ( this->fields.isEqCombine )
   {
     resSvtEqAtkLb = this->fields.resSvtEqAtkLb;
-    v150 = System_Int32__ToString_38275808(v148, (System_String_o *)StringLiteral_9236, 0LL);
+    v150 = System_Int32__ToString_38275808(v148, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
     if ( !resSvtEqAtkLb )
       goto LABEL_96;
     UILabel__set_text(resSvtEqAtkLb, v150, 0LL);
@@ -3676,7 +3676,7 @@ LABEL_123:
   else
   {
     resAtkLb = this->fields.resAtkLb;
-    v152 = System_Int32__ToString_38275808(v148, (System_String_o *)StringLiteral_9236, 0LL);
+    v152 = System_Int32__ToString_38275808(v148, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
     if ( !resAtkLb )
       goto LABEL_96;
     UILabel__set_text(resAtkLb, v152, 0LL);

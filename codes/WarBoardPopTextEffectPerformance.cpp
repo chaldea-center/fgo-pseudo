@@ -31,7 +31,7 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
     v13 = *(_QWORD *)&position.fields.value.fields.x;
     effetctPrefaba = effetctPrefab;
     v14 = parent;
-    sub_B16FFC(&StringLiteral_21761, parent);
+    sub_B16FFC(&StringLiteral_21761/*"root_text/type01/dm_base"*/, parent);
     effetctPrefab = effetctPrefaba;
     parent = v14;
     *(_QWORD *)&position.fields.value.fields.x = v13;
@@ -51,7 +51,7 @@ void __fastcall WarBoardPopTextEffectPerformance___ctor(
     doInstantiate,
     1,
     0LL);
-  v15 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_21761, 0LL);
+  v15 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_21761/*"root_text/type01/dm_base"*/, 0LL);
   this->fields.textObject = v15;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.textObject,

@@ -24,7 +24,7 @@ void __fastcall UserMessageInputDlg__OnChangeInput(UserMessageInputDlg_o *this, 
 
   if ( (byte_40F9744 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9744 = 1;
   }
   nameInput = this->fields.nameInput;
@@ -48,7 +48,7 @@ LABEL_17:
   if ( !*p_changeName )
     goto LABEL_17;
   v16 = System_String__Trim_43731064(*p_changeName, 0LL);
-  if ( !System_String__op_Equality(v16, (System_String_o *)StringLiteral_1, 0LL)
+  if ( !System_String__op_Equality(v16, (System_String_o *)StringLiteral_1/*""*/, 0LL)
     && !System_String__op_Equality(this->fields.changeName, this->fields.baseName, 0LL) )
   {
 LABEL_5:
@@ -155,10 +155,10 @@ void __fastcall UserMessageInputDlg__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&UIInput_OnValidate_TypeInfo, v10);
     sub_B16FFC(&Method_SupportDeckNameInputMenu_EndOpen__, v11);
-    sub_B16FFC(&StringLiteral_8713, v12);
-    sub_B16FFC(&StringLiteral_3253, v13);
-    sub_B16FFC(&StringLiteral_3251, v14);
-    sub_B16FFC(&StringLiteral_8711, v15);
+    sub_B16FFC(&StringLiteral_8713/*"MESSAGE_CHANGE_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v13);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v14);
+    sub_B16FFC(&StringLiteral_8711/*"MESSAGE_CHANGE_EXPLANATION"*/, v15);
     byte_40F9742 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -201,12 +201,12 @@ void __fastcall UserMessageInputDlg__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_8713, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_8713/*"MESSAGE_CHANGE_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_16;
   UILabel__set_text(titleLabel, v36, 0LL);
   explanationLabel = this->fields.explanationLabel;
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_8711, 0LL);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_8711/*"MESSAGE_CHANGE_EXPLANATION"*/, 0LL);
   if ( !explanationLabel )
     goto LABEL_16;
   UILabel__set_text(explanationLabel, v38, 0LL);
@@ -236,11 +236,11 @@ void __fastcall UserMessageInputDlg__Open(
     v52,
     v53);
   decideLabel = this->fields.decideLabel;
-  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideLabel
     || (UILabel__set_text(decideLabel, v55, 0LL),
         cancelLabel = this->fields.cancelLabel,
-        v57 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+        v57 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, v57, 0LL), (decideButton = this->fields.decideButton) == 0LL) )
   {
@@ -266,7 +266,7 @@ void __fastcall UserMessageInputDlg__Update(UserMessageInputDlg_o *this, const M
 
   if ( (byte_40F9743 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9743 = 1;
   }
   inputTarget = this->fields.inputTarget;
@@ -278,7 +278,7 @@ void __fastcall UserMessageInputDlg__Update(UserMessageInputDlg_o *this, const M
     this->fields.isFirstSelected = 1;
     if ( v4 )
     {
-      UIInput__set_value(v4, (System_String_o *)StringLiteral_1, 0LL);
+      UIInput__set_value(v4, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       return;
     }
 LABEL_9:
@@ -293,10 +293,10 @@ System_String_o *__fastcall UserMessageInputDlg__get_closeBtnPath(
 {
   if ( (byte_40F9746 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2731, method);
+    sub_B16FFC(&StringLiteral_2731/*"BaseWindow/CancleButton"*/, method);
     byte_40F9746 = 1;
   }
-  return (System_String_o *)StringLiteral_2731;
+  return (System_String_o *)StringLiteral_2731/*"BaseWindow/CancleButton"*/;
 }
 
 
@@ -328,7 +328,7 @@ void __fastcall UserMessageInputDlg__inputLabelSetup(
   if ( (byte_40F9745 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, message);
-    sub_B16FFC(&StringLiteral_8712, v5);
+    sub_B16FFC(&StringLiteral_8712/*"MESSAGE_CHANGE_NO_INPUT"*/, v5);
     byte_40F9745 = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(message, 0LL);
@@ -340,7 +340,7 @@ void __fastcall UserMessageInputDlg__inputLabelSetup(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8712, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8712/*"MESSAGE_CHANGE_NO_INPUT"*/, 0LL);
     if ( inputTarget )
     {
       UIInput__set_value(inputTarget, v8, 0LL);

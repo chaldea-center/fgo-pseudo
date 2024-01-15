@@ -836,8 +836,8 @@ void __fastcall FieldMotionManager__PlayBattleAction(
   if ( (int)(max_length - 1) < 0 )
   {
 LABEL_23:
-    v20 = (System_String_o *)sub_B17000(&StringLiteral_242, v6);
-    v22 = (System_String_o *)sub_B17000(&StringLiteral_219, v21);
+    v20 = (System_String_o *)sub_B17000(&StringLiteral_242/*" not found "*/, v6);
+    v22 = (System_String_o *)sub_B17000(&StringLiteral_219/*" in fieldFsm "*/, v21);
     v23 = System_String__Concat_43746016(v20, v10, v22, 0LL);
     v25 = sub_B17000(&UnityEngine_UnityException_TypeInfo, v24);
     v30 = (UnityEngine_UnityException_o *)sub_B170CC(v25, v26, v27, v28, v29);

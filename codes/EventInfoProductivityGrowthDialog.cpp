@@ -38,22 +38,22 @@ void __fastcall EventInfoProductivityGrowthDialog__Init(
   if ( (byte_40FA156 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3252, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FA156 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_15;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_15;
   UILabel__set_text(closeLabel, v7, 0LL);
@@ -228,10 +228,10 @@ void __fastcall EventInfoProductivityGrowthDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v18);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_5590, v20);
-    sub_B16FFC(&StringLiteral_5589, v21);
-    sub_B16FFC(&StringLiteral_5588, v22);
-    sub_B16FFC(&StringLiteral_5591, v23);
+    sub_B16FFC(&StringLiteral_5590/*"EVENT_CONQUEST_UP_MESSAGE"*/, v20);
+    sub_B16FFC(&StringLiteral_5589/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, v21);
+    sub_B16FFC(&StringLiteral_5588/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, v22);
+    sub_B16FFC(&StringLiteral_5591/*"EVENT_CONQUEST_UP_TITLE"*/, v23);
     byte_40FA157 = 1;
   }
   v24 = TerminalPramsManager_TypeInfo;
@@ -299,7 +299,7 @@ LABEL_64:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_5589, 0LL);
+        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_5589/*"EVENT_CONQUEST_UP_ITEM_FORMAT"*/, 0LL);
         productNum = v42->fields.productNum;
         v50 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &productNum);
         if ( !v48 )
@@ -312,7 +312,7 @@ LABEL_64:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v51 = LocalizationManager__Get((System_String_o *)StringLiteral_5588, 0LL);
+          v51 = LocalizationManager__Get((System_String_o *)StringLiteral_5588/*"EVENT_CONQUEST_UP_ITEM_ADD_FORMAT"*/, 0LL);
           productAdd = v42->fields.productAdd;
           v52 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &productAdd);
           System_Text_StringBuilder__AppendFormat(v48, v51, v52, 0LL);
@@ -431,12 +431,12 @@ LABEL_34:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v76 = LocalizationManager__Get((System_String_o *)StringLiteral_5591, 0LL);
+      v76 = LocalizationManager__Get((System_String_o *)StringLiteral_5591/*"EVENT_CONQUEST_UP_TITLE"*/, 0LL);
       if ( !titleLabel )
         goto LABEL_63;
       UILabel__set_text(titleLabel, v76, 0LL);
       v77 = *p_messageLabel;
-      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_5590, 0LL);
+      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_5590/*"EVENT_CONQUEST_UP_MESSAGE"*/, 0LL);
       if ( !v77 )
         goto LABEL_63;
       UILabel__set_text(v77, v78, 0LL);

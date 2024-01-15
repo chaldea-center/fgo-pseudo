@@ -13,17 +13,17 @@ void __fastcall TitleInfoSuperBossStatusComponent___cctor(const MethodInfo *meth
   if ( (byte_40F8452 & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoSuperBossStatusComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18530, v2);
-    sub_B16FFC(&StringLiteral_18529, v3);
+    sub_B16FFC(&StringLiteral_18530/*"event_superboss_status_win_"*/, v2);
+    sub_B16FFC(&StringLiteral_18529/*"event_superboss_status_battle_"*/, v3);
     byte_40F8452 = 1;
   }
   static_fields = TitleInfoSuperBossStatusComponent_TypeInfo->static_fields;
-  v5 = StringLiteral_18529;
-  static_fields->SUPERBOSS_ICON_SPNAME_PREFIX_BATTLE = (struct System_String_o *)StringLiteral_18529;
+  v5 = StringLiteral_18529/*"event_superboss_status_battle_"*/;
+  static_fields->SUPERBOSS_ICON_SPNAME_PREFIX_BATTLE = (struct System_String_o *)StringLiteral_18529/*"event_superboss_status_battle_"*/;
   sub_B16F98(static_fields, v5);
   v6 = TitleInfoSuperBossStatusComponent_TypeInfo->static_fields;
-  v7 = StringLiteral_18530;
-  v6->SUPERBOSS_ICON_SPNAME_PREFIX_WIN = (struct System_String_o *)StringLiteral_18530;
+  v7 = StringLiteral_18530/*"event_superboss_status_win_"*/;
+  v6->SUPERBOSS_ICON_SPNAME_PREFIX_WIN = (struct System_String_o *)StringLiteral_18530/*"event_superboss_status_win_"*/;
   sub_B16F98(&v6->SUPERBOSS_ICON_SPNAME_PREFIX_WIN, v7);
   v8 = TitleInfoSuperBossStatusComponent_TypeInfo;
   v9 = TitleInfoSuperBossStatusComponent_TypeInfo->static_fields;
@@ -397,7 +397,7 @@ void __fastcall TitleInfoSuperBossStatusComponent__SetEntryAnim(
   if ( (byte_40F844C & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoSuperBossStatusComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6013, v3);
+    sub_B16FFC(&StringLiteral_6013/*"EntryAnim"*/, v3);
     byte_40F844C = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -438,7 +438,7 @@ LABEL_10:
     0.0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6013,
+    (System_String_o *)StringLiteral_6013/*"EntryAnim"*/,
     TitleInfoSuperBossStatusComponent_TypeInfo->static_fields->ENTRY_ANIM_DELAY
   + (float)(this->fields.outPos.fields.x / -500.0),
     0LL);
@@ -501,7 +501,7 @@ void __fastcall TitleInfoSuperBossStatusComponent__StartClearAnim(
   if ( (byte_40F844E & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoSuperBossStatusComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1966, v3);
+    sub_B16FFC(&StringLiteral_1966/*"AnimFrameOutEnd"*/, v3);
     byte_40F844E = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -528,7 +528,7 @@ void __fastcall TitleInfoSuperBossStatusComponent__StartClearAnim(
   v12 = static_fields[3].n64_f32[0];
   *(float32x2_t *)&this->fields.outPos.fields.z = vadd_f32(v11, static_fields[2]);
   *((float *)&this->fields.clickCallBack + 1) = v12 + 0.0;
-  TitleInfoSuperBossStatusComponent__FrameOut(this, (System_String_o *)StringLiteral_1966, v5);
+  TitleInfoSuperBossStatusComponent__FrameOut(this, (System_String_o *)StringLiteral_1966/*"AnimFrameOutEnd"*/, v5);
 }
 
 

@@ -158,14 +158,14 @@ void __fastcall TripleButtonDlgComponent__Init(TripleButtonDlgComponent_o *this,
 
   if ( (byte_40FB8C2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FB8C2 = 1;
   }
   confirmTitleLabel = this->fields.confirmTitleLabel;
   if ( !confirmTitleLabel
-    || (UILabel__set_text(confirmTitleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(confirmTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (confirmDetailLabel = this->fields.confirmDetailLabel) == 0LL)
-    || (UILabel__set_text(confirmDetailLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(confirmDetailLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
     sub_B170D4();
@@ -291,7 +291,7 @@ void __fastcall TripleButtonDlgComponent__Open(
     sub_B16FFC(&System_Action_TypeInfo, title);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v20);
     sub_B16FFC(&Method_TripleButtonDlgComponent_EndOpen__, v21);
-    sub_B16FFC(&StringLiteral_1, v22);
+    sub_B16FFC(&StringLiteral_1/*""*/, v22);
     byte_40FB8C3 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -323,7 +323,7 @@ void __fastcall TripleButtonDlgComponent__Open(
     v31 = this->fields.confirmTitleLabel;
     if ( !v31 )
       goto LABEL_55;
-    v32 = title ? title : (System_String_o *)StringLiteral_1;
+    v32 = title ? title : (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v31, v32, 0LL);
     v33 = this->fields.confirmTitleLabel;
     if ( !v33 )
@@ -373,7 +373,7 @@ void __fastcall TripleButtonDlgComponent__Open(
   {
     if ( !*p_confirmDetailLabel )
       goto LABEL_55;
-    v42 = msg ? msg : (System_String_o *)StringLiteral_1;
+    v42 = msg ? msg : (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(*p_confirmDetailLabel, v42, 0LL);
     if ( !*p_confirmDetailLabel )
       goto LABEL_55;
@@ -453,7 +453,7 @@ void __fastcall TripleButtonDlgComponent__SetBackKeyForAndroid(
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_13261, v4);
+    sub_B16FFC(&StringLiteral_13261/*"TALKRESUME_CONFIRM_CANCEL"*/, v4);
     byte_40FB8CC = 1;
   }
   closeBtnLb = this->fields.closeBtnLb;
@@ -465,7 +465,7 @@ void __fastcall TripleButtonDlgComponent__SetBackKeyForAndroid(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_13261, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_13261/*"TALKRESUME_CONFIRM_CANCEL"*/, 0LL);
   if ( !System_String__op_Equality(mText, v7, 0LL) )
   {
     closeBtn = this->fields.closeBtn;

@@ -32,10 +32,10 @@ void __fastcall EventDeckSetupRequest__beginRequest(
     sub_B16FFC(&System_Convert_TypeInfo, userEventDeck);
     sub_B16FFC(&JsonManager_TypeInfo, v11);
     sub_B16FFC(&MiniMessagePack_MiniMessagePacker_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_18403, v13);
-    sub_B16FFC(&StringLiteral_21371, v14);
-    sub_B16FFC(&StringLiteral_17857, v15);
-    sub_B16FFC(&StringLiteral_21520, v16);
+    sub_B16FFC(&StringLiteral_18403/*"eventId"*/, v13);
+    sub_B16FFC(&StringLiteral_21371/*"phase"*/, v14);
+    sub_B16FFC(&StringLiteral_17857/*"deckInfo"*/, v15);
+    sub_B16FFC(&StringLiteral_21520/*"questId"*/, v16);
     byte_40FC5FF = 1;
   }
   if ( !userEventDeck )
@@ -44,9 +44,9 @@ void __fastcall EventDeckSetupRequest__beginRequest(
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   JsonManager__toJson(deckInfo, 0, 0, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18403, eventId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21520, questId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21371, phase, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18403/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21520/*"questId"*/, questId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21371/*"phase"*/, phase, 0LL);
   v22 = (MiniMessagePack_MiniMessagePacker_o *)sub_B170CC(
                                                  MiniMessagePack_MiniMessagePacker_TypeInfo,
                                                  v18,
@@ -64,7 +64,7 @@ LABEL_12:
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
   v24 = System_Convert__ToBase64String(v23, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_17857, v24, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_17857/*"deckInfo"*/, v24, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -73,10 +73,10 @@ System_String_o *__fastcall EventDeckSetupRequest__getMockData(EventDeckSetupReq
 {
   if ( (byte_40FC5FE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FC5FE = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -88,7 +88,7 @@ System_String_o *__fastcall EventDeckSetupRequest__getURL(EventDeckSetupRequest_
   if ( (byte_40FC5FD & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18400, v2);
+    sub_B16FFC(&StringLiteral_18400/*"eventDeck/setup"*/, v2);
     byte_40FC5FD = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -97,7 +97,7 @@ System_String_o *__fastcall EventDeckSetupRequest__getURL(EventDeckSetupRequest_
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18400, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18400/*"eventDeck/setup"*/, 0LL);
 }
 
 
@@ -114,8 +114,8 @@ void __fastcall EventDeckSetupRequest__requestCompleted(
   if ( (byte_40FC600 & 1) == 0 )
   {
     sub_B16FFC(&ResponseCommandKind_TypeInfo, responseList);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40FC600 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -125,8 +125,8 @@ void __fastcall EventDeckSetupRequest__requestCompleted(
   }
   v7 = ResponseCommandKind__SearchData(73, responseList, 0LL);
   if ( v7 && ResponseData__checkError_30924960(v7, 0LL) )
-    v8 = (System_String_o **)&StringLiteral_21129;
+    v8 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_20980;
+    v8 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, *v8, 0LL);
 }

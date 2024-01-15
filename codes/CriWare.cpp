@@ -171,10 +171,10 @@ System_String_o *__fastcall CriWare_Common__GetScriptVersionString(const MethodI
 
   if ( (byte_40FE526 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1007, v1);
+    sub_B16FFC(&StringLiteral_1007/*"1.01.00 (2.38.28h4-VolumeForCueInfo)"*/, v1);
     byte_40FE526 = 1;
   }
-  return (System_String_o *)StringLiteral_1007;
+  return (System_String_o *)StringLiteral_1007/*"1.01.00 (2.38.28h4-VolumeForCueInfo)"*/;
 }
 
 
@@ -281,8 +281,8 @@ UnityEngine_GameObject_o *__fastcall CriWare_Common__get_managerObject(const Met
     sub_B16FFC(&CriWare_Common_TypeInfo, v1);
     sub_B16FFC(&UnityEngine_GameObject_TypeInfo, v2);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_3430, v4);
-    sub_B16FFC(&StringLiteral_899, v5);
+    sub_B16FFC(&StringLiteral_3430/*"CRIWARE"*/, v4);
+    sub_B16FFC(&StringLiteral_899/*"/CRIWARE"*/, v5);
     byte_40FE525 = 1;
   }
   v6 = CriWare_Common_TypeInfo;
@@ -300,7 +300,7 @@ UnityEngine_GameObject_o *__fastcall CriWare_Common__get_managerObject(const Met
   }
   if ( UnityEngine_Object__op_Equality(managerObject, 0LL, 0LL) )
   {
-    v8 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_899, 0LL);
+    v8 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_899/*"/CRIWARE"*/, 0LL);
     v15 = CriWare_Common_TypeInfo;
     v16 = (System_Int32_array **)v8;
     if ( (BYTE3(CriWare_Common_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -321,7 +321,7 @@ UnityEngine_GameObject_o *__fastcall CriWare_Common__get_managerObject(const Met
     if ( UnityEngine_Object__op_Equality(v18, 0LL, 0LL) )
     {
       v23 = (UnityEngine_GameObject_o *)sub_B170CC(UnityEngine_GameObject_TypeInfo, v19, v20, v21, v22);
-      UnityEngine_GameObject___ctor(v23, (System_String_o *)StringLiteral_3430, 0LL);
+      UnityEngine_GameObject___ctor(v23, (System_String_o *)StringLiteral_3430/*"CRIWARE"*/, 0LL);
       v30 = CriWare_Common_TypeInfo;
       if ( (BYTE3(CriWare_Common_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !CriWare_Common_TypeInfo->_2.cctor_finished )
@@ -365,11 +365,11 @@ System_String_o *__fastcall CriWare_Common__get_streamingAssetsPath(const Method
 
   if ( (byte_40FE523 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, v1);
+    sub_B16FFC(&StringLiteral_1/*""*/, v1);
     byte_40FE523 = 1;
   }
   if ( UnityEngine_Application__get_platform(0LL) == 11 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   else
     return UnityEngine_Application__get_streamingAssetsPath(0LL);
 }

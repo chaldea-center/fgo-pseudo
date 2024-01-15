@@ -175,11 +175,11 @@ void __fastcall ServantCostumeListViewItemDraw__SetMaskLabelText(
   if ( (byte_40FCFE7 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_9317, v5);
-    sub_B16FFC(&StringLiteral_11584, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
-    sub_B16FFC(&StringLiteral_8629, v8);
-    sub_B16FFC(&StringLiteral_9315, v9);
+    sub_B16FFC(&StringLiteral_9317/*"NOT_SELECT_LET_GO"*/, v5);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
+    sub_B16FFC(&StringLiteral_8629/*"MATERIAL_FIND_SERVANT"*/, v8);
+    sub_B16FFC(&StringLiteral_9315/*"NOT_SELECT_COSTUME"*/, v9);
     byte_40FCFE7 = 1;
   }
   if ( !item )
@@ -197,7 +197,7 @@ void __fastcall ServantCostumeListViewItemDraw__SetMaskLabelText(
     v15 = this->fields.maskLabel;
     if ( v15 )
     {
-      v16 = (System_String_o *)StringLiteral_1;
+      v16 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_32:
       UILabel__set_text(v15, v16, 0LL);
       return;
@@ -215,7 +215,7 @@ LABEL_33:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = &StringLiteral_9317;
+      v14 = &StringLiteral_9317/*"NOT_SELECT_LET_GO"*/;
     }
     else
     {
@@ -224,7 +224,7 @@ LABEL_33:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = &StringLiteral_8629;
+      v14 = &StringLiteral_8629/*"MATERIAL_FIND_SERVANT"*/;
     }
 LABEL_30:
     v17 = LocalizationManager__Get((System_String_o *)*v14, 0LL);
@@ -244,7 +244,7 @@ LABEL_30:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = &StringLiteral_11584;
+    v14 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
     goto LABEL_30;
   }
   if ( !item->fields.isReleaseItemHaving )
@@ -255,7 +255,7 @@ LABEL_30:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = &StringLiteral_9315;
+    v14 = &StringLiteral_9315/*"NOT_SELECT_COSTUME"*/;
     goto LABEL_30;
   }
 }
@@ -279,8 +279,8 @@ void __fastcall ServantCostumeListViewItemDraw__SetNonColorStatusLabel(
   if ( (byte_40FCFE9 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_9313, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_9313/*"NOT_RELEASE_COSTUME"*/, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FCFE9 = 1;
   }
   if ( item )
@@ -313,7 +313,7 @@ void __fastcall ServantCostumeListViewItemDraw__SetNonColorStatusLabel(
       v10 = this->fields.nonColorStatusLabel;
       if ( v10 )
       {
-        v11 = (System_String_o *)StringLiteral_1;
+        v11 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_16:
         UILabel__set_text(v10, v11, 0LL);
         return;
@@ -327,7 +327,7 @@ LABEL_16:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = LocalizationManager__Get((System_String_o *)StringLiteral_9313, 0LL);
+      v13 = LocalizationManager__Get((System_String_o *)StringLiteral_9313/*"NOT_RELEASE_COSTUME"*/, 0LL);
       if ( v12 )
       {
         v11 = v13;
@@ -419,14 +419,14 @@ void __fastcall ServantCostumeListViewItemDraw__SetStatusLabel(
   if ( (byte_40FCFE8 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_364, v5);
-    sub_B16FFC(&StringLiteral_361, v6);
-    sub_B16FFC(&StringLiteral_363, v7);
-    sub_B16FFC(&StringLiteral_5568, v8);
-    sub_B16FFC(&StringLiteral_3380, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
-    sub_B16FFC(&StringLiteral_357, v11);
-    sub_B16FFC(&StringLiteral_5560, v12);
+    sub_B16FFC(&StringLiteral_364/*"#FFFFFF"*/, v5);
+    sub_B16FFC(&StringLiteral_361/*"#FEEF99"*/, v6);
+    sub_B16FFC(&StringLiteral_363/*"#FFFF00"*/, v7);
+    sub_B16FFC(&StringLiteral_5568/*"EVENT_COMBINE_COSTUME_LF"*/, v8);
+    sub_B16FFC(&StringLiteral_3380/*"COSTUME_CAN_RELEASE"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
+    sub_B16FFC(&StringLiteral_357/*"#E1A545"*/, v11);
+    sub_B16FFC(&StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, v12);
     byte_40FCFE8 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
@@ -438,7 +438,7 @@ void __fastcall ServantCostumeListViewItemDraw__SetStatusLabel(
     statusTxtLabel = this->fields.statusTxtLabel;
     if ( !statusTxtLabel )
       goto LABEL_26;
-    UILabel__set_text(statusTxtLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(statusTxtLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( !ServantCostumeListViewItem__get_IsCanNotSelect(item, 0LL) )
     {
       if ( item->fields.isOpenEventCostume )
@@ -449,14 +449,14 @@ void __fastcall ServantCostumeListViewItemDraw__SetStatusLabel(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5568, 0LL);
-        v16 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560, 0LL);
+        v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5568/*"EVENT_COMBINE_COSTUME_LF"*/, 0LL);
+        v16 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
         v17 = System_String__Format(v15, v16, 0LL);
         if ( !v14 )
           goto LABEL_26;
         UILabel__set_text(v14, v17, 0LL);
-        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_357, &v28, 0LL);
-        v18 = &StringLiteral_361;
+        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_357/*"#E1A545"*/, &v28, 0LL);
+        v18 = &StringLiteral_361/*"#FEEF99"*/;
 LABEL_18:
         UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)*v18, &color, 0LL);
         v21 = this->fields.statusTxtLabel;
@@ -477,12 +477,12 @@ LABEL_18:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v20 = LocalizationManager__Get((System_String_o *)StringLiteral_3380, 0LL);
+        v20 = LocalizationManager__Get((System_String_o *)StringLiteral_3380/*"COSTUME_CAN_RELEASE"*/, 0LL);
         if ( !v19 )
           goto LABEL_26;
         UILabel__set_text(v19, v20, 0LL);
-        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_364, &v28, 0LL);
-        v18 = &StringLiteral_363;
+        UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_364/*"#FFFFFF"*/, &v28, 0LL);
+        v18 = &StringLiteral_363/*"#FFFF00"*/;
         goto LABEL_18;
       }
     }

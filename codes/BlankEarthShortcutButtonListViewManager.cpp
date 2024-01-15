@@ -130,8 +130,8 @@ void __fastcall BlankEarthShortcutButtonListViewManager__CreateList(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
     sub_B16FFC(&Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0__CreateList_b__0__, v16);
     sub_B16FFC(&BlankEarthShortcutButtonListViewManager___c__DisplayClass13_0_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_8914, v18);
-    sub_B16FFC(&StringLiteral_5366, v19);
+    sub_B16FFC(&StringLiteral_8914/*"MapShortcut/DownloadMapShortcut"*/, v18);
+    sub_B16FFC(&StringLiteral_5366/*"DownloadMapShortcutAtlas"*/, v19);
     byte_40F90ED = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
@@ -155,12 +155,12 @@ void __fastcall BlankEarthShortcutButtonListViewManager__CreateList(
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_8914, 0LL);
+  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_8914/*"MapShortcut/DownloadMapShortcut"*/, 0LL);
   if ( !AssetStorage )
     goto LABEL_32;
   Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                  AssetStorage,
-                                                                 (System_String_o *)StringLiteral_5366,
+                                                                 (System_String_o *)StringLiteral_5366/*"DownloadMapShortcutAtlas"*/,
                                                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )

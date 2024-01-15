@@ -838,7 +838,7 @@ void __fastcall RequestBase__addField_30956696(
   if ( (byte_40FD32E & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string__Add__, fieldName);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD32E = 1;
   }
   paramString = this->fields.paramString;
@@ -848,7 +848,7 @@ void __fastcall RequestBase__addField_30956696(
   if ( v8 )
     v9 = (System_Xml_Schema_XmlSchemaObject_o *)v8;
   else
-    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1;
+    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1/*""*/;
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)paramString,
     (System_Xml_XmlQualifiedName_o *)fieldName,
@@ -873,7 +873,7 @@ void __fastcall RequestBase__addField_30956852(
   if ( (byte_40FD32F & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string__Add__, fieldName);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD32F = 1;
   }
   paramString = this->fields.paramString;
@@ -883,7 +883,7 @@ void __fastcall RequestBase__addField_30956852(
   if ( v8 )
     v9 = (System_Xml_Schema_XmlSchemaObject_o *)v8;
   else
-    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1;
+    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1/*""*/;
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)paramString,
     (System_Xml_XmlQualifiedName_o *)fieldName,
@@ -908,7 +908,7 @@ void __fastcall RequestBase__addField_30957008(
   if ( (byte_40FD330 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string__Add__, fieldName);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD330 = 1;
   }
   paramString = this->fields.paramString;
@@ -918,7 +918,7 @@ void __fastcall RequestBase__addField_30957008(
   if ( v8 )
     v9 = (System_Xml_Schema_XmlSchemaObject_o *)v8;
   else
-    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1;
+    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1/*""*/;
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)paramString,
     (System_Xml_XmlQualifiedName_o *)fieldName,
@@ -990,12 +990,12 @@ bool __fastcall RequestBase__backgroundErrorRequest(
 
   if ( (byte_40FD328 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20980, errorCode);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, errorCode);
     byte_40FD328 = 1;
   }
   CallBack = this->fields.CallBack;
   if ( CallBack )
-    NetworkManager_ResultCallbackFunc__Invoke(CallBack, (System_String_o *)StringLiteral_20980, 0LL);
+    NetworkManager_ResultCallbackFunc__Invoke(CallBack, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL);
   return 1;
 }
 
@@ -1065,12 +1065,12 @@ bool __fastcall RequestBase__errorRequest(RequestBase_o *this, System_String_o *
 
   if ( (byte_40FD329 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20980, errorCode);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, errorCode);
     byte_40FD329 = 1;
   }
   CallBack = this->fields.CallBack;
   if ( CallBack )
-    NetworkManager_ResultCallbackFunc__Invoke(CallBack, (System_String_o *)StringLiteral_20980, 0LL);
+    NetworkManager_ResultCallbackFunc__Invoke(CallBack, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL);
   return 1;
 }
 
@@ -1373,7 +1373,7 @@ void __fastcall RequestBase__replaceField_30957656(
   if ( (byte_40FD336 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, fieldName);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD336 = 1;
   }
   paramString = this->fields.paramString;
@@ -1383,7 +1383,7 @@ void __fastcall RequestBase__replaceField_30957656(
   if ( v8 )
     v9 = (System_Xml_Schema_XmlSchemaObject_o *)v8;
   else
-    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1;
+    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1/*""*/;
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)paramString,
     (System_Xml_XmlQualifiedName_o *)fieldName,
@@ -1408,7 +1408,7 @@ void __fastcall RequestBase__replaceField_30957812(
   if ( (byte_40FD337 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, fieldName);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD337 = 1;
   }
   paramString = this->fields.paramString;
@@ -1418,7 +1418,7 @@ void __fastcall RequestBase__replaceField_30957812(
   if ( v8 )
     v9 = (System_Xml_Schema_XmlSchemaObject_o *)v8;
   else
-    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1;
+    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1/*""*/;
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)paramString,
     (System_Xml_XmlQualifiedName_o *)fieldName,
@@ -1443,7 +1443,7 @@ void __fastcall RequestBase__replaceField_30957968(
   if ( (byte_40FD338 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, fieldName);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD338 = 1;
   }
   paramString = this->fields.paramString;
@@ -1453,7 +1453,7 @@ void __fastcall RequestBase__replaceField_30957968(
   if ( v8 )
     v9 = (System_Xml_Schema_XmlSchemaObject_o *)v8;
   else
-    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1;
+    v9 = (System_Xml_Schema_XmlSchemaObject_o *)StringLiteral_1/*""*/;
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)paramString,
     (System_Xml_XmlQualifiedName_o *)fieldName,

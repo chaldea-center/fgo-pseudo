@@ -23,8 +23,8 @@ System_String_o *__fastcall SpotCooltimeComponent__GetCooltimeText(
   if ( (byte_40FADA1 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&remainTime);
-    sub_B16FFC(&StringLiteral_4532, v4);
-    sub_B16FFC(&StringLiteral_5592, v5);
+    sub_B16FFC(&StringLiteral_4532/*"D2"*/, v4);
+    sub_B16FFC(&StringLiteral_5592/*"EVENT_COOLTIME_REMAIN"*/, v5);
     byte_40FADA1 = 1;
   }
   v13 = remainTime / 3600;
@@ -35,10 +35,10 @@ System_String_o *__fastcall SpotCooltimeComponent__GetCooltimeText(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5592, 0LL);
-  v7 = (Il2CppObject *)System_Int32__ToString_38275808((int32_t)&v13, (System_String_o *)StringLiteral_4532, 0LL);
-  v8 = (Il2CppObject *)System_Int32__ToString_38275808((int32_t)&v12, (System_String_o *)StringLiteral_4532, 0LL);
-  v9 = (Il2CppObject *)System_Int32__ToString_38275808((int32_t)&v11, (System_String_o *)StringLiteral_4532, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5592/*"EVENT_COOLTIME_REMAIN"*/, 0LL);
+  v7 = (Il2CppObject *)System_Int32__ToString_38275808((int32_t)&v13, (System_String_o *)StringLiteral_4532/*"D2"*/, 0LL);
+  v8 = (Il2CppObject *)System_Int32__ToString_38275808((int32_t)&v12, (System_String_o *)StringLiteral_4532/*"D2"*/, 0LL);
+  v9 = (Il2CppObject *)System_Int32__ToString_38275808((int32_t)&v11, (System_String_o *)StringLiteral_4532/*"D2"*/, 0LL);
   return System_String__Format_43744796(v6, v7, v8, v9, 0LL);
 }
 
@@ -144,7 +144,7 @@ void __fastcall SpotCooltimeComponent__Setup(
   if ( (byte_40FADA3 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, userCooltimeEntity);
-    sub_B16FFC(&StringLiteral_17634, v11);
+    sub_B16FFC(&StringLiteral_17634/*"cooltime_base"*/, v11);
     byte_40FADA3 = 1;
   }
   this->fields.userCooltimeEntity = userCooltimeEntity;
@@ -183,7 +183,7 @@ void __fastcall SpotCooltimeComponent__Setup(
   bgSprite = this->fields.bgSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(bgSprite, (System_String_o *)StringLiteral_17634, 0LL);
+  AtlasManager__SetEventUI(bgSprite, (System_String_o *)StringLiteral_17634/*"cooltime_base"*/, 0LL);
   SpotCooltimeComponent__UpdateDisp(this, v26);
 }
 

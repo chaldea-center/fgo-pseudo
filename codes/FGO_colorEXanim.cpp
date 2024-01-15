@@ -16,7 +16,7 @@ void __fastcall FGO_colorEXanim___ctor(FGO_colorEXanim_o *this, const MethodInfo
 
   if ( (byte_40F9F61 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16146, method);
+    sub_B16FFC(&StringLiteral_16146/*"_xxxColor"*/, method);
     byte_40F9F61 = 1;
   }
   v15.fields.r = 1.0;
@@ -26,8 +26,8 @@ void __fastcall FGO_colorEXanim___ctor(FGO_colorEXanim_o *this, const MethodInfo
   v14 = 0uLL;
   UnityEngine_Color___ctor(v15, v2, v3, v4, v5, (const MethodInfo *)&v14);
   *(_OWORD *)&this->fields.customColor.fields.g = v14;
-  v7 = (System_Int32_array **)StringLiteral_16146;
-  this->fields.targetColorName = (struct System_String_o *)StringLiteral_16146;
+  v7 = (System_Int32_array **)StringLiteral_16146/*"_xxxColor"*/;
+  this->fields.targetColorName = (struct System_String_o *)StringLiteral_16146/*"_xxxColor"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.targetColorName, v7, v8, v9, v10, v11, v12, v13);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }

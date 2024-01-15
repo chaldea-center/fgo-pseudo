@@ -752,7 +752,7 @@ void __fastcall SubmarineMapManager__CheckNewPlayableEventQuest(SubmarineMapMana
     sub_B16FFC(&SingletonTemplate_clsQuestCheck__TypeInfo, v8);
     sub_B16FFC(&Method_SubmarineMapManager___c__CheckNewPlayableEventQuest_b__50_0__, v9);
     sub_B16FFC(&SubmarineMapManager___c_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_6830, v11);
+    sub_B16FFC(&StringLiteral_6830/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE_PANEL_MAP"*/, v11);
     byte_40F7C67 = 1;
   }
   if ( (BYTE3(SingletonTemplate_clsQuestCheck__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -797,7 +797,7 @@ LABEL_28:
   }
   static_fields = v24->static_fields;
   _9__50_0 = static_fields->__9__50_0;
-  v27 = (System_String_o *)StringLiteral_6830;
+  v27 = (System_String_o *)StringLiteral_6830/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE_PANEL_MAP"*/;
   if ( !_9__50_0 )
   {
     if ( (BYTE3(v24->vtable._0_Equals.methodPtr) & 4) != 0 && !v24->_2.cctor_finished )
@@ -4141,14 +4141,14 @@ LABEL_88:
         AnimationComponent = SubmarineScannerComponent__get_AnimationComponent(v84, v237);
         if ( (byte_40F7CBE & 1) == 0 )
         {
-          sub_B16FFC(&StringLiteral_1, v238);
+          sub_B16FFC(&StringLiteral_1/*""*/, v238);
           byte_40F7CBE = 1;
         }
         state = v84->fields.state;
         if ( state )
           p_name = &state->fields.name;
         else
-          p_name = (System_String_o **)&StringLiteral_1;
+          p_name = (System_String_o **)&StringLiteral_1/*""*/;
         v245 = *p_name;
         v246 = sub_B170CC(SchedulerTaskSimpleAnimation_TypeInfo, v238, v239, v240, v241);
         SchedulerTaskSimpleAnimation___ctor((SchedulerTaskSimpleAnimation_o *)v246, AnimationComponent, v245, 0LL);
@@ -5780,24 +5780,24 @@ void __fastcall SubmarineMapManager__OnScanPanelRequestFinished(
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v11);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v12);
     sub_B16FFC(&TitleInfoEventSubmarineStatusComponent_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_20980, v14);
-    sub_B16FFC(&StringLiteral_15571, v15);
-    sub_B16FFC(&StringLiteral_6560, v16);
-    sub_B16FFC(&StringLiteral_15807, v17);
-    sub_B16FFC(&StringLiteral_951, v18);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v14);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v15);
+    sub_B16FFC(&StringLiteral_6560/*"False"*/, v16);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v17);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v18);
     byte_40F7C60 = 1;
   }
   v76 = 0;
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     SubmarineMapManager__OnEndScan(this, v19);
     return;
   }
   SubmarineMapManager__StartScanPerformance(this, scanId, panelData, v20);
   v21 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -5905,17 +5905,17 @@ LABEL_84:
             max_length = ValueByArray->max_length;
             v52 = &ValueByArray->m_Items[1];
             if ( max_length <= 1 )
-              v52 = (System_String_o **)&StringLiteral_951;
+              v52 = (System_String_o **)&StringLiteral_951/*"0"*/;
             v53 = *v52;
-            v54 = max_length <= 2 ? (System_String_o **)&StringLiteral_951 : &ValueByArray->m_Items[2];
+            v54 = max_length <= 2 ? (System_String_o **)&StringLiteral_951/*"0"*/ : &ValueByArray->m_Items[2];
             v55 = *v54;
-            v56 = max_length <= 3 ? &StringLiteral_6560 : (__int64 *)&ValueByArray->m_Items[3];
+            v56 = max_length <= 3 ? &StringLiteral_6560/*"False"*/ : (__int64 *)&ValueByArray->m_Items[3];
           }
           else
           {
-            v55 = (System_String_o *)StringLiteral_951;
-            v56 = &StringLiteral_6560;
-            v53 = (System_String_o *)StringLiteral_951;
+            v55 = (System_String_o *)StringLiteral_951/*"0"*/;
+            v56 = &StringLiteral_6560/*"False"*/;
+            v53 = (System_String_o *)StringLiteral_951/*"0"*/;
           }
           v57 = (System_String_o *)*v56;
           if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

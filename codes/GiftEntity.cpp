@@ -211,16 +211,16 @@ void __fastcall GiftEntity__GetInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v22);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v23);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v24);
-    sub_B16FFC(&StringLiteral_3238, v25);
-    sub_B16FFC(&StringLiteral_6431, v26);
-    sub_B16FFC(&StringLiteral_6430, v27);
-    sub_B16FFC(&StringLiteral_14652, v28);
-    sub_B16FFC(&StringLiteral_14683, v29);
-    sub_B16FFC(&StringLiteral_14682, v30);
-    sub_B16FFC(&StringLiteral_12004, v31);
-    sub_B16FFC(&StringLiteral_5735, v32);
-    sub_B16FFC(&StringLiteral_11678, v33);
-    sub_B16FFC(&StringLiteral_1, v34);
+    sub_B16FFC(&StringLiteral_3238/*"COMMAND_CODE_UNIT"*/, v25);
+    sub_B16FFC(&StringLiteral_6431/*"FRIENDSHIP_UNIT"*/, v26);
+    sub_B16FFC(&StringLiteral_6430/*"FRIENDSHIP_NAME"*/, v27);
+    sub_B16FFC(&StringLiteral_14652/*"UNIT_INFO"*/, v28);
+    sub_B16FFC(&StringLiteral_14683/*"USER_EXP_UNIT"*/, v29);
+    sub_B16FFC(&StringLiteral_14682/*"USER_EXP_NAME"*/, v30);
+    sub_B16FFC(&StringLiteral_12004/*"SERVANT_UNIT"*/, v31);
+    sub_B16FFC(&StringLiteral_5735/*"EXCEPT_SERVANT_UNIT"*/, v32);
+    sub_B16FFC(&StringLiteral_11678/*"SERVANT_EQUIP_UNIT"*/, v33);
+    sub_B16FFC(&StringLiteral_1/*""*/, v34);
     byte_40FC11B = 1;
   }
   switch ( this->fields.type )
@@ -253,7 +253,7 @@ void __fastcall GiftEntity__GetInfo(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v46 = &StringLiteral_12004;
+        v46 = &StringLiteral_12004/*"SERVANT_UNIT"*/;
       }
       else if ( ServantEntity__get_IsServantEquip(v38, 0LL)
              || ServantEntity__get_IsCombineMaterial(v38, 0LL)
@@ -264,7 +264,7 @@ void __fastcall GiftEntity__GetInfo(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v46 = &StringLiteral_11678;
+        v46 = &StringLiteral_11678/*"SERVANT_EQUIP_UNIT"*/;
       }
       else
       {
@@ -273,7 +273,7 @@ void __fastcall GiftEntity__GetInfo(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v46 = &StringLiteral_5735;
+        v46 = &StringLiteral_5735/*"EXCEPT_SERVANT_UNIT"*/;
       }
       goto LABEL_70;
     case 2:
@@ -304,7 +304,7 @@ void __fastcall GiftEntity__GetInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v98 = LocalizationManager__Get((System_String_o *)StringLiteral_6430, 0LL);
+      v98 = LocalizationManager__Get((System_String_o *)StringLiteral_6430/*"FRIENDSHIP_NAME"*/, 0LL);
       *nameText = v98;
       sub_B16F98(
         (BattleServantConfConponent_o *)nameText,
@@ -315,7 +315,7 @@ void __fastcall GiftEntity__GetInfo(
         v102,
         v103,
         v104);
-      v46 = &StringLiteral_6431;
+      v46 = &StringLiteral_6431/*"FRIENDSHIP_UNIT"*/;
       goto LABEL_70;
     case 4:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -323,10 +323,10 @@ void __fastcall GiftEntity__GetInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v81 = LocalizationManager__Get((System_String_o *)StringLiteral_14682, 0LL);
+      v81 = LocalizationManager__Get((System_String_o *)StringLiteral_14682/*"USER_EXP_NAME"*/, 0LL);
       *nameText = v81;
       sub_B16F98((BattleServantConfConponent_o *)nameText, (System_Int32_array **)v81, v82, v83, v84, v85, v86, v87);
-      v46 = &StringLiteral_14683;
+      v46 = &StringLiteral_14683/*"USER_EXP_UNIT"*/;
       goto LABEL_70;
     case 5:
       v52 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -357,21 +357,21 @@ void __fastcall GiftEntity__GetInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v46 = &StringLiteral_14652;
+      v46 = &StringLiteral_14652/*"UNIT_INFO"*/;
       goto LABEL_70;
     case 8:
-      *nameText = (System_String_o *)StringLiteral_1;
+      *nameText = (System_String_o *)StringLiteral_1/*""*/;
       sub_B16F98(
         (BattleServantConfConponent_o *)nameText,
-        (System_Int32_array **)StringLiteral_1,
+        (System_Int32_array **)StringLiteral_1/*""*/,
         (System_String_array **)countText,
         (System_String_array **)method,
         v4,
         v5,
         v6,
         v7);
-      *countText = (System_String_o *)StringLiteral_1;
-      v74 = (System_String_o *)StringLiteral_1;
+      *countText = (System_String_o *)StringLiteral_1/*""*/;
+      v74 = (System_String_o *)StringLiteral_1/*""*/;
       goto LABEL_61;
     case 9:
     case 0xA:
@@ -420,7 +420,7 @@ void __fastcall GiftEntity__GetInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v46 = &StringLiteral_3238;
+      v46 = &StringLiteral_3238/*"COMMAND_CODE_UNIT"*/;
 LABEL_70:
       v116 = LocalizationManager__Get((System_String_o *)*v46, 0LL);
       num = this->fields.num;
@@ -447,10 +447,10 @@ LABEL_70:
                     v89,
                     this->fields.objectId,
                     (const MethodInfo_266F388 *)Method_DataMasterBase_EventPointBuffMaster__EventPointBuffEntity__int__GetEntity__),
-            *countText = (System_String_o *)StringLiteral_1,
+            *countText = (System_String_o *)StringLiteral_1/*""*/,
             sub_B16F98(
               (BattleServantConfConponent_o *)countText,
-              (System_Int32_array **)StringLiteral_1,
+              (System_Int32_array **)StringLiteral_1/*""*/,
               v91,
               v92,
               v93,
@@ -496,8 +496,8 @@ LABEL_60:
         v5,
         v6,
         v7);
-      *countText = (System_String_o *)StringLiteral_1;
-      v74 = (System_String_o *)StringLiteral_1;
+      *countText = (System_String_o *)StringLiteral_1/*""*/;
+      v74 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_61:
       v97 = countText;
 LABEL_62:
@@ -570,12 +570,12 @@ System_String_o *__fastcall GiftEntity__GetRewardName(GiftEntity_o *this, const 
     sub_B16FFC(&Method_DataMasterBase_EventPointBuffMaster__EventPointBuffEntity__int__GetEntity__, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_8729, v16);
-    sub_B16FFC(&StringLiteral_8728, v17);
-    sub_B16FFC(&StringLiteral_80, v18);
-    sub_B16FFC(&StringLiteral_6430, v19);
-    sub_B16FFC(&StringLiteral_14682, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_8729/*"MISSION_REWARD_FOMAT_COSTUME_RELEASE"*/, v16);
+    sub_B16FFC(&StringLiteral_8728/*"MISSION_REWARD_FOMAT_COMMANDCODE"*/, v17);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v18);
+    sub_B16FFC(&StringLiteral_6430/*"FRIENDSHIP_NAME"*/, v19);
+    sub_B16FFC(&StringLiteral_14682/*"USER_EXP_NAME"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40FC11C = 1;
   }
   switch ( this->fields.type )
@@ -615,14 +615,14 @@ System_String_o *__fastcall GiftEntity__GetRewardName(GiftEntity_o *this, const 
         goto LABEL_76;
       name = v31->fields.name;
       CountText = ItemEntity__GetCountText(v31, this->fields.num, 0LL);
-      return System_String__Concat_43746016(name, (System_String_o *)StringLiteral_80, CountText, 0LL);
+      return System_String__Concat_43746016(name, (System_String_o *)StringLiteral_80/*" "*/, CountText, 0LL);
     case 3:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v34 = &StringLiteral_6430;
+      v34 = &StringLiteral_6430/*"FRIENDSHIP_NAME"*/;
       return LocalizationManager__Get((System_String_o *)*v34, 0LL);
     case 4:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -630,7 +630,7 @@ System_String_o *__fastcall GiftEntity__GetRewardName(GiftEntity_o *this, const 
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v34 = &StringLiteral_14682;
+      v34 = &StringLiteral_14682/*"USER_EXP_NAME"*/;
       return LocalizationManager__Get((System_String_o *)*v34, 0LL);
     case 5:
       if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -655,7 +655,7 @@ System_String_o *__fastcall GiftEntity__GetRewardName(GiftEntity_o *this, const 
       }
       return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44107000(v27, 0LL);
     case 8:
-      return (System_String_o *)StringLiteral_1;
+      return (System_String_o *)StringLiteral_1/*""*/;
     case 9:
       objectId = this->fields.objectId;
       if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -672,7 +672,7 @@ System_String_o *__fastcall GiftEntity__GetRewardName(GiftEntity_o *this, const 
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_8729, 0LL);
+      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_8729/*"MISSION_REWARD_FOMAT_COSTUME_RELEASE"*/, 0LL);
       if ( !v39 )
         goto LABEL_76;
       v41 = v40;
@@ -711,7 +711,7 @@ System_String_o *__fastcall GiftEntity__GetRewardName(GiftEntity_o *this, const 
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_8728, 0LL);
+      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_8728/*"MISSION_REWARD_FOMAT_COMMANDCODE"*/, 0LL);
       if ( !v44 )
         goto LABEL_76;
       v41 = v45;

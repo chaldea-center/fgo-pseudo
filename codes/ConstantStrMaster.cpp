@@ -83,12 +83,12 @@ System_String_array_array *__fastcall ConstantStrMaster__GetCombineReturnVoiceLi
   if ( (byte_40FBD5C & 1) == 0 )
   {
     sub_B16FFC(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___, method);
-    sub_B16FFC(&StringLiteral_3189, v3);
+    sub_B16FFC(&StringLiteral_3189/*"COMBINE_SCENE_VOICE_RETURN"*/, v3);
     byte_40FBD5C = 1;
   }
   EntityFromKey_object = DataMasterBase__getEntityFromKey_object_(
                            (DataMasterBase_o *)this,
-                           (System_String_o *)StringLiteral_3189,
+                           (System_String_o *)StringLiteral_3189/*"COMBINE_SCENE_VOICE_RETURN"*/,
                            (const MethodInfo_18C3A2C *)Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
   return ConstantStrMaster__GetVoiceList(
            (ConstantStrMaster_o *)EntityFromKey_object,
@@ -108,12 +108,12 @@ System_String_array_array *__fastcall ConstantStrMaster__GetCombineWelcomeVoiceL
   if ( (byte_40FBD5B & 1) == 0 )
   {
     sub_B16FFC(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___, method);
-    sub_B16FFC(&StringLiteral_3190, v3);
+    sub_B16FFC(&StringLiteral_3190/*"COMBINE_SCENE_VOICE_WELCOME"*/, v3);
     byte_40FBD5B = 1;
   }
   EntityFromKey_object = DataMasterBase__getEntityFromKey_object_(
                            (DataMasterBase_o *)this,
-                           (System_String_o *)StringLiteral_3190,
+                           (System_String_o *)StringLiteral_3190/*"COMBINE_SCENE_VOICE_WELCOME"*/,
                            (const MethodInfo_18C3A2C *)Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___);
   return ConstantStrMaster__GetVoiceList(
            (ConstantStrMaster_o *)EntityFromKey_object,
@@ -158,7 +158,7 @@ System_String_o *__fastcall ConstantStrMaster__GetRandomVoice(
   if ( (byte_40FBD5D & 1) == 0 )
   {
     sub_B16FFC(&Method_DataMasterBase_getEntityFromKey_ConstantStrEntity___, key);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FBD5D = 1;
   }
   EntityFromKey_object = DataMasterBase__getEntityFromKey_object_(
@@ -188,7 +188,7 @@ LABEL_10:
   }
   else
   {
-    m_Items = (System_String_o **)&StringLiteral_1;
+    m_Items = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *m_Items;
 }

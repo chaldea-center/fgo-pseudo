@@ -17,15 +17,15 @@ void __fastcall WarClearReward___ctor(WarClearReward_o *this, const MethodInfo *
 
   if ( (byte_40FA939 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FA939 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.giftId = 0LL;
-  v3 = (System_Int32_array **)StringLiteral_1;
-  this->fields.title = (struct System_String_o *)StringLiteral_1;
+  v3 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.title, v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Int32_array **)StringLiteral_1;
-  this->fields.message = (struct System_String_o *)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.message = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.message, v10, v11, v12, v13, v14, v15, v16);
 }

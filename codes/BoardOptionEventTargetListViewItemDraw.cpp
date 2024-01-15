@@ -14,12 +14,12 @@ void __fastcall BoardOptionEventTargetListViewItemDraw___cctor(const MethodInfo 
   if ( (byte_40FB0D7 & 1) == 0 )
   {
     sub_B16FFC(&BoardOptionEventTargetListViewItemDraw_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_20461, v8);
+    sub_B16FFC(&StringLiteral_20461/*"missiontarget_bg"*/, v8);
     byte_40FB0D7 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BoardOptionEventTargetListViewItemDraw_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_20461;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_20461;
+  v10 = (System_Int32_array **)StringLiteral_20461/*"missiontarget_bg"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_20461/*"missiontarget_bg"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -164,7 +164,7 @@ void __fastcall BoardOptionEventTargetListViewItemDraw__SetDispType_27166784(
   if ( (byte_40FB0D4 & 1) == 0 )
   {
     sub_B16FFC(&QuestInformationListViewItemDraw_TypeInfo, *(_QWORD *)&dispTp);
-    sub_B16FFC(&StringLiteral_15950, v7);
+    sub_B16FFC(&StringLiteral_15950/*"_MainTex"*/, v7);
     byte_40FB0D4 = 1;
   }
   if ( dispTp == 3 )
@@ -186,7 +186,7 @@ void __fastcall BoardOptionEventTargetListViewItemDraw__SetDispType_27166784(
                                          texture->klass->vtable._27_set_mainTexture.methodPtr);
         if ( v24 )
         {
-          UnityEngine_Material__SetTexture(v24, (System_String_o *)StringLiteral_15950, v25, 0LL);
+          UnityEngine_Material__SetTexture(v24, (System_String_o *)StringLiteral_15950/*"_MainTex"*/, v25, 0LL);
           ((void (__fastcall *)(UITexture_o *, UnityEngine_Material_o *, Il2CppMethodPointer))texture->klass->vtable._25_set_material.method)(
             texture,
             v24,

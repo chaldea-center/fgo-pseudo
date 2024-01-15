@@ -78,8 +78,8 @@ void __fastcall SellServantRequest__beginRequest(
     sub_B16FFC(&Method_SellServantRequest___c__beginRequest_b__2_0__, v13);
     sub_B16FFC(&Method_SellServantRequest___c__beginRequest_b__2_1__, v14);
     sub_B16FFC(&SellServantRequest___c_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_21868, v16);
-    sub_B16FFC(&StringLiteral_21867, v17);
+    sub_B16FFC(&StringLiteral_21868/*"sellData"*/, v16);
+    sub_B16FFC(&StringLiteral_21867/*"sellCommandCode"*/, v17);
     byte_40F93C2 = 1;
   }
   v18 = SellServantRequest___c_TypeInfo;
@@ -193,7 +193,7 @@ void __fastcall SellServantRequest__beginRequest(
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
   v55 = System_Convert__ToBase64String(v54, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_21868, v55, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_21868/*"sellData"*/, v55, 0LL);
   v60 = (MiniMessagePack_MiniMessagePacker_o *)sub_B170CC(
                                                  MiniMessagePack_MiniMessagePacker_TypeInfo,
                                                  v56,
@@ -206,7 +206,7 @@ LABEL_25:
     sub_B170D4();
   v61 = MiniMessagePack_MiniMessagePacker__PackClass(v60, v48, 0LL);
   v62 = System_Convert__ToBase64String(v61, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_21867, v62, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_21867/*"sellCommandCode"*/, v62, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -219,7 +219,7 @@ System_String_o *__fastcall SellServantRequest__getURL(SellServantRequest_o *thi
   if ( (byte_40F93C1 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_22016, v2);
+    sub_B16FFC(&StringLiteral_22016/*"shop/sellSvt"*/, v2);
     byte_40F93C1 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -228,7 +228,7 @@ System_String_o *__fastcall SellServantRequest__getURL(SellServantRequest_o *thi
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_22016, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_22016/*"shop/sellSvt"*/, 0LL);
 }
 
 
@@ -248,7 +248,7 @@ void __fastcall SellServantRequest__requestCompleted(
   {
     sub_B16FFC(&JsonManager_TypeInfo, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40F93C3 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -267,7 +267,7 @@ void __fastcall SellServantRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_20980;
+    v10 = (System_String_o *)StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

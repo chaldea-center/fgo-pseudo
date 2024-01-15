@@ -94,9 +94,9 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
   if ( (byte_40FCBD4 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_1, v7);
-    sub_B16FFC(&StringLiteral_8629, v8);
-    sub_B16FFC(&StringLiteral_8628, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
+    sub_B16FFC(&StringLiteral_8629/*"MATERIAL_FIND_SERVANT"*/, v8);
+    sub_B16FFC(&StringLiteral_8628/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
     byte_40FCBD4 = 1;
   }
   if ( item && mode )
@@ -135,7 +135,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v22 = &StringLiteral_8629;
+      v22 = &StringLiteral_8629/*"MATERIAL_FIND_SERVANT"*/;
     }
     else
     {
@@ -157,7 +157,7 @@ LABEL_9:
             v16 = this->fields.maskLabel;
             if ( v16 )
             {
-              UILabel__set_text(v16, (System_String_o *)StringLiteral_1, 0LL);
+              UILabel__set_text(v16, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 LABEL_13:
               MaterialCostumeServantListViewItemDraw__SetButtonState(this, 1, v12);
               return;
@@ -179,7 +179,7 @@ LABEL_13:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v22 = &StringLiteral_8628;
+      v22 = &StringLiteral_8628/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
     }
     v25 = LocalizationManager__Get((System_String_o *)*v22, 0LL);
     if ( maskLabel )

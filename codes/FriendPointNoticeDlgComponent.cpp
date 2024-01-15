@@ -175,14 +175,14 @@ void __fastcall FriendPointNoticeDlgComponent__Init(FriendPointNoticeDlgComponen
 
   if ( (byte_40FD93B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FD93B = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (addPointLabel = this->fields.addPointLabel) == 0LL)
-    || (UILabel__set_text(addPointLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(addPointLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
     sub_B170D4();
@@ -391,20 +391,20 @@ void __fastcall FriendPointNoticeDlgComponent__Open(
     sub_B16FFC(&int_TypeInfo, v16);
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&NetworkManager_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_6842, v19);
-    sub_B16FFC(&StringLiteral_6839, v20);
-    sub_B16FFC(&StringLiteral_6838, v21);
-    sub_B16FFC(&StringLiteral_6843, v22);
-    sub_B16FFC(&StringLiteral_81, v23);
-    sub_B16FFC(&StringLiteral_6836, v24);
-    sub_B16FFC(&StringLiteral_3252, v25);
-    sub_B16FFC(&StringLiteral_6835, v26);
-    sub_B16FFC(&StringLiteral_6833, v27);
-    sub_B16FFC(&StringLiteral_1, v28);
-    sub_B16FFC(&StringLiteral_6837, v29);
-    sub_B16FFC(&StringLiteral_6844, v30);
-    sub_B16FFC(&StringLiteral_6832, v31);
-    sub_B16FFC(&StringLiteral_6834, v32);
+    sub_B16FFC(&StringLiteral_6842/*"GET_FRIEND_POINT_SERVANT_TITLE"*/, v19);
+    sub_B16FFC(&StringLiteral_6839/*"GET_FRIEND_POINT_NO_DATA"*/, v20);
+    sub_B16FFC(&StringLiteral_6838/*"GET_FRIEND_POINT_NOW_POINT"*/, v21);
+    sub_B16FFC(&StringLiteral_6843/*"GET_FRIEND_POINT_SUPPORT_BTN"*/, v22);
+    sub_B16FFC(&StringLiteral_81/*"  "*/, v23);
+    sub_B16FFC(&StringLiteral_6836/*"GET_FRIEND_POINT_FP_NORMAL"*/, v24);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v25);
+    sub_B16FFC(&StringLiteral_6835/*"GET_FRIEND_POINT_FP_FOLLOW"*/, v26);
+    sub_B16FFC(&StringLiteral_6833/*"GET_FRIEND_POINT_CAPTION_EVENT"*/, v27);
+    sub_B16FFC(&StringLiteral_1/*""*/, v28);
+    sub_B16FFC(&StringLiteral_6837/*"GET_FRIEND_POINT_GACHA_BTN"*/, v29);
+    sub_B16FFC(&StringLiteral_6844/*"GET_FRIEND_POINT_TITLE"*/, v30);
+    sub_B16FFC(&StringLiteral_6832/*"GET_FRIEND_POINT_AT_LIMIT"*/, v31);
+    sub_B16FFC(&StringLiteral_6834/*"GET_FRIEND_POINT_CAPTION_NORMAL"*/, v32);
     byte_40FD93C = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -444,14 +444,14 @@ void __fastcall FriendPointNoticeDlgComponent__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_6844, 0LL);
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_6844/*"GET_FRIEND_POINT_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_119;
   UILabel__set_text(titleLabel, v44, 0LL);
   addPointLabel = this->fields.addPointLabel;
   if ( !addPointLabel )
     goto LABEL_119;
-  UILabel__set_text(addPointLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(addPointLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !mLoginResult )
     goto LABEL_119;
   if ( mLoginResult->fields.addFriendPoint >= 1 )
@@ -465,7 +465,7 @@ void __fastcall FriendPointNoticeDlgComponent__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v48 = LocalizationManager__Get((System_String_o *)StringLiteral_6836, 0LL);
+    v48 = LocalizationManager__Get((System_String_o *)StringLiteral_6836/*"GET_FRIEND_POINT_FP_NORMAL"*/, 0LL);
     addFriendPoint = mLoginResult->fields.addFriendPoint;
     v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &addFriendPoint);
     v50 = System_String__Format(v48, v49, 0LL);
@@ -479,7 +479,7 @@ void __fastcall FriendPointNoticeDlgComponent__Open(
       v52 = this->fields.addPointLabel;
       if ( !v52 )
         goto LABEL_119;
-      v53 = System_String__Concat_43743732(v52->fields.mText, (System_String_o *)StringLiteral_81, 0LL);
+      v53 = System_String__Concat_43743732(v52->fields.mText, (System_String_o *)StringLiteral_81/*"  "*/, 0LL);
       UILabel__set_text(v52, v53, 0LL);
     }
     v54 = this->fields.addPointLabel;
@@ -491,7 +491,7 @@ void __fastcall FriendPointNoticeDlgComponent__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v56 = LocalizationManager__Get((System_String_o *)StringLiteral_6835, 0LL);
+    v56 = LocalizationManager__Get((System_String_o *)StringLiteral_6835/*"GET_FRIEND_POINT_FP_FOLLOW"*/, 0LL);
     addFollowFriendPoint = mLoginResult->fields.addFollowFriendPoint;
     v57 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &addFollowFriendPoint);
     v58 = System_String__Format(v56, v57, 0LL);
@@ -516,17 +516,17 @@ void __fastcall FriendPointNoticeDlgComponent__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_6842, 0LL);
+  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_6842/*"GET_FRIEND_POINT_SERVANT_TITLE"*/, 0LL);
   if ( !mostUsedServantTitleLabel )
     goto LABEL_119;
   UILabel__set_text(mostUsedServantTitleLabel, v62, 0LL);
   normalSupportServantCaptionLabel = this->fields.normalSupportServantCaptionLabel;
-  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_6834, 0LL);
+  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_6834/*"GET_FRIEND_POINT_CAPTION_NORMAL"*/, 0LL);
   if ( !normalSupportServantCaptionLabel )
     goto LABEL_119;
   UILabel__set_text(normalSupportServantCaptionLabel, v64, 0LL);
   eventSupportServantCaptionLabel = this->fields.eventSupportServantCaptionLabel;
-  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_6833, 0LL);
+  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_6833/*"GET_FRIEND_POINT_CAPTION_EVENT"*/, 0LL);
   if ( !eventSupportServantCaptionLabel )
     goto LABEL_119;
   UILabel__set_text(eventSupportServantCaptionLabel, v66, 0LL);
@@ -647,7 +647,7 @@ LABEL_69:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v90 = LocalizationManager__Get((System_String_o *)StringLiteral_6839, 0LL);
+        v90 = LocalizationManager__Get((System_String_o *)StringLiteral_6839/*"GET_FRIEND_POINT_NO_DATA"*/, 0LL);
         if ( !v89 )
           goto LABEL_119;
         UILabel__set_text(v89, v90, 0LL);
@@ -692,7 +692,7 @@ LABEL_69:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v101 = LocalizationManager__Get((System_String_o *)StringLiteral_6832, 0LL);
+        v101 = LocalizationManager__Get((System_String_o *)StringLiteral_6832/*"GET_FRIEND_POINT_AT_LIMIT"*/, 0LL);
         if ( v100 )
         {
           UILabel__set_text(v100, v101, 0LL);
@@ -741,7 +741,7 @@ LABEL_107:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v106 = LocalizationManager__Get((System_String_o *)StringLiteral_6838, 0LL);
+  v106 = LocalizationManager__Get((System_String_o *)StringLiteral_6838/*"GET_FRIEND_POINT_NOW_POINT"*/, 0LL);
   v122 = v94->fields.friendPoint;
   v107 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v122);
   v108 = System_String__Format(v106, v107, 0LL);
@@ -761,17 +761,17 @@ LABEL_107:
     FriendPointNoticeDlgComponent_TypeInfo->static_fields->CURRENT_FRIEND_POINT_LABEL_MAX_WIDTH,
     0LL);
   closeBtnLb = this->fields.closeBtnLb;
-  v111 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v111 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeBtnLb )
     goto LABEL_119;
   UILabel__set_text(closeBtnLb, v111, 0LL);
   middleBtnLb = this->fields.middleBtnLb;
-  v113 = LocalizationManager__Get((System_String_o *)StringLiteral_6843, 0LL);
+  v113 = LocalizationManager__Get((System_String_o *)StringLiteral_6843/*"GET_FRIEND_POINT_SUPPORT_BTN"*/, 0LL);
   if ( !middleBtnLb )
     goto LABEL_119;
   UILabel__set_text(middleBtnLb, v113, 0LL);
   rightBtnLb = this->fields.rightBtnLb;
-  v115 = LocalizationManager__Get((System_String_o *)StringLiteral_6837, 0LL);
+  v115 = LocalizationManager__Get((System_String_o *)StringLiteral_6837/*"GET_FRIEND_POINT_GACHA_BTN"*/, 0LL);
   if ( !rightBtnLb )
     goto LABEL_119;
   UILabel__set_text(rightBtnLb, v115, 0LL);

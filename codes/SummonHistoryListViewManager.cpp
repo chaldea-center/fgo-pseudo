@@ -155,7 +155,7 @@ void __fastcall SummonHistoryListViewManager__CreateList(
     sub_B16FFC(&SummonHistoryListViewItem_TypeInfo, v19);
     sub_B16FFC(&Method_SummonHistoryListViewManager___c__CreateList_b__2_0__, v20);
     sub_B16FFC(&SummonHistoryListViewManager___c_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_6804, v22);
+    sub_B16FFC(&StringLiteral_6804/*"GACHA_HISTORY_LIST_DATETIME"*/, v22);
     byte_40FD46E = 1;
   }
   memset(&v120, 0, sizeof(v120));
@@ -231,7 +231,7 @@ void __fastcall SummonHistoryListViewManager__CreateList(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_6804, 0LL);
+    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_6804/*"GACHA_HISTORY_LIST_DATETIME"*/, 0LL);
     itemList = this->fields.itemList;
     v46 = v44;
     StonePurchaseNotificationMenu_DialogOpenQueue = System_Linq_Enumerable__First_StonePurchaseNotificationMenu_DialogOpenQueue_(

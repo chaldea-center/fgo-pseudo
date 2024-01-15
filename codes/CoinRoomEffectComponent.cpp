@@ -33,12 +33,12 @@ void __fastcall CoinRoomEffectComponent___ctor(CoinRoomEffectComponent_o *this, 
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_16371, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_16371/*"ar154"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F9A57 = 1;
   }
-  v12 = (System_Int32_array **)StringLiteral_16371;
-  this->fields.arrivedPlaySeName = (struct System_String_o *)StringLiteral_16371;
+  v12 = (System_Int32_array **)StringLiteral_16371/*"ar154"*/;
+  this->fields.arrivedPlaySeName = (struct System_String_o *)StringLiteral_16371/*"ar154"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.arrivedPlaySeName, v12, v2, v3, v4, v5, v6, v7);
   *(_QWORD *)&this->fields.arrivedPlaySeIntervalTime = 0x3E83D4CCCCDLL;
   this->fields.TARGET_ITEM_ID = 7999;
@@ -61,8 +61,8 @@ void __fastcall CoinRoomEffectComponent___ctor(CoinRoomEffectComponent_o *this, 
     v21,
     v22,
     v23);
-  v24 = (System_Int32_array **)StringLiteral_1;
-  this->fields.stateName = (struct System_String_o *)StringLiteral_1;
+  v24 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.stateName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.stateName, v24, v25, v26, v27, v28, v29, v30);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
@@ -246,8 +246,8 @@ void __fastcall CoinRoomEffectComponent__OpenEffect(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
     sub_B16FFC(&SoundManager_TypeInfo, v14);
     sub_B16FFC(&UserCoinRoomEntity_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_18207, v16);
-    sub_B16FFC(&StringLiteral_18206, v17);
+    sub_B16FFC(&StringLiteral_18207/*"effect_Circle_act2"*/, v16);
+    sub_B16FFC(&StringLiteral_18206/*"effect_Circle_act1"*/, v17);
     byte_40F9A52 = 1;
   }
   this->fields.state = 1;
@@ -314,9 +314,9 @@ LABEL_18:
   cnt = afterEntity->fields.cnt;
   this->fields.isAcquired = cnt == 0;
   if ( cnt )
-    v42 = &StringLiteral_18206;
+    v42 = &StringLiteral_18206/*"effect_Circle_act1"*/;
   else
-    v42 = &StringLiteral_18207;
+    v42 = &StringLiteral_18207/*"effect_Circle_act2"*/;
   v43 = (struct System_String_o *)*v42;
   this->fields.stateName = (struct System_String_o *)*v42;
   sub_B16F98(

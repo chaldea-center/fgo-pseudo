@@ -230,8 +230,8 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&NetworkManager_TypeInfo, v18);
     sub_B16FFC(&string_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_26, v20);
-    sub_B16FFC(&StringLiteral_9316, v21);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v20);
+    sub_B16FFC(&StringLiteral_9316/*"NOT_SELECT_EQUIPED"*/, v21);
     byte_40FA527 = 1;
   }
   v41 = 0LL;
@@ -242,7 +242,7 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_9316, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_9316/*"NOT_SELECT_EQUIPED"*/, 0LL);
   if ( !equipLabel )
     goto LABEL_58;
   UILabel__set_text(equipLabel, v22, 0LL);
@@ -254,7 +254,7 @@ void __fastcall CombineUtility__SetCommandCodeEquippedInfoLabel(
   UILabel__set_spacingX(nameLabel, -2, 0LL);
   if ( !dispName )
     return;
-  v24 = System_String__Concat_43743732(equipLabel->fields.mText, (System_String_o *)StringLiteral_26, 0LL);
+  v24 = System_String__Concat_43743732(equipLabel->fields.mText, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
   UILabel__set_text(equipLabel, v24, 0LL);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
@@ -345,7 +345,7 @@ LABEL_58:
   }
   Empty = ServantEntity__getName((ServantEntity_o *)v40, ServantLimitCountSealAfter, -1, 0LL);
 LABEL_53:
-  v37 = System_String__Concat_43743732((System_String_o *)StringLiteral_26, Empty, 0LL);
+  v37 = System_String__Concat_43743732((System_String_o *)StringLiteral_26/*"\n"*/, Empty, 0LL);
   UILabel__set_text(nameLabel, v37, 0LL);
   if ( !Empty )
     goto LABEL_58;

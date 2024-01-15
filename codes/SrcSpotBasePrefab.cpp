@@ -24,17 +24,17 @@ void __fastcall SrcSpotBasePrefab___cctor(const MethodInfo *method)
   if ( (byte_40FADFC & 1) == 0 )
   {
     sub_B16FFC(&SrcSpotBasePrefab_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18092, v8);
-    sub_B16FFC(&StringLiteral_5828, v9);
+    sub_B16FFC(&StringLiteral_18092/*"ef_badge_glow"*/, v8);
+    sub_B16FFC(&StringLiteral_5828/*"Effect/RecollectionQuest"*/, v9);
     byte_40FADFC = 1;
   }
   static_fields = (BattleServantConfConponent_o *)SrcSpotBasePrefab_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_5828;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5828;
+  v11 = (System_Int32_array **)StringLiteral_5828/*"Effect/RecollectionQuest"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5828/*"Effect/RecollectionQuest"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = SrcSpotBasePrefab_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_18092;
-  v12->RECOLLECTION_QUEST_SPOT_EFFECT_NAME = (struct System_String_o *)StringLiteral_18092;
+  v13 = (System_Int32_array **)StringLiteral_18092/*"ef_badge_glow"*/;
+  v12->RECOLLECTION_QUEST_SPOT_EFFECT_NAME = (struct System_String_o *)StringLiteral_18092/*"ef_badge_glow"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v12->RECOLLECTION_QUEST_SPOT_EFFECT_NAME,
     v13,
@@ -77,11 +77,11 @@ void __fastcall SrcSpotBasePrefab___ctor(SrcSpotBasePrefab_o *this, const Method
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_List_UIAtlas__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_22079, v10);
+    sub_B16FFC(&StringLiteral_22079/*"smfSpotBtn_Click"*/, v10);
     byte_40FADFB = 1;
   }
-  v11 = (System_Int32_array **)StringLiteral_22079;
-  this->fields.msSmfNameForBtnClick = (struct System_String_o *)StringLiteral_22079;
+  v11 = (System_Int32_array **)StringLiteral_22079/*"smfSpotBtn_Click"*/;
+  this->fields.msSmfNameForBtnClick = (struct System_String_o *)StringLiteral_22079/*"smfSpotBtn_Click"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.msSmfNameForBtnClick, v11, v2, v3, v4, v5, v6, v7);
   this->fields.selfScale = UnityEngine_Vector3__get_one(0LL);
   v16 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -520,12 +520,12 @@ System_String_o *__fastcall SrcSpotBasePrefab__GetGobjName(int32_t id, const Met
   v5 = id;
   if ( (byte_40FADE3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12941, method);
-    sub_B16FFC(&StringLiteral_960, v2);
+    sub_B16FFC(&StringLiteral_12941/*"Spot_"*/, method);
+    sub_B16FFC(&StringLiteral_960/*"00"*/, v2);
     byte_40FADE3 = 1;
   }
-  v3 = System_Int32__ToString_38275808((int32_t)&v5, (System_String_o *)StringLiteral_960, 0LL);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_12941, v3, 0LL);
+  v3 = System_Int32__ToString_38275808((int32_t)&v5, (System_String_o *)StringLiteral_960/*"00"*/, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_12941/*"Spot_"*/, v3, 0LL);
 }
 
 
@@ -806,7 +806,7 @@ void __fastcall SrcSpotBasePrefab__SelectSpot(SrcSpotBasePrefab_o *this, bool is
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v8);
     sub_B16FFC(&Method_SrcSpotBasePrefab___c__SelectSpot_b__75_0__, v9);
     sub_B16FFC(&SrcSpotBasePrefab___c_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FADEC = 1;
   }
   mcRootGobjP = (UnityEngine_Object_o *)this->fields.mcRootGobjP;
@@ -900,7 +900,7 @@ LABEL_49:
       }
       static_fields = v33->static_fields;
       _9__75_0 = static_fields->__9__75_0;
-      v36 = (System_String_o *)StringLiteral_1;
+      v36 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !_9__75_0 )
       {
         if ( (BYTE3(v33->vtable._0_Equals.methodPtr) & 4) != 0 && !v33->_2.cctor_finished )
@@ -1243,7 +1243,7 @@ void __fastcall SrcSpotBasePrefab__SetQaaScaleAnim_26817172(
   if ( (byte_40FADF5 & 1) == 0 )
   {
     sub_B16FFC(&Method_UITweener_Begin_TweenScale___, isDisp);
-    sub_B16FFC(&StringLiteral_2128, v7);
+    sub_B16FFC(&StringLiteral_2128/*"AtScaleAnimEnd"*/, v7);
     byte_40FADF5 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -1301,8 +1301,8 @@ void __fastcall SrcSpotBasePrefab__SetQaaScaleAnim_26817172(
       v19,
       v20,
       v21);
-    v23 = (System_Int32_array **)StringLiteral_2128;
-    p_eventReceiver[1] = (struct UnityEngine_GameObject_o *)StringLiteral_2128;
+    v23 = (System_Int32_array **)StringLiteral_2128/*"AtScaleAnimEnd"*/;
+    p_eventReceiver[1] = (struct UnityEngine_GameObject_o *)StringLiteral_2128/*"AtScaleAnimEnd"*/;
     sub_B16F98((BattleServantConfConponent_o *)(p_eventReceiver + 1), v23, v24, v25, v26, v27, v28, v29);
   }
 }
@@ -1362,13 +1362,13 @@ void __fastcall SrcSpotBasePrefab__SetSpotNameUI(
 
   if ( (byte_40FADEA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19562, sp);
+    sub_B16FFC(&StringLiteral_19562/*"img_spotname_bg"*/, sp);
     byte_40FADEA = 1;
   }
   if ( !lb
     || (UILabel__set_text(lb, spotName, 0LL),
-        v9 = (System_String_o *)StringLiteral_19562,
-        UIAtlasBySpriteName = UIAtlas__GetUIAtlasBySpriteName(atlases, (System_String_o *)StringLiteral_19562, 0LL),
+        v9 = (System_String_o *)StringLiteral_19562/*"img_spotname_bg"*/,
+        UIAtlasBySpriteName = UIAtlas__GetUIAtlasBySpriteName(atlases, (System_String_o *)StringLiteral_19562/*"img_spotname_bg"*/, 0LL),
         !sp) )
   {
     sub_B170D4();
@@ -1436,9 +1436,9 @@ void __fastcall SrcSpotBasePrefab__SetSpotUI(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_8915, v15);
-    sub_B16FFC(&StringLiteral_964, v16);
-    sub_B16FFC(&StringLiteral_22129, v17);
+    sub_B16FFC(&StringLiteral_8915/*"MapSpotEffect_{0}"*/, v15);
+    sub_B16FFC(&StringLiteral_964/*"000000"*/, v16);
+    sub_B16FFC(&StringLiteral_22129/*"spot_"*/, v17);
     byte_40FADE9 = 1;
   }
   if ( !sp )
@@ -1453,8 +1453,8 @@ void __fastcall SrcSpotBasePrefab__SetSpotUI(
   }
   if ( spotImageId >= 1 )
   {
-    v20 = System_Int32__ToString_38275808((int32_t)&v46, (System_String_o *)StringLiteral_964, 0LL);
-    v21 = System_String__Concat_43743732((System_String_o *)StringLiteral_22129, v20, 0LL);
+    v20 = System_Int32__ToString_38275808((int32_t)&v46, (System_String_o *)StringLiteral_964/*"000000"*/, 0LL);
+    v21 = System_String__Concat_43743732((System_String_o *)StringLiteral_22129/*"spot_"*/, v20, 0LL);
     UIAtlasBySpriteName = UIAtlas__GetUIAtlasBySpriteName(atlases, v21, 0LL);
     UISprite__set_atlas(sp, UIAtlasBySpriteName, 0LL);
     mAtlas = (UnityEngine_Object_o *)sp->fields.mAtlas;
@@ -1485,7 +1485,7 @@ LABEL_54:
     }
     v45 = v46;
     v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45);
-    v30 = System_String__Format((System_String_o *)StringLiteral_8915, v28, 0LL);
+    v30 = System_String__Format((System_String_o *)StringLiteral_8915/*"MapSpotEffect_{0}"*/, v28, 0LL);
     if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     {
@@ -1902,7 +1902,7 @@ void __fastcall SrcSpotBasePrefab__UpdateDisp(SrcSpotBasePrefab_o *this, bool is
     sub_B16FFC(&SrcSpotBasePrefab_TypeInfo, v11);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v12);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_12263, v14);
+    sub_B16FFC(&StringLiteral_12263/*"SPOT_FREE_QUEST_LAST_TIME"*/, v14);
     byte_40FADEB = 1;
   }
   spotName = 0LL;
@@ -2240,7 +2240,7 @@ LABEL_85:
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v116 = LocalizationManager__Get((System_String_o *)StringLiteral_12263, 0LL);
+                    v116 = LocalizationManager__Get((System_String_o *)StringLiteral_12263/*"SPOT_FREE_QUEST_LAST_TIME"*/, 0LL);
                     if ( loopLastTime )
                     {
                       UILabel__set_text(loopLastTime, v116, 0LL);

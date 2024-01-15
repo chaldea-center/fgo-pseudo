@@ -284,9 +284,9 @@ void __fastcall ClassBoardItemIconComponent__setItemInfo(
     sub_B16FFC(&int_TypeInfo, v10);
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
     sub_B16FFC(&NetworkManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_2988, v13);
-    sub_B16FFC(&StringLiteral_2990, v14);
-    sub_B16FFC(&StringLiteral_23395, v15);
+    sub_B16FFC(&StringLiteral_2988/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE"*/, v13);
+    sub_B16FFC(&StringLiteral_2990/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED"*/, v14);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v15);
     byte_40FB95E = 1;
   }
   this->fields.currentItemId = itemId;
@@ -352,26 +352,26 @@ void __fastcall ClassBoardItemIconComponent__setItemInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_2990, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_2990/*"CLASS_BOARD_DIALOG_ITEM_INFO_NEED"*/, 0LL);
   if ( !needTitleLb )
     goto LABEL_38;
   UILabel__set_text(needTitleLb, v34, 0LL);
   haveTitleLb = this->fields.haveTitleLb;
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_2988, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_2988/*"CLASS_BOARD_DIALOG_ITEM_INFO_HAVE"*/, 0LL);
   if ( !haveTitleLb )
     goto LABEL_38;
   UILabel__set_text(haveTitleLb, v36, 0LL);
   haveNumLb = this->fields.haveNumLb;
   c.fields.rgba = this->fields.haveItemNum;
   v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &c);
-  v39 = System_String__Format((System_String_o *)StringLiteral_23395, v38, 0LL);
+  v39 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v38, 0LL);
   if ( !haveNumLb )
     goto LABEL_38;
   UILabel__set_text(haveNumLb, v39, 0LL);
   needNumLb = this->fields.needNumLb;
   v60.fields.rgba = this->fields.needItemNum;
   v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v60);
-  v42 = System_String__Format((System_String_o *)StringLiteral_23395, v41, 0LL);
+  v42 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v41, 0LL);
   if ( !needNumLb )
     goto LABEL_38;
   UILabel__set_text(needNumLb, v42, 0LL);

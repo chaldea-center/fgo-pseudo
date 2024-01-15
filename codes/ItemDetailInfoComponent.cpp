@@ -134,7 +134,7 @@ void __fastcall ItemDetailInfoComponent__Init(ItemDetailInfoComponent_o *this, c
 
   if ( (byte_40FC1AB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FC1AB = 1;
   }
   itemDetailInfo = this->fields.itemDetailInfo;
@@ -144,18 +144,18 @@ void __fastcall ItemDetailInfoComponent__Init(ItemDetailInfoComponent_o *this, c
   itemNameLabel = this->fields.itemNameLabel;
   if ( !itemNameLabel )
     goto LABEL_11;
-  UILabel__set_text(itemNameLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(itemNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   itemDetailLabel = this->fields.itemDetailLabel;
   if ( !itemDetailLabel )
     goto LABEL_11;
-  UILabel__set_text(itemDetailLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(itemDetailLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   stoneDetailInfo = this->fields.stoneDetailInfo;
   if ( !stoneDetailInfo
     || (UnityEngine_GameObject__SetActive(stoneDetailInfo, 0, 0LL),
         (payStoneNumLabel = this->fields.payStoneNumLabel) == 0LL)
-    || (UILabel__set_text(payStoneNumLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(payStoneNumLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (freeStoneNumLabel = this->fields.freeStoneNumLabel) == 0LL)
-    || (UILabel__set_text(freeStoneNumLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(freeStoneNumLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_11:
@@ -431,9 +431,9 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
     sub_B16FFC(&System_Action_TypeInfo, name);
     sub_B16FFC(&Method_ItemDetailInfoComponent_EndOpen__, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_6424, v13);
-    sub_B16FFC(&StringLiteral_10396, v14);
-    sub_B16FFC(&StringLiteral_12326, v15);
+    sub_B16FFC(&StringLiteral_6424/*"FREESTONE_INFO_TITLE"*/, v13);
+    sub_B16FFC(&StringLiteral_10396/*"PAYSTONE_INFO_TITLE"*/, v14);
+    sub_B16FFC(&StringLiteral_12326/*"STONE_INFO_NOTICE"*/, v15);
     byte_40FC1AF = 1;
   }
   if ( !this->fields.state )
@@ -471,7 +471,7 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_10396, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_10396/*"PAYSTONE_INFO_TITLE"*/, 0LL);
     if ( !payStoneTitleLabel )
       goto LABEL_18;
     UILabel__set_text(payStoneTitleLabel, v27, 0LL);
@@ -483,7 +483,7 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
       goto LABEL_18;
     UILabel__set_text(payStoneNumLabel, UnitInfo, 0LL);
     freeStoneTitleLabel = this->fields.freeStoneTitleLabel;
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_6424, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_6424/*"FREESTONE_INFO_TITLE"*/, 0LL);
     if ( !freeStoneTitleLabel
       || (UILabel__set_text(freeStoneTitleLabel, v31, 0LL),
           freeStoneNumLabel = this->fields.freeStoneNumLabel,
@@ -491,7 +491,7 @@ void __fastcall ItemDetailInfoComponent__ShowStoneDetail(
           !freeStoneNumLabel)
       || (UILabel__set_text(freeStoneNumLabel, v33, 0LL),
           stoneNoticeLabel = this->fields.stoneNoticeLabel,
-          v35 = LocalizationManager__Get((System_String_o *)StringLiteral_12326, 0LL),
+          v35 = LocalizationManager__Get((System_String_o *)StringLiteral_12326/*"STONE_INFO_NOTICE"*/, 0LL),
           !stoneNoticeLabel) )
     {
 LABEL_18:
@@ -555,10 +555,10 @@ System_String_o *__fastcall ItemDetailInfoComponent__get_closeBtnPath(
 {
   if ( (byte_40FC1B1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_7579, method);
+    sub_B16FFC(&StringLiteral_7579/*"InfoWindow/CloseBtn"*/, method);
     byte_40FC1B1 = 1;
   }
-  return (System_String_o *)StringLiteral_7579;
+  return (System_String_o *)StringLiteral_7579/*"InfoWindow/CloseBtn"*/;
 }
 
 

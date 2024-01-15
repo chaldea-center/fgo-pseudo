@@ -564,13 +564,13 @@ bool __fastcall BaseBattleEvent__get_IsBattleEndReduceBuffTurn(BaseBattleEvent_o
 
   if ( (byte_40F6EEE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15268, method);
+    sub_B16FFC(&StringLiteral_15268/*"WAR_BOARD_BATTLE_END_REDUCE_BUFF_TURN_FLAG"*/, method);
     byte_40F6EEE = 1;
   }
   battleEndReduceBuffTurnFlag = this->fields.battleEndReduceBuffTurnFlag;
   if ( (battleEndReduceBuffTurnFlag & 0x80000000) != 0 )
   {
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_15268, 0LL);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_15268/*"WAR_BOARD_BATTLE_END_REDUCE_BUFF_TURN_FLAG"*/, 0LL);
     battleEndReduceBuffTurnFlag = UnityEngine_Mathf__Max_40727628(0, Value, 0LL);
     this->fields.battleEndReduceBuffTurnFlag = battleEndReduceBuffTurnFlag;
   }

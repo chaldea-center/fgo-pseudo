@@ -81,9 +81,9 @@ void __fastcall TitleInfoEventRaceRoundComponent__Setup(
     sub_B16FFC(&Method_DataManager_GetMasterData_MapCondMaster___, v12);
     sub_B16FFC(&Method_DataManager_GetMasterData_MapMaster___, v13);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_B16FFC(&StringLiteral_21576, v15);
-    sub_B16FFC(&StringLiteral_15842, v16);
-    sub_B16FFC(&StringLiteral_21575, v17);
+    sub_B16FFC(&StringLiteral_21576/*"race_mapname_round_"*/, v15);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v16);
+    sub_B16FFC(&StringLiteral_21575/*"race_mapname_bg_"*/, v17);
     byte_40FDFE2 = 1;
   }
   this[1].klass = (TitleInfoEventRaceRoundComponent_c *)effectAssetData;
@@ -121,7 +121,7 @@ void __fastcall TitleInfoEventRaceRoundComponent__Setup(
   mapNameSpr = this->fields.mapNameSpr;
   LODWORD(this->fields.effectAssetData) = PrioredID;
   v25 = System_Int32__ToString((int32_t)&v33, 0LL);
-  v26 = System_String__Concat_43743732((System_String_o *)StringLiteral_21575, v25, 0LL);
+  v26 = System_String__Concat_43743732((System_String_o *)StringLiteral_21575/*"race_mapname_bg_"*/, v25, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI(mapNameSpr, v26, 0LL);
@@ -130,9 +130,9 @@ void __fastcall TitleInfoEventRaceRoundComponent__Setup(
   v29 = System_Int32__ToString((int32_t)&v33, 0LL);
   v30 = System_Int32__ToString((int32_t)&v32, 0LL);
   v31 = System_String__Concat_43747144(
-          (System_String_o *)StringLiteral_21576,
+          (System_String_o *)StringLiteral_21576/*"race_mapname_round_"*/,
           v29,
-          (System_String_o *)StringLiteral_15842,
+          (System_String_o *)StringLiteral_15842/*"_"*/,
           v30,
           0LL);
   AtlasManager__SetEventUI((UISprite_o *)effectAttachRoot, v31, 0LL);
@@ -173,12 +173,12 @@ void __fastcall TitleInfoEventRaceRoundComponent__setHeaderImg(
   if ( (byte_40FDFE3 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&headerId);
-    sub_B16FFC(&StringLiteral_21574, v4);
+    sub_B16FFC(&StringLiteral_21574/*"race_mapname_"*/, v4);
     byte_40FDFE3 = 1;
   }
   roundNumSpr = this->fields.roundNumSpr;
   v6 = System_Int32__ToString((int32_t)&v8, 0LL);
-  v7 = System_String__Concat_43743732((System_String_o *)StringLiteral_21574, v6, 0LL);
+  v7 = System_String__Concat_43743732((System_String_o *)StringLiteral_21574/*"race_mapname_"*/, v6, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI(roundNumSpr, v7, 0LL);
@@ -227,14 +227,14 @@ void __fastcall TitleInfoEventRaceRoundComponent__setupNameChangeEffect(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&Method_TitleInfoEventRaceRoundComponent__setupNameChangeEffect_b__13_0__, v10);
-    sub_B16FFC(&StringLiteral_18126, v11);
+    sub_B16FFC(&StringLiteral_18126/*"ef_mapnamechange_"*/, v11);
     byte_40FDFE4 = 1;
   }
   klass = this[1].klass;
   if ( klass )
   {
     v13 = System_Int32__ToString((int32_t)&v30, 0LL);
-    v14 = System_String__Concat_43743732((System_String_o *)StringLiteral_18126, v13, 0LL);
+    v14 = System_String__Concat_43743732((System_String_o *)StringLiteral_18126/*"ef_mapnamechange_"*/, v13, 0LL);
     Object_29932412 = AssetData__GetObject_29932412((AssetData_o *)klass, v14, 0LL);
     if ( Object_29932412 )
     {

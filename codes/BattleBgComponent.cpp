@@ -803,11 +803,11 @@ void __fastcall BattleBgComponent_SaveData___ctor(BattleBgComponent_SaveData_o *
 
   if ( (byte_40F84C5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F84C5 = 1;
   }
-  v3 = StringLiteral_1;
-  this->fields.animName = (struct System_String_o *)StringLiteral_1;
+  v3 = StringLiteral_1/*""*/;
+  this->fields.animName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields, v3);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }

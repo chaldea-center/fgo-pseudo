@@ -757,7 +757,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetConfirmRestrictionMessage(
   if ( (byte_40FD593 & 1) == 0 )
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&initPos);
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, v9);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FD593 = 1;
   }
   if ( !v8->fields.restrictionBaseEntity )
@@ -794,7 +794,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetConfirmRestrictionMessage(
   }
   if ( !isCheckPosForWhole )
   {
-    p_summary = (System_String_o **)&StringLiteral_1;
+    p_summary = (System_String_o **)&StringLiteral_1/*""*/;
     return *p_summary;
   }
   if ( pos < 1 )
@@ -1191,7 +1191,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogMessage(
   v4 = this;
   if ( (byte_40FD5A6 & 1) == 0 )
   {
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, *(_QWORD *)&n);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, *(_QWORD *)&n);
     byte_40FD5A6 = 1;
   }
   if ( !v4->fields.restrictionBaseEntity )
@@ -1221,11 +1221,11 @@ LABEL_19:
   max_length = restrictionMessageEntities->max_length;
   if ( max_length < 1 )
   {
-    p_dialogMessage = (System_String_o **)&StringLiteral_1;
+    p_dialogMessage = (System_String_o **)&StringLiteral_1/*""*/;
   }
   else
   {
-    p_dialogMessage = (System_String_o **)&StringLiteral_1;
+    p_dialogMessage = (System_String_o **)&StringLiteral_1/*""*/;
     v8 = 0;
     while ( 1 )
     {
@@ -1313,7 +1313,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogMessageMySvtPos(
     sub_B16FFC(&Method_DataManager_GetMaster_RestrictionMessageMaster___, method);
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__, v5);
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, v6);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD5BF = 1;
   }
   entity = 0LL;
@@ -1323,7 +1323,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogMessageMySvtPos(
   max_length = restrictionWholeEntities->max_length;
   if ( max_length >= 1 )
   {
-    p_age = (System_String_o **)&StringLiteral_1;
+    p_age = (System_String_o **)&StringLiteral_1/*""*/;
     v10 = 0;
     while ( 1 )
     {
@@ -1365,7 +1365,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogMessageMySvtPos(
 LABEL_20:
     sub_B170D4();
   }
-  p_age = (System_String_o **)&StringLiteral_1;
+  p_age = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_age;
 }
 
@@ -1393,7 +1393,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogMessageSupportSvtPos(
     sub_B16FFC(&Method_DataManager_GetMaster_RestrictionMessageMaster___, method);
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__, v5);
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, v6);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD5C1 = 1;
   }
   entity = 0LL;
@@ -1403,7 +1403,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogMessageSupportSvtPos(
   max_length = restrictionWholeEntities->max_length;
   if ( max_length >= 1 )
   {
-    p_age = (System_String_o **)&StringLiteral_1;
+    p_age = (System_String_o **)&StringLiteral_1/*""*/;
     v10 = 0;
     while ( 1 )
     {
@@ -1445,7 +1445,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogMessageSupportSvtPos(
 LABEL_20:
     sub_B170D4();
   }
-  p_age = (System_String_o **)&StringLiteral_1;
+  p_age = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_age;
 }
 
@@ -1474,7 +1474,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogMessageSvtPos(
     sub_B16FFC(&Method_DataManager_GetMaster_RestrictionMessageMaster___, method);
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__, v5);
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, v6);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD5BE = 1;
   }
   entity = 0LL;
@@ -1484,7 +1484,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogMessageSvtPos(
   max_length = restrictionWholeEntities->max_length;
   if ( max_length >= 1 )
   {
-    p_age = (System_String_o **)&StringLiteral_1;
+    p_age = (System_String_o **)&StringLiteral_1/*""*/;
     v10 = 0;
     while ( 1 )
     {
@@ -1527,7 +1527,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogMessageSvtPos(
 LABEL_21:
     sub_B170D4();
   }
-  p_age = (System_String_o **)&StringLiteral_1;
+  p_age = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_age;
 }
 
@@ -1553,7 +1553,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetDialogTargetName(
   if ( (byte_40FD5A7 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__, *(_QWORD *)&n);
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, v5);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FD5A7 = 1;
   }
   if ( !v4->fields.restrictionBaseEntity )
@@ -1590,11 +1590,11 @@ LABEL_20:
   v8 = this;
   if ( dialogMessageInfoDictionary < 1 )
   {
-    p_title = (System_String_o **)&StringLiteral_1;
+    p_title = (System_String_o **)&StringLiteral_1/*""*/;
   }
   else
   {
-    p_title = (System_String_o **)&StringLiteral_1;
+    p_title = (System_String_o **)&StringLiteral_1/*""*/;
     v10 = 0;
     while ( 1 )
     {
@@ -1731,7 +1731,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetFixNpcMessage(
   if ( (byte_40FD5B1 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10359, v2);
+    sub_B16FFC(&StringLiteral_10359/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC"*/, v2);
     byte_40FD5B1 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1739,7 +1739,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetFixNpcMessage(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10359, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10359/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC"*/, 0LL);
 }
 
 
@@ -1752,7 +1752,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetFixNpcOnlyRestrictionMessag
   if ( (byte_40FD5B0 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10360, v2);
+    sub_B16FFC(&StringLiteral_10360/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC_ONLY"*/, v2);
     byte_40FD5B0 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1760,7 +1760,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetFixNpcOnlyRestrictionMessag
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10360, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10360/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC_ONLY"*/, 0LL);
 }
 
 
@@ -2031,7 +2031,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetFixedMyServantSingleRestric
   if ( (byte_40FD5A3 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10358, v2);
+    sub_B16FFC(&StringLiteral_10358/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE"*/, v2);
     byte_40FD5A3 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2039,7 +2039,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetFixedMyServantSingleRestric
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10358, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10358/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE"*/, 0LL);
 }
 
 
@@ -2300,7 +2300,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetFixedServantPositionRestric
   if ( (byte_40FD5A1 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10357, v2);
+    sub_B16FFC(&StringLiteral_10357/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION"*/, v2);
     byte_40FD5A1 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2308,7 +2308,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetFixedServantPositionRestric
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10357, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10357/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION"*/, 0LL);
 }
 
 
@@ -2497,7 +2497,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetFixedSupportPositionRestric
   if ( (byte_40FD59D & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10362, v2);
+    sub_B16FFC(&StringLiteral_10362/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION"*/, v2);
     byte_40FD59D = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2505,7 +2505,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetFixedSupportPositionRestric
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10362, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10362/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION"*/, 0LL);
 }
 
 
@@ -2533,7 +2533,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetMessage(
   v4 = this;
   if ( (byte_40FD590 & 1) == 0 )
   {
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, *(_QWORD *)&restrictionWholeType);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, *(_QWORD *)&restrictionWholeType);
     byte_40FD590 = 1;
   }
   restrictionWholeEntities = v4->fields.restrictionWholeEntities;
@@ -2543,11 +2543,11 @@ LABEL_15:
   max_length = restrictionWholeEntities->max_length;
   if ( max_length < 1 )
   {
-    p_summary = (System_String_o **)&StringLiteral_1;
+    p_summary = (System_String_o **)&StringLiteral_1/*""*/;
   }
   else
   {
-    p_summary = (System_String_o **)&StringLiteral_1;
+    p_summary = (System_String_o **)&StringLiteral_1/*""*/;
     v8 = 0;
     while ( 1 )
     {
@@ -2586,7 +2586,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetMessage_31241400(
   v4 = this;
   if ( (byte_40FD591 & 1) == 0 )
   {
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, *(_QWORD *)&restrictionType);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, *(_QWORD *)&restrictionType);
     byte_40FD591 = 1;
   }
   restrictionEntityList = v4->fields.restrictionEntityList;
@@ -2596,11 +2596,11 @@ LABEL_15:
   max_length = restrictionEntityList->max_length;
   if ( max_length < 1 )
   {
-    p_name = (System_String_o **)&StringLiteral_1;
+    p_name = (System_String_o **)&StringLiteral_1/*""*/;
   }
   else
   {
-    p_name = (System_String_o **)&StringLiteral_1;
+    p_name = (System_String_o **)&StringLiteral_1/*""*/;
     v8 = 0;
     while ( 1 )
     {
@@ -2686,11 +2686,11 @@ System_String_array *__fastcall QuestRestrictionInfo__GetMessages(
     sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, v25);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v26);
     sub_B16FFC(&LocalizationManager_TypeInfo, v27);
-    sub_B16FFC(&StringLiteral_10334, v28);
-    sub_B16FFC(&StringLiteral_11063, v29);
-    sub_B16FFC(&StringLiteral_11064, v30);
-    sub_B16FFC(&StringLiteral_11060, v31);
-    sub_B16FFC(&StringLiteral_6371, v32);
+    sub_B16FFC(&StringLiteral_10334/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, v28);
+    sub_B16FFC(&StringLiteral_11063/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/, v29);
+    sub_B16FFC(&StringLiteral_11064/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, v30);
+    sub_B16FFC(&StringLiteral_11060/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, v31);
+    sub_B16FFC(&StringLiteral_6371/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, v32);
     byte_40FD58E = 1;
   }
   v33 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -2713,8 +2713,8 @@ System_String_array *__fastcall QuestRestrictionInfo__GetMessages(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_6371, 0LL);
-    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_11064, 0LL);
+    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_6371/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, 0LL);
+    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_11064/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0LL);
     v38 = (System_String_o *)IsNullOrEmpty;
     if ( !this->fields.isUniqueServant )
     {
@@ -2726,7 +2726,7 @@ LABEL_19:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v40 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_11060, 0LL);
+      v40 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_11060/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, 0LL);
       if ( isNoneTitle )
       {
         if ( fatigue )
@@ -2759,7 +2759,7 @@ LABEL_30:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v41 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_10334, 0LL);
+      v41 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_10334/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0LL);
       if ( isNoneTitle )
       {
         if ( singleSupport )
@@ -2864,7 +2864,7 @@ LABEL_89:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v39 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_11063, 0LL);
+    v39 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_11063/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/, 0LL);
     if ( isNoneTitle )
     {
       if ( uniqueServant )
@@ -2930,7 +2930,7 @@ LABEL_88:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v53 = LocalizationManager__Get((System_String_o *)StringLiteral_6371, 0LL);
+            v53 = LocalizationManager__Get((System_String_o *)StringLiteral_6371/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, 0LL);
             v52 = System_String__Format(v53, *(Il2CppObject **)(v51 + 24), 0LL);
             if ( !v33 )
               goto LABEL_88;
@@ -3004,10 +3004,10 @@ System_String_array *__fastcall QuestRestrictionInfo__GetMessages_31240276(
     sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, v19);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v20);
     sub_B16FFC(&LocalizationManager_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_10334, v22);
-    sub_B16FFC(&StringLiteral_11064, v23);
-    sub_B16FFC(&StringLiteral_11060, v24);
-    sub_B16FFC(&StringLiteral_6371, v25);
+    sub_B16FFC(&StringLiteral_10334/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, v22);
+    sub_B16FFC(&StringLiteral_11064/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, v23);
+    sub_B16FFC(&StringLiteral_11060/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, v24);
+    sub_B16FFC(&StringLiteral_6371/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, v25);
     byte_40FD58F = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3015,8 +3015,8 @@ System_String_array *__fastcall QuestRestrictionInfo__GetMessages_31240276(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_6371, 0LL);
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_11064, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_6371/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_11064/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0LL);
   v32 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_string__TypeInfo,
                                                                                                   v28,
@@ -3033,7 +3033,7 @@ System_String_array *__fastcall QuestRestrictionInfo__GetMessages_31240276(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v36 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_11060, 0LL);
+    v36 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_11060/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, 0LL);
     if ( isNoneTitle )
     {
       if ( !fatigue )
@@ -3066,7 +3066,7 @@ LABEL_17:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v37 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_10334, 0LL);
+    v37 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_10334/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0LL);
     if ( !isNoneTitle )
       v37 = (Il2CppObject *)System_String__Format(v26, v37, 0LL);
     if ( singleSupport )
@@ -3211,7 +3211,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetMyServantNumRestrictionDial
     sub_B16FFC(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____ContainsKey__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__, v7);
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, v8);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FD5AF = 1;
   }
   v31 = 0LL;
@@ -3233,7 +3233,7 @@ LABEL_16:
       {
         v16 = slotInfos->max_length;
         if ( v15 >= v16 )
-          return (System_String_o *)StringLiteral_1;
+          return (System_String_o *)StringLiteral_1/*""*/;
         if ( v15 >= (unsigned int)v16 )
           goto LABEL_58;
         v17 = slotInfos->m_Items[v15];
@@ -3391,8 +3391,8 @@ System_String_o *__fastcall QuestRestrictionInfo__GetMyServantOrNpcRestrictionMe
   if ( (byte_40FD5B8 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&pos);
-    sub_B16FFC(&StringLiteral_10364, v7);
-    sub_B16FFC(&StringLiteral_10367, v8);
+    sub_B16FFC(&StringLiteral_10364/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_NPC"*/, v7);
+    sub_B16FFC(&StringLiteral_10367/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_NPC"*/, v8);
     byte_40FD5B8 = 1;
   }
   RestrictedName = (Il2CppObject *)QuestRestrictionInfo__GetRestrictedName(
@@ -3406,7 +3406,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetMyServantOrNpcRestrictionMe
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = &StringLiteral_10364;
+    v10 = &StringLiteral_10364/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_NPC"*/;
   }
   else
   {
@@ -3415,7 +3415,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetMyServantOrNpcRestrictionMe
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = &StringLiteral_10367;
+    v10 = &StringLiteral_10367/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_NPC"*/;
   }
   v11 = LocalizationManager__Get((System_String_o *)*v10, 0LL);
   return System_String__Format(v11, RestrictedName, 0LL);
@@ -4130,10 +4130,10 @@ System_String_o *__fastcall QuestRestrictionInfo__GetMyServantOrSupportRestricti
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&pos);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_10369, v8);
-    sub_B16FFC(&StringLiteral_10368, v9);
-    sub_B16FFC(&StringLiteral_10366, v10);
-    sub_B16FFC(&StringLiteral_10365, v11);
+    sub_B16FFC(&StringLiteral_10369/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT_ONLY"*/, v8);
+    sub_B16FFC(&StringLiteral_10368/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT"*/, v9);
+    sub_B16FFC(&StringLiteral_10366/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT_NOT_SINGLE_SUPPORT"*/, v10);
+    sub_B16FFC(&StringLiteral_10365/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT"*/, v11);
     byte_40FD5B9 = 1;
   }
   if ( this->fields.isNotSingleSupportOnly && this->fields.servantNumMin >= 1 )
@@ -4143,7 +4143,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetMyServantOrSupportRestricti
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = &StringLiteral_10366;
+    v12 = &StringLiteral_10366/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT_NOT_SINGLE_SUPPORT"*/;
   }
   else if ( haveIndividualityServant )
   {
@@ -4152,7 +4152,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetMyServantOrSupportRestricti
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = &StringLiteral_10365;
+    v12 = &StringLiteral_10365/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT"*/;
   }
   else
   {
@@ -4190,7 +4190,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetMyServantOrSupportRestricti
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v12 = &StringLiteral_10368;
+      v12 = &StringLiteral_10368/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT"*/;
     }
     else
     {
@@ -4200,7 +4200,7 @@ LABEL_23:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v12 = &StringLiteral_10369;
+      v12 = &StringLiteral_10369/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT_ONLY"*/;
     }
   }
   return LocalizationManager__Get((System_String_o *)*v12, 0LL);
@@ -4364,12 +4364,12 @@ System_String_o *__fastcall QuestRestrictionInfo__GetNeedIndividualityMessage(
     sub_B16FFC(
       &Method_System_Collections_Generic_KeyValuePair_int__QuestRestrictionInfo_DialogMessageInfo__get_Value__,
       v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FD5BD = 1;
   }
   memset(&v16, 0, sizeof(v16));
   if ( !this->fields.restrictionBaseEntity )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   dialogMessageInfoDictionary = this->fields.dialogMessageInfoDictionary;
   if ( !dialogMessageInfoDictionary )
     sub_B170D4();
@@ -4397,7 +4397,7 @@ LABEL_11:
     &v16,
     (const MethodInfo_27287A8 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__QuestRestrictionInfo_DialogMessageInfo__Dispose__);
   if ( v14 != 34 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   return DialogMessage;
 }
 
@@ -4752,10 +4752,10 @@ System_String_o *__fastcall QuestRestrictionInfo__GetRestrictedName(
     sub_B16FFC(&System_Predicate_RestrictionEntity__TypeInfo, v9);
     sub_B16FFC(&Method_QuestRestrictionInfo___c__DisplayClass172_0__GetRestrictedName_b__0__, v10);
     sub_B16FFC(&QuestRestrictionInfo___c__DisplayClass172_0_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FD5B7 = 1;
   }
-  v37 = (System_String_o *)StringLiteral_1;
+  v37 = (System_String_o *)StringLiteral_1/*""*/;
   if ( this->fields.restrictionBaseEntity )
   {
     restrictionSlotDictionary = this->fields.restrictionSlotDictionary;
@@ -4882,8 +4882,8 @@ System_String_o *__fastcall QuestRestrictionInfo__GetRestrictionMessage(
   if ( (byte_40FD594 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&initPos);
-    sub_B16FFC(&StringLiteral_26, v5);
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_10330, v6);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v5);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_10330/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, v6);
     byte_40FD594 = 1;
   }
   if ( !v4->fields.restrictionBaseEntity )
@@ -4907,7 +4907,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetRestrictionMessage(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  this = (QuestRestrictionInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10330, 0LL);
+  this = (QuestRestrictionInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10330/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0LL);
   v12 = v4->fields.slotInfos;
   if ( !v12 )
 LABEL_17:
@@ -4923,7 +4923,7 @@ LABEL_18:
     goto LABEL_17;
   return System_String__Concat_43746016(
            (System_String_o *)this,
-           (System_String_o *)StringLiteral_26,
+           (System_String_o *)StringLiteral_26/*"\n"*/,
            v13->fields.summary,
            0LL);
 }
@@ -5029,7 +5029,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetServantNumRestrictionDialog
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&Method_DataMasterBase_RestrictionMessageMaster__RestrictionMessageEntity__int__TryGetEntity__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__RestrictionSlotEntity____get_Item__, v6);
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, v7);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FD5AD = 1;
   }
   entity = 0LL;
@@ -5044,7 +5044,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetServantNumRestrictionDialog
     {
 LABEL_17:
       if ( v3->fields.servantNumMin < 1 )
-        return (System_String_o *)StringLiteral_1;
+        return (System_String_o *)StringLiteral_1/*""*/;
       v13 = 1;
       while ( 1 )
       {
@@ -5063,7 +5063,7 @@ LABEL_17:
           break;
 LABEL_33:
         if ( ++v13 > v3->fields.servantNumMin )
-          return (System_String_o *)StringLiteral_1;
+          return (System_String_o *)StringLiteral_1/*""*/;
       }
       v17 = 0;
       while ( 1 )
@@ -5196,8 +5196,8 @@ System_String_o *__fastcall QuestRestrictionInfo__GetServantNumRestrictionMessag
     sub_B16FFC(&BalanceConfig_TypeInfo, method);
     sub_B16FFC(&int_TypeInfo, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_10371, v5);
-    sub_B16FFC(&StringLiteral_10370, v6);
+    sub_B16FFC(&StringLiteral_10371/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FREE"*/, v5);
+    sub_B16FFC(&StringLiteral_10370/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FIXED"*/, v6);
     byte_40FD5AC = 1;
   }
   ServantNumRangeType = QuestRestrictionInfo__GetServantNumRangeType(this, method);
@@ -5221,7 +5221,7 @@ LABEL_20:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_10371, 0LL);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_10371/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FREE"*/, 0LL);
     v11 = &v15;
     v15 = this->fields.servantNumMax;
   }
@@ -5233,7 +5233,7 @@ LABEL_21:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_10370, 0LL);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_10370/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FIXED"*/, 0LL);
     v11 = &v14;
     v14 = this->fields.servantNumMax;
   }
@@ -5257,7 +5257,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetSupportOnlyRestrictionMessa
   if ( (byte_40FD595 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10372, v2);
+    sub_B16FFC(&StringLiteral_10372/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SUPPORT_ONLY"*/, v2);
     byte_40FD595 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5265,7 +5265,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetSupportOnlyRestrictionMessa
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10372, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10372/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SUPPORT_ONLY"*/, 0LL);
 }
 
 
@@ -5334,8 +5334,8 @@ System_String_o *__fastcall QuestRestrictionInfo__GetUniqueIndividualityRestrict
   if ( (byte_40FD59B & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, isFixMessage);
-    sub_B16FFC(&StringLiteral_10374, v5);
-    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_10374/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY"*/, v5);
+    this = (QuestRestrictionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD59B = 1;
   }
   if ( !v4->fields.restrictionBaseEntity || isFixMessage )
@@ -5345,7 +5345,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetUniqueIndividualityRestrict
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    return LocalizationManager__Get((System_String_o *)StringLiteral_10374, 0LL);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_10374/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY"*/, 0LL);
   }
   else
   {
@@ -5356,7 +5356,7 @@ LABEL_19:
     max_length = restrictionWholeEntities->max_length;
     if ( max_length < 1 )
     {
-      return (System_String_o *)StringLiteral_1;
+      return (System_String_o *)StringLiteral_1/*""*/;
     }
     else
     {
@@ -5374,7 +5374,7 @@ LABEL_19:
         if ( v10->fields.type == 9 )
           return v10->fields.summary;
         if ( (int)++v9 >= max_length )
-          return (System_String_o *)StringLiteral_1;
+          return (System_String_o *)StringLiteral_1/*""*/;
       }
     }
   }
@@ -5390,7 +5390,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetUniqueServantRestrictionMes
   if ( (byte_40FD59A & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10373, v2);
+    sub_B16FFC(&StringLiteral_10373/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/, v2);
     byte_40FD59A = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5398,7 +5398,7 @@ System_String_o *__fastcall QuestRestrictionInfo__GetUniqueServantRestrictionMes
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10373, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10373/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/, 0LL);
 }
 
 
@@ -9155,10 +9155,10 @@ void __fastcall QuestRestrictionInfo__Setup(
     sub_B16FFC(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_int__RestrictionSlotEntity____GetEnumerator__,
       v74);
-    sub_B16FFC(&StringLiteral_26, v75);
-    sub_B16FFC(&StringLiteral_10361, v76);
-    sub_B16FFC(&StringLiteral_10330, v77);
-    sub_B16FFC(&StringLiteral_1, v78);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v75);
+    sub_B16FFC(&StringLiteral_10361/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_POSITION"*/, v76);
+    sub_B16FFC(&StringLiteral_10330/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, v77);
+    sub_B16FFC(&StringLiteral_1/*""*/, v78);
     byte_40FD588 = 1;
   }
   v743 = 0LL;
@@ -9169,9 +9169,9 @@ void __fastcall QuestRestrictionInfo__Setup(
   v739 = 0;
   this->fields.isRestriction = 0;
   p_restrictionMessage = (BattleServantConfConponent_o *)&this->fields.restrictionMessage;
-  v79 = (struct System_String_o *)StringLiteral_1;
-  v80 = (System_Int32_array **)StringLiteral_1;
-  this->fields.restrictionMessage = (struct System_String_o *)StringLiteral_1;
+  v79 = (struct System_String_o *)StringLiteral_1/*""*/;
+  v80 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.restrictionMessage = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.restrictionMessage,
     v80,
@@ -10484,7 +10484,7 @@ LABEL_196:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              GroupId = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10361, 0LL);
+              GroupId = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10361/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_POSITION"*/, 0LL);
               condValue = (System_String_o *)GroupId;
             }
             else
@@ -10519,7 +10519,7 @@ LABEL_196:
             {
               v601 = (System_Int32_array **)System_String__Concat_43746016(
                                               *v599,
-                                              (System_String_o *)StringLiteral_26,
+                                              (System_String_o *)StringLiteral_26/*"\n"*/,
                                               condValue,
                                               0LL);
               *v599 = (System_String_o *)v601;
@@ -10906,7 +10906,7 @@ LABEL_355:
             {
               if ( !v682 )
                 goto LABEL_378;
-              System_Text_StringBuilder__Append_41914240(v682, (System_String_o *)StringLiteral_26, 0LL);
+              System_Text_StringBuilder__Append_41914240(v682, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
             }
             else if ( !v682 )
             {
@@ -10921,7 +10921,7 @@ LABEL_355:
             {
               if ( !v677 )
                 goto LABEL_378;
-              System_Text_StringBuilder__Append_41914240(v677, (System_String_o *)StringLiteral_26, 0LL);
+              System_Text_StringBuilder__Append_41914240(v677, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
             }
             else if ( !v677 )
             {
@@ -10957,11 +10957,11 @@ LABEL_368:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v698 = LocalizationManager__Get((System_String_o *)StringLiteral_10330, 0LL);
+      v698 = LocalizationManager__Get((System_String_o *)StringLiteral_10330/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0LL);
       v699 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v677->klass->vtable._3_ToString.method)(
                                   v677,
                                   v677->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-      v700 = (System_Int32_array **)System_String__Concat_43746016(v698, (System_String_o *)StringLiteral_26, v699, 0LL);
+      v700 = (System_Int32_array **)System_String__Concat_43746016(v698, (System_String_o *)StringLiteral_26/*"\n"*/, v699, 0LL);
       p_restrictionMessage->klass = (BattleServantConfConponent_c *)v700;
       sub_B16F98(p_restrictionMessage, v700, v701, v702, v703, v704, v705, v706);
     }
@@ -11170,8 +11170,8 @@ void __fastcall QuestRestrictionInfo__SetupOldRestriction(QuestRestrictionInfo_o
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v15);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_26, v18);
-    sub_B16FFC(&StringLiteral_10330, v19);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v18);
+    sub_B16FFC(&StringLiteral_10330/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, v19);
     byte_40FD589 = 1;
   }
   v180 = 0LL;
@@ -11474,7 +11474,7 @@ LABEL_53:
 LABEL_24:
             if ( !v20 )
               goto LABEL_127;
-            System_Text_StringBuilder__Append_41914240(v20, (System_String_o *)StringLiteral_26, 0LL);
+            System_Text_StringBuilder__Append_41914240(v20, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
           }
           else
           {
@@ -11515,10 +11515,10 @@ LABEL_54:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v109 = LocalizationManager__Get((System_String_o *)StringLiteral_10330, 0LL);
+    v109 = LocalizationManager__Get((System_String_o *)StringLiteral_10330/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0LL);
     v110 = System_String__Concat_43746016(
              v109,
-             (System_String_o *)StringLiteral_26,
+             (System_String_o *)StringLiteral_26/*"\n"*/,
              this->fields.confirmRestrictionMessage,
              0LL);
     this->fields.restrictionMessage = v110;
@@ -11880,7 +11880,7 @@ void __fastcall QuestRestrictionInfo_SlotInfo___ctor(QuestRestrictionInfo_SlotIn
     sub_B16FFC(&Method_System_Collections_Generic_List_Restriction_RangeType___ctor__, v3);
     sub_B16FFC(&System_Collections_Generic_List_int____TypeInfo, v4);
     sub_B16FFC(&System_Collections_Generic_List_Restriction_RangeType__TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FA31C = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -11923,8 +11923,8 @@ void __fastcall QuestRestrictionInfo_SlotInfo___ctor(QuestRestrictionInfo_SlotIn
     v26,
     v27,
     v28);
-  v29 = (System_Int32_array **)StringLiteral_1;
-  this->fields.summary = (struct System_String_o *)StringLiteral_1;
+  v29 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.summary = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.summary, v29, v30, v31, v32, v33, v34, v35);
   *(_WORD *)&this->fields.isMoved = 1;
 }

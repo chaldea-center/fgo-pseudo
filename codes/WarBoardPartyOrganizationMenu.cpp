@@ -322,7 +322,7 @@ void __fastcall WarBoardPartyOrganizationMenu__Init(WarBoardPartyOrganizationMen
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_GameObject___, v5);
-    sub_B16FFC(&StringLiteral_10560, v6);
+    sub_B16FFC(&StringLiteral_10560/*"PartyOrganization/PartyServantSelectMenu"*/, v6);
     byte_40F85C1 = 1;
   }
   p_servantSelectMenu = &this->fields.servantSelectMenu;
@@ -335,7 +335,7 @@ void __fastcall WarBoardPartyOrganizationMenu__Init(WarBoardPartyOrganizationMen
   if ( UnityEngine_Object__op_Equality(servantSelectMenu, 0LL, 0LL) )
   {
     UIAtlas = (UILabel_o *)UnityEngine_Resources__Load_UIAtlas_(
-                             (System_String_o *)StringLiteral_10560,
+                             (System_String_o *)StringLiteral_10560/*"PartyOrganization/PartyServantSelectMenu"*/,
                              (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_GameObject___);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

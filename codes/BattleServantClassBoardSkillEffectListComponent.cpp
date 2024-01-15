@@ -217,7 +217,7 @@ void __fastcall BattleServantClassBoardSkillEffectListComponent__SetClassBoardPa
       &System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_SkillDispData__TypeInfo,
       v20);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_22059, v22);
+    sub_B16FFC(&StringLiteral_22059/*"skill_{0:D5}"*/, v22);
     byte_40F8A08 = 1;
   }
   entityList = 0LL;
@@ -416,7 +416,7 @@ LABEL_58:
                 0LL);
         LODWORD(v71.fields.list) = v47[2].monitor;
         v65 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v71);
-        v66 = System_String__Format((System_String_o *)StringLiteral_22059, v65, 0LL);
+        v66 = System_String__Format((System_String_o *)StringLiteral_22059/*"skill_{0:D5}"*/, v65, 0LL);
         ClassBoardEffectListDialogSkillDetailComponent__SetIconFromBattleServantWindow(
           (ClassBoardEffectListDialogSkillDetailComponent_o *)Component_srcLineSprite,
           this->fields.atlasManagerUnit,

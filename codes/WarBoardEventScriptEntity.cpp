@@ -42,10 +42,10 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetActionTypes(
 {
   if ( (byte_40F63E0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16172, method);
+    sub_B16FFC(&StringLiteral_16172/*"actionType"*/, method);
     byte_40F63E0 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16172, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16172/*"actionType"*/, 0LL);
 }
 
 
@@ -57,13 +57,13 @@ System_Int32_array_array *__fastcall WarBoardEventScriptEntity__GetActorEffectPi
 
   if ( (byte_40F63F1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16180, method);
+    sub_B16FFC(&StringLiteral_16180/*"actorEffectPieceIndex"*/, method);
     byte_40F63F1 = 1;
   }
   resValue = 0LL;
   if ( EntityScriptUtil__TryGet2DimensionalIntArray(
          this->fields.script,
-         (System_String_o *)StringLiteral_16180,
+         (System_String_o *)StringLiteral_16180/*"actorEffectPieceIndex"*/,
          &resValue,
          0LL) )
   {
@@ -82,10 +82,10 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetAiIds(
 {
   if ( (byte_40F63E1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16229, method);
+    sub_B16FFC(&StringLiteral_16229/*"aiId"*/, method);
     byte_40F63E1 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16229, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16229/*"aiId"*/, 0LL);
 }
 
 
@@ -98,14 +98,14 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetAnimationName(
 
   if ( (byte_40F63E8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16285, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_16285/*"animationName"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F63E8 = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_16285,
-           (System_String_o *)StringLiteral_1,
+           (System_String_o *)StringLiteral_16285/*"animationName"*/,
+           (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
 
@@ -116,10 +116,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetBossIdx(WarBoardEventScriptEnti
 
   if ( (byte_40F63D5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16823, method);
+    sub_B16FFC(&StringLiteral_16823/*"bossIdx"*/, method);
     byte_40F63D5 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_16823, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_16823/*"bossIdx"*/, -1, v2);
 }
 
 
@@ -131,10 +131,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetBossProcessType(
 
   if ( (byte_40F63EE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16824, method);
+    sub_B16FFC(&StringLiteral_16824/*"bossProcessType"*/, method);
     byte_40F63EE = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_16824, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_16824/*"bossProcessType"*/, -1, v2);
 }
 
 
@@ -146,10 +146,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetBreakPointDamageType(
 
   if ( (byte_40F63DD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15347, method);
+    sub_B16FFC(&StringLiteral_15347/*"WarBoardBreakPointDamage"*/, method);
     byte_40F63DD = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_15347, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_15347/*"WarBoardBreakPointDamage"*/, -1, v2);
 }
 
 
@@ -161,10 +161,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetChangeWinCondition(
 
   if ( (byte_40F63EF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17217, method);
+    sub_B16FFC(&StringLiteral_17217/*"changeWinCondition"*/, method);
     byte_40F63EF = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_17217, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_17217/*"changeWinCondition"*/, -1, v2);
 }
 
 
@@ -175,10 +175,10 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetEffect(
 {
   if ( (byte_40F63D1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18153, defVal);
+    sub_B16FFC(&StringLiteral_18153/*"effect"*/, defVal);
     byte_40F63D1 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18153, defVal, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18153/*"effect"*/, defVal, 0LL);
 }
 
 
@@ -188,10 +188,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetEffectId(WarBoardEventScriptEnt
 
   if ( (byte_40F63CF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18200, method);
+    sub_B16FFC(&StringLiteral_18200/*"effectId"*/, method);
     byte_40F63CF = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18200, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18200/*"effectId"*/, -1, v2);
 }
 
 
@@ -201,10 +201,10 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetEffectIds(
 {
   if ( (byte_40F63D0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18201, method);
+    sub_B16FFC(&StringLiteral_18201/*"effectIds"*/, method);
     byte_40F63D0 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_18201, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_18201/*"effectIds"*/, 0LL);
 }
 
 
@@ -214,10 +214,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetForceId(WarBoardEventScriptEnti
 
   if ( (byte_40F63D8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18734, method);
+    sub_B16FFC(&StringLiteral_18734/*"forceId"*/, method);
     byte_40F63D8 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18734, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_18734/*"forceId"*/, -1, v2);
 }
 
 
@@ -227,10 +227,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetGroupId(WarBoardEventScriptEnti
 
   if ( (byte_40F63D7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19013, method);
+    sub_B16FFC(&StringLiteral_19013/*"groupId"*/, method);
     byte_40F63D7 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19013, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19013/*"groupId"*/, -1, v2);
 }
 
 
@@ -288,10 +288,10 @@ bool __fastcall WarBoardEventScriptEntity__GetIsIncludeDeadPiece(
 
   if ( (byte_40F63ED & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19854, method);
+    sub_B16FFC(&StringLiteral_19854/*"isIncludeDeadPiece"*/, method);
     byte_40F63ED = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19854, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19854/*"isIncludeDeadPiece"*/, -1, v2) == 1;
 }
 
 
@@ -303,10 +303,10 @@ bool __fastcall WarBoardEventScriptEntity__GetIsPlaySkillSe(
 
   if ( (byte_40F63F2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19862, method);
+    sub_B16FFC(&StringLiteral_19862/*"isPlaySkillSe"*/, method);
     byte_40F63F2 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19862, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19862/*"isPlaySkillSe"*/, -1, v2) == 1;
 }
 
 
@@ -316,10 +316,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetIsStop(WarBoardEventScriptEntit
 
   if ( (byte_40F63E9 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19874, method);
+    sub_B16FFC(&StringLiteral_19874/*"isStop"*/, method);
     byte_40F63E9 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19874, 0, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19874/*"isStop"*/, 0, v2);
 }
 
 
@@ -331,10 +331,10 @@ bool __fastcall WarBoardEventScriptEntity__GetNoActorEffect(
 
   if ( (byte_40F63EC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21005, method);
+    sub_B16FFC(&StringLiteral_21005/*"noActorEffect"*/, method);
     byte_40F63EC = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21005, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21005/*"noActorEffect"*/, -1, v2) == 1;
 }
 
 
@@ -346,10 +346,10 @@ bool __fastcall WarBoardEventScriptEntity__GetNoMoveLastPieceCamera(
 
   if ( (byte_40F63E6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21008, method);
+    sub_B16FFC(&StringLiteral_21008/*"noMoveLastPieceCamera"*/, method);
     byte_40F63E6 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21008, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21008/*"noMoveLastPieceCamera"*/, -1, v2) == 1;
 }
 
 
@@ -361,10 +361,10 @@ bool __fastcall WarBoardEventScriptEntity__GetNoMoveTargetCamera(
 
   if ( (byte_40F63E5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21009, method);
+    sub_B16FFC(&StringLiteral_21009/*"noMoveTargetCamera"*/, method);
     byte_40F63E5 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21009, -1, v2) == 1;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21009/*"noMoveTargetCamera"*/, -1, v2) == 1;
 }
 
 
@@ -377,14 +377,14 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetObjectName(
 
   if ( (byte_40F63E7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21099, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_21099/*"objectName"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F63E7 = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_21099,
-           (System_String_o *)StringLiteral_1,
+           (System_String_o *)StringLiteral_21099/*"objectName"*/,
+           (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
 
@@ -398,14 +398,14 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetOverlayEffectMessage(
 
   if ( (byte_40F63E4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21257, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_21257/*"overlayEffectMessage"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F63E4 = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_21257,
-           (System_String_o *)StringLiteral_1,
+           (System_String_o *)StringLiteral_21257/*"overlayEffectMessage"*/,
+           (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
 
@@ -419,14 +419,14 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetOverlayEffectPrefabNam
 
   if ( (byte_40F63E3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21258, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_21258/*"overlayEffectPrefabName"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F63E3 = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_21258,
-           (System_String_o *)StringLiteral_1,
+           (System_String_o *)StringLiteral_21258/*"overlayEffectPrefabName"*/,
+           (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
 
@@ -437,10 +437,10 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetPieceIndex(
 {
   if ( (byte_40F63DF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21382, method);
+    sub_B16FFC(&StringLiteral_21382/*"pieceIndex"*/, method);
     byte_40F63DF = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_21382, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_21382/*"pieceIndex"*/, 0LL);
 }
 
 
@@ -450,10 +450,10 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetPieceIndexes(
 {
   if ( (byte_40F63CB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21384, method);
+    sub_B16FFC(&StringLiteral_21384/*"pieceIndexes"*/, method);
     byte_40F63CB = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_21384, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_21384/*"pieceIndexes"*/, 0LL);
 }
 
 
@@ -465,10 +465,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetPlayAfterCurrentAnim(
 
   if ( (byte_40F63EA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21396, method);
+    sub_B16FFC(&StringLiteral_21396/*"playAfterCurrentAnim"*/, method);
     byte_40F63EA = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21396, 0, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21396/*"playAfterCurrentAnim"*/, 0, v2);
 }
 
 
@@ -481,14 +481,14 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetSeName(
 
   if ( (byte_40F63D2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21843, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_21843/*"seName"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F63D2 = 1;
   }
   return WarBoardEventScriptEntity__GetStringFromScript(
            this,
-           (System_String_o *)StringLiteral_21843,
-           (System_String_o *)StringLiteral_1,
+           (System_String_o *)StringLiteral_21843/*"seName"*/,
+           (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
 
@@ -499,10 +499,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetSkillId(WarBoardEventScriptEnti
 
   if ( (byte_40F63CD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22050, method);
+    sub_B16FFC(&StringLiteral_22050/*"skillId"*/, method);
     byte_40F63CD = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22050, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22050/*"skillId"*/, -1, v2);
 }
 
 
@@ -512,10 +512,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetSkillLv(WarBoardEventScriptEnti
 
   if ( (byte_40F63CE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22051, method);
+    sub_B16FFC(&StringLiteral_22051/*"skillLv"*/, method);
     byte_40F63CE = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22051, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22051/*"skillLv"*/, -1, v2);
 }
 
 
@@ -527,10 +527,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetSquareIndex(
 
   if ( (byte_40F63CC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22146, method);
+    sub_B16FFC(&StringLiteral_22146/*"squareIndex"*/, method);
     byte_40F63CC = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22146, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22146/*"squareIndex"*/, -1, v2);
 }
 
 
@@ -555,10 +555,10 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetSquareIndexGroup(
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__ToArray__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_22149, v7);
+    sub_B16FFC(&StringLiteral_22149/*"squareIndexGroup"*/, v7);
     byte_40F63DE = 1;
   }
-  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22149, -1, v2);
+  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22149/*"squareIndexGroup"*/, -1, v2);
   if ( IntFromScript == -1 )
     return 0LL;
   v9 = IntFromScript;
@@ -604,13 +604,13 @@ System_Int32_array *__fastcall WarBoardEventScriptEntity__GetSquareIndexes(
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__ToArray__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_22149, v7);
-    sub_B16FFC(&StringLiteral_22151, v8);
+    sub_B16FFC(&StringLiteral_22149/*"squareIndexGroup"*/, v7);
+    sub_B16FFC(&StringLiteral_22151/*"squareIndexes"*/, v8);
     byte_40F63DB = 1;
   }
-  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22149, -1, v2);
+  IntFromScript = WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22149/*"squareIndexGroup"*/, -1, v2);
   if ( IntFromScript == -1 )
-    return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_22151, 0LL);
+    return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_22151/*"squareIndexes"*/, 0LL);
   v10 = IntFromScript;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
@@ -717,10 +717,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetStageReinforcementsId(
 
   if ( (byte_40F63E2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21659, method);
+    sub_B16FFC(&StringLiteral_21659/*"reinforcements"*/, method);
     byte_40F63E2 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21659, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_21659/*"reinforcements"*/, -1, v2);
 }
 
 
@@ -730,10 +730,10 @@ int32_t __fastcall WarBoardEventScriptEntity__GetStatus(WarBoardEventScriptEntit
 
   if ( (byte_40F63D6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22210, method);
+    sub_B16FFC(&StringLiteral_22210/*"status"*/, method);
     byte_40F63D6 = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22210, -1, v2);
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22210/*"status"*/, -1, v2);
 }
 
 
@@ -788,10 +788,10 @@ float __fastcall WarBoardEventScriptEntity__GetTargetAllCameraSize(
 {
   if ( (byte_40F63F0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22510, method);
+    sub_B16FFC(&StringLiteral_22510/*"targetAllCameraSize"*/, method);
     byte_40F63F0 = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_22510, 0.0, 0LL);
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_22510/*"targetAllCameraSize"*/, 0.0, 0LL);
 }
 
 
@@ -802,10 +802,10 @@ System_String_o *__fastcall WarBoardEventScriptEntity__GetUiType(
 {
   if ( (byte_40F63D9 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22743, defVal);
+    sub_B16FFC(&StringLiteral_22743/*"type"*/, defVal);
     byte_40F63D9 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22743, defVal, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22743/*"type"*/, defVal, 0LL);
 }
 
 
@@ -813,10 +813,10 @@ bool __fastcall WarBoardEventScriptEntity__IsDisp(WarBoardEventScriptEntity_o *t
 {
   if ( (byte_40F63DA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17959, method);
+    sub_B16FFC(&StringLiteral_17959/*"disp"*/, method);
     byte_40F63DA = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17959, 1, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17959/*"disp"*/, 1, 0LL) == 1;
 }
 
 
@@ -828,8 +828,8 @@ bool __fastcall WarBoardEventScriptEntity__IsUseHoldReinforcements(
 
   if ( (byte_40F63EB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19879, method);
+    sub_B16FFC(&StringLiteral_19879/*"isUseHoldReinforcements"*/, method);
     byte_40F63EB = 1;
   }
-  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19879, -1, v2) > 0;
+  return WarBoardEventScriptEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_19879/*"isUseHoldReinforcements"*/, -1, v2) > 0;
 }

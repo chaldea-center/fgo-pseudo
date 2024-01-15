@@ -72,7 +72,7 @@ System_String_o *__fastcall BattleServantRaidParamComponent__get_RaidHPFormat(
   if ( (byte_40FCD1C & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_2462, v3);
+    sub_B16FFC(&StringLiteral_2462/*"BATTLE_RAID_TOTALHP"*/, v3);
     byte_40FCD1C = 1;
   }
   p_hpformat = (BattleServantConfConponent_o *)&this->fields.hpformat;
@@ -80,7 +80,7 @@ System_String_o *__fastcall BattleServantRaidParamComponent__get_RaidHPFormat(
   {
     v5 = (_DWORD)this + 460;
     v6 = System_Int32__ToString(v5, 0LL);
-    v7 = System_String__Concat_43743732((System_String_o *)StringLiteral_2462, v6, 0LL);
+    v7 = System_String__Concat_43743732((System_String_o *)StringLiteral_2462/*"BATTLE_RAID_TOTALHP"*/, v6, 0LL);
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
@@ -89,7 +89,7 @@ System_String_o *__fastcall BattleServantRaidParamComponent__get_RaidHPFormat(
     if ( LocalizationManager__ContainsKey(v7, 0LL) )
     {
       v8 = System_Int32__ToString(v5, 0LL);
-      v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_2462, v8, 0LL);
+      v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_2462/*"BATTLE_RAID_TOTALHP"*/, v8, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
@@ -104,7 +104,7 @@ System_String_o *__fastcall BattleServantRaidParamComponent__get_RaidHPFormat(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v10 = (System_String_o *)StringLiteral_2462;
+      v10 = (System_String_o *)StringLiteral_2462/*"BATTLE_RAID_TOTALHP"*/;
     }
     v11 = (System_Int32_array **)LocalizationManager__Get(v10, 0LL);
     p_hpformat->klass = (BattleServantConfConponent_c *)v11;
@@ -184,11 +184,11 @@ void __fastcall BattleServantRaidParamComponent__setData(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v10);
     sub_B16FFC(&int_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_21593, v13);
-    sub_B16FFC(&StringLiteral_2743, v14);
-    sub_B16FFC(&StringLiteral_2758, v15);
-    sub_B16FFC(&StringLiteral_21592, v16);
-    sub_B16FFC(&StringLiteral_21594, v17);
+    sub_B16FFC(&StringLiteral_21593/*"raid_down_last_"*/, v13);
+    sub_B16FFC(&StringLiteral_2743/*"Battle/Common"*/, v14);
+    sub_B16FFC(&StringLiteral_2758/*"BattleAssetUIAtlas"*/, v15);
+    sub_B16FFC(&StringLiteral_21592/*"raid_down_end_"*/, v16);
+    sub_B16FFC(&StringLiteral_21594/*"raid_down_normal_"*/, v17);
     byte_40FCD1D = 1;
   }
   if ( data )
@@ -259,12 +259,12 @@ void __fastcall BattleServantRaidParamComponent__setData(
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2743, 0LL);
+    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2743/*"Battle/Common"*/, 0LL);
     if ( !AssetStorage )
       goto LABEL_31;
     Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                    AssetStorage,
-                                                                   (System_String_o *)StringLiteral_2758,
+                                                                   (System_String_o *)StringLiteral_2758/*"BattleAssetUIAtlas"*/,
                                                                    (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     if ( !Object_WarBoardWaitTimeSetting )
       goto LABEL_31;
@@ -278,7 +278,7 @@ void __fastcall BattleServantRaidParamComponent__setData(
     raidDownNormalSprite = this->fields.raidDownNormalSprite;
     LODWORD(var40.methodPointer) = this->fields.hpBarType;
     v45 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &var40);
-    v46 = System_String__Concat((Il2CppObject *)StringLiteral_21594, v45, 0LL);
+    v46 = System_String__Concat((Il2CppObject *)StringLiteral_21594/*"raid_down_normal_"*/, v45, 0LL);
     if ( !raidDownNormalSprite )
       goto LABEL_31;
     UISprite__set_spriteName(raidDownNormalSprite, v46, 0LL);
@@ -289,14 +289,14 @@ void __fastcall BattleServantRaidParamComponent__setData(
     v48 = this->fields.raidDownLastSprite;
     HIDWORD(var40.klass) = this->fields.hpBarType;
     v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, (char *)&var40.klass + 4);
-    v50 = System_String__Concat((Il2CppObject *)StringLiteral_21593, v49, 0LL);
+    v50 = System_String__Concat((Il2CppObject *)StringLiteral_21593/*"raid_down_last_"*/, v49, 0LL);
     if ( !v48
       || (UISprite__set_spriteName(v48, v50, 0LL), (raidDownEndSprite = this->fields.raidDownEndSprite) == 0LL)
       || (UISprite__set_atlas(raidDownEndSprite, v43, 0LL),
           v52 = this->fields.raidDownEndSprite,
           LODWORD(var40.klass) = this->fields.hpBarType,
           v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &var40.klass),
-          v54 = System_String__Concat((Il2CppObject *)StringLiteral_21592, v53, 0LL),
+          v54 = System_String__Concat((Il2CppObject *)StringLiteral_21592/*"raid_down_end_"*/, v53, 0LL),
           !v52) )
     {
 LABEL_31:
@@ -333,7 +333,7 @@ void __fastcall BattleServantRaidParamComponent__setRaidDownMessage(
   if ( (byte_40FCD20 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FCD20 = 1;
   }
   if ( this->fields.isDefeatCount )
@@ -413,7 +413,7 @@ LABEL_28:
   raidhplabel = this->fields.raidhplabel;
   if ( !raidhplabel )
     goto LABEL_32;
-  UILabel__set_text(raidhplabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(raidhplabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v18 = (UnityEngine_Component_o *)this->fields.raidhplabel;
   if ( !v18 )
     goto LABEL_32;
@@ -808,7 +808,7 @@ void __fastcall BattleServantRaidParamComponent__updateStateString(
   if ( (byte_40FCD21 & 1) == 0 )
   {
     sub_B16FFC(&char___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FCD21 = 1;
   }
   data = this->fields.data;
@@ -878,7 +878,7 @@ LABEL_14:
   v14 = this->fields.stateLabel;
   if ( !v14 )
     goto LABEL_21;
-  v15 = (System_String_o *)StringLiteral_1;
+  v15 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_16:
   UILabel__set_text(v14, v15, 0LL);
 }

@@ -96,10 +96,10 @@ bool __fastcall ConstantMaster__IsDisableServantEffectFilter(const MethodInfo *m
 
   if ( (byte_40FBD4E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4583, v1);
+    sub_B16FFC(&StringLiteral_4583/*"DISABLE_SERVANT_EFFECT_FILTER"*/, v1);
     byte_40FBD4E = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_4583, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_4583/*"DISABLE_SERVANT_EFFECT_FILTER"*/, v1) == 1;
 }
 
 
@@ -109,10 +109,10 @@ bool __fastcall ConstantMaster__IsFLAG20220101(const MethodInfo *method)
 
   if ( (byte_40FBD49 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6337, v1);
+    sub_B16FFC(&StringLiteral_6337/*"FLAG_20220101"*/, v1);
     byte_40FBD49 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6337, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6337/*"FLAG_20220101"*/, v1) == 1;
 }
 
 
@@ -122,10 +122,10 @@ bool __fastcall ConstantMaster__IsFLAG20220119(const MethodInfo *method)
 
   if ( (byte_40FBD4A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6338, v1);
+    sub_B16FFC(&StringLiteral_6338/*"FLAG_20220119"*/, v1);
     byte_40FBD4A = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6338, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6338/*"FLAG_20220119"*/, v1) == 1;
 }
 
 
@@ -135,10 +135,10 @@ bool __fastcall ConstantMaster__IsFLAG20220511(const MethodInfo *method)
 
   if ( (byte_40FBD4B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6339, v1);
+    sub_B16FFC(&StringLiteral_6339/*"FLAG_20220511"*/, v1);
     byte_40FBD4B = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6339, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6339/*"FLAG_20220511"*/, v1) == 1;
 }
 
 
@@ -148,10 +148,10 @@ bool __fastcall ConstantMaster__IsFLAG20220730(const MethodInfo *method)
 
   if ( (byte_40FBD4D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6340, v1);
+    sub_B16FFC(&StringLiteral_6340/*"FLAG_20220730"*/, v1);
     byte_40FBD4D = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6340, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6340/*"FLAG_20220730"*/, v1) == 1;
 }
 
 
@@ -161,10 +161,10 @@ bool __fastcall ConstantMaster__IsFLAG20230402(const MethodInfo *method)
 
   if ( (byte_40FBD4F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6341, v1);
+    sub_B16FFC(&StringLiteral_6341/*"FLAG_20230402"*/, v1);
     byte_40FBD4F = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6341, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6341/*"FLAG_20230402"*/, v1) == 1;
 }
 
 
@@ -174,10 +174,10 @@ bool __fastcall ConstantMaster__IsFlag20211217(const MethodInfo *method)
 
   if ( (byte_40FBD48 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6336, v1);
+    sub_B16FFC(&StringLiteral_6336/*"FLAG_20211217"*/, v1);
     byte_40FBD48 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6336, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6336/*"FLAG_20211217"*/, v1) == 1;
 }
 
 
@@ -187,10 +187,10 @@ bool __fastcall ConstantMaster__IsNotUseRestrictionDialog(const MethodInfo *meth
 
   if ( (byte_40FBD50 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9321, v1);
+    sub_B16FFC(&StringLiteral_9321/*"NOT_USE_RESTRICTION_DIALOG"*/, v1);
     byte_40FBD50 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_9321, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_9321/*"NOT_USE_RESTRICTION_DIALOG"*/, v1) == 1;
 }
 
 
@@ -214,7 +214,7 @@ bool __fastcall ConstantMaster__IsOtherImage(const MethodInfo *method)
   {
     sub_B16FFC(&System_DateTime_TypeInfo, v1);
     sub_B16FFC(&NetworkManager_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_8412, v3);
+    sub_B16FFC(&StringLiteral_8412/*"LOGIN_DAY"*/, v3);
     byte_40FBD4C = 1;
   }
   v9 = 0LL;
@@ -225,7 +225,7 @@ bool __fastcall ConstantMaster__IsOtherImage(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   dateData = NetworkManager__getServerDateTime(0LL).fields.dateData;
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8412, v4);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8412/*"LOGIN_DAY"*/, v4);
   v9 = NetworkManager__getServerDateTime_23685560(Value, 0LL).fields.dateData;
   v11.fields.dateData = (uint64_t)&dateData;
   v6 = System_DateTime__get_Date(v11, 0LL).fields.dateData;

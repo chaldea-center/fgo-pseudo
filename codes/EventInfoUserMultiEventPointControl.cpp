@@ -186,7 +186,7 @@ void __fastcall EventInfoUserMultiEventPointControl__SetPointLabel(
     sub_B16FFC(&long_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&System_Math_TypeInfo, v9);
-    this = (EventInfoUserMultiEventPointControl_o *)sub_B16FFC(&StringLiteral_5635, v10);
+    this = (EventInfoUserMultiEventPointControl_o *)sub_B16FFC(&StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, v10);
     byte_40F8823 = 1;
   }
   pointLabels = v6->fields.pointLabels;
@@ -206,7 +206,7 @@ void __fastcall EventInfoUserMultiEventPointControl__SetPointLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5635, 0LL);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
     v15 = BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )

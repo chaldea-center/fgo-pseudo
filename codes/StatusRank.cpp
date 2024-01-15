@@ -251,45 +251,45 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&StatusRank_TypeInfo, v1);
     sub_B16FFC(&string___TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_4531, v4);
-    sub_B16FFC(&StringLiteral_5734, v5);
-    sub_B16FFC(&StringLiteral_2897, v6);
-    sub_B16FFC(&StringLiteral_5417, v7);
-    sub_B16FFC(&StringLiteral_4529, v8);
-    sub_B16FFC(&StringLiteral_4530, v9);
-    sub_B16FFC(&StringLiteral_5413, v10);
-    sub_B16FFC(&StringLiteral_5416, v11);
-    sub_B16FFC(&StringLiteral_1611, v12);
-    sub_B16FFC(&StringLiteral_2896, v13);
-    sub_B16FFC(&StringLiteral_5414, v14);
-    sub_B16FFC(&StringLiteral_1612, v15);
-    sub_B16FFC(&StringLiteral_1610, v16);
-    sub_B16FFC(&StringLiteral_5415, v17);
-    sub_B16FFC(&StringLiteral_2211, v18);
-    sub_B16FFC(&StringLiteral_2899, v19);
-    sub_B16FFC(&StringLiteral_2212, v20);
-    sub_B16FFC(&StringLiteral_4527, v21);
-    sub_B16FFC(&StringLiteral_2210, v22);
-    sub_B16FFC(&StringLiteral_2895, v23);
-    sub_B16FFC(&StringLiteral_4528, v24);
-    sub_B16FFC(&StringLiteral_1613, v25);
-    sub_B16FFC(&StringLiteral_2898, v26);
-    sub_B16FFC(&StringLiteral_1, v27);
-    sub_B16FFC(&StringLiteral_2213, v28);
-    sub_B16FFC(&StringLiteral_1548, v29);
+    sub_B16FFC(&StringLiteral_4531/*"D-"*/, v4);
+    sub_B16FFC(&StringLiteral_5734/*"EX"*/, v5);
+    sub_B16FFC(&StringLiteral_2897/*"C++"*/, v6);
+    sub_B16FFC(&StringLiteral_5417/*"E-"*/, v7);
+    sub_B16FFC(&StringLiteral_4529/*"D++"*/, v8);
+    sub_B16FFC(&StringLiteral_4530/*"D+++"*/, v9);
+    sub_B16FFC(&StringLiteral_5413/*"E"*/, v10);
+    sub_B16FFC(&StringLiteral_5416/*"E+++"*/, v11);
+    sub_B16FFC(&StringLiteral_1611/*"A++"*/, v12);
+    sub_B16FFC(&StringLiteral_2896/*"C+"*/, v13);
+    sub_B16FFC(&StringLiteral_5414/*"E+"*/, v14);
+    sub_B16FFC(&StringLiteral_1612/*"A+++"*/, v15);
+    sub_B16FFC(&StringLiteral_1610/*"A+"*/, v16);
+    sub_B16FFC(&StringLiteral_5415/*"E++"*/, v17);
+    sub_B16FFC(&StringLiteral_2211/*"B+"*/, v18);
+    sub_B16FFC(&StringLiteral_2899/*"C-"*/, v19);
+    sub_B16FFC(&StringLiteral_2212/*"B++"*/, v20);
+    sub_B16FFC(&StringLiteral_4527/*"D"*/, v21);
+    sub_B16FFC(&StringLiteral_2210/*"B"*/, v22);
+    sub_B16FFC(&StringLiteral_2895/*"C"*/, v23);
+    sub_B16FFC(&StringLiteral_4528/*"D+"*/, v24);
+    sub_B16FFC(&StringLiteral_1613/*"A-"*/, v25);
+    sub_B16FFC(&StringLiteral_2898/*"C+++"*/, v26);
+    sub_B16FFC(&StringLiteral_1/*""*/, v27);
+    sub_B16FFC(&StringLiteral_2213/*"B-"*/, v28);
+    sub_B16FFC(&StringLiteral_1548/*"A"*/, v29);
     byte_40FAE8B = 1;
   }
   v30 = sub_B17014(string___TypeInfo, 6LL, v2);
   if ( !v30 )
     goto LABEL_167;
   v37 = (System_Int32_array **)v30;
-  v38 = StringLiteral_1;
-  if ( StringLiteral_1 )
+  v38 = StringLiteral_1/*""*/;
+  if ( StringLiteral_1/*""*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1, *(_QWORD *)&(*v37)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1/*""*/, *(_QWORD *)&(*v37)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1;
+    v39 = (System_Int32_array **)StringLiteral_1/*""*/;
   }
   else
   {
@@ -299,13 +299,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v37[4] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v37 + 4), v39, v31, v32, v33, v34, v35, v36);
-  v38 = (void *)StringLiteral_1548;
-  if ( StringLiteral_1548 )
+  v38 = (void *)StringLiteral_1548/*"A"*/;
+  if ( StringLiteral_1548/*"A"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1548, *(_QWORD *)&(*v37)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1548/*"A"*/, *(_QWORD *)&(*v37)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1548;
+    v39 = (System_Int32_array **)StringLiteral_1548/*"A"*/;
   }
   else
   {
@@ -315,13 +315,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v37[5] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v37 + 5), v39, v31, v40, v41, v42, v43, v44);
-  v38 = (void *)StringLiteral_1610;
-  if ( StringLiteral_1610 )
+  v38 = (void *)StringLiteral_1610/*"A+"*/;
+  if ( StringLiteral_1610/*"A+"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1610, *(_QWORD *)&(*v37)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1610/*"A+"*/, *(_QWORD *)&(*v37)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1610;
+    v39 = (System_Int32_array **)StringLiteral_1610/*"A+"*/;
   }
   else
   {
@@ -331,13 +331,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v37[6] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v37 + 6), v39, v31, v45, v46, v47, v48, v49);
-  v38 = (void *)StringLiteral_1611;
-  if ( StringLiteral_1611 )
+  v38 = (void *)StringLiteral_1611/*"A++"*/;
+  if ( StringLiteral_1611/*"A++"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1611, *(_QWORD *)&(*v37)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1611/*"A++"*/, *(_QWORD *)&(*v37)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1611;
+    v39 = (System_Int32_array **)StringLiteral_1611/*"A++"*/;
   }
   else
   {
@@ -347,13 +347,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v37[7] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v37 + 7), v39, v31, v50, v51, v52, v53, v54);
-  v38 = (void *)StringLiteral_1613;
-  if ( StringLiteral_1613 )
+  v38 = (void *)StringLiteral_1613/*"A-"*/;
+  if ( StringLiteral_1613/*"A-"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1613, *(_QWORD *)&(*v37)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1613/*"A-"*/, *(_QWORD *)&(*v37)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1613;
+    v39 = (System_Int32_array **)StringLiteral_1613/*"A-"*/;
   }
   else
   {
@@ -363,13 +363,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v37[8] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v37 + 8), v39, v31, v55, v56, v57, v58, v59);
-  v38 = (void *)StringLiteral_1612;
-  if ( StringLiteral_1612 )
+  v38 = (void *)StringLiteral_1612/*"A+++"*/;
+  if ( StringLiteral_1612/*"A+++"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1612, *(_QWORD *)&(*v37)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1612/*"A+++"*/, *(_QWORD *)&(*v37)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1612;
+    v39 = (System_Int32_array **)StringLiteral_1612/*"A+++"*/;
   }
   else
   {
@@ -386,13 +386,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
   if ( !v73 )
     goto LABEL_167;
   v79 = (System_Int32_array **)v73;
-  v38 = StringLiteral_1;
-  if ( StringLiteral_1 )
+  v38 = StringLiteral_1/*""*/;
+  if ( StringLiteral_1/*""*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1, *(_QWORD *)&(*v79)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1/*""*/, *(_QWORD *)&(*v79)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1;
+    v39 = (System_Int32_array **)StringLiteral_1/*""*/;
   }
   else
   {
@@ -402,13 +402,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v79[4] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v79 + 4), v39, v31, v74, v75, v76, v77, v78);
-  v38 = (void *)StringLiteral_2210;
-  if ( StringLiteral_2210 )
+  v38 = (void *)StringLiteral_2210/*"B"*/;
+  if ( StringLiteral_2210/*"B"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_2210, *(_QWORD *)&(*v79)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_2210/*"B"*/, *(_QWORD *)&(*v79)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_2210;
+    v39 = (System_Int32_array **)StringLiteral_2210/*"B"*/;
   }
   else
   {
@@ -418,13 +418,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v79[5] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v79 + 5), v39, v31, v80, v81, v82, v83, v84);
-  v38 = (void *)StringLiteral_2211;
-  if ( StringLiteral_2211 )
+  v38 = (void *)StringLiteral_2211/*"B+"*/;
+  if ( StringLiteral_2211/*"B+"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_2211, *(_QWORD *)&(*v79)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_2211/*"B+"*/, *(_QWORD *)&(*v79)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_2211;
+    v39 = (System_Int32_array **)StringLiteral_2211/*"B+"*/;
   }
   else
   {
@@ -434,13 +434,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v79[6] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v79 + 6), v39, v31, v85, v86, v87, v88, v89);
-  v38 = (void *)StringLiteral_2212;
-  if ( StringLiteral_2212 )
+  v38 = (void *)StringLiteral_2212/*"B++"*/;
+  if ( StringLiteral_2212/*"B++"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_2212, *(_QWORD *)&(*v79)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_2212/*"B++"*/, *(_QWORD *)&(*v79)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_2212;
+    v39 = (System_Int32_array **)StringLiteral_2212/*"B++"*/;
   }
   else
   {
@@ -450,13 +450,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v79[7] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v79 + 7), v39, v31, v90, v91, v92, v93, v94);
-  v38 = (void *)StringLiteral_2213;
-  if ( StringLiteral_2213 )
+  v38 = (void *)StringLiteral_2213/*"B-"*/;
+  if ( StringLiteral_2213/*"B-"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_2213, *(_QWORD *)&(*v79)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_2213/*"B-"*/, *(_QWORD *)&(*v79)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_2213;
+    v39 = (System_Int32_array **)StringLiteral_2213/*"B-"*/;
   }
   else
   {
@@ -473,13 +473,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
   if ( !v108 )
     goto LABEL_167;
   v114 = (System_Int32_array **)v108;
-  v38 = StringLiteral_1;
-  if ( StringLiteral_1 )
+  v38 = StringLiteral_1/*""*/;
+  if ( StringLiteral_1/*""*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1, *(_QWORD *)&(*v114)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1/*""*/, *(_QWORD *)&(*v114)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1;
+    v39 = (System_Int32_array **)StringLiteral_1/*""*/;
   }
   else
   {
@@ -489,13 +489,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v114[4] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v114 + 4), v39, v31, v109, v110, v111, v112, v113);
-  v38 = (void *)StringLiteral_2895;
-  if ( StringLiteral_2895 )
+  v38 = (void *)StringLiteral_2895/*"C"*/;
+  if ( StringLiteral_2895/*"C"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_2895, *(_QWORD *)&(*v114)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_2895/*"C"*/, *(_QWORD *)&(*v114)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_2895;
+    v39 = (System_Int32_array **)StringLiteral_2895/*"C"*/;
   }
   else
   {
@@ -505,13 +505,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v114[5] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v114 + 5), v39, v31, v115, v116, v117, v118, v119);
-  v38 = (void *)StringLiteral_2896;
-  if ( StringLiteral_2896 )
+  v38 = (void *)StringLiteral_2896/*"C+"*/;
+  if ( StringLiteral_2896/*"C+"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_2896, *(_QWORD *)&(*v114)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_2896/*"C+"*/, *(_QWORD *)&(*v114)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_2896;
+    v39 = (System_Int32_array **)StringLiteral_2896/*"C+"*/;
   }
   else
   {
@@ -521,13 +521,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v114[6] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v114 + 6), v39, v31, v120, v121, v122, v123, v124);
-  v38 = (void *)StringLiteral_2897;
-  if ( StringLiteral_2897 )
+  v38 = (void *)StringLiteral_2897/*"C++"*/;
+  if ( StringLiteral_2897/*"C++"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_2897, *(_QWORD *)&(*v114)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_2897/*"C++"*/, *(_QWORD *)&(*v114)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_2897;
+    v39 = (System_Int32_array **)StringLiteral_2897/*"C++"*/;
   }
   else
   {
@@ -537,13 +537,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v114[7] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v114 + 7), v39, v31, v125, v126, v127, v128, v129);
-  v38 = (void *)StringLiteral_2899;
-  if ( StringLiteral_2899 )
+  v38 = (void *)StringLiteral_2899/*"C-"*/;
+  if ( StringLiteral_2899/*"C-"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_2899, *(_QWORD *)&(*v114)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_2899/*"C-"*/, *(_QWORD *)&(*v114)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_2899;
+    v39 = (System_Int32_array **)StringLiteral_2899/*"C-"*/;
   }
   else
   {
@@ -553,13 +553,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v114[8] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v114 + 8), v39, v31, v130, v131, v132, v133, v134);
-  v38 = (void *)StringLiteral_2898;
-  if ( StringLiteral_2898 )
+  v38 = (void *)StringLiteral_2898/*"C+++"*/;
+  if ( StringLiteral_2898/*"C+++"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_2898, *(_QWORD *)&(*v114)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_2898/*"C+++"*/, *(_QWORD *)&(*v114)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_2898;
+    v39 = (System_Int32_array **)StringLiteral_2898/*"C+++"*/;
   }
   else
   {
@@ -576,13 +576,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
   if ( !v148 )
     goto LABEL_167;
   v154 = (System_Int32_array **)v148;
-  v38 = StringLiteral_1;
-  if ( StringLiteral_1 )
+  v38 = StringLiteral_1/*""*/;
+  if ( StringLiteral_1/*""*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1, *(_QWORD *)&(*v154)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1/*""*/, *(_QWORD *)&(*v154)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1;
+    v39 = (System_Int32_array **)StringLiteral_1/*""*/;
   }
   else
   {
@@ -592,13 +592,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v154[4] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v154 + 4), v39, v31, v149, v150, v151, v152, v153);
-  v38 = StringLiteral_4527;
-  if ( StringLiteral_4527 )
+  v38 = StringLiteral_4527/*"D"*/;
+  if ( StringLiteral_4527/*"D"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_4527, *(_QWORD *)&(*v154)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_4527/*"D"*/, *(_QWORD *)&(*v154)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_4527;
+    v39 = (System_Int32_array **)StringLiteral_4527/*"D"*/;
   }
   else
   {
@@ -608,13 +608,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v154[5] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v154 + 5), v39, v31, v155, v156, v157, v158, v159);
-  v38 = (void *)StringLiteral_4528;
-  if ( StringLiteral_4528 )
+  v38 = (void *)StringLiteral_4528/*"D+"*/;
+  if ( StringLiteral_4528/*"D+"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_4528, *(_QWORD *)&(*v154)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_4528/*"D+"*/, *(_QWORD *)&(*v154)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_4528;
+    v39 = (System_Int32_array **)StringLiteral_4528/*"D+"*/;
   }
   else
   {
@@ -624,13 +624,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v154[6] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v154 + 6), v39, v31, v160, v161, v162, v163, v164);
-  v38 = (void *)StringLiteral_4529;
-  if ( StringLiteral_4529 )
+  v38 = (void *)StringLiteral_4529/*"D++"*/;
+  if ( StringLiteral_4529/*"D++"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_4529, *(_QWORD *)&(*v154)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_4529/*"D++"*/, *(_QWORD *)&(*v154)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_4529;
+    v39 = (System_Int32_array **)StringLiteral_4529/*"D++"*/;
   }
   else
   {
@@ -640,13 +640,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v154[7] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v154 + 7), v39, v31, v165, v166, v167, v168, v169);
-  v38 = (void *)StringLiteral_4531;
-  if ( StringLiteral_4531 )
+  v38 = (void *)StringLiteral_4531/*"D-"*/;
+  if ( StringLiteral_4531/*"D-"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_4531, *(_QWORD *)&(*v154)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_4531/*"D-"*/, *(_QWORD *)&(*v154)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_4531;
+    v39 = (System_Int32_array **)StringLiteral_4531/*"D-"*/;
   }
   else
   {
@@ -656,13 +656,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v154[8] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v154 + 8), v39, v31, v170, v171, v172, v173, v174);
-  v38 = (void *)StringLiteral_4530;
-  if ( StringLiteral_4530 )
+  v38 = (void *)StringLiteral_4530/*"D+++"*/;
+  if ( StringLiteral_4530/*"D+++"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_4530, *(_QWORD *)&(*v154)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_4530/*"D+++"*/, *(_QWORD *)&(*v154)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_4530;
+    v39 = (System_Int32_array **)StringLiteral_4530/*"D+++"*/;
   }
   else
   {
@@ -679,13 +679,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
   if ( !v188 )
     goto LABEL_167;
   v194 = (System_Int32_array **)v188;
-  v38 = StringLiteral_1;
-  if ( StringLiteral_1 )
+  v38 = StringLiteral_1/*""*/;
+  if ( StringLiteral_1/*""*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1, *(_QWORD *)&(*v194)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1/*""*/, *(_QWORD *)&(*v194)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1;
+    v39 = (System_Int32_array **)StringLiteral_1/*""*/;
   }
   else
   {
@@ -695,13 +695,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v194[4] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v194 + 4), v39, v31, v189, v190, v191, v192, v193);
-  v38 = (void *)StringLiteral_5413;
-  if ( StringLiteral_5413 )
+  v38 = (void *)StringLiteral_5413/*"E"*/;
+  if ( StringLiteral_5413/*"E"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_5413, *(_QWORD *)&(*v194)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_5413/*"E"*/, *(_QWORD *)&(*v194)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_5413;
+    v39 = (System_Int32_array **)StringLiteral_5413/*"E"*/;
   }
   else
   {
@@ -711,13 +711,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v194[5] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v194 + 5), v39, v31, v195, v196, v197, v198, v199);
-  v38 = (void *)StringLiteral_5414;
-  if ( StringLiteral_5414 )
+  v38 = (void *)StringLiteral_5414/*"E+"*/;
+  if ( StringLiteral_5414/*"E+"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_5414, *(_QWORD *)&(*v194)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_5414/*"E+"*/, *(_QWORD *)&(*v194)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_5414;
+    v39 = (System_Int32_array **)StringLiteral_5414/*"E+"*/;
   }
   else
   {
@@ -727,13 +727,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v194[6] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v194 + 6), v39, v31, v200, v201, v202, v203, v204);
-  v38 = (void *)StringLiteral_5415;
-  if ( StringLiteral_5415 )
+  v38 = (void *)StringLiteral_5415/*"E++"*/;
+  if ( StringLiteral_5415/*"E++"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_5415, *(_QWORD *)&(*v194)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_5415/*"E++"*/, *(_QWORD *)&(*v194)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_5415;
+    v39 = (System_Int32_array **)StringLiteral_5415/*"E++"*/;
   }
   else
   {
@@ -743,13 +743,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v194[7] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v194 + 7), v39, v31, v205, v206, v207, v208, v209);
-  v38 = (void *)StringLiteral_5417;
-  if ( StringLiteral_5417 )
+  v38 = (void *)StringLiteral_5417/*"E-"*/;
+  if ( StringLiteral_5417/*"E-"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_5417, *(_QWORD *)&(*v194)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_5417/*"E-"*/, *(_QWORD *)&(*v194)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_5417;
+    v39 = (System_Int32_array **)StringLiteral_5417/*"E-"*/;
   }
   else
   {
@@ -759,13 +759,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
     goto LABEL_165;
   v194[8] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v194 + 8), v39, v31, v210, v211, v212, v213, v214);
-  v38 = (void *)StringLiteral_5416;
-  if ( StringLiteral_5416 )
+  v38 = (void *)StringLiteral_5416/*"E+++"*/;
+  if ( StringLiteral_5416/*"E+++"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_5416, *(_QWORD *)&(*v194)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_5416/*"E+++"*/, *(_QWORD *)&(*v194)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_5416;
+    v39 = (System_Int32_array **)StringLiteral_5416/*"E+++"*/;
   }
   else
   {
@@ -783,13 +783,13 @@ void __fastcall StatusRank___cctor(const MethodInfo *method)
 LABEL_167:
     sub_B170D4();
   v234 = (System_Int32_array **)v228;
-  v38 = StringLiteral_1;
-  if ( StringLiteral_1 )
+  v38 = StringLiteral_1/*""*/;
+  if ( StringLiteral_1/*""*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_1, *(_QWORD *)&(*v234)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_1/*""*/, *(_QWORD *)&(*v234)->m_Items[9]);
     if ( !v38 )
       goto LABEL_166;
-    v39 = (System_Int32_array **)StringLiteral_1;
+    v39 = (System_Int32_array **)StringLiteral_1/*""*/;
   }
   else
   {
@@ -799,13 +799,13 @@ LABEL_167:
     goto LABEL_165;
   v234[4] = (System_Int32_array *)v39;
   sub_B16F98((BattleServantConfConponent_o *)(v234 + 4), v39, v31, v229, v230, v231, v232, v233);
-  v38 = (void *)StringLiteral_5734;
-  if ( StringLiteral_5734 )
+  v38 = (void *)StringLiteral_5734/*"EX"*/;
+  if ( StringLiteral_5734/*"EX"*/ )
   {
-    v38 = (void *)sub_B170BC(StringLiteral_5734, *(_QWORD *)&(*v234)->m_Items[9]);
+    v38 = (void *)sub_B170BC(StringLiteral_5734/*"EX"*/, *(_QWORD *)&(*v234)->m_Items[9]);
     if ( v38 )
     {
-      v39 = (System_Int32_array **)StringLiteral_5734;
+      v39 = (System_Int32_array **)StringLiteral_5734/*"EX"*/;
       goto LABEL_163;
     }
 LABEL_166:
@@ -848,8 +848,8 @@ System_String_o *__fastcall StatusRank__GetRankString(int32_t kind, const Method
   if ( (byte_40FAE8A & 1) == 0 )
   {
     sub_B16FFC(&StatusRank_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1520, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1520/*"?"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FAE8A = 1;
   }
   v6 = kind / 10 - 1;
@@ -931,9 +931,9 @@ LABEL_13:
       v10 = &aRankList->m_Items[v7];
       break;
     default:
-      v10 = (System_String_o **)&StringLiteral_1;
+      v10 = (System_String_o **)&StringLiteral_1/*""*/;
       if ( v7 == 98 )
-        v10 = (System_String_o **)&StringLiteral_1520;
+        v10 = (System_String_o **)&StringLiteral_1520/*"?"*/;
       break;
   }
   return *v10;

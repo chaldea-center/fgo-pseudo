@@ -2105,7 +2105,7 @@ void __fastcall PartyListViewItem___ctor_32454628(
     sub_B16FFC(&PartyOrganizationListViewItem_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v22);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_1, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v24);
     byte_40FDD80 = 1;
   }
   ListViewItem___ctor_30173668((ListViewItem_o *)this, index, 0LL);
@@ -2132,8 +2132,8 @@ void __fastcall PartyListViewItem___ctor_32454628(
     v35,
     v36);
   this->fields.isDeckNameDefault = 0;
-  v37 = (System_Int32_array **)StringLiteral_1;
-  this->fields.deckName = (struct System_String_o *)StringLiteral_1;
+  v37 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.deckName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.deckName, v37, v38, v39, v40, v41, v42, v43);
   this->fields.userEquipId = userEquipId;
   this->fields.id = 0LL;
@@ -10002,7 +10002,7 @@ System_String_o *__fastcall PartyListViewItem__get_DefaultDeckName(PartyListView
   if ( (byte_40FDD9E & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10324, v3);
+    sub_B16FFC(&StringLiteral_10324/*"PARTY_ORGANIZATION_NAME_BASE"*/, v3);
     byte_40FDD9E = 1;
   }
   v7 = 0;
@@ -10011,7 +10011,7 @@ System_String_o *__fastcall PartyListViewItem__get_DefaultDeckName(PartyListView
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10324, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10324/*"PARTY_ORGANIZATION_NAME_BASE"*/, 0LL);
   v7 = this->fields.index + 1;
   v5 = (Il2CppObject *)System_Int32__ToString((int32_t)&v7, 0LL);
   return System_String__Format(v4, v5, 0LL);

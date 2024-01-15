@@ -42,29 +42,29 @@ void __fastcall EventInfoBlankEarthRankControl___cctor(const MethodInfo *method)
   if ( (byte_40FB6F1 & 1) == 0 )
   {
     sub_B16FFC(&EventInfoBlankEarthRankControl_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19521, v8);
-    sub_B16FFC(&StringLiteral_19520, v9);
-    sub_B16FFC(&StringLiteral_16719, v10);
-    sub_B16FFC(&StringLiteral_16720, v11);
+    sub_B16FFC(&StringLiteral_19521/*"img_rank_bg"*/, v8);
+    sub_B16FFC(&StringLiteral_19520/*"img_rank_"*/, v9);
+    sub_B16FFC(&StringLiteral_16719/*"bit_orderrank_change"*/, v10);
+    sub_B16FFC(&StringLiteral_16720/*"bit_orderrank_change_{0:00}"*/, v11);
     byte_40FB6F1 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventInfoBlankEarthRankControl_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_19521;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19521;
+  v13 = (System_Int32_array **)StringLiteral_19521/*"img_rank_bg"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19521/*"img_rank_bg"*/;
   sub_B16F98(static_fields, v13, v2, v3, v4, v5, v6, v7);
   v14 = EventInfoBlankEarthRankControl_TypeInfo->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_19520;
-  v14->BLANK_EARTH_RANK_SP_NAME = (struct System_String_o *)StringLiteral_19520;
+  v15 = (System_Int32_array **)StringLiteral_19520/*"img_rank_"*/;
+  v14->BLANK_EARTH_RANK_SP_NAME = (struct System_String_o *)StringLiteral_19520/*"img_rank_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v14->BLANK_EARTH_RANK_SP_NAME, v15, v16, v17, v18, v19, v20, v21);
   v22 = EventInfoBlankEarthRankControl_TypeInfo;
   EventInfoBlankEarthRankControl_TypeInfo->static_fields->DEFALUT_RANK_ID = 1;
   v23 = v22->static_fields;
-  v24 = (System_Int32_array **)StringLiteral_16719;
-  v23->ORDERRANK_CHANGE_PREFAB_NAME = (struct System_String_o *)StringLiteral_16719;
+  v24 = (System_Int32_array **)StringLiteral_16719/*"bit_orderrank_change"*/;
+  v23->ORDERRANK_CHANGE_PREFAB_NAME = (struct System_String_o *)StringLiteral_16719/*"bit_orderrank_change"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v23->ORDERRANK_CHANGE_PREFAB_NAME, v24, v25, v26, v27, v28, v29, v30);
   v31 = EventInfoBlankEarthRankControl_TypeInfo->static_fields;
-  v32 = (System_Int32_array **)StringLiteral_16720;
-  v31->ORDERRANK_CHANGE_ANIM_NAME = (struct System_String_o *)StringLiteral_16720;
+  v32 = (System_Int32_array **)StringLiteral_16720/*"bit_orderrank_change_{0:00}"*/;
+  v31->ORDERRANK_CHANGE_ANIM_NAME = (struct System_String_o *)StringLiteral_16720/*"bit_orderrank_change_{0:00}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v31->ORDERRANK_CHANGE_ANIM_NAME, v32, v33, v34, v35, v36, v37, v38);
 }
 
@@ -173,7 +173,7 @@ void __fastcall EventInfoBlankEarthRankControl__FadeInSprite(
     sub_B16FFC(&Method_EventInfoBlankEarthRankControl___c__FadeInSprite_b__26_0__, v6);
     sub_B16FFC(&EventInfoBlankEarthRankControl___c_TypeInfo, v7);
     sub_B16FFC(&Method_UITweener_Begin_TweenAlpha___, v8);
-    sub_B16FFC(&StringLiteral_23402, v9);
+    sub_B16FFC(&StringLiteral_23402/*"{0:00}"*/, v9);
     byte_40FB6EE = 1;
   }
   rankSprite = this->fields.rankSprite;
@@ -187,7 +187,7 @@ void __fastcall EventInfoBlankEarthRankControl__FadeInSprite(
   BLANK_EARTH_RANK_SP_NAME = v11->static_fields->BLANK_EARTH_RANK_SP_NAME;
   rankId = this->fields.rankId;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &rankId);
-  v14 = System_String__Format((System_String_o *)StringLiteral_23402, v13, 0LL);
+  v14 = System_String__Format((System_String_o *)StringLiteral_23402/*"{0:00}"*/, v13, 0LL);
   v15 = System_String__Concat_43743732(BLANK_EARTH_RANK_SP_NAME, v14, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -804,7 +804,7 @@ void __fastcall EventInfoBlankEarthRankControl__SetBlankEarthRank(
     sub_B16FFC(&EventInfoBlankEarthRankControl_TypeInfo, v5);
     sub_B16FFC(&int_TypeInfo, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_23402, v8);
+    sub_B16FFC(&StringLiteral_23402/*"{0:00}"*/, v8);
     byte_40FB6E9 = 1;
   }
   rankSprite = (UnityEngine_Object_o *)this->fields.rankSprite;
@@ -895,7 +895,7 @@ LABEL_20:
     BLANK_EARTH_RANK_SP_NAME = v22->static_fields->BLANK_EARTH_RANK_SP_NAME;
     v28 = v21;
     v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
-    v26 = System_String__Format((System_String_o *)StringLiteral_23402, v25, 0LL);
+    v26 = System_String__Format((System_String_o *)StringLiteral_23402/*"{0:00}"*/, v25, 0LL);
     v27 = System_String__Concat_43743732(BLANK_EARTH_RANK_SP_NAME, v26, 0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -928,15 +928,15 @@ void __fastcall EventInfoBlankEarthRankControl__Setup(
     sub_B16FFC(&AtlasManager_TypeInfo, entity);
     sub_B16FFC(&EventInfoBlankEarthRankControl_TypeInfo, v4);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_16637, v6);
-    sub_B16FFC(&StringLiteral_21609, v7);
+    sub_B16FFC(&StringLiteral_16637/*"bgSprite"*/, v6);
+    sub_B16FFC(&StringLiteral_21609/*"rankSprite"*/, v7);
     byte_40FB6E8 = 1;
   }
   bgSprite = this->fields.bgSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(bgSprite, (System_String_o *)StringLiteral_16637, 0LL);
-  AtlasManager__SetEventUI(this->fields.rankSprite, (System_String_o *)StringLiteral_21609, 0LL);
+  AtlasManager__SetEventUI(bgSprite, (System_String_o *)StringLiteral_16637/*"bgSprite"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.rankSprite, (System_String_o *)StringLiteral_21609/*"rankSprite"*/, 0LL);
   v9 = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )

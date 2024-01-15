@@ -22,23 +22,23 @@ void __fastcall RecipeAssetManager___ctor(RecipeAssetManager_o *this, const Meth
   if ( (byte_40F82CB & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6188, v4);
+    sub_B16FFC(&StringLiteral_6188/*"EventUI/Prefabs/80391"*/, v4);
     byte_40F82CB = 1;
   }
   v5 = sub_B17014(string___TypeInfo, 1LL, v2);
   if ( !v5 )
     sub_B170D4();
   v12 = (struct System_String_array *)v5;
-  v13 = StringLiteral_6188;
-  if ( StringLiteral_6188 )
+  v13 = StringLiteral_6188/*"EventUI/Prefabs/80391"*/;
+  if ( StringLiteral_6188/*"EventUI/Prefabs/80391"*/ )
   {
-    v13 = sub_B170BC(StringLiteral_6188, v12->obj.klass->_1.element_class);
+    v13 = sub_B170BC(StringLiteral_6188/*"EventUI/Prefabs/80391"*/, v12->obj.klass->_1.element_class);
     if ( !v13 )
     {
       sub_B170F4(0LL);
       sub_B170A0();
     }
-    v14 = (System_Int32_array **)StringLiteral_6188;
+    v14 = (System_Int32_array **)StringLiteral_6188/*"EventUI/Prefabs/80391"*/;
   }
   else
   {
@@ -422,10 +422,10 @@ void __fastcall RecipeAssetManager___c__DisplayClass17_0___GetAssets_b__0(
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, v5);
     sub_B16FFC(&AtlasManager_TypeInfo, v6);
     sub_B16FFC(&Method_RecipeAssetManager___c__DisplayClass17_0__GetAssets_b__1__, v7);
-    sub_B16FFC(&StringLiteral_11287, v8);
-    sub_B16FFC(&StringLiteral_18150, v9);
-    sub_B16FFC(&StringLiteral_11286, v10);
-    sub_B16FFC(&StringLiteral_6169, v11);
+    sub_B16FFC(&StringLiteral_11287/*"RecipeRewardDialog"*/, v8);
+    sub_B16FFC(&StringLiteral_18150/*"ef_treasure_drop"*/, v9);
+    sub_B16FFC(&StringLiteral_11286/*"RecipePointRewardDialog"*/, v10);
+    sub_B16FFC(&StringLiteral_6169/*"EventRecipeConfirmDialog"*/, v11);
     byte_40F7411 = 1;
   }
   if ( !assetData )
@@ -433,7 +433,7 @@ void __fastcall RecipeAssetManager___c__DisplayClass17_0___GetAssets_b__0(
   _4__this = this->fields.__4__this;
   Object_WarBoardWaitTimeSetting = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                             assetData,
-                                                            (System_String_o *)StringLiteral_11287,
+                                                            (System_String_o *)StringLiteral_11287/*"RecipeRewardDialog"*/,
                                                             (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !_4__this )
     goto LABEL_14;
@@ -450,7 +450,7 @@ void __fastcall RecipeAssetManager___c__DisplayClass17_0___GetAssets_b__0(
   v20 = this->fields.__4__this;
   v21 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  assetData,
-                                 (System_String_o *)StringLiteral_11286,
+                                 (System_String_o *)StringLiteral_11286/*"RecipePointRewardDialog"*/,
                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v20 )
     goto LABEL_14;
@@ -467,7 +467,7 @@ void __fastcall RecipeAssetManager___c__DisplayClass17_0___GetAssets_b__0(
   v28 = this->fields.__4__this;
   v29 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                  assetData,
-                                 (System_String_o *)StringLiteral_6169,
+                                 (System_String_o *)StringLiteral_6169/*"EventRecipeConfirmDialog"*/,
                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !v28
     || (v28->fields._recipeConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)v29,
@@ -483,7 +483,7 @@ void __fastcall RecipeAssetManager___c__DisplayClass17_0___GetAssets_b__0(
         v36 = this->fields.__4__this,
         v37 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                        assetData,
-                                       (System_String_o *)StringLiteral_18150,
+                                       (System_String_o *)StringLiteral_18150/*"ef_treasure_drop"*/,
                                        (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784),
         !v36) )
   {

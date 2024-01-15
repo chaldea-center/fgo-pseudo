@@ -33,7 +33,7 @@ void __fastcall FriendshipExceedFriendshipGauge__InitUISpriteAtlas(
   if ( (byte_40FB2B8 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19376, v3);
+    sub_B16FFC(&StringLiteral_19376/*"img_bondsgage_11"*/, v3);
     byte_40FB2B8 = 1;
   }
   if ( !this->fields.isInitUISpriteAtlas )
@@ -44,7 +44,7 @@ void __fastcall FriendshipExceedFriendshipGauge__InitUISpriteAtlas(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetBondAtlasImage(exceededIconUISprite, (System_String_o *)StringLiteral_19376, 0LL);
+    AtlasManager__SetBondAtlasImage(exceededIconUISprite, (System_String_o *)StringLiteral_19376/*"img_bondsgage_11"*/, 0LL);
     this->fields.isInitUISpriteAtlas = 1;
   }
 }

@@ -17,7 +17,7 @@ void __fastcall ServantClassIconComponent__Clear(ServantClassIconComponent_o *th
   if ( (byte_40FCE12 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FCE12 = 1;
   }
   iconSprite = (UnityEngine_Object_o *)this->fields.iconSprite;
@@ -57,7 +57,7 @@ void __fastcall ServantClassIconComponent__Clear(ServantClassIconComponent_o *th
     v9 = this->fields.nameLabel;
     if ( v9 )
     {
-      UILabel__set_text(v9, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v9, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       return;
     }
 LABEL_22:
@@ -231,7 +231,7 @@ void __fastcall ServantClassIconComponent__SetImage(
     sub_B16FFC(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FCE16 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -320,7 +320,7 @@ LABEL_37:
     }
     else if ( v23 )
     {
-      age = (System_String_o *)StringLiteral_1;
+      age = (System_String_o *)StringLiteral_1/*""*/;
       goto LABEL_37;
     }
 LABEL_38:

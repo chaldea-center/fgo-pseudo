@@ -623,17 +623,17 @@ void __fastcall BattleCommandData__addCriticalPoint(
 
   if ( (byte_40F69DA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10401, *(_QWORD *)&count);
-    sub_B16FFC(&StringLiteral_5782, v7);
+    sub_B16FFC(&StringLiteral_10401/*"PER_SAME_COMMAND"*/, *(_QWORD *)&count);
+    sub_B16FFC(&StringLiteral_5782/*"EXTRA_CRITICAL_RATE"*/, v7);
     byte_40F69DA = 1;
   }
   starcount = this->fields.starcount;
   ++this->fields.starBonus;
-  if ( ConstantMaster__getValue((System_String_o *)StringLiteral_10401, 0LL) <= this->fields.starBonus )
+  if ( ConstantMaster__getValue((System_String_o *)StringLiteral_10401/*"PER_SAME_COMMAND"*/, 0LL) <= this->fields.starBonus )
   {
     this->fields.starBonus = 0;
     v10 = this->fields.starcount;
-    v9 = ConstantMaster__getValue((System_String_o *)StringLiteral_5782, 0LL) + v10;
+    v9 = ConstantMaster__getValue((System_String_o *)StringLiteral_5782/*"EXTRA_CRITICAL_RATE"*/, 0LL) + v10;
     this->fields.starcount = v9;
   }
   else

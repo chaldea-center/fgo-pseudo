@@ -703,7 +703,7 @@ void __fastcall ExUIMeshRenderer__SetTweenColor(
   if ( (byte_40F9C57 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15891, v8);
+    sub_B16FFC(&StringLiteral_15891/*"_Color"*/, v8);
     byte_40F9C57 = 1;
   }
   v12.fields.r = r;
@@ -721,13 +721,13 @@ void __fastcall ExUIMeshRenderer__SetTweenColor(
   {
     if ( !material )
       goto LABEL_12;
-    if ( UnityEngine_Material__HasProperty_40721564(material, (System_String_o *)StringLiteral_15891, 0LL) )
+    if ( UnityEngine_Material__HasProperty_40721564(material, (System_String_o *)StringLiteral_15891/*"_Color"*/, 0LL) )
     {
       v13.fields.r = r;
       v13.fields.g = g;
       v13.fields.b = b;
       v13.fields.a = a;
-      UnityEngine_Material__SetColor(material, (System_String_o *)StringLiteral_15891, v13, 0LL);
+      UnityEngine_Material__SetColor(material, (System_String_o *)StringLiteral_15891/*"_Color"*/, v13, 0LL);
     }
   }
   meshRenderer = (UnityEngine_Renderer_o *)this->fields.meshRenderer;
@@ -746,7 +746,7 @@ void __fastcall ExUIMeshRenderer__SetTweenVolume(ExUIMeshRenderer_o *this, float
   if ( (byte_40F9C58 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16036, v5);
+    sub_B16FFC(&StringLiteral_16036/*"_Volume"*/, v5);
     byte_40F9C58 = 1;
   }
   this->fields.volume = v;
@@ -760,8 +760,8 @@ void __fastcall ExUIMeshRenderer__SetTweenVolume(ExUIMeshRenderer_o *this, float
   {
     if ( !material )
       sub_B170D4();
-    if ( UnityEngine_Material__HasProperty_40721564(material, (System_String_o *)StringLiteral_16036, 0LL) )
-      UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16036, v, 0LL);
+    if ( UnityEngine_Material__HasProperty_40721564(material, (System_String_o *)StringLiteral_16036/*"_Volume"*/, 0LL) )
+      UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16036/*"_Volume"*/, v, 0LL);
   }
 }
 

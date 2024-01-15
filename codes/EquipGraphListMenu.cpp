@@ -145,8 +145,8 @@ void __fastcall EquipGraphListMenu__Decide(EquipGraphListMenu_o *this, const Met
     sub_B16FFC(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
     sub_B16FFC(&SoundManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_5511, v9);
-    sub_B16FFC(&StringLiteral_5512, v10);
+    sub_B16FFC(&StringLiteral_5511/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_MESSAGE"*/, v9);
+    sub_B16FFC(&StringLiteral_5512/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_TITLE"*/, v10);
     byte_40FE2E2 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -195,11 +195,11 @@ void __fastcall EquipGraphListMenu__Decide(EquipGraphListMenu_o *this, const Met
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5511, 0LL);
+          v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5511/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_MESSAGE"*/, 0LL);
           EndTimeStr = (Il2CppObject *)EventServantEntity__getEndTimeStr(v19, 0LL);
           v24 = System_String__Format(v22, EndTimeStr, 0LL);
           Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_5512, 0LL);
+          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_5512/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_TITLE"*/, 0LL);
           v31 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v27, v28, v29, v30);
           System_Action___ctor(v31, (Il2CppObject *)this, Method_EquipGraphListMenu_EndCloseEventServantWarning__, 0LL);
           if ( Instance )
@@ -1377,15 +1377,15 @@ void __fastcall EquipGraphListMenu__SetTabKind(
     sub_B16FFC(&EquipGraphListViewManager_CallbackFunc_TypeInfo, *(_QWORD *)&modeKind);
     sub_B16FFC(&Method_EquipGraphListMenu_OnSelectServantEquip__, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_11667, v10);
-    sub_B16FFC(&StringLiteral_17057, v11);
-    sub_B16FFC(&StringLiteral_17060, v12);
-    sub_B16FFC(&StringLiteral_11669, v13);
-    sub_B16FFC(&StringLiteral_11668, v14);
-    sub_B16FFC(&StringLiteral_17073, v15);
-    sub_B16FFC(&StringLiteral_17074, v16);
-    sub_B16FFC(&StringLiteral_17059, v17);
-    sub_B16FFC(&StringLiteral_17058, v18);
+    sub_B16FFC(&StringLiteral_11667/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/, v10);
+    sub_B16FFC(&StringLiteral_17057/*"button_allchoice_reg"*/, v11);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v12);
+    sub_B16FFC(&StringLiteral_11669/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/, v13);
+    sub_B16FFC(&StringLiteral_11668/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/, v14);
+    sub_B16FFC(&StringLiteral_17073/*"button_select_reg"*/, v15);
+    sub_B16FFC(&StringLiteral_17074/*"button_select_unreg"*/, v16);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v17);
+    sub_B16FFC(&StringLiteral_17058/*"button_allchoice_unreg"*/, v18);
     byte_40FE2E1 = 1;
   }
   v19 = !this->fields.isInitTab || isInit;
@@ -1406,9 +1406,9 @@ void __fastcall EquipGraphListMenu__SetTabKind(
     statusTabSprite = this->fields.statusTabSprite;
     if ( !statusTabSprite )
       goto LABEL_48;
-    v23 = (System_String_o **)&StringLiteral_17073;
+    v23 = (System_String_o **)&StringLiteral_17073/*"button_select_reg"*/;
     if ( modeKind )
-      v23 = (System_String_o **)&StringLiteral_17074;
+      v23 = (System_String_o **)&StringLiteral_17074/*"button_select_unreg"*/;
     UISprite__set_spriteName(statusTabSprite, *v23, 0LL);
     v24 = this->fields.statusTabButton;
     if ( !v24 )
@@ -1439,9 +1439,9 @@ void __fastcall EquipGraphListMenu__SetTabKind(
     lockTabSprite = this->fields.lockTabSprite;
     if ( !lockTabSprite )
       goto LABEL_48;
-    v32 = (System_String_o **)&StringLiteral_17059;
+    v32 = (System_String_o **)&StringLiteral_17059/*"button_alllock_reg"*/;
     if ( modeKind != 1 )
-      v32 = (System_String_o **)&StringLiteral_17060;
+      v32 = (System_String_o **)&StringLiteral_17060/*"button_alllock_unreg"*/;
     UISprite__set_spriteName(lockTabSprite, *v32, 0LL);
     v33 = this->fields.lockTabButton;
     if ( !v33 )
@@ -1470,9 +1470,9 @@ void __fastcall EquipGraphListMenu__SetTabKind(
     choiceTabSprite = this->fields.choiceTabSprite;
     if ( !choiceTabSprite )
       goto LABEL_48;
-    v39 = (System_String_o **)&StringLiteral_17057;
+    v39 = (System_String_o **)&StringLiteral_17057/*"button_allchoice_reg"*/;
     if ( modeKind != 2 )
-      v39 = (System_String_o **)&StringLiteral_17058;
+      v39 = (System_String_o **)&StringLiteral_17058/*"button_allchoice_unreg"*/;
     UISprite__set_spriteName(choiceTabSprite, *v39, 0LL);
     v40 = this->fields.choiceTabButton;
     if ( !v40 )
@@ -1495,7 +1495,7 @@ void __fastcall EquipGraphListMenu__SetTabKind(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v44 = &StringLiteral_11667;
+      v44 = &StringLiteral_11667/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/;
     }
     else if ( modeKind == 1 )
     {
@@ -1505,7 +1505,7 @@ void __fastcall EquipGraphListMenu__SetTabKind(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v44 = &StringLiteral_11668;
+      v44 = &StringLiteral_11668/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/;
     }
     else
     {
@@ -1517,7 +1517,7 @@ void __fastcall EquipGraphListMenu__SetTabKind(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v44 = &StringLiteral_11669;
+      v44 = &StringLiteral_11669/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/;
     }
     v45 = LocalizationManager__Get((System_String_o *)*v44, 0LL);
     if ( !explanationLabel )

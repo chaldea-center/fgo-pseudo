@@ -35,11 +35,11 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__AnimFrameOutEnd(
 
   if ( (byte_40FDFD8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17395, method);
+    sub_B16FFC(&StringLiteral_17395/*"clearAnimFinised"*/, method);
     byte_40FDFD8 = 1;
   }
   if ( this[1].klass )
-    v4 = (System_String_o *)StringLiteral_17395;
+    v4 = (System_String_o *)StringLiteral_17395/*"clearAnimFinised"*/;
   else
     v4 = 0LL;
   TitleInfoEventLeagueVsStatusComponent__FrameIn(this, v4, v2);
@@ -349,7 +349,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__SetEntryAnim(
   if ( (byte_40FDFD6 & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6013, v3);
+    sub_B16FFC(&StringLiteral_6013/*"EntryAnim"*/, v3);
     byte_40FDFD6 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -388,7 +388,7 @@ LABEL_10:
     0.0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6013,
+    (System_String_o *)StringLiteral_6013/*"EntryAnim"*/,
     TitleInfoEventLeagueVsStatusComponent_TypeInfo->static_fields->ENTRY_ANIM_DELAY
   + (float)(this->fields.outPos.fields.x / -500.0),
     0LL);
@@ -419,7 +419,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__StartClearAnim(
   if ( (byte_40FDFD7 & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, cb);
-    sub_B16FFC(&StringLiteral_1966, v10);
+    sub_B16FFC(&StringLiteral_1966/*"AnimFrameOutEnd"*/, v10);
     byte_40FDFD7 = 1;
   }
   this[1].klass = (TitleInfoEventLeagueVsStatusComponent_c *)cb;
@@ -454,7 +454,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__StartClearAnim(
   v17 = static_fields[1].n64_f32[0];
   *(float32x2_t *)&this->fields.outPos.fields.z = vadd_f32(v16, (float32x2_t)static_fields->n64_u64[0]);
   *((float *)&this->fields.clearAnimCallBack + 1) = v17 + 0.0;
-  TitleInfoEventLeagueVsStatusComponent__FrameOut(this, (System_String_o *)StringLiteral_1966, v12);
+  TitleInfoEventLeagueVsStatusComponent__FrameOut(this, (System_String_o *)StringLiteral_1966/*"AnimFrameOutEnd"*/, v12);
 }
 
 
@@ -567,16 +567,16 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__setup(
     sub_B16FFC(&int_TypeInfo, v10);
     sub_B16FFC(&NetworkManager_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_15844, v13);
-    sub_B16FFC(&StringLiteral_15846, v14);
-    sub_B16FFC(&StringLiteral_15847, v15);
-    sub_B16FFC(&StringLiteral_16532, v16);
-    sub_B16FFC(&StringLiteral_18546, v17);
-    sub_B16FFC(&StringLiteral_18545, v18);
-    sub_B16FFC(&StringLiteral_15848, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
-    sub_B16FFC(&StringLiteral_15845, v21);
-    sub_B16FFC(&StringLiteral_18547, v22);
+    sub_B16FFC(&StringLiteral_15844/*"_01"*/, v13);
+    sub_B16FFC(&StringLiteral_15846/*"_03"*/, v14);
+    sub_B16FFC(&StringLiteral_15847/*"_04"*/, v15);
+    sub_B16FFC(&StringLiteral_16532/*"balance"*/, v16);
+    sub_B16FFC(&StringLiteral_18546/*"event_vs_status_bg_"*/, v17);
+    sub_B16FFC(&StringLiteral_18545/*"event_vs_status_"*/, v18);
+    sub_B16FFC(&StringLiteral_15848/*"_05"*/, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
+    sub_B16FFC(&StringLiteral_15845/*"_02"*/, v21);
+    sub_B16FFC(&StringLiteral_18547/*"event_vs_status_name_"*/, v22);
     byte_40FDFD5 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -613,7 +613,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__setup(
     this->fields.title,
     title->klass->vtable._9_CalculateFinalAlpha.methodPtr,
     0.0);
-  v32 = (Il2CppObject *)StringLiteral_1;
+  v32 = (Il2CppObject *)StringLiteral_1/*""*/;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -665,7 +665,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__setup(
 LABEL_61:
             iconId = v47;
             v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-            v59 = &StringLiteral_15845;
+            v59 = &StringLiteral_15845/*"_02"*/;
             goto LABEL_72;
           }
 LABEL_90:
@@ -685,7 +685,7 @@ LABEL_90:
 LABEL_45:
         iconId = v57;
         v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-        v59 = &StringLiteral_15846;
+        v59 = &StringLiteral_15846/*"_03"*/;
 LABEL_72:
         v32 = (Il2CppObject *)System_String__Concat(v58, (Il2CppObject *)*v59, 0LL);
         goto LABEL_73;
@@ -725,7 +725,7 @@ LABEL_72:
           {
             iconId = v77->m_Items[1];
             v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-            v59 = &StringLiteral_15848;
+            v59 = &StringLiteral_15848/*"_05"*/;
             goto LABEL_72;
           }
           goto LABEL_90;
@@ -740,7 +740,7 @@ LABEL_72:
           {
             iconId = v64->m_Items[1];
             v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-            v59 = &StringLiteral_15847;
+            v59 = &StringLiteral_15847/*"_04"*/;
             goto LABEL_72;
           }
           goto LABEL_90;
@@ -757,7 +757,7 @@ LABEL_72:
 LABEL_71:
     iconId = v55;
     v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-    v59 = &StringLiteral_15844;
+    v59 = &StringLiteral_15844/*"_01"*/;
     goto LABEL_72;
   }
   v41 = eventPointEntity->fields.group1;
@@ -866,21 +866,21 @@ LABEL_19:
     v55 = v65->fields.iconId;
     goto LABEL_71;
   }
-  v32 = (Il2CppObject *)StringLiteral_16532;
+  v32 = (Il2CppObject *)StringLiteral_16532/*"balance"*/;
 LABEL_73:
   v66 = *(UISprite_o **)&this->fields.inPos.fields.x;
-  v67 = System_String__Concat_43743732((System_String_o *)StringLiteral_18545, (System_String_o *)v32, 0LL);
+  v67 = System_String__Concat_43743732((System_String_o *)StringLiteral_18545/*"event_vs_status_"*/, (System_String_o *)v32, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI(v66, v67, 0LL);
   backGround = this->fields.backGround;
   iconId = eventPointEntity->fields.id;
   v69 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-  v70 = System_String__Concat((Il2CppObject *)StringLiteral_18547, v69, 0LL);
+  v70 = System_String__Concat((Il2CppObject *)StringLiteral_18547/*"event_vs_status_name_"*/, v69, 0LL);
   AtlasManager__SetEventUI(backGround, v70, 0LL);
   statusName = this->fields.statusName;
   v78 = eventPointEntity->fields.id;
   v72 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v78);
-  v73 = System_String__Concat((Il2CppObject *)StringLiteral_18546, v72, 0LL);
+  v73 = System_String__Concat((Il2CppObject *)StringLiteral_18546/*"event_vs_status_bg_"*/, v72, 0LL);
   AtlasManager__SetEventUI(statusName, v73, 0LL);
 }

@@ -41,7 +41,7 @@ UIMasterFullFigureTexture_o *__fastcall MasterFullFigureManager__CreateLocal(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UIMasterFullFigureTexture___, parent);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_14627, v7);
+    sub_B16FFC(&StringLiteral_14627/*"UIMasterFullFigure"*/, v7);
     byte_40FB1ED = 1;
   }
   masterFigurePrefab = this->fields.masterFigurePrefab;
@@ -67,7 +67,7 @@ UIMasterFullFigureTexture_o *__fastcall MasterFullFigureManager__CreateLocal(
   x = localScale.fields.x;
   y = localScale.fields.y;
   z = localScale.fields.z;
-  UnityEngine_Object__set_name((UnityEngine_Object_o *)v10, (System_String_o *)StringLiteral_14627, 0LL);
+  UnityEngine_Object__set_name((UnityEngine_Object_o *)v10, (System_String_o *)StringLiteral_14627/*"UIMasterFullFigure"*/, 0LL);
   if ( !parent )
     goto LABEL_13;
   v17 = UnityEngine_GameObject__get_transform(parent, 0LL);
@@ -150,9 +150,9 @@ UIMasterFullFigureTexture_o *__fastcall MasterFullFigureManager__CreateLocal_272
   if ( (byte_40FB1EE & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, parent);
-    sub_B16FFC(&StringLiteral_14628, v13);
-    sub_B16FFC(&StringLiteral_746, v14);
-    sub_B16FFC(&StringLiteral_651, v15);
+    sub_B16FFC(&StringLiteral_14628/*"UIMasterFullFigure("*/, v13);
+    sub_B16FFC(&StringLiteral_746/*"-"*/, v14);
+    sub_B16FFC(&StringLiteral_651/*")"*/, v15);
     byte_40FB1EE = 1;
   }
   Local = (UnityEngine_Component_o *)MasterFullFigureManager__CreateLocal(this, parent, *(const MethodInfo **)&dispType);
@@ -165,13 +165,13 @@ LABEL_30:
     sub_B170D4();
   }
   v27 = (System_String_array *)v20;
-  v28 = (System_String_o *)StringLiteral_14628;
-  if ( StringLiteral_14628 )
+  v28 = (System_String_o *)StringLiteral_14628/*"UIMasterFullFigure("*/;
+  if ( StringLiteral_14628/*"UIMasterFullFigure("*/ )
   {
-    v28 = (System_String_o *)sub_B170BC(StringLiteral_14628, v27->obj.klass->_1.element_class);
+    v28 = (System_String_o *)sub_B170BC(StringLiteral_14628/*"UIMasterFullFigure("*/, v27->obj.klass->_1.element_class);
     if ( !v28 )
       goto LABEL_29;
-    v29 = (System_Int32_array **)StringLiteral_14628;
+    v29 = (System_Int32_array **)StringLiteral_14628/*"UIMasterFullFigure("*/;
   }
   else
   {
@@ -193,13 +193,13 @@ LABEL_30:
     goto LABEL_28;
   v27->m_Items[1] = (System_String_o *)v35;
   sub_B16F98((BattleServantConfConponent_o *)&v27->m_Items[1], v35, v21, v30, v31, v32, v33, v34);
-  v28 = (System_String_o *)StringLiteral_746;
-  if ( StringLiteral_746 )
+  v28 = (System_String_o *)StringLiteral_746/*"-"*/;
+  if ( StringLiteral_746/*"-"*/ )
   {
-    v28 = (System_String_o *)sub_B170BC(StringLiteral_746, v27->obj.klass->_1.element_class);
+    v28 = (System_String_o *)sub_B170BC(StringLiteral_746/*"-"*/, v27->obj.klass->_1.element_class);
     if ( !v28 )
       goto LABEL_29;
-    v29 = (System_Int32_array **)StringLiteral_746;
+    v29 = (System_Int32_array **)StringLiteral_746/*"-"*/;
   }
   else
   {
@@ -225,13 +225,13 @@ LABEL_29:
     goto LABEL_28;
   v27->m_Items[3] = (System_String_o *)v46;
   sub_B16F98((BattleServantConfConponent_o *)&v27->m_Items[3], v46, v21, v41, v42, v43, v44, v45);
-  v28 = (System_String_o *)StringLiteral_651;
-  if ( StringLiteral_651 )
+  v28 = (System_String_o *)StringLiteral_651/*")"*/;
+  if ( StringLiteral_651/*")"*/ )
   {
-    v28 = (System_String_o *)sub_B170BC(StringLiteral_651, v27->obj.klass->_1.element_class);
+    v28 = (System_String_o *)sub_B170BC(StringLiteral_651/*")"*/, v27->obj.klass->_1.element_class);
     if ( v28 )
     {
-      v29 = (System_Int32_array **)StringLiteral_651;
+      v29 = (System_Int32_array **)StringLiteral_651/*")"*/;
       goto LABEL_25;
     }
     goto LABEL_29;

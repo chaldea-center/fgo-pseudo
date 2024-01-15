@@ -248,8 +248,8 @@ System_String_o *__fastcall OverwriteAssetSoundName__GetUniqueKey(
   if ( (byte_40F8014 & 1) == 0 )
   {
     sub_B16FFC(&System_Type_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_802, v3);
-    sub_B16FFC(&StringLiteral_14951, v4);
+    sub_B16FFC(&StringLiteral_802/*"."*/, v3);
+    sub_B16FFC(&StringLiteral_14951/*"Unknown."*/, v4);
     byte_40F8014 = 1;
   }
   if ( !callMethod )
@@ -274,7 +274,7 @@ System_String_o *__fastcall OverwriteAssetSoundName__GetUniqueKey(
       v10 = (System_String_o *)((__int64 (__fastcall *)(System_Reflection_MethodBase_o *, Il2CppMethodPointer))callMethod->klass->vtable._8_unknown.method)(
                                  callMethod,
                                  callMethod->klass->vtable._9_unknown.methodPtr);
-      return System_String__Concat_43746016(v9, (System_String_o *)StringLiteral_802, v10, 0LL);
+      return System_String__Concat_43746016(v9, (System_String_o *)StringLiteral_802/*"."*/, v10, 0LL);
     }
 LABEL_11:
     sub_B170D4();
@@ -282,7 +282,7 @@ LABEL_11:
   v12 = (System_String_o *)((__int64 (__fastcall *)(System_Reflection_MethodBase_o *, Il2CppMethodPointer))klass->vtable._8_unknown.method)(
                              callMethod,
                              klass->vtable._9_unknown.methodPtr);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_14951, v12, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_14951/*"Unknown."*/, v12, 0LL);
 }
 
 
@@ -301,7 +301,7 @@ void __fastcall OverwriteAssetSoundName__Initialize(OverwriteAssetSoundName_o *t
     sub_B16FFC(&AssetManager_TypeInfo, method);
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v6);
     sub_B16FFC(&Method_OverwriteAssetSoundName__Initialize_b__4_0__, v7);
-    sub_B16FFC(&StringLiteral_13242, v8);
+    sub_B16FFC(&StringLiteral_13242/*"System/OverwriteAssetSoundNameTable"*/, v8);
     byte_40F800B = 1;
   }
   this->fields.isLoading = 1;
@@ -313,7 +313,7 @@ void __fastcall OverwriteAssetSoundName__Initialize(OverwriteAssetSoundName_o *t
     0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13242, v9, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13242/*"System/OverwriteAssetSoundNameTable"*/, v9, 1, 0LL);
 }
 
 

@@ -93,8 +93,8 @@ void __fastcall ServantStatusListViewItemDrawButtonsBase__SetItem(
   if ( (byte_40FDE89 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_16899, v7);
-    sub_B16FFC(&StringLiteral_16900, v8);
+    sub_B16FFC(&StringLiteral_16899/*"btn_bg_20"*/, v7);
+    sub_B16FFC(&StringLiteral_16900/*"btn_bg_21"*/, v8);
     byte_40FDE89 = 1;
   }
   LODWORD(this->fields.collider) = mode;
@@ -174,7 +174,7 @@ LABEL_48:
         v32 = (UISprite_o *)*((_QWORD *)&clickEventObject[1].monitor + v29);
         if ( !v32 )
           break;
-        v33 = (System_String_o **)(v27 ? &StringLiteral_16900 : &StringLiteral_16899);
+        v33 = (System_String_o **)(v27 ? &StringLiteral_16900/*"btn_bg_21"*/ : &StringLiteral_16899/*"btn_bg_20"*/);
         UISprite__set_spriteName(v32, *v33, 0LL);
         tdSpeedButtonList = this->fields.tdSpeedButtonList;
         if ( !tdSpeedButtonList )

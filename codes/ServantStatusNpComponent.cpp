@@ -258,8 +258,8 @@ void __fastcall ServantStatusNpComponent__ModifyCommandCard(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_14954, v13);
-    sub_B16FFC(&StringLiteral_4144, v14);
+    sub_B16FFC(&StringLiteral_14954/*"Unlit/Transparent Colored"*/, v13);
+    sub_B16FFC(&StringLiteral_4144/*"CommandCard"*/, v14);
     byte_40FCA75 = 1;
   }
   if ( this->fields.tdEntity )
@@ -339,7 +339,7 @@ LABEL_39:
     x = localScale.fields.x;
     y = localScale.fields.y;
     z = localScale.fields.z;
-    UnityEngine_Object__set_name((UnityEngine_Object_o *)v30, (System_String_o *)StringLiteral_4144, 0LL);
+    UnityEngine_Object__set_name((UnityEngine_Object_o *)v30, (System_String_o *)StringLiteral_4144/*"CommandCard"*/, 0LL);
     commandCardBase = this->fields.commandCardBase;
     if ( !commandCardBase )
       goto LABEL_39;
@@ -416,7 +416,7 @@ LABEL_39:
       goto LABEL_39;
     v72->fields.treasureDvc = tdEntity->fields.id;
     BattleCommandComponent__setData(v39, this->fields.commandCardData, 0LL, 0, 1, 0, 0LL);
-    BattleCommandComponent__setShader(v39, (System_String_o *)StringLiteral_14954, 0LL);
+    BattleCommandComponent__setShader(v39, (System_String_o *)StringLiteral_14954/*"Unlit/Transparent Colored"*/, 0LL);
     BattleCommandComponent__updateView(v39, 1, 0, 1, 0, this->fields.isCharaHide, 0LL);
     this->fields.commandCardComponent = v39;
     p_commandCardComponent = &this->fields.commandCardComponent;
@@ -620,11 +620,11 @@ void __fastcall ServantStatusNpComponent__Set(
     sub_B16FFC(&LocalizationManager_TypeInfo, v26);
     sub_B16FFC(&ServantStatusNpComponent_TypeInfo, v27);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v28);
-    sub_B16FFC(&StringLiteral_19464, v29);
-    sub_B16FFC(&StringLiteral_11940, v30);
-    sub_B16FFC(&StringLiteral_871, v31);
-    sub_B16FFC(&StringLiteral_19465, v32);
-    sub_B16FFC(&StringLiteral_1, v33);
+    sub_B16FFC(&StringLiteral_19464/*"img_npgage_"*/, v29);
+    sub_B16FFC(&StringLiteral_11940/*"SERVANT_STATUS_NP_GUAGE_MESSAGE"*/, v30);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v31);
+    sub_B16FFC(&StringLiteral_19465/*"img_npgage_bg"*/, v32);
+    sub_B16FFC(&StringLiteral_1/*""*/, v33);
     byte_40FCA74 = 1;
   }
   entity = 0LL;
@@ -632,33 +632,33 @@ void __fastcall ServantStatusNpComponent__Set(
   nameLabel = this->fields.nameLabel;
   if ( !nameLabel )
     goto LABEL_16;
-  UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   rubyLabel = this->fields.rubyLabel;
   if ( !rubyLabel )
     goto LABEL_16;
-  UILabel__set_text(rubyLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(rubyLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   npRankLabel = this->fields.npRankLabel;
   if ( !npRankLabel )
     goto LABEL_16;
-  UILabel__set_text(npRankLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(npRankLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   npTypeLabel = this->fields.npTypeLabel;
   if ( !npTypeLabel )
     goto LABEL_16;
-  UILabel__set_text(npTypeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(npTypeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   npLevelLabel = this->fields.npLevelLabel;
   if ( !npLevelLabel )
     goto LABEL_16;
-  UILabel__set_text(npLevelLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(npLevelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   maxGuageLabel = this->fields.maxGuageLabel;
   if ( !maxGuageLabel )
     goto LABEL_16;
   value = title;
   v166 = idx;
-  UILabel__set_text(maxGuageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(maxGuageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   explanationLabel = this->fields.explanationLabel;
   if ( !explanationLabel )
     goto LABEL_16;
-  UILabel__set_text(explanationLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(explanationLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   guageSpriteList = this->fields.guageSpriteList;
   if ( !guageSpriteList )
     goto LABEL_16;
@@ -677,7 +677,7 @@ LABEL_165:
     v47 = guageSpriteList->m_Items[v45];
     if ( v47 )
     {
-      UISprite__set_spriteName(v47, (System_String_o *)StringLiteral_19465, 0LL);
+      UISprite__set_spriteName(v47, (System_String_o *)StringLiteral_19465/*"img_npgage_bg"*/, 0LL);
       guageSpriteList = this->fields.guageSpriteList;
       ++v45;
       if ( guageSpriteList )
@@ -851,7 +851,7 @@ LABEL_165:
   v95 = this->fields.npLevelLabel;
   if ( tdInfo->fields.lv <= 0 )
   {
-    v98 = (System_String_o *)StringLiteral_1;
+    v98 = (System_String_o *)StringLiteral_1/*""*/;
     if ( !v95 )
       goto LABEL_16;
   }
@@ -859,7 +859,7 @@ LABEL_165:
   {
     v96 = System_Int32__ToString((int)tdInfo + 20, 0LL);
     v97 = System_Int32__ToString((int)tdInfo + 24, 0LL);
-    v98 = System_String__Concat_43746016(v96, (System_String_o *)StringLiteral_871, v97, 0LL);
+    v98 = System_String__Concat_43746016(v96, (System_String_o *)StringLiteral_871/*"/"*/, v97, 0LL);
     if ( !v95 )
       goto LABEL_16;
   }
@@ -870,7 +870,7 @@ LABEL_165:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v100 = LocalizationManager__Get((System_String_o *)StringLiteral_11940, 0LL);
+  v100 = LocalizationManager__Get((System_String_o *)StringLiteral_11940/*"SERVANT_STATUS_NP_GUAGE_MESSAGE"*/, 0LL);
   v168 = 100 * tdInfo->fields.guageCount;
   v101 = (Il2CppObject *)System_Int32__ToString((int32_t)&v168, 0LL);
   v102 = System_String__Format(v100, v101, 0LL);
@@ -922,7 +922,7 @@ LABEL_165:
   if ( v110 )
     Detail = TreasureDvcLvEntity__getDetail(v110, 0LL);
   else
-    Detail = (System_String_o *)StringLiteral_1;
+    Detail = (System_String_o *)StringLiteral_1/*""*/;
   v112 = ServantStatusNpComponent_TypeInfo;
   v113 = this->fields.explanationLabel;
   if ( (BYTE3(ServantStatusNpComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1046,7 +1046,7 @@ LABEL_16:
     v135 = this->fields.condLabel;
     if ( !v135 )
       goto LABEL_16;
-    UILabel__set_text(v135, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v135, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     costumeIdHash = this->fields.costumeIdHash;
     if ( !costumeIdHash )
       goto LABEL_16;
@@ -1063,7 +1063,7 @@ LABEL_16:
     maskInfoLabel = this->fields.maskInfoLabel;
     if ( !maskInfoLabel )
       goto LABEL_16;
-    v152 = (System_String_o *)StringLiteral_1;
+    v152 = (System_String_o *)StringLiteral_1/*""*/;
   }
   else
   {
@@ -1109,7 +1109,7 @@ LABEL_16:
     v161 = v157->m_Items[v158];
     v168 = v159;
     v162 = System_Int32__ToString((int32_t)&v168, 0LL);
-    v163 = System_String__Concat_43743732((System_String_o *)StringLiteral_19464, v162, 0LL);
+    v163 = System_String__Concat_43743732((System_String_o *)StringLiteral_19464/*"img_npgage_"*/, v162, 0LL);
     if ( v161 )
     {
       UISprite__set_spriteName(v161, v163, 0LL);

@@ -59,37 +59,37 @@ void __fastcall TreasureDvcEntity___cctor(const MethodInfo *method)
   if ( (byte_40FB89D & 1) == 0 )
   {
     sub_B16FFC(&TreasureDvcEntity_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19014, v8);
-    sub_B16FFC(&StringLiteral_17882, v9);
-    sub_B16FFC(&StringLiteral_16069, v10);
-    sub_B16FFC(&StringLiteral_21606, v11);
-    sub_B16FFC(&StringLiteral_22532, v12);
-    sub_B16FFC(&StringLiteral_21605, v13);
+    sub_B16FFC(&StringLiteral_19014/*"groupSeqIDs"*/, v8);
+    sub_B16FFC(&StringLiteral_17882/*"delayEnd"*/, v9);
+    sub_B16FFC(&StringLiteral_16069/*"_actSet"*/, v10);
+    sub_B16FFC(&StringLiteral_21606/*"randomWeights"*/, v11);
+    sub_B16FFC(&StringLiteral_22532/*"tdTypeChangeIDs"*/, v12);
+    sub_B16FFC(&StringLiteral_21605/*"randomSeqIds"*/, v13);
     byte_40FB89D = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TreasureDvcEntity_TypeInfo->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_21605;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21605;
+  v15 = (System_Int32_array **)StringLiteral_21605/*"randomSeqIds"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21605/*"randomSeqIds"*/;
   sub_B16F98(static_fields, v15, v2, v3, v4, v5, v6, v7);
   v16 = TreasureDvcEntity_TypeInfo->static_fields;
-  v17 = (System_Int32_array **)StringLiteral_21606;
-  v16->KEY_RANDOM_SEQ_WEIGHT = (struct System_String_o *)StringLiteral_21606;
+  v17 = (System_Int32_array **)StringLiteral_21606/*"randomWeights"*/;
+  v16->KEY_RANDOM_SEQ_WEIGHT = (struct System_String_o *)StringLiteral_21606/*"randomWeights"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v16->KEY_RANDOM_SEQ_WEIGHT, v17, v18, v19, v20, v21, v22, v23);
   v24 = TreasureDvcEntity_TypeInfo->static_fields;
-  v25 = (System_Int32_array **)StringLiteral_19014;
-  v24->KEY_GROUP_SEQ_ID = (struct System_String_o *)StringLiteral_19014;
+  v25 = (System_Int32_array **)StringLiteral_19014/*"groupSeqIDs"*/;
+  v24->KEY_GROUP_SEQ_ID = (struct System_String_o *)StringLiteral_19014/*"groupSeqIDs"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v24->KEY_GROUP_SEQ_ID, v25, v26, v27, v28, v29, v30, v31);
   v32 = TreasureDvcEntity_TypeInfo->static_fields;
-  v33 = (System_Int32_array **)StringLiteral_22532;
-  v32->KEY_TD_TYPE_CHANGE_ID = (struct System_String_o *)StringLiteral_22532;
+  v33 = (System_Int32_array **)StringLiteral_22532/*"tdTypeChangeIDs"*/;
+  v32->KEY_TD_TYPE_CHANGE_ID = (struct System_String_o *)StringLiteral_22532/*"tdTypeChangeIDs"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v32->KEY_TD_TYPE_CHANGE_ID, v33, v34, v35, v36, v37, v38, v39);
   v40 = TreasureDvcEntity_TypeInfo->static_fields;
-  v41 = (System_Int32_array **)StringLiteral_17882;
-  v40->KEY_TD_DELAY_END = (struct System_String_o *)StringLiteral_17882;
+  v41 = (System_Int32_array **)StringLiteral_17882/*"delayEnd"*/;
+  v40->KEY_TD_DELAY_END = (struct System_String_o *)StringLiteral_17882/*"delayEnd"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v40->KEY_TD_DELAY_END, v41, v42, v43, v44, v45, v46, v47);
   v48 = TreasureDvcEntity_TypeInfo->static_fields;
-  v49 = (System_Int32_array **)StringLiteral_16069;
-  v48->KET_SUFFIX_ACTSET = (struct System_String_o *)StringLiteral_16069;
+  v49 = (System_Int32_array **)StringLiteral_16069/*"_actSet"*/;
+  v48->KET_SUFFIX_ACTSET = (struct System_String_o *)StringLiteral_16069/*"_actSet"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v48->KET_SUFFIX_ACTSET, v49, v50, v51, v52, v53, v54, v55);
 }
 
@@ -120,10 +120,10 @@ System_Int32_array *__fastcall TreasureDvcEntity__GetAssumedEffectId(
 {
   if ( (byte_40FB89B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16437, method);
+    sub_B16FFC(&StringLiteral_16437/*"assumedEffectId"*/, method);
     byte_40FB89B = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16437, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16437/*"assumedEffectId"*/, 0LL);
 }
 
 
@@ -149,10 +149,10 @@ System_Int32_array *__fastcall TreasureDvcEntity__GetExcludeTdChangeTypes(
 
   if ( (byte_40FB894 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18558, defArray);
+    sub_B16FFC(&StringLiteral_18558/*"excludeTdChangeTypes"*/, defArray);
     byte_40FB894 = 1;
   }
-  return TreasureDvcEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_18558, defArray, v3);
+  return TreasureDvcEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_18558/*"excludeTdChangeTypes"*/, defArray, v3);
 }
 
 
@@ -175,10 +175,10 @@ System_String_o *__fastcall TreasureDvcEntity__GetNpNameFileSuffix(TreasureDvcEn
 {
   if ( (byte_40FB89A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21067, method);
+    sub_B16FFC(&StringLiteral_21067/*"npNameFileSuffix"*/, method);
     byte_40FB89A = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21067, 0LL, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21067/*"npNameFileSuffix"*/, 0LL, 0LL);
 }
 
 
@@ -239,10 +239,10 @@ bool __fastcall TreasureDvcEntity__IsOnlyFirstOneSpeed(TreasureDvcEntity_o *this
 
   if ( (byte_40FB899 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6726, method);
+    sub_B16FFC(&StringLiteral_6726/*"ForcedOnlyFirstOneSpeed"*/, method);
     byte_40FB899 = 1;
   }
-  return TreasureDvcEntity__getScriptInt(this, (System_String_o *)StringLiteral_6726, 0, v2) > 0;
+  return TreasureDvcEntity__getScriptInt(this, (System_String_o *)StringLiteral_6726/*"ForcedOnlyFirstOneSpeed"*/, 0, v2) > 0;
 }
 
 
@@ -467,8 +467,8 @@ bool __fastcall TreasureDvcEntity__getEffectExplanation(
     sub_B16FFC(&int_TypeInfo, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v15);
-    sub_B16FFC(&StringLiteral_9353, v16);
-    sub_B16FFC(&StringLiteral_9354, v17);
+    sub_B16FFC(&StringLiteral_9353/*"NP_NAME"*/, v16);
+    sub_B16FFC(&StringLiteral_9354/*"NP_NAME_LEVEL"*/, v17);
     byte_40FB884 = 1;
   }
   v18 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
@@ -495,7 +495,7 @@ bool __fastcall TreasureDvcEntity__getEffectExplanation(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_9353, 0LL);
+    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_9353/*"NP_NAME"*/, 0LL);
     v29 = System_String__Format(v36, (Il2CppObject *)this->fields.name, 0LL);
   }
   else
@@ -505,7 +505,7 @@ bool __fastcall TreasureDvcEntity__getEffectExplanation(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9354, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9354/*"NP_NAME_LEVEL"*/, 0LL);
     name = (Il2CppObject *)this->fields.name;
     v27 = v25;
     v55 = lv;
@@ -582,11 +582,11 @@ System_Int32_array *__fastcall TreasureDvcEntity__getFixAppearanceInfoArray(
   v8 = limit;
   if ( (byte_40FB892 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18677, *(_QWORD *)&limit);
+    sub_B16FFC(&StringLiteral_18677/*"fixAppearanceId_"*/, *(_QWORD *)&limit);
     byte_40FB892 = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v8, 0LL);
-  v5 = System_String__Concat_43743732((System_String_o *)StringLiteral_18677, v4, 0LL);
+  v5 = System_String__Concat_43743732((System_String_o *)StringLiteral_18677/*"fixAppearanceId_"*/, v4, 0LL);
   return TreasureDvcEntity__getScriptIntArrayParam(this, v5, 0LL, v6);
 }
 
@@ -1077,10 +1077,10 @@ System_Int32_array *__fastcall TreasureDvcEntity__getRelatedBgms(TreasureDvcEnti
 
   if ( (byte_40FB893 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21663, method);
+    sub_B16FFC(&StringLiteral_21663/*"relationBgmIds"*/, method);
     byte_40FB893 = 1;
   }
-  return TreasureDvcEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_21663, 0LL, v2);
+  return TreasureDvcEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_21663/*"relationBgmIds"*/, 0LL, v2);
 }
 
 
@@ -1283,12 +1283,12 @@ int32_t __fastcall TreasureDvcEntity__getSeqId(TreasureDvcEntity_o *this, int32_
   if ( (byte_40FB889 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&limit);
-    sub_B16FFC(&StringLiteral_20142, v5);
+    sub_B16FFC(&StringLiteral_20142/*"limitSeqId_{0}"*/, v5);
     byte_40FB889 = 1;
   }
   v10 = limit;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  v7 = System_String__Format((System_String_o *)StringLiteral_20142, v6, 0LL);
+  v7 = System_String__Format((System_String_o *)StringLiteral_20142/*"limitSeqId_{0}"*/, v6, 0LL);
   return TreasureDvcEntity__getScriptInt(this, v7, this->fields.seqId, v8);
 }
 
@@ -1425,9 +1425,9 @@ System_String_o *__fastcall TreasureDvcEntity__makeAddLimitKey(
   if ( (byte_40FB88C & 1) == 0 )
   {
     sub_B16FFC(&TreasureDvcEntity_TypeInfo, baseKey);
-    sub_B16FFC(&StringLiteral_23564, v8);
-    sub_B16FFC(&StringLiteral_15842, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_23564/*"{0}{1}{2}"*/, v8);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FB88C = 1;
   }
   if ( v6 != -1 || actSet )
@@ -1449,18 +1449,18 @@ System_String_o *__fastcall TreasureDvcEntity__makeAddLimitKey(
     }
     else
     {
-      v15 = (Il2CppObject *)StringLiteral_1;
+      v15 = (Il2CppObject *)StringLiteral_1/*""*/;
     }
     if ( v6 == -1 )
     {
-      v17 = (Il2CppObject *)StringLiteral_1;
+      v17 = (Il2CppObject *)StringLiteral_1/*""*/;
     }
     else
     {
       v16 = System_Int32__ToString((int32_t)&v20, 0LL);
-      v17 = (Il2CppObject *)System_String__Concat_43743732((System_String_o *)StringLiteral_15842, v16, 0LL);
+      v17 = (Il2CppObject *)System_String__Concat_43743732((System_String_o *)StringLiteral_15842/*"_"*/, v16, 0LL);
     }
-    return System_String__Format_43744796((System_String_o *)StringLiteral_23564, v7, v17, v15, 0LL);
+    return System_String__Format_43744796((System_String_o *)StringLiteral_23564/*"{0}{1}{2}"*/, v7, v17, v15, 0LL);
   }
   return (System_String_o *)v7;
 }
@@ -1515,7 +1515,7 @@ int32_t __fastcall TreasureDvcEntity___c___getScriptIntArrayParam_b__28_0(
 
   if ( (byte_40F792E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, x);
+    sub_B16FFC(&StringLiteral_1/*""*/, x);
     byte_40F792E = 1;
   }
   if ( x )
@@ -1526,6 +1526,6 @@ int32_t __fastcall TreasureDvcEntity___c___getScriptIntArrayParam_b__28_0(
   else
     v4 = 0LL;
   if ( !v4 )
-    v4 = (System_String_o *)StringLiteral_1;
+    v4 = (System_String_o *)StringLiteral_1/*""*/;
   return System_Int32__Parse(v4, 0LL);
 }

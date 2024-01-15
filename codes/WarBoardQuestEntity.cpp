@@ -43,8 +43,8 @@ bool __fastcall WarBoardQuestEntity__IsUseEventUI(WarBoardQuestEntity_o *this, c
 {
   if ( (byte_40FBA4C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19878, method);
+    sub_B16FFC(&StringLiteral_19878/*"isUseEventUI"*/, method);
     byte_40FBA4C = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19878, 0, 0LL) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19878/*"isUseEventUI"*/, 0, 0LL) > 0;
 }

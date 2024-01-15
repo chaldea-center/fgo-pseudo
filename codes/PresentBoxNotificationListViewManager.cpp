@@ -261,7 +261,7 @@ void __fastcall PresentBoxNotificationListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_PresentBoxNotificationListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40F8FE5 = 1;
   }
   memset(&v22, 0, sizeof(v22));
@@ -276,7 +276,7 @@ void __fastcall PresentBoxNotificationListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -344,7 +344,7 @@ void __fastcall PresentBoxNotificationListViewManager__RequestListObject_2336320
     sub_B16FFC(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_PresentBoxNotificationListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_PresentBoxNotificationListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40F8FE6 = 1;
   }
   memset(&v20, 0, sizeof(v20));
@@ -359,7 +359,7 @@ void __fastcall PresentBoxNotificationListViewManager__RequestListObject_2336320
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

@@ -647,8 +647,8 @@ System_String_o *__fastcall MaterialCollectionServantListViewItem__get_AttackTex
   if ( (byte_40FCB67 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
-    sub_B16FFC(&StringLiteral_18326, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v4);
     byte_40FCB67 = 1;
   }
   userSvtCollectionEntity = this->fields.userSvtCollectionEntity;
@@ -665,9 +665,9 @@ System_String_o *__fastcall MaterialCollectionServantListViewItem__get_AttackTex
   else
   {
     if ( this->fields.userCommandCodeCollectionEntity )
-      v8 = (System_String_o **)&StringLiteral_1;
+      v8 = (System_String_o **)&StringLiteral_1/*""*/;
     else
-      v8 = (System_String_o **)&StringLiteral_18326;
+      v8 = (System_String_o **)&StringLiteral_18326/*"error"*/;
     return *v8;
   }
 }
@@ -703,8 +703,8 @@ System_String_o *__fastcall MaterialCollectionServantListViewItem__get_CostText(
   if ( (byte_40FCB65 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
-    sub_B16FFC(&StringLiteral_18326, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v4);
     byte_40FCB65 = 1;
   }
   servantEntity = this->fields.servantEntity;
@@ -721,9 +721,9 @@ System_String_o *__fastcall MaterialCollectionServantListViewItem__get_CostText(
   else
   {
     if ( this->fields.commandCodeEntity )
-      v8 = (System_String_o **)&StringLiteral_1;
+      v8 = (System_String_o **)&StringLiteral_1/*""*/;
     else
-      v8 = (System_String_o **)&StringLiteral_18326;
+      v8 = (System_String_o **)&StringLiteral_18326/*"error"*/;
     return *v8;
   }
 }
@@ -742,8 +742,8 @@ System_String_o *__fastcall MaterialCollectionServantListViewItem__get_HpText(
   if ( (byte_40FCB66 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
-    sub_B16FFC(&StringLiteral_18326, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v4);
     byte_40FCB66 = 1;
   }
   userSvtCollectionEntity = this->fields.userSvtCollectionEntity;
@@ -760,9 +760,9 @@ System_String_o *__fastcall MaterialCollectionServantListViewItem__get_HpText(
   else
   {
     if ( this->fields.userCommandCodeCollectionEntity )
-      v8 = (System_String_o **)&StringLiteral_1;
+      v8 = (System_String_o **)&StringLiteral_1/*""*/;
     else
-      v8 = (System_String_o **)&StringLiteral_18326;
+      v8 = (System_String_o **)&StringLiteral_18326/*"error"*/;
     return *v8;
   }
 }
@@ -904,8 +904,8 @@ System_String_o *__fastcall MaterialCollectionServantListViewItem__get_LevelText
   if ( (byte_40FCB63 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
-    sub_B16FFC(&StringLiteral_18326, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v4);
     byte_40FCB63 = 1;
   }
   userSvtCollectionEntity = this->fields.userSvtCollectionEntity;
@@ -922,9 +922,9 @@ System_String_o *__fastcall MaterialCollectionServantListViewItem__get_LevelText
   else
   {
     if ( this->fields.userCommandCodeCollectionEntity )
-      v8 = (System_String_o **)&StringLiteral_1;
+      v8 = (System_String_o **)&StringLiteral_1/*""*/;
     else
-      v8 = (System_String_o **)&StringLiteral_18326;
+      v8 = (System_String_o **)&StringLiteral_18326/*"error"*/;
     return *v8;
   }
 }
@@ -939,7 +939,7 @@ System_String_o *__fastcall MaterialCollectionServantListViewItem__get_NameText(
 
   if ( (byte_40FCB62 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, method);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, method);
     byte_40FCB62 = 1;
   }
   servantEntity = this->fields.servantEntity;
@@ -949,7 +949,7 @@ System_String_o *__fastcall MaterialCollectionServantListViewItem__get_NameText(
   if ( commandCodeEntity )
     return CommandCodeEntity__GetName(commandCodeEntity, 0LL);
   else
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
 }
 
 

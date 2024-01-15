@@ -81,7 +81,7 @@ void __fastcall BattleViewBufflistComponent__setBuffList(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_2453, v8);
+    sub_B16FFC(&StringLiteral_2453/*"BATTLE_NOBUFFLIST"*/, v8);
     byte_40F9008 = 1;
   }
   prefabBuffObject = this->fields.prefabBuffObject;
@@ -154,7 +154,7 @@ void __fastcall BattleViewBufflistComponent__setBuffList(
     }
     if ( UnityEngine_Object__op_Inequality(nothingLabel, 0LL, 0LL) )
     {
-      v25 = (System_String_o *)StringLiteral_2453;
+      v25 = (System_String_o *)StringLiteral_2453/*"BATTLE_NOBUFFLIST"*/;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
@@ -235,7 +235,7 @@ void __fastcall BattleViewBufflistComponent__setClassIcon(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_17939, v9);
+    sub_B16FFC(&StringLiteral_17939/*"dialog_title"*/, v9);
     byte_40F900A = 1;
   }
   servantClassIconComponent = (UnityEngine_Object_o *)this->fields.nameInfo.fields.servantClassIconComponent;
@@ -292,7 +292,7 @@ void __fastcall BattleViewBufflistComponent__setClassIcon(
       if ( AssetStorage )
         Object_WarBoardWaitTimeSetting = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                         AssetStorage,
-                                                        (System_String_o *)StringLiteral_17939,
+                                                        (System_String_o *)StringLiteral_17939/*"dialog_title"*/,
                                                         (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       else
         Object_WarBoardWaitTimeSetting = 0LL;

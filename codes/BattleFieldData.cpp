@@ -127,8 +127,8 @@ void __fastcall BattleFieldData___ctor_23083972(
     sub_B16FFC(&double___TypeInfo, v12);
     sub_B16FFC(&long_TypeInfo, v13);
     sub_B16FFC(&BattleFieldData_SaveData_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_21582, v15);
-    sub_B16FFC(&StringLiteral_19307, v16);
+    sub_B16FFC(&StringLiteral_21582/*"raid"*/, v15);
+    sub_B16FFC(&StringLiteral_19307/*"id"*/, v16);
     byte_40F8D53 = 1;
   }
   v17 = (BattleFieldData_SaveData_o *)sub_B170CC(
@@ -186,13 +186,13 @@ void __fastcall BattleFieldData___ctor_23083972(
   }
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)obj,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_21582,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_21582/*"raid"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v45 = *p_aiField;
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)obj,
-             (System_Type_o *)StringLiteral_21582,
+             (System_Type_o *)StringLiteral_21582/*"raid"*/,
              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !v45 || !Item )
       goto LABEL_19;
@@ -202,7 +202,7 @@ void __fastcall BattleFieldData___ctor_23083972(
   }
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)obj,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_19307,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_19307/*"id"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
 LABEL_16:
@@ -223,7 +223,7 @@ LABEL_19:
   v51 = *p_aiField;
   Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
            (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)obj,
-           (System_Type_o *)StringLiteral_19307,
+           (System_Type_o *)StringLiteral_19307/*"id"*/,
            (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !v51 || !Item )
     goto LABEL_19;

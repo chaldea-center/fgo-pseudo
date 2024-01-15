@@ -40,7 +40,7 @@ System_String_o *__fastcall EventInfoRaidTimeComponent__GetRestTime(
     sub_B16FFC(&System_DateTime_TypeInfo, at);
     sub_B16FFC(&int_TypeInfo, v4);
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23411, v6);
+    sub_B16FFC(&StringLiteral_23411/*"{0:D2}:{1:D2}:{2:D2}[-]"*/, v6);
     byte_40FA169 = 1;
   }
   ticks = 0LL;
@@ -66,7 +66,7 @@ System_String_o *__fastcall EventInfoRaidTimeComponent__GetRestTime(
   Days = (EventInfoRaidTimeComponent_o *)System_TimeSpan__get_Days(v26, 0LL);
   v12 = Hours + 24 * (_DWORD)Days;
   RestTimeColorStr = EventInfoRaidTimeComponent__GetRestTimeColorStr(Days, v12, v13);
-  v15 = System_String__Concat_43743732(RestTimeColorStr, (System_String_o *)StringLiteral_23411, 0LL);
+  v15 = System_String__Concat_43743732(RestTimeColorStr, (System_String_o *)StringLiteral_23411/*"{0:D2}:{1:D2}:{2:D2}[-]"*/, 0LL);
   v22 = v12;
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
   v27.fields._ticks = (int64_t)&ticks;
@@ -91,16 +91,16 @@ System_String_o *__fastcall EventInfoRaidTimeComponent__GetRestTimeColorStr(
 
   if ( (byte_40FA16A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15677, *(_QWORD *)&restHours);
-    sub_B16FFC(&StringLiteral_15683, v4);
-    sub_B16FFC(&StringLiteral_15680, v5);
+    sub_B16FFC(&StringLiteral_15677/*"[FF0000]"*/, *(_QWORD *)&restHours);
+    sub_B16FFC(&StringLiteral_15683/*"[FFFFFF]"*/, v4);
+    sub_B16FFC(&StringLiteral_15680/*"[FFFF00]"*/, v5);
     byte_40FA16A = 1;
   }
-  v6 = (__int64 *)&StringLiteral_15683;
+  v6 = (__int64 *)&StringLiteral_15683/*"[FFFFFF]"*/;
   if ( restHours < 5 )
-    v6 = &StringLiteral_15680;
+    v6 = &StringLiteral_15680/*"[FFFF00]"*/;
   if ( restHours < 1 )
-    v6 = &StringLiteral_15677;
+    v6 = &StringLiteral_15677/*"[FF0000]"*/;
   return (System_String_o *)*v6;
 }
 
@@ -138,7 +138,7 @@ void __fastcall EventInfoRaidTimeComponent__Initialization(
     sub_B16FFC(&AtlasManager_TypeInfo, entity);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FA167 = 1;
   }
   this->fields.eventUiEntity = entity;
@@ -209,15 +209,15 @@ LABEL_28:
   this->fields.reidTimeLimit = TimeLimitAt;
   if ( !titleText )
     goto LABEL_28;
-  UILabel__set_text(titleText, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleText, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   timeText = this->fields.timeText;
   if ( !timeText )
     goto LABEL_28;
-  UILabel__set_text(timeText, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(timeText, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   timeOverText = this->fields.timeOverText;
   if ( !timeOverText )
     goto LABEL_28;
-  UILabel__set_text(timeOverText, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(timeOverText, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.isUpdate = 1;
   EventInfoRaidTimeComponent__UpdateDisp(this, v26);
 }
@@ -306,9 +306,9 @@ void __fastcall EventInfoRaidTimeComponent__UpdateDisp(EventInfoRaidTimeComponen
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
     sub_B16FFC(&RaidAutoUpdateRequest_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_968, v6);
-    sub_B16FFC(&StringLiteral_5675, v7);
-    sub_B16FFC(&StringLiteral_5673, v8);
+    sub_B16FFC(&StringLiteral_968/*"00:00:00[-]"*/, v6);
+    sub_B16FFC(&StringLiteral_5675/*"EVENT_RAID_TIME_OVER_TXT"*/, v7);
+    sub_B16FFC(&StringLiteral_5673/*"EVENT_RAID_TIME_LIMIT_TXT"*/, v8);
     byte_40FA168 = 1;
   }
   if ( this->fields.isUpdate )
@@ -380,7 +380,7 @@ void __fastcall EventInfoRaidTimeComponent__UpdateDisp(EventInfoRaidTimeComponen
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v38 = LocalizationManager__Get((System_String_o *)StringLiteral_5675, 0LL);
+                v38 = LocalizationManager__Get((System_String_o *)StringLiteral_5675/*"EVENT_RAID_TIME_OVER_TXT"*/, 0LL);
                 if ( !v34 )
                   goto LABEL_55;
               }
@@ -404,13 +404,13 @@ void __fastcall EventInfoRaidTimeComponent__UpdateDisp(EventInfoRaidTimeComponen
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5673, 0LL);
+                v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5673/*"EVENT_RAID_TIME_LIMIT_TXT"*/, 0LL);
                 if ( !v32 )
                   goto LABEL_55;
                 UILabel__set_text(v32, v33, 0LL);
                 v34 = this->fields.timeText;
                 RestTimeColorStr = EventInfoRaidTimeComponent__GetRestTimeColorStr(v35, 0, v36);
-                v38 = System_String__Concat_43743732(RestTimeColorStr, (System_String_o *)StringLiteral_968, 0LL);
+                v38 = System_String__Concat_43743732(RestTimeColorStr, (System_String_o *)StringLiteral_968/*"00:00:00[-]"*/, 0LL);
                 if ( !v34 )
                   goto LABEL_55;
               }
@@ -436,7 +436,7 @@ void __fastcall EventInfoRaidTimeComponent__UpdateDisp(EventInfoRaidTimeComponen
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5673, 0LL);
+                  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5673/*"EVENT_RAID_TIME_LIMIT_TXT"*/, 0LL);
                   if ( v20 )
                   {
                     UILabel__set_text(v20, v21, 0LL);

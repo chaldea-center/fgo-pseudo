@@ -85,12 +85,12 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
     sub_B16FFC(&int_TypeInfo, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
     sub_B16FFC(&NetworkManager_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_19305, v14);
-    sub_B16FFC(&StringLiteral_22021, v15);
-    sub_B16FFC(&StringLiteral_22020, v16);
-    sub_B16FFC(&StringLiteral_13322, v17);
-    sub_B16FFC(&StringLiteral_11003, v18);
-    sub_B16FFC(&StringLiteral_11004, v19);
+    sub_B16FFC(&StringLiteral_19305/*"icon_{0}"*/, v14);
+    sub_B16FFC(&StringLiteral_22021/*"shop_item_menu_{0}_2"*/, v15);
+    sub_B16FFC(&StringLiteral_22020/*"shop_item_menu_mask"*/, v16);
+    sub_B16FFC(&StringLiteral_13322/*"TIME_REST2_NONE"*/, v17);
+    sub_B16FFC(&StringLiteral_11003/*"RECIPE_EVENT_BOARD_MESSAGE"*/, v18);
+    sub_B16FFC(&StringLiteral_11004/*"RECIPE_EVENT_BOARD_UNRELEASED_NAME"*/, v19);
     byte_40F6109 = 1;
   }
   entity = 0LL;
@@ -99,7 +99,7 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
     baseSprite = this->fields.baseSprite;
     currentEventId = item->fields.currentEventId;
     v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId);
-    v23 = System_String__Format((System_String_o *)StringLiteral_22021, v21, 0LL);
+    v23 = System_String__Format((System_String_o *)StringLiteral_22021/*"shop_item_menu_{0}_2"*/, v21, 0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
     {
@@ -113,7 +113,7 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI_28584872(v24, maskSprite, (System_String_o *)StringLiteral_22020, 0LL);
+    AtlasManager__SetEventUI_28584872(v24, maskSprite, (System_String_o *)StringLiteral_22020/*"shop_item_menu_mask"*/, 0LL);
     v26 = (UnityEngine_Component_o *)this->fields.maskSprite;
     if ( v26 )
     {
@@ -130,7 +130,7 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
           itemIcon = this->fields.itemIcon;
           currentEventId = eventRecipeEntity->fields.iconId;
           v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId);
-          v32 = System_String__Format((System_String_o *)StringLiteral_19305, v31, 0LL);
+          v32 = System_String__Format((System_String_o *)StringLiteral_19305/*"icon_{0}"*/, v31, 0LL);
           if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !AtlasManager_TypeInfo->_2.cctor_finished )
           {
@@ -150,7 +150,7 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v36 = LocalizationManager__Get((System_String_o *)StringLiteral_11003, 0LL);
+          v36 = LocalizationManager__Get((System_String_o *)StringLiteral_11003/*"RECIPE_EVENT_BOARD_MESSAGE"*/, 0LL);
           v37 = item->fields.eventRecipeEntity;
           if ( !v37 )
             goto LABEL_63;
@@ -174,7 +174,7 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v42 = LocalizationManager__Get((System_String_o *)StringLiteral_11004, 0LL);
+          v42 = LocalizationManager__Get((System_String_o *)StringLiteral_11004/*"RECIPE_EVENT_BOARD_UNRELEASED_NAME"*/, 0LL);
           if ( !v41 )
             goto LABEL_63;
           UILabel__set_text(v41, v42, 0LL);
@@ -231,7 +231,7 @@ LABEL_57:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            RestTime2 = LocalizationManager__Get((System_String_o *)StringLiteral_13322, 0LL);
+            RestTime2 = LocalizationManager__Get((System_String_o *)StringLiteral_13322/*"TIME_REST2_NONE"*/, 0LL);
             if ( restTimeLabel )
               goto LABEL_56;
           }
@@ -623,11 +623,11 @@ void __fastcall EventRecipeListViewItemDraw__SetRewardIconText(
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_11006, v9);
-    sub_B16FFC(&StringLiteral_340, v10);
-    sub_B16FFC(&StringLiteral_11010, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
-    sub_B16FFC(&StringLiteral_951, v13);
+    sub_B16FFC(&StringLiteral_11006/*"RECIPE_EVENT_HAVE_NUM"*/, v9);
+    sub_B16FFC(&StringLiteral_340/*"#,0"*/, v10);
+    sub_B16FFC(&StringLiteral_11010/*"RECIPE_EVENT_PROBABILITY_MESSAGE"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v13);
     byte_40F610A = 1;
   }
   entity = 0LL;
@@ -680,7 +680,7 @@ void __fastcall EventRecipeListViewItemDraw__SetRewardIconText(
   {
     if ( !entity )
       goto LABEL_41;
-    v26 = System_Int32__ToString_38275808((int)entity + 28, (System_String_o *)StringLiteral_340, 0LL);
+    v26 = System_Int32__ToString_38275808((int)entity + 28, (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
     if ( !rewardNumTextLabel )
       goto LABEL_41;
     UILabel__set_text(rewardNumTextLabel, v26, 0LL);
@@ -693,7 +693,7 @@ void __fastcall EventRecipeListViewItemDraw__SetRewardIconText(
   {
     if ( !rewardNumTextLabel )
       goto LABEL_41;
-    UILabel__set_text(this->fields.rewardNumTextLabel, (System_String_o *)StringLiteral_951, 0LL);
+    UILabel__set_text(this->fields.rewardNumTextLabel, (System_String_o *)StringLiteral_951/*"0"*/, 0LL);
   }
   if ( !GiftListById->max_length )
     goto LABEL_42;
@@ -710,7 +710,7 @@ void __fastcall EventRecipeListViewItemDraw__SetRewardIconText(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_11006, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_11006/*"RECIPE_EVENT_HAVE_NUM"*/, 0LL);
   if ( !rewardNumTitleLabel )
     goto LABEL_41;
   UILabel__set_text(rewardNumTitleLabel, v31, 0LL);
@@ -729,7 +729,7 @@ LABEL_42:
   probabilityLabel = (UILabel_o *)this->fields.probabilityLabel;
   if ( v33->fields.topIconId <= 0 )
   {
-    v35 = (System_String_o *)StringLiteral_1;
+    v35 = (System_String_o *)StringLiteral_1/*""*/;
     if ( probabilityLabel )
       goto LABEL_39;
 LABEL_41:
@@ -740,7 +740,7 @@ LABEL_41:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_11010, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_11010/*"RECIPE_EVENT_PROBABILITY_MESSAGE"*/, 0LL);
   if ( !probabilityLabel )
     goto LABEL_41;
 LABEL_39:

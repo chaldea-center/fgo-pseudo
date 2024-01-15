@@ -407,9 +407,9 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&status);
     sub_B16FFC(&string_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_16090, v6);
-    sub_B16FFC(&StringLiteral_16113, v7);
-    sub_B16FFC(&StringLiteral_16078, v8);
+    sub_B16FFC(&StringLiteral_16090/*"_loop"*/, v6);
+    sub_B16FFC(&StringLiteral_16113/*"_start"*/, v7);
+    sub_B16FFC(&StringLiteral_16078/*"_end"*/, v8);
     byte_40FB5D0 = 1;
   }
   switch ( status )
@@ -451,7 +451,7 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
         }
       }
       asset = (System_String_o *)this->fields.asset;
-      v26 = &StringLiteral_16078;
+      v26 = &StringLiteral_16078/*"_end"*/;
       break;
     case 4:
       if ( !System_String__IsNullOrEmpty(this->fields.endAnimationName, 0LL) )
@@ -490,7 +490,7 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
         }
       }
       asset = (System_String_o *)this->fields.asset;
-      v26 = &StringLiteral_16090;
+      v26 = &StringLiteral_16090/*"_loop"*/;
       break;
     case 3:
       if ( System_String__IsNullOrEmpty(this->fields.loopAnimationName, 0LL) )
@@ -523,7 +523,7 @@ System_String_o *__fastcall MapGimmickEffectComponent__GetAnimationName(
       {
 LABEL_51:
         asset = (System_String_o *)this->fields.asset;
-        v26 = &StringLiteral_16113;
+        v26 = &StringLiteral_16113/*"_start"*/;
         return System_String__Concat_43743732(asset, (System_String_o *)*v26, 0LL);
       }
       v13 = this->fields.animationComponent;
@@ -596,7 +596,7 @@ void __fastcall MapGimmickEffectComponent__NextPlayAnimation(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&next);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FB5D1 = 1;
   }
   animationComponent = (UnityEngine_Object_o *)this->fields.animationComponent;
@@ -712,7 +712,7 @@ LABEL_68:
       goto LABEL_69;
     }
 LABEL_67:
-    name = (struct System_String_o *)StringLiteral_1;
+    name = (struct System_String_o *)StringLiteral_1/*""*/;
     goto LABEL_68;
   }
   if ( v3 != 5 )
@@ -803,7 +803,7 @@ LABEL_70:
     goto LABEL_39;
 LABEL_44:
   v30 = this;
-  name = (struct System_String_o *)StringLiteral_1;
+  name = (struct System_String_o *)StringLiteral_1/*""*/;
 LABEL_61:
   v30->fields.playAnimation = name;
   p_playAnimation = &v30->fields.playAnimation;

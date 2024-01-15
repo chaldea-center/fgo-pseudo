@@ -405,17 +405,17 @@ void __fastcall BlacklistRootComponent__OnSelectFriendItem(
     sub_B16FFC(&BlacklistRootComponent___c__DisplayClass31_0_TypeInfo, v25);
     sub_B16FFC(&Method_BlacklistRootComponent___c__DisplayClass31_2__OnSelectFriendItem_b__3__, v26);
     sub_B16FFC(&BlacklistRootComponent___c__DisplayClass31_2_TypeInfo, v27);
-    sub_B16FFC(&StringLiteral_26, v28);
-    sub_B16FFC(&StringLiteral_80, v29);
-    sub_B16FFC(&StringLiteral_2565, v30);
-    sub_B16FFC(&StringLiteral_8603, v31);
-    sub_B16FFC(&StringLiteral_2562, v32);
-    sub_B16FFC(&StringLiteral_2564, v33);
-    sub_B16FFC(&StringLiteral_2563, v34);
-    sub_B16FFC(&StringLiteral_2561, v35);
-    sub_B16FFC(&StringLiteral_2508, v36);
-    sub_B16FFC(&StringLiteral_1, v37);
-    sub_B16FFC(&StringLiteral_2566, v38);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v28);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v29);
+    sub_B16FFC(&StringLiteral_2565/*"BLACKLIST_REGIST_NORMAL_MESSAGE_2"*/, v30);
+    sub_B16FFC(&StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, v31);
+    sub_B16FFC(&StringLiteral_2562/*"BLACKLIST_REGIST_MAX_MESSAGE"*/, v32);
+    sub_B16FFC(&StringLiteral_2564/*"BLACKLIST_REGIST_NORMAL_MESSAGE_1"*/, v33);
+    sub_B16FFC(&StringLiteral_2563/*"BLACKLIST_REGIST_MAX_TITLE"*/, v34);
+    sub_B16FFC(&StringLiteral_2561/*"BLACKLIST_REGIST_CANCEL"*/, v35);
+    sub_B16FFC(&StringLiteral_2508/*"BATTLE_SKILLCHARGETURN"*/, v36);
+    sub_B16FFC(&StringLiteral_1/*""*/, v37);
+    sub_B16FFC(&StringLiteral_2566/*"BLACKLIST_REGIST_NORMAL_MESSAGE_3"*/, v38);
     byte_40F90A5 = 1;
   }
   v170 = 0LL;
@@ -508,12 +508,12 @@ LABEL_126:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v91 = LocalizationManager__Get((System_String_o *)StringLiteral_8603, 0LL);
+        v91 = LocalizationManager__Get((System_String_o *)StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
         lv = v82->fields.lv;
         v92 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
         v93 = System_String__Format(v91, v92, 0LL);
-        v169 = System_String__Concat_43746016(v90, (System_String_o *)StringLiteral_80, v93, 0LL);
-        v94 = LocalizationManager__Get((System_String_o *)StringLiteral_2508, 0LL);
+        v169 = System_String__Concat_43746016(v90, (System_String_o *)StringLiteral_80/*" "*/, v93, 0LL);
+        v94 = LocalizationManager__Get((System_String_o *)StringLiteral_2508/*"BATTLE_SKILLCHARGETURN"*/, 0LL);
         if ( !v89 )
           goto LABEL_125;
         v95 = v94;
@@ -579,7 +579,7 @@ LABEL_126:
                 friendOfferList = this->fields.friendOfferList;
                 if ( friendOfferList )
                 {
-                  v120 = (System_String_o *)StringLiteral_2564;
+                  v120 = (System_String_o *)StringLiteral_2564/*"BLACKLIST_REGIST_NORMAL_MESSAGE_1"*/;
                   v121 = System_Collections_Generic_List_long___Contains(
                            friendOfferList,
                            userId,
@@ -587,14 +587,14 @@ LABEL_126:
                   blackListRegistDlg = this->fields.blackListRegistDlg;
                   userName = v117->fields.userName;
                   if ( v121 )
-                    v120 = (System_String_o *)StringLiteral_2565;
+                    v120 = (System_String_o *)StringLiteral_2565/*"BLACKLIST_REGIST_NORMAL_MESSAGE_2"*/;
                   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                     && !LocalizationManager_TypeInfo->_2.cctor_finished )
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
                   v124 = LocalizationManager__Get(v120, 0LL);
-                  v125 = LocalizationManager__Get((System_String_o *)StringLiteral_2566, 0LL);
+                  v125 = LocalizationManager__Get((System_String_o *)StringLiteral_2566/*"BLACKLIST_REGIST_NORMAL_MESSAGE_3"*/, 0LL);
                   v130 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                                   CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                                   v126,
@@ -622,7 +622,7 @@ LABEL_126:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v152 = LocalizationManager__Get((System_String_o *)StringLiteral_2562, 0LL);
+        v152 = LocalizationManager__Get((System_String_o *)StringLiteral_2562/*"BLACKLIST_REGIST_MAX_MESSAGE"*/, 0LL);
         lv = Count;
         v153 = j_il2cpp_value_box_0(int_TypeInfo, &lv);
         v154 = BalanceConfig_TypeInfo;
@@ -637,7 +637,7 @@ LABEL_126:
         v156 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &chargeTurn);
         v157 = System_String__Format_43739268(v152, v155, v156, 0LL);
         v158 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v159 = LocalizationManager__Get((System_String_o *)StringLiteral_2563, 0LL);
+        v159 = LocalizationManager__Get((System_String_o *)StringLiteral_2563/*"BLACKLIST_REGIST_MAX_TITLE"*/, 0LL);
         if ( !v158 )
           goto LABEL_125;
         setCondensedScale.fields.value = 0LL;
@@ -677,8 +677,8 @@ LABEL_126:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v145 = LocalizationManager__Get((System_String_o *)StringLiteral_2561, 0LL);
-        v146 = System_String__Concat_43746016(v143, (System_String_o *)StringLiteral_26, v145, 0LL);
+        v145 = LocalizationManager__Get((System_String_o *)StringLiteral_2561/*"BLACKLIST_REGIST_CANCEL"*/, 0LL);
+        v146 = System_String__Concat_43746016(v143, (System_String_o *)StringLiteral_26/*"\n"*/, v145, 0LL);
         v151 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                         CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                         v147,
@@ -692,7 +692,7 @@ LABEL_126:
           0LL);
         if ( !v144 )
           goto LABEL_125;
-        CommonUI__OpenConfirmDialog_18237400(v144, (System_String_o *)StringLiteral_1, v146, 1, v151, 0, 0, 0, 0, 0LL);
+        CommonUI__OpenConfirmDialog_18237400(v144, (System_String_o *)StringLiteral_1/*""*/, v146, 1, v151, 0, 0, 0, 0, 0LL);
         return;
       case 13:
       case 14:
@@ -744,17 +744,17 @@ LABEL_126:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v66 = LocalizationManager__Get((System_String_o *)StringLiteral_8603, 0LL);
+          v66 = LocalizationManager__Get((System_String_o *)StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
           lv = v60->fields.lv;
           v67 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
           v68 = System_String__Format(v66, v67, 0LL);
-          name = System_String__Concat_43746016(v65, (System_String_o *)StringLiteral_80, v68, 0LL);
+          name = System_String__Concat_43746016(v65, (System_String_o *)StringLiteral_80/*" "*/, v68, 0LL);
           v69 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           if ( !v69 )
             goto LABEL_125;
           v71 = detail;
           v70 = name;
-          v72 = (System_String_o *)StringLiteral_1;
+          v72 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_78:
           CommonUI__OpenDetailLongInfoDialog(v69, v70, v72, v71, 1, 0, 0LL);
         }
@@ -945,12 +945,12 @@ void __fastcall BlacklistRootComponent___OnSelectFriendItem_b__31_2(
   {
     sub_B16FFC(&Method_BlacklistRootComponent_OnSelectFriendItem__, result);
     sub_B16FFC(&FriendOperationItemListViewManager_CallbackFunc_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21129, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v6);
     byte_40F90B3 = 1;
   }
   if ( !result )
     goto LABEL_8;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     BlacklistRootComponent__modeChange(this, 0, v8);
     return;
@@ -1030,12 +1030,12 @@ void __fastcall BlacklistRootComponent___OnSelectFriendItem_b__31_5(
     sub_B16FFC(&System_Action_TypeInfo, result);
     sub_B16FFC(&Method_BlacklistRootComponent__OnSelectFriendItem_b__31_6__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
     byte_40F90B4 = 1;
   }
   if ( !result )
     goto LABEL_8;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
     BlacklistRootComponent__modeChange(this, 1, v8);
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v14 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v10, v11, v12, v13);
@@ -1095,7 +1095,7 @@ void __fastcall BlacklistRootComponent___afterMainMenuBar_b__39_0(
 
   if ( (byte_40F90B7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6864, method);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, method);
     byte_40F90B7 = 1;
   }
   gameOptionComp = this->fields.gameOptionComp;
@@ -1114,7 +1114,7 @@ void __fastcall BlacklistRootComponent___afterMainMenuBar_b__39_0(
 LABEL_8:
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -1169,15 +1169,15 @@ void __fastcall BlacklistRootComponent___blackListSetup_b__26_0(
     sub_B16FFC(&JsonManager_TypeInfo, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_long__Add__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_long__Clear__, v11);
-    sub_B16FFC(&StringLiteral_20980, v12);
-    sub_B16FFC(&StringLiteral_6864, v13);
-    sub_B16FFC(&StringLiteral_18830, v14);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v12);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v13);
+    sub_B16FFC(&StringLiteral_18830/*"friendOfferList"*/, v14);
     byte_40F90B2 = 1;
   }
   value = 0LL;
   if ( !result )
     goto LABEL_34;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     goto LABEL_32;
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -1187,11 +1187,11 @@ void __fastcall BlacklistRootComponent___blackListSetup_b__26_0(
   v17 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary;
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_18830,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_18830/*"friendOfferList"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           v17,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_18830,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_18830/*"friendOfferList"*/,
           &value,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -1200,7 +1200,7 @@ LABEL_32:
     myRoomFsm = this->fields.myRoomFsm;
     if ( myRoomFsm )
     {
-      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL);
+      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
       return;
     }
 LABEL_34:
@@ -1298,8 +1298,8 @@ void __fastcall BlacklistRootComponent___fadeIn_b__23_0(BlacklistRootComponent_o
 
   if ( (byte_40F90B0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6864, method);
-    sub_B16FFC(&StringLiteral_7053, v3);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, method);
+    sub_B16FFC(&StringLiteral_7053/*"HIDE_END"*/, v3);
     byte_40F90B0 = 1;
   }
   blackListObj = this->fields.blackListObj;
@@ -1309,9 +1309,9 @@ void __fastcall BlacklistRootComponent___fadeIn_b__23_0(BlacklistRootComponent_o
     sub_B170D4();
   }
   if ( activeSelf )
-    v6 = &StringLiteral_6864;
+    v6 = &StringLiteral_6864/*"GO_NEXT"*/;
   else
-    v6 = &StringLiteral_7053;
+    v6 = &StringLiteral_7053/*"HIDE_END"*/;
   PlayMakerFSM__SendEvent(this->fields.myRoomFsm, (System_String_o *)*v6, 0LL);
 }
 
@@ -1322,13 +1322,13 @@ void __fastcall BlacklistRootComponent___fadeOut_b__24_0(BlacklistRootComponent_
 
   if ( (byte_40F90B1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6864, method);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, method);
     byte_40F90B1 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -1407,8 +1407,8 @@ void __fastcall BlacklistRootComponent__blackListSetup(BlacklistRootComponent_o 
     sub_B16FFC(&Method_NetworkManager_getRequest_BlacklistTopRequest___, v4);
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_2560, v7);
-    sub_B16FFC(&StringLiteral_6864, v8);
+    sub_B16FFC(&StringLiteral_2560/*"BLACKLIST_HELP_TEXT"*/, v7);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v8);
     byte_40F90A0 = 1;
   }
   blackListObj = this->fields.blackListObj;
@@ -1427,7 +1427,7 @@ void __fastcall BlacklistRootComponent__blackListSetup(BlacklistRootComponent_o 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2560, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2560/*"BLACKLIST_HELP_TEXT"*/, 0LL);
   if ( !helpLabel )
     goto LABEL_23;
   UILabel__set_text(helpLabel, v14, 0LL);
@@ -1491,7 +1491,7 @@ LABEL_23:
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     goto LABEL_23;
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -1676,14 +1676,14 @@ void __fastcall BlacklistRootComponent__modeChange(
     sub_B16FFC(&System_Action_TypeInfo, *(_QWORD *)&mode);
     sub_B16FFC(&Method_BlacklistRootComponent_onMoveEnd__, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_17015, v7);
-    sub_B16FFC(&StringLiteral_16894, v8);
-    sub_B16FFC(&StringLiteral_16968, v9);
-    sub_B16FFC(&StringLiteral_16895, v10);
-    sub_B16FFC(&StringLiteral_2557, v11);
-    sub_B16FFC(&StringLiteral_17016, v12);
-    sub_B16FFC(&StringLiteral_16969, v13);
-    sub_B16FFC(&StringLiteral_2558, v14);
+    sub_B16FFC(&StringLiteral_17015/*"btn_txt_requestlist_off"*/, v7);
+    sub_B16FFC(&StringLiteral_16894/*"btn_bg_08"*/, v8);
+    sub_B16FFC(&StringLiteral_16968/*"btn_txt_blacklist_off"*/, v9);
+    sub_B16FFC(&StringLiteral_16895/*"btn_bg_09"*/, v10);
+    sub_B16FFC(&StringLiteral_2557/*"BLACKLIST_EXPLANATION_1"*/, v11);
+    sub_B16FFC(&StringLiteral_17016/*"btn_txt_requestlist_on"*/, v12);
+    sub_B16FFC(&StringLiteral_16969/*"btn_txt_blacklist_on"*/, v13);
+    sub_B16FFC(&StringLiteral_2558/*"BLACKLIST_EXPLANATION_2"*/, v14);
     byte_40F90AB = 1;
   }
   friendOperationItemListViewManager = this->fields.friendOperationItemListViewManager;
@@ -1716,7 +1716,7 @@ void __fastcall BlacklistRootComponent__modeChange(
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v45 = LocalizationManager__Get((System_String_o *)StringLiteral_2558, 0LL);
+            v45 = LocalizationManager__Get((System_String_o *)StringLiteral_2558/*"BLACKLIST_EXPLANATION_2"*/, 0LL);
             if ( listExplanationLabel )
             {
               UILabel__set_text(listExplanationLabel, v45, 0LL);
@@ -1754,26 +1754,26 @@ void __fastcall BlacklistRootComponent__modeChange(
                           {
                             UISprite__set_spriteName(
                               friendHistoryTabButtonTitleSpr,
-                              (System_String_o *)StringLiteral_17015,
+                              (System_String_o *)StringLiteral_17015/*"btn_txt_requestlist_off"*/,
                               0LL);
                             friendHistoryTabButtonBackSpr = this->fields.friendHistoryTabButtonBackSpr;
                             if ( friendHistoryTabButtonBackSpr )
                             {
                               UISprite__set_spriteName(
                                 friendHistoryTabButtonBackSpr,
-                                (System_String_o *)StringLiteral_16894,
+                                (System_String_o *)StringLiteral_16894/*"btn_bg_08"*/,
                                 0LL);
                               blackLisTabButtonTitleSpr = this->fields.blackLisTabButtonTitleSpr;
                               if ( blackLisTabButtonTitleSpr )
                               {
                                 UISprite__set_spriteName(
                                   blackLisTabButtonTitleSpr,
-                                  (System_String_o *)StringLiteral_16969,
+                                  (System_String_o *)StringLiteral_16969/*"btn_txt_blacklist_on"*/,
                                   0LL);
                                 blackLisTabButtonBackSpr = this->fields.blackLisTabButtonBackSpr;
                                 if ( blackLisTabButtonBackSpr )
                                 {
-                                  v39 = &StringLiteral_16895;
+                                  v39 = &StringLiteral_16895/*"btn_bg_09"*/;
                                   goto LABEL_44;
                                 }
                               }
@@ -1817,7 +1817,7 @@ LABEL_46:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2557, 0LL);
+            v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2557/*"BLACKLIST_EXPLANATION_1"*/, 0LL);
             if ( v22 )
             {
               UILabel__set_text(v22, v23, 0LL);
@@ -1853,19 +1853,19 @@ LABEL_46:
                           v35 = this->fields.friendHistoryTabButtonTitleSpr;
                           if ( v35 )
                           {
-                            UISprite__set_spriteName(v35, (System_String_o *)StringLiteral_17016, 0LL);
+                            UISprite__set_spriteName(v35, (System_String_o *)StringLiteral_17016/*"btn_txt_requestlist_on"*/, 0LL);
                             v36 = this->fields.friendHistoryTabButtonBackSpr;
                             if ( v36 )
                             {
-                              UISprite__set_spriteName(v36, (System_String_o *)StringLiteral_16895, 0LL);
+                              UISprite__set_spriteName(v36, (System_String_o *)StringLiteral_16895/*"btn_bg_09"*/, 0LL);
                               v37 = this->fields.blackLisTabButtonTitleSpr;
                               if ( v37 )
                               {
-                                UISprite__set_spriteName(v37, (System_String_o *)StringLiteral_16968, 0LL);
+                                UISprite__set_spriteName(v37, (System_String_o *)StringLiteral_16968/*"btn_txt_blacklist_off"*/, 0LL);
                                 blackLisTabButtonBackSpr = this->fields.blackLisTabButtonBackSpr;
                                 if ( blackLisTabButtonBackSpr )
                                 {
-                                  v39 = &StringLiteral_16894;
+                                  v39 = &StringLiteral_16894/*"btn_bg_08"*/;
 LABEL_44:
                                   UISprite__set_spriteName(blackLisTabButtonBackSpr, (System_String_o *)*v39, 0LL);
                                   goto LABEL_45;
@@ -1986,7 +1986,7 @@ void __fastcall BlacklistRootComponent__setRegistCount(BlacklistRootComponent_o 
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_6477, v8);
+    sub_B16FFC(&StringLiteral_6477/*"FRIEND_SHOW_INFOMATION"*/, v8);
     byte_40F90AC = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -2004,7 +2004,7 @@ void __fastcall BlacklistRootComponent__setRegistCount(BlacklistRootComponent_o 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_6477, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_6477/*"FRIEND_SHOW_INFOMATION"*/, 0LL);
   if ( !list )
     goto LABEL_14;
   v14 = v13;

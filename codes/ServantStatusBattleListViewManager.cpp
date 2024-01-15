@@ -431,7 +431,7 @@ void __fastcall ServantStatusBattleListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_ServantStatusBattleListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40F870C = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -446,7 +446,7 @@ void __fastcall ServantStatusBattleListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -516,7 +516,7 @@ void __fastcall ServantStatusBattleListViewManager__RequestListObject_22352064(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_ServantStatusBattleListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40F870D = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -531,7 +531,7 @@ void __fastcall ServantStatusBattleListViewManager__RequestListObject_22352064(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -627,7 +627,7 @@ void __fastcall ServantStatusBattleListViewManager__SetMode_22351556(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Count__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusBattleListViewObject__get_Item__, v7);
     sub_B16FFC(&Method_ServantStatusBattleListViewManager_OnMoveEnd__, v8);
-    sub_B16FFC(&StringLiteral_10004, v9);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v9);
     byte_40F870B = 1;
   }
   this->fields.initMode = mode;
@@ -650,7 +650,7 @@ void __fastcall ServantStatusBattleListViewManager__SetMode_22351556(
       this->fields.callbackCount = 1;
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_10004,
+        (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
         0.2,
         0LL);
     }

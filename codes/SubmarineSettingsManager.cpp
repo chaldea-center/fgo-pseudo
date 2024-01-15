@@ -33,9 +33,9 @@ void __fastcall SubmarineSettingsManager___cctor(const MethodInfo *method)
   if ( (byte_40F7CE0 & 1) == 0 )
   {
     sub_B16FFC(&SubmarineSettingsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_12351, v8);
-    sub_B16FFC(&StringLiteral_12353, v9);
-    sub_B16FFC(&StringLiteral_12352, v10);
+    sub_B16FFC(&StringLiteral_12351/*"SUBMARINE_OPEN_PANEL_CAMERA_DURATION"*/, v8);
+    sub_B16FFC(&StringLiteral_12353/*"SUBMARINE_VIEW_SCAN_RANGE_CAMERA_DURATION"*/, v9);
+    sub_B16FFC(&StringLiteral_12352/*"SUBMARINE_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION"*/, v10);
     byte_40F7CE0 = 1;
   }
   SubmarineSettingsManager_TypeInfo->static_fields->DEFAULT_PANEL_WIDTH = 82;
@@ -48,8 +48,8 @@ void __fastcall SubmarineSettingsManager___cctor(const MethodInfo *method)
   v11->static_fields->DEFAULT_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION = 0.5;
   v11->static_fields->DEFAULT_OPEN_PANEL_CAMERA_DURATION = 0.5;
   static_fields = v11->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_12353;
-  static_fields->KEY_VIEW_SCAN_RANGE_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12353;
+  v13 = (System_Int32_array **)StringLiteral_12353/*"SUBMARINE_VIEW_SCAN_RANGE_CAMERA_DURATION"*/;
+  static_fields->KEY_VIEW_SCAN_RANGE_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12353/*"SUBMARINE_VIEW_SCAN_RANGE_CAMERA_DURATION"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&static_fields->KEY_VIEW_SCAN_RANGE_CAMERA_DURATION,
     v13,
@@ -60,8 +60,8 @@ void __fastcall SubmarineSettingsManager___cctor(const MethodInfo *method)
     v6,
     v7);
   v14 = SubmarineSettingsManager_TypeInfo->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_12352;
-  v14->KEY_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12352;
+  v15 = (System_Int32_array **)StringLiteral_12352/*"SUBMARINE_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION"*/;
+  v14->KEY_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12352/*"SUBMARINE_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v14->KEY_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION,
     v15,
@@ -72,8 +72,8 @@ void __fastcall SubmarineSettingsManager___cctor(const MethodInfo *method)
     v20,
     v21);
   v22 = SubmarineSettingsManager_TypeInfo->static_fields;
-  v23 = (System_Int32_array **)StringLiteral_12351;
-  v22->KEY_OPEN_PANEL_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12351;
+  v23 = (System_Int32_array **)StringLiteral_12351/*"SUBMARINE_OPEN_PANEL_CAMERA_DURATION"*/;
+  v22->KEY_OPEN_PANEL_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12351/*"SUBMARINE_OPEN_PANEL_CAMERA_DURATION"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v22->KEY_OPEN_PANEL_CAMERA_DURATION, v23, v24, v25, v26, v27, v28, v29);
 }
 

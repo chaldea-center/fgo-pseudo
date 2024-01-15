@@ -1122,7 +1122,7 @@ SchedulerTaskBase_o *__fastcall ClassBoardSelectViewManager__GetTaskOfFirstTrans
     sub_B16FFC(&SchedulerTaskBase_TaskCallback_TypeInfo, v6);
     sub_B16FFC(&Method_ClassBoardSelectViewManager___c__GetTaskOfFirstTransition_b__36_0__, v7);
     sub_B16FFC(&ClassBoardSelectViewManager___c_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_6521, v9);
+    sub_B16FFC(&StringLiteral_6521/*"FadeStart"*/, v9);
     byte_40FB9E2 = 1;
   }
   FirstTransitionAnimName = ClassBoardSelectViewManager__GetFirstTransitionAnimName(this, method);
@@ -1133,7 +1133,7 @@ SchedulerTaskBase_o *__fastcall ClassBoardSelectViewManager__GetTaskOfFirstTrans
   EventTime = ClassBoardSelectViewManager__GetEventTime(
                 (ClassBoardSelectViewManager_o *)Clip,
                 Clip,
-                (System_String_o *)StringLiteral_6521,
+                (System_String_o *)StringLiteral_6521/*"FadeStart"*/,
                 0.0,
                 v13);
   anim = this->fields.anim;
@@ -1882,8 +1882,8 @@ void __fastcall ClassBoardSelectViewManager__OnClickIcon(
     sub_B16FFC(&Method_ClassBoardSelectViewManager___c__OnClickIcon_b__35_0__, v9);
     sub_B16FFC(&Method_ClassBoardSelectViewManager___c__OnClickIcon_b__35_1__, v10);
     sub_B16FFC(&ClassBoardSelectViewManager___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_2982, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_2982/*"CLASS_BOARD_BASE_UNRELEASED"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FB9E1 = 1;
   }
   v14 = Method_ClassBoardSelectViewManager_OnClickIcon__;
@@ -1920,7 +1920,7 @@ LABEL_39:
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v24 = icon->fields._Entity_k__BackingField;
       v25 = (CommonUI_o *)Instance;
-      v26 = (System_String_o *)StringLiteral_1;
+      v26 = (System_String_o *)StringLiteral_1/*""*/;
       if ( v24 )
         closedMessage = v24->fields.closedMessage;
       else
@@ -1968,7 +1968,7 @@ LABEL_39:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_2982, 0LL);
+    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_2982/*"CLASS_BOARD_BASE_UNRELEASED"*/, 0LL);
     v33 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v34 = ClassBoardSelectViewManager___c_TypeInfo;
     if ( (BYTE3(ClassBoardSelectViewManager___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1979,7 +1979,7 @@ LABEL_39:
     }
     v35 = v34->static_fields;
     _9__35_1 = v35->__9__35_1;
-    v37 = (System_String_o *)StringLiteral_1;
+    v37 = (System_String_o *)StringLiteral_1/*""*/;
     if ( !_9__35_1 )
     {
       if ( (BYTE3(v34->vtable._0_Equals.methodPtr) & 4) != 0 && !v34->_2.cctor_finished )
@@ -2402,8 +2402,8 @@ void __fastcall ClassBoardSelectViewManager__SetupClassBoardUIController(
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_ClassBoardUIController___, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_19596, v9);
-    sub_B16FFC(&StringLiteral_3022, v10);
+    sub_B16FFC(&StringLiteral_19596/*"img_txt_classscore_main"*/, v9);
+    sub_B16FFC(&StringLiteral_3022/*"CLASS_BOARD_SELECT_HEADER_MESSAGE"*/, v10);
     byte_40FB9E7 = 1;
   }
   resourceCatalog = this->fields.resourceCatalog;
@@ -2522,7 +2522,7 @@ LABEL_23:
   ClassBoardUIController__SetHeaderTitle(
     v55,
     *(AtlasManagerUnit_o **)(v59 + 120),
-    (System_String_o *)StringLiteral_19596,
+    (System_String_o *)StringLiteral_19596/*"img_txt_classscore_main"*/,
     v60);
   ClassBoardSelectViewManager__SetUpHeaderItemList(this, v61);
   v62 = this->fields.resourceCatalog;
@@ -2557,7 +2557,7 @@ LABEL_32:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3022, 0LL);
+  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3022/*"CLASS_BOARD_SELECT_HEADER_MESSAGE"*/, 0LL);
   if ( !v64 )
 LABEL_40:
     sub_B170D4();
@@ -2790,7 +2790,7 @@ bool __fastcall ClassBoardSelectViewManager__ValidateBoardUIAtlas(
   if ( (byte_40FB9DD & 1) == 0 )
   {
     sub_B16FFC(&IClassBoardResourceCatalog_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19596, v3);
+    sub_B16FFC(&StringLiteral_19596/*"img_txt_classscore_main"*/, v3);
     byte_40FB9DD = 1;
   }
   resourceCatalog = this->fields.resourceCatalog;
@@ -2821,7 +2821,7 @@ LABEL_8:
   if ( !v9 || (v10 = *(AtlasManagerUnit_o **)(v9 + 120)) == 0LL )
 LABEL_13:
     sub_B170D4();
-  return AtlasManagerUnit__ValidateLoadSprite(v10, (System_String_o *)StringLiteral_19596, 0LL);
+  return AtlasManagerUnit__ValidateLoadSprite(v10, (System_String_o *)StringLiteral_19596/*"img_txt_classscore_main"*/, 0LL);
 }
 
 

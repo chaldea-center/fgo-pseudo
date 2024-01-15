@@ -366,9 +366,9 @@ void __fastcall BattleServantSkillIConComponent__SetSkillInfo(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, skillInfo);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_19287, v15);
-    sub_B16FFC(&StringLiteral_19285, v16);
-    sub_B16FFC(&StringLiteral_19286, v17);
+    sub_B16FFC(&StringLiteral_19287/*"icon_sealact_skill"*/, v15);
+    sub_B16FFC(&StringLiteral_19285/*"icon_sealact_disable"*/, v16);
+    sub_B16FFC(&StringLiteral_19286/*"icon_sealact_seal"*/, v17);
     byte_40FCD2B = 1;
   }
   this->fields.skillInfo = skillInfo;
@@ -497,7 +497,7 @@ LABEL_57:
     v56 = this->fields.noActSprite;
     if ( v56 )
     {
-      UISprite__set_spriteName(v56, (System_String_o *)StringLiteral_19287, 0LL);
+      UISprite__set_spriteName(v56, (System_String_o *)StringLiteral_19287/*"icon_sealact_skill"*/, 0LL);
       BattleServantSkillIConComponent__stopSealActSprite(this, v57);
       v10 = noActTurn;
       if ( isActSkill )
@@ -509,7 +509,7 @@ LABEL_57:
   v51 = this->fields.noActSprite;
   if ( !v51 )
     goto LABEL_57;
-  UISprite__set_spriteName(v51, (System_String_o *)StringLiteral_19286, 0LL);
+  UISprite__set_spriteName(v51, (System_String_o *)StringLiteral_19286/*"icon_sealact_seal"*/, 0LL);
   BattleServantSkillIConComponent__stopSealActSprite(this, v52);
   if ( IsSealSkillSelect )
   {
@@ -519,7 +519,7 @@ LABEL_57:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(v54, (System_String_o *)StringLiteral_19285, 0LL);
+    AtlasManager__SetEventSprite(v54, (System_String_o *)StringLiteral_19285/*"icon_sealact_disable"*/, 0LL);
   }
   if ( !isActSkill )
 LABEL_48:
@@ -616,8 +616,8 @@ void __fastcall BattleServantSkillIConComponent__SetUseCond(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
     sub_B16FFC(&string_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_2443, v13);
-    sub_B16FFC(&StringLiteral_22057, v14);
+    sub_B16FFC(&StringLiteral_2443/*"BATTLE_MASTER_SKILL_ADD_NOT_OPEN_COND_COLOR"*/, v13);
+    sub_B16FFC(&StringLiteral_22057/*"skill_item_{0}"*/, v14);
     byte_40FCD3D = 1;
   }
   v70 = 0;
@@ -722,7 +722,7 @@ void __fastcall BattleServantSkillIConComponent__SetUseCond(
       {
         imageId = ItemInfo->fields.imageId;
         v50 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageId);
-        v51 = System_String__Format((System_String_o *)StringLiteral_22057, v50, 0LL);
+        v51 = System_String__Format((System_String_o *)StringLiteral_22057/*"skill_item_{0}"*/, v50, 0LL);
         if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !AtlasManager_TypeInfo->_2.cctor_finished )
         {
@@ -766,7 +766,7 @@ void __fastcall BattleServantSkillIConComponent__SetUseCond(
       {
         imageId = ItemData->fields.imageId;
         v59 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageId);
-        v60 = System_String__Format((System_String_o *)StringLiteral_22057, v59, 0LL);
+        v60 = System_String__Format((System_String_o *)StringLiteral_22057/*"skill_item_{0}"*/, v59, 0LL);
         if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !AtlasManager_TypeInfo->_2.cctor_finished )
         {
@@ -807,7 +807,7 @@ void __fastcall BattleServantSkillIConComponent__SetUseCond(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v67 = LocalizationManager__Get((System_String_o *)StringLiteral_2443, 0LL);
+  v67 = LocalizationManager__Get((System_String_o *)StringLiteral_2443/*"BATTLE_MASTER_SKILL_ADD_NOT_OPEN_COND_COLOR"*/, 0LL);
   imageId = v70;
   v68 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageId);
   v66 = System_String__Format(v67, v68, 0LL);
@@ -920,7 +920,7 @@ bool __fastcall BattleServantSkillIConComponent__UpdateSkillRankUpEffect(
   {
     sub_B16FFC(&BattleRankUpSkillInfoData_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_18168, v4);
+    sub_B16FFC(&StringLiteral_18168/*"effect/data/effect/ef_skill_rankup01"*/, v4);
     byte_40FCD38 = 1;
   }
   skillInfo = this->fields.skillInfo;
@@ -951,7 +951,7 @@ bool __fastcall BattleServantSkillIConComponent__UpdateSkillRankUpEffect(
               {
                 v9 = BattleServantSkillIConComponent__PlayRankUpEffect(
                        this,
-                       (System_String_o *)StringLiteral_18168,
+                       (System_String_o *)StringLiteral_18168/*"effect/data/effect/ef_skill_rankup01"*/,
                        this->fields.rankupRoot,
                        v13 != 1,
                        v15);
@@ -1115,9 +1115,9 @@ void __fastcall BattleServantSkillIConComponent__completeSealActSpriteValues(
   if ( (byte_40FCD30 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19287, v3);
-    sub_B16FFC(&StringLiteral_19285, v4);
-    sub_B16FFC(&StringLiteral_19286, v5);
+    sub_B16FFC(&StringLiteral_19287/*"icon_sealact_skill"*/, v3);
+    sub_B16FFC(&StringLiteral_19285/*"icon_sealact_disable"*/, v4);
+    sub_B16FFC(&StringLiteral_19286/*"icon_sealact_seal"*/, v5);
     byte_40FCD30 = 1;
   }
   isTweenReverse = this->fields.isTweenReverse;
@@ -1132,7 +1132,7 @@ void __fastcall BattleServantSkillIConComponent__completeSealActSpriteValues(
     }
     if ( this->fields.isNoSkillSprite )
     {
-      UISprite__set_spriteName(v8, (System_String_o *)StringLiteral_19286, 0LL);
+      UISprite__set_spriteName(v8, (System_String_o *)StringLiteral_19286/*"icon_sealact_seal"*/, 0LL);
       BattleServantSkillIConComponent__setTurnLabel(this, this->fields.tweenNoSkillTurn, v9);
       isTweenSealSkillSelect = this->fields.isTweenSealSkillSelect;
       this->fields.isNoSkillSprite = 0;
@@ -1144,12 +1144,12 @@ void __fastcall BattleServantSkillIConComponent__completeSealActSpriteValues(
         {
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         }
-        AtlasManager__SetEventSprite(v11, (System_String_o *)StringLiteral_19285, 0LL);
+        AtlasManager__SetEventSprite(v11, (System_String_o *)StringLiteral_19285/*"icon_sealact_disable"*/, 0LL);
       }
     }
     else
     {
-      UISprite__set_spriteName(v8, (System_String_o *)StringLiteral_19287, 0LL);
+      UISprite__set_spriteName(v8, (System_String_o *)StringLiteral_19287/*"icon_sealact_skill"*/, 0LL);
       BattleServantSkillIConComponent__setTurnLabel(this, this->fields.tweenNoActTurn, v12);
       this->fields.isNoSkillSprite = 1;
     }
@@ -1312,7 +1312,7 @@ void __fastcall BattleServantSkillIConComponent__setTurnLabel(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&turn);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23445, v6);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v6);
     byte_40FCD2D = 1;
   }
   turnNoLabelBase = (UnityEngine_Object_o *)this->fields.turnNoLabelBase;
@@ -1339,7 +1339,7 @@ void __fastcall BattleServantSkillIConComponent__setTurnLabel(
     v11 = turn + 1 >= 0 ? turn + 1 : turn + 2;
     v14 = BattleUtility__FloorToInt((float)(v11 >> 1), 0LL);
     v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
-    v13 = System_String__Format((System_String_o *)StringLiteral_23445, v12, 0LL);
+    v13 = System_String__Format((System_String_o *)StringLiteral_23445/*"{0}"*/, v12, 0LL);
     if ( !turnNoLabel )
 LABEL_17:
       sub_B170D4();
@@ -1371,7 +1371,7 @@ bool __fastcall BattleServantSkillIConComponent__showChageEffect(
 
   if ( (byte_40FCD37 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18176, method);
+    sub_B16FFC(&StringLiteral_18176/*"effect/ef_command_flash01"*/, method);
     byte_40FCD37 = 1;
   }
   skillInfo = this->fields.skillInfo;
@@ -1382,7 +1382,7 @@ bool __fastcall BattleServantSkillIConComponent__showChageEffect(
     || (transform = UnityEngine_GameObject__get_transform(root, 0LL),
         BaseMonoBehaviour__createObject_19257936(
           (BaseMonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_18176,
+          (System_String_o *)StringLiteral_18176/*"effect/ef_command_flash01"*/,
           transform,
           0LL,
           0LL),
@@ -1515,19 +1515,19 @@ void __fastcall BattleServantSkillIConComponent__startChangeSealActSprite(
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&noActTurn);
     sub_B16FFC(&object___TypeInfo, v9);
     sub_B16FFC(&float_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_18842, v11);
-    sub_B16FFC(&StringLiteral_20241, v12);
-    sub_B16FFC(&StringLiteral_22584, v13);
-    sub_B16FFC(&StringLiteral_21182, v14);
-    sub_B16FFC(&StringLiteral_21385, v15);
-    sub_B16FFC(&StringLiteral_18037, v16);
-    sub_B16FFC(&StringLiteral_22621, v17);
-    sub_B16FFC(&StringLiteral_22850, v18);
-    sub_B16FFC(&StringLiteral_17561, v19);
-    sub_B16FFC(&StringLiteral_18045, v20);
-    sub_B16FFC(&StringLiteral_19285, v21);
-    sub_B16FFC(&StringLiteral_19286, v22);
-    sub_B16FFC(&StringLiteral_21173, v23);
+    sub_B16FFC(&StringLiteral_18842/*"from"*/, v11);
+    sub_B16FFC(&StringLiteral_20241/*"loopType"*/, v12);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v13);
+    sub_B16FFC(&StringLiteral_21182/*"onupdate"*/, v14);
+    sub_B16FFC(&StringLiteral_21385/*"pingPong"*/, v15);
+    sub_B16FFC(&StringLiteral_18037/*"easeOutCirc"*/, v16);
+    sub_B16FFC(&StringLiteral_22621/*"to"*/, v17);
+    sub_B16FFC(&StringLiteral_22850/*"updateSealActSpriteValues"*/, v18);
+    sub_B16FFC(&StringLiteral_17561/*"completeSealActSpriteValues"*/, v19);
+    sub_B16FFC(&StringLiteral_18045/*"easeType"*/, v20);
+    sub_B16FFC(&StringLiteral_19285/*"icon_sealact_disable"*/, v21);
+    sub_B16FFC(&StringLiteral_19286/*"icon_sealact_seal"*/, v22);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v23);
     sub_B16FFC(&iTween_TypeInfo, v24);
     byte_40FCD2E = 1;
   }
@@ -1543,7 +1543,7 @@ void __fastcall BattleServantSkillIConComponent__startChangeSealActSprite(
     v27 = this->fields.noActSprite;
     if ( !v27 )
       goto LABEL_86;
-    UISprite__set_spriteName(v27, (System_String_o *)StringLiteral_19286, 0LL);
+    UISprite__set_spriteName(v27, (System_String_o *)StringLiteral_19286/*"icon_sealact_seal"*/, 0LL);
     this->fields.isTweenSealSkillSelect = IsSealSkillSelect;
     if ( IsSealSkillSelect )
     {
@@ -1553,7 +1553,7 @@ void __fastcall BattleServantSkillIConComponent__startChangeSealActSprite(
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      AtlasManager__SetEventSprite(v29, (System_String_o *)StringLiteral_19285, 0LL);
+      AtlasManager__SetEventSprite(v29, (System_String_o *)StringLiteral_19285/*"icon_sealact_disable"*/, 0LL);
     }
     BattleServantSkillIConComponent__setTurnLabel(this, this->fields.tweenNoSkillTurn, v28);
     *(_WORD *)&this->fields.isNoSkillSprite = 0;
@@ -1565,13 +1565,13 @@ void __fastcall BattleServantSkillIConComponent__startChangeSealActSprite(
 LABEL_86:
       sub_B170D4();
     v39 = (System_Object_array *)v32;
-    v40 = StringLiteral_18842;
-    if ( StringLiteral_18842 )
+    v40 = StringLiteral_18842/*"from"*/;
+    if ( StringLiteral_18842/*"from"*/ )
     {
-      v40 = sub_B170BC(StringLiteral_18842, v39->obj.klass->_1.element_class);
+      v40 = sub_B170BC(StringLiteral_18842/*"from"*/, v39->obj.klass->_1.element_class);
       if ( !v40 )
         goto LABEL_85;
-      v41 = (System_Int32_array **)StringLiteral_18842;
+      v41 = (System_Int32_array **)StringLiteral_18842/*"from"*/;
     }
     else
     {
@@ -1590,13 +1590,13 @@ LABEL_86:
         goto LABEL_84;
       v39->m_Items[1] = (Il2CppObject *)v47;
       sub_B16F98((BattleServantConfConponent_o *)&v39->m_Items[1], v47, v33, v42, v43, v44, v45, v46);
-      v40 = StringLiteral_22621;
-      if ( StringLiteral_22621 )
+      v40 = StringLiteral_22621/*"to"*/;
+      if ( StringLiteral_22621/*"to"*/ )
       {
-        v40 = sub_B170BC(StringLiteral_22621, v39->obj.klass->_1.element_class);
+        v40 = sub_B170BC(StringLiteral_22621/*"to"*/, v39->obj.klass->_1.element_class);
         if ( !v40 )
           goto LABEL_85;
-        v41 = (System_Int32_array **)StringLiteral_22621;
+        v41 = (System_Int32_array **)StringLiteral_22621/*"to"*/;
       }
       else
       {
@@ -1615,13 +1615,13 @@ LABEL_86:
           goto LABEL_84;
         v39->m_Items[3] = (Il2CppObject *)v58;
         sub_B16F98((BattleServantConfConponent_o *)&v39->m_Items[3], v58, v33, v53, v54, v55, v56, v57);
-        v40 = StringLiteral_21182;
-        if ( StringLiteral_21182 )
+        v40 = StringLiteral_21182/*"onupdate"*/;
+        if ( StringLiteral_21182/*"onupdate"*/ )
         {
-          v40 = sub_B170BC(StringLiteral_21182, v39->obj.klass->_1.element_class);
+          v40 = sub_B170BC(StringLiteral_21182/*"onupdate"*/, v39->obj.klass->_1.element_class);
           if ( !v40 )
             goto LABEL_85;
-          v41 = (System_Int32_array **)StringLiteral_21182;
+          v41 = (System_Int32_array **)StringLiteral_21182/*"onupdate"*/;
         }
         else
         {
@@ -1631,13 +1631,13 @@ LABEL_86:
           goto LABEL_84;
         v39->m_Items[4] = (Il2CppObject *)v41;
         sub_B16F98((BattleServantConfConponent_o *)&v39->m_Items[4], v41, v33, v59, v60, v61, v62, v63);
-        v40 = StringLiteral_22850;
-        if ( StringLiteral_22850 )
+        v40 = StringLiteral_22850/*"updateSealActSpriteValues"*/;
+        if ( StringLiteral_22850/*"updateSealActSpriteValues"*/ )
         {
-          v40 = sub_B170BC(StringLiteral_22850, v39->obj.klass->_1.element_class);
+          v40 = sub_B170BC(StringLiteral_22850/*"updateSealActSpriteValues"*/, v39->obj.klass->_1.element_class);
           if ( !v40 )
             goto LABEL_85;
-          v41 = (System_Int32_array **)StringLiteral_22850;
+          v41 = (System_Int32_array **)StringLiteral_22850/*"updateSealActSpriteValues"*/;
         }
         else
         {
@@ -1647,13 +1647,13 @@ LABEL_86:
           goto LABEL_84;
         v39->m_Items[5] = (Il2CppObject *)v41;
         sub_B16F98((BattleServantConfConponent_o *)&v39->m_Items[5], v41, v33, v64, v65, v66, v67, v68);
-        v40 = StringLiteral_21173;
-        if ( StringLiteral_21173 )
+        v40 = StringLiteral_21173/*"oncomplete"*/;
+        if ( StringLiteral_21173/*"oncomplete"*/ )
         {
-          v40 = sub_B170BC(StringLiteral_21173, v39->obj.klass->_1.element_class);
+          v40 = sub_B170BC(StringLiteral_21173/*"oncomplete"*/, v39->obj.klass->_1.element_class);
           if ( !v40 )
             goto LABEL_85;
-          v41 = (System_Int32_array **)StringLiteral_21173;
+          v41 = (System_Int32_array **)StringLiteral_21173/*"oncomplete"*/;
         }
         else
         {
@@ -1663,13 +1663,13 @@ LABEL_86:
           goto LABEL_84;
         v39->m_Items[6] = (Il2CppObject *)v41;
         sub_B16F98((BattleServantConfConponent_o *)&v39->m_Items[6], v41, v33, v69, v70, v71, v72, v73);
-        v40 = StringLiteral_17561;
-        if ( StringLiteral_17561 )
+        v40 = StringLiteral_17561/*"completeSealActSpriteValues"*/;
+        if ( StringLiteral_17561/*"completeSealActSpriteValues"*/ )
         {
-          v40 = sub_B170BC(StringLiteral_17561, v39->obj.klass->_1.element_class);
+          v40 = sub_B170BC(StringLiteral_17561/*"completeSealActSpriteValues"*/, v39->obj.klass->_1.element_class);
           if ( !v40 )
             goto LABEL_85;
-          v41 = (System_Int32_array **)StringLiteral_17561;
+          v41 = (System_Int32_array **)StringLiteral_17561/*"completeSealActSpriteValues"*/;
         }
         else
         {
@@ -1679,13 +1679,13 @@ LABEL_86:
           goto LABEL_84;
         v39->m_Items[7] = (Il2CppObject *)v41;
         sub_B16F98((BattleServantConfConponent_o *)&v39->m_Items[7], v41, v33, v74, v75, v76, v77, v78);
-        v40 = StringLiteral_20241;
-        if ( StringLiteral_20241 )
+        v40 = StringLiteral_20241/*"loopType"*/;
+        if ( StringLiteral_20241/*"loopType"*/ )
         {
-          v40 = sub_B170BC(StringLiteral_20241, v39->obj.klass->_1.element_class);
+          v40 = sub_B170BC(StringLiteral_20241/*"loopType"*/, v39->obj.klass->_1.element_class);
           if ( !v40 )
             goto LABEL_85;
-          v41 = (System_Int32_array **)StringLiteral_20241;
+          v41 = (System_Int32_array **)StringLiteral_20241/*"loopType"*/;
         }
         else
         {
@@ -1695,13 +1695,13 @@ LABEL_86:
           goto LABEL_84;
         v39->m_Items[8] = (Il2CppObject *)v41;
         sub_B16F98((BattleServantConfConponent_o *)&v39->m_Items[8], v41, v33, v79, v80, v81, v82, v83);
-        v40 = StringLiteral_21385;
-        if ( StringLiteral_21385 )
+        v40 = StringLiteral_21385/*"pingPong"*/;
+        if ( StringLiteral_21385/*"pingPong"*/ )
         {
-          v40 = sub_B170BC(StringLiteral_21385, v39->obj.klass->_1.element_class);
+          v40 = sub_B170BC(StringLiteral_21385/*"pingPong"*/, v39->obj.klass->_1.element_class);
           if ( !v40 )
             goto LABEL_85;
-          v41 = (System_Int32_array **)StringLiteral_21385;
+          v41 = (System_Int32_array **)StringLiteral_21385/*"pingPong"*/;
         }
         else
         {
@@ -1711,13 +1711,13 @@ LABEL_86:
           goto LABEL_84;
         v39->m_Items[9] = (Il2CppObject *)v41;
         sub_B16F98((BattleServantConfConponent_o *)&v39->m_Items[9], v41, v33, v84, v85, v86, v87, v88);
-        v40 = StringLiteral_18045;
-        if ( StringLiteral_18045 )
+        v40 = StringLiteral_18045/*"easeType"*/;
+        if ( StringLiteral_18045/*"easeType"*/ )
         {
-          v40 = sub_B170BC(StringLiteral_18045, v39->obj.klass->_1.element_class);
+          v40 = sub_B170BC(StringLiteral_18045/*"easeType"*/, v39->obj.klass->_1.element_class);
           if ( !v40 )
             goto LABEL_85;
-          v41 = (System_Int32_array **)StringLiteral_18045;
+          v41 = (System_Int32_array **)StringLiteral_18045/*"easeType"*/;
         }
         else
         {
@@ -1727,13 +1727,13 @@ LABEL_86:
           goto LABEL_84;
         v39->m_Items[10] = (Il2CppObject *)v41;
         sub_B16F98((BattleServantConfConponent_o *)&v39->m_Items[10], v41, v33, v89, v90, v91, v92, v93);
-        v40 = StringLiteral_18037;
-        if ( StringLiteral_18037 )
+        v40 = StringLiteral_18037/*"easeOutCirc"*/;
+        if ( StringLiteral_18037/*"easeOutCirc"*/ )
         {
-          v40 = sub_B170BC(StringLiteral_18037, v39->obj.klass->_1.element_class);
+          v40 = sub_B170BC(StringLiteral_18037/*"easeOutCirc"*/, v39->obj.klass->_1.element_class);
           if ( !v40 )
             goto LABEL_85;
-          v41 = (System_Int32_array **)StringLiteral_18037;
+          v41 = (System_Int32_array **)StringLiteral_18037/*"easeOutCirc"*/;
         }
         else
         {
@@ -1743,13 +1743,13 @@ LABEL_86:
           goto LABEL_84;
         v39->m_Items[11] = (Il2CppObject *)v41;
         sub_B16F98((BattleServantConfConponent_o *)&v39->m_Items[11], v41, v33, v94, v95, v96, v97, v98);
-        v40 = StringLiteral_22584;
-        if ( StringLiteral_22584 )
+        v40 = StringLiteral_22584/*"time"*/;
+        if ( StringLiteral_22584/*"time"*/ )
         {
-          v40 = sub_B170BC(StringLiteral_22584, v39->obj.klass->_1.element_class);
+          v40 = sub_B170BC(StringLiteral_22584/*"time"*/, v39->obj.klass->_1.element_class);
           if ( !v40 )
             goto LABEL_85;
-          v41 = (System_Int32_array **)StringLiteral_22584;
+          v41 = (System_Int32_array **)StringLiteral_22584/*"time"*/;
         }
         else
         {

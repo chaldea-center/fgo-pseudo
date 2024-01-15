@@ -306,11 +306,11 @@ System_String_o *__fastcall BattleActorAnimationEffect__MakeTriggerKey(
 {
   if ( (byte_40FDA74 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23532, eventTag);
+    sub_B16FFC(&StringLiteral_23532/*"{0}:{1}"*/, eventTag);
     byte_40FDA74 = 1;
   }
   return System_String__Format_43739268(
-           (System_String_o *)StringLiteral_23532,
+           (System_String_o *)StringLiteral_23532/*"{0}:{1}"*/,
            (Il2CppObject *)animName,
            (Il2CppObject *)eventTag,
            0LL);
@@ -448,11 +448,11 @@ void __fastcall BattleActorAnimationEffect_DisplayTrigger___ctor(
   if ( (byte_40F9187 & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F9187 = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_1;
-  this->fields.eventTag = (struct System_String_o *)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.eventTag = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.eventTag, v10, v2, v3, v4, v5, v6, v7);
   v12 = (struct System_Int32_array *)sub_B17014(int___TypeInfo, 0LL, v11);
   this->fields.targetSvtLimits = v12;

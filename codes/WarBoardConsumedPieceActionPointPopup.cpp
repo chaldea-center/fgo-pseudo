@@ -185,8 +185,8 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__OpenNoticePopup(
     sub_B16FFC(&Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__, v15);
     sub_B16FFC(&Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Item__, v16);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_15179, v18);
-    sub_B16FFC(&StringLiteral_15180, v19);
+    sub_B16FFC(&StringLiteral_15179/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_CLOSE"*/, v18);
+    sub_B16FFC(&StringLiteral_15180/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_MESSAGE"*/, v19);
     byte_40F897A = 1;
   }
   this->fields.clickCallback = clickCallback;
@@ -204,7 +204,7 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__OpenNoticePopup(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_15180, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_15180/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_MESSAGE"*/, 0LL);
   v47 = consumedPoint;
   v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v47);
   v22 = System_String__Format(v20, v21, 0LL);
@@ -266,7 +266,7 @@ LABEL_17:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_15179, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_15179/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_CLOSE"*/, 0LL);
   if ( !closeButtonLabel )
     goto LABEL_40;
   UILabel__set_text(closeButtonLabel, v37, 0LL);

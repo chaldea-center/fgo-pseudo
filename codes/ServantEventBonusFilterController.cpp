@@ -843,8 +843,8 @@ void __fastcall ServantEventBonusFilterController__SetupLabel(
   if ( (byte_40FD088 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_11854, v3);
-    sub_B16FFC(&StringLiteral_11852, v4);
+    sub_B16FFC(&StringLiteral_11854/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_TITLE"*/, v3);
+    sub_B16FFC(&StringLiteral_11852/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_EXPLANATION"*/, v4);
     byte_40FD088 = 1;
   }
   titleLabel = this->fields.titleLabel;
@@ -853,11 +853,11 @@ void __fastcall ServantEventBonusFilterController__SetupLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_11854, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_11854/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_TITLE"*/, 0LL);
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, v6, 0LL),
         explanationLabel = this->fields.explanationLabel,
-        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11852, 0LL),
+        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_11852/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_EXPLANATION"*/, 0LL),
         !explanationLabel) )
   {
     sub_B170D4();

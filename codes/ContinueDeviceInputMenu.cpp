@@ -214,25 +214,25 @@ void __fastcall ContinueDeviceInputMenu__Init(ContinueDeviceInputMenu_o *this, c
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Collider___, method);
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIInput___, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FBD95 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_15;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideLabel = this->fields.decideLabel;
   if ( !decideLabel )
     goto LABEL_15;
-  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   warningLabel1 = this->fields.warningLabel1;
   if ( !warningLabel1 )
     goto LABEL_15;
-  UILabel__set_text(warningLabel1, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(warningLabel1, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   warningLabel2 = this->fields.warningLabel2;
   if ( !warningLabel2 )
     goto LABEL_15;
-  UILabel__set_text(warningLabel2, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(warningLabel2, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   passward1Input = (UnityEngine_Component_o *)this->fields.passward1Input;
   if ( !passward1Input )
     goto LABEL_15;
@@ -248,9 +248,9 @@ void __fastcall ContinueDeviceInputMenu__Init(ContinueDeviceInputMenu_o *this, c
   if ( !v11 )
     goto LABEL_15;
   v13 = (UIInput_o *)v12;
-  UIInput__set_value(v11, (System_String_o *)StringLiteral_1, 0LL);
+  UIInput__set_value(v11, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !v13
-    || (UIInput__set_value(v13, (System_String_o *)StringLiteral_1, 0LL),
+    || (UIInput__set_value(v13, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (v14 = (UnityEngine_Collider_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                            (UnityEngine_Component_o *)v11,
                                            (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL)
@@ -296,9 +296,9 @@ void __fastcall ContinueDeviceInputMenu__OnChangeInput(ContinueDeviceInputMenu_o
   if ( (byte_40FBD99 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3367, v3);
-    sub_B16FFC(&StringLiteral_3366, v4);
-    sub_B16FFC(&StringLiteral_3374, v5);
+    sub_B16FFC(&StringLiteral_3367/*"CONTINUE_DEVICE_INPUT_PASSWARD_LOW"*/, v3);
+    sub_B16FFC(&StringLiteral_3366/*"CONTINUE_DEVICE_INPUT_PASSWARD_DIFFERENT"*/, v4);
+    sub_B16FFC(&StringLiteral_3374/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/, v5);
     byte_40FBD99 = 1;
   }
   passward1Input = this->fields.passward1Input;
@@ -325,7 +325,7 @@ void __fastcall ContinueDeviceInputMenu__OnChangeInput(ContinueDeviceInputMenu_o
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = &StringLiteral_3374;
+      v18 = &StringLiteral_3374/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/;
       goto LABEL_30;
     }
     goto LABEL_26;
@@ -343,7 +343,7 @@ LABEL_26:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = &StringLiteral_3367;
+    v18 = &StringLiteral_3367/*"CONTINUE_DEVICE_INPUT_PASSWARD_LOW"*/;
     goto LABEL_30;
   }
   v12 = 0;
@@ -375,7 +375,7 @@ LABEL_26:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3374, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3374/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/, 0LL);
     if ( warningLabel2 )
     {
       UILabel__set_text(warningLabel2, v22, 0LL);
@@ -390,7 +390,7 @@ LABEL_43:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v18 = &StringLiteral_3366;
+  v18 = &StringLiteral_3366/*"CONTINUE_DEVICE_INPUT_PASSWARD_DIFFERENT"*/;
 LABEL_30:
   v19 = LocalizationManager__Get((System_String_o *)*v18, 0LL);
   if ( !warningLabel2 )
@@ -520,13 +520,13 @@ void __fastcall ContinueDeviceInputMenu__Open(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIInput___, v11);
     sub_B16FFC(&Method_ContinueDeviceInputMenu_EndOpen__, v12);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_3365, v14);
-    sub_B16FFC(&StringLiteral_3362, v15);
-    sub_B16FFC(&StringLiteral_3363, v16);
-    sub_B16FFC(&StringLiteral_3368, v17);
-    sub_B16FFC(&StringLiteral_3364, v18);
-    sub_B16FFC(&StringLiteral_1, v19);
-    sub_B16FFC(&StringLiteral_3374, v20);
+    sub_B16FFC(&StringLiteral_3365/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN3"*/, v14);
+    sub_B16FFC(&StringLiteral_3362/*"CONTINUE_DEVICE_INPUT_DECIDE"*/, v15);
+    sub_B16FFC(&StringLiteral_3363/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN1"*/, v16);
+    sub_B16FFC(&StringLiteral_3368/*"CONTINUE_DEVICE_INPUT_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_3364/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN2"*/, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v19);
+    sub_B16FFC(&StringLiteral_3374/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/, v20);
     byte_40FBD96 = 1;
   }
   state = this->fields.state;
@@ -570,32 +570,32 @@ void __fastcall ContinueDeviceInputMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_3368, 0LL);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_3368/*"CONTINUE_DEVICE_INPUT_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_24;
     UILabel__set_text(titleLabel, v24, 0LL);
     explanation1Label = this->fields.explanation1Label;
-    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3363, 0LL);
+    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3363/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN1"*/, 0LL);
     if ( !explanation1Label )
       goto LABEL_24;
     UILabel__set_text(explanation1Label, v26, 0LL);
     warningLabel1 = this->fields.warningLabel1;
-    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3365, 0LL);
+    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3365/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN3"*/, 0LL);
     if ( !warningLabel1 )
       goto LABEL_24;
     UILabel__set_text(warningLabel1, v28, 0LL);
     warningLabel2 = this->fields.warningLabel2;
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3374, 0LL);
+    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3374/*"CONTINUE_DEVICE_WARNING_MESSAGE"*/, 0LL);
     if ( !warningLabel2 )
       goto LABEL_24;
     UILabel__set_text(warningLabel2, v30, 0LL);
     explanation2Label = this->fields.explanation2Label;
-    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3364, 0LL);
+    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3364/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN2"*/, 0LL);
     if ( !explanation2Label )
       goto LABEL_24;
     UILabel__set_text(explanation2Label, v32, 0LL);
     decideLabel = this->fields.decideLabel;
-    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3362, 0LL);
+    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3362/*"CONTINUE_DEVICE_INPUT_DECIDE"*/, 0LL);
     if ( !decideLabel )
       goto LABEL_24;
     UILabel__set_text(decideLabel, v34, 0LL);
@@ -612,8 +612,8 @@ void __fastcall ContinueDeviceInputMenu__Open(
             (UnityEngine_Component_o *)this->fields.passward2Input,
             (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UIInput___);
     if ( !v37
-      || (v39 = (UIInput_o *)v38, UIInput__set_value(v37, (System_String_o *)StringLiteral_1, 0LL), !v39)
-      || (UIInput__set_value(v39, (System_String_o *)StringLiteral_1, 0LL),
+      || (v39 = (UIInput_o *)v38, UIInput__set_value(v37, (System_String_o *)StringLiteral_1/*""*/, 0LL), !v39)
+      || (UIInput__set_value(v39, (System_String_o *)StringLiteral_1/*""*/, 0LL),
           (v40 = (UnityEngine_Collider_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                              (UnityEngine_Component_o *)v37,
                                              (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL)
@@ -626,7 +626,7 @@ LABEL_24:
       sub_B170D4();
     }
     UnityEngine_Collider__set_enabled(v41, 0, 0LL);
-    v42 = LocalizationManager__Get((System_String_o *)StringLiteral_3365, 0LL);
+    v42 = LocalizationManager__Get((System_String_o *)StringLiteral_3365/*"CONTINUE_DEVICE_INPUT_EXPLANATIOIN3"*/, 0LL);
     UIInput__set_defaultText(v37, v42, 0LL);
     UIInput__set_defaultText(v39, v42, 0LL);
     this->fields.state = 1;

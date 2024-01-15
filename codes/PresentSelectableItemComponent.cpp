@@ -142,11 +142,11 @@ int32_t __fastcall PresentSelectableItemComponent__setItemInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&NetworkManager_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_B16FFC(&StringLiteral_23433, v19);
-    sub_B16FFC(&StringLiteral_746, v20);
-    sub_B16FFC(&StringLiteral_10470, v21);
-    sub_B16FFC(&StringLiteral_278, v22);
-    sub_B16FFC(&StringLiteral_1, v23);
+    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v19);
+    sub_B16FFC(&StringLiteral_746/*"-"*/, v20);
+    sub_B16FFC(&StringLiteral_10470/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/, v21);
+    sub_B16FFC(&StringLiteral_278/*" ×{0}"*/, v22);
+    sub_B16FFC(&StringLiteral_1/*""*/, v23);
     byte_40FA003 = 1;
   }
   requireNum = 0;
@@ -178,26 +178,26 @@ int32_t __fastcall PresentSelectableItemComponent__setItemInfo(
   itemNameLb = this->fields.itemNameLb;
   if ( !itemNameLb )
     goto LABEL_53;
-  UILabel__set_text(itemNameLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(itemNameLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   currentNumLb = this->fields.currentNumLb;
   if ( !currentNumLb )
     goto LABEL_53;
-  UILabel__set_text(currentNumLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(currentNumLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   spendNumLb = this->fields.spendNumLb;
   if ( !spendNumLb )
     goto LABEL_53;
-  UILabel__set_text(spendNumLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(spendNumLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   itemDetailLb = this->fields.itemDetailLb;
   if ( !itemDetailLb )
     goto LABEL_53;
-  UILabel__set_text(itemDetailLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(itemDetailLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   currentInfoLb = this->fields.currentInfoLb;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_10470, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_10470/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/, 0LL);
   if ( !currentInfoLb )
     goto LABEL_53;
   UILabel__set_text(currentInfoLb, v36, 0LL);
@@ -272,13 +272,13 @@ int32_t __fastcall PresentSelectableItemComponent__setItemInfo(
                   name = v52->fields.name;
                   if ( this->fields.giftNum <= 1 )
                   {
-                    v56 = (System_String_o *)StringLiteral_1;
+                    v56 = (System_String_o *)StringLiteral_1/*""*/;
                   }
                   else
                   {
                     giftNum = this->fields.giftNum;
                     v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &giftNum);
-                    v56 = System_String__Format((System_String_o *)StringLiteral_278, v55, 0LL);
+                    v56 = System_String__Format((System_String_o *)StringLiteral_278/*" ×{0}"*/, v55, 0LL);
                   }
                   v57 = System_String__Concat_43743732(name, v56, 0LL);
                   if ( v53 )
@@ -313,7 +313,7 @@ int32_t __fastcall PresentSelectableItemComponent__setItemInfo(
                             v63 = this->fields.currentNumLb;
                             v77 = num;
                             v64 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v77);
-                            v65 = System_String__Format((System_String_o *)StringLiteral_23433, v64, 0LL);
+                            v65 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v64, 0LL);
                             if ( v63 )
                             {
                               UILabel__set_text(v63, v65, 0LL);

@@ -14,12 +14,12 @@ void __fastcall ServantLimitAddMaster___cctor(const MethodInfo *method)
   if ( (byte_40FC7F1 & 1) == 0 )
   {
     sub_B16FFC(&ServantLimitAddMaster_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18198, v8);
+    sub_B16FFC(&StringLiteral_18198/*"effectFolder"*/, v8);
     byte_40FC7F1 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ServantLimitAddMaster_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_18198;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18198;
+  v10 = (System_Int32_array **)StringLiteral_18198/*"effectFolder"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18198/*"effectFolder"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -194,8 +194,8 @@ System_String_o *__fastcall ServantLimitAddMaster__GetOverwriteTDName(
     sub_B16FFC(&int_TypeInfo, v12);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_B16FFC(&StringLiteral_9353, v15);
-    sub_B16FFC(&StringLiteral_9354, v16);
+    sub_B16FFC(&StringLiteral_9353/*"NP_NAME"*/, v15);
+    sub_B16FFC(&StringLiteral_9354/*"NP_NAME_LEVEL"*/, v16);
     byte_40FC7EC = 1;
   }
   entity = 0LL;
@@ -227,7 +227,7 @@ System_String_o *__fastcall ServantLimitAddMaster__GetOverwriteTDName(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v28 = LocalizationManager__Get((System_String_o *)StringLiteral_9353, 0LL);
+        v28 = LocalizationManager__Get((System_String_o *)StringLiteral_9353/*"NP_NAME"*/, 0LL);
         if ( entity )
         {
           v30 = v28;
@@ -242,7 +242,7 @@ System_String_o *__fastcall ServantLimitAddMaster__GetOverwriteTDName(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v22 = LocalizationManager__Get((System_String_o *)StringLiteral_9354, 0LL);
+        v22 = LocalizationManager__Get((System_String_o *)StringLiteral_9354/*"NP_NAME_LEVEL"*/, 0LL);
         if ( entity )
         {
           v24 = v22;

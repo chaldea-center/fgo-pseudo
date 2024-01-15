@@ -117,8 +117,8 @@ void __fastcall BattleSeManager__DownloadSoundAsset(
     sub_B16FFC(&Method_BattleSeManager_LoadEndAsset__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__, v8);
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_2180, v10);
-    sub_B16FFC(&StringLiteral_826, v11);
+    sub_B16FFC(&StringLiteral_2180/*"Audio/Battle"*/, v10);
+    sub_B16FFC(&StringLiteral_826/*".acb.bytes"*/, v11);
     byte_40F752B = 1;
   }
   if ( !this->fields.assetStorageList )
@@ -132,9 +132,9 @@ void __fastcall BattleSeManager__DownloadSoundAsset(
     (System_Xml_Schema_XmlSchemaObject_o *)callbackFunc,
     (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__);
   v13 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_2180,
+          (System_String_o *)StringLiteral_2180/*"Audio/Battle"*/,
           cat,
-          (System_String_o *)StringLiteral_826,
+          (System_String_o *)StringLiteral_826/*".acb.bytes"*/,
           0LL);
   v18 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v14, v15, v16, v17);
   AssetLoader_LoadEndDataHandler___ctor(v18, (Il2CppObject *)this, Method_BattleSeManager_LoadEndAsset__, 0LL);
@@ -280,8 +280,8 @@ void __fastcall BattleSeManager__LoadSoundAsset(
     sub_B16FFC(&Method_BattleSeManager_LoadEndAsset__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__, v8);
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_2180, v10);
-    sub_B16FFC(&StringLiteral_826, v11);
+    sub_B16FFC(&StringLiteral_2180/*"Audio/Battle"*/, v10);
+    sub_B16FFC(&StringLiteral_826/*".acb.bytes"*/, v11);
     byte_40F752A = 1;
   }
   if ( !this->fields.assetStorageList )
@@ -295,9 +295,9 @@ void __fastcall BattleSeManager__LoadSoundAsset(
     (System_Xml_Schema_XmlSchemaObject_o *)callbackFunc,
     (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__);
   v13 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_2180,
+          (System_String_o *)StringLiteral_2180/*"Audio/Battle"*/,
           cat,
-          (System_String_o *)StringLiteral_826,
+          (System_String_o *)StringLiteral_826/*".acb.bytes"*/,
           0LL);
   v18 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v14, v15, v16, v17);
   AssetLoader_LoadEndDataHandler___ctor(v18, (Il2CppObject *)this, Method_BattleSeManager_LoadEndAsset__, 0LL);

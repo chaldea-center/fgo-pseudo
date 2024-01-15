@@ -14,12 +14,12 @@ void __fastcall BattlePerformanceTurnSituationComponent___cctor(const MethodInfo
   if ( (byte_40FA8B9 & 1) == 0 )
   {
     sub_B16FFC(&BattlePerformanceTurnSituationComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_2525, v8);
+    sub_B16FFC(&StringLiteral_2525/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/, v8);
     byte_40FA8B9 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BattlePerformanceTurnSituationComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_2525;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2525;
+  v10 = (System_Int32_array **)StringLiteral_2525/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2525/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 

@@ -55,7 +55,7 @@ void __fastcall SupportSelectItemDrawDrop__DoReturnMove(SupportSelectItemDrawDro
   if ( (byte_40FD219 & 1) == 0 )
   {
     sub_B16FFC(&SupportSelectItemDrawDrop_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9974, v3);
+    sub_B16FFC(&StringLiteral_9974/*"OnFinishedReturnMove"*/, v3);
     byte_40FD219 = 1;
   }
   ListViewObj = SupportSelectItemDrawDrop__GetListViewObj(this, method);
@@ -99,8 +99,8 @@ LABEL_13:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v19->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v19->fields.eventReceiver, gameObject, v21, v22, v23, v24, v25, v26);
-  v27 = (System_Int32_array **)StringLiteral_9974;
-  v19->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9974;
+  v27 = (System_Int32_array **)StringLiteral_9974/*"OnFinishedReturnMove"*/;
+  v19->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9974/*"OnFinishedReturnMove"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v19->fields.callWhenFinished, v27, v28, v29, v30, v31, v32, v33);
 }
 
@@ -163,7 +163,7 @@ void __fastcall SupportSelectItemDrawDrop__DoSwapMove(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, target);
     sub_B16FFC(&SupportSelectItemDrawDrop_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_9975, v6);
+    sub_B16FFC(&StringLiteral_9975/*"OnFinishedSwapMove"*/, v6);
     byte_40FD217 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -212,8 +212,8 @@ void __fastcall SupportSelectItemDrawDrop__DoSwapMove(
     gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     v21->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
     sub_B16F98((BattleServantConfConponent_o *)&v21->fields.eventReceiver, gameObject, v23, v24, v25, v26, v27, v28);
-    v29 = (System_Int32_array **)StringLiteral_9975;
-    v21->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9975;
+    v29 = (System_Int32_array **)StringLiteral_9975/*"OnFinishedSwapMove"*/;
+    v21->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9975/*"OnFinishedSwapMove"*/;
     sub_B16F98((BattleServantConfConponent_o *)&v21->fields.callWhenFinished, v29, v30, v31, v32, v33, v34, v35);
     ListViewObj = SupportSelectItemDrawDrop__GetListViewObj(this, v36);
     this->fields.dropObject = target;
@@ -767,10 +767,10 @@ void __fastcall SupportSelectItemDrawDrop__OnFinishedSwapMove(
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v16);
     sub_B16FFC(&Method_SupportSelectItemDrawDrop___c__DisplayClass13_0__OnFinishedSwapMove_b__0__, v17);
     sub_B16FFC(&SupportSelectItemDrawDrop___c__DisplayClass13_0_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_10175, v19);
-    sub_B16FFC(&StringLiteral_3255, v20);
-    sub_B16FFC(&StringLiteral_3258, v21);
-    sub_B16FFC(&StringLiteral_1, v22);
+    sub_B16FFC(&StringLiteral_10175/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, v19);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v20);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v22);
     byte_40FD218 = 1;
   }
   skillName = 0LL;
@@ -835,8 +835,8 @@ void __fastcall SupportSelectItemDrawDrop__OnFinishedSwapMove(
   v78 = LeaderInfo;
   v79 = SupportSelectObject__GetLeaderInfo(*v73, v77);
   *(_QWORD *)actMaxRarity = 0LL;
-  v204 = (System_String_o *)StringLiteral_1;
-  skillName = (System_String_o *)StringLiteral_1;
+  v204 = (System_String_o *)StringLiteral_1/*""*/;
+  skillName = (System_String_o *)StringLiteral_1/*""*/;
   if ( !v78 )
     goto LABEL_132;
   v84 = v79;
@@ -1142,14 +1142,14 @@ LABEL_38:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v183 = LocalizationManager__Get((System_String_o *)StringLiteral_10175, 0LL);
+          v183 = LocalizationManager__Get((System_String_o *)StringLiteral_10175/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, 0LL);
           System_Text_StringBuilder__Append_41914240(v114, v183, 0LL);
           v184 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v185 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v114->klass->vtable._3_ToString.method)(
                                       v114,
                                       v114->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-          v186 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-          v187 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+          v186 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+          v187 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
           v192 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                           CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                           v188,
@@ -1165,7 +1165,7 @@ LABEL_38:
           {
             CommonUI__OpenConfirmDialog_18237500(
               v184,
-              (System_String_o *)StringLiteral_1,
+              (System_String_o *)StringLiteral_1/*""*/,
               v185,
               v186,
               v187,

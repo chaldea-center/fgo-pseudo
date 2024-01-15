@@ -112,11 +112,11 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&UserPresentHistoryDialog_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_10478, v4);
-    sub_B16FFC(&StringLiteral_10476, v5);
-    sub_B16FFC(&StringLiteral_10477, v6);
-    sub_B16FFC(&StringLiteral_3252, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_10478/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/, v4);
+    sub_B16FFC(&StringLiteral_10476/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/, v5);
+    sub_B16FFC(&StringLiteral_10477/*"PRESENT_HISTORY_DIALOG_TITLE"*/, v6);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F8084 = 1;
   }
   ((void (__fastcall *)(UserPresentHistoryDialog_o *, void *))this->klass->vtable._7_Init.method)(
@@ -142,7 +142,7 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_10476, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_10476/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/, 0LL);
   if ( !subTitle )
     goto LABEL_34;
   UILabel__set_text(subTitle, v14, 0LL);
@@ -157,9 +157,9 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
   subTitleSmall = this->fields.subTitleSmall;
   if ( !subTitleSmall )
     goto LABEL_34;
-  UILabel__set_text(subTitleSmall, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(subTitleSmall, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   titleLabel = this->fields.titleLabel;
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10477, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10477/*"PRESENT_HISTORY_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_34;
   UILabel__set_text(titleLabel, v19, 0LL);
@@ -181,7 +181,7 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_10478, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_10478/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/, 0LL);
   if ( !v23 )
 LABEL_34:
     sub_B170D4();
@@ -211,7 +211,7 @@ LABEL_23:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_34;
   UILabel__set_text(closeLabel, v30, 0LL);

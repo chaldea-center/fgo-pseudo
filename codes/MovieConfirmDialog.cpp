@@ -112,7 +112,7 @@ void __fastcall MovieConfirmDialog__Init(MovieConfirmDialog_o *this, const Metho
   if ( (byte_40F7D80 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F7D80 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
@@ -126,7 +126,7 @@ void __fastcall MovieConfirmDialog__Init(MovieConfirmDialog_o *this, const Metho
     v5 = this->fields.titleLabel;
     if ( !v5 )
       goto LABEL_29;
-    UILabel__set_text(v5, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v5, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   mainLabel = (UnityEngine_Object_o *)this->fields.mainLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -139,7 +139,7 @@ void __fastcall MovieConfirmDialog__Init(MovieConfirmDialog_o *this, const Metho
     v7 = this->fields.mainLabel;
     if ( !v7 )
       goto LABEL_29;
-    UILabel__set_text(v7, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -152,7 +152,7 @@ void __fastcall MovieConfirmDialog__Init(MovieConfirmDialog_o *this, const Metho
     v9 = this->fields.buttonDecideLabel;
     if ( !v9 )
       goto LABEL_29;
-    UILabel__set_text(v9, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v9, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   buttonCancelLabel = (UnityEngine_Object_o *)this->fields.buttonCancelLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -165,7 +165,7 @@ void __fastcall MovieConfirmDialog__Init(MovieConfirmDialog_o *this, const Metho
     v11 = this->fields.buttonCancelLabel;
     if ( !v11 )
       goto LABEL_29;
-    UILabel__set_text(v11, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v11, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   *(_WORD *)&this->fields.isButtonEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -328,8 +328,8 @@ void __fastcall MovieConfirmDialog__SetModeParam(
   if ( (byte_40F7D87 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&mode);
-    sub_B16FFC(&StringLiteral_10916, v11);
-    sub_B16FFC(&StringLiteral_10918, v12);
+    sub_B16FFC(&StringLiteral_10916/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_SUB_MESSAGE"*/, v11);
+    sub_B16FFC(&StringLiteral_10918/*"QUEST_MESSAGE_DLG_MOVIE_PLAY_SUB_MESSAGE"*/, v12);
     byte_40F7D87 = 1;
   }
   if ( mode == 1 )
@@ -341,7 +341,7 @@ void __fastcall MovieConfirmDialog__SetModeParam(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = &StringLiteral_10916;
+    v13 = &StringLiteral_10916/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_SUB_MESSAGE"*/;
   }
   else
   {
@@ -352,7 +352,7 @@ void __fastcall MovieConfirmDialog__SetModeParam(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = &StringLiteral_10918;
+    v13 = &StringLiteral_10918/*"QUEST_MESSAGE_DLG_MOVIE_PLAY_SUB_MESSAGE"*/;
   }
   v14 = LocalizationManager__Get((System_String_o *)*v13, 0LL);
   *subMessage = v14;
@@ -414,11 +414,11 @@ void __fastcall MovieConfirmDialog__Setup(
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
     sub_B16FFC(&Method_MovieConfirmDialog_EndOpen__, v16);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_26, v18);
-    sub_B16FFC(&StringLiteral_10915, v19);
-    sub_B16FFC(&StringLiteral_10910, v20);
-    sub_B16FFC(&StringLiteral_15791, v21);
-    sub_B16FFC(&StringLiteral_1, v22);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v18);
+    sub_B16FFC(&StringLiteral_10915/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_DECIDE"*/, v19);
+    sub_B16FFC(&StringLiteral_10910/*"QUEST_MESSAGE_DLG_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_15791/*"\\n"*/, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v22);
     byte_40F7D81 = 1;
   }
   v49 = 0LL;
@@ -448,7 +448,7 @@ void __fastcall MovieConfirmDialog__Setup(
     if ( title )
       v26 = title;
     else
-      v26 = (System_String_o *)StringLiteral_1;
+      v26 = (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v25, v26, 0LL);
   }
   mainLabel = (UnityEngine_Object_o *)this->fields.mainLabel;
@@ -463,13 +463,13 @@ void __fastcall MovieConfirmDialog__Setup(
       goto LABEL_52;
     v28 = System_String__Replace_43750968(
             message,
-            (System_String_o *)StringLiteral_15791,
-            (System_String_o *)StringLiteral_26,
+            (System_String_o *)StringLiteral_15791/*"\\n"*/,
+            (System_String_o *)StringLiteral_26/*"\n"*/,
             0LL);
     v29 = this->fields.mainLabel;
     if ( !v29 )
       goto LABEL_52;
-    v30 = v28 ? v28 : (System_String_o *)StringLiteral_1;
+    v30 = v28 ? v28 : (System_String_o *)StringLiteral_1/*""*/;
     WrapControlText__textAdjust(this->fields.mainLabel, v30, v29->fields.mFontSize, 0, 0, 0LL);
     v31 = (UnityEngine_Component_o *)this->fields.mainLabel;
     if ( !v31 )
@@ -488,7 +488,7 @@ void __fastcall MovieConfirmDialog__Setup(
     v34 = this->fields.subLabel;
     if ( !v34 )
       goto LABEL_52;
-    v35 = v49 ? v49 : (System_String_o *)StringLiteral_1;
+    v35 = v49 ? v49 : (System_String_o *)StringLiteral_1/*""*/;
     WrapControlText__textAdjust(v34, v35, v34->fields.mFontSize, 0, 0, 0LL);
     v36 = (UnityEngine_Component_o *)this->fields.subLabel;
     if ( !v36 )
@@ -510,7 +510,7 @@ void __fastcall MovieConfirmDialog__Setup(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_10915, 0LL);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_10915/*"QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_DECIDE"*/, 0LL);
     if ( !v39 )
       goto LABEL_52;
     UILabel__set_text(v39, v40, 0LL);
@@ -529,7 +529,7 @@ void __fastcall MovieConfirmDialog__Setup(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_10910, 0LL);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_10910/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0LL);
     if ( v42 )
     {
       UILabel__set_text(v42, v43, 0LL);

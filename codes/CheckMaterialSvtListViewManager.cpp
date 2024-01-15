@@ -1507,7 +1507,7 @@ void __fastcall CheckMaterialSvtListViewManager__RequestListObject(
     sub_B16FFC(&Method_CheckMaterialSvtListViewManager_OnMoveEnd__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_CheckMaterialSvtListViewObject__get_Count__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_CheckMaterialSvtListViewObject__get_Item__, v7);
-    sub_B16FFC(&StringLiteral_10004, v8);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v8);
     byte_40FAF57 = 1;
   }
   v9 = CheckMaterialSvtListViewManager__get_ObjectList(this, *(const MethodInfo **)&mode);
@@ -1520,7 +1520,7 @@ void __fastcall CheckMaterialSvtListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

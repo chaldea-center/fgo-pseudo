@@ -2203,9 +2203,9 @@ BattleActionData_o *__fastcall BattleLogicNomal__DeadChangePos(BattleLogicNomal_
   {
     sub_B16FFC(&BattleActionData_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_6350, v4);
-    sub_B16FFC(&StringLiteral_6348, v5);
-    sub_B16FFC(&StringLiteral_6352, v6);
+    sub_B16FFC(&StringLiteral_6350/*"FOCUS_UNDER"*/, v4);
+    sub_B16FFC(&StringLiteral_6348/*"FOCUS_CENTER"*/, v5);
+    sub_B16FFC(&StringLiteral_6352/*"FOCUS_UP"*/, v6);
     byte_40FC42B = 1;
   }
   data = this->fields.data;
@@ -2226,7 +2226,7 @@ BattleActionData_o *__fastcall BattleLogicNomal__DeadChangePos(BattleLogicNomal_
     if ( !this->fields.data )
       goto LABEL_45;
     v13 = v12;
-    v14 = (System_Int32_array **)StringLiteral_6348;
+    v14 = (System_Int32_array **)StringLiteral_6348/*"FOCUS_CENTER"*/;
     PartsActor = (UnityEngine_Object_o *)BattleData__GetPartsActor(this->fields.data, 1, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2245,7 +2245,7 @@ BattleActionData_o *__fastcall BattleLogicNomal__DeadChangePos(BattleLogicNomal_
         v21 = this->fields.data;
         if ( !v21 )
           goto LABEL_45;
-        v14 = (System_Int32_array **)StringLiteral_6348;
+        v14 = (System_Int32_array **)StringLiteral_6348/*"FOCUS_CENTER"*/;
         v21->fields.globaltargetId = PartsActor[17].fields.m_CachedPtr;
       }
     }
@@ -2273,7 +2273,7 @@ BattleActionData_o *__fastcall BattleLogicNomal__DeadChangePos(BattleLogicNomal_
       if ( !v25 )
         goto LABEL_45;
       m_CachedPtr = v29[17].fields.m_CachedPtr;
-      v27 = &StringLiteral_6350;
+      v27 = &StringLiteral_6350/*"FOCUS_UNDER"*/;
     }
     else
     {
@@ -2301,7 +2301,7 @@ BattleActionData_o *__fastcall BattleLogicNomal__DeadChangePos(BattleLogicNomal_
       if ( !v25 )
         goto LABEL_45;
       m_CachedPtr = v23[17].fields.m_CachedPtr;
-      v27 = &StringLiteral_6352;
+      v27 = &StringLiteral_6352/*"FOCUS_UP"*/;
     }
     v14 = (System_Int32_array **)*v27;
     v25->fields.globaltargetId = m_CachedPtr;
@@ -3108,7 +3108,7 @@ BattleActionData_o *__fastcall BattleLogicNomal__createBackStep(
   if ( (byte_40FC425 & 1) == 0 )
   {
     sub_B16FFC(&BattleActionData_TypeInfo, *(_QWORD *)&uniqueId);
-    sub_B16FFC(&StringLiteral_8760, v6);
+    sub_B16FFC(&StringLiteral_8760/*"MOTION_BACK"*/, v6);
     byte_40FC425 = 1;
   }
   v7 = sub_B170CC(BattleActionData_TypeInfo, *(_QWORD *)&uniqueId, method, v3, v4);
@@ -3116,8 +3116,8 @@ BattleActionData_o *__fastcall BattleLogicNomal__createBackStep(
   if ( !v7 )
     sub_B170D4();
   *(_DWORD *)(v7 + 32) = uniqueId;
-  v14 = (System_Int32_array **)StringLiteral_8760;
-  *(_QWORD *)(v7 + 64) = StringLiteral_8760;
+  v14 = (System_Int32_array **)StringLiteral_8760/*"MOTION_BACK"*/;
+  *(_QWORD *)(v7 + 64) = StringLiteral_8760/*"MOTION_BACK"*/;
   sub_B16F98((BattleServantConfConponent_o *)(v7 + 64), v14, v8, v9, v10, v11, v12, v13);
   return (BattleActionData_o *)v7;
 }
@@ -3456,8 +3456,8 @@ BattleActionData_o *__fastcall BattleLogicNomal__createComboOrder(
     sub_B16FFC(
       &Field__PrivateImplementationDetails__6E462A3A512B9CB4A6185FA60D2DAE01F4222A66EA50EDA56030DA3910331E5F,
       v10);
-    sub_B16FFC(&StringLiteral_6331, v11);
-    sub_B16FFC(&StringLiteral_6330, v12);
+    sub_B16FFC(&StringLiteral_6331/*"FIELD_PLAYER"*/, v11);
+    sub_B16FFC(&StringLiteral_6330/*"FIELD_ENEMY"*/, v12);
     byte_40FC426 = 1;
   }
   v13 = sub_B170CC(BattleActionData_TypeInfo, task, method, v3, v4);
@@ -3491,7 +3491,7 @@ LABEL_30:
         v30 = (BattleServantConfConponent_o *)(v19 + 32);
 LABEL_14:
         sub_B16F98(v30, v29, v22, v23, v24, v25, v26, v27);
-        v39 = &StringLiteral_6331;
+        v39 = &StringLiteral_6331/*"FIELD_PLAYER"*/;
 LABEL_15:
         v40 = (System_Int32_array **)*v39;
         *(_QWORD *)(v13 + 64) = *v39;
@@ -3526,7 +3526,7 @@ LABEL_29:
     {
       *(_QWORD *)(v19 + 32) = v47;
       sub_B16F98((BattleServantConfConponent_o *)(v19 + 32), (System_Int32_array **)v47, v48, v49, v50, v51, v52, v53);
-      v39 = &StringLiteral_6330;
+      v39 = &StringLiteral_6330/*"FIELD_ENEMY"*/;
       goto LABEL_15;
     }
     goto LABEL_29;
@@ -3849,7 +3849,7 @@ BattleActionData_o *__fastcall BattleLogicNomal__createEndTurnEnemy(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v29);
     sub_B16FFC(&Method_BattleLogicNomal___c__DisplayClass34_0__createEndTurnEnemy_b__0__, v30);
     sub_B16FFC(&BattleLogicNomal___c__DisplayClass34_0_TypeInfo, v31);
-    sub_B16FFC(&StringLiteral_8769, v32);
+    sub_B16FFC(&StringLiteral_8769/*"MOTION_ENEMY_TURN_END"*/, v32);
     byte_40FC42F = 1;
   }
   entity = 0LL;
@@ -3882,8 +3882,8 @@ BattleActionData_o *__fastcall BattleLogicNomal__createEndTurnEnemy(
     goto LABEL_215;
   BattleActionData__setStateField((BattleActionData_o *)v44, 0LL);
   baseActData = (BattleActionData_o *)v44;
-  v49 = (System_Int32_array **)StringLiteral_8769;
-  *(_QWORD *)(v44 + 64) = StringLiteral_8769;
+  v49 = (System_Int32_array **)StringLiteral_8769/*"MOTION_ENEMY_TURN_END"*/;
+  *(_QWORD *)(v44 + 64) = StringLiteral_8769/*"MOTION_ENEMY_TURN_END"*/;
   sub_B16F98((BattleServantConfConponent_o *)(v44 + 64), v49, v50, v51, v52, v53, v54, v55);
   v230 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B170CC(
                                                                                                     System_Collections_Generic_Dictionary_int__BattleBuffData_BuffData____TypeInfo,
@@ -4935,7 +4935,7 @@ BattleActionData_o *__fastcall BattleLogicNomal__createEndTurnPlayer(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v29);
     sub_B16FFC(&Method_BattleLogicNomal___c__DisplayClass31_0__createEndTurnPlayer_b__0__, v30);
     sub_B16FFC(&BattleLogicNomal___c__DisplayClass31_0_TypeInfo, v31);
-    sub_B16FFC(&StringLiteral_8773, v32);
+    sub_B16FFC(&StringLiteral_8773/*"MOTION_PLAYER_TURN_END"*/, v32);
     byte_40FC42C = 1;
   }
   entity = 0LL;
@@ -4968,8 +4968,8 @@ BattleActionData_o *__fastcall BattleLogicNomal__createEndTurnPlayer(
   if ( !actiondata )
     goto LABEL_213;
   BattleActionData__setStateField(actiondata, 0LL);
-  v49 = (System_Int32_array **)StringLiteral_8773;
-  actiondata->fields.motionname = (struct System_String_o *)StringLiteral_8773;
+  v49 = (System_Int32_array **)StringLiteral_8773/*"MOTION_PLAYER_TURN_END"*/;
+  actiondata->fields.motionname = (struct System_String_o *)StringLiteral_8773/*"MOTION_PLAYER_TURN_END"*/;
   sub_B16F98((BattleServantConfConponent_o *)&actiondata->fields.motionname, v49, v50, v51, v52, v53, v54, v55);
   v228 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B170CC(
                                                                                                     System_Collections_Generic_Dictionary_int__BattleBuffData_BuffData____TypeInfo,
@@ -5931,7 +5931,7 @@ BattleActionData_o *__fastcall BattleLogicNomal__createShiftServant(
   {
     sub_B16FFC(&BattleActionData_TypeInfo, task);
     sub_B16FFC(&BattleActionData_ShiftServant_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8777, v6);
+    sub_B16FFC(&StringLiteral_8777/*"MOTION_SHIFT"*/, v6);
     byte_40FC433 = 1;
   }
   if ( !task )
@@ -5948,8 +5948,8 @@ BattleActionData_o *__fastcall BattleLogicNomal__createShiftServant(
   if ( !v14 )
     goto LABEL_10;
   *(_DWORD *)(v14 + 32) = ServantData->fields.uniqueId;
-  v21 = (System_Int32_array **)StringLiteral_8777;
-  *(_QWORD *)(v14 + 64) = StringLiteral_8777;
+  v21 = (System_Int32_array **)StringLiteral_8777/*"MOTION_SHIFT"*/;
+  *(_QWORD *)(v14 + 64) = StringLiteral_8777/*"MOTION_SHIFT"*/;
   sub_B16F98((BattleServantConfConponent_o *)(v14 + 64), v21, v15, v16, v17, v18, v19, v20);
   v26 = (BattleActionData_ShiftServant_o *)sub_B170CC(BattleActionData_ShiftServant_TypeInfo, v22, v23, v24, v25);
   BattleActionData_ShiftServant___ctor(v26, 0LL);
@@ -5988,7 +5988,7 @@ BattleActionData_o *__fastcall BattleLogicNomal__createStartEnemyTurn(
   if ( (byte_40FC42A & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, task);
-    sub_B16FFC(&StringLiteral_11051, v5);
+    sub_B16FFC(&StringLiteral_11051/*"RESET_CAMERA_BAT"*/, v5);
     byte_40FC42A = 1;
   }
   BattleLogicNomal__createStartTurn(this, task, method);
@@ -6023,7 +6023,7 @@ BattleActionData_o *__fastcall BattleLogicNomal__createStartEnemyTurn(
           v14 = v13->fields.actioncamera;
           if ( v14 )
           {
-            BattleActionCamera__sendMainEvent(v14, (System_String_o *)StringLiteral_11051, 0LL);
+            BattleActionCamera__sendMainEvent(v14, (System_String_o *)StringLiteral_11051/*"RESET_CAMERA_BAT"*/, 0LL);
             return v8;
           }
         }
@@ -7503,16 +7503,16 @@ BattleLogicTask_array *__fastcall BattleLogicNomal__taskPlaySubEntryMotion(
     sub_B16FFC(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v12);
     sub_B16FFC(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_2519, v15);
-    sub_B16FFC(&StringLiteral_8770, v16);
-    sub_B16FFC(&StringLiteral_2517, v17);
-    sub_B16FFC(&StringLiteral_2518, v18);
-    sub_B16FFC(&StringLiteral_8771, v19);
+    sub_B16FFC(&StringLiteral_2519/*"BATTLE_SUBENTRY_PLAYER"*/, v15);
+    sub_B16FFC(&StringLiteral_8770/*"MOTION_ENTRY"*/, v16);
+    sub_B16FFC(&StringLiteral_2517/*"BATTLE_SUBENTRY_ENEMY"*/, v17);
+    sub_B16FFC(&StringLiteral_2518/*"BATTLE_SUBENTRY_ENEMY_UNKNOWN"*/, v18);
+    sub_B16FFC(&StringLiteral_8771/*"MOTION_ENTRY_TAC"*/, v19);
     byte_40FC428 = 1;
   }
-  v20 = (System_Int32_array ***)&StringLiteral_8771;
+  v20 = (System_Int32_array ***)&StringLiteral_8771/*"MOTION_ENTRY_TAC"*/;
   if ( !isTactical )
-    v20 = (System_Int32_array ***)&StringLiteral_8770;
+    v20 = (System_Int32_array ***)&StringLiteral_8770/*"MOTION_ENTRY"*/;
   v21 = *v20;
   v22 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_BattleLogicTask__TypeInfo,
@@ -7555,7 +7555,7 @@ BattleLogicTask_array *__fastcall BattleLogicNomal__taskPlaySubEntryMotion(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_2518, 0LL);
+      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_2518/*"BATTLE_SUBENTRY_ENEMY_UNKNOWN"*/, 0LL);
     }
     else
     {
@@ -7564,7 +7564,7 @@ BattleLogicTask_array *__fastcall BattleLogicNomal__taskPlaySubEntryMotion(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v63 = LocalizationManager__Get((System_String_o *)StringLiteral_2517, 0LL);
+      v63 = LocalizationManager__Get((System_String_o *)StringLiteral_2517/*"BATTLE_SUBENTRY_ENEMY"*/, 0LL);
       v64 = this->fields.data;
       if ( !v64 )
         goto LABEL_30;
@@ -7591,7 +7591,7 @@ LABEL_30:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_2519, 0LL);
+  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_2519/*"BATTLE_SUBENTRY_PLAYER"*/, 0LL);
   v48 = this->fields.data;
   if ( !v48 )
     goto LABEL_30;

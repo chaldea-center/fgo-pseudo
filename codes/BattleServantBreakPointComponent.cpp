@@ -83,10 +83,10 @@ void __fastcall BattleServantBreakPointComponent__Initialize(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v12);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v13);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_16871, v15);
-    sub_B16FFC(&StringLiteral_16869, v16);
-    sub_B16FFC(&StringLiteral_16870, v17);
-    sub_B16FFC(&StringLiteral_16868, v18);
+    sub_B16FFC(&StringLiteral_16871/*"break_on_boss"*/, v15);
+    sub_B16FFC(&StringLiteral_16869/*"break_off_boss"*/, v16);
+    sub_B16FFC(&StringLiteral_16870/*"break_on"*/, v17);
+    sub_B16FFC(&StringLiteral_16868/*"break_off"*/, v18);
     byte_40F89F8 = 1;
   }
   baseObj = this->fields.baseObj;
@@ -133,9 +133,9 @@ void __fastcall BattleServantBreakPointComponent__Initialize(
   v43.fields.z = v43.fields.x;
   UnityEngine_Transform__set_localScale(transform, v43, 0LL);
   breakPointSpr = this->fields.breakPointSpr;
-  v27 = &StringLiteral_16869;
+  v27 = &StringLiteral_16869/*"break_off_boss"*/;
   if ( !isEnemy )
-    v27 = &StringLiteral_16868;
+    v27 = &StringLiteral_16868/*"break_off"*/;
   v28 = (System_String_o *)*v27;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -146,9 +146,9 @@ LABEL_41:
     sub_B170D4();
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   v31 = (UISprite_o *)this[1].klass;
-  v32 = &StringLiteral_16871;
+  v32 = &StringLiteral_16871/*"break_on_boss"*/;
   if ( !isEnemy )
-    v32 = &StringLiteral_16870;
+    v32 = &StringLiteral_16870/*"break_on"*/;
   v33 = (System_String_o *)*v32;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);

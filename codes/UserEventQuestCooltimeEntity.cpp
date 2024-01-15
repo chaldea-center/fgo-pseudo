@@ -101,7 +101,7 @@ EventQuestCooltimeEntity_o *__fastcall UserEventQuestCooltimeEntity__GetMasterEn
     sub_B16FFC(&Method_DataMasterBase_getEntityFromKey_EventQuestCooltimeEntity___, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
     sub_B16FFC(&string___TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1223, v7);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v7);
     byte_40FABB3 = 1;
   }
   v8 = (System_String_array *)sub_B17014(string___TypeInfo, 5LL, v2);
@@ -120,13 +120,13 @@ LABEL_28:
     goto LABEL_26;
   v8->m_Items[0] = (System_String_o *)v17;
   sub_B16F98((BattleServantConfConponent_o *)v8->m_Items, v17, v11, v12, v13, v14, v15, v16);
-  v9 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v9 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v9 = (System_String_o *)sub_B170BC(StringLiteral_1223, v8->obj.klass->_1.element_class);
+    v9 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v8->obj.klass->_1.element_class);
     if ( !v9 )
       goto LABEL_27;
-    v10 = (System_Int32_array **)StringLiteral_1223;
+    v10 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -148,13 +148,13 @@ LABEL_28:
     goto LABEL_26;
   v8->m_Items[2] = (System_String_o *)v28;
   sub_B16F98((BattleServantConfConponent_o *)&v8->m_Items[2], v28, v11, v23, v24, v25, v26, v27);
-  v9 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v9 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v9 = (System_String_o *)sub_B170BC(StringLiteral_1223, v8->obj.klass->_1.element_class);
+    v9 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v8->obj.klass->_1.element_class);
     if ( !v9 )
       goto LABEL_27;
-    v10 = (System_Int32_array **)StringLiteral_1223;
+    v10 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {

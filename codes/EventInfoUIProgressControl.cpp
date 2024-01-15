@@ -14,12 +14,12 @@ void __fastcall EventInfoUIProgressControl___cctor(const MethodInfo *method)
   if ( (byte_40F8807 & 1) == 0 )
   {
     sub_B16FFC(&EventInfoUIProgressControl_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_5658, v8);
+    sub_B16FFC(&StringLiteral_5658/*"EVENT_PROGRESS_VALUE"*/, v8);
     byte_40F8807 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventInfoUIProgressControl_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_5658;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5658;
+  v10 = (System_Int32_array **)StringLiteral_5658/*"EVENT_PROGRESS_VALUE"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5658/*"EVENT_PROGRESS_VALUE"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -174,7 +174,7 @@ System_String_o *__fastcall EventInfoUIProgressControl__GetEventProgressValueSav
   if ( (byte_40F8805 & 1) == 0 )
   {
     sub_B16FFC(&EventInfoUIProgressControl_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15842, v2);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v2);
     byte_40F8805 = 1;
   }
   v3 = EventInfoUIProgressControl_TypeInfo;
@@ -186,7 +186,7 @@ System_String_o *__fastcall EventInfoUIProgressControl__GetEventProgressValueSav
   }
   SAVEKEY_EVENT_PROGRESS_VALUE = v3->static_fields->SAVEKEY_EVENT_PROGRESS_VALUE;
   v5 = System_Int32__ToString((int32_t)&v7, 0LL);
-  return System_String__Concat_43746016(SAVEKEY_EVENT_PROGRESS_VALUE, (System_String_o *)StringLiteral_15842, v5, 0LL);
+  return System_String__Concat_43746016(SAVEKEY_EVENT_PROGRESS_VALUE, (System_String_o *)StringLiteral_15842/*"_"*/, v5, 0LL);
 }
 
 

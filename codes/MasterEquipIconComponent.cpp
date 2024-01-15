@@ -174,7 +174,7 @@ void __fastcall MasterEquipIconComponent__SetEquipInfo(
   {
     sub_B16FFC(&int_TypeInfo, usrEquipData);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_8603, v13);
+    sub_B16FFC(&StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, v13);
     byte_40FB62E = 1;
   }
   condUsrLv = 0;
@@ -216,7 +216,7 @@ void __fastcall MasterEquipIconComponent__SetEquipInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_8603, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
   lv = usrEquipData->fields.lv;
   v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
   v24 = System_String__Format(v22, v23, 0LL);

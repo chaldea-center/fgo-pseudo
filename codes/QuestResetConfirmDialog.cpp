@@ -122,7 +122,7 @@ void __fastcall QuestResetConfirmDialog__Init(QuestResetConfirmDialog_o *this, c
   if ( (byte_40FD57A & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FD57A = 1;
   }
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
@@ -136,7 +136,7 @@ void __fastcall QuestResetConfirmDialog__Init(QuestResetConfirmDialog_o *this, c
     v5 = this->fields.buttonDecideLabel;
     if ( !v5 )
       goto LABEL_17;
-    UILabel__set_text(v5, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v5, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   buttonCancelLabel = (UnityEngine_Object_o *)this->fields.buttonCancelLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -149,7 +149,7 @@ void __fastcall QuestResetConfirmDialog__Init(QuestResetConfirmDialog_o *this, c
     v7 = this->fields.buttonCancelLabel;
     if ( !v7 )
       goto LABEL_17;
-    UILabel__set_text(v7, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   *(_WORD *)&this->fields.isButtonEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -358,12 +358,12 @@ void __fastcall QuestResetConfirmDialog__Setup(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v24);
     sub_B16FFC(&Method_QuestResetConfirmDialog_EndOpen__, v25);
     sub_B16FFC(&QuestResetConfirmDialog_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_10920, v27);
-    sub_B16FFC(&StringLiteral_10922, v28);
-    sub_B16FFC(&StringLiteral_10921, v29);
-    sub_B16FFC(&StringLiteral_10925, v30);
-    sub_B16FFC(&StringLiteral_10924, v31);
-    sub_B16FFC(&StringLiteral_10923, v32);
+    sub_B16FFC(&StringLiteral_10920/*"QUEST_MESSAGE_DLG_QUEST_RESET_CANCEL"*/, v27);
+    sub_B16FFC(&StringLiteral_10922/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG"*/, v28);
+    sub_B16FFC(&StringLiteral_10921/*"QUEST_MESSAGE_DLG_QUEST_RESET_DECIDE"*/, v29);
+    sub_B16FFC(&StringLiteral_10925/*"QUEST_MESSAGE_DLG_QUEST_RESET_TITLE"*/, v30);
+    sub_B16FFC(&StringLiteral_10924/*"QUEST_MESSAGE_DLG_QUEST_RESET_NAME"*/, v31);
+    sub_B16FFC(&StringLiteral_10923/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG_COND"*/, v32);
     byte_40FD57B = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -548,7 +548,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v75 = LocalizationManager__Get((System_String_o *)StringLiteral_10925, 0LL);
+              v75 = LocalizationManager__Get((System_String_o *)StringLiteral_10925/*"QUEST_MESSAGE_DLG_QUEST_RESET_TITLE"*/, 0LL);
               if ( !v74 )
                 goto LABEL_32;
               UILabel__set_text(v74, v75, 0LL);
@@ -577,7 +577,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v81 = LocalizationManager__Get((System_String_o *)StringLiteral_10924, 0LL);
+              v81 = LocalizationManager__Get((System_String_o *)StringLiteral_10924/*"QUEST_MESSAGE_DLG_QUEST_RESET_NAME"*/, 0LL);
               if ( !v80 )
                 goto LABEL_32;
               v82 = v81;
@@ -615,7 +615,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v88 = &StringLiteral_10923;
+                v88 = &StringLiteral_10923/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG_COND"*/;
               }
               else
               {
@@ -624,7 +624,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v88 = &StringLiteral_10922;
+                v88 = &StringLiteral_10922/*"QUEST_MESSAGE_DLG_QUEST_RESET_MSG"*/;
               }
               v89 = LocalizationManager__Get((System_String_o *)*v88, 0LL);
               if ( !v87 )
@@ -645,7 +645,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v92 = LocalizationManager__Get((System_String_o *)StringLiteral_10921, 0LL);
+              v92 = LocalizationManager__Get((System_String_o *)StringLiteral_10921/*"QUEST_MESSAGE_DLG_QUEST_RESET_DECIDE"*/, 0LL);
               if ( !v91 )
                 goto LABEL_32;
               UILabel__set_text(v91, v92, 0LL);
@@ -664,7 +664,7 @@ void __fastcall QuestResetConfirmDialog__Setup(
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v95 = LocalizationManager__Get((System_String_o *)StringLiteral_10920, 0LL);
+            v95 = LocalizationManager__Get((System_String_o *)StringLiteral_10920/*"QUEST_MESSAGE_DLG_QUEST_RESET_CANCEL"*/, 0LL);
             if ( v94 )
             {
               UILabel__set_text(v94, v95, 0LL);

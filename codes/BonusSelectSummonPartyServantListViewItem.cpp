@@ -704,7 +704,7 @@ bool __fastcall BonusSelectSummonPartyServantListViewItem__SetSortValue(
   {
     sub_B16FFC(&BonusSelectSummonPartyServantListViewItem_TypeInfo, sort);
     sub_B16FFC(&System_Math_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FB10D = 1;
   }
   *(_QWORD *)tdMaxLv = 0LL;
@@ -753,8 +753,8 @@ bool __fastcall BonusSelectSummonPartyServantListViewItem__SetSortValue(
 LABEL_23:
     sub_B170D4();
   this->fields.sortValue1 = v22->fields.collectionNo;
-  v23 = (System_Int32_array **)StringLiteral_1;
-  this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1;
+  v23 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.sortStr1, v23, v14, v15, v16, v17, v18, v19);
   this->fields.sortValue1B = 0LL;
   return 1;

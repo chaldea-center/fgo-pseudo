@@ -15,12 +15,12 @@ void __fastcall BlankEarthShortcutButtonListViewObject___cctor(const MethodInfo 
   if ( (byte_40FB0A3 & 1) == 0 )
   {
     sub_B16FFC(&BlankEarthShortcutButtonListViewObject_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_6013, v8);
+    sub_B16FFC(&StringLiteral_6013/*"EntryAnim"*/, v8);
     byte_40FB0A3 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BlankEarthShortcutButtonListViewObject_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_6013;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6013;
+  v10 = (System_Int32_array **)StringLiteral_6013/*"EntryAnim"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6013/*"EntryAnim"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   v11 = BlankEarthShortcutButtonListViewObject_TypeInfo;
   BlankEarthShortcutButtonListViewObject_TypeInfo->static_fields->FRAME_IN_ANIM_DURATION = 0.2;

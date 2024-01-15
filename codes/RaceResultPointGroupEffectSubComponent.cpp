@@ -23,17 +23,17 @@ void __fastcall RaceResultPointGroupEffectSubComponent___cctor(const MethodInfo 
   if ( (byte_40F8285 & 1) == 0 )
   {
     sub_B16FFC(&RaceResultPointGroupEffectSubComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18497, v8);
-    sub_B16FFC(&StringLiteral_18496, v9);
+    sub_B16FFC(&StringLiteral_18497/*"event_ranking_group_name_"*/, v8);
+    sub_B16FFC(&StringLiteral_18496/*"event_ranking_group_"*/, v9);
     byte_40F8285 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_18496;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18496;
+  v11 = (System_Int32_array **)StringLiteral_18496/*"event_ranking_group_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18496/*"event_ranking_group_"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_18497;
-  v12->GROUP_NAME_IMAGE_NAME = (struct System_String_o *)StringLiteral_18497;
+  v13 = (System_Int32_array **)StringLiteral_18497/*"event_ranking_group_name_"*/;
+  v12->GROUP_NAME_IMAGE_NAME = (struct System_String_o *)StringLiteral_18497/*"event_ranking_group_name_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->GROUP_NAME_IMAGE_NAME, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -151,8 +151,8 @@ void __fastcall RaceResultPointGroupEffectSubComponent__RecvParam(
     sub_B16FFC(&RaceResultPointGroupEffectSubComponent_TypeInfo, v7);
     sub_B16FFC(&ScriptManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_15842, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F8284 = 1;
   }
   goalTime = 0LL;
@@ -227,7 +227,7 @@ LABEL_89:
             v78 = (UILabel_o *)*((_QWORD *)&v75->obj.klass + i);
             if ( !v78 )
               goto LABEL_113;
-            UILabel__set_text(v78, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v78, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           }
         }
         v79 = this->fields.nameSpriteList;
@@ -269,7 +269,7 @@ LABEL_89:
             v87 = (UILabel_o *)*((_QWORD *)&v85->obj.klass + i);
             if ( !v87 )
               goto LABEL_113;
-            UILabel__set_text(v87, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v87, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           }
         }
         v88 = i - 3;
@@ -356,7 +356,7 @@ LABEL_89:
             v47 = System_String__Concat_43747144(
                     GROUP_NAME_IMAGE_NAME,
                     v45,
-                    (System_String_o *)StringLiteral_15842,
+                    (System_String_o *)StringLiteral_15842/*"_"*/,
                     v46,
                     0LL);
             if ( !v42 )
@@ -387,7 +387,7 @@ LABEL_89:
             v55 = System_String__Concat_43747144(
                     GROUP_IMAGE_NAME,
                     v53,
-                    (System_String_o *)StringLiteral_15842,
+                    (System_String_o *)StringLiteral_15842/*"_"*/,
                     v54,
                     0LL);
             if ( !v50 )
@@ -416,7 +416,7 @@ LABEL_114:
             {
               if ( !v59 )
                 goto LABEL_113;
-              v61 = (System_String_o *)StringLiteral_1;
+              v61 = (System_String_o *)StringLiteral_1/*""*/;
             }
             else
             {
@@ -449,7 +449,7 @@ LABEL_65:
             v64 = v62->m_Items[v33];
             if ( !v64 )
               goto LABEL_113;
-            UILabel__set_text(v64, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v64, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           }
         }
         v65 = this->fields.nameSpriteList;
@@ -491,7 +491,7 @@ LABEL_65:
             v73 = v71->m_Items[v33];
             if ( !v73 )
               goto LABEL_113;
-            UILabel__set_text(v73, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v73, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           }
         }
       }

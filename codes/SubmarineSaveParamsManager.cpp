@@ -10,10 +10,10 @@ void __fastcall SubmarineSaveParamsManager__DeleteSavedQuestInfo(const MethodInf
 
   if ( (byte_40F7CAC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_13078, v1);
+    sub_B16FFC(&StringLiteral_13078/*"SubmarineMapBeforeQuestInfo"*/, v1);
     byte_40F7CAC = 1;
   }
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13078, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13078/*"SubmarineMapBeforeQuestInfo"*/, 0LL);
 }
 
 
@@ -23,10 +23,10 @@ void __fastcall SubmarineSaveParamsManager__DeleteUnreleasedScanInfo(const Metho
 
   if ( (byte_40F7CAF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_13086, v1);
+    sub_B16FFC(&StringLiteral_13086/*"SubmarineUnreleasedScan"*/, v1);
     byte_40F7CAF = 1;
   }
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13086, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13086/*"SubmarineUnreleasedScan"*/, 0LL);
 }
 
 
@@ -38,10 +38,10 @@ SubmarineQuestSaveInfo_o *__fastcall SubmarineSaveParamsManager__LoadBeforeQuest
 
   if ( (byte_40F7CAB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_13078, v1);
+    sub_B16FFC(&StringLiteral_13078/*"SubmarineMapBeforeQuestInfo"*/, v1);
     byte_40F7CAB = 1;
   }
-  String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_13078, 0LL);
+  String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_13078/*"SubmarineMapBeforeQuestInfo"*/, 0LL);
   return SubmarineQuestSaveInfo__CreateBySaveValue(String_34837456, v3);
 }
 
@@ -56,10 +56,10 @@ SubmarineUnreleasedScanSaveInfo_o *__fastcall SubmarineSaveParamsManager__LoadUn
 
   if ( (byte_40F7CAE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_13086, method);
+    sub_B16FFC(&StringLiteral_13086/*"SubmarineUnreleasedScan"*/, method);
     byte_40F7CAE = 1;
   }
-  String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_13086, 0LL);
+  String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_13086/*"SubmarineUnreleasedScan"*/, 0LL);
   result = SubmarineUnreleasedScanSaveInfo__CreateBySaveValue(String_34837456, v4);
   if ( result )
   {
@@ -86,7 +86,7 @@ void __fastcall SubmarineSaveParamsManager__SaveClearQuestInfo(
   if ( (byte_40F7CAA & 1) == 0 )
   {
     sub_B16FFC(&SubmarineQuestSaveInfo_TypeInfo, *(_QWORD *)&phaseCnt);
-    sub_B16FFC(&StringLiteral_13078, v9);
+    sub_B16FFC(&StringLiteral_13078/*"SubmarineMapBeforeQuestInfo"*/, v9);
     byte_40F7CAA = 1;
   }
   v10 = sub_B170CC(SubmarineQuestSaveInfo_TypeInfo, *(_QWORD *)&phaseCnt, isQuestClear, isQuestPhaseClear, method);
@@ -98,7 +98,7 @@ void __fastcall SubmarineSaveParamsManager__SaveClearQuestInfo(
   if ( !v10 )
     sub_B170D4();
   SaveValue = SubmarineQuestSaveInfo__GetSaveValue((SubmarineQuestSaveInfo_o *)v10, v11);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13078, SaveValue, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13078/*"SubmarineMapBeforeQuestInfo"*/, SaveValue, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -124,7 +124,7 @@ void __fastcall SubmarineSaveParamsManager__SaveUnreleasedScanInfo(
   if ( (byte_40F7CAD & 1) == 0 )
   {
     sub_B16FFC(&SubmarineUnreleasedScanSaveInfo_TypeInfo, scanIds);
-    sub_B16FFC(&StringLiteral_13086, v7);
+    sub_B16FFC(&StringLiteral_13086/*"SubmarineUnreleasedScan"*/, v7);
     byte_40F7CAD = 1;
   }
   v8 = sub_B170CC(SubmarineUnreleasedScanSaveInfo_TypeInfo, scanIds, method, v3, v4);
@@ -135,6 +135,6 @@ void __fastcall SubmarineSaveParamsManager__SaveUnreleasedScanInfo(
   if ( !v8 )
     sub_B170D4();
   SaveValue = SubmarineUnreleasedScanSaveInfo__GetSaveValue((SubmarineUnreleasedScanSaveInfo_o *)v8, v15);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13086, SaveValue, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13086/*"SubmarineUnreleasedScan"*/, SaveValue, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }

@@ -225,7 +225,7 @@ void __fastcall NotificationDialog__Init(NotificationDialog_o *this, const Metho
     sub_B16FFC(&System_Collections_Generic_List_LinkableSprite__TypeInfo, v10);
     sub_B16FFC(&System_Collections_Generic_List_LinkableTexture__TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40F9364 = 1;
   }
   if ( !this->fields.refuseInit )
@@ -233,11 +233,11 @@ void __fastcall NotificationDialog__Init(NotificationDialog_o *this, const Metho
     titleLabel = this->fields.titleLabel;
     if ( !titleLabel )
       goto LABEL_71;
-    UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     messageLabel = this->fields.messageLabel;
     if ( !messageLabel )
       goto LABEL_71;
-    UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     v16 = (UnityEngine_Object_o *)this->fields.titleLabel;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -249,7 +249,7 @@ void __fastcall NotificationDialog__Init(NotificationDialog_o *this, const Metho
       v17 = this->fields.titleLabel;
       if ( !v17 )
         goto LABEL_71;
-      UILabel__set_text(v17, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v17, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     }
     v18 = (UnityEngine_Object_o *)this->fields.messageLabel;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -262,7 +262,7 @@ void __fastcall NotificationDialog__Init(NotificationDialog_o *this, const Metho
       v19 = this->fields.messageLabel;
       if ( !v19 )
         goto LABEL_71;
-      UILabel__set_text(v19, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v19, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     }
     okBtnLabel = (UnityEngine_Object_o *)this->fields.okBtnLabel;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -275,7 +275,7 @@ void __fastcall NotificationDialog__Init(NotificationDialog_o *this, const Metho
       v21 = this->fields.okBtnLabel;
       if ( !v21 )
         goto LABEL_71;
-      UILabel__set_text(v21, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v21, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     }
     mBannerWWW = this->fields.mBannerWWW;
     if ( mBannerWWW )
@@ -878,8 +878,8 @@ void __fastcall NotificationDialog__OpenDialog(
     sub_B16FFC(&Method_System_Nullable_int__get_HasValue__, v36);
     sub_B16FFC(&Method_System_Nullable_float__get_HasValue__, v37);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v38);
-    sub_B16FFC(&StringLiteral_3252, v39);
-    sub_B16FFC(&StringLiteral_1, v40);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v39);
+    sub_B16FFC(&StringLiteral_1/*""*/, v40);
     byte_40F9366 = 1;
   }
   TargetPanel = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
@@ -931,7 +931,7 @@ void __fastcall NotificationDialog__OpenDialog(
     if ( title )
       v53 = title;
     else
-      v53 = (System_String_o *)StringLiteral_1;
+      v53 = (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v52, v53, 0LL);
     v54 = NotificationDialog_TypeInfo;
     if ( (BYTE3(NotificationDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1054,7 +1054,7 @@ void __fastcall NotificationDialog__OpenDialog(
       goto LABEL_140;
     UILabel__set_fontSize(v74, MESSAGE_FONT_SIZE, 0LL);
     v76 = this->fields.messageLabel;
-    v77 = message ? message : (System_String_o *)StringLiteral_1;
+    v77 = message ? message : (System_String_o *)StringLiteral_1/*""*/;
     if ( adjustText )
     {
       if ( !v76 )
@@ -1138,7 +1138,7 @@ LABEL_140:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v95 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+    v95 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( !v89 )
       goto LABEL_140;
     UILabel__set_text(v89, v95, 0LL);
@@ -1511,18 +1511,18 @@ void __fastcall NotificationDialog__Open_23727868(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v29);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v30);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v31);
-    sub_B16FFC(&StringLiteral_16543, v32);
-    sub_B16FFC(&StringLiteral_22042, v33);
-    sub_B16FFC(&StringLiteral_22872, v34);
-    sub_B16FFC(&StringLiteral_21110, v35);
-    sub_B16FFC(&StringLiteral_22612, v36);
-    sub_B16FFC(&StringLiteral_20398, v37);
-    sub_B16FFC(&StringLiteral_22140, v38);
-    sub_B16FFC(&StringLiteral_3252, v39);
-    sub_B16FFC(&StringLiteral_22871, v40);
-    sub_B16FFC(&StringLiteral_17056, v41);
-    sub_B16FFC(&StringLiteral_1, v42);
-    sub_B16FFC(&StringLiteral_22141, v43);
+    sub_B16FFC(&StringLiteral_16543/*"banners"*/, v32);
+    sub_B16FFC(&StringLiteral_22042/*"size"*/, v33);
+    sub_B16FFC(&StringLiteral_22872/*"urlOpenType"*/, v34);
+    sub_B16FFC(&StringLiteral_21110/*"offset"*/, v35);
+    sub_B16FFC(&StringLiteral_22612/*"titleOffset"*/, v36);
+    sub_B16FFC(&StringLiteral_20398/*"messageOffset"*/, v37);
+    sub_B16FFC(&StringLiteral_22140/*"spriteName"*/, v38);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v39);
+    sub_B16FFC(&StringLiteral_22871/*"urlLink"*/, v40);
+    sub_B16FFC(&StringLiteral_17056/*"buttonOffset"*/, v41);
+    sub_B16FFC(&StringLiteral_1/*""*/, v42);
+    sub_B16FFC(&StringLiteral_22141/*"sprites"*/, v43);
     byte_40F9367 = 1;
   }
   v187.name = 0LL;
@@ -1574,7 +1574,7 @@ void __fastcall NotificationDialog__Open_23727868(
     v54 = this->fields.titleLabel;
     if ( !v54 )
       goto LABEL_163;
-    v55 = title ? title : (System_String_o *)StringLiteral_1;
+    v55 = title ? title : (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v54, v55, 0LL);
     v56 = (UnityEngine_Component_o *)this->fields.titleLabel;
     if ( !v56 )
@@ -1595,7 +1595,7 @@ void __fastcall NotificationDialog__Open_23727868(
     VectFromScript = NotificationDialog__getVectFromScript(
                        (NotificationDialog_o *)gameObject,
                        script,
-                       (System_String_o *)StringLiteral_22612,
+                       (System_String_o *)StringLiteral_22612/*"titleOffset"*/,
                        v58);
     VectFromScript.fields.x = v62 + VectFromScript.fields.x;
     VectFromScript.fields.y = v63 + VectFromScript.fields.y;
@@ -1677,7 +1677,7 @@ void __fastcall NotificationDialog__Open_23727868(
     v80 = this->fields.messageLabel;
     if ( !v80 )
       goto LABEL_163;
-    v81 = message ? message : (System_String_o *)StringLiteral_1;
+    v81 = message ? message : (System_String_o *)StringLiteral_1/*""*/;
     WrapControlText__textAdjust(v80, v81, v80->fields.mFontSize, 0, 0, 0LL);
     v82 = (UnityEngine_Component_o *)this->fields.messageLabel;
     if ( !v82 )
@@ -1686,7 +1686,7 @@ void __fastcall NotificationDialog__Open_23727868(
     v189 = NotificationDialog__getVectFromScript(
              (NotificationDialog_o *)v83,
              script,
-             (System_String_o *)StringLiteral_20398,
+             (System_String_o *)StringLiteral_20398/*"messageOffset"*/,
              v84);
     v189.fields.x = v68 + v189.fields.x;
     v189.fields.y = y + v189.fields.y;
@@ -1705,7 +1705,7 @@ void __fastcall NotificationDialog__Open_23727868(
       goto LABEL_163;
     if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
             (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_22141,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_22141/*"sprites"*/,
             (System_Xml_Schema_XmlSchemaObject_o **)&v187.name,
             (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       goto LABEL_110;
@@ -1816,7 +1816,7 @@ void __fastcall NotificationDialog__Open_23727868(
           StringFromScript = NotificationDialog__getStringFromScript(
                                (NotificationDialog_o *)v114,
                                v113,
-                               (System_String_o *)StringLiteral_22140,
+                               (System_String_o *)StringLiteral_22140/*"spriteName"*/,
                                v117);
           if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -1843,13 +1843,13 @@ void __fastcall NotificationDialog__Open_23727868(
           v191 = NotificationDialog__getVectFromScript(
                    (NotificationDialog_o *)v120,
                    v113,
-                   (System_String_o *)StringLiteral_21110,
+                   (System_String_o *)StringLiteral_21110/*"offset"*/,
                    v121);
           v191.fields.x = v125 + v191.fields.x;
           v191.fields.y = v126 + v191.fields.y;
           v191.fields.z = v127 + v191.fields.z;
           GameObjectExtensions__SetLocalPosition(v123, v191, 0LL);
-          v192 = NotificationDialog__getVectFromScript(v128, v113, (System_String_o *)StringLiteral_22042, v129);
+          v192 = NotificationDialog__getVectFromScript(v128, v113, (System_String_o *)StringLiteral_22042/*"size"*/, v129);
           v187.methodPointer = *(Il2CppMethodPointer *)&v192.fields.x;
           *(float *)&v187.invoker_method = v192.fields.z;
           zero = UnityEngine_Vector3__get_zero(0LL);
@@ -1870,13 +1870,13 @@ void __fastcall NotificationDialog__Open_23727868(
           IntFromScript = (NotificationDialog_o *)NotificationDialog__getIntFromScript(
                                                     v130,
                                                     v113,
-                                                    (System_String_o *)StringLiteral_22872,
+                                                    (System_String_o *)StringLiteral_22872/*"urlOpenType"*/,
                                                     v131);
           v135 = (int)IntFromScript;
           v137 = NotificationDialog__getStringFromScript(
                    IntFromScript,
                    v113,
-                   (System_String_o *)StringLiteral_22871,
+                   (System_String_o *)StringLiteral_22871/*"urlLink"*/,
                    v136);
           LinkableSprite__SetUp(v102, v135, v137, 0LL);
           sprites = *p_sprites;
@@ -1914,7 +1914,7 @@ LABEL_113:
     goto LABEL_163;
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_16543,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_16543/*"banners"*/,
           (System_Xml_Schema_XmlSchemaObject_o **)&v187.name,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     goto LABEL_130;
@@ -1977,7 +1977,7 @@ LABEL_134:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v157 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+    v157 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( !v156 )
       goto LABEL_163;
     UILabel__set_text(v156, v157, 0LL);
@@ -2006,7 +2006,7 @@ LABEL_134:
     v194 = NotificationDialog__getVectFromScript(
              (NotificationDialog_o *)v161,
              script,
-             (System_String_o *)StringLiteral_17056,
+             (System_String_o *)StringLiteral_17056/*"buttonOffset"*/,
              v162);
     v194.fields.x = v166 + v194.fields.x;
     v194.fields.y = v167 + v194.fields.y;
@@ -2197,7 +2197,7 @@ System_String_o *__fastcall NotificationDialog__getStringFromScript(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, script);
     sub_B16FFC(&string_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F9369 = 1;
   }
   value = 0LL;
@@ -2208,7 +2208,7 @@ System_String_o *__fastcall NotificationDialog__getStringFromScript(
           (System_Xml_XmlQualifiedName_o *)key,
           &value,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( !value )
     return 0LL;
   if ( (System_String_c *)value->klass == string_TypeInfo )
@@ -2291,10 +2291,10 @@ System_String_o *__fastcall NotificationDialog__get_closeBtnPath(NotificationDia
 {
   if ( (byte_40F936E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15425, method);
+    sub_B16FFC(&StringLiteral_15425/*"Window/OkBtn"*/, method);
     byte_40F936E = 1;
   }
-  return (System_String_o *)StringLiteral_15425;
+  return (System_String_o *)StringLiteral_15425/*"Window/OkBtn"*/;
 }
 
 
@@ -2658,13 +2658,13 @@ bool __fastcall NotificationDialog__StartDownloadBanner_d__48__MoveNext(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v18);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v19);
     sub_B16FFC(&UnityEngine_Networking_UnityWebRequest_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_16536, v21);
-    sub_B16FFC(&StringLiteral_22042, v22);
-    sub_B16FFC(&StringLiteral_22872, v23);
-    sub_B16FFC(&StringLiteral_21110, v24);
-    sub_B16FFC(&StringLiteral_22871, v25);
-    sub_B16FFC(&StringLiteral_1, v26);
-    this = (NotificationDialog__StartDownloadBanner_d__48_o *)sub_B16FFC(&StringLiteral_9264, v27);
+    sub_B16FFC(&StringLiteral_16536/*"bannerUrl"*/, v21);
+    sub_B16FFC(&StringLiteral_22042/*"size"*/, v22);
+    sub_B16FFC(&StringLiteral_22872/*"urlOpenType"*/, v23);
+    sub_B16FFC(&StringLiteral_21110/*"offset"*/, v24);
+    sub_B16FFC(&StringLiteral_22871/*"urlLink"*/, v25);
+    sub_B16FFC(&StringLiteral_1/*""*/, v26);
+    this = (NotificationDialog__StartDownloadBanner_d__48_o *)sub_B16FFC(&StringLiteral_9264/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, v27);
     byte_40F835A = 1;
   }
   LODWORD(v118.invoker_method) = 0;
@@ -2785,7 +2785,7 @@ LABEL_19:
       VectFromScript = NotificationDialog__getVectFromScript(
                          _4__this,
                          v8->fields._banner_5__2,
-                         (System_String_o *)StringLiteral_21110,
+                         (System_String_o *)StringLiteral_21110/*"offset"*/,
                          0LL);
       VectFromScript.fields.x = v109 + VectFromScript.fields.x;
       VectFromScript.fields.y = v110 + VectFromScript.fields.y;
@@ -2794,7 +2794,7 @@ LABEL_19:
       v121 = NotificationDialog__getVectFromScript(
                _4__this,
                v8->fields._banner_5__2,
-               (System_String_o *)StringLiteral_22042,
+               (System_String_o *)StringLiteral_22042/*"size"*/,
                0LL);
       v118.methodPointer = *(Il2CppMethodPointer *)&v121.fields.x;
       *(float *)&v118.invoker_method = v121.fields.z;
@@ -2816,14 +2816,14 @@ LABEL_19:
       IntFromScript = NotificationDialog__getIntFromScript(
                         _4__this,
                         v8->fields._banner_5__2,
-                        (System_String_o *)StringLiteral_22872,
+                        (System_String_o *)StringLiteral_22872/*"urlOpenType"*/,
                         0LL);
       banner_5__2 = v8->fields._banner_5__2;
       v116 = IntFromScript;
       StringFromScript = NotificationDialog__getStringFromScript(
                            _4__this,
                            banner_5__2,
-                           (System_String_o *)StringLiteral_22871,
+                           (System_String_o *)StringLiteral_22871/*"urlLink"*/,
                            0LL);
       LinkableTexture__SetUp((LinkableTexture_o *)lnkTexture, v116, StringFromScript, 0LL);
       NotificationDialog__LoadNext(_4__this, 0LL);
@@ -2854,7 +2854,7 @@ LABEL_30:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v48 = LocalizationManager__Get((System_String_o *)StringLiteral_9264, 0LL);
+        v48 = LocalizationManager__Get((System_String_o *)StringLiteral_9264/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
         v53 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v49, v50, v51, v52);
         ErrorDialog_ClickDelegate___ctor(
           v53,
@@ -2863,7 +2863,7 @@ LABEL_30:
           0LL);
         if ( !Instance )
           goto LABEL_77;
-        CommonUI__OpenRetryDialog(Instance, (System_String_o *)StringLiteral_1, v48, v53, 0, 0LL);
+        CommonUI__OpenRetryDialog(Instance, (System_String_o *)StringLiteral_1/*""*/, v48, v53, 0, 0LL);
       }
     }
     v55 = _4__this->fields.mBannerWWW;
@@ -2911,7 +2911,7 @@ LABEL_30:
           v62 = NotificationDialog__getStringFromScript(
                   _4__this,
                   v8->fields._banner_5__2,
-                  (System_String_o *)StringLiteral_16536,
+                  (System_String_o *)StringLiteral_16536/*"bannerUrl"*/,
                   0LL);
           if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !NetworkManager_TypeInfo->_2.cctor_finished )

@@ -235,9 +235,9 @@ void __fastcall ShopTopListViewItemDraw__ResetShopListNotice(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
     sub_B16FFC(&Method_ShopTopListViewItemDraw___c__DisplayClass47_0__ResetShopListNotice_b__0__, v17);
     sub_B16FFC(&ShopTopListViewItemDraw___c__DisplayClass47_0_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_12113, v19);
-    sub_B16FFC(&StringLiteral_12117, v20);
-    sub_B16FFC(&StringLiteral_12116, v21);
+    sub_B16FFC(&StringLiteral_12113/*"SHOP_ITEM_TIME_LIMIT"*/, v19);
+    sub_B16FFC(&StringLiteral_12117/*"SHOP_NOTICE_EXCHANGE_STONE_FRAGMENTS_OVER"*/, v20);
+    sub_B16FFC(&StringLiteral_12116/*"SHOP_NOTICE_EXCHANGE_STONE_FRAGMENTS"*/, v21);
     byte_40FB7DF = 1;
   }
   v22 = sub_B170CC(ShopTopListViewItemDraw___c__DisplayClass47_0_TypeInfo, item, method, v3, v4);
@@ -509,13 +509,13 @@ LABEL_13:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v112 = LocalizationManager__Get((System_String_o *)StringLiteral_12113, 0LL);
+  v112 = LocalizationManager__Get((System_String_o *)StringLiteral_12113/*"SHOP_ITEM_TIME_LIMIT"*/, 0LL);
   ShopTopListViewItemDraw__SetLabelText((ShopTopListViewItemDraw_o *)v112, periodRemainTimeLabel, v112, v113);
   monthlyRemainTimeLabel = this->fields.monthlyRemainTimeLabel;
-  v115 = LocalizationManager__Get((System_String_o *)StringLiteral_12113, 0LL);
+  v115 = LocalizationManager__Get((System_String_o *)StringLiteral_12113/*"SHOP_ITEM_TIME_LIMIT"*/, 0LL);
   ShopTopListViewItemDraw__SetLabelText((ShopTopListViewItemDraw_o *)v115, monthlyRemainTimeLabel, v115, v116);
   exchangeServantRemainTimeLabel = this->fields.exchangeServantRemainTimeLabel;
-  v118 = LocalizationManager__Get((System_String_o *)StringLiteral_12113, 0LL);
+  v118 = LocalizationManager__Get((System_String_o *)StringLiteral_12113/*"SHOP_ITEM_TIME_LIMIT"*/, 0LL);
   ShopTopListViewItemDraw__SetLabelText((ShopTopListViewItemDraw_o *)v118, exchangeServantRemainTimeLabel, v118, v119);
   if ( !*v29 )
     goto LABEL_107;
@@ -565,7 +565,7 @@ LABEL_13:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v136 = LocalizationManager__Get((System_String_o *)StringLiteral_12117, 0LL);
+    v136 = LocalizationManager__Get((System_String_o *)StringLiteral_12117/*"SHOP_NOTICE_EXCHANGE_STONE_FRAGMENTS_OVER"*/, 0LL);
     if ( !exchangeStoneFragmentsLabel )
       goto LABEL_107;
     goto LABEL_102;
@@ -575,7 +575,7 @@ LABEL_13:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v137 = LocalizationManager__Get((System_String_o *)StringLiteral_12116, 0LL);
+  v137 = LocalizationManager__Get((System_String_o *)StringLiteral_12116/*"SHOP_NOTICE_EXCHANGE_STONE_FRAGMENTS"*/, 0LL);
   v142 = v133;
   v138 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142);
   v136 = System_String__Format(v137, v138, 0LL);
@@ -683,16 +683,16 @@ void __fastcall ShopTopListViewItemDraw__SetCoinRoom(ShopTopListViewItemDraw_o *
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UILabel___, v3);
     sub_B16FFC(&int_TypeInfo, v4);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_10702, v6);
-    sub_B16FFC(&StringLiteral_14368, v7);
-    sub_B16FFC(&StringLiteral_15106, v8);
-    sub_B16FFC(&StringLiteral_3118, v9);
-    sub_B16FFC(&StringLiteral_7578, v10);
-    sub_B16FFC(&StringLiteral_12113, v11);
-    sub_B16FFC(&StringLiteral_353, v12);
-    sub_B16FFC(&StringLiteral_10604, v13);
-    sub_B16FFC(&StringLiteral_3116, v14);
-    sub_B16FFC(&StringLiteral_10703, v15);
+    sub_B16FFC(&StringLiteral_10702/*"PreLabel"*/, v6);
+    sub_B16FFC(&StringLiteral_14368/*"TimeLabel"*/, v7);
+    sub_B16FFC(&StringLiteral_15106/*"ValueLabel"*/, v8);
+    sub_B16FFC(&StringLiteral_3118/*"COIN_ROOM_CLOSED_MESSAGE"*/, v9);
+    sub_B16FFC(&StringLiteral_7578/*"InfoLabel"*/, v10);
+    sub_B16FFC(&StringLiteral_12113/*"SHOP_ITEM_TIME_LIMIT"*/, v11);
+    sub_B16FFC(&StringLiteral_353/*"#6B6B6B"*/, v12);
+    sub_B16FFC(&StringLiteral_10604/*"PeriodTimeRoot"*/, v13);
+    sub_B16FFC(&StringLiteral_3116/*"COIN_ROOM_BANNER_INFO"*/, v14);
+    sub_B16FFC(&StringLiteral_10703/*"PreLabelRoot"*/, v15);
     byte_40FB7DE = 1;
   }
   v42 = 0uLL;
@@ -701,7 +701,7 @@ void __fastcall ShopTopListViewItemDraw__SetCoinRoom(ShopTopListViewItemDraw_o *
     goto LABEL_33;
   if ( !coinRoomListItem->fields._IsUse_k__BackingField )
   {
-    UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_353, (UnityEngine_Color_o *)&v42, 0LL);
+    UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_353/*"#6B6B6B"*/, (UnityEngine_Color_o *)&v42, 0LL);
     baseButton = this->fields.baseButton;
     if ( baseButton )
     {
@@ -716,9 +716,9 @@ void __fastcall ShopTopListViewItemDraw__SetCoinRoom(ShopTopListViewItemDraw_o *
           v36->klass->vtable._15_OnPress.methodPtr);
         GameObject = GameObjectExtensions__FindGameObject(
                        this->fields.coinRoomObject,
-                       (System_String_o *)StringLiteral_10703,
+                       (System_String_o *)StringLiteral_10703/*"PreLabelRoot"*/,
                        0LL);
-        v38 = GameObjectExtensions__FindGameObject(GameObject, (System_String_o *)StringLiteral_10702, 0LL);
+        v38 = GameObjectExtensions__FindGameObject(GameObject, (System_String_o *)StringLiteral_10702/*"PreLabel"*/, 0LL);
         if ( v38 )
         {
           Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
@@ -728,7 +728,7 @@ void __fastcall ShopTopListViewItemDraw__SetCoinRoom(ShopTopListViewItemDraw_o *
           {
             v40 = (UILabel_o *)Component_srcLineSprite;
             UnityEngine_GameObject__SetActive(GameObject, 1, 0LL);
-            Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_3118, 0LL);
+            Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_3118/*"COIN_ROOM_CLOSED_MESSAGE"*/, 0LL);
             if ( v40 )
             {
               UILabel__set_text(v40, Value, 0LL);
@@ -740,8 +740,8 @@ void __fastcall ShopTopListViewItemDraw__SetCoinRoom(ShopTopListViewItemDraw_o *
     }
     goto LABEL_33;
   }
-  v17 = GameObjectExtensions__FindGameObject(this->fields.coinRoomObject, (System_String_o *)StringLiteral_10604, 0LL);
-  v18 = GameObjectExtensions__FindGameObject(v17, (System_String_o *)StringLiteral_7578, 0LL);
+  v17 = GameObjectExtensions__FindGameObject(this->fields.coinRoomObject, (System_String_o *)StringLiteral_10604/*"PeriodTimeRoot"*/, 0LL);
+  v18 = GameObjectExtensions__FindGameObject(v17, (System_String_o *)StringLiteral_7578/*"InfoLabel"*/, 0LL);
   if ( !v18 )
     goto LABEL_33;
   v19 = UnityEngine_GameObject__GetComponent_srcLineSprite_(
@@ -756,11 +756,11 @@ void __fastcall ShopTopListViewItemDraw__SetCoinRoom(ShopTopListViewItemDraw_o *
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3116, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3116/*"COIN_ROOM_BANNER_INFO"*/, 0LL);
   if ( !v21 )
     goto LABEL_33;
   v22 = v21;
-  if ( !System_String__Equals_43731072(v21, (System_String_o *)StringLiteral_3116, 0LL) )
+  if ( !System_String__Equals_43731072(v21, (System_String_o *)StringLiteral_3116/*"COIN_ROOM_BANNER_INFO"*/, 0LL) )
   {
     if ( (BYTE3(CoinRoomUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CoinRoomUtility_TypeInfo->_2.cctor_finished )
@@ -779,13 +779,13 @@ LABEL_33:
     sub_B170D4();
   }
 LABEL_17:
-  v25 = GameObjectExtensions__FindGameObject(v17, (System_String_o *)StringLiteral_14368, 0LL);
+  v25 = GameObjectExtensions__FindGameObject(v17, (System_String_o *)StringLiteral_14368/*"TimeLabel"*/, 0LL);
   if ( !v25 )
     goto LABEL_33;
   v26 = (UILabel_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                        v25,
                        (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
-  v27 = GameObjectExtensions__FindGameObject(v17, (System_String_o *)StringLiteral_15106, 0LL);
+  v27 = GameObjectExtensions__FindGameObject(v17, (System_String_o *)StringLiteral_15106/*"ValueLabel"*/, 0LL);
   if ( !v27 )
     goto LABEL_33;
   v28 = UnityEngine_GameObject__GetComponent_srcLineSprite_(
@@ -805,7 +805,7 @@ LABEL_17:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_12113, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_12113/*"SHOP_ITEM_TIME_LIMIT"*/, 0LL);
   ShopTopListViewItemDraw__SetLabelText((ShopTopListViewItemDraw_o *)v33, v26, v33, v34);
 }
 
@@ -899,10 +899,10 @@ void __fastcall ShopTopListViewItemDraw__SetItem(
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&string_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_19203, v12);
-    sub_B16FFC(&StringLiteral_12060, v13);
-    sub_B16FFC(&StringLiteral_19532, v14);
-    this = (ShopTopListViewItemDraw_o *)sub_B16FFC(&StringLiteral_1, v15);
+    sub_B16FFC(&StringLiteral_19203/*"icon_balloon_blue"*/, v12);
+    sub_B16FFC(&StringLiteral_12060/*"SHOP_BUY_EVENTSHOP_PREPARATION"*/, v13);
+    sub_B16FFC(&StringLiteral_19532/*"img_shop_0"*/, v14);
+    this = (ShopTopListViewItemDraw_o *)sub_B16FFC(&StringLiteral_1/*""*/, v15);
     byte_40FB7DC = 1;
   }
   if ( !item )
@@ -957,7 +957,7 @@ LABEL_9:
         if ( !baseImageSprite )
           goto LABEL_67;
         if ( IsNullOrEmpty )
-          p_ImageName_k__BackingField = (System_String_o **)&StringLiteral_19532;
+          p_ImageName_k__BackingField = (System_String_o **)&StringLiteral_19532/*"img_shop_0"*/;
         UISprite__set_spriteName(v8->fields.baseImageSprite, *p_ImageName_k__BackingField, 0LL);
         v63 = v8->fields.baseImageSprite;
         if ( !v63 )
@@ -974,7 +974,7 @@ LABEL_13:
       }
       else
       {
-        InfoText = (System_String_o *)StringLiteral_1;
+        InfoText = (System_String_o *)StringLiteral_1/*""*/;
         if ( !infoTextLabel )
           goto LABEL_67;
       }
@@ -1005,7 +1005,7 @@ LABEL_13:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          Empty = LocalizationManager__Get((System_String_o *)StringLiteral_12060, 0LL);
+          Empty = LocalizationManager__Get((System_String_o *)StringLiteral_12060/*"SHOP_BUY_EVENTSHOP_PREPARATION"*/, 0LL);
           if ( !v33 )
             goto LABEL_67;
         }
@@ -1022,7 +1022,7 @@ LABEL_13:
         {
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         }
-        AtlasManager__SetShopBanner_28586476(exchangeStoneFragmentsSprite, (System_String_o *)StringLiteral_19203, 0LL);
+        AtlasManager__SetShopBanner_28586476(exchangeStoneFragmentsSprite, (System_String_o *)StringLiteral_19203/*"icon_balloon_blue"*/, 0LL);
         v37 = v8->fields.exchangeStoneFragmentsSprite;
         if ( v37 )
         {
@@ -1491,7 +1491,7 @@ bool __fastcall ShopTopListViewItemDraw__CreateCoinRoomAsset_d__44__MoveNext(
   if ( (byte_40F79FC & 1) == 0 )
   {
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, method);
-    sub_B16FFC(&StringLiteral_4100, v9);
+    sub_B16FFC(&StringLiteral_4100/*"CoinRoomBanner"*/, v9);
     byte_40F79FC = 1;
   }
   if ( this->fields.__1__state >= 2u )
@@ -1507,7 +1507,7 @@ LABEL_12:
   {
     Object_WarBoardWaitTimeSetting = AssetData__GetObject_WarBoardWaitTimeSetting_(
                                        coinRoomAsset,
-                                       (System_String_o *)StringLiteral_4100,
+                                       (System_String_o *)StringLiteral_4100/*"CoinRoomBanner"*/,
                                        (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     if ( _4__this )
     {
@@ -1624,7 +1624,7 @@ void __fastcall ShopTopListViewItemDraw___c__DisplayClass47_0___ResetShopListNot
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&int_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_19289, v4);
+    sub_B16FFC(&StringLiteral_19289/*"icon_servant_exchange_available_{0}"*/, v4);
     byte_40F79FB = 1;
   }
   item = this->fields.item;
@@ -1633,7 +1633,7 @@ void __fastcall ShopTopListViewItemDraw___c__DisplayClass47_0___ResetShopListNot
   exchangeServantSprite = this->fields.exchangeServantSprite;
   ExchangeServantEventId = ShopTopListViewItem__get_ExchangeServantEventId(item, 0LL);
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &ExchangeServantEventId);
-  v8 = System_String__Format((System_String_o *)StringLiteral_19289, v7, 0LL);
+  v8 = System_String__Format((System_String_o *)StringLiteral_19289/*"icon_servant_exchange_available_{0}"*/, v7, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   if ( !AtlasManager__SetEventUI(exchangeServantSprite, v8, 0LL) )

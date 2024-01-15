@@ -32,7 +32,7 @@ void __fastcall UserServantCoinMenu__Close_21381496(
 
   if ( (byte_40F8142 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10026, callback);
+    sub_B16FFC(&StringLiteral_10026/*"OnStartClose"*/, callback);
     byte_40F8142 = 1;
   }
   this->fields.closeCallbackFunc = callback;
@@ -48,7 +48,7 @@ void __fastcall UserServantCoinMenu__Close_21381496(
   this->fields.state = 4;
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10026,
+    (System_String_o *)StringLiteral_10026/*"OnStartClose"*/,
     0.1,
     0LL);
 }

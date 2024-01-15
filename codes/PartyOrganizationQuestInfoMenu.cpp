@@ -228,10 +228,10 @@ System_String_o *__fastcall PartyOrganizationQuestInfoMenu__get_closeBtnPath(
 {
   if ( (byte_40F76DA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10945, method);
+    sub_B16FFC(&StringLiteral_10945/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/, method);
     byte_40F76DA = 1;
   }
-  return (System_String_o *)StringLiteral_10945;
+  return (System_String_o *)StringLiteral_10945/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/;
 }
 
 

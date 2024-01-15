@@ -39,11 +39,11 @@ void __fastcall MasterMissionReceiveConfirmDialog__Init(
   if ( (byte_40FB25A & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_8611, v3);
-    sub_B16FFC(&StringLiteral_8614, v4);
-    sub_B16FFC(&StringLiteral_8613, v5);
-    sub_B16FFC(&StringLiteral_8612, v6);
-    sub_B16FFC(&StringLiteral_8615, v7);
+    sub_B16FFC(&StringLiteral_8611/*"MASTER_MISSION_RECEIVE_CONFIRM_CANCEL"*/, v3);
+    sub_B16FFC(&StringLiteral_8614/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_SUB_MSG"*/, v4);
+    sub_B16FFC(&StringLiteral_8613/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_MSG"*/, v5);
+    sub_B16FFC(&StringLiteral_8612/*"MASTER_MISSION_RECEIVE_CONFIRM_DECIDE"*/, v6);
+    sub_B16FFC(&StringLiteral_8615/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_TITLE"*/, v7);
     byte_40FB25A = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -57,25 +57,25 @@ void __fastcall MasterMissionReceiveConfirmDialog__Init(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8615, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8615/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_13;
   UILabel__set_text(titleLabel, v11, 0LL);
   subTitleLabel = this->fields.subTitleLabel;
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_8613, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_8613/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_MSG"*/, 0LL);
   if ( !subTitleLabel )
     goto LABEL_13;
   UILabel__set_text(subTitleLabel, v13, 0LL);
   subTitleSmallLabel = this->fields.subTitleSmallLabel;
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_8614, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_8614/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_SUB_MSG"*/, 0LL);
   if ( !subTitleSmallLabel
     || (UILabel__set_text(subTitleSmallLabel, v15, 0LL),
         cancelLabel = this->fields.cancelLabel,
-        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8611, 0LL),
+        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8611/*"MASTER_MISSION_RECEIVE_CONFIRM_CANCEL"*/, 0LL),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, v17, 0LL),
         decideLabel = this->fields.decideLabel,
-        v19 = LocalizationManager__Get((System_String_o *)StringLiteral_8612, 0LL),
+        v19 = LocalizationManager__Get((System_String_o *)StringLiteral_8612/*"MASTER_MISSION_RECEIVE_CONFIRM_DECIDE"*/, 0LL),
         !decideLabel) )
   {
 LABEL_13:
@@ -234,10 +234,10 @@ System_String_o *__fastcall MasterMissionReceiveConfirmDialog__get_closeBtnPath(
 {
   if ( (byte_40FB25D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15414, method);
+    sub_B16FFC(&StringLiteral_15414/*"Window/CancelButton"*/, method);
     byte_40FB25D = 1;
   }
-  return (System_String_o *)StringLiteral_15414;
+  return (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/;
 }
 
 

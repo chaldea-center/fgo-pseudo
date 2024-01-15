@@ -37,15 +37,15 @@ System_String_o *__fastcall CheckMaterialSvtListViewItemDraw__GetStatusText(
   if ( (byte_40FAF4C & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_11593, v8);
-    sub_B16FFC(&StringLiteral_11589, v9);
-    sub_B16FFC(&StringLiteral_12446, v10);
-    sub_B16FFC(&StringLiteral_11584, v11);
-    sub_B16FFC(&StringLiteral_11585, v12);
-    sub_B16FFC(&StringLiteral_11607, v13);
-    sub_B16FFC(&StringLiteral_11603, v14);
-    sub_B16FFC(&StringLiteral_9316, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_11593/*"SELECT_LOCK"*/, v8);
+    sub_B16FFC(&StringLiteral_11589/*"SELECT_FAVORITE"*/, v9);
+    sub_B16FFC(&StringLiteral_12446/*"SUPPORT_MEMBER"*/, v10);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v11);
+    sub_B16FFC(&StringLiteral_11585/*"SELECT_CHOICE"*/, v12);
+    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v13);
+    sub_B16FFC(&StringLiteral_11603/*"SELECT_PARTY"*/, v14);
+    sub_B16FFC(&StringLiteral_9316/*"NOT_SELECT_EQUIPED"*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40FAF4C = 1;
   }
   if ( !isServant )
@@ -65,7 +65,7 @@ LABEL_12:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = &StringLiteral_11607;
+    v18 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
     return LocalizationManager__Get((System_String_o *)*v18, 0LL);
   }
   if ( item->fields.attribute )
@@ -75,7 +75,7 @@ LABEL_12:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = &StringLiteral_11584;
+    v18 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
     return LocalizationManager__Get((System_String_o *)*v18, 0LL);
   }
 LABEL_18:
@@ -86,7 +86,7 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = &StringLiteral_11585;
+    v18 = &StringLiteral_11585/*"SELECT_CHOICE"*/;
     return LocalizationManager__Get((System_String_o *)*v18, 0LL);
   }
   if ( item->fields._IsLock_k__BackingField )
@@ -96,7 +96,7 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = &StringLiteral_11593;
+    v18 = &StringLiteral_11593/*"SELECT_LOCK"*/;
     return LocalizationManager__Get((System_String_o *)*v18, 0LL);
   }
   if ( isServant )
@@ -108,7 +108,7 @@ LABEL_18:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = &StringLiteral_11589;
+      v18 = &StringLiteral_11589/*"SELECT_FAVORITE"*/;
       return LocalizationManager__Get((System_String_o *)*v18, 0LL);
     }
     if ( item->fields._IsParty_k__BackingField )
@@ -118,7 +118,7 @@ LABEL_18:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = &StringLiteral_11603;
+      v18 = &StringLiteral_11603/*"SELECT_PARTY"*/;
       return LocalizationManager__Get((System_String_o *)*v18, 0LL);
     }
     if ( item->fields._IsUseSupportServant_k__BackingField )
@@ -128,7 +128,7 @@ LABEL_18:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = &StringLiteral_12446;
+      v18 = &StringLiteral_12446/*"SUPPORT_MEMBER"*/;
       return LocalizationManager__Get((System_String_o *)*v18, 0LL);
     }
   }
@@ -139,10 +139,10 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = &StringLiteral_9316;
+    v18 = &StringLiteral_9316/*"NOT_SELECT_EQUIPED"*/;
     return LocalizationManager__Get((System_String_o *)*v18, 0LL);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -484,7 +484,7 @@ void __fastcall CheckMaterialSvtListViewItemDraw__SetWarningText(
   if ( (byte_40FAF4B & 1) == 0 )
   {
     sub_B16FFC(&TutorialFlag_TypeInfo, item);
-    this = (CheckMaterialSvtListViewItemDraw_o *)sub_B16FFC(&StringLiteral_1, v11);
+    this = (CheckMaterialSvtListViewItemDraw_o *)sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FAF4B = 1;
   }
   if ( !item )
@@ -493,7 +493,7 @@ void __fastcall CheckMaterialSvtListViewItemDraw__SetWarningText(
   {
 LABEL_16:
     warningLabel = v10->fields.warningLabel;
-    v15 = (System_String_o *)StringLiteral_1;
+    v15 = (System_String_o *)StringLiteral_1/*""*/;
     goto LABEL_17;
   }
   if ( (unsigned int)(modeKind - 1) <= 1 )

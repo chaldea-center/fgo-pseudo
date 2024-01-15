@@ -9,7 +9,7 @@ bool __fastcall TreasureDeviceConditionUtil__HasEnoughCriticalStar(
 
   if ( (byte_40FB876 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12308, data);
+    sub_B16FFC(&StringLiteral_12308/*"STAR_HIGHER"*/, data);
     byte_40FB876 = 1;
   }
   if ( !servantData )
@@ -25,7 +25,7 @@ LABEL_11:
     if ( TDvcLv )
       return TreasureDeviceConditionUtil__HigherCondition(
                TDvcLv->fields.script,
-               (System_String_o *)StringLiteral_12308,
+               (System_String_o *)StringLiteral_12308/*"STAR_HIGHER"*/,
                data->fields.totalCriticalStars,
                v7);
   }

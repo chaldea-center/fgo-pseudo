@@ -131,14 +131,14 @@ void __fastcall SummonRootComponent__EndLoadBg(
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, data);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_16631, v7);
+    sub_B16FFC(&StringLiteral_16631/*"bg"*/, v7);
     byte_40FD4C0 = 1;
   }
   if ( !data )
     goto LABEL_15;
   Object_WarBoardWaitTimeSetting = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                                data,
-                                                                               (System_String_o *)StringLiteral_16631,
+                                                                               (System_String_o *)StringLiteral_16631/*"bg"*/,
                                                                                (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -199,11 +199,11 @@ void __fastcall SummonRootComponent__GoToSellServant(SummonRootComponent_o *this
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_12612, v6);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v6);
     byte_40FD4C9 = 1;
   }
   v7 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, method, v2, v3, v4);
-  SceneJumpInfo___ctor_29748028(v7, (System_String_o *)StringLiteral_12612, 0, 0LL);
+  SceneJumpInfo___ctor_29748028(v7, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 0, 0LL);
   Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     sub_B170D4();
@@ -260,9 +260,9 @@ void __fastcall SummonRootComponent__LoadAssetsToScene(SummonRootComponent_o *th
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___, v3);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_13106, v6);
-    sub_B16FFC(&StringLiteral_12854, v7);
-    sub_B16FFC(&StringLiteral_13101, v8);
+    sub_B16FFC(&StringLiteral_13106/*"SummonRoot"*/, v6);
+    sub_B16FFC(&StringLiteral_12854/*"SmmonEffPref"*/, v7);
+    sub_B16FFC(&StringLiteral_13101/*"SummonEffect2Prefab"*/, v8);
     byte_40FD4C4 = 1;
   }
   summonAssets = this->fields.summonAssets;
@@ -270,7 +270,7 @@ void __fastcall SummonRootComponent__LoadAssetsToScene(SummonRootComponent_o *th
     goto LABEL_24;
   Object_WarBoardWaitTimeSetting = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                                summonAssets,
-                                                                               (System_String_o *)StringLiteral_13101,
+                                                                               (System_String_o *)StringLiteral_13101/*"SummonEffect2Prefab"*/,
                                                                                (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -329,14 +329,14 @@ void __fastcall SummonRootComponent__LoadAssetsToScene(SummonRootComponent_o *th
     || (FsmVariables = PlayMakerFSM__get_FsmVariables(myFSM, 0LL)) == 0LL
     || (FsmGameObject = HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
                           FsmVariables,
-                          (System_String_o *)StringLiteral_12854,
+                          (System_String_o *)StringLiteral_12854/*"SmmonEffPref"*/,
                           0LL)) == 0LL
     || (HutongGames_PlayMaker_FsmGameObject__set_Value(FsmGameObject, *p_summonEffPrefab, 0LL), !*p_summonEffPrefab)
     || (Component_srcLineSprite = (PlayMakerFSM_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       *p_summonEffPrefab,
                                                       (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___)) == 0LL
     || (v43 = PlayMakerFSM__get_FsmVariables(Component_srcLineSprite, 0LL)) == 0LL
-    || (v44 = HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(v43, (System_String_o *)StringLiteral_13106, 0LL),
+    || (v44 = HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(v43, (System_String_o *)StringLiteral_13106/*"SummonRoot"*/, 0LL),
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL),
         !v44) )
   {
@@ -376,7 +376,7 @@ void __fastcall SummonRootComponent__SetAssetStroageData(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&Method_SummonRootComponent_EndLoadAssetData__, v7);
-    sub_B16FFC(&StringLiteral_5833, v8);
+    sub_B16FFC(&StringLiteral_5833/*"Effect/Summon"*/, v8);
     byte_40FD4C2 = 1;
   }
   summonAssets = this->fields.summonAssets;
@@ -407,7 +407,7 @@ void __fastcall SummonRootComponent__SetAssetStroageData(
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5833, v21, 1, 0LL);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5833/*"Effect/Summon"*/, v21, 1, 0LL);
   }
 }
 
@@ -436,11 +436,11 @@ void __fastcall SummonRootComponent__SetBg(SummonRootComponent_o *this, const Me
     sub_B16FFC(&AssetManager_TypeInfo, method);
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
     sub_B16FFC(&Method_SummonRootComponent_EndLoadBg__, v10);
-    sub_B16FFC(&StringLiteral_2792, v11);
+    sub_B16FFC(&StringLiteral_2792/*"Bg/10500"*/, v11);
     byte_40FD4BF = 1;
   }
-  v12 = (System_Int32_array **)StringLiteral_2792;
-  this->fields.path = (struct System_String_o *)StringLiteral_2792;
+  v12 = (System_Int32_array **)StringLiteral_2792/*"Bg/10500"*/;
+  this->fields.path = (struct System_String_o *)StringLiteral_2792/*"Bg/10500"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.path, v12, v2, v3, v4, v5, v6, v7);
   path = this->fields.path;
   v18 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v14, v15, v16, v17);

@@ -284,7 +284,7 @@ bool __fastcall UserServantCoinListViewItem__SetSortValue(
 
   if ( (byte_40F8114 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, sort);
+    sub_B16FFC(&StringLiteral_1/*""*/, sort);
     byte_40F8114 = 1;
   }
   klass = this->klass;
@@ -309,8 +309,8 @@ bool __fastcall UserServantCoinListViewItem__SetSortValue(
         if ( servantLimitEntity )
           servantLimitEntity = *(int *)(servantLimitEntity + 24);
         this->fields.sortValue1 = servantLimitEntity;
-        v27 = (System_Int32_array **)StringLiteral_1;
-        this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1;
+        v27 = (System_Int32_array **)StringLiteral_1/*""*/;
+        this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
         sub_B16F98((BattleServantConfConponent_o *)&this->fields.sortStr1, v27, v6, v7, v8, v9, v10, v11);
         servantEntity = this->fields.servantEntity;
         if ( servantEntity )
@@ -338,7 +338,7 @@ LABEL_23:
           userSvtCoinEntity = *(int *)(userSvtCoinEntity + 28);
         this->fields.sortValue1 = userSvtCoinEntity;
         p_sortStr1 = &this->fields.sortStr1;
-        sortRuby = (struct System_String_o *)StringLiteral_1;
+        sortRuby = (struct System_String_o *)StringLiteral_1/*""*/;
 LABEL_15:
         this->fields.sortStr1 = sortRuby;
         sub_B16F98(
@@ -380,8 +380,8 @@ LABEL_34:
     if ( v21 )
       v21 = *(int *)(v21 + 208);
     this->fields.sortValue1 = v21;
-    v22 = (System_Int32_array **)StringLiteral_1;
-    this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1;
+    v22 = (System_Int32_array **)StringLiteral_1/*""*/;
+    this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
     sub_B16F98((BattleServantConfConponent_o *)&this->fields.sortStr1, v22, v6, v7, v8, v9, v10, v11);
     v23 = this->fields.servantEntity;
     iconLabelInfo = this->fields.iconLabelInfo;

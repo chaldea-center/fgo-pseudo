@@ -217,8 +217,8 @@ void __fastcall EventInfoDiggingEventPointControl__Initialization(
   {
     sub_B16FFC(&System_Action_TypeInfo, entity);
     sub_B16FFC(&Method_EventInfoDiggingEventPointControl__Initialization_b__7_0__, v10);
-    sub_B16FFC(&StringLiteral_18469, v11);
-    sub_B16FFC(&StringLiteral_18470, v12);
+    sub_B16FFC(&StringLiteral_18469/*"event_point_bg_8036701"*/, v11);
+    sub_B16FFC(&StringLiteral_18470/*"event_point_bg_8036702"*/, v12);
     byte_40FA113 = 1;
   }
   this->fields.eventUiEntity = entity;
@@ -242,7 +242,7 @@ void __fastcall EventInfoDiggingEventPointControl__Initialization(
   EventInfoUIBase__SetSpriteByLocalAtlas(
     (EventInfoUIBase_o *)this,
     this->fields.userPointBgSprite,
-    (System_String_o *)StringLiteral_18469,
+    (System_String_o *)StringLiteral_18469/*"event_point_bg_8036701"*/,
     0LL);
   userPointBgSprite = this->fields.userPointBgSprite;
   if ( !userPointBgSprite
@@ -252,7 +252,7 @@ void __fastcall EventInfoDiggingEventPointControl__Initialization(
         EventInfoUIBase__SetSpriteByLocalAtlas(
           (EventInfoUIBase_o *)this,
           this->fields.nextPointBgSprite,
-          (System_String_o *)StringLiteral_18470,
+          (System_String_o *)StringLiteral_18470/*"event_point_bg_8036702"*/,
           0LL),
         (nextPointBgSprite = this->fields.nextPointBgSprite) == 0LL) )
   {
@@ -296,7 +296,7 @@ void __fastcall EventInfoDiggingEventPointControl__Redisplay(
   if ( (byte_40FA114 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_5636, v3);
+    sub_B16FFC(&StringLiteral_5636/*"EVENT_POINT_COMMON_FORMAT_COUNT_STOP"*/, v3);
     byte_40FA114 = 1;
   }
   if ( this->fields.eventUiValueEntityList )
@@ -326,7 +326,7 @@ void __fastcall EventInfoDiggingEventPointControl__Redisplay(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5636, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5636/*"EVENT_POINT_COMMON_FORMAT_COUNT_STOP"*/, 0LL);
     if ( !nextPointLabel )
 LABEL_13:
       sub_B170D4();
@@ -355,7 +355,7 @@ void __fastcall EventInfoDiggingEventPointControl__SetNextEventPointLabel(
     sub_B16FFC(&long_TypeInfo, point);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_5635, v7);
+    sub_B16FFC(&StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, v7);
     byte_40FA116 = 1;
   }
   nextPointLabel = (UnityEngine_Object_o *)this->fields.nextPointLabel;
@@ -372,7 +372,7 @@ void __fastcall EventInfoDiggingEventPointControl__SetNextEventPointLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5635, 0LL);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
     v13 = point;
     v11 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v13);
     v12 = System_String__Format(v10, v11, 0LL);
@@ -403,7 +403,7 @@ void __fastcall EventInfoDiggingEventPointControl__SetUserEventPointLabel(
     sub_B16FFC(&long_TypeInfo, point);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_5635, v7);
+    sub_B16FFC(&StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, v7);
     byte_40FA115 = 1;
   }
   userPointLabel = (UnityEngine_Object_o *)this->fields.userPointLabel;
@@ -420,7 +420,7 @@ void __fastcall EventInfoDiggingEventPointControl__SetUserEventPointLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5635, 0LL);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
     v13 = point;
     v11 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v13);
     v12 = System_String__Format(v10, v11, 0LL);

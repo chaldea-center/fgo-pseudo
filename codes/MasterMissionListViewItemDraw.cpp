@@ -624,9 +624,9 @@ void __fastcall MasterMissionListViewItemDraw__UpdateDispResTime(
     sub_B16FFC(&MasterMissionListViewItem_TypeInfo, v6);
     sub_B16FFC(&MissionListViewItemDraw_TypeInfo, v7);
     sub_B16FFC(&NetworkManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_13348, v9);
-    sub_B16FFC(&StringLiteral_9331, v10);
-    sub_B16FFC(&StringLiteral_13336, v11);
+    sub_B16FFC(&StringLiteral_13348/*"TIME_REST_QUEST"*/, v9);
+    sub_B16FFC(&StringLiteral_9331/*"NO_TIME_INFO"*/, v10);
+    sub_B16FFC(&StringLiteral_13336/*"TIME_REST_ACHIVE"*/, v11);
     byte_40FB23A = 1;
   }
   if ( missionListViewItem )
@@ -665,7 +665,7 @@ LABEL_32:
             {
               j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
             }
-            v23 = &StringLiteral_13336;
+            v23 = &StringLiteral_13336/*"TIME_REST_ACHIVE"*/;
             goto LABEL_53;
           }
           v24 = LocalizationManager_TypeInfo;
@@ -683,7 +683,7 @@ LABEL_32:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              RestTime = LocalizationManager__Get((System_String_o *)StringLiteral_9331, 0LL);
+              RestTime = LocalizationManager__Get((System_String_o *)StringLiteral_9331/*"NO_TIME_INFO"*/, 0LL);
               goto LABEL_32;
             }
             if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -691,7 +691,7 @@ LABEL_32:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v26 = LocalizationManager__Get((System_String_o *)StringLiteral_9331, 0LL);
+            v26 = LocalizationManager__Get((System_String_o *)StringLiteral_9331/*"NO_TIME_INFO"*/, 0LL);
 LABEL_49:
             v22 = v26;
             if ( (BYTE3(MissionListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -699,7 +699,7 @@ LABEL_49:
             {
               j_il2cpp_runtime_class_init_0(MissionListViewItemDraw_TypeInfo);
             }
-            v23 = &StringLiteral_13348;
+            v23 = &StringLiteral_13348/*"TIME_REST_QUEST"*/;
 LABEL_53:
             TimeText = MissionListViewItemDraw__GetTimeText((System_String_o *)*v23, v22, 0LL);
             if ( resTimeLb )

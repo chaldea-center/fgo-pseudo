@@ -187,14 +187,14 @@ System_String_o *__fastcall ChangeBattlePhaseOverwriteAnimation__GetCurrentNorma
 
   if ( (byte_40FCF90 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, baseAnimName);
+    sub_B16FFC(&StringLiteral_1/*""*/, baseAnimName);
     byte_40FCF90 = 1;
   }
   if ( System_String__IsNullOrEmpty(baseAnimName, 0LL) )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   current = this->fields.current;
   if ( !current )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   else
     return ChangeBattlePhaseOverwriteAnimation_AnimationOverwriteData__Find(current, baseAnimName, 0LL);
 }
@@ -562,7 +562,7 @@ System_String_o *__fastcall ChangeBattlePhaseOverwriteAnimation__Overwrite(
 
   if ( (byte_40FCF8F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, bActor);
+    sub_B16FFC(&StringLiteral_1/*""*/, bActor);
     byte_40FCF8F = 1;
   }
   current = this->fields.current;
@@ -574,7 +574,7 @@ System_String_o *__fastcall ChangeBattlePhaseOverwriteAnimation__Overwrite(
 LABEL_9:
     sub_B170D4();
   }
-  v8 = (System_String_o *)StringLiteral_1;
+  v8 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !bActor )
     goto LABEL_9;
 LABEL_5:
@@ -732,7 +732,7 @@ System_String_o *__fastcall ChangeBattlePhaseOverwriteAnimation_AnimationOverwri
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__, targetName);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F70B8 = 1;
   }
   dicOverwriteName = this->fields.dicOverwriteName;
@@ -752,7 +752,7 @@ System_String_o *__fastcall ChangeBattlePhaseOverwriteAnimation_AnimationOverwri
 LABEL_8:
     sub_B170D4();
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 

@@ -64,11 +64,11 @@ void __fastcall EventItemListComponent__GoToEventShop(int32_t eventId, const Met
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_9601, v7);
+    sub_B16FFC(&StringLiteral_9601/*"NormalEventShop"*/, v7);
     byte_40F8847 = 1;
   }
   v8 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, method, v2, v3, v4);
-  SceneJumpInfo___ctor_29748028(v8, (System_String_o *)StringLiteral_9601, eventId, 0LL);
+  SceneJumpInfo___ctor_29748028(v8, (System_String_o *)StringLiteral_9601/*"NormalEventShop"*/, eventId, 0LL);
   if ( !v8
     || (SceneJumpInfo__SetReturnNowScene(v8, 0LL),
         (Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
@@ -93,11 +93,11 @@ void __fastcall EventItemListComponent__GoToShopEventItemExchange(int32_t eventI
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_6153, v7);
+    sub_B16FFC(&StringLiteral_6153/*"EventItem"*/, v7);
     byte_40F8846 = 1;
   }
   v8 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, method, v2, v3, v4);
-  SceneJumpInfo___ctor_29748028(v8, (System_String_o *)StringLiteral_6153, eventId, 0LL);
+  SceneJumpInfo___ctor_29748028(v8, (System_String_o *)StringLiteral_6153/*"EventItem"*/, eventId, 0LL);
   if ( !v8
     || (SceneJumpInfo__SetReturnNowScene(v8, 0LL),
         (Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )

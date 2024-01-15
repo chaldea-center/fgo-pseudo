@@ -13,7 +13,7 @@ void __fastcall BattleLogData___ctor(BattleLogData_o *this, const MethodInfo *me
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F734F = 1;
   }
   v8 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -27,13 +27,13 @@ void __fastcall BattleLogData___ctor(BattleLogData_o *this, const MethodInfo *me
     (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.list = (struct System_Collections_Generic_List_string__o *)v8;
   sub_B16F98(&this->fields, v8);
-  v9 = StringLiteral_1;
-  this->fields.tag = (struct System_String_o *)StringLiteral_1;
+  v9 = StringLiteral_1/*""*/;
+  this->fields.tag = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields.tag, v9);
   this->fields.max = 10;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v10 = StringLiteral_1;
-  this->fields.tag = (struct System_String_o *)StringLiteral_1;
+  v10 = StringLiteral_1/*""*/;
+  this->fields.tag = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields.tag, v10);
 }
 
@@ -51,7 +51,7 @@ void __fastcall BattleLogData___ctor_19759460(BattleLogData_o *this, System_Stri
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, intag);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F7350 = 1;
   }
   v9 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -65,8 +65,8 @@ void __fastcall BattleLogData___ctor_19759460(BattleLogData_o *this, System_Stri
     (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.list = (struct System_Collections_Generic_List_string__o *)v9;
   sub_B16F98(&this->fields, v9);
-  v10 = StringLiteral_1;
-  this->fields.tag = (struct System_String_o *)StringLiteral_1;
+  v10 = StringLiteral_1/*""*/;
+  this->fields.tag = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields.tag, v10);
   this->fields.max = 10;
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -92,7 +92,7 @@ void __fastcall BattleLogData___ctor_19759668(
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, intag);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F7351 = 1;
   }
   v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -106,8 +106,8 @@ void __fastcall BattleLogData___ctor_19759668(
     (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.list = (struct System_Collections_Generic_List_string__o *)v10;
   sub_B16F98(&this->fields, v10);
-  v11 = StringLiteral_1;
-  this->fields.tag = (struct System_String_o *)StringLiteral_1;
+  v11 = StringLiteral_1/*""*/;
+  this->fields.tag = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields.tag, v11);
   this->fields.max = 10;
   System_Object___ctor((Il2CppObject *)this, 0LL);

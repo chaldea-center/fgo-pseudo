@@ -62,10 +62,10 @@ void __fastcall ServantListViewItemDraw__SetInput(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_21736, v10);
-    sub_B16FFC(&StringLiteral_11584, v11);
-    sub_B16FFC(&StringLiteral_11607, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, v10);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v11);
+    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FD6A5 = 1;
   }
   if ( !item )
@@ -174,7 +174,7 @@ void __fastcall ServantListViewItemDraw__SetInput(
     warningLabel = this->fields.warningLabel;
     if ( !warningLabel )
       goto LABEL_84;
-    v40 = (System_String_o *)StringLiteral_1;
+    v40 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_61:
     UILabel__set_text(warningLabel, v40, 0LL);
     goto LABEL_62;
@@ -189,7 +189,7 @@ LABEL_61:
   v34 = this->fields.warningLabel;
   if ( !v34 )
     goto LABEL_84;
-  UILabel__set_text(v34, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v34, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !item->fields.isEnabled )
   {
     v35 = this->fields.warningLabel;
@@ -200,7 +200,7 @@ LABEL_61:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v36 = &StringLiteral_11607;
+      v36 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
     }
     else
     {
@@ -209,7 +209,7 @@ LABEL_61:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v36 = &StringLiteral_11584;
+      v36 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
     }
     v41 = LocalizationManager__Get((System_String_o *)*v36, 0LL);
     if ( !v35 )
@@ -262,7 +262,7 @@ LABEL_62:
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      AtlasManager__SetEventSprite(v49, (System_String_o *)StringLiteral_21736, 0LL);
+      AtlasManager__SetEventSprite(v49, (System_String_o *)StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, 0LL);
       if ( item->fields.isNeedAdjustIconLabelScale )
       {
         v50 = this->fields.servantFaceIcon;
@@ -347,12 +347,12 @@ void __fastcall ServantListViewItemDraw__SetItem(
     sub_B16FFC(&AtlasManager_TypeInfo, item);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_21736, v9);
-    sub_B16FFC(&StringLiteral_11584, v10);
-    sub_B16FFC(&StringLiteral_11607, v11);
-    sub_B16FFC(&StringLiteral_19256, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
-    sub_B16FFC(&StringLiteral_19257, v14);
+    sub_B16FFC(&StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, v9);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v10);
+    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v11);
+    sub_B16FFC(&StringLiteral_19256/*"icon_equip"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
+    sub_B16FFC(&StringLiteral_19257/*"icon_equip_cc"*/, v14);
     byte_40FD6A4 = 1;
   }
   if ( !item || !mode )
@@ -426,9 +426,9 @@ void __fastcall ServantListViewItemDraw__SetItem(
       if ( !v24 )
         goto LABEL_104;
       if ( item->fields.userCommandCodeEntity )
-        v25 = &StringLiteral_19257;
+        v25 = &StringLiteral_19257/*"icon_equip_cc"*/;
       else
-        v25 = &StringLiteral_19256;
+        v25 = &StringLiteral_19256/*"icon_equip"*/;
       UISprite__set_spriteName(v24, (System_String_o *)*v25, 0LL);
     }
     else
@@ -514,7 +514,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
     warningLabel = this->fields.warningLabel;
     if ( !warningLabel )
       goto LABEL_104;
-    v48 = (System_String_o *)StringLiteral_1;
+    v48 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_81:
     UILabel__set_text(warningLabel, v48, 0LL);
     goto LABEL_82;
@@ -529,7 +529,7 @@ LABEL_81:
   v42 = this->fields.warningLabel;
   if ( !v42 )
     goto LABEL_104;
-  UILabel__set_text(v42, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v42, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !item->fields.isEnabled )
   {
     v43 = this->fields.warningLabel;
@@ -540,7 +540,7 @@ LABEL_81:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v44 = &StringLiteral_11607;
+      v44 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
     }
     else
     {
@@ -549,7 +549,7 @@ LABEL_81:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v44 = &StringLiteral_11584;
+      v44 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
     }
     v49 = LocalizationManager__Get((System_String_o *)*v44, 0LL);
     if ( !v43 )
@@ -600,7 +600,7 @@ LABEL_104:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(v57, (System_String_o *)StringLiteral_21736, 0LL);
+    AtlasManager__SetEventSprite(v57, (System_String_o *)StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, 0LL);
     if ( item->fields.isNeedAdjustIconLabelScale )
     {
       v58 = this->fields.servantFaceIcon;

@@ -18,22 +18,22 @@ System_String_o *__fastcall TitleInfoEventTimeImgListViewDraw__GetIconImageName(
 
   if ( (byte_40F83DC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22595, *(_QWORD *)&state);
-    sub_B16FFC(&StringLiteral_22594, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_22595/*"time_status_icon_noon"*/, *(_QWORD *)&state);
+    sub_B16FFC(&StringLiteral_22594/*"time_status_icon_night"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F83DC = 1;
   }
   if ( (unsigned int)state < 2 )
   {
-    v6 = (System_String_o **)&StringLiteral_22595;
+    v6 = (System_String_o **)&StringLiteral_22595/*"time_status_icon_noon"*/;
   }
   else if ( (state & 0xFFFFFFFE) == 2 )
   {
-    v6 = (System_String_o **)&StringLiteral_22594;
+    v6 = (System_String_o **)&StringLiteral_22594/*"time_status_icon_night"*/;
   }
   else
   {
-    v6 = (System_String_o **)&StringLiteral_1;
+    v6 = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *v6;
 }
@@ -51,13 +51,13 @@ System_String_o *__fastcall TitleInfoEventTimeImgListViewDraw__GetLabelImageName
 
   if ( (byte_40F83DD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22596, *(_QWORD *)&state);
-    sub_B16FFC(&StringLiteral_1, v4);
-    sub_B16FFC(&StringLiteral_22592, v5);
+    sub_B16FFC(&StringLiteral_22596/*"time_status_icon_story"*/, *(_QWORD *)&state);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
+    sub_B16FFC(&StringLiteral_22592/*"time_status_icon_free"*/, v5);
     byte_40F83DD = 1;
   }
   if ( (unsigned int)state > 3 )
-    v6 = (System_String_o **)&StringLiteral_1;
+    v6 = (System_String_o **)&StringLiteral_1/*""*/;
   else
     v6 = (System_String_o **)*(&off_3D6A720 + state);
   return *v6;

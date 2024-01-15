@@ -42,8 +42,8 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetCooltimeText(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&remainTime);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_12250, v5);
-    sub_B16FFC(&StringLiteral_12248, v6);
+    sub_B16FFC(&StringLiteral_12250/*"SPOT_COOLTIME_REMAIN"*/, v5);
+    sub_B16FFC(&StringLiteral_12248/*"SPOT_COOLTIME_NONE"*/, v6);
     byte_40FADA6 = 1;
   }
   if ( remainTime <= 0 )
@@ -53,7 +53,7 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetCooltimeText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    return LocalizationManager__Get((System_String_o *)StringLiteral_12248, 0LL);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_12248/*"SPOT_COOLTIME_NONE"*/, 0LL);
   }
   else
   {
@@ -65,7 +65,7 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetCooltimeText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12250, 0LL);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12250/*"SPOT_COOLTIME_REMAIN"*/, 0LL);
     v17 = v7;
     v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
     v16 = v8;
@@ -98,10 +98,10 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetRewardCountLabel(
   {
     sub_B16FFC(&long_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_12252, v4);
-    sub_B16FFC(&StringLiteral_12255, v5);
-    sub_B16FFC(&StringLiteral_12254, v6);
-    sub_B16FFC(&StringLiteral_12253, v7);
+    sub_B16FFC(&StringLiteral_12252/*"SPOT_COOLTIME_REWARD_COUNT"*/, v4);
+    sub_B16FFC(&StringLiteral_12255/*"SPOT_COOLTIME_REWARD_COUNT_QP_MAX"*/, v5);
+    sub_B16FFC(&StringLiteral_12254/*"SPOT_COOLTIME_REWARD_COUNT_QP"*/, v6);
+    sub_B16FFC(&StringLiteral_12253/*"SPOT_COOLTIME_REWARD_COUNT_MAX"*/, v7);
     byte_40FADAB = 1;
   }
   remainTime = this->fields.remainTime;
@@ -114,7 +114,7 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetRewardCountLabel(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v9 = &StringLiteral_12255;
+      v9 = &StringLiteral_12255/*"SPOT_COOLTIME_REWARD_COUNT_QP_MAX"*/;
     }
     else
     {
@@ -123,7 +123,7 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetRewardCountLabel(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v9 = &StringLiteral_12254;
+      v9 = &StringLiteral_12254/*"SPOT_COOLTIME_REWARD_COUNT_QP"*/;
     }
   }
   else if ( remainTime <= 0 )
@@ -133,7 +133,7 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetRewardCountLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v9 = &StringLiteral_12253;
+    v9 = &StringLiteral_12253/*"SPOT_COOLTIME_REWARD_COUNT_MAX"*/;
   }
   else
   {
@@ -142,7 +142,7 @@ System_String_o *__fastcall SpotCooltimeInfoComponent__GetRewardCountLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v9 = &StringLiteral_12252;
+    v9 = &StringLiteral_12252/*"SPOT_COOLTIME_REWARD_COUNT"*/;
   }
   v10 = LocalizationManager__Get((System_String_o *)*v9, 0LL);
   receivedRewardNum = this->fields.receivedRewardNum;
@@ -357,18 +357,18 @@ void __fastcall SpotCooltimeInfoComponent__SetupBaseUI(
   if ( (byte_40FADA8 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_22131, v5);
-    sub_B16FFC(&StringLiteral_22130, v6);
-    sub_B16FFC(&StringLiteral_22135, v7);
+    sub_B16FFC(&StringLiteral_22131/*"spot_info_gauge_base"*/, v5);
+    sub_B16FFC(&StringLiteral_22130/*"spot_info_gauge"*/, v6);
+    sub_B16FFC(&StringLiteral_22135/*"spot_info_window"*/, v7);
     byte_40FADA8 = 1;
   }
   rewardItemInfoRoot = this->fields.rewardItemInfoRoot;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_28584872(eventId, rewardItemInfoRoot, (System_String_o *)StringLiteral_22135, 0LL);
-  AtlasManager__SetEventUI_28584872(eventId, this->fields.rewardQpInfoRoot, (System_String_o *)StringLiteral_22135, 0LL);
-  AtlasManager__SetEventUI_28584872(eventId, this->fields.gaugeBaseSprite, (System_String_o *)StringLiteral_22131, 0LL);
-  v9 = AtlasManager__SetEventUI_28584872(eventId, this->fields.gaugeSprite, (System_String_o *)StringLiteral_22130, 0LL);
+  AtlasManager__SetEventUI_28584872(eventId, rewardItemInfoRoot, (System_String_o *)StringLiteral_22135/*"spot_info_window"*/, 0LL);
+  AtlasManager__SetEventUI_28584872(eventId, this->fields.rewardQpInfoRoot, (System_String_o *)StringLiteral_22135/*"spot_info_window"*/, 0LL);
+  AtlasManager__SetEventUI_28584872(eventId, this->fields.gaugeBaseSprite, (System_String_o *)StringLiteral_22131/*"spot_info_gauge_base"*/, 0LL);
+  v9 = AtlasManager__SetEventUI_28584872(eventId, this->fields.gaugeSprite, (System_String_o *)StringLiteral_22130/*"spot_info_gauge"*/, 0LL);
   gaugeLinesSprite = this->fields.gaugeLinesSprite;
   if ( !gaugeLinesSprite )
     sub_B170D4();
@@ -389,7 +389,7 @@ void __fastcall SpotCooltimeInfoComponent__SetupBaseUI(
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      v9 = AtlasManager__SetEventUI_28584872(eventId, v15, (System_String_o *)StringLiteral_22131, 0LL);
+      v9 = AtlasManager__SetEventUI_28584872(eventId, v15, (System_String_o *)StringLiteral_22131/*"spot_info_gauge_base"*/, 0LL);
       LODWORD(v13) = gaugeLinesSprite->max_length;
       ++v14;
     }

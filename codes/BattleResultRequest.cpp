@@ -214,35 +214,35 @@ void __fastcall BattleResultRequest__beginRequest(
     sub_B16FFC(&NetworkManager_TypeInfo, v39);
     sub_B16FFC(&string___TypeInfo, v40);
     sub_B16FFC(&uint_TypeInfo, v41);
-    sub_B16FFC(&StringLiteral_21765, v42);
-    sub_B16FFC(&StringLiteral_21706, v43);
-    sub_B16FFC(&StringLiteral_21631, v44);
-    sub_B16FFC(&StringLiteral_17112, v45);
-    sub_B16FFC(&StringLiteral_22054, v46);
-    sub_B16FFC(&StringLiteral_21584, v47);
-    sub_B16FFC(&StringLiteral_22893, v48);
-    sub_B16FFC(&StringLiteral_21630, v49);
-    sub_B16FFC(&StringLiteral_745, v50);
-    sub_B16FFC(&StringLiteral_22055, v51);
-    sub_B16FFC(&StringLiteral_17806, v52);
-    sub_B16FFC(&StringLiteral_22895, v53);
-    sub_B16FFC(&StringLiteral_18219, v54);
-    sub_B16FFC(&StringLiteral_22896, v55);
-    sub_B16FFC(&StringLiteral_22372, v56);
-    sub_B16FFC(&StringLiteral_21829, v57);
-    sub_B16FFC(&StringLiteral_16593, v58);
-    sub_B16FFC(&StringLiteral_698, v59);
-    sub_B16FFC(&StringLiteral_22530, v60);
-    sub_B16FFC(&StringLiteral_23087, v61);
-    sub_B16FFC(&StringLiteral_15571, v62);
-    sub_B16FFC(&StringLiteral_23188, v63);
-    sub_B16FFC(&StringLiteral_1, v64);
-    sub_B16FFC(&StringLiteral_22356, v65);
-    sub_B16FFC(&StringLiteral_15807, v66);
-    sub_B16FFC(&StringLiteral_16585, v67);
-    sub_B16FFC(&StringLiteral_16587, v68);
-    sub_B16FFC(&StringLiteral_16169, v69);
-    sub_B16FFC(&StringLiteral_16240, v70);
+    sub_B16FFC(&StringLiteral_21765/*"routeSelect"*/, v42);
+    sub_B16FFC(&StringLiteral_21706/*"result"*/, v43);
+    sub_B16FFC(&StringLiteral_21631/*"recordValueJson"*/, v44);
+    sub_B16FFC(&StringLiteral_17112/*"calledEnemyUniqueIds"*/, v45);
+    sub_B16FFC(&StringLiteral_22054/*"skillShiftNpcSvtIds"*/, v46);
+    sub_B16FFC(&StringLiteral_21584/*"raidResult"*/, v47);
+    sub_B16FFC(&StringLiteral_22893/*"useTreasureDevices"*/, v48);
+    sub_B16FFC(&StringLiteral_21630/*"recordType"*/, v49);
+    sub_B16FFC(&StringLiteral_745/*",["*/, v50);
+    sub_B16FFC(&StringLiteral_22055/*"skillShiftUniqueIds"*/, v51);
+    sub_B16FFC(&StringLiteral_17806/*"dataLostUniqueIds"*/, v52);
+    sub_B16FFC(&StringLiteral_22895/*"usedEquipSkillList"*/, v53);
+    sub_B16FFC(&StringLiteral_18219/*"elapsedTurn"*/, v54);
+    sub_B16FFC(&StringLiteral_22896/*"usedTurnList"*/, v55);
+    sub_B16FFC(&StringLiteral_22372/*"svtCommonFlagList"*/, v56);
+    sub_B16FFC(&StringLiteral_21829/*"scores"*/, v57);
+    sub_B16FFC(&StringLiteral_16593/*"battleStatus"*/, v58);
+    sub_B16FFC(&StringLiteral_698/*","*/, v59);
+    sub_B16FFC(&StringLiteral_22530/*"tdPlayed"*/, v60);
+    sub_B16FFC(&StringLiteral_23087/*"voicePlayedList"*/, v61);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v62);
+    sub_B16FFC(&StringLiteral_23188/*"winResult"*/, v63);
+    sub_B16FFC(&StringLiteral_1/*""*/, v64);
+    sub_B16FFC(&StringLiteral_22356/*"superBossResult"*/, v65);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v66);
+    sub_B16FFC(&StringLiteral_16585/*"battleId"*/, v67);
+    sub_B16FFC(&StringLiteral_16587/*"battleResult"*/, v68);
+    sub_B16FFC(&StringLiteral_16169/*"action"*/, v69);
+    sub_B16FFC(&StringLiteral_16240/*"aliveUniqueIds"*/, v70);
     byte_40FA407 = 1;
   }
   v71 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B170CC(
@@ -261,31 +261,31 @@ void __fastcall BattleResultRequest__beginRequest(
     goto LABEL_116;
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_16585,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_16585/*"battleId"*/,
     v72,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   v193 = battleResult;
   v73 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v193);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_16587,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_16587/*"battleResult"*/,
     v73,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   v192 = winResult;
   v74 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v192);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_23188,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_23188/*"winResult"*/,
     v74,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_21829,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_21829/*"scores"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)scores,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_16169,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_16169/*"action"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)action,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -293,32 +293,32 @@ void __fastcall BattleResultRequest__beginRequest(
   v75 = JsonManager__toJson(&raidResult->obj, 0, 0, 0LL);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_21584,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_21584/*"raidResult"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)v75,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   v76 = JsonManager__toJson(&superBossResult->obj, 0, 0, 0LL);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_22356,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_22356/*"superBossResult"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)v76,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   v191 = elapsedTurn;
   v77 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v191);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_18219,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_18219/*"elapsedTurn"*/,
     v77,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   v190 = recordType;
   v78 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v190);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_21630,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_21630/*"recordType"*/,
     v78,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_21631,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_21631/*"recordValueJson"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)recordJson,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   if ( !firstNpPlayList )
@@ -329,7 +329,7 @@ void __fastcall BattleResultRequest__beginRequest(
   v80 = JsonManager__toJson(&v79->obj, 0, 0, 0LL);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_22530,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_22530/*"tdPlayed"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)v80,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   if ( !playerServantNoblePhantasmUsageData )
@@ -337,42 +337,42 @@ void __fastcall BattleResultRequest__beginRequest(
   v81 = PlayerServantNoblePhantasmUsageData__ConvertToJsonString(playerServantNoblePhantasmUsageData, 0LL);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_22893,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_22893/*"useTreasureDevices"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)v81,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_22895,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_22895/*"usedEquipSkillList"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)usedEquipSkillDict,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_22372,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_22372/*"svtCommonFlagList"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)svtCommonFlagDict,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_22055,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_22055/*"skillShiftUniqueIds"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)skillShiftUniqueIdArray,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_22054,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_22054/*"skillShiftNpcSvtIds"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)skillShiftNpcSvtIdArray,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_17112,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_17112/*"calledEnemyUniqueIds"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)calledEnemyUniqueIdArray,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_21765,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_21765/*"routeSelect"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)routeSelectIdArray,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_17806,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_17806/*"dataLostUniqueIds"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)dataLostUniqueIdArray,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   if ( !raidResult )
@@ -430,7 +430,7 @@ LABEL_115:
 LABEL_25:
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_16240,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_16240/*"aliveUniqueIds"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)aliveUniqueIds,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   if ( !aliveUniqueIds )
@@ -501,14 +501,14 @@ LABEL_32:
   v110 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(uint_TypeInfo, &v194);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_16593,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_16593/*"battleStatus"*/,
     v110,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   v111 = voicePlayedArray;
   if ( voicePlayedArray )
   {
     v112 = *(_QWORD *)&voicePlayedArray->max_length;
-    v113 = (System_Int32_array **)StringLiteral_1;
+    v113 = (System_Int32_array **)StringLiteral_1/*""*/;
     if ( (int)v112 >= 1 )
     {
       v114 = 0LL;
@@ -523,13 +523,13 @@ LABEL_32:
             if ( !v117 )
               goto LABEL_116;
             v123 = (System_String_array *)v117;
-            StatusLong = StringLiteral_15571;
-            if ( StringLiteral_15571 )
+            StatusLong = StringLiteral_15571/*"["*/;
+            if ( StringLiteral_15571/*"["*/ )
             {
-              StatusLong = sub_B170BC(StringLiteral_15571, v123->obj.klass->_1.element_class);
+              StatusLong = sub_B170BC(StringLiteral_15571/*"["*/, v123->obj.klass->_1.element_class);
               if ( !StatusLong )
                 goto LABEL_117;
-              v83 = (System_Int32_array **)StringLiteral_15571;
+              v83 = (System_Int32_array **)StringLiteral_15571/*"["*/;
             }
             else
             {
@@ -553,13 +553,13 @@ LABEL_32:
               goto LABEL_115;
             v123->m_Items[1] = (System_String_o *)v139;
             sub_B16F98((BattleServantConfConponent_o *)&v123->m_Items[1], v139, v84, v134, v135, v136, v137, v138);
-            StatusLong = StringLiteral_698;
-            if ( StringLiteral_698 )
+            StatusLong = StringLiteral_698/*","*/;
+            if ( StringLiteral_698/*","*/ )
             {
-              StatusLong = sub_B170BC(StringLiteral_698, v123->obj.klass->_1.element_class);
+              StatusLong = sub_B170BC(StringLiteral_698/*","*/, v123->obj.klass->_1.element_class);
               if ( !StatusLong )
                 goto LABEL_117;
-              v83 = (System_Int32_array **)StringLiteral_698;
+              v83 = (System_Int32_array **)StringLiteral_698/*","*/;
             }
             else
             {
@@ -583,13 +583,13 @@ LABEL_32:
               goto LABEL_115;
             v123->m_Items[3] = (System_String_o *)v161;
             sub_B16F98((BattleServantConfConponent_o *)&v123->m_Items[3], v161, v84, v156, v157, v158, v159, v160);
-            StatusLong = StringLiteral_15807;
-            if ( StringLiteral_15807 )
+            StatusLong = StringLiteral_15807/*"]"*/;
+            if ( StringLiteral_15807/*"]"*/ )
             {
-              StatusLong = sub_B170BC(StringLiteral_15807, v123->obj.klass->_1.element_class);
+              StatusLong = sub_B170BC(StringLiteral_15807/*"]"*/, v123->obj.klass->_1.element_class);
               if ( !StatusLong )
                 goto LABEL_117;
-              v83 = (System_Int32_array **)StringLiteral_15807;
+              v83 = (System_Int32_array **)StringLiteral_15807/*"]"*/;
             }
             else
             {
@@ -620,13 +620,13 @@ LABEL_117:
               goto LABEL_115;
             v123->m_Items[0] = (System_String_o *)v113;
             sub_B16F98((BattleServantConfConponent_o *)v123->m_Items, v113, v84, v124, v125, v126, v127, v128);
-            StatusLong = StringLiteral_745;
-            if ( StringLiteral_745 )
+            StatusLong = StringLiteral_745/*",["*/;
+            if ( StringLiteral_745/*",["*/ )
             {
-              StatusLong = sub_B170BC(StringLiteral_745, v123->obj.klass->_1.element_class);
+              StatusLong = sub_B170BC(StringLiteral_745/*",["*/, v123->obj.klass->_1.element_class);
               if ( !StatusLong )
                 goto LABEL_117;
-              v83 = (System_Int32_array **)StringLiteral_745;
+              v83 = (System_Int32_array **)StringLiteral_745/*",["*/;
             }
             else
             {
@@ -650,13 +650,13 @@ LABEL_117:
               goto LABEL_115;
             v123->m_Items[2] = (System_String_o *)v150;
             sub_B16F98((BattleServantConfConponent_o *)&v123->m_Items[2], v150, v84, v145, v146, v147, v148, v149);
-            StatusLong = StringLiteral_698;
-            if ( StringLiteral_698 )
+            StatusLong = StringLiteral_698/*","*/;
+            if ( StringLiteral_698/*","*/ )
             {
-              StatusLong = sub_B170BC(StringLiteral_698, v123->obj.klass->_1.element_class);
+              StatusLong = sub_B170BC(StringLiteral_698/*","*/, v123->obj.klass->_1.element_class);
               if ( !StatusLong )
                 goto LABEL_117;
-              v83 = (System_Int32_array **)StringLiteral_698;
+              v83 = (System_Int32_array **)StringLiteral_698/*","*/;
             }
             else
             {
@@ -680,13 +680,13 @@ LABEL_117:
               goto LABEL_115;
             v123->m_Items[4] = (System_String_o *)v172;
             sub_B16F98((BattleServantConfConponent_o *)&v123->m_Items[4], v172, v84, v167, v168, v169, v170, v171);
-            StatusLong = StringLiteral_15807;
-            if ( StringLiteral_15807 )
+            StatusLong = StringLiteral_15807/*"]"*/;
+            if ( StringLiteral_15807/*"]"*/ )
             {
-              StatusLong = sub_B170BC(StringLiteral_15807, v123->obj.klass->_1.element_class);
+              StatusLong = sub_B170BC(StringLiteral_15807/*"]"*/, v123->obj.klass->_1.element_class);
               if ( !StatusLong )
                 goto LABEL_117;
-              v83 = (System_Int32_array **)StringLiteral_15807;
+              v83 = (System_Int32_array **)StringLiteral_15807/*"]"*/;
             }
             else
             {
@@ -710,19 +710,19 @@ LABEL_117:
     }
 LABEL_106:
     v174 = System_String__Concat_43746016(
-             (System_String_o *)StringLiteral_15571,
+             (System_String_o *)StringLiteral_15571/*"["*/,
              (System_String_o *)v113,
-             (System_String_o *)StringLiteral_15807,
+             (System_String_o *)StringLiteral_15807/*"]"*/,
              0LL);
     System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
       v71,
-      (System_Xml_XmlQualifiedName_o *)StringLiteral_23087,
+      (System_Xml_XmlQualifiedName_o *)StringLiteral_23087/*"voicePlayedList"*/,
       (System_Xml_Schema_XmlSchemaObject_o *)v174,
       (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   }
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v71,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_22896,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_22896/*"usedTurnList"*/,
     (System_Xml_Schema_XmlSchemaObject_o *)usedTurnArray,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   v179 = (MiniMessagePack_MiniMessagePacker_o *)sub_B170CC(
@@ -747,7 +747,7 @@ LABEL_106:
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
   v182 = System_Convert__ToBase64String(v181, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_21706, v182, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_21706/*"result"*/, v182, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -793,7 +793,7 @@ System_String_o *__fastcall BattleResultRequest__getMockData(BattleResultRequest
   if ( (byte_40FA406 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9127, v2);
+    sub_B16FFC(&StringLiteral_9127/*"MockBattleResultRequest"*/, v2);
     byte_40FA406 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -801,7 +801,7 @@ System_String_o *__fastcall BattleResultRequest__getMockData(BattleResultRequest
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9127, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9127/*"MockBattleResultRequest"*/, 0LL);
 }
 
 
@@ -813,7 +813,7 @@ System_String_o *__fastcall BattleResultRequest__getURL(BattleResultRequest_o *t
   if ( (byte_40FA405 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16569, v2);
+    sub_B16FFC(&StringLiteral_16569/*"battle/result"*/, v2);
     byte_40FA405 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -822,7 +822,7 @@ System_String_o *__fastcall BattleResultRequest__getURL(BattleResultRequest_o *t
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_16569, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_16569/*"battle/result"*/, 0LL);
 }
 
 
@@ -846,7 +846,7 @@ void __fastcall BattleResultRequest__requestCompleted(
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
     sub_B16FFC(&ServantCommentManager_TypeInfo, v6);
     sub_B16FFC(&TopHomeRequest_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_20980, v8);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v8);
     byte_40FA408 = 1;
   }
   if ( (BYTE3(TopHomeRequest_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -877,7 +877,7 @@ void __fastcall BattleResultRequest__requestCompleted(
   }
   else
   {
-    v12 = (System_String_o *)StringLiteral_20980;
+    v12 = (System_String_o *)StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v12, 0LL);
 }
@@ -946,14 +946,14 @@ void __fastcall BattleResultRequest_Argument___ctor(BattleResultRequest_Argument
     sub_B16FFC(&System_Collections_Generic_List_Dictionary_string__object___TypeInfo, v11);
     sub_B16FFC(&BattleResultRequest_RaidResult___TypeInfo, v12);
     sub_B16FFC(&BattleResultRequest_SuperBossResult___TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40F7195 = 1;
   }
-  v15 = StringLiteral_1;
-  this->fields.scores = (struct System_String_o *)StringLiteral_1;
+  v15 = StringLiteral_1/*""*/;
+  this->fields.scores = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields.scores, v15);
-  v16 = StringLiteral_1;
-  this->fields.action = (struct System_String_o *)StringLiteral_1;
+  v16 = StringLiteral_1/*""*/;
+  this->fields.action = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields.action, v16);
   v18 = (struct System_Int32_array_array *)sub_B17014(int_____TypeInfo, 0LL, v17);
   this->fields.voicePlayedArray = v18;
@@ -1231,15 +1231,15 @@ System_String_o *__fastcall BattleResultRequest_Argument__ConvertVoicePlayedData
   if ( (byte_40F7194 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_745, v4);
-    sub_B16FFC(&StringLiteral_698, v5);
-    sub_B16FFC(&StringLiteral_15571, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
-    this = (BattleResultRequest_Argument_o *)sub_B16FFC(&StringLiteral_15807, v8);
+    sub_B16FFC(&StringLiteral_745/*",["*/, v4);
+    sub_B16FFC(&StringLiteral_698/*","*/, v5);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
+    this = (BattleResultRequest_Argument_o *)sub_B16FFC(&StringLiteral_15807/*"]"*/, v8);
     byte_40F7194 = 1;
   }
   voicePlayedArray = v3->fields.voicePlayedArray;
-  v10 = (System_String_o *)StringLiteral_1;
+  v10 = (System_String_o *)StringLiteral_1/*""*/;
   if ( voicePlayedArray )
   {
     v11 = 0LL;
@@ -1259,13 +1259,13 @@ System_String_o *__fastcall BattleResultRequest_Argument__ConvertVoicePlayedData
           if ( !v15 )
             goto LABEL_65;
           v16 = (BattleResultRequest_Argument_o *)v15;
-          this = (BattleResultRequest_Argument_o *)StringLiteral_15571;
-          if ( StringLiteral_15571 )
+          this = (BattleResultRequest_Argument_o *)StringLiteral_15571/*"["*/;
+          if ( StringLiteral_15571/*"["*/ )
           {
-            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_15571, v16->klass->_1.element_class);
+            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_15571/*"["*/, v16->klass->_1.element_class);
             if ( !this )
               goto LABEL_68;
-            method = (const MethodInfo *)StringLiteral_15571;
+            method = (const MethodInfo *)StringLiteral_15571/*"["*/;
           }
           else
           {
@@ -1289,13 +1289,13 @@ System_String_o *__fastcall BattleResultRequest_Argument__ConvertVoicePlayedData
             goto LABEL_67;
           v16->fields.action = (struct System_String_o *)v17;
           sub_B16F98(&v16->fields.action, v17);
-          this = (BattleResultRequest_Argument_o *)StringLiteral_698;
-          if ( StringLiteral_698 )
+          this = (BattleResultRequest_Argument_o *)StringLiteral_698/*","*/;
+          if ( StringLiteral_698/*","*/ )
           {
-            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_698, v16->klass->_1.element_class);
+            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_698/*","*/, v16->klass->_1.element_class);
             if ( !this )
               goto LABEL_68;
-            method = (const MethodInfo *)StringLiteral_698;
+            method = (const MethodInfo *)StringLiteral_698/*","*/;
           }
           else
           {
@@ -1319,13 +1319,13 @@ System_String_o *__fastcall BattleResultRequest_Argument__ConvertVoicePlayedData
             goto LABEL_67;
           v16->fields.aliveUniqueIds = (struct System_Int32_array *)v19;
           sub_B16F98(&v16->fields.aliveUniqueIds, v19);
-          this = (BattleResultRequest_Argument_o *)StringLiteral_15807;
-          if ( StringLiteral_15807 )
+          this = (BattleResultRequest_Argument_o *)StringLiteral_15807/*"]"*/;
+          if ( StringLiteral_15807/*"]"*/ )
           {
-            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_15807, v16->klass->_1.element_class);
+            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_15807/*"]"*/, v16->klass->_1.element_class);
             if ( !this )
               goto LABEL_68;
-            method = (const MethodInfo *)StringLiteral_15807;
+            method = (const MethodInfo *)StringLiteral_15807/*"]"*/;
           }
           else
           {
@@ -1356,13 +1356,13 @@ LABEL_68:
             goto LABEL_67;
           v16->fields.scores = v10;
           sub_B16F98(&v16->fields.scores, v10);
-          this = (BattleResultRequest_Argument_o *)StringLiteral_745;
-          if ( StringLiteral_745 )
+          this = (BattleResultRequest_Argument_o *)StringLiteral_745/*",["*/;
+          if ( StringLiteral_745/*",["*/ )
           {
-            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_745, v16->klass->_1.element_class);
+            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_745/*",["*/, v16->klass->_1.element_class);
             if ( !this )
               goto LABEL_68;
-            method = (const MethodInfo *)StringLiteral_745;
+            method = (const MethodInfo *)StringLiteral_745/*",["*/;
           }
           else
           {
@@ -1386,13 +1386,13 @@ LABEL_68:
             goto LABEL_67;
           v16->fields.voicePlayedArray = (struct System_Int32_array_array *)v18;
           sub_B16F98(&v16->fields.voicePlayedArray, v18);
-          this = (BattleResultRequest_Argument_o *)StringLiteral_698;
-          if ( StringLiteral_698 )
+          this = (BattleResultRequest_Argument_o *)StringLiteral_698/*","*/;
+          if ( StringLiteral_698/*","*/ )
           {
-            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_698, v16->klass->_1.element_class);
+            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_698/*","*/, v16->klass->_1.element_class);
             if ( !this )
               goto LABEL_68;
-            method = (const MethodInfo *)StringLiteral_698;
+            method = (const MethodInfo *)StringLiteral_698/*","*/;
           }
           else
           {
@@ -1416,13 +1416,13 @@ LABEL_68:
             goto LABEL_67;
           v16->fields.raidResult = (struct BattleResultRequest_RaidResult_array *)v20;
           sub_B16F98(&v16->fields.raidResult, v20);
-          this = (BattleResultRequest_Argument_o *)StringLiteral_15807;
-          if ( StringLiteral_15807 )
+          this = (BattleResultRequest_Argument_o *)StringLiteral_15807/*"]"*/;
+          if ( StringLiteral_15807/*"]"*/ )
           {
-            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_15807, v16->klass->_1.element_class);
+            this = (BattleResultRequest_Argument_o *)sub_B170BC(StringLiteral_15807/*"]"*/, v16->klass->_1.element_class);
             if ( !this )
               goto LABEL_68;
-            method = (const MethodInfo *)StringLiteral_15807;
+            method = (const MethodInfo *)StringLiteral_15807/*"]"*/;
           }
           else
           {
@@ -1449,9 +1449,9 @@ LABEL_65:
     }
   }
   return System_String__Concat_43746016(
-           (System_String_o *)StringLiteral_15571,
+           (System_String_o *)StringLiteral_15571/*"["*/,
            v10,
-           (System_String_o *)StringLiteral_15807,
+           (System_String_o *)StringLiteral_15807/*"]"*/,
            0LL);
 }
 

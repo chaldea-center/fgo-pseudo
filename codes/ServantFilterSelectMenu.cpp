@@ -19,11 +19,11 @@ void __fastcall ServantFilterSelectMenu___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&ListViewSort_TypeInfo, v1);
     sub_B16FFC(&ServantFilterSelectMenu_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_12660, v6);
+    sub_B16FFC(&StringLiteral_12660/*"ServantFilterSelect1"*/, v6);
     byte_40FC74A = 1;
   }
   v7 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_12660, 3, 0, 0LL);
+  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_12660/*"ServantFilterSelect1"*/, 3, 0, 0LL);
   static_fields = (BattleServantConfConponent_o *)ServantFilterSelectMenu_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v7;
   sub_B16F98(static_fields, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
@@ -3741,12 +3741,12 @@ void __fastcall ServantFilterSelectMenu__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&Method_ServantFilterSelectMenu_EndOpen__, v17);
     sub_B16FFC(&ServantFilterSelectMenu_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_11890, v19);
-    sub_B16FFC(&StringLiteral_11759, v20);
-    sub_B16FFC(&StringLiteral_11652, v21);
-    sub_B16FFC(&StringLiteral_11763, v22);
-    sub_B16FFC(&StringLiteral_11892, v23);
-    sub_B16FFC(&StringLiteral_11760, v24);
+    sub_B16FFC(&StringLiteral_11890/*"SERVANT_SORT_RESET"*/, v19);
+    sub_B16FFC(&StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_11652/*"SERVANT_EQUIP_FILTER_WARNING"*/, v21);
+    sub_B16FFC(&StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, v22);
+    sub_B16FFC(&StringLiteral_11892/*"SERVANT_SORT_TITLE2"*/, v23);
+    sub_B16FFC(&StringLiteral_11760/*"SERVANT_SORT_CLEAR"*/, v24);
     byte_40FC72F = 1;
   }
   if ( !this->fields.state )
@@ -3855,32 +3855,32 @@ void __fastcall ServantFilterSelectMenu__Open(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v67 = LocalizationManager__Get((System_String_o *)StringLiteral_11892, 0LL);
+          v67 = LocalizationManager__Get((System_String_o *)StringLiteral_11892/*"SERVANT_SORT_TITLE2"*/, 0LL);
           if ( titleLabel )
           {
             UILabel__set_text(titleLabel, v67, 0LL);
             v68 = this->fields.warningLabel;
-            v69 = LocalizationManager__Get((System_String_o *)StringLiteral_11652, 0LL);
+            v69 = LocalizationManager__Get((System_String_o *)StringLiteral_11652/*"SERVANT_EQUIP_FILTER_WARNING"*/, 0LL);
             if ( v68 )
             {
               UILabel__set_text(v68, v69, 0LL);
               decideLabel = this->fields.decideLabel;
-              v71 = LocalizationManager__Get((System_String_o *)StringLiteral_11763, 0LL);
+              v71 = LocalizationManager__Get((System_String_o *)StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, 0LL);
               if ( decideLabel )
               {
                 UILabel__set_text(decideLabel, v71, 0LL);
                 clearLabel = this->fields.clearLabel;
-                v73 = LocalizationManager__Get((System_String_o *)StringLiteral_11760, 0LL);
+                v73 = LocalizationManager__Get((System_String_o *)StringLiteral_11760/*"SERVANT_SORT_CLEAR"*/, 0LL);
                 if ( clearLabel )
                 {
                   UILabel__set_text(clearLabel, v73, 0LL);
                   cancelLabel = this->fields.cancelLabel;
-                  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_11759, 0LL);
+                  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, 0LL);
                   if ( cancelLabel )
                   {
                     UILabel__set_text(cancelLabel, v75, 0LL);
                     initializeLabel = this->fields.initializeLabel;
-                    v77 = LocalizationManager__Get((System_String_o *)StringLiteral_11890, 0LL);
+                    v77 = LocalizationManager__Get((System_String_o *)StringLiteral_11890/*"SERVANT_SORT_RESET"*/, 0LL);
                     if ( initializeLabel )
                     {
                       UILabel__set_text(initializeLabel, v77, 0LL);
@@ -4424,10 +4424,10 @@ System_String_o *__fastcall ServantFilterSelectMenu__get_closeBtnPath(
 {
   if ( (byte_40FC748 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15414, method);
+    sub_B16FFC(&StringLiteral_15414/*"Window/CancelButton"*/, method);
     byte_40FC748 = 1;
   }
-  return (System_String_o *)StringLiteral_15414;
+  return (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/;
 }
 
 

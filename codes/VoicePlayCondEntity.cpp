@@ -279,10 +279,10 @@ int32_t __fastcall VoicePlayCondEntity__GetWeight(
 
   if ( (byte_40FF75B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23174, *(_QWORD *)&defVal);
+    sub_B16FFC(&StringLiteral_23174/*"weight"*/, *(_QWORD *)&defVal);
     byte_40FF75B = 1;
   }
-  return VoicePlayCondEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_23174, defVal, v3);
+  return VoicePlayCondEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_23174/*"weight"*/, defVal, v3);
 }
 
 
@@ -356,7 +356,7 @@ int32_t __fastcall VoicePlayCondEntity___c___GetScriptIntArrayParam_b__16_0(
 
   if ( (byte_40F79B8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, x);
+    sub_B16FFC(&StringLiteral_1/*""*/, x);
     byte_40F79B8 = 1;
   }
   if ( x )
@@ -367,6 +367,6 @@ int32_t __fastcall VoicePlayCondEntity___c___GetScriptIntArrayParam_b__16_0(
   else
     v4 = 0LL;
   if ( !v4 )
-    v4 = (System_String_o *)StringLiteral_1;
+    v4 = (System_String_o *)StringLiteral_1/*""*/;
   return System_Int32__Parse(v4, 0LL);
 }

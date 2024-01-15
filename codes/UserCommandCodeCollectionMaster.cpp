@@ -82,12 +82,12 @@ UserCommandCodeCollectionEntity_o *__fastcall UserCommandCodeCollectionMaster__G
   {
     sub_B16FFC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, userId);
     sub_B16FFC(&UserCommandCodeCollectionEntity_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1223, v6);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v6);
     byte_40FAAE1 = 1;
   }
   v7 = System_Int64__ToString((int64_t)&v34, 0LL);
   v8 = System_Int32__ToString((int32_t)&v33, 0LL);
-  v9 = System_String__Concat_43746016(v7, (System_String_o *)StringLiteral_1223, v8, 0LL);
+  v9 = System_String__Concat_43746016(v7, (System_String_o *)StringLiteral_1223/*":"*/, v8, 0LL);
   lookup = DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
   if ( !lookup )
     goto LABEL_26;
@@ -561,7 +561,7 @@ UserCommandCodeCollectionEntity_array *__fastcall UserCommandCodeCollectionMaste
     sub_B16FFC(&NetworkManager_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
     sub_B16FFC(&UserCommandCodeCollectionEntity_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_1223, v13);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v13);
     byte_40FAAE3 = 1;
   }
   UserId = 0LL;
@@ -609,7 +609,7 @@ UserCommandCodeCollectionEntity_array *__fastcall UserCommandCodeCollectionMaste
       v60 = v22->m_Items[v27 + 1];
       v28 = System_Int64__ToString((int64_t)&UserId, 0LL);
       v29 = System_Int32__ToString((int32_t)&v60, 0LL);
-      v30 = System_String__Concat_43746016(v28, (System_String_o *)StringLiteral_1223, v29, 0LL);
+      v30 = System_String__Concat_43746016(v28, (System_String_o *)StringLiteral_1223/*":"*/, v29, 0LL);
       lookup = DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
       if ( !lookup )
         goto LABEL_42;
@@ -810,7 +810,7 @@ UserCommandCodeCollectionEntity_array *__fastcall UserCommandCodeCollectionMaste
     sub_B16FFC(&NetworkManager_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
     sub_B16FFC(&UserCommandCodeCollectionEntity_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_1223, v15);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v15);
     byte_40FAAE2 = 1;
   }
   UserId = 0LL;
@@ -856,7 +856,7 @@ UserCommandCodeCollectionEntity_array *__fastcall UserCommandCodeCollectionMaste
       }
       v27 = v24;
       v28 = System_Int32__ToString((int)v21 + 4 * (int)v22 + 32, 0LL);
-      v29 = System_String__Concat_43746016(v27, (System_String_o *)StringLiteral_1223, v28, 0LL);
+      v29 = System_String__Concat_43746016(v27, (System_String_o *)StringLiteral_1223/*":"*/, v28, 0LL);
       lookup = DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
       if ( !lookup )
         break;

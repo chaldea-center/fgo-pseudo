@@ -114,7 +114,7 @@ void __fastcall TutorialNotificationDialog__Init(TutorialNotificationDialog_o *t
   if ( (byte_40FB91E & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FB91E = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
@@ -128,7 +128,7 @@ void __fastcall TutorialNotificationDialog__Init(TutorialNotificationDialog_o *t
     v5 = this->fields.messageLabel;
     if ( !v5 )
       goto LABEL_11;
-    UILabel__set_text(v5, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v5, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   this->fields.isButtonEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -232,7 +232,7 @@ void __fastcall TutorialNotificationDialog__Open(
     sub_B16FFC(&System_Action_TypeInfo, message);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
     sub_B16FFC(&Method_TutorialNotificationDialog_EndOpen__, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FB91F = 1;
   }
   this->fields.closeCallbackFunc = func;
@@ -260,7 +260,7 @@ void __fastcall TutorialNotificationDialog__Open(
     if ( message )
       v21 = message;
     else
-      v21 = (System_String_o *)StringLiteral_1;
+      v21 = (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v20, v21, 0LL);
   }
   this->fields.isButtonEnable = 0;

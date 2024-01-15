@@ -17,7 +17,7 @@ void __fastcall CoinRoomLobbyComponent__EndLoadAsset(
   {
     sub_B16FFC(&CoinRoomUtility_TypeInfo, assetData);
     sub_B16FFC(&Method_System_Linq_Enumerable_Any_UIAtlas___, v4);
-    sub_B16FFC(&StringLiteral_5352, v5);
+    sub_B16FFC(&StringLiteral_5352/*"DownloadCoinRoomAtlas"*/, v5);
     byte_40F9A5B = 1;
   }
   if ( assetData )
@@ -27,7 +27,7 @@ void __fastcall CoinRoomLobbyComponent__EndLoadAsset(
     {
       j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
     }
-    DownloadAtlas = CoinRoomUtility__GetDownloadAtlas(assetData, (System_String_o *)StringLiteral_5352, method);
+    DownloadAtlas = CoinRoomUtility__GetDownloadAtlas(assetData, (System_String_o *)StringLiteral_5352/*"DownloadCoinRoomAtlas"*/, method);
     System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
       (System_Collections_Generic_IEnumerable_TSource__o *)DownloadAtlas,
       (const MethodInfo_18C7E58 *)Method_System_Linq_Enumerable_Any_UIAtlas___);
@@ -204,9 +204,9 @@ void __fastcall CoinRoomLobbyComponent__OpenLobby(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UISlider___, v8);
     sub_B16FFC(&int_TypeInfo, v9);
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_18208, v11);
-    sub_B16FFC(&StringLiteral_3124, v12);
-    sub_B16FFC(&StringLiteral_3125, v13);
+    sub_B16FFC(&StringLiteral_18208/*"effect_Circle_loop"*/, v11);
+    sub_B16FFC(&StringLiteral_3124/*"COIN_ROOM_LOBBY_INFO"*/, v12);
+    sub_B16FFC(&StringLiteral_3125/*"COIN_ROOM_LOBBY_TIME_INFO"*/, v13);
     byte_40F9A5A = 1;
   }
   m_ParticleSystem = 0LL;
@@ -266,7 +266,7 @@ void __fastcall CoinRoomLobbyComponent__OpenLobby(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3124, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3124/*"COIN_ROOM_LOBBY_INFO"*/, 0LL);
   lobbyInfoLabel = this->fields.lobbyInfoLabel;
   v31 = v29;
   v53.fields.m_Mode = v18;
@@ -277,7 +277,7 @@ void __fastcall CoinRoomLobbyComponent__OpenLobby(
   if ( !lobbyInfoLabel )
     goto LABEL_29;
   UILabel__set_text(lobbyInfoLabel, v34, 0LL);
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3125, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3125/*"COIN_ROOM_LOBBY_TIME_INFO"*/, 0LL);
   v36 = (CoinRoomLobbyComponent_o *)CoinRoomUtility__MonthRemainingNum((const MethodInfo *)v35);
   v37 = (int)v36;
   v39 = (Il2CppObject *)CoinRoomLobbyComponent__SetTimeLabel(v36, v38);
@@ -324,7 +324,7 @@ void __fastcall CoinRoomLobbyComponent__OpenLobby(
 LABEL_29:
     sub_B170D4();
   }
-  SimpleAnimation__Play_16380456(v49, (System_String_o *)StringLiteral_18208, 0LL);
+  SimpleAnimation__Play_16380456(v49, (System_String_o *)StringLiteral_18208/*"effect_Circle_loop"*/, 0LL);
 }
 
 
@@ -420,8 +420,8 @@ System_String_o *__fastcall CoinRoomLobbyComponent__SetTimeLabel(
   {
     sub_B16FFC(&CoinRoomUtility_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_1, v3);
-    sub_B16FFC(&StringLiteral_23706, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
+    sub_B16FFC(&StringLiteral_23706/*"あと "*/, v4);
     byte_40F9A5E = 1;
   }
   v5 = CoinRoomUtility_TypeInfo;
@@ -440,11 +440,11 @@ System_String_o *__fastcall CoinRoomLobbyComponent__SetTimeLabel(
   if ( !RestTime5 )
     sub_B170D4();
   v8 = RestTime5;
-  if ( System_String__Contains(RestTime5, (System_String_o *)StringLiteral_23706, 0LL) )
+  if ( System_String__Contains(RestTime5, (System_String_o *)StringLiteral_23706/*"あと "*/, 0LL) )
     return System_String__Replace_43750968(
              v8,
-             (System_String_o *)StringLiteral_23706,
-             (System_String_o *)StringLiteral_1,
+             (System_String_o *)StringLiteral_23706/*"あと "*/,
+             (System_String_o *)StringLiteral_1/*""*/,
              0LL);
   else
     return v8;

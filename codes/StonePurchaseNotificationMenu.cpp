@@ -206,20 +206,20 @@ void __fastcall StonePurchaseNotificationMenu__Init(StonePurchaseNotificationMen
 
   if ( (byte_40F7BF4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F7BF4 = 1;
   }
   stoneDataLabel = this->fields.stoneDataLabel;
   if ( !stoneDataLabel
-    || (UILabel__set_text(stoneDataLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(stoneDataLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL)
     || (UILabel__set_overflowMethod(messageLabel, this->fields.DEFAULT_MESSAGE_OVERFLOW_METHOD, 0LL),
         (v5 = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(v5, (System_String_o *)StringLiteral_1, 0LL), (closeLabel = this->fields.closeLabel) == 0LL) )
+    || (UILabel__set_text(v5, (System_String_o *)StringLiteral_1/*""*/, 0LL), (closeLabel = this->fields.closeLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -407,16 +407,16 @@ void __fastcall StonePurchaseNotificationMenu__Open(
     sub_B16FFC(&Method_StonePurchaseNotificationMenu___c__Open_b__14_0__, v19);
     sub_B16FFC(&Method_StonePurchaseNotificationMenu___c__Open_b__14_1__, v20);
     sub_B16FFC(&StonePurchaseNotificationMenu___c_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_12336, v22);
-    sub_B16FFC(&StringLiteral_12331, v23);
-    sub_B16FFC(&StringLiteral_12339, v24);
-    sub_B16FFC(&StringLiteral_1619, v25);
-    sub_B16FFC(&StringLiteral_12334, v26);
-    sub_B16FFC(&StringLiteral_12338, v27);
-    sub_B16FFC(&StringLiteral_12332, v28);
-    sub_B16FFC(&StringLiteral_12335, v29);
-    sub_B16FFC(&StringLiteral_12333, v30);
-    sub_B16FFC(&StringLiteral_12337, v31);
+    sub_B16FFC(&StringLiteral_12336/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_PENDING_AFTER_PURCHASE"*/, v22);
+    sub_B16FFC(&StringLiteral_12331/*"STONE_PURCHASE_RESULT_CANCEL"*/, v23);
+    sub_B16FFC(&StringLiteral_12339/*"STONE_PURCHASE_RESULT_WAIT"*/, v24);
+    sub_B16FFC(&StringLiteral_1619/*"ACCOUNTING_ERROR_INITIALIZE_MESSAGE"*/, v25);
+    sub_B16FFC(&StringLiteral_12334/*"STONE_PURCHASE_RESULT_FAIL"*/, v26);
+    sub_B16FFC(&StringLiteral_12338/*"STONE_PURCHASE_RESULT_SUSPEND"*/, v27);
+    sub_B16FFC(&StringLiteral_12332/*"STONE_PURCHASE_RESULT_CLOSE"*/, v28);
+    sub_B16FFC(&StringLiteral_12335/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_ACCOUNT_ID_ERROR"*/, v29);
+    sub_B16FFC(&StringLiteral_12333/*"STONE_PURCHASE_RESULT_DUPLICATE_TRANSACTION_MESSAGE"*/, v30);
+    sub_B16FFC(&StringLiteral_12337/*"STONE_PURCHASE_RESULT_SUCCESS"*/, v31);
     byte_40F7BF5 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
@@ -436,7 +436,7 @@ void __fastcall StonePurchaseNotificationMenu__Open(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v36 = &StringLiteral_12331;
+          v36 = &StringLiteral_12331/*"STONE_PURCHASE_RESULT_CANCEL"*/;
           goto LABEL_52;
         case 1:
           freeStone = SelfUserGame->fields.freeStone;
@@ -550,7 +550,7 @@ void __fastcall StonePurchaseNotificationMenu__Open(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          format = LocalizationManager__Get((System_String_o *)StringLiteral_12337, 0LL);
+          format = LocalizationManager__Get((System_String_o *)StringLiteral_12337/*"STONE_PURCHASE_RESULT_SUCCESS"*/, 0LL);
           v95 = (System_Object_array *)sub_B17014(object___TypeInfo, 6LL, v94);
           v142 = stone - (buyChargeStone + buyFreeStone);
           v96 = j_il2cpp_value_box_0(int_TypeInfo, &v142);
@@ -688,7 +688,7 @@ LABEL_54:
                   {
                     UILabel__set_text(stoneDataLabel, NumberFormat, 0LL);
                     closeLabel = this->fields.closeLabel;
-                    v87 = LocalizationManager__Get((System_String_o *)StringLiteral_12332, 0LL);
+                    v87 = LocalizationManager__Get((System_String_o *)StringLiteral_12332/*"STONE_PURCHASE_RESULT_CLOSE"*/, 0LL);
                     if ( closeLabel )
                     {
                       UILabel__set_text(closeLabel, v87, 0LL);
@@ -714,7 +714,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v36 = &StringLiteral_12339;
+          v36 = &StringLiteral_12339/*"STONE_PURCHASE_RESULT_WAIT"*/;
           goto LABEL_52;
         case 3:
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -722,7 +722,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v36 = &StringLiteral_12334;
+          v36 = &StringLiteral_12334/*"STONE_PURCHASE_RESULT_FAIL"*/;
           goto LABEL_52;
         case 4:
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -730,7 +730,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v36 = &StringLiteral_12338;
+          v36 = &StringLiteral_12338/*"STONE_PURCHASE_RESULT_SUSPEND"*/;
           goto LABEL_52;
         case 5:
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -738,7 +738,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v36 = &StringLiteral_1619;
+          v36 = &StringLiteral_1619/*"ACCOUNTING_ERROR_INITIALIZE_MESSAGE"*/;
           goto LABEL_52;
         case 6:
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -746,7 +746,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v36 = &StringLiteral_12333;
+          v36 = &StringLiteral_12333/*"STONE_PURCHASE_RESULT_DUPLICATE_TRANSACTION_MESSAGE"*/;
           goto LABEL_52;
         case 7:
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -754,7 +754,7 @@ LABEL_54:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v36 = &StringLiteral_12335;
+          v36 = &StringLiteral_12335/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_ACCOUNT_ID_ERROR"*/;
 LABEL_52:
           v74 = LocalizationManager__Get((System_String_o *)*v36, 0LL);
           goto LABEL_53;
@@ -764,7 +764,7 @@ LABEL_52:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v75 = LocalizationManager__Get((System_String_o *)StringLiteral_12336, 0LL);
+          v75 = LocalizationManager__Get((System_String_o *)StringLiteral_12336/*"STONE_PURCHASE_RESULT_GOOGLE_PLAY_PENDING_AFTER_PURCHASE"*/, 0LL);
           DEFAULT_MESSAGE_FONT_SIZE = 24;
           goto LABEL_54;
         default:
@@ -873,10 +873,10 @@ System_String_o *__fastcall StonePurchaseNotificationMenu__get_closeBtnPath(
 {
   if ( (byte_40F7BFA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4203, method);
+    sub_B16FFC(&StringLiteral_4203/*"ConfirmWindow/CloseButton"*/, method);
     byte_40F7BFA = 1;
   }
-  return (System_String_o *)StringLiteral_4203;
+  return (System_String_o *)StringLiteral_4203/*"ConfirmWindow/CloseButton"*/;
 }
 
 

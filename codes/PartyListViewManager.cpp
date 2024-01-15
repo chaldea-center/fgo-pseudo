@@ -47,10 +47,10 @@ void __fastcall PartyListViewManager__CreateList(
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewItem__Add__, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&PartyListViewIndicator_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_10392, v18);
-    sub_B16FFC(&StringLiteral_10328, v19);
-    sub_B16FFC(&StringLiteral_10391, v20);
-    sub_B16FFC(&StringLiteral_10315, v21);
+    sub_B16FFC(&StringLiteral_10392/*"PARTY_ORGANIZATION_SUPPORT_ONLY_EXPLANATION"*/, v18);
+    sub_B16FFC(&StringLiteral_10328/*"PARTY_ORGANIZATION_PARTY_SELECT_EXPLANATION"*/, v19);
+    sub_B16FFC(&StringLiteral_10391/*"PARTY_ORGANIZATION_SINGLE_MEMBER_EXPLANATION"*/, v20);
+    sub_B16FFC(&StringLiteral_10315/*"PARTY_ORGANIZATION_FIX_NPC_ONLY_EXPLANATION"*/, v21);
     byte_40FDDAF = 1;
   }
   this->fields.menuKind = menuKind;
@@ -92,7 +92,7 @@ LABEL_9:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v30 = &StringLiteral_10315;
+      v30 = &StringLiteral_10315/*"PARTY_ORGANIZATION_FIX_NPC_ONLY_EXPLANATION"*/;
       break;
     case 3:
       explanationLabel = this->fields.explanationLabel;
@@ -101,7 +101,7 @@ LABEL_9:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v30 = &StringLiteral_10391;
+      v30 = &StringLiteral_10391/*"PARTY_ORGANIZATION_SINGLE_MEMBER_EXPLANATION"*/;
       break;
     case 1:
       explanationLabel = this->fields.explanationLabel;
@@ -110,7 +110,7 @@ LABEL_9:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v30 = &StringLiteral_10392;
+      v30 = &StringLiteral_10392/*"PARTY_ORGANIZATION_SUPPORT_ONLY_EXPLANATION"*/;
       break;
     default:
       explanationLabel = this->fields.explanationLabel;
@@ -119,7 +119,7 @@ LABEL_9:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v30 = &StringLiteral_10328;
+      v30 = &StringLiteral_10328/*"PARTY_ORGANIZATION_PARTY_SELECT_EXPLANATION"*/;
       break;
   }
   v31 = LocalizationManager__Get((System_String_o *)*v30, 0LL);
@@ -908,7 +908,7 @@ void __fastcall PartyListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_PartyListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FDDB2 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -923,7 +923,7 @@ void __fastcall PartyListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -993,7 +993,7 @@ void __fastcall PartyListViewManager__RequestListObject_32484900(
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_PartyListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FDDB3 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -1008,7 +1008,7 @@ void __fastcall PartyListViewManager__RequestListObject_32484900(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

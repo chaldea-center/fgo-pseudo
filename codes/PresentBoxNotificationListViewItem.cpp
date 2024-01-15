@@ -131,10 +131,10 @@ System_String_o *__fastcall PresentBoxNotificationListViewItem__ToString(
 {
   if ( (byte_40F8FDB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10714, method);
+    sub_B16FFC(&StringLiteral_10714/*"Present "*/, method);
     byte_40F8FDB = 1;
   }
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_10714, this->fields.presentName, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_10714/*"Present "*/, this->fields.presentName, 0LL);
 }
 
 

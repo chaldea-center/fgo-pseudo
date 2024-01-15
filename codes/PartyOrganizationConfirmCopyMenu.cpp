@@ -135,21 +135,21 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Init(
 
   if ( (byte_40FDC17 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FDC17 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -258,12 +258,12 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Open(
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_PartyOrganizationConfirmCopyMenu_EndOpen__, v15);
-    sub_B16FFC(&StringLiteral_10199, v16);
-    sub_B16FFC(&StringLiteral_10201, v17);
-    sub_B16FFC(&StringLiteral_10197, v18);
-    sub_B16FFC(&StringLiteral_10200, v19);
-    sub_B16FFC(&StringLiteral_10198, v20);
-    sub_B16FFC(&StringLiteral_10202, v21);
+    sub_B16FFC(&StringLiteral_10199/*"PARTY_ORGANIZATION_CONFIRM_COPY_FROM_PARTY_TITLE"*/, v16);
+    sub_B16FFC(&StringLiteral_10201/*"PARTY_ORGANIZATION_CONFIRM_COPY_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_10197/*"PARTY_ORGANIZATION_CONFIRM_COPY_CANCEL"*/, v18);
+    sub_B16FFC(&StringLiteral_10200/*"PARTY_ORGANIZATION_CONFIRM_COPY_MESSAGE"*/, v19);
+    sub_B16FFC(&StringLiteral_10198/*"PARTY_ORGANIZATION_CONFIRM_COPY_DECIDE"*/, v20);
+    sub_B16FFC(&StringLiteral_10202/*"PARTY_ORGANIZATION_CONFIRM_COPY_TO_PARTY_TITLE"*/, v21);
     byte_40FDC18 = 1;
   }
   state = this->fields.state;
@@ -332,12 +332,12 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10199, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10199/*"PARTY_ORGANIZATION_CONFIRM_COPY_FROM_PARTY_TITLE"*/, 0LL);
   if ( !baseDeckTitleLabel )
     goto LABEL_32;
   UILabel__set_text(baseDeckTitleLabel, v29, 0LL);
   editDeckTitleLabel = this->fields.editDeckTitleLabel;
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_10202, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_10202/*"PARTY_ORGANIZATION_CONFIRM_COPY_TO_PARTY_TITLE"*/, 0LL);
   if ( !editDeckTitleLabel )
     goto LABEL_32;
   UILabel__set_text(editDeckTitleLabel, v31, 0LL);
@@ -349,20 +349,20 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10201, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10201/*"PARTY_ORGANIZATION_CONFIRM_COPY_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_32;
   UILabel__set_text(titleLabel, v33, 0LL);
   messageLabel = this->fields.messageLabel;
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_10200, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_10200/*"PARTY_ORGANIZATION_CONFIRM_COPY_MESSAGE"*/, 0LL);
   if ( !messageLabel
     || (UILabel__set_text(messageLabel, v35, 0LL),
         decideLabel = this->fields.decideLabel,
-        v37 = LocalizationManager__Get((System_String_o *)StringLiteral_10198, 0LL),
+        v37 = LocalizationManager__Get((System_String_o *)StringLiteral_10198/*"PARTY_ORGANIZATION_CONFIRM_COPY_DECIDE"*/, 0LL),
         !decideLabel)
     || (UILabel__set_text(decideLabel, v37, 0LL),
         cancelLabel = this->fields.cancelLabel,
-        v39 = LocalizationManager__Get((System_String_o *)StringLiteral_10197, 0LL),
+        v39 = LocalizationManager__Get((System_String_o *)StringLiteral_10197/*"PARTY_ORGANIZATION_CONFIRM_COPY_CANCEL"*/, 0LL),
         !cancelLabel) )
   {
 LABEL_32:

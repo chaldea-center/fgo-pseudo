@@ -169,7 +169,7 @@ void __fastcall CoinBulkSelectDialog__OnEnable(CoinBulkSelectDialog_o *this, con
   if ( (byte_40F9A01 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15414, v3);
+    sub_B16FFC(&StringLiteral_15414/*"Window/CancelButton"*/, v3);
     byte_40F9A01 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -178,7 +178,7 @@ void __fastcall CoinBulkSelectDialog__OnEnable(CoinBulkSelectDialog_o *this, con
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15414, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/, 0LL);
 }
 
 
@@ -280,9 +280,9 @@ void __fastcall CoinBulkSelectDialog__Open(
     sub_B16FFC(&System_Math_TypeInfo, v23);
     sub_B16FFC(&NetworkManager_TypeInfo, v24);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
-    sub_B16FFC(&StringLiteral_3135, v26);
-    sub_B16FFC(&StringLiteral_3132, v27);
-    sub_B16FFC(&StringLiteral_3133, v28);
+    sub_B16FFC(&StringLiteral_3135/*"COIN_ROOM_SELECT_LIST_SUB_TITLE"*/, v26);
+    sub_B16FFC(&StringLiteral_3132/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_NAME"*/, v27);
+    sub_B16FFC(&StringLiteral_3133/*"COIN_ROOM_SELECT_DIALOD_SELECT_INFO_TXET"*/, v28);
     byte_40F99FB = 1;
   }
   entitya = 0LL;
@@ -352,12 +352,12 @@ void __fastcall CoinBulkSelectDialog__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v48 = LocalizationManager__Get((System_String_o *)StringLiteral_3135, 0LL);
+      v48 = LocalizationManager__Get((System_String_o *)StringLiteral_3135/*"COIN_ROOM_SELECT_LIST_SUB_TITLE"*/, 0LL);
       if ( !subTitleLabel )
         goto LABEL_57;
       UILabel__set_text(subTitleLabel, v48, 0LL);
       selectInfoLabel = this->fields.selectInfoLabel;
-      v50 = LocalizationManager__Get((System_String_o *)StringLiteral_3133, 0LL);
+      v50 = LocalizationManager__Get((System_String_o *)StringLiteral_3133/*"COIN_ROOM_SELECT_DIALOD_SELECT_INFO_TXET"*/, 0LL);
       if ( !selectInfoLabel )
         goto LABEL_57;
       UILabel__set_text(selectInfoLabel, v50, 0LL);
@@ -439,7 +439,7 @@ void __fastcall CoinBulkSelectDialog__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v64 = LocalizationManager__Get((System_String_o *)StringLiteral_3132, 0LL);
+      v64 = LocalizationManager__Get((System_String_o *)StringLiteral_3132/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_NAME"*/, 0LL);
       itemName = this->fields.itemName;
       v66 = System_String__Format(v64, Name, 0LL);
       if ( !itemName )
@@ -559,8 +559,8 @@ void __fastcall CoinBulkSelectDialog__UpdateCountValue(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&count);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_3131, v8);
-    sub_B16FFC(&StringLiteral_3130, v9);
+    sub_B16FFC(&StringLiteral_3131/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_COUNT"*/, v8);
+    sub_B16FFC(&StringLiteral_3130/*"COIN_ROOM_SELECT_DIALOD_REMAINING_TEXT"*/, v9);
     byte_40F9A00 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -568,7 +568,7 @@ void __fastcall CoinBulkSelectDialog__UpdateCountValue(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3130, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3130/*"COIN_ROOM_SELECT_DIALOD_REMAINING_TEXT"*/, 0LL);
   remainingLabel = this->fields.remainingLabel;
   v12 = v10;
   v20 = this->fields.maxPoint - point;
@@ -576,7 +576,7 @@ void __fastcall CoinBulkSelectDialog__UpdateCountValue(
   v14 = System_String__Format(v12, v13, 0LL);
   if ( !remainingLabel
     || (UILabel__set_text(remainingLabel, v14, 0LL),
-        v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3131, 0LL),
+        v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3131/*"COIN_ROOM_SELECT_DIALOD_SELECTED_ITEM_COUNT"*/, 0LL),
         itemCount = this->fields.itemCount,
         v19 = count,
         v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19),

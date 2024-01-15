@@ -653,23 +653,23 @@ System_String_o *__fastcall BattleLogicReaction__GetDisappearDeadMotionName(
 
   if ( (byte_40FC44B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8765, svtData);
-    sub_B16FFC(&StringLiteral_8766, v4);
-    sub_B16FFC(&StringLiteral_8767, v5);
+    sub_B16FFC(&StringLiteral_8765/*"MOTION_DEAD"*/, svtData);
+    sub_B16FFC(&StringLiteral_8766/*"MOTION_DEAD_CRYSTAL"*/, v4);
+    sub_B16FFC(&StringLiteral_8767/*"MOTION_DEAD_ENERGY"*/, v5);
     byte_40FC44B = 1;
   }
   if ( !svtData )
     sub_B170D4();
   if ( BattleServantData__IsDeadEnergy(svtData, 0LL) )
   {
-    v6 = (System_String_o **)&StringLiteral_8767;
+    v6 = (System_String_o **)&StringLiteral_8767/*"MOTION_DEAD_ENERGY"*/;
   }
   else
   {
     IsDeadCrystal = BattleServantData__IsDeadCrystal(svtData, 0LL);
-    v6 = (System_String_o **)&StringLiteral_8765;
+    v6 = (System_String_o **)&StringLiteral_8765/*"MOTION_DEAD"*/;
     if ( IsDeadCrystal )
-      v6 = (System_String_o **)&StringLiteral_8766;
+      v6 = (System_String_o **)&StringLiteral_8766/*"MOTION_DEAD_CRYSTAL"*/;
   }
   return *v6;
 }
@@ -1561,7 +1561,7 @@ BattleActionData_o *__fastcall BattleLogicReaction__createChangeApp(
   if ( (byte_40FC45A & 1) == 0 )
   {
     sub_B16FFC(&BattleActionData_TypeInfo, task);
-    sub_B16FFC(&StringLiteral_8759, v5);
+    sub_B16FFC(&StringLiteral_8759/*"MOTION_APP"*/, v5);
     byte_40FC45A = 1;
   }
   if ( !task )
@@ -1582,8 +1582,8 @@ BattleActionData_o *__fastcall BattleLogicReaction__createChangeApp(
 LABEL_10:
     sub_B170D4();
   *(_DWORD *)(v14 + 32) = v13->fields.uniqueId;
-  v21 = (System_Int32_array **)StringLiteral_8759;
-  *(_QWORD *)(v14 + 64) = StringLiteral_8759;
+  v21 = (System_Int32_array **)StringLiteral_8759/*"MOTION_APP"*/;
+  *(_QWORD *)(v14 + 64) = StringLiteral_8759/*"MOTION_APP"*/;
   sub_B16F98((BattleServantConfConponent_o *)(v14 + 64), v21, v15, v16, v17, v18, v19, v20);
   return (BattleActionData_o *)v14;
 }
@@ -1671,10 +1671,10 @@ BattleActionData_o *__fastcall BattleLogicReaction__createDeadMotion(
     sub_B16FFC(&BattleActionData_TypeInfo, task);
     sub_B16FFC(&BattleSkillInfoData_TypeInfo, v5);
     sub_B16FFC(&int___TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_8781, v7);
-    sub_B16FFC(&StringLiteral_8768, v8);
-    sub_B16FFC(&StringLiteral_8784, v9);
-    sub_B16FFC(&StringLiteral_8772, v10);
+    sub_B16FFC(&StringLiteral_8781/*"MOTION_STAND_DEAD"*/, v7);
+    sub_B16FFC(&StringLiteral_8768/*"MOTION_EFFECT_DEAD"*/, v8);
+    sub_B16FFC(&StringLiteral_8784/*"MOTION_WAIT_DEAD"*/, v9);
+    sub_B16FFC(&StringLiteral_8772/*"MOTION_NO_DEAD"*/, v10);
     byte_40FC44A = 1;
   }
   isFirstAdd = 0;
@@ -1736,17 +1736,17 @@ BattleActionData_o *__fastcall BattleLogicReaction__createDeadMotion(
     {
       if ( BattleServantData__isDeadStand(v14, 0LL) )
       {
-        v32 = &StringLiteral_8781;
+        v32 = &StringLiteral_8781/*"MOTION_STAND_DEAD"*/;
         goto LABEL_30;
       }
       if ( BattleServantData__isDeadEffect(v14, 0LL) )
       {
-        v32 = &StringLiteral_8768;
+        v32 = &StringLiteral_8768/*"MOTION_EFFECT_DEAD"*/;
         goto LABEL_30;
       }
       if ( BattleServantData__isDeadWait(v14, 0LL) )
       {
-        v32 = &StringLiteral_8784;
+        v32 = &StringLiteral_8784/*"MOTION_WAIT_DEAD"*/;
         goto LABEL_30;
       }
       v72 = this->fields.data;
@@ -1965,7 +1965,7 @@ LABEL_89:
         sub_B170D4();
       }
     }
-    v32 = &StringLiteral_8772;
+    v32 = &StringLiteral_8772/*"MOTION_NO_DEAD"*/;
 LABEL_30:
     DisappearDeadMotionName = (System_Int32_array **)*v32;
     goto LABEL_31;
@@ -2128,8 +2128,8 @@ BattleActionData_o *__fastcall BattleLogicReaction__createResurrectionCommon(
     sub_B16FFC(&Method_System_Array_Empty_int___, svtData);
     sub_B16FFC(&BattleActionData_TypeInfo, v12);
     sub_B16FFC(&BattleActionData_BuffData_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
-    sub_B16FFC(&StringLiteral_8776, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
+    sub_B16FFC(&StringLiteral_8776/*"MOTION_RESURRECTION"*/, v15);
     byte_40FC448 = 1;
   }
   digit = 0;
@@ -2160,8 +2160,8 @@ BattleActionData_o *__fastcall BattleLogicReaction__createResurrectionCommon(
     v27 = BattleActionData_TypeInfo;
   }
   *(_DWORD *)(v20 + 56) = v27->static_fields->TYPE_RESURRECTION;
-  v28 = (System_Int32_array **)StringLiteral_8776;
-  *(_QWORD *)(v20 + 64) = StringLiteral_8776;
+  v28 = (System_Int32_array **)StringLiteral_8776/*"MOTION_RESURRECTION"*/;
+  *(_QWORD *)(v20 + 64) = StringLiteral_8776/*"MOTION_RESURRECTION"*/;
   sub_B16F98((BattleServantConfConponent_o *)(v20 + 64), v28, v21, v22, v23, v24, v25, v26);
   *(_BYTE *)(v20 + 241) = isForcedSpeedOne;
   v33 = sub_B170CC(BattleActionData_BuffData_TypeInfo, v29, v30, v31, v32);
@@ -2219,8 +2219,8 @@ BattleActionData_o *__fastcall BattleLogicReaction__createResurrectionCommon(
       v59,
       v60,
       v61);
-    v62 = (System_Int32_array **)StringLiteral_1;
-    *(_QWORD *)(v33 + 56) = StringLiteral_1;
+    v62 = (System_Int32_array **)StringLiteral_1/*""*/;
+    *(_QWORD *)(v33 + 56) = StringLiteral_1/*""*/;
     sub_B16F98((BattleServantConfConponent_o *)(v33 + 56), v62, v63, v64, v65, v66, v67, v68);
   }
   digit = 1000;

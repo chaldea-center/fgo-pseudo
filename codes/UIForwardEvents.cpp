@@ -13,7 +13,7 @@ void __fastcall UIForwardEvents__OnClick(UIForwardEvents_o *this, const MethodIn
   if ( (byte_41037BE & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9911, v3);
+    sub_B16FFC(&StringLiteral_9911/*"OnClick"*/, v3);
     byte_41037BE = 1;
   }
   if ( this->fields.onClick )
@@ -29,7 +29,7 @@ void __fastcall UIForwardEvents__OnClick(UIForwardEvents_o *this, const MethodIn
       v5 = this->fields.target;
       if ( !v5 )
         sub_B170D4();
-      UnityEngine_GameObject__SendMessage(v5, (System_String_o *)StringLiteral_9911, 1, 0LL);
+      UnityEngine_GameObject__SendMessage(v5, (System_String_o *)StringLiteral_9911/*"OnClick"*/, 1, 0LL);
     }
   }
 }
@@ -44,7 +44,7 @@ void __fastcall UIForwardEvents__OnDoubleClick(UIForwardEvents_o *this, const Me
   if ( (byte_41037BF & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9955, v3);
+    sub_B16FFC(&StringLiteral_9955/*"OnDoubleClick"*/, v3);
     byte_41037BF = 1;
   }
   if ( this->fields.onDoubleClick )
@@ -60,7 +60,7 @@ void __fastcall UIForwardEvents__OnDoubleClick(UIForwardEvents_o *this, const Me
       v5 = this->fields.target;
       if ( !v5 )
         sub_B170D4();
-      UnityEngine_GameObject__SendMessage(v5, (System_String_o *)StringLiteral_9955, 1, 0LL);
+      UnityEngine_GameObject__SendMessage(v5, (System_String_o *)StringLiteral_9955/*"OnDoubleClick"*/, 1, 0LL);
     }
   }
 }
@@ -84,7 +84,7 @@ void __fastcall UIForwardEvents__OnDrag(UIForwardEvents_o *this, UnityEngine_Vec
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Vector2_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_9957, v7);
+    sub_B16FFC(&StringLiteral_9957/*"OnDrag"*/, v7);
     byte_41037C1 = 1;
   }
   if ( this->fields.onDrag )
@@ -103,7 +103,7 @@ void __fastcall UIForwardEvents__OnDrag(UIForwardEvents_o *this, UnityEngine_Vec
       v10 = (Il2CppObject *)j_il2cpp_value_box_0(UnityEngine_Vector2_TypeInfo, v11);
       if ( !v9 )
         sub_B170D4();
-      UnityEngine_GameObject__SendMessage_40692064(v9, (System_String_o *)StringLiteral_9957, v10, 1, 0LL);
+      UnityEngine_GameObject__SendMessage_40692064(v9, (System_String_o *)StringLiteral_9957/*"OnDrag"*/, v10, 1, 0LL);
     }
   }
 }
@@ -121,7 +121,7 @@ void __fastcall UIForwardEvents__OnDrop(
   if ( (byte_41037C2 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, go);
-    sub_B16FFC(&StringLiteral_9962, v5);
+    sub_B16FFC(&StringLiteral_9962/*"OnDrop"*/, v5);
     byte_41037C2 = 1;
   }
   if ( this->fields.onDrop )
@@ -139,7 +139,7 @@ void __fastcall UIForwardEvents__OnDrop(
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         v7,
-        (System_String_o *)StringLiteral_9962,
+        (System_String_o *)StringLiteral_9962/*"OnDrop"*/,
         (Il2CppObject *)go,
         1,
         0LL);
@@ -162,7 +162,7 @@ void __fastcall UIForwardEvents__OnHover(UIForwardEvents_o *this, bool isOver, c
   {
     sub_B16FFC(&bool_TypeInfo, isOver);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_9978, v6);
+    sub_B16FFC(&StringLiteral_9978/*"OnHover"*/, v6);
     byte_41037BC = 1;
   }
   if ( this->fields.onHover )
@@ -180,7 +180,7 @@ void __fastcall UIForwardEvents__OnHover(UIForwardEvents_o *this, bool isOver, c
       v9 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v10);
       if ( !v8 )
         sub_B170D4();
-      UnityEngine_GameObject__SendMessage_40692064(v8, (System_String_o *)StringLiteral_9978, v9, 1, 0LL);
+      UnityEngine_GameObject__SendMessage_40692064(v8, (System_String_o *)StringLiteral_9978/*"OnHover"*/, v9, 1, 0LL);
     }
   }
 }
@@ -200,7 +200,7 @@ void __fastcall UIForwardEvents__OnPress(UIForwardEvents_o *this, bool pressed, 
   {
     sub_B16FFC(&bool_TypeInfo, pressed);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_10008, v6);
+    sub_B16FFC(&StringLiteral_10008/*"OnPress"*/, v6);
     byte_41037BD = 1;
   }
   if ( this->fields.onPress )
@@ -218,7 +218,7 @@ void __fastcall UIForwardEvents__OnPress(UIForwardEvents_o *this, bool pressed, 
       v9 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v10);
       if ( !v8 )
         sub_B170D4();
-      UnityEngine_GameObject__SendMessage_40692064(v8, (System_String_o *)StringLiteral_10008, v9, 1, 0LL);
+      UnityEngine_GameObject__SendMessage_40692064(v8, (System_String_o *)StringLiteral_10008/*"OnPress"*/, v9, 1, 0LL);
     }
   }
 }
@@ -237,7 +237,7 @@ void __fastcall UIForwardEvents__OnScroll(UIForwardEvents_o *this, float delta, 
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
     sub_B16FFC(&float_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_10015, v6);
+    sub_B16FFC(&StringLiteral_10015/*"OnScroll"*/, v6);
     byte_41037C4 = 1;
   }
   if ( this->fields.onScroll )
@@ -255,7 +255,7 @@ void __fastcall UIForwardEvents__OnScroll(UIForwardEvents_o *this, float delta, 
       v9 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v10);
       if ( !v8 )
         sub_B170D4();
-      UnityEngine_GameObject__SendMessage_40692064(v8, (System_String_o *)StringLiteral_10015, v9, 1, 0LL);
+      UnityEngine_GameObject__SendMessage_40692064(v8, (System_String_o *)StringLiteral_10015/*"OnScroll"*/, v9, 1, 0LL);
     }
   }
 }
@@ -275,7 +275,7 @@ void __fastcall UIForwardEvents__OnSelect(UIForwardEvents_o *this, bool selected
   {
     sub_B16FFC(&bool_TypeInfo, selected);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_10018, v6);
+    sub_B16FFC(&StringLiteral_10018/*"OnSelect"*/, v6);
     byte_41037C0 = 1;
   }
   if ( this->fields.onSelect )
@@ -293,7 +293,7 @@ void __fastcall UIForwardEvents__OnSelect(UIForwardEvents_o *this, bool selected
       v9 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v10);
       if ( !v8 )
         sub_B170D4();
-      UnityEngine_GameObject__SendMessage_40692064(v8, (System_String_o *)StringLiteral_10018, v9, 1, 0LL);
+      UnityEngine_GameObject__SendMessage_40692064(v8, (System_String_o *)StringLiteral_10018/*"OnSelect"*/, v9, 1, 0LL);
     }
   }
 }
@@ -308,7 +308,7 @@ void __fastcall UIForwardEvents__OnSubmit(UIForwardEvents_o *this, const MethodI
   if ( (byte_41037C3 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10028, v3);
+    sub_B16FFC(&StringLiteral_10028/*"OnSubmit"*/, v3);
     byte_41037C3 = 1;
   }
   if ( this->fields.onSubmit )
@@ -324,7 +324,7 @@ void __fastcall UIForwardEvents__OnSubmit(UIForwardEvents_o *this, const MethodI
       v5 = this->fields.target;
       if ( !v5 )
         sub_B170D4();
-      UnityEngine_GameObject__SendMessage(v5, (System_String_o *)StringLiteral_10028, 1, 0LL);
+      UnityEngine_GameObject__SendMessage(v5, (System_String_o *)StringLiteral_10028/*"OnSubmit"*/, 1, 0LL);
     }
   }
 }

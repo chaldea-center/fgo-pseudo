@@ -18,28 +18,28 @@ System_String_o *__fastcall RestrictionNotSatisfyWholeInfo__AddColorCodeAndFixMe
   if ( (byte_40FC84B & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, message);
-    sub_B16FFC(&StringLiteral_15581, v6);
-    sub_B16FFC(&StringLiteral_11064, v7);
-    sub_B16FFC(&StringLiteral_15680, v8);
+    sub_B16FFC(&StringLiteral_15581/*"[-]"*/, v6);
+    sub_B16FFC(&StringLiteral_11064/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, v7);
+    sub_B16FFC(&StringLiteral_15680/*"[FFFF00]"*/, v8);
     byte_40FC84B = 1;
   }
   if ( !isAddFixMessage )
     return System_String__Concat_43746016(
-             (System_String_o *)StringLiteral_15680,
+             (System_String_o *)StringLiteral_15680/*"[FFFF00]"*/,
              message,
-             (System_String_o *)StringLiteral_15581,
+             (System_String_o *)StringLiteral_15581/*"[-]"*/,
              0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11064, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11064/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0LL);
   return System_String__Concat_43747144(
-           (System_String_o *)StringLiteral_15680,
+           (System_String_o *)StringLiteral_15680/*"[FFFF00]"*/,
            message,
            v9,
-           (System_String_o *)StringLiteral_15581,
+           (System_String_o *)StringLiteral_15581/*"[-]"*/,
            0LL);
 }
 
@@ -153,8 +153,8 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__Init(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, restrictionWholeEntity);
     sub_B16FFC(&Method_System_Linq_Enumerable_Contains_int___, v8);
-    sub_B16FFC(&StringLiteral_26, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FC845 = 1;
   }
   if ( restrictionWholeEntity )
@@ -207,8 +207,8 @@ LABEL_32:
           break;
         v38 = System_String__Replace_43750968(
                 summary,
-                (System_String_o *)StringLiteral_26,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_26/*"\n"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         if ( !this )
           break;
@@ -251,8 +251,8 @@ LABEL_124:
           break;
         v45 = System_String__Replace_43750968(
                 v44,
-                (System_String_o *)StringLiteral_26,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_26/*"\n"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(this, 0, v45, v46);
         v47 = 1;
@@ -361,8 +361,8 @@ LABEL_121:
           break;
         v96 = System_String__Replace_43750968(
                 v95,
-                (System_String_o *)StringLiteral_26,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_26/*"\n"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         if ( !this )
           break;
@@ -434,8 +434,8 @@ LABEL_59:
           break;
         v59 = System_String__Replace_43750968(
                 v58,
-                (System_String_o *)StringLiteral_26,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_26/*"\n"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         if ( !this )
           break;
@@ -522,8 +522,8 @@ LABEL_108:
             {
               v89 = System_String__Replace_43750968(
                       v88,
-                      (System_String_o *)StringLiteral_26,
-                      (System_String_o *)StringLiteral_1,
+                      (System_String_o *)StringLiteral_26/*"\n"*/,
+                      (System_String_o *)StringLiteral_1/*""*/,
                       0LL);
               v91 = v87 == 0;
               v47 = v87 != 0;
@@ -580,8 +580,8 @@ LABEL_130:
           break;
         v89 = System_String__Replace_43750968(
                 v99,
-                (System_String_o *)StringLiteral_26,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_26/*"\n"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         v91 = !v47;
         goto LABEL_132;
@@ -616,9 +616,9 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__InitFatigue(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, partyItem);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_26, v6);
-    sub_B16FFC(&StringLiteral_11060, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v6);
+    sub_B16FFC(&StringLiteral_11060/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FC847 = 1;
   }
   v9 = 0;
@@ -652,14 +652,14 @@ LABEL_13:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11060, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11060/*"RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE"*/, 0LL);
   if ( !v13 )
 LABEL_18:
     sub_B170D4();
   v14 = System_String__Replace_43750968(
           v13,
-          (System_String_o *)StringLiteral_26,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_26/*"\n"*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   v15 = v12 == 0;
   RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(this, v15, v14, v16);
@@ -689,9 +689,9 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__InitNotSingleSupportOnly(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, partyItem);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_26, v6);
-    sub_B16FFC(&StringLiteral_10334, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v6);
+    sub_B16FFC(&StringLiteral_10334/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FC848 = 1;
   }
   v9 = 0;
@@ -725,14 +725,14 @@ LABEL_13:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_10334, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_10334/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0LL);
   if ( !v13 )
 LABEL_18:
     sub_B170D4();
   v14 = System_String__Replace_43750968(
           v13,
-          (System_String_o *)StringLiteral_26,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_26/*"\n"*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   v15 = v12 == 0;
   RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(this, v15, v14, v16);
@@ -762,9 +762,9 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__InitUniqueServant(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, partyItem);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_26, v6);
-    sub_B16FFC(&StringLiteral_11063, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v6);
+    sub_B16FFC(&StringLiteral_11063/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FC846 = 1;
   }
   v9 = 0;
@@ -798,14 +798,14 @@ LABEL_13:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11063, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11063/*"RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE"*/, 0LL);
   if ( !v13 )
 LABEL_18:
     sub_B170D4();
   v14 = System_String__Replace_43750968(
           v13,
-          (System_String_o *)StringLiteral_26,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_26/*"\n"*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   v15 = v12 == 0;
   RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(this, v15, v14, v16);
@@ -913,8 +913,8 @@ bool __fastcall RestrictionNotSatisfyWholeInfo__Init_29679100(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, restrictionEntity);
     sub_B16FFC(&Method_System_Linq_Enumerable_Contains_int___, v9);
-    sub_B16FFC(&StringLiteral_26, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FC849 = 1;
   }
   if ( restrictionEntity )
@@ -969,8 +969,8 @@ LABEL_87:
         {
           v67 = System_String__Replace_43750968(
                   name,
-                  (System_String_o *)StringLiteral_26,
-                  (System_String_o *)StringLiteral_1,
+                  (System_String_o *)StringLiteral_26/*"\n"*/,
+                  (System_String_o *)StringLiteral_1/*""*/,
                   0LL);
           if ( this )
           {
@@ -1104,8 +1104,8 @@ LABEL_151:
         {
           v87 = System_String__Replace_43750968(
                   v86,
-                  (System_String_o *)StringLiteral_26,
-                  (System_String_o *)StringLiteral_1,
+                  (System_String_o *)StringLiteral_26/*"\n"*/,
+                  (System_String_o *)StringLiteral_1/*""*/,
                   0LL);
           if ( this )
           {
@@ -1151,8 +1151,8 @@ LABEL_151:
           break;
         v95 = System_String__Replace_43750968(
                 v94,
-                (System_String_o *)StringLiteral_26,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_26/*"\n"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         if ( !this )
           break;
@@ -1223,8 +1223,8 @@ LABEL_143:
         {
           v19 = System_String__Replace_43750968(
                   v85,
-                  (System_String_o *)StringLiteral_26,
-                  (System_String_o *)StringLiteral_1,
+                  (System_String_o *)StringLiteral_26/*"\n"*/,
+                  (System_String_o *)StringLiteral_1/*""*/,
                   0LL);
           v21 = isFollower == 0;
 LABEL_145:
@@ -1280,8 +1280,8 @@ LABEL_145:
         isFollower = !IsEmpty;
         v19 = System_String__Replace_43750968(
                 v16,
-                (System_String_o *)StringLiteral_26,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_26/*"\n"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         v21 = v17;
         goto LABEL_145;
@@ -1454,7 +1454,7 @@ void __fastcall RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(
 
   if ( (byte_40FC84A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23742, isWarning);
+    sub_B16FFC(&StringLiteral_23742/*"・"*/, isWarning);
     byte_40FC84A = 1;
   }
   notSatisfySprite = (UnityEngine_Component_o *)this->fields.notSatisfySprite;
@@ -1469,7 +1469,7 @@ void __fastcall RestrictionNotSatisfyWholeInfo__SetWholeInfoLabel(
     wholeInfoPrefixLabel = this->fields.wholeInfoPrefixLabel;
     if ( wholeInfoPrefixLabel )
     {
-      UILabel__set_text(wholeInfoPrefixLabel, (System_String_o *)StringLiteral_23742, 0LL);
+      UILabel__set_text(wholeInfoPrefixLabel, (System_String_o *)StringLiteral_23742/*"・"*/, 0LL);
       wholeInfoLabel = this->fields.wholeInfoLabel;
       if ( wholeInfoLabel )
       {
@@ -1482,7 +1482,7 @@ LABEL_13:
   }
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   v9 = this->fields.wholeInfoPrefixLabel;
-  fixed = RestrictionNotSatisfyWholeInfo__AddColorCodeAndFixMessage(v10, (System_String_o *)StringLiteral_23742, 0, v11);
+  fixed = RestrictionNotSatisfyWholeInfo__AddColorCodeAndFixMessage(v10, (System_String_o *)StringLiteral_23742/*"・"*/, 0, v11);
   if ( !v9 )
     goto LABEL_13;
   UILabel__set_text(v9, fixed, 0LL);

@@ -116,11 +116,11 @@ void __fastcall CostumeEventItemOrNeedItemConfirmInfo__Set(
     sub_B16FFC(&Method_CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0__Set_b__0__, v20);
     sub_B16FFC(&Method_CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0__Set_b__1__, v21);
     sub_B16FFC(&CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_3321, v23);
-    sub_B16FFC(&StringLiteral_5565, v24);
-    sub_B16FFC(&StringLiteral_5566, v25);
-    sub_B16FFC(&StringLiteral_5567, v26);
-    sub_B16FFC(&StringLiteral_5560, v27);
+    sub_B16FFC(&StringLiteral_3321/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, v23);
+    sub_B16FFC(&StringLiteral_5565/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_TITLE"*/, v24);
+    sub_B16FFC(&StringLiteral_5566/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_EVENT_ITEM"*/, v25);
+    sub_B16FFC(&StringLiteral_5567/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_NEED_ITEM"*/, v26);
+    sub_B16FFC(&StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, v27);
     byte_40FBDC1 = 1;
   }
   v28 = sub_B170CC(
@@ -142,19 +142,19 @@ void __fastcall CostumeEventItemOrNeedItemConfirmInfo__Set(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3321, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3321/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, 0LL);
   if ( !title )
     goto LABEL_61;
   UILabel__set_text(title, v36, 0LL);
   subTitle = this->fields.subTitle;
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_5565, 0LL);
-  v39 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560, 0LL);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_5565/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_TITLE"*/, 0LL);
+  v39 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
   v40 = System_String__Format(v38, v39, 0LL);
   if ( !subTitle )
     goto LABEL_61;
   UILabel__set_text(subTitle, v40, 0LL);
   needItemLabel = this->fields.needItemLabel;
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_5567, 0LL);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_5567/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_NEED_ITEM"*/, 0LL);
   if ( !needItemLabel )
     goto LABEL_61;
   UILabel__set_text(needItemLabel, v42, 0LL);
@@ -270,8 +270,8 @@ void __fastcall CostumeEventItemOrNeedItemConfirmInfo__Set(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v78 = LocalizationManager__Get((System_String_o *)StringLiteral_5566, 0LL);
-  v79 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560, 0LL);
+  v78 = LocalizationManager__Get((System_String_o *)StringLiteral_5566/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_EVENT_ITEM"*/, 0LL);
+  v79 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
   v80 = System_String__Format(v78, v79, 0LL);
   if ( !eventItemLabel )
     goto LABEL_61;

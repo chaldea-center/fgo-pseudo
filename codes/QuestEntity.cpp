@@ -484,12 +484,12 @@ System_String_o *__fastcall QuestEntity__GetChapterSubTitle(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_ConstantMaster___, *(_QWORD *)&warId);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_2956, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
-    sub_B16FFC(&StringLiteral_2957, v8);
+    sub_B16FFC(&StringLiteral_2956/*"CHAPTER_F_END_ID"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
+    sub_B16FFC(&StringLiteral_2957/*"CHAPTER_F_START_ID"*/, v8);
     byte_40F9573 = 1;
   }
-  ChapterSubStr = (System_String_o *)StringLiteral_1;
+  ChapterSubStr = (System_String_o *)StringLiteral_1/*""*/;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
@@ -503,10 +503,10 @@ System_String_o *__fastcall QuestEntity__GetChapterSubTitle(
 LABEL_14:
     sub_B170D4();
   id = this->fields.id;
-  if ( id >= ConstantMaster__GetValue(MasterData_WarQuestSelectionMaster, (System_String_o *)StringLiteral_2957, 0LL) )
+  if ( id >= ConstantMaster__GetValue(MasterData_WarQuestSelectionMaster, (System_String_o *)StringLiteral_2957/*"CHAPTER_F_START_ID"*/, 0LL) )
   {
     v15 = this->fields.id;
-    if ( v15 <= ConstantMaster__GetValue(v13, (System_String_o *)StringLiteral_2956, 0LL) )
+    if ( v15 <= ConstantMaster__GetValue(v13, (System_String_o *)StringLiteral_2956/*"CHAPTER_F_END_ID"*/, 0LL) )
 LABEL_10:
       ChapterSubStr = QuestEntity__getChapterSubStr(this, warId, v12);
   }
@@ -590,14 +590,14 @@ System_String_o *__fastcall QuestEntity__GetCostValueColor(
   if ( (byte_40F957D & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, isOverCost);
-    sub_B16FFC(&StringLiteral_23445, v5);
-    sub_B16FFC(&StringLiteral_9825, v6);
-    sub_B16FFC(&StringLiteral_2910, v7);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v5);
+    sub_B16FFC(&StringLiteral_9825/*"OVER_COST_COLOR"*/, v6);
+    sub_B16FFC(&StringLiteral_2910/*"CAMPAIGN_COST_COLOR"*/, v7);
     byte_40F957D = 1;
   }
   if ( costCalcVal < 1 )
   {
-    result = (System_String_o *)StringLiteral_23445;
+    result = (System_String_o *)StringLiteral_23445/*"{0}"*/;
     if ( !isOverCost )
       return result;
     goto LABEL_8;
@@ -607,7 +607,7 @@ System_String_o *__fastcall QuestEntity__GetCostValueColor(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  result = LocalizationManager__Get((System_String_o *)StringLiteral_2910, 0LL);
+  result = LocalizationManager__Get((System_String_o *)StringLiteral_2910/*"CAMPAIGN_COST_COLOR"*/, 0LL);
   if ( isOverCost )
   {
 LABEL_8:
@@ -616,7 +616,7 @@ LABEL_8:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    return LocalizationManager__Get((System_String_o *)StringLiteral_9825, 0LL);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_9825/*"OVER_COST_COLOR"*/, 0LL);
   }
   return result;
 }
@@ -1134,8 +1134,8 @@ System_String_o *__fastcall QuestEntity__getChapterSubStr(QuestEntity_o *this, i
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&warId);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8634, v6);
-    sub_B16FFC(&StringLiteral_8633, v7);
+    sub_B16FFC(&StringLiteral_8634/*"MATERIAL_MAP_CHAPTER_SUB_{0:D2}"*/, v6);
+    sub_B16FFC(&StringLiteral_8633/*"MATERIAL_MAP_CHAPTER_SUB"*/, v7);
     byte_40F9571 = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(this->fields.chapterSubStr, 0LL);
@@ -1152,7 +1152,7 @@ System_String_o *__fastcall QuestEntity__getChapterSubStr(QuestEntity_o *this, i
     {
       v32 = ChapterUnitId;
       v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32);
-      v21 = System_String__Format((System_String_o *)StringLiteral_8634, v20, 0LL);
+      v21 = System_String__Format((System_String_o *)StringLiteral_8634/*"MATERIAL_MAP_CHAPTER_SUB_{0:D2}"*/, v20, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
@@ -1170,7 +1170,7 @@ System_String_o *__fastcall QuestEntity__getChapterSubStr(QuestEntity_o *this, i
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_8633, 0LL);
+    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_8633/*"MATERIAL_MAP_CHAPTER_SUB"*/, 0LL);
     v29 = this->fields.chapterSubId;
     v30 = v28;
     v26 = (Il2CppObject *)LocalizationManager__ChineseNumber(v29, 0LL);
@@ -1182,7 +1182,7 @@ System_String_o *__fastcall QuestEntity__getChapterSubStr(QuestEntity_o *this, i
     {
       v31 = ChapterUnitId;
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31);
-      v16 = System_String__Format((System_String_o *)StringLiteral_8634, v15, 0LL);
+      v16 = System_String__Format((System_String_o *)StringLiteral_8634/*"MATERIAL_MAP_CHAPTER_SUB_{0:D2}"*/, v15, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
@@ -1198,7 +1198,7 @@ System_String_o *__fastcall QuestEntity__getChapterSubStr(QuestEntity_o *this, i
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_8633, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_8633/*"MATERIAL_MAP_CHAPTER_SUB"*/, 0LL);
     v26 = (Il2CppObject *)System_Int32__ToString((int)this + 116, 0LL);
     v27 = v25;
   }

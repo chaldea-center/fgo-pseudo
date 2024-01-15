@@ -195,16 +195,16 @@ float __fastcall SubmarineScannerComponent__GetJumpDuration(
   if ( (byte_40F7CC1 & 1) == 0 )
   {
     sub_B16FFC(&SubmarineScannerComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9981, v4);
-    sub_B16FFC(&StringLiteral_9982, v5);
+    sub_B16FFC(&StringLiteral_9981/*"OnJumpEnd"*/, v4);
+    sub_B16FFC(&StringLiteral_9982/*"OnJumpStart"*/, v5);
     byte_40F7CC1 = 1;
   }
   EventTimeByFunctionName = SubmarineScannerComponent__GetEventTimeByFunctionName(
                               this,
-                              (System_String_o *)StringLiteral_9982,
+                              (System_String_o *)StringLiteral_9982/*"OnJumpStart"*/,
                               0.0,
                               v2);
-  result = SubmarineScannerComponent__GetEventTimeByFunctionName(this, (System_String_o *)StringLiteral_9981, 0.0, v7)
+  result = SubmarineScannerComponent__GetEventTimeByFunctionName(this, (System_String_o *)StringLiteral_9981/*"OnJumpEnd"*/, 0.0, v7)
          - EventTimeByFunctionName;
   if ( result <= 0.0 )
   {
@@ -232,7 +232,7 @@ float __fastcall SubmarineScannerComponent__GetJumpStartTime(
   if ( (byte_40F7CC2 & 1) == 0 )
   {
     sub_B16FFC(&SubmarineScannerComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9982, v4);
+    sub_B16FFC(&StringLiteral_9982/*"OnJumpStart"*/, v4);
     byte_40F7CC2 = 1;
   }
   v5 = SubmarineScannerComponent_TypeInfo;
@@ -244,7 +244,7 @@ float __fastcall SubmarineScannerComponent__GetJumpStartTime(
   }
   return SubmarineScannerComponent__GetEventTimeByFunctionName(
            this,
-           (System_String_o *)StringLiteral_9982,
+           (System_String_o *)StringLiteral_9982/*"OnJumpStart"*/,
            v5->static_fields->DEFAULT_JUMP_START_TIME,
            v2);
 }
@@ -261,7 +261,7 @@ float __fastcall SubmarineScannerComponent__GetSelectedPanelEffecFinishTime(
   if ( (byte_40F7CC3 & 1) == 0 )
   {
     sub_B16FFC(&SubmarineScannerComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6652, v4);
+    sub_B16FFC(&StringLiteral_6652/*"FinishEffectSelectedPanel"*/, v4);
     byte_40F7CC3 = 1;
   }
   v5 = SubmarineScannerComponent_TypeInfo;
@@ -273,7 +273,7 @@ float __fastcall SubmarineScannerComponent__GetSelectedPanelEffecFinishTime(
   }
   return SubmarineScannerComponent__GetEventTimeByFunctionName(
            this,
-           (System_String_o *)StringLiteral_6652,
+           (System_String_o *)StringLiteral_6652/*"FinishEffectSelectedPanel"*/,
            v5->static_fields->DEFAULT_SELECTED_PANEL_EFFECT_FINISH_TIME,
            v2);
 }
@@ -294,7 +294,7 @@ float __fastcall SubmarineScannerComponent__GetTimeToStartOpenPanel(
   if ( (byte_40F7CC4 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12991, v3);
+    sub_B16FFC(&StringLiteral_12991/*"StartOpenPanel"*/, v3);
     byte_40F7CC4 = 1;
   }
   state = this->fields.state;
@@ -315,7 +315,7 @@ float __fastcall SubmarineScannerComponent__GetTimeToStartOpenPanel(
   length = UnityEngine_AnimationClip__get_length(v8, 0LL);
   return SubmarineScannerComponent__GetEventTimeByFunctionName(
            this,
-           (System_String_o *)StringLiteral_12991,
+           (System_String_o *)StringLiteral_12991/*"StartOpenPanel"*/,
            length,
            v10);
 }
@@ -402,8 +402,8 @@ void __fastcall SubmarineScannerComponent__PrepareAnimation(
     sub_B16FFC(&Method_System_Collections_Generic_List_SimpleAnimation_EditorState__get_Item__, v7);
     sub_B16FFC(&System_Collections_Generic_List_SimpleAnimation_EditorState__TypeInfo, v8);
     sub_B16FFC(&System_Text_RegularExpressions_Regex_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_5312, v10);
-    sub_B16FFC(&StringLiteral_12546, v11);
+    sub_B16FFC(&StringLiteral_5312/*"DistIndex"*/, v10);
+    sub_B16FFC(&StringLiteral_12546/*"Scanner_\\d+_Dist(?<DistIndex>\\d+)"*/, v11);
     byte_40F7CBF = 1;
   }
   AnimationComponent = SubmarineScannerComponent__get_AnimationComponent(this, method);
@@ -420,7 +420,7 @@ void __fastcall SubmarineScannerComponent__PrepareAnimation(
                                                     v14,
                                                     v15,
                                                     v16);
-  System_Text_RegularExpressions_Regex___ctor_16009552(v18, (System_String_o *)StringLiteral_12546, 0LL);
+  System_Text_RegularExpressions_Regex___ctor_16009552(v18, (System_String_o *)StringLiteral_12546/*"Scanner_\\d+_Dist(?<DistIndex>\\d+)"*/, 0LL);
   DistIndex = SubmarineScannerComponent__GetDistIndex(v19, dist, v20);
   v26 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_SimpleAnimation_EditorState__TypeInfo,
@@ -462,7 +462,7 @@ void __fastcall SubmarineScannerComponent__PrepareAnimation(
           goto LABEL_29;
         Item_36906384 = (System_Text_RegularExpressions_Capture_o *)System_Text_RegularExpressions_GroupCollection__get_Item_36906384(
                                                                       v40,
-                                                                      (System_String_o *)StringLiteral_5312,
+                                                                      (System_String_o *)StringLiteral_5312/*"DistIndex"*/,
                                                                       0LL);
         if ( !Item_36906384 )
           goto LABEL_29;
@@ -547,14 +547,14 @@ System_String_o *__fastcall SubmarineScannerComponent__get_AnimName(
 
   if ( (byte_40F7CBE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F7CBE = 1;
   }
   state = this->fields.state;
   if ( state )
     p_name = &state->fields.name;
   else
-    p_name = (System_String_o **)&StringLiteral_1;
+    p_name = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_name;
 }
 

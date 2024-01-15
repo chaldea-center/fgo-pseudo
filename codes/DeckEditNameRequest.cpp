@@ -14,12 +14,12 @@ void __fastcall DeckEditNameRequest__beginRequest(
 
   if ( (byte_40FA4F0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17856, deckId);
-    sub_B16FFC(&StringLiteral_17858, v7);
+    sub_B16FFC(&StringLiteral_17856/*"deckId"*/, deckId);
+    sub_B16FFC(&StringLiteral_17858/*"deckName"*/, v7);
     byte_40FA4F0 = 1;
   }
-  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_17856, deckId, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_17858, deckName, 0LL);
+  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_17856/*"deckId"*/, deckId, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_17858/*"deckName"*/, deckName, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -28,10 +28,10 @@ System_String_o *__fastcall DeckEditNameRequest__getMockData(DeckEditNameRequest
 {
   if ( (byte_40FA4EF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FA4EF = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -43,7 +43,7 @@ System_String_o *__fastcall DeckEditNameRequest__getURL(DeckEditNameRequest_o *t
   if ( (byte_40FA4EE & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_17854, v2);
+    sub_B16FFC(&StringLiteral_17854/*"deck/editName"*/, v2);
     byte_40FA4EE = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -52,7 +52,7 @@ System_String_o *__fastcall DeckEditNameRequest__getURL(DeckEditNameRequest_o *t
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17854, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17854/*"deck/editName"*/, 0LL);
 }
 
 
@@ -69,8 +69,8 @@ void __fastcall DeckEditNameRequest__requestCompleted(
   if ( (byte_40FA4F1 & 1) == 0 )
   {
     sub_B16FFC(&ResponseCommandKind_TypeInfo, responseList);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40FA4F1 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -80,8 +80,8 @@ void __fastcall DeckEditNameRequest__requestCompleted(
   }
   v7 = ResponseCommandKind__SearchData(52, responseList, 0LL);
   if ( v7 && ResponseData__checkError_30924960(v7, 0LL) )
-    v8 = (System_String_o **)&StringLiteral_21129;
+    v8 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_20980;
+    v8 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, *v8, 0LL);
 }

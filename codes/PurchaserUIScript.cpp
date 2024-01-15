@@ -14,7 +14,7 @@ void __fastcall PurchaserUIScript__ClearLog(PurchaserUIScript_o *this, const Met
   if ( (byte_40FA09F & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15747, v3);
+    sub_B16FFC(&StringLiteral_15747/*"[purchase log]\n"*/, v3);
     byte_40FA09F = 1;
   }
   puchaserLogLabel = (UnityEngine_Object_o *)this->fields._puchaserLogLabel;
@@ -33,7 +33,7 @@ void __fastcall PurchaserUIScript__ClearLog(PurchaserUIScript_o *this, const Met
       v6 = this->fields._puchaserLogLabel;
       if ( v6 )
       {
-        UILabel__set_text(v6, (System_String_o *)StringLiteral_15747, 0LL);
+        UILabel__set_text(v6, (System_String_o *)StringLiteral_15747/*"[purchase log]\n"*/, 0LL);
         return;
       }
 LABEL_12:
@@ -296,7 +296,7 @@ void __fastcall PurchaserUIScript__Start(PurchaserUIScript_o *this, const Method
     sub_B16FFC(&PurchaseBehaviour_TypeInfo, v5);
     sub_B16FFC(&Method_PurchaserUIScript__Start_b__5_0__, v6);
     sub_B16FFC(&Method_PurchaserUIScript__Start_b__5_1__, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FA09E = 1;
   }
   PurchaserUIScript__ClearLog(this, method);
@@ -305,7 +305,7 @@ void __fastcall PurchaserUIScript__Start(PurchaserUIScript_o *this, const Method
   v10 = System_Int32__ToString((int32_t)&v45, 0LL);
   if ( !stoneValueLabel )
     goto LABEL_30;
-  v11 = v10 ? v10 : (System_String_o *)StringLiteral_1;
+  v11 = v10 ? v10 : (System_String_o *)StringLiteral_1/*""*/;
   UILabel__set_text(stoneValueLabel, v11, 0LL);
   totalPaymentValueLabel = this->fields._totalPaymentValueLabel;
   v45 = 0;
@@ -315,7 +315,7 @@ void __fastcall PurchaserUIScript__Start(PurchaserUIScript_o *this, const Method
   if ( v13 )
     v14 = v13;
   else
-    v14 = (System_String_o *)StringLiteral_1;
+    v14 = (System_String_o *)StringLiteral_1/*""*/;
   UILabel__set_text(totalPaymentValueLabel, v14, 0LL);
   purchaseBehaviour = (UnityEngine_Object_o *)this->fields._purchaseBehaviour;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -415,7 +415,7 @@ void __fastcall PurchaserUIScript___Start_b__5_0(
   if ( (byte_40FA0A2 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, str);
-    sub_B16FFC(&StringLiteral_26, v5);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v5);
     byte_40FA0A2 = 1;
   }
   puchaserLogLabel = (UnityEngine_Object_o *)this->fields._puchaserLogLabel;
@@ -434,7 +434,7 @@ void __fastcall PurchaserUIScript___Start_b__5_0(
       v8 = this->fields._puchaserLogLabel;
       if ( v8 )
       {
-        v9 = System_String__Concat_43746016(v8->fields.mText, str, (System_String_o *)StringLiteral_26, 0LL);
+        v9 = System_String__Concat_43746016(v8->fields.mText, str, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
         UILabel__set_text(v8, v9, 0LL);
         return;
       }
@@ -463,11 +463,11 @@ void __fastcall PurchaserUIScript___Start_b__5_1(
   {
     sub_B16FFC(&UnityEngine_Debug_TypeInfo, str);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_26, v6);
-    sub_B16FFC(&StringLiteral_15700, v7);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v6);
+    sub_B16FFC(&StringLiteral_15700/*"[UnityIAP]課金エラー:"*/, v7);
     byte_40FA0A3 = 1;
   }
-  v8 = (Il2CppObject *)System_String__Concat_43743732((System_String_o *)StringLiteral_15700, str, 0LL);
+  v8 = (Il2CppObject *)System_String__Concat_43743732((System_String_o *)StringLiteral_15700/*"[UnityIAP]課金エラー:"*/, str, 0LL);
   if ( (BYTE3(UnityEngine_Debug_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
   {
@@ -490,7 +490,7 @@ void __fastcall PurchaserUIScript___Start_b__5_1(
       v11 = this->fields._puchaserLogLabel;
       if ( v11 )
       {
-        v12 = System_String__Concat_43746016(v11->fields.mText, str, (System_String_o *)StringLiteral_26, 0LL);
+        v12 = System_String__Concat_43746016(v11->fields.mText, str, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
         UILabel__set_text(v11, v12, 0LL);
         return;
       }

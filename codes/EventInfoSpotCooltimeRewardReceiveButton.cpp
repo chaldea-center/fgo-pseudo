@@ -146,13 +146,13 @@ System_String_o *__fastcall EventInfoSpotCooltimeRewardReceiveButton__GetButtonS
 
   if ( (byte_40FA175 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, *(_QWORD *)&eventId);
+    sub_B16FFC(&StringLiteral_1/*""*/, *(_QWORD *)&eventId);
     byte_40FA175 = 1;
   }
   EventInfo = EventInfoSpotCooltimeRewardReceiveButton__GetEventInfo(this, eventId, method);
   p_ButtonSpriteName = &EventInfo->fields.ButtonSpriteName;
   if ( !EventInfo )
-    p_ButtonSpriteName = (System_String_o **)&StringLiteral_1;
+    p_ButtonSpriteName = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_ButtonSpriteName;
 }
 
@@ -534,7 +534,7 @@ void __fastcall EventInfoSpotCooltimeRewardReceiveButton__Initialization(
   {
     sub_B16FFC(&Method_DataManager_GetMaster_EventCooltimeRewardMaster___, *(_QWORD *)&eventId);
     sub_B16FFC(&DataManager_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_11470, v15);
+    sub_B16FFC(&StringLiteral_11470/*"RewardButtonBlink"*/, v15);
     byte_40FA171 = 1;
   }
   this->fields.eventSpotCooltimeComponent = component;
@@ -568,7 +568,7 @@ void __fastcall EventInfoSpotCooltimeRewardReceiveButton__Initialization(
   EventInfoSpotCooltimeRewardReceiveButton__SetupBaseButtonEffect(
     this,
     asset,
-    (System_String_o *)StringLiteral_11470,
+    (System_String_o *)StringLiteral_11470/*"RewardButtonBlink"*/,
     v24);
   EventInfoSpotCooltimeRewardReceiveButton__SetupRewardReceivedDialog(this, asset, dialogParent, v25);
   EventInfoSpotCooltimeRewardReceiveButton__SetupButtonDisp(this, v26);
@@ -891,18 +891,18 @@ void __fastcall EventInfoSpotCooltimeRewardReceiveButton__Response(
     sub_B16FFC(&SoundManager_TypeInfo, v8);
     sub_B16FFC(&Method_EventInfoSpotCooltimeRewardReceiveButton___c__Response_b__31_0__, v9);
     sub_B16FFC(&EventInfoSpotCooltimeRewardReceiveButton___c_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_16373, v11);
-    sub_B16FFC(&StringLiteral_20980, v12);
-    sub_B16FFC(&StringLiteral_15571, v13);
-    sub_B16FFC(&StringLiteral_15807, v14);
+    sub_B16FFC(&StringLiteral_16373/*"ar192"*/, v11);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v12);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v13);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v14);
     byte_40FA17B = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     v15 = (Il2CppObject *)System_String__Concat_43746016(
-                            (System_String_o *)StringLiteral_15571,
+                            (System_String_o *)StringLiteral_15571/*"["*/,
                             result,
-                            (System_String_o *)StringLiteral_15807,
+                            (System_String_o *)StringLiteral_15807/*"]"*/,
                             0LL);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -930,7 +930,7 @@ void __fastcall EventInfoSpotCooltimeRewardReceiveButton__Response(
           {
             j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
           }
-          v16 = SoundManager__playSe((System_String_o *)StringLiteral_16373, 0LL);
+          v16 = SoundManager__playSe((System_String_o *)StringLiteral_16373/*"ar192"*/, 0LL);
           if ( v19[6] )
           {
             v24 = *((_QWORD *)v19 + 4);
@@ -1102,7 +1102,7 @@ void __fastcall EventInfoSpotCooltimeRewardReceiveButton__SetupButtonDisp(
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_12251, v6);
+    sub_B16FFC(&StringLiteral_12251/*"SPOT_COOLTIME_REWARD_BUTTON_TEXT"*/, v6);
     byte_40FA173 = 1;
   }
   ButtonSpriteNameByEventId = EventInfoSpotCooltimeRewardReceiveButton__GetButtonSpriteNameByEventId(
@@ -1132,7 +1132,7 @@ void __fastcall EventInfoSpotCooltimeRewardReceiveButton__SetupButtonDisp(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_12251, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_12251/*"SPOT_COOLTIME_REWARD_BUTTON_TEXT"*/, 0LL);
   if ( !buttonTextLabel || (UILabel__set_text(buttonTextLabel, v12, 0LL), (v13 = this->fields.buttonTextLabel) == 0LL) )
     sub_B170D4();
   UILabel__SetCondensedScale(v13, this->fields.buttonTextMaxWidth, 0LL);
@@ -1170,7 +1170,7 @@ void __fastcall EventInfoSpotCooltimeRewardReceiveButton__SetupRewardReceivedDia
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_SpotCooltimeRewardDialog___, v7);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_12938, v10);
+    sub_B16FFC(&StringLiteral_12938/*"SpotCooltimeRewardDialog"*/, v10);
     byte_40FA172 = 1;
   }
   if ( this->fields.mode == 1 )
@@ -1189,7 +1189,7 @@ void __fastcall EventInfoSpotCooltimeRewardReceiveButton__SetupRewardReceivedDia
       {
         Object_WarBoardWaitTimeSetting = (UnityEngine_Object_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                    asset,
-                                                                   (System_String_o *)StringLiteral_12938,
+                                                                   (System_String_o *)StringLiteral_12938/*"SpotCooltimeRewardDialog"*/,
                                                                    (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1485,8 +1485,8 @@ void __fastcall EventInfoSpotCooltimeRewardReceiveButton___c__DisplayClass35_0__
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_12612, v4);
-    sub_B16FFC(&StringLiteral_12651, v5);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v4);
+    sub_B16FFC(&StringLiteral_12651/*"ServantCombine"*/, v5);
     byte_40F6FDE = 1;
   }
   result = this->fields.result;
@@ -1495,7 +1495,7 @@ void __fastcall EventInfoSpotCooltimeRewardReceiveButton___c__DisplayClass35_0__
     case 2:
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v12 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v16, v17, v18, v19);
-      SceneJumpInfo___ctor_29748028(v12, (System_String_o *)StringLiteral_12612, 0, 0LL);
+      SceneJumpInfo___ctor_29748028(v12, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 0, 0LL);
       if ( Instance )
       {
         v13 = 22;
@@ -1517,7 +1517,7 @@ LABEL_13:
     case 0:
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v12 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v8, v9, v10, v11);
-      SceneJumpInfo___ctor_29747932(v12, (System_String_o *)StringLiteral_12651, 0LL);
+      SceneJumpInfo___ctor_29747932(v12, (System_String_o *)StringLiteral_12651/*"ServantCombine"*/, 0LL);
       if ( Instance )
       {
         v13 = 32;

@@ -1622,9 +1622,9 @@ bool __fastcall AvalonSceneManager__changeNextSceneCoroutine_d__36__MoveNext(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_SceneManagement_SceneManager_TypeInfo, v12);
     sub_B16FFC(&SceneTemp_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_2773, v14);
-    sub_B16FFC(&StringLiteral_2772, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_2773/*"BattleScriptScene"*/, v14);
+    sub_B16FFC(&StringLiteral_2772/*"BattleScene"*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40F914D = 1;
   }
   m_Handle = 0;
@@ -1645,7 +1645,7 @@ bool __fastcall AvalonSceneManager__changeNextSceneCoroutine_d__36__MoveNext(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
       v20 = UnityEngine_Object__op_Inequality(targetRoot, 0LL, 0LL);
-      v21 = System_String__op_Equality(this->fields.scenename, (System_String_o *)StringLiteral_1, 0LL);
+      v21 = System_String__op_Equality(this->fields.scenename, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       if ( !v20 )
         goto LABEL_12;
       if ( v21 )
@@ -1663,8 +1663,8 @@ LABEL_13:
         sub_B16F98((BattleServantConfConponent_o *)&this->fields._newTargetRoot_5__2, v29, v22, v23, v24, v25, v26, v27);
       }
       if ( this->fields.changeType <= 1u
-        && System_String__op_Inequality(this->fields.scenename, (System_String_o *)StringLiteral_2773, 0LL)
-        && System_String__op_Inequality(this->fields.scenename, (System_String_o *)StringLiteral_2772, 0LL) )
+        && System_String__op_Inequality(this->fields.scenename, (System_String_o *)StringLiteral_2773/*"BattleScriptScene"*/, 0LL)
+        && System_String__op_Inequality(this->fields.scenename, (System_String_o *)StringLiteral_2772/*"BattleScene"*/, 0LL) )
       {
         v30 = (Il2CppObject *)AvalonSceneManager__setupUI(_4__this, 0LL);
         this->fields.__2__current = v30;

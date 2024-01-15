@@ -38,21 +38,21 @@ void __fastcall AutoFortificationButtonComponent__Init(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1756, v8);
-    sub_B16FFC(&StringLiteral_16903, v9);
+    sub_B16FFC(&StringLiteral_1756/*"AUTO_ORGANIZATION_BTN_LABEL"*/, v8);
+    sub_B16FFC(&StringLiteral_16903/*"btn_bg_auto_organization"*/, v9);
     byte_40FBF50 = 1;
   }
   ButtonBg = this->fields.ButtonBg;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_28584872(eventId, ButtonBg, (System_String_o *)StringLiteral_16903, method);
+  AtlasManager__SetEventUI_28584872(eventId, ButtonBg, (System_String_o *)StringLiteral_16903/*"btn_bg_auto_organization"*/, method);
   ButtonLb = this->fields.ButtonLb;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_1756, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_1756/*"AUTO_ORGANIZATION_BTN_LABEL"*/, 0LL);
   if ( !ButtonLb )
     sub_B170D4();
   UILabel__set_text(ButtonLb, v12, 0LL);

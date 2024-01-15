@@ -124,14 +124,14 @@ void __fastcall SelectMyServantOrNpcDialog__Init(SelectMyServantOrNpcDialog_o *t
 
   if ( (byte_40FE1ED & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FE1ED = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
     sub_B170D4();
@@ -268,13 +268,13 @@ void __fastcall SelectMyServantOrNpcDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
     sub_B16FFC(&Method_SelectMyServantOrNpcDialog_EndOpen__, v16);
-    sub_B16FFC(&StringLiteral_10385, v17);
-    sub_B16FFC(&StringLiteral_3251, v18);
-    sub_B16FFC(&StringLiteral_10382, v19);
-    sub_B16FFC(&StringLiteral_10381, v20);
-    sub_B16FFC(&StringLiteral_10383, v21);
-    sub_B16FFC(&StringLiteral_10386, v22);
-    sub_B16FFC(&StringLiteral_10384, v23);
+    sub_B16FFC(&StringLiteral_10385/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_DIALOG_MESSAGE"*/, v17);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v18);
+    sub_B16FFC(&StringLiteral_10382/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MY_SERVANT_BUTTON"*/, v19);
+    sub_B16FFC(&StringLiteral_10381/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MESSAGE"*/, v20);
+    sub_B16FFC(&StringLiteral_10383/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_NPC_BUTTON"*/, v21);
+    sub_B16FFC(&StringLiteral_10386/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_FREE_DIALOG_MESSAGE"*/, v22);
+    sub_B16FFC(&StringLiteral_10384/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_TITLE"*/, v23);
     byte_40FE1EE = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -306,7 +306,7 @@ void __fastcall SelectMyServantOrNpcDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10384, 0LL);
+    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10384/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_TITLE"*/, 0LL);
     if ( !v32 )
       goto LABEL_65;
     UILabel__set_text(v32, v33, 0LL);
@@ -329,7 +329,7 @@ void __fastcall SelectMyServantOrNpcDialog__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v36 = &StringLiteral_10386;
+        v36 = &StringLiteral_10386/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_FREE_DIALOG_MESSAGE"*/;
       }
       else
       {
@@ -338,7 +338,7 @@ void __fastcall SelectMyServantOrNpcDialog__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v36 = &StringLiteral_10385;
+        v36 = &StringLiteral_10385/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_DIALOG_MESSAGE"*/;
       }
       v38 = LocalizationManager__Get((System_String_o *)*v36, 0LL);
       if ( !v35 )
@@ -351,7 +351,7 @@ void __fastcall SelectMyServantOrNpcDialog__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v37 = LocalizationManager__Get((System_String_o *)StringLiteral_10381, 0LL);
+      v37 = LocalizationManager__Get((System_String_o *)StringLiteral_10381/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MESSAGE"*/, 0LL);
       v38 = System_String__Format(v37, (Il2CppObject *)name, 0LL);
       if ( !v35 )
         goto LABEL_65;
@@ -372,7 +372,7 @@ void __fastcall SelectMyServantOrNpcDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
     if ( !v40 )
       goto LABEL_65;
     UILabel__set_text(v40, v41, 0LL);
@@ -391,7 +391,7 @@ void __fastcall SelectMyServantOrNpcDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_10382, 0LL);
+    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_10382/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MY_SERVANT_BUTTON"*/, 0LL);
     if ( !v43 )
       goto LABEL_65;
     UILabel__set_text(v43, v44, 0LL);
@@ -410,7 +410,7 @@ void __fastcall SelectMyServantOrNpcDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_10383, 0LL);
+    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_10383/*"PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_NPC_BUTTON"*/, 0LL);
     if ( v46 )
     {
       UILabel__set_text(v46, v47, 0LL);

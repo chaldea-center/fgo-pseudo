@@ -253,7 +253,7 @@ int32_t __fastcall GachaDetailEntity___c___GetScriptIntArray_b__8_0(
 
   if ( (byte_40F68D4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, x);
+    sub_B16FFC(&StringLiteral_1/*""*/, x);
     byte_40F68D4 = 1;
   }
   if ( x )
@@ -264,6 +264,6 @@ int32_t __fastcall GachaDetailEntity___c___GetScriptIntArray_b__8_0(
   else
     v4 = 0LL;
   if ( !v4 )
-    v4 = (System_String_o *)StringLiteral_1;
+    v4 = (System_String_o *)StringLiteral_1/*""*/;
   return System_Int32__Parse(v4, 0LL);
 }

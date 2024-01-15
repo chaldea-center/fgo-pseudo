@@ -485,8 +485,8 @@ int32_t __fastcall UserGameEntity__getCommandSpell(UserGameEntity_o *this, const
   if ( (byte_40F96FA & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9718, v3);
-    sub_B16FFC(&StringLiteral_8657, v4);
+    sub_B16FFC(&StringLiteral_9718/*"ONE_COMMAND_SPELL"*/, v3);
+    sub_B16FFC(&StringLiteral_8657/*"MAX_COMMAND_SPELL"*/, v4);
     byte_40F96FA = 1;
   }
   commandSpellRecoverAt = this->fields.commandSpellRecoverAt;
@@ -496,10 +496,10 @@ int32_t __fastcall UserGameEntity__getCommandSpell(UserGameEntity_o *this, const
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   v6 = commandSpellRecoverAt - NetworkManager__getTime(0LL);
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8657, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8657/*"MAX_COMMAND_SPELL"*/, 0LL);
   if ( v6 >= 1 )
   {
-    v8 = ConstantMaster__getValue((System_String_o *)StringLiteral_9718, 0LL);
+    v8 = ConstantMaster__getValue((System_String_o *)StringLiteral_9718/*"ONE_COMMAND_SPELL"*/, 0LL);
     v9 = (v6 + v8 - 1) / v8;
     if ( v9 >= Value )
       return 0;

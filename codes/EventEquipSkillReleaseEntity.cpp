@@ -65,12 +65,12 @@ int32_t __fastcall EventEquipSkillReleaseEntity__getScriptIntParam(
   if ( (byte_40FC64A & 1) == 0 )
   {
     sub_B16FFC(&long_TypeInfo, key);
-    sub_B16FFC(&StringLiteral_18735, v6);
+    sub_B16FFC(&StringLiteral_18735/*"forceOverwrite"*/, v6);
     byte_40FC64A = 1;
   }
   ScriptObj = EventEquipSkillReleaseEntity__getScriptObj(
                 this,
-                (System_String_o *)StringLiteral_18735,
+                (System_String_o *)StringLiteral_18735/*"forceOverwrite"*/,
                 *(const MethodInfo **)&def);
   if ( !ScriptObj )
     return v4;
@@ -123,7 +123,7 @@ bool __fastcall EventEquipSkillReleaseEntity__isForceOverwrite(
 
   if ( (byte_40FC64B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18735, method);
+    sub_B16FFC(&StringLiteral_18735/*"forceOverwrite"*/, method);
     byte_40FC64B = 1;
   }
   return EventEquipSkillReleaseEntity__getScriptIntParam(this, (System_String_o *)method, 0, v2) == 1;
@@ -188,16 +188,16 @@ bool __fastcall EventEquipSkillReleaseEntity__tryGetSkill(
     sub_B16FFC(&Method_System_Collections_Generic_List_object__get_Count__, v12);
     sub_B16FFC(&Method_System_Collections_Generic_List_object__get_Item__, v13);
     sub_B16FFC(&System_Collections_Generic_List_object__TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_19307, v15);
-    sub_B16FFC(&StringLiteral_22060, v16);
-    sub_B16FFC(&StringLiteral_20250, v17);
+    sub_B16FFC(&StringLiteral_19307/*"id"*/, v15);
+    sub_B16FFC(&StringLiteral_22060/*"skills"*/, v16);
+    sub_B16FFC(&StringLiteral_20250/*"lv"*/, v17);
     byte_40FC64C = 1;
   }
   *id = 0;
   *lv = 0;
   ScriptObj = EventEquipSkillReleaseEntity__getScriptObj(
                 this,
-                (System_String_o *)StringLiteral_22060,
+                (System_String_o *)StringLiteral_22060/*"skills"*/,
                 (const MethodInfo *)id);
   if ( !ScriptObj )
     goto LABEL_22;
@@ -228,16 +228,16 @@ bool __fastcall EventEquipSkillReleaseEntity__tryGetSkill(
       }
       if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v23,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_19307,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_19307/*"id"*/,
              (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
         && System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v23,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_20250,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_20250/*"lv"*/,
              (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       {
         Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                  v23,
-                 (System_Type_o *)StringLiteral_19307,
+                 (System_Type_o *)StringLiteral_19307/*"id"*/,
                  (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( Item )
         {
@@ -251,7 +251,7 @@ LABEL_23:
           *id = *(_QWORD *)j_il2cpp_object_unbox_0(Item);
           Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                    v23,
-                   (System_Type_o *)StringLiteral_20250,
+                   (System_Type_o *)StringLiteral_20250/*"lv"*/,
                    (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
           if ( Item )
           {

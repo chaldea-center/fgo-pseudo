@@ -192,9 +192,9 @@ void __fastcall WarBoardTreasureListComponent__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
     sub_B16FFC(&Method_WarBoardTreasureListComponent___c__DisplayClass18_0__Open_b__0__, v13);
     sub_B16FFC(&WarBoardTreasureListComponent___c__DisplayClass18_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_15185, v15);
-    sub_B16FFC(&StringLiteral_15184, v16);
-    sub_B16FFC(&StringLiteral_15183, v17);
+    sub_B16FFC(&StringLiteral_15185/*"WARBOARD_GET_TREASURE_DIALOG_TITLE_RESULT"*/, v15);
+    sub_B16FFC(&StringLiteral_15184/*"WARBOARD_GET_TREASURE_DIALOG_TITLE_GET"*/, v16);
+    sub_B16FFC(&StringLiteral_15183/*"WARBOARD_GET_TREASURE_DIALOG_MESSAGE"*/, v17);
     byte_40FA8FB = 1;
   }
   v18 = sub_B170CC(
@@ -231,12 +231,12 @@ void __fastcall WarBoardTreasureListComponent__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_15183, 0LL);
+    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_15183/*"WARBOARD_GET_TREASURE_DIALOG_MESSAGE"*/, 0LL);
     if ( textLabel )
     {
       UILabel__set_text(textLabel, v38, 0LL);
       titleLabel = this->fields.titleLabel;
-      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_15184, 0LL);
+      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_15184/*"WARBOARD_GET_TREASURE_DIALOG_TITLE_GET"*/, 0LL);
       if ( titleLabel )
       {
         UILabel__set_text(titleLabel, v40, 0LL);
@@ -252,7 +252,7 @@ LABEL_38:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_15185, 0LL);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_15185/*"WARBOARD_GET_TREASURE_DIALOG_TITLE_RESULT"*/, 0LL);
   if ( !v41 )
     goto LABEL_38;
   UILabel__set_text(v41, v42, 0LL);

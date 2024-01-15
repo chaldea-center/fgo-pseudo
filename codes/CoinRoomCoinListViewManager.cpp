@@ -19,11 +19,11 @@ void __fastcall CoinRoomCoinListViewManager___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&CoinRoomCoinListViewManager_TypeInfo, v1);
     sub_B16FFC(&ListViewSort_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_4101, v6);
+    sub_B16FFC(&StringLiteral_4101/*"CoinRoomCoinList1"*/, v6);
     byte_40F9A4F = 1;
   }
   v7 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_4101, 27, 1, 0LL);
+  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_4101/*"CoinRoomCoinList1"*/, 27, 1, 0LL);
   static_fields = (BattleServantConfConponent_o *)CoinRoomCoinListViewManager_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v7;
   sub_B16F98(static_fields, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
@@ -335,7 +335,7 @@ void __fastcall CoinRoomCoinListViewManager__CreateConfirmList(
     sub_B16FFC(&LocalizationManager_TypeInfo, v26);
     sub_B16FFC(&NetworkManager_TypeInfo, v27);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v28);
-    sub_B16FFC(&StringLiteral_14698, v29);
+    sub_B16FFC(&StringLiteral_14698/*"USER_SERVANT_COIN_LIST_EMPTY"*/, v29);
     byte_40F9A34 = 1;
   }
   memset(&v90, 0, sizeof(v90));
@@ -441,7 +441,7 @@ void __fastcall CoinRoomCoinListViewManager__CreateConfirmList(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_14698, 0LL);
+  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_14698/*"USER_SERVANT_COIN_LIST_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_56;
   UILabel__set_text(emptyMessageLabel, v57, 0LL);
@@ -633,9 +633,9 @@ void __fastcall CoinRoomCoinListViewManager__CreateInitList(
     sub_B16FFC(&Method_System_Collections_Generic_List_DataEntityBase__get_Item__, v12);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&UserSvtCoinEntity_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_3129, v15);
-    sub_B16FFC(&StringLiteral_3134, v16);
-    sub_B16FFC(&StringLiteral_14698, v17);
+    sub_B16FFC(&StringLiteral_3129/*"COIN_ROOM_SELECTED_TARGET_NUM"*/, v15);
+    sub_B16FFC(&StringLiteral_3134/*"COIN_ROOM_SELECT_LIST_STATUS_TITLE"*/, v16);
+    sub_B16FFC(&StringLiteral_14698/*"USER_SERVANT_COIN_LIST_EMPTY"*/, v17);
     byte_40F9A35 = 1;
   }
   if ( System_Linq_Enumerable__Any_KeyValuePair_int__QuestAfterAction_VoiceInfo__(
@@ -775,7 +775,7 @@ LABEL_62:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_3129, 0LL);
+  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_3129/*"COIN_ROOM_SELECTED_TARGET_NUM"*/, 0LL);
   nowLabel = this->fields.nowLabel;
   v59 = v57;
   if ( (BYTE3(CoinRoomUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -792,7 +792,7 @@ LABEL_62:
     goto LABEL_62;
   UILabel__set_text(nowLabel, v62, 0LL);
   statusLabel = this->fields.statusLabel;
-  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_3134, 0LL);
+  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_3134/*"COIN_ROOM_SELECT_LIST_STATUS_TITLE"*/, 0LL);
   if ( !statusLabel )
     goto LABEL_62;
   UILabel__set_text(statusLabel, v64, 0LL);
@@ -802,7 +802,7 @@ LABEL_62:
     goto LABEL_62;
   UIProgressBar__set_value(addSlider, 0.0, 0LL);
   emptyMessageLabel = this->fields.emptyMessageLabel;
-  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_14698, 0LL);
+  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_14698/*"USER_SERVANT_COIN_LIST_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_62;
   UILabel__set_text(emptyMessageLabel, v68, 0LL);
@@ -1941,7 +1941,7 @@ void __fastcall CoinRoomCoinListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_CoinRoomCoinIconObject__get_Current__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_CoinRoomCoinIconObject__GetEnumerator__, v11);
     sub_B16FFC(&Method_System_Collections_Generic_List_CoinRoomCoinIconObject__get_Count__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40F9A3E = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -1956,7 +1956,7 @@ void __fastcall CoinRoomCoinListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -2297,8 +2297,8 @@ void __fastcall CoinRoomCoinListViewManager__SetAddNumLabel(
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_CoinRoomCoinListViewManager___c__SetAddNumLabel_b__43_0__, v10);
     sub_B16FFC(&CoinRoomCoinListViewManager___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_3115, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_3115/*"COIN_ROOM_ADD_NUM"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40F9A37 = 1;
   }
   selectedCoinDic = this->fields.selectedCoinDic;
@@ -2354,7 +2354,7 @@ void __fastcall CoinRoomCoinListViewManager__SetAddNumLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3115, 0LL);
+    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3115/*"COIN_ROOM_ADD_NUM"*/, 0LL);
     addLabel = this->fields.addLabel;
     v30 = v28;
     v34 = v27;
@@ -2371,7 +2371,7 @@ LABEL_19:
   v33 = this->fields.addLabel;
   if ( !v33 )
     goto LABEL_19;
-  UILabel__set_text(v33, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v33, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -2431,8 +2431,8 @@ void __fastcall CoinRoomCoinListViewManager__SetFilterButtonBGImage(
 
   if ( (byte_40F9A3B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16927, method);
-    sub_B16FFC(&StringLiteral_16926, v3);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, method);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v3);
     byte_40F9A3B = 1;
   }
   sort = this->fields.sort;
@@ -2441,9 +2441,9 @@ void __fastcall CoinRoomCoinListViewManager__SetFilterButtonBGImage(
   {
     sub_B170D4();
   }
-  v7 = (System_String_o **)&StringLiteral_16926;
+  v7 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
   if ( !v6 )
-    v7 = (System_String_o **)&StringLiteral_16927;
+    v7 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
   UISprite__set_spriteName(filterSprite, *v7, 0LL);
 }
 
@@ -2562,7 +2562,7 @@ void __fastcall CoinRoomCoinListViewManager__SetSelectedDoneLabel(
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&selectedNum);
     sub_B16FFC(&Method_System_Collections_Generic_List_DataEntityBase__get_Count__, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_3129, v7);
+    sub_B16FFC(&StringLiteral_3129/*"COIN_ROOM_SELECTED_TARGET_NUM"*/, v7);
     byte_40F9A36 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2570,7 +2570,7 @@ void __fastcall CoinRoomCoinListViewManager__SetSelectedDoneLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3129, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3129/*"COIN_ROOM_SELECTED_TARGET_NUM"*/, 0LL);
   selectDoneLabel = this->fields.selectDoneLabel;
   v10 = v8;
   v17 = selectedNum;
@@ -2605,10 +2605,10 @@ void __fastcall CoinRoomCoinListViewManager__SetSortButtonBGImage(
 
   if ( (byte_40F9A3A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16892, method);
-    sub_B16FFC(&StringLiteral_16893, v3);
-    sub_B16FFC(&StringLiteral_360, v4);
-    sub_B16FFC(&StringLiteral_347, v5);
+    sub_B16FFC(&StringLiteral_16892/*"btn_bg_05"*/, method);
+    sub_B16FFC(&StringLiteral_16893/*"btn_bg_06"*/, v3);
+    sub_B16FFC(&StringLiteral_360/*"#FE4545"*/, v4);
+    sub_B16FFC(&StringLiteral_347/*"#000000"*/, v5);
     byte_40F9A3A = 1;
   }
   *(_QWORD *)&v11.fields.r = 0LL;
@@ -2619,10 +2619,10 @@ void __fastcall CoinRoomCoinListViewManager__SetSortButtonBGImage(
   v7 = ListViewSort__CheckFilterDefaultAll(sort, -1, 0LL);
   if ( !this->fields.sortSprite )
     goto LABEL_12;
-  v8 = (System_String_o **)&StringLiteral_16892;
+  v8 = (System_String_o **)&StringLiteral_16892/*"btn_bg_05"*/;
   if ( !v7 )
-    v8 = (System_String_o **)&StringLiteral_16893;
-  v9 = v7 ? (System_String_o **)&StringLiteral_347 : (System_String_o **)&StringLiteral_360;
+    v8 = (System_String_o **)&StringLiteral_16893/*"btn_bg_06"*/;
+  v9 = v7 ? (System_String_o **)&StringLiteral_347/*"#000000"*/ : (System_String_o **)&StringLiteral_360/*"#FE4545"*/;
   UISprite__set_spriteName(this->fields.sortSprite, *v8, 0LL);
   *(_QWORD *)&v11.fields.r = 0LL;
   *(_QWORD *)&v11.fields.b = 0LL;
@@ -2667,12 +2667,12 @@ void __fastcall CoinRoomCoinListViewManager__SetSortButtonImage(
   if ( (byte_40F9A4A & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_17038, v4);
-    sub_B16FFC(&StringLiteral_16995, v5);
-    sub_B16FFC(&StringLiteral_16985, v6);
-    sub_B16FFC(&StringLiteral_17002, v7);
-    sub_B16FFC(&StringLiteral_16952, v8);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v4);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v5);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v6);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v7);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v8);
     byte_40F9A4A = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -2709,7 +2709,7 @@ void __fastcall CoinRoomCoinListViewManager__SetSortButtonImage(
         sortExplanationSprite = this->fields.sortExplanationSprite;
         if ( sortExplanationSprite )
         {
-          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
           UISprite__set_spriteName(sortExplanationSprite, *v17, 0LL);
           v18 = this->fields.sort;
           if ( v18 )
@@ -2718,8 +2718,8 @@ void __fastcall CoinRoomCoinListViewManager__SetSortButtonImage(
             if ( v19 )
             {
               isAscendingOrder = v18->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16952;
-              v22 = (System_String_o **)&StringLiteral_16955;
+              v21 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+              v22 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
 LABEL_32:
               if ( isAscendingOrder )
                 v26 = v21;
@@ -2736,7 +2736,7 @@ LABEL_32:
         v23 = this->fields.sortExplanationSprite;
         if ( v23 )
         {
-          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
           UISprite__set_spriteName(v23, *v24, 0LL);
           v25 = this->fields.sort;
           if ( v25 )
@@ -2745,8 +2745,8 @@ LABEL_32:
             if ( v19 )
             {
               isAscendingOrder = v25->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16955;
-              v22 = (System_String_o **)&StringLiteral_16952;
+              v21 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+              v22 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
               goto LABEL_32;
             }
           }

@@ -126,7 +126,7 @@ void __fastcall BattleServantData___ctor(BattleServantData_o *this, const Method
     sub_B16FFC(&System_Collections_Generic_List_BattleSkillInfoData__TypeInfo, v15);
     sub_B16FFC(&System_Collections_Generic_List_BattleServantData_Adjustment__TypeInfo, v16);
     sub_B16FFC(&ServantWaveTurnEventOwner_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_1, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v18);
     byte_40F8AEE = 1;
   }
   this->fields.deckIndex = -1;
@@ -239,8 +239,8 @@ void __fastcall BattleServantData___ctor(BattleServantData_o *this, const Method
     v78,
     v79,
     v80);
-  v81 = (System_Int32_array **)StringLiteral_1;
-  this->fields.statestring = (struct System_String_o *)StringLiteral_1;
+  v81 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.statestring = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.statestring, v81, v82, v83, v84, v85, v86, v87);
   this->fields.isGutsSleepRelease = 1;
   this->fields.wasAttackTargetId = -1;
@@ -3766,7 +3766,7 @@ void __fastcall BattleServantData__InitCommonAddIndividuality(BattleServantData_
     sub_B16FFC(&Method_System_Collections_Generic_List_int___ctor__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__get_Count__, v8);
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_7245, v10);
+    sub_B16FFC(&StringLiteral_7245/*"INDIVIDUALITY_IS_SUPPORT"*/, v10);
     byte_40F8A36 = 1;
   }
   v11 = (System_Collections_Generic_List_int__o *)sub_B170CC(
@@ -3780,7 +3780,7 @@ void __fastcall BattleServantData__InitCommonAddIndividuality(BattleServantData_
     (const MethodInfo_2F0F794 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( Follower__IsAnySupport(this->fields.followerType, 0LL) )
   {
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_7245, 0LL);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_7245/*"INDIVIDUALITY_IS_SUPPORT"*/, 0LL);
     if ( v11 )
     {
       System_Collections_Generic_List_int___Add(
@@ -3878,13 +3878,13 @@ bool __fastcall BattleServantData__IsAntiSmoothNpSeqIdLotteried(
   if ( (byte_40F8AE5 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Array_IndexOf_int___, data);
-    sub_B16FFC(&StringLiteral_11616, v4);
+    sub_B16FFC(&StringLiteral_11616/*"SEQ_IDS_20220729"*/, v4);
     byte_40F8AE5 = 1;
   }
   TreasureDevice = BattleServantData__get_TreasureDevice(this, (const MethodInfo *)data);
   if ( TreasureDevice )
   {
-    ValueAsIntArray = ConstantStrMaster__GetValueAsIntArray((System_String_o *)StringLiteral_11616, 0LL);
+    ValueAsIntArray = ConstantStrMaster__GetValueAsIntArray((System_String_o *)StringLiteral_11616/*"SEQ_IDS_20220729"*/, 0LL);
     if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)ValueAsIntArray, 0LL) )
     {
       LOBYTE(TreasureDevice) = 0;
@@ -3970,9 +3970,9 @@ bool __fastcall BattleServantData__IsContainsSeqId(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
     sub_B16FFC(&string_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_22376, v19);
-    sub_B16FFC(&StringLiteral_22973, v20);
-    sub_B16FFC(&StringLiteral_21876, v21);
+    sub_B16FFC(&StringLiteral_22376/*"svtId"*/, v19);
+    sub_B16FFC(&StringLiteral_22973/*"userSvtId"*/, v20);
+    sub_B16FFC(&StringLiteral_21876/*"seqId"*/, v21);
     byte_40F8AE6 = 1;
   }
   memset(&v52, 0, sizeof(v52));
@@ -3986,9 +3986,9 @@ bool __fastcall BattleServantData__IsContainsSeqId(
     (System_Collections_Generic_List_Enumerator_T__o *)&v47,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)firstNpPlayList,
     (const MethodInfo_2F26B54 *)Method_System_Collections_Generic_List_Dictionary_string__object___GetEnumerator__);
-  v23 = (System_Xml_XmlQualifiedName_o **)&StringLiteral_21876;
+  v23 = (System_Xml_XmlQualifiedName_o **)&StringLiteral_21876/*"seqId"*/;
   v24 = &int_TypeInfo;
-  v25 = (System_Xml_XmlQualifiedName_o **)&StringLiteral_22973;
+  v25 = (System_Xml_XmlQualifiedName_o **)&StringLiteral_22973/*"userSvtId"*/;
   v52.fields.current = (Il2CppObject *)v47.fields.fakeValue;
   *(_OWORD *)&v52.fields.list = *(_OWORD *)&v47.fields.currentCryptoKey;
   while ( 1 )
@@ -4061,7 +4061,7 @@ LABEL_17:
     }
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)current,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_22376,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_22376/*"svtId"*/,
            &v49,
            (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
@@ -4994,9 +4994,9 @@ void __fastcall BattleServantData__SaveNpPlay(BattleServantData_o *this, BattleD
     sub_B16FFC(&long_TypeInfo, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_Dictionary_string__object___Add__, v9);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_22376, v11);
-    sub_B16FFC(&StringLiteral_22973, v12);
-    sub_B16FFC(&StringLiteral_21876, v13);
+    sub_B16FFC(&StringLiteral_22376/*"svtId"*/, v11);
+    sub_B16FFC(&StringLiteral_22973/*"userSvtId"*/, v12);
+    sub_B16FFC(&StringLiteral_21876/*"seqId"*/, v13);
     byte_40F8AE7 = 1;
   }
   SelectedNobleGroupSeqId = 0;
@@ -5041,7 +5041,7 @@ void __fastcall BattleServantData__SaveNpPlay(BattleServantData_o *this, BattleD
     goto LABEL_25;
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v25,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_21876,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_21876/*"seqId"*/,
     v26,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   if ( this->fields.isEnemy || this->fields.followerType )
@@ -5050,7 +5050,7 @@ void __fastcall BattleServantData__SaveNpPlay(BattleServantData_o *this, BattleD
     v28 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(long_TypeInfo, &UserSvtId);
     System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
       v25,
-      (System_Xml_XmlQualifiedName_o *)StringLiteral_22973,
+      (System_Xml_XmlQualifiedName_o *)StringLiteral_22973/*"userSvtId"*/,
       v28,
       (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
     v30 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
@@ -5071,7 +5071,7 @@ void __fastcall BattleServantData__SaveNpPlay(BattleServantData_o *this, BattleD
     v39 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(long_TypeInfo, &UserSvtId);
     System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
       v25,
-      (System_Xml_XmlQualifiedName_o *)StringLiteral_22973,
+      (System_Xml_XmlQualifiedName_o *)StringLiteral_22973/*"userSvtId"*/,
       v39,
       (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
     v31 = int_TypeInfo;
@@ -5080,7 +5080,7 @@ void __fastcall BattleServantData__SaveNpPlay(BattleServantData_o *this, BattleD
   v32 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(v31, &v40);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
     v25,
-    (System_Xml_XmlQualifiedName_o *)StringLiteral_22376,
+    (System_Xml_XmlQualifiedName_o *)StringLiteral_22376/*"svtId"*/,
     v32,
     (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   firstNpPlayList = data->fields.firstNpPlayList;
@@ -5357,11 +5357,11 @@ void __fastcall BattleServantData__SetFakeData(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_20138, v12);
-    sub_B16FFC(&StringLiteral_22376, v13);
-    sub_B16FFC(&StringLiteral_19700, v14);
-    sub_B16FFC(&StringLiteral_22973, v15);
-    sub_B16FFC(&StringLiteral_22811, v16);
+    sub_B16FFC(&StringLiteral_20138/*"limitCount"*/, v12);
+    sub_B16FFC(&StringLiteral_22376/*"svtId"*/, v13);
+    sub_B16FFC(&StringLiteral_19700/*"index"*/, v14);
+    sub_B16FFC(&StringLiteral_22973/*"userSvtId"*/, v15);
+    sub_B16FFC(&StringLiteral_22811/*"uniqueId"*/, v16);
     byte_40F8A45 = 1;
   }
   entity = 0LL;
@@ -5369,15 +5369,15 @@ void __fastcall BattleServantData__SetFakeData(
     goto LABEL_29;
   this->fields.index = System_Collections_Generic_Dictionary_string__int___get_Item(
                          fakeInfo,
-                         (System_String_o *)StringLiteral_19700,
+                         (System_String_o *)StringLiteral_19700/*"index"*/,
                          (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
   this->fields.uniqueId = System_Collections_Generic_Dictionary_string__int___get_Item(
                             fakeInfo,
-                            (System_String_o *)StringLiteral_22811,
+                            (System_String_o *)StringLiteral_22811/*"uniqueId"*/,
                             (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
   Item = System_Collections_Generic_Dictionary_string__int___get_Item(
            fakeInfo,
-           (System_String_o *)StringLiteral_22973,
+           (System_String_o *)StringLiteral_22973/*"userSvtId"*/,
            (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
@@ -5390,7 +5390,7 @@ void __fastcall BattleServantData__SetFakeData(
   *(_OWORD *)&this->fields.userSvtId.fields.fakeValue = v18;
   v19 = System_Collections_Generic_Dictionary_string__int___get_Item(
           fakeInfo,
-          (System_String_o *)StringLiteral_22376,
+          (System_String_o *)StringLiteral_22376/*"svtId"*/,
           (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
@@ -5400,7 +5400,7 @@ void __fastcall BattleServantData__SetFakeData(
   this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(v19, 0LL);
   v20 = System_Collections_Generic_Dictionary_string__int___get_Item(
           fakeInfo,
-          (System_String_o *)StringLiteral_20138,
+          (System_String_o *)StringLiteral_20138/*"limitCount"*/,
           (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
   this->fields.limitcount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(v20, 0LL);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -6564,7 +6564,7 @@ void __fastcall BattleServantData__UpdateStatusUIByTransform(BattleServantData_o
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_15007, v7);
+    sub_B16FFC(&StringLiteral_15007/*"UpdateStatusByTransform"*/, v7);
     byte_40F8A89 = 1;
   }
   memset(&v10, 0, sizeof(v10));
@@ -6591,7 +6591,7 @@ void __fastcall BattleServantData__UpdateStatusUIByTransform(BattleServantData_o
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         (UnityEngine_GameObject_o *)current,
-        (System_String_o *)StringLiteral_15007,
+        (System_String_o *)StringLiteral_15007/*"UpdateStatusByTransform"*/,
         (Il2CppObject *)this,
         1,
         0LL);
@@ -6787,7 +6787,7 @@ void __fastcall BattleServantData__addDamage(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_17209, v11);
+    sub_B16FFC(&StringLiteral_17209/*"changeHp"*/, v11);
     byte_40F8A85 = 1;
   }
   memset(&v17, 0, sizeof(v17));
@@ -6849,7 +6849,7 @@ LABEL_6:
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         (UnityEngine_GameObject_o *)current,
-        (System_String_o *)StringLiteral_17209,
+        (System_String_o *)StringLiteral_17209/*"changeHp"*/,
         (Il2CppObject *)this,
         1,
         0LL);
@@ -6890,7 +6890,7 @@ int32_t __fastcall BattleServantData__addNp(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_22847, v11);
+    sub_B16FFC(&StringLiteral_22847/*"updateNp"*/, v11);
     byte_40F8A90 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -6944,7 +6944,7 @@ int32_t __fastcall BattleServantData__addNp(
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         (UnityEngine_GameObject_o *)current,
-        (System_String_o *)StringLiteral_22847,
+        (System_String_o *)StringLiteral_22847/*"updateNp"*/,
         (Il2CppObject *)this,
         1,
         0LL);
@@ -7428,7 +7428,7 @@ void __fastcall BattleServantData__changeNp(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_17214, v11);
+    sub_B16FFC(&StringLiteral_17214/*"changeNp"*/, v11);
     byte_40F8A91 = 1;
   }
   memset(&v15, 0, sizeof(v15));
@@ -7461,7 +7461,7 @@ void __fastcall BattleServantData__changeNp(
           sub_B170D4();
         UnityEngine_GameObject__SendMessage_40692064(
           (UnityEngine_GameObject_o *)current,
-          (System_String_o *)StringLiteral_17214,
+          (System_String_o *)StringLiteral_17214/*"changeNp"*/,
           (Il2CppObject *)this,
           1,
           0LL);
@@ -7502,10 +7502,10 @@ void __fastcall BattleServantData__changeUpdateStatus(BattleServantData_o *this,
 
   if ( (byte_40F8A88 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17215, method);
+    sub_B16FFC(&StringLiteral_17215/*"changeUpdateStatus"*/, method);
     byte_40F8A88 = 1;
   }
-  BattleServantData__sendParamMessage(this, (System_String_o *)StringLiteral_17215, v2);
+  BattleServantData__sendParamMessage(this, (System_String_o *)StringLiteral_17215/*"changeUpdateStatus"*/, v2);
 }
 
 
@@ -8359,7 +8359,7 @@ void __fastcall BattleServantData__fixUpdateStatus(BattleServantData_o *this, co
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_18680, v7);
+    sub_B16FFC(&StringLiteral_18680/*"fixUpdateStatus"*/, v7);
     byte_40F8A8A = 1;
   }
   memset(&v10, 0, sizeof(v10));
@@ -8386,7 +8386,7 @@ void __fastcall BattleServantData__fixUpdateStatus(BattleServantData_o *this, co
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         (UnityEngine_GameObject_o *)current,
-        (System_String_o *)StringLiteral_18680,
+        (System_String_o *)StringLiteral_18680/*"fixUpdateStatus"*/,
         (Il2CppObject *)this,
         1,
         0LL);
@@ -10486,9 +10486,9 @@ float __fastcall BattleServantData__getCommandCardATK(
   if ( (byte_40F8A97 & 1) == 0 )
   {
     sub_B16FFC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, command);
-    sub_B16FFC(&StringLiteral_5488, v7);
-    sub_B16FFC(&StringLiteral_5489, v8);
-    sub_B16FFC(&StringLiteral_5490, v9);
+    sub_B16FFC(&StringLiteral_5488/*"ENEMY_ATTACK_RATE_ARTS"*/, v7);
+    sub_B16FFC(&StringLiteral_5489/*"ENEMY_ATTACK_RATE_BUSTER"*/, v8);
+    sub_B16FFC(&StringLiteral_5490/*"ENEMY_ATTACK_RATE_QUICK"*/, v9);
     byte_40F8A97 = 1;
   }
   if ( !this->fields.isEnemy )
@@ -10501,20 +10501,20 @@ float __fastcall BattleServantData__getCommandCardATK(
     v12 = BattleCommandData__getCommandType(command, 0LL);
     if ( BattleCommand__isQUICK(v12, 0LL) )
     {
-      v11 = &StringLiteral_5490;
+      v11 = &StringLiteral_5490/*"ENEMY_ATTACK_RATE_QUICK"*/;
       goto LABEL_11;
     }
     v13 = BattleCommandData__getCommandType(command, 0LL);
     if ( BattleCommand__isBUSTER(v13, 0LL) )
     {
-      v11 = &StringLiteral_5489;
+      v11 = &StringLiteral_5489/*"ENEMY_ATTACK_RATE_BUSTER"*/;
       goto LABEL_11;
     }
 LABEL_12:
     Magnification = BattleCommand__getMagnification(command, 0LL);
     goto LABEL_13;
   }
-  v11 = &StringLiteral_5488;
+  v11 = &StringLiteral_5488/*"ENEMY_ATTACK_RATE_ARTS"*/;
 LABEL_11:
   Magnification = ConstantMaster__getRateValue((System_String_o *)*v11, 0LL);
 LABEL_13:
@@ -11857,12 +11857,12 @@ System_String_o *__fastcall BattleServantData__getLevelLabel(BattleServantData_o
   if ( (byte_40F8A4D & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23445, v3);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v3);
     byte_40F8A4D = 1;
   }
   level = this->fields.level;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &level);
-  return System_String__Format((System_String_o *)StringLiteral_23445, v4, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_23445/*"{0}"*/, v4, 0LL);
 }
 
 
@@ -11931,7 +11931,7 @@ int32_t __fastcall BattleServantData__getMaxHp(BattleServantData_o *this, const 
   {
     sub_B16FFC(&BattleBuffData_CheckIndividualitiesData_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_15652, v7);
+    sub_B16FFC(&StringLiteral_15652/*"[BattleServantData.getMaxHp] buffData is null"*/, v7);
     byte_40F8A7E = 1;
   }
   v8 = (BattleBuffData_CheckIndividualitiesData_o *)sub_B170CC(
@@ -11944,7 +11944,7 @@ int32_t __fastcall BattleServantData__getMaxHp(BattleServantData_o *this, const 
   buffData = this->fields.buffData;
   if ( !buffData
     && ((Instance = (CrashReporter_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__)) == 0LL
-     || (CrashReporter__SendReport_28515572(Instance, (System_String_o *)StringLiteral_15652, 0LL, 0LL, 0LL),
+     || (CrashReporter__SendReport_28515572(Instance, (System_String_o *)StringLiteral_15652/*"[BattleServantData.getMaxHp] buffData is null"*/, 0LL, 0LL, 0LL),
          (buffData = this->fields.buffData) == 0LL))
     || (maxhp = this->fields.maxhp,
         ActValue_31051136 = BattleBuffData__getActValue_31051136(buffData, 52, v8, 0LL),
@@ -13762,7 +13762,7 @@ System_String_o *__fastcall BattleServantData__getTreasureDvcName(BattleServantD
 
   if ( (byte_40F8A5D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F8A5D = 1;
   }
   if ( BattleServantData__get_TreasureDevice(this, method) )
@@ -13774,7 +13774,7 @@ System_String_o *__fastcall BattleServantData__getTreasureDvcName(BattleServantD
   }
   else
   {
-    p_name = (System_String_o **)&StringLiteral_1;
+    p_name = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *p_name;
 }
@@ -13788,7 +13788,7 @@ System_String_o *__fastcall BattleServantData__getTreasureDvcRuby(BattleServantD
 
   if ( (byte_40F8A5E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F8A5E = 1;
   }
   if ( BattleServantData__get_TreasureDevice(this, method) )
@@ -13800,7 +13800,7 @@ System_String_o *__fastcall BattleServantData__getTreasureDvcRuby(BattleServantD
   }
   else
   {
-    p_ruby = (System_String_o **)&StringLiteral_1;
+    p_ruby = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *p_ruby;
 }
@@ -14668,7 +14668,7 @@ int32_t __fastcall BattleServantData__get_CriticalIndividuality(const MethodInfo
   if ( (byte_40F8ACA & 1) == 0 )
   {
     sub_B16FFC(&BattleServantData_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_3426, v2);
+    sub_B16FFC(&StringLiteral_3426/*"CRITICAL_INDIVIDUALITY"*/, v2);
     byte_40F8ACA = 1;
   }
   v3 = BattleServantData_TypeInfo;
@@ -14680,7 +14680,7 @@ int32_t __fastcall BattleServantData__get_CriticalIndividuality(const MethodInfo
   }
   if ( !v3->static_fields->_CriticalIndividuality )
   {
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3426, 0LL);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3426/*"CRITICAL_INDIVIDUALITY"*/, 0LL);
     v5 = BattleServantData_TypeInfo;
     v6 = Value;
     if ( (BYTE3(BattleServantData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -15339,7 +15339,7 @@ bool __fastcall BattleServantData__healHp(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_17209, v12);
+    sub_B16FFC(&StringLiteral_17209/*"changeHp"*/, v12);
     byte_40F8A86 = 1;
   }
   memset(&v27, 0, sizeof(v27));
@@ -15411,7 +15411,7 @@ LABEL_20:
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         (UnityEngine_GameObject_o *)current,
-        (System_String_o *)StringLiteral_17209,
+        (System_String_o *)StringLiteral_17209/*"changeHp"*/,
         (Il2CppObject *)this,
         1,
         0LL);
@@ -17275,8 +17275,8 @@ void __fastcall BattleServantData__setBaseServantData_22721260(
     sub_B16FFC(&BattleServantData___c__DisplayClass288_1_TypeInfo, v61);
     sub_B16FFC(&Method_BattleServantData___c__DisplayClass288_2__setBaseServantData_b__2__, v62);
     sub_B16FFC(&BattleServantData___c__DisplayClass288_2_TypeInfo, v63);
-    sub_B16FFC(&StringLiteral_1, v64);
-    sub_B16FFC(&StringLiteral_6512, v65);
+    sub_B16FFC(&StringLiteral_1/*""*/, v64);
+    sub_B16FFC(&StringLiteral_6512/*"FULL_TD_POINT"*/, v65);
     byte_40F8A35 = 1;
   }
   skillIndex[0] = 0;
@@ -17358,8 +17358,8 @@ void __fastcall BattleServantData__setBaseServantData_22721260(
   this->fields.deathRate = userSvt->fields.deathRate;
   this->fields.criticalRate = userSvt->fields.criticalRate;
   this->fields._imageSvtId_k__BackingField = userSvt->fields.imageSvtId;
-  v89 = (System_Int32_array **)StringLiteral_1;
-  this->fields.statestring = (struct System_String_o *)StringLiteral_1;
+  v89 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.statestring = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.statestring, v89, v90, v91, v92, v93, v94, v95);
   v102 = this->fields.deckSvt;
   this->fields.atktdrate = userSvt->fields.tdAttackRate;
@@ -18183,7 +18183,7 @@ LABEL_123:
     battleInfo,
     v507->klass[1]._1.image);
   BattleServantData__UpdateTreasureDevice(this, v510->fields.treasureDeviceId, v510->fields.treasureDeviceLv, v365);
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_6512, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_6512/*"FULL_TD_POINT"*/, 0LL);
   nplineCount = this->fields.nplineCount;
   this->fields.lineMaxNp = Value;
   if ( nplineCount >= 1 )
@@ -20687,7 +20687,7 @@ void __fastcall BattleServantData__shiftUpdateStatus(BattleServantData_o *this, 
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_22008, v7);
+    sub_B16FFC(&StringLiteral_22008/*"shiftUpdateStatus"*/, v7);
     byte_40F8A8B = 1;
   }
   memset(&v10, 0, sizeof(v10));
@@ -20714,7 +20714,7 @@ void __fastcall BattleServantData__shiftUpdateStatus(BattleServantData_o *this, 
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         (UnityEngine_GameObject_o *)current,
-        (System_String_o *)StringLiteral_22008,
+        (System_String_o *)StringLiteral_22008/*"shiftUpdateStatus"*/,
         (Il2CppObject *)this,
         1,
         0LL);
@@ -21080,7 +21080,7 @@ bool __fastcall BattleServantData__turnProgressing(
     sub_B16FFC(&int___TypeInfo, v15);
     sub_B16FFC(&Method_System_Collections_Generic_List_BattleSkillInfoData__GetEnumerator__, v16);
     sub_B16FFC(&BattleLogicBuff_ReduceHpProcess_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_1, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v18);
     byte_40F8A61 = 1;
   }
   actflg = 0;
@@ -21148,7 +21148,7 @@ bool __fastcall BattleServantData__turnProgressing(
       goto LABEL_33;
   }
   v43 = (DataVals_o *)sub_B170CC(DataVals_TypeInfo, v35, v36, v37, v38);
-  DataVals___ctor(v43, (System_String_o *)StringLiteral_1, 0LL);
+  DataVals___ctor(v43, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v44 = this->fields.buffData;
   v49 = (BattleBuffData_CheckIndividualitiesData_o *)sub_B170CC(
                                                        BattleBuffData_CheckIndividualitiesData_TypeInfo,
@@ -21622,7 +21622,7 @@ void __fastcall BattleServantData__updateHp(BattleServantData_o *this, const Met
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_17209, v7);
+    sub_B16FFC(&StringLiteral_17209/*"changeHp"*/, v7);
     byte_40F8A92 = 1;
   }
   memset(&v13, 0, sizeof(v13));
@@ -21660,7 +21660,7 @@ void __fastcall BattleServantData__updateHp(BattleServantData_o *this, const Met
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         (UnityEngine_GameObject_o *)current,
-        (System_String_o *)StringLiteral_17209,
+        (System_String_o *)StringLiteral_17209/*"changeHp"*/,
         (Il2CppObject *)this,
         1,
         0LL);
@@ -21690,7 +21690,7 @@ void __fastcall BattleServantData__updateNpGauge(BattleServantData_o *this, cons
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_22847, v7);
+    sub_B16FFC(&StringLiteral_22847/*"updateNp"*/, v7);
     byte_40F8A8C = 1;
   }
   memset(&v10, 0, sizeof(v10));
@@ -21717,7 +21717,7 @@ void __fastcall BattleServantData__updateNpGauge(BattleServantData_o *this, cons
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         (UnityEngine_GameObject_o *)current,
-        (System_String_o *)StringLiteral_22847,
+        (System_String_o *)StringLiteral_22847/*"updateNp"*/,
         (Il2CppObject *)this,
         1,
         0LL);
@@ -21906,7 +21906,7 @@ void __fastcall BattleServantData__updateTDGauge(BattleServantData_o *this, cons
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_22852, v7);
+    sub_B16FFC(&StringLiteral_22852/*"updateTDGauge"*/, v7);
     byte_40F8A8F = 1;
   }
   memset(&v10, 0, sizeof(v10));
@@ -21933,7 +21933,7 @@ void __fastcall BattleServantData__updateTDGauge(BattleServantData_o *this, cons
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         (UnityEngine_GameObject_o *)current,
-        (System_String_o *)StringLiteral_22852,
+        (System_String_o *)StringLiteral_22852/*"updateTDGauge"*/,
         (Il2CppObject *)this,
         1,
         0LL);
@@ -21963,7 +21963,7 @@ void __fastcall BattleServantData__updateView(BattleServantData_o *this, const M
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_22854, v7);
+    sub_B16FFC(&StringLiteral_22854/*"updateView"*/, v7);
     byte_40F8A8E = 1;
   }
   memset(&v10, 0, sizeof(v10));
@@ -21990,7 +21990,7 @@ void __fastcall BattleServantData__updateView(BattleServantData_o *this, const M
         sub_B170D4();
       UnityEngine_GameObject__SendMessage_40692064(
         (UnityEngine_GameObject_o *)current,
-        (System_String_o *)StringLiteral_22854,
+        (System_String_o *)StringLiteral_22854/*"updateView"*/,
         (Il2CppObject *)this,
         1,
         0LL);

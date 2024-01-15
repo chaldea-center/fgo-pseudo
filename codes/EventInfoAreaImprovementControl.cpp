@@ -35,15 +35,15 @@ void __fastcall EventInfoAreaImprovementControl___ctor(
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_12939, v10);
-    sub_B16FFC(&StringLiteral_12940, v11);
+    sub_B16FFC(&StringLiteral_12939/*"SpotCooltime_ParkData_"*/, v10);
+    sub_B16FFC(&StringLiteral_12940/*"SpotCooltime_SpotData_"*/, v11);
     byte_40FB6D8 = 1;
   }
-  v12 = (System_Int32_array **)StringLiteral_12940;
-  this->fields.KEY_PREFIX_SPOT_DATA = (struct System_String_o *)StringLiteral_12940;
+  v12 = (System_Int32_array **)StringLiteral_12940/*"SpotCooltime_SpotData_"*/;
+  this->fields.KEY_PREFIX_SPOT_DATA = (struct System_String_o *)StringLiteral_12940/*"SpotCooltime_SpotData_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.KEY_PREFIX_SPOT_DATA, v12, v2, v3, v4, v5, v6, v7);
-  v13 = (System_Int32_array **)StringLiteral_12939;
-  this->fields.KEY_PREFIX_PARK_DATA = (struct System_String_o *)StringLiteral_12939;
+  v13 = (System_Int32_array **)StringLiteral_12939/*"SpotCooltime_ParkData_"*/;
+  this->fields.KEY_PREFIX_PARK_DATA = (struct System_String_o *)StringLiteral_12939/*"SpotCooltime_ParkData_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.KEY_PREFIX_PARK_DATA, v13, v14, v15, v16, v17, v18, v19);
   this->fields.customerAttractionRateMaxWidth = 126;
   this->fields.customerNumMaxWidth = 98;
@@ -498,7 +498,7 @@ void __fastcall EventInfoAreaImprovementControl__Initialization(
   {
     sub_B16FFC(&System_Action_TypeInfo, entity);
     sub_B16FFC(&Method_EventInfoAreaImprovementControl__Initialization_b__25_0__, v10);
-    sub_B16FFC(&StringLiteral_18415, v11);
+    sub_B16FFC(&StringLiteral_18415/*"event_bg_80384"*/, v11);
     byte_40FB6C8 = 1;
   }
   this->fields.eventUiEntity = entity;
@@ -538,7 +538,7 @@ void __fastcall EventInfoAreaImprovementControl__Initialization(
   EventInfoUIBase__SetSpriteByLocalAtlas(
     (EventInfoUIBase_o *)this,
     this->fields.titleBgSprite,
-    (System_String_o *)StringLiteral_18415,
+    (System_String_o *)StringLiteral_18415/*"event_bg_80384"*/,
     0LL);
   titleBgSprite = this->fields.titleBgSprite;
   if ( !titleBgSprite
@@ -597,13 +597,13 @@ void __fastcall EventInfoAreaImprovementControl__LoadParkData(
   if ( (byte_40FB6D5 & 1) == 0 )
   {
     sub_B16FFC(&char___TypeInfo, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FB6D5 = 1;
   }
   KEY_PREFIX_PARK_DATA = this->fields.KEY_PREFIX_PARK_DATA;
   v6 = System_Int32__ToString((int32_t)&eventIda, 0LL);
   v7 = System_String__Concat_43743732(KEY_PREFIX_PARK_DATA, v6, 0LL);
-  String = UnityEngine_PlayerPrefs__GetString(v7, (System_String_o *)StringLiteral_1, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( System_String__IsNullOrEmpty(String, 0LL) )
   {
     UserEventTotalPoint = EventInfoAreaImprovementControl__GetUserEventTotalPoint(this, eventIda, v9);
@@ -689,7 +689,7 @@ void __fastcall EventInfoAreaImprovementControl__LoadSpotData(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoAreaImprovementControl_SpotData__Clear__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__GetEnumerator__, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FB6D0 = 1;
   }
   memset(&v36, 0, sizeof(v36));
@@ -702,7 +702,7 @@ void __fastcall EventInfoAreaImprovementControl__LoadSpotData(
   KEY_PREFIX_SPOT_DATA = this->fields.KEY_PREFIX_SPOT_DATA;
   v13 = System_Int32__ToString((int32_t)&eventIda, 0LL);
   v14 = System_String__Concat_43743732(KEY_PREFIX_SPOT_DATA, v13, 0LL);
-  String = UnityEngine_PlayerPrefs__GetString(v14, (System_String_o *)StringLiteral_1, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(v14, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !System_String__IsNullOrEmpty(String, 0LL) )
   {
     v23 = sub_B17014(char___TypeInfo, 1LL, v16);
@@ -1151,12 +1151,12 @@ void __fastcall EventInfoAreaImprovementControl__SaveParkData(
   v11 = eventId;
   if ( (byte_40FB6D6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_698, *(_QWORD *)&eventId);
+    sub_B16FFC(&StringLiteral_698/*","*/, *(_QWORD *)&eventId);
     byte_40FB6D6 = 1;
   }
   v4 = System_Int64__ToString((int64_t)&this->fields.customerNum, 0LL);
   v5 = System_Int64__ToString((int64_t)&this->fields.customerAttractionRate, 0LL);
-  v6 = System_String__Concat_43746016(v4, (System_String_o *)StringLiteral_698, v5, 0LL);
+  v6 = System_String__Concat_43746016(v4, (System_String_o *)StringLiteral_698/*","*/, v5, 0LL);
   KEY_PREFIX_PARK_DATA = this->fields.KEY_PREFIX_PARK_DATA;
   v8 = v6;
   v9 = System_Int32__ToString((int32_t)&v11, 0LL);
@@ -1223,8 +1223,8 @@ void __fastcall EventInfoAreaImprovementControl__SaveSpotData(
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v10);
     sub_B16FFC(&Method_EventInfoAreaImprovementControl___c__SaveSpotData_b__40_0__, v11);
     sub_B16FFC(&EventInfoAreaImprovementControl___c_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_1223, v13);
-    sub_B16FFC(&StringLiteral_698, v14);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v13);
+    sub_B16FFC(&StringLiteral_698/*","*/, v14);
     byte_40FB6D3 = 1;
   }
   v41 = 0;
@@ -1296,7 +1296,7 @@ void __fastcall EventInfoAreaImprovementControl__SaveSpotData(
       {
         if ( !v28 )
           break;
-        System_Text_StringBuilder__Append_41914240(v28, (System_String_o *)StringLiteral_698, 0LL);
+        System_Text_StringBuilder__Append_41914240(v28, (System_String_o *)StringLiteral_698/*","*/, 0LL);
       }
       v30 = this->fields.spotDataList;
       if ( !v30 )
@@ -1311,7 +1311,7 @@ void __fastcall EventInfoAreaImprovementControl__SaveSpotData(
       if ( !v28 )
         break;
       System_Text_StringBuilder__Append_41914240(v28, v32, 0LL);
-      System_Text_StringBuilder__Append_41914240(v28, (System_String_o *)StringLiteral_1223, 0LL);
+      System_Text_StringBuilder__Append_41914240(v28, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
       v33 = this->fields.spotDataList;
       if ( !v33 )
         break;
@@ -1369,7 +1369,7 @@ void __fastcall EventInfoAreaImprovementControl__SetCustomerAttractionRateLabel(
     sub_B16FFC(&long_TypeInfo, totalRate);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_5700, v7);
+    sub_B16FFC(&StringLiteral_5700/*"EVENT_SPOT_COOLTIME_CUSTOMER_RATE_FORMAT"*/, v7);
     byte_40FB6CD = 1;
   }
   customerAttractionRateLabel = (UnityEngine_Object_o *)this->fields.customerAttractionRateLabel;
@@ -1389,7 +1389,7 @@ void __fastcall EventInfoAreaImprovementControl__SetCustomerAttractionRateLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5700, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5700/*"EVENT_SPOT_COOLTIME_CUSTOMER_RATE_FORMAT"*/, 0LL);
     v19 = v12;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v19);
     v18 = v10;
@@ -1429,7 +1429,7 @@ void __fastcall EventInfoAreaImprovementControl__SetCustomerNumLabel(
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&System_Math_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_5635, v9);
+    sub_B16FFC(&StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, v9);
     byte_40FB6CF = 1;
   }
   customerNumLabel = (UnityEngine_Object_o *)this->fields.customerNumLabel;
@@ -1446,7 +1446,7 @@ void __fastcall EventInfoAreaImprovementControl__SetCustomerNumLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5635, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
     v13 = BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )

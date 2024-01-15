@@ -104,7 +104,7 @@ void __fastcall NotificationIconDialog__Init(NotificationIconDialog_o *this, con
   if ( (byte_40F9373 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F9373 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
@@ -118,7 +118,7 @@ void __fastcall NotificationIconDialog__Init(NotificationIconDialog_o *this, con
     v5 = this->fields.titleLabel;
     if ( !v5 )
       goto LABEL_23;
-    UILabel__set_text(v5, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v5, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -131,7 +131,7 @@ void __fastcall NotificationIconDialog__Init(NotificationIconDialog_o *this, con
     v7 = this->fields.messageLabel;
     if ( !v7 )
       goto LABEL_23;
-    UILabel__set_text(v7, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   okBtnLabel = (UnityEngine_Object_o *)this->fields.okBtnLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -144,7 +144,7 @@ void __fastcall NotificationIconDialog__Init(NotificationIconDialog_o *this, con
     v9 = this->fields.okBtnLabel;
     if ( !v9 )
       goto LABEL_23;
-    UILabel__set_text(v9, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v9, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -227,8 +227,8 @@ void __fastcall NotificationIconDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_NotificationIconDialog_EndOpen__, v15);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_3252, v17);
-    sub_B16FFC(&StringLiteral_1, v18);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v17);
+    sub_B16FFC(&StringLiteral_1/*""*/, v18);
     byte_40F9374 = 1;
   }
   this->fields.clickFunc = func;
@@ -255,7 +255,7 @@ void __fastcall NotificationIconDialog__Open(
     if ( title )
       v21 = title;
     else
-      v21 = (System_String_o *)StringLiteral_1;
+      v21 = (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v20, v21, 0LL);
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
@@ -272,7 +272,7 @@ void __fastcall NotificationIconDialog__Open(
     if ( message )
       v24 = message;
     else
-      v24 = (System_String_o *)StringLiteral_1;
+      v24 = (System_String_o *)StringLiteral_1/*""*/;
     WrapControlText__textAdjust(v23, v24, v23->fields.mFontSize, 0, 0, 0LL);
   }
   okBtnLabel = (UnityEngine_Object_o *)this->fields.okBtnLabel;
@@ -289,7 +289,7 @@ void __fastcall NotificationIconDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( !v26 )
       goto LABEL_37;
     UILabel__set_text(v26, v27, 0LL);
@@ -326,8 +326,8 @@ System_String_o *__fastcall NotificationIconDialog__get_closeBtnPath(
 {
   if ( (byte_40F9377 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15425, method);
+    sub_B16FFC(&StringLiteral_15425/*"Window/OkBtn"*/, method);
     byte_40F9377 = 1;
   }
-  return (System_String_o *)StringLiteral_15425;
+  return (System_String_o *)StringLiteral_15425/*"Window/OkBtn"*/;
 }

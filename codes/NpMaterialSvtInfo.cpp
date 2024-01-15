@@ -109,7 +109,7 @@ void __fastcall NpMaterialSvtInfo__setMaterialSvtInfo(
     sub_B16FFC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_B16FFC(&StringLiteral_21736, v14);
+    sub_B16FFC(&StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, v14);
     byte_40F93A1 = 1;
   }
   npLvInfo = this->fields.npLvInfo;
@@ -182,7 +182,7 @@ void __fastcall NpMaterialSvtInfo__setMaterialSvtInfo(
               {
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
               }
-              AtlasManager__SetEventSprite(v43, (System_String_o *)StringLiteral_21736, 0LL);
+              AtlasManager__SetEventSprite(v43, (System_String_o *)StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, 0LL);
             }
             goto LABEL_22;
           }

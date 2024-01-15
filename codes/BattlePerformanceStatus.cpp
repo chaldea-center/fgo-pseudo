@@ -253,7 +253,7 @@ void __fastcall BattlePerformanceStatus__InitSkillSelectAddFuncConfWindow(
     sub_B16FFC(&Method_UnityEngine_GameObject_TryGetComponent_BattleSkillSelectAddFuncConfComponent___, v5);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_12835, v8);
+    sub_B16FFC(&StringLiteral_12835/*"SkillSelectAddFuncConfWindow"*/, v8);
     byte_40FA8AE = 1;
   }
   data = 0LL;
@@ -270,7 +270,7 @@ void __fastcall BattlePerformanceStatus__InitSkillSelectAddFuncConfWindow(
   if ( AssetManager__TryGetAssetObject_object_(
          &data,
          ASSET_BATTLE_COMMON,
-         (System_String_o *)StringLiteral_12835,
+         (System_String_o *)StringLiteral_12835/*"SkillSelectAddFuncConfWindow"*/,
          (const MethodInfo_18AFFFC *)Method_AssetManager_TryGetAssetObject_GameObject___) )
   {
     BattlePerformanceStatus__DestroySkillSelectAddFuncConfWindow(this, v11);
@@ -700,8 +700,8 @@ void __fastcall BattlePerformanceStatus__clickServantWindow(
 
   if ( (byte_40FA8B3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21217, *(_QWORD *)&index);
-    sub_B16FFC(&StringLiteral_3072, v5);
+    sub_B16FFC(&StringLiteral_21217/*"openSvtIndex"*/, *(_QWORD *)&index);
+    sub_B16FFC(&StringLiteral_3072/*"CLICK_SVTWINDOW"*/, v5);
     byte_40FA8B3 = 1;
   }
   fsm = this->fields.fsm;
@@ -709,13 +709,13 @@ void __fastcall BattlePerformanceStatus__clickServantWindow(
     || (FsmVariables = PlayMakerFSM__get_FsmVariables(fsm, 0LL)) == 0LL
     || (FsmInt = HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                    FsmVariables,
-                   (System_String_o *)StringLiteral_21217,
+                   (System_String_o *)StringLiteral_21217/*"openSvtIndex"*/,
                    0LL)) == 0LL
     || (FsmInt->fields.value = index, (v9 = this->fields.fsm) == 0LL) )
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(v9, (System_String_o *)StringLiteral_3072, 0LL);
+  PlayMakerFSM__SendEvent(v9, (System_String_o *)StringLiteral_3072/*"CLICK_SVTWINDOW"*/, 0LL);
 }
 
 
@@ -1435,7 +1435,7 @@ void __fastcall BattlePerformanceStatus__updateTotalCriticalPoint(
 
   if ( (byte_40FA8B2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_646, method);
+    sub_B16FFC(&StringLiteral_646/*"({0})"*/, method);
     byte_40FA8B2 = 1;
   }
   totalCriticalStars = 0;
@@ -1444,7 +1444,7 @@ void __fastcall BattlePerformanceStatus__updateTotalCriticalPoint(
     || (totalCriticalStars = data->fields.totalCriticalStars,
         totalCriticalpointlabel = this->fields.totalCriticalpointlabel,
         v5 = (Il2CppObject *)System_Int32__ToString((int32_t)&totalCriticalStars, 0LL),
-        v6 = System_String__Format((System_String_o *)StringLiteral_646, v5, 0LL),
+        v6 = System_String__Format((System_String_o *)StringLiteral_646/*"({0})"*/, v5, 0LL),
         !totalCriticalpointlabel) )
   {
     sub_B170D4();

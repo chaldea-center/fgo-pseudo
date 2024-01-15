@@ -246,7 +246,7 @@ bool __fastcall MaterialEventLogListViewItem__SetSortValue(
 
   if ( (byte_40FCC16 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, sort);
+    sub_B16FFC(&StringLiteral_1/*""*/, sort);
     byte_40FCC16 = 1;
   }
   klass = this->klass;
@@ -263,8 +263,8 @@ bool __fastcall MaterialEventLogListViewItem__SetSortValue(
     this->fields.sortValue0 = 0LL;
     this->fields.sortValue0B = 0LL;
     this->fields.sortValue1 = index;
-    v15 = (System_Int32_array **)StringLiteral_1;
-    this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1;
+    v15 = (System_Int32_array **)StringLiteral_1/*""*/;
+    this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
     sub_B16F98((BattleServantConfConponent_o *)&this->fields.sortStr1, v15, v6, v7, v8, v9, v10, v11);
     result = 1;
     this->fields.sortValue1B = 0LL;

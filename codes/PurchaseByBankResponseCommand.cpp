@@ -18,7 +18,7 @@ int32_t __fastcall PurchaseByBankResponseCommand__ExecuteResponse(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, data);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
-    sub_B16FFC(&StringLiteral_21706, v5);
+    sub_B16FFC(&StringLiteral_21706/*"result"*/, v5);
     byte_40FA04E = 1;
   }
   if ( !data )
@@ -27,12 +27,12 @@ int32_t __fastcall PurchaseByBankResponseCommand__ExecuteResponse(
   if ( success
     && System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_21706,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_21706/*"result"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)success,
-             (System_Type_o *)StringLiteral_21706,
+             (System_Type_o *)StringLiteral_21706/*"result"*/,
              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( Item )
     {

@@ -225,7 +225,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventExViewer(
   if ( (byte_40F8754 & 1) == 0 )
   {
     sub_B16FFC(&ServantStatusCharaGraphListViewObject_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6159, v3);
+    sub_B16FFC(&StringLiteral_6159/*"EventMoveEnd"*/, v3);
     byte_40F8754 = 1;
   }
   v4 = ServantStatusCharaGraphListViewObject_TypeInfo;
@@ -237,7 +237,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventExViewer(
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6159,
+    (System_String_o *)StringLiteral_6159/*"EventMoveEnd"*/,
     v4->static_fields->MAXIM_IN_SPEED,
     0LL);
 }
@@ -294,7 +294,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventFadeoutFrameMove_223
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, target);
     sub_B16FFC(&ServantStatusCharaGraphListViewObject_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_6144, v6);
+    sub_B16FFC(&StringLiteral_6144/*"EventFadeoutFrameMove2"*/, v6);
     byte_40F875A = 1;
   }
   if ( !target )
@@ -358,7 +358,7 @@ LABEL_21:
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6144,
+    (System_String_o *)StringLiteral_6144/*"EventFadeoutFrameMove2"*/,
     v13->static_fields->MAXIM_IN_SPEED,
     0LL);
 }
@@ -373,7 +373,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventFadeoutFrameStart(
 
   if ( (byte_40F8758 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6143, method);
+    sub_B16FFC(&StringLiteral_6143/*"EventFadeoutFrameMove"*/, method);
     byte_40F8758 = 1;
   }
   this->fields.isBusy = 1;
@@ -382,7 +382,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventFadeoutFrameStart(
   ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6143,
+    (System_String_o *)StringLiteral_6143/*"EventFadeoutFrameMove"*/,
     delay,
     0LL);
 }
@@ -449,7 +449,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventMaximMove(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___, method);
     sub_B16FFC(&ServantStatusCharaGraphListViewManager_TypeInfo, v3);
     sub_B16FFC(&ServantStatusCharaGraphListViewObject_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_6156, v5);
+    sub_B16FFC(&StringLiteral_6156/*"EventMaximMove2"*/, v5);
     byte_40F8756 = 1;
   }
   localScale.fields.z = 0.0;
@@ -518,8 +518,8 @@ LABEL_12:
   v22->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   p_eventReceiver = &v22->fields.eventReceiver;
   sub_B16F98((BattleServantConfConponent_o *)p_eventReceiver, gameObject, v24, v25, v26, v27, v28, v29);
-  v31 = (System_Int32_array **)StringLiteral_6156;
-  p_eventReceiver[1] = (struct UnityEngine_GameObject_o *)StringLiteral_6156;
+  v31 = (System_Int32_array **)StringLiteral_6156/*"EventMaximMove2"*/;
+  p_eventReceiver[1] = (struct UnityEngine_GameObject_o *)StringLiteral_6156/*"EventMaximMove2"*/;
   sub_B16F98((BattleServantConfConponent_o *)(p_eventReceiver + 1), v31, v32, v33, v34, v35, v36, v37);
 }
 
@@ -544,17 +544,17 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventMaximMove2(
   if ( (byte_40F8757 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10657, v3);
-    sub_B16FFC(&StringLiteral_6159, v4);
+    sub_B16FFC(&StringLiteral_10657/*"PlayScriptButton"*/, v3);
+    sub_B16FFC(&StringLiteral_6159/*"EventMoveEnd"*/, v4);
     byte_40F8757 = 1;
   }
   targetFrameRate = UnityEngine_Application__get_targetFrameRate(0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6159,
+    (System_String_o *)StringLiteral_6159/*"EventMoveEnd"*/,
     1.0 / (float)targetFrameRate,
     0LL);
-  v6 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_10657, 0LL);
+  v6 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_10657/*"PlayScriptButton"*/, 0LL);
   p_playScriptButton = &this->fields.playScriptButton;
   this->fields.playScriptButton = v6;
   sub_B16F98(
@@ -605,7 +605,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventMaximStart(
   if ( (byte_40F8755 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_ServantStatusCharaGraphListViewObject___, method);
-    sub_B16FFC(&StringLiteral_6155, v6);
+    sub_B16FFC(&StringLiteral_6155/*"EventMaximMove"*/, v6);
     byte_40F8755 = 1;
   }
   this->fields.isBusy = 1;
@@ -638,7 +638,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventMaximStart(
   ServantStatusCharaGraphListViewObject__Init(v16, 2, 0LL, 0.0, *(UnityEngine_Vector3_o *)&zero.fields.y, v17);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6155,
+    (System_String_o *)StringLiteral_6155/*"EventMaximMove"*/,
     delay,
     0LL);
 }
@@ -768,7 +768,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventUsuallyMove(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&ServantStatusCharaGraphListViewManager_TypeInfo, v4);
     sub_B16FFC(&ServantStatusCharaGraphListViewObject_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_6194, v6);
+    sub_B16FFC(&StringLiteral_6194/*"EventUsuallyMove2"*/, v6);
     byte_40F875C = 1;
   }
   manager = this->fields.manager;
@@ -882,8 +882,8 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventUsuallyMove(
   v36->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   p_eventReceiver = &v36->fields.eventReceiver;
   sub_B16F98((BattleServantConfConponent_o *)p_eventReceiver, gameObject, v38, v39, v40, v41, v42, v43);
-  v45 = (System_Int32_array **)StringLiteral_6194;
-  p_eventReceiver[1] = (struct UnityEngine_GameObject_o *)StringLiteral_6194;
+  v45 = (System_Int32_array **)StringLiteral_6194/*"EventUsuallyMove2"*/;
+  p_eventReceiver[1] = (struct UnityEngine_GameObject_o *)StringLiteral_6194/*"EventUsuallyMove2"*/;
   sub_B16F98((BattleServantConfConponent_o *)(p_eventReceiver + 1), v45, v46, v47, v48, v49, v50, v51);
   playScriptButton = this->fields.playScriptButton;
   p_playScriptButton = &this->fields.playScriptButton;
@@ -962,7 +962,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventUsuallyStart(
 
   if ( (byte_40F875B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6193, method);
+    sub_B16FFC(&StringLiteral_6193/*"EventUsuallyMove"*/, method);
     byte_40F875B = 1;
   }
   this->fields.isBusy = 1;
@@ -971,7 +971,7 @@ void __fastcall ServantStatusCharaGraphListViewObject__EventUsuallyStart(
   ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6193,
+    (System_String_o *)StringLiteral_6193/*"EventUsuallyMove"*/,
     delay,
     0LL);
 }
@@ -1729,7 +1729,7 @@ System_String_o *__fastcall ServantStatusCharaGraphListViewObject__ToString(
   if ( (byte_40F875F & 1) == 0 )
   {
     sub_B16FFC(&ServantStatusCharaGraphListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40F875F = 1;
   }
   v13 = 0.0;
@@ -1748,7 +1748,7 @@ System_String_o *__fastcall ServantStatusCharaGraphListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

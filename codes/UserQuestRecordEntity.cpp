@@ -32,22 +32,22 @@ void __fastcall UserQuestRecordEntity___cctor(const MethodInfo *method)
   if ( (byte_40F80F6 & 1) == 0 )
   {
     sub_B16FFC(&UserQuestRecordEntity_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_22726, v8);
-    sub_B16FFC(&StringLiteral_20062, v9);
-    sub_B16FFC(&StringLiteral_22637, v10);
+    sub_B16FFC(&StringLiteral_22726/*"turnMaxDamage"*/, v8);
+    sub_B16FFC(&StringLiteral_20062/*"knockdownNum"*/, v9);
+    sub_B16FFC(&StringLiteral_22637/*"totalDamageToAliveEnemy"*/, v10);
     byte_40F80F6 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)UserQuestRecordEntity_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_22726;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22726;
+  v12 = (System_Int32_array **)StringLiteral_22726/*"turnMaxDamage"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22726/*"turnMaxDamage"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = UserQuestRecordEntity_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_20062;
-  v13->KEY_RECORD_KNOCKDOWN_NUM = (struct System_String_o *)StringLiteral_20062;
+  v14 = (System_Int32_array **)StringLiteral_20062/*"knockdownNum"*/;
+  v13->KEY_RECORD_KNOCKDOWN_NUM = (struct System_String_o *)StringLiteral_20062/*"knockdownNum"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->KEY_RECORD_KNOCKDOWN_NUM, v14, v15, v16, v17, v18, v19, v20);
   v21 = UserQuestRecordEntity_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_22637;
-  v21->KEY_RECORD_TOTAL_DAMAGE_TO_ALIVE_ENEMY = (struct System_String_o *)StringLiteral_22637;
+  v22 = (System_Int32_array **)StringLiteral_22637/*"totalDamageToAliveEnemy"*/;
+  v21->KEY_RECORD_TOTAL_DAMAGE_TO_ALIVE_ENEMY = (struct System_String_o *)StringLiteral_22637/*"totalDamageToAliveEnemy"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v21->KEY_RECORD_TOTAL_DAMAGE_TO_ALIVE_ENEMY,
     v22,

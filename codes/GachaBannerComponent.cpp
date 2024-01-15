@@ -18,7 +18,7 @@ void __fastcall GachaBannerComponent__OnClickDetail(GachaBannerComponent_o *this
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&SoundManager_TypeInfo, v3);
     sub_B16FFC(&WebViewManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_15307, v5);
+    sub_B16FFC(&StringLiteral_15307/*"WEB_VIEW_TITLE_SUMMON"*/, v5);
     byte_40FB350 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -33,7 +33,7 @@ void __fastcall GachaBannerComponent__OnClickDetail(GachaBannerComponent_o *this
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_15307, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_15307/*"WEB_VIEW_TITLE_SUMMON"*/, 0LL);
   if ( (BYTE3(WebViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !WebViewManager_TypeInfo->_2.cctor_finished )
   {
@@ -76,8 +76,8 @@ void __fastcall GachaBannerComponent__UpdateDisplay(GachaBannerComponent_o *this
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
     sub_B16FFC(&NetworkManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_6810, v6);
-    sub_B16FFC(&StringLiteral_6811, v7);
+    sub_B16FFC(&StringLiteral_6810/*"GACHA_PC_MESSAGE"*/, v6);
+    sub_B16FFC(&StringLiteral_6811/*"GACHA_PC_MESSAGE_END"*/, v7);
     byte_40FB34E = 1;
   }
   entity = 0LL;
@@ -124,7 +124,7 @@ LABEL_32:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_6810, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_6810/*"GACHA_PC_MESSAGE"*/, 0LL);
     v18 = this->fields.info;
     if ( v18 )
     {
@@ -147,7 +147,7 @@ LABEL_29:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_6811, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_6811/*"GACHA_PC_MESSAGE_END"*/, 0LL);
 LABEL_27:
   v24 = v16;
   pickupMessage = this->fields.pickupMessage;

@@ -38,16 +38,16 @@ void __fastcall FollowerListRequest__beginRequest(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, isEnfoceRefresh);
     sub_B16FFC(&FollowerListRequest_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_21647, v10);
-    sub_B16FFC(&StringLiteral_21522, v11);
-    sub_B16FFC(&StringLiteral_21520, v12);
+    sub_B16FFC(&StringLiteral_21647/*"refresh"*/, v10);
+    sub_B16FFC(&StringLiteral_21522/*"questPhase"*/, v11);
+    sub_B16FFC(&StringLiteral_21520/*"questId"*/, v12);
     byte_40F8ED4 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21520, questId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21522, questPhase, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21520/*"questId"*/, questId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21522/*"questPhase"*/, questPhase, 0LL);
   if ( !this )
     sub_B170D4();
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21647, isEnfoceRefresh, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21647/*"refresh"*/, isEnfoceRefresh, 0LL);
   if ( !isEnfoceRefresh )
     goto LABEL_13;
   v13 = BalanceConfig_TypeInfo;
@@ -196,10 +196,10 @@ System_String_o *__fastcall FollowerListRequest__getMockData(FollowerListRequest
 {
   if ( (byte_40F8ED2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F8ED2 = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -262,7 +262,7 @@ System_String_o *__fastcall FollowerListRequest__getURL(FollowerListRequest_o *t
   if ( (byte_40F8ED1 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18713, v2);
+    sub_B16FFC(&StringLiteral_18713/*"follower/list"*/, v2);
     byte_40F8ED1 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -271,7 +271,7 @@ System_String_o *__fastcall FollowerListRequest__getURL(FollowerListRequest_o *t
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18713, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18713/*"follower/list"*/, 0LL);
 }
 
 

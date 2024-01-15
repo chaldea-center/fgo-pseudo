@@ -14,12 +14,12 @@ void __fastcall SpecialAscensionControl___cctor(const MethodInfo *method)
   if ( (byte_40F9D8B & 1) == 0 )
   {
     sub_B16FFC(&SpecialAscensionControl_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_3181, v8);
+    sub_B16FFC(&StringLiteral_3181/*"COMBINE_LIMIT_SPECIAL_PRIVILEGE_ID"*/, v8);
     byte_40F9D8B = 1;
   }
   static_fields = (BattleServantConfConponent_o *)SpecialAscensionControl_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_3181;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_3181;
+  v10 = (System_Int32_array **)StringLiteral_3181/*"COMBINE_LIMIT_SPECIAL_PRIVILEGE_ID"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_3181/*"COMBINE_LIMIT_SPECIAL_PRIVILEGE_ID"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   SpecialAscensionControl_TypeInfo->static_fields->SPEND_QP_VAL = 0;
 }
@@ -1317,10 +1317,10 @@ void __fastcall SpecialAscensionControl__SetStateInfoMsg(SpecialAscensionControl
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_5746, v4);
-    sub_B16FFC(&StringLiteral_7256, v5);
-    sub_B16FFC(&StringLiteral_8806, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/, v4);
+    sub_B16FFC(&StringLiteral_7256/*"INFO_MSG_SPECIAL_ASCENSION"*/, v5);
+    sub_B16FFC(&StringLiteral_8806/*"MSG_LIMITUP_MAX"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F9D82 = 1;
   }
   detailInfoLb = (UnityEngine_Component_o *)this->fields.detailInfoLb;
@@ -1351,7 +1351,7 @@ void __fastcall SpecialAscensionControl__SetStateInfoMsg(SpecialAscensionControl
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v15 = &StringLiteral_8806;
+      v15 = &StringLiteral_8806/*"MSG_LIMITUP_MAX"*/;
     }
     else
     {
@@ -1360,7 +1360,7 @@ void __fastcall SpecialAscensionControl__SetStateInfoMsg(SpecialAscensionControl
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v15 = &StringLiteral_5746;
+      v15 = &StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/;
     }
   }
   else
@@ -1370,7 +1370,7 @@ void __fastcall SpecialAscensionControl__SetStateInfoMsg(SpecialAscensionControl
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = &StringLiteral_7256;
+    v15 = &StringLiteral_7256/*"INFO_MSG_SPECIAL_ASCENSION"*/;
   }
   v16 = LocalizationManager__Get((System_String_o *)*v15, 0LL);
   if ( !this->fields.detailInfoLb )
@@ -1409,8 +1409,8 @@ void __fastcall SpecialAscensionControl__SetUp(SpecialAscensionControl_o *this, 
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&SpecialAscensionControl_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_8811, v4);
-    sub_B16FFC(&StringLiteral_9236, v5);
+    sub_B16FFC(&StringLiteral_8811/*"MSG_PRESELECT_BASE_SPECIAL_ASCENSION"*/, v4);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v5);
     byte_40F9D80 = 1;
   }
   SPEND_QP_VAL = 0;
@@ -1461,7 +1461,7 @@ void __fastcall SpecialAscensionControl__SetUp(SpecialAscensionControl_o *this, 
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
     goto LABEL_20;
-  v22 = System_Int32__ToString_38275808((int)SelfUserGame + 96, (System_String_o *)StringLiteral_9236, 0LL);
+  v22 = System_Int32__ToString_38275808((int)SelfUserGame + 96, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !haveQpLb )
     goto LABEL_20;
   UILabel__set_text(haveQpLb, v22, 0LL);
@@ -1472,7 +1472,7 @@ void __fastcall SpecialAscensionControl__SetUp(SpecialAscensionControl_o *this, 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_8811, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_8811/*"MSG_PRESELECT_BASE_SPECIAL_ASCENSION"*/, 0LL);
   if ( !preSelectBaseLb )
 LABEL_20:
     sub_B170D4();

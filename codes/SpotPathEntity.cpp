@@ -23,10 +23,10 @@ int32_t __fastcall SpotPathEntity__GetMapGimmickEffectId(SpotPathEntity_o *this,
 
   if ( (byte_40FADD3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20288, method);
+    sub_B16FFC(&StringLiteral_20288/*"mapGimmickEffectId"*/, method);
     byte_40FADD3 = 1;
   }
-  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20288, 0, v2);
+  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20288/*"mapGimmickEffectId"*/, 0, v2);
 }
 
 
@@ -36,10 +36,10 @@ int32_t __fastcall SpotPathEntity__GetMapGimmickId(SpotPathEntity_o *this, const
 
   if ( (byte_40FADD2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20289, method);
+    sub_B16FFC(&StringLiteral_20289/*"mapGimmickId"*/, method);
     byte_40FADD2 = 1;
   }
-  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20289, 0, v2);
+  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20289/*"mapGimmickId"*/, 0, v2);
 }
 
 
@@ -55,10 +55,10 @@ bool __fastcall SpotPathEntity__IsStopRaidDeadTime(SpotPathEntity_o *this, const
 
   if ( (byte_40FADD1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22239, method);
+    sub_B16FFC(&StringLiteral_22239/*"stopRaidDeadTime"*/, method);
     byte_40FADD1 = 1;
   }
-  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22239, 0, v2) != 0;
+  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22239/*"stopRaidDeadTime"*/, 0, v2) != 0;
 }
 
 

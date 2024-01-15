@@ -223,7 +223,7 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__OnClickSelect(
 
   if ( (byte_40FB130 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9938, method);
+    sub_B16FFC(&StringLiteral_9938/*"OnClickSelectListView"*/, method);
     byte_40FB130 = 1;
   }
   if ( this->fields.linkItem )
@@ -235,7 +235,7 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__OnClickSelect(
     {
       sub_B170D4();
     }
-    UnityEngine_Component__SendMessage(v4, (System_String_o *)StringLiteral_9938, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(v4, (System_String_o *)StringLiteral_9938/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -290,7 +290,7 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__OnLongPush(
 
   if ( (byte_40FB131 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9991, method);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, method);
     byte_40FB131 = 1;
   }
   if ( this->fields.linkItem )
@@ -298,7 +298,7 @@ void __fastcall BonusSelectSummonPartyServantListViewObject__OnLongPush(
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9991, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 

@@ -74,9 +74,9 @@ void __fastcall ServantStatusListViewItemDrawEquipMain__SetItem(
     sub_B16FFC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_20282, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
-    sub_B16FFC(&StringLiteral_6823, v13);
+    sub_B16FFC(&StringLiteral_20282/*"maleImageId"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
+    sub_B16FFC(&StringLiteral_6823/*"GENDER_TYPE_IMAGE_EXPLANATION"*/, v13);
     byte_40FDE99 = 1;
   }
   *(_QWORD *)exp = 0LL;
@@ -213,7 +213,7 @@ void __fastcall ServantStatusListViewItemDrawEquipMain__SetItem(
                   klass = this[1].klass;
                   if ( klass )
                   {
-                    UILabel__set_text((UILabel_o *)klass, (System_String_o *)StringLiteral_1, 0LL);
+                    UILabel__set_text((UILabel_o *)klass, (System_String_o *)StringLiteral_1/*""*/, 0LL);
                     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                       && !DataManager_TypeInfo->_2.cctor_finished )
                     {
@@ -233,7 +233,7 @@ void __fastcall ServantStatusListViewItemDrawEquipMain__SetItem(
                       {
                         if ( !EntityScriptUtil__ScriptHasKey(
                                 *(System_Collections_Generic_Dictionary_string__object__o **)&entity[1].fields.flag,
-                                (System_String_o *)StringLiteral_20282,
+                                (System_String_o *)StringLiteral_20282/*"maleImageId"*/,
                                 0LL) )
                           return;
                         v48 = this[1].klass;
@@ -242,7 +242,7 @@ void __fastcall ServantStatusListViewItemDrawEquipMain__SetItem(
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_6823, 0LL);
+                        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_6823/*"GENDER_TYPE_IMAGE_EXPLANATION"*/, 0LL);
                         if ( v48 )
                         {
                           UILabel__set_text((UILabel_o *)v48, v49, 0LL);

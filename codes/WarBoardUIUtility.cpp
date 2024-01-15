@@ -81,8 +81,8 @@ void __fastcall WarBoardUIUtility__ShowRuleDialog(System_Action_o *callbackFunc,
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v10);
     sub_B16FFC(&Method_WarBoardUIUtility_ShowRuleDialog__, v11);
     sub_B16FFC(&WebViewManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_23562, v13);
-    sub_B16FFC(&StringLiteral_15309, v14);
+    sub_B16FFC(&StringLiteral_23562/*"{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}"*/, v13);
+    sub_B16FFC(&StringLiteral_15309/*"WEB_VIEW_TITLE_WARBOARD_RULE"*/, v14);
     byte_40FA909 = 1;
   }
   v15 = Method_WarBoardUIUtility_ShowRuleDialog__;
@@ -221,13 +221,13 @@ void __fastcall WarBoardUIUtility__ShowRuleDialog(System_Action_o *callbackFunc,
                       {
                         v28->m_Items[4] = (Il2CppObject *)v65;
                         sub_B16F98((BattleServantConfConponent_o *)&v28->m_Items[4], v65, v31, v60, v61, v62, v63, v64);
-                        v66 = System_String__Format_43822456((System_String_o *)StringLiteral_23562, v28, 0LL);
+                        v66 = System_String__Format_43822456((System_String_o *)StringLiteral_23562/*"{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}"*/, v28, 0LL);
                         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                           && !LocalizationManager_TypeInfo->_2.cctor_finished )
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_15309, 0LL);
+                        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_15309/*"WEB_VIEW_TITLE_WARBOARD_RULE"*/, 0LL);
                         if ( (BYTE3(WebViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                           && !WebViewManager_TypeInfo->_2.cctor_finished )
                         {

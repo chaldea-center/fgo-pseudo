@@ -385,8 +385,8 @@ void __fastcall QuestAfterAction__CreateCommandBuf(
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v29);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v30);
     sub_B16FFC(&QuestAfterAction_VoiceInfo_TypeInfo, v31);
-    sub_B16FFC(&StringLiteral_16222, v32);
-    this = (QuestAfterAction_o *)sub_B16FFC(&StringLiteral_698, v33);
+    sub_B16FFC(&StringLiteral_16222/*"afterActionBk"*/, v32);
+    this = (QuestAfterAction_o *)sub_B16FFC(&StringLiteral_698/*","*/, v33);
     byte_40FA0B7 = 1;
   }
   v195 = 0LL;
@@ -647,9 +647,9 @@ LABEL_96:
     v68 = TerminalPramsManager_TypeInfo;
   }
   if ( !v68->static_fields->_IsPhaseClear_k__BackingField
-    && UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_16222, 0LL) )
+    && UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_16222/*"afterActionBk"*/, 0LL) )
   {
-    String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_16222, 0LL);
+    String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_16222/*"afterActionBk"*/, 0LL);
     MapGimmickId = sub_B17014(char___TypeInfo, 1LL, v70);
     if ( !MapGimmickId )
       goto LABEL_344;
@@ -1063,7 +1063,7 @@ LABEL_261:
     || (v112 = *(_QWORD *)&afterActionVals->max_length, (int)v112 < 2)
     || (v112 & 1) != 0 )
   {
-    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_16222, 0LL);
+    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_16222/*"afterActionBk"*/, 0LL);
     return;
   }
   v113 = (System_Int32_array **)sub_B17014(QuestAfterAction_Command___TypeInfo, (unsigned int)v112 >> 1, v111);
@@ -1178,7 +1178,7 @@ LABEL_298:
     }
     if ( !*v135 )
       goto LABEL_344;
-    v153 = System_String__Contains(*v135, (System_String_o *)StringLiteral_698, 0LL);
+    v153 = System_String__Contains(*v135, (System_String_o *)StringLiteral_698/*","*/, 0LL);
     commandTypeIds = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)v4->fields.commandTypeIds;
     if ( !commandTypeIds )
       goto LABEL_344;
@@ -1545,10 +1545,10 @@ void __fastcall QuestAfterAction__DeleteContinueData(const MethodInfo *method)
 
   if ( (byte_40FA0B5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16222, v1);
+    sub_B16FFC(&StringLiteral_16222/*"afterActionBk"*/, v1);
     byte_40FA0B5 = 1;
   }
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_16222, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_16222/*"afterActionBk"*/, 0LL);
 }
 
 
@@ -3304,7 +3304,7 @@ System_String_o *__fastcall QuestAfterAction__MapObjName(
   if ( (byte_40FA0CB & 1) == 0 )
   {
     sub_B16FFC(&SrcSpotBasePrefab_TypeInfo, *(_QWORD *)&comType);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FA0CB = 1;
   }
   if ( comType )
@@ -3319,7 +3319,7 @@ System_String_o *__fastcall QuestAfterAction__MapObjName(
     }
     else
     {
-      return (System_String_o *)StringLiteral_1;
+      return (System_String_o *)StringLiteral_1/*""*/;
     }
   }
   else
@@ -4231,7 +4231,7 @@ System_String_o *__fastcall QuestAfterAction_Command__GetAvailableRandomVoice(
     sub_B16FFC(&ServantVoiceEntity_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_15842, v15);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v15);
     byte_40FA2E0 = 1;
   }
   result = 0;
@@ -4310,7 +4310,7 @@ System_String_o *__fastcall QuestAfterAction_Command__GetAvailableRandomVoice(
                 goto LABEL_57;
               v51 = System_String__Concat_43746016(
                       v43->m_Items[1],
-                      (System_String_o *)StringLiteral_15842,
+                      (System_String_o *)StringLiteral_15842/*"_"*/,
                       v43->m_Items[2],
                       0LL);
               if ( !MasterData_WarQuestSelectionMaster )
@@ -4409,7 +4409,7 @@ LABEL_57:
     if ( v55->max_length >= 3 )
       return System_String__Concat_43746016(
                v55->m_Items[1],
-               (System_String_o *)StringLiteral_15842,
+               (System_String_o *)StringLiteral_15842/*"_"*/,
                v55->m_Items[2],
                0LL);
     goto LABEL_57;
@@ -4540,7 +4540,7 @@ System_String_o *__fastcall QuestAfterAction_Command__GetVoiceId(
   if ( (byte_40FA2E2 & 1) == 0 )
   {
     sub_B16FFC(&char___TypeInfo, str);
-    sub_B16FFC(&StringLiteral_15842, v5);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v5);
     byte_40FA2E2 = 1;
   }
   if ( this->fields.id == 800 )
@@ -4561,7 +4561,7 @@ LABEL_13:
     if ( max_length == 2 )
       return v3;
     if ( max_length == 3 )
-      return System_String__Concat_43746016(v8->m_Items[1], (System_String_o *)StringLiteral_15842, v8->m_Items[2], 0LL);
+      return System_String__Concat_43746016(v8->m_Items[1], (System_String_o *)StringLiteral_15842/*"_"*/, v8->m_Items[2], 0LL);
   }
   return 0LL;
 }
@@ -6056,14 +6056,14 @@ void __fastcall QuestAfterAction_StateMain__UpdateAnim(
     sub_B16FFC(&Method_QuestAfterAction_StateMain___c__DisplayClass16_9__UpdateAnim_b__8__, v92);
     sub_B16FFC(&QuestAfterAction_StateMain___c__DisplayClass16_9_TypeInfo, v93);
     sub_B16FFC(&QuestAfterAction_StateMain___c_TypeInfo, v94);
-    sub_B16FFC(&StringLiteral_68, v95);
-    sub_B16FFC(&StringLiteral_1154, v96);
-    sub_B16FFC(&StringLiteral_10851, v97);
-    sub_B16FFC(&StringLiteral_1155, v98);
-    sub_B16FFC(&StringLiteral_1093, v99);
-    sub_B16FFC(&StringLiteral_2915, v100);
-    sub_B16FFC(&StringLiteral_1, v101);
-    sub_B16FFC(&StringLiteral_18982, v102);
+    sub_B16FFC(&StringLiteral_68/*"\r\n"*/, v95);
+    sub_B16FFC(&StringLiteral_1154/*"30101"*/, v96);
+    sub_B16FFC(&StringLiteral_10851/*"QUEST_AFTER_ACTION_MESSAGE_"*/, v97);
+    sub_B16FFC(&StringLiteral_1155/*"30102"*/, v98);
+    sub_B16FFC(&StringLiteral_1093/*"10703"*/, v99);
+    sub_B16FFC(&StringLiteral_2915/*"CAPTER WAIT"*/, v100);
+    sub_B16FFC(&StringLiteral_1/*""*/, v101);
+    sub_B16FFC(&StringLiteral_18982/*"gevINFOBAR_BACK"*/, v102);
     byte_40FA2E6 = 1;
   }
   *(_QWORD *)&color.fields.b = 0LL;
@@ -6190,7 +6190,7 @@ LABEL_1018:
               {
                 v299 = MyFsmP;
                 ActiveStateName = PlayMakerFSM__get_ActiveStateName(MyFsmP, 0LL);
-                if ( !System_String__op_Equality(ActiveStateName, (System_String_o *)StringLiteral_2915, 0LL) )
+                if ( !System_String__op_Equality(ActiveStateName, (System_String_o *)StringLiteral_2915/*"CAPTER WAIT"*/, 0LL) )
                   goto LABEL_443;
                 if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                   && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -6275,7 +6275,7 @@ LABEL_1018:
                       if ( v322 )
                       {
                         TerminalSceneComponent__CallQuestInformationClose(v322, 0LL);
-                        PlayMakerFSM__SendEvent(v299, (System_String_o *)StringLiteral_18982, 0LL);
+                        PlayMakerFSM__SendEvent(v299, (System_String_o *)StringLiteral_18982/*"gevINFOBAR_BACK"*/, 0LL);
                         goto LABEL_443;
                       }
                     }
@@ -8313,12 +8313,12 @@ LABEL_944:
           {
             if ( System_String__op_Equality(
                    *(System_String_o **)(v159 + 32),
-                   (System_String_o *)StringLiteral_1093,
+                   (System_String_o *)StringLiteral_1093/*"10703"*/,
                    0LL) )
             {
               y = y + -50.0;
             }
-            else if ( System_String__op_Equality(v808, (System_String_o *)StringLiteral_1154, 0LL) )
+            else if ( System_String__op_Equality(v808, (System_String_o *)StringLiteral_1154/*"30101"*/, 0LL) )
             {
               y = y + -50.0;
             }
@@ -8471,12 +8471,12 @@ LABEL_944:
           {
             if ( System_String__op_Equality(
                    *(System_String_o **)(v359 + 32),
-                   (System_String_o *)StringLiteral_1093,
+                   (System_String_o *)StringLiteral_1093/*"10703"*/,
                    0LL) )
             {
               v961 = v961 + -95.0;
             }
-            else if ( System_String__op_Equality(v965, (System_String_o *)StringLiteral_1155, 0LL) )
+            else if ( System_String__op_Equality(v965, (System_String_o *)StringLiteral_1155/*"30102"*/, 0LL) )
             {
               v961 = v961 + 45.0;
             }
@@ -9037,8 +9037,8 @@ LABEL_1017:
       switch ( id )
       {
         case 600:
-          v148 = (System_String_o *)StringLiteral_1;
-          v149 = System_String__Concat_43743732((System_String_o *)StringLiteral_10851, v122->fields.param, 0LL);
+          v148 = (System_String_o *)StringLiteral_1/*""*/;
+          v149 = System_String__Concat_43743732((System_String_o *)StringLiteral_10851/*"QUEST_AFTER_ACTION_MESSAGE_"*/, v122->fields.param, 0LL);
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
           {
@@ -9057,23 +9057,23 @@ LABEL_1017:
           CommonUI__OpenNotificationDialog(Instance, v148, v150, v156, 210, 0, 0, 0, 1, 0, 0, 0, 0LL, 0LL);
           return;
         case 601:
-          v410 = (System_String_o *)StringLiteral_1;
+          v410 = (System_String_o *)StringLiteral_1/*""*/;
           v411 = sub_B17014(string___TypeInfo, 1LL, v131);
           if ( !v411 )
             goto LABEL_1019;
           v417 = (System_String_array *)v411;
-          ComponentInChildren_Dropdown_DropdownItem = (void *)StringLiteral_68;
-          if ( StringLiteral_68 )
+          ComponentInChildren_Dropdown_DropdownItem = (void *)StringLiteral_68/*"\r\n"*/;
+          if ( StringLiteral_68/*"\r\n"*/ )
           {
             ComponentInChildren_Dropdown_DropdownItem = (void *)sub_B170BC(
-                                                                  StringLiteral_68,
+                                                                  StringLiteral_68/*"\r\n"*/,
                                                                   v417->obj.klass->_1.element_class);
             if ( !ComponentInChildren_Dropdown_DropdownItem )
             {
               sub_B170F4(0LL);
               sub_B170A0();
             }
-            v174 = (System_Int32_array **)StringLiteral_68;
+            v174 = (System_Int32_array **)StringLiteral_68/*"\r\n"*/;
           }
           else
           {
@@ -9114,8 +9114,8 @@ LABEL_1017:
           CommonUI__OpenNotificationDialog(v840, v831, v832, v845, 210, 0, 0, 0, 1, 0, 1, 0, 0LL, 0LL);
           return;
         case 602:
-          v393 = (System_String_o *)StringLiteral_1;
-          v394 = System_String__Concat_43743732((System_String_o *)StringLiteral_10851, v122->fields.param, 0LL);
+          v393 = (System_String_o *)StringLiteral_1/*""*/;
+          v394 = System_String__Concat_43743732((System_String_o *)StringLiteral_10851/*"QUEST_AFTER_ACTION_MESSAGE_"*/, v122->fields.param, 0LL);
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
           {
@@ -9149,21 +9149,21 @@ LABEL_1017:
             0LL);
           return;
         case 603:
-          v402 = (System_String_o *)StringLiteral_1;
+          v402 = (System_String_o *)StringLiteral_1/*""*/;
           v403 = sub_B17014(string___TypeInfo, 1LL, v131);
           if ( !v403 )
             goto LABEL_1020;
           v409 = (System_String_array *)v403;
-          v181 = (System_String_array *)StringLiteral_68;
-          if ( StringLiteral_68 )
+          v181 = (System_String_array *)StringLiteral_68/*"\r\n"*/;
+          if ( StringLiteral_68/*"\r\n"*/ )
           {
-            v181 = (System_String_array *)sub_B170BC(StringLiteral_68, v409->obj.klass->_1.element_class);
+            v181 = (System_String_array *)sub_B170BC(StringLiteral_68/*"\r\n"*/, v409->obj.klass->_1.element_class);
             if ( !v181 )
             {
               sub_B170F4(0LL);
               sub_B170A0();
             }
-            v183 = (System_Int32_array **)StringLiteral_68;
+            v183 = (System_Int32_array **)StringLiteral_68/*"\r\n"*/;
           }
           else
           {
@@ -9219,8 +9219,8 @@ LABEL_1017:
             0LL);
           return;
         case 604:
-          v384 = (System_String_o *)StringLiteral_1;
-          v385 = System_String__Concat_43743732((System_String_o *)StringLiteral_10851, v122->fields.param, 0LL);
+          v384 = (System_String_o *)StringLiteral_1/*""*/;
+          v385 = System_String__Concat_43743732((System_String_o *)StringLiteral_10851/*"QUEST_AFTER_ACTION_MESSAGE_"*/, v122->fields.param, 0LL);
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
           {
@@ -9684,7 +9684,7 @@ LABEL_443:
         else
           v330 = 0;
         v434 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v325, v326, v327, v328);
-        SceneJumpInfo___ctor_29748100(v434, (System_String_o *)StringLiteral_1, v329, v330, 0LL);
+        SceneJumpInfo___ctor_29748100(v434, (System_String_o *)StringLiteral_1/*""*/, v329, v330, 0LL);
         v435 = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
         if ( !v435 )
           goto LABEL_1020;
@@ -9921,11 +9921,11 @@ void __fastcall QuestAfterAction_StateMain__onEnd(
   if ( (byte_40FA2E7 & 1) == 0 )
   {
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, deleteKey);
-    sub_B16FFC(&StringLiteral_16222, v5);
+    sub_B16FFC(&StringLiteral_16222/*"afterActionBk"*/, v5);
     byte_40FA2E7 = 1;
   }
   if ( deleteKey )
-    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_16222, 0LL);
+    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_16222/*"afterActionBk"*/, 0LL);
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
@@ -10320,22 +10320,22 @@ void __fastcall QuestAfterAction_StateMain___c___UpdateAnim_b__16_35(
     sub_B16FFC(&ScriptManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_16222, v8);
-    sub_B16FFC(&StringLiteral_15571, v9);
-    sub_B16FFC(&StringLiteral_15807, v10);
+    sub_B16FFC(&StringLiteral_16222/*"afterActionBk"*/, v8);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v9);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v10);
     byte_40F7903 = 1;
   }
   v11 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           jsonstr,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v12 = (BattleResultComponent_resultData_array *)JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(
                                                     v11,
                                                     (const MethodInfo_19D67B8 *)Method_JsonManager_DeserializeArray_BattleResultComponent_resultData___);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_16222, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_16222/*"afterActionBk"*/, 0LL);
   if ( (BYTE3(ScriptManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ScriptManager_TypeInfo->_2.cctor_finished )
   {

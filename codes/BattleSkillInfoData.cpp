@@ -871,7 +871,7 @@ System_String_o *__fastcall BattleSkillInfoData__ToString(BattleSkillInfoData_o 
     sub_B16FFC(&int_TypeInfo, v4);
     sub_B16FFC(&object___TypeInfo, v5);
     sub_B16FFC(&BattleSkillInfoData_TYPE_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_15653, v7);
+    sub_B16FFC(&StringLiteral_15653/*"[BattleSkillInfoData]type:{0},index:{1},svtUniqueId:{2},isPassive:{3},isCharge:{4},skillId:{5},skilllv:{6},chargeTurn:{7},priority:{8}isUseSkill:{9},strengthStatus:{10},itemImageId:{11},changeTDCommandType:{12}"*/, v7);
     byte_40FCD55 = 1;
   }
   v8 = (System_Object_array *)sub_B17014(object___TypeInfo, 13LL, v2);
@@ -1056,7 +1056,7 @@ LABEL_44:
   }
   v8->m_Items[12] = (Il2CppObject *)v89;
   sub_B16F98((BattleServantConfConponent_o *)&v8->m_Items[12], v89, v11, v84, v85, v86, v87, v88);
-  return System_String__Format_43822456((System_String_o *)StringLiteral_15653, v8, 0LL);
+  return System_String__Format_43822456((System_String_o *)StringLiteral_15653/*"[BattleSkillInfoData]type:{0},index:{1},svtUniqueId:{2},isPassive:{3},isCharge:{4},skillId:{5},skilllv:{6},chargeTurn:{7},priority:{8}isUseSkill:{9},strengthStatus:{10},itemImageId:{11},changeTDCommandType:{12}"*/, v8, 0LL);
 }
 
 

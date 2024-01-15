@@ -32,24 +32,24 @@ void __fastcall TitleInfoEventItemComponent___cctor(const MethodInfo *method)
   if ( (byte_40FDFBC & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventItemComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19553, v8);
-    sub_B16FFC(&StringLiteral_19552, v9);
-    sub_B16FFC(&StringLiteral_18456, v10);
+    sub_B16FFC(&StringLiteral_19553/*"img_shopbg06"*/, v8);
+    sub_B16FFC(&StringLiteral_19552/*"img_shopbg05"*/, v9);
+    sub_B16FFC(&StringLiteral_18456/*"event_item_title_"*/, v10);
     byte_40FDFBC = 1;
   }
   TitleInfoEventItemComponent_TypeInfo->static_fields->EVENT_ITEM_SCALE_DEFAULT = 0.75;
   TitleInfoEventItemComponent_TypeInfo->static_fields->EVENT_ITEM_SCALE_VS = 1.0;
   static_fields = TitleInfoEventItemComponent_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_18456;
-  static_fields->TITLE_SP_ITEM_NAME_PREFIX = (struct System_String_o *)StringLiteral_18456;
+  v12 = (System_Int32_array **)StringLiteral_18456/*"event_item_title_"*/;
+  static_fields->TITLE_SP_ITEM_NAME_PREFIX = (struct System_String_o *)StringLiteral_18456/*"event_item_title_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->TITLE_SP_ITEM_NAME_PREFIX, v12, v2, v3, v4, v5, v6, v7);
   v13 = TitleInfoEventItemComponent_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_19552;
-  v13->EVENT_ITEM_VS_BASE_SP_NAME = (struct System_String_o *)StringLiteral_19552;
+  v14 = (System_Int32_array **)StringLiteral_19552/*"img_shopbg05"*/;
+  v13->EVENT_ITEM_VS_BASE_SP_NAME = (struct System_String_o *)StringLiteral_19552/*"img_shopbg05"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->EVENT_ITEM_VS_BASE_SP_NAME, v14, v15, v16, v17, v18, v19, v20);
   v21 = TitleInfoEventItemComponent_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_19553;
-  v21->EVENT_GPOINT_VS_BASE_SP_NAME = (struct System_String_o *)StringLiteral_19553;
+  v22 = (System_Int32_array **)StringLiteral_19553/*"img_shopbg06"*/;
+  v21->EVENT_GPOINT_VS_BASE_SP_NAME = (struct System_String_o *)StringLiteral_19553/*"img_shopbg06"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->EVENT_GPOINT_VS_BASE_SP_NAME, v22, v23, v24, v25, v26, v27, v28);
 }
 

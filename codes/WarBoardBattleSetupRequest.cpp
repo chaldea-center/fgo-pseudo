@@ -125,16 +125,16 @@ void __fastcall WarBoardBattleSetupRequest__beginRequest(
     sub_B16FFC(&Method_WarBoardBattleSetupRequest___c__beginRequest_b__6_0__, v18);
     sub_B16FFC(&Method_WarBoardBattleSetupRequest___c__beginRequest_b__6_1__, v19);
     sub_B16FFC(&WarBoardBattleSetupRequest___c_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_22171, v21);
-    sub_B16FFC(&StringLiteral_17878, v22);
-    sub_B16FFC(&StringLiteral_16619, v23);
-    sub_B16FFC(&StringLiteral_16447, v24);
-    sub_B16FFC(&StringLiteral_16221, v25);
-    sub_B16FFC(&StringLiteral_698, v26);
-    sub_B16FFC(&StringLiteral_15764, v27);
+    sub_B16FFC(&StringLiteral_22171/*"stageId"*/, v21);
+    sub_B16FFC(&StringLiteral_17878/*"defenseUserSvtIds"*/, v22);
+    sub_B16FFC(&StringLiteral_16619/*"befSquareIndex"*/, v23);
+    sub_B16FFC(&StringLiteral_16447/*"attackUserSvtIds"*/, v24);
+    sub_B16FFC(&StringLiteral_16221/*"aftSquareIndex"*/, v25);
+    sub_B16FFC(&StringLiteral_698/*","*/, v26);
+    sub_B16FFC(&StringLiteral_15764/*"[{0}]"*/, v27);
     byte_40F8925 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22171, stageId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22171/*"stageId"*/, stageId, 0LL);
   source = (System_Collections_Generic_IEnumerable_TSource__o *)defenseUserSvtIds;
   v32 = WarBoardBattleSetupRequest___c_TypeInfo;
   if ( (BYTE3(WarBoardBattleSetupRequest___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -145,10 +145,10 @@ void __fastcall WarBoardBattleSetupRequest__beginRequest(
   }
   static_fields = v32->static_fields;
   _9__6_0 = (System_Func_long__SellServantRequest_UseSvtHash__o *)static_fields->__9__6_0;
-  v35 = (System_String_o *)StringLiteral_698;
-  v36 = (System_String_o *)StringLiteral_15764;
+  v35 = (System_String_o *)StringLiteral_698/*","*/;
+  v36 = (System_String_o *)StringLiteral_15764/*"[{0}]"*/;
   data = aftSquareIndex;
-  v37 = (System_String_o *)StringLiteral_16447;
+  v37 = (System_String_o *)StringLiteral_16447/*"attackUserSvtIds"*/;
   if ( !_9__6_0 )
   {
     if ( (BYTE3(v32->vtable._0_Equals.methodPtr) & 4) != 0 )
@@ -209,10 +209,10 @@ void __fastcall WarBoardBattleSetupRequest__beginRequest(
     v55 = WarBoardBattleSetupRequest___c_TypeInfo;
   }
   v56 = v55->static_fields;
-  v57 = (System_String_o *)StringLiteral_15764;
+  v57 = (System_String_o *)StringLiteral_15764/*"[{0}]"*/;
   _9__6_1 = (System_Func_long__SellServantRequest_UseSvtHash__o *)v56->__9__6_1;
-  v59 = (System_String_o *)StringLiteral_698;
-  v60 = (System_String_o *)StringLiteral_17878;
+  v59 = (System_String_o *)StringLiteral_698/*","*/;
+  v60 = (System_String_o *)StringLiteral_17878/*"defenseUserSvtIds"*/;
   if ( !_9__6_1 )
   {
     if ( (BYTE3(v55->vtable._0_Equals.methodPtr) & 4) != 0 )
@@ -263,8 +263,8 @@ void __fastcall WarBoardBattleSetupRequest__beginRequest(
   v72 = (Il2CppObject *)System_String__Join(v59, v71, 0LL);
   v73 = System_String__Format(v57, v72, 0LL);
   RequestBase__addField_30957164((RequestBase_o *)this, v60, v73, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16619, befSquareIndex, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16221, data, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16619/*"befSquareIndex"*/, befSquareIndex, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16221/*"aftSquareIndex"*/, data, 0LL);
   if ( !warBoardData )
 LABEL_24:
     sub_B170D4();
@@ -283,7 +283,7 @@ System_String_o *__fastcall WarBoardBattleSetupRequest__getURL(
   if ( (byte_40F8923 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23107, v2);
+    sub_B16FFC(&StringLiteral_23107/*"warBoard/battleSetup"*/, v2);
     byte_40F8923 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -292,7 +292,7 @@ System_String_o *__fastcall WarBoardBattleSetupRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_23107, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_23107/*"warBoard/battleSetup"*/, 0LL);
 }
 
 

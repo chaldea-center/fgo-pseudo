@@ -1799,11 +1799,11 @@ bool __fastcall PartyOrganizationRootComponent__CheckTabKind(
   {
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, method);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_8710, v4);
-    sub_B16FFC(&StringLiteral_8698, v5);
-    sub_B16FFC(&StringLiteral_8697, v6);
-    sub_B16FFC(&StringLiteral_8694, v7);
-    sub_B16FFC(&StringLiteral_8695, v8);
+    sub_B16FFC(&StringLiteral_8710/*"MENU_SUPPORT_ONLY_QUEST_START"*/, v4);
+    sub_B16FFC(&StringLiteral_8698/*"MENU_QUEST_START"*/, v5);
+    sub_B16FFC(&StringLiteral_8697/*"MENU_PARTY_SELECT"*/, v6);
+    sub_B16FFC(&StringLiteral_8694/*"MENU_PARTY_OGRANIZATION_CHANGE"*/, v7);
+    sub_B16FFC(&StringLiteral_8695/*"MENU_PARTY_OGRANIZATION_SWAP"*/, v8);
     byte_40F76F9 = 1;
   }
   if ( (BYTE3(SingletonTemplate_PartyOrganizationUtility__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1877,31 +1877,31 @@ LABEL_29:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_29;
-      v30 = &StringLiteral_8698;
+      v30 = &StringLiteral_8698/*"MENU_QUEST_START"*/;
       break;
     case 1:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_29;
-      v30 = &StringLiteral_8710;
+      v30 = &StringLiteral_8710/*"MENU_SUPPORT_ONLY_QUEST_START"*/;
       break;
     case 9:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_29;
-      v30 = &StringLiteral_8697;
+      v30 = &StringLiteral_8697/*"MENU_PARTY_SELECT"*/;
       break;
     case 0xA:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_29;
-      v30 = &StringLiteral_8694;
+      v30 = &StringLiteral_8694/*"MENU_PARTY_OGRANIZATION_CHANGE"*/;
       break;
     case 0xB:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_29;
-      v30 = &StringLiteral_8695;
+      v30 = &StringLiteral_8695/*"MENU_PARTY_OGRANIZATION_SWAP"*/;
       break;
     default:
       return 1;
@@ -1994,8 +1994,8 @@ bool __fastcall PartyOrganizationRootComponent__ConfirmPartyOrganizationChangeCa
     sub_B16FFC(&PartyOrganizationConfirmDeck2Menu_CallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationChangeCancel__, v3);
     sub_B16FFC(&SoundManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_8686, v5);
-    sub_B16FFC(&StringLiteral_8687, v6);
+    sub_B16FFC(&StringLiteral_8686/*"MENU_BACK"*/, v5);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v6);
     byte_40F7709 = 1;
   }
   partyOrganizationChangeMenu = this->fields.partyOrganizationChangeMenu;
@@ -2014,7 +2014,7 @@ bool __fastcall PartyOrganizationRootComponent__ConfirmPartyOrganizationChangeCa
     this->fields.state = 1;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
       return 0;
     }
     goto LABEL_20;
@@ -2057,7 +2057,7 @@ LABEL_20:
   this->fields.menuMode = this->fields.mainMenuMode;
   if ( !v13 )
     goto LABEL_20;
-  PlayMakerFSM__SendEvent(v13, (System_String_o *)StringLiteral_8686, 0LL);
+  PlayMakerFSM__SendEvent(v13, (System_String_o *)StringLiteral_8686/*"MENU_BACK"*/, 0LL);
   return 1;
 }
 
@@ -2109,10 +2109,10 @@ bool __fastcall PartyOrganizationRootComponent__ConfirmPartyOrganizationChangeDe
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationChangeDecide__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
     sub_B16FFC(&SoundManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_8688, v9);
-    sub_B16FFC(&StringLiteral_10295, v10);
-    sub_B16FFC(&StringLiteral_10294, v11);
-    sub_B16FFC(&StringLiteral_8687, v12);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v9);
+    sub_B16FFC(&StringLiteral_10295/*"PARTY_ORGANIZATION_DECIDE_WARNING_TITLE_COST_OVER"*/, v10);
+    sub_B16FFC(&StringLiteral_10294/*"PARTY_ORGANIZATION_DECIDE_WARNING_MESSAGE_COST_OVER"*/, v11);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v12);
     byte_40F770B = 1;
   }
   partyOrganizationChangeMenu = this->fields.partyOrganizationChangeMenu;
@@ -2132,7 +2132,7 @@ LABEL_14:
     this->fields.state = 1;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
       return 0;
     }
 LABEL_32:
@@ -2169,7 +2169,7 @@ LABEL_32:
       v19 = this->fields.myFSM;
       if ( !v19 )
         goto LABEL_32;
-      PlayMakerFSM__SendEvent(v19, (System_String_o *)StringLiteral_8688, 0LL);
+      PlayMakerFSM__SendEvent(v19, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
       goto LABEL_13;
     case 1:
     case 2:
@@ -2201,8 +2201,8 @@ LABEL_32:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10295, 0LL);
-      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_10294, 0LL);
+      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10295/*"PARTY_ORGANIZATION_DECIDE_WARNING_TITLE_COST_OVER"*/, 0LL);
+      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_10294/*"PARTY_ORGANIZATION_DECIDE_WARNING_MESSAGE_COST_OVER"*/, 0LL);
       v36 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v32, v33, v34, v35);
       System_Action___ctor(
         v36,
@@ -2269,7 +2269,7 @@ bool __fastcall PartyOrganizationRootComponent__ConfirmPartyOrganizationChangeRe
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationChangeRemoveSelect__, v3);
     sub_B16FFC(&SoundManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40F770E = 1;
   }
   partyOrganizationChangeMenu = this->fields.partyOrganizationChangeMenu;
@@ -2314,7 +2314,7 @@ LABEL_15:
   this->fields.state = 1;
   if ( !myFSM )
     goto LABEL_15;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
   return 0;
 }
 
@@ -2352,8 +2352,8 @@ bool __fastcall PartyOrganizationRootComponent__ConfirmPartyOrganizationSwapCanc
     sub_B16FFC(&Method_PartyOrganizationRootComponent_ConfirmPartyOrganizationSwapCancel__, v3);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationSwapCancel__, v4);
     sub_B16FFC(&SoundManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8686, v6);
-    sub_B16FFC(&StringLiteral_8687, v7);
+    sub_B16FFC(&StringLiteral_8686/*"MENU_BACK"*/, v6);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v7);
     byte_40F7713 = 1;
   }
   partyOrganizationMenu = this->fields.partyOrganizationMenu;
@@ -2391,7 +2391,7 @@ bool __fastcall PartyOrganizationRootComponent__ConfirmPartyOrganizationSwapCanc
       this->fields.menuMode = this->fields.mainMenuMode;
       if ( myFSM )
       {
-        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8686, 0LL);
+        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8686/*"MENU_BACK"*/, 0LL);
         return 1;
       }
     }
@@ -2433,7 +2433,7 @@ LABEL_25:
   this->fields.state = 1;
   if ( !v24 )
     goto LABEL_29;
-  PlayMakerFSM__SendEvent(v24, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(v24, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
   return 0;
 }
 
@@ -2486,10 +2486,10 @@ bool __fastcall PartyOrganizationRootComponent__ConfirmPartyOrganizationSwapDeci
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationSwapDecide__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
     sub_B16FFC(&SoundManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_8688, v9);
-    sub_B16FFC(&StringLiteral_10295, v10);
-    sub_B16FFC(&StringLiteral_10294, v11);
-    sub_B16FFC(&StringLiteral_8687, v12);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v9);
+    sub_B16FFC(&StringLiteral_10295/*"PARTY_ORGANIZATION_DECIDE_WARNING_TITLE_COST_OVER"*/, v10);
+    sub_B16FFC(&StringLiteral_10294/*"PARTY_ORGANIZATION_DECIDE_WARNING_MESSAGE_COST_OVER"*/, v11);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v12);
     byte_40F7715 = 1;
   }
   partyOrganizationMenu = this->fields.partyOrganizationMenu;
@@ -2511,7 +2511,7 @@ LABEL_15:
     this->fields.state = 1;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
       return 0;
     }
 LABEL_31:
@@ -2546,7 +2546,7 @@ LABEL_31:
       v20 = this->fields.myFSM;
       if ( !v20 )
         goto LABEL_31;
-      PlayMakerFSM__SendEvent(v20, (System_String_o *)StringLiteral_8688, 0LL);
+      PlayMakerFSM__SendEvent(v20, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
       goto LABEL_11;
     case 1:
     case 2:
@@ -2578,8 +2578,8 @@ LABEL_31:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10295, 0LL);
-      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10294, 0LL);
+      v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10295/*"PARTY_ORGANIZATION_DECIDE_WARNING_TITLE_COST_OVER"*/, 0LL);
+      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10294/*"PARTY_ORGANIZATION_DECIDE_WARNING_MESSAGE_COST_OVER"*/, 0LL);
       v35 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v31, v32, v33, v34);
       System_Action___ctor(
         v35,
@@ -2648,7 +2648,7 @@ bool __fastcall PartyOrganizationRootComponent__ConfirmPartyOrganizationSwapRemo
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationSwapRemoveSelect__, v3);
     sub_B16FFC(&SoundManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40F7718 = 1;
   }
   partyOrganizationMenu = this->fields.partyOrganizationMenu;
@@ -2693,7 +2693,7 @@ LABEL_15:
   this->fields.state = 1;
   if ( !myFSM )
     goto LABEL_15;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
   return 0;
 }
 
@@ -2725,7 +2725,7 @@ bool __fastcall PartyOrganizationRootComponent__CopyDeck(
     sub_B16FFC(&DeckSelectMenu_CallbackFunc_TypeInfo, v6);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyRemoveSelect__, v7);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndDeckSelectCopy__, v8);
-    sub_B16FFC(&StringLiteral_8687, v9);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v9);
     byte_40F771F = 1;
   }
   if ( this->fields.basePartyItem )
@@ -2768,7 +2768,7 @@ LABEL_9:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_9;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
   return 0;
 }
 
@@ -3095,7 +3095,7 @@ void __fastcall PartyOrganizationRootComponent__CtrlMyServantOrNpc(
     sub_B16FFC(&SoundManager_TypeInfo, v10);
     sub_B16FFC(&Method_PartyOrganizationRootComponent___c__DisplayClass202_0__CtrlMyServantOrNpc_b__0__, v11);
     sub_B16FFC(&PartyOrganizationRootComponent___c__DisplayClass202_0_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_3052, v13);
+    sub_B16FFC(&StringLiteral_3052/*"CLICK_FOLLOWER"*/, v13);
     byte_40F7751 = 1;
   }
   v14 = sub_B170CC(PartyOrganizationRootComponent___c__DisplayClass202_0_TypeInfo, item, *(_QWORD *)&pos, method, v4);
@@ -3191,7 +3191,7 @@ LABEL_26:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_26;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3052, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3052/*"CLICK_FOLLOWER"*/, 0LL);
 }
 
 
@@ -3334,7 +3334,7 @@ void __fastcall PartyOrganizationRootComponent__EndCloseShowEventPoint(
 
   if ( (byte_40F772D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8687, method);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, method);
     byte_40F772D = 1;
   }
   this->fields.state = this->fields.showBackupState;
@@ -3342,7 +3342,7 @@ void __fastcall PartyOrganizationRootComponent__EndCloseShowEventPoint(
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
 }
 
 
@@ -3359,7 +3359,7 @@ void __fastcall PartyOrganizationRootComponent__EndCloseShowInfomation(
   if ( (byte_40F772A & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_8687, v3);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v3);
     byte_40F772A = 1;
   }
   this->fields.state = this->fields.showBackupState;
@@ -3381,7 +3381,7 @@ LABEL_9:
   if ( !myFSM )
 LABEL_12:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
 }
 
 
@@ -3393,7 +3393,7 @@ void __fastcall PartyOrganizationRootComponent__EndCloseShowQuestInformation(
 
   if ( (byte_40F7730 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8687, method);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, method);
     byte_40F7730 = 1;
   }
   this->fields.state = this->fields.showBackupState;
@@ -3401,7 +3401,7 @@ void __fastcall PartyOrganizationRootComponent__EndCloseShowQuestInformation(
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
 }
 
 
@@ -3454,7 +3454,7 @@ void __fastcall PartyOrganizationRootComponent__EndCloseTutorialArrowChange(
 
   if ( (byte_40F7750 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3034, method);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, method);
     byte_40F7750 = 1;
   }
   tutorialMaskBase = this->fields.tutorialMaskBase;
@@ -3463,7 +3463,7 @@ void __fastcall PartyOrganizationRootComponent__EndCloseTutorialArrowChange(
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
 }
 
 
@@ -3495,7 +3495,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmAutoOrganization(
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyRemoveSelect__, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_3073, v7);
+    sub_B16FFC(&StringLiteral_3073/*"CLICK_SWAP"*/, v7);
     byte_40F7767 = 1;
   }
   autoOrganizationConfirmDialog = this->fields.autoOrganizationConfirmDialog;
@@ -3545,7 +3545,7 @@ LABEL_12:
   this->fields.menuMode = 11;
   if ( !myFSM )
     goto LABEL_17;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3073, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3073/*"CLICK_SWAP"*/, 0LL);
 }
 
 
@@ -3653,7 +3653,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmInputBoostItem(
   {
     sub_B16FFC(&BoostItemMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndInputBoostItemMenu__, v5);
-    sub_B16FFC(&StringLiteral_8688, v6);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v6);
     byte_40F7724 = 1;
   }
   if ( isDecide )
@@ -3676,7 +3676,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmInputBoostItem(
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
       return;
     }
 LABEL_14:
@@ -3719,8 +3719,8 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmInputBoostSupportItem(
   if ( (byte_40F7725 & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, *(_QWORD *)&result);
-    sub_B16FFC(&StringLiteral_8688, v7);
-    sub_B16FFC(&StringLiteral_8687, v8);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v7);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v8);
     byte_40F7725 = 1;
   }
   if ( result == 2 )
@@ -3737,7 +3737,7 @@ LABEL_10:
     myFSM = this->fields.myFSM;
     if ( !myFSM )
       goto LABEL_15;
-    v10 = &StringLiteral_8688;
+    v10 = &StringLiteral_8688/*"MENU_DECIDE"*/;
     goto LABEL_12;
   }
   if ( result )
@@ -3747,7 +3747,7 @@ LABEL_10:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_15;
-  v10 = &StringLiteral_8687;
+  v10 = &StringLiteral_8687/*"MENU_CANCEL"*/;
 LABEL_12:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v10, 0LL);
 LABEL_13:
@@ -3786,7 +3786,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyInitAll(
   {
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyRemoveSelect__, v5);
-    sub_B16FFC(&StringLiteral_3064, v6);
+    sub_B16FFC(&StringLiteral_3064/*"CLICK_REMOVE"*/, v6);
     byte_40F776A = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -3815,7 +3815,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyInitAll(
             this->fields.menuMode = 11;
             if ( myFSM )
             {
-              PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3064, 0LL);
+              PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3064/*"CLICK_REMOVE"*/, 0LL);
               return;
             }
           }
@@ -3862,8 +3862,8 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
   {
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, isDecide);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8686, v6);
-    sub_B16FFC(&StringLiteral_8687, v7);
+    sub_B16FFC(&StringLiteral_8686/*"MENU_BACK"*/, v6);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v7);
     byte_40F770A = 1;
   }
   operationConfirmDeck2Menu = this->fields.operationConfirmDeck2Menu;
@@ -3876,7 +3876,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
     this->fields.state = 1;
     if ( myFSM )
     {
-      v11 = &StringLiteral_8687;
+      v11 = &StringLiteral_8687/*"MENU_CANCEL"*/;
       goto LABEL_13;
     }
 LABEL_14:
@@ -3895,7 +3895,7 @@ LABEL_14:
   this->fields.menuMode = this->fields.mainMenuMode;
   if ( !myFSM )
     goto LABEL_14;
-  v11 = &StringLiteral_8686;
+  v11 = &StringLiteral_8686/*"MENU_BACK"*/;
 LABEL_13:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v11, 0LL);
 }
@@ -3914,8 +3914,8 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
 
   if ( (byte_40F770C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40F770C = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -3928,7 +3928,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
     this->fields.state = 1;
     if ( myFSM )
     {
-      v8 = &StringLiteral_8687;
+      v8 = &StringLiteral_8687/*"MENU_CANCEL"*/;
       goto LABEL_9;
     }
 LABEL_10:
@@ -3937,7 +3937,7 @@ LABEL_10:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_10;
-  v8 = &StringLiteral_8688;
+  v8 = &StringLiteral_8688/*"MENU_DECIDE"*/;
 LABEL_9:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v8, 0LL);
 }
@@ -3951,14 +3951,14 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
 
   if ( (byte_40F770D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8687, method);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, method);
     byte_40F770D = 1;
   }
   myFSM = this->fields.myFSM;
   this->fields.state = 1;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
 }
 
 
@@ -3986,7 +3986,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
   {
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationChangeRemoveSelect__, v5);
-    sub_B16FFC(&StringLiteral_8688, v6);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v6);
     byte_40F7712 = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -4011,7 +4011,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
         this->fields.state = 1;
         if ( myFSM )
         {
-          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
           return;
         }
       }
@@ -4060,7 +4060,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
   {
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationChangeRemoveSelect__, v5);
-    sub_B16FFC(&StringLiteral_8688, v6);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v6);
     byte_40F7711 = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -4084,7 +4084,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
         this->fields.state = 1;
         if ( myFSM )
         {
-          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
           return;
         }
       }
@@ -4133,7 +4133,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
   {
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationChangeRemoveSelect__, v5);
-    sub_B16FFC(&StringLiteral_8688, v6);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v6);
     byte_40F7710 = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -4157,7 +4157,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
         this->fields.state = 1;
         if ( myFSM )
         {
-          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
           return;
         }
       }
@@ -4211,8 +4211,8 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationChang
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationChangeInitAll__, v7);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationChangeRemoveAll__, v8);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationChangeRemoveEquip__, v9);
-    sub_B16FFC(&StringLiteral_3047, v10);
-    sub_B16FFC(&StringLiteral_8687, v11);
+    sub_B16FFC(&StringLiteral_3047/*"CLICK_DECK_NAME"*/, v10);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v11);
     byte_40F770F = 1;
   }
   partyOrganizationChangeMenu = this->fields.partyOrganizationChangeMenu;
@@ -4280,7 +4280,7 @@ LABEL_11:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_18;
-      v19 = &StringLiteral_3047;
+      v19 = &StringLiteral_3047/*"CLICK_DECK_NAME"*/;
       goto LABEL_17;
     default:
       partyOrganizationRemoveSelectMenu = this->fields.partyOrganizationRemoveSelectMenu;
@@ -4291,7 +4291,7 @@ LABEL_11:
       this->fields.state = 1;
       if ( !myFSM )
         goto LABEL_18;
-      v19 = &StringLiteral_8687;
+      v19 = &StringLiteral_8687/*"MENU_CANCEL"*/;
 LABEL_17:
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v19, 0LL);
       return;
@@ -4317,8 +4317,8 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapC
   {
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, isDecide);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8686, v6);
-    sub_B16FFC(&StringLiteral_8687, v7);
+    sub_B16FFC(&StringLiteral_8686/*"MENU_BACK"*/, v6);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v7);
     byte_40F7714 = 1;
   }
   operationConfirmDeck2Menu = this->fields.operationConfirmDeck2Menu;
@@ -4331,7 +4331,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapC
     this->fields.state = 1;
     if ( myFSM )
     {
-      v11 = &StringLiteral_8687;
+      v11 = &StringLiteral_8687/*"MENU_CANCEL"*/;
       goto LABEL_13;
     }
 LABEL_14:
@@ -4351,7 +4351,7 @@ LABEL_14:
   this->fields.menuMode = this->fields.mainMenuMode;
   if ( !myFSM )
     goto LABEL_14;
-  v11 = &StringLiteral_8686;
+  v11 = &StringLiteral_8686/*"MENU_BACK"*/;
 LABEL_13:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v11, 0LL);
 }
@@ -4370,8 +4370,8 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapD
 
   if ( (byte_40F7716 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40F7716 = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -4384,7 +4384,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapD
     this->fields.state = 1;
     if ( myFSM )
     {
-      v8 = &StringLiteral_8687;
+      v8 = &StringLiteral_8687/*"MENU_CANCEL"*/;
       goto LABEL_9;
     }
 LABEL_10:
@@ -4393,7 +4393,7 @@ LABEL_10:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_10;
-  v8 = &StringLiteral_8688;
+  v8 = &StringLiteral_8688/*"MENU_DECIDE"*/;
 LABEL_9:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v8, 0LL);
 }
@@ -4407,14 +4407,14 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapD
 
   if ( (byte_40F7717 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8687, method);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, method);
     byte_40F7717 = 1;
   }
   myFSM = this->fields.myFSM;
   this->fields.state = 1;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
 }
 
 
@@ -4442,7 +4442,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapI
   {
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationSwapRemoveSelect__, v5);
-    sub_B16FFC(&StringLiteral_8688, v6);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v6);
     byte_40F771C = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -4467,7 +4467,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapI
         this->fields.state = 1;
         if ( myFSM )
         {
-          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
           return;
         }
       }
@@ -4516,7 +4516,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapR
   {
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationSwapRemoveSelect__, v5);
-    sub_B16FFC(&StringLiteral_8688, v6);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v6);
     byte_40F771B = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -4540,7 +4540,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapR
         this->fields.state = 1;
         if ( myFSM )
         {
-          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
           return;
         }
       }
@@ -4589,7 +4589,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapR
   {
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationSwapRemoveSelect__, v5);
-    sub_B16FFC(&StringLiteral_8688, v6);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v6);
     byte_40F771A = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -4613,7 +4613,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapR
         this->fields.state = 1;
         if ( myFSM )
         {
-          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
           return;
         }
       }
@@ -4667,8 +4667,8 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyOrganizationSwapR
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationSwapInitAll__, v7);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationSwapRemoveAll__, v8);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyOrganizationSwapRemoveEquip__, v9);
-    sub_B16FFC(&StringLiteral_3047, v10);
-    sub_B16FFC(&StringLiteral_8687, v11);
+    sub_B16FFC(&StringLiteral_3047/*"CLICK_DECK_NAME"*/, v10);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v11);
     byte_40F7719 = 1;
   }
   partyOrganizationMenu = this->fields.partyOrganizationMenu;
@@ -4736,7 +4736,7 @@ LABEL_11:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_18;
-      v19 = &StringLiteral_3047;
+      v19 = &StringLiteral_3047/*"CLICK_DECK_NAME"*/;
       goto LABEL_17;
     default:
       partyOrganizationRemoveSelectMenu = this->fields.partyOrganizationRemoveSelectMenu;
@@ -4747,7 +4747,7 @@ LABEL_11:
       this->fields.state = 1;
       if ( !myFSM )
         goto LABEL_18;
-      v19 = &StringLiteral_8687;
+      v19 = &StringLiteral_8687/*"MENU_CANCEL"*/;
 LABEL_17:
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v19, 0LL);
       return;
@@ -4781,7 +4781,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyRemoveAll(
   {
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyRemoveSelect__, v5);
-    sub_B16FFC(&StringLiteral_3064, v6);
+    sub_B16FFC(&StringLiteral_3064/*"CLICK_REMOVE"*/, v6);
     byte_40F7769 = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -4806,7 +4806,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyRemoveAll(
           this->fields.menuMode = 11;
           if ( myFSM )
           {
-            PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3064, 0LL);
+            PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3064/*"CLICK_REMOVE"*/, 0LL);
             return;
           }
         }
@@ -4860,7 +4860,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyRemoveEquip(
   {
     sub_B16FFC(&PartyOrganizationRemoveSelectMenu_CallbackFunc_TypeInfo, isDecide);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyRemoveSelect__, v5);
-    sub_B16FFC(&StringLiteral_3064, v6);
+    sub_B16FFC(&StringLiteral_3064/*"CLICK_REMOVE"*/, v6);
     byte_40F7768 = 1;
   }
   operationConfirmDeckMenu = this->fields.operationConfirmDeckMenu;
@@ -4885,7 +4885,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyRemoveEquip(
           this->fields.menuMode = 11;
           if ( myFSM )
           {
-            PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3064, 0LL);
+            PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3064/*"CLICK_REMOVE"*/, 0LL);
             return;
           }
         }
@@ -4992,14 +4992,14 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyRemoveSelect(
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmWavePartyRemoveAll__, v13);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmWavePartyRemoveEquip__, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_3046, v16);
-    sub_B16FFC(&StringLiteral_15285, v17);
-    sub_B16FFC(&StringLiteral_15291, v18);
-    sub_B16FFC(&StringLiteral_3253, v19);
-    sub_B16FFC(&StringLiteral_3251, v20);
-    sub_B16FFC(&StringLiteral_15292, v21);
-    sub_B16FFC(&StringLiteral_3047, v22);
-    sub_B16FFC(&StringLiteral_15286, v23);
+    sub_B16FFC(&StringLiteral_3046/*"CLICK_DECK_COPY"*/, v16);
+    sub_B16FFC(&StringLiteral_15285/*"WAVE_BATTLE_EQUIP_REMOVE_MESSAGE"*/, v17);
+    sub_B16FFC(&StringLiteral_15291/*"WAVE_BATTLE_PARTY_REMOVE_MESSAGE"*/, v18);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v19);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_15292/*"WAVE_BATTLE_PARTY_REMOVE_TITLE"*/, v21);
+    sub_B16FFC(&StringLiteral_3047/*"CLICK_DECK_NAME"*/, v22);
+    sub_B16FFC(&StringLiteral_15286/*"WAVE_BATTLE_EQUIP_REMOVE_TITLE"*/, v23);
     byte_40F7763 = 1;
   }
   switch ( result )
@@ -5012,7 +5012,7 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyRemoveSelect(
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_49;
-      v26 = &StringLiteral_3046;
+      v26 = &StringLiteral_3046/*"CLICK_DECK_COPY"*/;
       goto LABEL_9;
     case 2:
       waveBattlePartyOrganizationMenu = (UnityEngine_Object_o *)this->fields.waveBattlePartyOrganizationMenu;
@@ -5034,10 +5034,10 @@ void __fastcall PartyOrganizationRootComponent__EndConfirmPartyRemoveSelect(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v38 = LocalizationManager__Get((System_String_o *)StringLiteral_15292, 0LL);
-        v39 = LocalizationManager__Get((System_String_o *)StringLiteral_15291, 0LL);
-        v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
-        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+        v38 = LocalizationManager__Get((System_String_o *)StringLiteral_15292/*"WAVE_BATTLE_PARTY_REMOVE_TITLE"*/, 0LL);
+        v39 = LocalizationManager__Get((System_String_o *)StringLiteral_15291/*"WAVE_BATTLE_PARTY_REMOVE_MESSAGE"*/, 0LL);
+        v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
         v46 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                        CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                        v54,
@@ -5103,10 +5103,10 @@ LABEL_44:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v38 = LocalizationManager__Get((System_String_o *)StringLiteral_15286, 0LL);
-        v39 = LocalizationManager__Get((System_String_o *)StringLiteral_15285, 0LL);
-        v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
-        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+        v38 = LocalizationManager__Get((System_String_o *)StringLiteral_15286/*"WAVE_BATTLE_EQUIP_REMOVE_TITLE"*/, 0LL);
+        v39 = LocalizationManager__Get((System_String_o *)StringLiteral_15285/*"WAVE_BATTLE_EQUIP_REMOVE_MESSAGE"*/, 0LL);
+        v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
         v46 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                        CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                        v42,
@@ -5147,7 +5147,7 @@ LABEL_42:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_49;
-      v26 = &StringLiteral_3047;
+      v26 = &StringLiteral_3047/*"CLICK_DECK_NAME"*/;
 LABEL_9:
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v26, 0LL);
       return;
@@ -5624,7 +5624,7 @@ void __fastcall PartyOrganizationRootComponent__EndDeckSelectCopy(
     sub_B16FFC(&PartyOrganizationConfirmCopyMenu_CallbackFunc_TypeInfo, v8);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmCopy__, v9);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndConfirmPartyRemoveSelect__, v10);
-    this = (PartyOrganizationRootComponent_o *)sub_B16FFC(&StringLiteral_8687, v11);
+    this = (PartyOrganizationRootComponent_o *)sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v11);
     byte_40F7720 = 1;
   }
   v7->fields.selectCopyPartyNum = index;
@@ -5687,7 +5687,7 @@ LABEL_13:
   v7->fields.state = v7->fields.showBackupState;
   if ( !myFSM )
     goto LABEL_13;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
 }
 
 
@@ -5981,9 +5981,9 @@ void __fastcall PartyOrganizationRootComponent__EndInputBoostItemMenu(
     sub_B16FFC(&Method_PartyOrganizationRootComponent__EndInputBoostItemMenu_b__153_0__, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
     sub_B16FFC(&SoundManager_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_2577, v17);
-    sub_B16FFC(&StringLiteral_2576, v18);
-    sub_B16FFC(&StringLiteral_2578, v19);
+    sub_B16FFC(&StringLiteral_2577/*"BOOST_ITEM_USE_CONFIRM_MESSAGE_FRIEND_CHOCOLATE"*/, v17);
+    sub_B16FFC(&StringLiteral_2576/*"BOOST_ITEM_USE_CONFIRM_MESSAGE"*/, v18);
+    sub_B16FFC(&StringLiteral_2578/*"BOOST_ITEM_USE_CONFIRM_MESSAGE_FRIEND_CHOCOLATE_ALERT"*/, v19);
     byte_40F7723 = 1;
   }
   if ( result == 2 )
@@ -6052,8 +6052,8 @@ void __fastcall PartyOrganizationRootComponent__EndInputBoostItemMenu(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2577, 0LL);
-        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_2578, 0LL);
+        v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2577/*"BOOST_ITEM_USE_CONFIRM_MESSAGE_FRIEND_CHOCOLATE"*/, 0LL);
+        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_2578/*"BOOST_ITEM_USE_CONFIRM_MESSAGE_FRIEND_CHOCOLATE_ALERT"*/, 0LL);
         v26 = BalanceConfig_TypeInfo;
         if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -6073,7 +6073,7 @@ void __fastcall PartyOrganizationRootComponent__EndInputBoostItemMenu(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v42 = LocalizationManager__Get((System_String_o *)StringLiteral_2576, 0LL);
+        v42 = LocalizationManager__Get((System_String_o *)StringLiteral_2576/*"BOOST_ITEM_USE_CONFIRM_MESSAGE"*/, 0LL);
         if ( !Item )
           goto LABEL_45;
         v43 = v42;
@@ -6402,7 +6402,7 @@ void __fastcall PartyOrganizationRootComponent__EndOpenOrganizationChangeServant
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndTutorialOrganizationGuideNotification3__, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_13460, v6);
+    sub_B16FFC(&StringLiteral_13460/*"TUTORIAL_MESSAGE_PARTY_ORGANIZATION3"*/, v6);
     byte_40F776C = 1;
   }
   if ( this->fields.tutorialState == 2 )
@@ -6417,7 +6417,7 @@ void __fastcall PartyOrganizationRootComponent__EndOpenOrganizationChangeServant
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_13460, 0LL);
+      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_13460/*"TUTORIAL_MESSAGE_PARTY_ORGANIZATION3"*/, 0LL);
       v14 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v10, v11, v12, v13);
       System_Action___ctor(
         v14,
@@ -6560,17 +6560,17 @@ void __fastcall PartyOrganizationRootComponent__EndRequestDeckCopy(
 
   if ( (byte_40F7734 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, result);
-    sub_B16FFC(&StringLiteral_11041, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, result);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40F7734 = 1;
   }
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      v15 = &StringLiteral_11041;
+      v15 = &StringLiteral_11041/*"REQUEST_NG"*/;
       goto LABEL_9;
     }
 LABEL_10:
@@ -6586,7 +6586,7 @@ LABEL_10:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_10;
-  v15 = &StringLiteral_11043;
+  v15 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_9:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v15, 0LL);
 }
@@ -6611,17 +6611,17 @@ void __fastcall PartyOrganizationRootComponent__EndRequestDeckName(
 
   if ( (byte_40F7732 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, result);
-    sub_B16FFC(&StringLiteral_11041, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, result);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40F7732 = 1;
   }
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      v15 = &StringLiteral_11041;
+      v15 = &StringLiteral_11041/*"REQUEST_NG"*/;
       goto LABEL_9;
     }
 LABEL_10:
@@ -6636,7 +6636,7 @@ LABEL_10:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_10;
-  v15 = &StringLiteral_11043;
+  v15 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_9:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v15, 0LL);
 }
@@ -6664,18 +6664,18 @@ void __fastcall PartyOrganizationRootComponent__EndRequestOrganizationChange(
   if ( (byte_40F7738 & 1) == 0 )
   {
     sub_B16FFC(&TutorialFlag_TypeInfo, result);
-    sub_B16FFC(&StringLiteral_11043, v5);
-    sub_B16FFC(&StringLiteral_11041, v6);
-    sub_B16FFC(&StringLiteral_20980, v7);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v5);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v7);
     byte_40F7738 = 1;
   }
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     myFSM = this->fields.myFSM;
     this->fields.state = 1;
     if ( myFSM )
     {
-      v17 = &StringLiteral_11041;
+      v17 = &StringLiteral_11041/*"REQUEST_NG"*/;
       goto LABEL_14;
     }
 LABEL_15:
@@ -6702,7 +6702,7 @@ LABEL_15:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_15;
-  v17 = &StringLiteral_11043;
+  v17 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_14:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v17, 0LL);
 }
@@ -6734,19 +6734,19 @@ void __fastcall PartyOrganizationRootComponent__EndRequestOrganizationSelect(
 
   if ( (byte_40F7736 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, result);
-    sub_B16FFC(&StringLiteral_11041, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, result);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40F7736 = 1;
   }
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     myFSM = this->fields.myFSM;
     this->fields.state = 1;
     this->fields.activeDeckId = 0LL;
     if ( myFSM )
     {
-      v22 = &StringLiteral_11041;
+      v22 = &StringLiteral_11041/*"REQUEST_NG"*/;
       goto LABEL_12;
     }
 LABEL_13:
@@ -6769,7 +6769,7 @@ LABEL_13:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_13;
-  v22 = &StringLiteral_11043;
+  v22 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_12:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v22, 0LL);
 }
@@ -6797,18 +6797,18 @@ void __fastcall PartyOrganizationRootComponent__EndRequestOrganizationSwap(
   if ( (byte_40F773B & 1) == 0 )
   {
     sub_B16FFC(&TutorialFlag_TypeInfo, result);
-    sub_B16FFC(&StringLiteral_11043, v5);
-    sub_B16FFC(&StringLiteral_11041, v6);
-    sub_B16FFC(&StringLiteral_20980, v7);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v5);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v7);
     byte_40F773B = 1;
   }
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     myFSM = this->fields.myFSM;
     this->fields.state = 1;
     if ( myFSM )
     {
-      v17 = &StringLiteral_11041;
+      v17 = &StringLiteral_11041/*"REQUEST_NG"*/;
       goto LABEL_14;
     }
 LABEL_15:
@@ -6835,7 +6835,7 @@ LABEL_15:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_15;
-  v17 = &StringLiteral_11043;
+  v17 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_14:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v17, 0LL);
 }
@@ -6899,10 +6899,10 @@ void __fastcall PartyOrganizationRootComponent__EndRequestWaveBattleAutoDeckEdit
     sub_B16FFC(&Method_DataManager_GetMaster_UserEventDeckMaster___, result);
     sub_B16FFC(&DataManager_TypeInfo, v5);
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_20980, v7);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v7);
     byte_40F76FC = 1;
   }
-  if ( System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     this->fields.isSaveDeck = 0;
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -7007,10 +7007,10 @@ void __fastcall PartyOrganizationRootComponent__EndRequestWaveBattleDeckEdit(
 
   if ( (byte_40F774C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20980, result);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, result);
     byte_40F774C = 1;
   }
-  if ( System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     this->fields.isSaveDeck = 0;
     PartyOrganizationRootComponent__DispWaveBattleTop(this, v5);
@@ -7420,10 +7420,10 @@ void __fastcall PartyOrganizationRootComponent__EndSelectOrganizationSwapServant
       &Method_PartyOrganizationRootComponent___c__DisplayClass245_0__EndSelectOrganizationSwapServantEquip_b__0__,
       v18);
     sub_B16FFC(&PartyOrganizationRootComponent___c__DisplayClass245_0_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_10175, v20);
-    sub_B16FFC(&StringLiteral_3255, v21);
-    sub_B16FFC(&StringLiteral_3258, v22);
-    sub_B16FFC(&StringLiteral_1, v23);
+    sub_B16FFC(&StringLiteral_10175/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, v20);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v21);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v22);
+    sub_B16FFC(&StringLiteral_1/*""*/, v23);
     byte_40F7773 = 1;
   }
   *(_QWORD *)actMaxRarity = 0LL;
@@ -7552,7 +7552,7 @@ LABEL_46:
         TitleInfoControl__changeTitleInfo(titleInfo, 2, 68, 0LL);
       }
       actMaxRarity[1] = 0;
-      skillName = (System_String_o *)StringLiteral_1;
+      skillName = (System_String_o *)StringLiteral_1/*""*/;
       if ( !equipItem )
         goto LABEL_84;
       questRestrictionInfo = this->fields.questRestrictionInfo;
@@ -7671,7 +7671,7 @@ LABEL_84:
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v113 = LocalizationManager__Get((System_String_o *)StringLiteral_10175, 0LL);
+                    v113 = LocalizationManager__Get((System_String_o *)StringLiteral_10175/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, 0LL);
                     System_Text_StringBuilder__Append_41914240(v112, v113, 0LL);
                     v114 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                     if ( v114 )
@@ -7681,8 +7681,8 @@ LABEL_84:
                       v116 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v112->klass->vtable._3_ToString.method)(
                                                   v112,
                                                   v112->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-                      v117 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-                      v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+                      v117 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+                      v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
                       v123 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                                       CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                                       v119,
@@ -7698,7 +7698,7 @@ LABEL_84:
                       {
                         CommonUI__OpenConfirmDialog_18237500(
                           v115,
-                          (System_String_o *)StringLiteral_1,
+                          (System_String_o *)StringLiteral_1/*""*/,
                           v116,
                           v117,
                           v118,
@@ -7863,9 +7863,9 @@ void __fastcall PartyOrganizationRootComponent__EndSelectQuest(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v6);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_8694, v8);
-    sub_B16FFC(&StringLiteral_15334, v9);
-    sub_B16FFC(&StringLiteral_8695, v10);
+    sub_B16FFC(&StringLiteral_8694/*"MENU_PARTY_OGRANIZATION_CHANGE"*/, v8);
+    sub_B16FFC(&StringLiteral_15334/*"WaitQuest"*/, v9);
+    sub_B16FFC(&StringLiteral_8695/*"MENU_PARTY_OGRANIZATION_SWAP"*/, v10);
     byte_40F76FF = 1;
   }
   if ( (BYTE3(SingletonTemplate_PartyOrganizationUtility__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -7957,7 +7957,7 @@ LABEL_51:
     myFSM = this->fields.myFSM;
     if ( !myFSM )
       goto LABEL_51;
-    PlayMakerFSM__SetState(myFSM, (System_String_o *)StringLiteral_15334, 0LL);
+    PlayMakerFSM__SetState(myFSM, (System_String_o *)StringLiteral_15334/*"WaitQuest"*/, 0LL);
     goto LABEL_30;
   }
   v41 = this->fields.baseDeckItemList;
@@ -8003,14 +8003,14 @@ LABEL_52:
     v49 = this->fields.myFSM;
     if ( !v49 )
       goto LABEL_51;
-    v50 = &StringLiteral_8694;
+    v50 = &StringLiteral_8694/*"MENU_PARTY_OGRANIZATION_CHANGE"*/;
   }
   else
   {
     v49 = this->fields.myFSM;
     if ( !v49 )
       goto LABEL_51;
-    v50 = &StringLiteral_8695;
+    v50 = &StringLiteral_8695/*"MENU_PARTY_OGRANIZATION_SWAP"*/;
   }
   PlayMakerFSM__SendEvent(v49, (System_String_o *)*v50, 0LL);
 }
@@ -8039,7 +8039,7 @@ void __fastcall PartyOrganizationRootComponent__EndSelectQuestConfirmCostumeMenu
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndRequestConfirmCostumeMenu__, v4);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
     sub_B16FFC(&TutorialFlag_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
     byte_40F774B = 1;
   }
   if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -8125,7 +8125,7 @@ void __fastcall PartyOrganizationRootComponent__EndSelectedOrganizationChange(
     sub_B16FFC(&Method_PartyOrganizationRootComponent_OnSelectedOrganizationChange__, v4);
     sub_B16FFC(&Method_PartyOrganizationRootComponent__EndSelectedOrganizationChange_b__241_0__, v5);
     sub_B16FFC(&Method_PartyOrganizationRootComponent__EndSelectedOrganizationChange_b__241_1__, v6);
-    sub_B16FFC(&StringLiteral_9327, v7);
+    sub_B16FFC(&StringLiteral_9327/*"NO_MODIFY"*/, v7);
     byte_40F776F = 1;
   }
   partyItem = this->fields.partyItem;
@@ -8180,7 +8180,7 @@ void __fastcall PartyOrganizationRootComponent__EndSelectedOrganizationChange(
         myFSM = this->fields.myFSM;
         if ( myFSM )
         {
-          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_9327, 0LL);
+          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_9327/*"NO_MODIFY"*/, 0LL);
           return;
         }
       }
@@ -8683,14 +8683,14 @@ void __fastcall PartyOrganizationRootComponent__EndSelectedOrganizationSwapServa
       &Method_PartyOrganizationRootComponent___c__DisplayClass243_0__EndSelectedOrganizationSwapServant_b__3__,
       v23);
     sub_B16FFC(&PartyOrganizationRootComponent___c__DisplayClass243_0_TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_15296, v25);
-    sub_B16FFC(&StringLiteral_10175, v26);
-    sub_B16FFC(&StringLiteral_15283, v27);
-    sub_B16FFC(&StringLiteral_3255, v28);
-    sub_B16FFC(&StringLiteral_3258, v29);
-    sub_B16FFC(&StringLiteral_1, v30);
-    sub_B16FFC(&StringLiteral_15295, v31);
-    sub_B16FFC(&StringLiteral_15282, v32);
+    sub_B16FFC(&StringLiteral_15296/*"WAVE_BATTLE_SERVANT_SWAP_TITLE"*/, v25);
+    sub_B16FFC(&StringLiteral_10175/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, v26);
+    sub_B16FFC(&StringLiteral_15283/*"WAVE_BATTLE_COST_OVER_TITLE"*/, v27);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v28);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v29);
+    sub_B16FFC(&StringLiteral_1/*""*/, v30);
+    sub_B16FFC(&StringLiteral_15295/*"WAVE_BATTLE_SERVANT_SWAP_MESSAGE"*/, v31);
+    sub_B16FFC(&StringLiteral_15282/*"WAVE_BATTLE_COST_OVER_MESSAGE"*/, v32);
     byte_40F7771 = 1;
   }
   skillName = 0LL;
@@ -8726,7 +8726,7 @@ LABEL_79:
     goto LABEL_132;
   Member = PartyListViewItem__GetMember(partyItem, this->fields.selectPartyMemberNum, 0LL);
   actMaxRarity = 0;
-  skillName = (System_String_o *)StringLiteral_1;
+  skillName = (System_String_o *)StringLiteral_1/*""*/;
   if ( !Member )
     goto LABEL_132;
   v51 = Member;
@@ -8843,7 +8843,7 @@ LABEL_51:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v86 = LocalizationManager__Get((System_String_o *)StringLiteral_10175, 0LL);
+    v86 = LocalizationManager__Get((System_String_o *)StringLiteral_10175/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, 0LL);
     System_Text_StringBuilder__Append_41914240(v85, v86, 0LL);
     partyServantSelectMenu = this->fields.partyServantSelectMenu;
     v92 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v88, v89, v90, v91);
@@ -8863,8 +8863,8 @@ LABEL_51:
     v95 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v85->klass->vtable._3_ToString.method)(
                                v85,
                                v85->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-    v96 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-    v97 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+    v96 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+    v97 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
     v102 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                     CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                     v98,
@@ -8881,7 +8881,7 @@ LABEL_51:
     v103 = 1;
     CommonUI__OpenConfirmDialog_18237500(
       v94,
-      (System_String_o *)StringLiteral_1,
+      (System_String_o *)StringLiteral_1/*""*/,
       v95,
       v96,
       v97,
@@ -8983,8 +8983,8 @@ LABEL_77:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v127 = LocalizationManager__Get((System_String_o *)StringLiteral_15283, 0LL);
-    v128 = LocalizationManager__Get((System_String_o *)StringLiteral_15282, 0LL);
+    v127 = LocalizationManager__Get((System_String_o *)StringLiteral_15283/*"WAVE_BATTLE_COST_OVER_TITLE"*/, 0LL);
+    v128 = LocalizationManager__Get((System_String_o *)StringLiteral_15282/*"WAVE_BATTLE_COST_OVER_MESSAGE"*/, 0LL);
     v129 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v134 = (NotificationDialog_ClickDelegate_o *)sub_B170CC(
                                                    NotificationDialog_ClickDelegate_TypeInfo,
@@ -9032,8 +9032,8 @@ LABEL_88:
       j_il2cpp_runtime_class_init_0(v123);
   }
 LABEL_90:
-  v135 = LocalizationManager__Get((System_String_o *)StringLiteral_15296, 0LL);
-  v136 = LocalizationManager__Get((System_String_o *)StringLiteral_15295, 0LL);
+  v135 = LocalizationManager__Get((System_String_o *)StringLiteral_15296/*"WAVE_BATTLE_SERVANT_SWAP_TITLE"*/, 0LL);
+  v136 = LocalizationManager__Get((System_String_o *)StringLiteral_15295/*"WAVE_BATTLE_SERVANT_SWAP_MESSAGE"*/, 0LL);
   v138 = (System_Object_array *)sub_B17014(object___TypeInfo, 8LL, v137);
   v208 = v111;
   RarityType = (PartyOrganizationListViewItem_o *)j_il2cpp_value_box_0(int_TypeInfo, &v208);
@@ -9183,8 +9183,8 @@ LABEL_133:
   sub_B16F98((BattleServantConfConponent_o *)&v138->m_Items[7], v197, v107, v192, v193, v194, v195, v196);
   v198 = System_String__Format_43822456(v136, v138, 0LL);
   v199 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v200 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-  v201 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+  v200 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+  v201 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
   v206 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                   CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                   v202,
@@ -11315,7 +11315,7 @@ bool __fastcall PartyOrganizationRootComponent__InputBoostItem(
     sub_B16FFC(&Method_SingletonTemplate_BoostFunctionUtility__get_Instance__, v12);
     sub_B16FFC(&SingletonTemplate_BoostFunctionUtility__TypeInfo, v13);
     sub_B16FFC(&SoundManager_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_8688, v15);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v15);
     byte_40F7722 = 1;
   }
   battleSetupInfo = this->fields.battleSetupInfo;
@@ -11431,7 +11431,7 @@ LABEL_30:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_30;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
   return 1;
 }
 
@@ -11458,7 +11458,7 @@ bool __fastcall PartyOrganizationRootComponent__InputDeckName(
   {
     sub_B16FFC(&DeckNameInputMenu_CallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndInputDeckNameMenu__, v3);
-    sub_B16FFC(&StringLiteral_8687, v4);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v4);
     byte_40F771D = 1;
   }
   basePartyItem = this->fields.basePartyItem;
@@ -11488,7 +11488,7 @@ LABEL_8:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_8;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
   return 0;
 }
 
@@ -11895,9 +11895,9 @@ bool __fastcall PartyOrganizationRootComponent__MasterFormationScene(
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_5186, v7);
-    sub_B16FFC(&StringLiteral_6137, v8);
-    sub_B16FFC(&StringLiteral_15037, v9);
+    sub_B16FFC(&StringLiteral_5186/*"DeckId"*/, v7);
+    sub_B16FFC(&StringLiteral_6137/*"EventDeckId"*/, v8);
+    sub_B16FFC(&StringLiteral_15037/*"UserEquipId"*/, v9);
     byte_40F773D = 1;
   }
   basePartyItem = this->fields.basePartyItem;
@@ -11918,7 +11918,7 @@ bool __fastcall PartyOrganizationRootComponent__MasterFormationScene(
         goto LABEL_32;
       userEquipId = v13->fields.userEquipId;
       v15 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, method, v2, v3, v4);
-      SceneJumpInfo___ctor_29748256(v15, (System_String_o *)StringLiteral_15037, userEquipId, 0LL);
+      SceneJumpInfo___ctor_29748256(v15, (System_String_o *)StringLiteral_15037/*"UserEquipId"*/, userEquipId, 0LL);
     }
     else
     {
@@ -11942,9 +11942,9 @@ bool __fastcall PartyOrganizationRootComponent__MasterFormationScene(
       v38 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v31, v32, v33, v34);
       v15 = v38;
       if ( v29 )
-        v39 = &StringLiteral_6137;
+        v39 = &StringLiteral_6137/*"EventDeckId"*/;
       else
-        v39 = &StringLiteral_5186;
+        v39 = &StringLiteral_5186/*"DeckId"*/;
       SceneJumpInfo___ctor_29748404(v38, (System_String_o *)*v39, id, v37, v36, 0LL);
     }
     this->fields.masterFormationInfo = v15;
@@ -12492,15 +12492,15 @@ void __fastcall PartyOrganizationRootComponent__OnClickBack(
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v14);
     sub_B16FFC(&SoundManager_TypeInfo, v15);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_6357, v17);
-    sub_B16FFC(&StringLiteral_3034, v18);
-    sub_B16FFC(&StringLiteral_6356, v19);
-    sub_B16FFC(&StringLiteral_9327, v20);
-    sub_B16FFC(&StringLiteral_6355, v21);
-    sub_B16FFC(&StringLiteral_3255, v22);
-    sub_B16FFC(&StringLiteral_3258, v23);
-    sub_B16FFC(&StringLiteral_3036, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
+    sub_B16FFC(&StringLiteral_6357/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME_AP0"*/, v17);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v18);
+    sub_B16FFC(&StringLiteral_6356/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME"*/, v19);
+    sub_B16FFC(&StringLiteral_9327/*"NO_MODIFY"*/, v20);
+    sub_B16FFC(&StringLiteral_6355/*"FOLLOWER_SELECT_BACK_TITLE"*/, v21);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v22);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v23);
+    sub_B16FFC(&StringLiteral_3036/*"CLICK_BACK_QUEST"*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
     byte_40F774F = 1;
   }
   partyServantSelectMenu = this->fields.partyServantSelectMenu;
@@ -12554,7 +12554,7 @@ LABEL_37:
         myFSM = this->fields.myFSM;
         if ( !myFSM )
           goto LABEL_87;
-        v45 = &StringLiteral_3034;
+        v45 = &StringLiteral_3034/*"CLICK_BACK"*/;
       }
       else
       {
@@ -12562,7 +12562,7 @@ LABEL_37:
         this->fields.menuMode = this->fields.mainMenuMode;
         if ( !myFSM )
           goto LABEL_87;
-        v45 = &StringLiteral_3036;
+        v45 = &StringLiteral_3036/*"CLICK_BACK_QUEST"*/;
       }
 LABEL_73:
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v45, 0LL);
@@ -12641,7 +12641,7 @@ LABEL_68:
       this->fields.menuMode = 9;
       if ( !myFSM )
         goto LABEL_87;
-      v45 = &StringLiteral_9327;
+      v45 = &StringLiteral_9327/*"NO_MODIFY"*/;
       goto LABEL_73;
     case 20:
       if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -12699,7 +12699,7 @@ LABEL_18:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v42 = &StringLiteral_6357;
+          v42 = &StringLiteral_6357/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME_AP0"*/;
         }
         else
         {
@@ -12708,7 +12708,7 @@ LABEL_18:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v42 = &StringLiteral_6356;
+          v42 = &StringLiteral_6356/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME"*/;
         }
         v64 = LocalizationManager__Get((System_String_o *)*v42, 0LL);
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -12716,10 +12716,10 @@ LABEL_18:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v65 = LocalizationManager__Get((System_String_o *)StringLiteral_6355, 0LL);
+        v65 = LocalizationManager__Get((System_String_o *)StringLiteral_6355/*"FOLLOWER_SELECT_BACK_TITLE"*/, 0LL);
         v66 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-        v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+        v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
         v73 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                        CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                        v69,
@@ -12925,9 +12925,9 @@ void __fastcall PartyOrganizationRootComponent__OnMoveEnd(
     sub_B16FFC(&Method_PartyOrganizationRootComponent_OnSelectedOrganizationSwap__, v15);
     sub_B16FFC(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_5461, v18);
-    sub_B16FFC(&StringLiteral_13456, v19);
-    sub_B16FFC(&StringLiteral_13455, v20);
+    sub_B16FFC(&StringLiteral_5461/*"END_ACTION"*/, v18);
+    sub_B16FFC(&StringLiteral_13456/*"TUTORIAL_MESSAGE_FOLLOWER_ORGANIZATION2"*/, v19);
+    sub_B16FFC(&StringLiteral_13455/*"TUTORIAL_MESSAGE_FOLLOWER_ORGANIZATION1"*/, v20);
     byte_40F7746 = 1;
   }
   state = this->fields.state;
@@ -12947,7 +12947,7 @@ void __fastcall PartyOrganizationRootComponent__OnMoveEnd(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v93 = LocalizationManager__Get((System_String_o *)StringLiteral_13456, 0LL);
+        v93 = LocalizationManager__Get((System_String_o *)StringLiteral_13456/*"TUTORIAL_MESSAGE_FOLLOWER_ORGANIZATION2"*/, 0LL);
         v98 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v94, v95, v96, v97);
         System_Action___ctor(
           v98,
@@ -13096,7 +13096,7 @@ LABEL_60:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v121 = &StringLiteral_13456;
+          v121 = &StringLiteral_13456/*"TUTORIAL_MESSAGE_FOLLOWER_ORGANIZATION2"*/;
         }
         else
         {
@@ -13112,7 +13112,7 @@ LABEL_60:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v121 = &StringLiteral_13455;
+          v121 = &StringLiteral_13455/*"TUTORIAL_MESSAGE_FOLLOWER_ORGANIZATION1"*/;
         }
         v122 = LocalizationManager__Get((System_String_o *)*v121, 0LL);
         v127 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v123, v124, v125, v126);
@@ -13324,7 +13324,7 @@ LABEL_15:
         if ( myFSM )
         {
 LABEL_54:
-          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461, 0LL);
+          PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5461/*"END_ACTION"*/, 0LL);
           return;
         }
 LABEL_78:
@@ -13495,20 +13495,20 @@ void __fastcall PartyOrganizationRootComponent__OnSelectPartyList(
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v27);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v28);
     sub_B16FFC(&SoundManager_TypeInfo, v29);
-    sub_B16FFC(&StringLiteral_3046, v30);
-    sub_B16FFC(&StringLiteral_3073, v31);
-    sub_B16FFC(&StringLiteral_3055, v32);
-    sub_B16FFC(&StringLiteral_3063, v33);
-    sub_B16FFC(&StringLiteral_3052, v34);
-    sub_B16FFC(&StringLiteral_3054, v35);
-    sub_B16FFC(&StringLiteral_10317, v36);
-    sub_B16FFC(&StringLiteral_3045, v37);
-    sub_B16FFC(&StringLiteral_3041, v38);
-    sub_B16FFC(&StringLiteral_3048, v39);
-    sub_B16FFC(&StringLiteral_3047, v40);
-    sub_B16FFC(&StringLiteral_3070, v41);
-    sub_B16FFC(&StringLiteral_3049, v42);
-    sub_B16FFC(&StringLiteral_1, v43);
+    sub_B16FFC(&StringLiteral_3046/*"CLICK_DECK_COPY"*/, v30);
+    sub_B16FFC(&StringLiteral_3073/*"CLICK_SWAP"*/, v31);
+    sub_B16FFC(&StringLiteral_3055/*"CLICK_MASTER_FORMATION"*/, v32);
+    sub_B16FFC(&StringLiteral_3063/*"CLICK_QUEST"*/, v33);
+    sub_B16FFC(&StringLiteral_3052/*"CLICK_FOLLOWER"*/, v34);
+    sub_B16FFC(&StringLiteral_3054/*"CLICK_INFOMATION"*/, v35);
+    sub_B16FFC(&StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v36);
+    sub_B16FFC(&StringLiteral_3045/*"CLICK_DECIDE"*/, v37);
+    sub_B16FFC(&StringLiteral_3041/*"CLICK_CHANGE"*/, v38);
+    sub_B16FFC(&StringLiteral_3048/*"CLICK_EDIT"*/, v39);
+    sub_B16FFC(&StringLiteral_3047/*"CLICK_DECK_NAME"*/, v40);
+    sub_B16FFC(&StringLiteral_3070/*"CLICK_START"*/, v41);
+    sub_B16FFC(&StringLiteral_3049/*"CLICK_EVENT_POINT"*/, v42);
+    sub_B16FFC(&StringLiteral_1/*""*/, v43);
     byte_40F7752 = 1;
   }
   outEnt = 0LL;
@@ -13590,7 +13590,7 @@ void __fastcall PartyOrganizationRootComponent__OnSelectPartyList(
           myFSM = this->fields.myFSM;
           if ( myFSM )
           {
-            v70 = &StringLiteral_3045;
+            v70 = &StringLiteral_3045/*"CLICK_DECIDE"*/;
 LABEL_173:
             PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v70, 0LL);
             return;
@@ -13607,7 +13607,7 @@ LABEL_173:
             myFSM = this->fields.myFSM;
             if ( myFSM )
             {
-              v70 = &StringLiteral_3063;
+              v70 = &StringLiteral_3063/*"CLICK_QUEST"*/;
               goto LABEL_173;
             }
           }
@@ -13668,7 +13668,7 @@ LABEL_173:
         myFSM = this->fields.myFSM;
         if ( !myFSM )
           goto LABEL_176;
-        v70 = &StringLiteral_3047;
+        v70 = &StringLiteral_3047/*"CLICK_DECK_NAME"*/;
         goto LABEL_173;
       case 6:
         if ( (this->fields.menuKind | 2) == 3 || !this->fields.partyItem )
@@ -13680,7 +13680,7 @@ LABEL_173:
         myFSM = this->fields.myFSM;
         if ( !myFSM )
           goto LABEL_176;
-        v70 = &StringLiteral_3046;
+        v70 = &StringLiteral_3046/*"CLICK_DECK_COPY"*/;
         goto LABEL_173;
       case 7:
         if ( (this->fields.menuKind | 2) == 3 || !this->fields.partyItem )
@@ -13699,7 +13699,7 @@ LABEL_173:
         myFSM = this->fields.myFSM;
         if ( !myFSM )
           goto LABEL_176;
-        v70 = &StringLiteral_3048;
+        v70 = &StringLiteral_3048/*"CLICK_EDIT"*/;
         goto LABEL_173;
       case 8:
         if ( this->fields.mainMenuMode == 8 )
@@ -13736,7 +13736,7 @@ LABEL_173:
         this->fields.isMasterEquipEdit = 1;
         if ( !myFSM )
           goto LABEL_176;
-        v70 = &StringLiteral_3055;
+        v70 = &StringLiteral_3055/*"CLICK_MASTER_FORMATION"*/;
         goto LABEL_173;
       case 10:
         if ( !this->fields.partyItem )
@@ -13793,7 +13793,7 @@ LABEL_155:
         myFSM = this->fields.myFSM;
         if ( !myFSM )
           goto LABEL_176;
-        v70 = &StringLiteral_3054;
+        v70 = &StringLiteral_3054/*"CLICK_INFOMATION"*/;
         goto LABEL_173;
       case 12:
         if ( !this->fields.partyItem )
@@ -13805,7 +13805,7 @@ LABEL_155:
         myFSM = this->fields.myFSM;
         if ( !myFSM )
           goto LABEL_176;
-        v70 = &StringLiteral_3049;
+        v70 = &StringLiteral_3049/*"CLICK_EVENT_POINT"*/;
         goto LABEL_173;
       case 13:
         v99 = this->fields.basePartyItem;
@@ -13892,7 +13892,7 @@ LABEL_154:
               myFSM = this->fields.myFSM;
               if ( myFSM )
               {
-                v70 = &StringLiteral_3052;
+                v70 = &StringLiteral_3052/*"CLICK_FOLLOWER"*/;
                 goto LABEL_173;
               }
             }
@@ -14008,7 +14008,7 @@ LABEL_129:
         this->fields.menuMode = 10;
         if ( !myFSM )
           goto LABEL_176;
-        v70 = &StringLiteral_3041;
+        v70 = &StringLiteral_3041/*"CLICK_CHANGE"*/;
         goto LABEL_173;
       case 18:
         if ( !this->fields.partyItem )
@@ -14034,7 +14034,7 @@ LABEL_109:
         this->fields.menuMode = 11;
         if ( !myFSM )
           goto LABEL_176;
-        v70 = &StringLiteral_3073;
+        v70 = &StringLiteral_3073/*"CLICK_SWAP"*/;
         goto LABEL_173;
       default:
         return;
@@ -14227,13 +14227,13 @@ void __fastcall PartyOrganizationRootComponent__OnSelectWavePartyList(
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v30);
     sub_B16FFC(&Method_PartyOrganizationRootComponent___c__OnSelectWavePartyList_b__105_5__, v31);
     sub_B16FFC(&PartyOrganizationRootComponent___c_TypeInfo, v32);
-    sub_B16FFC(&StringLiteral_15294, v33);
-    sub_B16FFC(&StringLiteral_3055, v34);
-    sub_B16FFC(&StringLiteral_15293, v35);
-    sub_B16FFC(&StringLiteral_3054, v36);
-    sub_B16FFC(&StringLiteral_10317, v37);
-    sub_B16FFC(&StringLiteral_3070, v38);
-    sub_B16FFC(&StringLiteral_1, v39);
+    sub_B16FFC(&StringLiteral_15294/*"WAVE_BATTLE_RESTRICTION_NOT_SATISFY_TITLE"*/, v33);
+    sub_B16FFC(&StringLiteral_3055/*"CLICK_MASTER_FORMATION"*/, v34);
+    sub_B16FFC(&StringLiteral_15293/*"WAVE_BATTLE_RESTRICTION_NOT_SATISFY_MESSAGE"*/, v35);
+    sub_B16FFC(&StringLiteral_3054/*"CLICK_INFOMATION"*/, v36);
+    sub_B16FFC(&StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v37);
+    sub_B16FFC(&StringLiteral_3070/*"CLICK_START"*/, v38);
+    sub_B16FFC(&StringLiteral_1/*""*/, v39);
     byte_40F76FB = 1;
   }
   *(_QWORD *)&this->fields.selectPartyNum = (unsigned int)(wave - 1);
@@ -14332,7 +14332,7 @@ void __fastcall PartyOrganizationRootComponent__OnSelectWavePartyList(
       this->fields.isMasterEquipEdit = 1;
       if ( !myFSM )
         goto LABEL_96;
-      v110 = &StringLiteral_3055;
+      v110 = &StringLiteral_3055/*"CLICK_MASTER_FORMATION"*/;
       goto LABEL_71;
     case 2:
       waveBattleAutoOrganizationConfirmDialog = (UnityEngine_Object_o *)this->fields.waveBattleAutoOrganizationConfirmDialog;
@@ -14444,7 +14444,7 @@ LABEL_88:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_96;
-      v110 = &StringLiteral_3054;
+      v110 = &StringLiteral_3054/*"CLICK_INFOMATION"*/;
       goto LABEL_71;
     case 5:
       waveBattleDropAutoSellDialog = this->fields.waveBattleDropAutoSellDialog;
@@ -14476,8 +14476,8 @@ LABEL_88:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v129 = LocalizationManager__Get((System_String_o *)StringLiteral_15294, 0LL);
-        v130 = LocalizationManager__Get((System_String_o *)StringLiteral_15293, 0LL);
+        v129 = LocalizationManager__Get((System_String_o *)StringLiteral_15294/*"WAVE_BATTLE_RESTRICTION_NOT_SATISFY_TITLE"*/, 0LL);
+        v130 = LocalizationManager__Get((System_String_o *)StringLiteral_15293/*"WAVE_BATTLE_RESTRICTION_NOT_SATISFY_MESSAGE"*/, 0LL);
         v135 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         v136 = PartyOrganizationRootComponent___c_TypeInfo;
         if ( (BYTE3(PartyOrganizationRootComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -14539,7 +14539,7 @@ LABEL_88:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v152 = LocalizationManager__Get((System_String_o *)StringLiteral_10317, 0LL);
+        v152 = LocalizationManager__Get((System_String_o *)StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, 0LL);
         v157 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v153, v154, v155, v156);
         System_Action___ctor(
           v157,
@@ -14550,7 +14550,7 @@ LABEL_88:
         {
           CommonUI__OpenNotificationDialog(
             v151,
-            (System_String_o *)StringLiteral_1,
+            (System_String_o *)StringLiteral_1/*""*/,
             v152,
             v157,
             -1,
@@ -14573,7 +14573,7 @@ LABEL_69:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_96;
-      v110 = &StringLiteral_3070;
+      v110 = &StringLiteral_3070/*"CLICK_START"*/;
 LABEL_71:
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v110, 0LL);
       return;
@@ -14771,11 +14771,11 @@ void __fastcall PartyOrganizationRootComponent__OnSelectedOrganizationChange(
     sub_B16FFC(&SoundManager_TypeInfo, v17);
     sub_B16FFC(&Method_PartyOrganizationRootComponent___c__DisplayClass235_0__OnSelectedOrganizationChange_b__0__, v18);
     sub_B16FFC(&PartyOrganizationRootComponent___c__DisplayClass235_0_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_3054, v20);
-    sub_B16FFC(&StringLiteral_3045, v21);
-    sub_B16FFC(&StringLiteral_3034, v22);
-    sub_B16FFC(&StringLiteral_3064, v23);
-    sub_B16FFC(&StringLiteral_3049, v24);
+    sub_B16FFC(&StringLiteral_3054/*"CLICK_INFOMATION"*/, v20);
+    sub_B16FFC(&StringLiteral_3045/*"CLICK_DECIDE"*/, v21);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v22);
+    sub_B16FFC(&StringLiteral_3064/*"CLICK_REMOVE"*/, v23);
+    sub_B16FFC(&StringLiteral_3049/*"CLICK_EVENT_POINT"*/, v24);
     byte_40F776B = 1;
   }
   v25 = sub_B170CC(
@@ -14800,31 +14800,31 @@ void __fastcall PartyOrganizationRootComponent__OnSelectedOrganizationChange(
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_69;
-      v34 = &StringLiteral_3034;
+      v34 = &StringLiteral_3034/*"CLICK_BACK"*/;
       goto LABEL_15;
     case 1:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_69;
-      v34 = &StringLiteral_3045;
+      v34 = &StringLiteral_3045/*"CLICK_DECIDE"*/;
       goto LABEL_15;
     case 2:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_69;
-      v34 = &StringLiteral_3064;
+      v34 = &StringLiteral_3064/*"CLICK_REMOVE"*/;
       goto LABEL_15;
     case 3:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_69;
-      v34 = &StringLiteral_3054;
+      v34 = &StringLiteral_3054/*"CLICK_INFOMATION"*/;
       goto LABEL_15;
     case 4:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_69;
-      v34 = &StringLiteral_3049;
+      v34 = &StringLiteral_3049/*"CLICK_EVENT_POINT"*/;
 LABEL_15:
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v34, 0LL);
       return;
@@ -15264,12 +15264,12 @@ void __fastcall PartyOrganizationRootComponent__OnSelectedOrganizationSwap(
     sub_B16FFC(&SoundManager_TypeInfo, v18);
     sub_B16FFC(&Method_PartyOrganizationRootComponent___c__DisplayClass242_0__OnSelectedOrganizationSwap_b__0__, v19);
     sub_B16FFC(&PartyOrganizationRootComponent___c__DisplayClass242_0_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_3054, v21);
-    sub_B16FFC(&StringLiteral_3045, v22);
-    sub_B16FFC(&StringLiteral_3034, v23);
-    sub_B16FFC(&StringLiteral_9327, v24);
-    sub_B16FFC(&StringLiteral_3064, v25);
-    sub_B16FFC(&StringLiteral_3049, v26);
+    sub_B16FFC(&StringLiteral_3054/*"CLICK_INFOMATION"*/, v21);
+    sub_B16FFC(&StringLiteral_3045/*"CLICK_DECIDE"*/, v22);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v23);
+    sub_B16FFC(&StringLiteral_9327/*"NO_MODIFY"*/, v24);
+    sub_B16FFC(&StringLiteral_3064/*"CLICK_REMOVE"*/, v25);
+    sub_B16FFC(&StringLiteral_3049/*"CLICK_EVENT_POINT"*/, v26);
     byte_40F7770 = 1;
   }
   v27 = sub_B170CC(
@@ -15293,7 +15293,7 @@ void __fastcall PartyOrganizationRootComponent__OnSelectedOrganizationSwap(
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_76;
-      v36 = &StringLiteral_3034;
+      v36 = &StringLiteral_3034/*"CLICK_BACK"*/;
       goto LABEL_65;
     case 1:
       partyItem = this->fields.partyItem;
@@ -15327,7 +15327,7 @@ LABEL_61:
           myFSM = this->fields.myFSM;
           if ( myFSM )
           {
-            v36 = &StringLiteral_9327;
+            v36 = &StringLiteral_9327/*"NO_MODIFY"*/;
             goto LABEL_65;
           }
         }
@@ -15366,7 +15366,7 @@ LABEL_47:
               myFSM = this->fields.myFSM;
               if ( myFSM )
               {
-                v36 = &StringLiteral_3045;
+                v36 = &StringLiteral_3045/*"CLICK_DECIDE"*/;
 LABEL_65:
                 PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v36, 0LL);
                 return;
@@ -15380,19 +15380,19 @@ LABEL_65:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_76;
-      v36 = &StringLiteral_3064;
+      v36 = &StringLiteral_3064/*"CLICK_REMOVE"*/;
       goto LABEL_65;
     case 3:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_76;
-      v36 = &StringLiteral_3054;
+      v36 = &StringLiteral_3054/*"CLICK_INFOMATION"*/;
       goto LABEL_65;
     case 4:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_76;
-      v36 = &StringLiteral_3049;
+      v36 = &StringLiteral_3049/*"CLICK_EVENT_POINT"*/;
       goto LABEL_65;
     case 5:
       v48 = this->fields.partyItem;
@@ -16153,9 +16153,9 @@ bool __fastcall PartyOrganizationRootComponent__QuestStartCheckOld(
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v21);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v22);
     sub_B16FFC(&SoundManager_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_10317, v24);
-    sub_B16FFC(&StringLiteral_3070, v25);
-    sub_B16FFC(&StringLiteral_1, v26);
+    sub_B16FFC(&StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v24);
+    sub_B16FFC(&StringLiteral_3070/*"CLICK_START"*/, v25);
+    sub_B16FFC(&StringLiteral_1/*""*/, v26);
     byte_40F775D = 1;
   }
   partyItem = this->fields.partyItem;
@@ -16308,7 +16308,7 @@ LABEL_192:
         myFSM = this->fields.myFSM;
         if ( !myFSM )
           goto LABEL_204;
-        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3070, 0LL);
+        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3070/*"CLICK_START"*/, 0LL);
         return 0;
       }
       v221 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -16317,7 +16317,7 @@ LABEL_192:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v222 = LocalizationManager__Get((System_String_o *)StringLiteral_10317, 0LL);
+      v222 = LocalizationManager__Get((System_String_o *)StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, 0LL);
       v227 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v223, v224, v225, v226);
       System_Action___ctor(
         v227,
@@ -16328,7 +16328,7 @@ LABEL_192:
         goto LABEL_204;
       CommonUI__OpenNotificationDialog(
         v221,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         v222,
         v227,
         -1,
@@ -17236,7 +17236,7 @@ void __fastcall PartyOrganizationRootComponent__RequestDeckCopy(
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndRequestDeckCopy__, v4);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11043, v6);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v6);
     byte_40F7733 = 1;
   }
   partyListMenu = this->fields.partyListMenu;
@@ -17252,7 +17252,7 @@ void __fastcall PartyOrganizationRootComponent__RequestDeckCopy(
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
       return;
     }
 LABEL_17:
@@ -17312,7 +17312,7 @@ void __fastcall PartyOrganizationRootComponent__RequestDeckName(
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndRequestDeckName__, v4);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11043, v6);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v6);
     byte_40F7731 = 1;
   }
   basePartyItem = this->fields.basePartyItem;
@@ -17321,7 +17321,7 @@ void __fastcall PartyOrganizationRootComponent__RequestDeckName(
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
       return;
     }
 LABEL_12:
@@ -17400,7 +17400,7 @@ void __fastcall PartyOrganizationRootComponent__RequestOrganizationChange(
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndRequestOrganizationSelect__, v6);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_11041, v9);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v9);
     byte_40F7737 = 1;
   }
   partyOrganizationChangeMenu = this->fields.partyOrganizationChangeMenu;
@@ -17473,7 +17473,7 @@ LABEL_25:
     this->fields.state = 1;
     if ( !myFSM )
       goto LABEL_27;
-    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
     return;
   }
   v29 = UserDeck;
@@ -17553,7 +17553,7 @@ void __fastcall PartyOrganizationRootComponent__RequestOrganizationSelect(
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndRequestOrganizationSelect__, v5);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_11043, v8);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v8);
     byte_40F7735 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -17624,7 +17624,7 @@ LABEL_30:
     myFSM = this->fields.myFSM;
     if ( !myFSM )
       goto LABEL_32;
-    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
     return;
   }
   this->fields.activeDeckId = id;
@@ -17704,7 +17704,7 @@ void __fastcall PartyOrganizationRootComponent__RequestOrganizationSwap(
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndRequestOrganizationSwap__, v6);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_11041, v9);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v9);
     byte_40F773A = 1;
   }
   menuKind = this->fields.menuKind;
@@ -17784,7 +17784,7 @@ LABEL_27:
     this->fields.state = 1;
     if ( !myFSM )
       goto LABEL_29;
-    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
     return;
   }
   v31 = UserDeck;
@@ -18980,9 +18980,9 @@ void __fastcall PartyOrganizationRootComponent__SelectQuest(
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v27);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v28);
     sub_B16FFC(&UserEventDeckEntity_TypeInfo, v29);
-    sub_B16FFC(&StringLiteral_20144, v30);
-    sub_B16FFC(&StringLiteral_10317, v31);
-    sub_B16FFC(&StringLiteral_1, v32);
+    sub_B16FFC(&StringLiteral_20144/*"limited_bg"*/, v30);
+    sub_B16FFC(&StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v31);
+    sub_B16FFC(&StringLiteral_1/*""*/, v32);
     byte_40F76FE = 1;
   }
   isBaseModify[0] = 0;
@@ -20224,7 +20224,7 @@ LABEL_376:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v560 = LocalizationManager__Get((System_String_o *)StringLiteral_10317, 0LL);
+                v560 = LocalizationManager__Get((System_String_o *)StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, 0LL);
                 v565 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v561, v562, v563, v564);
                 System_Action___ctor(
                   v565,
@@ -20235,7 +20235,7 @@ LABEL_376:
                 {
                   CommonUI__OpenNotificationDialog(
                     v559,
-                    (System_String_o *)StringLiteral_1,
+                    (System_String_o *)StringLiteral_1/*""*/,
                     v560,
                     v565,
                     -1,
@@ -20540,7 +20540,7 @@ LABEL_46:
     v107 = this->fields.waveBattlePartyOrganizationFixSprite;
     if ( !v107 )
       goto LABEL_405;
-    UISprite__set_spriteName(v107, (System_String_o *)StringLiteral_20144, 0LL);
+    UISprite__set_spriteName(v107, (System_String_o *)StringLiteral_20144/*"limited_bg"*/, 0LL);
     v108 = (UnityEngine_Component_o *)this->fields.partyListMenu;
     if ( !v108 )
       goto LABEL_405;
@@ -20821,16 +20821,16 @@ void __fastcall PartyOrganizationRootComponent__SelectedFriendOfferConfirm(
 
   if ( (byte_40F7774 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, isDecide);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, isDecide);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40F7774 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  v7 = &StringLiteral_8688;
+  v7 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   if ( !isDecide )
-    v7 = &StringLiteral_8687;
+    v7 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v7, 0LL);
 }
 
@@ -20849,8 +20849,8 @@ void __fastcall PartyOrganizationRootComponent__SendPlayMarkerEventForChange(
 
   if ( (byte_40F775F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3073, method);
-    sub_B16FFC(&StringLiteral_3041, v3);
+    sub_B16FFC(&StringLiteral_3073/*"CLICK_SWAP"*/, method);
+    sub_B16FFC(&StringLiteral_3041/*"CLICK_CHANGE"*/, v3);
     byte_40F775F = 1;
   }
   menuKind = this->fields.menuKind;
@@ -20868,7 +20868,7 @@ void __fastcall PartyOrganizationRootComponent__SendPlayMarkerEventForChange(
       this->fields.menuMode = 11;
       if ( myFSM )
       {
-        v8 = &StringLiteral_3073;
+        v8 = &StringLiteral_3073/*"CLICK_SWAP"*/;
         goto LABEL_14;
       }
     }
@@ -20883,7 +20883,7 @@ LABEL_15:
   this->fields.menuMode = 10;
   if ( !myFSM )
     goto LABEL_15;
-  v8 = &StringLiteral_3041;
+  v8 = &StringLiteral_3041/*"CLICK_CHANGE"*/;
 LABEL_14:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v8, 0LL);
 }
@@ -21749,7 +21749,7 @@ bool __fastcall PartyOrganizationRootComponent__ShowEventPoint(
   {
     sub_B16FFC(&PartyOrganizationEventPointMenu_CallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndShowEventPoint__, v6);
-    sub_B16FFC(&StringLiteral_8687, v7);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v7);
     byte_40F772B = 1;
   }
   if ( this->fields.basePartyItem )
@@ -21783,7 +21783,7 @@ LABEL_8:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_8;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
   return 0;
 }
 
@@ -21809,7 +21809,7 @@ bool __fastcall PartyOrganizationRootComponent__ShowInfomation(
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndShowInfomation__, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_8687, v5);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v5);
     byte_40F7728 = 1;
   }
   if ( this->fields.basePartyItem )
@@ -21832,7 +21832,7 @@ LABEL_8:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_8;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
   return 0;
 }
 
@@ -21859,7 +21859,7 @@ bool __fastcall PartyOrganizationRootComponent__ShowQuestInformation(
   {
     sub_B16FFC(&PartyOrganizationQuestInfoMenu_CallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_PartyOrganizationRootComponent_EndShowShowQuestInformation__, v3);
-    sub_B16FFC(&StringLiteral_8687, v4);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v4);
     byte_40F772E = 1;
   }
   if ( this->fields.basePartyItem )
@@ -21896,7 +21896,7 @@ LABEL_9:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_9;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
   return 0;
 }
 
@@ -22809,7 +22809,7 @@ void __fastcall PartyOrganizationRootComponent___EndConfirmCopy_b__150_0(
 
   if ( (byte_40F7786 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, method);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, method);
     byte_40F7786 = 1;
   }
   this->fields.state = this->fields.showBackupState;
@@ -22817,7 +22817,7 @@ void __fastcall PartyOrganizationRootComponent___EndConfirmCopy_b__150_0(
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
 }
 
 
@@ -22829,7 +22829,7 @@ void __fastcall PartyOrganizationRootComponent___EndInputBoostItemMenu_b__153_0(
 
   if ( (byte_40F7787 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8687, method);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, method);
     byte_40F7787 = 1;
   }
   this->fields.state = this->fields.showBackupState;
@@ -22837,7 +22837,7 @@ void __fastcall PartyOrganizationRootComponent___EndInputBoostItemMenu_b__153_0(
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
 }
 
 
@@ -22933,7 +22933,7 @@ void __fastcall PartyOrganizationRootComponent___OnClickBack_b__200_2(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v6);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_3034, v8);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v8);
     byte_40F7788 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -22954,7 +22954,7 @@ void __fastcall PartyOrganizationRootComponent___OnClickBack_b__200_2(
       myFSM = this->fields.myFSM;
       if ( myFSM )
       {
-        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034, 0LL);
+        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
         return;
       }
     }
@@ -23746,7 +23746,7 @@ void __fastcall PartyOrganizationRootComponent__beginInitialize(
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v3);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_13122, v5);
+    sub_B16FFC(&StringLiteral_13122/*"SvtEqScrollBarValue"*/, v5);
     byte_40F76F1 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
@@ -23801,7 +23801,7 @@ LABEL_14:
   if ( !v11 )
     goto LABEL_24;
   BYTE4(v11[1].fields.cQuestReleaseListP) = LODWORD(v12[1].fields.qrs) == 0;
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13122, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13122/*"SvtEqScrollBarValue"*/, 0LL);
   Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
@@ -24398,8 +24398,8 @@ void __fastcall PartyOrganizationRootComponent__beginStartUp(
     sub_B16FFC(&SoundManager_TypeInfo, v35);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v36);
     sub_B16FFC(&TutorialFlag_TypeInfo, v37);
-    sub_B16FFC(&StringLiteral_5186, v38);
-    sub_B16FFC(&StringLiteral_12206, v39);
+    sub_B16FFC(&StringLiteral_5186/*"DeckId"*/, v38);
+    sub_B16FFC(&StringLiteral_12206/*"SKIP_SETUP"*/, v39);
     byte_40F76F2 = 1;
   }
   v236 = 0LL;
@@ -24461,7 +24461,7 @@ void __fastcall PartyOrganizationRootComponent__beginStartUp(
       v107 = *(&SceneJumpInfo_TypeInfo->_2.bitflags2 + 1);
       if ( *(&data->klass->_2.bitflags2 + 1) >= (unsigned int)v107
         && (SceneJumpInfo_c *)data->klass->_2.typeHierarchy[v107 - 1] == SceneJumpInfo_TypeInfo
-        && System_String__op_Equality((System_String_o *)data[1].klass, (System_String_o *)StringLiteral_5186, 0LL) )
+        && System_String__op_Equality((System_String_o *)data[1].klass, (System_String_o *)StringLiteral_5186/*"DeckId"*/, 0LL) )
       {
         v108 = *(&SceneJumpInfo_TypeInfo->_2.bitflags2 + 1);
         if ( *(&data->klass->_2.bitflags2 + 1) < (unsigned int)v108
@@ -24809,7 +24809,7 @@ LABEL_91:
   if ( v157->fields.isSupportOnlyForceBattle )
   {
 LABEL_112:
-    SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12206, 0LL);
+    SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12206/*"SKIP_SETUP"*/, 0LL);
     return;
   }
   if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -25310,7 +25310,7 @@ bool __fastcall PartyOrganizationRootComponent__SetWaveBattleOrganizationSwap_d_
   if ( (byte_40F838B & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_WaitForEndOfFrame_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_11043, v6);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v6);
     byte_40F838B = 1;
   }
   _1__state = this->fields.__1__state;
@@ -25414,7 +25414,7 @@ LABEL_31:
             myFSM = _4__this->fields.myFSM;
             if ( myFSM )
             {
-              PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+              PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
               return 0;
             }
           }
@@ -25615,8 +25615,8 @@ void __fastcall PartyOrganizationRootComponent___c__DisplayClass147_0___EndInput
 
   if ( (byte_40F8381 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, method);
-    sub_B16FFC(&StringLiteral_8687, v3);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, method);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v3);
     byte_40F8381 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -25628,9 +25628,9 @@ void __fastcall PartyOrganizationRootComponent___c__DisplayClass147_0___EndInput
     sub_B170D4();
   }
   if ( this->fields.isDecide )
-    v8 = &StringLiteral_8688;
+    v8 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   else
-    v8 = &StringLiteral_8687;
+    v8 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v8, 0LL);
 }
 
@@ -25710,7 +25710,7 @@ void __fastcall PartyOrganizationRootComponent___c__DisplayClass198_0___DispWave
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_20144, v7);
+    sub_B16FFC(&StringLiteral_20144/*"limited_bg"*/, v7);
     byte_40F8382 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -25887,7 +25887,7 @@ LABEL_58:
 LABEL_16:
     sub_B170D4();
   }
-  UISprite__set_spriteName(v57, (System_String_o *)StringLiteral_20144, 0LL);
+  UISprite__set_spriteName(v57, (System_String_o *)StringLiteral_20144/*"limited_bg"*/, 0LL);
 }
 
 
@@ -25929,7 +25929,7 @@ void __fastcall PartyOrganizationRootComponent___c__DisplayClass202_0___CtrlMySe
   {
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, *(_QWORD *)&buttonResult);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_3052, v6);
+    sub_B16FFC(&StringLiteral_3052/*"CLICK_FOLLOWER"*/, v6);
     byte_40F8383 = 1;
   }
   if ( buttonResult )
@@ -25974,7 +25974,7 @@ void __fastcall PartyOrganizationRootComponent___c__DisplayClass202_0___CtrlMySe
       myFSM = v22->fields.myFSM;
       if ( !myFSM )
         goto LABEL_30;
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3052, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3052/*"CLICK_FOLLOWER"*/, 0LL);
     }
     else if ( buttonResult == 2 )
     {

@@ -202,7 +202,7 @@ void __fastcall BonusSelectSummonMsgInfo__SetBase(
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v17);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_3297, v19);
+    sub_B16FFC(&StringLiteral_3297/*"CONFIRM_BONUS_SELECT_SUMMON_INFO"*/, v19);
     byte_40FB0F9 = 1;
   }
   data = 0LL;
@@ -220,7 +220,7 @@ void __fastcall BonusSelectSummonMsgInfo__SetBase(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3297, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3297/*"CONFIRM_BONUS_SELECT_SUMMON_INFO"*/, 0LL);
   if ( !selectInfoLabel )
     goto LABEL_37;
   UILabel__set_text(selectInfoLabel, v23, 0LL);

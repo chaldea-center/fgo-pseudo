@@ -374,8 +374,8 @@ void __fastcall PartyOrganizationChangeMenu__EndOpen(PartyOrganizationChangeMenu
     sub_B16FFC(&Method_PartyOrganizationChangeMenu_EndOpenTutorialArrow__, v13);
     sub_B16FFC(&Method_PartyOrganizationChangeMenu_OnClickEmptyItem__, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_10070, v16);
-    sub_B16FFC(&StringLiteral_13461, v17);
+    sub_B16FFC(&StringLiteral_10070/*"OpenServantDetail"*/, v16);
+    sub_B16FFC(&StringLiteral_13461/*"TUTORIAL_MESSAGE_PARTY_ORGANIZATION4"*/, v17);
     byte_40FDDF1 = 1;
   }
   memset(&methoda, 0, 32);
@@ -426,7 +426,7 @@ void __fastcall PartyOrganizationChangeMenu__EndOpen(PartyOrganizationChangeMenu
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v70 = LocalizationManager__Get((System_String_o *)StringLiteral_13461, 0LL);
+        v70 = LocalizationManager__Get((System_String_o *)StringLiteral_13461/*"TUTORIAL_MESSAGE_PARTY_ORGANIZATION4"*/, 0LL);
         methodPointer = methoda.methodPointer;
         invoker_method = methoda.invoker_method;
         v73 = v70;
@@ -547,7 +547,7 @@ LABEL_50:
         v57 = (UnityEngine_Component_o *)partyOrganizationChangeObjectList->m_Items[openSelectMember];
         if ( v57 )
         {
-          UnityEngine_Component__SendMessage_40674196(v57, (System_String_o *)StringLiteral_10070, 0LL);
+          UnityEngine_Component__SendMessage_40674196(v57, (System_String_o *)StringLiteral_10070/*"OpenServantDetail"*/, 0LL);
           return;
         }
       }
@@ -647,7 +647,7 @@ bool __fastcall PartyOrganizationChangeMenu__IsHintDialog(
     sub_B16FFC(&Method_DataManager_GetMaster_QuestHintMaster___, method);
     sub_B16FFC(&Method_DataManager_GetMaster_QuestPhaseMaster___, v3);
     sub_B16FFC(&DataManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FDDF9 = 1;
   }
   entity = 0LL;
@@ -679,7 +679,7 @@ bool __fastcall PartyOrganizationChangeMenu__IsHintDialog(
       if ( v14 )
       {
         HintMessage = QuestPhaseEntity__getHintMessage(v14, 0LL);
-        return System_String__op_Inequality(HintMessage, (System_String_o *)StringLiteral_1, 0LL);
+        return System_String__op_Inequality(HintMessage, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       }
 LABEL_19:
       sub_B170D4();
@@ -1101,8 +1101,8 @@ void __fastcall PartyOrganizationChangeMenu__Open(
     sub_B16FFC(&System_Action_TypeInfo, *(_QWORD *)&kind);
     sub_B16FFC(&LocalizationManager_TypeInfo, v20);
     sub_B16FFC(&Method_PartyOrganizationChangeMenu_EndOpen__, v21);
-    sub_B16FFC(&StringLiteral_10329, v22);
-    sub_B16FFC(&StringLiteral_10353, v23);
+    sub_B16FFC(&StringLiteral_10329/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_EXPLANATION_COLOR"*/, v22);
+    sub_B16FFC(&StringLiteral_10353/*"PARTY_ORGANIZATION_SERVANT_CHANGE_EXPLANATION"*/, v23);
     byte_40FDDF0 = 1;
   }
   message = 0LL;
@@ -1186,7 +1186,7 @@ void __fastcall PartyOrganizationChangeMenu__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v76 = LocalizationManager__Get((System_String_o *)StringLiteral_10353, 0LL);
+      v76 = LocalizationManager__Get((System_String_o *)StringLiteral_10353/*"PARTY_ORGANIZATION_SERVANT_CHANGE_EXPLANATION"*/, 0LL);
       if ( !explanationLabel )
         goto LABEL_25;
       UILabel__set_text(explanationLabel, v76, 0LL);
@@ -1206,7 +1206,7 @@ void __fastcall PartyOrganizationChangeMenu__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v81 = LocalizationManager__Get((System_String_o *)StringLiteral_10329, 0LL);
+        v81 = LocalizationManager__Get((System_String_o *)StringLiteral_10329/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_EXPLANATION_COLOR"*/, 0LL);
         v82 = System_String__Concat_43743732(v81, message, 0LL);
         if ( !titleExplanationLabel )
 LABEL_25:
@@ -1515,7 +1515,7 @@ void __fastcall PartyOrganizationChangeMenu__SetupButton(
     sub_B16FFC(&FSUtility_TypeInfo, v8);
     sub_B16FFC(&PartyOrganizationChangeMenu_TypeInfo, v9);
     sub_B16FFC(&QuestInformationComponent_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_17080, v11);
+    sub_B16FFC(&StringLiteral_17080/*"buttontxt_formation_20"*/, v11);
     byte_40FDDF3 = 1;
   }
   questRestrictionInfo = this->fields.questRestrictionInfo;
@@ -1647,7 +1647,7 @@ LABEL_31:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetPartyOrganizationImage(classInfoSprite, (System_String_o *)StringLiteral_17080, 0LL);
+    AtlasManager__SetPartyOrganizationImage(classInfoSprite, (System_String_o *)StringLiteral_17080/*"buttontxt_formation_20"*/, 0LL);
   }
 }
 

@@ -343,12 +343,12 @@ bool __fastcall WarBoardOverlayEffectPerformance__CheckAnimationEnd(
     sub_B16FFC(&System_IDisposable_TypeInfo, v5);
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F85A2 = 1;
   }
   if ( !this->fields.animationPlay )
     return 1;
-  name = (System_String_o *)StringLiteral_1;
+  name = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -505,12 +505,12 @@ bool __fastcall WarBoardOverlayEffectPerformance__CheckSimpleAnimationEnd(
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v9);
     sub_B16FFC(&Method_WarBoardOverlayEffectPerformance___c__CheckSimpleAnimationEnd_b__16_0__, v10);
     sub_B16FFC(&WarBoardOverlayEffectPerformance___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F85A3 = 1;
   }
   if ( !this->fields.animationPlay )
     return 1;
-  v13 = (System_String_o *)StringLiteral_1;
+  v13 = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {

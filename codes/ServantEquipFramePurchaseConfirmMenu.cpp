@@ -142,49 +142,49 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Init(
 
   if ( (byte_40FD071 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FD071 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_15;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   infoLabel1 = this->fields.infoLabel1;
   if ( !infoLabel1 )
     goto LABEL_15;
-  UILabel__set_text(infoLabel1, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(infoLabel1, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   infoLabel2 = this->fields.infoLabel2;
   if ( !infoLabel2 )
     goto LABEL_15;
-  UILabel__set_text(infoLabel2, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(infoLabel2, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   infoLabel3 = this->fields.infoLabel3;
   if ( !infoLabel3 )
     goto LABEL_15;
-  UILabel__set_text(infoLabel3, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(infoLabel3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   numberLabel1 = this->fields.numberLabel1;
   if ( !numberLabel1 )
     goto LABEL_15;
-  UILabel__set_text(numberLabel1, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(numberLabel1, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   numberLabel2 = this->fields.numberLabel2;
   if ( !numberLabel2 )
     goto LABEL_15;
-  UILabel__set_text(numberLabel2, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(numberLabel2, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   numberLabel3 = this->fields.numberLabel3;
   if ( !numberLabel3 )
     goto LABEL_15;
-  UILabel__set_text(numberLabel3, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(numberLabel3, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v10 = this->fields.messageLabel;
   if ( !v10
-    || (UILabel__set_text(v10, (System_String_o *)StringLiteral_1, 0LL), (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(v10, (System_String_o *)StringLiteral_1/*""*/, 0LL), (decideLabel = this->fields.decideLabel) == 0LL)
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL)
-    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL) )
   {
 LABEL_15:
     sub_B170D4();
   }
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -291,8 +291,8 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__OnEnable(
   if ( (byte_40FD077 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_4203, v3);
-    sub_B16FFC(&StringLiteral_4202, v4);
+    sub_B16FFC(&StringLiteral_4203/*"ConfirmWindow/CloseButton"*/, v3);
+    sub_B16FFC(&StringLiteral_4202/*"ConfirmWindow/CancelButton"*/, v4);
     byte_40FD077 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -301,9 +301,9 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__OnEnable(
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_4202, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_4202/*"ConfirmWindow/CancelButton"*/, 0LL);
   v6 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_21111220(v6, (System_String_o *)StringLiteral_4203, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(v6, (System_String_o *)StringLiteral_4203/*"ConfirmWindow/CloseButton"*/, 0LL);
 }
 
 
@@ -486,21 +486,21 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
     sub_B16FFC(&int_TypeInfo, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_ServantEquipFramePurchaseConfirmMenu_EndOpen__, v15);
-    sub_B16FFC(&StringLiteral_11656, v16);
-    sub_B16FFC(&StringLiteral_11654, v17);
-    sub_B16FFC(&StringLiteral_11659, v18);
-    sub_B16FFC(&StringLiteral_11661, v19);
-    sub_B16FFC(&StringLiteral_11664, v20);
-    sub_B16FFC(&StringLiteral_11658, v21);
-    sub_B16FFC(&StringLiteral_11662, v22);
-    sub_B16FFC(&StringLiteral_11655, v23);
-    sub_B16FFC(&StringLiteral_11665, v24);
-    sub_B16FFC(&StringLiteral_11657, v25);
-    sub_B16FFC(&StringLiteral_11653, v26);
-    sub_B16FFC(&StringLiteral_11660, v27);
-    sub_B16FFC(&StringLiteral_11663, v28);
-    sub_B16FFC(&StringLiteral_1, v29);
-    sub_B16FFC(&StringLiteral_11666, v30);
+    sub_B16FFC(&StringLiteral_11656/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO1"*/, v16);
+    sub_B16FFC(&StringLiteral_11654/*"SERVANT_EQUIP_FRAME_PURCHASE_CLOSE"*/, v17);
+    sub_B16FFC(&StringLiteral_11659/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_INFO_NONE"*/, v18);
+    sub_B16FFC(&StringLiteral_11661/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_START"*/, v19);
+    sub_B16FFC(&StringLiteral_11664/*"SERVANT_EQUIP_FRAME_PURCHASE_REQUEST_STONE_MESSAGE"*/, v20);
+    sub_B16FFC(&StringLiteral_11658/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_END"*/, v21);
+    sub_B16FFC(&StringLiteral_11662/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO1"*/, v22);
+    sub_B16FFC(&StringLiteral_11655/*"SERVANT_EQUIP_FRAME_PURCHASE_DECIDE"*/, v23);
+    sub_B16FFC(&StringLiteral_11665/*"SERVANT_EQUIP_FRAME_PURCHASE_STONE"*/, v24);
+    sub_B16FFC(&StringLiteral_11657/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO2"*/, v25);
+    sub_B16FFC(&StringLiteral_11653/*"SERVANT_EQUIP_FRAME_PURCHASE_CANCEL"*/, v26);
+    sub_B16FFC(&StringLiteral_11660/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_MAX_FRAME"*/, v27);
+    sub_B16FFC(&StringLiteral_11663/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO2"*/, v28);
+    sub_B16FFC(&StringLiteral_1/*""*/, v29);
+    sub_B16FFC(&StringLiteral_11666/*"SERVANT_EQUIP_FRAME_PURCHASE_TITLE"*/, v30);
     byte_40FD072 = 1;
   }
   if ( !this->fields.state )
@@ -547,7 +547,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v46 = LocalizationManager__Get((System_String_o *)StringLiteral_11666, 0LL);
+      v46 = LocalizationManager__Get((System_String_o *)StringLiteral_11666/*"SERVANT_EQUIP_FRAME_PURCHASE_TITLE"*/, 0LL);
       if ( titleLabel )
       {
         UILabel__set_text(titleLabel, v46, 0LL);
@@ -567,7 +567,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v90 = LocalizationManager__Get((System_String_o *)StringLiteral_11661, 0LL);
+              v90 = LocalizationManager__Get((System_String_o *)StringLiteral_11661/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_START"*/, 0LL);
               v91 = BalanceConfig_TypeInfo;
               if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -603,12 +603,12 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                           {
                             UnityEngine_GameObject__SetActive(v99, 0, 0LL);
                             v100 = this->fields.infoLabel1;
-                            v101 = LocalizationManager__Get((System_String_o *)StringLiteral_11656, 0LL);
+                            v101 = LocalizationManager__Get((System_String_o *)StringLiteral_11656/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO1"*/, 0LL);
                             if ( v100 )
                             {
                               UILabel__set_text(v100, v101, 0LL);
                               v102 = this->fields.infoLabel2;
-                              v103 = LocalizationManager__Get((System_String_o *)StringLiteral_11657, 0LL);
+                              v103 = LocalizationManager__Get((System_String_o *)StringLiteral_11657/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO2"*/, 0LL);
                               if ( v102 )
                               {
                                 UILabel__set_text(v102, v103, 0LL);
@@ -634,7 +634,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                                           {
                                             UnityEngine_GameObject__SetActive(v109, 0, 0LL);
                                             v110 = this->fields.numberLabel1;
-                                            v111 = LocalizationManager__Get((System_String_o *)StringLiteral_11662, 0LL);
+                                            v111 = LocalizationManager__Get((System_String_o *)StringLiteral_11662/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO1"*/, 0LL);
                                             v112 = this->fields.userGameEntity;
                                             if ( v112 )
                                             {
@@ -647,7 +647,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                                                 UILabel__set_text(v110, v115, 0LL);
                                                 v116 = this->fields.numberLabel2;
                                                 v117 = LocalizationManager__Get(
-                                                         (System_String_o *)StringLiteral_11663,
+                                                         (System_String_o *)StringLiteral_11663/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO2"*/,
                                                          0LL);
                                                 v118 = this->fields.userGameEntity;
                                                 if ( v118 )
@@ -769,7 +769,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                           {
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                           }
-                          v61 = LocalizationManager__Get((System_String_o *)StringLiteral_11656, 0LL);
+                          v61 = LocalizationManager__Get((System_String_o *)StringLiteral_11656/*"SERVANT_EQUIP_FRAME_PURCHASE_INFO1"*/, 0LL);
                           if ( v60 )
                           {
                             UILabel__set_text(v60, v61, 0LL);
@@ -795,7 +795,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                                       {
                                         UnityEngine_GameObject__SetActive(v67, 1, 0LL);
                                         v68 = this->fields.numberLabel3;
-                                        v69 = LocalizationManager__Get((System_String_o *)StringLiteral_11663, 0LL);
+                                        v69 = LocalizationManager__Get((System_String_o *)StringLiteral_11663/*"SERVANT_EQUIP_FRAME_PURCHASE_NUMBERO2"*/, 0LL);
                                         v70 = this->fields.userGameEntity;
                                         if ( v70 )
                                         {
@@ -817,7 +817,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                                                 UnityEngine_GameObject__SetActive(v75, 0, 0LL);
                                                 closeLabel = this->fields.closeLabel;
                                                 v77 = LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_11654,
+                                                        (System_String_o *)StringLiteral_11654/*"SERVANT_EQUIP_FRAME_PURCHASE_CLOSE"*/,
                                                         0LL);
                                                 if ( closeLabel )
                                                 {
@@ -827,7 +827,7 @@ void __fastcall ServantEquipFramePurchaseConfirmMenu__Open(
                                                   {
                                                     UILabel__set_text(
                                                       warningLabel,
-                                                      (System_String_o *)StringLiteral_1,
+                                                      (System_String_o *)StringLiteral_1/*""*/,
                                                       0LL);
                                                     v79 = (UnityEngine_Component_o *)this->fields.decideButton;
                                                     if ( v79 )
@@ -873,7 +873,7 @@ LABEL_83:
                                                                             goto LABEL_138;
                                                                           UILabel__set_text(
                                                                             v132,
-                                                                            (System_String_o *)StringLiteral_1,
+                                                                            (System_String_o *)StringLiteral_1/*""*/,
                                                                             0LL);
                                                                           decideLabel = this->fields.decideLabel;
                                                                           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -882,14 +882,14 @@ LABEL_83:
                                                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                                           }
                                                                           v134 = LocalizationManager__Get(
-                                                                                   (System_String_o *)StringLiteral_11655,
+                                                                                   (System_String_o *)StringLiteral_11655/*"SERVANT_EQUIP_FRAME_PURCHASE_DECIDE"*/,
                                                                                    0LL);
                                                                           if ( !decideLabel )
                                                                             goto LABEL_138;
                                                                           UILabel__set_text(decideLabel, v134, 0LL);
                                                                           cancelLabel = this->fields.cancelLabel;
                                                                           v136 = LocalizationManager__Get(
-                                                                                   (System_String_o *)StringLiteral_11653,
+                                                                                   (System_String_o *)StringLiteral_11653/*"SERVANT_EQUIP_FRAME_PURCHASE_CANCEL"*/,
                                                                                    0LL);
                                                                           if ( !cancelLabel )
                                                                             goto LABEL_138;
@@ -902,21 +902,21 @@ LABEL_83:
                                                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                                           }
                                                                           v138 = LocalizationManager__Get(
-                                                                                   (System_String_o *)StringLiteral_11664,
+                                                                                   (System_String_o *)StringLiteral_11664/*"SERVANT_EQUIP_FRAME_PURCHASE_REQUEST_STONE_MESSAGE"*/,
                                                                                    0LL);
                                                                           if ( !v137 )
                                                                             goto LABEL_138;
                                                                           UILabel__set_text(v137, v138, 0LL);
                                                                           v139 = this->fields.decideLabel;
                                                                           v140 = LocalizationManager__Get(
-                                                                                   (System_String_o *)StringLiteral_11665,
+                                                                                   (System_String_o *)StringLiteral_11665/*"SERVANT_EQUIP_FRAME_PURCHASE_STONE"*/,
                                                                                    0LL);
                                                                           if ( !v139 )
                                                                             goto LABEL_138;
                                                                           UILabel__set_text(v139, v140, 0LL);
                                                                           v141 = this->fields.cancelLabel;
                                                                           v142 = LocalizationManager__Get(
-                                                                                   (System_String_o *)StringLiteral_11653,
+                                                                                   (System_String_o *)StringLiteral_11653/*"SERVANT_EQUIP_FRAME_PURCHASE_CANCEL"*/,
                                                                                    0LL);
                                                                           if ( !v141 )
                                                                             goto LABEL_138;
@@ -1004,7 +1004,7 @@ LABEL_83:
                                                                           {
                                                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                                           }
-                                                                          v156 = &StringLiteral_11658;
+                                                                          v156 = &StringLiteral_11658/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_END"*/;
                                                                           goto LABEL_119;
                                                                         case 3:
                                                                           cancelLabel = this->fields.messageLabel;
@@ -1013,7 +1013,7 @@ LABEL_83:
                                                                           {
                                                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                                           }
-                                                                          v156 = &StringLiteral_11660;
+                                                                          v156 = &StringLiteral_11660/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_MAX_FRAME"*/;
 LABEL_119:
                                                                           v157 = LocalizationManager__Get(
                                                                                    (System_String_o *)*v156,
@@ -1043,7 +1043,7 @@ LABEL_123:
                                                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                                           }
                                                                           v161 = LocalizationManager__Get(
-                                                                                   (System_String_o *)StringLiteral_11659,
+                                                                                   (System_String_o *)StringLiteral_11659/*"SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_INFO_NONE"*/,
                                                                                    0LL);
                                                                           v162 = BalanceConfig_TypeInfo;
                                                                           if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

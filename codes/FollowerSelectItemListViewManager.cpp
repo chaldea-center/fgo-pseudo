@@ -26,11 +26,11 @@ void __fastcall FollowerSelectItemListViewManager___cctor(const MethodInfo *meth
   {
     sub_B16FFC(&FollowerSelectItemListViewManager_TypeInfo, v1);
     sub_B16FFC(&ListViewSort_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_6707, v6);
+    sub_B16FFC(&StringLiteral_6707/*"FollowerSelect"*/, v6);
     byte_40FA724 = 1;
   }
   v7 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_6707, 11, 0, 0LL);
+  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_6707/*"FollowerSelect"*/, 11, 0, 0LL);
   static_fields = (BattleServantConfConponent_o *)FollowerSelectItemListViewManager_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v7;
   sub_B16F98(static_fields, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
@@ -74,9 +74,9 @@ void __fastcall FollowerSelectItemListViewManager__AdjustButton(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UISprite___, v3);
-    sub_B16FFC(&StringLiteral_16896, v4);
-    sub_B16FFC(&StringLiteral_16947, v5);
-    sub_B16FFC(&StringLiteral_17079, v6);
+    sub_B16FFC(&StringLiteral_16896/*"btn_bg_12"*/, v4);
+    sub_B16FFC(&StringLiteral_16947/*"btn_sefilter_2"*/, v5);
+    sub_B16FFC(&StringLiteral_17079/*"buttontxt_formation_19"*/, v6);
     byte_40FA6FF = 1;
   }
   changeSkillButton = (UnityEngine_Component_o *)this->fields.changeSkillButton;
@@ -90,8 +90,8 @@ void __fastcall FollowerSelectItemListViewManager__AdjustButton(
   changeSkillButtonSprite = this->fields.changeSkillButtonSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(changeSkillButtonSprite, (System_String_o *)StringLiteral_17079, 0LL);
-  AtlasManager__SetEventSprite(this->fields.bonusFilterSprite, (System_String_o *)StringLiteral_16947, 0LL);
+  AtlasManager__SetEventSprite(changeSkillButtonSprite, (System_String_o *)StringLiteral_17079/*"buttontxt_formation_19"*/, 0LL);
+  AtlasManager__SetEventSprite(this->fields.bonusFilterSprite, (System_String_o *)StringLiteral_16947/*"btn_sefilter_2"*/, 0LL);
   bonusFilterSprite = this->fields.bonusFilterSprite;
   if ( !bonusFilterSprite
     || (((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))bonusFilterSprite->klass->vtable._33_MakePixelPerfect.method)(
@@ -101,7 +101,7 @@ void __fastcall FollowerSelectItemListViewManager__AdjustButton(
     || (Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                     sortKindButton,
                                     (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UISprite___),
-        AtlasManager__SetEventSprite((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_16896, 0LL),
+        AtlasManager__SetEventSprite((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_16896/*"btn_bg_12"*/, 0LL),
         !Component_WebViewObject) )
   {
 LABEL_12:
@@ -586,9 +586,9 @@ void __fastcall FollowerSelectItemListViewManager__CreateList(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v49);
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v50);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v51);
-    sub_B16FFC(&StringLiteral_2826, v52);
-    sub_B16FFC(&StringLiteral_11842, v53);
-    sub_B16FFC(&StringLiteral_1, v54);
+    sub_B16FFC(&StringLiteral_2826/*"BonusFilterEventId"*/, v52);
+    sub_B16FFC(&StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, v53);
+    sub_B16FFC(&StringLiteral_1/*""*/, v54);
     byte_40FA701 = 1;
   }
   v377 = 0LL;
@@ -698,7 +698,7 @@ void __fastcall FollowerSelectItemListViewManager__CreateList(
   v98 = questRestrictionInfo;
   if ( v97 && EventUpValSetupInfo__get_EventId(v97, 0LL) >= 1 )
   {
-    String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_2826, 0LL);
+    String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_2826/*"BonusFilterEventId"*/, 0LL);
     if ( !String_34837456 )
       goto LABEL_302;
     v101 = String_34837456;
@@ -803,7 +803,7 @@ LABEL_20:
     bonusFilterKindLabel = v371->fields.bonusFilterKindLabel;
     if ( !bonusFilterKindLabel )
       goto LABEL_302;
-    UILabel__set_text(bonusFilterKindLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(bonusFilterKindLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   v371->fields.isRefreshBtnHide = 0;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -1822,7 +1822,7 @@ LABEL_292:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v308 = LocalizationManager__Get((System_String_o *)StringLiteral_11842, 0LL);
+  v308 = LocalizationManager__Get((System_String_o *)StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_302;
   UILabel__set_text(emptyMessageLabel, v308, 0LL);
@@ -1853,7 +1853,7 @@ void __fastcall FollowerSelectItemListViewManager__DeleteContinueData(const Meth
   if ( (byte_40FA6FA & 1) == 0 )
   {
     sub_B16FFC(&FollowerSelectItemListViewManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_6708, v2);
+    sub_B16FFC(&StringLiteral_6708/*"FollowerSelectClass"*/, v2);
     byte_40FA6FA = 1;
   }
   v3 = FollowerSelectItemListViewManager_TypeInfo;
@@ -1867,7 +1867,7 @@ void __fastcall FollowerSelectItemListViewManager__DeleteContinueData(const Meth
   if ( !supportSortInfo )
     sub_B170D4();
   ListViewSort__DeleteContinueData(supportSortInfo, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_6708, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_6708/*"FollowerSelectClass"*/, 0LL);
 }
 
 
@@ -1957,8 +1957,8 @@ void __fastcall FollowerSelectItemListViewManager__DestroyList_26086992(
     sub_B16FFC(&Method_FollowerSelectItemListViewManager_OnChangeClass__, v10);
     sub_B16FFC(&FollowerSelectItemListViewManager_TypeInfo, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_11748, v13);
-    sub_B16FFC(&StringLiteral_6708, v14);
+    sub_B16FFC(&StringLiteral_11748/*"SERVANT_SORT_BONUS_FILTER_BUTTON_TITLE"*/, v13);
+    sub_B16FFC(&StringLiteral_6708/*"FollowerSelectClass"*/, v14);
     byte_40FA707 = 1;
   }
   if ( battleSetupInfo )
@@ -2055,7 +2055,7 @@ void __fastcall FollowerSelectItemListViewManager__DestroyList_26086992(
         j_il2cpp_runtime_class_init_0(FollowerSelectItemListViewManager_TypeInfo);
         v47 = FollowerSelectItemListViewManager_TypeInfo;
       }
-      UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_6708, v47->static_fields->followerClassId, 0LL);
+      UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_6708/*"FollowerSelectClass"*/, v47->static_fields->followerClassId, 0LL);
       UnityEngine_PlayerPrefs__Save(0LL);
     }
   }
@@ -2107,7 +2107,7 @@ void __fastcall FollowerSelectItemListViewManager__DestroyList_26086992(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v65 = LocalizationManager__Get((System_String_o *)StringLiteral_11748, 0LL);
+    v65 = LocalizationManager__Get((System_String_o *)StringLiteral_11748/*"SERVANT_SORT_BONUS_FILTER_BUTTON_TITLE"*/, 0LL);
     if ( bonusFilterKindLabel )
     {
       UILabel__set_text(bonusFilterKindLabel, v65, 0LL);
@@ -2536,10 +2536,10 @@ int32_t __fastcall FollowerSelectItemListViewManager__GetPlayerPrefsFollowerClas
 {
   if ( (byte_40FA705 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6708, method);
+    sub_B16FFC(&StringLiteral_6708/*"FollowerSelectClass"*/, method);
     byte_40FA705 = 1;
   }
-  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_6708, 0, 0LL);
+  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_6708/*"FollowerSelectClass"*/, 0, 0LL);
 }
 
 
@@ -3380,7 +3380,7 @@ void __fastcall FollowerSelectItemListViewManager__OnLongPushSkill(
 
   if ( (byte_40FA711 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12578, obj);
+    sub_B16FFC(&StringLiteral_12578/*"ScrollViewEnabled"*/, obj);
     byte_40FA711 = 1;
   }
   if ( this->fields.isInput )
@@ -3403,7 +3403,7 @@ void __fastcall FollowerSelectItemListViewManager__OnLongPushSkill(
       UnityEngine_Behaviour__set_enabled(v16, 0, 0LL);
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_12578,
+        (System_String_o *)StringLiteral_12578/*"ScrollViewEnabled"*/,
         0.1,
         0LL);
     }
@@ -3802,7 +3802,7 @@ void __fastcall FollowerSelectItemListViewManager__RequestInto(
     sub_B16FFC(&Method_FollowerSelectItemListViewManager_OnMoveEnd__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_FollowerSelectItemListViewObject__get_Count__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_FollowerSelectItemListViewObject__get_Item__, v5);
-    sub_B16FFC(&StringLiteral_10004, v6);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v6);
     byte_40FA70F = 1;
   }
   ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0LL);
@@ -3847,7 +3847,7 @@ LABEL_14:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -3889,7 +3889,7 @@ void __fastcall FollowerSelectItemListViewManager__RequestListObject(
     sub_B16FFC(&Method_FollowerSelectItemListViewManager_OnMoveEnd__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_FollowerSelectItemListViewObject__GetEnumerator__, v11);
     sub_B16FFC(&Method_System_Collections_Generic_List_FollowerSelectItemListViewObject__get_Count__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FA70D = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -3904,7 +3904,7 @@ void __fastcall FollowerSelectItemListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -3974,7 +3974,7 @@ void __fastcall FollowerSelectItemListViewManager__RequestListObject_26090328(
     sub_B16FFC(&Method_FollowerSelectItemListViewManager_OnMoveEnd__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_FollowerSelectItemListViewObject__GetEnumerator__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_FollowerSelectItemListViewObject__get_Count__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FA70E = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -3989,7 +3989,7 @@ void __fastcall FollowerSelectItemListViewManager__RequestListObject_26090328(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -4177,7 +4177,7 @@ void __fastcall FollowerSelectItemListViewManager__SetClassBoardInfo(
     sub_B16FFC(&System_IDisposable_TypeInfo, v14);
     sub_B16FFC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v15);
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_17080, v17);
+    sub_B16FFC(&StringLiteral_17080/*"buttontxt_formation_20"*/, v17);
     byte_40FA700 = 1;
   }
   v18 = BalanceConfig_TypeInfo;
@@ -4198,7 +4198,7 @@ void __fastcall FollowerSelectItemListViewManager__SetClassBoardInfo(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetPartyOrganizationImage(classInfoSprite, (System_String_o *)StringLiteral_17080, 0LL);
+    AtlasManager__SetPartyOrganizationImage(classInfoSprite, (System_String_o *)StringLiteral_17080/*"buttontxt_formation_20"*/, 0LL);
   }
   classBoardMaxDictionary = this->fields.classBoardMaxDictionary;
   p_classBoardMaxDictionary = (BattleServantConfConponent_o *)&this->fields.classBoardMaxDictionary;
@@ -4538,8 +4538,8 @@ void __fastcall FollowerSelectItemListViewManager__SetFilterButtonImage(
 
   if ( (byte_40FA716 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16948, method);
-    sub_B16FFC(&StringLiteral_16947, v3);
+    sub_B16FFC(&StringLiteral_16948/*"btn_sefilter_2_on"*/, method);
+    sub_B16FFC(&StringLiteral_16947/*"btn_sefilter_2"*/, v3);
     byte_40FA716 = 1;
   }
   sort = this->fields.sort;
@@ -4550,9 +4550,9 @@ void __fastcall FollowerSelectItemListViewManager__SetFilterButtonImage(
   {
     sub_B170D4();
   }
-  v7 = (System_String_o **)&StringLiteral_16947;
+  v7 = (System_String_o **)&StringLiteral_16947/*"btn_sefilter_2"*/;
   if ( !v6 )
-    v7 = (System_String_o **)&StringLiteral_16948;
+    v7 = (System_String_o **)&StringLiteral_16948/*"btn_sefilter_2_on"*/;
   UISprite__set_spriteName(bonusFilterSprite, *v7, 0LL);
 }
 
@@ -4639,8 +4639,8 @@ void __fastcall FollowerSelectItemListViewManager__SetMode_26089480(
     sub_B16FFC(&Method_FollowerSelectItemListViewManager_OnMoveEnd__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_FollowerSelectItemListViewObject__get_Count__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_FollowerSelectItemListViewObject__get_Item__, v7);
-    sub_B16FFC(&StringLiteral_10004, v8);
-    sub_B16FFC(&StringLiteral_11393, v9);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v8);
+    sub_B16FFC(&StringLiteral_11393/*"RequestInto"*/, v9);
     byte_40FA70C = 1;
   }
   if ( mode == 3 )
@@ -4680,7 +4680,7 @@ void __fastcall FollowerSelectItemListViewManager__SetMode_26089480(
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 2, 0LL);
   if ( mode == 1 )
   {
-    v17 = &StringLiteral_11393;
+    v17 = &StringLiteral_11393/*"RequestInto"*/;
 LABEL_37:
     UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)*v17, 0.0, 0LL);
     return;
@@ -4700,7 +4700,7 @@ LABEL_37:
   if ( v24 < 1 )
   {
     this->fields.callbackCount = 1;
-    v17 = &StringLiteral_10004;
+    v17 = &StringLiteral_10004/*"OnMoveEnd"*/;
     goto LABEL_37;
   }
   this->fields.callbackCount = v24;
@@ -4907,12 +4907,12 @@ void __fastcall FollowerSelectItemListViewManager__SetSortButtonImage(
   if ( (byte_40FA71A & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_17038, v4);
-    sub_B16FFC(&StringLiteral_16995, v5);
-    sub_B16FFC(&StringLiteral_16985, v6);
-    sub_B16FFC(&StringLiteral_17002, v7);
-    sub_B16FFC(&StringLiteral_16952, v8);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v4);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v5);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v6);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v7);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v8);
     byte_40FA71A = 1;
   }
   bonusFilterKindLabel = (UnityEngine_Object_o *)this->fields.bonusFilterKindLabel;
@@ -4950,7 +4950,7 @@ void __fastcall FollowerSelectItemListViewManager__SetSortButtonImage(
         sortExplanationSprite = this->fields.sortExplanationSprite;
         if ( sortExplanationSprite )
         {
-          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
           UISprite__set_spriteName(sortExplanationSprite, *v17, 0LL);
           v18 = this->fields.sort;
           if ( v18 )
@@ -4959,8 +4959,8 @@ void __fastcall FollowerSelectItemListViewManager__SetSortButtonImage(
             if ( v19 )
             {
               isAscendingOrder = v18->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16952;
-              v22 = (System_String_o **)&StringLiteral_16955;
+              v21 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+              v22 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
 LABEL_32:
               if ( isAscendingOrder )
                 v26 = v21;
@@ -4977,7 +4977,7 @@ LABEL_32:
         v23 = this->fields.sortExplanationSprite;
         if ( v23 )
         {
-          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
           UISprite__set_spriteName(v23, *v24, 0LL);
           v25 = this->fields.sort;
           if ( v25 )
@@ -4986,8 +4986,8 @@ LABEL_32:
             if ( v19 )
             {
               isAscendingOrder = v25->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16955;
-              v22 = (System_String_o **)&StringLiteral_16952;
+              v21 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+              v22 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
               goto LABEL_32;
             }
           }
@@ -5256,8 +5256,8 @@ void __fastcall FollowerSelectItemListViewManager__UpdateRefreshButtonInfo(
     sub_B16FFC(&long_TypeInfo, v5);
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_23445, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FA71D = 1;
   }
   if ( (BYTE3(FollowerListRequest_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5331,7 +5331,7 @@ void __fastcall FollowerSelectItemListViewManager__UpdateRefreshButtonInfo(
           v42 = this->fields.refreshRemainLabel;
           if ( v42 )
           {
-            UILabel__set_text(v42, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v42, (System_String_o *)StringLiteral_1/*""*/, 0LL);
             return;
           }
         }
@@ -5410,7 +5410,7 @@ LABEL_58:
         v23 = this->fields.refreshRemainLabel;
         v43 = v11;
         v24 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v43);
-        v25 = System_String__Format((System_String_o *)StringLiteral_23445, v24, 0LL);
+        v25 = System_String__Format((System_String_o *)StringLiteral_23445/*"{0}"*/, v24, 0LL);
         if ( v23 )
         {
           UILabel__set_text(v23, v25, 0LL);

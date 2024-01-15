@@ -51,10 +51,10 @@ System_String_array *__fastcall WarBoardStageBossEntity__GetTextEffectColors(
   {
     sub_B16FFC(&char___TypeInfo, method);
     sub_B16FFC(&string___TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_22565, v4);
+    sub_B16FFC(&StringLiteral_22565/*"text_effect_colors"*/, v4);
     byte_40FBAF6 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22565, 0LL, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22565/*"text_effect_colors"*/, 0LL, 0LL);
   if ( System_String__IsNullOrEmpty(StringValue, 0LL) )
     return (System_String_array *)sub_B17014(string___TypeInfo, 0LL, v6);
   v8 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v6);

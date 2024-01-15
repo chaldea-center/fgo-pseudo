@@ -14,12 +14,12 @@ void __fastcall SoundLogger___cctor(const MethodInfo *method)
   if ( (byte_40F9CAA & 1) == 0 )
   {
     sub_B16FFC(&SoundLogger_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_1254, v8);
+    sub_B16FFC(&StringLiteral_1254/*":NG"*/, v8);
     byte_40F9CAA = 1;
   }
   static_fields = (BattleServantConfConponent_o *)SoundLogger_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_1254;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_1254;
+  v10 = (System_Int32_array **)StringLiteral_1254/*":NG"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_1254/*":NG"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -115,14 +115,14 @@ void __fastcall SoundLogger__addLog(
   if ( (byte_40F9CA3 & 1) == 0 )
   {
     sub_B16FFC(&SoundLogger_TypeInfo, info);
-    sub_B16FFC(&StringLiteral_1, v10);
-    sub_B16FFC(&StringLiteral_23517, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
+    sub_B16FFC(&StringLiteral_23517/*"{0}/{1} {2}"*/, v11);
     byte_40F9CA3 = 1;
   }
-  v12 = (System_String_o *)StringLiteral_23517;
+  v12 = (System_String_o *)StringLiteral_23517/*"{0}/{1} {2}"*/;
   if ( isValid )
   {
-    static_fields = (Il2CppObject **)&StringLiteral_1;
+    static_fields = (Il2CppObject **)&StringLiteral_1/*""*/;
   }
   else
   {
@@ -401,7 +401,7 @@ void __fastcall SoundLogger_Info___ctor(SoundLogger_Info_o *this, int32_t maxBuf
   {
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, *(_QWORD *)&maxBuff);
     sub_B16FFC(&string___TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_762, v6);
+    sub_B16FFC(&StringLiteral_762/*"--------"*/, v6);
     byte_40F7A1F = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -419,16 +419,16 @@ void __fastcall SoundLogger_Info___ctor(SoundLogger_Info_o *this, int32_t maxBuf
       buff = (unsigned int *)p_fields->buff;
       if ( !p_fields->buff )
         sub_B170D4();
-      v26 = StringLiteral_762;
-      if ( StringLiteral_762 )
+      v26 = StringLiteral_762/*"--------"*/;
+      if ( StringLiteral_762/*"--------"*/ )
       {
-        v26 = sub_B170BC(StringLiteral_762, *(_QWORD *)(*(_QWORD *)buff + 64LL));
+        v26 = sub_B170BC(StringLiteral_762/*"--------"*/, *(_QWORD *)(*(_QWORD *)buff + 64LL));
         if ( !v26 )
         {
           sub_B170F4(0LL);
           sub_B170A0();
         }
-        v27 = (System_Int32_array **)StringLiteral_762;
+        v27 = (System_Int32_array **)StringLiteral_762/*"--------"*/;
       }
       else
       {
@@ -476,14 +476,14 @@ System_String_o *__fastcall SoundLogger_Info__ToString(SoundLogger_Info_o *this,
 
   if ( (byte_40F7A20 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_26, method);
-    sub_B16FFC(&StringLiteral_80, v3);
-    sub_B16FFC(&StringLiteral_762, v4);
-    sub_B16FFC(&StringLiteral_1512, v5);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, method);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
+    sub_B16FFC(&StringLiteral_762/*"--------"*/, v4);
+    sub_B16FFC(&StringLiteral_1512/*">"*/, v5);
     byte_40F7A20 = 1;
   }
   if ( this->fields.currentIndex == -1 )
-    return (System_String_o *)StringLiteral_762;
+    return (System_String_o *)StringLiteral_762/*"--------"*/;
   sb = this->fields.sb;
   if ( !sb )
     goto LABEL_22;
@@ -499,7 +499,7 @@ System_String_o *__fastcall SoundLogger_Info__ToString(SoundLogger_Info_o *this,
       v11 = v9 < 0 ? maxNum : 0;
       if ( !v10 )
         break;
-      v12 = (System_String_o **)(v9 == currentIndex ? &StringLiteral_1512 : &StringLiteral_80);
+      v12 = (System_String_o **)(v9 == currentIndex ? &StringLiteral_1512/*">"*/ : &StringLiteral_80/*" "*/);
       appended = System_Text_StringBuilder__Append_41914240(v10, *v12, 0LL);
       buff = this->fields.buff;
       if ( !buff )
@@ -516,7 +516,7 @@ System_String_o *__fastcall SoundLogger_Info__ToString(SoundLogger_Info_o *this,
       v18 = this->fields.sb;
       if ( !v18 )
         break;
-      System_Text_StringBuilder__Append_41914240(v18, (System_String_o *)StringLiteral_26, 0LL);
+      System_Text_StringBuilder__Append_41914240(v18, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
       currentIndex = this->fields.currentIndex;
       maxNum = this->fields.maxNum;
       if ( --v9 <= currentIndex - maxNum )

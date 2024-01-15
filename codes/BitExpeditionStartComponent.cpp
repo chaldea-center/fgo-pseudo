@@ -26,19 +26,19 @@ void __fastcall BitExpeditionStartComponent___ctor(BitExpeditionStartComponent_o
 
   if ( (byte_40F9094 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16697, method);
-    sub_B16FFC(&StringLiteral_16696, v9);
-    sub_B16FFC(&StringLiteral_16640, v10);
+    sub_B16FFC(&StringLiteral_16697/*"bit_expedition_start_dog_{0}"*/, method);
+    sub_B16FFC(&StringLiteral_16696/*"bit_expedition_start"*/, v9);
+    sub_B16FFC(&StringLiteral_16640/*"bg_{0}"*/, v10);
     byte_40F9094 = 1;
   }
-  v11 = (System_Int32_array **)StringLiteral_16696;
-  this->fields.START_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_16696;
+  v11 = (System_Int32_array **)StringLiteral_16696/*"bit_expedition_start"*/;
+  this->fields.START_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_16696/*"bit_expedition_start"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.START_ANIMATION_NAME_BASE, v11, v2, v3, v4, v5, v6, v7);
-  v12 = (System_Int32_array **)StringLiteral_16697;
-  this->fields.DOG_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_16697;
+  v12 = (System_Int32_array **)StringLiteral_16697/*"bit_expedition_start_dog_{0}"*/;
+  this->fields.DOG_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_16697/*"bit_expedition_start_dog_{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.DOG_ANIMATION_NAME_BASE, v12, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Int32_array **)StringLiteral_16640;
-  this->fields.BG_IMAGE_NAME_BASE = (struct System_String_o *)StringLiteral_16640;
+  v19 = (System_Int32_array **)StringLiteral_16640/*"bg_{0}"*/;
+  this->fields.BG_IMAGE_NAME_BASE = (struct System_String_o *)StringLiteral_16640/*"bg_{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.BG_IMAGE_NAME_BASE, v19, v20, v21, v22, v23, v24, v25);
   this->fields.WAIT_TOUCH_SKIP_TIME = 0.3;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);

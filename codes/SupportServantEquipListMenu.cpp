@@ -443,7 +443,7 @@ void __fastcall SupportServantEquipListMenu__Init(SupportServantEquipListMenu_o 
   if ( (byte_40FD2AC & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_11669, v3);
+    sub_B16FFC(&StringLiteral_11669/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/, v3);
     byte_40FD2AC = 1;
   }
   supportServantEquipListViewManager = this->fields.supportServantEquipListViewManager;
@@ -456,7 +456,7 @@ void __fastcall SupportServantEquipListMenu__Init(SupportServantEquipListMenu_o 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_11669, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_11669/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/, 0LL);
   if ( !explanationLabel
     || (UILabel__set_text(explanationLabel, v6, 0LL),
         normalTabButton = (UnityEngine_Behaviour_o *)this->fields.normalTabButton,
@@ -1609,15 +1609,15 @@ void __fastcall SupportServantEquipListMenu__setModeTabKind(
   if ( (byte_40FD2B9 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&modeKind);
-    sub_B16FFC(&StringLiteral_11667, v5);
-    sub_B16FFC(&StringLiteral_17057, v6);
-    sub_B16FFC(&StringLiteral_17060, v7);
-    sub_B16FFC(&StringLiteral_11669, v8);
-    sub_B16FFC(&StringLiteral_11668, v9);
-    sub_B16FFC(&StringLiteral_17073, v10);
-    sub_B16FFC(&StringLiteral_17074, v11);
-    sub_B16FFC(&StringLiteral_17059, v12);
-    sub_B16FFC(&StringLiteral_17058, v13);
+    sub_B16FFC(&StringLiteral_11667/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/, v5);
+    sub_B16FFC(&StringLiteral_17057/*"button_allchoice_reg"*/, v6);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v7);
+    sub_B16FFC(&StringLiteral_11669/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/, v8);
+    sub_B16FFC(&StringLiteral_11668/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/, v9);
+    sub_B16FFC(&StringLiteral_17073/*"button_select_reg"*/, v10);
+    sub_B16FFC(&StringLiteral_17074/*"button_select_unreg"*/, v11);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v12);
+    sub_B16FFC(&StringLiteral_17058/*"button_allchoice_unreg"*/, v13);
     byte_40FD2B9 = 1;
   }
   if ( this->fields.tabModeKind != modeKind )
@@ -1635,7 +1635,7 @@ void __fastcall SupportServantEquipListMenu__setModeTabKind(
     normalTabSprite = this->fields.normalTabSprite;
     if ( !normalTabSprite )
       goto LABEL_42;
-    v18 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17074 : &StringLiteral_17073);
+    v18 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17074/*"button_select_unreg"*/ : &StringLiteral_17073/*"button_select_reg"*/);
     UISprite__set_spriteName(normalTabSprite, *v18, 0LL);
     lockTabButton = (UnityEngine_Behaviour_o *)this->fields.lockTabButton;
     if ( !lockTabButton )
@@ -1649,7 +1649,7 @@ void __fastcall SupportServantEquipListMenu__setModeTabKind(
     lockTabSprite = this->fields.lockTabSprite;
     if ( !lockTabSprite )
       goto LABEL_42;
-    v23 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17059 : &StringLiteral_17060);
+    v23 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17059/*"button_alllock_reg"*/ : &StringLiteral_17060/*"button_alllock_unreg"*/);
     UISprite__set_spriteName(lockTabSprite, *v23, 0LL);
     choiceTabButton = (UnityEngine_Behaviour_o *)this->fields.choiceTabButton;
     if ( !choiceTabButton )
@@ -1664,9 +1664,9 @@ void __fastcall SupportServantEquipListMenu__setModeTabKind(
     if ( !choiceTabSprite )
       goto LABEL_42;
     if ( this->fields.tabModeKind == 2 )
-      v28 = (System_String_o **)&StringLiteral_17057;
+      v28 = (System_String_o **)&StringLiteral_17057/*"button_allchoice_reg"*/;
     else
-      v28 = (System_String_o **)&StringLiteral_17058;
+      v28 = (System_String_o **)&StringLiteral_17058/*"button_allchoice_unreg"*/;
     UISprite__set_spriteName(choiceTabSprite, *v28, 0LL);
     tabModeKind = this->fields.tabModeKind;
     if ( tabModeKind == 2 )
@@ -1677,7 +1677,7 @@ void __fastcall SupportServantEquipListMenu__setModeTabKind(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v32 = &StringLiteral_11667;
+      v32 = &StringLiteral_11667/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/;
     }
     else if ( tabModeKind == 1 )
     {
@@ -1687,7 +1687,7 @@ void __fastcall SupportServantEquipListMenu__setModeTabKind(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v32 = &StringLiteral_11668;
+      v32 = &StringLiteral_11668/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/;
     }
     else
     {
@@ -1710,7 +1710,7 @@ LABEL_42:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v32 = &StringLiteral_11669;
+      v32 = &StringLiteral_11669/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/;
     }
     v33 = LocalizationManager__Get((System_String_o *)*v32, 0LL);
     if ( !explanationLabel )

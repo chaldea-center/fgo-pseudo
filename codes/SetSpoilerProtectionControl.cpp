@@ -20,8 +20,8 @@ void __fastcall SetSpoilerProtectionControl__Init(SetSpoilerProtectionControl_o 
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&OptionManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9783, v4);
-    sub_B16FFC(&StringLiteral_9784, v5);
+    sub_B16FFC(&StringLiteral_9783/*"OPTION_SPOILER_PROTECTION_INFO"*/, v4);
+    sub_B16FFC(&StringLiteral_9784/*"OPTION_SPOILER_PROTECTION_TITLE"*/, v5);
     byte_40FF31D = 1;
   }
   infoLabel = this->fields.infoLabel;
@@ -30,11 +30,11 @@ void __fastcall SetSpoilerProtectionControl__Init(SetSpoilerProtectionControl_o 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9784, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9784/*"OPTION_SPOILER_PROTECTION_TITLE"*/, 0LL);
   if ( !infoLabel
     || (UILabel__set_text(infoLabel, v7, 0LL),
         v8 = *(UILabel_o **)&this->fields.isSpoilerSetting,
-        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9783, 0LL),
+        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9783/*"OPTION_SPOILER_PROTECTION_INFO"*/, 0LL),
         !v8) )
   {
     sub_B170D4();
@@ -114,16 +114,16 @@ void __fastcall SetSpoilerProtectionControl__SetSpoilerProtectionDispValue(
 
   if ( (byte_40FF31E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40FF31E = 1;
   }
   btnTitle = this->fields.btnTitle;
   if ( !btnTitle )
     sub_B170D4();
   if ( LOBYTE(this[1].klass) )
-    v5 = &StringLiteral_16939;
+    v5 = &StringLiteral_16939/*"btn_off"*/;
   else
-    v5 = &StringLiteral_16940;
+    v5 = &StringLiteral_16940/*"btn_on"*/;
   UIButton__set_normalSprite((UIButton_o *)btnTitle, (System_String_o *)*v5, 0LL);
 }

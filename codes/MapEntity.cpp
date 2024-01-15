@@ -192,12 +192,12 @@ System_String_o *__fastcall MapEntity__GetOverwriteMapAssetId(MapEntity_o *this,
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v3);
     sub_B16FFC(&MapMaster_TypeInfo, v4);
     sub_B16FFC(&string_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FB5B5 = 1;
   }
   script = this->fields.script;
   if ( !script )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   v8 = MapMaster_TypeInfo;
   if ( (BYTE3(MapMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !MapMaster_TypeInfo->_2.cctor_finished )
   {
@@ -208,7 +208,7 @@ System_String_o *__fastcall MapEntity__GetOverwriteMapAssetId(MapEntity_o *this,
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
           (System_Xml_XmlQualifiedName_o *)v8->static_fields->SCRIPT_KEY_OVERWRITE_MAP_ASSET_ID,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   v9 = this->fields.script;
   if ( (BYTE3(MapMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !MapMaster_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MapMaster_TypeInfo);
@@ -221,7 +221,7 @@ System_String_o *__fastcall MapEntity__GetOverwriteMapAssetId(MapEntity_o *this,
   if ( result && result->klass != string_TypeInfo )
   {
     sub_B173C8(result);
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   }
   return result;
 }

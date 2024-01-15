@@ -39,10 +39,10 @@ System_Int32_array *__fastcall ServantEntity__GetAssumedEffectId(ServantEntity_o
 {
   if ( (byte_40FD052 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16437, method);
+    sub_B16FFC(&StringLiteral_16437/*"assumedEffectId"*/, method);
     byte_40FD052 = 1;
   }
-  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16437, 0LL);
+  return EntityScriptUtil__GetIntArrayDefaultEmpty(this->fields.script, (System_String_o *)StringLiteral_16437/*"assumedEffectId"*/, 0LL);
 }
 
 
@@ -328,11 +328,11 @@ int32_t __fastcall ServantEntity__GetChangeLimitVoiceFriendshpLv(ServantEntity_o
 
   if ( (byte_40FD046 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17212, method);
+    sub_B16FFC(&StringLiteral_17212/*"changeLimitVoiceInFriendshipLv"*/, method);
     byte_40FD046 = 1;
   }
   param = 0;
-  ServantEntity__checkScript_30658676(this, (System_String_o *)StringLiteral_17212, &param, v2);
+  ServantEntity__checkScript_30658676(this, (System_String_o *)StringLiteral_17212/*"changeLimitVoiceInFriendshipLv"*/, &param, v2);
   return param;
 }
 
@@ -347,9 +347,9 @@ System_String_o *__fastcall ServantEntity__GetCountFormat(ServantEntity_o *this,
   if ( (byte_40FD034 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12004, v3);
-    sub_B16FFC(&StringLiteral_5735, v4);
-    sub_B16FFC(&StringLiteral_11678, v5);
+    sub_B16FFC(&StringLiteral_12004/*"SERVANT_UNIT"*/, v3);
+    sub_B16FFC(&StringLiteral_5735/*"EXCEPT_SERVANT_UNIT"*/, v4);
+    sub_B16FFC(&StringLiteral_11678/*"SERVANT_EQUIP_UNIT"*/, v5);
     byte_40FD034 = 1;
   }
   if ( SvtType__IsServant(this->fields.type, 0LL) || SvtType__IsSvtMaterialTd(this->fields.type, 0LL) )
@@ -359,7 +359,7 @@ System_String_o *__fastcall ServantEntity__GetCountFormat(ServantEntity_o *this,
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_12004;
+    v6 = &StringLiteral_12004/*"SERVANT_UNIT"*/;
   }
   else if ( SvtType__IsServantEquip(this->fields.type, 0LL) )
   {
@@ -368,7 +368,7 @@ System_String_o *__fastcall ServantEntity__GetCountFormat(ServantEntity_o *this,
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_11678;
+    v6 = &StringLiteral_11678/*"SERVANT_EQUIP_UNIT"*/;
   }
   else
   {
@@ -377,7 +377,7 @@ System_String_o *__fastcall ServantEntity__GetCountFormat(ServantEntity_o *this,
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = &StringLiteral_5735;
+    v6 = &StringLiteral_5735/*"EXCEPT_SERVANT_UNIT"*/;
   }
   return LocalizationManager__Get((System_String_o *)*v6, 0LL);
 }
@@ -391,11 +391,11 @@ int32_t __fastcall ServantEntity__GetDefaultDeadType(ServantEntity_o *this, int3
 
   if ( (byte_40FD051 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17869, *(_QWORD *)&defType);
+    sub_B16FFC(&StringLiteral_17869/*"defaultDeadType"*/, *(_QWORD *)&defType);
     byte_40FD051 = 1;
   }
   param = 0;
-  if ( ServantEntity__checkScript_30658676(this, (System_String_o *)StringLiteral_17869, &param, v3) )
+  if ( ServantEntity__checkScript_30658676(this, (System_String_o *)StringLiteral_17869/*"defaultDeadType"*/, &param, v3) )
     return param;
   else
     return defType;
@@ -425,13 +425,13 @@ int32_t __fastcall ServantEntity__GetEventJoinNameExistSvtId(ServantEntity_o *th
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_EventServantMaster___, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FD040 = 1;
   }
   name = 0LL;
   if ( ServantEntity__GetIsEventJoin(this, method) || ServantEntity__GetIsCollectionStatusNotGet(this, v5) )
   {
-    name = (System_String_o *)StringLiteral_1;
+    name = (System_String_o *)StringLiteral_1/*""*/;
     EventNameServantId = ServantEntity__GetEventNameServantId(this, v5);
     Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
@@ -520,11 +520,11 @@ System_String_o *__fastcall ServantEntity__GetHideInAnimNodeName(ServantEntity_o
   if ( (byte_40FD047 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_7135, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_7135/*"HideInAnimNode"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FD047 = 1;
   }
-  ScriptValue = ServantEntity__GetScriptValue(this, (System_String_o *)StringLiteral_7135, v2);
+  ScriptValue = ServantEntity__GetScriptValue(this, (System_String_o *)StringLiteral_7135/*"HideInAnimNode"*/, v2);
   if ( ScriptValue )
   {
     if ( (System_String_c *)ScriptValue->klass == string_TypeInfo )
@@ -539,7 +539,7 @@ System_String_o *__fastcall ServantEntity__GetHideInAnimNodeName(ServantEntity_o
   if ( v7 )
     return v7;
   else
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -842,7 +842,7 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *__fastcall ServantEntity__Ge
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v15);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_B16FFC(&StringLiteral_1, v17);
+    sub_B16FFC(&StringLiteral_1/*""*/, v17);
     byte_40FD03E = 1;
   }
   name = 0LL;
@@ -855,7 +855,7 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *__fastcall ServantEntity__Ge
   {
     goto LABEL_15;
   }
-  name = (System_String_o *)StringLiteral_1;
+  name = (System_String_o *)StringLiteral_1/*""*/;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_66;
@@ -878,7 +878,7 @@ LABEL_15:
     {
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
     }
-    v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit((System_String_o *)StringLiteral_1, 0LL);
+    v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit((System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( (imageLimitCount & 0x80000000) == 0 )
     {
       if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1037,11 +1037,11 @@ int32_t __fastcall ServantEntity__GetOverwriteClassImageId(ServantEntity_o *this
 
   if ( (byte_40FD031 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4001, method);
+    sub_B16FFC(&StringLiteral_4001/*"ClassImageId"*/, method);
     byte_40FD031 = 1;
   }
   param = 0;
-  if ( ServantEntity__checkScript_30658676(this, (System_String_o *)StringLiteral_4001, &param, v2) )
+  if ( ServantEntity__checkScript_30658676(this, (System_String_o *)StringLiteral_4001/*"ClassImageId"*/, &param, v2) )
     return param;
   else
     return 0;
@@ -1071,12 +1071,12 @@ System_Int32_array *__fastcall ServantEntity__GetRankUpSkillIds(
     sub_B16FFC(&Method_BasicHelper_IndexValue_int____66807072, *(_QWORD *)&baseSkillId);
     sub_B16FFC(&int___TypeInfo, v5);
     sub_B16FFC(&Method_ServantEntity_GetScriptMultiArray_int___, v6);
-    sub_B16FFC(&StringLiteral_12834, v7);
+    sub_B16FFC(&StringLiteral_12834/*"SkillRankUp"*/, v7);
     byte_40FD045 = 1;
   }
   ScriptMultiArray_int = ServantEntity__GetScriptMultiArray_int_(
                            this,
-                           (System_String_o *)StringLiteral_12834,
+                           (System_String_o *)StringLiteral_12834/*"SkillRankUp"*/,
                            (const MethodInfo_19E22B8 *)Method_ServantEntity_GetScriptMultiArray_int___);
   if ( ScriptMultiArray_int )
   {
@@ -2070,10 +2070,10 @@ bool __fastcall ServantEntity__IsAdditionExpandImage(
 
   if ( (byte_40FD048 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16197, *(_QWORD *)&limitCount);
+    sub_B16FFC(&StringLiteral_16197/*"additionExpandImage"*/, *(_QWORD *)&limitCount);
     byte_40FD048 = 1;
   }
-  ScriptIntArrayParam = ServantEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_16197, method);
+  ScriptIntArrayParam = ServantEntity__getScriptIntArrayParam(this, (System_String_o *)StringLiteral_16197/*"additionExpandImage"*/, method);
   if ( ScriptIntArrayParam )
   {
     v6 = *(_QWORD *)&ScriptIntArrayParam->max_length;
@@ -2130,10 +2130,10 @@ bool __fastcall ServantEntity__IsCoinRoomCheck(ServantEntity_o *this, const Meth
 
   if ( (byte_40FD04A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17427, method);
+    sub_B16FFC(&StringLiteral_17427/*"coinRoomCheck"*/, method);
     byte_40FD04A = 1;
   }
-  return ServantEntity__checkScript(this, (System_String_o *)StringLiteral_17427, v2);
+  return ServantEntity__checkScript(this, (System_String_o *)StringLiteral_17427/*"coinRoomCheck"*/, v2);
 }
 
 
@@ -2660,10 +2660,10 @@ bool __fastcall ServantEntity__IsSvtBuffTurnExtend(ServantEntity_o *this, const 
 
   if ( (byte_40FD04B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22367, method);
+    sub_B16FFC(&StringLiteral_22367/*"svtBuffTurnExtend"*/, method);
     byte_40FD04B = 1;
   }
-  return ServantEntity__checkScript(this, (System_String_o *)StringLiteral_22367, v2);
+  return ServantEntity__checkScript(this, (System_String_o *)StringLiteral_22367/*"svtBuffTurnExtend"*/, v2);
 }
 
 
@@ -2841,10 +2841,10 @@ bool __fastcall ServantEntity__getBattleHeight(ServantEntity_o *this, float *hei
 
   if ( (byte_40FD032 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16584, height);
+    sub_B16FFC(&StringLiteral_16584/*"battleHeight"*/, height);
     byte_40FD032 = 1;
   }
-  return ServantEntity__checkScript_30658828(this, (System_String_o *)StringLiteral_16584, height, 1000.0, v3);
+  return ServantEntity__checkScript_30658828(this, (System_String_o *)StringLiteral_16584/*"battleHeight"*/, height, 1000.0, v3);
 }
 
 
@@ -2921,7 +2921,7 @@ System_String_o *__fastcall ServantEntity__getBattleName(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FD039 = 1;
   }
   entity = 0LL;
@@ -2932,7 +2932,7 @@ System_String_o *__fastcall ServantEntity__getBattleName(
   {
     goto LABEL_17;
   }
-  battleName = (System_String_o *)StringLiteral_1;
+  battleName = (System_String_o *)StringLiteral_1/*""*/;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_54;
@@ -3108,11 +3108,11 @@ int32_t __fastcall ServantEntity__getCameraActionId(ServantEntity_o *this, const
 
   if ( (byte_40FD030 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17116, method);
+    sub_B16FFC(&StringLiteral_17116/*"cameraActionId"*/, method);
     byte_40FD030 = 1;
   }
   param = 0;
-  if ( ServantEntity__checkScript_30658676(this, (System_String_o *)StringLiteral_17116, &param, v2) )
+  if ( ServantEntity__checkScript_30658676(this, (System_String_o *)StringLiteral_17116/*"cameraActionId"*/, &param, v2) )
     return param;
   else
     return 0;
@@ -3134,11 +3134,11 @@ System_String_o *__fastcall ServantEntity__getClassName(ServantEntity_o *this, c
     sub_B16FFC(&Method_DataManager_GetMasterData_ServantClassMaster___, method);
     sub_B16FFC(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__TryGetEntity__, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FD025 = 1;
   }
   entity = 0LL;
-  p_age = (System_String_o **)&StringLiteral_1;
+  p_age = (System_String_o **)&StringLiteral_1/*""*/;
   if ( !SvtType__IsServantEquip(this->fields.type, 0LL) )
   {
     Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -3332,11 +3332,11 @@ int32_t __fastcall ServantEntity__getDressId(ServantEntity_o *this, const Method
 
   if ( (byte_40FD02F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22531, method);
+    sub_B16FFC(&StringLiteral_22531/*"tdTransform"*/, method);
     byte_40FD02F = 1;
   }
   param = 0;
-  if ( ServantEntity__checkScript_30658676(this, (System_String_o *)StringLiteral_22531, &param, v2) )
+  if ( ServantEntity__checkScript_30658676(this, (System_String_o *)StringLiteral_22531/*"tdTransform"*/, &param, v2) )
     return param;
   else
     return 0;
@@ -3972,10 +3972,10 @@ bool __fastcall ServantEntity__isInvalidSkillShift(ServantEntity_o *this, const 
 
   if ( (byte_40FD033 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19808, method);
+    sub_B16FFC(&StringLiteral_19808/*"invalidSkillShift"*/, method);
     byte_40FD033 = 1;
   }
-  return ServantEntity__checkScript(this, (System_String_o *)StringLiteral_19808, v2);
+  return ServantEntity__checkScript(this, (System_String_o *)StringLiteral_19808/*"invalidSkillShift"*/, v2);
 }
 
 

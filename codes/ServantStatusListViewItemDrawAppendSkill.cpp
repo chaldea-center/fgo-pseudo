@@ -208,8 +208,8 @@ void __fastcall ServantStatusListViewItemDrawAppendSkill__SetItem(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
     sub_B16FFC(&ServantStatusListViewItemDrawAppendSkill_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_11932, v17);
-    sub_B16FFC(&StringLiteral_19613, v18);
+    sub_B16FFC(&StringLiteral_11932/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, v17);
+    sub_B16FFC(&StringLiteral_19613/*"img_txt_extraskill_title"*/, v18);
     byte_40FDE83 = 1;
   }
   titleList = 0LL;
@@ -259,7 +259,7 @@ void __fastcall ServantStatusListViewItemDrawAppendSkill__SetItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_11932, 0LL);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_11932/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, 0LL);
     if ( srcSkillObj )
     {
       UILabel__set_text((UILabel_o *)srcSkillObj, v24, 0LL);
@@ -269,7 +269,7 @@ void __fastcall ServantStatusListViewItemDrawAppendSkill__SetItem(
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      AtlasManager__SetEventSprite((UISprite_o *)explanationLabel, (System_String_o *)StringLiteral_19613, 0LL);
+      AtlasManager__SetEventSprite((UISprite_o *)explanationLabel, (System_String_o *)StringLiteral_19613/*"img_txt_extraskill_title"*/, 0LL);
       v26 = this->fields.explanationLabel;
       if ( v26 )
       {

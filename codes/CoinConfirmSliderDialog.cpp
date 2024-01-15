@@ -218,7 +218,7 @@ void __fastcall CoinConfirmSliderDialog__OnEnable(CoinConfirmSliderDialog_o *thi
   if ( (byte_40F9A10 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15422, v3);
+    sub_B16FFC(&StringLiteral_15422/*"Window/Objects/Buttons/CancelButton"*/, v3);
     byte_40F9A10 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -227,7 +227,7 @@ void __fastcall CoinConfirmSliderDialog__OnEnable(CoinConfirmSliderDialog_o *thi
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15422, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15422/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
 }
 
 
@@ -320,9 +320,9 @@ void __fastcall CoinConfirmSliderDialog__Open(
     sub_B16FFC(&int_TypeInfo, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&UIProgressBar_OnDragFinished_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_3136, v11);
-    sub_B16FFC(&StringLiteral_3137, v12);
-    sub_B16FFC(&StringLiteral_3138, v13);
+    sub_B16FFC(&StringLiteral_3136/*"COIN_ROOM_SLIDER_CONFIRM_DIALOG_DETAIL_1"*/, v11);
+    sub_B16FFC(&StringLiteral_3137/*"COIN_ROOM_SLIDER_CONFIRM_DIALOG_DETAIL_2"*/, v12);
+    sub_B16FFC(&StringLiteral_3138/*"COIN_ROOM_SLIDER_CONFIRM_DIALOG_TITLE"*/, v13);
     byte_40F9A0A = 1;
   }
   if ( !this->fields.state )
@@ -347,7 +347,7 @@ void __fastcall CoinConfirmSliderDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3138, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3138/*"COIN_ROOM_SLIDER_CONFIRM_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_19;
     UILabel__set_text(titleLabel, v22, 0LL);
@@ -358,7 +358,7 @@ void __fastcall CoinConfirmSliderDialog__Open(
       j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
     }
     v24 = CoinRoomUtility__MaxPoint((const MethodInfo *)v23);
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_3136, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_3136/*"COIN_ROOM_SLIDER_CONFIRM_DIALOG_DETAIL_1"*/, 0LL);
     detailLabel_1 = this->fields.detailLabel_1;
     v27 = v25;
     v48 = v24;
@@ -368,7 +368,7 @@ void __fastcall CoinConfirmSliderDialog__Open(
       goto LABEL_19;
     UILabel__set_text(detailLabel_1, v29, 0LL);
     detailLabel_2 = this->fields.detailLabel_2;
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3137, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3137/*"COIN_ROOM_SLIDER_CONFIRM_DIALOG_DETAIL_2"*/, 0LL);
     if ( !detailLabel_2 )
       goto LABEL_19;
     UILabel__set_text(detailLabel_2, v31, 0LL);
@@ -427,16 +427,16 @@ void __fastcall CoinConfirmSliderDialog__SetSlider(
 
   if ( (byte_40F9A0B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19559, sliderOn);
-    sub_B16FFC(&StringLiteral_19558, v5);
+    sub_B16FFC(&StringLiteral_19559/*"img_slider_thumb_locked"*/, sliderOn);
+    sub_B16FFC(&StringLiteral_19558/*"img_slider_thumb"*/, v5);
     byte_40F9A0B = 1;
   }
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_16;
-  v7 = (System_String_o **)&StringLiteral_19558;
+  v7 = (System_String_o **)&StringLiteral_19558/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v7 = (System_String_o **)&StringLiteral_19559;
+    v7 = (System_String_o **)&StringLiteral_19559/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, *v7, 0LL);
   decideButton = this->fields.decideButton;
   if ( sliderOn )

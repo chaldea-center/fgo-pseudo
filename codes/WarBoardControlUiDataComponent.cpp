@@ -14,12 +14,12 @@ void __fastcall WarBoardControlUiDataComponent___cctor(const MethodInfo *method)
   if ( (byte_40F899B & 1) == 0 )
   {
     sub_B16FFC(&WarBoardControlUiDataComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_2714, v8);
+    sub_B16FFC(&StringLiteral_2714/*"Barrier"*/, v8);
     byte_40F899B = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarBoardControlUiDataComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_2714;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2714;
+  v10 = (System_Int32_array **)StringLiteral_2714/*"Barrier"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2714/*"Barrier"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -1171,7 +1171,7 @@ void __fastcall WarBoardControlUiDataComponent__ResumeUiData(
     sub_B16FFC(&Method_WarBoardControlUiDataComponent___c__DisplayClass26_0__ResumeUiData_b__0__, v11);
     sub_B16FFC(&WarBoardControlUiDataComponent___c__DisplayClass26_0_TypeInfo, v12);
     sub_B16FFC(&WarBoardControlUiDataComponent_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_20239, v14);
+    sub_B16FFC(&StringLiteral_20239/*"loop"*/, v14);
     byte_40F898C = 1;
   }
   memset(&v56, 0, sizeof(v56));
@@ -1300,7 +1300,7 @@ LABEL_5:
             v41 = (WarBoardServantPieceBuffTurnComponent_o *)WarBoardControlUiDataComponent__PlayAnimation(
                                                                this,
                                                                (SimpleAnimation_o *)Component_srcLineSprite,
-                                                               (System_String_o *)StringLiteral_20239,
+                                                               (System_String_o *)StringLiteral_20239/*"loop"*/,
                                                                v51);
           max_length = animationObjects->max_length;
         }
@@ -2514,7 +2514,7 @@ bool __fastcall WarBoardControlUiDataComponent__PlayEndUiDataAnim_d__42__MoveNex
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v4);
     sub_B16FFC(&WarBoardControlUiDataComponent_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_18273, v6);
+    sub_B16FFC(&StringLiteral_18273/*"end"*/, v6);
     byte_40F7ACE = 1;
   }
   _1__state = this->fields.__1__state;
@@ -2534,7 +2534,7 @@ bool __fastcall WarBoardControlUiDataComponent__PlayEndUiDataAnim_d__42__MoveNex
     v10 = WarBoardControlUiDataComponent__PlayAnimation(
             _4__this,
             this->fields.animation,
-            (System_String_o *)StringLiteral_18273,
+            (System_String_o *)StringLiteral_18273/*"end"*/,
             0LL);
     this->fields._stateName_5__2 = v10;
     sub_B16F98(
@@ -2586,7 +2586,7 @@ LABEL_19:
             IsNullOrEmpty = WarBoardControlUiDataComponent__IsPlayingAnimation(
                               _4__this,
                               (SimpleAnimation_o *)Component_srcLineSprite,
-                              (System_String_o *)StringLiteral_18273,
+                              (System_String_o *)StringLiteral_18273/*"end"*/,
                               0LL);
             if ( IsNullOrEmpty )
               return 0;
@@ -2740,8 +2740,8 @@ bool __fastcall WarBoardControlUiDataComponent__PlayStartUiDataAnim_d__41__MoveN
   if ( (byte_40F7ACF & 1) == 0 )
   {
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_22174, v3);
-    sub_B16FFC(&StringLiteral_20239, v4);
+    sub_B16FFC(&StringLiteral_22174/*"start"*/, v3);
+    sub_B16FFC(&StringLiteral_20239/*"loop"*/, v4);
     byte_40F7ACF = 1;
   }
   _1__state = this->fields.__1__state;
@@ -2761,7 +2761,7 @@ bool __fastcall WarBoardControlUiDataComponent__PlayStartUiDataAnim_d__41__MoveN
     v8 = WarBoardControlUiDataComponent__PlayAnimation(
            _4__this,
            this->fields.animation,
-           (System_String_o *)StringLiteral_22174,
+           (System_String_o *)StringLiteral_22174/*"start"*/,
            0LL);
     this->fields._stateName_5__2 = v8;
     sub_B16F98(
@@ -2779,7 +2779,7 @@ LABEL_20:
       WarBoardControlUiDataComponent__PlayAnimation(
         _4__this,
         this->fields.animation,
-        (System_String_o *)StringLiteral_20239,
+        (System_String_o *)StringLiteral_20239/*"loop"*/,
         0LL);
       return 0;
     }
@@ -2947,9 +2947,9 @@ bool __fastcall WarBoardControlUiDataComponent__StartOnExistsOtherTurnAnimation_
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_22174, v5);
-    sub_B16FFC(&StringLiteral_18273, v6);
-    sub_B16FFC(&StringLiteral_20239, v7);
+    sub_B16FFC(&StringLiteral_22174/*"start"*/, v5);
+    sub_B16FFC(&StringLiteral_18273/*"end"*/, v6);
+    sub_B16FFC(&StringLiteral_20239/*"loop"*/, v7);
     byte_40F7AD0 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -3017,12 +3017,12 @@ bool __fastcall WarBoardControlUiDataComponent__StartOnExistsOtherTurnAnimation_
             && (WarBoardControlUiDataComponent__IsPlayingAnimation(
                   _4__this,
                   *p_simpleAnimation_5__2,
-                  (System_String_o *)StringLiteral_22174,
+                  (System_String_o *)StringLiteral_22174/*"start"*/,
                   0LL)
              || WarBoardControlUiDataComponent__IsPlayingAnimation(
                   _4__this,
                   *p_simpleAnimation_5__2,
-                  (System_String_o *)StringLiteral_20239,
+                  (System_String_o *)StringLiteral_20239/*"loop"*/,
                   0LL)) )
           {
             return 0;
@@ -3063,9 +3063,9 @@ LABEL_51:
           goto LABEL_59;
         UnityEngine_GameObject__SetActive(this->fields.targetObject, 1, 0LL);
         if ( this->fields.isDisp )
-          v47 = &StringLiteral_22174;
+          v47 = &StringLiteral_22174/*"start"*/;
         else
-          v47 = &StringLiteral_18273;
+          v47 = &StringLiteral_18273/*"end"*/;
         v48 = WarBoardControlUiDataComponent__PlayAnimation(
                 _4__this,
                 this->fields._simpleAnimation_5__2,
@@ -3091,7 +3091,7 @@ LABEL_42:
             WarBoardControlUiDataComponent__PlayAnimation(
               _4__this,
               this->fields._simpleAnimation_5__2,
-              (System_String_o *)StringLiteral_20239,
+              (System_String_o *)StringLiteral_20239/*"loop"*/,
               0LL);
             return 0;
           }

@@ -81,8 +81,8 @@ void __fastcall CombineCommandCardEquipmentComponent__SetIcon(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, userCommandCode);
     sub_B16FFC(&Rarity_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
-    sub_B16FFC(&StringLiteral_11582, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
+    sub_B16FFC(&StringLiteral_11582/*"SELECTED_COMMAND_CODE"*/, v13);
     byte_40F9AB1 = 1;
   }
   raritySprite = (UnityEngine_Component_o *)this->fields.raritySprite;
@@ -134,7 +134,7 @@ void __fastcall CombineCommandCardEquipmentComponent__SetIcon(
   statusInfoLabel = this->fields.statusInfoLabel;
   if ( isEquipedCommandCode )
   {
-    v28 = (System_String_o *)StringLiteral_1;
+    v28 = (System_String_o *)StringLiteral_1/*""*/;
     if ( !statusInfoLabel )
       goto LABEL_24;
     goto LABEL_22;
@@ -144,7 +144,7 @@ void __fastcall CombineCommandCardEquipmentComponent__SetIcon(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11582, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11582/*"SELECTED_COMMAND_CODE"*/, 0LL);
   if ( !statusInfoLabel )
 LABEL_24:
     sub_B170D4();

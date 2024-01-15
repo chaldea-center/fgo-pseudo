@@ -14,14 +14,14 @@ void __fastcall TitleInfoEventRaidDayComponent___cctor(const MethodInfo *method)
   if ( (byte_40FE000 & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventRaidDayComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18486, v8);
+    sub_B16FFC(&StringLiteral_18486/*"event_raid_num_"*/, v8);
     byte_40FE000 = 1;
   }
   TitleInfoEventRaidDayComponent_TypeInfo->static_fields->DEPTH_FRONT = 3;
   TitleInfoEventRaidDayComponent_TypeInfo->static_fields->DEPTH_BACK = 1;
   static_fields = TitleInfoEventRaidDayComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_18486;
-  static_fields->NUM_SPNAME_PREFIX = (struct System_String_o *)StringLiteral_18486;
+  v10 = (System_Int32_array **)StringLiteral_18486/*"event_raid_num_"*/;
+  static_fields->NUM_SPNAME_PREFIX = (struct System_String_o *)StringLiteral_18486/*"event_raid_num_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->NUM_SPNAME_PREFIX, v10, v2, v3, v4, v5, v6, v7);
 }
 

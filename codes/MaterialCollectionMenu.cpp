@@ -58,7 +58,7 @@ void __fastcall MaterialCollectionMenu__Close_30080128(
 
   if ( (byte_40FCB50 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10026, callback);
+    sub_B16FFC(&StringLiteral_10026/*"OnStartClose"*/, callback);
     byte_40FCB50 = 1;
   }
   this->fields.closeCallbackFunc = callback;
@@ -74,7 +74,7 @@ void __fastcall MaterialCollectionMenu__Close_30080128(
   this->fields.state = 4;
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10026,
+    (System_String_o *)StringLiteral_10026/*"OnStartClose"*/,
     0.1,
     0LL);
 }
@@ -696,7 +696,7 @@ void __fastcall MaterialCollectionMenu__Open(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, opened_act);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_10027, v12);
+    sub_B16FFC(&StringLiteral_10027/*"OnStartOpen"*/, v12);
     byte_40FCB4D = 1;
   }
   if ( !this->fields.state )
@@ -791,7 +791,7 @@ LABEL_16:
     MaterialCollectionServantListViewManager__SetMode_30084748(v39, 1, v38);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10027,
+      (System_String_o *)StringLiteral_10027/*"OnStartOpen"*/,
       0.5,
       0LL);
   }
@@ -934,17 +934,17 @@ void __fastcall MaterialCollectionMenu__SetTabKind(
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
     sub_B16FFC(&Method_MaterialCollectionMenu_OnSelectServant__, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_16981, v13);
-    sub_B16FFC(&StringLiteral_17020, v14);
-    sub_B16FFC(&StringLiteral_16978, v15);
-    sub_B16FFC(&StringLiteral_16896, v16);
-    sub_B16FFC(&StringLiteral_16979, v17);
-    sub_B16FFC(&StringLiteral_17021, v18);
-    sub_B16FFC(&StringLiteral_16898, v19);
-    sub_B16FFC(&StringLiteral_2960, v20);
-    sub_B16FFC(&StringLiteral_16982, v21);
-    sub_B16FFC(&StringLiteral_2961, v22);
-    sub_B16FFC(&StringLiteral_2962, v23);
+    sub_B16FFC(&StringLiteral_16981/*"btn_txt_craftessence_off"*/, v13);
+    sub_B16FFC(&StringLiteral_17020/*"btn_txt_servant_off"*/, v14);
+    sub_B16FFC(&StringLiteral_16978/*"btn_txt_cc_off"*/, v15);
+    sub_B16FFC(&StringLiteral_16896/*"btn_bg_12"*/, v16);
+    sub_B16FFC(&StringLiteral_16979/*"btn_txt_cc_on"*/, v17);
+    sub_B16FFC(&StringLiteral_17021/*"btn_txt_servant_on"*/, v18);
+    sub_B16FFC(&StringLiteral_16898/*"btn_bg_19"*/, v19);
+    sub_B16FFC(&StringLiteral_2960/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, v20);
+    sub_B16FFC(&StringLiteral_16982/*"btn_txt_craftessence_on"*/, v21);
+    sub_B16FFC(&StringLiteral_2961/*"CHARA_GRAPH_TAB_SERVANT"*/, v22);
+    sub_B16FFC(&StringLiteral_2962/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, v23);
     byte_40FCB52 = 1;
   }
   *(_QWORD *)findSum = 0LL;
@@ -1018,16 +1018,16 @@ void __fastcall MaterialCollectionMenu__SetTabKind(
   servantTabSprite = this->fields.servantTabSprite;
   if ( !servantTabSprite )
     goto LABEL_122;
-  v45 = &StringLiteral_16896;
+  v45 = &StringLiteral_16896/*"btn_bg_12"*/;
   if ( !kind )
-    v45 = &StringLiteral_16898;
+    v45 = &StringLiteral_16898/*"btn_bg_19"*/;
   UISprite__set_spriteName(servantTabSprite, (System_String_o *)*v45, 0LL);
   servantTabStrSp = this->fields.servantTabStrSp;
   if ( !servantTabStrSp )
     goto LABEL_122;
-  v47 = (System_String_o **)&StringLiteral_17020;
+  v47 = (System_String_o **)&StringLiteral_17020/*"btn_txt_servant_off"*/;
   if ( !kind )
-    v47 = (System_String_o **)&StringLiteral_17021;
+    v47 = (System_String_o **)&StringLiteral_17021/*"btn_txt_servant_on"*/;
   UISprite__set_spriteName(servantTabStrSp, *v47, 0LL);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_122;
@@ -1047,7 +1047,7 @@ void __fastcall MaterialCollectionMenu__SetTabKind(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_2961, 0LL);
+  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_2961/*"CHARA_GRAPH_TAB_SERVANT"*/, 0LL);
   v124 = findSum[0];
   v54 = j_il2cpp_value_box_0(int_TypeInfo, &v124);
   if ( !v52 )
@@ -1094,16 +1094,16 @@ void __fastcall MaterialCollectionMenu__SetTabKind(
   servantEquipTabSprite = this->fields.servantEquipTabSprite;
   if ( !servantEquipTabSprite )
     goto LABEL_122;
-  v69 = &StringLiteral_16898;
+  v69 = &StringLiteral_16898/*"btn_bg_19"*/;
   if ( kind != 1 )
-    v69 = &StringLiteral_16896;
+    v69 = &StringLiteral_16896/*"btn_bg_12"*/;
   UISprite__set_spriteName(servantEquipTabSprite, (System_String_o *)*v69, 0LL);
   servantEquipTabStrSp = this->fields.servantEquipTabStrSp;
   if ( !servantEquipTabStrSp )
     goto LABEL_122;
-  v71 = (System_String_o **)&StringLiteral_16982;
+  v71 = (System_String_o **)&StringLiteral_16982/*"btn_txt_craftessence_on"*/;
   if ( kind != 1 )
-    v71 = (System_String_o **)&StringLiteral_16981;
+    v71 = (System_String_o **)&StringLiteral_16981/*"btn_txt_craftessence_off"*/;
   UISprite__set_spriteName(servantEquipTabStrSp, *v71, 0LL);
   v72 = UserServantCollectionMaster__getCollectionList(
           MasterData_WarQuestSelectionMaster,
@@ -1119,7 +1119,7 @@ void __fastcall MaterialCollectionMenu__SetTabKind(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_2962, 0LL);
+  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_2962/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, 0LL);
   v124 = findSum[0];
   v76 = j_il2cpp_value_box_0(int_TypeInfo, &v124);
   if ( !v74 )
@@ -1165,16 +1165,16 @@ void __fastcall MaterialCollectionMenu__SetTabKind(
   commandCodeTabSprite = this->fields.commandCodeTabSprite;
   if ( !commandCodeTabSprite )
     goto LABEL_122;
-  v90 = &StringLiteral_16898;
+  v90 = &StringLiteral_16898/*"btn_bg_19"*/;
   if ( kind != 2 )
-    v90 = &StringLiteral_16896;
+    v90 = &StringLiteral_16896/*"btn_bg_12"*/;
   UISprite__set_spriteName(commandCodeTabSprite, (System_String_o *)*v90, 0LL);
   commandCodeTabStrSp = this->fields.commandCodeTabStrSp;
   if ( !commandCodeTabStrSp )
     goto LABEL_122;
-  v92 = (System_String_o **)&StringLiteral_16979;
+  v92 = (System_String_o **)&StringLiteral_16979/*"btn_txt_cc_on"*/;
   if ( kind != 2 )
-    v92 = (System_String_o **)&StringLiteral_16978;
+    v92 = (System_String_o **)&StringLiteral_16978/*"btn_txt_cc_off"*/;
   UISprite__set_spriteName(commandCodeTabStrSp, *v92, 0LL);
   if ( !v122 )
     goto LABEL_122;
@@ -1186,7 +1186,7 @@ void __fastcall MaterialCollectionMenu__SetTabKind(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_2960, 0LL);
+  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_2960/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, 0LL);
   v124 = findSum[0];
   v97 = j_il2cpp_value_box_0(int_TypeInfo, &v124);
   if ( !v95 )

@@ -34,7 +34,7 @@ void __fastcall ClassBoardSave__CheckOpenedMissionClearDialog(const MethodInfo *
     sub_B16FFC(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__Clear__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData___ctor__, v9);
     sub_B16FFC(&System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_3018, v11);
+    sub_B16FFC(&StringLiteral_3018/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v11);
     byte_40FB9D1 = 1;
   }
   if ( !ClassBoardSave_TypeInfo->static_fields->cachePlayCondOpenEffectList )
@@ -51,7 +51,7 @@ void __fastcall ClassBoardSave__CheckOpenedMissionClearDialog(const MethodInfo *
     static_fields = (BattleServantConfConponent_o *)ClassBoardSave_TypeInfo->static_fields;
     static_fields->klass = (BattleServantConfConponent_c *)v12;
     sub_B16F98(static_fields, (System_Int32_array **)v12, v14, v15, v16, v17, v18, v19);
-    if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_3018, 0LL) )
+    if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_3018/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, 0LL) )
     {
       cachePlayCondOpenEffectList = ClassBoardSave_TypeInfo->static_fields->cachePlayCondOpenEffectList;
       if ( !cachePlayCondOpenEffectList )
@@ -60,7 +60,7 @@ void __fastcall ClassBoardSave__CheckOpenedMissionClearDialog(const MethodInfo *
         (System_Collections_Generic_List_XWeaponTrail_Element__o *)cachePlayCondOpenEffectList,
         (const MethodInfo_2F260E0 *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__Clear__);
       String_34837456 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_34837456(
-                                          (System_String_o *)StringLiteral_3018,
+                                          (System_String_o *)StringLiteral_3018/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/,
                                           0LL);
       if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -205,7 +205,7 @@ bool __fastcall ClassBoardSave__IsPlayCondOpenEffect(IClassBoardLockModel_o *loc
     sub_B16FFC(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__get_Count__, v9);
     sub_B16FFC(&Method_ClassBoardSave___c__DisplayClass4_0__IsPlayCondOpenEffect_b__0__, v10);
     sub_B16FFC(&ClassBoardSave___c__DisplayClass4_0_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_3018, v12);
+    sub_B16FFC(&StringLiteral_3018/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v12);
     byte_40FB9CE = 1;
   }
   v13 = sub_B170CC(ClassBoardSave___c__DisplayClass4_0_TypeInfo, method, v2, v3, v4);
@@ -214,7 +214,7 @@ bool __fastcall ClassBoardSave__IsPlayCondOpenEffect(IClassBoardLockModel_o *loc
     goto LABEL_9;
   *(_QWORD *)(v13 + 16) = lockModel;
   sub_B16F98((BattleServantConfConponent_o *)(v13 + 16), (System_Int32_array **)lockModel, v14, v15, v16, v17, v18, v19);
-  HasKey = UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_3018, 0LL);
+  HasKey = UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_3018/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, 0LL);
   if ( !HasKey )
     return 0;
   ClassBoardSave__CheckOpenedMissionClearDialog((const MethodInfo *)HasKey);
@@ -286,7 +286,7 @@ void __fastcall ClassBoardSave__SaveOpenedMissionClearDialog(
     sub_B16FFC(&JsonManager_TypeInfo, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__AddRange__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__ToArray__, v11);
-    sub_B16FFC(&StringLiteral_3018, v12);
+    sub_B16FFC(&StringLiteral_3018/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v12);
     byte_40FB9CF = 1;
   }
   if ( locks )
@@ -352,7 +352,7 @@ LABEL_8:
         j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
       }
       v27 = JsonManager__toJson(&v26->obj, 0, 0, 0LL);
-      UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_3018, v27, 0LL);
+      UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_3018/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v27, 0LL);
     }
   }
 }

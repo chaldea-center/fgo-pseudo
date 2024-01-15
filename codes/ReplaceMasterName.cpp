@@ -35,8 +35,8 @@ System_String_o *__fastcall ReplaceMasterName__get_Tag(ReplaceMasterName_o *this
 {
   if ( (byte_40FD31F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20319, method);
+    sub_B16FFC(&StringLiteral_20319/*"masterName"*/, method);
     byte_40FD31F = 1;
   }
-  return (System_String_o *)StringLiteral_20319;
+  return (System_String_o *)StringLiteral_20319/*"masterName"*/;
 }

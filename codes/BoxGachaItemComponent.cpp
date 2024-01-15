@@ -11,13 +11,13 @@ void __fastcall BoxGachaItemComponent__Clear(BoxGachaItemComponent_o *this, cons
 
   if ( (byte_40FB449 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FB449 = 1;
   }
   itemIcon = this->fields.itemIcon;
   if ( !itemIcon || (ItemIconComponent__Clear(itemIcon, 0LL), (dataLabel = this->fields.dataLabel) == 0LL) )
     sub_B170D4();
-  UILabel__set_text(dataLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(dataLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 

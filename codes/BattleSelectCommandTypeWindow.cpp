@@ -345,8 +345,8 @@ void __fastcall BattleSelectCommandTypeWindow__SetServantData(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v12);
     sub_B16FFC(&Method_BattleSelectCommandTypeWindow___c__DisplayClass19_0__SetServantData_b__0__, v13);
     sub_B16FFC(&BattleSelectCommandTypeWindow___c__DisplayClass19_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_2420, v15);
-    sub_B16FFC(&StringLiteral_2422, v16);
+    sub_B16FFC(&StringLiteral_2420/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/, v15);
+    sub_B16FFC(&StringLiteral_2422/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/, v16);
     byte_40F7535 = 1;
   }
   commandCard = 0LL;
@@ -358,7 +358,7 @@ void __fastcall BattleSelectCommandTypeWindow__SetServantData(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2422, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2422/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/, 0LL);
   if ( !bsData )
     goto LABEL_93;
   v19 = v18;
@@ -381,7 +381,7 @@ void __fastcall BattleSelectCommandTypeWindow__SetServantData(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2420, 0LL);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2420/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/, 0LL);
     if ( !v23 )
       goto LABEL_93;
     UILabel__set_text(v23, v24, 0LL);

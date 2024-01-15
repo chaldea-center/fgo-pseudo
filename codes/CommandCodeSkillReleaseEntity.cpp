@@ -112,7 +112,7 @@ System_String_o *__fastcall CommandCodeSkillReleaseEntity__getCreatePrimarykey(
   if ( (byte_40FA5CE & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, *(_QWORD *)&num);
-    sub_B16FFC(&StringLiteral_1223, v5);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v5);
     byte_40FA5CE = 1;
   }
   v6 = (System_String_array *)sub_B17014(string___TypeInfo, 7LL, *(_QWORD *)&priority);
@@ -130,13 +130,13 @@ System_String_o *__fastcall CommandCodeSkillReleaseEntity__getCreatePrimarykey(
     goto LABEL_32;
   v6->m_Items[0] = (System_String_o *)v15;
   sub_B16F98((BattleServantConfConponent_o *)v6->m_Items, v15, v9, v10, v11, v12, v13, v14);
-  v7 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v7 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v7 = (System_String_o *)sub_B170BC(StringLiteral_1223, v6->obj.klass->_1.element_class);
+    v7 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v6->obj.klass->_1.element_class);
     if ( !v7 )
       goto LABEL_33;
-    v8 = (System_Int32_array **)StringLiteral_1223;
+    v8 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -158,13 +158,13 @@ System_String_o *__fastcall CommandCodeSkillReleaseEntity__getCreatePrimarykey(
     goto LABEL_32;
   v6->m_Items[2] = (System_String_o *)v26;
   sub_B16F98((BattleServantConfConponent_o *)&v6->m_Items[2], v26, v9, v21, v22, v23, v24, v25);
-  v7 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v7 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v7 = (System_String_o *)sub_B170BC(StringLiteral_1223, v6->obj.klass->_1.element_class);
+    v7 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v6->obj.klass->_1.element_class);
     if ( !v7 )
       goto LABEL_33;
-    v8 = (System_Int32_array **)StringLiteral_1223;
+    v8 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -186,13 +186,13 @@ System_String_o *__fastcall CommandCodeSkillReleaseEntity__getCreatePrimarykey(
     goto LABEL_32;
   v6->m_Items[4] = (System_String_o *)v37;
   sub_B16F98((BattleServantConfConponent_o *)&v6->m_Items[4], v37, v9, v32, v33, v34, v35, v36);
-  v7 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v7 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v7 = (System_String_o *)sub_B170BC(StringLiteral_1223, v6->obj.klass->_1.element_class);
+    v7 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v6->obj.klass->_1.element_class);
     if ( !v7 )
       goto LABEL_33;
-    v8 = (System_Int32_array **)StringLiteral_1223;
+    v8 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {

@@ -966,7 +966,7 @@ void __fastcall ShopSceneListViewControlHelper__SetHelpButtonEnable(
   {
     sub_B16FFC(&ShopRootConstants_TypeInfo, *(_QWORD *)&state);
     sub_B16FFC(&TutorialFlag_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FB7D3 = 1;
   }
   if ( (unsigned int)state <= 0x14 && ((1 << state) & 0x10006A) != 0 )
@@ -977,7 +977,7 @@ void __fastcall ShopSceneListViewControlHelper__SetHelpButtonEnable(
       j_il2cpp_runtime_class_init_0(ShopRootConstants_TypeInfo);
     }
     HelpSaveKey = ShopRootConstants__GetHelpSaveKey(state, *(const MethodInfo **)&state);
-    if ( System_String__op_Inequality(HelpSaveKey, (System_String_o *)StringLiteral_1, 0LL) )
+    if ( System_String__op_Inequality(HelpSaveKey, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     {
       if ( UnityEngine_PlayerPrefs__GetInt(HelpSaveKey, 0, 0LL) )
         goto LABEL_10;

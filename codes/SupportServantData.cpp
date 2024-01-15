@@ -117,15 +117,15 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
     sub_B16FFC(&long___TypeInfo, v4);
     sub_B16FFC(&string___TypeInfo, v5);
     sub_B16FFC(&UserServantLeaderEntity___TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_12439, v7);
-    sub_B16FFC(&StringLiteral_12442, v8);
-    sub_B16FFC(&StringLiteral_12437, v9);
-    sub_B16FFC(&StringLiteral_12440, v10);
-    sub_B16FFC(&StringLiteral_12443, v11);
-    sub_B16FFC(&StringLiteral_12438, v12);
-    sub_B16FFC(&StringLiteral_12436, v13);
-    sub_B16FFC(&StringLiteral_12435, v14);
-    sub_B16FFC(&StringLiteral_12441, v15);
+    sub_B16FFC(&StringLiteral_12439/*"SUPPORT_KIND_4"*/, v7);
+    sub_B16FFC(&StringLiteral_12442/*"SUPPORT_KIND_7"*/, v8);
+    sub_B16FFC(&StringLiteral_12437/*"SUPPORT_KIND_2"*/, v9);
+    sub_B16FFC(&StringLiteral_12440/*"SUPPORT_KIND_5"*/, v10);
+    sub_B16FFC(&StringLiteral_12443/*"SUPPORT_KIND_8"*/, v11);
+    sub_B16FFC(&StringLiteral_12438/*"SUPPORT_KIND_3"*/, v12);
+    sub_B16FFC(&StringLiteral_12436/*"SUPPORT_KIND_1"*/, v13);
+    sub_B16FFC(&StringLiteral_12435/*"SUPPORT_KIND_0"*/, v14);
+    sub_B16FFC(&StringLiteral_12441/*"SUPPORT_KIND_6"*/, v15);
     byte_40FD297 = 1;
   }
   v16 = BalanceConfig_TypeInfo;
@@ -201,13 +201,13 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
   if ( !v57 )
     sub_B170D4();
   v64 = (struct System_String_array *)v57;
-  v65 = StringLiteral_12435;
-  if ( StringLiteral_12435 )
+  v65 = StringLiteral_12435/*"SUPPORT_KIND_0"*/;
+  if ( StringLiteral_12435/*"SUPPORT_KIND_0"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12435, v64->obj.klass->_1.element_class);
+    v65 = sub_B170BC(StringLiteral_12435/*"SUPPORT_KIND_0"*/, v64->obj.klass->_1.element_class);
     if ( !v65 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12435;
+    v66 = (System_Int32_array **)StringLiteral_12435/*"SUPPORT_KIND_0"*/;
   }
   else
   {
@@ -217,13 +217,13 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
     goto LABEL_53;
   v64->m_Items[0] = (System_String_o *)v66;
   sub_B16F98((BattleServantConfConponent_o *)v64->m_Items, v66, v58, v59, v60, v61, v62, v63);
-  v65 = StringLiteral_12436;
-  if ( StringLiteral_12436 )
+  v65 = StringLiteral_12436/*"SUPPORT_KIND_1"*/;
+  if ( StringLiteral_12436/*"SUPPORT_KIND_1"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12436, v64->obj.klass->_1.element_class);
+    v65 = sub_B170BC(StringLiteral_12436/*"SUPPORT_KIND_1"*/, v64->obj.klass->_1.element_class);
     if ( !v65 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12436;
+    v66 = (System_Int32_array **)StringLiteral_12436/*"SUPPORT_KIND_1"*/;
   }
   else
   {
@@ -233,13 +233,13 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
     goto LABEL_53;
   v64->m_Items[1] = (System_String_o *)v66;
   sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[1], v66, v58, v67, v68, v69, v70, v71);
-  v65 = StringLiteral_12437;
-  if ( StringLiteral_12437 )
+  v65 = StringLiteral_12437/*"SUPPORT_KIND_2"*/;
+  if ( StringLiteral_12437/*"SUPPORT_KIND_2"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12437, v64->obj.klass->_1.element_class);
+    v65 = sub_B170BC(StringLiteral_12437/*"SUPPORT_KIND_2"*/, v64->obj.klass->_1.element_class);
     if ( !v65 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12437;
+    v66 = (System_Int32_array **)StringLiteral_12437/*"SUPPORT_KIND_2"*/;
   }
   else
   {
@@ -249,13 +249,13 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
     goto LABEL_53;
   v64->m_Items[2] = (System_String_o *)v66;
   sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[2], v66, v58, v72, v73, v74, v75, v76);
-  v65 = StringLiteral_12438;
-  if ( StringLiteral_12438 )
+  v65 = StringLiteral_12438/*"SUPPORT_KIND_3"*/;
+  if ( StringLiteral_12438/*"SUPPORT_KIND_3"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12438, v64->obj.klass->_1.element_class);
+    v65 = sub_B170BC(StringLiteral_12438/*"SUPPORT_KIND_3"*/, v64->obj.klass->_1.element_class);
     if ( !v65 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12438;
+    v66 = (System_Int32_array **)StringLiteral_12438/*"SUPPORT_KIND_3"*/;
   }
   else
   {
@@ -265,13 +265,13 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
     goto LABEL_53;
   v64->m_Items[3] = (System_String_o *)v66;
   sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[3], v66, v58, v77, v78, v79, v80, v81);
-  v65 = StringLiteral_12439;
-  if ( StringLiteral_12439 )
+  v65 = StringLiteral_12439/*"SUPPORT_KIND_4"*/;
+  if ( StringLiteral_12439/*"SUPPORT_KIND_4"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12439, v64->obj.klass->_1.element_class);
+    v65 = sub_B170BC(StringLiteral_12439/*"SUPPORT_KIND_4"*/, v64->obj.klass->_1.element_class);
     if ( !v65 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12439;
+    v66 = (System_Int32_array **)StringLiteral_12439/*"SUPPORT_KIND_4"*/;
   }
   else
   {
@@ -281,13 +281,13 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
     goto LABEL_53;
   v64->m_Items[4] = (System_String_o *)v66;
   sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[4], v66, v58, v82, v83, v84, v85, v86);
-  v65 = StringLiteral_12440;
-  if ( StringLiteral_12440 )
+  v65 = StringLiteral_12440/*"SUPPORT_KIND_5"*/;
+  if ( StringLiteral_12440/*"SUPPORT_KIND_5"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12440, v64->obj.klass->_1.element_class);
+    v65 = sub_B170BC(StringLiteral_12440/*"SUPPORT_KIND_5"*/, v64->obj.klass->_1.element_class);
     if ( !v65 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12440;
+    v66 = (System_Int32_array **)StringLiteral_12440/*"SUPPORT_KIND_5"*/;
   }
   else
   {
@@ -297,13 +297,13 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
     goto LABEL_53;
   v64->m_Items[5] = (System_String_o *)v66;
   sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[5], v66, v58, v87, v88, v89, v90, v91);
-  v65 = StringLiteral_12441;
-  if ( StringLiteral_12441 )
+  v65 = StringLiteral_12441/*"SUPPORT_KIND_6"*/;
+  if ( StringLiteral_12441/*"SUPPORT_KIND_6"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12441, v64->obj.klass->_1.element_class);
+    v65 = sub_B170BC(StringLiteral_12441/*"SUPPORT_KIND_6"*/, v64->obj.klass->_1.element_class);
     if ( !v65 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12441;
+    v66 = (System_Int32_array **)StringLiteral_12441/*"SUPPORT_KIND_6"*/;
   }
   else
   {
@@ -313,13 +313,13 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
     goto LABEL_53;
   v64->m_Items[6] = (System_String_o *)v66;
   sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[6], v66, v58, v92, v93, v94, v95, v96);
-  v65 = StringLiteral_12442;
-  if ( StringLiteral_12442 )
+  v65 = StringLiteral_12442/*"SUPPORT_KIND_7"*/;
+  if ( StringLiteral_12442/*"SUPPORT_KIND_7"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12442, v64->obj.klass->_1.element_class);
+    v65 = sub_B170BC(StringLiteral_12442/*"SUPPORT_KIND_7"*/, v64->obj.klass->_1.element_class);
     if ( !v65 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12442;
+    v66 = (System_Int32_array **)StringLiteral_12442/*"SUPPORT_KIND_7"*/;
   }
   else
   {
@@ -329,13 +329,13 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
     goto LABEL_53;
   v64->m_Items[7] = (System_String_o *)v66;
   sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[7], v66, v58, v97, v98, v99, v100, v101);
-  v65 = StringLiteral_12443;
-  if ( StringLiteral_12443 )
+  v65 = StringLiteral_12443/*"SUPPORT_KIND_8"*/;
+  if ( StringLiteral_12443/*"SUPPORT_KIND_8"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12443, v64->obj.klass->_1.element_class);
+    v65 = sub_B170BC(StringLiteral_12443/*"SUPPORT_KIND_8"*/, v64->obj.klass->_1.element_class);
     if ( v65 )
     {
-      v66 = (System_Int32_array **)StringLiteral_12443;
+      v66 = (System_Int32_array **)StringLiteral_12443/*"SUPPORT_KIND_8"*/;
       goto LABEL_51;
     }
 LABEL_54:
@@ -1872,7 +1872,7 @@ System_String_o *__fastcall SupportServantData__getDefaultDeckName(
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_12491, v4);
+    sub_B16FFC(&StringLiteral_12491/*"SUPPORT_SELECT_NAME_BASE"*/, v4);
     byte_40FD299 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1880,7 +1880,7 @@ System_String_o *__fastcall SupportServantData__getDefaultDeckName(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12491, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12491/*"SUPPORT_SELECT_NAME_BASE"*/, 0LL);
   deckId_k__BackingField = this->fields._deckId_k__BackingField;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &deckId_k__BackingField);
   return System_String__Format(v5, v6, 0LL);
@@ -2755,11 +2755,11 @@ System_String_o *__fastcall SupportServantData__updateCheck(
   if ( (byte_40FD2A3 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, *(_QWORD *)&classPos);
-    sub_B16FFC(&StringLiteral_739, v5);
-    sub_B16FFC(&StringLiteral_23602, v6);
-    sub_B16FFC(&StringLiteral_735, v7);
-    sub_B16FFC(&StringLiteral_738, v8);
-    this = (SupportServantData_o *)sub_B16FFC(&StringLiteral_23384, v9);
+    sub_B16FFC(&StringLiteral_739/*",\"userSvtId\":"*/, v5);
+    sub_B16FFC(&StringLiteral_23602/*"}"*/, v6);
+    sub_B16FFC(&StringLiteral_735/*",\"classId\":"*/, v7);
+    sub_B16FFC(&StringLiteral_738/*",\"userSvtEquipId\":"*/, v8);
+    this = (SupportServantData_o *)sub_B16FFC(&StringLiteral_23384/*"{\"supportDeckId\":"*/, v9);
     byte_40FD2A3 = 1;
   }
   deckId_k__BackingField = 0;
@@ -2792,13 +2792,13 @@ System_String_o *__fastcall SupportServantData__updateCheck(
   if ( !v15 )
     goto LABEL_58;
   v21 = (System_String_array *)v15;
-  this = (SupportServantData_o *)StringLiteral_23384;
-  if ( StringLiteral_23384 )
+  this = (SupportServantData_o *)StringLiteral_23384/*"{\"supportDeckId\":"*/;
+  if ( StringLiteral_23384/*"{\"supportDeckId\":"*/ )
   {
-    this = (SupportServantData_o *)sub_B170BC(StringLiteral_23384, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B170BC(StringLiteral_23384/*"{\"supportDeckId\":"*/, v21->obj.klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
-    *(_QWORD *)&classPos = StringLiteral_23384;
+    *(_QWORD *)&classPos = StringLiteral_23384/*"{\"supportDeckId\":"*/;
   }
   else
   {
@@ -2837,13 +2837,13 @@ System_String_o *__fastcall SupportServantData__updateCheck(
     v24,
     v25,
     v26);
-  this = (SupportServantData_o *)StringLiteral_735;
-  if ( StringLiteral_735 )
+  this = (SupportServantData_o *)StringLiteral_735/*",\"classId\":"*/;
+  if ( StringLiteral_735/*",\"classId\":"*/ )
   {
-    this = (SupportServantData_o *)sub_B170BC(StringLiteral_735, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B170BC(StringLiteral_735/*",\"classId\":"*/, v21->obj.klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
-    *(_QWORD *)&classPos = StringLiteral_735;
+    *(_QWORD *)&classPos = StringLiteral_735/*",\"classId\":"*/;
   }
   else
   {
@@ -2885,13 +2885,13 @@ LABEL_59:
     v35,
     v36,
     v37);
-  this = (SupportServantData_o *)StringLiteral_739;
-  if ( StringLiteral_739 )
+  this = (SupportServantData_o *)StringLiteral_739/*",\"userSvtId\":"*/;
+  if ( StringLiteral_739/*",\"userSvtId\":"*/ )
   {
-    this = (SupportServantData_o *)sub_B170BC(StringLiteral_739, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B170BC(StringLiteral_739/*",\"userSvtId\":"*/, v21->obj.klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
-    *(_QWORD *)&classPos = StringLiteral_739;
+    *(_QWORD *)&classPos = StringLiteral_739/*",\"userSvtId\":"*/;
   }
   else
   {
@@ -2934,13 +2934,13 @@ LABEL_59:
     v47,
     v48,
     v49);
-  this = (SupportServantData_o *)StringLiteral_738;
-  if ( StringLiteral_738 )
+  this = (SupportServantData_o *)StringLiteral_738/*",\"userSvtEquipId\":"*/;
+  if ( StringLiteral_738/*",\"userSvtEquipId\":"*/ )
   {
-    this = (SupportServantData_o *)sub_B170BC(StringLiteral_738, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B170BC(StringLiteral_738/*",\"userSvtEquipId\":"*/, v21->obj.klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
-    *(_QWORD *)&classPos = StringLiteral_738;
+    *(_QWORD *)&classPos = StringLiteral_738/*",\"userSvtEquipId\":"*/;
   }
   else
   {
@@ -2984,13 +2984,13 @@ LABEL_58:
     v59,
     v60,
     v61);
-  this = (SupportServantData_o *)StringLiteral_23602;
-  if ( StringLiteral_23602 )
+  this = (SupportServantData_o *)StringLiteral_23602/*"}"*/;
+  if ( StringLiteral_23602/*"}"*/ )
   {
-    this = (SupportServantData_o *)sub_B170BC(StringLiteral_23602, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B170BC(StringLiteral_23602/*"}"*/, v21->obj.klass->_1.element_class);
     if ( this )
     {
-      *(_QWORD *)&classPos = StringLiteral_23602;
+      *(_QWORD *)&classPos = StringLiteral_23602/*"}"*/;
       goto LABEL_55;
     }
     goto LABEL_59;
@@ -3062,9 +3062,9 @@ System_String_o *__fastcall SupportServantData__updateNameCheck(SupportServantDa
   if ( (byte_40FD2A4 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23384, v3);
-    sub_B16FFC(&StringLiteral_736, v4);
-    sub_B16FFC(&StringLiteral_311, v5);
+    sub_B16FFC(&StringLiteral_23384/*"{\"supportDeckId\":"*/, v3);
+    sub_B16FFC(&StringLiteral_736/*",\"name\":\""*/, v4);
+    sub_B16FFC(&StringLiteral_311/*"\"}"*/, v5);
     byte_40FD2A4 = 1;
   }
   deckId_k__BackingField = 0;
@@ -3079,13 +3079,13 @@ System_String_o *__fastcall SupportServantData__updateNameCheck(SupportServantDa
     if ( !v9 )
       sub_B170D4();
     v16 = (System_String_array *)v9;
-    v17 = (System_String_o *)StringLiteral_23384;
-    if ( StringLiteral_23384 )
+    v17 = (System_String_o *)StringLiteral_23384/*"{\"supportDeckId\":"*/;
+    if ( StringLiteral_23384/*"{\"supportDeckId\":"*/ )
     {
-      v17 = (System_String_o *)sub_B170BC(StringLiteral_23384, v16->obj.klass->_1.element_class);
+      v17 = (System_String_o *)sub_B170BC(StringLiteral_23384/*"{\"supportDeckId\":"*/, v16->obj.klass->_1.element_class);
       if ( !v17 )
         goto LABEL_29;
-      v18 = (System_Int32_array **)StringLiteral_23384;
+      v18 = (System_Int32_array **)StringLiteral_23384/*"{\"supportDeckId\":"*/;
     }
     else
     {
@@ -3104,13 +3104,13 @@ System_String_o *__fastcall SupportServantData__updateNameCheck(SupportServantDa
         goto LABEL_28;
       v16->m_Items[1] = (System_String_o *)v24;
       sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[1], v24, v10, v19, v20, v21, v22, v23);
-      v17 = (System_String_o *)StringLiteral_736;
-      if ( StringLiteral_736 )
+      v17 = (System_String_o *)StringLiteral_736/*",\"name\":\""*/;
+      if ( StringLiteral_736/*",\"name\":\""*/ )
       {
-        v17 = (System_String_o *)sub_B170BC(StringLiteral_736, v16->obj.klass->_1.element_class);
+        v17 = (System_String_o *)sub_B170BC(StringLiteral_736/*",\"name\":\""*/, v16->obj.klass->_1.element_class);
         if ( !v17 )
           goto LABEL_29;
-        v18 = (System_Int32_array **)StringLiteral_736;
+        v18 = (System_Int32_array **)StringLiteral_736/*",\"name\":\""*/;
       }
       else
       {
@@ -3136,8 +3136,8 @@ System_String_o *__fastcall SupportServantData__updateNameCheck(SupportServantDa
           v32,
           v33,
           v34);
-        v17 = (System_String_o *)StringLiteral_311;
-        if ( !StringLiteral_311 )
+        v17 = (System_String_o *)StringLiteral_311/*"\"}"*/;
+        if ( !StringLiteral_311/*"\"}"*/ )
         {
           v18 = 0LL;
 LABEL_25:
@@ -3151,10 +3151,10 @@ LABEL_28:
           sub_B17100(v17, v18, v10);
           sub_B170A0();
         }
-        v17 = (System_String_o *)sub_B170BC(StringLiteral_311, v16->obj.klass->_1.element_class);
+        v17 = (System_String_o *)sub_B170BC(StringLiteral_311/*"\"}"*/, v16->obj.klass->_1.element_class);
         if ( v17 )
         {
-          v18 = (System_Int32_array **)StringLiteral_311;
+          v18 = (System_Int32_array **)StringLiteral_311/*"\"}"*/;
           goto LABEL_25;
         }
       }

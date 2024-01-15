@@ -280,7 +280,7 @@ void __fastcall WrapLineMessage__SetText(
 
   if ( (byte_40F6797 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, text);
+    sub_B16FFC(&StringLiteral_1/*""*/, text);
     byte_40F6797 = 1;
   }
   this->fields._IsWrapWidth_k__BackingField = 0;
@@ -298,7 +298,7 @@ void __fastcall WrapLineMessage__SetText(
   v15 = WrapLineMessage__GetWrapCheckLabel(this, v14);
   if ( !v15 )
     sub_B170D4();
-  UILabel__set_text(v15, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v15, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 

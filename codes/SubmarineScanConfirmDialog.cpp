@@ -40,7 +40,7 @@ void __fastcall SubmarineScanConfirmDialog__EndLoad(SubmarineScanConfirmDialog_o
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
     sub_B16FFC(&Method_SubmarineScanConfirmDialog__EndLoad_b__18_0__, v7);
-    sub_B16FFC(&StringLiteral_5701, v8);
+    sub_B16FFC(&StringLiteral_5701/*"EVENT_SUBMARINE_DO_SCAN_TITLE"*/, v8);
     byte_40F7CB2 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -64,7 +64,7 @@ void __fastcall SubmarineScanConfirmDialog__EndLoad(SubmarineScanConfirmDialog_o
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5701, 0LL);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5701/*"EVENT_SUBMARINE_DO_SCAN_TITLE"*/, 0LL);
     v15 = System_String__Format(v14, (Il2CppObject *)v12->fields.age, 0LL);
     if ( titleLabel )
     {
@@ -101,9 +101,9 @@ void __fastcall SubmarineScanConfirmDialog__Init(SubmarineScanConfirmDialog_o *t
   if ( (byte_40F7CB0 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3251, v3);
-    sub_B16FFC(&StringLiteral_5709, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v3);
+    sub_B16FFC(&StringLiteral_5709/*"EVENT_SUBMARINE_SCAN_CONFIRM_EXECUTE"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F7CB0 = 1;
   }
   this->fields.state = 0;
@@ -111,22 +111,22 @@ void __fastcall SubmarineScanConfirmDialog__Init(SubmarineScanConfirmDialog_o *t
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_11;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_11;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   executeLabel = this->fields.executeLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5709, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5709/*"EVENT_SUBMARINE_SCAN_CONFIRM_EXECUTE"*/, 0LL);
   if ( !executeLabel
     || (UILabel__set_text(executeLabel, v9, 0LL),
         cancelLabel = this->fields.cancelLabel,
-        v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+        v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
         !cancelLabel) )
   {
 LABEL_11:

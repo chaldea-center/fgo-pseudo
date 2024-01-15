@@ -406,15 +406,15 @@ void __fastcall QuestRewardBoxAction__Setup(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, *(_QWORD *)&box_type);
     sub_B16FFC(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v7);
     sub_B16FFC(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v8);
-    sub_B16FFC(&StringLiteral_16843, v9);
-    sub_B16FFC(&StringLiteral_16834, v10);
-    sub_B16FFC(&StringLiteral_16839, v11);
-    sub_B16FFC(&StringLiteral_16842, v12);
-    sub_B16FFC(&StringLiteral_16838, v13);
-    sub_B16FFC(&StringLiteral_16835, v14);
-    sub_B16FFC(&StringLiteral_16841, v15);
-    sub_B16FFC(&StringLiteral_16833, v16);
-    sub_B16FFC(&StringLiteral_16840, v17);
+    sub_B16FFC(&StringLiteral_16843/*"box_s_open"*/, v9);
+    sub_B16FFC(&StringLiteral_16834/*"box_g_lock"*/, v10);
+    sub_B16FFC(&StringLiteral_16839/*"box_n_lock"*/, v11);
+    sub_B16FFC(&StringLiteral_16842/*"box_s_lock"*/, v12);
+    sub_B16FFC(&StringLiteral_16838/*"box_n_base"*/, v13);
+    sub_B16FFC(&StringLiteral_16835/*"box_g_open"*/, v14);
+    sub_B16FFC(&StringLiteral_16841/*"box_s_base"*/, v15);
+    sub_B16FFC(&StringLiteral_16833/*"box_g_base"*/, v16);
+    sub_B16FFC(&StringLiteral_16840/*"box_n_open"*/, v17);
     byte_40FD5E1 = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -474,7 +474,7 @@ void __fastcall QuestRewardBoxAction__Setup(
         v45 = this->fields.mBoxBaseSp;
         if ( v45 )
         {
-          UISprite__set_spriteName(v45, (System_String_o *)StringLiteral_16833, 0LL);
+          UISprite__set_spriteName(v45, (System_String_o *)StringLiteral_16833/*"box_g_base"*/, 0LL);
           mBoxLockSp = this->fields.mBoxLockSp;
           if ( mBoxLockSp )
           {
@@ -482,7 +482,7 @@ void __fastcall QuestRewardBoxAction__Setup(
             v47 = this->fields.mBoxLockSp;
             if ( v47 )
             {
-              UISprite__set_spriteName(v47, (System_String_o *)StringLiteral_16834, 0LL);
+              UISprite__set_spriteName(v47, (System_String_o *)StringLiteral_16834/*"box_g_lock"*/, 0LL);
               mBoxOpenSp = this->fields.mBoxOpenSp;
               if ( mBoxOpenSp )
               {
@@ -490,7 +490,7 @@ void __fastcall QuestRewardBoxAction__Setup(
                 v42 = this->fields.mBoxOpenSp;
                 if ( v42 )
                 {
-                  v43 = &StringLiteral_16835;
+                  v43 = &StringLiteral_16835/*"box_g_open"*/;
                   goto LABEL_34;
                 }
               }
@@ -508,7 +508,7 @@ LABEL_35:
         v50 = this->fields.mBoxBaseSp;
         if ( v50 )
         {
-          UISprite__set_spriteName(v50, (System_String_o *)StringLiteral_16841, 0LL);
+          UISprite__set_spriteName(v50, (System_String_o *)StringLiteral_16841/*"box_s_base"*/, 0LL);
           v51 = this->fields.mBoxLockSp;
           if ( v51 )
           {
@@ -516,7 +516,7 @@ LABEL_35:
             v52 = this->fields.mBoxLockSp;
             if ( v52 )
             {
-              UISprite__set_spriteName(v52, (System_String_o *)StringLiteral_16842, 0LL);
+              UISprite__set_spriteName(v52, (System_String_o *)StringLiteral_16842/*"box_s_lock"*/, 0LL);
               v53 = this->fields.mBoxOpenSp;
               if ( v53 )
               {
@@ -524,7 +524,7 @@ LABEL_35:
                 v42 = this->fields.mBoxOpenSp;
                 if ( v42 )
                 {
-                  v43 = &StringLiteral_16843;
+                  v43 = &StringLiteral_16843/*"box_s_open"*/;
                   goto LABEL_34;
                 }
               }
@@ -541,7 +541,7 @@ LABEL_35:
         v38 = this->fields.mBoxBaseSp;
         if ( v38 )
         {
-          UISprite__set_spriteName(v38, (System_String_o *)StringLiteral_16838, 0LL);
+          UISprite__set_spriteName(v38, (System_String_o *)StringLiteral_16838/*"box_n_base"*/, 0LL);
           v39 = this->fields.mBoxLockSp;
           if ( v39 )
           {
@@ -549,7 +549,7 @@ LABEL_35:
             v40 = this->fields.mBoxLockSp;
             if ( v40 )
             {
-              UISprite__set_spriteName(v40, (System_String_o *)StringLiteral_16839, 0LL);
+              UISprite__set_spriteName(v40, (System_String_o *)StringLiteral_16839/*"box_n_lock"*/, 0LL);
               v41 = this->fields.mBoxOpenSp;
               if ( v41 )
               {
@@ -557,7 +557,7 @@ LABEL_35:
                 v42 = this->fields.mBoxOpenSp;
                 if ( v42 )
                 {
-                  v43 = &StringLiteral_16840;
+                  v43 = &StringLiteral_16840/*"box_n_open"*/;
 LABEL_34:
                   UISprite__set_spriteName(v42, (System_String_o *)*v43, 0LL);
                   return;

@@ -213,29 +213,29 @@ void __fastcall OptionManager___cctor(const MethodInfo *method)
   if ( (byte_40F7FAA & 1) == 0 )
   {
     sub_B16FFC(&OptionManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_10094, v8);
-    sub_B16FFC(&StringLiteral_10096, v9);
-    sub_B16FFC(&StringLiteral_10107, v10);
-    sub_B16FFC(&StringLiteral_10091, v11);
-    sub_B16FFC(&StringLiteral_10093, v12);
-    sub_B16FFC(&StringLiteral_10090, v13);
-    sub_B16FFC(&StringLiteral_10101, v14);
-    sub_B16FFC(&StringLiteral_10098, v15);
-    sub_B16FFC(&StringLiteral_10104, v16);
-    sub_B16FFC(&StringLiteral_10102, v17);
-    sub_B16FFC(&StringLiteral_16207, v18);
-    sub_B16FFC(&StringLiteral_10095, v19);
-    sub_B16FFC(&StringLiteral_10089, v20);
-    sub_B16FFC(&StringLiteral_10088, v21);
-    sub_B16FFC(&StringLiteral_10092, v22);
-    sub_B16FFC(&StringLiteral_10108, v23);
-    sub_B16FFC(&StringLiteral_10103, v24);
-    sub_B16FFC(&StringLiteral_10105, v25);
-    sub_B16FFC(&StringLiteral_10099, v26);
-    sub_B16FFC(&StringLiteral_10097, v27);
-    sub_B16FFC(&StringLiteral_10100, v28);
-    sub_B16FFC(&StringLiteral_10087, v29);
-    sub_B16FFC(&StringLiteral_10106, v30);
+    sub_B16FFC(&StringLiteral_10094/*"OptionMessageDisp"*/, v8);
+    sub_B16FFC(&StringLiteral_10096/*"OptionNotiffication"*/, v9);
+    sub_B16FFC(&StringLiteral_10107/*"OptionVoiceVolume"*/, v10);
+    sub_B16FFC(&StringLiteral_10091/*"OptionFriendCostume"*/, v11);
+    sub_B16FFC(&StringLiteral_10093/*"OptionLocalNotiffication"*/, v12);
+    sub_B16FFC(&StringLiteral_10090/*"OptionBoostItemConfirm"*/, v13);
+    sub_B16FFC(&StringLiteral_10101/*"OptionScenarioSpeed"*/, v14);
+    sub_B16FFC(&StringLiteral_10098/*"OptionRaidNotiffication"*/, v15);
+    sub_B16FFC(&StringLiteral_10104/*"OptionSeVolume"*/, v16);
+    sub_B16FFC(&StringLiteral_10102/*"OptionScenarioText"*/, v17);
+    sub_B16FFC(&StringLiteral_16207/*"adjustVolume"*/, v18);
+    sub_B16FFC(&StringLiteral_10095/*"OptionNotPlayOpeningMovie"*/, v19);
+    sub_B16FFC(&StringLiteral_10089/*"OptionBgmVolume"*/, v20);
+    sub_B16FFC(&StringLiteral_10088/*"OptionBattle20220729"*/, v21);
+    sub_B16FFC(&StringLiteral_10092/*"OptionFriendImageLimitCount"*/, v22);
+    sub_B16FFC(&StringLiteral_10108/*"OptionVolumeMute"*/, v23);
+    sub_B16FFC(&StringLiteral_10103/*"OptionScenarioTextSpeed"*/, v24);
+    sub_B16FFC(&StringLiteral_10105/*"OptionSelectAdvantageClassAuto"*/, v25);
+    sub_B16FFC(&StringLiteral_10099/*"OptionResolutionType"*/, v26);
+    sub_B16FFC(&StringLiteral_10097/*"OptionPreBattleFormation"*/, v27);
+    sub_B16FFC(&StringLiteral_10100/*"OptionScenarioScrollSpeed"*/, v28);
+    sub_B16FFC(&StringLiteral_10087/*"OptionAutoSelectParty"*/, v29);
+    sub_B16FFC(&StringLiteral_10106/*"OptionSvtRand"*/, v30);
     byte_40F7FAA = 1;
   }
   OptionManager_TypeInfo->static_fields->isModify = 0;
@@ -248,44 +248,44 @@ void __fastcall OptionManager___cctor(const MethodInfo *method)
   v31->static_fields->DEF_MUTE = 0;
   v31->static_fields->KIND_COUNT_SAVE_SERVER = 6;
   static_fields = v31->static_fields;
-  v33 = (System_Int32_array **)StringLiteral_10089;
-  static_fields->SAVE_KEY_BGM_VOLUME = (struct System_String_o *)StringLiteral_10089;
+  v33 = (System_Int32_array **)StringLiteral_10089/*"OptionBgmVolume"*/;
+  static_fields->SAVE_KEY_BGM_VOLUME = (struct System_String_o *)StringLiteral_10089/*"OptionBgmVolume"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->SAVE_KEY_BGM_VOLUME, v33, v2, v3, v4, v5, v6, v7);
   v34 = OptionManager_TypeInfo->static_fields;
-  v35 = (System_Int32_array **)StringLiteral_10104;
-  v34->SAVE_KEY_SE_VOLUME = (struct System_String_o *)StringLiteral_10104;
+  v35 = (System_Int32_array **)StringLiteral_10104/*"OptionSeVolume"*/;
+  v34->SAVE_KEY_SE_VOLUME = (struct System_String_o *)StringLiteral_10104/*"OptionSeVolume"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v34->SAVE_KEY_SE_VOLUME, v35, v36, v37, v38, v39, v40, v41);
   v42 = OptionManager_TypeInfo->static_fields;
-  v43 = (System_Int32_array **)StringLiteral_10107;
-  v42->SAVE_KEY_VOICE_VOLUME = (struct System_String_o *)StringLiteral_10107;
+  v43 = (System_Int32_array **)StringLiteral_10107/*"OptionVoiceVolume"*/;
+  v42->SAVE_KEY_VOICE_VOLUME = (struct System_String_o *)StringLiteral_10107/*"OptionVoiceVolume"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v42->SAVE_KEY_VOICE_VOLUME, v43, v44, v45, v46, v47, v48, v49);
   v50 = OptionManager_TypeInfo->static_fields;
-  v51 = (System_Int32_array **)StringLiteral_16207;
-  v50->SAVE_KEY_ADJUST_VOLUME = (struct System_String_o *)StringLiteral_16207;
+  v51 = (System_Int32_array **)StringLiteral_16207/*"adjustVolume"*/;
+  v50->SAVE_KEY_ADJUST_VOLUME = (struct System_String_o *)StringLiteral_16207/*"adjustVolume"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v50->SAVE_KEY_ADJUST_VOLUME, v51, v52, v53, v54, v55, v56, v57);
   v58 = OptionManager_TypeInfo->static_fields;
-  v59 = (System_Int32_array **)StringLiteral_10101;
-  v58->SAVE_KEY_SCENARIO_SPEED = (struct System_String_o *)StringLiteral_10101;
+  v59 = (System_Int32_array **)StringLiteral_10101/*"OptionScenarioSpeed"*/;
+  v58->SAVE_KEY_SCENARIO_SPEED = (struct System_String_o *)StringLiteral_10101/*"OptionScenarioSpeed"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v58->SAVE_KEY_SCENARIO_SPEED, v59, v60, v61, v62, v63, v64, v65);
   v66 = OptionManager_TypeInfo->static_fields;
-  v67 = (System_Int32_array **)StringLiteral_10102;
-  v66->SAVE_KEY_SCENARIO_TEXT_WAIT = (struct System_String_o *)StringLiteral_10102;
+  v67 = (System_Int32_array **)StringLiteral_10102/*"OptionScenarioText"*/;
+  v66->SAVE_KEY_SCENARIO_TEXT_WAIT = (struct System_String_o *)StringLiteral_10102/*"OptionScenarioText"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v66->SAVE_KEY_SCENARIO_TEXT_WAIT, v67, v68, v69, v70, v71, v72, v73);
   v74 = OptionManager_TypeInfo->static_fields;
-  v75 = (System_Int32_array **)StringLiteral_10103;
-  v74->SAVE_KEY_SCENARIO_TEXT_SPEED = (struct System_String_o *)StringLiteral_10103;
+  v75 = (System_Int32_array **)StringLiteral_10103/*"OptionScenarioTextSpeed"*/;
+  v74->SAVE_KEY_SCENARIO_TEXT_SPEED = (struct System_String_o *)StringLiteral_10103/*"OptionScenarioTextSpeed"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v74->SAVE_KEY_SCENARIO_TEXT_SPEED, v75, v76, v77, v78, v79, v80, v81);
   v82 = OptionManager_TypeInfo->static_fields;
-  v83 = (System_Int32_array **)StringLiteral_10100;
-  v82->SAVE_KEY_SCENARIO_SCROLL_SPEED = (struct System_String_o *)StringLiteral_10100;
+  v83 = (System_Int32_array **)StringLiteral_10100/*"OptionScenarioScrollSpeed"*/;
+  v82->SAVE_KEY_SCENARIO_SCROLL_SPEED = (struct System_String_o *)StringLiteral_10100/*"OptionScenarioScrollSpeed"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v82->SAVE_KEY_SCENARIO_SCROLL_SPEED, v83, v84, v85, v86, v87, v88, v89);
   v90 = OptionManager_TypeInfo->static_fields;
-  v91 = (System_Int32_array **)StringLiteral_10096;
-  v90->SAVE_KEY_NOTIFFICATION = (struct System_String_o *)StringLiteral_10096;
+  v91 = (System_Int32_array **)StringLiteral_10096/*"OptionNotiffication"*/;
+  v90->SAVE_KEY_NOTIFFICATION = (struct System_String_o *)StringLiteral_10096/*"OptionNotiffication"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v90->SAVE_KEY_NOTIFFICATION, v91, v92, v93, v94, v95, v96, v97);
   v98 = OptionManager_TypeInfo->static_fields;
-  v99 = (System_Int32_array **)StringLiteral_10093;
-  v98->SAVE_KEY_LOCAL_NOTIFFICATION = (struct System_String_o *)StringLiteral_10093;
+  v99 = (System_Int32_array **)StringLiteral_10093/*"OptionLocalNotiffication"*/;
+  v98->SAVE_KEY_LOCAL_NOTIFFICATION = (struct System_String_o *)StringLiteral_10093/*"OptionLocalNotiffication"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v98->SAVE_KEY_LOCAL_NOTIFFICATION,
     v99,
@@ -296,8 +296,8 @@ void __fastcall OptionManager___cctor(const MethodInfo *method)
     v104,
     v105);
   v106 = OptionManager_TypeInfo->static_fields;
-  v107 = (System_Int32_array **)StringLiteral_10098;
-  v106->SAVE_KEY_RAID_NOTIFFICATION = (struct System_String_o *)StringLiteral_10098;
+  v107 = (System_Int32_array **)StringLiteral_10098/*"OptionRaidNotiffication"*/;
+  v106->SAVE_KEY_RAID_NOTIFFICATION = (struct System_String_o *)StringLiteral_10098/*"OptionRaidNotiffication"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v106->SAVE_KEY_RAID_NOTIFFICATION,
     v107,
@@ -308,8 +308,8 @@ void __fastcall OptionManager___cctor(const MethodInfo *method)
     v112,
     v113);
   v114 = OptionManager_TypeInfo->static_fields;
-  v115 = (System_Int32_array **)StringLiteral_10090;
-  v114->SAVE_KEY_BOOST_ITEM_CONFIRM = (struct System_String_o *)StringLiteral_10090;
+  v115 = (System_Int32_array **)StringLiteral_10090/*"OptionBoostItemConfirm"*/;
+  v114->SAVE_KEY_BOOST_ITEM_CONFIRM = (struct System_String_o *)StringLiteral_10090/*"OptionBoostItemConfirm"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v114->SAVE_KEY_BOOST_ITEM_CONFIRM,
     v115,
@@ -320,8 +320,8 @@ void __fastcall OptionManager___cctor(const MethodInfo *method)
     v120,
     v121);
   v122 = OptionManager_TypeInfo->static_fields;
-  v123 = (System_Int32_array **)StringLiteral_10092;
-  v122->SAVE_KEY_FREND_IMAGE_LIMIT_COUNT = (struct System_String_o *)StringLiteral_10092;
+  v123 = (System_Int32_array **)StringLiteral_10092/*"OptionFriendImageLimitCount"*/;
+  v122->SAVE_KEY_FREND_IMAGE_LIMIT_COUNT = (struct System_String_o *)StringLiteral_10092/*"OptionFriendImageLimitCount"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v122->SAVE_KEY_FREND_IMAGE_LIMIT_COUNT,
     v123,
@@ -332,24 +332,24 @@ void __fastcall OptionManager___cctor(const MethodInfo *method)
     v128,
     v129);
   v130 = OptionManager_TypeInfo->static_fields;
-  v131 = (System_Int32_array **)StringLiteral_10091;
-  v130->SAVE_KEY_FREND_COSTUME = (struct System_String_o *)StringLiteral_10091;
+  v131 = (System_Int32_array **)StringLiteral_10091/*"OptionFriendCostume"*/;
+  v130->SAVE_KEY_FREND_COSTUME = (struct System_String_o *)StringLiteral_10091/*"OptionFriendCostume"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v130->SAVE_KEY_FREND_COSTUME, v131, v132, v133, v134, v135, v136, v137);
   v138 = OptionManager_TypeInfo->static_fields;
-  v139 = (System_Int32_array **)StringLiteral_10106;
-  v138->SAVE_KEY_SVT_RAND = (struct System_String_o *)StringLiteral_10106;
+  v139 = (System_Int32_array **)StringLiteral_10106/*"OptionSvtRand"*/;
+  v138->SAVE_KEY_SVT_RAND = (struct System_String_o *)StringLiteral_10106/*"OptionSvtRand"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v138->SAVE_KEY_SVT_RAND, v139, v140, v141, v142, v143, v144, v145);
   v146 = OptionManager_TypeInfo->static_fields;
-  v147 = (System_Int32_array **)StringLiteral_10094;
-  v146->SAVE_KEY_MESSAGE_DISP = (struct System_String_o *)StringLiteral_10094;
+  v147 = (System_Int32_array **)StringLiteral_10094/*"OptionMessageDisp"*/;
+  v146->SAVE_KEY_MESSAGE_DISP = (struct System_String_o *)StringLiteral_10094/*"OptionMessageDisp"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v146->SAVE_KEY_MESSAGE_DISP, v147, v148, v149, v150, v151, v152, v153);
   v154 = OptionManager_TypeInfo->static_fields;
-  v155 = (System_Int32_array **)StringLiteral_10108;
-  v154->SAVE_KEY_VOLUME_MUTE = (struct System_String_o *)StringLiteral_10108;
+  v155 = (System_Int32_array **)StringLiteral_10108/*"OptionVolumeMute"*/;
+  v154->SAVE_KEY_VOLUME_MUTE = (struct System_String_o *)StringLiteral_10108/*"OptionVolumeMute"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v154->SAVE_KEY_VOLUME_MUTE, v155, v156, v157, v158, v159, v160, v161);
   v162 = OptionManager_TypeInfo->static_fields;
-  v163 = (System_Int32_array **)StringLiteral_10105;
-  v162->SAVE_KEY_ADVANTAGE_CLASS_AUTO = (struct System_String_o *)StringLiteral_10105;
+  v163 = (System_Int32_array **)StringLiteral_10105/*"OptionSelectAdvantageClassAuto"*/;
+  v162->SAVE_KEY_ADVANTAGE_CLASS_AUTO = (struct System_String_o *)StringLiteral_10105/*"OptionSelectAdvantageClassAuto"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v162->SAVE_KEY_ADVANTAGE_CLASS_AUTO,
     v163,
@@ -360,8 +360,8 @@ void __fastcall OptionManager___cctor(const MethodInfo *method)
     v168,
     v169);
   v170 = OptionManager_TypeInfo->static_fields;
-  v171 = (System_Int32_array **)StringLiteral_10095;
-  v170->SAVE_KEY_NOT_PLAY_OPENING_MOVIE = (struct System_String_o *)StringLiteral_10095;
+  v171 = (System_Int32_array **)StringLiteral_10095/*"OptionNotPlayOpeningMovie"*/;
+  v170->SAVE_KEY_NOT_PLAY_OPENING_MOVIE = (struct System_String_o *)StringLiteral_10095/*"OptionNotPlayOpeningMovie"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v170->SAVE_KEY_NOT_PLAY_OPENING_MOVIE,
     v171,
@@ -372,8 +372,8 @@ void __fastcall OptionManager___cctor(const MethodInfo *method)
     v176,
     v177);
   v178 = OptionManager_TypeInfo->static_fields;
-  v179 = (System_Int32_array **)StringLiteral_10087;
-  v178->SAVE_KEY_AUTO_SELECT_PARTY = (struct System_String_o *)StringLiteral_10087;
+  v179 = (System_Int32_array **)StringLiteral_10087/*"OptionAutoSelectParty"*/;
+  v178->SAVE_KEY_AUTO_SELECT_PARTY = (struct System_String_o *)StringLiteral_10087/*"OptionAutoSelectParty"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v178->SAVE_KEY_AUTO_SELECT_PARTY,
     v179,
@@ -384,12 +384,12 @@ void __fastcall OptionManager___cctor(const MethodInfo *method)
     v184,
     v185);
   v186 = OptionManager_TypeInfo->static_fields;
-  v187 = (System_Int32_array **)StringLiteral_10099;
-  v186->SAVE_KEY_RESOLUTION_TYPE = (struct System_String_o *)StringLiteral_10099;
+  v187 = (System_Int32_array **)StringLiteral_10099/*"OptionResolutionType"*/;
+  v186->SAVE_KEY_RESOLUTION_TYPE = (struct System_String_o *)StringLiteral_10099/*"OptionResolutionType"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v186->SAVE_KEY_RESOLUTION_TYPE, v187, v188, v189, v190, v191, v192, v193);
   v194 = OptionManager_TypeInfo->static_fields;
-  v195 = (System_Int32_array **)StringLiteral_10097;
-  v194->SAVE_KEY_PREBATTLEFORMATION = (struct System_String_o *)StringLiteral_10097;
+  v195 = (System_Int32_array **)StringLiteral_10097/*"OptionPreBattleFormation"*/;
+  v194->SAVE_KEY_PREBATTLEFORMATION = (struct System_String_o *)StringLiteral_10097/*"OptionPreBattleFormation"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v194->SAVE_KEY_PREBATTLEFORMATION,
     v195,
@@ -400,8 +400,8 @@ void __fastcall OptionManager___cctor(const MethodInfo *method)
     v200,
     v201);
   v202 = OptionManager_TypeInfo->static_fields;
-  v203 = (System_Int32_array **)StringLiteral_10088;
-  v202->SAVE_KEY_BATTLE_FPS_SETTING = (struct System_String_o *)StringLiteral_10088;
+  v203 = (System_Int32_array **)StringLiteral_10088/*"OptionBattle20220729"*/;
+  v202->SAVE_KEY_BATTLE_FPS_SETTING = (struct System_String_o *)StringLiteral_10088/*"OptionBattle20220729"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v202->SAVE_KEY_BATTLE_FPS_SETTING,
     v203,

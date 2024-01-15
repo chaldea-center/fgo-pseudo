@@ -538,11 +538,11 @@ System_String_o *__fastcall EventVoicePlayMaster__getVoiceAssetName(int32_t svtI
   v4 = svtId;
   if ( (byte_40F9C51 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3947, method);
+    sub_B16FFC(&StringLiteral_3947/*"ChrVoice_"*/, method);
     byte_40F9C51 = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v4, 0LL);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_3947, v2, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_3947/*"ChrVoice_"*/, v2, 0LL);
 }
 
 

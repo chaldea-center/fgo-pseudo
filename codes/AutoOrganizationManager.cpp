@@ -32,14 +32,14 @@ void __fastcall AutoOrganizationManager___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&AutoOrganizationManager_TypeInfo, v1);
     sub_B16FFC(&ListViewSort_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_2198, v6);
-    sub_B16FFC(&StringLiteral_2203, v7);
+    sub_B16FFC(&StringLiteral_2198/*"AutoOrganization"*/, v6);
+    sub_B16FFC(&StringLiteral_2203/*"AutoOrganizationWaveBattle"*/, v7);
     byte_40FBF5D = 1;
   }
   AutoOrganizationManager_TypeInfo->static_fields->CATEGORY_ID_NP_GAIN = 10602;
   AutoOrganizationManager_TypeInfo->static_fields->CATEGORY_ID_NP_REGAIN = 10603;
   v8 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v8, (System_String_o *)StringLiteral_2198, 3, 0, 0LL);
+  ListViewSort___ctor_30208480(v8, (System_String_o *)StringLiteral_2198/*"AutoOrganization"*/, 3, 0, 0LL);
   static_fields = AutoOrganizationManager_TypeInfo->static_fields;
   static_fields->autoOrganizationInfo = v8;
   sub_B16F98(
@@ -52,7 +52,7 @@ void __fastcall AutoOrganizationManager___cctor(const MethodInfo *method)
     v14,
     v15);
   v20 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v16, v17, v18, v19);
-  ListViewSort___ctor_30208480(v20, (System_String_o *)StringLiteral_2203, 3, 0, 0LL);
+  ListViewSort___ctor_30208480(v20, (System_String_o *)StringLiteral_2203/*"AutoOrganizationWaveBattle"*/, 3, 0, 0LL);
   v21 = AutoOrganizationManager_TypeInfo->static_fields;
   v21->waveBattleAutoOrganizationInfo = v20;
   sub_B16F98(

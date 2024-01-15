@@ -594,8 +594,8 @@ void __fastcall EventInfoConquestItemCounterControl__Start(
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_16402, v5);
-    sub_B16FFC(&StringLiteral_5578, v6);
+    sub_B16FFC(&StringLiteral_16402/*"armaments_title"*/, v5);
+    sub_B16FFC(&StringLiteral_5578/*"EVENT_CONQUEST_ARMAMENT_LABEL"*/, v6);
     byte_40FA101 = 1;
   }
   crestSprite = (UnityEngine_Object_o *)this->fields.crestSprite;
@@ -612,7 +612,7 @@ void __fastcall EventInfoConquestItemCounterControl__Start(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI(v8, (System_String_o *)StringLiteral_16402, 0LL);
+    AtlasManager__SetEventUI(v8, (System_String_o *)StringLiteral_16402/*"armaments_title"*/, 0LL);
   }
   armamentLabel = this->fields.armamentLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -620,7 +620,7 @@ void __fastcall EventInfoConquestItemCounterControl__Start(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5578, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5578/*"EVENT_CONQUEST_ARMAMENT_LABEL"*/, 0LL);
   if ( !armamentLabel )
     sub_B170D4();
   UILabel__set_text(armamentLabel, v10, 0LL);

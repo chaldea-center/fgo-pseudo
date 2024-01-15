@@ -288,7 +288,7 @@ void __fastcall ServantStatusListViewItemDrawCommandCodeSkill__SetItem(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_11931, v8);
+    sub_B16FFC(&StringLiteral_11931/*"SERVANT_STATUS_EXPLANATION_SKILL_COMMAND_CODE"*/, v8);
     byte_40FDE94 = 1;
   }
   titleList = 0LL;
@@ -303,7 +303,7 @@ void __fastcall ServantStatusListViewItemDrawCommandCodeSkill__SetItem(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11931, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11931/*"SERVANT_STATUS_EXPLANATION_SKILL_COMMAND_CODE"*/, 0LL);
   if ( !skillBaseList )
     goto LABEL_65;
   UILabel__set_text(skillBaseList, v10, 0LL);

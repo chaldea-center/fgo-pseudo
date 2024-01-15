@@ -5799,7 +5799,7 @@ System_Int32_array *__fastcall BattleBuffData__GetIgnoreAuraBuffIds(BattleBuffDa
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_ConstantStrMaster___, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_7236, v4);
+    sub_B16FFC(&StringLiteral_7236/*"IGNORE_AURA_BUFF"*/, v4);
     byte_40FD42E = 1;
   }
   ignoreAuraBuffIds = this->fields.ignoreAuraBuffIds;
@@ -5817,7 +5817,7 @@ System_Int32_array *__fastcall BattleBuffData__GetIgnoreAuraBuffIds(BattleBuffDa
     }
     ValueArray = (System_Int32_array **)ConstantStrMaster__GetValueArray(
                                           MasterData_WarQuestSelectionMaster,
-                                          (System_String_o *)StringLiteral_7236,
+                                          (System_String_o *)StringLiteral_7236/*"IGNORE_AURA_BUFF"*/,
                                           0LL,
                                           0LL);
     p_ignoreAuraBuffIds->klass = (BattleServantConfConponent_c *)ValueArray;
@@ -5849,7 +5849,7 @@ System_Int32_array *__fastcall BattleBuffData__GetInvalidSacrificeIndividualitie
     sub_B16FFC(&BattleBuffData_TypeInfo, v1);
     sub_B16FFC(&Method_DataManager_GetMaster_ConstantStrMaster___, v2);
     sub_B16FFC(&DataManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_7279, v4);
+    sub_B16FFC(&StringLiteral_7279/*"INVALID_SACRIFICE_INDIV"*/, v4);
     byte_40FD44D = 1;
   }
   constantStrMaster = BattleBuffData_TypeInfo->static_fields->constantStrMaster;
@@ -5865,7 +5865,7 @@ System_Int32_array *__fastcall BattleBuffData__GetInvalidSacrificeIndividualitie
     if ( !constantStrMaster )
       sub_B170D4();
   }
-  return ConstantStrMaster__GetValueArray(constantStrMaster, (System_String_o *)StringLiteral_7279, 0LL, 0LL);
+  return ConstantStrMaster__GetValueArray(constantStrMaster, (System_String_o *)StringLiteral_7279/*"INVALID_SACRIFICE_INDIV"*/, 0LL, 0LL);
 }
 
 
@@ -12456,7 +12456,7 @@ bool __fastcall BattleBuffData__checkBuffSuccessful(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
     sub_B16FFC(&Method_BattleBuffData___c__checkBuffSuccessful_b__117_0__, v20);
     sub_B16FFC(&BattleBuffData___c_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_9312, v22);
+    sub_B16FFC(&StringLiteral_9312/*"NOT_REDUCE_COUNT_WITH_NO_DAMAGE_BUFF"*/, v22);
     byte_40FD3F5 = 1;
   }
   memset(&v76, 0, sizeof(v76));
@@ -12479,7 +12479,7 @@ bool __fastcall BattleBuffData__checkBuffSuccessful(
         goto LABEL_49;
       Value = ConstantStrMaster__GetValue(
                 MasterData_WarQuestSelectionMaster,
-                (System_String_o *)StringLiteral_9312,
+                (System_String_o *)StringLiteral_9312/*"NOT_REDUCE_COUNT_WITH_NO_DAMAGE_BUFF"*/,
                 0LL);
       if ( Value )
       {
@@ -15906,7 +15906,7 @@ int32_t __fastcall BattleBuffData__getCalculationParam(
     sub_B16FFC(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, v19);
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v20);
     sub_B16FFC(&System_Math_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_11100, v22);
+    sub_B16FFC(&StringLiteral_11100/*"REVERT_BUFF_LOWER_LIMIT"*/, v22);
     byte_40FD410 = 1;
   }
   *(_QWORD *)plusMinus = 0LL;
@@ -15930,7 +15930,7 @@ int32_t __fastcall BattleBuffData__getCalculationParam(
     (System_Int32_array **)upperParam,
     (System_Int32_array *)actflg,
     (System_Int32_array *)missText);
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_11100, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_11100/*"REVERT_BUFF_LOWER_LIMIT"*/, 0LL);
   v25 = BattleBuffData__AllBuffValidEnumerablePriorActive(this, 0, v24);
   if ( !v25 )
 LABEL_117:
@@ -16771,7 +16771,7 @@ BattleBuffData_ShowBuffData_array *__fastcall BattleBuffData__getRectBuffList(
     sub_B16FFC(&BattleBuffData_ShowBuffData_TypeInfo, v13);
     sub_B16FFC(&Method_BattleBuffData___c__DisplayClass135_0__getRectBuffList_b__0__, v14);
     sub_B16FFC(&BattleBuffData___c__DisplayClass135_0_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_7052, v16);
+    sub_B16FFC(&StringLiteral_7052/*"HIDE_DEFF_TYPE"*/, v16);
     byte_40FD3FF = 1;
   }
   v69 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -16788,7 +16788,7 @@ BattleBuffData_ShowBuffData_array *__fastcall BattleBuffData__getRectBuffList(
   else
     v17 = 109;
   v71 = v17;
-  Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_7052, 0LL);
+  Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_7052/*"HIDE_DEFF_TYPE"*/, 0LL);
   v19 = BasicHelper__Convert2IntArray(Value, 0x2Cu, 0LL);
   ActiveList = BattleBuffData__getActiveList(this, 1, v20);
   if ( !ActiveList )
@@ -21660,7 +21660,7 @@ void __fastcall BattleBuffData_FieldChangeData___ctor_22057672(
   {
     sub_B16FFC(&Method_DataManager_GetMaster_BgmMaster___, baseVals);
     sub_B16FFC(&DataManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F84E3 = 1;
   }
   this->fields.buffUniqueId = -1;
@@ -21680,7 +21680,7 @@ LABEL_9:
   BgmFileName = BgmMaster__GetBgmFileName(
                   Master_WarQuestSelectionMaster,
                   this->fields.bgmId,
-                  (System_String_o *)StringLiteral_1,
+                  (System_String_o *)StringLiteral_1/*""*/,
                   0LL);
   this->fields.bgmName = BgmFileName;
   sub_B16F98(&this->fields.bgmName, BgmFileName);

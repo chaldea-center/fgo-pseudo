@@ -34,14 +34,14 @@ void __fastcall ContinueDecideRequest__beginRequestCode(
 
   if ( (byte_40FBD78 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17614, continueKey);
-    sub_B16FFC(&StringLiteral_17617, v7);
-    sub_B16FFC(&StringLiteral_17616, v8);
+    sub_B16FFC(&StringLiteral_17614/*"continueKey"*/, continueKey);
+    sub_B16FFC(&StringLiteral_17617/*"continueType"*/, v7);
+    sub_B16FFC(&StringLiteral_17616/*"continuePass"*/, v8);
     byte_40FBD78 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17617, 1, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_17614, continueKey, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_17616, continuePass, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17617/*"continueType"*/, 1, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_17614/*"continueKey"*/, continueKey, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_17616/*"continuePass"*/, continuePass, 0LL);
   ContinueDecideRequest__beginRequest(this, v9);
 }
 
@@ -58,14 +58,14 @@ void __fastcall ContinueDecideRequest__beginRequestFacebook(
 
   if ( (byte_40FBD7A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18602, facebookId);
-    sub_B16FFC(&StringLiteral_17617, v7);
-    sub_B16FFC(&StringLiteral_16164, v8);
+    sub_B16FFC(&StringLiteral_18602/*"facebookId"*/, facebookId);
+    sub_B16FFC(&StringLiteral_17617/*"continueType"*/, v7);
+    sub_B16FFC(&StringLiteral_16164/*"accessToken"*/, v8);
     byte_40FBD7A = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17617, 3, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_18602, facebookId, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_16164, accessToken, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17617/*"continueType"*/, 3, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_18602/*"facebookId"*/, facebookId, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_16164/*"accessToken"*/, accessToken, 0LL);
   ContinueDecideRequest__beginRequest(this, v9);
 }
 
@@ -82,14 +82,14 @@ void __fastcall ContinueDecideRequest__beginRequestTwitter(
 
   if ( (byte_40FBD79 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22740, twitterId);
-    sub_B16FFC(&StringLiteral_17617, v7);
-    sub_B16FFC(&StringLiteral_16164, v8);
+    sub_B16FFC(&StringLiteral_22740/*"twitterId"*/, twitterId);
+    sub_B16FFC(&StringLiteral_17617/*"continueType"*/, v7);
+    sub_B16FFC(&StringLiteral_16164/*"accessToken"*/, v8);
     byte_40FBD79 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17617, 2, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_22740, twitterId, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_16164, accessToken, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17617/*"continueType"*/, 2, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_22740/*"twitterId"*/, twitterId, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_16164/*"accessToken"*/, accessToken, 0LL);
   ContinueDecideRequest__beginRequest(this, v9);
 }
 
@@ -98,10 +98,10 @@ System_String_o *__fastcall ContinueDecideRequest__getMockData(ContinueDecideReq
 {
   if ( (byte_40FBD77 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FBD77 = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -113,7 +113,7 @@ System_String_o *__fastcall ContinueDecideRequest__getURL(ContinueDecideRequest_
   if ( (byte_40FBD76 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_17611, v2);
+    sub_B16FFC(&StringLiteral_17611/*"continue/decide"*/, v2);
     byte_40FBD76 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -122,7 +122,7 @@ System_String_o *__fastcall ContinueDecideRequest__getURL(ContinueDecideRequest_
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17611, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17611/*"continue/decide"*/, 0LL);
 }
 
 
@@ -142,7 +142,7 @@ void __fastcall ContinueDecideRequest__requestCompleted(
   {
     sub_B16FFC(&JsonManager_TypeInfo, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40FBD7B = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -160,7 +160,7 @@ void __fastcall ContinueDecideRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_20980;
+    v10 = (System_String_o *)StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

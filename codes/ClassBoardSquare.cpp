@@ -42,21 +42,21 @@ void __fastcall ClassBoardSquare___ctor(ClassBoardSquare_o *this, const MethodIn
 
   if ( (byte_40FB9FC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2860, method);
-    sub_B16FFC(&StringLiteral_2857, v9);
-    sub_B16FFC(&StringLiteral_2862, v10);
-    sub_B16FFC(&StringLiteral_12950, v11);
-    sub_B16FFC(&StringLiteral_2813, v12);
+    sub_B16FFC(&StringLiteral_2860/*"BrightTurnTransition"*/, method);
+    sub_B16FFC(&StringLiteral_2857/*"BrightTurn"*/, v9);
+    sub_B16FFC(&StringLiteral_2862/*"BrightTurnUnLock"*/, v10);
+    sub_B16FFC(&StringLiteral_12950/*"SquareEnable"*/, v11);
+    sub_B16FFC(&StringLiteral_2813/*"BlackOutTransition"*/, v12);
     byte_40FB9FC = 1;
   }
-  v13 = (System_Int32_array **)StringLiteral_2857;
-  this->fields.enableAnimationName = (struct System_String_o *)StringLiteral_2857;
+  v13 = (System_Int32_array **)StringLiteral_2857/*"BrightTurn"*/;
+  this->fields.enableAnimationName = (struct System_String_o *)StringLiteral_2857/*"BrightTurn"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.enableAnimationName, v13, v2, v3, v4, v5, v6, v7);
-  v14 = (System_Int32_array **)StringLiteral_12950;
-  this->fields.releaseAnimationName = (struct System_String_o *)StringLiteral_12950;
+  v14 = (System_Int32_array **)StringLiteral_12950/*"SquareEnable"*/;
+  this->fields.releaseAnimationName = (struct System_String_o *)StringLiteral_12950/*"SquareEnable"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.releaseAnimationName, v14, v15, v16, v17, v18, v19, v20);
-  v21 = (System_Int32_array **)StringLiteral_2860;
-  this->fields.brightTurnTransitionAnimationName = (struct System_String_o *)StringLiteral_2860;
+  v21 = (System_Int32_array **)StringLiteral_2860/*"BrightTurnTransition"*/;
+  this->fields.brightTurnTransitionAnimationName = (struct System_String_o *)StringLiteral_2860/*"BrightTurnTransition"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.brightTurnTransitionAnimationName,
     v21,
@@ -66,8 +66,8 @@ void __fastcall ClassBoardSquare___ctor(ClassBoardSquare_o *this, const MethodIn
     v25,
     v26,
     v27);
-  v28 = (System_Int32_array **)StringLiteral_2813;
-  this->fields.blackOutTransitionAnimationName = (struct System_String_o *)StringLiteral_2813;
+  v28 = (System_Int32_array **)StringLiteral_2813/*"BlackOutTransition"*/;
+  this->fields.blackOutTransitionAnimationName = (struct System_String_o *)StringLiteral_2813/*"BlackOutTransition"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.blackOutTransitionAnimationName,
     v28,
@@ -77,8 +77,8 @@ void __fastcall ClassBoardSquare___ctor(ClassBoardSquare_o *this, const MethodIn
     v32,
     v33,
     v34);
-  v35 = (System_Int32_array **)StringLiteral_2862;
-  this->fields.unlockEnableAnimationName = (struct System_String_o *)StringLiteral_2862;
+  v35 = (System_Int32_array **)StringLiteral_2862/*"BrightTurnUnLock"*/;
+  this->fields.unlockEnableAnimationName = (struct System_String_o *)StringLiteral_2862/*"BrightTurnUnLock"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.unlockEnableAnimationName, v35, v36, v37, v38, v39, v40, v41);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -620,7 +620,7 @@ void __fastcall ClassBoardSquare__Setup(
     sub_B16FFC(&System_Action_TypeInfo, squareModel);
     sub_B16FFC(&ClassBoardEffectPlayer_TypeInfo, v10);
     sub_B16FFC(&IClassBoardSquareModel_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_15842, v12);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v12);
     byte_40FB9F0 = 1;
   }
   v96 = 0;
@@ -697,7 +697,7 @@ LABEL_17:
   }
   v96 = (*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v30)(squareModel, *(_QWORD *)(v30 + 8));
   v31 = System_Int32__ToString((int32_t)&v96, 0LL);
-  v32 = System_String__Concat_43746016(v27, (System_String_o *)StringLiteral_15842, v31, 0LL);
+  v32 = System_String__Concat_43746016(v27, (System_String_o *)StringLiteral_15842/*"_"*/, v31, 0LL);
   UnityEngine_Object__set_name(v24, v32, 0LL);
   v33 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !v33 )

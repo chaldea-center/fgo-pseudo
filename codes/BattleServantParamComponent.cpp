@@ -714,7 +714,7 @@ void __fastcall BattleServantParamComponent__OnClick(BattleServantParamComponent
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_21149, v4);
+    sub_B16FFC(&StringLiteral_21149/*"onClickServant"*/, v4);
     byte_40FCCE9 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
@@ -733,7 +733,7 @@ void __fastcall BattleServantParamComponent__OnClick(BattleServantParamComponent
       v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &uniqueId);
       if ( !v7 )
         sub_B170D4();
-      UnityEngine_GameObject__SendMessage_40693300(v7, (System_String_o *)StringLiteral_21149, v8, 0LL);
+      UnityEngine_GameObject__SendMessage_40693300(v7, (System_String_o *)StringLiteral_21149/*"onClickServant"*/, v8, 0LL);
     }
   }
 }
@@ -1352,15 +1352,15 @@ void __fastcall BattleServantParamComponent__UpdateShiftGaugeChangeHp(
     sub_B16FFC(&int_TypeInfo, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
     sub_B16FFC(&float_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_18842, v17);
-    sub_B16FFC(&StringLiteral_19333, v18);
-    sub_B16FFC(&StringLiteral_22584, v19);
-    sub_B16FFC(&StringLiteral_21174, v20);
-    sub_B16FFC(&StringLiteral_21182, v21);
-    sub_B16FFC(&StringLiteral_10040, v22);
-    sub_B16FFC(&StringLiteral_9948, v23);
-    sub_B16FFC(&StringLiteral_22621, v24);
-    sub_B16FFC(&StringLiteral_21173, v25);
+    sub_B16FFC(&StringLiteral_18842/*"from"*/, v17);
+    sub_B16FFC(&StringLiteral_19333/*"ignoretimescale"*/, v18);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v19);
+    sub_B16FFC(&StringLiteral_21174/*"oncompleteparams"*/, v20);
+    sub_B16FFC(&StringLiteral_21182/*"onupdate"*/, v21);
+    sub_B16FFC(&StringLiteral_10040/*"OnUpdateShiftGaugeChangeHp"*/, v22);
+    sub_B16FFC(&StringLiteral_9948/*"OnCompleteShiftGaugeChangeHp"*/, v23);
+    sub_B16FFC(&StringLiteral_22621/*"to"*/, v24);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v25);
     sub_B16FFC(&iTween_TypeInfo, v26);
     byte_40FCD09 = 1;
   }
@@ -1391,43 +1391,43 @@ LABEL_15:
   }
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_18842,
+    StringLiteral_18842/*"from"*/,
     v34,
     v33->klass->vtable._24_Clear.methodPtr);
   v41 = toHp;
   v35 = j_il2cpp_value_box_0(int_TypeInfo, &v41);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_22621,
+    StringLiteral_22621/*"to"*/,
     v35,
     v33->klass->vtable._24_Clear.methodPtr);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_21182,
-    StringLiteral_10040,
+    StringLiteral_21182/*"onupdate"*/,
+    StringLiteral_10040/*"OnUpdateShiftGaugeChangeHp"*/,
     v33->klass->vtable._24_Clear.methodPtr);
   v40 = time;
   v36 = j_il2cpp_value_box_0(float_TypeInfo, &v40);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_22584,
+    StringLiteral_22584/*"time"*/,
     v36,
     v33->klass->vtable._24_Clear.methodPtr);
   v39[0] = 1;
   v37 = j_il2cpp_value_box_0(bool_TypeInfo, v39);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_19333,
+    StringLiteral_19333/*"ignoretimescale"*/,
     v37,
     v33->klass->vtable._24_Clear.methodPtr);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_21173,
-    StringLiteral_9948,
+    StringLiteral_21173/*"oncomplete"*/,
+    StringLiteral_9948/*"OnCompleteShiftGaugeChangeHp"*/,
     v33->klass->vtable._24_Clear.methodPtr);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, BattleAction_BasePlayShiftGauge_o *, Il2CppMethodPointer))v33->klass->vtable._23_Add.method)(
     v33,
-    StringLiteral_21174,
+    StringLiteral_21174/*"oncompleteparams"*/,
     playShiftGauge,
     v33->klass->vtable._24_Clear.methodPtr);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -1489,7 +1489,7 @@ void __fastcall BattleServantParamComponent__UpdateShortNameLabel(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v4);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_16598, v7);
+    sub_B16FFC(&StringLiteral_16598/*"battle_name"*/, v7);
     byte_40FCD14 = 1;
   }
   if ( this->fields.data )
@@ -1546,7 +1546,7 @@ void __fastcall BattleServantParamComponent__UpdateShortNameLabel(
         v19 = AssetStorage
             ? (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                              AssetStorage,
-                             (System_String_o *)StringLiteral_16598,
+                             (System_String_o *)StringLiteral_16598/*"battle_name"*/,
                              (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784)
             : 0LL;
         v20 = (UnityEngine_Component_o *)this->fields.shortNameLabel;
@@ -2487,7 +2487,7 @@ void __fastcall BattleServantParamComponent__playAddition(
 
   if ( (byte_40FCD0C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2751, method);
+    sub_B16FFC(&StringLiteral_2751/*"Battle/Prefab/ef_add_enemy"*/, method);
     byte_40FCD0C = 1;
   }
   data = this->fields.data;
@@ -2498,7 +2498,7 @@ void __fastcall BattleServantParamComponent__playAddition(
       || (transform = UnityEngine_Component__get_transform(clsIconComponent, 0LL),
           BaseMonoBehaviour__createObject_19257936(
             (BaseMonoBehaviour_o *)this,
-            (System_String_o *)StringLiteral_2751,
+            (System_String_o *)StringLiteral_2751/*"Battle/Prefab/ef_add_enemy"*/,
             transform,
             0LL,
             0LL),
@@ -2538,7 +2538,7 @@ void __fastcall BattleServantParamComponent__playAttackEffect(
   if ( (byte_40FCCF8 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    this = (BattleServantParamComponent_o *)sub_B16FFC(&StringLiteral_18181, v4);
+    this = (BattleServantParamComponent_o *)sub_B16FFC(&StringLiteral_18181/*"effect/ef_cwflash01"*/, v4);
     byte_40FCCF8 = 1;
   }
   monitor = v3[11].monitor;
@@ -2586,7 +2586,7 @@ void __fastcall BattleServantParamComponent__playAttackEffect(
         transform = UnityEngine_GameObject__get_transform(gameObject, 0LL);
         this = (BattleServantParamComponent_o *)BaseMonoBehaviour__createObject_19257936(
                                                   v3,
-                                                  (System_String_o *)StringLiteral_18181,
+                                                  (System_String_o *)StringLiteral_18181/*"effect/ef_cwflash01"*/,
                                                   transform,
                                                   0LL,
                                                   0LL);
@@ -2869,7 +2869,7 @@ void __fastcall BattleServantParamComponent__popBuffLabel(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponentInChildren_BattleServantBuffIconComponent___, buffData);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BattleUIRangeLabel___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FCD0F = 1;
   }
   if ( !buffData )
@@ -2905,7 +2905,7 @@ void __fastcall BattleServantParamComponent__popBuffLabel(
       BattleUIRangeLabel__SetAdjustLabelOffset(
         Component_srcLineSprite,
         buffData->fields.popLabel,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         0,
         0LL,
         0,
@@ -3035,19 +3035,19 @@ void __fastcall BattleServantParamComponent__setAtlas(BattleServantParamComponen
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v4);
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_2743, v7);
-    sub_B16FFC(&StringLiteral_2758, v8);
-    sub_B16FFC(&StringLiteral_19105, v9);
+    sub_B16FFC(&StringLiteral_2743/*"Battle/Common"*/, v7);
+    sub_B16FFC(&StringLiteral_2758/*"BattleAssetUIAtlas"*/, v8);
+    sub_B16FFC(&StringLiteral_19105/*"hp_break_"*/, v9);
     byte_40FCCFB = 1;
   }
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2743, 0LL);
+  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2743/*"Battle/Common"*/, 0LL);
   if ( !AssetStorage )
     goto LABEL_16;
   Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                  AssetStorage,
-                                                                 (System_String_o *)StringLiteral_2758,
+                                                                 (System_String_o *)StringLiteral_2758/*"BattleAssetUIAtlas"*/,
                                                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( !Object_WarBoardWaitTimeSetting )
     goto LABEL_16;
@@ -3070,7 +3070,7 @@ void __fastcall BattleServantParamComponent__setAtlas(BattleServantParamComponen
       v16 = this->fields.breakSprite;
       v19 = 1;
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19);
-      v18 = System_String__Concat((Il2CppObject *)StringLiteral_19105, v17, 0LL);
+      v18 = System_String__Concat((Il2CppObject *)StringLiteral_19105/*"hp_break_"*/, v17, 0LL);
       if ( v16 )
       {
         UISprite__set_spriteName(v16, v18, 0LL);
@@ -3173,7 +3173,7 @@ void __fastcall BattleServantParamComponent__setCloseMode(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v4);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_13126, v7);
+    sub_B16FFC(&StringLiteral_13126/*"SvtW_StartClose"*/, v7);
     byte_40FCCED = 1;
   }
   BattleServantParamComponent__setSkillFlash(this, 0, v2);
@@ -3221,7 +3221,7 @@ void __fastcall BattleServantParamComponent__setCloseMode(
       {
         if ( Component_WebViewObject )
         {
-          Item = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126, 0LL);
+          Item = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
           if ( Item )
           {
             klass = Item->klass;
@@ -3248,7 +3248,7 @@ LABEL_21:
               v22,
               *(_QWORD *)(p_method + 8),
               0.0);
-            v34 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126, 0LL);
+            v34 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
             if ( v34 )
             {
               v35 = v34->klass;
@@ -3293,7 +3293,7 @@ LABEL_55:
       {
         if ( Component_WebViewObject )
         {
-          v26 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126, 0LL);
+          v26 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
           if ( v26 )
           {
             v27 = v26->klass;
@@ -3317,7 +3317,7 @@ LABEL_32:
               v31 = sub_AAFEF8(v26, SimpleAnimation_State_TypeInfo, 4LL);
             }
             (*(void (__fastcall **)(SimpleAnimation_State_o *, _QWORD, float))v31)(v28, *(_QWORD *)(v31 + 8), 0.0);
-            v40 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126, 0LL);
+            v40 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
             if ( v40 )
             {
               v35 = v40->klass;
@@ -3342,7 +3342,7 @@ LABEL_56:
               (*(void (__fastcall **)(SimpleAnimation_State_o *, _QWORD, float))v42)(v37, *(_QWORD *)(v42 + 8), 1.0);
               v9 = (TweenColor_o *)SimpleAnimation__Play_16380456(
                                      Component_WebViewObject,
-                                     (System_String_o *)StringLiteral_13126,
+                                     (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/,
                                      0LL);
               goto LABEL_57;
             }
@@ -3362,17 +3362,17 @@ LABEL_58:
     {
       if ( !v19 )
         goto LABEL_58;
-      v32 = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)v19, (System_String_o *)StringLiteral_13126, 0LL);
+      v32 = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)v19, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
       if ( !v32 )
         goto LABEL_58;
       UnityEngine_AnimationState__set_time(v32, 0.0, 0LL);
-      v33 = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)v19, (System_String_o *)StringLiteral_13126, 0LL);
+      v33 = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)v19, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
       if ( !v33 )
         goto LABEL_58;
       UnityEngine_AnimationState__set_speed(v33, 1.0, 0LL);
       v9 = (TweenColor_o *)UnityEngine_Animation__Play_49744236(
                              (UnityEngine_Animation_o *)v19,
-                             (System_String_o *)StringLiteral_13126,
+                             (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/,
                              0LL);
     }
   }
@@ -3527,7 +3527,7 @@ void __fastcall BattleServantParamComponent__setOpenMode(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_13126, v8);
+    sub_B16FFC(&StringLiteral_13126/*"SvtW_StartClose"*/, v8);
     byte_40FCCEE = 1;
   }
   BattleServantParamComponent__setSkillFlash(this, 1, method);
@@ -3586,8 +3586,8 @@ void __fastcall BattleServantParamComponent__setOpenMode(
     {
       if ( Component_WebViewObject )
       {
-        Item = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126, 0LL);
-        v26 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126, 0LL);
+        Item = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
+        v26 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
         if ( v26 )
         {
           klass = v26->klass;
@@ -3637,7 +3637,7 @@ LABEL_51:
               Item,
               *(_QWORD *)(v48 + 8),
               v45);
-            v49 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126, 0LL);
+            v49 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
             if ( v49 )
             {
               v50 = v49->klass;
@@ -3683,8 +3683,8 @@ LABEL_73:
     {
       if ( Component_WebViewObject )
       {
-        v32 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126, 0LL);
-        v33 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126, 0LL);
+        v32 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
+        v33 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
         if ( v33 )
         {
           v34 = v33->klass;
@@ -3731,7 +3731,7 @@ LABEL_65:
               v60 = sub_AAFEF8(v32, SimpleAnimation_State_TypeInfo, 4LL);
             }
             (*(void (__fastcall **)(SimpleAnimation_State_o *, _QWORD, long double))v60)(v32, *(_QWORD *)(v60 + 8), v57);
-            v61 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126, 0LL);
+            v61 = SimpleAnimation__get_Item(Component_WebViewObject, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
             if ( v61 )
             {
               v50 = v61->klass;
@@ -3756,7 +3756,7 @@ LABEL_74:
               (*(void (__fastcall **)(SimpleAnimation_State_o *, _QWORD, float))v63)(v52, *(_QWORD *)(v63 + 8), -1.0);
               v10 = (TweenColor_o *)SimpleAnimation__Play_16380456(
                                       Component_WebViewObject,
-                                      (System_String_o *)StringLiteral_13126,
+                                      (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/,
                                       0LL);
               goto LABEL_75;
             }
@@ -3777,8 +3777,8 @@ LABEL_78:
   {
     if ( v24 )
     {
-      v39 = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)v24, (System_String_o *)StringLiteral_13126, 0LL);
-      v40 = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)v24, (System_String_o *)StringLiteral_13126, 0LL);
+      v39 = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)v24, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
+      v40 = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)v24, (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/, 0LL);
       if ( v40 )
       {
         length = UnityEngine_AnimationState__get_length(v40, 0LL);
@@ -3787,14 +3787,14 @@ LABEL_78:
           UnityEngine_AnimationState__set_time(v39, length, 0LL);
           v42 = UnityEngine_Animation__get_Item(
                   (UnityEngine_Animation_o *)v24,
-                  (System_String_o *)StringLiteral_13126,
+                  (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/,
                   0LL);
           if ( v42 )
           {
             UnityEngine_AnimationState__set_speed(v42, -1.0, 0LL);
             v10 = (TweenColor_o *)UnityEngine_Animation__Play_49744236(
                                     (UnityEngine_Animation_o *)v24,
-                                    (System_String_o *)StringLiteral_13126,
+                                    (System_String_o *)StringLiteral_13126/*"SvtW_StartClose"*/,
                                     0LL);
             if ( !isPlayCommandSpellEffectStartAnim )
               goto LABEL_77;
@@ -3865,8 +3865,8 @@ void __fastcall BattleServantParamComponent__setRoleTyoe(BattleServantParamCompo
   if ( (byte_40FCCF7 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18302, v3);
-    sub_B16FFC(&StringLiteral_21891, v4);
+    sub_B16FFC(&StringLiteral_18302/*"enemy_icon_leader"*/, v3);
+    sub_B16FFC(&StringLiteral_21891/*"servant_icon"*/, v4);
     byte_40FCCF7 = 1;
   }
   roleTypeSprite = (UnityEngine_Object_o *)this->fields.roleTypeSprite;
@@ -3888,14 +3888,14 @@ void __fastcall BattleServantParamComponent__setRoleTyoe(BattleServantParamCompo
       {
         if ( !v8 )
           goto LABEL_26;
-        v9 = &StringLiteral_18302;
+        v9 = &StringLiteral_18302/*"enemy_icon_leader"*/;
         goto LABEL_18;
       }
       if ( !v8 )
         goto LABEL_26;
       if ( roleType == 3 )
       {
-        v9 = &StringLiteral_21891;
+        v9 = &StringLiteral_21891/*"servant_icon"*/;
 LABEL_18:
         UISprite__set_spriteName(v8, (System_String_o *)*v9, 0LL);
         v10 = (UnityEngine_Component_o *)this->fields.roleTypeSprite;
@@ -4504,14 +4504,14 @@ void __fastcall BattleServantParamComponent__shiftUpdateStatus(
     sub_B16FFC(&object___TypeInfo, v4);
     sub_B16FFC(&SeManager_TypeInfo, v5);
     sub_B16FFC(&float_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_18842, v7);
-    sub_B16FFC(&StringLiteral_19333, v8);
-    sub_B16FFC(&StringLiteral_22584, v9);
-    sub_B16FFC(&StringLiteral_22851, v10);
-    sub_B16FFC(&StringLiteral_21182, v11);
-    sub_B16FFC(&StringLiteral_22621, v12);
-    sub_B16FFC(&StringLiteral_4182, v13);
-    sub_B16FFC(&StringLiteral_21173, v14);
+    sub_B16FFC(&StringLiteral_18842/*"from"*/, v7);
+    sub_B16FFC(&StringLiteral_19333/*"ignoretimescale"*/, v8);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v9);
+    sub_B16FFC(&StringLiteral_22851/*"updateShiftHplabel"*/, v10);
+    sub_B16FFC(&StringLiteral_21182/*"onupdate"*/, v11);
+    sub_B16FFC(&StringLiteral_22621/*"to"*/, v12);
+    sub_B16FFC(&StringLiteral_4182/*"ComplateUpdateShiftHplabel"*/, v13);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v14);
     sub_B16FFC(&iTween_TypeInfo, v15);
     byte_40FCD0B = 1;
   }
@@ -4581,13 +4581,13 @@ void __fastcall BattleServantParamComponent__shiftUpdateStatus(
           if ( v35 )
           {
             v42 = (System_Object_array *)v35;
-            v43 = StringLiteral_18842;
-            if ( StringLiteral_18842 )
+            v43 = StringLiteral_18842/*"from"*/;
+            if ( StringLiteral_18842/*"from"*/ )
             {
-              v43 = sub_B170BC(StringLiteral_18842, v42->obj.klass->_1.element_class);
+              v43 = sub_B170BC(StringLiteral_18842/*"from"*/, v42->obj.klass->_1.element_class);
               if ( !v43 )
                 goto LABEL_86;
-              v44 = (System_Int32_array **)StringLiteral_18842;
+              v44 = (System_Int32_array **)StringLiteral_18842/*"from"*/;
             }
             else
             {
@@ -4610,13 +4610,13 @@ void __fastcall BattleServantParamComponent__shiftUpdateStatus(
               goto LABEL_85;
             v42->m_Items[1] = (Il2CppObject *)v50;
             sub_B16F98((BattleServantConfConponent_o *)&v42->m_Items[1], v50, v36, v45, v46, v47, v48, v49);
-            v43 = StringLiteral_22621;
-            if ( StringLiteral_22621 )
+            v43 = StringLiteral_22621/*"to"*/;
+            if ( StringLiteral_22621/*"to"*/ )
             {
-              v43 = sub_B170BC(StringLiteral_22621, v42->obj.klass->_1.element_class);
+              v43 = sub_B170BC(StringLiteral_22621/*"to"*/, v42->obj.klass->_1.element_class);
               if ( !v43 )
                 goto LABEL_86;
-              v44 = (System_Int32_array **)StringLiteral_22621;
+              v44 = (System_Int32_array **)StringLiteral_22621/*"to"*/;
             }
             else
             {
@@ -4638,13 +4638,13 @@ void __fastcall BattleServantParamComponent__shiftUpdateStatus(
                   goto LABEL_85;
                 v42->m_Items[3] = (Il2CppObject *)v62;
                 sub_B16F98((BattleServantConfConponent_o *)&v42->m_Items[3], v62, v36, v57, v58, v59, v60, v61);
-                v43 = StringLiteral_21182;
-                if ( StringLiteral_21182 )
+                v43 = StringLiteral_21182/*"onupdate"*/;
+                if ( StringLiteral_21182/*"onupdate"*/ )
                 {
-                  v43 = sub_B170BC(StringLiteral_21182, v42->obj.klass->_1.element_class);
+                  v43 = sub_B170BC(StringLiteral_21182/*"onupdate"*/, v42->obj.klass->_1.element_class);
                   if ( !v43 )
                     goto LABEL_86;
-                  v44 = (System_Int32_array **)StringLiteral_21182;
+                  v44 = (System_Int32_array **)StringLiteral_21182/*"onupdate"*/;
                 }
                 else
                 {
@@ -4654,13 +4654,13 @@ void __fastcall BattleServantParamComponent__shiftUpdateStatus(
                   goto LABEL_85;
                 v42->m_Items[4] = (Il2CppObject *)v44;
                 sub_B16F98((BattleServantConfConponent_o *)&v42->m_Items[4], v44, v36, v63, v64, v65, v66, v67);
-                v43 = StringLiteral_22851;
-                if ( StringLiteral_22851 )
+                v43 = StringLiteral_22851/*"updateShiftHplabel"*/;
+                if ( StringLiteral_22851/*"updateShiftHplabel"*/ )
                 {
-                  v43 = sub_B170BC(StringLiteral_22851, v42->obj.klass->_1.element_class);
+                  v43 = sub_B170BC(StringLiteral_22851/*"updateShiftHplabel"*/, v42->obj.klass->_1.element_class);
                   if ( !v43 )
                     goto LABEL_86;
-                  v44 = (System_Int32_array **)StringLiteral_22851;
+                  v44 = (System_Int32_array **)StringLiteral_22851/*"updateShiftHplabel"*/;
                 }
                 else
                 {
@@ -4670,13 +4670,13 @@ void __fastcall BattleServantParamComponent__shiftUpdateStatus(
                   goto LABEL_85;
                 v42->m_Items[5] = (Il2CppObject *)v44;
                 sub_B16F98((BattleServantConfConponent_o *)&v42->m_Items[5], v44, v36, v68, v69, v70, v71, v72);
-                v43 = StringLiteral_22584;
-                if ( StringLiteral_22584 )
+                v43 = StringLiteral_22584/*"time"*/;
+                if ( StringLiteral_22584/*"time"*/ )
                 {
-                  v43 = sub_B170BC(StringLiteral_22584, v42->obj.klass->_1.element_class);
+                  v43 = sub_B170BC(StringLiteral_22584/*"time"*/, v42->obj.klass->_1.element_class);
                   if ( !v43 )
                     goto LABEL_86;
-                  v44 = (System_Int32_array **)StringLiteral_22584;
+                  v44 = (System_Int32_array **)StringLiteral_22584/*"time"*/;
                 }
                 else
                 {
@@ -4695,13 +4695,13 @@ void __fastcall BattleServantParamComponent__shiftUpdateStatus(
                     goto LABEL_85;
                   v42->m_Items[7] = (Il2CppObject *)v83;
                   sub_B16F98((BattleServantConfConponent_o *)&v42->m_Items[7], v83, v36, v78, v79, v80, v81, v82);
-                  v43 = StringLiteral_19333;
-                  if ( StringLiteral_19333 )
+                  v43 = StringLiteral_19333/*"ignoretimescale"*/;
+                  if ( StringLiteral_19333/*"ignoretimescale"*/ )
                   {
-                    v43 = sub_B170BC(StringLiteral_19333, v42->obj.klass->_1.element_class);
+                    v43 = sub_B170BC(StringLiteral_19333/*"ignoretimescale"*/, v42->obj.klass->_1.element_class);
                     if ( !v43 )
                       goto LABEL_86;
-                    v44 = (System_Int32_array **)StringLiteral_19333;
+                    v44 = (System_Int32_array **)StringLiteral_19333/*"ignoretimescale"*/;
                   }
                   else
                   {
@@ -4720,13 +4720,13 @@ void __fastcall BattleServantParamComponent__shiftUpdateStatus(
                       goto LABEL_85;
                     v42->m_Items[9] = (Il2CppObject *)v94;
                     sub_B16F98((BattleServantConfConponent_o *)&v42->m_Items[9], v94, v36, v89, v90, v91, v92, v93);
-                    v43 = StringLiteral_21173;
-                    if ( StringLiteral_21173 )
+                    v43 = StringLiteral_21173/*"oncomplete"*/;
+                    if ( StringLiteral_21173/*"oncomplete"*/ )
                     {
-                      v43 = sub_B170BC(StringLiteral_21173, v42->obj.klass->_1.element_class);
+                      v43 = sub_B170BC(StringLiteral_21173/*"oncomplete"*/, v42->obj.klass->_1.element_class);
                       if ( !v43 )
                         goto LABEL_86;
-                      v44 = (System_Int32_array **)StringLiteral_21173;
+                      v44 = (System_Int32_array **)StringLiteral_21173/*"oncomplete"*/;
                     }
                     else
                     {
@@ -4736,8 +4736,8 @@ void __fastcall BattleServantParamComponent__shiftUpdateStatus(
                       goto LABEL_85;
                     v42->m_Items[10] = (Il2CppObject *)v44;
                     sub_B16F98((BattleServantConfConponent_o *)&v42->m_Items[10], v44, v36, v95, v96, v97, v98, v99);
-                    v43 = StringLiteral_4182;
-                    if ( !StringLiteral_4182 )
+                    v43 = StringLiteral_4182/*"ComplateUpdateShiftHplabel"*/;
+                    if ( !StringLiteral_4182/*"ComplateUpdateShiftHplabel"*/ )
                     {
                       v44 = 0LL;
 LABEL_78:
@@ -4766,10 +4766,10 @@ LABEL_85:
                       sub_B17100(v43, v44, v36);
                       sub_B170A0();
                     }
-                    v43 = sub_B170BC(StringLiteral_4182, v42->obj.klass->_1.element_class);
+                    v43 = sub_B170BC(StringLiteral_4182/*"ComplateUpdateShiftHplabel"*/, v42->obj.klass->_1.element_class);
                     if ( v43 )
                     {
-                      v44 = (System_Int32_array **)StringLiteral_4182;
+                      v44 = (System_Int32_array **)StringLiteral_4182/*"ComplateUpdateShiftHplabel"*/;
                       goto LABEL_78;
                     }
                   }
@@ -4913,8 +4913,8 @@ void __fastcall BattleServantParamComponent__updateBuffIcon(
     sub_B16FFC(&HutongGames_PlayMaker_Actions_FGOActorAnimation_ANIMATIONNAME_TypeInfo, buffData);
     sub_B16FFC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_13278, v7);
-    sub_B16FFC(&StringLiteral_23096, v8);
+    sub_B16FFC(&StringLiteral_13278/*"TAMAMOCAT_STUN_BUFF_ID"*/, v7);
+    sub_B16FFC(&StringLiteral_23096/*"wait"*/, v8);
     byte_40FCD00 = 1;
   }
   v54 = 0;
@@ -5063,7 +5063,7 @@ LABEL_36:
         goto LABEL_60;
       id = Entity->fields.id;
       ActiveList = (BattleBuffData_BuffData_array *)ConstantMaster__getValue(
-                                                      (System_String_o *)StringLiteral_13278,
+                                                      (System_String_o *)StringLiteral_13278/*"TAMAMOCAT_STUN_BUFF_ID"*/,
                                                       0LL);
       v45 |= id == (_DWORD)ActiveList;
     }
@@ -5095,7 +5095,7 @@ LABEL_55:
       if ( v53 )
       {
         if ( BattleActorControl__checkID(v53, this->fields.uniqueID, 0LL) )
-          BattleActorControl__playAnimation_32029680(v53, (System_String_o *)StringLiteral_23096, 0, 0LL);
+          BattleActorControl__playAnimation_32029680(v53, (System_String_o *)StringLiteral_23096/*"wait"*/, 0, 0LL);
         return;
       }
       goto LABEL_60;
@@ -5297,17 +5297,17 @@ void __fastcall BattleServantParamComponent__updateHplabel(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___, *(_QWORD *)&now);
     sub_B16FFC(&int_TypeInfo, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_23445, v11);
-    sub_B16FFC(&StringLiteral_23516, v12);
-    sub_B16FFC(&StringLiteral_23395, v13);
-    sub_B16FFC(&StringLiteral_23398, v14);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v11);
+    sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, v12);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v13);
+    sub_B16FFC(&StringLiteral_23398/*"{0:#,0}/{1:#,0}"*/, v14);
     byte_40FCCF5 = 1;
   }
   hplabel = (UnityEngine_Object_o *)this->fields.hplabel;
   if ( this->fields.hpformatflg )
-    v16 = &StringLiteral_23395;
+    v16 = &StringLiteral_23395/*"{0:#,0}"*/;
   else
-    v16 = &StringLiteral_23445;
+    v16 = &StringLiteral_23445/*"{0}"*/;
   v17 = (System_String_o *)*v16;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5372,7 +5372,7 @@ void __fastcall BattleServantParamComponent__updateHplabel(
       v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v46);
       v45 = max;
       v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45);
-      v31 = &StringLiteral_23398;
+      v31 = &StringLiteral_23398/*"{0:#,0}/{1:#,0}"*/;
     }
     else
     {
@@ -5380,7 +5380,7 @@ void __fastcall BattleServantParamComponent__updateHplabel(
       v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v46);
       v45 = max;
       v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45);
-      v31 = &StringLiteral_23516;
+      v31 = &StringLiteral_23516/*"{0}/{1}"*/;
     }
     v32 = System_String__Format_43739268((System_String_o *)*v31, v29, v30, 0LL);
     if ( !v28 )
@@ -5983,7 +5983,7 @@ bool __fastcall BattleServantParamComponent__CoAddClassIconEffect_d__120__MoveNe
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v16);
     sub_B16FFC(&Method_BattleServantParamComponent___c__DisplayClass120_0__CoAddClassIconEffect_b__0__, v17);
     sub_B16FFC(&BattleServantParamComponent___c__DisplayClass120_0_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_18105, v19);
+    sub_B16FFC(&StringLiteral_18105/*"ef_commandaura_{0}"*/, v19);
     byte_40F71CC = 1;
   }
   path = 0LL;
@@ -6164,7 +6164,7 @@ LABEL_76:
             v60 = path;
             battleGenderType = data->fields.battleGenderType;
             v61 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &battleGenderType);
-            v62 = System_String__Format((System_String_o *)StringLiteral_18105, v61, 0LL);
+            v62 = System_String__Format((System_String_o *)StringLiteral_18105/*"ef_commandaura_{0}"*/, v61, 0LL);
             if ( (BYTE3(ServantAssetLoadManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
             {

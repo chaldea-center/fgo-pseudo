@@ -16,16 +16,16 @@ void __fastcall CommandCodeSetStatusRequest__beginRequest(
 
   if ( (byte_40FA5BC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17532, userCommandCodeId);
-    sub_B16FFC(&StringLiteral_19857, v9);
-    sub_B16FFC(&StringLiteral_19843, v10);
+    sub_B16FFC(&StringLiteral_17532/*"commandCodeId"*/, userCommandCodeId);
+    sub_B16FFC(&StringLiteral_19857/*"isLock"*/, v9);
+    sub_B16FFC(&StringLiteral_19843/*"isChoice"*/, v10);
     byte_40FA5BC = 1;
   }
-  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_17532, userCommandCodeId, 0LL);
+  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_17532/*"commandCodeId"*/, userCommandCodeId, 0LL);
   if ( !this )
     sub_B170D4();
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19857, isLock, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19843, isChoice, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19857/*"isLock"*/, isLock, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19843/*"isChoice"*/, isChoice, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -39,7 +39,7 @@ System_String_o *__fastcall CommandCodeSetStatusRequest__getMockData(
   if ( (byte_40FA5BB & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v2);
+    sub_B16FFC(&StringLiteral_1/*""*/, v2);
     byte_40FA5BB = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -47,7 +47,7 @@ System_String_o *__fastcall CommandCodeSetStatusRequest__getMockData(
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_1, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -61,7 +61,7 @@ System_String_o *__fastcall CommandCodeSetStatusRequest__getURL(
   if ( (byte_40FA5BA & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_17529, v2);
+    sub_B16FFC(&StringLiteral_17529/*"commandCode/setStatus"*/, v2);
     byte_40FA5BA = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -70,7 +70,7 @@ System_String_o *__fastcall CommandCodeSetStatusRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17529, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17529/*"commandCode/setStatus"*/, 0LL);
 }
 
 
@@ -87,8 +87,8 @@ void __fastcall CommandCodeSetStatusRequest__requestCompleted(
   if ( (byte_40FA5BD & 1) == 0 )
   {
     sub_B16FFC(&ResponseCommandKind_TypeInfo, responseList);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40FA5BD = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -98,8 +98,8 @@ void __fastcall CommandCodeSetStatusRequest__requestCompleted(
   }
   v7 = ResponseCommandKind__SearchData(70, responseList, 0LL);
   if ( v7 && ResponseData__checkError_30924960(v7, 0LL) )
-    v8 = (System_String_o **)&StringLiteral_21129;
+    v8 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_20980;
+    v8 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, *v8, 0LL);
 }

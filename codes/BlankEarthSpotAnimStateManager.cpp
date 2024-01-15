@@ -262,7 +262,7 @@ BlankEarthSpotAnimStateManager_SpotStateData_array *__fastcall BlankEarthSpotAni
     sub_B16FFC(&Method_System_Linq_Enumerable_ToArray_BlankEarthSpotAnimStateManager_SpotStateData___, v10);
     sub_B16FFC(&Method_System_Func_string__BlankEarthSpotAnimStateManager_SpotStateData___ctor__, v11);
     sub_B16FFC(&System_Func_string__BlankEarthSpotAnimStateManager_SpotStateData__TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_2568, v13);
+    sub_B16FFC(&StringLiteral_2568/*"BLANK_EARTH_SPOT_ANIM_STATE"*/, v13);
     byte_40FB0A6 = 1;
   }
   entity = 0LL;
@@ -299,7 +299,7 @@ BlankEarthSpotAnimStateManager_SpotStateData_array *__fastcall BlankEarthSpotAni
   if ( DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
          Master_WarQuestSelectionMaster,
          &entity,
-         (System_String_o *)StringLiteral_2568,
+         (System_String_o *)StringLiteral_2568/*"BLANK_EARTH_SPOT_ANIM_STATE"*/,
          (const MethodInfo_266F830 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__) )
   {
     if ( !entity )

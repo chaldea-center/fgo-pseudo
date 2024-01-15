@@ -43,12 +43,12 @@ void __fastcall TerminalPramsManager___cctor(const MethodInfo *method)
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v8);
     sub_B16FFC(&float___TypeInfo, v9);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F6DB4 = 1;
   }
   static_fields = TerminalPramsManager_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_1;
-  static_fields->mTerminalWarStartedIds = (struct System_String_o *)StringLiteral_1;
+  v13 = (System_Int32_array **)StringLiteral_1/*""*/;
+  static_fields->mTerminalWarStartedIds = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->mTerminalWarStartedIds, v13, v2, v3, v4, v5, v6, v7);
   v14 = TerminalPramsManager_TypeInfo;
   TerminalPramsManager_TypeInfo->static_fields->clearLastBattleRaidId = -1;
@@ -138,7 +138,7 @@ void __fastcall TerminalPramsManager__BlankEarthRank_SaveData(const MethodInfo *
   if ( (byte_40F6D93 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11517, v2);
+    sub_B16FFC(&StringLiteral_11517/*"SAVEKEY_BlankEarthRank"*/, v2);
     byte_40F6D93 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -159,7 +159,7 @@ void __fastcall TerminalPramsManager__BlankEarthRank_SaveData(const MethodInfo *
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11517,
+    (System_String_o *)StringLiteral_11517/*"SAVEKEY_BlankEarthRank"*/,
     v3->static_fields->_BlankEarthRank_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -175,7 +175,7 @@ void __fastcall TerminalPramsManager__BlankEarthSpotId_SaveData(const MethodInfo
   if ( (byte_40F6D92 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11518, v2);
+    sub_B16FFC(&StringLiteral_11518/*"SAVEKEY_BlankEarthSpotId"*/, v2);
     byte_40F6D92 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -196,7 +196,7 @@ void __fastcall TerminalPramsManager__BlankEarthSpotId_SaveData(const MethodInfo
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11518,
+    (System_String_o *)StringLiteral_11518/*"SAVEKEY_BlankEarthSpotId"*/,
     v3->static_fields->_BlankEarthSpotId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -219,7 +219,7 @@ void __fastcall TerminalPramsManager__CampaignDirectBonus_SaveData(const MethodI
     sub_B16FFC(&CommonUI_CampaignDirectBonusData___TypeInfo, v1);
     sub_B16FFC(&JsonManager_TypeInfo, v3);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_11519, v5);
+    sub_B16FFC(&StringLiteral_11519/*"SAVEKEY_CampaignDirectBonus"*/, v5);
     byte_40F6D91 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -245,7 +245,7 @@ void __fastcall TerminalPramsManager__CampaignDirectBonus_SaveData(const MethodI
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v8 = JsonManager__toJson(p_obj, 0, 0, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11519, v8, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11519/*"SAVEKEY_CampaignDirectBonus"*/, v8, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -395,12 +395,12 @@ bool __fastcall TerminalPramsManager__CheckEventActivityPointSaveData(const Meth
 
   if ( (byte_40F6D7E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_13555, v1);
-    sub_B16FFC(&StringLiteral_13556, v2);
+    sub_B16FFC(&StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/, v1);
+    sub_B16FFC(&StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/, v2);
     byte_40F6D7E = 1;
   }
-  return UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13555, 0LL)
-      && UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13556, 0LL);
+  return UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/, 0LL)
+      && UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/, 0LL);
 }
 
 
@@ -410,10 +410,10 @@ bool __fastcall TerminalPramsManager__CheckEventSubmarinePointSaveData(const Met
 
   if ( (byte_40F6D80 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_13557, v1);
+    sub_B16FFC(&StringLiteral_13557/*"TerminalBeforeEventSubmarinePointData"*/, v1);
     byte_40F6D80 = 1;
   }
-  return UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13557, 0LL);
+  return UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13557/*"TerminalBeforeEventSubmarinePointData"*/, 0LL);
 }
 
 
@@ -516,9 +516,9 @@ void __fastcall TerminalPramsManager__CheckResumeEffectNT2(const MethodInfo *met
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v11);
     sub_B16FFC(&Method_TerminalPramsManager___c__DisplayClass594_0__CheckResumeEffectNT2_b__0__, v12);
     sub_B16FFC(&TerminalPramsManager___c__DisplayClass594_0_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_26, v14);
-    sub_B16FFC(&StringLiteral_68, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v14);
+    sub_B16FFC(&StringLiteral_68/*"\r\n"*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40F6D98 = 1;
   }
   v60 = 0;
@@ -602,8 +602,8 @@ void __fastcall TerminalPramsManager__CheckResumeEffectNT2(const MethodInfo *met
           goto LABEL_50;
         v30 = System_String__Replace_43750968(
                 PlayedTerminalEffects_k__BackingField,
-                (System_String_o *)StringLiteral_68,
-                (System_String_o *)StringLiteral_26,
+                (System_String_o *)StringLiteral_68/*"\r\n"*/,
+                (System_String_o *)StringLiteral_26/*"\n"*/,
                 0LL);
         v32 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v31);
         if ( !v32 )
@@ -629,8 +629,8 @@ void __fastcall TerminalPramsManager__CheckResumeEffectNT2(const MethodInfo *met
 LABEL_50:
           sub_B170D4();
         }
-        v43 = (System_Int32_array **)StringLiteral_1;
-        *(_QWORD *)(v17 + 16) = StringLiteral_1;
+        v43 = (System_Int32_array **)StringLiteral_1/*""*/;
+        *(_QWORD *)(v17 + 16) = StringLiteral_1/*""*/;
         sub_B16F98((BattleServantConfConponent_o *)(v17 + 16), v43, v37, v38, v39, v40, v41, v42);
         v48 = (System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)sub_B170CC(
                                                                                      System_Action_string__TypeInfo,
@@ -679,7 +679,7 @@ void __fastcall TerminalPramsManager__ClearEventQuestIds_SaveData(const MethodIn
   if ( (byte_40F6D8D & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11520, v2);
+    sub_B16FFC(&StringLiteral_11520/*"SAVEKEY_ClearEventQuestIds"*/, v2);
     byte_40F6D8D = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -700,7 +700,7 @@ void __fastcall TerminalPramsManager__ClearEventQuestIds_SaveData(const MethodIn
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetString(
-    (System_String_o *)StringLiteral_11520,
+    (System_String_o *)StringLiteral_11520/*"SAVEKEY_ClearEventQuestIds"*/,
     v3->static_fields->_ClearEventQuestIds_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -717,8 +717,8 @@ void __fastcall TerminalPramsManager__ConnectMark_SaveData(const MethodInfo *met
   if ( (byte_40F6D8C & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11522, v2);
-    sub_B16FFC(&StringLiteral_11521, v3);
+    sub_B16FFC(&StringLiteral_11522/*"SAVEKEY_ConnectMarkEventId"*/, v2);
+    sub_B16FFC(&StringLiteral_11521/*"SAVEKEY_ConnectMarkAnimationId"*/, v3);
     byte_40F6D8C = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
@@ -728,9 +728,9 @@ void __fastcall TerminalPramsManager__ConnectMark_SaveData(const MethodInfo *met
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v4 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11522, v4->static_fields->ConnectMarkEventId, 0LL);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11522/*"SAVEKEY_ConnectMarkEventId"*/, v4->static_fields->ConnectMarkEventId, 0LL);
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11521,
+    (System_String_o *)StringLiteral_11521/*"SAVEKEY_ConnectMarkAnimationId"*/,
     TerminalPramsManager_TypeInfo->static_fields->ConnectMarkAnimationId,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -758,7 +758,7 @@ void __fastcall TerminalPramsManager__DeleteClearDatas(const MethodInfo *method)
   {
     sub_B16FFC(&TerminalPramsManager_ClearData_TypeInfo, v1);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F6DA8 = 1;
   }
   v4 = TerminalPramsManager_ClearData_TypeInfo;
@@ -788,8 +788,8 @@ void __fastcall TerminalPramsManager__DeleteClearDatas(const MethodInfo *method)
   }
   v12->static_fields->_isQuestRewardSetted_k__BackingField = 0;
   p_lastPlayBgmName = (BattleServantConfConponent_o *)&v12->static_fields->lastPlayBgmName;
-  v14 = (System_Int32_array **)StringLiteral_1;
-  p_lastPlayBgmName->klass = (BattleServantConfConponent_c *)StringLiteral_1;
+  v14 = (System_Int32_array **)StringLiteral_1/*""*/;
+  p_lastPlayBgmName->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
   sub_B16F98(p_lastPlayBgmName, v14, v6, v7, v8, v9, v10, v11);
 }
 
@@ -845,88 +845,88 @@ void __fastcall TerminalPramsManager__DeleteContinueData(const MethodInfo *metho
   if ( (byte_40F6D71 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11525, v2);
-    sub_B16FFC(&StringLiteral_13559, v3);
-    sub_B16FFC(&StringLiteral_11531, v4);
-    sub_B16FFC(&StringLiteral_13555, v5);
-    sub_B16FFC(&StringLiteral_11519, v6);
-    sub_B16FFC(&StringLiteral_11526, v7);
-    sub_B16FFC(&StringLiteral_13560, v8);
-    sub_B16FFC(&StringLiteral_13557, v9);
-    sub_B16FFC(&StringLiteral_13566, v10);
-    sub_B16FFC(&StringLiteral_11535, v11);
-    sub_B16FFC(&StringLiteral_13574, v12);
-    sub_B16FFC(&StringLiteral_13558, v13);
-    sub_B16FFC(&StringLiteral_11528, v14);
-    sub_B16FFC(&StringLiteral_13561, v15);
-    sub_B16FFC(&StringLiteral_11527, v16);
-    sub_B16FFC(&StringLiteral_11532, v17);
-    sub_B16FFC(&StringLiteral_11536, v18);
-    sub_B16FFC(&StringLiteral_11520, v19);
-    sub_B16FFC(&StringLiteral_11529, v20);
-    sub_B16FFC(&StringLiteral_5179, v21);
-    sub_B16FFC(&StringLiteral_5178, v22);
-    sub_B16FFC(&StringLiteral_13569, v23);
-    sub_B16FFC(&StringLiteral_11534, v24);
-    sub_B16FFC(&StringLiteral_11539, v25);
-    sub_B16FFC(&StringLiteral_13573, v26);
-    sub_B16FFC(&StringLiteral_13578, v27);
-    sub_B16FFC(&StringLiteral_13571, v28);
-    sub_B16FFC(&StringLiteral_13575, v29);
-    sub_B16FFC(&StringLiteral_13556, v30);
-    sub_B16FFC(&StringLiteral_11518, v31);
-    sub_B16FFC(&StringLiteral_11523, v32);
-    sub_B16FFC(&StringLiteral_13579, v33);
-    sub_B16FFC(&StringLiteral_11522, v34);
-    sub_B16FFC(&StringLiteral_13577, v35);
-    sub_B16FFC(&StringLiteral_11521, v36);
-    sub_B16FFC(&StringLiteral_11530, v37);
-    sub_B16FFC(&StringLiteral_13564, v38);
-    sub_B16FFC(&StringLiteral_5177, v39);
-    sub_B16FFC(&StringLiteral_13576, v40);
-    sub_B16FFC(&StringLiteral_11538, v41);
+    sub_B16FFC(&StringLiteral_11525/*"SAVEKEY_LastPlayBgmName"*/, v2);
+    sub_B16FFC(&StringLiteral_13559/*"TerminalEndTime"*/, v3);
+    sub_B16FFC(&StringLiteral_11531/*"SAVEKEY_PlayedTerminalEffects"*/, v4);
+    sub_B16FFC(&StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/, v5);
+    sub_B16FFC(&StringLiteral_11519/*"SAVEKEY_CampaignDirectBonus"*/, v6);
+    sub_B16FFC(&StringLiteral_11526/*"SAVEKEY_LastPlayQuestConsumeType"*/, v7);
+    sub_B16FFC(&StringLiteral_13560/*"TerminalEventDailyPointEventId"*/, v8);
+    sub_B16FFC(&StringLiteral_13557/*"TerminalBeforeEventSubmarinePointData"*/, v9);
+    sub_B16FFC(&StringLiteral_13566/*"TerminalPhaseCnt"*/, v10);
+    sub_B16FFC(&StringLiteral_11535/*"SAVEKEY_TerminalConquestInfos"*/, v11);
+    sub_B16FFC(&StringLiteral_13574/*"TerminalTimeStatusEventId"*/, v12);
+    sub_B16FFC(&StringLiteral_13558/*"TerminalDispState"*/, v13);
+    sub_B16FFC(&StringLiteral_11528/*"SAVEKEY_PlayTerminalEffectDisappear"*/, v14);
+    sub_B16FFC(&StringLiteral_13561/*"TerminalIsDoneShortcut"*/, v15);
+    sub_B16FFC(&StringLiteral_11527/*"SAVEKEY_MapModelClearQuestInfo"*/, v16);
+    sub_B16FFC(&StringLiteral_11532/*"SAVEKEY_PlayerGenderType"*/, v17);
+    sub_B16FFC(&StringLiteral_11536/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, v18);
+    sub_B16FFC(&StringLiteral_11520/*"SAVEKEY_ClearEventQuestIds"*/, v19);
+    sub_B16FFC(&StringLiteral_11529/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/, v20);
+    sub_B16FFC(&StringLiteral_5179/*"Debug_IsQuestReleaseAll"*/, v21);
+    sub_B16FFC(&StringLiteral_5178/*"Debug_IsDummyErrorSelect"*/, v22);
+    sub_B16FFC(&StringLiteral_13569/*"TerminalQuestId"*/, v23);
+    sub_B16FFC(&StringLiteral_11534/*"SAVEKEY_TerminalConquestInfoDisp"*/, v24);
+    sub_B16FFC(&StringLiteral_11539/*"SAVEKEY_TerminalSelectedStoryQuestId"*/, v25);
+    sub_B16FFC(&StringLiteral_13573/*"TerminalTimeStatusEventDailyPoint"*/, v26);
+    sub_B16FFC(&StringLiteral_13578/*"TerminalWarId"*/, v27);
+    sub_B16FFC(&StringLiteral_13571/*"TerminalSpotId"*/, v28);
+    sub_B16FFC(&StringLiteral_13575/*"TerminalTimeStatusLoopCount"*/, v29);
+    sub_B16FFC(&StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/, v30);
+    sub_B16FFC(&StringLiteral_11518/*"SAVEKEY_BlankEarthSpotId"*/, v31);
+    sub_B16FFC(&StringLiteral_11523/*"SAVEKEY_DataLostBattleAutoReset"*/, v32);
+    sub_B16FFC(&StringLiteral_13579/*"TerminalWarStartedIds"*/, v33);
+    sub_B16FFC(&StringLiteral_11522/*"SAVEKEY_ConnectMarkEventId"*/, v34);
+    sub_B16FFC(&StringLiteral_13577/*"TerminalTransitionInfoVoiceAssetName"*/, v35);
+    sub_B16FFC(&StringLiteral_11521/*"SAVEKEY_ConnectMarkAnimationId"*/, v36);
+    sub_B16FFC(&StringLiteral_11530/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/, v37);
+    sub_B16FFC(&StringLiteral_13564/*"TerminalLastPlayedQuestId"*/, v38);
+    sub_B16FFC(&StringLiteral_5177/*"Debug_IsBuildInfoDisp"*/, v39);
+    sub_B16FFC(&StringLiteral_13576/*"TerminalTransitionInfoMissionId"*/, v40);
+    sub_B16FFC(&StringLiteral_11538/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/, v41);
     byte_40F6D71 = 1;
   }
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13558, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13578, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13571, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13569, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13564, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13566, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13559, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13561, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13579, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5179, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5178, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5177, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13574, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13575, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13560, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13573, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13576, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13577, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13555, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13556, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13557, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11535, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11534, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11536, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11525, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11526, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11531, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11528, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11529, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11530, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11539, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11522, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11521, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11538, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11520, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11527, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11523, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11532, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11519, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11518, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13558/*"TerminalDispState"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13578/*"TerminalWarId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13571/*"TerminalSpotId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13569/*"TerminalQuestId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13564/*"TerminalLastPlayedQuestId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13566/*"TerminalPhaseCnt"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13559/*"TerminalEndTime"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13561/*"TerminalIsDoneShortcut"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13579/*"TerminalWarStartedIds"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5179/*"Debug_IsQuestReleaseAll"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5178/*"Debug_IsDummyErrorSelect"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5177/*"Debug_IsBuildInfoDisp"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13574/*"TerminalTimeStatusEventId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13575/*"TerminalTimeStatusLoopCount"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13560/*"TerminalEventDailyPointEventId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13573/*"TerminalTimeStatusEventDailyPoint"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13576/*"TerminalTransitionInfoMissionId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13577/*"TerminalTransitionInfoVoiceAssetName"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13557/*"TerminalBeforeEventSubmarinePointData"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11535/*"SAVEKEY_TerminalConquestInfos"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11534/*"SAVEKEY_TerminalConquestInfoDisp"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11536/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11525/*"SAVEKEY_LastPlayBgmName"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11526/*"SAVEKEY_LastPlayQuestConsumeType"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11531/*"SAVEKEY_PlayedTerminalEffects"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11528/*"SAVEKEY_PlayTerminalEffectDisappear"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11529/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11530/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11539/*"SAVEKEY_TerminalSelectedStoryQuestId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11522/*"SAVEKEY_ConnectMarkEventId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11521/*"SAVEKEY_ConnectMarkAnimationId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11538/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11520/*"SAVEKEY_ClearEventQuestIds"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11527/*"SAVEKEY_MapModelClearQuestInfo"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11523/*"SAVEKEY_DataLostBattleAutoReset"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11532/*"SAVEKEY_PlayerGenderType"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11519/*"SAVEKEY_CampaignDirectBonus"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11518/*"SAVEKEY_BlankEarthSpotId"*/, 0LL);
   v42 = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -956,7 +956,7 @@ void __fastcall TerminalPramsManager__DeleteEventRaidDefeatedEffectInfo(const Me
   if ( (byte_40F6DA9 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11524, v8);
+    sub_B16FFC(&StringLiteral_11524/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/, v8);
     byte_40F6DA9 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -979,7 +979,7 @@ void __fastcall TerminalPramsManager__DeleteEventRaidDefeatedEffectInfo(const Me
   p_EventRaidDefeatedEffectInfo_k__BackingField = (BattleServantConfConponent_o *)&v9->static_fields->_EventRaidDefeatedEffectInfo_k__BackingField;
   p_EventRaidDefeatedEffectInfo_k__BackingField->klass = 0LL;
   sub_B16F98(p_EventRaidDefeatedEffectInfo_k__BackingField, 0LL, v2, v3, v4, v5, v6, v7);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11524, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11524/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/, 0LL);
 }
 
 
@@ -999,7 +999,7 @@ void __fastcall TerminalPramsManager__DeleteQuestRandomGroupList(const MethodInf
   if ( (byte_40F6DAE & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11533, v8);
+    sub_B16FFC(&StringLiteral_11533/*"SAVEKEY_QuestRandomGroupList"*/, v8);
     byte_40F6DAE = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1022,7 +1022,7 @@ void __fastcall TerminalPramsManager__DeleteQuestRandomGroupList(const MethodInf
   p_QuestRandomGroupList_k__BackingField = (BattleServantConfConponent_o *)&v9->static_fields->_QuestRandomGroupList_k__BackingField;
   p_QuestRandomGroupList_k__BackingField->klass = 0LL;
   sub_B16F98(p_QuestRandomGroupList_k__BackingField, 0LL, v2, v3, v4, v5, v6, v7);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11533, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11533/*"SAVEKEY_QuestRandomGroupList"*/, 0LL);
 }
 
 
@@ -1040,8 +1040,8 @@ void __fastcall TerminalPramsManager__EventDailyPointSave_SaveData(const MethodI
   if ( (byte_40F6D7A & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_13560, v2);
-    sub_B16FFC(&StringLiteral_13573, v3);
+    sub_B16FFC(&StringLiteral_13560/*"TerminalEventDailyPointEventId"*/, v2);
+    sub_B16FFC(&StringLiteral_13573/*"TerminalTimeStatusEventDailyPoint"*/, v3);
     byte_40F6D7A = 1;
   }
   BeforeTimeEventDailyPoint_k__BackingField = 0LL;
@@ -1063,7 +1063,7 @@ void __fastcall TerminalPramsManager__EventDailyPointSave_SaveData(const MethodI
     v4 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13560,
+    (System_String_o *)StringLiteral_13560/*"TerminalEventDailyPointEventId"*/,
     v4->static_fields->_EventDailyPointEventId_k__BackingField,
     0LL);
   if ( !byte_40F6E34 )
@@ -1080,7 +1080,7 @@ void __fastcall TerminalPramsManager__EventDailyPointSave_SaveData(const MethodI
   }
   BeforeTimeEventDailyPoint_k__BackingField = v6->static_fields->_BeforeTimeEventDailyPoint_k__BackingField;
   v7 = System_Int64__ToString((int64_t)&BeforeTimeEventDailyPoint_k__BackingField, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13573, v7, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13573/*"TerminalTimeStatusEventDailyPoint"*/, v7, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -1097,8 +1097,8 @@ void __fastcall TerminalPramsManager__EventStatusSave_SaveData(const MethodInfo 
   if ( (byte_40F6D79 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_13574, v2);
-    sub_B16FFC(&StringLiteral_13575, v3);
+    sub_B16FFC(&StringLiteral_13574/*"TerminalTimeStatusEventId"*/, v2);
+    sub_B16FFC(&StringLiteral_13575/*"TerminalTimeStatusLoopCount"*/, v3);
     byte_40F6D79 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1119,7 +1119,7 @@ void __fastcall TerminalPramsManager__EventStatusSave_SaveData(const MethodInfo 
     v4 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13574,
+    (System_String_o *)StringLiteral_13574/*"TerminalTimeStatusEventId"*/,
     v4->static_fields->_TimeStatusEventId_k__BackingField,
     0LL);
   if ( !byte_40F6E32 )
@@ -1135,7 +1135,7 @@ void __fastcall TerminalPramsManager__EventStatusSave_SaveData(const MethodInfo 
     v6 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13575,
+    (System_String_o *)StringLiteral_13575/*"TerminalTimeStatusLoopCount"*/,
     v6->static_fields->_TimeStatusLoopCount_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1300,7 +1300,7 @@ void __fastcall TerminalPramsManager__InitMessageWindowData(const MethodInfo *me
   if ( (byte_40F6D9B & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F6D9B = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1321,7 +1321,7 @@ void __fastcall TerminalPramsManager__InitMessageWindowData(const MethodInfo *me
     v9 = TerminalPramsManager_TypeInfo;
   }
   v9->static_fields->_IsDispOnly_k__BackingField = 0;
-  v10 = (System_Int32_array **)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
   if ( !byte_40F605B )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
@@ -1468,7 +1468,7 @@ void __fastcall TerminalPramsManager__InitParameter(const MethodInfo *method)
   if ( (byte_40F6D72 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F6D72 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1670,8 +1670,8 @@ void __fastcall TerminalPramsManager__InitParameter(const MethodInfo *method)
   }
   v19->static_fields->_IsDoneShortcut_k__BackingField = 0;
   v20 = v19->static_fields;
-  v21 = (System_Int32_array **)StringLiteral_1;
-  v20->mTerminalWarStartedIds = (struct System_String_o *)StringLiteral_1;
+  v21 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v20->mTerminalWarStartedIds = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&v20->mTerminalWarStartedIds, v21, v13, v14, v15, v16, v17, v18);
   if ( !byte_40F6E10 )
   {
@@ -1811,9 +1811,9 @@ void __fastcall TerminalPramsManager__InitParameter(const MethodInfo *method)
   p_BeforeEventSubmarineSaveData_k__BackingField = (BattleServantConfConponent_o *)&v38->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
   p_BeforeEventSubmarineSaveData_k__BackingField->klass = 0LL;
   sub_B16F98(p_BeforeEventSubmarineSaveData_k__BackingField, 0LL, v32, v33, v34, v35, v36, v37);
-  v40 = (System_Int32_array **)StringLiteral_1;
+  v40 = (System_Int32_array **)StringLiteral_1/*""*/;
   p_lastPlayBgmName = (BattleServantConfConponent_o *)&TerminalPramsManager_TypeInfo->static_fields->lastPlayBgmName;
-  p_lastPlayBgmName->klass = (BattleServantConfConponent_c *)StringLiteral_1;
+  p_lastPlayBgmName->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
   sub_B16F98(p_lastPlayBgmName, v40, v42, v43, v44, v45, v46, v47);
   v55 = TerminalPramsManager_TypeInfo;
   TerminalPramsManager_TypeInfo->static_fields->lastPlayQuestConsumeAp = 0;
@@ -1904,7 +1904,7 @@ void __fastcall TerminalPramsManager__InitParameter(const MethodInfo *method)
     v67 = TerminalPramsManager_TypeInfo;
   }
   v67->static_fields->_IsTopLastIdxNextBoardRequest_k__BackingField = 0;
-  v68 = (System_Int32_array **)StringLiteral_1;
+  v68 = (System_Int32_array **)StringLiteral_1/*""*/;
   if ( !byte_40F6E1D )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v60);
@@ -2138,7 +2138,7 @@ void __fastcall TerminalPramsManager__InitParameter(const MethodInfo *method)
     v77 = TerminalPramsManager_TypeInfo;
   }
   v77->static_fields->_EventUIEffectClearQuestId_k__BackingField = -1;
-  v78 = (System_Int32_array **)StringLiteral_1;
+  v78 = (System_Int32_array **)StringLiteral_1/*""*/;
   if ( !byte_40F6E2D )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v70);
@@ -2403,7 +2403,7 @@ void __fastcall TerminalPramsManager__IsDataLostBattleAutoReset_SaveData(const M
   if ( (byte_40F6D8F & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11523, v2);
+    sub_B16FFC(&StringLiteral_11523/*"SAVEKEY_DataLostBattleAutoReset"*/, v2);
     byte_40F6D8F = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2424,7 +2424,7 @@ void __fastcall TerminalPramsManager__IsDataLostBattleAutoReset_SaveData(const M
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11523,
+    (System_String_o *)StringLiteral_11523/*"SAVEKEY_DataLostBattleAutoReset"*/,
     v3->static_fields->_IsDataLostBattleAutoReset_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -2677,7 +2677,7 @@ void __fastcall TerminalPramsManager__IsPlayTerminalEffectDisappearWarId_SaveDat
   if ( (byte_40F6D88 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11529, v2);
+    sub_B16FFC(&StringLiteral_11529/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/, v2);
     byte_40F6D88 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2698,7 +2698,7 @@ void __fastcall TerminalPramsManager__IsPlayTerminalEffectDisappearWarId_SaveDat
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11529,
+    (System_String_o *)StringLiteral_11529/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/,
     v3->static_fields->_IsPlayTerminalEffectDisappearWarId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -2714,7 +2714,7 @@ void __fastcall TerminalPramsManager__IsPlayTerminalEffectDisappear_SaveData(con
   if ( (byte_40F6D87 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11528, v2);
+    sub_B16FFC(&StringLiteral_11528/*"SAVEKEY_PlayTerminalEffectDisappear"*/, v2);
     byte_40F6D87 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2735,7 +2735,7 @@ void __fastcall TerminalPramsManager__IsPlayTerminalEffectDisappear_SaveData(con
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11528,
+    (System_String_o *)StringLiteral_11528/*"SAVEKEY_PlayTerminalEffectDisappear"*/,
     v3->static_fields->_IsPlayTerminalEffectDisappear_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -2751,7 +2751,7 @@ void __fastcall TerminalPramsManager__IsPlayTerminalEffectNt2AfterAction_SaveDat
   if ( (byte_40F6D89 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11530, v2);
+    sub_B16FFC(&StringLiteral_11530/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/, v2);
     byte_40F6D89 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2772,7 +2772,7 @@ void __fastcall TerminalPramsManager__IsPlayTerminalEffectNt2AfterAction_SaveDat
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11530,
+    (System_String_o *)StringLiteral_11530/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/,
     v3->static_fields->_IsPlayTerminalEffectNt2AfterAction_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -2999,8 +2999,8 @@ bool __fastcall TerminalPramsManager__IsTerminalEffectPlayed(int32_t effectId, c
   {
     sub_B16FFC(&char___TypeInfo, method);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_26, v3);
-    sub_B16FFC(&StringLiteral_68, v4);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v3);
+    sub_B16FFC(&StringLiteral_68/*"\r\n"*/, v4);
     byte_40F6D95 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3045,8 +3045,8 @@ bool __fastcall TerminalPramsManager__IsTerminalEffectPlayed(int32_t effectId, c
     goto LABEL_34;
   v10 = System_String__Replace_43750968(
           PlayedTerminalEffects_k__BackingField,
-          (System_String_o *)StringLiteral_68,
-          (System_String_o *)StringLiteral_26,
+          (System_String_o *)StringLiteral_68/*"\r\n"*/,
+          (System_String_o *)StringLiteral_26/*"\n"*/,
           0LL);
   v12 = (System_String_array *)sub_B17014(char___TypeInfo, 1LL, v11);
   if ( !v12 )
@@ -3105,8 +3105,8 @@ bool __fastcall TerminalPramsManager__IsWarStartedId(int32_t war_id, const Metho
   {
     sub_B16FFC(&char___TypeInfo, method);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_26, v3);
-    sub_B16FFC(&StringLiteral_68, v4);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v3);
+    sub_B16FFC(&StringLiteral_68/*"\r\n"*/, v4);
     byte_40F6D99 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
@@ -3121,8 +3121,8 @@ bool __fastcall TerminalPramsManager__IsWarStartedId(int32_t war_id, const Metho
     goto LABEL_20;
   v7 = System_String__Replace_43750968(
          mTerminalWarStartedIds,
-         (System_String_o *)StringLiteral_68,
-         (System_String_o *)StringLiteral_26,
+         (System_String_o *)StringLiteral_68/*"\r\n"*/,
+         (System_String_o *)StringLiteral_26/*"\n"*/,
          0LL);
   v9 = (System_String_array *)sub_B17014(char___TypeInfo, 1LL, v8);
   if ( !v9 )
@@ -3168,7 +3168,7 @@ void __fastcall TerminalPramsManager__LastPanelEventPointSave_SaveData(const Met
   if ( (byte_40F6D86 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_13562, v2);
+    sub_B16FFC(&StringLiteral_13562/*"TerminalLastPanelEventPoint"*/, v2);
     byte_40F6D86 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
@@ -3178,7 +3178,7 @@ void __fastcall TerminalPramsManager__LastPanelEventPointSave_SaveData(const Met
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13562, v3->static_fields->panelEventPoint, 0LL);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_13562/*"TerminalLastPanelEventPoint"*/, v3->static_fields->panelEventPoint, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -3192,7 +3192,7 @@ void __fastcall TerminalPramsManager__LastPlayBgmNameSave_SaveData(const MethodI
   if ( (byte_40F6D84 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11525, v2);
+    sub_B16FFC(&StringLiteral_11525/*"SAVEKEY_LastPlayBgmName"*/, v2);
     byte_40F6D84 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
@@ -3202,7 +3202,7 @@ void __fastcall TerminalPramsManager__LastPlayBgmNameSave_SaveData(const MethodI
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11525, v3->static_fields->lastPlayBgmName, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11525/*"SAVEKEY_LastPlayBgmName"*/, v3->static_fields->lastPlayBgmName, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -3216,7 +3216,7 @@ void __fastcall TerminalPramsManager__LastPlayQuestConsumeApSave_SaveData(const 
   if ( (byte_40F6D85 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11526, v2);
+    sub_B16FFC(&StringLiteral_11526/*"SAVEKEY_LastPlayQuestConsumeType"*/, v2);
     byte_40F6D85 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
@@ -3227,7 +3227,7 @@ void __fastcall TerminalPramsManager__LastPlayQuestConsumeApSave_SaveData(const 
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11526,
+    (System_String_o *)StringLiteral_11526/*"SAVEKEY_LastPlayQuestConsumeType"*/,
     v3->static_fields->lastPlayQuestConsumeAp,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -4181,7 +4181,7 @@ void __fastcall TerminalPramsManager__LoadEventRaidDefeatedEffectInfo(const Meth
     sub_B16FFC(&EventRaidDefeatedEffectInfo_TypeInfo, v1);
     sub_B16FFC(&string_TypeInfo, v2);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_11524, v4);
+    sub_B16FFC(&StringLiteral_11524/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/, v4);
     byte_40F6DAA = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4204,7 +4204,7 @@ void __fastcall TerminalPramsManager__LoadEventRaidDefeatedEffectInfo(const Meth
   if ( !v5->static_fields->_EventRaidDefeatedEffectInfo_k__BackingField )
   {
     String = UnityEngine_PlayerPrefs__GetString(
-               (System_String_o *)StringLiteral_11524,
+               (System_String_o *)StringLiteral_11524/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/,
                string_TypeInfo->static_fields->Empty,
                0LL);
     v11 = (EventRaidDefeatedEffectInfo_o *)sub_B170CC(EventRaidDefeatedEffectInfo_TypeInfo, v7, v8, v9, v10);
@@ -4283,7 +4283,7 @@ void __fastcall TerminalPramsManager__LoadQuestRandomGroupList(const MethodInfo 
     sub_B16FFC(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v4);
     sub_B16FFC(&string_TypeInfo, v5);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_11533, v7);
+    sub_B16FFC(&StringLiteral_11533/*"SAVEKEY_QuestRandomGroupList"*/, v7);
     byte_40F6DAF = 1;
   }
   *(_QWORD *)result = 0LL;
@@ -4307,7 +4307,7 @@ void __fastcall TerminalPramsManager__LoadQuestRandomGroupList(const MethodInfo 
   if ( !v8->static_fields->_QuestRandomGroupList_k__BackingField )
   {
     String = UnityEngine_PlayerPrefs__GetString(
-               (System_String_o *)StringLiteral_11533,
+               (System_String_o *)StringLiteral_11533/*"SAVEKEY_QuestRandomGroupList"*/,
                string_TypeInfo->static_fields->Empty,
                0LL);
     v14 = (System_Collections_Generic_Dictionary_int__int__o *)sub_B170CC(
@@ -4701,53 +4701,53 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     sub_B16FFC(&Method_JsonManager_Deserialize_EventSaveData___, v6);
     sub_B16FFC(&JsonManager_TypeInfo, v7);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_11525, v9);
-    sub_B16FFC(&StringLiteral_13559, v10);
-    sub_B16FFC(&StringLiteral_11531, v11);
-    sub_B16FFC(&StringLiteral_13555, v12);
-    sub_B16FFC(&StringLiteral_11519, v13);
-    sub_B16FFC(&StringLiteral_11526, v14);
-    sub_B16FFC(&StringLiteral_11537, v15);
-    sub_B16FFC(&StringLiteral_13560, v16);
-    sub_B16FFC(&StringLiteral_13557, v17);
-    sub_B16FFC(&StringLiteral_13566, v18);
-    sub_B16FFC(&StringLiteral_11535, v19);
-    sub_B16FFC(&StringLiteral_13574, v20);
-    sub_B16FFC(&StringLiteral_13558, v21);
-    sub_B16FFC(&StringLiteral_11528, v22);
-    sub_B16FFC(&StringLiteral_13561, v23);
-    sub_B16FFC(&StringLiteral_11527, v24);
-    sub_B16FFC(&StringLiteral_11532, v25);
-    sub_B16FFC(&StringLiteral_11517, v26);
-    sub_B16FFC(&StringLiteral_13562, v27);
-    sub_B16FFC(&StringLiteral_11536, v28);
-    sub_B16FFC(&StringLiteral_11520, v29);
-    sub_B16FFC(&StringLiteral_11529, v30);
-    sub_B16FFC(&StringLiteral_5179, v31);
-    sub_B16FFC(&StringLiteral_5178, v32);
-    sub_B16FFC(&StringLiteral_13569, v33);
-    sub_B16FFC(&StringLiteral_11534, v34);
-    sub_B16FFC(&StringLiteral_11539, v35);
-    sub_B16FFC(&StringLiteral_13573, v36);
-    sub_B16FFC(&StringLiteral_13578, v37);
-    sub_B16FFC(&StringLiteral_13571, v38);
-    sub_B16FFC(&StringLiteral_13575, v39);
-    sub_B16FFC(&StringLiteral_13556, v40);
-    sub_B16FFC(&StringLiteral_11518, v41);
-    sub_B16FFC(&StringLiteral_11523, v42);
-    sub_B16FFC(&StringLiteral_13579, v43);
-    sub_B16FFC(&StringLiteral_11522, v44);
-    sub_B16FFC(&StringLiteral_13563, v45);
-    sub_B16FFC(&StringLiteral_11521, v46);
-    sub_B16FFC(&StringLiteral_11530, v47);
-    sub_B16FFC(&StringLiteral_1, v48);
-    sub_B16FFC(&StringLiteral_13564, v49);
-    sub_B16FFC(&StringLiteral_5177, v50);
-    sub_B16FFC(&StringLiteral_11538, v51);
+    sub_B16FFC(&StringLiteral_11525/*"SAVEKEY_LastPlayBgmName"*/, v9);
+    sub_B16FFC(&StringLiteral_13559/*"TerminalEndTime"*/, v10);
+    sub_B16FFC(&StringLiteral_11531/*"SAVEKEY_PlayedTerminalEffects"*/, v11);
+    sub_B16FFC(&StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/, v12);
+    sub_B16FFC(&StringLiteral_11519/*"SAVEKEY_CampaignDirectBonus"*/, v13);
+    sub_B16FFC(&StringLiteral_11526/*"SAVEKEY_LastPlayQuestConsumeType"*/, v14);
+    sub_B16FFC(&StringLiteral_11537/*"SAVEKEY_TerminalLastSelectQuestIndex"*/, v15);
+    sub_B16FFC(&StringLiteral_13560/*"TerminalEventDailyPointEventId"*/, v16);
+    sub_B16FFC(&StringLiteral_13557/*"TerminalBeforeEventSubmarinePointData"*/, v17);
+    sub_B16FFC(&StringLiteral_13566/*"TerminalPhaseCnt"*/, v18);
+    sub_B16FFC(&StringLiteral_11535/*"SAVEKEY_TerminalConquestInfos"*/, v19);
+    sub_B16FFC(&StringLiteral_13574/*"TerminalTimeStatusEventId"*/, v20);
+    sub_B16FFC(&StringLiteral_13558/*"TerminalDispState"*/, v21);
+    sub_B16FFC(&StringLiteral_11528/*"SAVEKEY_PlayTerminalEffectDisappear"*/, v22);
+    sub_B16FFC(&StringLiteral_13561/*"TerminalIsDoneShortcut"*/, v23);
+    sub_B16FFC(&StringLiteral_11527/*"SAVEKEY_MapModelClearQuestInfo"*/, v24);
+    sub_B16FFC(&StringLiteral_11532/*"SAVEKEY_PlayerGenderType"*/, v25);
+    sub_B16FFC(&StringLiteral_11517/*"SAVEKEY_BlankEarthRank"*/, v26);
+    sub_B16FFC(&StringLiteral_13562/*"TerminalLastPanelEventPoint"*/, v27);
+    sub_B16FFC(&StringLiteral_11536/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, v28);
+    sub_B16FFC(&StringLiteral_11520/*"SAVEKEY_ClearEventQuestIds"*/, v29);
+    sub_B16FFC(&StringLiteral_11529/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/, v30);
+    sub_B16FFC(&StringLiteral_5179/*"Debug_IsQuestReleaseAll"*/, v31);
+    sub_B16FFC(&StringLiteral_5178/*"Debug_IsDummyErrorSelect"*/, v32);
+    sub_B16FFC(&StringLiteral_13569/*"TerminalQuestId"*/, v33);
+    sub_B16FFC(&StringLiteral_11534/*"SAVEKEY_TerminalConquestInfoDisp"*/, v34);
+    sub_B16FFC(&StringLiteral_11539/*"SAVEKEY_TerminalSelectedStoryQuestId"*/, v35);
+    sub_B16FFC(&StringLiteral_13573/*"TerminalTimeStatusEventDailyPoint"*/, v36);
+    sub_B16FFC(&StringLiteral_13578/*"TerminalWarId"*/, v37);
+    sub_B16FFC(&StringLiteral_13571/*"TerminalSpotId"*/, v38);
+    sub_B16FFC(&StringLiteral_13575/*"TerminalTimeStatusLoopCount"*/, v39);
+    sub_B16FFC(&StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/, v40);
+    sub_B16FFC(&StringLiteral_11518/*"SAVEKEY_BlankEarthSpotId"*/, v41);
+    sub_B16FFC(&StringLiteral_11523/*"SAVEKEY_DataLostBattleAutoReset"*/, v42);
+    sub_B16FFC(&StringLiteral_13579/*"TerminalWarStartedIds"*/, v43);
+    sub_B16FFC(&StringLiteral_11522/*"SAVEKEY_ConnectMarkEventId"*/, v44);
+    sub_B16FFC(&StringLiteral_13563/*"TerminalLastPlayedFreeQuestSpotId"*/, v45);
+    sub_B16FFC(&StringLiteral_11521/*"SAVEKEY_ConnectMarkAnimationId"*/, v46);
+    sub_B16FFC(&StringLiteral_11530/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/, v47);
+    sub_B16FFC(&StringLiteral_1/*""*/, v48);
+    sub_B16FFC(&StringLiteral_13564/*"TerminalLastPlayedQuestId"*/, v49);
+    sub_B16FFC(&StringLiteral_5177/*"Debug_IsBuildInfoDisp"*/, v50);
+    sub_B16FFC(&StringLiteral_11538/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/, v51);
     byte_40F6D74 = 1;
   }
-  v52 = (System_String_o *)StringLiteral_13558;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13558, 0LL) )
+  v52 = (System_String_o *)StringLiteral_13558/*"TerminalDispState"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13558/*"TerminalDispState"*/, 0LL) )
   {
     Int_34836848 = UnityEngine_PlayerPrefs__GetInt_34836848(v52, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4769,8 +4769,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v55->static_fields->_DispState_k__BackingField = Int_34836848;
   }
-  v56 = (System_String_o *)StringLiteral_13578;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13578, 0LL) )
+  v56 = (System_String_o *)StringLiteral_13578/*"TerminalWarId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13578/*"TerminalWarId"*/, 0LL) )
   {
     v58 = UnityEngine_PlayerPrefs__GetInt_34836848(v56, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4792,8 +4792,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v59->static_fields->_WarId_k__BackingField = v58;
   }
-  v60 = (System_String_o *)StringLiteral_13571;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13571, 0LL) )
+  v60 = (System_String_o *)StringLiteral_13571/*"TerminalSpotId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13571/*"TerminalSpotId"*/, 0LL) )
   {
     v62 = UnityEngine_PlayerPrefs__GetInt_34836848(v60, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4815,8 +4815,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v63->static_fields->_SpotId_k__BackingField = v62;
   }
-  v64 = (System_String_o *)StringLiteral_13569;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13569, 0LL) )
+  v64 = (System_String_o *)StringLiteral_13569/*"TerminalQuestId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13569/*"TerminalQuestId"*/, 0LL) )
   {
     v66 = UnityEngine_PlayerPrefs__GetInt_34836848(v64, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4838,8 +4838,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v67->static_fields->_QuestId_k__BackingField = v66;
   }
-  v68 = (System_String_o *)StringLiteral_13564;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13564, 0LL) )
+  v68 = (System_String_o *)StringLiteral_13564/*"TerminalLastPlayedQuestId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13564/*"TerminalLastPlayedQuestId"*/, 0LL) )
   {
     v70 = UnityEngine_PlayerPrefs__GetInt_34836848(v68, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4861,8 +4861,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v71->static_fields->_LastPlayedQuestId_k__BackingField = v70;
   }
-  v72 = (System_String_o *)StringLiteral_13566;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13566, 0LL) )
+  v72 = (System_String_o *)StringLiteral_13566/*"TerminalPhaseCnt"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13566/*"TerminalPhaseCnt"*/, 0LL) )
   {
     v74 = UnityEngine_PlayerPrefs__GetInt_34836848(v72, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4884,12 +4884,12 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v75->static_fields->_PhaseCnt_k__BackingField = v74;
   }
-  v76 = (System_String_o *)StringLiteral_13559;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13559, 0LL) )
+  v76 = (System_String_o *)StringLiteral_13559/*"TerminalEndTime"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13559/*"TerminalEndTime"*/, 0LL) )
   {
     String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456(v76, 0LL);
     v79 = 0LL;
-    if ( System_String__op_Inequality(String_34837456, (System_String_o *)StringLiteral_1, 0LL) )
+    if ( System_String__op_Inequality(String_34837456, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     {
       if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !System_Convert_TypeInfo->_2.cctor_finished )
@@ -4917,8 +4917,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v80->static_fields->_EndTime_k__BackingField = v79;
   }
-  v81 = (System_String_o *)StringLiteral_13561;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13561, 0LL) )
+  v81 = (System_String_o *)StringLiteral_13561/*"TerminalIsDoneShortcut"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13561/*"TerminalIsDoneShortcut"*/, 0LL) )
   {
     v83 = UnityEngine_PlayerPrefs__GetInt_34836848(v81, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4940,8 +4940,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v84->static_fields->_IsDoneShortcut_k__BackingField = v83 != 0;
   }
-  v85 = (System_String_o *)StringLiteral_13579;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13579, 0LL) )
+  v85 = (System_String_o *)StringLiteral_13579/*"TerminalWarStartedIds"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13579/*"TerminalWarStartedIds"*/, 0LL) )
   {
     v92 = (System_Int32_array **)UnityEngine_PlayerPrefs__GetString_34837456(v85, 0LL);
     v93 = TerminalPramsManager_TypeInfo;
@@ -4963,8 +4963,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
       v90,
       v91);
   }
-  v95 = (System_String_o *)StringLiteral_5179;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5179, 0LL) )
+  v95 = (System_String_o *)StringLiteral_5179/*"Debug_IsQuestReleaseAll"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5179/*"Debug_IsQuestReleaseAll"*/, 0LL) )
   {
     v97 = UnityEngine_PlayerPrefs__GetInt_34836848(v95, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4986,8 +4986,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v98->static_fields->mDebug_IsQuestReleaseAll = v97 != 0;
   }
-  v99 = (System_String_o *)StringLiteral_5178;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5178, 0LL) )
+  v99 = (System_String_o *)StringLiteral_5178/*"Debug_IsDummyErrorSelect"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5178/*"Debug_IsDummyErrorSelect"*/, 0LL) )
   {
     v101 = UnityEngine_PlayerPrefs__GetInt_34836848(v99, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5009,8 +5009,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v102->static_fields->mDebug_IsDummyErrorSelect = v101 != 0;
   }
-  v103 = (System_String_o *)StringLiteral_5177;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5177, 0LL) )
+  v103 = (System_String_o *)StringLiteral_5177/*"Debug_IsBuildInfoDisp"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_5177/*"Debug_IsBuildInfoDisp"*/, 0LL) )
   {
     v105 = UnityEngine_PlayerPrefs__GetInt_34836848(v103, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5032,8 +5032,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v106->static_fields->mDebug_IsBuildInfoDisp = v105 != 0;
   }
-  v107 = (System_String_o *)StringLiteral_13574;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13574, 0LL) )
+  v107 = (System_String_o *)StringLiteral_13574/*"TerminalTimeStatusEventId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13574/*"TerminalTimeStatusEventId"*/, 0LL) )
   {
     v109 = UnityEngine_PlayerPrefs__GetInt_34836848(v107, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5055,8 +5055,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v110->static_fields->_TimeStatusEventId_k__BackingField = v109;
   }
-  v111 = (System_String_o *)StringLiteral_13575;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13575, 0LL) )
+  v111 = (System_String_o *)StringLiteral_13575/*"TerminalTimeStatusLoopCount"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13575/*"TerminalTimeStatusLoopCount"*/, 0LL) )
   {
     v113 = UnityEngine_PlayerPrefs__GetInt_34836848(v111, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5078,8 +5078,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v114->static_fields->_TimeStatusLoopCount_k__BackingField = v113;
   }
-  v115 = (System_String_o *)StringLiteral_13560;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13560, 0LL) )
+  v115 = (System_String_o *)StringLiteral_13560/*"TerminalEventDailyPointEventId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13560/*"TerminalEventDailyPointEventId"*/, 0LL) )
   {
     v117 = UnityEngine_PlayerPrefs__GetInt_34836848(v115, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5101,12 +5101,12 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v118->static_fields->_EventDailyPointEventId_k__BackingField = v117;
   }
-  v119 = (System_String_o *)StringLiteral_13573;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13573, 0LL) )
+  v119 = (System_String_o *)StringLiteral_13573/*"TerminalTimeStatusEventDailyPoint"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13573/*"TerminalTimeStatusEventDailyPoint"*/, 0LL) )
   {
     v120 = UnityEngine_PlayerPrefs__GetString_34837456(v119, 0LL);
     v122 = 0LL;
-    if ( !System_String__op_Equality(v120, (System_String_o *)StringLiteral_1, 0LL) )
+    if ( !System_String__op_Equality(v120, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     {
       if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !System_Convert_TypeInfo->_2.cctor_finished )
@@ -5134,8 +5134,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v123->static_fields->_BeforeTimeEventDailyPoint_k__BackingField = v122;
   }
-  v124 = (System_String_o *)StringLiteral_13555;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13555, 0LL) )
+  v124 = (System_String_o *)StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/, 0LL) )
   {
     v126 = UnityEngine_PlayerPrefs__GetInt_34836848(v124, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5157,8 +5157,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v127->static_fields->_BeforeEventActivityPoint_k__BackingField = v126;
   }
-  v128 = (System_String_o *)StringLiteral_13556;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13556, 0LL) )
+  v128 = (System_String_o *)StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/, 0LL) )
   {
     v130 = UnityEngine_PlayerPrefs__GetInt_34836848(v128, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5180,8 +5180,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v131->static_fields->_BeforeEventActivityPointGauge_k__BackingField = v130;
   }
-  v132 = (System_String_o *)StringLiteral_13557;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13557, 0LL) )
+  v132 = (System_String_o *)StringLiteral_13557/*"TerminalBeforeEventSubmarinePointData"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13557/*"TerminalBeforeEventSubmarinePointData"*/, 0LL) )
   {
     v133 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_34837456(v132, 0LL);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -5210,8 +5210,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     p_BeforeEventSubmarineSaveData_k__BackingField->klass = (BattleServantConfConponent_c *)v141;
     sub_B16F98(p_BeforeEventSubmarineSaveData_k__BackingField, v141, v135, v136, v137, v138, v139, v140);
   }
-  v144 = (System_String_o *)StringLiteral_11537;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11537, 0LL) )
+  v144 = (System_String_o *)StringLiteral_11537/*"SAVEKEY_TerminalLastSelectQuestIndex"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11537/*"SAVEKEY_TerminalLastSelectQuestIndex"*/, 0LL) )
   {
     v147 = UnityEngine_PlayerPrefs__GetInt_34836848(v144, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5260,8 +5260,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
       v148->static_fields->_LastSelectQuestIndex_k__BackingField,
       v146);
   }
-  v150 = (System_String_o *)StringLiteral_11535;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11535, 0LL) )
+  v150 = (System_String_o *)StringLiteral_11535/*"SAVEKEY_TerminalConquestInfos"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11535/*"SAVEKEY_TerminalConquestInfos"*/, 0LL) )
   {
     v151 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_34837456(v150, 0LL);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -5280,8 +5280,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     p_eventConquestInfos->klass = (BattleServantConfConponent_c *)v158;
     sub_B16F98(p_eventConquestInfos, v158, v152, v153, v154, v155, v156, v157);
   }
-  v161 = (System_String_o *)StringLiteral_11534;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11534, 0LL) )
+  v161 = (System_String_o *)StringLiteral_11534/*"SAVEKEY_TerminalConquestInfoDisp"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11534/*"SAVEKEY_TerminalConquestInfoDisp"*/, 0LL) )
   {
     v162 = UnityEngine_PlayerPrefs__GetInt_34836848(v161, 0LL);
     v163 = TerminalPramsManager_TypeInfo;
@@ -5293,8 +5293,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v163->static_fields->eventConquestInfoDisp = v162 != 0;
   }
-  v164 = (System_String_o *)StringLiteral_11536;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11536, 0LL) )
+  v164 = (System_String_o *)StringLiteral_11536/*"SAVEKEY_TerminalHarvestGrowthInfo"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11536/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, 0LL) )
   {
     v165 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_34837456(v164, 0LL);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -5313,8 +5313,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     p_eventHarvestGrowthInfo->klass = (BattleServantConfConponent_c *)v172;
     sub_B16F98(p_eventHarvestGrowthInfo, v172, v166, v167, v168, v169, v170, v171);
   }
-  v175 = (System_String_o *)StringLiteral_11525;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11525, 0LL) )
+  v175 = (System_String_o *)StringLiteral_11525/*"SAVEKEY_LastPlayBgmName"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11525/*"SAVEKEY_LastPlayBgmName"*/, 0LL) )
   {
     v182 = (System_Int32_array **)UnityEngine_PlayerPrefs__GetString_34837456(v175, 0LL);
     v183 = TerminalPramsManager_TypeInfo;
@@ -5328,8 +5328,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     p_lastPlayBgmName->klass = (BattleServantConfConponent_c *)v182;
     sub_B16F98(p_lastPlayBgmName, v182, v176, v177, v178, v179, v180, v181);
   }
-  v185 = (System_String_o *)StringLiteral_11526;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11526, 0LL) )
+  v185 = (System_String_o *)StringLiteral_11526/*"SAVEKEY_LastPlayQuestConsumeType"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11526/*"SAVEKEY_LastPlayQuestConsumeType"*/, 0LL) )
   {
     v186 = UnityEngine_PlayerPrefs__GetInt_34836848(v185, 0LL);
     v187 = TerminalPramsManager_TypeInfo;
@@ -5341,8 +5341,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v187->static_fields->lastPlayQuestConsumeAp = v186;
   }
-  v188 = (System_String_o *)StringLiteral_13563;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13563, 0LL) )
+  v188 = (System_String_o *)StringLiteral_13563/*"TerminalLastPlayedFreeQuestSpotId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13563/*"TerminalLastPlayedFreeQuestSpotId"*/, 0LL) )
   {
     v190 = UnityEngine_PlayerPrefs__GetInt_34836848(v188, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5364,8 +5364,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v191->static_fields->_LastPlayedFreeQuestSpotId_k__BackingField = v190;
   }
-  v192 = (System_String_o *)StringLiteral_13562;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13562, 0LL) )
+  v192 = (System_String_o *)StringLiteral_13562/*"TerminalLastPanelEventPoint"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13562/*"TerminalLastPanelEventPoint"*/, 0LL) )
   {
     v193 = UnityEngine_PlayerPrefs__GetInt_34836848(v192, 0LL);
     v194 = TerminalPramsManager_TypeInfo;
@@ -5377,8 +5377,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v194->static_fields->panelEventPoint = v193;
   }
-  v195 = (System_String_o *)StringLiteral_11531;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11531, 0LL) )
+  v195 = (System_String_o *)StringLiteral_11531/*"SAVEKEY_PlayedTerminalEffects"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11531/*"SAVEKEY_PlayedTerminalEffects"*/, 0LL) )
   {
     v203 = (System_Int32_array **)UnityEngine_PlayerPrefs__GetString_34837456(v195, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5402,8 +5402,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     p_PlayedTerminalEffects_k__BackingField->klass = (BattleServantConfConponent_c *)v203;
     sub_B16F98(p_PlayedTerminalEffects_k__BackingField, v203, v197, v198, v199, v200, v201, v202);
   }
-  v206 = (System_String_o *)StringLiteral_11528;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11528, 0LL) )
+  v206 = (System_String_o *)StringLiteral_11528/*"SAVEKEY_PlayTerminalEffectDisappear"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11528/*"SAVEKEY_PlayTerminalEffectDisappear"*/, 0LL) )
   {
     v208 = UnityEngine_PlayerPrefs__GetInt_34836848(v206, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5425,8 +5425,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v209->static_fields->_IsPlayTerminalEffectDisappear_k__BackingField = v208 != 0;
   }
-  v210 = (System_String_o *)StringLiteral_11529;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11529, 0LL) )
+  v210 = (System_String_o *)StringLiteral_11529/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11529/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/, 0LL) )
   {
     v212 = UnityEngine_PlayerPrefs__GetInt_34836848(v210, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5448,8 +5448,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v213->static_fields->_IsPlayTerminalEffectDisappearWarId_k__BackingField = v212;
   }
-  v214 = (System_String_o *)StringLiteral_11530;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11530, 0LL) )
+  v214 = (System_String_o *)StringLiteral_11530/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11530/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/, 0LL) )
   {
     v216 = UnityEngine_PlayerPrefs__GetInt_34836848(v214, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5471,8 +5471,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v217->static_fields->_IsPlayTerminalEffectNt2AfterAction_k__BackingField = v216 != 0;
   }
-  v218 = (System_String_o *)StringLiteral_11539;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11539, 0LL) )
+  v218 = (System_String_o *)StringLiteral_11539/*"SAVEKEY_TerminalSelectedStoryQuestId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11539/*"SAVEKEY_TerminalSelectedStoryQuestId"*/, 0LL) )
   {
     v220 = UnityEngine_PlayerPrefs__GetInt_34836848(v218, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5494,8 +5494,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v221->static_fields->_SelectedStoryQuestId_k__BackingField = v220;
   }
-  v222 = (System_String_o *)StringLiteral_11522;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11522, 0LL) )
+  v222 = (System_String_o *)StringLiteral_11522/*"SAVEKEY_ConnectMarkEventId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11522/*"SAVEKEY_ConnectMarkEventId"*/, 0LL) )
   {
     v223 = UnityEngine_PlayerPrefs__GetInt_34836848(v222, 0LL);
     v224 = TerminalPramsManager_TypeInfo;
@@ -5507,8 +5507,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v224->static_fields->ConnectMarkEventId = v223;
   }
-  v225 = (System_String_o *)StringLiteral_11521;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11521, 0LL) )
+  v225 = (System_String_o *)StringLiteral_11521/*"SAVEKEY_ConnectMarkAnimationId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11521/*"SAVEKEY_ConnectMarkAnimationId"*/, 0LL) )
   {
     v226 = UnityEngine_PlayerPrefs__GetInt_34836848(v225, 0LL);
     v227 = TerminalPramsManager_TypeInfo;
@@ -5520,8 +5520,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v227->static_fields->ConnectMarkAnimationId = v226;
   }
-  v228 = (System_String_o *)StringLiteral_11538;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11538, 0LL) )
+  v228 = (System_String_o *)StringLiteral_11538/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11538/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/, 0LL) )
   {
     v230 = UnityEngine_PlayerPrefs__GetInt_34836848(v228, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5543,8 +5543,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     }
     v231->static_fields->_SelectedRecollectionWarId_k__BackingField = v230;
   }
-  v232 = (System_String_o *)StringLiteral_11520;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11520, 0LL) )
+  v232 = (System_String_o *)StringLiteral_11520/*"SAVEKEY_ClearEventQuestIds"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11520/*"SAVEKEY_ClearEventQuestIds"*/, 0LL) )
   {
     v240 = (System_Int32_array **)UnityEngine_PlayerPrefs__GetString_34837456(v232, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5568,8 +5568,8 @@ void __fastcall TerminalPramsManager__Load_SaveData(const MethodInfo *method)
     p_ClearEventQuestIds_k__BackingField->klass = (BattleServantConfConponent_c *)v240;
     sub_B16F98(p_ClearEventQuestIds_k__BackingField, v240, v234, v235, v236, v237, v238, v239);
   }
-  v243 = (System_String_o *)StringLiteral_11527;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11527, 0LL) )
+  v243 = (System_String_o *)StringLiteral_11527/*"SAVEKEY_MapModelClearQuestInfo"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11527/*"SAVEKEY_MapModelClearQuestInfo"*/, 0LL) )
   {
     v244 = UnityEngine_PlayerPrefs__GetString_34837456(v243, 0LL);
     if ( !System_String__IsNullOrEmpty(v244, 0LL) )
@@ -5652,8 +5652,8 @@ LABEL_432:
     }
   }
 LABEL_377:
-  v256 = (System_String_o *)StringLiteral_11523;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11523, 0LL) )
+  v256 = (System_String_o *)StringLiteral_11523/*"SAVEKEY_DataLostBattleAutoReset"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11523/*"SAVEKEY_DataLostBattleAutoReset"*/, 0LL) )
   {
     v258 = UnityEngine_PlayerPrefs__GetInt_34836848(v256, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5675,8 +5675,8 @@ LABEL_377:
     }
     v259->static_fields->_IsDataLostBattleAutoReset_k__BackingField = v258 != 0;
   }
-  v260 = (System_String_o *)StringLiteral_11532;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11532, 0LL) )
+  v260 = (System_String_o *)StringLiteral_11532/*"SAVEKEY_PlayerGenderType"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11532/*"SAVEKEY_PlayerGenderType"*/, 0LL) )
   {
     v262 = UnityEngine_PlayerPrefs__GetInt_34836848(v260, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5698,8 +5698,8 @@ LABEL_377:
     }
     v263->static_fields->_PlayerGenderType_k__BackingField = v262;
   }
-  v264 = (System_String_o *)StringLiteral_11519;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11519, 0LL) )
+  v264 = (System_String_o *)StringLiteral_11519/*"SAVEKEY_CampaignDirectBonus"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11519/*"SAVEKEY_CampaignDirectBonus"*/, 0LL) )
   {
     v265 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_34837456(v264, 0LL);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -5736,8 +5736,8 @@ LABEL_377:
       v271,
       v272);
   }
-  v276 = (System_String_o *)StringLiteral_11518;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11518, 0LL) )
+  v276 = (System_String_o *)StringLiteral_11518/*"SAVEKEY_BlankEarthSpotId"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11518/*"SAVEKEY_BlankEarthSpotId"*/, 0LL) )
   {
     v278 = UnityEngine_PlayerPrefs__GetInt_34836848(v276, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5759,8 +5759,8 @@ LABEL_377:
     }
     v279->static_fields->_BlankEarthSpotId_k__BackingField = v278;
   }
-  v280 = (System_String_o *)StringLiteral_11517;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11517, 0LL) )
+  v280 = (System_String_o *)StringLiteral_11517/*"SAVEKEY_BlankEarthRank"*/;
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_11517/*"SAVEKEY_BlankEarthRank"*/, 0LL) )
   {
     v282 = UnityEngine_PlayerPrefs__GetInt_34836848(v280, 0LL);
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5810,13 +5810,13 @@ TerminalTransitionInfo_o *__fastcall TerminalPramsManager__Load_TerminalTransiti
   if ( (byte_40F6D75 & 1) == 0 )
   {
     sub_B16FFC(&TerminalTransitionInfo_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_13577, v2);
-    sub_B16FFC(&StringLiteral_13576, v3);
+    sub_B16FFC(&StringLiteral_13577/*"TerminalTransitionInfoVoiceAssetName"*/, v2);
+    sub_B16FFC(&StringLiteral_13576/*"TerminalTransitionInfoMissionId"*/, v3);
     byte_40F6D75 = 1;
   }
-  v4 = (System_String_o *)StringLiteral_13576;
+  v4 = (System_String_o *)StringLiteral_13576/*"TerminalTransitionInfoMissionId"*/;
   v5 = 0LL;
-  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13576, 0LL) )
+  if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13576/*"TerminalTransitionInfoMissionId"*/, 0LL) )
   {
     Int_34836848 = UnityEngine_PlayerPrefs__GetInt_34836848(v4, 0LL);
     if ( Int_34836848 < 1 )
@@ -5831,8 +5831,8 @@ TerminalTransitionInfo_o *__fastcall TerminalPramsManager__Load_TerminalTransiti
       if ( !v5 )
         sub_B170D4();
       *(_DWORD *)(v5 + 16) = v11;
-      v12 = (System_String_o *)StringLiteral_13577;
-      if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13577, 0LL) )
+      v12 = (System_String_o *)StringLiteral_13577/*"TerminalTransitionInfoVoiceAssetName"*/;
+      if ( UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_13577/*"TerminalTransitionInfoVoiceAssetName"*/, 0LL) )
       {
         String_34837456 = (System_Int32_array **)UnityEngine_PlayerPrefs__GetString_34837456(v12, 0LL);
         *(_QWORD *)(v5 + 40) = String_34837456;
@@ -5860,8 +5860,8 @@ void __fastcall TerminalPramsManager__MapModelClearQuestInfo_SaveData(const Meth
   if ( (byte_40F6D8E & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11527, v2);
-    sub_B16FFC(&StringLiteral_698, v3);
+    sub_B16FFC(&StringLiteral_11527/*"SAVEKEY_MapModelClearQuestInfo"*/, v2);
+    sub_B16FFC(&StringLiteral_698/*","*/, v3);
     byte_40F6D8E = 1;
   }
   MapModelClearQuestId_k__BackingField = 0;
@@ -5898,8 +5898,8 @@ void __fastcall TerminalPramsManager__MapModelClearQuestInfo_SaveData(const Meth
   }
   MapModelClearQuestId_k__BackingField = v7->static_fields->_MapModelClearPhaseCount_k__BackingField;
   v8 = System_Int32__ToString((int32_t)&MapModelClearQuestId_k__BackingField, 0LL);
-  v9 = System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_698, v8, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11527, v9, 0LL);
+  v9 = System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_698/*","*/, v8, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11527/*"SAVEKEY_MapModelClearQuestInfo"*/, v9, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -5919,9 +5919,9 @@ void __fastcall TerminalPramsManager__PlayQuestSave_SaveData(const MethodInfo *m
   if ( (byte_40F6D7B & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11537, v2);
-    sub_B16FFC(&StringLiteral_13563, v3);
-    sub_B16FFC(&StringLiteral_13564, v4);
+    sub_B16FFC(&StringLiteral_11537/*"SAVEKEY_TerminalLastSelectQuestIndex"*/, v2);
+    sub_B16FFC(&StringLiteral_13563/*"TerminalLastPlayedFreeQuestSpotId"*/, v3);
+    sub_B16FFC(&StringLiteral_13564/*"TerminalLastPlayedQuestId"*/, v4);
     byte_40F6D7B = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5942,7 +5942,7 @@ void __fastcall TerminalPramsManager__PlayQuestSave_SaveData(const MethodInfo *m
     v5 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13564,
+    (System_String_o *)StringLiteral_13564/*"TerminalLastPlayedQuestId"*/,
     v5->static_fields->_LastPlayedQuestId_k__BackingField,
     0LL);
   if ( !byte_40F6E2F )
@@ -5958,7 +5958,7 @@ void __fastcall TerminalPramsManager__PlayQuestSave_SaveData(const MethodInfo *m
     v7 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11537,
+    (System_String_o *)StringLiteral_11537/*"SAVEKEY_TerminalLastSelectQuestIndex"*/,
     v7->static_fields->_LastSelectQuestIndex_k__BackingField,
     0LL);
   if ( !byte_40F6E3D )
@@ -5974,7 +5974,7 @@ void __fastcall TerminalPramsManager__PlayQuestSave_SaveData(const MethodInfo *m
     v9 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13563,
+    (System_String_o *)StringLiteral_13563/*"TerminalLastPlayedFreeQuestSpotId"*/,
     v9->static_fields->_LastPlayedFreeQuestSpotId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -6091,8 +6091,8 @@ void __fastcall TerminalPramsManager__PlayedTerminalEffectsSave_SaveData(int32_t
   if ( (byte_40F6D96 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_26, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F6D96 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -6123,7 +6123,7 @@ void __fastcall TerminalPramsManager__PlayedTerminalEffectsSave_SaveData(int32_t
     {
       if ( (BYTE3(v12->vtable._0_Equals.methodPtr) & 4) != 0 && !v12->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v12);
-      v13 = (System_Int32_array **)StringLiteral_1;
+      v13 = (System_Int32_array **)StringLiteral_1/*""*/;
       if ( !byte_40F6E1D )
       {
         sub_B16FFC(&TerminalPramsManager_TypeInfo, v5);
@@ -6160,7 +6160,7 @@ void __fastcall TerminalPramsManager__PlayedTerminalEffectsSave_SaveData(int32_t
     v26 = (System_Int32_array **)System_String__Concat_43746016(
                                    PlayedTerminalEffects_k__BackingField,
                                    v18,
-                                   (System_String_o *)StringLiteral_26,
+                                   (System_String_o *)StringLiteral_26/*"\n"*/,
                                    0LL);
     if ( !byte_40F6E1D )
     {
@@ -6191,7 +6191,7 @@ void __fastcall TerminalPramsManager__PlayerGenderType_SaveData(const MethodInfo
   if ( (byte_40F6D90 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11532, v2);
+    sub_B16FFC(&StringLiteral_11532/*"SAVEKEY_PlayerGenderType"*/, v2);
     byte_40F6D90 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -6212,7 +6212,7 @@ void __fastcall TerminalPramsManager__PlayerGenderType_SaveData(const MethodInfo
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11532,
+    (System_String_o *)StringLiteral_11532/*"SAVEKEY_PlayerGenderType"*/,
     v3->static_fields->_PlayerGenderType_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -6993,13 +6993,13 @@ void __fastcall TerminalPramsManager__ReceiveQuestEndResultInfo(
     sub_B16FFC(&UserServantCollectionEntity_TypeInfo, v49);
     sub_B16FFC(&UserServantEntity_TypeInfo, v50);
     sub_B16FFC(&UserSuperBossEntity___TypeInfo, v51);
-    sub_B16FFC(&StringLiteral_19037, v52);
-    sub_B16FFC(&StringLiteral_16222, v53);
-    sub_B16FFC(&StringLiteral_698, v54);
-    sub_B16FFC(&StringLiteral_19038, v55);
-    sub_B16FFC(&StringLiteral_1, v56);
-    sub_B16FFC(&StringLiteral_6560, v57);
-    result = (BattleResultComponent_resultData_array *)sub_B16FFC(&StringLiteral_951, v58);
+    sub_B16FFC(&StringLiteral_19037/*"harvestGrowthAfterQuestId"*/, v52);
+    sub_B16FFC(&StringLiteral_16222/*"afterActionBk"*/, v53);
+    sub_B16FFC(&StringLiteral_698/*","*/, v54);
+    sub_B16FFC(&StringLiteral_19038/*"harvestGrowthBeforeQuestId"*/, v55);
+    sub_B16FFC(&StringLiteral_1/*""*/, v56);
+    sub_B16FFC(&StringLiteral_6560/*"False"*/, v57);
+    result = (BattleResultComponent_resultData_array *)sub_B16FFC(&StringLiteral_951/*"0"*/, v58);
     byte_40F6D9E = 1;
   }
   v712 = 0LL;
@@ -8448,17 +8448,17 @@ LABEL_433:
               v321 = ValueByArray->max_length;
               v322 = &ValueByArray->m_Items[1];
               if ( v321 <= 1 )
-                v322 = (System_String_o **)&StringLiteral_951;
+                v322 = (System_String_o **)&StringLiteral_951/*"0"*/;
               v323 = *v322;
-              v324 = v321 <= 2 ? (System_String_o **)&StringLiteral_951 : &ValueByArray->m_Items[2];
+              v324 = v321 <= 2 ? (System_String_o **)&StringLiteral_951/*"0"*/ : &ValueByArray->m_Items[2];
               v325 = *v324;
-              v326 = v321 <= 3 ? &StringLiteral_6560 : (__int64 *)&ValueByArray->m_Items[3];
+              v326 = v321 <= 3 ? &StringLiteral_6560/*"False"*/ : (__int64 *)&ValueByArray->m_Items[3];
             }
             else
             {
-              v325 = (System_String_o *)StringLiteral_951;
-              v326 = &StringLiteral_6560;
-              v323 = (System_String_o *)StringLiteral_951;
+              v325 = (System_String_o *)StringLiteral_951/*"0"*/;
+              v326 = &StringLiteral_6560/*"False"*/;
+              v323 = (System_String_o *)StringLiteral_951/*"0"*/;
             }
             if ( !v709 )
               goto LABEL_1319;
@@ -9978,8 +9978,8 @@ LABEL_1087:
         v548 = TerminalPramsManager_TypeInfo;
       }
       p_lastPlayBgmName = (BattleServantConfConponent_o *)&v548->static_fields->lastPlayBgmName;
-      v550 = (System_Int32_array **)StringLiteral_1;
-      p_lastPlayBgmName->klass = (BattleServantConfConponent_c *)StringLiteral_1;
+      v550 = (System_Int32_array **)StringLiteral_1/*""*/;
+      p_lastPlayBgmName->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
       sub_B16F98(p_lastPlayBgmName, v550, v536, v537, v538, v539, v540, v541);
       TerminalPramsManager__LastPlayBgmNameSave_SaveData(v551);
     }
@@ -10174,8 +10174,8 @@ LABEL_1320:
   if ( !v584 )
     goto LABEL_1320;
   v585 = v584;
-  ScriptIntParam = QuestPhaseEntity__getScriptIntParam(v584, (System_String_o *)StringLiteral_19038, -1, 0LL);
-  v587 = QuestPhaseEntity__getScriptIntParam(v585, (System_String_o *)StringLiteral_19037, -1, 0LL);
+  ScriptIntParam = QuestPhaseEntity__getScriptIntParam(v584, (System_String_o *)StringLiteral_19038/*"harvestGrowthBeforeQuestId"*/, -1, 0LL);
+  v587 = QuestPhaseEntity__getScriptIntParam(v585, (System_String_o *)StringLiteral_19037/*"harvestGrowthAfterQuestId"*/, -1, 0LL);
   if ( ScriptIntParam >= 1 )
   {
     v592 = v587;
@@ -10340,7 +10340,7 @@ LABEL_1205:
       v624 = System_Int32__ToString((int32_t)&v711, 0LL);
       v632 = (System_Int32_array **)System_String__Concat_43746016(
                                       v622,
-                                      (System_String_o *)StringLiteral_698,
+                                      (System_String_o *)StringLiteral_698/*","*/,
                                       v624,
                                       0LL);
       if ( !byte_40F6E2D )
@@ -10444,13 +10444,13 @@ LABEL_1205:
     v644,
     v645,
     v646);
-  result = (BattleResultComponent_resultData_array *)StringLiteral_698;
-  if ( StringLiteral_698 )
+  result = (BattleResultComponent_resultData_array *)StringLiteral_698/*","*/;
+  if ( StringLiteral_698/*","*/ )
   {
-    result = (BattleResultComponent_resultData_array *)sub_B170BC(StringLiteral_698, v639->obj.klass->_1.element_class);
+    result = (BattleResultComponent_resultData_array *)sub_B170BC(StringLiteral_698/*","*/, v639->obj.klass->_1.element_class);
     if ( !result )
       goto LABEL_1323;
-    *(_QWORD *)&isWin = StringLiteral_698;
+    *(_QWORD *)&isWin = StringLiteral_698/*","*/;
   }
   else
   {
@@ -10501,13 +10501,13 @@ LABEL_1205:
     v657,
     v658,
     v659);
-  result = (BattleResultComponent_resultData_array *)StringLiteral_698;
-  if ( StringLiteral_698 )
+  result = (BattleResultComponent_resultData_array *)StringLiteral_698/*","*/;
+  if ( StringLiteral_698/*","*/ )
   {
-    result = (BattleResultComponent_resultData_array *)sub_B170BC(StringLiteral_698, v639->obj.klass->_1.element_class);
+    result = (BattleResultComponent_resultData_array *)sub_B170BC(StringLiteral_698/*","*/, v639->obj.klass->_1.element_class);
     if ( !result )
       goto LABEL_1323;
-    *(_QWORD *)&isWin = StringLiteral_698;
+    *(_QWORD *)&isWin = StringLiteral_698/*","*/;
   }
   else
   {
@@ -10558,13 +10558,13 @@ LABEL_1205:
     v670,
     v671,
     v672);
-  result = (BattleResultComponent_resultData_array *)StringLiteral_698;
-  if ( StringLiteral_698 )
+  result = (BattleResultComponent_resultData_array *)StringLiteral_698/*","*/;
+  if ( StringLiteral_698/*","*/ )
   {
-    result = (BattleResultComponent_resultData_array *)sub_B170BC(StringLiteral_698, v639->obj.klass->_1.element_class);
+    result = (BattleResultComponent_resultData_array *)sub_B170BC(StringLiteral_698/*","*/, v639->obj.klass->_1.element_class);
     if ( !result )
       goto LABEL_1323;
-    *(_QWORD *)&isWin = StringLiteral_698;
+    *(_QWORD *)&isWin = StringLiteral_698/*","*/;
   }
   else
   {
@@ -10620,7 +10620,7 @@ LABEL_1323:
     v684,
     v685);
   v687 = System_String__Concat_43823856(v639, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_16222, v687, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_16222/*"afterActionBk"*/, v687, 0LL);
   TerminalPramsManager__SaveClearDatas(resulta, v688);
   TerminalPramsManager__TerminalEventConquestInfosSave_SaveData(v689);
   TerminalPramsManager__TerminalEventHarvestGrowthInfosSave_SaveData(v690);
@@ -11215,7 +11215,7 @@ void __fastcall TerminalPramsManager__SaveEventRaidDefeatedEffectInfo(const Meth
   if ( (byte_40F6DAC & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11524, v2);
+    sub_B16FFC(&StringLiteral_11524/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/, v2);
     byte_40F6DAC = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -11239,7 +11239,7 @@ void __fastcall TerminalPramsManager__SaveEventRaidDefeatedEffectInfo(const Meth
   if ( !EventRaidDefeatedEffectInfo_k__BackingField )
     sub_B170D4();
   v5 = EventRaidDefeatedEffectInfo__ConvertToStringData(EventRaidDefeatedEffectInfo_k__BackingField, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11524, v5, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11524/*"SAVEKEY_EventRaidDefeatedEffectInfo"*/, v5, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -11256,8 +11256,8 @@ void __fastcall TerminalPramsManager__SaveQuestInfo_SaveData(const MethodInfo *m
   if ( (byte_40F6D78 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_13566, v2);
-    sub_B16FFC(&StringLiteral_13569, v3);
+    sub_B16FFC(&StringLiteral_13566/*"TerminalPhaseCnt"*/, v2);
+    sub_B16FFC(&StringLiteral_13569/*"TerminalQuestId"*/, v3);
     byte_40F6D78 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -11278,7 +11278,7 @@ void __fastcall TerminalPramsManager__SaveQuestInfo_SaveData(const MethodInfo *m
     v4 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13569,
+    (System_String_o *)StringLiteral_13569/*"TerminalQuestId"*/,
     v4->static_fields->_QuestId_k__BackingField,
     0LL);
   if ( !byte_40F6058 )
@@ -11294,7 +11294,7 @@ void __fastcall TerminalPramsManager__SaveQuestInfo_SaveData(const MethodInfo *m
     v6 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13566,
+    (System_String_o *)StringLiteral_13566/*"TerminalPhaseCnt"*/,
     v6->static_fields->_PhaseCnt_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -11338,9 +11338,9 @@ void __fastcall TerminalPramsManager__SaveQuestRandomGroupList(const MethodInfo 
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__, v7);
     sub_B16FFC(&string_TypeInfo, v8);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_11533, v10);
-    sub_B16FFC(&StringLiteral_23532, v11);
-    sub_B16FFC(&StringLiteral_698, v12);
+    sub_B16FFC(&StringLiteral_11533/*"SAVEKEY_QuestRandomGroupList"*/, v10);
+    sub_B16FFC(&StringLiteral_23532/*"{0}:{1}"*/, v11);
+    sub_B16FFC(&StringLiteral_698/*","*/, v12);
     byte_40F6DB0 = 1;
   }
   memset(&v22, 0, 32);
@@ -11378,18 +11378,18 @@ void __fastcall TerminalPramsManager__SaveQuestRandomGroupList(const MethodInfo 
     key = (int)v22.fields.current.fields.key;
     key_high = HIDWORD(v22.fields.current.fields.key);
     if ( !System_String__IsNullOrEmpty(Empty, 0LL) )
-      Empty = System_String__Concat_43743732(Empty, (System_String_o *)StringLiteral_698, 0LL);
+      Empty = System_String__Concat_43743732(Empty, (System_String_o *)StringLiteral_698/*","*/, 0LL);
     LODWORD(v21[0]) = key;
     v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, v21);
     v23 = key_high;
     v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23);
-    v20 = System_String__Format_43739268((System_String_o *)StringLiteral_23532, v18, v19, 0LL);
+    v20 = System_String__Format_43739268((System_String_o *)StringLiteral_23532/*"{0}:{1}"*/, v18, v19, 0LL);
     Empty = System_String__Concat_43743732(Empty, v20, 0LL);
   }
   System_Collections_Generic_Dictionary_Enumerator_int__int___Dispose(
     &v22,
     (const MethodInfo_27261A4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int__Dispose__);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11533, Empty, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11533/*"SAVEKEY_QuestRandomGroupList"*/, Empty, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -11483,33 +11483,33 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
   if ( (byte_40F6D76 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_13559, v2);
-    sub_B16FFC(&StringLiteral_11531, v3);
-    sub_B16FFC(&StringLiteral_13555, v4);
-    sub_B16FFC(&StringLiteral_13560, v5);
-    sub_B16FFC(&StringLiteral_13566, v6);
-    sub_B16FFC(&StringLiteral_13574, v7);
-    sub_B16FFC(&StringLiteral_13558, v8);
-    sub_B16FFC(&StringLiteral_11528, v9);
-    sub_B16FFC(&StringLiteral_13561, v10);
-    sub_B16FFC(&StringLiteral_11527, v11);
-    sub_B16FFC(&StringLiteral_11532, v12);
-    sub_B16FFC(&StringLiteral_11520, v13);
-    sub_B16FFC(&StringLiteral_11529, v14);
-    sub_B16FFC(&StringLiteral_13569, v15);
-    sub_B16FFC(&StringLiteral_11539, v16);
-    sub_B16FFC(&StringLiteral_13573, v17);
-    sub_B16FFC(&StringLiteral_13578, v18);
-    sub_B16FFC(&StringLiteral_13571, v19);
-    sub_B16FFC(&StringLiteral_13575, v20);
-    sub_B16FFC(&StringLiteral_13556, v21);
-    sub_B16FFC(&StringLiteral_11523, v22);
-    sub_B16FFC(&StringLiteral_13579, v23);
-    sub_B16FFC(&StringLiteral_11522, v24);
-    sub_B16FFC(&StringLiteral_698, v25);
-    sub_B16FFC(&StringLiteral_11521, v26);
-    sub_B16FFC(&StringLiteral_11530, v27);
-    sub_B16FFC(&StringLiteral_11538, v28);
+    sub_B16FFC(&StringLiteral_13559/*"TerminalEndTime"*/, v2);
+    sub_B16FFC(&StringLiteral_11531/*"SAVEKEY_PlayedTerminalEffects"*/, v3);
+    sub_B16FFC(&StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/, v4);
+    sub_B16FFC(&StringLiteral_13560/*"TerminalEventDailyPointEventId"*/, v5);
+    sub_B16FFC(&StringLiteral_13566/*"TerminalPhaseCnt"*/, v6);
+    sub_B16FFC(&StringLiteral_13574/*"TerminalTimeStatusEventId"*/, v7);
+    sub_B16FFC(&StringLiteral_13558/*"TerminalDispState"*/, v8);
+    sub_B16FFC(&StringLiteral_11528/*"SAVEKEY_PlayTerminalEffectDisappear"*/, v9);
+    sub_B16FFC(&StringLiteral_13561/*"TerminalIsDoneShortcut"*/, v10);
+    sub_B16FFC(&StringLiteral_11527/*"SAVEKEY_MapModelClearQuestInfo"*/, v11);
+    sub_B16FFC(&StringLiteral_11532/*"SAVEKEY_PlayerGenderType"*/, v12);
+    sub_B16FFC(&StringLiteral_11520/*"SAVEKEY_ClearEventQuestIds"*/, v13);
+    sub_B16FFC(&StringLiteral_11529/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/, v14);
+    sub_B16FFC(&StringLiteral_13569/*"TerminalQuestId"*/, v15);
+    sub_B16FFC(&StringLiteral_11539/*"SAVEKEY_TerminalSelectedStoryQuestId"*/, v16);
+    sub_B16FFC(&StringLiteral_13573/*"TerminalTimeStatusEventDailyPoint"*/, v17);
+    sub_B16FFC(&StringLiteral_13578/*"TerminalWarId"*/, v18);
+    sub_B16FFC(&StringLiteral_13571/*"TerminalSpotId"*/, v19);
+    sub_B16FFC(&StringLiteral_13575/*"TerminalTimeStatusLoopCount"*/, v20);
+    sub_B16FFC(&StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/, v21);
+    sub_B16FFC(&StringLiteral_11523/*"SAVEKEY_DataLostBattleAutoReset"*/, v22);
+    sub_B16FFC(&StringLiteral_13579/*"TerminalWarStartedIds"*/, v23);
+    sub_B16FFC(&StringLiteral_11522/*"SAVEKEY_ConnectMarkEventId"*/, v24);
+    sub_B16FFC(&StringLiteral_698/*","*/, v25);
+    sub_B16FFC(&StringLiteral_11521/*"SAVEKEY_ConnectMarkAnimationId"*/, v26);
+    sub_B16FFC(&StringLiteral_11530/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/, v27);
+    sub_B16FFC(&StringLiteral_11538/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/, v28);
     byte_40F6D76 = 1;
   }
   EndTime_k__BackingField = 0LL;
@@ -11532,7 +11532,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v29 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13558,
+    (System_String_o *)StringLiteral_13558/*"TerminalDispState"*/,
     v29->static_fields->_DispState_k__BackingField,
     0LL);
   if ( !byte_40F6044 )
@@ -11548,7 +11548,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v31 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13578,
+    (System_String_o *)StringLiteral_13578/*"TerminalWarId"*/,
     v31->static_fields->_WarId_k__BackingField,
     0LL);
   if ( !byte_40F6053 )
@@ -11564,7 +11564,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v33 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13571,
+    (System_String_o *)StringLiteral_13571/*"TerminalSpotId"*/,
     v33->static_fields->_SpotId_k__BackingField,
     0LL);
   if ( !byte_40F6057 )
@@ -11580,7 +11580,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v35 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13569,
+    (System_String_o *)StringLiteral_13569/*"TerminalQuestId"*/,
     v35->static_fields->_QuestId_k__BackingField,
     0LL);
   if ( !byte_40F6058 )
@@ -11596,7 +11596,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v37 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13566,
+    (System_String_o *)StringLiteral_13566/*"TerminalPhaseCnt"*/,
     v37->static_fields->_PhaseCnt_k__BackingField,
     0LL);
   if ( !byte_40F6974 )
@@ -11613,7 +11613,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
   }
   EndTime_k__BackingField = v39->static_fields->_EndTime_k__BackingField;
   v40 = System_Int64__ToString((int64_t)&EndTime_k__BackingField, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13559, v40, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13559/*"TerminalEndTime"*/, v40, 0LL);
   if ( !byte_40F608D )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v41);
@@ -11627,7 +11627,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v42 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13561,
+    (System_String_o *)StringLiteral_13561/*"TerminalIsDoneShortcut"*/,
     v42->static_fields->_IsDoneShortcut_k__BackingField,
     0LL);
   v43 = TerminalPramsManager_TypeInfo;
@@ -11638,7 +11638,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v43 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetString(
-    (System_String_o *)StringLiteral_13579,
+    (System_String_o *)StringLiteral_13579/*"TerminalWarStartedIds"*/,
     v43->static_fields->mTerminalWarStartedIds,
     0LL);
   if ( !byte_40F6E31 )
@@ -11654,7 +11654,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v45 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13574,
+    (System_String_o *)StringLiteral_13574/*"TerminalTimeStatusEventId"*/,
     v45->static_fields->_TimeStatusEventId_k__BackingField,
     0LL);
   if ( !byte_40F6E32 )
@@ -11670,7 +11670,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v47 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13575,
+    (System_String_o *)StringLiteral_13575/*"TerminalTimeStatusLoopCount"*/,
     v47->static_fields->_TimeStatusLoopCount_k__BackingField,
     0LL);
   if ( !byte_40F6E33 )
@@ -11686,7 +11686,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v49 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13560,
+    (System_String_o *)StringLiteral_13560/*"TerminalEventDailyPointEventId"*/,
     v49->static_fields->_EventDailyPointEventId_k__BackingField,
     0LL);
   if ( !byte_40F6E34 )
@@ -11703,7 +11703,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
   }
   EndTime_k__BackingField = v51->static_fields->_BeforeTimeEventDailyPoint_k__BackingField;
   v52 = System_Int64__ToString((int64_t)&EndTime_k__BackingField, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13573, v52, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13573/*"TerminalTimeStatusEventDailyPoint"*/, v52, 0LL);
   if ( !byte_40F6E35 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v53);
@@ -11717,7 +11717,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v54 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13555,
+    (System_String_o *)StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/,
     v54->static_fields->_BeforeEventActivityPoint_k__BackingField,
     0LL);
   if ( !byte_40F6E36 )
@@ -11733,7 +11733,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v56 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13556,
+    (System_String_o *)StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/,
     v56->static_fields->_BeforeEventActivityPointGauge_k__BackingField,
     0LL);
   if ( !byte_40F6E37 )
@@ -11749,7 +11749,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v58 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetString(
-    (System_String_o *)StringLiteral_11531,
+    (System_String_o *)StringLiteral_11531/*"SAVEKEY_PlayedTerminalEffects"*/,
     v58->static_fields->_PlayedTerminalEffects_k__BackingField,
     0LL);
   if ( !byte_40F6083 )
@@ -11765,7 +11765,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v60 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11528,
+    (System_String_o *)StringLiteral_11528/*"SAVEKEY_PlayTerminalEffectDisappear"*/,
     v60->static_fields->_IsPlayTerminalEffectDisappear_k__BackingField,
     0LL);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -11786,7 +11786,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v62 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11529,
+    (System_String_o *)StringLiteral_11529/*"SAVEKEY_PlayTerminalEffectDisappearWarId"*/,
     v62->static_fields->_IsPlayTerminalEffectDisappearWarId_k__BackingField,
     0LL);
   if ( !byte_40F6E38 )
@@ -11802,7 +11802,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v64 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11530,
+    (System_String_o *)StringLiteral_11530/*"SAVEKEY_PlayTerminalEffectNt2AfterAction"*/,
     v64->static_fields->_IsPlayTerminalEffectNt2AfterAction_k__BackingField,
     0LL);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -11823,15 +11823,15 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v66 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11539,
+    (System_String_o *)StringLiteral_11539/*"SAVEKEY_TerminalSelectedStoryQuestId"*/,
     v66->static_fields->_SelectedStoryQuestId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11522,
+    (System_String_o *)StringLiteral_11522/*"SAVEKEY_ConnectMarkEventId"*/,
     TerminalPramsManager_TypeInfo->static_fields->ConnectMarkEventId,
     0LL);
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11521,
+    (System_String_o *)StringLiteral_11521/*"SAVEKEY_ConnectMarkAnimationId"*/,
     TerminalPramsManager_TypeInfo->static_fields->ConnectMarkAnimationId,
     0LL);
   if ( !byte_40F6050 )
@@ -11847,7 +11847,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v68 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11538,
+    (System_String_o *)StringLiteral_11538/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/,
     v68->static_fields->_SelectedRecollectionWarId_k__BackingField,
     0LL);
   if ( !byte_40F68A3 )
@@ -11863,7 +11863,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v70 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetString(
-    (System_String_o *)StringLiteral_11520,
+    (System_String_o *)StringLiteral_11520/*"SAVEKEY_ClearEventQuestIds"*/,
     v70->static_fields->_ClearEventQuestIds_k__BackingField,
     0LL);
   if ( !byte_40F606D )
@@ -11894,8 +11894,8 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
   }
   MapModelClearQuestId_k__BackingField = v75->static_fields->_MapModelClearPhaseCount_k__BackingField;
   v76 = System_Int32__ToString((int32_t)&MapModelClearQuestId_k__BackingField, 0LL);
-  v77 = System_String__Concat_43746016(v74, (System_String_o *)StringLiteral_698, v76, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11527, v77, 0LL);
+  v77 = System_String__Concat_43746016(v74, (System_String_o *)StringLiteral_698/*","*/, v76, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11527/*"SAVEKEY_MapModelClearQuestInfo"*/, v77, 0LL);
   if ( !byte_40F6E3A )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v78);
@@ -11909,7 +11909,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v79 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11523,
+    (System_String_o *)StringLiteral_11523/*"SAVEKEY_DataLostBattleAutoReset"*/,
     v79->static_fields->_IsDataLostBattleAutoReset_k__BackingField,
     0LL);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -11930,7 +11930,7 @@ void __fastcall TerminalPramsManager__Save_SaveData(const MethodInfo *method)
     v81 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11532,
+    (System_String_o *)StringLiteral_11532/*"SAVEKEY_PlayerGenderType"*/,
     v81->static_fields->_PlayerGenderType_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -13008,7 +13008,7 @@ void __fastcall TerminalPramsManager__SetWarStartedId(int32_t war_id, const Meth
   if ( (byte_40F6D9A & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_26, v3);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v3);
     byte_40F6D9A = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -13030,7 +13030,7 @@ void __fastcall TerminalPramsManager__SetWarStartedId(int32_t war_id, const Meth
     v7 = (System_Int32_array **)System_String__Concat_43746016(
                                   mTerminalWarStartedIds,
                                   v6,
-                                  (System_String_o *)StringLiteral_26,
+                                  (System_String_o *)StringLiteral_26/*"\n"*/,
                                   0LL);
     static_fields = TerminalPramsManager_TypeInfo->static_fields;
     static_fields->mTerminalWarStartedIds = (struct System_String_o *)v7;
@@ -13049,7 +13049,7 @@ void __fastcall TerminalPramsManager__SpotIdSave_SaveData(const MethodInfo *meth
   if ( (byte_40F6D77 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_13571, v2);
+    sub_B16FFC(&StringLiteral_13571/*"TerminalSpotId"*/, v2);
     byte_40F6D77 = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -13070,7 +13070,7 @@ void __fastcall TerminalPramsManager__SpotIdSave_SaveData(const MethodInfo *meth
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13571,
+    (System_String_o *)StringLiteral_13571/*"TerminalSpotId"*/,
     v3->static_fields->_SpotId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -13089,8 +13089,8 @@ void __fastcall TerminalPramsManager__TerminalEventActivityPointInfoSave_SaveDat
   if ( (byte_40F6D7D & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_13555, v2);
-    sub_B16FFC(&StringLiteral_13556, v3);
+    sub_B16FFC(&StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/, v2);
+    sub_B16FFC(&StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/, v3);
     byte_40F6D7D = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -13111,7 +13111,7 @@ void __fastcall TerminalPramsManager__TerminalEventActivityPointInfoSave_SaveDat
     v4 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13555,
+    (System_String_o *)StringLiteral_13555/*"TerminalBeforeEventActivityPoint"*/,
     v4->static_fields->_BeforeEventActivityPoint_k__BackingField,
     0LL);
   if ( !byte_40F6E36 )
@@ -13127,7 +13127,7 @@ void __fastcall TerminalPramsManager__TerminalEventActivityPointInfoSave_SaveDat
     v6 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_13556,
+    (System_String_o *)StringLiteral_13556/*"TerminalBeforeEventActivityPointGauge"*/,
     v6->static_fields->_BeforeEventActivityPointGauge_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -13143,7 +13143,7 @@ void __fastcall TerminalPramsManager__TerminalEventConquestInfoDispSave_SaveData
   if ( (byte_40F6D82 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11534, v2);
+    sub_B16FFC(&StringLiteral_11534/*"SAVEKEY_TerminalConquestInfoDisp"*/, v2);
     byte_40F6D82 = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
@@ -13153,7 +13153,7 @@ void __fastcall TerminalPramsManager__TerminalEventConquestInfoDispSave_SaveData
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v3 = TerminalPramsManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11534, v3->static_fields->eventConquestInfoDisp, 0LL);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_11534/*"SAVEKEY_TerminalConquestInfoDisp"*/, v3->static_fields->eventConquestInfoDisp, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -13176,8 +13176,8 @@ void __fastcall TerminalPramsManager__TerminalEventConquestInfosSave_SaveData(co
     sub_B16FFC(&EventConquestInfo___TypeInfo, v1);
     sub_B16FFC(&JsonManager_TypeInfo, v3);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_11535, v5);
-    sub_B16FFC(&StringLiteral_11534, v6);
+    sub_B16FFC(&StringLiteral_11535/*"SAVEKEY_TerminalConquestInfos"*/, v5);
+    sub_B16FFC(&StringLiteral_11534/*"SAVEKEY_TerminalConquestInfoDisp"*/, v6);
     byte_40F6D81 = 1;
   }
   v7 = TerminalPramsManager_TypeInfo;
@@ -13203,7 +13203,7 @@ void __fastcall TerminalPramsManager__TerminalEventConquestInfosSave_SaveData(co
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v9 = JsonManager__toJson(&eventConquestInfos->obj, 0, 0, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11535, v9, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11535/*"SAVEKEY_TerminalConquestInfos"*/, v9, 0LL);
   v10 = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13212,7 +13212,7 @@ void __fastcall TerminalPramsManager__TerminalEventConquestInfosSave_SaveData(co
     v10 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11534,
+    (System_String_o *)StringLiteral_11534/*"SAVEKEY_TerminalConquestInfoDisp"*/,
     v10->static_fields->eventConquestInfoDisp,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -13237,7 +13237,7 @@ void __fastcall TerminalPramsManager__TerminalEventHarvestGrowthInfosSave_SaveDa
     sub_B16FFC(&EventHarvestGrowthInfo_TypeInfo, v1);
     sub_B16FFC(&JsonManager_TypeInfo, v5);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_11536, v7);
+    sub_B16FFC(&StringLiteral_11536/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, v7);
     byte_40F6D83 = 1;
   }
   v8 = TerminalPramsManager_TypeInfo;
@@ -13264,7 +13264,7 @@ void __fastcall TerminalPramsManager__TerminalEventHarvestGrowthInfosSave_SaveDa
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v10 = JsonManager__toJson((Il2CppObject *)eventHarvestGrowthInfo, 0, 0, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11536, v10, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_11536/*"SAVEKEY_TerminalHarvestGrowthInfo"*/, v10, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -13283,7 +13283,7 @@ void __fastcall TerminalPramsManager__TerminalEventSubmarinePointInfoSave_SaveDa
   {
     sub_B16FFC(&JsonManager_TypeInfo, v1);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_13557, v3);
+    sub_B16FFC(&StringLiteral_13557/*"TerminalBeforeEventSubmarinePointData"*/, v3);
     byte_40F6D7F = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -13323,7 +13323,7 @@ void __fastcall TerminalPramsManager__TerminalEventSubmarinePointInfoSave_SaveDa
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v7 = JsonManager__toJson(BeforeEventSubmarineSaveData_k__BackingField, 0, 0, 0LL);
-    UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13557, v7, 0LL);
+    UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_13557/*"TerminalBeforeEventSubmarinePointData"*/, v7, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -13338,7 +13338,7 @@ void __fastcall TerminalPramsManager__TerminalSelectedRecollectionWarId_SaveData
   if ( (byte_40F6D8B & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11538, v2);
+    sub_B16FFC(&StringLiteral_11538/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/, v2);
     byte_40F6D8B = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -13359,7 +13359,7 @@ void __fastcall TerminalPramsManager__TerminalSelectedRecollectionWarId_SaveData
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11538,
+    (System_String_o *)StringLiteral_11538/*"SAVEKEY_TerminalSelectedRecollectionWarId"*/,
     v3->static_fields->_SelectedRecollectionWarId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -13375,7 +13375,7 @@ void __fastcall TerminalPramsManager__TerminalSelectedStoryQuestId_SaveData(cons
   if ( (byte_40F6D8A & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11539, v2);
+    sub_B16FFC(&StringLiteral_11539/*"SAVEKEY_TerminalSelectedStoryQuestId"*/, v2);
     byte_40F6D8A = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -13396,7 +13396,7 @@ void __fastcall TerminalPramsManager__TerminalSelectedStoryQuestId_SaveData(cons
     v3 = TerminalPramsManager_TypeInfo;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_11539,
+    (System_String_o *)StringLiteral_11539/*"SAVEKEY_TerminalSelectedStoryQuestId"*/,
     v3->static_fields->_SelectedStoryQuestId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -13411,18 +13411,18 @@ void __fastcall TerminalPramsManager__TerminalTransitionInfoSave_SaveData(
 
   if ( (byte_40F6D7C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_13577, method);
-    sub_B16FFC(&StringLiteral_13576, v3);
+    sub_B16FFC(&StringLiteral_13577/*"TerminalTransitionInfoVoiceAssetName"*/, method);
+    sub_B16FFC(&StringLiteral_13576/*"TerminalTransitionInfoMissionId"*/, v3);
     byte_40F6D7C = 1;
   }
   if ( terminalTransitionInfo )
   {
     UnityEngine_PlayerPrefs__SetInt(
-      (System_String_o *)StringLiteral_13576,
+      (System_String_o *)StringLiteral_13576/*"TerminalTransitionInfoMissionId"*/,
       terminalTransitionInfo->fields.missionId,
       0LL);
     UnityEngine_PlayerPrefs__SetString(
-      (System_String_o *)StringLiteral_13577,
+      (System_String_o *)StringLiteral_13577/*"TerminalTransitionInfoVoiceAssetName"*/,
       terminalTransitionInfo->fields.voiceAssetName,
       0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
@@ -18963,12 +18963,12 @@ void __fastcall TerminalPramsManager_ClearData___cctor(const MethodInfo *method)
   if ( (byte_40F77B1 & 1) == 0 )
   {
     sub_B16FFC(&TerminalPramsManager_ClearData_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_13290, v8);
+    sub_B16FFC(&StringLiteral_13290/*"TERMINAL_CLEAR_REWARD_DISP"*/, v8);
     byte_40F77B1 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TerminalPramsManager_ClearData_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_13290;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_13290;
+  v10 = (System_Int32_array **)StringLiteral_13290/*"TERMINAL_CLEAR_REWARD_DISP"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_13290/*"TERMINAL_CLEAR_REWARD_DISP"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -20097,7 +20097,7 @@ void __fastcall TerminalPramsManager___c__DisplayClass594_0___CheckResumeEffectN
 
   if ( (byte_40F77AD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_26, effectId);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, effectId);
     byte_40F77AD = 1;
   }
   effectIdsStr = this->fields.effectIdsStr;
@@ -20105,7 +20105,7 @@ void __fastcall TerminalPramsManager___c__DisplayClass594_0___CheckResumeEffectN
   v7 = (System_Int32_array **)System_String__Concat_43746016(
                                 effectIdsStr,
                                 effectId,
-                                (System_String_o *)StringLiteral_26,
+                                (System_String_o *)StringLiteral_26/*"\n"*/,
                                 0LL);
   p_fields->klass = (BattleServantConfConponent_c *)v7;
   sub_B16F98(p_fields, v7, v8, v9, v10, v11, v12, v13);

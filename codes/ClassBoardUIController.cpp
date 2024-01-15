@@ -36,7 +36,7 @@ void __fastcall ClassBoardUIController__Init(ClassBoardUIController_o *this, con
   if ( (byte_40FBA1F & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    this = (ClassBoardUIController_o *)sub_B16FFC(&StringLiteral_16929, v3);
+    this = (ClassBoardUIController_o *)sub_B16FFC(&StringLiteral_16929/*"btn_list"*/, v3);
     byte_40FBA1F = 1;
   }
   v2->fields.touchBlockCount = 0;
@@ -46,7 +46,7 @@ void __fastcall ClassBoardUIController__Init(ClassBoardUIController_o *this, con
   AtlasManagerUnit__SetUI(
     UiAtlasManagerUnit,
     v2->fields.effectListBtnSprite,
-    (System_String_o *)StringLiteral_16929,
+    (System_String_o *)StringLiteral_16929/*"btn_list"*/,
     0LL);
   backBtn = v2->fields.backBtn;
   if ( (BYTE3(AndroidBackKeyManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -140,7 +140,7 @@ void __fastcall ClassBoardUIController__OpenMissionClearDialog(
     sub_B16FFC(&LocalizationManager_TypeInfo, callback);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
     sub_B16FFC(&string_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_3017, v6);
+    sub_B16FFC(&StringLiteral_3017/*"CLASS_BOARD_MISSION_CLEAR_MESSAGE"*/, v6);
     byte_40FBA26 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -150,7 +150,7 @@ void __fastcall ClassBoardUIController__OpenMissionClearDialog(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3017, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3017/*"CLASS_BOARD_MISSION_CLEAR_MESSAGE"*/, 0LL);
   if ( !Instance )
     sub_B170D4();
   CommonUI__OpenNotificationDialog(Instance, Empty, v9, callback, -1, 0, 0, 0, 0, 0, 0, 0, 0LL, 0LL);
@@ -207,14 +207,14 @@ void __fastcall ClassBoardUIController__SetHeaderMessage(
 
   if ( (byte_40FBA20 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19399, atlasManagerUnit);
+    sub_B16FFC(&StringLiteral_19399/*"img_commonbg_11"*/, atlasManagerUnit);
     byte_40FBA20 = 1;
   }
   if ( !atlasManagerUnit
     || (AtlasManagerUnit__SetUI(
           atlasManagerUnit,
           this->fields.headerMessageBgSprite,
-          (System_String_o *)StringLiteral_19399,
+          (System_String_o *)StringLiteral_19399/*"img_commonbg_11"*/,
           0LL),
         (headerMessageLabel = this->fields.headerMessageLabel) == 0LL) )
   {
@@ -265,7 +265,7 @@ void __fastcall ClassBoardUIController__SetItemList(
   v6 = this;
   if ( (byte_40FBA21 & 1) == 0 )
   {
-    this = (ClassBoardUIController_o *)sub_B16FFC(&StringLiteral_19429, dispItemIds);
+    this = (ClassBoardUIController_o *)sub_B16FFC(&StringLiteral_19429/*"img_item_bg"*/, dispItemIds);
     byte_40FBA21 = 1;
   }
   if ( !dispItemIds )
@@ -305,7 +305,7 @@ LABEL_23:
         this = (ClassBoardUIController_o *)AtlasManagerUnit__SetUI(
                                              atlasManagerUnit,
                                              v13->fields.baseSp,
-                                             (System_String_o *)StringLiteral_19429,
+                                             (System_String_o *)StringLiteral_19429/*"img_item_bg"*/,
                                              0LL);
         v14 = v6->fields.headerItemComponentList;
         if ( !v14 )

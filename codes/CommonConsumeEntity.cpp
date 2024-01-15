@@ -84,7 +84,7 @@ System_String_o *__fastcall CommonConsumeEntity__GetName(CommonConsumeEntity_o *
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&string_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1739, v4);
+    sub_B16FFC(&StringLiteral_1739/*"AP_TXT"*/, v4);
     byte_40F655C = 1;
   }
   type = this->fields.type;
@@ -95,7 +95,7 @@ System_String_o *__fastcall CommonConsumeEntity__GetName(CommonConsumeEntity_o *
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    return LocalizationManager__Get((System_String_o *)StringLiteral_1739, 0LL);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_1739/*"AP_TXT"*/, 0LL);
   }
   else if ( type == 1 && (ItemEntity = CommonConsumeEntity__GetItemEntity(this, method)) != 0LL )
   {

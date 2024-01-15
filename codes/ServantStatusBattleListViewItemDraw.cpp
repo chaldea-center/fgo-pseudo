@@ -97,12 +97,12 @@ void __fastcall ServantStatusBattleListViewItemDraw__SetItem(
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_8360, v10);
-    sub_B16FFC(&StringLiteral_11938, v11);
-    sub_B16FFC(&StringLiteral_16899, v12);
-    sub_B16FFC(&StringLiteral_11939, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
-    sub_B16FFC(&StringLiteral_16900, v15);
+    sub_B16FFC(&StringLiteral_8360/*"LIMIT_COUNT_SELECT_SEALED"*/, v10);
+    sub_B16FFC(&StringLiteral_11938/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v11);
+    sub_B16FFC(&StringLiteral_16899/*"btn_bg_20"*/, v12);
+    sub_B16FFC(&StringLiteral_11939/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
+    sub_B16FFC(&StringLiteral_16900/*"btn_bg_21"*/, v15);
     byte_40F8701 = 1;
   }
   DispLimitCount = 0;
@@ -186,7 +186,7 @@ void __fastcall ServantStatusBattleListViewItemDraw__SetItem(
     {
       v32 = this->fields.nameRangeLabel;
       v33 = System_Int32__ToString((int32_t)&DispLimitCount, 0LL);
-      v34 = System_String__Concat_43743732((System_String_o *)StringLiteral_11938, v33, 0LL);
+      v34 = System_String__Concat_43743732((System_String_o *)StringLiteral_11938/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v33, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
@@ -202,7 +202,7 @@ void __fastcall ServantStatusBattleListViewItemDraw__SetItem(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v35 = (System_String_o *)StringLiteral_11939;
+      v35 = (System_String_o *)StringLiteral_11939/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
     }
     v38 = LocalizationManager__Get(v35, 0LL);
     if ( !v32 )
@@ -214,9 +214,9 @@ void __fastcall ServantStatusBattleListViewItemDraw__SetItem(
   baseSpite = this->fields.baseSpite;
   if ( !baseSpite )
     goto LABEL_80;
-  v40 = &StringLiteral_16900;
+  v40 = &StringLiteral_16900/*"btn_bg_21"*/;
   if ( !v21 )
-    v40 = &StringLiteral_16899;
+    v40 = &StringLiteral_16899/*"btn_bg_20"*/;
   UISprite__set_spriteName(baseSpite, (System_String_o *)*v40, 0LL);
   baseButton = this->fields.baseButton;
   if ( !baseButton )
@@ -273,7 +273,7 @@ LABEL_66:
       v52 = this->fields.limitSealLabel;
       if ( v52 )
       {
-        v51 = (System_String_o *)StringLiteral_1;
+        v51 = (System_String_o *)StringLiteral_1/*""*/;
         goto LABEL_78;
       }
       goto LABEL_80;
@@ -307,7 +307,7 @@ LABEL_66:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v50 = LocalizationManager__Get((System_String_o *)StringLiteral_8360, 0LL);
+    v50 = LocalizationManager__Get((System_String_o *)StringLiteral_8360/*"LIMIT_COUNT_SELECT_SEALED"*/, 0LL);
     if ( v49 )
     {
       v51 = v50;

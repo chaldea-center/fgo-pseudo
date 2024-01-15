@@ -69,10 +69,10 @@ void __fastcall ServantStatusVoiceListViewItemDraw__SetItem(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_TweenColor___, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_19644, v8);
-    sub_B16FFC(&StringLiteral_19650, v9);
-    sub_B16FFC(&StringLiteral_19586, v10);
-    sub_B16FFC(&StringLiteral_19675, v11);
+    sub_B16FFC(&StringLiteral_19644/*"img_txt_myroom"*/, v8);
+    sub_B16FFC(&StringLiteral_19650/*"img_txt_other"*/, v9);
+    sub_B16FFC(&StringLiteral_19586/*"img_txt_battle"*/, v10);
+    sub_B16FFC(&StringLiteral_19675/*"img_txt_synthesis"*/, v11);
     byte_40FCA9F = 1;
   }
   if ( item && mode )
@@ -81,7 +81,7 @@ void __fastcall ServantStatusVoiceListViewItemDraw__SetItem(
     if ( !voiceEntitiy )
       goto LABEL_27;
     v13 = voiceEntitiy->fields.svtVoiceType - 1;
-    v14 = (System_String_o **)(v13 > 8 ? &StringLiteral_19650 : (&off_3D6A9C0)[v13]);
+    v14 = (System_String_o **)(v13 > 8 ? &StringLiteral_19650/*"img_txt_other"*/ : (&off_3D6A9C0)[v13]);
     typeSpite = this->fields.typeSpite;
     if ( !typeSpite )
       goto LABEL_27;

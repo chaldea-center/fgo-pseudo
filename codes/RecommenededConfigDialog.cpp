@@ -20,15 +20,15 @@ void __fastcall RecommenededConfigDialog___ctor(RecommenededConfigDialog_o *this
   if ( (byte_40F82EF & 1) == 0 )
   {
     sub_B16FFC(&BaseDialog_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16891, v9);
-    sub_B16FFC(&StringLiteral_16890, v10);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v9);
+    sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v10);
     byte_40F82EF = 1;
   }
-  v11 = (System_Int32_array **)StringLiteral_16890;
-  this->fields.ON_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_16890;
+  v11 = (System_Int32_array **)StringLiteral_16890/*"btn_bg_03"*/;
+  this->fields.ON_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_16890/*"btn_bg_03"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.ON_BTN_SPRITE_NAME, v11, v2, v3, v4, v5, v6, v7);
-  v12 = (System_Int32_array **)StringLiteral_16891;
-  this->fields.OFF_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_16891;
+  v12 = (System_Int32_array **)StringLiteral_16891/*"btn_bg_04"*/;
+  this->fields.OFF_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_16891/*"btn_bg_04"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.OFF_BTN_SPRITE_NAME, v12, v13, v14, v15, v16, v17, v18);
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -148,26 +148,26 @@ void __fastcall RecommenededConfigDialog__Init(RecommenededConfigDialog_o *this,
 
   if ( (byte_40F82E4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F82E4 = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
   if ( !titleLabel )
     goto LABEL_29;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_29;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   classLabel = this->fields.classLabel;
   if ( !classLabel )
     goto LABEL_29;
-  UILabel__set_text(classLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(classLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   rarityLabel = this->fields.rarityLabel;
   if ( !rarityLabel )
     goto LABEL_29;
-  UILabel__set_text(rarityLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(rarityLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   classButtonLabelList = this->fields.classButtonLabelList;
   if ( !classButtonLabelList )
     goto LABEL_29;
@@ -180,7 +180,7 @@ void __fastcall RecommenededConfigDialog__Init(RecommenededConfigDialog_o *this,
       v13 = classButtonLabelList->m_Items[v12];
       if ( !v13 )
         goto LABEL_29;
-      UILabel__set_text(v13, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       if ( (int)++v12 >= max_length )
         goto LABEL_15;
       classButtonLabelList = this->fields.classButtonLabelList;
@@ -204,7 +204,7 @@ LABEL_15:
       v17 = rarityButtonLabelList->m_Items[v16];
       if ( !v17 )
         goto LABEL_29;
-      UILabel__set_text(v17, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v17, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       if ( (int)++v16 >= v15 )
         goto LABEL_23;
       rarityButtonLabelList = this->fields.rarityButtonLabelList;
@@ -217,14 +217,14 @@ LABEL_23:
   resetButtonLabel = this->fields.resetButtonLabel;
   if ( !resetButtonLabel )
     goto LABEL_29;
-  UILabel__set_text(resetButtonLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(resetButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   clearButtonLabel = this->fields.clearButtonLabel;
   if ( !clearButtonLabel
-    || (UILabel__set_text(clearButtonLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(clearButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideButtonLabel = this->fields.decideButtonLabel) == 0LL)
-    || (UILabel__set_text(decideButtonLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelButtonLabel = this->fields.cancelButtonLabel) == 0LL)
-    || (UILabel__set_text(cancelButtonLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_29:
@@ -640,16 +640,16 @@ void __fastcall RecommenededConfigDialog__OpenRecommendedConfig(
     sub_B16FFC(&RecommenededConfigDialog___c__DisplayClass23_0_TypeInfo, v14);
     sub_B16FFC(&Method_RecommenededConfigDialog___c__DisplayClass23_1__OpenRecommendedConfig_b__1__, v15);
     sub_B16FFC(&RecommenededConfigDialog___c__DisplayClass23_1_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_11018, v17);
-    sub_B16FFC(&StringLiteral_11024, v18);
-    sub_B16FFC(&StringLiteral_11023, v19);
-    sub_B16FFC(&StringLiteral_11016, v20);
-    sub_B16FFC(&StringLiteral_3253, v21);
-    sub_B16FFC(&StringLiteral_3251, v22);
-    sub_B16FFC(&StringLiteral_11025, v23);
-    sub_B16FFC(&StringLiteral_11015, v24);
-    sub_B16FFC(&StringLiteral_11014, v25);
-    sub_B16FFC(&StringLiteral_11017, v26);
+    sub_B16FFC(&StringLiteral_11018/*"RECOMMENDED_DIALOG_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_11024/*"RECOMMENDED_RARITY_TITLE"*/, v18);
+    sub_B16FFC(&StringLiteral_11023/*"RECOMMENDED_RARITY_"*/, v19);
+    sub_B16FFC(&StringLiteral_11016/*"RECOMMENDED_CLEAR"*/, v20);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v21);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v22);
+    sub_B16FFC(&StringLiteral_11025/*"RECOMMENDED_RESET"*/, v23);
+    sub_B16FFC(&StringLiteral_11015/*"RECOMMENDED_CLASS_TITLE"*/, v24);
+    sub_B16FFC(&StringLiteral_11014/*"RECOMMENDED_CLASS_"*/, v25);
+    sub_B16FFC(&StringLiteral_11017/*"RECOMMENDED_DIALOG_MESSAGE"*/, v26);
     byte_40F82E5 = 1;
   }
   v148 = 0LL;
@@ -671,17 +671,17 @@ void __fastcall RecommenededConfigDialog__OpenRecommendedConfig(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_11018, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_11018/*"RECOMMENDED_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_68;
   UILabel__set_text(titleLabel, v36, 0LL);
   messageLabel = this->fields.messageLabel;
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_11017, 0LL);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_11017/*"RECOMMENDED_DIALOG_MESSAGE"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_68;
   UILabel__set_text(messageLabel, v38, 0LL);
   classLabel = this->fields.classLabel;
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_11015, 0LL);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_11015/*"RECOMMENDED_CLASS_TITLE"*/, 0LL);
   if ( !classLabel )
     goto LABEL_68;
   UILabel__set_text(classLabel, v40, 0LL);
@@ -709,7 +709,7 @@ void __fastcall RecommenededConfigDialog__OpenRecommendedConfig(
         goto LABEL_69;
       v58 = v57->m_Items[SHIDWORD(v148)];
       v59 = System_Int32__ToString((int32_t)&v148 + 4, 0LL);
-      v60 = System_String__Concat_43743732((System_String_o *)StringLiteral_11014, v59, 0LL);
+      v60 = System_String__Concat_43743732((System_String_o *)StringLiteral_11014/*"RECOMMENDED_CLASS_"*/, v59, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
@@ -788,7 +788,7 @@ LABEL_31:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v81 = LocalizationManager__Get((System_String_o *)StringLiteral_11024, 0LL);
+  v81 = LocalizationManager__Get((System_String_o *)StringLiteral_11024/*"RECOMMENDED_RARITY_TITLE"*/, 0LL);
   if ( !rarityLabel )
     goto LABEL_68;
   UILabel__set_text(rarityLabel, v81, 0LL);
@@ -816,7 +816,7 @@ LABEL_31:
         goto LABEL_69;
       v96 = v95->m_Items[(int)v148];
       v97 = System_Int32__ToString((int32_t)&v148, 0LL);
-      v98 = System_String__Concat_43743732((System_String_o *)StringLiteral_11023, v97, 0LL);
+      v98 = System_String__Concat_43743732((System_String_o *)StringLiteral_11023/*"RECOMMENDED_RARITY_"*/, v97, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
@@ -875,22 +875,22 @@ LABEL_31:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v116 = LocalizationManager__Get((System_String_o *)StringLiteral_11025, 0LL);
+  v116 = LocalizationManager__Get((System_String_o *)StringLiteral_11025/*"RECOMMENDED_RESET"*/, 0LL);
   if ( !resetButtonLabel )
     goto LABEL_68;
   UILabel__set_text(resetButtonLabel, v116, 0LL);
   clearButtonLabel = this->fields.clearButtonLabel;
-  v118 = LocalizationManager__Get((System_String_o *)StringLiteral_11016, 0LL);
+  v118 = LocalizationManager__Get((System_String_o *)StringLiteral_11016/*"RECOMMENDED_CLEAR"*/, 0LL);
   if ( !clearButtonLabel )
     goto LABEL_68;
   UILabel__set_text(clearButtonLabel, v118, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
-  v120 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v120 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_68;
   UILabel__set_text(decideButtonLabel, v120, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  v122 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v122 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_68;
   UILabel__set_text(cancelButtonLabel, v122, 0LL);

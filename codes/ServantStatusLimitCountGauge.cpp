@@ -48,8 +48,8 @@ void __fastcall ServantStatusLimitCountGauge__Set(
   v6 = this;
   if ( (byte_4101946 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19273, *(_QWORD *)&limitCount);
-    this = (ServantStatusLimitCountGauge_o *)sub_B16FFC(&StringLiteral_19272, v7);
+    sub_B16FFC(&StringLiteral_19273/*"icon_limit_on"*/, *(_QWORD *)&limitCount);
+    this = (ServantStatusLimitCountGauge_o *)sub_B16FFC(&StringLiteral_19272/*"icon_limit_off"*/, v7);
     byte_4101946 = 1;
   }
   gaugeSpriteList = v6->fields.gaugeSpriteList;
@@ -79,9 +79,9 @@ LABEL_16:
       if ( !v11 )
         goto LABEL_16;
       if ( v9 >= limitCount )
-        v12 = (System_String_o **)&StringLiteral_19272;
+        v12 = (System_String_o **)&StringLiteral_19272/*"icon_limit_off"*/;
       else
-        v12 = (System_String_o **)&StringLiteral_19273;
+        v12 = (System_String_o **)&StringLiteral_19273/*"icon_limit_on"*/;
       v13 = *v12;
     }
     UISprite__set_spriteName(v11, v13, 0LL);

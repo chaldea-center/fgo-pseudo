@@ -39,7 +39,7 @@ void __fastcall MasterMissionListViewItem___ctor(
 
   if ( (byte_40FB236 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, missionData);
+    sub_B16FFC(&StringLiteral_1/*""*/, missionData);
     byte_40FB236 = 1;
   }
   MissionListViewItem___ctor((MissionListViewItem_o *)this, 0LL);
@@ -60,17 +60,17 @@ void __fastcall MasterMissionListViewItem___ctor(
   this->fields.isNew = 0;
   this->fields.currentMissionId = id;
   this->fields.dispNo = missionData->fields.dispNo;
-  v20 = (System_Int32_array **)StringLiteral_1;
-  this->fields.condMsg = (struct System_String_o *)StringLiteral_1;
+  v20 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.condMsg = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.condMsg, v20, v13, v14, v15, v16, v17, v18);
   this->fields.progVal = 0.0;
   this->fields.targetNum = 0LL;
   this->fields.progNum = 0LL;
-  v21 = (System_Int32_array **)StringLiteral_1;
-  this->fields.closedMessage = (struct System_String_o *)StringLiteral_1;
+  v21 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.closedMessage = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.closedMessage, v21, v22, v23, v24, v25, v26, v27);
-  v28 = (System_Int32_array **)StringLiteral_1;
-  this->fields.progTxt = (struct System_String_o *)StringLiteral_1;
+  v28 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.progTxt = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.progTxt, v28, v29, v30, v31, v32, v33, v34);
   eventMissionEnt = this->fields.eventMissionEnt;
   *(_QWORD *)&this->fields.progStatus = 0x400000000LL;

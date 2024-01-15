@@ -57,10 +57,10 @@ void __fastcall TopLoginRequest__beginRequest(TopLoginRequest_o *this, const Met
     sub_B16FFC(&Crc32_TypeInfo, method);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__, v3);
     sub_B16FFC(&NetworkManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_16431, v5);
-    sub_B16FFC(&StringLiteral_22961, v6);
-    sub_B16FFC(&StringLiteral_20098, v7);
-    sub_B16FFC(&StringLiteral_19877, v8);
+    sub_B16FFC(&StringLiteral_16431/*"assetbundleFolder"*/, v5);
+    sub_B16FFC(&StringLiteral_22961/*"userState"*/, v6);
+    sub_B16FFC(&StringLiteral_20098/*"lastAccessTime"*/, v7);
+    sub_B16FFC(&StringLiteral_19877/*"isTerminalLogin"*/, v8);
     byte_40FB7F9 = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, 0LL);
@@ -100,7 +100,7 @@ LABEL_19:
   v16 = UserId;
   Item = (System_String_o *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                               (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)this->fields.paramString,
-                              (System_Type_o *)StringLiteral_20098,
+                              (System_Type_o *)StringLiteral_20098/*"lastAccessTime"*/,
                               (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   v18 = System_Int64__Parse(Item, 0LL);
   v19 = -v18;
@@ -108,12 +108,12 @@ LABEL_19:
     v19 = ~v18;
   RequestBase__addField_30956696(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_22961,
+    (System_String_o *)StringLiteral_22961/*"userState"*/,
     v16 & v14 ^ (unsigned __int64)(v19 >> 2),
     0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_16431, dataServerFolder, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_16431/*"assetbundleFolder"*/, dataServerFolder, 0LL);
   TerminalDispState = NetworkManager__GetTerminalDispState(0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19877, TerminalDispState, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19877/*"isTerminalLogin"*/, TerminalDispState, 0LL);
   NetworkManager__RequestStart((RequestBase_o *)this, 0LL);
 }
 
@@ -163,7 +163,7 @@ System_String_o *__fastcall TopLoginRequest__getMockData(TopLoginRequest_o *this
   if ( (byte_40FB7F7 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9138, v2);
+    sub_B16FFC(&StringLiteral_9138/*"MockTopLoginRequest"*/, v2);
     byte_40FB7F7 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -171,7 +171,7 @@ System_String_o *__fastcall TopLoginRequest__getMockData(TopLoginRequest_o *this
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9138, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9138/*"MockTopLoginRequest"*/, 0LL);
 }
 
 
@@ -183,7 +183,7 @@ System_String_o *__fastcall TopLoginRequest__getURL(TopLoginRequest_o *this, con
   if ( (byte_40FB7F6 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_20229, v2);
+    sub_B16FFC(&StringLiteral_20229/*"login/top"*/, v2);
     byte_40FB7F6 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -192,7 +192,7 @@ System_String_o *__fastcall TopLoginRequest__getURL(TopLoginRequest_o *this, con
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_20229, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_20229/*"login/top"*/, 0LL);
 }
 
 
@@ -284,8 +284,8 @@ void __fastcall TopLoginRequest__requestCompleted(
     sub_B16FFC(&UserEquipNewManager_TypeInfo, v22);
     sub_B16FFC(&UserServantCollectionManager_TypeInfo, v23);
     sub_B16FFC(&UserServantNewManager_TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_20980, v25);
-    sub_B16FFC(&StringLiteral_17971, v26);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v25);
+    sub_B16FFC(&StringLiteral_17971/*"do_signup"*/, v26);
     byte_40FB7FA = 1;
   }
   dateData = 0LL;
@@ -493,9 +493,9 @@ LABEL_88:
       v59->static_fields->accessTime = 0LL;
       if ( !v58 )
         goto LABEL_88;
-      if ( System_String__op_Equality(v58->fields.action, (System_String_o *)StringLiteral_17971, 0LL) )
+      if ( System_String__op_Equality(v58->fields.action, (System_String_o *)StringLiteral_17971/*"do_signup"*/, 0LL) )
       {
-        v57 = (System_String_o *)StringLiteral_17971;
+        v57 = (System_String_o *)StringLiteral_17971/*"do_signup"*/;
         goto LABEL_87;
       }
     }
@@ -508,7 +508,7 @@ LABEL_88:
     v60 = TopLoginRequest_TypeInfo;
   }
   v60->static_fields->accessTime = 0LL;
-  v57 = (System_String_o *)StringLiteral_20980;
+  v57 = (System_String_o *)StringLiteral_20980/*"ng"*/;
 LABEL_87:
   RequestBase__completed((RequestBase_o *)this, v57, 0LL);
 }

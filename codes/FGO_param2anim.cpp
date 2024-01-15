@@ -27,8 +27,8 @@ void __fastcall FGO_param2anim__Start(FGO_param2anim_o *this, const MethodInfo *
   if ( (byte_40F9F64 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_B16FFC(&StringLiteral_16127, v3);
-    sub_B16FFC(&StringLiteral_16128, v4);
+    sub_B16FFC(&StringLiteral_16127/*"_twoValue0"*/, v3);
+    sub_B16FFC(&StringLiteral_16128/*"_twoValue1"*/, v4);
     byte_40F9F64 = 1;
   }
   Component_WebViewObject = (struct UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
@@ -50,13 +50,13 @@ void __fastcall FGO_param2anim__Start(FGO_param2anim_o *this, const MethodInfo *
     goto LABEL_12;
   material = UnityEngine_Renderer__get_material(renderer, 0LL);
   if ( !material
-    || (UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16127, 0LL), !*p_renderer)
+    || (UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16127/*"_twoValue0"*/, 0LL), !*p_renderer)
     || (v15 = UnityEngine_Renderer__get_material(*p_renderer, 0LL)) == 0LL
-    || (UnityEngine_Material__EnableKeyword(v15, (System_String_o *)StringLiteral_16128, 0LL), !*p_renderer)
+    || (UnityEngine_Material__EnableKeyword(v15, (System_String_o *)StringLiteral_16128/*"_twoValue1"*/, 0LL), !*p_renderer)
     || (v16 = UnityEngine_Renderer__get_material(*p_renderer, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           v16,
-          (System_String_o *)StringLiteral_16127,
+          (System_String_o *)StringLiteral_16127/*"_twoValue0"*/,
           this->fields.two_value.fields.y,
           0LL),
         (v17 = this->fields._renderer) == 0LL)
@@ -67,7 +67,7 @@ LABEL_12:
   }
   UnityEngine_Material__SetFloat(
     v18,
-    (System_String_o *)StringLiteral_16128,
+    (System_String_o *)StringLiteral_16128/*"_twoValue1"*/,
     *((float *)&this->fields.two_value + 2),
     0LL);
 }
@@ -83,8 +83,8 @@ void __fastcall FGO_param2anim__Update(FGO_param2anim_o *this, const MethodInfo 
 
   if ( (byte_40F9F65 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16127, method);
-    sub_B16FFC(&StringLiteral_16128, v3);
+    sub_B16FFC(&StringLiteral_16127/*"_twoValue0"*/, method);
+    sub_B16FFC(&StringLiteral_16128/*"_twoValue1"*/, v3);
     byte_40F9F65 = 1;
   }
   renderer = this->fields._renderer;
@@ -92,7 +92,7 @@ void __fastcall FGO_param2anim__Update(FGO_param2anim_o *this, const MethodInfo 
     || (material = UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           material,
-          (System_String_o *)StringLiteral_16127,
+          (System_String_o *)StringLiteral_16127/*"_twoValue0"*/,
           this->fields.two_value.fields.y,
           0LL),
         (v6 = this->fields._renderer) == 0LL)
@@ -102,7 +102,7 @@ void __fastcall FGO_param2anim__Update(FGO_param2anim_o *this, const MethodInfo 
   }
   UnityEngine_Material__SetFloat(
     v7,
-    (System_String_o *)StringLiteral_16128,
+    (System_String_o *)StringLiteral_16128/*"_twoValue1"*/,
     *((float *)&this->fields.two_value + 2),
     0LL);
 }

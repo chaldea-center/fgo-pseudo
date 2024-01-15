@@ -399,8 +399,8 @@ void __fastcall BattleSelectServantWindow__SetServantData(
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_2417, v13);
-    sub_B16FFC(&StringLiteral_2409, v14);
+    sub_B16FFC(&StringLiteral_2417/*"BATTLE_DIALOG_SELECT_SERVANT"*/, v13);
+    sub_B16FFC(&StringLiteral_2409/*"BATTLE_DIALOG_NOT_SELECT_TARGET"*/, v14);
     byte_40F754A = 1;
   }
   this->fields.svtList = v6;
@@ -411,7 +411,7 @@ void __fastcall BattleSelectServantWindow__SetServantData(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2417, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2417/*"BATTLE_DIALOG_SELECT_SERVANT"*/, 0LL);
   if ( !title_label )
     goto LABEL_94;
   UILabel__set_text(title_label, v16, 0LL);
@@ -430,7 +430,7 @@ void __fastcall BattleSelectServantWindow__SetServantData(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2409, 0LL);
+      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2409/*"BATTLE_DIALOG_NOT_SELECT_TARGET"*/, 0LL);
       if ( !v23 )
         goto LABEL_94;
       UILabel__set_text(v23, v24, 0LL);
@@ -697,10 +697,10 @@ System_String_o *__fastcall BattleSelectServantWindow__get_closeBtnPath(
 {
   if ( (byte_40F754D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12944, method);
+    sub_B16FFC(&StringLiteral_12944/*"Sprite"*/, method);
     byte_40F754D = 1;
   }
-  return (System_String_o *)StringLiteral_12944;
+  return (System_String_o *)StringLiteral_12944/*"Sprite"*/;
 }
 
 

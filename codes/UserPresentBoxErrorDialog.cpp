@@ -118,10 +118,10 @@ void __fastcall UserPresentBoxErrorDialog__ChangeScene(
     sub_B16FFC(&SoundManager_TypeInfo, v9);
     sub_B16FFC(&Method_UserPresentBoxErrorDialog___c__DisplayClass23_0__ChangeScene_b__0__, v10);
     sub_B16FFC(&UserPresentBoxErrorDialog___c__DisplayClass23_0_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_12655, v12);
-    sub_B16FFC(&StringLiteral_12612, v13);
-    sub_B16FFC(&StringLiteral_12654, v14);
-    sub_B16FFC(&StringLiteral_12651, v15);
+    sub_B16FFC(&StringLiteral_12655/*"ServantEquipList"*/, v12);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v13);
+    sub_B16FFC(&StringLiteral_12654/*"ServantEQCombine"*/, v14);
+    sub_B16FFC(&StringLiteral_12651/*"ServantCombine"*/, v15);
     byte_40F978D = 1;
   }
   v16 = sub_B170CC(UserPresentBoxErrorDialog___c__DisplayClass23_0_TypeInfo, *(_QWORD *)&scene, method, v3, v4);
@@ -155,7 +155,7 @@ LABEL_29:
         goto LABEL_31;
       }
       v35 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v47, v48, v49, v50);
-      SceneJumpInfo___ctor_29747932(v35, (System_String_o *)StringLiteral_12655, 0LL);
+      SceneJumpInfo___ctor_29747932(v35, (System_String_o *)StringLiteral_12655/*"ServantEquipList"*/, 0LL);
       if ( !v29 )
         goto LABEL_31;
       v51 = 71;
@@ -170,9 +170,9 @@ LABEL_28:
       v44 = v38 == 1;
       v35 = v43;
       if ( v44 )
-        v52 = &StringLiteral_12654;
+        v52 = &StringLiteral_12654/*"ServantEQCombine"*/;
       else
-        v52 = &StringLiteral_12651;
+        v52 = &StringLiteral_12651/*"ServantCombine"*/;
       SceneJumpInfo___ctor_29747932(v43, (System_String_o *)*v52, 0LL);
       if ( !v29 )
         goto LABEL_31;
@@ -186,7 +186,7 @@ LABEL_28:
         v34 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v30, v31, v32, v33);
         v35 = v34;
         v36 = 1;
-        v37 = (System_String_o *)StringLiteral_12612;
+        v37 = (System_String_o *)StringLiteral_12612/*"SellServant"*/;
       }
       else
       {
@@ -194,7 +194,7 @@ LABEL_28:
         v34 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v53, v54, v55, v56);
         v44 = v28 == 2;
         v35 = v34;
-        v37 = (System_String_o *)StringLiteral_12612;
+        v37 = (System_String_o *)StringLiteral_12612/*"SellServant"*/;
         if ( v44 )
           v36 = 2;
         else
@@ -259,40 +259,40 @@ void __fastcall UserPresentBoxErrorDialog__Init(UserPresentBoxErrorDialog_o *thi
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&UserPresentBoxErrorDialog_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_12180, v4);
-    sub_B16FFC(&StringLiteral_3252, v5);
-    sub_B16FFC(&StringLiteral_12183, v6);
-    sub_B16FFC(&StringLiteral_12166, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_12180/*"SHORT_SERVANT_SELL"*/, v4);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v5);
+    sub_B16FFC(&StringLiteral_12183/*"SHORT_SERVANT_WAREHOUSE"*/, v6);
+    sub_B16FFC(&StringLiteral_12166/*"SHORT_SERVANT_COMBINE"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F978A = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_32;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_32;
   UILabel__set_text(closeLabel, v11, 0LL);
   shopLabel = this->fields.shopLabel;
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_12180, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_12180/*"SHORT_SERVANT_SELL"*/, 0LL);
   if ( !shopLabel )
     goto LABEL_32;
   UILabel__set_text(shopLabel, v13, 0LL);
   combineLabel = this->fields.combineLabel;
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12166, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12166/*"SHORT_SERVANT_COMBINE"*/, 0LL);
   if ( !combineLabel )
     goto LABEL_32;
   UILabel__set_text(combineLabel, v15, 0LL);
   warehouseLabel = this->fields.warehouseLabel;
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_12183, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_12183/*"SHORT_SERVANT_WAREHOUSE"*/, 0LL);
   if ( !warehouseLabel )
     goto LABEL_32;
   UILabel__set_text(warehouseLabel, v17, 0LL);
@@ -497,10 +497,10 @@ System_String_o *__fastcall UserPresentBoxErrorDialog__get_closeBtnPath(
 {
   if ( (byte_40F978E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15418, method);
+    sub_B16FFC(&StringLiteral_15418/*"Window/ExitButton"*/, method);
     byte_40F978E = 1;
   }
-  return (System_String_o *)StringLiteral_15418;
+  return (System_String_o *)StringLiteral_15418/*"Window/ExitButton"*/;
 }
 
 

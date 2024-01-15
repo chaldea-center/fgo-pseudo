@@ -14,12 +14,12 @@ void __fastcall DiggingManager___cctor(const MethodInfo *method)
   if ( (byte_40FBCBD & 1) == 0 )
   {
     sub_B16FFC(&DiggingManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_12837, v8);
+    sub_B16FFC(&StringLiteral_12837/*"SkipDiggingConfirmCheckBoxState"*/, v8);
     byte_40FBCBD = 1;
   }
   static_fields = (BattleServantConfConponent_o *)DiggingManager_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_12837;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_12837;
+  v10 = (System_Int32_array **)StringLiteral_12837/*"SkipDiggingConfirmCheckBoxState"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_12837/*"SkipDiggingConfirmCheckBoxState"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -1831,12 +1831,12 @@ System_String_o *__fastcall DiggingManager__GetDiggingAnimationName(
 
   if ( (byte_40FBCAF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12800, block);
-    sub_B16FFC(&StringLiteral_7082, v6);
-    sub_B16FFC(&StringLiteral_7083, v7);
-    sub_B16FFC(&StringLiteral_10617, v8);
-    sub_B16FFC(&StringLiteral_12799, v9);
-    sub_B16FFC(&StringLiteral_10616, v10);
+    sub_B16FFC(&StringLiteral_12800/*"ShoveltAnimation_skip"*/, block);
+    sub_B16FFC(&StringLiteral_7082/*"HammertAnimation"*/, v6);
+    sub_B16FFC(&StringLiteral_7083/*"HammertAnimation_skip"*/, v7);
+    sub_B16FFC(&StringLiteral_10617/*"PickaxetAnimation_skip"*/, v8);
+    sub_B16FFC(&StringLiteral_12799/*"ShoveltAnimation"*/, v9);
+    sub_B16FFC(&StringLiteral_10616/*"PickaxetAnimation"*/, v10);
     byte_40FBCAF = 1;
   }
   if ( !block )
@@ -1844,20 +1844,20 @@ System_String_o *__fastcall DiggingManager__GetDiggingAnimationName(
   animationId = block->fields.animationId;
   if ( animationId == 2 )
   {
-    v12 = (System_String_o **)&StringLiteral_7082;
-    v13 = (System_String_o **)&StringLiteral_7083;
+    v12 = (System_String_o **)&StringLiteral_7082/*"HammertAnimation"*/;
+    v13 = (System_String_o **)&StringLiteral_7083/*"HammertAnimation_skip"*/;
   }
   else if ( animationId == 1 )
   {
-    v12 = (System_String_o **)&StringLiteral_10616;
-    v13 = (System_String_o **)&StringLiteral_10617;
+    v12 = (System_String_o **)&StringLiteral_10616/*"PickaxetAnimation"*/;
+    v13 = (System_String_o **)&StringLiteral_10617/*"PickaxetAnimation_skip"*/;
   }
   else
   {
-    v12 = (System_String_o **)&StringLiteral_12799;
+    v12 = (System_String_o **)&StringLiteral_12799/*"ShoveltAnimation"*/;
     if ( animationId )
       return *v12;
-    v13 = (System_String_o **)&StringLiteral_12800;
+    v13 = (System_String_o **)&StringLiteral_12800/*"ShoveltAnimation_skip"*/;
   }
   if ( isSkip )
     v12 = v13;
@@ -2072,8 +2072,8 @@ void __fastcall DiggingManager__Init(
     sub_B16FFC(&TaskScheduler_TypeInfo, v26);
     sub_B16FFC(&Method_DiggingManager___c__DisplayClass76_0__Init_b__0__, v27);
     sub_B16FFC(&DiggingManager___c__DisplayClass76_0_TypeInfo, v28);
-    sub_B16FFC(&StringLiteral_11054, v29);
-    sub_B16FFC(&StringLiteral_1751, v30);
+    sub_B16FFC(&StringLiteral_11054/*"RESET_DIGGING_BUTTON_TITLE"*/, v29);
+    sub_B16FFC(&StringLiteral_1751/*"AUTO_DIGGING_BUTTON_TITLE"*/, v30);
     byte_40FBC9E = 1;
   }
   v31 = sub_B170CC(
@@ -2265,11 +2265,11 @@ void __fastcall DiggingManager__Init(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v130 = LocalizationManager__Get((System_String_o *)StringLiteral_1751, 0LL);
+  v130 = LocalizationManager__Get((System_String_o *)StringLiteral_1751/*"AUTO_DIGGING_BUTTON_TITLE"*/, 0LL);
   if ( !autoButtonLabel
     || (UILabel__set_text(autoButtonLabel, v130, 0LL),
         resetButtonLabel = this->fields.resetButtonLabel,
-        v132 = LocalizationManager__Get((System_String_o *)StringLiteral_11054, 0LL),
+        v132 = LocalizationManager__Get((System_String_o *)StringLiteral_11054/*"RESET_DIGGING_BUTTON_TITLE"*/, 0LL),
         !resetButtonLabel) )
   {
 LABEL_23:
@@ -3077,10 +3077,10 @@ void __fastcall DiggingManager__ResetTable(DiggingManager_o *this, const MethodI
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_11057, v7);
-    sub_B16FFC(&StringLiteral_11058, v8);
-    sub_B16FFC(&StringLiteral_11056, v9);
-    sub_B16FFC(&StringLiteral_11055, v10);
+    sub_B16FFC(&StringLiteral_11057/*"RESET_DIGGING_CONFIRM_DIALOG_MESSAGE"*/, v7);
+    sub_B16FFC(&StringLiteral_11058/*"RESET_DIGGING_CONFIRM_DIALOG_TITLE"*/, v8);
+    sub_B16FFC(&StringLiteral_11056/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, v9);
+    sub_B16FFC(&StringLiteral_11055/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, v10);
     byte_40FBCA1 = 1;
   }
   if ( DiggingManager__IsAchievedTheConditionsToReset(this, method) )
@@ -3097,10 +3097,10 @@ void __fastcall DiggingManager__ResetTable(DiggingManager_o *this, const MethodI
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11058, 0LL);
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11057, 0LL);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_11056, 0LL);
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11055, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11058/*"RESET_DIGGING_CONFIRM_DIALOG_TITLE"*/, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11057/*"RESET_DIGGING_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_11056/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11055/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, 0LL);
     v20 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                    CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                    v16,
@@ -3422,9 +3422,9 @@ void __fastcall DiggingManager__Response(DiggingManager_o *this, System_String_o
     sub_B16FFC(&Method_DiggingManager___c__DisplayClass90_2__Response_b__3__, v34);
     sub_B16FFC(&Method_DiggingManager___c__DisplayClass90_2__Response_b__4__, v35);
     sub_B16FFC(&DiggingManager___c__DisplayClass90_2_TypeInfo, v36);
-    sub_B16FFC(&StringLiteral_20980, v37);
-    sub_B16FFC(&StringLiteral_15571, v38);
-    sub_B16FFC(&StringLiteral_15807, v39);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v37);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v38);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v39);
     byte_40FBCAB = 1;
   }
   v40 = sub_B170CC(DiggingManager___c__DisplayClass90_0_TypeInfo, result, method, v3, v4);
@@ -3433,7 +3433,7 @@ void __fastcall DiggingManager__Response(DiggingManager_o *this, System_String_o
     goto LABEL_46;
   *(_QWORD *)(v40 + 16) = this;
   sub_B16F98((BattleServantConfConponent_o *)(v40 + 16), (System_Int32_array **)this, v41, v42, v43, v44, v45, v46);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     maskPanel = this->fields.maskPanel;
     if ( maskPanel )
@@ -3445,9 +3445,9 @@ LABEL_46:
     sub_B170D4();
   }
   v48 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -4135,7 +4135,7 @@ void __fastcall DiggingManager__SetDiggingCompleteImage(DiggingManager_o *this, 
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v4);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_17951, v7);
+    sub_B16FFC(&StringLiteral_17951/*"digging_clear_img"*/, v7);
     byte_40FBCBB = 1;
   }
   assetManager = this->fields.assetManager;
@@ -4174,7 +4174,7 @@ void __fastcall DiggingManager__SetDiggingCompleteImage(DiggingManager_o *this, 
   eventId = this->fields.eventId;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_28584872(eventId, (UISprite_o *)v12, (System_String_o *)StringLiteral_17951, 0LL);
+  AtlasManager__SetEventUI_28584872(eventId, (UISprite_o *)v12, (System_String_o *)StringLiteral_17951/*"digging_clear_img"*/, 0LL);
   v20 = UnityEngine_Component__get_gameObject(v12, 0LL);
   if ( !v20 )
 LABEL_16:
@@ -5655,7 +5655,7 @@ bool __fastcall DiggingManager__StartDiggingCompAnimation_d__116__MoveNext(
 
   if ( (byte_40F8B69 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5273, method);
+    sub_B16FFC(&StringLiteral_5273/*"DiggingComplete"*/, method);
     byte_40F8B69 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -5698,7 +5698,7 @@ LABEL_20:
               v9 = _4__this->fields.diggingCompleteAnim;
               if ( v9 )
               {
-                UnityEngine_Animation__Play_49744236(v9, (System_String_o *)StringLiteral_5273, 0LL);
+                UnityEngine_Animation__Play_49744236(v9, (System_String_o *)StringLiteral_5273/*"DiggingComplete"*/, 0LL);
 LABEL_15:
                 this->fields.__2__current = 0LL;
                 p__2__current = &this->fields.__2__current;
@@ -5977,9 +5977,9 @@ void __fastcall DiggingManager___c__DisplayClass76_0___Init_b__0(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&int_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_17950, v4);
-    sub_B16FFC(&StringLiteral_17952, v5);
-    sub_B16FFC(&StringLiteral_17949, v6);
+    sub_B16FFC(&StringLiteral_17950/*"digging_bg_{0}"*/, v4);
+    sub_B16FFC(&StringLiteral_17952/*"digging_txt_touchscreen"*/, v5);
+    sub_B16FFC(&StringLiteral_17949/*"digging_bg_frame_{0}"*/, v6);
     byte_40F8B5C = 1;
   }
   _4__this = this->fields.__4__this;
@@ -5992,7 +5992,7 @@ void __fastcall DiggingManager___c__DisplayClass76_0___Init_b__0(
     goto LABEL_12;
   bgImageId = eventDiggingEntity->fields.bgImageId;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &bgImageId);
-  v12 = System_String__Format((System_String_o *)StringLiteral_17950, v11, 0LL);
+  v12 = System_String__Format((System_String_o *)StringLiteral_17950/*"digging_bg_{0}"*/, v11, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI_28584872(eventId, bgSprite, v12, 0LL);
@@ -6005,7 +6005,7 @@ void __fastcall DiggingManager___c__DisplayClass76_0___Init_b__0(
   if ( !v16
     || (v20 = v16->fields.bgImageId,
         v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20),
-        v18 = System_String__Format((System_String_o *)StringLiteral_17949, v17, 0LL),
+        v18 = System_String__Format((System_String_o *)StringLiteral_17949/*"digging_bg_frame_{0}"*/, v17, 0LL),
         AtlasManager__SetEventUI_28584872(v14, bgFrameSprite, v18, 0LL),
         (v19 = this->fields.__4__this) == 0LL) )
   {
@@ -6015,7 +6015,7 @@ LABEL_12:
   AtlasManager__SetEventUI_28584872(
     this->fields.eventId,
     v19->fields.touchScreenSprite,
-    (System_String_o *)StringLiteral_17952,
+    (System_String_o *)StringLiteral_17952/*"digging_txt_touchscreen"*/,
     0LL);
 }
 

@@ -47,10 +47,10 @@ int32_t __fastcall WarBoardOnboardSkillEntity__GetBreakPointDamageType(
 
   if ( (byte_40F858C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15348, method);
+    sub_B16FFC(&StringLiteral_15348/*"WarBoardBreakPointDamageType"*/, method);
     byte_40F858C = 1;
   }
-  return WarBoardOnboardSkillEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_15348, 0, v2);
+  return WarBoardOnboardSkillEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_15348/*"WarBoardBreakPointDamageType"*/, 0, v2);
 }
 
 
@@ -120,10 +120,10 @@ System_Int32_array *__fastcall WarBoardOnboardSkillEntity__GetSquareIndexGroup(
     sub_B16FFC(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___, *(_QWORD *)&stageId);
     sub_B16FFC(&DataManager_TypeInfo, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__ToArray__, v7);
-    sub_B16FFC(&StringLiteral_22149, v8);
+    sub_B16FFC(&StringLiteral_22149/*"squareIndexGroup"*/, v8);
     byte_40F858D = 1;
   }
-  IntFromScript = WarBoardOnboardSkillEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22149, -1, v3);
+  IntFromScript = WarBoardOnboardSkillEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_22149/*"squareIndexGroup"*/, -1, v3);
   if ( IntFromScript == -1 )
     return this->fields.targetSquareIndex;
   v10 = IntFromScript;

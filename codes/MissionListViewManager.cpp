@@ -599,7 +599,7 @@ void __fastcall MissionListViewManager__RequestInto(MissionListViewManager_o *th
     sub_B16FFC(&Method_System_Collections_Generic_List_MissionListViewObject__get_Item__, v4);
     sub_B16FFC(&Method_MissionListViewManager_GetObjectList_MissionListViewObject___, v5);
     sub_B16FFC(&Method_MissionListViewManager_OnMoveEnd__, v6);
-    sub_B16FFC(&StringLiteral_10004, v7);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v7);
     byte_40F7D0D = 1;
   }
   ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0LL);
@@ -645,7 +645,7 @@ LABEL_14:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       this->fields.listInDelay + 0.5,
       0LL);
   }
@@ -688,7 +688,7 @@ void __fastcall MissionListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_MissionListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_MissionListViewManager_GetObjectList_MissionListViewObject___, v12);
     sub_B16FFC(&Method_MissionListViewManager_OnMoveEnd__, v13);
-    sub_B16FFC(&StringLiteral_10004, v14);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v14);
     byte_40F7D0C = 1;
   }
   memset(&v24, 0, sizeof(v24));
@@ -701,7 +701,7 @@ void __fastcall MissionListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -795,7 +795,7 @@ void __fastcall MissionListViewManager__SetMode_21011028(
   if ( (byte_40F7D0B & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&mode);
-    sub_B16FFC(&StringLiteral_11393, v5);
+    sub_B16FFC(&StringLiteral_11393/*"RequestInto"*/, v5);
     byte_40F7D0B = 1;
   }
   this->fields.initMode = mode;
@@ -819,7 +819,7 @@ void __fastcall MissionListViewManager__SetMode_21011028(
     }
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_11393,
+      (System_String_o *)StringLiteral_11393/*"RequestInto"*/,
       0.0,
       0LL);
   }

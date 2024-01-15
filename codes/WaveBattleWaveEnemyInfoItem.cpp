@@ -57,28 +57,28 @@ void __fastcall WaveBattleWaveEnemyInfoItem___cctor(const MethodInfo *method)
   if ( (byte_40F6760 & 1) == 0 )
   {
     sub_B16FFC(&WaveBattleWaveEnemyInfoItem_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18301, v8);
-    sub_B16FFC(&StringLiteral_14954, v9);
-    sub_B16FFC(&StringLiteral_14955, v10);
-    sub_B16FFC(&StringLiteral_5982, v11);
-    sub_B16FFC(&StringLiteral_4520, v12);
+    sub_B16FFC(&StringLiteral_18301/*"enemy_icon_"*/, v8);
+    sub_B16FFC(&StringLiteral_14954/*"Unlit/Transparent Colored"*/, v9);
+    sub_B16FFC(&StringLiteral_14955/*"Unlit/Transparent Colored_Choco"*/, v10);
+    sub_B16FFC(&StringLiteral_5982/*"Enemys/Icon/"*/, v11);
+    sub_B16FFC(&StringLiteral_4520/*"Custom/SpriteWithMask_Choco"*/, v12);
     byte_40F6760 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WaveBattleWaveEnemyInfoItem_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_14955;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_14955;
+  v14 = (System_Int32_array **)StringLiteral_14955/*"Unlit/Transparent Colored_Choco"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_14955/*"Unlit/Transparent Colored_Choco"*/;
   sub_B16F98(static_fields, v14, v2, v3, v4, v5, v6, v7);
   v15 = WaveBattleWaveEnemyInfoItem_TypeInfo->static_fields;
-  v16 = (System_Int32_array **)StringLiteral_4520;
-  v15->CHOCO_SHADER_SP = (struct System_String_o *)StringLiteral_4520;
+  v16 = (System_Int32_array **)StringLiteral_4520/*"Custom/SpriteWithMask_Choco"*/;
+  v15->CHOCO_SHADER_SP = (struct System_String_o *)StringLiteral_4520/*"Custom/SpriteWithMask_Choco"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v15->CHOCO_SHADER_SP, v16, v17, v18, v19, v20, v21, v22);
   v23 = WaveBattleWaveEnemyInfoItem_TypeInfo->static_fields;
-  v24 = (System_Int32_array **)StringLiteral_5982;
-  v23->ENEMY_ICON_TEXTURE_PATH = (struct System_String_o *)StringLiteral_5982;
+  v24 = (System_Int32_array **)StringLiteral_5982/*"Enemys/Icon/"*/;
+  v23->ENEMY_ICON_TEXTURE_PATH = (struct System_String_o *)StringLiteral_5982/*"Enemys/Icon/"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v23->ENEMY_ICON_TEXTURE_PATH, v24, v25, v26, v27, v28, v29, v30);
   v31 = WaveBattleWaveEnemyInfoItem_TypeInfo->static_fields;
-  v32 = (System_Int32_array **)StringLiteral_18301;
-  v31->ENEMY_ICON_TEXTURE_PREFIX = (struct System_String_o *)StringLiteral_18301;
+  v32 = (System_Int32_array **)StringLiteral_18301/*"enemy_icon_"*/;
+  v31->ENEMY_ICON_TEXTURE_PREFIX = (struct System_String_o *)StringLiteral_18301/*"enemy_icon_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v31->ENEMY_ICON_TEXTURE_PREFIX, v32, v33, v34, v35, v36, v37, v38);
   v53.fields.r = 0.05;
   v53.fields.a = 1.0;
@@ -89,8 +89,8 @@ void __fastcall WaveBattleWaveEnemyInfoItem___cctor(const MethodInfo *method)
   v43 = WaveBattleWaveEnemyInfoItem_TypeInfo;
   WaveBattleWaveEnemyInfoItem_TypeInfo->static_fields->SHADOW_COLOR = v52;
   v44 = v43->static_fields;
-  v45 = (System_Int32_array **)StringLiteral_14954;
-  v44->DEFAULT_SHADER = (struct System_String_o *)StringLiteral_14954;
+  v45 = (System_Int32_array **)StringLiteral_14954/*"Unlit/Transparent Colored"*/;
+  v44->DEFAULT_SHADER = (struct System_String_o *)StringLiteral_14954/*"Unlit/Transparent Colored"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v44->DEFAULT_SHADER, v45, v46, v47, v48, v49, v50, v51);
 }
 
@@ -334,8 +334,8 @@ void __fastcall WaveBattleWaveEnemyInfoItem__SetDispType(
     sub_B16FFC(&UnityEngine_Material_TypeInfo, *(_QWORD *)&dispTp);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_Texture2D___, v6);
     sub_B16FFC(&WaveBattleWaveEnemyInfoItem_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_15875, v8);
-    sub_B16FFC(&StringLiteral_12773, v9);
+    sub_B16FFC(&StringLiteral_15875/*"_ChocoTex"*/, v8);
+    sub_B16FFC(&StringLiteral_12773/*"Shaders/ChocoMap"*/, v9);
     byte_40F675A = 1;
   }
   switch ( dispTp )
@@ -346,7 +346,7 @@ void __fastcall WaveBattleWaveEnemyInfoItem__SetDispType(
       {
         UIWidget__set_color((UIWidget_o *)sp, *(UnityEngine_Color_o *)&v16, 0LL);
         UIAtlas = (UnityEngine_Texture_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                             (System_String_o *)StringLiteral_12773,
+                                             (System_String_o *)StringLiteral_12773/*"Shaders/ChocoMap"*/,
                                              (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_Texture2D___);
         v21 = WaveBattleWaveEnemyInfoItem_TypeInfo;
         if ( (BYTE3(WaveBattleWaveEnemyInfoItem_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -360,7 +360,7 @@ void __fastcall WaveBattleWaveEnemyInfoItem__SetDispType(
         UnityEngine_Material___ctor(v27, v22, 0LL);
         if ( v27 )
         {
-          UnityEngine_Material__SetTexture(v27, (System_String_o *)StringLiteral_15875, UIAtlas, 0LL);
+          UnityEngine_Material__SetTexture(v27, (System_String_o *)StringLiteral_15875/*"_ChocoTex"*/, UIAtlas, 0LL);
           v32 = (UnityEngine_Material_o *)sub_B170CC(UnityEngine_Material_TypeInfo, v28, v29, v30, v31);
           UnityEngine_Material___ctor_40718828(v32, v27, 0LL);
           UISpriteAltMat__SetMaterialKeepTexture(sp, v32, 0LL);
@@ -487,9 +487,9 @@ void __fastcall WaveBattleWaveEnemyInfoItem__SetDispType_18349000(
     sub_B16FFC(&UnityEngine_Material_TypeInfo, *(_QWORD *)&dispTp);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_Texture2D___, v6);
     sub_B16FFC(&WaveBattleWaveEnemyInfoItem_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_15950, v8);
-    sub_B16FFC(&StringLiteral_15875, v9);
-    sub_B16FFC(&StringLiteral_12773, v10);
+    sub_B16FFC(&StringLiteral_15950/*"_MainTex"*/, v8);
+    sub_B16FFC(&StringLiteral_15875/*"_ChocoTex"*/, v9);
+    sub_B16FFC(&StringLiteral_12773/*"Shaders/ChocoMap"*/, v10);
     byte_40F675B = 1;
   }
   if ( dispTp == 3 )
@@ -503,7 +503,7 @@ void __fastcall WaveBattleWaveEnemyInfoItem__SetDispType_18349000(
         0LL,
         texture->klass->vtable._30_MarkAsChanged.methodPtr);
       UIAtlas = (UnityEngine_Texture_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                           (System_String_o *)StringLiteral_12773,
+                                           (System_String_o *)StringLiteral_12773/*"Shaders/ChocoMap"*/,
                                            (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_Texture2D___);
       v26 = WaveBattleWaveEnemyInfoItem_TypeInfo;
       if ( (BYTE3(WaveBattleWaveEnemyInfoItem_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -517,11 +517,11 @@ void __fastcall WaveBattleWaveEnemyInfoItem__SetDispType_18349000(
       UnityEngine_Material___ctor(v32, v27, 0LL);
       if ( v32 )
       {
-        UnityEngine_Material__SetTexture(v32, (System_String_o *)StringLiteral_15875, UIAtlas, 0LL);
+        UnityEngine_Material__SetTexture(v32, (System_String_o *)StringLiteral_15875/*"_ChocoTex"*/, UIAtlas, 0LL);
         v33 = (UnityEngine_Texture_o *)((__int64 (__fastcall *)(UITexture_o *, Il2CppMethodPointer))texture->klass->vtable._26_get_mainTexture.method)(
                                          texture,
                                          texture->klass->vtable._27_set_mainTexture.methodPtr);
-        UnityEngine_Material__SetTexture(v32, (System_String_o *)StringLiteral_15950, v33, 0LL);
+        UnityEngine_Material__SetTexture(v32, (System_String_o *)StringLiteral_15950/*"_MainTex"*/, v33, 0LL);
         ((void (__fastcall *)(UITexture_o *, UnityEngine_Material_o *, Il2CppMethodPointer))texture->klass->vtable._25_set_material.method)(
           texture,
           v32,
@@ -758,7 +758,7 @@ void __fastcall WaveBattleWaveEnemyInfoItem__SetItem(
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v8);
     sub_B16FFC(&Method_WaveBattleWaveEnemyInfoItem___c__DisplayClass17_0__SetItem_b__0__, v9);
     sub_B16FFC(&WaveBattleWaveEnemyInfoItem___c__DisplayClass17_0_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_18302, v11);
+    sub_B16FFC(&StringLiteral_18302/*"enemy_icon_leader"*/, v11);
     byte_40F6759 = 1;
   }
   v12 = sub_B170CC(WaveBattleWaveEnemyInfoItem___c__DisplayClass17_0_TypeInfo, viewEnemyEnt, method, v3, v4);
@@ -895,7 +895,7 @@ void __fastcall WaveBattleWaveEnemyInfoItem__SetItem(
   dangerSprite = this->fields.dangerSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(dangerSprite, (System_String_o *)StringLiteral_18302, 0LL);
+  AtlasManager__SetPartyOrganizationImage(dangerSprite, (System_String_o *)StringLiteral_18302/*"enemy_icon_leader"*/, 0LL);
   v65 = this->fields.dangerSprite;
   if ( !v65 )
 LABEL_41:
@@ -936,13 +936,13 @@ void __fastcall WaveBattleWaveEnemyInfoItem___SetEnemyName_b__22_0(
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, assetData);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_21532, v7);
+    sub_B16FFC(&StringLiteral_21532/*"quest_info"*/, v7);
     byte_40F6761 = 1;
   }
   if ( !assetData
     || (Object_WarBoardWaitTimeSetting = AssetData__GetObject_WarBoardWaitTimeSetting_(
                                            assetData,
-                                           (System_String_o *)StringLiteral_21532,
+                                           (System_String_o *)StringLiteral_21532/*"quest_info"*/,
                                            (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784),
         (textLb = (UnityEngine_Component_o *)this->fields.textLb) == 0LL) )
   {
@@ -1042,9 +1042,9 @@ void __fastcall WaveBattleWaveEnemyInfoItem___c__DisplayClass23_0___LoadEnemyTex
     sub_B16FFC(&Method_AssetData_GetObject_Texture2D____66802808, assetData);
     sub_B16FFC(&UnityEngine_Material_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_16070, v12);
-    sub_B16FFC(&StringLiteral_4519, v13);
-    sub_B16FFC(&StringLiteral_15952, v14);
+    sub_B16FFC(&StringLiteral_16070/*"_alpha"*/, v12);
+    sub_B16FFC(&StringLiteral_4519/*"Custom/SpriteWithMask"*/, v13);
+    sub_B16FFC(&StringLiteral_15952/*"_MaskTex"*/, v14);
     byte_40F789C = 1;
   }
   _4__this = this->fields.__4__this;
@@ -1060,7 +1060,7 @@ void __fastcall WaveBattleWaveEnemyInfoItem___c__DisplayClass23_0___LoadEnemyTex
     v5,
     v6,
     v7);
-  v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519, 0LL);
+  v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519/*"Custom/SpriteWithMask"*/, 0LL);
   v21 = (UnityEngine_Material_o *)sub_B170CC(UnityEngine_Material_TypeInfo, v17, v18, v19, v20);
   UnityEngine_Material___ctor(v21, v16, 0LL);
   v22 = this->fields.__4__this;
@@ -1090,14 +1090,14 @@ void __fastcall WaveBattleWaveEnemyInfoItem___c__DisplayClass23_0___LoadEnemyTex
   if ( !v27 )
     goto LABEL_16;
   v28 = v27->fields.enemyIconAssetData;
-  v29 = System_String__Concat_43743732(v27->fields.enemyIconName, (System_String_o *)StringLiteral_16070, 0LL);
+  v29 = System_String__Concat_43743732(v27->fields.enemyIconName, (System_String_o *)StringLiteral_16070/*"_alpha"*/, 0LL);
   if ( !v28 )
     goto LABEL_16;
   v30 = (UnityEngine_Texture_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                    v28,
                                    v29,
                                    (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_Texture2D____66802808);
-  UnityEngine_Material__SetTexture(v21, (System_String_o *)StringLiteral_15952, v30, 0LL);
+  UnityEngine_Material__SetTexture(v21, (System_String_o *)StringLiteral_15952/*"_MaskTex"*/, v30, 0LL);
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_16;

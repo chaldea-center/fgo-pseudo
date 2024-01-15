@@ -43,23 +43,23 @@ void __fastcall ParseBattleMessage___ctor(ParseBattleMessage_o *this, BattleLogi
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase___ctor__, logic);
     sub_B16FFC(&System_Collections_Generic_Dictionary_string__ReplaceTagBase__TypeInfo, v5);
     sub_B16FFC(&string___TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_15724, v7);
+    sub_B16FFC(&StringLiteral_15724/*"[div]"*/, v7);
     byte_40F8024 = 1;
   }
   v8 = sub_B17014(string___TypeInfo, 1LL, method);
   if ( !v8 )
     sub_B170D4();
   v15 = (struct System_String_array *)v8;
-  v16 = StringLiteral_15724;
-  if ( StringLiteral_15724 )
+  v16 = StringLiteral_15724/*"[div]"*/;
+  if ( StringLiteral_15724/*"[div]"*/ )
   {
-    v16 = sub_B170BC(StringLiteral_15724, v15->obj.klass->_1.element_class);
+    v16 = sub_B170BC(StringLiteral_15724/*"[div]"*/, v15->obj.klass->_1.element_class);
     if ( !v16 )
     {
       sub_B170F4(0LL);
       sub_B170A0();
     }
-    v17 = (System_Int32_array **)StringLiteral_15724;
+    v17 = (System_Int32_array **)StringLiteral_15724/*"[div]"*/;
   }
   else
   {
@@ -159,7 +159,7 @@ bool __fastcall ParseBattleMessage__ExistReplaceTag(
     sub_B16FFC(&Method_BasicHelper_IndexValue_string___, tag);
     sub_B16FFC(&char___TypeInfo, v7);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase__TryGetValue__, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F802A = 1;
   }
   dicReplaceTag = this->fields.dicReplaceTag;
@@ -177,7 +177,7 @@ bool __fastcall ParseBattleMessage__ExistReplaceTag(
         v14 = (System_Xml_XmlQualifiedName_o *)BasicHelper__IndexValue_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_(
                                                  (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_array *)v13,
                                                  0,
-                                                 (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *)StringLiteral_1,
+                                                 (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *)StringLiteral_1/*""*/,
                                                  (const MethodInfo_18B82A4 *)Method_BasicHelper_IndexValue_string___),
         !dicReplaceTag) )
   {
@@ -225,18 +225,18 @@ bool __fastcall ParseBattleMessage__NextTagSearch(
 
   if ( (byte_40F8027 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15571, text);
-    sub_B16FFC(&StringLiteral_15807, v10);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, text);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v10);
     byte_40F8027 = 1;
   }
   *endIndex = 0;
   if ( !text )
     sub_B170D4();
-  v11 = System_String__IndexOf_43816112(text, (System_String_o *)StringLiteral_15571, analyzeIdx, 4, 0LL);
+  v11 = System_String__IndexOf_43816112(text, (System_String_o *)StringLiteral_15571/*"["*/, analyzeIdx, 4, 0LL);
   *startIndex = v11;
   if ( (v11 & 0x80000000) != 0 )
     return 0;
-  v12 = System_String__IndexOf_43816112(text, (System_String_o *)StringLiteral_15807, v11, 4, 0LL);
+  v12 = System_String__IndexOf_43816112(text, (System_String_o *)StringLiteral_15807/*"]"*/, v11, 4, 0LL);
   *endIndex = v12;
   return v12 > 0;
 }

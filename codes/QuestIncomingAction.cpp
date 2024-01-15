@@ -18,15 +18,15 @@ void __fastcall QuestIncomingAction___ctor(QuestIncomingAction_o *this, const Me
 
   if ( (byte_40F95A8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16708, method);
-    sub_B16FFC(&StringLiteral_16709, v9);
+    sub_B16FFC(&StringLiteral_16708/*"bit_incoming_end"*/, method);
+    sub_B16FFC(&StringLiteral_16709/*"bit_incoming_start"*/, v9);
     byte_40F95A8 = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_16709;
-  this->fields.startAnimName = (struct System_String_o *)StringLiteral_16709;
+  v10 = (System_Int32_array **)StringLiteral_16709/*"bit_incoming_start"*/;
+  this->fields.startAnimName = (struct System_String_o *)StringLiteral_16709/*"bit_incoming_start"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.startAnimName, v10, v2, v3, v4, v5, v6, v7);
-  v11 = (System_Int32_array **)StringLiteral_16708;
-  this->fields.endAnimName = (struct System_String_o *)StringLiteral_16708;
+  v11 = (System_Int32_array **)StringLiteral_16708/*"bit_incoming_end"*/;
+  this->fields.endAnimName = (struct System_String_o *)StringLiteral_16708/*"bit_incoming_end"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.endAnimName, v11, v12, v13, v14, v15, v16, v17);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }

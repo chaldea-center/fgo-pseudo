@@ -1185,14 +1185,14 @@ void __fastcall PresentBoxFilterSelectMenu__Open(
     sub_B16FFC(&ListViewSort_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_PresentBoxFilterSelectMenu_EndOpen__, v9);
-    sub_B16FFC(&StringLiteral_11890, v10);
-    sub_B16FFC(&StringLiteral_10456, v11);
-    sub_B16FFC(&StringLiteral_11759, v12);
-    sub_B16FFC(&StringLiteral_11763, v13);
-    sub_B16FFC(&StringLiteral_11892, v14);
-    sub_B16FFC(&StringLiteral_11760, v15);
-    sub_B16FFC(&StringLiteral_10434, v16);
-    sub_B16FFC(&StringLiteral_10455, v17);
+    sub_B16FFC(&StringLiteral_11890/*"SERVANT_SORT_RESET"*/, v10);
+    sub_B16FFC(&StringLiteral_10456/*"PRESENT_BOX_FILTER_TITLE_RARITY"*/, v11);
+    sub_B16FFC(&StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, v12);
+    sub_B16FFC(&StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, v13);
+    sub_B16FFC(&StringLiteral_11892/*"SERVANT_SORT_TITLE2"*/, v14);
+    sub_B16FFC(&StringLiteral_11760/*"SERVANT_SORT_CLEAR"*/, v15);
+    sub_B16FFC(&StringLiteral_10434/*"PRESENT_BOX_FILTER_EXPLANATION"*/, v16);
+    sub_B16FFC(&StringLiteral_10455/*"PRESENT_BOX_FILTER_TITLE_CATEGORY"*/, v17);
     byte_40F8FCB = 1;
   }
   if ( !this->fields.state )
@@ -1282,42 +1282,42 @@ void __fastcall PresentBoxFilterSelectMenu__Open(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v57 = LocalizationManager__Get((System_String_o *)StringLiteral_11892, 0LL);
+          v57 = LocalizationManager__Get((System_String_o *)StringLiteral_11892/*"SERVANT_SORT_TITLE2"*/, 0LL);
           if ( titleLabel )
           {
             UILabel__set_text(titleLabel, v57, 0LL);
             explanationLabel = this->fields.explanationLabel;
-            v59 = LocalizationManager__Get((System_String_o *)StringLiteral_10434, 0LL);
+            v59 = LocalizationManager__Get((System_String_o *)StringLiteral_10434/*"PRESENT_BOX_FILTER_EXPLANATION"*/, 0LL);
             if ( explanationLabel )
             {
               UILabel__set_text(explanationLabel, v59, 0LL);
               categoryFilterTitle = this->fields.categoryFilterTitle;
-              v61 = LocalizationManager__Get((System_String_o *)StringLiteral_10455, 0LL);
+              v61 = LocalizationManager__Get((System_String_o *)StringLiteral_10455/*"PRESENT_BOX_FILTER_TITLE_CATEGORY"*/, 0LL);
               if ( categoryFilterTitle )
               {
                 UILabel__set_text(categoryFilterTitle, v61, 0LL);
                 rarityFilterTitle = this->fields.rarityFilterTitle;
-                v63 = LocalizationManager__Get((System_String_o *)StringLiteral_10456, 0LL);
+                v63 = LocalizationManager__Get((System_String_o *)StringLiteral_10456/*"PRESENT_BOX_FILTER_TITLE_RARITY"*/, 0LL);
                 if ( rarityFilterTitle )
                 {
                   UILabel__set_text(rarityFilterTitle, v63, 0LL);
                   decideLabel = this->fields.decideLabel;
-                  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_11763, 0LL);
+                  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, 0LL);
                   if ( decideLabel )
                   {
                     UILabel__set_text(decideLabel, v65, 0LL);
                     clearLabel = this->fields.clearLabel;
-                    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_11760, 0LL);
+                    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_11760/*"SERVANT_SORT_CLEAR"*/, 0LL);
                     if ( clearLabel )
                     {
                       UILabel__set_text(clearLabel, v67, 0LL);
                       cancelLabel = this->fields.cancelLabel;
-                      v69 = LocalizationManager__Get((System_String_o *)StringLiteral_11759, 0LL);
+                      v69 = LocalizationManager__Get((System_String_o *)StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, 0LL);
                       if ( cancelLabel )
                       {
                         UILabel__set_text(cancelLabel, v69, 0LL);
                         initializeLabel = this->fields.initializeLabel;
-                        v71 = LocalizationManager__Get((System_String_o *)StringLiteral_11890, 0LL);
+                        v71 = LocalizationManager__Get((System_String_o *)StringLiteral_11890/*"SERVANT_SORT_RESET"*/, 0LL);
                         if ( initializeLabel )
                         {
                           UILabel__set_text(initializeLabel, v71, 0LL);
@@ -1426,8 +1426,8 @@ void __fastcall PresentBoxFilterSelectMenu__SetButtonSelect(
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_PresentBoxCategoryFilterKind__get_Item__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_PresentBoxRarityFilterKind__get_Item__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_UISprite__get_Item__, v6);
-    sub_B16FFC(&StringLiteral_16891, v7);
-    sub_B16FFC(&StringLiteral_16890, v8);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v7);
+    sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v8);
     byte_40F8FCE = 1;
   }
   categoryFilterKindList = this->fields.categoryFilterKindList;
@@ -1464,9 +1464,9 @@ void __fastcall PresentBoxFilterSelectMenu__SetButtonSelect(
         if ( !v16 )
           break;
         if ( Filter_30229884 )
-          v19 = &StringLiteral_16890;
+          v19 = &StringLiteral_16890/*"btn_bg_03"*/;
         else
-          v19 = &StringLiteral_16891;
+          v19 = &StringLiteral_16891/*"btn_bg_04"*/;
       }
       else
       {
@@ -1484,9 +1484,9 @@ void __fastcall PresentBoxFilterSelectMenu__SetButtonSelect(
         if ( !v16 )
           break;
         if ( Filter_30229944 )
-          v19 = &StringLiteral_16890;
+          v19 = &StringLiteral_16890/*"btn_bg_03"*/;
         else
-          v19 = &StringLiteral_16891;
+          v19 = &StringLiteral_16891/*"btn_bg_04"*/;
       }
       UISprite__set_spriteName(v16, (System_String_o *)*v19, 0LL);
       if ( (__int64)++v13 >= size )

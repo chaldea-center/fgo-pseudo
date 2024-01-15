@@ -76,28 +76,28 @@ void __fastcall SupportSelectItemDraw___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&string___TypeInfo, v1);
     sub_B16FFC(&SupportSelectItemDraw_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_19220, v4);
-    sub_B16FFC(&StringLiteral_19218, v5);
-    sub_B16FFC(&StringLiteral_19217, v6);
-    sub_B16FFC(&StringLiteral_19215, v7);
-    sub_B16FFC(&StringLiteral_19212, v8);
-    sub_B16FFC(&StringLiteral_19219, v9);
-    sub_B16FFC(&StringLiteral_19213, v10);
-    sub_B16FFC(&StringLiteral_19216, v11);
-    sub_B16FFC(&StringLiteral_19214, v12);
+    sub_B16FFC(&StringLiteral_19220/*"icon_class1002"*/, v4);
+    sub_B16FFC(&StringLiteral_19218/*"icon_class007"*/, v5);
+    sub_B16FFC(&StringLiteral_19217/*"icon_class006"*/, v6);
+    sub_B16FFC(&StringLiteral_19215/*"icon_class004"*/, v7);
+    sub_B16FFC(&StringLiteral_19212/*"icon_class001"*/, v8);
+    sub_B16FFC(&StringLiteral_19219/*"icon_class1001"*/, v9);
+    sub_B16FFC(&StringLiteral_19213/*"icon_class002"*/, v10);
+    sub_B16FFC(&StringLiteral_19216/*"icon_class005"*/, v11);
+    sub_B16FFC(&StringLiteral_19214/*"icon_class003"*/, v12);
     byte_40FD52E = 1;
   }
   v13 = sub_B17014(string___TypeInfo, 9LL, v2);
   if ( !v13 )
     sub_B170D4();
   v20 = (System_Int32_array **)v13;
-  v21 = StringLiteral_19219;
-  if ( StringLiteral_19219 )
+  v21 = StringLiteral_19219/*"icon_class1001"*/;
+  if ( StringLiteral_19219/*"icon_class1001"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19219, *(_QWORD *)&(*v20)->m_Items[9]);
+    v21 = sub_B170BC(StringLiteral_19219/*"icon_class1001"*/, *(_QWORD *)&(*v20)->m_Items[9]);
     if ( !v21 )
       goto LABEL_51;
-    v22 = (System_Int32_array **)StringLiteral_19219;
+    v22 = (System_Int32_array **)StringLiteral_19219/*"icon_class1001"*/;
   }
   else
   {
@@ -107,13 +107,13 @@ void __fastcall SupportSelectItemDraw___cctor(const MethodInfo *method)
     goto LABEL_50;
   v20[4] = (System_Int32_array *)v22;
   sub_B16F98((BattleServantConfConponent_o *)(v20 + 4), v22, v14, v15, v16, v17, v18, v19);
-  v21 = StringLiteral_19212;
-  if ( StringLiteral_19212 )
+  v21 = StringLiteral_19212/*"icon_class001"*/;
+  if ( StringLiteral_19212/*"icon_class001"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19212, *(_QWORD *)&(*v20)->m_Items[9]);
+    v21 = sub_B170BC(StringLiteral_19212/*"icon_class001"*/, *(_QWORD *)&(*v20)->m_Items[9]);
     if ( !v21 )
       goto LABEL_51;
-    v22 = (System_Int32_array **)StringLiteral_19212;
+    v22 = (System_Int32_array **)StringLiteral_19212/*"icon_class001"*/;
   }
   else
   {
@@ -123,13 +123,13 @@ void __fastcall SupportSelectItemDraw___cctor(const MethodInfo *method)
     goto LABEL_50;
   v20[5] = (System_Int32_array *)v22;
   sub_B16F98((BattleServantConfConponent_o *)(v20 + 5), v22, v14, v23, v24, v25, v26, v27);
-  v21 = StringLiteral_19213;
-  if ( StringLiteral_19213 )
+  v21 = StringLiteral_19213/*"icon_class002"*/;
+  if ( StringLiteral_19213/*"icon_class002"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19213, *(_QWORD *)&(*v20)->m_Items[9]);
+    v21 = sub_B170BC(StringLiteral_19213/*"icon_class002"*/, *(_QWORD *)&(*v20)->m_Items[9]);
     if ( !v21 )
       goto LABEL_51;
-    v22 = (System_Int32_array **)StringLiteral_19213;
+    v22 = (System_Int32_array **)StringLiteral_19213/*"icon_class002"*/;
   }
   else
   {
@@ -139,13 +139,13 @@ void __fastcall SupportSelectItemDraw___cctor(const MethodInfo *method)
     goto LABEL_50;
   v20[6] = (System_Int32_array *)v22;
   sub_B16F98((BattleServantConfConponent_o *)(v20 + 6), v22, v14, v28, v29, v30, v31, v32);
-  v21 = StringLiteral_19214;
-  if ( StringLiteral_19214 )
+  v21 = StringLiteral_19214/*"icon_class003"*/;
+  if ( StringLiteral_19214/*"icon_class003"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19214, *(_QWORD *)&(*v20)->m_Items[9]);
+    v21 = sub_B170BC(StringLiteral_19214/*"icon_class003"*/, *(_QWORD *)&(*v20)->m_Items[9]);
     if ( !v21 )
       goto LABEL_51;
-    v22 = (System_Int32_array **)StringLiteral_19214;
+    v22 = (System_Int32_array **)StringLiteral_19214/*"icon_class003"*/;
   }
   else
   {
@@ -155,13 +155,13 @@ void __fastcall SupportSelectItemDraw___cctor(const MethodInfo *method)
     goto LABEL_50;
   v20[7] = (System_Int32_array *)v22;
   sub_B16F98((BattleServantConfConponent_o *)(v20 + 7), v22, v14, v33, v34, v35, v36, v37);
-  v21 = StringLiteral_19215;
-  if ( StringLiteral_19215 )
+  v21 = StringLiteral_19215/*"icon_class004"*/;
+  if ( StringLiteral_19215/*"icon_class004"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19215, *(_QWORD *)&(*v20)->m_Items[9]);
+    v21 = sub_B170BC(StringLiteral_19215/*"icon_class004"*/, *(_QWORD *)&(*v20)->m_Items[9]);
     if ( !v21 )
       goto LABEL_51;
-    v22 = (System_Int32_array **)StringLiteral_19215;
+    v22 = (System_Int32_array **)StringLiteral_19215/*"icon_class004"*/;
   }
   else
   {
@@ -171,13 +171,13 @@ void __fastcall SupportSelectItemDraw___cctor(const MethodInfo *method)
     goto LABEL_50;
   v20[8] = (System_Int32_array *)v22;
   sub_B16F98((BattleServantConfConponent_o *)(v20 + 8), v22, v14, v38, v39, v40, v41, v42);
-  v21 = StringLiteral_19216;
-  if ( StringLiteral_19216 )
+  v21 = StringLiteral_19216/*"icon_class005"*/;
+  if ( StringLiteral_19216/*"icon_class005"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19216, *(_QWORD *)&(*v20)->m_Items[9]);
+    v21 = sub_B170BC(StringLiteral_19216/*"icon_class005"*/, *(_QWORD *)&(*v20)->m_Items[9]);
     if ( !v21 )
       goto LABEL_51;
-    v22 = (System_Int32_array **)StringLiteral_19216;
+    v22 = (System_Int32_array **)StringLiteral_19216/*"icon_class005"*/;
   }
   else
   {
@@ -187,13 +187,13 @@ void __fastcall SupportSelectItemDraw___cctor(const MethodInfo *method)
     goto LABEL_50;
   v20[9] = (System_Int32_array *)v22;
   sub_B16F98((BattleServantConfConponent_o *)(v20 + 9), v22, v14, v43, v44, v45, v46, v47);
-  v21 = StringLiteral_19217;
-  if ( StringLiteral_19217 )
+  v21 = StringLiteral_19217/*"icon_class006"*/;
+  if ( StringLiteral_19217/*"icon_class006"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19217, *(_QWORD *)&(*v20)->m_Items[9]);
+    v21 = sub_B170BC(StringLiteral_19217/*"icon_class006"*/, *(_QWORD *)&(*v20)->m_Items[9]);
     if ( !v21 )
       goto LABEL_51;
-    v22 = (System_Int32_array **)StringLiteral_19217;
+    v22 = (System_Int32_array **)StringLiteral_19217/*"icon_class006"*/;
   }
   else
   {
@@ -203,13 +203,13 @@ void __fastcall SupportSelectItemDraw___cctor(const MethodInfo *method)
     goto LABEL_50;
   v20[10] = (System_Int32_array *)v22;
   sub_B16F98((BattleServantConfConponent_o *)(v20 + 10), v22, v14, v48, v49, v50, v51, v52);
-  v21 = StringLiteral_19218;
-  if ( StringLiteral_19218 )
+  v21 = StringLiteral_19218/*"icon_class007"*/;
+  if ( StringLiteral_19218/*"icon_class007"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19218, *(_QWORD *)&(*v20)->m_Items[9]);
+    v21 = sub_B170BC(StringLiteral_19218/*"icon_class007"*/, *(_QWORD *)&(*v20)->m_Items[9]);
     if ( !v21 )
       goto LABEL_51;
-    v22 = (System_Int32_array **)StringLiteral_19218;
+    v22 = (System_Int32_array **)StringLiteral_19218/*"icon_class007"*/;
   }
   else
   {
@@ -219,13 +219,13 @@ void __fastcall SupportSelectItemDraw___cctor(const MethodInfo *method)
     goto LABEL_50;
   v20[11] = (System_Int32_array *)v22;
   sub_B16F98((BattleServantConfConponent_o *)(v20 + 11), v22, v14, v53, v54, v55, v56, v57);
-  v21 = StringLiteral_19220;
-  if ( StringLiteral_19220 )
+  v21 = StringLiteral_19220/*"icon_class1002"*/;
+  if ( StringLiteral_19220/*"icon_class1002"*/ )
   {
-    v21 = sub_B170BC(StringLiteral_19220, *(_QWORD *)&(*v20)->m_Items[9]);
+    v21 = sub_B170BC(StringLiteral_19220/*"icon_class1002"*/, *(_QWORD *)&(*v20)->m_Items[9]);
     if ( v21 )
     {
-      v22 = (System_Int32_array **)StringLiteral_19220;
+      v22 = (System_Int32_array **)StringLiteral_19220/*"icon_class1002"*/;
       goto LABEL_48;
     }
 LABEL_51:
@@ -719,7 +719,7 @@ void __fastcall SupportSelectItemDraw__ClearMessage(SupportSelectItemDraw_o *thi
   if ( (byte_40FD528 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FD528 = 1;
   }
   restrictionMaskSprite = (UnityEngine_Object_o *)this->fields.restrictionMaskSprite;
@@ -740,7 +740,7 @@ void __fastcall SupportSelectItemDraw__ClearMessage(SupportSelectItemDraw_o *thi
     restrictionMaskMessageText = this->fields.restrictionMaskMessageText;
     if ( !restrictionMaskMessageText )
       goto LABEL_20;
-    UILabel__set_text(restrictionMaskMessageText, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(restrictionMaskMessageText, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   restrictionWarningBase = (UnityEngine_Object_o *)this->fields.restrictionWarningBase;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -761,7 +761,7 @@ void __fastcall SupportSelectItemDraw__ClearMessage(SupportSelectItemDraw_o *thi
         restrictionWarningMessageLabel = this->fields.restrictionWarningMessageLabel;
         if ( restrictionWarningMessageLabel )
         {
-          UILabel__set_text(restrictionWarningMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(restrictionWarningMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           return;
         }
       }
@@ -1347,11 +1347,11 @@ void __fastcall SupportSelectItemDraw__SetItem(
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v43);
     sub_B16FFC(&SupportSelectItemDraw_TypeInfo, v44);
     sub_B16FFC(&TutorialFlag_TypeInfo, v45);
-    sub_B16FFC(&StringLiteral_11601, v46);
-    sub_B16FFC(&StringLiteral_10330, v47);
-    sub_B16FFC(&StringLiteral_6375, v48);
-    sub_B16FFC(&StringLiteral_340, v49);
-    sub_B16FFC(&StringLiteral_1, v50);
+    sub_B16FFC(&StringLiteral_11601/*"SELECT_NO_SORTIE_TIMES_TO_RESTART"*/, v46);
+    sub_B16FFC(&StringLiteral_10330/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, v47);
+    sub_B16FFC(&StringLiteral_6375/*"FOLLOWER_SELECT_QUEST_RESTRICTION_WARNING2"*/, v48);
+    sub_B16FFC(&StringLiteral_340/*"#,0"*/, v49);
+    sub_B16FFC(&StringLiteral_1/*""*/, v50);
     byte_40FD527 = 1;
   }
   eventUpVallInfo = 0LL;
@@ -2326,7 +2326,7 @@ LABEL_280:
         goto LABEL_592;
       UIWidget__set_color(v310, *(UnityEngine_Color_o *)&v306, 0LL);
       v311 = this->fields.attackLabel;
-      v312 = System_Int32__ToString_38275808((int32_t)v462, (System_String_o *)StringLiteral_340, 0LL);
+      v312 = System_Int32__ToString_38275808((int32_t)v462, (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
       if ( !v311 )
         goto LABEL_592;
       UILabel__set_text(v311, v312, 0LL);
@@ -2348,7 +2348,7 @@ LABEL_280:
         goto LABEL_592;
       UIWidget__set_color(v318, *(UnityEngine_Color_o *)&v314, 0LL);
       v319 = this->fields.hpLabel;
-      v320 = System_Int32__ToString_38275808((int32_t)&v461, (System_String_o *)StringLiteral_340, 0LL);
+      v320 = System_Int32__ToString_38275808((int32_t)&v461, (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
       if ( !v319 )
         goto LABEL_592;
       UILabel__set_text(v319, v320, 0LL);
@@ -2416,7 +2416,7 @@ LABEL_592:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v333 = LocalizationManager__Get((System_String_o *)StringLiteral_10330, 0LL);
+      v333 = LocalizationManager__Get((System_String_o *)StringLiteral_10330/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0LL);
       goto LABEL_430;
     }
     v338 = IsDataLost;
@@ -2456,7 +2456,7 @@ LABEL_445:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v344 = LocalizationManager__Get((System_String_o *)StringLiteral_6375, 0LL);
+        v344 = LocalizationManager__Get((System_String_o *)StringLiteral_6375/*"FOLLOWER_SELECT_QUEST_RESTRICTION_WARNING2"*/, 0LL);
         SupportSelectItemDraw__SetWarningMessage(this, v344, 1, v345);
 LABEL_466:
         friendPointBonus = (UnityEngine_Object_o *)this->fields.friendPointBonus;
@@ -2579,7 +2579,7 @@ LABEL_496:
         v337 = 1;
         v336 = this;
         v335 = 0;
-        v334 = (System_String_o *)StringLiteral_1;
+        v334 = (System_String_o *)StringLiteral_1/*""*/;
         goto LABEL_431;
       }
       if ( TimesToRestart >= 1 )
@@ -2589,7 +2589,7 @@ LABEL_496:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v346 = LocalizationManager__Get((System_String_o *)StringLiteral_11601, 0LL);
+        v346 = LocalizationManager__Get((System_String_o *)StringLiteral_11601/*"SELECT_NO_SORTIE_TIMES_TO_RESTART"*/, 0LL);
         LODWORD(v456.fields.currentCryptoKey) = TimesToRestart;
         v347 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v456);
         v333 = System_String__Format(v346, v347, 0LL);
@@ -2711,7 +2711,7 @@ LABEL_48:
     v101 = this->fields.levelLabel;
     if ( !v101 )
       goto LABEL_592;
-    UILabel__set_text(v101, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v101, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   v102 = (UnityEngine_Object_o *)this->fields.raritySprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2740,7 +2740,7 @@ LABEL_48:
     v106 = this->fields.attackLabel;
     if ( !v106 )
       goto LABEL_592;
-    UILabel__set_text(v106, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v106, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   v107 = (UnityEngine_Object_o *)this->fields.hpLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2753,7 +2753,7 @@ LABEL_48:
     v108 = this->fields.hpLabel;
     if ( !v108 )
       goto LABEL_592;
-    UILabel__set_text(v108, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v108, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   v109 = (UnityEngine_Object_o *)this->fields.sortieMaskSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3203,9 +3203,9 @@ void __fastcall SupportSelectItemDraw__SetMaskMessage(
     sub_B16FFC(&AtlasManager_TypeInfo, message);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&SupportSelectItemDraw_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_19413, v11);
-    sub_B16FFC(&StringLiteral_17814, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_19413/*"img_frames_mask05"*/, v11);
+    sub_B16FFC(&StringLiteral_17814/*"datalost_party_edit"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FD529 = 1;
   }
   restrictionMaskSprite = (UnityEngine_Object_o *)this->fields.restrictionMaskSprite;
@@ -3235,7 +3235,7 @@ void __fastcall SupportSelectItemDraw__SetMaskMessage(
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      AtlasManager__SetPartyOrganizationImage(v18, (System_String_o *)StringLiteral_17814, 0LL);
+      AtlasManager__SetPartyOrganizationImage(v18, (System_String_o *)StringLiteral_17814/*"datalost_party_edit"*/, 0LL);
       v19 = (UIWidget_o *)this->fields.restrictionMaskSprite;
       if ( (BYTE3(SupportSelectItemDraw_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !SupportSelectItemDraw_TypeInfo->_2.cctor_finished )
@@ -3268,7 +3268,7 @@ void __fastcall SupportSelectItemDraw__SetMaskMessage(
       v27 = this->fields.restrictionMaskSprite;
       if ( !v27 )
         goto LABEL_47;
-      UISprite__set_spriteName(v27, (System_String_o *)StringLiteral_19413, 0LL);
+      UISprite__set_spriteName(v27, (System_String_o *)StringLiteral_19413/*"img_frames_mask05"*/, 0LL);
       v28 = (UIWidget_o *)this->fields.restrictionMaskSprite;
       if ( !v28 )
         goto LABEL_47;
@@ -3340,7 +3340,7 @@ LABEL_37:
         restrictionWarningMessageLabel = this->fields.restrictionWarningMessageLabel;
         if ( restrictionWarningMessageLabel )
         {
-          UILabel__set_text(restrictionWarningMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(restrictionWarningMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           return;
         }
       }
@@ -3383,7 +3383,7 @@ void __fastcall SupportSelectItemDraw__SetWarningMessage(
   if ( (byte_40FD52A & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, message);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FD52A = 1;
   }
   restrictionMaskSprite = (UnityEngine_Object_o *)this->fields.restrictionMaskSprite;
@@ -3404,7 +3404,7 @@ void __fastcall SupportSelectItemDraw__SetWarningMessage(
     restrictionMaskMessageText = this->fields.restrictionMaskMessageText;
     if ( !restrictionMaskMessageText )
       goto LABEL_29;
-    UILabel__set_text(restrictionMaskMessageText, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(restrictionMaskMessageText, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   restrictionWarningBase = (UnityEngine_Object_o *)this->fields.restrictionWarningBase;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

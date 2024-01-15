@@ -370,9 +370,9 @@ void __fastcall ClassBoardClassReleaseDialog__SetupText(ClassBoardClassReleaseDi
   if ( (byte_40FAFAF & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3019, v3);
-    sub_B16FFC(&StringLiteral_3252, v4);
-    sub_B16FFC(&StringLiteral_3020, v5);
+    sub_B16FFC(&StringLiteral_3019/*"CLASS_BOARD_RELEASE_DIALOG_CONTENT"*/, v3);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v4);
+    sub_B16FFC(&StringLiteral_3020/*"CLASS_BOARD_RELEASE_DIALOG_TITLE"*/, v5);
     byte_40FAFAF = 1;
   }
   titleLabel = this->fields.titleLabel;
@@ -381,15 +381,15 @@ void __fastcall ClassBoardClassReleaseDialog__SetupText(ClassBoardClassReleaseDi
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3020, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3020/*"CLASS_BOARD_RELEASE_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, v7, 0LL),
         contentLabel = this->fields.contentLabel,
-        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3019, 0LL),
+        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3019/*"CLASS_BOARD_RELEASE_DIALOG_CONTENT"*/, 0LL),
         !contentLabel)
     || (UILabel__set_text(contentLabel, v9, 0LL),
         closeButtonLabel = this->fields.closeButtonLabel,
-        v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL),
+        v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
         !closeButtonLabel) )
   {
     sub_B170D4();

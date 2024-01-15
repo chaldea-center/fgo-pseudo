@@ -29,12 +29,12 @@ void __fastcall EventFortificationListViewManager___cctor(const MethodInfo *meth
   {
     sub_B16FFC(&EventFortificationListViewManager_TypeInfo, v1);
     sub_B16FFC(&ListViewSort_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_6175, v9);
+    sub_B16FFC(&StringLiteral_6175/*"EventServantFatigueList"*/, v9);
     byte_40FB65F = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventFortificationListViewManager_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_6175;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6175;
+  v11 = (System_Int32_array **)StringLiteral_6175/*"EventServantFatigueList"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6175/*"EventServantFatigueList"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   SORT_SAVE_KEY = EventFortificationListViewManager_TypeInfo->static_fields->SORT_SAVE_KEY;
   v17 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v13, v14, v15, v16);
@@ -75,12 +75,12 @@ void __fastcall EventFortificationListViewManager__CallbackFortificationRequest(
   if ( (byte_40FB648 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Action_bool__UserServantEntity__Invoke__, result);
-    sub_B16FFC(&StringLiteral_20980, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v5);
     byte_40FB648 = 1;
   }
   if ( !result )
     goto LABEL_11;
-  if ( !System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     fortificationConfirmDialog = this->fields.fortificationConfirmDialog;
     if ( fortificationConfirmDialog )
@@ -485,7 +485,7 @@ void __fastcall EventFortificationListViewManager__CreateList(
     sub_B16FFC(&Method_EventFortificationListViewManager___c__DisplayClass48_0__CreateList_b__0__, v24);
     sub_B16FFC(&Method_EventFortificationListViewManager___c__DisplayClass48_0__CreateList_b__1__, v25);
     sub_B16FFC(&EventFortificationListViewManager___c__DisplayClass48_0_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_11842, v27);
+    sub_B16FFC(&StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, v27);
     byte_40FB63B = 1;
   }
   memset(&v151[1], 0, sizeof(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o));
@@ -806,7 +806,7 @@ LABEL_48:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v143 = LocalizationManager__Get((System_String_o *)StringLiteral_11842, 0LL);
+  v143 = LocalizationManager__Get((System_String_o *)StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_59;
   UILabel__set_text(emptyMessageLabel, v143, 0LL);
@@ -3078,10 +3078,10 @@ void __fastcall EventFortificationListViewManager__OnClickSelectPush(
     sub_B16FFC(&SoundManager_TypeInfo, v20);
     sub_B16FFC(&Method_EventFortificationListViewManager___c__DisplayClass95_0__OnClickSelectPush_b__0__, v21);
     sub_B16FFC(&EventFortificationListViewManager___c__DisplayClass95_0_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_11946, v23);
-    sub_B16FFC(&StringLiteral_11944, v24);
-    sub_B16FFC(&StringLiteral_11945, v25);
-    sub_B16FFC(&StringLiteral_11947, v26);
+    sub_B16FFC(&StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v23);
+    sub_B16FFC(&StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v24);
+    sub_B16FFC(&StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v25);
+    sub_B16FFC(&StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v26);
     byte_40FB65D = 1;
   }
   v27 = sub_B170CC(EventFortificationListViewManager___c__DisplayClass95_0_TypeInfo, obj, method, v3, v4);
@@ -3175,8 +3175,8 @@ void __fastcall EventFortificationListViewManager__OnClickSelectPush(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v58 = LocalizationManager__Get((System_String_o *)StringLiteral_11947, 0LL);
-    v59 = LocalizationManager__Get((System_String_o *)StringLiteral_11946, 0LL);
+    v58 = LocalizationManager__Get((System_String_o *)StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
+    v59 = LocalizationManager__Get((System_String_o *)StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
     v61 = (System_Object_array *)sub_B17014(object___TypeInfo, 6LL, v60);
     Rarity = UserServantEntity__getRarity(Entity, 0LL);
     if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
@@ -3285,8 +3285,8 @@ LABEL_72:
       v61->m_Items[5] = (Il2CppObject *)v109;
       sub_B16F98((BattleServantConfConponent_o *)&v61->m_Items[5], v109, v65, v104, v105, v106, v107, v108);
       v110 = System_String__Format_43822456(v59, v61, 0LL);
-      v111 = LocalizationManager__Get((System_String_o *)StringLiteral_11945, 0LL);
-      v112 = LocalizationManager__Get((System_String_o *)StringLiteral_11944, 0LL);
+      v111 = LocalizationManager__Get((System_String_o *)StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
+      v112 = LocalizationManager__Get((System_String_o *)StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
       v113 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v118 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                       CommonConfirmDialog_ClickDelegate_TypeInfo,
@@ -3850,7 +3850,7 @@ void __fastcall EventFortificationListViewManager__RequestListObject(
     sub_B16FFC(&Method_EventFortificationListViewManager_OnMoveEnd__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventFortificationListViewObject__get_Count__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventFortificationListViewObject__get_Item__, v9);
-    sub_B16FFC(&StringLiteral_10004, v10);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v10);
     byte_40FB644 = 1;
   }
   ObjectList = EventFortificationListViewManager__get_ObjectList(this, *(const MethodInfo **)&mode);
@@ -3863,7 +3863,7 @@ void __fastcall EventFortificationListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -3916,8 +3916,8 @@ void __fastcall EventFortificationListViewManager__SetFilterButtonImage(
 
   if ( (byte_40FB64F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16927, method);
-    sub_B16FFC(&StringLiteral_16926, v3);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, method);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v3);
     byte_40FB64F = 1;
   }
   sort = this->fields.sort;
@@ -3926,9 +3926,9 @@ void __fastcall EventFortificationListViewManager__SetFilterButtonImage(
   {
     sub_B170D4();
   }
-  v7 = (System_String_o **)&StringLiteral_16926;
+  v7 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
   if ( !v6 )
-    v7 = (System_String_o **)&StringLiteral_16927;
+    v7 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
   UISprite__set_spriteName(filterSprite, *v7, 0LL);
 }
 
@@ -3960,10 +3960,10 @@ void __fastcall EventFortificationListViewManager__SetHeaderMsg(
   if ( (byte_40FB63E & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_11701, v3);
-    sub_B16FFC(&StringLiteral_11699, v4);
-    sub_B16FFC(&StringLiteral_11700, v5);
-    sub_B16FFC(&StringLiteral_6412, v6);
+    sub_B16FFC(&StringLiteral_11701/*"SERVANT_LIST_EXPLANATION_PUSH"*/, v3);
+    sub_B16FFC(&StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/, v4);
+    sub_B16FFC(&StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/, v5);
+    sub_B16FFC(&StringLiteral_6412/*"FORTIFICATION_GUIDE_HELP"*/, v6);
     byte_40FB63E = 1;
   }
   switch ( this->fields.modeKind )
@@ -3975,7 +3975,7 @@ void __fastcall EventFortificationListViewManager__SetHeaderMsg(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6412, 0LL);
+      v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6412/*"FORTIFICATION_GUIDE_HELP"*/, 0LL);
       targetFortificationWorkItem = this->fields.targetFortificationWorkItem;
       if ( !targetFortificationWorkItem )
         goto LABEL_32;
@@ -3983,14 +3983,14 @@ void __fastcall EventFortificationListViewManager__SetHeaderMsg(
       v12 = this->fields.targetFortificationWorkItem;
       if ( (byte_40FB68D & 1) == 0 )
       {
-        sub_B16FFC(&StringLiteral_1, v9);
+        sub_B16FFC(&StringLiteral_1/*""*/, v9);
         byte_40FB68D = 1;
         v12 = this->fields.targetFortificationWorkItem;
       }
       eventFortificationEntity = targetFortificationWorkItem->fields.eventFortificationEntity;
       v14 = eventFortificationEntity
           ? (Il2CppObject **)&eventFortificationEntity->fields.name
-          : (Il2CppObject **)&StringLiteral_1;
+          : (Il2CppObject **)&StringLiteral_1/*""*/;
       if ( !v12 )
         goto LABEL_32;
       eventFortificationDetailEntity = v12->fields.eventFortificationDetailEntity;
@@ -4009,7 +4009,7 @@ void __fastcall EventFortificationListViewManager__SetHeaderMsg(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v20 = &StringLiteral_11700;
+      v20 = &StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
       goto LABEL_29;
     case 2:
       v19 = this->fields.recoveryFatigueInfoMsgLabel;
@@ -4018,7 +4018,7 @@ void __fastcall EventFortificationListViewManager__SetHeaderMsg(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v20 = &StringLiteral_11699;
+      v20 = &StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
       goto LABEL_29;
     case 3:
       v19 = this->fields.recoveryFatigueInfoMsgLabel;
@@ -4027,7 +4027,7 @@ void __fastcall EventFortificationListViewManager__SetHeaderMsg(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v20 = &StringLiteral_11701;
+      v20 = &StringLiteral_11701/*"SERVANT_LIST_EXPLANATION_PUSH"*/;
 LABEL_29:
       v21 = LocalizationManager__Get((System_String_o *)*v20, 0LL);
       if ( !v19 )
@@ -4196,12 +4196,12 @@ void __fastcall EventFortificationListViewManager__SetSortButtonImage(
   if ( (byte_40FB653 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_17038, v4);
-    sub_B16FFC(&StringLiteral_16995, v5);
-    sub_B16FFC(&StringLiteral_16985, v6);
-    sub_B16FFC(&StringLiteral_17002, v7);
-    sub_B16FFC(&StringLiteral_16952, v8);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v4);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v5);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v6);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v7);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v8);
     byte_40FB653 = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -4242,7 +4242,7 @@ void __fastcall EventFortificationListViewManager__SetSortButtonImage(
         sortExplanationSprite = this->fields.sortExplanationSprite;
         if ( sortExplanationSprite )
         {
-          v18 = (System_String_o **)(v15->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+          v18 = (System_String_o **)(v15->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
           UISprite__set_spriteName(sortExplanationSprite, *v18, 0LL);
           v19 = this->fields.sort;
           if ( v19 )
@@ -4251,8 +4251,8 @@ void __fastcall EventFortificationListViewManager__SetSortButtonImage(
             if ( v20 )
             {
               isAscendingOrder = v19->fields.isAscendingOrder;
-              v22 = (System_String_o **)&StringLiteral_16952;
-              v23 = (System_String_o **)&StringLiteral_16955;
+              v22 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+              v23 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
 LABEL_33:
               if ( isAscendingOrder )
                 v27 = v22;
@@ -4269,7 +4269,7 @@ LABEL_33:
         v24 = this->fields.sortExplanationSprite;
         if ( v24 )
         {
-          v25 = (System_String_o **)(v15->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+          v25 = (System_String_o **)(v15->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
           UISprite__set_spriteName(v24, *v25, 0LL);
           v26 = this->fields.sort;
           if ( v26 )
@@ -4278,8 +4278,8 @@ LABEL_33:
             if ( v20 )
             {
               isAscendingOrder = v26->fields.isAscendingOrder;
-              v22 = (System_String_o **)&StringLiteral_16955;
-              v23 = (System_String_o **)&StringLiteral_16952;
+              v22 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+              v23 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
               goto LABEL_33;
             }
           }
@@ -4329,14 +4329,14 @@ void __fastcall EventFortificationListViewManager__SetStatusKind(
 
   if ( (byte_40FB63D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17071, *(_QWORD *)&modeKind);
-    sub_B16FFC(&StringLiteral_17072, v5);
-    sub_B16FFC(&StringLiteral_17057, v6);
-    sub_B16FFC(&StringLiteral_17060, v7);
-    sub_B16FFC(&StringLiteral_17073, v8);
-    sub_B16FFC(&StringLiteral_17074, v9);
-    sub_B16FFC(&StringLiteral_17059, v10);
-    sub_B16FFC(&StringLiteral_17058, v11);
+    sub_B16FFC(&StringLiteral_17071/*"button_push_reg"*/, *(_QWORD *)&modeKind);
+    sub_B16FFC(&StringLiteral_17072/*"button_push_unreg"*/, v5);
+    sub_B16FFC(&StringLiteral_17057/*"button_allchoice_reg"*/, v6);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v7);
+    sub_B16FFC(&StringLiteral_17073/*"button_select_reg"*/, v8);
+    sub_B16FFC(&StringLiteral_17074/*"button_select_unreg"*/, v9);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v10);
+    sub_B16FFC(&StringLiteral_17058/*"button_allchoice_unreg"*/, v11);
     byte_40FB63D = 1;
   }
   statusTabButton = this->fields.statusTabButton;
@@ -4354,9 +4354,9 @@ void __fastcall EventFortificationListViewManager__SetStatusKind(
   statusTabSprite = this->fields.statusTabSprite;
   if ( !statusTabSprite )
     goto LABEL_28;
-  v15 = (System_String_o **)&StringLiteral_17073;
+  v15 = (System_String_o **)&StringLiteral_17073/*"button_select_reg"*/;
   if ( modeKind )
-    v15 = (System_String_o **)&StringLiteral_17074;
+    v15 = (System_String_o **)&StringLiteral_17074/*"button_select_unreg"*/;
   UISprite__set_spriteName(statusTabSprite, *v15, 0LL);
   v16 = this->fields.statusTabButton;
   if ( !v16 )
@@ -4380,9 +4380,9 @@ void __fastcall EventFortificationListViewManager__SetStatusKind(
   lockTabSprite = this->fields.lockTabSprite;
   if ( !lockTabSprite )
     goto LABEL_28;
-  v20 = (System_String_o **)&StringLiteral_17059;
+  v20 = (System_String_o **)&StringLiteral_17059/*"button_alllock_reg"*/;
   if ( modeKind != 1 )
-    v20 = (System_String_o **)&StringLiteral_17060;
+    v20 = (System_String_o **)&StringLiteral_17060/*"button_alllock_unreg"*/;
   UISprite__set_spriteName(lockTabSprite, *v20, 0LL);
   v21 = this->fields.lockTabButton;
   if ( !v21 )
@@ -4406,9 +4406,9 @@ void __fastcall EventFortificationListViewManager__SetStatusKind(
   choiceSprite = this->fields.choiceSprite;
   if ( !choiceSprite )
     goto LABEL_28;
-  v25 = (System_String_o **)&StringLiteral_17057;
+  v25 = (System_String_o **)&StringLiteral_17057/*"button_allchoice_reg"*/;
   if ( modeKind != 2 )
-    v25 = (System_String_o **)&StringLiteral_17058;
+    v25 = (System_String_o **)&StringLiteral_17058/*"button_allchoice_unreg"*/;
   UISprite__set_spriteName(choiceSprite, *v25, 0LL);
   v26 = this->fields.choiceTabButton;
   if ( !v26 )
@@ -4432,9 +4432,9 @@ void __fastcall EventFortificationListViewManager__SetStatusKind(
   pushSprite = this->fields.pushSprite;
   if ( !pushSprite )
     goto LABEL_28;
-  v30 = (System_String_o **)&StringLiteral_17071;
+  v30 = (System_String_o **)&StringLiteral_17071/*"button_push_reg"*/;
   if ( modeKind != 3 )
-    v30 = (System_String_o **)&StringLiteral_17072;
+    v30 = (System_String_o **)&StringLiteral_17072/*"button_push_unreg"*/;
   UISprite__set_spriteName(pushSprite, *v30, 0LL);
   v31 = this->fields.pushTabButton;
   if ( !v31 )

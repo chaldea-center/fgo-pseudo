@@ -39,8 +39,8 @@ void __fastcall ProgramEffectComponent__Init(
   if ( (byte_40FA014 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, isSkip);
-    sub_B16FFC(&StringLiteral_5794, v16);
-    sub_B16FFC(&StringLiteral_651, v17);
+    sub_B16FFC(&StringLiteral_5794/*"Effect("*/, v16);
+    sub_B16FFC(&StringLiteral_651/*")"*/, v17);
     byte_40FA014 = 1;
   }
   this->fields.duration = time;
@@ -53,9 +53,9 @@ void __fastcall ProgramEffectComponent__Init(
   this->fields.isPause = isPause;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v19 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_5794,
+          (System_String_o *)StringLiteral_5794/*"Effect("*/,
           this->fields.effectName,
-          (System_String_o *)StringLiteral_651,
+          (System_String_o *)StringLiteral_651/*")"*/,
           0LL);
   if ( !gameObject )
     goto LABEL_14;

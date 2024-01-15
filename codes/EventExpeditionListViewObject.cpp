@@ -287,13 +287,13 @@ void __fastcall EventExpeditionListViewObject__OnClickSelect(
 
   if ( (byte_40FC683 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9922, method);
+    sub_B16FFC(&StringLiteral_9922/*"OnClickListView"*/, method);
     byte_40FC683 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
     sub_B170D4();
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9922, (Il2CppObject *)this, 0LL);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9922/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
 }
 
 

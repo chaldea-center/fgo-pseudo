@@ -6,11 +6,11 @@ void __fastcall FGOUv1Anim___cctor(const MethodInfo *method)
   if ( (byte_40F9F56 & 1) == 0 )
   {
     sub_B16FFC(&FGOUv1Anim_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16009, v2);
+    sub_B16FFC(&StringLiteral_16009/*"_SubTex"*/, v2);
     byte_40F9F56 = 1;
   }
   FGOUv1Anim_TypeInfo->static_fields->subTexID = UnityEngine_Shader__PropertyToID(
-                                                   (System_String_o *)StringLiteral_16009,
+                                                   (System_String_o *)StringLiteral_16009/*"_SubTex"*/,
                                                    0LL);
 }
 

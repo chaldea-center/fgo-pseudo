@@ -97,12 +97,12 @@ void __fastcall PartyOrganizationListViewManager__CreateList(
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&PartyOrganizationListViewDropObject_TypeInfo, v15);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_10329, v17);
-    sub_B16FFC(&StringLiteral_10388, v18);
-    sub_B16FFC(&StringLiteral_10390, v19);
-    sub_B16FFC(&StringLiteral_10387, v20);
-    sub_B16FFC(&StringLiteral_10389, v21);
-    sub_B16FFC(&StringLiteral_10217, v22);
+    sub_B16FFC(&StringLiteral_10329/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_EXPLANATION_COLOR"*/, v17);
+    sub_B16FFC(&StringLiteral_10388/*"PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_MY_SERVANT_POSITION"*/, v18);
+    sub_B16FFC(&StringLiteral_10390/*"PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_SUPPORT_POSITION"*/, v19);
+    sub_B16FFC(&StringLiteral_10387/*"PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION"*/, v20);
+    sub_B16FFC(&StringLiteral_10389/*"PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_MY_SERVANT_POSITION_MAIN"*/, v21);
+    sub_B16FFC(&StringLiteral_10217/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_SPLIT"*/, v22);
     byte_40F769D = 1;
   }
   message = 0LL;
@@ -191,7 +191,7 @@ void __fastcall PartyOrganizationListViewManager__CreateList(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v53 = &StringLiteral_10390;
+    v53 = &StringLiteral_10390/*"PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_SUPPORT_POSITION"*/;
 LABEL_49:
     v74 = LocalizationManager__Get((System_String_o *)*v53, 0LL);
     if ( !explanationLabel )
@@ -209,7 +209,7 @@ LABEL_45:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v53 = &StringLiteral_10387;
+    v53 = &StringLiteral_10387/*"PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION"*/;
     goto LABEL_49;
   }
   PartyOrganizationServantSwapExplanationFixedServantText = QuestRestrictionInfo__GetPartyOrganizationServantSwapExplanationFixedServantText(
@@ -223,7 +223,7 @@ LABEL_45:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v53 = &StringLiteral_10388;
+    v53 = &StringLiteral_10388/*"PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_MY_SERVANT_POSITION"*/;
     goto LABEL_49;
   }
   v59 = PartyOrganizationServantSwapExplanationFixedServantText;
@@ -241,7 +241,7 @@ LABEL_45:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v66 = LocalizationManager__Get((System_String_o *)StringLiteral_10217, 0LL);
+        v66 = LocalizationManager__Get((System_String_o *)StringLiteral_10217/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_SPLIT"*/, 0LL);
         if ( !v60 )
           goto LABEL_17;
         appended = System_Text_StringBuilder__Append_41914240(v60, v66, 0LL);
@@ -264,7 +264,7 @@ LABEL_45:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_10389, 0LL);
+  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_10389/*"PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_MY_SERVANT_POSITION_MAIN"*/, 0LL);
   if ( !v60 )
     goto LABEL_17;
   v69 = v68;
@@ -301,7 +301,7 @@ LABEL_51:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v80 = LocalizationManager__Get((System_String_o *)StringLiteral_10329, 0LL);
+      v80 = LocalizationManager__Get((System_String_o *)StringLiteral_10329/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_EXPLANATION_COLOR"*/, 0LL);
       v81 = System_String__Concat_43743732(v80, message, 0LL);
       if ( titleExplanationLabel )
       {
@@ -1464,7 +1464,7 @@ void __fastcall PartyOrganizationListViewManager__RequestInto(
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyOrganizationListViewObject__get_Count__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyOrganizationListViewObject__get_Item__, v4);
     sub_B16FFC(&Method_PartyOrganizationListViewManager_OnMoveEnd__, v5);
-    sub_B16FFC(&StringLiteral_10004, v6);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v6);
     byte_40F76A6 = 1;
   }
   ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0LL);
@@ -1508,7 +1508,7 @@ LABEL_14:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

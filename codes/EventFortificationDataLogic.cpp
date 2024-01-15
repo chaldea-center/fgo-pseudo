@@ -92,24 +92,24 @@ void __fastcall EventFortificationDataLogic__SetFortification(
     sub_B16FFC(&Method_DataManager_GetMasterData_EventMaster___, fortificationName);
     sub_B16FFC(&Method_DataManager_GetMasterData_UserEventFortificationMaster___, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FC6A4 = 1;
   }
   *isFortification = 0;
-  *fortificationName = (System_String_o *)StringLiteral_1;
+  *fortificationName = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)fortificationName,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     (System_String_array **)fortificationDetailName,
     (System_String_array **)userSvtId,
     (System_Boolean_array **)method,
     v5,
     v6,
     v7);
-  *fortificationDetailName = (System_String_o *)StringLiteral_1;
+  *fortificationDetailName = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)fortificationDetailName,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     v15,
     v16,
     v17,
@@ -191,8 +191,8 @@ bool __fastcall EventFortificationDataLogic__TryGetColorByWorkType(
   v11 = colorCodeMilitsry;
   if ( (byte_40FC6A5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_313, colorCodeMilitsry);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_313/*"#"*/, colorCodeMilitsry);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FC6A5 = 1;
   }
   if ( workType != 1 )
@@ -203,10 +203,10 @@ bool __fastcall EventFortificationDataLogic__TryGetColorByWorkType(
       if ( workType == 3 )
         v11 = colorCodeFarmming;
       else
-        v11 = (System_String_o *)StringLiteral_1;
+        v11 = (System_String_o *)StringLiteral_1/*""*/;
     }
   }
-  v14 = System_String__Concat_43743732((System_String_o *)StringLiteral_313, v11, 0LL);
+  v14 = System_String__Concat_43743732((System_String_o *)StringLiteral_313/*"#"*/, v11, 0LL);
   v15 = UnityEngine_ColorUtility__TryParseHtmlString(v14, color, 0LL);
   p_c = (UnityEngine_Color32_o)&c;
   c.fields.rgba = 0;

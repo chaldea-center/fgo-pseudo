@@ -191,8 +191,8 @@ System_String_o *__fastcall ShopEntity__GetAddMessage(ShopEntity_o *this, const 
   if ( (byte_40FF877 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
-    sub_B16FFC(&StringLiteral_16191, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_16191/*"addMessage"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FF877 = 1;
   }
   value = 0LL;
@@ -200,11 +200,11 @@ System_String_o *__fastcall ShopEntity__GetAddMessage(ShopEntity_o *this, const 
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_16191,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_16191/*"addMessage"*/,
           &value,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   }
   if ( !value )
     sub_B170D4();
@@ -256,7 +256,7 @@ System_Int32_array *__fastcall ShopEntity__GetAnotherPayItemIds(ShopEntity_o *th
     sub_B16FFC(&System_Collections_Generic_List_object__TypeInfo, v7);
     sub_B16FFC(&Method_ShopEntity___c__GetAnotherPayItemIds_b__58_0__, v8);
     sub_B16FFC(&ShopEntity___c_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_16289, v10);
+    sub_B16FFC(&StringLiteral_16289/*"anotherItemIds"*/, v10);
     byte_40FF859 = 1;
   }
   value = 0LL;
@@ -265,7 +265,7 @@ System_Int32_array *__fastcall ShopEntity__GetAnotherPayItemIds(ShopEntity_o *th
   {
     if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
             (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_16289,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_16289/*"anotherItemIds"*/,
             &value,
             (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0LL;
@@ -357,7 +357,7 @@ int32_t __fastcall ShopEntity__GetAnotherPayType(ShopEntity_o *this, const Metho
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
     sub_B16FFC(&PayType_Type_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_16292, v4);
+    sub_B16FFC(&StringLiteral_16292/*"anotherPayType"*/, v4);
     byte_40FF85A = 1;
   }
   value = 0LL;
@@ -366,7 +366,7 @@ int32_t __fastcall ShopEntity__GetAnotherPayType(ShopEntity_o *this, const Metho
   {
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_16292,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_16292/*"anotherPayType"*/,
            &value,
            (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
@@ -500,7 +500,7 @@ int32_t __fastcall ShopEntity__GetFreeShopCondId(ShopEntity_o *this, const Metho
   {
     sub_B16FFC(&System_Convert_TypeInfo, method);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v3);
-    sub_B16FFC(&StringLiteral_18815, v4);
+    sub_B16FFC(&StringLiteral_18815/*"freeShopCondId"*/, v4);
     byte_40FF840 = 1;
   }
   value = 0LL;
@@ -509,7 +509,7 @@ int32_t __fastcall ShopEntity__GetFreeShopCondId(ShopEntity_o *this, const Metho
   {
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_18815,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_18815/*"freeShopCondId"*/,
            &value,
            (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
@@ -545,7 +545,7 @@ int64_t __fastcall ShopEntity__GetFreeShopReleaseDate(ShopEntity_o *this, const 
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
     sub_B16FFC(&long_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_18818, v4);
+    sub_B16FFC(&StringLiteral_18818/*"freeShopReleaseDate"*/, v4);
     byte_40FF841 = 1;
   }
   value = 0LL;
@@ -554,7 +554,7 @@ int64_t __fastcall ShopEntity__GetFreeShopReleaseDate(ShopEntity_o *this, const 
   {
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_18818,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_18818/*"freeShopReleaseDate"*/,
            &value,
            (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
@@ -646,11 +646,11 @@ void __fastcall ShopEntity__GetInfo(
     sub_B16FFC(&int_TypeInfo, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_14652, v18);
-    sub_B16FFC(&StringLiteral_12004, v19);
-    sub_B16FFC(&StringLiteral_5735, v20);
-    sub_B16FFC(&StringLiteral_11678, v21);
-    sub_B16FFC(&StringLiteral_1, v22);
+    sub_B16FFC(&StringLiteral_14652/*"UNIT_INFO"*/, v18);
+    sub_B16FFC(&StringLiteral_12004/*"SERVANT_UNIT"*/, v19);
+    sub_B16FFC(&StringLiteral_5735/*"EXCEPT_SERVANT_UNIT"*/, v20);
+    sub_B16FFC(&StringLiteral_11678/*"SERVANT_EQUIP_UNIT"*/, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v22);
     byte_40FF860 = 1;
   }
   name = this->fields.name;
@@ -709,7 +709,7 @@ void __fastcall ShopEntity__GetInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v31 = &StringLiteral_14652;
+      v31 = &StringLiteral_14652/*"UNIT_INFO"*/;
       goto LABEL_34;
     case 4:
       goto LABEL_10;
@@ -744,7 +744,7 @@ LABEL_47:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v31 = &StringLiteral_12004;
+            v31 = &StringLiteral_12004/*"SERVANT_UNIT"*/;
           }
           else if ( ServantEntity__get_IsServantEquip(v47, 0LL) )
           {
@@ -753,7 +753,7 @@ LABEL_47:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v31 = &StringLiteral_11678;
+            v31 = &StringLiteral_11678/*"SERVANT_EQUIP_UNIT"*/;
           }
           else
           {
@@ -762,7 +762,7 @@ LABEL_47:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v31 = &StringLiteral_5735;
+            v31 = &StringLiteral_5735/*"EXCEPT_SERVANT_UNIT"*/;
           }
 LABEL_34:
           v48 = LocalizationManager__Get((System_String_o *)*v31, 0LL);
@@ -788,14 +788,14 @@ LABEL_12:
         if ( v33 )
           v34 = v33;
         else
-          v34 = (System_String_o *)StringLiteral_1;
+          v34 = (System_String_o *)StringLiteral_1/*""*/;
         *countText = v34;
       }
       else
       {
 LABEL_16:
-        *countText = (System_String_o *)StringLiteral_1;
-        v34 = (System_String_o *)StringLiteral_1;
+        *countText = (System_String_o *)StringLiteral_1/*""*/;
+        v34 = (System_String_o *)StringLiteral_1/*""*/;
       }
 LABEL_17:
       v35 = countText;
@@ -1290,12 +1290,12 @@ System_String_o *__fastcall ShopEntity__GetOverwriteName(
 {
   if ( (byte_40FF876 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21283, defaultValue);
+    sub_B16FFC(&StringLiteral_21283/*"overwriteName"*/, defaultValue);
     byte_40FF876 = 1;
   }
   return EntityScriptUtil__GetStringValue(
            this->fields.script,
-           (System_String_o *)StringLiteral_21283,
+           (System_String_o *)StringLiteral_21283/*"overwriteName"*/,
            defaultValue,
            0LL);
 }
@@ -1485,9 +1485,9 @@ int32_t __fastcall ShopEntity__GetRemainDays(ShopEntity_o *this, const MethodInf
   if ( (byte_40FF85B & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
-    sub_B16FFC(&StringLiteral_8351, v3);
-    sub_B16FFC(&StringLiteral_8757, v4);
-    sub_B16FFC(&StringLiteral_21668, v5);
+    sub_B16FFC(&StringLiteral_8351/*"LIMITED_SHOP_REMAIN_DAYS"*/, v3);
+    sub_B16FFC(&StringLiteral_8757/*"MONTHLY_SHOP_REMAIN_DAYS"*/, v4);
+    sub_B16FFC(&StringLiteral_21668/*"remainDays"*/, v5);
     byte_40FF85B = 1;
   }
   value = 0LL;
@@ -1495,14 +1495,14 @@ int32_t __fastcall ShopEntity__GetRemainDays(ShopEntity_o *this, const MethodInf
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_21668,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_21668/*"remainDays"*/,
           &value,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     flag = this->fields.flag;
     if ( (flag & 0x800) != 0 )
     {
-      v10 = &StringLiteral_8351;
+      v10 = &StringLiteral_8351/*"LIMITED_SHOP_REMAIN_DAYS"*/;
     }
     else
     {
@@ -1513,7 +1513,7 @@ int32_t __fastcall ShopEntity__GetRemainDays(ShopEntity_o *this, const MethodInf
         else
           return 0;
       }
-      v10 = &StringLiteral_8757;
+      v10 = &StringLiteral_8757/*"MONTHLY_SHOP_REMAIN_DAYS"*/;
     }
     return ConstantMaster__getValue((System_String_o *)*v10, 0LL);
   }
@@ -1853,7 +1853,7 @@ bool __fastcall ShopEntity__IsAnotherPayCommonReleaseOpen(ShopEntity_o *this, co
     sub_B16FFC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v3);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_22885, v6);
+    sub_B16FFC(&StringLiteral_22885/*"useAnotherPayCommonReleaseId"*/, v6);
     byte_40FF858 = 1;
   }
   value = 0LL;
@@ -1861,7 +1861,7 @@ bool __fastcall ShopEntity__IsAnotherPayCommonReleaseOpen(ShopEntity_o *this, co
   if ( script
     && System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_22885,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_22885/*"useAnotherPayCommonReleaseId"*/,
          &value,
          (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -2028,7 +2028,7 @@ bool __fastcall ShopEntity__IsEligibleForFreeFeaturesTheCostumeRelease(ShopEntit
     sub_B16FFC(&Method_DataManager_GetMasterData_ServantCostumeReleaseMaster___, method);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_18815, v5);
+    sub_B16FFC(&StringLiteral_18815/*"freeShopCondId"*/, v5);
     byte_40FF846 = 1;
   }
   *(_QWORD *)svtId = 0LL;
@@ -2037,7 +2037,7 @@ bool __fastcall ShopEntity__IsEligibleForFreeFeaturesTheCostumeRelease(ShopEntit
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_18815,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_18815/*"freeShopCondId"*/,
           &value,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__)
     || !ShopEntity__IsAfterTheFreeShopReleaseDate(this, v7)
@@ -2325,7 +2325,7 @@ bool __fastcall ShopEntity__IsExchangeServantIconDisplayTarget(ShopEntity_o *thi
   if ( (byte_40FF856 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
-    sub_B16FFC(&StringLiteral_21668, v3);
+    sub_B16FFC(&StringLiteral_21668/*"remainDays"*/, v3);
     byte_40FF856 = 1;
   }
   value = 0LL;
@@ -2333,7 +2333,7 @@ bool __fastcall ShopEntity__IsExchangeServantIconDisplayTarget(ShopEntity_o *thi
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_21668,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_21668/*"remainDays"*/,
           &value,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -2367,7 +2367,7 @@ bool __fastcall ShopEntity__IsFulFilledFreeExchangeCondition(ShopEntity_o *this,
     sub_B16FFC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_18815, v5);
+    sub_B16FFC(&StringLiteral_18815/*"freeShopCondId"*/, v5);
     byte_40FF843 = 1;
   }
   script = this->fields.script;
@@ -2375,7 +2375,7 @@ bool __fastcall ShopEntity__IsFulFilledFreeExchangeCondition(ShopEntity_o *this,
     goto LABEL_10;
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_18815,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_18815/*"freeShopCondId"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -2488,7 +2488,7 @@ bool __fastcall ShopEntity__IsLimitedIconDisplayTarget(ShopEntity_o *this, const
   if ( (byte_40FF854 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
-    sub_B16FFC(&StringLiteral_21668, v3);
+    sub_B16FFC(&StringLiteral_21668/*"remainDays"*/, v3);
     byte_40FF854 = 1;
   }
   value = 0LL;
@@ -2496,7 +2496,7 @@ bool __fastcall ShopEntity__IsLimitedIconDisplayTarget(ShopEntity_o *this, const
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_21668,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_21668/*"remainDays"*/,
           &value,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -2525,7 +2525,7 @@ bool __fastcall ShopEntity__IsMonthlyIconDisplayTarget(ShopEntity_o *this, const
   if ( (byte_40FF855 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
-    sub_B16FFC(&StringLiteral_21668, v3);
+    sub_B16FFC(&StringLiteral_21668/*"remainDays"*/, v3);
     byte_40FF855 = 1;
   }
   value = 0LL;
@@ -2533,7 +2533,7 @@ bool __fastcall ShopEntity__IsMonthlyIconDisplayTarget(ShopEntity_o *this, const
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_21668,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_21668/*"remainDays"*/,
           &value,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -2909,7 +2909,7 @@ bool __fastcall ShopEntity__IsPaidExchange(ShopEntity_o *this, const MethodInfo 
     sub_B16FFC(&Method_ShopEntity___c__IsPaidExchange_b__36_2__, v29);
     sub_B16FFC(&Method_ShopEntity___c__IsPaidExchange_b__36_3__, v30);
     sub_B16FFC(&ShopEntity___c_TypeInfo, v31);
-    sub_B16FFC(&StringLiteral_18818, v32);
+    sub_B16FFC(&StringLiteral_18818/*"freeShopReleaseDate"*/, v32);
     byte_40FF845 = 1;
   }
   v141 = 0LL;
@@ -2950,7 +2950,7 @@ bool __fastcall ShopEntity__IsPaidExchange(ShopEntity_o *this, const MethodInfo 
   updatedAt = v41->fields.updatedAt;
   Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
            (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)script,
-           (System_Type_o *)StringLiteral_18818,
+           (System_Type_o *)StringLiteral_18818/*"freeShopReleaseDate"*/,
            (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
     goto LABEL_79;
@@ -3596,7 +3596,7 @@ bool __fastcall ShopEntity__IsSetStrikethrough(ShopEntity_o *this, bool isInPrep
   if ( (byte_40FF844 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, isInPreparation);
-    sub_B16FFC(&StringLiteral_18815, v5);
+    sub_B16FFC(&StringLiteral_18815/*"freeShopCondId"*/, v5);
     byte_40FF844 = 1;
   }
   value = 0LL;
@@ -3605,7 +3605,7 @@ bool __fastcall ShopEntity__IsSetStrikethrough(ShopEntity_o *this, bool isInPrep
   {
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_18815,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_18815/*"freeShopCondId"*/,
            &value,
            (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__)
       && ShopEntity__IsAfterTheFreeShopReleaseDate(this, v7) )
@@ -5117,7 +5117,7 @@ int32_t __fastcall ShopEntity___c___GetAnotherPayItemIds_b__58_0(
 
   if ( (byte_40F79E4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, x);
+    sub_B16FFC(&StringLiteral_1/*""*/, x);
     byte_40F79E4 = 1;
   }
   if ( x )
@@ -5128,7 +5128,7 @@ int32_t __fastcall ShopEntity___c___GetAnotherPayItemIds_b__58_0(
   else
     v4 = 0LL;
   if ( !v4 )
-    v4 = (System_String_o *)StringLiteral_1;
+    v4 = (System_String_o *)StringLiteral_1/*""*/;
   return System_Int32__Parse(v4, 0LL);
 }
 

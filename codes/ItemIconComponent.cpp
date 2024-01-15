@@ -15,7 +15,7 @@ void __fastcall ItemIconComponent___cctor(const MethodInfo *method)
   if ( (byte_40FC1E9 & 1) == 0 )
   {
     sub_B16FFC(&ItemIconComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18515, v8);
+    sub_B16FFC(&StringLiteral_18515/*"event_skill_icon_{0:D2}"*/, v8);
     byte_40FC1E9 = 1;
   }
   ItemIconComponent_TypeInfo->static_fields->CHANGE_FONT_COUNT = 4;
@@ -24,8 +24,8 @@ void __fastcall ItemIconComponent___cctor(const MethodInfo *method)
   ItemIconComponent_TypeInfo->static_fields->OVER_FIVE_LENGTH = 16;
   v9->static_fields->EQUIP_ITEM_RARITY = 3;
   static_fields = v9->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_18515;
-  static_fields->ASSIST_SPRITE_NAME = (struct System_String_o *)StringLiteral_18515;
+  v11 = (System_Int32_array **)StringLiteral_18515/*"event_skill_icon_{0:D2}"*/;
+  static_fields->ASSIST_SPRITE_NAME = (struct System_String_o *)StringLiteral_18515/*"event_skill_icon_{0:D2}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->ASSIST_SPRITE_NAME, v11, v2, v3, v4, v5, v6, v7);
 }
 
@@ -57,7 +57,7 @@ void __fastcall ItemIconComponent__Awake(ItemIconComponent_o *this, const Method
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_7425, v4);
+    sub_B16FFC(&StringLiteral_7425/*"ITEM_POSSESSION_TITLE"*/, v4);
     byte_40FC1C4 = 1;
   }
   typeSprite = (UnityEngine_Object_o *)this->fields.typeSprite;
@@ -101,7 +101,7 @@ void __fastcall ItemIconComponent__Awake(ItemIconComponent_o *this, const Method
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_7425, 0LL);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_7425/*"ITEM_POSSESSION_TITLE"*/, 0LL);
     if ( v13 )
     {
       UILabel__set_text(v13, v14, 0LL);
@@ -207,8 +207,8 @@ void __fastcall ItemIconComponent__Clear(ItemIconComponent_o *this, const Method
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
-    sub_B16FFC(&StringLiteral_20173, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
+    sub_B16FFC(&StringLiteral_20173/*"listframes_shadow"*/, v5);
     byte_40FC1C5 = 1;
   }
   typeSprite = (UnityEngine_Object_o *)this->fields.typeSprite;
@@ -230,7 +230,7 @@ void __fastcall ItemIconComponent__Clear(ItemIconComponent_o *this, const Method
     iconSprite = this->fields.iconSprite;
     if ( !iconSprite
       || (UISprite__set_spriteName(iconSprite, 0LL, 0LL), (frameSprite = this->fields.frameSprite) == 0LL)
-      || (UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173, 0LL),
+      || (UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173/*"listframes_shadow"*/, 0LL),
           (v11 = this->fields.typeSprite) == 0LL) )
     {
 LABEL_53:
@@ -296,7 +296,7 @@ LABEL_53:
     v19 = this->fields.counterLabel;
     if ( !v19 )
       goto LABEL_53;
-    UILabel__set_text(v19, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v19, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   svtJoinIcon = (UnityEngine_Object_o *)this->fields.svtJoinIcon;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -721,12 +721,12 @@ void __fastcall ItemIconComponent__SetCoinImage(
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&coinImageId);
     sub_B16FFC(&int_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_19395, v13);
-    sub_B16FFC(&StringLiteral_20175, v14);
-    sub_B16FFC(&StringLiteral_23555, v15);
-    sub_B16FFC(&StringLiteral_20178, v16);
-    sub_B16FFC(&StringLiteral_1, v17);
-    sub_B16FFC(&StringLiteral_20173, v18);
+    sub_B16FFC(&StringLiteral_19395/*"img_common_frame01"*/, v13);
+    sub_B16FFC(&StringLiteral_20175/*"listframes{0}_bg"*/, v14);
+    sub_B16FFC(&StringLiteral_23555/*"{0}{1:#,0}"*/, v15);
+    sub_B16FFC(&StringLiteral_20178/*"listframes{0}_txt_item"*/, v16);
+    sub_B16FFC(&StringLiteral_1/*""*/, v17);
+    sub_B16FFC(&StringLiteral_20173/*"listframes_shadow"*/, v18);
     byte_40FC1D2 = 1;
   }
   typeSprite = (UnityEngine_Object_o *)this->fields.typeSprite;
@@ -741,7 +741,7 @@ void __fastcall ItemIconComponent__SetCoinImage(
   {
     v53 = bgImageId;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v53);
-    v23 = System_String__Format((System_String_o *)StringLiteral_20175, v22, 0LL);
+    v23 = System_String__Format((System_String_o *)StringLiteral_20175/*"listframes{0}_bg"*/, v22, 0LL);
     if ( backSprite )
     {
       UISprite__set_spriteName(backSprite, v23, 0LL);
@@ -755,11 +755,11 @@ void __fastcall ItemIconComponent__SetCoinImage(
       frameSprite = this->fields.frameSprite;
       if ( frameSprite )
       {
-        UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173, 0LL);
+        UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173/*"listframes_shadow"*/, 0LL);
         v26 = this->fields.typeSprite;
         v52 = bgImageId;
         v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-        v28 = System_String__Format((System_String_o *)StringLiteral_20178, v27, 0LL);
+        v28 = System_String__Format((System_String_o *)StringLiteral_20178/*"listframes{0}_txt_item"*/, v27, 0LL);
         if ( v26 )
         {
           v29 = v28;
@@ -815,7 +815,7 @@ LABEL_74:
     v30 = this->fields.frameSprite;
     if ( !v30 )
       goto LABEL_74;
-    v29 = (System_String_o *)StringLiteral_19395;
+    v29 = (System_String_o *)StringLiteral_19395/*"img_common_frame01"*/;
     goto LABEL_35;
   }
 LABEL_36:
@@ -862,7 +862,7 @@ LABEL_36:
     v44 = (Il2CppObject *)PlusOperatorString;
     if ( (count & 0x80000000) != 0 )
     {
-      v46 = (System_String_o *)StringLiteral_1;
+      v46 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !v43 )
         goto LABEL_74;
     }
@@ -870,7 +870,7 @@ LABEL_36:
     {
       v51 = count;
       v45 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51);
-      v46 = System_String__Format_43739268((System_String_o *)StringLiteral_23555, v44, v45, 0LL);
+      v46 = System_String__Format_43739268((System_String_o *)StringLiteral_23555/*"{0}{1:#,0}"*/, v44, v45, 0LL);
       if ( !v43 )
         goto LABEL_74;
     }
@@ -1161,9 +1161,9 @@ void __fastcall ItemIconComponent__SetCombineItemImage(
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&imageId);
     sub_B16FFC(&int_TypeInfo, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_20175, v12);
-    sub_B16FFC(&StringLiteral_20178, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_20175/*"listframes{0}_bg"*/, v12);
+    sub_B16FFC(&StringLiteral_20178/*"listframes{0}_txt_item"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FC1D3 = 1;
   }
   backSprite = (UnityEngine_Object_o *)this->fields.backSprite;
@@ -1221,7 +1221,7 @@ void __fastcall ItemIconComponent__SetCombineItemImage(
     v21 = this->fields.frameSprite;
     v39 = bgImageId;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39);
-    v23 = System_String__Format((System_String_o *)StringLiteral_20175, v22, 0LL);
+    v23 = System_String__Format((System_String_o *)StringLiteral_20175/*"listframes{0}_bg"*/, v22, 0LL);
     if ( !v21 )
       goto LABEL_66;
     UISprite__set_spriteName(v21, v23, 0LL);
@@ -1237,7 +1237,7 @@ void __fastcall ItemIconComponent__SetCombineItemImage(
     v25 = this->fields.typeSprite;
     v38 = bgImageId;
     v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v38);
-    v27 = System_String__Format((System_String_o *)StringLiteral_20178, v26, 0LL);
+    v27 = System_String__Format((System_String_o *)StringLiteral_20178/*"listframes{0}_txt_item"*/, v26, 0LL);
     if ( !v25 )
       goto LABEL_66;
     UISprite__set_spriteName(v25, v27, 0LL);
@@ -1279,7 +1279,7 @@ void __fastcall ItemIconComponent__SetCombineItemImage(
     v33 = this->fields.counterLabel;
     if ( (v40 & 0x80000000) != 0 )
     {
-      v35 = (System_String_o *)StringLiteral_1;
+      v35 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !v33 )
         goto LABEL_66;
     }
@@ -1289,7 +1289,7 @@ void __fastcall ItemIconComponent__SetCombineItemImage(
       if ( v34 )
         v35 = v34;
       else
-        v35 = (System_String_o *)StringLiteral_1;
+        v35 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !v33 )
 LABEL_66:
         sub_B170D4();
@@ -1366,7 +1366,7 @@ void __fastcall ItemIconComponent__SetCommandCodeImage(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&Rarity_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FC1D6 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -1501,7 +1501,7 @@ LABEL_36:
     v35 = this->fields.counterLabel;
     if ( count <= 1 )
     {
-      v38 = (System_String_o *)StringLiteral_1;
+      v38 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !v35 )
         goto LABEL_75;
     }
@@ -1812,9 +1812,9 @@ void __fastcall ItemIconComponent__SetEquipItemImage(
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&ItemIconComponent_TypeInfo, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_20179, v8);
-    sub_B16FFC(&StringLiteral_20175, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_20179/*"listframes{0}_txt_mysticcode"*/, v8);
+    sub_B16FFC(&StringLiteral_20175/*"listframes{0}_bg"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FC1D4 = 1;
   }
   backSprite = (UnityEngine_Object_o *)this->fields.backSprite;
@@ -1842,7 +1842,7 @@ void __fastcall ItemIconComponent__SetEquipItemImage(
     }
     EQUIP_ITEM_RARITY = v15->static_fields->EQUIP_ITEM_RARITY;
     v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &EQUIP_ITEM_RARITY);
-    v17 = System_String__Format((System_String_o *)StringLiteral_20175, v16, 0LL);
+    v17 = System_String__Format((System_String_o *)StringLiteral_20175/*"listframes{0}_bg"*/, v16, 0LL);
     if ( !v14 )
       goto LABEL_68;
     UISprite__set_spriteName(v14, v17, 0LL);
@@ -1894,7 +1894,7 @@ void __fastcall ItemIconComponent__SetEquipItemImage(
     }
     v37 = v24->static_fields->EQUIP_ITEM_RARITY;
     v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37);
-    v26 = System_String__Format((System_String_o *)StringLiteral_20179, v25, 0LL);
+    v26 = System_String__Format((System_String_o *)StringLiteral_20179/*"listframes{0}_txt_mysticcode"*/, v25, 0LL);
     if ( !v23 )
       goto LABEL_68;
     UISprite__set_spriteName(v23, v26, 0LL);
@@ -1923,7 +1923,7 @@ void __fastcall ItemIconComponent__SetEquipItemImage(
     v30 = this->fields.counterLabel;
     if ( !v30 )
       goto LABEL_68;
-    UILabel__set_text(v30, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v30, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   raritySprite = (UnityEngine_Object_o *)this->fields.raritySprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2016,11 +2016,11 @@ void __fastcall ItemIconComponent__SetEventPointBuffImage(
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&imageId);
     sub_B16FFC(&int_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_19395, v9);
-    sub_B16FFC(&StringLiteral_20175, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
-    sub_B16FFC(&StringLiteral_20177, v12);
-    sub_B16FFC(&StringLiteral_20173, v13);
+    sub_B16FFC(&StringLiteral_19395/*"img_common_frame01"*/, v9);
+    sub_B16FFC(&StringLiteral_20175/*"listframes{0}_bg"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
+    sub_B16FFC(&StringLiteral_20177/*"listframes{0}_txt_eventbonus"*/, v12);
+    sub_B16FFC(&StringLiteral_20173/*"listframes_shadow"*/, v13);
     byte_40FC1CE = 1;
   }
   typeSprite = (UnityEngine_Object_o *)this->fields.typeSprite;
@@ -2035,7 +2035,7 @@ void __fastcall ItemIconComponent__SetEventPointBuffImage(
   {
     v38 = bgImageId;
     v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v38);
-    v18 = System_String__Format((System_String_o *)StringLiteral_20175, v17, 0LL);
+    v18 = System_String__Format((System_String_o *)StringLiteral_20175/*"listframes{0}_bg"*/, v17, 0LL);
     if ( !backSprite )
       goto LABEL_55;
     UISprite__set_spriteName(backSprite, v18, 0LL);
@@ -2049,11 +2049,11 @@ void __fastcall ItemIconComponent__SetEventPointBuffImage(
     frameSprite = this->fields.frameSprite;
     if ( !frameSprite )
       goto LABEL_55;
-    UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173, 0LL);
+    UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173/*"listframes_shadow"*/, 0LL);
     v21 = this->fields.typeSprite;
     v37 = bgImageId;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37);
-    v23 = System_String__Format((System_String_o *)StringLiteral_20177, v22, 0LL);
+    v23 = System_String__Format((System_String_o *)StringLiteral_20177/*"listframes{0}_txt_eventbonus"*/, v22, 0LL);
     if ( !v21 )
       goto LABEL_55;
     v24 = v23;
@@ -2102,7 +2102,7 @@ void __fastcall ItemIconComponent__SetEventPointBuffImage(
     v25 = this->fields.frameSprite;
     if ( !v25 )
       goto LABEL_55;
-    v24 = (System_String_o *)StringLiteral_19395;
+    v24 = (System_String_o *)StringLiteral_19395/*"img_common_frame01"*/;
 LABEL_35:
     UISprite__set_spriteName(v25, v24, 0LL);
   }
@@ -2143,7 +2143,7 @@ LABEL_35:
     v36 = this->fields.counterLabel;
     if ( v36 )
     {
-      UILabel__set_text(v36, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v36, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       return;
     }
 LABEL_55:
@@ -2232,11 +2232,11 @@ void __fastcall ItemIconComponent__SetFaceImage(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v17);
     sub_B16FFC(&Rarity_TypeInfo, v18);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
-    sub_B16FFC(&StringLiteral_21736, v20);
-    sub_B16FFC(&StringLiteral_21737, v21);
-    sub_B16FFC(&StringLiteral_1, v22);
-    sub_B16FFC(&StringLiteral_20173, v23);
-    sub_B16FFC(&StringLiteral_19266, v24);
+    sub_B16FFC(&StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, v20);
+    sub_B16FFC(&StringLiteral_21737/*"ribbon_noblephantasmup_02"*/, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v22);
+    sub_B16FFC(&StringLiteral_20173/*"listframes_shadow"*/, v23);
+    sub_B16FFC(&StringLiteral_19266/*"icon_eventjoin_01"*/, v24);
     byte_40FC1D5 = 1;
   }
   rarity = 0;
@@ -2315,7 +2315,7 @@ void __fastcall ItemIconComponent__SetFaceImage(
     frameSprite = this->fields.frameSprite;
     if ( !frameSprite )
       goto LABEL_105;
-    UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173, 0LL);
+    UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173/*"listframes_shadow"*/, 0LL);
     AtlasManager__SetServantType(this->fields.typeSprite, v28->fields.type, FrameType_30699216, startType, 0LL);
   }
   else
@@ -2435,7 +2435,7 @@ LABEL_74:
     v56 = this->fields.counterLabel;
     if ( v68 <= 1 )
     {
-      v59 = (System_String_o *)StringLiteral_1;
+      v59 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !v56 )
         goto LABEL_105;
     }
@@ -2461,7 +2461,7 @@ LABEL_74:
     if ( !v61 )
       goto LABEL_105;
     if ( giftType == 6 )
-      ShiningIconComponent__Set_33652672(v61, (System_String_o *)StringLiteral_19266, 0LL);
+      ShiningIconComponent__Set_33652672(v61, (System_String_o *)StringLiteral_19266/*"icon_eventjoin_01"*/, 0LL);
     else
       ShiningIconComponent__Clear(v61, 0LL);
   }
@@ -2477,9 +2477,9 @@ LABEL_74:
     v64 = this->fields.materialTdSprite;
     if ( IsServantMaterialTd )
     {
-      v65 = (System_String_o **)&StringLiteral_21737;
+      v65 = (System_String_o **)&StringLiteral_21737/*"ribbon_noblephantasmup_02"*/;
       if ( !isQuestBoard )
-        v65 = (System_String_o **)&StringLiteral_21736;
+        v65 = (System_String_o **)&StringLiteral_21736/*"ribbon_noblephantasmup_01"*/;
       v66 = *v65;
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -3043,16 +3043,16 @@ void __fastcall ItemIconComponent__SetItemInfo(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&bgImageId);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_20176, v10);
-    sub_B16FFC(&StringLiteral_20182, v11);
-    sub_B16FFC(&StringLiteral_19395, v12);
-    sub_B16FFC(&StringLiteral_20175, v13);
-    sub_B16FFC(&StringLiteral_23555, v14);
-    sub_B16FFC(&StringLiteral_20181, v15);
-    sub_B16FFC(&StringLiteral_20178, v16);
-    sub_B16FFC(&StringLiteral_1, v17);
-    sub_B16FFC(&StringLiteral_20180, v18);
-    sub_B16FFC(&StringLiteral_20173, v19);
+    sub_B16FFC(&StringLiteral_20176/*"listframes{0}_txt_costume"*/, v10);
+    sub_B16FFC(&StringLiteral_20182/*"listframes{0}_txt_quest"*/, v11);
+    sub_B16FFC(&StringLiteral_19395/*"img_common_frame01"*/, v12);
+    sub_B16FFC(&StringLiteral_20175/*"listframes{0}_bg"*/, v13);
+    sub_B16FFC(&StringLiteral_23555/*"{0}{1:#,0}"*/, v14);
+    sub_B16FFC(&StringLiteral_20181/*"listframes{0}_txt_point"*/, v15);
+    sub_B16FFC(&StringLiteral_20178/*"listframes{0}_txt_item"*/, v16);
+    sub_B16FFC(&StringLiteral_1/*""*/, v17);
+    sub_B16FFC(&StringLiteral_20180/*"listframes{0}_txt_plain"*/, v18);
+    sub_B16FFC(&StringLiteral_20173/*"listframes_shadow"*/, v19);
     byte_40FC1D1 = 1;
   }
   typeSprite = (UnityEngine_Object_o *)this->fields.typeSprite;
@@ -3067,14 +3067,14 @@ void __fastcall ItemIconComponent__SetItemInfo(
   {
     v50 = bgImageId;
     v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-    v24 = System_String__Format((System_String_o *)StringLiteral_20175, v23, 0LL);
+    v24 = System_String__Format((System_String_o *)StringLiteral_20175/*"listframes{0}_bg"*/, v23, 0LL);
     if ( backSprite )
     {
       UISprite__set_spriteName(backSprite, v24, 0LL);
       frameSprite = this->fields.frameSprite;
       if ( frameSprite )
       {
-        UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173, 0LL);
+        UISprite__set_spriteName(frameSprite, (System_String_o *)StringLiteral_20173/*"listframes_shadow"*/, 0LL);
         if ( type > 22 )
         {
           if ( type == 23 )
@@ -3082,7 +3082,7 @@ void __fastcall ItemIconComponent__SetItemInfo(
             v26 = this->fields.typeSprite;
             v50 = bgImageId;
             v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-            v28 = &StringLiteral_20176;
+            v28 = &StringLiteral_20176/*"listframes{0}_txt_costume"*/;
             goto LABEL_32;
           }
           if ( type == 24 )
@@ -3090,7 +3090,7 @@ void __fastcall ItemIconComponent__SetItemInfo(
             v26 = this->fields.typeSprite;
             v50 = bgImageId;
             v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-            v28 = &StringLiteral_20180;
+            v28 = &StringLiteral_20180/*"listframes{0}_txt_plain"*/;
             goto LABEL_32;
           }
         }
@@ -3101,7 +3101,7 @@ void __fastcall ItemIconComponent__SetItemInfo(
             v26 = this->fields.typeSprite;
             v50 = bgImageId;
             v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-            v28 = &StringLiteral_20181;
+            v28 = &StringLiteral_20181/*"listframes{0}_txt_point"*/;
             goto LABEL_32;
           }
           if ( type == 16 )
@@ -3109,7 +3109,7 @@ void __fastcall ItemIconComponent__SetItemInfo(
             v26 = this->fields.typeSprite;
             v50 = bgImageId;
             v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-            v28 = &StringLiteral_20182;
+            v28 = &StringLiteral_20182/*"listframes{0}_txt_quest"*/;
 LABEL_32:
             v34 = System_String__Format((System_String_o *)*v28, v27, 0LL);
             if ( !v26 )
@@ -3122,7 +3122,7 @@ LABEL_32:
         v26 = this->fields.typeSprite;
         v50 = bgImageId;
         v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-        v28 = &StringLiteral_20178;
+        v28 = &StringLiteral_20178/*"listframes{0}_txt_item"*/;
         goto LABEL_32;
       }
     }
@@ -3155,7 +3155,7 @@ LABEL_73:
     v32 = this->fields.frameSprite;
     if ( !v32 )
       goto LABEL_73;
-    v33 = (System_String_o *)StringLiteral_19395;
+    v33 = (System_String_o *)StringLiteral_19395/*"img_common_frame01"*/;
 LABEL_34:
     UISprite__set_spriteName(v32, v33, 0LL);
   }
@@ -3202,7 +3202,7 @@ LABEL_34:
     v43 = (Il2CppObject *)PlusOperatorString;
     if ( (count & 0x80000000) != 0 )
     {
-      v45 = (System_String_o *)StringLiteral_1;
+      v45 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !v42 )
         goto LABEL_73;
     }
@@ -3210,7 +3210,7 @@ LABEL_34:
     {
       v50 = count;
       v44 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-      v45 = System_String__Format_43739268((System_String_o *)StringLiteral_23555, v43, v44, 0LL);
+      v45 = System_String__Format_43739268((System_String_o *)StringLiteral_23555/*"{0}{1:#,0}"*/, v43, v44, 0LL);
       if ( !v42 )
         goto LABEL_73;
     }
@@ -3361,7 +3361,7 @@ void __fastcall ItemIconComponent__SetPossession(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UILabel___, *(_QWORD *)&possessionNum);
     sub_B16FFC(&int_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23395, v6);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v6);
     byte_40FC1DE = 1;
   }
   possessionRoot = this->fields.possessionRoot;
@@ -3377,7 +3377,7 @@ void __fastcall ItemIconComponent__SetPossession(
                                            (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UILabel___);
   v20 = this->fields.possessionNum;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20);
-  v12 = System_String__Format((System_String_o *)StringLiteral_23395, v11, 0LL);
+  v12 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v11, 0LL);
   if ( !Component_WebViewObject )
     goto LABEL_12;
   UILabel__set_text(Component_WebViewObject, v12, 0LL);
@@ -3428,7 +3428,7 @@ void __fastcall ItemIconComponent__SetPossessionOneLabel(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UILabel___, *(_QWORD *)&possessionNum);
     sub_B16FFC(&int_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23395, v6);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v6);
     byte_40FC1E8 = 1;
   }
   possessionRoot = this->fields.possessionRoot;
@@ -3445,7 +3445,7 @@ void __fastcall ItemIconComponent__SetPossessionOneLabel(
   v11 = (UILabel_o *)Component_WebViewObject;
   v15 = this->fields.possessionNum;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-  v13 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23395, v12, 0LL);
+  v13 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v12, 0LL);
   v14 = System_String__Format(v10, v13, 0LL);
   UILabel__set_text(v11, v14, 0LL);
 }

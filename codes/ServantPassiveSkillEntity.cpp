@@ -98,7 +98,7 @@ void __fastcall ServantPassiveSkillEntity__getEffectExplanation(
     sub_B16FFC(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40FBB58 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -164,8 +164,8 @@ void __fastcall ServantPassiveSkillEntity__getEffectExplanation(
       v24,
       v25,
       v26);
-    *explanation = (System_String_o *)StringLiteral_1;
-    EffectExplanation = (System_String_o *)StringLiteral_1;
+    *explanation = (System_String_o *)StringLiteral_1/*""*/;
+    EffectExplanation = (System_String_o *)StringLiteral_1/*""*/;
   }
   sub_B16F98(
     (BattleServantConfConponent_o *)explanation,

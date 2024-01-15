@@ -40,9 +40,9 @@ void __fastcall AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *
     sub_B16FFC(&Method_System_Func_List_object___List_int____ctor__, v7);
     sub_B16FFC(&System_Func_List_object___List_int___TypeInfo, v8);
     sub_B16FFC(&int___TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_16230, v10);
-    sub_B16FFC(&StringLiteral_19723, v11);
-    sub_B16FFC(&StringLiteral_16349, v12);
+    sub_B16FFC(&StringLiteral_16230/*"aiIds"*/, v10);
+    sub_B16FFC(&StringLiteral_19723/*"individuality"*/, v11);
+    sub_B16FFC(&StringLiteral_16349/*"applySvtType"*/, v12);
     byte_40F7EB9 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -69,7 +69,7 @@ void __fastcall AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *
   }
   ScriptValue_object__object = EntityScriptUtil__GetScriptValue_object__object_(
                                  (System_Collections_Generic_Dictionary_string__object__o *)obj,
-                                 (System_String_o *)StringLiteral_16230,
+                                 (System_String_o *)StringLiteral_16230/*"aiIds"*/,
                                  (System_Func_TSource__TDestination__o *)v17,
                                  0LL,
                                  (const MethodInfo_18C5838 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
@@ -85,12 +85,12 @@ void __fastcall AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *
     v25);
   this->fields._ApplyType_k__BackingField = EntityScriptUtil__GetIntValue(
                                               (System_Collections_Generic_Dictionary_string__object__o *)obj,
-                                              (System_String_o *)StringLiteral_16349,
+                                              (System_String_o *)StringLiteral_16349/*"applySvtType"*/,
                                               0,
                                               0LL);
   IntValue = EntityScriptUtil__GetIntValue(
                (System_Collections_Generic_Dictionary_string__object__o *)obj,
-               (System_String_o *)StringLiteral_19723,
+               (System_String_o *)StringLiteral_19723/*"individuality"*/,
                0,
                0LL);
   if ( IntValue < 1 )

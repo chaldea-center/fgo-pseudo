@@ -74,7 +74,7 @@ void __fastcall WarBoardItemComponent__Initialize(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v12);
     sub_B16FFC(&UnityEngine_Transform___TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_23445, v14);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v14);
     byte_40F6420 = 1;
   }
   this->fields.itemData = data;
@@ -113,7 +113,7 @@ void __fastcall WarBoardItemComponent__Initialize(
   v25 = this->fields.itemIcon;
   iconId = itemEntity->fields.iconId;
   v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-  v27 = System_String__Format((System_String_o *)StringLiteral_23445, v26, 0LL);
+  v27 = System_String__Format((System_String_o *)StringLiteral_23445/*"{0}"*/, v26, 0LL);
   if ( !v25 )
     goto LABEL_28;
   UISprite__set_spriteName(v25, v27, 0LL);
@@ -360,7 +360,7 @@ void __fastcall WarBoardItemComponent__OnGet(
     sub_B16FFC(&Method_WarBoardItemComponent_ItemGetEffectEndCallback__, v8);
     sub_B16FFC(&WarBoardSimpleAnimationPerformance_TypeInfo, v9);
     sub_B16FFC(&WarBoardTaskBase___TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_8232, v11);
+    sub_B16FFC(&StringLiteral_8232/*"ItemGet"*/, v11);
     byte_40F6427 = 1;
   }
   Component_WebViewObject = (SimpleAnimation_o *)UnityEngine_Component__GetComponent_WebViewObject_(
@@ -370,7 +370,7 @@ void __fastcall WarBoardItemComponent__OnGet(
   WarBoardSimpleAnimationPerformance___ctor(
     (WarBoardSimpleAnimationPerformance_o *)v17,
     Component_WebViewObject,
-    (System_String_o *)StringLiteral_8232,
+    (System_String_o *)StringLiteral_8232/*"ItemGet"*/,
     0LL);
   if ( !v17 )
     goto LABEL_13;
@@ -563,7 +563,7 @@ void __fastcall WarBoardItemComponent__OnUse(
     sub_B16FFC(&Method_WarBoardItemComponent_ItemGetEffectEndCallback__, v14);
     sub_B16FFC(&WarBoardSimpleAnimationPerformance_TypeInfo, v15);
     sub_B16FFC(&WarBoardTaskBase___TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_8232, v17);
+    sub_B16FFC(&StringLiteral_8232/*"ItemGet"*/, v17);
     byte_40F6426 = 1;
   }
   v18 = sub_B170CC(
@@ -585,7 +585,7 @@ void __fastcall WarBoardItemComponent__OnUse(
   WarBoardSimpleAnimationPerformance___ctor(
     (WarBoardSimpleAnimationPerformance_o *)v30,
     Component_WebViewObject,
-    (System_String_o *)StringLiteral_8232,
+    (System_String_o *)StringLiteral_8232/*"ItemGet"*/,
     0LL);
   if ( !v30 )
     goto LABEL_18;

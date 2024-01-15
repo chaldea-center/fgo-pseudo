@@ -173,26 +173,26 @@ void __fastcall PartyOrganizationRestrictionHelpDialog__Init(
 
   if ( (byte_40F76EB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F76EB = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_11;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_11;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageDeckLabel = this->fields.messageDeckLabel;
   if ( !messageDeckLabel )
     goto LABEL_11;
-  UILabel__set_text(messageDeckLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageDeckLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageSelfOrSupportLabel = this->fields.messageSelfOrSupportLabel;
   if ( !messageSelfOrSupportLabel
-    || (UILabel__set_text(messageSelfOrSupportLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageSelfOrSupportLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL)
-    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (partyMemberBase = this->fields.partyMemberBase) == 0LL)
     || (UnityEngine_GameObject__SetActive(partyMemberBase, 0, 0LL),
         (supportMemberBase = this->fields.supportMemberBase) == 0LL) )
@@ -444,16 +444,16 @@ void __fastcall PartyOrganizationRestrictionHelpDialog__Open(
     sub_B16FFC(&PartyOrganizationListViewItem_TypeInfo, v33);
     sub_B16FFC(&Method_PartyOrganizationRestrictionHelpDialog_EndOpen__, v34);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v35);
-    sub_B16FFC(&StringLiteral_10351, v36);
-    sub_B16FFC(&StringLiteral_10344, v37);
-    sub_B16FFC(&StringLiteral_10349, v38);
-    sub_B16FFC(&StringLiteral_10346, v39);
-    sub_B16FFC(&StringLiteral_10350, v40);
-    sub_B16FFC(&StringLiteral_10347, v41);
-    sub_B16FFC(&StringLiteral_10345, v42);
-    sub_B16FFC(&StringLiteral_10352, v43);
-    sub_B16FFC(&StringLiteral_10348, v44);
-    sub_B16FFC(&StringLiteral_1, v45);
+    sub_B16FFC(&StringLiteral_10351/*"PARTY_ORGANIZATION_RESTRICTION_HELP_UNIQUE_INDIVIDUALITY_TITLE"*/, v36);
+    sub_B16FFC(&StringLiteral_10344/*"PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE"*/, v37);
+    sub_B16FFC(&StringLiteral_10349/*"PARTY_ORGANIZATION_RESTRICTION_HELP_TITLE"*/, v38);
+    sub_B16FFC(&StringLiteral_10346/*"PARTY_ORGANIZATION_RESTRICTION_HELP_FIXED_SUPPORT_POSITION_TITLE"*/, v39);
+    sub_B16FFC(&StringLiteral_10350/*"PARTY_ORGANIZATION_RESTRICTION_HELP_TOTAL_COST_TITLE"*/, v40);
+    sub_B16FFC(&StringLiteral_10347/*"PARTY_ORGANIZATION_RESTRICTION_HELP_MY_SERVANT_NUM"*/, v41);
+    sub_B16FFC(&StringLiteral_10345/*"PARTY_ORGANIZATION_RESTRICTION_HELP_FIXED_MY_SERVANT_POSITION"*/, v42);
+    sub_B16FFC(&StringLiteral_10352/*"PARTY_ORGANIZATION_RESTRICTION_HELP_UNIQUE_SVT_ONLY_TITLE"*/, v43);
+    sub_B16FFC(&StringLiteral_10348/*"PARTY_ORGANIZATION_RESTRICTION_HELP_SERVANT_NUM"*/, v44);
+    sub_B16FFC(&StringLiteral_1/*""*/, v45);
     byte_40F76EC = 1;
   }
   entity = 0LL;
@@ -488,22 +488,22 @@ void __fastcall PartyOrganizationRestrictionHelpDialog__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_10344, 0LL);
+        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_10344/*"PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE"*/, 0LL);
         if ( closeLabel )
         {
           UILabel__set_text(closeLabel, v49, 0LL);
           messageLabel = this->fields.messageLabel;
           if ( messageLabel )
           {
-            UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
             messageDeckLabel = this->fields.messageDeckLabel;
             if ( messageDeckLabel )
             {
-              UILabel__set_text(messageDeckLabel, (System_String_o *)StringLiteral_1, 0LL);
+              UILabel__set_text(messageDeckLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
               messageSelfOrSupportLabel = this->fields.messageSelfOrSupportLabel;
               if ( messageSelfOrSupportLabel )
               {
-                UILabel__set_text(messageSelfOrSupportLabel, (System_String_o *)StringLiteral_1, 0LL);
+                UILabel__set_text(messageSelfOrSupportLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
                 partyMemberBase = this->fields.partyMemberBase;
                 if ( partyMemberBase )
                 {
@@ -522,7 +522,7 @@ void __fastcall PartyOrganizationRestrictionHelpDialog__Open(
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v108 = &StringLiteral_10350;
+                        v108 = &StringLiteral_10350/*"PARTY_ORGANIZATION_RESTRICTION_HELP_TOTAL_COST_TITLE"*/;
                         goto LABEL_124;
                       case 6:
                         titleLabel = this->fields.titleLabel;
@@ -531,7 +531,7 @@ void __fastcall PartyOrganizationRestrictionHelpDialog__Open(
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v108 = &StringLiteral_10352;
+                        v108 = &StringLiteral_10352/*"PARTY_ORGANIZATION_RESTRICTION_HELP_UNIQUE_SVT_ONLY_TITLE"*/;
                         goto LABEL_124;
                       case 7:
                         v109 = this->fields.titleLabel;
@@ -540,7 +540,7 @@ void __fastcall PartyOrganizationRestrictionHelpDialog__Open(
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v110 = LocalizationManager__Get((System_String_o *)StringLiteral_10346, 0LL);
+                        v110 = LocalizationManager__Get((System_String_o *)StringLiteral_10346/*"PARTY_ORGANIZATION_RESTRICTION_HELP_FIXED_SUPPORT_POSITION_TITLE"*/, 0LL);
                         if ( !v109 )
                           break;
                         UILabel__set_text(v109, v110, 0LL);
@@ -683,7 +683,7 @@ LABEL_181:
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v56 = LocalizationManager__Get((System_String_o *)StringLiteral_10345, 0LL);
+                        v56 = LocalizationManager__Get((System_String_o *)StringLiteral_10345/*"PARTY_ORGANIZATION_RESTRICTION_HELP_FIXED_MY_SERVANT_POSITION"*/, 0LL);
                         if ( !v55 )
                           break;
                         UILabel__set_text(v55, v56, 0LL);
@@ -859,7 +859,7 @@ LABEL_56:
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v108 = &StringLiteral_10348;
+                        v108 = &StringLiteral_10348/*"PARTY_ORGANIZATION_RESTRICTION_HELP_SERVANT_NUM"*/;
                         goto LABEL_124;
                       case 11:
                         titleLabel = this->fields.titleLabel;
@@ -868,7 +868,7 @@ LABEL_56:
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v108 = &StringLiteral_10347;
+                        v108 = &StringLiteral_10347/*"PARTY_ORGANIZATION_RESTRICTION_HELP_MY_SERVANT_NUM"*/;
                         goto LABEL_124;
                       case 12:
                       case 16:
@@ -878,7 +878,7 @@ LABEL_56:
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v97 = LocalizationManager__Get((System_String_o *)StringLiteral_10349, 0LL);
+                        v97 = LocalizationManager__Get((System_String_o *)StringLiteral_10349/*"PARTY_ORGANIZATION_RESTRICTION_HELP_TITLE"*/, 0LL);
                         if ( !v96 )
                           break;
                         UILabel__set_text(v96, v97, 0LL);
@@ -1119,7 +1119,7 @@ LABEL_127:
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v108 = &StringLiteral_10351;
+                        v108 = &StringLiteral_10351/*"PARTY_ORGANIZATION_RESTRICTION_HELP_UNIQUE_INDIVIDUALITY_TITLE"*/;
                         goto LABEL_124;
                       default:
                         titleLabel = this->fields.titleLabel;
@@ -1128,7 +1128,7 @@ LABEL_127:
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v108 = &StringLiteral_10349;
+                        v108 = &StringLiteral_10349/*"PARTY_ORGANIZATION_RESTRICTION_HELP_TITLE"*/;
 LABEL_124:
                         v130 = LocalizationManager__Get((System_String_o *)*v108, 0LL);
                         if ( !titleLabel )
@@ -1409,13 +1409,13 @@ void __fastcall PartyOrganizationRestrictionHelpDialog__Open_20219896(
     sub_B16FFC(&PartyOrganizationListViewItem_TypeInfo, v43);
     sub_B16FFC(&Method_PartyOrganizationRestrictionHelpDialog_EndOpen__, v44);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v45);
-    sub_B16FFC(&StringLiteral_10344, v46);
-    sub_B16FFC(&StringLiteral_10349, v47);
-    sub_B16FFC(&StringLiteral_10346, v48);
-    sub_B16FFC(&StringLiteral_10345, v49);
-    sub_B16FFC(&StringLiteral_10352, v50);
-    sub_B16FFC(&StringLiteral_10348, v51);
-    sub_B16FFC(&StringLiteral_1, v52);
+    sub_B16FFC(&StringLiteral_10344/*"PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE"*/, v46);
+    sub_B16FFC(&StringLiteral_10349/*"PARTY_ORGANIZATION_RESTRICTION_HELP_TITLE"*/, v47);
+    sub_B16FFC(&StringLiteral_10346/*"PARTY_ORGANIZATION_RESTRICTION_HELP_FIXED_SUPPORT_POSITION_TITLE"*/, v48);
+    sub_B16FFC(&StringLiteral_10345/*"PARTY_ORGANIZATION_RESTRICTION_HELP_FIXED_MY_SERVANT_POSITION"*/, v49);
+    sub_B16FFC(&StringLiteral_10352/*"PARTY_ORGANIZATION_RESTRICTION_HELP_UNIQUE_SVT_ONLY_TITLE"*/, v50);
+    sub_B16FFC(&StringLiteral_10348/*"PARTY_ORGANIZATION_RESTRICTION_HELP_SERVANT_NUM"*/, v51);
+    sub_B16FFC(&StringLiteral_1/*""*/, v52);
     byte_40F76ED = 1;
   }
   entity = 0LL;
@@ -1450,22 +1450,22 @@ void __fastcall PartyOrganizationRestrictionHelpDialog__Open_20219896(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v56 = LocalizationManager__Get((System_String_o *)StringLiteral_10344, 0LL);
+    v56 = LocalizationManager__Get((System_String_o *)StringLiteral_10344/*"PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE"*/, 0LL);
     if ( !closeLabel )
       goto LABEL_195;
     UILabel__set_text(closeLabel, v56, 0LL);
     messageLabel = this->fields.messageLabel;
     if ( !messageLabel )
       goto LABEL_195;
-    UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     messageDeckLabel = this->fields.messageDeckLabel;
     if ( !messageDeckLabel )
       goto LABEL_195;
-    UILabel__set_text(messageDeckLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(messageDeckLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     messageSelfOrSupportLabel = this->fields.messageSelfOrSupportLabel;
     if ( !messageSelfOrSupportLabel )
       goto LABEL_195;
-    UILabel__set_text(messageSelfOrSupportLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(messageSelfOrSupportLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     partyMemberBase = this->fields.partyMemberBase;
     if ( !partyMemberBase )
       goto LABEL_195;
@@ -1493,7 +1493,7 @@ void __fastcall PartyOrganizationRestrictionHelpDialog__Open_20219896(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v97 = LocalizationManager__Get((System_String_o *)StringLiteral_10349, 0LL);
+          v97 = LocalizationManager__Get((System_String_o *)StringLiteral_10349/*"PARTY_ORGANIZATION_RESTRICTION_HELP_TITLE"*/, 0LL);
           if ( !titleLabel )
             goto LABEL_195;
           UILabel__set_text(titleLabel, v97, 0LL);
@@ -1717,7 +1717,7 @@ LABEL_180:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v138 = LocalizationManager__Get((System_String_o *)StringLiteral_10349, 0LL);
+        v138 = LocalizationManager__Get((System_String_o *)StringLiteral_10349/*"PARTY_ORGANIZATION_RESTRICTION_HELP_TITLE"*/, 0LL);
         if ( !titleLabel )
           goto LABEL_195;
         UILabel__set_text(titleLabel, v138, 0LL);
@@ -1886,7 +1886,7 @@ LABEL_193:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v110 = &StringLiteral_10348;
+        v110 = &StringLiteral_10348/*"PARTY_ORGANIZATION_RESTRICTION_HELP_SERVANT_NUM"*/;
         goto LABEL_75;
       case 4:
       case 5:
@@ -1896,7 +1896,7 @@ LABEL_193:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v63 = LocalizationManager__Get((System_String_o *)StringLiteral_10345, 0LL);
+        v63 = LocalizationManager__Get((System_String_o *)StringLiteral_10345/*"PARTY_ORGANIZATION_RESTRICTION_HELP_FIXED_MY_SERVANT_POSITION"*/, 0LL);
         if ( !v62 )
           goto LABEL_195;
         UILabel__set_text(v62, v63, 0LL);
@@ -1995,7 +1995,7 @@ LABEL_40:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v118 = LocalizationManager__Get((System_String_o *)StringLiteral_10346, 0LL);
+        v118 = LocalizationManager__Get((System_String_o *)StringLiteral_10346/*"PARTY_ORGANIZATION_RESTRICTION_HELP_FIXED_SUPPORT_POSITION_TITLE"*/, 0LL);
         if ( !v117 )
           goto LABEL_195;
         UILabel__set_text(v117, v118, 0LL);
@@ -2116,7 +2116,7 @@ LABEL_191:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v110 = &StringLiteral_10352;
+        v110 = &StringLiteral_10352/*"PARTY_ORGANIZATION_RESTRICTION_HELP_UNIQUE_SVT_ONLY_TITLE"*/;
         goto LABEL_75;
       default:
         v109 = this->fields.titleLabel;
@@ -2125,7 +2125,7 @@ LABEL_191:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v110 = &StringLiteral_10349;
+        v110 = &StringLiteral_10349/*"PARTY_ORGANIZATION_RESTRICTION_HELP_TITLE"*/;
 LABEL_75:
         v111 = LocalizationManager__Get((System_String_o *)*v110, 0LL);
         if ( !v109 )

@@ -136,33 +136,33 @@ void __fastcall ServantSellMaxAlertDialog__Init(ServantSellMaxAlertDialog_o *thi
     sub_B16FFC(&Method_ServantSellMaxAlertDialog_OnClickClose__, v5);
     sub_B16FFC(&Method_ServantSellMaxAlertDialog_OnClickDecide__, v6);
     sub_B16FFC(&Method_ServantSellMaxAlertDialog_OnClickTransition__, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FBC1D = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_22;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_22;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   getableLabel = this->fields.getableLabel;
   if ( !getableLabel )
     goto LABEL_22;
-  UILabel__set_text(getableLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(getableLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideLabel = this->fields.decideLabel;
   if ( !decideLabel )
     goto LABEL_22;
-  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   transitionLabel = this->fields.transitionLabel;
   if ( !transitionLabel )
     goto LABEL_22;
-  UILabel__set_text(transitionLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(transitionLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( !closeLabel )
     goto LABEL_22;
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   eventMissionMessageLabel = (UnityEngine_Object_o *)this->fields.eventMissionMessageLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -174,7 +174,7 @@ void __fastcall ServantSellMaxAlertDialog__Init(ServantSellMaxAlertDialog_o *thi
     v20 = this->fields.eventMissionMessageLabel;
     if ( !v20 )
       goto LABEL_22;
-    UILabel__set_text(v20, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v20, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   decideButton = this->fields.decideButton;
   if ( !decideButton )

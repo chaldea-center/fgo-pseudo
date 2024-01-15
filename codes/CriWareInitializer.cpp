@@ -224,8 +224,8 @@ void __fastcall CriWareInitializer__Initialize(CriWareInitializer_o *this, const
     sub_B16FFC(&CriWareInitializer_TypeInfo, v6);
     sub_B16FFC(&UnityEngine_Debug_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
-    sub_B16FFC(&StringLiteral_951, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v10);
     byte_40F0389 = 1;
   }
   v11 = CriWareInitializer_TypeInfo;
@@ -421,8 +421,8 @@ LABEL_85:
       j_il2cpp_runtime_class_init_0(CriWareDecrypter_TypeInfo);
     }
     CriWareDecrypter__Initialize_14149300(
-      (System_String_o *)StringLiteral_951,
-      (System_String_o *)StringLiteral_1,
+      (System_String_o *)StringLiteral_951/*"0"*/,
+      (System_String_o *)StringLiteral_1/*""*/,
       0,
       0,
       v16);
@@ -797,7 +797,7 @@ bool __fastcall CriWareInitializer__InitializeMana(CriManaConfig_o *config, cons
   if ( (byte_40F038F & 1) == 0 )
   {
     sub_B16FFC(&CriManaPlugin_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3433, v3);
+    sub_B16FFC(&StringLiteral_3433/*"CRI_LINEAR_COLORSPACE"*/, v3);
     byte_40F038F = 1;
   }
   v4 = CriManaPlugin_TypeInfo;
@@ -823,7 +823,7 @@ bool __fastcall CriWareInitializer__InitializeMana(CriManaConfig_o *config, cons
   CriManaPlugin__SetConfigAdditonalParameters_ANDROID(v10, 0, v11);
   CriManaPlugin__InitializeLibrary(v12);
   if ( UnityEngine_QualitySettings__get_activeColorSpace(0LL) == 1 )
-    UnityEngine_Shader__EnableKeyword((System_String_o *)StringLiteral_3433, 0LL);
+    UnityEngine_Shader__EnableKeyword((System_String_o *)StringLiteral_3433/*"CRI_LINEAR_COLORSPACE"*/, 0LL);
   return 1;
 }
 

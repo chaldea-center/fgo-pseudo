@@ -163,7 +163,7 @@ void __fastcall EventInfoAreaImprovementSlideComponent__SlideDown(
     sub_B16FFC(&EventDelegate_TypeInfo, endCallbackAction);
     sub_B16FFC(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventDelegate__Add__, v11);
-    sub_B16FFC(&StringLiteral_5966, v12);
+    sub_B16FFC(&StringLiteral_5966/*"EndSlideDown"*/, v12);
     byte_40FB6DD = 1;
   }
   this->fields.endCallbackAction = endCallbackAction;
@@ -196,7 +196,7 @@ void __fastcall EventInfoAreaImprovementSlideComponent__SlideDown(
   *((float *)&v14[4].monitor + 1) = z;
   klass = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v14[2].klass;
   v25 = (EventDelegate_o *)sub_B170CC(EventDelegate_TypeInfo, v15, v16, v17, v18);
-  EventDelegate___ctor_29412928(v25, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5966, 0LL);
+  EventDelegate___ctor_29412928(v25, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5966/*"EndSlideDown"*/, 0LL);
   if ( !klass )
 LABEL_7:
     sub_B170D4();
@@ -241,7 +241,7 @@ void __fastcall EventInfoAreaImprovementSlideComponent__SlideIn(
     sub_B16FFC(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventDelegate__Add__, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_5967, v8);
+    sub_B16FFC(&StringLiteral_5967/*"EndSlideIn"*/, v8);
     byte_40FB6DE = 1;
   }
   infoObject = (UnityEngine_Object_o *)this->fields.infoObject;
@@ -287,7 +287,7 @@ void __fastcall EventInfoAreaImprovementSlideComponent__SlideIn(
     LODWORD(v20->fields.callbackQueue) = 2;
     klass = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v20[2].klass;
     v26 = (EventDelegate_o *)sub_B170CC(EventDelegate_TypeInfo, v22, v23, v24, v25);
-    EventDelegate___ctor_29412928(v26, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5967, 0LL);
+    EventDelegate___ctor_29412928(v26, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5967/*"EndSlideIn"*/, 0LL);
     if ( !klass )
 LABEL_13:
       sub_B170D4();

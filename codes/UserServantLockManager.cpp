@@ -30,12 +30,12 @@ void __fastcall UserServantLockManager___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_List_long___ctor__, v1);
     sub_B16FFC(&System_Collections_Generic_List_long__TypeInfo, v8);
     sub_B16FFC(&UserServantLockManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_6588, v10);
+    sub_B16FFC(&StringLiteral_6588/*"Fgo_20150511"*/, v10);
     byte_40FF6A7 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)UserServantLockManager_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_6588;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6588;
+  v12 = (System_Int32_array **)StringLiteral_6588/*"Fgo_20150511"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6588/*"Fgo_20150511"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   UserServantLockManager_TypeInfo->static_fields->isModfiy = 0;
   v17 = (System_Collections_Generic_List_long__o *)sub_B170CC(
@@ -246,7 +246,7 @@ System_String_o *__fastcall UserServantLockManager__GetSaveFileName(const Method
   {
     sub_B16FFC(&AndroidUtil_TypeInfo, v1);
     sub_B16FFC(&DatFileName_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_871, v3);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v3);
     byte_40FF6A1 = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
@@ -255,7 +255,7 @@ System_String_o *__fastcall UserServantLockManager__GetSaveFileName(const Method
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(6, 0LL);
-  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871, FileName, 0LL);
+  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871/*"/"*/, FileName, 0LL);
 }
 
 

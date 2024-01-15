@@ -23,17 +23,17 @@ void __fastcall ServantFilterButtonControl___cctor(const MethodInfo *method)
   if ( (byte_40FD0D4 & 1) == 0 )
   {
     sub_B16FFC(&ServantFilterButtonControl_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16891, v8);
-    sub_B16FFC(&StringLiteral_16890, v9);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v8);
+    sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v9);
     byte_40FD0D4 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ServantFilterButtonControl_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_16890;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16890;
+  v11 = (System_Int32_array **)StringLiteral_16890/*"btn_bg_03"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16890/*"btn_bg_03"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = ServantFilterButtonControl_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_16891;
-  v12->SPRITE_NAME_DISABLE = (struct System_String_o *)StringLiteral_16891;
+  v13 = (System_Int32_array **)StringLiteral_16891/*"btn_bg_04"*/;
+  v12->SPRITE_NAME_DISABLE = (struct System_String_o *)StringLiteral_16891/*"btn_bg_04"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->SPRITE_NAME_DISABLE, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -163,8 +163,8 @@ void __fastcall ServantFilterButtonControl__OverwriteButtonText(
   if ( (byte_40FD0D1 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, isSummon);
-    sub_B16FFC(&StringLiteral_11826, v5);
-    sub_B16FFC(&StringLiteral_11827, v6);
+    sub_B16FFC(&StringLiteral_11826/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND"*/, v5);
+    sub_B16FFC(&StringLiteral_11827/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET"*/, v6);
     byte_40FD0D1 = 1;
   }
   if ( isSummon )
@@ -178,7 +178,7 @@ void __fastcall ServantFilterButtonControl__OverwriteButtonText(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11826, 0LL);
+      v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11826/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND"*/, 0LL);
       if ( !targetSort )
         goto LABEL_17;
       UILabel__set_text(targetSort, v9, 0LL);
@@ -192,7 +192,7 @@ void __fastcall ServantFilterButtonControl__OverwriteButtonText(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11827, 0LL);
+      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11827/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET"*/, 0LL);
       if ( v10 )
       {
         UILabel__set_text(v10, v11, 0LL);
@@ -286,7 +286,7 @@ void __fastcall ServantFilterButtonControl__SetButtonMask(
 
   if ( (byte_40FD0D3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_350, isActive);
+    sub_B16FFC(&StringLiteral_350/*"#303030"*/, isActive);
     byte_40FD0D3 = 1;
   }
   *(_QWORD *)&gray.fields.r = 0LL;
@@ -308,7 +308,7 @@ void __fastcall ServantFilterButtonControl__SetButtonMask(
 LABEL_12:
     sub_B170D4();
   }
-  if ( !UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_350, &gray, 0LL) )
+  if ( !UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_350/*"#303030"*/, &gray, 0LL) )
     gray = UnityEngine_Color__get_gray(0LL);
   v7 = (UIWidget_o *)this->fields.buttonText;
   if ( !v7 )

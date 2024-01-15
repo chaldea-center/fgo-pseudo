@@ -215,50 +215,50 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText___ctor(
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v14);
     sub_B16FFC(&System_Collections_Generic_List_UILabel__TypeInfo, v15);
     sub_B16FFC(&System_Collections_Generic_List_bool__TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_16632, v17);
-    sub_B16FFC(&StringLiteral_13099, v18);
-    sub_B16FFC(&StringLiteral_13247, v19);
-    sub_B16FFC(&StringLiteral_2792, v20);
-    sub_B16FFC(&StringLiteral_6040, v21);
-    sub_B16FFC(&StringLiteral_12669, v22);
-    sub_B16FFC(&StringLiteral_2864, v23);
-    sub_B16FFC(&StringLiteral_14471, v24);
-    sub_B16FFC(&StringLiteral_3943, v25);
-    sub_B16FFC(&StringLiteral_2795, v26);
-    sub_B16FFC(&StringLiteral_4166, v27);
-    sub_B16FFC(&StringLiteral_6784, v28);
-    sub_B16FFC(&StringLiteral_16631, v29);
-    sub_B16FFC(&StringLiteral_4173, v30);
-    sub_B16FFC(&StringLiteral_13115, v31);
-    sub_B16FFC(&StringLiteral_8546, v32);
-    sub_B16FFC(&StringLiteral_12658, v33);
-    sub_B16FFC(&StringLiteral_13017, v34);
-    sub_B16FFC(&StringLiteral_19427, v35);
-    sub_B16FFC(&StringLiteral_6980, v36);
+    sub_B16FFC(&StringLiteral_16632/*"bg(Clone)/bg10500"*/, v17);
+    sub_B16FFC(&StringLiteral_13099/*"SummonBgRoot"*/, v18);
+    sub_B16FFC(&StringLiteral_13247/*"SystemUICamera"*/, v19);
+    sub_B16FFC(&StringLiteral_2792/*"Bg/10500"*/, v20);
+    sub_B16FFC(&StringLiteral_6040/*"EquipGraphListMenuPrefab(Clone)"*/, v21);
+    sub_B16FFC(&StringLiteral_12669/*"ServantStatusDialogPrefab(Clone)"*/, v22);
+    sub_B16FFC(&StringLiteral_2864/*"BtnBg"*/, v23);
+    sub_B16FFC(&StringLiteral_14471/*"TouchCamera"*/, v24);
+    sub_B16FFC(&StringLiteral_3943/*"ChoiceButton"*/, v25);
+    sub_B16FFC(&StringLiteral_2795/*"BgCamera"*/, v26);
+    sub_B16FFC(&StringLiteral_4166/*"CommonUI"*/, v27);
+    sub_B16FFC(&StringLiteral_6784/*"FrontCommonUICamera"*/, v28);
+    sub_B16FFC(&StringLiteral_16631/*"bg"*/, v29);
+    sub_B16FFC(&StringLiteral_4173/*"CommonUICamera"*/, v30);
+    sub_B16FFC(&StringLiteral_13115/*"SupportServantEquipListMenuPrefab(Clone)"*/, v31);
+    sub_B16FFC(&StringLiteral_8546/*"LockButton"*/, v32);
+    sub_B16FFC(&StringLiteral_12658/*"ServantEquipStatusDialogPrefab(Clone)"*/, v33);
+    sub_B16FFC(&StringLiteral_13017/*"StatusButton"*/, v34);
+    sub_B16FFC(&StringLiteral_19427/*"img_index_02"*/, v35);
+    sub_B16FFC(&StringLiteral_6980/*"Ground/Field/bg(Clone)"*/, v36);
     byte_4101913 = 1;
   }
-  v37 = (System_Int32_array **)StringLiteral_19427;
-  *(_QWORD *)&this->fields.BASE_SPRITE_ADD_POS_Y = StringLiteral_19427;
+  v37 = (System_Int32_array **)StringLiteral_19427/*"img_index_02"*/;
+  *(_QWORD *)&this->fields.BASE_SPRITE_ADD_POS_Y = StringLiteral_19427/*"img_index_02"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.BASE_SPRITE_ADD_POS_Y, v37, v2, v3, v4, v5, v6, v7);
   this->fields.ambientLight.fields.r = -45.0;
   *(_QWORD *)&this->fields.MESSAGE_LABEL_ADD_POS_Y = 0xC25C0000C2080000LL;
-  v38 = (System_Int32_array **)StringLiteral_4166;
-  this->fields.BATTLE_BG_OBJECT = (struct System_String_o *)StringLiteral_4166;
+  v38 = (System_Int32_array **)StringLiteral_4166/*"CommonUI"*/;
+  this->fields.BATTLE_BG_OBJECT = (struct System_String_o *)StringLiteral_4166/*"CommonUI"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.BATTLE_BG_OBJECT, v38, v39, v40, v41, v42, v43, v44);
-  v45 = (System_Int32_array **)StringLiteral_6980;
-  this->fields.SUMMON_BG_OBJECT = (struct System_String_o *)StringLiteral_6980;
+  v45 = (System_Int32_array **)StringLiteral_6980/*"Ground/Field/bg(Clone)"*/;
+  this->fields.SUMMON_BG_OBJECT = (struct System_String_o *)StringLiteral_6980/*"Ground/Field/bg(Clone)"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.SUMMON_BG_OBJECT, v45, v46, v47, v48, v49, v50, v51);
-  v52 = (System_Int32_array **)StringLiteral_16632;
-  this->fields.SUMMON_BG_ROOT = (struct System_String_o *)StringLiteral_16632;
+  v52 = (System_Int32_array **)StringLiteral_16632/*"bg(Clone)/bg10500"*/;
+  this->fields.SUMMON_BG_ROOT = (struct System_String_o *)StringLiteral_16632/*"bg(Clone)/bg10500"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.SUMMON_BG_ROOT, v52, v53, v54, v55, v56, v57, v58);
-  v59 = (System_Int32_array **)StringLiteral_13099;
-  this->fields.SUMMON_BG_ASSET_NAME = (struct System_String_o *)StringLiteral_13099;
+  v59 = (System_Int32_array **)StringLiteral_13099/*"SummonBgRoot"*/;
+  this->fields.SUMMON_BG_ASSET_NAME = (struct System_String_o *)StringLiteral_13099/*"SummonBgRoot"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.SUMMON_BG_ASSET_NAME, v59, v60, v61, v62, v63, v64, v65);
-  v66 = (System_Int32_array **)StringLiteral_2792;
-  this->fields.SUMMON_BG_OBJECT_NAME = (struct System_String_o *)StringLiteral_2792;
+  v66 = (System_Int32_array **)StringLiteral_2792/*"Bg/10500"*/;
+  this->fields.SUMMON_BG_OBJECT_NAME = (struct System_String_o *)StringLiteral_2792/*"Bg/10500"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.SUMMON_BG_OBJECT_NAME, v66, v67, v68, v69, v70, v71, v72);
-  v73 = (System_Int32_array **)StringLiteral_16631;
-  this->fields.INACTIVE_PREFABS = (struct System_Collections_Generic_List_string__o *)StringLiteral_16631;
+  v73 = (System_Int32_array **)StringLiteral_16631/*"bg"*/;
+  this->fields.INACTIVE_PREFABS = (struct System_Collections_Generic_List_string__o *)StringLiteral_16631/*"bg"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.INACTIVE_PREFABS, v73, v74, v75, v76, v77, v78, v79);
   v84 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_string__TypeInfo,
@@ -273,19 +273,19 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText___ctor(
     goto LABEL_7;
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v84,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_12669,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_12669/*"ServantStatusDialogPrefab(Clone)"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v84,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_12658,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_12658/*"ServantEquipStatusDialogPrefab(Clone)"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v84,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_6040,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_6040/*"EquipGraphListMenuPrefab(Clone)"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v84,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_13115,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_13115/*"SupportServantEquipListMenuPrefab(Clone)"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   this->fields.SCRIPT_CAMERAS = (struct System_Collections_Generic_List_string__o *)v84;
   sub_B16F98(
@@ -310,23 +310,23 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText___ctor(
     goto LABEL_7;
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v95,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_2795,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_2795/*"BgCamera"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v95,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_4173,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_4173/*"CommonUICamera"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v95,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_6784,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_6784/*"FrontCommonUICamera"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v95,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_13247,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_13247/*"SystemUICamera"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v95,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_14471,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_14471/*"TouchCamera"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   this->fields.TARGET_BUTTON_NAME = (struct System_Collections_Generic_List_string__o *)v95;
   sub_B16F98(
@@ -352,19 +352,19 @@ LABEL_7:
     sub_B170D4();
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v106,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_2864,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_2864/*"BtnBg"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v106,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_13017,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_13017/*"StatusButton"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v106,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_8546,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_8546/*"LockButton"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v106,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_3943,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_3943/*"ChoiceButton"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   this->fields.baseButton = (struct UICommonButton_o *)v106;
   sub_B16F98(
@@ -561,14 +561,14 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText__GetForm
     sub_B16FFC(&Method_System_Collections_Generic_List_char__Add__, labelText);
     sub_B16FFC(&Method_System_Collections_Generic_List_char___ctor__, v7);
     sub_B16FFC(&System_Collections_Generic_List_char__TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_15574, v9);
-    sub_B16FFC(&StringLiteral_1223, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
-    sub_B16FFC(&StringLiteral_15807, v12);
+    sub_B16FFC(&StringLiteral_15574/*"[#"*/, v9);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v12);
     byte_4101911 = 1;
   }
   v30[0] = 0;
-  v13 = (System_String_o *)StringLiteral_1;
+  v13 = (System_String_o *)StringLiteral_1/*""*/;
   v14 = (System_Collections_Generic_List_char__o *)sub_B170CC(
                                                      System_Collections_Generic_List_char__TypeInfo,
                                                      labelText,
@@ -624,7 +624,7 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText__GetForm
           {
             if ( (v17 & 1) != 0 )
             {
-              v23 = System_String__Concat_43743732((System_String_o *)StringLiteral_1223, v19, 0LL);
+              v23 = System_String__Concat_43743732((System_String_o *)StringLiteral_1223/*":"*/, v19, 0LL);
               if ( !v13 )
                 goto LABEL_33;
               v24 = v23;
@@ -633,10 +633,10 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText__GetForm
             {
               if ( !v13 )
                 goto LABEL_33;
-              v24 = (System_String_o *)StringLiteral_15807;
+              v24 = (System_String_o *)StringLiteral_15807/*"]"*/;
             }
-            v25 = System_String__Replace_43750968(v13, v24, (System_String_o *)StringLiteral_1, 0LL);
-            v19 = (System_String_o *)StringLiteral_1;
+            v25 = System_String__Replace_43750968(v13, v24, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+            v19 = (System_String_o *)StringLiteral_1/*""*/;
             v13 = v25;
             v16 = 0;
             v17 = 0;
@@ -647,8 +647,8 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText__GetForm
           goto LABEL_33;
         v13 = System_String__Replace_43750968(
                 v13,
-                (System_String_o *)StringLiteral_15574,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_15574/*"[#"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
       }
       v16 = 1;
@@ -1352,7 +1352,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText__SetCondTitle(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
     sub_B16FFC(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v6);
     sub_B16FFC(&ServantStatusFlavorTextListViewItemDrawText_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_4101909 = 1;
   }
   titleEquipBase = this->fields.titleEquipBase;
@@ -1366,7 +1366,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText__SetCondTitle(
     playScriptButton = this->fields.playScriptButton;
     if ( !playScriptButton )
       goto LABEL_53;
-    UILabel__set_text((UILabel_o *)playScriptButton, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text((UILabel_o *)playScriptButton, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -2161,8 +2161,8 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText__SetRubyObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_string__set_Item__, v15);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v16);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_23742, v18);
-    sub_B16FFC(&StringLiteral_1, v19);
+    sub_B16FFC(&StringLiteral_23742/*"・"*/, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v19);
     byte_4101910 = 1;
   }
   newIcon = (UnityEngine_Component_o *)this->fields.newIcon;
@@ -2198,7 +2198,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText__SetRubyObject(
     System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
   if ( System_String__op_Equality(
          *(System_String_o **)&textPositionYList->fields._items->m_Items[2 * idx + 1],
-         (System_String_o *)StringLiteral_1,
+         (System_String_o *)StringLiteral_1/*""*/,
          0LL) )
   {
     mText = mainLabel->fields.mText;
@@ -2214,7 +2214,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText__SetRubyObject(
             System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
           v32 = System_String__Concat_43743732(
                   (System_String_o *)v31->fields._items->m_Items[idx],
-                  (System_String_o *)StringLiteral_23742,
+                  (System_String_o *)StringLiteral_23742/*"・"*/,
                   0LL);
           System_Collections_Generic_List_WarBoardManager_TaskList___set_Item(
             v31,
@@ -2329,11 +2329,11 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText__SetText
     sub_B16FFC(&Method_System_Collections_Generic_List_bool__Add__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_string__Add__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__Add__, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_410190E = 1;
   }
   v43[0] = 0;
-  v9 = (System_String_o *)StringLiteral_1;
+  v9 = (System_String_o *)StringLiteral_1/*""*/;
   v10 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, method);
   if ( !v10 )
     goto LABEL_56;
@@ -2367,7 +2367,7 @@ LABEL_56:
         break;
       v20 = BYTE4(this[1].klass) != 0;
 LABEL_45:
-      if ( System_String__op_Inequality(v16, (System_String_o *)StringLiteral_1, 0LL) )
+      if ( System_String__op_Inequality(v16, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
       {
         rubyTextList = this->fields.rubyTextList;
         if ( !rubyTextList )
@@ -2407,7 +2407,7 @@ LABEL_45:
             (EventMissionProgressRequest_Argument_ProgressData_o *)v9,
             (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
         }
-        v16 = (System_String_o *)StringLiteral_1;
+        v16 = (System_String_o *)StringLiteral_1/*""*/;
       }
       v10 = v42;
       ++v15;
@@ -2432,7 +2432,7 @@ LABEL_45:
           goto LABEL_42;
         }
         BYTE4(this[1].klass) = 1;
-        if ( System_String__op_Inequality(v16, (System_String_o *)StringLiteral_1, 0LL) )
+        if ( System_String__op_Inequality(v16, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
         {
           v29 = this->fields.rubyTextList;
           if ( !v29 )
@@ -2462,7 +2462,7 @@ LABEL_45:
             (System_Collections_Generic_List_int__o *)v32,
             v15,
             (const MethodInfo_2F104F0 *)Method_System_Collections_Generic_List_int__Add__);
-          v16 = (System_String_o *)StringLiteral_1;
+          v16 = (System_String_o *)StringLiteral_1/*""*/;
         }
         LOBYTE(this->fields.addSize.fields.y) = 0;
         v18 = 1;
@@ -2524,7 +2524,7 @@ LABEL_27:
       v14 = 0;
       v18 = 0;
       v20 = 0;
-      v9 = (System_String_o *)StringLiteral_1;
+      v9 = (System_String_o *)StringLiteral_1/*""*/;
       BYTE4(this[1].klass) = 0;
       v16 = v9;
 LABEL_42:
@@ -2603,7 +2603,7 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText__TextFor
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_char__get_Count__, localMainTextList);
     sub_B16FFC(&Method_System_Collections_Generic_List_char__get_Item__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_4101912 = 1;
   }
   v40[0] = 0;
@@ -2611,7 +2611,7 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText__TextFor
 LABEL_53:
     sub_B170D4();
   size = localMainTextList->fields._size;
-  v8 = (System_String_o *)StringLiteral_1;
+  v8 = (System_String_o *)StringLiteral_1/*""*/;
   if ( size >= 1 )
   {
     v9 = 0;

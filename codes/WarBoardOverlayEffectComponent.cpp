@@ -71,20 +71,20 @@ bool __fastcall WarBoardOverlayEffectComponent__CheckRubyText(
 
   if ( (byte_40F859B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, message);
+    sub_B16FFC(&StringLiteral_1/*""*/, message);
     byte_40F859B = 1;
   }
   v63[0] = 0;
   if ( !message )
     sub_B170D4();
   m_stringLength = message->fields.m_stringLength;
-  v11 = (System_Int32_array **)StringLiteral_1;
-  this->fields.mainText = (struct System_String_o *)StringLiteral_1;
+  v11 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.mainText = (struct System_String_o *)StringLiteral_1/*""*/;
   p_mainText = &this->fields.mainText;
   sub_B16F98((BattleServantConfConponent_o *)p_mainText, v11, (System_String_array **)method, v3, v4, v5, v6, v7);
-  v13 = (System_Int32_array **)StringLiteral_1;
+  v13 = (System_Int32_array **)StringLiteral_1/*""*/;
   v14 = p_mainText + 1;
-  p_mainText[1] = (struct System_String_o *)StringLiteral_1;
+  p_mainText[1] = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)(p_mainText + 1), v13, v15, v16, v17, v18, v19, v20);
   if ( m_stringLength >= 1 )
   {
@@ -213,14 +213,14 @@ System_String_o *__fastcall WarBoardOverlayEffectComponent__GetFormalText(
     sub_B16FFC(&Method_System_Collections_Generic_List_char__Add__, labelText);
     sub_B16FFC(&Method_System_Collections_Generic_List_char___ctor__, v7);
     sub_B16FFC(&System_Collections_Generic_List_char__TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_15574, v9);
-    sub_B16FFC(&StringLiteral_1223, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
-    sub_B16FFC(&StringLiteral_15807, v12);
+    sub_B16FFC(&StringLiteral_15574/*"[#"*/, v9);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v12);
     byte_40F859C = 1;
   }
   v31[0] = 0;
-  v13 = (System_String_o *)StringLiteral_1;
+  v13 = (System_String_o *)StringLiteral_1/*""*/;
   v14 = (System_Collections_Generic_List_char__o *)sub_B170CC(
                                                      System_Collections_Generic_List_char__TypeInfo,
                                                      labelText,
@@ -276,7 +276,7 @@ System_String_o *__fastcall WarBoardOverlayEffectComponent__GetFormalText(
           {
             if ( (v17 & 1) != 0 )
             {
-              v23 = System_String__Concat_43743732((System_String_o *)StringLiteral_1223, v19, 0LL);
+              v23 = System_String__Concat_43743732((System_String_o *)StringLiteral_1223/*":"*/, v19, 0LL);
               if ( !v13 )
                 goto LABEL_34;
               v24 = v23;
@@ -285,10 +285,10 @@ System_String_o *__fastcall WarBoardOverlayEffectComponent__GetFormalText(
             {
               if ( !v13 )
                 goto LABEL_34;
-              v24 = (System_String_o *)StringLiteral_15807;
+              v24 = (System_String_o *)StringLiteral_15807/*"]"*/;
             }
-            v25 = System_String__Replace_43750968(v13, v24, (System_String_o *)StringLiteral_1, 0LL);
-            v19 = (System_String_o *)StringLiteral_1;
+            v25 = System_String__Replace_43750968(v13, v24, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+            v19 = (System_String_o *)StringLiteral_1/*""*/;
             v13 = v25;
             v16 = 0;
             v17 = 0;
@@ -299,8 +299,8 @@ System_String_o *__fastcall WarBoardOverlayEffectComponent__GetFormalText(
           goto LABEL_34;
         v13 = System_String__Replace_43750968(
                 v13,
-                (System_String_o *)StringLiteral_15574,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_15574/*"[#"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
       }
       v16 = 1;
@@ -496,7 +496,7 @@ System_String_o *__fastcall WarBoardOverlayEffectComponent__TextFormalAdjust(
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_char__get_Count__, localMainTextList);
     sub_B16FFC(&Method_System_Collections_Generic_List_char__get_Item__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F859D = 1;
   }
   v40[0] = 0;
@@ -504,7 +504,7 @@ System_String_o *__fastcall WarBoardOverlayEffectComponent__TextFormalAdjust(
 LABEL_53:
     sub_B170D4();
   size = localMainTextList->fields._size;
-  v8 = (System_String_o *)StringLiteral_1;
+  v8 = (System_String_o *)StringLiteral_1/*""*/;
   if ( size >= 1 )
   {
     v9 = 0;

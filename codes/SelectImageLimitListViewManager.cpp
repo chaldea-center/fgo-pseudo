@@ -328,7 +328,7 @@ void __fastcall SelectImageLimitListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_SelectImageLimitListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_SelectImageLimitListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_SelectImageLimitListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FE1DD = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -343,7 +343,7 @@ void __fastcall SelectImageLimitListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -413,7 +413,7 @@ void __fastcall SelectImageLimitListViewManager__RequestListObject_33035620(
     sub_B16FFC(&Method_System_Collections_Generic_List_SelectImageLimitListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_SelectImageLimitListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_SelectImageLimitListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FE1DE = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -428,7 +428,7 @@ void __fastcall SelectImageLimitListViewManager__RequestListObject_33035620(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

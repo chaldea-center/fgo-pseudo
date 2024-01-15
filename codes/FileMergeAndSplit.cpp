@@ -14,12 +14,12 @@ void __fastcall FileMergeAndSplit___cctor(const MethodInfo *method)
   if ( (byte_40F8E8B & 1) == 0 )
   {
     sub_B16FFC(&FileMergeAndSplit_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_10587, v8);
+    sub_B16FFC(&StringLiteral_10587/*"PathCRC"*/, v8);
     byte_40F8E8B = 1;
   }
   static_fields = (BattleServantConfConponent_o *)FileMergeAndSplit_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_10587;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_10587;
+  v10 = (System_Int32_array **)StringLiteral_10587/*"PathCRC"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_10587/*"PathCRC"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -114,11 +114,11 @@ void __fastcall FileMergeAndSplit__Split(
     sub_B16FFC(&System_IO_Path_TypeInfo, v11);
     sub_B16FFC(&System_IO_StreamWriter_TypeInfo, v12);
     sub_B16FFC(&uint_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_23564, v14);
-    sub_B16FFC(&StringLiteral_12935, v15);
-    sub_B16FFC(&StringLiteral_23516, v16);
-    sub_B16FFC(&StringLiteral_23521, v17);
-    sub_B16FFC(&StringLiteral_23519, v18);
+    sub_B16FFC(&StringLiteral_23564/*"{0}{1}{2}"*/, v14);
+    sub_B16FFC(&StringLiteral_12935/*"SplitFile/{0},{1}"*/, v15);
+    sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, v16);
+    sub_B16FFC(&StringLiteral_23521/*"{0}/{1}/{2}"*/, v17);
+    sub_B16FFC(&StringLiteral_23519/*"{0}/{1}/SplitFile"*/, v18);
     byte_40F8E8A = 1;
   }
   v76 = 0;
@@ -129,7 +129,7 @@ void __fastcall FileMergeAndSplit__Split(
     j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
   }
   arg1 = (Il2CppObject *)System_IO_Path__GetFileNameWithoutExtension(targetFilePath, 0LL);
-  v19 = System_String__Format_43739268((System_String_o *)StringLiteral_23519, (Il2CppObject *)outputPath, arg1, 0LL);
+  v19 = System_String__Format_43739268((System_String_o *)StringLiteral_23519/*"{0}/{1}/SplitFile"*/, (Il2CppObject *)outputPath, arg1, 0LL);
   v20 = FileMergeAndSplit_TypeInfo;
   if ( (BYTE3(FileMergeAndSplit_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !FileMergeAndSplit_TypeInfo->_2.cctor_finished )
@@ -138,7 +138,7 @@ void __fastcall FileMergeAndSplit__Split(
     v20 = FileMergeAndSplit_TypeInfo;
   }
   v21 = System_String__Format_43744796(
-          (System_String_o *)StringLiteral_23521,
+          (System_String_o *)StringLiteral_23521/*"{0}/{1}/{2}"*/,
           (Il2CppObject *)outputPath,
           arg1,
           (Il2CppObject *)v20->static_fields->PathCRCFileName,
@@ -174,8 +174,8 @@ void __fastcall FileMergeAndSplit__Split(
       v36 = (Il2CppObject *)System_Int32__ToString((int32_t)&v76, 0LL);
       LOWORD(v74[0]) = 46;
       v37 = (Il2CppObject *)j_il2cpp_value_box_0(char_TypeInfo, v74);
-      v38 = (Il2CppObject *)System_String__Format_43744796((System_String_o *)StringLiteral_23564, v36, v37, arg1, 0LL);
-      v39 = System_String__Format_43739268((System_String_o *)StringLiteral_23516, (Il2CppObject *)v19, v38, 0LL);
+      v38 = (Il2CppObject *)System_String__Format_43744796((System_String_o *)StringLiteral_23564/*"{0}{1}{2}"*/, v36, v37, arg1, 0LL);
+      v39 = System_String__Format_43739268((System_String_o *)StringLiteral_23516/*"{0}/{1}"*/, (Il2CppObject *)v19, v38, 0LL);
       v44 = (System_IO_FileStream_o *)sub_B170CC(System_IO_FileStream_TypeInfo, v40, v41, v42, v43);
       System_IO_FileStream___ctor_42813840(v44, v39, 2, 2, 0LL);
       v45 = 0x100000;
@@ -264,7 +264,7 @@ LABEL_34:
       v19 = v68;
       v74[0] = Crc32__Compute(AllBytes, 0LL);
       v57 = (Il2CppObject *)j_il2cpp_value_box_0(uint_TypeInfo, v74);
-      v58 = System_String__Format_43739268((System_String_o *)StringLiteral_12935, v72, v57, 0LL);
+      v58 = System_String__Format_43739268((System_String_o *)StringLiteral_12935/*"SplitFile/{0},{1}"*/, v72, v57, 0LL);
       if ( !v34 )
         sub_B170D4();
       ((void (__fastcall *)(System_IO_StreamWriter_o *, System_String_o *, Il2CppMethodPointer))v34->klass->vtable._21_WriteLine.method)(
@@ -1104,7 +1104,7 @@ bool __fastcall FileMergeAndSplit_Merge__Run_d__9__MoveNext(
     sub_B16FFC(&Method_System_Collections_Generic_List_string__get_Count__, v11);
     sub_B16FFC(&System_Math_TypeInfo, v12);
     sub_B16FFC(&System_Diagnostics_Stopwatch_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_5301, v14);
+    sub_B16FFC(&StringLiteral_5301/*"Disk full"*/, v14);
     byte_40F78D5 = 1;
   }
   v122 = 0;
@@ -1174,7 +1174,7 @@ bool __fastcall FileMergeAndSplit_Merge__Run_d__9__MoveNext(
       {
         errorCallBack = this->fields.errorCallBack;
         v30 = (System_Exception_o *)sub_B170CC(System_Exception_TypeInfo, v24, v25, v26, v27);
-        System_Exception___ctor_15880420(v30, (System_String_o *)StringLiteral_5301, 0LL);
+        System_Exception___ctor_15880420(v30, (System_String_o *)StringLiteral_5301/*"Disk full"*/, 0LL);
         if ( !errorCallBack )
           sub_B170D4();
         System_Action_Uri___Invoke(

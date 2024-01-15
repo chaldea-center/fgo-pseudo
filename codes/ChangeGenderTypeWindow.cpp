@@ -226,10 +226,10 @@ void __fastcall ChangeGenderTypeWindow__OpenChangeGenderWindow(
     sub_B16FFC(&System_Action_TypeInfo, *(_QWORD *)&currentType);
     sub_B16FFC(&Method_ChangeGenderTypeWindow_EndOpen__, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_8589, v9);
-    sub_B16FFC(&StringLiteral_6314, v10);
-    sub_B16FFC(&StringLiteral_2942, v11);
-    sub_B16FFC(&StringLiteral_2943, v12);
+    sub_B16FFC(&StringLiteral_8589/*"MALE_TEXT"*/, v9);
+    sub_B16FFC(&StringLiteral_6314/*"FEMALE_TEXT"*/, v10);
+    sub_B16FFC(&StringLiteral_2942/*"CHANGE_GENDER_INFO"*/, v11);
+    sub_B16FFC(&StringLiteral_2943/*"CHANGE_GENDER_TITLE"*/, v12);
     byte_40FCF93 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -253,20 +253,20 @@ void __fastcall ChangeGenderTypeWindow__OpenChangeGenderWindow(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_2943, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_2943/*"CHANGE_GENDER_TITLE"*/, 0LL);
   if ( !titleLb )
     goto LABEL_12;
   UILabel__set_text(titleLb, v21, 0LL);
   inputInfoLb = this->fields.inputInfoLb;
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2942, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2942/*"CHANGE_GENDER_INFO"*/, 0LL);
   if ( !inputInfoLb
     || (UILabel__set_text(inputInfoLb, v23, 0LL),
         femaleTxt = this->fields.femaleTxt,
-        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_6314, 0LL),
+        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_6314/*"FEMALE_TEXT"*/, 0LL),
         !femaleTxt)
     || (UILabel__set_text(femaleTxt, v25, 0LL),
         maleTxt = this->fields.maleTxt,
-        v27 = LocalizationManager__Get((System_String_o *)StringLiteral_8589, 0LL),
+        v27 = LocalizationManager__Get((System_String_o *)StringLiteral_8589/*"MALE_TEXT"*/, 0LL),
         !maleTxt) )
   {
 LABEL_12:

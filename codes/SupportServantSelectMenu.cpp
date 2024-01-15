@@ -304,7 +304,7 @@ void __fastcall SupportServantSelectMenu__Init(SupportServantSelectMenu_o *this,
   if ( (byte_40FDA42 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12503, v3);
+    sub_B16FFC(&StringLiteral_12503/*"SUPPORT_SERVANT_SELECT_EXPLANATION"*/, v3);
     byte_40FDA42 = 1;
   }
   supportServantListViewManager = this->fields.supportServantListViewManager;
@@ -318,7 +318,7 @@ void __fastcall SupportServantSelectMenu__Init(SupportServantSelectMenu_o *this,
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_12503, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_12503/*"SUPPORT_SERVANT_SELECT_EXPLANATION"*/, 0LL);
   if ( !explanationLabel
     || (UILabel__set_text(explanationLabel, v6, 0LL), (normalTabButton = this->fields.normalTabButton) == 0LL) )
   {
@@ -362,7 +362,7 @@ void __fastcall SupportServantSelectMenu__OnClickCancel(SupportServantSelectMenu
     sub_B16FFC(&SupportServantSelectMenu_RequestCallbackFunc_TypeInfo, method);
     sub_B16FFC(&SoundManager_TypeInfo, v3);
     sub_B16FFC(&Method_SupportServantSelectMenu_endCancelButton__, v4);
-    sub_B16FFC(&StringLiteral_4003, v5);
+    sub_B16FFC(&StringLiteral_4003/*"ClassPos"*/, v5);
     byte_40FDA4B = 1;
   }
   if ( this->fields.state == 2 )
@@ -373,7 +373,7 @@ void __fastcall SupportServantSelectMenu__OnClickCancel(SupportServantSelectMenu
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     }
     SoundManager__playSystemSe(1, 0LL);
-    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_4003, this->fields.classPos, 0LL);
+    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_4003/*"ClassPos"*/, this->fields.classPos, 0LL);
     supportServantListViewManager = (ListViewManager_o *)this->fields.supportServantListViewManager;
     if ( !supportServantListViewManager )
       sub_B170D4();
@@ -616,10 +616,10 @@ void __fastcall SupportServantSelectMenu__OnSelectItem(
     sub_B16FFC(&Method_SupportServantSelectMenu_OnSelectItem__, v24);
     sub_B16FFC(&Method_SupportServantSelectMenu___c__DisplayClass31_0__OnSelectItem_b__0__, v25);
     sub_B16FFC(&SupportServantSelectMenu___c__DisplayClass31_0_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_11946, v27);
-    sub_B16FFC(&StringLiteral_11944, v28);
-    sub_B16FFC(&StringLiteral_11945, v29);
-    sub_B16FFC(&StringLiteral_11947, v30);
+    sub_B16FFC(&StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v27);
+    sub_B16FFC(&StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v28);
+    sub_B16FFC(&StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v29);
+    sub_B16FFC(&StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v30);
     byte_40FDA45 = 1;
   }
   v31 = sub_B170CC(
@@ -822,8 +822,8 @@ LABEL_39:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v98 = LocalizationManager__Get((System_String_o *)StringLiteral_11947, 0LL);
-        v99 = LocalizationManager__Get((System_String_o *)StringLiteral_11946, 0LL);
+        v98 = LocalizationManager__Get((System_String_o *)StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
+        v99 = LocalizationManager__Get((System_String_o *)StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
         v101 = sub_B17014(object___TypeInfo, 6LL, v100);
         Rarity = UserServantEntity__getRarity(Entity, 0LL);
         if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
@@ -903,8 +903,8 @@ LABEL_39:
                       *(_QWORD *)(v101 + 72) = v145;
                       sub_B16F98((BattleServantConfConponent_o *)(v101 + 72), v145, v105, v140, v141, v142, v143, v144);
                       v146 = System_String__Format_43822456(v99, (System_Object_array *)v101, 0LL);
-                      v147 = LocalizationManager__Get((System_String_o *)StringLiteral_11945, 0LL);
-                      v148 = LocalizationManager__Get((System_String_o *)StringLiteral_11944, 0LL);
+                      v147 = LocalizationManager__Get((System_String_o *)StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
+                      v148 = LocalizationManager__Get((System_String_o *)StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
                       v149 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                       v154 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                                       CommonConfirmDialog_ClickDelegate_TypeInfo,
@@ -1075,7 +1075,7 @@ void __fastcall SupportServantSelectMenu__Open(
     sub_B16FFC(&SupportServantListViewManager_CallbackFunc_TypeInfo, v18);
     sub_B16FFC(&Method_SupportServantSelectMenu_EndOpen__, v19);
     sub_B16FFC(&Method_SupportServantSelectMenu_OnSelectItem__, v20);
-    sub_B16FFC(&StringLiteral_4003, v21);
+    sub_B16FFC(&StringLiteral_4003/*"ClassPos"*/, v21);
     byte_40FDA43 = 1;
   }
   SupportServantSelectMenu__Init(this, (const MethodInfo *)supportServantData);
@@ -1102,7 +1102,7 @@ void __fastcall SupportServantSelectMenu__Open(
     goto LABEL_16;
   UnityEngine_GameObject__SetActive(v30, IsActiveBgTxt, 0LL);
   this->fields.classPos = classPos;
-  if ( UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_4003, -1, 0LL) != classPos )
+  if ( UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_4003/*"ClassPos"*/, -1, 0LL) != classPos )
   {
     supportServantListViewManager = (ListViewManager_o *)this->fields.supportServantListViewManager;
     if ( !supportServantListViewManager )
@@ -1788,18 +1788,18 @@ void __fastcall SupportServantSelectMenu__setModeTabKind(
     sub_B16FFC(&SupportServantListViewManager_CallbackFunc_TypeInfo, *(_QWORD *)&modeKind);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&Method_SupportServantSelectMenu_OnSelectItem__, v6);
-    sub_B16FFC(&StringLiteral_11701, v7);
-    sub_B16FFC(&StringLiteral_17071, v8);
-    sub_B16FFC(&StringLiteral_17072, v9);
-    sub_B16FFC(&StringLiteral_17057, v10);
-    sub_B16FFC(&StringLiteral_17060, v11);
-    sub_B16FFC(&StringLiteral_11699, v12);
-    sub_B16FFC(&StringLiteral_11700, v13);
-    sub_B16FFC(&StringLiteral_17073, v14);
-    sub_B16FFC(&StringLiteral_12503, v15);
-    sub_B16FFC(&StringLiteral_17074, v16);
-    sub_B16FFC(&StringLiteral_17059, v17);
-    sub_B16FFC(&StringLiteral_17058, v18);
+    sub_B16FFC(&StringLiteral_11701/*"SERVANT_LIST_EXPLANATION_PUSH"*/, v7);
+    sub_B16FFC(&StringLiteral_17071/*"button_push_reg"*/, v8);
+    sub_B16FFC(&StringLiteral_17072/*"button_push_unreg"*/, v9);
+    sub_B16FFC(&StringLiteral_17057/*"button_allchoice_reg"*/, v10);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v11);
+    sub_B16FFC(&StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/, v12);
+    sub_B16FFC(&StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/, v13);
+    sub_B16FFC(&StringLiteral_17073/*"button_select_reg"*/, v14);
+    sub_B16FFC(&StringLiteral_12503/*"SUPPORT_SERVANT_SELECT_EXPLANATION"*/, v15);
+    sub_B16FFC(&StringLiteral_17074/*"button_select_unreg"*/, v16);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v17);
+    sub_B16FFC(&StringLiteral_17058/*"button_allchoice_unreg"*/, v18);
     byte_40FDA4A = 1;
   }
   if ( this->fields.tabModeKind != modeKind )
@@ -1817,7 +1817,7 @@ void __fastcall SupportServantSelectMenu__setModeTabKind(
         normalTabSprite = this->fields.normalTabSprite;
         if ( normalTabSprite )
         {
-          v23 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17074 : &StringLiteral_17073);
+          v23 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17074/*"button_select_unreg"*/ : &StringLiteral_17073/*"button_select_reg"*/);
           UISprite__set_spriteName(normalTabSprite, *v23, 0LL);
           lockTabButton = (UnityEngine_Behaviour_o *)this->fields.lockTabButton;
           if ( lockTabButton )
@@ -1831,7 +1831,7 @@ void __fastcall SupportServantSelectMenu__setModeTabKind(
               lockTabSprite = this->fields.lockTabSprite;
               if ( lockTabSprite )
               {
-                v28 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17059 : &StringLiteral_17060);
+                v28 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17059/*"button_alllock_reg"*/ : &StringLiteral_17060/*"button_alllock_unreg"*/);
                 UISprite__set_spriteName(lockTabSprite, *v28, 0LL);
                 choiceTabButton = (UnityEngine_Behaviour_o *)this->fields.choiceTabButton;
                 if ( choiceTabButton )
@@ -1848,8 +1848,8 @@ void __fastcall SupportServantSelectMenu__setModeTabKind(
                     if ( choiceTabSprite )
                     {
                       v33 = (System_String_o **)(this->fields.tabModeKind == 2
-                                               ? &StringLiteral_17057
-                                               : &StringLiteral_17058);
+                                               ? &StringLiteral_17057/*"button_allchoice_reg"*/
+                                               : &StringLiteral_17058/*"button_allchoice_unreg"*/);
                       UISprite__set_spriteName(choiceTabSprite, *v33, 0LL);
                       pushTabButton = (UnityEngine_Behaviour_o *)this->fields.pushTabButton;
                       if ( pushTabButton )
@@ -1866,9 +1866,9 @@ void __fastcall SupportServantSelectMenu__setModeTabKind(
                           if ( pushTabSprite )
                           {
                             if ( this->fields.tabModeKind == 3 )
-                              v38 = (System_String_o **)&StringLiteral_17071;
+                              v38 = (System_String_o **)&StringLiteral_17071/*"button_push_reg"*/;
                             else
-                              v38 = (System_String_o **)&StringLiteral_17072;
+                              v38 = (System_String_o **)&StringLiteral_17072/*"button_push_unreg"*/;
                             UISprite__set_spriteName(pushTabSprite, *v38, 0LL);
                             switch ( this->fields.tabModeKind )
                             {
@@ -1879,7 +1879,7 @@ void __fastcall SupportServantSelectMenu__setModeTabKind(
                                 {
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
-                                v41 = &StringLiteral_12503;
+                                v41 = &StringLiteral_12503/*"SUPPORT_SERVANT_SELECT_EXPLANATION"*/;
                                 goto LABEL_45;
                               case 1:
                                 explanationLabel = this->fields.explanationLabel;
@@ -1888,7 +1888,7 @@ void __fastcall SupportServantSelectMenu__setModeTabKind(
                                 {
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
-                                v41 = &StringLiteral_11700;
+                                v41 = &StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
                                 goto LABEL_45;
                               case 2:
                                 explanationLabel = this->fields.explanationLabel;
@@ -1897,7 +1897,7 @@ void __fastcall SupportServantSelectMenu__setModeTabKind(
                                 {
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
-                                v41 = &StringLiteral_11699;
+                                v41 = &StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
                                 goto LABEL_45;
                               case 3:
                                 explanationLabel = this->fields.explanationLabel;
@@ -1906,7 +1906,7 @@ void __fastcall SupportServantSelectMenu__setModeTabKind(
                                 {
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
-                                v41 = &StringLiteral_11701;
+                                v41 = &StringLiteral_11701/*"SERVANT_LIST_EXPLANATION_PUSH"*/;
 LABEL_45:
                                 v42 = LocalizationManager__Get((System_String_o *)*v41, 0LL);
                                 if ( !explanationLabel )

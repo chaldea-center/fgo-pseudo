@@ -106,8 +106,8 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
   if ( (byte_40F96D1 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12375, v3);
-    sub_B16FFC(&StringLiteral_12385, v4);
+    sub_B16FFC(&StringLiteral_12375/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, v3);
+    sub_B16FFC(&StringLiteral_12385/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/, v4);
     byte_40F96D1 = 1;
   }
   p_titleString = &this->fields.titleString;
@@ -120,7 +120,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v6 = &StringLiteral_12385;
+      v6 = &StringLiteral_12385/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
     }
     else
     {
@@ -129,7 +129,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v6 = &StringLiteral_12375;
+      v6 = &StringLiteral_12375/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
     }
     v7 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)*v6, 0LL);
     *p_titleString = (System_String_o *)v7;

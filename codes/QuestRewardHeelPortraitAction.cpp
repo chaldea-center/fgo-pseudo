@@ -10,12 +10,12 @@ void __fastcall QuestRewardHeelPortraitAction___ctor(QuestRewardHeelPortraitActi
 
   if ( (byte_40FD5F6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6184, method);
+    sub_B16FFC(&StringLiteral_6184/*"EventUI/Prefabs/"*/, method);
     byte_40FD5F6 = 1;
   }
   *(_QWORD *)&this->fields.screenTouchInfoPosY = 0x40000000FFFFFF23LL;
-  v9 = (System_Int32_array **)StringLiteral_6184;
-  this->fields.loadAssetName = (struct System_String_o *)StringLiteral_6184;
+  v9 = (System_Int32_array **)StringLiteral_6184/*"EventUI/Prefabs/"*/;
+  this->fields.loadAssetName = (struct System_String_o *)StringLiteral_6184/*"EventUI/Prefabs/"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.loadAssetName, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -594,7 +594,7 @@ bool __fastcall QuestRewardHeelPortraitAction__Play_d__17__MoveNext(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
     sub_B16FFC(&Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__, v10);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_16378, v12);
+    sub_B16FFC(&StringLiteral_16378/*"ar236"*/, v12);
     byte_40FA32B = 1;
   }
   _1__state = this->fields.__1__state;
@@ -633,7 +633,7 @@ bool __fastcall QuestRewardHeelPortraitAction__Play_d__17__MoveNext(
           if ( (*((_BYTE *)Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__ + 75) & 2) != 0 )
             v17 = (_QWORD *)sub_B17004(Method_QuestRewardHeelPortraitAction__Play_d__17_MoveNext__);
           v18 = (System_Reflection_MethodBase_o *)sub_B16FE0(v17, v17[3]);
-          OverwriteAssetSoundName__PlaySe(v18, (System_String_o *)StringLiteral_16378, 0LL);
+          OverwriteAssetSoundName__PlaySe(v18, (System_String_o *)StringLiteral_16378/*"ar236"*/, 0LL);
           Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           if ( (BYTE3(AvalonSceneManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !AvalonSceneManager_TypeInfo->_2.cctor_finished )

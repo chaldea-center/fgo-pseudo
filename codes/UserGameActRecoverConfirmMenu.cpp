@@ -131,38 +131,38 @@ void __fastcall UserGameActRecoverConfirmMenu__Init(UserGameActRecoverConfirmMen
 
   if ( (byte_40F96DF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F96DF = 1;
   }
   stoneTitleLabel = this->fields.stoneTitleLabel;
   if ( !stoneTitleLabel )
     goto LABEL_12;
-  UILabel__set_text(stoneTitleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(stoneTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   stoneDataLabel = this->fields.stoneDataLabel;
   if ( !stoneDataLabel )
     goto LABEL_12;
-  UILabel__set_text(stoneDataLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(stoneDataLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_12;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   infoLabel = this->fields.infoLabel;
   if ( !infoLabel )
     goto LABEL_12;
-  UILabel__set_text(infoLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(infoLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   warningLabel = this->fields.warningLabel;
   if ( !warningLabel
-    || (UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL)
-    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL) )
   {
 LABEL_12:
     sub_B170D4();
   }
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -368,20 +368,20 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
     sub_B16FFC(&int_TypeInfo, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_UserGameActRecoverConfirmMenu_EndOpen__, v15);
-    sub_B16FFC(&StringLiteral_14697, v16);
-    sub_B16FFC(&StringLiteral_14693, v17);
-    sub_B16FFC(&StringLiteral_14687, v18);
-    sub_B16FFC(&StringLiteral_14696, v19);
-    sub_B16FFC(&StringLiteral_14688, v20);
-    sub_B16FFC(&StringLiteral_14689, v21);
-    sub_B16FFC(&StringLiteral_14692, v22);
-    sub_B16FFC(&StringLiteral_14691, v23);
-    sub_B16FFC(&StringLiteral_12340, v24);
-    sub_B16FFC(&StringLiteral_14695, v25);
-    sub_B16FFC(&StringLiteral_12341, v26);
-    sub_B16FFC(&StringLiteral_1, v27);
-    sub_B16FFC(&StringLiteral_14690, v28);
-    sub_B16FFC(&StringLiteral_14694, v29);
+    sub_B16FFC(&StringLiteral_14697/*"USER_GAME_ACT_RECOVER_STONE"*/, v16);
+    sub_B16FFC(&StringLiteral_14693/*"USER_GAME_ACT_RECOVER_MESSAGE_INFO_NONE"*/, v17);
+    sub_B16FFC(&StringLiteral_14687/*"USER_GAME_ACT_RECOVER_CANCEL"*/, v18);
+    sub_B16FFC(&StringLiteral_14696/*"USER_GAME_ACT_RECOVER_REQUEST_STONE_MESSAGE"*/, v19);
+    sub_B16FFC(&StringLiteral_14688/*"USER_GAME_ACT_RECOVER_CLOSE"*/, v20);
+    sub_B16FFC(&StringLiteral_14689/*"USER_GAME_ACT_RECOVER_DECIDE"*/, v21);
+    sub_B16FFC(&StringLiteral_14692/*"USER_GAME_ACT_RECOVER_MESSAGE_END"*/, v22);
+    sub_B16FFC(&StringLiteral_14691/*"USER_GAME_ACT_RECOVER_INFO_BEFORE_AFTER"*/, v23);
+    sub_B16FFC(&StringLiteral_12340/*"STONE_TAKE"*/, v24);
+    sub_B16FFC(&StringLiteral_14695/*"USER_GAME_ACT_RECOVER_MESSAGE_START"*/, v25);
+    sub_B16FFC(&StringLiteral_12341/*"STONE_UNIT"*/, v26);
+    sub_B16FFC(&StringLiteral_1/*""*/, v27);
+    sub_B16FFC(&StringLiteral_14690/*"USER_GAME_ACT_RECOVER_INFO"*/, v28);
+    sub_B16FFC(&StringLiteral_14694/*"USER_GAME_ACT_RECOVER_MESSAGE_MAX_ACT"*/, v29);
     byte_40F96E0 = 1;
   }
   if ( !this->fields.state )
@@ -428,12 +428,12 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v47 = LocalizationManager__Get((System_String_o *)StringLiteral_12340, 0LL);
+      v47 = LocalizationManager__Get((System_String_o *)StringLiteral_12340/*"STONE_TAKE"*/, 0LL);
       if ( stoneTitleLabel )
       {
         UILabel__set_text(stoneTitleLabel, v47, 0LL);
         stoneDataLabel = this->fields.stoneDataLabel;
-        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12341, 0LL);
+        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12341/*"STONE_UNIT"*/, 0LL);
         userGameEntity = this->fields.userGameEntity;
         if ( userGameEntity )
         {
@@ -444,7 +444,7 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
           if ( stoneDataLabel )
           {
             UILabel__set_text(stoneDataLabel, v53, 0LL);
-            v54 = LocalizationManager__Get((System_String_o *)StringLiteral_14690, 0LL);
+            v54 = LocalizationManager__Get((System_String_o *)StringLiteral_14690/*"USER_GAME_ACT_RECOVER_INFO"*/, 0LL);
             v56 = *p_userGameEntity;
             if ( *p_userGameEntity )
             {
@@ -468,7 +468,7 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v77 = LocalizationManager__Get((System_String_o *)StringLiteral_14695, 0LL);
+                  v77 = LocalizationManager__Get((System_String_o *)StringLiteral_14695/*"USER_GAME_ACT_RECOVER_MESSAGE_START"*/, 0LL);
                   if ( messageLabel )
                   {
                     UILabel__set_text(messageLabel, v77, 0LL);
@@ -527,14 +527,14 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_14688, 0LL);
+                  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_14688/*"USER_GAME_ACT_RECOVER_CLOSE"*/, 0LL);
                   if ( closeLabel )
                   {
                     UILabel__set_text(closeLabel, v64, 0LL);
                     warningLabel = this->fields.warningLabel;
                     if ( warningLabel )
                     {
-                      UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1, 0LL);
+                      UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
                       v66 = (UnityEngine_Component_o *)this->fields.decideButton;
                       if ( v66 )
                       {
@@ -577,23 +577,23 @@ LABEL_47:
                                             v86 = this->fields.warningLabel;
                                             if ( !v86 )
                                               goto LABEL_84;
-                                            UILabel__set_text(v86, (System_String_o *)StringLiteral_1, 0LL);
+                                            UILabel__set_text(v86, (System_String_o *)StringLiteral_1/*""*/, 0LL);
                                             decideLabel = this->fields.decideLabel;
                                             if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                                               && !LocalizationManager_TypeInfo->_2.cctor_finished )
                                             {
                                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                             }
-                                            v88 = LocalizationManager__Get((System_String_o *)StringLiteral_14689, 0LL);
+                                            v88 = LocalizationManager__Get((System_String_o *)StringLiteral_14689/*"USER_GAME_ACT_RECOVER_DECIDE"*/, 0LL);
                                             if ( !decideLabel )
                                               goto LABEL_84;
                                             UILabel__set_text(decideLabel, v88, 0LL);
                                             cancelLabel = this->fields.cancelLabel;
-                                            v90 = LocalizationManager__Get((System_String_o *)StringLiteral_14687, 0LL);
+                                            v90 = LocalizationManager__Get((System_String_o *)StringLiteral_14687/*"USER_GAME_ACT_RECOVER_CANCEL"*/, 0LL);
                                             if ( !cancelLabel )
                                               goto LABEL_84;
                                             UILabel__set_text(cancelLabel, v90, 0LL);
-                                            v91 = LocalizationManager__Get((System_String_o *)StringLiteral_14690, 0LL);
+                                            v91 = LocalizationManager__Get((System_String_o *)StringLiteral_14690/*"USER_GAME_ACT_RECOVER_INFO"*/, 0LL);
                                             if ( !*p_userGameEntity )
                                               goto LABEL_84;
                                             v92 = v91;
@@ -606,7 +606,7 @@ LABEL_47:
                                             v116 = v94->fields.actMax;
                                             v96 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v116);
                                             v97 = (Il2CppObject *)System_String__Format_43739268(v92, v95, v96, 0LL);
-                                            v98 = LocalizationManager__Get((System_String_o *)StringLiteral_14691, 0LL);
+                                            v98 = LocalizationManager__Get((System_String_o *)StringLiteral_14691/*"USER_GAME_ACT_RECOVER_INFO_BEFORE_AFTER"*/, 0LL);
                                             v62 = (Il2CppObject *)System_String__Format_43739268(v98, v62, v97, 0LL);
                                             goto LABEL_81;
                                           case 1:
@@ -616,17 +616,17 @@ LABEL_47:
                                             {
                                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                             }
-                                            v100 = LocalizationManager__Get((System_String_o *)StringLiteral_14696, 0LL);
+                                            v100 = LocalizationManager__Get((System_String_o *)StringLiteral_14696/*"USER_GAME_ACT_RECOVER_REQUEST_STONE_MESSAGE"*/, 0LL);
                                             if ( !v99 )
                                               goto LABEL_84;
                                             UILabel__set_text(v99, v100, 0LL);
                                             v101 = this->fields.decideLabel;
-                                            v102 = LocalizationManager__Get((System_String_o *)StringLiteral_14697, 0LL);
+                                            v102 = LocalizationManager__Get((System_String_o *)StringLiteral_14697/*"USER_GAME_ACT_RECOVER_STONE"*/, 0LL);
                                             if ( !v101 )
                                               goto LABEL_84;
                                             UILabel__set_text(v101, v102, 0LL);
                                             v103 = this->fields.cancelLabel;
-                                            v104 = LocalizationManager__Get((System_String_o *)StringLiteral_14687, 0LL);
+                                            v104 = LocalizationManager__Get((System_String_o *)StringLiteral_14687/*"USER_GAME_ACT_RECOVER_CANCEL"*/, 0LL);
                                             if ( !v103 )
                                               goto LABEL_84;
                                             goto LABEL_80;
@@ -637,7 +637,7 @@ LABEL_47:
                                             {
                                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                             }
-                                            v105 = &StringLiteral_14692;
+                                            v105 = &StringLiteral_14692/*"USER_GAME_ACT_RECOVER_MESSAGE_END"*/;
                                             goto LABEL_76;
                                           case 3:
                                             v103 = this->fields.messageLabel;
@@ -646,7 +646,7 @@ LABEL_47:
                                             {
                                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                             }
-                                            v105 = &StringLiteral_14694;
+                                            v105 = &StringLiteral_14694/*"USER_GAME_ACT_RECOVER_MESSAGE_MAX_ACT"*/;
                                             goto LABEL_76;
                                           case 4:
                                             v103 = this->fields.messageLabel;
@@ -655,7 +655,7 @@ LABEL_47:
                                             {
                                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                             }
-                                            v105 = &StringLiteral_14693;
+                                            v105 = &StringLiteral_14693/*"USER_GAME_ACT_RECOVER_MESSAGE_INFO_NONE"*/;
 LABEL_76:
                                             v106 = LocalizationManager__Get((System_String_o *)*v105, 0LL);
                                             v107 = BalanceConfig_TypeInfo;

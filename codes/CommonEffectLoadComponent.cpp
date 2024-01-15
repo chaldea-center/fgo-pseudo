@@ -85,12 +85,12 @@ void __fastcall CommonEffectLoadComponent__EndLoad(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v11);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_16123, v14);
-    sub_B16FFC(&StringLiteral_16127, v15);
-    sub_B16FFC(&StringLiteral_16128, v16);
-    sub_B16FFC(&StringLiteral_16118, v17);
-    sub_B16FFC(&StringLiteral_16119, v18);
-    sub_B16FFC(&StringLiteral_16099, v19);
+    sub_B16FFC(&StringLiteral_16123/*"_threeValue2"*/, v14);
+    sub_B16FFC(&StringLiteral_16127/*"_twoValue0"*/, v15);
+    sub_B16FFC(&StringLiteral_16128/*"_twoValue1"*/, v16);
+    sub_B16FFC(&StringLiteral_16118/*"_threeValue0"*/, v17);
+    sub_B16FFC(&StringLiteral_16119/*"_threeValue1"*/, v18);
+    sub_B16FFC(&StringLiteral_16099/*"_oneValue"*/, v19);
     byte_40F6579 = 1;
   }
   if ( this->fields.isEnable )
@@ -241,8 +241,8 @@ void __fastcall CommonEffectLoadComponent__EndLoad(
           {
             if ( !material )
               sub_B170D4();
-            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16099, 0LL);
-            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16099, 0.0, 0LL);
+            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16099/*"_oneValue"*/, 0LL);
+            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16099/*"_oneValue"*/, 0.0, 0LL);
           }
           if ( GameObjectExtensions__HasComponent_StoneCountRefreshComponent_(
                  v55,
@@ -250,10 +250,10 @@ void __fastcall CommonEffectLoadComponent__EndLoad(
           {
             if ( !material )
               sub_B170D4();
-            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16127, 0LL);
-            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16128, 0LL);
-            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16127, 0.0, 0LL);
-            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16128, 0.0, 0LL);
+            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16127/*"_twoValue0"*/, 0LL);
+            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16128/*"_twoValue1"*/, 0LL);
+            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16127/*"_twoValue0"*/, 0.0, 0LL);
+            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16128/*"_twoValue1"*/, 0.0, 0LL);
           }
           if ( GameObjectExtensions__HasComponent_StoneCountRefreshComponent_(
                  v55,
@@ -261,12 +261,12 @@ void __fastcall CommonEffectLoadComponent__EndLoad(
           {
             if ( !material )
               sub_B170D4();
-            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16118, 0LL);
-            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16119, 0LL);
-            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16123, 0LL);
-            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16118, 0.0, 0LL);
-            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16119, 0.0, 0LL);
-            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16123, 0.0, 0LL);
+            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16118/*"_threeValue0"*/, 0LL);
+            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16119/*"_threeValue1"*/, 0LL);
+            UnityEngine_Material__EnableKeyword(material, (System_String_o *)StringLiteral_16123/*"_threeValue2"*/, 0LL);
+            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16118/*"_threeValue0"*/, 0.0, 0LL);
+            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16119/*"_threeValue1"*/, 0.0, 0LL);
+            UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16123/*"_threeValue2"*/, 0.0, 0LL);
           }
         }
       }
@@ -385,8 +385,8 @@ void __fastcall CommonEffectLoadComponent__Init_18177312(
     sub_B16FFC(&Method_CommonEffectLoadComponent_EndLoad__, v10);
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_5853, v13);
-    sub_B16FFC(&StringLiteral_651, v14);
+    sub_B16FFC(&StringLiteral_5853/*"EffectLoad("*/, v13);
+    sub_B16FFC(&StringLiteral_651/*")"*/, v14);
     byte_40F6578 = 1;
   }
   if ( !this->fields.isInit )
@@ -404,9 +404,9 @@ void __fastcall CommonEffectLoadComponent__Init_18177312(
       v7);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     v16 = System_String__Concat_43746016(
-            (System_String_o *)StringLiteral_5853,
+            (System_String_o *)StringLiteral_5853/*"EffectLoad("*/,
             filename,
-            (System_String_o *)StringLiteral_651,
+            (System_String_o *)StringLiteral_651/*")"*/,
             0LL);
     if ( !gameObject )
       sub_B170D4();

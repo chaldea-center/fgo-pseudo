@@ -78,8 +78,8 @@ void __fastcall LevelExceedControl__CheckConductionWire(LevelExceedControl_o *th
   if ( (byte_40FC22C & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3277, v3);
-    sub_B16FFC(&StringLiteral_3278, v4);
+    sub_B16FFC(&StringLiteral_3277/*"CONDUCTION_COMBINE"*/, v3);
+    sub_B16FFC(&StringLiteral_3278/*"CONDUCTION_COMBINE_MSG"*/, v4);
     byte_40FC22C = 1;
   }
   conductionWireInfo = this->fields.conductionWireInfo;
@@ -107,12 +107,12 @@ LABEL_9:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3278, 0LL);
+      v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3278/*"CONDUCTION_COMBINE_MSG"*/, 0LL);
       if ( conductionWireLabel )
       {
         UILabel__set_text(conductionWireLabel, v10, 0LL);
         conductionButtonLabel = this->fields.conductionButtonLabel;
-        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3277, 0LL);
+        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3277/*"CONDUCTION_COMBINE"*/, 0LL);
         if ( conductionButtonLabel )
         {
           UILabel__set_text(conductionButtonLabel, v12, 0LL);
@@ -490,7 +490,7 @@ void __fastcall LevelExceedControl__InitLvExceed(LevelExceedControl_o *this, con
   if ( (byte_40FC227 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_8812, v3);
+    sub_B16FFC(&StringLiteral_8812/*"MSG_PRESELECT_BASE_SVT"*/, v3);
     byte_40FC227 = 1;
   }
   EventTutorialMaster__CheckTutorial(0, 40, 0LL, 0, 0, 0, 0, 0LL);
@@ -514,7 +514,7 @@ void __fastcall LevelExceedControl__InitLvExceed(LevelExceedControl_o *this, con
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_8812, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_8812/*"MSG_PRESELECT_BASE_SVT"*/, 0LL);
   if ( !preSelectBaseLb
     || (UILabel__set_text(preSelectBaseLb, v9, 0LL), (preSelectBaseObj = this->fields.preSelectBaseObj) == 0LL)
     || (UnityEngine_GameObject__SetActive(preSelectBaseObj, 1, 0LL),
@@ -535,7 +535,7 @@ void __fastcall LevelExceedControl__OnClickCheckLvExceed(LevelExceedControl_o *t
   if ( (byte_40FC235 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3322, v3);
+    sub_B16FFC(&StringLiteral_3322/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, v3);
     byte_40FC235 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -543,7 +543,7 @@ void __fastcall LevelExceedControl__OnClickCheckLvExceed(LevelExceedControl_o *t
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3322, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3322/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, 0LL);
   if ( !this->fields.exeCombineDlg )
     sub_B170D4();
   SetRarityDialogControl__SetConfirmLvExceed(
@@ -565,7 +565,7 @@ void __fastcall LevelExceedControl__OnClickExeLvExceed(LevelExceedControl_o *thi
   if ( (byte_40FC234 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3322, v3);
+    sub_B16FFC(&StringLiteral_3322/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, v3);
     byte_40FC234 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -573,7 +573,7 @@ void __fastcall LevelExceedControl__OnClickExeLvExceed(LevelExceedControl_o *thi
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3322, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3322/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, 0LL);
   if ( !this->fields.exeCombineDlg )
     sub_B170D4();
   SetRarityDialogControl__SetConfirmLvExceed(
@@ -935,7 +935,7 @@ void __fastcall LevelExceedControl__SetExceedInfo(LevelExceedControl_o *this, co
     sub_B16FFC(&System_Collections_Generic_List_LimitCntUpItemComponent__TypeInfo, v10);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_9236, v13);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v13);
     byte_40FC230 = 1;
   }
   exp = 0;
@@ -1010,7 +1010,7 @@ void __fastcall LevelExceedControl__SetExceedInfo(LevelExceedControl_o *this, co
     goto LABEL_69;
   this->fields.spendQpVal = UserServantEntity__getCombineQpSvtExceed(v39, 0LL);
   needQpLb = this->fields.needQpLb;
-  v41 = System_Int32__ToString_38275808((int)this + 208, (System_String_o *)StringLiteral_9236, 0LL);
+  v41 = System_Int32__ToString_38275808((int)this + 208, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !needQpLb )
     goto LABEL_69;
   UILabel__set_text(needQpLb, v41, 0LL);
@@ -1267,7 +1267,7 @@ void __fastcall LevelExceedControl__SetHaveQpIno(LevelExceedControl_o *this, con
 
   if ( (byte_40FC229 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9236, method);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, method);
     byte_40FC229 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -1275,7 +1275,7 @@ void __fastcall LevelExceedControl__SetHaveQpIno(LevelExceedControl_o *this, con
     || (this->fields.haveQpVal = SelfUserGame->fields.qp,
         p_haveQpVal = &this->fields.haveQpVal,
         v5 = *(UILabel_o **)(p_haveQpVal - 9),
-        v6 = System_Int32__ToString_38275808((int32_t)p_haveQpVal, (System_String_o *)StringLiteral_9236, 0LL),
+        v6 = System_Int32__ToString_38275808((int32_t)p_haveQpVal, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL),
         !v5) )
   {
     sub_B170D4();
@@ -1316,12 +1316,12 @@ void __fastcall LevelExceedControl__SetStateInfoMsg(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, *(_QWORD *)&state);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8808, v6);
-    sub_B16FFC(&StringLiteral_5746, v7);
-    sub_B16FFC(&StringLiteral_12161, v8);
-    sub_B16FFC(&StringLiteral_12162, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
-    sub_B16FFC(&StringLiteral_7252, v11);
+    sub_B16FFC(&StringLiteral_8808/*"MSG_MAX_LVEXCEED"*/, v6);
+    sub_B16FFC(&StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/, v7);
+    sub_B16FFC(&StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/, v8);
+    sub_B16FFC(&StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
+    sub_B16FFC(&StringLiteral_7252/*"INFO_MSG_LVEXCEED"*/, v11);
     byte_40FC236 = 1;
   }
   detailInfoLb = (UnityEngine_Component_o *)this->fields.detailInfoLb;
@@ -1354,7 +1354,7 @@ LABEL_36:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = &StringLiteral_8808;
+      v18 = &StringLiteral_8808/*"MSG_MAX_LVEXCEED"*/;
       goto LABEL_29;
     }
     if ( !this->fields.isItemNum )
@@ -1366,7 +1366,7 @@ LABEL_36:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = &StringLiteral_12161;
+      v18 = &StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/;
       goto LABEL_29;
     }
     if ( this->fields.isQpNum )
@@ -1377,7 +1377,7 @@ LABEL_39:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = &StringLiteral_5746;
+      v18 = &StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/;
     }
     else
     {
@@ -1388,14 +1388,14 @@ LABEL_39:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = &StringLiteral_12162;
+      v18 = &StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/;
     }
   }
   else
   {
     if ( state )
     {
-      v19 = (System_String_o *)StringLiteral_1;
+      v19 = (System_String_o *)StringLiteral_1/*""*/;
       goto LABEL_30;
     }
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1403,7 +1403,7 @@ LABEL_39:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = &StringLiteral_7252;
+    v18 = &StringLiteral_7252/*"INFO_MSG_LVEXCEED"*/;
   }
 LABEL_29:
   v19 = LocalizationManager__Get((System_String_o *)*v18, 0LL);

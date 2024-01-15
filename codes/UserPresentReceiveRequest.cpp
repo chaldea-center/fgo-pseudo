@@ -24,9 +24,9 @@ void __fastcall UserPresentReceiveRequest__beginRequest(
   {
     sub_B16FFC(&System_Convert_TypeInfo, presentIds);
     sub_B16FFC(&MiniMessagePack_MiniMessagePacker_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_19935, v10);
-    sub_B16FFC(&StringLiteral_21432, v11);
-    sub_B16FFC(&StringLiteral_19936, v12);
+    sub_B16FFC(&StringLiteral_19935/*"itemSelectIdx"*/, v10);
+    sub_B16FFC(&StringLiteral_21432/*"presentIds"*/, v11);
+    sub_B16FFC(&StringLiteral_19936/*"itemSelectNum"*/, v12);
     byte_40F80CF = 1;
   }
   v13 = (MiniMessagePack_MiniMessagePacker_o *)sub_B170CC(
@@ -45,9 +45,9 @@ void __fastcall UserPresentReceiveRequest__beginRequest(
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
   v15 = System_Convert__ToBase64String(v14, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_21432, v15, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19935, itemSelectIdx, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19936, itemSelectNum, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_21432/*"presentIds"*/, v15, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19935/*"itemSelectIdx"*/, itemSelectIdx, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19936/*"itemSelectNum"*/, itemSelectNum, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -61,7 +61,7 @@ System_String_o *__fastcall UserPresentReceiveRequest__getMockData(
   if ( (byte_40F80CE & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9140, v2);
+    sub_B16FFC(&StringLiteral_9140/*"MockUserPresentReceiveResponse"*/, v2);
     byte_40F80CE = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -69,7 +69,7 @@ System_String_o *__fastcall UserPresentReceiveRequest__getMockData(
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9140, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9140/*"MockUserPresentReceiveResponse"*/, 0LL);
 }
 
 
@@ -83,7 +83,7 @@ System_String_o *__fastcall UserPresentReceiveRequest__getURL(
   if ( (byte_40F80CD & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21430, v2);
+    sub_B16FFC(&StringLiteral_21430/*"present/receive"*/, v2);
     byte_40F80CD = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -92,7 +92,7 @@ System_String_o *__fastcall UserPresentReceiveRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_21430, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_21430/*"present/receive"*/, 0LL);
 }
 
 
@@ -112,7 +112,7 @@ void __fastcall UserPresentReceiveRequest__requestCompleted(
   {
     sub_B16FFC(&JsonManager_TypeInfo, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40F80D0 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -131,7 +131,7 @@ void __fastcall UserPresentReceiveRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_20980;
+    v10 = (System_String_o *)StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

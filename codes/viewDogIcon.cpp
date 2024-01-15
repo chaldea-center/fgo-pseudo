@@ -10,11 +10,11 @@ void __fastcall viewDogIcon___ctor(viewDogIcon_o *this, const MethodInfo *method
 
   if ( (byte_40F9107 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19419, method);
+    sub_B16FFC(&StringLiteral_19419/*"img_frameselect"*/, method);
     byte_40F9107 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_19419;
-  this->fields.FRAME_SELECT_NAME = (struct System_String_o *)StringLiteral_19419;
+  v9 = (System_Int32_array **)StringLiteral_19419/*"img_frameselect"*/;
+  this->fields.FRAME_SELECT_NAME = (struct System_String_o *)StringLiteral_19419/*"img_frameselect"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.FRAME_SELECT_NAME, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -80,7 +80,7 @@ System_String_o *__fastcall viewDogIcon__GetExpeditionTimeLabel(
   {
     sub_B16FFC(&long_TypeInfo, time);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_5772, v5);
+    sub_B16FFC(&StringLiteral_5772/*"EXPEDITION_TIME_FORMAT"*/, v5);
     byte_40F9104 = 1;
   }
   if ( time < 1 )
@@ -100,7 +100,7 @@ System_String_o *__fastcall viewDogIcon__GetExpeditionTimeLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5772, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5772/*"EXPEDITION_TIME_FORMAT"*/, 0LL);
   v16 = v8;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v16);
   v15 = v7;
@@ -160,29 +160,29 @@ void __fastcall viewDogIcon__Init(
     sub_B16FFC(&AtlasManager_TypeInfo, eventExpeditionPieceEntity);
     sub_B16FFC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F9102 = 1;
   }
   compatibilityLabel = this->fields.compatibilityLabel;
   if ( !compatibilityLabel )
     goto LABEL_32;
-  UILabel__set_text(compatibilityLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(compatibilityLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   onAnExpeditionLabel = this->fields.onAnExpeditionLabel;
   if ( !onAnExpeditionLabel )
     goto LABEL_32;
-  UILabel__set_text(onAnExpeditionLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(onAnExpeditionLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   timeRequiredTextLabel = this->fields.timeRequiredTextLabel;
   if ( !timeRequiredTextLabel )
     goto LABEL_32;
-  UILabel__set_text(timeRequiredTextLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(timeRequiredTextLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   timeRequiredNumLabel = this->fields.timeRequiredNumLabel;
   if ( !timeRequiredNumLabel )
     goto LABEL_32;
-  UILabel__set_text(timeRequiredNumLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(timeRequiredNumLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   nameLabel = this->fields.nameLabel;
   if ( !nameLabel )
     goto LABEL_32;
-  UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.onClickPanel = 0LL;
   *(_WORD *)&this->fields._IsSelect_k__BackingField = 0;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.onClickPanel, 0LL, v13, v14, v15, v16, v17, v18);
@@ -369,11 +369,11 @@ void __fastcall viewDogIcon__Set(
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&compatibilityPercent);
     sub_B16FFC(&int_TypeInfo, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_19305, v13);
-    sub_B16FFC(&StringLiteral_5754, v14);
-    sub_B16FFC(&StringLiteral_5758, v15);
-    sub_B16FFC(&StringLiteral_15681, v16);
-    sub_B16FFC(&StringLiteral_5759, v17);
+    sub_B16FFC(&StringLiteral_19305/*"icon_{0}"*/, v13);
+    sub_B16FFC(&StringLiteral_5754/*"EXPEDITION_CONFIRM_DIALOG_COMPATIBILITY"*/, v14);
+    sub_B16FFC(&StringLiteral_5758/*"EXPEDITION_CONFIRM_DIALOG_ON_AN_EXPEDITION"*/, v15);
+    sub_B16FFC(&StringLiteral_15681/*"[FFFF00]{0}[-]"*/, v16);
+    sub_B16FFC(&StringLiteral_5759/*"EXPEDITION_CONFIRM_DIALOG_TIME_REQUIRED"*/, v17);
     byte_40F9103 = 1;
   }
   if ( compatibilityPercent >= 1 )
@@ -384,7 +384,7 @@ void __fastcall viewDogIcon__Set(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_5754, 0LL);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_5754/*"EXPEDITION_CONFIRM_DIALOG_COMPATIBILITY"*/, 0LL);
     v61 = compatibilityPercent;
     v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v61);
     v21 = System_String__Format(v19, v20, 0LL);
@@ -401,7 +401,7 @@ LABEL_38:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5758, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5758/*"EXPEDITION_CONFIRM_DIALOG_ON_AN_EXPEDITION"*/, 0LL);
     if ( !onAnExpeditionLabel )
       goto LABEL_38;
     UILabel__set_text(onAnExpeditionLabel, v23, 0LL);
@@ -445,7 +445,7 @@ LABEL_38:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_5759, 0LL);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_5759/*"EXPEDITION_CONFIRM_DIALOG_TIME_REQUIRED"*/, 0LL);
   if ( !timeRequiredTextLabel )
     goto LABEL_38;
   UILabel__set_text(timeRequiredTextLabel, v42, 0LL);
@@ -453,7 +453,7 @@ LABEL_38:
   ExpeditionTimeLabel = (Il2CppObject *)viewDogIcon__GetExpeditionTimeLabel(v44, timeRequiredNum, v45);
   if ( compatibilityPercent >= 1 )
     ExpeditionTimeLabel = (Il2CppObject *)System_String__Format(
-                                            (System_String_o *)StringLiteral_15681,
+                                            (System_String_o *)StringLiteral_15681/*"[FFFF00]{0}[-]"*/,
                                             ExpeditionTimeLabel,
                                             0LL);
   if ( !timeRequiredNumLabel )
@@ -477,7 +477,7 @@ LABEL_38:
     icon = this->fields.icon;
     iconImageId = v56->fields.iconImageId;
     v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconImageId);
-    v59 = System_String__Format((System_String_o *)StringLiteral_19305, v58, 0LL);
+    v59 = System_String__Format((System_String_o *)StringLiteral_19305/*"icon_{0}"*/, v58, 0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {

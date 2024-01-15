@@ -67,13 +67,13 @@ void __fastcall BoxGachaItemListViewManager__ClickResetGachaBtn(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
     sub_B16FFC(&SoundManager_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_2606, v14);
-    sub_B16FFC(&StringLiteral_2603, v15);
-    sub_B16FFC(&StringLiteral_2607, v16);
-    sub_B16FFC(&StringLiteral_2610, v17);
-    sub_B16FFC(&StringLiteral_3255, v18);
-    sub_B16FFC(&StringLiteral_2602, v19);
-    sub_B16FFC(&StringLiteral_2596, v20);
+    sub_B16FFC(&StringLiteral_2606/*"BOX_GACHA_RESET_MSG"*/, v14);
+    sub_B16FFC(&StringLiteral_2603/*"BOX_GACHA_RESET_LIMIT_NO_RARE_MSG"*/, v15);
+    sub_B16FFC(&StringLiteral_2607/*"BOX_GACHA_RESET_NO_RARE_MSG"*/, v16);
+    sub_B16FFC(&StringLiteral_2610/*"BOX_GACHA_RESET_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v18);
+    sub_B16FFC(&StringLiteral_2602/*"BOX_GACHA_RESET_LIMIT_MSG"*/, v19);
+    sub_B16FFC(&StringLiteral_2596/*"BOX_GACHA_EXE_TXT"*/, v20);
     byte_40FB462 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -119,7 +119,7 @@ LABEL_43:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_2606, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_2606/*"BOX_GACHA_RESET_MSG"*/, 0LL);
   v46 = max_length;
   v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v46);
   v33 = System_String__Format(v31, v32, 0LL);
@@ -132,7 +132,7 @@ LABEL_43:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v34 = &StringLiteral_2602;
+      v34 = &StringLiteral_2602/*"BOX_GACHA_RESET_LIMIT_MSG"*/;
     }
     else
     {
@@ -141,7 +141,7 @@ LABEL_43:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v34 = &StringLiteral_2603;
+      v34 = &StringLiteral_2603/*"BOX_GACHA_RESET_LIMIT_NO_RARE_MSG"*/;
     }
 LABEL_34:
     v35 = LocalizationManager__Get((System_String_o *)*v34, 0LL);
@@ -157,7 +157,7 @@ LABEL_34:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v34 = &StringLiteral_2607;
+    v34 = &StringLiteral_2607/*"BOX_GACHA_RESET_NO_RARE_MSG"*/;
     goto LABEL_34;
   }
 LABEL_35:
@@ -167,9 +167,9 @@ LABEL_35:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_2610, 0LL);
-  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_2596, 0LL);
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_2610/*"BOX_GACHA_RESET_TITLE"*/, 0LL);
+  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_2596/*"BOX_GACHA_EXE_TXT"*/, 0LL);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
   v45 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v41,
@@ -827,7 +827,7 @@ void __fastcall BoxGachaItemListViewManager__RequestInto(BoxGachaItemListViewMan
     sub_B16FFC(&Method_BoxGachaItemListViewManager_OnMoveEnd__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoxGachaItemListViewObject__get_Count__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoxGachaItemListViewObject__get_Item__, v5);
-    sub_B16FFC(&StringLiteral_10004, v6);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v6);
     byte_40FB45C = 1;
   }
   ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0LL);
@@ -873,7 +873,7 @@ LABEL_14:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       this->fields.listInDelay + 0.5,
       0LL);
   }
@@ -915,7 +915,7 @@ void __fastcall BoxGachaItemListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_BoxGachaItemListViewObject__get_Current__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoxGachaItemListViewObject__GetEnumerator__, v11);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoxGachaItemListViewObject__get_Count__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FB45A = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -930,7 +930,7 @@ void __fastcall BoxGachaItemListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -1000,7 +1000,7 @@ void __fastcall BoxGachaItemListViewManager__RequestListObject_27563244(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_BoxGachaItemListViewObject__get_Current__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoxGachaItemListViewObject__GetEnumerator__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoxGachaItemListViewObject__get_Count__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FB45B = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -1015,7 +1015,7 @@ void __fastcall BoxGachaItemListViewManager__RequestListObject_27563244(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -1116,7 +1116,7 @@ void __fastcall BoxGachaItemListViewManager__SetMode_27562276(
   if ( (byte_40FB459 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&mode);
-    sub_B16FFC(&StringLiteral_11393, v5);
+    sub_B16FFC(&StringLiteral_11393/*"RequestInto"*/, v5);
     byte_40FB459 = 1;
   }
   this->fields.initMode = mode;
@@ -1140,7 +1140,7 @@ void __fastcall BoxGachaItemListViewManager__SetMode_27562276(
     }
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_11393,
+      (System_String_o *)StringLiteral_11393/*"RequestInto"*/,
       0.0,
       0LL);
   }
@@ -1303,13 +1303,13 @@ void __fastcall BoxGachaItemListViewManager___closeEventSvtConfirmDlg_b__46_0(
 
   if ( (byte_40FB466 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5745, method);
+    sub_B16FFC(&StringLiteral_5745/*"EXE_RESETGACHA"*/, method);
     byte_40FB466 = 1;
   }
   targetFSM = this->fields.targetFSM;
   if ( !targetFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(targetFSM, (System_String_o *)StringLiteral_5745, 0LL);
+  PlayMakerFSM__SendEvent(targetFSM, (System_String_o *)StringLiteral_5745/*"EXE_RESETGACHA"*/, 0LL);
 }
 
 

@@ -395,7 +395,7 @@ void __fastcall BoardOptionTextWithIconComponent__SetItemIconAtlas(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&itemImageId);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FB0E4 = 1;
   }
   itemIconSprite = (UnityEngine_Object_o *)this->fields.itemIconSprite;
@@ -415,7 +415,7 @@ void __fastcall BoardOptionTextWithIconComponent__SetItemIconAtlas(
         v12 = this->fields.itemIconSprite;
         if ( v12 )
         {
-          UISprite__set_spriteName(v12, (System_String_o *)StringLiteral_1, 0LL);
+          UISprite__set_spriteName(v12, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           v13 = (UnityEngine_Component_o *)this->fields.itemIconSprite;
           if ( v13 )
           {
@@ -512,7 +512,7 @@ System_String_o *__fastcall BoardOptionTextWithIconComponent__get_behindLabelTex
   if ( (byte_40FB0D9 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FB0D9 = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
@@ -530,7 +530,7 @@ System_String_o *__fastcall BoardOptionTextWithIconComponent__get_behindLabelTex
   }
   else
   {
-    p_mText = (System_String_o **)&StringLiteral_1;
+    p_mText = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *p_mText;
 }
@@ -548,7 +548,7 @@ System_String_o *__fastcall BoardOptionTextWithIconComponent__get_forwardLabelTe
   if ( (byte_40FB0D8 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FB0D8 = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
@@ -566,7 +566,7 @@ System_String_o *__fastcall BoardOptionTextWithIconComponent__get_forwardLabelTe
   }
   else
   {
-    p_mText = (System_String_o **)&StringLiteral_1;
+    p_mText = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *p_mText;
 }

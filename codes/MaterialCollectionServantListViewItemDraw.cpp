@@ -128,10 +128,10 @@ void __fastcall MaterialCollectionServantListViewItemDraw__SetItem(
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_8627, v12);
-    sub_B16FFC(&StringLiteral_8630, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
-    sub_B16FFC(&StringLiteral_8629, v15);
+    sub_B16FFC(&StringLiteral_8627/*"MATERIAL_FIND_COMMAND_CODE"*/, v12);
+    sub_B16FFC(&StringLiteral_8630/*"MATERIAL_FIND_SERVANT_EQUIP"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
+    sub_B16FFC(&StringLiteral_8629/*"MATERIAL_FIND_SERVANT"*/, v15);
     byte_40FCB68 = 1;
   }
   if ( !item || !mode )
@@ -276,7 +276,7 @@ LABEL_58:
     maskLabel = this->fields.maskLabel;
     if ( !maskLabel )
       goto LABEL_78;
-    v49 = (System_String_o *)StringLiteral_1;
+    v49 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_69:
     UILabel__set_text(maskLabel, v49, 0LL);
     goto LABEL_70;
@@ -286,9 +286,9 @@ LABEL_69:
   {
     v43 = item->fields.servantEntity;
     v44 = this->fields.maskLabel;
-    v45 = &StringLiteral_8629;
+    v45 = &StringLiteral_8629/*"MATERIAL_FIND_SERVANT"*/;
     if ( v43 && ServantEntity__get_IsKeepServantEquip(v43, 0LL) )
-      v45 = (__int64 *)&StringLiteral_8630;
+      v45 = (__int64 *)&StringLiteral_8630/*"MATERIAL_FIND_SERVANT_EQUIP"*/;
     v46 = (System_String_o *)*v45;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -312,7 +312,7 @@ LABEL_67:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v47 = (System_String_o *)StringLiteral_8627;
+    v47 = (System_String_o *)StringLiteral_8627/*"MATERIAL_FIND_COMMAND_CODE"*/;
     goto LABEL_67;
   }
 LABEL_70:
@@ -383,8 +383,8 @@ void __fastcall MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_6315, v6);
-    sub_B16FFC(&StringLiteral_8635, v7);
+    sub_B16FFC(&StringLiteral_6315/*"FES_WAR_ID"*/, v6);
+    sub_B16FFC(&StringLiteral_8635/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, v7);
     byte_40FCB6A = 1;
   }
   mLastTimeIcon = (UnityEngine_Component_o *)this->fields.mLastTimeIcon;
@@ -396,7 +396,7 @@ void __fastcall MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   if ( item && item->fields.info )
   {
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_6315, 0LL);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_6315/*"FES_WAR_ID"*/, 0LL);
     info = item->fields.info;
     if ( !info )
       goto LABEL_93;
@@ -464,7 +464,7 @@ void __fastcall MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v20 = LocalizationManager__Get((System_String_o *)StringLiteral_8635, 0LL);
+          v20 = LocalizationManager__Get((System_String_o *)StringLiteral_8635/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0LL);
           if ( System_String__op_Equality(LastPlayTitle_k__BackingField, v20, 0LL) )
           {
             if ( (BYTE3(MyRoomParamsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -500,7 +500,7 @@ void __fastcall MaterialCollectionServantListViewItemDraw__SetLastTimeIcon(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v34 = LocalizationManager__Get((System_String_o *)StringLiteral_8635, 0LL);
+          v34 = LocalizationManager__Get((System_String_o *)StringLiteral_8635/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0LL);
           if ( System_String__op_Inequality(str, v34, 0LL) )
           {
 LABEL_84:

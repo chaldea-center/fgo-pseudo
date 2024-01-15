@@ -139,7 +139,7 @@ void __fastcall ClassBoardSquareDetailDialog__Open(
     sub_B16FFC(&Method_ClassBoardSquareDetailDialog_EndOpen__, v11);
     sub_B16FFC(&ClassBoardSquareDetailDialog_TypeInfo, v12);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_3023, v14);
+    sub_B16FFC(&StringLiteral_3023/*"CLASS_BOARD_SQUARE_DETAIL_DIALOG_TITLE"*/, v14);
     byte_40FB9FD = 1;
   }
   this->fields.classBoardSquare = square;
@@ -168,7 +168,7 @@ void __fastcall ClassBoardSquareDetailDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3023, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3023/*"CLASS_BOARD_SQUARE_DETAIL_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel || (UILabel__set_text(titleLabel, v22, 0LL), !square) )
     sub_B170D4();
   SquareModel_k__BackingField = square->fields._SquareModel_k__BackingField;
@@ -200,8 +200,8 @@ System_String_o *__fastcall ClassBoardSquareDetailDialog__get_closeBtnPath(
 {
   if ( (byte_40FBA01 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15415, method);
+    sub_B16FFC(&StringLiteral_15415/*"Window/CloseBtn"*/, method);
     byte_40FBA01 = 1;
   }
-  return (System_String_o *)StringLiteral_15415;
+  return (System_String_o *)StringLiteral_15415/*"Window/CloseBtn"*/;
 }

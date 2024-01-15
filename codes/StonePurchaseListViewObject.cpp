@@ -115,7 +115,7 @@ void __fastcall StonePurchaseListViewObject__EventEnterMove(
 
   if ( (byte_40FAEC1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6140, method);
+    sub_B16FFC(&StringLiteral_6140/*"EventEnterMove2"*/, method);
     byte_40FAEC1 = 1;
   }
   dragObject = this->fields.dragObject;
@@ -143,8 +143,8 @@ LABEL_9:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v13->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v13->fields.eventReceiver, gameObject, v15, v16, v17, v18, v19, v20);
-  v21 = (System_Int32_array **)StringLiteral_6140;
-  v13->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6140;
+  v21 = (System_Int32_array **)StringLiteral_6140/*"EventEnterMove2"*/;
+  v13->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6140/*"EventEnterMove2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->fields.callWhenFinished, v21, v22, v23, v24, v25, v26, v27);
 }
 
@@ -200,7 +200,7 @@ void __fastcall StonePurchaseListViewObject__EventEnterStart(
   if ( (byte_40FAEC0 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___, method);
-    sub_B16FFC(&StringLiteral_6139, v5);
+    sub_B16FFC(&StringLiteral_6139/*"EventEnterMove"*/, v5);
     byte_40FAEC0 = 1;
   }
   this->fields.isBusy = 1;
@@ -233,7 +233,7 @@ void __fastcall StonePurchaseListViewObject__EventEnterStart(
   StonePurchaseListViewObject__Init(v15, 2, 0LL, zero.fields.x, *(UnityEngine_Vector3_o *)&zero.fields.y, v16);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6139,
+    (System_String_o *)StringLiteral_6139/*"EventEnterMove"*/,
     delay,
     0LL);
 }
@@ -275,7 +275,7 @@ void __fastcall StonePurchaseListViewObject__EventExitMove(
   if ( (byte_40FAEC4 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6142, v3);
+    sub_B16FFC(&StringLiteral_6142/*"EventExitMove2"*/, v3);
     byte_40FAEC4 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
@@ -315,8 +315,8 @@ LABEL_14:
     gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     v16->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
     sub_B16F98((BattleServantConfConponent_o *)&v16->fields.eventReceiver, gameObject, v18, v19, v20, v21, v22, v23);
-    v24 = (System_Int32_array **)StringLiteral_6142;
-    v16->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6142;
+    v24 = (System_Int32_array **)StringLiteral_6142/*"EventExitMove2"*/;
+    v16->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6142/*"EventExitMove2"*/;
     sub_B16F98((BattleServantConfConponent_o *)&v16->fields.callWhenFinished, v24, v25, v26, v27, v28, v29, v30);
   }
 }
@@ -375,7 +375,7 @@ void __fastcall StonePurchaseListViewObject__EventExitStart(
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_6141, v6);
+    sub_B16FFC(&StringLiteral_6141/*"EventExitMove"*/, v6);
     byte_40FAEC3 = 1;
   }
   this->fields.isBusy = 1;
@@ -424,7 +424,7 @@ LABEL_11:
     v17);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6141,
+    (System_String_o *)StringLiteral_6141/*"EventExitMove"*/,
     delay,
     0LL);
 }
@@ -463,7 +463,7 @@ void __fastcall StonePurchaseListViewObject__EventIntoMove(
 
   if ( (byte_40FAEBE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6152, method);
+    sub_B16FFC(&StringLiteral_6152/*"EventIntoMove2"*/, method);
     byte_40FAEBE = 1;
   }
   dragObject = this->fields.dragObject;
@@ -494,8 +494,8 @@ LABEL_9:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v14->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v14->fields.eventReceiver, gameObject, v16, v17, v18, v19, v20, v21);
-  v22 = (System_Int32_array **)StringLiteral_6152;
-  v14->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6152;
+  v22 = (System_Int32_array **)StringLiteral_6152/*"EventIntoMove2"*/;
+  v14->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6152/*"EventIntoMove2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v14->fields.callWhenFinished, v22, v23, v24, v25, v26, v27, v28);
 }
 
@@ -559,7 +559,7 @@ void __fastcall StonePurchaseListViewObject__EventIntoStart(
   if ( (byte_40FAEBD & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___, method);
-    sub_B16FFC(&StringLiteral_6151, v5);
+    sub_B16FFC(&StringLiteral_6151/*"EventIntoMove"*/, v5);
     byte_40FAEBD = 1;
   }
   this->fields.isBusy = 1;
@@ -599,7 +599,7 @@ void __fastcall StonePurchaseListViewObject__EventIntoStart(
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v20, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6151,
+    (System_String_o *)StringLiteral_6151/*"EventIntoMove"*/,
     delay,
     0LL);
 }
@@ -962,7 +962,7 @@ System_String_o *__fastcall StonePurchaseListViewObject__ToString(
   if ( (byte_40FAEC6 & 1) == 0 )
   {
     sub_B16FFC(&StonePurchaseListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40FAEC6 = 1;
   }
   v13 = 0.0;
@@ -981,7 +981,7 @@ System_String_o *__fastcall StonePurchaseListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

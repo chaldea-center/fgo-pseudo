@@ -24,8 +24,8 @@ UnityEngine_GameObject_o *__fastcall EventInfoCommandBuffPointControl__CreateBuf
   {
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, ent);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_585, v6);
-    sub_B16FFC(&StringLiteral_651, v7);
+    sub_B16FFC(&StringLiteral_585/*"("*/, v6);
+    sub_B16FFC(&StringLiteral_651/*")"*/, v7);
     byte_40FA0F3 = 1;
   }
   baseBuffPointPrefab = this->fields.baseBuffPointPrefab;
@@ -44,9 +44,9 @@ UnityEngine_GameObject_o *__fastcall EventInfoCommandBuffPointControl__CreateBuf
       || (name = UnityEngine_Object__get_name(v10, 0LL), !ent)
       || (v12 = System_String__Concat_43747144(
                   name,
-                  (System_String_o *)StringLiteral_585,
+                  (System_String_o *)StringLiteral_585/*"("*/,
                   ent->fields.value,
-                  (System_String_o *)StringLiteral_651,
+                  (System_String_o *)StringLiteral_651/*")"*/,
                   0LL),
           !v9) )
     {
@@ -260,7 +260,7 @@ void __fastcall EventInfoCommandBuffPointControl__SetTotalPointLabel(
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&System_Math_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_5635, v9);
+    sub_B16FFC(&StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, v9);
     byte_40FA0F6 = 1;
   }
   totalPointLabel = (UnityEngine_Object_o *)this->fields.totalPointLabel;
@@ -277,7 +277,7 @@ void __fastcall EventInfoCommandBuffPointControl__SetTotalPointLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5635, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
     v13 = BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )

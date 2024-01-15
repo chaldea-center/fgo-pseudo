@@ -14,12 +14,12 @@ void __fastcall ClassBoardBaseClassIconNameComponent___cctor(const MethodInfo *m
   if ( (byte_40FAF90 & 1) == 0 )
   {
     sub_B16FFC(&ClassBoardBaseClassIconNameComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16961, v8);
+    sub_B16FFC(&StringLiteral_16961/*"btn_tab_{0}"*/, v8);
     byte_40FAF90 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_16961;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16961;
+  v10 = (System_Int32_array **)StringLiteral_16961/*"btn_tab_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16961/*"btn_tab_{0}"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 

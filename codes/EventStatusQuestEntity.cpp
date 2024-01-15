@@ -69,14 +69,14 @@ int32_t __fastcall EventStatusQuestEntity__getPriority(EventStatusQuestEntity_o 
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
     sub_B16FFC(&int_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21052, v6);
+    sub_B16FFC(&StringLiteral_21052/*"notClearPriority"*/, v6);
     byte_40FD1F8 = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_21052,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_21052/*"notClearPriority"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     goto LABEL_9;
@@ -94,7 +94,7 @@ LABEL_9:
   if ( !v11
     || (Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                  (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v11,
-                 (System_Type_o *)StringLiteral_21052,
+                 (System_Type_o *)StringLiteral_21052/*"notClearPriority"*/,
                  (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
     sub_B170D4();

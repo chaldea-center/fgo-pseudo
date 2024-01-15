@@ -293,7 +293,7 @@ void __fastcall HakkenshiListController__CreateHakkenshiWindow(
     sub_B16FFC(&HakkenshiListController_TypeInfo, v13);
     sub_B16FFC(&int_TypeInfo, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_19204, v16);
+    sub_B16FFC(&StringLiteral_19204/*"icon_bg_{0}"*/, v16);
     byte_40FC14C = 1;
   }
   this->fields.assetData = assetData;
@@ -311,7 +311,7 @@ void __fastcall HakkenshiListController__CreateHakkenshiWindow(
   bgSprite = this->fields.bgSprite;
   v32 = v17;
   v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32);
-  v20 = System_String__Format((System_String_o *)StringLiteral_19204, v19, 0LL);
+  v20 = System_String__Format((System_String_o *)StringLiteral_19204/*"icon_bg_{0}"*/, v19, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI_28584872(v17, bgSprite, v20, 0LL);

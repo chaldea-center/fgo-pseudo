@@ -173,7 +173,7 @@ void __fastcall FormationRootComponent__Init(FormationRootComponent_o *this, con
     sub_B16FFC(&Method_FormationRootComponent___c__Init_b__28_0__, v12);
     sub_B16FFC(&Method_FormationRootComponent___c__Init_b__28_1__, v13);
     sub_B16FFC(&FormationRootComponent___c_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_13458, v15);
+    sub_B16FFC(&StringLiteral_13458/*"TUTORIAL_MESSAGE_FORMATION1"*/, v15);
     byte_40FA754 = 1;
   }
   memset(&methoda, 0, 32);
@@ -339,7 +339,7 @@ LABEL_81:
                                 {
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
-                                v65 = LocalizationManager__Get((System_String_o *)StringLiteral_13458, 0LL);
+                                v65 = LocalizationManager__Get((System_String_o *)StringLiteral_13458/*"TUTORIAL_MESSAGE_FORMATION1"*/, 0LL);
                                 name = methoda.name;
                                 klass = methoda.klass;
                                 v73 = this->fields.TUTORIAL_FORMATION_MESSAGE_POS.fields.x;
@@ -500,17 +500,17 @@ void __fastcall FormationRootComponent__OnClickBack(FormationRootComponent_o *th
 
   if ( (byte_40FA758 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3034, method);
-    sub_B16FFC(&StringLiteral_3075, v3);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, method);
+    sub_B16FFC(&StringLiteral_3075/*"CLICK_TERMINAL"*/, v3);
     byte_40FA758 = 1;
   }
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     sub_B170D4();
   if ( this->fields.type == 1 )
-    v5 = (System_String_o **)&StringLiteral_3034;
+    v5 = (System_String_o **)&StringLiteral_3034/*"CLICK_BACK"*/;
   else
-    v5 = (System_String_o **)&StringLiteral_3075;
+    v5 = (System_String_o **)&StringLiteral_3075/*"CLICK_TERMINAL"*/;
   TitleInfoControl__sendEvent(titleInfo, *v5, 0LL);
 }
 
@@ -714,7 +714,7 @@ void __fastcall FormationRootComponent___Init_b__28_3(FormationRootComponent_o *
   {
     sub_B16FFC(&AvalonSceneManager_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_6864, v4);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v4);
     byte_40FA759 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -729,7 +729,7 @@ void __fastcall FormationRootComponent___Init_b__28_3(FormationRootComponent_o *
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_6864, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 

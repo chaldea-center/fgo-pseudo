@@ -176,17 +176,17 @@ void __fastcall EventRewardRootComponent___cctor(const MethodInfo *method)
     sub_B16FFC(
       &Field__PrivateImplementationDetails__F14C0ACB6DCD73C777D2FD1029C107FB8CA0CE4F905A06A72F4CFA5568FDE84C,
       v13);
-    sub_B16FFC(&StringLiteral_16704, v14);
-    sub_B16FFC(&StringLiteral_6184, v15);
-    sub_B16FFC(&StringLiteral_11289, v16);
-    sub_B16FFC(&StringLiteral_18459, v17);
-    sub_B16FFC(&StringLiteral_2540, v18);
-    sub_B16FFC(&StringLiteral_5825, v19);
-    sub_B16FFC(&StringLiteral_15344, v20);
-    sub_B16FFC(&StringLiteral_6172, v21);
-    sub_B16FFC(&StringLiteral_19577, v22);
-    sub_B16FFC(&StringLiteral_18505, v23);
-    sub_B16FFC(&StringLiteral_2643, v24);
+    sub_B16FFC(&StringLiteral_16704/*"bit_grail_get"*/, v14);
+    sub_B16FFC(&StringLiteral_6184/*"EventUI/Prefabs/"*/, v15);
+    sub_B16FFC(&StringLiteral_11289/*"RecoveryFatigue"*/, v16);
+    sub_B16FFC(&StringLiteral_18459/*"event_logo_"*/, v17);
+    sub_B16FFC(&StringLiteral_2540/*"BGM_CHALDEA_1"*/, v18);
+    sub_B16FFC(&StringLiteral_5825/*"Effect/EventShop"*/, v19);
+    sub_B16FFC(&StringLiteral_15344/*"WarBoard/Shop/Effect/bit_grail_get"*/, v20);
+    sub_B16FFC(&StringLiteral_6172/*"EventReward/EventRewardAtlas"*/, v21);
+    sub_B16FFC(&StringLiteral_19577/*"img_titlebg_"*/, v22);
+    sub_B16FFC(&StringLiteral_18505/*"event_rewardframe_{0}"*/, v23);
+    sub_B16FFC(&StringLiteral_2643/*"Back/back{0}"*/, v24);
     byte_40F6237 = 1;
   }
   EventRewardRootComponent_TypeInfo->static_fields->DEFAULT_EVENT_ID = 80087;
@@ -194,12 +194,12 @@ void __fastcall EventRewardRootComponent___cctor(const MethodInfo *method)
   v25 = EventRewardRootComponent_TypeInfo;
   EventRewardRootComponent_TypeInfo->static_fields->DEFAULT_SVT_ID = 500900;
   static_fields = v25->static_fields;
-  v27 = (System_Int32_array **)StringLiteral_2540;
-  static_fields->DEFAULT_BGM_NAME = (struct System_String_o *)StringLiteral_2540;
+  v27 = (System_Int32_array **)StringLiteral_2540/*"BGM_CHALDEA_1"*/;
+  static_fields->DEFAULT_BGM_NAME = (struct System_String_o *)StringLiteral_2540/*"BGM_CHALDEA_1"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->DEFAULT_BGM_NAME, v27, v2, v3, v4, v5, v6, v7);
   v28 = EventRewardRootComponent_TypeInfo->static_fields;
-  v29 = (System_Int32_array **)StringLiteral_2643;
-  v28->BG_ROOT = (struct System_String_o *)StringLiteral_2643;
+  v29 = (System_Int32_array **)StringLiteral_2643/*"Back/back{0}"*/;
+  v28->BG_ROOT = (struct System_String_o *)StringLiteral_2643/*"Back/back{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v28->BG_ROOT, v29, v30, v31, v32, v33, v34, v35);
   v160.fields.m_YMin = 0.41;
   v160.fields.m_Height = 0.5869;
@@ -212,16 +212,16 @@ void __fastcall EventRewardRootComponent___cctor(const MethodInfo *method)
   v40->static_fields->DEFAULT_INFOPANEL_HEIGHT = -202;
   v40->static_fields->DEFAULT_SLIDERPANEL_HEIGHT = -262;
   v41 = v40->static_fields;
-  v42 = (System_Int32_array **)StringLiteral_19577;
-  v41->LOGO_BG_SPRITENAME_ROOT = (struct System_String_o *)StringLiteral_19577;
+  v42 = (System_Int32_array **)StringLiteral_19577/*"img_titlebg_"*/;
+  v41->LOGO_BG_SPRITENAME_ROOT = (struct System_String_o *)StringLiteral_19577/*"img_titlebg_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v41->LOGO_BG_SPRITENAME_ROOT, v42, v43, v44, v45, v46, v47, v48);
   v49 = EventRewardRootComponent_TypeInfo->static_fields;
-  v50 = (System_Int32_array **)StringLiteral_18459;
-  v49->LOGO_SPRITENAME_ROOT = (struct System_String_o *)StringLiteral_18459;
+  v50 = (System_Int32_array **)StringLiteral_18459/*"event_logo_"*/;
+  v49->LOGO_SPRITENAME_ROOT = (struct System_String_o *)StringLiteral_18459/*"event_logo_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v49->LOGO_SPRITENAME_ROOT, v50, v51, v52, v53, v54, v55, v56);
   v57 = EventRewardRootComponent_TypeInfo->static_fields;
-  v58 = (System_Int32_array **)StringLiteral_18505;
-  v57->REWARD_RARITY_SPRITE_NAME = (struct System_String_o *)StringLiteral_18505;
+  v58 = (System_Int32_array **)StringLiteral_18505/*"event_rewardframe_{0}"*/;
+  v57->REWARD_RARITY_SPRITE_NAME = (struct System_String_o *)StringLiteral_18505/*"event_rewardframe_{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v57->REWARD_RARITY_SPRITE_NAME, v58, v59, v60, v61, v62, v63, v64);
   v65 = EventRewardRootComponent_TypeInfo;
   EventRewardRootComponent_TypeInfo->static_fields->SCOPE_INFOPANEL_ADD_HEIGHT = 33;
@@ -285,20 +285,20 @@ void __fastcall EventRewardRootComponent___cctor(const MethodInfo *method)
   v93->static_fields->BOX_GACHA_POS = -12.0;
   v93->static_fields->DEFAULT_POSX = 350.0;
   v94 = v93->static_fields;
-  v95 = (System_Int32_array **)StringLiteral_5825;
-  v94->LOAD_EFFECT_NAME = (struct System_String_o *)StringLiteral_5825;
+  v95 = (System_Int32_array **)StringLiteral_5825/*"Effect/EventShop"*/;
+  v94->LOAD_EFFECT_NAME = (struct System_String_o *)StringLiteral_5825/*"Effect/EventShop"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v94->LOAD_EFFECT_NAME, v95, v96, v97, v98, v99, v100, v101);
   v102 = EventRewardRootComponent_TypeInfo->static_fields;
-  v103 = (System_Int32_array **)StringLiteral_11289;
-  v102->RECOVERY_FATIGUE_PREFAB = (struct System_String_o *)StringLiteral_11289;
+  v103 = (System_Int32_array **)StringLiteral_11289/*"RecoveryFatigue"*/;
+  v102->RECOVERY_FATIGUE_PREFAB = (struct System_String_o *)StringLiteral_11289/*"RecoveryFatigue"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v102->RECOVERY_FATIGUE_PREFAB, v103, v104, v105, v106, v107, v108, v109);
   v110 = EventRewardRootComponent_TypeInfo->static_fields;
-  v111 = (System_Int32_array **)StringLiteral_15344;
-  v110->ITEM_GET_ASSET_NAME = (struct System_String_o *)StringLiteral_15344;
+  v111 = (System_Int32_array **)StringLiteral_15344/*"WarBoard/Shop/Effect/bit_grail_get"*/;
+  v110->ITEM_GET_ASSET_NAME = (struct System_String_o *)StringLiteral_15344/*"WarBoard/Shop/Effect/bit_grail_get"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v110->ITEM_GET_ASSET_NAME, v111, v112, v113, v114, v115, v116, v117);
   v118 = EventRewardRootComponent_TypeInfo->static_fields;
-  v119 = (System_Int32_array **)StringLiteral_16704;
-  v118->ITEM_GET_EFFECT_NAME = (struct System_String_o *)StringLiteral_16704;
+  v119 = (System_Int32_array **)StringLiteral_16704/*"bit_grail_get"*/;
+  v118->ITEM_GET_EFFECT_NAME = (struct System_String_o *)StringLiteral_16704/*"bit_grail_get"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v118->ITEM_GET_EFFECT_NAME, v119, v120, v121, v122, v123, v124, v125);
   EventRewardRootComponent_TypeInfo->static_fields->isFirst = 1;
   v130 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -326,13 +326,13 @@ void __fastcall EventRewardRootComponent___cctor(const MethodInfo *method)
   *(_QWORD *)&v139->BOX_COUNT_EXISTS_LABEL_POSITION.fields.x = 1107558400LL;
   v139->BOX_COUNT_EXISTS_LABEL_POSITION.fields.z = 0.0;
   v138->static_fields->TAB_TYPE_IMAGE_DEFAULT_POSITION = (struct UnityEngine_Vector2_o)0x41D00000C0C00000LL;
-  v140 = (System_Int32_array **)StringLiteral_6172;
+  v140 = (System_Int32_array **)StringLiteral_6172/*"EventReward/EventRewardAtlas"*/;
   p_REWARDIMG_ATLAS_PATH = (BattleServantConfConponent_o *)&v138->static_fields->REWARDIMG_ATLAS_PATH;
-  p_REWARDIMG_ATLAS_PATH->klass = (BattleServantConfConponent_c *)StringLiteral_6172;
+  p_REWARDIMG_ATLAS_PATH->klass = (BattleServantConfConponent_c *)StringLiteral_6172/*"EventReward/EventRewardAtlas"*/;
   sub_B16F98(p_REWARDIMG_ATLAS_PATH, v140, v142, v143, v144, v145, v146, v147);
-  v148 = (System_Int32_array **)StringLiteral_6184;
+  v148 = (System_Int32_array **)StringLiteral_6184/*"EventUI/Prefabs/"*/;
   p_EVENT_UI_ASSET_PATH = (BattleServantConfConponent_o *)&EventRewardRootComponent_TypeInfo->static_fields->EVENT_UI_ASSET_PATH;
-  p_EVENT_UI_ASSET_PATH->klass = (BattleServantConfConponent_c *)StringLiteral_6184;
+  p_EVENT_UI_ASSET_PATH->klass = (BattleServantConfConponent_c *)StringLiteral_6184/*"EventUI/Prefabs/"*/;
   sub_B16F98(p_EVENT_UI_ASSET_PATH, v148, v150, v151, v152, v153, v154, v155);
 }
 
@@ -368,11 +368,11 @@ void __fastcall EventRewardRootComponent___ctor(EventRewardRootComponent_o *this
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v9);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F6236 = 1;
   }
-  v12 = (System_Int32_array **)StringLiteral_1;
-  this->fields.recoveryFatiguePath = (struct System_String_o *)StringLiteral_1;
+  v12 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.recoveryFatiguePath = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.recoveryFatiguePath, v12, v2, v3, v4, v5, v6, v7);
   v17 = (System_Collections_Generic_Dictionary_int__int__o *)sub_B170CC(
                                                                System_Collections_Generic_Dictionary_int__int__TypeInfo,
@@ -1490,7 +1490,7 @@ void __fastcall EventRewardRootComponent__CheckCostumeReleaseEffect(
     sub_B16FFC(&AvalonSceneManager_TypeInfo, v3);
     sub_B16FFC(&Method_EventRewardRootComponent__CheckCostumeReleaseEffect_b__445_0__, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_5466, v6);
+    sub_B16FFC(&StringLiteral_5466/*"END_DISP"*/, v6);
     byte_40F61D3 = 1;
   }
   if ( this->fields.isDischargeCostume )
@@ -1521,7 +1521,7 @@ LABEL_11:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_11;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5466, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5466/*"END_DISP"*/, 0LL);
 }
 
 
@@ -1574,9 +1574,9 @@ void __fastcall EventRewardRootComponent__CheckDetailConfirm(
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_9328, v9);
-    sub_B16FFC(&StringLiteral_8688, v10);
-    sub_B16FFC(&StringLiteral_3251, v11);
+    sub_B16FFC(&StringLiteral_9328/*"NO_QUEST_EVENT_SHOP_DECIDE_BUTTON"*/, v9);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v10);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v11);
     byte_40F6209 = 1;
   }
   buyItemListViewManager = this->fields.buyItemListViewManager;
@@ -1613,8 +1613,8 @@ void __fastcall EventRewardRootComponent__CheckDetailConfirm(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_9328, 0LL);
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_9328/*"NO_QUEST_EVENT_SHOP_DECIDE_BUTTON"*/, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
     v28 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                    CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                    v24,
@@ -1659,7 +1659,7 @@ LABEL_26:
     myFSM = this->fields.myFSM;
     if ( !myFSM )
       goto LABEL_26;
-    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
   }
   else
   {
@@ -1877,7 +1877,7 @@ void __fastcall EventRewardRootComponent__CheckMissionRewardGetCostume(
 
   if ( (byte_40F61EC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5466, method);
+    sub_B16FFC(&StringLiteral_5466/*"END_DISP"*/, method);
     byte_40F61EC = 1;
   }
   eventMissionListViewManager = this->fields.eventMissionListViewManager;
@@ -1895,7 +1895,7 @@ void __fastcall EventRewardRootComponent__CheckMissionRewardGetCostume(
   if ( !myFSM )
 LABEL_8:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5466, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5466/*"END_DISP"*/, 0LL);
 }
 
 
@@ -2049,9 +2049,9 @@ void __fastcall EventRewardRootComponent__CheckTabTypeImage(EventRewardRootCompo
   if ( (byte_40F61A8 & 1) == 0 )
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18538, v3);
-    sub_B16FFC(&StringLiteral_15842, v4);
-    sub_B16FFC(&StringLiteral_22496, v5);
+    sub_B16FFC(&StringLiteral_18538/*"event_type_txt_"*/, v3);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v4);
+    sub_B16FFC(&StringLiteral_22496/*"tabTypeImage"*/, v5);
     byte_40F61A8 = 1;
   }
   imageIdArray = this->fields.imageIdArray;
@@ -2071,7 +2071,7 @@ void __fastcall EventRewardRootComponent__CheckTabTypeImage(EventRewardRootCompo
     EventRewardRootComponent__SetOverwritePosition(
       this,
       gameObject,
-      (System_String_o *)StringLiteral_22496,
+      (System_String_o *)StringLiteral_22496/*"tabTypeImage"*/,
       v10->static_fields->TAB_TYPE_IMAGE_DEFAULT_POSITION,
       1,
       v8);
@@ -2117,9 +2117,9 @@ LABEL_27:
       {
         v25 = System_Int32__ToString((int)v22 + 4 * (int)RealIndex + 32, 0LL);
         v27 = System_String__Concat_43747144(
-                (System_String_o *)StringLiteral_18538,
+                (System_String_o *)StringLiteral_18538/*"event_type_txt_"*/,
                 v23,
-                (System_String_o *)StringLiteral_15842,
+                (System_String_o *)StringLiteral_15842/*"_"*/,
                 v25,
                 0LL);
         if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2187,7 +2187,7 @@ void __fastcall EventRewardRootComponent__ClosePresentBox(
     sub_B16FFC(&Method_EventRewardRootComponent_CheckTabTypeImage__, v4);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_5477, v7);
+    sub_B16FFC(&StringLiteral_5477/*"END_OPEN"*/, v7);
     byte_40F61C9 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -2265,7 +2265,7 @@ LABEL_18:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_21;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5477, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5477/*"END_OPEN"*/, 0LL);
 }
 
 
@@ -2454,7 +2454,7 @@ void __fastcall EventRewardRootComponent__CommitPurchase(
     sub_B16FFC(&Method_NetworkManager_getRequest_CommitPurchaseRequest___, v8);
     sub_B16FFC(&NetworkManager_TypeInfo, v9);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_11041, v11);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v11);
     byte_40F6230 = 1;
   }
   if ( System_String__IsNullOrEmpty(token, 0LL) )
@@ -2462,7 +2462,7 @@ void __fastcall EventRewardRootComponent__CommitPurchase(
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
       return;
     }
 LABEL_14:
@@ -2789,7 +2789,7 @@ UnityEngine_GameObject_o *__fastcall EventRewardRootComponent__CreateSpotCoolTim
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeRewardReceiveButton___, v5);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_6177, v8);
+    sub_B16FFC(&StringLiteral_6177/*"EventSpotCooltimeRewardReceiveButton"*/, v8);
     byte_40F6235 = 1;
   }
   result = (UnityEngine_GameObject_o *)this->fields.eventUiAssetData;
@@ -2797,7 +2797,7 @@ UnityEngine_GameObject_o *__fastcall EventRewardRootComponent__CreateSpotCoolTim
   {
     Object_WarBoardWaitTimeSetting = (UnityEngine_Object_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                (AssetData_o *)result,
-                                                               (System_String_o *)StringLiteral_6177,
+                                                               (System_String_o *)StringLiteral_6177/*"EventSpotCooltimeRewardReceiveButton"*/,
                                                                (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2937,8 +2937,8 @@ void __fastcall EventRewardRootComponent__EndCheckDetailConfirm(
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_8688, v9);
-    sub_B16FFC(&StringLiteral_8687, v10);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v9);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v10);
     byte_40F620A = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -2994,9 +2994,9 @@ LABEL_16:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_20;
-  v22 = &StringLiteral_8688;
+  v22 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   if ( !decide )
-    v22 = &StringLiteral_8687;
+    v22 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v22, 0LL);
 }
 
@@ -3040,7 +3040,7 @@ void __fastcall EventRewardRootComponent__EndCommitPurchaseShop(
     sub_B16FFC(&Method_EventRewardRootComponent_OnEndFadeRequestValentineShop__, v7);
     sub_B16FFC(&Method_EventRewardRootComponent__EndCommitPurchaseShop_b__548_0__, v8);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F6232 = 1;
   }
   buyItemListViewManager = this->fields.buyItemListViewManager;
@@ -3145,7 +3145,7 @@ LABEL_35:
       goto LABEL_35;
     RequestResultDialog__Open_30964380(
       requestResultDialog,
-      (System_String_o *)StringLiteral_1,
+      (System_String_o *)StringLiteral_1/*""*/,
       shopRequestOkMessage,
       v27,
       -1,
@@ -3192,13 +3192,13 @@ void __fastcall EventRewardRootComponent__EndFadeOut(EventRewardRootComponent_o 
 
   if ( (byte_40F6224 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, method);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, method);
     byte_40F6224 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
 }
 
 
@@ -4158,30 +4158,30 @@ void __fastcall EventRewardRootComponent__EndRequestShop(
     sub_B16FFC(&Method_EventRewardRootComponent___c__DisplayClass509_1__EndRequestShop_b__6__, v66);
     sub_B16FFC(&EventRewardRootComponent___c__DisplayClass509_1_TypeInfo, v67);
     sub_B16FFC(&EventRewardRootComponent___c_TypeInfo, v68);
-    sub_B16FFC(&StringLiteral_26, v69);
-    sub_B16FFC(&StringLiteral_5679, v70);
-    sub_B16FFC(&StringLiteral_1658, v71);
-    sub_B16FFC(&StringLiteral_2622, v72);
-    sub_B16FFC(&StringLiteral_12084, v73);
-    sub_B16FFC(&StringLiteral_22376, v74);
-    sub_B16FFC(&StringLiteral_1659, v75);
-    sub_B16FFC(&StringLiteral_21728, v76);
-    sub_B16FFC(&StringLiteral_12019, v77);
-    sub_B16FFC(&StringLiteral_11041, v78);
-    sub_B16FFC(&StringLiteral_21495, v79);
-    sub_B16FFC(&StringLiteral_2623, v80);
-    sub_B16FFC(&StringLiteral_12081, v81);
-    sub_B16FFC(&StringLiteral_1660, v82);
-    sub_B16FFC(&StringLiteral_20980, v83);
-    sub_B16FFC(&StringLiteral_12083, v84);
-    sub_B16FFC(&StringLiteral_12082, v85);
-    sub_B16FFC(&StringLiteral_18398, v86);
-    sub_B16FFC(&StringLiteral_21492, v87);
-    sub_B16FFC(&StringLiteral_20244, v88);
-    sub_B16FFC(&StringLiteral_12020, v89);
-    sub_B16FFC(&StringLiteral_27, v90);
-    sub_B16FFC(&StringLiteral_1, v91);
-    sub_B16FFC(&StringLiteral_12018, v92);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v69);
+    sub_B16FFC(&StringLiteral_5679/*"EVENT_REWARD_ASSIST_SKILL_RESULT"*/, v70);
+    sub_B16FFC(&StringLiteral_1658/*"ADD_USER_ITEM_MSG"*/, v71);
+    sub_B16FFC(&StringLiteral_2622/*"BUY_AFTER_QP_NUM"*/, v72);
+    sub_B16FFC(&StringLiteral_12084/*"SHOP_BUY_SUCCESS_SEND_PRESENT_BOX"*/, v73);
+    sub_B16FFC(&StringLiteral_22376/*"svtId"*/, v74);
+    sub_B16FFC(&StringLiteral_1659/*"ADD_USER_QP_MSG"*/, v75);
+    sub_B16FFC(&StringLiteral_21728/*"rewardInfos"*/, v76);
+    sub_B16FFC(&StringLiteral_12019/*"SET_ITEM_GET_SERVANT_MSG"*/, v77);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v78);
+    sub_B16FFC(&StringLiteral_21495/*"purchaseToken"*/, v79);
+    sub_B16FFC(&StringLiteral_2623/*"BUY_AFTER_USER_ITEM_NUM"*/, v80);
+    sub_B16FFC(&StringLiteral_12081/*"SHOP_BUY_SUCCESS"*/, v81);
+    sub_B16FFC(&StringLiteral_1660/*"ADD_USER_SVT_COIN_MSG"*/, v82);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v83);
+    sub_B16FFC(&StringLiteral_12083/*"SHOP_BUY_SUCCESS_SEND_MIX"*/, v84);
+    sub_B16FFC(&StringLiteral_12082/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, v85);
+    sub_B16FFC(&StringLiteral_18398/*"eventActivityPointAddFlag"*/, v86);
+    sub_B16FFC(&StringLiteral_21492/*"purchaseResults"*/, v87);
+    sub_B16FFC(&StringLiteral_20244/*"lotteryShopId"*/, v88);
+    sub_B16FFC(&StringLiteral_12020/*"SET_ITEM_INDIVIDUAL"*/, v89);
+    sub_B16FFC(&StringLiteral_27/*"\n\n"*/, v90);
+    sub_B16FFC(&StringLiteral_1/*""*/, v91);
+    sub_B16FFC(&StringLiteral_12018/*"SET_ITEM_GET_ITEM_MSG"*/, v92);
     sub_B16FFC(&EventRewardRootComponent_resLotteryShopData_TypeInfo, v93);
     byte_40F620F = 1;
   }
@@ -4193,8 +4193,8 @@ void __fastcall EventRewardRootComponent__EndRequestShop(
   entity = 0LL;
   *(_QWORD *)buyQuestNum = 0LL;
   this->fields.isServantGet = 0;
-  v94 = (System_Int32_array **)StringLiteral_1;
-  this->fields.shopRequestOkMessage = (struct System_String_o *)StringLiteral_1;
+  v94 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.shopRequestOkMessage = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.shopRequestOkMessage,
     v94,
@@ -4204,12 +4204,12 @@ void __fastcall EventRewardRootComponent__EndRequestShop(
     v5,
     v6,
     v7);
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
       return;
     }
     goto LABEL_356;
@@ -4236,12 +4236,12 @@ void __fastcall EventRewardRootComponent__EndRequestShop(
   v107 = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)Dictionary;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_21728,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_21728/*"rewardInfos"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                              v107,
-                             (System_Type_o *)StringLiteral_21728,
+                             (System_Type_o *)StringLiteral_21728/*"rewardInfos"*/,
                              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -4270,12 +4270,12 @@ void __fastcall EventRewardRootComponent__EndRequestShop(
   }
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v107,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_18398,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_18398/*"eventActivityPointAddFlag"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v120 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                              v107,
-                             (System_Type_o *)StringLiteral_18398,
+                             (System_Type_o *)StringLiteral_18398/*"eventActivityPointAddFlag"*/,
                              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !System_Convert_TypeInfo->_2.cctor_finished )
@@ -4331,12 +4331,12 @@ void __fastcall EventRewardRootComponent__EndRequestShop(
   if ( (v141->fields.purchaseType == 16 || ShopEntity__checkFlag(v141, 0x10000, 0LL))
     && System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v107,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_21495,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_21495/*"purchaseToken"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v148 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                              v107,
-                             (System_Type_o *)StringLiteral_21495,
+                             (System_Type_o *)StringLiteral_21495/*"purchaseToken"*/,
                              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !System_Convert_TypeInfo->_2.cctor_finished )
@@ -4399,12 +4399,12 @@ void __fastcall EventRewardRootComponent__EndRequestShop(
     v502 = v99;
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v107,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_21492,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_21492/*"purchaseResults"*/,
            (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       v180 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                                v107,
-                               (System_Type_o *)StringLiteral_21492,
+                               (System_Type_o *)StringLiteral_21492/*"purchaseResults"*/,
                                (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -4462,7 +4462,7 @@ LABEL_357:
       EventRewardRootComponent_resLotteryShopData___ctor((EventRewardRootComponent_resLotteryShopData_o *)v191, 0LL);
       v192 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                                v107,
-                               (System_Type_o *)StringLiteral_22376,
+                               (System_Type_o *)StringLiteral_22376/*"svtId"*/,
                                (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !System_Convert_TypeInfo->_2.cctor_finished )
@@ -4476,19 +4476,19 @@ LABEL_357:
       *(_DWORD *)(v191 + 28) = v193;
       v194 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                                v107,
-                               (System_Type_o *)StringLiteral_20244,
+                               (System_Type_o *)StringLiteral_20244/*"lotteryShopId"*/,
                                (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       *(_DWORD *)(v191 + 32) = System_Convert__ToInt32(v194, 0LL);
       v195 = System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
                (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v107,
-               (System_Xml_XmlQualifiedName_o *)StringLiteral_21495,
+               (System_Xml_XmlQualifiedName_o *)StringLiteral_21495/*"purchaseToken"*/,
                (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
       v202 = 0LL;
       if ( v195 )
       {
         v203 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                                  v107,
-                                 (System_Type_o *)StringLiteral_21495,
+                                 (System_Type_o *)StringLiteral_21495/*"purchaseToken"*/,
                                  (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !System_Convert_TypeInfo->_2.cctor_finished )
@@ -4544,7 +4544,7 @@ LABEL_78:
   }
   if ( v168->fields.purchaseType == 5 )
   {
-    v214 = (System_String_o *)StringLiteral_1;
+    v214 = (System_String_o *)StringLiteral_1/*""*/;
     Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
@@ -4598,7 +4598,7 @@ LABEL_78:
                       {
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                       }
-                      v227 = LocalizationManager__Get((System_String_o *)StringLiteral_12082, 0LL);
+                      v227 = LocalizationManager__Get((System_String_o *)StringLiteral_12082/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
                       if ( !v226 )
                         goto LABEL_356;
                       v228 = v227;
@@ -4622,13 +4622,13 @@ LABEL_78:
                                                     v226[6],
                                                     (const MethodInfo_266F388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
                         if ( !System_String__IsNullOrEmpty(v225, 0LL) )
-                          v225 = System_String__Concat_43743732(v225, (System_String_o *)StringLiteral_26, 0LL);
+                          v225 = System_String__Concat_43743732(v225, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
                         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                           && !LocalizationManager_TypeInfo->_2.cctor_finished )
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v236 = LocalizationManager__Get((System_String_o *)StringLiteral_12020, 0LL);
+                        v236 = LocalizationManager__Get((System_String_o *)StringLiteral_12020/*"SET_ITEM_INDIVIDUAL"*/, 0LL);
                         if ( !v235 )
                           goto LABEL_356;
                         v237 = v236;
@@ -4650,13 +4650,13 @@ LABEL_78:
                                  v226[6],
                                  (const MethodInfo_266F388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
                         if ( !System_String__IsNullOrEmpty(v214, 0LL) )
-                          v214 = System_String__Concat_43743732(v214, (System_String_o *)StringLiteral_26, 0LL);
+                          v214 = System_String__Concat_43743732(v214, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
                         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                           && !LocalizationManager_TypeInfo->_2.cctor_finished )
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v243 = LocalizationManager__Get((System_String_o *)StringLiteral_12020, 0LL);
+                        v243 = LocalizationManager__Get((System_String_o *)StringLiteral_12020/*"SET_ITEM_INDIVIDUAL"*/, 0LL);
                         if ( !v242 )
                           goto LABEL_356;
                         v244 = v243;
@@ -4681,9 +4681,9 @@ LABEL_161:
                   else
                   {
                     IsNullOrEmpty = System_String__IsNullOrEmpty(v217, 0LL);
-                    v290 = (System_String_o **)&StringLiteral_27;
+                    v290 = (System_String_o **)&StringLiteral_27/*"\n\n"*/;
                     if ( IsNullOrEmpty )
-                      v290 = (System_String_o **)&StringLiteral_1;
+                      v290 = (System_String_o **)&StringLiteral_1/*""*/;
                     v287 = v508;
                     v291 = System_String__Concat_43743732(valuea, *v290, 0LL);
                     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4691,22 +4691,22 @@ LABEL_161:
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v292 = LocalizationManager__Get((System_String_o *)StringLiteral_12019, 0LL);
+                    v292 = LocalizationManager__Get((System_String_o *)StringLiteral_12019/*"SET_ITEM_GET_SERVANT_MSG"*/, 0LL);
                     longName = System_String__Concat_43746016(v291, v225, v292, 0LL);
                   }
                   if ( !System_String__IsNullOrEmpty(v214, 0LL) )
                   {
                     v293 = System_String__IsNullOrEmpty(longName, 0LL);
-                    v294 = (System_String_o **)&StringLiteral_27;
+                    v294 = (System_String_o **)&StringLiteral_27/*"\n\n"*/;
                     if ( v293 )
-                      v294 = (System_String_o **)&StringLiteral_1;
+                      v294 = (System_String_o **)&StringLiteral_1/*""*/;
                     v295 = System_String__Concat_43743732(longName, *v294, 0LL);
                     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                       && !LocalizationManager_TypeInfo->_2.cctor_finished )
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v296 = LocalizationManager__Get((System_String_o *)StringLiteral_12018, 0LL);
+                    v296 = LocalizationManager__Get((System_String_o *)StringLiteral_12018/*"SET_ITEM_GET_ITEM_MSG"*/, 0LL);
                     longName = System_String__Concat_43746016(v295, v214, v296, 0LL);
                   }
                   if ( entity
@@ -4746,9 +4746,9 @@ LABEL_161:
                                    this,
                                    1,
                                    v305,
-                                   (System_String_o *)StringLiteral_1,
-                                   (System_String_o *)StringLiteral_1,
-                                   (System_String_o *)StringLiteral_1,
+                                   (System_String_o *)StringLiteral_1/*""*/,
+                                   (System_String_o *)StringLiteral_1/*""*/,
+                                   (System_String_o *)StringLiteral_1/*""*/,
                                    v299,
                                    v311,
                                    addMessageY);
@@ -4773,7 +4773,7 @@ LABEL_310:
                           goto LABEL_356;
                         RequestResultDialog__OpenAddMsg_30964536(
                           requestResultDialog,
-                          (System_String_o *)StringLiteral_1,
+                          (System_String_o *)StringLiteral_1/*""*/,
                           longName,
                           v299,
                           v471,
@@ -4819,7 +4819,7 @@ LABEL_356:
   {
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v107,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_20244,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_20244/*"lotteryShopId"*/,
            (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       v254 = ShopDetailEntity;
@@ -4831,7 +4831,7 @@ LABEL_356:
                                                               (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ShopMaster___);
       v257 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                                v107,
-                               (System_Type_o *)StringLiteral_20244,
+                               (System_Type_o *)StringLiteral_20244/*"lotteryShopId"*/,
                                (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( (BYTE3(System_Convert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !System_Convert_TypeInfo->_2.cctor_finished )
@@ -4940,7 +4940,7 @@ LABEL_356:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v284 = LocalizationManager__Get((System_String_o *)StringLiteral_12082, 0LL);
+    v284 = LocalizationManager__Get((System_String_o *)StringLiteral_12082/*"SHOP_BUY_SUCCESS_MULTIPLE"*/, 0LL);
     v285 = System_String__Format(v284, NumberFormat, 0LL);
     v283 = System_String__Concat_43743732(v281, v285, 0LL);
   }
@@ -4953,7 +4953,7 @@ LABEL_155:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v286 = &StringLiteral_12083;
+    v286 = &StringLiteral_12083/*"SHOP_BUY_SUCCESS_SEND_MIX"*/;
   }
   else if ( isSend )
   {
@@ -4962,7 +4962,7 @@ LABEL_155:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v286 = &StringLiteral_12084;
+    v286 = &StringLiteral_12084/*"SHOP_BUY_SUCCESS_SEND_PRESENT_BOX"*/;
   }
   else
   {
@@ -4971,7 +4971,7 @@ LABEL_155:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v286 = &StringLiteral_12081;
+    v286 = &StringLiteral_12081/*"SHOP_BUY_SUCCESS"*/;
   }
   v316 = LocalizationManager__Get((System_String_o *)*v286, 0LL);
   v317 = (System_Int32_array **)System_String__Format(v316, (Il2CppObject *)v281, 0LL);
@@ -4988,12 +4988,12 @@ LABEL_155:
       sub_B16F98((BattleServantConfConponent_o *)(v99 + 24), afterMessage, v324, v325, v326, v327, v328, v329);
     }
   }
-  v332 = (System_Int32_array **)StringLiteral_1;
-  *(_QWORD *)(v99 + 40) = StringLiteral_1;
+  v332 = (System_Int32_array **)StringLiteral_1/*""*/;
+  *(_QWORD *)(v99 + 40) = StringLiteral_1/*""*/;
   v333 = (System_Int32_array ***)(v99 + 32);
   sub_B16F98((BattleServantConfConponent_o *)(v99 + 40), v332, v324, v325, v326, v327, v328, v329);
-  v334 = (System_Int32_array **)StringLiteral_1;
-  *(_QWORD *)(v99 + 32) = StringLiteral_1;
+  v334 = (System_Int32_array **)StringLiteral_1/*""*/;
+  *(_QWORD *)(v99 + 32) = StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)(v99 + 32), v334, v335, v336, v337, v338, v339, v340);
   v341 = *(_QWORD *)(v99 + 16);
   if ( !v341 )
@@ -5029,10 +5029,10 @@ LABEL_155:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v349 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_1659, 0LL);
+      v349 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_1659/*"ADD_USER_QP_MSG"*/, 0LL);
       *v333 = v349;
       sub_B16F98((BattleServantConfConponent_o *)(v99 + 32), v349, v350, v351, v352, v353, v354, v355);
-      v356 = LocalizationManager__Get((System_String_o *)StringLiteral_2622, 0LL);
+      v356 = LocalizationManager__Get((System_String_o *)StringLiteral_2622/*"BUY_AFTER_QP_NUM"*/, 0LL);
       if ( !v348 || !*v134 )
         goto LABEL_356;
       v357 = v356;
@@ -5090,7 +5090,7 @@ LABEL_243:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v372 = &StringLiteral_1660;
+          v372 = &StringLiteral_1660/*"ADD_USER_SVT_COIN_MSG"*/;
           goto LABEL_238;
         }
         if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0 )
@@ -5110,7 +5110,7 @@ LABEL_228:
         j_il2cpp_runtime_class_init_0(v371);
     }
 LABEL_237:
-    v372 = &StringLiteral_1658;
+    v372 = &StringLiteral_1658/*"ADD_USER_ITEM_MSG"*/;
 LABEL_238:
     v373 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)*v372, 0LL);
     *v333 = v373;
@@ -5120,7 +5120,7 @@ LABEL_238:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v380 = LocalizationManager__Get((System_String_o *)StringLiteral_2623, 0LL);
+    v380 = LocalizationManager__Get((System_String_o *)StringLiteral_2623/*"BUY_AFTER_USER_ITEM_NUM"*/, 0LL);
     if ( !*v134 )
       goto LABEL_356;
     v357 = v380;
@@ -5319,7 +5319,7 @@ LABEL_308:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v481 = LocalizationManager__Get((System_String_o *)StringLiteral_5679, 0LL);
+      v481 = LocalizationManager__Get((System_String_o *)StringLiteral_5679/*"EVENT_REWARD_ASSIST_SKILL_RESULT"*/, 0LL);
       if ( !v478 )
         goto LABEL_356;
       v482 = v481;
@@ -5829,7 +5829,7 @@ void __fastcall EventRewardRootComponent__FadeInSvtPanel(EventRewardRootComponen
   if ( (byte_40F61A3 & 1) == 0 )
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6666, v3);
+    sub_B16FFC(&StringLiteral_6666/*"FinishedSvtSlideIn"*/, v3);
     byte_40F61A3 = 1;
   }
   centerChild = this->fields.centerChild;
@@ -5860,8 +5860,8 @@ LABEL_9:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v12->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v12->fields.eventReceiver, gameObject, v14, v15, v16, v17, v18, v19);
-  v20 = (System_Int32_array **)StringLiteral_6666;
-  v12->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6666;
+  v20 = (System_Int32_array **)StringLiteral_6666/*"FinishedSvtSlideIn"*/;
+  v12->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6666/*"FinishedSvtSlideIn"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->fields.callWhenFinished, v20, v21, v22, v23, v24, v25, v26);
 }
 
@@ -5970,9 +5970,9 @@ void __fastcall EventRewardRootComponent__GetBoxGachaEventEnableTime(
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_13316, v4);
-    sub_B16FFC(&StringLiteral_13324, v5);
-    sub_B16FFC(&StringLiteral_13338, v6);
+    sub_B16FFC(&StringLiteral_13316/*"TIME_OVER_EVENTREWARD"*/, v4);
+    sub_B16FFC(&StringLiteral_13324/*"TIME_REST2_TIMEOVER"*/, v5);
+    sub_B16FFC(&StringLiteral_13338/*"TIME_REST_EVENTREWARD"*/, v6);
     byte_40F61E1 = 1;
   }
   boxGachaEndTimeLabel = this->fields.boxGachaEndTimeLabel;
@@ -5990,7 +5990,7 @@ void __fastcall EventRewardRootComponent__GetBoxGachaEventEnableTime(
   if ( !v10 )
     goto LABEL_45;
   mText = v10->fields.mText;
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_13324, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_13324/*"TIME_REST2_TIMEOVER"*/, 0LL);
   v13 = System_String__op_Equality(mText, v12, 0LL);
   boxGachaStringLb = this->fields.boxGachaStringLb;
   v15 = v13;
@@ -6001,7 +6001,7 @@ void __fastcall EventRewardRootComponent__GetBoxGachaEventEnableTime(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = &StringLiteral_13316;
+    v16 = &StringLiteral_13316/*"TIME_OVER_EVENTREWARD"*/;
   }
   else
   {
@@ -6010,7 +6010,7 @@ void __fastcall EventRewardRootComponent__GetBoxGachaEventEnableTime(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = &StringLiteral_13338;
+    v16 = &StringLiteral_13338/*"TIME_REST_EVENTREWARD"*/;
   }
   v17 = LocalizationManager__Get((System_String_o *)*v16, 0LL);
   if ( !boxGachaStringLb )
@@ -6481,8 +6481,8 @@ System_Collections_Generic_Dictionary_string__List_EventRewardGuideReleaseEntity
     sub_B16FFC(&Method_System_Collections_Generic_List_EventRewardGuideReleaseEntity___ctor__, v13);
     sub_B16FFC(&System_Collections_Generic_List_EventRewardGuideReleaseEntity__TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_15842, v16);
-    sub_B16FFC(&StringLiteral_1, v17);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v16);
+    sub_B16FFC(&StringLiteral_1/*""*/, v17);
     byte_40F617E = 1;
   }
   v46 = 0;
@@ -6534,7 +6534,7 @@ LABEL_22:
       if ( !klass )
         goto LABEL_22;
       namespaze = klass->_1.namespaze;
-      v36 = (System_Xml_XmlQualifiedName_o *)StringLiteral_1;
+      v36 = (System_Xml_XmlQualifiedName_o *)StringLiteral_1/*""*/;
       if ( (int)namespaze >= 1 )
         break;
 LABEL_15:
@@ -6577,7 +6577,7 @@ LABEL_15:
       Entities_17512820 = System_String__Concat_43746016(
                             (System_String_o *)v36,
                             v38,
-                            (System_String_o *)StringLiteral_15842,
+                            (System_String_o *)StringLiteral_15842/*"_"*/,
                             0LL);
       LODWORD(namespaze) = klass->_1.namespaze;
       ++v37;
@@ -7333,7 +7333,7 @@ void __fastcall EventRewardRootComponent__GetSlotAllVoiceData(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventRewardRootComponent_SlotAllSvtData__get_Count__, v14);
     sub_B16FFC(&System_Collections_Generic_List_ServantVoiceData____TypeInfo, v15);
     sub_B16FFC(&EventRewardRootComponent_VoiceData_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_1, v17);
+    sub_B16FFC(&StringLiteral_1/*""*/, v17);
     byte_40F6182 = 1;
   }
   memset(&v208, 0, sizeof(v208));
@@ -7518,7 +7518,7 @@ LABEL_46:
                 EventRewardRootComponent_VoiceData__SetVoiceData(
                   v105,
                   EventIndividualPurchaseVoiceList,
-                  (System_String_o *)StringLiteral_1,
+                  (System_String_o *)StringLiteral_1/*""*/,
                   0LL);
               }
               current[2].monitor = v105;
@@ -8081,7 +8081,7 @@ void __fastcall EventRewardRootComponent__OnCenterOnChildFinished(
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_MultiSvtInfoComponent___, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_2949, v4);
+    sub_B16FFC(&StringLiteral_2949/*"CHANGE_SVT"*/, v4);
     byte_40F61AE = 1;
   }
   centerChild = (UnityEngine_Object_o *)this->fields.centerChild;
@@ -8182,7 +8182,7 @@ LABEL_27:
       myFSM = this->fields.myFSM;
       if ( myFSM )
       {
-        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_2949, 0LL);
+        PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_2949/*"CHANGE_SVT"*/, 0LL);
         return;
       }
 LABEL_34:
@@ -8210,7 +8210,7 @@ void __fastcall EventRewardRootComponent__OnClickBack(EventRewardRootComponent_o
   if ( (byte_40F621F & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6858, v3);
+    sub_B16FFC(&StringLiteral_6858/*"GOTO_CALL"*/, v3);
     byte_40F621F = 1;
   }
   EventRewardRootComponent__stopSvtVoice(this, method);
@@ -8273,7 +8273,7 @@ LABEL_23:
     titleInfo = this->fields.titleInfo;
     if ( !titleInfo )
       goto LABEL_25;
-    TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_6858, 0LL);
+    TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_6858/*"GOTO_CALL"*/, 0LL);
   }
 }
 
@@ -8303,7 +8303,7 @@ void __fastcall EventRewardRootComponent__OnClickDetail(EventRewardRootComponent
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
     sub_B16FFC(&WebViewManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_15299, v9);
+    sub_B16FFC(&StringLiteral_15299/*"WEB_VIEW_TITLE_BOXGACHA"*/, v9);
     byte_40F61CA = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -8336,7 +8336,7 @@ LABEL_19:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_15299, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_15299/*"WEB_VIEW_TITLE_BOXGACHA"*/, 0LL);
   if ( (BYTE3(WebViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !WebViewManager_TypeInfo->_2.cctor_finished )
   {
@@ -9004,8 +9004,8 @@ void __fastcall EventRewardRootComponent__OnEndDialogRequestShop(
     sub_B16FFC(&Method_DataMasterBase_ShopScriptMaster__ShopScriptEntity__int__TryGetEntity__, v6);
     sub_B16FFC(&Method_EventRewardRootComponent_OnEndPlayScriptRequestShop__, v7);
     sub_B16FFC(&ScriptManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_11043, v9);
-    sub_B16FFC(&StringLiteral_12509, v10);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v9);
+    sub_B16FFC(&StringLiteral_12509/*"SVT_GET"*/, v10);
     byte_40F6210 = 1;
   }
   entity = 0LL;
@@ -9040,9 +9040,9 @@ LABEL_14:
     if ( myFSM )
     {
       if ( this->fields.isServantGet )
-        v21 = &StringLiteral_12509;
+        v21 = &StringLiteral_12509/*"SVT_GET"*/;
       else
-        v21 = &StringLiteral_11043;
+        v21 = &StringLiteral_11043/*"REQUEST_OK"*/;
       PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v21, 0LL);
       return;
     }
@@ -9187,7 +9187,7 @@ void __fastcall EventRewardRootComponent__OnEndDialogRequestValentineShop(
     sub_B16FFC(&ScriptManager_TypeInfo, v20);
     sub_B16FFC(&Method_EventRewardRootComponent___c__OnEndDialogRequestValentineShop_b__514_0__, v21);
     sub_B16FFC(&EventRewardRootComponent___c_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_12509, v23);
+    sub_B16FFC(&StringLiteral_12509/*"SVT_GET"*/, v23);
     byte_40F6214 = 1;
   }
   requestResultDialog = this->fields.requestResultDialog;
@@ -9427,7 +9427,7 @@ LABEL_47:
     myFSM = this->fields.myFSM;
     if ( !myFSM )
       goto LABEL_84;
-    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_12509, 0LL);
+    PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_12509/*"SVT_GET"*/, 0LL);
   }
   else
   {
@@ -9459,13 +9459,13 @@ void __fastcall EventRewardRootComponent__OnEndFadeRequestShop(
 
   if ( (byte_40F621B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, method);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, method);
     byte_40F621B = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
 }
 
 
@@ -10315,10 +10315,10 @@ void __fastcall EventRewardRootComponent__OnSelectBuyItem(
     sub_B16FFC(&NetworkManager_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
     sub_B16FFC(&SoundManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_8700, v13);
-    sub_B16FFC(&StringLiteral_8699, v14);
-    sub_B16FFC(&StringLiteral_1, v15);
-    sub_B16FFC(&StringLiteral_5698, v16);
+    sub_B16FFC(&StringLiteral_8700/*"MENU_SELECT_ITEM"*/, v13);
+    sub_B16FFC(&StringLiteral_8699/*"MENU_SELECT_BULK_ITEM"*/, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v15);
+    sub_B16FFC(&StringLiteral_5698/*"EVENT_SHOP_RECEIVED_ITEM_BEFORE"*/, v16);
     byte_40F6201 = 1;
   }
   message = 0LL;
@@ -10363,7 +10363,7 @@ void __fastcall EventRewardRootComponent__OnSelectBuyItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5698, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5698/*"EVENT_SHOP_RECEIVED_ITEM_BEFORE"*/, 0LL);
     NameText = (Il2CppObject *)ShopBuyItemListViewItem__get_NameText(v20, 0LL);
     v25 = System_String__Format(v23, NameText, 0LL);
     Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -10373,7 +10373,7 @@ void __fastcall EventRewardRootComponent__OnSelectBuyItem(
     {
       CommonUI__OpenNotificationDialog(
         Instance,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         v25,
         v31,
         -1,
@@ -10415,9 +10415,9 @@ LABEL_58:
     if ( !this->fields.myFSM )
       goto LABEL_58;
     if ( qp >= 2 * Price )
-      v47 = &StringLiteral_8699;
+      v47 = &StringLiteral_8699/*"MENU_SELECT_BULK_ITEM"*/;
     else
-      v47 = &StringLiteral_8700;
+      v47 = &StringLiteral_8700/*"MENU_SELECT_ITEM"*/;
     v35 = (System_String_o *)*v47;
     myFSM = this->fields.myFSM;
     goto LABEL_33;
@@ -10452,7 +10452,7 @@ LABEL_50:
     myFSM = this->fields.myFSM;
     if ( !myFSM )
       goto LABEL_58;
-    v34 = &StringLiteral_8699;
+    v34 = &StringLiteral_8699/*"MENU_SELECT_BULK_ITEM"*/;
   }
   else
   {
@@ -10460,7 +10460,7 @@ LABEL_30:
     myFSM = this->fields.myFSM;
     if ( !myFSM )
       goto LABEL_58;
-    v34 = &StringLiteral_8700;
+    v34 = &StringLiteral_8700/*"MENU_SELECT_ITEM"*/;
   }
   v35 = (System_String_o *)*v34;
 LABEL_33:
@@ -11040,7 +11040,7 @@ void __fastcall EventRewardRootComponent__OpenPurchaseResultDialog(
     sub_B16FFC(&System_Action_bool__TypeInfo, v13);
     sub_B16FFC(&Method_EventRewardRootComponent_OnEndDialogRequestShop__, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40F6211 = 1;
   }
   if ( !entity )
@@ -11087,7 +11087,7 @@ LABEL_11:
   else
     RequestResultDialog__OpenAddMsg_30964536(
       requestResultDialog,
-      (System_String_o *)StringLiteral_1,
+      (System_String_o *)StringLiteral_1/*""*/,
       message,
       addMessage,
       v31,
@@ -11148,8 +11148,8 @@ void __fastcall EventRewardRootComponent__OpenRequestResultDialogTransitionTermi
       &Method_EventRewardRootComponent___c__DisplayClass513_0__OpenRequestResultDialogTransitionTerminal_b__0__,
       v12);
     sub_B16FFC(&EventRewardRootComponent___c__DisplayClass513_0_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_12036, v14);
-    sub_B16FFC(&StringLiteral_12037, v15);
+    sub_B16FFC(&StringLiteral_12036/*"SHOP_AFTER_ACTION_DIALOG_CLOSE"*/, v14);
+    sub_B16FFC(&StringLiteral_12037/*"SHOP_AFTER_ACTION_DIALOG_MAP"*/, v15);
     byte_40F6213 = 1;
   }
   v16 = sub_B170CC(
@@ -11186,8 +11186,8 @@ void __fastcall EventRewardRootComponent__OpenRequestResultDialogTransitionTermi
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  cancelMessage = LocalizationManager__Get((System_String_o *)StringLiteral_12036, 0LL);
-  decideMessage = LocalizationManager__Get((System_String_o *)StringLiteral_12037, 0LL);
+  cancelMessage = LocalizationManager__Get((System_String_o *)StringLiteral_12036/*"SHOP_AFTER_ACTION_DIALOG_CLOSE"*/, 0LL);
+  decideMessage = LocalizationManager__Get((System_String_o *)StringLiteral_12037/*"SHOP_AFTER_ACTION_DIALOG_MAP"*/, 0LL);
   if ( !requestResultDialog )
 LABEL_9:
     sub_B170D4();
@@ -11313,9 +11313,9 @@ void __fastcall EventRewardRootComponent__OpenValenineShopRequestResult(
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v16);
     sub_B16FFC(&string_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_9309, v18);
-    sub_B16FFC(&StringLiteral_5697, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
+    sub_B16FFC(&StringLiteral_9309/*"NOT_GET_COMMIT_AFTER_SCRIPT_WARNING"*/, v18);
+    sub_B16FFC(&StringLiteral_5697/*"EVENT_SHOP_RECEIVED_ITEM_AFTER"*/, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
     byte_40F621A = 1;
   }
   buyItemListViewManager = this->fields.buyItemListViewManager;
@@ -11445,7 +11445,7 @@ LABEL_8:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v78 = LocalizationManager__Get((System_String_o *)StringLiteral_9309, 0LL);
+        v78 = LocalizationManager__Get((System_String_o *)StringLiteral_9309/*"NOT_GET_COMMIT_AFTER_SCRIPT_WARNING"*/, 0LL);
         v79 = System_String__Concat_43743732(shopRequestOkMessage, v78, 0LL);
         v84 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v80, v81, v82, v83);
         System_Action___ctor(
@@ -11457,7 +11457,7 @@ LABEL_8:
           goto LABEL_82;
         CommonUI__OpenNotificationDialog_18238444(
           v77,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_1/*""*/,
           v79,
           v84,
           42.0,
@@ -11489,7 +11489,7 @@ LABEL_8:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5697, 0LL);
+    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5697/*"EVENT_SHOP_RECEIVED_ITEM_AFTER"*/, 0LL);
     if ( !this->fields.afterLotteryShopEntity )
       goto LABEL_82;
     v34 = v33;
@@ -11504,7 +11504,7 @@ LABEL_8:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_5697, 0LL);
+    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_5697/*"EVENT_SHOP_RECEIVED_ITEM_AFTER"*/, 0LL);
     Name = (Il2CppObject *)ShopBuyItemListViewItem__get_NameText(v23, 0LL);
   }
   v45 = System_String__Format(v34, Name, 0LL);
@@ -11598,7 +11598,7 @@ LABEL_82:
       (const MethodInfo_24B33C8 *)Method_System_Action_bool___ctor__);
     if ( !requestResultDialog )
       goto LABEL_82;
-    RequestResultDialog__Open_30964380(requestResultDialog, (System_String_o *)StringLiteral_1, v86, v87, -1, 0LL);
+    RequestResultDialog__Open_30964380(requestResultDialog, (System_String_o *)StringLiteral_1/*""*/, v86, v87, -1, 0LL);
   }
 }
 
@@ -11712,8 +11712,8 @@ void __fastcall EventRewardRootComponent__PlayContinueLotteryShopScripts(
       sub_B16FFC(&ScriptManager_TypeInfo, v20);
       sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v21);
       sub_B16FFC(&string_TypeInfo, v22);
-      sub_B16FFC(&StringLiteral_9309, v23);
-      sub_B16FFC(&StringLiteral_1, v24);
+      sub_B16FFC(&StringLiteral_9309/*"NOT_GET_COMMIT_AFTER_SCRIPT_WARNING"*/, v23);
+      sub_B16FFC(&StringLiteral_1/*""*/, v24);
       byte_40F6217 = 1;
     }
     bulkLotteryScriptsPlayList = this->fields.bulkLotteryScriptsPlayList;
@@ -11816,7 +11816,7 @@ void __fastcall EventRewardRootComponent__PlayContinueLotteryShopScripts(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v75 = LocalizationManager__Get((System_String_o *)StringLiteral_9309, 0LL);
+              v75 = LocalizationManager__Get((System_String_o *)StringLiteral_9309/*"NOT_GET_COMMIT_AFTER_SCRIPT_WARNING"*/, 0LL);
               v76 = System_String__Concat_43743732(shopRequestOkMessage, v75, 0LL);
               v81 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v77, v78, v79, v80);
               System_Action___ctor(
@@ -11828,7 +11828,7 @@ void __fastcall EventRewardRootComponent__PlayContinueLotteryShopScripts(
               {
                 CommonUI__OpenNotificationDialog_18238444(
                   v74,
-                  (System_String_o *)StringLiteral_1,
+                  (System_String_o *)StringLiteral_1/*""*/,
                   v76,
                   v81,
                   42.0,
@@ -12203,7 +12203,7 @@ void __fastcall EventRewardRootComponent__PurchaseNormalFinish(
     sub_B16FFC(&Method_System_Action_int___ctor__, method);
     sub_B16FFC(&System_Action_int__TypeInfo, v3);
     sub_B16FFC(&Method_EventRewardRootComponent_OnSelectBuyItem__, v4);
-    sub_B16FFC(&StringLiteral_9294, v5);
+    sub_B16FFC(&StringLiteral_9294/*"NORMAL_FINISH"*/, v5);
     byte_40F620C = 1;
   }
   RealSlotId = EventRewardRootComponent__GetRealSlotId(this, method);
@@ -12257,7 +12257,7 @@ void __fastcall EventRewardRootComponent__PurchaseNormalFinish(
 LABEL_14:
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_9294, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_9294/*"NORMAL_FINISH"*/, 0LL);
 }
 
 
@@ -12422,7 +12422,7 @@ void __fastcall EventRewardRootComponent__RequestShop(EventRewardRootComponent_o
     sub_B16FFC(&Method_NetworkManager_getRequest_PurchaseRequest___, v5);
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_11041, v8);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v8);
     byte_40F620E = 1;
   }
   buyItemListViewManager = this->fields.buyItemListViewManager;
@@ -12492,7 +12492,7 @@ LABEL_24:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_24;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11041/*"REQUEST_NG"*/, 0LL);
 }
 
 
@@ -12807,9 +12807,9 @@ void __fastcall EventRewardRootComponent__SelectedBuyEventItemConfirm(
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v16);
     sub_B16FFC(&NetworkManager_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_B16FFC(&StringLiteral_8688, v19);
-    sub_B16FFC(&StringLiteral_2966, v20);
-    sub_B16FFC(&StringLiteral_8687, v21);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v19);
+    sub_B16FFC(&StringLiteral_2966/*"CHECK_DETAIL"*/, v20);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, v21);
     byte_40F6208 = 1;
   }
   entity = 0LL;
@@ -12933,7 +12933,7 @@ LABEL_66:
             myFSM = this->fields.myFSM;
             if ( !myFSM )
               goto LABEL_70;
-            v40 = &StringLiteral_2966;
+            v40 = &StringLiteral_2966/*"CHECK_DETAIL"*/;
             break;
           default:
             goto LABEL_18;
@@ -13004,7 +13004,7 @@ LABEL_18:
     if ( !myFSM )
 LABEL_70:
       sub_B170D4();
-    v40 = &StringLiteral_8688;
+    v40 = &StringLiteral_8688/*"MENU_DECIDE"*/;
   }
   else
   {
@@ -13029,7 +13029,7 @@ LABEL_70:
     myFSM = this->fields.myFSM;
     if ( !myFSM )
       goto LABEL_70;
-    v40 = &StringLiteral_8687;
+    v40 = &StringLiteral_8687/*"MENU_CANCEL"*/;
   }
 LABEL_68:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v40, 0LL);
@@ -13352,23 +13352,23 @@ void __fastcall EventRewardRootComponent__SetBoxGachaInfoImg(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponentInChildren_UISprite___, method);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_19635, v5);
-    sub_B16FFC(&StringLiteral_19522, v6);
-    sub_B16FFC(&StringLiteral_19629, v7);
-    sub_B16FFC(&StringLiteral_15842, v8);
-    sub_B16FFC(&StringLiteral_19422, v9);
-    sub_B16FFC(&StringLiteral_352, v10);
-    sub_B16FFC(&StringLiteral_19605, v11);
-    sub_B16FFC(&StringLiteral_19657, v12);
+    sub_B16FFC(&StringLiteral_19635/*"img_txt_lineup_"*/, v5);
+    sub_B16FFC(&StringLiteral_19522/*"img_resettxt_"*/, v6);
+    sub_B16FFC(&StringLiteral_19629/*"img_txt_getpresent_"*/, v7);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v8);
+    sub_B16FFC(&StringLiteral_19422/*"img_gachatxt_"*/, v9);
+    sub_B16FFC(&StringLiteral_352/*"#4C4C4C"*/, v10);
+    sub_B16FFC(&StringLiteral_19605/*"img_txt_end_"*/, v11);
+    sub_B16FFC(&StringLiteral_19657/*"img_txt_remaining_"*/, v12);
     byte_40F61C0 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
   RealIndex = 0;
   v13 = System_Int32__ToString((int)this + 1248, 0LL);
-  v14 = System_String__Concat_43743732((System_String_o *)StringLiteral_19422, v13, 0LL);
+  v14 = System_String__Concat_43743732((System_String_o *)StringLiteral_19422/*"img_gachatxt_"*/, v13, 0LL);
   v15 = System_Int32__ToString((int)this + 1248, 0LL);
-  v16 = System_String__Concat_43743732((System_String_o *)StringLiteral_19629, v15, 0LL);
+  v16 = System_String__Concat_43743732((System_String_o *)StringLiteral_19629/*"img_txt_getpresent_"*/, v15, 0LL);
   singleGachaTimeSprite = this->fields.singleGachaTimeSprite;
   v19 = v16;
   if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -13384,11 +13384,11 @@ void __fastcall EventRewardRootComponent__SetBoxGachaInfoImg(
   EventRewardRootComponent__setRewardInfoImg(this->fields.multiInfoTxtSprite, v19, v24);
   resetTxtSprite = this->fields.resetTxtSprite;
   v26 = System_Int32__ToString((int)this + 1248, 0LL);
-  v27 = System_String__Concat_43743732((System_String_o *)StringLiteral_19522, v26, 0LL);
+  v27 = System_String__Concat_43743732((System_String_o *)StringLiteral_19522/*"img_resettxt_"*/, v26, 0LL);
   EventRewardRootComponent__setRewardInfoImg(resetTxtSprite, v27, v28);
   allNumTitleSprite = this->fields.allNumTitleSprite;
   v30 = System_Int32__ToString((int)this + 1248, 0LL);
-  v31 = System_String__Concat_43743732((System_String_o *)StringLiteral_19657, v30, 0LL);
+  v31 = System_String__Concat_43743732((System_String_o *)StringLiteral_19657/*"img_txt_remaining_"*/, v30, 0LL);
   EventRewardRootComponent__setRewardInfoImg(allNumTitleSprite, v31, v32);
   boxGachaListViewManager = (UnityEngine_Object_o *)this->fields.boxGachaListViewManager;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -13427,14 +13427,14 @@ void __fastcall EventRewardRootComponent__SetBoxGachaInfoImg(
   {
     LimitLineupInfoSprite = this->fields.LimitLineupInfoSprite;
     v40 = System_Int32__ToString((int)this + 1248, 0LL);
-    v42 = System_String__Concat_43743732((System_String_o *)StringLiteral_19605, v40, 0LL);
+    v42 = System_String__Concat_43743732((System_String_o *)StringLiteral_19605/*"img_txt_end_"*/, v40, 0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
     }
     EventRewardRootComponent__setRewardInfoImg(LimitLineupInfoSprite, v42, v41);
-    UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_352, &color, 0LL);
+    UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_352/*"#4C4C4C"*/, &color, 0LL);
     v43 = (UIWidget_o *)this->fields.singleGachaTimeSprite;
     if ( v43 )
     {
@@ -13470,9 +13470,9 @@ LABEL_29:
   RealIndex = EventRewardRootComponent__GetRealIndex(this, v54);
   v55 = System_Int32__ToString((int32_t)&RealIndex, 0LL);
   v57 = System_String__Concat_43747144(
-          (System_String_o *)StringLiteral_19635,
+          (System_String_o *)StringLiteral_19635/*"img_txt_lineup_"*/,
           v53,
-          (System_String_o *)StringLiteral_15842,
+          (System_String_o *)StringLiteral_15842/*"_"*/,
           v55,
           0LL);
   if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -13851,8 +13851,8 @@ void __fastcall EventRewardRootComponent__SetCurrentEventShopList(
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_EventRewardRootComponent_OnMoveEnd__, v3);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_15842, v5);
-    sub_B16FFC(&StringLiteral_18535, v6);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v5);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v6);
     byte_40F61FF = 1;
   }
   v60 = 0;
@@ -13943,9 +13943,9 @@ void __fastcall EventRewardRootComponent__SetCurrentEventShopList(
     v60 = EventRewardRootComponent__GetRealSlotId(this, v40);
     v41 = System_Int32__ToString((int32_t)&v60, 0LL);
     v43 = System_String__Concat_43747144(
-            (System_String_o *)StringLiteral_18535,
+            (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
             v39,
-            (System_String_o *)StringLiteral_15842,
+            (System_String_o *)StringLiteral_15842/*"_"*/,
             v41,
             0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -14549,8 +14549,8 @@ void __fastcall EventRewardRootComponent__SetEventBoardGameTokenList(
   if ( (byte_40F61F4 & 1) == 0 )
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15842, v3);
-    sub_B16FFC(&StringLiteral_18535, v4);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v3);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v4);
     byte_40F61F4 = 1;
   }
   RealSlotId = 0;
@@ -14566,9 +14566,9 @@ void __fastcall EventRewardRootComponent__SetEventBoardGameTokenList(
     RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v8);
     v9 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
     v11 = System_String__Concat_43747144(
-            (System_String_o *)StringLiteral_18535,
+            (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
             v7,
-            (System_String_o *)StringLiteral_15842,
+            (System_String_o *)StringLiteral_15842/*"_"*/,
             v9,
             0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -14637,8 +14637,8 @@ void __fastcall EventRewardRootComponent__SetEventDiggingList(
     sub_B16FFC(&Method_EventRewardRootComponent__SetEventDiggingList_b__540_0__, v6);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v7);
     sub_B16FFC(&Method_PresentBoxInfoComponent_SetPresentBoxInfo__, v8);
-    sub_B16FFC(&StringLiteral_19635, v9);
-    sub_B16FFC(&StringLiteral_15842, v10);
+    sub_B16FFC(&StringLiteral_19635/*"img_txt_lineup_"*/, v9);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v10);
     byte_40F622B = 1;
   }
   RealSlotId = 0;
@@ -14692,9 +14692,9 @@ LABEL_12:
     RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v40);
     v41 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
     v43 = System_String__Concat_43747144(
-            (System_String_o *)StringLiteral_19635,
+            (System_String_o *)StringLiteral_19635/*"img_txt_lineup_"*/,
             v39,
-            (System_String_o *)StringLiteral_15842,
+            (System_String_o *)StringLiteral_15842/*"_"*/,
             v41,
             0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -14713,13 +14713,13 @@ void __fastcall EventRewardRootComponent__SetEventEnableTime(
 {
   if ( (byte_40F61E0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6912, method);
+    sub_B16FFC(&StringLiteral_6912/*"GetBoxGachaEventEnableTime"*/, method);
     byte_40F61E0 = 1;
   }
   EventRewardRootComponent__GetBoxGachaEventEnableTime(this, method);
   UnityEngine_MonoBehaviour__InvokeRepeating(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6912,
+    (System_String_o *)StringLiteral_6912/*"GetBoxGachaEventEnableTime"*/,
     1.0,
     1.0,
     0LL);
@@ -14798,8 +14798,8 @@ void __fastcall EventRewardRootComponent__SetEventExpeditionList(
     sub_B16FFC(&Method_EventRewardRootComponent__SetEventExpeditionList_b__542_0__, v7);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_15842, v10);
-    sub_B16FFC(&StringLiteral_18535, v11);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v10);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v11);
     byte_40F622C = 1;
   }
   RealSlotId = 0;
@@ -14870,9 +14870,9 @@ void __fastcall EventRewardRootComponent__SetEventExpeditionList(
     RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v39);
     v40 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
     v42 = System_String__Concat_43747144(
-            (System_String_o *)StringLiteral_18535,
+            (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
             v38,
-            (System_String_o *)StringLiteral_15842,
+            (System_String_o *)StringLiteral_15842/*"_"*/,
             v40,
             0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -14956,8 +14956,8 @@ void __fastcall EventRewardRootComponent__SetEventFortification(
   if ( (byte_40F622E & 1) == 0 )
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15842, v3);
-    sub_B16FFC(&StringLiteral_18535, v4);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v3);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v4);
     byte_40F622E = 1;
   }
   RealSlotId = 0;
@@ -14973,9 +14973,9 @@ void __fastcall EventRewardRootComponent__SetEventFortification(
     RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v8);
     v9 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
     v11 = System_String__Concat_43747144(
-            (System_String_o *)StringLiteral_18535,
+            (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
             v7,
-            (System_String_o *)StringLiteral_15842,
+            (System_String_o *)StringLiteral_15842/*"_"*/,
             v9,
             0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -15065,8 +15065,8 @@ void __fastcall EventRewardRootComponent__SetEventHeelPortrait(
   if ( (byte_40F622F & 1) == 0 )
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15842, v3);
-    sub_B16FFC(&StringLiteral_18535, v4);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v3);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v4);
     byte_40F622F = 1;
   }
   RealSlotId = 0;
@@ -15082,9 +15082,9 @@ void __fastcall EventRewardRootComponent__SetEventHeelPortrait(
     RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v8);
     v9 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
     v11 = System_String__Concat_43747144(
-            (System_String_o *)StringLiteral_18535,
+            (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
             v7,
-            (System_String_o *)StringLiteral_15842,
+            (System_String_o *)StringLiteral_15842/*"_"*/,
             v9,
             0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -15399,9 +15399,9 @@ void __fastcall EventRewardRootComponent__SetEventRandomMissionList(
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v14);
     sub_B16FFC(&Method_EventRewardRootComponent___c__SetEventRandomMissionList_b__536_0__, v15);
     sub_B16FFC(&EventRewardRootComponent___c_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_5684, v17);
-    sub_B16FFC(&StringLiteral_5683, v18);
-    sub_B16FFC(&StringLiteral_5685, v19);
+    sub_B16FFC(&StringLiteral_5684/*"EVENT_REWARD_RANDOM_CLEAR_LIST_SUBTITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_5683/*"EVENT_REWARD_RANDOM_CLEAR_LIST_ITEM"*/, v18);
+    sub_B16FFC(&StringLiteral_5685/*"EVENT_REWARD_RANDOM_CLEAR_LIST_TITLE"*/, v19);
     byte_40F6227 = 1;
   }
   entity = 0LL;
@@ -15518,7 +15518,7 @@ void __fastcall EventRewardRootComponent__SetEventRandomMissionList(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v51 = LocalizationManager__Get((System_String_o *)StringLiteral_5683, 0LL);
+              v51 = LocalizationManager__Get((System_String_o *)StringLiteral_5683/*"EVENT_REWARD_RANDOM_CLEAR_LIST_ITEM"*/, 0LL);
               v52 = System_String__Format(v51, (Il2CppObject *)v50->fields.name, 0LL);
               if ( !v43 )
                 break;
@@ -15549,8 +15549,8 @@ LABEL_38:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v55 = LocalizationManager__Get((System_String_o *)StringLiteral_5685, 0LL);
-        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_5684, 0LL);
+        v55 = LocalizationManager__Get((System_String_o *)StringLiteral_5685/*"EVENT_REWARD_RANDOM_CLEAR_LIST_TITLE"*/, 0LL);
+        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_5684/*"EVENT_REWARD_RANDOM_CLEAR_LIST_SUBTITLE"*/, 0LL);
         v61 = EventRewardRootComponent___c_TypeInfo;
         if ( (BYTE3(EventRewardRootComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !EventRewardRootComponent___c_TypeInfo->_2.cctor_finished )
@@ -15962,8 +15962,8 @@ void __fastcall EventRewardRootComponent__SetEventRecipeList(
     sub_B16FFC(&Method_EventRewardRootComponent__SetEventRecipeList_b__543_0__, v9);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v10);
     sub_B16FFC(&Method_EventSvtControl_PlayEventRecipeVoice__, v11);
-    sub_B16FFC(&StringLiteral_15842, v12);
-    sub_B16FFC(&StringLiteral_18535, v13);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v12);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v13);
     byte_40F622D = 1;
   }
   RealSlotId = 0;
@@ -15979,9 +15979,9 @@ void __fastcall EventRewardRootComponent__SetEventRecipeList(
     RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v17);
     v18 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
     v20 = System_String__Concat_43747144(
-            (System_String_o *)StringLiteral_18535,
+            (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
             v16,
-            (System_String_o *)StringLiteral_15842,
+            (System_String_o *)StringLiteral_15842/*"_"*/,
             v18,
             0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -17387,8 +17387,8 @@ void __fastcall EventRewardRootComponent__SetEventTowerRewardList(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
     sub_B16FFC(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v18);
     sub_B16FFC(&SingletonTemplate_clsQuestCheck__TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_15842, v20);
-    sub_B16FFC(&StringLiteral_18535, v21);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v20);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v21);
     byte_40F61EF = 1;
   }
   RealSlotId = 0;
@@ -17431,9 +17431,9 @@ LABEL_60:
           RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v80);
           v81 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
           v83 = System_String__Concat_43747144(
-                  (System_String_o *)StringLiteral_18535,
+                  (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
                   v79,
-                  (System_String_o *)StringLiteral_15842,
+                  (System_String_o *)StringLiteral_15842/*"_"*/,
                   v81,
                   0LL);
           if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -17731,8 +17731,8 @@ void __fastcall EventRewardRootComponent__SetEventTreasureBoxList(
     sub_B16FFC(&Method_EventRewardRootComponent_TreasureBoxDrawAction__, v8);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v9);
     sub_B16FFC(&Method_EventSvtControl_PlayTreasureBoxVoice__, v10);
-    sub_B16FFC(&StringLiteral_15842, v11);
-    sub_B16FFC(&StringLiteral_18535, v12);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v11);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v12);
     byte_40F61F5 = 1;
   }
   RealSlotId = 0;
@@ -17786,9 +17786,9 @@ void __fastcall EventRewardRootComponent__SetEventTreasureBoxList(
     RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v35);
     v36 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
     v38 = System_String__Concat_43747144(
-            (System_String_o *)StringLiteral_18535,
+            (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
             v34,
-            (System_String_o *)StringLiteral_15842,
+            (System_String_o *)StringLiteral_15842/*"_"*/,
             v36,
             0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -18236,9 +18236,9 @@ void __fastcall EventRewardRootComponent__SetMissionCompleteNum(
     sub_B16FFC(&long_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_23516, v9);
-    sub_B16FFC(&StringLiteral_23395, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, v9);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F61EB = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -18311,7 +18311,7 @@ void __fastcall EventRewardRootComponent__SetMissionCompleteNum(
             {
               Point = UserEventPointMaster__GetPoint(v34, UserId, this->fields.currentEventId, groupId, 0LL);
               v36 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &Point);
-              v37 = System_String__Format((System_String_o *)StringLiteral_23395, v36, 0LL);
+              v37 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v36, 0LL);
               goto LABEL_25;
             }
           }
@@ -18333,7 +18333,7 @@ LABEL_27:
   v44 = v39;
 LABEL_24:
   v40 = (Il2CppObject *)j_il2cpp_value_box_0(v26, &v44);
-  v37 = System_String__Format_43739268((System_String_o *)StringLiteral_23516, v25, v40, 0LL);
+  v37 = System_String__Format_43739268((System_String_o *)StringLiteral_23516/*"{0}/{1}"*/, v25, v40, 0LL);
 LABEL_25:
   v41 = v37;
   eventMissionTxt = this->fields.eventMissionTxt;
@@ -18366,9 +18366,9 @@ void __fastcall EventRewardRootComponent__SetMissionRewardInfoImg(
   if ( (byte_40F61EE & 1) == 0 )
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15842, v3);
-    sub_B16FFC(&StringLiteral_18535, v4);
-    sub_B16FFC(&StringLiteral_19487, v5);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v3);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v4);
+    sub_B16FFC(&StringLiteral_19487/*"img_pointtxt02_"*/, v5);
     byte_40F61EE = 1;
   }
   missionTitleTxtSprite = this->fields.missionTitleTxtSprite;
@@ -18377,9 +18377,9 @@ void __fastcall EventRewardRootComponent__SetMissionRewardInfoImg(
   RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v9);
   v10 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
   v12 = System_String__Concat_43747144(
-          (System_String_o *)StringLiteral_18535,
+          (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
           v8,
-          (System_String_o *)StringLiteral_15842,
+          (System_String_o *)StringLiteral_15842/*"_"*/,
           v10,
           0LL);
   if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -18390,7 +18390,7 @@ void __fastcall EventRewardRootComponent__SetMissionRewardInfoImg(
   EventRewardRootComponent__setRewardInfoImg(missionTitleTxtSprite, v12, v11);
   missionTxtSprite = this->fields.missionTxtSprite;
   v14 = System_Int32__ToString(v7, 0LL);
-  v15 = System_String__Concat_43743732((System_String_o *)StringLiteral_19487, v14, 0LL);
+  v15 = System_String__Concat_43743732((System_String_o *)StringLiteral_19487/*"img_pointtxt02_"*/, v14, 0LL);
   EventRewardRootComponent__setRewardInfoImg(missionTxtSprite, v15, v16);
 }
 
@@ -18720,9 +18720,9 @@ void __fastcall EventRewardRootComponent__SetRandomMissionRewardInfoImg(
   if ( (byte_40F6228 & 1) == 0 )
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19486, v3);
-    sub_B16FFC(&StringLiteral_15842, v4);
-    sub_B16FFC(&StringLiteral_18535, v5);
+    sub_B16FFC(&StringLiteral_19486/*"img_pointtxt01_"*/, v3);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v4);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v5);
     byte_40F6228 = 1;
   }
   randomMissionTitleTxtSprite = this->fields.randomMissionTitleTxtSprite;
@@ -18730,9 +18730,9 @@ void __fastcall EventRewardRootComponent__SetRandomMissionRewardInfoImg(
   RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v8);
   v9 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
   v11 = System_String__Concat_43747144(
-          (System_String_o *)StringLiteral_18535,
+          (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
           v7,
-          (System_String_o *)StringLiteral_15842,
+          (System_String_o *)StringLiteral_15842/*"_"*/,
           v9,
           0LL);
   if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -18746,9 +18746,9 @@ void __fastcall EventRewardRootComponent__SetRandomMissionRewardInfoImg(
   RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v14);
   v15 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
   v16 = System_String__Concat_43747144(
-          (System_String_o *)StringLiteral_19486,
+          (System_String_o *)StringLiteral_19486/*"img_pointtxt01_"*/,
           v13,
-          (System_String_o *)StringLiteral_15842,
+          (System_String_o *)StringLiteral_15842/*"_"*/,
           v15,
           0LL);
   EventRewardRootComponent__setRewardInfoImg(randomMissionTxtSprite, v16, v17);
@@ -18989,9 +18989,9 @@ void __fastcall EventRewardRootComponent__SetRewardPointInfoImg(
   if ( (byte_40F61E3 & 1) == 0 )
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19486, v3);
-    sub_B16FFC(&StringLiteral_15842, v4);
-    sub_B16FFC(&StringLiteral_18535, v5);
+    sub_B16FFC(&StringLiteral_19486/*"img_pointtxt01_"*/, v3);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v4);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v5);
     byte_40F61E3 = 1;
   }
   pointTxtSprite = this->fields.pointTxtSprite;
@@ -18999,9 +18999,9 @@ void __fastcall EventRewardRootComponent__SetRewardPointInfoImg(
   RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v8);
   v9 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
   v11 = System_String__Concat_43747144(
-          (System_String_o *)StringLiteral_19486,
+          (System_String_o *)StringLiteral_19486/*"img_pointtxt01_"*/,
           v7,
-          (System_String_o *)StringLiteral_15842,
+          (System_String_o *)StringLiteral_15842/*"_"*/,
           v9,
           0LL);
   if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -19015,9 +19015,9 @@ void __fastcall EventRewardRootComponent__SetRewardPointInfoImg(
   RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v14);
   v15 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
   v16 = System_String__Concat_43747144(
-          (System_String_o *)StringLiteral_18535,
+          (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
           v13,
-          (System_String_o *)StringLiteral_15842,
+          (System_String_o *)StringLiteral_15842/*"_"*/,
           v15,
           0LL);
   EventRewardRootComponent__setRewardInfoImg(pointTitleTxtSprite, v16, v17);
@@ -19041,8 +19041,8 @@ void __fastcall EventRewardRootComponent__SetRewardRankingInfoImg(
   if ( (byte_40F61E8 & 1) == 0 )
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15842, v3);
-    sub_B16FFC(&StringLiteral_18535, v4);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v3);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v4);
     byte_40F61E8 = 1;
   }
   rankingRewardTxtSprite = this->fields.rankingRewardTxtSprite;
@@ -19050,9 +19050,9 @@ void __fastcall EventRewardRootComponent__SetRewardRankingInfoImg(
   RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v7);
   v8 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
   v10 = System_String__Concat_43747144(
-          (System_String_o *)StringLiteral_18535,
+          (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
           v6,
-          (System_String_o *)StringLiteral_15842,
+          (System_String_o *)StringLiteral_15842/*"_"*/,
           v8,
           0LL);
   if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -19541,8 +19541,8 @@ void __fastcall EventRewardRootComponent__SetServantRecoveryFatigueInfo(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_EventServantRecoveryFatigueManager___, v10);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_15842, v13);
-    sub_B16FFC(&StringLiteral_18535, v14);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v13);
+    sub_B16FFC(&StringLiteral_18535/*"event_title_txt_"*/, v14);
     byte_40F61F0 = 1;
   }
   RealSlotId = 0;
@@ -19679,9 +19679,9 @@ LABEL_36:
             RealSlotId = EventRewardRootComponent__GetRealSlotId(this, v70);
             v71 = System_Int32__ToString((int32_t)&RealSlotId, 0LL);
             v73 = System_String__Concat_43747144(
-                    (System_String_o *)StringLiteral_18535,
+                    (System_String_o *)StringLiteral_18535/*"event_title_txt_"*/,
                     v69,
-                    (System_String_o *)StringLiteral_15842,
+                    (System_String_o *)StringLiteral_15842/*"_"*/,
                     v71,
                     0LL);
             if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -20137,8 +20137,8 @@ int32_t __fastcall EventRewardRootComponent__SetSvtFigure(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v18);
     sub_B16FFC(&UIScrollView_OnDragNotification_TypeInfo, v19);
     sub_B16FFC(&SpringPanel_OnFinished_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_1004, v21);
-    sub_B16FFC(&StringLiteral_951, v22);
+    sub_B16FFC(&StringLiteral_1004/*"1"*/, v21);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v22);
     byte_40F61A1 = 1;
   }
   HIDWORD(methoda.klass) = 0;
@@ -20435,12 +20435,12 @@ int32_t __fastcall EventRewardRootComponent__SetSvtFigure(
         }
         HIDWORD(methoda.klass) = klass + 1;
         v132 = System_Int32__ToString((int32_t)&methoda.klass + 4, 0LL);
-        v133 = System_String__Concat_43743732((System_String_o *)StringLiteral_951, v132, 0LL);
+        v133 = System_String__Concat_43743732((System_String_o *)StringLiteral_951/*"0"*/, v132, 0LL);
         UnityEngine_Object__set_name((UnityEngine_Object_o *)v114, v133, 0LL);
         if ( SHIDWORD(methoda.klass) >= 10 )
         {
           v134 = System_Int32__ToString((int32_t)&methoda.klass + 4, 0LL);
-          v135 = System_String__Concat_43743732((System_String_o *)StringLiteral_1004, v134, 0LL);
+          v135 = System_String__Concat_43743732((System_String_o *)StringLiteral_1004/*"1"*/, v134, 0LL);
           UnityEngine_Object__set_name((UnityEngine_Object_o *)v114, v135, 0LL);
         }
         v136 = UnityEngine_GameObject__GetComponent_srcLineSprite_(
@@ -20573,8 +20573,8 @@ void __fastcall EventRewardRootComponent__SetTermTotalSupportNum(
     sub_B16FFC(&long_TypeInfo, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B16FFC(&StringLiteral_10847, v11);
-    sub_B16FFC(&StringLiteral_5690, v12);
+    sub_B16FFC(&StringLiteral_10847/*"QP_UNIT"*/, v11);
+    sub_B16FFC(&StringLiteral_5690/*"EVENT_REWARD_RANKING_SUPPORT_INFO"*/, v12);
     byte_40F61E5 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -20640,14 +20640,14 @@ void __fastcall EventRewardRootComponent__SetTermTotalSupportNum(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5690, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5690/*"EVENT_REWARD_RANKING_SUPPORT_INFO"*/, 0LL);
   v37 = v26->fields.num;
   v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37);
   v31 = System_String__Format(v29, v30, 0LL);
   if ( !rankingTitleTxtLabel
     || (UILabel__set_text(rankingTitleTxtLabel, v31, 0LL),
         raceSupportLabel = this->fields.raceSupportLabel,
-        v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10847, 0LL),
+        v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10847/*"QP_UNIT"*/, 0LL),
         v36 = v17 * num,
         v34 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v36),
         v35 = System_String__Format(v33, v34, 0LL),
@@ -20702,7 +20702,7 @@ System_String_o *__fastcall EventRewardRootComponent__SetValentineScriptBadEndMe
     sub_B16FFC(&Method_DataMasterBase_ShopDetailMaster__ShopDetailEntity__int__GetEntity__, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&string_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_9308, v11);
+    sub_B16FFC(&StringLiteral_9308/*"NOT_GET_COMMIT_AFTER_SCRIPT"*/, v11);
     byte_40F6218 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -20717,7 +20717,7 @@ System_String_o *__fastcall EventRewardRootComponent__SetValentineScriptBadEndMe
   if ( Entity && (bannerId = Entity->fields.bannerId, v14 = (_DWORD)Entity + 48, bannerId > 0) )
   {
     v16 = System_Int32__ToString(v14, 0LL);
-    v17 = System_String__Concat_43743732((System_String_o *)StringLiteral_9308, v16, 0LL);
+    v17 = System_String__Concat_43743732((System_String_o *)StringLiteral_9308/*"NOT_GET_COMMIT_AFTER_SCRIPT"*/, v16, 0LL);
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
@@ -20731,11 +20731,11 @@ System_String_o *__fastcall EventRewardRootComponent__SetValentineScriptBadEndMe
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = (System_String_o *)StringLiteral_9308;
+    v17 = (System_String_o *)StringLiteral_9308/*"NOT_GET_COMMIT_AFTER_SCRIPT"*/;
   }
   v18 = LocalizationManager__Get(v17, 0LL);
   v19 = System_Int32__ToString((int32_t)&v29, 0LL);
-  v20 = System_String__Concat_43743732((System_String_o *)StringLiteral_9308, v19, 0LL);
+  v20 = System_String__Concat_43743732((System_String_o *)StringLiteral_9308/*"NOT_GET_COMMIT_AFTER_SCRIPT"*/, v19, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -20776,7 +20776,7 @@ System_String_o *__fastcall EventRewardRootComponent__SetValentineScriptBadEndMe
     {
 LABEL_36:
       v26 = System_Int32__ToString((int32_t)&v29, 0LL);
-      v27 = System_String__Concat_43743732((System_String_o *)StringLiteral_9308, v26, 0LL);
+      v27 = System_String__Concat_43743732((System_String_o *)StringLiteral_9308/*"NOT_GET_COMMIT_AFTER_SCRIPT"*/, v26, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
@@ -21553,9 +21553,9 @@ void __fastcall EventRewardRootComponent__UpdateEventRandomMissionNum(
     sub_B16FFC(&int_TypeInfo, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_UserEventRandomMissionEntity__get_Count__, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_5689, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
-    sub_B16FFC(&StringLiteral_12413, v11);
+    sub_B16FFC(&StringLiteral_5689/*"EVENT_REWARD_RANDOM_MISSION_NUM_OVER"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
+    sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v11);
     byte_40F6229 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -21601,7 +21601,7 @@ void __fastcall EventRewardRootComponent__UpdateEventRandomMissionNum(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   v36 = size;
   v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v36);
   v35 = v26;
@@ -21613,7 +21613,7 @@ void __fastcall EventRewardRootComponent__UpdateEventRandomMissionNum(
   eventRandomMissionWarningText = this->fields.eventRandomMissionWarningText;
   if ( !eventRandomMissionWarningText )
     goto LABEL_26;
-  UILabel__set_text(eventRandomMissionWarningText, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(eventRandomMissionWarningText, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( size < v26 )
     goto LABEL_24;
   v32 = this->fields.eventRandomMissionWarningText;
@@ -21622,7 +21622,7 @@ void __fastcall EventRewardRootComponent__UpdateEventRandomMissionNum(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5689, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5689/*"EVENT_REWARD_RANDOM_MISSION_NUM_OVER"*/, 0LL);
   if ( !v32 )
 LABEL_26:
     sub_B170D4();
@@ -21665,7 +21665,7 @@ void __fastcall EventRewardRootComponent__VoiceBtnTween(EventRewardRootComponent
     sub_B16FFC(&int_TypeInfo, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__get_Item__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_5682, v7);
+    sub_B16FFC(&StringLiteral_5682/*"EVENT_REWARD_MUTE_SVT_ID_{0}"*/, v7);
     byte_40F6192 = 1;
   }
   eventServantIdList = this->fields.eventServantIdList;
@@ -21676,7 +21676,7 @@ void __fastcall EventRewardRootComponent__VoiceBtnTween(EventRewardRootComponent
     System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
   v23 = eventServantIdList->fields._items->m_Items[currentEventSlotIndex + 1];
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23);
-  v11 = System_String__Format((System_String_o *)StringLiteral_5682, v10, 0LL);
+  v11 = System_String__Format((System_String_o *)StringLiteral_5682/*"EVENT_REWARD_MUTE_SVT_ID_{0}"*/, v10, 0LL);
   if ( ConstantMaster__getValue(v11, 0LL) <= 0 )
   {
     playBtnImg = (UnityEngine_Object_o *)this->fields.playBtnImg;
@@ -21853,7 +21853,7 @@ void __fastcall EventRewardRootComponent___EndCommitPurchaseShop_b__548_0(
   if ( (byte_40F6251 & 1) == 0 )
   {
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, *(_QWORD *)&onClick);
-    sub_B16FFC(&StringLiteral_11043, v4);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v4);
     byte_40F6251 = 1;
   }
   eventRewardAnotherPayConfirmDialog = (BaseDialog_o *)this->fields.eventRewardAnotherPayConfirmDialog;
@@ -21882,7 +21882,7 @@ void __fastcall EventRewardRootComponent___EndCommitPurchaseShop_b__548_0(
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
       return;
     }
 LABEL_24:
@@ -21955,13 +21955,13 @@ void __fastcall EventRewardRootComponent___ExecuteCostumeReleaseEffect_b__446_0(
 
   if ( (byte_40F623E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5466, method);
+    sub_B16FFC(&StringLiteral_5466/*"END_DISP"*/, method);
     byte_40F623E = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5466, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5466/*"END_DISP"*/, 0LL);
 }
 
 
@@ -21973,13 +21973,13 @@ void __fastcall EventRewardRootComponent___ExecuteCostumeReleaseEffect_b__446_1(
 
   if ( (byte_40F623F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5466, method);
+    sub_B16FFC(&StringLiteral_5466/*"END_DISP"*/, method);
     byte_40F623F = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5466, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5466/*"END_DISP"*/, 0LL);
 }
 
 
@@ -22081,13 +22081,13 @@ void __fastcall EventRewardRootComponent___OnEndDialogRequestValentineShop_b__51
 
   if ( (byte_40F624A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, method);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, method);
     byte_40F624A = 1;
   }
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel || (UnityEngine_GameObject__SetActive(maskPanel, 0, 0LL), (myFSM = this->fields.myFSM) == 0LL) )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
 }
 
 
@@ -22257,12 +22257,12 @@ void __fastcall EventRewardRootComponent___RequestGachaAutoReset_b__454_0(
     sub_B16FFC(&AvalonSceneManager_TypeInfo, v5);
     sub_B16FFC(&Method_EventRewardRootComponent__RequestGachaAutoReset_b__454_1__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_20980, v8);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v8);
     byte_40F6241 = 1;
   }
   if ( !result )
     goto LABEL_10;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     return;
   EventRewardRootComponent__setTotalBoxGachaCount(this, 1, v9);
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -22355,7 +22355,7 @@ void __fastcall EventRewardRootComponent___SelectedBuyEventItemConfirm_b__502_0(
     sub_B16FFC(&Method_System_Action_int___ctor__, *(_QWORD *)&onClick);
     sub_B16FFC(&System_Action_int__TypeInfo, v5);
     sub_B16FFC(&Method_EventRewardRootComponent_SelectedBuyEventItemConfirm__, v6);
-    sub_B16FFC(&StringLiteral_8688, v7);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, v7);
     byte_40F6246 = 1;
   }
   eventRewardAssistConfirmDialog = (BaseDialog_o *)this->fields.eventRewardAssistConfirmDialog;
@@ -22367,7 +22367,7 @@ void __fastcall EventRewardRootComponent___SelectedBuyEventItemConfirm_b__502_0(
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
       return;
     }
 LABEL_12:
@@ -22410,13 +22410,13 @@ void __fastcall EventRewardRootComponent___SelectedBuyEventItemConfirm_b__502_1(
 
   if ( (byte_40F6247 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8688, method);
+    sub_B16FFC(&StringLiteral_8688/*"MENU_DECIDE"*/, method);
     byte_40F6247 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8688/*"MENU_DECIDE"*/, 0LL);
 }
 
 
@@ -22428,13 +22428,13 @@ void __fastcall EventRewardRootComponent___SelectedBuyEventItemConfirm_b__502_2(
 
   if ( (byte_40F6248 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8687, method);
+    sub_B16FFC(&StringLiteral_8687/*"MENU_CANCEL"*/, method);
     byte_40F6248 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8687/*"MENU_CANCEL"*/, 0LL);
 }
 
 
@@ -22780,13 +22780,13 @@ void __fastcall EventRewardRootComponent___closeReseEndDlg_b__458_0(
 
   if ( (byte_40F6244 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5472, method);
+    sub_B16FFC(&StringLiteral_5472/*"END_NOTICE"*/, method);
     byte_40F6244 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5472, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5472/*"END_NOTICE"*/, 0LL);
   EventTutorialMaster__CheckTutorial(
     this->fields.currentEventId,
     72,
@@ -22843,7 +22843,7 @@ void __fastcall EventRewardRootComponent___resetGachaList_b__456_0(
 
   if ( (byte_40F6243 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5468, method);
+    sub_B16FFC(&StringLiteral_5468/*"END_FADE"*/, method);
     byte_40F6243 = 1;
   }
   boxGachaListViewManager = this->fields.boxGachaListViewManager;
@@ -22856,7 +22856,7 @@ void __fastcall EventRewardRootComponent___resetGachaList_b__456_0(
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5468, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5468/*"END_FADE"*/, 0LL);
 }
 
 
@@ -22868,14 +22868,14 @@ void __fastcall EventRewardRootComponent___setRecieveModifyItem_b__472_0(
 
   if ( (byte_40F6245 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5466, method);
+    sub_B16FFC(&StringLiteral_5466/*"END_DISP"*/, method);
     byte_40F6245 = 1;
   }
   EventRewardRootComponent__SetMissionCompleteNum(this, method);
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5466, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5466/*"END_DISP"*/, 0LL);
 }
 
 
@@ -22902,7 +22902,7 @@ void __fastcall EventRewardRootComponent___showBoxGachaResult_b__438_0(
 
   if ( (byte_40F623C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5468, method);
+    sub_B16FFC(&StringLiteral_5468/*"END_FADE"*/, method);
     byte_40F623C = 1;
   }
   EventRewardRootComponent__SetGachaResouces(this, method);
@@ -22911,7 +22911,7 @@ void __fastcall EventRewardRootComponent___showBoxGachaResult_b__438_0(
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5468, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5468/*"END_FADE"*/, 0LL);
 }
 
 
@@ -22949,7 +22949,7 @@ void __fastcall EventRewardRootComponent___transitionBoxGachaMainDisp_b__448_0(
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, method);
     sub_B16FFC(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v9);
     sub_B16FFC(&SingletonTemplate_MissionNotifyManager__TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_5468, v11);
+    sub_B16FFC(&StringLiteral_5468/*"END_FADE"*/, v11);
     byte_40F6240 = 1;
   }
   currentBoxGachaEnt = this->fields.currentBoxGachaEnt;
@@ -23008,7 +23008,7 @@ void __fastcall EventRewardRootComponent___transitionBoxGachaMainDisp_b__448_0(
   if ( !v25 || (MissionNotifyManager__EndPause(v25, 0LL), (myFSM = this->fields.myFSM) == 0LL) )
 LABEL_15:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5468, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5468/*"END_FADE"*/, 0LL);
 }
 
 
@@ -23486,7 +23486,7 @@ void __fastcall EventRewardRootComponent__beginStartUp_17518612(
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v15);
     sub_B16FFC(&SceneJumpInfo_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_21129, v18);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v18);
     byte_40F6174 = 1;
   }
   p_jumpInfo = &this->fields.jumpInfo;
@@ -23717,16 +23717,16 @@ void __fastcall EventRewardRootComponent__callbackBoxGachaDraw(
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v10);
     sub_B16FFC(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v11);
     sub_B16FFC(&SingletonTemplate_MissionNotifyManager__TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_11043, v13);
-    sub_B16FFC(&StringLiteral_11041, v14);
-    sub_B16FFC(&StringLiteral_20980, v15);
-    sub_B16FFC(&StringLiteral_15571, v16);
-    sub_B16FFC(&StringLiteral_15807, v17);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v13);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v14);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v15);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v16);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v17);
     byte_40F61CC = 1;
   }
   if ( !result )
     goto LABEL_38;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     if ( (BYTE3(SingletonTemplate_MissionNotifyManager__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SingletonTemplate_MissionNotifyManager__TypeInfo->_2.cctor_finished )
@@ -23742,12 +23742,12 @@ void __fastcall EventRewardRootComponent__callbackBoxGachaDraw(
 LABEL_38:
     sub_B170D4();
   }
-  if ( !System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     v21 = (Il2CppObject *)System_String__Concat_43746016(
-                            (System_String_o *)StringLiteral_15571,
+                            (System_String_o *)StringLiteral_15571/*"["*/,
                             result,
-                            (System_String_o *)StringLiteral_15807,
+                            (System_String_o *)StringLiteral_15807/*"]"*/,
                             0LL);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -23862,7 +23862,7 @@ LABEL_32:
                 myFSM = this->fields.myFSM;
                 if ( myFSM )
                 {
-                  v20 = &StringLiteral_11043;
+                  v20 = &StringLiteral_11043/*"REQUEST_OK"*/;
                   goto LABEL_37;
                 }
               }
@@ -23901,7 +23901,7 @@ LABEL_11:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_38;
-  v20 = &StringLiteral_11041;
+  v20 = &StringLiteral_11041/*"REQUEST_NG"*/;
 LABEL_37:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v20, 0LL);
 }
@@ -23920,21 +23920,21 @@ void __fastcall EventRewardRootComponent__callbackBoxGachaReset(
 
   if ( (byte_40F61DC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, result);
-    sub_B16FFC(&StringLiteral_11041, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, result);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40F61DC = 1;
   }
   if ( !result
-    || (v7 = System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL),
+    || (v7 = System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL),
         (myFSM = this->fields.myFSM) == 0LL) )
   {
     sub_B170D4();
   }
   if ( v7 )
-    v9 = &StringLiteral_11041;
+    v9 = &StringLiteral_11041/*"REQUEST_NG"*/;
   else
-    v9 = &StringLiteral_11043;
+    v9 = &StringLiteral_11043/*"REQUEST_OK"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v9, 0LL);
 }
 
@@ -24196,7 +24196,7 @@ void __fastcall EventRewardRootComponent__checkEventExist(EventRewardRootCompone
     sub_B16FFC(&System_Collections_Generic_List_EventRewardSceneEntity__TypeInfo, v28);
     sub_B16FFC(&System_Collections_Generic_List_EventRewardRootComponent_SlotAllSvtData__TypeInfo, v29);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v30);
-    sub_B16FFC(&StringLiteral_13570, v31);
+    sub_B16FFC(&StringLiteral_13570/*"TerminalScene"*/, v31);
     byte_40F617B = 1;
   }
   *(_WORD *)&this->fields.existNotOpenTab = 0;
@@ -24770,7 +24770,7 @@ LABEL_81:
   if ( num <= 0 )
   {
     v212 = *p_size;
-    if ( System_String__op_Equality(jumpInfo->fields.returnSceneName, (System_String_o *)StringLiteral_13570, 0LL) )
+    if ( System_String__op_Equality(jumpInfo->fields.returnSceneName, (System_String_o *)StringLiteral_13570/*"TerminalScene"*/, 0LL) )
     {
       if ( !byte_40F6252 )
       {
@@ -24859,8 +24859,8 @@ void __fastcall EventRewardRootComponent__checkPresentNum(EventRewardRootCompone
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&System_Math_TypeInfo, v5);
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_12294, v7);
-    sub_B16FFC(&StringLiteral_12187, v8);
+    sub_B16FFC(&StringLiteral_12294/*"START_GACHA"*/, v7);
+    sub_B16FFC(&StringLiteral_12187/*"SHOW_MSG"*/, v8);
     byte_40F61C5 = 1;
   }
   EventRewardRootComponent__stopSvtVoice(this, method);
@@ -24904,9 +24904,9 @@ LABEL_25:
   if ( !myFSM )
     goto LABEL_25;
   if ( (signed int)(v16 + v13->max_length) <= BalanceConfig_TypeInfo->static_fields->PresentBoxMax )
-    v18 = &StringLiteral_12294;
+    v18 = &StringLiteral_12294/*"START_GACHA"*/;
   else
-    v18 = &StringLiteral_12187;
+    v18 = &StringLiteral_12187/*"SHOW_MSG"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v18, 0LL);
 }
 
@@ -25245,7 +25245,7 @@ void __fastcall EventRewardRootComponent__dispLimitReset(EventRewardRootComponen
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponentInChildren_UISprite___, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_2600, v4);
+    sub_B16FFC(&StringLiteral_2600/*"BOX_GACHA_LIMIT_TXT"*/, v4);
     byte_40F61D7 = 1;
   }
   limitInfoLb = this->fields.limitInfoLb;
@@ -25254,7 +25254,7 @@ void __fastcall EventRewardRootComponent__dispLimitReset(EventRewardRootComponen
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_2600, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_2600/*"BOX_GACHA_LIMIT_TXT"*/, 0LL);
   if ( !limitInfoLb )
     goto LABEL_23;
   UILabel__set_text(limitInfoLb, v6, 0LL);
@@ -25346,7 +25346,7 @@ void __fastcall EventRewardRootComponent__exeBoxGacha(
 
   if ( (byte_40F61C4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5742, *(_QWORD *)&gachaTime);
+    sub_B16FFC(&StringLiteral_5742/*"EXE_BOXGACHA"*/, *(_QWORD *)&gachaTime);
     byte_40F61C4 = 1;
   }
   myFSM = this->fields.myFSM;
@@ -25354,7 +25354,7 @@ void __fastcall EventRewardRootComponent__exeBoxGacha(
   this->fields.drawGachaTime = gachaTime;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5742, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5742/*"EXE_BOXGACHA"*/, 0LL);
 }
 
 
@@ -27122,7 +27122,7 @@ void __fastcall EventRewardRootComponent__setCurrentBoxGachaInfo(
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
     sub_B16FFC(&string_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_2599, v9);
+    sub_B16FFC(&StringLiteral_2599/*"BOX_GACHA_LIMIT_NUM_TXT"*/, v9);
     byte_40F61BF = 1;
   }
   v71 = 0;
@@ -27267,7 +27267,7 @@ LABEL_46:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_2599, 0LL);
+  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_2599/*"BOX_GACHA_LIMIT_NUM_TXT"*/, 0LL);
   v70 = v53;
   v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v70);
   v56 = System_String__Format(v54, v55, 0LL);
@@ -28408,8 +28408,8 @@ void __fastcall EventRewardRootComponent__setGachaExeInfo(EventRewardRootCompone
     sub_B16FFC(&int_TypeInfo, v6);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&NetworkManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_2613, v9);
-    sub_B16FFC(&StringLiteral_11414, v10);
+    sub_B16FFC(&StringLiteral_2613/*"BOX_GACHA_REWARD_NORMAL_TXT"*/, v9);
+    sub_B16FFC(&StringLiteral_11414/*"ResetGachaLIst"*/, v10);
     byte_40F61C2 = 1;
   }
   setGachaResourceCtr = this->fields.setGachaResourceCtr;
@@ -28427,7 +28427,7 @@ void __fastcall EventRewardRootComponent__setGachaExeInfo(EventRewardRootCompone
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2613, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2613/*"BOX_GACHA_REWARD_NORMAL_TXT"*/, 0LL);
   v17 = this->fields.isLimitBox ? 0 : allCurrentNum;
   v40 = v17;
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v40);
@@ -28485,7 +28485,7 @@ void __fastcall EventRewardRootComponent__setGachaExeInfo(EventRewardRootCompone
 LABEL_40:
     sub_B170D4();
   }
-  if ( !System_String__Equals_43731072(ActiveStateName, (System_String_o *)StringLiteral_11414, 0LL) )
+  if ( !System_String__Equals_43731072(ActiveStateName, (System_String_o *)StringLiteral_11414/*"ResetGachaLIst"*/, 0LL) )
     EventTutorialMaster__CheckTutorial(
       this->fields.currentEventId,
       72,
@@ -28898,7 +28898,7 @@ void __fastcall EventRewardRootComponent__setGuideSvtVoice(EventRewardRootCompon
     sub_B16FFC(&Method_EventRewardRootComponent___c__setGuideSvtVoice_b__333_0__, v35);
     sub_B16FFC(&EventRewardRootComponent___c_TypeInfo, v36);
     sub_B16FFC(&EventRewardRootComponent_VoiceData_TypeInfo, v37);
-    sub_B16FFC(&StringLiteral_1, v38);
+    sub_B16FFC(&StringLiteral_1/*""*/, v38);
     byte_40F6181 = 1;
   }
   v363 = 0LL;
@@ -29350,7 +29350,7 @@ LABEL_163:
               EventRewardRootComponent_VoiceData__SetVoiceData(
                 (EventRewardRootComponent_VoiceData_o *)v107,
                 EventIndividualPurchaseVoiceList,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
             }
             v108 = *p_allEventVoiceDataList;
@@ -30269,7 +30269,7 @@ bool __fastcall EventRewardRootComponent__setRewardInfoImg(
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v5);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F6170 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -30313,7 +30313,7 @@ bool __fastcall EventRewardRootComponent__setRewardInfoImg(
           sprite->klass->vtable._34_get_minWidth.methodPtr);
         return 1;
       }
-      UISprite__set_spriteName(sprite, (System_String_o *)StringLiteral_1, 0LL);
+      UISprite__set_spriteName(sprite, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     }
   }
   return 0;
@@ -30396,7 +30396,7 @@ void __fastcall EventRewardRootComponent__setTotalBoxGachaCount(
     sub_B16FFC(&long_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
     sub_B16FFC(&TitleInfoControl_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_8655, v14);
+    sub_B16FFC(&StringLiteral_8655/*"MAX_ALL_USERS_BOX_GACHA_COUNT"*/, v14);
     byte_40F61CE = 1;
   }
   eventDetailEnt = this->fields.eventDetailEnt;
@@ -30448,7 +30448,7 @@ void __fastcall EventRewardRootComponent__setTotalBoxGachaCount(
     {
       if ( TotalCount + 1 > ConstantLongMaster__GetValue_28461356(
                               v20,
-                              (System_String_o *)StringLiteral_8655,
+                              (System_String_o *)StringLiteral_8655/*"MAX_ALL_USERS_BOX_GACHA_COUNT"*/,
                               BalanceConfig_TypeInfo->static_fields->AllUserBoxGachaTotalMax,
                               0LL) )
         goto LABEL_35;
@@ -30749,9 +30749,9 @@ void __fastcall EventRewardRootComponent__showLimitResetDlg(EventRewardRootCompo
     sub_B16FFC(&Method_EventRewardRootComponent_closeReseEndDlg__, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_5472, v6);
-    sub_B16FFC(&StringLiteral_2598, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_5472/*"END_NOTICE"*/, v6);
+    sub_B16FFC(&StringLiteral_2598/*"BOX_GACHA_LIMIT_INFO_MSG"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F61D8 = 1;
   }
   if ( this->fields.isLimitBox )
@@ -30762,7 +30762,7 @@ void __fastcall EventRewardRootComponent__showLimitResetDlg(EventRewardRootCompo
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_2598, 0LL);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_2598/*"BOX_GACHA_LIMIT_INFO_MSG"*/, 0LL);
     v15 = (NotificationDialog_ClickDelegate_o *)sub_B170CC(
                                                   NotificationDialog_ClickDelegate_TypeInfo,
                                                   v11,
@@ -30778,7 +30778,7 @@ void __fastcall EventRewardRootComponent__showLimitResetDlg(EventRewardRootCompo
     {
       CommonUI__OpenNotificationDialog_18239760(
         Instance,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         v10,
         v15,
         -1,
@@ -30805,7 +30805,7 @@ LABEL_11:
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     goto LABEL_11;
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5472, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_5472/*"END_NOTICE"*/, 0LL);
 }
 
 
@@ -30837,8 +30837,8 @@ void __fastcall EventRewardRootComponent__showNoticeMsg(EventRewardRootComponent
     sub_B16FFC(&Method_EventRewardRootComponent_callBackNoticeDlg__, v4);
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_2595, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_2595/*"BOX_GACHA_CHECK_PRESEN_NUM_TXT"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F61C6 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -30846,7 +30846,7 @@ void __fastcall EventRewardRootComponent__showNoticeMsg(EventRewardRootComponent
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_2595, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_2595/*"BOX_GACHA_CHECK_PRESEN_NUM_TXT"*/, 0LL);
   v10 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -30872,7 +30872,7 @@ void __fastcall EventRewardRootComponent__showNoticeMsg(EventRewardRootComponent
     0LL);
   if ( !presentBoxOverDialog )
     sub_B170D4();
-  PresentBoxOverDialog__Open(presentBoxOverDialog, (System_String_o *)StringLiteral_1, v14, v19, 0, 0LL);
+  PresentBoxOverDialog__Open(presentBoxOverDialog, (System_String_o *)StringLiteral_1/*""*/, v14, v19, 0, 0LL);
 }
 
 
@@ -30916,12 +30916,12 @@ void __fastcall EventRewardRootComponent__showResetEndDlg(EventRewardRootCompone
     sub_B16FFC(&int_TypeInfo, v4);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_2604, v7);
-    sub_B16FFC(&StringLiteral_2609, v8);
-    sub_B16FFC(&StringLiteral_2601, v9);
-    sub_B16FFC(&StringLiteral_2608, v10);
-    sub_B16FFC(&StringLiteral_2605, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_2604/*"BOX_GACHA_RESET_LIMIT_NO_RARE_RESUTL_MSG"*/, v7);
+    sub_B16FFC(&StringLiteral_2609/*"BOX_GACHA_RESET_RESULT_NO_RARE_MSG"*/, v8);
+    sub_B16FFC(&StringLiteral_2601/*"BOX_GACHA_RESET_LAST_RESULT_MSG"*/, v9);
+    sub_B16FFC(&StringLiteral_2608/*"BOX_GACHA_RESET_RESULT_MSG"*/, v10);
+    sub_B16FFC(&StringLiteral_2605/*"BOX_GACHA_RESET_LIMIT_RESULT_MSG"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F61DE = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -30929,7 +30929,7 @@ void __fastcall EventRewardRootComponent__showResetEndDlg(EventRewardRootCompone
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2608, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2608/*"BOX_GACHA_RESET_RESULT_MSG"*/, 0LL);
   if ( this->fields.isLimitReset )
   {
     currentBoxGachaEnt = this->fields.currentBoxGachaEnt;
@@ -30949,7 +30949,7 @@ LABEL_35:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2605, 0LL);
+        v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2605/*"BOX_GACHA_RESET_LIMIT_RESULT_MSG"*/, 0LL);
         v31 = max_length;
         v19 = &v31;
       }
@@ -30960,7 +30960,7 @@ LABEL_35:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2604, 0LL);
+        v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2604/*"BOX_GACHA_RESET_LIMIT_NO_RARE_RESUTL_MSG"*/, 0LL);
         v19 = &v32;
         v32 = max_length;
       }
@@ -30973,7 +30973,7 @@ LABEL_35:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v22 = &StringLiteral_2601;
+    v22 = &StringLiteral_2601/*"BOX_GACHA_RESET_LAST_RESULT_MSG"*/;
 LABEL_26:
     v23 = LocalizationManager__Get((System_String_o *)*v22, 0LL);
 LABEL_32:
@@ -30991,7 +30991,7 @@ LABEL_32:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v22 = &StringLiteral_2609;
+    v22 = &StringLiteral_2609/*"BOX_GACHA_RESET_RESULT_NO_RARE_MSG"*/;
     goto LABEL_26;
   }
 LABEL_33:
@@ -31006,7 +31006,7 @@ LABEL_33:
     goto LABEL_35;
   CommonUI__OpenNotificationDialog_18239760(
     Instance,
-    (System_String_o *)StringLiteral_1,
+    (System_String_o *)StringLiteral_1/*""*/,
     v21,
     v30,
     -1,
@@ -31910,7 +31910,7 @@ bool __fastcall EventRewardRootComponent__OpenDialogAfterVoice_d__526__MoveNext(
     sub_B16FFC(&System_Action_bool__TypeInfo, v3);
     sub_B16FFC(&Method_EventRewardRootComponent_OnEndDialogRequestShop__, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F705A = 1;
   }
   _1__state = this->fields.__1__state;
@@ -31957,7 +31957,7 @@ LABEL_8:
         goto LABEL_25;
       RequestResultDialog__OpenAddMsg_30964536(
         monitor,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         message,
         addMessage,
         v23,
@@ -32004,7 +32004,7 @@ LABEL_8:
           goto LABEL_25;
         RequestResultDialog__OpenAddMsg_30964536(
           v25,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_1/*""*/,
           v26,
           v31,
           v32,
@@ -32371,12 +32371,12 @@ bool __fastcall EventRewardRootComponent___c___GetEventUIOverwritePosition_b__39
 {
   if ( (byte_40F703C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22496, comp);
+    sub_B16FFC(&StringLiteral_22496/*"tabTypeImage"*/, comp);
     byte_40F703C = 1;
   }
   if ( !comp )
     sub_B170D4();
-  return EventUIPositionOverwriteComponent__ContainsKey(comp, (System_String_o *)StringLiteral_22496, 0LL);
+  return EventUIPositionOverwriteComponent__ContainsKey(comp, (System_String_o *)StringLiteral_22496/*"tabTypeImage"*/, 0LL);
 }
 
 
@@ -32699,7 +32699,7 @@ void __fastcall EventRewardRootComponent___c__DisplayClass348_0___AfterInitializ
     sub_B16FFC(&SingletonTemplate_MissionNotifyManager__TypeInfo, v9);
     sub_B16FFC(&Method_EventRewardRootComponent___c__AfterInitialize_b__348_1__, v10);
     sub_B16FFC(&EventRewardRootComponent___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_12017, v12);
+    sub_B16FFC(&StringLiteral_12017/*"SET_END"*/, v12);
     byte_40F7040 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -32884,7 +32884,7 @@ LABEL_29:
   if ( !v79 || (myFSM = v79->fields.myFSM) == 0LL )
 LABEL_59:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_12017, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_12017/*"SET_END"*/, 0LL);
 }
 
 
@@ -33254,17 +33254,17 @@ void __fastcall EventRewardRootComponent___c__DisplayClass432_0___callBackNotice
 
   if ( (byte_40F7044 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5472, method);
-    sub_B16FFC(&StringLiteral_9739, v3);
+    sub_B16FFC(&StringLiteral_5472/*"END_NOTICE"*/, method);
+    sub_B16FFC(&StringLiteral_9739/*"OPEN_PRESENT"*/, v3);
     byte_40F7044 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this || (myFSM = _4__this->fields.myFSM) == 0LL )
     sub_B170D4();
   if ( this->fields.isOpenPresentBox )
-    v6 = &StringLiteral_9739;
+    v6 = &StringLiteral_9739/*"OPEN_PRESENT"*/;
   else
-    v6 = &StringLiteral_5472;
+    v6 = &StringLiteral_5472/*"END_NOTICE"*/;
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v6, 0LL);
 }
 
@@ -34429,7 +34429,7 @@ void __fastcall EventRewardRootComponent___c__DisplayClass496_0___CheckAnotherPa
     sub_B16FFC(&System_Action_TypeInfo, *(_QWORD *)&onDecide);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v5);
     sub_B16FFC(&Method_EventRewardRootComponent___c__DisplayClass496_0__CheckAnotherPayConfirm_b__1__, v6);
-    sub_B16FFC(&StringLiteral_8700, v7);
+    sub_B16FFC(&StringLiteral_8700/*"MENU_SELECT_ITEM"*/, v7);
     byte_40F7051 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -34500,7 +34500,7 @@ LABEL_17:
       myFSM = v16->fields.myFSM;
       if ( !myFSM )
         goto LABEL_24;
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8700, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_8700/*"MENU_SELECT_ITEM"*/, 0LL);
       return;
     default:
       return;

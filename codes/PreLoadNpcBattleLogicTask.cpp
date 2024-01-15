@@ -9,12 +9,12 @@ void __fastcall PreLoadNpcBattleLogicTask___ctor(
 
   if ( (byte_40F8FC7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9337, *(_QWORD *)&targetId);
+    sub_B16FFC(&StringLiteral_9337/*"NPC_PRE_LOAD"*/, *(_QWORD *)&targetId);
     byte_40F8FC7 = 1;
   }
   PlayFieldMotionNpcBattleLogicTask___ctor(
     (PlayFieldMotionNpcBattleLogicTask_o *)this,
-    (System_String_o *)StringLiteral_9337,
+    (System_String_o *)StringLiteral_9337/*"NPC_PRE_LOAD"*/,
     targetId,
     isForcedSpeedOne,
     v4);

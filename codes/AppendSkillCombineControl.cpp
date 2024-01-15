@@ -135,7 +135,7 @@ void __fastcall AppendSkillCombineControl__InitDispCombineInfo(
     sub_B16FFC(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&string_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1705, v8);
+    sub_B16FFC(&StringLiteral_1705/*"APPEND_SKILL_COMBINE_PRESELECT_BASE_INFO"*/, v8);
     byte_40FC9D0 = 1;
   }
   preSelectBaseLb = this->fields.preSelectBaseLb;
@@ -144,7 +144,7 @@ void __fastcall AppendSkillCombineControl__InitDispCombineInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_1705, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_1705/*"APPEND_SKILL_COMBINE_PRESELECT_BASE_INFO"*/, 0LL);
   if ( !preSelectBaseLb )
     goto LABEL_28;
   UILabel__set_text(preSelectBaseLb, v10, 0LL);
@@ -246,9 +246,9 @@ void __fastcall AppendSkillCombineControl__InitSvtSkillCombine(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_19612, v4);
-    sub_B16FFC(&StringLiteral_17083, v5);
-    sub_B16FFC(&StringLiteral_19611, v6);
+    sub_B16FFC(&StringLiteral_19612/*"img_txt_extraskill_item"*/, v4);
+    sub_B16FFC(&StringLiteral_17083/*"buttontxt_synthesis"*/, v5);
+    sub_B16FFC(&StringLiteral_19611/*"img_txt_extraskill"*/, v6);
     byte_40FC9CF = 1;
   }
   EventTutorialMaster__CheckTutorial(0, 70, 0LL, 0, 0, 0, 0, 0LL);
@@ -273,12 +273,12 @@ void __fastcall AppendSkillCombineControl__InitSvtSkillCombine(
   v13 = this->fields.combineTxtImg;
   if ( !v13 )
     goto LABEL_24;
-  UISprite__set_spriteName(v13, (System_String_o *)StringLiteral_17083, 0LL);
+  UISprite__set_spriteName(v13, (System_String_o *)StringLiteral_17083/*"buttontxt_synthesis"*/, 0LL);
   titleImg = this->fields.titleImg;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(titleImg, (System_String_o *)StringLiteral_19611, 0LL);
-  AtlasManager__SetEventSprite(this->fields.itemTitleImg, (System_String_o *)StringLiteral_19612, 0LL);
+  AtlasManager__SetEventSprite(titleImg, (System_String_o *)StringLiteral_19611/*"img_txt_extraskill"*/, 0LL);
+  AtlasManager__SetEventSprite(this->fields.itemTitleImg, (System_String_o *)StringLiteral_19612/*"img_txt_extraskill_item"*/, 0LL);
   v15 = this->fields.combineTxtImg;
   if ( !v15 )
     goto LABEL_24;
@@ -350,8 +350,8 @@ void __fastcall AppendSkillCombineControl__OnClickExeCombine(
   if ( (byte_40FC9DB & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1710, v3);
-    sub_B16FFC(&StringLiteral_1715, v4);
+    sub_B16FFC(&StringLiteral_1710/*"APPEND_SKILL_LVUP_TITLE"*/, v3);
+    sub_B16FFC(&StringLiteral_1715/*"APPEND_SKILL_OPEN_TITLE"*/, v4);
     byte_40FC9DB = 1;
   }
   nowStatus = this->fields.nowStatus;
@@ -364,7 +364,7 @@ void __fastcall AppendSkillCombineControl__OnClickExeCombine(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_1710, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_1710/*"APPEND_SKILL_LVUP_TITLE"*/, 0LL);
     if ( exeCombineDlg )
     {
       v9 = v15;
@@ -385,7 +385,7 @@ LABEL_17:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_1715, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_1715/*"APPEND_SKILL_OPEN_TITLE"*/, 0LL);
     if ( v6 )
     {
       v9 = v8;
@@ -790,7 +790,7 @@ void __fastcall AppendSkillCombineControl__SetNeedItemInfo(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Count__, *(_QWORD *)&idx);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_8814, v7);
+    sub_B16FFC(&StringLiteral_8814/*"MSG_SKILL_SELECT"*/, v7);
     byte_40FC9D4 = 1;
   }
   if ( this->fields.baseUserServantEntity )
@@ -803,7 +803,7 @@ void __fastcall AppendSkillCombineControl__SetNeedItemInfo(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_8814, 0LL);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_8814/*"MSG_SKILL_SELECT"*/, 0LL);
     if ( !selectSkillHelpLb
       || (UILabel__set_text(selectSkillHelpLb, v9, 0LL), (targetList = this->fields.targetList) == 0LL) )
     {
@@ -1003,7 +1003,7 @@ void __fastcall AppendSkillCombineControl__SetSkillIconInfo(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent___ctor__, v15);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantSkillInfoIconComponent__get_Item__, v16);
     sub_B16FFC(&System_Collections_Generic_List_ServantSkillInfoIconComponent__TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_746, v18);
+    sub_B16FFC(&StringLiteral_746/*"-"*/, v18);
     byte_40FC9D2 = 1;
   }
   if ( !skillData )
@@ -1076,7 +1076,7 @@ void __fastcall AppendSkillCombineControl__SetSkillIconInfo(
         }
         else
         {
-          p_age = (System_String_o **)&StringLiteral_746;
+          p_age = (System_String_o **)&StringLiteral_746/*"-"*/;
           longName = 10;
         }
         svtSkillLvList = skillData->fields.svtSkillLvList;
@@ -1390,10 +1390,10 @@ void __fastcall AppendSkillCombineControl__SetStateInfoMsg(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, *(_QWORD *)&state);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1708, v6);
-    sub_B16FFC(&StringLiteral_1709, v7);
-    sub_B16FFC(&StringLiteral_1713, v8);
-    sub_B16FFC(&StringLiteral_1703, v9);
+    sub_B16FFC(&StringLiteral_1708/*"APPEND_SKILL_LVMAX_MSG"*/, v6);
+    sub_B16FFC(&StringLiteral_1709/*"APPEND_SKILL_LVUP_MSG"*/, v7);
+    sub_B16FFC(&StringLiteral_1713/*"APPEND_SKILL_OPEN_MSG"*/, v8);
+    sub_B16FFC(&StringLiteral_1703/*"APPEND_SKILL_COMBINE_INFO"*/, v9);
     byte_40FC9DC = 1;
   }
   if ( !state )
@@ -1424,7 +1424,7 @@ LABEL_26:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v17 = &StringLiteral_1703;
+        v17 = &StringLiteral_1703/*"APPEND_SKILL_COMBINE_INFO"*/;
         goto LABEL_23;
       case 1:
         v16 = this->fields.detailInfoLb;
@@ -1433,7 +1433,7 @@ LABEL_26:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v17 = &StringLiteral_1713;
+        v17 = &StringLiteral_1713/*"APPEND_SKILL_OPEN_MSG"*/;
         goto LABEL_23;
       case 2:
         v16 = this->fields.detailInfoLb;
@@ -1442,7 +1442,7 @@ LABEL_26:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v17 = &StringLiteral_1709;
+        v17 = &StringLiteral_1709/*"APPEND_SKILL_LVUP_MSG"*/;
         goto LABEL_23;
       case 3:
         white = UnityEngine_Color__get_white(0LL);
@@ -1453,7 +1453,7 @@ LABEL_26:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v17 = &StringLiteral_1708;
+        v17 = &StringLiteral_1708/*"APPEND_SKILL_LVMAX_MSG"*/;
 LABEL_23:
         v18 = LocalizationManager__Get((System_String_o *)*v17, 0LL);
         if ( !v16 )
@@ -1609,14 +1609,14 @@ void __fastcall AppendSkillCombineControl__SetSvtSkillCombineData(
     sub_B16FFC(&Method_System_Collections_Generic_List_LimitCntUpItemComponent__get_Item__, v14);
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_9241, v17);
-    sub_B16FFC(&StringLiteral_17009, v18);
-    sub_B16FFC(&StringLiteral_17083, v19);
-    sub_B16FFC(&StringLiteral_12161, v20);
-    sub_B16FFC(&StringLiteral_12162, v21);
-    sub_B16FFC(&StringLiteral_1704, v22);
-    sub_B16FFC(&StringLiteral_1, v23);
-    this = (AppendSkillCombineControl_o *)sub_B16FFC(&StringLiteral_17081, v24);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v17);
+    sub_B16FFC(&StringLiteral_17009/*"btn_txt_open2"*/, v18);
+    sub_B16FFC(&StringLiteral_17083/*"buttontxt_synthesis"*/, v19);
+    sub_B16FFC(&StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/, v20);
+    sub_B16FFC(&StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, v21);
+    sub_B16FFC(&StringLiteral_1704/*"APPEND_SKILL_COMBINE_ITEM_NOT_ENOUGH"*/, v22);
+    sub_B16FFC(&StringLiteral_1/*""*/, v23);
+    this = (AppendSkillCombineControl_o *)sub_B16FFC(&StringLiteral_17081/*"buttontxt_notsynthesis"*/, v24);
     byte_40FC9D5 = 1;
   }
   skillData = v4->fields.skillData;
@@ -1710,7 +1710,7 @@ LABEL_101:
     goto LABEL_22;
   UnityEngine_GameObject__SetActive(combineQpInfo, 0, 0LL);
   nowStatus = v4->fields.nowStatus;
-  v51 = (System_String_o *)StringLiteral_1;
+  v51 = (System_String_o *)StringLiteral_1/*""*/;
   if ( nowStatus == 1 )
   {
     combineTxtImg = v4->fields.combineTxtImg;
@@ -1719,7 +1719,7 @@ LABEL_101:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(combineTxtImg, (System_String_o *)StringLiteral_17009, 0LL);
+    AtlasManager__SetEventSprite(combineTxtImg, (System_String_o *)StringLiteral_17009/*"btn_txt_open2"*/, 0LL);
     v56 = v4->fields.combineTxtImg;
     if ( !v56 )
       goto LABEL_22;
@@ -1780,7 +1780,7 @@ LABEL_101:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_1704, 0LL);
+    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_1704/*"APPEND_SKILL_COMBINE_ITEM_NOT_ENOUGH"*/, 0LL);
     goto LABEL_86;
   }
   if ( nowStatus != 2 )
@@ -1796,7 +1796,7 @@ LABEL_101:
       v53 = v4->fields.combineTxtImg;
       if ( !v53 )
         goto LABEL_22;
-      UISprite__set_spriteName(v53, (System_String_o *)StringLiteral_17081, 0LL);
+      UISprite__set_spriteName(v53, (System_String_o *)StringLiteral_17081/*"buttontxt_notsynthesis"*/, 0LL);
       v54 = v4->fields.combineTxtImg;
       if ( !v54 )
         goto LABEL_22;
@@ -1820,7 +1820,7 @@ LABEL_86:
   v76 = v4->fields.combineTxtImg;
   if ( !v76 )
     goto LABEL_22;
-  UISprite__set_spriteName(v76, (System_String_o *)StringLiteral_17083, 0LL);
+  UISprite__set_spriteName(v76, (System_String_o *)StringLiteral_17083/*"buttontxt_synthesis"*/, 0LL);
   v77 = v4->fields.combineTxtImg;
   if ( !v77 )
     goto LABEL_22;
@@ -1855,7 +1855,7 @@ LABEL_86:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v87 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v87 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   if ( !v86 )
     goto LABEL_22;
   v88 = v87;
@@ -1866,7 +1866,7 @@ LABEL_86:
     goto LABEL_22;
   UILabel__set_text(spendQpLabel, v90, 0LL);
   haveQpLabel = v4->fields.haveQpLabel;
-  v92 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v92 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   userQp = v4->fields.userQp;
   v93 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &userQp);
   v94 = System_String__Format(v92, v93, 0LL);
@@ -1886,7 +1886,7 @@ LABEL_86:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12162, 0LL);
+    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, 0LL);
   }
   if ( (v73 & 1) == 0 )
   {
@@ -1895,7 +1895,7 @@ LABEL_86:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12161, 0LL);
+    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/, 0LL);
   }
   AppendSkillCombineControl__SetSkillLevelUpData(
     v4,
@@ -1905,7 +1905,7 @@ LABEL_86:
     num,
     v36->fields.name,
     v86->fields.itemIds,
-    (System_String_o *)StringLiteral_1,
+    (System_String_o *)StringLiteral_1/*""*/,
     v117);
   AppendSkillCombineControl__SetSkillNeedQpData(v4, v86->fields.qp, v99);
   v42 = v119;

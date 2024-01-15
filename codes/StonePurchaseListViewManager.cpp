@@ -267,7 +267,7 @@ void __fastcall StonePurchaseListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_StonePurchaseListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FAEB1 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -282,7 +282,7 @@ void __fastcall StonePurchaseListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -352,7 +352,7 @@ void __fastcall StonePurchaseListViewManager__RequestListObject_26867436(
     sub_B16FFC(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_StonePurchaseListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_StonePurchaseListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FAEB2 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -367,7 +367,7 @@ void __fastcall StonePurchaseListViewManager__RequestListObject_26867436(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

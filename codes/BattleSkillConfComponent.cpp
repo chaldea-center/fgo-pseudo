@@ -186,8 +186,8 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v19);
     sub_B16FFC(&ServantSkillStrengthStatus_TypeInfo, v20);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    sub_B16FFC(&StringLiteral_23450, v22);
-    sub_B16FFC(&StringLiteral_1, v23);
+    sub_B16FFC(&StringLiteral_23450/*"{0}  Lv.{1}"*/, v22);
+    sub_B16FFC(&StringLiteral_1/*""*/, v23);
     byte_40FCD4E = 1;
   }
   this->fields.skillInfo = skillInfo;
@@ -376,7 +376,7 @@ void __fastcall BattleSkillConfComponent__SetSkillConf(
                         goto LABEL_171;
                       skilllv = (*p_skillInfo)->fields.skilllv;
                       v69 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &skilllv);
-                      v70 = System_String__Format_43739268((System_String_o *)StringLiteral_23450, Name, v69, 0LL);
+                      v70 = System_String__Format_43739268((System_String_o *)StringLiteral_23450/*"{0}  Lv.{1}"*/, Name, v69, 0LL);
                       if ( !skillNameLabel )
                         goto LABEL_171;
                       v68 = v70;
@@ -745,11 +745,11 @@ LABEL_171:
   v38 = this->fields.skillNameLabel;
   if ( !v38 )
     goto LABEL_171;
-  UILabel__set_text(v38, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v38, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v39 = this->fields.skillConfLabel;
   if ( !v39 )
     goto LABEL_171;
-  UILabel__set_text(v39, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v39, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v40 = (UnityEngine_Object_o *)this->fields.useCondSkillConfLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -761,7 +761,7 @@ LABEL_171:
     v41 = this->fields.useCondSkillConfLabel;
     if ( !v41 )
       goto LABEL_171;
-    UILabel__set_text(v41, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v41, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   v42 = (UnityEngine_Object_o *)this->fields.skillStrengthStatus;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -859,10 +859,10 @@ void __fastcall BattleSkillConfComponent__SetUseCond(BattleSkillConfComponent_o 
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
     sub_B16FFC(&string_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_20388, v11);
-    sub_B16FFC(&StringLiteral_20389, v12);
-    sub_B16FFC(&StringLiteral_2443, v13);
-    sub_B16FFC(&StringLiteral_22057, v14);
+    sub_B16FFC(&StringLiteral_20388/*"menu_txt_remaining"*/, v11);
+    sub_B16FFC(&StringLiteral_20389/*"menu_txt_spend"*/, v12);
+    sub_B16FFC(&StringLiteral_2443/*"BATTLE_MASTER_SKILL_ADD_NOT_OPEN_COND_COLOR"*/, v13);
+    sub_B16FFC(&StringLiteral_22057/*"skill_item_{0}"*/, v14);
     byte_40FCD51 = 1;
   }
   v62 = 0LL;
@@ -929,7 +929,7 @@ void __fastcall BattleSkillConfComponent__SetUseCond(BattleSkillConfComponent_o 
       {
         imageId = ItemInfo->fields.imageId;
         v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageId);
-        v30 = System_String__Format((System_String_o *)StringLiteral_22057, v29, 0LL);
+        v30 = System_String__Format((System_String_o *)StringLiteral_22057/*"skill_item_{0}"*/, v29, 0LL);
         if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !AtlasManager_TypeInfo->_2.cctor_finished )
         {
@@ -973,7 +973,7 @@ void __fastcall BattleSkillConfComponent__SetUseCond(BattleSkillConfComponent_o 
       {
         imageId = ItemData->fields.imageId;
         v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageId);
-        v41 = System_String__Format((System_String_o *)StringLiteral_22057, v40, 0LL);
+        v41 = System_String__Format((System_String_o *)StringLiteral_22057/*"skill_item_{0}"*/, v40, 0LL);
         if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !AtlasManager_TypeInfo->_2.cctor_finished )
         {
@@ -1017,7 +1017,7 @@ void __fastcall BattleSkillConfComponent__SetUseCond(BattleSkillConfComponent_o 
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v49 = LocalizationManager__Get((System_String_o *)StringLiteral_2443, 0LL);
+      v49 = LocalizationManager__Get((System_String_o *)StringLiteral_2443/*"BATTLE_MASTER_SKILL_ADD_NOT_OPEN_COND_COLOR"*/, 0LL);
       imageId = HIDWORD(v62);
       v50 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageId);
       v48 = System_String__Format(v49, v50, 0LL);
@@ -1064,7 +1064,7 @@ LABEL_65:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(v58, (System_String_o *)StringLiteral_20388, 0LL);
+    AtlasManager__SetEventSprite(v58, (System_String_o *)StringLiteral_20388/*"menu_txt_remaining"*/, 0LL);
   }
   useCondItemConsume = (UnityEngine_Object_o *)this->fields.useCondItemConsume;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1080,7 +1080,7 @@ LABEL_65:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(v60, (System_String_o *)StringLiteral_20389, 0LL);
+    AtlasManager__SetEventSprite(v60, (System_String_o *)StringLiteral_20389/*"menu_txt_spend"*/, 0LL);
   }
 }
 
@@ -1143,10 +1143,10 @@ System_String_o *__fastcall BattleSkillConfComponent__get_closeBtnPath(
 {
   if ( (byte_40FCD53 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16919, method);
+    sub_B16FFC(&StringLiteral_16919/*"btn_close"*/, method);
     byte_40FCD53 = 1;
   }
-  return (System_String_o *)StringLiteral_16919;
+  return (System_String_o *)StringLiteral_16919/*"btn_close"*/;
 }
 
 

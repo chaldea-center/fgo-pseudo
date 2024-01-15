@@ -31,12 +31,12 @@ void __fastcall UserMissionProgressManager___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_List_UserMissionProgressInfo___ctor__, v1);
     sub_B16FFC(&System_Collections_Generic_List_UserMissionProgressInfo__TypeInfo, v8);
     sub_B16FFC(&UserMissionProgressManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_6591, v10);
+    sub_B16FFC(&StringLiteral_6591/*"Fgo_20160211_1"*/, v10);
     byte_40F9763 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)UserMissionProgressManager_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_6591;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6591;
+  v12 = (System_Int32_array **)StringLiteral_6591/*"Fgo_20160211_1"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6591/*"Fgo_20160211_1"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = UserMissionProgressManager_TypeInfo;
   UserMissionProgressManager_TypeInfo->static_fields->isModfiy = 0;
@@ -802,7 +802,7 @@ System_String_o *__fastcall UserMissionProgressManager__getSaveFileNameByEvent(
   {
     sub_B16FFC(&AndroidUtil_TypeInfo, method);
     sub_B16FFC(&DatFileName_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_871, v4);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v4);
     byte_40F9757 = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
@@ -811,7 +811,7 @@ System_String_o *__fastcall UserMissionProgressManager__getSaveFileNameByEvent(
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName_27471060 = DatFileName__getFileName_27471060(23, eventId, 0, 0LL);
-  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871, FileName_27471060, 0LL);
+  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871/*"/"*/, FileName_27471060, 0LL);
 }
 
 
@@ -830,7 +830,7 @@ System_String_o *__fastcall UserMissionProgressManager__getSaveFileNameByEvent_2
   {
     sub_B16FFC(&AndroidUtil_TypeInfo, *(_QWORD *)&slot);
     sub_B16FFC(&DatFileName_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_871, v6);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v6);
     byte_40F9758 = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
@@ -839,7 +839,7 @@ System_String_o *__fastcall UserMissionProgressManager__getSaveFileNameByEvent_2
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName_27471060 = DatFileName__getFileName_27471060(24, eventId, slot, 0LL);
-  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871, FileName_27471060, 0LL);
+  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871/*"/"*/, FileName_27471060, 0LL);
 }
 
 
@@ -862,14 +862,14 @@ void __fastcall UserMissionProgressManager__setSaveFileName(int32_t eventId, con
   {
     sub_B16FFC(&DatFileName_TypeInfo, method);
     sub_B16FFC(&UserMissionProgressManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_871, v4);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v4);
     byte_40F9755 = 1;
   }
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName_27471060 = DatFileName__getFileName_27471060(23, eventId, 0, 0LL);
   v12 = (System_Int32_array **)System_String__Concat_43743732(
-                                 (System_String_o *)StringLiteral_871,
+                                 (System_String_o *)StringLiteral_871/*"/"*/,
                                  FileName_27471060,
                                  0LL);
   v13 = UserMissionProgressManager_TypeInfo;
@@ -908,14 +908,14 @@ void __fastcall UserMissionProgressManager__setSaveFileName_24050896(
   {
     sub_B16FFC(&DatFileName_TypeInfo, *(_QWORD *)&slot);
     sub_B16FFC(&UserMissionProgressManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_871, v6);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v6);
     byte_40F9756 = 1;
   }
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName_27471060 = DatFileName__getFileName_27471060(24, eventId, slot, 0LL);
   v14 = (System_Int32_array **)System_String__Concat_43743732(
-                                 (System_String_o *)StringLiteral_871,
+                                 (System_String_o *)StringLiteral_871/*"/"*/,
                                  FileName_27471060,
                                  0LL);
   v15 = UserMissionProgressManager_TypeInfo;

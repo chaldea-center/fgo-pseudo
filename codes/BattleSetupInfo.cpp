@@ -122,7 +122,7 @@ BattleSetupInfo_o *__fastcall BattleSetupInfo__ConvertBattleSetupInfo(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
     sub_B16FFC(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v16);
     sub_B16FFC(&SingletonTemplate_clsQuestCheck__TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_1, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v18);
     byte_40FCD49 = 1;
   }
   v19 = sub_B170CC(
@@ -175,8 +175,8 @@ LABEL_11:
   BattleSetupInfo__SetRestriction((BattleSetupInfo_o *)v19, 1, v27);
   BattleSetupInfo__SetSelectableQuests((BattleSetupInfo_o *)v19, v28);
   *(_DWORD *)(v19 + 136) = 0;
-  v29 = (System_Int32_array **)StringLiteral_1;
-  *(_QWORD *)(v19 + 144) = StringLiteral_1;
+  v29 = (System_Int32_array **)StringLiteral_1/*""*/;
+  *(_QWORD *)(v19 + 144) = StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)(v19 + 144), v29, v30, v31, v32, v33, v34, v35);
   *(_DWORD *)(v19 + 152) = 0;
   *(_BYTE *)(v19 + 156) = isScriptBeforeWarBoard;

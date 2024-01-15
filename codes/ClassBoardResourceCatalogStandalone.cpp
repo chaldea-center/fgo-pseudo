@@ -337,10 +337,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_BLANK_PATH(
 {
   if ( (byte_40FB9B9 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3968, method);
+    sub_B16FFC(&StringLiteral_3968/*"ClassBoard/ClassBoardBlank"*/, method);
     byte_40FB9B9 = 1;
   }
-  return (System_String_o *)StringLiteral_3968;
+  return (System_String_o *)StringLiteral_3968/*"ClassBoard/ClassBoardBlank"*/;
 }
 
 
@@ -350,10 +350,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_BOARD_BG_MO
 {
   if ( (byte_40FB9C1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3967, method);
+    sub_B16FFC(&StringLiteral_3967/*"ClassBoard/Bg/ClassBoardBg"*/, method);
     byte_40FB9C1 = 1;
   }
-  return (System_String_o *)StringLiteral_3967;
+  return (System_String_o *)StringLiteral_3967/*"ClassBoard/Bg/ClassBoardBg"*/;
 }
 
 
@@ -363,10 +363,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_BOARD_UI_PA
 {
   if ( (byte_40FB9BF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3977, method);
+    sub_B16FFC(&StringLiteral_3977/*"ClassBoard/ClassBoardUI"*/, method);
     byte_40FB9BF = 1;
   }
-  return (System_String_o *)StringLiteral_3977;
+  return (System_String_o *)StringLiteral_3977/*"ClassBoard/ClassBoardUI"*/;
 }
 
 
@@ -376,10 +376,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_CLASS_UI_AT
 {
   if ( (byte_40FB9C3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3981, method);
+    sub_B16FFC(&StringLiteral_3981/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/, method);
     byte_40FB9C3 = 1;
   }
-  return (System_String_o *)StringLiteral_3981;
+  return (System_String_o *)StringLiteral_3981/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/;
 }
 
 
@@ -397,10 +397,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_DISABLE_OPE
 {
   if ( (byte_40FB9BA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3969, method);
+    sub_B16FFC(&StringLiteral_3969/*"ClassBoard/ClassBoardDisableOpenDialog"*/, method);
     byte_40FB9BA = 1;
   }
-  return (System_String_o *)StringLiteral_3969;
+  return (System_String_o *)StringLiteral_3969/*"ClassBoard/ClassBoardDisableOpenDialog"*/;
 }
 
 
@@ -410,10 +410,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_ICON_ATLAS_
 {
   if ( (byte_40FB9C0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3978, method);
+    sub_B16FFC(&StringLiteral_3978/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/, method);
     byte_40FB9C0 = 1;
   }
-  return (System_String_o *)StringLiteral_3978;
+  return (System_String_o *)StringLiteral_3978/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/;
 }
 
 
@@ -423,10 +423,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_LINE_PATH(
 {
   if ( (byte_40FB9B6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3970, method);
+    sub_B16FFC(&StringLiteral_3970/*"ClassBoard/ClassBoardLine"*/, method);
     byte_40FB9B6 = 1;
   }
-  return (System_String_o *)StringLiteral_3970;
+  return (System_String_o *)StringLiteral_3970/*"ClassBoard/ClassBoardLine"*/;
 }
 
 
@@ -436,10 +436,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_LOCK_OPEN_C
 {
   if ( (byte_40FB9BC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3972, method);
+    sub_B16FFC(&StringLiteral_3972/*"ClassBoard/ClassBoardLockOpenConfirmDialog"*/, method);
     byte_40FB9BC = 1;
   }
-  return (System_String_o *)StringLiteral_3972;
+  return (System_String_o *)StringLiteral_3972/*"ClassBoard/ClassBoardLockOpenConfirmDialog"*/;
 }
 
 
@@ -449,10 +449,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_LOCK_PATH(
 {
   if ( (byte_40FB9B8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3971, method);
+    sub_B16FFC(&StringLiteral_3971/*"ClassBoard/ClassBoardLock"*/, method);
     byte_40FB9B8 = 1;
   }
-  return (System_String_o *)StringLiteral_3971;
+  return (System_String_o *)StringLiteral_3971/*"ClassBoard/ClassBoardLock"*/;
 }
 
 
@@ -462,10 +462,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_LOCK_RELEAS
 {
   if ( (byte_40FB9BD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3973, method);
+    sub_B16FFC(&StringLiteral_3973/*"ClassBoard/ClassBoardLockReleaseConditionDialog"*/, method);
     byte_40FB9BD = 1;
   }
-  return (System_String_o *)StringLiteral_3973;
+  return (System_String_o *)StringLiteral_3973/*"ClassBoard/ClassBoardLockReleaseConditionDialog"*/;
 }
 
 
@@ -475,10 +475,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_SQUARE_DETA
 {
   if ( (byte_40FB9BE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3975, method);
+    sub_B16FFC(&StringLiteral_3975/*"ClassBoard/ClassBoardSquareDetailDialog"*/, method);
     byte_40FB9BE = 1;
   }
-  return (System_String_o *)StringLiteral_3975;
+  return (System_String_o *)StringLiteral_3975/*"ClassBoard/ClassBoardSquareDetailDialog"*/;
 }
 
 
@@ -488,10 +488,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_SQUARE_OPEN
 {
   if ( (byte_40FB9BB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3976, method);
+    sub_B16FFC(&StringLiteral_3976/*"ClassBoard/ClassBoardSquareOpenConfirmDialog"*/, method);
     byte_40FB9BB = 1;
   }
-  return (System_String_o *)StringLiteral_3976;
+  return (System_String_o *)StringLiteral_3976/*"ClassBoard/ClassBoardSquareOpenConfirmDialog"*/;
 }
 
 
@@ -501,10 +501,10 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_SQUARE_PATH
 {
   if ( (byte_40FB9B7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3974, method);
+    sub_B16FFC(&StringLiteral_3974/*"ClassBoard/ClassBoardSquare"*/, method);
     byte_40FB9B7 = 1;
   }
-  return (System_String_o *)StringLiteral_3974;
+  return (System_String_o *)StringLiteral_3974/*"ClassBoard/ClassBoardSquare"*/;
 }
 
 
@@ -514,8 +514,8 @@ System_String_o *__fastcall ClassBoardResourceCatalogStandalone__get_UI_ATLAS_PA
 {
   if ( (byte_40FB9C2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3982, method);
+    sub_B16FFC(&StringLiteral_3982/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/, method);
     byte_40FB9C2 = 1;
   }
-  return (System_String_o *)StringLiteral_3982;
+  return (System_String_o *)StringLiteral_3982/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/;
 }

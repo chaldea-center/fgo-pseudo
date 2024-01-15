@@ -32,22 +32,22 @@ void __fastcall BattleResultEventDamageItemComponent___cctor(const MethodInfo *m
   if ( (byte_40FA372 & 1) == 0 )
   {
     sub_B16FFC(&BattleResultEventDamageItemComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19604, v8);
-    sub_B16FFC(&StringLiteral_2482, v9);
-    sub_B16FFC(&StringLiteral_19358, v10);
+    sub_B16FFC(&StringLiteral_19604/*"img_txt_dpreward"*/, v8);
+    sub_B16FFC(&StringLiteral_2482/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_POINT"*/, v9);
+    sub_B16FFC(&StringLiteral_19358/*"img_bg_dp"*/, v10);
     byte_40FA372 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BattleResultEventDamageItemComponent_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_2482;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2482;
+  v12 = (System_Int32_array **)StringLiteral_2482/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_POINT"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2482/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_POINT"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = BattleResultEventDamageItemComponent_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_19604;
-  v13->DAMAGE_POINT_REWARD_TITLE_NAME = (struct System_String_o *)StringLiteral_19604;
+  v14 = (System_Int32_array **)StringLiteral_19604/*"img_txt_dpreward"*/;
+  v13->DAMAGE_POINT_REWARD_TITLE_NAME = (struct System_String_o *)StringLiteral_19604/*"img_txt_dpreward"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->DAMAGE_POINT_REWARD_TITLE_NAME, v14, v15, v16, v17, v18, v19, v20);
   v21 = BattleResultEventDamageItemComponent_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_19358;
-  v21->DAMAGE_POINT_REWARD_SPRITE_NAME = (struct System_String_o *)StringLiteral_19358;
+  v22 = (System_Int32_array **)StringLiteral_19358/*"img_bg_dp"*/;
+  v21->DAMAGE_POINT_REWARD_SPRITE_NAME = (struct System_String_o *)StringLiteral_19358/*"img_bg_dp"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->DAMAGE_POINT_REWARD_SPRITE_NAME, v22, v23, v24, v25, v26, v27, v28);
 }
 
@@ -259,12 +259,12 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_2481, v18);
-    sub_B16FFC(&StringLiteral_2468, v19);
-    sub_B16FFC(&StringLiteral_2466, v20);
-    sub_B16FFC(&StringLiteral_2467, v21);
-    sub_B16FFC(&StringLiteral_2464, v22);
-    sub_B16FFC(&StringLiteral_1, v23);
+    sub_B16FFC(&StringLiteral_2481/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_ITEM"*/, v18);
+    sub_B16FFC(&StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v19);
+    sub_B16FFC(&StringLiteral_2466/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, v20);
+    sub_B16FFC(&StringLiteral_2467/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, v21);
+    sub_B16FFC(&StringLiteral_2464/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, v22);
+    sub_B16FFC(&StringLiteral_1/*""*/, v23);
     byte_40FA36F = 1;
   }
   countText = 0LL;
@@ -311,7 +311,7 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
     {
       UILabel__set_text(titleAtLabel, v30, 0LL);
       titleNextItemLabel = this->fields.titleNextItemLabel;
-      v32 = LocalizationManager__Get((System_String_o *)StringLiteral_2481, 0LL);
+      v32 = LocalizationManager__Get((System_String_o *)StringLiteral_2481/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_ITEM"*/, 0LL);
       if ( titleNextItemLabel )
       {
         UILabel__set_text(titleNextItemLabel, v32, 0LL);
@@ -420,7 +420,7 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v66 = LocalizationManager__Get((System_String_o *)StringLiteral_2468, 0LL);
+                        v66 = LocalizationManager__Get((System_String_o *)StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
                         v77 = v49->fields.point - TotalDamagePoint;
                         v67 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v77);
                         v68 = System_String__Format(v66, v67, 0LL);
@@ -436,9 +436,9 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
                             {
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                             }
-                            v71 = LocalizationManager__Get((System_String_o *)StringLiteral_2467, 0LL);
+                            v71 = LocalizationManager__Get((System_String_o *)StringLiteral_2467/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, 0LL);
                             v72 = (Il2CppObject *)countText;
-                            v73 = (Il2CppObject *)StringLiteral_1;
+                            v73 = (Il2CppObject *)StringLiteral_1/*""*/;
                           }
                           else
                           {
@@ -447,7 +447,7 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
                             {
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                             }
-                            v71 = LocalizationManager__Get((System_String_o *)StringLiteral_2467, 0LL);
+                            v71 = LocalizationManager__Get((System_String_o *)StringLiteral_2467/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, 0LL);
                             v72 = (Il2CppObject *)countText;
                             v73 = (Il2CppObject *)nameText;
                           }
@@ -468,12 +468,12 @@ LABEL_69:
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v75 = LocalizationManager__Get((System_String_o *)StringLiteral_2466, 0LL);
+                        v75 = LocalizationManager__Get((System_String_o *)StringLiteral_2466/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
                         if ( v74 )
                         {
                           UILabel__set_text(v74, v75, 0LL);
                           nextItemLabel = this->fields.nextItemLabel;
-                          v76 = LocalizationManager__Get((System_String_o *)StringLiteral_2464, 0LL);
+                          v76 = LocalizationManager__Get((System_String_o *)StringLiteral_2464/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
                           if ( nextItemLabel )
                             goto LABEL_69;
                         }

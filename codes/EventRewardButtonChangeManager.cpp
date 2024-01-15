@@ -95,57 +95,57 @@ void __fastcall EventRewardButtonChangeManager___cctor(const MethodInfo *method)
   if ( (byte_40F6150 & 1) == 0 )
   {
     sub_B16FFC(&EventRewardButtonChangeManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16911, v8);
-    sub_B16FFC(&StringLiteral_16912, v9);
-    sub_B16FFC(&StringLiteral_16913, v10);
-    sub_B16FFC(&StringLiteral_18084, v11);
-    sub_B16FFC(&StringLiteral_16908, v12);
-    sub_B16FFC(&StringLiteral_16906, v13);
-    sub_B16FFC(&StringLiteral_18086, v14);
-    sub_B16FFC(&StringLiteral_18085, v15);
-    sub_B16FFC(&StringLiteral_16907, v16);
-    sub_B16FFC(&StringLiteral_16921, v17);
+    sub_B16FFC(&StringLiteral_16911/*"btn_bg_on_1"*/, v8);
+    sub_B16FFC(&StringLiteral_16912/*"btn_bg_on_2"*/, v9);
+    sub_B16FFC(&StringLiteral_16913/*"btn_bg_on_4"*/, v10);
+    sub_B16FFC(&StringLiteral_18084/*"ef_2tab_open"*/, v11);
+    sub_B16FFC(&StringLiteral_16908/*"btn_bg_off_4"*/, v12);
+    sub_B16FFC(&StringLiteral_16906/*"btn_bg_off_1"*/, v13);
+    sub_B16FFC(&StringLiteral_18086/*"ef_4tab_open"*/, v14);
+    sub_B16FFC(&StringLiteral_18085/*"ef_3tab_open"*/, v15);
+    sub_B16FFC(&StringLiteral_16907/*"btn_bg_off_2"*/, v16);
+    sub_B16FFC(&StringLiteral_16921/*"btn_disable_txt_"*/, v17);
     byte_40F6150 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v19 = (System_Int32_array **)StringLiteral_16911;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16911;
+  v19 = (System_Int32_array **)StringLiteral_16911/*"btn_bg_on_1"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16911/*"btn_bg_on_1"*/;
   sub_B16F98(static_fields, v19, v2, v3, v4, v5, v6, v7);
   v20 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v21 = (System_Int32_array **)StringLiteral_16906;
-  v20->BTN_NAME_TYPE3_OFF = (struct System_String_o *)StringLiteral_16906;
+  v21 = (System_Int32_array **)StringLiteral_16906/*"btn_bg_off_1"*/;
+  v20->BTN_NAME_TYPE3_OFF = (struct System_String_o *)StringLiteral_16906/*"btn_bg_off_1"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v20->BTN_NAME_TYPE3_OFF, v21, v22, v23, v24, v25, v26, v27);
   v28 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v29 = (System_Int32_array **)StringLiteral_16912;
-  v28->BTN_NAME_TYPE2_ON = (struct System_String_o *)StringLiteral_16912;
+  v29 = (System_Int32_array **)StringLiteral_16912/*"btn_bg_on_2"*/;
+  v28->BTN_NAME_TYPE2_ON = (struct System_String_o *)StringLiteral_16912/*"btn_bg_on_2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v28->BTN_NAME_TYPE2_ON, v29, v30, v31, v32, v33, v34, v35);
   v36 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v37 = (System_Int32_array **)StringLiteral_16907;
-  v36->BTN_NAME_TYPE2_OFF = (struct System_String_o *)StringLiteral_16907;
+  v37 = (System_Int32_array **)StringLiteral_16907/*"btn_bg_off_2"*/;
+  v36->BTN_NAME_TYPE2_OFF = (struct System_String_o *)StringLiteral_16907/*"btn_bg_off_2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v36->BTN_NAME_TYPE2_OFF, v37, v38, v39, v40, v41, v42, v43);
   v44 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v45 = (System_Int32_array **)StringLiteral_16913;
-  v44->BTN_NAME_TYPE4_ON = (struct System_String_o *)StringLiteral_16913;
+  v45 = (System_Int32_array **)StringLiteral_16913/*"btn_bg_on_4"*/;
+  v44->BTN_NAME_TYPE4_ON = (struct System_String_o *)StringLiteral_16913/*"btn_bg_on_4"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v44->BTN_NAME_TYPE4_ON, v45, v46, v47, v48, v49, v50, v51);
   v52 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v53 = (System_Int32_array **)StringLiteral_16908;
-  v52->BTN_NAME_TYPE4_OFF = (struct System_String_o *)StringLiteral_16908;
+  v53 = (System_Int32_array **)StringLiteral_16908/*"btn_bg_off_4"*/;
+  v52->BTN_NAME_TYPE4_OFF = (struct System_String_o *)StringLiteral_16908/*"btn_bg_off_4"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v52->BTN_NAME_TYPE4_OFF, v53, v54, v55, v56, v57, v58, v59);
   v60 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v61 = (System_Int32_array **)StringLiteral_18086;
-  v60->RELEASE_EFFECT_4TAB_NAME = (struct System_String_o *)StringLiteral_18086;
+  v61 = (System_Int32_array **)StringLiteral_18086/*"ef_4tab_open"*/;
+  v60->RELEASE_EFFECT_4TAB_NAME = (struct System_String_o *)StringLiteral_18086/*"ef_4tab_open"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v60->RELEASE_EFFECT_4TAB_NAME, v61, v62, v63, v64, v65, v66, v67);
   v68 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v69 = (System_Int32_array **)StringLiteral_18085;
-  v68->RELEASE_EFFECT_3TAB_NAME = (struct System_String_o *)StringLiteral_18085;
+  v69 = (System_Int32_array **)StringLiteral_18085/*"ef_3tab_open"*/;
+  v68->RELEASE_EFFECT_3TAB_NAME = (struct System_String_o *)StringLiteral_18085/*"ef_3tab_open"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v68->RELEASE_EFFECT_3TAB_NAME, v69, v70, v71, v72, v73, v74, v75);
   v76 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v77 = (System_Int32_array **)StringLiteral_18084;
-  v76->RELEASE_EFFECT_2TAB_NAME = (struct System_String_o *)StringLiteral_18084;
+  v77 = (System_Int32_array **)StringLiteral_18084/*"ef_2tab_open"*/;
+  v76->RELEASE_EFFECT_2TAB_NAME = (struct System_String_o *)StringLiteral_18084/*"ef_2tab_open"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v76->RELEASE_EFFECT_2TAB_NAME, v77, v78, v79, v80, v81, v82, v83);
   v84 = EventRewardButtonChangeManager_TypeInfo->static_fields;
-  v85 = (System_Int32_array **)StringLiteral_16921;
-  v84->DISABLE_BTN_TXT = (struct System_String_o *)StringLiteral_16921;
+  v85 = (System_Int32_array **)StringLiteral_16921/*"btn_disable_txt_"*/;
+  v84->DISABLE_BTN_TXT = (struct System_String_o *)StringLiteral_16921/*"btn_disable_txt_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v84->DISABLE_BTN_TXT, v85, v86, v87, v88, v89, v90, v91);
 }
 
@@ -252,9 +252,9 @@ void __fastcall EventRewardButtonChangeManager__ChangeTabInfo(
     sub_B16FFC(&EventRewardButtonChangeManager_TypeInfo, *(_QWORD *)&priorityId);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v12);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, v13);
-    sub_B16FFC(&StringLiteral_17003, v14);
-    sub_B16FFC(&StringLiteral_15842, v15);
-    sub_B16FFC(&StringLiteral_16997, v16);
+    sub_B16FFC(&StringLiteral_17003/*"btn_txt_on_"*/, v14);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v15);
+    sub_B16FFC(&StringLiteral_16997/*"btn_txt_off_"*/, v16);
     byte_40F6147 = 1;
   }
   if ( !eventRewardSceneEnt )
@@ -482,7 +482,7 @@ LABEL_58:
         v65 = v64->m_Items[v24];
         if ( !v65 )
           goto LABEL_107;
-        v66 = (System_String_o **)(v25 == priorityId ? &StringLiteral_17003 : &StringLiteral_16997);
+        v66 = (System_String_o **)(v25 == priorityId ? &StringLiteral_17003/*"btn_txt_on_"*/ : &StringLiteral_16997/*"btn_txt_off_"*/);
         UnityEngine_GameObject__SetActive(v65, v25 == priorityId, 0LL);
         v67 = this->fields.btnTxtSprites;
         if ( !v67 )
@@ -500,7 +500,7 @@ LABEL_58:
         v71 = eventRewardSceneEnt;
         v72 = (System_String_o *)v18;
         v73 = System_Int32__ToString((int)v70 + 20, 0LL);
-        v75 = System_String__Concat_43747144(v68, v72, (System_String_o *)StringLiteral_15842, v73, 0LL);
+        v75 = System_String__Concat_43747144(v68, v72, (System_String_o *)StringLiteral_15842/*"_"*/, v73, 0LL);
         if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
         {
@@ -690,7 +690,7 @@ void __fastcall EventRewardButtonChangeManager__OnClickDisableCenterButton(
     sub_B16FFC(&SoundManager_TypeInfo, v4);
     sub_B16FFC(&Method_EventRewardButtonChangeManager___c__OnClickDisableCenterButton_b__35_0__, v5);
     sub_B16FFC(&EventRewardButtonChangeManager___c_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F614D = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -719,7 +719,7 @@ void __fastcall EventRewardButtonChangeManager__OnClickDisableCenterButton(
   }
   static_fields = v17->static_fields;
   _9__35_0 = static_fields->__9__35_0;
-  v20 = (System_String_o *)StringLiteral_1;
+  v20 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !_9__35_0 )
   {
     if ( (BYTE3(v17->vtable._0_Equals.methodPtr) & 4) != 0 && !v17->_2.cctor_finished )
@@ -791,7 +791,7 @@ void __fastcall EventRewardButtonChangeManager__OnClickDisableLeftButton(
     sub_B16FFC(&SoundManager_TypeInfo, v4);
     sub_B16FFC(&Method_EventRewardButtonChangeManager___c__OnClickDisableLeftButton_b__34_0__, v5);
     sub_B16FFC(&EventRewardButtonChangeManager___c_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F614C = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -820,7 +820,7 @@ void __fastcall EventRewardButtonChangeManager__OnClickDisableLeftButton(
   }
   static_fields = v17->static_fields;
   _9__34_0 = static_fields->__9__34_0;
-  v20 = (System_String_o *)StringLiteral_1;
+  v20 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !_9__34_0 )
   {
     if ( (BYTE3(v17->vtable._0_Equals.methodPtr) & 4) != 0 && !v17->_2.cctor_finished )
@@ -905,7 +905,7 @@ void __fastcall EventRewardButtonChangeManager__OnClickDisableRightButton(
     sub_B16FFC(&Method_EventRewardButtonChangeManager___c__OnClickDisableRightButton_b__36_0__, v5);
     sub_B16FFC(&Method_EventRewardButtonChangeManager___c__OnClickDisableRightButton_b__36_1__, v6);
     sub_B16FFC(&EventRewardButtonChangeManager___c_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F614E = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -937,7 +937,7 @@ LABEL_34:
       }
       static_fields = v19->static_fields;
       _9__36_0 = static_fields->__9__36_0;
-      v22 = (System_String_o *)StringLiteral_1;
+      v22 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !_9__36_0 )
       {
         if ( (BYTE3(v19->vtable._0_Equals.methodPtr) & 4) != 0 && !v19->_2.cctor_finished )
@@ -986,7 +986,7 @@ LABEL_35:
   }
   v38 = v37->static_fields;
   _9__36_0 = v38->__9__36_1;
-  v22 = (System_String_o *)StringLiteral_1;
+  v22 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !_9__36_0 )
   {
     if ( (BYTE3(v37->vtable._0_Equals.methodPtr) & 4) != 0 && !v37->_2.cctor_finished )

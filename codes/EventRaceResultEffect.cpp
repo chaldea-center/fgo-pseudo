@@ -14,12 +14,12 @@ void __fastcall EventRaceResultEffect___cctor(const MethodInfo *method)
   if ( (byte_40FACB8 & 1) == 0 )
   {
     sub_B16FFC(&EventRaceResultEffect_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_21580, v8);
+    sub_B16FFC(&StringLiteral_21580/*"raceresults_team_{0}"*/, v8);
     byte_40FACB8 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventRaceResultEffect_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_21580;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21580;
+  v10 = (System_Int32_array **)StringLiteral_21580/*"raceresults_team_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21580/*"raceresults_team_{0}"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   EventRaceResultEffect_TypeInfo->static_fields->REST_DISTANCE_FONT_SIZE = 16;
 }
@@ -176,7 +176,7 @@ System_String_o *__fastcall EventRaceResultEffect__MakeRestDistanceStr(
   {
     sub_B16FFC(&long_TypeInfo, restDistance);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_5663, v5);
+    sub_B16FFC(&StringLiteral_5663/*"EVENT_RACE_RESULT_PATH_LENGTH"*/, v5);
     byte_40FACB4 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -184,7 +184,7 @@ System_String_o *__fastcall EventRaceResultEffect__MakeRestDistanceStr(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5663, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5663/*"EVENT_RACE_RESULT_PATH_LENGTH"*/, 0LL);
   v9 = restDistance;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v9);
   return System_String__Format(v6, v7, 0LL);
@@ -213,7 +213,7 @@ System_String_o *__fastcall EventRaceResultEffect__MakeTimeStr(
   {
     sub_B16FFC(&int_TypeInfo, utime);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_5668, v5);
+    sub_B16FFC(&StringLiteral_5668/*"EVENT_RACE_RESULT_TIME_STR"*/, v5);
     byte_40FACB3 = 1;
   }
   v6 = utime / 3600;
@@ -224,7 +224,7 @@ System_String_o *__fastcall EventRaceResultEffect__MakeTimeStr(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5668, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5668/*"EVENT_RACE_RESULT_TIME_STR"*/, 0LL);
   v16 = v6;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
   v15 = v8;
@@ -505,8 +505,8 @@ void __fastcall EventRaceResultEffect__SetUp(
     sub_B16FFC(&EventRaceResultEffect_TypeInfo, v12);
     sub_B16FFC(&int_TypeInfo, v13);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_10966, v15);
-    sub_B16FFC(&StringLiteral_2643, v16);
+    sub_B16FFC(&StringLiteral_10966/*"RACE_TARGET_GOAL_RANK"*/, v15);
+    sub_B16FFC(&StringLiteral_2643/*"Back/back{0}"*/, v16);
     byte_40FACB2 = 1;
   }
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -585,7 +585,7 @@ void __fastcall EventRaceResultEffect__SetUp(
     ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))v33->klass->vtable._33_MakePixelPerfect.method)(
       v33,
       v33->klass->vtable._34_get_minWidth.methodPtr);
-    Value = (void *)ConstantMaster__getValue((System_String_o *)StringLiteral_10966, 0LL);
+    Value = (void *)ConstantMaster__getValue((System_String_o *)StringLiteral_10966/*"RACE_TARGET_GOAL_RANK"*/, 0LL);
     teamTimes = this->fields.teamTimes;
     if ( !teamTimes )
       goto LABEL_52;
@@ -670,7 +670,7 @@ LABEL_53:
   v55 = (ExUITexture_o *)*(p_mAnimation - 7);
   v59 = *((_DWORD *)p_mAnimation - 8);
   v56 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v59);
-  v57 = System_String__Format((System_String_o *)StringLiteral_2643, v56, 0LL);
+  v57 = System_String__Format((System_String_o *)StringLiteral_2643/*"Back/back{0}"*/, v56, 0LL);
   if ( !v55 )
 LABEL_52:
     sub_B170D4();

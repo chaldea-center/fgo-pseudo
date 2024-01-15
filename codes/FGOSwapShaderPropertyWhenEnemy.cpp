@@ -35,7 +35,7 @@ void __fastcall FGOSwapShaderPropertyWhenEnemy___ctor(FGOSwapShaderPropertyWhenE
     sub_B16FFC(&Method_System_Collections_Generic_List_Renderer___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_List_Renderer__TypeInfo, v4);
     sub_B16FFC(&FGOSwapShaderPropertyWhenEnemy_RendererType___TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_15896, v6);
+    sub_B16FFC(&StringLiteral_15896/*"_CullMode"*/, v6);
     byte_40F9F4C = 1;
   }
   v7 = (struct FGOSwapShaderPropertyWhenEnemy_RendererType_array *)sub_B17014(
@@ -60,8 +60,8 @@ void __fastcall FGOSwapShaderPropertyWhenEnemy___ctor(FGOSwapShaderPropertyWhenE
     v11,
     v12,
     v13);
-  v14 = (System_Int32_array **)StringLiteral_15896;
-  this->fields.propertyName = (struct System_String_o *)StringLiteral_15896;
+  v14 = (System_Int32_array **)StringLiteral_15896/*"_CullMode"*/;
+  this->fields.propertyName = (struct System_String_o *)StringLiteral_15896/*"_CullMode"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.propertyName, v14, v15, v16, v17, v18, v19, v20);
   this->fields.isDestroyMaterialWhenOnDestroy = 1;
   this->fields.equivalentRange = 0.001;

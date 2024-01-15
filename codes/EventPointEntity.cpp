@@ -123,8 +123,8 @@ System_String_o *__fastcall EventPointEntity__getNameStr(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_EventPointGroupMaster___, group);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_698, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_698/*","*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FAC18 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -136,7 +136,7 @@ System_String_o *__fastcall EventPointEntity__getNameStr(
   if ( !group )
     goto LABEL_15;
   v13 = *(_QWORD *)&group->max_length;
-  v14 = (System_String_o *)StringLiteral_1;
+  v14 = (System_String_o *)StringLiteral_1/*""*/;
   if ( (int)v13 >= 1 )
   {
     v15 = MasterData_WarQuestSelectionMaster;
@@ -155,7 +155,7 @@ System_String_o *__fastcall EventPointEntity__getNameStr(
         break;
       v18 = Entity;
       if ( v14->fields.m_stringLength >= 2 )
-        v14 = System_String__Concat_43743732(v14, (System_String_o *)StringLiteral_698, 0LL);
+        v14 = System_String__Concat_43743732(v14, (System_String_o *)StringLiteral_698/*","*/, 0LL);
       if ( !v18 )
         break;
       MasterData_WarQuestSelectionMaster = (EventPointGroupMaster_o *)System_String__Concat_43743732(

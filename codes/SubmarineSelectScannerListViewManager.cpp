@@ -55,7 +55,7 @@ void __fastcall SubmarineSelectScannerListViewManager__CreateList(
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
     sub_B16FFC(&SubmarineSelectScannerListViewItem_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_5714, v8);
+    sub_B16FFC(&StringLiteral_5714/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/, v8);
     byte_40F7CDA = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
@@ -79,7 +79,7 @@ void __fastcall SubmarineSelectScannerListViewManager__CreateList(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5714, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5714/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/, 0LL);
   v36 = (System_Int32_array **)v13;
   if ( !ListByEventId )
     goto LABEL_22;

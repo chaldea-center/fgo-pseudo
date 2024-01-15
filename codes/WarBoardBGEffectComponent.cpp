@@ -136,8 +136,8 @@ void __fastcall WarBoardBGEffectComponent__NextPlayAnimation(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_16090, v4);
-    sub_B16FFC(&StringLiteral_16078, v5);
+    sub_B16FFC(&StringLiteral_16090/*"_loop"*/, v4);
+    sub_B16FFC(&StringLiteral_16078/*"_end"*/, v5);
     byte_40F8C37 = 1;
   }
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
@@ -163,7 +163,7 @@ LABEL_44:
         goto LABEL_45;
       }
       v15 = this->fields.simpleAnimationComponent;
-      v16 = System_String__Concat_43743732(this->fields.animationName, (System_String_o *)StringLiteral_16090, 0LL);
+      v16 = System_String__Concat_43743732(this->fields.animationName, (System_String_o *)StringLiteral_16090/*"_loop"*/, 0LL);
       if ( v15 )
       {
         Item = SimpleAnimation__get_Item(v15, v16, 0LL);
@@ -204,7 +204,7 @@ LABEL_41:
         goto LABEL_44;
       }
       v20 = this->fields.simpleAnimationComponent;
-      v21 = System_String__Concat_43743732(this->fields.animationName, (System_String_o *)StringLiteral_16078, 0LL);
+      v21 = System_String__Concat_43743732(this->fields.animationName, (System_String_o *)StringLiteral_16078/*"_end"*/, 0LL);
       if ( v20 )
       {
         v22 = SimpleAnimation__get_Item(v20, v21, 0LL);
@@ -303,7 +303,7 @@ void __fastcall WarBoardBGEffectComponent__OtherObjectPlayAnimation(
     sub_B16FFC(&char___TypeInfo, eventStr);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_WarBoardBGEffectComponent___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_22714, v7);
+    sub_B16FFC(&StringLiteral_22714/*"true"*/, v7);
     byte_40F8C35 = 1;
   }
   if ( this->fields.oldStatus == this->fields.status )
@@ -326,7 +326,7 @@ void __fastcall WarBoardBGEffectComponent__OtherObjectPlayAnimation(
     {
       v12 = v10->m_Items[0];
       v11 = v10->m_Items[1];
-      v13 = System_String__op_Equality(v10->m_Items[2], (System_String_o *)StringLiteral_22714, 0LL);
+      v13 = System_String__op_Equality(v10->m_Items[2], (System_String_o *)StringLiteral_22714/*"true"*/, 0LL);
       v14 = UnityEngine_GameObject__Find(v12, 0LL);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -443,8 +443,8 @@ void __fastcall WarBoardBGEffectComponent__PlayAnimation(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, animName);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_16113, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_16113/*"_start"*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F8C36 = 1;
   }
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
@@ -467,7 +467,7 @@ void __fastcall WarBoardBGEffectComponent__PlayAnimation(
       SimpleAnimation__Stop(v20, 0LL);
     }
     v21 = this->fields.simpleAnimationComponent;
-    v22 = System_String__Concat_43743732(animName, (System_String_o *)StringLiteral_16113, 0LL);
+    v22 = System_String__Concat_43743732(animName, (System_String_o *)StringLiteral_16113/*"_start"*/, 0LL);
     if ( !v21 )
 LABEL_38:
       sub_B170D4();
@@ -538,7 +538,7 @@ LABEL_36:
       {
         this->fields.endtime = 0.0;
         v39 = this;
-        v46 = (System_Int32_array **)StringLiteral_1;
+        v46 = (System_Int32_array **)StringLiteral_1/*""*/;
         goto LABEL_36;
       }
       klass = v30->klass;
@@ -562,8 +562,8 @@ LABEL_25:
     p_method = sub_AAFEF8(v25, v26, 13LL);
     goto LABEL_27;
   }
-  v18 = (System_Int32_array **)StringLiteral_1;
-  this->fields.requestAnimation = (struct System_String_o *)StringLiteral_1;
+  v18 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.requestAnimation = (struct System_String_o *)StringLiteral_1/*""*/;
   p_animationName = &this->fields.requestAnimation;
 LABEL_37:
   sub_B16F98((BattleServantConfConponent_o *)p_animationName, v18, v12, v13, v14, v15, v16, v17);
@@ -606,8 +606,8 @@ void __fastcall WarBoardBGEffectComponent__ResumeAnimation(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, animName);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_16090, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_16090/*"_loop"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F8C34 = 1;
   }
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
@@ -619,12 +619,12 @@ void __fastcall WarBoardBGEffectComponent__ResumeAnimation(
   if ( UnityEngine_Object__op_Inequality(simpleAnimationComponent, 0LL, 0LL) )
   {
     this->fields.status = 4;
-    v10 = System_String__Concat_43743732(animName, (System_String_o *)StringLiteral_16090, 0LL);
+    v10 = System_String__Concat_43743732(animName, (System_String_o *)StringLiteral_16090/*"_loop"*/, 0LL);
     if ( !this->fields.simpleAnimationComponent )
       goto LABEL_22;
     currentAnimationName = v10;
     Item = SimpleAnimation__get_Item(this->fields.simpleAnimationComponent, v10, 0LL);
-    v13 = System_String__op_Equality(currentAnimationName, (System_String_o *)StringLiteral_1, 0LL);
+    v13 = System_String__op_Equality(currentAnimationName, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( !Item || v13 )
       currentAnimationName = this->fields.currentAnimationName;
     v14 = this->fields.simpleAnimationComponent;
@@ -832,7 +832,7 @@ void __fastcall WarBoardBGEffectComponent__Update(WarBoardBGEffectComponent_o *t
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F8C39 = 1;
   }
   status = this->fields.status;
@@ -884,7 +884,7 @@ void __fastcall WarBoardBGEffectComponent__Update(WarBoardBGEffectComponent_o *t
       if ( SimpleAnimation__CheckPlaying(v18, 0LL) )
         return;
     }
-    if ( !System_String__op_Inequality(*p_requestAnimation, (System_String_o *)StringLiteral_1, 0LL) )
+    if ( !System_String__op_Inequality(*p_requestAnimation, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     {
       this->fields.playAnimation = 0LL;
       p_playAnimation = &this->fields.playAnimation;

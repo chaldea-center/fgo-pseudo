@@ -39,7 +39,7 @@ void __fastcall WarBoardPieceBaseComponent___ctor(WarBoardPieceBaseComponent_o *
     sub_B16FFC(&Method_System_Collections_Generic_List_WarBoardPieceBaseComponent_ScriptEffectData___ctor__, v6);
     sub_B16FFC(&System_Collections_Generic_List_GameObject__TypeInfo, v7);
     sub_B16FFC(&System_Collections_Generic_List_WarBoardPieceBaseComponent_ScriptEffectData__TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_6765, v9);
+    sub_B16FFC(&StringLiteral_6765/*"Frame{0}"*/, v9);
     byte_40F85F1 = 1;
   }
   v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -65,8 +65,8 @@ void __fastcall WarBoardPieceBaseComponent___ctor(WarBoardPieceBaseComponent_o *
   this->fields.lengthMoveAttack = 25.0;
   *(_OWORD *)&this->fields.positionPieceActionPointDefault.fields.x = xmmword_3134090;
   *(_OWORD *)&this->fields.pixelPerSecond = xmmword_31340A0;
-  v17 = (System_Int32_array **)StringLiteral_6765;
-  this->fields.baseFrameName = (struct System_String_o *)StringLiteral_6765;
+  v17 = (System_Int32_array **)StringLiteral_6765/*"Frame{0}"*/;
+  this->fields.baseFrameName = (struct System_String_o *)StringLiteral_6765/*"Frame{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.baseFrameName, v17, v18, v19, v20, v21, v22, v23);
   v28 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_GameObject__TypeInfo,
@@ -1109,8 +1109,8 @@ void __fastcall WarBoardPieceBaseComponent__Initialize(
     sub_B16FFC(&UnityEngine_Transform___TypeInfo, v10);
     sub_B16FFC(&WarBoardBreakPointComponent___TypeInfo, v11);
     sub_B16FFC(&Method_WarBoardManager_GetCommonEffectAsset_GameObject___, v12);
-    sub_B16FFC(&StringLiteral_21761, v13);
-    sub_B16FFC(&StringLiteral_18113, v14);
+    sub_B16FFC(&StringLiteral_21761/*"root_text/type01/dm_base"*/, v13);
+    sub_B16FFC(&StringLiteral_18113/*"ef_dm_base"*/, v14);
     byte_40F85D5 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -1318,7 +1318,7 @@ LABEL_61:
     goto LABEL_27;
   CommonEffectAsset_object = WarBoardManager__GetCommonEffectAsset_object_(
                                (WarBoardManager_o *)v91,
-                               (System_String_o *)StringLiteral_18113,
+                               (System_String_o *)StringLiteral_18113/*"ef_dm_base"*/,
                                (const MethodInfo_2266354 *)Method_WarBoardManager_GetCommonEffectAsset_GameObject___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1362,7 +1362,7 @@ LABEL_61:
     {
       v103 = (UnityEngine_Component_o *)GameObjectExtensions__Find(
                                           *p_effectDamageBaseObject,
-                                          (System_String_o *)StringLiteral_21761,
+                                          (System_String_o *)StringLiteral_21761/*"root_text/type01/dm_base"*/,
                                           0LL);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2494,7 +2494,7 @@ void __fastcall WarBoardPieceBaseComponent__OnAttack(
     sub_B16FFC(&WarBoardOrthostichySchedule_TypeInfo, v30);
     sub_B16FFC(&WarBoardParallelSchedule_TypeInfo, v31);
     sub_B16FFC(&WarBoardTaskBase___TypeInfo, v32);
-    sub_B16FFC(&StringLiteral_8934, v33);
+    sub_B16FFC(&StringLiteral_8934/*"MasterDamage"*/, v33);
     byte_40F85E3 = 1;
   }
   LODWORD(methoda.klass) = 0;
@@ -3082,7 +3082,7 @@ LABEL_109:
     goto LABEL_109;
   AttackEffectTask = (System_Int32_array **)WarBoardPieceBaseComponent__GetSimpleAnimationPerformance(
                                               v291,
-                                              (System_String_o *)StringLiteral_8934,
+                                              (System_String_o *)StringLiteral_8934/*"MasterDamage"*/,
                                               v290);
   v297 = AttackEffectTask;
   if ( AttackEffectTask )
@@ -4262,7 +4262,7 @@ void __fastcall WarBoardPieceBaseComponent__OnShowDamagePopup(
 
   if ( (byte_40F85ED & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18113, popText);
+    sub_B16FFC(&StringLiteral_18113/*"ef_dm_base"*/, popText);
     byte_40F85ED = 1;
   }
   if ( !System_String__IsNullOrEmpty(popText, 0LL) )

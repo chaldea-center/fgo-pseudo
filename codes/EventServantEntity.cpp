@@ -14,12 +14,12 @@ void __fastcall EventServantEntity___cctor(const MethodInfo *method)
   if ( (byte_40FD162 & 1) == 0 )
   {
     sub_B16FFC(&EventServantEntity_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_20918, v8);
+    sub_B16FFC(&StringLiteral_20918/*"nameReleaseCond"*/, v8);
     byte_40FD162 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventServantEntity_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_20918;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_20918;
+  v10 = (System_Int32_array **)StringLiteral_20918/*"nameReleaseCond"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_20918/*"nameReleaseCond"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -98,7 +98,7 @@ System_String_o *__fastcall EventServantEntity__GetAddMessage(
     sub_B16FFC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, key);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_16192, v9);
+    sub_B16FFC(&StringLiteral_16192/*"addMessageCommonReleaseId"*/, v9);
     byte_40FD15C = 1;
   }
   v18 = 0LL;
@@ -117,7 +117,7 @@ System_String_o *__fastcall EventServantEntity__GetAddMessage(
       goto LABEL_14;
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v11,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_16192,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_16192/*"addMessageCommonReleaseId"*/,
            &v18,
            (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
@@ -157,10 +157,10 @@ System_String_o *__fastcall EventServantEntity__GetGetMessage(EventServantEntity
 
   if ( (byte_40FD15E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16187, method);
+    sub_B16FFC(&StringLiteral_16187/*"addGetMessage"*/, method);
     byte_40FD15E = 1;
   }
-  return EventServantEntity__GetAddMessage(this, (System_String_o *)StringLiteral_16187, this->fields.getMessage, v2);
+  return EventServantEntity__GetAddMessage(this, (System_String_o *)StringLiteral_16187/*"addGetMessage"*/, this->fields.getMessage, v2);
 }
 
 
@@ -230,10 +230,10 @@ System_String_o *__fastcall EventServantEntity__GetJoinMessage(EventServantEntit
 
   if ( (byte_40FD15D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16189, method);
+    sub_B16FFC(&StringLiteral_16189/*"addJoinMessage"*/, method);
     byte_40FD15D = 1;
   }
-  return EventServantEntity__GetAddMessage(this, (System_String_o *)StringLiteral_16189, this->fields.joinMessage, v2);
+  return EventServantEntity__GetAddMessage(this, (System_String_o *)StringLiteral_16189/*"addJoinMessage"*/, this->fields.joinMessage, v2);
 }
 
 
@@ -243,10 +243,10 @@ System_String_o *__fastcall EventServantEntity__GetLeaveMessage(EventServantEnti
 
   if ( (byte_40FD15F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16190, method);
+    sub_B16FFC(&StringLiteral_16190/*"addLeaveMessage"*/, method);
     byte_40FD15F = 1;
   }
-  return EventServantEntity__GetAddMessage(this, (System_String_o *)StringLiteral_16190, this->fields.leaveMessage, v2);
+  return EventServantEntity__GetAddMessage(this, (System_String_o *)StringLiteral_16190/*"addLeaveMessage"*/, this->fields.leaveMessage, v2);
 }
 
 
@@ -257,12 +257,12 @@ System_String_o *__fastcall EventServantEntity__GetRuby(EventServantEntity_o *th
   if ( (byte_40FD160 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21776, v3);
+    sub_B16FFC(&StringLiteral_21776/*"ruby"*/, v3);
     byte_40FD160 = 1;
   }
   return EntityScriptUtil__GetStringValue(
            this->fields.script,
-           (System_String_o *)StringLiteral_21776,
+           (System_String_o *)StringLiteral_21776/*"ruby"*/,
            string_TypeInfo->static_fields->Empty,
            0LL);
 }
@@ -280,7 +280,7 @@ bool __fastcall EventServantEntity__IsProtectedDuringEvent(EventServantEntity_o 
   {
     sub_B16FFC(&System_Convert_TypeInfo, method);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v3);
-    sub_B16FFC(&StringLiteral_19866, v4);
+    sub_B16FFC(&StringLiteral_19866/*"isProtectedDuringEvent"*/, v4);
     byte_40FD159 = 1;
   }
   value = 0LL;
@@ -289,7 +289,7 @@ bool __fastcall EventServantEntity__IsProtectedDuringEvent(EventServantEntity_o 
   {
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_19866,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_19866/*"isProtectedDuringEvent"*/,
            &value,
            (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
@@ -328,7 +328,7 @@ bool __fastcall EventServantEntity__TryGetBattleName(
   if ( (byte_40FD157 & 1) == 0 )
   {
     sub_B16FFC(&EventServantEntity_TypeInfo, battleName);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FD157 = 1;
   }
   if ( System_String__IsNullOrEmpty(this->fields.battleName, 0LL) )
@@ -343,10 +343,10 @@ bool __fastcall EventServantEntity__TryGetBattleName(
   if ( EventServantEntity__GetIsCondClear(this, v12->static_fields->NAME_RELEASE_COND, (const MethodInfo *)v6) )
   {
 LABEL_8:
-    *battleName = (System_String_o *)StringLiteral_1;
+    *battleName = (System_String_o *)StringLiteral_1/*""*/;
     sub_B16F98(
       (BattleServantConfConponent_o *)battleName,
-      (System_Int32_array **)StringLiteral_1,
+      (System_Int32_array **)StringLiteral_1/*""*/,
       v6,
       v7,
       v8,
@@ -383,7 +383,7 @@ bool __fastcall EventServantEntity__TryGetName(
   if ( (byte_40FD156 & 1) == 0 )
   {
     sub_B16FFC(&EventServantEntity_TypeInfo, name);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FD156 = 1;
   }
   if ( System_String__IsNullOrEmpty(this->fields.name, 0LL) )
@@ -398,8 +398,8 @@ bool __fastcall EventServantEntity__TryGetName(
   if ( EventServantEntity__GetIsCondClear(this, v12->static_fields->NAME_RELEASE_COND, (const MethodInfo *)v6) )
   {
 LABEL_8:
-    *name = (System_String_o *)StringLiteral_1;
-    sub_B16F98((BattleServantConfConponent_o *)name, (System_Int32_array **)StringLiteral_1, v6, v7, v8, v9, v10, v11);
+    *name = (System_String_o *)StringLiteral_1/*""*/;
+    sub_B16F98((BattleServantConfConponent_o *)name, (System_Int32_array **)StringLiteral_1/*""*/, v6, v7, v8, v9, v10, v11);
     return 0;
   }
   else
@@ -489,7 +489,7 @@ System_String_o *__fastcall EventServantEntity__getEndTimeStr(EventServantEntity
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
     sub_B16FFC(&object___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_23514, v5);
+    sub_B16FFC(&StringLiteral_23514/*"{0}/{1:D2}/{2:D2} {3:D2}:{4:D2}"*/, v5);
     byte_40FD15B = 1;
   }
   dateData = 0LL;
@@ -581,7 +581,7 @@ LABEL_23:
   }
   v8->m_Items[4] = (Il2CppObject *)v41;
   sub_B16F98((BattleServantConfConponent_o *)&v8->m_Items[4], v41, v11, v36, v37, v38, v39, v40);
-  return System_String__Format_43822456((System_String_o *)StringLiteral_23514, v8, 0LL);
+  return System_String__Format_43822456((System_String_o *)StringLiteral_23514/*"{0}/{1:D2}/{2:D2} {3:D2}:{4:D2}"*/, v8, 0LL);
 }
 
 

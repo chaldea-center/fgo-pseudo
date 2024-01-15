@@ -141,22 +141,22 @@ void __fastcall UserPresentBoxWindow__CallbackReceiveRequest(
     sub_B16FFC(&Method_JsonManager_DeserializeArray_UserPresentBoxWindow_resData___, v5);
     sub_B16FFC(&JsonManager_TypeInfo, v6);
     sub_B16FFC(&Method_UserPresentBoxWindow__CallbackReceiveRequest_b__80_0__, v7);
-    sub_B16FFC(&StringLiteral_20980, v8);
-    sub_B16FFC(&StringLiteral_15571, v9);
-    sub_B16FFC(&StringLiteral_15807, v10);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v8);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v9);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v10);
     byte_40F97AA = 1;
   }
   if ( !result )
     goto LABEL_23;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     UserPresentBoxWindow__ReDisp(this, v11);
     return;
   }
   v12 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -875,13 +875,13 @@ void __fastcall UserPresentBoxWindow__EndEffect(UserPresentBoxWindow_o *this, co
 
   if ( (byte_40F97B7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5467, method);
+    sub_B16FFC(&StringLiteral_5467/*"END_EFFECT"*/, method);
     byte_40F97B7 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5467, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5467/*"END_EFFECT"*/, 0LL);
 }
 
 
@@ -891,14 +891,14 @@ void __fastcall UserPresentBoxWindow__EndEffectReceive(UserPresentBoxWindow_o *t
 
   if ( (byte_40F97C0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3080, method);
+    sub_B16FFC(&StringLiteral_3080/*"CLOSE"*/, method);
     byte_40F97C0 = 1;
   }
   UserPresentBoxWindow__ReDisp(this, method);
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3080, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3080/*"CLOSE"*/, 0LL);
 }
 
 
@@ -1503,7 +1503,7 @@ void __fastcall UserPresentBoxWindow__Open(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
     sub_B16FFC(&Method_UserPresentBoxWindow_OnClickBack__, v15);
     sub_B16FFC(&Method_UserPresentBoxWindow__Open_b__69_0__, v16);
-    sub_B16FFC(&StringLiteral_5453, v17);
+    sub_B16FFC(&StringLiteral_5453/*"ENABLE_PRESENT_HISTORY"*/, v17);
     byte_40F97A1 = 1;
   }
   bgObject = this->fields.bgObject;
@@ -1673,7 +1673,7 @@ LABEL_22:
     v80,
     v81);
   UserPresentBoxWindow__SetBtnEnable(this, 0, v82);
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_5453, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_5453/*"ENABLE_PRESENT_HISTORY"*/, 0LL);
   if ( !this->fields.presentHistoryButtonPanel )
     goto LABEL_31;
   v84 = Value > 0;
@@ -1948,13 +1948,13 @@ void __fastcall UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
     sub_B16FFC(&TutorialFlag_TypeInfo, v18);
     sub_B16FFC(&UserPresentListViewManager_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_10480, v20);
-    sub_B16FFC(&StringLiteral_10990, v21);
-    sub_B16FFC(&StringLiteral_10989, v22);
-    sub_B16FFC(&StringLiteral_3441, v23);
-    sub_B16FFC(&StringLiteral_10481, v24);
-    sub_B16FFC(&StringLiteral_3439, v25);
-    this = (UserPresentBoxWindow_o *)sub_B16FFC(&StringLiteral_12413, v26);
+    sub_B16FFC(&StringLiteral_10480/*"PRESENT_LIST_INFO"*/, v20);
+    sub_B16FFC(&StringLiteral_10990/*"RECEIVE_FILTER_NOTHING"*/, v21);
+    sub_B16FFC(&StringLiteral_10989/*"RECEIVE_ALL_DONE"*/, v22);
+    sub_B16FFC(&StringLiteral_3441/*"CURRENT_QP_UNIT"*/, v23);
+    sub_B16FFC(&StringLiteral_10481/*"PRESENT_LIST_NOTICE"*/, v24);
+    sub_B16FFC(&StringLiteral_3439/*"CURRENT_FRIEND_POINT_UNIT"*/, v25);
+    this = (UserPresentBoxWindow_o *)sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v26);
     byte_40F97A5 = 1;
   }
   *(_QWORD *)servantEquipSum = 0LL;
@@ -2001,7 +2001,7 @@ void __fastcall UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   v192 = servantEquipSum[1];
   v45 = j_il2cpp_value_box_0(int_TypeInfo, &v192);
   if ( !SelfUserGame )
@@ -2014,7 +2014,7 @@ void __fastcall UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const
     goto LABEL_160;
   UILabel__set_text(svtNumValLb, v48, 0LL);
   svtEqNumValLb = v2->fields.svtEqNumValLb;
-  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   v190 = servantEquipSum[0];
   v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v190);
   svtEquipKeep = SelfUserGame->fields.svtEquipKeep;
@@ -2024,7 +2024,7 @@ void __fastcall UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const
     goto LABEL_160;
   UILabel__set_text(svtEqNumValLb, v53, 0LL);
   commandCodeNumValLb = v2->fields.commandCodeNumValLb;
-  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   v188 = v43;
   v57 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v188);
   if ( !byte_40F6094 )
@@ -2061,7 +2061,7 @@ void __fastcall UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const
     goto LABEL_160;
   UILabel__set_text(mpNumValLb, v66, 0LL);
   qpNumValLb = v2->fields.qpNumValLb;
-  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3441, 0LL);
+  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3441/*"CURRENT_QP_UNIT"*/, 0LL);
   qp = SelfUserGame->fields.qp;
   v69 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &qp);
   v70 = System_String__Format(v68, v69, 0LL);
@@ -2069,7 +2069,7 @@ void __fastcall UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const
     goto LABEL_160;
   UILabel__set_text(qpNumValLb, v70, 0LL);
   fpNumValLb = v2->fields.fpNumValLb;
-  v72 = LocalizationManager__Get((System_String_o *)StringLiteral_3439, 0LL);
+  v72 = LocalizationManager__Get((System_String_o *)StringLiteral_3439/*"CURRENT_FRIEND_POINT_UNIT"*/, 0LL);
   FriendPoint = UserGameEntity__GetFriendPoint(SelfUserGame, v73);
   v74 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &FriendPoint);
   v75 = System_String__Format(v72, v74, 0LL);
@@ -2098,7 +2098,7 @@ void __fastcall UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const
   }
   presentInfoLabel = v2->fields.presentInfoLabel;
   PresentBoxMax = v81->static_fields->PresentBoxMax;
-  v85 = LocalizationManager__Get((System_String_o *)StringLiteral_10480, 0LL);
+  v85 = LocalizationManager__Get((System_String_o *)StringLiteral_10480/*"PRESENT_LIST_INFO"*/, 0LL);
   v184 = v82;
   v86 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v184);
   v183 = PresentBoxMax;
@@ -2108,7 +2108,7 @@ void __fastcall UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const
     goto LABEL_160;
   UILabel__set_text(presentInfoLabel, v88, 0LL);
   presentNoticeLabel = v2->fields.presentNoticeLabel;
-  v90 = LocalizationManager__Get((System_String_o *)StringLiteral_10481, 0LL);
+  v90 = LocalizationManager__Get((System_String_o *)StringLiteral_10481/*"PRESENT_LIST_NOTICE"*/, 0LL);
   v182 = PresentBoxMax;
   v91 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v182);
   v92 = System_String__Format(v90, v91, 0LL);
@@ -2351,7 +2351,7 @@ LABEL_160:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v146 = &StringLiteral_10990;
+              v146 = &StringLiteral_10990/*"RECEIVE_FILTER_NOTHING"*/;
             }
             else
             {
@@ -2360,7 +2360,7 @@ LABEL_160:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v146 = &StringLiteral_10989;
+              v146 = &StringLiteral_10989/*"RECEIVE_ALL_DONE"*/;
             }
             v166 = LocalizationManager__Get((System_String_o *)*v146, 0LL);
             if ( nonPresentNoticeLabel )
@@ -3147,8 +3147,8 @@ void __fastcall UserPresentBoxWindow__SetFilterButtonImage(UserPresentBoxWindow_
   if ( (byte_40F97A6 & 1) == 0 )
   {
     sub_B16FFC(&UserPresentListViewManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16927, v3);
-    sub_B16FFC(&StringLiteral_16926, v4);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, v3);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v4);
     byte_40F97A6 = 1;
   }
   filterBtnSp = this->fields.filterBtnSp;
@@ -3172,7 +3172,7 @@ void __fastcall UserPresentBoxWindow__SetFilterButtonImage(UserPresentBoxWindow_
   sortInfo = v6->static_fields->sortInfo;
   if ( !sortInfo )
     goto LABEL_26;
-  v9 = (System_String_o **)&StringLiteral_16927;
+  v9 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
   if ( !ListViewSort__UnCheckPresentBoxFilterAll(sortInfo, 0LL) )
     goto LABEL_24;
   if ( (BYTE3(UserPresentListViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3197,7 +3197,7 @@ void __fastcall UserPresentBoxWindow__SetFilterButtonImage(UserPresentBoxWindow_
 LABEL_26:
     sub_B170D4();
   if ( ListViewSort__UnCheckPresentBoxRarityFilterAll(v11, 0LL) )
-    v9 = (System_String_o **)&StringLiteral_16926;
+    v9 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
 LABEL_24:
   if ( !filterBtnSp )
     goto LABEL_26;
@@ -3220,12 +3220,12 @@ void __fastcall UserPresentBoxWindow__SetPresentHistoryBtnEnable(
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, is_enable);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_10717, v6);
+    sub_B16FFC(&StringLiteral_10717/*"PresentHistoryButton"*/, v6);
     byte_40F97C9 = 1;
   }
   GameObject = GameObjectExtensions__FindGameObject(
                  this->fields.presentHistoryButtonPanel,
-                 (System_String_o *)StringLiteral_10717,
+                 (System_String_o *)StringLiteral_10717/*"PresentHistoryButton"*/,
                  0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3306,7 +3306,7 @@ void __fastcall UserPresentBoxWindow__SetSelectCount(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&selected);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_10487, v5);
+    sub_B16FFC(&StringLiteral_10487/*"PRESENT_SELECT_INFO"*/, v5);
     byte_40F97CA = 1;
   }
   presentSelectNumLabel = this->fields.presentSelectNumLabel;
@@ -3315,7 +3315,7 @@ void __fastcall UserPresentBoxWindow__SetSelectCount(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_10487, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_10487/*"PRESENT_SELECT_INFO"*/, 0LL);
   v8 = (Il2CppObject *)System_Int32__ToString((int32_t)&v18, 0LL);
   v9 = System_String__Format_43739268(v7, v8, (Il2CppObject *)this->fields.presentMaxSelectable, 0LL);
   if ( !presentSelectNumLabel )
@@ -3487,8 +3487,8 @@ void __fastcall UserPresentBoxWindow__ShowExpiredPresents(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
     sub_B16FFC(&Method_UserPresentBoxWindow___c__DisplayClass82_0__ShowExpiredPresents_b__0__, v9);
     sub_B16FFC(&UserPresentBoxWindow___c__DisplayClass82_0_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_10474, v11);
-    sub_B16FFC(&StringLiteral_27, v12);
+    sub_B16FFC(&StringLiteral_10474/*"PRESENT_EXPIRED_ERROR_MESSAGE"*/, v11);
+    sub_B16FFC(&StringLiteral_27/*"\n\n"*/, v12);
     byte_40F97AC = 1;
   }
   v13 = sub_B170CC(UserPresentBoxWindow___c__DisplayClass82_0_TypeInfo, callback, method, v3, v4);
@@ -3511,8 +3511,8 @@ void __fastcall UserPresentBoxWindow__ShowExpiredPresents(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10474, 0LL);
-    v30 = System_String__Concat_43746016(expiredPresents_k__BackingField, (System_String_o *)StringLiteral_27, v29, 0LL);
+    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10474/*"PRESENT_EXPIRED_ERROR_MESSAGE"*/, 0LL);
+    v30 = System_String__Concat_43746016(expiredPresents_k__BackingField, (System_String_o *)StringLiteral_27/*"\n\n"*/, v29, 0LL);
     v35 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v31, v32, v33, v34);
     System_Action___ctor(
       v35,
@@ -3596,7 +3596,7 @@ void __fastcall UserPresentBoxWindow___CallbackReceiveRequest_b__80_0(
   {
     sub_B16FFC(&UserPresentListViewManager_ReceiveCallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_UserPresentBoxWindow_EventPointRewardWithOutSvtGet__, v3);
-    sub_B16FFC(&StringLiteral_12186, v4);
+    sub_B16FFC(&StringLiteral_12186/*"SHOW_EFFECT"*/, v4);
     byte_40F97D3 = 1;
   }
   getSvtList = this->fields.getSvtList;
@@ -3607,7 +3607,7 @@ void __fastcall UserPresentBoxWindow___CallbackReceiveRequest_b__80_0(
     myFsm = this->fields.myFsm;
     if ( myFsm )
     {
-      PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_12186, 0LL);
+      PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_12186/*"SHOW_EFFECT"*/, 0LL);
       return;
     }
 LABEL_14:
@@ -4143,8 +4143,8 @@ void __fastcall UserPresentBoxWindow__checkNextSvt(UserPresentBoxWindow_o *this,
   if ( (byte_40F97B9 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_UserPresentBoxEntity__get_Count__, method);
-    sub_B16FFC(&StringLiteral_9269, v9);
-    sub_B16FFC(&StringLiteral_6332, v10);
+    sub_B16FFC(&StringLiteral_9269/*"NEXT_SVT"*/, v9);
+    sub_B16FFC(&StringLiteral_6332/*"FINAL_SVT"*/, v10);
     byte_40F97B9 = 1;
   }
   receiveList = this->fields.receiveList;
@@ -4158,7 +4158,7 @@ void __fastcall UserPresentBoxWindow__checkNextSvt(UserPresentBoxWindow_o *this,
     this->fields.receiveIdx = 0;
     if ( myFsm )
     {
-      v13 = &StringLiteral_6332;
+      v13 = &StringLiteral_6332/*"FINAL_SVT"*/;
       goto LABEL_9;
     }
 LABEL_10:
@@ -4167,7 +4167,7 @@ LABEL_10:
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     goto LABEL_10;
-  v13 = &StringLiteral_9269;
+  v13 = &StringLiteral_9269/*"NEXT_SVT"*/;
 LABEL_9:
   PlayMakerFSM__SendEvent(myFsm, (System_String_o *)*v13, 0LL);
 }
@@ -4284,7 +4284,7 @@ void __fastcall UserPresentBoxWindow__incereIdx(UserPresentBoxWindow_o *this, co
   if ( (byte_40F97BD & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_UserPresentBoxEntity__get_Count__, method);
-    sub_B16FFC(&StringLiteral_9269, v3);
+    sub_B16FFC(&StringLiteral_9269/*"NEXT_SVT"*/, v3);
     byte_40F97BD = 1;
   }
   receiveList = this->fields.receiveList;
@@ -4297,7 +4297,7 @@ void __fastcall UserPresentBoxWindow__incereIdx(UserPresentBoxWindow_o *this, co
   if ( !myFsm )
 LABEL_8:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9269, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9269/*"NEXT_SVT"*/, 0LL);
 }
 
 
@@ -4317,8 +4317,8 @@ System_String_o *__fastcall UserPresentBoxWindow__maxSelectable(UserPresentBoxWi
   if ( (byte_40F97CB & 1) == 0 )
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23602, v2);
-    sub_B16FFC(&StringLiteral_23387, v3);
+    sub_B16FFC(&StringLiteral_23602/*"}"*/, v2);
+    sub_B16FFC(&StringLiteral_23387/*"{0,"*/, v3);
     byte_40F97CB = 1;
   }
   v12 = 0;
@@ -4340,9 +4340,9 @@ System_String_o *__fastcall UserPresentBoxWindow__maxSelectable(UserPresentBoxWi
   v12 = v7->fields.m_stringLength + 2 * (m_stringLength - v7->fields.m_stringLength);
   v9 = System_Int32__ToString((int32_t)&v12, 0LL);
   v10 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_23387,
+          (System_String_o *)StringLiteral_23387/*"{0,"*/,
           v9,
-          (System_String_o *)StringLiteral_23602,
+          (System_String_o *)StringLiteral_23602/*"}"*/,
           0LL);
   return System_String__Format(v10, v8, 0LL);
 }
@@ -5310,8 +5310,8 @@ void __fastcall UserPresentBoxWindow__startRewardGetEffect(
     sub_B16FFC(&UserPresentBoxWindow___c__DisplayClass89_0_TypeInfo, v22);
     sub_B16FFC(&Method_UserPresentBoxWindow___c__DisplayClass89_1__startRewardGetEffect_b__1__, v23);
     sub_B16FFC(&UserPresentBoxWindow___c__DisplayClass89_1_TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_12382, v25);
-    sub_B16FFC(&StringLiteral_12383, v26);
+    sub_B16FFC(&StringLiteral_12382/*"SUMMON_EVENT_SERVANT_TITLE_GET"*/, v25);
+    sub_B16FFC(&StringLiteral_12383/*"SUMMON_EVENT_SERVANT_TITLE_JOIN"*/, v26);
     byte_40F97B2 = 1;
   }
   v27 = sub_B170CC(
@@ -5394,7 +5394,7 @@ LABEL_31:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v58 = &StringLiteral_12383;
+    v58 = &StringLiteral_12383/*"SUMMON_EVENT_SERVANT_TITLE_JOIN"*/;
   }
   else
   {
@@ -5406,7 +5406,7 @@ LABEL_31:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v58 = &StringLiteral_12382;
+    v58 = &StringLiteral_12382/*"SUMMON_EVENT_SERVANT_TITLE_GET"*/;
   }
   v75 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)*v58, 0LL);
   *(_QWORD *)(v44 + 16) = v75;
@@ -5775,7 +5775,7 @@ void __fastcall UserPresentBoxWindow___c__DisplayClass82_0___ShowExpiredPresents
   if ( (byte_40F798E & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F798E = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -5788,8 +5788,8 @@ void __fastcall UserPresentBoxWindow___c__DisplayClass82_0___ShowExpiredPresents
   {
     sub_B170D4();
   }
-  v15 = (System_Int32_array **)StringLiteral_1;
-  v14->fields._expiredPresents_k__BackingField = (struct System_String_o *)StringLiteral_1;
+  v15 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v14->fields._expiredPresents_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v14->fields._expiredPresents_k__BackingField,
     v15,

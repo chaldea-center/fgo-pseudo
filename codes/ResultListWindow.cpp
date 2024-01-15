@@ -51,12 +51,12 @@ void __fastcall ResultListWindow___ctor(ResultListWindow_o *this, const MethodIn
     sub_B16FFC(&BaseDialog_TypeInfo, method);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject___ctor__, v9);
     sub_B16FFC(&System_Collections_Generic_List_GameObject__TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_18097, v11);
+    sub_B16FFC(&StringLiteral_18097/*"ef_boxitem_fall"*/, v11);
     byte_40FC86F = 1;
   }
   *(_OWORD *)&this->fields.itemDropTime = xmmword_3147190;
-  v12 = (System_Int32_array **)StringLiteral_18097;
-  this->fields.aniName = (struct System_String_o *)StringLiteral_18097;
+  v12 = (System_Int32_array **)StringLiteral_18097/*"ef_boxitem_fall"*/;
+  this->fields.aniName = (struct System_String_o *)StringLiteral_18097/*"ef_boxitem_fall"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.aniName, v12, v2, v3, v4, v5, v6, v7);
   v17 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_GameObject__TypeInfo,
@@ -776,8 +776,8 @@ void __fastcall ResultListWindow__endDisp(ResultListWindow_o *this, const Method
 
   if ( (byte_40FC869 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5953, method);
-    sub_B16FFC(&StringLiteral_21920, v3);
+    sub_B16FFC(&StringLiteral_5953/*"EndOpen"*/, method);
+    sub_B16FFC(&StringLiteral_21920/*"setDisp"*/, v3);
     byte_40FC869 = 1;
   }
   maxPlayCnt = this->fields.maxPlayCnt;
@@ -789,7 +789,7 @@ void __fastcall ResultListWindow__endDisp(ResultListWindow_o *this, const Method
     {
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_5953,
+        (System_String_o *)StringLiteral_5953/*"EndOpen"*/,
         0.5,
         0LL);
     }
@@ -803,7 +803,7 @@ LABEL_6:
   {
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_21920,
+      (System_String_o *)StringLiteral_21920/*"setDisp"*/,
       0.00001,
       0LL);
     if ( !this->fields.isDischargeCostume && this->fields.playCnt == this->fields.maxPlayCnt - 1 )
@@ -841,9 +841,9 @@ void __fastcall ResultListWindow__playEffectDrop(ResultListWindow_o *this, const
     sub_B16FFC(&BoxGachaResultEffectComponent_TypeInfo, method);
     sub_B16FFC(&BoxGachaUtility_TypeInfo, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, v4);
-    sub_B16FFC(&StringLiteral_18095, v5);
-    sub_B16FFC(&StringLiteral_18094, v6);
-    sub_B16FFC(&StringLiteral_22026, v7);
+    sub_B16FFC(&StringLiteral_18095/*"ef_boxitem_drop_rare"*/, v5);
+    sub_B16FFC(&StringLiteral_18094/*"ef_boxitem_drop"*/, v6);
+    sub_B16FFC(&StringLiteral_22026/*"showResultItem"*/, v7);
     byte_40FC867 = 1;
   }
   if ( this->fields.isSkip && !this->fields.isRare )
@@ -853,9 +853,9 @@ void __fastcall ResultListWindow__playEffectDrop(ResultListWindow_o *this, const
     goto LABEL_33;
   UnityEngine_Collider__set_enabled(skipCollider, 1, 0LL);
   if ( this->fields.isRare )
-    v9 = (System_String_o **)&StringLiteral_18095;
+    v9 = (System_String_o **)&StringLiteral_18095/*"ef_boxitem_drop_rare"*/;
   else
-    v9 = (System_String_o **)&StringLiteral_18094;
+    v9 = (System_String_o **)&StringLiteral_18094/*"ef_boxitem_drop"*/;
   v10 = *v9;
   if ( this->fields.maxPlayCnt < 11 )
   {
@@ -926,7 +926,7 @@ LABEL_33:
 LABEL_32:
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_22026,
+    (System_String_o *)StringLiteral_22026/*"showResultItem"*/,
     this->fields.itemDispWaitTime,
     0LL);
 }
@@ -984,8 +984,8 @@ void __fastcall ResultListWindow__setDisp(ResultListWindow_o *this, const Method
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, v12);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v13);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_21399, v15);
-    sub_B16FFC(&StringLiteral_18097, v16);
+    sub_B16FFC(&StringLiteral_21399/*"playEffectDrop"*/, v15);
+    sub_B16FFC(&StringLiteral_18097/*"ef_boxitem_fall"*/, v16);
     byte_40FC866 = 1;
   }
   resultItemObjList = this->fields.resultItemObjList;
@@ -1029,7 +1029,7 @@ void __fastcall ResultListWindow__setDisp(ResultListWindow_o *this, const Method
   {
     j_il2cpp_runtime_class_init_0(BoxGachaResultEffectComponent_TypeInfo);
   }
-  Effect = BoxGachaResultEffectComponent__getEffect((System_String_o *)StringLiteral_18097, v30, 0LL);
+  Effect = BoxGachaResultEffectComponent__getEffect((System_String_o *)StringLiteral_18097/*"ef_boxitem_fall"*/, v30, 0LL);
   if ( !Effect )
     goto LABEL_42;
   v32 = Effect;
@@ -1108,7 +1108,7 @@ LABEL_42:
 LABEL_41:
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_21399,
+    (System_String_o *)StringLiteral_21399/*"playEffectDrop"*/,
     this->fields.itemDropTime,
     0LL);
 }
@@ -1253,7 +1253,7 @@ void __fastcall ResultListWindow__setResultItem(ResultListWindow_o *this, const 
     sub_B16FFC(&System_Collections_Generic_List_GameObject__TypeInfo, v13);
     sub_B16FFC(&System_Math_TypeInfo, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_12986, v16);
+    sub_B16FFC(&StringLiteral_12986/*"StartDisp"*/, v16);
     byte_40FC862 = 1;
   }
   v17 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -1538,7 +1538,7 @@ LABEL_77:
   else
     UnityEngine_MonoBehaviour__StartCoroutine(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_12986,
+      (System_String_o *)StringLiteral_12986/*"StartDisp"*/,
       0LL);
 }
 
@@ -1547,12 +1547,12 @@ void __fastcall ResultListWindow__showResultEffect(ResultListWindow_o *this, con
 {
   if ( (byte_40FC865 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21920, method);
+    sub_B16FFC(&StringLiteral_21920/*"setDisp"*/, method);
     byte_40FC865 = 1;
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_21920,
+    (System_String_o *)StringLiteral_21920/*"setDisp"*/,
     0.3,
     0LL);
 }
@@ -1564,7 +1564,7 @@ void __fastcall ResultListWindow__showResultItem(ResultListWindow_o *this, const
 
   if ( (byte_40FC868 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18276, method);
+    sub_B16FFC(&StringLiteral_18276/*"endDisp"*/, method);
     byte_40FC868 = 1;
   }
   dispObj = this->fields.dispObj;
@@ -1573,7 +1573,7 @@ void __fastcall ResultListWindow__showResultItem(ResultListWindow_o *this, const
   UnityEngine_GameObject__SetActive(dispObj, 1, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_18276,
+    (System_String_o *)StringLiteral_18276/*"endDisp"*/,
     this->fields.itemDispTime,
     0LL);
 }
@@ -1683,7 +1683,7 @@ bool __fastcall ResultListWindow__StartDisp_d__47__MoveNext(
     sub_B16FFC(&ResultListWindow_TypeInfo, v15);
     sub_B16FFC(&ResultListWindow_RewardAction_TypeInfo, v16);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_5953, v18);
+    sub_B16FFC(&StringLiteral_5953/*"EndOpen"*/, v18);
     byte_40F7433 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -1882,7 +1882,7 @@ LABEL_65:
             if ( _4__this->fields.isDischargeCostume )
             {
               EFFECT_PLAY_TIME = 0.5;
-              v73 = (System_String_o *)StringLiteral_5953;
+              v73 = (System_String_o *)StringLiteral_5953/*"EndOpen"*/;
             }
             else
             {
@@ -1896,7 +1896,7 @@ LABEL_65:
                 v74 = ResultListWindow_TypeInfo;
               }
               EFFECT_PLAY_TIME = v74->static_fields->EFFECT_PLAY_TIME;
-              v73 = (System_String_o *)StringLiteral_5953;
+              v73 = (System_String_o *)StringLiteral_5953/*"EndOpen"*/;
             }
             UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)_4__this, v73, EFFECT_PLAY_TIME, 0LL);
             return 0;
@@ -2082,10 +2082,10 @@ bool __fastcall ResultListWindow__StartRewardAction_d__48__MoveNext(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
     sub_B16FFC(&ResultListWindow_TypeInfo, v13);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_18095, v15);
-    sub_B16FFC(&StringLiteral_18096, v16);
-    sub_B16FFC(&StringLiteral_18098, v17);
-    sub_B16FFC(&StringLiteral_5953, v18);
+    sub_B16FFC(&StringLiteral_18095/*"ef_boxitem_drop_rare"*/, v15);
+    sub_B16FFC(&StringLiteral_18096/*"ef_boxitem_drop_scalable"*/, v16);
+    sub_B16FFC(&StringLiteral_18098/*"ef_boxitem_fall_scalable"*/, v17);
+    sub_B16FFC(&StringLiteral_5953/*"EndOpen"*/, v18);
     byte_40F7434 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -2171,7 +2171,7 @@ LABEL_97:
         {
           j_il2cpp_runtime_class_init_0(BoxGachaResultEffectComponent_TypeInfo);
         }
-        Effect = BoxGachaResultEffectComponent__getEffect((System_String_o *)StringLiteral_18098, transform, 0LL);
+        Effect = BoxGachaResultEffectComponent__getEffect((System_String_o *)StringLiteral_18098/*"ef_boxitem_fall_scalable"*/, transform, 0LL);
         if ( !Effect )
           goto LABEL_97;
         v76 = Effect;
@@ -2281,9 +2281,9 @@ LABEL_96:
 LABEL_15:
       v41 = _4__this->fields.effectRoot;
       if ( isRare )
-        v42 = (System_String_o **)&StringLiteral_18095;
+        v42 = (System_String_o **)&StringLiteral_18095/*"ef_boxitem_drop_rare"*/;
       else
-        v42 = (System_String_o **)&StringLiteral_18096;
+        v42 = (System_String_o **)&StringLiteral_18096/*"ef_boxitem_drop_scalable"*/;
       if ( !v41 )
         goto LABEL_97;
       v43 = _4__this->fields.maxPlayCnt;
@@ -2381,7 +2381,7 @@ LABEL_37:
         }
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)_4__this,
-          (System_String_o *)StringLiteral_5953,
+          (System_String_o *)StringLiteral_5953/*"EndOpen"*/,
           v65->static_fields->EFFECT_PLAY_TIME,
           0LL);
       }

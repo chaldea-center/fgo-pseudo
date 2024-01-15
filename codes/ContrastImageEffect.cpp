@@ -19,18 +19,18 @@ void __fastcall ContrastImageEffect__OnRenderImage(
   if ( (byte_40FBDA5 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Graphics_TypeInfo, source);
-    sub_B16FFC(&StringLiteral_15895, v7);
-    sub_B16FFC(&StringLiteral_15991, v8);
+    sub_B16FFC(&StringLiteral_15895/*"_Contrast"*/, v7);
+    sub_B16FFC(&StringLiteral_15991/*"_Saturation"*/, v8);
     byte_40FBDA5 = 1;
   }
   material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL);
   if ( !material
-    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_15991, this->fields.saturation, 0LL),
+    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_15991/*"_Saturation"*/, this->fields.saturation, 0LL),
         (v10 = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL)) == 0LL) )
   {
     sub_B170D4();
   }
-  UnityEngine_Material__SetFloat(v10, (System_String_o *)StringLiteral_15895, this->fields.contrast, 0LL);
+  UnityEngine_Material__SetFloat(v10, (System_String_o *)StringLiteral_15895/*"_Contrast"*/, this->fields.contrast, 0LL);
   v11 = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL);
   if ( (BYTE3(UnityEngine_Graphics_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )

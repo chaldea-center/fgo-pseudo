@@ -32,9 +32,9 @@ void __fastcall MasterMissionReceiveResultDialog__Init(
   if ( (byte_40FB271 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_8618, v3);
-    sub_B16FFC(&StringLiteral_3252, v4);
-    sub_B16FFC(&StringLiteral_8617, v5);
+    sub_B16FFC(&StringLiteral_8618/*"MASTER_MISSION_RECEIVE_RESULT_DLG_TITLE"*/, v3);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v4);
+    sub_B16FFC(&StringLiteral_8617/*"MASTER_MISSION_RECEIVE_RESULT_DLG_MSG"*/, v5);
     byte_40FB271 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -48,15 +48,15 @@ void __fastcall MasterMissionReceiveResultDialog__Init(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8618, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8618/*"MASTER_MISSION_RECEIVE_RESULT_DLG_TITLE"*/, 0LL);
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, v8, 0LL),
         subTitleLabel = this->fields.subTitleLabel,
-        v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8617, 0LL),
+        v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8617/*"MASTER_MISSION_RECEIVE_RESULT_DLG_MSG"*/, 0LL),
         !subTitleLabel)
     || (UILabel__set_text(subTitleLabel, v10, 0LL),
         closeLabel = this->fields.closeLabel,
-        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL),
+        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
         !closeLabel) )
   {
 LABEL_11:
@@ -162,8 +162,8 @@ System_String_o *__fastcall MasterMissionReceiveResultDialog__get_closeBtnPath(
 {
   if ( (byte_40FB273 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15416, method);
+    sub_B16FFC(&StringLiteral_15416/*"Window/CloseButton"*/, method);
     byte_40FB273 = 1;
   }
-  return (System_String_o *)StringLiteral_15416;
+  return (System_String_o *)StringLiteral_15416/*"Window/CloseButton"*/;
 }

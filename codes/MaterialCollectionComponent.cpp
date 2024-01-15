@@ -13,12 +13,12 @@ void __fastcall MaterialCollectionComponent___openMenu_b__5_0(
 
   if ( (byte_40FCB4A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6864, method);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, method);
     byte_40FCB4A = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm
-    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL),
+    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL),
         (myRoomCtrl = this->fields.myRoomCtrl) == 0LL) )
   {
     sub_B170D4();
@@ -75,13 +75,13 @@ void __fastcall MaterialCollectionComponent__onClose(MaterialCollectionComponent
 
   if ( (byte_40FCB48 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3094, method);
+    sub_B16FFC(&StringLiteral_3094/*"CLOSE_MENU"*/, method);
     byte_40FCB48 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3094, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3094/*"CLOSE_MENU"*/, 0LL);
 }
 
 
@@ -93,13 +93,13 @@ void __fastcall MaterialCollectionComponent__onCloseWebView(
 
   if ( (byte_40FCB46 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3091, method);
+    sub_B16FFC(&StringLiteral_3091/*"CLOSE_MATERIAL"*/, method);
     byte_40FCB46 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3091, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3091/*"CLOSE_MATERIAL"*/, 0LL);
 }
 
 
@@ -115,17 +115,17 @@ void __fastcall MaterialCollectionComponent__onEndMenu(
 
   if ( (byte_40FCB49 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3091, *(_QWORD *)&result);
-    sub_B16FFC(&StringLiteral_3034, v5);
+    sub_B16FFC(&StringLiteral_3091/*"CLOSE_MATERIAL"*/, *(_QWORD *)&result);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v5);
     byte_40FCB49 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
   if ( result == 1 )
-    v7 = &StringLiteral_3034;
+    v7 = &StringLiteral_3034/*"CLICK_BACK"*/;
   else
-    v7 = &StringLiteral_3091;
+    v7 = &StringLiteral_3091/*"CLOSE_MATERIAL"*/;
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)*v7, 0LL);
 }
 

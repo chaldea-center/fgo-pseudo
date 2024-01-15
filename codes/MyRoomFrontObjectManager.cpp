@@ -245,7 +245,7 @@ void __fastcall MyRoomFrontObjectManager__ReleaseAll(MyRoomFrontObjectManager_o 
     sub_B16FFC(&AssetManager_TypeInfo, method);
     sub_B16FFC(&int_TypeInfo, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_9228, v5);
+    sub_B16FFC(&StringLiteral_9228/*"MyRoom/FrontObject/{0}"*/, v5);
     byte_40F9AE8 = 1;
   }
   klass = this[1].klass;
@@ -261,7 +261,7 @@ void __fastcall MyRoomFrontObjectManager__ReleaseAll(MyRoomFrontObjectManager_o 
     if ( !*v6
       || (m_CachedPtr = (*v6)[1].fields.m_CachedPtr,
           v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_CachedPtr),
-          v10 = System_String__Format((System_String_o *)StringLiteral_9228, v9, 0LL),
+          v10 = System_String__Format((System_String_o *)StringLiteral_9228/*"MyRoom/FrontObject/{0}"*/, v9, 0LL),
           !*v6) )
     {
       sub_B170D4();
@@ -322,7 +322,7 @@ void __fastcall MyRoomFrontObjectManager__Setup(MyRoomFrontObjectManager_o *this
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v8);
     sub_B16FFC(&Method_MyRoomFrontObjectManager___c__DisplayClass6_0__Setup_b__0__, v9);
     sub_B16FFC(&MyRoomFrontObjectManager___c__DisplayClass6_0_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_9228, v11);
+    sub_B16FFC(&StringLiteral_9228/*"MyRoom/FrontObject/{0}"*/, v11);
     byte_40F9AE7 = 1;
   }
   v12 = sub_B170CC(MyRoomFrontObjectManager___c__DisplayClass6_0_TypeInfo, *(_QWORD *)&id, method, v3, v4);
@@ -338,7 +338,7 @@ void __fastcall MyRoomFrontObjectManager__Setup(MyRoomFrontObjectManager_o *this
       MyRoomFrontObjectManager__ReleaseAll(this, v21);
     v29 = *(_DWORD *)(v12 + 24);
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29);
-    v23 = System_String__Format((System_String_o *)StringLiteral_9228, v22, 0LL);
+    v23 = System_String__Format((System_String_o *)StringLiteral_9228/*"MyRoom/FrontObject/{0}"*/, v22, 0LL);
     v28 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v24, v25, v26, v27);
     AssetLoader_LoadEndDataHandler___ctor(
       v28,
@@ -421,14 +421,14 @@ void __fastcall MyRoomFrontObjectManager___c__DisplayClass6_0___Setup_b__0(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_MyRoomFrontObject___, v5);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_9230, v8);
+    sub_B16FFC(&StringLiteral_9230/*"MyRoomFrontObj"*/, v8);
     byte_40F8668 = 1;
   }
   if ( assetData )
   {
     Object_WarBoardWaitTimeSetting = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                     assetData,
-                                                    (System_String_o *)StringLiteral_9230,
+                                                    (System_String_o *)StringLiteral_9230/*"MyRoomFrontObj"*/,
                                                     (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )

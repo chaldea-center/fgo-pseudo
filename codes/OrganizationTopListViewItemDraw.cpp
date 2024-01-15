@@ -30,8 +30,8 @@ void __fastcall OrganizationTopListViewItemDraw__SetItem(
   if ( (byte_40F7FB6 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_19532, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_19532/*"img_shop_0"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F7FB6 = 1;
   }
   if ( item && mode )
@@ -43,7 +43,7 @@ void __fastcall OrganizationTopListViewItemDraw__SetItem(
     if ( System_String__IsNullOrEmpty(imageName, 0LL) )
     {
       infoTextLabel = this->fields.infoTextLabel;
-      imageName = (System_String_o *)StringLiteral_19532;
+      imageName = (System_String_o *)StringLiteral_19532/*"img_shop_0"*/;
       InfoText = OrganizationTopListViewItem__get_InfoText(item, v11);
       if ( !infoTextLabel )
         goto LABEL_25;
@@ -55,7 +55,7 @@ void __fastcall OrganizationTopListViewItemDraw__SetItem(
       v15 = this->fields.infoTextLabel;
       if ( !v15 )
         goto LABEL_25;
-      v14 = (System_String_o *)StringLiteral_1;
+      v14 = (System_String_o *)StringLiteral_1/*""*/;
     }
     UILabel__set_text(v15, v14, 0LL);
     baseButton = (UnityEngine_Object_o *)this->fields.baseButton;

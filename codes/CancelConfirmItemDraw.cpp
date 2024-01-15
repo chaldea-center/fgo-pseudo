@@ -53,9 +53,9 @@ void __fastcall CancelConfirmItemDraw__SetItem(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
     sub_B16FFC(&TutorialFlag_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_11594, v12);
-    sub_B16FFC(&StringLiteral_18748, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_11594/*"SELECT_NO_SORTIE"*/, v12);
+    sub_B16FFC(&StringLiteral_18748/*"formation_blank_small"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FCF0D = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
@@ -68,7 +68,7 @@ void __fastcall CancelConfirmItemDraw__SetItem(
   warningText = this->fields.warningText;
   if ( !warningText )
     goto LABEL_41;
-  UILabel__set_text(warningText, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(warningText, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   pushSprite = (UnityEngine_Component_o *)this->fields.pushSprite;
   if ( !pushSprite )
     goto LABEL_41;
@@ -86,7 +86,7 @@ void __fastcall CancelConfirmItemDraw__SetItem(
       goto LABEL_41;
     if ( !equipIdList->max_length )
       goto LABEL_42;
-    v30 = (System_String_o *)StringLiteral_18748;
+    v30 = (System_String_o *)StringLiteral_18748/*"formation_blank_small"*/;
     if ( !equipIdList->m_Items[0] )
       goto LABEL_39;
     Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -137,7 +137,7 @@ LABEL_41:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_11594, 0LL);
+      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_11594/*"SELECT_NO_SORTIE"*/, 0LL);
       if ( !v23 )
         goto LABEL_41;
       UILabel__set_text(v23, v24, 0LL);

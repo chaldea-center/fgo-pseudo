@@ -181,7 +181,7 @@ void __fastcall BattleLogicBaseAi__AddPlayMotionTask(
   if ( (byte_40FCD95 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, retList);
-    sub_B16FFC(&StringLiteral_8758, v7);
+    sub_B16FFC(&StringLiteral_8758/*"MOTION_"*/, v7);
     byte_40FCD95 = 1;
   }
   ActionValue = 0;
@@ -195,7 +195,7 @@ void __fastcall BattleLogicBaseAi__AddPlayMotionTask(
     return;
   Task = BaseAiActArgument__MakeTask(arg, this, 0, 0LL);
   v10 = System_Int32__ToString((int32_t)&ActionValue, 0LL);
-  v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_8758, v10, 0LL);
+  v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_8758/*"MOTION_"*/, v10, 0LL);
   if ( !Task
     || (BattleLogicTask__setPlayMoiton(Task, v11, 0LL), (logic = this->fields.logic) == 0LL)
     || (perf = logic->fields.perf,

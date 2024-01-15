@@ -241,7 +241,7 @@ void __fastcall PartyOrganizationMenu__EndOpen(PartyOrganizationMenu_o *this, co
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
     sub_B16FFC(&Method_PartyOrganizationMenu_EndOpenTutorialArrow__, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v13);
-    sub_B16FFC(&StringLiteral_13461, v14);
+    sub_B16FFC(&StringLiteral_13461/*"TUTORIAL_MESSAGE_PARTY_ORGANIZATION4"*/, v14);
     byte_40F76CA = 1;
   }
   methoda.methodPointer = 0LL;
@@ -287,7 +287,7 @@ void __fastcall PartyOrganizationMenu__EndOpen(PartyOrganizationMenu_o *this, co
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_13461, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_13461/*"TUTORIAL_MESSAGE_PARTY_ORGANIZATION4"*/, 0LL);
     methodPointer = methoda.methodPointer;
     invoker_method = methoda.invoker_method;
     v30 = v27;
@@ -393,7 +393,7 @@ bool __fastcall PartyOrganizationMenu__IsHintDialog(PartyOrganizationMenu_o *thi
     sub_B16FFC(&Method_DataManager_GetMaster_QuestHintMaster___, method);
     sub_B16FFC(&Method_DataManager_GetMaster_QuestPhaseMaster___, v3);
     sub_B16FFC(&DataManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F76D2 = 1;
   }
   entity = 0LL;
@@ -425,7 +425,7 @@ bool __fastcall PartyOrganizationMenu__IsHintDialog(PartyOrganizationMenu_o *thi
       if ( v14 )
       {
         HintMessage = QuestPhaseEntity__getHintMessage(v14, 0LL);
-        return System_String__op_Inequality(HintMessage, (System_String_o *)StringLiteral_1, 0LL);
+        return System_String__op_Inequality(HintMessage, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       }
 LABEL_19:
       sub_B170D4();
@@ -925,8 +925,8 @@ void __fastcall PartyOrganizationMenu__Open(
     sub_B16FFC(&Method_PartyOrganizationMenu_EndOpen__, v22);
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v23);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_18854, v25);
-    sub_B16FFC(&StringLiteral_12281, v26);
+    sub_B16FFC(&StringLiteral_18854/*"func_group_icon_1009_starting"*/, v25);
+    sub_B16FFC(&StringLiteral_12281/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, v26);
     byte_40F76C9 = 1;
   }
   state = this->fields.state;
@@ -1195,7 +1195,7 @@ LABEL_33:
                         }
                         AtlasManager__SetEventUI(
                           startingMemberFriendshipSprite,
-                          (System_String_o *)StringLiteral_18854,
+                          (System_String_o *)StringLiteral_18854/*"func_group_icon_1009_starting"*/,
                           0LL);
                         v74 = this->fields.startingMemberFriendshipLabel;
                         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1203,12 +1203,12 @@ LABEL_33:
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v75 = LocalizationManager__Get((System_String_o *)StringLiteral_12281, 0LL);
+                        v75 = LocalizationManager__Get((System_String_o *)StringLiteral_12281/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
                         if ( v74 )
                         {
                           UILabel__set_text(v74, v75, 0LL);
                           v76 = this->fields.startingMemberFriendshipLabelOver;
-                          v77 = LocalizationManager__Get((System_String_o *)StringLiteral_12281, 0LL);
+                          v77 = LocalizationManager__Get((System_String_o *)StringLiteral_12281/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
                           if ( v76 )
                           {
                             UILabel__set_text(v76, v77, 0LL);
@@ -1409,7 +1409,7 @@ void __fastcall PartyOrganizationMenu__SetupButton(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&PartyOrganizationMenu_TypeInfo, v10);
     sub_B16FFC(&QuestInformationComponent_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_17080, v12);
+    sub_B16FFC(&StringLiteral_17080/*"buttontxt_formation_20"*/, v12);
     byte_40F76CC = 1;
   }
   if ( this->fields.menuKind == 9 )
@@ -1600,7 +1600,7 @@ LABEL_26:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetPartyOrganizationImage(classInfoSprite, (System_String_o *)StringLiteral_17080, 0LL);
+    AtlasManager__SetPartyOrganizationImage(classInfoSprite, (System_String_o *)StringLiteral_17080/*"buttontxt_formation_20"*/, 0LL);
   }
 }
 

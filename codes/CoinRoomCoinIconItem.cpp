@@ -680,7 +680,7 @@ bool __fastcall CoinRoomCoinIconItem__SetSortValue(
 
   if ( (byte_40F9A1A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, sort);
+    sub_B16FFC(&StringLiteral_1/*""*/, sort);
     byte_40F9A1A = 1;
   }
   selectedNum_k__BackingField = this->fields._selectedNum_k__BackingField;
@@ -704,8 +704,8 @@ bool __fastcall CoinRoomCoinIconItem__SetSortValue(
       rarity_k__BackingField = this->fields._rarity_k__BackingField;
       this->fields.sortValue0B = 0LL;
       this->fields.sortValue1 = rarity_k__BackingField;
-      v22 = (System_Int32_array **)StringLiteral_1;
-      this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1;
+      v22 = (System_Int32_array **)StringLiteral_1/*""*/;
+      this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
       sub_B16F98(
         (BattleServantConfConponent_o *)&this->fields.sortStr1,
         v22,
@@ -731,15 +731,15 @@ bool __fastcall CoinRoomCoinIconItem__SetSortValue(
       p_sortStr1 = &this->fields.sortStr1;
       this->fields.sortValue0B = 0LL;
       this->fields.sortValue1 = num_k__BackingField;
-      sortRuby = (struct System_String_o *)StringLiteral_1;
+      sortRuby = (struct System_String_o *)StringLiteral_1/*""*/;
       goto LABEL_14;
     }
 LABEL_16:
     v17 = this->fields._collectionNo_k__BackingField;
     this->fields.sortValue0B = 0LL;
     this->fields.sortValue1 = v17;
-    v18 = (System_Int32_array **)StringLiteral_1;
-    this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1;
+    v18 = (System_Int32_array **)StringLiteral_1/*""*/;
+    this->fields.sortStr1 = (struct System_String_o *)StringLiteral_1/*""*/;
     sub_B16F98(
       (BattleServantConfConponent_o *)&this->fields.sortStr1,
       v18,

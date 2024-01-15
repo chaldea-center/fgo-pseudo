@@ -93,25 +93,25 @@ void __fastcall EventRewardEntity__GetInfo(
 
   if ( (byte_40F6155 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, nameText);
+    sub_B16FFC(&StringLiteral_1/*""*/, nameText);
     byte_40F6155 = 1;
   }
   v43 = 0LL;
   nameTexta = 0LL;
-  *nameText = (System_String_o *)StringLiteral_1;
+  *nameText = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)nameText,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     (System_String_array **)countText,
     (System_String_array **)method,
     v4,
     v5,
     v6,
     v7);
-  *countText = (System_String_o *)StringLiteral_1;
+  *countText = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)countText,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     v11,
     v12,
     v13,

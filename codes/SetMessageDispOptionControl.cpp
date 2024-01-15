@@ -20,8 +20,8 @@ void __fastcall SetMessageDispOptionControl__Init(SetMessageDispOptionControl_o 
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&OptionManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9755, v4);
-    sub_B16FFC(&StringLiteral_9756, v5);
+    sub_B16FFC(&StringLiteral_9755/*"OPTION_FRIEND_MESSAGE_DISP"*/, v4);
+    sub_B16FFC(&StringLiteral_9756/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, v5);
     byte_40FC3CA = 1;
   }
   switchButton = (UILabel_o *)this->fields.switchButton;
@@ -30,11 +30,11 @@ void __fastcall SetMessageDispOptionControl__Init(SetMessageDispOptionControl_o 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9755, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9755/*"OPTION_FRIEND_MESSAGE_DISP"*/, 0LL);
   if ( !switchButton
     || (UILabel__set_text(switchButton, v7, 0LL),
         v8 = *(UILabel_o **)&this->fields.isDisp,
-        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9756, 0LL),
+        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9756/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, 0LL),
         !v8) )
   {
     sub_B170D4();
@@ -98,16 +98,16 @@ void __fastcall SetMessageDispOptionControl__setDispValue(
 
   if ( (byte_40FC3CB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40FC3CB = 1;
   }
   infoLb = this->fields.infoLb;
   if ( !infoLb )
     sub_B170D4();
   if ( LOBYTE(this[1].klass) )
-    v5 = &StringLiteral_16940;
+    v5 = &StringLiteral_16940/*"btn_on"*/;
   else
-    v5 = &StringLiteral_16939;
+    v5 = &StringLiteral_16939/*"btn_off"*/;
   UIButton__set_normalSprite((UIButton_o *)infoLb, (System_String_o *)*v5, 0LL);
 }

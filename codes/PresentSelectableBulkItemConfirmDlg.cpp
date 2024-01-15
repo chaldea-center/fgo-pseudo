@@ -301,15 +301,15 @@ void __fastcall PresentSelectableBulkItemConfirmDlg__Open(
     sub_B16FFC(&BalanceConfig_TypeInfo, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&Method_PresentSelectableBulkItemConfirmDlg_EndOpen__, v17);
-    sub_B16FFC(&StringLiteral_10463, v18);
-    sub_B16FFC(&StringLiteral_10462, v19);
-    sub_B16FFC(&StringLiteral_10465, v20);
-    sub_B16FFC(&StringLiteral_10467, v21);
-    sub_B16FFC(&StringLiteral_10461, v22);
-    sub_B16FFC(&StringLiteral_10466, v23);
-    sub_B16FFC(&StringLiteral_10489, v24);
-    sub_B16FFC(&StringLiteral_10464, v25);
-    sub_B16FFC(&StringLiteral_10488, v26);
+    sub_B16FFC(&StringLiteral_10463/*"PRESENT_BOX_SELECTABLE_BULK_CONFIRM_DLG_TITLE"*/, v18);
+    sub_B16FFC(&StringLiteral_10462/*"PRESENT_BOX_SELECTABLE_BULK_CONFIRM_DLG_DETAIL_UPPER"*/, v19);
+    sub_B16FFC(&StringLiteral_10465/*"PRESENT_BOX_SELECTABLE_BULK_DESTINATION_KIND"*/, v20);
+    sub_B16FFC(&StringLiteral_10467/*"PRESENT_BOX_SELECTABLE_BULK_ORIGIN_KIND"*/, v21);
+    sub_B16FFC(&StringLiteral_10461/*"PRESENT_BOX_SELECTABLE_BULK_CONFIRM_DLG_DETAIL_UNDER"*/, v22);
+    sub_B16FFC(&StringLiteral_10466/*"PRESENT_BOX_SELECTABLE_BULK_ORIGIN"*/, v23);
+    sub_B16FFC(&StringLiteral_10489/*"PRESENT_SELECT_ITEM_OVER_WARNING"*/, v24);
+    sub_B16FFC(&StringLiteral_10464/*"PRESENT_BOX_SELECTABLE_BULK_DESTINATION"*/, v25);
+    sub_B16FFC(&StringLiteral_10488/*"PRESENT_SELECT_ITEM_FULL_WARNING"*/, v26);
     byte_40F9FF4 = 1;
   }
   if ( !this->fields.state )
@@ -355,37 +355,37 @@ void __fastcall PresentSelectableBulkItemConfirmDlg__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_10463, 0LL);
+    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_10463/*"PRESENT_BOX_SELECTABLE_BULK_CONFIRM_DLG_TITLE"*/, 0LL);
     if ( !TitleLabel )
       goto LABEL_47;
     UILabel__set_text(TitleLabel, v37, 0LL);
     DetailLabel = this->fields.DetailLabel;
-    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_10462, 0LL);
+    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_10462/*"PRESENT_BOX_SELECTABLE_BULK_CONFIRM_DLG_DETAIL_UPPER"*/, 0LL);
     if ( !DetailLabel )
       goto LABEL_47;
     UILabel__set_text(DetailLabel, v39, 0LL);
     UnderDetailLabel = this->fields.UnderDetailLabel;
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10461, 0LL);
+    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10461/*"PRESENT_BOX_SELECTABLE_BULK_CONFIRM_DLG_DETAIL_UNDER"*/, 0LL);
     if ( !UnderDetailLabel )
       goto LABEL_47;
     UILabel__set_text(UnderDetailLabel, v41, 0LL);
     exchangeOrigin = this->fields.exchangeOrigin;
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_10466, 0LL);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_10466/*"PRESENT_BOX_SELECTABLE_BULK_ORIGIN"*/, 0LL);
     if ( !exchangeOrigin )
       goto LABEL_47;
     UILabel__set_text(exchangeOrigin, v43, 0LL);
     exchangeOriginCountKind = this->fields.exchangeOriginCountKind;
-    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_10467, 0LL);
+    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_10467/*"PRESENT_BOX_SELECTABLE_BULK_ORIGIN_KIND"*/, 0LL);
     if ( !exchangeOriginCountKind )
       goto LABEL_47;
     UILabel__set_text(exchangeOriginCountKind, v45, 0LL);
     exchangeDestination = this->fields.exchangeDestination;
-    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_10464, 0LL);
+    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_10464/*"PRESENT_BOX_SELECTABLE_BULK_DESTINATION"*/, 0LL);
     if ( !exchangeDestination )
       goto LABEL_47;
     UILabel__set_text(exchangeDestination, v47, 0LL);
     exchangeDestinationCountKind = this->fields.exchangeDestinationCountKind;
-    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_10465, 0LL);
+    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_10465/*"PRESENT_BOX_SELECTABLE_BULK_DESTINATION_KIND"*/, 0LL);
     if ( !exchangeDestinationCountKind )
       goto LABEL_47;
     UILabel__set_text(exchangeDestinationCountKind, v49, 0LL);
@@ -433,7 +433,7 @@ void __fastcall PresentSelectableBulkItemConfirmDlg__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v60 = &StringLiteral_10488;
+      v60 = &StringLiteral_10488/*"PRESENT_SELECT_ITEM_FULL_WARNING"*/;
     }
     else
     {
@@ -469,7 +469,7 @@ LABEL_47:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v60 = &StringLiteral_10489;
+      v60 = &StringLiteral_10489/*"PRESENT_SELECT_ITEM_OVER_WARNING"*/;
     }
     v61 = LocalizationManager__Get((System_String_o *)*v60, 0LL);
     if ( !v59 )

@@ -398,11 +398,11 @@ void __fastcall WaveBattleWaveInfoComponent__SetWaveInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v24);
     sub_B16FFC(&Method_WaveBattleWaveInfoComponent_OnSelectWavePartyList__, v25);
     sub_B16FFC(&WaveBattleWaveInfoComponent_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_20151, v27);
-    sub_B16FFC(&StringLiteral_15298, v28);
-    sub_B16FFC(&StringLiteral_19582, v29);
-    sub_B16FFC(&StringLiteral_19583, v30);
-    sub_B16FFC(&StringLiteral_19581, v31);
+    sub_B16FFC(&StringLiteral_20151/*"line_whiteAlpha"*/, v27);
+    sub_B16FFC(&StringLiteral_15298/*"WAVE_BATTLE_WAVE_INFO"*/, v28);
+    sub_B16FFC(&StringLiteral_19582/*"img_txt_Member"*/, v29);
+    sub_B16FFC(&StringLiteral_19583/*"img_txt_Starting"*/, v30);
+    sub_B16FFC(&StringLiteral_19581/*"img_txt_Enemy"*/, v31);
     byte_40F6764 = 1;
   }
   this->fields.callbackFunc = callback;
@@ -422,7 +422,7 @@ void __fastcall WaveBattleWaveInfoComponent__SetWaveInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_15298, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_15298/*"WAVE_BATTLE_WAVE_INFO"*/, 0LL);
   v97 = wave;
   v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v97);
   v96 = maxWave;
@@ -434,7 +434,7 @@ void __fastcall WaveBattleWaveInfoComponent__SetWaveInfo(
   waveLineSprite = this->fields.waveLineSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_20151, 0LL);
+  AtlasManager__SetPartyOrganizationImage(waveLineSprite, (System_String_o *)StringLiteral_20151/*"line_whiteAlpha"*/, 0LL);
   if ( wave >= 10 )
   {
     v38 = (UIWidget_o *)this->fields.waveLineSprite;
@@ -450,7 +450,7 @@ void __fastcall WaveBattleWaveInfoComponent__SetWaveInfo(
   enemyTextSprite = this->fields.enemyTextSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(enemyTextSprite, (System_String_o *)StringLiteral_19581, 0LL);
+  AtlasManager__SetPartyOrganizationImage(enemyTextSprite, (System_String_o *)StringLiteral_19581/*"img_txt_Enemy"*/, 0LL);
   v40 = this->fields.enemyTextSprite;
   if ( !v40 )
     goto LABEL_52;
@@ -494,7 +494,7 @@ void __fastcall WaveBattleWaveInfoComponent__SetWaveInfo(
   servantTextStartingSprite = this->fields.servantTextStartingSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(servantTextStartingSprite, (System_String_o *)StringLiteral_19583, 0LL);
+  AtlasManager__SetPartyOrganizationImage(servantTextStartingSprite, (System_String_o *)StringLiteral_19583/*"img_txt_Starting"*/, 0LL);
   v57 = this->fields.servantTextStartingSprite;
   if ( !v57
     || (((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v57->klass->vtable._33_MakePixelPerfect.method)(
@@ -502,7 +502,7 @@ void __fastcall WaveBattleWaveInfoComponent__SetWaveInfo(
           v57->klass->vtable._34_get_minWidth.methodPtr),
         AtlasManager__SetPartyOrganizationImage(
           this->fields.servantTextMemberSprite,
-          (System_String_o *)StringLiteral_19582,
+          (System_String_o *)StringLiteral_19582/*"img_txt_Member"*/,
           0LL),
         (servantTextMemberSprite = this->fields.servantTextMemberSprite) == 0LL) )
   {

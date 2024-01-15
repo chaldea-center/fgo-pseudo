@@ -45,8 +45,8 @@ int32_t __fastcall MissionNotifyResponseCommand__ExecuteResponse(
     sub_B16FFC(&JsonManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v9);
     sub_B16FFC(&SingletonTemplate_MissionNotifyManager__TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_17397, v11);
-    sub_B16FFC(&StringLiteral_18409, v12);
+    sub_B16FFC(&StringLiteral_17397/*"clearRandomMissions"*/, v11);
+    sub_B16FFC(&StringLiteral_18409/*"eventMissionAnnounce"*/, v12);
     byte_40F7D4E = 1;
   }
   if ( !data )
@@ -56,12 +56,12 @@ int32_t __fastcall MissionNotifyResponseCommand__ExecuteResponse(
     return 0;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_18409,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_18409/*"eventMissionAnnounce"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)success,
-                             (System_Type_o *)StringLiteral_18409,
+                             (System_Type_o *)StringLiteral_18409/*"eventMissionAnnounce"*/,
                              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -99,12 +99,12 @@ LABEL_35:
 LABEL_18:
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_17397,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_17397/*"clearRandomMissions"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   v24 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                           (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)success,
-                          (System_Type_o *)StringLiteral_17397,
+                          (System_Type_o *)StringLiteral_17397/*"clearRandomMissions"*/,
                           (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

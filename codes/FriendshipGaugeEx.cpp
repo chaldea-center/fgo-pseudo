@@ -33,9 +33,9 @@ void __fastcall FriendshipGaugeEx___cctor(const MethodInfo *method)
   if ( (byte_40FB2C4 & 1) == 0 )
   {
     sub_B16FFC(&FriendshipGaugeEx_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_5347, v8);
-    sub_B16FFC(&StringLiteral_19376, v9);
-    sub_B16FFC(&StringLiteral_2824, v10);
+    sub_B16FFC(&StringLiteral_5347/*"DownloadBondAtlas"*/, v8);
+    sub_B16FFC(&StringLiteral_19376/*"img_bondsgage_11"*/, v9);
+    sub_B16FFC(&StringLiteral_2824/*"Bond/DownloadBond"*/, v10);
     byte_40FB2C4 = 1;
   }
   FriendshipGaugeEx_TypeInfo->static_fields->MAX_COLUMN = 5;
@@ -43,16 +43,16 @@ void __fastcall FriendshipGaugeEx___cctor(const MethodInfo *method)
   v11 = FriendshipGaugeEx_TypeInfo;
   FriendshipGaugeEx_TypeInfo->static_fields->POSITION_Y_OTHER = 10.0;
   static_fields = v11->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_2824;
-  static_fields->AtlasPath = (struct System_String_o *)StringLiteral_2824;
+  v13 = (System_Int32_array **)StringLiteral_2824/*"Bond/DownloadBond"*/;
+  static_fields->AtlasPath = (struct System_String_o *)StringLiteral_2824/*"Bond/DownloadBond"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->AtlasPath, v13, v2, v3, v4, v5, v6, v7);
   v14 = FriendshipGaugeEx_TypeInfo->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_5347;
-  v14->ObjectName = (struct System_String_o *)StringLiteral_5347;
+  v15 = (System_Int32_array **)StringLiteral_5347/*"DownloadBondAtlas"*/;
+  v14->ObjectName = (struct System_String_o *)StringLiteral_5347/*"DownloadBondAtlas"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v14->ObjectName, v15, v16, v17, v18, v19, v20, v21);
   v22 = FriendshipGaugeEx_TypeInfo->static_fields;
-  v23 = (System_Int32_array **)StringLiteral_19376;
-  v22->SpriteName = (struct System_String_o *)StringLiteral_19376;
+  v23 = (System_Int32_array **)StringLiteral_19376/*"img_bondsgage_11"*/;
+  v22->SpriteName = (struct System_String_o *)StringLiteral_19376/*"img_bondsgage_11"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v22->SpriteName, v23, v24, v25, v26, v27, v28, v29);
 }
 
@@ -411,10 +411,10 @@ void __fastcall FriendshipGaugeEx__Start(FriendshipGaugeEx_o *this, const Method
     sub_B16FFC(&Method_FriendshipGaugeEx__Start_b__19_0__, v3);
     sub_B16FFC(&FriendshipGaugeEx_TypeInfo, v4);
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_4582, v6);
+    sub_B16FFC(&StringLiteral_4582/*"DISABLE_FRIENDSHIP_EXCEED"*/, v6);
     byte_40FB2C1 = 1;
   }
-  if ( ConstantMaster__getValue((System_String_o *)StringLiteral_4582, 0LL) != 1 )
+  if ( ConstantMaster__getValue((System_String_o *)StringLiteral_4582/*"DISABLE_FRIENDSHIP_EXCEED"*/, 0LL) != 1 )
   {
     v11 = FriendshipGaugeEx_TypeInfo;
     if ( (BYTE3(FriendshipGaugeEx_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

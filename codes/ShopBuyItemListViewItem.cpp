@@ -861,7 +861,7 @@ System_String_o *__fastcall ShopBuyItemListViewItem__get_BulkNameText(
   if ( (byte_40FF7E0 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10847, v3);
+    sub_B16FFC(&StringLiteral_10847/*"QP_UNIT"*/, v3);
     byte_40FF7E0 = 1;
   }
   itemEntity = this->fields.itemEntity;
@@ -872,7 +872,7 @@ System_String_o *__fastcall ShopBuyItemListViewItem__get_BulkNameText(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10847, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10847/*"QP_UNIT"*/, 0LL);
 }
 
 
@@ -1149,7 +1149,7 @@ System_String_o *__fastcall ShopBuyItemListViewItem__get_NameText(
 
   if ( (byte_40FF7DF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, method);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, method);
     byte_40FF7DF = 1;
   }
   Shop_k__BackingField = this->fields._Shop_k__BackingField;
@@ -1159,7 +1159,7 @@ System_String_o *__fastcall ShopBuyItemListViewItem__get_NameText(
   if ( itemEntity )
     return itemEntity->fields.name;
   else
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
 }
 
 

@@ -117,7 +117,7 @@ void __fastcall SoundPlayerComponent__LoginProcess(const MethodInfo *method)
     sub_B16FFC(&SoundPlayerComponent_TypeInfo, v13);
     sub_B16FFC(&SoundPlayerMenu_TypeInfo, v14);
     sub_B16FFC(&string___TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_698, v16);
+    sub_B16FFC(&StringLiteral_698/*","*/, v16);
     byte_40F9D0B = 1;
   }
   entity = 0LL;
@@ -256,7 +256,7 @@ LABEL_46:
       }
       while ( (__int64)v40 < v41 );
     }
-    v49 = System_String__Join((System_String_o *)StringLiteral_698, v39, 0LL);
+    v49 = System_String__Join((System_String_o *)StringLiteral_698/*","*/, v39, 0LL);
     v50 = SoundPlayerMenu_TypeInfo;
     if ( (BYTE3(SoundPlayerMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundPlayerMenu_TypeInfo->_2.cctor_finished )
@@ -300,12 +300,12 @@ void __fastcall SoundPlayerComponent___openMenu_b__10_0(SoundPlayerComponent_o *
 
   if ( (byte_40F9D13 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6864, method);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, method);
     byte_40F9D13 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm
-    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL),
+    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL),
         (myRoomCtrl = this->fields.myRoomCtrl) == 0LL) )
   {
     sub_B170D4();
@@ -507,13 +507,13 @@ void __fastcall SoundPlayerComponent__onClose(SoundPlayerComponent_o *this, cons
 
   if ( (byte_40F9D11 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3094, method);
+    sub_B16FFC(&StringLiteral_3094/*"CLOSE_MENU"*/, method);
     byte_40F9D11 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3094, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3094/*"CLOSE_MENU"*/, 0LL);
 }
 
 
@@ -523,13 +523,13 @@ void __fastcall SoundPlayerComponent__onEndMenu(SoundPlayerComponent_o *this, co
 
   if ( (byte_40F9D12 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3099, method);
+    sub_B16FFC(&StringLiteral_3099/*"CLOSE_SOUND_PLAYER"*/, method);
     byte_40F9D12 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3099, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3099/*"CLOSE_SOUND_PLAYER"*/, 0LL);
 }
 
 

@@ -100,21 +100,21 @@ void __fastcall CoinRoomRequest__BeginRequest(
     sub_B16FFC(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_int__SelectedUserSvtCoin__GetEnumerator__,
       v9);
-    sub_B16FFC(&StringLiteral_23602, v10);
-    sub_B16FFC(&StringLiteral_737, v11);
-    sub_B16FFC(&StringLiteral_23383, v12);
-    sub_B16FFC(&StringLiteral_19932, v13);
-    sub_B16FFC(&StringLiteral_698, v14);
-    sub_B16FFC(&StringLiteral_15571, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
-    sub_B16FFC(&StringLiteral_15807, v17);
+    sub_B16FFC(&StringLiteral_23602/*"}"*/, v10);
+    sub_B16FFC(&StringLiteral_737/*",\"num\":"*/, v11);
+    sub_B16FFC(&StringLiteral_23383/*"{\"id\":"*/, v12);
+    sub_B16FFC(&StringLiteral_19932/*"itemData"*/, v13);
+    sub_B16FFC(&StringLiteral_698/*","*/, v14);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v17);
     byte_40F9A62 = 1;
   }
   memset(&v78, 0, sizeof(v78));
   monitor = 0;
   if ( !requestValuse
     || (v75 = (RequestBase_o *)this,
-        v18 = (System_String_o *)StringLiteral_1,
+        v18 = (System_String_o *)StringLiteral_1/*""*/,
         (Values = System_Collections_Generic_Dictionary_int__QuestAfterAction_VoiceInfo___get_Values(
                     (System_Collections_Generic_Dictionary_int__QuestAfterAction_VoiceInfo__o *)requestValuse,
                     (const MethodInfo_2DE9160 *)Method_System_Collections_Generic_Dictionary_int__SelectedUserSvtCoin__get_Values__)) == 0LL) )
@@ -133,7 +133,7 @@ void __fastcall CoinRoomRequest__BeginRequest(
   {
     currentValue = v78.fields.currentValue;
     if ( v20 >= 1 )
-      v18 = System_String__Concat_43743732(v18, (System_String_o *)StringLiteral_698, 0LL);
+      v18 = System_String__Concat_43743732(v18, (System_String_o *)StringLiteral_698/*","*/, 0LL);
     v23 = sub_B17014(string___TypeInfo, 6LL, v22);
     v31 = (System_String_array *)v23;
     if ( !v23 )
@@ -154,16 +154,16 @@ void __fastcall CoinRoomRequest__BeginRequest(
     }
     v31->m_Items[0] = v18;
     sub_B16F98((BattleServantConfConponent_o *)v31->m_Items, (System_Int32_array **)v18, v25, v26, v27, v28, v29, v30);
-    v38 = StringLiteral_23383;
-    if ( StringLiteral_23383 )
+    v38 = StringLiteral_23383/*"{\"id\":"*/;
+    if ( StringLiteral_23383/*"{\"id\":"*/ )
     {
-      v38 = sub_B170BC(StringLiteral_23383, v31->obj.klass->_1.element_class);
+      v38 = sub_B170BC(StringLiteral_23383/*"{\"id\":"*/, v31->obj.klass->_1.element_class);
       if ( !v38 )
       {
         sub_B170F4(0LL);
         sub_B170A0();
       }
-      v39 = (System_Int32_array **)StringLiteral_23383;
+      v39 = (System_Int32_array **)StringLiteral_23383/*"{\"id\":"*/;
     }
     else
     {
@@ -197,16 +197,16 @@ void __fastcall CoinRoomRequest__BeginRequest(
     }
     v31->m_Items[2] = (System_String_o *)v48;
     sub_B16F98((BattleServantConfConponent_o *)&v31->m_Items[2], v48, v42, v43, v44, v45, v46, v47);
-    v55 = StringLiteral_737;
-    if ( StringLiteral_737 )
+    v55 = StringLiteral_737/*",\"num\":"*/;
+    if ( StringLiteral_737/*",\"num\":"*/ )
     {
-      v55 = sub_B170BC(StringLiteral_737, v31->obj.klass->_1.element_class);
+      v55 = sub_B170BC(StringLiteral_737/*",\"num\":"*/, v31->obj.klass->_1.element_class);
       if ( !v55 )
       {
         sub_B170F4(0LL);
         sub_B170A0();
       }
-      v56 = (System_Int32_array **)StringLiteral_737;
+      v56 = (System_Int32_array **)StringLiteral_737/*",\"num\":"*/;
     }
     else
     {
@@ -238,16 +238,16 @@ void __fastcall CoinRoomRequest__BeginRequest(
     }
     v31->m_Items[4] = (System_String_o *)v65;
     sub_B16F98((BattleServantConfConponent_o *)&v31->m_Items[4], v65, v59, v60, v61, v62, v63, v64);
-    v72 = StringLiteral_23602;
-    if ( StringLiteral_23602 )
+    v72 = StringLiteral_23602/*"}"*/;
+    if ( StringLiteral_23602/*"}"*/ )
     {
-      v72 = sub_B170BC(StringLiteral_23602, v31->obj.klass->_1.element_class);
+      v72 = sub_B170BC(StringLiteral_23602/*"}"*/, v31->obj.klass->_1.element_class);
       if ( !v72 )
       {
         sub_B170F4(0LL);
         sub_B170A0();
       }
-      v73 = (System_Int32_array **)StringLiteral_23602;
+      v73 = (System_Int32_array **)StringLiteral_23602/*"}"*/;
     }
     else
     {
@@ -267,11 +267,11 @@ void __fastcall CoinRoomRequest__BeginRequest(
     &v78,
     (const MethodInfo_27297E8 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__SelectedUserSvtCoin__Dispose__);
   v74 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_15571,
+          (System_String_o *)StringLiteral_15571/*"["*/,
           v18,
-          (System_String_o *)StringLiteral_15807,
+          (System_String_o *)StringLiteral_15807/*"]"*/,
           0LL);
-  RequestBase__addField_30957164(v75, (System_String_o *)StringLiteral_19932, v74, 0LL);
+  RequestBase__addField_30957164(v75, (System_String_o *)StringLiteral_19932/*"itemData"*/, v74, 0LL);
   RequestBase__beginRequest(v75, 0LL);
 }
 
@@ -284,7 +284,7 @@ System_String_o *__fastcall CoinRoomRequest__getURL(CoinRoomRequest_o *this, con
   if ( (byte_40F9A61 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_17426, v2);
+    sub_B16FFC(&StringLiteral_17426/*"coinRoom/put"*/, v2);
     byte_40F9A61 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -293,7 +293,7 @@ System_String_o *__fastcall CoinRoomRequest__getURL(CoinRoomRequest_o *this, con
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17426, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17426/*"coinRoom/put"*/, 0LL);
 }
 
 
@@ -313,7 +313,7 @@ void __fastcall CoinRoomRequest__requestCompleted(
   {
     sub_B16FFC(&JsonManager_TypeInfo, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40F9A63 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -332,7 +332,7 @@ void __fastcall CoinRoomRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_20980;
+    v10 = (System_String_o *)StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

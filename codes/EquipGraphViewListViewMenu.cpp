@@ -429,8 +429,8 @@ void __fastcall EquipGraphViewListViewMenu__Open(
     sub_B16FFC(&Method_EquipGraphViewListViewMenu___c__DisplayClass12_0__Open_b__3__, v35);
     sub_B16FFC(&EquipGraphViewListViewMenu___c__DisplayClass12_0_TypeInfo, v36);
     sub_B16FFC(&EquipGraphViewListViewMenu___c_TypeInfo, v37);
-    sub_B16FFC(&StringLiteral_132, v38);
-    sub_B16FFC(&StringLiteral_3914, v39);
+    sub_B16FFC(&StringLiteral_132/*" : "*/, v38);
+    sub_B16FFC(&StringLiteral_3914/*"CharaGraph"*/, v39);
     byte_40FC4E6 = 1;
   }
   entity = 0LL;
@@ -557,7 +557,7 @@ void __fastcall EquipGraphViewListViewMenu__Open(
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
     AssetStorageList = (System_Collections_Generic_IEnumerable_T__o *)AssetManager__getAssetStorageList(
-                                                                        (System_String_o *)StringLiteral_3914,
+                                                                        (System_String_o *)StringLiteral_3914/*"CharaGraph"*/,
                                                                         0LL);
     v90 = (System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *)sub_B170CC(
                                                                             System_Collections_Generic_List_string__TypeInfo,
@@ -692,7 +692,7 @@ LABEL_66:
           }
           v124->m_Items[1] = (System_String_o *)v131;
           sub_B16F98((BattleServantConfConponent_o *)&v124->m_Items[1], v131, v118, v126, v127, v128, v129, v130);
-          v132 = System_String__Join((System_String_o *)StringLiteral_132, v124, 0LL);
+          v132 = System_String__Join((System_String_o *)StringLiteral_132/*" : "*/, v124, 0LL);
           System_Collections_Generic_List_WarBoardManager_TaskList___set_Item(
             (System_Collections_Generic_List_WarBoardManager_TaskList__o *)v93,
             v114,
@@ -1185,21 +1185,21 @@ System_String_o *__fastcall EquipGraphViewListViewMenu___c___Open_b__12_1(
   if ( (byte_40F8B89 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, x);
-    sub_B16FFC(&StringLiteral_1, v4);
-    sub_B16FFC(&StringLiteral_3915, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
+    sub_B16FFC(&StringLiteral_3915/*"CharaGraph/"*/, v5);
     byte_40F8B89 = 1;
   }
   v6 = sub_B17014(string___TypeInfo, 2LL, method);
   if ( !v6 )
     sub_B170D4();
   v13 = (System_String_array *)v6;
-  v14 = StringLiteral_3915;
-  if ( StringLiteral_3915 )
+  v14 = StringLiteral_3915/*"CharaGraph/"*/;
+  if ( StringLiteral_3915/*"CharaGraph/"*/ )
   {
-    v14 = sub_B170BC(StringLiteral_3915, v13->obj.klass->_1.element_class);
+    v14 = sub_B170BC(StringLiteral_3915/*"CharaGraph/"*/, v13->obj.klass->_1.element_class);
     if ( !v14 )
       goto LABEL_14;
-    v15 = (System_Int32_array **)StringLiteral_3915;
+    v15 = (System_Int32_array **)StringLiteral_3915/*"CharaGraph/"*/;
   }
   else
   {
@@ -1227,7 +1227,7 @@ LABEL_13:
   }
   v13->m_Items[1] = x;
   sub_B16F98((BattleServantConfConponent_o *)&v13->m_Items[1], (System_Int32_array **)x, v7, v16, v17, v18, v19, v20);
-  return System_String__Join((System_String_o *)StringLiteral_1, v13, 0LL);
+  return System_String__Join((System_String_o *)StringLiteral_1/*""*/, v13, 0LL);
 }
 
 

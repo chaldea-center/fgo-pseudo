@@ -14,12 +14,12 @@ void __fastcall BattlePerformanceBg___cctor(const MethodInfo *method)
   if ( (byte_40FC275 & 1) == 0 )
   {
     sub_B16FFC(&BattlePerformanceBg_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18843, v8);
+    sub_B16FFC(&StringLiteral_18843/*"front"*/, v8);
     byte_40FC275 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BattlePerformanceBg_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_18843;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18843;
+  v10 = (System_Int32_array **)StringLiteral_18843/*"front"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18843/*"front"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -475,11 +475,11 @@ System_String_o *__fastcall BattlePerformanceBg__GetAssetPass(int32_t bgNo, cons
   v4 = bgNo;
   if ( (byte_40FC25A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2791, method);
+    sub_B16FFC(&StringLiteral_2791/*"Bg/"*/, method);
     byte_40FC25A = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v4, 0LL);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_2791, v2, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_2791/*"Bg/"*/, v2, 0LL);
 }
 
 
@@ -499,14 +499,14 @@ UnityEngine_Texture2D_o *__fastcall BattlePerformanceBg__GetShadowTexture(
   if ( (byte_40FC26E & 1) == 0 )
   {
     sub_B16FFC(&Method_AssetData_GetObject_Texture2D____66802808, *(_QWORD *)&shadowId);
-    sub_B16FFC(&StringLiteral_22000, v4);
+    sub_B16FFC(&StringLiteral_22000/*"shadow_"*/, v4);
     byte_40FC26E = 1;
   }
   BgAssetData = this->fields.BgAssetData;
   if ( !BgAssetData )
     return 0LL;
   v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v7 = System_String__Concat_43743732((System_String_o *)StringLiteral_22000, v6, 0LL);
+  v7 = System_String__Concat_43743732((System_String_o *)StringLiteral_22000/*"shadow_"*/, v6, 0LL);
   return (UnityEngine_Texture2D_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       BgAssetData,
                                       v7,
@@ -1064,13 +1064,13 @@ void __fastcall BattlePerformanceBg__changeBg(
     sub_B16FFC(&UnityEngine_Color_TypeInfo, *(_QWORD *)&No);
     sub_B16FFC(&object___TypeInfo, v22);
     sub_B16FFC(&float_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_18842, v24);
-    sub_B16FFC(&StringLiteral_18275, v25);
-    sub_B16FFC(&StringLiteral_15000, v26);
-    sub_B16FFC(&StringLiteral_22584, v27);
-    sub_B16FFC(&StringLiteral_21182, v28);
-    sub_B16FFC(&StringLiteral_22621, v29);
-    sub_B16FFC(&StringLiteral_21173, v30);
+    sub_B16FFC(&StringLiteral_18842/*"from"*/, v24);
+    sub_B16FFC(&StringLiteral_18275/*"endChangeColor"*/, v25);
+    sub_B16FFC(&StringLiteral_15000/*"UpdateColor"*/, v26);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v27);
+    sub_B16FFC(&StringLiteral_21182/*"onupdate"*/, v28);
+    sub_B16FFC(&StringLiteral_22621/*"to"*/, v29);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v30);
     sub_B16FFC(&iTween_TypeInfo, v31);
     byte_40FC269 = 1;
   }
@@ -1126,13 +1126,13 @@ void __fastcall BattlePerformanceBg__changeBg(
   if ( !v36 )
     sub_B170D4();
   v43 = (System_Object_array *)v36;
-  v44 = StringLiteral_18842;
-  if ( StringLiteral_18842 )
+  v44 = StringLiteral_18842/*"from"*/;
+  if ( StringLiteral_18842/*"from"*/ )
   {
-    v44 = sub_B170BC(StringLiteral_18842, v43->obj.klass->_1.element_class);
+    v44 = sub_B170BC(StringLiteral_18842/*"from"*/, v43->obj.klass->_1.element_class);
     if ( !v44 )
       goto LABEL_62;
-    v45 = (System_Int32_array **)StringLiteral_18842;
+    v45 = (System_Int32_array **)StringLiteral_18842/*"from"*/;
   }
   else
   {
@@ -1155,13 +1155,13 @@ void __fastcall BattlePerformanceBg__changeBg(
     goto LABEL_61;
   v43->m_Items[1] = (Il2CppObject *)v51;
   sub_B16F98((BattleServantConfConponent_o *)&v43->m_Items[1], v51, v37, v46, v47, v48, v49, v50);
-  v44 = StringLiteral_22621;
-  if ( StringLiteral_22621 )
+  v44 = StringLiteral_22621/*"to"*/;
+  if ( StringLiteral_22621/*"to"*/ )
   {
-    v44 = sub_B170BC(StringLiteral_22621, v43->obj.klass->_1.element_class);
+    v44 = sub_B170BC(StringLiteral_22621/*"to"*/, v43->obj.klass->_1.element_class);
     if ( !v44 )
       goto LABEL_62;
-    v45 = (System_Int32_array **)StringLiteral_22621;
+    v45 = (System_Int32_array **)StringLiteral_22621/*"to"*/;
   }
   else
   {
@@ -1184,13 +1184,13 @@ void __fastcall BattlePerformanceBg__changeBg(
     goto LABEL_61;
   v43->m_Items[3] = (Il2CppObject *)v62;
   sub_B16F98((BattleServantConfConponent_o *)&v43->m_Items[3], v62, v37, v57, v58, v59, v60, v61);
-  v44 = StringLiteral_22584;
-  if ( StringLiteral_22584 )
+  v44 = StringLiteral_22584/*"time"*/;
+  if ( StringLiteral_22584/*"time"*/ )
   {
-    v44 = sub_B170BC(StringLiteral_22584, v43->obj.klass->_1.element_class);
+    v44 = sub_B170BC(StringLiteral_22584/*"time"*/, v43->obj.klass->_1.element_class);
     if ( !v44 )
       goto LABEL_62;
-    v45 = (System_Int32_array **)StringLiteral_22584;
+    v45 = (System_Int32_array **)StringLiteral_22584/*"time"*/;
   }
   else
   {
@@ -1217,13 +1217,13 @@ LABEL_62:
     goto LABEL_61;
   v43->m_Items[5] = (Il2CppObject *)v73;
   sub_B16F98((BattleServantConfConponent_o *)&v43->m_Items[5], v73, v37, v68, v69, v70, v71, v72);
-  v44 = StringLiteral_21182;
-  if ( StringLiteral_21182 )
+  v44 = StringLiteral_21182/*"onupdate"*/;
+  if ( StringLiteral_21182/*"onupdate"*/ )
   {
-    v44 = sub_B170BC(StringLiteral_21182, v43->obj.klass->_1.element_class);
+    v44 = sub_B170BC(StringLiteral_21182/*"onupdate"*/, v43->obj.klass->_1.element_class);
     if ( !v44 )
       goto LABEL_62;
-    v45 = (System_Int32_array **)StringLiteral_21182;
+    v45 = (System_Int32_array **)StringLiteral_21182/*"onupdate"*/;
   }
   else
   {
@@ -1233,13 +1233,13 @@ LABEL_62:
     goto LABEL_61;
   v43->m_Items[6] = (Il2CppObject *)v45;
   sub_B16F98((BattleServantConfConponent_o *)&v43->m_Items[6], v45, v37, v74, v75, v76, v77, v78);
-  v44 = StringLiteral_15000;
-  if ( StringLiteral_15000 )
+  v44 = StringLiteral_15000/*"UpdateColor"*/;
+  if ( StringLiteral_15000/*"UpdateColor"*/ )
   {
-    v44 = sub_B170BC(StringLiteral_15000, v43->obj.klass->_1.element_class);
+    v44 = sub_B170BC(StringLiteral_15000/*"UpdateColor"*/, v43->obj.klass->_1.element_class);
     if ( !v44 )
       goto LABEL_62;
-    v45 = (System_Int32_array **)StringLiteral_15000;
+    v45 = (System_Int32_array **)StringLiteral_15000/*"UpdateColor"*/;
   }
   else
   {
@@ -1249,13 +1249,13 @@ LABEL_62:
     goto LABEL_61;
   v43->m_Items[7] = (Il2CppObject *)v45;
   sub_B16F98((BattleServantConfConponent_o *)&v43->m_Items[7], v45, v37, v79, v80, v81, v82, v83);
-  v44 = StringLiteral_21173;
-  if ( StringLiteral_21173 )
+  v44 = StringLiteral_21173/*"oncomplete"*/;
+  if ( StringLiteral_21173/*"oncomplete"*/ )
   {
-    v44 = sub_B170BC(StringLiteral_21173, v43->obj.klass->_1.element_class);
+    v44 = sub_B170BC(StringLiteral_21173/*"oncomplete"*/, v43->obj.klass->_1.element_class);
     if ( !v44 )
       goto LABEL_62;
-    v45 = (System_Int32_array **)StringLiteral_21173;
+    v45 = (System_Int32_array **)StringLiteral_21173/*"oncomplete"*/;
   }
   else
   {
@@ -1265,13 +1265,13 @@ LABEL_62:
     goto LABEL_61;
   v43->m_Items[8] = (Il2CppObject *)v45;
   sub_B16F98((BattleServantConfConponent_o *)&v43->m_Items[8], v45, v37, v84, v85, v86, v87, v88);
-  v44 = StringLiteral_18275;
-  if ( StringLiteral_18275 )
+  v44 = StringLiteral_18275/*"endChangeColor"*/;
+  if ( StringLiteral_18275/*"endChangeColor"*/ )
   {
-    v44 = sub_B170BC(StringLiteral_18275, v43->obj.klass->_1.element_class);
+    v44 = sub_B170BC(StringLiteral_18275/*"endChangeColor"*/, v43->obj.klass->_1.element_class);
     if ( v44 )
     {
-      v45 = (System_Int32_array **)StringLiteral_18275;
+      v45 = (System_Int32_array **)StringLiteral_18275/*"endChangeColor"*/;
       goto LABEL_56;
     }
     goto LABEL_62;
@@ -1445,13 +1445,13 @@ void __fastcall BattlePerformanceBg__endChangeBg(
     sub_B16FFC(&object___TypeInfo, v12);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
     sub_B16FFC(&float_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_18842, v15);
-    sub_B16FFC(&StringLiteral_18275, v16);
-    sub_B16FFC(&StringLiteral_15000, v17);
-    sub_B16FFC(&StringLiteral_22584, v18);
-    sub_B16FFC(&StringLiteral_21182, v19);
-    sub_B16FFC(&StringLiteral_22621, v20);
-    sub_B16FFC(&StringLiteral_21173, v21);
+    sub_B16FFC(&StringLiteral_18842/*"from"*/, v15);
+    sub_B16FFC(&StringLiteral_18275/*"endChangeColor"*/, v16);
+    sub_B16FFC(&StringLiteral_15000/*"UpdateColor"*/, v17);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v18);
+    sub_B16FFC(&StringLiteral_21182/*"onupdate"*/, v19);
+    sub_B16FFC(&StringLiteral_22621/*"to"*/, v20);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v21);
     sub_B16FFC(&iTween_TypeInfo, v22);
     byte_40FC26C = 1;
   }
@@ -1600,13 +1600,13 @@ void __fastcall BattlePerformanceBg__endChangeBg(
 LABEL_78:
     sub_B170D4();
   v92 = (System_Object_array *)v85;
-  v93 = StringLiteral_18842;
-  if ( StringLiteral_18842 )
+  v93 = StringLiteral_18842/*"from"*/;
+  if ( StringLiteral_18842/*"from"*/ )
   {
-    v93 = sub_B170BC(StringLiteral_18842, v92->obj.klass->_1.element_class);
+    v93 = sub_B170BC(StringLiteral_18842/*"from"*/, v92->obj.klass->_1.element_class);
     if ( !v93 )
       goto LABEL_80;
-    v94 = (System_Int32_array **)StringLiteral_18842;
+    v94 = (System_Int32_array **)StringLiteral_18842/*"from"*/;
   }
   else
   {
@@ -1629,13 +1629,13 @@ LABEL_78:
     goto LABEL_79;
   v92->m_Items[1] = (Il2CppObject *)v100;
   sub_B16F98((BattleServantConfConponent_o *)&v92->m_Items[1], v100, v86, v95, v96, v97, v98, v99);
-  v93 = StringLiteral_22621;
-  if ( StringLiteral_22621 )
+  v93 = StringLiteral_22621/*"to"*/;
+  if ( StringLiteral_22621/*"to"*/ )
   {
-    v93 = sub_B170BC(StringLiteral_22621, v92->obj.klass->_1.element_class);
+    v93 = sub_B170BC(StringLiteral_22621/*"to"*/, v92->obj.klass->_1.element_class);
     if ( !v93 )
       goto LABEL_80;
-    v94 = (System_Int32_array **)StringLiteral_22621;
+    v94 = (System_Int32_array **)StringLiteral_22621/*"to"*/;
   }
   else
   {
@@ -1658,13 +1658,13 @@ LABEL_78:
     goto LABEL_79;
   v92->m_Items[3] = (Il2CppObject *)v111;
   sub_B16F98((BattleServantConfConponent_o *)&v92->m_Items[3], v111, v86, v106, v107, v108, v109, v110);
-  v93 = StringLiteral_22584;
-  if ( StringLiteral_22584 )
+  v93 = StringLiteral_22584/*"time"*/;
+  if ( StringLiteral_22584/*"time"*/ )
   {
-    v93 = sub_B170BC(StringLiteral_22584, v92->obj.klass->_1.element_class);
+    v93 = sub_B170BC(StringLiteral_22584/*"time"*/, v92->obj.klass->_1.element_class);
     if ( !v93 )
       goto LABEL_80;
-    v94 = (System_Int32_array **)StringLiteral_22584;
+    v94 = (System_Int32_array **)StringLiteral_22584/*"time"*/;
   }
   else
   {
@@ -1691,13 +1691,13 @@ LABEL_80:
     goto LABEL_79;
   v92->m_Items[5] = (Il2CppObject *)v122;
   sub_B16F98((BattleServantConfConponent_o *)&v92->m_Items[5], v122, v86, v117, v118, v119, v120, v121);
-  v93 = StringLiteral_21182;
-  if ( StringLiteral_21182 )
+  v93 = StringLiteral_21182/*"onupdate"*/;
+  if ( StringLiteral_21182/*"onupdate"*/ )
   {
-    v93 = sub_B170BC(StringLiteral_21182, v92->obj.klass->_1.element_class);
+    v93 = sub_B170BC(StringLiteral_21182/*"onupdate"*/, v92->obj.klass->_1.element_class);
     if ( !v93 )
       goto LABEL_80;
-    v94 = (System_Int32_array **)StringLiteral_21182;
+    v94 = (System_Int32_array **)StringLiteral_21182/*"onupdate"*/;
   }
   else
   {
@@ -1707,13 +1707,13 @@ LABEL_80:
     goto LABEL_79;
   v92->m_Items[6] = (Il2CppObject *)v94;
   sub_B16F98((BattleServantConfConponent_o *)&v92->m_Items[6], v94, v86, v123, v124, v125, v126, v127);
-  v93 = StringLiteral_15000;
-  if ( StringLiteral_15000 )
+  v93 = StringLiteral_15000/*"UpdateColor"*/;
+  if ( StringLiteral_15000/*"UpdateColor"*/ )
   {
-    v93 = sub_B170BC(StringLiteral_15000, v92->obj.klass->_1.element_class);
+    v93 = sub_B170BC(StringLiteral_15000/*"UpdateColor"*/, v92->obj.klass->_1.element_class);
     if ( !v93 )
       goto LABEL_80;
-    v94 = (System_Int32_array **)StringLiteral_15000;
+    v94 = (System_Int32_array **)StringLiteral_15000/*"UpdateColor"*/;
   }
   else
   {
@@ -1723,13 +1723,13 @@ LABEL_80:
     goto LABEL_79;
   v92->m_Items[7] = (Il2CppObject *)v94;
   sub_B16F98((BattleServantConfConponent_o *)&v92->m_Items[7], v94, v86, v128, v129, v130, v131, v132);
-  v93 = StringLiteral_21173;
-  if ( StringLiteral_21173 )
+  v93 = StringLiteral_21173/*"oncomplete"*/;
+  if ( StringLiteral_21173/*"oncomplete"*/ )
   {
-    v93 = sub_B170BC(StringLiteral_21173, v92->obj.klass->_1.element_class);
+    v93 = sub_B170BC(StringLiteral_21173/*"oncomplete"*/, v92->obj.klass->_1.element_class);
     if ( !v93 )
       goto LABEL_80;
-    v94 = (System_Int32_array **)StringLiteral_21173;
+    v94 = (System_Int32_array **)StringLiteral_21173/*"oncomplete"*/;
   }
   else
   {
@@ -1739,13 +1739,13 @@ LABEL_80:
     goto LABEL_79;
   v92->m_Items[8] = (Il2CppObject *)v94;
   sub_B16F98((BattleServantConfConponent_o *)&v92->m_Items[8], v94, v86, v133, v134, v135, v136, v137);
-  v93 = StringLiteral_18275;
-  if ( StringLiteral_18275 )
+  v93 = StringLiteral_18275/*"endChangeColor"*/;
+  if ( StringLiteral_18275/*"endChangeColor"*/ )
   {
-    v93 = sub_B170BC(StringLiteral_18275, v92->obj.klass->_1.element_class);
+    v93 = sub_B170BC(StringLiteral_18275/*"endChangeColor"*/, v92->obj.klass->_1.element_class);
     if ( v93 )
     {
-      v94 = (System_Int32_array **)StringLiteral_18275;
+      v94 = (System_Int32_array **)StringLiteral_18275/*"endChangeColor"*/;
       goto LABEL_73;
     }
     goto LABEL_80;
@@ -2344,8 +2344,8 @@ UnityEngine_GameObject_o *__fastcall BattlePerformanceBg__getBgObject(
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, data);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_16631, v8);
-    sub_B16FFC(&StringLiteral_16634, v9);
+    sub_B16FFC(&StringLiteral_16631/*"bg"*/, v8);
+    sub_B16FFC(&StringLiteral_16634/*"bg0"*/, v9);
     byte_40FC26A = 1;
   }
   if ( tp < 1 )
@@ -2354,7 +2354,7 @@ UnityEngine_GameObject_o *__fastcall BattlePerformanceBg__getBgObject(
       sub_B170D4();
     Object_WarBoardWaitTimeSetting = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                                  data,
-                                                                                 (System_String_o *)StringLiteral_16631,
+                                                                                 (System_String_o *)StringLiteral_16631/*"bg"*/,
                                                                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2376,7 +2376,7 @@ UnityEngine_GameObject_o *__fastcall BattlePerformanceBg__getBgObject(
     {
       v16 = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                         data,
-                                                        (System_String_o *)StringLiteral_16634,
+                                                        (System_String_o *)StringLiteral_16634/*"bg0"*/,
                                                         (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2391,7 +2391,7 @@ UnityEngine_GameObject_o *__fastcall BattlePerformanceBg__getBgObject(
   else
   {
     v10 = System_Int32__ToString((int32_t)&v17, 0LL);
-    v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_16631, v10, 0LL);
+    v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_16631/*"bg"*/, v10, 0LL);
     if ( !data )
       sub_B170D4();
     v12 = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
@@ -2418,7 +2418,7 @@ UnityEngine_GameObject_o *__fastcall BattlePerformanceBg__getBgObject(
     {
       v15 = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                         data,
-                                                        (System_String_o *)StringLiteral_16631,
+                                                        (System_String_o *)StringLiteral_16631/*"bg"*/,
                                                         (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2880,14 +2880,14 @@ void __fastcall BattlePerformanceBg__playBgAnimationIn(BattlePerformanceBg_o *th
 
   if ( (byte_40FC272 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21405, method);
-    sub_B16FFC(&StringLiteral_2769, v4);
+    sub_B16FFC(&StringLiteral_21405/*"playerfield"*/, method);
+    sub_B16FFC(&StringLiteral_2769/*"BattleIn"*/, v4);
     byte_40FC272 = 1;
   }
   BattlePerformanceBg__playAnimation(
     this,
-    (System_String_o *)StringLiteral_21405,
-    (System_String_o *)StringLiteral_2769,
+    (System_String_o *)StringLiteral_21405/*"playerfield"*/,
+    (System_String_o *)StringLiteral_2769/*"BattleIn"*/,
     0.0,
     v2);
 }
@@ -2900,14 +2900,14 @@ void __fastcall BattlePerformanceBg__playBgAnimationOut(BattlePerformanceBg_o *t
 
   if ( (byte_40FC271 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2771, method);
-    sub_B16FFC(&StringLiteral_21405, v4);
+    sub_B16FFC(&StringLiteral_2771/*"BattleOut"*/, method);
+    sub_B16FFC(&StringLiteral_21405/*"playerfield"*/, v4);
     byte_40FC271 = 1;
   }
   BattlePerformanceBg__playAnimation(
     this,
-    (System_String_o *)StringLiteral_21405,
-    (System_String_o *)StringLiteral_2771,
+    (System_String_o *)StringLiteral_21405/*"playerfield"*/,
+    (System_String_o *)StringLiteral_2771/*"BattleOut"*/,
     0.0,
     v2);
 }

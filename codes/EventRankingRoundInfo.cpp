@@ -23,17 +23,17 @@ void __fastcall EventRankingRoundInfo___cctor(const MethodInfo *method)
   if ( (byte_40F60EC & 1) == 0 )
   {
     sub_B16FFC(&EventRankingRoundInfo_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16899, v8);
-    sub_B16FFC(&StringLiteral_16900, v9);
+    sub_B16FFC(&StringLiteral_16899/*"btn_bg_20"*/, v8);
+    sub_B16FFC(&StringLiteral_16900/*"btn_bg_21"*/, v9);
     byte_40F60EC = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventRankingRoundInfo_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_16900;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16900;
+  v11 = (System_Int32_array **)StringLiteral_16900/*"btn_bg_21"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16900/*"btn_bg_21"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = EventRankingRoundInfo_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_16899;
-  v12->NON_SELECT_SPRITE_NAME = (struct System_String_o *)StringLiteral_16899;
+  v13 = (System_Int32_array **)StringLiteral_16899/*"btn_bg_20"*/;
+  v12->NON_SELECT_SPRITE_NAME = (struct System_String_o *)StringLiteral_16899/*"btn_bg_20"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->NON_SELECT_SPRITE_NAME, v13, v14, v15, v16, v17, v18, v19);
 }
 

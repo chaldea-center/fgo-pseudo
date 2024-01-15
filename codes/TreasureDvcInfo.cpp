@@ -17,17 +17,17 @@ void __fastcall TreasureDvcInfo___ctor(TreasureDvcInfo_o *this, const MethodInfo
 
   if ( (byte_40FB89E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FB89E = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.id = 0LL;
   this->fields.maxLv = 0;
-  v3 = (System_Int32_array **)StringLiteral_1;
-  this->fields.name = (struct System_String_o *)StringLiteral_1;
+  v3 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.name, v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Int32_array **)StringLiteral_1;
-  this->fields.explanation = (struct System_String_o *)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.explanation = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.explanation, v10, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)&this->fields.guageCount = 0LL;
   *(_QWORD *)&this->fields.strengthStatus = 0LL;
@@ -74,12 +74,12 @@ System_String_o *__fastcall TreasureDvcInfo__GetName(TreasureDvcInfo_o *this, co
     sub_B16FFC(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
-    sub_B16FFC(&StringLiteral_9353, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
+    sub_B16FFC(&StringLiteral_9353/*"NP_NAME"*/, v7);
     byte_40FB89F = 1;
   }
   if ( this->fields.id < 1 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
@@ -100,7 +100,7 @@ System_String_o *__fastcall TreasureDvcInfo__GetName(TreasureDvcInfo_o *this, co
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_9353, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_9353/*"NP_NAME"*/, 0LL);
     return System_String__Format(v13, (Il2CppObject *)v12->fields.age, 0LL);
   }
   else

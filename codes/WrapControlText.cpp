@@ -82,7 +82,7 @@ void __fastcall WrapControlText__fontSizeAdjust(
 
   if ( (byte_40F6794 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, text);
+    sub_B16FFC(&StringLiteral_1/*""*/, text);
     byte_40F6794 = 1;
   }
   *(_QWORD *)lineOut = 0LL;
@@ -90,7 +90,7 @@ void __fastcall WrapControlText__fontSizeAdjust(
   {
     if ( !label )
       sub_B170D4();
-    UILabel__set_text(label, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   else
   {
@@ -110,7 +110,7 @@ float __fastcall WrapControlText__getFontWidth(
 
   if ( (byte_40F6795 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, text);
+    sub_B16FFC(&StringLiteral_1/*""*/, text);
     byte_40F6795 = 1;
   }
   *(_QWORD *)lineOut = 0LL;
@@ -118,7 +118,7 @@ float __fastcall WrapControlText__getFontWidth(
   {
     if ( !label )
       sub_B170D4();
-    UILabel__set_text(label, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     return 0.0;
   }
   else
@@ -148,8 +148,8 @@ int32_t __fastcall WrapControlText__textAdjust(
   {
     sub_B16FFC(&UnityEngine_Debug_TypeInfo, text);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_15441, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_15441/*"WrapControlText textAdjust error: "*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40F6793 = 1;
   }
   *(_QWORD *)lineOut = 0LL;
@@ -164,7 +164,7 @@ int32_t __fastcall WrapControlText__textAdjust(
   {
     if ( label )
     {
-      UILabel__set_text(label, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       return 0;
     }
 LABEL_22:
@@ -185,7 +185,7 @@ LABEL_22:
   if ( !label )
     goto LABEL_22;
   UILabel__set_text(label, text, 0LL);
-  v15 = (Il2CppObject *)System_String__Concat_43743732((System_String_o *)StringLiteral_15441, text, 0LL);
+  v15 = (Il2CppObject *)System_String__Concat_43743732((System_String_o *)StringLiteral_15441/*"WrapControlText textAdjust error: "*/, text, 0LL);
   if ( (BYTE3(UnityEngine_Debug_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
   {
@@ -320,7 +320,7 @@ bool __fastcall WrapControlText__wrapText(
     sub_B16FFC(&LocalizationManager_TypeInfo, text);
     sub_B16FFC(&NGUIText_TypeInfo, v18);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
     byte_40F6796 = 1;
   }
   s = 0LL;
@@ -481,7 +481,7 @@ bool __fastcall WrapControlText__wrapText(
   if ( !b )
   {
 LABEL_73:
-    v51 = (System_String_o *)StringLiteral_1;
+    v51 = (System_String_o *)StringLiteral_1/*""*/;
     goto LABEL_74;
   }
   if ( (BYTE3(NGUIText_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUIText_TypeInfo->_2.cctor_finished )

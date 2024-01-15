@@ -138,19 +138,19 @@ void __fastcall PartyOrganizationConfirmMenu__Init(PartyOrganizationConfirmMenu_
 
   if ( (byte_40FDC40 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FDC40 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -255,8 +255,8 @@ void __fastcall PartyOrganizationConfirmMenu__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&Method_PartyOrganizationConfirmMenu_EndOpen__, v14);
     sub_B16FFC(&PartyOrganizationConfirmMenu_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_2574, v16);
-    sub_B16FFC(&StringLiteral_2575, v17);
+    sub_B16FFC(&StringLiteral_2574/*"BOOST_ITEM_USE_CONFIRM_CANCEL"*/, v16);
+    sub_B16FFC(&StringLiteral_2575/*"BOOST_ITEM_USE_CONFIRM_DECIDE"*/, v17);
     byte_40FDC41 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
@@ -313,12 +313,12 @@ LABEL_22:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_2575, 0LL);
+      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_2575/*"BOOST_ITEM_USE_CONFIRM_DECIDE"*/, 0LL);
       if ( decideLabel )
       {
         UILabel__set_text(decideLabel, v26, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v28 = LocalizationManager__Get((System_String_o *)StringLiteral_2574, 0LL);
+        v28 = LocalizationManager__Get((System_String_o *)StringLiteral_2574/*"BOOST_ITEM_USE_CONFIRM_CANCEL"*/, 0LL);
         if ( cancelLabel )
         {
           UILabel__set_text(cancelLabel, v28, 0LL);

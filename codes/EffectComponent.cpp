@@ -481,13 +481,13 @@ void __fastcall EffectComponent__replaceFigure(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UITexture___, obj);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UIStandFigureR___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_13601, v7);
+    sub_B16FFC(&StringLiteral_13601/*"Texture"*/, v7);
     byte_40FE25E = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   NodeFromName = (UnityEngine_Component_o *)TransformHelper__getNodeFromName(
                                               transform,
-                                              (System_String_o *)StringLiteral_13601,
+                                              (System_String_o *)StringLiteral_13601/*"Texture"*/,
                                               1,
                                               0LL);
   if ( !NodeFromName )
@@ -607,13 +607,13 @@ void __fastcall EffectComponent__setFigure(
     sub_B16FFC(&System_Action_TypeInfo, *(_QWORD *)&svtId);
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UITexture___, v9);
     sub_B16FFC(&Method_EffectComponent_onFigureAssetLoad__, v10);
-    sub_B16FFC(&StringLiteral_13601, v11);
+    sub_B16FFC(&StringLiteral_13601/*"Texture"*/, v11);
     byte_40FE25F = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   NodeFromName = (UnityEngine_Component_o *)TransformHelper__getNodeFromName(
                                               transform,
-                                              (System_String_o *)StringLiteral_13601,
+                                              (System_String_o *)StringLiteral_13601/*"Texture"*/,
                                               1,
                                               0LL);
   if ( !NodeFromName )

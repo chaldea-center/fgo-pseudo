@@ -63,7 +63,7 @@ bool __fastcall FriendshipMaster__GetFriendshipRank(
   if ( (byte_40FB2CA & 1) == 0 )
   {
     sub_B16FFC(&Method_DataMasterBase_TryGetEntityFromId_FriendshipEntity___, *(_QWORD *)&friendshipId);
-    sub_B16FFC(&StringLiteral_1223, v15);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v15);
     byte_40FB2CA = 1;
   }
   result = 0LL;
@@ -76,7 +76,7 @@ bool __fastcall FriendshipMaster__GetFriendshipRank(
   {
     v21 = System_Int32__ToString((int32_t)&v28, 0LL);
     v22 = System_Int32__ToString((int32_t)max, 0LL);
-    v23 = System_String__Concat_43746016(v21, (System_String_o *)StringLiteral_1223, v22, 0LL);
+    v23 = System_String__Concat_43746016(v21, (System_String_o *)StringLiteral_1223/*":"*/, v22, 0LL);
     result = 0LL;
     if ( !DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
             (DataMasterBase_o *)this,
@@ -206,7 +206,7 @@ int32_t __fastcall FriendshipMaster__getRankMax(FriendshipMaster_o *this, int32_
   if ( (byte_40FB2CB & 1) == 0 )
   {
     sub_B16FFC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, *(_QWORD *)&id);
-    sub_B16FFC(&StringLiteral_1223, v4);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v4);
     byte_40FB2CB = 1;
   }
   for ( i = 0; ; i = v16 + 1 )
@@ -214,7 +214,7 @@ int32_t __fastcall FriendshipMaster__getRankMax(FriendshipMaster_o *this, int32_
     v16 = i;
     v6 = System_Int32__ToString((int32_t)&v17, 0LL);
     v7 = System_Int32__ToString((int32_t)&v16, 0LL);
-    v8 = System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_1223, v7, 0LL);
+    v8 = System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_1223/*":"*/, v7, 0LL);
     lookup = DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
     if ( !lookup )
       sub_B170D4();

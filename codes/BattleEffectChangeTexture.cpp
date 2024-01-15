@@ -25,13 +25,13 @@ void __fastcall BattleEffectChangeTexture___ctor(BattleEffectChangeTexture_o *th
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_Renderer___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_List_Renderer__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_16814, v10);
+    sub_B16FFC(&StringLiteral_16814/*"body_level"*/, v10);
     byte_40F8CE4 = 1;
   }
   LODWORD(this->fields.sourceServantIds) = -1;
   LOBYTE(this->fields.searchMeshWord) = 1;
-  v11 = (System_Int32_array **)StringLiteral_16814;
-  this->fields.targetRendererList = (struct System_Collections_Generic_List_Renderer__o *)StringLiteral_16814;
+  v11 = (System_Int32_array **)StringLiteral_16814/*"body_level"*/;
+  this->fields.targetRendererList = (struct System_Collections_Generic_List_Renderer__o *)StringLiteral_16814/*"body_level"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.targetRendererList, v11, v2, v3, v4, v5, v6, v7);
   v16 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_Renderer__TypeInfo,
@@ -174,11 +174,11 @@ void __fastcall BattleEffectChangeTexture__ChangeTexture_23023632(
     sub_B16FFC(&Method_UnityEngine_Resources_Load_Texture2D___, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__, v9);
     sub_B16FFC(&UnityEngine_SkinnedMeshRenderer_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_15891, v11);
-    sub_B16FFC(&StringLiteral_15875, v12);
-    sub_B16FFC(&StringLiteral_4499, v13);
-    sub_B16FFC(&StringLiteral_12773, v14);
-    sub_B16FFC(&StringLiteral_15853, v15);
+    sub_B16FFC(&StringLiteral_15891/*"_Color"*/, v11);
+    sub_B16FFC(&StringLiteral_15875/*"_ChocoTex"*/, v12);
+    sub_B16FFC(&StringLiteral_4499/*"Custom/SoftEdgeUnlitCutZ_Choco"*/, v13);
+    sub_B16FFC(&StringLiteral_12773/*"Shaders/ChocoMap"*/, v14);
+    sub_B16FFC(&StringLiteral_15853/*"_AddColor"*/, v15);
     byte_40F8CE2 = 1;
   }
   methoda.methodPointer = 0LL;
@@ -346,9 +346,9 @@ LABEL_14:
       }
       if ( BattleActorControl__isChocoServant(actor, 0LL) )
       {
-        v48 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4499, 0LL);
+        v48 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4499/*"Custom/SoftEdgeUnlitCutZ_Choco"*/, 0LL);
         UIAtlas = UnityEngine_Resources__Load_UIAtlas_(
-                    (System_String_o *)StringLiteral_12773,
+                    (System_String_o *)StringLiteral_12773/*"Shaders/ChocoMap"*/,
                     (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_Texture2D___);
         v50 = *(_QWORD *)&this->fields.isCreateShadowAura;
         if ( v50 )
@@ -405,11 +405,11 @@ LABEL_14:
                     v78.fields.g = g;
                     v78.fields.b = b;
                     v78.fields.a = a;
-                    UnityEngine_Material__SetColor(v68, (System_String_o *)StringLiteral_15891, v78, 0LL);
+                    UnityEngine_Material__SetColor(v68, (System_String_o *)StringLiteral_15891/*"_Color"*/, v78, 0LL);
                     *(_QWORD *)&v79.fields.r = methoda.methodPointer;
                     *(_QWORD *)&v79.fields.b = methoda.invoker_method;
-                    UnityEngine_Material__SetColor(v68, (System_String_o *)StringLiteral_15853, v79, 0LL);
-                    UnityEngine_Material__SetTexture(v68, (System_String_o *)StringLiteral_15875, v51, 0LL);
+                    UnityEngine_Material__SetColor(v68, (System_String_o *)StringLiteral_15853/*"_AddColor"*/, v79, 0LL);
+                    UnityEngine_Material__SetTexture(v68, (System_String_o *)StringLiteral_15875/*"_ChocoTex"*/, v51, 0LL);
                     v64 = v65[6];
                     if ( (int)++v66 >= v64 )
                       goto LABEL_70;

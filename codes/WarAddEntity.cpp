@@ -32,22 +32,22 @@ void __fastcall WarAddEntity___cctor(const MethodInfo *method)
   if ( (byte_40F8BB0 & 1) == 0 )
   {
     sub_B16FFC(&WarAddEntity_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16635, v8);
-    sub_B16FFC(&StringLiteral_16636, v9);
-    sub_B16FFC(&StringLiteral_18412, v10);
+    sub_B16FFC(&StringLiteral_16635/*"bgChangeEffectTime"*/, v8);
+    sub_B16FFC(&StringLiteral_16636/*"bgChangeEffectType"*/, v9);
+    sub_B16FFC(&StringLiteral_18412/*"eventTowerId"*/, v10);
     byte_40F8BB0 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarAddEntity_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_16636;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16636;
+  v12 = (System_Int32_array **)StringLiteral_16636/*"bgChangeEffectType"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16636/*"bgChangeEffectType"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = WarAddEntity_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_16635;
-  v13->BG_CHANGE_TIME_KEY = (struct System_String_o *)StringLiteral_16635;
+  v14 = (System_Int32_array **)StringLiteral_16635/*"bgChangeEffectTime"*/;
+  v13->BG_CHANGE_TIME_KEY = (struct System_String_o *)StringLiteral_16635/*"bgChangeEffectTime"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->BG_CHANGE_TIME_KEY, v14, v15, v16, v17, v18, v19, v20);
   v21 = WarAddEntity_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_18412;
-  v21->EVENT_TOWER_ID = (struct System_String_o *)StringLiteral_18412;
+  v22 = (System_Int32_array **)StringLiteral_18412/*"eventTowerId"*/;
+  v21->EVENT_TOWER_ID = (struct System_String_o *)StringLiteral_18412/*"eventTowerId"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->EVENT_TOWER_ID, v22, v23, v24, v25, v26, v27, v28);
 }
 

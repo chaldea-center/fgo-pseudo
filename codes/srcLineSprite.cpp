@@ -10,12 +10,12 @@ void __fastcall srcLineSprite___ctor(srcLineSprite_o *this, const MethodInfo *me
 
   if ( (byte_40F9101 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9101 = 1;
   }
   this->fields.mfWidth = 20.0;
-  v9 = (System_Int32_array **)StringLiteral_1;
-  this->fields.msSpriteName = (struct System_String_o *)StringLiteral_1;
+  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.msSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.msSpriteName, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -227,12 +227,12 @@ System_String_o *__fastcall srcLineSprite__GetGobjName(int32_t id, const MethodI
   v5 = id;
   if ( (byte_40F90FA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12942, method);
-    sub_B16FFC(&StringLiteral_960, v2);
+    sub_B16FFC(&StringLiteral_12942/*"Spot_Line_"*/, method);
+    sub_B16FFC(&StringLiteral_960/*"00"*/, v2);
     byte_40F90FA = 1;
   }
-  v3 = System_Int32__ToString_38275808((int32_t)&v5, (System_String_o *)StringLiteral_960, 0LL);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_12942, v3, 0LL);
+  v3 = System_Int32__ToString_38275808((int32_t)&v5, (System_String_o *)StringLiteral_960/*"00"*/, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_12942/*"Spot_Line_"*/, v3, 0LL);
 }
 
 
@@ -466,7 +466,7 @@ void __fastcall srcLineSprite__SetQaaScaleAnim_23472388(
   {
     sub_B16FFC(&Method_UITweener_Begin_TweenPosition___, is_disp);
     sub_B16FFC(&Method_UITweener_Begin_TweenScale___, v7);
-    sub_B16FFC(&StringLiteral_13009, v8);
+    sub_B16FFC(&StringLiteral_13009/*"StateQaaEnd"*/, v8);
     byte_40F90FF = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -497,8 +497,8 @@ void __fastcall srcLineSprite__SetQaaScaleAnim_23472388(
   v17 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v10->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v17;
   sub_B16F98((BattleServantConfConponent_o *)&v10->fields.eventReceiver, v17, v18, v19, v20, v21, v22, v23);
-  v24 = (System_Int32_array **)StringLiteral_13009;
-  v10->fields.callWhenFinished = (struct System_String_o *)StringLiteral_13009;
+  v24 = (System_Int32_array **)StringLiteral_13009/*"StateQaaEnd"*/;
+  v10->fields.callWhenFinished = (struct System_String_o *)StringLiteral_13009/*"StateQaaEnd"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v10->fields.callWhenFinished, v24, v25, v26, v27, v28, v29, v30);
   if ( time != 0.0 || is_disp )
   {

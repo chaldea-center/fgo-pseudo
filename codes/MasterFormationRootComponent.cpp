@@ -10,13 +10,13 @@ void __fastcall MasterFormationRootComponent__Init(MasterFormationRootComponent_
 
   if ( (byte_40FB1DF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6864, method);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, method);
     byte_40FB1DF = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_6864, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -28,13 +28,13 @@ void __fastcall MasterFormationRootComponent__OnClickBack(
 
   if ( (byte_40FB1E4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3034, method);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, method);
     byte_40FB1E4 = 1;
   }
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     sub_B170D4();
-  TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_3034, 0LL);
+  TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
 }
 
 
@@ -69,7 +69,7 @@ void __fastcall MasterFormationRootComponent___closeMasterFormation_b__17_0(
 
   if ( (byte_40FB1E6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6864, method);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, method);
     byte_40FB1E6 = 1;
   }
   mstFormationComp = this->fields.mstFormationComp;
@@ -78,7 +78,7 @@ void __fastcall MasterFormationRootComponent___closeMasterFormation_b__17_0(
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_6864, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -180,9 +180,9 @@ void __fastcall MasterFormationRootComponent__beginStartUp(
     sub_B16FFC(&Method_MasterFormationRootComponent__beginStartUp_b__9_0__, v13);
     sub_B16FFC(&SceneJumpInfo_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_5186, v16);
-    sub_B16FFC(&StringLiteral_6137, v17);
-    sub_B16FFC(&StringLiteral_15037, v18);
+    sub_B16FFC(&StringLiteral_5186/*"DeckId"*/, v16);
+    sub_B16FFC(&StringLiteral_6137/*"EventDeckId"*/, v17);
+    sub_B16FFC(&StringLiteral_15037/*"UserEquipId"*/, v18);
     byte_40FB1DE = 1;
   }
   this->fields.jumpInfo = 0LL;
@@ -242,10 +242,10 @@ void __fastcall MasterFormationRootComponent__beginStartUp(
   name = (*p_jumpInfo)->fields.name;
   if ( !name )
     goto LABEL_8;
-  if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_5186, 0LL)
-    && !System_String__op_Equality(name, (System_String_o *)StringLiteral_6137, 0LL) )
+  if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_5186/*"DeckId"*/, 0LL)
+    && !System_String__op_Equality(name, (System_String_o *)StringLiteral_6137/*"EventDeckId"*/, 0LL) )
   {
-    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_15037, 0LL) )
+    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_15037/*"UserEquipId"*/, 0LL) )
     {
       if ( !*p_jumpInfo )
         goto LABEL_33;
@@ -324,13 +324,13 @@ void __fastcall MasterFormationRootComponent__changeUserEquipCallback(
 
   if ( (byte_40FB1E2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, res);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, res);
     byte_40FB1E2 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11043/*"REQUEST_OK"*/, 0LL);
 }
 
 
@@ -403,9 +403,9 @@ void __fastcall MasterFormationRootComponent__gotoBack(MasterFormationRootCompon
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_5186, v4);
-    sub_B16FFC(&StringLiteral_6137, v5);
-    sub_B16FFC(&StringLiteral_15037, v6);
+    sub_B16FFC(&StringLiteral_5186/*"DeckId"*/, v4);
+    sub_B16FFC(&StringLiteral_6137/*"EventDeckId"*/, v5);
+    sub_B16FFC(&StringLiteral_15037/*"UserEquipId"*/, v6);
     byte_40FB1E5 = 1;
   }
   jumpInfo = this->fields.jumpInfo;
@@ -414,15 +414,15 @@ void __fastcall MasterFormationRootComponent__gotoBack(MasterFormationRootCompon
   name = jumpInfo->fields.name;
   if ( name )
   {
-    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_15037, 0LL) )
+    if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_15037/*"UserEquipId"*/, 0LL) )
     {
       v9 = this->fields.jumpInfo;
       if ( !v9 )
         goto LABEL_33;
       v9->fields.userId = this->fields.userEquipId;
     }
-    else if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_5186, 0LL)
-           || System_String__op_Equality(name, (System_String_o *)StringLiteral_6137, 0LL) )
+    else if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_5186/*"DeckId"*/, 0LL)
+           || System_String__op_Equality(name, (System_String_o *)StringLiteral_6137/*"EventDeckId"*/, 0LL) )
     {
       v10 = this->fields.jumpInfo;
       if ( !v10 )
@@ -499,8 +499,8 @@ void __fastcall MasterFormationRootComponent__requestChangeUsrEquip(
 
   if ( (byte_40FB1E1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9323, method);
-    sub_B16FFC(&StringLiteral_11043, v3);
+    sub_B16FFC(&StringLiteral_9323/*"NO_CHANGE_EQUIP"*/, method);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v3);
     byte_40FB1E1 = 1;
   }
   mstFormationComp = this->fields.mstFormationComp;
@@ -512,7 +512,7 @@ void __fastcall MasterFormationRootComponent__requestChangeUsrEquip(
     myFSM = this->fields.myFSM;
     if ( myFSM )
     {
-      v7 = &StringLiteral_9323;
+      v7 = &StringLiteral_9323/*"NO_CHANGE_EQUIP"*/;
       goto LABEL_10;
     }
 LABEL_11:
@@ -522,7 +522,7 @@ LABEL_11:
   this->fields.userEquipId = currentUsrEquipId;
   if ( !myFSM )
     goto LABEL_11;
-  v7 = &StringLiteral_11043;
+  v7 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_10:
   PlayMakerFSM__SendEvent(myFSM, (System_String_o *)*v7, 0LL);
 }

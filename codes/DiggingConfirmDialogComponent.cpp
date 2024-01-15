@@ -361,11 +361,11 @@ void __fastcall DiggingConfirmDialogComponent__Open(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
     sub_B16FFC(&Method_DiggingConfirmDialogComponent___c__DisplayClass16_0__Open_b__0__, v19);
     sub_B16FFC(&DiggingConfirmDialogComponent___c__DisplayClass16_0_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_4568, v21);
-    sub_B16FFC(&StringLiteral_4567, v22);
-    sub_B16FFC(&StringLiteral_4569, v23);
-    sub_B16FFC(&StringLiteral_11056, v24);
-    sub_B16FFC(&StringLiteral_4566, v25);
+    sub_B16FFC(&StringLiteral_4568/*"DIGGING_CONFIRM_DIALOG_CONSUME"*/, v21);
+    sub_B16FFC(&StringLiteral_4567/*"DIGGING_CONFIRM_DIALOG_CHECK_MESSAGE"*/, v22);
+    sub_B16FFC(&StringLiteral_4569/*"DIGGING_CONFIRM_DIALOG_MESSAGE"*/, v23);
+    sub_B16FFC(&StringLiteral_11056/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, v24);
+    sub_B16FFC(&StringLiteral_4566/*"DIGGING_CONFIRM_DIALOG_CANCEL"*/, v25);
     byte_40FBC8B = 1;
   }
   v93 = 0;
@@ -446,7 +446,7 @@ void __fastcall DiggingConfirmDialogComponent__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v54 = LocalizationManager__Get((System_String_o *)StringLiteral_4569, 0LL);
+      v54 = LocalizationManager__Get((System_String_o *)StringLiteral_4569/*"DIGGING_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
       if ( titleLabel )
       {
         UILabel__set_text(titleLabel, v54, 0LL);
@@ -496,21 +496,21 @@ LABEL_30:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_11056, 0LL);
+  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_11056/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, 0LL);
   if ( !v63 )
     goto LABEL_45;
   UILabel__set_text(v63, v66, 0LL);
-  v67 = LocalizationManager__Get((System_String_o *)StringLiteral_4566, 0LL);
+  v67 = LocalizationManager__Get((System_String_o *)StringLiteral_4566/*"DIGGING_CONFIRM_DIALOG_CANCEL"*/, 0LL);
   if ( !v65 )
     goto LABEL_45;
   UILabel__set_text(v65, v67, 0LL);
   consumeLabel = this->fields.consumeLabel;
-  v69 = LocalizationManager__Get((System_String_o *)StringLiteral_4568, 0LL);
+  v69 = LocalizationManager__Get((System_String_o *)StringLiteral_4568/*"DIGGING_CONFIRM_DIALOG_CONSUME"*/, 0LL);
   if ( !consumeLabel )
     goto LABEL_45;
   UILabel__set_text(consumeLabel, v69, 0LL);
   checkBoxLabel = this->fields.checkBoxLabel;
-  v71 = LocalizationManager__Get((System_String_o *)StringLiteral_4567, 0LL);
+  v71 = LocalizationManager__Get((System_String_o *)StringLiteral_4567/*"DIGGING_CONFIRM_DIALOG_CHECK_MESSAGE"*/, 0LL);
   if ( !checkBoxLabel )
     goto LABEL_45;
   UILabel__set_text(checkBoxLabel, v71, 0LL);
@@ -577,7 +577,7 @@ void __fastcall DiggingConfirmDialogComponent__PlaySelectBlockAnim(
   if ( (byte_40FBC8D & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_Animation___, panelData);
-    sub_B16FFC(&StringLiteral_12601, v5);
+    sub_B16FFC(&StringLiteral_12601/*"SelectAnimation"*/, v5);
     byte_40FBC8D = 1;
   }
   DiggingConfirmDialogComponent__StopSelectBlockAnim(this, (const MethodInfo *)panelData);
@@ -602,7 +602,7 @@ void __fastcall DiggingConfirmDialogComponent__PlaySelectBlockAnim(
   {
     sub_B170D4();
   }
-  UnityEngine_Animation__Play_49744236(Component_srcLineSprite, (System_String_o *)StringLiteral_12601, 0LL);
+  UnityEngine_Animation__Play_49744236(Component_srcLineSprite, (System_String_o *)StringLiteral_12601/*"SelectAnimation"*/, 0LL);
 }
 
 
@@ -659,7 +659,7 @@ void __fastcall DiggingConfirmDialogComponent__Redisplay(
     sub_B16FFC(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_B16FFC(&StringLiteral_4569, v14);
+    sub_B16FFC(&StringLiteral_4569/*"DIGGING_CONFIRM_DIALOG_MESSAGE"*/, v14);
     byte_40FBC8C = 1;
   }
   v45 = 0;
@@ -735,7 +735,7 @@ LABEL_21:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v28 = LocalizationManager__Get((System_String_o *)StringLiteral_4569, 0LL);
+            v28 = LocalizationManager__Get((System_String_o *)StringLiteral_4569/*"DIGGING_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
             if ( titleLabel )
             {
               UILabel__set_text(titleLabel, v28, 0LL);

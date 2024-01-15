@@ -321,7 +321,7 @@ void __fastcall MapZoom__MouseScrollWheel(MapZoom_o *this, const MethodInfo *met
 
   if ( (byte_40FB61A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9171, method);
+    sub_B16FFC(&StringLiteral_9171/*"Mouse ScrollWheel"*/, method);
     byte_40FB61A = 1;
   }
   *(UnityEngine_Vector3_o *)&v3 = UnityEngine_Input__get_mousePosition(0LL);
@@ -332,7 +332,7 @@ void __fastcall MapZoom__MouseScrollWheel(MapZoom_o *this, const MethodInfo *met
     width = UnityEngine_Screen__get_width(0LL);
     if ( v6 >= 0.0 && v5 <= (float)width && v6 <= (float)UnityEngine_Screen__get_height(0LL) )
     {
-      Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9171, 0LL);
+      Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9171/*"Mouse ScrollWheel"*/, 0LL);
       if ( Axis <= 0.0 )
       {
         if ( Axis < 0.0 )

@@ -72,13 +72,13 @@ void __fastcall CostumeEventItemConfirmInfo__Set(
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&NetworkManager_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B16FFC(&StringLiteral_5561, v11);
-    sub_B16FFC(&StringLiteral_5564, v12);
-    sub_B16FFC(&StringLiteral_3321, v13);
-    sub_B16FFC(&StringLiteral_23395, v14);
-    sub_B16FFC(&StringLiteral_5562, v15);
-    sub_B16FFC(&StringLiteral_5563, v16);
-    sub_B16FFC(&StringLiteral_5560, v17);
+    sub_B16FFC(&StringLiteral_5561/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG"*/, v11);
+    sub_B16FFC(&StringLiteral_5564/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_3321/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, v13);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v14);
+    sub_B16FFC(&StringLiteral_5562/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_HAVE"*/, v15);
+    sub_B16FFC(&StringLiteral_5563/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_REQ"*/, v16);
+    sub_B16FFC(&StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, v17);
     byte_40FBDC0 = 1;
   }
   entity = 0LL;
@@ -101,34 +101,34 @@ void __fastcall CostumeEventItemConfirmInfo__Set(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3321, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3321/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, 0LL);
   if ( !title )
     goto LABEL_33;
   UILabel__set_text(title, v21, 0LL);
   subTitle = this->fields.subTitle;
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5564, 0LL);
-  v24 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5564/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_TITLE"*/, 0LL);
+  v24 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
   v25 = System_String__Format(v23, v24, 0LL);
   if ( !subTitle )
     goto LABEL_33;
   UILabel__set_text(subTitle, v25, 0LL);
   reqItemLabel = this->fields.reqItemLabel;
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_5563, 0LL);
-  v28 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_5563/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_REQ"*/, 0LL);
+  v28 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
   v29 = System_String__Format(v27, v28, 0LL);
   if ( !reqItemLabel )
     goto LABEL_33;
   UILabel__set_text(reqItemLabel, v29, 0LL);
   haveItemLabel = this->fields.haveItemLabel;
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_5562, 0LL);
-  v32 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_5562/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_HAVE"*/, 0LL);
+  v32 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
   v33 = System_String__Format(v31, v32, 0LL);
   if ( !haveItemLabel )
     goto LABEL_33;
   UILabel__set_text(haveItemLabel, v33, 0LL);
   msg = this->fields.msg;
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_5561, 0LL);
-  v36 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_5561/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG"*/, 0LL);
+  v36 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
   v37 = System_String__Format(v35, v36, 0LL);
   if ( !msg )
     goto LABEL_33;
@@ -141,7 +141,7 @@ void __fastcall CostumeEventItemConfirmInfo__Set(
   reqItemCountLabel = this->fields.reqItemCountLabel;
   num = itemNums->m_Items[1];
   v43 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num);
-  v44 = System_String__Format((System_String_o *)StringLiteral_23395, v43, 0LL);
+  v44 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v43, 0LL);
   if ( !reqItemCountLabel )
     goto LABEL_33;
   UILabel__set_text(reqItemCountLabel, v44, 0LL);
@@ -177,7 +177,7 @@ void __fastcall CostumeEventItemConfirmInfo__Set(
     || (v50 = this->fields.haveItemCountLabel,
         num = entity->fields.num,
         v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num),
-        v52 = System_String__Format((System_String_o *)StringLiteral_23395, v51, 0LL),
+        v52 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v51, 0LL),
         !v50) )
   {
 LABEL_33:

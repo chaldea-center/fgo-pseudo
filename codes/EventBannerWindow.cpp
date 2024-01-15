@@ -240,8 +240,8 @@ void __fastcall EventBannerWindow__Setup(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v16);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_B16FFC(&StringLiteral_5545, v19);
-    sub_B16FFC(&StringLiteral_5546, v20);
+    sub_B16FFC(&StringLiteral_5545/*"EVENT_BANNER_WINDOW_MESSAGE"*/, v19);
+    sub_B16FFC(&StringLiteral_5546/*"EVENT_BANNER_WINDOW_TITLE"*/, v20);
     byte_40FC51E = 1;
   }
   memset(&v50, 0, sizeof(v50));
@@ -381,12 +381,12 @@ LABEL_39:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v46 = LocalizationManager__Get((System_String_o *)StringLiteral_5546, 0LL);
+  v46 = LocalizationManager__Get((System_String_o *)StringLiteral_5546/*"EVENT_BANNER_WINDOW_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_46;
   UILabel__set_text(titleLabel, v46, 0LL);
   titleDetailLabel = this->fields.titleDetailLabel;
-  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_5545, 0LL);
+  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_5545/*"EVENT_BANNER_WINDOW_MESSAGE"*/, 0LL);
   if ( !titleDetailLabel )
     goto LABEL_46;
   UILabel__set_text(titleDetailLabel, v48, 0LL);
@@ -397,10 +397,10 @@ System_String_o *__fastcall EventBannerWindow__get_closeBtnPath(EventBannerWindo
 {
   if ( (byte_40FC521 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2732, method);
+    sub_B16FFC(&StringLiteral_2732/*"BaseWindow/CloseBtn"*/, method);
     byte_40FC521 = 1;
   }
-  return (System_String_o *)StringLiteral_2732;
+  return (System_String_o *)StringLiteral_2732/*"BaseWindow/CloseBtn"*/;
 }
 
 

@@ -157,12 +157,12 @@ void __fastcall SupportSelectConfirmCopyMenu__Open(
     sub_B16FFC(&System_Action_TypeInfo, baseDeckData);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_SupportSelectConfirmCopyMenu_OnFinishedOpen__, v10);
-    sub_B16FFC(&StringLiteral_12456, v11);
-    sub_B16FFC(&StringLiteral_12455, v12);
-    sub_B16FFC(&StringLiteral_12457, v13);
-    sub_B16FFC(&StringLiteral_12452, v14);
-    sub_B16FFC(&StringLiteral_12453, v15);
-    sub_B16FFC(&StringLiteral_12454, v16);
+    sub_B16FFC(&StringLiteral_12456/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TARGET_DECK"*/, v11);
+    sub_B16FFC(&StringLiteral_12455/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_MESSAGE"*/, v12);
+    sub_B16FFC(&StringLiteral_12457/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TITLE"*/, v13);
+    sub_B16FFC(&StringLiteral_12452/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_BASE_DECK"*/, v14);
+    sub_B16FFC(&StringLiteral_12453/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_CANCEL"*/, v15);
+    sub_B16FFC(&StringLiteral_12454/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_DECIDE"*/, v16);
     byte_40FD4ED = 1;
   }
   if ( this->fields.currentState == 2 )
@@ -174,31 +174,31 @@ void __fastcall SupportSelectConfirmCopyMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_12457, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_12457/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_17;
     UILabel__set_text(titleLabel, v18, 0LL);
     messageLabel = this->fields.messageLabel;
-    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_12455, 0LL);
+    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_12455/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_MESSAGE"*/, 0LL);
     if ( !messageLabel )
       goto LABEL_17;
     UILabel__set_text(messageLabel, v20, 0LL);
     baseDeckTitleLabel = this->fields.baseDeckTitleLabel;
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12452, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12452/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_BASE_DECK"*/, 0LL);
     if ( !baseDeckTitleLabel )
       goto LABEL_17;
     UILabel__set_text(baseDeckTitleLabel, v22, 0LL);
     targetDeckTitleLabel = this->fields.targetDeckTitleLabel;
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12456, 0LL);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12456/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TARGET_DECK"*/, 0LL);
     if ( !targetDeckTitleLabel )
       goto LABEL_17;
     UILabel__set_text(targetDeckTitleLabel, v24, 0LL);
     decideButtonLabel = this->fields.decideButtonLabel;
-    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12454, 0LL);
+    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12454/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_DECIDE"*/, 0LL);
     if ( !decideButtonLabel
       || (UILabel__set_text(decideButtonLabel, v26, 0LL),
           cancelButtonLabel = this->fields.cancelButtonLabel,
-          v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12453, 0LL),
+          v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12453/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_CANCEL"*/, 0LL),
           !cancelButtonLabel)
       || (UILabel__set_text(cancelButtonLabel, v28, 0LL), (baseDeckObj = this->fields.baseDeckObj) == 0LL)
       || (SupportSelectDeckListViewItemDraw__SetSupportData(baseDeckObj, baseDeckData, 0, 1, v29),
@@ -273,10 +273,10 @@ System_String_o *__fastcall SupportSelectConfirmCopyMenu__get_closeBtnPath(
 {
   if ( (byte_40FD4F1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4202, method);
+    sub_B16FFC(&StringLiteral_4202/*"ConfirmWindow/CancelButton"*/, method);
     byte_40FD4F1 = 1;
   }
-  return (System_String_o *)StringLiteral_4202;
+  return (System_String_o *)StringLiteral_4202/*"ConfirmWindow/CancelButton"*/;
 }
 
 

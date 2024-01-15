@@ -859,7 +859,7 @@ UserServantCollectionEntity_array *__fastcall UserServantCollectionMaster__getCo
     sub_B16FFC(&NetworkManager_TypeInfo, v15);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
     sub_B16FFC(&UserServantCollectionEntity_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_1223, v18);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v18);
     byte_40F8189 = 1;
   }
   userId = 0LL;
@@ -925,7 +925,7 @@ LABEL_57:
   if ( (int)v28 >= 1 )
   {
     v34 = (int)v28;
-    v35 = (System_String_o **)&StringLiteral_1223;
+    v35 = (System_String_o **)&StringLiteral_1223/*":"*/;
     v36 = &System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo;
     v37 = 0LL;
     v81 = v29;
@@ -1157,7 +1157,7 @@ UserServantCollectionEntity_array *__fastcall UserServantCollectionMaster__getLi
     sub_B16FFC(&NetworkManager_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
     sub_B16FFC(&UserServantCollectionEntity_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_1223, v15);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v15);
     byte_40F8188 = 1;
   }
   UserId = 0LL;
@@ -1203,7 +1203,7 @@ UserServantCollectionEntity_array *__fastcall UserServantCollectionMaster__getLi
       }
       v27 = v24;
       v28 = System_Int32__ToString((int)v21 + 4 * (int)v22 + 32, 0LL);
-      v29 = System_String__Concat_43746016(v27, (System_String_o *)StringLiteral_1223, v28, 0LL);
+      v29 = System_String__Concat_43746016(v27, (System_String_o *)StringLiteral_1223/*":"*/, v28, 0LL);
       lookup = DataMasterBase__get_lookup((DataMasterBase_o *)this, 0LL);
       if ( !lookup )
         break;
@@ -1362,7 +1362,7 @@ System_Collections_Generic_List_UserServantCollectionEntity__o *__fastcall UserS
     sub_B16FFC(&NetworkManager_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
     sub_B16FFC(&UserServantCollectionEntity_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_1223, v14);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v14);
     byte_40F818A = 1;
   }
   UserId = 0LL;
@@ -1421,7 +1421,7 @@ System_Collections_Generic_List_UserServantCollectionEntity__o *__fastcall UserS
           v32 = System_Int32__ToString((int32_t)&key, 0LL);
           value = (WarBoardEvalValueSquare_CalcEval_o *)System_String__Concat_43746016(
                                                           v15,
-                                                          (System_String_o *)StringLiteral_1223,
+                                                          (System_String_o *)StringLiteral_1223/*":"*/,
                                                           v32,
                                                           0LL);
           System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___Add(
@@ -1436,7 +1436,7 @@ System_Collections_Generic_List_UserServantCollectionEntity__o *__fastcall UserS
         v33 = System_Int32__ToString((int32_t)&key, 0LL);
         value = (WarBoardEvalValueSquare_CalcEval_o *)System_String__Concat_43746016(
                                                         v15,
-                                                        (System_String_o *)StringLiteral_1223,
+                                                        (System_String_o *)StringLiteral_1223/*":"*/,
                                                         v33,
                                                         0LL);
       }

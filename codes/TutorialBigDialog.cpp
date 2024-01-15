@@ -44,28 +44,28 @@ void __fastcall TutorialBigDialog___cctor(const MethodInfo *method)
   if ( (byte_40FB8F8 & 1) == 0 )
   {
     sub_B16FFC(&TutorialBigDialog_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_14517, v8);
-    sub_B16FFC(&StringLiteral_17524, v9);
-    sub_B16FFC(&StringLiteral_14515, v10);
-    sub_B16FFC(&StringLiteral_22735, v11);
+    sub_B16FFC(&StringLiteral_14517/*"Tutorial/tutorial_alpha"*/, v8);
+    sub_B16FFC(&StringLiteral_17524/*"combine_tutorial_alpha"*/, v9);
+    sub_B16FFC(&StringLiteral_14515/*"Tutorial/combine_tutorial_alpha"*/, v10);
+    sub_B16FFC(&StringLiteral_22735/*"tutorial_alpha"*/, v11);
     byte_40FB8F8 = 1;
   }
   TutorialBigDialog_TypeInfo->static_fields->FADE_TIME = 0.3;
   static_fields = TutorialBigDialog_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_14517;
-  static_fields->alphaImgPath = (struct System_String_o *)StringLiteral_14517;
+  v13 = (System_Int32_array **)StringLiteral_14517/*"Tutorial/tutorial_alpha"*/;
+  static_fields->alphaImgPath = (struct System_String_o *)StringLiteral_14517/*"Tutorial/tutorial_alpha"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->alphaImgPath, v13, v2, v3, v4, v5, v6, v7);
   v14 = TutorialBigDialog_TypeInfo->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_22735;
-  v14->alphaImgName = (struct System_String_o *)StringLiteral_22735;
+  v15 = (System_Int32_array **)StringLiteral_22735/*"tutorial_alpha"*/;
+  v14->alphaImgName = (struct System_String_o *)StringLiteral_22735/*"tutorial_alpha"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v14->alphaImgName, v15, v16, v17, v18, v19, v20, v21);
   v22 = TutorialBigDialog_TypeInfo->static_fields;
-  v23 = (System_Int32_array **)StringLiteral_14515;
-  v22->alphaMiniImgPath = (struct System_String_o *)StringLiteral_14515;
+  v23 = (System_Int32_array **)StringLiteral_14515/*"Tutorial/combine_tutorial_alpha"*/;
+  v22->alphaMiniImgPath = (struct System_String_o *)StringLiteral_14515/*"Tutorial/combine_tutorial_alpha"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v22->alphaMiniImgPath, v23, v24, v25, v26, v27, v28, v29);
   v30 = TutorialBigDialog_TypeInfo->static_fields;
-  v31 = (System_Int32_array **)StringLiteral_17524;
-  v30->alphaMiniImgName = (struct System_String_o *)StringLiteral_17524;
+  v31 = (System_Int32_array **)StringLiteral_17524/*"combine_tutorial_alpha"*/;
+  v30->alphaMiniImgName = (struct System_String_o *)StringLiteral_17524/*"combine_tutorial_alpha"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v30->alphaMiniImgName, v31, v32, v33, v34, v35, v36, v37);
   v38 = TutorialBigDialog_TypeInfo;
   TutorialBigDialog_TypeInfo->static_fields->baseImgNo = 6;
@@ -144,9 +144,9 @@ void __fastcall TutorialBigDialog__AddImg(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&TutorialBigDialog_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_4519, v12);
-    sub_B16FFC(&StringLiteral_7470, v13);
-    sub_B16FFC(&StringLiteral_15952, v14);
+    sub_B16FFC(&StringLiteral_4519/*"Custom/SpriteWithMask"*/, v12);
+    sub_B16FFC(&StringLiteral_7470/*"Image"*/, v13);
+    sub_B16FFC(&StringLiteral_15952/*"_MaskTex"*/, v14);
     byte_40FB8E8 = 1;
   }
   TutorialImagePrefab = this->fields.TutorialImagePrefab;
@@ -159,7 +159,7 @@ void __fastcall TutorialBigDialog__AddImg(
                                   (UnityEngine_UI_Dropdown_DropdownItem_o *)TutorialImagePrefab,
                                   (const MethodInfo_19DE20C *)Method_UnityEngine_Object_Instantiate_GameObject___);
   v17 = System_Int32__ToString((int)this + 240, 0LL);
-  v18 = System_String__Concat_43743732((System_String_o *)StringLiteral_7470, v17, 0LL);
+  v18 = System_String__Concat_43743732((System_String_o *)StringLiteral_7470/*"Image"*/, v17, 0LL);
   if ( !v16 )
     goto LABEL_29;
   UnityEngine_Object__set_name(v16, v18, 0LL);
@@ -173,7 +173,7 @@ void __fastcall TutorialBigDialog__AddImg(
   if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__SetLayer((UnityEngine_GameObject_o *)v16, layer, 0LL);
-  v22 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519, 0LL);
+  v22 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519/*"Custom/SpriteWithMask"*/, 0LL);
   v27 = (UnityEngine_Material_o *)sub_B170CC(UnityEngine_Material_TypeInfo, v23, v24, v25, v26);
   UnityEngine_Material___ctor(v27, v22, 0LL);
   if ( !Component_srcLineSprite )
@@ -213,7 +213,7 @@ void __fastcall TutorialBigDialog__AddImg(
                                                               alphaTexAssetData,
                                                               *p_alphaMiniImgName,
                                                               (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_Texture2D____66802808);
-  UnityEngine_Material__SetTexture(v27, (System_String_o *)StringLiteral_15952, Object_WarBoardWaitTimeSetting, 0LL);
+  UnityEngine_Material__SetTexture(v27, (System_String_o *)StringLiteral_15952/*"_MaskTex"*/, Object_WarBoardWaitTimeSetting, 0LL);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v16, 0, 0LL);
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v16, 0LL);
   if ( !this->fields.ImageRoot )
@@ -373,10 +373,10 @@ void __fastcall TutorialBigDialog__AddScrollImg(
     sub_B16FFC(&TutorialBigDialog_TypeInfo, v15);
     sub_B16FFC(&Method_TutorialBigDialog___c__DisplayClass56_0__AddScrollImg_b__0__, v16);
     sub_B16FFC(&TutorialBigDialog___c__DisplayClass56_0_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_16248, v18);
-    sub_B16FFC(&StringLiteral_4519, v19);
-    sub_B16FFC(&StringLiteral_7470, v20);
-    sub_B16FFC(&StringLiteral_15952, v21);
+    sub_B16FFC(&StringLiteral_16248/*"alpha"*/, v18);
+    sub_B16FFC(&StringLiteral_4519/*"Custom/SpriteWithMask"*/, v19);
+    sub_B16FFC(&StringLiteral_7470/*"Image"*/, v20);
+    sub_B16FFC(&StringLiteral_15952/*"_MaskTex"*/, v21);
     byte_40FB8E9 = 1;
   }
   v22 = sub_B170CC(TutorialBigDialog___c__DisplayClass56_0_TypeInfo, data, callback, method, v4);
@@ -417,7 +417,7 @@ void __fastcall TutorialBigDialog__AddScrollImg(
       v44 = v46;
       if ( !v46 )
         goto LABEL_63;
-      ObjectNameList = (void *)System_String__Contains(v44, (System_String_o *)StringLiteral_16248, 0LL);
+      ObjectNameList = (void *)System_String__Contains(v44, (System_String_o *)StringLiteral_16248/*"alpha"*/, 0LL);
       if ( v40 >= v39[6] )
       {
 LABEL_62:
@@ -462,7 +462,7 @@ LABEL_62:
   sub_B16F98((BattleServantConfConponent_o *)(v22 + 32), v50, v52, v53, v54, v55, v56, v57);
   v58 = *(UnityEngine_Object_o **)(v22 + 32);
   v59 = System_Int32__ToString((int)v114 + 240, 0LL);
-  v60 = System_String__Concat_43743732((System_String_o *)StringLiteral_7470, v59, 0LL);
+  v60 = System_String__Concat_43743732((System_String_o *)StringLiteral_7470/*"Image"*/, v59, 0LL);
   if ( !v58 )
     goto LABEL_63;
   UnityEngine_Object__set_name(v58, v60, 0LL);
@@ -482,7 +482,7 @@ LABEL_62:
   if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__SetLayer(v69, layer, 0LL);
-  v72 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519, 0LL);
+  v72 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519/*"Custom/SpriteWithMask"*/, 0LL);
   v77 = (UnityEngine_Material_o *)sub_B170CC(UnityEngine_Material_TypeInfo, v73, v74, v75, v76);
   UnityEngine_Material___ctor(v77, v72, 0LL);
   if ( !*(_QWORD *)v62 )
@@ -497,7 +497,7 @@ LABEL_62:
   if ( !v77 )
     goto LABEL_63;
   UnityEngine_Material__set_mainTexture(v77, v42, 0LL);
-  UnityEngine_Material__SetTexture(v77, (System_String_o *)StringLiteral_15952, v48, 0LL);
+  UnityEngine_Material__SetTexture(v77, (System_String_o *)StringLiteral_15952/*"_MaskTex"*/, v48, 0LL);
   if ( !*(_QWORD *)v62 )
     goto LABEL_63;
   v79 = *(UIWidget_o **)(*(_QWORD *)v62 + 32LL);
@@ -635,7 +635,7 @@ void __fastcall TutorialBigDialog__AfterLoad(TutorialBigDialog_o *this, int32_t 
 
   if ( (byte_40FB8EA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10072, *(_QWORD *)&addCount);
+    sub_B16FFC(&StringLiteral_10072/*"OpenWindow"*/, *(_QWORD *)&addCount);
     byte_40FB8EA = 1;
   }
   loadByAsset = this->fields.loadByAsset;
@@ -659,7 +659,7 @@ LABEL_5:
     TutorialBigDialog__UpdatePage(this, 0, method);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10072,
+      (System_String_o *)StringLiteral_10072/*"OpenWindow"*/,
       0.3,
       0LL);
   }
@@ -901,14 +901,14 @@ System_String_o *__fastcall TutorialBigDialog__GetTuorialImageName(
   if ( (byte_40FB8E4 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&imgId);
-    sub_B16FFC(&StringLiteral_23414, v4);
-    sub_B16FFC(&StringLiteral_22733, v5);
+    sub_B16FFC(&StringLiteral_23414/*"{0:D4}"*/, v4);
+    sub_B16FFC(&StringLiteral_22733/*"tutorial_"*/, v5);
     byte_40FB8E4 = 1;
   }
   v9 = imgId;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-  v7 = System_String__Format((System_String_o *)StringLiteral_23414, v6, 0LL);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_22733, v7, 0LL);
+  v7 = System_String__Format((System_String_o *)StringLiteral_23414/*"{0:D4}"*/, v6, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_22733/*"tutorial_"*/, v7, 0LL);
 }
 
 
@@ -922,11 +922,11 @@ System_String_o *__fastcall TutorialBigDialog__GetTuorialImagePath(
 
   if ( (byte_40FB8E3 & 1) == 0 )
   {
-    this = (TutorialBigDialog_o *)sub_B16FFC(&StringLiteral_14514, *(_QWORD *)&imgId);
+    this = (TutorialBigDialog_o *)sub_B16FFC(&StringLiteral_14514/*"Tutorial/"*/, *(_QWORD *)&imgId);
     byte_40FB8E3 = 1;
   }
   TuorialImageName = TutorialBigDialog__GetTuorialImageName(this, imgId, method);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_14514, TuorialImageName, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_14514/*"Tutorial/"*/, TuorialImageName, 0LL);
 }
 
 
@@ -2761,8 +2761,8 @@ void __fastcall TutorialBigDialog__UpdateButtons(TutorialBigDialog_o *this, bool
     sub_B16FFC(&Method_UnityEngine_Component_GetComponentsInChildren_UILabel____66819928, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Count__, v6);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_13406, v8);
-    sub_B16FFC(&StringLiteral_13407, v9);
+    sub_B16FFC(&StringLiteral_13406/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/, v8);
+    sub_B16FFC(&StringLiteral_13407/*"TUTORIAL_IMAGE_DIALOG_PREV"*/, v9);
     byte_40FB8EE = 1;
   }
   if ( !isDisp )
@@ -2842,7 +2842,7 @@ void __fastcall TutorialBigDialog__UpdateButtons(TutorialBigDialog_o *this, bool
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_13406, 0LL);
+    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_13406/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/, 0LL);
     if ( !v25 )
 LABEL_45:
       sub_B170D4();
@@ -2880,7 +2880,7 @@ LABEL_46:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_13407, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_13407/*"TUTORIAL_IMAGE_DIALOG_PREV"*/, 0LL);
   if ( !v29 )
     goto LABEL_45;
   UILabel__set_text(v29, v30, 0LL);
@@ -3117,7 +3117,7 @@ void __fastcall TutorialBigDialog___LoadStartAssets_b__54_0(
     sub_B16FFC(&System_Action_TypeInfo, data);
     sub_B16FFC(&Method_AssetData_GetObject_Texture2D____66802808, v5);
     sub_B16FFC(&Method_TutorialBigDialog__LoadStartAssets_b__54_1__, v6);
-    sub_B16FFC(&StringLiteral_15944, v7);
+    sub_B16FFC(&StringLiteral_15944/*"_L_"*/, v7);
     byte_40FB8FA = 1;
   }
   if ( !data )
@@ -3130,7 +3130,7 @@ void __fastcall TutorialBigDialog___LoadStartAssets_b__54_0(
   v11 = ObjectNameList->m_Items[0];
   if ( !v11 )
     goto LABEL_12;
-  ObjectNameList = (System_String_array *)System_String__Contains(v11, (System_String_o *)StringLiteral_15944, 0LL);
+  ObjectNameList = (System_String_array *)System_String__Contains(v11, (System_String_o *)StringLiteral_15944/*"_L_"*/, 0LL);
   if ( ((unsigned __int8)ObjectNameList & 1) != 0 )
   {
     v14 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v9, v10, v12, v13);
@@ -3194,7 +3194,7 @@ void __fastcall TutorialBigDialog___LoadStart_b__53_0(
     sub_B16FFC(&System_Action_TypeInfo, data);
     sub_B16FFC(&Method_AssetData_GetObject_Texture2D____66802808, v5);
     sub_B16FFC(&Method_TutorialBigDialog__LoadStart_b__53_1__, v6);
-    sub_B16FFC(&StringLiteral_15944, v7);
+    sub_B16FFC(&StringLiteral_15944/*"_L_"*/, v7);
     byte_40FB8F9 = 1;
   }
   if ( !data )
@@ -3207,7 +3207,7 @@ void __fastcall TutorialBigDialog___LoadStart_b__53_0(
   v11 = ObjectNameList->m_Items[0];
   if ( !v11 )
     goto LABEL_12;
-  ObjectNameList = (System_String_array *)System_String__Contains(v11, (System_String_o *)StringLiteral_15944, 0LL);
+  ObjectNameList = (System_String_array *)System_String__Contains(v11, (System_String_o *)StringLiteral_15944/*"_L_"*/, 0LL);
   if ( ((unsigned __int8)ObjectNameList & 1) != 0 )
   {
     v14 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v9, v10, v12, v13);
@@ -3376,8 +3376,8 @@ void __fastcall TutorialBigDialog___c__DisplayClass56_0___AddScrollImg_b__0(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, v10);
     sub_B16FFC(&UnityEngine_Material_TypeInfo, v11);
     sub_B16FFC(&TutorialBigDialog_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_4519, v13);
-    sub_B16FFC(&StringLiteral_15952, v14);
+    sub_B16FFC(&StringLiteral_4519/*"Custom/SpriteWithMask"*/, v13);
+    sub_B16FFC(&StringLiteral_15952/*"_MaskTex"*/, v14);
     byte_40F7931 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -3393,7 +3393,7 @@ void __fastcall TutorialBigDialog___c__DisplayClass56_0___AddScrollImg_b__0(
     v5,
     v6,
     v7);
-  v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519, 0LL);
+  v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519/*"Custom/SpriteWithMask"*/, 0LL);
   v21 = (UnityEngine_Material_o *)sub_B170CC(UnityEngine_Material_TypeInfo, v17, v18, v19, v20);
   UnityEngine_Material___ctor(v21, v16, 0LL);
   comp = this->fields.comp;
@@ -3432,7 +3432,7 @@ void __fastcall TutorialBigDialog___c__DisplayClass56_0___AddScrollImg_b__0(
                                          alphaTexAssetData,
                                          TutorialBigDialog_TypeInfo->static_fields->alphaImgName,
                                          (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_Texture2D____66802808),
-        UnityEngine_Material__SetTexture(v21, (System_String_o *)StringLiteral_15952, v29, 0LL),
+        UnityEngine_Material__SetTexture(v21, (System_String_o *)StringLiteral_15952/*"_MaskTex"*/, v29, 0LL),
         (v30 = this->fields.__4__this) == 0LL)
     || (ImagePageList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v30->fields.ImagePageList) == 0LL )
   {

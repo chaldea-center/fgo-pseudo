@@ -47,12 +47,12 @@ System_String_o *__fastcall AtlasSubManagerEventUI__GetAssetPath(
   if ( (byte_40FBF27 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_6189, v4);
+    sub_B16FFC(&StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v4);
     byte_40FBF27 = 1;
   }
   v7 = eventId;
   v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v7);
-  return System_String__Format((System_String_o *)StringLiteral_6189, v5, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v5, 0LL);
 }
 
 

@@ -174,7 +174,7 @@ System_String_o *__fastcall WarBoardZoomSwitchButton__GetCurrentButtonSpriteName
   v3 = this;
   if ( (byte_40FA936 & 1) == 0 )
   {
-    this = (WarBoardZoomSwitchButton_o *)sub_B16FFC(&StringLiteral_1, method);
+    this = (WarBoardZoomSwitchButton_o *)sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FA936 = 1;
   }
   currentZoomIndex = v3->fields.currentZoomIndex;
@@ -192,7 +192,7 @@ System_String_o *__fastcall WarBoardZoomSwitchButton__GetCurrentButtonSpriteName
   if ( (int)currentZoomIndex >= max_length )
   {
 LABEL_10:
-    p_freeZoomSpriteName = (System_String_o **)&StringLiteral_1;
+    p_freeZoomSpriteName = (System_String_o **)&StringLiteral_1/*""*/;
     return *p_freeZoomSpriteName;
   }
   if ( (unsigned int)currentZoomIndex >= max_length )
@@ -353,7 +353,7 @@ void __fastcall WarBoardZoomSwitchButton__UpdateRuleButton(WarBoardZoomSwitchBut
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_19275, v4);
+    sub_B16FFC(&StringLiteral_19275/*"icon_noticebg_01"*/, v4);
     byte_40FA930 = 1;
   }
   newRuleBg = this->fields.newRuleBg;
@@ -362,7 +362,7 @@ void __fastcall WarBoardZoomSwitchButton__UpdateRuleButton(WarBoardZoomSwitchBut
   AtlasManager__SetCommon(newRuleBg, 0LL);
   v6 = this->fields.newRuleBg;
   if ( !v6
-    || (UISprite__set_spriteName(v6, (System_String_o *)StringLiteral_19275, 0LL),
+    || (UISprite__set_spriteName(v6, (System_String_o *)StringLiteral_19275/*"icon_noticebg_01"*/, 0LL),
         newRuleObject = this->fields.newRuleObject,
         (Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
     || (monitor = (WarBoardData_o *)Instance[4].monitor) == 0LL

@@ -446,8 +446,8 @@ void __fastcall SvtEqCombineListViewObject__OnClickSelect(SvtEqCombineListViewOb
     sub_B16FFC(&SoundManager_TypeInfo, method);
     sub_B16FFC(&SvtEqCombineListViewItem_TypeInfo, v4);
     sub_B16FFC(&SvtEqCombineListViewManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_9937, v6);
-    sub_B16FFC(&StringLiteral_9939, v7);
+    sub_B16FFC(&StringLiteral_9937/*"OnClickSelectBase"*/, v6);
+    sub_B16FFC(&StringLiteral_9939/*"OnClickSelectMaterial"*/, v7);
     byte_40FD66A = 1;
   }
   linkItem = (SvtEqCombineListViewItem_o *)this->fields.linkItem;
@@ -541,7 +541,7 @@ LABEL_41:
       v24 = (UnityEngine_Component_o *)this->fields.manager;
       if ( !v24 )
         goto LABEL_61;
-      UnityEngine_Component__SendMessage(v24, (System_String_o *)StringLiteral_9937, (Il2CppObject *)this, 0LL);
+      UnityEngine_Component__SendMessage(v24, (System_String_o *)StringLiteral_9937/*"OnClickSelectBase"*/, (Il2CppObject *)this, 0LL);
     }
     type = linkItem->fields.type;
   }
@@ -589,7 +589,7 @@ LABEL_41:
     v26 = (UnityEngine_Component_o *)this->fields.manager;
     if ( v26 )
     {
-      UnityEngine_Component__SendMessage(v26, (System_String_o *)StringLiteral_9939, (Il2CppObject *)this, 0LL);
+      UnityEngine_Component__SendMessage(v26, (System_String_o *)StringLiteral_9939/*"OnClickSelectMaterial"*/, (Il2CppObject *)this, 0LL);
       return;
     }
 LABEL_61:
@@ -709,8 +709,8 @@ void __fastcall SvtEqCombineListViewObject__OnLongPush(SvtEqCombineListViewObjec
   {
     sub_B16FFC(&SvtEqCombineListViewItem_TypeInfo, method);
     sub_B16FFC(&SvtEqCombineListViewManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_9991, v5);
-    sub_B16FFC(&StringLiteral_10009, v6);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, v5);
+    sub_B16FFC(&StringLiteral_10009/*"OnPressCancel"*/, v6);
     byte_40FD66B = 1;
   }
   linkItem = this->fields.linkItem;
@@ -757,13 +757,13 @@ void __fastcall SvtEqCombineListViewObject__OnLongPush(SvtEqCombineListViewObjec
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
         if ( gameObject )
         {
-          UnityEngine_GameObject__SendMessage_40693392(gameObject, (System_String_o *)StringLiteral_10009, 0LL);
+          UnityEngine_GameObject__SendMessage_40693392(gameObject, (System_String_o *)StringLiteral_10009/*"OnPressCancel"*/, 0LL);
           v15 = (UnityEngine_Component_o *)this->fields.manager;
           if ( v15 )
           {
             UnityEngine_Component__SendMessage(
               v15,
-              (System_String_o *)StringLiteral_9991,
+              (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/,
               (Il2CppObject *)this->fields.linkItem,
               0LL);
             return;
@@ -795,8 +795,8 @@ void __fastcall SvtEqCombineListViewObject__OnLongRelease(SvtEqCombineListViewOb
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
     sub_B16FFC(&SvtEqCombineListViewManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9991, v4);
-    sub_B16FFC(&StringLiteral_3546, v5);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, v4);
+    sub_B16FFC(&StringLiteral_3546/*"CancelDragEnd"*/, v5);
     byte_40FD66D = 1;
   }
   if ( this->fields.linkItem )
@@ -825,14 +825,14 @@ void __fastcall SvtEqCombineListViewObject__OnLongRelease(SvtEqCombineListViewOb
           return;
         UnityEngine_Component__SendMessage_40674196(
           (UnityEngine_Component_o *)manager,
-          (System_String_o *)StringLiteral_3546,
+          (System_String_o *)StringLiteral_3546/*"CancelDragEnd"*/,
           0LL);
         v10 = (UnityEngine_Component_o *)this->fields.manager;
         if ( v10 )
         {
           UnityEngine_Component__SendMessage(
             v10,
-            (System_String_o *)StringLiteral_9991,
+            (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/,
             (Il2CppObject *)this->fields.linkItem,
             0LL);
           return;
@@ -1051,7 +1051,7 @@ System_String_o *__fastcall SvtEqCombineListViewObject__ToString(
   if ( (byte_40FD669 & 1) == 0 )
   {
     sub_B16FFC(&SvtEqCombineListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40FD669 = 1;
   }
   v13 = 0.0;
@@ -1070,7 +1070,7 @@ System_String_o *__fastcall SvtEqCombineListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

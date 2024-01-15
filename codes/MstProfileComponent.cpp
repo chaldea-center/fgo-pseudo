@@ -133,8 +133,8 @@ void __fastcall MstProfileComponent__OnClickSubmit(
   if ( (byte_40F7DCB & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, changeName);
-    sub_B16FFC(&StringLiteral_3899, v5);
-    sub_B16FFC(&StringLiteral_3071, v6);
+    sub_B16FFC(&StringLiteral_3899/*"ChangeUserName"*/, v5);
+    sub_B16FFC(&StringLiteral_3071/*"CLICK_SUBMIT"*/, v6);
     byte_40F7DCB = 1;
   }
   myRoomFsm = (UnityEngine_Object_o *)this->fields.myRoomFsm;
@@ -151,7 +151,7 @@ void __fastcall MstProfileComponent__OnClickSubmit(
       || (variables = Fsm->fields.variables) == 0LL
       || (FsmString = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                         variables,
-                        (System_String_o *)StringLiteral_3899,
+                        (System_String_o *)StringLiteral_3899/*"ChangeUserName"*/,
                         0LL)) == 0LL
       || (FsmString->fields.value = changeName,
           sub_B16F98(
@@ -167,7 +167,7 @@ void __fastcall MstProfileComponent__OnClickSubmit(
     {
       sub_B170D4();
     }
-    PlayMakerFSM__SendEvent(v24, (System_String_o *)StringLiteral_3071, 0LL);
+    PlayMakerFSM__SendEvent(v24, (System_String_o *)StringLiteral_3071/*"CLICK_SUBMIT"*/, 0LL);
   }
   else
   {
@@ -235,7 +235,7 @@ void __fastcall MstProfileComponent__SetProfileData(MstProfileComponent_o *this,
     sub_B16FFC(&FSUtility_TypeInfo, method);
     sub_B16FFC(&MstProfileComponent_TypeInfo, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_8946, v5);
+    sub_B16FFC(&StringLiteral_8946/*"MasterProfileInfo"*/, v5);
     byte_40F7DBE = 1;
   }
   if ( (BYTE3(FSUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !FSUtility_TypeInfo->_2.cctor_finished )
@@ -249,7 +249,7 @@ void __fastcall MstProfileComponent__SetProfileData(MstProfileComponent_o *this,
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       if ( !transform )
         goto LABEL_22;
-      v8 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_8946, 0LL);
+      v8 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_8946/*"MasterProfileInfo"*/, 0LL);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -613,11 +613,11 @@ void __fastcall MstProfileComponent__callbackChangeMessage(
 
   if ( (byte_40F7DD8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21129, result);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, result);
     byte_40F7DD8 = 1;
   }
   if ( !result
-    || (v5 = System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129, 0LL),
+    || (v5 = System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL),
         !this->fields.userMessageInputDlg) )
   {
     sub_B170D4();
@@ -641,12 +641,12 @@ void __fastcall MstProfileComponent__callbackChangeName(
 
   if ( (byte_40F7DDB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21129, result);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, result);
     byte_40F7DDB = 1;
   }
   if ( !result )
     goto LABEL_10;
-  v5 = System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129, 0LL);
+  v5 = System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL);
   changeNameWindow = this->fields.changeNameWindow;
   if ( v5 )
   {
@@ -750,7 +750,7 @@ void __fastcall MstProfileComponent__checkInput(MstProfileComponent_o *this, con
     sub_B16FFC(&Method_MstProfileComponent_callbackChangeName__, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_2967, v5);
+    sub_B16FFC(&StringLiteral_2967/*"CHECK_OK"*/, v5);
     byte_40F7DCC = 1;
   }
   myRoomFsm = (UnityEngine_Object_o *)this->fields.myRoomFsm;
@@ -764,7 +764,7 @@ void __fastcall MstProfileComponent__checkInput(MstProfileComponent_o *this, con
     v7 = this->fields.myRoomFsm;
     if ( v7 )
     {
-      PlayMakerFSM__SendEvent(v7, (System_String_o *)StringLiteral_2967, 0LL);
+      PlayMakerFSM__SendEvent(v7, (System_String_o *)StringLiteral_2967/*"CHECK_OK"*/, 0LL);
       return;
     }
 LABEL_11:
@@ -924,7 +924,7 @@ void __fastcall MstProfileComponent__dispSetBirth(
     sub_B16FFC(&CondType_TypeInfo, callback);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&MstProfileComponent_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_2553, v7);
+    sub_B16FFC(&StringLiteral_2553/*"BIRTHDAY"*/, v7);
     byte_40F7DC4 = 1;
   }
   v32.fields.dateData = (uint64_t)&this->fields.dtBirthDay;
@@ -990,7 +990,7 @@ void __fastcall MstProfileComponent__dispSetBirth(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_2553, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_2553/*"BIRTHDAY"*/, 0LL);
   if ( !this->fields.inputBirthDayWindow )
     goto LABEL_32;
   v26 = v25;
@@ -1028,7 +1028,7 @@ void __fastcall MstProfileComponent__endOpenChangeDlg(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, res);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_3040, v8);
+    sub_B16FFC(&StringLiteral_3040/*"CLICK_CANCLE"*/, v8);
     byte_40F7DCA = 1;
   }
   if ( !res )
@@ -1050,7 +1050,7 @@ void __fastcall MstProfileComponent__endOpenChangeDlg(
       v11 = this->fields.myRoomFsm;
       if ( v11 )
       {
-        PlayMakerFSM__SendEvent(v11, (System_String_o *)StringLiteral_3040, 0LL);
+        PlayMakerFSM__SendEvent(v11, (System_String_o *)StringLiteral_3040/*"CLICK_CANCLE"*/, 0LL);
         return;
       }
     }
@@ -1383,7 +1383,7 @@ void __fastcall MstProfileComponent__messageSetup(MstProfileComponent_o *this, c
   if ( (byte_40F7DB9 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_8712, v3);
+    sub_B16FFC(&StringLiteral_8712/*"MESSAGE_CHANGE_NO_INPUT"*/, v3);
     byte_40F7DB9 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -1397,7 +1397,7 @@ void __fastcall MstProfileComponent__messageSetup(MstProfileComponent_o *this, c
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8712, 0LL);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8712/*"MESSAGE_CHANGE_NO_INPUT"*/, 0LL);
     messageLabel = this->fields.messageLabel;
     p_messageLabel = &this->fields.messageLabel;
     v7 = messageLabel;
@@ -1980,8 +1980,8 @@ void __fastcall MstProfileComponent__setCmdSpellRecoverTime(
   {
     sub_B16FFC(&int_TypeInfo, recoverTime);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_3247, v6);
-    sub_B16FFC(&StringLiteral_3249, v7);
+    sub_B16FFC(&StringLiteral_3247/*"COMMAND_SPELL_RECOVER_TIME"*/, v6);
+    sub_B16FFC(&StringLiteral_3249/*"COMMNAD_SPELL_RECV_TXT"*/, v7);
     byte_40F7DBF = 1;
   }
   if ( recoverTime > 0 )
@@ -1992,7 +1992,7 @@ void __fastcall MstProfileComponent__setCmdSpellRecoverTime(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3249, 0LL);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3249/*"COMMNAD_SPELL_RECV_TXT"*/, 0LL);
     if ( recoverTitleLb )
     {
       v10 = recoverTime / 0xE10uLL;
@@ -2000,7 +2000,7 @@ void __fastcall MstProfileComponent__setCmdSpellRecoverTime(
       v12 = recoverTime % 0x3CuLL;
       UILabel__set_text(recoverTitleLb, v9, 0LL);
       recoverTimeLb = this->fields.recoverTimeLb;
-      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3247, 0LL);
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3247/*"COMMAND_SPELL_RECOVER_TIME"*/, 0LL);
       v22 = v10;
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
       v21 = v11;
@@ -2478,7 +2478,7 @@ void __fastcall MstProfileComponent__setUserExp(MstProfileComponent_o *this, con
 
   if ( (byte_40F7DC6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_340, method);
+    sub_B16FFC(&StringLiteral_340/*"#,0"*/, method);
     byte_40F7DC6 = 1;
   }
   lateExp = 0LL;
@@ -2490,7 +2490,7 @@ void __fastcall MstProfileComponent__setUserExp(MstProfileComponent_o *this, con
   if ( !UserGameEntity__getExpInfo(usrGameEnt, &exp, &lateExp, &barExp, 0LL) )
     return;
   userExpLb = this->fields.userExpLb;
-  v5 = System_Int64__ToString_38278592((int64_t)&lateExp, (System_String_o *)StringLiteral_340, 0LL);
+  v5 = System_Int64__ToString_38278592((int64_t)&lateExp, (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
   if ( !userExpLb || (UILabel__set_text(userExpLb, v5, 0LL), (expBar = (UIProgressBar_o *)this->fields.expBar) == 0LL) )
 LABEL_9:
     sub_B170D4();
@@ -2541,7 +2541,7 @@ void __fastcall MstProfileComponent__setUserLv(MstProfileComponent_o *this, cons
   if ( (byte_40F7DC5 & 1) == 0 )
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F7DC5 = 1;
   }
   usrGameEnt = this->fields.usrGameEnt;
@@ -2554,7 +2554,7 @@ void __fastcall MstProfileComponent__setUserLv(MstProfileComponent_o *this, cons
   if ( v6 )
     v7 = v6;
   else
-    v7 = (System_String_o *)StringLiteral_1;
+    v7 = (System_String_o *)StringLiteral_1/*""*/;
   UIExtrusionLabel__set_text(userLevelLb, v7, 0LL);
   userMaxLvLb = this->fields.userMaxLvLb;
   v9 = BalanceConfig_TypeInfo;
@@ -2571,7 +2571,7 @@ LABEL_16:
   if ( v10 )
     v11 = v10;
   else
-    v11 = (System_String_o *)StringLiteral_1;
+    v11 = (System_String_o *)StringLiteral_1/*""*/;
   UILabel__set_text(userMaxLvLb, v11, 0LL);
 }
 
@@ -2675,9 +2675,9 @@ void __fastcall MstProfileComponent__showLoginCountInfo(MstProfileComponent_o *t
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v8);
-    sub_B16FFC(&StringLiteral_23433, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
-    sub_B16FFC(&StringLiteral_9270, v11);
+    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
+    sub_B16FFC(&StringLiteral_9270/*"NEXT_TOTAL_LOGIN_BONUS_DAYS"*/, v11);
     byte_40F7DCE = 1;
   }
   v12 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
@@ -2731,21 +2731,21 @@ void __fastcall MstProfileComponent__showLoginCountInfo(MstProfileComponent_o *t
   seqLoginLb = this->fields.seqLoginLb;
   v37 = hiddenValue;
   v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37);
-  v27 = System_String__Format((System_String_o *)StringLiteral_23433, v26, 0LL);
+  v27 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v26, 0LL);
   if ( !seqLoginLb )
     goto LABEL_30;
   UILabel__set_text(seqLoginLb, v27, 0LL);
   totalLoginLb = this->fields.totalLoginLb;
   v36 = hiddenValue_high;
   v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v36);
-  v30 = System_String__Format((System_String_o *)StringLiteral_23433, v29, 0LL);
+  v30 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v29, 0LL);
   if ( !totalLoginLb )
     goto LABEL_30;
   UILabel__set_text(totalLoginLb, v30, 0LL);
   nextLoginBonusLb = this->fields.nextLoginBonusLb;
   if ( NextLoginBonusDay < 1 )
   {
-    v34 = (System_String_o *)StringLiteral_1;
+    v34 = (System_String_o *)StringLiteral_1/*""*/;
     if ( nextLoginBonusLb )
       goto LABEL_28;
 LABEL_30:
@@ -2756,7 +2756,7 @@ LABEL_30:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_9270, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_9270/*"NEXT_TOTAL_LOGIN_BONUS_DAYS"*/, 0LL);
   v35 = NextLoginBonusDay;
   v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
   v34 = System_String__Format(v32, v33, 0LL);

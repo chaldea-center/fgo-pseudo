@@ -68,13 +68,13 @@ void __fastcall LimitUpResultInfoRewardComponent__Setup(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&iconImageId);
     sub_B16FFC(&LimitUpResultInfoRewardComponent_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_19284, v12);
+    sub_B16FFC(&StringLiteral_19284/*"icon_reward_get"*/, v12);
     byte_40FCC37 = 1;
   }
   rewardInfoGetIcon = this->fields.rewardInfoGetIcon;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(rewardInfoGetIcon, (System_String_o *)StringLiteral_19284, 0LL);
+  AtlasManager__SetEventUI(rewardInfoGetIcon, (System_String_o *)StringLiteral_19284/*"icon_reward_get"*/, 0LL);
   rewardInfoIcon = this->fields.rewardInfoIcon;
   if ( !rewardInfoIcon )
     goto LABEL_24;

@@ -39,17 +39,17 @@ void __fastcall AssetDataListInfo___ctor(AssetDataListInfo_o *this, const Method
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_AssetData___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_List_AssetData__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FCA05 = 1;
   }
-  v11 = (System_Int32_array **)StringLiteral_1;
-  this->fields.masterVersion = (struct System_String_o *)StringLiteral_1;
+  v11 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.masterVersion = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields, v11, v2, v3, v4, v5, v6, v7);
-  v12 = (System_Int32_array **)StringLiteral_1;
-  this->fields.dateVersion = (struct System_String_o *)StringLiteral_1;
+  v12 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.dateVersion = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.dateVersion, v12, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Int32_array **)StringLiteral_1;
-  this->fields.buildVersion = (struct System_String_o *)StringLiteral_1;
+  v19 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.buildVersion = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.buildVersion, v19, v20, v21, v22, v23, v24, v25);
   v30 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_AssetData__TypeInfo,

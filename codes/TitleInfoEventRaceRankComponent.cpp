@@ -73,7 +73,7 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameIn(
   {
     sub_B16FFC(&TitleInfoEventRaceRankComponent_TypeInfo, callback);
     sub_B16FFC(&Method_UITweener_Begin_TweenPosition___, v5);
-    sub_B16FFC(&StringLiteral_6762, v6);
+    sub_B16FFC(&StringLiteral_6762/*"FrameInFinish"*/, v6);
     byte_40FDFDF = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -104,8 +104,8 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameIn(
   v14 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v10->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v14;
   sub_B16F98((BattleServantConfConponent_o *)&v10->fields.eventReceiver, v14, v15, v16, v17, v18, v19, v20);
-  v21 = (System_Int32_array **)StringLiteral_6762;
-  v10->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6762;
+  v21 = (System_Int32_array **)StringLiteral_6762/*"FrameInFinish"*/;
+  v10->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6762/*"FrameInFinish"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v10->fields.callWhenFinished, v21, v22, v23, v24, v25, v26, v27);
   this[1].klass = (TitleInfoEventRaceRankComponent_c *)callback;
   sub_B16F98((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)callback, v28, v29, v30, v31, v32, v33);
@@ -171,7 +171,7 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameOut(
   {
     sub_B16FFC(&TitleInfoEventRaceRankComponent_TypeInfo, method);
     sub_B16FFC(&Method_UITweener_Begin_TweenPosition___, v3);
-    sub_B16FFC(&StringLiteral_6764, v4);
+    sub_B16FFC(&StringLiteral_6764/*"FrameOutFinish"*/, v4);
     byte_40FDFE0 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -203,8 +203,8 @@ void __fastcall TitleInfoEventRaceRankComponent__FrameOut(
   v15 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v9->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v15;
   sub_B16F98((BattleServantConfConponent_o *)&v9->fields.eventReceiver, v15, v16, v17, v18, v19, v20, v21);
-  v22 = (System_Int32_array **)StringLiteral_6764;
-  v9->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6764;
+  v22 = (System_Int32_array **)StringLiteral_6764/*"FrameOutFinish"*/;
+  v9->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6764/*"FrameOutFinish"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v9->fields.callWhenFinished, v22, v23, v24, v25, v26, v27, v28);
 }
 
@@ -398,11 +398,11 @@ void __fastcall TitleInfoEventRaceRankComponent__Setup(
     sub_B16FFC(&NetworkManager_TypeInfo, v23);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v24);
     sub_B16FFC(&TitleInfoEventRaceRankComponent_TypeInfo, v25);
-    sub_B16FFC(&StringLiteral_21578, v26);
-    sub_B16FFC(&StringLiteral_15842, v27);
-    sub_B16FFC(&StringLiteral_21579, v28);
-    sub_B16FFC(&StringLiteral_21577, v29);
-    sub_B16FFC(&StringLiteral_961, v30);
+    sub_B16FFC(&StringLiteral_21578/*"race_status_goal_"*/, v26);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v27);
+    sub_B16FFC(&StringLiteral_21579/*"race_status_rank_"*/, v28);
+    sub_B16FFC(&StringLiteral_21577/*"race_status_"*/, v29);
+    sub_B16FFC(&StringLiteral_961/*"000"*/, v30);
     byte_40FDFDE = 1;
   }
   v129 = 0uLL;
@@ -617,9 +617,9 @@ LABEL_136:
     {
       v93 = System_Int32__ToString((int32_t)&v131, 0LL);
       v94 = System_String__Concat_43746016(
-              (System_String_o *)StringLiteral_21577,
+              (System_String_o *)StringLiteral_21577/*"race_status_"*/,
               v93,
-              (System_String_o *)StringLiteral_961,
+              (System_String_o *)StringLiteral_961/*"000"*/,
               0LL);
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -639,7 +639,7 @@ LABEL_136:
       v130 = *((_QWORD *)v85 + 6);
       v129 = v86;
       v87 = System_Int32__ToString((int32_t)&v129, 0LL);
-      v88 = System_String__Concat_43743732((System_String_o *)StringLiteral_21577, v87, 0LL);
+      v88 = System_String__Concat_43743732((System_String_o *)StringLiteral_21577/*"race_status_"*/, v87, 0LL);
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
       {
@@ -703,9 +703,9 @@ LABEL_89:
     v101 = (UISprite_o *)*((_QWORD *)&goalIcon->obj.klass + v98);
     v102 = System_Int32__ToString((int32_t)&v131, 0LL);
     v103 = System_String__Concat_43746016(
-             (System_String_o *)StringLiteral_21577,
+             (System_String_o *)StringLiteral_21577/*"race_status_"*/,
              v102,
-             (System_String_o *)StringLiteral_961,
+             (System_String_o *)StringLiteral_961/*"000"*/,
              0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -746,9 +746,9 @@ LABEL_89:
     v110 = System_Int32__ToString((int32_t)&v131, 0LL);
     v111 = System_Int32__ToString((int32_t)&v128, 0LL);
     v112 = System_String__Concat_43747144(
-             (System_String_o *)StringLiteral_21579,
+             (System_String_o *)StringLiteral_21579/*"race_status_rank_"*/,
              v110,
-             (System_String_o *)StringLiteral_15842,
+             (System_String_o *)StringLiteral_15842/*"_"*/,
              v111,
              0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -776,7 +776,7 @@ LABEL_89:
       goto LABEL_138;
     v117 = *(UISprite_o **)(v113 + 8 * v114 + 32);
     v118 = System_Int32__ToString((int32_t)&v131, 0LL);
-    v119 = System_String__Concat_43743732((System_String_o *)StringLiteral_21578, v118, 0LL);
+    v119 = System_String__Concat_43743732((System_String_o *)StringLiteral_21578/*"race_status_goal_"*/, v118, 0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {

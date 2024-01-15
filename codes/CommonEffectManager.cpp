@@ -51,17 +51,17 @@ void __fastcall CommonEffectManager___cctor(const MethodInfo *method)
   if ( (byte_40F65A8 & 1) == 0 )
   {
     sub_B16FFC(&CommonEffectManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_5795, v8);
-    sub_B16FFC(&StringLiteral_5831, v9);
+    sub_B16FFC(&StringLiteral_5795/*"Effect/"*/, v8);
+    sub_B16FFC(&StringLiteral_5831/*"Effect/Skin/{0:D2}"*/, v9);
     byte_40F65A8 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)CommonEffectManager_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_5795;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5795;
+  v11 = (System_Int32_array **)StringLiteral_5795/*"Effect/"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5795/*"Effect/"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = CommonEffectManager_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_5831;
-  v12->skinEffectAssetStoragePath = (struct System_String_o *)StringLiteral_5831;
+  v13 = (System_Int32_array **)StringLiteral_5831/*"Effect/Skin/{0:D2}"*/;
+  v12->skinEffectAssetStoragePath = (struct System_String_o *)StringLiteral_5831/*"Effect/Skin/{0:D2}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->skinEffectAssetStoragePath, v13, v14, v15, v16, v17, v18, v19);
   v20 = CommonEffectManager_TypeInfo->static_fields;
   v20->testEffectPrefab = 0LL;
@@ -1817,24 +1817,24 @@ void __fastcall CommonEffectManager__LoadCreateLocal(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_CommonEffectLoadComponent___, v21);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v22);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_13500, v24);
-    sub_B16FFC(&StringLiteral_13507, v25);
-    sub_B16FFC(&StringLiteral_13505, v26);
-    sub_B16FFC(&StringLiteral_13503, v27);
-    sub_B16FFC(&StringLiteral_13499, v28);
-    sub_B16FFC(&StringLiteral_13501, v29);
-    sub_B16FFC(&StringLiteral_13502, v30);
+    sub_B16FFC(&StringLiteral_13500/*"Talk/TestBackEffect"*/, v24);
+    sub_B16FFC(&StringLiteral_13507/*"Talk/communicationCharaEffect"*/, v25);
+    sub_B16FFC(&StringLiteral_13505/*"Talk/bit_talk_10"*/, v26);
+    sub_B16FFC(&StringLiteral_13503/*"Talk/TestEffect"*/, v27);
+    sub_B16FFC(&StringLiteral_13499/*"Talk/Test"*/, v28);
+    sub_B16FFC(&StringLiteral_13501/*"Talk/TestCharaBackEffect"*/, v29);
+    sub_B16FFC(&StringLiteral_13502/*"Talk/TestCharaEffect"*/, v30);
     byte_40F659C = 1;
   }
   if ( !effectName )
     goto LABEL_57;
-  if ( !System_String__StartsWith(effectName, (System_String_o *)StringLiteral_13499, 0LL) )
+  if ( !System_String__StartsWith(effectName, (System_String_o *)StringLiteral_13499/*"Talk/Test"*/, 0LL) )
   {
-    if ( System_String__op_Equality(effectName, (System_String_o *)StringLiteral_13507, 0LL) )
-      effectName = (System_String_o *)StringLiteral_13505;
+    if ( System_String__op_Equality(effectName, (System_String_o *)StringLiteral_13507/*"Talk/communicationCharaEffect"*/, 0LL) )
+      effectName = (System_String_o *)StringLiteral_13505/*"Talk/bit_talk_10"*/;
     goto LABEL_12;
   }
-  if ( System_String__op_Equality(effectName, (System_String_o *)StringLiteral_13503, 0LL) )
+  if ( System_String__op_Equality(effectName, (System_String_o *)StringLiteral_13503/*"Talk/TestEffect"*/, 0LL) )
   {
     v31 = CommonEffectManager_TypeInfo;
     if ( (BYTE3(CommonEffectManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1846,7 +1846,7 @@ void __fastcall CommonEffectManager__LoadCreateLocal(
     p_testEffectPrefab = (UnityEngine_Object_o **)&v31->static_fields->testEffectPrefab;
     goto LABEL_38;
   }
-  if ( System_String__op_Equality(effectName, (System_String_o *)StringLiteral_13500, 0LL) )
+  if ( System_String__op_Equality(effectName, (System_String_o *)StringLiteral_13500/*"Talk/TestBackEffect"*/, 0LL) )
   {
     v51 = CommonEffectManager_TypeInfo;
     if ( (BYTE3(CommonEffectManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1858,7 +1858,7 @@ void __fastcall CommonEffectManager__LoadCreateLocal(
     p_testEffectPrefab = (UnityEngine_Object_o **)&v51->static_fields->testBackEffectPrefab;
     goto LABEL_38;
   }
-  if ( System_String__op_Equality(effectName, (System_String_o *)StringLiteral_13502, 0LL) )
+  if ( System_String__op_Equality(effectName, (System_String_o *)StringLiteral_13502/*"Talk/TestCharaEffect"*/, 0LL) )
   {
     v44 = CommonEffectManager_TypeInfo;
     if ( (BYTE3(CommonEffectManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1870,7 +1870,7 @@ void __fastcall CommonEffectManager__LoadCreateLocal(
     p_testEffectPrefab = (UnityEngine_Object_o **)&v44->static_fields->testCharaEffectPrefab;
     goto LABEL_38;
   }
-  if ( !System_String__op_Equality(effectName, (System_String_o *)StringLiteral_13501, 0LL) )
+  if ( !System_String__op_Equality(effectName, (System_String_o *)StringLiteral_13501/*"Talk/TestCharaBackEffect"*/, 0LL) )
   {
 LABEL_12:
     if ( (BYTE3(CommonEffectManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

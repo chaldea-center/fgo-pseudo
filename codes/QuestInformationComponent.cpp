@@ -62,10 +62,10 @@ void __fastcall QuestInformationComponent___cctor(const MethodInfo *method)
     sub_B16FFC(&QuestInformationComponent_TypeInfo, v1);
     sub_B16FFC(&string_____TypeInfo, v3);
     sub_B16FFC(&string___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_21555, v5);
-    sub_B16FFC(&StringLiteral_21553, v6);
-    sub_B16FFC(&StringLiteral_21556, v7);
-    sub_B16FFC(&StringLiteral_21554, v8);
+    sub_B16FFC(&StringLiteral_21555/*"questinfo_tab_btn_txt_02_off"*/, v5);
+    sub_B16FFC(&StringLiteral_21553/*"questinfo_tab_btn_txt_01_off"*/, v6);
+    sub_B16FFC(&StringLiteral_21556/*"questinfo_tab_btn_txt_02_on"*/, v7);
+    sub_B16FFC(&StringLiteral_21554/*"questinfo_tab_btn_txt_01_on"*/, v8);
     byte_40F95B1 = 1;
   }
   v9 = (System_Int32_array **)sub_B17014(string_____TypeInfo, 2LL, v2);
@@ -73,13 +73,13 @@ void __fastcall QuestInformationComponent___cctor(const MethodInfo *method)
   if ( !v11 )
     goto LABEL_33;
   v18 = (System_Int32_array **)v11;
-  v19 = StringLiteral_21553;
-  if ( StringLiteral_21553 )
+  v19 = StringLiteral_21553/*"questinfo_tab_btn_txt_01_off"*/;
+  if ( StringLiteral_21553/*"questinfo_tab_btn_txt_01_off"*/ )
   {
-    v19 = sub_B170BC(StringLiteral_21553, *(_QWORD *)&(*v18)->m_Items[9]);
+    v19 = sub_B170BC(StringLiteral_21553/*"questinfo_tab_btn_txt_01_off"*/, *(_QWORD *)&(*v18)->m_Items[9]);
     if ( !v19 )
       goto LABEL_32;
-    v20 = (System_Int32_array **)StringLiteral_21553;
+    v20 = (System_Int32_array **)StringLiteral_21553/*"questinfo_tab_btn_txt_01_off"*/;
   }
   else
   {
@@ -89,13 +89,13 @@ void __fastcall QuestInformationComponent___cctor(const MethodInfo *method)
     goto LABEL_31;
   v18[4] = (System_Int32_array *)v20;
   sub_B16F98((BattleServantConfConponent_o *)(v18 + 4), v20, v12, v13, v14, v15, v16, v17);
-  v19 = StringLiteral_21554;
-  if ( StringLiteral_21554 )
+  v19 = StringLiteral_21554/*"questinfo_tab_btn_txt_01_on"*/;
+  if ( StringLiteral_21554/*"questinfo_tab_btn_txt_01_on"*/ )
   {
-    v19 = sub_B170BC(StringLiteral_21554, *(_QWORD *)&(*v18)->m_Items[9]);
+    v19 = sub_B170BC(StringLiteral_21554/*"questinfo_tab_btn_txt_01_on"*/, *(_QWORD *)&(*v18)->m_Items[9]);
     if ( !v19 )
       goto LABEL_32;
-    v20 = (System_Int32_array **)StringLiteral_21554;
+    v20 = (System_Int32_array **)StringLiteral_21554/*"questinfo_tab_btn_txt_01_on"*/;
   }
   else
   {
@@ -119,13 +119,13 @@ void __fastcall QuestInformationComponent___cctor(const MethodInfo *method)
 LABEL_33:
     sub_B170D4();
   v38 = (System_Int32_array **)v32;
-  v19 = StringLiteral_21555;
-  if ( StringLiteral_21555 )
+  v19 = StringLiteral_21555/*"questinfo_tab_btn_txt_02_off"*/;
+  if ( StringLiteral_21555/*"questinfo_tab_btn_txt_02_off"*/ )
   {
-    v19 = sub_B170BC(StringLiteral_21555, *(_QWORD *)&(*v38)->m_Items[9]);
+    v19 = sub_B170BC(StringLiteral_21555/*"questinfo_tab_btn_txt_02_off"*/, *(_QWORD *)&(*v38)->m_Items[9]);
     if ( !v19 )
       goto LABEL_32;
-    v20 = (System_Int32_array **)StringLiteral_21555;
+    v20 = (System_Int32_array **)StringLiteral_21555/*"questinfo_tab_btn_txt_02_off"*/;
   }
   else
   {
@@ -135,13 +135,13 @@ LABEL_33:
     goto LABEL_31;
   v38[4] = (System_Int32_array *)v20;
   sub_B16F98((BattleServantConfConponent_o *)(v38 + 4), v20, v12, v33, v34, v35, v36, v37);
-  v19 = StringLiteral_21556;
-  if ( StringLiteral_21556 )
+  v19 = StringLiteral_21556/*"questinfo_tab_btn_txt_02_on"*/;
+  if ( StringLiteral_21556/*"questinfo_tab_btn_txt_02_on"*/ )
   {
-    v19 = sub_B170BC(StringLiteral_21556, *(_QWORD *)&(*v38)->m_Items[9]);
+    v19 = sub_B170BC(StringLiteral_21556/*"questinfo_tab_btn_txt_02_on"*/, *(_QWORD *)&(*v38)->m_Items[9]);
     if ( !v19 )
       goto LABEL_32;
-    v20 = (System_Int32_array **)StringLiteral_21556;
+    v20 = (System_Int32_array **)StringLiteral_21556/*"questinfo_tab_btn_txt_02_on"*/;
   }
   else
   {
@@ -997,10 +997,10 @@ bool __fastcall QuestInformationComponent__Setup(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
     sub_B16FFC(&Method_QuestInformationComponent___c__Setup_b__30_0__, v26);
     sub_B16FFC(&QuestInformationComponent___c_TypeInfo, v27);
-    sub_B16FFC(&StringLiteral_10906, v28);
-    sub_B16FFC(&StringLiteral_10908, v29);
-    sub_B16FFC(&StringLiteral_10907, v30);
-    sub_B16FFC(&StringLiteral_10905, v31);
+    sub_B16FFC(&StringLiteral_10906/*"QUEST_INFO_TAB_ENEMY_FORCE_DISP"*/, v28);
+    sub_B16FFC(&StringLiteral_10908/*"QUEST_INFO_TOP"*/, v29);
+    sub_B16FFC(&StringLiteral_10907/*"QUEST_INFO_TAB_REWARD"*/, v30);
+    sub_B16FFC(&StringLiteral_10905/*"QUEST_INFO_TAB_ENEMY"*/, v31);
     byte_40F95AB = 1;
   }
   entity = 0LL;
@@ -1137,7 +1137,7 @@ LABEL_58:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v95 = &StringLiteral_10907;
+              v95 = &StringLiteral_10907/*"QUEST_INFO_TAB_REWARD"*/;
 LABEL_87:
               v97 = LocalizationManager__Get((System_String_o *)*v95, 0LL);
               if ( tabInfoLabel )
@@ -1150,7 +1150,7 @@ LABEL_87:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v99 = LocalizationManager__Get((System_String_o *)StringLiteral_10908, 0LL);
+                v99 = LocalizationManager__Get((System_String_o *)StringLiteral_10908/*"QUEST_INFO_TOP"*/, 0LL);
                 if ( titleBarInfoLabel )
                 {
                   UILabel__set_text(titleBarInfoLabel, v99, 0LL);
@@ -1303,7 +1303,7 @@ LABEL_96:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v95 = &StringLiteral_10906;
+                v95 = &StringLiteral_10906/*"QUEST_INFO_TAB_ENEMY_FORCE_DISP"*/;
               }
               else
               {
@@ -1312,7 +1312,7 @@ LABEL_96:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v95 = &StringLiteral_10905;
+                v95 = &StringLiteral_10905/*"QUEST_INFO_TAB_ENEMY"*/;
               }
               goto LABEL_87;
             }

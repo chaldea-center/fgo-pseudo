@@ -4,12 +4,12 @@ void __fastcall BattleParamComponent___ctor(BattleParamComponent_o *this, const 
 
   if ( (byte_40F6B00 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F6B00 = 1;
   }
   this->fields.nextStepTime = 1.5;
-  v3 = StringLiteral_1;
-  this->fields.baseAnimationName = (struct System_String_o *)StringLiteral_1;
+  v3 = StringLiteral_1/*""*/;
+  this->fields.baseAnimationName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(&this->fields.baseAnimationName, v3);
   this->fields.maxPhase = 1;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
@@ -73,7 +73,7 @@ void __fastcall BattleParamComponent__Release(BattleParamComponent_o *this, cons
   if ( (byte_40F6AFD & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F6AFD = 1;
   }
   this->fields.simpleAnim = 0LL;
@@ -81,7 +81,7 @@ void __fastcall BattleParamComponent__Release(BattleParamComponent_o *this, cons
   this->fields.anim = 0LL;
   sub_B16F98(&this->fields.anim, 0LL);
   voicePath = this->fields.voicePath;
-  if ( voicePath && System_String__op_Inequality(voicePath, (System_String_o *)StringLiteral_1, 0LL) )
+  if ( voicePath && System_String__op_Inequality(voicePath, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
   {
     v5 = this->fields.voicePath;
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -140,7 +140,7 @@ void __fastcall BattleParamComponent__SetInfo(
   {
     sub_B16FFC(&int_TypeInfo, animationIds);
     sub_B16FFC(&SoundManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_23549, v10);
+    sub_B16FFC(&StringLiteral_23549/*"{0}_{1}"*/, v10);
     byte_40F6AFC = 1;
   }
   BattleParamComponent__Init(this, (const MethodInfo *)animationIds);
@@ -157,7 +157,7 @@ void __fastcall BattleParamComponent__SetInfo(
     voiceDataStr = (Il2CppObject *)this->fields.voiceDataStr;
     v15 = voiceId;
     v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-    v13 = System_String__Format_43739268((System_String_o *)StringLiteral_23549, voiceDataStr, v12, 0LL);
+    v13 = System_String__Format_43739268((System_String_o *)StringLiteral_23549/*"{0}_{1}"*/, voiceDataStr, v12, 0LL);
     this->fields.voicePath = v13;
     sub_B16F98(&this->fields.voicePath, v13);
     voicePath = this->fields.voicePath;
@@ -266,8 +266,8 @@ bool __fastcall BattleParamComponent__playingEffect_d__17__MoveNext(
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_23563, v5);
-    this = (BattleParamComponent__playingEffect_d__17_o *)sub_B16FFC(&StringLiteral_23557, v6);
+    sub_B16FFC(&StringLiteral_23563/*"{0}{1}_{2}"*/, v5);
+    this = (BattleParamComponent__playingEffect_d__17_o *)sub_B16FFC(&StringLiteral_23557/*"{0}{1}"*/, v6);
     byte_40F9DE3 = 1;
   }
   _1__state = v3->fields.__1__state;
@@ -324,7 +324,7 @@ LABEL_45:
       v16 = (Il2CppObject *)this;
       v42 = animationIds->m_Items[v15 + 1];
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42);
-      v18 = System_String__Format_43744796((System_String_o *)StringLiteral_23563, baseAnimationName, v16, v17, 0LL);
+      v18 = System_String__Format_43744796((System_String_o *)StringLiteral_23563/*"{0}{1}_{2}"*/, baseAnimationName, v16, v17, 0LL);
       ++_4__this->fields.switchIndex;
     }
     else
@@ -333,7 +333,7 @@ LABEL_19:
       v19 = (Il2CppObject *)_4__this->fields.baseAnimationName;
       v41 = i;
       v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v41);
-      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_23557, v19, v20, 0LL);
+      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_23557/*"{0}{1}"*/, v19, v20, 0LL);
     }
     simpleAnim = (UnityEngine_Object_o *)_4__this->fields.simpleAnim;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

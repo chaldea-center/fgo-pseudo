@@ -616,12 +616,12 @@ System_String_o *__fastcall EquipGraphServantItem__get_NameText(
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_18326, v7);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v7);
     byte_40FC4DC = 1;
   }
   entity = 0LL;
   if ( !this->fields.servantEntity )
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
   userServantEntity = this->fields.userServantEntity;
   if ( userServantEntity )
   {

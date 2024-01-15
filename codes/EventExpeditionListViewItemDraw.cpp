@@ -279,7 +279,7 @@ System_String_o *__fastcall EventExpeditionListViewItemDraw__GetExpeditionTimeLa
   {
     sub_B16FFC(&long_TypeInfo, time);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_5772, v5);
+    sub_B16FFC(&StringLiteral_5772/*"EXPEDITION_TIME_FORMAT"*/, v5);
     byte_40FC65F = 1;
   }
   if ( time < 1 )
@@ -299,7 +299,7 @@ System_String_o *__fastcall EventExpeditionListViewItemDraw__GetExpeditionTimeLa
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5772, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5772/*"EXPEDITION_TIME_FORMAT"*/, 0LL);
   v16 = v8;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v16);
   v15 = v7;
@@ -347,7 +347,7 @@ void __fastcall EventExpeditionListViewItemDraw__PlayRunningAnim(
     sub_B16FFC(&int_TypeInfo, v7);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_16770, v10);
+    sub_B16FFC(&StringLiteral_16770/*"bit_runningdog_{0}_1"*/, v10);
     byte_40FC65D = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -393,7 +393,7 @@ void __fastcall EventExpeditionListViewItemDraw__PlayRunningAnim(
         runAnim = this->fields.runAnim,
         v33 = idx,
         v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33),
-        v32 = System_String__Format((System_String_o *)StringLiteral_16770, v31, 0LL),
+        v32 = System_String__Format((System_String_o *)StringLiteral_16770/*"bit_runningdog_{0}_1"*/, v31, 0LL),
         !runAnim) )
   {
 LABEL_13:
@@ -433,9 +433,9 @@ bool __fastcall EventExpeditionListViewItemDraw__SetEventPeriodTime(
     sub_B16FFC(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v6);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&NetworkManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_13342, v9);
-    sub_B16FFC(&StringLiteral_5774, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_13342/*"TIME_REST_NONE"*/, v9);
+    sub_B16FFC(&StringLiteral_5774/*"EXPEDITION_TIME_REST"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FC660 = 1;
   }
   entity = 0LL;
@@ -470,7 +470,7 @@ bool __fastcall EventExpeditionListViewItemDraw__SetEventPeriodTime(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5774, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5774/*"EXPEDITION_TIME_REST"*/, 0LL);
     if ( eventPeriodRestText )
     {
       UILabel__set_text(eventPeriodRestText, v15, 0LL);
@@ -490,14 +490,14 @@ LABEL_29:
   }
   if ( !eventPeriodRestText )
     goto LABEL_29;
-  UILabel__set_text(this->fields.eventPeriodRestText, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(this->fields.eventPeriodRestText, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v19 = this->fields.eventPeriodRestTimeText;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_13342, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_13342/*"TIME_REST_NONE"*/, 0LL);
   if ( !v19 )
     goto LABEL_29;
   UILabel__set_text(v19, v20, 0LL);
@@ -623,14 +623,14 @@ void __fastcall EventExpeditionListViewItemDraw__SetItem(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
     sub_B16FFC(&Method_EventExpeditionListViewItemDraw___c__SetItem_b__27_0__, v17);
     sub_B16FFC(&EventExpeditionListViewItemDraw___c_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_22021, v19);
-    sub_B16FFC(&StringLiteral_22020, v20);
-    sub_B16FFC(&StringLiteral_18441, v21);
-    sub_B16FFC(&StringLiteral_18446, v22);
-    sub_B16FFC(&StringLiteral_5771, v23);
-    sub_B16FFC(&StringLiteral_5763, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
-    this = (EventExpeditionListViewItemDraw_o *)sub_B16FFC(&StringLiteral_18447, v26);
+    sub_B16FFC(&StringLiteral_22021/*"shop_item_menu_{0}_2"*/, v19);
+    sub_B16FFC(&StringLiteral_22020/*"shop_item_menu_mask"*/, v20);
+    sub_B16FFC(&StringLiteral_18441/*"event_gauge_back"*/, v21);
+    sub_B16FFC(&StringLiteral_18446/*"event_gauge_front"*/, v22);
+    sub_B16FFC(&StringLiteral_5771/*"EXPEDITION_REWARD_TITLE_LABEL"*/, v23);
+    sub_B16FFC(&StringLiteral_5763/*"EXPEDITION_EVENT_END"*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
+    this = (EventExpeditionListViewItemDraw_o *)sub_B16FFC(&StringLiteral_18447/*"event_gauge_front_complete"*/, v26);
     byte_40FC65B = 1;
   }
   num = 0;
@@ -658,7 +658,7 @@ void __fastcall EventExpeditionListViewItemDraw__SetItem(
     baseSprite = v6->fields.baseSprite;
     currentEventId = item->fields.currentEventId;
     v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId);
-    v33 = System_String__Format((System_String_o *)StringLiteral_22021, v32, 0LL);
+    v33 = System_String__Format((System_String_o *)StringLiteral_22021/*"shop_item_menu_{0}_2"*/, v32, 0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
     {
@@ -672,7 +672,7 @@ void __fastcall EventExpeditionListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI_28584872(v34, maskSprite, (System_String_o *)StringLiteral_22020, 0LL);
+    AtlasManager__SetEventUI_28584872(v34, maskSprite, (System_String_o *)StringLiteral_22020/*"shop_item_menu_mask"*/, 0LL);
     eventExpeditionEnt = item->fields.eventExpeditionEnt;
     if ( !eventExpeditionEnt )
       goto LABEL_76;
@@ -683,12 +683,12 @@ void __fastcall EventExpeditionListViewItemDraw__SetItem(
     AtlasManager__SetEventUI_28584872(
       item->fields.currentEventId,
       v6->fields.progressGaugeF,
-      (System_String_o *)StringLiteral_18446,
+      (System_String_o *)StringLiteral_18446/*"event_gauge_front"*/,
       0LL);
     AtlasManager__SetEventUI_28584872(
       item->fields.currentEventId,
       v6->fields.progressGaugeB,
-      (System_String_o *)StringLiteral_18441,
+      (System_String_o *)StringLiteral_18441/*"event_gauge_back"*/,
       0LL);
     v40 = item->fields.eventExpeditionEnt;
     if ( !v40 )
@@ -703,7 +703,7 @@ void __fastcall EventExpeditionListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5771, 0LL);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5771/*"EXPEDITION_REWARD_TITLE_LABEL"*/, 0LL);
     if ( !rewardTitleLabel )
       goto LABEL_76;
     UILabel__set_text(rewardTitleLabel, v43, 0LL);
@@ -835,7 +835,7 @@ LABEL_54:
         {
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         }
-        AtlasManager__SetEventUI_28584872(v93, progressGaugeF, (System_String_o *)StringLiteral_18447, 0LL);
+        AtlasManager__SetEventUI_28584872(v93, progressGaugeF, (System_String_o *)StringLiteral_18447/*"event_gauge_front_complete"*/, 0LL);
 LABEL_60:
         v95 = v6->fields.MaskObj;
         if ( !v95 )
@@ -867,7 +867,7 @@ LABEL_60:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v103 = LocalizationManager__Get((System_String_o *)StringLiteral_5763, 0LL);
+              v103 = LocalizationManager__Get((System_String_o *)StringLiteral_5763/*"EXPEDITION_EVENT_END"*/, 0LL);
               if ( eventEndText )
               {
                 v99 = v103;
@@ -882,7 +882,7 @@ LABEL_60:
           v98 = v6->fields.eventEndText;
           if ( v98 )
           {
-            v99 = (System_String_o *)StringLiteral_1;
+            v99 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_74:
             UILabel__set_text(v98, v99, 0LL);
             return;
@@ -1017,14 +1017,14 @@ void __fastcall EventExpeditionListViewItemDraw__UpdateItem(
     sub_B16FFC(&NetworkManager_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_B16FFC(&StringLiteral_5748, v14);
-    sub_B16FFC(&StringLiteral_16770, v15);
-    sub_B16FFC(&StringLiteral_5750, v16);
-    sub_B16FFC(&StringLiteral_16771, v17);
-    sub_B16FFC(&StringLiteral_13355, v18);
-    sub_B16FFC(&StringLiteral_1, v19);
-    sub_B16FFC(&StringLiteral_18447, v20);
-    sub_B16FFC(&StringLiteral_5773, v21);
+    sub_B16FFC(&StringLiteral_5748/*"EXPEDITION_BEST_MATCH_LABEL"*/, v14);
+    sub_B16FFC(&StringLiteral_16770/*"bit_runningdog_{0}_1"*/, v15);
+    sub_B16FFC(&StringLiteral_5750/*"EXPEDITION_COMPLETE_LABEL"*/, v16);
+    sub_B16FFC(&StringLiteral_16771/*"bit_runningdog_{0}_2"*/, v17);
+    sub_B16FFC(&StringLiteral_13355/*"TIME_REST_TIMEOVER"*/, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v19);
+    sub_B16FFC(&StringLiteral_18447/*"event_gauge_front_complete"*/, v20);
+    sub_B16FFC(&StringLiteral_5773/*"EXPEDITION_TIME_LABEL"*/, v21);
     byte_40FC65C = 1;
   }
   entity = 0LL;
@@ -1090,7 +1090,7 @@ void __fastcall EventExpeditionListViewItemDraw__UpdateItem(
         v39 = this->fields.runAnim;
         v110 = pieceIdx;
         v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v110);
-        v41 = System_String__Format((System_String_o *)StringLiteral_16770, v40, 0LL);
+        v41 = System_String__Format((System_String_o *)StringLiteral_16770/*"bit_runningdog_{0}_1"*/, v40, 0LL);
         if ( !v39 )
           goto LABEL_107;
         UnityEngine_Animation__Play_49744236(v39, v41, 0LL);
@@ -1117,7 +1117,7 @@ LABEL_105:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
   RestTime = LocalizationManager__GetRestTime(endedAt, 0LL);
-  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_13355, 0LL);
+  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_13355/*"TIME_REST_TIMEOVER"*/, 0LL);
   if ( !RestTime )
     goto LABEL_107;
   v48 = System_String__Equals_43731072(RestTime, v47, 0LL);
@@ -1150,7 +1150,7 @@ LABEL_105:
       v56 = this->fields.runAnim;
       v110 = pieceIdx;
       v57 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v110);
-      v58 = System_String__Format((System_String_o *)StringLiteral_16771, v57, 0LL);
+      v58 = System_String__Format((System_String_o *)StringLiteral_16771/*"bit_runningdog_{0}_2"*/, v57, 0LL);
       if ( !v56 )
         goto LABEL_107;
       UnityEngine_Animation__Play_49744236(v56, v58, 0LL);
@@ -1211,7 +1211,7 @@ LABEL_105:
   timeLeftLabel = this->fields.timeLeftLabel;
   if ( !timeLeftLabel )
     goto LABEL_107;
-  UILabel__set_text(timeLeftLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(timeLeftLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_107;
@@ -1233,7 +1233,7 @@ LABEL_105:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v84 = LocalizationManager__Get((System_String_o *)StringLiteral_5773, 0LL);
+    v84 = LocalizationManager__Get((System_String_o *)StringLiteral_5773/*"EXPEDITION_TIME_LABEL"*/, 0LL);
     if ( !entity )
       goto LABEL_107;
     name = (Il2CppObject *)entity->fields.name;
@@ -1268,7 +1268,7 @@ LABEL_105:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v99 = LocalizationManager__Get((System_String_o *)StringLiteral_5748, 0LL);
+      v99 = LocalizationManager__Get((System_String_o *)StringLiteral_5748/*"EXPEDITION_BEST_MATCH_LABEL"*/, 0LL);
       v100 = System_String__Concat_43743732(mText, v99, 0LL);
       UILabel__set_text(v97, v100, 0LL);
     }
@@ -1283,7 +1283,7 @@ LABEL_105:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
   v103 = LocalizationManager__GetRestTime(v102, 0LL);
-  v104 = LocalizationManager__Get((System_String_o *)StringLiteral_13355, 0LL);
+  v104 = LocalizationManager__Get((System_String_o *)StringLiteral_13355/*"TIME_REST_TIMEOVER"*/, 0LL);
   if ( !v103 )
     goto LABEL_107;
   if ( System_String__Equals_43731072(v103, v104, 0LL) )
@@ -1296,14 +1296,14 @@ LABEL_105:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI_28584872(v105, progressGaugeF, (System_String_o *)StringLiteral_18447, 0LL);
+    AtlasManager__SetEventUI_28584872(v105, progressGaugeF, (System_String_o *)StringLiteral_18447/*"event_gauge_front_complete"*/, 0LL);
     v107 = this->fields.timeLeftLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v108 = LocalizationManager__Get((System_String_o *)StringLiteral_5750, 0LL);
+    v108 = LocalizationManager__Get((System_String_o *)StringLiteral_5750/*"EXPEDITION_COMPLETE_LABEL"*/, 0LL);
     if ( !v107 )
       goto LABEL_107;
     UILabel__set_text(v107, v108, 0LL);
@@ -1313,7 +1313,7 @@ LABEL_105:
     v109 = this->fields.timeLeftLabel;
     if ( v109 )
     {
-      UILabel__set_text(v109, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v109, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       return;
     }
     goto LABEL_107;

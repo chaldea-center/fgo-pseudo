@@ -16,7 +16,7 @@ void __fastcall CombineBannerComponent__onOpenWebView(CombineBannerComponent_o *
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
     sub_B16FFC(&WebViewManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F9AAA = 1;
   }
   eventEntity = this->fields.eventEntity;
@@ -34,7 +34,7 @@ void __fastcall CombineBannerComponent__onOpenWebView(CombineBannerComponent_o *
   {
     j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
   }
-  WebViewManager__OpenView((System_String_o *)StringLiteral_1, WebViewAddress, 0LL, 0LL);
+  WebViewManager__OpenView((System_String_o *)StringLiteral_1/*""*/, WebViewAddress, 0LL, 0LL);
 }
 
 

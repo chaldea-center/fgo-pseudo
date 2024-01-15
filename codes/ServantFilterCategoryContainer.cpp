@@ -37,21 +37,21 @@ void __fastcall ServantFilterCategoryContainer___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string___ctor__, v5);
     sub_B16FFC(&System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__TypeInfo, v6);
     sub_B16FFC(&ServantFilterCategoryContainer_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_11792, v8);
-    sub_B16FFC(&StringLiteral_11781, v9);
-    sub_B16FFC(&StringLiteral_11783, v10);
-    sub_B16FFC(&StringLiteral_11791, v11);
-    sub_B16FFC(&StringLiteral_11787, v12);
-    sub_B16FFC(&StringLiteral_11786, v13);
-    sub_B16FFC(&StringLiteral_11784, v14);
-    sub_B16FFC(&StringLiteral_11780, v15);
-    sub_B16FFC(&StringLiteral_11790, v16);
-    sub_B16FFC(&StringLiteral_11785, v17);
-    sub_B16FFC(&StringLiteral_10434, v18);
-    sub_B16FFC(&StringLiteral_11782, v19);
-    sub_B16FFC(&StringLiteral_11788, v20);
-    sub_B16FFC(&StringLiteral_11789, v21);
-    sub_B16FFC(&StringLiteral_11765, v22);
+    sub_B16FFC(&StringLiteral_11792/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_SUMMON_CATEGORY"*/, v8);
+    sub_B16FFC(&StringLiteral_11781/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_CLASS_GROUP"*/, v9);
+    sub_B16FFC(&StringLiteral_11783/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_COSTUME"*/, v10);
+    sub_B16FFC(&StringLiteral_11791/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_KIND"*/, v11);
+    sub_B16FFC(&StringLiteral_11787/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_OTHER"*/, v12);
+    sub_B16FFC(&StringLiteral_11786/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_NP_TYPE"*/, v13);
+    sub_B16FFC(&StringLiteral_11784/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_HAVE_STATUS"*/, v14);
+    sub_B16FFC(&StringLiteral_11780/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_CLASS"*/, v15);
+    sub_B16FFC(&StringLiteral_11790/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_EQUIP_TYPE"*/, v16);
+    sub_B16FFC(&StringLiteral_11785/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_NP_EFFECT"*/, v17);
+    sub_B16FFC(&StringLiteral_10434/*"PRESENT_BOX_FILTER_EXPLANATION"*/, v18);
+    sub_B16FFC(&StringLiteral_11782/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_COLLECTION_STATUS"*/, v19);
+    sub_B16FFC(&StringLiteral_11788/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_RARITY"*/, v20);
+    sub_B16FFC(&StringLiteral_11789/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_COMBINE_BASE"*/, v21);
+    sub_B16FFC(&StringLiteral_11765/*"SERVANT_SORT_EXPLANATION2"*/, v22);
     byte_40FD0D7 = 1;
   }
   v23 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B170CC(
@@ -68,92 +68,92 @@ void __fastcall ServantFilterCategoryContainer___cctor(const MethodInfo *method)
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     9,
-    (System_String_o *)StringLiteral_11765,
+    (System_String_o *)StringLiteral_11765/*"SERVANT_SORT_EXPLANATION2"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     10,
-    (System_String_o *)StringLiteral_10434,
+    (System_String_o *)StringLiteral_10434/*"PRESENT_BOX_FILTER_EXPLANATION"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     13,
-    (System_String_o *)StringLiteral_11781,
+    (System_String_o *)StringLiteral_11781/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_CLASS_GROUP"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     0,
-    (System_String_o *)StringLiteral_11780,
+    (System_String_o *)StringLiteral_11780/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_CLASS"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     14,
-    (System_String_o *)StringLiteral_11780,
+    (System_String_o *)StringLiteral_11780/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_CLASS"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     15,
-    (System_String_o *)StringLiteral_11780,
+    (System_String_o *)StringLiteral_11780/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_CLASS"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     1,
-    (System_String_o *)StringLiteral_11786,
+    (System_String_o *)StringLiteral_11786/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_NP_TYPE"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     2,
-    (System_String_o *)StringLiteral_11785,
+    (System_String_o *)StringLiteral_11785/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_NP_EFFECT"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     3,
-    (System_String_o *)StringLiteral_11791,
+    (System_String_o *)StringLiteral_11791/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_KIND"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     4,
-    (System_String_o *)StringLiteral_11788,
+    (System_String_o *)StringLiteral_11788/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_RARITY"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     5,
-    (System_String_o *)StringLiteral_11783,
+    (System_String_o *)StringLiteral_11783/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_COSTUME"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     6,
-    (System_String_o *)StringLiteral_11783,
+    (System_String_o *)StringLiteral_11783/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_COSTUME"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     8,
-    (System_String_o *)StringLiteral_11789,
+    (System_String_o *)StringLiteral_11789/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_COMBINE_BASE"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     12,
-    (System_String_o *)StringLiteral_11790,
+    (System_String_o *)StringLiteral_11790/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_EQUIP_TYPE"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     7,
-    (System_String_o *)StringLiteral_11787,
+    (System_String_o *)StringLiteral_11787/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_OTHER"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     16,
-    (System_String_o *)StringLiteral_11782,
+    (System_String_o *)StringLiteral_11782/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_COLLECTION_STATUS"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     17,
-    (System_String_o *)StringLiteral_11784,
+    (System_String_o *)StringLiteral_11784/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_HAVE_STATUS"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v23,
     18,
-    (System_String_o *)StringLiteral_11792,
+    (System_String_o *)StringLiteral_11792/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_SUMMON_CATEGORY"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_ListViewSort_FilterCategoryKind__string__Add__);
   static_fields = (BattleServantConfConponent_o *)ServantFilterCategoryContainer_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v23;

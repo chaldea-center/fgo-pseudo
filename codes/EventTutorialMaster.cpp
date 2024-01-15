@@ -1651,12 +1651,12 @@ System_Collections_Generic_List_EventTutorialEntity__o *__fastcall EventTutorial
     sub_B16FFC(&Method_System_Collections_Generic_List_EventTutorialEntity___ctor__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v10);
     sub_B16FFC(&System_Collections_Generic_List_EventTutorialEntity__TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_15706, v12);
-    sub_B16FFC(&StringLiteral_15764, v13);
+    sub_B16FFC(&StringLiteral_15706/*"[]"*/, v12);
+    sub_B16FFC(&StringLiteral_15764/*"[{0}]"*/, v13);
     byte_40F9C1C = 1;
   }
   if ( !System_String__IsNullOrEmpty(targetIds, 0LL) )
-    targetIds = System_String__Format((System_String_o *)StringLiteral_15764, (Il2CppObject *)targetIds, 0LL);
+    targetIds = System_String__Format((System_String_o *)StringLiteral_15764/*"[{0}]"*/, (Il2CppObject *)targetIds, 0LL);
   v18 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_EventTutorialEntity__TypeInfo,
                                                                                                   v14,
@@ -1715,7 +1715,7 @@ LABEL_39:
         if ( !v26 )
         {
           if ( !(_DWORD)v30
-            || (IsNullOrEmpty = System_String__op_Equality(v29->m_Items[0], (System_String_o *)StringLiteral_15706, 0LL),
+            || (IsNullOrEmpty = System_String__op_Equality(v29->m_Items[0], (System_String_o *)StringLiteral_15706/*"[]"*/, 0LL),
                 v26 = 0LL,
                 IsNullOrEmpty) )
           {

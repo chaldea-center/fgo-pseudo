@@ -40,7 +40,7 @@ void __fastcall EventInfoChronologyButton__CallbackLoadAsset(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
     sub_B16FFC(&System_IO_Path_TypeInfo, v8);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_13548, v10);
+    sub_B16FFC(&StringLiteral_13548/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/, v10);
     byte_40FB6FC = 1;
   }
   if ( assetData )
@@ -50,7 +50,7 @@ void __fastcall EventInfoChronologyButton__CallbackLoadAsset(
     {
       j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
     }
-    FileName = System_IO_Path__GetFileName((System_String_o *)StringLiteral_13548, 0LL);
+    FileName = System_IO_Path__GetFileName((System_String_o *)StringLiteral_13548/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/, 0LL);
     Object_WarBoardWaitTimeSetting = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                                  assetData,
                                                                                  FileName,
@@ -238,9 +238,9 @@ void __fastcall EventInfoChronologyButton__Initialization(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v6);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&System_IO_Path_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_13548, v9);
-    sub_B16FFC(&StringLiteral_17357, v10);
-    sub_B16FFC(&StringLiteral_2978, v11);
+    sub_B16FFC(&StringLiteral_13548/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/, v9);
+    sub_B16FFC(&StringLiteral_17357/*"chronology_button"*/, v10);
+    sub_B16FFC(&StringLiteral_2978/*"CHRONOLOGY_OPEN_BUTTON"*/, v11);
     byte_40FB6F9 = 1;
   }
   buttonLabel = this->fields.buttonLabel;
@@ -249,14 +249,14 @@ void __fastcall EventInfoChronologyButton__Initialization(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2978, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2978/*"CHRONOLOGY_OPEN_BUTTON"*/, 0LL);
   if ( !buttonLabel )
     goto LABEL_18;
   UILabel__set_text(buttonLabel, v13, 0LL);
   buttonSprite = this->fields.buttonSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(buttonSprite, (System_String_o *)StringLiteral_17357, 0LL);
+  AtlasManager__SetEventUI(buttonSprite, (System_String_o *)StringLiteral_17357/*"chronology_button"*/, 0LL);
   button = this->fields.button;
   if ( !button )
 LABEL_18:
@@ -267,7 +267,7 @@ LABEL_18:
   {
     j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
   }
-  DirectoryName = System_IO_Path__GetDirectoryName((System_String_o *)StringLiteral_13548, 0LL);
+  DirectoryName = System_IO_Path__GetDirectoryName((System_String_o *)StringLiteral_13548/*"Terminal/Info/TitleInfoChronologyDialogPrefab"*/, 0LL);
   v21 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v17, v18, v19, v20);
   AssetLoader_LoadEndDataHandler___ctor(
     v21,

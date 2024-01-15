@@ -417,11 +417,11 @@ System_String_o *__fastcall EquipTargetInfo__GetSvtName(EquipTargetInfo_o *this,
     sub_B16FFC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v3);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FC505 = 1;
   }
   entity = 0LL;
-  v7 = (System_String_o *)StringLiteral_1;
+  v7 = (System_String_o *)StringLiteral_1/*""*/;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;

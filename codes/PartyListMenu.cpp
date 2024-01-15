@@ -147,9 +147,9 @@ void __fastcall PartyListMenu___cctor(const MethodInfo *method)
     sub_B16FFC(&int___TypeInfo, v1);
     sub_B16FFC(&PartyListMenu_TypeInfo, v3);
     sub_B16FFC(&float___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_17077, v5);
-    sub_B16FFC(&StringLiteral_17078, v6);
-    sub_B16FFC(&StringLiteral_17082, v7);
+    sub_B16FFC(&StringLiteral_17077/*"buttontxt_battlestart"*/, v5);
+    sub_B16FFC(&StringLiteral_17078/*"buttontxt_formation_05"*/, v6);
+    sub_B16FFC(&StringLiteral_17082/*"buttontxt_queststart"*/, v7);
     byte_40F807F = 1;
   }
   static_fields = PartyListMenu_TypeInfo->static_fields;
@@ -352,16 +352,16 @@ LABEL_44:
   v117->LAYOUT_FS_OFFSET_OLD = (struct System_Single_array *)v19;
   sub_B16F98((BattleServantConfConponent_o *)&v117->LAYOUT_FS_OFFSET_OLD, v19, v12, v111, v112, v113, v114, v115);
   v118 = PartyListMenu_TypeInfo->static_fields;
-  v119 = (System_Int32_array **)StringLiteral_17082;
-  v118->START_BUTTON_QUEST_SP = (struct System_String_o *)StringLiteral_17082;
+  v119 = (System_Int32_array **)StringLiteral_17082/*"buttontxt_queststart"*/;
+  v118->START_BUTTON_QUEST_SP = (struct System_String_o *)StringLiteral_17082/*"buttontxt_queststart"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v118->START_BUTTON_QUEST_SP, v119, v120, v121, v122, v123, v124, v125);
   v126 = PartyListMenu_TypeInfo->static_fields;
-  v127 = (System_Int32_array **)StringLiteral_17077;
-  v126->START_BUTTON_BATTLE_SP = (struct System_String_o *)StringLiteral_17077;
+  v127 = (System_Int32_array **)StringLiteral_17077/*"buttontxt_battlestart"*/;
+  v126->START_BUTTON_BATTLE_SP = (struct System_String_o *)StringLiteral_17077/*"buttontxt_battlestart"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v126->START_BUTTON_BATTLE_SP, v127, v128, v129, v130, v131, v132, v133);
   v134 = PartyListMenu_TypeInfo->static_fields;
-  v135 = (System_Int32_array **)StringLiteral_17078;
-  v134->START_BUTTON_WAVE_BATTLE_SP = (struct System_String_o *)StringLiteral_17078;
+  v135 = (System_Int32_array **)StringLiteral_17078/*"buttontxt_formation_05"*/;
+  v134->START_BUTTON_WAVE_BATTLE_SP = (struct System_String_o *)StringLiteral_17078/*"buttontxt_formation_05"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v134->START_BUTTON_WAVE_BATTLE_SP,
     v135,
@@ -893,7 +893,7 @@ void __fastcall PartyListMenu__EndOpen(PartyListMenu_o *this, const MethodInfo *
     sub_B16FFC(&Method_PartyListMenu_EndOpenTutorialArrow__, v10);
     sub_B16FFC(&Method_PartyListMenu_OnSelectItem__, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_13459, v13);
+    sub_B16FFC(&StringLiteral_13459/*"TUTORIAL_MESSAGE_PARTY_ORGANIZATION1_2"*/, v13);
     byte_40F804D = 1;
   }
   memset(&methoda, 0, 48);
@@ -1094,7 +1094,7 @@ LABEL_31:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v85 = LocalizationManager__Get((System_String_o *)StringLiteral_13459, 0LL);
+    v85 = LocalizationManager__Get((System_String_o *)StringLiteral_13459/*"TUTORIAL_MESSAGE_PARTY_ORGANIZATION1_2"*/, 0LL);
     name = methoda.name;
     klass = methoda.klass;
     v88 = v85;
@@ -1652,7 +1652,7 @@ bool __fastcall PartyListMenu__IsDisplayLiveConfirm(PartyListMenu_o *this, const
     sub_B16FFC(&Method_DataManager_GetMasterData_QuestMaster___, v3);
     sub_B16FFC(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_19210, v6);
+    sub_B16FFC(&StringLiteral_19210/*"icon_center_bg"*/, v6);
     byte_40F8076 = 1;
   }
   entity = 0LL;
@@ -1676,7 +1676,7 @@ bool __fastcall PartyListMenu__IsDisplayLiveConfirm(PartyListMenu_o *this, const
   centerEffectLabelSp = this->fields.centerEffectLabelSp;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  v11 = AtlasManager__SetEventUI(centerEffectLabelSp, (System_String_o *)StringLiteral_19210, 0LL);
+  v11 = AtlasManager__SetEventUI(centerEffectLabelSp, (System_String_o *)StringLiteral_19210/*"icon_center_bg"*/, 0LL);
   if ( !centerEffectLabelSp
     || (UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)centerEffectLabelSp, v11, 0LL),
         (v12 = this->fields.centerEffectLabelSp) == 0LL)
@@ -1712,7 +1712,7 @@ bool __fastcall PartyListMenu__IsHintDialog(PartyListMenu_o *this, const MethodI
     sub_B16FFC(&Method_DataManager_GetMaster_QuestHintMaster___, method);
     sub_B16FFC(&Method_DataManager_GetMaster_QuestPhaseMaster___, v3);
     sub_B16FFC(&DataManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F8079 = 1;
   }
   entity = 0LL;
@@ -1744,7 +1744,7 @@ bool __fastcall PartyListMenu__IsHintDialog(PartyListMenu_o *this, const MethodI
       if ( v14 )
       {
         HintMessage = QuestPhaseEntity__getHintMessage(v14, 0LL);
-        return System_String__op_Inequality(HintMessage, (System_String_o *)StringLiteral_1, 0LL);
+        return System_String__op_Inequality(HintMessage, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       }
 LABEL_19:
       sub_B170D4();
@@ -3539,11 +3539,11 @@ void __fastcall PartyListMenu__Open(
     sub_B16FFC(&QuestInformationComponent_TypeInfo, v30);
     sub_B16FFC(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v31);
     sub_B16FFC(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v32);
-    sub_B16FFC(&StringLiteral_5542, v33);
-    sub_B16FFC(&StringLiteral_5573, v34);
-    sub_B16FFC(&StringLiteral_18514, v35);
-    sub_B16FFC(&StringLiteral_17080, v36);
-    sub_B16FFC(&StringLiteral_1, v37);
+    sub_B16FFC(&StringLiteral_5542/*"EVENT_ASSIST_SKILL_DO_NOT"*/, v33);
+    sub_B16FFC(&StringLiteral_5573/*"EVENT_COMMAND_ASSIST_DO_NOT"*/, v34);
+    sub_B16FFC(&StringLiteral_18514/*"event_skill_btn_{0}"*/, v35);
+    sub_B16FFC(&StringLiteral_17080/*"buttontxt_formation_20"*/, v36);
+    sub_B16FFC(&StringLiteral_1/*""*/, v37);
     byte_40F804A = 1;
   }
   PartyListMenu__DispInfoPanel(this, 1, *(const MethodInfo **)&tutorialMode);
@@ -3777,7 +3777,7 @@ void __fastcall PartyListMenu__Open(
         v185 = (UISprite_o *)Component_WebViewObject;
         eventId = (*p_questRestrictionInfo)->fields.eventId;
         v186 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
-        v187 = System_String__Format((System_String_o *)StringLiteral_18514, v186, 0LL);
+        v187 = System_String__Format((System_String_o *)StringLiteral_18514/*"event_skill_btn_{0}"*/, v186, 0LL);
         if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !AtlasManager_TypeInfo->_2.cctor_finished )
         {
@@ -3811,7 +3811,7 @@ void __fastcall PartyListMenu__Open(
           v198 = this->fields.assistCanNotLabel;
           if ( !v198 )
             goto LABEL_207;
-          v199 = (System_String_o *)StringLiteral_1;
+          v199 = (System_String_o *)StringLiteral_1/*""*/;
         }
         else
         {
@@ -3840,7 +3840,7 @@ void __fastcall PartyListMenu__Open(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v211 = LocalizationManager__Get((System_String_o *)StringLiteral_5542, 0LL);
+          v211 = LocalizationManager__Get((System_String_o *)StringLiteral_5542/*"EVENT_ASSIST_SKILL_DO_NOT"*/, 0LL);
           if ( !v210 )
             goto LABEL_207;
           v199 = v211;
@@ -3905,7 +3905,7 @@ void __fastcall PartyListMenu__Open(
           v231 = this->fields.commandAssistCanNotLabel;
           if ( !v231 )
             goto LABEL_207;
-          v232 = (System_String_o *)StringLiteral_1;
+          v232 = (System_String_o *)StringLiteral_1/*""*/;
         }
         else
         {
@@ -3933,7 +3933,7 @@ void __fastcall PartyListMenu__Open(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v244 = LocalizationManager__Get((System_String_o *)StringLiteral_5573, 0LL);
+          v244 = LocalizationManager__Get((System_String_o *)StringLiteral_5573/*"EVENT_COMMAND_ASSIST_DO_NOT"*/, 0LL);
           if ( !v243 )
             goto LABEL_207;
           v232 = v244;
@@ -4183,11 +4183,11 @@ void __fastcall PartyListMenu__Open(
         }
         AtlasManager__SetPartyOrganizationImage(
           classInfoSpriteOrganization,
-          (System_String_o *)StringLiteral_17080,
+          (System_String_o *)StringLiteral_17080/*"buttontxt_formation_20"*/,
           0LL);
         AtlasManager__SetPartyOrganizationImage(
           this->fields.classInfoSpriteConfirm,
-          (System_String_o *)StringLiteral_17080,
+          (System_String_o *)StringLiteral_17080/*"buttontxt_formation_20"*/,
           0LL);
       }
       v280 = this->fields.partyListViewManager;
@@ -5186,7 +5186,7 @@ void __fastcall PartyListMenu__ShowHintDialogButton(PartyListMenu_o *this, const
     sub_B16FFC(&DataManager_TypeInfo, v5);
     sub_B16FFC(&Method_PartyListMenu__ShowHintDialogButton_b__169_0__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F807C = 1;
   }
   v25 = 0LL;
@@ -5196,7 +5196,7 @@ void __fastcall PartyListMenu__ShowHintDialogButton(PartyListMenu_o *this, const
     goto LABEL_25;
   questId = questRestrictionInfo->fields.questId;
   questPhase = questRestrictionInfo->fields.questPhase;
-  message = (System_String_o *)StringLiteral_1;
+  message = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
   Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_QuestHintMaster___);
@@ -5327,7 +5327,7 @@ void __fastcall PartyListMenu___Open_b__99_0(PartyListMenu_o *this, const Method
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UISprite___, v3);
-    sub_B16FFC(&StringLiteral_16886, v4);
+    sub_B16FFC(&StringLiteral_16886/*"btn_badge_organization"*/, v4);
     byte_40F8080 = 1;
   }
   questRestrictionInfo = this->fields.questRestrictionInfo;
@@ -5345,7 +5345,7 @@ void __fastcall PartyListMenu___Open_b__99_0(PartyListMenu_o *this, const Method
   AtlasManager__SetEventUI_28584872(
     eventId,
     (UISprite_o *)Component_WebViewObject,
-    (System_String_o *)StringLiteral_16886,
+    (System_String_o *)StringLiteral_16886/*"btn_badge_organization"*/,
     0LL);
 }
 

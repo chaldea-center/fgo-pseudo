@@ -32,22 +32,22 @@ void __fastcall BattlePerformanceEnemyMst___cctor(const MethodInfo *method)
   if ( (byte_40FA81B & 1) == 0 )
   {
     sub_B16FFC(&BattlePerformanceEnemyMst_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_3948, v8);
-    sub_B16FFC(&StringLiteral_18298, v9);
-    sub_B16FFC(&StringLiteral_5978, v10);
+    sub_B16FFC(&StringLiteral_3948/*"ChrVoice_{0}"*/, v8);
+    sub_B16FFC(&StringLiteral_18298/*"enemyMstFace{0:d5}"*/, v9);
+    sub_B16FFC(&StringLiteral_5978/*"EnemyMasterFace/enemyMstFace{0:d5}"*/, v10);
     byte_40FA81B = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BattlePerformanceEnemyMst_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_5978;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5978;
+  v12 = (System_Int32_array **)StringLiteral_5978/*"EnemyMasterFace/enemyMstFace{0:d5}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5978/*"EnemyMasterFace/enemyMstFace{0:d5}"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = BattlePerformanceEnemyMst_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_18298;
-  v13->MASTER_FACE_TEXTURE_NAME = (struct System_String_o *)StringLiteral_18298;
+  v14 = (System_Int32_array **)StringLiteral_18298/*"enemyMstFace{0:d5}"*/;
+  v13->MASTER_FACE_TEXTURE_NAME = (struct System_String_o *)StringLiteral_18298/*"enemyMstFace{0:d5}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->MASTER_FACE_TEXTURE_NAME, v14, v15, v16, v17, v18, v19, v20);
   v21 = BattlePerformanceEnemyMst_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_3948;
-  v21->MASTER_VOICE_ASSET_NAME = (struct System_String_o *)StringLiteral_3948;
+  v22 = (System_Int32_array **)StringLiteral_3948/*"ChrVoice_{0}"*/;
+  v21->MASTER_VOICE_ASSET_NAME = (struct System_String_o *)StringLiteral_3948/*"ChrVoice_{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->MASTER_VOICE_ASSET_NAME, v22, v23, v24, v25, v26, v27, v28);
 }
 
@@ -173,9 +173,9 @@ void __fastcall BattlePerformanceEnemyMst__OverwriteEnemyMasterFrame(
     sub_B16FFC(&Method_DataMasterBase_EnemyMstBattleMaster__EnemyMstBattleEntity__int__GetEntity__, v6);
     sub_B16FFC(&int_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_18809, v9);
-    sub_B16FFC(&StringLiteral_2758, v10);
-    sub_B16FFC(&StringLiteral_18810, v11);
+    sub_B16FFC(&StringLiteral_18809/*"frame_enemymaster_bg"*/, v9);
+    sub_B16FFC(&StringLiteral_2758/*"BattleAssetUIAtlas"*/, v10);
+    sub_B16FFC(&StringLiteral_18810/*"frame_enemymaster_bg_{0}"*/, v11);
     byte_40FA812 = 1;
   }
   atlas = 0LL;
@@ -194,7 +194,7 @@ void __fastcall BattlePerformanceEnemyMst__OverwriteEnemyMasterFrame(
     v14 = this->fields.enemyMasterFrame;
     if ( !v14 )
       goto LABEL_31;
-    UISprite__set_spriteName(v14, (System_String_o *)StringLiteral_18809, 0LL);
+    UISprite__set_spriteName(v14, (System_String_o *)StringLiteral_18809/*"frame_enemymaster_bg"*/, 0LL);
   }
   data = this->fields.data;
   if ( !data )
@@ -234,7 +234,7 @@ LABEL_31:
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    if ( AssetManager__TryGetUIAtlas(&atlas, ASSET_BATTLE_COMMON, (System_String_o *)StringLiteral_2758, 0LL) )
+    if ( AssetManager__TryGetUIAtlas(&atlas, ASSET_BATTLE_COMMON, (System_String_o *)StringLiteral_2758/*"BattleAssetUIAtlas"*/, 0LL) )
     {
       v24 = this->fields.enemyMasterFrame;
       if ( v24 )
@@ -243,7 +243,7 @@ LABEL_31:
         v25 = this->fields.enemyMasterFrame;
         v28 = v21;
         v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
-        v27 = System_String__Format((System_String_o *)StringLiteral_18810, v26, 0LL);
+        v27 = System_String__Format((System_String_o *)StringLiteral_18810/*"frame_enemymaster_bg_{0}"*/, v26, 0LL);
         if ( v25 )
         {
           UISprite__set_spriteName(v25, v27, 0LL);
@@ -1030,7 +1030,7 @@ void __fastcall BattlePerformanceEnemyMst___c__DisplayClass24_0___LoadAssetCorou
   {
     sub_B16FFC(&Method_AssetData_GetObject_Texture2D____66802808, data);
     sub_B16FFC(&UnityEngine_Material_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_4519, v6);
+    sub_B16FFC(&StringLiteral_4519/*"Custom/SpriteWithMask"*/, v6);
     byte_40F717A = 1;
   }
   _4__this = this->fields.__4__this;
@@ -1046,7 +1046,7 @@ void __fastcall BattlePerformanceEnemyMst___c__DisplayClass24_0___LoadAssetCorou
   if ( !v9 )
     goto LABEL_11;
   faceText = v9->fields.faceText;
-  v11 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519, 0LL);
+  v11 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519/*"Custom/SpriteWithMask"*/, 0LL);
   v16 = (UnityEngine_Material_o *)sub_B170CC(UnityEngine_Material_TypeInfo, v12, v13, v14, v15);
   UnityEngine_Material___ctor(v16, v11, 0LL);
   if ( !faceText

@@ -11,10 +11,10 @@ void __fastcall FriendOfferRequest__beginRequest(
 {
   if ( (byte_40FD8D0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22521, targetUserId);
+    sub_B16FFC(&StringLiteral_22521/*"targetUserId"*/, targetUserId);
     byte_40FD8D0 = 1;
   }
-  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_22521, targetUserId, 0LL);
+  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_22521/*"targetUserId"*/, targetUserId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -27,7 +27,7 @@ System_String_o *__fastcall FriendOfferRequest__getURL(FriendOfferRequest_o *thi
   if ( (byte_40FD8CF & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18825, v2);
+    sub_B16FFC(&StringLiteral_18825/*"friend/offer"*/, v2);
     byte_40FD8CF = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -36,7 +36,7 @@ System_String_o *__fastcall FriendOfferRequest__getURL(FriendOfferRequest_o *thi
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18825, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18825/*"friend/offer"*/, 0LL);
 }
 
 
@@ -86,12 +86,12 @@ void __fastcall FriendOfferRequest__requestCompleted(
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
     sub_B16FFC(&string_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_20980, v12);
-    sub_B16FFC(&StringLiteral_22610, v13);
-    sub_B16FFC(&StringLiteral_20390, v14);
-    sub_B16FFC(&StringLiteral_1, v15);
-    sub_B16FFC(&StringLiteral_951, v16);
-    sub_B16FFC(&StringLiteral_22210, v17);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v12);
+    sub_B16FFC(&StringLiteral_22610/*"title"*/, v13);
+    sub_B16FFC(&StringLiteral_20390/*"message"*/, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v15);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v16);
+    sub_B16FFC(&StringLiteral_22210/*"status"*/, v17);
     byte_40FD8D1 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -111,19 +111,19 @@ LABEL_34:
     sub_B170D4();
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v19->fields.success,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_22210,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_22210/*"status"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              success,
-             (System_Type_o *)StringLiteral_22210,
+             (System_Type_o *)StringLiteral_22210/*"status"*/,
              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v22 = (System_String_o *)Item;
     if ( Item && (System_String_c *)Item->klass != string_TypeInfo )
     {
       sub_B173C8(Item);
 LABEL_13:
-      v23 = (System_String_o *)StringLiteral_20980;
+      v23 = (System_String_o *)StringLiteral_20980/*"ng"*/;
 LABEL_14:
       RequestBase__completed((RequestBase_o *)this, v23, 0LL);
       return;
@@ -131,43 +131,43 @@ LABEL_14:
   }
   else
   {
-    v22 = (System_String_o *)StringLiteral_951;
+    v22 = (System_String_o *)StringLiteral_951/*"0"*/;
   }
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_22610,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_22610/*"title"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_20;
   v24 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
           success,
-          (System_Type_o *)StringLiteral_22610,
+          (System_Type_o *)StringLiteral_22610/*"title"*/,
           (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   v25 = (System_String_o *)v24;
   if ( v24 && (System_String_c *)v24->klass != string_TypeInfo )
   {
     sub_B173C8(v24);
 LABEL_20:
-    v25 = (System_String_o *)StringLiteral_1;
+    v25 = (System_String_o *)StringLiteral_1/*""*/;
   }
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_20390,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_20390/*"message"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v26 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
             success,
-            (System_Type_o *)StringLiteral_20390,
+            (System_Type_o *)StringLiteral_20390/*"message"*/,
             (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v27 = (System_String_o *)v26;
     if ( !v26 || (System_String_c *)v26->klass == string_TypeInfo )
       goto LABEL_26;
     sub_B173C8(v26);
   }
-  v27 = (System_String_o *)StringLiteral_1;
+  v27 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_26:
   if ( !v22 )
     goto LABEL_34;
-  if ( System_String__Equals_43731072(v22, (System_String_o *)StringLiteral_951, 0LL) )
+  if ( System_String__Equals_43731072(v22, (System_String_o *)StringLiteral_951/*"0"*/, 0LL) )
   {
     v28 = (Il2CppObject *)v19->fields.success;
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -217,12 +217,12 @@ void __fastcall FriendOfferRequest__requestErrorDialog(FriendOfferRequest_o *thi
   if ( (byte_40FD8D2 & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, flg);
-    sub_B16FFC(&StringLiteral_20980, v4);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v4);
     byte_40FD8D2 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     sub_B170D4();
   CommonUI__CloseNotificationDialog(Instance, 0LL);
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)StringLiteral_20980, 0LL);
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL);
 }

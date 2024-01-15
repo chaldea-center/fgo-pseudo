@@ -324,7 +324,7 @@ void __fastcall ServantStatusFriendshipGauge__Initialize(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&BalanceConfig_TypeInfo, v4);
-    this = (ServantStatusFriendshipGauge_o *)sub_B16FFC(&StringLiteral_19376, v5);
+    this = (ServantStatusFriendshipGauge_o *)sub_B16FFC(&StringLiteral_19376/*"img_bondsgage_11"*/, v5);
     byte_4101940 = 1;
   }
   gaugeSliderList = v3->fields.gaugeSliderList;
@@ -397,7 +397,7 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetBondAtlasImage(overLimitGaugeSprite, (System_String_o *)StringLiteral_19376, 0LL);
+    AtlasManager__SetBondAtlasImage(overLimitGaugeSprite, (System_String_o *)StringLiteral_19376/*"img_bondsgage_11"*/, 0LL);
   }
 }
 
@@ -433,8 +433,8 @@ void __fastcall ServantStatusFriendshipGauge__Set(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&currentRank);
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_14656, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_14656/*"UNIT_REST_NONE"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_4101941 = 1;
   }
   if ( this->fields.isInit )
@@ -480,7 +480,7 @@ void __fastcall ServantStatusFriendshipGauge__Set(
   }
   if ( (late & 0x80000000) == 0 )
   {
-    v22 = (System_String_o *)StringLiteral_1;
+    v22 = (System_String_o *)StringLiteral_1/*""*/;
     if ( latePointLabel )
       goto LABEL_21;
 LABEL_24:
@@ -491,7 +491,7 @@ LABEL_24:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  NumberFormat = LocalizationManager__Get((System_String_o *)StringLiteral_14656, 0LL);
+  NumberFormat = LocalizationManager__Get((System_String_o *)StringLiteral_14656/*"UNIT_REST_NONE"*/, 0LL);
 LABEL_20:
   v22 = NumberFormat;
   if ( !latePointLabel )

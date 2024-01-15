@@ -32,22 +32,22 @@ void __fastcall TitleInfoEventTower___cctor(const MethodInfo *method)
   if ( (byte_40F83F5 & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventTower_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18148, v8);
-    sub_B16FFC(&StringLiteral_18147, v9);
-    sub_B16FFC(&StringLiteral_18149, v10);
+    sub_B16FFC(&StringLiteral_18148/*"ef_tower_change{0}_end"*/, v8);
+    sub_B16FFC(&StringLiteral_18147/*"ef_tower_change"*/, v9);
+    sub_B16FFC(&StringLiteral_18149/*"ef_tower_change{0}_start"*/, v10);
     byte_40F83F5 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TitleInfoEventTower_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_18149;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18149;
+  v12 = (System_Int32_array **)StringLiteral_18149/*"ef_tower_change{0}_start"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18149/*"ef_tower_change{0}_start"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = TitleInfoEventTower_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_18148;
-  v13->EFFECT_ANIMATION_END_FORMAT = (struct System_String_o *)StringLiteral_18148;
+  v14 = (System_Int32_array **)StringLiteral_18148/*"ef_tower_change{0}_end"*/;
+  v13->EFFECT_ANIMATION_END_FORMAT = (struct System_String_o *)StringLiteral_18148/*"ef_tower_change{0}_end"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->EFFECT_ANIMATION_END_FORMAT, v14, v15, v16, v17, v18, v19, v20);
   v21 = TitleInfoEventTower_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_18147;
-  v21->OBJECT_NAME_EFFECT_BASE = (struct System_String_o *)StringLiteral_18147;
+  v22 = (System_Int32_array **)StringLiteral_18147/*"ef_tower_change"*/;
+  v21->OBJECT_NAME_EFFECT_BASE = (struct System_String_o *)StringLiteral_18147/*"ef_tower_change"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->OBJECT_NAME_EFFECT_BASE, v22, v23, v24, v25, v26, v27, v28);
 }
 

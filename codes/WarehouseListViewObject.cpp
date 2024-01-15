@@ -430,7 +430,7 @@ void __fastcall WarehouseListViewObject__OnClickSelect(WarehouseListViewObject_o
 
   if ( (byte_40F671C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9938, method);
+    sub_B16FFC(&StringLiteral_9938/*"OnClickSelectListView"*/, method);
     byte_40F671C = 1;
   }
   linkItem = (Il2CppObject *)this->fields.linkItem;
@@ -439,7 +439,7 @@ void __fastcall WarehouseListViewObject__OnClickSelect(WarehouseListViewObject_o
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9938, linkItem, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9938/*"OnClickSelectListView"*/, linkItem, 0LL);
   }
 }
 
@@ -596,8 +596,8 @@ void __fastcall WarehouseListViewObject__OnLongRelease(WarehouseListViewObject_o
   if ( (byte_40F671F & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9991, v3);
-    sub_B16FFC(&StringLiteral_3546, v4);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, v3);
+    sub_B16FFC(&StringLiteral_3546/*"CancelDragEnd"*/, v4);
     byte_40F671F = 1;
   }
   if ( this->fields.linkItem )
@@ -618,13 +618,13 @@ void __fastcall WarehouseListViewObject__OnLongRelease(WarehouseListViewObject_o
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( manager )
     {
-      UnityEngine_Component__SendMessage_40674196(manager, (System_String_o *)StringLiteral_3546, 0LL);
+      UnityEngine_Component__SendMessage_40674196(manager, (System_String_o *)StringLiteral_3546/*"CancelDragEnd"*/, 0LL);
       v8 = (UnityEngine_Component_o *)this->fields.manager;
       if ( v8 )
       {
         UnityEngine_Component__SendMessage(
           v8,
-          (System_String_o *)StringLiteral_9991,
+          (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/,
           (Il2CppObject *)this->fields.linkItem,
           0LL);
         return;

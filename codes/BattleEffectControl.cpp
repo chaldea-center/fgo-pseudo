@@ -22,9 +22,9 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__CreateDropItemEffectOb
   {
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, *(_QWORD *)&dropEffectType);
     sub_B16FFC(&AssetManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_21093, v8);
-    sub_B16FFC(&StringLiteral_18191, v9);
-    sub_B16FFC(&StringLiteral_2745, v10);
+    sub_B16FFC(&StringLiteral_21093/*"obj_treasure_item_bound"*/, v8);
+    sub_B16FFC(&StringLiteral_18191/*"effect/obj_treasure_item01"*/, v9);
+    sub_B16FFC(&StringLiteral_2745/*"Battle/DropEffect/1"*/, v10);
     byte_40F8CE8 = 1;
   }
   if ( dropEffectType == 1 )
@@ -34,12 +34,12 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__CreateDropItemEffectOb
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2745, 0LL);
+    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2745/*"Battle/DropEffect/1"*/, 0LL);
     if ( !AssetStorage )
       sub_B170D4();
     Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                    AssetStorage,
-                                                                   (System_String_o *)StringLiteral_21093,
+                                                                   (System_String_o *)StringLiteral_21093/*"obj_treasure_item_bound"*/,
                                                                    (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     return BaseMonoBehaviour__createObject(
              (BaseMonoBehaviour_o *)this,
@@ -56,7 +56,7 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__CreateDropItemEffectOb
   {
     return BaseMonoBehaviour__createObject_19257936(
              (BaseMonoBehaviour_o *)this,
-             (System_String_o *)StringLiteral_18191,
+             (System_String_o *)StringLiteral_18191/*"effect/obj_treasure_item01"*/,
              rootTr,
              0LL,
              0LL);
@@ -579,23 +579,23 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__getTreasureObject(
   if ( (byte_40F8CE7 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&rarity);
-    sub_B16FFC(&StringLiteral_18194, v9);
-    sub_B16FFC(&StringLiteral_18192, v10);
-    sub_B16FFC(&StringLiteral_22686, v11);
-    sub_B16FFC(&StringLiteral_18193, v12);
+    sub_B16FFC(&StringLiteral_18194/*"effect/obj_treasure{0:D2}"*/, v9);
+    sub_B16FFC(&StringLiteral_18192/*"effect/obj_treasure_p"*/, v10);
+    sub_B16FFC(&StringLiteral_22686/*"treasure"*/, v11);
+    sub_B16FFC(&StringLiteral_18193/*"effect/obj_treasure_pp"*/, v12);
     byte_40F8CE7 = 1;
   }
   if ( rarity < 1000 )
   {
     v23 = rarity % 3 + 1;
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23);
-    v14 = System_String__Format((System_String_o *)StringLiteral_18194, v13, 0LL);
+    v14 = System_String__Format((System_String_o *)StringLiteral_18194/*"effect/obj_treasure{0:D2}"*/, v13, 0LL);
     Object_19257936 = BaseMonoBehaviour__createObject_19257936((BaseMonoBehaviour_o *)this, v14, rootTr, 0LL, 0LL);
     if ( Object_19257936 )
     {
       v16 = Object_19257936;
       transform = UnityEngine_GameObject__get_transform(Object_19257936, 0LL);
-      NodeFromName = TransformHelper__getNodeFromName(transform, (System_String_o *)StringLiteral_22686, 0, 0LL);
+      NodeFromName = TransformHelper__getNodeFromName(transform, (System_String_o *)StringLiteral_22686/*"treasure"*/, 0, 0LL);
       if ( (unsigned int)(rarity - 3) > 2 )
       {
         if ( (unsigned int)(rarity - 6) > 2 )
@@ -618,17 +618,17 @@ LABEL_16:
     goto LABEL_16;
   v16 = DropItemEffectObject;
   v20 = UnityEngine_GameObject__get_transform(DropItemEffectObject, 0LL);
-  NodeFromName = TransformHelper__getNodeFromName(v20, (System_String_o *)StringLiteral_22686, 0, 0LL);
+  NodeFromName = TransformHelper__getNodeFromName(v20, (System_String_o *)StringLiteral_22686/*"treasure"*/, 0, 0LL);
   if ( rarity == 1002 )
   {
 LABEL_13:
-    v21 = &StringLiteral_18193;
+    v21 = &StringLiteral_18193/*"effect/obj_treasure_pp"*/;
     goto LABEL_14;
   }
   if ( rarity == 1001 )
   {
 LABEL_12:
-    v21 = &StringLiteral_18192;
+    v21 = &StringLiteral_18192/*"effect/obj_treasure_p"*/;
 LABEL_14:
     BaseMonoBehaviour__createObject_19257936(
       (BaseMonoBehaviour_o *)this,

@@ -29,7 +29,7 @@ void __fastcall EventPointBuffEntity___ctor(EventPointBuffEntity_o *this, const 
   {
     sub_B16FFC(&Method_DataEntityBase_int___ctor__, method);
     sub_B16FFC(&int___TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FAC0F = 1;
   }
   DataEntityBase_int____ctor(
@@ -37,11 +37,11 @@ void __fastcall EventPointBuffEntity___ctor(EventPointBuffEntity_o *this, const 
     (const MethodInfo_266F234 *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   *(_QWORD *)&this->fields.groupId = 0LL;
-  v5 = (System_Int32_array **)StringLiteral_1;
-  this->fields.name = (struct System_String_o *)StringLiteral_1;
+  v5 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.name, v5, v6, v7, v8, v9, v10, v11);
-  v12 = (System_Int32_array **)StringLiteral_1;
-  this->fields.detail = (struct System_String_o *)StringLiteral_1;
+  v12 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.detail = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.detail, v12, v13, v14, v15, v16, v17, v18);
   this->fields.value = 0;
   *(_QWORD *)&this->fields.imageId = 0LL;

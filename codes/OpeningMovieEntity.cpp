@@ -21,10 +21,10 @@ int32_t __fastcall OpeningMovieEntity__GetGroupId(OpeningMovieEntity_o *this, co
 {
   if ( (byte_40F7F5A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19013, method);
+    sub_B16FFC(&StringLiteral_19013/*"groupId"*/, method);
     byte_40F7F5A = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19013, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19013/*"groupId"*/, 0, 0LL);
 }
 
 
@@ -47,8 +47,8 @@ System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEnt
   if ( (byte_40F7F5B & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23572, v3);
-    sub_B16FFC(&StringLiteral_23574, v4);
+    sub_B16FFC(&StringLiteral_23572/*"{0}分{1}秒"*/, v3);
+    sub_B16FFC(&StringLiteral_23574/*"{0}秒"*/, v4);
     byte_40F7F5B = 1;
   }
   v11 = 0LL;
@@ -60,7 +60,7 @@ System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEnt
     v16.fields._ticks = (int64_t)&v11;
     Seconds = System_TimeSpan__get_Seconds(v16, 0LL);
     v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds);
-    return System_String__Format((System_String_o *)StringLiteral_23574, v8, 0LL);
+    return System_String__Format((System_String_o *)StringLiteral_23574/*"{0}秒"*/, v8, 0LL);
   }
   else
   {
@@ -70,7 +70,7 @@ System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEnt
     v15.fields._ticks = (int64_t)&v11;
     v9 = System_TimeSpan__get_Seconds(v15, 0LL);
     v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-    return System_String__Format_43739268((System_String_o *)StringLiteral_23572, v5, v6, 0LL);
+    return System_String__Format_43739268((System_String_o *)StringLiteral_23572/*"{0}分{1}秒"*/, v5, v6, 0LL);
   }
 }
 

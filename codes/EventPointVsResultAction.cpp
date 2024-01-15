@@ -14,12 +14,12 @@ void __fastcall EventPointVsResultAction___cctor(const MethodInfo *method)
   if ( (byte_40FAC7F & 1) == 0 )
   {
     sub_B16FFC(&EventPointVsResultAction_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16782, v8);
+    sub_B16FFC(&StringLiteral_16782/*"bit_vs_result_"*/, v8);
     byte_40FAC7F = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventPointVsResultAction_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_16782;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16782;
+  v10 = (System_Int32_array **)StringLiteral_16782/*"bit_vs_result_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16782/*"bit_vs_result_"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -1434,7 +1434,7 @@ void __fastcall EventPointVsResultAction___c__DisplayClass19_0___Setup_b__0(
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&int_TypeInfo, v4);
     sub_B16FFC(&Method_EventPointVsResultAction___c__DisplayClass19_0__Setup_b__1__, v5);
-    this = (EventPointVsResultAction___c__DisplayClass19_0_o *)sub_B16FFC(&StringLiteral_2643, v6);
+    this = (EventPointVsResultAction___c__DisplayClass19_0_o *)sub_B16FFC(&StringLiteral_2643/*"Back/back{0}"*/, v6);
     byte_40F7017 = 1;
   }
   _4__this = v3->fields.__4__this;
@@ -1452,7 +1452,7 @@ void __fastcall EventPointVsResultAction___c__DisplayClass19_0___Setup_b__0(
   mBg = _4__this->fields.mBg;
   v26 = bgs->m_Items[v9 + 1];
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26);
-  v12 = System_String__Format((System_String_o *)StringLiteral_2643, v11, 0LL);
+  v12 = System_String__Format((System_String_o *)StringLiteral_2643/*"Back/back{0}"*/, v11, 0LL);
   _9__1 = v3->fields.__9__1;
   v18 = v12;
   if ( !_9__1 )

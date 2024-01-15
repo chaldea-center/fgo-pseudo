@@ -185,7 +185,7 @@ bool __fastcall WarMaster__IsLastQuest(int32_t warId, int32_t questId, const Met
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_WarMaster___, *(_QWORD *)&questId);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_6315, v6);
+    sub_B16FFC(&StringLiteral_6315/*"FES_WAR_ID"*/, v6);
     byte_40FA957 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -201,7 +201,7 @@ bool __fastcall WarMaster__IsLastQuest(int32_t warId, int32_t questId, const Met
   if ( v10 )
   {
     v11 = v10;
-    if ( ConstantMaster__getValue((System_String_o *)StringLiteral_6315, 0LL) == warId && v11->fields.id == warId )
+    if ( ConstantMaster__getValue((System_String_o *)StringLiteral_6315/*"FES_WAR_ID"*/, 0LL) == warId && v11->fields.id == warId )
       return 1;
   }
   return result;

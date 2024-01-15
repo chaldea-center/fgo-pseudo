@@ -21,10 +21,10 @@ int32_t __fastcall BgmEntity__GetInvalidOverwrite(BgmEntity_o *this, const Metho
 {
   if ( (byte_40F9027 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8041, method);
+    sub_B16FFC(&StringLiteral_8041/*"InvalidOverwrite"*/, method);
     byte_40F9027 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_8041, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_8041/*"InvalidOverwrite"*/, 0, 0LL);
 }
 
 

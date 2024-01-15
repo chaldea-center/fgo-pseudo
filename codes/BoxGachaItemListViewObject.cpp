@@ -123,7 +123,7 @@ void __fastcall BoxGachaItemListViewObject__EventExitMove(BoxGachaItemListViewOb
   {
     sub_B16FFC(&ListViewObject_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_6142, v4);
+    sub_B16FFC(&StringLiteral_6142/*"EventExitMove2"*/, v4);
     byte_40FB473 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
@@ -175,8 +175,8 @@ LABEL_17:
     gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     v20->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
     sub_B16F98((BattleServantConfConponent_o *)&v20->fields.eventReceiver, gameObject, v22, v23, v24, v25, v26, v27);
-    v28 = (System_Int32_array **)StringLiteral_6142;
-    v20->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6142;
+    v28 = (System_Int32_array **)StringLiteral_6142/*"EventExitMove2"*/;
+    v20->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6142/*"EventExitMove2"*/;
     sub_B16F98((BattleServantConfConponent_o *)&v20->fields.callWhenFinished, v28, v29, v30, v31, v32, v33, v34);
   }
 }
@@ -235,7 +235,7 @@ void __fastcall BoxGachaItemListViewObject__EventExitStart(
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_6141, v6);
+    sub_B16FFC(&StringLiteral_6141/*"EventExitMove"*/, v6);
     byte_40FB472 = 1;
   }
   this->fields.isBusy = 1;
@@ -284,7 +284,7 @@ LABEL_11:
     v17);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6141,
+    (System_String_o *)StringLiteral_6141/*"EventExitMove"*/,
     delay,
     0LL);
 }
@@ -326,7 +326,7 @@ void __fastcall BoxGachaItemListViewObject__EventIntoMove(BoxGachaItemListViewOb
   if ( (byte_40FB470 & 1) == 0 )
   {
     sub_B16FFC(&ListViewObject_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6152, v3);
+    sub_B16FFC(&StringLiteral_6152/*"EventIntoMove2"*/, v3);
     byte_40FB470 = 1;
   }
   dragObject = this->fields.dragObject;
@@ -366,8 +366,8 @@ LABEL_12:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v17->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v17->fields.eventReceiver, gameObject, v19, v20, v21, v22, v23, v24);
-  v25 = (System_Int32_array **)StringLiteral_6152;
-  v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6152;
+  v25 = (System_Int32_array **)StringLiteral_6152/*"EventIntoMove2"*/;
+  v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6152/*"EventIntoMove2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v17->fields.callWhenFinished, v25, v26, v27, v28, v29, v30, v31);
 }
 
@@ -431,7 +431,7 @@ void __fastcall BoxGachaItemListViewObject__EventIntoStart(
   if ( (byte_40FB46F & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___, method);
-    sub_B16FFC(&StringLiteral_6151, v5);
+    sub_B16FFC(&StringLiteral_6151/*"EventIntoMove"*/, v5);
     byte_40FB46F = 1;
   }
   this->fields.isBusy = 1;
@@ -471,7 +471,7 @@ void __fastcall BoxGachaItemListViewObject__EventIntoStart(
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v20, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6151,
+    (System_String_o *)StringLiteral_6151/*"EventIntoMove"*/,
     delay,
     0LL);
 }
@@ -700,13 +700,13 @@ void __fastcall BoxGachaItemListViewObject__OnClickSelect(BoxGachaItemListViewOb
 
   if ( (byte_40FB476 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9922, method);
+    sub_B16FFC(&StringLiteral_9922/*"OnClickListView"*/, method);
     byte_40FB476 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
     sub_B170D4();
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9922, (Il2CppObject *)this, 0LL);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9922/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
 }
 
 
@@ -830,7 +830,7 @@ System_String_o *__fastcall BoxGachaItemListViewObject__ToString(
   if ( (byte_40FB475 & 1) == 0 )
   {
     sub_B16FFC(&BoxGachaItemListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40FB475 = 1;
   }
   v13 = 0.0;
@@ -849,7 +849,7 @@ System_String_o *__fastcall BoxGachaItemListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

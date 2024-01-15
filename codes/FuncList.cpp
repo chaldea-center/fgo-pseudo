@@ -150,7 +150,7 @@ bool __fastcall FuncList__isDamage(int32_t funcType, const MethodInfo *method)
   if ( (byte_40FB2EC & 1) == 0 )
   {
     sub_B16FFC(&FuncList_TYPE_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_4538, v3);
+    sub_B16FFC(&StringLiteral_4538/*"DAMAGE"*/, v3);
     byte_40FB2EC = 1;
   }
   v8 = funcType;
@@ -165,7 +165,7 @@ bool __fastcall FuncList__isDamage(int32_t funcType, const MethodInfo *method)
   {
     sub_B170D4();
   }
-  return System_String__Contains(v6, (System_String_o *)StringLiteral_4538, 0LL);
+  return System_String__Contains(v6, (System_String_o *)StringLiteral_4538/*"DAMAGE"*/, 0LL);
 }
 
 

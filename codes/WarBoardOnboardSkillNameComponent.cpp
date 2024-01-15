@@ -78,13 +78,13 @@ void __fastcall WarBoardOnboardSkillNameComponent__Clear(
   if ( (byte_40F8594 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_string__Clear__, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F8594 = 1;
   }
   WarBoardOnboardSkillNameComponent__SetActive(this, 0, v2);
   skillName = this->fields.skillName;
   if ( !skillName
-    || (UILabel__set_text(skillName, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(skillName, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         skillNames = this->fields.skillNames,
         this->fields.skillDispIndex = 0,
         !skillNames) )
@@ -146,7 +146,7 @@ void __fastcall WarBoardOnboardSkillNameComponent__SetSkillNameDisp(
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_string__get_Count__, method);
     sub_B16FFC(&Method_System_Collections_Generic_List_string__get_Item__, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F8595 = 1;
   }
   skillNames = this->fields.skillNames;
@@ -165,7 +165,7 @@ LABEL_13:
     sub_B170D4();
   if ( IsNullOrEmpty )
   {
-    UILabel__set_text(this->fields.skillName, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(this->fields.skillName, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     v11 = this;
     v12 = 0;
   }

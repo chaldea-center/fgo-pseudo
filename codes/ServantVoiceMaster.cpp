@@ -279,7 +279,7 @@ ServantVoiceEntity_o *__fastcall ServantVoiceMaster__getEntity(
     sub_B16FFC(&ServantVoiceEntity_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
     sub_B16FFC(&string___TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_1223, v13);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v13);
     byte_40FCB0F = 1;
   }
   voiceId = 0;
@@ -316,13 +316,13 @@ LABEL_41:
     goto LABEL_40;
   v17->m_Items[0] = (System_String_o *)v26;
   sub_B16F98((BattleServantConfConponent_o *)v17->m_Items, v26, v20, v21, v22, v23, v24, v25);
-  v18 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v18 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v18 = (System_String_o *)sub_B170BC(StringLiteral_1223, v17->obj.klass->_1.element_class);
+    v18 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v17->obj.klass->_1.element_class);
     if ( !v18 )
       goto LABEL_42;
-    v19 = (System_Int32_array **)StringLiteral_1223;
+    v19 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -344,13 +344,13 @@ LABEL_41:
     goto LABEL_40;
   v17->m_Items[2] = (System_String_o *)v37;
   sub_B16F98((BattleServantConfConponent_o *)&v17->m_Items[2], v37, v20, v32, v33, v34, v35, v36);
-  v18 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v18 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v18 = (System_String_o *)sub_B170BC(StringLiteral_1223, v17->obj.klass->_1.element_class);
+    v18 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v17->obj.klass->_1.element_class);
     if ( !v18 )
       goto LABEL_42;
-    v19 = (System_Int32_array **)StringLiteral_1223;
+    v19 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -490,7 +490,7 @@ ServantVoiceEntity_o *__fastcall ServantVoiceMaster__getEntityEventReward(
     sub_B16FFC(&ServantVoiceEntity_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
     sub_B16FFC(&string___TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_1223, v13);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v13);
     byte_40FCB11 = 1;
   }
   voiceId = 0;
@@ -530,13 +530,13 @@ LABEL_43:
     goto LABEL_42;
   v17->m_Items[0] = (System_String_o *)v26;
   sub_B16F98((BattleServantConfConponent_o *)v17->m_Items, v26, v20, v21, v22, v23, v24, v25);
-  v18 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v18 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v18 = (System_String_o *)sub_B170BC(StringLiteral_1223, v17->obj.klass->_1.element_class);
+    v18 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v17->obj.klass->_1.element_class);
     if ( !v18 )
       goto LABEL_44;
-    v19 = (System_Int32_array **)StringLiteral_1223;
+    v19 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -558,13 +558,13 @@ LABEL_43:
     goto LABEL_42;
   v17->m_Items[2] = (System_String_o *)v37;
   sub_B16F98((BattleServantConfConponent_o *)&v17->m_Items[2], v37, v20, v32, v33, v34, v35, v36);
-  v18 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v18 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v18 = (System_String_o *)sub_B170BC(StringLiteral_1223, v17->obj.klass->_1.element_class);
+    v18 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v17->obj.klass->_1.element_class);
     if ( !v18 )
       goto LABEL_44;
-    v19 = (System_Int32_array **)StringLiteral_1223;
+    v19 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -699,7 +699,7 @@ System_Collections_Generic_List_ServantVoiceData____o *__fastcall ServantVoiceMa
     sub_B16FFC(&Method_DataMasterBase_TryGetEntityFromId_ServantVoiceEntity___, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
     sub_B16FFC(&string___TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_1223, v14);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v14);
     byte_40FCB14 = 1;
   }
   voiceId = 0;
@@ -738,13 +738,13 @@ System_Collections_Generic_List_ServantVoiceData____o *__fastcall ServantVoiceMa
     goto LABEL_31;
   v18->m_Items[0] = (System_String_o *)v27;
   sub_B16F98((BattleServantConfConponent_o *)v18->m_Items, v27, v21, v22, v23, v24, v25, v26);
-  v19 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v19 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v19 = (System_String_o *)sub_B170BC(StringLiteral_1223, v18->obj.klass->_1.element_class);
+    v19 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v18->obj.klass->_1.element_class);
     if ( !v19 )
       goto LABEL_32;
-    v20 = (System_Int32_array **)StringLiteral_1223;
+    v20 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -766,13 +766,13 @@ System_Collections_Generic_List_ServantVoiceData____o *__fastcall ServantVoiceMa
     goto LABEL_31;
   v18->m_Items[2] = (System_String_o *)v38;
   sub_B16F98((BattleServantConfConponent_o *)&v18->m_Items[2], v38, v21, v33, v34, v35, v36, v37);
-  v19 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v19 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v19 = (System_String_o *)sub_B170BC(StringLiteral_1223, v18->obj.klass->_1.element_class);
+    v19 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v18->obj.klass->_1.element_class);
     if ( !v19 )
       goto LABEL_32;
-    v20 = (System_Int32_array **)StringLiteral_1223;
+    v20 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -900,7 +900,7 @@ ServantVoiceEntity_array *__fastcall ServantVoiceMaster__getEntity_30014400(
     sub_B16FFC(&ServantVoiceEntity_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
     sub_B16FFC(&string___TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1223, v12);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v12);
     byte_40FCB12 = 1;
   }
   voiceId = 0;
@@ -946,13 +946,13 @@ LABEL_50:
       goto LABEL_49;
     v18->m_Items[0] = (System_String_o *)v26;
     sub_B16F98((BattleServantConfConponent_o *)v18->m_Items, v26, v16, v21, v22, v23, v24, v25);
-    v19 = StringLiteral_1223;
-    if ( StringLiteral_1223 )
+    v19 = StringLiteral_1223/*":"*/;
+    if ( StringLiteral_1223/*":"*/ )
     {
-      v19 = sub_B170BC(StringLiteral_1223, v18->obj.klass->_1.element_class);
+      v19 = sub_B170BC(StringLiteral_1223/*":"*/, v18->obj.klass->_1.element_class);
       if ( !v19 )
         goto LABEL_50;
-      v20 = (System_Int32_array **)StringLiteral_1223;
+      v20 = (System_Int32_array **)StringLiteral_1223/*":"*/;
     }
     else
     {
@@ -974,13 +974,13 @@ LABEL_50:
       goto LABEL_49;
     v18->m_Items[2] = (System_String_o *)v37;
     sub_B16F98((BattleServantConfConponent_o *)&v18->m_Items[2], v37, v16, v32, v33, v34, v35, v36);
-    v19 = StringLiteral_1223;
-    if ( StringLiteral_1223 )
+    v19 = StringLiteral_1223/*":"*/;
+    if ( StringLiteral_1223/*":"*/ )
     {
-      v19 = sub_B170BC(StringLiteral_1223, v18->obj.klass->_1.element_class);
+      v19 = sub_B170BC(StringLiteral_1223/*":"*/, v18->obj.klass->_1.element_class);
       if ( !v19 )
         goto LABEL_50;
-      v20 = (System_Int32_array **)StringLiteral_1223;
+      v20 = (System_Int32_array **)StringLiteral_1223/*":"*/;
     }
     else
     {
@@ -1306,7 +1306,7 @@ System_Collections_Generic_List_ServantVoiceData____o *__fastcall ServantVoiceMa
     sub_B16FFC(&ServantVoiceEntity_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
     sub_B16FFC(&string___TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_1223, v15);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v15);
     byte_40FCB13 = 1;
   }
   voiceId = 0;
@@ -1343,13 +1343,13 @@ System_Collections_Generic_List_ServantVoiceData____o *__fastcall ServantVoiceMa
     goto LABEL_40;
   v19->m_Items[0] = (System_String_o *)v28;
   sub_B16F98((BattleServantConfConponent_o *)v19->m_Items, v28, v22, v23, v24, v25, v26, v27);
-  v20 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v20 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v20 = (System_String_o *)sub_B170BC(StringLiteral_1223, v19->obj.klass->_1.element_class);
+    v20 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v19->obj.klass->_1.element_class);
     if ( !v20 )
       goto LABEL_41;
-    v21 = (System_Int32_array **)StringLiteral_1223;
+    v21 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {
@@ -1371,13 +1371,13 @@ System_Collections_Generic_List_ServantVoiceData____o *__fastcall ServantVoiceMa
     goto LABEL_40;
   v19->m_Items[2] = (System_String_o *)v39;
   sub_B16F98((BattleServantConfConponent_o *)&v19->m_Items[2], v39, v22, v34, v35, v36, v37, v38);
-  v20 = (System_String_o *)StringLiteral_1223;
-  if ( StringLiteral_1223 )
+  v20 = (System_String_o *)StringLiteral_1223/*":"*/;
+  if ( StringLiteral_1223/*":"*/ )
   {
-    v20 = (System_String_o *)sub_B170BC(StringLiteral_1223, v19->obj.klass->_1.element_class);
+    v20 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v19->obj.klass->_1.element_class);
     if ( !v20 )
       goto LABEL_41;
-    v21 = (System_Int32_array **)StringLiteral_1223;
+    v21 = (System_Int32_array **)StringLiteral_1223/*":"*/;
   }
   else
   {

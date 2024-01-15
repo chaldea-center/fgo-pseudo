@@ -71,38 +71,38 @@ void __fastcall AgeVerificationMenu___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&AgeVerificationMenu_TypeInfo, v1);
     sub_B16FFC(&string___TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1676, v9);
-    sub_B16FFC(&StringLiteral_1672, v10);
-    sub_B16FFC(&StringLiteral_1866, v11);
-    sub_B16FFC(&StringLiteral_1865, v12);
-    sub_B16FFC(&StringLiteral_1674, v13);
-    sub_B16FFC(&StringLiteral_1675, v14);
-    sub_B16FFC(&StringLiteral_1864, v15);
+    sub_B16FFC(&StringLiteral_1676/*"AGE_VEIFICATION_TYPE3"*/, v9);
+    sub_B16FFC(&StringLiteral_1672/*"AGE_VEIFICATION_NONE"*/, v10);
+    sub_B16FFC(&StringLiteral_1866/*"AgeVerificationType"*/, v11);
+    sub_B16FFC(&StringLiteral_1865/*"AgeVerificationExpirationDate"*/, v12);
+    sub_B16FFC(&StringLiteral_1674/*"AGE_VEIFICATION_TYPE1"*/, v13);
+    sub_B16FFC(&StringLiteral_1675/*"AGE_VEIFICATION_TYPE2"*/, v14);
+    sub_B16FFC(&StringLiteral_1864/*"AgeVerificationCumulativeAmount"*/, v15);
     byte_40F7EB2 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)AgeVerificationMenu_TypeInfo->static_fields;
-  v17 = (System_Int32_array **)StringLiteral_1866;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_1866;
+  v17 = (System_Int32_array **)StringLiteral_1866/*"AgeVerificationType"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_1866/*"AgeVerificationType"*/;
   sub_B16F98(static_fields, v17, v2, v3, v4, v5, v6, v7);
   v18 = AgeVerificationMenu_TypeInfo->static_fields;
-  v19 = (System_Int32_array **)StringLiteral_1865;
-  v18->SAVE_KEY_EXPIRATION_DATE = (struct System_String_o *)StringLiteral_1865;
+  v19 = (System_Int32_array **)StringLiteral_1865/*"AgeVerificationExpirationDate"*/;
+  v18->SAVE_KEY_EXPIRATION_DATE = (struct System_String_o *)StringLiteral_1865/*"AgeVerificationExpirationDate"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v18->SAVE_KEY_EXPIRATION_DATE, v19, v20, v21, v22, v23, v24, v25);
   v26 = AgeVerificationMenu_TypeInfo->static_fields;
-  v27 = (System_Int32_array **)StringLiteral_1864;
-  v26->SAVE_KEY_CUMULATIVE_AMOUNT = (struct System_String_o *)StringLiteral_1864;
+  v27 = (System_Int32_array **)StringLiteral_1864/*"AgeVerificationCumulativeAmount"*/;
+  v26->SAVE_KEY_CUMULATIVE_AMOUNT = (struct System_String_o *)StringLiteral_1864/*"AgeVerificationCumulativeAmount"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v26->SAVE_KEY_CUMULATIVE_AMOUNT, v27, v28, v29, v30, v31, v32, v33);
   v35 = sub_B17014(string___TypeInfo, 4LL, v34);
   if ( !v35 )
     sub_B170D4();
   v42 = (System_Int32_array **)v35;
-  v43 = StringLiteral_1672;
-  if ( StringLiteral_1672 )
+  v43 = StringLiteral_1672/*"AGE_VEIFICATION_NONE"*/;
+  if ( StringLiteral_1672/*"AGE_VEIFICATION_NONE"*/ )
   {
-    v43 = sub_B170BC(StringLiteral_1672, *(_QWORD *)&(*v42)->m_Items[9]);
+    v43 = sub_B170BC(StringLiteral_1672/*"AGE_VEIFICATION_NONE"*/, *(_QWORD *)&(*v42)->m_Items[9]);
     if ( !v43 )
       goto LABEL_26;
-    v44 = (System_Int32_array **)StringLiteral_1672;
+    v44 = (System_Int32_array **)StringLiteral_1672/*"AGE_VEIFICATION_NONE"*/;
   }
   else
   {
@@ -112,13 +112,13 @@ void __fastcall AgeVerificationMenu___cctor(const MethodInfo *method)
     goto LABEL_25;
   v42[4] = (System_Int32_array *)v44;
   sub_B16F98((BattleServantConfConponent_o *)(v42 + 4), v44, v36, v37, v38, v39, v40, v41);
-  v43 = StringLiteral_1674;
-  if ( StringLiteral_1674 )
+  v43 = StringLiteral_1674/*"AGE_VEIFICATION_TYPE1"*/;
+  if ( StringLiteral_1674/*"AGE_VEIFICATION_TYPE1"*/ )
   {
-    v43 = sub_B170BC(StringLiteral_1674, *(_QWORD *)&(*v42)->m_Items[9]);
+    v43 = sub_B170BC(StringLiteral_1674/*"AGE_VEIFICATION_TYPE1"*/, *(_QWORD *)&(*v42)->m_Items[9]);
     if ( !v43 )
       goto LABEL_26;
-    v44 = (System_Int32_array **)StringLiteral_1674;
+    v44 = (System_Int32_array **)StringLiteral_1674/*"AGE_VEIFICATION_TYPE1"*/;
   }
   else
   {
@@ -128,13 +128,13 @@ void __fastcall AgeVerificationMenu___cctor(const MethodInfo *method)
     goto LABEL_25;
   v42[5] = (System_Int32_array *)v44;
   sub_B16F98((BattleServantConfConponent_o *)(v42 + 5), v44, v36, v45, v46, v47, v48, v49);
-  v43 = StringLiteral_1675;
-  if ( StringLiteral_1675 )
+  v43 = StringLiteral_1675/*"AGE_VEIFICATION_TYPE2"*/;
+  if ( StringLiteral_1675/*"AGE_VEIFICATION_TYPE2"*/ )
   {
-    v43 = sub_B170BC(StringLiteral_1675, *(_QWORD *)&(*v42)->m_Items[9]);
+    v43 = sub_B170BC(StringLiteral_1675/*"AGE_VEIFICATION_TYPE2"*/, *(_QWORD *)&(*v42)->m_Items[9]);
     if ( !v43 )
       goto LABEL_26;
-    v44 = (System_Int32_array **)StringLiteral_1675;
+    v44 = (System_Int32_array **)StringLiteral_1675/*"AGE_VEIFICATION_TYPE2"*/;
   }
   else
   {
@@ -144,13 +144,13 @@ void __fastcall AgeVerificationMenu___cctor(const MethodInfo *method)
     goto LABEL_25;
   v42[6] = (System_Int32_array *)v44;
   sub_B16F98((BattleServantConfConponent_o *)(v42 + 6), v44, v36, v50, v51, v52, v53, v54);
-  v43 = StringLiteral_1676;
-  if ( StringLiteral_1676 )
+  v43 = StringLiteral_1676/*"AGE_VEIFICATION_TYPE3"*/;
+  if ( StringLiteral_1676/*"AGE_VEIFICATION_TYPE3"*/ )
   {
-    v43 = sub_B170BC(StringLiteral_1676, *(_QWORD *)&(*v42)->m_Items[9]);
+    v43 = sub_B170BC(StringLiteral_1676/*"AGE_VEIFICATION_TYPE3"*/, *(_QWORD *)&(*v42)->m_Items[9]);
     if ( v43 )
     {
-      v44 = (System_Int32_array **)StringLiteral_1676;
+      v44 = (System_Int32_array **)StringLiteral_1676/*"AGE_VEIFICATION_TYPE3"*/;
       goto LABEL_23;
     }
 LABEL_26:
@@ -358,10 +358,10 @@ void __fastcall AgeVerificationMenu__ConfirmType(AgeVerificationMenu_o *this, in
     sub_B16FFC(&CommonConfirmDialog_ClickDelegate_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_1670, v10);
-    sub_B16FFC(&StringLiteral_1669, v11);
-    sub_B16FFC(&StringLiteral_1667, v12);
-    sub_B16FFC(&StringLiteral_1668, v13);
+    sub_B16FFC(&StringLiteral_1670/*"AGE_VEIFICATION_CONFIRM_TITLE"*/, v10);
+    sub_B16FFC(&StringLiteral_1669/*"AGE_VEIFICATION_CONFIRM_MESSAGE"*/, v11);
+    sub_B16FFC(&StringLiteral_1667/*"AGE_VEIFICATION_CONFIRM_CANCEL"*/, v12);
+    sub_B16FFC(&StringLiteral_1668/*"AGE_VEIFICATION_CONFIRM_DECIDE"*/, v13);
     byte_40F7EAA = 1;
   }
   this->fields.selectType = type;
@@ -372,8 +372,8 @@ void __fastcall AgeVerificationMenu__ConfirmType(AgeVerificationMenu_o *this, in
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_1670, 0LL);
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_1669, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_1670/*"AGE_VEIFICATION_CONFIRM_TITLE"*/, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_1669/*"AGE_VEIFICATION_CONFIRM_MESSAGE"*/, 0LL);
   v19 = v16;
   v20 = AgeVerificationMenu_TypeInfo;
   if ( (BYTE3(AgeVerificationMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -393,8 +393,8 @@ void __fastcall AgeVerificationMenu__ConfirmType(AgeVerificationMenu_o *this, in
   }
   v23 = (Il2CppObject *)LocalizationManager__Get(typeTextList->m_Items[selectType], 0LL);
   v24 = System_String__Format(v19, v23, 0LL);
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_1668, 0LL);
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_1667, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_1668/*"AGE_VEIFICATION_CONFIRM_DECIDE"*/, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_1667/*"AGE_VEIFICATION_CONFIRM_CANCEL"*/, 0LL);
   v31 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v27,
@@ -560,26 +560,26 @@ void __fastcall AgeVerificationMenu__Init(AgeVerificationMenu_o *this, const Met
 
   if ( (byte_40F7EA7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F7EA7 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_9;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (type1Label = this->fields.type1Label) == 0LL)
-    || (UILabel__set_text(type1Label, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(type1Label, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (type2Label = this->fields.type2Label) == 0LL)
-    || (UILabel__set_text(type2Label, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(type2Label, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (type3Label = this->fields.type3Label) == 0LL) )
   {
 LABEL_9:
     sub_B170D4();
   }
-  UILabel__set_text(type3Label, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(type3Label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -615,7 +615,7 @@ bool __fastcall AgeVerificationMenu__IsConcent(const MethodInfo *method)
     sub_B16FFC(&AgeVerificationMenu_TypeInfo, v1);
     sub_B16FFC(&ManagerConfig_TypeInfo, v2);
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_951, v4);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v4);
     byte_40F7E9F = 1;
   }
   dateData = 0LL;
@@ -657,7 +657,7 @@ bool __fastcall AgeVerificationMenu__IsConcent(const MethodInfo *method)
     }
     String = UnityEngine_PlayerPrefs__GetString(
                v9->static_fields->SAVE_KEY_EXPIRATION_DATE,
-               (System_String_o *)StringLiteral_951,
+               (System_String_o *)StringLiteral_951/*"0"*/,
                0LL);
     v11 = System_Int64__Parse(String, 0LL);
     v16 = NetworkManager__getDateTime_23685272(v11, 0LL).fields.dateData;
@@ -895,8 +895,8 @@ void __fastcall AgeVerificationMenu__Open(
     sub_B16FFC(&Method_AgeVerificationMenu_EndOpen__, v10);
     sub_B16FFC(&AgeVerificationMenu_TypeInfo, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_1673, v13);
-    sub_B16FFC(&StringLiteral_1671, v14);
+    sub_B16FFC(&StringLiteral_1673/*"AGE_VEIFICATION_TITLE"*/, v13);
+    sub_B16FFC(&StringLiteral_1671/*"AGE_VEIFICATION_MESSAGE"*/, v14);
     byte_40F7EA8 = 1;
   }
   state = this->fields.state;
@@ -937,12 +937,12 @@ void __fastcall AgeVerificationMenu__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = LocalizationManager__Get((System_String_o *)StringLiteral_1673, 0LL);
+      v18 = LocalizationManager__Get((System_String_o *)StringLiteral_1673/*"AGE_VEIFICATION_TITLE"*/, 0LL);
       if ( titleLabel )
       {
         UILabel__set_text(titleLabel, v18, 0LL);
         messageLabel = this->fields.messageLabel;
-        v20 = LocalizationManager__Get((System_String_o *)StringLiteral_1671, 0LL);
+        v20 = LocalizationManager__Get((System_String_o *)StringLiteral_1671/*"AGE_VEIFICATION_MESSAGE"*/, 0LL);
         if ( messageLabel )
         {
           UILabel__set_text(messageLabel, v20, 0LL);
@@ -1071,10 +1071,10 @@ System_String_o *__fastcall AgeVerificationMenu__get_closeBtnPath(
 {
   if ( (byte_40F7EB0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15416, method);
+    sub_B16FFC(&StringLiteral_15416/*"Window/CloseButton"*/, method);
     byte_40F7EB0 = 1;
   }
-  return (System_String_o *)StringLiteral_15416;
+  return (System_String_o *)StringLiteral_15416/*"Window/CloseButton"*/;
 }
 
 

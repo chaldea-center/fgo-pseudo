@@ -1346,7 +1346,7 @@ void __fastcall BlankEarthPoint__SetBlankEarthSpotUI(BlankEarthPoint_o *this, bo
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_12263, v12);
+    sub_B16FFC(&StringLiteral_12263/*"SPOT_FREE_QUEST_LAST_TIME"*/, v12);
     byte_40F90D7 = 1;
   }
   memset(&v76, 0, sizeof(v76));
@@ -1510,7 +1510,7 @@ LABEL_85:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v61 = LocalizationManager__Get((System_String_o *)StringLiteral_12263, 0LL);
+      v61 = LocalizationManager__Get((System_String_o *)StringLiteral_12263/*"SPOT_FREE_QUEST_LAST_TIME"*/, 0LL);
       if ( !v60 )
         goto LABEL_84;
       UILabel__set_text(v60, v61, 0LL);
@@ -1677,7 +1677,7 @@ void __fastcall BlankEarthPoint__SetEarthObj(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
     sub_B16FFC(&Method_SingletonTemplate_QuestTree__get_Instance__, v16);
     sub_B16FFC(&SingletonTemplate_QuestTree__TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_19296, v18);
+    sub_B16FFC(&StringLiteral_19296/*"icon_spot_next"*/, v18);
     byte_40F90D6 = 1;
   }
   memset(&methoda.name, 0, 24);
@@ -1697,7 +1697,7 @@ void __fastcall BlankEarthPoint__SetEarthObj(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI(v26, (System_String_o *)StringLiteral_19296, 0LL);
+    AtlasManager__SetEventUI(v26, (System_String_o *)StringLiteral_19296/*"icon_spot_next"*/, 0LL);
   }
   if ( !spotEnt )
     goto LABEL_31;

@@ -68,20 +68,20 @@ void __fastcall QuestRewardItemAction___ctor(QuestRewardItemAction_o *this, cons
 
   if ( (byte_40FD601 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16710, method);
-    sub_B16FFC(&StringLiteral_16712, v9);
-    sub_B16FFC(&StringLiteral_16713, v10);
-    sub_B16FFC(&StringLiteral_16711, v11);
+    sub_B16FFC(&StringLiteral_16710/*"bit_item_get01"*/, method);
+    sub_B16FFC(&StringLiteral_16712/*"bit_item_get01_3"*/, v9);
+    sub_B16FFC(&StringLiteral_16713/*"bit_item_get01_4"*/, v10);
+    sub_B16FFC(&StringLiteral_16711/*"bit_item_get01_2"*/, v11);
     byte_40FD601 = 1;
   }
   this->fields.mLabelAnimate = 1;
   this->fields.mTreasureAnimStartTime = 1.0;
   *(_WORD *)&this->fields.mTreasureEffectOff = 257;
-  v12 = (System_Int32_array **)StringLiteral_16710;
-  this->fields.ANIMATION_NAME_1_TYPE = (struct System_String_o *)StringLiteral_16710;
+  v12 = (System_Int32_array **)StringLiteral_16710/*"bit_item_get01"*/;
+  this->fields.ANIMATION_NAME_1_TYPE = (struct System_String_o *)StringLiteral_16710/*"bit_item_get01"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.ANIMATION_NAME_1_TYPE, v12, v2, v3, v4, v5, v6, v7);
-  v13 = (System_Int32_array **)StringLiteral_16711;
-  this->fields.DIFF_ANIMATION_NAME_2_TYPES = (struct System_String_o *)StringLiteral_16711;
+  v13 = (System_Int32_array **)StringLiteral_16711/*"bit_item_get01_2"*/;
+  this->fields.DIFF_ANIMATION_NAME_2_TYPES = (struct System_String_o *)StringLiteral_16711/*"bit_item_get01_2"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.DIFF_ANIMATION_NAME_2_TYPES,
     v13,
@@ -91,8 +91,8 @@ void __fastcall QuestRewardItemAction___ctor(QuestRewardItemAction_o *this, cons
     v17,
     v18,
     v19);
-  v20 = (System_Int32_array **)StringLiteral_16712;
-  this->fields.DIFF_ANIMATION_NAME_3_TYPES = (struct System_String_o *)StringLiteral_16712;
+  v20 = (System_Int32_array **)StringLiteral_16712/*"bit_item_get01_3"*/;
+  this->fields.DIFF_ANIMATION_NAME_3_TYPES = (struct System_String_o *)StringLiteral_16712/*"bit_item_get01_3"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.DIFF_ANIMATION_NAME_3_TYPES,
     v20,
@@ -102,8 +102,8 @@ void __fastcall QuestRewardItemAction___ctor(QuestRewardItemAction_o *this, cons
     v24,
     v25,
     v26);
-  v27 = (System_Int32_array **)StringLiteral_16713;
-  this->fields.DIFF_ANIMATION_NAME_4_TYPES = (struct System_String_o *)StringLiteral_16713;
+  v27 = (System_Int32_array **)StringLiteral_16713/*"bit_item_get01_4"*/;
+  this->fields.DIFF_ANIMATION_NAME_4_TYPES = (struct System_String_o *)StringLiteral_16713/*"bit_item_get01_4"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.DIFF_ANIMATION_NAME_4_TYPES,
     v27,
@@ -113,8 +113,8 @@ void __fastcall QuestRewardItemAction___ctor(QuestRewardItemAction_o *this, cons
     v31,
     v32,
     v33);
-  v34 = (System_Int32_array **)StringLiteral_16711;
-  this->fields.SAME_ANIMATION_NAME_2_TYPES = (struct System_String_o *)StringLiteral_16711;
+  v34 = (System_Int32_array **)StringLiteral_16711/*"bit_item_get01_2"*/;
+  this->fields.SAME_ANIMATION_NAME_2_TYPES = (struct System_String_o *)StringLiteral_16711/*"bit_item_get01_2"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.SAME_ANIMATION_NAME_2_TYPES,
     v34,
@@ -124,8 +124,8 @@ void __fastcall QuestRewardItemAction___ctor(QuestRewardItemAction_o *this, cons
     v38,
     v39,
     v40);
-  v41 = (System_Int32_array **)StringLiteral_16712;
-  this->fields.SAME_ANIMATION_NAME_3_TYPES = (struct System_String_o *)StringLiteral_16712;
+  v41 = (System_Int32_array **)StringLiteral_16712/*"bit_item_get01_3"*/;
+  this->fields.SAME_ANIMATION_NAME_3_TYPES = (struct System_String_o *)StringLiteral_16712/*"bit_item_get01_3"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.SAME_ANIMATION_NAME_3_TYPES,
     v41,
@@ -135,8 +135,8 @@ void __fastcall QuestRewardItemAction___ctor(QuestRewardItemAction_o *this, cons
     v45,
     v46,
     v47);
-  v48 = (System_Int32_array **)StringLiteral_16713;
-  this->fields.SAME_ANIMATION_NAME_4_TYPES = (struct System_String_o *)StringLiteral_16713;
+  v48 = (System_Int32_array **)StringLiteral_16713/*"bit_item_get01_4"*/;
+  this->fields.SAME_ANIMATION_NAME_4_TYPES = (struct System_String_o *)StringLiteral_16713/*"bit_item_get01_4"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.SAME_ANIMATION_NAME_4_TYPES,
     v48,
@@ -698,8 +698,8 @@ void __fastcall QuestRewardItemAction__SetClearTextLabel(
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v14);
     sub_B16FFC(&QuestRewardItemAction_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_10878, v16);
-    sub_B16FFC(&StringLiteral_1, v17);
+    sub_B16FFC(&StringLiteral_10878/*"QUEST_CLEAR_REWARD_GET"*/, v16);
+    sub_B16FFC(&StringLiteral_1/*""*/, v17);
     byte_40FD5FC = 1;
   }
   CrossOperatorString = ItemType__get_CrossOperatorString(0LL);
@@ -781,7 +781,7 @@ LABEL_28:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10878, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10878/*"QUEST_CLEAR_REWARD_GET"*/, 0LL);
   num = questInfoReward->fields.num;
   v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num);
   v32 = System_String__Format_43744796(v30, age, CountableString, v31, 0LL);
@@ -929,7 +929,7 @@ void __fastcall QuestRewardItemAction__Setup(
     sub_B16FFC(&UnityEngine_GameObject___TypeInfo, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&UILabel___TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FD5F9 = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -1090,7 +1090,7 @@ LABEL_55:
     mItemSp = this->fields.mItemSp;
     if ( !mItemSp )
       goto LABEL_54;
-    UISprite__set_spriteName(mItemSp, (System_String_o *)StringLiteral_1, 0LL);
+    UISprite__set_spriteName(mItemSp, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     mServantFaceIcon = (UnityEngine_Object_o *)this->fields.mServantFaceIcon;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1274,7 +1274,7 @@ void __fastcall QuestRewardItemAction__SetupMultipleQuestRewardInfo(
     sub_B16FFC(&Method_GameObjectExtensions_SafeGetComponent_ItemIconComponent___, v7);
     sub_B16FFC(&UnityEngine_GameObject___TypeInfo, v8);
     sub_B16FFC(&UILabel___TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FD5FB = 1;
   }
   if ( this->fields.mItemSpList_2 && this->fields.mItemLabelList_3 && this->fields.mItemLabelList_4 )
@@ -1487,7 +1487,7 @@ LABEL_59:
             v99 = v90[v88];
             if ( !v99 )
               goto LABEL_59;
-            UISprite__set_spriteName(v99, (System_String_o *)StringLiteral_1, 0LL);
+            UISprite__set_spriteName(v99, (System_String_o *)StringLiteral_1/*""*/, 0LL);
             if ( !mServantFaceIconList_3 )
               goto LABEL_59;
             v100 = *(_QWORD *)&mServantFaceIconList_3->max_length;
@@ -1725,7 +1725,7 @@ void __fastcall QuestRewardItemAction__Setup_31289008(
     sub_B16FFC(&DataManager_TypeInfo, v11);
     sub_B16FFC(&Method_GameObjectExtensions_SafeGetComponent_ItemIconComponent___, v12);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FD5FA = 1;
   }
   entity = 0LL;
@@ -2030,7 +2030,7 @@ LABEL_43:
         v120 = (UISprite_o *)*((_QWORD *)&mItemSpList_2->obj.klass + v117);
         if ( !v120 )
           goto LABEL_76;
-        UISprite__set_spriteName(v120, (System_String_o *)StringLiteral_1, 0LL);
+        UISprite__set_spriteName(v120, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         if ( !mServantFaceIconList_2 )
           goto LABEL_76;
         if ( v118 >= mServantFaceIconList_2->max_length )

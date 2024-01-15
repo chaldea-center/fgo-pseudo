@@ -61,7 +61,7 @@ void __fastcall WarBoardServantPieceComponent__ChangeDyingAnimation(
   if ( (byte_40FBA93 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12653, v3);
+    sub_B16FFC(&StringLiteral_12653/*"ServantDying"*/, v3);
     byte_40FBA93 = 1;
   }
   pieceData = this->fields.pieceData;
@@ -71,7 +71,7 @@ void __fastcall WarBoardServantPieceComponent__ChangeDyingAnimation(
   {
     WarBoardPieceBaseComponent__StopSimpleAnimation(
       (WarBoardPieceBaseComponent_o *)this,
-      (System_String_o *)StringLiteral_12653,
+      (System_String_o *)StringLiteral_12653/*"ServantDying"*/,
       0LL);
     faceEffect = (UnityEngine_Object_o *)this->fields.faceEffect;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -95,7 +95,7 @@ LABEL_14:
   {
     WarBoardPieceBaseComponent__PlaySimpleAnimation(
       (WarBoardPieceBaseComponent_o *)this,
-      (System_String_o *)StringLiteral_12653,
+      (System_String_o *)StringLiteral_12653/*"ServantDying"*/,
       0LL);
   }
 }
@@ -965,9 +965,9 @@ void __fastcall WarBoardServantPieceComponent__Initialize(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, pieceData);
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_19300, v7);
-    sub_B16FFC(&StringLiteral_19111, v8);
-    sub_B16FFC(&StringLiteral_21890, v9);
+    sub_B16FFC(&StringLiteral_19300/*"icon_strong_enemy"*/, v7);
+    sub_B16FFC(&StringLiteral_19111/*"hp_gauge_boss"*/, v8);
+    sub_B16FFC(&StringLiteral_21890/*"servant_base_{0}"*/, v9);
     byte_40FBA8D = 1;
   }
   WarBoardPieceBaseComponent__Initialize((WarBoardPieceBaseComponent_o *)this, pieceData, 0LL);
@@ -976,7 +976,7 @@ void __fastcall WarBoardServantPieceComponent__Initialize(
   frameSprite = this->fields.frameSprite;
   v35 = pieceData->fields._forceId_k__BackingField + 1;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
-  v12 = System_String__Format((System_String_o *)StringLiteral_21890, v11, 0LL);
+  v12 = System_String__Format((System_String_o *)StringLiteral_21890/*"servant_base_{0}"*/, v11, 0LL);
   if ( !frameSprite )
     goto LABEL_42;
   UISprite__set_spriteName(frameSprite, v12, 0LL);
@@ -985,7 +985,7 @@ void __fastcall WarBoardServantPieceComponent__Initialize(
     hpBar = this->fields.hpBar;
     if ( !hpBar )
       goto LABEL_42;
-    UISprite__set_spriteName(hpBar, (System_String_o *)StringLiteral_19111, 0LL);
+    UISprite__set_spriteName(hpBar, (System_String_o *)StringLiteral_19111/*"hp_gauge_boss"*/, 0LL);
   }
   if ( pieceData->fields._battleServant_k__BackingField )
   {
@@ -1054,7 +1054,7 @@ void __fastcall WarBoardServantPieceComponent__Initialize(
                                                     (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
           if ( Component_srcLineSprite )
           {
-            UISprite__set_spriteName(Component_srcLineSprite, (System_String_o *)StringLiteral_19300, 0LL);
+            UISprite__set_spriteName(Component_srcLineSprite, (System_String_o *)StringLiteral_19300/*"icon_strong_enemy"*/, 0LL);
             v32 = this->fields.RoleTypeLabel;
             if ( v32 )
             {
@@ -1798,10 +1798,10 @@ void __fastcall WarBoardServantPieceComponent__OnDead(
     sub_B16FFC(&WarBoardManager_TypeInfo, v24);
     sub_B16FFC(&Method_WarBoardServantPieceComponent__OnDead_b__46_0__, v25);
     sub_B16FFC(&WarBoardWaitTime_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_6121, v27);
-    sub_B16FFC(&StringLiteral_5980, v28);
-    sub_B16FFC(&StringLiteral_12670, v29);
-    sub_B16FFC(&StringLiteral_12905, v30);
+    sub_B16FFC(&StringLiteral_6121/*"Escape_Effect"*/, v27);
+    sub_B16FFC(&StringLiteral_5980/*"Enemy_Dead_Effect"*/, v28);
+    sub_B16FFC(&StringLiteral_12670/*"Servant_Dead_Effect"*/, v29);
+    sub_B16FFC(&StringLiteral_12905/*"Special_Effect{0:D2}"*/, v30);
     byte_40FBA98 = 1;
   }
   priority = 0;
@@ -2081,9 +2081,9 @@ void __fastcall WarBoardServantPieceComponent__OnDead(
   if ( !v90 )
     goto LABEL_84;
   IsEnemyMonster = WarBoardPieceData__get_IsEnemyMonster(v90, 0LL);
-  v92 = (System_String_o **)&StringLiteral_5980;
+  v92 = (System_String_o **)&StringLiteral_5980/*"Enemy_Dead_Effect"*/;
   if ( !IsEnemyMonster )
-    v92 = (System_String_o **)&StringLiteral_12670;
+    v92 = (System_String_o **)&StringLiteral_12670/*"Servant_Dead_Effect"*/;
   v93 = *v92;
   v94 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !v94 )
@@ -2124,13 +2124,13 @@ void __fastcall WarBoardServantPieceComponent__OnDead(
   v106 = ServantEntity__checkIsHeroineSvt(v103, 0LL);
   if ( LODWORD(v105) == 1 || v106 )
   {
-    v93 = (System_String_o *)StringLiteral_6121;
+    v93 = (System_String_o *)StringLiteral_6121/*"Escape_Effect"*/;
   }
   else if ( SLODWORD(v105) >= 2 )
   {
     v136.fields.value.fields.x = v105;
     v107 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v136);
-    v93 = System_String__Format((System_String_o *)StringLiteral_12905, v107, 0LL);
+    v93 = System_String__Format((System_String_o *)StringLiteral_12905/*"Special_Effect{0:D2}"*/, v107, 0LL);
   }
   SimpleAnimationPerformance = WarBoardPieceBaseComponent__GetSimpleAnimationPerformance(
                                  (WarBoardPieceBaseComponent_o *)this,
@@ -2214,7 +2214,7 @@ void __fastcall WarBoardServantPieceComponent__OnGuts(
 
   if ( (byte_40FBAA3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18122, taskList);
+    sub_B16FFC(&StringLiteral_18122/*"ef_guts"*/, taskList);
     byte_40FBAA3 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -2223,7 +2223,7 @@ void __fastcall WarBoardServantPieceComponent__OnGuts(
   if ( UnityEngine_GameObject__get_activeSelf(gameObject, 0LL) )
     WarBoardPieceBaseComponent__CreateEffect(
       (WarBoardPieceBaseComponent_o *)this,
-      (System_String_o *)StringLiteral_18122,
+      (System_String_o *)StringLiteral_18122/*"ef_guts"*/,
       taskList,
       0LL);
 }
@@ -2238,7 +2238,7 @@ void __fastcall WarBoardServantPieceComponent__OnInvincible(
 
   if ( (byte_40FBAA2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18142, taskList);
+    sub_B16FFC(&StringLiteral_18142/*"ef_special_invincible01"*/, taskList);
     byte_40FBAA2 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -2247,7 +2247,7 @@ void __fastcall WarBoardServantPieceComponent__OnInvincible(
   if ( UnityEngine_GameObject__get_activeSelf(gameObject, 0LL) )
     WarBoardPieceBaseComponent__CreateEffect(
       (WarBoardPieceBaseComponent_o *)this,
-      (System_String_o *)StringLiteral_18142,
+      (System_String_o *)StringLiteral_18142/*"ef_special_invincible01"*/,
       taskList,
       0LL);
 }
@@ -2724,7 +2724,7 @@ void __fastcall WarBoardServantPieceComponent__OnRevive(
     sub_B16FFC(&WarBoardTaskBase_TaskCallback_TypeInfo, v10);
     sub_B16FFC(&Method_WarBoardServantPieceComponent__OnRevive_b__47_0__, v11);
     sub_B16FFC(&WarBoardWaitTime_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_12671, v13);
+    sub_B16FFC(&StringLiteral_12671/*"Servant_Regenerate_Effect"*/, v13);
     byte_40FBA99 = 1;
   }
   WarBoardServantPieceComponent__SetServantIcon(this, (const MethodInfo *)taskList);
@@ -2815,7 +2815,7 @@ void __fastcall WarBoardServantPieceComponent__OnRevive(
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
   SimpleAnimationPerformance = WarBoardPieceBaseComponent__GetSimpleAnimationPerformance(
                                  (WarBoardPieceBaseComponent_o *)this,
-                                 (System_String_o *)StringLiteral_12671,
+                                 (System_String_o *)StringLiteral_12671/*"Servant_Regenerate_Effect"*/,
                                  0LL);
   if ( !SimpleAnimationPerformance )
     goto LABEL_10;
@@ -2951,7 +2951,7 @@ void __fastcall WarBoardServantPieceComponent__Reinforcements(
     sub_B16FFC(&WarBoardTaskBase_TaskCallback_TypeInfo, v12);
     sub_B16FFC(&Method_WarBoardServantPieceComponent___c__DisplayClass58_0__Reinforcements_b__0__, v13);
     sub_B16FFC(&WarBoardServantPieceComponent___c__DisplayClass58_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_11342, v15);
+    sub_B16FFC(&StringLiteral_11342/*"Reinforcement_Effect_1"*/, v15);
     byte_40FBAA1 = 1;
   }
   v16 = sub_B170CC(WarBoardServantPieceComponent___c__DisplayClass58_0_TypeInfo, callback, method, v3, v4);
@@ -3002,7 +3002,7 @@ void __fastcall WarBoardServantPieceComponent__Reinforcements(
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
   SimpleAnimationPerformance = WarBoardPieceBaseComponent__GetSimpleAnimationPerformance(
                                  (WarBoardPieceBaseComponent_o *)this,
-                                 (System_String_o *)StringLiteral_11342,
+                                 (System_String_o *)StringLiteral_11342/*"Reinforcement_Effect_1"*/,
                                  0LL);
   if ( !SimpleAnimationPerformance )
     goto LABEL_12;
@@ -3103,7 +3103,7 @@ void __fastcall WarBoardServantPieceComponent__SetClassIcon(
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__TryGetEntity__, v5);
     sub_B16FFC(&int_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_21140, v7);
+    sub_B16FFC(&StringLiteral_21140/*"onBoard_initial_placement_class2_{0}"*/, v7);
     byte_40FBA8E = 1;
   }
   entity = 0LL;
@@ -3169,7 +3169,7 @@ LABEL_21:
   classIcon = this->fields.classIcon;
   iconImageId = AllClassServantEntity->fields.iconImageId;
   v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconImageId);
-  v23 = System_String__Format((System_String_o *)StringLiteral_21140, v22, 0LL);
+  v23 = System_String__Format((System_String_o *)StringLiteral_21140/*"onBoard_initial_placement_class2_{0}"*/, v22, 0LL);
   if ( !classIcon )
     goto LABEL_23;
   UISprite__set_spriteName(classIcon, v23, 0LL);
@@ -3386,8 +3386,8 @@ void __fastcall WarBoardServantPieceComponent__SetServantIcon(
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_21552, v10);
-    sub_B16FFC(&StringLiteral_15212, v11);
+    sub_B16FFC(&StringLiteral_21552/*"questinfo_enemyface_bg"*/, v10);
+    sub_B16FFC(&StringLiteral_15212/*"WARBOARD_PIECE_ICON_SVT_LV"*/, v11);
     byte_40FBA8F = 1;
   }
   v104 = 0;
@@ -3541,7 +3541,7 @@ LABEL_35:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI_28584872(webView, v37, (System_String_o *)StringLiteral_21552, 0LL);
+    AtlasManager__SetEventUI_28584872(webView, v37, (System_String_o *)StringLiteral_21552/*"questinfo_enemyface_bg"*/, 0LL);
     v38 = this->fields.pieceData;
     if ( !v38 )
       goto LABEL_123;
@@ -3662,7 +3662,7 @@ LABEL_123:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_15212, 0LL);
+    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_15212/*"WARBOARD_PIECE_ICON_SVT_LV"*/, 0LL);
     v68 = this->fields.pieceData;
     if ( !v68 )
       goto LABEL_123;

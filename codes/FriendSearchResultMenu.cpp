@@ -12,11 +12,11 @@ void __fastcall FriendSearchResultMenu___ctor(FriendSearchResultMenu_o *this, co
   if ( (byte_40FB29C & 1) == 0 )
   {
     sub_B16FFC(&BaseMenu_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FB29C = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_1;
-  this->fields.searchId = (struct System_String_o *)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.searchId = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.searchId, v10, v2, v3, v4, v5, v6, v7);
   if ( (BYTE3(BaseMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -199,13 +199,13 @@ void __fastcall FriendSearchResultMenu__Init(FriendSearchResultMenu_o *this, con
     sub_B16FFC(&System_IDisposable_TypeInfo, v10);
     sub_B16FFC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v11);
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FB295 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_46;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_46;
@@ -465,7 +465,7 @@ void __fastcall FriendSearchResultMenu__Open(
     sub_B16FFC(&Method_FriendSearchResultMenu_EndOpen__, v10);
     sub_B16FFC(&Method_FriendSearchResultMenu_changeClass__, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_6474, v13);
+    sub_B16FFC(&StringLiteral_6474/*"FRIEND_SEARCH_RESULT_TITLE"*/, v13);
     byte_40FB296 = 1;
   }
   classButtonControl = this->fields.classButtonControl;
@@ -536,7 +536,7 @@ void __fastcall FriendSearchResultMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_6474, 0LL);
+    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_6474/*"FRIEND_SEARCH_RESULT_TITLE"*/, 0LL);
     if ( titleLabel )
     {
       UILabel__set_text(titleLabel, v32, 0LL);

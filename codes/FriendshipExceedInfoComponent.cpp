@@ -32,7 +32,7 @@ void __fastcall FriendshipExceedInfoComponent__InitLabel(
   if ( (byte_40FB2B9 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_8805, v3);
+    sub_B16FFC(&StringLiteral_8805/*"MSG_FRIENDSHIP_EXCEED_DISABLE"*/, v3);
     byte_40FB2B9 = 1;
   }
   if ( !this->fields.isInitialized )
@@ -43,7 +43,7 @@ void __fastcall FriendshipExceedInfoComponent__InitLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_8805, 0LL);
+    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_8805/*"MSG_FRIENDSHIP_EXCEED_DISABLE"*/, 0LL);
     if ( !disableLabel
       || (UILabel__set_text(disableLabel, v5, 0LL), (v6 = (UIWidget_o *)this->fields.disableLabel) == 0LL) )
     {

@@ -619,7 +619,7 @@ void __fastcall SetMoveBannerControll__setBanner(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventEntity__get_Count__, v12);
     sub_B16FFC(&Method_SetMoveBannerControll___c__setBanner_b__15_0__, v13);
     sub_B16FFC(&SetMoveBannerControll___c_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_16538, v15);
+    sub_B16FFC(&StringLiteral_16538/*"banner_event_002"*/, v15);
     byte_40FC3CF = 1;
   }
   v16 = SetMoveBannerControll___c_TypeInfo;
@@ -705,7 +705,7 @@ void __fastcall SetMoveBannerControll__setBanner(
                                                   (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         if ( !Component_srcLineSprite )
           break;
-        UISprite__set_spriteName(Component_srcLineSprite, (System_String_o *)StringLiteral_16538, 0LL);
+        UISprite__set_spriteName(Component_srcLineSprite, (System_String_o *)StringLiteral_16538/*"banner_event_002"*/, 0LL);
       }
       else if ( !Object )
       {

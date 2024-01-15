@@ -44,10 +44,10 @@ System_String_o *__fastcall CommonConsumeDetail__GetConsumeDetailDescription(
     sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, v5);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v6);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_3260, v8);
-    sub_B16FFC(&StringLiteral_3259, v9);
-    sub_B16FFC(&StringLiteral_3262, v10);
-    sub_B16FFC(&StringLiteral_3261, v11);
+    sub_B16FFC(&StringLiteral_3260/*"COMMON_CONSUME_INFO_IF_ENOUGH"*/, v8);
+    sub_B16FFC(&StringLiteral_3259/*"COMMON_CONSUME_DESCRIPTION_TITLE"*/, v9);
+    sub_B16FFC(&StringLiteral_3262/*"COMMON_CONSUME_INFO_SEPARATOR"*/, v10);
+    sub_B16FFC(&StringLiteral_3261/*"COMMON_CONSUME_INFO_IF_LACKING"*/, v11);
     byte_40F6556 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -55,10 +55,10 @@ System_String_o *__fastcall CommonConsumeDetail__GetConsumeDetailDescription(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  str0 = LocalizationManager__Get((System_String_o *)StringLiteral_3259, 0LL);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3260, 0LL);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3261, 0LL);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3262, 0LL);
+  str0 = LocalizationManager__Get((System_String_o *)StringLiteral_3259/*"COMMON_CONSUME_DESCRIPTION_TITLE"*/, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3260/*"COMMON_CONSUME_INFO_IF_ENOUGH"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3261/*"COMMON_CONSUME_INFO_IF_LACKING"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3262/*"COMMON_CONSUME_INFO_SEPARATOR"*/, 0LL);
   v19 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                   System_Collections_Generic_List_string__TypeInfo,
                                                                                                   v15,

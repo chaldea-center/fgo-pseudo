@@ -35,8 +35,8 @@ void __fastcall BattleServantHeadUpComponent__SetEnableTargetMark(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UISprite___, enable);
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UITexture___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_22402, v7);
-    sub_B16FFC(&StringLiteral_22403, v8);
+    sub_B16FFC(&StringLiteral_22402/*"symbol_adjust/mapsymbol_001"*/, v7);
+    sub_B16FFC(&StringLiteral_22403/*"symbol_adjust/target"*/, v8);
     byte_40FCCD5 = 1;
   }
   targetMark = (UnityEngine_Object_o *)this->fields.targetMark;
@@ -53,7 +53,7 @@ void __fastcall BattleServantHeadUpComponent__SetEnableTargetMark(
     transform = UnityEngine_GameObject__get_transform(v10, 0LL);
     if ( !transform )
       goto LABEL_40;
-    v12 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_22403, 0LL);
+    v12 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_22403/*"symbol_adjust/target"*/, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -89,7 +89,7 @@ void __fastcall BattleServantHeadUpComponent__SetEnableTargetMark(
     if ( !v15 || (v16 = UnityEngine_GameObject__get_transform(v15, 0LL)) == 0LL )
 LABEL_40:
       sub_B170D4();
-    v17 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(v16, (System_String_o *)StringLiteral_22402, 0LL);
+    v17 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(v16, (System_String_o *)StringLiteral_22402/*"symbol_adjust/mapsymbol_001"*/, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {

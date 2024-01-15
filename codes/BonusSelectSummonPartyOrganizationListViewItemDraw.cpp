@@ -40,25 +40,25 @@ System_String_o *__fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__
   if ( (byte_40FB109 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, classIconId);
-    sub_B16FFC(&StringLiteral_16100, v8);
-    sub_B16FFC(&StringLiteral_19240, v9);
-    sub_B16FFC(&StringLiteral_16098, v10);
+    sub_B16FFC(&StringLiteral_16100/*"_on{0}"*/, v8);
+    sub_B16FFC(&StringLiteral_19240/*"icon_class{0}"*/, v9);
+    sub_B16FFC(&StringLiteral_16098/*"_off{0}"*/, v10);
     byte_40FB109 = 1;
   }
   if ( System_String__IsNullOrEmpty(classIconId, 0LL) )
     return string_TypeInfo->static_fields->Empty;
-  v12 = StringLiteral_19240;
+  v12 = StringLiteral_19240/*"icon_class{0}"*/;
   if ( isUpper )
   {
-    v13 = (System_String_o **)&StringLiteral_16100;
+    v13 = (System_String_o **)&StringLiteral_16100/*"_on{0}"*/;
     if ( !isUpperOn )
-      v13 = (System_String_o **)&StringLiteral_16098;
+      v13 = (System_String_o **)&StringLiteral_16098/*"_off{0}"*/;
     v14 = (Il2CppObject *)System_String__Format(*v13, (Il2CppObject *)classIconId, 0LL);
     v15 = (System_String_o *)v12;
   }
   else
   {
-    v15 = (System_String_o *)StringLiteral_19240;
+    v15 = (System_String_o *)StringLiteral_19240/*"icon_class{0}"*/;
     v14 = (Il2CppObject *)classIconId;
   }
   return System_String__Format(v15, v14, 0LL);
@@ -292,8 +292,8 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewItemDraw__SvtDisp(
     sub_B16FFC(&AtlasManager_TypeInfo, item);
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&Rarity_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_16639, v7);
-    sub_B16FFC(&StringLiteral_16816, v8);
+    sub_B16FFC(&StringLiteral_16639/*"bg_white"*/, v7);
+    sub_B16FFC(&StringLiteral_16816/*"bonus_select_frame_{0}"*/, v8);
     byte_40FB105 = 1;
   }
   tdInfo = 0LL;
@@ -372,14 +372,14 @@ LABEL_25:
   treasureDeviceIconBg = this->fields.treasureDeviceIconBg;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(treasureDeviceIconBg, (System_String_o *)StringLiteral_16639, 0LL);
+  AtlasManager__SetPartyOrganizationImage(treasureDeviceIconBg, (System_String_o *)StringLiteral_16639/*"bg_white"*/, 0LL);
   baseSprite = this->fields.baseSprite;
   v38 = BonusSelectSummonPartyOrganizationListViewItem__get_FrameType(item, v37);
   AtlasManager__SetFormationBase(baseSprite, v38, this->fields.partyOrganizationAtlas, 0, 0LL);
   base2Sprite = this->fields.base2Sprite;
   v43 = BonusSelectSummonPartyOrganizationListViewItem__get_FrameType(item, v40);
   v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v43);
-  v42 = System_String__Format((System_String_o *)StringLiteral_16816, v41, 0LL);
+  v42 = System_String__Format((System_String_o *)StringLiteral_16816/*"bonus_select_frame_{0}"*/, v41, 0LL);
   AtlasManager__SetEventSprite(base2Sprite, v42, 0LL);
 }
 

@@ -169,14 +169,14 @@ System_String_o *__fastcall BoostItemListViewItem__get_NameText(
 
   if ( (byte_40FB141 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, method);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, method);
     byte_40FB141 = 1;
   }
   itemEntity = this->fields.itemEntity;
   if ( itemEntity )
     p_name = &itemEntity->fields.name;
   else
-    p_name = (System_String_o **)&StringLiteral_18326;
+    p_name = (System_String_o **)&StringLiteral_18326/*"error"*/;
   return *p_name;
 }
 
@@ -191,15 +191,15 @@ System_String_o *__fastcall BoostItemListViewItem__get_NumText(BoostItemListView
   if ( (byte_40FB144 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23433, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FB144 = 1;
   }
   if ( !this->fields.itemEntity )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   itemPossessionSum = this->fields.itemPossessionSum;
   v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &itemPossessionSum);
-  return System_String__Format((System_String_o *)StringLiteral_23433, v5, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v5, 0LL);
 }
 
 
@@ -245,12 +245,12 @@ System_String_o *__fastcall BoostItemListViewItem__get_SkillText(
     sub_B16FFC(&Method_DataManager_GetMasterData_SkillMaster___, method);
     sub_B16FFC(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FB143 = 1;
   }
   itemEntity = this->fields.itemEntity;
   if ( !itemEntity || itemEntity->fields.type != 19 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
@@ -268,5 +268,5 @@ System_String_o *__fastcall BoostItemListViewItem__get_SkillText(
   if ( Entity )
     return SkillEntity__getEffectExplanation(Entity, 0, 0LL);
   else
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
 }

@@ -23,17 +23,17 @@ void __fastcall QuestPhaseMaster___cctor(const MethodInfo *method)
   if ( (byte_40FD53E & 1) == 0 )
   {
     sub_B16FFC(&QuestPhaseMaster_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_20501, v8);
-    sub_B16FFC(&StringLiteral_20502, v9);
+    sub_B16FFC(&StringLiteral_20501/*"movieFolder"*/, v8);
+    sub_B16FFC(&StringLiteral_20502/*"moviePlayType"*/, v9);
     byte_40FD53E = 1;
   }
   static_fields = (BattleServantConfConponent_o *)QuestPhaseMaster_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_20501;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_20501;
+  v11 = (System_Int32_array **)StringLiteral_20501/*"movieFolder"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_20501/*"movieFolder"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = QuestPhaseMaster_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_20502;
-  v12->MOVIE_QUEST_SCRIPT_TYPE_STR = (struct System_String_o *)StringLiteral_20502;
+  v13 = (System_Int32_array **)StringLiteral_20502/*"moviePlayType"*/;
+  v12->MOVIE_QUEST_SCRIPT_TYPE_STR = (struct System_String_o *)StringLiteral_20502/*"moviePlayType"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->MOVIE_QUEST_SCRIPT_TYPE_STR, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -554,12 +554,12 @@ System_String_o *__fastcall QuestPhaseMaster__GetMapModelEntryAnimationName(
 
   if ( (byte_40FD53D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, *(_QWORD *)&questId);
+    sub_B16FFC(&StringLiteral_1/*""*/, *(_QWORD *)&questId);
     byte_40FD53D = 1;
   }
   entity = 0LL;
   if ( questId < 1 || !QuestPhaseMaster__TryGetEntity(this, &entity, questId, phase, v4) )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( !entity )
     sub_B170D4();
   return QuestPhaseEntity__GetMapModelEntryAnimationName(entity, 0LL);
@@ -716,7 +716,7 @@ bool __fastcall QuestPhaseMaster__IsEnableMaterialPlayUseUserQuestRoute(
 
   if ( (byte_40FD53C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20344, *(_QWORD *)&questId);
+    sub_B16FFC(&StringLiteral_20344/*"materialPlayUseUserQuestRoute"*/, *(_QWORD *)&questId);
     byte_40FD53C = 1;
   }
   entity = 0LL;
@@ -724,7 +724,7 @@ bool __fastcall QuestPhaseMaster__IsEnableMaterialPlayUseUserQuestRoute(
     return 0;
   if ( !entity )
     sub_B170D4();
-  return QuestPhaseEntity__getScriptIntParam(entity, (System_String_o *)StringLiteral_20344, 0, 0LL) == 1;
+  return QuestPhaseEntity__getScriptIntParam(entity, (System_String_o *)StringLiteral_20344/*"materialPlayUseUserQuestRoute"*/, 0, 0LL) == 1;
 }
 
 
@@ -744,7 +744,7 @@ bool __fastcall QuestPhaseMaster__IsHaveOverwriteEndScript(
 
   if ( (byte_40FD53B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21271, *(_QWORD *)&questId);
+    sub_B16FFC(&StringLiteral_21271/*"overwriteEndScript"*/, *(_QWORD *)&questId);
     byte_40FD53B = 1;
   }
   List = QuestPhaseMaster__getList(this, questId, method);
@@ -766,7 +766,7 @@ LABEL_13:
     v11 = v9->m_Items[v10];
     if ( !v11 )
       goto LABEL_13;
-    List = (QuestPhaseEntity_array *)QuestPhaseEntity__getScriptObj(v11, (System_String_o *)StringLiteral_21271, 0LL);
+    List = (QuestPhaseEntity_array *)QuestPhaseEntity__getScriptObj(v11, (System_String_o *)StringLiteral_21271/*"overwriteEndScript"*/, 0LL);
     if ( List )
       return 1;
     max_length = v9->max_length;

@@ -22,10 +22,10 @@ void __fastcall SetRandomLimitCountOptionControl__Init(
   if ( (byte_40FC3F3 & 1) == 0 )
   {
     sub_B16FFC(&OptionManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9767, v3);
-    sub_B16FFC(&StringLiteral_9768, v4);
-    sub_B16FFC(&StringLiteral_9766, v5);
-    sub_B16FFC(&StringLiteral_9765, v6);
+    sub_B16FFC(&StringLiteral_9767/*"OPTION_RANDOM_LIMIT_COUNT_OWN_BUTTON"*/, v3);
+    sub_B16FFC(&StringLiteral_9768/*"OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION"*/, v4);
+    sub_B16FFC(&StringLiteral_9766/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_EXPLANATION"*/, v5);
+    sub_B16FFC(&StringLiteral_9765/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_BUTTON"*/, v6);
     byte_40FC3F3 = 1;
   }
   friendSettingInfo = this->fields.friendSettingInfo;
@@ -39,8 +39,8 @@ void __fastcall SetRandomLimitCountOptionControl__Init(
     || (SetRandomLimitCountOptionControl_CategoryInfo__Init(
           friendSettingInfo,
           RandomLimitCountOwn,
-          (System_String_o *)StringLiteral_9767,
-          (System_String_o *)StringLiteral_9768,
+          (System_String_o *)StringLiteral_9767/*"OPTION_RANDOM_LIMIT_COUNT_OWN_BUTTON"*/,
+          (System_String_o *)StringLiteral_9768/*"OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION"*/,
           0LL),
         klass = (SetRandomLimitCountOptionControl_CategoryInfo_o *)this[1].klass,
         RandomLimitCountFriend = OptionManager__GetRandomLimitCountFriend(0LL),
@@ -51,8 +51,8 @@ void __fastcall SetRandomLimitCountOptionControl__Init(
   SetRandomLimitCountOptionControl_CategoryInfo__Init(
     klass,
     RandomLimitCountFriend,
-    (System_String_o *)StringLiteral_9765,
-    (System_String_o *)StringLiteral_9766,
+    (System_String_o *)StringLiteral_9765/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_BUTTON"*/,
+    (System_String_o *)StringLiteral_9766/*"OPTION_RANDOM_LIMIT_COUNT_FRIEND_EXPLANATION"*/,
     0LL);
 }
 
@@ -252,16 +252,16 @@ void __fastcall SetRandomLimitCountOptionControl_CategoryInfo__RefreshButton(
 
   if ( (byte_40F7682 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40F7682 = 1;
   }
   button = this->fields.button;
   if ( !button )
     sub_B170D4();
   if ( this->fields.flag )
-    v5 = &StringLiteral_16940;
+    v5 = &StringLiteral_16940/*"btn_on"*/;
   else
-    v5 = &StringLiteral_16939;
+    v5 = &StringLiteral_16939/*"btn_off"*/;
   UIButton__set_normalSprite(button, (System_String_o *)*v5, 0LL);
 }

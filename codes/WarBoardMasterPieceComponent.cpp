@@ -23,17 +23,17 @@ void __fastcall WarBoardMasterPieceComponent___cctor(const MethodInfo *method)
   if ( (byte_40F8565 & 1) == 0 )
   {
     sub_B16FFC(&WarBoardMasterPieceComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18298, v8);
-    sub_B16FFC(&StringLiteral_5978, v9);
+    sub_B16FFC(&StringLiteral_18298/*"enemyMstFace{0:d5}"*/, v8);
+    sub_B16FFC(&StringLiteral_5978/*"EnemyMasterFace/enemyMstFace{0:d5}"*/, v9);
     byte_40F8565 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarBoardMasterPieceComponent_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_5978;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5978;
+  v11 = (System_Int32_array **)StringLiteral_5978/*"EnemyMasterFace/enemyMstFace{0:d5}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5978/*"EnemyMasterFace/enemyMstFace{0:d5}"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = WarBoardMasterPieceComponent_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_18298;
-  v12->ENEMY_MASTER_FACE_TEXTURE_NAME = (struct System_String_o *)StringLiteral_18298;
+  v13 = (System_Int32_array **)StringLiteral_18298/*"enemyMstFace{0:d5}"*/;
+  v12->ENEMY_MASTER_FACE_TEXTURE_NAME = (struct System_String_o *)StringLiteral_18298/*"enemyMstFace{0:d5}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->ENEMY_MASTER_FACE_TEXTURE_NAME, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -121,8 +121,8 @@ void __fastcall WarBoardMasterPieceComponent__Initialize(
     sub_B16FFC(&int_TypeInfo, pieceData);
     sub_B16FFC(&UnityEngine_Material_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_4519, v7);
-    sub_B16FFC(&StringLiteral_6765, v8);
+    sub_B16FFC(&StringLiteral_4519/*"Custom/SpriteWithMask"*/, v7);
+    sub_B16FFC(&StringLiteral_6765/*"Frame{0}"*/, v8);
     byte_40F855E = 1;
   }
   WarBoardPieceBaseComponent__Initialize((WarBoardPieceBaseComponent_o *)this, pieceData, method);
@@ -131,7 +131,7 @@ void __fastcall WarBoardMasterPieceComponent__Initialize(
   frameSprite = this->fields.frameSprite;
   forceId_k__BackingField = pieceData->fields._forceId_k__BackingField;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &forceId_k__BackingField);
-  v11 = System_String__Format((System_String_o *)StringLiteral_6765, v10, 0LL);
+  v11 = System_String__Format((System_String_o *)StringLiteral_6765/*"Frame{0}"*/, v10, 0LL);
   if ( !frameSprite )
     goto LABEL_13;
   UISprite__set_spriteName(frameSprite, v11, 0LL);
@@ -149,7 +149,7 @@ void __fastcall WarBoardMasterPieceComponent__Initialize(
   if ( UnityEngine_Object__op_Equality(v13, 0LL, 0LL) )
   {
     v15 = this->fields.masterIcon;
-    v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519, 0LL);
+    v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519/*"Custom/SpriteWithMask"*/, 0LL);
     v21 = (UnityEngine_Material_o *)sub_B170CC(UnityEngine_Material_TypeInfo, v17, v18, v19, v20);
     UnityEngine_Material___ctor(v21, v16, 0LL);
     if ( v15 )
@@ -241,7 +241,7 @@ void __fastcall WarBoardMasterPieceComponent__OnDead(
     sub_B16FFC(&WarBoardTaskBase_TaskCallback_TypeInfo, v11);
     sub_B16FFC(&Method_WarBoardMasterPieceComponent__OnDead_b__11_0__, v12);
     sub_B16FFC(&WarBoardTaskBase___TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_8933, v14);
+    sub_B16FFC(&StringLiteral_8933/*"MasterBreak"*/, v14);
     byte_40F855F = 1;
   }
   if ( cameraMove )
@@ -313,7 +313,7 @@ LABEL_28:
 LABEL_16:
   SimpleAnimationPerformance = WarBoardPieceBaseComponent__GetSimpleAnimationPerformance(
                                  (WarBoardPieceBaseComponent_o *)this,
-                                 (System_String_o *)StringLiteral_8933,
+                                 (System_String_o *)StringLiteral_8933/*"MasterBreak"*/,
                                  (const MethodInfo *)taskList);
   if ( !SimpleAnimationPerformance )
     goto LABEL_28;
@@ -992,7 +992,7 @@ void __fastcall WarBoardMasterPieceComponent___c__DisplayClass16_0___SetPlayerMa
   {
     sub_B16FFC(&Method_AssetData_GetObject_Texture2D___, method);
     sub_B16FFC(&AssetManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_15952, v4);
+    sub_B16FFC(&StringLiteral_15952/*"_MaskTex"*/, v4);
     byte_40F7846 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -1058,7 +1058,7 @@ LABEL_23:
                                    (const MethodInfo_18AFB5C *)Method_AssetData_GetObject_Texture2D___);
   if ( !v26 )
     goto LABEL_22;
-  UnityEngine_Material__SetTexture(v26, (System_String_o *)StringLiteral_15952, v28, 0LL);
+  UnityEngine_Material__SetTexture(v26, (System_String_o *)StringLiteral_15952/*"_MaskTex"*/, v28, 0LL);
   v29 = this->fields.__4__this;
   if ( !v29 )
     goto LABEL_22;

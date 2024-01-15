@@ -169,7 +169,7 @@ void __fastcall UserEquipEntity__getEquipInfo(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v15);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v16);
-    sub_B16FFC(&StringLiteral_1, v17);
+    sub_B16FFC(&StringLiteral_1/*""*/, v17);
     byte_40FAB24 = 1;
   }
   v18 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
@@ -205,20 +205,20 @@ void __fastcall UserEquipEntity__getEquipInfo(
   {
     *condUsrLv = 0;
     *maxLv = 0;
-    *equipName = (System_String_o *)StringLiteral_1;
+    *equipName = (System_String_o *)StringLiteral_1/*""*/;
     sub_B16F98(
       (BattleServantConfConponent_o *)equipName,
-      (System_Int32_array **)StringLiteral_1,
+      (System_Int32_array **)StringLiteral_1/*""*/,
       v27,
       v28,
       v29,
       v30,
       v31,
       v32);
-    *detail = (System_String_o *)StringLiteral_1;
+    *detail = (System_String_o *)StringLiteral_1/*""*/;
     sub_B16F98(
       (BattleServantConfConponent_o *)detail,
-      (System_Int32_array **)StringLiteral_1,
+      (System_Int32_array **)StringLiteral_1/*""*/,
       v54,
       v55,
       v56,

@@ -454,9 +454,9 @@ void __fastcall ServantStatusListViewItemDrawSkill__SetItem(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
     sub_B16FFC(&ServantSkillStrengthStatus_TypeInfo, v9);
     sub_B16FFC(&ServantStatusListViewItemDrawSkill_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_11932, v11);
-    sub_B16FFC(&StringLiteral_11930, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_11932/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, v11);
+    sub_B16FFC(&StringLiteral_11930/*"SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FDEBD = 1;
   }
   skillInfoList = 0LL;
@@ -468,9 +468,9 @@ void __fastcall ServantStatusListViewItemDrawSkill__SetItem(
     goto LABEL_165;
   skillBaseList = (UILabel_o *)this->fields.skillBaseList;
   if ( ServantEntity__get_IsServantEquip(svtEntity, 0LL) )
-    v16 = (System_String_o **)&StringLiteral_11932;
+    v16 = (System_String_o **)&StringLiteral_11932/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/;
   else
-    v16 = (System_String_o **)&StringLiteral_11930;
+    v16 = (System_String_o **)&StringLiteral_11930/*"SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE"*/;
   v17 = *v16;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -722,7 +722,7 @@ LABEL_165:
         v90 = skillNameLabelList->m_Items[(int)v64];
         if ( !v90 )
           goto LABEL_165;
-        v89 = (System_String_o *)StringLiteral_1;
+        v89 = (System_String_o *)StringLiteral_1/*""*/;
       }
       else
       {

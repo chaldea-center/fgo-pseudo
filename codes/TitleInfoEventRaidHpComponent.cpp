@@ -23,18 +23,18 @@ void __fastcall TitleInfoEventRaidHpComponent___cctor(const MethodInfo *method)
   if ( (byte_40FE002 & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventRaidHpComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18487, v8);
-    sub_B16FFC(&StringLiteral_18485, v9);
+    sub_B16FFC(&StringLiteral_18487/*"event_raid_ok"*/, v8);
+    sub_B16FFC(&StringLiteral_18485/*"event_raid_ng"*/, v9);
     byte_40FE002 = 1;
   }
   TitleInfoEventRaidHpComponent_TypeInfo->static_fields->WIDTH = 31.0;
   static_fields = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_18487;
-  static_fields->RESULT_OK_SPNAME = (struct System_String_o *)StringLiteral_18487;
+  v11 = (System_Int32_array **)StringLiteral_18487/*"event_raid_ok"*/;
+  static_fields->RESULT_OK_SPNAME = (struct System_String_o *)StringLiteral_18487/*"event_raid_ok"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->RESULT_OK_SPNAME, v11, v2, v3, v4, v5, v6, v7);
   v12 = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_18485;
-  v12->RESULT_NG_SPNAME = (struct System_String_o *)StringLiteral_18485;
+  v13 = (System_Int32_array **)StringLiteral_18485/*"event_raid_ng"*/;
+  v12->RESULT_NG_SPNAME = (struct System_String_o *)StringLiteral_18485/*"event_raid_ng"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->RESULT_NG_SPNAME, v13, v14, v15, v16, v17, v18, v19);
 }
 

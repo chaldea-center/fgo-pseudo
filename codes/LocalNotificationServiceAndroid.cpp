@@ -16,17 +16,17 @@ void __fastcall LocalNotificationServiceAndroid___ctor(
   {
     sub_B16FFC(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__, method);
     sub_B16FFC(&SingletonTemplate_LocalNotificationManagerAndroid__TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_6563, v4);
-    sub_B16FFC(&StringLiteral_1873, v5);
-    sub_B16FFC(&StringLiteral_23758, v6);
-    sub_B16FFC(&StringLiteral_2951, v7);
+    sub_B16FFC(&StringLiteral_6563/*"Fate/Grand Order"*/, v4);
+    sub_B16FFC(&StringLiteral_1873/*"All notifications"*/, v5);
+    sub_B16FFC(&StringLiteral_23758/*"全ての通知"*/, v6);
+    sub_B16FFC(&StringLiteral_2951/*"CHANNEL_ALL"*/, v7);
     byte_40F8D7D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( UnityEngine_Application__get_systemLanguage(0LL) == 22 )
-    v8 = (System_String_o **)&StringLiteral_23758;
+    v8 = (System_String_o **)&StringLiteral_23758/*"全ての通知"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_1873;
+    v8 = (System_String_o **)&StringLiteral_1873/*"All notifications"*/;
   v9 = *v8;
   if ( (BYTE3(SingletonTemplate_LocalNotificationManagerAndroid__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !SingletonTemplate_LocalNotificationManagerAndroid__TypeInfo->_2.cctor_finished )
@@ -38,10 +38,10 @@ void __fastcall LocalNotificationServiceAndroid___ctor(
     sub_B170D4();
   LocalNotificationManagerAndroid__SetNotificationChannelParam(
     v10,
-    (System_String_o *)StringLiteral_2951,
+    (System_String_o *)StringLiteral_2951/*"CHANNEL_ALL"*/,
     v9,
     v9,
-    (System_String_o *)StringLiteral_6563,
+    (System_String_o *)StringLiteral_6563/*"Fate/Grand Order"*/,
     v11);
 }
 

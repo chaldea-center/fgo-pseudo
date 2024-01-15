@@ -50,9 +50,9 @@ void __fastcall BlacklistRegistDialog__Open(
     sub_B16FFC(&Method_CommonConfirmDialog_EndOpen__, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_3255, v18);
-    sub_B16FFC(&StringLiteral_3258, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v18);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
     byte_40F9095 = 1;
   }
   this->fields.clickFunc = func;
@@ -79,7 +79,7 @@ void __fastcall BlacklistRegistDialog__Open(
     if ( title )
       v23 = title;
     else
-      v23 = (System_String_o *)StringLiteral_1;
+      v23 = (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v22, v23, 0LL);
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
@@ -103,7 +103,7 @@ void __fastcall BlacklistRegistDialog__Open(
     if ( message_main )
       v27 = message_main;
     else
-      v27 = (System_String_o *)StringLiteral_1;
+      v27 = (System_String_o *)StringLiteral_1/*""*/;
     WrapControlText__textAdjust(v26, v27, v26->fields.mFontSize, 0, 0, 0LL);
   }
   messageLabel_sub = (UnityEngine_Object_o *)this->fields.messageLabel_sub;
@@ -127,7 +127,7 @@ void __fastcall BlacklistRegistDialog__Open(
       if ( message_sub )
         v31 = message_sub;
       else
-        v31 = (System_String_o *)StringLiteral_1;
+        v31 = (System_String_o *)StringLiteral_1/*""*/;
       WrapControlText__textAdjust(v30, v31, v30->fields.mFontSize, 0, 0, 0LL);
       goto LABEL_36;
     }
@@ -149,7 +149,7 @@ LABEL_36:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
+    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
     if ( !v33 )
       goto LABEL_55;
     UILabel__set_text(v33, v34, 0LL);
@@ -168,7 +168,7 @@ LABEL_36:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
     if ( v40 )
     {
       UILabel__set_text(v40, v41, 0LL);

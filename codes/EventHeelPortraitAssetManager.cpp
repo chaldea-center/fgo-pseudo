@@ -22,23 +22,23 @@ void __fastcall EventHeelPortraitAssetManager___ctor(EventHeelPortraitAssetManag
   if ( (byte_40FB6A5 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6184, v4);
+    sub_B16FFC(&StringLiteral_6184/*"EventUI/Prefabs/"*/, v4);
     byte_40FB6A5 = 1;
   }
   v5 = sub_B17014(string___TypeInfo, 1LL, v2);
   if ( !v5 )
     sub_B170D4();
   v12 = (struct System_String_array *)v5;
-  v13 = StringLiteral_6184;
-  if ( StringLiteral_6184 )
+  v13 = StringLiteral_6184/*"EventUI/Prefabs/"*/;
+  if ( StringLiteral_6184/*"EventUI/Prefabs/"*/ )
   {
-    v13 = sub_B170BC(StringLiteral_6184, v12->obj.klass->_1.element_class);
+    v13 = sub_B170BC(StringLiteral_6184/*"EventUI/Prefabs/"*/, v12->obj.klass->_1.element_class);
     if ( !v13 )
     {
       sub_B170F4(0LL);
       sub_B170A0();
     }
-    v14 = (System_Int32_array **)StringLiteral_6184;
+    v14 = (System_Int32_array **)StringLiteral_6184/*"EventUI/Prefabs/"*/;
   }
   else
   {
@@ -267,14 +267,14 @@ void __fastcall EventHeelPortraitAssetManager___c__DisplayClass5_0___GetAssets_b
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, v5);
     sub_B16FFC(&AtlasManager_TypeInfo, v6);
     sub_B16FFC(&Method_EventHeelPortraitAssetManager___c__DisplayClass5_0__GetAssets_b__1__, v7);
-    sub_B16FFC(&StringLiteral_7115, v8);
+    sub_B16FFC(&StringLiteral_7115/*"HeelPortraitDetailDialog"*/, v8);
     byte_40F6FB3 = 1;
   }
   if ( !assetData
     || (_4__this = this->fields.__4__this,
         Object_WarBoardWaitTimeSetting = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                   assetData,
-                                                                  (System_String_o *)StringLiteral_7115,
+                                                                  (System_String_o *)StringLiteral_7115/*"HeelPortraitDetailDialog"*/,
                                                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784),
         !_4__this) )
   {

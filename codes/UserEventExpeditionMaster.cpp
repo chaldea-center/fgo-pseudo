@@ -59,7 +59,7 @@ System_Collections_Generic_List_ExpeditionInfo__o *__fastcall UserEventExpeditio
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&NetworkManager_TypeInfo, v10);
     sub_B16FFC(&UserEventExpeditionEntity_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_13355, v12);
+    sub_B16FFC(&StringLiteral_13355/*"TIME_REST_TIMEOVER"*/, v12);
     byte_40FAB7A = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
@@ -139,7 +139,7 @@ LABEL_32:
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
           RestTime = LocalizationManager__GetRestTime(v33, 0LL);
-          v35 = LocalizationManager__Get((System_String_o *)StringLiteral_13355, 0LL);
+          v35 = LocalizationManager__Get((System_String_o *)StringLiteral_13355/*"TIME_REST_TIMEOVER"*/, 0LL);
           if ( !RestTime )
             goto LABEL_32;
           UserId = System_String__Equals_43731072(RestTime, v35, 0LL);

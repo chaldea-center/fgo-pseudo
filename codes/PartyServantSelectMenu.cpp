@@ -1470,10 +1470,10 @@ void __fastcall PartyServantSelectMenu__OnSelectItem(
     sub_B16FFC(&SoundManager_TypeInfo, v30);
     sub_B16FFC(&Method_PartyServantSelectMenu___c__DisplayClass60_0__OnSelectItem_b__0__, v31);
     sub_B16FFC(&PartyServantSelectMenu___c__DisplayClass60_0_TypeInfo, v32);
-    sub_B16FFC(&StringLiteral_11946, v33);
-    sub_B16FFC(&StringLiteral_11944, v34);
-    sub_B16FFC(&StringLiteral_11945, v35);
-    sub_B16FFC(&StringLiteral_11947, v36);
+    sub_B16FFC(&StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v33);
+    sub_B16FFC(&StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v34);
+    sub_B16FFC(&StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v35);
+    sub_B16FFC(&StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v36);
     byte_40FDE79 = 1;
   }
   v37 = sub_B170CC(PartyServantSelectMenu___c__DisplayClass60_0_TypeInfo, *(_QWORD *)&kind, *(_QWORD *)&n, method, v4);
@@ -1914,8 +1914,8 @@ LABEL_71:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v128 = LocalizationManager__Get((System_String_o *)StringLiteral_11947, 0LL);
-      v129 = LocalizationManager__Get((System_String_o *)StringLiteral_11946, 0LL);
+      v128 = LocalizationManager__Get((System_String_o *)StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
+      v129 = LocalizationManager__Get((System_String_o *)StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
       v131 = (System_Object_array *)sub_B17014(object___TypeInfo, 6LL, v130);
       Rarity = UserServantEntity__getRarity(Entity, 0LL);
       if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
@@ -2021,8 +2021,8 @@ LABEL_161:
       v131->m_Items[5] = (Il2CppObject *)v175;
       sub_B16F98((BattleServantConfConponent_o *)&v131->m_Items[5], v175, v135, v170, v171, v172, v173, v174);
       v176 = System_String__Format_43822456(v129, v131, 0LL);
-      v177 = LocalizationManager__Get((System_String_o *)StringLiteral_11945, 0LL);
-      v178 = LocalizationManager__Get((System_String_o *)StringLiteral_11944, 0LL);
+      v177 = LocalizationManager__Get((System_String_o *)StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
+      v178 = LocalizationManager__Get((System_String_o *)StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
       v179 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v184 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                       CommonConfirmDialog_ClickDelegate_TypeInfo,
@@ -2740,18 +2740,18 @@ void __fastcall PartyServantSelectMenu__SetTabKind(
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
     sub_B16FFC(&Method_PartyServantSelectMenu_OnSelectItem__, v9);
-    sub_B16FFC(&StringLiteral_17071, v10);
-    sub_B16FFC(&StringLiteral_17072, v11);
-    sub_B16FFC(&StringLiteral_17057, v12);
-    sub_B16FFC(&StringLiteral_17060, v13);
-    sub_B16FFC(&StringLiteral_10377, v14);
-    sub_B16FFC(&StringLiteral_10380, v15);
-    sub_B16FFC(&StringLiteral_17073, v16);
-    sub_B16FFC(&StringLiteral_10378, v17);
-    sub_B16FFC(&StringLiteral_10379, v18);
-    sub_B16FFC(&StringLiteral_17074, v19);
-    sub_B16FFC(&StringLiteral_17059, v20);
-    sub_B16FFC(&StringLiteral_17058, v21);
+    sub_B16FFC(&StringLiteral_17071/*"button_push_reg"*/, v10);
+    sub_B16FFC(&StringLiteral_17072/*"button_push_unreg"*/, v11);
+    sub_B16FFC(&StringLiteral_17057/*"button_allchoice_reg"*/, v12);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v13);
+    sub_B16FFC(&StringLiteral_10377/*"PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_CHOICE"*/, v14);
+    sub_B16FFC(&StringLiteral_10380/*"PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_STATUS"*/, v15);
+    sub_B16FFC(&StringLiteral_17073/*"button_select_reg"*/, v16);
+    sub_B16FFC(&StringLiteral_10378/*"PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_LOCK"*/, v17);
+    sub_B16FFC(&StringLiteral_10379/*"PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_PUSH"*/, v18);
+    sub_B16FFC(&StringLiteral_17074/*"button_select_unreg"*/, v19);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v20);
+    sub_B16FFC(&StringLiteral_17058/*"button_allchoice_unreg"*/, v21);
     byte_40FDE71 = 1;
   }
   v22 = !this->fields.isInitTab || isInit;
@@ -2772,9 +2772,9 @@ void __fastcall PartyServantSelectMenu__SetTabKind(
     statusTabSprite = this->fields.statusTabSprite;
     if ( !statusTabSprite )
       goto LABEL_64;
-    v26 = (System_String_o **)&StringLiteral_17073;
+    v26 = (System_String_o **)&StringLiteral_17073/*"button_select_reg"*/;
     if ( modeKind )
-      v26 = (System_String_o **)&StringLiteral_17074;
+      v26 = (System_String_o **)&StringLiteral_17074/*"button_select_unreg"*/;
     UISprite__set_spriteName(statusTabSprite, *v26, 0LL);
     v27 = this->fields.statusTabButton;
     if ( !v27 )
@@ -2805,9 +2805,9 @@ void __fastcall PartyServantSelectMenu__SetTabKind(
     lockTabSprite = this->fields.lockTabSprite;
     if ( !lockTabSprite )
       goto LABEL_64;
-    v35 = (System_String_o **)&StringLiteral_17059;
+    v35 = (System_String_o **)&StringLiteral_17059/*"button_alllock_reg"*/;
     if ( modeKind != 1 )
-      v35 = (System_String_o **)&StringLiteral_17060;
+      v35 = (System_String_o **)&StringLiteral_17060/*"button_alllock_unreg"*/;
     UISprite__set_spriteName(lockTabSprite, *v35, 0LL);
     v36 = this->fields.lockTabButton;
     if ( !v36 )
@@ -2836,9 +2836,9 @@ void __fastcall PartyServantSelectMenu__SetTabKind(
     choiceTabSprite = this->fields.choiceTabSprite;
     if ( !choiceTabSprite )
       goto LABEL_64;
-    v42 = (System_String_o **)&StringLiteral_17057;
+    v42 = (System_String_o **)&StringLiteral_17057/*"button_allchoice_reg"*/;
     if ( modeKind != 2 )
-      v42 = (System_String_o **)&StringLiteral_17058;
+      v42 = (System_String_o **)&StringLiteral_17058/*"button_allchoice_unreg"*/;
     UISprite__set_spriteName(choiceTabSprite, *v42, 0LL);
     v43 = this->fields.choiceTabButton;
     if ( !v43 )
@@ -2875,9 +2875,9 @@ void __fastcall PartyServantSelectMenu__SetTabKind(
       pushTabSprite = this->fields.pushTabSprite;
       if ( !pushTabSprite )
         goto LABEL_64;
-      v50 = (System_String_o **)&StringLiteral_17071;
+      v50 = (System_String_o **)&StringLiteral_17071/*"button_push_reg"*/;
       if ( modeKind != 3 )
-        v50 = (System_String_o **)&StringLiteral_17072;
+        v50 = (System_String_o **)&StringLiteral_17072/*"button_push_unreg"*/;
       UISprite__set_spriteName(pushTabSprite, *v50, 0LL);
       v51 = this->fields.pushTabButton;
       if ( !v51 )
@@ -2902,7 +2902,7 @@ void __fastcall PartyServantSelectMenu__SetTabKind(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v55 = &StringLiteral_10380;
+        v55 = &StringLiteral_10380/*"PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_STATUS"*/;
         goto LABEL_55;
       case 1:
         explanationLabel = this->fields.explanationLabel;
@@ -2911,7 +2911,7 @@ void __fastcall PartyServantSelectMenu__SetTabKind(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v55 = &StringLiteral_10378;
+        v55 = &StringLiteral_10378/*"PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_LOCK"*/;
         goto LABEL_55;
       case 2:
         explanationLabel = this->fields.explanationLabel;
@@ -2920,7 +2920,7 @@ void __fastcall PartyServantSelectMenu__SetTabKind(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v55 = &StringLiteral_10377;
+        v55 = &StringLiteral_10377/*"PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_CHOICE"*/;
         goto LABEL_55;
       case 3:
         explanationLabel = this->fields.explanationLabel;
@@ -2929,7 +2929,7 @@ void __fastcall PartyServantSelectMenu__SetTabKind(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v55 = &StringLiteral_10379;
+        v55 = &StringLiteral_10379/*"PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_PUSH"*/;
 LABEL_55:
         v56 = LocalizationManager__Get((System_String_o *)*v55, 0LL);
         if ( !explanationLabel )

@@ -189,7 +189,7 @@ bool __fastcall FollowerQuestInfomationDraw__SetRestrictionDisp(
 
   if ( (byte_40F8EDA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, restrictionMessage);
+    sub_B16FFC(&StringLiteral_1/*""*/, restrictionMessage);
     byte_40F8EDA = 1;
   }
   if ( System_String__IsNullOrEmpty(restrictionMessage, 0LL) )
@@ -204,7 +204,7 @@ bool __fastcall FollowerQuestInfomationDraw__SetRestrictionDisp(
       restrictionMessageLabel = this->fields.restrictionMessageLabel;
       if ( restrictionMessageLabel )
       {
-        UILabel__set_text(restrictionMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(restrictionMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         return 0;
       }
     }
@@ -290,7 +290,7 @@ bool __fastcall FollowerQuestInfomationDraw__SetTrendDisp(
     sub_B16FFC(&Method_DataManager_GetMasterData_QuestPhaseMaster___, v5);
     sub_B16FFC(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F8ED9 = 1;
   }
   if ( !this->fields.questRestrictionInfo )
@@ -336,7 +336,7 @@ LABEL_17:
       levelInfoLabel = this->fields.levelInfoLabel;
       if ( !levelInfoLabel )
         goto LABEL_66;
-      UILabel__set_text(levelInfoLabel, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(levelInfoLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       v17 = 0;
       if ( !classIds )
         goto LABEL_44;

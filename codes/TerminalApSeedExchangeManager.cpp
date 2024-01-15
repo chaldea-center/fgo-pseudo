@@ -61,10 +61,10 @@ void __fastcall TerminalApSeedExchangeManager__EndRequestShop(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, result);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40F6C6A = 1;
   }
-  v7 = System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL);
+  v7 = System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL);
   if ( v7 )
   {
     TerminalApSeedExchangeManager__CloseDialogs((TerminalApSeedExchangeManager_o *)v7, v8);

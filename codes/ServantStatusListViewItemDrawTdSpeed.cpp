@@ -80,12 +80,12 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
   if ( (byte_40FDEC0 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_11991, v7);
-    sub_B16FFC(&StringLiteral_16899, v8);
-    sub_B16FFC(&StringLiteral_11989, v9);
-    sub_B16FFC(&StringLiteral_11990, v10);
-    sub_B16FFC(&StringLiteral_11985, v11);
-    this = (ServantStatusListViewItemDrawTdSpeed_o *)sub_B16FFC(&StringLiteral_16900, v12);
+    sub_B16FFC(&StringLiteral_11991/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, v7);
+    sub_B16FFC(&StringLiteral_16899/*"btn_bg_20"*/, v8);
+    sub_B16FFC(&StringLiteral_11989/*"SERVANT_STATUS_TD_SPEED_FREE"*/, v9);
+    sub_B16FFC(&StringLiteral_11990/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, v10);
+    sub_B16FFC(&StringLiteral_11985/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, v11);
+    this = (ServantStatusListViewItemDrawTdSpeed_o *)sub_B16FFC(&StringLiteral_16900/*"btn_bg_21"*/, v12);
     byte_40FDEC0 = 1;
   }
   LODWORD(v6->fields.explanationLabel) = mode;
@@ -102,7 +102,7 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11989, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11989/*"SERVANT_STATUS_TD_SPEED_FREE"*/, 0LL);
     if ( !v14 )
       goto LABEL_57;
     UIRangeLabel__Set(v14, v15, 0LL, 1, 0, 0LL);
@@ -112,7 +112,7 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
     if ( v16->max_length <= 1 )
       goto LABEL_58;
     v17 = (UIRangeLabel_o *)v16->m_Items[1];
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_11985, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_11985/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, 0LL);
     if ( !v17 )
       goto LABEL_57;
     UIRangeLabel__Set(v17, v18, 0LL, 1, 0, 0LL);
@@ -126,12 +126,12 @@ LABEL_58:
       sub_B170A0();
     }
     v20 = (UIRangeLabel_o *)v19->m_Items[2];
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_11991, 0LL);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_11991/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, 0LL);
     if ( !v20 )
       goto LABEL_57;
     UIRangeLabel__Set(v20, v21, 0LL, 1, 0, 0LL);
     tdSpeedRangeLabelList = (UILabel_o *)v6->fields.tdSpeedRangeLabelList;
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_11990, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_11990/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0LL);
     if ( !tdSpeedRangeLabelList )
       goto LABEL_57;
     UILabel__set_text(tdSpeedRangeLabelList, v23, 0LL);
@@ -199,7 +199,7 @@ LABEL_58:
         v44 = (UISprite_o *)*((_QWORD *)&clickEventObject->klass + v34);
         if ( !v44 )
           break;
-        v45 = (System_String_o **)(v40 == v41 ? &StringLiteral_16900 : &StringLiteral_16899);
+        v45 = (System_String_o **)(v40 == v41 ? &StringLiteral_16900/*"btn_bg_21"*/ : &StringLiteral_16899/*"btn_bg_20"*/);
         UISprite__set_spriteName(v44, *v45, 0LL);
         v46 = v6->fields.tdSpeedButtonList;
         if ( !v46 )

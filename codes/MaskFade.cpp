@@ -163,7 +163,7 @@ bool __fastcall MaskFade__FadeChangeColor(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_TweenColor___, *(_QWORD *)&kind);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_5942, v14);
+    sub_B16FFC(&StringLiteral_5942/*"EndFadeout"*/, v14);
     byte_40FB61E = 1;
   }
   if ( this->fields.isExecuteMask )
@@ -270,8 +270,8 @@ LABEL_28:
   v34[3].klass = (UnityEngine_Object_c *)v35;
   v42 = v34 + 3;
   sub_B16F98((BattleServantConfConponent_o *)v42, v35, v36, v37, v38, v39, v40, v41);
-  v43 = (System_Int32_array **)StringLiteral_5942;
-  v42->monitor = (void *)StringLiteral_5942;
+  v43 = (System_Int32_array **)StringLiteral_5942/*"EndFadeout"*/;
+  v42->monitor = (void *)StringLiteral_5942/*"EndFadeout"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v42->monitor, v43, v44, v45, v46, v47, v48, v49);
   return 1;
 }
@@ -317,7 +317,7 @@ bool __fastcall MaskFade__Fadein(MaskFade_o *this, float duration, System_Action
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_TweenColor___, callback);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_5941, v13);
+    sub_B16FFC(&StringLiteral_5941/*"EndFadein"*/, v13);
     byte_40FB61F = 1;
   }
   if ( !this->fields.isExecuteMask )
@@ -378,8 +378,8 @@ LABEL_14:
           v23[3].klass = (UnityEngine_Object_c *)v24;
           v31 = v23 + 3;
           sub_B16F98((BattleServantConfConponent_o *)v31, v24, v25, v26, v27, v28, v29, v30);
-          v32 = (System_Int32_array **)StringLiteral_5941;
-          v31->monitor = (void *)StringLiteral_5941;
+          v32 = (System_Int32_array **)StringLiteral_5941/*"EndFadein"*/;
+          v31->monitor = (void *)StringLiteral_5941/*"EndFadein"*/;
           sub_B16F98((BattleServantConfConponent_o *)&v31->monitor, v32, v33, v34, v35, v36, v37, v38);
           result = 1;
           this->fields.isExecuteMask = 1;
@@ -458,7 +458,7 @@ bool __fastcall MaskFade__Fadeout(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_TweenColor___, *(_QWORD *)&kind);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_5942, v14);
+    sub_B16FFC(&StringLiteral_5942/*"EndFadeout"*/, v14);
     byte_40FB61D = 1;
   }
   if ( this->fields.isExecuteMask )
@@ -568,8 +568,8 @@ LABEL_28:
   v34[3].klass = (UnityEngine_Object_c *)v35;
   v42 = v34 + 3;
   sub_B16F98((BattleServantConfConponent_o *)v42, v35, v36, v37, v38, v39, v40, v41);
-  v43 = (System_Int32_array **)StringLiteral_5942;
-  v42->monitor = (void *)StringLiteral_5942;
+  v43 = (System_Int32_array **)StringLiteral_5942/*"EndFadeout"*/;
+  v42->monitor = (void *)StringLiteral_5942/*"EndFadeout"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v42->monitor, v43, v44, v45, v46, v47, v48, v49);
   return 1;
 }

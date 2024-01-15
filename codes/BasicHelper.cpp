@@ -3140,11 +3140,11 @@ System_String_o *__fastcall BasicHelper__SubstringLast(
 
   if ( (byte_40F6F1F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, *(_QWORD *)&len);
+    sub_B16FFC(&StringLiteral_1/*""*/, *(_QWORD *)&len);
     byte_40F6F1F = 1;
   }
   if ( !self || System_Text_StringBuilder__get_Length(self, 0LL) < len )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   Length = System_Text_StringBuilder__get_Length(self, 0LL);
   v7 = System_Text_StringBuilder__ToString_41911336(self, Length - len, len, 0LL);
   v8 = System_Text_StringBuilder__get_Length(self, 0LL);
@@ -3458,12 +3458,12 @@ System_String_o *__fastcall BasicHelper__ToCommaString(int32_t value, const Meth
   if ( (byte_40F6F20 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23395, v3);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v3);
     byte_40F6F20 = 1;
   }
   v6 = value;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
-  return System_String__Format((System_String_o *)StringLiteral_23395, v4, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v4, 0LL);
 }
 
 
@@ -3476,12 +3476,12 @@ System_String_o *__fastcall BasicHelper__ToCommaString_19262784(int64_t value, c
   if ( (byte_40F6F21 & 1) == 0 )
   {
     sub_B16FFC(&long_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23395, v3);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v3);
     byte_40F6F21 = 1;
   }
   v6 = value;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v6);
-  return System_String__Format((System_String_o *)StringLiteral_23395, v4, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v4, 0LL);
 }
 
 

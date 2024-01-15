@@ -365,7 +365,7 @@ System_String_o *__fastcall ServantCheckEquipListViewObject__ToString(
   if ( (byte_40F94F9 & 1) == 0 )
   {
     sub_B16FFC(&ServantCheckEquipListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40F94F9 = 1;
   }
   v13 = 0.0;
@@ -384,7 +384,7 @@ System_String_o *__fastcall ServantCheckEquipListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

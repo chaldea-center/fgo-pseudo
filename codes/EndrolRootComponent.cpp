@@ -42,24 +42,24 @@ int32_t __fastcall EndrolRootComponent__CheckNextDispContent(
 
   if ( (byte_40FE2AC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17443, nextDispText);
-    sub_B16FFC(&StringLiteral_17442, v4);
-    sub_B16FFC(&StringLiteral_1278, v5);
-    sub_B16FFC(&StringLiteral_1533, v6);
-    sub_B16FFC(&StringLiteral_7470, v7);
+    sub_B16FFC(&StringLiteral_17443/*"column=3"*/, nextDispText);
+    sub_B16FFC(&StringLiteral_17442/*"column=2"*/, v4);
+    sub_B16FFC(&StringLiteral_1278/*"<"*/, v5);
+    sub_B16FFC(&StringLiteral_1533/*"@"*/, v6);
+    sub_B16FFC(&StringLiteral_7470/*"Image"*/, v7);
     byte_40FE2AC = 1;
   }
   if ( !nextDispText )
     sub_B170D4();
-  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_7470, 0LL) )
+  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_7470/*"Image"*/, 0LL) )
     return 2;
-  if ( System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1533, 0LL) )
+  if ( System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1533/*"@"*/, 0LL) )
     return 3;
-  if ( !System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1278, 0LL) )
+  if ( !System_String__StartsWith(nextDispText, (System_String_o *)StringLiteral_1278/*"<"*/, 0LL) )
     return 1;
-  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_17442, 0LL) )
+  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_17442/*"column=2"*/, 0LL) )
     return 5;
-  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_17443, 0LL) )
+  if ( System_String__Contains(nextDispText, (System_String_o *)StringLiteral_17443/*"column=3"*/, 0LL) )
     return 5;
   return 4;
 }
@@ -197,23 +197,23 @@ void __fastcall EndrolRootComponent__CheckOrderEndrol(EndrolRootComponent_o *thi
     sub_B16FFC(&Method_System_Collections_Generic_List_string__Add__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, v7);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_18153, v9);
-    sub_B16FFC(&StringLiteral_6714, v10);
-    sub_B16FFC(&StringLiteral_21834, v11);
-    sub_B16FFC(&StringLiteral_22174, v12);
-    sub_B16FFC(&StringLiteral_16641, v13);
-    sub_B16FFC(&StringLiteral_17874, v14);
-    sub_B16FFC(&StringLiteral_1278, v15);
-    sub_B16FFC(&StringLiteral_9361, v16);
-    sub_B16FFC(&StringLiteral_23096, v17);
-    sub_B16FFC(&StringLiteral_18273, v18);
-    sub_B16FFC(&StringLiteral_1533, v19);
-    sub_B16FFC(&StringLiteral_17873, v20);
-    sub_B16FFC(&StringLiteral_16628, v21);
-    sub_B16FFC(&StringLiteral_1, v22);
-    sub_B16FFC(&StringLiteral_67, v23);
-    sub_B16FFC(&StringLiteral_1512, v24);
-    sub_B16FFC(&StringLiteral_17872, v25);
+    sub_B16FFC(&StringLiteral_18153/*"effect"*/, v9);
+    sub_B16FFC(&StringLiteral_6714/*"FontSize"*/, v10);
+    sub_B16FFC(&StringLiteral_21834/*"scroll"*/, v11);
+    sub_B16FFC(&StringLiteral_22174/*"start"*/, v12);
+    sub_B16FFC(&StringLiteral_16641/*"bgm"*/, v13);
+    sub_B16FFC(&StringLiteral_17874/*"default_text_color"*/, v14);
+    sub_B16FFC(&StringLiteral_1278/*"<"*/, v15);
+    sub_B16FFC(&StringLiteral_9361/*"NULL"*/, v16);
+    sub_B16FFC(&StringLiteral_23096/*"wait"*/, v17);
+    sub_B16FFC(&StringLiteral_18273/*"end"*/, v18);
+    sub_B16FFC(&StringLiteral_1533/*"@"*/, v19);
+    sub_B16FFC(&StringLiteral_17873/*"default_font_size"*/, v20);
+    sub_B16FFC(&StringLiteral_16628/*"begine_time"*/, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v22);
+    sub_B16FFC(&StringLiteral_67/*"\r"*/, v23);
+    sub_B16FFC(&StringLiteral_1512/*">"*/, v24);
+    sub_B16FFC(&StringLiteral_17872/*"default_clearance"*/, v25);
     byte_40FE2B1 = 1;
   }
   v26 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -242,7 +242,7 @@ void __fastcall EndrolRootComponent__CheckOrderEndrol(EndrolRootComponent_o *thi
   {
     p_bgmName = (BattleServantConfConponent_o *)&this->fields.bgmName;
     p_defaultTextColor = (BattleServantConfConponent_o *)&this->fields.defaultTextColor;
-    v37 = (System_String_o **)&StringLiteral_1533;
+    v37 = (System_String_o **)&StringLiteral_1533/*"@"*/;
     v38 = 0;
     for ( i = 0; i < this->fields.txtLength; ++i )
     {
@@ -266,7 +266,7 @@ LABEL_173:
         v86 = v85->m_Items[i];
         if ( !v86 )
           goto LABEL_173;
-        v33 = System_String__Contains(v86, (System_String_o *)StringLiteral_22174, 0LL);
+        v33 = System_String__Contains(v86, (System_String_o *)StringLiteral_22174/*"start"*/, 0LL);
         if ( (v33 & 1) != 0 )
         {
           v38 = 1;
@@ -281,7 +281,7 @@ LABEL_173:
           v118 = v117->m_Items[i];
           if ( !v118 )
             goto LABEL_173;
-          v33 = System_String__Contains(v118, (System_String_o *)StringLiteral_16628, 0LL);
+          v33 = System_String__Contains(v118, (System_String_o *)StringLiteral_16628/*"begine_time"*/, 0LL);
           v119 = this->fields.allCreditText;
           if ( !v119 )
             goto LABEL_173;
@@ -310,7 +310,7 @@ LABEL_173:
           {
             if ( !v120 )
               goto LABEL_173;
-            v33 = System_String__Contains(v120, (System_String_o *)StringLiteral_21834, 0LL);
+            v33 = System_String__Contains(v120, (System_String_o *)StringLiteral_21834/*"scroll"*/, 0LL);
             v121 = this->fields.allCreditText;
             if ( !v121 )
               goto LABEL_173;
@@ -339,7 +339,7 @@ LABEL_173:
             {
               if ( !v122 )
                 goto LABEL_173;
-              v33 = System_String__Contains(v122, (System_String_o *)StringLiteral_18273, 0LL);
+              v33 = System_String__Contains(v122, (System_String_o *)StringLiteral_18273/*"end"*/, 0LL);
               if ( (v33 & 1) != 0 )
               {
 LABEL_170:
@@ -354,7 +354,7 @@ LABEL_170:
               v41 = v40->m_Items[i];
               if ( !v41 )
                 goto LABEL_173;
-              v33 = System_String__Contains(v41, (System_String_o *)StringLiteral_23096, 0LL);
+              v33 = System_String__Contains(v41, (System_String_o *)StringLiteral_23096/*"wait"*/, 0LL);
               v42 = this->fields.allCreditText;
               if ( !v42 )
                 goto LABEL_173;
@@ -383,7 +383,7 @@ LABEL_170:
               {
                 if ( !v43 )
                   goto LABEL_173;
-                v33 = System_String__Contains(v43, (System_String_o *)StringLiteral_18153, 0LL);
+                v33 = System_String__Contains(v43, (System_String_o *)StringLiteral_18153/*"effect"*/, 0LL);
                 v44 = this->fields.allCreditText;
                 if ( !v44 )
                   goto LABEL_173;
@@ -510,7 +510,7 @@ LABEL_170:
                 {
                   if ( !v45 )
                     goto LABEL_173;
-                  v33 = System_String__Contains(v45, (System_String_o *)StringLiteral_16641, 0LL);
+                  v33 = System_String__Contains(v45, (System_String_o *)StringLiteral_16641/*"bgm"*/, 0LL);
                   v53 = this->fields.allCreditText;
                   if ( !v53 )
                     goto LABEL_173;
@@ -524,8 +524,8 @@ LABEL_170:
                   {
                     v56 = (System_Int32_array **)System_String__Replace_43750968(
                                                    v55,
-                                                   (System_String_o *)StringLiteral_67,
-                                                   (System_String_o *)StringLiteral_1,
+                                                   (System_String_o *)StringLiteral_67/*"\r"*/,
+                                                   (System_String_o *)StringLiteral_1/*""*/,
                                                    0LL);
                     p_bgmName->klass = (BattleServantConfConponent_c *)v56;
                     sub_B16F98(p_bgmName, v56, v57, v58, v59, v60, v61, v62);
@@ -547,12 +547,12 @@ LABEL_170:
                     v70 = *(struct System_String_o **)(v33 + 40);
                     this->fields.bgmName = v70;
                     sub_B16F98(p_bgmName, (System_Int32_array **)v70, v35, v65, v66, v67, v68, v69);
-                    v33 = System_String__op_Inequality(this->fields.bgmName, (System_String_o *)StringLiteral_9361, 0LL);
+                    v33 = System_String__op_Inequality(this->fields.bgmName, (System_String_o *)StringLiteral_9361/*"NULL"*/, 0LL);
                     this->fields.isBgmPlay = v33 & 1;
                   }
                   else
                   {
-                    v33 = System_String__Contains(v55, (System_String_o *)StringLiteral_17873, 0LL);
+                    v33 = System_String__Contains(v55, (System_String_o *)StringLiteral_17873/*"default_font_size"*/, 0LL);
                     v71 = this->fields.allCreditText;
                     if ( !v71 )
                       goto LABEL_173;
@@ -582,7 +582,7 @@ LABEL_170:
                     {
                       if ( !v72 )
                         goto LABEL_173;
-                      v33 = System_String__Contains(v72, (System_String_o *)StringLiteral_17872, 0LL);
+                      v33 = System_String__Contains(v72, (System_String_o *)StringLiteral_17872/*"default_clearance"*/, 0LL);
                       v73 = this->fields.allCreditText;
                       if ( !v73 )
                         goto LABEL_173;
@@ -612,7 +612,7 @@ LABEL_170:
                       {
                         if ( !v74 )
                           goto LABEL_173;
-                        v33 = System_String__Contains(v74, (System_String_o *)StringLiteral_17874, 0LL);
+                        v33 = System_String__Contains(v74, (System_String_o *)StringLiteral_17874/*"default_text_color"*/, 0LL);
                         if ( (v33 & 1) != 0 )
                         {
                           v75 = this->fields.allCreditText;
@@ -662,8 +662,8 @@ LABEL_170:
           goto LABEL_173;
         v89 = System_String__Replace_43750968(
                 v88,
-                (System_String_o *)StringLiteral_67,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_67/*"\r"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         if ( !*p_creditText )
           goto LABEL_173;
@@ -681,7 +681,7 @@ LABEL_170:
           goto LABEL_173;
         v92 = v37;
         defaultFontSize = this->fields.defaultFontSize;
-        v33 = System_String__Contains(v91, (System_String_o *)StringLiteral_6714, 0LL);
+        v33 = System_String__Contains(v91, (System_String_o *)StringLiteral_6714/*"FontSize"*/, 0LL);
         if ( (v33 & 1) != 0 )
         {
           v94 = this->fields.allCreditText;
@@ -715,7 +715,7 @@ LABEL_170:
               v100 = v102;
               if ( !v102 )
                 goto LABEL_173;
-              v33 = System_String__Contains(v100, (System_String_o *)StringLiteral_6714, 0LL);
+              v33 = System_String__Contains(v100, (System_String_o *)StringLiteral_6714/*"FontSize"*/, 0LL);
               if ( (v33 & 1) != 0 )
               {
                 if ( v98 >= v97[6] )
@@ -724,8 +724,8 @@ LABEL_170:
                   goto LABEL_173;
                 v33 = (__int64)System_String__Replace_43750968(
                                  *v101,
-                                 (System_String_o *)StringLiteral_1278,
-                                 (System_String_o *)StringLiteral_1,
+                                 (System_String_o *)StringLiteral_1278/*"<"*/,
+                                 (System_String_o *)StringLiteral_1/*""*/,
                                  0LL);
                 v108 = (System_Int32_array **)v33;
                 if ( v33 )
@@ -744,8 +744,8 @@ LABEL_170:
                   goto LABEL_173;
                 v33 = (__int64)System_String__Replace_43750968(
                                  *v101,
-                                 (System_String_o *)StringLiteral_1512,
-                                 (System_String_o *)StringLiteral_1,
+                                 (System_String_o *)StringLiteral_1512/*">"*/,
+                                 (System_String_o *)StringLiteral_1/*""*/,
                                  0LL);
                 v114 = (System_Int32_array **)v33;
                 if ( v33 )
@@ -975,10 +975,10 @@ void __fastcall EndrolRootComponent__OnClickEndrol(EndrolRootComponent_o *this, 
     sub_B16FFC(&Method_EndrolRootComponent_callbackConfirmDlg__, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_5459, v6);
-    sub_B16FFC(&StringLiteral_5458, v7);
-    sub_B16FFC(&StringLiteral_5456, v8);
-    sub_B16FFC(&StringLiteral_5457, v9);
+    sub_B16FFC(&StringLiteral_5459/*"ENDROLL_TITLE"*/, v6);
+    sub_B16FFC(&StringLiteral_5458/*"ENDROLL_MESSAGE"*/, v7);
+    sub_B16FFC(&StringLiteral_5456/*"ENDROLL_CANCEL"*/, v8);
+    sub_B16FFC(&StringLiteral_5457/*"ENDROLL_DECIDE"*/, v9);
     byte_40FE2AF = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -987,10 +987,10 @@ void __fastcall EndrolRootComponent__OnClickEndrol(EndrolRootComponent_o *this, 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5459, 0LL);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5458, 0LL);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5457, 0LL);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5456, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5459/*"ENDROLL_TITLE"*/, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5458/*"ENDROLL_MESSAGE"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5457/*"ENDROLL_DECIDE"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5456/*"ENDROLL_CANCEL"*/, 0LL);
   v19 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v15,
@@ -1192,13 +1192,13 @@ void __fastcall EndrolRootComponent__SetAssetStorageData(
   if ( (byte_40FE2A5 & 1) == 0 )
   {
     sub_B16FFC(&Method_AssetData_GetObject_TextAsset____66802800, data);
-    sub_B16FFC(&StringLiteral_17693, v7);
+    sub_B16FFC(&StringLiteral_17693/*"credit"*/, v7);
     byte_40FE2A5 = 1;
   }
   if ( !data
     || (Object_WarBoardWaitTimeSetting = (UnityEngine_TextAsset_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                       data,
-                                                                      (System_String_o *)StringLiteral_17693,
+                                                                      (System_String_o *)StringLiteral_17693/*"credit"*/,
                                                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_TextAsset____66802800),
         EndrolRootComponent__OpenTextFile(this, Object_WarBoardWaitTimeSetting, v9),
         !endCallback) )
@@ -1360,17 +1360,17 @@ EndrolContentItem_o *__fastcall EndrolRootComponent__SetItemInfo(
     sub_B16FFC(&UIWidget_Pivot_TypeInfo, v12);
     sub_B16FFC(&string___TypeInfo, v13);
     sub_B16FFC(&System_Type_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_1503, v15);
-    sub_B16FFC(&StringLiteral_19054, v16);
-    sub_B16FFC(&StringLiteral_1278, v17);
-    sub_B16FFC(&StringLiteral_20123, v18);
-    sub_B16FFC(&StringLiteral_21740, v19);
-    sub_B16FFC(&StringLiteral_288, v20);
-    sub_B16FFC(&StringLiteral_15571, v21);
-    sub_B16FFC(&StringLiteral_1, v22);
-    sub_B16FFC(&StringLiteral_23184, v23);
-    sub_B16FFC(&StringLiteral_1512, v24);
-    sub_B16FFC(&StringLiteral_17193, v25);
+    sub_B16FFC(&StringLiteral_1503/*"="*/, v15);
+    sub_B16FFC(&StringLiteral_19054/*"height"*/, v16);
+    sub_B16FFC(&StringLiteral_1278/*"<"*/, v17);
+    sub_B16FFC(&StringLiteral_20123/*"left"*/, v18);
+    sub_B16FFC(&StringLiteral_21740/*"right"*/, v19);
+    sub_B16FFC(&StringLiteral_288/*"\""*/, v20);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v22);
+    sub_B16FFC(&StringLiteral_23184/*"width"*/, v23);
+    sub_B16FFC(&StringLiteral_1512/*">"*/, v24);
+    sub_B16FFC(&StringLiteral_17193/*"center"*/, v25);
     byte_40FE2AD = 1;
   }
   if ( type == 5 )
@@ -1397,8 +1397,8 @@ EndrolContentItem_o *__fastcall EndrolRootComponent__SetItemInfo(
     defaultFontSize = this->fields.defaultFontSize;
     v26 = (__int64)System_String__Replace_43750968(
                      v83,
-                     (System_String_o *)StringLiteral_1278,
-                     (System_String_o *)StringLiteral_1,
+                     (System_String_o *)StringLiteral_1278/*"<"*/,
+                     (System_String_o *)StringLiteral_1/*""*/,
                      0LL);
     if ( !*(_DWORD *)(v82 + 24) )
       goto LABEL_181;
@@ -1407,8 +1407,8 @@ EndrolContentItem_o *__fastcall EndrolRootComponent__SetItemInfo(
       goto LABEL_182;
     v86 = System_String__Replace_43750968(
             v85,
-            (System_String_o *)StringLiteral_1512,
-            (System_String_o *)StringLiteral_1,
+            (System_String_o *)StringLiteral_1512/*">"*/,
+            (System_String_o *)StringLiteral_1/*""*/,
             0LL);
     v26 = sub_B17014(char___TypeInfo, 1LL, v87);
     if ( !v26 )
@@ -1455,7 +1455,7 @@ LABEL_153:
         goto LABEL_181;
       if ( !*v94 )
         goto LABEL_182;
-      v26 = System_String__StartsWith(*v94, (System_String_o *)StringLiteral_1278, 0LL);
+      v26 = System_String__StartsWith(*v94, (System_String_o *)StringLiteral_1278/*"<"*/, 0LL);
       if ( v95 >= *(_DWORD *)(v82 + 24) )
         goto LABEL_181;
       v96 = v26;
@@ -1466,8 +1466,8 @@ LABEL_153:
         break;
       v26 = (__int64)System_String__Replace_43750968(
                        v97,
-                       (System_String_o *)StringLiteral_1278,
-                       (System_String_o *)StringLiteral_1,
+                       (System_String_o *)StringLiteral_1278/*"<"*/,
+                       (System_String_o *)StringLiteral_1/*""*/,
                        0LL);
       v103 = (System_Int32_array **)v26;
       if ( v26 )
@@ -1486,8 +1486,8 @@ LABEL_153:
         goto LABEL_182;
       v26 = (__int64)System_String__Replace_43750968(
                        *v94,
-                       (System_String_o *)StringLiteral_1512,
-                       (System_String_o *)StringLiteral_1,
+                       (System_String_o *)StringLiteral_1512/*">"*/,
+                       (System_String_o *)StringLiteral_1/*""*/,
                        0LL);
       v109 = (System_Int32_array **)v26;
       if ( v26 )
@@ -1508,7 +1508,7 @@ LABEL_183:
         goto LABEL_181;
       if ( !*v94 )
         goto LABEL_182;
-      v26 = System_String__Contains(*v94, (System_String_o *)StringLiteral_1503, 0LL);
+      v26 = System_String__Contains(*v94, (System_String_o *)StringLiteral_1503/*"="*/, 0LL);
       if ( (v26 & 1) != 0 )
       {
         if ( v95 >= *(_DWORD *)(v82 + 24) )
@@ -1538,7 +1538,7 @@ LABEL_152:
       if ( (int)v95 >= v91 )
         goto LABEL_153;
     }
-    v26 = System_String__Contains(v97, (System_String_o *)StringLiteral_15571, 0LL);
+    v26 = System_String__Contains(v97, (System_String_o *)StringLiteral_15571/*"["*/, 0LL);
     v116 = *(_DWORD *)(v82 + 24);
     if ( (v26 & 1) != 0 )
     {
@@ -1600,7 +1600,7 @@ LABEL_150:
             v136 = v6;
             v30 = *(_DWORD *)(v26 + 24);
             v31 = v26;
-            v32 = (System_String_o *)StringLiteral_1;
+            v32 = (System_String_o *)StringLiteral_1/*""*/;
             if ( v30 >= 1 )
             {
               v33 = 0;
@@ -1614,7 +1614,7 @@ LABEL_150:
                 v37 = v39;
                 if ( !v39 )
                   goto LABEL_182;
-                v26 = System_String__StartsWith(v37, (System_String_o *)StringLiteral_1278, 0LL);
+                v26 = System_String__StartsWith(v37, (System_String_o *)StringLiteral_1278/*"<"*/, 0LL);
                 if ( v33 >= *(_DWORD *)(v31 + 24) )
                   break;
                 v40 = v26;
@@ -1625,8 +1625,8 @@ LABEL_150:
                 {
                   v26 = (__int64)System_String__Replace_43750968(
                                    v41,
-                                   (System_String_o *)StringLiteral_1278,
-                                   (System_String_o *)StringLiteral_1,
+                                   (System_String_o *)StringLiteral_1278/*"<"*/,
+                                   (System_String_o *)StringLiteral_1/*""*/,
                                    0LL);
                   if ( v33 >= *(_DWORD *)(v31 + 24) )
                     break;
@@ -1650,14 +1650,14 @@ LABEL_150:
                     goto LABEL_182;
                   v26 = (__int64)System_String__Replace_43750968(
                                    v43,
-                                   (System_String_o *)StringLiteral_288,
-                                   (System_String_o *)StringLiteral_1,
+                                   (System_String_o *)StringLiteral_288/*"\""*/,
+                                   (System_String_o *)StringLiteral_1/*""*/,
                                    0LL);
                   v32 = (System_String_o *)v26;
                 }
                 else
                 {
-                  v26 = System_String__Contains(v41, (System_String_o *)StringLiteral_23184, 0LL);
+                  v26 = System_String__Contains(v41, (System_String_o *)StringLiteral_23184/*"width"*/, 0LL);
                   if ( v33 >= *(_DWORD *)(v31 + 24) )
                     break;
                   v44 = *v38;
@@ -1683,7 +1683,7 @@ LABEL_150:
                   {
                     if ( !v44 )
                       goto LABEL_182;
-                    v26 = System_String__Contains(*v38, (System_String_o *)StringLiteral_19054, 0LL);
+                    v26 = System_String__Contains(*v38, (System_String_o *)StringLiteral_19054/*"height"*/, 0LL);
                     if ( (v26 & 1) != 0 )
                     {
                       if ( v33 >= *(_DWORD *)(v31 + 24) )
@@ -1708,8 +1708,8 @@ LABEL_150:
                         goto LABEL_182;
                       v47 = System_String__Replace_43750968(
                               v46,
-                              (System_String_o *)StringLiteral_1512,
-                              (System_String_o *)StringLiteral_1,
+                              (System_String_o *)StringLiteral_1512/*">"*/,
+                              (System_String_o *)StringLiteral_1/*""*/,
                               0LL);
                       v34 = System_Single__Parse(v47, 0LL);
                     }
@@ -1749,7 +1749,7 @@ LABEL_182:
     v122 = creditText->fields._items->m_Items[nowDispIndex];
     if ( !v122 )
       goto LABEL_182;
-    if ( System_String__Contains(v122, (System_String_o *)StringLiteral_15571, 0LL) )
+    if ( System_String__Contains(v122, (System_String_o *)StringLiteral_15571/*"["*/, 0LL) )
     {
       v123 = this->fields.creditText;
       if ( !v123 )
@@ -1797,7 +1797,7 @@ LABEL_176:
   v49 = *(_DWORD *)(v26 + 24);
   v50 = this->fields.defaultFontSize;
   v51 = (_DWORD *)v26;
-  v52 = (System_String_o *)StringLiteral_1;
+  v52 = (System_String_o *)StringLiteral_1/*""*/;
   if ( v49 < 1 )
   {
     v54 = 4;
@@ -1824,7 +1824,7 @@ LABEL_174:
     v56 = v58;
     if ( !v58 )
       goto LABEL_182;
-    v26 = System_String__StartsWith(v56, (System_String_o *)StringLiteral_1278, 0LL);
+    v26 = System_String__StartsWith(v56, (System_String_o *)StringLiteral_1278/*"<"*/, 0LL);
     if ( v53 >= v51[6] )
       goto LABEL_181;
     v59 = v26;
@@ -1833,7 +1833,7 @@ LABEL_174:
       goto LABEL_182;
     if ( (v59 & 1) == 0 )
     {
-      v26 = System_String__Contains(v60, (System_String_o *)StringLiteral_15571, 0LL);
+      v26 = System_String__Contains(v60, (System_String_o *)StringLiteral_15571/*"["*/, 0LL);
       v74 = v51[6];
       if ( (v26 & 1) != 0 )
       {
@@ -1852,8 +1852,8 @@ LABEL_174:
     }
     v26 = (__int64)System_String__Replace_43750968(
                      v60,
-                     (System_String_o *)StringLiteral_1278,
-                     (System_String_o *)StringLiteral_1,
+                     (System_String_o *)StringLiteral_1278/*"<"*/,
+                     (System_String_o *)StringLiteral_1/*""*/,
                      0LL);
     v66 = (System_Int32_array **)v26;
     if ( v26 )
@@ -1872,8 +1872,8 @@ LABEL_174:
       goto LABEL_182;
     v26 = (__int64)System_String__Replace_43750968(
                      *v57,
-                     (System_String_o *)StringLiteral_1512,
-                     (System_String_o *)StringLiteral_1,
+                     (System_String_o *)StringLiteral_1512/*">"*/,
+                     (System_String_o *)StringLiteral_1/*""*/,
                      0LL);
     v72 = (System_Int32_array **)v26;
     if ( v26 )
@@ -1890,7 +1890,7 @@ LABEL_174:
       goto LABEL_181;
     if ( !*v57 )
       goto LABEL_182;
-    v26 = System_String__Contains(*v57, (System_String_o *)StringLiteral_1503, 0LL);
+    v26 = System_String__Contains(*v57, (System_String_o *)StringLiteral_1503/*"="*/, 0LL);
     if ( v53 >= v51[6] )
       goto LABEL_181;
     v73 = *v57;
@@ -1916,21 +1916,21 @@ LABEL_174:
     }
     if ( !v73 )
       goto LABEL_182;
-    v26 = System_String__Contains(*v57, (System_String_o *)StringLiteral_17193, 0LL);
+    v26 = System_String__Contains(*v57, (System_String_o *)StringLiteral_17193/*"center"*/, 0LL);
     if ( (v26 & 1) != 0 )
       break;
     if ( v53 >= v51[6] )
       goto LABEL_181;
     if ( !*v57 )
       goto LABEL_182;
-    v26 = System_String__Contains(*v57, (System_String_o *)StringLiteral_20123, 0LL);
+    v26 = System_String__Contains(*v57, (System_String_o *)StringLiteral_20123/*"left"*/, 0LL);
     if ( (v26 & 1) != 0 )
       break;
     if ( v53 >= v51[6] )
       goto LABEL_181;
     if ( !*v57 )
       goto LABEL_182;
-    v26 = System_String__Contains(*v57, (System_String_o *)StringLiteral_21740, 0LL);
+    v26 = System_String__Contains(*v57, (System_String_o *)StringLiteral_21740/*"right"*/, 0LL);
     if ( (v26 & 1) != 0 )
       break;
 LABEL_101:
@@ -2005,13 +2005,13 @@ void __fastcall EndrolRootComponent__StartEndroll(EndrolRootComponent_o *this, c
     sub_B16FFC(&System_Collections_Hashtable_TypeInfo, method);
     sub_B16FFC(&int_TypeInfo, v6);
     sub_B16FFC(&float_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_10039, v8);
-    sub_B16FFC(&StringLiteral_18842, v9);
-    sub_B16FFC(&StringLiteral_22584, v10);
-    sub_B16FFC(&StringLiteral_21182, v11);
-    sub_B16FFC(&StringLiteral_10016, v12);
-    sub_B16FFC(&StringLiteral_22621, v13);
-    sub_B16FFC(&StringLiteral_21173, v14);
+    sub_B16FFC(&StringLiteral_10039/*"OnUpdateScroll"*/, v8);
+    sub_B16FFC(&StringLiteral_18842/*"from"*/, v9);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v10);
+    sub_B16FFC(&StringLiteral_21182/*"onupdate"*/, v11);
+    sub_B16FFC(&StringLiteral_10016/*"OnScrollEnd"*/, v12);
+    sub_B16FFC(&StringLiteral_22621/*"to"*/, v13);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v14);
     sub_B16FFC(&iTween_TypeInfo, v15);
     byte_40FE2A3 = 1;
   }
@@ -2024,32 +2024,32 @@ void __fastcall EndrolRootComponent__StartEndroll(EndrolRootComponent_o *this, c
     sub_B170D4();
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v17->klass->vtable._23_Add.method)(
     v17,
-    StringLiteral_18842,
+    StringLiteral_18842/*"from"*/,
     v18,
     v17->klass->vtable._24_Clear.methodPtr);
   v23 = lastPostion + 580.0;
   v19 = j_il2cpp_value_box_0(float_TypeInfo, &v23);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v17->klass->vtable._23_Add.method)(
     v17,
-    StringLiteral_22621,
+    StringLiteral_22621/*"to"*/,
     v19,
     v17->klass->vtable._24_Clear.methodPtr);
   endrolTotalTime = this->fields.endrolTotalTime;
   v20 = j_il2cpp_value_box_0(float_TypeInfo, &endrolTotalTime);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v17->klass->vtable._23_Add.method)(
     v17,
-    StringLiteral_22584,
+    StringLiteral_22584/*"time"*/,
     v20,
     v17->klass->vtable._24_Clear.methodPtr);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v17->klass->vtable._23_Add.method)(
     v17,
-    StringLiteral_21182,
-    StringLiteral_10039,
+    StringLiteral_21182/*"onupdate"*/,
+    StringLiteral_10039/*"OnUpdateScroll"*/,
     v17->klass->vtable._24_Clear.methodPtr);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v17->klass->vtable._23_Add.method)(
     v17,
-    StringLiteral_21173,
-    StringLiteral_10016,
+    StringLiteral_21173/*"oncomplete"*/,
+    StringLiteral_10016/*"OnScrollEnd"*/,
     v17->klass->vtable._24_Clear.methodPtr);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( (BYTE3(iTween_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !iTween_TypeInfo->_2.cctor_finished )

@@ -97,7 +97,7 @@ void __fastcall TitleInfoEventDailyPoint__EndPlayVoice(TitleInfoEventDailyPoint_
   if ( (byte_40FDF9E & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, method);
-    this = (TitleInfoEventDailyPoint_o *)sub_B16FFC(&StringLiteral_10661, v4);
+    this = (TitleInfoEventDailyPoint_o *)sub_B16FFC(&StringLiteral_10661/*"PlayVoice"*/, v4);
     byte_40FDF9E = 1;
   }
   playCnt = v3->fields.playCnt;
@@ -122,7 +122,7 @@ void __fastcall TitleInfoEventDailyPoint__EndPlayVoice(TitleInfoEventDailyPoint_
         {
           UnityEngine_MonoBehaviour__Invoke(
             (UnityEngine_MonoBehaviour_o *)v3,
-            (System_String_o *)StringLiteral_10661,
+            (System_String_o *)StringLiteral_10661/*"PlayVoice"*/,
             v9->fields.delay,
             0LL);
           return;
@@ -560,7 +560,7 @@ void __fastcall TitleInfoEventDailyPoint__Open(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v15);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v16);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_16688, v18);
+    sub_B16FFC(&StringLiteral_16688/*"bit_dedicate_reward_"*/, v18);
     byte_40FDF9A = 1;
   }
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -672,7 +672,7 @@ void __fastcall TitleInfoEventDailyPoint__Open(
     goto LABEL_72;
   effectId = v52->fields.effectId;
   v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &effectId);
-  v54 = System_String__Concat((Il2CppObject *)StringLiteral_16688, v53, 0LL);
+  v54 = System_String__Concat((Il2CppObject *)StringLiteral_16688/*"bit_dedicate_reward_"*/, v53, 0LL);
   simpleAnimation = (UnityEngine_Object_o *)this->fields.simpleAnimation;
   v56 = v54;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1060,7 +1060,7 @@ void __fastcall TitleInfoEventDailyPoint___OnLoadSvtVoice_b__26_0(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
     sub_B16FFC(&SoundManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_12995, v9);
+    sub_B16FFC(&StringLiteral_12995/*"StartVoice"*/, v9);
     byte_40FDFA2 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -1074,7 +1074,7 @@ void __fastcall TitleInfoEventDailyPoint___OnLoadSvtVoice_b__26_0(
   CommonUI__maskFadein(Instance, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_12995,
+    (System_String_o *)StringLiteral_12995/*"StartVoice"*/,
     this->fields.voiceStartTime,
     0LL);
   eventPointBehavior = this->fields.eventPointBehavior;

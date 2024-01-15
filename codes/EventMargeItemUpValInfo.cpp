@@ -35,7 +35,7 @@ void __fastcall EventMargeItemUpValInfo___ctor(
 
   if ( (byte_40F8869 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, dropItemInfo);
+    sub_B16FFC(&StringLiteral_1/*""*/, dropItemInfo);
     byte_40F8869 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -48,8 +48,8 @@ void __fastcall EventMargeItemUpValInfo___ctor(
     sub_B170D4();
   this->fields.eventId = dropItemInfo->fields.eventId;
   this->fields.member = -1;
-  v11 = (System_Int32_array **)StringLiteral_1;
-  this->fields.servantName = (struct System_String_o *)StringLiteral_1;
+  v11 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.servantName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.servantName, v11, v5, v6, v7, v8, v9, v10);
   *(_WORD *)&this->fields.isFollower = 0;
   funcGroupEntity = dropItemInfo->fields.funcGroupEntity;
@@ -331,8 +331,8 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetColorString(
   if ( (byte_40F886A & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10304, v3);
-    sub_B16FFC(&StringLiteral_10306, v4);
+    sub_B16FFC(&StringLiteral_10304/*"PARTY_ORGANIZATION_EVENT_MEMBER_MINE_EFFECT"*/, v3);
+    sub_B16FFC(&StringLiteral_10306/*"PARTY_ORGANIZATION_EVENT_MEMBER_OTHER_EFFECT"*/, v4);
     byte_40F886A = 1;
   }
   if ( this->fields.isOtherUp )
@@ -342,7 +342,7 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetColorString(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v5 = &StringLiteral_10306;
+    v5 = &StringLiteral_10306/*"PARTY_ORGANIZATION_EVENT_MEMBER_OTHER_EFFECT"*/;
   }
   else
   {
@@ -351,7 +351,7 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetColorString(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v5 = &StringLiteral_10304;
+    v5 = &StringLiteral_10304/*"PARTY_ORGANIZATION_EVENT_MEMBER_MINE_EFFECT"*/;
   }
   return LocalizationManager__Get((System_String_o *)*v5, 0LL);
 }
@@ -400,11 +400,11 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetEventUpString(
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
     sub_B16FFC(&float_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_11591, v5);
-    sub_B16FFC(&StringLiteral_10355, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
-    sub_B16FFC(&StringLiteral_10327, v8);
-    sub_B16FFC(&StringLiteral_10356, v9);
+    sub_B16FFC(&StringLiteral_11591/*"SELECT_FP_NUM_UP"*/, v5);
+    sub_B16FFC(&StringLiteral_10355/*"PARTY_ORGANIZATION_SERVANT_POINT_INFO"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
+    sub_B16FFC(&StringLiteral_10327/*"PARTY_ORGANIZATION_NOT_CLASS_BOARD"*/, v8);
+    sub_B16FFC(&StringLiteral_10356/*"PARTY_ORGANIZATION_SERVANT_POINT_RANK_"*/, v9);
     byte_40F8870 = 1;
   }
   funcGroupEntity = this->fields.funcGroupEntity;
@@ -426,7 +426,7 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetEventUpString(
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v26 = (System_String_o *)StringLiteral_1;
+            v26 = (System_String_o *)StringLiteral_1/*""*/;
             v27 = rateCount / 10;
             v28 = 1;
             v25 = 0;
@@ -454,7 +454,7 @@ LABEL_38:
             }
             v25 = 0;
 LABEL_42:
-            v26 = (System_String_o *)StringLiteral_1;
+            v26 = (System_String_o *)StringLiteral_1/*""*/;
             v27 = addCount;
 LABEL_43:
             v28 = 0;
@@ -468,7 +468,7 @@ LABEL_43:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v26 = (System_String_o *)StringLiteral_1;
+            v26 = (System_String_o *)StringLiteral_1/*""*/;
             v27 = v30 / 10;
             v25 = 0;
             goto LABEL_43;
@@ -480,7 +480,7 @@ LABEL_54:
           if ( itemEntity )
             p_unit = (void **)&itemEntity->fields.unit;
           else
-            p_unit = &StringLiteral_1;
+            p_unit = &StringLiteral_1/*""*/;
           v35 = (System_String_o *)*p_unit;
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -512,7 +512,7 @@ LABEL_54:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11591, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11591/*"SELECT_FP_NUM_UP"*/, 0LL);
     v16 = (double)this->fields.friendPointBonus / 1000.0;
     v37 = v16;
     v17 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v37);
@@ -521,7 +521,7 @@ LABEL_54:
   if ( this->fields.isServantPoint )
   {
     v20 = System_Int32__ToString((int)this + 116, 0LL);
-    v21 = System_String__Concat_43743732((System_String_o *)StringLiteral_10356, v20, 0LL);
+    v21 = System_String__Concat_43743732((System_String_o *)StringLiteral_10356/*"PARTY_ORGANIZATION_SERVANT_POINT_RANK_"*/, v20, 0LL);
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
@@ -535,7 +535,7 @@ LABEL_54:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_10355, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_10355/*"PARTY_ORGANIZATION_SERVANT_POINT_INFO"*/, 0LL);
     servantPoint = this->fields.servantPoint;
     v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &servantPoint);
     return System_String__Format_43739268(v22, (Il2CppObject *)IconDetailText, v23, 0LL);
@@ -551,13 +551,13 @@ LABEL_54:
     goto LABEL_38;
   }
   if ( !this->fields.isNotClassBoard )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10327, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10327/*"PARTY_ORGANIZATION_NOT_CLASS_BOARD"*/, 0LL);
 }
 
 
@@ -570,14 +570,14 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetItemName(
 
   if ( (byte_40F886C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F886C = 1;
   }
   itemEntity = this->fields.itemEntity;
   if ( itemEntity )
     p_name = &itemEntity->fields.name;
   else
-    p_name = (System_String_o **)&StringLiteral_1;
+    p_name = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_name;
 }
 
@@ -591,14 +591,14 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetNameTitleString(
 
   if ( (byte_40F886D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F886D = 1;
   }
   baseFuncGroupEntity = this->fields.baseFuncGroupEntity;
   if ( baseFuncGroupEntity )
     p_name = &baseFuncGroupEntity->fields.name;
   else
-    p_name = (System_String_o **)&StringLiteral_1;
+    p_name = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_name;
 }
 
@@ -612,14 +612,14 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetNameTotalString(
 
   if ( (byte_40F886E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F886E = 1;
   }
   baseFuncGroupEntity = this->fields.baseFuncGroupEntity;
   if ( baseFuncGroupEntity )
     p_nameTotal = &baseFuncGroupEntity->fields.nameTotal;
   else
-    p_nameTotal = (System_String_o **)&StringLiteral_1;
+    p_nameTotal = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_nameTotal;
 }
 
@@ -638,17 +638,17 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetServantName(
   if ( (byte_40F886B & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10307, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
-    sub_B16FFC(&StringLiteral_10301, v5);
+    sub_B16FFC(&StringLiteral_10307/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
+    sub_B16FFC(&StringLiteral_10301/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/, v5);
     byte_40F886B = 1;
   }
   if ( (this->fields.member & 0x80000000) != 0 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( this->fields.isFollower )
-    v6 = (System_String_o **)&StringLiteral_10307;
+    v6 = (System_String_o **)&StringLiteral_10307/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/;
   else
-    v6 = (System_String_o **)&StringLiteral_10301;
+    v6 = (System_String_o **)&StringLiteral_10301/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/;
   v7 = *v6;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -676,18 +676,18 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetTargetString(
   if ( (byte_40F886F & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10310, v3);
-    sub_B16FFC(&StringLiteral_10312, v4);
-    sub_B16FFC(&StringLiteral_10311, v5);
-    sub_B16FFC(&StringLiteral_10313, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_10310/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_ALL"*/, v3);
+    sub_B16FFC(&StringLiteral_10312/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_OTHER_FULL"*/, v4);
+    sub_B16FFC(&StringLiteral_10311/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_FULL"*/, v5);
+    sub_B16FFC(&StringLiteral_10313/*"PARTY_ORGANIZATION_EVENT_TARGET_SELF"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F886F = 1;
   }
   if ( this->fields.isOtherUp )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   baseFuncType = this->fields.baseFuncType;
   if ( baseFuncType != 1 && baseFuncType != 111 && baseFuncType != 16 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   targetType = this->fields.targetType;
   if ( targetType <= 3 )
   {
@@ -698,7 +698,7 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetTargetString(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v11 = &StringLiteral_10313;
+      v11 = &StringLiteral_10313/*"PARTY_ORGANIZATION_EVENT_TARGET_SELF"*/;
       return LocalizationManager__Get((System_String_o *)*v11, 0LL);
     }
     if ( targetType == 3 )
@@ -708,10 +708,10 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetTargetString(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v11 = &StringLiteral_10310;
+      v11 = &StringLiteral_10310/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_ALL"*/;
       return LocalizationManager__Get((System_String_o *)*v11, 0LL);
     }
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   }
   if ( targetType == 7 )
   {
@@ -720,17 +720,17 @@ System_String_o *__fastcall EventMargeItemUpValInfo__GetTargetString(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v11 = &StringLiteral_10311;
+    v11 = &StringLiteral_10311/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_FULL"*/;
     return LocalizationManager__Get((System_String_o *)*v11, 0LL);
   }
   if ( targetType != 14 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = &StringLiteral_10312;
+  v11 = &StringLiteral_10312/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_OTHER_FULL"*/;
   return LocalizationManager__Get((System_String_o *)*v11, 0LL);
 }
 
@@ -826,11 +826,11 @@ void __fastcall EventMargeItemUpValInfo__SetIcon(
   if ( (byte_40F8871 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, sprite);
-    sub_B16FFC(&StringLiteral_18854, v5);
-    sub_B16FFC(&StringLiteral_18852, v6);
-    sub_B16FFC(&StringLiteral_18853, v7);
-    sub_B16FFC(&StringLiteral_18856, v8);
-    sub_B16FFC(&StringLiteral_18855, v9);
+    sub_B16FFC(&StringLiteral_18854/*"func_group_icon_1009_starting"*/, v5);
+    sub_B16FFC(&StringLiteral_18852/*"func_group_icon_"*/, v6);
+    sub_B16FFC(&StringLiteral_18853/*"func_group_icon_1009"*/, v7);
+    sub_B16FFC(&StringLiteral_18856/*"func_group_icon_1028"*/, v8);
+    sub_B16FFC(&StringLiteral_18855/*"func_group_icon_1023_starting"*/, v9);
     byte_40F8871 = 1;
   }
   v22 = 0LL;
@@ -876,7 +876,7 @@ LABEL_51:
       v16 = (__int64 *)((char *)&v22 + 4);
     }
     v17 = System_Int32__ToString((int32_t)v16, 0LL);
-    v18 = System_String__Concat_43743732((System_String_o *)StringLiteral_18852, v17, 0LL);
+    v18 = System_String__Concat_43743732((System_String_o *)StringLiteral_18852/*"func_group_icon_"*/, v17, 0LL);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {
@@ -904,7 +904,7 @@ LABEL_51:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    v21 = &StringLiteral_18856;
+    v21 = &StringLiteral_18856/*"func_group_icon_1028"*/;
 LABEL_37:
     v20 = (System_String_o *)*v21;
     v19 = sprite;
@@ -919,7 +919,7 @@ LABEL_38:
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    v21 = &StringLiteral_18853;
+    v21 = &StringLiteral_18853/*"func_group_icon_1009"*/;
     goto LABEL_37;
   }
   if ( this->fields.isStartingMemberFriendshipUp )
@@ -931,7 +931,7 @@ LABEL_38:
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      v21 = &StringLiteral_18855;
+      v21 = &StringLiteral_18855/*"func_group_icon_1023_starting"*/;
     }
     else
     {
@@ -940,7 +940,7 @@ LABEL_38:
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      v21 = &StringLiteral_18854;
+      v21 = &StringLiteral_18854/*"func_group_icon_1009_starting"*/;
     }
     goto LABEL_37;
   }

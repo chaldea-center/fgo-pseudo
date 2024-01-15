@@ -150,10 +150,10 @@ bool __fastcall SetRarityDialogControl__CheckStatusUpInfo(
     sub_B16FFC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v12);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_B16FFC(&StringLiteral_12314, v15);
-    sub_B16FFC(&StringLiteral_12313, v16);
-    sub_B16FFC(&StringLiteral_12315, v17);
-    sub_B16FFC(&StringLiteral_1, v18);
+    sub_B16FFC(&StringLiteral_12314/*"STATUS_HP_OVER_DIALOG_MSG"*/, v15);
+    sub_B16FFC(&StringLiteral_12313/*"STATUS_ATK_OVER_DIALOG_MSG"*/, v16);
+    sub_B16FFC(&StringLiteral_12315/*"STATUS_OVER_DIALOG_MSG"*/, v17);
+    sub_B16FFC(&StringLiteral_1/*""*/, v18);
     byte_40FC401 = 1;
   }
   *(_QWORD *)maxAjustAtk = 0LL;
@@ -168,10 +168,10 @@ LABEL_39:
   maxAjustAtk[1] = 0;
   maxAjustAtk[0] = 0;
   *(_QWORD *)secondMaxAdjustAtk = 0LL;
-  *labelMsg = (System_String_o *)StringLiteral_1;
+  *labelMsg = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)labelMsg,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     (System_String_array **)selectUsrSvtIdList,
     (System_String_array **)labelMsg,
     (System_Boolean_array **)method,
@@ -245,7 +245,7 @@ LABEL_39:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v33 = LocalizationManager__Get((System_String_o *)StringLiteral_12314, 0LL);
+        v33 = LocalizationManager__Get((System_String_o *)StringLiteral_12314/*"STATUS_HP_OVER_DIALOG_MSG"*/, 0LL);
         *labelMsg = v33;
         sub_B16F98((BattleServantConfConponent_o *)labelMsg, (System_Int32_array **)v33, v34, v35, v36, v37, v38, v39);
         v40 = 1;
@@ -257,7 +257,7 @@ LABEL_39:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_12313, 0LL);
+        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_12313/*"STATUS_ATK_OVER_DIALOG_MSG"*/, 0LL);
         *labelMsg = v41;
         sub_B16F98((BattleServantConfConponent_o *)labelMsg, (System_Int32_array **)v41, v42, v43, v44, v45, v46, v47);
         v48 = 1;
@@ -273,7 +273,7 @@ LABEL_32:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12315, 0LL);
+      v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12315/*"STATUS_OVER_DIALOG_MSG"*/, 0LL);
       *labelMsg = v49;
       sub_B16F98((BattleServantConfConponent_o *)labelMsg, (System_Int32_array **)v49, v50, v51, v52, v53, v54, v55);
     }
@@ -328,8 +328,8 @@ void __fastcall SetRarityDialogControl__Close(SetRarityDialogControl_o *this, co
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&SetRarityDialogControl_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_5923, v5);
-    sub_B16FFC(&StringLiteral_5318, v6);
+    sub_B16FFC(&StringLiteral_5923/*"EndCloseDlg"*/, v5);
+    sub_B16FFC(&StringLiteral_5318/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/, v6);
     byte_40FC40E = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -363,8 +363,8 @@ void __fastcall SetRarityDialogControl__Close(SetRarityDialogControl_o *this, co
     v13 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     v12->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v13;
     sub_B16F98((BattleServantConfConponent_o *)&v12->fields.eventReceiver, v13, v14, v15, v16, v17, v18, v19);
-    v20 = (System_Int32_array **)StringLiteral_5923;
-    v12->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5923;
+    v20 = (System_Int32_array **)StringLiteral_5923/*"EndCloseDlg"*/;
+    v12->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5923/*"EndCloseDlg"*/;
     sub_B16F98((BattleServantConfConponent_o *)&v12->fields.callWhenFinished, v20, v21, v22, v23, v24, v25, v26);
   }
   else
@@ -409,7 +409,7 @@ LABEL_29:
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__RemoveBackBtn_21201964(v39, (System_String_o *)StringLiteral_5318, 0LL);
+  AndroidBackKeyManager__RemoveBackBtn_21201964(v39, (System_String_o *)StringLiteral_5318/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/, 0LL);
 }
 
 
@@ -559,7 +559,7 @@ void __fastcall SetRarityDialogControl__EndOpen(SetRarityDialogControl_o *this, 
   if ( (byte_40FC410 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_5318, v3);
+    sub_B16FFC(&StringLiteral_5318/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/, v3);
     byte_40FC410 = 1;
   }
   this->fields.isButtonEnable = 1;
@@ -569,7 +569,7 @@ void __fastcall SetRarityDialogControl__EndOpen(SetRarityDialogControl_o *this, 
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_5318, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_5318/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/, 0LL);
 }
 
 
@@ -1014,15 +1014,15 @@ void __fastcall SetRarityDialogControl__SetAllDispConfirmCombine(
     sub_B16FFC(&int_TypeInfo, v17);
     sub_B16FFC(&LocalizationManager_TypeInfo, v18);
     sub_B16FFC(&Method_SetRarityDialogControl__SetAllDispConfirmCombine_b__146_0__, v19);
-    sub_B16FFC(&StringLiteral_9241, v20);
-    sub_B16FFC(&StringLiteral_3160, v21);
-    sub_B16FFC(&StringLiteral_3304, v22);
-    sub_B16FFC(&StringLiteral_3159, v23);
-    sub_B16FFC(&StringLiteral_3253, v24);
-    sub_B16FFC(&StringLiteral_3251, v25);
-    sub_B16FFC(&StringLiteral_10974, v26);
-    sub_B16FFC(&StringLiteral_3192, v27);
-    sub_B16FFC(&StringLiteral_3329, v28);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v20);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v21);
+    sub_B16FFC(&StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, v22);
+    sub_B16FFC(&StringLiteral_3159/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/, v23);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v24);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v25);
+    sub_B16FFC(&StringLiteral_10974/*"RARE_MATERIAL_INFO_MSG"*/, v26);
+    sub_B16FFC(&StringLiteral_3192/*"COMBINE_SPEND_QP"*/, v27);
+    sub_B16FFC(&StringLiteral_3329/*"CONFIRM_TITLE_SVT_COMBINE"*/, v28);
     byte_40FC400 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
@@ -1044,17 +1044,17 @@ void __fastcall SetRarityDialogControl__SetAllDispConfirmCombine(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3329, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3329/*"CONFIRM_TITLE_SVT_COMBINE"*/, 0LL);
   if ( !allTitleLb )
     goto LABEL_63;
   UILabel__set_text(allTitleLb, v34, 0LL);
   cancelBtnLb = this->fields.cancelBtnLb;
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_63;
   UILabel__set_text(cancelBtnLb, v36, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_63;
   UILabel__set_text(decideBtnLb, v38, 0LL);
@@ -1142,17 +1142,17 @@ void __fastcall SetRarityDialogControl__SetAllDispConfirmCombine(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_3192, 0LL);
+  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_3192/*"COMBINE_SPEND_QP"*/, 0LL);
   if ( !allSpendQpTxtLb )
     goto LABEL_63;
   UILabel__set_text(allSpendQpTxtLb, v62, 0LL);
   allHaveQpTxtLb = this->fields.allHaveQpTxtLb;
-  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !allHaveQpTxtLb )
     goto LABEL_63;
   UILabel__set_text(allHaveQpTxtLb, v64, 0LL);
   allSpendQpLb = this->fields.allSpendQpLb;
-  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v96 = spendQp;
   v67 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v96);
   v68 = System_String__Format(v66, v67, 0LL);
@@ -1160,7 +1160,7 @@ void __fastcall SetRarityDialogControl__SetAllDispConfirmCombine(
     goto LABEL_63;
   UILabel__set_text(allSpendQpLb, v68, 0LL);
   allHaveQpLb = this->fields.allHaveQpLb;
-  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v95 = haveQp;
   v71 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v95);
   v72 = System_String__Format(v70, v71, 0LL);
@@ -1204,7 +1204,7 @@ void __fastcall SetRarityDialogControl__SetAllDispConfirmCombine(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v82 = &StringLiteral_3159;
+    v82 = &StringLiteral_3159/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/;
   }
   else
   {
@@ -1213,7 +1213,7 @@ void __fastcall SetRarityDialogControl__SetAllDispConfirmCombine(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v82 = &StringLiteral_10974;
+    v82 = &StringLiteral_10974/*"RARE_MATERIAL_INFO_MSG"*/;
   }
   v83 = LocalizationManager__Get((System_String_o *)*v82, 0LL);
   if ( !allRareMsgLb )
@@ -1225,7 +1225,7 @@ void __fastcall SetRarityDialogControl__SetAllDispConfirmCombine(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v85 = LocalizationManager__Get((System_String_o *)StringLiteral_3304, 0LL);
+  v85 = LocalizationManager__Get((System_String_o *)StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, 0LL);
   if ( !allRareConfirmMsgLb
     || (UILabel__set_text(allRareConfirmMsgLb, v85, 0LL),
         (combineRootComponent = this->fields.combineRootComponent) == 0LL) )
@@ -1356,15 +1356,15 @@ void __fastcall SetRarityDialogControl__SetAppendSkillCombineInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
     sub_B16FFC(&Method_SetRarityDialogControl__SetAppendSkillCombineInfo_b__150_0__, v15);
-    sub_B16FFC(&StringLiteral_9241, v16);
-    sub_B16FFC(&StringLiteral_3160, v17);
-    sub_B16FFC(&StringLiteral_1711, v18);
-    sub_B16FFC(&StringLiteral_1714, v19);
-    sub_B16FFC(&StringLiteral_3253, v20);
-    sub_B16FFC(&StringLiteral_3251, v21);
-    sub_B16FFC(&StringLiteral_1712, v22);
-    sub_B16FFC(&StringLiteral_3192, v23);
-    sub_B16FFC(&StringLiteral_1702, v24);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v16);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v17);
+    sub_B16FFC(&StringLiteral_1711/*"APPEND_SKILL_OPEN_CONFIRM"*/, v18);
+    sub_B16FFC(&StringLiteral_1714/*"APPEND_SKILL_OPEN_SPEND_COIN"*/, v19);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v20);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v21);
+    sub_B16FFC(&StringLiteral_1712/*"APPEND_SKILL_OPEN_HAVE_COIN"*/, v22);
+    sub_B16FFC(&StringLiteral_3192/*"COMBINE_SPEND_QP"*/, v23);
+    sub_B16FFC(&StringLiteral_1702/*"APPEND_SKILL_COMBINE_CONFIRM"*/, v24);
     byte_40FC404 = 1;
   }
   memset(&v99, 0, sizeof(v99));
@@ -1496,17 +1496,17 @@ void __fastcall SetRarityDialogControl__SetAppendSkillCombineInfo(
                       {
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                       }
-                      v75 = LocalizationManager__Get((System_String_o *)StringLiteral_1714, 0LL);
+                      v75 = LocalizationManager__Get((System_String_o *)StringLiteral_1714/*"APPEND_SKILL_OPEN_SPEND_COIN"*/, 0LL);
                       if ( v74 )
                       {
                         UILabel__set_text(v74, v75, 0LL);
                         v76 = this->fields.appendSkillHaveTxtLabel;
-                        v77 = LocalizationManager__Get((System_String_o *)StringLiteral_1712, 0LL);
+                        v77 = LocalizationManager__Get((System_String_o *)StringLiteral_1712/*"APPEND_SKILL_OPEN_HAVE_COIN"*/, 0LL);
                         if ( v76 )
                         {
                           UILabel__set_text(v76, v77, 0LL);
                           appendSkillSpendLabel = this->fields.appendSkillSpendLabel;
-                          v79 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+                          v79 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
                           LODWORD(v98.fields.m_Center.fields.x) = updata->fields.spendSvtCoin;
                           v80 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v98);
                           v81 = System_String__Format(v79, v80, 0LL);
@@ -1514,7 +1514,7 @@ void __fastcall SetRarityDialogControl__SetAppendSkillCombineInfo(
                           {
                             UILabel__set_text(appendSkillSpendLabel, v81, 0LL);
                             appendSkillHaveLabel = this->fields.appendSkillHaveLabel;
-                            v83 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+                            v83 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
                             haveSvtCoin = updata->fields.haveSvtCoin;
                             v84 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveSvtCoin);
                             v85 = System_String__Format(v83, v84, 0LL);
@@ -1522,7 +1522,7 @@ void __fastcall SetRarityDialogControl__SetAppendSkillCombineInfo(
                             {
                               UILabel__set_text(appendSkillHaveLabel, v85, 0LL);
                               appendSkillConfirmLabel = this->fields.appendSkillConfirmLabel;
-                              v62 = &StringLiteral_1711;
+                              v62 = &StringLiteral_1711/*"APPEND_SKILL_OPEN_CONFIRM"*/;
                               goto LABEL_54;
                             }
                           }
@@ -1576,17 +1576,17 @@ LABEL_64:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_3192, 0LL);
+  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_3192/*"COMBINE_SPEND_QP"*/, 0LL);
   if ( !v49 )
     goto LABEL_64;
   UILabel__set_text(v49, v50, 0LL);
   v51 = this->fields.appendSkillHaveTxtLabel;
-  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !v51 )
     goto LABEL_64;
   UILabel__set_text(v51, v52, 0LL);
   v53 = this->fields.appendSkillSpendLabel;
-  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   LODWORD(v98.fields.m_Center.fields.x) = updata->fields.spendQp;
   v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v98);
   v56 = System_String__Format(v54, v55, 0LL);
@@ -1594,7 +1594,7 @@ LABEL_64:
     goto LABEL_64;
   UILabel__set_text(v53, v56, 0LL);
   v57 = this->fields.appendSkillHaveLabel;
-  v58 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v58 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   haveSvtCoin = updata->fields.haveQp;
   v59 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveSvtCoin);
   v60 = System_String__Format(v58, v59, 0LL);
@@ -1602,7 +1602,7 @@ LABEL_64:
     goto LABEL_64;
   UILabel__set_text(v57, v60, 0LL);
   appendSkillConfirmLabel = this->fields.appendSkillConfirmLabel;
-  v62 = &StringLiteral_1702;
+  v62 = &StringLiteral_1702/*"APPEND_SKILL_COMBINE_CONFIRM"*/;
 LABEL_54:
   v86 = LocalizationManager__Get((System_String_o *)*v62, 0LL);
   if ( !appendSkillConfirmLabel )
@@ -1614,12 +1614,12 @@ LABEL_54:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v88 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v88 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_64;
   UILabel__set_text(cancelBtnLb, v88, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v90 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v90 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_64;
   UILabel__set_text(decideBtnLb, v90, 0LL);
@@ -1869,12 +1869,12 @@ void __fastcall SetRarityDialogControl__SetConfirmCombine(
     sub_B16FFC(&int_TypeInfo, v16);
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&Method_SetRarityDialogControl__SetConfirmCombine_b__144_0__, v18);
-    sub_B16FFC(&StringLiteral_9241, v19);
-    sub_B16FFC(&StringLiteral_3160, v20);
-    sub_B16FFC(&StringLiteral_3304, v21);
-    sub_B16FFC(&StringLiteral_3253, v22);
-    sub_B16FFC(&StringLiteral_3251, v23);
-    sub_B16FFC(&StringLiteral_3192, v24);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v19);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v20);
+    sub_B16FFC(&StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, v21);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v22);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v23);
+    sub_B16FFC(&StringLiteral_3192/*"COMBINE_SPEND_QP"*/, v24);
     byte_40FC3FE = 1;
   }
   labelMsg = 0LL;
@@ -1900,12 +1900,12 @@ void __fastcall SetRarityDialogControl__SetConfirmCombine(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_49;
   UILabel__set_text(cancelBtnLb, v31, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_49;
   UILabel__set_text(decideBtnLb, v33, 0LL);
@@ -1988,17 +1988,17 @@ void __fastcall SetRarityDialogControl__SetConfirmCombine(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_3192, 0LL);
+  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_3192/*"COMBINE_SPEND_QP"*/, 0LL);
   if ( !normalSpendQpTxtLb )
     goto LABEL_49;
   UILabel__set_text(normalSpendQpTxtLb, v57, 0LL);
   normalHaveQpTxtLb = this->fields.normalHaveQpTxtLb;
-  v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !normalHaveQpTxtLb )
     goto LABEL_49;
   UILabel__set_text(normalHaveQpTxtLb, v59, 0LL);
   confirmSpendQpLb = this->fields.confirmSpendQpLb;
-  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v84 = spendQp;
   v62 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v84);
   v63 = System_String__Format(v61, v62, 0LL);
@@ -2006,7 +2006,7 @@ void __fastcall SetRarityDialogControl__SetConfirmCombine(
     goto LABEL_49;
   UILabel__set_text(confirmSpendQpLb, v63, 0LL);
   confirmHaveQpLb = this->fields.confirmHaveQpLb;
-  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v83 = haveQp;
   v66 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v83);
   v67 = System_String__Format(v65, v66, 0LL);
@@ -2014,7 +2014,7 @@ void __fastcall SetRarityDialogControl__SetConfirmCombine(
     goto LABEL_49;
   UILabel__set_text(confirmHaveQpLb, v67, 0LL);
   confirmMsgLb = this->fields.confirmMsgLb;
-  v69 = LocalizationManager__Get((System_String_o *)StringLiteral_3304, 0LL);
+  v69 = LocalizationManager__Get((System_String_o *)StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, 0LL);
   if ( !confirmMsgLb )
     goto LABEL_49;
   UILabel__set_text(confirmMsgLb, v69, 0LL);
@@ -2098,13 +2098,13 @@ void __fastcall SetRarityDialogControl__SetConfirmCombineCostume(
   {
     sub_B16FFC(&int_TypeInfo, cosName);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_9241, v14);
-    sub_B16FFC(&StringLiteral_3321, v15);
-    sub_B16FFC(&StringLiteral_3253, v16);
-    sub_B16FFC(&StringLiteral_3251, v17);
-    sub_B16FFC(&StringLiteral_3386, v18);
-    sub_B16FFC(&StringLiteral_3383, v19);
-    sub_B16FFC(&StringLiteral_3385, v20);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v14);
+    sub_B16FFC(&StringLiteral_3321/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, v15);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v16);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v17);
+    sub_B16FFC(&StringLiteral_3386/*"COSTUME_NEED_QP_TEXT"*/, v18);
+    sub_B16FFC(&StringLiteral_3383/*"COSTUME_CONFIRM_MSG"*/, v19);
+    sub_B16FFC(&StringLiteral_3385/*"COSTUME_HAVE_QP_TEXT"*/, v20);
     byte_40FC40B = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)cosName);
@@ -2124,7 +2124,7 @@ void __fastcall SetRarityDialogControl__SetConfirmCombineCostume(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3321, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3321/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, 0LL);
   if ( !costumeTitleLb )
     goto LABEL_21;
   UILabel__set_text(costumeTitleLb, v26, 0LL);
@@ -2133,22 +2133,22 @@ void __fastcall SetRarityDialogControl__SetConfirmCombineCostume(
     goto LABEL_21;
   UILabel__set_text(costumeNameLb, cosName, 0LL);
   cancelBtnLb = this->fields.cancelBtnLb;
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_21;
   UILabel__set_text(cancelBtnLb, v29, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_21;
   UILabel__set_text(decideBtnLb, v31, 0LL);
   needQpCostumeTextLb = this->fields.needQpCostumeTextLb;
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3386, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3386/*"COSTUME_NEED_QP_TEXT"*/, 0LL);
   if ( !needQpCostumeTextLb )
     goto LABEL_21;
   UILabel__set_text(needQpCostumeTextLb, v33, 0LL);
   needQpCostumeLb = this->fields.needQpCostumeLb;
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v49 = needQp;
   v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49);
   v37 = System_String__Format(v35, v36, 0LL);
@@ -2156,19 +2156,19 @@ void __fastcall SetRarityDialogControl__SetConfirmCombineCostume(
     goto LABEL_21;
   UILabel__set_text(needQpCostumeLb, v37, 0LL);
   haveQpCostumeTextLb = this->fields.haveQpCostumeTextLb;
-  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_3385, 0LL);
+  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_3385/*"COSTUME_HAVE_QP_TEXT"*/, 0LL);
   if ( !haveQpCostumeTextLb )
     goto LABEL_21;
   UILabel__set_text(haveQpCostumeTextLb, v39, 0LL);
   haveQpCostumeLb = this->fields.haveQpCostumeLb;
-  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v48 = haveQp;
   v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v48);
   v43 = System_String__Format(v41, v42, 0LL);
   if ( !haveQpCostumeLb
     || (UILabel__set_text(haveQpCostumeLb, v43, 0LL),
         costumeInfoLb = this->fields.costumeInfoLb,
-        v45 = LocalizationManager__Get((System_String_o *)StringLiteral_3383, 0LL),
+        v45 = LocalizationManager__Get((System_String_o *)StringLiteral_3383/*"COSTUME_CONFIRM_MSG"*/, 0LL),
         !costumeInfoLb)
     || (UILabel__set_text(costumeInfoLb, v45, 0LL), (combineRootComponent = this->fields.combineRootComponent) == 0LL) )
   {
@@ -2270,7 +2270,7 @@ void __fastcall SetRarityDialogControl__SetConfirmCombineCostumeEventItemOrNeedI
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_CostumeEventItemOrNeedItemConfirmInfo___, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&Method_SetRarityDialogControl_DefaultBgSize__, v17);
-    sub_B16FFC(&StringLiteral_3251, v18);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v18);
     byte_40FC409 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)combineCostumeEnt);
@@ -2306,7 +2306,7 @@ void __fastcall SetRarityDialogControl__SetConfirmCombineCostumeEventItemOrNeedI
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_22;
   UILabel__set_text(cancelBtnLb, v26, 0LL);
@@ -2495,12 +2495,12 @@ void __fastcall SetRarityDialogControl__SetConfirmLvExceed(
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&Method_SetRarityDialogControl__SetConfirmLvExceed_b__152_0__, v14);
     sub_B16FFC(&Method_SetRarityDialogControl__SetConfirmLvExceed_b__152_1__, v15);
-    sub_B16FFC(&StringLiteral_9241, v16);
-    sub_B16FFC(&StringLiteral_3309, v17);
-    sub_B16FFC(&StringLiteral_3160, v18);
-    sub_B16FFC(&StringLiteral_8431, v19);
-    sub_B16FFC(&StringLiteral_3253, v20);
-    sub_B16FFC(&StringLiteral_3251, v21);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v16);
+    sub_B16FFC(&StringLiteral_3309/*"CONFIRM_EXCEED_COMBINE"*/, v17);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v18);
+    sub_B16FFC(&StringLiteral_8431/*"LVEXCEED_COMBINE_SPEND_QP"*/, v19);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v20);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v21);
     byte_40FC406 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
@@ -2524,12 +2524,12 @@ void __fastcall SetRarityDialogControl__SetConfirmLvExceed(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_37;
   UILabel__set_text(cancelBtnLb, v28, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_37;
   UILabel__set_text(decideBtnLb, v30, 0LL);
@@ -2541,17 +2541,17 @@ void __fastcall SetRarityDialogControl__SetConfirmLvExceed(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_8431, 0LL);
+    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_8431/*"LVEXCEED_COMBINE_SPEND_QP"*/, 0LL);
     if ( lvExceedSpendQpTxtLb )
     {
       UILabel__set_text(lvExceedSpendQpTxtLb, v37, 0LL);
       lvExceedHaveQpTxtLb = this->fields.lvExceedHaveQpTxtLb;
-      v39 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+      v39 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
       if ( lvExceedHaveQpTxtLb )
       {
         UILabel__set_text(lvExceedHaveQpTxtLb, v39, 0LL);
         lvExceedSpendQpLb = this->fields.lvExceedSpendQpLb;
-        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
         v61 = spendQp;
         v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v61);
         v43 = System_String__Format(v41, v42, 0LL);
@@ -2559,7 +2559,7 @@ void __fastcall SetRarityDialogControl__SetConfirmLvExceed(
         {
           UILabel__set_text(lvExceedSpendQpLb, v43, 0LL);
           lvExceedHaveQpLb = this->fields.lvExceedHaveQpLb;
-          v45 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+          v45 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
           v60 = haveQp;
           v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v60);
           v47 = System_String__Format(v45, v46, 0LL);
@@ -2591,7 +2591,7 @@ LABEL_37:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3309, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3309/*"CONFIRM_EXCEED_COMBINE"*/, 0LL);
   if ( !v31 )
     goto LABEL_37;
   UILabel__set_text(v31, v32, 0LL);
@@ -2711,14 +2711,14 @@ void __fastcall SetRarityDialogControl__SetConfirmLvExceed_29181932(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v14);
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
     sub_B16FFC(&Method_SetRarityDialogControl__SetConfirmLvExceed_b__153_0__, v16);
-    sub_B16FFC(&StringLiteral_9241, v17);
-    sub_B16FFC(&StringLiteral_3322, v18);
-    sub_B16FFC(&StringLiteral_3160, v19);
-    sub_B16FFC(&StringLiteral_8430, v20);
-    sub_B16FFC(&StringLiteral_8431, v21);
-    sub_B16FFC(&StringLiteral_8432, v22);
-    sub_B16FFC(&StringLiteral_3253, v23);
-    sub_B16FFC(&StringLiteral_3251, v24);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v17);
+    sub_B16FFC(&StringLiteral_3322/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, v18);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v19);
+    sub_B16FFC(&StringLiteral_8430/*"LVEXCEED_COMBINE_SPEND_ITEM"*/, v20);
+    sub_B16FFC(&StringLiteral_8431/*"LVEXCEED_COMBINE_SPEND_QP"*/, v21);
+    sub_B16FFC(&StringLiteral_8432/*"LVEXCEED_EXE_CONFIRM"*/, v22);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v23);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v24);
     byte_40FC407 = 1;
   }
   combineRootComponent = this->fields.combineRootComponent;
@@ -2750,37 +2750,37 @@ void __fastcall SetRarityDialogControl__SetConfirmLvExceed_29181932(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
     if ( !cancelBtnLb )
       goto LABEL_35;
     UILabel__set_text(cancelBtnLb, v33, 0LL);
     decideBtnLb = this->fields.decideBtnLb;
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
     if ( !decideBtnLb )
       goto LABEL_35;
     UILabel__set_text(decideBtnLb, v35, 0LL);
     lvExceedTitleLabel = this->fields.lvExceedTitleLabel;
-    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3322, 0LL);
+    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3322/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, 0LL);
     if ( !lvExceedTitleLabel )
       goto LABEL_35;
     UILabel__set_text(lvExceedTitleLabel, v37, 0LL);
     lvExceedSpendItemLabel = this->fields.lvExceedSpendItemLabel;
-    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_8430, 0LL);
+    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_8430/*"LVEXCEED_COMBINE_SPEND_ITEM"*/, 0LL);
     if ( !lvExceedSpendItemLabel )
       goto LABEL_35;
     UILabel__set_text(lvExceedSpendItemLabel, v39, 0LL);
     lvExceedSpendQpTxtLabel = this->fields.lvExceedSpendQpTxtLabel;
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_8431, 0LL);
+    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_8431/*"LVEXCEED_COMBINE_SPEND_QP"*/, 0LL);
     if ( !lvExceedSpendQpTxtLabel )
       goto LABEL_35;
     UILabel__set_text(lvExceedSpendQpTxtLabel, v41, 0LL);
     lvExceedHaveQpTxtLabel = this->fields.lvExceedHaveQpTxtLabel;
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
     if ( !lvExceedHaveQpTxtLabel )
       goto LABEL_35;
     UILabel__set_text(lvExceedHaveQpTxtLabel, v43, 0LL);
     lvExceedSpendQpLabel = this->fields.lvExceedSpendQpLabel;
-    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
     v72 = spendQp;
     v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v72);
     v47 = System_String__Format(v45, v46, 0LL);
@@ -2788,7 +2788,7 @@ void __fastcall SetRarityDialogControl__SetConfirmLvExceed_29181932(
       goto LABEL_35;
     UILabel__set_text(lvExceedSpendQpLabel, v47, 0LL);
     lvExceedHaveQpLabel = this->fields.lvExceedHaveQpLabel;
-    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
     v71 = haveQp;
     v50 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v71);
     v51 = System_String__Format(v49, v50, 0LL);
@@ -2796,7 +2796,7 @@ void __fastcall SetRarityDialogControl__SetConfirmLvExceed_29181932(
       goto LABEL_35;
     UILabel__set_text(lvExceedHaveQpLabel, v51, 0LL);
     lvExceedConfirmLabel = this->fields.lvExceedConfirmLabel;
-    v53 = LocalizationManager__Get((System_String_o *)StringLiteral_8432, 0LL);
+    v53 = LocalizationManager__Get((System_String_o *)StringLiteral_8432/*"LVEXCEED_EXE_CONFIRM"*/, 0LL);
     if ( !lvExceedConfirmLabel )
       goto LABEL_35;
     UILabel__set_text(lvExceedConfirmLabel, v53, 0LL);
@@ -2942,14 +2942,14 @@ void __fastcall SetRarityDialogControl__SetConfirmRarityInfo(
     sub_B16FFC(&int_TypeInfo, v16);
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&Method_SetRarityDialogControl__SetConfirmRarityInfo_b__142_0__, v18);
-    sub_B16FFC(&StringLiteral_9241, v19);
-    sub_B16FFC(&StringLiteral_3160, v20);
-    sub_B16FFC(&StringLiteral_3304, v21);
-    sub_B16FFC(&StringLiteral_3159, v22);
-    sub_B16FFC(&StringLiteral_3253, v23);
-    sub_B16FFC(&StringLiteral_3251, v24);
-    sub_B16FFC(&StringLiteral_10974, v25);
-    sub_B16FFC(&StringLiteral_3192, v26);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v19);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v20);
+    sub_B16FFC(&StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, v21);
+    sub_B16FFC(&StringLiteral_3159/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/, v22);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v23);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v24);
+    sub_B16FFC(&StringLiteral_10974/*"RARE_MATERIAL_INFO_MSG"*/, v25);
+    sub_B16FFC(&StringLiteral_3192/*"COMBINE_SPEND_QP"*/, v26);
     byte_40FC3FC = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
@@ -2973,12 +2973,12 @@ void __fastcall SetRarityDialogControl__SetConfirmRarityInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_56;
   UILabel__set_text(cancelBtnLb, v33, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_56;
   UILabel__set_text(decideBtnLb, v35, 0LL);
@@ -3053,17 +3053,17 @@ void __fastcall SetRarityDialogControl__SetConfirmRarityInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3192, 0LL);
+  v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3192/*"COMBINE_SPEND_QP"*/, 0LL);
   if ( !spendQpTxtLb )
     goto LABEL_56;
   UILabel__set_text(spendQpTxtLb, v59, 0LL);
   haveQpTxtLb = this->fields.haveQpTxtLb;
-  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !haveQpTxtLb )
     goto LABEL_56;
   UILabel__set_text(haveQpTxtLb, v61, 0LL);
   spendQpLb = this->fields.spendQpLb;
-  v63 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v63 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v83 = spendQp;
   v64 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v83);
   v65 = System_String__Format(v63, v64, 0LL);
@@ -3071,7 +3071,7 @@ void __fastcall SetRarityDialogControl__SetConfirmRarityInfo(
     goto LABEL_56;
   UILabel__set_text(spendQpLb, v65, 0LL);
   haveQpLb = this->fields.haveQpLb;
-  v67 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v67 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v82 = haveQp;
   v68 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v82);
   v69 = System_String__Format(v67, v68, 0LL);
@@ -3086,7 +3086,7 @@ void __fastcall SetRarityDialogControl__SetConfirmRarityInfo(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v71 = &StringLiteral_3159;
+    v71 = &StringLiteral_3159/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/;
   }
   else
   {
@@ -3095,7 +3095,7 @@ void __fastcall SetRarityDialogControl__SetConfirmRarityInfo(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v71 = &StringLiteral_10974;
+    v71 = &StringLiteral_10974/*"RARE_MATERIAL_INFO_MSG"*/;
   }
   v72 = LocalizationManager__Get((System_String_o *)*v71, 0LL);
   if ( !rareMaterialMsgLb )
@@ -3107,7 +3107,7 @@ void __fastcall SetRarityDialogControl__SetConfirmRarityInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_3304, 0LL);
+  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, 0LL);
   if ( !rareConfirmMsgLb
     || (UILabel__set_text(rareConfirmMsgLb, v74, 0LL), (combineRootComponent = this->fields.combineRootComponent) == 0LL) )
   {
@@ -3228,12 +3228,12 @@ void __fastcall SetRarityDialogControl__SetConfirmSvtEqCombine(
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_long__bool__get_Value__, v22);
     sub_B16FFC(&LocalizationManager_TypeInfo, v23);
     sub_B16FFC(&Method_SetRarityDialogControl__SetConfirmSvtEqCombine_b__145_0__, v24);
-    sub_B16FFC(&StringLiteral_9241, v25);
-    sub_B16FFC(&StringLiteral_3160, v26);
-    sub_B16FFC(&StringLiteral_3304, v27);
-    sub_B16FFC(&StringLiteral_3253, v28);
-    sub_B16FFC(&StringLiteral_3251, v29);
-    sub_B16FFC(&StringLiteral_3192, v30);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v25);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v26);
+    sub_B16FFC(&StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, v27);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v28);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v29);
+    sub_B16FFC(&StringLiteral_3192/*"COMBINE_SPEND_QP"*/, v30);
     byte_40FC3FF = 1;
   }
   memset(&v90, 0, sizeof(v90));
@@ -3259,12 +3259,12 @@ void __fastcall SetRarityDialogControl__SetConfirmSvtEqCombine(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_46;
   UILabel__set_text(cancelBtnLb, v37, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_46;
   UILabel__set_text(decideBtnLb, v39, 0LL);
@@ -3363,17 +3363,17 @@ void __fastcall SetRarityDialogControl__SetConfirmSvtEqCombine(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_3192, 0LL);
+  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_3192/*"COMBINE_SPEND_QP"*/, 0LL);
   if ( !normalSpendQpTxtLb )
     goto LABEL_46;
   UILabel__set_text(normalSpendQpTxtLb, v66, 0LL);
   normalHaveQpTxtLb = this->fields.normalHaveQpTxtLb;
-  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !normalHaveQpTxtLb )
     goto LABEL_46;
   UILabel__set_text(normalHaveQpTxtLb, v68, 0LL);
   confirmSpendQpLb = this->fields.confirmSpendQpLb;
-  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   LODWORD(v89.fields.dictionary) = spendQp;
   v71 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v89);
   v72 = System_String__Format(v70, v71, 0LL);
@@ -3381,7 +3381,7 @@ void __fastcall SetRarityDialogControl__SetConfirmSvtEqCombine(
     goto LABEL_46;
   UILabel__set_text(confirmSpendQpLb, v72, 0LL);
   confirmHaveQpLb = this->fields.confirmHaveQpLb;
-  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v92 = v91;
   v75 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v92);
   v76 = System_String__Format(v74, v75, 0LL);
@@ -3389,7 +3389,7 @@ void __fastcall SetRarityDialogControl__SetConfirmSvtEqCombine(
     goto LABEL_46;
   UILabel__set_text(confirmHaveQpLb, v76, 0LL);
   confirmMsgLb = this->fields.confirmMsgLb;
-  v78 = LocalizationManager__Get((System_String_o *)StringLiteral_3304, 0LL);
+  v78 = LocalizationManager__Get((System_String_o *)StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, 0LL);
   if ( !confirmMsgLb
     || (UILabel__set_text(confirmMsgLb, v78, 0LL),
         (statusUpInfoLb = (UnityEngine_Component_o *)this->fields.statusUpInfoLb) == 0LL)
@@ -3498,13 +3498,13 @@ void __fastcall SetRarityDialogControl__SetExceedMaterialInfo(
     sub_B16FFC(&int_TypeInfo, v14);
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
     sub_B16FFC(&Method_SetRarityDialogControl__SetExceedMaterialInfo_b__143_0__, v16);
-    sub_B16FFC(&StringLiteral_9241, v17);
-    sub_B16FFC(&StringLiteral_3160, v18);
-    sub_B16FFC(&StringLiteral_3304, v19);
-    sub_B16FFC(&StringLiteral_3159, v20);
-    sub_B16FFC(&StringLiteral_3253, v21);
-    sub_B16FFC(&StringLiteral_3251, v22);
-    sub_B16FFC(&StringLiteral_3192, v23);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v17);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v18);
+    sub_B16FFC(&StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, v19);
+    sub_B16FFC(&StringLiteral_3159/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/, v20);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v21);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v22);
+    sub_B16FFC(&StringLiteral_3192/*"COMBINE_SPEND_QP"*/, v23);
     byte_40FC3FD = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
@@ -3528,12 +3528,12 @@ void __fastcall SetRarityDialogControl__SetExceedMaterialInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_44;
   UILabel__set_text(cancelBtnLb, v30, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_44;
   UILabel__set_text(decideBtnLb, v32, 0LL);
@@ -3608,17 +3608,17 @@ void __fastcall SetRarityDialogControl__SetExceedMaterialInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v56 = LocalizationManager__Get((System_String_o *)StringLiteral_3192, 0LL);
+  v56 = LocalizationManager__Get((System_String_o *)StringLiteral_3192/*"COMBINE_SPEND_QP"*/, 0LL);
   if ( !exceedConfirmSpendQpTxtLb )
     goto LABEL_44;
   UILabel__set_text(exceedConfirmSpendQpTxtLb, v56, 0LL);
   exceedConfirmHaveQpTxtLb = this->fields.exceedConfirmHaveQpTxtLb;
-  v58 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v58 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !exceedConfirmHaveQpTxtLb )
     goto LABEL_44;
   UILabel__set_text(exceedConfirmHaveQpTxtLb, v58, 0LL);
   exceedConfirmSpendQpLb = this->fields.exceedConfirmSpendQpLb;
-  v60 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v60 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v79 = spendQp;
   v61 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v79);
   v62 = System_String__Format(v60, v61, 0LL);
@@ -3626,7 +3626,7 @@ void __fastcall SetRarityDialogControl__SetExceedMaterialInfo(
     goto LABEL_44;
   UILabel__set_text(exceedConfirmSpendQpLb, v62, 0LL);
   exceedConfirmHaveQpLb = this->fields.exceedConfirmHaveQpLb;
-  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v78 = haveQp;
   v65 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v78);
   v66 = System_String__Format(v64, v65, 0LL);
@@ -3634,11 +3634,11 @@ void __fastcall SetRarityDialogControl__SetExceedMaterialInfo(
     goto LABEL_44;
   UILabel__set_text(exceedConfirmHaveQpLb, v66, 0LL);
   exceedMaterialMsgLb = this->fields.exceedMaterialMsgLb;
-  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3159, 0LL);
+  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3159/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/, 0LL);
   if ( !exceedMaterialMsgLb
     || (UILabel__set_text(exceedMaterialMsgLb, v68, 0LL),
         exceedConfirmMsgLb = this->fields.exceedConfirmMsgLb,
-        v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3304, 0LL),
+        v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, 0LL),
         !exceedConfirmMsgLb)
     || (UILabel__set_text(exceedConfirmMsgLb, v70, 0LL),
         (combineRootComponent = this->fields.combineRootComponent) == 0LL) )
@@ -3716,12 +3716,12 @@ void __fastcall SetRarityDialogControl__SetFriendshipExceedInfo(
     sub_B16FFC(&int_TypeInfo, v9);
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
     sub_B16FFC(&Method_SetRarityDialogControl__SetFriendshipExceedInfo_b__158_0__, v11);
-    sub_B16FFC(&StringLiteral_9241, v12);
-    sub_B16FFC(&StringLiteral_3160, v13);
-    sub_B16FFC(&StringLiteral_6429, v14);
-    sub_B16FFC(&StringLiteral_3253, v15);
-    sub_B16FFC(&StringLiteral_3251, v16);
-    sub_B16FFC(&StringLiteral_3312, v17);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v12);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v13);
+    sub_B16FFC(&StringLiteral_6429/*"FRIENDSHIP_EXCEED_SPEND_QP"*/, v14);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v15);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v16);
+    sub_B16FFC(&StringLiteral_3312/*"CONFIRM_FRIENDSHIP_EXCEED_COMBINE"*/, v17);
     byte_40FC40C = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)msg);
@@ -3745,27 +3745,27 @@ void __fastcall SetRarityDialogControl__SetFriendshipExceedInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_22;
   UILabel__set_text(cancelBtnLb, v24, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_22;
   UILabel__set_text(decideBtnLb, v26, 0LL);
   friendshipExceedSpendQpTxtLb = this->fields.friendshipExceedSpendQpTxtLb;
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_6429, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_6429/*"FRIENDSHIP_EXCEED_SPEND_QP"*/, 0LL);
   if ( !friendshipExceedSpendQpTxtLb )
     goto LABEL_22;
   UILabel__set_text(friendshipExceedSpendQpTxtLb, v28, 0LL);
   friendshipExceedHaveQpTxtLb = this->fields.friendshipExceedHaveQpTxtLb;
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !friendshipExceedHaveQpTxtLb )
     goto LABEL_22;
   UILabel__set_text(friendshipExceedHaveQpTxtLb, v30, 0LL);
   friendshipExceedSpendQpLb = this->fields.friendshipExceedSpendQpLb;
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v51 = spendQp;
   v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51);
   v34 = System_String__Format(v32, v33, 0LL);
@@ -3773,7 +3773,7 @@ void __fastcall SetRarityDialogControl__SetFriendshipExceedInfo(
     goto LABEL_22;
   UILabel__set_text(friendshipExceedSpendQpLb, v34, 0LL);
   friendshipExceedHaveQpLb = this->fields.friendshipExceedHaveQpLb;
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v50 = haveQp;
   v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
   v38 = System_String__Format(v36, v37, 0LL);
@@ -3781,7 +3781,7 @@ void __fastcall SetRarityDialogControl__SetFriendshipExceedInfo(
     goto LABEL_22;
   UILabel__set_text(friendshipExceedHaveQpLb, v38, 0LL);
   friendshipExceedMsgLb = this->fields.friendshipExceedMsgLb;
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3312, 0LL);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3312/*"CONFIRM_FRIENDSHIP_EXCEED_COMBINE"*/, 0LL);
   if ( !friendshipExceedMsgLb
     || (UILabel__set_text(friendshipExceedMsgLb, v40, 0LL),
         (statusUpInfoLb = (UnityEngine_Component_o *)this->fields.statusUpInfoLb) == 0LL)
@@ -3886,12 +3886,12 @@ void __fastcall SetRarityDialogControl__SetLimitUpInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_SetRarityDialogControl___c__DisplayClass148_0__SetLimitUpInfo_b__0__, v15);
     sub_B16FFC(&SetRarityDialogControl___c__DisplayClass148_0_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_9241, v17);
-    sub_B16FFC(&StringLiteral_3160, v18);
-    sub_B16FFC(&StringLiteral_3304, v19);
-    sub_B16FFC(&StringLiteral_3253, v20);
-    sub_B16FFC(&StringLiteral_3251, v21);
-    sub_B16FFC(&StringLiteral_3192, v22);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v17);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v18);
+    sub_B16FFC(&StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, v19);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v20);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v21);
+    sub_B16FFC(&StringLiteral_3192/*"COMBINE_SPEND_QP"*/, v22);
     byte_40FC402 = 1;
   }
   v23 = sub_B170CC(
@@ -3938,27 +3938,27 @@ void __fastcall SetRarityDialogControl__SetLimitUpInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_23;
   UILabel__set_text(cancelBtnLb, v49, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_23;
   UILabel__set_text(decideBtnLb, v51, 0LL);
   limitUpConfirmSpendQpTxtLb = this->fields.limitUpConfirmSpendQpTxtLb;
-  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_3192, 0LL);
+  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_3192/*"COMBINE_SPEND_QP"*/, 0LL);
   if ( !limitUpConfirmSpendQpTxtLb )
     goto LABEL_23;
   UILabel__set_text(limitUpConfirmSpendQpTxtLb, v53, 0LL);
   limitUpConfirmHaveQpTxtLb = this->fields.limitUpConfirmHaveQpTxtLb;
-  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !limitUpConfirmHaveQpTxtLb )
     goto LABEL_23;
   UILabel__set_text(limitUpConfirmHaveQpTxtLb, v55, 0LL);
   limitUpConfirmSpendQpLb = this->fields.limitUpConfirmSpendQpLb;
-  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v76 = spendQp;
   v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v76);
   v59 = System_String__Format(v57, v58, 0LL);
@@ -3966,7 +3966,7 @@ void __fastcall SetRarityDialogControl__SetLimitUpInfo(
     goto LABEL_23;
   UILabel__set_text(limitUpConfirmSpendQpLb, v59, 0LL);
   limitUpConfirmHaveQpLb = this->fields.limitUpConfirmHaveQpLb;
-  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v75 = haveQp;
   v62 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v75);
   v63 = System_String__Format(v61, v62, 0LL);
@@ -3974,7 +3974,7 @@ void __fastcall SetRarityDialogControl__SetLimitUpInfo(
     goto LABEL_23;
   UILabel__set_text(limitUpConfirmHaveQpLb, v63, 0LL);
   limitUpConfirmMsgLb = this->fields.limitUpConfirmMsgLb;
-  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_3304, 0LL);
+  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, 0LL);
   if ( !limitUpConfirmMsgLb
     || (UILabel__set_text(limitUpConfirmMsgLb, v65, 0LL),
         (statusUpInfoLb = (UnityEngine_Component_o *)this->fields.statusUpInfoLb) == 0LL)
@@ -4074,10 +4074,10 @@ void __fastcall SetRarityDialogControl__SetNpCombineInfo(
     sub_B16FFC(&Method_SetRarityDialogControl_DefaultBgSize__, v18);
     sub_B16FFC(&Method_SetRarityDialogControl__SetNpCombineInfo_b__151_0__, v19);
     sub_B16FFC(&Method_SetRarityDialogControl__SetNpCombineInfo_b__151_1__, v20);
-    sub_B16FFC(&StringLiteral_3253, v21);
-    sub_B16FFC(&StringLiteral_3251, v22);
-    sub_B16FFC(&StringLiteral_3332, v23);
-    sub_B16FFC(&StringLiteral_3330, v24);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v21);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v22);
+    sub_B16FFC(&StringLiteral_3332/*"CONFIRM_TITLE_TD_RECONFIRM_COMBINE"*/, v23);
+    sub_B16FFC(&StringLiteral_3330/*"CONFIRM_TITLE_TD_COMBINE"*/, v24);
     byte_40FC405 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
@@ -4153,7 +4153,7 @@ void __fastcall SetRarityDialogControl__SetNpCombineInfo(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v51 = &StringLiteral_3332;
+    v51 = &StringLiteral_3332/*"CONFIRM_TITLE_TD_RECONFIRM_COMBINE"*/;
   }
   else
   {
@@ -4162,7 +4162,7 @@ void __fastcall SetRarityDialogControl__SetNpCombineInfo(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v51 = &StringLiteral_3330;
+    v51 = &StringLiteral_3330/*"CONFIRM_TITLE_TD_COMBINE"*/;
   }
   v52 = LocalizationManager__Get((System_String_o *)*v51, 0LL);
   if ( !npUpTitleLb )
@@ -4174,11 +4174,11 @@ void __fastcall SetRarityDialogControl__SetNpCombineInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb
     || (UILabel__set_text(cancelBtnLb, v54, 0LL),
         decideBtnLb = this->fields.decideBtnLb,
-        v56 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL),
+        v56 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL),
         !decideBtnLb)
     || (UILabel__set_text(decideBtnLb, v56, 0LL), (combineRootComponent = this->fields.combineRootComponent) == 0LL) )
   {
@@ -4271,12 +4271,12 @@ void __fastcall SetRarityDialogControl__SetSkillNpCombineInfo(
     sub_B16FFC(&int_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_SetRarityDialogControl__SetSkillNpCombineInfo_b__149_0__, v9);
-    sub_B16FFC(&StringLiteral_9241, v10);
-    sub_B16FFC(&StringLiteral_3160, v11);
-    sub_B16FFC(&StringLiteral_3304, v12);
-    sub_B16FFC(&StringLiteral_3253, v13);
-    sub_B16FFC(&StringLiteral_3251, v14);
-    sub_B16FFC(&StringLiteral_3192, v15);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v10);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v11);
+    sub_B16FFC(&StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, v12);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v13);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v14);
+    sub_B16FFC(&StringLiteral_3192/*"COMBINE_SPEND_QP"*/, v15);
     byte_40FC403 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)updata);
@@ -4320,17 +4320,17 @@ void __fastcall SetRarityDialogControl__SetSkillNpCombineInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3192, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3192/*"COMBINE_SPEND_QP"*/, 0LL);
   if ( !upSpendQpTxtLb )
     goto LABEL_25;
   UILabel__set_text(upSpendQpTxtLb, v28, 0LL);
   upHaveQpTxtLb = this->fields.upHaveQpTxtLb;
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !upHaveQpTxtLb )
     goto LABEL_25;
   UILabel__set_text(upHaveQpTxtLb, v30, 0LL);
   upSpendQpLb = this->fields.upSpendQpLb;
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   spendQp = updata->fields.spendQp;
   v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendQp);
   v34 = System_String__Format(v32, v33, 0LL);
@@ -4338,7 +4338,7 @@ void __fastcall SetRarityDialogControl__SetSkillNpCombineInfo(
     goto LABEL_25;
   UILabel__set_text(upSpendQpLb, v34, 0LL);
   upHaveQpLb = this->fields.upHaveQpLb;
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   haveQp = updata->fields.haveQp;
   v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveQp);
   v38 = System_String__Format(v36, v37, 0LL);
@@ -4346,16 +4346,16 @@ void __fastcall SetRarityDialogControl__SetSkillNpCombineInfo(
     goto LABEL_25;
   UILabel__set_text(upHaveQpLb, v38, 0LL);
   upConfirmMsgLb = this->fields.upConfirmMsgLb;
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3304, 0LL);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, 0LL);
   if ( !upConfirmMsgLb )
     goto LABEL_25;
   UILabel__set_text(upConfirmMsgLb, v40, 0LL);
   cancelBtnLb = this->fields.cancelBtnLb;
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb
     || (UILabel__set_text(cancelBtnLb, v42, 0LL),
         decideBtnLb = this->fields.decideBtnLb,
-        v44 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL),
+        v44 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL),
         !decideBtnLb)
     || (UILabel__set_text(decideBtnLb, v44, 0LL), (combineRootComponent = this->fields.combineRootComponent) == 0LL) )
   {
@@ -4430,12 +4430,12 @@ void __fastcall SetRarityDialogControl__SetSpecialAscension(
     sub_B16FFC(&Method_SetRarityDialogControl__SetSpecialAscension_b__159_0__, v12);
     sub_B16FFC(&Method_SetRarityDialogControl__SetSpecialAscension_b__159_1__, v13);
     sub_B16FFC(&Method_SetRarityDialogControl__SetSpecialAscension_b__159_2__, v14);
-    sub_B16FFC(&StringLiteral_3253, v15);
-    sub_B16FFC(&StringLiteral_3251, v16);
-    sub_B16FFC(&StringLiteral_12234, v17);
-    sub_B16FFC(&StringLiteral_12238, v18);
-    sub_B16FFC(&StringLiteral_12239, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v15);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v16);
+    sub_B16FFC(&StringLiteral_12234/*"SPECIAL_ASCENSION_CONFIRM_TXT"*/, v17);
+    sub_B16FFC(&StringLiteral_12238/*"SPECIAL_ASCENSION_WARNING1_TXT"*/, v18);
+    sub_B16FFC(&StringLiteral_12239/*"SPECIAL_ASCENSION_WARNING2_TXT"*/, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
     byte_40FC40D = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
@@ -4459,7 +4459,7 @@ void __fastcall SetRarityDialogControl__SetSpecialAscension(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12234, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12234/*"SPECIAL_ASCENSION_CONFIRM_TXT"*/, 0LL);
     this->fields.specialAscensionConfirm = 0;
   }
   else if ( warning1 )
@@ -4469,7 +4469,7 @@ void __fastcall SetRarityDialogControl__SetSpecialAscension(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12238, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12238/*"SPECIAL_ASCENSION_WARNING1_TXT"*/, 0LL);
     this->fields.specialAscensionWarning1 = 0;
   }
   else if ( warning2 )
@@ -4479,12 +4479,12 @@ void __fastcall SetRarityDialogControl__SetSpecialAscension(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12239, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12239/*"SPECIAL_ASCENSION_WARNING2_TXT"*/, 0LL);
     this->fields.specialAscensionWarning2 = 0;
   }
   else
   {
-    v25 = (System_String_o *)StringLiteral_1;
+    v25 = (System_String_o *)StringLiteral_1/*""*/;
   }
   v26 = this->fields.specialAscensionConfirmInfo;
   if ( !v26 )
@@ -4501,12 +4501,12 @@ void __fastcall SetRarityDialogControl__SetSpecialAscension(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_41;
   UILabel__set_text(cancelBtnLb, v29, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb
     || (UILabel__set_text(decideBtnLb, v31, 0LL),
         (statusUpInfoLb = (UnityEngine_Component_o *)this->fields.statusUpInfoLb) == 0LL)
@@ -4675,13 +4675,13 @@ void __fastcall SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_long__bool__get_Value__, v23);
     sub_B16FFC(&LocalizationManager_TypeInfo, v24);
     sub_B16FFC(&Method_SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine_b__154_0__, v25);
-    sub_B16FFC(&StringLiteral_9241, v26);
-    sub_B16FFC(&StringLiteral_3160, v27);
-    sub_B16FFC(&StringLiteral_3304, v28);
-    sub_B16FFC(&StringLiteral_3253, v29);
-    sub_B16FFC(&StringLiteral_3251, v30);
-    sub_B16FFC(&StringLiteral_10974, v31);
-    sub_B16FFC(&StringLiteral_3192, v32);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v26);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v27);
+    sub_B16FFC(&StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, v28);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v29);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v30);
+    sub_B16FFC(&StringLiteral_10974/*"RARE_MATERIAL_INFO_MSG"*/, v31);
+    sub_B16FFC(&StringLiteral_3192/*"COMBINE_SPEND_QP"*/, v32);
     byte_40FC408 = 1;
   }
   memset(&v107, 0, sizeof(v107));
@@ -4706,12 +4706,12 @@ void __fastcall SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_74;
   UILabel__set_text(cancelBtnLb, v39, 0LL);
   decideBtnLb = this->fields.decideBtnLb;
-  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideBtnLb )
     goto LABEL_74;
   UILabel__set_text(decideBtnLb, v41, 0LL);
@@ -4809,17 +4809,17 @@ void __fastcall SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3192, 0LL);
+  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3192/*"COMBINE_SPEND_QP"*/, 0LL);
   if ( !allSpendQpTxtLb )
     goto LABEL_74;
   UILabel__set_text(allSpendQpTxtLb, v68, 0LL);
   allHaveQpTxtLb = this->fields.allHaveQpTxtLb;
-  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !allHaveQpTxtLb )
     goto LABEL_74;
   UILabel__set_text(allHaveQpTxtLb, v70, 0LL);
   allSpendQpLb = this->fields.allSpendQpLb;
-  v72 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v72 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   LODWORD(v106.fields.dictionary) = spendQp;
   v73 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v106);
   v74 = System_String__Format(v72, v73, 0LL);
@@ -4827,7 +4827,7 @@ void __fastcall SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
     goto LABEL_74;
   UILabel__set_text(allSpendQpLb, v74, 0LL);
   allHaveQpLb = this->fields.allHaveQpLb;
-  v76 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v76 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   v109 = haveQp;
   v77 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v109);
   v78 = System_String__Format(v76, v77, 0LL);
@@ -4872,7 +4872,7 @@ void __fastcall SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v88 = LocalizationManager__Get((System_String_o *)StringLiteral_10974, 0LL);
+    v88 = LocalizationManager__Get((System_String_o *)StringLiteral_10974/*"RARE_MATERIAL_INFO_MSG"*/, 0LL);
     if ( !v87 )
       goto LABEL_74;
     UILabel__set_text(v87, v88, 0LL);
@@ -4900,7 +4900,7 @@ void __fastcall SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v94 = LocalizationManager__Get((System_String_o *)StringLiteral_10974, 0LL);
+    v94 = LocalizationManager__Get((System_String_o *)StringLiteral_10974/*"RARE_MATERIAL_INFO_MSG"*/, 0LL);
     if ( v93 )
     {
       UILabel__set_text(v93, v94, 0LL);
@@ -4925,7 +4925,7 @@ LABEL_63:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v97 = LocalizationManager__Get((System_String_o *)StringLiteral_3304, 0LL);
+  v97 = LocalizationManager__Get((System_String_o *)StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, 0LL);
   if ( !allRareConfirmMsgLb )
     goto LABEL_74;
   UILabel__set_text(allRareConfirmMsgLb, v97, 0LL);
@@ -5163,8 +5163,8 @@ void __fastcall SetRarityDialogControl___SetSpecialAscension_b__159_1(
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SetRarityDialogControl__SetSpecialAscension_b__159_3__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_12236, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_12236/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FC415 = 1;
   }
   if ( (BYTE3(CombineRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5189,14 +5189,14 @@ LABEL_14:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12236, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12236/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/, 0LL);
   v16 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v12, v13, v14, v15);
   System_Action___ctor(v16, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSpecialAscension_b__159_3__, 0LL);
   if ( !Instance )
     goto LABEL_14;
   CommonUI__OpenNotificationDialog(
     Instance,
-    (System_String_o *)StringLiteral_1,
+    (System_String_o *)StringLiteral_1/*""*/,
     v11,
     v16,
     -1,
@@ -5239,8 +5239,8 @@ void __fastcall SetRarityDialogControl___SetSpecialAscension_b__159_2(
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SetRarityDialogControl__SetSpecialAscension_b__159_4__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_12236, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_12236/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FC416 = 1;
   }
   if ( (BYTE3(CombineRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -5266,14 +5266,14 @@ void __fastcall SetRarityDialogControl___SetSpecialAscension_b__159_2(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_12236, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_12236/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/, 0LL);
     v17 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v13, v14, v15, v16);
     System_Action___ctor(v17, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSpecialAscension_b__159_4__, 0LL);
     if ( !Instance )
       sub_B170D4();
     CommonUI__OpenNotificationDialog(
       Instance,
-      (System_String_o *)StringLiteral_1,
+      (System_String_o *)StringLiteral_1/*""*/,
       v12,
       v17,
       -1,

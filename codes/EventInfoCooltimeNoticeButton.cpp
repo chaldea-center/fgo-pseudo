@@ -25,7 +25,7 @@ void __fastcall EventInfoCooltimeNoticeButton__Initialization(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, entity);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1209, v5);
+    sub_B16FFC(&StringLiteral_1209/*"80341001"*/, v5);
     byte_40FA107 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -44,7 +44,7 @@ void __fastcall EventInfoCooltimeNoticeButton__Initialization(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI(v8, (System_String_o *)StringLiteral_1209, 0LL);
+    AtlasManager__SetEventUI(v8, (System_String_o *)StringLiteral_1209/*"80341001"*/, 0LL);
     v9 = this->fields.bgSprite;
     if ( !v9 )
       sub_B170D4();
@@ -145,16 +145,16 @@ void __fastcall EventInfoCooltimeNoticeButton__UpdateButtonDisp(
 
   if ( (byte_40FA108 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40FA108 = 1;
   }
   noticeButton = this->fields.noticeButton;
   if ( !noticeButton )
     sub_B170D4();
   if ( this->fields.isButtonOn )
-    v5 = &StringLiteral_16940;
+    v5 = &StringLiteral_16940/*"btn_on"*/;
   else
-    v5 = &StringLiteral_16939;
+    v5 = &StringLiteral_16939/*"btn_off"*/;
   UIButton__set_normalSprite(noticeButton, (System_String_o *)*v5, 0LL);
 }

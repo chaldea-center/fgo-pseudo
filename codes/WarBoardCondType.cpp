@@ -15,13 +15,13 @@ bool __fastcall WarBoardCondType__IsBossStatus(int32_t bossId, int32_t status, c
   if ( (byte_40F895A & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, *(_QWORD *)&status);
-    sub_B16FFC(&StringLiteral_22210, v5);
+    sub_B16FFC(&StringLiteral_22210/*"status"*/, v5);
     byte_40F895A = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance || (monitor = (WarBoardData_o *)Instance[4].monitor) == 0LL )
     sub_B170D4();
-  return WarBoardData__IsBossInfo(monitor, bossId, (System_String_o *)StringLiteral_22210, status, v7);
+  return WarBoardData__IsBossInfo(monitor, bossId, (System_String_o *)StringLiteral_22210/*"status"*/, status, v7);
 }
 
 

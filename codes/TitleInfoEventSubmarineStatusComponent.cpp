@@ -253,7 +253,7 @@ System_String_o *__fastcall TitleInfoEventSubmarineStatusComponent__CreateSaveDa
   if ( (byte_40F83C9 & 1) == 0 )
   {
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, currentQuestId);
-    sub_B16FFC(&StringLiteral_698, v9);
+    sub_B16FFC(&StringLiteral_698/*","*/, v9);
     byte_40F83C9 = 1;
   }
   v10 = (System_Text_StringBuilder_o *)sub_B170CC(
@@ -266,11 +266,11 @@ System_String_o *__fastcall TitleInfoEventSubmarineStatusComponent__CreateSaveDa
   if ( !v10 )
     sub_B170D4();
   System_Text_StringBuilder__Append_41914240(v10, userPoint, 0LL);
-  System_Text_StringBuilder__Append_41914240(v10, (System_String_o *)StringLiteral_698, 0LL);
+  System_Text_StringBuilder__Append_41914240(v10, (System_String_o *)StringLiteral_698/*","*/, 0LL);
   System_Text_StringBuilder__Append_41914240(v10, currentQuestId, 0LL);
-  System_Text_StringBuilder__Append_41914240(v10, (System_String_o *)StringLiteral_698, 0LL);
+  System_Text_StringBuilder__Append_41914240(v10, (System_String_o *)StringLiteral_698/*","*/, 0LL);
   System_Text_StringBuilder__Append_41914240(v10, progressQuestId, 0LL);
-  System_Text_StringBuilder__Append_41914240(v10, (System_String_o *)StringLiteral_698, 0LL);
+  System_Text_StringBuilder__Append_41914240(v10, (System_String_o *)StringLiteral_698/*","*/, 0LL);
   System_Text_StringBuilder__Append_41914240(v10, isLastGoalPlayed, 0LL);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v10->klass->vtable._3_ToString.method)(
                               v10,
@@ -658,7 +658,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__EndExitAnimation(
   if ( (byte_40F83BA & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventSubmarineStatusComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10641, v3);
+    sub_B16FFC(&StringLiteral_10641/*"PlayEntryAnimation"*/, v3);
     byte_40F83BA = 1;
   }
   TitleInfoEventSubmarineStatusComponent__DestroyGoalAnim(this, method);
@@ -671,7 +671,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__EndExitAnimation(
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10641,
+    (System_String_o *)StringLiteral_10641/*"PlayEntryAnimation"*/,
     v4->static_fields->MAP_CHANGE_WAIT_TIME,
     0LL);
 }
@@ -723,7 +723,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__EndProgressAnimation(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
     sub_B16FFC(&TitleInfoEventSubmarineStatusComponent_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_5918, v4);
+    sub_B16FFC(&StringLiteral_5918/*"EndAnimation"*/, v4);
     byte_40F83BD = 1;
   }
   v5 = UnityEngine_Mathf__Min_40727532(HIDWORD(this->fields.onEndAnim), this->fields.userPoint, 0LL);
@@ -821,7 +821,7 @@ LABEL_33:
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_5918,
+    (System_String_o *)StringLiteral_5918/*"EndAnimation"*/,
     v39->static_fields->GOAL_ANIMATION_TIME,
     0LL);
 }
@@ -897,12 +897,12 @@ System_String_o *__fastcall TitleInfoEventSubmarineStatusComponent__GetEventUIAs
   if ( (byte_40F83CE & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6189, v3);
+    sub_B16FFC(&StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v3);
     byte_40F83CE = 1;
   }
   v6 = eventId;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
-  return System_String__Format((System_String_o *)StringLiteral_6189, v4, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v4, 0LL);
 }
 
 
@@ -943,29 +943,29 @@ System_String_o *__fastcall TitleInfoEventSubmarineStatusComponent__GetGoalAnimN
 
   if ( (byte_40F83C3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16090, *(_QWORD *)&animType);
-    sub_B16FFC(&StringLiteral_16113, v5);
-    sub_B16FFC(&StringLiteral_16088, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
-    sub_B16FFC(&StringLiteral_16078, v8);
+    sub_B16FFC(&StringLiteral_16090/*"_loop"*/, *(_QWORD *)&animType);
+    sub_B16FFC(&StringLiteral_16113/*"_start"*/, v5);
+    sub_B16FFC(&StringLiteral_16088/*"_last"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
+    sub_B16FFC(&StringLiteral_16078/*"_end"*/, v8);
     byte_40F83C3 = 1;
   }
   v9 = *(System_String_o **)&this->fields.targetQuestId;
   if ( BYTE4(this->fields.goalAnimObject) )
-    v9 = System_String__Concat_43743732(v9, (System_String_o *)StringLiteral_16088, 0LL);
+    v9 = System_String__Concat_43743732(v9, (System_String_o *)StringLiteral_16088/*"_last"*/, 0LL);
   switch ( animType )
   {
     case 3:
-      v10 = &StringLiteral_16078;
+      v10 = &StringLiteral_16078/*"_end"*/;
       return System_String__Concat_43743732(v9, (System_String_o *)*v10, 0LL);
     case 2:
-      v10 = &StringLiteral_16090;
+      v10 = &StringLiteral_16090/*"_loop"*/;
       return System_String__Concat_43743732(v9, (System_String_o *)*v10, 0LL);
     case 1:
-      v10 = &StringLiteral_16113;
+      v10 = &StringLiteral_16113/*"_start"*/;
       return System_String__Concat_43743732(v9, (System_String_o *)*v10, 0LL);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -1445,8 +1445,8 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__LoadLocalAtlas(
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Add__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_23407, v9);
-    sub_B16FFC(&StringLiteral_5361, v10);
+    sub_B16FFC(&StringLiteral_23407/*"{0:D2}"*/, v9);
+    sub_B16FFC(&StringLiteral_5361/*"DownloadEventUIAtlas{0}{1}"*/, v10);
     byte_40F83D2 = 1;
   }
   if ( this->fields.atlasList )
@@ -1462,10 +1462,10 @@ LABEL_18:
     {
       v22 = i;
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
-      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407, v15, 0LL);
+      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407/*"{0:D2}"*/, v15, 0LL);
       v21 = eventId;
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
-      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_5361, v17, v16, 0LL);
+      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_5361/*"DownloadEventUIAtlas{0}{1}"*/, v17, v16, 0LL);
       GameObjectFromEventUIAssetData = (UnityEngine_Object_o *)TitleInfoEventSubmarineStatusComponent__GetGameObjectFromEventUIAssetData(
                                                                  this,
                                                                  v18,
@@ -1770,7 +1770,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__PlayEntryAnimation(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventDelegate__Add__, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
     sub_B16FFC(&TitleInfoEventSubmarineStatusComponent_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_5930, v9);
+    sub_B16FFC(&StringLiteral_5930/*"EndEntryAnimation"*/, v9);
     byte_40F83BB = 1;
   }
   progressPointBg = (UnityEngine_GameObject_o *)this->fields.progressPointBg;
@@ -1818,7 +1818,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__PlayEntryAnimation(
   LODWORD(v19->fields.callbackQueue) = 3;
   *(float *)&v19[1].fields.m_CachedPtr = ENTRY_ANIMATION_TIME;
   v23 = (EventDelegate_o *)sub_B170CC(EventDelegate_TypeInfo, v15, v16, v17, v18);
-  EventDelegate___ctor_29412928(v23, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5930, 0LL);
+  EventDelegate___ctor_29412928(v23, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5930/*"EndEntryAnimation"*/, 0LL);
   if ( !klass )
     goto LABEL_35;
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
@@ -1919,7 +1919,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__PlayExitAnimation(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventDelegate__Add__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
     sub_B16FFC(&TitleInfoEventSubmarineStatusComponent_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_5940, v8);
+    sub_B16FFC(&StringLiteral_5940/*"EndExitAnimation"*/, v8);
     byte_40F83B9 = 1;
   }
   progressPointBg = (UnityEngine_GameObject_o *)this->fields.progressPointBg;
@@ -1964,7 +1964,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__PlayExitAnimation(
   LODWORD(v17->fields.callbackQueue) = 3;
   *(float *)&v17[1].fields.m_CachedPtr = EXIT_ANIMATION_TIME;
   v21 = (EventDelegate_o *)sub_B170CC(EventDelegate_TypeInfo, v13, v14, v15, v16);
-  EventDelegate___ctor_29412928(v21, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5940, 0LL);
+  EventDelegate___ctor_29412928(v21, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5940/*"EndExitAnimation"*/, 0LL);
   if ( !klass )
 LABEL_24:
     sub_B170D4();
@@ -2088,7 +2088,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__PlayLastMapAnimation(
     sub_B16FFC(&CondType_TypeInfo, onEndAnim);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
     sub_B16FFC(&TitleInfoEventSubmarineStatusComponent_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_10646, v7);
+    sub_B16FFC(&StringLiteral_10646/*"PlayLastMapStartedAnimation"*/, v7);
     byte_40F83BE = 1;
   }
   if ( BYTE4(this->fields.goalAnimObject) )
@@ -2144,7 +2144,7 @@ LABEL_17:
     }
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10646,
+      (System_String_o *)StringLiteral_10646/*"PlayLastMapStartedAnimation"*/,
       v27->static_fields->EXIT_ANIMATION_TIME,
       0LL);
   }
@@ -2164,7 +2164,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__PlayLastMapStartedAnimat
   if ( (byte_40F83BF & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventSubmarineStatusComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_5918, v4);
+    sub_B16FFC(&StringLiteral_5918/*"EndAnimation"*/, v4);
     byte_40F83BF = 1;
   }
   BYTE4(this->fields.goalAnimObject) = 1;
@@ -2180,7 +2180,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__PlayLastMapStartedAnimat
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_5918,
+    (System_String_o *)StringLiteral_5918/*"EndAnimation"*/,
     v7->static_fields->GOAL_ANIMATION_TIME,
     0LL);
 }
@@ -2245,7 +2245,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__PlayProgressAnimation(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventDelegate__Add__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
     sub_B16FFC(&TitleInfoEventSubmarineStatusComponent_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_5955, v8);
+    sub_B16FFC(&StringLiteral_5955/*"EndProgressAnimation"*/, v8);
     byte_40F83BC = 1;
   }
   LocalPosition = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)this->fields.progressPointBg, 0LL);
@@ -2267,7 +2267,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__PlayProgressAnimation(
     }
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_5955,
+      (System_String_o *)StringLiteral_5955/*"EndProgressAnimation"*/,
       v32->static_fields->PROGRESS_ANIMATION_TIME,
       0LL);
   }
@@ -2323,7 +2323,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__PlayProgressAnimation(
     LODWORD(v27->fields.callbackQueue) = 3;
     *(float *)&v27[1].fields.m_CachedPtr = PROGRESS_ANIMATION_TIME;
     v31 = (EventDelegate_o *)sub_B170CC(EventDelegate_TypeInfo, v23, v24, v25, v26);
-    EventDelegate___ctor_29412928(v31, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5955, 0LL);
+    EventDelegate___ctor_29412928(v31, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_5955/*"EndProgressAnimation"*/, 0LL);
     if ( !klass )
       goto LABEL_42;
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
@@ -2669,21 +2669,21 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
     sub_B16FFC(&Method_TitleInfoEventSubmarineStatusComponent__Setup_b__54_0__, v13);
     sub_B16FFC(&TitleInfoEventSubmarineStatusComponent_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_18453, v15);
-    sub_B16FFC(&StringLiteral_18477, v16);
-    sub_B16FFC(&StringLiteral_18475, v17);
-    sub_B16FFC(&StringLiteral_5705, v18);
-    sub_B16FFC(&StringLiteral_5635, v19);
-    sub_B16FFC(&StringLiteral_1216, v20);
-    sub_B16FFC(&StringLiteral_5706, v21);
-    sub_B16FFC(&StringLiteral_5713, v22);
-    sub_B16FFC(&StringLiteral_18517, v23);
-    sub_B16FFC(&StringLiteral_18472, v24);
-    sub_B16FFC(&StringLiteral_18466, v25);
-    sub_B16FFC(&StringLiteral_18474, v26);
-    sub_B16FFC(&StringLiteral_5702, v27);
-    sub_B16FFC(&StringLiteral_18473, v28);
-    sub_B16FFC(&StringLiteral_18476, v29);
+    sub_B16FFC(&StringLiteral_18453/*"event_goal"*/, v15);
+    sub_B16FFC(&StringLiteral_18477/*"event_progressicon"*/, v16);
+    sub_B16FFC(&StringLiteral_18475/*"event_progressgauge_front"*/, v17);
+    sub_B16FFC(&StringLiteral_5705/*"EVENT_SUBMARINE_NEXT_DESCRIPTION"*/, v18);
+    sub_B16FFC(&StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, v19);
+    sub_B16FFC(&StringLiteral_1216/*"94053407"*/, v20);
+    sub_B16FFC(&StringLiteral_5706/*"EVENT_SUBMARINE_NEXT_POINT"*/, v21);
+    sub_B16FFC(&StringLiteral_5713/*"EVENT_SUBMARINE_STATUS_TITLE"*/, v22);
+    sub_B16FFC(&StringLiteral_18517/*"event_status_point"*/, v23);
+    sub_B16FFC(&StringLiteral_18472/*"event_progress_point"*/, v24);
+    sub_B16FFC(&StringLiteral_18466/*"event_next"*/, v25);
+    sub_B16FFC(&StringLiteral_18474/*"event_progressgauge_back"*/, v26);
+    sub_B16FFC(&StringLiteral_5702/*"EVENT_SUBMARINE_GAUGE_CURRENT"*/, v27);
+    sub_B16FFC(&StringLiteral_18473/*"event_progressgauge"*/, v28);
+    sub_B16FFC(&StringLiteral_18476/*"event_progressgaugebg_80393"*/, v29);
     byte_40F83B6 = 1;
   }
   this->fields.mapAssetData = (struct AssetData_o *)eventDetailEntity;
@@ -2731,7 +2731,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.areaIcon,
-    (System_String_o *)StringLiteral_18476,
+    (System_String_o *)StringLiteral_18476/*"event_progressgaugebg_80393"*/,
     v53);
   areaIcon = this->fields.areaIcon;
   if ( !areaIcon )
@@ -2742,12 +2742,12 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     (UISprite_o *)this->fields.titleLabel,
-    (System_String_o *)StringLiteral_1216,
+    (System_String_o *)StringLiteral_1216/*"94053407"*/,
     v55);
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.gaugeBg,
-    (System_String_o *)StringLiteral_18473,
+    (System_String_o *)StringLiteral_18473/*"event_progressgauge"*/,
     v56);
   gaugeBg = this->fields.gaugeBg;
   if ( !gaugeBg )
@@ -2758,7 +2758,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.shipIcon,
-    (System_String_o *)StringLiteral_18475,
+    (System_String_o *)StringLiteral_18475/*"event_progressgauge_front"*/,
     v58);
   shipIcon = this->fields.shipIcon;
   if ( !shipIcon )
@@ -2769,7 +2769,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.gaugeBar,
-    (System_String_o *)StringLiteral_18474,
+    (System_String_o *)StringLiteral_18474/*"event_progressgauge_back"*/,
     v60);
   gaugeBar = this->fields.gaugeBar;
   if ( !gaugeBar )
@@ -2780,12 +2780,12 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     (UISprite_o *)this->fields.shipPanelObj,
-    (System_String_o *)StringLiteral_18477,
+    (System_String_o *)StringLiteral_18477/*"event_progressicon"*/,
     v62);
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     (UISprite_o *)this->fields.progressNameLabel,
-    (System_String_o *)StringLiteral_18517,
+    (System_String_o *)StringLiteral_18517/*"event_status_point"*/,
     v63);
   progressNameLabel = this->fields.progressNameLabel;
   if ( !progressNameLabel )
@@ -2796,7 +2796,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.gateGoalIcon,
-    (System_String_o *)StringLiteral_18466,
+    (System_String_o *)StringLiteral_18466/*"event_next"*/,
     v65);
   gateGoalIcon = this->fields.gateGoalIcon;
   if ( !gateGoalIcon )
@@ -2807,7 +2807,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.gateNextPointBg,
-    (System_String_o *)StringLiteral_18453,
+    (System_String_o *)StringLiteral_18453/*"event_goal"*/,
     v67);
   gateNextPointBg = this->fields.gateNextPointBg;
   if ( !gateNextPointBg )
@@ -2818,7 +2818,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   TitleInfoEventSubmarineStatusComponent__SetSpriteByLocalAtlas(
     this,
     (UISprite_o *)this->fields.gateNextPointLabel,
-    (System_String_o *)StringLiteral_18472,
+    (System_String_o *)StringLiteral_18472/*"event_progress_point"*/,
     v69);
   gateNextPointLabel = this->fields.gateNextPointLabel;
   if ( !gateNextPointLabel )
@@ -2832,12 +2832,12 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v72 = LocalizationManager__Get((System_String_o *)StringLiteral_5713, 0LL);
+  v72 = LocalizationManager__Get((System_String_o *)StringLiteral_5713/*"EVENT_SUBMARINE_STATUS_TITLE"*/, 0LL);
   if ( !gaugeFrame )
     goto LABEL_54;
   UILabel__set_text(gaugeFrame, v72, 0LL);
   progressPointLabel = this->fields.progressPointLabel;
-  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_5702, 0LL);
+  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_5702/*"EVENT_SUBMARINE_GAUGE_CURRENT"*/, 0LL);
   if ( !progressPointLabel )
     goto LABEL_54;
   UILabel__set_text(progressPointLabel, v74, 0LL);
@@ -2901,11 +2901,11 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_5705, 0LL);
+  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_5705/*"EVENT_SUBMARINE_NEXT_DESCRIPTION"*/, 0LL);
   userPoint = this->fields.userPoint;
   v97 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &userPoint);
   v98 = System_String__Format(v96, v97, 0LL);
-  v99 = LocalizationManager__Get((System_String_o *)StringLiteral_5706, 0LL);
+  v99 = LocalizationManager__Get((System_String_o *)StringLiteral_5706/*"EVENT_SUBMARINE_NEXT_POINT"*/, 0LL);
   v100 = (System_Int32_array **)System_String__Concat_43743732(v98, v99, 0LL);
   *(_QWORD *)&this->fields.currentQuestId = v100;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.currentQuestId, v100, v101, v102, v103, v104, v105, v106);
@@ -2953,7 +2953,7 @@ void __fastcall TitleInfoEventSubmarineStatusComponent__Setup(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v116 = LocalizationManager__Get((System_String_o *)StringLiteral_5635, 0LL);
+  v116 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
   if ( !gateBg
     || (UICounterLabel__Setup(gateBg, onEndAnim, PROGRESS_ANIMATION_TIME, v116, 0, 0LL),
         (v117 = (UICounterLabel_o *)this->fields.gateBg) == 0LL) )

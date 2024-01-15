@@ -316,7 +316,7 @@ void __fastcall FavoriteChangeComponent__Init(FavoriteChangeComponent_o *this, c
   if ( (byte_40F9F9B & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_7002, v3);
+    sub_B16FFC(&StringLiteral_7002/*"HEADER_MSG_FAVORITE"*/, v3);
     byte_40F9F9B = 1;
   }
   favoriteChangeManager = this->fields.favoriteChangeManager;
@@ -330,7 +330,7 @@ void __fastcall FavoriteChangeComponent__Init(FavoriteChangeComponent_o *this, c
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_7002, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_7002/*"HEADER_MSG_FAVORITE"*/, 0LL);
   if ( !infoLb )
 LABEL_9:
     sub_B170D4();
@@ -653,16 +653,16 @@ void __fastcall FavoriteChangeComponent__OnClickServant(
     sub_B16FFC(&Method_FavoriteChangeComponent___c__DisplayClass31_0__OnClickServant_b__0__, v27);
     sub_B16FFC(&Method_FavoriteChangeComponent___c__DisplayClass31_0__OnClickServant_b__2__, v28);
     sub_B16FFC(&FavoriteChangeComponent___c__DisplayClass31_0_TypeInfo, v29);
-    sub_B16FFC(&StringLiteral_11936, v30);
-    sub_B16FFC(&StringLiteral_11934, v31);
-    sub_B16FFC(&StringLiteral_11946, v32);
-    sub_B16FFC(&StringLiteral_11944, v33);
-    sub_B16FFC(&StringLiteral_11945, v34);
-    sub_B16FFC(&StringLiteral_11933, v35);
-    sub_B16FFC(&StringLiteral_11937, v36);
-    sub_B16FFC(&StringLiteral_1, v37);
-    sub_B16FFC(&StringLiteral_11935, v38);
-    sub_B16FFC(&StringLiteral_11947, v39);
+    sub_B16FFC(&StringLiteral_11936/*"SERVANT_STATUS_FAVORITE_CONFIRM_MESSAGE"*/, v30);
+    sub_B16FFC(&StringLiteral_11934/*"SERVANT_STATUS_FAVORITE_CONFIRM_DECIDE"*/, v31);
+    sub_B16FFC(&StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v32);
+    sub_B16FFC(&StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v33);
+    sub_B16FFC(&StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v34);
+    sub_B16FFC(&StringLiteral_11933/*"SERVANT_STATUS_FAVORITE_CONFIRM_CANCEL"*/, v35);
+    sub_B16FFC(&StringLiteral_11937/*"SERVANT_STATUS_FAVORITE_CONFIRM_TITLE"*/, v36);
+    sub_B16FFC(&StringLiteral_1/*""*/, v37);
+    sub_B16FFC(&StringLiteral_11935/*"SERVANT_STATUS_FAVORITE_CONFIRM_EVENT_JOIN_MESSAGE"*/, v38);
+    sub_B16FFC(&StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v39);
     byte_40F9F9F = 1;
   }
   v40 = sub_B170CC(FavoriteChangeComponent___c__DisplayClass31_0_TypeInfo, *(_QWORD *)&kind, *(_QWORD *)&n, method, v4);
@@ -865,7 +865,7 @@ LABEL_47:
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v108 = LocalizationManager__Get((System_String_o *)StringLiteral_11937, 0LL);
+                        v108 = LocalizationManager__Get((System_String_o *)StringLiteral_11937/*"SERVANT_STATUS_FAVORITE_CONFIRM_TITLE"*/, 0LL);
                         if ( *v55 )
                         {
                           v109 = v108;
@@ -883,19 +883,19 @@ LABEL_47:
                             {
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                             }
-                            v112 = LocalizationManager__Get((System_String_o *)StringLiteral_11935, 0LL);
+                            v112 = LocalizationManager__Get((System_String_o *)StringLiteral_11935/*"SERVANT_STATUS_FAVORITE_CONFIRM_EVENT_JOIN_MESSAGE"*/, 0LL);
                           }
                           else
                           {
 LABEL_79:
-                            v112 = (System_String_o *)StringLiteral_1;
+                            v112 = (System_String_o *)StringLiteral_1/*""*/;
                           }
                           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                             && !LocalizationManager_TypeInfo->_2.cctor_finished )
                           {
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                           }
-                          v202 = LocalizationManager__Get((System_String_o *)StringLiteral_11936, 0LL);
+                          v202 = LocalizationManager__Get((System_String_o *)StringLiteral_11936/*"SERVANT_STATUS_FAVORITE_CONFIRM_MESSAGE"*/, 0LL);
                           v203 = System_String__Concat_43743732(v202, v112, 0LL);
                           v205 = (System_Object_array *)sub_B17014(object___TypeInfo, 6LL, v204);
                           Rarity = UserServantEntity__getRarity(Entity, 0LL);
@@ -1041,8 +1041,8 @@ LABEL_183:
                               v242,
                               v243);
                             v245 = System_String__Format_43822456(v203, v205, 0LL);
-                            v246 = LocalizationManager__Get((System_String_o *)StringLiteral_11934, 0LL);
-                            v247 = LocalizationManager__Get((System_String_o *)StringLiteral_11933, 0LL);
+                            v246 = LocalizationManager__Get((System_String_o *)StringLiteral_11934/*"SERVANT_STATUS_FAVORITE_CONFIRM_DECIDE"*/, 0LL);
+                            v247 = LocalizationManager__Get((System_String_o *)StringLiteral_11933/*"SERVANT_STATUS_FAVORITE_CONFIRM_CANCEL"*/, 0LL);
                             v248 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                             v253 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                                             CommonConfirmDialog_ClickDelegate_TypeInfo,
@@ -1194,8 +1194,8 @@ LABEL_91:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v138 = LocalizationManager__Get((System_String_o *)StringLiteral_11947, 0LL);
-  v139 = LocalizationManager__Get((System_String_o *)StringLiteral_11946, 0LL);
+  v138 = LocalizationManager__Get((System_String_o *)StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
+  v139 = LocalizationManager__Get((System_String_o *)StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
   v141 = (System_Object_array *)sub_B17014(object___TypeInfo, 6LL, v140);
   v142 = UserServantEntity__getRarity(v120, 0LL);
   if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
@@ -1297,8 +1297,8 @@ LABEL_184:
   v141->m_Items[5] = (Il2CppObject *)v185;
   sub_B16F98((BattleServantConfConponent_o *)&v141->m_Items[5], v185, v145, v180, v181, v182, v183, v184);
   v186 = System_String__Format_43822456(v139, v141, 0LL);
-  v187 = LocalizationManager__Get((System_String_o *)StringLiteral_11945, 0LL);
-  v188 = LocalizationManager__Get((System_String_o *)StringLiteral_11944, 0LL);
+  v187 = LocalizationManager__Get((System_String_o *)StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
+  v188 = LocalizationManager__Get((System_String_o *)StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
   v189 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v194 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                   CommonConfirmDialog_ClickDelegate_TypeInfo,
@@ -2502,18 +2502,18 @@ void __fastcall FavoriteChangeComponent__setModeTabKind(
   if ( (byte_40F9FAA & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&modeKind);
-    sub_B16FFC(&StringLiteral_11701, v5);
-    sub_B16FFC(&StringLiteral_17071, v6);
-    sub_B16FFC(&StringLiteral_17072, v7);
-    sub_B16FFC(&StringLiteral_17057, v8);
-    sub_B16FFC(&StringLiteral_17060, v9);
-    sub_B16FFC(&StringLiteral_11699, v10);
-    sub_B16FFC(&StringLiteral_11700, v11);
-    sub_B16FFC(&StringLiteral_17073, v12);
-    sub_B16FFC(&StringLiteral_17074, v13);
-    sub_B16FFC(&StringLiteral_17059, v14);
-    sub_B16FFC(&StringLiteral_17058, v15);
-    sub_B16FFC(&StringLiteral_7002, v16);
+    sub_B16FFC(&StringLiteral_11701/*"SERVANT_LIST_EXPLANATION_PUSH"*/, v5);
+    sub_B16FFC(&StringLiteral_17071/*"button_push_reg"*/, v6);
+    sub_B16FFC(&StringLiteral_17072/*"button_push_unreg"*/, v7);
+    sub_B16FFC(&StringLiteral_17057/*"button_allchoice_reg"*/, v8);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v9);
+    sub_B16FFC(&StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/, v10);
+    sub_B16FFC(&StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/, v11);
+    sub_B16FFC(&StringLiteral_17073/*"button_select_reg"*/, v12);
+    sub_B16FFC(&StringLiteral_17074/*"button_select_unreg"*/, v13);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v14);
+    sub_B16FFC(&StringLiteral_17058/*"button_allchoice_unreg"*/, v15);
+    sub_B16FFC(&StringLiteral_7002/*"HEADER_MSG_FAVORITE"*/, v16);
     byte_40F9FAA = 1;
   }
   if ( this->fields.tabModeKind != modeKind )
@@ -2530,7 +2530,7 @@ void __fastcall FavoriteChangeComponent__setModeTabKind(
     normalTabSprite = this->fields.normalTabSprite;
     if ( !normalTabSprite )
       goto LABEL_54;
-    v20 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17074 : &StringLiteral_17073);
+    v20 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17074/*"button_select_unreg"*/ : &StringLiteral_17073/*"button_select_reg"*/);
     UISprite__set_spriteName(normalTabSprite, *v20, 0LL);
     lockTabButton = (UnityEngine_Behaviour_o *)this->fields.lockTabButton;
     if ( !lockTabButton )
@@ -2543,7 +2543,7 @@ void __fastcall FavoriteChangeComponent__setModeTabKind(
     lockTabSprite = this->fields.lockTabSprite;
     if ( !lockTabSprite )
       goto LABEL_54;
-    v24 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17059 : &StringLiteral_17060);
+    v24 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17059/*"button_alllock_reg"*/ : &StringLiteral_17060/*"button_alllock_unreg"*/);
     UISprite__set_spriteName(lockTabSprite, *v24, 0LL);
     choiceTabButton = (UnityEngine_Behaviour_o *)this->fields.choiceTabButton;
     if ( !choiceTabButton )
@@ -2556,7 +2556,7 @@ void __fastcall FavoriteChangeComponent__setModeTabKind(
     choiceTabSprite = this->fields.choiceTabSprite;
     if ( !choiceTabSprite )
       goto LABEL_54;
-    v28 = (System_String_o **)(this->fields.tabModeKind == 2 ? &StringLiteral_17057 : &StringLiteral_17058);
+    v28 = (System_String_o **)(this->fields.tabModeKind == 2 ? &StringLiteral_17057/*"button_allchoice_reg"*/ : &StringLiteral_17058/*"button_allchoice_unreg"*/);
     UISprite__set_spriteName(choiceTabSprite, *v28, 0LL);
     pushTabButton = (UnityEngine_Behaviour_o *)this->fields.pushTabButton;
     if ( !pushTabButton
@@ -2569,9 +2569,9 @@ LABEL_54:
       sub_B170D4();
     }
     if ( this->fields.tabModeKind == 3 )
-      v32 = (System_String_o **)&StringLiteral_17071;
+      v32 = (System_String_o **)&StringLiteral_17071/*"button_push_reg"*/;
     else
-      v32 = (System_String_o **)&StringLiteral_17072;
+      v32 = (System_String_o **)&StringLiteral_17072/*"button_push_unreg"*/;
     UISprite__set_spriteName(pushTabSprite, *v32, 0LL);
     switch ( modeKind )
     {
@@ -2582,7 +2582,7 @@ LABEL_54:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_7002, 0LL);
+        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_7002/*"HEADER_MSG_FAVORITE"*/, 0LL);
         if ( !infoLb )
           goto LABEL_54;
         UILabel__set_text(infoLb, v35, 0LL);
@@ -2600,7 +2600,7 @@ LABEL_54:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v40 = &StringLiteral_11700;
+        v40 = &StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
         goto LABEL_47;
       case 2:
         v39 = this->fields.infoLb;
@@ -2609,7 +2609,7 @@ LABEL_54:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v40 = &StringLiteral_11699;
+        v40 = &StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
         goto LABEL_47;
       case 3:
         v39 = this->fields.infoLb;
@@ -2618,7 +2618,7 @@ LABEL_54:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v40 = &StringLiteral_11701;
+        v40 = &StringLiteral_11701/*"SERVANT_LIST_EXPLANATION_PUSH"*/;
 LABEL_47:
         v41 = LocalizationManager__Get((System_String_o *)*v40, 0LL);
         if ( !v39 )
@@ -3019,7 +3019,7 @@ void __fastcall FavoriteChangeComponent___c__DisplayClass31_0___OnClickServant_b
 
   if ( (byte_40F68B1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9913, method);
+    sub_B16FFC(&StringLiteral_9913/*"OnClickFavoriteDecide"*/, method);
     byte_40F68B1 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -3031,7 +3031,7 @@ void __fastcall FavoriteChangeComponent___c__DisplayClass31_0___OnClickServant_b
   }
   UnityEngine_Component__SendMessage(
     favoriteChangeManager,
-    (System_String_o *)StringLiteral_9913,
+    (System_String_o *)StringLiteral_9913/*"OnClickFavoriteDecide"*/,
     (Il2CppObject *)item->fields.viewObject,
     0LL);
 }
@@ -3077,7 +3077,7 @@ void __fastcall FavoriteChangeComponent___c__DisplayClass37_0___closeSvtDetail_b
   {
     sub_B16FFC(&FavoriteChangeListViewManager_CallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_FavoriteChangeComponent_OnClickServant__, v3);
-    sub_B16FFC(&StringLiteral_3034, v4);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v4);
     byte_40F68B2 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -3099,7 +3099,7 @@ void __fastcall FavoriteChangeComponent___c__DisplayClass37_0___closeSvtDetail_b
           myRoomFsm = v8->fields.myRoomFsm;
           if ( myRoomFsm )
           {
-            PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3034, 0LL);
+            PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
             return;
           }
         }

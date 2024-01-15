@@ -64,7 +64,7 @@ void __fastcall PartyOrganizationUIDragDropListViewItem__DragReturnEnd(
   if ( (byte_40FDE10 & 1) == 0 )
   {
     sub_B16FFC(&PartyOrganizationListViewObject_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_5375, v3);
+    sub_B16FFC(&StringLiteral_5375/*"DragEnd"*/, v3);
     byte_40FDE10 = 1;
   }
   mListViewObject = this->fields.mListViewObject;
@@ -79,7 +79,7 @@ void __fastcall PartyOrganizationUIDragDropListViewItem__DragReturnEnd(
   PartyOrganizationListViewObject__Init_20192244((PartyOrganizationListViewObject_o *)mListViewObject, 3, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_5375,
+    (System_String_o *)StringLiteral_5375/*"DragEnd"*/,
     0.1,
     0LL);
 }
@@ -129,7 +129,7 @@ void __fastcall PartyOrganizationUIDragDropListViewItem__DragReturnStart(
   {
     sub_B16FFC(&PartyOrganizationListViewObject_TypeInfo, method);
     sub_B16FFC(&PartyOrganizationUIDragDropListViewItem_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_5376, v4);
+    sub_B16FFC(&StringLiteral_5376/*"DragReturnEnd"*/, v4);
     byte_40FDE0F = 1;
   }
   mListViewObject = this->fields.mListViewObject;
@@ -186,8 +186,8 @@ LABEL_19:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v22->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v22->fields.eventReceiver, gameObject, v24, v25, v26, v27, v28, v29);
-  v30 = (System_Int32_array **)StringLiteral_5376;
-  v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5376;
+  v30 = (System_Int32_array **)StringLiteral_5376/*"DragReturnEnd"*/;
+  v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5376/*"DragReturnEnd"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v22->fields.callWhenFinished, v30, v31, v32, v33, v34, v35, v36);
 }
 
@@ -232,7 +232,7 @@ void __fastcall PartyOrganizationUIDragDropListViewItem__OnDragDropRelease(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
     sub_B16FFC(&PartyOrganizationListViewManager_TypeInfo, v7);
     sub_B16FFC(&PartyOrganizationListViewObject_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_5375, v9);
+    sub_B16FFC(&StringLiteral_5375/*"DragEnd"*/, v9);
     byte_40FDE0D = 1;
   }
   mListViewObject = this->fields.mListViewObject;
@@ -345,7 +345,7 @@ LABEL_45:
   PartyOrganizationListViewDropObject__Init_32300096((PartyOrganizationListViewDropObject_o *)klass, 4, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_5375,
+    (System_String_o *)StringLiteral_5375/*"DragEnd"*/,
     0.1,
     0LL);
 }

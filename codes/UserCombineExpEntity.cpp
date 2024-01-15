@@ -17,8 +17,8 @@ System_String_o *__fastcall UserCombineExpEntity__CreatePrimaryKey(
 {
   if ( (byte_40FAAC5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FAAC5 = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }

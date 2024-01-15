@@ -77,47 +77,47 @@ void __fastcall TitleInfoEventFactory___cctor(const MethodInfo *method)
   if ( (byte_40FDFB5 & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventFactory_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18120, v8);
-    sub_B16FFC(&StringLiteral_18121, v9);
-    sub_B16FFC(&StringLiteral_18604, v10);
-    sub_B16FFC(&StringLiteral_18603, v11);
-    sub_B16FFC(&StringLiteral_18119, v12);
-    sub_B16FFC(&StringLiteral_18606, v13);
-    sub_B16FFC(&StringLiteral_18605, v14);
-    sub_B16FFC(&StringLiteral_18118, v15);
+    sub_B16FFC(&StringLiteral_18120/*"ef_factory_open"*/, v8);
+    sub_B16FFC(&StringLiteral_18121/*"ef_factory_open1"*/, v9);
+    sub_B16FFC(&StringLiteral_18604/*"factory_icon_possible"*/, v10);
+    sub_B16FFC(&StringLiteral_18603/*"factory_bg_rate"*/, v11);
+    sub_B16FFC(&StringLiteral_18119/*"ef_factory_flash1"*/, v12);
+    sub_B16FFC(&StringLiteral_18606/*"factory_title_chocolate"*/, v13);
+    sub_B16FFC(&StringLiteral_18605/*"factory_line"*/, v14);
+    sub_B16FFC(&StringLiteral_18118/*"ef_factory_flash"*/, v15);
     byte_40FDFB5 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TitleInfoEventFactory_TypeInfo->static_fields;
-  v17 = (System_Int32_array **)StringLiteral_18606;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18606;
+  v17 = (System_Int32_array **)StringLiteral_18606/*"factory_title_chocolate"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18606/*"factory_title_chocolate"*/;
   sub_B16F98(static_fields, v17, v2, v3, v4, v5, v6, v7);
   v18 = TitleInfoEventFactory_TypeInfo->static_fields;
-  v19 = (System_Int32_array **)StringLiteral_18604;
-  v18->SPRITE_NAME_POSSIBLE = (struct System_String_o *)StringLiteral_18604;
+  v19 = (System_Int32_array **)StringLiteral_18604/*"factory_icon_possible"*/;
+  v18->SPRITE_NAME_POSSIBLE = (struct System_String_o *)StringLiteral_18604/*"factory_icon_possible"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v18->SPRITE_NAME_POSSIBLE, v19, v20, v21, v22, v23, v24, v25);
   v26 = TitleInfoEventFactory_TypeInfo->static_fields;
-  v27 = (System_Int32_array **)StringLiteral_18605;
-  v26->SPRITE_NAME_LINE = (struct System_String_o *)StringLiteral_18605;
+  v27 = (System_Int32_array **)StringLiteral_18605/*"factory_line"*/;
+  v26->SPRITE_NAME_LINE = (struct System_String_o *)StringLiteral_18605/*"factory_line"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v26->SPRITE_NAME_LINE, v27, v28, v29, v30, v31, v32, v33);
   v34 = TitleInfoEventFactory_TypeInfo->static_fields;
-  v35 = (System_Int32_array **)StringLiteral_18603;
-  v34->SPRITE_NAME_BG_RATE = (struct System_String_o *)StringLiteral_18603;
+  v35 = (System_Int32_array **)StringLiteral_18603/*"factory_bg_rate"*/;
+  v34->SPRITE_NAME_BG_RATE = (struct System_String_o *)StringLiteral_18603/*"factory_bg_rate"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v34->SPRITE_NAME_BG_RATE, v35, v36, v37, v38, v39, v40, v41);
   v42 = TitleInfoEventFactory_TypeInfo->static_fields;
-  v43 = (System_Int32_array **)StringLiteral_18120;
-  v42->OBJECT_NAME_EFFECT_1 = (struct System_String_o *)StringLiteral_18120;
+  v43 = (System_Int32_array **)StringLiteral_18120/*"ef_factory_open"*/;
+  v42->OBJECT_NAME_EFFECT_1 = (struct System_String_o *)StringLiteral_18120/*"ef_factory_open"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v42->OBJECT_NAME_EFFECT_1, v43, v44, v45, v46, v47, v48, v49);
   v50 = TitleInfoEventFactory_TypeInfo->static_fields;
-  v51 = (System_Int32_array **)StringLiteral_18118;
-  v50->OBJECT_NAME_EFFECT_2 = (struct System_String_o *)StringLiteral_18118;
+  v51 = (System_Int32_array **)StringLiteral_18118/*"ef_factory_flash"*/;
+  v50->OBJECT_NAME_EFFECT_2 = (struct System_String_o *)StringLiteral_18118/*"ef_factory_flash"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v50->OBJECT_NAME_EFFECT_2, v51, v52, v53, v54, v55, v56, v57);
   v58 = TitleInfoEventFactory_TypeInfo->static_fields;
-  v59 = (System_Int32_array **)StringLiteral_18121;
-  v58->EFFECT_ANIMATION_START_1 = (struct System_String_o *)StringLiteral_18121;
+  v59 = (System_Int32_array **)StringLiteral_18121/*"ef_factory_open1"*/;
+  v58->EFFECT_ANIMATION_START_1 = (struct System_String_o *)StringLiteral_18121/*"ef_factory_open1"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v58->EFFECT_ANIMATION_START_1, v59, v60, v61, v62, v63, v64, v65);
   v66 = TitleInfoEventFactory_TypeInfo->static_fields;
-  v67 = (System_Int32_array **)StringLiteral_18119;
-  v66->EFFECT_ANIMATION_START_2 = (struct System_String_o *)StringLiteral_18119;
+  v67 = (System_Int32_array **)StringLiteral_18119/*"ef_factory_flash1"*/;
+  v66->EFFECT_ANIMATION_START_2 = (struct System_String_o *)StringLiteral_18119/*"ef_factory_flash1"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v66->EFFECT_ANIMATION_START_2, v67, v68, v69, v70, v71, v72, v73);
 }
 
@@ -331,7 +331,7 @@ void __fastcall TitleInfoEventFactory__Open(TitleInfoEventFactory_o *this, const
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
     sub_B16FFC(&TitleInfoEventFactory_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_5611, v17);
+    sub_B16FFC(&StringLiteral_5611/*"EVENT_FACTORY_GET_EP_RATE"*/, v17);
     byte_40FDFAE = 1;
   }
   if ( this->fields.eventDetailEntity )
@@ -544,7 +544,7 @@ LABEL_64:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v61 = LocalizationManager__Get((System_String_o *)StringLiteral_5611, 0LL);
+    v61 = LocalizationManager__Get((System_String_o *)StringLiteral_5611/*"EVENT_FACTORY_GET_EP_RATE"*/, 0LL);
     v69 = (double)v37 / 1000.0;
     v62 = (Il2CppObject *)j_il2cpp_value_box_0(double_TypeInfo, &v69);
     v63 = System_String__Format(v61, v62, 0LL);
@@ -605,7 +605,7 @@ void __fastcall TitleInfoEventFactory__RateChange(TitleInfoEventFactory_o *this,
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_5611, v8);
+    sub_B16FFC(&StringLiteral_5611/*"EVENT_FACTORY_GET_EP_RATE"*/, v8);
     byte_40FDFB4 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -678,7 +678,7 @@ LABEL_29:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5611, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5611/*"EVENT_FACTORY_GET_EP_RATE"*/, 0LL);
   v32 = (double)v21 / 1000.0;
   v30 = (Il2CppObject *)j_il2cpp_value_box_0(double_TypeInfo, &v32);
   v31 = System_String__Format(v29, v30, 0LL);
@@ -840,7 +840,7 @@ void __fastcall TitleInfoEventFactory__StartLvUpEffect(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v17);
     sub_B16FFC(&TitleInfoEventFactory_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_8573, v19);
+    sub_B16FFC(&StringLiteral_8573/*"LvUpIconCreate"*/, v19);
     byte_40FDFB1 = 1;
   }
   if ( shopEntity && shopEntity->fields.purchaseType == 17 )
@@ -1053,7 +1053,7 @@ LABEL_37:
 LABEL_55:
                             UnityEngine_MonoBehaviour__Invoke(
                               (UnityEngine_MonoBehaviour_o *)this,
-                              (System_String_o *)StringLiteral_8573,
+                              (System_String_o *)StringLiteral_8573/*"LvUpIconCreate"*/,
                               this->fields.lvUpIconCreateTime,
                               0LL);
                             return;
@@ -1144,7 +1144,7 @@ void __fastcall TitleInfoEventFactory__StartRateEffect(TitleInfoEventFactory_o *
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v13);
     sub_B16FFC(&TitleInfoEventFactory_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_11248, v15);
+    sub_B16FFC(&StringLiteral_11248/*"RateChange"*/, v15);
     byte_40FDFB3 = 1;
   }
   effectAsset = this->fields.effectAsset;
@@ -1299,7 +1299,7 @@ LABEL_29:
 LABEL_47:
                     UnityEngine_MonoBehaviour__Invoke(
                       (UnityEngine_MonoBehaviour_o *)this,
-                      (System_String_o *)StringLiteral_11248,
+                      (System_String_o *)StringLiteral_11248/*"RateChange"*/,
                       this->fields.rateChangeTime,
                       0LL);
                     return;

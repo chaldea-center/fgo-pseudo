@@ -62,7 +62,7 @@ void __fastcall EventInfoAreaImprovementDrawComponent__UpdateLevelLabel(
   if ( (byte_40FB6D9 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_8348, v3);
+    sub_B16FFC(&StringLiteral_8348/*"LEVEL_INFO"*/, v3);
     byte_40FB6D9 = 1;
   }
   Level_k__BackingField = 0;
@@ -72,7 +72,7 @@ void __fastcall EventInfoAreaImprovementDrawComponent__UpdateLevelLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_8348, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LEVEL_INFO"*/, 0LL);
   Level_k__BackingField = this->fields._Level_k__BackingField;
   v6 = (Il2CppObject *)System_Int32__ToString((int32_t)&Level_k__BackingField, 0LL);
   v7 = System_String__Format(v5, v6, 0LL);

@@ -69,10 +69,10 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
     sub_B16FFC(&AtlasManager_TypeInfo, item);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
     sub_B16FFC(&Rarity_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_21736, v9);
-    sub_B16FFC(&StringLiteral_19282, v10);
-    sub_B16FFC(&StringLiteral_19274, v11);
-    sub_B16FFC(&StringLiteral_19281, v12);
+    sub_B16FFC(&StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, v9);
+    sub_B16FFC(&StringLiteral_19282/*"icon_reinforced"*/, v10);
+    sub_B16FFC(&StringLiteral_19274/*"icon_noblephantasmup"*/, v11);
+    sub_B16FFC(&StringLiteral_19281/*"icon_rarity5"*/, v12);
     byte_40F94E1 = 1;
   }
   if ( item && mode )
@@ -148,7 +148,7 @@ LABEL_53:
         v31 = this->fields.warningSprite;
         if ( !v31 )
           goto LABEL_53;
-        v32 = &StringLiteral_19282;
+        v32 = &StringLiteral_19282/*"icon_reinforced"*/;
         goto LABEL_38;
       case 2:
         v33 = (UnityEngine_Component_o *)this->fields.equipSprite;
@@ -175,7 +175,7 @@ LABEL_53:
         v31 = this->fields.warningSprite;
         if ( !v31 )
           goto LABEL_53;
-        v32 = &StringLiteral_19281;
+        v32 = &StringLiteral_19281/*"icon_rarity5"*/;
 LABEL_38:
         UISprite__set_spriteName(v31, (System_String_o *)*v32, 0LL);
 LABEL_39:
@@ -208,7 +208,7 @@ LABEL_39:
         {
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         }
-        AtlasManager__SetEventSprite(v44, (System_String_o *)StringLiteral_19274, 0LL);
+        AtlasManager__SetEventSprite(v44, (System_String_o *)StringLiteral_19274/*"icon_noblephantasmup"*/, 0LL);
         v45 = (UnityEngine_Component_o *)this->fields.materialTdSprite;
         if ( !v45 )
           goto LABEL_53;
@@ -216,7 +216,7 @@ LABEL_39:
         if ( !v46 )
           goto LABEL_53;
         UnityEngine_GameObject__SetActive(v46, 1, 0LL);
-        AtlasManager__SetEventSprite(this->fields.materialTdSprite, (System_String_o *)StringLiteral_21736, 0LL);
+        AtlasManager__SetEventSprite(this->fields.materialTdSprite, (System_String_o *)StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, 0LL);
         return;
       default:
         return;

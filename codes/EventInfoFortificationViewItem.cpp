@@ -152,7 +152,7 @@ void __fastcall EventInfoFortificationViewItem__SetupWorkBgColor(
   {
     sub_B16FFC(&int_TypeInfo, eventFortificationEntity);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_6410, v6);
+    sub_B16FFC(&StringLiteral_6410/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v6);
     byte_40FA121 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
@@ -163,7 +163,7 @@ void __fastcall EventInfoFortificationViewItem__SetupWorkBgColor(
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
   workType = eventFortificationEntity->fields.workType;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &workType);
-  v9 = System_String__Format_43739268((System_String_o *)StringLiteral_6410, v7, v8, 0LL);
+  v9 = System_String__Format_43739268((System_String_o *)StringLiteral_6410/*"FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v7, v8, 0LL);
   color = UnityEngine_Color__get_white(0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )

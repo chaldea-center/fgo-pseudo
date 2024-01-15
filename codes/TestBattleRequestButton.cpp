@@ -136,7 +136,7 @@ bool __fastcall TestBattleRequestButton__battleRequest_d__4__MoveNext(
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v8);
     sub_B16FFC(&Method_TestBattleRequestButton_callbackRequest__, v9);
     sub_B16FFC(&UnityEngine_WaitForEndOfFrame_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F77E6 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -197,7 +197,7 @@ LABEL_20:
         0,
         0LL,
         0,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         0,
         0,
         0,

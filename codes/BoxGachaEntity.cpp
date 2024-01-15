@@ -28,7 +28,7 @@ System_String_o *__fastcall BoxGachaEntity__GetMessagePrizeName(BoxGachaEntity_o
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
     sub_B16FFC(&string_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_20403, v4);
+    sub_B16FFC(&StringLiteral_20403/*"message_prize_name"*/, v4);
     byte_40FB1A3 = 1;
   }
   value = 0LL;
@@ -37,7 +37,7 @@ System_String_o *__fastcall BoxGachaEntity__GetMessagePrizeName(BoxGachaEntity_o
   {
     if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
             (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_20403,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_20403/*"message_prize_name"*/,
             &value,
             (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0LL;

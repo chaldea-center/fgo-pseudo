@@ -16,14 +16,14 @@ void __fastcall AppendSkillCombineRequest__beginRequest(
 
   if ( (byte_40FC9DF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22052, baseUsrSvtId);
-    sub_B16FFC(&StringLiteral_16559, v9);
-    sub_B16FFC(&StringLiteral_17764, v10);
+    sub_B16FFC(&StringLiteral_22052/*"skillNum"*/, baseUsrSvtId);
+    sub_B16FFC(&StringLiteral_16559/*"baseUserSvtId"*/, v9);
+    sub_B16FFC(&StringLiteral_17764/*"currentSkillLv"*/, v10);
     byte_40FC9DF = 1;
   }
-  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_16559, baseUsrSvtId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22052, skillNum, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17764, currentSkillLv, 0LL);
+  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_16559/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22052/*"skillNum"*/, skillNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17764/*"currentSkillLv"*/, currentSkillLv, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -38,7 +38,7 @@ System_String_o *__fastcall AppendSkillCombineRequest__getURL(
   if ( (byte_40FC9DE & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_17148, v2);
+    sub_B16FFC(&StringLiteral_17148/*"card/combineAppendPassiveSkill"*/, v2);
     byte_40FC9DE = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -47,7 +47,7 @@ System_String_o *__fastcall AppendSkillCombineRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17148, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17148/*"card/combineAppendPassiveSkill"*/, 0LL);
 }
 
 
@@ -67,7 +67,7 @@ void __fastcall AppendSkillCombineRequest__requestCompleted(
   {
     sub_B16FFC(&JsonManager_TypeInfo, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40FC9E0 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -85,7 +85,7 @@ void __fastcall AppendSkillCombineRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_20980;
+    v10 = (System_String_o *)StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

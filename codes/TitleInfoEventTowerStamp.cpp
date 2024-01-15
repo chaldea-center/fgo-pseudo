@@ -14,12 +14,12 @@ void __fastcall TitleInfoEventTowerStamp___cctor(const MethodInfo *method)
   if ( (byte_40F840F & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventTowerStamp_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_22650, v8);
+    sub_B16FFC(&StringLiteral_22650/*"tower_img_base{0:00}_stamp"*/, v8);
     byte_40F840F = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TitleInfoEventTowerStamp_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_22650;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22650;
+  v10 = (System_Int32_array **)StringLiteral_22650/*"tower_img_base{0:00}_stamp"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22650/*"tower_img_base{0:00}_stamp"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 

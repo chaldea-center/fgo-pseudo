@@ -26,7 +26,7 @@ void __fastcall CommandAssistLvUpDialogComponent__Init(
 
   if ( (byte_40FA532 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FA532 = 1;
   }
   this->fields.state = 0;
@@ -34,12 +34,12 @@ void __fastcall CommandAssistLvUpDialogComponent__Init(
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_10;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( !closeLabel
-    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (endEventMessageLabel = this->fields.endEventMessageLabel) == 0LL)
-    || (UILabel__set_text(endEventMessageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(endEventMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (v6 = (UnityEngine_Component_o *)this->fields.endEventMessageLabel) == 0LL)
     || (gameObject = UnityEngine_Component__get_gameObject(v6, 0LL)) == 0LL
     || (UnityEngine_GameObject__SetActive(gameObject, 0, 0LL),
@@ -123,9 +123,9 @@ void __fastcall CommandAssistLvUpDialogComponent__Open(
     sub_B16FFC(&CondType_TypeInfo, v10);
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_5574, v13);
-    sub_B16FFC(&StringLiteral_5575, v14);
-    sub_B16FFC(&StringLiteral_3252, v15);
+    sub_B16FFC(&StringLiteral_5574/*"EVENT_COMMAND_ASSIST_EVENT_END_MSG"*/, v13);
+    sub_B16FFC(&StringLiteral_5575/*"EVENT_COMMAND_ASSIST_LEVEL_UP_DIALOG_TITLE"*/, v14);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v15);
     byte_40FA533 = 1;
   }
   CommandAssistLvUpDialogComponent__Init(this, *(const MethodInfo **)&eventId);
@@ -151,17 +151,17 @@ void __fastcall CommandAssistLvUpDialogComponent__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5575, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5575/*"EVENT_COMMAND_ASSIST_LEVEL_UP_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_22;
   UILabel__set_text(titleLabel, v21, 0LL);
   closeLabel = this->fields.closeLabel;
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_22;
   UILabel__set_text(closeLabel, v23, 0LL);
   v24 = this->fields.endEventMessageLabel;
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5574, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5574/*"EVENT_COMMAND_ASSIST_EVENT_END_MSG"*/, 0LL);
   if ( !v24 )
     goto LABEL_22;
   UILabel__set_text(v24, v25, 0LL);

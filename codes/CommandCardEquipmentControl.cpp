@@ -95,15 +95,15 @@ void __fastcall CommandCardEquipmentControl___cctor(const MethodInfo *method)
   if ( (byte_40FA573 & 1) == 0 )
   {
     sub_B16FFC(&CommandCardEquipmentControl_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19608, v6);
-    sub_B16FFC(&StringLiteral_19607, v7);
-    sub_B16FFC(&StringLiteral_19202, v8);
-    sub_B16FFC(&StringLiteral_17014, v9);
-    sub_B16FFC(&StringLiteral_19679, v10);
-    sub_B16FFC(&StringLiteral_16986, v11);
-    sub_B16FFC(&StringLiteral_19609, v12);
-    sub_B16FFC(&StringLiteral_17037, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_19608/*"img_txt_equipcc_3"*/, v6);
+    sub_B16FFC(&StringLiteral_19607/*"img_txt_equipcc_1"*/, v7);
+    sub_B16FFC(&StringLiteral_19202/*"icon_arrow_pink"*/, v8);
+    sub_B16FFC(&StringLiteral_17014/*"btn_txt_replace"*/, v9);
+    sub_B16FFC(&StringLiteral_19679/*"img_txt_unlockcc"*/, v10);
+    sub_B16FFC(&StringLiteral_16986/*"btn_txt_equipcc"*/, v11);
+    sub_B16FFC(&StringLiteral_19609/*"img_txt_equipcc_4"*/, v12);
+    sub_B16FFC(&StringLiteral_17037/*"btn_txt_unlockcc"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FA573 = 1;
   }
   v15 = 1063321600;
@@ -113,8 +113,8 @@ void __fastcall CommandCardEquipmentControl___cctor(const MethodInfo *method)
   UnityEngine_Color___ctor_40666012(*(UnityEngine_Color_o *)(&v2 - 3), v3, v4, v5, (const MethodInfo *)&v90);
   CommandCardEquipmentControl_TypeInfo->static_fields->defaultDetailColor = v90;
   static_fields = CommandCardEquipmentControl_TypeInfo->static_fields;
-  v19 = (System_Int32_array **)StringLiteral_19202;
-  static_fields->DEFAULT_MESSAGE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19202;
+  v19 = (System_Int32_array **)StringLiteral_19202/*"icon_arrow_pink"*/;
+  static_fields->DEFAULT_MESSAGE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19202/*"icon_arrow_pink"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&static_fields->DEFAULT_MESSAGE_SPRITE_NAME,
     v19,
@@ -125,36 +125,36 @@ void __fastcall CommandCardEquipmentControl___cctor(const MethodInfo *method)
     v24,
     v25);
   v26 = CommandCardEquipmentControl_TypeInfo->static_fields;
-  v27 = (System_Int32_array **)StringLiteral_19679;
-  v26->UNLOCK_MESSAGE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19679;
+  v27 = (System_Int32_array **)StringLiteral_19679/*"img_txt_unlockcc"*/;
+  v26->UNLOCK_MESSAGE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19679/*"img_txt_unlockcc"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v26->UNLOCK_MESSAGE_SPRITE_NAME, v27, v28, v29, v30, v31, v32, v33);
   v34 = CommandCardEquipmentControl_TypeInfo->static_fields;
-  v35 = (System_Int32_array **)StringLiteral_19607;
-  v34->EQUIPED_MESSAGE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19607;
+  v35 = (System_Int32_array **)StringLiteral_19607/*"img_txt_equipcc_1"*/;
+  v34->EQUIPED_MESSAGE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19607/*"img_txt_equipcc_1"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v34->EQUIPED_MESSAGE_SPRITE_NAME, v35, v36, v37, v38, v39, v40, v41);
   v42 = CommandCardEquipmentControl_TypeInfo->static_fields;
-  v43 = (System_Int32_array **)StringLiteral_19608;
-  v42->SELECTED_MESSAGE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19608;
+  v43 = (System_Int32_array **)StringLiteral_19608/*"img_txt_equipcc_3"*/;
+  v42->SELECTED_MESSAGE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19608/*"img_txt_equipcc_3"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v42->SELECTED_MESSAGE_SPRITE_NAME, v43, v44, v45, v46, v47, v48, v49);
   v50 = CommandCardEquipmentControl_TypeInfo->static_fields;
-  v51 = (System_Int32_array **)StringLiteral_19609;
-  v50->NOT_EQUIPED_MESSAGE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19609;
+  v51 = (System_Int32_array **)StringLiteral_19609/*"img_txt_equipcc_4"*/;
+  v50->NOT_EQUIPED_MESSAGE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19609/*"img_txt_equipcc_4"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v50->NOT_EQUIPED_MESSAGE_SPRITE_NAME, v51, v52, v53, v54, v55, v56, v57);
   v58 = CommandCardEquipmentControl_TypeInfo->static_fields;
-  v59 = (System_Int32_array **)StringLiteral_1;
-  v58->DEFAULT_EXE_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_1;
+  v59 = (System_Int32_array **)StringLiteral_1/*""*/;
+  v58->DEFAULT_EXE_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&v58->DEFAULT_EXE_BTN_SPRITE_NAME, v59, v60, v61, v62, v63, v64, v65);
   v66 = CommandCardEquipmentControl_TypeInfo->static_fields;
-  v67 = (System_Int32_array **)StringLiteral_17037;
-  v66->UNLOCK_EXE_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_17037;
+  v67 = (System_Int32_array **)StringLiteral_17037/*"btn_txt_unlockcc"*/;
+  v66->UNLOCK_EXE_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_17037/*"btn_txt_unlockcc"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v66->UNLOCK_EXE_BTN_SPRITE_NAME, v67, v68, v69, v70, v71, v72, v73);
   v74 = CommandCardEquipmentControl_TypeInfo->static_fields;
-  v75 = (System_Int32_array **)StringLiteral_16986;
-  v74->EQUIP_EXE_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_16986;
+  v75 = (System_Int32_array **)StringLiteral_16986/*"btn_txt_equipcc"*/;
+  v74->EQUIP_EXE_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_16986/*"btn_txt_equipcc"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v74->EQUIP_EXE_BTN_SPRITE_NAME, v75, v76, v77, v78, v79, v80, v81);
   v82 = CommandCardEquipmentControl_TypeInfo->static_fields;
-  v83 = (System_Int32_array **)StringLiteral_17014;
-  v82->REPLACE_EXE_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_17014;
+  v83 = (System_Int32_array **)StringLiteral_17014/*"btn_txt_replace"*/;
+  v82->REPLACE_EXE_BTN_SPRITE_NAME = (struct System_String_o *)StringLiteral_17014/*"btn_txt_replace"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v82->REPLACE_EXE_BTN_SPRITE_NAME, v83, v84, v85, v86, v87, v88, v89);
 }
 
@@ -244,7 +244,7 @@ void __fastcall CommandCardEquipmentControl__ChangeCommandCardTypeDispInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_3157, v9);
+    sub_B16FFC(&StringLiteral_3157/*"COMBINE_COMMAND_CODE_TOUCH_EMPTY_COMMAND_CODE_MSG"*/, v9);
     byte_40FA551 = 1;
   }
   CommandCardEquipmentControl__InitDisplayInfo(this, *(const MethodInfo **)&nowKind);
@@ -338,7 +338,7 @@ void __fastcall CommandCardEquipmentControl__ChangeCommandCardTypeDispInfo(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_3157, 0LL);
+    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_3157/*"COMBINE_COMMAND_CODE_TOUCH_EMPTY_COMMAND_CODE_MSG"*/, 0LL);
     if ( commandCardNotEquippedDetail )
     {
       UILabel__set_text(commandCardNotEquippedDetail, v67, 0LL);
@@ -2244,11 +2244,11 @@ void __fastcall CommandCardEquipmentControl__OpenEquippedCommandCodeAttachDialog
       &Method_CommandCardEquipmentControl___c__DisplayClass89_0__OpenEquippedCommandCodeAttachDialog_b__1__,
       v23);
     sub_B16FFC(&CommandCardEquipmentControl___c__DisplayClass89_0_TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_3231, v25);
-    sub_B16FFC(&StringLiteral_3229, v26);
-    sub_B16FFC(&StringLiteral_3230, v27);
-    sub_B16FFC(&StringLiteral_3255, v28);
-    sub_B16FFC(&StringLiteral_3258, v29);
+    sub_B16FFC(&StringLiteral_3231/*"COMMAND_CODE_REATTACH_TITLE"*/, v25);
+    sub_B16FFC(&StringLiteral_3229/*"COMMAND_CODE_REATTACH_MSG"*/, v26);
+    sub_B16FFC(&StringLiteral_3230/*"COMMAND_CODE_REATTACH_SELF_MSG"*/, v27);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v28);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v29);
     byte_40FA557 = 1;
   }
   v30 = sub_B170CC(CommandCardEquipmentControl___c__DisplayClass89_0_TypeInfo, dic, isCommandCardEmpty, method, v4);
@@ -2265,8 +2265,8 @@ void __fastcall CommandCardEquipmentControl__OpenEquippedCommandCodeAttachDialog
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3231, 0LL);
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3230, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3231/*"COMMAND_CODE_REATTACH_TITLE"*/, 0LL);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3230/*"COMMAND_CODE_REATTACH_SELF_MSG"*/, 0LL);
   baseUserServantEntity = this->fields.baseUserServantEntity;
   if ( baseUserServantEntity )
   {
@@ -2334,8 +2334,8 @@ void __fastcall CommandCardEquipmentControl__OpenEquippedCommandCodeAttachDialog
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v55 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-          v56 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+          v55 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+          v56 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
           v61 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                          CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                          v57,
@@ -2532,7 +2532,7 @@ LABEL_117:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3229, 0LL);
+    v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3229/*"COMMAND_CODE_REATTACH_MSG"*/, 0LL);
     v120 = sub_B17014(object___TypeInfo, 6LL, v119);
     Name = ServantEntity__getName(Entity, limitCount, -1, 0LL);
     if ( !v120 )
@@ -2595,8 +2595,8 @@ LABEL_117:
                   if ( (*(_BYTE *)(v163 + 306) & 1) == 0 )
                     sub_AAFCFC(v163);
                   v164 = **(CommonUI_o ***)(v163 + 184);
-                  v165 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-                  v166 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+                  v165 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+                  v166 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
                   v171 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                                   CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                                   v167,
@@ -4140,14 +4140,14 @@ void __fastcall CommandCardEquipmentControl__SetHaveQpInfo(
 
   if ( (byte_40FA563 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9236, method);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, method);
     byte_40FA563 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame
     || (haveQpLabel = this->fields.haveQpLabel,
         this->fields.haveQpVal = SelfUserGame->fields.qp,
-        v5 = System_Int32__ToString_38275808((int)this + 436, (System_String_o *)StringLiteral_9236, 0LL),
+        v5 = System_Int32__ToString_38275808((int)this + 436, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL),
         !haveQpLabel) )
   {
     sub_B170D4();
@@ -4600,17 +4600,17 @@ void __fastcall CommandCardEquipmentControl__SetStateInfoMsg(
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_3152, v8);
-    sub_B16FFC(&StringLiteral_3149, v9);
-    sub_B16FFC(&StringLiteral_3150, v10);
-    sub_B16FFC(&StringLiteral_3156, v11);
-    sub_B16FFC(&StringLiteral_3154, v12);
-    sub_B16FFC(&StringLiteral_3153, v13);
-    sub_B16FFC(&StringLiteral_12161, v14);
-    sub_B16FFC(&StringLiteral_3158, v15);
-    sub_B16FFC(&StringLiteral_12162, v16);
-    sub_B16FFC(&StringLiteral_3155, v17);
-    sub_B16FFC(&StringLiteral_1, v18);
+    sub_B16FFC(&StringLiteral_3152/*"COMBINE_COMMAND_CODE_CARD_SELECT_HEADER_MSG"*/, v8);
+    sub_B16FFC(&StringLiteral_3149/*"COMBINE_COMMAND_CODE_BASE_SELECT_HEADER_MSG"*/, v9);
+    sub_B16FFC(&StringLiteral_3150/*"COMBINE_COMMAND_CODE_BASE_SELECT_MSG"*/, v10);
+    sub_B16FFC(&StringLiteral_3156/*"COMBINE_COMMAND_CODE_SELECT_COMMAND_CODE_MSG"*/, v11);
+    sub_B16FFC(&StringLiteral_3154/*"COMBINE_COMMAND_CODE_EQUIP_HEADER_MSG"*/, v12);
+    sub_B16FFC(&StringLiteral_3153/*"COMBINE_COMMAND_CODE_CARD_SELECT_MSG"*/, v13);
+    sub_B16FFC(&StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/, v14);
+    sub_B16FFC(&StringLiteral_3158/*"COMBINE_COMMAND_CODE_UNLOCK_HEADER_MSG"*/, v15);
+    sub_B16FFC(&StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, v16);
+    sub_B16FFC(&StringLiteral_3155/*"COMBINE_COMMAND_CODE_REPLACE_HEADER_MSG"*/, v17);
+    sub_B16FFC(&StringLiteral_1/*""*/, v18);
     byte_40FA565 = 1;
   }
   detailLabel = (UIWidget_o *)this->fields.detailLabel;
@@ -4624,7 +4624,7 @@ void __fastcall CommandCardEquipmentControl__SetStateInfoMsg(
   if ( !detailLabel )
     goto LABEL_129;
   UIWidget__set_color(detailLabel, v20->static_fields->defaultDetailColor, 0LL);
-  v21 = (System_String_o *)StringLiteral_1;
+  v21 = (System_String_o *)StringLiteral_1/*""*/;
   switch ( state )
   {
     case 0:
@@ -4633,7 +4633,7 @@ void __fastcall CommandCardEquipmentControl__SetStateInfoMsg(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3149, 0LL);
+      v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3149/*"COMBINE_COMMAND_CODE_BASE_SELECT_HEADER_MSG"*/, 0LL);
       messageTxtLabelSprite = this->fields.messageTxtLabelSprite;
       v21 = v22;
       if ( (BYTE3(CommandCardEquipmentControl_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4661,7 +4661,7 @@ void __fastcall CommandCardEquipmentControl__SetStateInfoMsg(
         CommandCardEquipmentControl_TypeInfo->static_fields->DEFAULT_EXE_BTN_SPRITE_NAME,
         0LL);
       baseSelectInfoLabel = this->fields.baseSelectInfoLabel;
-      v27 = &StringLiteral_3150;
+      v27 = &StringLiteral_3150/*"COMBINE_COMMAND_CODE_BASE_SELECT_MSG"*/;
       goto LABEL_55;
     case 1:
       targetCommandCardData = (UnityEngine_Object_o *)this->fields.targetCommandCardData;
@@ -4690,7 +4690,7 @@ void __fastcall CommandCardEquipmentControl__SetStateInfoMsg(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3155, 0LL);
+        v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3155/*"COMBINE_COMMAND_CODE_REPLACE_HEADER_MSG"*/, 0LL);
         v60 = this->fields.messageTxtLabelSprite;
         v21 = v59;
         if ( (BYTE3(CommandCardEquipmentControl_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4730,7 +4730,7 @@ LABEL_124:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3154, 0LL);
+          v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3154/*"COMBINE_COMMAND_CODE_EQUIP_HEADER_MSG"*/, 0LL);
           goto LABEL_127;
         }
         if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -4738,7 +4738,7 @@ LABEL_124:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v69 = LocalizationManager__Get((System_String_o *)StringLiteral_3156, 0LL);
+        v69 = LocalizationManager__Get((System_String_o *)StringLiteral_3156/*"COMBINE_COMMAND_CODE_SELECT_COMMAND_CODE_MSG"*/, 0LL);
         v70 = this->fields.messageTxtLabelSprite;
         v21 = v69;
         if ( (BYTE3(CommandCardEquipmentControl_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4784,7 +4784,7 @@ LABEL_124:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v45 = &StringLiteral_12162;
+          v45 = &StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/;
         }
         else if ( this->fields.isShortNeedItem )
         {
@@ -4798,7 +4798,7 @@ LABEL_124:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v45 = &StringLiteral_12161;
+          v45 = &StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/;
         }
         else
         {
@@ -4807,7 +4807,7 @@ LABEL_124:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v45 = &StringLiteral_3158;
+          v45 = &StringLiteral_3158/*"COMBINE_COMMAND_CODE_UNLOCK_HEADER_MSG"*/;
         }
         v73 = LocalizationManager__Get((System_String_o *)*v45, 0LL);
         v74 = this->fields.messageTxtLabelSprite;
@@ -4871,7 +4871,7 @@ LABEL_124:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v34 = &StringLiteral_3155;
+              v34 = &StringLiteral_3155/*"COMBINE_COMMAND_CODE_REPLACE_HEADER_MSG"*/;
               goto LABEL_63;
             }
             if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -4879,7 +4879,7 @@ LABEL_124:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v56 = LocalizationManager__Get((System_String_o *)StringLiteral_3155, 0LL);
+            v56 = LocalizationManager__Get((System_String_o *)StringLiteral_3155/*"COMBINE_COMMAND_CODE_REPLACE_HEADER_MSG"*/, 0LL);
             v54 = this->fields.executeButtonSprite;
             v21 = v56;
             if ( (BYTE3(CommandCardEquipmentControl_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4902,7 +4902,7 @@ LABEL_129:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v34 = &StringLiteral_3154;
+      v34 = &StringLiteral_3154/*"COMBINE_COMMAND_CODE_EQUIP_HEADER_MSG"*/;
 LABEL_63:
       v53 = LocalizationManager__Get((System_String_o *)*v34, 0LL);
       v54 = this->fields.executeButtonSprite;
@@ -4954,7 +4954,7 @@ LABEL_127:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v46 = LocalizationManager__Get((System_String_o *)StringLiteral_3152, 0LL);
+      v46 = LocalizationManager__Get((System_String_o *)StringLiteral_3152/*"COMBINE_COMMAND_CODE_CARD_SELECT_HEADER_MSG"*/, 0LL);
       v47 = this->fields.messageTxtLabelSprite;
       v21 = v46;
       if ( (BYTE3(CommandCardEquipmentControl_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4982,7 +4982,7 @@ LABEL_127:
         CommandCardEquipmentControl_TypeInfo->static_fields->DEFAULT_EXE_BTN_SPRITE_NAME,
         0LL);
       baseSelectInfoLabel = this->fields.baseSelectInfoLabel;
-      v27 = &StringLiteral_3153;
+      v27 = &StringLiteral_3153/*"COMBINE_COMMAND_CODE_CARD_SELECT_MSG"*/;
 LABEL_55:
       v50 = LocalizationManager__Get((System_String_o *)*v27, 0LL);
       if ( !baseSelectInfoLabel )
@@ -5090,7 +5090,7 @@ void __fastcall CommandCardEquipmentControl__SetUnlockItemInfo(
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_9236, v6);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v6);
     byte_40FA55B = 1;
   }
   CommandCardEquipmentControl__SetHaveQpInfo(this, method);
@@ -5126,7 +5126,7 @@ void __fastcall CommandCardEquipmentControl__SetUnlockItemInfo(
   spendQpLabel = this->fields.spendQpLabel;
   v18 = Entity;
   this->fields.spendQpVal = Entity->fields.qp;
-  v19 = System_Int32__ToString_38275808((int)this + 432, (System_String_o *)StringLiteral_9236, 0LL);
+  v19 = System_Int32__ToString_38275808((int)this + 432, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !spendQpLabel )
     goto LABEL_38;
   UILabel__set_text(spendQpLabel, v19, 0LL);

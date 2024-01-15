@@ -116,11 +116,11 @@ bool __fastcall ShopRootComponent__BackScene(ShopRootComponent_o *this, int32_t 
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_6153, v12);
-    sub_B16FFC(&StringLiteral_3034, v13);
-    sub_B16FFC(&StringLiteral_13021, v14);
-    sub_B16FFC(&StringLiteral_12090, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_6153/*"EventItem"*/, v12);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v13);
+    sub_B16FFC(&StringLiteral_13021/*"StoneFragments"*/, v14);
+    sub_B16FFC(&StringLiteral_12090/*"SHOP_EVENT_RETURN_ERROR"*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40FB7B5 = 1;
   }
   switch ( state )
@@ -138,11 +138,11 @@ LABEL_8:
       myFSM = this->fields.myFSM;
       if ( !myFSM )
         goto LABEL_52;
-      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034, 0LL);
+      PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
       return 1;
     case 4:
       v23 = this->fields.jumpInfo;
-      if ( !v23 || !System_String__op_Equality(v23->fields.name, (System_String_o *)StringLiteral_13021, 0LL) )
+      if ( !v23 || !System_String__op_Equality(v23->fields.name, (System_String_o *)StringLiteral_13021/*"StoneFragments"*/, 0LL) )
         return 0;
       v24 = this->fields.jumpInfo;
       if ( !v24 )
@@ -159,7 +159,7 @@ LABEL_8:
       return v20;
     case 7:
       v21 = this->fields.jumpInfo;
-      if ( !v21 || !System_String__op_Equality(v21->fields.name, (System_String_o *)StringLiteral_6153, 0LL) )
+      if ( !v21 || !System_String__op_Equality(v21->fields.name, (System_String_o *)StringLiteral_6153/*"EventItem"*/, 0LL) )
         return 0;
       v22 = this->fields.jumpInfo;
       if ( !v22 )
@@ -169,7 +169,7 @@ LABEL_8:
       v25 = this->fields.jumpInfo;
       if ( !v25 )
         return 0;
-      if ( !System_String__op_Equality(v25->fields.name, (System_String_o *)StringLiteral_6153, 0LL) )
+      if ( !System_String__op_Equality(v25->fields.name, (System_String_o *)StringLiteral_6153/*"EventItem"*/, 0LL) )
         goto LABEL_38;
       v26 = this->fields.jumpInfo;
       if ( !v26 )
@@ -210,7 +210,7 @@ LABEL_38:
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_12090, 0LL);
+                    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_12090/*"SHOP_EVENT_RETURN_ERROR"*/, 0LL);
                     EventName = (Il2CppObject *)EventEntity__getEventName(v36, 0LL);
                     v41 = System_String__Format(v39, EventName, 0LL);
                     v46 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v42, v43, v44, v45);
@@ -224,7 +224,7 @@ LABEL_38:
                       v20 = 1;
                       CommonUI__OpenNotificationDialog(
                         v38,
-                        (System_String_o *)StringLiteral_1,
+                        (System_String_o *)StringLiteral_1/*""*/,
                         v41,
                         v46,
                         -1,
@@ -371,14 +371,14 @@ void __fastcall ShopRootComponent__CheckTutorial(ShopRootComponent_o *this, cons
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v4);
     sub_B16FFC(&Method_ShopRootComponent_QuitHelp__, v5);
     sub_B16FFC(&TutorialFlag_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
     byte_40FB7B2 = 1;
   }
   if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
   if ( TutorialFlag__Get_28023340(103, 0LL) )
   {
-    ShopRootComponent__QuitHelp(this, (System_String_o *)StringLiteral_21129, v9);
+    ShopRootComponent__QuitHelp(this, (System_String_o *)StringLiteral_21129/*"ok"*/, v9);
   }
   else
   {
@@ -728,8 +728,8 @@ void __fastcall ShopRootComponent__CloseStonePurchaseMenu(
 
   if ( (byte_40FB7C4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12127, *(_QWORD *)&result);
-    sub_B16FFC(&StringLiteral_12126, v6);
+    sub_B16FFC(&StringLiteral_12127/*"SHOP_SCENE_VOICE_CANCEL"*/, *(_QWORD *)&result);
+    sub_B16FFC(&StringLiteral_12126/*"SHOP_SCENE_VOICE_BACK2"*/, v6);
     byte_40FB7C4 = 1;
   }
   if ( result )
@@ -739,7 +739,7 @@ void __fastcall ShopRootComponent__CloseStonePurchaseMenu(
     goto LABEL_9;
   if ( !ShopPlayVoiceComponent__PlayVoiceOnce(
           shopPlayVoiceComponent,
-          (System_String_o *)StringLiteral_12127,
+          (System_String_o *)StringLiteral_12127/*"SHOP_SCENE_VOICE_CANCEL"*/,
           0x2000,
           v3) )
   {
@@ -747,7 +747,7 @@ LABEL_6:
     v9 = this->fields.shopPlayVoiceComponent;
     if ( v9 )
     {
-      ShopPlayVoiceComponent__PlayVoiceOnce(v9, (System_String_o *)StringLiteral_12126, 4096, v3);
+      ShopPlayVoiceComponent__PlayVoiceOnce(v9, (System_String_o *)StringLiteral_12126/*"SHOP_SCENE_VOICE_BACK2"*/, 4096, v3);
       goto LABEL_8;
     }
 LABEL_9:
@@ -989,16 +989,16 @@ void __fastcall ShopRootComponent__DeleteContinueData(const MethodInfo *method)
 
   if ( (byte_40FB78B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12903, v1);
-    sub_B16FFC(&StringLiteral_12784, v2);
-    sub_B16FFC(&StringLiteral_1971, v3);
-    sub_B16FFC(&StringLiteral_11241, v4);
+    sub_B16FFC(&StringLiteral_12903/*"SpecialItemHelp"*/, v1);
+    sub_B16FFC(&StringLiteral_12784/*"Shop15Help"*/, v2);
+    sub_B16FFC(&StringLiteral_1971/*"AnonymousHelp"*/, v3);
+    sub_B16FFC(&StringLiteral_11241/*"RarePriHelp"*/, v4);
     byte_40FB78B = 1;
   }
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_1971, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11241, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_12903, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_12784, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_1971/*"AnonymousHelp"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11241/*"RarePriHelp"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_12903/*"SpecialItemHelp"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_12784/*"Shop15Help"*/, 0LL);
 }
 
 
@@ -1091,7 +1091,7 @@ void __fastcall ShopRootComponent__EndRequestSellServant(
     sub_B16FFC(&Method_System_Action_int___ctor__, result);
     sub_B16FFC(&System_Action_int__TypeInfo, v5);
     sub_B16FFC(&Method_ShopRootComponent_EndSellResultServant__, v6);
-    sub_B16FFC(&StringLiteral_20980, v7);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v7);
     byte_40FB7AE = 1;
   }
   servantSellMenu = this->fields.servantSellMenu;
@@ -1106,7 +1106,7 @@ void __fastcall ShopRootComponent__EndRequestSellServant(
   if ( !v10 )
     goto LABEL_8;
   tabKind = v10->fields.tabKind;
-  v12 = System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL);
+  v12 = System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL);
   ServantSellConfirmKindOnRequestEnd = ServantSellConfirmMenu__GetServantSellConfirmKindOnRequestEnd(tabKind, v12, 0LL);
   v14 = this->fields.servantSellConfirmMenu;
   selectedServantIds = this->fields.selectedServantIds;
@@ -1143,10 +1143,10 @@ void __fastcall ShopRootComponent__EndRequestShop(
 
   if ( (byte_40FB7A3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20980, result);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, result);
     byte_40FB7A3 = 1;
   }
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     ShopRootComponent__RequestEnd(this, v5);
     return;
@@ -1511,21 +1511,21 @@ int32_t __fastcall ShopRootComponent__GetStateOnInit(
 
   if ( (byte_40FB7C2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8465, jumpInfoName);
-    sub_B16FFC(&StringLiteral_6153, v6);
-    sub_B16FFC(&StringLiteral_13021, v7);
-    sub_B16FFC(&StringLiteral_12612, v8);
+    sub_B16FFC(&StringLiteral_8465/*"LeafExchange"*/, jumpInfoName);
+    sub_B16FFC(&StringLiteral_6153/*"EventItem"*/, v6);
+    sub_B16FFC(&StringLiteral_13021/*"StoneFragments"*/, v7);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v8);
     byte_40FB7C2 = 1;
   }
   if ( !jumpInfoName )
     return 1;
-  if ( !System_String__op_Equality(jumpInfoName, (System_String_o *)StringLiteral_6153, 0LL) )
+  if ( !System_String__op_Equality(jumpInfoName, (System_String_o *)StringLiteral_6153/*"EventItem"*/, 0LL) )
   {
-    if ( System_String__op_Equality(jumpInfoName, (System_String_o *)StringLiteral_12612, 0LL) )
+    if ( System_String__op_Equality(jumpInfoName, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 0LL) )
       return 9;
-    if ( System_String__op_Equality(jumpInfoName, (System_String_o *)StringLiteral_13021, 0LL) )
+    if ( System_String__op_Equality(jumpInfoName, (System_String_o *)StringLiteral_13021/*"StoneFragments"*/, 0LL) )
       return 4;
-    if ( System_String__op_Equality(jumpInfoName, (System_String_o *)StringLiteral_8465, 0LL) )
+    if ( System_String__op_Equality(jumpInfoName, (System_String_o *)StringLiteral_8465/*"LeafExchange"*/, 0LL) )
       return 20;
     return 1;
   }
@@ -1652,7 +1652,7 @@ void __fastcall ShopRootComponent__Init(ShopRootComponent_o *this, const MethodI
     sub_B16FFC(&Method_ShopRootComponent_OpenHelp__, v17);
     sub_B16FFC(&Method_ShopRootComponent__Init_b__71_0__, v18);
     sub_B16FFC(&ShopSceneListViewControlHelper_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
     byte_40FB790 = 1;
   }
   if ( !this->fields.state )
@@ -1667,7 +1667,7 @@ void __fastcall ShopRootComponent__Init(ShopRootComponent_o *this, const MethodI
     else
     {
       eventId = 0;
-      p_name = (System_String_o **)&StringLiteral_1;
+      p_name = (System_String_o **)&StringLiteral_1/*""*/;
     }
     topListViewBase = this->fields.topListViewBase;
     servantSellMenu = this->fields.servantSellMenu;
@@ -1846,7 +1846,7 @@ void __fastcall ShopRootComponent__LoadBanner(ShopRootComponent_o *this, const M
     sub_B16FFC(&AtlasManager_TypeInfo, v6);
     sub_B16FFC(&Method_ShopRootComponent___c__DisplayClass68_0__LoadBanner_b__0__, v7);
     sub_B16FFC(&ShopRootComponent___c__DisplayClass68_0_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FB78F = 1;
   }
   v10 = sub_B170CC(ShopRootComponent___c__DisplayClass68_0_TypeInfo, method, v2, v3, v4);
@@ -1863,7 +1863,7 @@ void __fastcall ShopRootComponent__LoadBanner(ShopRootComponent_o *this, const M
   }
   else
   {
-    p_name = (System_String_o **)&StringLiteral_1;
+    p_name = (System_String_o **)&StringLiteral_1/*""*/;
     id = 0;
   }
   *(_DWORD *)(v10 + 24) = ShopRootComponent__GetStateOnInit(v17, *p_name, id, v18);
@@ -2395,7 +2395,7 @@ void __fastcall ShopRootComponent__OnSelectEvent(ShopRootComponent_o *this, int3
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
     sub_B16FFC(&SoundManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_9601, v11);
+    sub_B16FFC(&StringLiteral_9601/*"NormalEventShop"*/, v11);
     byte_40FB7B9 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -2429,7 +2429,7 @@ void __fastcall ShopRootComponent__OnSelectEvent(ShopRootComponent_o *this, int3
   {
     eventId = Item->fields.eventId;
     v23 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v18, v19, v20, v21);
-    SceneJumpInfo___ctor_29748028(v23, (System_String_o *)StringLiteral_9601, eventId, 0LL);
+    SceneJumpInfo___ctor_29748028(v23, (System_String_o *)StringLiteral_9601/*"NormalEventShop"*/, eventId, 0LL);
     if ( v23 )
     {
       SceneJumpInfo__SetReturnNowScene(v23, 0LL);
@@ -3227,7 +3227,7 @@ void __fastcall ShopRootComponent__OpenLimitCountSealInfoDialog(
     sub_B16FFC(&DataManager_TypeInfo, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_ShopRootComponent_EndLimitCountSealInfoDialog__, v10);
-    sub_B16FFC(&StringLiteral_8359, v11);
+    sub_B16FFC(&StringLiteral_8359/*"LIMIT_COUNT_SEALED_TITLE"*/, v11);
     byte_40FB799 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -3247,7 +3247,7 @@ void __fastcall ShopRootComponent__OpenLimitCountSealInfoDialog(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_8359, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_8359/*"LIMIT_COUNT_SEALED_TITLE"*/, 0LL);
   v21 = (SummonInfoDlgComponent_CallbackFunc_o *)sub_B170CC(
                                                    SummonInfoDlgComponent_CallbackFunc_TypeInfo,
                                                    v17,
@@ -3718,10 +3718,10 @@ void __fastcall ShopRootComponent__QuitHelp(
 
   if ( (byte_40FB7B3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21129, result);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, result);
     byte_40FB7B3 = 1;
   }
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     listViewHelper = this->fields.listViewHelper;
     this->fields.inputState = 4;
@@ -3836,8 +3836,8 @@ void __fastcall ShopRootComponent__RefreshInfo(ShopRootComponent_o *this, const 
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_19361, v9);
-    sub_B16FFC(&StringLiteral_19365, v10);
+    sub_B16FFC(&StringLiteral_19361/*"img_bg_evocation"*/, v9);
+    sub_B16FFC(&StringLiteral_19365/*"img_bg_pp"*/, v10);
     byte_40FB791 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -3950,7 +3950,7 @@ void __fastcall ShopRootComponent__RefreshInfo(ShopRootComponent_o *this, const 
   v49 = this->fields.shop13Info;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetShopBanner_28586476(v49, (System_String_o *)StringLiteral_19365, 0LL);
+  AtlasManager__SetShopBanner_28586476(v49, (System_String_o *)StringLiteral_19365/*"img_bg_pp"*/, 0LL);
   v50 = (UnityEngine_Component_o *)this->fields.manaInfoLabel;
   if ( !v50 )
     goto LABEL_64;
@@ -4015,7 +4015,7 @@ void __fastcall ShopRootComponent__RefreshInfo(ShopRootComponent_o *this, const 
         {
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         }
-        AtlasManager__SetShopBanner_28586476(shop15Info, (System_String_o *)StringLiteral_19361, 0LL);
+        AtlasManager__SetShopBanner_28586476(shop15Info, (System_String_o *)StringLiteral_19361/*"img_bg_evocation"*/, 0LL);
         v69 = (UnityEngine_Component_o *)this->fields.anonymousInfoLabel;
         if ( v69 )
         {
@@ -4131,7 +4131,7 @@ void __fastcall ShopRootComponent__RequestSellServant(ShopRootComponent_o *this,
     sub_B16FFC(&NetworkManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
     sub_B16FFC(&Method_ShopRootComponent_EndRequestSellServant__, v8);
-    sub_B16FFC(&StringLiteral_20980, v9);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v9);
     byte_40FB7AD = 1;
   }
   if ( this->fields.selectedServantIds )
@@ -4165,7 +4165,7 @@ void __fastcall ShopRootComponent__RequestSellServant(ShopRootComponent_o *this,
   }
   else
   {
-    ShopRootComponent__EndRequestSellServant(this, (System_String_o *)StringLiteral_20980, v2);
+    ShopRootComponent__EndRequestSellServant(this, (System_String_o *)StringLiteral_20980/*"ng"*/, v2);
   }
 }
 
@@ -4321,8 +4321,8 @@ void __fastcall ShopRootComponent__SelectItem(
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&Method_ShopRootComponent_EndLimitCountSealInfoDialog__, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_3180, v16);
-    sub_B16FFC(&StringLiteral_3179, v17);
+    sub_B16FFC(&StringLiteral_3180/*"COMBINE_LIMIT_SEALED_TITLE"*/, v16);
+    sub_B16FFC(&StringLiteral_3179/*"COMBINE_LIMIT_SEALED_MESSAGE_{0}"*/, v17);
     byte_40FB797 = 1;
   }
   if ( !this->fields.inputState )
@@ -4397,13 +4397,13 @@ LABEL_8:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3180, 0LL);
+                v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3180/*"COMBINE_LIMIT_SEALED_TITLE"*/, 0LL);
                 if ( Entity )
                 {
                   v36 = v35;
                   v50 = HIDWORD(Entity->fields.coordinates);
                   v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-                  v38 = System_String__Format((System_String_o *)StringLiteral_3179, v37, 0LL);
+                  v38 = System_String__Format((System_String_o *)StringLiteral_3179/*"COMBINE_LIMIT_SEALED_MESSAGE_{0}"*/, v37, 0LL);
                   v39 = LocalizationManager__Get(v38, 0LL);
                   if ( v23->fields._Shop_k__BackingField )
                   {
@@ -5086,7 +5086,7 @@ void __fastcall ShopRootComponent__ShowNormalItemDialog(
     sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v9);
     sub_B16FFC(&Method_ShopRootComponent_OnEndItemDialog__, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FB7A5 = 1;
   }
   RequestResultDialogMessageNormal = ShopRequestResultDialogMessageMaker__GetRequestResultDialogMessageNormal(
@@ -5148,7 +5148,7 @@ LABEL_11:
     (const MethodInfo_24B33C8 *)Method_System_Action_bool___ctor__);
   if ( !v34 )
     goto LABEL_11;
-  RequestResultDialog__Open_30964380(v34, (System_String_o *)StringLiteral_1, v18, v35, -1, 0LL);
+  RequestResultDialog__Open_30964380(v34, (System_String_o *)StringLiteral_1/*""*/, v18, v35, -1, 0LL);
 }
 
 
@@ -5174,7 +5174,7 @@ void __fastcall ShopRootComponent__ShowSetItemDialog(
     sub_B16FFC(&Method_System_Action_bool___ctor__, entity);
     sub_B16FFC(&System_Action_bool__TypeInfo, v5);
     sub_B16FFC(&Method_ShopRootComponent_OnEndItemDialog__, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FB7A6 = 1;
   }
   RequestResultDialogMessage = ShopRequestResultDialogMessageMaker__GetRequestResultDialogMessage(
@@ -5191,7 +5191,7 @@ void __fastcall ShopRootComponent__ShowSetItemDialog(
     (const MethodInfo_24B33C8 *)Method_System_Action_bool___ctor__);
   if ( !requestResultDialog )
     sub_B170D4();
-  RequestResultDialog__Open_30964380(requestResultDialog, (System_String_o *)StringLiteral_1, v10, v15, -1, 0LL);
+  RequestResultDialog__Open_30964380(requestResultDialog, (System_String_o *)StringLiteral_1/*""*/, v10, v15, -1, 0LL);
 }
 
 

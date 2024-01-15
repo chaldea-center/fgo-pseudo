@@ -48,7 +48,7 @@ void __fastcall ShopBuyItemUtility__SetAddTextOnMask(
     sub_B16FFC(&NetworkManager_TypeInfo, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B16FFC(&StringLiteral_12123, v11);
+    sub_B16FFC(&StringLiteral_12123/*"SHOP_RETURN_EXCHANGE_ITEM"*/, v11);
     byte_40FF82D = 1;
   }
   if ( shopEntity )
@@ -107,7 +107,7 @@ LABEL_25:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12123, 0LL);
+      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12123/*"SHOP_RETURN_EXCHANGE_ITEM"*/, 0LL);
       v25 = System_String__Format(v24, (Il2CppObject *)v22->fields.age, 0LL);
       v26 = System_String__Concat_43743732(mText, v25, 0LL);
       WrapControlText__textAdjust(textOnMaskLabel, v26, textOnMaskLabel->fields.mFontSize, 0, 0, 0LL);
@@ -171,7 +171,7 @@ void __fastcall ShopBuyItemUtility__SetShopHaveStatusIcon(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, sprite);
     sub_B16FFC(&string_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_19424, v8);
+    sub_B16FFC(&StringLiteral_19424/*"img_icon_acquired"*/, v8);
     byte_40FF82E = 1;
   }
   if ( shopEntity )
@@ -207,7 +207,7 @@ LABEL_21:
       {
         Empty = string_TypeInfo->static_fields->Empty;
         if ( ShopEntity__IsServantGet(shopEntity, v13) )
-          v15 = (System_String_o *)StringLiteral_19424;
+          v15 = (System_String_o *)StringLiteral_19424/*"img_icon_acquired"*/;
         else
           v15 = Empty;
         if ( !System_String__IsNullOrEmpty(v15, 0LL) )

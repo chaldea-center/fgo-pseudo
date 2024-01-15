@@ -1966,7 +1966,7 @@ System_String_o *__fastcall BattleInfoData__getStartRaidState(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_EventRaidMaster___, *(_QWORD *)&eventId);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F7322 = 1;
   }
   MyInfo = BattleInfoData__getMyInfo(this, raidId, *(const MethodInfo **)&raidId);
@@ -1993,7 +1993,7 @@ System_String_o *__fastcall BattleInfoData__getStartRaidState(
   }
   else
   {
-    v17 = (System_String_o **)&StringLiteral_1;
+    v17 = (System_String_o **)&StringLiteral_1/*""*/;
   }
   fields = result[4].fields;
   if ( !*(_QWORD *)&fields )

@@ -607,7 +607,7 @@ void __fastcall QuestRewardTokenAction__LoadEventUI(
     sub_B16FFC(&AssetManager_TypeInfo, v7);
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v8);
     sub_B16FFC(&Method_QuestRewardTokenAction_LoadEventUIEnd__, v9);
-    sub_B16FFC(&StringLiteral_6185, v10);
+    sub_B16FFC(&StringLiteral_6185/*"EventUI/Prefabs/80285"*/, v10);
     byte_40F821F = 1;
   }
   eventUIAssetData = this->fields.eventUIAssetData;
@@ -651,7 +651,7 @@ void __fastcall QuestRewardTokenAction__LoadEventUI(
       {
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       }
-      if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6185, v23, loadParallelMax, 0LL) )
+      if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6185/*"EventUI/Prefabs/80285"*/, v23, loadParallelMax, 0LL) )
       {
         this->fields.isEventUILoad = 0;
         v25 = this;
@@ -689,7 +689,7 @@ void __fastcall QuestRewardTokenAction__LoadEventUIEnd(
 
   if ( (byte_40F8220 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5359, assetData);
+    sub_B16FFC(&StringLiteral_5359/*"DownloadEventUIAtlas8028500"*/, assetData);
     byte_40F8220 = 1;
   }
   if ( this->fields.isEventUILoad )
@@ -708,7 +708,7 @@ void __fastcall QuestRewardTokenAction__LoadEventUIEnd(
     UIAtlasFromAssetData = QuestRewardTokenAction__CreateUIAtlasFromAssetData(
                              v10,
                              assetData,
-                             (System_String_o *)StringLiteral_5359,
+                             (System_String_o *)StringLiteral_5359/*"DownloadEventUIAtlas8028500"*/,
                              v11);
     this->fields.eventUIDownloadAtlas = UIAtlasFromAssetData;
     sub_B16F98(
@@ -821,7 +821,7 @@ void __fastcall QuestRewardTokenAction__ReleaseEventUI(QuestRewardTokenAction_o 
   if ( (byte_40F8222 & 1) == 0 )
   {
     sub_B16FFC(&AssetManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6185, v9);
+    sub_B16FFC(&StringLiteral_6185/*"EventUI/Prefabs/80285"*/, v9);
     byte_40F8222 = 1;
   }
   if ( this->fields.isEventUILoad )
@@ -832,7 +832,7 @@ void __fastcall QuestRewardTokenAction__ReleaseEventUI(QuestRewardTokenAction_o 
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetManager__releaseAssetStorage((System_String_o *)StringLiteral_6185, 0LL);
+    AssetManager__releaseAssetStorage((System_String_o *)StringLiteral_6185/*"EventUI/Prefabs/80285"*/, 0LL);
     p_eventUIAssetData = &this->fields.eventUIAssetData;
   }
   else

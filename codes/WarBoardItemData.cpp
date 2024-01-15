@@ -642,7 +642,7 @@ DataVals_array *__fastcall WarBoardItemData__getDataValsList(WarBoardItemData_o 
   {
     sub_B16FFC(&DataVals___TypeInfo, method);
     sub_B16FFC(&DataVals_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F642F = 1;
   }
   itemEntity = this->fields.itemEntity;
@@ -653,7 +653,7 @@ DataVals_array *__fastcall WarBoardItemData__getDataValsList(WarBoardItemData_o 
   {
     v14 = (DataVals_array *)sub_B17014(DataVals___TypeInfo, 1LL, v2);
     v29 = (DataVals_o *)sub_B170CC(DataVals_TypeInfo, v25, v26, v27, v28);
-    DataVals___ctor(v29, (System_String_o *)StringLiteral_1, 0LL);
+    DataVals___ctor(v29, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( v14 )
     {
       if ( v29 )
@@ -759,19 +759,19 @@ System_String_o *__fastcall WarBoardItemData__get_BaseImageSpriteName(
   if ( (byte_40F642D & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21142, v3);
-    sub_B16FFC(&StringLiteral_21141, v4);
+    sub_B16FFC(&StringLiteral_21142/*"onBoard_itembase_{0}"*/, v3);
+    sub_B16FFC(&StringLiteral_21141/*"onBoard_itembase"*/, v4);
     byte_40F642D = 1;
   }
   itemEntity = this->fields.itemEntity;
   if ( !itemEntity )
-    return (System_String_o *)StringLiteral_21141;
+    return (System_String_o *)StringLiteral_21141/*"onBoard_itembase"*/;
   baseImageId = itemEntity->fields.baseImageId;
   if ( baseImageId <= 0 )
-    return (System_String_o *)StringLiteral_21141;
+    return (System_String_o *)StringLiteral_21141/*"onBoard_itembase"*/;
   v9 = baseImageId;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-  return System_String__Format((System_String_o *)StringLiteral_21142, v7, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_21142/*"onBoard_itembase_{0}"*/, v7, 0LL);
 }
 
 

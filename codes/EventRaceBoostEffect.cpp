@@ -23,17 +23,17 @@ void __fastcall EventRaceBoostEffect___cctor(const MethodInfo *method)
   if ( (byte_40FACA2 & 1) == 0 )
   {
     sub_B16FFC(&EventRaceBoostEffect_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_21573, v8);
-    sub_B16FFC(&StringLiteral_6164, v9);
+    sub_B16FFC(&StringLiteral_21573/*"race_boost_effect_{0}"*/, v8);
+    sub_B16FFC(&StringLiteral_6164/*"EventRaceBoostEffect_{0}"*/, v9);
     byte_40FACA2 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventRaceBoostEffect_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_21573;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21573;
+  v11 = (System_Int32_array **)StringLiteral_21573/*"race_boost_effect_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21573/*"race_boost_effect_{0}"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = EventRaceBoostEffect_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_6164;
-  v12->ANIM_NAME = (struct System_String_o *)StringLiteral_6164;
+  v13 = (System_Int32_array **)StringLiteral_6164/*"EventRaceBoostEffect_{0}"*/;
+  v12->ANIM_NAME = (struct System_String_o *)StringLiteral_6164/*"EventRaceBoostEffect_{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->ANIM_NAME, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -104,7 +104,7 @@ System_String_o *__fastcall EventRaceBoostEffect__GetVoiceId(
   if ( (byte_40FACA0 & 1) == 0 )
   {
     sub_B16FFC(&char___TypeInfo, voiceStr);
-    sub_B16FFC(&StringLiteral_15842, v4);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v4);
     byte_40FACA0 = 1;
   }
   v5 = (System_String_array *)sub_B17014(char___TypeInfo, 1LL, method);
@@ -121,7 +121,7 @@ LABEL_11:
   if ( max_length >= 2 )
   {
     if ( max_length != 2 )
-      return System_String__Concat_43746016(v5->m_Items[1], (System_String_o *)StringLiteral_15842, v5->m_Items[2], 0LL);
+      return System_String__Concat_43746016(v5->m_Items[1], (System_String_o *)StringLiteral_15842/*"_"*/, v5->m_Items[2], 0LL);
 LABEL_12:
     sub_B17100(v5, v7, v6);
     sub_B170A0();
@@ -347,7 +347,7 @@ void __fastcall EventRaceBoostEffect__afterSE(EventRaceBoostEffect_o *this, cons
     sub_B16FFC(&Method_EventRaceBoostEffect_afterVoice__, v3);
     sub_B16FFC(&SeManager_TypeInfo, v4);
     sub_B16FFC(&SoundManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_3947, v6);
+    sub_B16FFC(&StringLiteral_3947/*"ChrVoice_"*/, v6);
     byte_40FAC9D = 1;
   }
   if ( !this->fields.destroyedBeforeVoiceStop )
@@ -361,7 +361,7 @@ void __fastcall EventRaceBoostEffect__afterSE(EventRaceBoostEffect_o *this, cons
     else
     {
       v8 = System_Int32__ToString((int)this + 60, 0LL);
-      v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_3947, v8, 0LL);
+      v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_3947/*"ChrVoice_"*/, v8, 0LL);
       randvoiceId = this->fields.randvoiceId;
       v15 = v9;
       v16 = SeManager_TypeInfo;
@@ -508,8 +508,8 @@ void __fastcall EventRaceBoostEffect__setupLocal(
     sub_B16FFC(&SeManager_TypeInfo, v22);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v23);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_5661, v25);
-    sub_B16FFC(&StringLiteral_21153, v26);
+    sub_B16FFC(&StringLiteral_5661/*"EVENT_RACE_BOOST_COUNT"*/, v25);
+    sub_B16FFC(&StringLiteral_21153/*"onEndAnim"*/, v26);
     byte_40FAC9C = 1;
   }
   if ( this->fields.effectSp )
@@ -643,7 +643,7 @@ LABEL_84:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v52 = LocalizationManager__Get((System_String_o *)StringLiteral_5661, 0LL);
+              v52 = LocalizationManager__Get((System_String_o *)StringLiteral_5661/*"EVENT_RACE_BOOST_COUNT"*/, 0LL);
               v78 = boostPoint;
               v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v78);
               v54 = System_String__Format(v52, v53, 0LL);
@@ -737,7 +737,7 @@ LABEL_65:
 LABEL_75:
                       UnityEngine_MonoBehaviour__Invoke(
                         (UnityEngine_MonoBehaviour_o *)this,
-                        (System_String_o *)StringLiteral_21153,
+                        (System_String_o *)StringLiteral_21153/*"onEndAnim"*/,
                         length,
                         0LL);
 LABEL_76:

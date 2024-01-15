@@ -32,7 +32,7 @@ void __fastcall TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, con
 
   if ( (byte_40F71F0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F71F0 = 1;
   }
   this->fields.missionId = 0;
@@ -41,8 +41,8 @@ void __fastcall TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, con
   this->fields.afterActionVals = 0LL;
   p_afterActionVals = &this->fields.afterActionVals;
   sub_B16F98((BattleServantConfConponent_o *)p_afterActionVals, 0LL, v10, v11, v12, v13, v14, v15);
-  v16 = (System_Int32_array **)StringLiteral_1;
-  p_afterActionVals[1] = (struct System_String_array *)StringLiteral_1;
+  v16 = (System_Int32_array **)StringLiteral_1/*""*/;
+  p_afterActionVals[1] = (struct System_String_array *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)(p_afterActionVals + 1), v16, v17, v18, v19, v20, v21, v22);
   *((_DWORD *)p_afterActionVals + 4) = 0;
 }

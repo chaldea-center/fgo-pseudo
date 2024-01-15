@@ -194,23 +194,23 @@ void __fastcall EventNoticeControl__InitLabelAndSprite(EventNoticeControl_o *thi
 
   if ( (byte_40FABE7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FABE7 = 1;
   }
   eventDetailLabel = this->fields.eventDetailLabel;
   if ( !eventDetailLabel
-    || (UILabel__set_text(eventDetailLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(eventDetailLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         v4 = (UIWidget_o *)this->fields.eventDetailLabel,
         *(UnityEngine_Color_o *)&v5 = UnityEngine_Color__get_white(0LL),
         !v4)
     || (UIWidget__set_color(v4, *(UnityEngine_Color_o *)&v5, 0LL),
         (eventDetailSprite = this->fields.eventDetailSprite) == 0LL)
-    || (UISprite__set_spriteName(eventDetailSprite, (System_String_o *)StringLiteral_1, 0LL),
+    || (UISprite__set_spriteName(eventDetailSprite, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (eventRemainLabel = this->fields.eventRemainLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(eventRemainLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(eventRemainLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -359,8 +359,8 @@ void __fastcall EventNoticeControl__SetLabelAndSprite(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_23445, v8);
-    sub_B16FFC(&StringLiteral_13339, v9);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v8);
+    sub_B16FFC(&StringLiteral_13339/*"TIME_REST_EVENT_BOARD_CAMPAIGN"*/, v9);
     byte_40FABEB = 1;
   }
   eventInfoList = this->fields.eventInfoList;
@@ -422,14 +422,14 @@ void __fastcall EventNoticeControl__SetLabelAndSprite(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_13339, 0LL);
+    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_13339/*"TIME_REST_EVENT_BOARD_CAMPAIGN"*/, 0LL);
     v27 = this->fields.eventDetailLabel;
     if ( v27 )
     {
       v28 = System_String__Format_43739268(
               v26,
               (Il2CppObject *)v27->fields.mText,
-              (Il2CppObject *)StringLiteral_23445,
+              (Il2CppObject *)StringLiteral_23445/*"{0}"*/,
               0LL);
       v29 = this->fields.eventDetailLabel;
       v30 = v28;
@@ -558,11 +558,11 @@ void __fastcall EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o 
   {
     sub_B16FFC(&int_TypeInfo, label);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_5608, v6);
-    sub_B16FFC(&StringLiteral_5716, v7);
-    sub_B16FFC(&StringLiteral_5717, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
-    sub_B16FFC(&StringLiteral_5631, v10);
+    sub_B16FFC(&StringLiteral_5608/*"EVENT_DAY_TXT"*/, v6);
+    sub_B16FFC(&StringLiteral_5716/*"EVENT_TIMEOVER_TXT"*/, v7);
+    sub_B16FFC(&StringLiteral_5717/*"EVENT_TIME_TXT"*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
+    sub_B16FFC(&StringLiteral_5631/*"EVENT_MIN_TXT"*/, v10);
     byte_40FABE9 = 1;
   }
   *(UnityEngine_Color_o *)&v11 = UnityEngine_Color__get_black(0LL);
@@ -576,7 +576,7 @@ void __fastcall EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o 
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5716, 0LL);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5716/*"EVENT_TIMEOVER_TXT"*/, 0LL);
     goto LABEL_18;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -584,7 +584,7 @@ void __fastcall EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5608, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5608/*"EVENT_DAY_TXT"*/, 0LL);
   v27 = remainTime / 0x15180uLL;
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27);
   v17 = System_String__Format(v15, v16, 0LL);
@@ -595,7 +595,7 @@ void __fastcall EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o 
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_5717, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_5717/*"EVENT_TIME_TXT"*/, 0LL);
     v26 = remainTime / 0xE10uLL;
     v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26);
     v17 = System_String__Format(v18, v19, 0LL);
@@ -607,7 +607,7 @@ void __fastcall EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o 
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5631, 0LL);
+      v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5631/*"EVENT_MIN_TXT"*/, 0LL);
       v25 = v22;
       v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25);
       v21 = System_String__Format(v23, v24, 0LL);
@@ -794,12 +794,12 @@ void __fastcall EventNoticeControl_EventInfo___ctor(
 
   if ( (byte_40F700B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22405, eventInfoData);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_22405/*"synthesis_notice_"*/, eventInfoData);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F700B = 1;
   }
-  v11 = (System_Int32_array **)StringLiteral_1;
-  this->fields.spriteName = (struct System_String_o *)StringLiteral_1;
+  v11 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.spriteName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.spriteName,
     v11,
@@ -809,14 +809,14 @@ void __fastcall EventNoticeControl_EventInfo___ctor(
     v5,
     v6,
     v7);
-  v12 = (System_Int32_array **)StringLiteral_1;
-  this->fields.eventName = (struct System_String_o *)StringLiteral_1;
+  v12 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.eventName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.eventName, v12, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Int32_array **)StringLiteral_1;
-  this->fields.overwriteSpriteName = (struct System_String_o *)StringLiteral_1;
+  v19 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.overwriteSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.overwriteSpriteName, v19, v20, v21, v22, v23, v24, v25);
-  v26 = (System_Int32_array **)StringLiteral_1;
-  this->fields.overwriteText = (struct System_String_o *)StringLiteral_1;
+  v26 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.overwriteText = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.overwriteText, v26, v27, v28, v29, v30, v31, v32);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !eventInfoData )
@@ -849,11 +849,11 @@ void __fastcall EventNoticeControl_EventInfo___ctor(
     v50,
     v51,
     v52);
-  v53 = (System_Int32_array **)StringLiteral_1;
-  this->fields.overwriteSpriteName = (struct System_String_o *)StringLiteral_1;
+  v53 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.overwriteSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.overwriteSpriteName, v53, v54, v55, v56, v57, v58, v59);
-  v60 = (System_Int32_array **)StringLiteral_1;
-  this->fields.overwriteText = (struct System_String_o *)StringLiteral_1;
+  v60 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.overwriteText = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.overwriteText, v60, v61, v62, v63, v64, v65, v66);
   eventEntity = eventInfoData->fields.eventEntity;
   if ( !eventEntity )
@@ -877,7 +877,7 @@ void __fastcall EventNoticeControl_EventInfo___ctor(
         v80 = v79[7];
         if ( !System_String__IsNullOrEmpty(v80, 0LL) )
         {
-          v81 = System_String__Concat_43743732((System_String_o *)StringLiteral_22405, v80, 0LL);
+          v81 = System_String__Concat_43743732((System_String_o *)StringLiteral_22405/*"synthesis_notice_"*/, v80, 0LL);
           this->fields.spriteName = v81;
           sub_B16F98(
             (BattleServantConfConponent_o *)&this->fields.spriteName,
@@ -903,7 +903,7 @@ void __fastcall EventNoticeControl_EventInfo___ctor(
         v94 = v79[8];
         if ( !System_String__IsNullOrEmpty(v94, 0LL) )
         {
-          v95 = System_String__Concat_43743732((System_String_o *)StringLiteral_22405, v94, 0LL);
+          v95 = System_String__Concat_43743732((System_String_o *)StringLiteral_22405/*"synthesis_notice_"*/, v94, 0LL);
           this->fields.overwriteSpriteName = v95;
           sub_B16F98(
             (BattleServantConfConponent_o *)&this->fields.overwriteSpriteName,
@@ -940,8 +940,8 @@ LABEL_21:
   }
   else
   {
-    v108 = (System_Int32_array **)StringLiteral_1;
-    this->fields._SpriteName_k__BackingField = (struct System_String_o *)StringLiteral_1;
+    v108 = (System_Int32_array **)StringLiteral_1/*""*/;
+    this->fields._SpriteName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
     sub_B16F98(
       (BattleServantConfConponent_o *)&this->fields._SpriteName_k__BackingField,
       v108,

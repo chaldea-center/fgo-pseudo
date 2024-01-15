@@ -23,17 +23,17 @@ void __fastcall TitleInfoEventTowerFloorLabel___cctor(const MethodInfo *method)
   if ( (byte_40F83FA & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventTowerFloorLabel_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_22651, v8);
-    sub_B16FFC(&StringLiteral_22652, v9);
+    sub_B16FFC(&StringLiteral_22651/*"tower_img_floor"*/, v8);
+    sub_B16FFC(&StringLiteral_22652/*"tower_img_floor_clear"*/, v9);
     byte_40F83FA = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TitleInfoEventTowerFloorLabel_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_22652;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22652;
+  v11 = (System_Int32_array **)StringLiteral_22652/*"tower_img_floor_clear"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_22652/*"tower_img_floor_clear"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = TitleInfoEventTowerFloorLabel_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_22651;
-  v12->SPRITE_NAME_FLOOR = (struct System_String_o *)StringLiteral_22651;
+  v13 = (System_Int32_array **)StringLiteral_22651/*"tower_img_floor"*/;
+  v12->SPRITE_NAME_FLOOR = (struct System_String_o *)StringLiteral_22651/*"tower_img_floor"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->SPRITE_NAME_FLOOR, v13, v14, v15, v16, v17, v18, v19);
 }
 

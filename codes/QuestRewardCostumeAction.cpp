@@ -481,7 +481,7 @@ void __fastcall QuestRewardCostumeAction__Setup(
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v13);
-    sub_B16FFC(&StringLiteral_10877, v14);
+    sub_B16FFC(&StringLiteral_10877/*"QUEST_CLEAR_COSTUME_GET"*/, v14);
     byte_40FD5E7 = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -540,7 +540,7 @@ void __fastcall QuestRewardCostumeAction__Setup(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_10877, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_10877/*"QUEST_CLEAR_COSTUME_GET"*/, 0LL);
   v37 = System_String__Format(v36, (Il2CppObject *)itmName, 0LL);
   if ( !this->fields.mItemLabel )
     goto LABEL_26;

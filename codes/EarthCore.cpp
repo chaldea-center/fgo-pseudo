@@ -542,7 +542,7 @@ void __fastcall EarthCore__Setup(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_8340, v12);
+    sub_B16FFC(&StringLiteral_8340/*"LAST_WAR_ID"*/, v12);
     byte_40FBD0B = 1;
   }
   memset(&v42, 0, sizeof(v42));
@@ -559,7 +559,7 @@ void __fastcall EarthCore__Setup(
           isFocusIn,
           1LL,
           this->klass->vtable._5_Awake.methodPtr),
-        Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8340, 0LL),
+        Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8340/*"LAST_WAR_ID"*/, 0LL),
         !warInfoList) )
   {
     sub_B170D4();
@@ -930,7 +930,7 @@ void __fastcall EarthCore_StateZoomIn__GoNext(EarthCore_StateZoomIn_o *this, con
   if ( (byte_40F8B7A & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___, method);
-    sub_B16FFC(&StringLiteral_6864, v3);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v3);
     byte_40F8B7A = 1;
   }
   mThat = this->fields.mThat;
@@ -944,7 +944,7 @@ void __fastcall EarthCore_StateZoomIn__GoNext(EarthCore_StateZoomIn_o *this, con
   {
     sub_B170D4();
   }
-  HutongGames_PlayMaker_Fsm__Event_14544876(Fsm, (System_String_o *)StringLiteral_6864, 0LL);
+  HutongGames_PlayMaker_Fsm__Event_14544876(Fsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -1505,7 +1505,7 @@ void __fastcall EarthCore_StateZoomOut__GoNext(EarthCore_StateZoomOut_o *this, c
   if ( (byte_40F8B7C & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___, method);
-    sub_B16FFC(&StringLiteral_6864, v3);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v3);
     byte_40F8B7C = 1;
   }
   mThat = this->fields.mThat;
@@ -1519,7 +1519,7 @@ void __fastcall EarthCore_StateZoomOut__GoNext(EarthCore_StateZoomOut_o *this, c
   {
     sub_B170D4();
   }
-  HutongGames_PlayMaker_Fsm__Event_14544876(Fsm, (System_String_o *)StringLiteral_6864, 0LL);
+  HutongGames_PlayMaker_Fsm__Event_14544876(Fsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 

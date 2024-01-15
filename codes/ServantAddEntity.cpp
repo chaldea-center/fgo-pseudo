@@ -48,7 +48,7 @@ System_String_o *__fastcall ServantAddEntity__GetOverwriteServantShortName(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
     sub_B16FFC(&string_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_21249, v4);
+    sub_B16FFC(&StringLiteral_21249/*"overWriteServantShortName"*/, v4);
     byte_40F93DE = 1;
   }
   value = 0LL;
@@ -57,7 +57,7 @@ System_String_o *__fastcall ServantAddEntity__GetOverwriteServantShortName(
   {
     if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
             (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_21249,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_21249/*"overWriteServantShortName"*/,
             &value,
             (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0LL;

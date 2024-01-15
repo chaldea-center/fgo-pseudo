@@ -53,7 +53,7 @@ void __fastcall BoostItemListViewManager__CreateList(
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewItem__Add__, v9);
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_12114, v12);
+    sub_B16FFC(&StringLiteral_12114/*"SHOP_LIST_EMPTY"*/, v12);
     byte_40FB14D = 1;
   }
   v38 = 0LL;
@@ -125,7 +125,7 @@ LABEL_15:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12114, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12114/*"SHOP_LIST_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_20;
   UILabel__set_text(emptyMessageLabel, v36, 0LL);
@@ -291,7 +291,7 @@ void __fastcall BoostItemListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_BoostItemListViewObject__get_Current__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoostItemListViewObject__GetEnumerator__, v11);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoostItemListViewObject__get_Count__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FB150 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -306,7 +306,7 @@ void __fastcall BoostItemListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -376,7 +376,7 @@ void __fastcall BoostItemListViewManager__RequestListObject_27212316(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_BoostItemListViewObject__get_Current__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoostItemListViewObject__GetEnumerator__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoostItemListViewObject__get_Count__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FB151 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -391,7 +391,7 @@ void __fastcall BoostItemListViewManager__RequestListObject_27212316(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

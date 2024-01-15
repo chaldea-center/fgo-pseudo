@@ -110,7 +110,7 @@ System_String_o *__fastcall ClassRelationOverwriteEntity__getFieldsLogString(
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&object___TypeInfo, v4);
     sub_B16FFC(&ClassRelationOverwriteEntity_TYPE_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_19312, v6);
+    sub_B16FFC(&StringLiteral_19312/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v6);
     byte_40F99D4 = 1;
   }
   type = 0;
@@ -211,7 +211,7 @@ LABEL_24:
   }
   v7->m_Items[5] = (Il2CppObject *)v43;
   sub_B16F98((BattleServantConfConponent_o *)&v7->m_Items[5], v43, v10, v44, v45, v46, v47, v48);
-  return System_String__Format_43822456((System_String_o *)StringLiteral_19312, v7, 0LL);
+  return System_String__Format_43822456((System_String_o *)StringLiteral_19312/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v7, 0LL);
 }
 
 

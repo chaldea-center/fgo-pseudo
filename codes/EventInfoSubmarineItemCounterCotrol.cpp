@@ -24,8 +24,8 @@ UnityEngine_GameObject_o *__fastcall EventInfoSubmarineItemCounterCotrol__Create
   {
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, ent);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_585, v6);
-    sub_B16FFC(&StringLiteral_651, v7);
+    sub_B16FFC(&StringLiteral_585/*"("*/, v6);
+    sub_B16FFC(&StringLiteral_651/*")"*/, v7);
     byte_40FA187 = 1;
   }
   baseItemPrefab = this->fields.baseItemPrefab;
@@ -44,9 +44,9 @@ UnityEngine_GameObject_o *__fastcall EventInfoSubmarineItemCounterCotrol__Create
       || (name = UnityEngine_Object__get_name(v10, 0LL), !ent)
       || (v12 = System_String__Concat_43747144(
                   name,
-                  (System_String_o *)StringLiteral_585,
+                  (System_String_o *)StringLiteral_585/*"("*/,
                   ent->fields.value,
-                  (System_String_o *)StringLiteral_651,
+                  (System_String_o *)StringLiteral_651/*")"*/,
                   0LL),
           !v9) )
     {
@@ -356,8 +356,8 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
     sub_B16FFC(&Method_EventInfoSubmarineItemCounterCotrol___c__Setup_b__10_0__, v12);
     sub_B16FFC(&EventInfoSubmarineItemCounterCotrol___c_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_5708, v14);
-    sub_B16FFC(&StringLiteral_18457, v15);
+    sub_B16FFC(&StringLiteral_5708/*"EVENT_SUBMARINE_RESOURCE_TITLE"*/, v14);
+    sub_B16FFC(&StringLiteral_18457/*"event_itembase"*/, v15);
     byte_40FA185 = 1;
   }
   if ( entitys )
@@ -373,7 +373,7 @@ void __fastcall EventInfoSubmarineItemCounterCotrol__Setup(
       EventInfoUIBase__SetSpriteByLocalAtlas(
         (EventInfoUIBase_o *)this,
         this->fields.bgSprite,
-        (System_String_o *)StringLiteral_18457,
+        (System_String_o *)StringLiteral_18457/*"event_itembase"*/,
         0LL);
       if ( *(_QWORD *)&entitys->max_length )
       {
@@ -511,7 +511,7 @@ LABEL_37:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_5708, 0LL);
+        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_5708/*"EVENT_SUBMARINE_RESOURCE_TITLE"*/, 0LL);
         if ( !titleLabel )
           goto LABEL_43;
         UILabel__set_text(titleLabel, v49, 0LL);

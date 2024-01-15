@@ -48,7 +48,7 @@ void __fastcall WarBoardBattleEvent___ctor(WarBoardBattleEvent_o *this, const Me
   {
     sub_B16FFC(&BattleWarBoardEventLimitTurn_TypeInfo, method);
     sub_B16FFC(&int___TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F8C66 = 1;
   }
   v8 = (BattleWarBoardEventLimitTurn_o *)sub_B170CC(BattleWarBoardEventLimitTurn_TypeInfo, method, v2, v3, v4);
@@ -63,8 +63,8 @@ void __fastcall WarBoardBattleEvent___ctor(WarBoardBattleEvent_o *this, const Me
     v12,
     v13,
     v14);
-  v15 = (System_Int32_array **)StringLiteral_1;
-  this->fields.warBoardDataJson = (struct System_String_o *)StringLiteral_1;
+  v15 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.warBoardDataJson = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.warBoardDataJson, v15, v16, v17, v18, v19, v20, v21);
   v23 = (struct System_Int32_array *)sub_B17014(int___TypeInfo, 0LL, v22);
   this->fields.joinCurTurnUniqueIds = v23;
@@ -480,7 +480,7 @@ System_Int32_array *__fastcall WarBoardBattleEvent__GetResetBuffTypes(
     sub_B16FFC(&Method_System_Collections_Generic_List_int___ctor__, v7);
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_15269, v10);
+    sub_B16FFC(&StringLiteral_15269/*"WAR_BOARD_BATTLE_END_RESET_BUFF_TYPES"*/, v10);
     byte_40F8C58 = 1;
   }
   v11 = (System_Collections_Generic_List_int__o *)sub_B170CC(
@@ -502,7 +502,7 @@ System_Int32_array *__fastcall WarBoardBattleEvent__GetResetBuffTypes(
     goto LABEL_10;
   ValueArray = (System_Collections_Generic_IEnumerable_T__o *)ConstantStrMaster__GetValueArray(
                                                                 MasterData_WarQuestSelectionMaster,
-                                                                (System_String_o *)StringLiteral_15269,
+                                                                (System_String_o *)StringLiteral_15269/*"WAR_BOARD_BATTLE_END_RESET_BUFF_TYPES"*/,
                                                                 0LL,
                                                                 0LL);
   if ( !ValueArray )
@@ -542,7 +542,7 @@ int32_t __fastcall WarBoardBattleEvent__GetResultBgmId(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_ConstantMaster___, *(_QWORD *)&curBgmId);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_15270, v6);
+    sub_B16FFC(&StringLiteral_15270/*"WAR_BOARD_BATTLE_LOSE_BGM"*/, v6);
     byte_40F8C53 = 1;
   }
   Data_k__BackingField = this->fields._Data_k__BackingField;
@@ -559,7 +559,7 @@ int32_t __fastcall WarBoardBattleEvent__GetResultBgmId(
       if ( MasterData_WarQuestSelectionMaster )
         return ConstantMaster__GetValue_28461932(
                  MasterData_WarQuestSelectionMaster,
-                 (System_String_o *)StringLiteral_15270,
+                 (System_String_o *)StringLiteral_15270/*"WAR_BOARD_BATTLE_LOSE_BGM"*/,
                  -1,
                  0LL);
     }
@@ -1396,7 +1396,7 @@ void __fastcall WarBoardBattleEvent__InitStartResult(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_ConstantStrMaster___, result);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    this = (WarBoardBattleEvent_o *)sub_B16FFC(&StringLiteral_15271, v7);
+    this = (WarBoardBattleEvent_o *)sub_B16FFC(&StringLiteral_15271/*"WAR_BOARD_BATTLE_WIN_HIDE_RESULT_TYPES"*/, v7);
     byte_40F8C55 = 1;
   }
   Data_k__BackingField = v5->fields._Data_k__BackingField;
@@ -1417,7 +1417,7 @@ LABEL_9:
   }
   ValueArray = (WarBoardBattleEvent_o *)ConstantStrMaster__GetValueArray(
                                           MasterData_WarQuestSelectionMaster,
-                                          (System_String_o *)StringLiteral_15271,
+                                          (System_String_o *)StringLiteral_15271/*"WAR_BOARD_BATTLE_WIN_HIDE_RESULT_TYPES"*/,
                                           0LL,
                                           0LL);
   WarBoardBattleEvent__HideTargetsResult(ValueArray, result, (System_Int32_array *)ValueArray, v13);

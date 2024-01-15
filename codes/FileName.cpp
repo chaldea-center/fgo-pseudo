@@ -56,12 +56,12 @@ void __fastcall FileName___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__, v5);
     sub_B16FFC(&System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo, v6);
     sub_B16FFC(&FileName_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_18124, v8);
-    sub_B16FFC(&StringLiteral_18108, v9);
-    sub_B16FFC(&StringLiteral_19303, v10);
-    sub_B16FFC(&StringLiteral_18123, v11);
-    sub_B16FFC(&StringLiteral_19267, v12);
-    sub_B16FFC(&StringLiteral_18125, v13);
+    sub_B16FFC(&StringLiteral_18124/*"ef_hit_slash01_M"*/, v8);
+    sub_B16FFC(&StringLiteral_18108/*"ef_crit01"*/, v9);
+    sub_B16FFC(&StringLiteral_19303/*"icon_support_02"*/, v10);
+    sub_B16FFC(&StringLiteral_18123/*"ef_hit01_M"*/, v11);
+    sub_B16FFC(&StringLiteral_19267/*"icon_eventjoin_02"*/, v12);
+    sub_B16FFC(&StringLiteral_18125/*"ef_hit_slash02_M"*/, v13);
     byte_40F8E8E = 1;
   }
   v14 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B170CC(
@@ -83,17 +83,17 @@ void __fastcall FileName___cctor(const MethodInfo *method)
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v14,
     1,
-    (System_String_o *)StringLiteral_18124,
+    (System_String_o *)StringLiteral_18124/*"ef_hit_slash01_M"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v14,
     2,
-    (System_String_o *)StringLiteral_18125,
+    (System_String_o *)StringLiteral_18125/*"ef_hit_slash02_M"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v14,
     3,
-    (System_String_o *)StringLiteral_18123,
+    (System_String_o *)StringLiteral_18123/*"ef_hit01_M"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   static_fields = (BattleServantConfConponent_o *)FileName_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v14;
@@ -118,17 +118,17 @@ LABEL_6:
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v26,
     1,
-    (System_String_o *)StringLiteral_18108,
+    (System_String_o *)StringLiteral_18108/*"ef_crit01"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v26,
     2,
-    (System_String_o *)StringLiteral_18108,
+    (System_String_o *)StringLiteral_18108/*"ef_crit01"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v26,
     3,
-    (System_String_o *)StringLiteral_18108,
+    (System_String_o *)StringLiteral_18108/*"ef_crit01"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   v27 = FileName_TypeInfo->static_fields;
   v27->criticaleffectlist = (struct System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__o *)v26;
@@ -142,12 +142,12 @@ LABEL_6:
     v32,
     v33);
   v34 = FileName_TypeInfo->static_fields;
-  v35 = (System_Int32_array **)StringLiteral_19303;
-  v34->friendIconName = (struct System_String_o *)StringLiteral_19303;
+  v35 = (System_Int32_array **)StringLiteral_19303/*"icon_support_02"*/;
+  v34->friendIconName = (struct System_String_o *)StringLiteral_19303/*"icon_support_02"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v34->friendIconName, v35, v36, v37, v38, v39, v40, v41);
   v42 = FileName_TypeInfo->static_fields;
-  v43 = (System_Int32_array **)StringLiteral_19267;
-  v42->eventJoinIconName = (struct System_String_o *)StringLiteral_19267;
+  v43 = (System_Int32_array **)StringLiteral_19267/*"icon_eventjoin_02"*/;
+  v42->eventJoinIconName = (struct System_String_o *)StringLiteral_19267/*"icon_eventjoin_02"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v42->eventJoinIconName, v43, v44, v45, v46, v47, v48, v49);
 }
 

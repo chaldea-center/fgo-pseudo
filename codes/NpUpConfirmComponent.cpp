@@ -631,19 +631,19 @@ void __fastcall NpUpConfirmComponent__setNpUpConfirmInfo(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v20);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v21);
     sub_B16FFC(&UnityEngine_Transform_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_26, v23);
-    sub_B16FFC(&StringLiteral_9241, v24);
-    sub_B16FFC(&StringLiteral_9342, v25);
-    sub_B16FFC(&StringLiteral_3160, v26);
-    sub_B16FFC(&StringLiteral_3185, v27);
-    sub_B16FFC(&StringLiteral_3304, v28);
-    sub_B16FFC(&StringLiteral_9343, v29);
-    sub_B16FFC(&StringLiteral_9341, v30);
-    sub_B16FFC(&StringLiteral_3184, v31);
-    sub_B16FFC(&StringLiteral_3192, v32);
-    sub_B16FFC(&StringLiteral_9340, v33);
-    sub_B16FFC(&StringLiteral_1, v34);
-    sub_B16FFC(&StringLiteral_3186, v35);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v23);
+    sub_B16FFC(&StringLiteral_9241/*"NEED_QP"*/, v24);
+    sub_B16FFC(&StringLiteral_9342/*"NPUP_EXCEEDED"*/, v25);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v26);
+    sub_B16FFC(&StringLiteral_3185/*"COMBINE_NPUP_MATERIAL"*/, v27);
+    sub_B16FFC(&StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, v28);
+    sub_B16FFC(&StringLiteral_9343/*"NPUP_RECONFIRM_TXT"*/, v29);
+    sub_B16FFC(&StringLiteral_9341/*"NPUP_CONFIRM_WARNING_TXT"*/, v30);
+    sub_B16FFC(&StringLiteral_3184/*"COMBINE_NPUP_BASE"*/, v31);
+    sub_B16FFC(&StringLiteral_3192/*"COMBINE_SPEND_QP"*/, v32);
+    sub_B16FFC(&StringLiteral_9340/*"NPUP_CONFIRM_TXT"*/, v33);
+    sub_B16FFC(&StringLiteral_1/*""*/, v34);
+    sub_B16FFC(&StringLiteral_3186/*"COMBINE_NP_ADD_TITLE"*/, v35);
     byte_40F93A4 = 1;
   }
   HIDWORD(v178) = 0;
@@ -653,7 +653,7 @@ void __fastcall NpUpConfirmComponent__setNpUpConfirmInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3186, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3186/*"COMBINE_NP_ADD_TITLE"*/, 0LL);
   if ( !upTargetAddLabel )
     goto LABEL_143;
   UILabel__set_text(upTargetAddLabel, v37, 0LL);
@@ -711,7 +711,7 @@ void __fastcall NpUpConfirmComponent__setNpUpConfirmInfo(
     goto LABEL_143;
   NpMaterialSvtInfo__setMaterialSvtInfo(v52, 0, v54, v53, 0LL, v55);
   baseTxt = this->fields.baseTxt;
-  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_3184, 0LL);
+  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_3184/*"COMBINE_NPUP_BASE"*/, 0LL);
   if ( !baseTxt )
     goto LABEL_143;
   v171 = updata;
@@ -772,7 +772,7 @@ void __fastcall NpUpConfirmComponent__setNpUpConfirmInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v82 = LocalizationManager__Get((System_String_o *)StringLiteral_9342, 0LL);
+      v82 = LocalizationManager__Get((System_String_o *)StringLiteral_9342/*"NPUP_EXCEEDED"*/, 0LL);
       if ( !v81 )
         goto LABEL_143;
       UILabel__set_text(v81, v82, 0LL);
@@ -788,7 +788,7 @@ void __fastcall NpUpConfirmComponent__setNpUpConfirmInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v84 = LocalizationManager__Get((System_String_o *)StringLiteral_3185, 0LL);
+  v84 = LocalizationManager__Get((System_String_o *)StringLiteral_3185/*"COMBINE_NPUP_MATERIAL"*/, 0LL);
   if ( !mtTxt )
     goto LABEL_143;
   UILabel__set_text(mtTxt, v84, 0LL);
@@ -880,17 +880,17 @@ LABEL_60:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v107 = LocalizationManager__Get((System_String_o *)StringLiteral_3192, 0LL);
+  v107 = LocalizationManager__Get((System_String_o *)StringLiteral_3192/*"COMBINE_SPEND_QP"*/, 0LL);
   if ( !upSpendQpTxtLb )
     goto LABEL_143;
   UILabel__set_text(upSpendQpTxtLb, v107, 0LL);
   upHaveQpTxtLb = this->fields.upHaveQpTxtLb;
-  v109 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v109 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !upHaveQpTxtLb )
     goto LABEL_143;
   UILabel__set_text(upHaveQpTxtLb, v109, 0LL);
   upSpendQpLb = this->fields.upSpendQpLb;
-  v111 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v111 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   LODWORD(v177.fields.currentCryptoKey) = v171->fields.spendQp;
   v112 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v177);
   v113 = System_String__Format(v111, v112, 0LL);
@@ -898,7 +898,7 @@ LABEL_60:
     goto LABEL_143;
   UILabel__set_text(upSpendQpLb, v113, 0LL);
   upHaveQpLb = this->fields.upHaveQpLb;
-  v115 = LocalizationManager__Get((System_String_o *)StringLiteral_9241, 0LL);
+  v115 = LocalizationManager__Get((System_String_o *)StringLiteral_9241/*"NEED_QP"*/, 0LL);
   haveQp = v171->fields.haveQp;
   v116 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveQp);
   v117 = System_String__Format(v115, v116, 0LL);
@@ -908,11 +908,11 @@ LABEL_60:
   upConfirmReConfirmMsgLb = this->fields.upConfirmReConfirmMsgLb;
   if ( !upConfirmReConfirmMsgLb )
     goto LABEL_143;
-  UILabel__set_text(upConfirmReConfirmMsgLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(upConfirmReConfirmMsgLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   upConfirmMsgLb = this->fields.upConfirmMsgLb;
   if ( !upConfirmMsgLb )
     goto LABEL_143;
-  UILabel__set_text(upConfirmMsgLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(upConfirmMsgLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( isExceedMaxLv || isExceedeMaterial || isCombineSvt )
   {
     if ( reConfirmation )
@@ -923,7 +923,7 @@ LABEL_60:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v131 = LocalizationManager__Get((System_String_o *)StringLiteral_9343, 0LL);
+      v131 = LocalizationManager__Get((System_String_o *)StringLiteral_9343/*"NPUP_RECONFIRM_TXT"*/, 0LL);
       if ( !v130 )
         goto LABEL_143;
       UILabel__set_text(v130, v131, 0LL);
@@ -1075,7 +1075,7 @@ LABEL_122:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v161 = LocalizationManager__Get((System_String_o *)StringLiteral_9341, 0LL);
+      v161 = LocalizationManager__Get((System_String_o *)StringLiteral_9341/*"NPUP_CONFIRM_WARNING_TXT"*/, 0LL);
       v162 = System_String__Concat_43743732(mText, v161, 0LL);
       UILabel__set_text(v159, v162, 0LL);
     }
@@ -1088,8 +1088,8 @@ LABEL_122:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v165 = LocalizationManager__Get((System_String_o *)StringLiteral_9340, 0LL);
-    v166 = System_String__Concat_43746016(v164, (System_String_o *)StringLiteral_26, v165, 0LL);
+    v165 = LocalizationManager__Get((System_String_o *)StringLiteral_9340/*"NPUP_CONFIRM_TXT"*/, 0LL);
+    v166 = System_String__Concat_43746016(v164, (System_String_o *)StringLiteral_26/*"\n"*/, v165, 0LL);
     UILabel__set_text(v163, v166, 0LL);
     NpUpConfirmComponent__SetDefaultLayout(this, v171, v167);
     v168 = (UnityEngine_Component_o *)this->fields.upConfirmMsgLb;
@@ -1115,7 +1115,7 @@ LABEL_143:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v122 = LocalizationManager__Get((System_String_o *)StringLiteral_3304, 0LL);
+    v122 = LocalizationManager__Get((System_String_o *)StringLiteral_3304/*"CONFIRM_COMBINE_MSG"*/, 0LL);
     v123 = System_String__Concat_43743732(v121, v122, 0LL);
     UILabel__set_text(v120, v123, 0LL);
     NpUpConfirmComponent__SetDefaultLayout(this, v171, v124);

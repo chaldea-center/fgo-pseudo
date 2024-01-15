@@ -121,10 +121,10 @@ void __fastcall NoticeInfoComponent__OpenAccountDeleteReConfirmDialog(
     sub_B16FFC(&Method_NoticeInfoComponent__OpenAccountDeleteReConfirmDialog_b__19_0__, v4);
     sub_B16FFC(&NoticeInfoComponent_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_1641, v7);
-    sub_B16FFC(&StringLiteral_1640, v8);
-    sub_B16FFC(&StringLiteral_1642, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1641/*"ACCOUNT_DELETE_RECONFIRM_DECIDE"*/, v7);
+    sub_B16FFC(&StringLiteral_1640/*"ACCOUNT_DELETE_RECONFIRM_CANCEL"*/, v8);
+    sub_B16FFC(&StringLiteral_1642/*"ACCOUNT_DELETE_RECONFIRM_MESSAGE"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F9353 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -133,9 +133,9 @@ void __fastcall NoticeInfoComponent__OpenAccountDeleteReConfirmDialog(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_1642, 0LL);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_1641, 0LL);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_1640, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_1642/*"ACCOUNT_DELETE_RECONFIRM_MESSAGE"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_1641/*"ACCOUNT_DELETE_RECONFIRM_DECIDE"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_1640/*"ACCOUNT_DELETE_RECONFIRM_CANCEL"*/, 0LL);
   v19 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v15,
@@ -158,7 +158,7 @@ void __fastcall NoticeInfoComponent__OpenAccountDeleteReConfirmDialog(
     sub_B170D4();
   CommonUI__OpenConfirmDialog_18237660(
     Instance,
-    (System_String_o *)StringLiteral_1,
+    (System_String_o *)StringLiteral_1/*""*/,
     v12,
     v13,
     v14,
@@ -313,8 +313,8 @@ void __fastcall NoticeInfoComponent___OpenAccountDeleteConfirmDialog_b__18_0(
   if ( (byte_40F9359 & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    sub_B16FFC(&StringLiteral_3061, v5);
-    sub_B16FFC(&StringLiteral_3040, v6);
+    sub_B16FFC(&StringLiteral_3061/*"CLICK_OK"*/, v5);
+    sub_B16FFC(&StringLiteral_3040/*"CLICK_CANCLE"*/, v6);
     byte_40F9359 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -324,9 +324,9 @@ void __fastcall NoticeInfoComponent___OpenAccountDeleteConfirmDialog_b__18_0(
     sub_B170D4();
   }
   if ( isDecide )
-    v9 = &StringLiteral_3061;
+    v9 = &StringLiteral_3061/*"CLICK_OK"*/;
   else
-    v9 = &StringLiteral_3040;
+    v9 = &StringLiteral_3040/*"CLICK_CANCLE"*/;
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)*v9, 0LL);
 }
 
@@ -366,7 +366,7 @@ void __fastcall NoticeInfoComponent___OpenAccountDeleteReConfirmDialog_b__19_0(
   if ( (byte_40F935A & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    sub_B16FFC(&StringLiteral_3040, v5);
+    sub_B16FFC(&StringLiteral_3040/*"CLICK_CANCLE"*/, v5);
     byte_40F935A = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -382,7 +382,7 @@ void __fastcall NoticeInfoComponent___OpenAccountDeleteReConfirmDialog_b__19_0(
   if ( !myRoomFsm )
 LABEL_8:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3040, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3040/*"CLICK_CANCLE"*/, 0LL);
 }
 
 
@@ -392,13 +392,13 @@ void __fastcall NoticeInfoComponent__onEndWebView(NoticeInfoComponent_o *this, c
 
   if ( (byte_40F9351 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3104, method);
+    sub_B16FFC(&StringLiteral_3104/*"CLOSE_WEBVIEW"*/, method);
     byte_40F9351 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3104, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3104/*"CLOSE_WEBVIEW"*/, 0LL);
 }
 
 
@@ -502,7 +502,7 @@ void __fastcall NoticeInfoComponent__setCreditWebViewInfo(NoticeInfoComponent_o 
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_15301, v4);
+    sub_B16FFC(&StringLiteral_15301/*"WEB_VIEW_TITLE_CREDIT"*/, v4);
     byte_40F934E = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -510,7 +510,7 @@ void __fastcall NoticeInfoComponent__setCreditWebViewInfo(NoticeInfoComponent_o 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15301, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15301/*"WEB_VIEW_TITLE_CREDIT"*/, 0LL);
   this->fields.title = v5;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.title, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -556,7 +556,7 @@ void __fastcall NoticeInfoComponent__setHelpWebViewInfo(NoticeInfoComponent_o *t
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_15302, v4);
+    sub_B16FFC(&StringLiteral_15302/*"WEB_VIEW_TITLE_HELP"*/, v4);
     byte_40F934A = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -564,7 +564,7 @@ void __fastcall NoticeInfoComponent__setHelpWebViewInfo(NoticeInfoComponent_o *t
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15302, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15302/*"WEB_VIEW_TITLE_HELP"*/, 0LL);
   this->fields.title = v5;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.title, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -610,7 +610,7 @@ void __fastcall NoticeInfoComponent__setInfomationWebViewInfo(NoticeInfoComponen
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_15303, v4);
+    sub_B16FFC(&StringLiteral_15303/*"WEB_VIEW_TITLE_INFOMATION"*/, v4);
     byte_40F9349 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -618,7 +618,7 @@ void __fastcall NoticeInfoComponent__setInfomationWebViewInfo(NoticeInfoComponen
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15303, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15303/*"WEB_VIEW_TITLE_INFOMATION"*/, 0LL);
   this->fields.title = v5;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.title, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -666,7 +666,7 @@ void __fastcall NoticeInfoComponent__setInquiryWebViewInfo(NoticeInfoComponent_o
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_15300, v4);
+    sub_B16FFC(&StringLiteral_15300/*"WEB_VIEW_TITLE_CONTACT_US"*/, v4);
     byte_40F934B = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -674,7 +674,7 @@ void __fastcall NoticeInfoComponent__setInquiryWebViewInfo(NoticeInfoComponent_o
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15300, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15300/*"WEB_VIEW_TITLE_CONTACT_US"*/, 0LL);
   this->fields.title = v5;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.title, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -719,19 +719,19 @@ void __fastcall NoticeInfoComponent__setNoticeInfo(NoticeInfoComponent_o *this, 
 
   if ( (byte_40F9348 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9348 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     sub_B170D4();
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  v4 = (System_Int32_array **)StringLiteral_1;
-  this->fields.title = (struct System_String_o *)StringLiteral_1;
+  v4 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
   p_title = &this->fields.title;
   sub_B16F98((BattleServantConfConponent_o *)p_title, v4, v6, v7, v8, v9, v10, v11);
-  v12 = (System_Int32_array **)StringLiteral_1;
-  p_title[1] = (struct System_String_o *)StringLiteral_1;
+  v12 = (System_Int32_array **)StringLiteral_1/*""*/;
+  p_title[1] = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)(p_title + 1), v12, v13, v14, v15, v16, v17, v18);
 }
 
@@ -760,7 +760,7 @@ void __fastcall NoticeInfoComponent__setRightWebViewInfo(NoticeInfoComponent_o *
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_15304, v4);
+    sub_B16FFC(&StringLiteral_15304/*"WEB_VIEW_TITLE_RIGHT_NOTATION"*/, v4);
     byte_40F934F = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -768,7 +768,7 @@ void __fastcall NoticeInfoComponent__setRightWebViewInfo(NoticeInfoComponent_o *
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15304, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15304/*"WEB_VIEW_TITLE_RIGHT_NOTATION"*/, 0LL);
   this->fields.title = v5;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.title, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -814,7 +814,7 @@ void __fastcall NoticeInfoComponent__setRulesWebViewInfo(NoticeInfoComponent_o *
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_15308, v4);
+    sub_B16FFC(&StringLiteral_15308/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/, v4);
     byte_40F934D = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -822,7 +822,7 @@ void __fastcall NoticeInfoComponent__setRulesWebViewInfo(NoticeInfoComponent_o *
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15308, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15308/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/, 0LL);
   this->fields.title = v5;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.title, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -866,12 +866,12 @@ void __fastcall NoticeInfoComponent__userDeleteCallback(
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
     sub_B16FFC(&UserDeleteReservationEntity_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_20980, v8);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v8);
     byte_40F9355 = 1;
   }
   if ( !result )
     goto LABEL_16;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     return;
   if ( (BYTE3(UserDeleteReservationEntity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UserDeleteReservationEntity_TypeInfo->_2.cctor_finished )
@@ -942,7 +942,7 @@ bool __fastcall NoticeInfoComponent__WaitForSE_d__11__MoveNext(
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9727, v4);
+    sub_B16FFC(&StringLiteral_9727/*"OPEN_BROWSER"*/, v4);
     byte_40F8359 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -954,7 +954,7 @@ bool __fastcall NoticeInfoComponent__WaitForSE_d__11__MoveNext(
       this->fields.__1__state = -1;
       if ( !_4__this || (myRoomFsm = _4__this->fields.myRoomFsm) == 0LL )
         sub_B170D4();
-      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_9727, 0LL);
+      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_9727/*"OPEN_BROWSER"*/, 0LL);
     }
     return 0;
   }

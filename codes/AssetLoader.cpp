@@ -280,59 +280,59 @@ void __fastcall AssetLoader__AssetLoadLogError(
     sub_B16FFC(&UnityEngine_Debug_TypeInfo, errorCode);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v5);
     sub_B16FFC(&string___TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_14049, v7);
-    sub_B16FFC(&StringLiteral_19973, v8);
-    sub_B16FFC(&StringLiteral_12266, v9);
-    sub_B16FFC(&StringLiteral_1178, v10);
-    sub_B16FFC(&StringLiteral_13981, v11);
-    sub_B16FFC(&StringLiteral_1173, v12);
-    sub_B16FFC(&StringLiteral_14724, v13);
-    sub_B16FFC(&StringLiteral_14759, v14);
-    sub_B16FFC(&StringLiteral_17583, v15);
-    sub_B16FFC(&StringLiteral_7075, v16);
-    sub_B16FFC(&StringLiteral_19975, v17);
-    sub_B16FFC(&StringLiteral_1186, v18);
-    sub_B16FFC(&StringLiteral_1188, v19);
-    sub_B16FFC(&StringLiteral_11390, v20);
-    sub_B16FFC(&StringLiteral_4226, v21);
-    sub_B16FFC(&StringLiteral_4590, v22);
-    sub_B16FFC(&StringLiteral_4589, v23);
-    sub_B16FFC(&StringLiteral_1200, v24);
-    sub_B16FFC(&StringLiteral_14913, v25);
-    sub_B16FFC(&StringLiteral_1190, v26);
-    sub_B16FFC(&StringLiteral_19956, v27);
-    sub_B16FFC(&StringLiteral_19970, v28);
-    sub_B16FFC(&StringLiteral_1176, v29);
-    sub_B16FFC(&StringLiteral_4225, v30);
-    sub_B16FFC(&StringLiteral_7076, v31);
-    sub_B16FFC(&StringLiteral_1175, v32);
-    sub_B16FFC(&StringLiteral_19957, v33);
-    sub_B16FFC(&StringLiteral_9452, v34);
-    sub_B16FFC(&StringLiteral_19972, v35);
-    sub_B16FFC(&StringLiteral_2090, v36);
-    sub_B16FFC(&StringLiteral_1179, v37);
-    sub_B16FFC(&StringLiteral_14454, v38);
-    sub_B16FFC(&StringLiteral_12858, v39);
-    sub_B16FFC(&StringLiteral_2089, v40);
-    sub_B16FFC(&StringLiteral_19971, v41);
-    sub_B16FFC(&StringLiteral_5252, v42);
-    sub_B16FFC(&StringLiteral_4227, v43);
-    sub_B16FFC(&StringLiteral_3785, v44);
-    sub_B16FFC(&StringLiteral_19974, v45);
-    sub_B16FFC(&StringLiteral_2093, v46);
+    sub_B16FFC(&StringLiteral_14049/*"The request timed out."*/, v7);
+    sub_B16FFC(&StringLiteral_19973/*"java.net.SocketException"*/, v8);
+    sub_B16FFC(&StringLiteral_12266/*"SSL CA certificate error"*/, v9);
+    sub_B16FFC(&StringLiteral_1178/*"404: Not Found"*/, v10);
+    sub_B16FFC(&StringLiteral_13981/*"The network connection was lost."*/, v11);
+    sub_B16FFC(&StringLiteral_1173/*"400: Bad Request"*/, v12);
+    sub_B16FFC(&StringLiteral_14724/*"Unable to complete SSL connection"*/, v13);
+    sub_B16FFC(&StringLiteral_14759/*"Unable to read data"*/, v14);
+    sub_B16FFC(&StringLiteral_17583/*"connect failed"*/, v15);
+    sub_B16FFC(&StringLiteral_7075/*"HTTP/1.1 500 Internal Server Error"*/, v16);
+    sub_B16FFC(&StringLiteral_19975/*"java.net.UnknownHostException"*/, v17);
+    sub_B16FFC(&StringLiteral_1186/*"500: Internal Server Error"*/, v18);
+    sub_B16FFC(&StringLiteral_1188/*"502:"*/, v19);
+    sub_B16FFC(&StringLiteral_11390/*"Request timeout"*/, v20);
+    sub_B16FFC(&StringLiteral_4226/*"Connection reset by peer"*/, v21);
+    sub_B16FFC(&StringLiteral_4590/*"DLErrorType"*/, v22);
+    sub_B16FFC(&StringLiteral_4589/*"DLErrorAsset"*/, v23);
+    sub_B16FFC(&StringLiteral_1200/*"504: Gateway Timeout"*/, v24);
+    sub_B16FFC(&StringLiteral_14913/*"Unknown Error"*/, v25);
+    sub_B16FFC(&StringLiteral_1190/*"503 Auto retry count"*/, v26);
+    sub_B16FFC(&StringLiteral_19956/*"java.io.EOFException"*/, v27);
+    sub_B16FFC(&StringLiteral_19970/*"java.net.ConnectException"*/, v28);
+    sub_B16FFC(&StringLiteral_1176/*"403: Forbidden"*/, v29);
+    sub_B16FFC(&StringLiteral_4225/*"Connection refused"*/, v30);
+    sub_B16FFC(&StringLiteral_7076/*"HTTP/1.1 504 Gateway Timeout"*/, v31);
+    sub_B16FFC(&StringLiteral_1175/*"401: Authorization Required"*/, v32);
+    sub_B16FFC(&StringLiteral_19957/*"java.io.IOException"*/, v33);
+    sub_B16FFC(&StringLiteral_9452/*"No address associated with hostname"*/, v34);
+    sub_B16FFC(&StringLiteral_19972/*"java.net.ProtocolException"*/, v35);
+    sub_B16FFC(&StringLiteral_2090/*"AssetBundle file download time over"*/, v36);
+    sub_B16FFC(&StringLiteral_1179/*"408: Request Time-out"*/, v37);
+    sub_B16FFC(&StringLiteral_14454/*"Too many redirects"*/, v38);
+    sub_B16FFC(&StringLiteral_12858/*"Software caused connection abort"*/, v39);
+    sub_B16FFC(&StringLiteral_2089/*"AssetBundle file check sum error"*/, v40);
+    sub_B16FFC(&StringLiteral_19971/*"java.net.NoRouteToHostException"*/, v41);
+    sub_B16FFC(&StringLiteral_5252/*"Destination host has an erroneous SSL certificate"*/, v42);
+    sub_B16FFC(&StringLiteral_4227/*"Connection timed out"*/, v43);
+    sub_B16FFC(&StringLiteral_3785/*"Cannot resolve destination host"*/, v44);
+    sub_B16FFC(&StringLiteral_19974/*"java.net.SocketTimeoutException"*/, v45);
+    sub_B16FFC(&StringLiteral_2093/*"AssetLoadError"*/, v46);
     byte_40FCA12 = 1;
   }
   v47 = sub_B17014(string___TypeInfo, 37LL, method);
   if ( !v47 )
     goto LABEL_210;
   v54 = v47;
-  v55 = StringLiteral_9452;
-  if ( StringLiteral_9452 )
+  v55 = StringLiteral_9452/*"No address associated with hostname"*/;
+  if ( StringLiteral_9452/*"No address associated with hostname"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_9452, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_9452/*"No address associated with hostname"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_9452;
+    v56 = (System_Int32_array **)StringLiteral_9452/*"No address associated with hostname"*/;
   }
   else
   {
@@ -343,13 +343,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 32) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 32), v56, v48, v49, v50, v51, v52, v53);
-  v55 = StringLiteral_2090;
-  if ( StringLiteral_2090 )
+  v55 = StringLiteral_2090/*"AssetBundle file download time over"*/;
+  if ( StringLiteral_2090/*"AssetBundle file download time over"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_2090, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_2090/*"AssetBundle file download time over"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_2090;
+    v56 = (System_Int32_array **)StringLiteral_2090/*"AssetBundle file download time over"*/;
   }
   else
   {
@@ -359,13 +359,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 40) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 40), v56, v48, v58, v59, v60, v61, v62);
-  v55 = StringLiteral_13981;
-  if ( StringLiteral_13981 )
+  v55 = StringLiteral_13981/*"The network connection was lost."*/;
+  if ( StringLiteral_13981/*"The network connection was lost."*/ )
   {
-    v55 = sub_B170BC(StringLiteral_13981, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_13981/*"The network connection was lost."*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_13981;
+    v56 = (System_Int32_array **)StringLiteral_13981/*"The network connection was lost."*/;
   }
   else
   {
@@ -375,13 +375,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 48) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 48), v56, v48, v63, v64, v65, v66, v67);
-  v55 = StringLiteral_4226;
-  if ( StringLiteral_4226 )
+  v55 = StringLiteral_4226/*"Connection reset by peer"*/;
+  if ( StringLiteral_4226/*"Connection reset by peer"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_4226, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_4226/*"Connection reset by peer"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_4226;
+    v56 = (System_Int32_array **)StringLiteral_4226/*"Connection reset by peer"*/;
   }
   else
   {
@@ -391,13 +391,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 56) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 56), v56, v48, v68, v69, v70, v71, v72);
-  v55 = StringLiteral_12858;
-  if ( StringLiteral_12858 )
+  v55 = StringLiteral_12858/*"Software caused connection abort"*/;
+  if ( StringLiteral_12858/*"Software caused connection abort"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_12858, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_12858/*"Software caused connection abort"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_12858;
+    v56 = (System_Int32_array **)StringLiteral_12858/*"Software caused connection abort"*/;
   }
   else
   {
@@ -407,13 +407,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 64) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 64), v56, v48, v73, v74, v75, v76, v77);
-  v55 = StringLiteral_4227;
-  if ( StringLiteral_4227 )
+  v55 = StringLiteral_4227/*"Connection timed out"*/;
+  if ( StringLiteral_4227/*"Connection timed out"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_4227, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_4227/*"Connection timed out"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_4227;
+    v56 = (System_Int32_array **)StringLiteral_4227/*"Connection timed out"*/;
   }
   else
   {
@@ -423,13 +423,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 72) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 72), v56, v48, v78, v79, v80, v81, v82);
-  v55 = StringLiteral_4225;
-  if ( StringLiteral_4225 )
+  v55 = StringLiteral_4225/*"Connection refused"*/;
+  if ( StringLiteral_4225/*"Connection refused"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_4225, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_4225/*"Connection refused"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_4225;
+    v56 = (System_Int32_array **)StringLiteral_4225/*"Connection refused"*/;
   }
   else
   {
@@ -439,13 +439,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 80) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 80), v56, v48, v83, v84, v85, v86, v87);
-  v55 = StringLiteral_14049;
-  if ( StringLiteral_14049 )
+  v55 = StringLiteral_14049/*"The request timed out."*/;
+  if ( StringLiteral_14049/*"The request timed out."*/ )
   {
-    v55 = sub_B170BC(StringLiteral_14049, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_14049/*"The request timed out."*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_14049;
+    v56 = (System_Int32_array **)StringLiteral_14049/*"The request timed out."*/;
   }
   else
   {
@@ -455,13 +455,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 88) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 88), v56, v48, v88, v89, v90, v91, v92);
-  v55 = StringLiteral_3785;
-  if ( StringLiteral_3785 )
+  v55 = StringLiteral_3785/*"Cannot resolve destination host"*/;
+  if ( StringLiteral_3785/*"Cannot resolve destination host"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_3785, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_3785/*"Cannot resolve destination host"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_3785;
+    v56 = (System_Int32_array **)StringLiteral_3785/*"Cannot resolve destination host"*/;
   }
   else
   {
@@ -471,13 +471,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 96) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 96), v56, v48, v93, v94, v95, v96, v97);
-  v55 = StringLiteral_14724;
-  if ( StringLiteral_14724 )
+  v55 = StringLiteral_14724/*"Unable to complete SSL connection"*/;
+  if ( StringLiteral_14724/*"Unable to complete SSL connection"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_14724, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_14724/*"Unable to complete SSL connection"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_14724;
+    v56 = (System_Int32_array **)StringLiteral_14724/*"Unable to complete SSL connection"*/;
   }
   else
   {
@@ -487,13 +487,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 104) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 104), v56, v48, v98, v99, v100, v101, v102);
-  v55 = StringLiteral_14913;
-  if ( StringLiteral_14913 )
+  v55 = StringLiteral_14913/*"Unknown Error"*/;
+  if ( StringLiteral_14913/*"Unknown Error"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_14913, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_14913/*"Unknown Error"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_14913;
+    v56 = (System_Int32_array **)StringLiteral_14913/*"Unknown Error"*/;
   }
   else
   {
@@ -503,13 +503,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 112) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 112), v56, v48, v103, v104, v105, v106, v107);
-  v55 = StringLiteral_11390;
-  if ( StringLiteral_11390 )
+  v55 = StringLiteral_11390/*"Request timeout"*/;
+  if ( StringLiteral_11390/*"Request timeout"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_11390, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_11390/*"Request timeout"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_11390;
+    v56 = (System_Int32_array **)StringLiteral_11390/*"Request timeout"*/;
   }
   else
   {
@@ -519,13 +519,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 120) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 120), v56, v48, v108, v109, v110, v111, v112);
-  v55 = StringLiteral_2089;
-  if ( StringLiteral_2089 )
+  v55 = StringLiteral_2089/*"AssetBundle file check sum error"*/;
+  if ( StringLiteral_2089/*"AssetBundle file check sum error"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_2089, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_2089/*"AssetBundle file check sum error"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_2089;
+    v56 = (System_Int32_array **)StringLiteral_2089/*"AssetBundle file check sum error"*/;
   }
   else
   {
@@ -535,13 +535,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 128) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 128), v56, v48, v113, v114, v115, v116, v117);
-  v55 = StringLiteral_12266;
-  if ( StringLiteral_12266 )
+  v55 = StringLiteral_12266/*"SSL CA certificate error"*/;
+  if ( StringLiteral_12266/*"SSL CA certificate error"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_12266, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_12266/*"SSL CA certificate error"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_12266;
+    v56 = (System_Int32_array **)StringLiteral_12266/*"SSL CA certificate error"*/;
   }
   else
   {
@@ -551,13 +551,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 136) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 136), v56, v48, v118, v119, v120, v121, v122);
-  v55 = StringLiteral_7075;
-  if ( StringLiteral_7075 )
+  v55 = StringLiteral_7075/*"HTTP/1.1 500 Internal Server Error"*/;
+  if ( StringLiteral_7075/*"HTTP/1.1 500 Internal Server Error"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_7075, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_7075/*"HTTP/1.1 500 Internal Server Error"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_7075;
+    v56 = (System_Int32_array **)StringLiteral_7075/*"HTTP/1.1 500 Internal Server Error"*/;
   }
   else
   {
@@ -567,13 +567,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 144) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 144), v56, v48, v123, v124, v125, v126, v127);
-  v55 = StringLiteral_7076;
-  if ( StringLiteral_7076 )
+  v55 = StringLiteral_7076/*"HTTP/1.1 504 Gateway Timeout"*/;
+  if ( StringLiteral_7076/*"HTTP/1.1 504 Gateway Timeout"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_7076, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_7076/*"HTTP/1.1 504 Gateway Timeout"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_7076;
+    v56 = (System_Int32_array **)StringLiteral_7076/*"HTTP/1.1 504 Gateway Timeout"*/;
   }
   else
   {
@@ -583,13 +583,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 152) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 152), v56, v48, v128, v129, v130, v131, v132);
-  v55 = StringLiteral_5252;
-  if ( StringLiteral_5252 )
+  v55 = StringLiteral_5252/*"Destination host has an erroneous SSL certificate"*/;
+  if ( StringLiteral_5252/*"Destination host has an erroneous SSL certificate"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_5252, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_5252/*"Destination host has an erroneous SSL certificate"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_5252;
+    v56 = (System_Int32_array **)StringLiteral_5252/*"Destination host has an erroneous SSL certificate"*/;
   }
   else
   {
@@ -599,13 +599,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 160) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 160), v56, v48, v133, v134, v135, v136, v137);
-  v55 = StringLiteral_14454;
-  if ( StringLiteral_14454 )
+  v55 = StringLiteral_14454/*"Too many redirects"*/;
+  if ( StringLiteral_14454/*"Too many redirects"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_14454, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_14454/*"Too many redirects"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_14454;
+    v56 = (System_Int32_array **)StringLiteral_14454/*"Too many redirects"*/;
   }
   else
   {
@@ -615,13 +615,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 168) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 168), v56, v48, v138, v139, v140, v141, v142);
-  v55 = StringLiteral_19956;
-  if ( StringLiteral_19956 )
+  v55 = StringLiteral_19956/*"java.io.EOFException"*/;
+  if ( StringLiteral_19956/*"java.io.EOFException"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_19956, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_19956/*"java.io.EOFException"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_19956;
+    v56 = (System_Int32_array **)StringLiteral_19956/*"java.io.EOFException"*/;
   }
   else
   {
@@ -631,13 +631,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 176) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 176), v56, v48, v143, v144, v145, v146, v147);
-  v55 = StringLiteral_19973;
-  if ( StringLiteral_19973 )
+  v55 = StringLiteral_19973/*"java.net.SocketException"*/;
+  if ( StringLiteral_19973/*"java.net.SocketException"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_19973, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_19973/*"java.net.SocketException"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_19973;
+    v56 = (System_Int32_array **)StringLiteral_19973/*"java.net.SocketException"*/;
   }
   else
   {
@@ -647,13 +647,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 184) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 184), v56, v48, v148, v149, v150, v151, v152);
-  v55 = StringLiteral_19974;
-  if ( StringLiteral_19974 )
+  v55 = StringLiteral_19974/*"java.net.SocketTimeoutException"*/;
+  if ( StringLiteral_19974/*"java.net.SocketTimeoutException"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_19974, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_19974/*"java.net.SocketTimeoutException"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_19974;
+    v56 = (System_Int32_array **)StringLiteral_19974/*"java.net.SocketTimeoutException"*/;
   }
   else
   {
@@ -663,13 +663,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 192) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 192), v56, v48, v153, v154, v155, v156, v157);
-  v55 = StringLiteral_19971;
-  if ( StringLiteral_19971 )
+  v55 = StringLiteral_19971/*"java.net.NoRouteToHostException"*/;
+  if ( StringLiteral_19971/*"java.net.NoRouteToHostException"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_19971, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_19971/*"java.net.NoRouteToHostException"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_19971;
+    v56 = (System_Int32_array **)StringLiteral_19971/*"java.net.NoRouteToHostException"*/;
   }
   else
   {
@@ -679,13 +679,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 200) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 200), v56, v48, v158, v159, v160, v161, v162);
-  v55 = StringLiteral_19957;
-  if ( StringLiteral_19957 )
+  v55 = StringLiteral_19957/*"java.io.IOException"*/;
+  if ( StringLiteral_19957/*"java.io.IOException"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_19957, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_19957/*"java.io.IOException"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_19957;
+    v56 = (System_Int32_array **)StringLiteral_19957/*"java.io.IOException"*/;
   }
   else
   {
@@ -695,13 +695,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 208) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 208), v56, v48, v163, v164, v165, v166, v167);
-  v55 = StringLiteral_19970;
-  if ( StringLiteral_19970 )
+  v55 = StringLiteral_19970/*"java.net.ConnectException"*/;
+  if ( StringLiteral_19970/*"java.net.ConnectException"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_19970, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_19970/*"java.net.ConnectException"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_19970;
+    v56 = (System_Int32_array **)StringLiteral_19970/*"java.net.ConnectException"*/;
   }
   else
   {
@@ -711,13 +711,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 216) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 216), v56, v48, v168, v169, v170, v171, v172);
-  v55 = StringLiteral_17583;
-  if ( StringLiteral_17583 )
+  v55 = StringLiteral_17583/*"connect failed"*/;
+  if ( StringLiteral_17583/*"connect failed"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_17583, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_17583/*"connect failed"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_17583;
+    v56 = (System_Int32_array **)StringLiteral_17583/*"connect failed"*/;
   }
   else
   {
@@ -727,13 +727,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 224) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 224), v56, v48, v173, v174, v175, v176, v177);
-  v55 = StringLiteral_19972;
-  if ( StringLiteral_19972 )
+  v55 = StringLiteral_19972/*"java.net.ProtocolException"*/;
+  if ( StringLiteral_19972/*"java.net.ProtocolException"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_19972, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_19972/*"java.net.ProtocolException"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_19972;
+    v56 = (System_Int32_array **)StringLiteral_19972/*"java.net.ProtocolException"*/;
   }
   else
   {
@@ -743,13 +743,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 232) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 232), v56, v48, v178, v179, v180, v181, v182);
-  v55 = StringLiteral_19975;
-  if ( StringLiteral_19975 )
+  v55 = StringLiteral_19975/*"java.net.UnknownHostException"*/;
+  if ( StringLiteral_19975/*"java.net.UnknownHostException"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_19975, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_19975/*"java.net.UnknownHostException"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_19975;
+    v56 = (System_Int32_array **)StringLiteral_19975/*"java.net.UnknownHostException"*/;
   }
   else
   {
@@ -759,13 +759,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 240) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 240), v56, v48, v183, v184, v185, v186, v187);
-  v55 = StringLiteral_1173;
-  if ( StringLiteral_1173 )
+  v55 = StringLiteral_1173/*"400: Bad Request"*/;
+  if ( StringLiteral_1173/*"400: Bad Request"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_1173, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_1173/*"400: Bad Request"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_1173;
+    v56 = (System_Int32_array **)StringLiteral_1173/*"400: Bad Request"*/;
   }
   else
   {
@@ -775,13 +775,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 248) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 248), v56, v48, v188, v189, v190, v191, v192);
-  v55 = StringLiteral_1175;
-  if ( StringLiteral_1175 )
+  v55 = StringLiteral_1175/*"401: Authorization Required"*/;
+  if ( StringLiteral_1175/*"401: Authorization Required"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_1175, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_1175/*"401: Authorization Required"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_1175;
+    v56 = (System_Int32_array **)StringLiteral_1175/*"401: Authorization Required"*/;
   }
   else
   {
@@ -791,13 +791,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 256) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 256), v56, v48, v193, v194, v195, v196, v197);
-  v55 = StringLiteral_1176;
-  if ( StringLiteral_1176 )
+  v55 = StringLiteral_1176/*"403: Forbidden"*/;
+  if ( StringLiteral_1176/*"403: Forbidden"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_1176, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_1176/*"403: Forbidden"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_1176;
+    v56 = (System_Int32_array **)StringLiteral_1176/*"403: Forbidden"*/;
   }
   else
   {
@@ -807,13 +807,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 264) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 264), v56, v48, v198, v199, v200, v201, v202);
-  v55 = StringLiteral_1178;
-  if ( StringLiteral_1178 )
+  v55 = StringLiteral_1178/*"404: Not Found"*/;
+  if ( StringLiteral_1178/*"404: Not Found"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_1178, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_1178/*"404: Not Found"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_1178;
+    v56 = (System_Int32_array **)StringLiteral_1178/*"404: Not Found"*/;
   }
   else
   {
@@ -823,13 +823,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 272) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 272), v56, v48, v203, v204, v205, v206, v207);
-  v55 = StringLiteral_1179;
-  if ( StringLiteral_1179 )
+  v55 = StringLiteral_1179/*"408: Request Time-out"*/;
+  if ( StringLiteral_1179/*"408: Request Time-out"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_1179, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_1179/*"408: Request Time-out"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_1179;
+    v56 = (System_Int32_array **)StringLiteral_1179/*"408: Request Time-out"*/;
   }
   else
   {
@@ -839,13 +839,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 280) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 280), v56, v48, v208, v209, v210, v211, v212);
-  v55 = StringLiteral_1186;
-  if ( StringLiteral_1186 )
+  v55 = StringLiteral_1186/*"500: Internal Server Error"*/;
+  if ( StringLiteral_1186/*"500: Internal Server Error"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_1186, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_1186/*"500: Internal Server Error"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_1186;
+    v56 = (System_Int32_array **)StringLiteral_1186/*"500: Internal Server Error"*/;
   }
   else
   {
@@ -855,13 +855,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 288) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 288), v56, v48, v213, v214, v215, v216, v217);
-  v55 = StringLiteral_1188;
-  if ( StringLiteral_1188 )
+  v55 = StringLiteral_1188/*"502:"*/;
+  if ( StringLiteral_1188/*"502:"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_1188, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_1188/*"502:"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_1188;
+    v56 = (System_Int32_array **)StringLiteral_1188/*"502:"*/;
   }
   else
   {
@@ -871,13 +871,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 296) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 296), v56, v48, v218, v219, v220, v221, v222);
-  v55 = StringLiteral_1190;
-  if ( StringLiteral_1190 )
+  v55 = StringLiteral_1190/*"503 Auto retry count"*/;
+  if ( StringLiteral_1190/*"503 Auto retry count"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_1190, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_1190/*"503 Auto retry count"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_1190;
+    v56 = (System_Int32_array **)StringLiteral_1190/*"503 Auto retry count"*/;
   }
   else
   {
@@ -887,13 +887,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 304) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 304), v56, v48, v223, v224, v225, v226, v227);
-  v55 = StringLiteral_1200;
-  if ( StringLiteral_1200 )
+  v55 = StringLiteral_1200/*"504: Gateway Timeout"*/;
+  if ( StringLiteral_1200/*"504: Gateway Timeout"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_1200, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_1200/*"504: Gateway Timeout"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( !v55 )
       goto LABEL_209;
-    v56 = (System_Int32_array **)StringLiteral_1200;
+    v56 = (System_Int32_array **)StringLiteral_1200/*"504: Gateway Timeout"*/;
   }
   else
   {
@@ -903,13 +903,13 @@ void __fastcall AssetLoader__AssetLoadLogError(
     goto LABEL_195;
   *(_QWORD *)(v54 + 312) = v56;
   sub_B16F98((BattleServantConfConponent_o *)(v54 + 312), v56, v48, v228, v229, v230, v231, v232);
-  v55 = StringLiteral_14759;
-  if ( StringLiteral_14759 )
+  v55 = StringLiteral_14759/*"Unable to read data"*/;
+  if ( StringLiteral_14759/*"Unable to read data"*/ )
   {
-    v55 = sub_B170BC(StringLiteral_14759, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
+    v55 = sub_B170BC(StringLiteral_14759/*"Unable to read data"*/, *(_QWORD *)(*(_QWORD *)v54 + 64LL));
     if ( v55 )
     {
-      v56 = (System_Int32_array **)StringLiteral_14759;
+      v56 = (System_Int32_array **)StringLiteral_14759/*"Unable to read data"*/;
       goto LABEL_188;
     }
 LABEL_209:
@@ -955,7 +955,7 @@ LABEL_196:
 LABEL_210:
     sub_B170D4();
   }
-  CrashReporter__AddCustomKey(v244, (System_String_o *)StringLiteral_4589, CacheName, 0LL);
+  CrashReporter__AddCustomKey(v244, (System_String_o *)StringLiteral_4589/*"DLErrorAsset"*/, CacheName, 0LL);
   v55 = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   if ( (unsigned int)v239 >= *v57 )
   {
@@ -967,7 +967,7 @@ LABEL_195:
     goto LABEL_210;
   CrashReporter__AddCustomKey(
     (CrashReporter_o *)v55,
-    (System_String_o *)StringLiteral_4590,
+    (System_String_o *)StringLiteral_4590/*"DLErrorType"*/,
     *(System_String_o **)(v54 + 32 + 8 * v239),
     0LL);
   if ( (BYTE3(UnityEngine_Debug_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -975,7 +975,7 @@ LABEL_195:
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
   }
-  v241 = (Il2CppObject *)StringLiteral_2093;
+  v241 = (Il2CppObject *)StringLiteral_2093/*"AssetLoadError"*/;
 LABEL_208:
   UnityEngine_Debug__LogError(v241, 0LL);
 }
@@ -2784,33 +2784,33 @@ bool __fastcall AssetLoader__LoadDataCR_d__29__MoveNext(
     sub_B16FFC(&UnityEngine_WaitForEndOfFrame_TypeInfo, v33);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v34);
     sub_B16FFC(&UnityEngine_WaitUntil_TypeInfo, v35);
-    sub_B16FFC(&StringLiteral_26, v36);
-    sub_B16FFC(&StringLiteral_9246, v37);
-    sub_B16FFC(&StringLiteral_7070, v38);
-    sub_B16FFC(&StringLiteral_5301, v39);
-    sub_B16FFC(&StringLiteral_2107, v40);
-    sub_B16FFC(&StringLiteral_9255, v41);
-    sub_B16FFC(&StringLiteral_80, v42);
-    sub_B16FFC(&StringLiteral_2094, v43);
-    sub_B16FFC(&StringLiteral_654, v44);
-    sub_B16FFC(&StringLiteral_657, v45);
-    sub_B16FFC(&StringLiteral_1189, v46);
-    sub_B16FFC(&StringLiteral_1743, v47);
-    sub_B16FFC(&StringLiteral_15682, v48);
-    sub_B16FFC(&StringLiteral_2104, v49);
-    sub_B16FFC(&StringLiteral_23604, v50);
-    sub_B16FFC(&StringLiteral_12312, v51);
-    sub_B16FFC(&StringLiteral_653, v52);
-    sub_B16FFC(&StringLiteral_9245, v53);
-    sub_B16FFC(&StringLiteral_585, v54);
-    sub_B16FFC(&StringLiteral_655, v55);
-    sub_B16FFC(&StringLiteral_651, v56);
-    sub_B16FFC(&StringLiteral_18327, v57);
-    sub_B16FFC(&StringLiteral_1533, v58);
-    sub_B16FFC(&StringLiteral_1744, v59);
-    sub_B16FFC(&StringLiteral_2105, v60);
-    sub_B16FFC(&StringLiteral_656, v61);
-    sub_B16FFC(&StringLiteral_1, v62);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v36);
+    sub_B16FFC(&StringLiteral_9246/*"NETWORK_ERROR_ASSET_UPDATE_BOOT"*/, v37);
+    sub_B16FFC(&StringLiteral_7070/*"HTTP"*/, v38);
+    sub_B16FFC(&StringLiteral_5301/*"Disk full"*/, v39);
+    sub_B16FFC(&StringLiteral_2107/*"AssetStorageList download time over"*/, v40);
+    sub_B16FFC(&StringLiteral_9255/*"NETWORK_ERROR_DISK_FULL"*/, v41);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v42);
+    sub_B16FFC(&StringLiteral_2094/*"AssetName : "*/, v43);
+    sub_B16FFC(&StringLiteral_654/*")\n\n503 Auto retry count "*/, v44);
+    sub_B16FFC(&StringLiteral_657/*")\nfile crc ("*/, v45);
+    sub_B16FFC(&StringLiteral_1189/*"503"*/, v46);
+    sub_B16FFC(&StringLiteral_1743/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, v47);
+    sub_B16FFC(&StringLiteral_15682/*"[FFFF80]Download error for debug"*/, v48);
+    sub_B16FFC(&StringLiteral_2104/*"AssetStorageList download data error"*/, v49);
+    sub_B16FFC(&StringLiteral_23604/*"~"*/, v50);
+    sub_B16FFC(&StringLiteral_12312/*"STATUS"*/, v51);
+    sub_B16FFC(&StringLiteral_653/*")\n\n"*/, v52);
+    sub_B16FFC(&StringLiteral_9245/*"NETWORK_ERROR_ASSET_UPDATE"*/, v53);
+    sub_B16FFC(&StringLiteral_585/*"("*/, v54);
+    sub_B16FFC(&StringLiteral_655/*")\n\nAssetBundle file check sum error\nlist crc ("*/, v55);
+    sub_B16FFC(&StringLiteral_651/*")"*/, v56);
+    sub_B16FFC(&StringLiteral_18327/*"error "*/, v57);
+    sub_B16FFC(&StringLiteral_1533/*"@"*/, v58);
+    sub_B16FFC(&StringLiteral_1744/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, v59);
+    sub_B16FFC(&StringLiteral_2105/*"AssetStorageList download error"*/, v60);
+    sub_B16FFC(&StringLiteral_656/*")\n\nAssetBundle file download time over"*/, v61);
+    sub_B16FFC(&StringLiteral_1/*""*/, v62);
     byte_40F9124 = 1;
   }
   v628 = 0LL;
@@ -3021,8 +3021,8 @@ LABEL_57:
           if ( v156 < v157->static_fields->LIMIT_FREE_SIZE )
           {
             _4__this->fields.isErrorDialog = 1;
-            v158 = (System_Int32_array **)StringLiteral_5301;
-            p_errorCode_5__6->klass = (BattleServantConfConponent_c *)StringLiteral_5301;
+            v158 = (System_Int32_array **)StringLiteral_5301/*"Disk full"*/;
+            p_errorCode_5__6->klass = (BattleServantConfConponent_c *)StringLiteral_5301/*"Disk full"*/;
             sub_B16F98(
               (BattleServantConfConponent_o *)&this->fields._errorCode_5__6,
               v158,
@@ -3033,8 +3033,8 @@ LABEL_57:
               v154,
               v155);
             p_errorLocalizeCode_5__7 = &this->fields._errorLocalizeCode_5__7;
-            v166 = (System_Int32_array **)StringLiteral_9255;
-            this->fields._errorLocalizeCode_5__7 = (struct System_String_o *)StringLiteral_9255;
+            v166 = (System_Int32_array **)StringLiteral_9255/*"NETWORK_ERROR_DISK_FULL"*/;
+            this->fields._errorLocalizeCode_5__7 = (struct System_String_o *)StringLiteral_9255/*"NETWORK_ERROR_DISK_FULL"*/;
             goto LABEL_165;
           }
         }
@@ -3162,9 +3162,9 @@ LABEL_431:
         if ( !UnityEngine_Networking_UnityWebRequest__get_isDone(v213, 0LL) )
         {
           v218 = System_String__Concat_43746016(
-                   (System_String_o *)StringLiteral_585,
+                   (System_String_o *)StringLiteral_585/*"("*/,
                    this->fields._url_5__11,
-                   (System_String_o *)StringLiteral_656,
+                   (System_String_o *)StringLiteral_656/*")\n\nAssetBundle file download time over"*/,
                    0LL);
           p_errorCode_5__6 = (BattleServantConfConponent_o *)&this->fields._errorCode_5__6;
           this->fields._errorCode_5__6 = v218;
@@ -3211,13 +3211,13 @@ LABEL_127:
               if ( !v270 )
                 goto LABEL_438;
               v276 = (System_String_array *)v270;
-              IsSame = StringLiteral_585;
-              if ( StringLiteral_585 )
+              IsSame = StringLiteral_585/*"("*/;
+              if ( StringLiteral_585/*"("*/ )
               {
-                IsSame = sub_B170BC(StringLiteral_585, v276->obj.klass->_1.element_class);
+                IsSame = sub_B170BC(StringLiteral_585/*"("*/, v276->obj.klass->_1.element_class);
                 if ( !IsSame )
                   goto LABEL_439;
-                v261 = (System_Int32_array **)StringLiteral_585;
+                v261 = (System_Int32_array **)StringLiteral_585/*"("*/;
               }
               else
               {
@@ -3238,13 +3238,13 @@ LABEL_127:
                 goto LABEL_295;
               v276->m_Items[1] = (System_String_o *)v283;
               sub_B16F98((BattleServantConfConponent_o *)&v276->m_Items[1], v283, v226, v278, v279, v280, v281, v282);
-              IsSame = StringLiteral_655;
-              if ( StringLiteral_655 )
+              IsSame = StringLiteral_655/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
+              if ( StringLiteral_655/*")\n\nAssetBundle file check sum error\nlist crc ("*/ )
               {
-                IsSame = sub_B170BC(StringLiteral_655, v276->obj.klass->_1.element_class);
+                IsSame = sub_B170BC(StringLiteral_655/*")\n\nAssetBundle file check sum error\nlist crc ("*/, v276->obj.klass->_1.element_class);
                 if ( !IsSame )
                   goto LABEL_439;
-                v261 = (System_Int32_array **)StringLiteral_655;
+                v261 = (System_Int32_array **)StringLiteral_655/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
               }
               else
               {
@@ -3274,13 +3274,13 @@ LABEL_439:
                 goto LABEL_295;
               v276->m_Items[3] = (System_String_o *)v295;
               sub_B16F98((BattleServantConfConponent_o *)&v276->m_Items[3], v295, v226, v290, v291, v292, v293, v294);
-              IsSame = StringLiteral_657;
-              if ( StringLiteral_657 )
+              IsSame = StringLiteral_657/*")\nfile crc ("*/;
+              if ( StringLiteral_657/*")\nfile crc ("*/ )
               {
-                IsSame = sub_B170BC(StringLiteral_657, v276->obj.klass->_1.element_class);
+                IsSame = sub_B170BC(StringLiteral_657/*")\nfile crc ("*/, v276->obj.klass->_1.element_class);
                 if ( !IsSame )
                   goto LABEL_439;
-                v261 = (System_Int32_array **)StringLiteral_657;
+                v261 = (System_Int32_array **)StringLiteral_657/*")\nfile crc ("*/;
               }
               else
               {
@@ -3302,13 +3302,13 @@ LABEL_439:
                 goto LABEL_295;
               v276->m_Items[5] = (System_String_o *)v306;
               sub_B16F98((BattleServantConfConponent_o *)&v276->m_Items[5], v306, v226, v301, v302, v303, v304, v305);
-              IsSame = StringLiteral_651;
-              if ( StringLiteral_651 )
+              IsSame = StringLiteral_651/*")"*/;
+              if ( StringLiteral_651/*")"*/ )
               {
-                IsSame = sub_B170BC(StringLiteral_651, v276->obj.klass->_1.element_class);
+                IsSame = sub_B170BC(StringLiteral_651/*")"*/, v276->obj.klass->_1.element_class);
                 if ( !IsSame )
                   goto LABEL_439;
-                v261 = (System_Int32_array **)StringLiteral_651;
+                v261 = (System_Int32_array **)StringLiteral_651/*")"*/;
               }
               else
               {
@@ -3355,9 +3355,9 @@ LABEL_110:
           v247 = this->fields._url_5__11;
           v248 = UnityEngine_Networking_UnityWebRequest__get_error(v246, 0LL);
           v249 = System_String__Concat_43747144(
-                   (System_String_o *)StringLiteral_585,
+                   (System_String_o *)StringLiteral_585/*"("*/,
                    v247,
-                   (System_String_o *)StringLiteral_653,
+                   (System_String_o *)StringLiteral_653/*")\n\n"*/,
                    v248,
                    0LL);
           p_errorCode_5__6 = (BattleServantConfConponent_o *)&this->fields._errorCode_5__6;
@@ -3383,7 +3383,7 @@ LABEL_110:
                  (const MethodInfo_2DA3814 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) < 1
             || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
                   v258,
-                  (System_Xml_XmlQualifiedName_o *)StringLiteral_12312,
+                  (System_Xml_XmlQualifiedName_o *)StringLiteral_12312/*"STATUS"*/,
                   &value,
                   (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
           {
@@ -3408,7 +3408,7 @@ LABEL_110:
           v264 = v262->m_Items[0];
           if ( !v264 )
             goto LABEL_438;
-          IsSame = System_String__StartsWith(v264, (System_String_o *)StringLiteral_7070, 0LL);
+          IsSame = System_String__StartsWith(v264, (System_String_o *)StringLiteral_7070/*"HTTP"*/, 0LL);
           if ( (IsSame & 1) == 0 )
             goto LABEL_164;
           if ( v263->max_length <= 1 )
@@ -3416,7 +3416,7 @@ LABEL_110:
           v265 = v263->m_Items[1];
           if ( !v265 )
             goto LABEL_438;
-          if ( !System_String__Equals_43731072(v265, (System_String_o *)StringLiteral_1189, 0LL) )
+          if ( !System_String__Equals_43731072(v265, (System_String_o *)StringLiteral_1189/*"503"*/, 0LL) )
             goto LABEL_164;
           v266 = this->fields._url_5__11;
           v267 = this->fields._autoRetryCount_5__3 + 1;
@@ -3424,9 +3424,9 @@ LABEL_110:
           this->fields._autoRetryCount_5__3 = v267;
           v268 = System_Int32__ToString((int)this + 52, 0LL);
           v239 = System_String__Concat_43747144(
-                   (System_String_o *)StringLiteral_585,
+                   (System_String_o *)StringLiteral_585/*"("*/,
                    v266,
-                   (System_String_o *)StringLiteral_654,
+                   (System_String_o *)StringLiteral_654/*")\n\n503 Auto retry count "*/,
                    v268,
                    0LL);
           this->fields._errorCode_5__6 = v239;
@@ -3460,9 +3460,9 @@ LABEL_110:
                                       v212[4].klass,
                                       *((_QWORD *)v236->_1.image + 50));
           v239 = System_String__Concat_43747144(
-                   (System_String_o *)StringLiteral_18327,
+                   (System_String_o *)StringLiteral_18327/*"error "*/,
                    v237,
-                   (System_String_o *)StringLiteral_80,
+                   (System_String_o *)StringLiteral_80/*" "*/,
                    v238,
                    0LL);
           this->fields._errorCode_5__6 = v239;
@@ -3498,9 +3498,9 @@ LABEL_165:
               goto LABEL_438;
             v322 = (CommonUI_o *)Instance;
             v323 = System_String__Concat_43747144(
-                     (System_String_o *)StringLiteral_2094,
+                     (System_String_o *)StringLiteral_2094/*"AssetName : "*/,
                      v321->fields.name,
-                     (System_String_o *)StringLiteral_26,
+                     (System_String_o *)StringLiteral_26/*"\n"*/,
                      (System_String_o *)p_errorCode_5__6->klass,
                      0LL);
             v328 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v324, v325, v326, v327);
@@ -3512,7 +3512,7 @@ LABEL_165:
             effectDistance.fields.value = 0LL;
             CommonUI__OpenWarningDialog(
               v322,
-              (System_String_o *)StringLiteral_15682,
+              (System_String_o *)StringLiteral_15682/*"[FFFF80]Download error for debug"*/,
               v323,
               v328,
               1,
@@ -3592,13 +3592,13 @@ LABEL_413:
             v331 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
             errorLocalizeCode_5__7 = this->fields._errorLocalizeCode_5__7;
             v333 = (CommonUI_o *)v331;
-            v334 = (System_String_o *)StringLiteral_1;
+            v334 = (System_String_o *)StringLiteral_1/*""*/;
             if ( isDuringStartup )
             {
               if ( errorLocalizeCode_5__7 )
                 v335 = this->fields._errorLocalizeCode_5__7;
               else
-                v335 = (System_String_o *)StringLiteral_1743;
+                v335 = (System_String_o *)StringLiteral_1743/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/;
               if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !LocalizationManager_TypeInfo->_2.cctor_finished )
               {
@@ -3621,7 +3621,7 @@ LABEL_413:
               if ( errorLocalizeCode_5__7 )
                 v342 = this->fields._errorLocalizeCode_5__7;
               else
-                v342 = (System_String_o *)StringLiteral_1744;
+                v342 = (System_String_o *)StringLiteral_1744/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/;
               if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !LocalizationManager_TypeInfo->_2.cctor_finished )
               {
@@ -4040,7 +4040,7 @@ LABEL_437:
       if ( !isDone )
       {
         UnityEngine_Networking_UnityWebRequest__Abort(*v403, 0LL);
-        v466 = &StringLiteral_2107;
+        v466 = &StringLiteral_2107/*"AssetStorageList download time over"*/;
         goto LABEL_377;
       }
       v405 = UnityEngine_Networking_UnityWebRequest__get_error(*v403, 0LL);
@@ -4065,7 +4065,7 @@ LABEL_437:
       v409 = CatAndMouseGame__MouseGame3(text, 0LL);
       if ( System_String__IsNullOrEmpty(v409, 0LL) )
       {
-        v466 = &StringLiteral_2105;
+        v466 = &StringLiteral_2105/*"AssetStorageList download error"*/;
         goto LABEL_377;
       }
       IsSame = sub_B17014(char___TypeInfo, 1LL, v410);
@@ -4081,7 +4081,7 @@ LABEL_437:
       if ( !v416 )
         goto LABEL_438;
       v417 = v416;
-      if ( !System_String__StartsWith(v416, (System_String_o *)StringLiteral_23604, 0LL) )
+      if ( !System_String__StartsWith(v416, (System_String_o *)StringLiteral_23604/*"~"*/, 0LL) )
         goto LABEL_332;
       IsSame = sub_B17014(char___TypeInfo, 2LL, v410);
       if ( !IsSame )
@@ -4113,7 +4113,7 @@ LABEL_437:
       if ( System_UInt32__Parse(v421, 0LL) != v425 )
       {
 LABEL_332:
-        v466 = &StringLiteral_2104;
+        v466 = &StringLiteral_2104/*"AssetStorageList download data error"*/;
 LABEL_377:
         v557 = (System_Int32_array **)*v466;
         *v401 = (System_String_o *)*v466;
@@ -4151,9 +4151,9 @@ LABEL_378:
               goto LABEL_438;
             v567 = (CommonUI_o *)v565;
             v568 = System_String__Concat_43747144(
-                     (System_String_o *)StringLiteral_2094,
+                     (System_String_o *)StringLiteral_2094/*"AssetName : "*/,
                      v566->fields.name,
-                     (System_String_o *)StringLiteral_26,
+                     (System_String_o *)StringLiteral_26/*"\n"*/,
                      *v401,
                      0LL);
             v573 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v569, v570, v571, v572);
@@ -4164,7 +4164,7 @@ LABEL_378:
             *(_DWORD *)&effectDistancea.fields.has_value = 0;
             CommonUI__OpenWarningDialog(
               v567,
-              (System_String_o *)StringLiteral_15682,
+              (System_String_o *)StringLiteral_15682/*"[FFFF80]Download error for debug"*/,
               v568,
               v573,
               1,
@@ -4218,12 +4218,12 @@ LABEL_388:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v578 = LocalizationManager__Get((System_String_o *)StringLiteral_1743, 0LL);
+            v578 = LocalizationManager__Get((System_String_o *)StringLiteral_1743/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
             v583 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v579, v580, v581, v582);
             ErrorDialog_ClickDelegate___ctor(v583, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
             if ( !v577 )
               goto LABEL_438;
-            CommonUI__OpenRetryBootDialog(v577, (System_String_o *)StringLiteral_1, v578, v583, 0, 0LL);
+            CommonUI__OpenRetryBootDialog(v577, (System_String_o *)StringLiteral_1/*""*/, v578, v583, 0, 0LL);
           }
           else
           {
@@ -4232,12 +4232,12 @@ LABEL_388:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v584 = LocalizationManager__Get((System_String_o *)StringLiteral_1744, 0LL);
+            v584 = LocalizationManager__Get((System_String_o *)StringLiteral_1744/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
             v589 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v585, v586, v587, v588);
             ErrorDialog_ClickDelegate___ctor(v589, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
             if ( !v577 )
               goto LABEL_438;
-            CommonUI__OpenRetryDialog(v577, (System_String_o *)StringLiteral_1, v584, v589, 0, 0LL);
+            CommonUI__OpenRetryDialog(v577, (System_String_o *)StringLiteral_1/*""*/, v584, v589, 0, 0LL);
           }
 LABEL_409:
           if ( _4__this->fields.isErrorDialog )
@@ -4303,7 +4303,7 @@ LABEL_312:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v458 = &StringLiteral_9246;
+          v458 = &StringLiteral_9246/*"NETWORK_ERROR_ASSET_UPDATE_BOOT"*/;
         }
         else
         {
@@ -4312,14 +4312,14 @@ LABEL_312:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v458 = &StringLiteral_9245;
+          v458 = &StringLiteral_9245/*"NETWORK_ERROR_ASSET_UPDATE"*/;
         }
         v459 = LocalizationManager__Get((System_String_o *)*v458, 0LL);
         v464 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v460, v461, v462, v463);
         ErrorDialog_ClickDelegate___ctor(v464, (Il2CppObject *)_4__this, Method_AssetLoader_EndRebootDialog__, 0LL);
         if ( !v457 )
           goto LABEL_438;
-        CommonUI__OpenErrorDialog(v457, (System_String_o *)StringLiteral_1, v459, v464, 0, 0LL);
+        CommonUI__OpenErrorDialog(v457, (System_String_o *)StringLiteral_1/*""*/, v459, v464, 0, 0LL);
         return 0;
       }
       IsSame = sub_B17014(char___TypeInfo, 2LL, v410);
@@ -4364,7 +4364,7 @@ LABEL_295:
         v435 = v432->m_Items[0];
         if ( !v435 )
           goto LABEL_438;
-        IsSame = System_String__StartsWith(v435, (System_String_o *)StringLiteral_1533, 0LL);
+        IsSame = System_String__StartsWith(v435, (System_String_o *)StringLiteral_1533/*"@"*/, 0LL);
         if ( !v434->max_length )
           goto LABEL_295;
         v436 = IsSame;
@@ -4374,7 +4374,7 @@ LABEL_295:
         if ( (v436 & 1) != 0 )
         {
           v438 = System_String__Substring(v437, 1, 0LL);
-          v439 = (System_String_o **)&StringLiteral_1;
+          v439 = (System_String_o **)&StringLiteral_1/*""*/;
           if ( (int)v434->max_length > 1 )
             v439 = &v434->m_Items[1];
           v440 = *v439;
@@ -4389,7 +4389,7 @@ LABEL_295:
         }
         else
         {
-          IsSame = System_String__StartsWith(v437, (System_String_o *)StringLiteral_23604, 0LL);
+          IsSame = System_String__StartsWith(v437, (System_String_o *)StringLiteral_23604/*"~"*/, 0LL);
           if ( (IsSame & 1) == 0 )
           {
             if ( !v434->max_length )
@@ -4457,12 +4457,12 @@ LABEL_293:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v449 = LocalizationManager__Get((System_String_o *)StringLiteral_1743, 0LL);
+        v449 = LocalizationManager__Get((System_String_o *)StringLiteral_1743/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
         v454 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v450, v451, v452, v453);
         ErrorDialog_ClickDelegate___ctor(v454, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
         if ( v448 )
         {
-          CommonUI__OpenRetryBootDialog(v448, (System_String_o *)StringLiteral_1, v449, v454, 1, 0LL);
+          CommonUI__OpenRetryBootDialog(v448, (System_String_o *)StringLiteral_1/*""*/, v449, v454, 1, 0LL);
           goto LABEL_338;
         }
         goto LABEL_438;
@@ -4472,12 +4472,12 @@ LABEL_293:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v467 = LocalizationManager__Get((System_String_o *)StringLiteral_1744, 0LL);
+      v467 = LocalizationManager__Get((System_String_o *)StringLiteral_1744/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
       v472 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v468, v469, v470, v471);
       ErrorDialog_ClickDelegate___ctor(v472, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
       if ( !v448 )
         goto LABEL_438;
-      CommonUI__OpenRetryDialog(v448, (System_String_o *)StringLiteral_1, v467, v472, 1, 0LL);
+      CommonUI__OpenRetryDialog(v448, (System_String_o *)StringLiteral_1/*""*/, v467, v472, 1, 0LL);
 LABEL_338:
       if ( !_4__this->fields.isErrorDialog )
       {

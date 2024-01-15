@@ -14,12 +14,12 @@ void __fastcall DialogMessageMaster___cctor(const MethodInfo *method)
   if ( (byte_40FBC7C & 1) == 0 )
   {
     sub_B16FFC(&DialogMessageMaster_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_17938, v8);
+    sub_B16FFC(&StringLiteral_17938/*"dialogMessage_{0}_{1}"*/, v8);
     byte_40FBC7C = 1;
   }
   static_fields = (BattleServantConfConponent_o *)DialogMessageMaster_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_17938;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17938;
+  v10 = (System_Int32_array **)StringLiteral_17938/*"dialogMessage_{0}_{1}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17938/*"dialogMessage_{0}_{1}"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 

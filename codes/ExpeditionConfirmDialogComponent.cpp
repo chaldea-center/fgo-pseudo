@@ -594,17 +594,17 @@ void __fastcall ExpeditionConfirmDialogComponent__Open(
     sub_B16FFC(&Method_ExpeditionConfirmDialogComponent___c__DisplayClass26_0__Open_b__1__, v33);
     sub_B16FFC(&ExpeditionConfirmDialogComponent___c__DisplayClass26_0_TypeInfo, v34);
     sub_B16FFC(&ExpeditionConfirmDialogComponent___c_TypeInfo, v35);
-    sub_B16FFC(&StringLiteral_3263, v36);
-    sub_B16FFC(&StringLiteral_5756, v37);
-    sub_B16FFC(&StringLiteral_5753, v38);
-    sub_B16FFC(&StringLiteral_5755, v39);
-    sub_B16FFC(&StringLiteral_5752, v40);
-    sub_B16FFC(&StringLiteral_3251, v41);
-    sub_B16FFC(&StringLiteral_5760, v42);
-    sub_B16FFC(&StringLiteral_3264, v43);
-    sub_B16FFC(&StringLiteral_5761, v44);
-    sub_B16FFC(&StringLiteral_1, v45);
-    sub_B16FFC(&StringLiteral_5757, v46);
+    sub_B16FFC(&StringLiteral_3263/*"COMMON_COUNT_OPERATOR_CROSS"*/, v36);
+    sub_B16FFC(&StringLiteral_5756/*"EXPEDITION_CONFIRM_DIALOG_DECIDE"*/, v37);
+    sub_B16FFC(&StringLiteral_5753/*"EXPEDITION_CONFIRM_DIALOG_ACQUIRED_REWARD"*/, v38);
+    sub_B16FFC(&StringLiteral_5755/*"EXPEDITION_CONFIRM_DIALOG_CONSUMPTION"*/, v39);
+    sub_B16FFC(&StringLiteral_5752/*"EXPEDITION_CONFIRM_DIALOG_ACQUIRED_POINT"*/, v40);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v41);
+    sub_B16FFC(&StringLiteral_5760/*"EXPEDITION_CONFIRM_DIALOG_TITLE"*/, v42);
+    sub_B16FFC(&StringLiteral_3264/*"COMMON_COUNT_OPERATOR_PLUS"*/, v43);
+    sub_B16FFC(&StringLiteral_5761/*"EXPEDITION_CONFIRM_DIALOG_WARNIG_MESSAGE"*/, v44);
+    sub_B16FFC(&StringLiteral_1/*""*/, v45);
+    sub_B16FFC(&StringLiteral_5757/*"EXPEDITION_CONFIRM_DIALOG_DESCRIPTION"*/, v46);
     byte_40FACF0 = 1;
   }
   entity = 0LL;
@@ -671,7 +671,7 @@ void __fastcall ExpeditionConfirmDialogComponent__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v81 = LocalizationManager__Get((System_String_o *)StringLiteral_3263, 0LL);
+    v81 = LocalizationManager__Get((System_String_o *)StringLiteral_3263/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0LL);
     v82 = System_Int32__ToString((int)v77 + 32, 0LL);
     v83 = System_String__Concat_43743732(v81, v82, 0LL);
     if ( !consumptionNumLabel )
@@ -718,37 +718,37 @@ void __fastcall ExpeditionConfirmDialogComponent__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v92 = LocalizationManager__Get((System_String_o *)StringLiteral_5760, 0LL);
+  v92 = LocalizationManager__Get((System_String_o *)StringLiteral_5760/*"EXPEDITION_CONFIRM_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_109;
   UILabel__set_text(titleLabel, v92, 0LL);
   dialogDescriptionLabel = this->fields.dialogDescriptionLabel;
-  v94 = LocalizationManager__Get((System_String_o *)StringLiteral_5757, 0LL);
+  v94 = LocalizationManager__Get((System_String_o *)StringLiteral_5757/*"EXPEDITION_CONFIRM_DIALOG_DESCRIPTION"*/, 0LL);
   if ( !dialogDescriptionLabel )
     goto LABEL_109;
   UILabel__set_text(dialogDescriptionLabel, v94, 0LL);
   consumptionLabel = this->fields.consumptionLabel;
-  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_5755, 0LL);
+  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_5755/*"EXPEDITION_CONFIRM_DIALOG_CONSUMPTION"*/, 0LL);
   if ( !consumptionLabel )
     goto LABEL_109;
   UILabel__set_text(consumptionLabel, v96, 0LL);
   acquiredRewardLabel = this->fields.acquiredRewardLabel;
-  v98 = LocalizationManager__Get((System_String_o *)StringLiteral_5753, 0LL);
+  v98 = LocalizationManager__Get((System_String_o *)StringLiteral_5753/*"EXPEDITION_CONFIRM_DIALOG_ACQUIRED_REWARD"*/, 0LL);
   if ( !acquiredRewardLabel )
     goto LABEL_109;
   UILabel__set_text(acquiredRewardLabel, v98, 0LL);
   acquiredPointLabel = this->fields.acquiredPointLabel;
-  v100 = LocalizationManager__Get((System_String_o *)StringLiteral_5752, 0LL);
+  v100 = LocalizationManager__Get((System_String_o *)StringLiteral_5752/*"EXPEDITION_CONFIRM_DIALOG_ACQUIRED_POINT"*/, 0LL);
   if ( !acquiredPointLabel )
     goto LABEL_109;
   UILabel__set_text(acquiredPointLabel, v100, 0LL);
   buttonCancelLabel = this->fields.buttonCancelLabel;
-  v102 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v102 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !buttonCancelLabel )
     goto LABEL_109;
   UILabel__set_text(buttonCancelLabel, v102, 0LL);
   buttonDecideLabel = this->fields.buttonDecideLabel;
-  v104 = LocalizationManager__Get((System_String_o *)StringLiteral_5756, 0LL);
+  v104 = LocalizationManager__Get((System_String_o *)StringLiteral_5756/*"EXPEDITION_CONFIRM_DIALOG_DECIDE"*/, 0LL);
   if ( !buttonDecideLabel )
     goto LABEL_109;
   UILabel__set_text(buttonDecideLabel, v104, 0LL);
@@ -800,7 +800,7 @@ LABEL_45:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v114 = LocalizationManager__Get((System_String_o *)StringLiteral_5761, 0LL);
+  v114 = LocalizationManager__Get((System_String_o *)StringLiteral_5761/*"EXPEDITION_CONFIRM_DIALOG_WARNIG_MESSAGE"*/, 0LL);
   Name = (Il2CppObject *)CommonConsumeEntity__GetName(v77, 0LL);
   v116 = System_String__Format(v114, Name, 0LL);
   if ( !confirmationWarningLabel )
@@ -899,7 +899,7 @@ LABEL_45:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v142 = &StringLiteral_3264;
+    v142 = &StringLiteral_3264/*"COMMON_COUNT_OPERATOR_PLUS"*/;
   }
   else
   {
@@ -908,7 +908,7 @@ LABEL_45:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v142 = &StringLiteral_3263;
+    v142 = &StringLiteral_3263/*"COMMON_COUNT_OPERATOR_CROSS"*/;
   }
   v144 = LocalizationManager__Get((System_String_o *)*v142, 0LL);
   p_rewardNumLabel = &this->fields.rewardNumLabel;

@@ -117,9 +117,9 @@ void __fastcall BattleCommand__setSprite(UISprite_o *sprite, int32_t type, const
 
   if ( (byte_40F697A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19244, *(_QWORD *)&type);
-    sub_B16FFC(&StringLiteral_19242, v5);
-    sub_B16FFC(&StringLiteral_19241, v6);
+    sub_B16FFC(&StringLiteral_19244/*"icon_commandcard_quick"*/, *(_QWORD *)&type);
+    sub_B16FFC(&StringLiteral_19242/*"icon_commandcard_buster"*/, v5);
+    sub_B16FFC(&StringLiteral_19241/*"icon_commandcard_arts"*/, v6);
     byte_40F697A = 1;
   }
   switch ( type )
@@ -128,7 +128,7 @@ void __fastcall BattleCommand__setSprite(UISprite_o *sprite, int32_t type, const
       if ( sprite )
       {
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)sprite, 1, 0LL);
-        v7 = &StringLiteral_19244;
+        v7 = &StringLiteral_19244/*"icon_commandcard_quick"*/;
         goto LABEL_12;
       }
       goto LABEL_15;
@@ -136,7 +136,7 @@ void __fastcall BattleCommand__setSprite(UISprite_o *sprite, int32_t type, const
       if ( sprite )
       {
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)sprite, 1, 0LL);
-        v7 = &StringLiteral_19242;
+        v7 = &StringLiteral_19242/*"icon_commandcard_buster"*/;
         goto LABEL_12;
       }
 LABEL_15:
@@ -145,7 +145,7 @@ LABEL_15:
       if ( sprite )
       {
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)sprite, 1, 0LL);
-        v7 = &StringLiteral_19241;
+        v7 = &StringLiteral_19241/*"icon_commandcard_arts"*/;
 LABEL_12:
         UISprite__set_spriteName(sprite, (System_String_o *)*v7, 0LL);
         return;

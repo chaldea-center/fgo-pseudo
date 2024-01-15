@@ -19,11 +19,11 @@ void __fastcall SupportServantEquipListViewManager___cctor(const MethodInfo *met
   {
     sub_B16FFC(&ListViewSort_TypeInfo, v1);
     sub_B16FFC(&SupportServantEquipListViewManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_13114, v6);
+    sub_B16FFC(&StringLiteral_13114/*"SupportServantEquip"*/, v6);
     byte_40FD9E2 = 1;
   }
   v7 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_13114, 3, 0, 0LL);
+  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_13114/*"SupportServantEquip"*/, 3, 0, 0LL);
   static_fields = (BattleServantConfConponent_o *)SupportServantEquipListViewManager_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v7;
   sub_B16F98(static_fields, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
@@ -224,8 +224,8 @@ void __fastcall SupportServantEquipListViewManager__CreateList(
     sub_B16FFC(&SupportServantEquipListViewItem_TypeInfo, v20);
     sub_B16FFC(&SupportServantEquipListViewManager_TypeInfo, v21);
     sub_B16FFC(&SupportServantEquipServantItem_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_11651, v23);
-    this = (SupportServantEquipListViewManager_o *)sub_B16FFC(&StringLiteral_11842, v24);
+    sub_B16FFC(&StringLiteral_11651/*"SERVANT_EQUIP_EMPTY"*/, v23);
+    this = (SupportServantEquipListViewManager_o *)sub_B16FFC(&StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, v24);
     byte_40FD9C9 = 1;
   }
   entity = 0LL;
@@ -457,7 +457,7 @@ LABEL_48:
   if ( !v102 )
     goto LABEL_57;
   emptyMessageLabel = v116->fields.emptyMessageLabel;
-  v104 = (System_String_o **)(v102->fields._size <= 0 ? &StringLiteral_11651 : &StringLiteral_11842);
+  v104 = (System_String_o **)(v102->fields._size <= 0 ? &StringLiteral_11651/*"SERVANT_EQUIP_EMPTY"*/ : &StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/);
   v105 = *v104;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -2155,7 +2155,7 @@ void __fastcall SupportServantEquipListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_SupportServantEquipListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_SupportServantEquipListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_SupportServantEquipListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FD9CE = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -2170,7 +2170,7 @@ void __fastcall SupportServantEquipListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -2240,7 +2240,7 @@ void __fastcall SupportServantEquipListViewManager__RequestListObject_31915640(
     sub_B16FFC(&Method_System_Collections_Generic_List_SupportServantEquipListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_SupportServantEquipListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_SupportServantEquipListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FD9CF = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -2255,7 +2255,7 @@ void __fastcall SupportServantEquipListViewManager__RequestListObject_31915640(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2303,8 +2303,8 @@ void __fastcall SupportServantEquipListViewManager__SetFilterButtonImage(
 
   if ( (byte_40FD9D8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16927, method);
-    sub_B16FFC(&StringLiteral_16926, v3);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, method);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v3);
     byte_40FD9D8 = 1;
   }
   sort = this->fields.sort;
@@ -2313,9 +2313,9 @@ void __fastcall SupportServantEquipListViewManager__SetFilterButtonImage(
   {
     sub_B170D4();
   }
-  v7 = (System_String_o **)&StringLiteral_16926;
+  v7 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
   if ( !v6 )
-    v7 = (System_String_o **)&StringLiteral_16927;
+    v7 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
   UISprite__set_spriteName(filterSprite, *v7, 0LL);
 }
 
@@ -2498,12 +2498,12 @@ void __fastcall SupportServantEquipListViewManager__SetSortButtonImage(
   if ( (byte_40FD9DD & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_17038, v4);
-    sub_B16FFC(&StringLiteral_16995, v5);
-    sub_B16FFC(&StringLiteral_16985, v6);
-    sub_B16FFC(&StringLiteral_17002, v7);
-    sub_B16FFC(&StringLiteral_16952, v8);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v4);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v5);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v6);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v7);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v8);
     byte_40FD9DD = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -2540,7 +2540,7 @@ void __fastcall SupportServantEquipListViewManager__SetSortButtonImage(
       sortExplanationSprite = this->fields.sortExplanationSprite;
       if ( !sortExplanationSprite )
         goto LABEL_43;
-      v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+      v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
       UISprite__set_spriteName(sortExplanationSprite, *v17, 0LL);
       v18 = this->fields.sort;
       if ( !v18 )
@@ -2549,15 +2549,15 @@ void __fastcall SupportServantEquipListViewManager__SetSortButtonImage(
       if ( !v19 )
         goto LABEL_43;
       isAscendingOrder = v18->fields.isAscendingOrder;
-      v21 = (System_String_o **)&StringLiteral_16952;
-      v22 = (System_String_o **)&StringLiteral_16955;
+      v21 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+      v22 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
     }
     else
     {
       v23 = this->fields.sortExplanationSprite;
       if ( !v23 )
         goto LABEL_43;
-      v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+      v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
       UISprite__set_spriteName(v23, *v24, 0LL);
       v25 = this->fields.sort;
       if ( !v25 )
@@ -2566,8 +2566,8 @@ void __fastcall SupportServantEquipListViewManager__SetSortButtonImage(
       if ( !v19 )
         goto LABEL_43;
       isAscendingOrder = v25->fields.isAscendingOrder;
-      v21 = (System_String_o **)&StringLiteral_16955;
-      v22 = (System_String_o **)&StringLiteral_16952;
+      v21 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+      v22 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
     }
     if ( isAscendingOrder )
       v26 = v21;
@@ -2734,7 +2734,7 @@ void __fastcall SupportServantEquipListViewManager__checkEquipChange(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v10);
     sub_B16FFC(&Method_SupportServantEquipListViewManager_EndConfirmMenu__, v11);
     sub_B16FFC(&SupportServantEquipListViewObject_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FD9D3 = 1;
   }
   if ( !selectItem )

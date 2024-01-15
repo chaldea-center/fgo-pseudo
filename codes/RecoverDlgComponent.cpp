@@ -281,8 +281,8 @@ void __fastcall RecoverDlgComponent__OpenApRecvItemDlg(
     sub_B16FFC(&Method_RecoverDlgComponent_EndOpen__, v17);
     sub_B16FFC(&Method_RecoverDlgComponent_requestRecover__, v18);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
-    sub_B16FFC(&StringLiteral_1724, v20);
-    sub_B16FFC(&StringLiteral_1725, v21);
+    sub_B16FFC(&StringLiteral_1724/*"APRECV_TITILE_DETAIL_TXT"*/, v20);
+    sub_B16FFC(&StringLiteral_1725/*"APRECV_TITILE_TXT"*/, v21);
     byte_40F82F5 = 1;
   }
   RecoverDlgComponent__clearInfoGrid(this, *(const MethodInfo **)&needAp);
@@ -303,12 +303,12 @@ void __fastcall RecoverDlgComponent__OpenApRecvItemDlg(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_1725, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_1725/*"APRECV_TITILE_TXT"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_36;
   UILabel__set_text(titleLabel, v29, 0LL);
   titleDetailLabel = this->fields.titleDetailLabel;
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_1724, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_1724/*"APRECV_TITILE_DETAIL_TXT"*/, 0LL);
   if ( !titleDetailLabel )
     goto LABEL_36;
   UILabel__set_text(titleDetailLabel, v31, 0LL);
@@ -512,8 +512,8 @@ void __fastcall RecoverDlgComponent__OpenRpRecvItemDlg(
     sub_B16FFC(&Method_RecoverDlgComponent_EndOpen__, v13);
     sub_B16FFC(&Method_RecoverDlgComponent_requestRecover__, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_11222, v16);
-    sub_B16FFC(&StringLiteral_11221, v17);
+    sub_B16FFC(&StringLiteral_11222/*"RPRECV_TITILE_TXT"*/, v16);
+    sub_B16FFC(&StringLiteral_11221/*"RPRECV_TITILE_DETAIL_TXT"*/, v17);
     byte_40F82F7 = 1;
   }
   RecoverDlgComponent__clearInfoGrid(this, *(const MethodInfo **)&needRp);
@@ -533,12 +533,12 @@ void __fastcall RecoverDlgComponent__OpenRpRecvItemDlg(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_11222, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_11222/*"RPRECV_TITILE_TXT"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_23;
   UILabel__set_text(titleLabel, v25, 0LL);
   titleDetailLabel = this->fields.titleDetailLabel;
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_11221, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_11221/*"RPRECV_TITILE_DETAIL_TXT"*/, 0LL);
   if ( !titleDetailLabel )
     goto LABEL_23;
   UILabel__set_text(titleDetailLabel, v27, 0LL);
@@ -842,10 +842,10 @@ System_String_o *__fastcall RecoverDlgComponent__get_closeBtnPath(
 {
   if ( (byte_40F82FD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2732, method);
+    sub_B16FFC(&StringLiteral_2732/*"BaseWindow/CloseBtn"*/, method);
     byte_40F82FD = 1;
   }
-  return (System_String_o *)StringLiteral_2732;
+  return (System_String_o *)StringLiteral_2732/*"BaseWindow/CloseBtn"*/;
 }
 
 
@@ -940,7 +940,7 @@ void __fastcall RecoverDlgComponent__requestRecover(
     sub_B16FFC(&Method_RecoverDlgComponent_EndRequestUserGameActRecover__, v13);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v14);
     sub_B16FFC(&RecoverType_Type_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_21688, v16);
+    sub_B16FFC(&StringLiteral_21688/*"requestApItem Param: {0}, {1}, {2}"*/, v16);
     byte_40F82FB = 1;
   }
   v33 = type;
@@ -949,7 +949,7 @@ void __fastcall RecoverDlgComponent__requestRecover(
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32);
   v31 = num;
   v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31);
-  System_String__Format_43744796((System_String_o *)StringLiteral_21688, v17, v18, v19, 0LL);
+  System_String__Format_43744796((System_String_o *)StringLiteral_21688/*"requestApItem Param: {0}, {1}, {2}"*/, v17, v18, v19, 0LL);
   switch ( type )
   {
     case 1:

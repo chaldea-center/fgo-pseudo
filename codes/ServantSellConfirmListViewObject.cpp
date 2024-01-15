@@ -352,8 +352,8 @@ void __fastcall ServantSellConfirmListViewObject__OnClickSelect(
     sub_B16FFC(&ServantSellConfirmListViewManager_TypeInfo, v3);
     sub_B16FFC(&SoundManager_TypeInfo, v4);
     sub_B16FFC(&TutorialFlag_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_9938, v6);
-    sub_B16FFC(&StringLiteral_9934, v7);
+    sub_B16FFC(&StringLiteral_9938/*"OnClickSelectListView"*/, v6);
+    sub_B16FFC(&StringLiteral_9934/*"OnClickLockModeItem"*/, v7);
     byte_40FBBF7 = 1;
   }
   linkItem = this->fields.linkItem;
@@ -387,7 +387,7 @@ LABEL_14:
       Item = ServantSellConfirmListViewObject__GetItem(this, (const MethodInfo *)v9);
       if ( manager )
       {
-        v15 = &StringLiteral_9938;
+        v15 = &StringLiteral_9938/*"OnClickSelectListView"*/;
         v16 = (Il2CppObject *)Item;
         v17 = (UnityEngine_Component_o *)manager;
 LABEL_26:
@@ -413,7 +413,7 @@ LABEL_33:
       if ( !TutorialFlag__Get_28023340(126, 0LL) )
       {
 LABEL_25:
-        v15 = &StringLiteral_9934;
+        v15 = &StringLiteral_9934/*"OnClickLockModeItem"*/;
         v17 = (UnityEngine_Component_o *)v13;
         v16 = (Il2CppObject *)linkItem;
         goto LABEL_26;
@@ -554,8 +554,8 @@ void __fastcall ServantSellConfirmListViewObject__OnLongRelease(
   if ( (byte_40FBBFA & 1) == 0 )
   {
     sub_B16FFC(&ServantSellConfirmListViewManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9991, v3);
-    sub_B16FFC(&StringLiteral_3546, v4);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, v3);
+    sub_B16FFC(&StringLiteral_3546/*"CancelDragEnd"*/, v4);
     byte_40FBBFA = 1;
   }
   if ( this->fields.linkItem )
@@ -571,14 +571,14 @@ void __fastcall ServantSellConfirmListViewObject__OnLongRelease(
           return;
         UnityEngine_Component__SendMessage_40674196(
           (UnityEngine_Component_o *)manager,
-          (System_String_o *)StringLiteral_3546,
+          (System_String_o *)StringLiteral_3546/*"CancelDragEnd"*/,
           0LL);
         v7 = (UnityEngine_Component_o *)this->fields.manager;
         if ( v7 )
         {
           UnityEngine_Component__SendMessage(
             v7,
-            (System_String_o *)StringLiteral_9991,
+            (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/,
             (Il2CppObject *)this->fields.linkItem,
             0LL);
           return;

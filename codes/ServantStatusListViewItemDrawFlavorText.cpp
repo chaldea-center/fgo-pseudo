@@ -73,7 +73,7 @@ void __fastcall ServantStatusListViewItemDrawFlavorText__SetItem(
   if ( (byte_40FDEA1 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, item);
-    this = (ServantStatusListViewItemDrawFlavorText_o *)sub_B16FFC(&StringLiteral_1, v7);
+    this = (ServantStatusListViewItemDrawFlavorText_o *)sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FDEA1 = 1;
   }
   LODWORD(v6->fields.baseButton) = mode;
@@ -84,7 +84,7 @@ void __fastcall ServantStatusListViewItemDrawFlavorText__SetItem(
     if ( svtCommentEntityList )
     {
       max_length = svtCommentEntityList->max_length;
-      Comment = (System_String_o *)StringLiteral_1;
+      Comment = (System_String_o *)StringLiteral_1/*""*/;
       if ( max_length >= 1 )
       {
         v11 = 0;

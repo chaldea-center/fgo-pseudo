@@ -58,26 +58,26 @@ void __fastcall ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *
 
   if ( (byte_40FB96A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2860, method);
-    sub_B16FFC(&StringLiteral_2857, v9);
-    sub_B16FFC(&StringLiteral_2861, v10);
-    sub_B16FFC(&StringLiteral_2862, v11);
-    sub_B16FFC(&StringLiteral_2858, v12);
-    sub_B16FFC(&StringLiteral_2859, v13);
-    sub_B16FFC(&StringLiteral_2813, v14);
+    sub_B16FFC(&StringLiteral_2860/*"BrightTurnTransition"*/, method);
+    sub_B16FFC(&StringLiteral_2857/*"BrightTurn"*/, v9);
+    sub_B16FFC(&StringLiteral_2861/*"BrightTurnTransitionRoadOn"*/, v10);
+    sub_B16FFC(&StringLiteral_2862/*"BrightTurnUnLock"*/, v11);
+    sub_B16FFC(&StringLiteral_2858/*"BrightTurnRoadOn"*/, v12);
+    sub_B16FFC(&StringLiteral_2859/*"BrightTurnRoadOnUnLock"*/, v13);
+    sub_B16FFC(&StringLiteral_2813/*"BlackOutTransition"*/, v14);
     byte_40FB96A = 1;
   }
-  v15 = (System_Int32_array **)StringLiteral_2857;
-  this->fields.animNameBrightTurn = (struct System_String_o *)StringLiteral_2857;
+  v15 = (System_Int32_array **)StringLiteral_2857/*"BrightTurn"*/;
+  this->fields.animNameBrightTurn = (struct System_String_o *)StringLiteral_2857/*"BrightTurn"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.animNameBrightTurn, v15, v2, v3, v4, v5, v6, v7);
-  v16 = (System_Int32_array **)StringLiteral_2858;
-  this->fields.animNameBrightTurnRoadOn = (struct System_String_o *)StringLiteral_2858;
+  v16 = (System_Int32_array **)StringLiteral_2858/*"BrightTurnRoadOn"*/;
+  this->fields.animNameBrightTurnRoadOn = (struct System_String_o *)StringLiteral_2858/*"BrightTurnRoadOn"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.animNameBrightTurnRoadOn, v16, v17, v18, v19, v20, v21, v22);
-  v23 = (System_Int32_array **)StringLiteral_2862;
-  this->fields.animNameBrightTurnUnlock = (struct System_String_o *)StringLiteral_2862;
+  v23 = (System_Int32_array **)StringLiteral_2862/*"BrightTurnUnLock"*/;
+  this->fields.animNameBrightTurnUnlock = (struct System_String_o *)StringLiteral_2862/*"BrightTurnUnLock"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.animNameBrightTurnUnlock, v23, v24, v25, v26, v27, v28, v29);
-  v30 = (System_Int32_array **)StringLiteral_2859;
-  this->fields.animNameBrightTurnRoadOnUnlock = (struct System_String_o *)StringLiteral_2859;
+  v30 = (System_Int32_array **)StringLiteral_2859/*"BrightTurnRoadOnUnLock"*/;
+  this->fields.animNameBrightTurnRoadOnUnlock = (struct System_String_o *)StringLiteral_2859/*"BrightTurnRoadOnUnLock"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.animNameBrightTurnRoadOnUnlock,
     v30,
@@ -87,8 +87,8 @@ void __fastcall ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *
     v34,
     v35,
     v36);
-  v37 = (System_Int32_array **)StringLiteral_2860;
-  this->fields.animNameBrightTurnTransition = (struct System_String_o *)StringLiteral_2860;
+  v37 = (System_Int32_array **)StringLiteral_2860/*"BrightTurnTransition"*/;
+  this->fields.animNameBrightTurnTransition = (struct System_String_o *)StringLiteral_2860/*"BrightTurnTransition"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.animNameBrightTurnTransition,
     v37,
@@ -98,8 +98,8 @@ void __fastcall ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *
     v41,
     v42,
     v43);
-  v44 = (System_Int32_array **)StringLiteral_2861;
-  this->fields.animNameBrightTurnTransitionRoadOn = (struct System_String_o *)StringLiteral_2861;
+  v44 = (System_Int32_array **)StringLiteral_2861/*"BrightTurnTransitionRoadOn"*/;
+  this->fields.animNameBrightTurnTransitionRoadOn = (struct System_String_o *)StringLiteral_2861/*"BrightTurnTransitionRoadOn"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.animNameBrightTurnTransitionRoadOn,
     v44,
@@ -109,8 +109,8 @@ void __fastcall ClassBoardLine___ctor(ClassBoardLine_o *this, const MethodInfo *
     v48,
     v49,
     v50);
-  v51 = (System_Int32_array **)StringLiteral_2813;
-  this->fields.animNameBlackOutTransition = (struct System_String_o *)StringLiteral_2813;
+  v51 = (System_Int32_array **)StringLiteral_2813/*"BlackOutTransition"*/;
+  this->fields.animNameBlackOutTransition = (struct System_String_o *)StringLiteral_2813/*"BlackOutTransition"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.animNameBlackOutTransition,
     v51,
@@ -1298,7 +1298,7 @@ void __fastcall ClassBoardLine__Setup(
     sub_B16FFC(&IClassBoardLineModel_TypeInfo, v12);
     sub_B16FFC(&IClassBoardSquareModel_TypeInfo, v13);
     sub_B16FFC(&string___TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_15842, v15);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v15);
     byte_40FB963 = 1;
   }
   v118 = 0;
@@ -1331,13 +1331,13 @@ void __fastcall ClassBoardLine__Setup(
     goto LABEL_64;
   v19->m_Items[0] = (System_String_o *)v28;
   sub_B16F98((BattleServantConfConponent_o *)v19->m_Items, v28, v22, v23, v24, v25, v26, v27);
-  name = (System_String_o *)StringLiteral_15842;
-  if ( StringLiteral_15842 )
+  name = (System_String_o *)StringLiteral_15842/*"_"*/;
+  if ( StringLiteral_15842/*"_"*/ )
   {
-    name = (System_String_o *)sub_B170BC(StringLiteral_15842, v19->obj.klass->_1.element_class);
+    name = (System_String_o *)sub_B170BC(StringLiteral_15842/*"_"*/, v19->obj.klass->_1.element_class);
     if ( !name )
       goto LABEL_65;
-    v21 = (System_Int32_array **)StringLiteral_15842;
+    v21 = (System_Int32_array **)StringLiteral_15842/*"_"*/;
   }
   else
   {
@@ -1404,13 +1404,13 @@ LABEL_25:
     goto LABEL_64;
   v19->m_Items[2] = (System_String_o *)v49;
   sub_B16F98((BattleServantConfConponent_o *)&v19->m_Items[2], v49, v22, v44, v45, v46, v47, v48);
-  name = (System_String_o *)StringLiteral_15842;
-  if ( StringLiteral_15842 )
+  name = (System_String_o *)StringLiteral_15842/*"_"*/;
+  if ( StringLiteral_15842/*"_"*/ )
   {
-    name = (System_String_o *)sub_B170BC(StringLiteral_15842, v19->obj.klass->_1.element_class);
+    name = (System_String_o *)sub_B170BC(StringLiteral_15842/*"_"*/, v19->obj.klass->_1.element_class);
     if ( !name )
       goto LABEL_65;
-    v21 = (System_Int32_array **)StringLiteral_15842;
+    v21 = (System_Int32_array **)StringLiteral_15842/*"_"*/;
   }
   else
   {

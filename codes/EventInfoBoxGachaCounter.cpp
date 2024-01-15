@@ -487,8 +487,8 @@ void __fastcall EventInfoBoxGachaCounter__SetTotalBoxGacha(
     sub_B16FFC(&System_Math_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
     sub_B16FFC(&string_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_5718, v10);
-    sub_B16FFC(&StringLiteral_5719, v11);
+    sub_B16FFC(&StringLiteral_5718/*"EVENT_TOTALBOXGACHA_NEXT_FORMAT"*/, v10);
+    sub_B16FFC(&StringLiteral_5719/*"EVENT_TOTALBOXGACHA_TOTAL_FORMAT"*/, v11);
     byte_40FB6F4 = 1;
   }
   if ( !obj )
@@ -522,7 +522,7 @@ LABEL_47:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5719, 0LL);
+        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5719/*"EVENT_TOTALBOXGACHA_TOTAL_FORMAT"*/, 0LL);
         totalCount = this->fields.totalCount;
         v19 = v17;
         v20 = EventInfoBoxGachaCounter_TypeInfo;
@@ -560,7 +560,7 @@ LABEL_47:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_5718, 0LL);
+      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_5718/*"EVENT_TOTALBOXGACHA_NEXT_FORMAT"*/, 0LL);
       v27 = this->fields.nextCount;
       v28 = v26;
       v29 = EventInfoBoxGachaCounter_TypeInfo;
@@ -628,10 +628,10 @@ void __fastcall EventInfoBoxGachaCounter__Setup(
   if ( (byte_40FB6F2 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, entity);
-    sub_B16FFC(&StringLiteral_16845, v4);
-    sub_B16FFC(&StringLiteral_16846, v5);
-    sub_B16FFC(&StringLiteral_16847, v6);
-    sub_B16FFC(&StringLiteral_16844, v7);
+    sub_B16FFC(&StringLiteral_16845/*"box_status_side_02"*/, v4);
+    sub_B16FFC(&StringLiteral_16846/*"box_status_side_03"*/, v5);
+    sub_B16FFC(&StringLiteral_16847/*"box_status_side_04"*/, v6);
+    sub_B16FFC(&StringLiteral_16844/*"box_status_side_01"*/, v7);
     byte_40FB6F2 = 1;
   }
   this->fields.totalCount = 0LL;
@@ -639,10 +639,10 @@ void __fastcall EventInfoBoxGachaCounter__Setup(
   totalCounterBg = this->fields.totalCounterBg;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(totalCounterBg, (System_String_o *)StringLiteral_16844, 0LL);
-  AtlasManager__SetEventUI(this->fields.nextCounterBg, (System_String_o *)StringLiteral_16845, 0LL);
-  AtlasManager__SetEventUI(this->fields.accessorySp, (System_String_o *)StringLiteral_16846, 0LL);
-  AtlasManager__SetEventUI(this->fields.completeSprite, (System_String_o *)StringLiteral_16847, 0LL);
+  AtlasManager__SetEventUI(totalCounterBg, (System_String_o *)StringLiteral_16844/*"box_status_side_01"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.nextCounterBg, (System_String_o *)StringLiteral_16845/*"box_status_side_02"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.accessorySp, (System_String_o *)StringLiteral_16846/*"box_status_side_03"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.completeSprite, (System_String_o *)StringLiteral_16847/*"box_status_side_04"*/, 0LL);
   EventInfoBoxGachaCounter__UpdatePosition(this, v9);
 }
 

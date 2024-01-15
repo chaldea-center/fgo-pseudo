@@ -167,11 +167,11 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
 
   if ( (byte_40FA8F4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23854, method);
-    sub_B16FFC(&StringLiteral_23857, v3);
-    sub_B16FFC(&StringLiteral_23855, v4);
-    sub_B16FFC(&StringLiteral_9236, v5);
-    sub_B16FFC(&StringLiteral_23853, v6);
+    sub_B16FFC(&StringLiteral_23854/*"（＋"*/, method);
+    sub_B16FFC(&StringLiteral_23857/*"＋ "*/, v3);
+    sub_B16FFC(&StringLiteral_23855/*"）"*/, v4);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v5);
+    sub_B16FFC(&StringLiteral_23853/*"（"*/, v6);
     byte_40FA8F4 = 1;
   }
   v65 = 0;
@@ -208,8 +208,8 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
     }
     else
     {
-      v8 = System_Int32__ToString_38275808((int)this + 168, (System_String_o *)StringLiteral_9236, 0LL);
-      v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_23857, v8, 0LL);
+      v8 = System_Int32__ToString_38275808((int)this + 168, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
+      v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_23857/*"＋ "*/, v8, 0LL);
       if ( atlabel )
       {
         UILabel__set_text(atlabel, v9, 0LL);
@@ -223,7 +223,7 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
             v12 = this->fields.bonuslabel;
             if ( v12 )
             {
-              UILabel__set_text(v12, (System_String_o *)StringLiteral_23853, 0LL);
+              UILabel__set_text(v12, (System_String_o *)StringLiteral_23853/*"（"*/, 0LL);
               v13 = this->fields.bonuslabel;
               if ( v13 )
               {
@@ -234,12 +234,12 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
                   parenthesisAjust = this->fields.parenthesisAjust;
                   mText = v15->fields.mText;
                   v18 = v14;
-                  v19 = System_Int32__ToString_38275808((int32_t)&v65, (System_String_o *)StringLiteral_9236, 0LL);
+                  v19 = System_Int32__ToString_38275808((int32_t)&v65, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
                   v20 = System_String__Concat_43747144(
                           mText,
-                          (System_String_o *)StringLiteral_23854,
+                          (System_String_o *)StringLiteral_23854/*"（＋"*/,
                           v19,
-                          (System_String_o *)StringLiteral_23855,
+                          (System_String_o *)StringLiteral_23855/*"）"*/,
                           0LL);
                   if ( this->fields.bonuslabel )
                   {
@@ -262,11 +262,11 @@ void __fastcall BattleResultBondsIconComponent__LayoutFriendshipValue(
                         v26 = v24 / (float)(UILabel__get_printedSize(v25, 0LL).fields.x - v22);
                       }
                       v32 = this->fields.bonuslabel;
-                      v33 = System_Int32__ToString_38275808((int32_t)&v65, (System_String_o *)StringLiteral_9236, 0LL);
+                      v33 = System_Int32__ToString_38275808((int32_t)&v65, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
                       v34 = System_String__Concat_43746016(
-                              (System_String_o *)StringLiteral_23854,
+                              (System_String_o *)StringLiteral_23854/*"（＋"*/,
                               v33,
-                              (System_String_o *)StringLiteral_23855,
+                              (System_String_o *)StringLiteral_23855/*"）"*/,
                               0LL);
                       if ( v32 )
                       {
@@ -487,9 +487,9 @@ bool __fastcall BattleResultBondsIconComponent__changeGauge(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
     sub_B16FFC(&IFriendshipGauge_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_23743, v7);
-    sub_B16FFC(&StringLiteral_23857, v8);
-    sub_B16FFC(&StringLiteral_9236, v9);
+    sub_B16FFC(&StringLiteral_23743/*"ーーー"*/, v7);
+    sub_B16FFC(&StringLiteral_23857/*"＋ "*/, v8);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v9);
     byte_40FA8F3 = 1;
   }
   v41[0] = 0;
@@ -581,12 +581,12 @@ LABEL_9:
       {
         if ( !v26 )
           goto LABEL_46;
-        UILabel__set_text(this->fields.atlabel, (System_String_o *)StringLiteral_23743, 0LL);
+        UILabel__set_text(this->fields.atlabel, (System_String_o *)StringLiteral_23743/*"ーーー"*/, 0LL);
       }
       else
       {
-        v27 = System_Int32__ToString_38275808((int32_t)&v39, (System_String_o *)StringLiteral_9236, 0LL);
-        v28 = System_String__Concat_43743732((System_String_o *)StringLiteral_23857, v27, 0LL);
+        v27 = System_Int32__ToString_38275808((int32_t)&v39, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
+        v28 = System_String__Concat_43743732((System_String_o *)StringLiteral_23857/*"＋ "*/, v27, 0LL);
         if ( !v26 )
           goto LABEL_46;
         UILabel__set_text(v26, v28, 0LL);

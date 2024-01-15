@@ -21,11 +21,11 @@ System_String_o *__fastcall ShopHelpListViewItemDraw__GetInfoText(
 {
   if ( (byte_40FB729 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, imageName);
+    sub_B16FFC(&StringLiteral_1/*""*/, imageName);
     byte_40FB729 = 1;
   }
   if ( System_String__IsNullOrEmpty(imageName, 0LL) )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   else
     return infoText;
 }
@@ -162,9 +162,9 @@ void __fastcall ShopHelpListViewItemDraw__SetItem(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_19580, v8);
-    sub_B16FFC(&StringLiteral_19532, v9);
-    sub_B16FFC(&StringLiteral_19579, v10);
+    sub_B16FFC(&StringLiteral_19580/*"img_tutorial_txtbg_sq"*/, v8);
+    sub_B16FFC(&StringLiteral_19532/*"img_shop_0"*/, v9);
+    sub_B16FFC(&StringLiteral_19579/*"img_tutorial_txtbg"*/, v10);
     byte_40FB728 = 1;
   }
   if ( item )
@@ -205,8 +205,8 @@ void __fastcall ShopHelpListViewItemDraw__SetItem(
             if ( baseTextSprite )
             {
               v20 = (System_String_o **)(v18->fields._Kind_k__BackingField == 6
-                                       ? &StringLiteral_19580
-                                       : &StringLiteral_19579);
+                                       ? &StringLiteral_19580/*"img_tutorial_txtbg_sq"*/
+                                       : &StringLiteral_19579/*"img_tutorial_txtbg"*/);
               UISprite__set_spriteName(baseTextSprite, *v20, 0LL);
               v21 = item->fields.info;
               if ( v21 )
@@ -263,7 +263,7 @@ LABEL_26:
                     v32 = this->fields.baseImageSprite;
                     if ( System_String__IsNullOrEmpty(v31->fields._ImageName_k__BackingField, 0LL) )
                     {
-                      p_ImageName_k__BackingField = (System_String_o **)&StringLiteral_19532;
+                      p_ImageName_k__BackingField = (System_String_o **)&StringLiteral_19532/*"img_shop_0"*/;
                       if ( !v32 )
                         break;
 LABEL_44:

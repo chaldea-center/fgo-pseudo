@@ -320,7 +320,7 @@ void __fastcall ServantStatusListViewItemDrawClassSkill__SetItem(
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
     sub_B16FFC(&ServantStatusListViewItemDrawClassSkill_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_11932, v9);
+    sub_B16FFC(&StringLiteral_11932/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, v9);
     byte_40FDE8B = 1;
   }
   idList = 0LL;
@@ -335,7 +335,7 @@ void __fastcall ServantStatusListViewItemDrawClassSkill__SetItem(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11932, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11932/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, 0LL);
   if ( !skillBaseList )
     goto LABEL_88;
   UILabel__set_text(skillBaseList, v11, 0LL);

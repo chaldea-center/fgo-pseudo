@@ -14,12 +14,12 @@ void __fastcall MyRoomRootComponent___cctor(const MethodInfo *method)
   if ( (byte_40F9B34 & 1) == 0 )
   {
     sub_B16FFC(&MyRoomRootComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_8283, v8);
+    sub_B16FFC(&StringLiteral_8283/*"JumpNewMaterial"*/, v8);
     byte_40F9B34 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)MyRoomRootComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_8283;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_8283;
+  v10 = (System_Int32_array **)StringLiteral_8283/*"JumpNewMaterial"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_8283/*"JumpNewMaterial"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -113,7 +113,7 @@ void __fastcall MyRoomRootComponent__beginResume(
   if ( (byte_40F9B32 & 1) == 0 )
   {
     sub_B16FFC(&BattleSetupInfo_TypeInfo, data);
-    sub_B16FFC(&StringLiteral_11095, v10);
+    sub_B16FFC(&StringLiteral_11095/*"RETURN_BLACKLIST"*/, v10);
     byte_40F9B32 = 1;
   }
   myRoomControl = this->fields.myRoomControl;
@@ -158,7 +158,7 @@ LABEL_18:
   if ( optionComp->fields._optionSceneType_k__BackingField == 1 )
   {
     SceneRootComponent__beginFinish((SceneRootComponent_o *)this, 0LL);
-    SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_11095, 0LL);
+    SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_11095/*"RETURN_BLACKLIST"*/, 0LL);
     goto LABEL_16;
   }
   SceneRootComponent__beginResume_29752260((SceneRootComponent_o *)this, 0LL);

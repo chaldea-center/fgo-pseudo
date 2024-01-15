@@ -156,8 +156,8 @@ void __fastcall ChangeUserNameWindow__OnChangeInput(ChangeUserNameWindow_o *this
   if ( (byte_40FCFA3 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_26, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FCFA3 = 1;
   }
   nameInput = this->fields.nameInput;
@@ -169,7 +169,7 @@ void __fastcall ChangeUserNameWindow__OnChangeInput(ChangeUserNameWindow_o *this
   if ( !Text )
     goto LABEL_25;
   v7 = System_String__Trim_43731064(Text, 0LL);
-  if ( System_String__op_Equality(v7, (System_String_o *)StringLiteral_1, 0LL) )
+  if ( System_String__op_Equality(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     goto LABEL_12;
   if ( Text->fields.m_stringLength >= 1 )
   {
@@ -182,7 +182,7 @@ void __fastcall ChangeUserNameWindow__OnChangeInput(ChangeUserNameWindow_o *this
     }
     while ( ++v8 < Text->fields.m_stringLength );
   }
-  if ( (System_String__IndexOf_43816080(Text, (System_String_o *)StringLiteral_26, 0LL) & 0x80000000) != 0 )
+  if ( (System_String__IndexOf_43816080(Text, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL) & 0x80000000) != 0 )
   {
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -236,10 +236,10 @@ void __fastcall ChangeUserNameWindow__OnClickCancel(ChangeUserNameWindow_o *this
 
   if ( (byte_40FCFA7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FCFA7 = 1;
   }
-  ChangeUserNameWindow__Callback(this, 0, (System_String_o *)StringLiteral_1, v2);
+  ChangeUserNameWindow__Callback(this, 0, (System_String_o *)StringLiteral_1/*""*/, v2);
 }
 
 
@@ -348,10 +348,10 @@ void __fastcall ChangeUserNameWindow__OpenChangeNameWindow(
     sub_B16FFC(&Method_EmojiUtility_ValidateNameText__, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&UIInput_OnValidate_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_3253, v11);
-    sub_B16FFC(&StringLiteral_3251, v12);
-    sub_B16FFC(&StringLiteral_2946, v13);
-    sub_B16FFC(&StringLiteral_2950, v14);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v11);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v12);
+    sub_B16FFC(&StringLiteral_2946/*"CHANGE_NAME_TITLE"*/, v13);
+    sub_B16FFC(&StringLiteral_2950/*"CHANGE_TITLE"*/, v14);
     byte_40FCFA2 = 1;
   }
   submitTxtLb = this->fields.submitTxtLb;
@@ -360,12 +360,12 @@ void __fastcall ChangeUserNameWindow__OpenChangeNameWindow(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !submitTxtLb )
     goto LABEL_17;
   UILabel__set_text(submitTxtLb, v16, 0LL);
   cancelTxtLb = this->fields.cancelTxtLb;
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelTxtLb )
     goto LABEL_17;
   UILabel__set_text(cancelTxtLb, v18, 0LL);
@@ -416,11 +416,11 @@ void __fastcall ChangeUserNameWindow__OpenChangeNameWindow(
     v44,
     v45);
   titleTxtLb = this->fields.titleTxtLb;
-  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_2950, 0LL);
+  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_2950/*"CHANGE_TITLE"*/, 0LL);
   if ( !titleTxtLb
     || (UILabel__set_text(titleTxtLb, v47, 0LL),
         titleLb = this->fields.titleLb,
-        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_2946, 0LL),
+        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_2946/*"CHANGE_NAME_TITLE"*/, 0LL),
         !titleLb)
     || (UILabel__set_text(titleLb, v49, 0LL), (nameText = this->fields.nameText) == 0LL) )
   {
@@ -483,10 +483,10 @@ System_String_o *__fastcall ChangeUserNameWindow__get_closeBtnPath(
 {
   if ( (byte_40FCFA8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2730, method);
+    sub_B16FFC(&StringLiteral_2730/*"BaseWindow/CancleBtn"*/, method);
     byte_40FCFA8 = 1;
   }
-  return (System_String_o *)StringLiteral_2730;
+  return (System_String_o *)StringLiteral_2730/*"BaseWindow/CancleBtn"*/;
 }
 
 
@@ -537,13 +537,13 @@ void __fastcall ChangeUserNameWindow__resetInputVal(ChangeUserNameWindow_o *this
 
   if ( (byte_40FCFA4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FCFA4 = 1;
   }
   inputTarget = this->fields.inputTarget;
   if ( !inputTarget )
     sub_B170D4();
-  UIInput__set_value(inputTarget, (System_String_o *)StringLiteral_1, 0LL);
+  UIInput__set_value(inputTarget, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 

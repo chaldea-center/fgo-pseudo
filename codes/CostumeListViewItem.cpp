@@ -99,15 +99,15 @@ void __fastcall CostumeListViewItem___ctor(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FBDC2 = 1;
   }
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
   this->fields.isNotClearCond = 0;
   *(_WORD *)&this->fields.isNotHaveReleaseItem = 0;
   this->fields.isHide = 0;
-  v14 = (System_Int32_array **)StringLiteral_1;
-  this->fields.closedMessage = (struct System_String_o *)StringLiteral_1;
+  v14 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.closedMessage = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.closedMessage, v14, v15, v16, v17, v18, v19, v20);
   this->fields.baseSvt = baseSvt;
   p_baseSvt = &this->fields.baseSvt;

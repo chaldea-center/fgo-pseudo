@@ -103,8 +103,8 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v18);
-    sub_B16FFC(&StringLiteral_8602, v19);
-    sub_B16FFC(&StringLiteral_19554, v20);
+    sub_B16FFC(&StringLiteral_8602/*"MASTER_EQSKILL_LV_INFO"*/, v19);
+    sub_B16FFC(&StringLiteral_19554/*"img_skill_0"*/, v20);
     byte_40FC4F5 = 1;
   }
   v42 = 0;
@@ -140,7 +140,7 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
   v27 = (SkillEntity_o *)Entity;
   v42 = idx + 1;
   v28 = System_Int32__ToString((int32_t)&v42, 0LL);
-  v29 = System_String__Concat_43743732((System_String_o *)StringLiteral_19554, v28, 0LL);
+  v29 = System_String__Concat_43743732((System_String_o *)StringLiteral_19554/*"img_skill_0"*/, v28, 0LL);
   if ( !skillIndxImg )
     goto LABEL_26;
   UISprite__set_spriteName(skillIndxImg, v29, 0LL);
@@ -161,7 +161,7 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_8602, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_8602/*"MASTER_EQSKILL_LV_INFO"*/, 0LL);
   v41 = skillLv;
   v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v41);
   maxLv = v27->fields.maxLv;

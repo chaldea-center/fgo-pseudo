@@ -20,9 +20,9 @@ void __fastcall CardLockSyncRequest__beginRequest(
   if ( (byte_40FCF26 & 1) == 0 )
   {
     sub_B16FFC(&JsonManager_TypeInfo, lockUserSvtIds);
-    sub_B16FFC(&StringLiteral_19875, v9);
-    sub_B16FFC(&StringLiteral_20219, v10);
-    sub_B16FFC(&StringLiteral_22830, v11);
+    sub_B16FFC(&StringLiteral_19875/*"isStorage"*/, v9);
+    sub_B16FFC(&StringLiteral_20219/*"lockUserSvtIds"*/, v10);
+    sub_B16FFC(&StringLiteral_22830/*"unlockUserSvtIds"*/, v11);
     byte_40FCF26 = 1;
   }
   if ( lockUserSvtIds && *(_QWORD *)&lockUserSvtIds->max_length )
@@ -30,17 +30,17 @@ void __fastcall CardLockSyncRequest__beginRequest(
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v12 = JsonManager__toJson(&lockUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_20219, v12, 0LL);
+    RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_20219/*"lockUserSvtIds"*/, v12, 0LL);
   }
   if ( unlockUserSvtIds && *(_QWORD *)&unlockUserSvtIds->max_length )
   {
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v13 = JsonManager__toJson(&unlockUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_22830, v13, 0LL);
+    RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_22830/*"unlockUserSvtIds"*/, v13, 0LL);
   }
   if ( isStorage )
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19875, 1, 0LL);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19875/*"isStorage"*/, 1, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -52,7 +52,7 @@ System_String_o *__fastcall CardLockSyncRequest__getMockData(CardLockSyncRequest
   if ( (byte_40FCF25 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v2);
+    sub_B16FFC(&StringLiteral_1/*""*/, v2);
     byte_40FCF25 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -60,7 +60,7 @@ System_String_o *__fastcall CardLockSyncRequest__getMockData(CardLockSyncRequest
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_1, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -72,7 +72,7 @@ System_String_o *__fastcall CardLockSyncRequest__getURL(CardLockSyncRequest_o *t
   if ( (byte_40FCF24 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_17158, v2);
+    sub_B16FFC(&StringLiteral_17158/*"card/lockSync"*/, v2);
     byte_40FCF24 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -81,7 +81,7 @@ System_String_o *__fastcall CardLockSyncRequest__getURL(CardLockSyncRequest_o *t
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17158, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17158/*"card/lockSync"*/, 0LL);
 }
 
 
@@ -98,8 +98,8 @@ void __fastcall CardLockSyncRequest__requestCompleted(
   if ( (byte_40FCF27 & 1) == 0 )
   {
     sub_B16FFC(&ResponseCommandKind_TypeInfo, responseList);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40FCF27 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -109,8 +109,8 @@ void __fastcall CardLockSyncRequest__requestCompleted(
   }
   v7 = ResponseCommandKind__SearchData(55, responseList, 0LL);
   if ( v7 && ResponseData__checkError_30924960(v7, 0LL) )
-    v8 = (System_String_o **)&StringLiteral_21129;
+    v8 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_20980;
+    v8 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, *v8, 0LL);
 }

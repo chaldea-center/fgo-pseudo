@@ -148,7 +148,7 @@ System_String_o *__fastcall MdcStr__Dc(
     {
       v94 = sub_B17000(&System_IO_IOException_TypeInfo, v22);
       v99 = (System_IO_IOException_o *)sub_B170CC(v94, v95, v96, v97, v98);
-      v101 = (System_String_o *)sub_B17000(&StringLiteral_8976, v100);
+      v101 = (System_String_o *)sub_B17000(&StringLiteral_8976/*"MdcStr:Dc Crc Error"*/, v100);
       System_IO_IOException___ctor_38265584(v99, v101, 0LL);
       sub_B17000(&Method_MdcStr_Dc__, v102);
       sub_B170A0();

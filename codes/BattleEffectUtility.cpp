@@ -53,10 +53,10 @@ void __fastcall BattleEffectUtility___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&BattleEffectUtility_TypeInfo, v1);
     sub_B16FFC(&string___TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_15988, v9);
-    sub_B16FFC(&StringLiteral_15948, v10);
-    sub_B16FFC(&StringLiteral_15943, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_15988/*"_S"*/, v9);
+    sub_B16FFC(&StringLiteral_15948/*"_M"*/, v10);
+    sub_B16FFC(&StringLiteral_15943/*"_L"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F8D12 = 1;
   }
   BattleEffectUtility_TypeInfo->static_fields->SendReportProbability = 1.0;
@@ -72,13 +72,13 @@ void __fastcall BattleEffectUtility___cctor(const MethodInfo *method)
   if ( !v17 )
     sub_B170D4();
   v24 = (System_Int32_array **)v17;
-  v25 = StringLiteral_1;
-  if ( StringLiteral_1 )
+  v25 = StringLiteral_1/*""*/;
+  if ( StringLiteral_1/*""*/ )
   {
-    v25 = (void *)sub_B170BC(StringLiteral_1, *(_QWORD *)&(*v24)->m_Items[9]);
+    v25 = (void *)sub_B170BC(StringLiteral_1/*""*/, *(_QWORD *)&(*v24)->m_Items[9]);
     if ( !v25 )
       goto LABEL_26;
-    v26 = (System_Int32_array **)StringLiteral_1;
+    v26 = (System_Int32_array **)StringLiteral_1/*""*/;
   }
   else
   {
@@ -88,13 +88,13 @@ void __fastcall BattleEffectUtility___cctor(const MethodInfo *method)
     goto LABEL_25;
   v24[4] = (System_Int32_array *)v26;
   sub_B16F98((BattleServantConfConponent_o *)(v24 + 4), v26, v18, v19, v20, v21, v22, v23);
-  v25 = (void *)StringLiteral_15988;
-  if ( StringLiteral_15988 )
+  v25 = (void *)StringLiteral_15988/*"_S"*/;
+  if ( StringLiteral_15988/*"_S"*/ )
   {
-    v25 = (void *)sub_B170BC(StringLiteral_15988, *(_QWORD *)&(*v24)->m_Items[9]);
+    v25 = (void *)sub_B170BC(StringLiteral_15988/*"_S"*/, *(_QWORD *)&(*v24)->m_Items[9]);
     if ( !v25 )
       goto LABEL_26;
-    v26 = (System_Int32_array **)StringLiteral_15988;
+    v26 = (System_Int32_array **)StringLiteral_15988/*"_S"*/;
   }
   else
   {
@@ -104,13 +104,13 @@ void __fastcall BattleEffectUtility___cctor(const MethodInfo *method)
     goto LABEL_25;
   v24[5] = (System_Int32_array *)v26;
   sub_B16F98((BattleServantConfConponent_o *)(v24 + 5), v26, v18, v27, v28, v29, v30, v31);
-  v25 = (void *)StringLiteral_15948;
-  if ( StringLiteral_15948 )
+  v25 = (void *)StringLiteral_15948/*"_M"*/;
+  if ( StringLiteral_15948/*"_M"*/ )
   {
-    v25 = (void *)sub_B170BC(StringLiteral_15948, *(_QWORD *)&(*v24)->m_Items[9]);
+    v25 = (void *)sub_B170BC(StringLiteral_15948/*"_M"*/, *(_QWORD *)&(*v24)->m_Items[9]);
     if ( !v25 )
       goto LABEL_26;
-    v26 = (System_Int32_array **)StringLiteral_15948;
+    v26 = (System_Int32_array **)StringLiteral_15948/*"_M"*/;
   }
   else
   {
@@ -120,13 +120,13 @@ void __fastcall BattleEffectUtility___cctor(const MethodInfo *method)
     goto LABEL_25;
   v24[6] = (System_Int32_array *)v26;
   sub_B16F98((BattleServantConfConponent_o *)(v24 + 6), v26, v18, v32, v33, v34, v35, v36);
-  v25 = (void *)StringLiteral_15943;
-  if ( StringLiteral_15943 )
+  v25 = (void *)StringLiteral_15943/*"_L"*/;
+  if ( StringLiteral_15943/*"_L"*/ )
   {
-    v25 = (void *)sub_B170BC(StringLiteral_15943, *(_QWORD *)&(*v24)->m_Items[9]);
+    v25 = (void *)sub_B170BC(StringLiteral_15943/*"_L"*/, *(_QWORD *)&(*v24)->m_Items[9]);
     if ( v25 )
     {
-      v26 = (System_Int32_array **)StringLiteral_15943;
+      v26 = (System_Int32_array **)StringLiteral_15943/*"_L"*/;
       goto LABEL_23;
     }
 LABEL_26:
@@ -369,8 +369,8 @@ UnityEngine_GameObject_array *__fastcall BattleEffectUtility__ChangeServantView(
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__, v15);
     sub_B16FFC(&string___TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_18257, v17);
-    sub_B16FFC(&StringLiteral_15891, v18);
+    sub_B16FFC(&StringLiteral_18257/*"en_waist"*/, v17);
+    sub_B16FFC(&StringLiteral_15891/*"_Color"*/, v18);
     byte_40F8D10 = 1;
   }
   white = UnityEngine_Color__get_white(0LL);
@@ -388,16 +388,16 @@ UnityEngine_GameObject_array *__fastcall BattleEffectUtility__ChangeServantView(
     if ( !v25 )
       goto LABEL_76;
     v32 = v25;
-    OverwriteShadowServantEffectNodes = StringLiteral_18257;
-    if ( StringLiteral_18257 )
+    OverwriteShadowServantEffectNodes = StringLiteral_18257/*"en_waist"*/;
+    if ( StringLiteral_18257/*"en_waist"*/ )
     {
-      OverwriteShadowServantEffectNodes = sub_B170BC(StringLiteral_18257, *(_QWORD *)(*(_QWORD *)v32 + 64LL));
+      OverwriteShadowServantEffectNodes = sub_B170BC(StringLiteral_18257/*"en_waist"*/, *(_QWORD *)(*(_QWORD *)v32 + 64LL));
       if ( !OverwriteShadowServantEffectNodes )
       {
         sub_B170F4();
         sub_B170A0();
       }
-      v34 = (System_Int32_array **)StringLiteral_18257;
+      v34 = (System_Int32_array **)StringLiteral_18257/*"en_waist"*/;
     }
     else
     {
@@ -549,7 +549,7 @@ LABEL_54:
           goto LABEL_76;
         *(_QWORD *)&v83.fields.b = methoda.invoker_method;
         *(_QWORD *)&v83.fields.r = methoda.methodPointer;
-        UnityEngine_Material__SetColor(v68, (System_String_o *)StringLiteral_15891, v83, 0LL);
+        UnityEngine_Material__SetColor(v68, (System_String_o *)StringLiteral_15891/*"_Color"*/, v83, 0LL);
         v65 = *(_DWORD *)(v66 + 24);
         if ( (int)++v67 >= v65 )
           goto LABEL_54;
@@ -610,7 +610,7 @@ LABEL_71:
           goto LABEL_76;
         *(_QWORD *)&v84.fields.b = methoda.invoker_method;
         *(_QWORD *)&v84.fields.r = methoda.methodPointer;
-        UnityEngine_Material__SetColor(v77, (System_String_o *)StringLiteral_15891, v84, 0LL);
+        UnityEngine_Material__SetColor(v77, (System_String_o *)StringLiteral_15891/*"_Color"*/, v84, 0LL);
         v74 = *(_DWORD *)(v75 + 24);
         if ( (int)++v76 >= v74 )
           goto LABEL_71;
@@ -691,16 +691,16 @@ void __fastcall BattleEffectUtility__GetBattleCommonEffectPathAndName(
 
   if ( (byte_40F8D06 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_871, path);
-    sub_B16FFC(&StringLiteral_5797, v7);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, path);
+    sub_B16FFC(&StringLiteral_5797/*"Effect/BattleCommon/{0}"*/, v7);
     byte_40F8D06 = 1;
   }
   if ( !baseName )
     sub_B170D4();
-  IndexOf_43817692 = System_String__LastIndexOf_43817692(baseName, (System_String_o *)StringLiteral_871, 0LL);
+  IndexOf_43817692 = System_String__LastIndexOf_43817692(baseName, (System_String_o *)StringLiteral_871/*"/"*/, 0LL);
   if ( IndexOf_43817692 == -1 )
   {
-    v26 = System_String__Format((System_String_o *)StringLiteral_5797, (Il2CppObject *)baseName, 0LL);
+    v26 = System_String__Format((System_String_o *)StringLiteral_5797/*"Effect/BattleCommon/{0}"*/, (Il2CppObject *)baseName, 0LL);
     *path = v26;
     sub_B16F98((BattleServantConfConponent_o *)path, (System_Int32_array **)v26, v27, v28, v29, v30, v31, v32);
     v25 = name;
@@ -711,7 +711,7 @@ void __fastcall BattleEffectUtility__GetBattleCommonEffectPathAndName(
   {
     v9 = IndexOf_43817692;
     v10 = (Il2CppObject *)System_String__Substring_43807468(baseName, 0, IndexOf_43817692, 0LL);
-    v11 = System_String__Format((System_String_o *)StringLiteral_5797, v10, 0LL);
+    v11 = System_String__Format((System_String_o *)StringLiteral_5797/*"Effect/BattleCommon/{0}"*/, v10, 0LL);
     *path = v11;
     sub_B16F98((BattleServantConfConponent_o *)path, (System_Int32_array **)v11, v12, v13, v14, v15, v16, v17);
     v18 = System_String__Substring(baseName, v9 + 1, 0LL);
@@ -846,12 +846,12 @@ System_String_o *__fastcall BattleEffectUtility__GetSideEffectPath(int32_t effec
   if ( (byte_40F8D01 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_5830, v3);
+    sub_B16FFC(&StringLiteral_5830/*"Effect/SideEffect/"*/, v3);
     byte_40F8D01 = 1;
   }
   v6 = effectId;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
-  return System_String__Concat((Il2CppObject *)StringLiteral_5830, v4, 0LL);
+  return System_String__Concat((Il2CppObject *)StringLiteral_5830/*"Effect/SideEffect/"*/, v4, 0LL);
 }
 
 
@@ -997,7 +997,7 @@ void __fastcall BattleEffectUtility__LoadEffectAssetIfNotYet(
     sub_B16FFC(&Method_BattleEffectUtility___c__DisplayClass32_0__LoadEffectAssetIfNotYet_b__0__, v16);
     sub_B16FFC(&Method_BattleEffectUtility___c__DisplayClass32_0__LoadEffectAssetIfNotYet_b__1__, v17);
     sub_B16FFC(&BattleEffectUtility___c__DisplayClass32_0_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_21025, v19);
+    sub_B16FFC(&StringLiteral_21025/*"non-loaded asset was detected. effectId = {0}"*/, v19);
     byte_40F8D0B = 1;
   }
   effectPath = 0LL;
@@ -1062,7 +1062,7 @@ void __fastcall BattleEffectUtility__LoadEffectAssetIfNotYet(
       {
         v50 = effectId;
         v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-        v35 = System_String__Format((System_String_o *)StringLiteral_21025, v34, 0LL);
+        v35 = System_String__Format((System_String_o *)StringLiteral_21025/*"non-loaded asset was detected. effectId = {0}"*/, v34, 0LL);
         Instance = (CrashReporter_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
         if ( !Instance )
           goto LABEL_45;
@@ -1377,10 +1377,10 @@ UnityEngine_GameObject_o *__fastcall BattleEffectUtility__getEffectObject(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v21);
     sub_B16FFC(&SoundManager_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_18154, v23);
-    sub_B16FFC(&StringLiteral_18155, v24);
-    sub_B16FFC(&StringLiteral_2747, v25);
-    sub_B16FFC(&StringLiteral_2740, v26);
+    sub_B16FFC(&StringLiteral_18154/*"effect load failed. effectId = {0}"*/, v23);
+    sub_B16FFC(&StringLiteral_18155/*"effect/"*/, v24);
+    sub_B16FFC(&StringLiteral_2747/*"Battle/Effect/"*/, v25);
+    sub_B16FFC(&StringLiteral_2740/*"Battle"*/, v26);
     byte_40F8D0D = 1;
   }
   name = 0LL;
@@ -1409,7 +1409,7 @@ UnityEngine_GameObject_o *__fastcall BattleEffectUtility__getEffectObject(
   switch ( v30->fields.folderType )
   {
     case 1:
-      v34 = System_String__Concat_43743732((System_String_o *)StringLiteral_18155, v30->fields.name, 0LL);
+      v34 = System_String__Concat_43743732((System_String_o *)StringLiteral_18155/*"effect/"*/, v30->fields.name, 0LL);
       v35 = UnityEngine_Resources__Load(v34, 0LL);
       if ( !v35 )
         goto LABEL_12;
@@ -1499,7 +1499,7 @@ LABEL_53:
         {
           j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
         }
-        SoundManager__playSe_24823480((System_String_o *)StringLiteral_2740, se, 0LL);
+        SoundManager__playSe_24823480((System_String_o *)StringLiteral_2740/*"Battle"*/, se, 0LL);
       }
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1606,7 +1606,7 @@ LABEL_98:
       {
         id = v30->fields.id;
         v67 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id);
-        v68 = System_String__Format((System_String_o *)StringLiteral_18154, v67, 0LL);
+        v68 = System_String__Format((System_String_o *)StringLiteral_18154/*"effect load failed. effectId = {0}"*/, v67, 0LL);
         v69 = (CrashReporter_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
         if ( v69 )
         {
@@ -1639,7 +1639,7 @@ LABEL_98:
         v57 = BattleEffectUtility_TypeInfo;
       }
       v58 = System_Int32__ToString((unsigned int)v57->static_fields + 24, 0LL);
-      v59 = System_String__Concat_43743732((System_String_o *)StringLiteral_2747, v58, 0LL);
+      v59 = System_String__Concat_43743732((System_String_o *)StringLiteral_2747/*"Battle/Effect/"*/, v58, 0LL);
       if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AssetManager_TypeInfo->_2.cctor_finished )
       {
@@ -1705,7 +1705,7 @@ UnityEngine_GameObject_o *__fastcall BattleEffectUtility__getEffectObjectSafe(
     sub_B16FFC(&Method_UnityEngine_GameObject_AddComponent_AutoDestroyObjectComponent___, v9);
     sub_B16FFC(&UnityEngine_GameObject_TypeInfo, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_5792, v12);
+    sub_B16FFC(&StringLiteral_5792/*"Effect Default"*/, v12);
     byte_40F8D0C = 1;
   }
   if ( (BYTE3(BattleEffectUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1722,7 +1722,7 @@ UnityEngine_GameObject_o *__fastcall BattleEffectUtility__getEffectObjectSafe(
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)EffectObject, 0LL, 0LL) )
   {
     EffectObject = (UnityEngine_GameObject_o *)sub_B170CC(UnityEngine_GameObject_TypeInfo, v14, v15, v16, v17);
-    UnityEngine_GameObject___ctor(EffectObject, (System_String_o *)StringLiteral_5792, 0LL);
+    UnityEngine_GameObject___ctor(EffectObject, (System_String_o *)StringLiteral_5792/*"Effect Default"*/, 0LL);
     if ( !EffectObject
       || (v18 = UnityEngine_GameObject__AddComponent_UnitySynchronizationContext_SynchronizationContextBehavoir_(
                   EffectObject,
@@ -1757,13 +1757,13 @@ UnityEngine_GameObject_o *__fastcall BattleEffectUtility__getEffectObject_230486
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, name);
     sub_B16FFC(&UnityEngine_GameObject_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_2744, v9);
-    sub_B16FFC(&StringLiteral_18155, v10);
+    sub_B16FFC(&StringLiteral_2744/*"Battle/CommonEffects/"*/, v9);
+    sub_B16FFC(&StringLiteral_18155/*"effect/"*/, v10);
     byte_40F8D0F = 1;
   }
   if ( folder == 2 )
   {
-    v11 = &StringLiteral_18155;
+    v11 = &StringLiteral_18155/*"effect/"*/;
 LABEL_15:
     v15 = System_String__Concat_43743732((System_String_o *)*v11, name, 0LL);
     result = (UnityEngine_GameObject_o *)UnityEngine_Resources__Load(v15, 0LL);
@@ -1778,7 +1778,7 @@ LABEL_15:
   {
     if ( folder )
       return 0LL;
-    v11 = &StringLiteral_2744;
+    v11 = &StringLiteral_2744/*"Battle/CommonEffects/"*/;
     goto LABEL_15;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1858,11 +1858,11 @@ System_String_o *__fastcall BattleEffectUtility__getNodeNameFromEffectEntity(int
     sub_B16FFC(&Method_DataManager_GetMasterData_EffectMaster___, method);
     sub_B16FFC(&Method_DataMasterBase_EffectMaster__EffectEntity__int__TryGetEntity__, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_18251, v5);
+    sub_B16FFC(&StringLiteral_18251/*"en_body"*/, v5);
     byte_40F8D11 = 1;
   }
   entity = 0LL;
-  v6 = (System_String_o *)StringLiteral_18251;
+  v6 = (System_String_o *)StringLiteral_18251/*"en_body"*/;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
@@ -1897,7 +1897,7 @@ System_String_o *__fastcall BattleEffectUtility__get_EffectAssetName(const Metho
   if ( (byte_40F8CFC & 1) == 0 )
   {
     sub_B16FFC(&BattleEffectUtility_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_2747, v2);
+    sub_B16FFC(&StringLiteral_2747/*"Battle/Effect/"*/, v2);
     byte_40F8CFC = 1;
   }
   v3 = BattleEffectUtility_TypeInfo;
@@ -1908,7 +1908,7 @@ System_String_o *__fastcall BattleEffectUtility__get_EffectAssetName(const Metho
     v3 = BattleEffectUtility_TypeInfo;
   }
   v4 = System_Int32__ToString((unsigned int)v3->static_fields + 24, 0LL);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_2747, v4, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_2747/*"Battle/Effect/"*/, v4, 0LL);
 }
 
 
@@ -2116,11 +2116,11 @@ UnityEngine_GameObject_o *__fastcall BattleEffectUtility__loadActivateSideEffect
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v1);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v2);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_GameObject___, v3);
-    sub_B16FFC(&StringLiteral_18190, v4);
+    sub_B16FFC(&StringLiteral_18190/*"effect/ef_sideeffect01"*/, v4);
     byte_40F8D03 = 1;
   }
   UIAtlas = (UnityEngine_UI_Dropdown_DropdownItem_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                                        (System_String_o *)StringLiteral_18190,
+                                                        (System_String_o *)StringLiteral_18190/*"effect/ef_sideeffect01"*/,
                                                         (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_GameObject___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2551,7 +2551,7 @@ void __fastcall BattleEffectUtility__showSideEffect(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v12);
     sub_B16FFC(&Method_BattleEffectUtility___c__DisplayClass23_0__showSideEffect_b__0__, v13);
     sub_B16FFC(&BattleEffectUtility___c__DisplayClass23_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_18114, v15);
+    sub_B16FFC(&StringLiteral_18114/*"ef_enchant"*/, v15);
     byte_40F8D02 = 1;
   }
   v16 = sub_B170CC(BattleEffectUtility___c__DisplayClass23_0_TypeInfo, *(_QWORD *)&effectId, method, v4, v5);
@@ -2569,8 +2569,8 @@ void __fastcall BattleEffectUtility__showSideEffect(
     j_il2cpp_runtime_class_init_0(BattleEffectUtility_TypeInfo);
   }
   SideEffectPath = BattleEffectUtility__GetSideEffectPath(effectId, v23);
-  v25 = (System_Int32_array **)StringLiteral_18114;
-  *(_QWORD *)(v16 + 16) = StringLiteral_18114;
+  v25 = (System_Int32_array **)StringLiteral_18114/*"ef_enchant"*/;
+  *(_QWORD *)(v16 + 16) = StringLiteral_18114/*"ef_enchant"*/;
   sub_B16F98((BattleServantConfConponent_o *)(v16 + 16), v25, v26, v27, v28, v29, v30, v31);
   v36 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v32, v33, v34, v35);
   AssetLoader_LoadEndDataHandler___ctor(

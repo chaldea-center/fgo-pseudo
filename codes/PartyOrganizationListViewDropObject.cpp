@@ -309,7 +309,7 @@ void __fastcall PartyOrganizationListViewDropObject__DragMoveStart(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&PartyOrganizationListViewDropObject_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_9174, v12);
+    sub_B16FFC(&StringLiteral_9174/*"MoveEnd"*/, v12);
     byte_40FDC8D = 1;
   }
   p_dragObject = &this->fields.dragObject;
@@ -415,8 +415,8 @@ LABEL_21:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v47->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v47->fields.eventReceiver, gameObject, v49, v50, v51, v52, v53, v54);
-  v55 = (System_Int32_array **)StringLiteral_9174;
-  v47->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9174;
+  v55 = (System_Int32_array **)StringLiteral_9174/*"MoveEnd"*/;
+  v47->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9174/*"MoveEnd"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v47->fields.callWhenFinished, v55, v56, v57, v58, v59, v60, v61);
 }
 
@@ -719,7 +719,7 @@ void __fastcall PartyOrganizationListViewDropObject__IntoMove(
 
   if ( (byte_40FDC8B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_7689, method);
+    sub_B16FFC(&StringLiteral_7689/*"IntoMove2"*/, method);
     byte_40FDC8B = 1;
   }
   dragObject = this->fields.dragObject;
@@ -750,8 +750,8 @@ LABEL_9:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v14->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v14->fields.eventReceiver, gameObject, v16, v17, v18, v19, v20, v21);
-  v22 = (System_Int32_array **)StringLiteral_7689;
-  v14->fields.callWhenFinished = (struct System_String_o *)StringLiteral_7689;
+  v22 = (System_Int32_array **)StringLiteral_7689/*"IntoMove2"*/;
+  v14->fields.callWhenFinished = (struct System_String_o *)StringLiteral_7689/*"IntoMove2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v14->fields.callWhenFinished, v22, v23, v24, v25, v26, v27, v28);
 }
 
@@ -811,7 +811,7 @@ void __fastcall PartyOrganizationListViewDropObject__IntoStart(
 
   if ( (byte_40FDC8A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_7688, method);
+    sub_B16FFC(&StringLiteral_7688/*"IntoMove"*/, method);
     byte_40FDC8A = 1;
   }
   this->fields.isBusy = 1;
@@ -843,7 +843,7 @@ void __fastcall PartyOrganizationListViewDropObject__IntoStart(
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v17, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_7688,
+    (System_String_o *)StringLiteral_7688/*"IntoMove"*/,
     delay,
     0LL);
 }
@@ -956,7 +956,7 @@ void __fastcall PartyOrganizationListViewDropObject__OnClickItemEquip(
 
   if ( (byte_40FDC91 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9918, method);
+    sub_B16FFC(&StringLiteral_9918/*"OnClickListDropEquip"*/, method);
     byte_40FDC91 = 1;
   }
   if ( this->fields.state == 3 && this->fields.linkItem )
@@ -964,7 +964,7 @@ void __fastcall PartyOrganizationListViewDropObject__OnClickItemEquip(
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9918, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9918/*"OnClickListDropEquip"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -977,7 +977,7 @@ void __fastcall PartyOrganizationListViewDropObject__OnClickListDrop(
 
   if ( (byte_40FDC8F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9920, method);
+    sub_B16FFC(&StringLiteral_9920/*"OnClickListDropServant"*/, method);
     byte_40FDC8F = 1;
   }
   if ( this->fields.state == 3 && this->fields.linkItem )
@@ -985,7 +985,7 @@ void __fastcall PartyOrganizationListViewDropObject__OnClickListDrop(
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9920, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9920/*"OnClickListDropServant"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -1040,7 +1040,7 @@ void __fastcall PartyOrganizationListViewDropObject__OnLongPressItem(
 
   if ( (byte_40FDC90 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9921, method);
+    sub_B16FFC(&StringLiteral_9921/*"OnClickListDropServantDetail"*/, method);
     byte_40FDC90 = 1;
   }
   if ( this->fields.state == 3 && this->fields.linkItem )
@@ -1048,7 +1048,7 @@ void __fastcall PartyOrganizationListViewDropObject__OnLongPressItem(
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9921, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9921/*"OnClickListDropServantDetail"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -1061,7 +1061,7 @@ void __fastcall PartyOrganizationListViewDropObject__OnLongPressItemEquip(
 
   if ( (byte_40FDC92 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9919, method);
+    sub_B16FFC(&StringLiteral_9919/*"OnClickListDropEquipDetail"*/, method);
     byte_40FDC92 = 1;
   }
   if ( this->fields.state == 3 && this->fields.linkItem )
@@ -1069,7 +1069,7 @@ void __fastcall PartyOrganizationListViewDropObject__OnLongPressItemEquip(
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9919, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9919/*"OnClickListDropEquipDetail"*/, (Il2CppObject *)this, 0LL);
   }
 }
 

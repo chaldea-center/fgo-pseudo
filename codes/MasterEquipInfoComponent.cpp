@@ -163,9 +163,9 @@ void __fastcall MasterEquipInfoComponent__setEquipInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_340, v14);
-    sub_B16FFC(&StringLiteral_8607, v15);
-    sub_B16FFC(&StringLiteral_8604, v16);
+    sub_B16FFC(&StringLiteral_340/*"#,0"*/, v14);
+    sub_B16FFC(&StringLiteral_8607/*"MASTER_EQUIP_SKILL_INFO_TXT"*/, v15);
+    sub_B16FFC(&StringLiteral_8604/*"MASTER_EQUIP_EXPLANATION_TXT"*/, v16);
     byte_40FB1A5 = 1;
   }
   condUsrLv = 0;
@@ -251,7 +251,7 @@ LABEL_19:
   UILabel__set_text(equipNameLb, equipName, 0LL);
   UserEquipEntity__getExpInfo(usrEquipData, (int32_t *)&exp, &lateExp[1], (float *)lateExp, 0LL);
   equipExpLb = this->fields.equipExpLb;
-  v46 = System_Int32__ToString_38275808((int32_t)&lateExp[1], (System_String_o *)StringLiteral_340, 0LL);
+  v46 = System_Int32__ToString_38275808((int32_t)&lateExp[1], (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
   if ( !equipExpLb )
     goto LABEL_46;
   UILabel__set_text(equipExpLb, v46, 0LL);
@@ -309,12 +309,12 @@ LABEL_19:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_8607, 0LL);
+  v64 = LocalizationManager__Get((System_String_o *)StringLiteral_8607/*"MASTER_EQUIP_SKILL_INFO_TXT"*/, 0LL);
   if ( !skillCheckHelpLb )
     goto LABEL_46;
   UILabel__set_text(skillCheckHelpLb, v64, 0LL);
   equipChangeHelpLb = this->fields.equipChangeHelpLb;
-  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_8604, 0LL);
+  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_8604/*"MASTER_EQUIP_EXPLANATION_TXT"*/, 0LL);
   if ( !equipChangeHelpLb )
     goto LABEL_46;
   UILabel__set_text(equipChangeHelpLb, v66, 0LL);
@@ -513,9 +513,9 @@ void __fastcall MasterEquipInfoComponent__setSkillCallBack(
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_80, v12);
-    sub_B16FFC(&StringLiteral_8603, v13);
-    sub_B16FFC(&StringLiteral_2508, v14);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v12);
+    sub_B16FFC(&StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, v13);
+    sub_B16FFC(&StringLiteral_2508/*"BATTLE_SKILLCHARGETURN"*/, v14);
     byte_40FB1A7 = 1;
   }
   name = 0LL;
@@ -551,12 +551,12 @@ void __fastcall MasterEquipInfoComponent__setSkillCallBack(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8603, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
   v32 = skillLv;
   v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32);
   v25 = System_String__Format(v23, v24, 0LL);
-  name = System_String__Concat_43746016(v22, (System_String_o *)StringLiteral_80, v25, 0LL);
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_2508, 0LL);
+  name = System_String__Concat_43746016(v22, (System_String_o *)StringLiteral_80/*" "*/, v25, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_2508/*"BATTLE_SKILLCHARGETURN"*/, 0LL);
   if ( !v21
     || (v27 = v26,
         chargeTurn = v21->fields.chargeTurn,

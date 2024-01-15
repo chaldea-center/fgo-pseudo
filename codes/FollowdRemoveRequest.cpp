@@ -11,10 +11,10 @@ void __fastcall FollowdRemoveRequest__beginRequest(
 {
   if ( (byte_40F8EBF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18709, followId);
+    sub_B16FFC(&StringLiteral_18709/*"followId"*/, followId);
     byte_40F8EBF = 1;
   }
-  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_18709, followId, 0LL);
+  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_18709/*"followId"*/, followId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -27,7 +27,7 @@ System_String_o *__fastcall FollowdRemoveRequest__getURL(FollowdRemoveRequest_o 
   if ( (byte_40F8EBE & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18708, v2);
+    sub_B16FFC(&StringLiteral_18708/*"follow/remove"*/, v2);
     byte_40F8EBE = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -36,7 +36,7 @@ System_String_o *__fastcall FollowdRemoveRequest__getURL(FollowdRemoveRequest_o 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18708, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18708/*"follow/remove"*/, 0LL);
 }
 
 
@@ -56,7 +56,7 @@ void __fastcall FollowdRemoveRequest__requestCompleted(
   {
     sub_B16FFC(&JsonManager_TypeInfo, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40F8EC0 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -74,7 +74,7 @@ void __fastcall FollowdRemoveRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_20980;
+    v10 = (System_String_o *)StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

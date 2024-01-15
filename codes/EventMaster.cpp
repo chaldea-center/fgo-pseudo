@@ -649,7 +649,7 @@ System_String_o *__fastcall EventMaster__GetEventName(EventMaster_o *this, int32
   if ( (byte_40F8883 & 1) == 0 )
   {
     sub_B16FFC(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F8883 = 1;
   }
   entity = 0LL;
@@ -665,7 +665,7 @@ System_String_o *__fastcall EventMaster__GetEventName(EventMaster_o *this, int32
   }
   else
   {
-    p_name = (System_String_o **)&StringLiteral_1;
+    p_name = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *p_name;
 }
@@ -684,7 +684,7 @@ System_String_o *__fastcall EventMaster__GetEventShortName(
   if ( (byte_40F8884 & 1) == 0 )
   {
     sub_B16FFC(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F8884 = 1;
   }
   entity = 0LL;
@@ -700,7 +700,7 @@ System_String_o *__fastcall EventMaster__GetEventShortName(
   }
   else
   {
-    p_longName = (System_String_o **)&StringLiteral_1;
+    p_longName = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *p_longName;
 }

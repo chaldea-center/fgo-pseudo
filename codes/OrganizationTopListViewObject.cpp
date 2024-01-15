@@ -121,7 +121,7 @@ void __fastcall OrganizationTopListViewObject__EventEnterMove(
   if ( (byte_40F7FD2 & 1) == 0 )
   {
     sub_B16FFC(&ListViewObject_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6140, v3);
+    sub_B16FFC(&StringLiteral_6140/*"EventEnterMove2"*/, v3);
     byte_40F7FD2 = 1;
   }
   dragObject = this->fields.dragObject;
@@ -161,8 +161,8 @@ LABEL_12:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v17->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v17->fields.eventReceiver, gameObject, v19, v20, v21, v22, v23, v24);
-  v25 = (System_Int32_array **)StringLiteral_6140;
-  v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6140;
+  v25 = (System_Int32_array **)StringLiteral_6140/*"EventEnterMove2"*/;
+  v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6140/*"EventEnterMove2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v17->fields.callWhenFinished, v25, v26, v27, v28, v29, v30, v31);
 }
 
@@ -218,7 +218,7 @@ void __fastcall OrganizationTopListViewObject__EventEnterStart(
   if ( (byte_40F7FD1 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_OrganizationTopListViewObject___, method);
-    sub_B16FFC(&StringLiteral_6139, v5);
+    sub_B16FFC(&StringLiteral_6139/*"EventEnterMove"*/, v5);
     byte_40F7FD1 = 1;
   }
   this->fields.isBusy = 1;
@@ -251,7 +251,7 @@ void __fastcall OrganizationTopListViewObject__EventEnterStart(
   OrganizationTopListViewObject__Init(v15, 2, 0LL, 0.0, *(UnityEngine_Vector3_o *)&zero.fields.y, v16);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6139,
+    (System_String_o *)StringLiteral_6139/*"EventEnterMove"*/,
     delay,
     0LL);
 }
@@ -295,7 +295,7 @@ void __fastcall OrganizationTopListViewObject__EventIntoMove(
   if ( (byte_40F7FCF & 1) == 0 )
   {
     sub_B16FFC(&ListViewObject_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6152, v3);
+    sub_B16FFC(&StringLiteral_6152/*"EventIntoMove2"*/, v3);
     byte_40F7FCF = 1;
   }
   dragObject = this->fields.dragObject;
@@ -335,8 +335,8 @@ LABEL_12:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v17->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v17->fields.eventReceiver, gameObject, v19, v20, v21, v22, v23, v24);
-  v25 = (System_Int32_array **)StringLiteral_6152;
-  v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6152;
+  v25 = (System_Int32_array **)StringLiteral_6152/*"EventIntoMove2"*/;
+  v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6152/*"EventIntoMove2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v17->fields.callWhenFinished, v25, v26, v27, v28, v29, v30, v31);
 }
 
@@ -400,7 +400,7 @@ void __fastcall OrganizationTopListViewObject__EventIntoStart(
   if ( (byte_40F7FCE & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_OrganizationTopListViewObject___, method);
-    sub_B16FFC(&StringLiteral_6151, v5);
+    sub_B16FFC(&StringLiteral_6151/*"EventIntoMove"*/, v5);
     byte_40F7FCE = 1;
   }
   this->fields.isBusy = 1;
@@ -440,7 +440,7 @@ void __fastcall OrganizationTopListViewObject__EventIntoStart(
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v20, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6151,
+    (System_String_o *)StringLiteral_6151/*"EventIntoMove"*/,
     delay,
     0LL);
 }
@@ -512,7 +512,7 @@ void __fastcall OrganizationTopListViewObject__EventRetryMove(
   if ( (byte_40F7FD5 & 1) == 0 )
   {
     sub_B16FFC(&ListViewObject_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6171, v3);
+    sub_B16FFC(&StringLiteral_6171/*"EventRetryMove2"*/, v3);
     byte_40F7FD5 = 1;
   }
   dragObject = this->fields.dragObject;
@@ -552,8 +552,8 @@ LABEL_12:
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v17->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v17->fields.eventReceiver, gameObject, v19, v20, v21, v22, v23, v24);
-  v25 = (System_Int32_array **)StringLiteral_6171;
-  v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6171;
+  v25 = (System_Int32_array **)StringLiteral_6171/*"EventRetryMove2"*/;
+  v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6171/*"EventRetryMove2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v17->fields.callWhenFinished, v25, v26, v27, v28, v29, v30, v31);
 }
 
@@ -617,7 +617,7 @@ void __fastcall OrganizationTopListViewObject__EventRetryStart(
   if ( (byte_40F7FD4 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_OrganizationTopListViewObject___, method);
-    sub_B16FFC(&StringLiteral_6170, v5);
+    sub_B16FFC(&StringLiteral_6170/*"EventRetryMove"*/, v5);
     byte_40F7FD4 = 1;
   }
   this->fields.isBusy = 1;
@@ -657,7 +657,7 @@ void __fastcall OrganizationTopListViewObject__EventRetryStart(
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v20, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6170,
+    (System_String_o *)StringLiteral_6170/*"EventRetryMove"*/,
     delay,
     0LL);
 }
@@ -990,7 +990,7 @@ System_String_o *__fastcall OrganizationTopListViewObject__ToString(
   if ( (byte_40F7FD7 & 1) == 0 )
   {
     sub_B16FFC(&OrganizationTopListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40F7FD7 = 1;
   }
   v13 = 0.0;
@@ -1009,7 +1009,7 @@ System_String_o *__fastcall OrganizationTopListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

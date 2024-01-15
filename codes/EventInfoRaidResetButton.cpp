@@ -114,8 +114,8 @@ void __fastcall EventInfoRaidResetButton__Initialization(
     sub_B16FFC(&AtlasManager_TypeInfo, entity);
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_5598, v12);
-    sub_B16FFC(&StringLiteral_16937, v13);
+    sub_B16FFC(&StringLiteral_5598/*"EVENT_DATA_LOST_BATTLE_RESET_BUTTON"*/, v12);
+    sub_B16FFC(&StringLiteral_16937/*"btn_mission_bg"*/, v13);
     byte_40FA163 = 1;
   }
   this->fields.uiEntity = entity;
@@ -134,7 +134,7 @@ void __fastcall EventInfoRaidResetButton__Initialization(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5598, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5598/*"EVENT_DATA_LOST_BATTLE_RESET_BUTTON"*/, 0LL);
   if ( !buttonLabel || (UILabel__set_text(buttonLabel, v15, 0LL), (v16 = this->fields.buttonLabel) == 0LL) )
     sub_B170D4();
   UILabel__SetCondensedScale(v16, this->fields.labelWidth, 0LL);
@@ -152,7 +152,7 @@ void __fastcall EventInfoRaidResetButton__Initialization(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI(v18, (System_String_o *)StringLiteral_16937, 0LL);
+    AtlasManager__SetEventUI(v18, (System_String_o *)StringLiteral_16937/*"btn_mission_bg"*/, 0LL);
   }
 }
 

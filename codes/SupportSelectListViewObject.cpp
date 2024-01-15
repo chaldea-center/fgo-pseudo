@@ -138,37 +138,37 @@ void __fastcall SupportSelectListViewObject___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&string___TypeInfo, v1);
     sub_B16FFC(&SupportSelectListViewObject_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_19228, v4);
-    sub_B16FFC(&StringLiteral_19238, v5);
-    sub_B16FFC(&StringLiteral_19229, v6);
-    sub_B16FFC(&StringLiteral_19223, v7);
-    sub_B16FFC(&StringLiteral_19227, v8);
-    sub_B16FFC(&StringLiteral_19221, v9);
-    sub_B16FFC(&StringLiteral_19235, v10);
-    sub_B16FFC(&StringLiteral_19232, v11);
-    sub_B16FFC(&StringLiteral_19230, v12);
-    sub_B16FFC(&StringLiteral_19226, v13);
-    sub_B16FFC(&StringLiteral_19237, v14);
-    sub_B16FFC(&StringLiteral_19233, v15);
-    sub_B16FFC(&StringLiteral_19234, v16);
-    sub_B16FFC(&StringLiteral_19231, v17);
-    sub_B16FFC(&StringLiteral_19236, v18);
-    sub_B16FFC(&StringLiteral_19225, v19);
-    sub_B16FFC(&StringLiteral_19222, v20);
-    sub_B16FFC(&StringLiteral_19224, v21);
+    sub_B16FFC(&StringLiteral_19228/*"icon_class_off1001"*/, v4);
+    sub_B16FFC(&StringLiteral_19238/*"icon_class_on1002"*/, v5);
+    sub_B16FFC(&StringLiteral_19229/*"icon_class_off1002"*/, v6);
+    sub_B16FFC(&StringLiteral_19223/*"icon_class_off003"*/, v7);
+    sub_B16FFC(&StringLiteral_19227/*"icon_class_off007"*/, v8);
+    sub_B16FFC(&StringLiteral_19221/*"icon_class_off001"*/, v9);
+    sub_B16FFC(&StringLiteral_19235/*"icon_class_on006"*/, v10);
+    sub_B16FFC(&StringLiteral_19232/*"icon_class_on003"*/, v11);
+    sub_B16FFC(&StringLiteral_19230/*"icon_class_on001"*/, v12);
+    sub_B16FFC(&StringLiteral_19226/*"icon_class_off006"*/, v13);
+    sub_B16FFC(&StringLiteral_19237/*"icon_class_on1001"*/, v14);
+    sub_B16FFC(&StringLiteral_19233/*"icon_class_on004"*/, v15);
+    sub_B16FFC(&StringLiteral_19234/*"icon_class_on005"*/, v16);
+    sub_B16FFC(&StringLiteral_19231/*"icon_class_on002"*/, v17);
+    sub_B16FFC(&StringLiteral_19236/*"icon_class_on007"*/, v18);
+    sub_B16FFC(&StringLiteral_19225/*"icon_class_off005"*/, v19);
+    sub_B16FFC(&StringLiteral_19222/*"icon_class_off002"*/, v20);
+    sub_B16FFC(&StringLiteral_19224/*"icon_class_off004"*/, v21);
     byte_40FD246 = 1;
   }
   v22 = sub_B17014(string___TypeInfo, 9LL, v2);
   if ( !v22 )
     goto LABEL_98;
   v29 = (System_Int32_array **)v22;
-  v30 = StringLiteral_19228;
-  if ( StringLiteral_19228 )
+  v30 = StringLiteral_19228/*"icon_class_off1001"*/;
+  if ( StringLiteral_19228/*"icon_class_off1001"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19228, *(_QWORD *)&(*v29)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19228/*"icon_class_off1001"*/, *(_QWORD *)&(*v29)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19228;
+    v31 = (System_Int32_array **)StringLiteral_19228/*"icon_class_off1001"*/;
   }
   else
   {
@@ -178,13 +178,13 @@ void __fastcall SupportSelectListViewObject___cctor(const MethodInfo *method)
     goto LABEL_96;
   v29[4] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v29 + 4), v31, v23, v24, v25, v26, v27, v28);
-  v30 = StringLiteral_19221;
-  if ( StringLiteral_19221 )
+  v30 = StringLiteral_19221/*"icon_class_off001"*/;
+  if ( StringLiteral_19221/*"icon_class_off001"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19221, *(_QWORD *)&(*v29)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19221/*"icon_class_off001"*/, *(_QWORD *)&(*v29)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19221;
+    v31 = (System_Int32_array **)StringLiteral_19221/*"icon_class_off001"*/;
   }
   else
   {
@@ -194,13 +194,13 @@ void __fastcall SupportSelectListViewObject___cctor(const MethodInfo *method)
     goto LABEL_96;
   v29[5] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v29 + 5), v31, v23, v32, v33, v34, v35, v36);
-  v30 = StringLiteral_19222;
-  if ( StringLiteral_19222 )
+  v30 = StringLiteral_19222/*"icon_class_off002"*/;
+  if ( StringLiteral_19222/*"icon_class_off002"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19222, *(_QWORD *)&(*v29)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19222/*"icon_class_off002"*/, *(_QWORD *)&(*v29)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19222;
+    v31 = (System_Int32_array **)StringLiteral_19222/*"icon_class_off002"*/;
   }
   else
   {
@@ -210,13 +210,13 @@ void __fastcall SupportSelectListViewObject___cctor(const MethodInfo *method)
     goto LABEL_96;
   v29[6] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v29 + 6), v31, v23, v37, v38, v39, v40, v41);
-  v30 = StringLiteral_19223;
-  if ( StringLiteral_19223 )
+  v30 = StringLiteral_19223/*"icon_class_off003"*/;
+  if ( StringLiteral_19223/*"icon_class_off003"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19223, *(_QWORD *)&(*v29)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19223/*"icon_class_off003"*/, *(_QWORD *)&(*v29)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19223;
+    v31 = (System_Int32_array **)StringLiteral_19223/*"icon_class_off003"*/;
   }
   else
   {
@@ -226,13 +226,13 @@ void __fastcall SupportSelectListViewObject___cctor(const MethodInfo *method)
     goto LABEL_96;
   v29[7] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v29 + 7), v31, v23, v42, v43, v44, v45, v46);
-  v30 = StringLiteral_19224;
-  if ( StringLiteral_19224 )
+  v30 = StringLiteral_19224/*"icon_class_off004"*/;
+  if ( StringLiteral_19224/*"icon_class_off004"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19224, *(_QWORD *)&(*v29)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19224/*"icon_class_off004"*/, *(_QWORD *)&(*v29)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19224;
+    v31 = (System_Int32_array **)StringLiteral_19224/*"icon_class_off004"*/;
   }
   else
   {
@@ -242,13 +242,13 @@ void __fastcall SupportSelectListViewObject___cctor(const MethodInfo *method)
     goto LABEL_96;
   v29[8] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v29 + 8), v31, v23, v47, v48, v49, v50, v51);
-  v30 = StringLiteral_19225;
-  if ( StringLiteral_19225 )
+  v30 = StringLiteral_19225/*"icon_class_off005"*/;
+  if ( StringLiteral_19225/*"icon_class_off005"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19225, *(_QWORD *)&(*v29)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19225/*"icon_class_off005"*/, *(_QWORD *)&(*v29)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19225;
+    v31 = (System_Int32_array **)StringLiteral_19225/*"icon_class_off005"*/;
   }
   else
   {
@@ -258,13 +258,13 @@ void __fastcall SupportSelectListViewObject___cctor(const MethodInfo *method)
     goto LABEL_96;
   v29[9] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v29 + 9), v31, v23, v52, v53, v54, v55, v56);
-  v30 = StringLiteral_19226;
-  if ( StringLiteral_19226 )
+  v30 = StringLiteral_19226/*"icon_class_off006"*/;
+  if ( StringLiteral_19226/*"icon_class_off006"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19226, *(_QWORD *)&(*v29)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19226/*"icon_class_off006"*/, *(_QWORD *)&(*v29)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19226;
+    v31 = (System_Int32_array **)StringLiteral_19226/*"icon_class_off006"*/;
   }
   else
   {
@@ -274,13 +274,13 @@ void __fastcall SupportSelectListViewObject___cctor(const MethodInfo *method)
     goto LABEL_96;
   v29[10] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v29 + 10), v31, v23, v57, v58, v59, v60, v61);
-  v30 = StringLiteral_19227;
-  if ( StringLiteral_19227 )
+  v30 = StringLiteral_19227/*"icon_class_off007"*/;
+  if ( StringLiteral_19227/*"icon_class_off007"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19227, *(_QWORD *)&(*v29)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19227/*"icon_class_off007"*/, *(_QWORD *)&(*v29)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19227;
+    v31 = (System_Int32_array **)StringLiteral_19227/*"icon_class_off007"*/;
   }
   else
   {
@@ -290,13 +290,13 @@ void __fastcall SupportSelectListViewObject___cctor(const MethodInfo *method)
     goto LABEL_96;
   v29[11] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v29 + 11), v31, v23, v62, v63, v64, v65, v66);
-  v30 = StringLiteral_19229;
-  if ( StringLiteral_19229 )
+  v30 = StringLiteral_19229/*"icon_class_off1002"*/;
+  if ( StringLiteral_19229/*"icon_class_off1002"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19229, *(_QWORD *)&(*v29)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19229/*"icon_class_off1002"*/, *(_QWORD *)&(*v29)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19229;
+    v31 = (System_Int32_array **)StringLiteral_19229/*"icon_class_off1002"*/;
   }
   else
   {
@@ -314,13 +314,13 @@ void __fastcall SupportSelectListViewObject___cctor(const MethodInfo *method)
 LABEL_98:
     sub_B170D4();
   v86 = (System_Int32_array **)v80;
-  v30 = StringLiteral_19237;
-  if ( StringLiteral_19237 )
+  v30 = StringLiteral_19237/*"icon_class_on1001"*/;
+  if ( StringLiteral_19237/*"icon_class_on1001"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19237, *(_QWORD *)&(*v86)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19237/*"icon_class_on1001"*/, *(_QWORD *)&(*v86)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19237;
+    v31 = (System_Int32_array **)StringLiteral_19237/*"icon_class_on1001"*/;
   }
   else
   {
@@ -330,13 +330,13 @@ LABEL_98:
     goto LABEL_96;
   v86[4] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v86 + 4), v31, v23, v81, v82, v83, v84, v85);
-  v30 = StringLiteral_19230;
-  if ( StringLiteral_19230 )
+  v30 = StringLiteral_19230/*"icon_class_on001"*/;
+  if ( StringLiteral_19230/*"icon_class_on001"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19230, *(_QWORD *)&(*v86)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19230/*"icon_class_on001"*/, *(_QWORD *)&(*v86)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19230;
+    v31 = (System_Int32_array **)StringLiteral_19230/*"icon_class_on001"*/;
   }
   else
   {
@@ -346,13 +346,13 @@ LABEL_98:
     goto LABEL_96;
   v86[5] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v86 + 5), v31, v23, v87, v88, v89, v90, v91);
-  v30 = StringLiteral_19231;
-  if ( StringLiteral_19231 )
+  v30 = StringLiteral_19231/*"icon_class_on002"*/;
+  if ( StringLiteral_19231/*"icon_class_on002"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19231, *(_QWORD *)&(*v86)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19231/*"icon_class_on002"*/, *(_QWORD *)&(*v86)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19231;
+    v31 = (System_Int32_array **)StringLiteral_19231/*"icon_class_on002"*/;
   }
   else
   {
@@ -362,13 +362,13 @@ LABEL_98:
     goto LABEL_96;
   v86[6] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v86 + 6), v31, v23, v92, v93, v94, v95, v96);
-  v30 = StringLiteral_19232;
-  if ( StringLiteral_19232 )
+  v30 = StringLiteral_19232/*"icon_class_on003"*/;
+  if ( StringLiteral_19232/*"icon_class_on003"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19232, *(_QWORD *)&(*v86)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19232/*"icon_class_on003"*/, *(_QWORD *)&(*v86)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19232;
+    v31 = (System_Int32_array **)StringLiteral_19232/*"icon_class_on003"*/;
   }
   else
   {
@@ -378,13 +378,13 @@ LABEL_98:
     goto LABEL_96;
   v86[7] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v86 + 7), v31, v23, v97, v98, v99, v100, v101);
-  v30 = StringLiteral_19233;
-  if ( StringLiteral_19233 )
+  v30 = StringLiteral_19233/*"icon_class_on004"*/;
+  if ( StringLiteral_19233/*"icon_class_on004"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19233, *(_QWORD *)&(*v86)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19233/*"icon_class_on004"*/, *(_QWORD *)&(*v86)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19233;
+    v31 = (System_Int32_array **)StringLiteral_19233/*"icon_class_on004"*/;
   }
   else
   {
@@ -394,13 +394,13 @@ LABEL_98:
     goto LABEL_96;
   v86[8] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v86 + 8), v31, v23, v102, v103, v104, v105, v106);
-  v30 = StringLiteral_19234;
-  if ( StringLiteral_19234 )
+  v30 = StringLiteral_19234/*"icon_class_on005"*/;
+  if ( StringLiteral_19234/*"icon_class_on005"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19234, *(_QWORD *)&(*v86)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19234/*"icon_class_on005"*/, *(_QWORD *)&(*v86)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19234;
+    v31 = (System_Int32_array **)StringLiteral_19234/*"icon_class_on005"*/;
   }
   else
   {
@@ -410,13 +410,13 @@ LABEL_98:
     goto LABEL_96;
   v86[9] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v86 + 9), v31, v23, v107, v108, v109, v110, v111);
-  v30 = StringLiteral_19235;
-  if ( StringLiteral_19235 )
+  v30 = StringLiteral_19235/*"icon_class_on006"*/;
+  if ( StringLiteral_19235/*"icon_class_on006"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19235, *(_QWORD *)&(*v86)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19235/*"icon_class_on006"*/, *(_QWORD *)&(*v86)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19235;
+    v31 = (System_Int32_array **)StringLiteral_19235/*"icon_class_on006"*/;
   }
   else
   {
@@ -426,13 +426,13 @@ LABEL_98:
     goto LABEL_96;
   v86[10] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v86 + 10), v31, v23, v112, v113, v114, v115, v116);
-  v30 = StringLiteral_19236;
-  if ( StringLiteral_19236 )
+  v30 = StringLiteral_19236/*"icon_class_on007"*/;
+  if ( StringLiteral_19236/*"icon_class_on007"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19236, *(_QWORD *)&(*v86)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19236/*"icon_class_on007"*/, *(_QWORD *)&(*v86)->m_Items[9]);
     if ( !v30 )
       goto LABEL_97;
-    v31 = (System_Int32_array **)StringLiteral_19236;
+    v31 = (System_Int32_array **)StringLiteral_19236/*"icon_class_on007"*/;
   }
   else
   {
@@ -442,13 +442,13 @@ LABEL_98:
     goto LABEL_96;
   v86[11] = (System_Int32_array *)v31;
   sub_B16F98((BattleServantConfConponent_o *)(v86 + 11), v31, v23, v117, v118, v119, v120, v121);
-  v30 = StringLiteral_19238;
-  if ( StringLiteral_19238 )
+  v30 = StringLiteral_19238/*"icon_class_on1002"*/;
+  if ( StringLiteral_19238/*"icon_class_on1002"*/ )
   {
-    v30 = sub_B170BC(StringLiteral_19238, *(_QWORD *)&(*v86)->m_Items[9]);
+    v30 = sub_B170BC(StringLiteral_19238/*"icon_class_on1002"*/, *(_QWORD *)&(*v86)->m_Items[9]);
     if ( v30 )
     {
-      v31 = (System_Int32_array **)StringLiteral_19238;
+      v31 = (System_Int32_array **)StringLiteral_19238/*"icon_class_on1002"*/;
       goto LABEL_94;
     }
 LABEL_97:
@@ -678,9 +678,9 @@ void __fastcall SupportSelectListViewObject__Init(
     sub_B16FFC(&EventCampaignEntity___TypeInfo, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_12433, v16);
-    sub_B16FFC(&StringLiteral_12487, v17);
-    sub_B16FFC(&StringLiteral_12434, v18);
+    sub_B16FFC(&StringLiteral_12433/*"SUPPORT_FOLLOWER_HELP"*/, v16);
+    sub_B16FFC(&StringLiteral_12487/*"SUPPORT_SELECT_HELP"*/, v17);
+    sub_B16FFC(&StringLiteral_12434/*"SUPPORT_INFO_HELP"*/, v18);
     byte_40FD23C = 1;
   }
   this->fields.supportServantData = supportServantData;
@@ -704,7 +704,7 @@ void __fastcall SupportSelectListViewObject__Init(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12487, 0LL);
+    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12487/*"SUPPORT_SELECT_HELP"*/, 0LL);
     if ( explanationLb )
     {
       UILabel__set_text(explanationLb, v30, 0LL);
@@ -714,9 +714,9 @@ LABEL_30:
     sub_B170D4();
   }
   if ( v19->fields.isSelectServant )
-    v21 = (System_String_o **)&StringLiteral_12433;
+    v21 = (System_String_o **)&StringLiteral_12433/*"SUPPORT_FOLLOWER_HELP"*/;
   else
-    v21 = (System_String_o **)&StringLiteral_12434;
+    v21 = (System_String_o **)&StringLiteral_12434/*"SUPPORT_INFO_HELP"*/;
   v22 = *v21;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1297,15 +1297,15 @@ void __fastcall SupportSelectListViewObject__UpdateExplanationLabel(
   if ( (byte_40FD242 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, displaySwapInfo);
-    sub_B16FFC(&StringLiteral_12487, v5);
-    sub_B16FFC(&StringLiteral_12498, v6);
+    sub_B16FFC(&StringLiteral_12487/*"SUPPORT_SELECT_HELP"*/, v5);
+    sub_B16FFC(&StringLiteral_12498/*"SUPPORT_SELECT_SWAP"*/, v6);
     byte_40FD242 = 1;
   }
-  v7 = (System_String_o **)&StringLiteral_12498;
+  v7 = (System_String_o **)&StringLiteral_12498/*"SUPPORT_SELECT_SWAP"*/;
   v8 = !displaySwapInfo;
   explanationLb = this->fields.explanationLb;
   if ( v8 )
-    v7 = (System_String_o **)&StringLiteral_12487;
+    v7 = (System_String_o **)&StringLiteral_12487/*"SUPPORT_SELECT_HELP"*/;
   v10 = *v7;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )

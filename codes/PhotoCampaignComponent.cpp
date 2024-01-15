@@ -395,12 +395,12 @@ int64_t __fastcall PhotoCampaignComponent__GetLatestSelectedUsrSvtId(
   if ( (byte_40F8F1E & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10614, v2);
+    sub_B16FFC(&StringLiteral_10614/*"PhotoCampaignSelectedUsrSvtId"*/, v2);
     byte_40F8F1E = 1;
   }
   result = 0LL;
   String = UnityEngine_PlayerPrefs__GetString(
-             (System_String_o *)StringLiteral_10614,
+             (System_String_o *)StringLiteral_10614/*"PhotoCampaignSelectedUsrSvtId"*/,
              string_TypeInfo->static_fields->Empty,
              0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(String, 0LL);
@@ -428,8 +428,8 @@ System_String_o *__fastcall PhotoCampaignComponent__GetTitleMessage(
   if ( (byte_40F8F2E & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_7011, v3);
-    sub_B16FFC(&StringLiteral_7010, v4);
+    sub_B16FFC(&StringLiteral_7011/*"HEADER_MSG_PHOTO_SERVANT_SELECTED"*/, v3);
+    sub_B16FFC(&StringLiteral_7010/*"HEADER_MSG_PHOTO_SERVANT"*/, v4);
     byte_40F8F2E = 1;
   }
   if ( (this->fields.selectedUsrSvtId & 0x8000000000000000LL) != 0 )
@@ -439,7 +439,7 @@ System_String_o *__fastcall PhotoCampaignComponent__GetTitleMessage(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v5 = &StringLiteral_7010;
+    v5 = &StringLiteral_7010/*"HEADER_MSG_PHOTO_SERVANT"*/;
   }
   else
   {
@@ -448,7 +448,7 @@ System_String_o *__fastcall PhotoCampaignComponent__GetTitleMessage(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v5 = &StringLiteral_7011;
+    v5 = &StringLiteral_7011/*"HEADER_MSG_PHOTO_SERVANT_SELECTED"*/;
   }
   return LocalizationManager__Get((System_String_o *)*v5, 0LL);
 }
@@ -997,10 +997,10 @@ void __fastcall PhotoCampaignComponent__OnClickServant(
     sub_B16FFC(&Method_PhotoCampaignComponent___c__DisplayClass37_0__OnClickServant_b__0__, v26);
     sub_B16FFC(&Method_PhotoCampaignComponent___c__DisplayClass37_0__OnClickServant_b__1__, v27);
     sub_B16FFC(&PhotoCampaignComponent___c__DisplayClass37_0_TypeInfo, v28);
-    sub_B16FFC(&StringLiteral_11946, v29);
-    sub_B16FFC(&StringLiteral_11944, v30);
-    sub_B16FFC(&StringLiteral_11945, v31);
-    sub_B16FFC(&StringLiteral_11947, v32);
+    sub_B16FFC(&StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v29);
+    sub_B16FFC(&StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v30);
+    sub_B16FFC(&StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v31);
+    sub_B16FFC(&StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v32);
     byte_40F8F22 = 1;
   }
   v33 = sub_B170CC(PhotoCampaignComponent___c__DisplayClass37_0_TypeInfo, *(_QWORD *)&kind, *(_QWORD *)&n, method, v4);
@@ -1273,8 +1273,8 @@ LABEL_65:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v110 = LocalizationManager__Get((System_String_o *)StringLiteral_11947, 0LL);
-  v111 = LocalizationManager__Get((System_String_o *)StringLiteral_11946, 0LL);
+  v110 = LocalizationManager__Get((System_String_o *)StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
+  v111 = LocalizationManager__Get((System_String_o *)StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
   v113 = (System_Object_array *)sub_B17014(object___TypeInfo, 6LL, v112);
   Rarity = UserServantEntity__getRarity(Entity, 0LL);
   if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
@@ -1386,8 +1386,8 @@ LABEL_127:
   v113->m_Items[5] = (Il2CppObject *)v161;
   sub_B16F98((BattleServantConfConponent_o *)&v113->m_Items[5], v161, v117, v156, v157, v158, v159, v160);
   v162 = System_String__Format_43822456(v111, v113, 0LL);
-  v163 = LocalizationManager__Get((System_String_o *)StringLiteral_11945, 0LL);
-  v164 = LocalizationManager__Get((System_String_o *)StringLiteral_11944, 0LL);
+  v163 = LocalizationManager__Get((System_String_o *)StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
+  v164 = LocalizationManager__Get((System_String_o *)StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
   v165 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v170 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                   CommonConfirmDialog_ClickDelegate_TypeInfo,
@@ -1827,11 +1827,11 @@ void __fastcall PhotoCampaignComponent__SetLatestSelectedUsrSvtId(
   v4 = usrSvtId;
   if ( (byte_40F8F1F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10614, usrSvtId);
+    sub_B16FFC(&StringLiteral_10614/*"PhotoCampaignSelectedUsrSvtId"*/, usrSvtId);
     byte_40F8F1F = 1;
   }
   v3 = System_Int64__ToString((int64_t)&v4, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_10614, v3, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_10614/*"PhotoCampaignSelectedUsrSvtId"*/, v3, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -1885,17 +1885,17 @@ void __fastcall PhotoCampaignComponent__SetModeTabKind(
   if ( (byte_40F8F2A & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&modeKind);
-    sub_B16FFC(&StringLiteral_11701, v5);
-    sub_B16FFC(&StringLiteral_17071, v6);
-    sub_B16FFC(&StringLiteral_17072, v7);
-    sub_B16FFC(&StringLiteral_17057, v8);
-    sub_B16FFC(&StringLiteral_17060, v9);
-    sub_B16FFC(&StringLiteral_11699, v10);
-    sub_B16FFC(&StringLiteral_11700, v11);
-    sub_B16FFC(&StringLiteral_17073, v12);
-    sub_B16FFC(&StringLiteral_17074, v13);
-    sub_B16FFC(&StringLiteral_17059, v14);
-    sub_B16FFC(&StringLiteral_17058, v15);
+    sub_B16FFC(&StringLiteral_11701/*"SERVANT_LIST_EXPLANATION_PUSH"*/, v5);
+    sub_B16FFC(&StringLiteral_17071/*"button_push_reg"*/, v6);
+    sub_B16FFC(&StringLiteral_17072/*"button_push_unreg"*/, v7);
+    sub_B16FFC(&StringLiteral_17057/*"button_allchoice_reg"*/, v8);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v9);
+    sub_B16FFC(&StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/, v10);
+    sub_B16FFC(&StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/, v11);
+    sub_B16FFC(&StringLiteral_17073/*"button_select_reg"*/, v12);
+    sub_B16FFC(&StringLiteral_17074/*"button_select_unreg"*/, v13);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v14);
+    sub_B16FFC(&StringLiteral_17058/*"button_allchoice_unreg"*/, v15);
     byte_40F8F2A = 1;
   }
   if ( this->fields.tabModeKind != modeKind )
@@ -1912,7 +1912,7 @@ void __fastcall PhotoCampaignComponent__SetModeTabKind(
     normalTabSprite = this->fields.normalTabSprite;
     if ( !normalTabSprite )
       goto LABEL_51;
-    v19 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17074 : &StringLiteral_17073);
+    v19 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17074/*"button_select_unreg"*/ : &StringLiteral_17073/*"button_select_reg"*/);
     UISprite__set_spriteName(normalTabSprite, *v19, 0LL);
     lockTabButton = (UnityEngine_Behaviour_o *)this->fields.lockTabButton;
     if ( !lockTabButton )
@@ -1925,7 +1925,7 @@ void __fastcall PhotoCampaignComponent__SetModeTabKind(
     lockTabSprite = this->fields.lockTabSprite;
     if ( !lockTabSprite )
       goto LABEL_51;
-    v23 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17059 : &StringLiteral_17060);
+    v23 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17059/*"button_alllock_reg"*/ : &StringLiteral_17060/*"button_alllock_unreg"*/);
     UISprite__set_spriteName(lockTabSprite, *v23, 0LL);
     choiceTabButton = (UnityEngine_Behaviour_o *)this->fields.choiceTabButton;
     if ( !choiceTabButton )
@@ -1938,7 +1938,7 @@ void __fastcall PhotoCampaignComponent__SetModeTabKind(
     choiceTabSprite = this->fields.choiceTabSprite;
     if ( !choiceTabSprite )
       goto LABEL_51;
-    v27 = (System_String_o **)(this->fields.tabModeKind == 2 ? &StringLiteral_17057 : &StringLiteral_17058);
+    v27 = (System_String_o **)(this->fields.tabModeKind == 2 ? &StringLiteral_17057/*"button_allchoice_reg"*/ : &StringLiteral_17058/*"button_allchoice_unreg"*/);
     UISprite__set_spriteName(choiceTabSprite, *v27, 0LL);
     pushTabButton = (UnityEngine_Behaviour_o *)this->fields.pushTabButton;
     if ( !pushTabButton
@@ -1951,9 +1951,9 @@ LABEL_51:
       sub_B170D4();
     }
     if ( this->fields.tabModeKind == 3 )
-      v31 = (System_String_o **)&StringLiteral_17071;
+      v31 = (System_String_o **)&StringLiteral_17071/*"button_push_reg"*/;
     else
-      v31 = (System_String_o **)&StringLiteral_17072;
+      v31 = (System_String_o **)&StringLiteral_17072/*"button_push_unreg"*/;
     UISprite__set_spriteName(pushTabSprite, *v31, 0LL);
     switch ( modeKind )
     {
@@ -1976,7 +1976,7 @@ LABEL_51:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v39 = &StringLiteral_11700;
+        v39 = &StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
         goto LABEL_44;
       case 2:
         v38 = this->fields.infoLb;
@@ -1985,7 +1985,7 @@ LABEL_51:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v39 = &StringLiteral_11699;
+        v39 = &StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
         goto LABEL_44;
       case 3:
         v38 = this->fields.infoLb;
@@ -1994,7 +1994,7 @@ LABEL_51:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v39 = &StringLiteral_11701;
+        v39 = &StringLiteral_11701/*"SERVANT_LIST_EXPLANATION_PUSH"*/;
 LABEL_44:
         v40 = LocalizationManager__Get((System_String_o *)*v39, 0LL);
         if ( !v38 )
@@ -2637,7 +2637,7 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass40_0___CloseSvtDetail_b_
   {
     sub_B16FFC(&PhotoCampaignListViewManager_CallbackFunc_TypeInfo, method);
     sub_B16FFC(&Method_PhotoCampaignComponent_OnClickServant__, v3);
-    sub_B16FFC(&StringLiteral_3034, v4);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v4);
     byte_40F8392 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -2659,7 +2659,7 @@ void __fastcall PhotoCampaignComponent___c__DisplayClass40_0___CloseSvtDetail_b_
           myRoomFsm = v8->fields.myRoomFsm;
           if ( myRoomFsm )
           {
-            PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3034, 0LL);
+            PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
             return;
           }
         }

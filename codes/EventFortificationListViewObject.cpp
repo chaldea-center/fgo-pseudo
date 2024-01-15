@@ -307,8 +307,8 @@ void __fastcall EventFortificationListViewObject__OnClickSelect(
     sub_B16FFC(&EventFortificationListViewItem_TypeInfo, method);
     sub_B16FFC(&EventFortificationListViewManager_TypeInfo, v3);
     sub_B16FFC(&SoundManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_9940, v5);
-    sub_B16FFC(&StringLiteral_9941, v6);
+    sub_B16FFC(&StringLiteral_9940/*"OnClickSelectObject"*/, v5);
+    sub_B16FFC(&StringLiteral_9941/*"OnClickSelectPush"*/, v6);
     byte_40FB667 = 1;
   }
   linkItem = this->fields.linkItem;
@@ -378,13 +378,13 @@ LABEL_25:
         manager = (UnityEngine_Component_o *)this->fields.manager;
         if ( !manager )
           goto LABEL_38;
-        v14 = &StringLiteral_9941;
+        v14 = &StringLiteral_9941/*"OnClickSelectPush"*/;
         goto LABEL_37;
       }
     }
     else if ( !v9->fields.isCanNotSelect )
     {
-      v14 = &StringLiteral_9940;
+      v14 = &StringLiteral_9940/*"OnClickSelectObject"*/;
 LABEL_37:
       UnityEngine_Component__SendMessage(manager, (System_String_o *)*v14, (Il2CppObject *)this, 0LL);
       return;
@@ -415,8 +415,8 @@ void __fastcall EventFortificationListViewObject__OnLongPush(
   {
     sub_B16FFC(&EventFortificationListViewItem_TypeInfo, method);
     sub_B16FFC(&SoundManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9991, v4);
-    sub_B16FFC(&StringLiteral_10009, v5);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, v4);
+    sub_B16FFC(&StringLiteral_10009/*"OnPressCancel"*/, v5);
     byte_40FB668 = 1;
   }
   linkItem = this->fields.linkItem;
@@ -441,11 +441,11 @@ void __fastcall EventFortificationListViewObject__OnLongPush(
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       if ( gameObject )
       {
-        UnityEngine_GameObject__SendMessage_40693392(gameObject, (System_String_o *)StringLiteral_10009, 0LL);
+        UnityEngine_GameObject__SendMessage_40693392(gameObject, (System_String_o *)StringLiteral_10009/*"OnPressCancel"*/, 0LL);
         manager = (UnityEngine_Component_o *)this->fields.manager;
         if ( manager )
         {
-          UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9991, (Il2CppObject *)this, 0LL);
+          UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/, (Il2CppObject *)this, 0LL);
           return;
         }
       }
@@ -563,7 +563,7 @@ System_String_o *__fastcall EventFortificationListViewObject__ToString(
   if ( (byte_40FB666 & 1) == 0 )
   {
     sub_B16FFC(&EventFortificationListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40FB666 = 1;
   }
   v13 = 0.0;
@@ -582,7 +582,7 @@ System_String_o *__fastcall EventFortificationListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

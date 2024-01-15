@@ -1071,27 +1071,27 @@ bool __fastcall BattleLogicSkill__checkConditions(
     sub_B16FFC(&Method_BattleLogicSkill___c__DisplayClass11_0__checkConditions_b__2__, v19);
     sub_B16FFC(&Method_BattleLogicSkill___c__DisplayClass11_0__checkConditions_b__3__, v20);
     sub_B16FFC(&BattleLogicSkill___c__DisplayClass11_0_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_2512, v22);
-    sub_B16FFC(&StringLiteral_2510, v23);
-    sub_B16FFC(&StringLiteral_12308, v24);
-    sub_B16FFC(&StringLiteral_7065, v25);
-    sub_B16FFC(&StringLiteral_2511, v26);
-    sub_B16FFC(&StringLiteral_2509, v27);
-    sub_B16FFC(&StringLiteral_7064, v28);
-    sub_B16FFC(&StringLiteral_2513, v29);
-    sub_B16FFC(&StringLiteral_9350, v30);
-    sub_B16FFC(&StringLiteral_2514, v31);
-    sub_B16FFC(&StringLiteral_7066, v32);
-    sub_B16FFC(&StringLiteral_12309, v33);
-    sub_B16FFC(&StringLiteral_1, v34);
-    sub_B16FFC(&StringLiteral_9351, v35);
-    sub_B16FFC(&StringLiteral_7067, v36);
+    sub_B16FFC(&StringLiteral_2512/*"BATTLE_SKILLERROR_NP_LOWER"*/, v22);
+    sub_B16FFC(&StringLiteral_2510/*"BATTLE_SKILLERROR_HP_LOWER"*/, v23);
+    sub_B16FFC(&StringLiteral_12308/*"STAR_HIGHER"*/, v24);
+    sub_B16FFC(&StringLiteral_7065/*"HP_PER_LOWER"*/, v25);
+    sub_B16FFC(&StringLiteral_2511/*"BATTLE_SKILLERROR_NP_HIGHER"*/, v26);
+    sub_B16FFC(&StringLiteral_2509/*"BATTLE_SKILLERROR_HP_HIGHER"*/, v27);
+    sub_B16FFC(&StringLiteral_7064/*"HP_PER_HIGHER"*/, v28);
+    sub_B16FFC(&StringLiteral_2513/*"BATTLE_SKILLERROR_STAR_HIGHER"*/, v29);
+    sub_B16FFC(&StringLiteral_9350/*"NP_HIGHER"*/, v30);
+    sub_B16FFC(&StringLiteral_2514/*"BATTLE_SKILLERROR_STAR_LOWER"*/, v31);
+    sub_B16FFC(&StringLiteral_7066/*"HP_VAL_HIGHER"*/, v32);
+    sub_B16FFC(&StringLiteral_12309/*"STAR_LOWER"*/, v33);
+    sub_B16FFC(&StringLiteral_1/*""*/, v34);
+    sub_B16FFC(&StringLiteral_9351/*"NP_LOWER"*/, v35);
+    sub_B16FFC(&StringLiteral_7067/*"HP_VAL_LOWER"*/, v36);
     byte_40FC464 = 1;
   }
   v37 = sub_B170CC(BattleLogicSkill___c__DisplayClass11_0_TypeInfo, skillInfo, text, method, v4);
   BattleLogicSkill___c__DisplayClass11_0___ctor((BattleLogicSkill___c__DisplayClass11_0_o *)v37, 0LL);
-  *text = (System_String_o *)StringLiteral_1;
-  sub_B16F98((BattleServantConfConponent_o *)text, (System_Int32_array **)StringLiteral_1, v38, v39, v40, v41, v42, v43);
+  *text = (System_String_o *)StringLiteral_1/*""*/;
+  sub_B16F98((BattleServantConfConponent_o *)text, (System_Int32_array **)StringLiteral_1/*""*/, v38, v39, v40, v41, v42, v43);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_53;
@@ -1177,7 +1177,7 @@ bool __fastcall BattleLogicSkill__checkConditions(
     goto LABEL_53;
   if ( !System_Func_BattleBuffData_BuffData__int__bool___Invoke(
           v61,
-          (BattleBuffData_BuffData_o *)StringLiteral_9350,
+          (BattleBuffData_BuffData_o *)StringLiteral_9350/*"NP_HIGHER"*/,
           NPVal,
           (const MethodInfo_2B74754 *)Method_System_Func_string__int__bool__Invoke__) )
   {
@@ -1186,7 +1186,7 @@ bool __fastcall BattleLogicSkill__checkConditions(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v91 = &StringLiteral_2511;
+    v91 = &StringLiteral_2511/*"BATTLE_SKILLERROR_NP_HIGHER"*/;
     goto LABEL_52;
   }
   v81 = BattleServantData__getNPVal(v79, 0LL);
@@ -1194,7 +1194,7 @@ bool __fastcall BattleLogicSkill__checkConditions(
     goto LABEL_53;
   if ( !System_Func_BattleBuffData_BuffData__int__bool___Invoke(
           v66,
-          (BattleBuffData_BuffData_o *)StringLiteral_9351,
+          (BattleBuffData_BuffData_o *)StringLiteral_9351/*"NP_LOWER"*/,
           v81,
           (const MethodInfo_2B74754 *)Method_System_Func_string__int__bool__Invoke__) )
   {
@@ -1203,7 +1203,7 @@ bool __fastcall BattleLogicSkill__checkConditions(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v91 = &StringLiteral_2512;
+    v91 = &StringLiteral_2512/*"BATTLE_SKILLERROR_NP_LOWER"*/;
     goto LABEL_52;
   }
   v82 = this->fields.data;
@@ -1211,7 +1211,7 @@ bool __fastcall BattleLogicSkill__checkConditions(
     goto LABEL_53;
   if ( !System_Func_BattleBuffData_BuffData__int__bool___Invoke(
           v61,
-          (BattleBuffData_BuffData_o *)StringLiteral_12308,
+          (BattleBuffData_BuffData_o *)StringLiteral_12308/*"STAR_HIGHER"*/,
           v82->fields.totalCriticalStars,
           (const MethodInfo_2B74754 *)Method_System_Func_string__int__bool__Invoke__) )
   {
@@ -1220,7 +1220,7 @@ bool __fastcall BattleLogicSkill__checkConditions(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v91 = &StringLiteral_2513;
+    v91 = &StringLiteral_2513/*"BATTLE_SKILLERROR_STAR_HIGHER"*/;
     goto LABEL_52;
   }
   v83 = this->fields.data;
@@ -1228,7 +1228,7 @@ bool __fastcall BattleLogicSkill__checkConditions(
     goto LABEL_53;
   if ( !System_Func_BattleBuffData_BuffData__int__bool___Invoke(
           v66,
-          (BattleBuffData_BuffData_o *)StringLiteral_12309,
+          (BattleBuffData_BuffData_o *)StringLiteral_12309/*"STAR_LOWER"*/,
           v83->fields.totalCriticalStars,
           (const MethodInfo_2B74754 *)Method_System_Func_string__int__bool__Invoke__) )
   {
@@ -1237,13 +1237,13 @@ bool __fastcall BattleLogicSkill__checkConditions(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v91 = &StringLiteral_2514;
+    v91 = &StringLiteral_2514/*"BATTLE_SKILLERROR_STAR_LOWER"*/;
     goto LABEL_52;
   }
   NowHp = BattleServantData__getNowHp(v79, 0LL);
   if ( !System_Func_BattleBuffData_BuffData__int__bool___Invoke(
           v61,
-          (BattleBuffData_BuffData_o *)StringLiteral_7066,
+          (BattleBuffData_BuffData_o *)StringLiteral_7066/*"HP_VAL_HIGHER"*/,
           NowHp,
           (const MethodInfo_2B74754 *)Method_System_Func_string__int__bool__Invoke__) )
   {
@@ -1253,13 +1253,13 @@ LABEL_44:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v91 = &StringLiteral_2509;
+    v91 = &StringLiteral_2509/*"BATTLE_SKILLERROR_HP_HIGHER"*/;
     goto LABEL_52;
   }
   v85 = BattleServantData__getNowHp(v79, 0LL);
   if ( System_Func_BattleBuffData_BuffData__int__bool___Invoke(
          v66,
-         (BattleBuffData_BuffData_o *)StringLiteral_7067,
+         (BattleBuffData_BuffData_o *)StringLiteral_7067/*"HP_VAL_LOWER"*/,
          v85,
          (const MethodInfo_2B74754 *)Method_System_Func_string__int__bool__Invoke__) )
   {
@@ -1269,7 +1269,7 @@ LABEL_44:
       goto LABEL_53;
     if ( System_Func_string__double__bool___Invoke(
            v71,
-           (System_String_o *)StringLiteral_7064,
+           (System_String_o *)StringLiteral_7064/*"HP_PER_HIGHER"*/,
            (double)v86 * 1000.0 / (double)MaxHp,
            (const MethodInfo_2B742E0 *)Method_System_Func_string__double__bool__Invoke__) )
     {
@@ -1279,7 +1279,7 @@ LABEL_44:
       {
         if ( System_Func_string__double__bool___Invoke(
                v76,
-               (System_String_o *)StringLiteral_7065,
+               (System_String_o *)StringLiteral_7065/*"HP_PER_LOWER"*/,
                (double)v88 * 1000.0 / (double)v89,
                (const MethodInfo_2B742E0 *)Method_System_Func_string__double__bool__Invoke__) )
         {
@@ -1298,7 +1298,7 @@ LABEL_48:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v91 = &StringLiteral_2510;
+  v91 = &StringLiteral_2510/*"BATTLE_SKILLERROR_HP_LOWER"*/;
 LABEL_52:
   v92 = LocalizationManager__Get((System_String_o *)*v91, 0LL);
   *text = v92;
@@ -1839,7 +1839,7 @@ BattleActionData_o *__fastcall BattleLogicSkill__createSkillData_29250012(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v20);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_B16FFC(&StringLiteral_1, v23);
+    sub_B16FFC(&StringLiteral_1/*""*/, v23);
     byte_40FC460 = 1;
   }
   dataValsArray = 0LL;
@@ -2233,8 +2233,8 @@ LABEL_103:
                   v166,
                   v167,
                   v168);
-                v170 = (System_Int32_array **)StringLiteral_1;
-                v54->fields.skillMessage = (struct System_String_o *)StringLiteral_1;
+                v170 = (System_Int32_array **)StringLiteral_1/*""*/;
+                v54->fields.skillMessage = (struct System_String_o *)StringLiteral_1/*""*/;
                 sub_B16F98(
                   (BattleServantConfConponent_o *)&v54->fields.skillMessage,
                   v170,
@@ -2258,8 +2258,8 @@ LABEL_103:
                     v181,
                     v182,
                     v183);
-                  v185 = (System_Int32_array **)StringLiteral_1;
-                  *v177 = (System_Int32_array **)StringLiteral_1;
+                  v185 = (System_Int32_array **)StringLiteral_1/*""*/;
+                  *v177 = (System_Int32_array **)StringLiteral_1/*""*/;
                   sub_B16F98(
                     (BattleServantConfConponent_o *)&v54->fields.motionMessage,
                     v185,

@@ -23,10 +23,10 @@ System_Int32_array *__fastcall WarBoardEventEntity__GetSquareIndicesToAdd(
 {
   if ( (byte_40F63C4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16196, method);
+    sub_B16FFC(&StringLiteral_16196/*"addSquareIndex"*/, method);
     byte_40F63C4 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16196, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16196/*"addSquareIndex"*/, 0LL, 0LL);
 }
 
 
@@ -58,10 +58,10 @@ bool __fastcall WarBoardEventEntity__IsIncludeInvolvedAttacker(WarBoardEventEnti
 {
   if ( (byte_40F63C5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19693, method);
+    sub_B16FFC(&StringLiteral_19693/*"includeInvolvedAttacker"*/, method);
     byte_40F63C5 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19693, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19693/*"includeInvolvedAttacker"*/, 0, 0LL) == 1;
 }
 
 
@@ -69,10 +69,10 @@ bool __fastcall WarBoardEventEntity__IsIncludeInvolvedDefender(WarBoardEventEnti
 {
   if ( (byte_40F63C6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19694, method);
+    sub_B16FFC(&StringLiteral_19694/*"includeInvolvedDefender"*/, method);
     byte_40F63C6 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19694, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19694/*"includeInvolvedDefender"*/, 0, 0LL) == 1;
 }
 
 

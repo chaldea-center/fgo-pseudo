@@ -16,22 +16,22 @@ System_String_o *__fastcall Gift__CountTextWithPrefix(
   if ( (byte_40FC100 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, unitString);
-    sub_B16FFC(&StringLiteral_690, v7);
-    sub_B16FFC(&StringLiteral_23611, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_690/*"+"*/, v7);
+    sub_B16FFC(&StringLiteral_23611/*"×"*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FC100 = 1;
   }
   if ( (unsigned int)(type - 3) < 2 )
   {
-    v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_690, unitString, 0LL);
+    v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_690/*"+"*/, unitString, 0LL);
     v15 = num;
     v12 = &v15;
   }
   else
   {
     if ( type == 8 )
-      return (System_String_o *)StringLiteral_1;
-    v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_23611, unitString, 0LL);
+      return (System_String_o *)StringLiteral_1/*""*/;
+    v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_23611/*"×"*/, unitString, 0LL);
     v12 = &v14;
     v14 = num;
   }

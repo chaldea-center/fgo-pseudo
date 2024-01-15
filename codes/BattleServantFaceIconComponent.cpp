@@ -209,8 +209,8 @@ void __fastcall BattleServantFaceIconComponent__SetDropLabel(
   if ( (byte_40FCCCF & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&dropNum);
-    sub_B16FFC(&StringLiteral_23612, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_23612/*"×{0}"*/, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FCCCF = 1;
   }
   dropNumLabel = this->fields.dropNumLabel;
@@ -218,7 +218,7 @@ void __fastcall BattleServantFaceIconComponent__SetDropLabel(
   {
     v10 = dropNum;
     v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
-    v9 = System_String__Format((System_String_o *)StringLiteral_23612, v8, 0LL);
+    v9 = System_String__Format((System_String_o *)StringLiteral_23612/*"×{0}"*/, v8, 0LL);
     if ( dropNumLabel )
     {
       UILabel__set_text(dropNumLabel, v9, 0LL);
@@ -229,7 +229,7 @@ LABEL_8:
   }
   if ( !dropNumLabel )
     goto LABEL_8;
-  UILabel__set_text(dropNumLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(dropNumLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 

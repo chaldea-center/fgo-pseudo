@@ -274,13 +274,13 @@ void __fastcall LimitUpResultCheckComponent__SetResInfoListQuestInfo(
     sub_B16FFC(&Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoComponent___, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, v10);
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_9738, v12);
-    sub_B16FFC(&StringLiteral_9744, v13);
-    sub_B16FFC(&StringLiteral_9735, v14);
-    sub_B16FFC(&StringLiteral_9736, v15);
-    sub_B16FFC(&StringLiteral_9731, v16);
-    sub_B16FFC(&StringLiteral_9732, v17);
-    sub_B16FFC(&StringLiteral_9737, v18);
+    sub_B16FFC(&StringLiteral_9738/*"OPEN_MAIN_SCENARIO_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_9744/*"OPEN_STORY_QUEST_TITLE_LIMIT_UP"*/, v13);
+    sub_B16FFC(&StringLiteral_9735/*"OPEN_LIMIT_UNSEALED_QUEST_NAME_LIMIT_UP"*/, v14);
+    sub_B16FFC(&StringLiteral_9736/*"OPEN_LIMIT_UNSEALED_QUEST_TITLE_LIMIT_UP"*/, v15);
+    sub_B16FFC(&StringLiteral_9731/*"OPEN_EVENT_QUEST_NAME_LIMIT_UP"*/, v16);
+    sub_B16FFC(&StringLiteral_9732/*"OPEN_EVENT_QUEST_TITLE_LIMIT_UP"*/, v17);
+    sub_B16FFC(&StringLiteral_9737/*"OPEN_MAIN_QUEST_TITLE_LIMIT_UP"*/, v18);
     byte_40FC255 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -311,8 +311,8 @@ void __fastcall LimitUpResultCheckComponent__SetResInfoListQuestInfo(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9736, 0LL);
-        v26 = &StringLiteral_9735;
+        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9736/*"OPEN_LIMIT_UNSEALED_QUEST_TITLE_LIMIT_UP"*/, 0LL);
+        v26 = &StringLiteral_9735/*"OPEN_LIMIT_UNSEALED_QUEST_NAME_LIMIT_UP"*/;
       }
       else
       {
@@ -324,16 +324,16 @@ void __fastcall LimitUpResultCheckComponent__SetResInfoListQuestInfo(
         v27 = (ConstantStrMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_ConstantStrMaster___);
         if ( !v27 )
           goto LABEL_47;
-        Value = (Il2CppObject *)ConstantStrMaster__GetValue(v27, (System_String_o *)StringLiteral_9738, 0LL);
+        Value = (Il2CppObject *)ConstantStrMaster__GetValue(v27, (System_String_o *)StringLiteral_9738/*"OPEN_MAIN_SCENARIO_TITLE"*/, 0LL);
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !LocalizationManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v29 = LocalizationManager__Get((System_String_o *)StringLiteral_9737, 0LL);
+        v29 = LocalizationManager__Get((System_String_o *)StringLiteral_9737/*"OPEN_MAIN_QUEST_TITLE_LIMIT_UP"*/, 0LL);
         v25 = System_String__Format(v29, Value, 0LL);
 LABEL_27:
-        v26 = &StringLiteral_9731;
+        v26 = &StringLiteral_9731/*"OPEN_EVENT_QUEST_NAME_LIMIT_UP"*/;
       }
 LABEL_40:
       v24 = v25;
@@ -380,8 +380,8 @@ LABEL_47:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v26 = &StringLiteral_9735;
-        v30 = &StringLiteral_9736;
+        v26 = &StringLiteral_9735/*"OPEN_LIMIT_UNSEALED_QUEST_NAME_LIMIT_UP"*/;
+        v30 = &StringLiteral_9736/*"OPEN_LIMIT_UNSEALED_QUEST_TITLE_LIMIT_UP"*/;
       }
       else
       {
@@ -390,8 +390,8 @@ LABEL_47:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v26 = &StringLiteral_9731;
-        v30 = &StringLiteral_9744;
+        v26 = &StringLiteral_9731/*"OPEN_EVENT_QUEST_NAME_LIMIT_UP"*/;
+        v30 = &StringLiteral_9744/*"OPEN_STORY_QUEST_TITLE_LIMIT_UP"*/;
       }
       v25 = LocalizationManager__Get((System_String_o *)*v30, 0LL);
       goto LABEL_40;
@@ -404,7 +404,7 @@ LABEL_47:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9732, 0LL);
+      v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9732/*"OPEN_EVENT_QUEST_TITLE_LIMIT_UP"*/, 0LL);
       goto LABEL_27;
     default:
       v24 = 0LL;
@@ -461,8 +461,8 @@ void __fastcall LimitUpResultCheckComponent__SetSkillRelease(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_6850, v14);
-    sub_B16FFC(&StringLiteral_6849, v15);
+    sub_B16FFC(&StringLiteral_6850/*"GET_SKILL_TITLE"*/, v14);
+    sub_B16FFC(&StringLiteral_6849/*"GET_SKILL_NAME_LIMIT_UP"*/, v15);
     byte_40FC257 = 1;
   }
   detail = 0LL;
@@ -481,7 +481,7 @@ void __fastcall LimitUpResultCheckComponent__SetSkillRelease(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_6850, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_6850/*"GET_SKILL_TITLE"*/, 0LL);
   if ( !this->fields.resUsrSvtData )
     goto LABEL_20;
   v19 = v18;
@@ -489,7 +489,7 @@ void __fastcall LimitUpResultCheckComponent__SetSkillRelease(
   if ( !Entity )
     goto LABEL_20;
   SkillEntity__getSkillMessageInfo(Entity, &name, &detail, SkillLevel, 0LL);
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_6849, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_6849/*"GET_SKILL_NAME_LIMIT_UP"*/, 0LL);
   v22 = System_String__Format(v21, (Il2CppObject *)name, 0LL);
   v23 = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_ServantSkillMaster___);
   resUsrSvtData = this->fields.resUsrSvtData;
@@ -618,10 +618,10 @@ void __fastcall LimitUpResultCheckComponent__checkGetSkill(
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_6848, v8);
-    sub_B16FFC(&StringLiteral_1663, v9);
-    sub_B16FFC(&StringLiteral_2947, v10);
-    sub_B16FFC(&StringLiteral_2533, v11);
+    sub_B16FFC(&StringLiteral_6848/*"GET_SKILL_NAME"*/, v8);
+    sub_B16FFC(&StringLiteral_1663/*"AFTER_CHANGE_SKILL_SUB_TITLE"*/, v9);
+    sub_B16FFC(&StringLiteral_2947/*"CHANGE_SKILL_TITLE"*/, v10);
+    sub_B16FFC(&StringLiteral_2533/*"BEFORE_CHANGE_SKILL_SUB_TITLE"*/, v11);
     byte_40FC256 = 1;
   }
   name = 0LL;
@@ -745,17 +745,17 @@ LABEL_55:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v55 = LocalizationManager__Get((System_String_o *)StringLiteral_2947, 0LL);
+                v55 = LocalizationManager__Get((System_String_o *)StringLiteral_2947/*"CHANGE_SKILL_TITLE"*/, 0LL);
                 if ( skillChangeInfoTitle )
                 {
                   UILabel__set_text(skillChangeInfoTitle, v55, 0LL);
                   skillChangeInfoSubTitleOld = this->fields.skillChangeInfoSubTitleOld;
-                  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_2533, 0LL);
+                  v57 = LocalizationManager__Get((System_String_o *)StringLiteral_2533/*"BEFORE_CHANGE_SKILL_SUB_TITLE"*/, 0LL);
                   if ( skillChangeInfoSubTitleOld )
                   {
                     UILabel__set_text(skillChangeInfoSubTitleOld, v57, 0LL);
                     skillChangeInfoSubTitleNow = this->fields.skillChangeInfoSubTitleNow;
-                    v59 = LocalizationManager__Get((System_String_o *)StringLiteral_1663, 0LL);
+                    v59 = LocalizationManager__Get((System_String_o *)StringLiteral_1663/*"AFTER_CHANGE_SKILL_SUB_TITLE"*/, 0LL);
                     if ( skillChangeInfoSubTitleNow )
                     {
                       UILabel__set_text(skillChangeInfoSubTitleNow, v59, 0LL);
@@ -763,7 +763,7 @@ LABEL_55:
                       {
                         SkillEntity__getSkillMessageInfo(Entity, &name, &detail, v51, 0LL);
                         skillChangeInfoNameOld = this->fields.skillChangeInfoNameOld;
-                        v61 = LocalizationManager__Get((System_String_o *)StringLiteral_6848, 0LL);
+                        v61 = LocalizationManager__Get((System_String_o *)StringLiteral_6848/*"GET_SKILL_NAME"*/, 0LL);
                         v62 = System_String__Format(v61, (Il2CppObject *)name, 0LL);
                         if ( skillChangeInfoNameOld )
                         {
@@ -782,7 +782,7 @@ LABEL_55:
                             {
                               SkillEntity__getSkillMessageInfo(v49, &name, &detail, v54, 0LL);
                               skillChangeInfoNameNow = this->fields.skillChangeInfoNameNow;
-                              v65 = LocalizationManager__Get((System_String_o *)StringLiteral_6848, 0LL);
+                              v65 = LocalizationManager__Get((System_String_o *)StringLiteral_6848/*"GET_SKILL_NAME"*/, 0LL);
                               v66 = System_String__Format(v65, (Il2CppObject *)name, 0LL);
                               if ( skillChangeInfoNameNow )
                               {
@@ -914,8 +914,8 @@ void __fastcall LimitUpResultCheckComponent__checkLimitUpReward(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
     sub_B16FFC(&Method_LimitUpResultCheckComponent___c__DisplayClass44_0__checkLimitUpReward_b__0__, v17);
     sub_B16FFC(&LimitUpResultCheckComponent___c__DisplayClass44_0_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_6845, v19);
-    sub_B16FFC(&StringLiteral_6846, v20);
+    sub_B16FFC(&StringLiteral_6845/*"GET_LIMIT_UP_REWARD_DETAIL"*/, v19);
+    sub_B16FFC(&StringLiteral_6846/*"GET_LIMIT_UP_REWARD_TITLE"*/, v20);
     byte_40FC258 = 1;
   }
   countText = 0LL;
@@ -991,8 +991,8 @@ void __fastcall LimitUpResultCheckComponent__checkLimitUpReward(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_6846, 0LL);
-  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_6845, 0LL);
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_6846/*"GET_LIMIT_UP_REWARD_TITLE"*/, 0LL);
+  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_6845/*"GET_LIMIT_UP_REWARD_DETAIL"*/, 0LL);
   if ( !*v37 )
     goto LABEL_35;
   v46 = (Il2CppObject *)nameText;
@@ -1112,8 +1112,8 @@ void __fastcall LimitUpResultCheckComponent__checkQuestOpen(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
     sub_B16FFC(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v13);
     sub_B16FFC(&SingletonTemplate_clsQuestCheck__TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_9743, v15);
-    sub_B16FFC(&StringLiteral_9733, v16);
+    sub_B16FFC(&StringLiteral_9743/*"OPEN_STORY_QUEST_TITLE"*/, v15);
+    sub_B16FFC(&StringLiteral_9733/*"OPEN_HERO_QUEST_TITLE"*/, v16);
     byte_40FC254 = 1;
   }
   this->fields.isOpenQuest = 0;
@@ -1206,12 +1206,12 @@ LABEL_44:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_9743, 0LL);
+    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_9743/*"OPEN_STORY_QUEST_TITLE"*/, 0LL);
     if ( storyQuestInfoTitle )
     {
       UILabel__set_text(storyQuestInfoTitle, v37, 0LL);
       heroQuestInfoTitle = this->fields.heroQuestInfoTitle;
-      v39 = LocalizationManager__Get((System_String_o *)StringLiteral_9733, 0LL);
+      v39 = LocalizationManager__Get((System_String_o *)StringLiteral_9733/*"OPEN_HERO_QUEST_TITLE"*/, 0LL);
       if ( heroQuestInfoTitle )
       {
         UILabel__set_text(heroQuestInfoTitle, v39, 0LL);

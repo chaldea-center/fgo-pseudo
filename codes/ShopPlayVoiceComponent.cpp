@@ -53,7 +53,7 @@ void __fastcall ShopPlayVoiceComponent__EndLoadVoice(
   if ( (byte_40FB776 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, *(_QWORD *)&state);
-    sub_B16FFC(&StringLiteral_12144, v12);
+    sub_B16FFC(&StringLiteral_12144/*"SHOP_SCENE_VOICE_WELCOME"*/, v12);
     byte_40FB776 = 1;
   }
   p_voiceData = &this->fields.voiceData;
@@ -92,7 +92,7 @@ void __fastcall ShopPlayVoiceComponent__EndLoadVoice(
     }
     else if ( state != 9 )
     {
-      VoiceFromMaster = ShopPlayVoiceComponent__GetVoiceFromMaster(v28, (System_String_o *)StringLiteral_12144, v30);
+      VoiceFromMaster = ShopPlayVoiceComponent__GetVoiceFromMaster(v28, (System_String_o *)StringLiteral_12144/*"SHOP_SCENE_VOICE_WELCOME"*/, v30);
       ShopPlayVoiceComponent__PlayVoice(this, VoiceFromMaster, v36);
     }
   }
@@ -259,7 +259,7 @@ void __fastcall ShopPlayVoiceComponent__LoadVoice(
     sub_B16FFC(&SoundManager_TypeInfo, v12);
     sub_B16FFC(&Method_ShopPlayVoiceComponent___c__DisplayClass14_0__LoadVoice_b__0__, v13);
     sub_B16FFC(&ShopPlayVoiceComponent___c__DisplayClass14_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_3947, v15);
+    sub_B16FFC(&StringLiteral_3947/*"ChrVoice_"*/, v15);
     byte_40FB76E = 1;
   }
   v16 = sub_B170CC(
@@ -281,7 +281,7 @@ void __fastcall ShopPlayVoiceComponent__LoadVoice(
   {
     v38 = figureSvtId;
     v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v38);
-    v25 = (System_Int32_array **)System_String__Concat((Il2CppObject *)StringLiteral_3947, v24, 0LL);
+    v25 = (System_Int32_array **)System_String__Concat((Il2CppObject *)StringLiteral_3947/*"ChrVoice_"*/, v24, 0LL);
     *p_requestVoiceData = (struct System_String_o *)v25;
     sub_B16F98((BattleServantConfConponent_o *)&this->fields.requestVoiceData, v25, v26, v27, v28, v29, v30, v31);
     v36 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v32, v33, v34, v35);
@@ -334,7 +334,7 @@ void __fastcall ShopPlayVoiceComponent__PlayVoice(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_983, v8);
+    sub_B16FFC(&StringLiteral_983/*"0_"*/, v8);
     byte_40FB771 = 1;
   }
   if ( !System_String__IsNullOrEmpty(name, 0LL) && this->fields.voiceData )
@@ -350,7 +350,7 @@ void __fastcall ShopPlayVoiceComponent__PlayVoice(
                                                  (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ServantVoiceMaster___),
           figureServantLimitCount = this->fields.figureServantLimitCount,
           v15 = (ServantVoiceMaster_o *)MasterData_WarQuestSelectionMaster,
-          v16 = System_String__Concat_43743732((System_String_o *)StringLiteral_983, name, 0LL),
+          v16 = System_String__Concat_43743732((System_String_o *)StringLiteral_983/*"0_"*/, name, 0LL),
           !v15) )
     {
       sub_B170D4();
@@ -415,7 +415,7 @@ void __fastcall ShopPlayVoiceComponent__PlayVoiceList(ShopPlayVoiceComponent_o *
   v3 = this;
   if ( (byte_40FB772 & 1) == 0 )
   {
-    this = (ShopPlayVoiceComponent_o *)sub_B16FFC(&StringLiteral_8050, method);
+    this = (ShopPlayVoiceComponent_o *)sub_B16FFC(&StringLiteral_8050/*"InvokedPlayVoiceList"*/, method);
     byte_40FB772 = 1;
   }
   voicePlayingList = v3->fields.voicePlayingList;
@@ -436,7 +436,7 @@ void __fastcall ShopPlayVoiceComponent__PlayVoiceList(ShopPlayVoiceComponent_o *
       {
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)v3,
-          (System_String_o *)StringLiteral_8050,
+          (System_String_o *)StringLiteral_8050/*"InvokedPlayVoiceList"*/,
           v7->fields.delay,
           0LL);
         return;
@@ -473,10 +473,10 @@ bool __fastcall ShopPlayVoiceComponent__PlayVoiceOnce(
 
   if ( (byte_40FB770 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, name);
+    sub_B16FFC(&StringLiteral_1/*""*/, name);
     byte_40FB770 = 1;
   }
-  if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_1, 0LL) )
+  if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     return 0;
   ShopPlayVoiceComponent__StopVoice(this, v7);
   if ( this->fields.isPlayingVoice || (this->fields.voicePlayOnce & flag) != 0 )
@@ -591,7 +591,7 @@ void __fastcall ShopPlayVoiceComponent__ReloadVoice(
     sub_B16FFC(&SoundManager_TypeInfo, v14);
     sub_B16FFC(&Method_ShopPlayVoiceComponent___c__DisplayClass15_0__ReloadVoice_b__0__, v15);
     sub_B16FFC(&ShopPlayVoiceComponent___c__DisplayClass15_0_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_3947, v17);
+    sub_B16FFC(&StringLiteral_3947/*"ChrVoice_"*/, v17);
     byte_40FB76F = 1;
   }
   v18 = sub_B170CC(
@@ -629,7 +629,7 @@ void __fastcall ShopPlayVoiceComponent__ReloadVoice(
     *((_DWORD *)p_standFigureBack + 4) = defaultFaceType;
     v52 = figureServantId;
     v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-    v39 = (System_Int32_array **)System_String__Concat((Il2CppObject *)StringLiteral_3947, v38, 0LL);
+    v39 = (System_Int32_array **)System_String__Concat((Il2CppObject *)StringLiteral_3947/*"ChrVoice_"*/, v38, 0LL);
     p_standFigureBack[4] = (struct StandFigureBack_o *)v39;
     sub_B16F98((BattleServantConfConponent_o *)(p_standFigureBack + 4), v39, v40, v41, v42, v43, v44, v45);
     v46 = (System_String_o *)p_standFigureBack[4];
@@ -708,7 +708,7 @@ void __fastcall ShopPlayVoiceComponent__StopVoice(ShopPlayVoiceComponent_o *this
 
   if ( (byte_40FB774 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8050, method);
+    sub_B16FFC(&StringLiteral_8050/*"InvokedPlayVoiceList"*/, method);
     byte_40FB774 = 1;
   }
   voicePlayer = this->fields.voicePlayer;
@@ -730,12 +730,12 @@ void __fastcall ShopPlayVoiceComponent__StopVoice(ShopPlayVoiceComponent_o *this
   }
   if ( UnityEngine_MonoBehaviour__IsInvoking_34803724(
          (UnityEngine_MonoBehaviour_o *)this,
-         (System_String_o *)StringLiteral_8050,
+         (System_String_o *)StringLiteral_8050/*"InvokedPlayVoiceList"*/,
          0LL) )
   {
     UnityEngine_MonoBehaviour__CancelInvoke_34803564(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_8050,
+      (System_String_o *)StringLiteral_8050/*"InvokedPlayVoiceList"*/,
       0LL);
   }
 }

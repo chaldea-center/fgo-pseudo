@@ -181,30 +181,30 @@ void __fastcall CancelConfirmMenu__Init(CancelConfirmMenu_o *this, const MethodI
 
   if ( (byte_40FCF10 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FCF10 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_10;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_10;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   currentSupportMemberTitleLabel = this->fields.currentSupportMemberTitleLabel;
   if ( !currentSupportMemberTitleLabel
-    || (UILabel__set_text(currentSupportMemberTitleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(currentSupportMemberTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (oldSupportMemberTitleLabel = this->fields.oldSupportMemberTitleLabel) == 0LL)
-    || (UILabel__set_text(oldSupportMemberTitleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(oldSupportMemberTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL) )
   {
 LABEL_10:
     sub_B170D4();
   }
-  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -321,12 +321,12 @@ void __fastcall CancelConfirmMenu__Open(
     sub_B16FFC(&long___TypeInfo, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_10186, v18);
-    sub_B16FFC(&StringLiteral_10185, v19);
-    sub_B16FFC(&StringLiteral_12472, v20);
-    sub_B16FFC(&StringLiteral_12495, v21);
-    sub_B16FFC(&StringLiteral_10187, v22);
-    sub_B16FFC(&StringLiteral_12450, v23);
+    sub_B16FFC(&StringLiteral_10186/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_DECIDE"*/, v18);
+    sub_B16FFC(&StringLiteral_10185/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_CANCEL"*/, v19);
+    sub_B16FFC(&StringLiteral_12472/*"SUPPORT_SELECT_CURRENT_STATE"*/, v20);
+    sub_B16FFC(&StringLiteral_12495/*"SUPPORT_SELECT_OLD_STATE"*/, v21);
+    sub_B16FFC(&StringLiteral_10187/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_MESSAGE"*/, v22);
+    sub_B16FFC(&StringLiteral_12450/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/, v23);
     byte_40FCF11 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
@@ -491,12 +491,12 @@ LABEL_61:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v57 = LocalizationManager__Get((System_String_o *)StringLiteral_12472, 0LL);
+    v57 = LocalizationManager__Get((System_String_o *)StringLiteral_12472/*"SUPPORT_SELECT_CURRENT_STATE"*/, 0LL);
     if ( !currentSupportMemberTitleLabel )
       goto LABEL_60;
     UILabel__set_text(currentSupportMemberTitleLabel, v57, 0LL);
     oldSupportMemberTitleLabel = this->fields.oldSupportMemberTitleLabel;
-    v59 = LocalizationManager__Get((System_String_o *)StringLiteral_12495, 0LL);
+    v59 = LocalizationManager__Get((System_String_o *)StringLiteral_12495/*"SUPPORT_SELECT_OLD_STATE"*/, 0LL);
     if ( !oldSupportMemberTitleLabel )
       goto LABEL_60;
     UILabel__set_text(oldSupportMemberTitleLabel, v59, 0LL);
@@ -505,21 +505,21 @@ LABEL_61:
       goto LABEL_60;
     UILabel__set_alignment(titleLabel, 1, 0LL);
     v61 = this->fields.titleLabel;
-    v62 = LocalizationManager__Get((System_String_o *)StringLiteral_12450, 0LL);
+    v62 = LocalizationManager__Get((System_String_o *)StringLiteral_12450/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/, 0LL);
     if ( !v61 )
       goto LABEL_60;
     UILabel__set_text(v61, v62, 0LL);
     messageLabel = this->fields.messageLabel;
-    v64 = LocalizationManager__Get((System_String_o *)StringLiteral_10187, 0LL);
+    v64 = LocalizationManager__Get((System_String_o *)StringLiteral_10187/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_MESSAGE"*/, 0LL);
     if ( !messageLabel )
       goto LABEL_60;
     UILabel__set_text(messageLabel, v64, 0LL);
     decideLabel = this->fields.decideLabel;
-    v66 = LocalizationManager__Get((System_String_o *)StringLiteral_10186, 0LL);
+    v66 = LocalizationManager__Get((System_String_o *)StringLiteral_10186/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_DECIDE"*/, 0LL);
     if ( !decideLabel
       || (UILabel__set_text(decideLabel, v66, 0LL),
           cancelLabel = this->fields.cancelLabel,
-          v68 = LocalizationManager__Get((System_String_o *)StringLiteral_10185, 0LL),
+          v68 = LocalizationManager__Get((System_String_o *)StringLiteral_10185/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_CANCEL"*/, 0LL),
           !cancelLabel)
       || (UILabel__set_text(cancelLabel, v68, 0LL), (v69 = (UnityEngine_Component_o *)this->fields.cancelButton) == 0LL) )
     {

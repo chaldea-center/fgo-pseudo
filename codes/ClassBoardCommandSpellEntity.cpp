@@ -313,7 +313,7 @@ DataVals_array *__fastcall ClassBoardCommandSpellEntity__getDataValsList(
   {
     sub_B16FFC(&DataVals___TypeInfo, method);
     sub_B16FFC(&DataVals_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FAFB2 = 1;
   }
   svals = this->fields.svals;
@@ -321,7 +321,7 @@ DataVals_array *__fastcall ClassBoardCommandSpellEntity__getDataValsList(
   {
     v13 = (DataVals_array *)sub_B17014(DataVals___TypeInfo, 1LL, v2);
     v29 = (DataVals_o *)sub_B170CC(DataVals_TypeInfo, v25, v26, v27, v28);
-    DataVals___ctor(v29, (System_String_o *)StringLiteral_1, 0LL);
+    DataVals___ctor(v29, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( v13 )
     {
       if ( v29 )

@@ -14,13 +14,13 @@ void __fastcall BattleChrManager___cctor(const MethodInfo *method)
   if ( (byte_40FD46D & 1) == 0 )
   {
     sub_B16FFC(&BattleChrManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16089, v8);
+    sub_B16FFC(&StringLiteral_16089/*"_level"*/, v8);
     byte_40FD46D = 1;
   }
   BattleChrManager_TypeInfo->static_fields->animFps = 30.0;
   static_fields = BattleChrManager_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_16089;
-  static_fields->levelMarker = (struct System_String_o *)StringLiteral_16089;
+  v10 = (System_Int32_array **)StringLiteral_16089/*"_level"*/;
+  static_fields->levelMarker = (struct System_String_o *)StringLiteral_16089/*"_level"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->levelMarker, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -113,10 +113,10 @@ void __fastcall BattleChrManager__AttachAnimationEvents(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_Animation___, v11);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BattleChrControl___, v12);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_313, v14);
-    sub_B16FFC(&StringLiteral_9905, v15);
-    sub_B16FFC(&StringLiteral_1223, v16);
-    sub_B16FFC(&StringLiteral_698, v17);
+    sub_B16FFC(&StringLiteral_313/*"#"*/, v14);
+    sub_B16FFC(&StringLiteral_9905/*"OnAnimEvent"*/, v15);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v16);
+    sub_B16FFC(&StringLiteral_698/*","*/, v17);
     byte_40FD46B = 1;
   }
   if ( !gameObject )
@@ -160,10 +160,10 @@ LABEL_76:
         goto LABEL_77;
       v28 = *(System_String_o **)(v26 + 8LL * i + 32);
       v29 = sub_B17014(char___TypeInfo, 1LL, v22);
-      if ( !StringLiteral_698 )
+      if ( !StringLiteral_698/*","*/ )
         goto LABEL_76;
       v30 = (System_Char_array *)v29;
-      Chars = System_String__get_Chars((System_String_o *)StringLiteral_698, 0, 0LL);
+      Chars = System_String__get_Chars((System_String_o *)StringLiteral_698/*","*/, 0, 0LL);
       if ( !v30 )
         goto LABEL_76;
       if ( !v30->max_length )
@@ -183,7 +183,7 @@ LABEL_76:
         v33 = *(System_String_o **)(Chars + 32);
         if ( !v33 )
           goto LABEL_76;
-        Chars = System_String__StartsWith(v33, (System_String_o *)StringLiteral_313, 0LL);
+        Chars = System_String__StartsWith(v33, (System_String_o *)StringLiteral_313/*"#"*/, 0LL);
         if ( (Chars & 1) == 0 && *(int *)(v32 + 24) >= 6 )
         {
           Chars = System_Int32__Parse(*(System_String_o **)(v32 + 40), 0LL);
@@ -257,9 +257,9 @@ LABEL_76:
                       if ( !v49 )
                         goto LABEL_76;
                       UnityEngine_AnimationEvent__set_time(v49, v43 / v48, 0LL);
-                      v50 = System_String__Concat_43746016(v46, (System_String_o *)StringLiteral_1223, v47, 0LL);
+                      v50 = System_String__Concat_43746016(v46, (System_String_o *)StringLiteral_1223/*":"*/, v47, 0LL);
                       UnityEngine_AnimationEvent__set_stringParameter(v49, v50, 0LL);
-                      UnityEngine_AnimationEvent__set_functionName(v49, (System_String_o *)StringLiteral_9905, 0LL);
+                      UnityEngine_AnimationEvent__set_functionName(v49, (System_String_o *)StringLiteral_9905/*"OnAnimEvent"*/, 0LL);
                       v39 = *(_DWORD *)(v32 + 24);
                       v40 = v45 + 1;
                       if ( v45 + 1 < v39 )
@@ -330,9 +330,9 @@ LABEL_76:
                         if ( !v62 )
                           goto LABEL_76;
                         UnityEngine_AnimationEvent__set_time(v62, v56 / v61, 0LL);
-                        v63 = System_String__Concat_43746016(v59, (System_String_o *)StringLiteral_1223, v60, 0LL);
+                        v63 = System_String__Concat_43746016(v59, (System_String_o *)StringLiteral_1223/*":"*/, v60, 0LL);
                         UnityEngine_AnimationEvent__set_stringParameter(v62, v63, 0LL);
-                        UnityEngine_AnimationEvent__set_functionName(v62, (System_String_o *)StringLiteral_9905, 0LL);
+                        UnityEngine_AnimationEvent__set_functionName(v62, (System_String_o *)StringLiteral_9905/*"OnAnimEvent"*/, 0LL);
                         v52 = *(_DWORD *)(v32 + 24);
                         v53 = v58 + 1;
                         if ( v58 + 1 < v52 )
@@ -728,8 +728,8 @@ void __fastcall BattleChrManager__Start(BattleChrManager_o *this, const MethodIn
     sub_B16FFC(&UnityEngine_TextAsset_var, v4);
     sub_B16FFC(&UnityEngine_TextAsset_TypeInfo, v5);
     sub_B16FFC(&System_Type_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_8974, v7);
-    sub_B16FFC(&StringLiteral_23711, v8);
+    sub_B16FFC(&StringLiteral_8974/*"Maya/fbxevent_arthur"*/, v7);
+    sub_B16FFC(&StringLiteral_23711/*"アルトリア"*/, v8);
     byte_40FD469 = 1;
   }
   mayaPrefab = (Il2CppObject *)this->fields.mayaPrefab;
@@ -793,7 +793,7 @@ LABEL_21:
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
   v36.fields.value = v29;
   TypeFromHandle = System_Type__GetTypeFromHandle(v36, 0LL);
-  _34873004 = UnityEngine_Resources__Load_34873004((System_String_o *)StringLiteral_8974, TypeFromHandle, 0LL);
+  _34873004 = UnityEngine_Resources__Load_34873004((System_String_o *)StringLiteral_8974/*"Maya/fbxevent_arthur"*/, TypeFromHandle, 0LL);
   if ( _34873004
     && (v34 = *(&UnityEngine_TextAsset_TypeInfo->_2.bitflags2 + 1),
         *(&_34873004->klass->_2.bitflags2 + 1) >= (unsigned int)v34) )

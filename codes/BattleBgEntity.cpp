@@ -51,12 +51,12 @@ System_Single_array *__fastcall BattleBgEntity__GetCameraClippingRange(
   if ( (byte_40FD39F & 1) == 0 )
   {
     sub_B16FFC(&float___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3461, v3);
-    sub_B16FFC(&StringLiteral_3462, v4);
+    sub_B16FFC(&StringLiteral_3461/*"CameraClippingFar"*/, v3);
+    sub_B16FFC(&StringLiteral_3462/*"CameraClippingNear"*/, v4);
     byte_40FD39F = 1;
   }
-  Millesimal = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3462, -1.0, 0LL);
-  v6 = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3461, -1.0, 0LL);
+  Millesimal = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3462/*"CameraClippingNear"*/, -1.0, 0LL);
+  v6 = EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_3461/*"CameraClippingFar"*/, -1.0, 0LL);
   result = (System_Single_array *)sub_B17014(float___TypeInfo, 2LL, v7);
   if ( !result )
     sub_B170D4();
@@ -75,10 +75,10 @@ int32_t __fastcall BattleBgEntity__GetInvalidOverwrite(BattleBgEntity_o *this, c
 {
   if ( (byte_40FD3A0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8041, method);
+    sub_B16FFC(&StringLiteral_8041/*"InvalidOverwrite"*/, method);
     byte_40FD3A0 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_8041, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_8041/*"InvalidOverwrite"*/, 0, 0LL);
 }
 
 
@@ -90,10 +90,10 @@ int32_t __fastcall BattleBgEntity__GetSpecialShadowEffectId(
 {
   if ( (byte_40FD3A1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12904, *(_QWORD *)&defId);
+    sub_B16FFC(&StringLiteral_12904/*"SpecialShadowEffectId"*/, *(_QWORD *)&defId);
     byte_40FD3A1 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_12904, defId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_12904/*"SpecialShadowEffectId"*/, defId, 0LL);
 }
 
 
@@ -128,7 +128,7 @@ SubBgmPlayArgs_array *__fastcall BattleBgEntity__GetSubBgmPlayArgsArray(
     sub_B16FFC(&System_Func_List_object___SubBgmPlayArgs____TypeInfo, v7);
     sub_B16FFC(&Method_BattleBgEntity___c__GetSubBgmPlayArgsArray_b__8_0__, v8);
     sub_B16FFC(&BattleBgEntity___c_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_22282, v10);
+    sub_B16FFC(&StringLiteral_22282/*"subBgms"*/, v10);
     byte_40FD39D = 1;
   }
   v11 = BattleBgEntity___c_TypeInfo;
@@ -173,7 +173,7 @@ SubBgmPlayArgs_array *__fastcall BattleBgEntity__GetSubBgmPlayArgsArray(
   }
   return (SubBgmPlayArgs_array *)EntityScriptUtil__GetScriptValue_object__object_(
                                    this->fields.script,
-                                   (System_String_o *)StringLiteral_22282,
+                                   (System_String_o *)StringLiteral_22282/*"subBgms"*/,
                                    (System_Func_TSource__TDestination__o *)_9__8_0,
                                    0LL,
                                    (const MethodInfo_18C5838 *)Method_EntityScriptUtil_GetScriptValue_List_object___SubBgmPlayArgs_____);
@@ -184,10 +184,10 @@ int32_t __fastcall BattleBgEntity__GetSubBgmsPriority(BattleBgEntity_o *this, co
 {
   if ( (byte_40FD39E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22283, method);
+    sub_B16FFC(&StringLiteral_22283/*"subBgmsPriority"*/, method);
     byte_40FD39E = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22283, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22283/*"subBgmsPriority"*/, 0, 0LL);
 }
 
 

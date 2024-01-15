@@ -722,7 +722,7 @@ void __fastcall OpeningMovieMaster__SavePlayedOpeningMovie(
   {
     sub_B16FFC(&char___TypeInfo, movieFileName);
     sub_B16FFC(&TitleRootComponent_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_698, v6);
+    sub_B16FFC(&StringLiteral_698/*","*/, v6);
     byte_40F7F61 = 1;
   }
   OpeningMovie = OpeningMovieMaster__GetOpeningMovie(this, movieFileName, method);
@@ -796,7 +796,7 @@ LABEL_17:
           }
           v22 = v21->static_fields->SAVE_KEY_PLAYED_MOVIE;
           v23 = System_Int32__ToString((int32_t)p_fields, 0LL);
-          v24 = System_String__Concat_43746016(v12, (System_String_o *)StringLiteral_698, v23, 0LL);
+          v24 = System_String__Concat_43746016(v12, (System_String_o *)StringLiteral_698/*","*/, v23, 0LL);
           v25 = v22;
           goto LABEL_26;
         }

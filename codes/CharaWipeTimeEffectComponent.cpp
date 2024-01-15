@@ -10,12 +10,12 @@ void __fastcall CharaWipeTimeEffectComponent___ctor(CharaWipeTimeEffectComponent
 
   if ( (byte_40FAF10 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17365, method);
+    sub_B16FFC(&StringLiteral_17365/*"circleOut"*/, method);
     byte_40FAF10 = 1;
   }
   this->fields.wipeColor = UnityEngine_Color__get_clear(0LL);
-  v3 = (System_Int32_array **)StringLiteral_17365;
-  this->fields.wipeName = (struct System_String_o *)StringLiteral_17365;
+  v3 = (System_Int32_array **)StringLiteral_17365/*"circleOut"*/;
+  this->fields.wipeName = (struct System_String_o *)StringLiteral_17365/*"circleOut"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.wipeName, v3, v4, v5, v6, v7, v8, v9);
   ProgramEffectComponent___ctor((ProgramEffectComponent_o *)this, 0LL);
 }
@@ -46,7 +46,7 @@ void __fastcall CharaWipeTimeEffectComponent__EffectResume(
 
   if ( (byte_40FAF0C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9967, method);
+    sub_B16FFC(&StringLiteral_9967/*"OnEndEffect"*/, method);
     byte_40FAF0C = 1;
   }
   klass = this->klass;
@@ -64,8 +64,8 @@ void __fastcall CharaWipeTimeEffectComponent__EffectResume(
   v7 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v6->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v7;
   sub_B16F98((BattleServantConfConponent_o *)&v6->fields.eventReceiver, v7, v8, v9, v10, v11, v12, v13);
-  v14 = (System_Int32_array **)StringLiteral_9967;
-  v6->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9967;
+  v14 = (System_Int32_array **)StringLiteral_9967/*"OnEndEffect"*/;
+  v6->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9967/*"OnEndEffect"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v6->fields.callWhenFinished, v14, v15, v16, v17, v18, v19, v20);
 }
 
@@ -142,8 +142,8 @@ void __fastcall CharaWipeTimeEffectComponent__EndLoadWipe(
     sub_B16FFC(&CommonEffectManager_TypeInfo, v13);
     sub_B16FFC(&CommonEffectLoadComponent_LoadEndHandler_TypeInfo, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_13498, v16);
-    sub_B16FFC(&StringLiteral_4517, v17);
+    sub_B16FFC(&StringLiteral_13498/*"Talk/"*/, v16);
+    sub_B16FFC(&StringLiteral_4517/*"Custom/Sprite-ScriptActionFigureWipe"*/, v17);
     byte_40FAF0B = 1;
   }
   wipeData = this->fields.wipeData;
@@ -175,7 +175,7 @@ void __fastcall CharaWipeTimeEffectComponent__EndLoadWipe(
   this->fields.bodySize = BodySize;
   this->fields.addVolume = 0.2;
   if ( !v21
-    || (UIStandFigureRender__SetSharder(v21, (System_String_o *)StringLiteral_4517, 0LL), !data)
+    || (UIStandFigureRender__SetSharder(v21, (System_String_o *)StringLiteral_4517/*"Custom/Sprite-ScriptActionFigureWipe"*/, 0LL), !data)
     || (v22 = (UIStandFigureRender_o *)this->fields.figure,
         Object_Texture2D = (UnityEngine_Texture_o *)AssetData__GetObject_Texture2D_(
                                                       data,
@@ -205,7 +205,7 @@ LABEL_24:
     && !System_String__IsNullOrEmpty(this->fields.subEffectName, 0LL) )
   {
     v28 = this->fields.subEffectBase;
-    v29 = System_String__Concat_43743732((System_String_o *)StringLiteral_13498, this->fields.subEffectName, 0LL);
+    v29 = System_String__Concat_43743732((System_String_o *)StringLiteral_13498/*"Talk/"*/, this->fields.subEffectName, 0LL);
     v34 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_B170CC(
                                                           CommonEffectLoadComponent_LoadEndHandler_TypeInfo,
                                                           v30,
@@ -444,7 +444,7 @@ void __fastcall CharaWipeTimeEffectComponent__WipeStart(
     sub_B16FFC(&Method_CharaWipeTimeEffectComponent_EndLoadWipe__, v10);
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_15433, v13);
+    sub_B16FFC(&StringLiteral_15433/*"Wipe/"*/, v13);
     byte_40FAF0A = 1;
   }
   p_figure = (UIStandFigureRender_o **)&this->fields.figure;
@@ -475,7 +475,7 @@ void __fastcall CharaWipeTimeEffectComponent__WipeStart(
   }
   else
   {
-    v22 = System_String__Concat_43743732((System_String_o *)StringLiteral_15433, this->fields.wipeName, 0LL);
+    v22 = System_String__Concat_43743732((System_String_o *)StringLiteral_15433/*"Wipe/"*/, this->fields.wipeName, 0LL);
     v27 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v23, v24, v25, v26);
     AssetLoader_LoadEndDataHandler___ctor(
       v27,

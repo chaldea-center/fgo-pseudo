@@ -978,18 +978,18 @@ System_String_o *__fastcall FollowerSelectItemListViewItem__GetFriendPointCampai
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
-    sub_B16FFC(&StringLiteral_6364, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
+    sub_B16FFC(&StringLiteral_6364/*"FOLLOWER_SELECT_FRIEND_POINT_CAMPAIGN"*/, v5);
     byte_40F8F0E = 1;
   }
   if ( !this->fields.friendPointCampaignEntity )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_6364, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_6364/*"FOLLOWER_SELECT_FRIEND_POINT_CAMPAIGN"*/, 0LL);
   friendPointCampaignEntity = this->fields.friendPointCampaignEntity;
   if ( !friendPointCampaignEntity )
     sub_B170D4();
@@ -1267,7 +1267,7 @@ System_Collections_Generic_Dictionary_string__int__o *__fastcall FollowerSelectI
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v10);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1151, v12);
+    sub_B16FFC(&StringLiteral_1151/*"3"*/, v12);
     byte_40F8F08 = 1;
   }
   v47 = 0LL;
@@ -1447,12 +1447,12 @@ LABEL_74:
                       break;
                     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__int___ContainsKey(
                            (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)v45[4],
-                           (System_Xml_XmlQualifiedName_o *)StringLiteral_1151,
+                           (System_Xml_XmlQualifiedName_o *)StringLiteral_1151/*"3"*/,
                            (const MethodInfo_2D9C430 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
                     {
                       result = (System_Collections_Generic_Dictionary_string__int__o *)System_Collections_Generic_Dictionary_string__int___get_Item(
                                                                                          v46,
-                                                                                         (System_String_o *)StringLiteral_1151,
+                                                                                         (System_String_o *)StringLiteral_1151/*"3"*/,
                                                                                          (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
                       if ( (_DWORD)result )
                         break;
@@ -2201,11 +2201,11 @@ bool __fastcall FollowerSelectItemListViewItem__SetSortValue(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
     sub_B16FFC(&ServantBonusFilterSelectMenu_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_1102, v12);
-    sub_B16FFC(&StringLiteral_2825, v13);
-    sub_B16FFC(&StringLiteral_2827, v14);
-    sub_B16FFC(&StringLiteral_1004, v15);
-    sub_B16FFC(&StringLiteral_951, v16);
+    sub_B16FFC(&StringLiteral_1102/*"2"*/, v12);
+    sub_B16FFC(&StringLiteral_2825/*"BonusFilterEquipId"*/, v13);
+    sub_B16FFC(&StringLiteral_2827/*"BonusFilterGroupId"*/, v14);
+    sub_B16FFC(&StringLiteral_1004/*"1"*/, v15);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v16);
     byte_40F8F09 = 1;
   }
   v222 = 0;
@@ -2268,8 +2268,8 @@ LABEL_201:
         goto LABEL_198;
       if ( ListViewSort__GetFilter(sort, 41, 0LL) )
         goto LABEL_59;
-      v49 = (System_String_o *)StringLiteral_2825;
-      v50 = (System_String_o *)StringLiteral_2827;
+      v49 = (System_String_o *)StringLiteral_2825/*"BonusFilterEquipId"*/;
+      v50 = (System_String_o *)StringLiteral_2827/*"BonusFilterGroupId"*/;
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_198;
@@ -2393,13 +2393,13 @@ LABEL_9:
         {
           if ( priorityKind == 6 )
           {
-            v75 = &StringLiteral_1102;
+            v75 = &StringLiteral_1102/*"2"*/;
           }
           else
           {
             if ( priorityKind != 1 )
               goto LABEL_87;
-            v75 = &StringLiteral_951;
+            v75 = &StringLiteral_951/*"0"*/;
           }
           if ( System_Collections_Generic_Dictionary_XmlQualifiedName__int___ContainsKey(
                  (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)ValuesDictionary,
@@ -2441,21 +2441,21 @@ LABEL_198:
         }
         else if ( System_Collections_Generic_Dictionary_XmlQualifiedName__int___ContainsKey(
                     (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)ValuesDictionary,
-                    (System_Xml_XmlQualifiedName_o *)StringLiteral_951,
+                    (System_Xml_XmlQualifiedName_o *)StringLiteral_951/*"0"*/,
                     (const MethodInfo_2D9C430 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__)
                && System_Collections_Generic_Dictionary_XmlQualifiedName__int___ContainsKey(
                     (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)ValuesDictionary,
-                    (System_Xml_XmlQualifiedName_o *)StringLiteral_1004,
+                    (System_Xml_XmlQualifiedName_o *)StringLiteral_1004/*"1"*/,
                     (const MethodInfo_2D9C430 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
         {
           if ( System_Collections_Generic_Dictionary_string__int___get_Item(
                  ValuesDictionary,
-                 (System_String_o *)StringLiteral_951,
+                 (System_String_o *)StringLiteral_951/*"0"*/,
                  (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__) == 1 )
           {
             Item = System_Collections_Generic_Dictionary_string__int___get_Item(
                      ValuesDictionary,
-                     (System_String_o *)StringLiteral_1004,
+                     (System_String_o *)StringLiteral_1004/*"1"*/,
                      (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
             v38 = 100000;
           }
@@ -2463,7 +2463,7 @@ LABEL_198:
           {
             if ( System_Collections_Generic_Dictionary_string__int___get_Item(
                    ValuesDictionary,
-                   (System_String_o *)StringLiteral_951,
+                   (System_String_o *)StringLiteral_951/*"0"*/,
                    (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__) != 2 )
             {
               v87 = *p_sortValue0;
@@ -2471,7 +2471,7 @@ LABEL_198:
             }
             Item = System_Collections_Generic_Dictionary_string__int___get_Item(
                      ValuesDictionary,
-                     (System_String_o *)StringLiteral_1004,
+                     (System_String_o *)StringLiteral_1004/*"1"*/,
                      (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
             v38 = 100000000;
           }
@@ -3313,14 +3313,14 @@ System_String_o *__fastcall FollowerSelectItemListViewItem__get_PlayerNameText(
 
   if ( (byte_40F8F0A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, method);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, method);
     byte_40F8F0A = 1;
   }
   followerInfo = this->fields.followerInfo;
   if ( followerInfo )
     p_userName = &followerInfo->fields.userName;
   else
-    p_userName = (System_String_o **)&StringLiteral_18326;
+    p_userName = (System_String_o **)&StringLiteral_18326/*"error"*/;
   return *p_userName;
 }
 

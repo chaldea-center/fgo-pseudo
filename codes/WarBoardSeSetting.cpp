@@ -73,42 +73,42 @@ void __fastcall WarBoardSeSetting___ctor(WarBoardSeSetting_o *this, const Method
 
   if ( (byte_40FBA7E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16546, method);
-    sub_B16FFC(&StringLiteral_16544, v9);
-    sub_B16FFC(&StringLiteral_16501, v10);
-    sub_B16FFC(&StringLiteral_16545, v11);
-    sub_B16FFC(&StringLiteral_16499, v12);
-    sub_B16FFC(&StringLiteral_16507, v13);
-    sub_B16FFC(&StringLiteral_16502, v14);
-    sub_B16FFC(&StringLiteral_16498, v15);
+    sub_B16FFC(&StringLiteral_16546/*"bas13"*/, method);
+    sub_B16FFC(&StringLiteral_16544/*"bas1"*/, v9);
+    sub_B16FFC(&StringLiteral_16501/*"ba20"*/, v10);
+    sub_B16FFC(&StringLiteral_16545/*"bas10"*/, v11);
+    sub_B16FFC(&StringLiteral_16499/*"ba19"*/, v12);
+    sub_B16FFC(&StringLiteral_16507/*"ba30"*/, v13);
+    sub_B16FFC(&StringLiteral_16502/*"ba21"*/, v14);
+    sub_B16FFC(&StringLiteral_16498/*"ba18"*/, v15);
     byte_40FBA7E = 1;
   }
-  v16 = (System_Int32_array **)StringLiteral_16498;
-  this->fields.SelectSe = (struct System_String_o *)StringLiteral_16498;
+  v16 = (System_Int32_array **)StringLiteral_16498/*"ba18"*/;
+  this->fields.SelectSe = (struct System_String_o *)StringLiteral_16498/*"ba18"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.SelectSe, v16, v2, v3, v4, v5, v6, v7);
-  v17 = (System_Int32_array **)StringLiteral_16499;
-  this->fields.DeselectSe = (struct System_String_o *)StringLiteral_16499;
+  v17 = (System_Int32_array **)StringLiteral_16499/*"ba19"*/;
+  this->fields.DeselectSe = (struct System_String_o *)StringLiteral_16499/*"ba19"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.DeselectSe, v17, v18, v19, v20, v21, v22, v23);
-  v24 = (System_Int32_array **)StringLiteral_16498;
-  this->fields.OpenSimpleInfoSe = (struct System_String_o *)StringLiteral_16498;
+  v24 = (System_Int32_array **)StringLiteral_16498/*"ba18"*/;
+  this->fields.OpenSimpleInfoSe = (struct System_String_o *)StringLiteral_16498/*"ba18"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.OpenSimpleInfoSe, v24, v25, v26, v27, v28, v29, v30);
-  v31 = (System_Int32_array **)StringLiteral_16501;
-  this->fields.OpenDetailInfoSe = (struct System_String_o *)StringLiteral_16501;
+  v31 = (System_Int32_array **)StringLiteral_16501/*"ba20"*/;
+  this->fields.OpenDetailInfoSe = (struct System_String_o *)StringLiteral_16501/*"ba20"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.OpenDetailInfoSe, v31, v32, v33, v34, v35, v36, v37);
-  v38 = (System_Int32_array **)StringLiteral_16502;
-  this->fields.CloseDetailInfoSe = (struct System_String_o *)StringLiteral_16502;
+  v38 = (System_Int32_array **)StringLiteral_16502/*"ba21"*/;
+  this->fields.CloseDetailInfoSe = (struct System_String_o *)StringLiteral_16502/*"ba21"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.CloseDetailInfoSe, v38, v39, v40, v41, v42, v43, v44);
-  v45 = (System_Int32_array **)StringLiteral_16507;
-  this->fields.HpGaugeAddSe = (struct System_String_o *)StringLiteral_16507;
+  v45 = (System_Int32_array **)StringLiteral_16507/*"ba30"*/;
+  this->fields.HpGaugeAddSe = (struct System_String_o *)StringLiteral_16507/*"ba30"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.HpGaugeAddSe, v45, v46, v47, v48, v49, v50, v51);
-  v52 = (System_Int32_array **)StringLiteral_16544;
-  this->fields.OnBoardSkillNameInfoSe = (struct System_String_o *)StringLiteral_16544;
+  v52 = (System_Int32_array **)StringLiteral_16544/*"bas1"*/;
+  this->fields.OnBoardSkillNameInfoSe = (struct System_String_o *)StringLiteral_16544/*"bas1"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.OnBoardSkillNameInfoSe, v52, v53, v54, v55, v56, v57, v58);
-  v59 = (System_Int32_array **)StringLiteral_16545;
-  this->fields.OnBoardSkillBuffSe = (struct System_String_o *)StringLiteral_16545;
+  v59 = (System_Int32_array **)StringLiteral_16545/*"bas10"*/;
+  this->fields.OnBoardSkillBuffSe = (struct System_String_o *)StringLiteral_16545/*"bas10"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.OnBoardSkillBuffSe, v59, v60, v61, v62, v63, v64, v65);
-  v66 = (System_Int32_array **)StringLiteral_16546;
-  this->fields.OnBoardSkillDebuffSe = (struct System_String_o *)StringLiteral_16546;
+  v66 = (System_Int32_array **)StringLiteral_16546/*"bas13"*/;
+  this->fields.OnBoardSkillDebuffSe = (struct System_String_o *)StringLiteral_16546/*"bas13"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.OnBoardSkillDebuffSe, v66, v67, v68, v69, v70, v71, v72);
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0LL);
 }

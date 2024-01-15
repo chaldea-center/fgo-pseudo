@@ -68,7 +68,7 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
   if ( (byte_40F8116 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_23395, v7);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v7);
     byte_40F8116 = 1;
   }
   if ( item && mode )
@@ -98,7 +98,7 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
       LODWORD(userSvtCoinEntity) = userSvtCoinEntity->fields.num;
     v16 = (int)userSvtCoinEntity;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
-    v15 = System_String__Format((System_String_o *)StringLiteral_23395, v14, 0LL);
+    v15 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v14, 0LL);
     if ( !possessionNum )
 LABEL_15:
       sub_B170D4();

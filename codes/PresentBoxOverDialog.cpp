@@ -109,17 +109,17 @@ void __fastcall PresentBoxOverDialog__Init(PresentBoxOverDialog_o *this, const M
   if ( (byte_40F9FEB & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F9FEB = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_31;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_31;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v6 = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -131,7 +131,7 @@ void __fastcall PresentBoxOverDialog__Init(PresentBoxOverDialog_o *this, const M
     v7 = this->fields.titleLabel;
     if ( !v7 )
       goto LABEL_31;
-    UILabel__set_text(v7, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   v8 = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -144,7 +144,7 @@ void __fastcall PresentBoxOverDialog__Init(PresentBoxOverDialog_o *this, const M
     v9 = this->fields.messageLabel;
     if ( !v9 )
       goto LABEL_31;
-    UILabel__set_text(v9, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v9, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   closeBtnLabel = (UnityEngine_Object_o *)this->fields.closeBtnLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -157,7 +157,7 @@ void __fastcall PresentBoxOverDialog__Init(PresentBoxOverDialog_o *this, const M
     v11 = this->fields.closeBtnLabel;
     if ( !v11 )
       goto LABEL_31;
-    UILabel__set_text(v11, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v11, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   presentBoxBtnLabel = (UnityEngine_Object_o *)this->fields.presentBoxBtnLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -170,7 +170,7 @@ void __fastcall PresentBoxOverDialog__Init(PresentBoxOverDialog_o *this, const M
     v13 = this->fields.presentBoxBtnLabel;
     if ( !v13 )
       goto LABEL_31;
-    UILabel__set_text(v13, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -302,8 +302,8 @@ void __fastcall PresentBoxOverDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
     sub_B16FFC(&Method_PresentBoxOverDialog_EndOpen__, v15);
-    sub_B16FFC(&StringLiteral_9740, v16);
-    sub_B16FFC(&StringLiteral_3252, v17);
+    sub_B16FFC(&StringLiteral_9740/*"OPEN_PRESENT_BOX"*/, v16);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v17);
     byte_40F9FEC = 1;
   }
   if ( !this->fields.state )
@@ -368,7 +368,7 @@ void __fastcall PresentBoxOverDialog__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
       if ( !v25 )
         goto LABEL_39;
       UILabel__set_text(v25, v26, 0LL);
@@ -387,7 +387,7 @@ void __fastcall PresentBoxOverDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_9740, 0LL);
+    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_9740/*"OPEN_PRESENT_BOX"*/, 0LL);
     if ( v32 )
     {
       UILabel__set_text(v32, v33, 0LL);
@@ -410,10 +410,10 @@ System_String_o *__fastcall PresentBoxOverDialog__get_closeBtnPath(
 {
   if ( (byte_40F9FF0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15416, method);
+    sub_B16FFC(&StringLiteral_15416/*"Window/CloseButton"*/, method);
     byte_40F9FF0 = 1;
   }
-  return (System_String_o *)StringLiteral_15416;
+  return (System_String_o *)StringLiteral_15416/*"Window/CloseButton"*/;
 }
 
 

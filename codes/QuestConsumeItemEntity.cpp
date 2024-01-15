@@ -75,9 +75,9 @@ System_String_o *__fastcall QuestConsumeItemEntity__GetItemConsumeString(
     sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
     sub_B16FFC(&string___TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_26, v6);
-    sub_B16FFC(&StringLiteral_80, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v6);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F9558 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -86,7 +86,7 @@ System_String_o *__fastcall QuestConsumeItemEntity__GetItemConsumeString(
   MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                                         (DataManager_o *)Instance,
                                                                                         (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ItemMaster___);
-  v11 = (System_Int32_array **)StringLiteral_1;
+  v11 = (System_Int32_array **)StringLiteral_1/*""*/;
   IsAvailableAt = QuestConsumeItemEntity__IsAvailableAt(this, 0, v12);
   if ( (IsAvailableAt & 1) != 0 )
   {
@@ -127,13 +127,13 @@ LABEL_38:
           goto LABEL_37;
         v26->m_Items[0] = (System_String_o *)v11;
         sub_B16F98((BattleServantConfConponent_o *)v26->m_Items, v11, v15, v21, v22, v23, v24, v25);
-        IsAvailableAt = StringLiteral_26;
-        if ( StringLiteral_26 )
+        IsAvailableAt = StringLiteral_26/*"\n"*/;
+        if ( StringLiteral_26/*"\n"*/ )
         {
-          IsAvailableAt = sub_B170BC(StringLiteral_26, v26->obj.klass->_1.element_class);
+          IsAvailableAt = sub_B170BC(StringLiteral_26/*"\n"*/, v26->obj.klass->_1.element_class);
           if ( !IsAvailableAt )
             goto LABEL_38;
-          v14 = (System_Int32_array **)StringLiteral_26;
+          v14 = (System_Int32_array **)StringLiteral_26/*"\n"*/;
         }
         else
         {
@@ -154,13 +154,13 @@ LABEL_38:
           goto LABEL_37;
         v26->m_Items[2] = (System_String_o *)name;
         sub_B16F98((BattleServantConfConponent_o *)&v26->m_Items[2], name, v15, v32, v33, v34, v35, v36);
-        IsAvailableAt = StringLiteral_80;
-        if ( StringLiteral_80 )
+        IsAvailableAt = StringLiteral_80/*" "*/;
+        if ( StringLiteral_80/*" "*/ )
         {
-          IsAvailableAt = sub_B170BC(StringLiteral_80, v26->obj.klass->_1.element_class);
+          IsAvailableAt = sub_B170BC(StringLiteral_80/*" "*/, v26->obj.klass->_1.element_class);
           if ( !IsAvailableAt )
             goto LABEL_38;
-          v14 = (System_Int32_array **)StringLiteral_80;
+          v14 = (System_Int32_array **)StringLiteral_80/*" "*/;
         }
         else
         {

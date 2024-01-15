@@ -142,8 +142,8 @@ System_String_o *__fastcall TitleInfoEventUIComponent__GetAssetName(
   if ( (byte_40F841F & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6189, v3);
-    sub_B16FFC(&StringLiteral_6190, v4);
+    sub_B16FFC(&StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v3);
+    sub_B16FFC(&StringLiteral_6190/*"EventUI/Prefabs/{0}/{1}"*/, v4);
     byte_40F841F = 1;
   }
   if ( !eventUIEntity )
@@ -152,7 +152,7 @@ System_String_o *__fastcall TitleInfoEventUIComponent__GetAssetName(
   {
     eventId = eventUIEntity->fields.eventId;
     v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
-    return System_String__Format((System_String_o *)StringLiteral_6189, v5, 0LL);
+    return System_String__Format((System_String_o *)StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v5, 0LL);
   }
   else
   {
@@ -160,7 +160,7 @@ System_String_o *__fastcall TitleInfoEventUIComponent__GetAssetName(
     v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
     warId = eventUIEntity->fields.warId;
     v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &warId);
-    return System_String__Format_43739268((System_String_o *)StringLiteral_6190, v7, v8, 0LL);
+    return System_String__Format_43739268((System_String_o *)StringLiteral_6190/*"EventUI/Prefabs/{0}/{1}"*/, v7, v8, 0LL);
   }
 }
 

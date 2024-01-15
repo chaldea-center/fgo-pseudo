@@ -8,10 +8,10 @@ System_String_o *__fastcall TopRefreshRequest__getMockData(TopRefreshRequest_o *
 {
   if ( (byte_40FB800 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FB800 = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -23,7 +23,7 @@ System_String_o *__fastcall TopRefreshRequest__getURL(TopRefreshRequest_o *this,
   if ( (byte_40FB7FF & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21648, v2);
+    sub_B16FFC(&StringLiteral_21648/*"refresh/top"*/, v2);
     byte_40FB7FF = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -32,7 +32,7 @@ System_String_o *__fastcall TopRefreshRequest__getURL(TopRefreshRequest_o *this,
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_21648, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_21648/*"refresh/top"*/, 0LL);
 }
 
 
@@ -52,8 +52,8 @@ void __fastcall TopRefreshRequest__requestCompleted(
   {
     sub_B16FFC(&ResponseCommandKind_TypeInfo, responseList);
     sub_B16FFC(&TopHomeRequest_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21129, v6);
-    sub_B16FFC(&StringLiteral_20980, v7);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v7);
     byte_40FB801 = 1;
   }
   v8 = TopHomeRequest_TypeInfo;
@@ -70,8 +70,8 @@ void __fastcall TopRefreshRequest__requestCompleted(
   }
   v9 = ResponseCommandKind__SearchData(5, responseList, 0LL);
   if ( v9 && ResponseData__checkError_30924960(v9, 0LL) )
-    v10 = (System_String_o **)&StringLiteral_21129;
+    v10 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
   else
-    v10 = (System_String_o **)&StringLiteral_20980;
+    v10 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, *v10, 0LL);
 }

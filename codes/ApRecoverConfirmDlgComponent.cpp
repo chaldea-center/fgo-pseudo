@@ -134,7 +134,7 @@ int32_t __fastcall ApRecoverConfirmDlgComponent__GetItemSliderMax(
     sub_B16FFC(&int_TypeInfo, v3);
     sub_B16FFC(&NetworkManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_23433, v6);
+    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v6);
     byte_40FC9C4 = 1;
   }
   entity = 0LL;
@@ -160,7 +160,7 @@ int32_t __fastcall ApRecoverConfirmDlgComponent__GetItemSliderMax(
     currentNumLb = this->fields.currentNumLb;
     v20 = num;
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20);
-    v14 = System_String__Format((System_String_o *)StringLiteral_23433, v13, 0LL);
+    v14 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v13, 0LL);
     if ( currentNumLb )
     {
       UILabel__set_text(currentNumLb, v14, 0LL);
@@ -438,12 +438,12 @@ void __fastcall ApRecoverConfirmDlgComponent__Open(
     sub_B16FFC(&Method_DataMasterBase_RecoverMaster__RecoverEntity__int__TryGetEntity__, v16);
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_B16FFC(&StringLiteral_1737, v19);
-    sub_B16FFC(&StringLiteral_3440, v20);
-    sub_B16FFC(&StringLiteral_12048, v21);
-    sub_B16FFC(&StringLiteral_3253, v22);
-    sub_B16FFC(&StringLiteral_3251, v23);
-    sub_B16FFC(&StringLiteral_12047, v24);
+    sub_B16FFC(&StringLiteral_1737/*"AP_RECOVER_TITLE"*/, v19);
+    sub_B16FFC(&StringLiteral_3440/*"CURRENT_NUM_TXT"*/, v20);
+    sub_B16FFC(&StringLiteral_12048/*"SHOP_BULK_WINDOW_MIN_LABEL"*/, v21);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v22);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v23);
+    sub_B16FFC(&StringLiteral_12047/*"SHOP_BULK_WINDOW_MAX_LABEL"*/, v24);
     byte_40FC9C0 = 1;
   }
   entity = 0LL;
@@ -538,32 +538,32 @@ void __fastcall ApRecoverConfirmDlgComponent__Open(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v45 = LocalizationManager__Get((System_String_o *)StringLiteral_1737, 0LL);
+                v45 = LocalizationManager__Get((System_String_o *)StringLiteral_1737/*"AP_RECOVER_TITLE"*/, 0LL);
                 if ( titleLb )
                 {
                   UILabel__set_text(titleLb, v45, 0LL);
                   currentInfoLb = this->fields.currentInfoLb;
-                  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_3440, 0LL);
+                  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_3440/*"CURRENT_NUM_TXT"*/, 0LL);
                   if ( currentInfoLb )
                   {
                     UILabel__set_text(currentInfoLb, v47, 0LL);
                     maxLabel = this->fields.maxLabel;
-                    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12047, 0LL);
+                    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12047/*"SHOP_BULK_WINDOW_MAX_LABEL"*/, 0LL);
                     if ( maxLabel )
                     {
                       UILabel__set_text(maxLabel, v49, 0LL);
                       minLabel = this->fields.minLabel;
-                      v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12048, 0LL);
+                      v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12048/*"SHOP_BULK_WINDOW_MIN_LABEL"*/, 0LL);
                       if ( minLabel )
                       {
                         UILabel__set_text(minLabel, v51, 0LL);
                         decideButtonLb = this->fields.decideButtonLb;
-                        v53 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+                        v53 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
                         if ( decideButtonLb )
                         {
                           UILabel__set_text(decideButtonLb, v53, 0LL);
                           cancelButtonLb = this->fields.cancelButtonLb;
-                          v55 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+                          v55 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
                           if ( cancelButtonLb )
                           {
                             UILabel__set_text(cancelButtonLb, v55, 0LL);
@@ -607,7 +607,7 @@ void __fastcall ApRecoverConfirmDlgComponent__SetConfirmMessageLb(
   if ( (byte_40FC9C2 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1732, v3);
+    sub_B16FFC(&StringLiteral_1732/*"AP_RECOVER_CONFIRM_TXT"*/, v3);
     byte_40FC9C2 = 1;
   }
   if ( this->fields.recovItemEnt )
@@ -618,7 +618,7 @@ void __fastcall ApRecoverConfirmDlgComponent__SetConfirmMessageLb(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_1732, 0LL);
+    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_1732/*"AP_RECOVER_CONFIRM_TXT"*/, 0LL);
     recovItemEnt = this->fields.recovItemEnt;
     if ( !recovItemEnt
       || (v7 = System_String__Format(v5, (Il2CppObject *)recovItemEnt->fields.name, 0LL), !confirmMessageLb) )
@@ -661,9 +661,9 @@ void __fastcall ApRecoverConfirmDlgComponent__SetItemDetailLb(
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_14652, v4);
-    sub_B16FFC(&StringLiteral_1657, v5);
-    sub_B16FFC(&StringLiteral_1733, v6);
+    sub_B16FFC(&StringLiteral_14652/*"UNIT_INFO"*/, v4);
+    sub_B16FFC(&StringLiteral_1657/*"ADD_RECOVER_NUM_TXT"*/, v5);
+    sub_B16FFC(&StringLiteral_1733/*"AP_RECOVER_NUM_TXT"*/, v6);
     byte_40FC9C3 = 1;
   }
   RecoverVal = ApRecoverConfirmDlgComponent__GetRecoverVal(this, method);
@@ -672,7 +672,7 @@ void __fastcall ApRecoverConfirmDlgComponent__SetItemDetailLb(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_14652, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_14652/*"UNIT_INFO"*/, 0LL);
   v24 = 1;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
   v10 = System_String__Format(v8, v9, 0LL);
@@ -694,7 +694,7 @@ void __fastcall ApRecoverConfirmDlgComponent__SetItemDetailLb(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v17 = LocalizationManager__Get((System_String_o *)StringLiteral_1733, 0LL);
+      v17 = LocalizationManager__Get((System_String_o *)StringLiteral_1733/*"AP_RECOVER_NUM_TXT"*/, 0LL);
       v24 = v16;
       v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
       v23 = RecoverVal;
@@ -711,7 +711,7 @@ void __fastcall ApRecoverConfirmDlgComponent__SetItemDetailLb(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_1657, 0LL);
+      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_1657/*"ADD_RECOVER_NUM_TXT"*/, 0LL);
       v24 = RecoverVal;
       v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
       v20 = System_String__Format_43739268(v21, v12, v22, 0LL);
@@ -828,9 +828,9 @@ void __fastcall ApRecoverConfirmDlgComponent__SetResultApLb(
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
     sub_B16FFC(&object___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1734, v5);
-    sub_B16FFC(&StringLiteral_1738, v6);
-    sub_B16FFC(&StringLiteral_1735, v7);
+    sub_B16FFC(&StringLiteral_1734/*"AP_RECOVER_RESULT"*/, v5);
+    sub_B16FFC(&StringLiteral_1738/*"AP_RECOVER_TXT"*/, v6);
+    sub_B16FFC(&StringLiteral_1735/*"AP_RECOVER_RESULT_OVER"*/, v7);
     byte_40FC9C1 = 1;
   }
   if ( this->fields.recovItemEnt )
@@ -845,7 +845,7 @@ void __fastcall ApRecoverConfirmDlgComponent__SetResultApLb(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v11 = &StringLiteral_1734;
+      v11 = &StringLiteral_1734/*"AP_RECOVER_RESULT"*/;
     }
     else
     {
@@ -854,7 +854,7 @@ void __fastcall ApRecoverConfirmDlgComponent__SetResultApLb(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v11 = &StringLiteral_1735;
+      v11 = &StringLiteral_1735/*"AP_RECOVER_RESULT_OVER"*/;
     }
     v12 = LocalizationManager__Get((System_String_o *)*v11, 0LL);
     userMaxAp = this->fields.userMaxAp;
@@ -871,7 +871,7 @@ void __fastcall ApRecoverConfirmDlgComponent__SetResultApLb(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_1738, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_1738/*"AP_RECOVER_TXT"*/, 0LL);
     v19 = sub_B17014(object___TypeInfo, 4LL, v18);
     recovItemEnt = this->fields.recovItemEnt;
     if ( !recovItemEnt )

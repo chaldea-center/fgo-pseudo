@@ -130,13 +130,13 @@ System_String_o *__fastcall CommandCardExceedConfirmDialog__GetMessageLocalizati
 
   if ( (byte_40FA579 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3204, isOk);
-    sub_B16FFC(&StringLiteral_3199, v4);
+    sub_B16FFC(&StringLiteral_3204/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_WARNING_QP"*/, isOk);
+    sub_B16FFC(&StringLiteral_3199/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_MESSAGE_OK"*/, v4);
     byte_40FA579 = 1;
   }
-  v5 = (System_String_o **)&StringLiteral_3199;
+  v5 = (System_String_o **)&StringLiteral_3199/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_MESSAGE_OK"*/;
   if ( !isOk )
-    v5 = (System_String_o **)&StringLiteral_3204;
+    v5 = (System_String_o **)&StringLiteral_3204/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_WARNING_QP"*/;
   return *v5;
 }
 
@@ -206,7 +206,7 @@ System_String_o *__fastcall CommandCardExceedConfirmDialog__GetRequiredQpText(
   if ( (byte_40FA578 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&requiredQp);
-    sub_B16FFC(&StringLiteral_3201, v6);
+    sub_B16FFC(&StringLiteral_3201/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP_WARNING"*/, v6);
     byte_40FA578 = 1;
   }
   if ( isOk )
@@ -225,7 +225,7 @@ System_String_o *__fastcall CommandCardExceedConfirmDialog__GetRequiredQpText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3201, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3201/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP_WARNING"*/, 0LL);
     NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(requiredQp, 0LL);
     return System_String__Format(v8, NumberFormat, 0LL);
   }
@@ -802,11 +802,11 @@ void __fastcall CommandCardExceedConfirmDialog__SetStaticLabels(
   if ( (byte_40FA576 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&itemUsableCount);
-    sub_B16FFC(&StringLiteral_3203, v5);
-    sub_B16FFC(&StringLiteral_3205, v6);
-    sub_B16FFC(&StringLiteral_3194, v7);
-    sub_B16FFC(&StringLiteral_3206, v8);
-    sub_B16FFC(&StringLiteral_3195, v9);
+    sub_B16FFC(&StringLiteral_3203/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USE_ITEM"*/, v5);
+    sub_B16FFC(&StringLiteral_3205/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_MULTI_DESCRIPTION"*/, v6);
+    sub_B16FFC(&StringLiteral_3194/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_CANCEL_BUTTON"*/, v7);
+    sub_B16FFC(&StringLiteral_3206/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_TITLE"*/, v8);
+    sub_B16FFC(&StringLiteral_3195/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_DECIDE_BUTTON"*/, v9);
     byte_40FA576 = 1;
   }
   titleLabel = this->fields.titleLabel;
@@ -815,12 +815,12 @@ void __fastcall CommandCardExceedConfirmDialog__SetStaticLabels(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3206, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3206/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_23;
   UILabel__set_text(titleLabel, v11, 0LL);
   descriptionLabel = this->fields.descriptionLabel;
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3205, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3205/*"COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_MULTI_DESCRIPTION"*/, 0LL);
   if ( !descriptionLabel )
     goto LABEL_23;
   UILabel__set_text(descriptionLabel, v13, 0LL);
@@ -839,7 +839,7 @@ void __fastcall CommandCardExceedConfirmDialog__SetStaticLabels(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3203, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3203/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USE_ITEM"*/, 0LL);
     exceedItemEntity = this->fields.exceedItemEntity;
     if ( exceedItemEntity )
     {
@@ -860,12 +860,12 @@ LABEL_17:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3195, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3195/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_DECIDE_BUTTON"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_23;
   UILabel__set_text(decideButtonLabel, v21, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3194, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3194/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_CANCEL_BUTTON"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_23;
   UILabel__set_text(cancelButtonLabel, v23, 0LL);
@@ -926,11 +926,11 @@ void __fastcall CommandCardExceedConfirmDialog__SetValueLabels(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&itemUseCount);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_3196, v6);
-    sub_B16FFC(&StringLiteral_3200, v7);
-    sub_B16FFC(&StringLiteral_3198, v8);
-    sub_B16FFC(&StringLiteral_3202, v9);
-    sub_B16FFC(&StringLiteral_3197, v10);
+    sub_B16FFC(&StringLiteral_3196/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/, v6);
+    sub_B16FFC(&StringLiteral_3200/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP"*/, v7);
+    sub_B16FFC(&StringLiteral_3198/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_ITEM_COUNT"*/, v8);
+    sub_B16FFC(&StringLiteral_3202/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USER_QP"*/, v9);
+    sub_B16FFC(&StringLiteral_3197/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, v10);
     byte_40FA577 = 1;
   }
   previousStatusLabel = this->fields.previousStatusLabel;
@@ -939,7 +939,7 @@ void __fastcall CommandCardExceedConfirmDialog__SetValueLabels(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3197, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3197/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, 0LL);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(this->fields.nowCommandCardParam, 0LL);
   v14 = (Il2CppObject *)LocalizationManager__GetNumberFormat(this->fields.constantMaxStatus, 0LL);
   v15 = System_String__Format_43739268(v12, NumberFormat, v14, 0LL);
@@ -947,7 +947,7 @@ void __fastcall CommandCardExceedConfirmDialog__SetValueLabels(
     goto LABEL_20;
   UILabel__set_text(previousStatusLabel, v15, 0LL);
   afterStatusLabel = this->fields.afterStatusLabel;
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3196, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3196/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/, 0LL);
   exceedItemEntity = this->fields.exceedItemEntity;
   if ( !exceedItemEntity )
     goto LABEL_20;
@@ -961,7 +961,7 @@ void __fastcall CommandCardExceedConfirmDialog__SetValueLabels(
     goto LABEL_20;
   UILabel__set_text(afterStatusLabel, v22, 0LL);
   itemCountLabel = this->fields.itemCountLabel;
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_3198, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_3198/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_ITEM_COUNT"*/, 0LL);
   v47 = itemUseCount;
   v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v47);
   v26 = System_String__Format(v24, v25, 0LL);
@@ -971,7 +971,7 @@ void __fastcall CommandCardExceedConfirmDialog__SetValueLabels(
   RequiredQp = CommandCardExceedConfirmDialog__GetRequiredQp(this, itemUseCount, v27);
   requiredQpLabel = this->fields.requiredQpLabel;
   v30 = RequiredQp;
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3200, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3200/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP"*/, 0LL);
   if ( !requiredQpLabel )
     goto LABEL_20;
   UILabel__set_text(requiredQpLabel, v31, 0LL);
@@ -981,7 +981,7 @@ void __fastcall CommandCardExceedConfirmDialog__SetValueLabels(
     goto LABEL_20;
   UILabel__set_text(requiredQpText, v35, 0LL);
   userQpLabel = this->fields.userQpLabel;
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3202, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3202/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USER_QP"*/, 0LL);
   if ( !userQpLabel )
     goto LABEL_20;
   UILabel__set_text(userQpLabel, v37, 0LL);

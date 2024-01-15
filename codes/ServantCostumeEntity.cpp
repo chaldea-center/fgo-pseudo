@@ -92,10 +92,10 @@ bool __fastcall ServantCostumeEntity__checkBgmId(
 
   if ( (byte_40FCECF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16642, param);
+    sub_B16FFC(&StringLiteral_16642/*"bgmId"*/, param);
     byte_40FCECF = 1;
   }
-  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_16642, param, v3);
+  return ServantCostumeEntity__checkScript(this, (System_String_o *)StringLiteral_16642/*"bgmId"*/, param, v3);
 }
 
 

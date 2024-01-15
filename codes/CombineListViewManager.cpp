@@ -76,12 +76,12 @@ void __fastcall CombineListViewManager___cctor(const MethodInfo *method)
     sub_B16FFC(
       &Field__PrivateImplementationDetails__4636993D3E1DA4E9D6B8F87B79E8F7C6D018580D52661950EABC3845C5897A4D,
       v6);
-    sub_B16FFC(&StringLiteral_8690, v7);
-    sub_B16FFC(&StringLiteral_19461, v8);
-    sub_B16FFC(&StringLiteral_8691, v9);
-    sub_B16FFC(&StringLiteral_8692, v10);
-    sub_B16FFC(&StringLiteral_19463, v11);
-    sub_B16FFC(&StringLiteral_19462, v12);
+    sub_B16FFC(&StringLiteral_8690/*"MENU_OPERATION_FRIEND"*/, v7);
+    sub_B16FFC(&StringLiteral_19461/*"img_myroom_01"*/, v8);
+    sub_B16FFC(&StringLiteral_8691/*"MENU_OPERATION_OFFER"*/, v9);
+    sub_B16FFC(&StringLiteral_8692/*"MENU_OPERATION_OFFERED"*/, v10);
+    sub_B16FFC(&StringLiteral_19463/*"img_myroom_03"*/, v11);
+    sub_B16FFC(&StringLiteral_19462/*"img_myroom_02"*/, v12);
     byte_40F9938 = 1;
   }
   v13 = (System_Int32_array **)sub_B17014(CombineListItemInfo___TypeInfo, 3LL, v2);
@@ -90,8 +90,8 @@ void __fastcall CombineListViewManager___cctor(const MethodInfo *method)
     v18,
     1,
     1,
-    (System_String_o *)StringLiteral_19461,
-    (System_String_o *)StringLiteral_8690,
+    (System_String_o *)StringLiteral_19461/*"img_myroom_01"*/,
+    (System_String_o *)StringLiteral_8690/*"MENU_OPERATION_FRIEND"*/,
     v19);
   if ( !v13 )
     sub_B170D4();
@@ -110,8 +110,8 @@ void __fastcall CombineListViewManager___cctor(const MethodInfo *method)
     v32,
     2,
     1,
-    (System_String_o *)StringLiteral_19462,
-    (System_String_o *)StringLiteral_8691,
+    (System_String_o *)StringLiteral_19462/*"img_myroom_02"*/,
+    (System_String_o *)StringLiteral_8691/*"MENU_OPERATION_OFFER"*/,
     v33);
   if ( v32 )
   {
@@ -128,8 +128,8 @@ void __fastcall CombineListViewManager___cctor(const MethodInfo *method)
     v43,
     3,
     1,
-    (System_String_o *)StringLiteral_19463,
-    (System_String_o *)StringLiteral_8692,
+    (System_String_o *)StringLiteral_19463/*"img_myroom_03"*/,
+    (System_String_o *)StringLiteral_8692/*"MENU_OPERATION_OFFERED"*/,
     v44);
   if ( v43 )
   {
@@ -563,7 +563,7 @@ void __fastcall CombineListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_CombineListViewObject__get_Current__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_CombineListViewObject__GetEnumerator__, v11);
     sub_B16FFC(&Method_System_Collections_Generic_List_CombineListViewObject__get_Count__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40F9934 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -578,7 +578,7 @@ void __fastcall CombineListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -648,7 +648,7 @@ void __fastcall CombineListViewManager__RequestListObject_24274464(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_CombineListViewObject__get_Current__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_CombineListViewObject__GetEnumerator__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_CombineListViewObject__get_Count__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40F9935 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -663,7 +663,7 @@ void __fastcall CombineListViewManager__RequestListObject_24274464(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

@@ -38,11 +38,11 @@ void __fastcall BattleViewItemlistComponent___ctor(BattleViewItemlistComponent_o
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_List_GameObject__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_2439, v10);
+    sub_B16FFC(&StringLiteral_2439/*"BATTLE_ITEMLIST_NOTGET"*/, v10);
     byte_40F9019 = 1;
   }
-  v11 = (System_Int32_array **)StringLiteral_2439;
-  this->fields.noItemLabelKey = (struct System_String_o *)StringLiteral_2439;
+  v11 = (System_Int32_array **)StringLiteral_2439/*"BATTLE_ITEMLIST_NOTGET"*/;
+  this->fields.noItemLabelKey = (struct System_String_o *)StringLiteral_2439/*"BATTLE_ITEMLIST_NOTGET"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.noItemLabelKey, v11, v2, v3, v4, v5, v6, v7);
   this->fields.colmax = 5;
   *(_QWORD *)&this->fields.width = 0x42F0000042FA0000LL;
@@ -1099,7 +1099,7 @@ void __fastcall BattleViewItemlistComponent__setListData(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v18);
     sub_B16FFC(&LocalizationManager_TypeInfo, v19);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_2440, v21);
+    sub_B16FFC(&StringLiteral_2440/*"BATTLE_ITEM_DISP_COLUMN"*/, v21);
     byte_40F900E = 1;
   }
   memset(&v75, 0, sizeof(v75));
@@ -1137,7 +1137,7 @@ void __fastcall BattleViewItemlistComponent__setListData(
   height = this->fields.height;
   if ( !setColMax )
   {
-    setColMax = ConstantMaster__getValue((System_String_o *)StringLiteral_2440, 0LL);
+    setColMax = ConstantMaster__getValue((System_String_o *)StringLiteral_2440/*"BATTLE_ITEM_DISP_COLUMN"*/, 0LL);
     if ( setColMax <= 0 )
     {
       v28 = BattleViewItemlistComponent_TypeInfo;

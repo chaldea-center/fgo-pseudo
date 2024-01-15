@@ -23,17 +23,17 @@ void __fastcall EventPointItemListViewItemDraw___cctor(const MethodInfo *method)
   if ( (byte_40FAC31 & 1) == 0 )
   {
     sub_B16FFC(&EventPointItemListViewItemDraw_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18510, v8);
-    sub_B16FFC(&StringLiteral_18507, v9);
+    sub_B16FFC(&StringLiteral_18510/*"event_rewardpoint_"*/, v8);
+    sub_B16FFC(&StringLiteral_18507/*"event_rewardget_"*/, v9);
     byte_40FAC31 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventPointItemListViewItemDraw_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_18510;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18510;
+  v11 = (System_Int32_array **)StringLiteral_18510/*"event_rewardpoint_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18510/*"event_rewardpoint_"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = EventPointItemListViewItemDraw_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_18507;
-  v12->GET_SPRITE_NAME = (struct System_String_o *)StringLiteral_18507;
+  v13 = (System_Int32_array **)StringLiteral_18507/*"event_rewardget_"*/;
+  v12->GET_SPRITE_NAME = (struct System_String_o *)StringLiteral_18507/*"event_rewardget_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->GET_SPRITE_NAME, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -188,7 +188,7 @@ void __fastcall EventPointItemListViewItemDraw__SetItem(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject___ctor__, v10);
     sub_B16FFC(&System_Collections_Generic_List_GameObject__TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_960, v13);
+    sub_B16FFC(&StringLiteral_960/*"00"*/, v13);
     byte_40FAC30 = 1;
   }
   eventId = 0;
@@ -225,7 +225,7 @@ void __fastcall EventPointItemListViewItemDraw__SetItem(
         BOARD_SPRITE_BASE_NAME = EventPointItemListViewItemDraw_TypeInfo->static_fields->BOARD_SPRITE_BASE_NAME;
         eventId = eventRewardEnt->fields.eventId;
         v26 = System_Int32__ToString((int32_t)&eventId, 0LL);
-        v24 = System_String__Concat_43746016(BOARD_SPRITE_BASE_NAME, v26, (System_String_o *)StringLiteral_960, 0LL);
+        v24 = System_String__Concat_43746016(BOARD_SPRITE_BASE_NAME, v26, (System_String_o *)StringLiteral_960/*"00"*/, 0LL);
       }
       else
       {
@@ -440,7 +440,7 @@ LABEL_63:
             GET_SPRITE_NAME = EventPointItemListViewItemDraw_TypeInfo->static_fields->GET_SPRITE_NAME;
             eventId = v60->fields.eventId;
             v66 = System_Int32__ToString((int32_t)&eventId, 0LL);
-            v64 = System_String__Concat_43746016(GET_SPRITE_NAME, v66, (System_String_o *)StringLiteral_960, 0LL);
+            v64 = System_String__Concat_43746016(GET_SPRITE_NAME, v66, (System_String_o *)StringLiteral_960/*"00"*/, 0LL);
           }
           else
           {

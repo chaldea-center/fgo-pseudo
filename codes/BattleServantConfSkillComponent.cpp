@@ -14,14 +14,14 @@ void __fastcall BattleServantConfSkillComponent___cctor(const MethodInfo *method
   if ( (byte_40F8A1E & 1) == 0 )
   {
     sub_B16FFC(&BattleServantConfSkillComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19555, v8);
+    sub_B16FFC(&StringLiteral_19555/*"img_skillclass_0"*/, v8);
     byte_40F8A1E = 1;
   }
   BattleServantConfSkillComponent_TypeInfo->static_fields->MAX_HEIGHT = 500;
   BattleServantConfSkillComponent_TypeInfo->static_fields->ADJUST_HEIGHT = 40;
   static_fields = BattleServantConfSkillComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_19555;
-  static_fields->SKILL_NO_FILE_PREFIX = (struct System_String_o *)StringLiteral_19555;
+  v10 = (System_Int32_array **)StringLiteral_19555/*"img_skillclass_0"*/;
+  static_fields->SKILL_NO_FILE_PREFIX = (struct System_String_o *)StringLiteral_19555/*"img_skillclass_0"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->SKILL_NO_FILE_PREFIX, v10, v2, v3, v4, v5, v6, v7);
   BattleServantConfSkillComponent_TypeInfo->static_fields->MAX_LEVEL = 10;
 }
@@ -107,7 +107,7 @@ void __fastcall BattleServantConfSkillComponent__SetItem(
   if ( (byte_40F8A1D & 1) == 0 )
   {
     sub_B16FFC(&BattleServantConfSkillComponent_TypeInfo, *(_QWORD *)&num);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40F8A1D = 1;
   }
   v52 = 0;
@@ -137,7 +137,7 @@ void __fastcall BattleServantConfSkillComponent__SetItem(
           v27 = this->fields.titleNumSecondSprite;
           if ( v27 )
           {
-            v26 = (System_String_o *)StringLiteral_1;
+            v26 = (System_String_o *)StringLiteral_1/*""*/;
             goto LABEL_20;
           }
         }

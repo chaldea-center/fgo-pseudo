@@ -78,7 +78,7 @@ void __fastcall MasterFormationComponent__OnCenterOnChildFinished(
   if ( (byte_40FB1D0 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_MasterEquipInfoComponent___, method);
-    sub_B16FFC(&StringLiteral_2944, v3);
+    sub_B16FFC(&StringLiteral_2944/*"CHANGE_INFO"*/, v3);
     byte_40FB1D0 = 1;
   }
   if ( this->fields.isIconOnly )
@@ -113,7 +113,7 @@ LABEL_15:
     fsm = this->fields.fsm;
     if ( fsm )
     {
-      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_2944, 0LL);
+      PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_2944/*"CHANGE_INFO"*/, 0LL);
       return;
     }
     goto LABEL_15;
@@ -269,14 +269,14 @@ void __fastcall MasterFormationComponent__OnDragStarted(MasterFormationComponent
 
   if ( (byte_40FB1CD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11326, method);
+    sub_B16FFC(&StringLiteral_11326/*"RefreshCurrentInfo"*/, method);
     byte_40FB1CD = 1;
   }
   *(_WORD *)&this->fields.isChangeMasterImg = 1;
   this->fields.isDragStart = 1;
   UnityEngine_MonoBehaviour__CancelInvoke_34803564(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_11326,
+    (System_String_o *)StringLiteral_11326/*"RefreshCurrentInfo"*/,
     0LL);
   MasterFormationComponent__setDisEquipEffect(this, v3);
   MasterFormationComponent__SetEnabledEquipIconScroll(this, 0, v4);
@@ -326,7 +326,7 @@ void __fastcall MasterFormationComponent__OnIconCenterOnChildFinished(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_MasterEquipIconComponent___, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_MasterEquipIconComponent__GetEnumerator__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_UserEquipEntity__get_Count__, v7);
-    sub_B16FFC(&StringLiteral_11326, v8);
+    sub_B16FFC(&StringLiteral_11326/*"RefreshCurrentInfo"*/, v8);
     byte_40FB1D1 = 1;
   }
   memset(&v20, 0, sizeof(v20));
@@ -359,7 +359,7 @@ void __fastcall MasterFormationComponent__OnIconCenterOnChildFinished(
   *(_WORD *)&this->fields.isDragStart = 0;
   UnityEngine_MonoBehaviour__CancelInvoke_34803564(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_11326,
+    (System_String_o *)StringLiteral_11326/*"RefreshCurrentInfo"*/,
     0LL);
   notificationDragState = this->fields.notificationDragState;
   if ( !notificationDragState )
@@ -447,14 +447,14 @@ void __fastcall MasterFormationComponent__OnIconDragStarted(MasterFormationCompo
 
   if ( (byte_40FB1CE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11326, method);
+    sub_B16FFC(&StringLiteral_11326/*"RefreshCurrentInfo"*/, method);
     byte_40FB1CE = 1;
   }
   *(_WORD *)&this->fields.isChangeMasterImg = 257;
   this->fields.isIconDragStart = 1;
   UnityEngine_MonoBehaviour__CancelInvoke_34803564(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_11326,
+    (System_String_o *)StringLiteral_11326/*"RefreshCurrentInfo"*/,
     0LL);
   MasterFormationComponent__SetEnabledEquipDetailScroll(this, 0, v3);
   leftArrowBtn = (UnityEngine_Behaviour_o *)this->fields.leftArrowBtn;
@@ -495,12 +495,12 @@ void __fastcall MasterFormationComponent__RefreshCurrentInfo(
 
   if ( (byte_40FB1D2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11326, method);
+    sub_B16FFC(&StringLiteral_11326/*"RefreshCurrentInfo"*/, method);
     byte_40FB1D2 = 1;
   }
   UnityEngine_MonoBehaviour__CancelInvoke_34803564(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_11326,
+    (System_String_o *)StringLiteral_11326/*"RefreshCurrentInfo"*/,
     0LL);
   notificationDragState = this->fields.notificationDragState;
   if ( !notificationDragState )
@@ -1152,7 +1152,7 @@ void __fastcall MasterFormationComponent__onClickLeftArrow(MasterFormationCompon
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_MasterEquipIconComponent__get_Current__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_MasterEquipIconComponent__GetEnumerator__, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_11326, v7);
+    sub_B16FFC(&StringLiteral_11326/*"RefreshCurrentInfo"*/, v7);
     byte_40FB1D5 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -1170,7 +1170,7 @@ void __fastcall MasterFormationComponent__onClickLeftArrow(MasterFormationCompon
     *(_WORD *)&this->fields.isDragStart = 0;
     UnityEngine_MonoBehaviour__CancelInvoke_34803564(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_11326,
+      (System_String_o *)StringLiteral_11326/*"RefreshCurrentInfo"*/,
       0LL);
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -1248,7 +1248,7 @@ void __fastcall MasterFormationComponent__onClickRightArrow(MasterFormationCompo
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_MasterEquipIconComponent__get_Current__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_MasterEquipIconComponent__GetEnumerator__, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_11326, v7);
+    sub_B16FFC(&StringLiteral_11326/*"RefreshCurrentInfo"*/, v7);
     byte_40FB1D4 = 1;
   }
   memset(&v22, 0, sizeof(v22));
@@ -1266,7 +1266,7 @@ void __fastcall MasterFormationComponent__onClickRightArrow(MasterFormationCompo
     *(_WORD *)&this->fields.isDragStart = 0;
     UnityEngine_MonoBehaviour__CancelInvoke_34803564(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_11326,
+      (System_String_o *)StringLiteral_11326/*"RefreshCurrentInfo"*/,
       0LL);
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -1364,21 +1364,21 @@ void __fastcall MasterFormationComponent__setChangeMasterInfo(
 
   if ( (byte_40FB1D6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5483, method);
-    sub_B16FFC(&StringLiteral_11326, v4);
+    sub_B16FFC(&StringLiteral_5483/*"END_SET"*/, method);
+    sub_B16FFC(&StringLiteral_11326/*"RefreshCurrentInfo"*/, v4);
     byte_40FB1D6 = 1;
   }
   MasterFormationComponent__setMstImg(this, this->fields.currentEquipId, v2);
   if ( this->fields.isDragStart || this->fields.isIconDragStart )
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_11326,
+      (System_String_o *)StringLiteral_11326/*"RefreshCurrentInfo"*/,
       0.1,
       0LL);
   fsm = this->fields.fsm;
   if ( !fsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5483, 0LL);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_5483/*"END_SET"*/, 0LL);
 }
 
 
@@ -1499,8 +1499,8 @@ void __fastcall MasterFormationComponent__setCmdSpellRecoverTime(
   {
     sub_B16FFC(&int_TypeInfo, recoverTime);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_3247, v6);
-    sub_B16FFC(&StringLiteral_3249, v7);
+    sub_B16FFC(&StringLiteral_3247/*"COMMAND_SPELL_RECOVER_TIME"*/, v6);
+    sub_B16FFC(&StringLiteral_3249/*"COMMNAD_SPELL_RECV_TXT"*/, v7);
     byte_40FB1C3 = 1;
   }
   if ( recoverTime > 0 )
@@ -1511,7 +1511,7 @@ void __fastcall MasterFormationComponent__setCmdSpellRecoverTime(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3249, 0LL);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3249/*"COMMNAD_SPELL_RECV_TXT"*/, 0LL);
     if ( recoverTitleLb )
     {
       v10 = recoverTime / 0xE10uLL;
@@ -1519,7 +1519,7 @@ void __fastcall MasterFormationComponent__setCmdSpellRecoverTime(
       v12 = recoverTime % 0x3CuLL;
       UILabel__set_text(recoverTitleLb, v9, 0LL);
       recoverTimeLb = this->fields.recoverTimeLb;
-      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3247, 0LL);
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3247/*"COMMAND_SPELL_RECOVER_TIME"*/, 0LL);
       v22 = v10;
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
       v21 = v11;
@@ -2071,9 +2071,9 @@ void __fastcall MasterFormationComponent__setMstEquipIconList(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v24);
     sub_B16FFC(&UIScrollView_OnDragNotification_TypeInfo, v25);
     sub_B16FFC(&SpringPanel_OnFinished_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_8606, v27);
-    sub_B16FFC(&StringLiteral_8605, v28);
-    sub_B16FFC(&StringLiteral_4533, v29);
+    sub_B16FFC(&StringLiteral_8606/*"MASTER_EQUIP_ICON_TOUCH_TXT"*/, v27);
+    sub_B16FFC(&StringLiteral_8605/*"MASTER_EQUIP_ICON_SCROLL_TXT"*/, v28);
+    sub_B16FFC(&StringLiteral_4533/*"D3"*/, v29);
     byte_40FB1C8 = 1;
   }
   v164 = 0;
@@ -2128,7 +2128,7 @@ void __fastcall MasterFormationComponent__setMstEquipIconList(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_8606, 0LL);
+  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_8606/*"MASTER_EQUIP_ICON_TOUCH_TXT"*/, 0LL);
   if ( !touchGuideLabel
     || (UILabel__set_text(touchGuideLabel, v50, 0LL), (currentList = this->fields.currentList) == 0LL)
     || (iconScroll = (UnityEngine_Component_o *)this->fields.iconScroll) == 0LL
@@ -2239,7 +2239,7 @@ LABEL_77:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v106 = LocalizationManager__Get((System_String_o *)StringLiteral_8605, 0LL);
+    v106 = LocalizationManager__Get((System_String_o *)StringLiteral_8605/*"MASTER_EQUIP_ICON_SCROLL_TXT"*/, 0LL);
     if ( !scrollGuideLabel )
       goto LABEL_76;
     UILabel__set_text(scrollGuideLabel, v106, 0LL);
@@ -2295,7 +2295,7 @@ LABEL_77:
         if ( !v130 )
           goto LABEL_76;
         UnityEngine_Transform__set_localPosition(v130, *(UnityEngine_Vector3_o *)&v132, 0LL);
-        v135 = System_Int32__ToString_38275808((int32_t)&v164, (System_String_o *)StringLiteral_4533, 0LL);
+        v135 = System_Int32__ToString_38275808((int32_t)&v164, (System_String_o *)StringLiteral_4533/*"D3"*/, 0LL);
         UnityEngine_Object__set_name((UnityEngine_Object_o *)v124, v135, 0LL);
         if ( !v117 )
           goto LABEL_76;
@@ -2511,7 +2511,7 @@ void __fastcall MasterFormationComponent__setMstEquipList(MasterFormationCompone
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
     sub_B16FFC(&UIScrollView_OnDragNotification_TypeInfo, v15);
     sub_B16FFC(&SpringPanel_OnFinished_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_4533, v17);
+    sub_B16FFC(&StringLiteral_4533/*"D3"*/, v17);
     byte_40FB1C7 = 1;
   }
   moveIdx = 0;
@@ -2627,7 +2627,7 @@ LABEL_41:
       if ( !v85 )
         goto LABEL_41;
       UnityEngine_Transform__set_localPosition(v85, *(UnityEngine_Vector3_o *)&v87, 0LL);
-      v90 = System_Int32__ToString_38275808((int32_t)&moveIdx, (System_String_o *)StringLiteral_4533, 0LL);
+      v90 = System_Int32__ToString_38275808((int32_t)&moveIdx, (System_String_o *)StringLiteral_4533/*"D3"*/, 0LL);
       UnityEngine_Object__set_name((UnityEngine_Object_o *)v79, v90, 0LL);
       Component_srcLineSprite = (EventMissionProgressRequest_Argument_ProgressData_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                                          v79,

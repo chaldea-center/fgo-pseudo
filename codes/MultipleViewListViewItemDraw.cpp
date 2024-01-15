@@ -357,9 +357,9 @@ void __fastcall MultipleViewListViewItemDraw__SetMaskInfo(
   if ( (byte_40FC012 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_11584, v5);
-    sub_B16FFC(&StringLiteral_11607, v6);
-    sub_B16FFC(&StringLiteral_8824, v7);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v5);
+    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
+    sub_B16FFC(&StringLiteral_8824/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v7);
     byte_40FC012 = 1;
   }
   selectNum = 0;
@@ -388,7 +388,7 @@ void __fastcall MultipleViewListViewItemDraw__SetMaskInfo(
         v13 = this->fields.maskLb;
         selectNum = item->fields.selectNum;
         v25 = System_Int32__ToString((int32_t)&selectNum, 0LL);
-        v26 = System_String__Concat_43743732((System_String_o *)StringLiteral_8824, v25, 0LL);
+        v26 = System_String__Concat_43743732((System_String_o *)StringLiteral_8824/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v25, 0LL);
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !LocalizationManager_TypeInfo->_2.cctor_finished )
         {
@@ -421,7 +421,7 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = &StringLiteral_11584;
+    v14 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
     goto LABEL_26;
   }
   userSvtEntity = item->fields.userSvtEntity;
@@ -447,7 +447,7 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = &StringLiteral_11607;
+    v14 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_26:
     v19 = (System_String_o *)*v14;
 LABEL_27:

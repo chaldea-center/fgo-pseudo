@@ -112,11 +112,11 @@ void __fastcall UserNameEntryComponent__callbackUserNameChange(
     sub_B16FFC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
     sub_B16FFC(&Method_UserNameEntryComponent__callbackUserNameChange_b__33_0__, v8);
-    sub_B16FFC(&StringLiteral_21129, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F9771 = 1;
   }
-  v11 = System_String__op_Equality(result, (System_String_o *)StringLiteral_21129, 0LL);
+  v11 = System_String__op_Equality(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL);
   if ( v11 )
   {
     SelfUserGame = UserGameMaster__getSelfUserGame((const MethodInfo *)v11);
@@ -158,7 +158,7 @@ LABEL_16:
   mInput = this->fields.mInput;
   if ( !mInput )
     goto LABEL_16;
-  UIInput__set_value(mInput, (System_String_o *)StringLiteral_1, 0LL);
+  UIInput__set_value(mInput, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   entryNameInput = this->fields.entryNameInput;
   if ( !entryNameInput )
     goto LABEL_16;
@@ -273,8 +273,8 @@ void __fastcall UserNameEntryComponent__onChangeInput(UserNameEntryComponent_o *
   if ( (byte_40F976C & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_26, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F976C = 1;
   }
   entryNameInput = this->fields.entryNameInput;
@@ -286,7 +286,7 @@ void __fastcall UserNameEntryComponent__onChangeInput(UserNameEntryComponent_o *
   if ( !Text )
     goto LABEL_24;
   v7 = System_String__Trim_43731064(Text, 0LL);
-  if ( System_String__op_Equality(v7, (System_String_o *)StringLiteral_1, 0LL) )
+  if ( System_String__op_Equality(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     goto LABEL_12;
   if ( Text->fields.m_stringLength >= 1 )
   {
@@ -299,7 +299,7 @@ void __fastcall UserNameEntryComponent__onChangeInput(UserNameEntryComponent_o *
     }
     while ( ++v8 < Text->fields.m_stringLength );
   }
-  if ( (System_String__IndexOf_43816080(Text, (System_String_o *)StringLiteral_26, 0LL) & 0x80000000) != 0 )
+  if ( (System_String__IndexOf_43816080(Text, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL) & 0x80000000) != 0 )
   {
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -497,10 +497,10 @@ void __fastcall UserNameEntryComponent__open(
     sub_B16FFC(&Method_UserNameEntryComponent___c__open_b__25_0__, v22);
     sub_B16FFC(&UserNameEntryComponent___c_TypeInfo, v23);
     sub_B16FFC(&UIMasterFullFigureTexture___TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_7273, v25);
-    sub_B16FFC(&StringLiteral_7272, v26);
-    sub_B16FFC(&StringLiteral_11590, v27);
-    sub_B16FFC(&StringLiteral_7274, v28);
+    sub_B16FFC(&StringLiteral_7273/*"INPUT_NAME_INFO"*/, v25);
+    sub_B16FFC(&StringLiteral_7272/*"INPUT_NAME_ANNOUNCE"*/, v26);
+    sub_B16FFC(&StringLiteral_11590/*"SELECT_FIGURE_INFO"*/, v27);
+    sub_B16FFC(&StringLiteral_7274/*"INPUT_NAME_LIMIT_NUM"*/, v28);
     byte_40F9769 = 1;
   }
   this->fields.mClosedAct = closed_act;
@@ -535,22 +535,22 @@ void __fastcall UserNameEntryComponent__open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_7272, 0LL);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_7272/*"INPUT_NAME_ANNOUNCE"*/, 0LL);
   if ( !mInfoLabelMain )
     goto LABEL_44;
   UILabel__set_text(mInfoLabelMain, v42, 0LL);
   mInfoLabelSub = this->fields.mInfoLabelSub;
-  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_7273, 0LL);
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_7273/*"INPUT_NAME_INFO"*/, 0LL);
   if ( !mInfoLabelSub )
     goto LABEL_44;
   UILabel__set_text(mInfoLabelSub, v44, 0LL);
   mInfoLabelInput = this->fields.mInfoLabelInput;
-  v46 = LocalizationManager__Get((System_String_o *)StringLiteral_7274, 0LL);
+  v46 = LocalizationManager__Get((System_String_o *)StringLiteral_7274/*"INPUT_NAME_LIMIT_NUM"*/, 0LL);
   if ( !mInfoLabelInput )
     goto LABEL_44;
   UILabel__set_text(mInfoLabelInput, v46, 0LL);
   mInfoLabelFlick = this->fields.mInfoLabelFlick;
-  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_11590, 0LL);
+  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_11590/*"SELECT_FIGURE_INFO"*/, 0LL);
   if ( !mInfoLabelFlick )
     goto LABEL_44;
   UILabel__set_text(mInfoLabelFlick, v48, 0LL);
@@ -821,10 +821,10 @@ void __fastcall UserNameEntryComponent__openConfirm(UserNameEntryComponent_o *th
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
     sub_B16FFC(&Method_UserNameEntryComponent_endConfirm__, v5);
-    sub_B16FFC(&StringLiteral_5495, v6);
-    sub_B16FFC(&StringLiteral_3325, v7);
-    sub_B16FFC(&StringLiteral_3316, v8);
-    sub_B16FFC(&StringLiteral_5496, v9);
+    sub_B16FFC(&StringLiteral_5495/*"ENTRY_GENDER_MAN"*/, v6);
+    sub_B16FFC(&StringLiteral_3325/*"CONFIRM_TITLE_MESSAGE"*/, v7);
+    sub_B16FFC(&StringLiteral_3316/*"CONFIRM_INFO_MESSAGE"*/, v8);
+    sub_B16FFC(&StringLiteral_5496/*"ENTRY_GENDER_WOMAN"*/, v9);
     byte_40F976E = 1;
   }
   entryNameInput = this->fields.entryNameInput;
@@ -844,7 +844,7 @@ void __fastcall UserNameEntryComponent__openConfirm(UserNameEntryComponent_o *th
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = &StringLiteral_5495;
+    v13 = &StringLiteral_5495/*"ENTRY_GENDER_MAN"*/;
   }
   else
   {
@@ -853,7 +853,7 @@ void __fastcall UserNameEntryComponent__openConfirm(UserNameEntryComponent_o *th
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = &StringLiteral_5496;
+    v13 = &StringLiteral_5496/*"ENTRY_GENDER_WOMAN"*/;
   }
   v14 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)*v13, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -861,10 +861,10 @@ void __fastcall UserNameEntryComponent__openConfirm(UserNameEntryComponent_o *th
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3316, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3316/*"CONFIRM_INFO_MESSAGE"*/, 0LL);
   v16 = System_String__Format_43739268(v15, v14, v12, 0LL);
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3325, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3325/*"CONFIRM_TITLE_MESSAGE"*/, 0LL);
   v23 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v19,
@@ -919,8 +919,8 @@ void __fastcall UserNameEntryComponent__requestUserNameChange(UserNameEntryCompo
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v7);
     sub_B16FFC(&Method_UserNameEntryComponent_callbackUserNameChange__, v8);
-    sub_B16FFC(&StringLiteral_21129, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F9770 = 1;
   }
   entryNameInput = this->fields.entryNameInput;
@@ -986,7 +986,7 @@ void __fastcall UserNameEntryComponent__requestUserNameChange(UserNameEntryCompo
           Request_WarBoardWallAttackRequest,
           v17,
           this->fields.genderType,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_1/*""*/,
           v25);
         goto LABEL_28;
       }
@@ -1002,7 +1002,7 @@ LABEL_32:
   if ( !v20 )
     goto LABEL_32;
   NetworkManager__WriteSignup(v20, 0LL);
-  UserNameEntryComponent__callbackUserNameChange(this, (System_String_o *)StringLiteral_21129, v21);
+  UserNameEntryComponent__callbackUserNameChange(this, (System_String_o *)StringLiteral_21129/*"ok"*/, v21);
 LABEL_28:
   confirmBtn = this->fields.confirmBtn;
   if ( !confirmBtn )

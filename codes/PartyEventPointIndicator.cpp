@@ -145,7 +145,7 @@ bool __fastcall PartyEventPointIndicator__SetRestrictionDisp(
 
   if ( (byte_40F8040 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, restrictionMessage);
+    sub_B16FFC(&StringLiteral_1/*""*/, restrictionMessage);
     byte_40F8040 = 1;
   }
   if ( System_String__IsNullOrEmpty(restrictionMessage, 0LL) )
@@ -160,7 +160,7 @@ bool __fastcall PartyEventPointIndicator__SetRestrictionDisp(
       restrictionMessageLabel = this->fields.restrictionMessageLabel;
       if ( restrictionMessageLabel )
       {
-        UILabel__set_text(restrictionMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(restrictionMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         return 0;
       }
     }
@@ -246,9 +246,9 @@ bool __fastcall PartyEventPointIndicator__SetTotalDropItem(
     sub_B16FFC(
       &Field__PrivateImplementationDetails__307012A837186614D001E192B1D70E6A03D8FC10730FB392A7536E08456B2EF3,
       v6);
-    sub_B16FFC(&StringLiteral_1, v7);
-    sub_B16FFC(&StringLiteral_67, v8);
-    sub_B16FFC(&StringLiteral_10314, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
+    sub_B16FFC(&StringLiteral_67/*"\r"*/, v8);
+    sub_B16FFC(&StringLiteral_10314/*"PARTY_ORGANIZATION_EVENT_TOTAL_DATA"*/, v9);
     byte_40F803E = 1;
   }
   if ( !dropItemInfo )
@@ -263,15 +263,15 @@ bool __fastcall PartyEventPointIndicator__SetTotalDropItem(
       pointEventTotalTitle1Label = this->fields.pointEventTotalTitle1Label;
       if ( pointEventTotalTitle1Label )
       {
-        UILabel__set_text(pointEventTotalTitle1Label, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(pointEventTotalTitle1Label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         pointEventTotalTitle2Label = this->fields.pointEventTotalTitle2Label;
         if ( pointEventTotalTitle2Label )
         {
-          UILabel__set_text(pointEventTotalTitle2Label, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(pointEventTotalTitle2Label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           pointEventTotalDataLabel = this->fields.pointEventTotalDataLabel;
           if ( pointEventTotalDataLabel )
           {
-            UILabel__set_text(pointEventTotalDataLabel, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(pointEventTotalDataLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
             return 0;
           }
         }
@@ -287,8 +287,8 @@ bool __fastcall PartyEventPointIndicator__SetTotalDropItem(
     goto LABEL_43;
   v14 = System_String__Replace_43750968(
           v13,
-          (System_String_o *)StringLiteral_67,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_67/*"\r"*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   v16 = (System_Array_o *)sub_B17014(char___TypeInfo, 4LL, v15);
   v47.fields.value = Field__PrivateImplementationDetails__307012A837186614D001E192B1D70E6A03D8FC10730FB392A7536E08456B2EF3;
@@ -308,7 +308,7 @@ bool __fastcall PartyEventPointIndicator__SetTotalDropItem(
     {
       if ( !v23 )
         goto LABEL_43;
-      UILabel__set_text(v23, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v23, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       if ( v21->max_length )
       {
         v38 = this->fields.pointEventTotalTitle2Label;
@@ -358,11 +358,11 @@ LABEL_31:
   v36 = this->fields.pointEventTotalTitle1Label;
   if ( !v36 )
     goto LABEL_43;
-  UILabel__set_text(v36, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v36, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v37 = this->fields.pointEventTotalTitle2Label;
   if ( !v37 )
     goto LABEL_43;
-  UILabel__set_text(v37, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v37, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 LABEL_33:
   v40 = this->fields.pointEventTotalTitleBase;
   if ( !v40 )
@@ -381,7 +381,7 @@ LABEL_33:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_10314, 0LL);
+    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_10314/*"PARTY_ORGANIZATION_EVENT_TOTAL_DATA"*/, 0LL);
     v46 = System_String__Format(v45, (Il2CppObject *)EventUpString, 0LL);
     if ( v43 )
     {
@@ -393,7 +393,7 @@ LABEL_43:
   }
   if ( !v43 )
     goto LABEL_43;
-  v44 = (System_String_o *)StringLiteral_1;
+  v44 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_42:
   UILabel__set_text(v43, v44, 0LL);
   return 1;
@@ -495,7 +495,7 @@ bool __fastcall PartyEventPointIndicator__SetTrendDisp(
     sub_B16FFC(&Method_DataManager_GetMasterData_QuestPhaseMaster___, classIds);
     sub_B16FFC(&PartyEventPointIndicator_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F803F = 1;
   }
   levelInfoBase = this->fields.levelInfoBase;
@@ -505,7 +505,7 @@ bool __fastcall PartyEventPointIndicator__SetTrendDisp(
   levelInfoLabel = this->fields.levelInfoLabel;
   if ( !levelInfoLabel )
     goto LABEL_60;
-  UILabel__set_text(levelInfoLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(levelInfoLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !classIds || !*(_QWORD *)&classIds->max_length )
   {
     if ( !this->fields.questRestrictionInfo )

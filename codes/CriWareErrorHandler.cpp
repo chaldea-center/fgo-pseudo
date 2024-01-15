@@ -547,14 +547,14 @@ void __fastcall CriWareErrorHandler__OutputDefaultLog(System_String_o *errmsg, c
 
   if ( (byte_40F0343 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15167, method);
-    sub_B16FFC(&StringLiteral_5413, v3);
+    sub_B16FFC(&StringLiteral_15167/*"W"*/, method);
+    sub_B16FFC(&StringLiteral_5413/*"E"*/, v3);
     byte_40F0343 = 1;
   }
   if ( !errmsg )
     sub_B170D4();
-  if ( !System_String__StartsWith(errmsg, (System_String_o *)StringLiteral_5413, 0LL) )
-    System_String__StartsWith(errmsg, (System_String_o *)StringLiteral_15167, 0LL);
+  if ( !System_String__StartsWith(errmsg, (System_String_o *)StringLiteral_5413/*"E"*/, 0LL) )
+    System_String__StartsWith(errmsg, (System_String_o *)StringLiteral_15167/*"W"*/, 0LL);
 }
 
 

@@ -920,11 +920,11 @@ void __fastcall FortificationAutomaticDialogComponent__Open(
     sub_B16FFC(&System_Action_TypeInfo, onDecide);
     sub_B16FFC(&Method_FortificationAutomaticDialogComponent__Open_b__16_0__, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_6396, v13);
-    sub_B16FFC(&StringLiteral_6397, v14);
-    sub_B16FFC(&StringLiteral_3252, v15);
-    sub_B16FFC(&StringLiteral_6398, v16);
-    sub_B16FFC(&StringLiteral_6399, v17);
+    sub_B16FFC(&StringLiteral_6396/*"FORTIFICATION_AUTOMATIC_DIALOG_DESCRIPTION"*/, v13);
+    sub_B16FFC(&StringLiteral_6397/*"FORTIFICATION_AUTOMATIC_DIALOG_REMOVE_BUTTON"*/, v14);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v15);
+    sub_B16FFC(&StringLiteral_6398/*"FORTIFICATION_AUTOMATIC_DIALOG_SET_BUTTON"*/, v16);
+    sub_B16FFC(&StringLiteral_6399/*"FORTIFICATION_AUTOMATIC_DIALOG_TITLE"*/, v17);
     byte_40FA75E = 1;
   }
   if ( !this->fields.state )
@@ -955,25 +955,25 @@ void __fastcall FortificationAutomaticDialogComponent__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_6399, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_6399/*"FORTIFICATION_AUTOMATIC_DIALOG_TITLE"*/, 0LL);
     if ( !titleLb )
       goto LABEL_13;
     UILabel__set_text(titleLb, v25, 0LL);
     descriptionLb = this->fields.descriptionLb;
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_6396, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_6396/*"FORTIFICATION_AUTOMATIC_DIALOG_DESCRIPTION"*/, 0LL);
     if ( !descriptionLb )
       goto LABEL_13;
     UILabel__set_text(descriptionLb, v27, 0LL);
     setButtonLb = this->fields.setButtonLb;
-    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_6398, 0LL);
+    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_6398/*"FORTIFICATION_AUTOMATIC_DIALOG_SET_BUTTON"*/, 0LL);
     if ( !setButtonLb
       || (UILabel__set_text(setButtonLb, v29, 0LL),
           removeButtonLb = this->fields.removeButtonLb,
-          v31 = LocalizationManager__Get((System_String_o *)StringLiteral_6397, 0LL),
+          v31 = LocalizationManager__Get((System_String_o *)StringLiteral_6397/*"FORTIFICATION_AUTOMATIC_DIALOG_REMOVE_BUTTON"*/, 0LL),
           !removeButtonLb)
       || (UILabel__set_text(removeButtonLb, v31, 0LL),
           cancelButtonLb = this->fields.cancelButtonLb,
-          v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL),
+          v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
           !cancelButtonLb) )
     {
 LABEL_13:
@@ -1566,8 +1566,8 @@ void __fastcall FortificationAutomaticDialogComponent___c__DisplayClass18_0___Au
   if ( (byte_40F68C6 & 1) == 0 )
   {
     sub_B16FFC(&Method_FortificationAutomaticDialogComponent___c__DisplayClass18_0__AutoSet_b__0__, result);
-    sub_B16FFC(&StringLiteral_20980, v5);
-    sub_B16FFC(&StringLiteral_16375, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v5);
+    sub_B16FFC(&StringLiteral_16375/*"ar200"*/, v6);
     byte_40F68C6 = 1;
   }
   if ( this->fields.isSet )
@@ -1576,7 +1576,7 @@ void __fastcall FortificationAutomaticDialogComponent___c__DisplayClass18_0___Au
     if ( (*((_BYTE *)Method_FortificationAutomaticDialogComponent___c__DisplayClass18_0__AutoSet_b__0__ + 75) & 2) != 0 )
       v7 = (_QWORD *)sub_B17004(Method_FortificationAutomaticDialogComponent___c__DisplayClass18_0__AutoSet_b__0__);
     v8 = (System_Reflection_MethodBase_o *)sub_B16FE0(v7, v7[3]);
-    OverwriteAssetSoundName__PlaySe(v8, (System_String_o *)StringLiteral_16375, 0LL);
+    OverwriteAssetSoundName__PlaySe(v8, (System_String_o *)StringLiteral_16375/*"ar200"*/, 0LL);
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -1584,7 +1584,7 @@ void __fastcall FortificationAutomaticDialogComponent___c__DisplayClass18_0___Au
   ActionExtensions__Call(_4__this->fields.onDecide, 0LL);
   if ( !result )
     goto LABEL_12;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     return;
   v10 = this->fields.__4__this;
   if ( !v10 )

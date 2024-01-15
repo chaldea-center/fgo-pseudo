@@ -734,7 +734,7 @@ void __fastcall SpotLargeComponent_StateLargeIn__begin(
     sub_B16FFC(&Method_UITweener_Begin_TweenAlpha___, that);
     sub_B16FFC(&Method_UITweener_Begin_TweenPosition___, v4);
     sub_B16FFC(&Method_UITweener_Begin_TweenScale___, v5);
-    sub_B16FFC(&StringLiteral_13007, v6);
+    sub_B16FFC(&StringLiteral_13007/*"StateLargeIn_End"*/, v6);
     byte_40F7A53 = 1;
   }
   if ( !that )
@@ -778,8 +778,8 @@ LABEL_8:
   v23 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
   v22->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v23;
   sub_B16F98((BattleServantConfConponent_o *)&v22->fields.eventReceiver, v23, v24, v25, v26, v27, v28, v29);
-  v30 = (System_Int32_array **)StringLiteral_13007;
-  v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_13007;
+  v30 = (System_Int32_array **)StringLiteral_13007/*"StateLargeIn_End"*/;
+  v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_13007/*"StateLargeIn_End"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v22->fields.callWhenFinished, v30, v31, v32, v33, v34, v35, v36);
 }
 
@@ -968,7 +968,7 @@ void __fastcall SpotLargeComponent_StateLargeOut__begin(
     sub_B16FFC(&Method_UITweener_Begin_TweenAlpha___, that);
     sub_B16FFC(&Method_UITweener_Begin_TweenPosition___, v4);
     sub_B16FFC(&Method_UITweener_Begin_TweenScale___, v5);
-    sub_B16FFC(&StringLiteral_13008, v6);
+    sub_B16FFC(&StringLiteral_13008/*"StateLargeOut_End"*/, v6);
     byte_40F7A55 = 1;
   }
   if ( !that )
@@ -1012,8 +1012,8 @@ LABEL_8:
   v23 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0LL);
   v22->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v23;
   sub_B16F98((BattleServantConfConponent_o *)&v22->fields.eventReceiver, v23, v24, v25, v26, v27, v28, v29);
-  v30 = (System_Int32_array **)StringLiteral_13008;
-  v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_13008;
+  v30 = (System_Int32_array **)StringLiteral_13008/*"StateLargeOut_End"*/;
+  v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_13008/*"StateLargeOut_End"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v22->fields.callWhenFinished, v30, v31, v32, v33, v34, v35, v36);
 }
 

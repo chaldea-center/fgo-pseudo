@@ -20,7 +20,7 @@ void __fastcall MaterialEventLogListViewManager___cctor(const MethodInfo *method
   {
     sub_B16FFC(&ListViewSort_TypeInfo, v1);
     sub_B16FFC(&MaterialEventLogListViewManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8953, v6);
+    sub_B16FFC(&StringLiteral_8953/*"MaterialCollectionServant6"*/, v6);
     byte_40FCC35 = 1;
   }
   MaterialEventLogListViewManager_TypeInfo->static_fields->VL_LIST_POS_Y = -30.0;
@@ -40,7 +40,7 @@ void __fastcall MaterialEventLogListViewManager___cctor(const MethodInfo *method
   v7->static_fields->NORMAL_PANEL_HEIGHT = 500;
   v7->static_fields->NORMAL_PANEL_CENTER_Y = 0;
   v8 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v8, (System_String_o *)StringLiteral_8953, 27, 1, 0LL);
+  ListViewSort___ctor_30208480(v8, (System_String_o *)StringLiteral_8953/*"MaterialCollectionServant6"*/, 27, 1, 0LL);
   static_fields = MaterialEventLogListViewManager_TypeInfo->static_fields;
   static_fields->EventLogservantSortInfo = v8;
   sub_B16F98(
@@ -583,7 +583,7 @@ void __fastcall MaterialEventLogListViewManager__CreateList(
     sub_B16FFC(&MaterialEventLogListViewManager_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
     sub_B16FFC(&UIScrollBar_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_11843, v14);
+    sub_B16FFC(&StringLiteral_11843/*"SERVANT_SORT_FILTER_RESULT_EMPTY_NEW_LINE"*/, v14);
     byte_40FCC22 = 1;
   }
   ListViewManager__DestroyList((ListViewManager_o *)this, 0LL);
@@ -788,7 +788,7 @@ void __fastcall MaterialEventLogListViewManager__CreateList(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v86 = LocalizationManager__Get((System_String_o *)StringLiteral_11843, 0LL);
+          v86 = LocalizationManager__Get((System_String_o *)StringLiteral_11843/*"SERVANT_SORT_FILTER_RESULT_EMPTY_NEW_LINE"*/, 0LL);
           if ( emptyMessageLabel )
           {
             UILabel__set_text(emptyMessageLabel, v86, 0LL);
@@ -1710,10 +1710,10 @@ void __fastcall MaterialEventLogListViewManager__SetFilterButtonImage(
 
   if ( (byte_40FCC2D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_360, method);
-    sub_B16FFC(&StringLiteral_16927, v3);
-    sub_B16FFC(&StringLiteral_347, v4);
-    sub_B16FFC(&StringLiteral_16926, v5);
+    sub_B16FFC(&StringLiteral_360/*"#FE4545"*/, method);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, v3);
+    sub_B16FFC(&StringLiteral_347/*"#000000"*/, v4);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v5);
     byte_40FCC2D = 1;
   }
   *(_QWORD *)&v11.fields.r = 0LL;
@@ -1724,10 +1724,10 @@ void __fastcall MaterialEventLogListViewManager__SetFilterButtonImage(
   v7 = ListViewSort__CheckFilterDefaultAll(sort, -1, 0LL);
   if ( !this->fields.filterSprite )
     goto LABEL_12;
-  v8 = (System_String_o **)&StringLiteral_16926;
+  v8 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
   if ( !v7 )
-    v8 = (System_String_o **)&StringLiteral_16927;
-  v9 = v7 ? (System_String_o **)&StringLiteral_347 : (System_String_o **)&StringLiteral_360;
+    v8 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
+  v9 = v7 ? (System_String_o **)&StringLiteral_347/*"#000000"*/ : (System_String_o **)&StringLiteral_360/*"#FE4545"*/;
   UISprite__set_spriteName(this->fields.filterSprite, *v8, 0LL);
   *(_QWORD *)&v11.fields.r = 0LL;
   *(_QWORD *)&v11.fields.b = 0LL;
@@ -1971,12 +1971,12 @@ void __fastcall MaterialEventLogListViewManager__SetSortButtonImage(
   if ( (byte_40FCC30 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_17038, v4);
-    sub_B16FFC(&StringLiteral_16995, v5);
-    sub_B16FFC(&StringLiteral_16985, v6);
-    sub_B16FFC(&StringLiteral_17002, v7);
-    sub_B16FFC(&StringLiteral_16952, v8);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v4);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v5);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v6);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v7);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v8);
     byte_40FCC30 = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -2013,7 +2013,7 @@ void __fastcall MaterialEventLogListViewManager__SetSortButtonImage(
         sortExplanationSprite = this->fields.sortExplanationSprite;
         if ( sortExplanationSprite )
         {
-          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
           UISprite__set_spriteName(sortExplanationSprite, *v17, 0LL);
           v18 = this->fields.sort;
           if ( v18 )
@@ -2022,8 +2022,8 @@ void __fastcall MaterialEventLogListViewManager__SetSortButtonImage(
             if ( v19 )
             {
               isAscendingOrder = v18->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16952;
-              v22 = (System_String_o **)&StringLiteral_16955;
+              v21 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+              v22 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
 LABEL_32:
               if ( isAscendingOrder )
                 v26 = v21;
@@ -2040,7 +2040,7 @@ LABEL_32:
         v23 = this->fields.sortExplanationSprite;
         if ( v23 )
         {
-          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
           UISprite__set_spriteName(v23, *v24, 0LL);
           v25 = this->fields.sort;
           if ( v25 )
@@ -2049,8 +2049,8 @@ LABEL_32:
             if ( v19 )
             {
               isAscendingOrder = v25->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16955;
-              v22 = (System_String_o **)&StringLiteral_16952;
+              v21 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+              v22 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
               goto LABEL_32;
             }
           }

@@ -12,11 +12,11 @@ void __fastcall UserDeckEntity___ctor(UserDeckEntity_o *this, const MethodInfo *
   if ( (byte_40FAB04 & 1) == 0 )
   {
     sub_B16FFC(&Method_DataEntityBase_long___ctor__, method);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FAB04 = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_1;
-  this->fields.name = (struct System_String_o *)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.name, v10, v2, v3, v4, v5, v6, v7);
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
@@ -58,11 +58,11 @@ void __fastcall UserDeckEntity___ctor_26539120(
     sub_B16FFC(&BalanceConfig_TypeInfo, userId);
     sub_B16FFC(&Method_DataEntityBase_long___ctor__, v13);
     sub_B16FFC(&DeckServant_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_1, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v15);
     byte_40FAB05 = 1;
   }
-  v16 = (System_Int32_array **)StringLiteral_1;
-  this->fields.name = (struct System_String_o *)StringLiteral_1;
+  v16 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.name,
     v16,

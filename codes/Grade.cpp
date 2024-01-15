@@ -179,33 +179,33 @@ void __fastcall Grade___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&Grade_TypeInfo, v1);
     sub_B16FFC(&string___TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_19447, v4);
-    sub_B16FFC(&StringLiteral_19444, v5);
-    sub_B16FFC(&StringLiteral_19452, v6);
-    sub_B16FFC(&StringLiteral_19398, v7);
-    sub_B16FFC(&StringLiteral_19270, v8);
-    sub_B16FFC(&StringLiteral_19455, v9);
-    sub_B16FFC(&StringLiteral_18812, v10);
-    sub_B16FFC(&StringLiteral_19454, v11);
-    sub_B16FFC(&StringLiteral_22216, v12);
-    sub_B16FFC(&StringLiteral_19446, v13);
-    sub_B16FFC(&StringLiteral_19451, v14);
-    sub_B16FFC(&StringLiteral_19453, v15);
-    sub_B16FFC(&StringLiteral_18811, v16);
-    sub_B16FFC(&StringLiteral_22217, v17);
+    sub_B16FFC(&StringLiteral_19447/*"img_listbg_04"*/, v4);
+    sub_B16FFC(&StringLiteral_19444/*"img_listbg_01"*/, v5);
+    sub_B16FFC(&StringLiteral_19452/*"img_mastername_line1"*/, v6);
+    sub_B16FFC(&StringLiteral_19398/*"img_commonbg_04"*/, v7);
+    sub_B16FFC(&StringLiteral_19270/*"icon_grade_1"*/, v8);
+    sub_B16FFC(&StringLiteral_19455/*"img_masterprofile_bg2"*/, v9);
+    sub_B16FFC(&StringLiteral_18812/*"frame_master_bg1"*/, v10);
+    sub_B16FFC(&StringLiteral_19454/*"img_masterprofile_bg1"*/, v11);
+    sub_B16FFC(&StringLiteral_22216/*"status_master_frame"*/, v12);
+    sub_B16FFC(&StringLiteral_19446/*"img_listbg_03"*/, v13);
+    sub_B16FFC(&StringLiteral_19451/*"img_masterform_bg"*/, v14);
+    sub_B16FFC(&StringLiteral_19453/*"img_mastername_line2"*/, v15);
+    sub_B16FFC(&StringLiteral_18811/*"frame_master_bg"*/, v16);
+    sub_B16FFC(&StringLiteral_22217/*"status_master_frame1"*/, v17);
     byte_40FC139 = 1;
   }
   v18 = sub_B17014(string___TypeInfo, 2LL, v2);
   if ( !v18 )
     goto LABEL_89;
   v25 = (System_Int32_array **)v18;
-  v26 = StringLiteral_19270;
-  if ( StringLiteral_19270 )
+  v26 = StringLiteral_19270/*"icon_grade_1"*/;
+  if ( StringLiteral_19270/*"icon_grade_1"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19270, *(_QWORD *)&(*v25)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19270/*"icon_grade_1"*/, *(_QWORD *)&(*v25)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_19270;
+    v27 = (System_Int32_array **)StringLiteral_19270/*"icon_grade_1"*/;
   }
   else
   {
@@ -222,13 +222,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
   if ( !v36 )
     goto LABEL_89;
   v42 = (System_Int32_array **)v36;
-  v26 = StringLiteral_19454;
-  if ( StringLiteral_19454 )
+  v26 = StringLiteral_19454/*"img_masterprofile_bg1"*/;
+  if ( StringLiteral_19454/*"img_masterprofile_bg1"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19454, *(_QWORD *)&(*v42)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19454/*"img_masterprofile_bg1"*/, *(_QWORD *)&(*v42)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_19454;
+    v27 = (System_Int32_array **)StringLiteral_19454/*"img_masterprofile_bg1"*/;
   }
   else
   {
@@ -238,13 +238,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
     goto LABEL_87;
   v42[4] = (System_Int32_array *)v27;
   sub_B16F98((BattleServantConfConponent_o *)(v42 + 4), v27, v19, v37, v38, v39, v40, v41);
-  v26 = StringLiteral_19455;
-  if ( StringLiteral_19455 )
+  v26 = StringLiteral_19455/*"img_masterprofile_bg2"*/;
+  if ( StringLiteral_19455/*"img_masterprofile_bg2"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19455, *(_QWORD *)&(*v42)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19455/*"img_masterprofile_bg2"*/, *(_QWORD *)&(*v42)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_19455;
+    v27 = (System_Int32_array **)StringLiteral_19455/*"img_masterprofile_bg2"*/;
   }
   else
   {
@@ -261,13 +261,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
   if ( !v56 )
     goto LABEL_89;
   v62 = (System_Int32_array **)v56;
-  v26 = StringLiteral_19452;
-  if ( StringLiteral_19452 )
+  v26 = StringLiteral_19452/*"img_mastername_line1"*/;
+  if ( StringLiteral_19452/*"img_mastername_line1"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19452, *(_QWORD *)&(*v62)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19452/*"img_mastername_line1"*/, *(_QWORD *)&(*v62)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_19452;
+    v27 = (System_Int32_array **)StringLiteral_19452/*"img_mastername_line1"*/;
   }
   else
   {
@@ -277,13 +277,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
     goto LABEL_87;
   v62[4] = (System_Int32_array *)v27;
   sub_B16F98((BattleServantConfConponent_o *)(v62 + 4), v27, v19, v57, v58, v59, v60, v61);
-  v26 = StringLiteral_19453;
-  if ( StringLiteral_19453 )
+  v26 = StringLiteral_19453/*"img_mastername_line2"*/;
+  if ( StringLiteral_19453/*"img_mastername_line2"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19453, *(_QWORD *)&(*v62)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19453/*"img_mastername_line2"*/, *(_QWORD *)&(*v62)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_19453;
+    v27 = (System_Int32_array **)StringLiteral_19453/*"img_mastername_line2"*/;
   }
   else
   {
@@ -300,13 +300,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
   if ( !v76 )
     goto LABEL_89;
   v82 = (System_Int32_array **)v76;
-  v26 = StringLiteral_19398;
-  if ( StringLiteral_19398 )
+  v26 = StringLiteral_19398/*"img_commonbg_04"*/;
+  if ( StringLiteral_19398/*"img_commonbg_04"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19398, *(_QWORD *)&(*v82)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19398/*"img_commonbg_04"*/, *(_QWORD *)&(*v82)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_19398;
+    v27 = (System_Int32_array **)StringLiteral_19398/*"img_commonbg_04"*/;
   }
   else
   {
@@ -316,13 +316,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
     goto LABEL_87;
   v82[4] = (System_Int32_array *)v27;
   sub_B16F98((BattleServantConfConponent_o *)(v82 + 4), v27, v19, v77, v78, v79, v80, v81);
-  v26 = StringLiteral_19451;
-  if ( StringLiteral_19451 )
+  v26 = StringLiteral_19451/*"img_masterform_bg"*/;
+  if ( StringLiteral_19451/*"img_masterform_bg"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19451, *(_QWORD *)&(*v82)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19451/*"img_masterform_bg"*/, *(_QWORD *)&(*v82)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_19451;
+    v27 = (System_Int32_array **)StringLiteral_19451/*"img_masterform_bg"*/;
   }
   else
   {
@@ -339,13 +339,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
   if ( !v96 )
     goto LABEL_89;
   v102 = (System_Int32_array **)v96;
-  v26 = StringLiteral_18811;
-  if ( StringLiteral_18811 )
+  v26 = StringLiteral_18811/*"frame_master_bg"*/;
+  if ( StringLiteral_18811/*"frame_master_bg"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_18811, *(_QWORD *)&(*v102)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_18811/*"frame_master_bg"*/, *(_QWORD *)&(*v102)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_18811;
+    v27 = (System_Int32_array **)StringLiteral_18811/*"frame_master_bg"*/;
   }
   else
   {
@@ -355,13 +355,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
     goto LABEL_87;
   v102[4] = (System_Int32_array *)v27;
   sub_B16F98((BattleServantConfConponent_o *)(v102 + 4), v27, v19, v97, v98, v99, v100, v101);
-  v26 = StringLiteral_18812;
-  if ( StringLiteral_18812 )
+  v26 = StringLiteral_18812/*"frame_master_bg1"*/;
+  if ( StringLiteral_18812/*"frame_master_bg1"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_18812, *(_QWORD *)&(*v102)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_18812/*"frame_master_bg1"*/, *(_QWORD *)&(*v102)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_18812;
+    v27 = (System_Int32_array **)StringLiteral_18812/*"frame_master_bg1"*/;
   }
   else
   {
@@ -378,13 +378,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
   if ( !v116 )
     goto LABEL_89;
   v122 = (System_Int32_array **)v116;
-  v26 = StringLiteral_22216;
-  if ( StringLiteral_22216 )
+  v26 = StringLiteral_22216/*"status_master_frame"*/;
+  if ( StringLiteral_22216/*"status_master_frame"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_22216, *(_QWORD *)&(*v122)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_22216/*"status_master_frame"*/, *(_QWORD *)&(*v122)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_22216;
+    v27 = (System_Int32_array **)StringLiteral_22216/*"status_master_frame"*/;
   }
   else
   {
@@ -394,13 +394,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
     goto LABEL_87;
   v122[4] = (System_Int32_array *)v27;
   sub_B16F98((BattleServantConfConponent_o *)(v122 + 4), v27, v19, v117, v118, v119, v120, v121);
-  v26 = StringLiteral_22217;
-  if ( StringLiteral_22217 )
+  v26 = StringLiteral_22217/*"status_master_frame1"*/;
+  if ( StringLiteral_22217/*"status_master_frame1"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_22217, *(_QWORD *)&(*v122)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_22217/*"status_master_frame1"*/, *(_QWORD *)&(*v122)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_22217;
+    v27 = (System_Int32_array **)StringLiteral_22217/*"status_master_frame1"*/;
   }
   else
   {
@@ -417,13 +417,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
   if ( !v136 )
     goto LABEL_89;
   v142 = (System_Int32_array **)v136;
-  v26 = StringLiteral_19444;
-  if ( StringLiteral_19444 )
+  v26 = StringLiteral_19444/*"img_listbg_01"*/;
+  if ( StringLiteral_19444/*"img_listbg_01"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19444, *(_QWORD *)&(*v142)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19444/*"img_listbg_01"*/, *(_QWORD *)&(*v142)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_19444;
+    v27 = (System_Int32_array **)StringLiteral_19444/*"img_listbg_01"*/;
   }
   else
   {
@@ -433,13 +433,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
     goto LABEL_87;
   v142[4] = (System_Int32_array *)v27;
   sub_B16F98((BattleServantConfConponent_o *)(v142 + 4), v27, v19, v137, v138, v139, v140, v141);
-  v26 = StringLiteral_19446;
-  if ( StringLiteral_19446 )
+  v26 = StringLiteral_19446/*"img_listbg_03"*/;
+  if ( StringLiteral_19446/*"img_listbg_03"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19446, *(_QWORD *)&(*v142)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19446/*"img_listbg_03"*/, *(_QWORD *)&(*v142)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_19446;
+    v27 = (System_Int32_array **)StringLiteral_19446/*"img_listbg_03"*/;
   }
   else
   {
@@ -457,13 +457,13 @@ void __fastcall Grade___cctor(const MethodInfo *method)
 LABEL_89:
     sub_B170D4();
   v162 = (System_Int32_array **)v156;
-  v26 = StringLiteral_19444;
-  if ( StringLiteral_19444 )
+  v26 = StringLiteral_19444/*"img_listbg_01"*/;
+  if ( StringLiteral_19444/*"img_listbg_01"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19444, *(_QWORD *)&(*v162)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19444/*"img_listbg_01"*/, *(_QWORD *)&(*v162)->m_Items[9]);
     if ( !v26 )
       goto LABEL_88;
-    v27 = (System_Int32_array **)StringLiteral_19444;
+    v27 = (System_Int32_array **)StringLiteral_19444/*"img_listbg_01"*/;
   }
   else
   {
@@ -473,13 +473,13 @@ LABEL_89:
     goto LABEL_87;
   v162[4] = (System_Int32_array *)v27;
   sub_B16F98((BattleServantConfConponent_o *)(v162 + 4), v27, v19, v157, v158, v159, v160, v161);
-  v26 = StringLiteral_19447;
-  if ( StringLiteral_19447 )
+  v26 = StringLiteral_19447/*"img_listbg_04"*/;
+  if ( StringLiteral_19447/*"img_listbg_04"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_19447, *(_QWORD *)&(*v162)->m_Items[9]);
+    v26 = sub_B170BC(StringLiteral_19447/*"img_listbg_04"*/, *(_QWORD *)&(*v162)->m_Items[9]);
     if ( v26 )
     {
-      v27 = (System_Int32_array **)StringLiteral_19447;
+      v27 = (System_Int32_array **)StringLiteral_19447/*"img_listbg_04"*/;
       goto LABEL_85;
     }
 LABEL_88:

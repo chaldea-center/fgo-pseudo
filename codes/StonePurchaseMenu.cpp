@@ -15,7 +15,7 @@ void __fastcall StonePurchaseMenu__BackBuyBankItem(StonePurchaseMenu_o *this, co
 {
   if ( (byte_40FAECD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10004, method);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, method);
     byte_40FAECD = 1;
   }
   if ( this->fields.state == 2 )
@@ -23,7 +23,7 @@ void __fastcall StonePurchaseMenu__BackBuyBankItem(StonePurchaseMenu_o *this, co
     this->fields.state = 3;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.1,
       0LL);
   }
@@ -300,7 +300,7 @@ void __fastcall StonePurchaseMenu__Init(StonePurchaseMenu_o *this, const MethodI
 
   if ( (byte_40FAECA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FAECA = 1;
   }
   this->fields.callbackFunc = 0LL;
@@ -309,7 +309,7 @@ void __fastcall StonePurchaseMenu__Init(StonePurchaseMenu_o *this, const MethodI
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.refreshCallbackFunc, 0LL, v9, v10, v11, v12, v13, v14);
   stoneDataLabel = this->fields.stoneDataLabel;
   if ( !stoneDataLabel
-    || (UILabel__set_text(stoneDataLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(stoneDataLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (ItemListViewManager = (ListViewManager_o *)this->fields.ItemListViewManager) == 0LL) )
   {
     sub_B170D4();
@@ -366,7 +366,7 @@ void __fastcall StonePurchaseMenu__OnClickExplanation(StonePurchaseMenu_o *this,
     sub_B16FFC(&SoundManager_TypeInfo, v5);
     sub_B16FFC(&Method_StonePurchaseMenu_OnEndWebView__, v6);
     sub_B16FFC(&WebViewManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_15306, v8);
+    sub_B16FFC(&StringLiteral_15306/*"WEB_VIEW_TITLE_STONE_PURCHASE"*/, v8);
     byte_40FAED7 = 1;
   }
   if ( this->fields.state == 2 )
@@ -388,7 +388,7 @@ void __fastcall StonePurchaseMenu__OnClickExplanation(StonePurchaseMenu_o *this,
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_15306, 0LL);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_15306/*"WEB_VIEW_TITLE_STONE_PURCHASE"*/, 0LL);
     v15 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v11, v12, v13, v14);
     System_Action___ctor(v15, (Il2CppObject *)this, Method_StonePurchaseMenu_OnEndWebView__, 0LL);
     if ( (BYTE3(WebViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1028,7 +1028,7 @@ void __fastcall StonePurchaseMenu__SelectedBuyBankItemConfirm(
     sub_B16FFC(&Method_StonePurchaseMenu_EndBuyBankItemNotificationSuspend__, v17);
     sub_B16FFC(&Method_StonePurchaseMenu_EndBuyBankItemNotificationWait__, v18);
     sub_B16FFC(&Method_StonePurchaseMenu_EndSpendLimit__, v19);
-    sub_B16FFC(&StringLiteral_12339, v20);
+    sub_B16FFC(&StringLiteral_12339/*"STONE_PURCHASE_RESULT_WAIT"*/, v20);
     byte_40FAED0 = 1;
   }
   TweenAlpha__Begin(this->fields.buyItemMask, 0.2, 0.0, 0LL);
@@ -1070,7 +1070,7 @@ void __fastcall StonePurchaseMenu__SelectedBuyBankItemConfirm(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12339, 0LL);
+      v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12339/*"STONE_PURCHASE_RESULT_WAIT"*/, 0LL);
       v54 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v50, v51, v52, v53);
       ErrorDialog_ClickDelegate___ctor(
         v54,
@@ -1288,7 +1288,7 @@ void __fastcall StonePurchaseMenu__SelectedBuyBankItemConfirm_26877176(
     sub_B16FFC(&Method_StonePurchaseMenu_EndBuyBankItemNotificationSuspend__, v14);
     sub_B16FFC(&Method_StonePurchaseMenu_EndBuyBankItemNotificationWait__, v15);
     sub_B16FFC(&Method_StonePurchaseMenu_EndSpendLimit__, v16);
-    sub_B16FFC(&StringLiteral_12339, v17);
+    sub_B16FFC(&StringLiteral_12339/*"STONE_PURCHASE_RESULT_WAIT"*/, v17);
     byte_40FAED1 = 1;
   }
   TweenAlpha__Begin(this->fields.buyItemMask, 0.2, 0.0, 0LL);
@@ -1334,7 +1334,7 @@ void __fastcall StonePurchaseMenu__SelectedBuyBankItemConfirm_26877176(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12339, 0LL);
+      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12339/*"STONE_PURCHASE_RESULT_WAIT"*/, 0LL);
       v35 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v31, v32, v33, v34);
       ErrorDialog_ClickDelegate___ctor(
         v35,
@@ -1493,10 +1493,10 @@ System_String_o *__fastcall StonePurchaseMenu__get_closeBtnPath(StonePurchaseMen
 {
   if ( (byte_40FAED8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8869, method);
+    sub_B16FFC(&StringLiteral_8869/*"MainPanel/BaseView/CloseButton"*/, method);
     byte_40FAED8 = 1;
   }
-  return (System_String_o *)StringLiteral_8869;
+  return (System_String_o *)StringLiteral_8869/*"MainPanel/BaseView/CloseButton"*/;
 }
 
 

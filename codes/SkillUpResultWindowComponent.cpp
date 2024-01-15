@@ -309,10 +309,10 @@ void __fastcall SkillUpResultWindowComponent__OpenFriendshipUpResultInfo(
     sub_B16FFC(&SkillUpResultWindowComponent_TypeInfo, v22);
     sub_B16FFC(&SoundManager_TypeInfo, v23);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_11069, v25);
-    sub_B16FFC(&StringLiteral_11071, v26);
-    sub_B16FFC(&StringLiteral_11066, v27);
-    sub_B16FFC(&StringLiteral_1, v28);
+    sub_B16FFC(&StringLiteral_11069/*"RESULT_BOUNDS_OPENQUEST"*/, v25);
+    sub_B16FFC(&StringLiteral_11071/*"RESULT_BOUNDS_UPDATE_MATERIAL"*/, v26);
+    sub_B16FFC(&StringLiteral_11066/*"RESULT_BOUNDS_GETVOICE"*/, v27);
+    sub_B16FFC(&StringLiteral_1/*""*/, v28);
     byte_40F9285 = 1;
   }
   memset(&v82, 0, sizeof(v82));
@@ -354,7 +354,7 @@ void __fastcall SkillUpResultWindowComponent__OpenFriendshipUpResultInfo(
             friendshipLabel = this->fields.friendshipLabel;
             if ( friendshipLabel )
             {
-              UILabel__set_text(friendshipLabel, (System_String_o *)StringLiteral_1, 0LL);
+              UILabel__set_text(friendshipLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
               v45 = (System_Text_StringBuilder_o *)sub_B170CC(System_Text_StringBuilder_TypeInfo, v41, v42, v43, v44);
               System_Text_StringBuilder___ctor(v45, 0LL);
               if ( usrSvtData )
@@ -410,7 +410,7 @@ void __fastcall SkillUpResultWindowComponent__OpenFriendshipUpResultInfo(
                           {
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                           }
-                          v54 = LocalizationManager__Get((System_String_o *)StringLiteral_11069, 0LL);
+                          v54 = LocalizationManager__Get((System_String_o *)StringLiteral_11069/*"RESULT_BOUNDS_OPENQUEST"*/, 0LL);
                           if ( !current )
                             sub_B170D4();
                           v55 = v54;
@@ -437,7 +437,7 @@ void __fastcall SkillUpResultWindowComponent__OpenFriendshipUpResultInfo(
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v59 = LocalizationManager__Get((System_String_o *)StringLiteral_11071, 0LL);
+                        v59 = LocalizationManager__Get((System_String_o *)StringLiteral_11071/*"RESULT_BOUNDS_UPDATE_MATERIAL"*/, 0LL);
                         if ( !v45 )
                           goto LABEL_66;
                         System_Text_StringBuilder__AppendLine_41915036(v45, v59, 0LL);
@@ -455,7 +455,7 @@ void __fastcall SkillUpResultWindowComponent__OpenFriendshipUpResultInfo(
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_11066, 0LL);
+                        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_11066/*"RESULT_BOUNDS_GETVOICE"*/, 0LL);
                         if ( !v45 )
                           goto LABEL_66;
                         System_Text_StringBuilder__AppendLine_41915036(v45, v60, 0LL);
@@ -1003,7 +1003,7 @@ void __fastcall SkillUpResultWindowComponent__OpenPowerUpResultInfo(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
     sub_B16FFC(&Method_SkillUpResultWindowComponent_EndOpen__, v12);
     sub_B16FFC(&SoundManager_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_11070, v14);
+    sub_B16FFC(&StringLiteral_11070/*"RESULT_BOUNDS_POWERUP"*/, v14);
     byte_40F9286 = 1;
   }
   if ( !this->fields.state )
@@ -1072,7 +1072,7 @@ void __fastcall SkillUpResultWindowComponent__OpenPowerUpResultInfo(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_11070, 0LL);
+    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_11070/*"RESULT_BOUNDS_POWERUP"*/, 0LL);
     if ( !v34 || (v36 = System_String__Format(v35, (Il2CppObject *)v34->fields.emptyMessage, 0LL), !powerupLabel) )
 LABEL_23:
       sub_B170D4();
@@ -1117,7 +1117,7 @@ void __fastcall SkillUpResultWindowComponent__OpenSkillChangeMessage(
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
     sub_B16FFC(&SoundManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_3381, v11);
+    sub_B16FFC(&StringLiteral_3381/*"COSTUME_CHANGE_DESCRIPTION"*/, v11);
     byte_40F927F = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -1161,7 +1161,7 @@ void __fastcall SkillUpResultWindowComponent__OpenSkillChangeMessage(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3381, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3381/*"COSTUME_CHANGE_DESCRIPTION"*/, 0LL);
   v24 = System_String__Format(v23, v22, 0LL);
   if ( !costumeChangeLabel )
 LABEL_18:
@@ -1198,7 +1198,7 @@ void __fastcall SkillUpResultWindowComponent__OpenSkillChangeResultInfo(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&oldSkillId);
     sub_B16FFC(&SoundManager_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_3382, v16);
+    sub_B16FFC(&StringLiteral_3382/*"COSTUME_CHANGE_SKILL_TITLE"*/, v16);
     byte_40F9280 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -1226,7 +1226,7 @@ void __fastcall SkillUpResultWindowComponent__OpenSkillChangeResultInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3382, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3382/*"COSTUME_CHANGE_SKILL_TITLE"*/, 0LL);
   v24 = System_String__Format(v23, (Il2CppObject *)costumeName, 0LL);
   if ( !skillChangeInfoTitle )
 LABEL_15:
@@ -1386,9 +1386,9 @@ void __fastcall SkillUpResultWindowComponent__OpenSkillUpResultInfo(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v27);
     sub_B16FFC(&Method_SkillUpResultWindowComponent_EndOpen__, v28);
     sub_B16FFC(&SoundManager_TypeInfo, v29);
-    sub_B16FFC(&StringLiteral_1716, v30);
-    sub_B16FFC(&StringLiteral_12194, v31);
-    sub_B16FFC(&StringLiteral_1717, v32);
+    sub_B16FFC(&StringLiteral_1716/*"APPEND_SKILL_RESULT_AFTER_LV"*/, v30);
+    sub_B16FFC(&StringLiteral_12194/*"SKILL_COMBINE_EFFFECT_UNRELEASE"*/, v31);
+    sub_B16FFC(&StringLiteral_1717/*"APPEND_SKILL_RESULT_LV"*/, v32);
     byte_40F927E = 1;
   }
   detail = 0LL;
@@ -1527,7 +1527,7 @@ LABEL_20:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v80 = LocalizationManager__Get((System_String_o *)StringLiteral_1716, 0LL);
+      v80 = LocalizationManager__Get((System_String_o *)StringLiteral_1716/*"APPEND_SKILL_RESULT_AFTER_LV"*/, 0LL);
       v134 = targetLv;
       v81 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v134);
       v82 = System_String__Format(v80, v81, 0LL);
@@ -1597,7 +1597,7 @@ LABEL_20:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        detail = LocalizationManager__Get((System_String_o *)StringLiteral_12194, 0LL);
+        detail = LocalizationManager__Get((System_String_o *)StringLiteral_12194/*"SKILL_COMBINE_EFFFECT_UNRELEASE"*/, 0LL);
         WrapControlText__textBBCodeAdjust(this->fields.skillAftdetailLb, detail, mFontSize, 0, 0, 0LL);
       }
       v99 = this->fields.skillIconBef;
@@ -1632,7 +1632,7 @@ LABEL_20:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v108 = LocalizationManager__Get((System_String_o *)StringLiteral_1717, 0LL);
+    v108 = LocalizationManager__Get((System_String_o *)StringLiteral_1717/*"APPEND_SKILL_RESULT_LV"*/, 0LL);
     v109 = v133;
     if ( isOpen )
       v109 = targetLv;
@@ -1769,9 +1769,9 @@ void __fastcall SkillUpResultWindowComponent__SetSkillInfo(
   if ( (byte_40F928B & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&oldSkillId);
-    sub_B16FFC(&StringLiteral_6848, v11);
-    sub_B16FFC(&StringLiteral_1663, v12);
-    sub_B16FFC(&StringLiteral_2533, v13);
+    sub_B16FFC(&StringLiteral_6848/*"GET_SKILL_NAME"*/, v11);
+    sub_B16FFC(&StringLiteral_1663/*"AFTER_CHANGE_SKILL_SUB_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_2533/*"BEFORE_CHANGE_SKILL_SUB_TITLE"*/, v13);
     byte_40F928B = 1;
   }
   name = 0LL;
@@ -1784,7 +1784,7 @@ void __fastcall SkillUpResultWindowComponent__SetSkillInfo(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_2533, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_2533/*"BEFORE_CHANGE_SKILL_SUB_TITLE"*/, 0LL);
   if ( !skillChangeInfoSubTitleOld )
     goto LABEL_15;
   UILabel__set_text(skillChangeInfoSubTitleOld, v15, 0LL);
@@ -1793,7 +1793,7 @@ void __fastcall SkillUpResultWindowComponent__SetSkillInfo(
     goto LABEL_15;
   SkillEntity__getSkillMessageInfo(SkillEntity, &name, &detail, oldSkillLv, v19);
   skillChangeInfoNameOld = this->fields.skillChangeInfoNameOld;
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_6848, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_6848/*"GET_SKILL_NAME"*/, 0LL);
   v22 = System_String__Format(v21, (Il2CppObject *)name, 0LL);
   if ( !skillChangeInfoNameOld )
     goto LABEL_15;
@@ -1809,7 +1809,7 @@ void __fastcall SkillUpResultWindowComponent__SetSkillInfo(
     0,
     0LL);
   skillChangeInfoSubTitleNow = this->fields.skillChangeInfoSubTitleNow;
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_1663, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_1663/*"AFTER_CHANGE_SKILL_SUB_TITLE"*/, 0LL);
   if ( !skillChangeInfoSubTitleNow )
     goto LABEL_15;
   UILabel__set_text(skillChangeInfoSubTitleNow, v25, 0LL);
@@ -1817,7 +1817,7 @@ void __fastcall SkillUpResultWindowComponent__SetSkillInfo(
   if ( !v28
     || (SkillEntity__getSkillMessageInfo(v28, &v35, &text, nowSkillLv, v29),
         skillChangeInfoNameNow = this->fields.skillChangeInfoNameNow,
-        v31 = LocalizationManager__Get((System_String_o *)StringLiteral_6848, 0LL),
+        v31 = LocalizationManager__Get((System_String_o *)StringLiteral_6848/*"GET_SKILL_NAME"*/, 0LL),
         v32 = System_String__Format(v31, (Il2CppObject *)v35, 0LL),
         !skillChangeInfoNameNow)
     || (UILabel__set_text(skillChangeInfoNameNow, v32, 0LL),
@@ -1919,7 +1919,7 @@ void __fastcall SkillUpResultWindowComponent__SetupNpUpResultInfoNormal(
     sub_B16FFC(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__, v18);
     sub_B16FFC(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__TryGetEntity__, v19);
     sub_B16FFC(&SkillUpResultWindowComponent_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40F9284 = 1;
   }
   entity = 0LL;
@@ -1978,7 +1978,7 @@ void __fastcall SkillUpResultWindowComponent__SetupNpUpResultInfoNormal(
       npRankupBeforeLb = this->fields.npRankupBeforeLb;
       if ( !npRankupBeforeLb )
         goto LABEL_71;
-      v48 = entity ? &entity->fields.longName : (System_String_o **)&StringLiteral_1;
+      v48 = entity ? &entity->fields.longName : (System_String_o **)&StringLiteral_1/*""*/;
       UILabel__set_text(npRankupBeforeLb, *v48, 0LL);
       npRankupAfterLb = this->fields.npRankupAfterLb;
       if ( !npRankupAfterLb )
@@ -2033,11 +2033,11 @@ LABEL_27:
         npBefDetailLb = this->fields.npBefDetailLb;
         if ( npBefDetailLb )
         {
-          UILabel__set_text(npBefDetailLb, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(npBefDetailLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           npAftDetailLb = this->fields.npAftDetailLb;
           if ( npAftDetailLb )
           {
-            v42 = (System_String_o *)StringLiteral_1;
+            v42 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_49:
             UILabel__set_text(npAftDetailLb, v42, 0LL);
             return;
@@ -2100,7 +2100,7 @@ LABEL_49:
         npAftDetailLb = this->fields.npAftDetailLb;
         if ( npAftDetailLb )
         {
-          v42 = (System_String_o *)StringLiteral_1;
+          v42 = (System_String_o *)StringLiteral_1/*""*/;
           goto LABEL_49;
         }
       }
@@ -2120,7 +2120,7 @@ LABEL_71:
     }
     else
     {
-      v55 = (System_String_o *)StringLiteral_1;
+      v55 = (System_String_o *)StringLiteral_1/*""*/;
       if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !DataManager_TypeInfo->_2.cctor_finished )
       {

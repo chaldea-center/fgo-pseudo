@@ -32,10 +32,10 @@ void __fastcall CombineMenuListItemComponent__InitButton(
   if ( (byte_40F9959 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3187, v3);
-    sub_B16FFC(&StringLiteral_353, v4);
-    sub_B16FFC(&StringLiteral_358, v5);
-    sub_B16FFC(&StringLiteral_356, v6);
+    sub_B16FFC(&StringLiteral_3187/*"COMBINE_PREPARATION"*/, v3);
+    sub_B16FFC(&StringLiteral_353/*"#6B6B6B"*/, v4);
+    sub_B16FFC(&StringLiteral_358/*"#E1C896"*/, v5);
+    sub_B16FFC(&StringLiteral_356/*"#B7A37B"*/, v6);
     byte_40F9959 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
@@ -49,13 +49,13 @@ void __fastcall CombineMenuListItemComponent__InitButton(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3187, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3187/*"COMBINE_PREPARATION"*/, 0LL);
   if ( !preparationLabel )
     goto LABEL_11;
   UILabel__set_text(preparationLabel, v8, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_358, &color, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_356, &v13, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_353, (UnityEngine_Color_o *)&v12, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_358/*"#E1C896"*/, &color, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_356/*"#B7A37B"*/, &v13, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_353/*"#6B6B6B"*/, (UnityEngine_Color_o *)&v12, 0LL);
   button = this->fields.button;
   if ( !button
     || (button->fields.specifyHoverColor = color, (v10 = this->fields.button) == 0LL)

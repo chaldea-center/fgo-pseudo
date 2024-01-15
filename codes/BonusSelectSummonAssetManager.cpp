@@ -40,7 +40,7 @@ void __fastcall BonusSelectSummonAssetManager__GetAssets(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
     sub_B16FFC(&Method_BonusSelectSummonAssetManager___c__DisplayClass21_0__GetAssets_b__0__, v8);
     sub_B16FFC(&BonusSelectSummonAssetManager___c__DisplayClass21_0_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_13108, v10);
+    sub_B16FFC(&StringLiteral_13108/*"SummonScene/BonusSelectSummon"*/, v10);
     byte_40FB0E6 = 1;
   }
   v11 = sub_B170CC(BonusSelectSummonAssetManager___c__DisplayClass21_0_TypeInfo, finishCallback, method, v3, v4);
@@ -69,7 +69,7 @@ void __fastcall BonusSelectSummonAssetManager__GetAssets(
     0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13108, v28, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13108/*"SummonScene/BonusSelectSummon"*/, v28, 1, 0LL);
 }
 
 
@@ -420,11 +420,11 @@ void __fastcall BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_
 
   if ( (byte_40F7091 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2832, assetData);
-    sub_B16FFC(&StringLiteral_2833, v5);
-    sub_B16FFC(&StringLiteral_2834, v6);
-    sub_B16FFC(&StringLiteral_2835, v7);
-    sub_B16FFC(&StringLiteral_2837, v8);
+    sub_B16FFC(&StringLiteral_2832/*"BonusSelectSummonConfirmDialog"*/, assetData);
+    sub_B16FFC(&StringLiteral_2833/*"BonusSelectSummonMsgInfo"*/, v5);
+    sub_B16FFC(&StringLiteral_2834/*"BonusSelectSummonMsgInfoMenber"*/, v6);
+    sub_B16FFC(&StringLiteral_2835/*"BonusSelectSummonPartyListViewItemMemberPrefab"*/, v7);
+    sub_B16FFC(&StringLiteral_2837/*"BonusSelectSummonPartyServantSelectMenu"*/, v8);
     byte_40F7091 = 1;
   }
   prefab = 0LL;
@@ -438,7 +438,7 @@ void __fastcall BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_
   BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
     _4__this,
     &prefab,
-    (System_String_o *)StringLiteral_2832,
+    (System_String_o *)StringLiteral_2832/*"BonusSelectSummonConfirmDialog"*/,
     assetData,
     0LL);
   v16 = this->fields.__4__this;
@@ -450,7 +450,7 @@ void __fastcall BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_
   v18 = this->fields.__4__this;
   if ( !v18 )
     goto LABEL_14;
-  BonusSelectSummonAssetManager__SetPrefabAndNullCheck(v18, &v57, (System_String_o *)StringLiteral_2835, assetData, 0LL);
+  BonusSelectSummonAssetManager__SetPrefabAndNullCheck(v18, &v57, (System_String_o *)StringLiteral_2835/*"BonusSelectSummonPartyListViewItemMemberPrefab"*/, assetData, 0LL);
   v25 = this->fields.__4__this;
   if ( !v25 )
     goto LABEL_14;
@@ -468,7 +468,7 @@ void __fastcall BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_
   v27 = this->fields.__4__this;
   if ( !v27 )
     goto LABEL_14;
-  BonusSelectSummonAssetManager__SetPrefabAndNullCheck(v27, &v56, (System_String_o *)StringLiteral_2837, assetData, 0LL);
+  BonusSelectSummonAssetManager__SetPrefabAndNullCheck(v27, &v56, (System_String_o *)StringLiteral_2837/*"BonusSelectSummonPartyServantSelectMenu"*/, assetData, 0LL);
   v34 = this->fields.__4__this;
   if ( !v34 )
     goto LABEL_14;
@@ -486,7 +486,7 @@ void __fastcall BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_
   v36 = this->fields.__4__this;
   if ( !v36 )
     goto LABEL_14;
-  BonusSelectSummonAssetManager__SetPrefabAndNullCheck(v36, &v55, (System_String_o *)StringLiteral_2833, assetData, 0LL);
+  BonusSelectSummonAssetManager__SetPrefabAndNullCheck(v36, &v55, (System_String_o *)StringLiteral_2833/*"BonusSelectSummonMsgInfo"*/, assetData, 0LL);
   v43 = this->fields.__4__this;
   if ( !v43
     || (v44 = (System_Int32_array **)v55,
@@ -504,7 +504,7 @@ void __fastcall BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_
     || (BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
           v45,
           (UnityEngine_GameObject_o **)&v54,
-          (System_String_o *)StringLiteral_2834,
+          (System_String_o *)StringLiteral_2834/*"BonusSelectSummonMsgInfoMenber"*/,
           assetData,
           0LL),
         (v52 = this->fields.__4__this) == 0LL) )

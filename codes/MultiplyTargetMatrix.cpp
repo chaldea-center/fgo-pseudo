@@ -18,15 +18,15 @@ void __fastcall MultiplyTargetMatrix___ctor(MultiplyTargetMatrix_o *this, const 
 
   if ( (byte_40FC041 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16110, method);
-    sub_B16FFC(&StringLiteral_16083, v9);
+    sub_B16FFC(&StringLiteral_16110/*"_rootMatrix"*/, method);
+    sub_B16FFC(&StringLiteral_16083/*"_invrootMatrix"*/, v9);
     byte_40FC041 = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_16110;
-  this->fields.mainMatrix = (struct System_String_o *)StringLiteral_16110;
+  v10 = (System_Int32_array **)StringLiteral_16110/*"_rootMatrix"*/;
+  this->fields.mainMatrix = (struct System_String_o *)StringLiteral_16110/*"_rootMatrix"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.mainMatrix, v10, v2, v3, v4, v5, v6, v7);
-  v11 = (System_Int32_array **)StringLiteral_16083;
-  this->fields.invertMatrix = (struct System_String_o *)StringLiteral_16083;
+  v11 = (System_Int32_array **)StringLiteral_16083/*"_invrootMatrix"*/;
+  this->fields.invertMatrix = (struct System_String_o *)StringLiteral_16083/*"_invrootMatrix"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.invertMatrix, v11, v12, v13, v14, v15, v16, v17);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }

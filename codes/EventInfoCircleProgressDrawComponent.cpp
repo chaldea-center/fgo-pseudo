@@ -203,7 +203,7 @@ void __fastcall EventInfoCircleProgressDrawComponent__PlayLevelUpAnim(
   {
     sub_B16FFC(&int_TypeInfo, endAction);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8348, v6);
+    sub_B16FFC(&StringLiteral_8348/*"LEVEL_INFO"*/, v6);
     byte_40FA0DC = 1;
   }
   if ( this->fields.progressData )
@@ -214,7 +214,7 @@ void __fastcall EventInfoCircleProgressDrawComponent__PlayLevelUpAnim(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8348, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LEVEL_INFO"*/, 0LL);
     progressData = this->fields.progressData;
     if ( !progressData
       || (v10 = v8,
@@ -446,11 +446,11 @@ void __fastcall EventInfoCircleProgressDrawComponent__Setup(
     sub_B16FFC(&int_TypeInfo, circleProgressCtrl);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_8348, v15);
-    sub_B16FFC(&StringLiteral_16678, v16);
-    sub_B16FFC(&StringLiteral_17052, v17);
-    sub_B16FFC(&StringLiteral_16677, v18);
-    sub_B16FFC(&StringLiteral_1, v19);
+    sub_B16FFC(&StringLiteral_8348/*"LEVEL_INFO"*/, v15);
+    sub_B16FFC(&StringLiteral_16678/*"bit_circlemeter_gain"*/, v16);
+    sub_B16FFC(&StringLiteral_17052/*"bufficon_{0:D2}"*/, v17);
+    sub_B16FFC(&StringLiteral_16677/*"bit_circlemeter_comptext"*/, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v19);
     byte_40FA0D9 = 1;
   }
   this->fields.circleProgressCtrl = circleProgressCtrl;
@@ -480,7 +480,7 @@ void __fastcall EventInfoCircleProgressDrawComponent__Setup(
     if ( !nameLabel )
       goto LABEL_35;
     EventPointBuffEnt = progressData->fields.EventPointBuffEnt;
-    v28 = EventPointBuffEnt ? &EventPointBuffEnt->fields.name : (System_String_o **)&StringLiteral_1;
+    v28 = EventPointBuffEnt ? &EventPointBuffEnt->fields.name : (System_String_o **)&StringLiteral_1/*""*/;
     UILabel__set_text(nameLabel, *v28, 0LL);
     v29 = this->fields.nameLabel;
     if ( !v29 )
@@ -492,7 +492,7 @@ void __fastcall EventInfoCircleProgressDrawComponent__Setup(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8348, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LEVEL_INFO"*/, 0LL);
     OldLevel = progressData->fields.OldLevel;
     v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &OldLevel);
     v33 = System_String__Format(v31, v32, 0LL);
@@ -505,7 +505,7 @@ void __fastcall EventInfoCircleProgressDrawComponent__Setup(
     buffIconSprite = this->fields.buffIconSprite;
     v65 = (int)v34;
     v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v65);
-    v37 = System_String__Format((System_String_o *)StringLiteral_17052, v36, 0LL);
+    v37 = System_String__Format((System_String_o *)StringLiteral_17052/*"bufficon_{0:D2}"*/, v36, 0LL);
     if ( !circleProgressCtrl )
       goto LABEL_35;
     EventInfoCircleProgressControl__SetSprite(circleProgressCtrl, buffIconSprite, v37, 0LL);
@@ -563,7 +563,7 @@ void __fastcall EventInfoCircleProgressDrawComponent__Setup(
           (v49 = (EventInfoUIBase_o *)this->fields.circleProgressCtrl) == 0LL)
       || (GameObjectFromEventUIAssetData = EventInfoUIBase__GetGameObjectFromEventUIAssetData(
                                              v49,
-                                             (System_String_o *)StringLiteral_16678,
+                                             (System_String_o *)StringLiteral_16678/*"bit_circlemeter_gain"*/,
                                              0LL),
           this->fields.progressBarAnimPrefab = GameObjectFromEventUIAssetData,
           sub_B16F98(
@@ -580,7 +580,7 @@ void __fastcall EventInfoCircleProgressDrawComponent__Setup(
 LABEL_35:
       sub_B170D4();
     }
-    v58 = EventInfoUIBase__GetGameObjectFromEventUIAssetData(v57, (System_String_o *)StringLiteral_16677, 0LL);
+    v58 = EventInfoUIBase__GetGameObjectFromEventUIAssetData(v57, (System_String_o *)StringLiteral_16677/*"bit_circlemeter_comptext"*/, 0LL);
     this->fields.completedAnimPrefab = v58;
     sub_B16F98(
       (BattleServantConfConponent_o *)&this->fields.completedAnimPrefab,
@@ -616,7 +616,7 @@ void __fastcall EventInfoCircleProgressDrawComponent__SetupLeaderIcon(
   if ( (byte_40FA0DA & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19347, v3);
+    sub_B16FFC(&StringLiteral_19347/*"img_LeaderIcon{0:D2}"*/, v3);
     byte_40FA0DA = 1;
   }
   if ( this->fields.isExtraCircle )
@@ -659,7 +659,7 @@ LABEL_16:
     v12 = this->fields.leaderIconSprite;
     v15 = (int)progressData;
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-    v14 = System_String__Format((System_String_o *)StringLiteral_19347, v13, 0LL);
+    v14 = System_String__Format((System_String_o *)StringLiteral_19347/*"img_LeaderIcon{0:D2}"*/, v13, 0LL);
     if ( !circleProgressCtrl )
       goto LABEL_16;
     EventInfoCircleProgressControl__SetSprite(circleProgressCtrl, v12, v14, 0LL);
@@ -974,11 +974,11 @@ void __fastcall EventInfoCircleProgressDrawComponent___c__DisplayClass40_0___Pla
 
   if ( (byte_40F6FC3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16677, method);
+    sub_B16FFC(&StringLiteral_16677/*"bit_circlemeter_comptext"*/, method);
     byte_40F6FC3 = 1;
   }
   anim = this->fields.anim;
   if ( !anim )
     sub_B170D4();
-  UnityEngine_Animation__Play_49744236(anim, (System_String_o *)StringLiteral_16677, 0LL);
+  UnityEngine_Animation__Play_49744236(anim, (System_String_o *)StringLiteral_16677/*"bit_circlemeter_comptext"*/, 0LL);
 }

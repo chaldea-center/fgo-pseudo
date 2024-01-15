@@ -193,26 +193,26 @@ void __fastcall PartyOrganizationConfirmDeck2Menu__Init(
 
   if ( (byte_40FDC26 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FDC26 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_9;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL)
-    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL) )
   {
 LABEL_9:
     sub_B170D4();
   }
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -497,37 +497,37 @@ void __fastcall PartyOrganizationConfirmDeck2Menu__Open(
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_PartyOrganizationConfirmDeck2Menu_EndOpen__, v15);
-    sub_B16FFC(&StringLiteral_10186, v16);
-    sub_B16FFC(&StringLiteral_10237, v17);
-    sub_B16FFC(&StringLiteral_10209, v18);
-    sub_B16FFC(&StringLiteral_10241, v19);
-    sub_B16FFC(&StringLiteral_10185, v20);
-    sub_B16FFC(&StringLiteral_10258, v21);
-    sub_B16FFC(&StringLiteral_10242, v22);
-    sub_B16FFC(&StringLiteral_10184, v23);
-    sub_B16FFC(&StringLiteral_10188, v24);
-    sub_B16FFC(&StringLiteral_10250, v25);
-    sub_B16FFC(&StringLiteral_10284, v26);
-    sub_B16FFC(&StringLiteral_10286, v27);
-    sub_B16FFC(&StringLiteral_10251, v28);
-    sub_B16FFC(&StringLiteral_10207, v29);
-    sub_B16FFC(&StringLiteral_10257, v30);
-    sub_B16FFC(&StringLiteral_10238, v31);
-    sub_B16FFC(&StringLiteral_10285, v32);
-    sub_B16FFC(&StringLiteral_10252, v33);
-    sub_B16FFC(&StringLiteral_10244, v34);
-    sub_B16FFC(&StringLiteral_10253, v35);
-    sub_B16FFC(&StringLiteral_10187, v36);
-    sub_B16FFC(&StringLiteral_10231, v37);
-    sub_B16FFC(&StringLiteral_10206, v38);
-    sub_B16FFC(&StringLiteral_10245, v39);
-    sub_B16FFC(&StringLiteral_10240, v40);
-    sub_B16FFC(&StringLiteral_10239, v41);
-    sub_B16FFC(&StringLiteral_10259, v42);
-    sub_B16FFC(&StringLiteral_10243, v43);
-    sub_B16FFC(&StringLiteral_10189, v44);
-    sub_B16FFC(&StringLiteral_10232, v45);
-    sub_B16FFC(&StringLiteral_10208, v46);
+    sub_B16FFC(&StringLiteral_10186/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_DECIDE"*/, v16);
+    sub_B16FFC(&StringLiteral_10237/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_CANCEL"*/, v17);
+    sub_B16FFC(&StringLiteral_10209/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_TITLE"*/, v18);
+    sub_B16FFC(&StringLiteral_10241/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_TITLE"*/, v19);
+    sub_B16FFC(&StringLiteral_10185/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_10258/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_MESSAGE"*/, v21);
+    sub_B16FFC(&StringLiteral_10242/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_MESSAGE"*/, v22);
+    sub_B16FFC(&StringLiteral_10184/*"PARTY_ORGANIZATION_CONFIRM2_BASE_PARTY_TITLE"*/, v23);
+    sub_B16FFC(&StringLiteral_10188/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_TITLE"*/, v24);
+    sub_B16FFC(&StringLiteral_10250/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_CANCEL"*/, v25);
+    sub_B16FFC(&StringLiteral_10284/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_CLOSE"*/, v26);
+    sub_B16FFC(&StringLiteral_10286/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_TITLE"*/, v27);
+    sub_B16FFC(&StringLiteral_10251/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_DECIDE"*/, v28);
+    sub_B16FFC(&StringLiteral_10207/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_DECIDE"*/, v29);
+    sub_B16FFC(&StringLiteral_10257/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_CLOSE"*/, v30);
+    sub_B16FFC(&StringLiteral_10238/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_DECIDE"*/, v31);
+    sub_B16FFC(&StringLiteral_10285/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_MESSAGE"*/, v32);
+    sub_B16FFC(&StringLiteral_10252/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_MESSAGE"*/, v33);
+    sub_B16FFC(&StringLiteral_10244/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MESSAGE"*/, v34);
+    sub_B16FFC(&StringLiteral_10253/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_TITLE"*/, v35);
+    sub_B16FFC(&StringLiteral_10187/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_MESSAGE"*/, v36);
+    sub_B16FFC(&StringLiteral_10231/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_CANCEL"*/, v37);
+    sub_B16FFC(&StringLiteral_10206/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_CANCEL"*/, v38);
+    sub_B16FFC(&StringLiteral_10245/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_TITLE"*/, v39);
+    sub_B16FFC(&StringLiteral_10240/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_MESSAGE"*/, v40);
+    sub_B16FFC(&StringLiteral_10239/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_CLOSE"*/, v41);
+    sub_B16FFC(&StringLiteral_10259/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_TITLE"*/, v42);
+    sub_B16FFC(&StringLiteral_10243/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_TITLE"*/, v43);
+    sub_B16FFC(&StringLiteral_10189/*"PARTY_ORGANIZATION_CONFIRM2_NOW_PARTY_TITLE"*/, v44);
+    sub_B16FFC(&StringLiteral_10232/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_DECIDE"*/, v45);
+    sub_B16FFC(&StringLiteral_10208/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_MESSAGE"*/, v46);
     byte_40FDC27 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
@@ -722,12 +722,12 @@ LABEL_49:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v83 = LocalizationManager__Get((System_String_o *)StringLiteral_10189, 0LL);
+    v83 = LocalizationManager__Get((System_String_o *)StringLiteral_10189/*"PARTY_ORGANIZATION_CONFIRM2_NOW_PARTY_TITLE"*/, 0LL);
     if ( memberTitleLabel )
     {
       UILabel__set_text(memberTitleLabel, v83, 0LL);
       baseTitleLabel = this->fields.baseTitleLabel;
-      v85 = LocalizationManager__Get((System_String_o *)StringLiteral_10184, 0LL);
+      v85 = LocalizationManager__Get((System_String_o *)StringLiteral_10184/*"PARTY_ORGANIZATION_CONFIRM2_BASE_PARTY_TITLE"*/, 0LL);
       if ( baseTitleLabel )
       {
         UILabel__set_text(baseTitleLabel, v85, 0LL);
@@ -740,22 +740,22 @@ LABEL_49:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v91 = LocalizationManager__Get((System_String_o *)StringLiteral_10188, 0LL);
+            v91 = LocalizationManager__Get((System_String_o *)StringLiteral_10188/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_TITLE"*/, 0LL);
             if ( !titleLabel )
               goto LABEL_111;
             UILabel__set_text(titleLabel, v91, 0LL);
             messageLabel = this->fields.messageLabel;
-            v93 = LocalizationManager__Get((System_String_o *)StringLiteral_10187, 0LL);
+            v93 = LocalizationManager__Get((System_String_o *)StringLiteral_10187/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_MESSAGE"*/, 0LL);
             if ( !messageLabel )
               goto LABEL_111;
             UILabel__set_text(messageLabel, v93, 0LL);
             decideLabel = this->fields.decideLabel;
-            v95 = LocalizationManager__Get((System_String_o *)StringLiteral_10186, 0LL);
+            v95 = LocalizationManager__Get((System_String_o *)StringLiteral_10186/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_DECIDE"*/, 0LL);
             if ( !decideLabel )
               goto LABEL_111;
             UILabel__set_text(decideLabel, v95, 0LL);
             cancelLabel = this->fields.cancelLabel;
-            v97 = &StringLiteral_10185;
+            v97 = &StringLiteral_10185/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_CANCEL"*/;
             break;
           case 1:
             v98 = this->fields.titleLabel;
@@ -764,22 +764,22 @@ LABEL_49:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v99 = LocalizationManager__Get((System_String_o *)StringLiteral_10209, 0LL);
+            v99 = LocalizationManager__Get((System_String_o *)StringLiteral_10209/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_TITLE"*/, 0LL);
             if ( !v98 )
               goto LABEL_111;
             UILabel__set_text(v98, v99, 0LL);
             v100 = this->fields.messageLabel;
-            v101 = LocalizationManager__Get((System_String_o *)StringLiteral_10208, 0LL);
+            v101 = LocalizationManager__Get((System_String_o *)StringLiteral_10208/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_MESSAGE"*/, 0LL);
             if ( !v100 )
               goto LABEL_111;
             UILabel__set_text(v100, v101, 0LL);
             v102 = this->fields.decideLabel;
-            v103 = LocalizationManager__Get((System_String_o *)StringLiteral_10207, 0LL);
+            v103 = LocalizationManager__Get((System_String_o *)StringLiteral_10207/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_DECIDE"*/, 0LL);
             if ( !v102 )
               goto LABEL_111;
             UILabel__set_text(v102, v103, 0LL);
             cancelLabel = this->fields.cancelLabel;
-            v97 = &StringLiteral_10206;
+            v97 = &StringLiteral_10206/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_CANCEL"*/;
             break;
           case 2:
             v104 = this->fields.titleLabel;
@@ -788,22 +788,22 @@ LABEL_49:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v105 = LocalizationManager__Get((System_String_o *)StringLiteral_10253, 0LL);
+            v105 = LocalizationManager__Get((System_String_o *)StringLiteral_10253/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_TITLE"*/, 0LL);
             if ( !v104 )
               goto LABEL_111;
             UILabel__set_text(v104, v105, 0LL);
             v106 = this->fields.messageLabel;
-            v107 = LocalizationManager__Get((System_String_o *)StringLiteral_10252, 0LL);
+            v107 = LocalizationManager__Get((System_String_o *)StringLiteral_10252/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_MESSAGE"*/, 0LL);
             if ( !v106 )
               goto LABEL_111;
             UILabel__set_text(v106, v107, 0LL);
             v108 = this->fields.decideLabel;
-            v109 = LocalizationManager__Get((System_String_o *)StringLiteral_10251, 0LL);
+            v109 = LocalizationManager__Get((System_String_o *)StringLiteral_10251/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_DECIDE"*/, 0LL);
             if ( !v108 )
               goto LABEL_111;
             UILabel__set_text(v108, v109, 0LL);
             cancelLabel = this->fields.cancelLabel;
-            v97 = &StringLiteral_10250;
+            v97 = &StringLiteral_10250/*"PARTY_ORGANIZATION_CONFIRM_SHORTAGE_DECK_MEMBER_CANCEL"*/;
             break;
           case 4:
             v122 = this->fields.titleLabel;
@@ -812,22 +812,22 @@ LABEL_49:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v123 = LocalizationManager__Get((System_String_o *)StringLiteral_10245, 0LL);
+            v123 = LocalizationManager__Get((System_String_o *)StringLiteral_10245/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_TITLE"*/, 0LL);
             if ( !v122 )
               goto LABEL_111;
             UILabel__set_text(v122, v123, 0LL);
             v124 = this->fields.messageLabel;
-            v125 = LocalizationManager__Get((System_String_o *)StringLiteral_10244, 0LL);
+            v125 = LocalizationManager__Get((System_String_o *)StringLiteral_10244/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MESSAGE"*/, 0LL);
             if ( !v124 )
               goto LABEL_111;
             UILabel__set_text(v124, v125, 0LL);
             v126 = this->fields.decideLabel;
-            v127 = LocalizationManager__Get((System_String_o *)StringLiteral_10232, 0LL);
+            v127 = LocalizationManager__Get((System_String_o *)StringLiteral_10232/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_DECIDE"*/, 0LL);
             if ( !v126 )
               goto LABEL_111;
             UILabel__set_text(v126, v127, 0LL);
             cancelLabel = this->fields.cancelLabel;
-            v97 = &StringLiteral_10231;
+            v97 = &StringLiteral_10231/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_CANCEL"*/;
             break;
           case 5:
             v128 = this->fields.titleLabel;
@@ -836,22 +836,22 @@ LABEL_49:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v129 = LocalizationManager__Get((System_String_o *)StringLiteral_10243, 0LL);
+            v129 = LocalizationManager__Get((System_String_o *)StringLiteral_10243/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_TITLE"*/, 0LL);
             if ( !v128 )
               goto LABEL_111;
             UILabel__set_text(v128, v129, 0LL);
             v130 = this->fields.messageLabel;
-            v131 = LocalizationManager__Get((System_String_o *)StringLiteral_10242, 0LL);
+            v131 = LocalizationManager__Get((System_String_o *)StringLiteral_10242/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_MESSAGE"*/, 0LL);
             if ( !v130 )
               goto LABEL_111;
             UILabel__set_text(v130, v131, 0LL);
             v132 = this->fields.decideLabel;
-            v133 = LocalizationManager__Get((System_String_o *)StringLiteral_10238, 0LL);
+            v133 = LocalizationManager__Get((System_String_o *)StringLiteral_10238/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_DECIDE"*/, 0LL);
             if ( !v132 )
               goto LABEL_111;
             UILabel__set_text(v132, v133, 0LL);
             cancelLabel = this->fields.cancelLabel;
-            v97 = &StringLiteral_10237;
+            v97 = &StringLiteral_10237/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_CANCEL"*/;
             break;
           case 6:
             v110 = this->fields.titleLabel;
@@ -860,17 +860,17 @@ LABEL_49:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v111 = LocalizationManager__Get((System_String_o *)StringLiteral_10241, 0LL);
+            v111 = LocalizationManager__Get((System_String_o *)StringLiteral_10241/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_TITLE"*/, 0LL);
             if ( !v110 )
               goto LABEL_111;
             UILabel__set_text(v110, v111, 0LL);
             v112 = this->fields.messageLabel;
-            v113 = LocalizationManager__Get((System_String_o *)StringLiteral_10240, 0LL);
+            v113 = LocalizationManager__Get((System_String_o *)StringLiteral_10240/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_MESSAGE"*/, 0LL);
             if ( !v112 )
               goto LABEL_111;
             UILabel__set_text(v112, v113, 0LL);
             cancelLabel = this->fields.closeLabel;
-            v97 = &StringLiteral_10239;
+            v97 = &StringLiteral_10239/*"PARTY_ORGANIZATION_CONFIRM_REMOVE_MAIN_DECK_LEADER_CLOSE"*/;
             break;
           case 7:
             v114 = this->fields.titleLabel;
@@ -879,17 +879,17 @@ LABEL_49:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v115 = LocalizationManager__Get((System_String_o *)StringLiteral_10286, 0LL);
+            v115 = LocalizationManager__Get((System_String_o *)StringLiteral_10286/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_TITLE"*/, 0LL);
             if ( !v114 )
               goto LABEL_111;
             UILabel__set_text(v114, v115, 0LL);
             v116 = this->fields.messageLabel;
-            v117 = LocalizationManager__Get((System_String_o *)StringLiteral_10285, 0LL);
+            v117 = LocalizationManager__Get((System_String_o *)StringLiteral_10285/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_MESSAGE"*/, 0LL);
             if ( !v116 )
               goto LABEL_111;
             UILabel__set_text(v116, v117, 0LL);
             cancelLabel = this->fields.closeLabel;
-            v97 = &StringLiteral_10284;
+            v97 = &StringLiteral_10284/*"PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_CLOSE"*/;
             break;
           case 8:
             v118 = this->fields.titleLabel;
@@ -898,17 +898,17 @@ LABEL_49:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v119 = LocalizationManager__Get((System_String_o *)StringLiteral_10259, 0LL);
+            v119 = LocalizationManager__Get((System_String_o *)StringLiteral_10259/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_TITLE"*/, 0LL);
             if ( !v118 )
               goto LABEL_111;
             UILabel__set_text(v118, v119, 0LL);
             v120 = this->fields.messageLabel;
-            v121 = LocalizationManager__Get((System_String_o *)StringLiteral_10258, 0LL);
+            v121 = LocalizationManager__Get((System_String_o *)StringLiteral_10258/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_MESSAGE"*/, 0LL);
             if ( !v120 )
               goto LABEL_111;
             UILabel__set_text(v120, v121, 0LL);
             cancelLabel = this->fields.closeLabel;
-            v97 = &StringLiteral_10257;
+            v97 = &StringLiteral_10257/*"PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_CLOSE"*/;
             break;
           default:
             goto LABEL_110;

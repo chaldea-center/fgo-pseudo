@@ -177,7 +177,7 @@ System_String_o *__fastcall WarBoardCost__CurrentAndMaxPointToString(WarBoardCos
   if ( (byte_40F899C & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23516, v3);
+    sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, v3);
     byte_40F899C = 1;
   }
   CurrentActionPoint_k__BackingField = this->fields._CurrentActionPoint_k__BackingField;
@@ -188,7 +188,7 @@ System_String_o *__fastcall WarBoardCost__CurrentAndMaxPointToString(WarBoardCos
     overwirteBaseActionPoint = this->fields.baseActionPoint;
   v9 = overwirteBaseActionPoint;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-  return System_String__Format_43739268((System_String_o *)StringLiteral_23516, v6, v7, 0LL);
+  return System_String__Format_43739268((System_String_o *)StringLiteral_23516/*"{0}/{1}"*/, v6, v7, 0LL);
 }
 
 

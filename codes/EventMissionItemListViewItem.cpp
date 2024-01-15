@@ -33,7 +33,7 @@ void __fastcall EventMissionItemListViewItem___ctor(
 
   if ( (byte_40F88DD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, missionData);
+    sub_B16FFC(&StringLiteral_1/*""*/, missionData);
     byte_40F88DD = 1;
   }
   MissionListViewItem___ctor((MissionListViewItem_o *)this, 0LL);
@@ -54,14 +54,14 @@ void __fastcall EventMissionItemListViewItem___ctor(
   this->fields.isNew = 0;
   this->fields.currentMissionId = id;
   this->fields.dispNo = missionData->fields.dispNo;
-  v20 = (System_Int32_array **)StringLiteral_1;
-  this->fields.condMsg = (struct System_String_o *)StringLiteral_1;
+  v20 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.condMsg = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.condMsg, v20, v13, v14, v15, v16, v17, v18);
   this->fields.progVal = 0.0;
   this->fields.targetNum = 0LL;
   this->fields.progNum = 0LL;
-  v21 = (System_Int32_array **)StringLiteral_1;
-  this->fields.progTxt = (struct System_String_o *)StringLiteral_1;
+  v21 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.progTxt = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.progTxt, v21, v22, v23, v24, v25, v26, v27);
   eventMissionEnt = this->fields.eventMissionEnt;
   *(_QWORD *)&this->fields.progStatus = 0x400000000LL;
@@ -159,7 +159,7 @@ System_String_o *__fastcall EventMissionItemListViewItem__GetGiftName(
   if ( (byte_40F88DF & 1) == 0 )
   {
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F88DF = 1;
   }
   if ( MissionListViewItem__get_Type((MissionListViewItem_o *)this, 0LL) == 2
@@ -187,7 +187,7 @@ LABEL_17:
       if ( Gift__IsCostumeRelease(v10, 0LL) && (servantCostumeEnt = this->fields.servantCostumeEnt) != 0LL )
         return servantCostumeEnt->fields.name;
       else
-        return (System_String_o *)StringLiteral_1;
+        return (System_String_o *)StringLiteral_1/*""*/;
     }
     SvtEntity = MissionListViewItem__get_CmdEntity((MissionListViewItem_o *)this, 0LL);
     if ( !SvtEntity )

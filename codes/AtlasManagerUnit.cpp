@@ -488,7 +488,7 @@ bool __fastcall AtlasManagerUnit__ValidateLoadSprite(
     sub_B16FFC(&System_Func_UIAtlas__string__TypeInfo, v6);
     sub_B16FFC(&Method_AtlasManagerUnit___c__ValidateLoadSprite_b__11_0__, v7);
     sub_B16FFC(&AtlasManagerUnit___c_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_698, v9);
+    sub_B16FFC(&StringLiteral_698/*","*/, v9);
     byte_40FBF21 = 1;
   }
   IsNullOrEmpty = (UISpriteData_o *)System_String__IsNullOrEmpty(spriteName, 0LL);
@@ -510,7 +510,7 @@ LABEL_12:
     }
     static_fields = v19->static_fields;
     _9__11_0 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *)static_fields->__9__11_0;
-    v22 = (System_String_o *)StringLiteral_698;
+    v22 = (System_String_o *)StringLiteral_698/*","*/;
     if ( !_9__11_0 )
     {
       if ( (BYTE3(v19->vtable._0_Equals.methodPtr) & 4) != 0 && !v19->_2.cctor_finished )

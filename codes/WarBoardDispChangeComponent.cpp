@@ -144,7 +144,7 @@ void __fastcall WarBoardDispChangeComponent__SetBackKeyObject(
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_14467, v4);
+    sub_B16FFC(&StringLiteral_14467/*"TopBase/BackButton"*/, v4);
     byte_40F639E = 1;
   }
   configuration = (UnityEngine_Object_o *)this->fields.configuration;
@@ -164,7 +164,7 @@ void __fastcall WarBoardDispChangeComponent__SetBackKeyObject(
     {
       j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
     }
-    AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_14467, 0LL);
+    AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_14467/*"TopBase/BackButton"*/, 0LL);
   }
 }
 

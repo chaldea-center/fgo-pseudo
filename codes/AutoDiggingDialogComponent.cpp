@@ -629,15 +629,15 @@ void __fastcall AutoDiggingDialogComponent__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v30);
     sub_B16FFC(&NetworkManager_TypeInfo, v31);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v32);
-    sub_B16FFC(&StringLiteral_4570, v33);
-    sub_B16FFC(&StringLiteral_1752, v34);
-    sub_B16FFC(&StringLiteral_4568, v35);
-    sub_B16FFC(&StringLiteral_1754, v36);
-    sub_B16FFC(&StringLiteral_1753, v37);
-    sub_B16FFC(&StringLiteral_11056, v38);
-    sub_B16FFC(&StringLiteral_11055, v39);
-    sub_B16FFC(&StringLiteral_1755, v40);
-    sub_B16FFC(&StringLiteral_951, v41);
+    sub_B16FFC(&StringLiteral_4570/*"DIGGING_CONFIRM_DIALOG_POSSESSION"*/, v33);
+    sub_B16FFC(&StringLiteral_1752/*"AUTO_DIGGING_CONFIRM_DIALOG_MESSAGE"*/, v34);
+    sub_B16FFC(&StringLiteral_4568/*"DIGGING_CONFIRM_DIALOG_CONSUME"*/, v35);
+    sub_B16FFC(&StringLiteral_1754/*"AUTO_DIGGING_CONFIRM_DIALOG_TITLE"*/, v36);
+    sub_B16FFC(&StringLiteral_1753/*"AUTO_DIGGING_CONFIRM_DIALOG_SUB_TITLE"*/, v37);
+    sub_B16FFC(&StringLiteral_11056/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, v38);
+    sub_B16FFC(&StringLiteral_11055/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, v39);
+    sub_B16FFC(&StringLiteral_1755/*"AUTO_DIGGING_CONFIRM_DIALOG_WARNING_MESSAGE"*/, v40);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v41);
     byte_40FBF44 = 1;
   }
   entity = 0LL;
@@ -866,7 +866,7 @@ LABEL_114:
       v97 = v96->m_Items[v64];
       if ( !v97 )
         goto LABEL_113;
-      UILabel__set_text(v97, (System_String_o *)StringLiteral_951, 0LL);
+      UILabel__set_text(v97, (System_String_o *)StringLiteral_951/*"0"*/, 0LL);
       v98 = this->fields.consumeItemNumLabel;
       if ( !v98 )
         goto LABEL_113;
@@ -875,7 +875,7 @@ LABEL_114:
       v95 = v98->m_Items[v64];
       if ( !v95 )
         goto LABEL_113;
-      v94 = (System_String_o *)StringLiteral_951;
+      v94 = (System_String_o *)StringLiteral_951/*"0"*/;
     }
     UILabel__set_text(v95, v94, 0LL);
     if ( !v65 )
@@ -941,31 +941,31 @@ LABEL_114:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v106 = LocalizationManager__Get((System_String_o *)StringLiteral_11056, 0LL);
+  v106 = LocalizationManager__Get((System_String_o *)StringLiteral_11056/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, 0LL);
   if ( !v103 )
     goto LABEL_113;
   UILabel__set_text(v103, v106, 0LL);
-  v107 = LocalizationManager__Get((System_String_o *)StringLiteral_11055, 0LL);
+  v107 = LocalizationManager__Get((System_String_o *)StringLiteral_11055/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, 0LL);
   if ( !v105 )
     goto LABEL_113;
   UILabel__set_text(v105, v107, 0LL);
   consumeLabel = this->fields.consumeLabel;
-  v109 = LocalizationManager__Get((System_String_o *)StringLiteral_4568, 0LL);
+  v109 = LocalizationManager__Get((System_String_o *)StringLiteral_4568/*"DIGGING_CONFIRM_DIALOG_CONSUME"*/, 0LL);
   if ( !consumeLabel )
     goto LABEL_113;
   UILabel__set_text(consumeLabel, v109, 0LL);
   possessionLabel = this->fields.possessionLabel;
-  v111 = LocalizationManager__Get((System_String_o *)StringLiteral_4570, 0LL);
+  v111 = LocalizationManager__Get((System_String_o *)StringLiteral_4570/*"DIGGING_CONFIRM_DIALOG_POSSESSION"*/, 0LL);
   if ( !possessionLabel )
     goto LABEL_113;
   UILabel__set_text(possessionLabel, v111, 0LL);
   titleLabel = this->fields.titleLabel;
-  v113 = LocalizationManager__Get((System_String_o *)StringLiteral_1754, 0LL);
+  v113 = LocalizationManager__Get((System_String_o *)StringLiteral_1754/*"AUTO_DIGGING_CONFIRM_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_113;
   UILabel__set_text(titleLabel, v113, 0LL);
   subTitleLabel = this->fields.subTitleLabel;
-  v115 = LocalizationManager__Get((System_String_o *)StringLiteral_1753, 0LL);
+  v115 = LocalizationManager__Get((System_String_o *)StringLiteral_1753/*"AUTO_DIGGING_CONFIRM_DIALOG_SUB_TITLE"*/, 0LL);
   if ( !subTitleLabel )
     goto LABEL_113;
   UILabel__set_text(subTitleLabel, v115, 0LL);
@@ -977,7 +977,7 @@ LABEL_114:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v117 = &StringLiteral_1752;
+    v117 = &StringLiteral_1752/*"AUTO_DIGGING_CONFIRM_DIALOG_MESSAGE"*/;
   }
   else
   {
@@ -986,7 +986,7 @@ LABEL_114:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v117 = &StringLiteral_1755;
+    v117 = &StringLiteral_1755/*"AUTO_DIGGING_CONFIRM_DIALOG_WARNING_MESSAGE"*/;
   }
   v118 = LocalizationManager__Get((System_String_o *)*v117, 0LL);
   if ( !messageLabel )

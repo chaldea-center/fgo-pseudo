@@ -14,12 +14,12 @@ void __fastcall EventBannerWindowScrollItem___cctor(const MethodInfo *method)
   if ( (byte_40FC527 & 1) == 0 )
   {
     sub_B16FFC(&EventBannerWindowScrollItem_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16541, v8);
+    sub_B16FFC(&StringLiteral_16541/*"banner_loading"*/, v8);
     byte_40FC527 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventBannerWindowScrollItem_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_16541;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16541;
+  v10 = (System_Int32_array **)StringLiteral_16541/*"banner_loading"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16541/*"banner_loading"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -306,8 +306,8 @@ void __fastcall EventBannerWindowScrollItem__Setup(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_NoticeNumberComponent___, v12);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
     sub_B16FFC(&string_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_5693, v15);
-    sub_B16FFC(&StringLiteral_5696, v16);
+    sub_B16FFC(&StringLiteral_5693/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, v15);
+    sub_B16FFC(&StringLiteral_5696/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, v16);
     byte_40FC524 = 1;
   }
   this->fields.mEventEndTimeInfo = ev_end_time_inf;
@@ -356,7 +356,7 @@ void __fastcall EventBannerWindowScrollItem__Setup(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_5693, 0LL);
+      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_5693/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0LL);
       v30 = *p_mEventEndTimeInfo;
       if ( !*p_mEventEndTimeInfo )
         goto LABEL_50;
@@ -369,7 +369,7 @@ void __fastcall EventBannerWindowScrollItem__Setup(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      Empty = LocalizationManager__Get((System_String_o *)StringLiteral_5696, 0LL);
+      Empty = LocalizationManager__Get((System_String_o *)StringLiteral_5696/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0LL);
     }
   }
   condMessageLabel = this->fields.condMessageLabel;

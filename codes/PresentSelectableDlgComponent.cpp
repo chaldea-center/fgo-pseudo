@@ -228,8 +228,8 @@ void __fastcall PresentSelectableDlgComponent__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_PresentSelectableDlgComponent_EndOpen__, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_10471, v12);
-    sub_B16FFC(&StringLiteral_10472, v13);
+    sub_B16FFC(&StringLiteral_10471/*"PRESENT_BOX_SELECTABLE_LIST_DETAIL"*/, v12);
+    sub_B16FFC(&StringLiteral_10472/*"PRESENT_BOX_SELECTABLE_LIST_TITLE"*/, v13);
     byte_40F9FFB = 1;
   }
   PresentSelectableDlgComponent__clearInfoGrid(this, (const MethodInfo *)ticketItem);
@@ -256,12 +256,12 @@ void __fastcall PresentSelectableDlgComponent__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_10472, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_10472/*"PRESENT_BOX_SELECTABLE_LIST_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_30;
   UILabel__set_text(titleLabel, v23, 0LL);
   titleDetailLabel = this->fields.titleDetailLabel;
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_10471, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_10471/*"PRESENT_BOX_SELECTABLE_LIST_DETAIL"*/, 0LL);
   ticketItm = this->fields.ticketItm;
   if ( !ticketItm )
     goto LABEL_30;

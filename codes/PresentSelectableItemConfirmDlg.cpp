@@ -253,10 +253,10 @@ void __fastcall PresentSelectableItemConfirmDlg__Open(
     sub_B16FFC(&BalanceConfig_TypeInfo, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
     sub_B16FFC(&Method_PresentSelectableItemConfirmDlg_EndOpen__, v17);
-    sub_B16FFC(&StringLiteral_10469, v18);
-    sub_B16FFC(&StringLiteral_10489, v19);
-    sub_B16FFC(&StringLiteral_10468, v20);
-    sub_B16FFC(&StringLiteral_10488, v21);
+    sub_B16FFC(&StringLiteral_10469/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_TITLE"*/, v18);
+    sub_B16FFC(&StringLiteral_10489/*"PRESENT_SELECT_ITEM_OVER_WARNING"*/, v19);
+    sub_B16FFC(&StringLiteral_10468/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_DETAIL"*/, v20);
+    sub_B16FFC(&StringLiteral_10488/*"PRESENT_SELECT_ITEM_FULL_WARNING"*/, v21);
     byte_40FA007 = 1;
   }
   if ( !this->fields.state )
@@ -291,12 +291,12 @@ void __fastcall PresentSelectableItemConfirmDlg__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10469, 0LL);
+    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10469/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_TITLE"*/, 0LL);
     if ( !TitleLabel )
       goto LABEL_37;
     UILabel__set_text(TitleLabel, v30, 0LL);
     DetailLabel = this->fields.DetailLabel;
-    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_10468, 0LL);
+    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_10468/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_DETAIL"*/, 0LL);
     if ( !DetailLabel )
       goto LABEL_37;
     UILabel__set_text(DetailLabel, v32, 0LL);
@@ -333,7 +333,7 @@ void __fastcall PresentSelectableItemConfirmDlg__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v40 = &StringLiteral_10488;
+      v40 = &StringLiteral_10488/*"PRESENT_SELECT_ITEM_FULL_WARNING"*/;
     }
     else
     {
@@ -380,7 +380,7 @@ LABEL_37:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v40 = &StringLiteral_10489;
+      v40 = &StringLiteral_10489/*"PRESENT_SELECT_ITEM_OVER_WARNING"*/;
     }
     v41 = LocalizationManager__Get((System_String_o *)*v40, 0LL);
     if ( !v39 )

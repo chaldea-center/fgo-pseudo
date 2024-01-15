@@ -39,7 +39,7 @@ void __fastcall UVScroll__UpdateUV(UVScroll_o *this, const MethodInfo *method)
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_Renderer___, method);
     sub_B16FFC(&UnityEngine_Material_TypeInfo, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_15950, v5);
+    sub_B16FFC(&StringLiteral_15950/*"_MainTex"*/, v5);
     byte_40FE439 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -81,7 +81,7 @@ void __fastcall UVScroll__UpdateUV(UVScroll_o *this, const MethodInfo *method)
 LABEL_11:
         UnityEngine_Material__SetTextureOffset(
           material,
-          (System_String_o *)StringLiteral_15950,
+          (System_String_o *)StringLiteral_15950/*"_MainTex"*/,
           *(UnityEngine_Vector2_o *)&this->fields.m_Offset.fields.y,
           0LL);
         if ( !UnityEngine_Application__get_isPlaying(0LL) )

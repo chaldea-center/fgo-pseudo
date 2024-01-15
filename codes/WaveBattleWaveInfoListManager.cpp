@@ -279,7 +279,7 @@ void __fastcall WaveBattleWaveInfoListManager__LoadEnemyAsset(
     sub_B16FFC(&Method_WaveBattleWaveInfoListManager___c__DisplayClass16_0__LoadEnemyAsset_b__0__, v19);
     sub_B16FFC(&WaveBattleWaveInfoListManager___c__DisplayClass16_0_TypeInfo, v20);
     sub_B16FFC(&ViewWaveEnemyEntity_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_12679, v22);
+    sub_B16FFC(&StringLiteral_12679/*"Servants/Commands/"*/, v22);
     byte_40F676C = 1;
   }
   entity = 0LL;
@@ -347,7 +347,7 @@ void __fastcall WaveBattleWaveInfoListManager__LoadEnemyAsset(
           && !ViewWaveEnemyEntity__IsIconIdUnique(v53, 0LL) )
         {
           v57 = System_Int32__ToString((int)v53 + 36, 0LL);
-          v58 = System_String__Concat_43743732((System_String_o *)StringLiteral_12679, v57, 0LL);
+          v58 = System_String__Concat_43743732((System_String_o *)StringLiteral_12679/*"Servants/Commands/"*/, v57, 0LL);
           if ( !v35 )
             break;
           v59 = (EventMissionProgressRequest_Argument_ProgressData_o *)v58;

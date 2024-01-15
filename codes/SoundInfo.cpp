@@ -75,13 +75,13 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     sub_B16FFC(&UnityEngine_GUI_TypeInfo, method);
     sub_B16FFC(&SoundLogger_TypeInfo, v3);
     sub_B16FFC(&string___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_15650, v5);
-    sub_B16FFC(&StringLiteral_1493, v6);
-    sub_B16FFC(&StringLiteral_45, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
-    sub_B16FFC(&StringLiteral_1309, v9);
-    sub_B16FFC(&StringLiteral_46, v10);
-    sub_B16FFC(&StringLiteral_1512, v11);
+    sub_B16FFC(&StringLiteral_15650/*"[BGM]\n"*/, v5);
+    sub_B16FFC(&StringLiteral_1493/*"<size="*/, v6);
+    sub_B16FFC(&StringLiteral_45/*"\n[SE]\n"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
+    sub_B16FFC(&StringLiteral_1309/*"</size>"*/, v9);
+    sub_B16FFC(&StringLiteral_46/*"\n[VOICE]\n"*/, v10);
+    sub_B16FFC(&StringLiteral_1512/*">"*/, v11);
     byte_40F9C9E = 1;
   }
   HIDWORD(methoda.parameters) = 0;
@@ -91,11 +91,11 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     if ( (BYTE3(SoundLogger_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundLogger_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
     LogBgm = SoundLogger__getLogBgm((const MethodInfo *)v12);
-    v14 = System_String__Concat_43743732((System_String_o *)StringLiteral_15650, LogBgm, 0LL);
+    v14 = System_String__Concat_43743732((System_String_o *)StringLiteral_15650/*"[BGM]\n"*/, LogBgm, 0LL);
     LogVoice = SoundLogger__getLogVoice((const MethodInfo *)v14);
-    v16 = System_String__Concat_43746016(v14, (System_String_o *)StringLiteral_46, LogVoice, 0LL);
+    v16 = System_String__Concat_43746016(v14, (System_String_o *)StringLiteral_46/*"\n[VOICE]\n"*/, LogVoice, 0LL);
     LogSe = SoundLogger__getLogSe((const MethodInfo *)v16);
-    v18 = (System_Int32_array **)System_String__Concat_43746016(v16, (System_String_o *)StringLiteral_45, LogSe, 0LL);
+    v18 = (System_Int32_array **)System_String__Concat_43746016(v16, (System_String_o *)StringLiteral_45/*"\n[SE]\n"*/, LogSe, 0LL);
     v19 = *(float *)&this[1].klass * (float)((float)UnityEngine_Screen__get_width(0LL) * 0.00097656);
     v62.fields.m_XMin = 5.0;
     v62.fields.m_Width = v19 * 310.0;
@@ -111,7 +111,7 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     }
     *(_QWORD *)&v63.fields.m_XMin = methoda.methodPointer;
     *(_QWORD *)&v63.fields.m_Width = methoda.invoker_method;
-    UnityEngine_GUI__Box(v63, (System_String_o *)StringLiteral_1, 0LL);
+    UnityEngine_GUI__Box(v63, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     v64.fields.m_YMin = 5.0;
     v64.fields.m_Height = v19 * 825.0;
     v64.fields.m_Width = v19 * 1000.0;
@@ -123,13 +123,13 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     if ( !v28 )
       sub_B170D4();
     v35 = (System_String_array *)v28;
-    v36 = (System_String_o *)StringLiteral_1493;
-    if ( StringLiteral_1493 )
+    v36 = (System_String_o *)StringLiteral_1493/*"<size="*/;
+    if ( StringLiteral_1493/*"<size="*/ )
     {
-      v36 = (System_String_o *)sub_B170BC(StringLiteral_1493, v35->obj.klass->_1.element_class);
+      v36 = (System_String_o *)sub_B170BC(StringLiteral_1493/*"<size="*/, v35->obj.klass->_1.element_class);
       if ( !v36 )
         goto LABEL_35;
-      v37 = (System_Int32_array **)StringLiteral_1493;
+      v37 = (System_Int32_array **)StringLiteral_1493/*"<size="*/;
     }
     else
     {
@@ -148,13 +148,13 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
         goto LABEL_34;
       v35->m_Items[1] = (System_String_o *)v43;
       sub_B16F98((BattleServantConfConponent_o *)&v35->m_Items[1], v43, v29, v38, v39, v40, v41, v42);
-      v36 = (System_String_o *)StringLiteral_1512;
-      if ( StringLiteral_1512 )
+      v36 = (System_String_o *)StringLiteral_1512/*">"*/;
+      if ( StringLiteral_1512/*">"*/ )
       {
-        v36 = (System_String_o *)sub_B170BC(StringLiteral_1512, v35->obj.klass->_1.element_class);
+        v36 = (System_String_o *)sub_B170BC(StringLiteral_1512/*">"*/, v35->obj.klass->_1.element_class);
         if ( !v36 )
           goto LABEL_35;
-        v37 = (System_Int32_array **)StringLiteral_1512;
+        v37 = (System_Int32_array **)StringLiteral_1512/*">"*/;
       }
       else
       {
@@ -170,8 +170,8 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
           goto LABEL_34;
         v35->m_Items[3] = (System_String_o *)v18;
         sub_B16F98((BattleServantConfConponent_o *)&v35->m_Items[3], v18, v29, v49, v50, v51, v52, v53);
-        v36 = (System_String_o *)StringLiteral_1309;
-        if ( !StringLiteral_1309 )
+        v36 = (System_String_o *)StringLiteral_1309/*"</size>"*/;
+        if ( !StringLiteral_1309/*"</size>"*/ )
         {
           v37 = 0LL;
 LABEL_31:
@@ -187,10 +187,10 @@ LABEL_34:
           sub_B17100(v36, v37, v29);
           sub_B170A0();
         }
-        v36 = (System_String_o *)sub_B170BC(StringLiteral_1309, v35->obj.klass->_1.element_class);
+        v36 = (System_String_o *)sub_B170BC(StringLiteral_1309/*"</size>"*/, v35->obj.klass->_1.element_class);
         if ( v36 )
         {
-          v37 = (System_Int32_array **)StringLiteral_1309;
+          v37 = (System_Int32_array **)StringLiteral_1309/*"</size>"*/;
           goto LABEL_31;
         }
       }

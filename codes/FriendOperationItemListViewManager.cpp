@@ -261,10 +261,10 @@ void __fastcall FriendOperationItemListViewManager__CreateList(
     sub_B16FFC(&FriendOperationItemListViewManager___c_TypeInfo, v29);
     sub_B16FFC(&UserBlacklistEntity_TypeInfo, v30);
     sub_B16FFC(&UserFriendRequestHistoryEntity_TypeInfo, v31);
-    sub_B16FFC(&StringLiteral_2556, v32);
-    sub_B16FFC(&StringLiteral_6439, v33);
-    sub_B16FFC(&StringLiteral_2559, v34);
-    sub_B16FFC(&StringLiteral_6440, v35);
+    sub_B16FFC(&StringLiteral_2556/*"BLACKLIST_EMPTY_MESSAGE"*/, v32);
+    sub_B16FFC(&StringLiteral_6439/*"FRIEND_EMPTY_FRIEND_MESSAGE"*/, v33);
+    sub_B16FFC(&StringLiteral_2559/*"BLACKLIST_FRIEND_HISTORY_EMPTY_MESSAGE"*/, v34);
+    sub_B16FFC(&StringLiteral_6440/*"FRIEND_EMPTY_OFFERED_MESSAGE"*/, v35);
     byte_40FD8FD = 1;
   }
   if ( (BYTE3(FriendOperationItemListViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -321,7 +321,7 @@ LABEL_102:
            (const MethodInfo_290DE84 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) < 1 )
     {
 LABEL_35:
-      v84 = &StringLiteral_2556;
+      v84 = &StringLiteral_2556/*"BLACKLIST_EMPTY_MESSAGE"*/;
       goto LABEL_68;
     }
     v67 = 0;
@@ -477,7 +477,7 @@ LABEL_101:
     if ( (int)v113 < 1 )
     {
 LABEL_67:
-      v84 = &StringLiteral_2559;
+      v84 = &StringLiteral_2559/*"BLACKLIST_FRIEND_HISTORY_EMPTY_MESSAGE"*/;
       goto LABEL_68;
     }
     v114 = 0LL;
@@ -525,7 +525,7 @@ LABEL_67:
         goto LABEL_67;
     }
   }
-  v47 = (System_String_o *)StringLiteral_6440;
+  v47 = (System_String_o *)StringLiteral_6440/*"FRIEND_EMPTY_OFFERED_MESSAGE"*/;
   if ( !kind )
   {
     v48 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -675,10 +675,10 @@ LABEL_87:
     if ( kind != 2 )
     {
       if ( kind == 3 )
-        v47 = (System_String_o *)StringLiteral_6439;
+        v47 = (System_String_o *)StringLiteral_6439/*"FRIEND_EMPTY_FRIEND_MESSAGE"*/;
       goto LABEL_88;
     }
-    v84 = &StringLiteral_6440;
+    v84 = &StringLiteral_6440/*"FRIEND_EMPTY_OFFERED_MESSAGE"*/;
 LABEL_68:
     v47 = (System_String_o *)*v84;
   }
@@ -778,7 +778,7 @@ void __fastcall FriendOperationItemListViewManager__CreateSorteData(int32_t clas
     sub_B16FFC(&FriendOperationItemListViewManager_TypeInfo, method);
     sub_B16FFC(&ListViewSort___TypeInfo, v4);
     sub_B16FFC(&ListViewSort_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_6778, v6);
+    sub_B16FFC(&StringLiteral_6778/*"FriendOperation"*/, v6);
     byte_40FD8F7 = 1;
   }
   v45 = 0;
@@ -816,7 +816,7 @@ void __fastcall FriendOperationItemListViewManager__CreateSorteData(int32_t clas
       sortStatusList = v18->static_fields->sortStatusList;
       v45 = v19 + 1;
       v22 = System_Int32__ToString((int32_t)&v45, 0LL);
-      v23 = System_String__Concat_43743732((System_String_o *)StringLiteral_6778, v22, 0LL);
+      v23 = System_String__Concat_43743732((System_String_o *)StringLiteral_6778/*"FriendOperation"*/, v22, 0LL);
       v28 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v24, v25, v26, v27);
       ListViewSort___ctor_30208480(v28, v23, 3, 0, 0LL);
       if ( !sortStatusList )
@@ -1537,7 +1537,7 @@ void __fastcall FriendOperationItemListViewManager__OnLongPushSkill(
 
   if ( (byte_40FD905 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12578, obj);
+    sub_B16FFC(&StringLiteral_12578/*"ScrollViewEnabled"*/, obj);
     byte_40FD905 = 1;
   }
   if ( this->fields.isInput )
@@ -1552,7 +1552,7 @@ void __fastcall FriendOperationItemListViewManager__OnLongPushSkill(
     UnityEngine_Behaviour__set_enabled(v8, 0, 0LL);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_12578,
+      (System_String_o *)StringLiteral_12578/*"ScrollViewEnabled"*/,
       0.1,
       0LL);
     callbackFunc = this->fields.callbackFunc;
@@ -1943,7 +1943,7 @@ void __fastcall FriendOperationItemListViewManager__RequestInto(
     sub_B16FFC(&Method_FriendOperationItemListViewManager_OnMoveEnd__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_FriendOperationItemListViewObject__get_Count__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_FriendOperationItemListViewObject__get_Item__, v5);
-    sub_B16FFC(&StringLiteral_10004, v6);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v6);
     byte_40FD903 = 1;
   }
   ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0LL);
@@ -1988,7 +1988,7 @@ LABEL_14:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.2,
       0LL);
   }
@@ -2030,7 +2030,7 @@ void __fastcall FriendOperationItemListViewManager__RequestListObject(
     sub_B16FFC(&Method_FriendOperationItemListViewManager_OnMoveEnd__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_FriendOperationItemListViewObject__GetEnumerator__, v11);
     sub_B16FFC(&Method_System_Collections_Generic_List_FriendOperationItemListViewObject__get_Count__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FD901 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -2045,7 +2045,7 @@ void __fastcall FriendOperationItemListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -2115,7 +2115,7 @@ void __fastcall FriendOperationItemListViewManager__RequestListObject_31848396(
     sub_B16FFC(&Method_FriendOperationItemListViewManager_OnMoveEnd__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_FriendOperationItemListViewObject__GetEnumerator__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_FriendOperationItemListViewObject__get_Count__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FD902 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -2130,7 +2130,7 @@ void __fastcall FriendOperationItemListViewManager__RequestListObject_31848396(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2418,8 +2418,8 @@ void __fastcall FriendOperationItemListViewManager__SetMode_31847292(
     sub_B16FFC(&Method_FriendOperationItemListViewManager_OnMoveEnd__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_FriendOperationItemListViewObject__get_Count__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_FriendOperationItemListViewObject__get_Item__, v7);
-    sub_B16FFC(&StringLiteral_10004, v8);
-    sub_B16FFC(&StringLiteral_11393, v9);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v8);
+    sub_B16FFC(&StringLiteral_11393/*"RequestInto"*/, v9);
     byte_40FD900 = 1;
   }
   if ( mode != 5 )
@@ -2435,7 +2435,7 @@ void __fastcall FriendOperationItemListViewManager__SetMode_31847292(
           goto LABEL_39;
         UnityEngine_GameObject__SetActive(emptyMessageBase, 0, 0LL);
         v24 = 0;
-        v25 = (System_String_o *)StringLiteral_11393;
+        v25 = (System_String_o *)StringLiteral_11393/*"RequestInto"*/;
         goto LABEL_38;
       case 2:
         FriendOperationItemListViewManager__RequestListObject_31848396(this, 3, v22);
@@ -2515,7 +2515,7 @@ LABEL_39:
   {
 LABEL_37:
     this->fields.callbackCount = 1;
-    v25 = (System_String_o *)StringLiteral_10004;
+    v25 = (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/;
     v24 = 1045220557;
 LABEL_38:
     UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, v25, *(float *)&v24, 0LL);
@@ -2653,12 +2653,12 @@ void __fastcall FriendOperationItemListViewManager__SetSortButtonImage(
   if ( (byte_40FD909 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_17038, v4);
-    sub_B16FFC(&StringLiteral_16995, v5);
-    sub_B16FFC(&StringLiteral_16985, v6);
-    sub_B16FFC(&StringLiteral_17002, v7);
-    sub_B16FFC(&StringLiteral_16952, v8);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v4);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v5);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v6);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v7);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v8);
     byte_40FD909 = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -2695,7 +2695,7 @@ void __fastcall FriendOperationItemListViewManager__SetSortButtonImage(
       sortExplanationSprite = this->fields.sortExplanationSprite;
       if ( !sortExplanationSprite )
         goto LABEL_38;
-      v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+      v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
       UISprite__set_spriteName(sortExplanationSprite, *v17, 0LL);
       v18 = this->fields.sort;
       if ( !v18 )
@@ -2704,15 +2704,15 @@ void __fastcall FriendOperationItemListViewManager__SetSortButtonImage(
       if ( !v19 )
         goto LABEL_38;
       isAscendingOrder = v18->fields.isAscendingOrder;
-      v21 = (System_String_o **)&StringLiteral_16952;
-      v22 = (System_String_o **)&StringLiteral_16955;
+      v21 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+      v22 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
     }
     else
     {
       v25 = this->fields.sortExplanationSprite;
       if ( !v25 )
         goto LABEL_38;
-      v26 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+      v26 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
       UISprite__set_spriteName(v25, *v26, 0LL);
       v27 = this->fields.sort;
       if ( !v27 )
@@ -2721,8 +2721,8 @@ void __fastcall FriendOperationItemListViewManager__SetSortButtonImage(
       if ( !v19 )
         goto LABEL_38;
       isAscendingOrder = v27->fields.isAscendingOrder;
-      v21 = (System_String_o **)&StringLiteral_16955;
-      v22 = (System_String_o **)&StringLiteral_16952;
+      v21 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+      v22 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
     }
     if ( isAscendingOrder )
       v23 = v21;

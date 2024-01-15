@@ -118,7 +118,7 @@ void __fastcall BattleSelectServantComponent__setData(
     sub_B16FFC(&BattleSelectServantComponent_TypeInfo, svtData);
     sub_B16FFC(&IconLabelInfo_TypeInfo, v10);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F7543 = 1;
   }
   NowHp = 0;
@@ -199,7 +199,7 @@ void __fastcall BattleSelectServantComponent__setData(
   v40 = System_Int32__ToString((int32_t)&NowHp, 0LL);
   if ( !hpLabel )
     goto LABEL_29;
-  v41 = v40 ? v40 : (System_String_o *)StringLiteral_1;
+  v41 = v40 ? v40 : (System_String_o *)StringLiteral_1/*""*/;
   UILabel__set_text(hpLabel, v41, 0LL);
   hpGauge = this->fields.hpGauge;
   v43 = BattleServantData__getNowHp(svtData, 0LL);
@@ -246,7 +246,7 @@ void __fastcall BattleSelectServantComponent__setNone(BattleSelectServantCompone
 
   if ( (byte_40F7544 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F7544 = 1;
   }
   root = this->fields.root;
@@ -259,7 +259,7 @@ void __fastcall BattleSelectServantComponent__setNone(BattleSelectServantCompone
   if ( !servantSelectMask
     || (UnityEngine_GameObject__SetActive(servantSelectMask, 0, 0LL),
         (servantSelectMaskLabel = this->fields.servantSelectMaskLabel) == 0LL)
-    || (UILabel__set_text(servantSelectMaskLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(servantSelectMaskLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (v6 = (UnityEngine_Component_o *)this->fields.servantSelectMaskLabel) == 0LL)
     || (gameObject = UnityEngine_Component__get_gameObject(v6, 0LL)) == 0LL )
   {
@@ -287,8 +287,8 @@ void __fastcall BattleSelectServantComponent__setSelectMask(
   if ( (byte_40F7545 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, canSelect);
-    sub_B16FFC(&StringLiteral_2405, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_2405/*"BATTLE_DIALOG_CAN_NOT_REPLACE"*/, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F7545 = 1;
   }
   servantSelectMask = this->fields.servantSelectMask;
@@ -304,13 +304,13 @@ void __fastcall BattleSelectServantComponent__setSelectMask(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_2405, 0LL);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_2405/*"BATTLE_DIALOG_CAN_NOT_REPLACE"*/, 0LL);
     if ( servantSelectMaskLabel )
       goto LABEL_11;
 LABEL_14:
     sub_B170D4();
   }
-  v9 = (System_String_o *)StringLiteral_1;
+  v9 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !servantSelectMaskLabel )
     goto LABEL_14;
 LABEL_11:

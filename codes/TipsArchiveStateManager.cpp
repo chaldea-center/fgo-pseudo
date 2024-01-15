@@ -14,12 +14,12 @@ void __fastcall TipsArchiveStateManager___cctor(const MethodInfo *method)
   if ( (byte_40F7225 & 1) == 0 )
   {
     sub_B16FFC(&TipsArchiveStateManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_6606, v8);
+    sub_B16FFC(&StringLiteral_6606/*"Fgo_20230514_1"*/, v8);
     byte_40F7225 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TipsArchiveStateManager_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_6606;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6606;
+  v10 = (System_Int32_array **)StringLiteral_6606/*"Fgo_20230514_1"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6606/*"Fgo_20230514_1"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -276,13 +276,13 @@ void __fastcall TipsArchiveStateManager__SetSaveFileName(
   if ( (byte_40F721F & 1) == 0 )
   {
     sub_B16FFC(&DatFileName_TypeInfo, eventUiName);
-    sub_B16FFC(&StringLiteral_871, v5);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v5);
     byte_40F721F = 1;
   }
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName_27471476 = DatFileName__getFileName_27471476(40, eventUiName, 0LL, 0LL);
-  v7 = System_String__Concat_43743732((System_String_o *)StringLiteral_871, FileName_27471476, 0LL);
+  v7 = System_String__Concat_43743732((System_String_o *)StringLiteral_871/*"/"*/, FileName_27471476, 0LL);
   this->fields.saveName = v7;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.saveName,

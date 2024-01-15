@@ -248,43 +248,43 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
     sub_B16FFC(&ShopTopItemInfo___TypeInfo, v1);
     sub_B16FFC(&ShopTopItemInfo_TypeInfo, v3);
     sub_B16FFC(&ShopTopListViewManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_12079, v5);
-    sub_B16FFC(&StringLiteral_20296, v6);
-    sub_B16FFC(&StringLiteral_12051, v7);
-    sub_B16FFC(&StringLiteral_19539, v8);
-    sub_B16FFC(&StringLiteral_12153, v9);
-    sub_B16FFC(&StringLiteral_19535, v10);
-    sub_B16FFC(&StringLiteral_12145, v11);
-    sub_B16FFC(&StringLiteral_19545, v12);
-    sub_B16FFC(&StringLiteral_12064, v13);
-    sub_B16FFC(&StringLiteral_12073, v14);
-    sub_B16FFC(&StringLiteral_12091, v15);
-    sub_B16FFC(&StringLiteral_12053, v16);
-    sub_B16FFC(&StringLiteral_12154, v17);
-    sub_B16FFC(&StringLiteral_19537, v18);
-    sub_B16FFC(&StringLiteral_19550, v19);
-    sub_B16FFC(&StringLiteral_12069, v20);
-    sub_B16FFC(&StringLiteral_12085, v21);
-    sub_B16FFC(&StringLiteral_19534, v22);
-    sub_B16FFC(&StringLiteral_19540, v23);
-    sub_B16FFC(&StringLiteral_19541, v24);
-    sub_B16FFC(&StringLiteral_19543, v25);
-    sub_B16FFC(&StringLiteral_19549, v26);
-    sub_B16FFC(&StringLiteral_12032, v27);
-    sub_B16FFC(&StringLiteral_12087, v28);
-    sub_B16FFC(&StringLiteral_19547, v29);
-    sub_B16FFC(&StringLiteral_19544, v30);
-    sub_B16FFC(&StringLiteral_12033, v31);
-    sub_B16FFC(&StringLiteral_19542, v32);
-    sub_B16FFC(&StringLiteral_12076, v33);
-    sub_B16FFC(&StringLiteral_12061, v34);
-    sub_B16FFC(&StringLiteral_19546, v35);
-    sub_B16FFC(&StringLiteral_12078, v36);
-    sub_B16FFC(&StringLiteral_1, v37);
-    sub_B16FFC(&StringLiteral_19538, v38);
-    sub_B16FFC(&StringLiteral_19533, v39);
-    sub_B16FFC(&StringLiteral_12075, v40);
-    sub_B16FFC(&StringLiteral_19536, v41);
+    sub_B16FFC(&StringLiteral_12079/*"SHOP_BUY_STONE_FRAGMENTS"*/, v5);
+    sub_B16FFC(&StringLiteral_20296/*"mask00"*/, v6);
+    sub_B16FFC(&StringLiteral_12051/*"SHOP_BUY_ANONYMOUS"*/, v7);
+    sub_B16FFC(&StringLiteral_19539/*"img_shop_15"*/, v8);
+    sub_B16FFC(&StringLiteral_12153/*"SHOP_START_UP_SUMMON"*/, v9);
+    sub_B16FFC(&StringLiteral_19535/*"img_shop_11"*/, v10);
+    sub_B16FFC(&StringLiteral_12145/*"SHOP_SELL_SERVANT"*/, v11);
+    sub_B16FFC(&StringLiteral_19545/*"img_shop_22"*/, v12);
+    sub_B16FFC(&StringLiteral_12064/*"SHOP_BUY_GRAIL_FRAGMENTS"*/, v13);
+    sub_B16FFC(&StringLiteral_12073/*"SHOP_BUY_RARE_PRI"*/, v14);
+    sub_B16FFC(&StringLiteral_12091/*"SHOP_EVENT_SVT_EQUIP"*/, v15);
+    sub_B16FFC(&StringLiteral_12053/*"SHOP_BUY_BANK_ITEM"*/, v16);
+    sub_B16FFC(&StringLiteral_12154/*"SHOP_TRADE_AP"*/, v17);
+    sub_B16FFC(&StringLiteral_19537/*"img_shop_13"*/, v18);
+    sub_B16FFC(&StringLiteral_19550/*"img_shop_9"*/, v19);
+    sub_B16FFC(&StringLiteral_12069/*"SHOP_BUY_MANA_ITEM"*/, v20);
+    sub_B16FFC(&StringLiteral_12085/*"SHOP_BUY_SVT_COSTUME"*/, v21);
+    sub_B16FFC(&StringLiteral_19534/*"img_shop_10"*/, v22);
+    sub_B16FFC(&StringLiteral_19540/*"img_shop_16"*/, v23);
+    sub_B16FFC(&StringLiteral_19541/*"img_shop_17"*/, v24);
+    sub_B16FFC(&StringLiteral_19543/*"img_shop_20"*/, v25);
+    sub_B16FFC(&StringLiteral_19549/*"img_shop_8"*/, v26);
+    sub_B16FFC(&StringLiteral_12032/*"SHOP13"*/, v27);
+    sub_B16FFC(&StringLiteral_12087/*"SHOP_COIN_ROOM"*/, v28);
+    sub_B16FFC(&StringLiteral_19547/*"img_shop_4"*/, v29);
+    sub_B16FFC(&StringLiteral_19544/*"img_shop_21"*/, v30);
+    sub_B16FFC(&StringLiteral_12033/*"SHOP15"*/, v31);
+    sub_B16FFC(&StringLiteral_19542/*"img_shop_18"*/, v32);
+    sub_B16FFC(&StringLiteral_12076/*"SHOP_BUY_SERVANT_STORAGE"*/, v33);
+    sub_B16FFC(&StringLiteral_12061/*"SHOP_BUY_EVENT_ITEM"*/, v34);
+    sub_B16FFC(&StringLiteral_19546/*"img_shop_3"*/, v35);
+    sub_B16FFC(&StringLiteral_12078/*"SHOP_BUY_SPECIAL_ITEM"*/, v36);
+    sub_B16FFC(&StringLiteral_1/*""*/, v37);
+    sub_B16FFC(&StringLiteral_19538/*"img_shop_14"*/, v38);
+    sub_B16FFC(&StringLiteral_19533/*"img_shop_1"*/, v39);
+    sub_B16FFC(&StringLiteral_12075/*"SHOP_BUY_SERVANT_EQUIP_STORAGE"*/, v40);
+    sub_B16FFC(&StringLiteral_19536/*"img_shop_12"*/, v41);
     byte_40F91A8 = 1;
   }
   v42 = (System_Int32_array **)sub_B17014(ShopTopItemInfo___TypeInfo, 19LL, v2);
@@ -292,8 +292,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v47,
     5,
-    (System_String_o *)StringLiteral_12061,
-    (System_String_o *)StringLiteral_19549,
+    (System_String_o *)StringLiteral_12061/*"SHOP_BUY_EVENT_ITEM"*/,
+    (System_String_o *)StringLiteral_19549/*"img_shop_8"*/,
     7,
     1,
     0LL);
@@ -313,8 +313,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v60,
     9,
-    (System_String_o *)StringLiteral_12153,
-    (System_String_o *)StringLiteral_19541,
+    (System_String_o *)StringLiteral_12153/*"SHOP_START_UP_SUMMON"*/,
+    (System_String_o *)StringLiteral_19541/*"img_shop_17"*/,
     16,
     12,
     0LL);
@@ -332,8 +332,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v70,
     8,
-    (System_String_o *)StringLiteral_12145,
-    (System_String_o *)StringLiteral_19547,
+    (System_String_o *)StringLiteral_12145/*"SHOP_SELL_SERVANT"*/,
+    (System_String_o *)StringLiteral_19547/*"img_shop_4"*/,
     9,
     0,
     0LL);
@@ -351,8 +351,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v80,
     3,
-    (System_String_o *)StringLiteral_12069,
-    (System_String_o *)StringLiteral_19546,
+    (System_String_o *)StringLiteral_12069/*"SHOP_BUY_MANA_ITEM"*/,
+    (System_String_o *)StringLiteral_19546/*"img_shop_3"*/,
     2,
     2,
     0LL);
@@ -370,8 +370,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v90,
     19,
-    (System_String_o *)StringLiteral_12032,
-    (System_String_o *)StringLiteral_19542,
+    (System_String_o *)StringLiteral_12032/*"SHOP13"*/,
+    (System_String_o *)StringLiteral_19542/*"img_shop_18"*/,
     18,
     13,
     0LL);
@@ -389,8 +389,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v100,
     14,
-    (System_String_o *)StringLiteral_12073,
-    (System_String_o *)StringLiteral_19535,
+    (System_String_o *)StringLiteral_12073/*"SHOP_BUY_RARE_PRI"*/,
+    (System_String_o *)StringLiteral_19535/*"img_shop_11"*/,
     3,
     3,
     0LL);
@@ -408,8 +408,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v110,
     22,
-    (System_String_o *)StringLiteral_12033,
-    (System_String_o *)StringLiteral_19544,
+    (System_String_o *)StringLiteral_12033/*"SHOP15"*/,
+    (System_String_o *)StringLiteral_19544/*"img_shop_21"*/,
     20,
     15,
     0LL);
@@ -427,8 +427,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v120,
     20,
-    (System_String_o *)StringLiteral_12154,
-    (System_String_o *)StringLiteral_19543,
+    (System_String_o *)StringLiteral_12154/*"SHOP_TRADE_AP"*/,
+    (System_String_o *)StringLiteral_19543/*"img_shop_20"*/,
     19,
     14,
     0LL);
@@ -446,8 +446,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v130,
     17,
-    (System_String_o *)StringLiteral_12085,
-    (System_String_o *)StringLiteral_19540,
+    (System_String_o *)StringLiteral_12085/*"SHOP_BUY_SVT_COSTUME"*/,
+    (System_String_o *)StringLiteral_19540/*"img_shop_16"*/,
     15,
     11,
     0LL);
@@ -465,8 +465,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v140,
     23,
-    (System_String_o *)StringLiteral_12091,
-    (System_String_o *)StringLiteral_19545,
+    (System_String_o *)StringLiteral_12091/*"SHOP_EVENT_SVT_EQUIP"*/,
+    (System_String_o *)StringLiteral_19545/*"img_shop_22"*/,
     21,
     16,
     0LL);
@@ -484,8 +484,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v150,
     6,
-    (System_String_o *)StringLiteral_12076,
-    (System_String_o *)StringLiteral_19536,
+    (System_String_o *)StringLiteral_12076/*"SHOP_BUY_SERVANT_STORAGE"*/,
+    (System_String_o *)StringLiteral_19536/*"img_shop_12"*/,
     11,
     0,
     0LL);
@@ -503,8 +503,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v160,
     7,
-    (System_String_o *)StringLiteral_12075,
-    (System_String_o *)StringLiteral_19537,
+    (System_String_o *)StringLiteral_12075/*"SHOP_BUY_SERVANT_EQUIP_STORAGE"*/,
+    (System_String_o *)StringLiteral_19537/*"img_shop_13"*/,
     12,
     0,
     0LL);
@@ -522,8 +522,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v170,
     12,
-    (System_String_o *)StringLiteral_12079,
-    (System_String_o *)StringLiteral_19550,
+    (System_String_o *)StringLiteral_12079/*"SHOP_BUY_STONE_FRAGMENTS"*/,
+    (System_String_o *)StringLiteral_19550/*"img_shop_9"*/,
     4,
     0,
     0LL);
@@ -541,8 +541,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v180,
     1,
-    (System_String_o *)StringLiteral_12053,
-    (System_String_o *)StringLiteral_19533,
+    (System_String_o *)StringLiteral_12053/*"SHOP_BUY_BANK_ITEM"*/,
+    (System_String_o *)StringLiteral_19533/*"img_shop_1"*/,
     10,
     0,
     0LL);
@@ -560,8 +560,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v190,
     16,
-    (System_String_o *)StringLiteral_12064,
-    (System_String_o *)StringLiteral_19539,
+    (System_String_o *)StringLiteral_12064/*"SHOP_BUY_GRAIL_FRAGMENTS"*/,
+    (System_String_o *)StringLiteral_19539/*"img_shop_15"*/,
     14,
     0,
     0LL);
@@ -579,8 +579,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v200,
     18,
-    (System_String_o *)StringLiteral_12087,
-    (System_String_o *)StringLiteral_19541,
+    (System_String_o *)StringLiteral_12087/*"SHOP_COIN_ROOM"*/,
+    (System_String_o *)StringLiteral_19541/*"img_shop_17"*/,
     17,
     0,
     0LL);
@@ -598,8 +598,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v210,
     15,
-    (System_String_o *)StringLiteral_12078,
-    (System_String_o *)StringLiteral_19538,
+    (System_String_o *)StringLiteral_12078/*"SHOP_BUY_SPECIAL_ITEM"*/,
+    (System_String_o *)StringLiteral_19538/*"img_shop_14"*/,
     5,
     0,
     0LL);
@@ -617,8 +617,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v220,
     13,
-    (System_String_o *)StringLiteral_12051,
-    (System_String_o *)StringLiteral_19534,
+    (System_String_o *)StringLiteral_12051/*"SHOP_BUY_ANONYMOUS"*/,
+    (System_String_o *)StringLiteral_19534/*"img_shop_10"*/,
     6,
     0,
     0LL);
@@ -636,8 +636,8 @@ void __fastcall ShopTopListViewManager___cctor(const MethodInfo *method)
   ShopTopItemInfo___ctor(
     v230,
     21,
-    (System_String_o *)StringLiteral_1,
-    (System_String_o *)StringLiteral_20296,
+    (System_String_o *)StringLiteral_1/*""*/,
+    (System_String_o *)StringLiteral_20296/*"mask00"*/,
     0,
     0,
     0LL);
@@ -765,7 +765,7 @@ void __fastcall ShopTopListViewManager__CreateList(
     sub_B16FFC(&ShopRootConstants_TypeInfo, v15);
     sub_B16FFC(&ShopTopListViewItem_TypeInfo, v16);
     sub_B16FFC(&ShopTopListViewManager_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_12031, v18);
+    sub_B16FFC(&StringLiteral_12031/*"SHOP04_SHOP_STATE"*/, v18);
     byte_40F919B = 1;
   }
   v19 = ShopTopListViewManager_TypeInfo;
@@ -831,7 +831,7 @@ void __fastcall ShopTopListViewManager__CreateList(
       Kind_k__BackingField = v44->fields._Kind_k__BackingField;
       if ( Kind_k__BackingField == 17 )
       {
-        Value = (ShopTopListViewManager_c *)ConstantMaster__getValue((System_String_o *)StringLiteral_12031, 0LL);
+        Value = (ShopTopListViewManager_c *)ConstantMaster__getValue((System_String_o *)StringLiteral_12031/*"SHOP04_SHOP_STATE"*/, 0LL);
         if ( (_DWORD)Value == -1 )
           goto LABEL_49;
         Kind_k__BackingField = v44->fields._Kind_k__BackingField;
@@ -1360,7 +1360,7 @@ void __fastcall ShopTopListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Count__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_ShopTopListViewObject__get_Item__, v6);
     sub_B16FFC(&Method_ShopTopListViewManager_OnMoveEnd__, v7);
-    sub_B16FFC(&StringLiteral_10004, v8);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v8);
     byte_40F91A2 = 1;
   }
   if ( initMode == 1 )
@@ -1411,7 +1411,7 @@ LABEL_20:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

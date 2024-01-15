@@ -235,7 +235,7 @@ void __fastcall UserItemListViewObject__OnClickSelect(UserItemListViewObject_o *
   if ( (byte_40F9735 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9922, v3);
+    sub_B16FFC(&StringLiteral_9922/*"OnClickListView"*/, v3);
     byte_40F9735 = 1;
   }
   if ( this->fields.linkItem )
@@ -249,7 +249,7 @@ void __fastcall UserItemListViewObject__OnClickSelect(UserItemListViewObject_o *
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9922, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9922/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 

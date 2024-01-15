@@ -466,9 +466,9 @@ void __fastcall ServantStatusVoiceListViewManager__CreateList(
     sub_B16FFC(&ServantStatusVoiceListViewItem_TypeInfo, v38);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v39);
     sub_B16FFC(&TutorialFlag_TypeInfo, v40);
-    sub_B16FFC(&StringLiteral_2221, v41);
-    sub_B16FFC(&StringLiteral_15057, v42);
-    sub_B16FFC(&StringLiteral_11998, v43);
+    sub_B16FFC(&StringLiteral_2221/*"B050"*/, v41);
+    sub_B16FFC(&StringLiteral_15057/*"VOICE_EMPTY_MESSAGE"*/, v42);
+    sub_B16FFC(&StringLiteral_11998/*"SERVANT_STATUS_VOICE_EXPLANATION"*/, v43);
     byte_40FCAA7 = 1;
   }
   firstPriority[0] = 0;
@@ -477,7 +477,7 @@ void __fastcall ServantStatusVoiceListViewManager__CreateList(
   afterRelationList = 0LL;
   memset(&v255, 0, sizeof(v255));
   entity = 0LL;
-  v44 = StringLiteral_15057;
+  v44 = StringLiteral_15057/*"VOICE_EMPTY_MESSAGE"*/;
   memset(&v253, 0, sizeof(v253));
   v252 = 0;
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
@@ -1175,7 +1175,7 @@ LABEL_200:
     }
     v155 = DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
              (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)v241,
-             (System_String_o *)StringLiteral_2221,
+             (System_String_o *)StringLiteral_2221/*"B050"*/,
              (const MethodInfo_266F7D8 *)Method_DataMasterBase_VoiceMaster__VoiceEntity__string__GetEntity__);
     v156 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !v156 )
@@ -1406,7 +1406,7 @@ LABEL_229:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v229 = LocalizationManager__Get((System_String_o *)StringLiteral_11998, 0LL);
+  v229 = LocalizationManager__Get((System_String_o *)StringLiteral_11998/*"SERVANT_STATUS_VOICE_EXPLANATION"*/, 0LL);
   if ( !explanationLabel )
     goto LABEL_257;
   UILabel__set_text(explanationLabel, v229, 0LL);
@@ -1497,7 +1497,7 @@ bool __fastcall ServantStatusVoiceListViewManager__IsSvtVoiceEntityCondAddItem(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_ServantVoiceMaster___, *(_QWORD *)&svtId);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_15842, v9);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v9);
     byte_40FCAA8 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -1531,7 +1531,7 @@ LABEL_26:
     || (v23 = (System_String_o *)((__int64 (__fastcall *)(struct CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *, void *))id->klass->vtable._3_ToString.method)(
                                    id,
                                    id->klass[1]._1.image),
-        Entity_30014400 = System_String__Concat_43746016(v21, (System_String_o *)StringLiteral_15842, v23, 0LL),
+        Entity_30014400 = System_String__Concat_43746016(v21, (System_String_o *)StringLiteral_15842/*"_"*/, v23, 0LL),
         (v24 = *(_QWORD *)(v18 + 32)) == 0) )
   {
 LABEL_25:
@@ -1829,7 +1829,7 @@ void __fastcall ServantStatusVoiceListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusVoiceListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusVoiceListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_ServantStatusVoiceListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FCAAD = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -1844,7 +1844,7 @@ void __fastcall ServantStatusVoiceListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -1914,7 +1914,7 @@ void __fastcall ServantStatusVoiceListViewManager__RequestListObject_30016832(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusVoiceListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusVoiceListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_ServantStatusVoiceListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FCAAE = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -1929,7 +1929,7 @@ void __fastcall ServantStatusVoiceListViewManager__RequestListObject_30016832(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2046,7 +2046,7 @@ void __fastcall ServantStatusVoiceListViewManager__SetMode_30015892(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantStatusVoiceListViewObject__get_Item__, v12);
     sub_B16FFC(&ServantStatusVoiceListViewItem_TypeInfo, v13);
     sub_B16FFC(&Method_ServantStatusVoiceListViewManager_OnMoveEnd__, v14);
-    sub_B16FFC(&StringLiteral_10004, v15);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v15);
     byte_40FCAAC = 1;
   }
   memset(&i, 0, sizeof(i));
@@ -2124,7 +2124,7 @@ void __fastcall ServantStatusVoiceListViewManager__SetMode_30015892(
         this->fields.callbackCount = 1;
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_10004,
+          (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
           0.2,
           0LL);
       }

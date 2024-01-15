@@ -228,8 +228,8 @@ void __fastcall ExpeditionPointRewardDialogComponent__OnClickSwitchShowMode(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_22700, v8);
-    sub_B16FFC(&StringLiteral_22702, v9);
+    sub_B16FFC(&StringLiteral_22700/*"treasurechest_btn"*/, v8);
+    sub_B16FFC(&StringLiteral_22702/*"treasurechest_btn_on"*/, v9);
     byte_40FACFD = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -240,7 +240,7 @@ void __fastcall ExpeditionPointRewardDialogComponent__OnClickSwitchShowMode(
   this->fields.isShowPossessionNum = !isShowPossessionNum;
   if ( !viewChangeButton )
     goto LABEL_30;
-  v12 = isShowPossessionNum ? (System_String_o **)&StringLiteral_22700 : (System_String_o **)&StringLiteral_22702;
+  v12 = isShowPossessionNum ? (System_String_o **)&StringLiteral_22700/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_22702/*"treasurechest_btn_on"*/;
   UIButton__set_normalSprite(viewChangeButton, *v12, 0LL);
   v13 = (UnityEngine_Component_o *)this->fields.viewChangeButton;
   if ( !v13 )
@@ -448,14 +448,14 @@ void __fastcall ExpeditionPointRewardDialogComponent__Open(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
     sub_B16FFC(&Method_ExpeditionPointRewardDialogComponent___c__DisplayClass27_0__Open_b__0__, v22);
     sub_B16FFC(&ExpeditionPointRewardDialogComponent___c__DisplayClass27_0_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_5764, v24);
-    sub_B16FFC(&StringLiteral_5749, v25);
-    sub_B16FFC(&StringLiteral_22700, v26);
-    sub_B16FFC(&StringLiteral_5770, v27);
-    sub_B16FFC(&StringLiteral_22706, v28);
-    sub_B16FFC(&StringLiteral_2463, v29);
-    sub_B16FFC(&StringLiteral_5762, v30);
-    sub_B16FFC(&StringLiteral_5765, v31);
+    sub_B16FFC(&StringLiteral_5764/*"EXPEDITION_EVENT_POINT"*/, v24);
+    sub_B16FFC(&StringLiteral_5749/*"EXPEDITION_BOX_EVENT_POINT_REWARD_TITLE"*/, v25);
+    sub_B16FFC(&StringLiteral_22700/*"treasurechest_btn"*/, v26);
+    sub_B16FFC(&StringLiteral_5770/*"EXPEDITION_REWARD_DIALOG_VIEW_CHANGE"*/, v27);
+    sub_B16FFC(&StringLiteral_22706/*"treasurechest_img_bg_reward"*/, v28);
+    sub_B16FFC(&StringLiteral_2463/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, v29);
+    sub_B16FFC(&StringLiteral_5762/*"EXPEDITION_DIALOG_CANCEL"*/, v30);
+    sub_B16FFC(&StringLiteral_5765/*"EXPEDITION_EVENT_POINT_REWARD"*/, v31);
     byte_40FACF8 = 1;
   }
   v32 = sub_B170CC(
@@ -521,12 +521,12 @@ void __fastcall ExpeditionPointRewardDialogComponent__Open(
           (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI((UISprite_o *)v60, (System_String_o *)StringLiteral_22700, 0LL);
+  AtlasManager__SetEventUI((UISprite_o *)v60, (System_String_o *)StringLiteral_22700/*"treasurechest_btn"*/, 0LL);
   v61 = this->fields.viewChangeButton;
   this->fields.isShowPossessionNum = 0;
   if ( !v61 )
     goto LABEL_36;
-  UIButton__set_normalSprite(v61, (System_String_o *)StringLiteral_22700, 0LL);
+  UIButton__set_normalSprite(v61, (System_String_o *)StringLiteral_22700/*"treasurechest_btn"*/, 0LL);
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
     goto LABEL_36;
@@ -566,7 +566,7 @@ void __fastcall ExpeditionPointRewardDialogComponent__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v78 = LocalizationManager__Get((System_String_o *)StringLiteral_5764, 0LL);
+  v78 = LocalizationManager__Get((System_String_o *)StringLiteral_5764/*"EXPEDITION_EVENT_POINT"*/, 0LL);
   if ( !this->fields.viewChangeButton )
     goto LABEL_36;
   v79 = (Il2CppObject *)v78;
@@ -591,27 +591,27 @@ void __fastcall ExpeditionPointRewardDialogComponent__Open(
           v83,
           1,
           (const MethodInfo_18BD5AC *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____66819560);
-  v85 = LocalizationManager__Get((System_String_o *)StringLiteral_5770, 0LL);
+  v85 = LocalizationManager__Get((System_String_o *)StringLiteral_5770/*"EXPEDITION_REWARD_DIALOG_VIEW_CHANGE"*/, 0LL);
   if ( !v82 )
     goto LABEL_36;
   UILabel__set_text(v82, v85, 0LL);
-  v86 = LocalizationManager__Get((System_String_o *)StringLiteral_5762, 0LL);
+  v86 = LocalizationManager__Get((System_String_o *)StringLiteral_5762/*"EXPEDITION_DIALOG_CANCEL"*/, 0LL);
   if ( !v84 )
     goto LABEL_36;
   UILabel__set_text(v84, v86, 0LL);
   titleLabel = this->fields.titleLabel;
-  v88 = LocalizationManager__Get((System_String_o *)StringLiteral_5749, 0LL);
+  v88 = LocalizationManager__Get((System_String_o *)StringLiteral_5749/*"EXPEDITION_BOX_EVENT_POINT_REWARD_TITLE"*/, 0LL);
   v89 = System_String__Format(v88, v79, 0LL);
   if ( !titleLabel )
     goto LABEL_36;
   UILabel__set_text(titleLabel, v89, 0LL);
   titleNextItemLabel = this->fields.titleNextItemLabel;
-  v91 = LocalizationManager__Get((System_String_o *)StringLiteral_2463, 0LL);
+  v91 = LocalizationManager__Get((System_String_o *)StringLiteral_2463/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, 0LL);
   if ( !titleNextItemLabel )
     goto LABEL_36;
   UILabel__set_text(titleNextItemLabel, v91, 0LL);
   titleAtLabel = this->fields.titleAtLabel;
-  v93 = LocalizationManager__Get((System_String_o *)StringLiteral_5765, 0LL);
+  v93 = LocalizationManager__Get((System_String_o *)StringLiteral_5765/*"EXPEDITION_EVENT_POINT_REWARD"*/, 0LL);
   if ( !titleAtLabel )
     goto LABEL_36;
   UILabel__set_text(titleAtLabel, v93, 0LL);
@@ -623,8 +623,8 @@ void __fastcall ExpeditionPointRewardDialogComponent__Open(
   if ( !pointRewardRoot )
     goto LABEL_36;
   UnityEngine_GameObject__SetActive(pointRewardRoot, 1, 0LL);
-  AtlasManager__SetEventUI(this->fields.eventPointBg, (System_String_o *)StringLiteral_22706, 0LL);
-  AtlasManager__SetEventUI(this->fields.eventPointRewardBg, (System_String_o *)StringLiteral_22706, 0LL);
+  AtlasManager__SetEventUI(this->fields.eventPointBg, (System_String_o *)StringLiteral_22706/*"treasurechest_img_bg_reward"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.eventPointRewardBg, (System_String_o *)StringLiteral_22706/*"treasurechest_img_bg_reward"*/, 0LL);
   EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(eventId, 0LL);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -696,9 +696,9 @@ void __fastcall ExpeditionPointRewardDialogComponent__SetNextItemLabel(
   {
     sub_B16FFC(&long_TypeInfo, userEventPoint);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_2468, v8);
-    sub_B16FFC(&StringLiteral_2466, v9);
-    sub_B16FFC(&StringLiteral_2464, v10);
+    sub_B16FFC(&StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v8);
+    sub_B16FFC(&StringLiteral_2466/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, v9);
+    sub_B16FFC(&StringLiteral_2464/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, v10);
     byte_40FACFA = 1;
   }
   nameText = 0LL;
@@ -711,12 +711,12 @@ void __fastcall ExpeditionPointRewardDialogComponent__SetNextItemLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2466, 0LL);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2466/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
     if ( atLabel )
     {
       UILabel__set_text(atLabel, v19, 0LL);
       nextItemLabel = this->fields.nextItemLabel;
-      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2464, 0LL);
+      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2464/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
       if ( nextItemLabel )
         goto LABEL_16;
     }
@@ -730,7 +730,7 @@ LABEL_19:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2468, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
   v21 = eventRewardEnt->fields.point - userEventPoint;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v21);
   v14 = System_String__Format(v12, v13, 0LL);

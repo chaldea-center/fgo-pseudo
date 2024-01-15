@@ -31,7 +31,7 @@ void __fastcall FieldChangeBuffDeleteProcess__Exec(
   {
     sub_B16FFC(&PlayFieldMotionBattleLogicTask_TypeInfo, buff);
     sub_B16FFC(&UpdateAllViewBattleLogicTask_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_8783, v8);
+    sub_B16FFC(&StringLiteral_8783/*"MOTION_UPDATE_FIELD"*/, v8);
     byte_40F8E5F = 1;
   }
   if ( !buff )
@@ -55,7 +55,7 @@ void __fastcall FieldChangeBuffDeleteProcess__Exec(
     {
       v21 = this->fields._FieldEnvData_k__BackingField;
       v22 = (PlayFieldMotionBattleLogicTask_o *)sub_B170CC(PlayFieldMotionBattleLogicTask_TypeInfo, v17, v18, v19, v20);
-      PlayFieldMotionBattleLogicTask___ctor(v22, (System_String_o *)StringLiteral_8783, 0, 0LL);
+      PlayFieldMotionBattleLogicTask___ctor(v22, (System_String_o *)StringLiteral_8783/*"MOTION_UPDATE_FIELD"*/, 0, 0LL);
       if ( v21 )
       {
         BattleFieldEnvironmentData__AddRemoveProcTask(v21, (BattleLogicTask_o *)v22, 1, 1, 0LL);

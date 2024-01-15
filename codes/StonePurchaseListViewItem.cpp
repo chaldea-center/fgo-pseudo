@@ -82,12 +82,12 @@ System_String_o *__fastcall StonePurchaseListViewItem__ToString(
 
   if ( (byte_40FAEA5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8228, method);
+    sub_B16FFC(&StringLiteral_8228/*"Item "*/, method);
     byte_40FAEA5 = 1;
   }
   if ( (byte_40FAEA0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, method);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, method);
     byte_40FAEA0 = 1;
   }
   bankShop = this->fields.bankShop;
@@ -101,9 +101,9 @@ System_String_o *__fastcall StonePurchaseListViewItem__ToString(
     if ( entity )
       p_name = &entity->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_18326;
+      p_name = (System_String_o **)&StringLiteral_18326/*"error"*/;
   }
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_8228, *p_name, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_8228/*"Item "*/, *p_name, 0LL);
 }
 
 
@@ -124,14 +124,14 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_CountDetailText(
 
   if ( (byte_40FAEA2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FAEA2 = 1;
   }
   bankShop = this->fields.bankShop;
   if ( bankShop )
     p_numDetail = &bankShop->fields.numDetail;
   else
-    p_numDetail = (System_String_o **)&StringLiteral_1;
+    p_numDetail = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_numDetail;
 }
 
@@ -145,7 +145,7 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_CountText(
 
   if ( (byte_40FAEA1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, method);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, method);
     byte_40FAEA1 = 1;
   }
   bankShop = this->fields.bankShop;
@@ -155,7 +155,7 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_CountText(
   if ( entity )
     return ItemEntity__GetCountText(entity, 1, 0LL);
   else
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
 }
 
 
@@ -168,14 +168,14 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_DetailText(
 
   if ( (byte_40FAEA4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, method);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, method);
     byte_40FAEA4 = 1;
   }
   entity = this->fields.entity;
   if ( entity )
     p_detail = &entity->fields.detail;
   else
-    p_detail = (System_String_o **)&StringLiteral_18326;
+    p_detail = (System_String_o **)&StringLiteral_18326/*"error"*/;
   return *p_detail;
 }
 
@@ -202,7 +202,7 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_NameText(
 
   if ( (byte_40FAEA0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, method);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, method);
     byte_40FAEA0 = 1;
   }
   bankShop = this->fields.bankShop;
@@ -216,7 +216,7 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_NameText(
     if ( entity )
       p_name = &entity->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_18326;
+      p_name = (System_String_o **)&StringLiteral_18326/*"error"*/;
   }
   return *p_name;
 }
@@ -253,13 +253,13 @@ System_String_o *__fastcall StonePurchaseListViewItem__get_PriceDetilText(
 
   if ( (byte_40FAEA3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FAEA3 = 1;
   }
   bankShop = this->fields.bankShop;
   if ( bankShop )
     p_priceDetail = &bankShop->fields.priceDetail;
   else
-    p_priceDetail = (System_String_o **)&StringLiteral_1;
+    p_priceDetail = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_priceDetail;
 }

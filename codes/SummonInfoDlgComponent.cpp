@@ -108,14 +108,14 @@ void __fastcall SummonInfoDlgComponent__Init(SummonInfoDlgComponent_o *this, con
 
   if ( (byte_40FD495 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FD495 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cautionInfo = this->fields.cautionInfo) == 0LL)
     || (UnityEngine_GameObject__SetActive(cautionInfo, 0, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
@@ -148,7 +148,7 @@ void __fastcall SummonInfoDlgComponent__OpenInfoMessageDlg(
   if ( (byte_40FD496 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, title);
-    sub_B16FFC(&StringLiteral_3252, v12);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v12);
     byte_40FD496 = 1;
   }
   this->fields.callbackFunc = callback;
@@ -175,7 +175,7 @@ void __fastcall SummonInfoDlgComponent__OpenInfoMessageDlg(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !confirmBtnLabel
     || (UILabel__set_text(confirmBtnLabel, v16, 0LL), (cautionInfo = this->fields.cautionInfo) == 0LL)
     || (UnityEngine_GameObject__SetActive(cautionInfo, 1, 0LL),
@@ -237,10 +237,10 @@ System_String_o *__fastcall SummonInfoDlgComponent__get_closeBtnPath(
 {
   if ( (byte_40FD498 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4206, method);
+    sub_B16FFC(&StringLiteral_4206/*"ConfirmWindow/ConfirmBntInfo/DecideButton"*/, method);
     byte_40FD498 = 1;
   }
-  return (System_String_o *)StringLiteral_4206;
+  return (System_String_o *)StringLiteral_4206/*"ConfirmWindow/ConfirmBntInfo/DecideButton"*/;
 }
 
 

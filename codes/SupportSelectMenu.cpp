@@ -505,10 +505,10 @@ void __fastcall SupportSelectMenu__SetActiveCurrentSupportSprite(
   if ( (byte_40FD24E & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, mainQuestActive);
-    sub_B16FFC(&StringLiteral_19264, v11);
-    sub_B16FFC(&StringLiteral_19263, v12);
-    sub_B16FFC(&StringLiteral_19262, v13);
-    sub_B16FFC(&StringLiteral_19261, v14);
+    sub_B16FFC(&StringLiteral_19264/*"icon_event_2_{0}"*/, v11);
+    sub_B16FFC(&StringLiteral_19263/*"icon_event_2"*/, v12);
+    sub_B16FFC(&StringLiteral_19262/*"icon_event_1_{0}"*/, v13);
+    sub_B16FFC(&StringLiteral_19261/*"icon_event_1"*/, v14);
     byte_40FD24E = 1;
   }
   currentMainQuestSupportSprite = (UnityEngine_Component_o *)this->fields.currentMainQuestSupportSprite;
@@ -530,7 +530,7 @@ void __fastcall SupportSelectMenu__SetActiveCurrentSupportSprite(
   {
     v32 = mainNo;
     v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32);
-    v21 = System_String__Format((System_String_o *)StringLiteral_19264, v20, 0LL);
+    v21 = System_String__Format((System_String_o *)StringLiteral_19264/*"icon_event_2_{0}"*/, v20, 0LL);
     if ( !v19 )
       goto LABEL_24;
     v22 = v21;
@@ -539,7 +539,7 @@ void __fastcall SupportSelectMenu__SetActiveCurrentSupportSprite(
   {
     if ( !v19 )
       goto LABEL_24;
-    v22 = (System_String_o *)StringLiteral_19263;
+    v22 = (System_String_o *)StringLiteral_19263/*"icon_event_2"*/;
   }
   UISprite__set_spriteName(v19, v22, 0LL);
   v23 = this->fields.currentEventQuestSupportSprite;
@@ -547,7 +547,7 @@ void __fastcall SupportSelectMenu__SetActiveCurrentSupportSprite(
   {
     v31 = eventNo;
     v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31);
-    v25 = System_String__Format((System_String_o *)StringLiteral_19262, v24, 0LL);
+    v25 = System_String__Format((System_String_o *)StringLiteral_19262/*"icon_event_1_{0}"*/, v24, 0LL);
     if ( !v23 )
       goto LABEL_24;
     v26 = v25;
@@ -556,7 +556,7 @@ void __fastcall SupportSelectMenu__SetActiveCurrentSupportSprite(
   {
     if ( !v23 )
       goto LABEL_24;
-    v26 = (System_String_o *)StringLiteral_19261;
+    v26 = (System_String_o *)StringLiteral_19261/*"icon_event_1"*/;
   }
   UISprite__set_spriteName(v23, v26, 0LL);
   currentSupportDeckSpriteGrid = this->fields.currentSupportDeckSpriteGrid;
@@ -980,8 +980,8 @@ void __fastcall SupportSelectMenu__SetFixDeckButton(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&currentId);
     sub_B16FFC(&int_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_17027, v9);
-    sub_B16FFC(&StringLiteral_17028, v10);
+    sub_B16FFC(&StringLiteral_17027/*"btn_txt_set0_1"*/, v9);
+    sub_B16FFC(&StringLiteral_17028/*"btn_txt_set{0}_1"*/, v10);
     byte_40FD24F = 1;
   }
   v11 = (System_String_o *)BalanceConfig_TypeInfo;
@@ -1024,14 +1024,14 @@ LABEL_33:
       {
         v23 = fixDeckIds->m_Items[i + 1];
         v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23);
-        v11 = System_String__Format((System_String_o *)StringLiteral_17028, v16, 0LL);
+        v11 = System_String__Format((System_String_o *)StringLiteral_17028/*"btn_txt_set{0}_1"*/, v16, 0LL);
         v17 = v11;
         if ( isEventButton )
           goto LABEL_18;
       }
       else
       {
-        v17 = (System_String_o *)StringLiteral_17027;
+        v17 = (System_String_o *)StringLiteral_17027/*"btn_txt_set0_1"*/;
         if ( isEventButton )
         {
 LABEL_18:

@@ -348,8 +348,8 @@ System_String_o *__fastcall UserPresentListViewItem__get_NameText(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_8726, v4);
-    sub_B16FFC(&StringLiteral_18326, v5);
+    sub_B16FFC(&StringLiteral_8726/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/, v4);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v5);
     byte_40F8096 = 1;
   }
   if ( this->fields.svtEnt && Gift__IsServant_28854740(this->fields.giftType, 0LL) )
@@ -382,13 +382,13 @@ LABEL_16:
     goto LABEL_16;
   }
   if ( !this->fields.costumeEnt || this->fields.giftType != 9 )
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8726, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8726/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/, 0LL);
   costumeEnt = this->fields.costumeEnt;
   if ( !costumeEnt )
     goto LABEL_28;

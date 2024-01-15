@@ -124,8 +124,8 @@ void __fastcall ServantNpInfoIconComponent__setNpIconImg(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B16FFC(&StringLiteral_14954, v11);
-    sub_B16FFC(&StringLiteral_4144, v12);
+    sub_B16FFC(&StringLiteral_14954/*"Unlit/Transparent Colored"*/, v11);
+    sub_B16FFC(&StringLiteral_4144/*"CommandCard"*/, v12);
     byte_40FD6E7 = 1;
   }
   if ( !npData )
@@ -152,7 +152,7 @@ void __fastcall ServantNpInfoIconComponent__setNpIconImg(
         x = localScale.fields.x;
         y = localScale.fields.y;
         z = localScale.fields.z;
-        UnityEngine_Object__set_name((UnityEngine_Object_o *)v15, (System_String_o *)StringLiteral_4144, 0LL);
+        UnityEngine_Object__set_name((UnityEngine_Object_o *)v15, (System_String_o *)StringLiteral_4144/*"CommandCard"*/, 0LL);
         commandCardBase = this->fields.commandCardBase;
         if ( commandCardBase )
         {
@@ -202,7 +202,7 @@ void __fastcall ServantNpInfoIconComponent__setNpIconImg(
                                                   npData->fields.dispLimitCount,
                                                   0LL);
                     BattleCommandComponent__setData(v24, v39, 0LL, 0, 1, 0, 0LL);
-                    BattleCommandComponent__setShader(v24, (System_String_o *)StringLiteral_14954, 0LL);
+                    BattleCommandComponent__setShader(v24, (System_String_o *)StringLiteral_14954/*"Unlit/Transparent Colored"*/, 0LL);
                     BattleCommandComponent__updateView(v24, 1, 0, 1, 0, npData->fields.isCardHide, 0LL);
                     BattleCommandComponent__setTouchFlg(v24, 0, 0LL);
                     this->fields.commandCard = v24;
@@ -250,7 +250,7 @@ void __fastcall ServantNpInfoIconComponent__setNpLv(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&lv);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8348, v6);
+    sub_B16FFC(&StringLiteral_8348/*"LEVEL_INFO"*/, v6);
     byte_40FD6E8 = 1;
   }
   levelLabel = this->fields.levelLabel;
@@ -259,7 +259,7 @@ void __fastcall ServantNpInfoIconComponent__setNpLv(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8348, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LEVEL_INFO"*/, 0LL);
   v13 = lv;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
   v10 = System_String__Format(v8, v9, 0LL);

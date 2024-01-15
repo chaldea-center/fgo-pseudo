@@ -49,10 +49,10 @@ void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *t
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&OptionManager_TypeInfo, v3);
     sub_B16FFC(&ResolutionManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_9770, v5);
-    sub_B16FFC(&StringLiteral_9769, v6);
-    sub_B16FFC(&StringLiteral_9772, v7);
-    sub_B16FFC(&StringLiteral_9771, v8);
+    sub_B16FFC(&StringLiteral_9770/*"OPTION_RERSOLUTION_INFO_DISABLE"*/, v5);
+    sub_B16FFC(&StringLiteral_9769/*"OPTION_RERSOLUTION_INFO"*/, v6);
+    sub_B16FFC(&StringLiteral_9772/*"OPTION_RERSOLUTION_NORMAL"*/, v7);
+    sub_B16FFC(&StringLiteral_9771/*"OPTION_RERSOLUTION_LOW"*/, v8);
     byte_40FF301 = 1;
   }
   if ( LOBYTE(this->fields.onButtonOutlineColor.fields.g) )
@@ -102,9 +102,9 @@ void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *t
   }
   normalLabel = this->fields.normalLabel;
   if ( klass_low )
-    v31 = (System_String_o **)&StringLiteral_9769;
+    v31 = (System_String_o **)&StringLiteral_9769/*"OPTION_RERSOLUTION_INFO"*/;
   else
-    v31 = (System_String_o **)&StringLiteral_9770;
+    v31 = (System_String_o **)&StringLiteral_9770/*"OPTION_RERSOLUTION_INFO_DISABLE"*/;
   v32 = *v31;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -115,11 +115,11 @@ void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *t
   if ( !normalLabel
     || (UILabel__set_text(normalLabel, v33, 0LL),
         v34 = this->fields.lowLabel,
-        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_9772, 0LL),
+        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_9772/*"OPTION_RERSOLUTION_NORMAL"*/, 0LL),
         !v34)
     || (UILabel__set_text(v34, v35, 0LL),
         v36 = (UILabel_o *)this->fields.normalButton,
-        v37 = LocalizationManager__Get((System_String_o *)StringLiteral_9771, 0LL),
+        v37 = LocalizationManager__Get((System_String_o *)StringLiteral_9771/*"OPTION_RERSOLUTION_LOW"*/, 0LL),
         !v36) )
   {
 LABEL_26:

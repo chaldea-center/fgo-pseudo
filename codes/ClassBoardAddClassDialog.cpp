@@ -267,7 +267,7 @@ void __fastcall ClassBoardAddClassDialog__Open(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantClassIconComponent__get_Count__, v14);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantClassIconComponent__get_Item__, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_2980, v17);
+    sub_B16FFC(&StringLiteral_2980/*"CLASS_BOARD_ADD_CLASS_DIALOG_CONTENT_FORMAT"*/, v17);
     byte_40FAF7F = 1;
   }
   entity = 0LL;
@@ -363,7 +363,7 @@ LABEL_26:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v33 = LocalizationManager__Get((System_String_o *)StringLiteral_2980, 0LL);
+        v33 = LocalizationManager__Get((System_String_o *)StringLiteral_2980/*"CLASS_BOARD_ADD_CLASS_DIALOG_CONTENT_FORMAT"*/, 0LL);
         if ( !entity )
           goto LABEL_46;
         v34 = System_String__Format(v33, (Il2CppObject *)entity->fields.age, 0LL);
@@ -409,8 +409,8 @@ void __fastcall ClassBoardAddClassDialog__SetupText(ClassBoardAddClassDialog_o *
   if ( (byte_40FAF82 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_2981, v3);
-    sub_B16FFC(&StringLiteral_3252, v4);
+    sub_B16FFC(&StringLiteral_2981/*"CLASS_BOARD_ADD_CLASS_DIALOG_TITLE"*/, v3);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v4);
     byte_40FAF82 = 1;
   }
   titleLabel = this->fields.titleLabel;
@@ -419,11 +419,11 @@ void __fastcall ClassBoardAddClassDialog__SetupText(ClassBoardAddClassDialog_o *
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_2981, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_2981/*"CLASS_BOARD_ADD_CLASS_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, v6, 0LL),
         closeButtonLabel = this->fields.closeButtonLabel,
-        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL),
+        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
         !closeButtonLabel) )
   {
     sub_B170D4();

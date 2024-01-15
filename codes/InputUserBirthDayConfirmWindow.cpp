@@ -208,8 +208,8 @@ void __fastcall InputUserBirthDayConfirmWindow__OpenConfirmWindow(
     sub_B16FFC(&System_Action_TypeInfo, title);
     sub_B16FFC(&Method_InputUserBirthDayConfirmWindow_EndOpen__, v15);
     sub_B16FFC(&LocalizationManager_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_3253, v17);
-    sub_B16FFC(&StringLiteral_3251, v18);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v17);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v18);
     byte_40FC184 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -253,11 +253,11 @@ void __fastcall InputUserBirthDayConfirmWindow__OpenConfirmWindow(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !confirmTxt
     || (UILabel__set_text(confirmTxt, v33, 0LL),
         cancelTxt = this->fields.cancelTxt,
-        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
         !cancelTxt) )
   {
 LABEL_15:
@@ -319,10 +319,10 @@ System_String_o *__fastcall InputUserBirthDayConfirmWindow__get_closeBtnPath(
 {
   if ( (byte_40FC187 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2730, method);
+    sub_B16FFC(&StringLiteral_2730/*"BaseWindow/CancleBtn"*/, method);
     byte_40FC187 = 1;
   }
-  return (System_String_o *)StringLiteral_2730;
+  return (System_String_o *)StringLiteral_2730/*"BaseWindow/CancleBtn"*/;
 }
 
 

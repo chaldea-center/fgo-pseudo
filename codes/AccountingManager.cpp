@@ -131,7 +131,7 @@ void __fastcall AccountingManager__AddExtraDataProductID(AccountingManager_o *th
   if ( (byte_40F7E27 & 1) == 0 )
   {
     sub_B16FFC(&AccountingManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23587, v2);
+    sub_B16FFC(&StringLiteral_23587/*"{{\"ProductId\":\"{0}\"}}"*/, v2);
     byte_40F7E27 = 1;
   }
   v3 = AccountingManager_TypeInfo;
@@ -145,7 +145,7 @@ void __fastcall AccountingManager__AddExtraDataProductID(AccountingManager_o *th
   if ( !paymentInfo )
     sub_B170D4();
   v5 = System_String__Format(
-         (System_String_o *)StringLiteral_23587,
+         (System_String_o *)StringLiteral_23587/*"{{\"ProductId\":\"{0}\"}}"*/,
          (Il2CppObject *)paymentInfo->fields._ProductId_k__BackingField,
          0LL);
   AccountingManager__AddExtraData((AccountingManager_o *)v5, v5, v6);
@@ -325,7 +325,7 @@ System_String_o *__fastcall AccountingManager__GetHistoryFileName(System_String_
   if ( (byte_40F7E1B & 1) == 0 )
   {
     sub_B16FFC(&AccountingManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_871, v3);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v3);
     byte_40F7E1B = 1;
   }
   v4 = AccountingManager_TypeInfo;
@@ -335,7 +335,7 @@ System_String_o *__fastcall AccountingManager__GetHistoryFileName(System_String_
     j_il2cpp_runtime_class_init_0(AccountingManager_TypeInfo);
   }
   PaymentHistoryPath = AccountingManager__GetPaymentHistoryPath((const MethodInfo *)v4);
-  return System_String__Concat_43746016(PaymentHistoryPath, (System_String_o *)StringLiteral_871, name, 0LL);
+  return System_String__Concat_43746016(PaymentHistoryPath, (System_String_o *)StringLiteral_871/*"/"*/, name, 0LL);
 }
 
 
@@ -351,7 +351,7 @@ System_String_o *__fastcall AccountingManager__GetHistoryFileName_21117840(int64
   {
     sub_B16FFC(&AccountingManager_TypeInfo, method);
     sub_B16FFC(&DatFileName_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_871, v4);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v4);
     byte_40F7E1C = 1;
   }
   v5 = AccountingManager_TypeInfo;
@@ -366,7 +366,7 @@ System_String_o *__fastcall AccountingManager__GetHistoryFileName_21117840(int64
   FileName_27470680 = DatFileName__getFileName_27470680(22, time, 0LL);
   return System_String__Concat_43746016(
            PaymentHistoryPath,
-           (System_String_o *)StringLiteral_871,
+           (System_String_o *)StringLiteral_871/*"/"*/,
            FileName_27470680,
            0LL);
 }
@@ -382,14 +382,14 @@ System_String_o *__fastcall AccountingManager__GetOldPaymentFileName(const Metho
   if ( (byte_40F7E18 & 1) == 0 )
   {
     sub_B16FFC(&DatFileName_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_871, v2);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v2);
     byte_40F7E18 = 1;
   }
   temporaryCachePath = UnityEngine_Application__get_temporaryCachePath(0LL);
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(21, 0LL);
-  return System_String__Concat_43746016(temporaryCachePath, (System_String_o *)StringLiteral_871, FileName, 0LL);
+  return System_String__Concat_43746016(temporaryCachePath, (System_String_o *)StringLiteral_871/*"/"*/, FileName, 0LL);
 }
 
 
@@ -405,7 +405,7 @@ System_String_o *__fastcall AccountingManager__GetPaymentFileName(const MethodIn
   {
     sub_B16FFC(&AndroidUtil_TypeInfo, v1);
     sub_B16FFC(&DatFileName_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_871, v3);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v3);
     byte_40F7E19 = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
@@ -414,7 +414,7 @@ System_String_o *__fastcall AccountingManager__GetPaymentFileName(const MethodIn
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(21, 0LL);
-  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871, FileName, 0LL);
+  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871/*"/"*/, FileName, 0LL);
 }
 
 
@@ -464,7 +464,7 @@ System_String_array *__fastcall AccountingManager__GetPaymentHistoryList(
     sub_B16FFC(&Method_System_Collections_Generic_List_string__ToArray__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, v5);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_857, v7);
+    sub_B16FFC(&StringLiteral_857/*".meta"*/, v7);
     byte_40F7E21 = 1;
   }
   Chars = 0;
@@ -531,7 +531,7 @@ LABEL_24:
           break;
         Files = (System_IO_FileInfo_array *)System_String__Equals_43731072(
                                               v33,
-                                              (System_String_o *)StringLiteral_857,
+                                              (System_String_o *)StringLiteral_857/*".meta"*/,
                                               0LL);
         if ( ((unsigned __int8)Files & 1) == 0 )
         {
@@ -571,7 +571,7 @@ System_String_o *__fastcall AccountingManager__GetPaymentHistoryPath(const Metho
   {
     sub_B16FFC(&AndroidUtil_TypeInfo, v1);
     sub_B16FFC(&CacheFolderName_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_871, v3);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v3);
     byte_40F7E1A = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
@@ -583,7 +583,7 @@ System_String_o *__fastcall AccountingManager__GetPaymentHistoryPath(const Metho
     j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
   }
   FolderName = CacheFolderName__getFolderName(2, 0LL);
-  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871, FolderName, 0LL);
+  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871/*"/"*/, FolderName, 0LL);
 }
 
 
@@ -893,7 +893,7 @@ void __fastcall AccountingManager__WritePayment(AccountingManager_o *this, const
     sub_B16FFC(&AgeVerificationMenu_TypeInfo, v2);
     sub_B16FFC(&ManagerConfig_TypeInfo, v3);
     sub_B16FFC(&NetworkManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F7E23 = 1;
   }
   v6 = ManagerConfig_TypeInfo;
@@ -955,8 +955,8 @@ void __fastcall AccountingManager__WritePayment(AccountingManager_o *this, const
           v19 = AccountingManager_TypeInfo->static_fields->paymentInfo;
           if ( !v19 )
             goto LABEL_41;
-          v20 = (System_Int32_array **)StringLiteral_1;
-          v19->fields._Receipt_k__BackingField = (struct System_String_o *)StringLiteral_1;
+          v20 = (System_Int32_array **)StringLiteral_1/*""*/;
+          v19->fields._Receipt_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
           sub_B16F98(
             (BattleServantConfConponent_o *)&v19->fields._Receipt_k__BackingField,
             v20,
@@ -969,8 +969,8 @@ void __fastcall AccountingManager__WritePayment(AccountingManager_o *this, const
           v27 = AccountingManager_TypeInfo->static_fields->paymentInfo;
           if ( !v27 )
             goto LABEL_41;
-          v28 = (System_Int32_array **)StringLiteral_1;
-          v27->fields._BaseReceipt_k__BackingField = (struct System_String_o *)StringLiteral_1;
+          v28 = (System_Int32_array **)StringLiteral_1/*""*/;
+          v27->fields._BaseReceipt_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
           sub_B16F98(
             (BattleServantConfConponent_o *)&v27->fields._BaseReceipt_k__BackingField,
             v28,
@@ -994,8 +994,8 @@ void __fastcall AccountingManager__WritePayment(AccountingManager_o *this, const
           v38 = AccountingManager_TypeInfo->static_fields->paymentInfo;
           if ( !v38 )
             goto LABEL_41;
-          v39 = (System_Int32_array **)StringLiteral_1;
-          v38->fields._GoogleSignature_k__BackingField = (struct System_String_o *)StringLiteral_1;
+          v39 = (System_Int32_array **)StringLiteral_1/*""*/;
+          v38->fields._GoogleSignature_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
           sub_B16F98(
             (BattleServantConfConponent_o *)&v38->fields._GoogleSignature_k__BackingField,
             v39,

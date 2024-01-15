@@ -14,12 +14,12 @@ void __fastcall FriendIconComponent___cctor(const MethodInfo *method)
   if ( (byte_40FA79C & 1) == 0 )
   {
     sub_B16FFC(&FriendIconComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19444, v8);
+    sub_B16FFC(&StringLiteral_19444/*"img_listbg_01"*/, v8);
     byte_40FA79C = 1;
   }
   static_fields = (BattleServantConfConponent_o *)FriendIconComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_19444;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19444;
+  v10 = (System_Int32_array **)StringLiteral_19444/*"img_listbg_01"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19444/*"img_listbg_01"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -216,10 +216,10 @@ void __fastcall FriendIconComponent__Awake(FriendIconComponent_o *this, const Me
     sub_B16FFC(&Method_System_Collections_Generic_List_UIWidget___ctor__, v6);
     sub_B16FFC(&System_Collections_Generic_List_UIWidget__TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_19290, v9);
-    sub_B16FFC(&StringLiteral_19421, v10);
-    sub_B16FFC(&StringLiteral_19201, v11);
-    sub_B16FFC(&StringLiteral_19420, v12);
+    sub_B16FFC(&StringLiteral_19290/*"icon_skill_mini"*/, v9);
+    sub_B16FFC(&StringLiteral_19421/*"img_friend_skill"*/, v10);
+    sub_B16FFC(&StringLiteral_19201/*"icon_append_mini"*/, v11);
+    sub_B16FFC(&StringLiteral_19420/*"img_friend_appendskill"*/, v12);
     byte_40FA78E = 1;
   }
   v13 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -255,7 +255,7 @@ void __fastcall FriendIconComponent__Awake(FriendIconComponent_o *this, const Me
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(v21, (System_String_o *)StringLiteral_19290, 0LL);
+    AtlasManager__SetEventSprite(v21, (System_String_o *)StringLiteral_19290/*"icon_skill_mini"*/, 0LL);
   }
   skillTitleSprite = (UnityEngine_Object_o *)this->fields.skillTitleSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -271,7 +271,7 @@ void __fastcall FriendIconComponent__Awake(FriendIconComponent_o *this, const Me
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(v23, (System_String_o *)StringLiteral_19421, 0LL);
+    AtlasManager__SetEventSprite(v23, (System_String_o *)StringLiteral_19421/*"img_friend_skill"*/, 0LL);
   }
   appendSkillIconSprite = (UnityEngine_Object_o *)this->fields.appendSkillIconSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -287,7 +287,7 @@ void __fastcall FriendIconComponent__Awake(FriendIconComponent_o *this, const Me
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(v25, (System_String_o *)StringLiteral_19201, 0LL);
+    AtlasManager__SetEventSprite(v25, (System_String_o *)StringLiteral_19201/*"icon_append_mini"*/, 0LL);
   }
   appendSkillTitleSprite = (UnityEngine_Object_o *)this->fields.appendSkillTitleSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -303,7 +303,7 @@ void __fastcall FriendIconComponent__Awake(FriendIconComponent_o *this, const Me
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(v27, (System_String_o *)StringLiteral_19420, 0LL);
+    AtlasManager__SetEventSprite(v27, (System_String_o *)StringLiteral_19420/*"img_friend_appendskill"*/, 0LL);
   }
 }
 
@@ -893,9 +893,9 @@ void __fastcall FriendIconComponent__OpenAppendSkillInfoDialog(
     sub_B16FFC(&int_TypeInfo, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
-    sub_B16FFC(&StringLiteral_80, v11);
-    sub_B16FFC(&StringLiteral_8603, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v11);
+    sub_B16FFC(&StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FA798 = 1;
   }
   skillInfoList = 0LL;
@@ -952,18 +952,18 @@ void __fastcall FriendIconComponent__OpenAppendSkillInfoDialog(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v25 = LocalizationManager__Get((System_String_o *)StringLiteral_8603, 0LL);
+              v25 = LocalizationManager__Get((System_String_o *)StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
               lv = v19->fields.lv;
               v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
               v27 = System_String__Format(v25, v26, 0LL);
-              name = System_String__Concat_43746016(v24, (System_String_o *)StringLiteral_80, v27, 0LL);
+              name = System_String__Concat_43746016(v24, (System_String_o *)StringLiteral_80/*" "*/, v27, 0LL);
               Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
               if ( Instance )
               {
                 CommonUI__OpenDetailLongInfoDialog(
                   Instance,
                   name,
-                  (System_String_o *)StringLiteral_1,
+                  (System_String_o *)StringLiteral_1/*""*/,
                   detail,
                   1,
                   0,
@@ -1042,9 +1042,9 @@ void __fastcall FriendIconComponent__OpenSkillInfoDialog(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
     sub_B16FFC(&SoundManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_80, v12);
-    sub_B16FFC(&StringLiteral_8603, v13);
-    sub_B16FFC(&StringLiteral_2508, v14);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v12);
+    sub_B16FFC(&StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, v13);
+    sub_B16FFC(&StringLiteral_2508/*"BATTLE_SKILLCHARGETURN"*/, v14);
     byte_40FA793 = 1;
   }
   name = 0LL;
@@ -1113,12 +1113,12 @@ void __fastcall FriendIconComponent__OpenSkillInfoDialog(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8603, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8603/*"MASTER_EQSKILL_LV_TXT"*/, 0LL);
     lv = v22->fields.lv;
     v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
     v33 = System_String__Format(v31, v32, 0LL);
-    name = System_String__Concat_43746016(v30, (System_String_o *)StringLiteral_80, v33, 0LL);
-    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_2508, 0LL);
+    name = System_String__Concat_43746016(v30, (System_String_o *)StringLiteral_80/*" "*/, v33, 0LL);
+    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_2508/*"BATTLE_SKILLCHARGETURN"*/, 0LL);
     if ( !v29
       || (v35 = v34,
           chargeTurn = v29->fields.chargeTurn,
@@ -1482,14 +1482,14 @@ void __fastcall FriendIconComponent__Set(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v44);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v45);
     sub_B16FFC(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, v46);
-    sub_B16FFC(&StringLiteral_3267, v47);
-    sub_B16FFC(&StringLiteral_6716, v48);
-    sub_B16FFC(&StringLiteral_6317, v49);
-    sub_B16FFC(&StringLiteral_9352, v50);
-    sub_B16FFC(&StringLiteral_6316, v51);
-    sub_B16FFC(&StringLiteral_9324, v52);
-    sub_B16FFC(&StringLiteral_9346, v53);
-    sub_B16FFC(&StringLiteral_15767, v54);
+    sub_B16FFC(&StringLiteral_3267/*"COMMON_NO_ENTRY"*/, v47);
+    sub_B16FFC(&StringLiteral_6716/*"Fonts/FGO-Main-Font"*/, v48);
+    sub_B16FFC(&StringLiteral_6317/*"FFFFFF"*/, v49);
+    sub_B16FFC(&StringLiteral_9352/*"NP_MAX_COLOR_NAME"*/, v50);
+    sub_B16FFC(&StringLiteral_6316/*"FFFF00"*/, v51);
+    sub_B16FFC(&StringLiteral_9324/*"NO_ENTRY_NAME"*/, v52);
+    sub_B16FFC(&StringLiteral_9346/*"NP_COLOR_NAME"*/, v53);
+    sub_B16FFC(&StringLiteral_15767/*"[{0}]+{1}[-]"*/, v54);
     byte_40FA78F = 1;
   }
   if ( isUseServantStatus )
@@ -1700,11 +1700,11 @@ void __fastcall FriendIconComponent__Set(
                                 tdInfo->fields.name,
                                 tdInfo->fields.lv,
                                 0LL);
-            v100 = (System_String_o **)&StringLiteral_9352;
+            v100 = (System_String_o **)&StringLiteral_9352/*"NP_MAX_COLOR_NAME"*/;
             v101 = TreasureDeviceLevelIcon <= 1;
             v102 = (Il2CppObject *)OverwriteTDName;
             if ( v101 )
-              v100 = (System_String_o **)&StringLiteral_9346;
+              v100 = (System_String_o **)&StringLiteral_9346/*"NP_COLOR_NAME"*/;
             v103 = *v100;
             if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1751,12 +1751,12 @@ LABEL_311:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v79 = LocalizationManager__Get((System_String_o *)StringLiteral_3267, 0LL);
+  v79 = LocalizationManager__Get((System_String_o *)StringLiteral_3267/*"COMMON_NO_ENTRY"*/, 0LL);
   if ( !v78 )
     goto LABEL_311;
   UIRangeLabel__Set(v78, v79, 0LL, 1, 0, 0LL);
   v80 = this->fields.svtNpTitleLabel;
-  v81 = LocalizationManager__Get((System_String_o *)StringLiteral_9324, 0LL);
+  v81 = LocalizationManager__Get((System_String_o *)StringLiteral_9324/*"NO_ENTRY_NAME"*/, 0LL);
   if ( !v80 )
     goto LABEL_311;
   UIRangeLabel__Set(v80, v81, 0LL, 1, 0, 0LL);
@@ -2076,7 +2076,7 @@ LABEL_312:
     if ( UnityEngine_Object__op_Equality(trueTypeFont, 0LL, 0LL) )
     {
       v175 = this->fields.playerNameLabel;
-      v176 = (UnityEngine_Font_o *)UnityEngine_Resources__Load((System_String_o *)StringLiteral_6716, 0LL);
+      v176 = (UnityEngine_Font_o *)UnityEngine_Resources__Load((System_String_o *)StringLiteral_6716/*"Fonts/FGO-Main-Font"*/, 0LL);
       if ( !v175 )
         goto LABEL_311;
       if ( v176 && v176->klass != UnityEngine_Font_TypeInfo )
@@ -2377,13 +2377,13 @@ LABEL_241:
               }
               if ( UnityEngine_Object__op_Inequality(openClassBoardNumLabel, 0LL, 0LL) )
               {
-                v219 = (Il2CppObject **)&StringLiteral_6317;
+                v219 = (Il2CppObject **)&StringLiteral_6317/*"FFFFFF"*/;
                 if ( v217 )
-                  v219 = (Il2CppObject **)&StringLiteral_6316;
+                  v219 = (Il2CppObject **)&StringLiteral_6316/*"FFFF00"*/;
                 v220 = *v219;
                 v255 = v216;
                 v221 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v255);
-                v222 = System_String__Format_43739268((System_String_o *)StringLiteral_15767, v220, v221, 0LL);
+                v222 = System_String__Format_43739268((System_String_o *)StringLiteral_15767/*"[{0}]+{1}[-]"*/, v220, v221, 0LL);
                 if ( !this->fields.openClassBoardNumLabel )
                   goto LABEL_311;
                 UILabel__set_text(this->fields.openClassBoardNumLabel, v222, 0LL);

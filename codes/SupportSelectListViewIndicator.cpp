@@ -20,8 +20,8 @@ void __fastcall SupportSelectListViewIndicator__DrawPartyInfo(
   if ( (byte_40FD225 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, partyItem);
-    sub_B16FFC(&StringLiteral_12490, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_12490/*"SUPPORT_SELECT_NAME"*/, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FD225 = 1;
   }
   selectNameLabel = this->fields.selectNameLabel;
@@ -29,7 +29,7 @@ void __fastcall SupportSelectListViewIndicator__DrawPartyInfo(
   {
     if ( selectNameLabel )
     {
-      v11 = (System_String_o *)StringLiteral_1;
+      v11 = (System_String_o *)StringLiteral_1/*""*/;
       goto LABEL_12;
     }
 LABEL_13:
@@ -40,7 +40,7 @@ LABEL_13:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12490, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12490/*"SUPPORT_SELECT_NAME"*/, 0LL);
   supportServantData = partyItem->fields.supportServantData;
   if ( !supportServantData )
     goto LABEL_13;
@@ -373,9 +373,9 @@ void __fastcall SupportSelectListViewIndicator__SetPageIndex(
   if ( (byte_40FD224 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    sub_B16FFC(&StringLiteral_19557, v5);
-    sub_B16FFC(&StringLiteral_21339, v6);
-    sub_B16FFC(&StringLiteral_19556, v7);
+    sub_B16FFC(&StringLiteral_19557/*"img_slider_on"*/, v5);
+    sub_B16FFC(&StringLiteral_21339/*"party_txt_"*/, v6);
+    sub_B16FFC(&StringLiteral_19556/*"img_slider_off"*/, v7);
     byte_40FD224 = 1;
   }
   v20 = 0;
@@ -406,9 +406,9 @@ void __fastcall SupportSelectListViewIndicator__SetPageIndex(
         if ( !v14 )
           break;
         if ( index == (_DWORD)v12 )
-          v15 = &StringLiteral_19557;
+          v15 = &StringLiteral_19557/*"img_slider_on"*/;
         else
-          v15 = &StringLiteral_19556;
+          v15 = &StringLiteral_19556/*"img_slider_off"*/;
         UISprite__set_spriteName(v14, (System_String_o *)*v15, 0LL);
         if ( (int)++v12 >= this->fields.pageMax )
           goto LABEL_17;
@@ -420,7 +420,7 @@ LABEL_17:
     v20 = index + 1;
     v16 = System_Int32__ToString((int32_t)&v20, 0LL);
     indexSprite = this->fields.indexSprite;
-    v18 = System_String__Concat_43743732((System_String_o *)StringLiteral_21339, v16, 0LL);
+    v18 = System_String__Concat_43743732((System_String_o *)StringLiteral_21339/*"party_txt_"*/, v16, 0LL);
     if ( !indexSprite )
       goto LABEL_21;
     UISprite__set_spriteName(indexSprite, v18, 0LL);
@@ -456,7 +456,7 @@ void __fastcall SupportSelectListViewIndicator__SetPageMax(
   if ( (byte_40FD223 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&max);
-    sub_B16FFC(&StringLiteral_19556, v5);
+    sub_B16FFC(&StringLiteral_19556/*"img_slider_off"*/, v5);
     byte_40FD223 = 1;
   }
   pageSpriteList = this->fields.pageSpriteList;
@@ -496,7 +496,7 @@ LABEL_21:
     v15 = v12->m_Items[v13];
     if ( v15 )
     {
-      v16 = (int)v13 >= this->fields.pageMax ? 0LL : (System_String_o *)StringLiteral_19556;
+      v16 = (int)v13 >= this->fields.pageMax ? 0LL : (System_String_o *)StringLiteral_19556/*"img_slider_off"*/;
       UISprite__set_spriteName(v15, v16, 0LL);
       v12 = this->fields.pageSpriteList;
       ++v13;

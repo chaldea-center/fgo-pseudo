@@ -24,8 +24,8 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2___cctor(const Metho
   if ( (byte_410191D & 1) == 0 )
   {
     sub_B16FFC(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19428, v8);
-    sub_B16FFC(&StringLiteral_19427, v9);
+    sub_B16FFC(&StringLiteral_19428/*"img_index_03"*/, v8);
+    sub_B16FFC(&StringLiteral_19427/*"img_index_02"*/, v9);
     byte_410191D = 1;
   }
   ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields->LABEL_HEIGHT_MAX = 3000;
@@ -33,12 +33,12 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2___cctor(const Metho
   v10 = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo;
   ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields->TITLE_NAME_LEFT_POS = -88;
   static_fields = v10->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_19427;
-  static_fields->TITLE_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19427;
+  v12 = (System_Int32_array **)StringLiteral_19427/*"img_index_02"*/;
+  static_fields->TITLE_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_19427/*"img_index_02"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->TITLE_BASE_SPRITE_NAME, v12, v2, v3, v4, v5, v6, v7);
   v13 = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_19428;
-  v13->TITLE_BASE_LONG_SPRITE_NAME = (struct System_String_o *)StringLiteral_19428;
+  v14 = (System_Int32_array **)StringLiteral_19428/*"img_index_03"*/;
+  v13->TITLE_BASE_LONG_SPRITE_NAME = (struct System_String_o *)StringLiteral_19428/*"img_index_03"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->TITLE_BASE_LONG_SPRITE_NAME, v14, v15, v16, v17, v18, v19, v20);
 }
 
@@ -330,7 +330,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetCondTitle(
   if ( (byte_4101916 & 1) == 0 )
   {
     sub_B16FFC(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, title);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_4101916 = 1;
   }
   if ( System_String__IsNullOrEmpty(title, 0LL) )
@@ -338,7 +338,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetCondTitle(
     rubyPrefab = this->fields.rubyPrefab;
     if ( rubyPrefab )
     {
-      UILabel__set_text((UILabel_o *)rubyPrefab, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text((UILabel_o *)rubyPrefab, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       titleNumSprite = this->fields.titleNumSprite;
       if ( (BYTE3(ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->_2.cctor_finished )
@@ -535,7 +535,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetItem(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, item);
     sub_B16FFC(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_19654, v16);
+    sub_B16FFC(&StringLiteral_19654/*"img_txt_profile"*/, v16);
     byte_4101915 = 1;
   }
   LODWORD(this->fields.baseCollider) = mode;
@@ -554,7 +554,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetItem(
     {
       v20 = this->fields.messageLabel;
       v21 = System_Int32__ToString((int32_t)&v77, 0LL);
-      v22 = System_String__Concat_43743732((System_String_o *)StringLiteral_19654, v21, 0LL);
+      v22 = System_String__Concat_43743732((System_String_o *)StringLiteral_19654/*"img_txt_profile"*/, v21, 0LL);
       if ( !v20 )
         goto LABEL_66;
       UISprite__set_spriteName((UISprite_o *)v20, v22, 0LL);
@@ -989,8 +989,8 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetRubyObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_string__set_Item__, v15);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v16);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_23742, v18);
-    sub_B16FFC(&StringLiteral_1, v19);
+    sub_B16FFC(&StringLiteral_23742/*"・"*/, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v19);
     byte_4101919 = 1;
   }
   newIcon = (UnityEngine_Component_o *)this->fields.newIcon;
@@ -1026,7 +1026,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetRubyObject(
     System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
   if ( System_String__op_Equality(
          *(System_String_o **)&textPositionYList->fields._items->m_Items[2 * idx + 1],
-         (System_String_o *)StringLiteral_1,
+         (System_String_o *)StringLiteral_1/*""*/,
          0LL) )
   {
     mText = mainLabel->fields.mText;
@@ -1042,7 +1042,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawText2__SetRubyObject(
             System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
           v32 = System_String__Concat_43743732(
                   (System_String_o *)v31->fields._items->m_Items[idx],
-                  (System_String_o *)StringLiteral_23742,
+                  (System_String_o *)StringLiteral_23742/*"・"*/,
                   0LL);
           System_Collections_Generic_List_WarBoardManager_TaskList___set_Item(
             v31,
@@ -1157,11 +1157,11 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText2__SetTex
     sub_B16FFC(&Method_System_Collections_Generic_List_bool__Add__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_string__Add__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__Add__, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_4101917 = 1;
   }
   v43[0] = 0;
-  v9 = (System_String_o *)StringLiteral_1;
+  v9 = (System_String_o *)StringLiteral_1/*""*/;
   v10 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, method);
   if ( !v10 )
     goto LABEL_56;
@@ -1195,7 +1195,7 @@ LABEL_56:
         break;
       v20 = BYTE4(this[1].klass) != 0;
 LABEL_45:
-      if ( System_String__op_Inequality(v16, (System_String_o *)StringLiteral_1, 0LL) )
+      if ( System_String__op_Inequality(v16, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
       {
         rubyTextList = this->fields.rubyTextList;
         if ( !rubyTextList )
@@ -1234,12 +1234,12 @@ LABEL_45:
             (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)textPositionYList,
             (EventMissionProgressRequest_Argument_ProgressData_o *)v9,
             (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
-          v9 = (System_String_o *)StringLiteral_1;
-          v16 = (System_String_o *)StringLiteral_1;
+          v9 = (System_String_o *)StringLiteral_1/*""*/;
+          v16 = (System_String_o *)StringLiteral_1/*""*/;
         }
         else
         {
-          v16 = (System_String_o *)StringLiteral_1;
+          v16 = (System_String_o *)StringLiteral_1/*""*/;
         }
       }
       v10 = v42;
@@ -1265,7 +1265,7 @@ LABEL_45:
           goto LABEL_42;
         }
         BYTE4(this[1].klass) = 1;
-        if ( System_String__op_Inequality(v16, (System_String_o *)StringLiteral_1, 0LL) )
+        if ( System_String__op_Inequality(v16, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
         {
           v29 = this->fields.rubyTextList;
           if ( !v29 )
@@ -1295,7 +1295,7 @@ LABEL_45:
             (System_Collections_Generic_List_int__o *)v32,
             v15,
             (const MethodInfo_2F104F0 *)Method_System_Collections_Generic_List_int__Add__);
-          v16 = (System_String_o *)StringLiteral_1;
+          v16 = (System_String_o *)StringLiteral_1/*""*/;
         }
         LOBYTE(this->fields.addSize.fields.y) = 0;
         v18 = 1;
@@ -1357,7 +1357,7 @@ LABEL_27:
       v14 = 0;
       v18 = 0;
       v20 = 0;
-      v9 = (System_String_o *)StringLiteral_1;
+      v9 = (System_String_o *)StringLiteral_1/*""*/;
       BYTE4(this[1].klass) = 0;
       v16 = v9;
 LABEL_42:
@@ -1436,7 +1436,7 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText2__TextFo
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_char__get_Count__, localMainTextList);
     sub_B16FFC(&Method_System_Collections_Generic_List_char__get_Item__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_410191B = 1;
   }
   v40[0] = 0;
@@ -1444,7 +1444,7 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText2__TextFo
 LABEL_53:
     sub_B170D4();
   size = localMainTextList->fields._size;
-  v8 = (System_String_o *)StringLiteral_1;
+  v8 = (System_String_o *)StringLiteral_1/*""*/;
   if ( size >= 1 )
   {
     v9 = 0;
@@ -1615,14 +1615,14 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText2__TextLi
     sub_B16FFC(&Method_System_Collections_Generic_List_char__Add__, labelText);
     sub_B16FFC(&Method_System_Collections_Generic_List_char___ctor__, v7);
     sub_B16FFC(&System_Collections_Generic_List_char__TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_15574, v9);
-    sub_B16FFC(&StringLiteral_1223, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
-    sub_B16FFC(&StringLiteral_15807, v12);
+    sub_B16FFC(&StringLiteral_15574/*"[#"*/, v9);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v12);
     byte_410191A = 1;
   }
   v30[0] = 0;
-  v13 = (System_String_o *)StringLiteral_1;
+  v13 = (System_String_o *)StringLiteral_1/*""*/;
   v14 = (System_Collections_Generic_List_char__o *)sub_B170CC(
                                                      System_Collections_Generic_List_char__TypeInfo,
                                                      labelText,
@@ -1678,7 +1678,7 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText2__TextLi
           {
             if ( (v17 & 1) != 0 )
             {
-              v23 = System_String__Concat_43743732((System_String_o *)StringLiteral_1223, v19, 0LL);
+              v23 = System_String__Concat_43743732((System_String_o *)StringLiteral_1223/*":"*/, v19, 0LL);
               if ( !v13 )
                 goto LABEL_33;
               v24 = v23;
@@ -1687,10 +1687,10 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText2__TextLi
             {
               if ( !v13 )
                 goto LABEL_33;
-              v24 = (System_String_o *)StringLiteral_15807;
+              v24 = (System_String_o *)StringLiteral_15807/*"]"*/;
             }
-            v25 = System_String__Replace_43750968(v13, v24, (System_String_o *)StringLiteral_1, 0LL);
-            v19 = (System_String_o *)StringLiteral_1;
+            v25 = System_String__Replace_43750968(v13, v24, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+            v19 = (System_String_o *)StringLiteral_1/*""*/;
             v13 = v25;
             v16 = 0;
             v17 = 0;
@@ -1701,8 +1701,8 @@ System_String_o *__fastcall ServantStatusFlavorTextListViewItemDrawText2__TextLi
           goto LABEL_33;
         v13 = System_String__Replace_43750968(
                 v13,
-                (System_String_o *)StringLiteral_15574,
-                (System_String_o *)StringLiteral_1,
+                (System_String_o *)StringLiteral_15574/*"[#"*/,
+                (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
       }
       v16 = 1;

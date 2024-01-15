@@ -14,12 +14,12 @@ void __fastcall EventInfoConquestGetComponent___cctor(const MethodInfo *method)
   if ( (byte_40FA0FC & 1) == 0 )
   {
     sub_B16FFC(&EventInfoConquestGetComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_20419, v8);
+    sub_B16FFC(&StringLiteral_20419/*"military_production_bg"*/, v8);
     byte_40FA0FC = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventInfoConquestGetComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_20419;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_20419;
+  v10 = (System_Int32_array **)StringLiteral_20419/*"military_production_bg"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_20419/*"military_production_bg"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -135,8 +135,8 @@ void __fastcall EventInfoConquestGetComponent__Open(
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v17);
     sub_B16FFC(&Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__, v18);
     sub_B16FFC(&EventInfoConquestGetComponent___c__DisplayClass3_0_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_5581, v20);
-    sub_B16FFC(&StringLiteral_5582, v21);
+    sub_B16FFC(&StringLiteral_5581/*"EVENT_CONQUEST_GET_MESSAGE"*/, v20);
+    sub_B16FFC(&StringLiteral_5582/*"EVENT_CONQUEST_GET_TITLE"*/, v21);
     byte_40FA0FB = 1;
   }
   v22 = sub_B170CC(EventInfoConquestGetComponent___c__DisplayClass3_0_TypeInfo, callback, method, v3, v4);
@@ -256,10 +256,10 @@ LABEL_32:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v66 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_5582, 0LL);
+  v66 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_5582/*"EVENT_CONQUEST_GET_TITLE"*/, 0LL);
   *(_QWORD *)(v22 + 32) = v66;
   sub_B16F98((BattleServantConfConponent_o *)(v22 + 32), v66, v67, v68, v69, v70, v71, v72);
-  v73 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_5581, 0LL);
+  v73 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_5581/*"EVENT_CONQUEST_GET_MESSAGE"*/, 0LL);
   *(_QWORD *)(v22 + 40) = v73;
   sub_B16F98((BattleServantConfConponent_o *)(v22 + 40), v73, v74, v75, v76, v77, v78, v79);
   if ( *(_QWORD *)(v22 + 40) )

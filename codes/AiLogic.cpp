@@ -487,8 +487,8 @@ bool __fastcall AiLogic__checkThinking_21180536(
     sub_B16FFC(&Method_System_Collections_Generic_List_AiInterface__GetEnumerator__, v20);
     sub_B16FFC(&Method_System_Collections_Generic_List_AiInterface___ctor__, v21);
     sub_B16FFC(&System_Collections_Generic_List_AiInterface__TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_9306, v23);
-    sub_B16FFC(&StringLiteral_1, v24);
+    sub_B16FFC(&StringLiteral_9306/*"NOT_"*/, v23);
+    sub_B16FFC(&StringLiteral_1/*""*/, v24);
     byte_40F7EDE = 1;
   }
   Cond = 0;
@@ -500,8 +500,8 @@ bool __fastcall AiLogic__checkThinking_21180536(
   if ( !aiInfo )
     goto LABEL_262;
   v25 = aiEnt->fields.cond;
-  v26 = (System_String_o *)StringLiteral_9306;
-  v27 = (System_String_o *)StringLiteral_1;
+  v26 = (System_String_o *)StringLiteral_9306/*"NOT_"*/;
+  v27 = (System_String_o *)StringLiteral_1/*""*/;
   v28 = j_il2cpp_value_box_0(Ai_COND_TypeInfo, &Cond);
   if ( !v28 )
     goto LABEL_262;

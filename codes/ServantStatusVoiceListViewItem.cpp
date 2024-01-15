@@ -543,7 +543,7 @@ System_String_o *__fastcall ServantStatusVoiceListViewItem__get_Name(
   {
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FCA9A = 1;
   }
   dispName = this->fields.dispName;
@@ -575,7 +575,7 @@ System_String_o *__fastcall ServantStatusVoiceListViewItem__get_Name(
     *(_QWORD *)&v18.fields.fakeValue = v12;
     if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44068536(v18, 0LL) <= 0 )
     {
-      v14 = (Il2CppObject *)StringLiteral_1;
+      v14 = (Il2CppObject *)StringLiteral_1/*""*/;
     }
     else
     {

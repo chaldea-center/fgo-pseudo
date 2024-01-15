@@ -340,14 +340,14 @@ void __fastcall FGOSequenceManager__setup(FGOSequenceManager_o *this, const Meth
   {
     sub_B16FFC(&UnityEngine_GameObject___TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_11491, v4);
-    sub_B16FFC(&StringLiteral_6619, v5);
-    sub_B16FFC(&StringLiteral_634, v6);
-    sub_B16FFC(&StringLiteral_6620, v7);
+    sub_B16FFC(&StringLiteral_11491/*"RootCameraPrefab"*/, v4);
+    sub_B16FFC(&StringLiteral_6619/*"FieldMotionPrefab"*/, v5);
+    sub_B16FFC(&StringLiteral_634/*"(motion)"*/, v6);
+    sub_B16FFC(&StringLiteral_6620/*"FieldMotionPrefab(common)"*/, v7);
     byte_40F9F3A = 1;
   }
   v51 = 0;
-  v8 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_11491, 0LL);
+  v8 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_11491/*"RootCameraPrefab"*/, 0LL);
   this->fields.cameraPos = v8;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.cameraPos,
@@ -358,7 +358,7 @@ void __fastcall FGOSequenceManager__setup(FGOSequenceManager_o *this, const Meth
     v12,
     v13,
     v14);
-  v15 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_6620, 0LL);
+  v15 = UnityEngine_GameObject__Find((System_String_o *)StringLiteral_6620/*"FieldMotionPrefab(common)"*/, 0LL);
   this->fields.fieldPos = v15;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.fieldPos,
@@ -404,9 +404,9 @@ LABEL_14:
     v51 = v36 + 1;
     v39 = System_Int32__ToString((int32_t)&v51, 0LL);
     v40 = System_String__Concat_43746016(
-            (System_String_o *)StringLiteral_6619,
+            (System_String_o *)StringLiteral_6619/*"FieldMotionPrefab"*/,
             v39,
-            (System_String_o *)StringLiteral_634,
+            (System_String_o *)StringLiteral_634/*"(motion)"*/,
             0LL);
     v41 = UnityEngine_GameObject__Find(v40, 0LL);
     v49 = (System_Int32_array **)v41;

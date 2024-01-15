@@ -94,12 +94,12 @@ void __fastcall SummonHistoryDialog__Open(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, gachaInfo);
     sub_B16FFC(&string_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_26, v6);
-    sub_B16FFC(&StringLiteral_6809, v7);
-    sub_B16FFC(&StringLiteral_6803, v8);
-    sub_B16FFC(&StringLiteral_6808, v9);
-    sub_B16FFC(&StringLiteral_3252, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v6);
+    sub_B16FFC(&StringLiteral_6809/*"GACHA_HISTORY_UPPER_MESSAGE"*/, v7);
+    sub_B16FFC(&StringLiteral_6803/*"GACHA_HISTORY_EMPTY"*/, v8);
+    sub_B16FFC(&StringLiteral_6808/*"GACHA_HISTORY_TITLE"*/, v9);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FC001 = 1;
   }
   ((void (__fastcall *)(SummonHistoryDialog_o *, void *, const MethodInfo *))this->klass->vtable._7_Init.method)(
@@ -111,7 +111,7 @@ void __fastcall SummonHistoryDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6808, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6808/*"GACHA_HISTORY_TITLE"*/, 0LL);
   TextLabelScrollDialog__Open(
     (TextLabelScrollDialog_o *)this,
     v12,
@@ -127,14 +127,14 @@ void __fastcall SummonHistoryDialog__Open(
   summonNameLabel = this->fields.summonNameLabel;
   v15 = System_String__Replace_43750968(
           name,
-          (System_String_o *)StringLiteral_26,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_26/*"\n"*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   if ( !summonNameLabel )
     goto LABEL_27;
   UILabel__set_text(summonNameLabel, v15, 0LL);
   UpperMessageLabel = this->fields.UpperMessageLabel;
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_6809, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_6809/*"GACHA_HISTORY_UPPER_MESSAGE"*/, 0LL);
   if ( !UpperMessageLabel )
     goto LABEL_27;
   UILabel__set_text(UpperMessageLabel, v17, 0LL);
@@ -160,7 +160,7 @@ void __fastcall SummonHistoryDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_6803, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_6803/*"GACHA_HISTORY_EMPTY"*/, 0LL);
   if ( !v22 )
 LABEL_27:
     sub_B170D4();
@@ -180,7 +180,7 @@ LABEL_20:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_27;
   UILabel__set_text(closeLabel, v27, 0LL);

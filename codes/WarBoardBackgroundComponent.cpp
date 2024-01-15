@@ -335,7 +335,7 @@ void __fastcall WarBoardBackgroundComponent__PlayBgAnimation(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, entity);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F8C4A = 1;
   }
   if ( !entity )
@@ -364,7 +364,7 @@ void __fastcall WarBoardBackgroundComponent__PlayBgAnimation(
         {
           if ( monitor )
           {
-            WarBoardData__SetBgAnimationInfo(monitor, v14, (System_String_o *)StringLiteral_1, 0LL);
+            WarBoardData__SetBgAnimationInfo(monitor, v14, (System_String_o *)StringLiteral_1/*""*/, 0LL);
             if ( WarBoardBGEffectComponent )
             {
               WarBoardBGEffectComponent__StopAnimation(WarBoardBGEffectComponent, 0, v17);
@@ -446,8 +446,8 @@ void __fastcall WarBoardBackgroundComponent__SetDispBgDiff(
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, *(_QWORD *)&idx);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_23101, v8);
-    sub_B16FFC(&StringLiteral_23102, v9);
+    sub_B16FFC(&StringLiteral_23101/*"wall_0"*/, v8);
+    sub_B16FFC(&StringLiteral_23102/*"wall_1"*/, v9);
     byte_40F8C47 = 1;
   }
   BgDiffByIndex = WarBoardBackgroundComponent__GetBgDiffByIndex(this, idx, (const MethodInfo *)isDisp);
@@ -470,9 +470,9 @@ void __fastcall WarBoardBackgroundComponent__SetDispBgDiff(
     }
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_srcLineSprite, 0LL, 0LL) )
     {
-      v12 = (System_String_o **)&StringLiteral_23102;
+      v12 = (System_String_o **)&StringLiteral_23102/*"wall_1"*/;
       if ( !isDisp )
-        v12 = (System_String_o **)&StringLiteral_23101;
+        v12 = (System_String_o **)&StringLiteral_23101/*"wall_0"*/;
       if ( Component_srcLineSprite )
       {
         v13 = *v12;

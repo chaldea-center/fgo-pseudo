@@ -1099,7 +1099,7 @@ bool __fastcall MainMenuBarBase__IsSpotSelectWait(MainMenuBarBase_o *this, const
   if ( (byte_40F8E40 & 1) == 0 )
   {
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12247, v2);
+    sub_B16FFC(&StringLiteral_12247/*"SPOT SELECT WAIT"*/, v2);
     byte_40F8E40 = 1;
   }
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1131,7 +1131,7 @@ bool __fastcall MainMenuBarBase__IsSpotSelectWait(MainMenuBarBase_o *this, const
   ActiveStateName = PlayMakerFSM__get_ActiveStateName(MyFsmP, 0LL);
   if ( !ActiveStateName )
     goto LABEL_30;
-  if ( (System_String__IndexOf_43816080(ActiveStateName, (System_String_o *)StringLiteral_12247, 0LL) & 0x80000000) != 0 )
+  if ( (System_String__IndexOf_43816080(ActiveStateName, (System_String_o *)StringLiteral_12247/*"SPOT SELECT WAIT"*/, 0LL) & 0x80000000) != 0 )
     return 0;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -1167,7 +1167,7 @@ void __fastcall MainMenuBarBase__OnClickCombine(MainMenuBarBase_o *this, const M
 
   if ( (byte_40F8E43 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8579, method);
+    sub_B16FFC(&StringLiteral_8579/*"MAIN_MENU_BAR_SELECT_COMBINE"*/, method);
     byte_40F8E43 = 1;
   }
   combineBtn = this->fields.combineBtn;
@@ -1176,7 +1176,7 @@ void __fastcall MainMenuBarBase__OnClickCombine(MainMenuBarBase_o *this, const M
   IsEnabled = MainMenuBarButton__IsEnabled(combineBtn, 0LL);
   MainMenuBarBase__OnClickCommon(this, 3, IsEnabled, v5);
   if ( IsEnabled )
-    MainMenuBarBase__SendSelectSignal(this, 32, (System_String_o *)StringLiteral_8579, 0LL, v6);
+    MainMenuBarBase__SendSelectSignal(this, 32, (System_String_o *)StringLiteral_8579/*"MAIN_MENU_BAR_SELECT_COMBINE"*/, 0LL, v6);
 }
 
 
@@ -1269,7 +1269,7 @@ void __fastcall MainMenuBarBase__OnClickFormation(MainMenuBarBase_o *this, const
 
   if ( (byte_40F8E41 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8583, method);
+    sub_B16FFC(&StringLiteral_8583/*"MAIN_MENU_BAR_SELECT_PARTY"*/, method);
     byte_40F8E41 = 1;
   }
   partyBtn = this->fields.partyBtn;
@@ -1278,7 +1278,7 @@ void __fastcall MainMenuBarBase__OnClickFormation(MainMenuBarBase_o *this, const
   IsEnabled = MainMenuBarButton__IsEnabled(partyBtn, 0LL);
   MainMenuBarBase__OnClickCommon(this, 1, IsEnabled, v5);
   if ( IsEnabled )
-    MainMenuBarBase__SendSelectSignal(this, 39, (System_String_o *)StringLiteral_8583, 0LL, v6);
+    MainMenuBarBase__SendSelectSignal(this, 39, (System_String_o *)StringLiteral_8583/*"MAIN_MENU_BAR_SELECT_PARTY"*/, 0LL, v6);
 }
 
 
@@ -1291,7 +1291,7 @@ void __fastcall MainMenuBarBase__OnClickFriend(MainMenuBarBase_o *this, const Me
 
   if ( (byte_40F8E45 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8580, method);
+    sub_B16FFC(&StringLiteral_8580/*"MAIN_MENU_BAR_SELECT_FRIEND"*/, method);
     byte_40F8E45 = 1;
   }
   friendBtn = this->fields.friendBtn;
@@ -1300,7 +1300,7 @@ void __fastcall MainMenuBarBase__OnClickFriend(MainMenuBarBase_o *this, const Me
   IsEnabled = MainMenuBarButton__IsEnabled(friendBtn, 0LL);
   MainMenuBarBase__OnClickCommon(this, 5, IsEnabled, v5);
   if ( IsEnabled )
-    MainMenuBarBase__SendSelectSignal(this, 23, (System_String_o *)StringLiteral_8580, 0LL, v6);
+    MainMenuBarBase__SendSelectSignal(this, 23, (System_String_o *)StringLiteral_8580/*"MAIN_MENU_BAR_SELECT_FRIEND"*/, 0LL, v6);
 }
 
 
@@ -1328,7 +1328,7 @@ void __fastcall MainMenuBarBase__OnClickLatestScenario(MainMenuBarBase_o *this, 
   {
     sub_B16FFC(&MyRoomRootComponent_TypeInfo, method);
     sub_B16FFC(&SceneJumpInfo_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_8581, v4);
+    sub_B16FFC(&StringLiteral_8581/*"MAIN_MENU_BAR_SELECT_MYROOM"*/, v4);
     byte_40F8E47 = 1;
   }
   *(_QWORD *)questId = 0LL;
@@ -1358,7 +1358,7 @@ void __fastcall MainMenuBarBase__OnClickLatestScenario(MainMenuBarBase_o *this, 
     {
       v18 = 0LL;
     }
-    MainMenuBarBase__SendSelectSignal(this, 30, (System_String_o *)StringLiteral_8581, (Il2CppObject *)v18, v13);
+    MainMenuBarBase__SendSelectSignal(this, 30, (System_String_o *)StringLiteral_8581/*"MAIN_MENU_BAR_SELECT_MYROOM"*/, (Il2CppObject *)v18, v13);
   }
 }
 
@@ -1372,7 +1372,7 @@ void __fastcall MainMenuBarBase__OnClickMyroom(MainMenuBarBase_o *this, const Me
 
   if ( (byte_40F8E46 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8581, method);
+    sub_B16FFC(&StringLiteral_8581/*"MAIN_MENU_BAR_SELECT_MYROOM"*/, method);
     byte_40F8E46 = 1;
   }
   myroomBtn = this->fields.myroomBtn;
@@ -1381,7 +1381,7 @@ void __fastcall MainMenuBarBase__OnClickMyroom(MainMenuBarBase_o *this, const Me
   IsEnabled = MainMenuBarButton__IsEnabled(myroomBtn, 0LL);
   MainMenuBarBase__OnClickCommon(this, 6, IsEnabled, v5);
   if ( IsEnabled )
-    MainMenuBarBase__SendSelectSignal(this, 30, (System_String_o *)StringLiteral_8581, 0LL, v6);
+    MainMenuBarBase__SendSelectSignal(this, 30, (System_String_o *)StringLiteral_8581/*"MAIN_MENU_BAR_SELECT_MYROOM"*/, 0LL, v6);
 }
 
 
@@ -1402,7 +1402,7 @@ void __fastcall MainMenuBarBase__OnClickShop(MainMenuBarBase_o *this, const Meth
 
   if ( (byte_40F8E44 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8584, method);
+    sub_B16FFC(&StringLiteral_8584/*"MAIN_MENU_BAR_SELECT_SHOP"*/, method);
     byte_40F8E44 = 1;
   }
   shopBtn = this->fields.shopBtn;
@@ -1411,7 +1411,7 @@ void __fastcall MainMenuBarBase__OnClickShop(MainMenuBarBase_o *this, const Meth
   IsEnabled = MainMenuBarButton__IsEnabled(shopBtn, 0LL);
   MainMenuBarBase__OnClickCommon(this, 4, IsEnabled, v5);
   if ( IsEnabled )
-    MainMenuBarBase__SendSelectSignal(this, 22, (System_String_o *)StringLiteral_8584, 0LL, v6);
+    MainMenuBarBase__SendSelectSignal(this, 22, (System_String_o *)StringLiteral_8584/*"MAIN_MENU_BAR_SELECT_SHOP"*/, 0LL, v6);
 }
 
 
@@ -1424,7 +1424,7 @@ void __fastcall MainMenuBarBase__OnClickSummon(MainMenuBarBase_o *this, const Me
 
   if ( (byte_40F8E42 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8585, method);
+    sub_B16FFC(&StringLiteral_8585/*"MAIN_MENU_BAR_SELECT_SUMMON"*/, method);
     byte_40F8E42 = 1;
   }
   summonBtn = this->fields.summonBtn;
@@ -1433,7 +1433,7 @@ void __fastcall MainMenuBarBase__OnClickSummon(MainMenuBarBase_o *this, const Me
   IsEnabled = MainMenuBarButton__IsEnabled(summonBtn, 0LL);
   MainMenuBarBase__OnClickCommon(this, 2, IsEnabled, v5);
   if ( IsEnabled )
-    MainMenuBarBase__SendSelectSignal(this, 20, (System_String_o *)StringLiteral_8585, 0LL, v6);
+    MainMenuBarBase__SendSelectSignal(this, 20, (System_String_o *)StringLiteral_8585/*"MAIN_MENU_BAR_SELECT_SUMMON"*/, 0LL, v6);
 }
 
 
@@ -1510,9 +1510,9 @@ void __fastcall MainMenuBarBase__OnClickTerminal(MainMenuBarBase_o *this, const 
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v5);
     sub_B16FFC(&Method_MainMenuBarBase___c__OnClickTerminal_b__106_0__, v6);
     sub_B16FFC(&MainMenuBarBase___c_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_8586, v8);
-    sub_B16FFC(&StringLiteral_12247, v9);
-    sub_B16FFC(&StringLiteral_2915, v10);
+    sub_B16FFC(&StringLiteral_8586/*"MAIN_MENU_BAR_SELECT_TERMINAL"*/, v8);
+    sub_B16FFC(&StringLiteral_12247/*"SPOT SELECT WAIT"*/, v9);
+    sub_B16FFC(&StringLiteral_2915/*"CAPTER WAIT"*/, v10);
     byte_40F8E3E = 1;
   }
   terminalBtn = this->fields.terminalBtn;
@@ -1671,8 +1671,8 @@ LABEL_155:
     if ( !ActiveStateName )
       goto LABEL_152;
     v28 = ActiveStateName;
-    if ( (System_String__IndexOf_43816080(ActiveStateName, (System_String_o *)StringLiteral_12247, 0LL) & 0x80000000) != 0
-      && (System_String__IndexOf_43816080(v28, (System_String_o *)StringLiteral_2915, 0LL) & 0x80000000) != 0 )
+    if ( (System_String__IndexOf_43816080(ActiveStateName, (System_String_o *)StringLiteral_12247/*"SPOT SELECT WAIT"*/, 0LL) & 0x80000000) != 0
+      && (System_String__IndexOf_43816080(v28, (System_String_o *)StringLiteral_2915/*"CAPTER WAIT"*/, 0LL) & 0x80000000) != 0 )
     {
       goto LABEL_156;
     }
@@ -1773,7 +1773,7 @@ LABEL_156:
           {
             TerminalSceneComponent__CallQuestInformationClose(v38, 0LL);
 LABEL_115:
-            MainMenuBarBase__SendSelectSignal(this, 34, (System_String_o *)StringLiteral_8586, 0LL, v18);
+            MainMenuBarBase__SendSelectSignal(this, 34, (System_String_o *)StringLiteral_8586/*"MAIN_MENU_BAR_SELECT_TERMINAL"*/, 0LL, v18);
             return;
           }
         }
@@ -1781,7 +1781,7 @@ LABEL_115:
 LABEL_152:
       sub_B170D4();
     }
-    if ( (System_String__IndexOf_43816080(v28, (System_String_o *)StringLiteral_2915, 0LL) & 0x80000000) != 0 )
+    if ( (System_String__IndexOf_43816080(v28, (System_String_o *)StringLiteral_2915/*"CAPTER WAIT"*/, 0LL) & 0x80000000) != 0 )
     {
       if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -1937,7 +1937,7 @@ void __fastcall MainMenuBarBase__RequestSelectedSignal(MainMenuBarBase_o *this, 
   if ( (byte_40F8E32 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_8582, v3);
+    sub_B16FFC(&StringLiteral_8582/*"MAIN_MENU_BAR_SELECT_NONE"*/, v3);
     byte_40F8E32 = 1;
   }
   activeSceneFSM = (UnityEngine_Object_o *)this->fields.activeSceneFSM;
@@ -1960,7 +1960,7 @@ LABEL_13:
     {
       if ( !v6 )
         goto LABEL_13;
-      selectedKind = (System_String_o *)StringLiteral_8582;
+      selectedKind = (System_String_o *)StringLiteral_8582/*"MAIN_MENU_BAR_SELECT_NONE"*/;
     }
     PlayMakerFSM__SendEvent(v6, selectedKind, 0LL);
   }
@@ -3196,8 +3196,8 @@ void __fastcall MainMenuBarBase__ResetSummonNoticeDraw(MainMenuBarBase_o *this, 
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&SummonControl_TypeInfo, v3);
     sub_B16FFC(&UserGachaMaster_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_6463, v5);
-    sub_B16FFC(&StringLiteral_6464, v6);
+    sub_B16FFC(&StringLiteral_6463/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_MENU_MSG1"*/, v5);
+    sub_B16FFC(&StringLiteral_6464/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_MENU_MSG2"*/, v6);
     byte_40F8E39 = 1;
   }
   *(_QWORD *)maxNum = 0LL;
@@ -3228,11 +3228,11 @@ void __fastcall MainMenuBarBase__ResetSummonNoticeDraw(MainMenuBarBase_o *this, 
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6463, v10);
+      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6463/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_MENU_MSG1"*/, v10);
       if ( !summonCampainLabel1
         || (UILabel__set_text(summonCampainLabel1, v12, 0LL),
             summonCampainLabel2 = this->fields.summonCampainLabel2,
-            v15 = LocalizationManager__Get((System_String_o *)StringLiteral_6464, v14),
+            v15 = LocalizationManager__Get((System_String_o *)StringLiteral_6464/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_MENU_MSG2"*/, v14),
             !summonCampainLabel2)
         || (UILabel__set_text(summonCampainLabel2, v15, 0LL),
             summonCampainNumLabel = this->fields.summonCampainNumLabel,
@@ -3275,7 +3275,7 @@ void __fastcall MainMenuBarBase__SendSelectSignal(
   if ( (byte_40F8E33 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&type);
-    sub_B16FFC(&StringLiteral_8578, v9);
+    sub_B16FFC(&StringLiteral_8578/*"MAIN_MENU_BAR_SELECT"*/, v9);
     byte_40F8E33 = 1;
   }
   activeSceneFSM = (UnityEngine_Object_o *)this->fields.activeSceneFSM;
@@ -3310,7 +3310,7 @@ void __fastcall MainMenuBarBase__SendSelectSignal(
     v23 = this->fields.activeSceneFSM;
     if ( !v23 )
       sub_B170D4();
-    PlayMakerFSM__SendEvent(v23, (System_String_o *)StringLiteral_8578, 0LL);
+    PlayMakerFSM__SendEvent(v23, (System_String_o *)StringLiteral_8578/*"MAIN_MENU_BAR_SELECT"*/, 0LL);
   }
 }
 
@@ -3963,18 +3963,18 @@ void __fastcall MainMenuBarBase__SwitchMenu(
     sub_B16FFC(&float_TypeInfo, v7);
     sub_B16FFC(&SoundManager_TypeInfo, v8);
     sub_B16FFC(&UnityEngine_Vector3_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_18046, v10);
-    sub_B16FFC(&StringLiteral_21161, v11);
-    sub_B16FFC(&StringLiteral_17411, v12);
-    sub_B16FFC(&StringLiteral_18031, v13);
-    sub_B16FFC(&StringLiteral_22584, v14);
-    sub_B16FFC(&StringLiteral_21175, v15);
-    sub_B16FFC(&StringLiteral_21181, v16);
-    sub_B16FFC(&StringLiteral_21419, v17);
-    sub_B16FFC(&StringLiteral_19856, v18);
-    sub_B16FFC(&StringLiteral_21179, v19);
-    sub_B16FFC(&StringLiteral_21173, v20);
-    sub_B16FFC(&StringLiteral_21215, v21);
+    sub_B16FFC(&StringLiteral_18046/*"easetype"*/, v10);
+    sub_B16FFC(&StringLiteral_21161/*"onMoveComplete"*/, v11);
+    sub_B16FFC(&StringLiteral_17411/*"closeMenuStateImg"*/, v12);
+    sub_B16FFC(&StringLiteral_18031/*"easeInQuad"*/, v13);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v14);
+    sub_B16FFC(&StringLiteral_21175/*"oncompletetarget"*/, v15);
+    sub_B16FFC(&StringLiteral_21181/*"onstarttarget"*/, v16);
+    sub_B16FFC(&StringLiteral_21419/*"position"*/, v17);
+    sub_B16FFC(&StringLiteral_19856/*"isLocal"*/, v18);
+    sub_B16FFC(&StringLiteral_21179/*"onstart"*/, v19);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v20);
+    sub_B16FFC(&StringLiteral_21215/*"openMenuStateImg"*/, v21);
     sub_B16FFC(&iTween_TypeInfo, v22);
     byte_40F8E34 = 1;
   }
@@ -4017,7 +4017,7 @@ void __fastcall MainMenuBarBase__SwitchMenu(
         {
           ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v34->klass->vtable._23_Add.method)(
             v34,
-            StringLiteral_19856,
+            StringLiteral_19856/*"isLocal"*/,
             v35,
             v34->klass->vtable._24_Clear.methodPtr);
           v36 = this->fields.table;
@@ -4029,7 +4029,7 @@ void __fastcall MainMenuBarBase__SwitchMenu(
           {
             ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v36->klass->vtable._23_Add.method)(
               v36,
-              StringLiteral_21419,
+              StringLiteral_21419/*"position"*/,
               v37,
               v36->klass->vtable._24_Clear.methodPtr);
             v38 = this->fields.table;
@@ -4037,8 +4037,8 @@ void __fastcall MainMenuBarBase__SwitchMenu(
             {
               ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v38->klass->vtable._23_Add.method)(
                 v38,
-                StringLiteral_21179,
-                StringLiteral_21215,
+                StringLiteral_21179/*"onstart"*/,
+                StringLiteral_21215/*"openMenuStateImg"*/,
                 v38->klass->vtable._24_Clear.methodPtr);
               v39 = this->fields.table;
               v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -4046,7 +4046,7 @@ void __fastcall MainMenuBarBase__SwitchMenu(
               {
                 ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, Il2CppMethodPointer))v39->klass->vtable._23_Add.method)(
                   v39,
-                  StringLiteral_21181,
+                  StringLiteral_21181/*"onstarttarget"*/,
                   v40,
                   v39->klass->vtable._24_Clear.methodPtr);
                 v41 = this->fields.table;
@@ -4054,8 +4054,8 @@ void __fastcall MainMenuBarBase__SwitchMenu(
                 {
                   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v41->klass->vtable._23_Add.method)(
                     v41,
-                    StringLiteral_21173,
-                    StringLiteral_21161,
+                    StringLiteral_21173/*"oncomplete"*/,
+                    StringLiteral_21161/*"onMoveComplete"*/,
                     v41->klass->vtable._24_Clear.methodPtr);
                   v42 = this->fields.table;
                   v43 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -4063,7 +4063,7 @@ void __fastcall MainMenuBarBase__SwitchMenu(
                   {
                     ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, Il2CppMethodPointer))v42->klass->vtable._23_Add.method)(
                       v42,
-                      StringLiteral_21175,
+                      StringLiteral_21175/*"oncompletetarget"*/,
                       v43,
                       v42->klass->vtable._24_Clear.methodPtr);
                     v44 = this->fields.table;
@@ -4071,8 +4071,8 @@ void __fastcall MainMenuBarBase__SwitchMenu(
                     {
                       ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v44->klass->vtable._23_Add.method)(
                         v44,
-                        StringLiteral_18046,
-                        StringLiteral_18031,
+                        StringLiteral_18046/*"easetype"*/,
+                        StringLiteral_18031/*"easeInQuad"*/,
                         v44->klass->vtable._24_Clear.methodPtr);
                       v45 = this->fields.table;
                       v73 = 1024148374;
@@ -4081,7 +4081,7 @@ void __fastcall MainMenuBarBase__SwitchMenu(
                       {
                         ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v45->klass->vtable._23_Add.method)(
                           v45,
-                          StringLiteral_22584,
+                          StringLiteral_22584/*"time"*/,
                           v46,
                           v45->klass->vtable._24_Clear.methodPtr);
                         v47 = this->fields.table;
@@ -4136,7 +4136,7 @@ LABEL_47:
     v56 = dword_3134BF0[v53];
     ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v54->klass->vtable._23_Add.method)(
       v54,
-      StringLiteral_19856,
+      StringLiteral_19856/*"isLocal"*/,
       v55,
       v54->klass->vtable._24_Clear.methodPtr);
     v57 = this->fields.table;
@@ -4148,7 +4148,7 @@ LABEL_47:
       goto LABEL_47;
     ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v57->klass->vtable._23_Add.method)(
       v57,
-      StringLiteral_21419,
+      StringLiteral_21419/*"position"*/,
       v58,
       v57->klass->vtable._24_Clear.methodPtr);
     v59 = this->fields.table;
@@ -4156,8 +4156,8 @@ LABEL_47:
       goto LABEL_47;
     ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v59->klass->vtable._23_Add.method)(
       v59,
-      StringLiteral_21179,
-      StringLiteral_17411,
+      StringLiteral_21179/*"onstart"*/,
+      StringLiteral_17411/*"closeMenuStateImg"*/,
       v59->klass->vtable._24_Clear.methodPtr);
     v60 = this->fields.table;
     v61 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -4165,7 +4165,7 @@ LABEL_47:
       goto LABEL_47;
     ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, Il2CppMethodPointer))v60->klass->vtable._23_Add.method)(
       v60,
-      StringLiteral_21181,
+      StringLiteral_21181/*"onstarttarget"*/,
       v61,
       v60->klass->vtable._24_Clear.methodPtr);
     v62 = this->fields.table;
@@ -4173,8 +4173,8 @@ LABEL_47:
       goto LABEL_47;
     ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v62->klass->vtable._23_Add.method)(
       v62,
-      StringLiteral_21173,
-      StringLiteral_21161,
+      StringLiteral_21173/*"oncomplete"*/,
+      StringLiteral_21161/*"onMoveComplete"*/,
       v62->klass->vtable._24_Clear.methodPtr);
     v63 = this->fields.table;
     v64 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -4182,7 +4182,7 @@ LABEL_47:
       goto LABEL_47;
     ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, Il2CppMethodPointer))v63->klass->vtable._23_Add.method)(
       v63,
-      StringLiteral_21175,
+      StringLiteral_21175/*"oncompletetarget"*/,
       v64,
       v63->klass->vtable._24_Clear.methodPtr);
     v65 = this->fields.table;
@@ -4190,8 +4190,8 @@ LABEL_47:
       goto LABEL_47;
     ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v65->klass->vtable._23_Add.method)(
       v65,
-      StringLiteral_18046,
-      StringLiteral_18031,
+      StringLiteral_18046/*"easetype"*/,
+      StringLiteral_18031/*"easeInQuad"*/,
       v65->klass->vtable._24_Clear.methodPtr);
     v66 = this->fields.table;
     v73 = 1024148374;
@@ -4200,7 +4200,7 @@ LABEL_47:
       goto LABEL_47;
     ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v66->klass->vtable._23_Add.method)(
       v66,
-      StringLiteral_22584,
+      StringLiteral_22584/*"time"*/,
       v67,
       v66->klass->vtable._24_Clear.methodPtr);
     v68 = this->fields.table;
@@ -4364,7 +4364,7 @@ void __fastcall MainMenuBarBase___ResetShopNoticeDraw_b__97_0(MainMenuBarBase_o 
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&int_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_19289, v4);
+    sub_B16FFC(&StringLiteral_19289/*"icon_servant_exchange_available_{0}"*/, v4);
     byte_40F8E4E = 1;
   }
   shopNotice = this->fields.shopNotice;
@@ -4373,7 +4373,7 @@ void __fastcall MainMenuBarBase___ResetShopNoticeDraw_b__97_0(MainMenuBarBase_o 
   mExchangeServantItemSp = this->fields.mExchangeServantItemSp;
   ExchangeServantEventId_k__BackingField = shopNotice->fields._ExchangeServantEventId_k__BackingField;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &ExchangeServantEventId_k__BackingField);
-  v8 = System_String__Format((System_String_o *)StringLiteral_19289, v7, 0LL);
+  v8 = System_String__Format((System_String_o *)StringLiteral_19289/*"icon_servant_exchange_available_{0}"*/, v7, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   if ( !AtlasManager__SetEventUI(mExchangeServantItemSp, v8, 0LL) )
@@ -4406,12 +4406,12 @@ void __fastcall MainMenuBarBase__closeMenuStateImg(MainMenuBarBase_o *this, cons
   if ( (byte_40F8E3B & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19457, v3);
+    sub_B16FFC(&StringLiteral_19457/*"img_menu_menu"*/, v3);
     byte_40F8E3B = 1;
   }
   menuStateBtn = this->fields.menuStateBtn;
   if ( !menuStateBtn
-    || (UIButton__set_normalSprite(menuStateBtn, (System_String_o *)StringLiteral_19457, 0LL),
+    || (UIButton__set_normalSprite(menuStateBtn, (System_String_o *)StringLiteral_19457/*"img_menu_menu"*/, 0LL),
         (menuStateImg = this->fields.menuStateImg) == 0LL)
     || (((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))menuStateImg->klass->vtable._33_MakePixelPerfect.method)(
           menuStateImg,
@@ -4491,12 +4491,12 @@ void __fastcall MainMenuBarBase__openMenuStateImg(MainMenuBarBase_o *this, const
   if ( (byte_40F8E3A & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19456, v3);
+    sub_B16FFC(&StringLiteral_19456/*"img_menu_close"*/, v3);
     byte_40F8E3A = 1;
   }
   menuStateBtn = this->fields.menuStateBtn;
   if ( !menuStateBtn
-    || (UIButton__set_normalSprite(menuStateBtn, (System_String_o *)StringLiteral_19456, 0LL),
+    || (UIButton__set_normalSprite(menuStateBtn, (System_String_o *)StringLiteral_19456/*"img_menu_close"*/, 0LL),
         (menuStateImg = this->fields.menuStateImg) == 0LL)
     || (((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))menuStateImg->klass->vtable._33_MakePixelPerfect.method)(
           menuStateImg,

@@ -54,7 +54,7 @@ int32_t __fastcall ServantLimitEntity__GetAscensionAfterDialogId(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, *(_QWORD *)&defaultValue);
     sub_B16FFC(&JsonManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_16417, v6);
+    sub_B16FFC(&StringLiteral_16417/*"ascensionAfterDialogId"*/, v6);
     byte_40FC7F8 = 1;
   }
   value = 0LL;
@@ -66,7 +66,7 @@ int32_t __fastcall ServantLimitEntity__GetAscensionAfterDialogId(
     goto LABEL_11;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_16417,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_16417/*"ascensionAfterDialogId"*/,
          &value,
          (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -103,7 +103,7 @@ int32_t __fastcall ServantLimitEntity__GetChangeGraphCommonReleaseId(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, *(_QWORD *)&defaultValue);
     sub_B16FFC(&JsonManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_17207, v6);
+    sub_B16FFC(&StringLiteral_17207/*"changeGraphCommonReleaseId"*/, v6);
     byte_40FC7F9 = 1;
   }
   value = 0LL;
@@ -115,7 +115,7 @@ int32_t __fastcall ServantLimitEntity__GetChangeGraphCommonReleaseId(
     goto LABEL_11;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_17207,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_17207/*"changeGraphCommonReleaseId"*/,
          &value,
          (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -150,7 +150,7 @@ System_String_o *__fastcall ServantLimitEntity__GetChangeGraphSuffix(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, defaultValue);
     sub_B16FFC(&JsonManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_17208, v6);
+    sub_B16FFC(&StringLiteral_17208/*"changeGraphSuffix"*/, v6);
     byte_40FC7FA = 1;
   }
   value = 0LL;
@@ -162,7 +162,7 @@ System_String_o *__fastcall ServantLimitEntity__GetChangeGraphSuffix(
     goto LABEL_11;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_17208,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_17208/*"changeGraphSuffix"*/,
          &value,
          (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -196,7 +196,7 @@ int32_t __fastcall ServantLimitEntity__GetChangeIconCommonReleaseId(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, *(_QWORD *)&defaultValue);
     sub_B16FFC(&JsonManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_17210, v6);
+    sub_B16FFC(&StringLiteral_17210/*"changeIconCommonReleaseId"*/, v6);
     byte_40FC7FB = 1;
   }
   value = 0LL;
@@ -208,7 +208,7 @@ int32_t __fastcall ServantLimitEntity__GetChangeIconCommonReleaseId(
     goto LABEL_11;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_17210,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_17210/*"changeIconCommonReleaseId"*/,
          &value,
          (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -243,7 +243,7 @@ System_String_o *__fastcall ServantLimitEntity__GetChangeIconSuffix(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, defaultValue);
     sub_B16FFC(&JsonManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_17211, v6);
+    sub_B16FFC(&StringLiteral_17211/*"changeIconSuffix"*/, v6);
     byte_40FC7FC = 1;
   }
   value = 0LL;
@@ -255,7 +255,7 @@ System_String_o *__fastcall ServantLimitEntity__GetChangeIconSuffix(
     goto LABEL_11;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_17211,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_17211/*"changeIconSuffix"*/,
          &value,
          (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -290,7 +290,7 @@ int32_t __fastcall ServantLimitEntity__GetSaintGraphNameIndex(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, *(_QWORD *)&defaultValue);
     sub_B16FFC(&JsonManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21793, v6);
+    sub_B16FFC(&StringLiteral_21793/*"saintGraphImageId"*/, v6);
     byte_40FC7F7 = 1;
   }
   result = 0;
@@ -303,7 +303,7 @@ int32_t __fastcall ServantLimitEntity__GetSaintGraphNameIndex(
     result = v3;
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)Dictionary,
-             (System_Type_o *)StringLiteral_21793,
+             (System_Type_o *)StringLiteral_21793/*"saintGraphImageId"*/,
              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       sub_B170D4();
@@ -328,7 +328,7 @@ bool __fastcall ServantLimitEntity__IsNeedChangeSaintGraphName(ServantLimitEntit
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
     sub_B16FFC(&JsonManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_21793, v4);
+    sub_B16FFC(&StringLiteral_21793/*"saintGraphImageId"*/, v4);
     byte_40FC7F6 = 1;
   }
   strParam = this->fields.strParam;
@@ -338,7 +338,7 @@ bool __fastcall ServantLimitEntity__IsNeedChangeSaintGraphName(ServantLimitEntit
   if ( Dictionary )
     LOBYTE(Dictionary) = System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
                            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary,
-                           (System_Xml_XmlQualifiedName_o *)StringLiteral_21793,
+                           (System_Xml_XmlQualifiedName_o *)StringLiteral_21793/*"saintGraphImageId"*/,
                            (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)Dictionary;
 }

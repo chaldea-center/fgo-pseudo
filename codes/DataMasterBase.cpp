@@ -1647,7 +1647,7 @@ System_String_o *__fastcall DataMasterBase__createKey(
   if ( (byte_40FB443 & 1) == 0 )
   {
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, args);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FB443 = 1;
   }
   if ( !args )
@@ -1657,7 +1657,7 @@ System_String_o *__fastcall DataMasterBase__createKey(
   if ( max_length == 1 )
     return System_Int64__ToString((int64_t)args->m_Items, 0LL);
   if ( max_length < 2 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   sb = this->fields.sb;
   p_sb = (BattleServantConfConponent_o *)&this->fields.sb;
   klass = sb;
@@ -1767,7 +1767,7 @@ DataEntityBase_array *__fastcall DataMasterBase__directGetList(
   {
     v25 = sub_B17000(&System_FormatException_TypeInfo, v18);
     v30 = (System_FormatException_o *)sub_B170CC(v25, v26, v27, v28, v29);
-    v32 = (System_String_o *)sub_B17000(&StringLiteral_18933, v31);
+    v32 = (System_String_o *)sub_B17000(&StringLiteral_18933/*"getList family cannot return null."*/, v31);
     System_FormatException___ctor_42829508(v30, v32, 0LL);
     sub_B17000(&Method_DataMasterBase_directGetList__, v33);
     sub_B170A0();

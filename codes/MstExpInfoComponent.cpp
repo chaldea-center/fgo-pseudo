@@ -114,8 +114,8 @@ void __fastcall MstExpInfoComponent__openExpInfo(MstExpInfoComponent_o *this, in
     sub_B16FFC(&long_TypeInfo, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&Method_MstExpInfoComponent_EndOpen__, v7);
-    sub_B16FFC(&StringLiteral_23433, v8);
-    sub_B16FFC(&StringLiteral_8624, v9);
+    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v8);
+    sub_B16FFC(&StringLiteral_8624/*"MASTER_TOTAL_EXP"*/, v9);
     byte_40F7D9F = 1;
   }
   expInfoTitleLb = this->fields.expInfoTitleLb;
@@ -124,13 +124,13 @@ void __fastcall MstExpInfoComponent__openExpInfo(MstExpInfoComponent_o *this, in
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8624, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8624/*"MASTER_TOTAL_EXP"*/, 0LL);
   if ( !expInfoTitleLb
     || (UILabel__set_text(expInfoTitleLb, v11, 0LL),
         expInfoLb = this->fields.expInfoLb,
         v20 = exp,
         v13 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v20),
-        v14 = System_String__Format((System_String_o *)StringLiteral_23433, v13, 0LL),
+        v14 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v13, 0LL),
         !expInfoLb) )
   {
     sub_B170D4();

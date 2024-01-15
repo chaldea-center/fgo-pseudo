@@ -54,7 +54,7 @@ void __fastcall ExUISpriteRenderer__ClearImage(ExUISpriteRenderer_o *this, const
   if ( (byte_40F9C64 & 1) == 0 )
   {
     sub_B16FFC(&AssetManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16009, v3);
+    sub_B16FFC(&StringLiteral_16009/*"_SubTex"*/, v3);
     byte_40F9C64 = 1;
   }
   spriteRenderer = this->fields.spriteRenderer;
@@ -68,7 +68,7 @@ void __fastcall ExUISpriteRenderer__ClearImage(ExUISpriteRenderer_o *this, const
   if ( !v5 || (material = UnityEngine_Renderer__get_material(v5, 0LL)) == 0LL )
 LABEL_20:
     sub_B170D4();
-  UnityEngine_Material__SetTexture(material, (System_String_o *)StringLiteral_16009, 0LL, 0LL);
+  UnityEngine_Material__SetTexture(material, (System_String_o *)StringLiteral_16009/*"_SubTex"*/, 0LL, 0LL);
 LABEL_8:
   assetData = this->fields.assetData;
   if ( assetData )
@@ -764,8 +764,8 @@ void __fastcall ExUISpriteRenderer__SetAssetTexture(ExUISpriteRenderer_o *this, 
   {
     sub_B16FFC(&Method_AssetData_GetObject_Texture2D____66802808, method);
     sub_B16FFC(&UnityEngine_Material_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_16155, v4);
-    sub_B16FFC(&StringLiteral_16009, v5);
+    sub_B16FFC(&StringLiteral_16155/*"a"*/, v4);
+    sub_B16FFC(&StringLiteral_16009/*"_SubTex"*/, v5);
     byte_40F9C6B = 1;
   }
   v45.methodPointer = 0LL;
@@ -778,14 +778,14 @@ void __fastcall ExUISpriteRenderer__SetAssetTexture(ExUISpriteRenderer_o *this, 
     material = UnityEngine_Renderer__get_material(spriteRenderer, 0LL);
     if ( !material )
       goto LABEL_19;
-    UnityEngine_Material__SetTexture(material, (System_String_o *)StringLiteral_16009, 0LL, 0LL);
+    UnityEngine_Material__SetTexture(material, (System_String_o *)StringLiteral_16009/*"_SubTex"*/, 0LL, 0LL);
   }
   isUseAlphaImage = this->fields.isUseAlphaImage;
   this->fields.isTextureAlphaImage = isUseAlphaImage;
   if ( isUseAlphaImage )
   {
     assetData = this->fields.assetData;
-    v10 = System_String__Concat_43743732(this->fields.assetLabel, (System_String_o *)StringLiteral_16155, 0LL);
+    v10 = System_String__Concat_43743732(this->fields.assetLabel, (System_String_o *)StringLiteral_16155/*"a"*/, 0LL);
     if ( assetData )
     {
       Object_WarBoardWaitTimeSetting = AssetData__GetObject_WarBoardWaitTimeSetting_(
@@ -803,7 +803,7 @@ void __fastcall ExUISpriteRenderer__SetAssetTexture(ExUISpriteRenderer_o *this, 
           UnityEngine_Material___ctor(v19, shader, 0LL);
           if ( v19 )
           {
-            UnityEngine_Material__SetTexture(v19, (System_String_o *)StringLiteral_16009, v12, 0LL);
+            UnityEngine_Material__SetTexture(v19, (System_String_o *)StringLiteral_16009/*"_SubTex"*/, v12, 0LL);
             v20 = (UnityEngine_Renderer_o *)this->fields.spriteRenderer;
             if ( v20 )
             {
@@ -1151,7 +1151,7 @@ void __fastcall ExUISpriteRenderer__SetTexture(
 
   if ( (byte_40F9C6A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16009, tex);
+    sub_B16FFC(&StringLiteral_16009/*"_SubTex"*/, tex);
     byte_40F9C6A = 1;
   }
   v28.methodPointer = 0LL;
@@ -1162,7 +1162,7 @@ void __fastcall ExUISpriteRenderer__SetTexture(
     if ( !spriteRenderer || (material = UnityEngine_Renderer__get_material(spriteRenderer, 0LL)) == 0LL )
 LABEL_11:
       sub_B170D4();
-    UnityEngine_Material__SetTexture(material, (System_String_o *)StringLiteral_16009, 0LL, 0LL);
+    UnityEngine_Material__SetTexture(material, (System_String_o *)StringLiteral_16009/*"_SubTex"*/, 0LL, 0LL);
   }
   this->fields.isTextureAlphaImage = 0;
   if ( !tex )

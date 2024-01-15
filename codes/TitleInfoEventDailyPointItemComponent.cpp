@@ -565,8 +565,8 @@ void __fastcall TitleInfoEventDailyPointItemComponent__PrepareUpdateUIWithEffect
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&recievePoint);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_690, v12);
-    sub_B16FFC(&StringLiteral_23395, v13);
+    sub_B16FFC(&StringLiteral_690/*"+"*/, v12);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v13);
     byte_40FDFA4 = 1;
   }
   *(_QWORD *)&this->fields.eventId = assetData;
@@ -634,8 +634,8 @@ void __fastcall TitleInfoEventDailyPointItemComponent__PrepareUpdateUIWithEffect
       v27 = *(UILabel_o **)&this->fields.subLabelPosition.fields.x;
       v39 = recievePoint;
       v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39);
-      v29 = System_String__Format((System_String_o *)StringLiteral_23395, v28, 0LL);
-      v30 = System_String__Concat_43743732((System_String_o *)StringLiteral_690, v29, 0LL);
+      v29 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v28, 0LL);
+      v30 = System_String__Concat_43743732((System_String_o *)StringLiteral_690/*"+"*/, v29, 0LL);
       if ( !v27 )
         goto LABEL_29;
       UILabel__set_text(v27, v30, 0LL);
@@ -666,7 +666,7 @@ void __fastcall TitleInfoEventDailyPointItemComponent__PrepareUpdateUIWithEffect
     monitor = (UILabel_o *)Item[1].monitor;
     v38 = UserEventPointMaster__GetEventPointNoGroup((int32_t)this[1].klass, 0LL) - HIDWORD(this[1].klass);
     v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v38);
-    v37 = System_String__Format((System_String_o *)StringLiteral_23395, v36, 0LL);
+    v37 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v36, 0LL);
     if ( monitor )
     {
       UILabel__set_text(monitor, v37, 0LL);
@@ -724,7 +724,7 @@ void __fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUI(
     sub_B16FFC(&Method_System_Collections_Generic_List_int__get_Item__, v5);
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_23395, v8);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v8);
     byte_40FDFA3 = 1;
   }
   TitleInfoEventDailyPointItemComponent__DeactivateSubLabel(this, method);
@@ -771,7 +771,7 @@ LABEL_17:
           System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
         v24 = v13->fields._items->m_Items[v19 + 1];
         v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
-        v23 = System_String__Format((System_String_o *)StringLiteral_23395, v22, 0LL);
+        v23 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v22, 0LL);
         if ( !monitor )
           goto LABEL_17;
         UILabel__set_text(monitor, v23, 0LL);
@@ -925,7 +925,7 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__
   {
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_23395, v4);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v4);
     byte_40F7825 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -954,7 +954,7 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__
       v26 = this->fields.label;
       to = this->fields.to;
       v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &to);
-      v28 = System_String__Format((System_String_o *)StringLiteral_23395, v27, 0LL);
+      v28 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v27, 0LL);
       if ( !v26 )
         goto LABEL_18;
       UILabel__set_text(v26, v28, 0LL);
@@ -975,7 +975,7 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__
     v15 = this->fields.label;
     v29 = v14 + from;
     v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29);
-    v17 = System_String__Format((System_String_o *)StringLiteral_23395, v16, 0LL);
+    v17 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v16, 0LL);
     if ( v15 )
     {
       UILabel__set_text(v15, v17, 0LL);
@@ -1520,9 +1520,9 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEff
     sub_B16FFC(&Method_TitleInfoEventDailyPointItemComponent___c__UpdateDailyPointUIWithEffect_IE_b__29_0__, v7);
     sub_B16FFC(&TitleInfoEventDailyPointItemComponent___c_TypeInfo, v8);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_16685, v10);
-    sub_B16FFC(&StringLiteral_16684, v11);
-    sub_B16FFC(&StringLiteral_16686, v12);
+    sub_B16FFC(&StringLiteral_16685/*"bit_dedicate_left_item_flash_2"*/, v10);
+    sub_B16FFC(&StringLiteral_16684/*"bit_dedicate_left_item_flash_1"*/, v11);
+    sub_B16FFC(&StringLiteral_16686/*"bit_dedicate_left_item_flash_3"*/, v12);
     byte_40F7828 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -1580,7 +1580,7 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEff
       v96 = HIDWORD(v94);
       v97 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(
               _4__this,
-              (System_String_o *)StringLiteral_16684,
+              (System_String_o *)StringLiteral_16684/*"bit_dedicate_left_item_flash_1"*/,
               *(UnityEngine_Vector3_o *)&v94,
               0LL);
       started = (Il2CppObject *)UnityEngine_MonoBehaviour__StartCoroutine_34804316(
@@ -1621,7 +1621,7 @@ bool __fastcall TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEff
       UnityEngine_MonoBehaviour__StartCoroutine_34804316((UnityEngine_MonoBehaviour_o *)_4__this, v57, 0LL);
       v58 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(
               _4__this,
-              (System_String_o *)StringLiteral_16686,
+              (System_String_o *)StringLiteral_16686/*"bit_dedicate_left_item_flash_3"*/,
               this->fields._position_5__5,
               0LL);
       v59 = (Il2CppObject *)UnityEngine_MonoBehaviour__StartCoroutine_34804316(
@@ -1723,7 +1723,7 @@ LABEL_47:
       TitleInfoEventDailyPointItemComponent__DeactivateSubLabel(_4__this, 0LL);
       v66 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(
               _4__this,
-              (System_String_o *)StringLiteral_16685,
+              (System_String_o *)StringLiteral_16685/*"bit_dedicate_left_item_flash_2"*/,
               *(UnityEngine_Vector3_o *)&_4__this->fields.lastEffectPosition.fields.z,
               0LL);
       v67 = (Il2CppObject *)UnityEngine_MonoBehaviour__StartCoroutine_34804316(

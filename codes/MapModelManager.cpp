@@ -377,7 +377,7 @@ void __fastcall MapModelManager__LoadMapModel(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v10);
     sub_B16FFC(&Method_MapModelManager___c__DisplayClass41_0__LoadMapModel_b__0__, v11);
     sub_B16FFC(&MapModelManager___c__DisplayClass41_0_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_13550, v13);
+    sub_B16FFC(&StringLiteral_13550/*"Terminal/MapModels/{0:D4}_{1}"*/, v13);
     byte_40FB5FB = 1;
   }
   v14 = sub_B170CC(
@@ -400,7 +400,7 @@ void __fastcall MapModelManager__LoadMapModel(
     v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42);
     v41 = mapId;
     v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v41);
-    v31 = System_String__Format_43739268((System_String_o *)StringLiteral_13550, v29, v30, 0LL);
+    v31 = System_String__Format_43739268((System_String_o *)StringLiteral_13550/*"Terminal/MapModels/{0:D4}_{1}"*/, v29, v30, 0LL);
     MapModelAssetData_k__BackingField = this->fields._MapModelAssetData_k__BackingField;
     v34 = v31;
     if ( MapModelAssetData_k__BackingField
@@ -1208,7 +1208,7 @@ void __fastcall MapModelManager___c__DisplayClass41_0___LoadMapModel_b__0(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v13);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
     sub_B16FFC(&ScrTerminalMap_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_16638, v16);
+    sub_B16FFC(&StringLiteral_16638/*"bg_map"*/, v16);
     byte_40F694E = 1;
   }
   _4__this = this->fields.__4__this;
@@ -1232,7 +1232,7 @@ void __fastcall MapModelManager___c__DisplayClass41_0___LoadMapModel_b__0(
     goto LABEL_52;
   Object_WarBoardWaitTimeSetting = AssetData__GetObject_WarBoardWaitTimeSetting_(
                                      MapModelAssetData_k__BackingField,
-                                     (System_String_o *)StringLiteral_16638,
+                                     (System_String_o *)StringLiteral_16638/*"bg_map"*/,
                                      (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   v21 = this->fields.__4__this;
   v22 = (UnityEngine_UI_Dropdown_DropdownItem_o *)Object_WarBoardWaitTimeSetting;

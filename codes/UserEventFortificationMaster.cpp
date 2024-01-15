@@ -597,24 +597,24 @@ bool __fastcall UserEventFortificationMaster__TryGetFortificationNameTextBySvtId
     sub_B16FFC(&Method_DataManager_GetMasterData_EventFortificationDetailMaster___, fortificationName);
     sub_B16FFC(&Method_DataManager_GetMasterData_EventFortificationMaster___, v13);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_B16FFC(&StringLiteral_1, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v15);
     byte_40FAB82 = 1;
   }
   *(_QWORD *)position = 0LL;
-  *fortificationName = (System_String_o *)StringLiteral_1;
+  *fortificationName = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)fortificationName,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     (System_String_array **)fortificationDetailName,
     *(System_String_array ***)&eventId,
     (System_Boolean_array **)userSvtId,
     (System_Int32_array **)method,
     v6,
     v7);
-  *fortificationDetailName = (System_String_o *)StringLiteral_1;
+  *fortificationDetailName = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)fortificationDetailName,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     v16,
     v17,
     v18,

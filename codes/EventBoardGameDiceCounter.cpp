@@ -10,11 +10,11 @@ void __fastcall EventBoardGameDiceCounter___ctor(EventBoardGameDiceCounter_o *th
 
   if ( (byte_40FC530 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18882, method);
+    sub_B16FFC(&StringLiteral_18882/*"game1_count_"*/, method);
     byte_40FC530 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_18882;
-  this->fields.spriteName = (struct System_String_o *)StringLiteral_18882;
+  v9 = (System_Int32_array **)StringLiteral_18882/*"game1_count_"*/;
+  this->fields.spriteName = (struct System_String_o *)StringLiteral_18882/*"game1_count_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.spriteName, v9, v2, v3, v4, v5, v6, v7);
   this->fields.delayTime = 0.2;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);

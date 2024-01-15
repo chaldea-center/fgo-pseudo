@@ -81,14 +81,14 @@ void __fastcall ServantStatusQuestBoardDraw___cctor(const MethodInfo *method)
   if ( (byte_40FCA8C & 1) == 0 )
   {
     sub_B16FFC(&ServantStatusQuestBoardDraw_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19402, v8);
-    sub_B16FFC(&StringLiteral_19403, v9);
-    sub_B16FFC(&StringLiteral_19401, v10);
-    sub_B16FFC(&StringLiteral_17106, v11);
-    sub_B16FFC(&StringLiteral_19499, v12);
-    sub_B16FFC(&StringLiteral_19400, v13);
-    sub_B16FFC(&StringLiteral_19404, v14);
-    sub_B16FFC(&StringLiteral_19396, v15);
+    sub_B16FFC(&StringLiteral_19402/*"img_conductor_03"*/, v8);
+    sub_B16FFC(&StringLiteral_19403/*"img_conductor_04"*/, v9);
+    sub_B16FFC(&StringLiteral_19401/*"img_conductor_02"*/, v10);
+    sub_B16FFC(&StringLiteral_17106/*"caldeagate_notice_{0:00}"*/, v11);
+    sub_B16FFC(&StringLiteral_19499/*"img_questboard_1001"*/, v12);
+    sub_B16FFC(&StringLiteral_19400/*"img_conductor_01"*/, v13);
+    sub_B16FFC(&StringLiteral_19404/*"img_conductor_questboard"*/, v14);
+    sub_B16FFC(&StringLiteral_19396/*"img_commonbg"*/, v15);
     byte_40FCA8C = 1;
   }
   ServantStatusQuestBoardDraw_TypeInfo->static_fields->TITLE_LABEL_BASE_WIDTH = 320;
@@ -104,35 +104,35 @@ void __fastcall ServantStatusQuestBoardDraw___cctor(const MethodInfo *method)
   v17->static_fields->QUEST_BOARD_PHASE_EX_INTERVAL = 17;
   v17->static_fields->QUEST_BOARD_PHASE_EX_LOOF_INTERVAL = 26;
   v19 = v17->static_fields;
-  v20 = (System_Int32_array **)StringLiteral_19396;
-  v19->DARK_BOARD_SPRITE_NAME = (struct System_String_o *)StringLiteral_19396;
+  v20 = (System_Int32_array **)StringLiteral_19396/*"img_commonbg"*/;
+  v19->DARK_BOARD_SPRITE_NAME = (struct System_String_o *)StringLiteral_19396/*"img_commonbg"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v19->DARK_BOARD_SPRITE_NAME, v20, v2, v3, v4, v5, v6, v7);
   v21 = ServantStatusQuestBoardDraw_TypeInfo;
   ServantStatusQuestBoardDraw_TypeInfo->static_fields->DARK_BOARD_WIDTH = 496;
   v21->static_fields->DARK_BOARD_HIGHT = 122;
   v22 = v21->static_fields;
-  v23 = (System_Int32_array **)StringLiteral_19404;
-  v22->BASE_BOARD_SPRITE_NAME = (struct System_String_o *)StringLiteral_19404;
+  v23 = (System_Int32_array **)StringLiteral_19404/*"img_conductor_questboard"*/;
+  v22->BASE_BOARD_SPRITE_NAME = (struct System_String_o *)StringLiteral_19404/*"img_conductor_questboard"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v22->BASE_BOARD_SPRITE_NAME, v23, v24, v25, v26, v27, v28, v29);
   v30 = ServantStatusQuestBoardDraw_TypeInfo->static_fields;
-  v31 = (System_Int32_array **)StringLiteral_19401;
-  v30->TITLE_SPRITE_NAME_INTERLUDE = (struct System_String_o *)StringLiteral_19401;
+  v31 = (System_Int32_array **)StringLiteral_19401/*"img_conductor_02"*/;
+  v30->TITLE_SPRITE_NAME_INTERLUDE = (struct System_String_o *)StringLiteral_19401/*"img_conductor_02"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v30->TITLE_SPRITE_NAME_INTERLUDE, v31, v32, v33, v34, v35, v36, v37);
   v38 = ServantStatusQuestBoardDraw_TypeInfo->static_fields;
-  v39 = (System_Int32_array **)StringLiteral_19400;
-  v38->TITLE_SPRITE_NAME_INTERLUDE_MAP = (struct System_String_o *)StringLiteral_19400;
+  v39 = (System_Int32_array **)StringLiteral_19400/*"img_conductor_01"*/;
+  v38->TITLE_SPRITE_NAME_INTERLUDE_MAP = (struct System_String_o *)StringLiteral_19400/*"img_conductor_01"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v38->TITLE_SPRITE_NAME_INTERLUDE_MAP, v39, v40, v41, v42, v43, v44, v45);
   v46 = ServantStatusQuestBoardDraw_TypeInfo->static_fields;
-  v47 = (System_Int32_array **)StringLiteral_19402;
-  v46->TITLE_SPRITE_NAME_RAINFORCEMENT = (struct System_String_o *)StringLiteral_19402;
+  v47 = (System_Int32_array **)StringLiteral_19402/*"img_conductor_03"*/;
+  v46->TITLE_SPRITE_NAME_RAINFORCEMENT = (struct System_String_o *)StringLiteral_19402/*"img_conductor_03"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v46->TITLE_SPRITE_NAME_RAINFORCEMENT, v47, v48, v49, v50, v51, v52, v53);
   v54 = ServantStatusQuestBoardDraw_TypeInfo->static_fields;
-  v55 = (System_Int32_array **)StringLiteral_17106;
-  v54->QUEST_BOARD_INFO_FRAME_NAME = (struct System_String_o *)StringLiteral_17106;
+  v55 = (System_Int32_array **)StringLiteral_17106/*"caldeagate_notice_{0:00}"*/;
+  v54->QUEST_BOARD_INFO_FRAME_NAME = (struct System_String_o *)StringLiteral_17106/*"caldeagate_notice_{0:00}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v54->QUEST_BOARD_INFO_FRAME_NAME, v55, v56, v57, v58, v59, v60, v61);
   v62 = ServantStatusQuestBoardDraw_TypeInfo->static_fields;
-  v63 = (System_Int32_array **)StringLiteral_19499;
-  v62->BASE_BOARD_LIMIT_UNSEAL_SPRITE_NAME = (struct System_String_o *)StringLiteral_19499;
+  v63 = (System_Int32_array **)StringLiteral_19499/*"img_questboard_1001"*/;
+  v62->BASE_BOARD_LIMIT_UNSEAL_SPRITE_NAME = (struct System_String_o *)StringLiteral_19499/*"img_questboard_1001"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v62->BASE_BOARD_LIMIT_UNSEAL_SPRITE_NAME,
     v63,
@@ -143,8 +143,8 @@ void __fastcall ServantStatusQuestBoardDraw___cctor(const MethodInfo *method)
     v68,
     v69);
   v70 = ServantStatusQuestBoardDraw_TypeInfo->static_fields;
-  v71 = (System_Int32_array **)StringLiteral_19403;
-  v70->TITLE_SPRITE_NAME_LIMIT_UNSEAL = (struct System_String_o *)StringLiteral_19403;
+  v71 = (System_Int32_array **)StringLiteral_19403/*"img_conductor_04"*/;
+  v70->TITLE_SPRITE_NAME_LIMIT_UNSEAL = (struct System_String_o *)StringLiteral_19403/*"img_conductor_04"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v70->TITLE_SPRITE_NAME_LIMIT_UNSEAL, v71, v72, v73, v74, v75, v76, v77);
 }
 
@@ -348,8 +348,8 @@ QuestBoardInformaionText_o *__fastcall ServantStatusQuestBoardDraw__CreateQuestB
     sub_B16FFC(&DataManager_TypeInfo, v16);
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&QuestBoardInformaionText_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_23445, v19);
-    sub_B16FFC(&StringLiteral_13349, v20);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v19);
+    sub_B16FFC(&StringLiteral_13349/*"TIME_REST_QUEST_BOARD_CAMPAIGN"*/, v20);
     byte_40FCA89 = 1;
   }
   entity = 0LL;
@@ -417,9 +417,9 @@ LABEL_35:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_13349, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_13349/*"TIME_REST_QUEST_BOARD_CAMPAIGN"*/, 0LL);
   EventName = (Il2CppObject *)EventEntity__getEventName(eventEnt, 0LL);
-  v30 = System_String__Format_43739268(v28, EventName, (Il2CppObject *)StringLiteral_23445, 0LL);
+  v30 = System_String__Format_43739268(v28, EventName, (Il2CppObject *)StringLiteral_23445/*"{0}"*/, 0LL);
   EndTime = EventEntity__GetEndTime(eventEnt, 0, 0LL);
   v36 = (QuestBoardInformaionText_o *)sub_B170CC(QuestBoardInformaionText_TypeInfo, v32, v33, v34, v35);
   v40.fields.r = 0.0;
@@ -491,9 +491,9 @@ System_Collections_Generic_List_QuestBoardInformaionText__o *__fastcall ServantS
     sub_B16FFC(&System_Collections_Generic_List_QuestBoardInformaionText__TypeInfo, v20);
     sub_B16FFC(&LocalizationManager_TypeInfo, v21);
     sub_B16FFC(&QuestBoardInformaionText_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_23445, v23);
-    sub_B16FFC(&StringLiteral_80, v24);
-    sub_B16FFC(&StringLiteral_13354, v25);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v23);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v24);
+    sub_B16FFC(&StringLiteral_13354/*"TIME_REST_STRING"*/, v25);
     byte_40FCA87 = 1;
   }
   entity = 0LL;
@@ -559,12 +559,12 @@ LABEL_24:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_13354, 0LL);
+    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_13354/*"TIME_REST_STRING"*/, 0LL);
     v36 = System_String__Concat_43747144(
             EventName,
-            (System_String_o *)StringLiteral_80,
+            (System_String_o *)StringLiteral_80/*" "*/,
             v35,
-            (System_String_o *)StringLiteral_23445,
+            (System_String_o *)StringLiteral_23445/*"{0}"*/,
             0LL);
     v41 = (QuestBoardInformaionText_o *)sub_B170CC(QuestBoardInformaionText_TypeInfo, v37, v38, v39, v40);
     v46.fields.r = 0.0;
@@ -1083,7 +1083,7 @@ void __fastcall ServantStatusQuestBoardDraw__OnClick(ServantStatusQuestBoardDraw
     sub_B16FFC(&int_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&SoundManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_9942, v5);
+    sub_B16FFC(&StringLiteral_9942/*"OnClickServantQuest"*/, v5);
     byte_40FCA8B = 1;
   }
   inputMessageObject = (UnityEngine_Object_o *)this->fields.inputMessageObject;
@@ -1108,7 +1108,7 @@ void __fastcall ServantStatusQuestBoardDraw__OnClick(ServantStatusQuestBoardDraw
     v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
     if ( !v8 )
       sub_B170D4();
-    UnityEngine_GameObject__SendMessage_40693300(v8, (System_String_o *)StringLiteral_9942, v9, 0LL);
+    UnityEngine_GameObject__SendMessage_40693300(v8, (System_String_o *)StringLiteral_9942/*"OnClickServantQuest"*/, v9, 0LL);
   }
 }
 
@@ -1216,8 +1216,8 @@ void __fastcall ServantStatusQuestBoardDraw__SetDark(ServantStatusQuestBoardDraw
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&ServantStatusQuestBoardDraw_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_11926, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_11926/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_DARK"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FCA7F = 1;
   }
   UnityEngine_Color__get_black(0LL);
@@ -1264,14 +1264,14 @@ void __fastcall ServantStatusQuestBoardDraw__SetDark(ServantStatusQuestBoardDraw
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11926, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_11926/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_DARK"*/, 0LL);
   if ( !mNoneLb )
     goto LABEL_29;
   UILabel__set_text(mNoneLb, v15, 0LL);
   mTitleNameLb = this->fields.mTitleNameLb;
   if ( !mTitleNameLb )
     goto LABEL_29;
-  UILabel__set_text(mTitleNameLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(mTitleNameLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   mTitleShortcutSp = (UnityEngine_Behaviour_o *)this->fields.mTitleShortcutSp;
   if ( !mTitleShortcutSp )
     goto LABEL_29;
@@ -1279,7 +1279,7 @@ void __fastcall ServantStatusQuestBoardDraw__SetDark(ServantStatusQuestBoardDraw
   mTitleShortcutLb = this->fields.mTitleShortcutLb;
   if ( !mTitleShortcutLb )
     goto LABEL_29;
-  UILabel__set_text(mTitleShortcutLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(mTitleShortcutLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   ServantStatusQuestBoardDraw__ResetInfoTextList(this, v19);
   mOptionInfoLb = (UnityEngine_Component_o *)this->fields.mOptionInfoLb;
   if ( !mOptionInfoLb )
@@ -1710,14 +1710,14 @@ void __fastcall ServantStatusQuestBoardDraw__SetItem(
     sub_B16FFC(&Method_ServantStatusQuestBoardDraw___c__DisplayClass46_0__SetItem_b__0__, v49);
     sub_B16FFC(&Method_ServantStatusQuestBoardDraw___c__DisplayClass46_0__SetItem_b__1__, v50);
     sub_B16FFC(&ServantStatusQuestBoardDraw___c__DisplayClass46_0_TypeInfo, v51);
-    sub_B16FFC(&StringLiteral_13352, v52);
-    sub_B16FFC(&StringLiteral_23445, v53);
-    sub_B16FFC(&StringLiteral_11995, v54);
-    sub_B16FFC(&StringLiteral_11997, v55);
-    sub_B16FFC(&StringLiteral_11996, v56);
-    sub_B16FFC(&StringLiteral_1, v57);
-    sub_B16FFC(&StringLiteral_11994, v58);
-    sub_B16FFC(&StringLiteral_11948, v59);
+    sub_B16FFC(&StringLiteral_13352/*"TIME_REST_QUEST_BOARD_QUEST"*/, v52);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v53);
+    sub_B16FFC(&StringLiteral_11995/*"SERVANT_STATUS_UNKNOWN_NAME_QUEST_INTERLUDE2"*/, v54);
+    sub_B16FFC(&StringLiteral_11997/*"SERVANT_STATUS_UNKNOWN_NAME_QUEST_RAINFORCEMENT2"*/, v55);
+    sub_B16FFC(&StringLiteral_11996/*"SERVANT_STATUS_UNKNOWN_NAME_QUEST_RAINFORCEMENT"*/, v56);
+    sub_B16FFC(&StringLiteral_1/*""*/, v57);
+    sub_B16FFC(&StringLiteral_11994/*"SERVANT_STATUS_UNKNOWN_NAME_QUEST_INTERLUDE"*/, v58);
+    sub_B16FFC(&StringLiteral_11948/*"SERVANT_STATUS_QUEST_NOT_RELEASED_BECAUSE_DONT_HAVE_SERVANT"*/, v59);
     byte_40FCA80 = 1;
   }
   entity = 0LL;
@@ -2119,7 +2119,7 @@ LABEL_18:
   mNoneLb = this->fields.mNoneLb;
   if ( !mNoneLb )
     goto LABEL_307;
-  UILabel__set_text(mNoneLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(mNoneLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v313 = HasStatus;
   if ( !(v74 & 1 | IsClear) )
   {
@@ -2127,15 +2127,15 @@ LABEL_18:
     mTitleNameLb = this->fields.mTitleNameLb;
     if ( QuestType == 3 )
     {
-      v160 = (System_String_o **)&StringLiteral_11995;
+      v160 = (System_String_o **)&StringLiteral_11995/*"SERVANT_STATUS_UNKNOWN_NAME_QUEST_INTERLUDE2"*/;
       v161 = LocalizationManager_TypeInfo;
-      v162 = (System_String_o **)&StringLiteral_11994;
+      v162 = (System_String_o **)&StringLiteral_11994/*"SERVANT_STATUS_UNKNOWN_NAME_QUEST_INTERLUDE"*/;
     }
     else
     {
-      v160 = (System_String_o **)&StringLiteral_11997;
+      v160 = (System_String_o **)&StringLiteral_11997/*"SERVANT_STATUS_UNKNOWN_NAME_QUEST_RAINFORCEMENT2"*/;
       v161 = LocalizationManager_TypeInfo;
-      v162 = (System_String_o **)&StringLiteral_11996;
+      v162 = (System_String_o **)&StringLiteral_11996/*"SERVANT_STATUS_UNKNOWN_NAME_QUEST_RAINFORCEMENT"*/;
     }
     v157 = v317;
     if ( !v309 )
@@ -2154,7 +2154,7 @@ LABEL_18:
     v155 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_ClosedMessageMaster___);
     if ( !v155 )
       goto LABEL_307;
-    age = (System_String_o *)StringLiteral_1;
+    age = (System_String_o *)StringLiteral_1/*""*/;
     if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
            v155,
            &v326,
@@ -2176,7 +2176,7 @@ LABEL_18:
     {
       case 1:
         targetId = questReleaseNG->fields.targetId;
-        v206 = (System_String_o *)StringLiteral_1;
+        v206 = (System_String_o *)StringLiteral_1/*""*/;
         if ( (BYTE3(SingletonTemplate_QuestTree__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !SingletonTemplate_QuestTree__TypeInfo->_2.cctor_finished )
         {
@@ -2301,7 +2301,7 @@ LABEL_306:
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
     v164 = v74;
-    v165 = (System_String_o *)StringLiteral_11948;
+    v165 = (System_String_o *)StringLiteral_11948/*"SERVANT_STATUS_QUEST_NOT_RELEASED_BECAUSE_DONT_HAVE_SERVANT"*/;
 LABEL_149:
     v166 = LocalizationManager__Get(v165, 0LL);
     if ( !mTitleNameLb )
@@ -2315,7 +2315,7 @@ LABEL_149:
   if ( !QuestName )
     goto LABEL_307;
   age = QuestName;
-  if ( System_String__Contains(QuestName, (System_String_o *)StringLiteral_23445, 0LL) )
+  if ( System_String__Contains(QuestName, (System_String_o *)StringLiteral_23445/*"{0}"*/, 0LL) )
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
@@ -2467,7 +2467,7 @@ LABEL_200:
     if ( !v243 )
       goto LABEL_307;
   }
-  UILabel__set_text(v243, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v243, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 LABEL_238:
   ServantStatusQuestBoardDraw__ResetInfoTextList(this, v240);
   if ( (v164 & 1) != 0 )
@@ -2483,7 +2483,7 @@ LABEL_238:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v246 = LocalizationManager__Get((System_String_o *)StringLiteral_13352, 0LL);
+    v246 = LocalizationManager__Get((System_String_o *)StringLiteral_13352/*"TIME_REST_QUEST_BOARD_QUEST"*/, 0LL);
     v251 = (QuestBoardInformaionText_o *)sub_B170CC(QuestBoardInformaionText_TypeInfo, v247, v248, v249, v250);
     v336.fields.r = 0.0;
     v336.fields.g = 0.0;

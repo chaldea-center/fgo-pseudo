@@ -1480,7 +1480,7 @@ void __fastcall BattleLogicEnemyAi__Initialize(
   {
     sub_B16FFC(&AiEntity_TypeInfo, data);
     sub_B16FFC(&AiLogic_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_9299, v6);
+    sub_B16FFC(&StringLiteral_9299/*"NOTHINK_AIACTID"*/, v6);
     byte_40FCDA1 = 1;
   }
   BattleLogicBaseAi__Initialize((BattleLogicBaseAi_o *)this, data, method);
@@ -1506,7 +1506,7 @@ void __fastcall BattleLogicEnemyAi__Initialize(
   p_noThinkAiEnt = &this->fields.noThinkAiEnt;
   sub_B16F98((BattleServantConfConponent_o *)p_noThinkAiEnt, (System_Int32_array **)v23, v25, v26, v27, v28, v29, v30);
   v31 = *p_noThinkAiEnt;
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_9299, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_9299/*"NOTHINK_AIACTID"*/, 0LL);
   if ( !v31 )
 LABEL_6:
     sub_B170D4();
@@ -2180,7 +2180,7 @@ BattleLogicTask_array *__fastcall BattleLogicEnemyAi__procAiAct(
     sub_B16FFC(&Method_WeightRate_int__getTotalWeight__, v27);
     sub_B16FFC(&Method_WeightRate_int__setWeight__, v28);
     sub_B16FFC(&WeightRate_int__TypeInfo, v29);
-    sub_B16FFC(&StringLiteral_8758, v30);
+    sub_B16FFC(&StringLiteral_8758/*"MOTION_"*/, v30);
     byte_40FCDA9 = 1;
   }
   ActionValue = 0;
@@ -2729,7 +2729,7 @@ LABEL_141:
       if ( ActionValue < 1 )
         goto LABEL_77;
       v84 = System_Int32__ToString((int32_t)&ActionValue, 0LL);
-      v85 = System_String__Concat_43743732((System_String_o *)StringLiteral_8758, v84, 0LL);
+      v85 = System_String__Concat_43743732((System_String_o *)StringLiteral_8758/*"MOTION_"*/, v84, 0LL);
       BattleLogicTask__setPlayMoiton((BattleLogicTask_o *)v68, v85, 0LL);
       v86 = this->fields.logic;
       if ( !v86 )

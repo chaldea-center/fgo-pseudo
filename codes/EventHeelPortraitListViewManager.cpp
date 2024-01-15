@@ -643,7 +643,7 @@ void __fastcall EventHeelPortraitListViewManager___c__DisplayClass7_0___Init_b__
   if ( (byte_40F6FB5 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21416, v3);
+    sub_B16FFC(&StringLiteral_21416/*"portrait_back"*/, v3);
     byte_40F6FB5 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -653,7 +653,7 @@ void __fastcall EventHeelPortraitListViewManager___c__DisplayClass7_0___Init_b__
   bg = _4__this->fields.bg;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_28584872(eventId, bg, (System_String_o *)StringLiteral_21416, 0LL);
+  AtlasManager__SetEventUI_28584872(eventId, bg, (System_String_o *)StringLiteral_21416/*"portrait_back"*/, 0LL);
   v7 = this->fields.__4__this;
   if ( !v7 || (EventHeelPortraitListViewManager__CreateList(v7, 0LL), (v8 = this->fields.__4__this) == 0LL) )
 LABEL_10:

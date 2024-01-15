@@ -88,7 +88,7 @@ void __fastcall SoundPlayerListViewItem__analyzeOpenType(SoundPlayerListViewItem
     sub_B16FFC(&Method_DataManager_GetMasterData_ShopMaster___, v9);
     sub_B16FFC(&Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F9D17 = 1;
   }
   entity = 0LL;
@@ -153,8 +153,8 @@ void __fastcall SoundPlayerListViewItem__analyzeOpenType(SoundPlayerListViewItem
         }
       }
     }
-    v26 = (System_Int32_array **)StringLiteral_1;
-    this->fields.notOpenStr = (struct System_String_o *)StringLiteral_1;
+    v26 = (System_Int32_array **)StringLiteral_1/*""*/;
+    this->fields.notOpenStr = (struct System_String_o *)StringLiteral_1/*""*/;
     sub_B16F98((BattleServantConfConponent_o *)&this->fields.notOpenStr, v26, v2, v3, v4, v5, v6, v7);
     if ( this->fields.openType == 2 )
       return;
@@ -273,14 +273,14 @@ System_String_o *__fastcall SoundPlayerListViewItem__getBgmCueName(
 
   if ( (byte_40F9D1C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9D1C = 1;
   }
   bgmEntity = this->fields.bgmEntity;
   if ( bgmEntity )
     p_fileName = &bgmEntity->fields.fileName;
   else
-    p_fileName = (System_String_o **)&StringLiteral_1;
+    p_fileName = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_fileName;
 }
 
@@ -332,14 +332,14 @@ System_String_o *__fastcall SoundPlayerListViewItem__getTitleName(
 
   if ( (byte_40F9D1B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9D1B = 1;
   }
   bgmEntity = this->fields.bgmEntity;
   if ( bgmEntity )
     p_name = &bgmEntity->fields.name;
   else
-    p_name = (System_String_o **)&StringLiteral_1;
+    p_name = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_name;
 }
 
@@ -383,10 +383,10 @@ bool __fastcall SoundPlayerListViewItem__isBgmLock(int32_t bgmId, const MethodIn
 
   if ( (byte_40F9D18 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9D18 = 1;
   }
-  closedMessage = (System_String_o *)StringLiteral_1;
+  closedMessage = (System_String_o *)StringLiteral_1/*""*/;
   return SoundPlayerListViewItem__isBgmLock_24862228(bgmId, &closedMessage, v2);
 }
 
@@ -931,14 +931,14 @@ void __fastcall SoundPlayerListViewItem__setNotOpenStr(
 
   if ( (byte_40F9D1A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_26, *(_QWORD *)&kind);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, *(_QWORD *)&kind);
     byte_40F9D1A = 1;
   }
   if ( closedMesEntity )
   {
     if ( isNewLine )
     {
-      v8 = System_String__Concat_43743732(*closedMessage, (System_String_o *)StringLiteral_26, 0LL);
+      v8 = System_String__Concat_43743732(*closedMessage, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
       *closedMessage = v8;
       sub_B16F98((BattleServantConfConponent_o *)closedMessage, (System_Int32_array **)v8, v9, v10, v11, v12, v13, v14);
     }

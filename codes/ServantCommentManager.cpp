@@ -76,37 +76,37 @@ void __fastcall ServantCommentManager___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantCommentManager_UserServantCommentOpenInfo___ctor__, v1);
     sub_B16FFC(&System_Collections_Generic_List_ServantCommentManager_UserServantCommentOpenInfo__TypeInfo, v8);
     sub_B16FFC(&ServantCommentManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_3905, v10);
-    sub_B16FFC(&StringLiteral_6722, v11);
-    sub_B16FFC(&StringLiteral_10163, v12);
-    sub_B16FFC(&StringLiteral_6589, v13);
-    sub_B16FFC(&StringLiteral_6593, v14);
-    sub_B16FFC(&StringLiteral_14613, v15);
+    sub_B16FFC(&StringLiteral_3905/*"ChapterProgress"*/, v10);
+    sub_B16FFC(&StringLiteral_6722/*"ForceReadNewProfiles"*/, v11);
+    sub_B16FFC(&StringLiteral_10163/*"OverwriteUIVersion"*/, v12);
+    sub_B16FFC(&StringLiteral_6589/*"Fgo_20150511_1"*/, v13);
+    sub_B16FFC(&StringLiteral_6593/*"Fgo_20160620_1"*/, v14);
+    sub_B16FFC(&StringLiteral_14613/*"UIChangeType"*/, v15);
     byte_40FCEA5 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ServantCommentManager_TypeInfo->static_fields;
-  v17 = (System_Int32_array **)StringLiteral_6589;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6589;
+  v17 = (System_Int32_array **)StringLiteral_6589/*"Fgo_20150511_1"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6589/*"Fgo_20150511_1"*/;
   sub_B16F98(static_fields, v17, v2, v3, v4, v5, v6, v7);
   v18 = ServantCommentManager_TypeInfo->static_fields;
-  v19 = (System_Int32_array **)StringLiteral_6593;
-  v18->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6593;
+  v19 = (System_Int32_array **)StringLiteral_6593/*"Fgo_20160620_1"*/;
+  v18->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6593/*"Fgo_20160620_1"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v18->SAVE_DATA_VERSION, v19, v20, v21, v22, v23, v24, v25);
   v26 = ServantCommentManager_TypeInfo->static_fields;
-  v27 = (System_Int32_array **)StringLiteral_3905;
-  v26->SAVE_KEY = (struct System_String_o *)StringLiteral_3905;
+  v27 = (System_Int32_array **)StringLiteral_3905/*"ChapterProgress"*/;
+  v26->SAVE_KEY = (struct System_String_o *)StringLiteral_3905/*"ChapterProgress"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v26->SAVE_KEY, v27, v28, v29, v30, v31, v32, v33);
   v34 = ServantCommentManager_TypeInfo->static_fields;
-  v35 = (System_Int32_array **)StringLiteral_14613;
-  v34->UI_CHANGE_TYPE_KEY = (struct System_String_o *)StringLiteral_14613;
+  v35 = (System_Int32_array **)StringLiteral_14613/*"UIChangeType"*/;
+  v34->UI_CHANGE_TYPE_KEY = (struct System_String_o *)StringLiteral_14613/*"UIChangeType"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v34->UI_CHANGE_TYPE_KEY, v35, v36, v37, v38, v39, v40, v41);
   v42 = ServantCommentManager_TypeInfo->static_fields;
-  v43 = (System_Int32_array **)StringLiteral_10163;
-  v42->OVERWIRTE_UI_VERSION_KEY = (struct System_String_o *)StringLiteral_10163;
+  v43 = (System_Int32_array **)StringLiteral_10163/*"OverwriteUIVersion"*/;
+  v42->OVERWIRTE_UI_VERSION_KEY = (struct System_String_o *)StringLiteral_10163/*"OverwriteUIVersion"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v42->OVERWIRTE_UI_VERSION_KEY, v43, v44, v45, v46, v47, v48, v49);
   v50 = ServantCommentManager_TypeInfo->static_fields;
-  v51 = (System_Int32_array **)StringLiteral_6722;
-  v50->FORCE_READ_NEW_COMMENTS_KEY = (struct System_String_o *)StringLiteral_6722;
+  v51 = (System_Int32_array **)StringLiteral_6722/*"ForceReadNewProfiles"*/;
+  v50->FORCE_READ_NEW_COMMENTS_KEY = (struct System_String_o *)StringLiteral_6722/*"ForceReadNewProfiles"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v50->FORCE_READ_NEW_COMMENTS_KEY, v51, v52, v53, v54, v55, v56, v57);
   v58 = ServantCommentManager_TypeInfo;
   ServantCommentManager_TypeInfo->static_fields->isModfiy = 0;
@@ -435,7 +435,7 @@ System_Int32_array *__fastcall ServantCommentManager__GetClearWarIdList(const Me
     sub_B16FFC(&Method_JsonManager_Deserialize_ServantCommentManager_ClearWarInfo___, v3);
     sub_B16FFC(&JsonManager_TypeInfo, v4);
     sub_B16FFC(&ServantCommentManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23589, v6);
+    sub_B16FFC(&StringLiteral_23589/*"{}"*/, v6);
     byte_40FCE92 = 1;
   }
   v7 = ServantCommentManager_TypeInfo;
@@ -447,7 +447,7 @@ System_Int32_array *__fastcall ServantCommentManager__GetClearWarIdList(const Me
   }
   String = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString(
                              v7->static_fields->SAVE_KEY,
-                             (System_String_o *)StringLiteral_23589,
+                             (System_String_o *)StringLiteral_23589/*"{}"*/,
                              0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -2346,7 +2346,7 @@ void __fastcall ServantCommentManager__UpdateChapter(const MethodInfo *method)
     sub_B16FFC(&ManagerConfig_TypeInfo, v4);
     sub_B16FFC(&ServantCommentManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_23589, v7);
+    sub_B16FFC(&StringLiteral_23589/*"{}"*/, v7);
     byte_40FCE93 = 1;
   }
   v8 = ManagerConfig_TypeInfo;
@@ -2372,7 +2372,7 @@ void __fastcall ServantCommentManager__UpdateChapter(const MethodInfo *method)
     }
     String = UnityEngine_PlayerPrefs__GetString(
                v10->static_fields->SAVE_KEY,
-               (System_String_o *)StringLiteral_23589,
+               (System_String_o *)StringLiteral_23589/*"{}"*/,
                0LL);
     Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
@@ -2638,11 +2638,11 @@ void __fastcall ServantCommentManager__checkUIChange(bool isSave, const MethodIn
   if ( (byte_40FCEA1 & 1) == 0 )
   {
     sub_B16FFC(&ServantCommentManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_2953, v3);
-    sub_B16FFC(&StringLiteral_2954, v4);
+    sub_B16FFC(&StringLiteral_2953/*"CHAPTER2_EPILOGUE_WAR_ID"*/, v3);
+    sub_B16FFC(&StringLiteral_2954/*"CHAPTER2_PROLOGUE_WAR_ID"*/, v4);
     byte_40FCEA1 = 1;
   }
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_2954, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_2954/*"CHAPTER2_PROLOGUE_WAR_ID"*/, 0LL);
   if ( (Value & 0x80000000) == 0 )
   {
     v6 = Value;
@@ -2657,7 +2657,7 @@ void __fastcall ServantCommentManager__checkUIChange(bool isSave, const MethodIn
       sub_B170D4();
     v9 = ClearWarIdList;
     if ( *(_QWORD *)&ClearWarIdList->max_length
-      && (v10 = ConstantMaster__getValue((System_String_o *)StringLiteral_2953, 0LL),
+      && (v10 = ConstantMaster__getValue((System_String_o *)StringLiteral_2953/*"CHAPTER2_EPILOGUE_WAR_ID"*/, 0LL),
           System_Array__Reverse((System_Array_o *)v9, 0LL),
           max_length = v9->max_length,
           max_length >= 1) )
@@ -2714,7 +2714,7 @@ System_String_o *__fastcall ServantCommentManager__getSaveFileName(const MethodI
   {
     sub_B16FFC(&AndroidUtil_TypeInfo, v1);
     sub_B16FFC(&DatFileName_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_871, v3);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v3);
     byte_40FCE8B = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
@@ -2723,7 +2723,7 @@ System_String_o *__fastcall ServantCommentManager__getSaveFileName(const MethodI
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(11, 0LL);
-  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871, FileName, 0LL);
+  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871/*"/"*/, FileName, 0LL);
 }
 
 

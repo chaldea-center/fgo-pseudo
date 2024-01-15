@@ -53,11 +53,11 @@ void __fastcall TitleInfoEventSideItemComponent___cctor(const MethodInfo *method
   {
     sub_B16FFC(&string___TypeInfo, v1);
     sub_B16FFC(&TitleInfoEventSideItemComponent_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_22600, v4);
-    sub_B16FFC(&StringLiteral_22597, v5);
-    sub_B16FFC(&StringLiteral_22599, v6);
-    sub_B16FFC(&StringLiteral_21411, v7);
-    sub_B16FFC(&StringLiteral_22598, v8);
+    sub_B16FFC(&StringLiteral_22600/*"time_status_side_04"*/, v4);
+    sub_B16FFC(&StringLiteral_22597/*"time_status_side_01"*/, v5);
+    sub_B16FFC(&StringLiteral_22599/*"time_status_side_03"*/, v6);
+    sub_B16FFC(&StringLiteral_21411/*"point_status_side"*/, v7);
+    sub_B16FFC(&StringLiteral_22598/*"time_status_side_02"*/, v8);
     byte_40F83B5 = 1;
   }
   TitleInfoEventSideItemComponent_TypeInfo->static_fields->ADD_LAST_LABEL_POS = (struct UnityEngine_Vector2_o)0x3F800000BF800000LL;
@@ -67,13 +67,13 @@ void __fastcall TitleInfoEventSideItemComponent___cctor(const MethodInfo *method
   if ( !v14 )
     sub_B170D4();
   v21 = (System_Int32_array **)v14;
-  v22 = StringLiteral_22597;
-  if ( StringLiteral_22597 )
+  v22 = StringLiteral_22597/*"time_status_side_01"*/;
+  if ( StringLiteral_22597/*"time_status_side_01"*/ )
   {
-    v22 = sub_B170BC(StringLiteral_22597, *(_QWORD *)&(*v21)->m_Items[9]);
+    v22 = sub_B170BC(StringLiteral_22597/*"time_status_side_01"*/, *(_QWORD *)&(*v21)->m_Items[9]);
     if ( !v22 )
       goto LABEL_26;
-    v23 = (System_Int32_array **)StringLiteral_22597;
+    v23 = (System_Int32_array **)StringLiteral_22597/*"time_status_side_01"*/;
   }
   else
   {
@@ -83,13 +83,13 @@ void __fastcall TitleInfoEventSideItemComponent___cctor(const MethodInfo *method
     goto LABEL_25;
   v21[4] = (System_Int32_array *)v23;
   sub_B16F98((BattleServantConfConponent_o *)(v21 + 4), v23, v15, v16, v17, v18, v19, v20);
-  v22 = StringLiteral_22599;
-  if ( StringLiteral_22599 )
+  v22 = StringLiteral_22599/*"time_status_side_03"*/;
+  if ( StringLiteral_22599/*"time_status_side_03"*/ )
   {
-    v22 = sub_B170BC(StringLiteral_22599, *(_QWORD *)&(*v21)->m_Items[9]);
+    v22 = sub_B170BC(StringLiteral_22599/*"time_status_side_03"*/, *(_QWORD *)&(*v21)->m_Items[9]);
     if ( !v22 )
       goto LABEL_26;
-    v23 = (System_Int32_array **)StringLiteral_22599;
+    v23 = (System_Int32_array **)StringLiteral_22599/*"time_status_side_03"*/;
   }
   else
   {
@@ -99,13 +99,13 @@ void __fastcall TitleInfoEventSideItemComponent___cctor(const MethodInfo *method
     goto LABEL_25;
   v21[5] = (System_Int32_array *)v23;
   sub_B16F98((BattleServantConfConponent_o *)(v21 + 5), v23, v15, v24, v25, v26, v27, v28);
-  v22 = StringLiteral_22598;
-  if ( StringLiteral_22598 )
+  v22 = StringLiteral_22598/*"time_status_side_02"*/;
+  if ( StringLiteral_22598/*"time_status_side_02"*/ )
   {
-    v22 = sub_B170BC(StringLiteral_22598, *(_QWORD *)&(*v21)->m_Items[9]);
+    v22 = sub_B170BC(StringLiteral_22598/*"time_status_side_02"*/, *(_QWORD *)&(*v21)->m_Items[9]);
     if ( !v22 )
       goto LABEL_26;
-    v23 = (System_Int32_array **)StringLiteral_22598;
+    v23 = (System_Int32_array **)StringLiteral_22598/*"time_status_side_02"*/;
   }
   else
   {
@@ -115,13 +115,13 @@ void __fastcall TitleInfoEventSideItemComponent___cctor(const MethodInfo *method
     goto LABEL_25;
   v21[6] = (System_Int32_array *)v23;
   sub_B16F98((BattleServantConfConponent_o *)(v21 + 6), v23, v15, v29, v30, v31, v32, v33);
-  v22 = StringLiteral_22600;
-  if ( StringLiteral_22600 )
+  v22 = StringLiteral_22600/*"time_status_side_04"*/;
+  if ( StringLiteral_22600/*"time_status_side_04"*/ )
   {
-    v22 = sub_B170BC(StringLiteral_22600, *(_QWORD *)&(*v21)->m_Items[9]);
+    v22 = sub_B170BC(StringLiteral_22600/*"time_status_side_04"*/, *(_QWORD *)&(*v21)->m_Items[9]);
     if ( v22 )
     {
-      v23 = (System_Int32_array **)StringLiteral_22600;
+      v23 = (System_Int32_array **)StringLiteral_22600/*"time_status_side_04"*/;
       goto LABEL_23;
     }
 LABEL_26:
@@ -150,8 +150,8 @@ LABEL_25:
     v44,
     v45);
   v46 = TitleInfoEventSideItemComponent_TypeInfo->static_fields;
-  v47 = (System_Int32_array **)StringLiteral_21411;
-  v46->POINT_STATUS_STRING = (struct System_String_o *)StringLiteral_21411;
+  v47 = (System_Int32_array **)StringLiteral_21411/*"point_status_side"*/;
+  v46->POINT_STATUS_STRING = (struct System_String_o *)StringLiteral_21411/*"point_status_side"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v46->POINT_STATUS_STRING, v47, v48, v49, v50, v51, v52, v53);
 }
 
@@ -376,12 +376,12 @@ void __fastcall TitleInfoEventSideItemComponent__SetupBuffRateUI(
     sub_B16FFC(&float_TypeInfo, v9);
     sub_B16FFC(&string___TypeInfo, v10);
     sub_B16FFC(&TitleInfoEventSideItemComponent_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_696, v12);
-    sub_B16FFC(&StringLiteral_14656, v13);
-    sub_B16FFC(&StringLiteral_23395, v14);
-    sub_B16FFC(&StringLiteral_697, v15);
-    sub_B16FFC(&StringLiteral_16148, v16);
-    sub_B16FFC(&StringLiteral_951, v17);
+    sub_B16FFC(&StringLiteral_696/*"+{0:0.0}%"*/, v12);
+    sub_B16FFC(&StringLiteral_14656/*"UNIT_REST_NONE"*/, v13);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v14);
+    sub_B16FFC(&StringLiteral_697/*"+{0}%"*/, v15);
+    sub_B16FFC(&StringLiteral_16148/*"_{0:00}"*/, v16);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v17);
     byte_40F83B3 = 1;
   }
   EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(eventId, 0LL);
@@ -425,7 +425,7 @@ LABEL_13:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_14656, 0LL);
+  v29 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_14656/*"UNIT_REST_NONE"*/, 0LL);
   if ( v28 == INFINITY )
     v30 = -v28;
   else
@@ -434,19 +434,19 @@ LABEL_13:
   if ( v28 == (float)(int)v30 )
   {
     v31 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v96);
-    v32 = &StringLiteral_697;
+    v32 = &StringLiteral_697/*"+{0}%"*/;
   }
   else
   {
     v31 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v96);
-    v32 = &StringLiteral_696;
+    v32 = &StringLiteral_696/*"+{0:0.0}%"*/;
   }
   v34 = (System_Int32_array **)System_String__Format((System_String_o *)*v32, v31, 0LL);
   if ( (_DWORD)v27 )
   {
     v96 = v27;
     v35 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v96);
-    v29 = (System_Int32_array **)System_String__Format((System_String_o *)StringLiteral_23395, v35, 0LL);
+    v29 = (System_Int32_array **)System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v35, 0LL);
   }
   EventPointNoGroup = sub_B17014(string___TypeInfo, 3LL, v33);
   if ( !EventPointNoGroup )
@@ -465,7 +465,7 @@ LABEL_82:
   sub_B16F98((BattleServantConfConponent_o *)(v41 + 32), v34, v20, v36, v37, v38, v39, v40);
   v96 = v22;
   v42 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v96);
-  EventPointNoGroup = (__int64)System_String__Format((System_String_o *)StringLiteral_23395, v42, 0LL);
+  EventPointNoGroup = (__int64)System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v42, 0LL);
   v48 = (System_Int32_array **)EventPointNoGroup;
   if ( EventPointNoGroup )
   {
@@ -518,7 +518,7 @@ LABEL_83:
       POINT_STATUS_STRING = v60->static_fields->POINT_STATUS_STRING;
       LODWORD(v96) = v56 + 1;
       v63 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v96);
-      v64 = System_String__Format((System_String_o *)StringLiteral_16148, v63, 0LL);
+      v64 = System_String__Format((System_String_o *)StringLiteral_16148/*"_{0:00}"*/, v63, 0LL);
       v65 = System_String__Concat_43743732(POINT_STATUS_STRING, v64, 0LL);
       SideItem = (UnityEngine_Component_o *)TitleInfoEventSideItemComponent__CreateSideItem(this, v65, v66);
       if ( !SideItem )
@@ -723,7 +723,7 @@ void __fastcall TitleInfoEventSideItemComponent__SetupTotalPointUI(
     sub_B16FFC(&long_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
     sub_B16FFC(&TitleInfoEventSideItemComponent_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_23395, v7);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v7);
     byte_40F83B2 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -817,7 +817,7 @@ LABEL_33:
         v31 = (UILabel_o *)v23[1].monitor;
         v42 = EventPoint;
         v32 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v42);
-        v33 = System_String__Format((System_String_o *)StringLiteral_23395, v32, 0LL);
+        v33 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v32, 0LL);
         if ( v31 )
         {
           UILabel__set_text(v31, v33, 0LL);

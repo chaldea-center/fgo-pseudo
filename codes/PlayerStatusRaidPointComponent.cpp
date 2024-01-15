@@ -85,12 +85,12 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
     sub_B16FFC(&int___TypeInfo, v1);
     sub_B16FFC(&PlayerStatusRaidPointComponent_TypeInfo, v3);
     sub_B16FFC(&string___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_21598, v5);
-    sub_B16FFC(&StringLiteral_21595, v6);
-    sub_B16FFC(&StringLiteral_21599, v7);
-    sub_B16FFC(&StringLiteral_22220, v8);
-    sub_B16FFC(&StringLiteral_21597, v9);
-    sub_B16FFC(&StringLiteral_21600, v10);
+    sub_B16FFC(&StringLiteral_21598/*"raid_point_old"*/, v5);
+    sub_B16FFC(&StringLiteral_21595/*"raid_point"*/, v6);
+    sub_B16FFC(&StringLiteral_21599/*"raid_point_over"*/, v7);
+    sub_B16FFC(&StringLiteral_22220/*"status_raid_point_frame"*/, v8);
+    sub_B16FFC(&StringLiteral_21597/*"raid_point_frame_old"*/, v9);
+    sub_B16FFC(&StringLiteral_21600/*"raid_point_over_old"*/, v10);
     byte_40F8FBB = 1;
   }
   PlayerStatusRaidPointComponent_TypeInfo->static_fields->RAID_MARKDISP_STEP_DEFAULT = 5;
@@ -98,13 +98,13 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
   if ( !v11 )
     goto LABEL_41;
   v18 = (System_Int32_array **)v11;
-  v19 = StringLiteral_21597;
-  if ( StringLiteral_21597 )
+  v19 = StringLiteral_21597/*"raid_point_frame_old"*/;
+  if ( StringLiteral_21597/*"raid_point_frame_old"*/ )
   {
-    v19 = sub_B170BC(StringLiteral_21597, *(_QWORD *)&(*v18)->m_Items[9]);
+    v19 = sub_B170BC(StringLiteral_21597/*"raid_point_frame_old"*/, *(_QWORD *)&(*v18)->m_Items[9]);
     if ( !v19 )
       goto LABEL_40;
-    v20 = (System_Int32_array **)StringLiteral_21597;
+    v20 = (System_Int32_array **)StringLiteral_21597/*"raid_point_frame_old"*/;
   }
   else
   {
@@ -114,13 +114,13 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
     goto LABEL_39;
   v18[4] = (System_Int32_array *)v20;
   sub_B16F98((BattleServantConfConponent_o *)(v18 + 4), v20, v12, v13, v14, v15, v16, v17);
-  v19 = StringLiteral_22220;
-  if ( StringLiteral_22220 )
+  v19 = StringLiteral_22220/*"status_raid_point_frame"*/;
+  if ( StringLiteral_22220/*"status_raid_point_frame"*/ )
   {
-    v19 = sub_B170BC(StringLiteral_22220, *(_QWORD *)&(*v18)->m_Items[9]);
+    v19 = sub_B170BC(StringLiteral_22220/*"status_raid_point_frame"*/, *(_QWORD *)&(*v18)->m_Items[9]);
     if ( !v19 )
       goto LABEL_40;
-    v20 = (System_Int32_array **)StringLiteral_22220;
+    v20 = (System_Int32_array **)StringLiteral_22220/*"status_raid_point_frame"*/;
   }
   else
   {
@@ -137,13 +137,13 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
   if ( !v34 )
     goto LABEL_41;
   v40 = (System_Int32_array **)v34;
-  v19 = StringLiteral_21598;
-  if ( StringLiteral_21598 )
+  v19 = StringLiteral_21598/*"raid_point_old"*/;
+  if ( StringLiteral_21598/*"raid_point_old"*/ )
   {
-    v19 = sub_B170BC(StringLiteral_21598, *(_QWORD *)&(*v40)->m_Items[9]);
+    v19 = sub_B170BC(StringLiteral_21598/*"raid_point_old"*/, *(_QWORD *)&(*v40)->m_Items[9]);
     if ( !v19 )
       goto LABEL_40;
-    v20 = (System_Int32_array **)StringLiteral_21598;
+    v20 = (System_Int32_array **)StringLiteral_21598/*"raid_point_old"*/;
   }
   else
   {
@@ -153,13 +153,13 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
     goto LABEL_39;
   v40[4] = (System_Int32_array *)v20;
   sub_B16F98((BattleServantConfConponent_o *)(v40 + 4), v20, v12, v35, v36, v37, v38, v39);
-  v19 = StringLiteral_21595;
-  if ( StringLiteral_21595 )
+  v19 = StringLiteral_21595/*"raid_point"*/;
+  if ( StringLiteral_21595/*"raid_point"*/ )
   {
-    v19 = sub_B170BC(StringLiteral_21595, *(_QWORD *)&(*v40)->m_Items[9]);
+    v19 = sub_B170BC(StringLiteral_21595/*"raid_point"*/, *(_QWORD *)&(*v40)->m_Items[9]);
     if ( !v19 )
       goto LABEL_40;
-    v20 = (System_Int32_array **)StringLiteral_21595;
+    v20 = (System_Int32_array **)StringLiteral_21595/*"raid_point"*/;
   }
   else
   {
@@ -176,13 +176,13 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
   if ( !v54 )
     goto LABEL_41;
   v60 = (System_Int32_array **)v54;
-  v19 = StringLiteral_21600;
-  if ( StringLiteral_21600 )
+  v19 = StringLiteral_21600/*"raid_point_over_old"*/;
+  if ( StringLiteral_21600/*"raid_point_over_old"*/ )
   {
-    v19 = sub_B170BC(StringLiteral_21600, *(_QWORD *)&(*v60)->m_Items[9]);
+    v19 = sub_B170BC(StringLiteral_21600/*"raid_point_over_old"*/, *(_QWORD *)&(*v60)->m_Items[9]);
     if ( !v19 )
       goto LABEL_40;
-    v20 = (System_Int32_array **)StringLiteral_21600;
+    v20 = (System_Int32_array **)StringLiteral_21600/*"raid_point_over_old"*/;
   }
   else
   {
@@ -192,13 +192,13 @@ void __fastcall PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
     goto LABEL_39;
   v60[4] = (System_Int32_array *)v20;
   sub_B16F98((BattleServantConfConponent_o *)(v60 + 4), v20, v12, v55, v56, v57, v58, v59);
-  v19 = StringLiteral_21599;
-  if ( StringLiteral_21599 )
+  v19 = StringLiteral_21599/*"raid_point_over"*/;
+  if ( StringLiteral_21599/*"raid_point_over"*/ )
   {
-    v19 = sub_B170BC(StringLiteral_21599, *(_QWORD *)&(*v60)->m_Items[9]);
+    v19 = sub_B170BC(StringLiteral_21599/*"raid_point_over"*/, *(_QWORD *)&(*v60)->m_Items[9]);
     if ( v19 )
     {
-      v20 = (System_Int32_array **)StringLiteral_21599;
+      v20 = (System_Int32_array **)StringLiteral_21599/*"raid_point_over"*/;
       goto LABEL_35;
     }
 LABEL_40:
@@ -375,7 +375,7 @@ void __fastcall PlayerStatusRaidPointComponent__Setup(
   if ( (byte_40F8FB9 & 1) == 0 )
   {
     sub_B16FFC(&PlayerStatusRaidPointComponent_TypeInfo, *(_QWORD *)&index);
-    sub_B16FFC(&StringLiteral_10968, v6);
+    sub_B16FFC(&StringLiteral_10968/*"RAID_MARKDISP_STEP"*/, v6);
     byte_40F8FB9 = 1;
   }
   this->fields.BpType = iBpType;
@@ -388,7 +388,7 @@ void __fastcall PlayerStatusRaidPointComponent__Setup(
   v11 = System_String__Concat_43743732(name, v10, 0LL);
   UnityEngine_Object__set_name(v8, v11, 0LL);
   v12 = v30 - 1;
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_10968, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_10968/*"RAID_MARKDISP_STEP"*/, 0LL);
   if ( Value <= 0 )
   {
     v14 = PlayerStatusRaidPointComponent_TypeInfo;

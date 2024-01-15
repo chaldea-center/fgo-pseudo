@@ -219,13 +219,13 @@ System_String_o *__fastcall EventTowerListViewItem__get_BoardMessage(
   if ( (byte_40F9BB2 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23445, v3);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v3);
     byte_40F9BB2 = 1;
   }
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo
     || (boardMessage = itemInfo->fields.boardMessage) == 0LL
-    || (v6 = System_String__Contains(boardMessage, (System_String_o *)StringLiteral_23445, 0LL),
+    || (v6 = System_String__Contains(boardMessage, (System_String_o *)StringLiteral_23445/*"{0}"*/, 0LL),
         (v7 = this->fields.itemInfo) == 0LL) )
   {
     sub_B170D4();

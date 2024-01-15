@@ -115,7 +115,7 @@ void __fastcall ServantCombineResultInfoComponent__Init(
 
   if ( (byte_40FCE5A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FCE5A = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -130,24 +130,24 @@ void __fastcall ServantCombineResultInfoComponent__Init(
   befLevelLb = this->fields.befLevelLb;
   if ( !befLevelLb )
     goto LABEL_12;
-  UILabel__set_text(befLevelLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(befLevelLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   currentLevelLb = this->fields.currentLevelLb;
   if ( !currentLevelLb )
     goto LABEL_12;
-  UILabel__set_text(currentLevelLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentLevelLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   currentHpLb = this->fields.currentHpLb;
   if ( !currentHpLb
-    || (UILabel__set_text(currentHpLb, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(currentHpLb, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (increHpLb = this->fields.increHpLb) == 0LL)
-    || (UILabel__set_text(increHpLb, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(increHpLb, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (currentAtkLb = this->fields.currentAtkLb) == 0LL)
-    || (UILabel__set_text(currentAtkLb, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(currentAtkLb, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (increAtkLb = this->fields.increAtkLb) == 0LL) )
   {
 LABEL_12:
     sub_B170D4();
   }
-  UILabel__set_text(increAtkLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(increAtkLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -212,10 +212,10 @@ void __fastcall ServantCombineResultInfoComponent__OpenLevelUpInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_ServantCombineResultInfoComponent_EndOpen__, v9);
     sub_B16FFC(&SoundManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_8348, v11);
-    sub_B16FFC(&StringLiteral_8345, v12);
-    sub_B16FFC(&StringLiteral_7242, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_8348/*"LEVEL_INFO"*/, v11);
+    sub_B16FFC(&StringLiteral_8345/*"LEVELUP_NOTICE_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_7242/*"INCREMENT_SVTLEVEL"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FCE5C = 1;
   }
   if ( !this->fields.state )
@@ -241,7 +241,7 @@ void __fastcall ServantCombineResultInfoComponent__OpenLevelUpInfo(
     levelUpTitleLb = this->fields.levelUpTitleLb;
     if ( !levelUpTitleLb )
       goto LABEL_28;
-    UILabel__set_text(levelUpTitleLb, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(levelUpTitleLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( !infoData )
       goto LABEL_28;
     if ( infoData->fields.oldLv < infoData->fields.currentLv )
@@ -252,7 +252,7 @@ void __fastcall ServantCombineResultInfoComponent__OpenLevelUpInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v25 = LocalizationManager__Get((System_String_o *)StringLiteral_8345, 0LL);
+      v25 = LocalizationManager__Get((System_String_o *)StringLiteral_8345/*"LEVELUP_NOTICE_TITLE"*/, 0LL);
       if ( !v24 )
         goto LABEL_28;
       UILabel__set_text(v24, v25, 0LL);
@@ -269,7 +269,7 @@ void __fastcall ServantCombineResultInfoComponent__OpenLevelUpInfo(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_8348, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LEVEL_INFO"*/, 0LL);
     oldLv = infoData->fields.oldLv;
     v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &oldLv);
     v29 = System_String__Format(v27, v28, 0LL);
@@ -287,7 +287,7 @@ void __fastcall ServantCombineResultInfoComponent__OpenLevelUpInfo(
         {
           UILabel__set_text(currentHpLb, v33, 0LL);
           increHpLb = this->fields.increHpLb;
-          v35 = LocalizationManager__Get((System_String_o *)StringLiteral_7242, 0LL);
+          v35 = LocalizationManager__Get((System_String_o *)StringLiteral_7242/*"INCREMENT_SVTLEVEL"*/, 0LL);
           increHpVal = infoData->fields.increHpVal;
           v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &increHpVal);
           v37 = System_String__Format(v35, v36, 0LL);
@@ -300,7 +300,7 @@ void __fastcall ServantCombineResultInfoComponent__OpenLevelUpInfo(
             {
               UILabel__set_text(currentAtkLb, v39, 0LL);
               increAtkLb = this->fields.increAtkLb;
-              v41 = LocalizationManager__Get((System_String_o *)StringLiteral_7242, 0LL);
+              v41 = LocalizationManager__Get((System_String_o *)StringLiteral_7242/*"INCREMENT_SVTLEVEL"*/, 0LL);
               increAtkVal = infoData->fields.increAtkVal;
               v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &increAtkVal);
               v43 = System_String__Format(v41, v42, 0LL);

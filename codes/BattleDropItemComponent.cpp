@@ -545,7 +545,7 @@ void __fastcall BattleDropItemComponent__SetMaterialTd(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, flg);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21736, v6);
+    sub_B16FFC(&StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, v6);
     byte_40F8CD9 = 1;
   }
   materialTdSprite = (UnityEngine_Object_o *)this->fields.materialTdSprite;
@@ -568,7 +568,7 @@ void __fastcall BattleDropItemComponent__SetMaterialTd(
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      AtlasManager__SetEventSprite(v10, (System_String_o *)StringLiteral_21736, 0LL);
+      AtlasManager__SetEventSprite(v10, (System_String_o *)StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, 0LL);
     }
   }
 }
@@ -602,13 +602,13 @@ void __fastcall BattleDropItemComponent__SetPossession(
   {
     sub_B16FFC(&BattleDropItemComponent_TypeInfo, *(_QWORD *)&num);
     sub_B16FFC(&int_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_23395, v5);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v5);
     byte_40F8CDB = 1;
   }
   possessionLabel = this->fields.possessionLabel;
   possessionNum = this->fields.possessionNum;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &possessionNum);
-  v8 = System_String__Format((System_String_o *)StringLiteral_23395, v7, 0LL);
+  v8 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v7, 0LL);
   if ( !possessionLabel )
     goto LABEL_19;
   UILabel__set_text(possessionLabel, v8, 0LL);
@@ -837,7 +837,7 @@ void __fastcall BattleDropItemComponent__ShowAcquisitionUp(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, indata);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_2775, v6);
+    sub_B16FFC(&StringLiteral_2775/*"Battle_RESULT_ITEM_DROPUP"*/, v6);
     byte_40F8CD2 = 1;
   }
   _8[0] = 0LL;
@@ -879,7 +879,7 @@ void __fastcall BattleDropItemComponent__ShowAcquisitionUp(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2775, 0LL);
+      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2775/*"Battle_RESULT_ITEM_DROPUP"*/, 0LL);
       v17 = System_String__Concat_43743732(v15, v16, 0LL);
       if ( !v13 )
 LABEL_23:

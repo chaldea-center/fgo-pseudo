@@ -68,17 +68,17 @@ void __fastcall CoinRoomGaugeEffectComponent__StartAnimation(
     sub_B16FFC(&System_Collections_Hashtable_TypeInfo, v8);
     sub_B16FFC(&iTween_LoopType_TypeInfo, v9);
     sub_B16FFC(&float_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_15002, v11);
-    sub_B16FFC(&StringLiteral_21184, v12);
-    sub_B16FFC(&StringLiteral_18842, v13);
-    sub_B16FFC(&StringLiteral_20241, v14);
-    sub_B16FFC(&StringLiteral_22584, v15);
-    sub_B16FFC(&StringLiteral_21182, v16);
-    sub_B16FFC(&StringLiteral_17881, v17);
-    sub_B16FFC(&StringLiteral_22621, v18);
-    sub_B16FFC(&StringLiteral_6653, v19);
-    sub_B16FFC(&StringLiteral_18045, v20);
-    sub_B16FFC(&StringLiteral_21173, v21);
+    sub_B16FFC(&StringLiteral_15002/*"UpdateGauge"*/, v11);
+    sub_B16FFC(&StringLiteral_21184/*"onupdatetarget"*/, v12);
+    sub_B16FFC(&StringLiteral_18842/*"from"*/, v13);
+    sub_B16FFC(&StringLiteral_20241/*"loopType"*/, v14);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v15);
+    sub_B16FFC(&StringLiteral_21182/*"onupdate"*/, v16);
+    sub_B16FFC(&StringLiteral_17881/*"delay"*/, v17);
+    sub_B16FFC(&StringLiteral_22621/*"to"*/, v18);
+    sub_B16FFC(&StringLiteral_6653/*"FinishGauge"*/, v19);
+    sub_B16FFC(&StringLiteral_18045/*"easeType"*/, v20);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v21);
     sub_B16FFC(&iTween_TypeInfo, v22);
     byte_40F9A59 = 1;
   }
@@ -105,58 +105,58 @@ void __fastcall CoinRoomGaugeEffectComponent__StartAnimation(
     v33 = (float)v32 / (float)v24;
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v30->klass->vtable._23_Add.method)(
       v30,
-      StringLiteral_18842,
+      StringLiteral_18842/*"from"*/,
       v31,
       v30->klass->vtable._24_Clear.methodPtr);
     v45 = v33;
     v34 = j_il2cpp_value_box_0(float_TypeInfo, &v45);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v30->klass->vtable._23_Add.method)(
       v30,
-      StringLiteral_22621,
+      StringLiteral_22621/*"to"*/,
       v34,
       v30->klass->vtable._24_Clear.methodPtr);
     gaugeAnimationDelayTime = this->fields.gaugeAnimationDelayTime;
     v35 = j_il2cpp_value_box_0(float_TypeInfo, &gaugeAnimationDelayTime);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v30->klass->vtable._23_Add.method)(
       v30,
-      StringLiteral_22584,
+      StringLiteral_22584/*"time"*/,
       v35,
       v30->klass->vtable._24_Clear.methodPtr);
     v43 = *((_DWORD *)&this->fields.gaugeAnimationDelayTime + 1);
     v36 = j_il2cpp_value_box_0(float_TypeInfo, &v43);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v30->klass->vtable._23_Add.method)(
       v30,
-      StringLiteral_17881,
+      StringLiteral_17881/*"delay"*/,
       v36,
       v30->klass->vtable._24_Clear.methodPtr);
     v42 = 1;
     v37 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v42);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v30->klass->vtable._23_Add.method)(
       v30,
-      StringLiteral_18045,
+      StringLiteral_18045/*"easeType"*/,
       v37,
       v30->klass->vtable._24_Clear.methodPtr);
     v41 = 0;
     v38 = j_il2cpp_value_box_0(iTween_LoopType_TypeInfo, &v41);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v30->klass->vtable._23_Add.method)(
       v30,
-      StringLiteral_20241,
+      StringLiteral_20241/*"loopType"*/,
       v38,
       v30->klass->vtable._24_Clear.methodPtr);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v30->klass->vtable._23_Add.method)(
       v30,
-      StringLiteral_21182,
-      StringLiteral_15002,
+      StringLiteral_21182/*"onupdate"*/,
+      StringLiteral_15002/*"UpdateGauge"*/,
       v30->klass->vtable._24_Clear.methodPtr);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v30->klass->vtable._23_Add.method)(
       v30,
-      StringLiteral_21173,
-      StringLiteral_6653,
+      StringLiteral_21173/*"oncomplete"*/,
+      StringLiteral_6653/*"FinishGauge"*/,
       v30->klass->vtable._24_Clear.methodPtr);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, Il2CppMethodPointer))v30->klass->vtable._23_Add.method)(
       v30,
-      StringLiteral_21184,
+      StringLiteral_21184/*"onupdatetarget"*/,
       gameObject,
       v30->klass->vtable._24_Clear.methodPtr);
     v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);

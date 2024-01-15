@@ -62,10 +62,10 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__Setup(
   if ( (byte_40FDEAF & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_11973, v5);
-    sub_B16FFC(&StringLiteral_11974, v6);
-    sub_B16FFC(&StringLiteral_11975, v7);
-    sub_B16FFC(&StringLiteral_11976, v8);
+    sub_B16FFC(&StringLiteral_11973/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN"*/, v5);
+    sub_B16FFC(&StringLiteral_11974/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN_EXPLANATION"*/, v6);
+    sub_B16FFC(&StringLiteral_11975/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT"*/, v7);
+    sub_B16FFC(&StringLiteral_11976/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT_EXPLANATION"*/, v8);
     byte_40FDEAF = 1;
   }
   if ( item )
@@ -77,8 +77,8 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__Setup(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11973, 0LL);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11974, 0LL);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11973/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN"*/, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11974/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN_EXPLANATION"*/, 0LL);
     ServantStatusListViewItemDrawRandomLimitCountSetting__SetupCategoryInfo(
       (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v12,
       myServantInfo,
@@ -88,8 +88,8 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__Setup(
       v13);
     supportServantInfo = this->fields.supportServantInfo;
     isEnableSupportRandomSetting = item->fields.isEnableSupportRandomSetting;
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_11975, 0LL);
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11976, 0LL);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_11975/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT"*/, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11976/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT_EXPLANATION"*/, 0LL);
     ServantStatusListViewItemDrawRandomLimitCountSetting__SetupCategoryInfo(
       (ServantStatusListViewItemDrawRandomLimitCountSetting_o *)v17,
       supportServantInfo,
@@ -118,8 +118,8 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupCateg
 
   if ( (byte_40FDEB0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, target);
-    sub_B16FFC(&StringLiteral_16939, v10);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, target);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v10);
     byte_40FDEB0 = 1;
   }
   if ( !target )
@@ -127,9 +127,9 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupCateg
   button = target->fields.button;
   if ( !button )
     goto LABEL_10;
-  v12 = &StringLiteral_16940;
+  v12 = &StringLiteral_16940/*"btn_on"*/;
   if ( !isButtonOn )
-    v12 = &StringLiteral_16939;
+    v12 = &StringLiteral_16939/*"btn_off"*/;
   UIButton__set_normalSprite(button, (System_String_o *)*v12, 0LL);
   buttonLabel = target->fields.buttonLabel;
   if ( !buttonLabel
@@ -287,10 +287,10 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask_
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&maskType);
     sub_B16FFC(&string_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11972, v6);
-    sub_B16FFC(&StringLiteral_11969, v7);
-    sub_B16FFC(&StringLiteral_11970, v8);
-    sub_B16FFC(&StringLiteral_11971, v9);
+    sub_B16FFC(&StringLiteral_11972/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_COMBINE"*/, v6);
+    sub_B16FFC(&StringLiteral_11969/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL"*/, v7);
+    sub_B16FFC(&StringLiteral_11970/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL_OWN"*/, v8);
+    sub_B16FFC(&StringLiteral_11971/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL_SUPPORT"*/, v9);
     byte_40FDEB2 = 1;
   }
   baseSprite = this->fields.baseSprite;
@@ -364,7 +364,7 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask_
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v35 = &StringLiteral_11969;
+        v35 = &StringLiteral_11969/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL"*/;
       }
       else
       {
@@ -373,7 +373,7 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask_
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v35 = &StringLiteral_11972;
+        v35 = &StringLiteral_11972/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_COMBINE"*/;
       }
       goto LABEL_33;
     case 2:
@@ -388,7 +388,7 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask_
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v35 = &StringLiteral_11970;
+      v35 = &StringLiteral_11970/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL_OWN"*/;
       goto LABEL_33;
     case 3:
       x = this->fields.MASK_SIZE_BOTTOM.fields.y;
@@ -402,7 +402,7 @@ void __fastcall ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask_
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v35 = &StringLiteral_11971;
+      v35 = &StringLiteral_11971/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL_SUPPORT"*/;
 LABEL_33:
       Empty = LocalizationManager__Get((System_String_o *)*v35, 0LL);
       break;

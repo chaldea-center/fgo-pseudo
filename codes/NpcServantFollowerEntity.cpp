@@ -71,9 +71,9 @@ System_String_o *__fastcall NpcServantFollowerEntity__GetFollowerName_21218484(
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
     sub_B16FFC(&string_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_11694, v16);
-    sub_B16FFC(&StringLiteral_9280, v17);
-    this = (NpcServantFollowerEntity_o *)sub_B16FFC(&StringLiteral_1, v18);
+    sub_B16FFC(&StringLiteral_11694/*"SERVANT_HIDE_NAME"*/, v16);
+    sub_B16FFC(&StringLiteral_9280/*"NONE"*/, v17);
+    this = (NpcServantFollowerEntity_o *)sub_B16FFC(&StringLiteral_1/*""*/, v18);
     byte_40F7F2F = 1;
   }
   *isChangeName = 1;
@@ -115,7 +115,7 @@ System_String_o *__fastcall NpcServantFollowerEntity__GetFollowerName_21218484(
       }
     }
     name = v10->fields.name;
-    if ( name && System_String__op_Inequality(name, (System_String_o *)StringLiteral_9280, 0LL) )
+    if ( name && System_String__op_Inequality(name, (System_String_o *)StringLiteral_9280/*"NONE"*/, 0LL) )
       return v10->fields.name;
     *isChangeName = 0;
     v27 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -132,7 +132,7 @@ System_String_o *__fastcall NpcServantFollowerEntity__GetFollowerName_21218484(
                                       (const MethodInfo_266F388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         if ( Entity )
           return ServantEntity__getName(Entity, v10->fields.limitCount, -1, 0LL);
-        return (System_String_o *)StringLiteral_1;
+        return (System_String_o *)StringLiteral_1/*""*/;
       }
     }
 LABEL_24:
@@ -143,7 +143,7 @@ LABEL_24:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_11694, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_11694/*"SERVANT_HIDE_NAME"*/, 0LL);
 }
 
 
@@ -261,9 +261,9 @@ System_Int32_array *__fastcall NpcServantFollowerEntity__GetOverwriteIndividuali
     sub_B16FFC(&Method_System_Func_string__int___ctor__, v5);
     sub_B16FFC(&System_Func_string__int__TypeInfo, v6);
     sub_B16FFC(&Method_System_Int32_Parse__, v7);
-    sub_B16FFC(&StringLiteral_15571, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
-    sub_B16FFC(&StringLiteral_15807, v10);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v10);
     byte_40F7F34 = 1;
   }
   if ( !NpcServantFollowerEntity__IsOverwriteIndividuality(this, method) )
@@ -273,15 +273,15 @@ System_Int32_array *__fastcall NpcServantFollowerEntity__GetOverwriteIndividuali
     goto LABEL_11;
   v12 = System_String__Replace_43750968(
           individuality,
-          (System_String_o *)StringLiteral_15571,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_15571/*"["*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   if ( !v12 )
     goto LABEL_11;
   v13 = System_String__Replace_43750968(
           v12,
-          (System_String_o *)StringLiteral_15807,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_15807/*"]"*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   v15 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v14);
   if ( !v15 )
@@ -389,10 +389,10 @@ bool __fastcall NpcServantFollowerEntity__IsOverwriteIndividuality(
 {
   if ( (byte_40F7F33 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9280, method);
+    sub_B16FFC(&StringLiteral_9280/*"NONE"*/, method);
     byte_40F7F33 = 1;
   }
-  return System_String__op_Inequality(this->fields.individuality, (System_String_o *)StringLiteral_9280, 0LL);
+  return System_String__op_Inequality(this->fields.individuality, (System_String_o *)StringLiteral_9280/*"NONE"*/, 0LL);
 }
 
 

@@ -115,8 +115,8 @@ void __fastcall DeckListViewItemDraw__SetItem_25779096(
   {
     sub_B16FFC(&DeckListViewItemDraw_TypeInfo, item);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_10300, v8);
-    sub_B16FFC(&StringLiteral_10299, v9);
+    sub_B16FFC(&StringLiteral_10300/*"PARTY_ORGANIZATION_DECK_SELECT_NUMBER"*/, v8);
+    sub_B16FFC(&StringLiteral_10299/*"PARTY_ORGANIZATION_DECK_SELECT_NAME"*/, v9);
     byte_40FA4F2 = 1;
   }
   if ( mode )
@@ -169,7 +169,7 @@ void __fastcall DeckListViewItemDraw__SetItem_25779096(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10300, 0LL);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10300/*"PARTY_ORGANIZATION_DECK_SELECT_NUMBER"*/, 0LL);
     if ( !item )
       goto LABEL_19;
     v20 = v19;
@@ -179,7 +179,7 @@ void __fastcall DeckListViewItemDraw__SetItem_25779096(
     if ( !deckNumLabel
       || (UILabel__set_text(deckNumLabel, v23, 0LL),
           deckNameLabel = this->fields.deckNameLabel,
-          v25 = LocalizationManager__Get((System_String_o *)StringLiteral_10299, 0LL),
+          v25 = LocalizationManager__Get((System_String_o *)StringLiteral_10299/*"PARTY_ORGANIZATION_DECK_SELECT_NAME"*/, 0LL),
           v26 = System_String__Format(v25, (Il2CppObject *)item->fields.deckName, 0LL),
           !deckNameLabel) )
     {

@@ -40,8 +40,8 @@ void __fastcall EventInfoAreaImproveResultDialog__Init(
   if ( (byte_40FB6B9 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3252, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FB6B9 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -49,14 +49,14 @@ void __fastcall EventInfoAreaImproveResultDialog__Init(
   this->fields.isClose = 0;
   if ( !titleLabel )
     goto LABEL_9;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
 LABEL_9:
     sub_B170D4();
@@ -447,7 +447,7 @@ void __fastcall EventInfoAreaImproveResultDialog__SetupTitle(
   if ( (byte_40FB6BB & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, areaName);
-    sub_B16FFC(&StringLiteral_5534, v5);
+    sub_B16FFC(&StringLiteral_5534/*"EVENT_AREA_IMPROVE_RESULT_DIALOG_TITLE"*/, v5);
     byte_40FB6BB = 1;
   }
   titleLabel = this->fields.titleLabel;
@@ -456,7 +456,7 @@ void __fastcall EventInfoAreaImproveResultDialog__SetupTitle(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5534, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5534/*"EVENT_AREA_IMPROVE_RESULT_DIALOG_TITLE"*/, 0LL);
   v8 = System_String__Format(v7, (Il2CppObject *)areaName, 0LL);
   if ( !titleLabel )
     sub_B170D4();

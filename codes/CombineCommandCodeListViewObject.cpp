@@ -264,7 +264,7 @@ void __fastcall CombineCommandCodeListViewObject__OnClickSelect(
     sub_B16FFC(&CombineCommandCodeListViewItem_TypeInfo, method);
     sub_B16FFC(&CombineCommandCodeListViewManager_TypeInfo, v4);
     sub_B16FFC(&SoundManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_9922, v6);
+    sub_B16FFC(&StringLiteral_9922/*"OnClickListView"*/, v6);
     byte_40F98BD = 1;
   }
   linkItem = this->fields.linkItem;
@@ -328,7 +328,7 @@ LABEL_20:
   {
     UnityEngine_Component__SendMessage(
       manager,
-      (System_String_o *)StringLiteral_9922,
+      (System_String_o *)StringLiteral_9922/*"OnClickListView"*/,
       (Il2CppObject *)this->fields.linkItem,
       0LL);
   }
@@ -347,7 +347,7 @@ void __fastcall CombineCommandCodeListViewObject__OnLongPush(
   if ( (byte_40F98BE & 1) == 0 )
   {
     sub_B16FFC(&CombineCommandCodeListViewManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9991, v3);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, v3);
     byte_40F98BE = 1;
   }
   linkItem = (Il2CppObject *)this->fields.linkItem;
@@ -360,7 +360,7 @@ void __fastcall CombineCommandCodeListViewObject__OnLongPush(
       if ( *(&manager->klass->_2.bitflags2 + 1) >= (unsigned int)v6
         && (CombineCommandCodeListViewManager_c *)manager->klass->_2.typeHierarchy[v6 - 1] == CombineCommandCodeListViewManager_TypeInfo )
       {
-        UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9991, linkItem, 0LL);
+        UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/, linkItem, 0LL);
         return;
       }
       sub_B173C8(manager);
@@ -512,7 +512,7 @@ System_String_o *__fastcall CombineCommandCodeListViewObject__ToString(
   if ( (byte_40F98BF & 1) == 0 )
   {
     sub_B16FFC(&CombineCommandCodeListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
     byte_40F98BF = 1;
   }
   v13 = 0.0;
@@ -531,7 +531,7 @@ System_String_o *__fastcall CombineCommandCodeListViewObject__ToString(
   v12 = v8;
   v13 = z;
   v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
-  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80, v10, 0LL);
+  return System_String__Concat_43746016(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 

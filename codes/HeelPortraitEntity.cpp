@@ -38,19 +38,19 @@ int32_t __fastcall HeelPortraitEntity__GetOverwriteImageId(
   if ( (byte_40FC15C & 1) == 0 )
   {
     sub_B16FFC(&CondType_TypeInfo, *(_QWORD *)&originImageId);
-    sub_B16FFC(&StringLiteral_21266, v6);
-    sub_B16FFC(&StringLiteral_21267, v7);
-    sub_B16FFC(&StringLiteral_21268, v8);
-    sub_B16FFC(&StringLiteral_21276, v9);
+    sub_B16FFC(&StringLiteral_21266/*"overwriteCondNum"*/, v6);
+    sub_B16FFC(&StringLiteral_21267/*"overwriteCondTargetId"*/, v7);
+    sub_B16FFC(&StringLiteral_21268/*"overwriteCondType"*/, v8);
+    sub_B16FFC(&StringLiteral_21276/*"overwriteImageId"*/, v9);
     byte_40FC15C = 1;
   }
-  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21268, 0, v3);
-  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21267, 0, v11);
-  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21266, 0, v13);
+  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21268/*"overwriteCondType"*/, 0, v3);
+  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21267/*"overwriteCondTargetId"*/, 0, v11);
+  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21266/*"overwriteCondNum"*/, 0, v13);
   if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   if ( CondType__IsOpen(Script, v12, v14, 0, 0LL) )
-    return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21276, 0, v15);
+    return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21276/*"overwriteImageId"*/, 0, v15);
   else
     return originImageId;
 }
@@ -76,19 +76,19 @@ System_String_o *__fastcall HeelPortraitEntity__GetOverwriteName(
   if ( (byte_40FC15A & 1) == 0 )
   {
     sub_B16FFC(&CondType_TypeInfo, originName);
-    sub_B16FFC(&StringLiteral_21266, v6);
-    sub_B16FFC(&StringLiteral_21267, v7);
-    sub_B16FFC(&StringLiteral_21283, v8);
-    sub_B16FFC(&StringLiteral_21268, v9);
+    sub_B16FFC(&StringLiteral_21266/*"overwriteCondNum"*/, v6);
+    sub_B16FFC(&StringLiteral_21267/*"overwriteCondTargetId"*/, v7);
+    sub_B16FFC(&StringLiteral_21283/*"overwriteName"*/, v8);
+    sub_B16FFC(&StringLiteral_21268/*"overwriteCondType"*/, v9);
     byte_40FC15A = 1;
   }
-  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21268, 0, v3);
-  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21267, 0, v11);
-  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21266, 0, v13);
+  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21268/*"overwriteCondType"*/, 0, v3);
+  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21267/*"overwriteCondTargetId"*/, 0, v11);
+  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21266/*"overwriteCondNum"*/, 0, v13);
   if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   if ( CondType__IsOpen(Script, v12, v14, 0, 0LL) )
-    return HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_21283, 0LL, v15);
+    return HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_21283/*"overwriteName"*/, 0LL, v15);
   else
     return originName;
 }
@@ -100,10 +100,10 @@ bool __fastcall HeelPortraitEntity__IsSetOverwriteImageId(HeelPortraitEntity_o *
 
   if ( (byte_40FC15B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21276, method);
+    sub_B16FFC(&StringLiteral_21276/*"overwriteImageId"*/, method);
     byte_40FC15B = 1;
   }
-  return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21276, 0, v2) != 0;
+  return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_21276/*"overwriteImageId"*/, 0, v2) != 0;
 }
 
 
@@ -114,10 +114,10 @@ bool __fastcall HeelPortraitEntity__IsSetOverwriteName(HeelPortraitEntity_o *thi
 
   if ( (byte_40FC159 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21283, method);
+    sub_B16FFC(&StringLiteral_21283/*"overwriteName"*/, method);
     byte_40FC159 = 1;
   }
-  ScriptStr = HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_21283, 0LL, v2);
+  ScriptStr = HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_21283/*"overwriteName"*/, 0LL, v2);
   return !System_String__IsNullOrEmpty(ScriptStr, 0LL);
 }
 

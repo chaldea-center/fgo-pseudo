@@ -189,8 +189,8 @@ void __fastcall BattleResultKnockdownComponent__setKnockdownInfoLabel(
   if ( (byte_40FA3F9 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, labelArray);
-    sub_B16FFC(&StringLiteral_2441, v11);
-    sub_B16FFC(&StringLiteral_339, v12);
+    sub_B16FFC(&StringLiteral_2441/*"BATTLE_KNOCKDOWN_COUNT_NAME"*/, v11);
+    sub_B16FFC(&StringLiteral_339/*"#,#"*/, v12);
     byte_40FA3F9 = 1;
   }
   if ( !labelArray )
@@ -203,7 +203,7 @@ void __fastcall BattleResultKnockdownComponent__setKnockdownInfoLabel(
   if ( info->fields.knockdownNum <= 0 )
     v14 = System_Int64__ToString((int64_t)p_fields, 0LL);
   else
-    v14 = System_Int64__ToString_38278592((int64_t)p_fields, (System_String_o *)StringLiteral_339, 0LL);
+    v14 = System_Int64__ToString_38278592((int64_t)p_fields, (System_String_o *)StringLiteral_339/*"#,#"*/, 0LL);
   v16 = v14;
   if ( !labelArray->max_length )
     goto LABEL_30;
@@ -220,7 +220,7 @@ void __fastcall BattleResultKnockdownComponent__setKnockdownInfoLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2441, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2441/*"BATTLE_KNOCKDOWN_COUNT_NAME"*/, 0LL);
   if ( !v19 )
     goto LABEL_29;
   UILabel__set_text(v19, v20, 0LL);
@@ -232,7 +232,7 @@ void __fastcall BattleResultKnockdownComponent__setKnockdownInfoLabel(
   if ( totalDamage <= 0 )
     v14 = System_Int64__ToString((int64_t)p_totalDamage, 0LL);
   else
-    v14 = System_Int64__ToString_38278592((int64_t)p_totalDamage, (System_String_o *)StringLiteral_339, 0LL);
+    v14 = System_Int64__ToString_38278592((int64_t)p_totalDamage, (System_String_o *)StringLiteral_339/*"#,#"*/, 0LL);
   v16 = v14;
   if ( labelArray->max_length <= 2 )
     goto LABEL_30;

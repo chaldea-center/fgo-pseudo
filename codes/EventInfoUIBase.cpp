@@ -260,12 +260,12 @@ System_String_o *__fastcall EventInfoUIBase__GetEventUIAssetDataPath(int32_t eve
   if ( (byte_40F87F2 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6189, v3);
+    sub_B16FFC(&StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v3);
     byte_40F87F2 = 1;
   }
   v6 = eventId;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
-  return System_String__Format((System_String_o *)StringLiteral_6189, v4, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v4, 0LL);
 }
 
 
@@ -284,14 +284,14 @@ System_String_o *__fastcall EventInfoUIBase__GetEventUIAssetDataPath_22457148(
   if ( (byte_40F87F3 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&warId);
-    sub_B16FFC(&StringLiteral_6190, v5);
+    sub_B16FFC(&StringLiteral_6190/*"EventUI/Prefabs/{0}/{1}"*/, v5);
     byte_40F87F3 = 1;
   }
   v10 = eventId;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
   v9 = warId;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-  return System_String__Format_43739268((System_String_o *)StringLiteral_6190, v6, v7, 0LL);
+  return System_String__Format_43739268((System_String_o *)StringLiteral_6190/*"EventUI/Prefabs/{0}/{1}"*/, v6, v7, 0LL);
 }
 
 
@@ -657,8 +657,8 @@ void __fastcall EventInfoUIBase__LoadLocalAtlas(EventInfoUIBase_o *this, int32_t
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Add__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_23407, v9);
-    sub_B16FFC(&StringLiteral_5361, v10);
+    sub_B16FFC(&StringLiteral_23407/*"{0:D2}"*/, v9);
+    sub_B16FFC(&StringLiteral_5361/*"DownloadEventUIAtlas{0}{1}"*/, v10);
     byte_40F87F9 = 1;
   }
   if ( this->fields.assetData )
@@ -674,10 +674,10 @@ LABEL_18:
     {
       v22 = i;
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
-      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407, v15, 0LL);
+      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407/*"{0:D2}"*/, v15, 0LL);
       v21 = eventId;
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
-      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_5361, v17, v16, 0LL);
+      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_5361/*"DownloadEventUIAtlas{0}{1}"*/, v17, v16, 0LL);
       GameObjectFromEventUIAssetData = (UnityEngine_Object_o *)EventInfoUIBase__GetGameObjectFromEventUIAssetData(
                                                                  this,
                                                                  v18,
@@ -747,8 +747,8 @@ void __fastcall EventInfoUIBase__LoadLocalAtlasWithWarId(
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Add__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_23407, v9);
-    sub_B16FFC(&StringLiteral_5362, v10);
+    sub_B16FFC(&StringLiteral_23407/*"{0:D2}"*/, v9);
+    sub_B16FFC(&StringLiteral_5362/*"DownloadEventUIAtlas{0}{1}{2}"*/, v10);
     byte_40F87FA = 1;
   }
   if ( this->fields.assetData2 )
@@ -764,12 +764,12 @@ LABEL_18:
     {
       v24 = i;
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
-      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407, v15, 0LL);
+      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407/*"{0:D2}"*/, v15, 0LL);
       v23 = 0;
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23);
       v22 = warId;
       v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
-      v19 = System_String__Format_43744796((System_String_o *)StringLiteral_5362, v17, v18, v16, 0LL);
+      v19 = System_String__Format_43744796((System_String_o *)StringLiteral_5362/*"DownloadEventUIAtlas{0}{1}{2}"*/, v17, v18, v16, 0LL);
       GameObjectFromEventUIAssetData = (UnityEngine_Object_o *)EventInfoUIBase__GetGameObjectFromEventUIAssetData(
                                                                  this,
                                                                  v19,

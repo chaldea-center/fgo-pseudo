@@ -15,7 +15,7 @@ void __fastcall AutoSellInfoComponent__Clear(AutoSellInfoComponent_o *this, cons
 
   if ( (byte_40F6E6A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F6E6A = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -30,12 +30,12 @@ void __fastcall AutoSellInfoComponent__Clear(AutoSellInfoComponent_o *this, cons
   if ( !manaInfo
     || (UnityEngine_GameObject__SetActive(manaInfo, 0, 0LL), (qpInfo = this->fields.qpInfo) == 0LL)
     || (UnityEngine_GameObject__SetActive(qpInfo, 1, 0LL), (manaLabel = this->fields.manaLabel) == 0LL)
-    || (UILabel__set_text(manaLabel, (System_String_o *)StringLiteral_1, 0LL), (qpLabel = this->fields.qpLabel) == 0LL) )
+    || (UILabel__set_text(manaLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL), (qpLabel = this->fields.qpLabel) == 0LL) )
   {
 LABEL_10:
     sub_B170D4();
   }
-  UILabel__set_text(qpLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(qpLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -87,8 +87,8 @@ void __fastcall AutoSellInfoComponent__SetData(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&mana);
     sub_B16FFC(&int_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_23555, v12);
-    sub_B16FFC(&StringLiteral_15678, v13);
+    sub_B16FFC(&StringLiteral_23555/*"{0}{1:#,0}"*/, v12);
+    sub_B16FFC(&StringLiteral_15678/*"[FF0000]{0}{1:#,0}[-]"*/, v13);
     byte_40F6E6B = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -122,7 +122,7 @@ LABEL_13:
       manaLabel = this->fields.manaLabel;
       v44 = mana;
       v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44);
-      v22 = System_String__Format_43739268((System_String_o *)StringLiteral_23555, v16, v21, 0LL);
+      v22 = System_String__Format_43739268((System_String_o *)StringLiteral_23555/*"{0}{1:#,0}"*/, v16, v21, 0LL);
       if ( !manaLabel )
         goto LABEL_41;
       v23 = v22;
@@ -141,13 +141,13 @@ LABEL_13:
       {
         v44 = 0;
         v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44);
-        v28 = &StringLiteral_15678;
+        v28 = &StringLiteral_15678/*"[FF0000]{0}{1:#,0}[-]"*/;
       }
       else
       {
         v44 = v26;
         v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44);
-        v28 = &StringLiteral_23555;
+        v28 = &StringLiteral_23555/*"{0}{1:#,0}"*/;
       }
       v29 = System_String__Format_43739268((System_String_o *)*v28, v16, v27, 0LL);
       if ( !v25 )
@@ -185,13 +185,13 @@ LABEL_13:
       {
         v44 = 0;
         v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44);
-        v42 = &StringLiteral_15678;
+        v42 = &StringLiteral_15678/*"[FF0000]{0}{1:#,0}[-]"*/;
       }
       else
       {
         v44 = v40;
         v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44);
-        v42 = &StringLiteral_23555;
+        v42 = &StringLiteral_23555/*"{0}{1:#,0}"*/;
       }
       v43 = System_String__Format_43739268((System_String_o *)*v42, PlusOperatorString, v41, 0LL);
       if ( qpLabel )
@@ -207,7 +207,7 @@ LABEL_41:
   v34 = this->fields.qpLabel;
   v44 = qp;
   v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44);
-  v36 = System_String__Format_43739268((System_String_o *)StringLiteral_23555, PlusOperatorString, v35, 0LL);
+  v36 = System_String__Format_43739268((System_String_o *)StringLiteral_23555/*"{0}{1:#,0}"*/, PlusOperatorString, v35, 0LL);
   if ( !v34 )
     goto LABEL_41;
   v37 = v36;

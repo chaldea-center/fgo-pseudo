@@ -43,7 +43,7 @@ void __fastcall ShopEventListViewManager__CreateList(
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&ShopEventListViewItem_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_12088, v10);
+    sub_B16FFC(&StringLiteral_12088/*"SHOP_EVENT_LIST_EMPTY"*/, v10);
     byte_40FF886 = 1;
   }
   if ( !kind )
@@ -111,7 +111,7 @@ LABEL_19:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12088, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12088/*"SHOP_EVENT_LIST_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_24;
   UILabel__set_text(emptyMessageLabel, v28, 0LL);
@@ -660,7 +660,7 @@ void __fastcall ShopEventListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_ShopEventListViewObject__get_Count__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_ShopEventListViewObject__get_Item__, v6);
     sub_B16FFC(&Method_ShopEventListViewManager_OnMoveEnd__, v7);
-    sub_B16FFC(&StringLiteral_10004, v8);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v8);
     byte_40FF88D = 1;
   }
   v9 = 3;
@@ -754,7 +754,7 @@ LABEL_30:
           v27 = 0.0;
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_10004,
+          (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
           v27,
           0LL);
       }

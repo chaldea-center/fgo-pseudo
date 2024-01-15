@@ -1221,7 +1221,7 @@ void __fastcall TitleInfoEventBulletinBoardComponent__LoadAssetData(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
     sub_B16FFC(&Method_TitleInfoEventBulletinBoardComponent___c__DisplayClass59_0__LoadAssetData_b__0__, v8);
     sub_B16FFC(&TitleInfoEventBulletinBoardComponent___c__DisplayClass59_0_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_6184, v10);
+    sub_B16FFC(&StringLiteral_6184/*"EventUI/Prefabs/"*/, v10);
     byte_40FDF97 = 1;
   }
   v11 = sub_B170CC(TitleInfoEventBulletinBoardComponent___c__DisplayClass59_0_TypeInfo, callBack, method, v3, v4);
@@ -1235,7 +1235,7 @@ void __fastcall TitleInfoEventBulletinBoardComponent__LoadAssetData(
   *(_QWORD *)(v11 + 24) = callBack;
   sub_B16F98((BattleServantConfConponent_o *)(v11 + 24), (System_Int32_array **)callBack, v18, v19, v20, v21, v22, v23);
   v24 = System_Int32__ToString((int)this + 248, 0LL);
-  v25 = System_String__Concat_43743732((System_String_o *)StringLiteral_6184, v24, 0LL);
+  v25 = System_String__Concat_43743732((System_String_o *)StringLiteral_6184/*"EventUI/Prefabs/"*/, v24, 0LL);
   v30 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v26, v27, v28, v29);
   AssetLoader_LoadEndDataHandler___ctor(
     v30,
@@ -1455,7 +1455,7 @@ void __fastcall TitleInfoEventBulletinBoardComponent__SetUp(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__bool__Clear__, boardMessages);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Count__, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FDF8C = 1;
   }
   this->fields.messages = boardMessages;
@@ -1475,7 +1475,7 @@ void __fastcall TitleInfoEventBulletinBoardComponent__SetUp(
     UnityEngine_MonoBehaviour__StopCoroutine_34804984((UnityEngine_MonoBehaviour_o *)this, coroutine, 0LL);
   svtNameLabel = this->fields.svtNameLabel;
   if ( !svtNameLabel
-    || (UILabel__set_text(svtNameLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(svtNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (wipeIcon = this->fields.wipeIcon) == 0LL)
     || (UISprite__set_atlas(wipeIcon, 0LL, 0LL), (wipeIcon2 = this->fields.wipeIcon2) == 0LL)
     || (UISprite__set_atlas(wipeIcon2, 0LL, 0LL), (showStatusDic = this->fields.showStatusDic) == 0LL) )
@@ -1573,7 +1573,7 @@ void __fastcall TitleInfoEventBulletinBoardComponent__SwitchWipeIconAndSvtNameLa
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&int_TypeInfo, v4);
-    this = (TitleInfoEventBulletinBoardComponent_o *)sub_B16FFC(&StringLiteral_18601, v5);
+    this = (TitleInfoEventBulletinBoardComponent_o *)sub_B16FFC(&StringLiteral_18601/*"face_{0:D3}"*/, v5);
     byte_40FDF90 = 1;
   }
   switchInfo = v3->fields.switchInfo;
@@ -1609,7 +1609,7 @@ LABEL_26:
   eventId = v3->fields.eventId;
   iconId = v13->fields.iconId;
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-  v17 = System_String__Format((System_String_o *)StringLiteral_18601, v16, 0LL);
+  v17 = System_String__Format((System_String_o *)StringLiteral_18601/*"face_{0:D3}"*/, v16, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI_28584872(eventId, v14, v17, 0LL);
@@ -2030,8 +2030,8 @@ bool __fastcall TitleInfoEventBulletinBoardComponent__SetWipeIconAndSvtNameLabel
     sub_B16FFC(&Method_DataMasterBase_EventBulletinBoardMaster__EventBulletinBoardEntity__int__TryGetEntity__, v6);
     sub_B16FFC(&int_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_18601, v9);
-    this = (TitleInfoEventBulletinBoardComponent__SetWipeIconAndSvtNameLabel_d__51_o *)sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_18601/*"face_{0:D3}"*/, v9);
+    this = (TitleInfoEventBulletinBoardComponent__SetWipeIconAndSvtNameLabel_d__51_o *)sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F7822 = 1;
   }
   _1__state = v3->fields.__1__state;
@@ -2056,7 +2056,7 @@ bool __fastcall TitleInfoEventBulletinBoardComponent__SetWipeIconAndSvtNameLabel
       wipeIcon = _4__this->fields.wipeIcon;
       iconId = v48->fields.iconId;
       v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-      v52 = System_String__Format((System_String_o *)StringLiteral_18601, v51, 0LL);
+      v52 = System_String__Format((System_String_o *)StringLiteral_18601/*"face_{0:D3}"*/, v51, 0LL);
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
       {
@@ -2140,7 +2140,7 @@ bool __fastcall TitleInfoEventBulletinBoardComponent__SetWipeIconAndSvtNameLabel
             svtNameLabel = _4__this->fields.svtNameLabel;
             if ( svtNameLabel )
             {
-              name = (System_String_o *)StringLiteral_1;
+              name = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_38:
               UILabel__set_text(svtNameLabel, name, 0LL);
               return 0;

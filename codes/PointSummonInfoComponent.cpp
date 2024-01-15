@@ -312,9 +312,9 @@ void __fastcall PointSummonInfoComponent__setMultiGachaNum(
 
   if ( (byte_40F8FBE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22347, *(_QWORD *)&price);
-    sub_B16FFC(&StringLiteral_22345, v7);
-    sub_B16FFC(&StringLiteral_22346, v8);
+    sub_B16FFC(&StringLiteral_22347/*"summon_txt_f10"*/, *(_QWORD *)&price);
+    sub_B16FFC(&StringLiteral_22345/*"summon_txt_f0"*/, v7);
+    sub_B16FFC(&StringLiteral_22346/*"summon_txt_f01"*/, v8);
     byte_40F8FBE = 1;
   }
   v9 = usrFriendPoint / price;
@@ -329,7 +329,7 @@ void __fastcall PointSummonInfoComponent__setMultiGachaNum(
     freeGachaTxtImg = this->fields.freeGachaTxtImg;
     if ( freeGachaTxtImg )
     {
-      v13 = (System_String_o *)StringLiteral_22346;
+      v13 = (System_String_o *)StringLiteral_22346/*"summon_txt_f01"*/;
       goto LABEL_12;
     }
 LABEL_13:
@@ -341,11 +341,11 @@ LABEL_13:
     goto LABEL_13;
   UnityEngine_GameObject__SetActive(multiGachaBtnInfo, 1, 0LL);
   v15 = System_Int32__ToString((int)this + 156, 0LL);
-  v16 = System_String__Concat_43743732((System_String_o *)StringLiteral_22345, v15, 0LL);
+  v16 = System_String__Concat_43743732((System_String_o *)StringLiteral_22345/*"summon_txt_f0"*/, v15, 0LL);
   if ( *p_gachaTime >= 10 )
   {
     *p_gachaTime = 10;
-    v13 = (System_String_o *)StringLiteral_22347;
+    v13 = (System_String_o *)StringLiteral_22347/*"summon_txt_f10"*/;
   }
   else
   {
@@ -438,9 +438,9 @@ void __fastcall PointSummonInfoComponent__setPointSummonDispInfo(
     sub_B16FFC(&NetworkManager_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_10426, v12);
-    sub_B16FFC(&StringLiteral_4537, v13);
-    sub_B16FFC(&StringLiteral_22348, v14);
+    sub_B16FFC(&StringLiteral_10426/*"POINT_SUMMON_DETAIL"*/, v12);
+    sub_B16FFC(&StringLiteral_4537/*"DAILY_SUMMON_DETAIL"*/, v13);
+    sub_B16FFC(&StringLiteral_22348/*"summon_txt_free"*/, v14);
     byte_40F8FBD = 1;
   }
   usrFriendPoint = 0;
@@ -577,14 +577,14 @@ LABEL_47:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_4537, 0LL);
+    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_4537/*"DAILY_SUMMON_DETAIL"*/, 0LL);
     if ( pointGachaDetailLb )
     {
       UILabel__set_text(pointGachaDetailLb, v45, 0LL);
       freeGachaTxtImg = this->fields.freeGachaTxtImg;
       if ( freeGachaTxtImg )
       {
-        UISprite__set_spriteName(freeGachaTxtImg, (System_String_o *)StringLiteral_22348, 0LL);
+        UISprite__set_spriteName(freeGachaTxtImg, (System_String_o *)StringLiteral_22348/*"summon_txt_free"*/, 0LL);
         singleGachaBtnInfo = this->fields.singleGachaBtnInfo;
         if ( singleGachaBtnInfo )
         {
@@ -601,7 +601,7 @@ LABEL_65:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_10426, 0LL);
+  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_10426/*"POINT_SUMMON_DETAIL"*/, 0LL);
   price = this->fields.price;
   v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &price);
   v50 = System_String__Format(v48, v49, 0LL);

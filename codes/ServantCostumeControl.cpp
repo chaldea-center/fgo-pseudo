@@ -78,10 +78,10 @@ void __fastcall ServantCostumeControl__CheckCondJoin(
     sub_B16FFC(&string_TypeInfo, v9);
     sub_B16FFC(&Method_ServantCostumeControl___c__DisplayClass57_0__CheckCondJoin_b__0__, v10);
     sub_B16FFC(&ServantCostumeControl___c__DisplayClass57_0_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_3307, v12);
-    sub_B16FFC(&StringLiteral_3306, v13);
-    sub_B16FFC(&StringLiteral_3305, v14);
-    sub_B16FFC(&StringLiteral_3308, v15);
+    sub_B16FFC(&StringLiteral_3307/*"CONFIRM_COSTUME_COMBINE_COND_JOIN_SERVANT_TITIE"*/, v12);
+    sub_B16FFC(&StringLiteral_3306/*"CONFIRM_COSTUME_COMBINE_COND_JOIN_SERVANT_NO"*/, v13);
+    sub_B16FFC(&StringLiteral_3305/*"CONFIRM_COSTUME_COMBINE_COND_JOIN_SERVANT_MESSAGE"*/, v14);
+    sub_B16FFC(&StringLiteral_3308/*"CONFIRM_COSTUME_COMBINE_COND_JOIN_SERVANT_YES"*/, v15);
     byte_40FCEC3 = 1;
   }
   v16 = sub_B170CC(ServantCostumeControl___c__DisplayClass57_0_TypeInfo, callBack, method, v3, v4);
@@ -108,8 +108,8 @@ void __fastcall ServantCostumeControl__CheckCondJoin(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3307, 0LL);
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3305, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3307/*"CONFIRM_COSTUME_COMBINE_COND_JOIN_SERVANT_TITIE"*/, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3305/*"CONFIRM_COSTUME_COMBINE_COND_JOIN_SERVANT_MESSAGE"*/, 0LL);
   v29 = (Il2CppObject *)(v25 ? EventServantEntity__getEndTimeStr(v25, 0LL) : string_TypeInfo->static_fields->Empty);
   v30 = System_String__Format(v28, v29, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -117,8 +117,8 @@ void __fastcall ServantCostumeControl__CheckCondJoin(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3308, 0LL);
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3306, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3308/*"CONFIRM_COSTUME_COMBINE_COND_JOIN_SERVANT_YES"*/, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3306/*"CONFIRM_COSTUME_COMBINE_COND_JOIN_SERVANT_NO"*/, 0LL);
   v37 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v33,
@@ -334,7 +334,7 @@ void __fastcall ServantCostumeControl__InitCombineCostume(ServantCostumeControl_
   if ( (byte_40FCEB9 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9236, v3);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v3);
     byte_40FCEB9 = 1;
   }
   EventTutorialMaster__CheckTutorial(0, 31, 0LL, 0, 0, 0, 0, 0LL);
@@ -344,7 +344,7 @@ void __fastcall ServantCostumeControl__InitCombineCostume(ServantCostumeControl_
   ServantCostumeControl__ClearItemList(this, v5);
   this->fields.spendQpVal = 0;
   spendQpLb = this->fields.spendQpLb;
-  v7 = System_Int32__ToString_38275808((int)this + 256, (System_String_o *)StringLiteral_9236, 0LL);
+  v7 = System_Int32__ToString_38275808((int)this + 256, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !spendQpLb )
     goto LABEL_15;
   UILabel__set_text(spendQpLb, v7, 0LL);
@@ -408,8 +408,8 @@ void __fastcall ServantCostumeControl__InitCombineCostumeInfo(ServantCostumeCont
   if ( (byte_40FCEBB & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9236, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FCEBB = 1;
   }
   this->fields.isCanCombine = 0;
@@ -417,7 +417,7 @@ void __fastcall ServantCostumeControl__InitCombineCostumeInfo(ServantCostumeCont
   this->fields.isShortEventItem = 0;
   this->fields.spendQpVal = 0;
   spendQpLb = this->fields.spendQpLb;
-  v6 = System_Int32__ToString_38275808((int)this + 256, (System_String_o *)StringLiteral_9236, 0LL);
+  v6 = System_Int32__ToString_38275808((int)this + 256, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !spendQpLb )
     goto LABEL_18;
   UILabel__set_text(spendQpLb, v6, 0LL);
@@ -450,10 +450,10 @@ void __fastcall ServantCostumeControl__InitCombineCostumeInfo(ServantCostumeCont
   costumeNameLb = this->fields.costumeNameLb;
   if ( !costumeNameLb )
     goto LABEL_18;
-  UILabel__set_text(costumeNameLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(costumeNameLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   conditionLb = this->fields.conditionLb;
   if ( !conditionLb
-    || (UILabel__set_text(conditionLb, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(conditionLb, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         ServantCostumeControl__SetExeBtnState(this, v22),
         (costumeReleaseInfo = this->fields.costumeReleaseInfo) == 0LL)
     || (UnityEngine_GameObject__SetActive(costumeReleaseInfo, 0, 0LL),
@@ -789,7 +789,7 @@ void __fastcall ServantCostumeControl__RefreshAlreadyGetInfo(ServantCostumeContr
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_3393, v4);
+    sub_B16FFC(&StringLiteral_3393/*"COSTUME_SELECT_SERVANT_MSG"*/, v4);
     byte_40FCEC5 = 1;
   }
   alreadyGetInfo = this->fields.alreadyGetInfo;
@@ -802,7 +802,7 @@ void __fastcall ServantCostumeControl__RefreshAlreadyGetInfo(ServantCostumeContr
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3393, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3393/*"COSTUME_SELECT_SERVANT_MSG"*/, 0LL);
   if ( !alreadyGetLabel )
     goto LABEL_26;
   UILabel__set_text(alreadyGetLabel, v7, 0LL);
@@ -1039,11 +1039,11 @@ void __fastcall ServantCostumeControl__RefreshEventCostumeInfo(ServantCostumeCon
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
     sub_B16FFC(&System_TimeSpan_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_12652, v19);
-    sub_B16FFC(&StringLiteral_3392, v20);
-    sub_B16FFC(&StringLiteral_3391, v21);
-    sub_B16FFC(&StringLiteral_23522, v22);
-    sub_B16FFC(&StringLiteral_5560, v23);
+    sub_B16FFC(&StringLiteral_12652/*"ServantCostumeEventBalloon_"*/, v19);
+    sub_B16FFC(&StringLiteral_3392/*"COSTUME_SELECT_SERVANT_EVENT_ITEM_COSTUME_MSG"*/, v20);
+    sub_B16FFC(&StringLiteral_3391/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, v21);
+    sub_B16FFC(&StringLiteral_23522/*"{0}/{1}/{2} {3:D2}:{4:D2}"*/, v22);
+    sub_B16FFC(&StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, v23);
     byte_40FCEC6 = 1;
   }
   dateData = 0LL;
@@ -1086,7 +1086,7 @@ void __fastcall ServantCostumeControl__RefreshEventCostumeInfo(ServantCostumeCon
     if ( !itemIds->max_length )
       goto LABEL_94;
     v39 = System_Int32__ToString((int)itemIds + 32, 0LL);
-    v40 = System_String__Concat_43743732((System_String_o *)StringLiteral_12652, v39, 0LL);
+    v40 = System_String__Concat_43743732((System_String_o *)StringLiteral_12652/*"ServantCostumeEventBalloon_"*/, v39, 0LL);
     Object_WarBoardWaitTimeSetting = (UnityEngine_Object_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                eventCombineCostumeBalloonData,
                                                                v40,
@@ -1388,7 +1388,7 @@ LABEL_94:
               v103,
               v104,
               v105);
-            v107 = System_String__Format_43822456((System_String_o *)StringLiteral_23522, v76, 0LL);
+            v107 = System_String__Format_43822456((System_String_o *)StringLiteral_23522/*"{0}/{1}/{2} {3:D2}:{4:D2}"*/, v76, 0LL);
             v108 = this->fields.alreadyGetLabel;
             v109 = (Il2CppObject *)v107;
             if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1396,8 +1396,8 @@ LABEL_94:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v110 = LocalizationManager__Get((System_String_o *)StringLiteral_3392, 0LL);
-            v111 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560, 0LL);
+            v110 = LocalizationManager__Get((System_String_o *)StringLiteral_3392/*"COSTUME_SELECT_SERVANT_EVENT_ITEM_COSTUME_MSG"*/, 0LL);
+            v111 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
             v112 = System_String__Format_43739268(v110, v111, v109, 0LL);
             if ( v108 )
             {
@@ -1464,8 +1464,8 @@ LABEL_94:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v122 = LocalizationManager__Get((System_String_o *)StringLiteral_3391, 0LL);
-    v123 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560, 0LL);
+    v122 = LocalizationManager__Get((System_String_o *)StringLiteral_3391/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, 0LL);
+    v123 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
     v124 = System_String__Format(v122, v123, 0LL);
     if ( !v121 )
       goto LABEL_119;
@@ -1729,7 +1729,7 @@ void __fastcall ServantCostumeControl__SetHaveQpInfo(ServantCostumeControl_o *th
 
   if ( (byte_40FCEBF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9236, method);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, method);
     byte_40FCEBF = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -1737,7 +1737,7 @@ void __fastcall ServantCostumeControl__SetHaveQpInfo(ServantCostumeControl_o *th
     || (this->fields.haveQpVal = SelfUserGame->fields.qp,
         p_haveQpVal = &this->fields.haveQpVal,
         v5 = *(UILabel_o **)(p_haveQpVal - 29),
-        v6 = System_Int32__ToString_38275808((int32_t)p_haveQpVal, (System_String_o *)StringLiteral_9236, 0LL),
+        v6 = System_Int32__ToString_38275808((int32_t)p_haveQpVal, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL),
         !v5) )
   {
     sub_B170D4();
@@ -1772,13 +1772,13 @@ void __fastcall ServantCostumeControl__SetStateInfoMsg(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&state);
     sub_B16FFC(&ServantCostumeControl_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_12163, v6);
-    sub_B16FFC(&StringLiteral_3384, v7);
-    sub_B16FFC(&StringLiteral_7254, v8);
-    sub_B16FFC(&StringLiteral_12161, v9);
-    sub_B16FFC(&StringLiteral_12162, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
-    sub_B16FFC(&StringLiteral_7249, v12);
+    sub_B16FFC(&StringLiteral_12163/*"SHORT_RELEASE_COND_MSG"*/, v6);
+    sub_B16FFC(&StringLiteral_3384/*"COSTUME_EXE_MSG"*/, v7);
+    sub_B16FFC(&StringLiteral_7254/*"INFO_MSG_SELECT_COSTUME"*/, v8);
+    sub_B16FFC(&StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/, v9);
+    sub_B16FFC(&StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
+    sub_B16FFC(&StringLiteral_7249/*"INFO_MSG_COSTUME_SELECT_BASE"*/, v12);
     byte_40FCEC2 = 1;
   }
   detailInfoLb = (UIWidget_o *)this->fields.detailInfoLb;
@@ -1799,10 +1799,10 @@ void __fastcall ServantCostumeControl__SetStateInfoMsg(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = &StringLiteral_7254;
+    v16 = &StringLiteral_7254/*"INFO_MSG_SELECT_COSTUME"*/;
     goto LABEL_23;
   }
-  v15 = (System_String_o *)StringLiteral_1;
+  v15 = (System_String_o *)StringLiteral_1/*""*/;
   if ( state != 2 )
   {
     if ( state )
@@ -1812,7 +1812,7 @@ void __fastcall ServantCostumeControl__SetStateInfoMsg(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = &StringLiteral_7249;
+    v16 = &StringLiteral_7249/*"INFO_MSG_COSTUME_SELECT_BASE"*/;
     goto LABEL_23;
   }
   if ( this->fields.isCanCombine )
@@ -1822,7 +1822,7 @@ void __fastcall ServantCostumeControl__SetStateInfoMsg(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = &StringLiteral_3384;
+    v16 = &StringLiteral_3384/*"COSTUME_EXE_MSG"*/;
 LABEL_23:
     v15 = LocalizationManager__Get((System_String_o *)*v16, 0LL);
     goto LABEL_24;
@@ -1840,7 +1840,7 @@ LABEL_43:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12162, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, 0LL);
   }
   if ( this->fields.isShortNeedItem || this->fields.isShortEventItem )
   {
@@ -1849,7 +1849,7 @@ LABEL_43:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12161, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/, 0LL);
   }
   if ( this->fields.isNotClearReleaseCond )
   {
@@ -1858,7 +1858,7 @@ LABEL_43:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = &StringLiteral_12163;
+    v16 = &StringLiteral_12163/*"SHORT_RELEASE_COND_MSG"*/;
     goto LABEL_23;
   }
 LABEL_24:
@@ -1997,7 +1997,7 @@ void __fastcall ServantCostumeControl__SetSvtCostumeCombineData(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_9236, v16);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v16);
     byte_40FCEC0 = 1;
   }
   v110 = 0LL;
@@ -2056,7 +2056,7 @@ void __fastcall ServantCostumeControl__SetSvtCostumeCombineData(
     p_spendQpLb = &this->fields.spendQpLb;
     spendQpLb = this->fields.spendQpLb;
     this->fields.spendQpVal = entity->fields.qp;
-    v38 = System_Int32__ToString_38275808((int)this + 256, (System_String_o *)StringLiteral_9236, 0LL);
+    v38 = System_Int32__ToString_38275808((int)this + 256, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
     if ( !spendQpLb )
       goto LABEL_116;
     UILabel__set_text(spendQpLb, v38, 0LL);

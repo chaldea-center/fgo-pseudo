@@ -189,7 +189,7 @@ void __fastcall CoinConfirmDialog__OnEnable(CoinConfirmDialog_o *this, const Met
   if ( (byte_40F9A08 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15423, v3);
+    sub_B16FFC(&StringLiteral_15423/*"Window/Objects/CancelButton"*/, v3);
     byte_40F9A08 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -198,7 +198,7 @@ void __fastcall CoinConfirmDialog__OnEnable(CoinConfirmDialog_o *this, const Met
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15423, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15423/*"Window/Objects/CancelButton"*/, 0LL);
 }
 
 
@@ -236,8 +236,8 @@ void __fastcall CoinConfirmDialog__Open(
     sub_B16FFC(&CoinRoomUtility_TypeInfo, selectedCoinDic);
     sub_B16FFC(&int_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_3121, v9);
-    sub_B16FFC(&StringLiteral_3122, v10);
+    sub_B16FFC(&StringLiteral_3121/*"COIN_ROOM_CONFIRM_DIALOG_DETAIL"*/, v9);
+    sub_B16FFC(&StringLiteral_3122/*"COIN_ROOM_CONFIRM_DIALOG_TITLE"*/, v10);
     byte_40F9A03 = 1;
   }
   if ( !this->fields.state )
@@ -262,11 +262,11 @@ void __fastcall CoinConfirmDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3122, 0LL);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3122/*"COIN_ROOM_CONFIRM_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_16;
     UILabel__set_text(titleLabel, v19, 0LL);
-    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_3121, 0LL);
+    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_3121/*"COIN_ROOM_CONFIRM_DIALOG_DETAIL"*/, 0LL);
     v21 = v20;
     if ( (BYTE3(CoinRoomUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CoinRoomUtility_TypeInfo->_2.cctor_finished )

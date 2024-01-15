@@ -228,9 +228,9 @@ System_String_o *__fastcall EventRaidDefeatedEffectInfo__ConvertToStringData(
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_int__List_int___get_Value__, v13);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__GetEnumerator__, v14);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_1223, v16);
-    sub_B16FFC(&StringLiteral_1260, v17);
-    sub_B16FFC(&StringLiteral_698, v18);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v16);
+    sub_B16FFC(&StringLiteral_1260/*";"*/, v17);
+    sub_B16FFC(&StringLiteral_698/*","*/, v18);
     byte_40FACC3 = 1;
   }
   key = 0;
@@ -255,7 +255,7 @@ System_String_o *__fastcall EventRaidDefeatedEffectInfo__ConvertToStringData(
     current = v34.fields.current;
     key = (int)v34.fields.current.fields.key;
     v23 = System_Int32__ToString((int32_t)&key, 0LL);
-    v24 = System_String__Concat_43743732(v23, (System_String_o *)StringLiteral_1223, 0LL);
+    v24 = System_String__Concat_43743732(v23, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
     if ( !v19 )
       sub_B170D4();
     System_Text_StringBuilder__Append_41914240(v19, v24, 0LL);
@@ -273,7 +273,7 @@ System_String_o *__fastcall EventRaidDefeatedEffectInfo__ConvertToStringData(
     {
       HIDWORD(v31) = v32.fields.current;
       if ( (v25 & 1) != 0 )
-        System_Text_StringBuilder__Append_41914240(v19, (System_String_o *)StringLiteral_698, 0LL);
+        System_Text_StringBuilder__Append_41914240(v19, (System_String_o *)StringLiteral_698/*","*/, 0LL);
       v26 = System_Int32__ToString((int32_t)&v31 + 4, 0LL);
       v25 = 1;
       System_Text_StringBuilder__Append_41914240(v19, v26, 0LL);
@@ -293,7 +293,7 @@ System_String_o *__fastcall EventRaidDefeatedEffectInfo__ConvertToStringData(
         LODWORD(v31) = v27;
       }
     }
-    System_Text_StringBuilder__Append_41914240(v19, (System_String_o *)StringLiteral_1260, 0LL);
+    System_Text_StringBuilder__Append_41914240(v19, (System_String_o *)StringLiteral_1260/*";"*/, 0LL);
   }
   *(_DWORD *)&v30[2 * v21 + 20] = 189;
   LODWORD(v31) = v31 + 1;

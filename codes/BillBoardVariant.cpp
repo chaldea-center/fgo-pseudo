@@ -10,12 +10,12 @@ void __fastcall BillBoardVariant___ctor(BillBoardVariant_o *this, const MethodIn
 
   if ( (byte_40F9089 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9089 = 1;
   }
   this->fields.enableRotationY = 1;
-  v9 = (System_Int32_array **)StringLiteral_1;
-  this->fields.searchCameraName = (struct System_String_o *)StringLiteral_1;
+  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.searchCameraName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.searchCameraName, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }

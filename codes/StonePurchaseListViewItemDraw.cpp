@@ -98,38 +98,38 @@ void __fastcall StonePurchaseListViewItemDraw__SetItem(
     sub_B16FFC(&int_TypeInfo, item);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_80, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FAEA6 = 1;
   }
   if ( !item || !mode )
     return;
   priceTitleTextLabel = this->fields.priceTitleTextLabel;
   if ( !priceTitleTextLabel
-    || (UILabel__set_text(priceTitleTextLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(priceTitleTextLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (countTextLabel = this->fields.countTextLabel) == 0LL) )
   {
 LABEL_54:
     sub_B170D4();
   }
-  UILabel__set_text(countTextLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(countTextLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( (byte_40FAEA2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40FAEA2 = 1;
   }
   bankShop = item->fields.bankShop;
   if ( bankShop )
     p_numDetail = &bankShop->fields.numDetail;
   else
-    p_numDetail = (System_String_o **)&StringLiteral_1;
+    p_numDetail = (System_String_o **)&StringLiteral_1/*""*/;
   v16 = *p_numDetail;
   IsNullOrEmpty = System_String__IsNullOrEmpty(*p_numDetail, 0LL);
   nameTextLabel = this->fields.nameTextLabel;
   v20 = IsNullOrEmpty;
   if ( (byte_40FAEA0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, v18);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v18);
     byte_40FAEA0 = 1;
   }
   v21 = item->fields.bankShop;
@@ -143,13 +143,13 @@ LABEL_54:
     if ( entity )
       p_name = &entity->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_18326;
+      p_name = (System_String_o **)&StringLiteral_18326/*"error"*/;
   }
   v24 = *p_name;
   CountText = StonePurchaseListViewItem__get_CountText(item, v18);
   if ( v20 )
   {
-    v26 = System_String__Concat_43746016(v24, (System_String_o *)StringLiteral_80, CountText, 0LL);
+    v26 = System_String__Concat_43746016(v24, (System_String_o *)StringLiteral_80/*" "*/, CountText, 0LL);
     if ( !nameTextLabel )
       goto LABEL_54;
   }
@@ -162,14 +162,14 @@ LABEL_54:
   UILabel__set_text(nameTextLabel, v26, 0LL);
   if ( (byte_40FAEA3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, v27);
+    sub_B16FFC(&StringLiteral_1/*""*/, v27);
     byte_40FAEA3 = 1;
   }
   v28 = item->fields.bankShop;
   if ( v28 )
     p_priceDetail = &v28->fields.priceDetail;
   else
-    p_priceDetail = (System_String_o **)&StringLiteral_1;
+    p_priceDetail = (System_String_o **)&StringLiteral_1/*""*/;
   v30 = *p_priceDetail;
   v31 = System_String__IsNullOrEmpty(*p_priceDetail, 0LL);
   v32 = item->fields.bankShop;
@@ -212,7 +212,7 @@ LABEL_33:
   if ( Price2Info )
     v38 = Price2Info;
   else
-    v38 = (System_String_o *)StringLiteral_1;
+    v38 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_43:
   UILabel__set_text(priceTextLabel, v38, 0LL);
   v41 = item->fields.entity;

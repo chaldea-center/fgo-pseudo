@@ -15,22 +15,22 @@ void __fastcall TitleInfoPersonalBossComponent___cctor(const MethodInfo *method)
   if ( (byte_40F8439 & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoPersonalBossComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_14406, v2);
-    sub_B16FFC(&StringLiteral_18528, v3);
-    sub_B16FFC(&StringLiteral_14405, v4);
+    sub_B16FFC(&StringLiteral_14406/*"TitleInfoEventSuperBossEffect_Dead"*/, v2);
+    sub_B16FFC(&StringLiteral_18528/*"event_superboss_icon_"*/, v3);
+    sub_B16FFC(&StringLiteral_14405/*"TitleInfoEventSuperBossEffect_Break"*/, v4);
     byte_40F8439 = 1;
   }
   static_fields = TitleInfoPersonalBossComponent_TypeInfo->static_fields;
-  v6 = StringLiteral_18528;
-  static_fields->SUPERBOSS_ICON_SPNAME_PREFIX = (struct System_String_o *)StringLiteral_18528;
+  v6 = StringLiteral_18528/*"event_superboss_icon_"*/;
+  static_fields->SUPERBOSS_ICON_SPNAME_PREFIX = (struct System_String_o *)StringLiteral_18528/*"event_superboss_icon_"*/;
   sub_B16F98(static_fields, v6);
   v7 = TitleInfoPersonalBossComponent_TypeInfo->static_fields;
-  v8 = StringLiteral_14406;
-  v7->SUPERBOSS_CLEAR_EFFECT_PREFAB = (struct System_String_o *)StringLiteral_14406;
+  v8 = StringLiteral_14406/*"TitleInfoEventSuperBossEffect_Dead"*/;
+  v7->SUPERBOSS_CLEAR_EFFECT_PREFAB = (struct System_String_o *)StringLiteral_14406/*"TitleInfoEventSuperBossEffect_Dead"*/;
   sub_B16F98(&v7->SUPERBOSS_CLEAR_EFFECT_PREFAB, v8);
   v9 = TitleInfoPersonalBossComponent_TypeInfo->static_fields;
-  v10 = StringLiteral_14405;
-  v9->SUPERBOSS_GAUGE_BREAK_EFFECT_PREFAB = (struct System_String_o *)StringLiteral_14405;
+  v10 = StringLiteral_14405/*"TitleInfoEventSuperBossEffect_Break"*/;
+  v9->SUPERBOSS_GAUGE_BREAK_EFFECT_PREFAB = (struct System_String_o *)StringLiteral_14405/*"TitleInfoEventSuperBossEffect_Break"*/;
   sub_B16F98(&v9->SUPERBOSS_GAUGE_BREAK_EFFECT_PREFAB, v10);
   v11 = TitleInfoPersonalBossComponent_TypeInfo;
   TitleInfoPersonalBossComponent_TypeInfo->static_fields->ANIM_DURATION_HP_CUT = 1.5;
@@ -55,15 +55,15 @@ void __fastcall TitleInfoPersonalBossComponent___ctor(TitleInfoPersonalBossCompo
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_List_UIAtlas__TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_16381, v4);
-    sub_B16FFC(&StringLiteral_16376, v5);
+    sub_B16FFC(&StringLiteral_16381/*"ar60"*/, v4);
+    sub_B16FFC(&StringLiteral_16376/*"ar210"*/, v5);
     byte_40F8438 = 1;
   }
-  v6 = StringLiteral_16381;
-  this->fields.breakHpDownSeName = (struct System_String_o *)StringLiteral_16381;
+  v6 = StringLiteral_16381/*"ar60"*/;
+  this->fields.breakHpDownSeName = (struct System_String_o *)StringLiteral_16381/*"ar60"*/;
   sub_B16F98(&this->fields.breakHpDownSeName, v6);
-  v7 = StringLiteral_16376;
-  *(_QWORD *)&this->fields.breakEffectStartWaitTime = StringLiteral_16376;
+  v7 = StringLiteral_16376/*"ar210"*/;
+  *(_QWORD *)&this->fields.breakEffectStartWaitTime = StringLiteral_16376/*"ar210"*/;
   sub_B16F98(&this->fields.breakEffectStartWaitTime, v7);
   this->fields.assetData = (struct AssetData_o *)0x3E99999A3F800000LL;
   v12 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -156,7 +156,7 @@ UnityEngine_GameObject_o *__fastcall TitleInfoPersonalBossComponent__GetClearBos
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, mapAssetData);
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&TitleInfoPersonalBossComponent_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_16151, v7);
+    sub_B16FFC(&StringLiteral_16151/*"_{0}{1:D2}"*/, v7);
     byte_40F842E = 1;
   }
   if ( !mapAssetData )
@@ -170,7 +170,7 @@ UnityEngine_GameObject_o *__fastcall TitleInfoPersonalBossComponent__GetClearBos
   }
   v9 = System_String__Concat_43743732(
          v8->static_fields->SUPERBOSS_CLEAR_EFFECT_PREFAB,
-         (System_String_o *)StringLiteral_16151,
+         (System_String_o *)StringLiteral_16151/*"_{0}{1:D2}"*/,
          0LL);
   eventSuperBossEntity = (int)this->fields.eventSuperBossEntity;
   v10 = j_il2cpp_value_box_0(int_TypeInfo, &eventSuperBossEntity);
@@ -371,12 +371,12 @@ System_String_o *__fastcall TitleInfoPersonalBossComponent__GetEventUIAssetDataP
   if ( (byte_40F8426 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6189, v3);
+    sub_B16FFC(&StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v3);
     byte_40F8426 = 1;
   }
   v6 = eventId;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
-  return System_String__Format((System_String_o *)StringLiteral_6189, v4, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v4, 0LL);
 }
 
 
@@ -420,7 +420,7 @@ UnityEngine_GameObject_o *__fastcall TitleInfoPersonalBossComponent__GetGaugeBre
   {
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, mapAssetData);
     sub_B16FFC(&TitleInfoPersonalBossComponent_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_15842, v6);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v6);
     byte_40F8430 = 1;
   }
   if ( !mapAssetData )
@@ -436,7 +436,7 @@ UnityEngine_GameObject_o *__fastcall TitleInfoPersonalBossComponent__GetGaugeBre
   v9 = System_Int32__ToString(v4 + 176, 0LL);
   v10 = System_String__Concat_43746016(
           SUPERBOSS_GAUGE_BREAK_EFFECT_PREFAB,
-          (System_String_o *)StringLiteral_15842,
+          (System_String_o *)StringLiteral_15842/*"_"*/,
           v9,
           0LL);
   return (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
@@ -650,8 +650,8 @@ void __fastcall TitleInfoPersonalBossComponent__LoadLocalAtlas(
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Add__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_23407, v9);
-    sub_B16FFC(&StringLiteral_5361, v10);
+    sub_B16FFC(&StringLiteral_23407/*"{0:D2}"*/, v9);
+    sub_B16FFC(&StringLiteral_5361/*"DownloadEventUIAtlas{0}{1}"*/, v10);
     byte_40F8428 = 1;
   }
   if ( this->fields.atlasList )
@@ -667,10 +667,10 @@ LABEL_18:
     {
       v22 = i;
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
-      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407, v15, 0LL);
+      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407/*"{0:D2}"*/, v15, 0LL);
       v21 = eventId;
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
-      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_5361, v17, v16, 0LL);
+      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_5361/*"DownloadEventUIAtlas{0}{1}"*/, v17, v16, 0LL);
       GameObjectFromEventUIAssetData = (UnityEngine_Object_o *)TitleInfoPersonalBossComponent__GetGameObjectFromEventUIAssetData(
                                                                  this,
                                                                  v18,
@@ -1326,11 +1326,11 @@ void __fastcall TitleInfoPersonalBossComponent__SetDisp(
     sub_B16FFC(&Method_DataManager_GetMaster_EventSuperBossMaster___, v5);
     sub_B16FFC(&DataManager_TypeInfo, v6);
     sub_B16FFC(&TitleInfoPersonalBossComponent_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_18527, v8);
-    sub_B16FFC(&StringLiteral_18481, v9);
-    sub_B16FFC(&StringLiteral_18522, v10);
-    sub_B16FFC(&StringLiteral_18482, v11);
-    sub_B16FFC(&StringLiteral_18526, v12);
+    sub_B16FFC(&StringLiteral_18527/*"event_superboss_hp_white"*/, v8);
+    sub_B16FFC(&StringLiteral_18481/*"event_raid_hp_back"*/, v9);
+    sub_B16FFC(&StringLiteral_18522/*"event_superboss_hp_lower_"*/, v10);
+    sub_B16FFC(&StringLiteral_18482/*"event_raid_hp_frame"*/, v11);
+    sub_B16FFC(&StringLiteral_18526/*"event_superboss_hp_upper_"*/, v12);
     byte_40F8424 = 1;
   }
   v112 = 0LL;
@@ -1659,26 +1659,26 @@ LABEL_101:
   TitleInfoPersonalBossComponent__SetupBreakGauge(v82, clearBossEffect, v83, v80);
   hpBarUpperSprite = this->fields.hpBarUpperSprite;
   v100 = System_Int32__ToString((int32_t)&v113 + 4, 0LL);
-  v101 = System_String__Concat_43743732((System_String_o *)StringLiteral_18522, v100, 0LL);
+  v101 = System_String__Concat_43743732((System_String_o *)StringLiteral_18522/*"event_superboss_hp_lower_"*/, v100, 0LL);
   TitleInfoPersonalBossComponent__SetSpriteByLocalAtlas(this, hpBarUpperSprite, v101, v102);
   hpBarWhiteSprite = this->fields.hpBarWhiteSprite;
   v104 = System_Int32__ToString((int32_t)&v113, 0LL);
-  v105 = System_String__Concat_43743732((System_String_o *)StringLiteral_18526, v104, 0LL);
+  v105 = System_String__Concat_43743732((System_String_o *)StringLiteral_18526/*"event_superboss_hp_upper_"*/, v104, 0LL);
   TitleInfoPersonalBossComponent__SetSpriteByLocalAtlas(this, hpBarWhiteSprite, v105, v106);
   TitleInfoPersonalBossComponent__SetSpriteByLocalAtlas(
     this,
     (UISprite_o *)this->fields.breakIconList,
-    (System_String_o *)StringLiteral_18527,
+    (System_String_o *)StringLiteral_18527/*"event_superboss_hp_white"*/,
     v107);
   TitleInfoPersonalBossComponent__SetSpriteByLocalAtlas(
     this,
     this->fields.bossHpBg,
-    (System_String_o *)StringLiteral_18482,
+    (System_String_o *)StringLiteral_18482/*"event_raid_hp_frame"*/,
     v108);
   TitleInfoPersonalBossComponent__SetSpriteByLocalAtlas(
     this,
     (UISprite_o *)this->fields.hpBarSlider,
-    (System_String_o *)StringLiteral_18481,
+    (System_String_o *)StringLiteral_18481/*"event_raid_hp_back"*/,
     v109);
 }
 
@@ -1787,7 +1787,7 @@ void __fastcall TitleInfoPersonalBossComponent__SetTotalHpText(
   {
     sub_B16FFC(&long_TypeInfo, hp);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_3268, v6);
+    sub_B16FFC(&StringLiteral_3268/*"COMMON_NUM_FORMAT"*/, v6);
     byte_40F8434 = 1;
   }
   hpBarUnderSprite = (UILabel_o *)this->fields.hpBarUnderSprite;
@@ -1796,7 +1796,7 @@ void __fastcall TitleInfoPersonalBossComponent__SetTotalHpText(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3268, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3268/*"COMMON_NUM_FORMAT"*/, 0LL);
   v11 = hp;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v11);
   v10 = System_String__Format(v8, v9, 0LL);
@@ -1944,9 +1944,9 @@ void __fastcall TitleInfoPersonalBossComponent__SetupBreakGauge(
   v7 = this;
   if ( (byte_40F8425 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18519, *(_QWORD *)&maxCount);
-    sub_B16FFC(&StringLiteral_18520, v8);
-    this = (TitleInfoPersonalBossComponent_o *)sub_B16FFC(&StringLiteral_18518, v9);
+    sub_B16FFC(&StringLiteral_18519/*"event_superboss_hp_icon_0"*/, *(_QWORD *)&maxCount);
+    sub_B16FFC(&StringLiteral_18520/*"event_superboss_hp_icon_11"*/, v8);
+    this = (TitleInfoPersonalBossComponent_o *)sub_B16FFC(&StringLiteral_18518/*"event_superboss_hp_icon_"*/, v9);
     byte_40F8425 = 1;
   }
   v31 = 0;
@@ -1962,7 +1962,7 @@ LABEL_33:
       TitleInfoPersonalBossComponent__SetSpriteByLocalAtlas(
         v7,
         (UISprite_o *)v7->fields.bossName,
-        (System_String_o *)StringLiteral_18520,
+        (System_String_o *)StringLiteral_18520/*"event_superboss_hp_icon_11"*/,
         method);
       bossName = v7->fields.bossName;
       if ( bossName )
@@ -2001,7 +2001,7 @@ LABEL_36:
         if ( (unsigned int)v16 >= LODWORD(v24->fields.leftAnchor) )
           goto LABEL_37;
         v23 = (UISprite_o *)*((_QWORD *)&v24->fields.rightAnchor + v16);
-        v21 = (System_String_o *)StringLiteral_18519;
+        v21 = (System_String_o *)StringLiteral_18519/*"event_superboss_hp_icon_0"*/;
         v22 = v7;
         goto LABEL_24;
       }
@@ -2021,7 +2021,7 @@ LABEL_28:
     v19 = (UISprite_o *)*((_QWORD *)&v18->fields.rightAnchor + v16);
     v31 = v14;
     v20 = System_Int32__ToString((int32_t)&v31, 0LL);
-    v21 = System_String__Concat_43743732((System_String_o *)StringLiteral_18518, v20, 0LL);
+    v21 = System_String__Concat_43743732((System_String_o *)StringLiteral_18518/*"event_superboss_hp_icon_"*/, v20, 0LL);
     v22 = v7;
     v23 = v19;
 LABEL_24:
@@ -2072,7 +2072,7 @@ LABEL_31:
   TitleInfoPersonalBossComponent__SetSpriteByLocalAtlas(
     v7,
     (UISprite_o *)v7->fields.bossName,
-    (System_String_o *)StringLiteral_18520,
+    (System_String_o *)StringLiteral_18520/*"event_superboss_hp_icon_11"*/,
     method);
   v28 = v7->fields.bossName;
   if ( !v28 )

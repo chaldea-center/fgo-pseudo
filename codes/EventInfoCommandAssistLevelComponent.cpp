@@ -23,17 +23,17 @@ void __fastcall EventInfoCommandAssistLevelComponent___cctor(const MethodInfo *m
   if ( (byte_40FA0E6 & 1) == 0 )
   {
     sub_B16FFC(&EventInfoCommandAssistLevelComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16531, v8);
-    sub_B16FFC(&StringLiteral_15732, v9);
+    sub_B16FFC(&StringLiteral_16531/*"badge_lock"*/, v8);
+    sub_B16FFC(&StringLiteral_15732/*"[ffff00]"*/, v9);
     byte_40FA0E6 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventInfoCommandAssistLevelComponent_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_16531;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16531;
+  v11 = (System_Int32_array **)StringLiteral_16531/*"badge_lock"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16531/*"badge_lock"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = EventInfoCommandAssistLevelComponent_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_15732;
-  v12->MAX_LEVEL_TEXT_COLOR = (struct System_String_o *)StringLiteral_15732;
+  v13 = (System_Int32_array **)StringLiteral_15732/*"[ffff00]"*/;
+  v12->MAX_LEVEL_TEXT_COLOR = (struct System_String_o *)StringLiteral_15732/*"[ffff00]"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->MAX_LEVEL_TEXT_COLOR, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -209,8 +209,8 @@ void __fastcall EventInfoCommandAssistLevelComponent__SetupLevel(
   {
     sub_B16FFC(&EventInfoCommandAssistLevelComponent_TypeInfo, *(_QWORD *)&level);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8348, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_8348/*"LEVEL_INFO"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FA0E4 = 1;
   }
   if ( level < 1 )
@@ -218,7 +218,7 @@ void __fastcall EventInfoCommandAssistLevelComponent__SetupLevel(
     levelLabel = this->fields.levelLabel;
     if ( levelLabel )
     {
-      UILabel__set_text(levelLabel, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(levelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       return;
     }
 LABEL_17:
@@ -226,7 +226,7 @@ LABEL_17:
   }
   if ( level < 10 )
   {
-    p_MAX_LEVEL_TEXT_COLOR = (System_String_o **)&StringLiteral_1;
+    p_MAX_LEVEL_TEXT_COLOR = (System_String_o **)&StringLiteral_1/*""*/;
   }
   else
   {
@@ -246,7 +246,7 @@ LABEL_17:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_8348, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LEVEL_INFO"*/, 0LL);
   v14 = System_Int32__ToString((int32_t)&v17, 0LL);
   v15 = (Il2CppObject *)System_String__Concat_43743732(v11, v14, 0LL);
   v16 = System_String__Format(v13, v15, 0LL);

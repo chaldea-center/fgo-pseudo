@@ -7,12 +7,12 @@ void __fastcall NpcBackStepBattleLogicTask___ctor(
 {
   if ( (byte_40F93A8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9335, *(_QWORD *)&targetId);
+    sub_B16FFC(&StringLiteral_9335/*"NPC_BACKSTEP"*/, *(_QWORD *)&targetId);
     byte_40F93A8 = 1;
   }
   PlayFieldMotionNpcBattleLogicTask___ctor(
     (PlayFieldMotionNpcBattleLogicTask_o *)this,
-    (System_String_o *)StringLiteral_9335,
+    (System_String_o *)StringLiteral_9335/*"NPC_BACKSTEP"*/,
     targetId,
     isForcedSpeedOne,
     0LL);

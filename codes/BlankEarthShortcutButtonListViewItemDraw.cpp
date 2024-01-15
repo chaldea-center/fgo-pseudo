@@ -178,10 +178,10 @@ void __fastcall BlankEarthShortcutButtonListViewItemDraw__SetItem(
     sub_B16FFC(&System_Collections_Generic_List_GameObject__TypeInfo, v18);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v19);
     sub_B16FFC(&UICommonButtonColor_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_26, v21);
-    sub_B16FFC(&StringLiteral_68, v22);
-    sub_B16FFC(&StringLiteral_16949, v23);
-    sub_B16FFC(&StringLiteral_18462, v24);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v21);
+    sub_B16FFC(&StringLiteral_68/*"\r\n"*/, v22);
+    sub_B16FFC(&StringLiteral_16949/*"btn_shortcut"*/, v23);
+    sub_B16FFC(&StringLiteral_18462/*"event_logo_shortcut_"*/, v24);
     byte_40F90E8 = 1;
   }
   IconId_k__BackingField = 0;
@@ -219,7 +219,7 @@ void __fastcall BlankEarthShortcutButtonListViewItemDraw__SetItem(
   UISprite__set_atlas(bgSprite, item->fields._CommonUiAtlas_k__BackingField, 0LL);
   if ( !*p_bgSprite )
     goto LABEL_63;
-  UISprite__set_spriteName(*p_bgSprite, (System_String_o *)StringLiteral_16949, 0LL);
+  UISprite__set_spriteName(*p_bgSprite, (System_String_o *)StringLiteral_16949/*"btn_shortcut"*/, 0LL);
   if ( !*p_bgSprite )
     goto LABEL_63;
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))(*p_bgSprite)->klass->vtable._33_MakePixelPerfect.method)(
@@ -334,15 +334,15 @@ void __fastcall BlankEarthShortcutButtonListViewItemDraw__SetItem(
   Name_k__BackingField = item->fields._Name_k__BackingField;
   if ( !Name_k__BackingField )
     goto LABEL_63;
-  if ( System_String__Contains(Name_k__BackingField, (System_String_o *)StringLiteral_26, 0LL) )
+  if ( System_String__Contains(Name_k__BackingField, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL) )
   {
     v78 = item->fields._Name_k__BackingField;
     if ( !v78 )
       goto LABEL_63;
     v79 = System_String__Replace_43750968(
             v78,
-            (System_String_o *)StringLiteral_68,
-            (System_String_o *)StringLiteral_26,
+            (System_String_o *)StringLiteral_68/*"\r\n"*/,
+            (System_String_o *)StringLiteral_26/*"\n"*/,
             0LL);
     v81 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v80);
     if ( !v81 )
@@ -427,7 +427,7 @@ void __fastcall BlankEarthShortcutButtonListViewItemDraw__SetItem(
   UILabel__SetCondensedScale(v89, v90->static_fields->NAME_LABEL_MAX_WIDTH, 0LL);
   IconId_k__BackingField = item->fields._IconId_k__BackingField;
   v94 = System_Int32__ToString((int32_t)&IconId_k__BackingField, 0LL);
-  v95 = System_String__Concat_43743732((System_String_o *)StringLiteral_18462, v94, 0LL);
+  v95 = System_String__Concat_43743732((System_String_o *)StringLiteral_18462/*"event_logo_shortcut_"*/, v94, 0LL);
   IconAtlas_k__BackingField = (UnityEngine_Object_o *)item->fields._IconAtlas_k__BackingField;
   v97 = v95;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

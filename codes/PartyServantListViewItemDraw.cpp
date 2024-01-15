@@ -174,7 +174,7 @@ void __fastcall PartyServantListViewItemDraw__ClearMessage(
 
   if ( (byte_40FDE35 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FDE35 = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
@@ -187,20 +187,20 @@ void __fastcall PartyServantListViewItemDraw__ClearMessage(
   maskMessageLabel = this->fields.maskMessageLabel;
   if ( !maskMessageLabel )
     goto LABEL_13;
-  UILabel__set_text(maskMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(maskMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   maskFatigureMessageLabel = this->fields.maskFatigureMessageLabel;
   if ( !maskFatigureMessageLabel )
     goto LABEL_13;
-  UILabel__set_text(maskFatigureMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(maskFatigureMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   maskFatigureMessageLabelTime = this->fields.maskFatigureMessageLabelTime;
   if ( !maskFatigureMessageLabelTime )
     goto LABEL_13;
-  UILabel__set_text(maskFatigureMessageLabelTime, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(maskFatigureMessageLabelTime, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   warningBase = this->fields.warningBase;
   if ( !warningBase
     || (UnityEngine_GameObject__SetActive(warningBase, 0, 0LL), (warningIcon = this->fields.warningIcon) == 0LL)
     || (FlashingIconComponent__Clear(warningIcon, 0LL), (warningMessageLabel = this->fields.warningMessageLabel) == 0LL)
-    || (UILabel__set_text(warningMessageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(warningMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL) )
   {
 LABEL_13:
@@ -449,12 +449,12 @@ void __fastcall PartyServantListViewItemDraw__SetFatigueMask(
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_UIWidget__Add__, item);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11596, v6);
-    sub_B16FFC(&StringLiteral_19412, v7);
-    sub_B16FFC(&StringLiteral_11602, v8);
-    sub_B16FFC(&StringLiteral_11598, v9);
-    sub_B16FFC(&StringLiteral_349, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_11596/*"SELECT_NO_SORTIE_FATIGURE"*/, v6);
+    sub_B16FFC(&StringLiteral_19412/*"img_frames_mask04"*/, v7);
+    sub_B16FFC(&StringLiteral_11602/*"SELECT_NO_SORTIE_TITLE"*/, v8);
+    sub_B16FFC(&StringLiteral_11598/*"SELECT_NO_SORTIE_FATIGURE_RECOVER"*/, v9);
+    sub_B16FFC(&StringLiteral_349/*"#042484"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FDE39 = 1;
   }
   *(_QWORD *)&value.fields.r = 0LL;
@@ -485,8 +485,8 @@ void __fastcall PartyServantListViewItemDraw__SetFatigueMask(
   v18 = this->fields.maskSprite;
   if ( !v18 )
     goto LABEL_39;
-  UISprite__set_spriteName(v18, (System_String_o *)StringLiteral_19412, 0LL);
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_349, &value, 0LL);
+  UISprite__set_spriteName(v18, (System_String_o *)StringLiteral_19412/*"img_frames_mask04"*/, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_349/*"#042484"*/, &value, 0LL);
   value.fields.a = 0.69804;
   v19 = (UIWidget_o *)this->fields.maskSprite;
   if ( !v19 )
@@ -507,26 +507,26 @@ void __fastcall PartyServantListViewItemDraw__SetFatigueMask(
   warningMessageLabel = this->fields.warningMessageLabel;
   if ( !warningMessageLabel )
     goto LABEL_39;
-  UILabel__set_text(warningMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(warningMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   maskMessageLabel = this->fields.maskMessageLabel;
   if ( !maskMessageLabel )
     goto LABEL_39;
-  UILabel__set_text(maskMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(maskMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   maskFatigureMessageLabel = this->fields.maskFatigureMessageLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_11602, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_11602/*"SELECT_NO_SORTIE_TITLE"*/, 0LL);
   if ( !maskFatigureMessageLabel )
     goto LABEL_39;
   UILabel__set_text(maskFatigureMessageLabel, v25, 0LL);
   maskFatigureMessageLabelTime = this->fields.maskFatigureMessageLabelTime;
   if ( item->fields.isFatigureRecover )
-    v27 = (System_String_o **)&StringLiteral_11598;
+    v27 = (System_String_o **)&StringLiteral_11598/*"SELECT_NO_SORTIE_FATIGURE_RECOVER"*/;
   else
-    v27 = (System_String_o **)&StringLiteral_11596;
+    v27 = (System_String_o **)&StringLiteral_11596/*"SELECT_NO_SORTIE_FATIGURE"*/;
   v28 = *v27;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -823,10 +823,10 @@ void __fastcall PartyServantListViewItemDraw__SetItem(
     sub_B16FFC(&System_Math_TypeInfo, v12);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
     sub_B16FFC(&PartyServantListViewItemDraw_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_15297, v15);
-    sub_B16FFC(&StringLiteral_10355, v16);
-    sub_B16FFC(&StringLiteral_18856, v17);
-    sub_B16FFC(&StringLiteral_10356, v18);
+    sub_B16FFC(&StringLiteral_15297/*"WAVE_BATTLE_SERVANT_WAVE"*/, v15);
+    sub_B16FFC(&StringLiteral_10355/*"PARTY_ORGANIZATION_SERVANT_POINT_INFO"*/, v16);
+    sub_B16FFC(&StringLiteral_18856/*"func_group_icon_1028"*/, v17);
+    sub_B16FFC(&StringLiteral_10356/*"PARTY_ORGANIZATION_SERVANT_POINT_RANK_"*/, v18);
     byte_40FDE31 = 1;
   }
   SvtPointRank_k__BackingField = 0;
@@ -971,7 +971,7 @@ void __fastcall PartyServantListViewItemDraw__SetItem(
                   0LL);
                 SvtPointRank_k__BackingField = item->fields._SvtPointRank_k__BackingField;
                 v45 = System_Int32__ToString((int32_t)&SvtPointRank_k__BackingField, 0LL);
-                v46 = System_String__Concat_43743732((System_String_o *)StringLiteral_10356, v45, 0LL);
+                v46 = System_String__Concat_43743732((System_String_o *)StringLiteral_10356/*"PARTY_ORGANIZATION_SERVANT_POINT_RANK_"*/, v45, 0LL);
                 if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                   && !LocalizationManager_TypeInfo->_2.cctor_finished )
                 {
@@ -980,7 +980,7 @@ void __fastcall PartyServantListViewItemDraw__SetItem(
                 v47 = LocalizationManager__Get(v46, 0LL);
                 v48 = this->fields.svtPointInfoLabel;
                 v49 = (Il2CppObject *)v47;
-                v50 = LocalizationManager__Get((System_String_o *)StringLiteral_10355, 0LL);
+                v50 = LocalizationManager__Get((System_String_o *)StringLiteral_10355/*"PARTY_ORGANIZATION_SERVANT_POINT_INFO"*/, 0LL);
                 SvtPoint_k__BackingField = item->fields._SvtPoint_k__BackingField;
                 v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &SvtPoint_k__BackingField);
                 v52 = System_String__Format_43739268(v50, v49, v51, 0LL);
@@ -1061,7 +1061,7 @@ void __fastcall PartyServantListViewItemDraw__SetItem(
                 {
                   j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
                 }
-                AtlasManager__SetEventUI(svtPointIconSprite, (System_String_o *)StringLiteral_18856, 0LL);
+                AtlasManager__SetEventUI(svtPointIconSprite, (System_String_o *)StringLiteral_18856/*"func_group_icon_1028"*/, 0LL);
               }
               v79 = this->fields.switchInfoList;
               if ( v79 )
@@ -1088,7 +1088,7 @@ void __fastcall PartyServantListViewItemDraw__SetItem(
                       {
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                       }
-                      v85 = LocalizationManager__Get((System_String_o *)StringLiteral_15297, 0LL);
+                      v85 = LocalizationManager__Get((System_String_o *)StringLiteral_15297/*"WAVE_BATTLE_SERVANT_WAVE"*/, 0LL);
                       SvtPoint_k__BackingField = item->fields._OrganizedWave_k__BackingField;
                       v86 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &SvtPoint_k__BackingField);
                       MaxWave_k__BackingField = item->fields._MaxWave_k__BackingField;
@@ -1185,8 +1185,8 @@ void __fastcall PartyServantListViewItemDraw__SetMaskMessage(
     sub_B16FFC(&AtlasManager_TypeInfo, message);
     sub_B16FFC(&Method_System_Collections_Generic_List_UIWidget__Add__, v11);
     sub_B16FFC(&PartyServantListViewItemDraw_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_19409, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_19409/*"img_frames_mask01"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FDE36 = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
@@ -1205,7 +1205,7 @@ void __fastcall PartyServantListViewItemDraw__SetMaskMessage(
       v26 = this->fields.maskSprite;
       if ( v26 )
       {
-        v27 = maskName ? maskName : (System_String_o *)StringLiteral_19409;
+        v27 = maskName ? maskName : (System_String_o *)StringLiteral_19409/*"img_frames_mask01"*/;
         UISprite__set_spriteName(v26, v27, 0LL);
         v32 = (UIWidget_o *)this->fields.maskSprite;
         if ( maskName )
@@ -1275,15 +1275,15 @@ LABEL_26:
   warningMessageLabel = this->fields.warningMessageLabel;
   if ( !warningMessageLabel )
     goto LABEL_42;
-  UILabel__set_text(warningMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(warningMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   maskFatigureMessageLabel = this->fields.maskFatigureMessageLabel;
   if ( !maskFatigureMessageLabel )
     goto LABEL_42;
-  UILabel__set_text(maskFatigureMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(maskFatigureMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   maskFatigureMessageLabelTime = this->fields.maskFatigureMessageLabelTime;
   if ( !maskFatigureMessageLabelTime )
     goto LABEL_42;
-  UILabel__set_text(maskFatigureMessageLabelTime, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(maskFatigureMessageLabelTime, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   maskMessageLabel = this->fields.maskMessageLabel;
   if ( !maskMessageLabel )
     goto LABEL_42;
@@ -1368,10 +1368,10 @@ bool __fastcall PartyServantListViewItemDraw__SetMessageLabel(
     sub_B16FFC(&Method_System_Collections_Generic_List_UIWidget__ToArray__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_UIWidget__get_Count__, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_11584, v9);
-    sub_B16FFC(&StringLiteral_11607, v10);
-    sub_B16FFC(&StringLiteral_11583, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v9);
+    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v10);
+    sub_B16FFC(&StringLiteral_11583/*"SELECT_BONUS_SKILL_INVALID"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FDE32 = 1;
   }
   messageLabelList = this->fields.messageLabelList;
@@ -1418,7 +1418,7 @@ bool __fastcall PartyServantListViewItemDraw__SetMessageLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11583, 0LL);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11583/*"SELECT_BONUS_SKILL_INVALID"*/, 0LL);
     if ( !v18 )
       goto LABEL_43;
     UILabel__set_text(v18, v19, 0LL);
@@ -1434,7 +1434,7 @@ bool __fastcall PartyServantListViewItemDraw__SetMessageLabel(
   {
     if ( !v18 )
       goto LABEL_43;
-    UILabel__set_text(this->fields.skillInvalidLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(this->fields.skillInvalidLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   if ( item->fields.isEnabled )
   {
@@ -1460,7 +1460,7 @@ bool __fastcall PartyServantListViewItemDraw__SetMessageLabel(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v23 = &StringLiteral_11607;
+      v23 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
     }
     else
     {
@@ -1469,7 +1469,7 @@ bool __fastcall PartyServantListViewItemDraw__SetMessageLabel(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v23 = &StringLiteral_11584;
+      v23 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
     }
     v25 = LocalizationManager__Get((System_String_o *)*v23, 0LL);
     PartyServantListViewItemDraw__SetMaskMessage(this, v25, 0, 0LL, 0, v26);
@@ -1545,15 +1545,15 @@ bool __fastcall PartyServantListViewItemDraw__SetRestrictionMask(
   {
     sub_B16FFC(&int_TypeInfo, item);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_10331, v7);
-    sub_B16FFC(&StringLiteral_11601, v8);
-    sub_B16FFC(&StringLiteral_11595, v9);
-    sub_B16FFC(&StringLiteral_10330, v10);
-    sub_B16FFC(&StringLiteral_6375, v11);
-    sub_B16FFC(&StringLiteral_11594, v12);
-    sub_B16FFC(&StringLiteral_17815, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
-    sub_B16FFC(&StringLiteral_10376, v15);
+    sub_B16FFC(&StringLiteral_10331/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING2"*/, v7);
+    sub_B16FFC(&StringLiteral_11601/*"SELECT_NO_SORTIE_TIMES_TO_RESTART"*/, v8);
+    sub_B16FFC(&StringLiteral_11595/*"SELECT_NO_SORTIE_ALLOUT_BATTLE"*/, v9);
+    sub_B16FFC(&StringLiteral_10330/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, v10);
+    sub_B16FFC(&StringLiteral_6375/*"FOLLOWER_SELECT_QUEST_RESTRICTION_WARNING2"*/, v11);
+    sub_B16FFC(&StringLiteral_11594/*"SELECT_NO_SORTIE"*/, v12);
+    sub_B16FFC(&StringLiteral_17815/*"datalost_svt_select"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
+    sub_B16FFC(&StringLiteral_10376/*"PARTY_ORGANIZATION_SERVANT_SAME_SERVANT"*/, v15);
     byte_40FDE33 = 1;
   }
   if ( !item )
@@ -1567,7 +1567,7 @@ bool __fastcall PartyServantListViewItemDraw__SetRestrictionMask(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_10330, 0LL);
+      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_10330/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0LL);
       v21 = 1;
       v22 = this;
       v23 = 0LL;
@@ -1583,7 +1583,7 @@ bool __fastcall PartyServantListViewItemDraw__SetRestrictionMask(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v25 = &StringLiteral_10331;
+        v25 = &StringLiteral_10331/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING2"*/;
 LABEL_25:
         v26 = LocalizationManager__Get((System_String_o *)*v25, 0LL);
         v19 = 1;
@@ -1609,7 +1609,7 @@ LABEL_25:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11601, 0LL);
+          v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11601/*"SELECT_NO_SORTIE_TIMES_TO_RESTART"*/, 0LL);
           v30 = &TimesToRestart_k__BackingField;
           TimesToRestart_k__BackingField = item->fields._TimesToRestart_k__BackingField;
 LABEL_72:
@@ -1635,7 +1635,7 @@ LABEL_72:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11601, 0LL);
+        v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11601/*"SELECT_NO_SORTIE_TIMES_TO_RESTART"*/, 0LL);
         v30 = &v32;
         v32 = item->fields._TimesToRestart_k__BackingField;
         goto LABEL_72;
@@ -1647,7 +1647,7 @@ LABEL_72:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v16 = &StringLiteral_10376;
+        v16 = &StringLiteral_10376/*"PARTY_ORGANIZATION_SERVANT_SAME_SERVANT"*/;
         goto LABEL_9;
       }
       if ( (item->fields.commonRestrictionId & 0x80000000) == 0 )
@@ -1662,7 +1662,7 @@ LABEL_72:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v25 = &StringLiteral_6375;
+        v25 = &StringLiteral_6375/*"FOLLOWER_SELECT_QUEST_RESTRICTION_WARNING2"*/;
         goto LABEL_25;
       }
       if ( (item->fields.fatigureTime & 0x8000000000000000LL) == 0 )
@@ -1679,7 +1679,7 @@ LABEL_51:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v16 = &StringLiteral_11595;
+        v16 = &StringLiteral_11595/*"SELECT_NO_SORTIE_ALLOUT_BATTLE"*/;
         goto LABEL_9;
       }
 LABEL_75:
@@ -1688,8 +1688,8 @@ LABEL_75:
     }
     v24 = 1;
     v22 = this;
-    v20 = (System_String_o *)StringLiteral_1;
-    v23 = (System_String_o *)StringLiteral_17815;
+    v20 = (System_String_o *)StringLiteral_1/*""*/;
+    v23 = (System_String_o *)StringLiteral_17815/*"datalost_svt_select"*/;
     v21 = 0;
 LABEL_17:
     v19 = 1;
@@ -1701,7 +1701,7 @@ LABEL_17:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = &StringLiteral_11594;
+  v16 = &StringLiteral_11594/*"SELECT_NO_SORTIE"*/;
 LABEL_9:
   RestrictionMessage = LocalizationManager__Get((System_String_o *)*v16, 0LL);
 LABEL_10:
@@ -1741,7 +1741,7 @@ void __fastcall PartyServantListViewItemDraw__SetWarningMessage(
   if ( (byte_40FDE37 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_UIWidget__Add__, message);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FDE37 = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
@@ -1754,15 +1754,15 @@ void __fastcall PartyServantListViewItemDraw__SetWarningMessage(
   maskMessageLabel = this->fields.maskMessageLabel;
   if ( !maskMessageLabel )
     goto LABEL_21;
-  UILabel__set_text(maskMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(maskMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   maskFatigureMessageLabel = this->fields.maskFatigureMessageLabel;
   if ( !maskFatigureMessageLabel )
     goto LABEL_21;
-  UILabel__set_text(maskFatigureMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(maskFatigureMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   maskFatigureMessageLabelTime = this->fields.maskFatigureMessageLabelTime;
   if ( !maskFatigureMessageLabelTime )
     goto LABEL_21;
-  UILabel__set_text(maskFatigureMessageLabelTime, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(maskFatigureMessageLabelTime, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   warningBase = this->fields.warningBase;
   if ( !warningBase
     || (UnityEngine_GameObject__SetActive(warningBase, 1, 0LL), (warningIcon = this->fields.warningIcon) == 0LL)

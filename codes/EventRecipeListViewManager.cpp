@@ -94,7 +94,7 @@ void __fastcall EventRecipeListViewManager__CreateList(
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewItem__Add__, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B16FFC(&StringLiteral_5692, v11);
+    sub_B16FFC(&StringLiteral_5692/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/, v11);
     byte_40F610F = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
@@ -155,7 +155,7 @@ LABEL_12:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_5692, 0LL);
+    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_5692/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/, 0LL);
     if ( !emptyMessageLabel )
       goto LABEL_18;
     UILabel__set_text(emptyMessageLabel, v32, 0LL);
@@ -270,9 +270,9 @@ void __fastcall EventRecipeListViewManager__CreateRecipeResponse(
     sub_B16FFC(&Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__0__, v17);
     sub_B16FFC(&Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__1__, v18);
     sub_B16FFC(&EventRecipeListViewManager___c__DisplayClass33_0_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_20980, v20);
-    sub_B16FFC(&StringLiteral_15571, v21);
-    sub_B16FFC(&StringLiteral_15807, v22);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v20);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v21);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v22);
     byte_40F6116 = 1;
   }
   v23 = sub_B170CC(EventRecipeListViewManager___c__DisplayClass33_0_TypeInfo, result, method, v3, v4);
@@ -283,7 +283,7 @@ void __fastcall EventRecipeListViewManager__CreateRecipeResponse(
     goto LABEL_28;
   *(_QWORD *)(v23 + 16) = this;
   sub_B16F98((BattleServantConfConponent_o *)(v23 + 16), (System_Int32_array **)this, v24, v25, v26, v27, v28, v29);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     return;
   eventRecipeEntities = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.eventRecipeEntities;
   v35 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B170CC(
@@ -317,9 +317,9 @@ void __fastcall EventRecipeListViewManager__CreateRecipeResponse(
     0LL,
     (const MethodInfo_24C613C *)Method_System_Action_int__string____Action__Invoke__);
   v46 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -1202,7 +1202,7 @@ void __fastcall EventRecipeListViewManager__RequestListObject(
     sub_B16FFC(&Method_EventRecipeListViewManager_OnMoveEnd__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventRecipeListViewObject__GetEnumerator__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventRecipeListViewObject__get_Count__, v8);
-    sub_B16FFC(&StringLiteral_10004, v9);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v9);
     byte_40F6112 = 1;
   }
   memset(&v19, 0, sizeof(v19));
@@ -1217,7 +1217,7 @@ void __fastcall EventRecipeListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

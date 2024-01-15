@@ -73,7 +73,7 @@ void __fastcall CoinRoomSelectCoinComponent__EndRequest(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
     sub_B16FFC(&Method_CoinRoomSelectCoinComponent___c__DisplayClass14_0__EndRequest_b__0__, v9);
     sub_B16FFC(&CoinRoomSelectCoinComponent___c__DisplayClass14_0_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_20980, v11);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v11);
     byte_40F9A6A = 1;
   }
   v12 = sub_B170CC(CoinRoomSelectCoinComponent___c__DisplayClass14_0_TypeInfo, result, method, v3, v4);
@@ -84,7 +84,7 @@ void __fastcall CoinRoomSelectCoinComponent__EndRequest(
     goto LABEL_11;
   *(_QWORD *)(v12 + 16) = this;
   sub_B16F98((BattleServantConfConponent_o *)(v12 + 16), (System_Int32_array **)this, v13, v14, v15, v16, v17, v18);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     return;
   coinListViewManager = this->fields.coinListViewManager;
   if ( !coinListViewManager )
@@ -315,7 +315,7 @@ void __fastcall CoinRoomSelectCoinComponent__OpenSelectCoinList(
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_CoinRoomSelectCoinComponent_EndOpen__, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_3135, v5);
+    sub_B16FFC(&StringLiteral_3135/*"COIN_ROOM_SELECT_LIST_SUB_TITLE"*/, v5);
     byte_40F9A67 = 1;
   }
   coinListPanel = this->fields.coinListPanel;
@@ -348,7 +348,7 @@ void __fastcall CoinRoomSelectCoinComponent__OpenSelectCoinList(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3135, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3135/*"COIN_ROOM_SELECT_LIST_SUB_TITLE"*/, 0LL);
   if ( !subTitle )
 LABEL_14:
     sub_B170D4();

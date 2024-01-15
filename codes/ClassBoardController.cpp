@@ -2269,8 +2269,8 @@ void __fastcall ClassBoardController__SetupClassBoardUIController(
     sub_B16FFC(&IClassBoardResourceCatalog_TypeInfo, v10);
     sub_B16FFC(&int_TypeInfo, v11);
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_19597, v13);
-    sub_B16FFC(&StringLiteral_3005, v14);
+    sub_B16FFC(&StringLiteral_19597/*"img_txt_classscore_{0}"*/, v13);
+    sub_B16FFC(&StringLiteral_3005/*"CLASS_BOARD_HEADER_MESSAGE"*/, v14);
     byte_40FAFC8 = 1;
   }
   entity = 0LL;
@@ -2337,7 +2337,7 @@ LABEL_8:
   sub_B16F98((BattleServantConfConponent_o *)(v35 + 96), (System_Int32_array **)v40, v41, v42, v43, v44, v45, v46);
   v59 = this->fields.baseId;
   v47 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v59);
-  v48 = System_String__Format((System_String_o *)StringLiteral_19597, v47, 0LL);
+  v48 = System_String__Format((System_String_o *)StringLiteral_19597/*"img_txt_classscore_{0}"*/, v47, 0LL);
   v49 = (ClassBoardUIController_o *)((__int64 (__fastcall *)(ClassBoardController_o *, Il2CppMethodPointer))this->klass->vtable._4_get_classBoardUIController.method)(
                                       this,
                                       this->klass->vtable._5_set_classBoardUIController.methodPtr);
@@ -2354,7 +2354,7 @@ LABEL_8:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_3005, 0LL);
+  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_3005/*"CLASS_BOARD_HEADER_MESSAGE"*/, 0LL);
   if ( !v51 )
     goto LABEL_30;
   ClassBoardUIController__SetHeaderMessage(v51, v52, v53, 0LL);

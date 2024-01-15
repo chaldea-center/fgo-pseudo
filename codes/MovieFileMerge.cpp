@@ -145,30 +145,30 @@ void __fastcall MovieFileMerge__AssetLoadLogError(
     sub_B16FFC(&UnityEngine_Debug_TypeInfo, errorCode);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v5);
     sub_B16FFC(&string___TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_14049, v7);
-    sub_B16FFC(&StringLiteral_13981, v8);
-    sub_B16FFC(&StringLiteral_4226, v9);
-    sub_B16FFC(&StringLiteral_4590, v10);
-    sub_B16FFC(&StringLiteral_4589, v11);
-    sub_B16FFC(&StringLiteral_4225, v12);
-    sub_B16FFC(&StringLiteral_9452, v13);
-    sub_B16FFC(&StringLiteral_2090, v14);
-    sub_B16FFC(&StringLiteral_12858, v15);
-    sub_B16FFC(&StringLiteral_4227, v16);
-    sub_B16FFC(&StringLiteral_2093, v17);
+    sub_B16FFC(&StringLiteral_14049/*"The request timed out."*/, v7);
+    sub_B16FFC(&StringLiteral_13981/*"The network connection was lost."*/, v8);
+    sub_B16FFC(&StringLiteral_4226/*"Connection reset by peer"*/, v9);
+    sub_B16FFC(&StringLiteral_4590/*"DLErrorType"*/, v10);
+    sub_B16FFC(&StringLiteral_4589/*"DLErrorAsset"*/, v11);
+    sub_B16FFC(&StringLiteral_4225/*"Connection refused"*/, v12);
+    sub_B16FFC(&StringLiteral_9452/*"No address associated with hostname"*/, v13);
+    sub_B16FFC(&StringLiteral_2090/*"AssetBundle file download time over"*/, v14);
+    sub_B16FFC(&StringLiteral_12858/*"Software caused connection abort"*/, v15);
+    sub_B16FFC(&StringLiteral_4227/*"Connection timed out"*/, v16);
+    sub_B16FFC(&StringLiteral_2093/*"AssetLoadError"*/, v17);
     byte_40F7D9B = 1;
   }
   v18 = sub_B17014(string___TypeInfo, 8LL, method);
   if ( !v18 )
     goto LABEL_63;
   v25 = v18;
-  v26 = StringLiteral_9452;
-  if ( StringLiteral_9452 )
+  v26 = StringLiteral_9452/*"No address associated with hostname"*/;
+  if ( StringLiteral_9452/*"No address associated with hostname"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_9452, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
+    v26 = sub_B170BC(StringLiteral_9452/*"No address associated with hostname"*/, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
     if ( !v26 )
       goto LABEL_64;
-    v27 = (System_Int32_array **)StringLiteral_9452;
+    v27 = (System_Int32_array **)StringLiteral_9452/*"No address associated with hostname"*/;
   }
   else
   {
@@ -178,13 +178,13 @@ void __fastcall MovieFileMerge__AssetLoadLogError(
     goto LABEL_50;
   *(_QWORD *)(v25 + 32) = v27;
   sub_B16F98((BattleServantConfConponent_o *)(v25 + 32), v27, v19, v20, v21, v22, v23, v24);
-  v26 = StringLiteral_2090;
-  if ( StringLiteral_2090 )
+  v26 = StringLiteral_2090/*"AssetBundle file download time over"*/;
+  if ( StringLiteral_2090/*"AssetBundle file download time over"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_2090, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
+    v26 = sub_B170BC(StringLiteral_2090/*"AssetBundle file download time over"*/, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
     if ( !v26 )
       goto LABEL_64;
-    v27 = (System_Int32_array **)StringLiteral_2090;
+    v27 = (System_Int32_array **)StringLiteral_2090/*"AssetBundle file download time over"*/;
   }
   else
   {
@@ -194,13 +194,13 @@ void __fastcall MovieFileMerge__AssetLoadLogError(
     goto LABEL_50;
   *(_QWORD *)(v25 + 40) = v27;
   sub_B16F98((BattleServantConfConponent_o *)(v25 + 40), v27, v19, v28, v29, v30, v31, v32);
-  v26 = StringLiteral_13981;
-  if ( StringLiteral_13981 )
+  v26 = StringLiteral_13981/*"The network connection was lost."*/;
+  if ( StringLiteral_13981/*"The network connection was lost."*/ )
   {
-    v26 = sub_B170BC(StringLiteral_13981, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
+    v26 = sub_B170BC(StringLiteral_13981/*"The network connection was lost."*/, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
     if ( !v26 )
       goto LABEL_64;
-    v27 = (System_Int32_array **)StringLiteral_13981;
+    v27 = (System_Int32_array **)StringLiteral_13981/*"The network connection was lost."*/;
   }
   else
   {
@@ -210,13 +210,13 @@ void __fastcall MovieFileMerge__AssetLoadLogError(
     goto LABEL_50;
   *(_QWORD *)(v25 + 48) = v27;
   sub_B16F98((BattleServantConfConponent_o *)(v25 + 48), v27, v19, v33, v34, v35, v36, v37);
-  v26 = StringLiteral_4226;
-  if ( StringLiteral_4226 )
+  v26 = StringLiteral_4226/*"Connection reset by peer"*/;
+  if ( StringLiteral_4226/*"Connection reset by peer"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_4226, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
+    v26 = sub_B170BC(StringLiteral_4226/*"Connection reset by peer"*/, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
     if ( !v26 )
       goto LABEL_64;
-    v27 = (System_Int32_array **)StringLiteral_4226;
+    v27 = (System_Int32_array **)StringLiteral_4226/*"Connection reset by peer"*/;
   }
   else
   {
@@ -226,13 +226,13 @@ void __fastcall MovieFileMerge__AssetLoadLogError(
     goto LABEL_50;
   *(_QWORD *)(v25 + 56) = v27;
   sub_B16F98((BattleServantConfConponent_o *)(v25 + 56), v27, v19, v38, v39, v40, v41, v42);
-  v26 = StringLiteral_12858;
-  if ( StringLiteral_12858 )
+  v26 = StringLiteral_12858/*"Software caused connection abort"*/;
+  if ( StringLiteral_12858/*"Software caused connection abort"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_12858, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
+    v26 = sub_B170BC(StringLiteral_12858/*"Software caused connection abort"*/, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
     if ( !v26 )
       goto LABEL_64;
-    v27 = (System_Int32_array **)StringLiteral_12858;
+    v27 = (System_Int32_array **)StringLiteral_12858/*"Software caused connection abort"*/;
   }
   else
   {
@@ -242,13 +242,13 @@ void __fastcall MovieFileMerge__AssetLoadLogError(
     goto LABEL_50;
   *(_QWORD *)(v25 + 64) = v27;
   sub_B16F98((BattleServantConfConponent_o *)(v25 + 64), v27, v19, v43, v44, v45, v46, v47);
-  v26 = StringLiteral_4227;
-  if ( StringLiteral_4227 )
+  v26 = StringLiteral_4227/*"Connection timed out"*/;
+  if ( StringLiteral_4227/*"Connection timed out"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_4227, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
+    v26 = sub_B170BC(StringLiteral_4227/*"Connection timed out"*/, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
     if ( !v26 )
       goto LABEL_64;
-    v27 = (System_Int32_array **)StringLiteral_4227;
+    v27 = (System_Int32_array **)StringLiteral_4227/*"Connection timed out"*/;
   }
   else
   {
@@ -258,13 +258,13 @@ void __fastcall MovieFileMerge__AssetLoadLogError(
     goto LABEL_50;
   *(_QWORD *)(v25 + 72) = v27;
   sub_B16F98((BattleServantConfConponent_o *)(v25 + 72), v27, v19, v48, v49, v50, v51, v52);
-  v26 = StringLiteral_4225;
-  if ( StringLiteral_4225 )
+  v26 = StringLiteral_4225/*"Connection refused"*/;
+  if ( StringLiteral_4225/*"Connection refused"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_4225, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
+    v26 = sub_B170BC(StringLiteral_4225/*"Connection refused"*/, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
     if ( !v26 )
       goto LABEL_64;
-    v27 = (System_Int32_array **)StringLiteral_4225;
+    v27 = (System_Int32_array **)StringLiteral_4225/*"Connection refused"*/;
   }
   else
   {
@@ -274,13 +274,13 @@ void __fastcall MovieFileMerge__AssetLoadLogError(
     goto LABEL_50;
   *(_QWORD *)(v25 + 80) = v27;
   sub_B16F98((BattleServantConfConponent_o *)(v25 + 80), v27, v19, v53, v54, v55, v56, v57);
-  v26 = StringLiteral_14049;
-  if ( StringLiteral_14049 )
+  v26 = StringLiteral_14049/*"The request timed out."*/;
+  if ( StringLiteral_14049/*"The request timed out."*/ )
   {
-    v26 = sub_B170BC(StringLiteral_14049, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
+    v26 = sub_B170BC(StringLiteral_14049/*"The request timed out."*/, *(_QWORD *)(*(_QWORD *)v25 + 64LL));
     if ( v26 )
     {
-      v27 = (System_Int32_array **)StringLiteral_14049;
+      v27 = (System_Int32_array **)StringLiteral_14049/*"The request timed out."*/;
       goto LABEL_43;
     }
 LABEL_64:
@@ -323,7 +323,7 @@ LABEL_51:
   if ( !Instance )
 LABEL_63:
     sub_B170D4();
-  CrashReporter__AddCustomKey(Instance, (System_String_o *)StringLiteral_4589, this->fields.downloadingURL, 0LL);
+  CrashReporter__AddCustomKey(Instance, (System_String_o *)StringLiteral_4589/*"DLErrorAsset"*/, this->fields.downloadingURL, 0LL);
   v26 = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   if ( (unsigned int)v64 >= *(_DWORD *)(v25 + 24) )
   {
@@ -335,7 +335,7 @@ LABEL_50:
     goto LABEL_63;
   CrashReporter__AddCustomKey(
     (CrashReporter_o *)v26,
-    (System_String_o *)StringLiteral_4590,
+    (System_String_o *)StringLiteral_4590/*"DLErrorType"*/,
     *(System_String_o **)(v25 + 32 + 8 * v64),
     0LL);
   if ( (BYTE3(UnityEngine_Debug_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -343,7 +343,7 @@ LABEL_50:
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
   }
-  v66 = (Il2CppObject *)StringLiteral_2093;
+  v66 = (Il2CppObject *)StringLiteral_2093/*"AssetLoadError"*/;
 LABEL_62:
   UnityEngine_Debug__LogError(v66, 0LL);
 }
@@ -489,13 +489,13 @@ void __fastcall MovieFileMerge__Delete(System_String_o *folder, const MethodInfo
   {
     sub_B16FFC(&char___TypeInfo, method);
     sub_B16FFC(&System_IO_Path_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_23516, v4);
-    sub_B16FFC(&StringLiteral_871, v5);
+    sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, v4);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v5);
     byte_40F7D95 = 1;
   }
   if ( !folder )
     goto LABEL_14;
-  if ( !System_String__EndsWith(folder, (System_String_o *)StringLiteral_871, 0LL) )
+  if ( !System_String__EndsWith(folder, (System_String_o *)StringLiteral_871/*"/"*/, 0LL) )
     goto LABEL_8;
   v7 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v6);
   if ( !v7 )
@@ -517,7 +517,7 @@ LABEL_8:
   FileName = System_IO_Path__GetFileName(folder, 0LL);
   LocalDataPath = (Il2CppObject *)MovieFileMerge__GetLocalDataPath((const MethodInfo *)FileName);
   v11 = System_String__Format_43739268(
-          (System_String_o *)StringLiteral_23516,
+          (System_String_o *)StringLiteral_23516/*"{0}/{1}"*/,
           LocalDataPath,
           (Il2CppObject *)FileName,
           0LL);
@@ -671,14 +671,14 @@ bool __fastcall MovieFileMerge__ExistCRCCheckedMovieFile(
     sub_B16FFC(&char___TypeInfo, assetFolderURL);
     sub_B16FFC(&FileMergeAndSplit_TypeInfo, v4);
     sub_B16FFC(&System_IO_Path_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_871, v6);
-    sub_B16FFC(&StringLiteral_23521, v7);
-    sub_B16FFC(&StringLiteral_23520, v8);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v6);
+    sub_B16FFC(&StringLiteral_23521/*"{0}/{1}/{2}"*/, v7);
+    sub_B16FFC(&StringLiteral_23520/*"{0}/{1}/{1}.usm"*/, v8);
     byte_40F7D89 = 1;
   }
   if ( !v3 )
     goto LABEL_17;
-  if ( !System_String__EndsWith(v3, (System_String_o *)StringLiteral_871, 0LL) )
+  if ( !System_String__EndsWith(v3, (System_String_o *)StringLiteral_871/*"/"*/, 0LL) )
     goto LABEL_8;
   v10 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v9);
   if ( !v10 )
@@ -700,7 +700,7 @@ LABEL_8:
   FileName = System_IO_Path__GetFileName(v3, 0LL);
   LocalDataPath = (Il2CppObject *)MovieFileMerge__GetLocalDataPath((const MethodInfo *)FileName);
   v14 = System_String__Format_43739268(
-          (System_String_o *)StringLiteral_23520,
+          (System_String_o *)StringLiteral_23520/*"{0}/{1}/{1}.usm"*/,
           LocalDataPath,
           (Il2CppObject *)FileName,
           0LL);
@@ -713,7 +713,7 @@ LABEL_8:
     v16 = FileMergeAndSplit_TypeInfo;
   }
   v17 = System_String__Format_43744796(
-          (System_String_o *)StringLiteral_23521,
+          (System_String_o *)StringLiteral_23521/*"{0}/{1}/{2}"*/,
           v15,
           (Il2CppObject *)FileName,
           (Il2CppObject *)v16->static_fields->PathCRCFileName,
@@ -779,11 +779,11 @@ System_String_o *__fastcall MovieFileMerge__GetLocalDataPath(const MethodInfo *m
 
   if ( (byte_40F7D8A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_919, v1);
+    sub_B16FFC(&StringLiteral_919/*"/extend-data/movie"*/, v1);
     byte_40F7D8A = 1;
   }
   persistentDataPath = UnityEngine_Application__get_persistentDataPath(0LL);
-  return System_String__Concat_43743732(persistentDataPath, (System_String_o *)StringLiteral_919, 0LL);
+  return System_String__Concat_43743732(persistentDataPath, (System_String_o *)StringLiteral_919/*"/extend-data/movie"*/, 0LL);
 }
 
 
@@ -795,12 +795,12 @@ System_String_o *__fastcall MovieFileMerge__GetLocalFolderPath(MovieFileMerge_o 
   v2 = this;
   if ( (byte_40F7D96 & 1) == 0 )
   {
-    this = (MovieFileMerge_o *)sub_B16FFC(&StringLiteral_23516, method);
+    this = (MovieFileMerge_o *)sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, method);
     byte_40F7D96 = 1;
   }
   LocalDataPath = (Il2CppObject *)MovieFileMerge__GetLocalDataPath((const MethodInfo *)this);
   return System_String__Format_43739268(
-           (System_String_o *)StringLiteral_23516,
+           (System_String_o *)StringLiteral_23516/*"{0}/{1}"*/,
            LocalDataPath,
            (Il2CppObject *)v2->fields.assetFolder,
            0LL);
@@ -865,7 +865,7 @@ System_Collections_Generic_Dictionary_string__uint__o *__fastcall MovieFileMerge
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__get_Current__, v12);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_string__uint__get_Key__, v13);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_string__uint__get_Value__, v14);
-    sub_B16FFC(&StringLiteral_23516, v15);
+    sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, v15);
     byte_40F7D97 = 1;
   }
   memset(&v32, 0, sizeof(v32));
@@ -894,7 +894,7 @@ System_Collections_Generic_Dictionary_string__uint__o *__fastcall MovieFileMerge
     key = v32.fields.current.fields.key;
     value = (uint32_t)v32.fields.current.fields.value;
     LocalFolderPath = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(this, v18);
-    v22 = System_String__Format_43739268((System_String_o *)StringLiteral_23516, LocalFolderPath, key, 0LL);
+    v22 = System_String__Format_43739268((System_String_o *)StringLiteral_23516/*"{0}/{1}"*/, LocalFolderPath, key, 0LL);
     if ( !System_IO_File__Exists(v22, 0LL) )
       goto LABEL_12;
     AllBytes = System_IO_File__ReadAllBytes(v22, 0LL);
@@ -975,7 +975,7 @@ System_Collections_Generic_List_string__o *__fastcall MovieFileMerge__GetSplitFi
     sub_B16FFC(&Method_System_Collections_Generic_List_string__GetEnumerator__, v11);
     sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, v12);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_23516, v14);
+    sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, v14);
     byte_40F7D9A = 1;
   }
   memset(&v26, 0, sizeof(v26));
@@ -1012,7 +1012,7 @@ System_Collections_Generic_List_string__o *__fastcall MovieFileMerge__GetSplitFi
     {
       current = v26.fields.current;
       v23 = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(this, v21);
-      v24 = System_String__Format_43739268((System_String_o *)StringLiteral_23516, v23, current, 0LL);
+      v24 = System_String__Format_43739268((System_String_o *)StringLiteral_23516/*"{0}/{1}"*/, v23, current, 0LL);
       if ( !v15 )
         sub_B170D4();
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
@@ -1157,10 +1157,10 @@ void __fastcall MovieFileMerge__Initialize(
     sub_B16FFC(&System_Collections_Generic_Dictionary_string__uint__TypeInfo, v9);
     sub_B16FFC(&FileMergeAndSplit_TypeInfo, v10);
     sub_B16FFC(&System_IO_Path_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_23516, v12);
-    sub_B16FFC(&StringLiteral_23512, v13);
-    sub_B16FFC(&StringLiteral_871, v14);
-    sub_B16FFC(&StringLiteral_23518, v15);
+    sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, v12);
+    sub_B16FFC(&StringLiteral_23512/*"{0}/SplitFile"*/, v13);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v14);
+    sub_B16FFC(&StringLiteral_23518/*"{0}/{1}.usm"*/, v15);
     byte_40F7D91 = 1;
   }
   AllDownLoadFilePathCRCDictionary = this->fields.AllDownLoadFilePathCRCDictionary;
@@ -1229,7 +1229,7 @@ void __fastcall MovieFileMerge__Initialize(
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.crcCheckerClass, 0LL, v42, v43, v44, v45, v46, v47);
   if ( !v5 )
     goto LABEL_21;
-  if ( !System_String__EndsWith(v5, (System_String_o *)StringLiteral_871, 0LL) )
+  if ( !System_String__EndsWith(v5, (System_String_o *)StringLiteral_871/*"/"*/, 0LL) )
     goto LABEL_14;
   v54 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v48);
   if ( !v54 )
@@ -1270,7 +1270,7 @@ LABEL_14:
     v61,
     v62);
   LocalFolderPath = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(this, v63);
-  v65 = System_String__Format((System_String_o *)StringLiteral_23512, LocalFolderPath, 0LL);
+  v65 = System_String__Format((System_String_o *)StringLiteral_23512/*"{0}/SplitFile"*/, LocalFolderPath, 0LL);
   this->fields.outputSplitFileFolder = v65;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.outputSplitFileFolder,
@@ -1283,7 +1283,7 @@ LABEL_14:
     v71);
   v73 = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(this, v72);
   v74 = System_String__Format_43739268(
-          (System_String_o *)StringLiteral_23518,
+          (System_String_o *)StringLiteral_23518/*"{0}/{1}.usm"*/,
           v73,
           (Il2CppObject *)this->fields.assetFolder,
           0LL);
@@ -1306,7 +1306,7 @@ LABEL_14:
     v83 = FileMergeAndSplit_TypeInfo;
   }
   v84 = System_String__Format_43739268(
-          (System_String_o *)StringLiteral_23516,
+          (System_String_o *)StringLiteral_23516/*"{0}/{1}"*/,
           v82,
           (Il2CppObject *)v83->static_fields->PathCRCFileName,
           0LL);
@@ -1582,9 +1582,9 @@ void __fastcall MovieFileMerge___Merge_b__35_0(MovieFileMerge_o *this, System_Ex
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&Method_MovieFileMerge_EndMergeRetryDialog__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_5301, v8);
-    sub_B16FFC(&StringLiteral_9255, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_5301/*"Disk full"*/, v8);
+    sub_B16FFC(&StringLiteral_9255/*"NETWORK_ERROR_DISK_FULL"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F7D9E = 1;
   }
   if ( !e )
@@ -1595,7 +1595,7 @@ void __fastcall MovieFileMerge___Merge_b__35_0(MovieFileMerge_o *this, System_Ex
                              method);
   if ( !v11 )
     goto LABEL_13;
-  if ( !System_String__StartsWith(v11, (System_String_o *)StringLiteral_5301, 0LL) )
+  if ( !System_String__StartsWith(v11, (System_String_o *)StringLiteral_5301/*"Disk full"*/, 0LL) )
   {
     v20 = (System_String_o *)((__int64 (__fastcall *)(System_Exception_o *, Il2CppMethodPointer))e->klass->vtable._5_get_Message.method)(
                                e,
@@ -1608,14 +1608,14 @@ void __fastcall MovieFileMerge___Merge_b__35_0(MovieFileMerge_o *this, System_Ex
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_9255, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_9255/*"NETWORK_ERROR_DISK_FULL"*/, 0LL);
   v18 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v14, v15, v16, v17);
   ErrorDialog_ClickDelegate___ctor(v18, (Il2CppObject *)this, Method_MovieFileMerge_EndMergeRetryDialog__, 0LL);
   if ( !Instance )
 LABEL_13:
     sub_B170D4();
-  CommonUI__OpenErrorDialog(Instance, (System_String_o *)StringLiteral_1, v13, v18, 1, 0LL);
-  v20 = (System_String_o *)StringLiteral_5301;
+  CommonUI__OpenErrorDialog(Instance, (System_String_o *)StringLiteral_1/*""*/, v13, v18, 1, 0LL);
+  v20 = (System_String_o *)StringLiteral_5301/*"Disk full"*/;
 LABEL_12:
   MovieFileMerge__AssetLoadLogError(this, v20, v19);
 }
@@ -2471,21 +2471,21 @@ bool __fastcall MovieFileMerge__Download_d__41__MoveNext(
     sub_B16FFC(&string___TypeInfo, v22);
     sub_B16FFC(&UnityEngine_WaitForEndOfFrame_TypeInfo, v23);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_7070, v25);
-    sub_B16FFC(&StringLiteral_654, v26);
-    sub_B16FFC(&StringLiteral_657, v27);
-    sub_B16FFC(&StringLiteral_1189, v28);
-    sub_B16FFC(&StringLiteral_1743, v29);
-    sub_B16FFC(&StringLiteral_15682, v30);
-    sub_B16FFC(&StringLiteral_23516, v31);
-    sub_B16FFC(&StringLiteral_12312, v32);
-    sub_B16FFC(&StringLiteral_653, v33);
-    sub_B16FFC(&StringLiteral_585, v34);
-    sub_B16FFC(&StringLiteral_655, v35);
-    sub_B16FFC(&StringLiteral_651, v36);
-    sub_B16FFC(&StringLiteral_1744, v37);
-    sub_B16FFC(&StringLiteral_656, v38);
-    sub_B16FFC(&StringLiteral_1, v39);
+    sub_B16FFC(&StringLiteral_7070/*"HTTP"*/, v25);
+    sub_B16FFC(&StringLiteral_654/*")\n\n503 Auto retry count "*/, v26);
+    sub_B16FFC(&StringLiteral_657/*")\nfile crc ("*/, v27);
+    sub_B16FFC(&StringLiteral_1189/*"503"*/, v28);
+    sub_B16FFC(&StringLiteral_1743/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, v29);
+    sub_B16FFC(&StringLiteral_15682/*"[FFFF80]Download error for debug"*/, v30);
+    sub_B16FFC(&StringLiteral_23516/*"{0}/{1}"*/, v31);
+    sub_B16FFC(&StringLiteral_12312/*"STATUS"*/, v32);
+    sub_B16FFC(&StringLiteral_653/*")\n\n"*/, v33);
+    sub_B16FFC(&StringLiteral_585/*"("*/, v34);
+    sub_B16FFC(&StringLiteral_655/*")\n\nAssetBundle file check sum error\nlist crc ("*/, v35);
+    sub_B16FFC(&StringLiteral_651/*")"*/, v36);
+    sub_B16FFC(&StringLiteral_1744/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, v37);
+    sub_B16FFC(&StringLiteral_656/*")\n\nAssetBundle file download time over"*/, v38);
+    sub_B16FFC(&StringLiteral_1/*""*/, v39);
     byte_40F863A = 1;
   }
   value = 0LL;
@@ -2497,7 +2497,7 @@ bool __fastcall MovieFileMerge__Download_d__41__MoveNext(
       if ( !_4__this )
         goto LABEL_223;
       v41 = (System_Int32_array **)System_String__Format_43739268(
-                                     (System_String_o *)StringLiteral_23516,
+                                     (System_String_o *)StringLiteral_23516/*"{0}/{1}"*/,
                                      (Il2CppObject *)_4__this->fields.assetFolderURL,
                                      (Il2CppObject *)this->fields.fileName,
                                      0LL);
@@ -2506,7 +2506,7 @@ bool __fastcall MovieFileMerge__Download_d__41__MoveNext(
       _4__this->fields.downloadingCRC = this->fields.crc;
       LocalFolderPath = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(_4__this, 0LL);
       v49 = System_String__Format_43739268(
-              (System_String_o *)StringLiteral_23516,
+              (System_String_o *)StringLiteral_23516/*"{0}/{1}"*/,
               LocalFolderPath,
               (Il2CppObject *)this->fields.fileName,
               0LL);
@@ -2643,9 +2643,9 @@ LABEL_223:
       if ( !UnityEngine_Networking_UnityWebRequest__get_isDone(*p_loader, 0LL) )
       {
         v159 = (System_Int32_array **)System_String__Concat_43746016(
-                                        (System_String_o *)StringLiteral_585,
+                                        (System_String_o *)StringLiteral_585/*"("*/,
                                         _4__this->fields.downloadingURL,
-                                        (System_String_o *)StringLiteral_656,
+                                        (System_String_o *)StringLiteral_656/*")\n\nAssetBundle file download time over"*/,
                                         0LL);
         *p_errorCode_5__11 = (struct System_String_o *)v159;
 LABEL_63:
@@ -2693,9 +2693,9 @@ LABEL_63:
       downloadingURL = _4__this->fields.downloadingURL;
       v194 = UnityEngine_Networking_UnityWebRequest__get_error(v192, 0LL);
       v195 = (System_Int32_array **)System_String__Concat_43747144(
-                                      (System_String_o *)StringLiteral_585,
+                                      (System_String_o *)StringLiteral_585/*"("*/,
                                       downloadingURL,
-                                      (System_String_o *)StringLiteral_653,
+                                      (System_String_o *)StringLiteral_653/*")\n\n"*/,
                                       v194,
                                       0LL);
       *p_errorCode_5__11 = (struct System_String_o *)v195;
@@ -2720,7 +2720,7 @@ LABEL_63:
              (const MethodInfo_2DA3814 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) < 1
         || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
               v204,
-              (System_Xml_XmlQualifiedName_o *)StringLiteral_12312,
+              (System_Xml_XmlQualifiedName_o *)StringLiteral_12312/*"STATUS"*/,
               &value,
               (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
       {
@@ -2745,7 +2745,7 @@ LABEL_63:
       v209 = v207->m_Items[0];
       if ( !v209 )
         goto LABEL_223;
-      v73 = System_String__StartsWith(v209, (System_String_o *)StringLiteral_7070, 0LL);
+      v73 = System_String__StartsWith(v209, (System_String_o *)StringLiteral_7070/*"HTTP"*/, 0LL);
       if ( (v73 & 1) == 0 )
         goto LABEL_133;
       if ( v208->max_length <= 1 )
@@ -2753,7 +2753,7 @@ LABEL_63:
       v210 = v208->m_Items[1];
       if ( !v210 )
         goto LABEL_223;
-      if ( System_String__Equals_43731072(v210, (System_String_o *)StringLiteral_1189, 0LL) )
+      if ( System_String__Equals_43731072(v210, (System_String_o *)StringLiteral_1189/*"503"*/, 0LL) )
       {
         v211 = this->fields._autoRetryCount_5__3 + 1;
         this->fields._isAutoRetry_5__9 = 1;
@@ -2761,9 +2761,9 @@ LABEL_63:
         v212 = _4__this->fields.downloadingURL;
         v213 = System_Int32__ToString((int)this + 64, 0LL);
         v159 = (System_Int32_array **)System_String__Concat_43747144(
-                                        (System_String_o *)StringLiteral_585,
+                                        (System_String_o *)StringLiteral_585/*"("*/,
                                         v212,
-                                        (System_String_o *)StringLiteral_654,
+                                        (System_String_o *)StringLiteral_654/*")\n\n503 Auto retry count "*/,
                                         v213,
                                         0LL);
         this->fields._errorCode_5__11 = (struct System_String_o *)v159;
@@ -2798,13 +2798,13 @@ LABEL_63:
         if ( !v65 )
           goto LABEL_223;
         v72 = (System_String_array *)v65;
-        v73 = StringLiteral_585;
-        if ( StringLiteral_585 )
+        v73 = StringLiteral_585/*"("*/;
+        if ( StringLiteral_585/*"("*/ )
         {
-          v73 = sub_B170BC(StringLiteral_585, v72->obj.klass->_1.element_class);
+          v73 = sub_B170BC(StringLiteral_585/*"("*/, v72->obj.klass->_1.element_class);
           if ( !v73 )
             goto LABEL_215;
-          v74 = (System_Int32_array **)StringLiteral_585;
+          v74 = (System_Int32_array **)StringLiteral_585/*"("*/;
         }
         else
         {
@@ -2821,13 +2821,13 @@ LABEL_63:
             goto LABEL_214;
           v72->m_Items[1] = (System_String_o *)v219;
           sub_B16F98((BattleServantConfConponent_o *)&v72->m_Items[1], v219, v66, v214, v215, v216, v217, v218);
-          v73 = StringLiteral_655;
-          if ( StringLiteral_655 )
+          v73 = StringLiteral_655/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
+          if ( StringLiteral_655/*")\n\nAssetBundle file check sum error\nlist crc ("*/ )
           {
-            v73 = sub_B170BC(StringLiteral_655, v72->obj.klass->_1.element_class);
+            v73 = sub_B170BC(StringLiteral_655/*")\n\nAssetBundle file check sum error\nlist crc ("*/, v72->obj.klass->_1.element_class);
             if ( !v73 )
               goto LABEL_215;
-            v74 = (System_Int32_array **)StringLiteral_655;
+            v74 = (System_Int32_array **)StringLiteral_655/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
           }
           else
           {
@@ -2845,13 +2845,13 @@ LABEL_63:
               goto LABEL_214;
             v72->m_Items[3] = (System_String_o *)v230;
             sub_B16F98((BattleServantConfConponent_o *)&v72->m_Items[3], v230, v66, v225, v226, v227, v228, v229);
-            v73 = StringLiteral_657;
-            if ( StringLiteral_657 )
+            v73 = StringLiteral_657/*")\nfile crc ("*/;
+            if ( StringLiteral_657/*")\nfile crc ("*/ )
             {
-              v73 = sub_B170BC(StringLiteral_657, v72->obj.klass->_1.element_class);
+              v73 = sub_B170BC(StringLiteral_657/*")\nfile crc ("*/, v72->obj.klass->_1.element_class);
               if ( !v73 )
                 goto LABEL_215;
-              v74 = (System_Int32_array **)StringLiteral_657;
+              v74 = (System_Int32_array **)StringLiteral_657/*")\nfile crc ("*/;
             }
             else
             {
@@ -2869,8 +2869,8 @@ LABEL_63:
                 goto LABEL_214;
               v72->m_Items[5] = (System_String_o *)v241;
               sub_B16F98((BattleServantConfConponent_o *)&v72->m_Items[5], v241, v66, v236, v237, v238, v239, v240);
-              v73 = StringLiteral_651;
-              if ( !StringLiteral_651 )
+              v73 = StringLiteral_651/*")"*/;
+              if ( !StringLiteral_651/*")"*/ )
               {
                 v74 = 0LL;
 LABEL_131:
@@ -2896,10 +2896,10 @@ LABEL_214:
                 sub_B17100(v73, v74, v66);
                 sub_B170A0();
               }
-              v73 = sub_B170BC(StringLiteral_651, v72->obj.klass->_1.element_class);
+              v73 = sub_B170BC(StringLiteral_651/*")"*/, v72->obj.klass->_1.element_class);
               if ( v73 )
               {
-                v74 = (System_Int32_array **)StringLiteral_651;
+                v74 = (System_Int32_array **)StringLiteral_651/*")"*/;
                 goto LABEL_131;
               }
             }
@@ -2942,7 +2942,7 @@ LABEL_215:
         {
           v368 = sub_B17000(&System_IO_IOException_TypeInfo, v170);
           v373 = (System_IO_IOException_o *)sub_B170CC(v368, v369, v370, v371, v372);
-          v375 = (System_String_o *)sub_B17000(&StringLiteral_5301, v374);
+          v375 = (System_String_o *)sub_B17000(&StringLiteral_5301/*"Disk full"*/, v374);
           System_IO_IOException___ctor_38265584(v373, v375, 0LL);
           sub_B17000(&Method_MovieFileMerge__Download_d__41_MoveNext__, v376);
           sub_B170A0();
@@ -2983,7 +2983,7 @@ LABEL_133:
           *(_DWORD *)&effectDistance.fields.has_value = 0;
           CommonUI__OpenWarningDialog(
             v257,
-            (System_String_o *)StringLiteral_15682,
+            (System_String_o *)StringLiteral_15682/*"[FFFF80]Download error for debug"*/,
             errorCode_5__11,
             v262,
             1,
@@ -3079,13 +3079,13 @@ LABEL_140:
           v348 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           errorLocalizeCode_5__12 = this->fields._errorLocalizeCode_5__12;
           v350 = (CommonUI_o *)v348;
-          v351 = (System_String_o *)StringLiteral_1;
+          v351 = (System_String_o *)StringLiteral_1/*""*/;
           if ( isDuringStartup )
           {
             if ( errorLocalizeCode_5__12 )
               v352 = this->fields._errorLocalizeCode_5__12;
             else
-              v352 = (System_String_o *)StringLiteral_1743;
+              v352 = (System_String_o *)StringLiteral_1743/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/;
             if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !LocalizationManager_TypeInfo->_2.cctor_finished )
             {
@@ -3107,7 +3107,7 @@ LABEL_140:
             if ( errorLocalizeCode_5__12 )
               v361 = this->fields._errorLocalizeCode_5__12;
             else
-              v361 = (System_String_o *)StringLiteral_1744;
+              v361 = (System_String_o *)StringLiteral_1744/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/;
             if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !LocalizationManager_TypeInfo->_2.cctor_finished )
             {
@@ -3295,7 +3295,7 @@ LABEL_218:
           *(_DWORD *)&effectDistancea.fields.has_value = 0;
           CommonUI__OpenWarningDialog(
             v314,
-            (System_String_o *)StringLiteral_15682,
+            (System_String_o *)StringLiteral_15682/*"[FFFF80]Download error for debug"*/,
             v313,
             v319,
             1,
@@ -3410,12 +3410,12 @@ LABEL_165:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v78 = LocalizationManager__Get((System_String_o *)StringLiteral_1743, 0LL);
+        v78 = LocalizationManager__Get((System_String_o *)StringLiteral_1743/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
         v83 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v79, v80, v81, v82);
         ErrorDialog_ClickDelegate___ctor(v83, (Il2CppObject *)_4__this, Method_MovieFileMerge_EndRetryDialog__, 0LL);
         if ( !v77 )
           goto LABEL_223;
-        CommonUI__OpenRetryBootDialog(v77, (System_String_o *)StringLiteral_1, v78, v83, 1, 0LL);
+        CommonUI__OpenRetryBootDialog(v77, (System_String_o *)StringLiteral_1/*""*/, v78, v83, 1, 0LL);
       }
       else
       {
@@ -3424,12 +3424,12 @@ LABEL_165:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v173 = LocalizationManager__Get((System_String_o *)StringLiteral_1744, 0LL);
+        v173 = LocalizationManager__Get((System_String_o *)StringLiteral_1744/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
         v178 = (ErrorDialog_ClickDelegate_o *)sub_B170CC(ErrorDialog_ClickDelegate_TypeInfo, v174, v175, v176, v177);
         ErrorDialog_ClickDelegate___ctor(v178, (Il2CppObject *)_4__this, Method_MovieFileMerge_EndRetryDialog__, 0LL);
         if ( !v77 )
           goto LABEL_223;
-        CommonUI__OpenRetryDialog(v77, (System_String_o *)StringLiteral_1, v173, v178, 1, 0LL);
+        CommonUI__OpenRetryDialog(v77, (System_String_o *)StringLiteral_1/*""*/, v173, v178, 1, 0LL);
       }
 LABEL_83:
       if ( _4__this->fields.isErrorDialog )
@@ -3826,7 +3826,7 @@ bool __fastcall MovieFileMerge__PlayCRIMovie_d__31__MoveNext(
     sub_B16FFC(&Method_UnityEngine_Resources_Load_GameObject___, v13);
     sub_B16FFC(&Method_MovieFileMerge___c__DisplayClass31_0__PlayCRIMovie_b__0__, v14);
     sub_B16FFC(&MovieFileMerge___c__DisplayClass31_0_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_3423, v16);
+    sub_B16FFC(&StringLiteral_3423/*"CRIMovie/CRIMoviePlayerWithPanel"*/, v16);
     byte_40F863E = 1;
   }
   _1__state = this->fields.__1__state;
@@ -3854,7 +3854,7 @@ bool __fastcall MovieFileMerge__PlayCRIMovie_d__31__MoveNext(
       v24,
       v25);
     UIAtlas = (UnityEngine_UI_Dropdown_DropdownItem_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                                          (System_String_o *)StringLiteral_3423,
+                                                          (System_String_o *)StringLiteral_3423/*"CRIMovie/CRIMoviePlayerWithPanel"*/,
                                                           (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_GameObject___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )

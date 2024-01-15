@@ -395,8 +395,8 @@ void __fastcall CommandCardExceedResultWindowComponent__SetLabels(
   if ( (byte_40FA598 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&previousParam);
-    sub_B16FFC(&StringLiteral_3196, v9);
-    sub_B16FFC(&StringLiteral_3197, v10);
+    sub_B16FFC(&StringLiteral_3196/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/, v9);
+    sub_B16FFC(&StringLiteral_3197/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, v10);
     byte_40FA598 = 1;
   }
   previousStatusLabel = this->fields.previousStatusLabel;
@@ -405,14 +405,14 @@ void __fastcall CommandCardExceedResultWindowComponent__SetLabels(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3197, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3197/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_PREVIOUS"*/, 0LL);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(previousParam, 0LL);
   v14 = (Il2CppObject *)LocalizationManager__GetNumberFormat(maxParam, 0LL);
   v15 = System_String__Format_43739268(v12, NumberFormat, v14, 0LL);
   if ( !previousStatusLabel
     || (UILabel__set_text(previousStatusLabel, v15, 0LL),
         afterStatusLabel = this->fields.afterStatusLabel,
-        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3196, 0LL),
+        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3196/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER"*/, 0LL),
         v18 = (Il2CppObject *)LocalizationManager__GetNumberFormat(afterParam, 0LL),
         v19 = (Il2CppObject *)LocalizationManager__GetNumberFormat(maxParam, 0LL),
         v20 = System_String__Format_43739268(v17, v18, v19, 0LL),

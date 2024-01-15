@@ -609,9 +609,9 @@ void __fastcall EventExpeditionListViewManager__FinishResponse(
     sub_B16FFC(&JsonManager_TypeInfo, v9);
     sub_B16FFC(&Method_EventExpeditionListViewManager___c__DisplayClass49_0__FinishResponse_b__0__, v10);
     sub_B16FFC(&EventExpeditionListViewManager___c__DisplayClass49_0_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_20980, v12);
-    sub_B16FFC(&StringLiteral_15571, v13);
-    sub_B16FFC(&StringLiteral_15807, v14);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v12);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v13);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v14);
     byte_40FC672 = 1;
   }
   v15 = sub_B170CC(
@@ -637,12 +637,12 @@ void __fastcall EventExpeditionListViewManager__FinishResponse(
     v21);
   *(_QWORD *)(v15 + 32) = this;
   sub_B16F98((BattleServantConfConponent_o *)(v15 + 32), (System_Int32_array **)this, v22, v23, v24, v25, v26, v27);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     return;
   v28 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -830,7 +830,7 @@ void __fastcall EventExpeditionListViewManager__Init(
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
     sub_B16FFC(&Method_EventExpeditionListViewManager___c__DisplayClass32_0__Init_b__0__, v13);
     sub_B16FFC(&EventExpeditionListViewManager___c__DisplayClass32_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_5766, v15);
+    sub_B16FFC(&StringLiteral_5766/*"EXPEDITION_PUSH_BTN_LABEL"*/, v15);
     byte_40FC663 = 1;
   }
   v16 = sub_B170CC(
@@ -886,7 +886,7 @@ void __fastcall EventExpeditionListViewManager__Init(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5766, 0LL);
+  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5766/*"EXPEDITION_PUSH_BTN_LABEL"*/, 0LL);
   if ( !expeditionNoticeLb )
     goto LABEL_14;
   UILabel__set_text(expeditionNoticeLb, v43, 0LL);
@@ -1897,7 +1897,7 @@ void __fastcall EventExpeditionListViewManager__RequestListObject(
     sub_B16FFC(&Method_EventExpeditionListViewManager_OnMoveEnd__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__GetEnumerator__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventExpeditionListViewObject__get_Count__, v8);
-    sub_B16FFC(&StringLiteral_10004, v9);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v9);
     byte_40FC666 = 1;
   }
   memset(&v19, 0, sizeof(v19));
@@ -1912,7 +1912,7 @@ void __fastcall EventExpeditionListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2331,10 +2331,10 @@ void __fastcall EventExpeditionListViewManager__StartResponse(
 
   if ( (byte_40FC670 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20980, result);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, result);
     byte_40FC670 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     v6 = EventExpeditionListViewManager__CoWaitEffectPlay(this, v5);
     UnityEngine_MonoBehaviour__StartCoroutine_34804316((UnityEngine_MonoBehaviour_o *)this, v6, 0LL);
@@ -2352,17 +2352,17 @@ void __fastcall EventExpeditionListViewManager__UpdateButtonDisp(
 
   if ( (byte_40FC675 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40FC675 = 1;
   }
   expeditionNoticeBtnSp = this->fields.expeditionNoticeBtnSp;
   if ( !expeditionNoticeBtnSp )
     sub_B170D4();
   if ( this->fields.isButtonOn )
-    v5 = &StringLiteral_16940;
+    v5 = &StringLiteral_16940/*"btn_on"*/;
   else
-    v5 = &StringLiteral_16939;
+    v5 = &StringLiteral_16939/*"btn_off"*/;
   UISprite__set_spriteName(expeditionNoticeBtnSp, (System_String_o *)*v5, 0LL);
 }
 
@@ -3193,8 +3193,8 @@ void __fastcall EventExpeditionListViewManager___c__DisplayClass32_0___Init_b__0
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_16920, v4);
-    sub_B16FFC(&StringLiteral_5751, v5);
+    sub_B16FFC(&StringLiteral_16920/*"btn_completecheck_bg"*/, v4);
+    sub_B16FFC(&StringLiteral_5751/*"EXPEDITION_COMP_BTN_LABEL"*/, v5);
     byte_40F6F97 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -3204,7 +3204,7 @@ void __fastcall EventExpeditionListViewManager___c__DisplayClass32_0___Init_b__0
   completeBtnSp = _4__this->fields.completeBtnSp;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_28584872(eventId, completeBtnSp, (System_String_o *)StringLiteral_16920, 0LL);
+  AtlasManager__SetEventUI_28584872(eventId, completeBtnSp, (System_String_o *)StringLiteral_16920/*"btn_completecheck_bg"*/, 0LL);
   v9 = this->fields.__4__this;
   if ( !v9 )
     goto LABEL_18;
@@ -3214,7 +3214,7 @@ void __fastcall EventExpeditionListViewManager___c__DisplayClass32_0___Init_b__0
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5751, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5751/*"EXPEDITION_COMP_BTN_LABEL"*/, 0LL);
   if ( !completeBtnLb )
     goto LABEL_18;
   UILabel__set_text(completeBtnLb, v11, 0LL);
@@ -3272,8 +3272,8 @@ void __fastcall EventExpeditionListViewManager___c__DisplayClass40_0___CheckServ
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_12612, v4);
-    sub_B16FFC(&StringLiteral_12651, v5);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v4);
+    sub_B16FFC(&StringLiteral_12651/*"ServantCombine"*/, v5);
     byte_40F6F98 = 1;
   }
   result = this->fields.result;
@@ -3282,7 +3282,7 @@ void __fastcall EventExpeditionListViewManager___c__DisplayClass40_0___CheckServ
     case 2:
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v12 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v16, v17, v18, v19);
-      SceneJumpInfo___ctor_29748028(v12, (System_String_o *)StringLiteral_12612, 0, 0LL);
+      SceneJumpInfo___ctor_29748028(v12, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 0, 0LL);
       if ( Instance )
       {
         v13 = 22;
@@ -3304,7 +3304,7 @@ LABEL_13:
     case 0:
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v12 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v8, v9, v10, v11);
-      SceneJumpInfo___ctor_29747932(v12, (System_String_o *)StringLiteral_12651, 0LL);
+      SceneJumpInfo___ctor_29747932(v12, (System_String_o *)StringLiteral_12651/*"ServantCombine"*/, 0LL);
       if ( Instance )
       {
         v13 = 32;
@@ -3355,9 +3355,9 @@ void __fastcall EventExpeditionListViewManager___c__DisplayClass40_1___CheckServ
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_12655, v4);
-    sub_B16FFC(&StringLiteral_12612, v5);
-    sub_B16FFC(&StringLiteral_12654, v6);
+    sub_B16FFC(&StringLiteral_12655/*"ServantEquipList"*/, v4);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v5);
+    sub_B16FFC(&StringLiteral_12654/*"ServantEQCombine"*/, v6);
     byte_40F6F99 = 1;
   }
   result = this->fields.result;
@@ -3366,7 +3366,7 @@ void __fastcall EventExpeditionListViewManager___c__DisplayClass40_1___CheckServ
     case 2:
       Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v13 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v19, v20, v21, v22);
-      SceneJumpInfo___ctor_29748028(v13, (System_String_o *)StringLiteral_12612, 1, 0LL);
+      SceneJumpInfo___ctor_29748028(v13, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 1, 0LL);
       if ( Instance )
       {
         v14 = 22;
@@ -3376,7 +3376,7 @@ void __fastcall EventExpeditionListViewManager___c__DisplayClass40_1___CheckServ
     case 1:
       Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v13 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v15, v16, v17, v18);
-      SceneJumpInfo___ctor_29747932(v13, (System_String_o *)StringLiteral_12655, 0LL);
+      SceneJumpInfo___ctor_29747932(v13, (System_String_o *)StringLiteral_12655/*"ServantEquipList"*/, 0LL);
       if ( Instance )
       {
         v14 = 71;
@@ -3387,7 +3387,7 @@ LABEL_14:
     case 0:
       Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       v13 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v9, v10, v11, v12);
-      SceneJumpInfo___ctor_29747932(v13, (System_String_o *)StringLiteral_12654, 0LL);
+      SceneJumpInfo___ctor_29747932(v13, (System_String_o *)StringLiteral_12654/*"ServantEQCombine"*/, 0LL);
       if ( Instance )
       {
         v14 = 32;
@@ -3425,14 +3425,14 @@ void __fastcall EventExpeditionListViewManager___c__DisplayClass40_2___CheckServ
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_12612, v4);
+    sub_B16FFC(&StringLiteral_12612/*"SellServant"*/, v4);
     byte_40F6F9A = 1;
   }
   if ( this->fields.result == 2 )
   {
     Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     v10 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v6, v7, v8, v9);
-    SceneJumpInfo___ctor_29748028(v10, (System_String_o *)StringLiteral_12612, 2, 0LL);
+    SceneJumpInfo___ctor_29748028(v10, (System_String_o *)StringLiteral_12612/*"SellServant"*/, 2, 0LL);
     if ( !Instance )
       sub_B170D4();
     AvalonSceneManager__transitionScene(Instance, 22, 1, (Il2CppObject *)v10, 0LL);

@@ -17,13 +17,13 @@ void __fastcall PopupMessageDialog__EndClose(PopupMessageDialog_o *this, const M
 
   if ( (byte_40F8FC4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F8FC4 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     sub_B170D4();
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -142,7 +142,7 @@ void __fastcall PopupMessageDialog__Open(
     sub_B16FFC(&ManagerConfig_TypeInfo, v6);
     sub_B16FFC(&Method_PopupMessageDialog_EndOpen__, v7);
     sub_B16FFC(&UICamera_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F8FC2 = 1;
   }
   baseWindow = this->fields.baseWindow;
@@ -179,7 +179,7 @@ void __fastcall PopupMessageDialog__Open(
   UIWidget__set_height(*p_messageLabel, 1024, 0LL);
   if ( !*p_messageLabel )
     goto LABEL_78;
-  v15 = message ? message : (System_String_o *)StringLiteral_1;
+  v15 = message ? message : (System_String_o *)StringLiteral_1/*""*/;
   UILabel__set_text((UILabel_o *)*p_messageLabel, v15, 0LL);
   if ( !*p_messageLabel )
     goto LABEL_78;

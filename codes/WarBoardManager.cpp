@@ -52,23 +52,23 @@ void __fastcall WarBoardManager___cctor(const MethodInfo *method)
   if ( (byte_40F652A & 1) == 0 )
   {
     sub_B16FFC(&WarBoardManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_15349, v8);
-    sub_B16FFC(&StringLiteral_15353, v9);
-    sub_B16FFC(&StringLiteral_15172, v10);
-    sub_B16FFC(&StringLiteral_3460, v11);
+    sub_B16FFC(&StringLiteral_15349/*"WarBoardConfirmedRule"*/, v8);
+    sub_B16FFC(&StringLiteral_15353/*"WarBoardEventBossUIData"*/, v9);
+    sub_B16FFC(&StringLiteral_15172/*"WARBOARDDATA_SERVERDATA"*/, v10);
+    sub_B16FFC(&StringLiteral_3460/*"CameraBackActionKey"*/, v11);
     byte_40F652A = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarBoardManager_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_15349;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_15349;
+  v13 = (System_Int32_array **)StringLiteral_15349/*"WarBoardConfirmedRule"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_15349/*"WarBoardConfirmedRule"*/;
   sub_B16F98(static_fields, v13, v2, v3, v4, v5, v6, v7);
   v14 = WarBoardManager_TypeInfo->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_15172;
-  v14->WARBOARDDATA_SERVERDATA_KEY = (struct System_String_o *)StringLiteral_15172;
+  v15 = (System_Int32_array **)StringLiteral_15172/*"WARBOARDDATA_SERVERDATA"*/;
+  v14->WARBOARDDATA_SERVERDATA_KEY = (struct System_String_o *)StringLiteral_15172/*"WARBOARDDATA_SERVERDATA"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v14->WARBOARDDATA_SERVERDATA_KEY, v15, v16, v17, v18, v19, v20, v21);
   v22 = WarBoardManager_TypeInfo->static_fields;
-  v23 = (System_Int32_array **)StringLiteral_15353;
-  v22->SAVE_KEY_PREFIX_WAR_BOARD_BOSS_UI_DATA = (struct System_String_o *)StringLiteral_15353;
+  v23 = (System_Int32_array **)StringLiteral_15353/*"WarBoardEventBossUIData"*/;
+  v22->SAVE_KEY_PREFIX_WAR_BOARD_BOSS_UI_DATA = (struct System_String_o *)StringLiteral_15353/*"WarBoardEventBossUIData"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v22->SAVE_KEY_PREFIX_WAR_BOARD_BOSS_UI_DATA,
     v23,
@@ -97,8 +97,8 @@ void __fastcall WarBoardManager___cctor(const MethodInfo *method)
   v36->static_fields->SKILL_ZOOM_OUT_SIZE = 3.0;
   v36->static_fields->SKILL_ZOOM_IN_SIZE = 0.8;
   v37 = v36->static_fields;
-  v38 = (System_Int32_array **)StringLiteral_3460;
-  v37->TASK_KEY_CAMERA_BACK_ACTION = (struct System_String_o *)StringLiteral_3460;
+  v38 = (System_Int32_array **)StringLiteral_3460/*"CameraBackActionKey"*/;
+  v37->TASK_KEY_CAMERA_BACK_ACTION = (struct System_String_o *)StringLiteral_3460/*"CameraBackActionKey"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v37->TASK_KEY_CAMERA_BACK_ACTION, v38, v39, v40, v41, v42, v43, v44);
 }
 
@@ -1637,12 +1637,12 @@ void __fastcall WarBoardManager__AddEventTaskMoveCamera(
     sub_B16FFC(&Method_System_Nullable_float___ctor__, v13);
     sub_B16FFC(&Method_System_Nullable_Vector2___ctor__, v14);
     sub_B16FFC(&WarBoardMapCameraPerformance_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_20495, v16);
-    sub_B16FFC(&StringLiteral_21383, v17);
-    sub_B16FFC(&StringLiteral_23374, v18);
-    sub_B16FFC(&StringLiteral_21418, v19);
-    sub_B16FFC(&StringLiteral_18045, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_20495/*"moveTime"*/, v16);
+    sub_B16FFC(&StringLiteral_21383/*"pieceIndex2"*/, v17);
+    sub_B16FFC(&StringLiteral_23374/*"zoom"*/, v18);
+    sub_B16FFC(&StringLiteral_21418/*"pos"*/, v19);
+    sub_B16FFC(&StringLiteral_18045/*"easeType"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40F6494 = 1;
   }
   v99 = 0u;
@@ -1689,10 +1689,10 @@ void __fastcall WarBoardManager__AddEventTaskMoveCamera(
     sub_AAFCFC(*v35[6]);
   IntArray = EntityScriptUtil__GetIntArray(
                script,
-               (System_String_o *)StringLiteral_21383,
+               (System_String_o *)StringLiteral_21383/*"pieceIndex2"*/,
                **(System_Int32_array ***)(v40 + 184),
                0LL);
-  v42 = EntityScriptUtil__GetIntArray(entity->fields.script, (System_String_o *)StringLiteral_21418, 0LL, 0LL);
+  v42 = EntityScriptUtil__GetIntArray(entity->fields.script, (System_String_o *)StringLiteral_21418/*"pos"*/, 0LL, 0LL);
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)SquareIndexes, 0LL);
   if ( !IsNullOrEmpty )
   {
@@ -1879,8 +1879,8 @@ LABEL_67:
   x = v93 / v96;
   y = v94 / v96;
 LABEL_51:
-  FloatValue = EntityScriptUtil__GetFloatValue(entity->fields.script, (System_String_o *)StringLiteral_20495, 1.0, 0LL);
-  ZoomSize = EntityScriptUtil__GetFloatValue(entity->fields.script, (System_String_o *)StringLiteral_23374, -1.0, 0LL);
+  FloatValue = EntityScriptUtil__GetFloatValue(entity->fields.script, (System_String_o *)StringLiteral_20495/*"moveTime"*/, 1.0, 0LL);
+  ZoomSize = EntityScriptUtil__GetFloatValue(entity->fields.script, (System_String_o *)StringLiteral_23374/*"zoom"*/, -1.0, 0LL);
   if ( ZoomSize >= 0.0 )
     goto LABEL_55;
   v80 = this->fields.mapCamera;
@@ -1891,8 +1891,8 @@ LABEL_69:
 LABEL_55:
   StringValue = EntityScriptUtil__GetStringValue(
                   entity->fields.script,
-                  (System_String_o *)StringLiteral_18045,
-                  (System_String_o *)StringLiteral_1,
+                  (System_String_o *)StringLiteral_18045/*"easeType"*/,
+                  (System_String_o *)StringLiteral_1/*""*/,
                   0LL);
   v83 = System_String__IsNullOrEmpty(StringValue, 0LL);
   if ( v83 )
@@ -2044,14 +2044,14 @@ void __fastcall WarBoardManager__AddEventTaskPlayTalk(
   {
     sub_B16FFC(&Method_BasicHelper_GetValue_long___, entity);
     sub_B16FFC(&WarBoardFaceMessagePerformance_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21831, v6);
+    sub_B16FFC(&StringLiteral_21831/*"scriptId"*/, v6);
     byte_40F6491 = 1;
   }
   if ( !entity )
     sub_B170D4();
   Value_long = BasicHelper__GetValue_long_(
                  entity->fields.script,
-                 (System_String_o *)StringLiteral_21831,
+                 (System_String_o *)StringLiteral_21831/*"scriptId"*/,
                  -1LL,
                  (const MethodInfo_18B7C18 *)Method_BasicHelper_GetValue_long___);
   if ( (Value_long & 0x8000000000000000LL) == 0 )
@@ -2657,8 +2657,8 @@ void __fastcall WarBoardManager__AddEventTaskUnlockSquareRoad(
     sub_B16FFC(&WarBoardManager___c__DisplayClass267_1_TypeInfo, v17);
     sub_B16FFC(&WarBoardRoadComponent_TypeInfo, v18);
     sub_B16FFC(&WarBoardSimpleAnimationPerformance_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_22147, v20);
-    sub_B16FFC(&StringLiteral_22148, v21);
+    sub_B16FFC(&StringLiteral_22147/*"squareIndex1"*/, v20);
+    sub_B16FFC(&StringLiteral_22148/*"squareIndex2"*/, v21);
     byte_40F6499 = 1;
   }
   v22 = sub_B170CC(WarBoardManager___c__DisplayClass267_0_TypeInfo, entity, method, v3, v4);
@@ -2671,12 +2671,12 @@ void __fastcall WarBoardManager__AddEventTaskUnlockSquareRoad(
     goto LABEL_28;
   *(_DWORD *)(v22 + 16) = WarBoardEventScriptEntity__GetIntFromScript(
                             entity,
-                            (System_String_o *)StringLiteral_22147,
+                            (System_String_o *)StringLiteral_22147/*"squareIndex1"*/,
                             -1,
                             v29);
   *(_DWORD *)(v22 + 20) = WarBoardEventScriptEntity__GetIntFromScript(
                             entity,
-                            (System_String_o *)StringLiteral_22148,
+                            (System_String_o *)StringLiteral_22148/*"squareIndex2"*/,
                             -1,
                             v30);
   condRoadComponents = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.condRoadComponents;
@@ -2827,12 +2827,12 @@ void __fastcall WarBoardManager__AddEventTaskWait(
   if ( (byte_40F649A & 1) == 0 )
   {
     sub_B16FFC(&WarBoardWaitTime_TypeInfo, entity);
-    sub_B16FFC(&StringLiteral_23098, v5);
+    sub_B16FFC(&StringLiteral_23098/*"waitTime"*/, v5);
     byte_40F649A = 1;
   }
   if ( !entity )
     sub_B170D4();
-  FloatValue = EntityScriptUtil__GetFloatValue(entity->fields.script, (System_String_o *)StringLiteral_23098, 0.0, 0LL);
+  FloatValue = EntityScriptUtil__GetFloatValue(entity->fields.script, (System_String_o *)StringLiteral_23098/*"waitTime"*/, 0.0, 0LL);
   v11 = (WarBoardWaitTime_o *)sub_B170CC(WarBoardWaitTime_TypeInfo, v7, v8, v9, v10);
   WarBoardWaitTime___ctor(v11, FloatValue, 0LL);
   WarBoardManager__AddEventTask(this, (WarBoardTaskBase_o *)v11, v12);
@@ -3284,7 +3284,7 @@ void __fastcall WarBoardManager__AddPopupLabel(
     sub_B16FFC(&WarBoardManager___c__DisplayClass410_0_TypeInfo, v16);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass410_1__AddPopupLabel_b__0__, v17);
     sub_B16FFC(&WarBoardManager___c__DisplayClass410_1_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_18133, v19);
+    sub_B16FFC(&StringLiteral_18133/*"ef_popLabel{0:00}"*/, v19);
     byte_40F64E6 = 1;
   }
   memset(&v83, 0, sizeof(v83));
@@ -3306,7 +3306,7 @@ void __fastcall WarBoardManager__AddPopupLabel(
   commonAssetData = this->fields.commonAssetData;
   LODWORD(v82.fields.list) = *(_DWORD *)(*(_QWORD *)v27 + 68LL);
   v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v82);
-  v36 = System_String__Format((System_String_o *)StringLiteral_18133, v35, 0LL);
+  v36 = System_String__Format((System_String_o *)StringLiteral_18133/*"ef_popLabel{0:00}"*/, v35, 0LL);
   if ( !commonAssetData )
     goto LABEL_29;
   Object_WarBoardWaitTimeSetting = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
@@ -3900,11 +3900,11 @@ void __fastcall WarBoardManager__BattleSetupResponse(
     sub_B16FFC(&Method_DataManager_GetMaster_BattleMaster___, v4);
     sub_B16FFC(&DataManager_TypeInfo, v5);
     sub_B16FFC(&Method_DataMasterBase_BattleMaster__BattleEntity__long__TryGetSingleEntity__, v6);
-    sub_B16FFC(&StringLiteral_20980, v7);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v7);
     byte_40F6466 = 1;
   }
   entity = 0LL;
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
@@ -4278,7 +4278,7 @@ void __fastcall WarBoardManager__BuffSaveResponse(
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass123_0__BuffSaveResponse_b__0__, v8);
     sub_B16FFC(&WarBoardManager___c__DisplayClass123_0_TypeInfo, v9);
     sub_B16FFC(&WarBoardManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_20980, v11);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v11);
     byte_40F6449 = 1;
   }
   v12 = sub_B170CC(WarBoardManager___c__DisplayClass123_0_TypeInfo, result, method, v3, v4);
@@ -4287,7 +4287,7 @@ void __fastcall WarBoardManager__BuffSaveResponse(
     goto LABEL_11;
   *(_QWORD *)(v12 + 16) = this;
   sub_B16F98((BattleServantConfConponent_o *)(v12 + 16), (System_Int32_array **)this, v13, v14, v15, v16, v17, v18);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     return;
   if ( (BYTE3(WarBoardManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !WarBoardManager_TypeInfo->_2.cctor_finished )
@@ -6875,10 +6875,10 @@ void __fastcall WarBoardManager__ContinueResponse(
   if ( (byte_40F646D & 1) == 0 )
   {
     sub_B16FFC(&WarBoardManager_TypeInfo, result);
-    sub_B16FFC(&StringLiteral_20980, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v5);
     byte_40F646D = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     if ( (BYTE3(WarBoardManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !WarBoardManager_TypeInfo->_2.cctor_finished )
@@ -7550,7 +7550,7 @@ WarBoardEventBossUIComponent_o *__fastcall WarBoardManager__CreateEventBossUI(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_WarBoardEventBossUIComponent___, v9);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_15354, v12);
+    sub_B16FFC(&StringLiteral_15354/*"WarBoardEventBossUi"*/, v12);
     byte_40F64B0 = 1;
   }
   result = (WarBoardEventBossUIComponent_o *)this->fields.eventUIAssetData;
@@ -7558,7 +7558,7 @@ WarBoardEventBossUIComponent_o *__fastcall WarBoardManager__CreateEventBossUI(
   {
     Object_WarBoardWaitTimeSetting = (UnityEngine_Object_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                (AssetData_o *)result,
-                                                               (System_String_o *)StringLiteral_15354,
+                                                               (System_String_o *)StringLiteral_15354/*"WarBoardEventBossUi"*/,
                                                                (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -8439,7 +8439,7 @@ void __fastcall WarBoardManager__CreateOnBoardSkillEffectTask(
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass408_1__CreateOnBoardSkillEffectTask_b__0__, v17);
     sub_B16FFC(&WarBoardManager___c__DisplayClass408_1_TypeInfo, v18);
     sub_B16FFC(&Method_WarBoardManager_GetCommonEffectAsset_GameObject___, v19);
-    sub_B16FFC(&StringLiteral_18146, v20);
+    sub_B16FFC(&StringLiteral_18146/*"ef_status_{0}"*/, v20);
     byte_40F64E4 = 1;
   }
   memset(&v81, 0, sizeof(v81));
@@ -8467,7 +8467,7 @@ LABEL_8:
   }
   LODWORD(v80.fields.list) = effectId;
   v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v80);
-  v43 = System_String__Format((System_String_o *)StringLiteral_18146, v42, 0LL);
+  v43 = System_String__Format((System_String_o *)StringLiteral_18146/*"ef_status_{0}"*/, v42, 0LL);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
@@ -12462,7 +12462,7 @@ void __fastcall WarBoardManager__Finish(WarBoardManager_o *this, const MethodInf
     sub_B16FFC(&AtlasManager_TypeInfo, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
     sub_B16FFC(&SoundManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_2740, v13);
+    sub_B16FFC(&StringLiteral_2740/*"Battle"*/, v13);
     byte_40F6443 = 1;
   }
   p_commonAssetData = &this->fields.commonAssetData;
@@ -12647,7 +12647,7 @@ LABEL_13:
   AtlasManager__ReleaseBanner(0LL);
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__releaseAudioAssetStorage((System_String_o *)StringLiteral_2740, 0LL);
+  SoundManager__releaseAudioAssetStorage((System_String_o *)StringLiteral_2740/*"Battle"*/, 0LL);
   this->fields.numberFont2 = 0LL;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.numberFont2, 0LL, v180, v181, v182, v183, v184, v185);
   if ( (BYTE3(AStarSearch_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AStarSearch_TypeInfo->_2.cctor_finished )
@@ -13083,12 +13083,12 @@ void __fastcall WarBoardManager__GameSetupResponse(
     sub_B16FFC(&Method_System_Collections_Generic_List_QuestRewardInfo__ToArray__, v9);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v10);
     sub_B16FFC(&WarBoardData_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_20980, v12);
-    sub_B16FFC(&StringLiteral_15571, v13);
-    sub_B16FFC(&StringLiteral_15807, v14);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v12);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v13);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v14);
     byte_40F646B = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     if ( (BYTE3(WarBoardData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !WarBoardData_TypeInfo->_2.cctor_finished )
@@ -13097,9 +13097,9 @@ void __fastcall WarBoardManager__GameSetupResponse(
     }
     WarBoardData__DeleteLocalSave(0LL);
     v15 = (Il2CppObject *)System_String__Concat_43746016(
-                            (System_String_o *)StringLiteral_15571,
+                            (System_String_o *)StringLiteral_15571/*"["*/,
                             result,
-                            (System_String_o *)StringLiteral_15807,
+                            (System_String_o *)StringLiteral_15807/*"]"*/,
                             0LL);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -13542,7 +13542,7 @@ WarBoardTaskBase_o *__fastcall WarBoardManager__GetCameraShakeTask(WarBoardManag
   if ( (byte_40F64DF & 1) == 0 )
   {
     sub_B16FFC(&WarBoardSimpleAnimationPerformance_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3466, v6);
+    sub_B16FFC(&StringLiteral_3466/*"CameraShake"*/, v6);
     byte_40F64DF = 1;
   }
   cameraRootAnimation = this->fields.cameraRootAnimation;
@@ -13552,7 +13552,7 @@ WarBoardTaskBase_o *__fastcall WarBoardManager__GetCameraShakeTask(WarBoardManag
                                                  v2,
                                                  v3,
                                                  v4);
-  WarBoardSimpleAnimationPerformance___ctor(v8, cameraRootAnimation, (System_String_o *)StringLiteral_3466, 0LL);
+  WarBoardSimpleAnimationPerformance___ctor(v8, cameraRootAnimation, (System_String_o *)StringLiteral_3466/*"CameraShake"*/, 0LL);
   return (WarBoardTaskBase_o *)v8;
 }
 
@@ -13818,39 +13818,39 @@ int32_t __fastcall WarBoardManager__GetEaseTypeScript(
 
   if ( (byte_40F6522 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18041, easeTypeString);
-    sub_B16FFC(&StringLiteral_18030, v4);
-    sub_B16FFC(&StringLiteral_18040, v5);
-    sub_B16FFC(&StringLiteral_18027, v6);
-    sub_B16FFC(&StringLiteral_18022, v7);
-    sub_B16FFC(&StringLiteral_18044, v8);
-    sub_B16FFC(&StringLiteral_18033, v9);
-    sub_B16FFC(&StringLiteral_18031, v10);
-    sub_B16FFC(&StringLiteral_18038, v11);
-    sub_B16FFC(&StringLiteral_18034, v12);
-    sub_B16FFC(&StringLiteral_18036, v13);
-    sub_B16FFC(&StringLiteral_18018, v14);
-    sub_B16FFC(&StringLiteral_18017, v15);
-    sub_B16FFC(&StringLiteral_18025, v16);
-    sub_B16FFC(&StringLiteral_18035, v17);
-    sub_B16FFC(&StringLiteral_18024, v18);
-    sub_B16FFC(&StringLiteral_18029, v19);
-    sub_B16FFC(&StringLiteral_18037, v20);
-    sub_B16FFC(&StringLiteral_20152, v21);
-    sub_B16FFC(&StringLiteral_18042, v22);
-    sub_B16FFC(&StringLiteral_18020, v23);
-    sub_B16FFC(&StringLiteral_18043, v24);
-    sub_B16FFC(&StringLiteral_18039, v25);
-    sub_B16FFC(&StringLiteral_21485, v26);
-    sub_B16FFC(&StringLiteral_18015, v27);
-    sub_B16FFC(&StringLiteral_18026, v28);
-    sub_B16FFC(&StringLiteral_18016, v29);
-    sub_B16FFC(&StringLiteral_18032, v30);
-    sub_B16FFC(&StringLiteral_18019, v31);
-    sub_B16FFC(&StringLiteral_18021, v32);
-    sub_B16FFC(&StringLiteral_22136, v33);
-    sub_B16FFC(&StringLiteral_18028, v34);
-    sub_B16FFC(&StringLiteral_18023, v35);
+    sub_B16FFC(&StringLiteral_18041/*"easeOutQuad"*/, easeTypeString);
+    sub_B16FFC(&StringLiteral_18030/*"easeInOutSine"*/, v4);
+    sub_B16FFC(&StringLiteral_18040/*"easeOutExpo"*/, v5);
+    sub_B16FFC(&StringLiteral_18027/*"easeInOutQuad"*/, v6);
+    sub_B16FFC(&StringLiteral_18022/*"easeInOutBounce"*/, v7);
+    sub_B16FFC(&StringLiteral_18044/*"easeOutSine"*/, v8);
+    sub_B16FFC(&StringLiteral_18033/*"easeInQuint"*/, v9);
+    sub_B16FFC(&StringLiteral_18031/*"easeInQuad"*/, v10);
+    sub_B16FFC(&StringLiteral_18038/*"easeOutCubic"*/, v11);
+    sub_B16FFC(&StringLiteral_18034/*"easeInSine"*/, v12);
+    sub_B16FFC(&StringLiteral_18036/*"easeOutBounce"*/, v13);
+    sub_B16FFC(&StringLiteral_18018/*"easeInCubic"*/, v14);
+    sub_B16FFC(&StringLiteral_18017/*"easeInCirc"*/, v15);
+    sub_B16FFC(&StringLiteral_18025/*"easeInOutElastic"*/, v16);
+    sub_B16FFC(&StringLiteral_18035/*"easeOutBack"*/, v17);
+    sub_B16FFC(&StringLiteral_18024/*"easeInOutCubic"*/, v18);
+    sub_B16FFC(&StringLiteral_18029/*"easeInOutQuint"*/, v19);
+    sub_B16FFC(&StringLiteral_18037/*"easeOutCirc"*/, v20);
+    sub_B16FFC(&StringLiteral_20152/*"linear"*/, v21);
+    sub_B16FFC(&StringLiteral_18042/*"easeOutQuart"*/, v22);
+    sub_B16FFC(&StringLiteral_18020/*"easeInExpo"*/, v23);
+    sub_B16FFC(&StringLiteral_18043/*"easeOutQuint"*/, v24);
+    sub_B16FFC(&StringLiteral_18039/*"easeOutElastic"*/, v25);
+    sub_B16FFC(&StringLiteral_21485/*"punch"*/, v26);
+    sub_B16FFC(&StringLiteral_18015/*"easeInBack"*/, v27);
+    sub_B16FFC(&StringLiteral_18026/*"easeInOutExpo"*/, v28);
+    sub_B16FFC(&StringLiteral_18016/*"easeInBounce"*/, v29);
+    sub_B16FFC(&StringLiteral_18032/*"easeInQuart"*/, v30);
+    sub_B16FFC(&StringLiteral_18019/*"easeInElastic"*/, v31);
+    sub_B16FFC(&StringLiteral_18021/*"easeInOutBack"*/, v32);
+    sub_B16FFC(&StringLiteral_22136/*"spring"*/, v33);
+    sub_B16FFC(&StringLiteral_18028/*"easeInOutQuart"*/, v34);
+    sub_B16FFC(&StringLiteral_18023/*"easeInOutCirc"*/, v35);
     byte_40F6522 = 1;
   }
   if ( !easeTypeString )
@@ -13869,13 +13869,13 @@ int32_t __fastcall WarBoardManager__GetEaseTypeScript(
           {
             if ( v36 == 370923137 )
             {
-              v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18038, 0LL);
+              v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18038/*"easeOutCubic"*/, 0LL);
               v39 = 5;
               goto LABEL_72;
             }
             return v37;
           }
-          v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18023, 0LL);
+          v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18023/*"easeInOutCirc"*/, 0LL);
           v42 = 21;
 LABEL_94:
           if ( v41 )
@@ -13886,13 +13886,13 @@ LABEL_94:
         v37 = 15;
         if ( v36 == 527728500 )
         {
-          v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18042, 0LL);
+          v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18042/*"easeOutQuart"*/, 0LL);
           v42 = 8;
           goto LABEL_94;
         }
         if ( v36 != 530127589 )
           return v37;
-        v40 = &StringLiteral_18030;
+        v40 = &StringLiteral_18030/*"easeInOutSine"*/;
         goto LABEL_99;
       }
       if ( v36 > 0x33FD1F11 )
@@ -13900,14 +13900,14 @@ LABEL_94:
         v37 = 15;
         if ( v36 == 986637332 )
         {
-          if ( System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18020, 0LL) )
+          if ( System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18020/*"easeInExpo"*/, 0LL) )
             return 16;
           else
             return 15;
         }
         if ( v36 != 1078887775 )
           return v37;
-        v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18033, 0LL);
+        v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18033/*"easeInQuint"*/, 0LL);
         v39 = 10;
       }
       else
@@ -13915,13 +13915,13 @@ LABEL_94:
         v37 = 15;
         if ( v36 == 775301194 )
         {
-          v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18037, 0LL);
+          v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18037/*"easeOutCirc"*/, 0LL);
           v42 = 20;
           goto LABEL_94;
         }
         if ( v36 != 872226577 )
           return v37;
-        v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18034, 0LL);
+        v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18034/*"easeInSine"*/, 0LL);
         v39 = 13;
       }
 LABEL_72:
@@ -13937,26 +13937,26 @@ LABEL_72:
         v37 = 15;
         if ( v36 == 1616284270 )
         {
-          v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18024, 0LL);
+          v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18024/*"easeInOutCubic"*/, 0LL);
           v42 = 6;
           goto LABEL_94;
         }
         if ( v36 != 1676751724 )
           return v37;
-        v40 = &StringLiteral_22136;
+        v40 = &StringLiteral_22136/*"spring"*/;
       }
       else
       {
         v37 = 15;
         if ( v36 == 1496637729 )
         {
-          v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18040, 0LL);
+          v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18040/*"easeOutExpo"*/, 0LL);
           v42 = 17;
           goto LABEL_94;
         }
         if ( v36 != 1581195947 )
           return v37;
-        v40 = &StringLiteral_18025;
+        v40 = &StringLiteral_18025/*"easeInOutElastic"*/;
       }
       goto LABEL_99;
     }
@@ -13964,12 +13964,12 @@ LABEL_72:
     {
       if ( v36 == 1259118176 )
       {
-        v40 = &StringLiteral_18022;
+        v40 = &StringLiteral_18022/*"easeInOutBounce"*/;
         goto LABEL_99;
       }
       if ( v36 == 1457520084 )
       {
-        v40 = &StringLiteral_18039;
+        v40 = &StringLiteral_18039/*"easeOutElastic"*/;
         goto LABEL_99;
       }
     }
@@ -13977,12 +13977,12 @@ LABEL_72:
     {
       if ( v36 == 1127984567 )
       {
-        v40 = &StringLiteral_18019;
+        v40 = &StringLiteral_18019/*"easeInElastic"*/;
         goto LABEL_99;
       }
       if ( v36 == 1155462302 )
       {
-        v40 = &StringLiteral_18035;
+        v40 = &StringLiteral_18035/*"easeOutBack"*/;
 LABEL_99:
         System_String__op_Equality(easeTypeString, (System_String_o *)*v40, 0LL);
       }
@@ -14000,27 +14000,27 @@ LABEL_99:
         {
           if ( v36 == -1103477276 )
           {
-            if ( System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18044, 0LL) )
+            if ( System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18044/*"easeOutSine"*/, 0LL) )
               return 14;
             else
               return 15;
           }
           return v37;
         }
-        v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18027, 0LL);
+        v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18027/*"easeInOutQuad"*/, 0LL);
         v42 = 3;
         goto LABEL_94;
       }
       v37 = 15;
       if ( v36 == -1462570496 )
       {
-        v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18043, 0LL);
+        v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18043/*"easeOutQuint"*/, 0LL);
         v42 = 11;
         goto LABEL_94;
       }
       if ( v36 != -1219277717 )
         return v37;
-      v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18032, 0LL);
+      v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18032/*"easeInQuart"*/, 0LL);
       v39 = 7;
       goto LABEL_72;
     }
@@ -14029,24 +14029,24 @@ LABEL_99:
       v37 = 15;
       if ( v36 == -1952051318 )
       {
-        v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18018, 0LL);
+        v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18018/*"easeInCubic"*/, 0LL);
         v42 = 4;
         goto LABEL_94;
       }
       if ( v36 != 1948954871 )
         return v37;
-      v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18028, 0LL);
+      v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18028/*"easeInOutQuart"*/, 0LL);
       v39 = 9;
       goto LABEL_72;
     }
     if ( v36 == -1933610845 )
     {
-      v40 = &StringLiteral_21485;
+      v40 = &StringLiteral_21485/*"punch"*/;
       goto LABEL_99;
     }
     if ( v36 == -1575752822 )
     {
-      v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18041, 0LL);
+      v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18041/*"easeOutQuad"*/, 0LL);
       v39 = 2;
       goto LABEL_72;
     }
@@ -14059,25 +14059,25 @@ LABEL_99:
       v37 = 15;
       if ( v36 == -313061944 )
       {
-        v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18026, 0LL);
+        v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18026/*"easeInOutExpo"*/, 0LL);
         v42 = 18;
         goto LABEL_94;
       }
       if ( v36 != -274697553 )
         return v37;
-      v40 = &StringLiteral_18015;
+      v40 = &StringLiteral_18015/*"easeInBack"*/;
       goto LABEL_99;
     }
     switch ( v36 )
     {
       case 0xF4D2D1BC:
-        v40 = &StringLiteral_18016;
+        v40 = &StringLiteral_18016/*"easeInBounce"*/;
         goto LABEL_99;
       case 0xF97FE169:
-        v40 = &StringLiteral_18036;
+        v40 = &StringLiteral_18036/*"easeOutBounce"*/;
         goto LABEL_99;
       case 0xFDB1C5F3:
-        v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18029, 0LL);
+        v38 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18029/*"easeInOutQuint"*/, 0LL);
         v39 = 12;
         goto LABEL_72;
     }
@@ -14090,14 +14090,14 @@ LABEL_99:
     {
       if ( v36 == -804940608 )
       {
-        if ( System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_20152, 0LL) )
+        if ( System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_20152/*"linear"*/, 0LL) )
           return 0;
         else
           return 15;
       }
       return v37;
     }
-    v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18017, 0LL);
+    v41 = !System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18017/*"easeInCirc"*/, 0LL);
     v42 = 19;
     goto LABEL_94;
   }
@@ -14106,10 +14106,10 @@ LABEL_99:
   {
     if ( v36 != -495746253 )
       return v37;
-    v40 = &StringLiteral_18021;
+    v40 = &StringLiteral_18021/*"easeInOutBack"*/;
     goto LABEL_99;
   }
-  if ( System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18031, 0LL) )
+  if ( System_String__op_Equality(easeTypeString, (System_String_o *)StringLiteral_18031/*"easeInQuad"*/, 0LL) )
     return 1;
   else
     return 15;
@@ -14252,7 +14252,7 @@ System_String_o *__fastcall WarBoardManager__GetEventBossUIDataSaveKey(
   if ( (byte_40F64B4 & 1) == 0 )
   {
     sub_B16FFC(&WarBoardManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_15842, v4);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v4);
     byte_40F64B4 = 1;
   }
   v5 = WarBoardManager_TypeInfo;
@@ -14268,7 +14268,7 @@ System_String_o *__fastcall WarBoardManager__GetEventBossUIDataSaveKey(
   return System_String__Concat_43747144(
            SAVE_KEY_PREFIX_WAR_BOARD_BOSS_UI_DATA,
            v7,
-           (System_String_o *)StringLiteral_15842,
+           (System_String_o *)StringLiteral_15842/*"_"*/,
            v8,
            0LL);
 }
@@ -14810,8 +14810,8 @@ void __fastcall WarBoardManager__GetReinforcementsDataForResponse(
     sub_B16FFC(&Method_JsonManager_Deserialize_WarBoardReinforcementsPieceData_____, v9);
     sub_B16FFC(&JsonManager_TypeInfo, v10);
     sub_B16FFC(&WarBoardReinforcementsPieceData___TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_22172, v12);
-    sub_B16FFC(&StringLiteral_21659, v13);
+    sub_B16FFC(&StringLiteral_22172/*"stageReinforcementId"*/, v12);
+    sub_B16FFC(&StringLiteral_21659/*"reinforcements"*/, v13);
     byte_40F6435 = 1;
   }
   v14 = (WarBoardReinforcementsPieceData_array *)sub_B17014(
@@ -14842,16 +14842,16 @@ void __fastcall WarBoardManager__GetReinforcementsDataForResponse(
   }
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v21,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_21659,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_21659/*"reinforcements"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__)
     || System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v22,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_22172,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_22172/*"stageReinforcementId"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                              v22,
-                             (System_Type_o *)StringLiteral_21659,
+                             (System_Type_o *)StringLiteral_21659/*"reinforcements"*/,
                              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -14870,7 +14870,7 @@ void __fastcall WarBoardManager__GetReinforcementsDataForResponse(
       v31);
     v32 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
             v22,
-            (System_Type_o *)StringLiteral_22172,
+            (System_Type_o *)StringLiteral_22172/*"stageReinforcementId"*/,
             (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( v32 )
     {
@@ -14968,9 +14968,9 @@ System_Collections_Generic_List_string__o *__fastcall WarBoardManager__GetServan
     sub_B16FFC(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__, v16);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v17);
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_12681, v19);
-    sub_B16FFC(&StringLiteral_5819, v20);
-    sub_B16FFC(&StringLiteral_12678, v21);
+    sub_B16FFC(&StringLiteral_12681/*"Servants/Motion/{0}"*/, v19);
+    sub_B16FFC(&StringLiteral_5819/*"Effect/CutIn/Skill/{0}"*/, v20);
+    sub_B16FFC(&StringLiteral_12678/*"Servants/Camera/{0}"*/, v21);
     byte_40F6483 = 1;
   }
   JUMPOUT(0x114DEACLL);
@@ -15334,7 +15334,7 @@ WarBoardDataEntity_o *__fastcall WarBoardManager__GetWarBoardDataEntityFromRespo
     sub_B16FFC(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v4);
     sub_B16FFC(&Method_JsonManager_Deserialize_WarBoardDataEntity___, v5);
     sub_B16FFC(&JsonManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_23121, v7);
+    sub_B16FFC(&StringLiteral_23121/*"warBoardData"*/, v7);
     byte_40F6434 = 1;
   }
   v8 = MiniJSON_Json__Deserialize(reponse, 0LL);
@@ -15350,12 +15350,12 @@ WarBoardDataEntity_o *__fastcall WarBoardManager__GetWarBoardDataEntityFromRespo
   }
   if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v8,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_23121,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_23121/*"warBoardData"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0LL;
   Item = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                            v9,
-                           (System_Type_o *)StringLiteral_23121,
+                           (System_Type_o *)StringLiteral_23121/*"warBoardData"*/,
                            (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -15399,15 +15399,15 @@ System_String_o *__fastcall WarBoardManager__GetWeaponEffectAssetName(
   if ( (byte_40F6487 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&weapongroup);
-    sub_B16FFC(&StringLiteral_5846, v6);
-    sub_B16FFC(&StringLiteral_5847, v7);
+    sub_B16FFC(&StringLiteral_5846/*"Effect/weapon/{0}"*/, v6);
+    sub_B16FFC(&StringLiteral_5847/*"Effect/weapon/{0}/{1}"*/, v7);
     byte_40F6487 = 1;
   }
   if ( effectFolder < 1 )
   {
     v12 = weapongroup;
     v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12);
-    return System_String__Format((System_String_o *)StringLiteral_5846, v11, 0LL);
+    return System_String__Format((System_String_o *)StringLiteral_5846/*"Effect/weapon/{0}"*/, v11, 0LL);
   }
   else
   {
@@ -15415,7 +15415,7 @@ System_String_o *__fastcall WarBoardManager__GetWeaponEffectAssetName(
     v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
     v13 = effectFolder;
     v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
-    return System_String__Format_43739268((System_String_o *)StringLiteral_5847, v8, v9, 0LL);
+    return System_String__Format_43739268((System_String_o *)StringLiteral_5847/*"Effect/weapon/{0}/{1}"*/, v8, v9, 0LL);
   }
 }
 
@@ -17455,7 +17455,7 @@ void __fastcall WarBoardManager__LoadBattleBgCache(
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass223_0__LoadBattleBgCache_b__0__, v14);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass223_0__LoadBattleBgCache_b__1__, v15);
     sub_B16FFC(&WarBoardManager___c__DisplayClass223_0_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_2794, v17);
+    sub_B16FFC(&StringLiteral_2794/*"Bg/{0}"*/, v17);
     byte_40F647F = 1;
   }
   v18 = sub_B170CC(WarBoardManager___c__DisplayClass223_0_TypeInfo, endCallback, method, v3, v4);
@@ -17499,7 +17499,7 @@ void __fastcall WarBoardManager__LoadBattleBgCache(
       }
       v60 = battleBgList->m_Items[v41 + 1];
       v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v60);
-      v43 = System_String__Format((System_String_o *)StringLiteral_2794, v42, 0LL);
+      v43 = System_String__Format((System_String_o *)StringLiteral_2794/*"Bg/{0}"*/, v42, 0LL);
       if ( !v35 )
         break;
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
@@ -17666,9 +17666,9 @@ void __fastcall WarBoardManager__LoadBattleResourceCache(
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass222_0__LoadBattleResourceCache_b__0__, v19);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass222_0__LoadBattleResourceCache_b__1__, v20);
     sub_B16FFC(&WarBoardManager___c__DisplayClass222_0_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_2431, v22);
-    sub_B16FFC(&StringLiteral_2743, v23);
-    sub_B16FFC(&StringLiteral_2742, v24);
+    sub_B16FFC(&StringLiteral_2431/*"BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE"*/, v22);
+    sub_B16FFC(&StringLiteral_2743/*"Battle/Common"*/, v23);
+    sub_B16FFC(&StringLiteral_2742/*"Battle/BattleResult"*/, v24);
     byte_40F647E = 1;
   }
   v25 = sub_B170CC(WarBoardManager___c__DisplayClass222_0_TypeInfo, endCallback, method, v3, v4);
@@ -17700,11 +17700,11 @@ void __fastcall WarBoardManager__LoadBattleResourceCache(
     goto LABEL_26;
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v42,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_2742,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_2742/*"Battle/BattleResult"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     v42,
-    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_2743,
+    (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_2743/*"Battle/Common"*/,
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -17735,7 +17735,7 @@ void __fastcall WarBoardManager__LoadBattleResourceCache(
         v50 = sub_B17014(int___TypeInfo, 1LL, v49),
         !v48)
     || (v51 = (System_Int32_array *)v50,
-        Value = ConstantMaster__GetValue(v48, (System_String_o *)StringLiteral_2431, 0LL),
+        Value = ConstantMaster__GetValue(v48, (System_String_o *)StringLiteral_2431/*"BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE"*/, 0LL),
         !v51) )
   {
 LABEL_26:
@@ -17911,11 +17911,11 @@ void __fastcall WarBoardManager__LoadEventBossUIData(
     sub_B16FFC(&char___TypeInfo, *(_QWORD *)&eventId);
     sub_B16FFC(&Method_System_Collections_Generic_List_string____Add__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_string____Clear__, v8);
-    this = (WarBoardManager_o *)sub_B16FFC(&StringLiteral_1, v9);
+    this = (WarBoardManager_o *)sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F64B7 = 1;
   }
   EventBossUIDataSaveKey = WarBoardManager__GetEventBossUIDataSaveKey(this, eventId, stageId, method);
-  String = UnityEngine_PlayerPrefs__GetString(EventBossUIDataSaveKey, (System_String_o *)StringLiteral_1, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(EventBossUIDataSaveKey, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   IsNullOrEmpty = sub_B17014(char___TypeInfo, 1LL, v12);
   if ( !IsNullOrEmpty )
     goto LABEL_20;
@@ -18760,10 +18760,10 @@ void __fastcall WarBoardManager__MasterAttackResponse(
   if ( (byte_40F6460 & 1) == 0 )
   {
     sub_B16FFC(&WarBoardManager_TypeInfo, result);
-    sub_B16FFC(&StringLiteral_20980, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v5);
     byte_40F6460 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     if ( (BYTE3(WarBoardManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !WarBoardManager_TypeInfo->_2.cctor_finished )
@@ -20752,16 +20752,16 @@ void __fastcall WarBoardManager__OpenEventTutorial(
   if ( (byte_40F64AD & 1) == 0 )
   {
     sub_B16FFC(&WarBoardDispNotiDialog_TypeInfo, entity);
-    sub_B16FFC(&StringLiteral_18403, v5);
-    sub_B16FFC(&StringLiteral_22515, v6);
+    sub_B16FFC(&StringLiteral_18403/*"eventId"*/, v5);
+    sub_B16FFC(&StringLiteral_22515/*"targetId"*/, v6);
     byte_40F64AD = 1;
   }
   if ( !entity )
     sub_B170D4();
-  IntValue = EntityScriptUtil__GetIntValue(entity->fields.script, (System_String_o *)StringLiteral_18403, 0, 0LL);
+  IntValue = EntityScriptUtil__GetIntValue(entity->fields.script, (System_String_o *)StringLiteral_18403/*"eventId"*/, 0, 0LL);
   script = entity->fields.script;
   v9 = IntValue;
-  v10 = EntityScriptUtil__GetIntValue(script, (System_String_o *)StringLiteral_22515, 0, 0LL);
+  v10 = EntityScriptUtil__GetIntValue(script, (System_String_o *)StringLiteral_22515/*"targetId"*/, 0, 0LL);
   v15 = sub_B170CC(WarBoardDispNotiDialog_TypeInfo, v11, v12, v13, v14);
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)v15, 0LL);
   *(_DWORD *)(v15 + 52) = v9;
@@ -20912,14 +20912,14 @@ void __fastcall WarBoardManager__OpenUserEquipScene(WarBoardManager_o *this, con
   {
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_15037, v4);
+    sub_B16FFC(&StringLiteral_15037/*"UserEquipId"*/, v4);
     byte_40F64F2 = 1;
   }
   warBoardData_k__BackingField = this->fields._warBoardData_k__BackingField;
   if ( !warBoardData_k__BackingField
     || (PlayerMasterUserEquipId = WarBoardData__get_PlayerMasterUserEquipId(warBoardData_k__BackingField, 0LL),
         v11 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v7, v8, v9, v10),
-        SceneJumpInfo___ctor_29748256(v11, (System_String_o *)StringLiteral_15037, PlayerMasterUserEquipId, 0LL),
+        SceneJumpInfo___ctor_29748256(v11, (System_String_o *)StringLiteral_15037/*"UserEquipId"*/, PlayerMasterUserEquipId, 0LL),
         this->fields._UserEquipSceneInfo_k__BackingField = v11,
         sub_B16F98(
           (BattleServantConfConponent_o *)&this->fields._UserEquipSceneInfo_k__BackingField,
@@ -22517,7 +22517,7 @@ void __fastcall WarBoardManager__PlayEffectSquareScript(
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__WarBoardManager_EffectData__set_Item__, key);
     sub_B16FFC(&WarBoardManager_EffectData_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F651D = 1;
   }
   warBoardData_k__BackingField = this->fields._warBoardData_k__BackingField;
@@ -22532,7 +22532,7 @@ void __fastcall WarBoardManager__PlayEffectSquareScript(
       squareComponent = v14->fields.squareComponent;
       if ( squareComponent )
       {
-        WarBoardSquareComponent__PlayEffect(squareComponent, effectName, (System_String_o *)StringLiteral_1, 0LL);
+        WarBoardSquareComponent__PlayEffect(squareComponent, effectName, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         v20 = sub_B170CC(WarBoardManager_EffectData_TypeInfo, v16, v17, v18, v19);
         WarBoardManager_EffectData___ctor((WarBoardManager_EffectData_o *)v20, 0LL);
         if ( v20 )
@@ -23852,13 +23852,13 @@ void __fastcall WarBoardManager__ResponseReinforcementsWarBoardDataEntity(
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v13);
     sub_B16FFC(&System_Collections_Generic_List_WarBoardUserServantData__TypeInfo, v14);
     sub_B16FFC(&WarBoardManager_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_20980, v16);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v16);
     byte_40F646F = 1;
   }
   reinforcementsPieceDatas = 0LL;
   stageReinforcementsId = 0;
   entity = 0LL;
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     if ( (BYTE3(WarBoardManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !WarBoardManager_TypeInfo->_2.cctor_finished )
@@ -24037,10 +24037,10 @@ void __fastcall WarBoardManager__ResponseWarBoardDataEntity(
   if ( (byte_40F6464 & 1) == 0 )
   {
     sub_B16FFC(&WarBoardManager_TypeInfo, result);
-    sub_B16FFC(&StringLiteral_20980, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v5);
     byte_40F6464 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     if ( (BYTE3(WarBoardManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !WarBoardManager_TypeInfo->_2.cctor_finished )
@@ -24554,7 +24554,7 @@ void __fastcall WarBoardManager__SaveEventBossUIData(
     sub_B16FFC(&Method_System_Collections_Generic_List_WarBoardEventBossUIComponent__get_Count__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_WarBoardEventBossUIComponent__get_Item__, v8);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_698, v10);
+    sub_B16FFC(&StringLiteral_698/*","*/, v10);
     byte_40F64B6 = 1;
   }
   eventBossManager = this->fields.eventBossManager;
@@ -24581,7 +24581,7 @@ void __fastcall WarBoardManager__SaveEventBossUIData(
             {
               if ( !v16 )
                 goto LABEL_23;
-              System_Text_StringBuilder__Append_41914240(v16, (System_String_o *)StringLiteral_698, 0LL);
+              System_Text_StringBuilder__Append_41914240(v16, (System_String_o *)StringLiteral_698/*","*/, 0LL);
             }
             v24 = this->fields.eventBossManager;
             if ( !v24 )
@@ -26838,10 +26838,10 @@ void __fastcall WarBoardManager__SetupResponse(
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
     sub_B16FFC(&Method_WarBoardManager_BuffSaveResponse__, v7);
     sub_B16FFC(&WarBoardManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_20980, v9);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v9);
     byte_40F6448 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     if ( (BYTE3(WarBoardManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !WarBoardManager_TypeInfo->_2.cctor_finished )
@@ -27116,8 +27116,8 @@ void __fastcall WarBoardManager__ShowActionCountDecreaseNoticePopup(
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass476_0__ShowActionCountDecreaseNoticePopup_b__0__, v9);
     sub_B16FFC(&WarBoardManager___c__DisplayClass476_0_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_15173, v11);
-    sub_B16FFC(&StringLiteral_15174, v12);
+    sub_B16FFC(&StringLiteral_15173/*"WARBOARD_ACTION_COUNT_DECREASE_NOTICE_CLOSE"*/, v11);
+    sub_B16FFC(&StringLiteral_15174/*"WARBOARD_ACTION_COUNT_DECREASE_NOTICE_MESSAGE"*/, v12);
     byte_40F64FA = 1;
   }
   v13 = sub_B170CC(WarBoardManager___c__DisplayClass476_0_TypeInfo, clickCallback, method, v3, v4);
@@ -27147,8 +27147,8 @@ void __fastcall WarBoardManager__ShowActionCountDecreaseNoticePopup(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_15174, 0LL);
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_15173, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_15174/*"WARBOARD_ACTION_COUNT_DECREASE_NOTICE_MESSAGE"*/, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_15173/*"WARBOARD_ACTION_COUNT_DECREASE_NOTICE_CLOSE"*/, 0LL);
   if ( !commonMiniPopup )
 LABEL_9:
     sub_B170D4();
@@ -27253,9 +27253,9 @@ void __fastcall WarBoardManager__ShowAttackConfirmPopup(
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass471_0__ShowAttackConfirmPopup_b__0__, v11);
     sub_B16FFC(&WarBoardManager___c__DisplayClass471_0_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_15177, v13);
-    sub_B16FFC(&StringLiteral_15176, v14);
-    sub_B16FFC(&StringLiteral_15175, v15);
+    sub_B16FFC(&StringLiteral_15177/*"WARBOARD_ATTACK_CONFIRMATION_YES"*/, v13);
+    sub_B16FFC(&StringLiteral_15176/*"WARBOARD_ATTACK_CONFIRMATION_NO"*/, v14);
+    sub_B16FFC(&StringLiteral_15175/*"WARBOARD_ATTACK_CONFIRMATION_MESSAGE"*/, v15);
     byte_40F64F5 = 1;
   }
   v16 = sub_B170CC(WarBoardManager___c__DisplayClass471_0_TypeInfo, *(_QWORD *)&attackCost, clickCallback, method, v4);
@@ -27285,12 +27285,12 @@ void __fastcall WarBoardManager__ShowAttackConfirmPopup(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_15175, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_15175/*"WARBOARD_ATTACK_CONFIRMATION_MESSAGE"*/, 0LL);
   v35 = attackCost;
   v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
   v32 = System_String__Format(v30, v31, 0LL);
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_15177, 0LL);
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_15176, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_15177/*"WARBOARD_ATTACK_CONFIRMATION_YES"*/, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_15176/*"WARBOARD_ATTACK_CONFIRMATION_NO"*/, 0LL);
   if ( !commonMiniPopup )
 LABEL_9:
     sub_B170D4();
@@ -27883,12 +27883,12 @@ void __fastcall WarBoardManager__ShowSwapConfirmPopup(
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass473_0__ShowSwapConfirmPopup_b__0__, v16);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass473_0__ShowSwapConfirmPopup_b__1__, v17);
     sub_B16FFC(&WarBoardManager___c__DisplayClass473_0_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_15234, v19);
-    sub_B16FFC(&StringLiteral_15230, v20);
-    sub_B16FFC(&StringLiteral_15229, v21);
-    sub_B16FFC(&StringLiteral_15231, v22);
-    sub_B16FFC(&StringLiteral_15233, v23);
-    sub_B16FFC(&StringLiteral_15232, v24);
+    sub_B16FFC(&StringLiteral_15234/*"WARBOARD_SWAP_CONFIRMATION_YES"*/, v19);
+    sub_B16FFC(&StringLiteral_15230/*"WARBOARD_SWAP_CONFIRMATION_MESSAGE"*/, v20);
+    sub_B16FFC(&StringLiteral_15229/*"WARBOARD_SWAP_CONFIRMATION_MASTER_MESSAGE_HAS_COST"*/, v21);
+    sub_B16FFC(&StringLiteral_15231/*"WARBOARD_SWAP_CONFIRMATION_MESSAGE_HAS_COST"*/, v22);
+    sub_B16FFC(&StringLiteral_15233/*"WARBOARD_SWAP_CONFIRMATION_SVT_MESSAGE_HAS_COST"*/, v23);
+    sub_B16FFC(&StringLiteral_15232/*"WARBOARD_SWAP_CONFIRMATION_NO"*/, v24);
     byte_40F64F7 = 1;
   }
   v25 = sub_B170CC(WarBoardManager___c__DisplayClass473_0_TypeInfo, actionPiece, targetPiece, okCall, cancelCall);
@@ -27940,7 +27940,7 @@ LABEL_15:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v57 = LocalizationManager__Get((System_String_o *)StringLiteral_15230, 0LL);
+    v57 = LocalizationManager__Get((System_String_o *)StringLiteral_15230/*"WARBOARD_SWAP_CONFIRMATION_MESSAGE"*/, 0LL);
     if ( this->fields._warBoardData_k__BackingField )
     {
       v58 = v57;
@@ -27953,8 +27953,8 @@ LABEL_15:
                    0LL);
       v59 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &MoveCost);
       v60 = System_String__Format(v58, v59, 0LL);
-      v61 = LocalizationManager__Get((System_String_o *)StringLiteral_15234, 0LL);
-      v62 = LocalizationManager__Get((System_String_o *)StringLiteral_15232, 0LL);
+      v61 = LocalizationManager__Get((System_String_o *)StringLiteral_15234/*"WARBOARD_SWAP_CONFIRMATION_YES"*/, 0LL);
+      v62 = LocalizationManager__Get((System_String_o *)StringLiteral_15232/*"WARBOARD_SWAP_CONFIRMATION_NO"*/, 0LL);
       if ( commonMiniPopup )
       {
         WarBoardCommonMiniPopup__OpenConfirmPopup(commonMiniPopup, v56, v60, v61, v62, 0LL);
@@ -27989,7 +27989,7 @@ LABEL_69:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v70 = LocalizationManager__Get((System_String_o *)StringLiteral_15229, 0LL);
+    v70 = LocalizationManager__Get((System_String_o *)StringLiteral_15229/*"WARBOARD_SWAP_CONFIRMATION_MASTER_MESSAGE_HAS_COST"*/, 0LL);
     MoveCost = v69;
     v71 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &MoveCost);
     v72 = System_String__Format(v70, v71, 0LL);
@@ -28001,7 +28001,7 @@ LABEL_69:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v73 = LocalizationManager__Get((System_String_o *)StringLiteral_15233, 0LL);
+    v73 = LocalizationManager__Get((System_String_o *)StringLiteral_15233/*"WARBOARD_SWAP_CONFIRMATION_SVT_MESSAGE_HAS_COST"*/, 0LL);
     battleServant_k__BackingField = actionPiece->fields._battleServant_k__BackingField;
     if ( !battleServant_k__BackingField )
       goto LABEL_69;
@@ -28039,7 +28039,7 @@ LABEL_69:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v86 = LocalizationManager__Get((System_String_o *)StringLiteral_15229, 0LL);
+    v86 = LocalizationManager__Get((System_String_o *)StringLiteral_15229/*"WARBOARD_SWAP_CONFIRMATION_MASTER_MESSAGE_HAS_COST"*/, 0LL);
     MoveCost = v85;
     v87 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &MoveCost);
     v88 = System_String__Format(v86, v87, 0LL);
@@ -28051,7 +28051,7 @@ LABEL_69:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v93 = LocalizationManager__Get((System_String_o *)StringLiteral_15233, 0LL);
+    v93 = LocalizationManager__Get((System_String_o *)StringLiteral_15233/*"WARBOARD_SWAP_CONFIRMATION_SVT_MESSAGE_HAS_COST"*/, 0LL);
     v94 = targetPiece->fields._battleServant_k__BackingField;
     if ( !v94 )
       goto LABEL_69;
@@ -28074,7 +28074,7 @@ LABEL_69:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v101 = LocalizationManager__Get((System_String_o *)StringLiteral_15231, 0LL);
+  v101 = LocalizationManager__Get((System_String_o *)StringLiteral_15231/*"WARBOARD_SWAP_CONFIRMATION_MESSAGE_HAS_COST"*/, 0LL);
   v102 = (_QWORD **)Method_System_Array_Empty_object___;
   v103 = **((_QWORD **)Method_System_Array_Empty_object___ + 6);
   v104 = *(_WORD *)(v103 + 306);
@@ -28100,8 +28100,8 @@ LABEL_69:
   if ( (*(_BYTE *)(v107 + 306) & 1) == 0 )
     sub_AAFCFC(*v102[6]);
   v108 = System_String__Format_43822456(v101, **(System_Object_array ***)(v107 + 184), 0LL);
-  v109 = LocalizationManager__Get((System_String_o *)StringLiteral_15234, 0LL);
-  v110 = LocalizationManager__Get((System_String_o *)StringLiteral_15232, 0LL);
+  v109 = LocalizationManager__Get((System_String_o *)StringLiteral_15234/*"WARBOARD_SWAP_CONFIRMATION_YES"*/, 0LL);
+  v110 = LocalizationManager__Get((System_String_o *)StringLiteral_15232/*"WARBOARD_SWAP_CONFIRMATION_NO"*/, 0LL);
   if ( !swapConfirmPopup )
     goto LABEL_69;
   WarBoardSwapConfirmPopup__OpenConfirmPopup(swapConfirmPopup, v100, v108, v78, v99, v109, v110, 0LL);
@@ -28147,9 +28147,9 @@ void __fastcall WarBoardManager__ShowTurnEndConfirmPopup(
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass474_0__ShowTurnEndConfirmPopup_b__0__, v9);
     sub_B16FFC(&WarBoardManager___c__DisplayClass474_0_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_15237, v11);
-    sub_B16FFC(&StringLiteral_15236, v12);
-    sub_B16FFC(&StringLiteral_15238, v13);
+    sub_B16FFC(&StringLiteral_15237/*"WARBOARD_TURN_END_CONFIRMATION_NO"*/, v11);
+    sub_B16FFC(&StringLiteral_15236/*"WARBOARD_TURN_END_CONFIRMATION_MESSAGE"*/, v12);
+    sub_B16FFC(&StringLiteral_15238/*"WARBOARD_TURN_END_CONFIRMATION_YES"*/, v13);
     byte_40F64F8 = 1;
   }
   v14 = sub_B170CC(WarBoardManager___c__DisplayClass474_0_TypeInfo, clickCallback, method, v3, v4);
@@ -28179,9 +28179,9 @@ void __fastcall WarBoardManager__ShowTurnEndConfirmPopup(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_15236, 0LL);
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_15238, 0LL);
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_15237, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_15236/*"WARBOARD_TURN_END_CONFIRMATION_MESSAGE"*/, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_15238/*"WARBOARD_TURN_END_CONFIRMATION_YES"*/, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_15237/*"WARBOARD_TURN_END_CONFIRMATION_NO"*/, 0LL);
   if ( !commonMiniPopup )
 LABEL_9:
     sub_B170D4();
@@ -28754,7 +28754,7 @@ void __fastcall WarBoardManager__StopEffectScript(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_WarBoardPieceBaseComponent___, v5);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_WarBoardSquareComponent___, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40F651E = 1;
   }
   EffectDataScript = WarBoardManager__GetEffectDataScript(this, key, method);
@@ -28782,7 +28782,7 @@ void __fastcall WarBoardManager__StopEffectScript(
         WarBoardSquareComponent__StopEffect(
           (WarBoardSquareComponent_o *)Component_srcLineSprite,
           v11->fields.effectName,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
       }
     }
@@ -29697,7 +29697,7 @@ void __fastcall WarBoardManager__TreasureResponse(
     sub_B16FFC(&Method_System_Collections_Generic_Queue_int__get_Count__, v9);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass178_0__TreasureResponse_b__0__, v10);
     sub_B16FFC(&WarBoardManager___c__DisplayClass178_0_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_20980, v12);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v12);
     byte_40F6469 = 1;
   }
   v13 = sub_B170CC(WarBoardManager___c__DisplayClass178_0_TypeInfo, response, method, v3, v4);
@@ -29706,7 +29706,7 @@ void __fastcall WarBoardManager__TreasureResponse(
     goto LABEL_13;
   *(_QWORD *)(v13 + 24) = this;
   sub_B16F98((BattleServantConfConponent_o *)(v13 + 24), (System_Int32_array **)this, v14, v15, v16, v17, v18, v19);
-  v20 = System_String__op_Equality(response, (System_String_o *)StringLiteral_20980, 0LL);
+  v20 = System_String__op_Equality(response, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL);
   treasureIds = this->fields.treasureIds;
   if ( !treasureIds )
     goto LABEL_13;
@@ -32332,10 +32332,10 @@ void __fastcall WarBoardManager__WallAttackResponse(
   if ( (byte_40F6462 & 1) == 0 )
   {
     sub_B16FFC(&WarBoardManager_TypeInfo, result);
-    sub_B16FFC(&StringLiteral_20980, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v5);
     byte_40F6462 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     if ( (BYTE3(WarBoardManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !WarBoardManager_TypeInfo->_2.cctor_finished )
@@ -32985,7 +32985,7 @@ void __fastcall WarBoardManager___ChangeTurn_b__349_3(WarBoardManager_o *this, c
   if ( (byte_40F652D & 1) == 0 )
   {
     sub_B16FFC(&WarBoardManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10633, v3);
+    sub_B16FFC(&StringLiteral_10633/*"PlayBgmForPlaying"*/, v3);
     byte_40F652D = 1;
   }
   v4 = WarBoardManager_TypeInfo;
@@ -32997,7 +32997,7 @@ void __fastcall WarBoardManager___ChangeTurn_b__349_3(WarBoardManager_o *this, c
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10633,
+    (System_String_o *)StringLiteral_10633/*"PlayBgmForPlaying"*/,
     v4->static_fields->START_BGM_FADEOUT_TIME,
     0LL);
 }
@@ -34343,7 +34343,7 @@ System_String_o *__fastcall WarBoardManager__getServantVoiceName(
   if ( (byte_40F6488 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&svtId);
-    sub_B16FFC(&StringLiteral_12684, v9);
+    sub_B16FFC(&StringLiteral_12684/*"Servants_{0}"*/, v9);
     byte_40F6488 = 1;
   }
   SvtVoiceId = ServantVoiceMaster__getSvtVoiceId(svtId, 0LL);
@@ -34358,7 +34358,7 @@ System_String_o *__fastcall WarBoardManager__getServantVoiceName(
     return 0LL;
   v15 = v12;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
-  return System_String__Format((System_String_o *)StringLiteral_12684, v13, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_12684/*"Servants_{0}"*/, v13, 0LL);
 }
 
 
@@ -35951,7 +35951,7 @@ bool __fastcall WarBoardManager__InitPartyMenu_d__432__MoveNext(
     sub_B16FFC(&WarBoardManager___c__DisplayClass432_0_TypeInfo, v21);
     sub_B16FFC(&WarBoardManager___c_TypeInfo, v22);
     sub_B16FFC(&UnityEngine_WaitUntil_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_15358, v24);
+    sub_B16FFC(&StringLiteral_15358/*"WarBoardPartyMenu"*/, v24);
     byte_40F7B33 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -35966,7 +35966,7 @@ bool __fastcall WarBoardManager__InitPartyMenu_d__432__MoveNext(
       goto LABEL_39;
     Object_WarBoardWaitTimeSetting = AssetData__GetObject_WarBoardWaitTimeSetting_(
                                        partyOrganizationAssetData,
-                                       (System_String_o *)StringLiteral_15358,
+                                       (System_String_o *)StringLiteral_15358/*"WarBoardPartyMenu"*/,
                                        (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     uiRoot = _4__this->fields.uiRoot;
     v110 = (UILabel_o *)Object_WarBoardWaitTimeSetting;
@@ -36434,16 +36434,16 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
     sub_B16FFC(&Method_WarBoardManager_HideServantDetailPopup__, v17);
     sub_B16FFC(&Method_WarBoardManager__InitializeOnPartOfPopupControl_b__492_0__, v18);
     sub_B16FFC(&Method_WarBoardManager__InitializeOnPartOfPopupControl_b__492_1__, v19);
-    sub_B16FFC(&StringLiteral_12814, v20);
-    sub_B16FFC(&StringLiteral_12815, v21);
-    sub_B16FFC(&StringLiteral_4198, v22);
-    sub_B16FFC(&StringLiteral_4266, v23);
-    sub_B16FFC(&StringLiteral_13129, v24);
-    sub_B16FFC(&StringLiteral_12657, v25);
-    sub_B16FFC(&StringLiteral_5977, v26);
-    sub_B16FFC(&StringLiteral_4161, v27);
-    sub_B16FFC(&StringLiteral_4243, v28);
-    sub_B16FFC(&StringLiteral_12816, v29);
+    sub_B16FFC(&StringLiteral_12814/*"SimplePopup"*/, v20);
+    sub_B16FFC(&StringLiteral_12815/*"SimplePopupElementBuff"*/, v21);
+    sub_B16FFC(&StringLiteral_4198/*"ConfWindowServant"*/, v22);
+    sub_B16FFC(&StringLiteral_4266/*"ContinueConfirmPopup"*/, v23);
+    sub_B16FFC(&StringLiteral_13129/*"SwapConfirmPopup"*/, v24);
+    sub_B16FFC(&StringLiteral_12657/*"ServantEquipSimpleDialog"*/, v25);
+    sub_B16FFC(&StringLiteral_5977/*"EnemyConfWindowServant"*/, v26);
+    sub_B16FFC(&StringLiteral_4161/*"CommonMiniPopup"*/, v27);
+    sub_B16FFC(&StringLiteral_4243/*"ConsumedPieceActionPointPopup"*/, v28);
+    sub_B16FFC(&StringLiteral_12816/*"SimplePopupElementServant"*/, v29);
     byte_40F7B34 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -36465,7 +36465,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     Object_WarBoardWaitTimeSetting = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                               commonAssetData,
-                                                              (System_String_o *)StringLiteral_12816,
+                                                              (System_String_o *)StringLiteral_12816/*"SimplePopupElementServant"*/,
                                                               (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     _4__this->fields.simplePopupElementServantPrefab = (struct UnityEngine_GameObject_o *)Object_WarBoardWaitTimeSetting;
     sub_B16F98(
@@ -36482,7 +36482,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     v42 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                    v41,
-                                   (System_String_o *)StringLiteral_12815,
+                                   (System_String_o *)StringLiteral_12815/*"SimplePopupElementBuff"*/,
                                    (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     _4__this->fields.simplePopupElementBuffPrefab = (struct UnityEngine_GameObject_o *)v42;
     sub_B16F98(
@@ -36499,7 +36499,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     v50 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                    v49,
-                                   (System_String_o *)StringLiteral_12814,
+                                   (System_String_o *)StringLiteral_12814/*"SimplePopup"*/,
                                    (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     _4__this->fields.simplePopupPrefab = (struct UnityEngine_GameObject_o *)v50;
     sub_B16F98((BattleServantConfConponent_o *)&_4__this->fields.simplePopupPrefab, v50, v51, v52, v53, v54, v55, v56);
@@ -36508,7 +36508,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     v58 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                    v57,
-                                   (System_String_o *)StringLiteral_12657,
+                                   (System_String_o *)StringLiteral_12657/*"ServantEquipSimpleDialog"*/,
                                    (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     _4__this->fields.servantEquipSimpleDialogPrefab = (struct UnityEngine_GameObject_o *)v58;
     sub_B16F98(
@@ -36525,7 +36525,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     v66 = AssetData__GetObject_WarBoardWaitTimeSetting_(
             v65,
-            (System_String_o *)StringLiteral_12814,
+            (System_String_o *)StringLiteral_12814/*"SimplePopup"*/,
             (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     uiRoot = _4__this->fields.uiRoot;
     v68 = (UILabel_o *)v66;
@@ -36564,7 +36564,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     v79 = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                          v78,
-                         (System_String_o *)StringLiteral_4198,
+                         (System_String_o *)StringLiteral_4198/*"ConfWindowServant"*/,
                          (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     v80 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_UILabel_(
                                         v79,
@@ -36616,7 +36616,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     v103 = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                           v102,
-                          (System_String_o *)StringLiteral_5977,
+                          (System_String_o *)StringLiteral_5977/*"EnemyConfWindowServant"*/,
                           (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     v104 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_UILabel_(
                                          v103,
@@ -36676,7 +36676,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     v127 = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                           v126,
-                          (System_String_o *)StringLiteral_4161,
+                          (System_String_o *)StringLiteral_4161/*"CommonMiniPopup"*/,
                           (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     v128 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_UILabel_(
                                          v127,
@@ -36708,7 +36708,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     v138 = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                           v137,
-                          (System_String_o *)StringLiteral_4243,
+                          (System_String_o *)StringLiteral_4243/*"ConsumedPieceActionPointPopup"*/,
                           (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     v139 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_UILabel_(
                                          v138,
@@ -36740,7 +36740,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     v149 = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                           v148,
-                          (System_String_o *)StringLiteral_13129,
+                          (System_String_o *)StringLiteral_13129/*"SwapConfirmPopup"*/,
                           (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     v150 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_UILabel_(
                                          v149,
@@ -36772,7 +36772,7 @@ bool __fastcall WarBoardManager__InitializeOnPartOfPopupControl_d__492__MoveNext
       goto LABEL_47;
     v160 = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                           v159,
-                          (System_String_o *)StringLiteral_4266,
+                          (System_String_o *)StringLiteral_4266/*"ContinueConfirmPopup"*/,
                           (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     v161 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_UILabel_(
                                          v160,
@@ -40771,8 +40771,8 @@ void __fastcall WarBoardManager___c__DisplayClass262_0___AddEventTaskHighlightSq
     sub_B16FFC(&System_Collections_Generic_IEnumerator_WarBoardSquareData__TypeInfo, v8);
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v9);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass262_0__AddEventTaskHighlightSquareIndex_b__1__, v10);
-    sub_B16FFC(&StringLiteral_4160, v11);
-    sub_B16FFC(&StringLiteral_7137, v12);
+    sub_B16FFC(&StringLiteral_4160/*"CommonFocus"*/, v11);
+    sub_B16FFC(&StringLiteral_7137/*"Highlight_"*/, v12);
     byte_40F7AFE = 1;
   }
   entity = this->fields.entity;
@@ -40786,7 +40786,7 @@ void __fastcall WarBoardManager___c__DisplayClass262_0___AddEventTaskHighlightSq
   v15 = this->fields.entity;
   if ( !v15 )
     goto LABEL_49;
-  Effect = WarBoardEventScriptEntity__GetEffect(v15, (System_String_o *)StringLiteral_4160, 0LL);
+  Effect = WarBoardEventScriptEntity__GetEffect(v15, (System_String_o *)StringLiteral_4160/*"CommonFocus"*/, 0LL);
   if ( !this->fields.entity )
     goto LABEL_49;
   v17 = Effect;
@@ -40902,7 +40902,7 @@ LABEL_28:
       v48 = *(WarBoardSquareComponent_o **)(v47 + 48);
       if ( !v48 )
         sub_B170D4();
-      WarBoardSquareComponent__PlayEffect(v48, v17, (System_String_o *)StringLiteral_7137, 0LL);
+      WarBoardSquareComponent__PlayEffect(v48, v17, (System_String_o *)StringLiteral_7137/*"Highlight_"*/, 0LL);
     }
     else
     {
@@ -40911,7 +40911,7 @@ LABEL_28:
       v49 = *(WarBoardSquareComponent_o **)(v47 + 48);
       if ( !v49 )
         sub_B170D4();
-      WarBoardSquareComponent__StopEffect(v49, v17, (System_String_o *)StringLiteral_7137, 0LL);
+      WarBoardSquareComponent__StopEffect(v49, v17, (System_String_o *)StringLiteral_7137/*"Highlight_"*/, 0LL);
     }
   }
   v50 = *(_QWORD *)v38;
@@ -41412,7 +41412,7 @@ void __fastcall WarBoardManager___c__DisplayClass271_0___UpdateBossInfo_b__0(
 
   if ( (byte_40F7B04 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22210, method);
+    sub_B16FFC(&StringLiteral_22210/*"status"*/, method);
     byte_40F7B04 = 1;
   }
   entity = this->fields.entity;
@@ -41432,7 +41432,7 @@ void __fastcall WarBoardManager___c__DisplayClass271_0___UpdateBossInfo_b__0(
       warBoardData_k__BackingField = _4__this->fields._warBoardData_k__BackingField;
       if ( warBoardData_k__BackingField )
       {
-        WarBoardData__UpdateBossInfo(warBoardData_k__BackingField, v5, (System_String_o *)StringLiteral_22210, v8, 0LL);
+        WarBoardData__UpdateBossInfo(warBoardData_k__BackingField, v5, (System_String_o *)StringLiteral_22210/*"status"*/, v8, 0LL);
         return;
       }
     }
@@ -41784,7 +41784,7 @@ void __fastcall WarBoardManager___c__DisplayClass283_0___AddEventTaskSetUiSquare
     sub_B16FFC(&System_Collections_Generic_IEnumerator_WarBoardSquareData__TypeInfo, v8);
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v9);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass283_0__AddEventTaskSetUiSquare_b__1__, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F7B05 = 1;
   }
   entity = this->fields.entity;
@@ -41798,7 +41798,7 @@ void __fastcall WarBoardManager___c__DisplayClass283_0___AddEventTaskSetUiSquare
   v14 = this->fields.entity;
   if ( !v14 )
     goto LABEL_45;
-  UiType = WarBoardEventScriptEntity__GetUiType(v14, (System_String_o *)StringLiteral_1, 0LL);
+  UiType = WarBoardEventScriptEntity__GetUiType(v14, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !this->fields.entity )
     goto LABEL_45;
   v16 = UiType;
@@ -41982,8 +41982,8 @@ void __fastcall WarBoardManager___c__DisplayClass284_0___AddEventTaskSetUiPiece_
   if ( (byte_40F7B06 & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21382, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_21382/*"pieceIndex"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F7B06 = 1;
   }
   entity = this->fields.entity;
@@ -42005,7 +42005,7 @@ void __fastcall WarBoardManager___c__DisplayClass284_0___AddEventTaskSetUiPiece_
   v11 = this->fields.entity;
   if ( !v11 )
     goto LABEL_32;
-  IntArray = EntityScriptUtil__GetIntArray(v11->fields.script, (System_String_o *)StringLiteral_21382, 0LL, 0LL);
+  IntArray = EntityScriptUtil__GetIntArray(v11->fields.script, (System_String_o *)StringLiteral_21382/*"pieceIndex"*/, 0LL, 0LL);
   if ( !IntArray )
     return;
   v14 = IntArray;
@@ -42027,7 +42027,7 @@ LABEL_14:
   v18 = this->fields.entity;
   if ( !v18 )
     goto LABEL_32;
-  UiType = WarBoardEventScriptEntity__GetUiType(v18, (System_String_o *)StringLiteral_1, 0LL);
+  UiType = WarBoardEventScriptEntity__GetUiType(v18, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !this->fields.entity )
     goto LABEL_32;
   v20 = UiType;
@@ -43504,7 +43504,7 @@ void __fastcall WarBoardManager___c__DisplayClass345_0___CreateCommandSpellTask_
   {
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874912, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_20339, v4);
+    sub_B16FFC(&StringLiteral_20339/*"masterfigure"*/, v4);
     byte_40F7B0F = 1;
   }
   _4__this = this->fields.__4__this;
@@ -43530,7 +43530,7 @@ void __fastcall WarBoardManager___c__DisplayClass345_0___CreateCommandSpellTask_
   v10 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v9, 0LL);
   NodeFromName = (UnityEngine_Component_o *)TransformHelper__getNodeFromName(
                                               v10,
-                                              (System_String_o *)StringLiteral_20339,
+                                              (System_String_o *)StringLiteral_20339/*"masterfigure"*/,
                                               1,
                                               0LL);
   if ( !NodeFromName
@@ -43600,8 +43600,8 @@ void __fastcall WarBoardManager___c__DisplayClass345_0___CreateCommandSpellTask_
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874912, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_18106, v8);
-    sub_B16FFC(&StringLiteral_18107, v9);
+    sub_B16FFC(&StringLiteral_18106/*"ef_commandspell_{0:D2}"*/, v8);
+    sub_B16FFC(&StringLiteral_18107/*"ef_commandspell{0:D4}"*/, v9);
     byte_40F7B10 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -43613,7 +43613,7 @@ void __fastcall WarBoardManager___c__DisplayClass345_0___CreateCommandSpellTask_
   commandSpellEffect = _4__this->fields.commandSpellEffect;
   SpellImageId = UserGameEntity__get_SpellImageId(userGame, 0LL);
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &SpellImageId);
-  v14 = System_String__Format((System_String_o *)StringLiteral_18107, v13, 0LL);
+  v14 = System_String__Format((System_String_o *)StringLiteral_18107/*"ef_commandspell{0:D4}"*/, v13, 0LL);
   if ( !commandSpellEffect )
     goto LABEL_25;
   Object_WarBoardWaitTimeSetting = AssetData__GetObject_WarBoardWaitTimeSetting_(
@@ -43683,7 +43683,7 @@ LABEL_18:
   {
     v32 = 3;
     v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32);
-    v31 = System_String__Format((System_String_o *)StringLiteral_18106, v30, 0LL);
+    v31 = System_String__Format((System_String_o *)StringLiteral_18106/*"ef_commandspell_{0:D2}"*/, v30, 0LL);
     if ( !Component_srcLineSprite )
       goto LABEL_25;
     UnityEngine_Animation__Play_49744236(Component_srcLineSprite, v31, 0LL);
@@ -45605,7 +45605,7 @@ void __fastcall WarBoardManager___c__DisplayClass432_0___InitPartyMenu_b__0(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
     sub_B16FFC(&Method_WarBoardManager___c__DisplayClass432_1__InitPartyMenu_b__4__, v8);
     sub_B16FFC(&WarBoardManager___c__DisplayClass432_1_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_15343, v10);
+    sub_B16FFC(&StringLiteral_15343/*"WarBoard/PartyOrganization"*/, v10);
     byte_40F7B1F = 1;
   }
   v11 = sub_B170CC(WarBoardManager___c__DisplayClass432_1_TypeInfo, action, method, v3, v4);
@@ -45624,7 +45624,7 @@ void __fastcall WarBoardManager___c__DisplayClass432_0___InitPartyMenu_b__0(
     0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_15343, v28, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_15343/*"WarBoard/PartyOrganization"*/, v28, 1, 0LL);
 }
 
 
@@ -49311,49 +49311,49 @@ bool __fastcall WarBoardManager__coInitialize_d__73__MoveNext(
     sub_B16FFC(&WarBoardManager_TypeInfo, v107);
     sub_B16FFC(&WarBoardTaskBase___TypeInfo, v108);
     sub_B16FFC(&WarBoardWaitTime_TypeInfo, v109);
-    sub_B16FFC(&StringLiteral_5860, v110);
-    sub_B16FFC(&StringLiteral_14489, v111);
-    sub_B16FFC(&StringLiteral_11481, v112);
-    sub_B16FFC(&StringLiteral_15335, v113);
-    sub_B16FFC(&StringLiteral_10558, v114);
-    sub_B16FFC(&StringLiteral_18166, v115);
-    sub_B16FFC(&StringLiteral_6717, v116);
-    sub_B16FFC(&StringLiteral_5851, v117);
-    sub_B16FFC(&StringLiteral_10666, v118);
-    sub_B16FFC(&StringLiteral_18145, v119);
-    sub_B16FFC(&StringLiteral_15568, v120);
-    sub_B16FFC(&StringLiteral_4200, v121);
-    sub_B16FFC(&StringLiteral_5849, v122);
-    sub_B16FFC(&StringLiteral_5848, v123);
-    sub_B16FFC(&StringLiteral_15341, v124);
-    sub_B16FFC(&StringLiteral_12949, v125);
-    sub_B16FFC(&StringLiteral_15338, v126);
-    sub_B16FFC(&StringLiteral_15192, v127);
-    sub_B16FFC(&StringLiteral_18117, v128);
-    sub_B16FFC(&StringLiteral_5850, v129);
-    sub_B16FFC(&StringLiteral_3465, v130);
-    sub_B16FFC(&StringLiteral_5857, v131);
-    sub_B16FFC(&StringLiteral_12582, v132);
-    sub_B16FFC(&StringLiteral_12833, v133);
-    sub_B16FFC(&StringLiteral_5854, v134);
-    sub_B16FFC(&StringLiteral_5859, v135);
-    sub_B16FFC(&StringLiteral_8227, v136);
-    sub_B16FFC(&StringLiteral_8233, v137);
-    sub_B16FFC(&StringLiteral_6189, v138);
-    sub_B16FFC(&StringLiteral_15340, v139);
-    sub_B16FFC(&StringLiteral_2820, v140);
-    sub_B16FFC(&StringLiteral_15206, v141);
-    sub_B16FFC(&StringLiteral_7475, v142);
-    sub_B16FFC(&StringLiteral_4153, v143);
-    sub_B16FFC(&StringLiteral_15357, v144);
-    sub_B16FFC(&StringLiteral_15342, v145);
-    sub_B16FFC(&StringLiteral_18144, v146);
-    sub_B16FFC(&StringLiteral_5790, v147);
-    sub_B16FFC(&StringLiteral_2740, v148);
-    sub_B16FFC(&StringLiteral_5307, v149);
-    sub_B16FFC(&StringLiteral_5384, v150);
-    sub_B16FFC(&StringLiteral_12665, v151);
-    sub_B16FFC(&StringLiteral_8943, v152);
+    sub_B16FFC(&StringLiteral_5860/*"EffectWin"*/, v110);
+    sub_B16FFC(&StringLiteral_14489/*"Treasure"*/, v111);
+    sub_B16FFC(&StringLiteral_11481/*"Road"*/, v112);
+    sub_B16FFC(&StringLiteral_15335/*"WaitTimeSetting"*/, v113);
+    sub_B16FFC(&StringLiteral_10558/*"PartyBuffHelpUI"*/, v114);
+    sub_B16FFC(&StringLiteral_18166/*"effect/BitEffect/bit_mastercutin01"*/, v115);
+    sub_B16FFC(&StringLiteral_6717/*"Fonts/FGO-NumberFont-02"*/, v116);
+    sub_B16FFC(&StringLiteral_5851/*"EffectIconsAtlas"*/, v117);
+    sub_B16FFC(&StringLiteral_10666/*"Playing"*/, v118);
+    sub_B16FFC(&StringLiteral_18145/*"ef_states_up_01"*/, v119);
+    sub_B16FFC(&StringLiteral_15568/*"ZoomSwitchUI"*/, v120);
+    sub_B16FFC(&StringLiteral_4200/*"Configuration"*/, v121);
+    sub_B16FFC(&StringLiteral_5849/*"EffectEncount"*/, v122);
+    sub_B16FFC(&StringLiteral_5848/*"EffectAttackMasterPiece"*/, v123);
+    sub_B16FFC(&StringLiteral_15341/*"WarBoard/Common"*/, v124);
+    sub_B16FFC(&StringLiteral_12949/*"Square"*/, v125);
+    sub_B16FFC(&StringLiteral_15338/*"Wall"*/, v126);
+    sub_B16FFC(&StringLiteral_15192/*"WARBOARD_MAX_SERVANT_CACHE_COUNT"*/, v127);
+    sub_B16FFC(&StringLiteral_18117/*"ef_exercise_01"*/, v128);
+    sub_B16FFC(&StringLiteral_5850/*"EffectEnemyPhase"*/, v129);
+    sub_B16FFC(&StringLiteral_3465/*"CameraRoot"*/, v130);
+    sub_B16FFC(&StringLiteral_5857/*"EffectPlayerPhase"*/, v131);
+    sub_B16FFC(&StringLiteral_12582/*"SeSetting"*/, v132);
+    sub_B16FFC(&StringLiteral_12833/*"SkillNameInfo"*/, v133);
+    sub_B16FFC(&StringLiteral_5854/*"EffectLose"*/, v134);
+    sub_B16FFC(&StringLiteral_5859/*"EffectStart"*/, v135);
+    sub_B16FFC(&StringLiteral_8227/*"Item"*/, v136);
+    sub_B16FFC(&StringLiteral_8233/*"ItemIcons"*/, v137);
+    sub_B16FFC(&StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v138);
+    sub_B16FFC(&StringLiteral_15340/*"WarBoard/Background/{0}"*/, v139);
+    sub_B16FFC(&StringLiteral_2820/*"BoardBG"*/, v140);
+    sub_B16FFC(&StringLiteral_15206/*"WARBOARD_MIDDLE_MEMORY_SERVANT_CACHE_COUNT"*/, v141);
+    sub_B16FFC(&StringLiteral_7475/*"ImageSetAtlas"*/, v142);
+    sub_B16FFC(&StringLiteral_4153/*"CommandSpellEffect/ef_commandspell{0:D4}"*/, v143);
+    sub_B16FFC(&StringLiteral_15357/*"WarBoardObjectAtlas"*/, v144);
+    sub_B16FFC(&StringLiteral_15342/*"WarBoard/ImageSet/{0}"*/, v145);
+    sub_B16FFC(&StringLiteral_18144/*"ef_states_down_01"*/, v146);
+    sub_B16FFC(&StringLiteral_5790/*"Effect"*/, v147);
+    sub_B16FFC(&StringLiteral_2740/*"Battle"*/, v148);
+    sub_B16FFC(&StringLiteral_5307/*"DispChangeUI"*/, v149);
+    sub_B16FFC(&StringLiteral_5384/*"DropItemIconsAtlas"*/, v150);
+    sub_B16FFC(&StringLiteral_12665/*"ServantPiece"*/, v151);
+    sub_B16FFC(&StringLiteral_8943/*"MasterPiece"*/, v152);
     byte_40F7B3C = 1;
   }
   _4__this = this->fields.__4__this;
@@ -49638,13 +49638,13 @@ bool __fastcall WarBoardManager__coInitialize_d__73__MoveNext(
         v281->fields.questId,
         v281->fields.questPhase,
         0LL);
-      Value = ConstantMaster__getValue((System_String_o *)StringLiteral_15192, 0LL);
+      Value = ConstantMaster__getValue((System_String_o *)StringLiteral_15192/*"WARBOARD_MAX_SERVANT_CACHE_COUNT"*/, 0LL);
       if ( Value < 0 )
         v283 = 12;
       else
         v283 = Value;
       _4__this->fields.maxCacheServantCount = v283;
-      v284 = ConstantMaster__getValue((System_String_o *)StringLiteral_15206, 0LL);
+      v284 = ConstantMaster__getValue((System_String_o *)StringLiteral_15206/*"WARBOARD_MIDDLE_MEMORY_SERVANT_CACHE_COUNT"*/, 0LL);
       if ( v284 < 0 )
         v289 = 6;
       else
@@ -49768,13 +49768,13 @@ bool __fastcall WarBoardManager__coInitialize_d__73__MoveNext(
       if ( !v331 )
         goto LABEL_340;
       v338 = (struct System_String_array *)v331;
-      AssetStorage_29955104 = (void *)StringLiteral_15341;
-      if ( StringLiteral_15341 )
+      AssetStorage_29955104 = (void *)StringLiteral_15341/*"WarBoard/Common"*/;
+      if ( StringLiteral_15341/*"WarBoard/Common"*/ )
       {
-        AssetStorage_29955104 = (void *)sub_B170BC(StringLiteral_15341, v338->obj.klass->_1.element_class);
+        AssetStorage_29955104 = (void *)sub_B170BC(StringLiteral_15341/*"WarBoard/Common"*/, v338->obj.klass->_1.element_class);
         if ( !AssetStorage_29955104 )
           goto LABEL_343;
-        v340 = (System_Int32_array **)StringLiteral_15341;
+        v340 = (System_Int32_array **)StringLiteral_15341/*"WarBoard/Common"*/;
       }
       else
       {
@@ -49791,7 +49791,7 @@ bool __fastcall WarBoardManager__coInitialize_d__73__MoveNext(
         goto LABEL_340;
       backGroundId = warBoardEntity->fields.backGroundId;
       v942 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &backGroundId);
-      AssetStorage_29955104 = System_String__Format((System_String_o *)StringLiteral_15340, v942, 0LL);
+      AssetStorage_29955104 = System_String__Format((System_String_o *)StringLiteral_15340/*"WarBoard/Background/{0}"*/, v942, 0LL);
       v948 = (System_Int32_array **)AssetStorage_29955104;
       if ( AssetStorage_29955104 )
       {
@@ -49810,7 +49810,7 @@ bool __fastcall WarBoardManager__coInitialize_d__73__MoveNext(
         {
           imageSetId = v949->fields.imageSetId;
           v950 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &imageSetId);
-          AssetStorage_29955104 = System_String__Format((System_String_o *)StringLiteral_15342, v950, 0LL);
+          AssetStorage_29955104 = System_String__Format((System_String_o *)StringLiteral_15342/*"WarBoard/ImageSet/{0}"*/, v950, 0LL);
           v956 = (System_Int32_array **)AssetStorage_29955104;
           if ( !AssetStorage_29955104
             || (AssetStorage_29955104 = (void *)sub_B170BC(AssetStorage_29955104, v338->obj.klass->_1.element_class)) != 0LL )
@@ -49887,7 +49887,7 @@ LABEL_343:
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
       v350 = 1;
-      SoundManager__loadAudioAssetStorage((System_String_o *)StringLiteral_2740, v571, 1, 0LL);
+      SoundManager__loadAudioAssetStorage((System_String_o *)StringLiteral_2740/*"Battle"*/, v571, 1, 0LL);
       v572 = (Il2CppObject *)this->fields.__8__1;
       v577 = (System_Func_bool__o *)sub_B170CC(System_Func_bool__TypeInfo, v573, v574, v575, v576);
       System_Func_bool____ctor(
@@ -49949,7 +49949,7 @@ LABEL_343:
     case 3:
       this->fields.__1__state = -1;
       UIAtlas = (UnityEngine_Object_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                          (System_String_o *)StringLiteral_6717,
+                                          (System_String_o *)StringLiteral_6717/*"Fonts/FGO-NumberFont-02"*/,
                                           (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_GameObject___);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -50044,7 +50044,7 @@ LABEL_112:
             {
               backGroundId = v501->fields.eventId;
               v502 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &backGroundId);
-              v503 = System_String__Format((System_String_o *)StringLiteral_6189, v502, 0LL);
+              v503 = System_String__Format((System_String_o *)StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v502, 0LL);
               v504 = (Il2CppObject *)this->fields.__8__1;
               v505 = v503;
               v510 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(
@@ -50310,7 +50310,7 @@ LABEL_165:
         goto LABEL_340;
       backGroundId = UserGameEntity__get_SpellImageId(SelfUserGame, 0LL);
       v421 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &backGroundId);
-      v422 = System_String__Format((System_String_o *)StringLiteral_4153, v421, 0LL);
+      v422 = System_String__Format((System_String_o *)StringLiteral_4153/*"CommandSpellEffect/ef_commandspell{0:D4}"*/, v421, 0LL);
       v423 = (Il2CppObject *)this->fields.__8__1;
       v424 = v422;
       v429 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(
@@ -50360,7 +50360,7 @@ LABEL_99:
     case 0xA:
       this->fields.__1__state = -1;
       v652 = (System_Int32_array **)UnityEngine_Resources__Load_UIAtlas_(
-                                      (System_String_o *)StringLiteral_18166,
+                                      (System_String_o *)StringLiteral_18166/*"effect/BitEffect/bit_mastercutin01"*/,
                                       (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_GameObject___);
       if ( !_4__this )
         goto LABEL_340;
@@ -50401,7 +50401,7 @@ LABEL_99:
         goto LABEL_340;
       Object_WarBoardWaitTimeSetting = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 commonAssetData,
-                                                                (System_String_o *)StringLiteral_12949,
+                                                                (System_String_o *)StringLiteral_12949/*"Square"*/,
                                                                 (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.squarePrefab = (struct UnityEngine_GameObject_o *)Object_WarBoardWaitTimeSetting;
       sub_B16F98(
@@ -50418,7 +50418,7 @@ LABEL_99:
         goto LABEL_340;
       v679 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v678,
-                                      (System_String_o *)StringLiteral_11481,
+                                      (System_String_o *)StringLiteral_11481/*"Road"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.roadPrefab = (struct UnityEngine_GameObject_o *)v679;
       sub_B16F98((BattleServantConfConponent_o *)&_4__this->fields.roadPrefab, v679, v680, v681, v682, v683, v684, v685);
@@ -50427,7 +50427,7 @@ LABEL_99:
         goto LABEL_340;
       v687 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v686,
-                                      (System_String_o *)StringLiteral_8227,
+                                      (System_String_o *)StringLiteral_8227/*"Item"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.itemPrefab = (struct UnityEngine_GameObject_o *)v687;
       sub_B16F98((BattleServantConfConponent_o *)&_4__this->fields.itemPrefab, v687, v688, v689, v690, v691, v692, v693);
@@ -50436,7 +50436,7 @@ LABEL_99:
         goto LABEL_340;
       v695 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v694,
-                                      (System_String_o *)StringLiteral_14489,
+                                      (System_String_o *)StringLiteral_14489/*"Treasure"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.treasurePrefab = (struct UnityEngine_GameObject_o *)v695;
       sub_B16F98(
@@ -50453,7 +50453,7 @@ LABEL_99:
         goto LABEL_340;
       v703 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v702,
-                                      (System_String_o *)StringLiteral_15338,
+                                      (System_String_o *)StringLiteral_15338/*"Wall"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.wallPrefab = (struct UnityEngine_GameObject_o *)v703;
       sub_B16F98((BattleServantConfConponent_o *)&_4__this->fields.wallPrefab, v703, v704, v705, v706, v707, v708, v709);
@@ -50462,7 +50462,7 @@ LABEL_99:
         goto LABEL_340;
       v711 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v710,
-                                      (System_String_o *)StringLiteral_5790,
+                                      (System_String_o *)StringLiteral_5790/*"Effect"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectPrefab = (struct UnityEngine_GameObject_o *)v711;
       sub_B16F98(
@@ -50479,7 +50479,7 @@ LABEL_99:
         goto LABEL_340;
       v719 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v718,
-                                      (System_String_o *)StringLiteral_8943,
+                                      (System_String_o *)StringLiteral_8943/*"MasterPiece"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.masterPiecePrefab = (struct UnityEngine_GameObject_o *)v719;
       sub_B16F98(
@@ -50496,7 +50496,7 @@ LABEL_99:
         goto LABEL_340;
       v727 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v726,
-                                      (System_String_o *)StringLiteral_12665,
+                                      (System_String_o *)StringLiteral_12665/*"ServantPiece"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.servantPiecePrefab = (struct UnityEngine_GameObject_o *)v727;
       sub_B16F98(
@@ -50513,7 +50513,7 @@ LABEL_99:
         goto LABEL_340;
       v735 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v734,
-                                      (System_String_o *)StringLiteral_5859,
+                                      (System_String_o *)StringLiteral_5859/*"EffectStart"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectStartPrefab = (struct UnityEngine_GameObject_o *)v735;
       sub_B16F98(
@@ -50530,7 +50530,7 @@ LABEL_99:
         goto LABEL_340;
       v743 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v742,
-                                      (System_String_o *)StringLiteral_5857,
+                                      (System_String_o *)StringLiteral_5857/*"EffectPlayerPhase"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectPlayerTurnPrefab = (struct UnityEngine_GameObject_o *)v743;
       sub_B16F98(
@@ -50547,7 +50547,7 @@ LABEL_99:
         goto LABEL_340;
       v751 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v750,
-                                      (System_String_o *)StringLiteral_5850,
+                                      (System_String_o *)StringLiteral_5850/*"EffectEnemyPhase"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectEnemyTurnPrefab = (struct UnityEngine_GameObject_o *)v751;
       sub_B16F98(
@@ -50564,7 +50564,7 @@ LABEL_99:
         goto LABEL_340;
       v759 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v758,
-                                      (System_String_o *)StringLiteral_5860,
+                                      (System_String_o *)StringLiteral_5860/*"EffectWin"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectWinPrefab = (struct UnityEngine_GameObject_o *)v759;
       sub_B16F98(
@@ -50581,7 +50581,7 @@ LABEL_99:
         goto LABEL_340;
       v767 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v766,
-                                      (System_String_o *)StringLiteral_5854,
+                                      (System_String_o *)StringLiteral_5854/*"EffectLose"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectLosePrefab = (struct UnityEngine_GameObject_o *)v767;
       sub_B16F98(
@@ -50598,7 +50598,7 @@ LABEL_99:
         goto LABEL_340;
       v775 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v774,
-                                      (System_String_o *)StringLiteral_5848,
+                                      (System_String_o *)StringLiteral_5848/*"EffectAttackMasterPiece"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectAttackPrefab = (struct UnityEngine_GameObject_o *)v775;
       sub_B16F98(
@@ -50615,7 +50615,7 @@ LABEL_99:
         goto LABEL_340;
       v783 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v782,
-                                      (System_String_o *)StringLiteral_5849,
+                                      (System_String_o *)StringLiteral_5849/*"EffectEncount"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectEncountPrefab = (struct UnityEngine_GameObject_o *)v783;
       sub_B16F98(
@@ -50632,7 +50632,7 @@ LABEL_99:
         goto LABEL_340;
       v791 = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                            v790,
-                                           (System_String_o *)StringLiteral_8233,
+                                           (System_String_o *)StringLiteral_8233/*"ItemIcons"*/,
                                            (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       if ( !v791 )
         goto LABEL_340;
@@ -50654,7 +50654,7 @@ LABEL_99:
         goto LABEL_340;
       v800 = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                            v799,
-                                           (System_String_o *)StringLiteral_5384,
+                                           (System_String_o *)StringLiteral_5384/*"DropItemIconsAtlas"*/,
                                            (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       if ( !v800 )
         goto LABEL_340;
@@ -50676,7 +50676,7 @@ LABEL_99:
         goto LABEL_340;
       v809 = (UnityEngine_Object_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                        v808,
-                                       (System_String_o *)StringLiteral_15357,
+                                       (System_String_o *)StringLiteral_15357/*"WarBoardObjectAtlas"*/,
                                        (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -50706,7 +50706,7 @@ LABEL_202:
         goto LABEL_340;
       v818 = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                            v817,
-                                           (System_String_o *)StringLiteral_5851,
+                                           (System_String_o *)StringLiteral_5851/*"EffectIconsAtlas"*/,
                                            (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       if ( !v818 )
         goto LABEL_340;
@@ -50728,7 +50728,7 @@ LABEL_202:
         goto LABEL_340;
       v827 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v826,
-                                      (System_String_o *)StringLiteral_3465,
+                                      (System_String_o *)StringLiteral_3465/*"CameraRoot"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.cameraRootPrefab = (struct UnityEngine_GameObject_o *)v827;
       sub_B16F98(
@@ -50745,7 +50745,7 @@ LABEL_202:
         goto LABEL_340;
       v835 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v834,
-                                      (System_String_o *)StringLiteral_12582,
+                                      (System_String_o *)StringLiteral_12582/*"SeSetting"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_WarBoardSeSetting___);
       _4__this->fields.seSetting = (struct WarBoardSeSetting_o *)v835;
       sub_B16F98((BattleServantConfConponent_o *)&_4__this->fields.seSetting, v835, v836, v837, v838, v839, v840, v841);
@@ -50754,7 +50754,7 @@ LABEL_202:
         goto LABEL_340;
       v843 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                       v842,
-                                      (System_String_o *)StringLiteral_15335,
+                                      (System_String_o *)StringLiteral_15335/*"WaitTimeSetting"*/,
                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_WarBoardWaitTimeSetting___);
       _4__this->fields._WaitTimeSetting_k__BackingField = (struct WarBoardWaitTimeSetting_o *)v843;
       sub_B16F98(
@@ -50771,7 +50771,7 @@ LABEL_202:
         goto LABEL_340;
       v851 = AssetData__GetObject_WarBoardWaitTimeSetting_(
                v850,
-               (System_String_o *)StringLiteral_4200,
+               (System_String_o *)StringLiteral_4200/*"Configuration"*/,
                (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       uiRoot = _4__this->fields.uiRoot;
       v853 = (UILabel_o *)v851;
@@ -50789,7 +50789,7 @@ LABEL_202:
       v855 = (UnityEngine_GameObject_o *)v854;
       v856 = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                             _4__this->fields.commonAssetData,
-                            (System_String_o *)StringLiteral_10666,
+                            (System_String_o *)StringLiteral_10666/*"Playing"*/,
                             (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       v857 = UnityEngine_Object__Instantiate_UILabel_(
                v856,
@@ -50800,7 +50800,7 @@ LABEL_202:
       v858 = (UnityEngine_GameObject_o *)v857;
       v859 = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                             _4__this->fields.commonAssetData,
-                            (System_String_o *)StringLiteral_15568,
+                            (System_String_o *)StringLiteral_15568/*"ZoomSwitchUI"*/,
                             (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       v860 = UnityEngine_Object__Instantiate_UILabel_(
                v859,
@@ -50811,7 +50811,7 @@ LABEL_202:
       v861 = (UnityEngine_GameObject_o *)v860;
       v862 = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                             _4__this->fields.commonAssetData,
-                            (System_String_o *)StringLiteral_10558,
+                            (System_String_o *)StringLiteral_10558/*"PartyBuffHelpUI"*/,
                             (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       v863 = UnityEngine_Object__Instantiate_UILabel_(
                v862,
@@ -50822,7 +50822,7 @@ LABEL_202:
       v864 = (UnityEngine_Object_o *)v863;
       v865 = (UILabel_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                             _4__this->fields.commonAssetData,
-                            (System_String_o *)StringLiteral_5307,
+                            (System_String_o *)StringLiteral_5307/*"DispChangeUI"*/,
                             (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       v866 = UnityEngine_Object__Instantiate_UILabel_(
                v865,
@@ -51001,7 +51001,7 @@ LABEL_279:
         goto LABEL_340;
       v1003 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                        v1002,
-                                       (System_String_o *)StringLiteral_18145,
+                                       (System_String_o *)StringLiteral_18145/*"ef_states_up_01"*/,
                                        (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectOnBoardBuffPrefab = (struct UnityEngine_GameObject_o *)v1003;
       sub_B16F98(
@@ -51018,7 +51018,7 @@ LABEL_279:
         goto LABEL_340;
       v1011 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                        v1010,
-                                       (System_String_o *)StringLiteral_18144,
+                                       (System_String_o *)StringLiteral_18144/*"ef_states_down_01"*/,
                                        (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectOnBoardDeBuffPrefab = (struct UnityEngine_GameObject_o *)v1011;
       sub_B16F98(
@@ -51035,7 +51035,7 @@ LABEL_279:
         goto LABEL_340;
       v1019 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                        v1018,
-                                       (System_String_o *)StringLiteral_18117,
+                                       (System_String_o *)StringLiteral_18117/*"ef_exercise_01"*/,
                                        (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       _4__this->fields.effectOnBoardExercisePrefab = (struct UnityEngine_GameObject_o *)v1019;
       sub_B16F98(
@@ -51052,7 +51052,7 @@ LABEL_279:
         goto LABEL_340;
       v1027 = AssetData__GetObject_WarBoardWaitTimeSetting_(
                 v1026,
-                (System_String_o *)StringLiteral_12833,
+                (System_String_o *)StringLiteral_12833/*"SkillNameInfo"*/,
                 (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       v1028 = _4__this->fields.uiRoot;
       v1029 = (UILabel_o *)v1027;
@@ -51089,7 +51089,7 @@ LABEL_279:
         goto LABEL_340;
       v1040 = AssetData__GetObject_WarBoardWaitTimeSetting_(
                 backgroundAssetData,
-                (System_String_o *)StringLiteral_2820,
+                (System_String_o *)StringLiteral_2820/*"BoardBG"*/,
                 (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       if ( !_4__this->fields.boardRoot )
         goto LABEL_340;
@@ -51220,7 +51220,7 @@ LABEL_302:
         goto LABEL_340;
       v1087 = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                             imageSetAssetData,
-                                            (System_String_o *)StringLiteral_7475,
+                                            (System_String_o *)StringLiteral_7475/*"ImageSetAtlas"*/,
                                             (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       if ( !v1087 )
         goto LABEL_340;

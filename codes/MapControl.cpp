@@ -23,15 +23,15 @@ void __fastcall MapControl_AreaBoardInfo___ctor(MapControl_AreaBoardInfo_o *this
 
   if ( (byte_40F691A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F691A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.eventEnt = 0LL;
   p_eventEnt = &this->fields.eventEnt;
   sub_B16F98((BattleServantConfConponent_o *)p_eventEnt, 0LL, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Int32_array **)StringLiteral_1;
-  p_eventEnt[4] = (struct EventEntity_o *)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  p_eventEnt[4] = (struct EventEntity_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)(p_eventEnt + 4), v10, v11, v12, v13, v14, v15, v16);
 }
 

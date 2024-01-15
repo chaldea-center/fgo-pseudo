@@ -31,10 +31,10 @@ System_String_o *__fastcall CylinderPoint__GetEffectName(CylinderPoint_o *this, 
 {
   if ( (byte_40FB3DF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18112, method);
+    sub_B16FFC(&StringLiteral_18112/*"ef_difference21"*/, method);
     byte_40FB3DF = 1;
   }
-  return (System_String_o *)StringLiteral_18112;
+  return (System_String_o *)StringLiteral_18112/*"ef_difference21"*/;
 }
 
 

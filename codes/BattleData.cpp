@@ -20,32 +20,32 @@ void __fastcall BattleData___cctor(const MethodInfo *method)
   if ( (byte_40F6AD8 & 1) == 0 )
   {
     sub_B16FFC(&BattleData_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_22064, v2);
-    sub_B16FFC(&StringLiteral_21013, v3);
-    sub_B16FFC(&StringLiteral_12836, v4);
-    sub_B16FFC(&StringLiteral_13534, v5);
-    sub_B16FFC(&StringLiteral_19073, v6);
+    sub_B16FFC(&StringLiteral_22064/*"skipSkill"*/, v2);
+    sub_B16FFC(&StringLiteral_21013/*"noSkipDeadFirstIdListKey"*/, v3);
+    sub_B16FFC(&StringLiteral_12836/*"SkipDead"*/, v4);
+    sub_B16FFC(&StringLiteral_13534/*"TdConstantVel"*/, v5);
+    sub_B16FFC(&StringLiteral_19073/*"hightSpeed"*/, v6);
     byte_40F6AD8 = 1;
   }
   static_fields = BattleData_TypeInfo->static_fields;
-  v8 = StringLiteral_21013;
-  static_fields->NO_SKIP_DEAD_FIRST_ID_LIST_KEY = (struct System_String_o *)StringLiteral_21013;
+  v8 = StringLiteral_21013/*"noSkipDeadFirstIdListKey"*/;
+  static_fields->NO_SKIP_DEAD_FIRST_ID_LIST_KEY = (struct System_String_o *)StringLiteral_21013/*"noSkipDeadFirstIdListKey"*/;
   sub_B16F98(&static_fields->NO_SKIP_DEAD_FIRST_ID_LIST_KEY, v8);
   v9 = BattleData_TypeInfo->static_fields;
-  v10 = StringLiteral_22064;
-  v9->skipKey = (struct System_String_o *)StringLiteral_22064;
+  v10 = StringLiteral_22064/*"skipSkill"*/;
+  v9->skipKey = (struct System_String_o *)StringLiteral_22064/*"skipSkill"*/;
   sub_B16F98(&v9->skipKey, v10);
   v11 = BattleData_TypeInfo->static_fields;
-  v12 = StringLiteral_19073;
-  v11->speedKey = (struct System_String_o *)StringLiteral_19073;
+  v12 = StringLiteral_19073/*"hightSpeed"*/;
+  v11->speedKey = (struct System_String_o *)StringLiteral_19073/*"hightSpeed"*/;
   sub_B16F98(&v11->speedKey, v12);
   v13 = BattleData_TypeInfo->static_fields;
-  v14 = StringLiteral_13534;
-  v13->TdCvKey = (struct System_String_o *)StringLiteral_13534;
+  v14 = StringLiteral_13534/*"TdConstantVel"*/;
+  v13->TdCvKey = (struct System_String_o *)StringLiteral_13534/*"TdConstantVel"*/;
   sub_B16F98(&v13->TdCvKey, v14);
   v15 = BattleData_TypeInfo->static_fields;
-  v16 = StringLiteral_12836;
-  v15->SkipDeadKey = (struct System_String_o *)StringLiteral_12836;
+  v16 = StringLiteral_12836/*"SkipDead"*/;
+  v15->SkipDeadKey = (struct System_String_o *)StringLiteral_12836/*"SkipDead"*/;
   sub_B16F98(&v15->SkipDeadKey, v16);
 }
 
@@ -858,13 +858,13 @@ void __fastcall BattleData__AddServantVoicePlayed(
   {
     sub_B16FFC(&Method_DataManager_GetMaster_VoiceMaster___, *(_QWORD *)&svtId);
     sub_B16FFC(&DataManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_15842, v8);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v8);
     byte_40F6A07 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
   Master_WarQuestSelectionMaster = (VoiceMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_VoiceMaster___);
-  v10 = System_String__Concat_43743732((System_String_o *)StringLiteral_15842, labelName, 0LL);
+  v10 = System_String__Concat_43743732((System_String_o *)StringLiteral_15842/*"_"*/, labelName, 0LL);
   if ( !Master_WarQuestSelectionMaster )
     sub_B170D4();
   FlagRequestNumber = VoiceMaster__getFlagRequestNumber(Master_WarQuestSelectionMaster, svtId, v10, 0, 0LL);
@@ -912,7 +912,7 @@ void __fastcall BattleData__AddServantVoicePlayed_18712544(
     sub_B16FFC(&Method_System_Collections_Generic_HashSet_string__Add__, v11);
     sub_B16FFC(&int_TypeInfo, v12);
     sub_B16FFC(&long_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_23493, v14);
+    sub_B16FFC(&StringLiteral_23493/*"{0},{1}"*/, v14);
     byte_40F6A08 = 1;
   }
   if ( skipVoiceOffCheck || !BattleData__IsVoiceOffSvt(this, svtId, *(const MethodInfo **)&condValue) )
@@ -923,7 +923,7 @@ void __fastcall BattleData__AddServantVoicePlayed_18712544(
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27);
       v28 = condValue;
       v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
-      v17 = System_String__Format_43739268((System_String_o *)StringLiteral_23493, v15, v16, 0LL);
+      v17 = System_String__Format_43739268((System_String_o *)StringLiteral_23493/*"{0},{1}"*/, v15, v16, 0LL);
       if ( this->fields.voicePlayedOver64Info )
       {
         System_Collections_Generic_HashSet_WarBoardAIRoute_RouteData___Add(
@@ -3057,19 +3057,19 @@ void __fastcall BattleData__DeleteContinueData(const MethodInfo *method)
   {
     sub_B16FFC(&BattleData_TypeInfo, v1);
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_5049, v3);
-    sub_B16FFC(&StringLiteral_10849, v4);
-    sub_B16FFC(&StringLiteral_3353, v5);
-    sub_B16FFC(&StringLiteral_10848, v6);
-    sub_B16FFC(&StringLiteral_3354, v7);
-    sub_B16FFC(&StringLiteral_11516, v8);
-    sub_B16FFC(&StringLiteral_3375, v9);
-    sub_B16FFC(&StringLiteral_3244, v10);
-    sub_B16FFC(&StringLiteral_10850, v11);
-    sub_B16FFC(&StringLiteral_8097, v12);
-    sub_B16FFC(&StringLiteral_11046, v13);
-    sub_B16FFC(&StringLiteral_15123, v14);
-    sub_B16FFC(&StringLiteral_2740, v15);
+    sub_B16FFC(&StringLiteral_5049/*"DUEL"*/, v3);
+    sub_B16FFC(&StringLiteral_10849/*"QUESTPHASEID"*/, v4);
+    sub_B16FFC(&StringLiteral_3353/*"CONTINUECOUNT"*/, v5);
+    sub_B16FFC(&StringLiteral_10848/*"QUESTID"*/, v6);
+    sub_B16FFC(&StringLiteral_3354/*"CONTINUE_BATTLE_SAVEKEY"*/, v7);
+    sub_B16FFC(&StringLiteral_11516/*"SAVEKEY_"*/, v8);
+    sub_B16FFC(&StringLiteral_3375/*"CONTINUE_ITEM_SAVEKEY"*/, v9);
+    sub_B16FFC(&StringLiteral_3244/*"COMMAND_SPELL_BATTLE_SAVEKEY"*/, v10);
+    sub_B16FFC(&StringLiteral_10850/*"QUESTUSEDTURNSAVEKEY"*/, v11);
+    sub_B16FFC(&StringLiteral_8097/*"IsDuelMessagePack"*/, v12);
+    sub_B16FFC(&StringLiteral_11046/*"RESERVE_BATTKE_SAVEKEY"*/, v13);
+    sub_B16FFC(&StringLiteral_15123/*"Version"*/, v14);
+    sub_B16FFC(&StringLiteral_2740/*"Battle"*/, v15);
     byte_40F6A72 = 1;
   }
   v16 = BattleData_TypeInfo;
@@ -3087,20 +3087,20 @@ void __fastcall BattleData__DeleteContinueData(const MethodInfo *method)
   EncryptedPlayerPrefs__DeleteKey(skipKey, 0LL);
   EncryptedPlayerPrefs__DeleteKey(BattleData_TypeInfo->static_fields->speedKey, 0LL);
   EncryptedPlayerPrefs__DeleteKey(BattleData_TypeInfo->static_fields->TdCvKey, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11516, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11046, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10848, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10849, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3354, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3244, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3375, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_15123, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_8097, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5049, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10848, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_2740, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10850, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3353, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11516/*"SAVEKEY_"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11046/*"RESERVE_BATTKE_SAVEKEY"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10848/*"QUESTID"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10849/*"QUESTPHASEID"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3354/*"CONTINUE_BATTLE_SAVEKEY"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3244/*"COMMAND_SPELL_BATTLE_SAVEKEY"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3375/*"CONTINUE_ITEM_SAVEKEY"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_15123/*"Version"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_8097/*"IsDuelMessagePack"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_5049/*"DUEL"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10848/*"QUESTID"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_2740/*"Battle"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10850/*"QUESTUSEDTURNSAVEKEY"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3353/*"CONTINUECOUNT"*/, 0LL);
 }
 
 
@@ -3188,8 +3188,8 @@ void __fastcall BattleData__DeleteResumeCheckPlayedMovieSaveKey(BattleData_o *th
   if ( (byte_40F6A8C & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21402, v2);
-    sub_B16FFC(&StringLiteral_21623, v3);
+    sub_B16FFC(&StringLiteral_21402/*"playWaveStartMovie"*/, v2);
+    sub_B16FFC(&StringLiteral_21623/*"rebootAlreadyPlayMovie"*/, v3);
     byte_40F6A8C = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3197,8 +3197,8 @@ void __fastcall BattleData__DeleteResumeCheckPlayedMovieSaveKey(BattleData_o *th
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_21623, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_21402, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_21623/*"rebootAlreadyPlayMovie"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_21402/*"playWaveStartMovie"*/, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -3816,7 +3816,7 @@ System_String_o *__fastcall BattleData__GetBattleUseItemParameter(const MethodIn
   if ( (byte_40F6A7A & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_2526, v2);
+    sub_B16FFC(&StringLiteral_2526/*"BATTLE_USE_ITEM_SAVEKEY"*/, v2);
     byte_40F6A7A = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3824,7 +3824,7 @@ System_String_o *__fastcall BattleData__GetBattleUseItemParameter(const MethodIn
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  return EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_2526, 0LL);
+  return EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_2526/*"BATTLE_USE_ITEM_SAVEKEY"*/, 0LL);
 }
 
 
@@ -4025,7 +4025,7 @@ int32_t __fastcall BattleData__GetContinueItemId(const MethodInfo *method)
   if ( (byte_40F6A78 & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_3375, v2);
+    sub_B16FFC(&StringLiteral_3375/*"CONTINUE_ITEM_SAVEKEY"*/, v2);
     byte_40F6A78 = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4033,7 +4033,7 @@ int32_t __fastcall BattleData__GetContinueItemId(const MethodInfo *method)
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  return EncryptedPlayerPrefs__GetInt_33186652((System_String_o *)StringLiteral_3375, 0, 0LL);
+  return EncryptedPlayerPrefs__GetInt_33186652((System_String_o *)StringLiteral_3375/*"CONTINUE_ITEM_SAVEKEY"*/, 0, 0LL);
 }
 
 
@@ -5697,7 +5697,7 @@ System_Collections_Generic_Dictionary_int__int__o *__fastcall BattleData__GetSav
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, v6);
     sub_B16FFC(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v7);
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_2522, v9);
+    sub_B16FFC(&StringLiteral_2522/*"BATTLE_SVT_COMMON_FLAG"*/, v9);
     byte_40F6ABD = 1;
   }
   *(_QWORD *)result = 0LL;
@@ -5715,7 +5715,7 @@ System_Collections_Generic_Dictionary_int__int__o *__fastcall BattleData__GetSav
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  String = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_2522, 0LL);
+  String = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_2522/*"BATTLE_SVT_COMMON_FLAG"*/, 0LL);
   v13 = sub_B17014(char___TypeInfo, 1LL, v12);
   if ( !v13 )
     goto LABEL_26;
@@ -6661,11 +6661,11 @@ void __fastcall BattleData__Initialize(BattleData_o *this, const MethodInfo *met
     sub_B16FFC(&System_Collections_Generic_List_BattleBoostItemInfoData__TypeInfo, v25);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v26);
     sub_B16FFC(&UseSkillEachTurn_TypeInfo, v27);
-    sub_B16FFC(&StringLiteral_4149, v28);
-    sub_B16FFC(&StringLiteral_11492, v29);
-    sub_B16FFC(&StringLiteral_14620, v30);
-    sub_B16FFC(&StringLiteral_8551, v31);
-    sub_B16FFC(&StringLiteral_10602, v32);
+    sub_B16FFC(&StringLiteral_4149/*"CommandFSM"*/, v28);
+    sub_B16FFC(&StringLiteral_11492/*"RootFSM"*/, v29);
+    sub_B16FFC(&StringLiteral_14620/*"UIFSM"*/, v30);
+    sub_B16FFC(&StringLiteral_8551/*"Logic"*/, v31);
+    sub_B16FFC(&StringLiteral_10602/*"Performance"*/, v32);
     byte_40F6A0B = 1;
   }
   fsm = (UnityEngine_Object_o *)this->fields.fsm;
@@ -6682,7 +6682,7 @@ void __fastcall BattleData__Initialize(BattleData_o *this, const MethodInfo *met
     v35 = PlayMakerFSM__get_Fsm(v34, 0LL);
     if ( !v35 )
       goto LABEL_45;
-    FsmGameObject = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v35, (System_String_o *)StringLiteral_4149, 0LL);
+    FsmGameObject = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v35, (System_String_o *)StringLiteral_4149/*"CommandFSM"*/, 0LL);
     perf = this->fields.perf;
     if ( !perf )
       goto LABEL_45;
@@ -6700,7 +6700,7 @@ void __fastcall BattleData__Initialize(BattleData_o *this, const MethodInfo *met
     v42 = PlayMakerFSM__get_Fsm(v41, 0LL);
     if ( !v42 )
       goto LABEL_45;
-    v43 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v42, (System_String_o *)StringLiteral_8551, 0LL);
+    v43 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v42, (System_String_o *)StringLiteral_8551/*"Logic"*/, 0LL);
     if ( !this->fields.logic )
       goto LABEL_45;
     v44 = v43;
@@ -6714,7 +6714,7 @@ void __fastcall BattleData__Initialize(BattleData_o *this, const MethodInfo *met
     v47 = PlayMakerFSM__get_Fsm(v46, 0LL);
     if ( !v47 )
       goto LABEL_45;
-    v48 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v47, (System_String_o *)StringLiteral_10602, 0LL);
+    v48 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v47, (System_String_o *)StringLiteral_10602/*"Performance"*/, 0LL);
     if ( !this->fields.perf )
       goto LABEL_45;
     v49 = v48;
@@ -6728,7 +6728,7 @@ void __fastcall BattleData__Initialize(BattleData_o *this, const MethodInfo *met
     v52 = PlayMakerFSM__get_Fsm(v51, 0LL);
     if ( !v52 )
       goto LABEL_45;
-    v53 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v52, (System_String_o *)StringLiteral_11492, 0LL);
+    v53 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v52, (System_String_o *)StringLiteral_11492/*"RootFSM"*/, 0LL);
     if ( !this->fields.rootfsm )
       goto LABEL_45;
     v54 = v53;
@@ -6742,7 +6742,7 @@ void __fastcall BattleData__Initialize(BattleData_o *this, const MethodInfo *met
     v57 = PlayMakerFSM__get_Fsm(v56, 0LL);
     if ( !v57 )
       goto LABEL_45;
-    v58 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v57, (System_String_o *)StringLiteral_14620, 0LL);
+    v58 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v57, (System_String_o *)StringLiteral_14620/*"UIFSM"*/, 0LL);
     v59 = this->fields.perf;
     if ( !v59 )
       goto LABEL_45;
@@ -8496,11 +8496,11 @@ bool __fastcall BattleData__IsRetryableQuestPhase(BattleData_o *this, const Meth
     sub_B16FFC(&Method_DataManager_GetMasterData_UserQuestMaster___, v3);
     sub_B16FFC(&NetworkManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_6342, v6);
+    sub_B16FFC(&StringLiteral_6342/*"FLAG_BATTLE_RETRY_UNAVAILABLE"*/, v6);
     byte_40F6AB8 = 1;
   }
   entity = 0LL;
-  if ( ConstantMaster__getValue((System_String_o *)StringLiteral_6342, 0LL) > 0 )
+  if ( ConstantMaster__getValue((System_String_o *)StringLiteral_6342/*"FLAG_BATTLE_RETRY_UNAVAILABLE"*/, 0LL) > 0 )
     return 0;
   data = this->fields.data;
   if ( !data )
@@ -9270,8 +9270,8 @@ void __fastcall BattleData__PartsIntoTheBody(BattleData_o *this, const MethodInf
     sub_B16FFC(&Method_System_Collections_Generic_List_BattleServantData__get_Count__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_BattleServantData__get_Item__, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_18250, v7);
-    sub_B16FFC(&StringLiteral_18249, v8);
+    sub_B16FFC(&StringLiteral_18250/*"en_Parts_Up01"*/, v7);
+    sub_B16FFC(&StringLiteral_18249/*"en_Parts_Under01"*/, v8);
     byte_40F6AA1 = 1;
   }
   if ( this->fields.isMultiTargetBattle )
@@ -9308,7 +9308,7 @@ void __fastcall BattleData__PartsIntoTheBody(BattleData_o *this, const MethodInf
       if ( !v21 )
         goto LABEL_49;
       isMultiTargetUp = BattleServantData__isMultiTargetUp(v21, 0LL);
-      v23 = &StringLiteral_18250;
+      v23 = &StringLiteral_18250/*"en_Parts_Up01"*/;
       if ( isMultiTargetUp )
         goto LABEL_20;
       v24 = this->fields.enemy_datalist;
@@ -9320,7 +9320,7 @@ void __fastcall BattleData__PartsIntoTheBody(BattleData_o *this, const MethodInf
       if ( !v25 )
         goto LABEL_49;
       isMultiTargetUnder = BattleServantData__isMultiTargetUnder(v25, 0LL);
-      v23 = &StringLiteral_18249;
+      v23 = &StringLiteral_18249/*"en_Parts_Under01"*/;
       if ( isMultiTargetUnder )
       {
 LABEL_20:
@@ -9754,7 +9754,7 @@ void __fastcall BattleData__SaveBattleUseItemParameter(System_String_o *param, b
   if ( (byte_40F6A7B & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, save);
-    sub_B16FFC(&StringLiteral_2526, v5);
+    sub_B16FFC(&StringLiteral_2526/*"BATTLE_USE_ITEM_SAVEKEY"*/, v5);
     byte_40F6A7B = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -9762,7 +9762,7 @@ void __fastcall BattleData__SaveBattleUseItemParameter(System_String_o *param, b
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  EncryptedPlayerPrefs__SetString((System_String_o *)StringLiteral_2526, param, 0LL);
+  EncryptedPlayerPrefs__SetString((System_String_o *)StringLiteral_2526/*"BATTLE_USE_ITEM_SAVEKEY"*/, param, 0LL);
   if ( save )
     UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -9776,7 +9776,7 @@ void __fastcall BattleData__SaveContinueItemId(int32_t continueItemId, bool save
   if ( (byte_40F6A79 & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, save);
-    sub_B16FFC(&StringLiteral_3375, v5);
+    sub_B16FFC(&StringLiteral_3375/*"CONTINUE_ITEM_SAVEKEY"*/, v5);
     byte_40F6A79 = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -9784,7 +9784,7 @@ void __fastcall BattleData__SaveContinueItemId(int32_t continueItemId, bool save
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_3375, continueItemId, 0LL);
+  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_3375/*"CONTINUE_ITEM_SAVEKEY"*/, continueItemId, 0LL);
   if ( save )
     UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -9836,7 +9836,7 @@ void __fastcall BattleData__SaveNoSkipDeadFirstIdList(BattleData_o *this, const 
     sub_B16FFC(&Method_System_Collections_Generic_List_int__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__get_Count__, v11);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_698, v13);
+    sub_B16FFC(&StringLiteral_698/*","*/, v13);
     byte_40F6A16 = 1;
   }
   memset(&v32, 0, sizeof(v32));
@@ -9903,7 +9903,7 @@ void __fastcall BattleData__SaveNoSkipDeadFirstIdList(BattleData_o *this, const 
     if ( !v22 )
       sub_B170D4();
     System_Text_StringBuilder__Append_41917580(v22, v32.fields.current, 0LL);
-    System_Text_StringBuilder__Append_41914240(v22, (System_String_o *)StringLiteral_698, 0LL);
+    System_Text_StringBuilder__Append_41914240(v22, (System_String_o *)StringLiteral_698/*","*/, 0LL);
   }
   v30[0] = 180;
   v23 = ++v31;
@@ -9994,18 +9994,18 @@ void __fastcall BattleData__SaveServantCommonFlag(int32_t servantId, int32_t com
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Key__, v14);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__, v15);
     sub_B16FFC(&string_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_23535, v17);
-    sub_B16FFC(&StringLiteral_2522, v18);
+    sub_B16FFC(&StringLiteral_23535/*"{0}:{1},"*/, v17);
+    sub_B16FFC(&StringLiteral_2522/*"BATTLE_SVT_COMMON_FLAG"*/, v18);
     byte_40F6ABC = 1;
   }
   memset(&v34, 0, 32);
-  v19 = (System_String_o *)StringLiteral_23535;
+  v19 = (System_String_o *)StringLiteral_23535/*"{0}:{1},"*/;
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  if ( EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_2522, 0LL) )
+  if ( EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_2522/*"BATTLE_SVT_COMMON_FLAG"*/, 0LL) )
   {
     inited = BattleData_TypeInfo;
     if ( (BYTE3(BattleData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BattleData_TypeInfo->_2.cctor_finished )
@@ -10060,7 +10060,7 @@ void __fastcall BattleData__SaveServantCommonFlag(int32_t servantId, int32_t com
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    v26 = (System_String_o *)StringLiteral_2522;
+    v26 = (System_String_o *)StringLiteral_2522/*"BATTLE_SVT_COMMON_FLAG"*/;
     v27 = Empty;
   }
   else
@@ -10075,7 +10075,7 @@ void __fastcall BattleData__SaveServantCommonFlag(int32_t servantId, int32_t com
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    v26 = (System_String_o *)StringLiteral_2522;
+    v26 = (System_String_o *)StringLiteral_2522/*"BATTLE_SVT_COMMON_FLAG"*/;
     v27 = v25;
   }
   EncryptedPlayerPrefs__SetString(v26, v27, 0LL);
@@ -10349,18 +10349,18 @@ void __fastcall BattleData__SaveTurnData(BattleData_o *this, const MethodInfo *m
     sub_B16FFC(&string___TypeInfo, v32);
     sub_B16FFC(&Method_BattleData___c__SaveTurnData_b__520_0__, v33);
     sub_B16FFC(&BattleData___c_TypeInfo, v34);
-    sub_B16FFC(&StringLiteral_22376, v35);
-    sub_B16FFC(&StringLiteral_5049, v36);
-    sub_B16FFC(&StringLiteral_22973, v37);
-    sub_B16FFC(&StringLiteral_10848, v38);
-    sub_B16FFC(&StringLiteral_11516, v39);
-    sub_B16FFC(&StringLiteral_21301, v40);
-    sub_B16FFC(&StringLiteral_21876, v41);
-    sub_B16FFC(&StringLiteral_8097, v42);
-    sub_B16FFC(&StringLiteral_18014, v43);
-    sub_B16FFC(&StringLiteral_957, v44);
-    sub_B16FFC(&StringLiteral_15123, v45);
-    sub_B16FFC(&StringLiteral_2740, v46);
+    sub_B16FFC(&StringLiteral_22376/*"svtId"*/, v35);
+    sub_B16FFC(&StringLiteral_5049/*"DUEL"*/, v36);
+    sub_B16FFC(&StringLiteral_22973/*"userSvtId"*/, v37);
+    sub_B16FFC(&StringLiteral_10848/*"QUESTID"*/, v38);
+    sub_B16FFC(&StringLiteral_11516/*"SAVEKEY_"*/, v39);
+    sub_B16FFC(&StringLiteral_21301/*"p_svlist"*/, v40);
+    sub_B16FFC(&StringLiteral_21876/*"seqId"*/, v41);
+    sub_B16FFC(&StringLiteral_8097/*"IsDuelMessagePack"*/, v42);
+    sub_B16FFC(&StringLiteral_18014/*"e_svlist"*/, v43);
+    sub_B16FFC(&StringLiteral_957/*"0.6.17.1"*/, v44);
+    sub_B16FFC(&StringLiteral_15123/*"Version"*/, v45);
+    sub_B16FFC(&StringLiteral_2740/*"Battle"*/, v46);
     byte_40F6A85 = 1;
   }
   v230 = 0;
@@ -10715,7 +10715,7 @@ LABEL_193:
         *(Il2CppClass **)((char *)&p_svlist_MP->obj.klass + v138) = (Il2CppClass *)v142;
         sub_B16F98((char *)p_svlist_MP + v138, v142);
         v143 = System_Int32__ToString((int)v140 + 16, 0LL);
-        v144 = System_String__Concat_43743732((System_String_o *)StringLiteral_21301, v143, 0LL);
+        v144 = System_String__Concat_43743732((System_String_o *)StringLiteral_21301/*"p_svlist"*/, v143, 0LL);
         if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
         {
@@ -10776,7 +10776,7 @@ LABEL_193:
         *(Il2CppClass **)((char *)&v157->obj.klass + v154) = (Il2CppClass *)v158;
         sub_B16F98((char *)v157 + v154, v158);
         v159 = System_Int32__ToString((int32_t)&v230, 0LL);
-        v160 = System_String__Concat_43743732((System_String_o *)StringLiteral_18014, v159, 0LL);
+        v160 = System_String__Concat_43743732((System_String_o *)StringLiteral_18014/*"e_svlist"*/, v159, 0LL);
         if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
         {
@@ -10878,7 +10878,7 @@ LABEL_193:
       firstNpPlayUserSvtIdList = v228->fields.firstNpPlayUserSvtIdList;
       Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                *(System_Collections_Generic_Dictionary_Type__IStoreExtension__o **)((char *)&items->obj.klass + v180),
-               (System_Type_o *)StringLiteral_22973,
+               (System_Type_o *)StringLiteral_22973/*"userSvtId"*/,
                (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !Item )
         goto LABEL_193;
@@ -10901,7 +10901,7 @@ LABEL_193:
       firstNpPlaySeqIdList = v228->fields.firstNpPlaySeqIdList;
       v189 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                v184,
-               (System_Type_o *)StringLiteral_21876,
+               (System_Type_o *)StringLiteral_21876/*"seqId"*/,
                (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !firstNpPlaySeqIdList || !v189 )
         goto LABEL_193;
@@ -10914,7 +10914,7 @@ LABEL_193:
       firstNpPlaySvtIdList = v228->fields.firstNpPlaySvtIdList;
       v189 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                v184,
-               (System_Type_o *)StringLiteral_22376,
+               (System_Type_o *)StringLiteral_22376/*"svtId"*/,
                (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !firstNpPlaySvtIdList || !v189 )
         goto LABEL_193;
@@ -11038,25 +11038,25 @@ LABEL_196:
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    EncryptedPlayerPrefs__SetString((System_String_o *)StringLiteral_5049, v219, 0LL);
+    EncryptedPlayerPrefs__SetString((System_String_o *)StringLiteral_5049/*"DUEL"*/, v219, 0LL);
     v220 = v229->fields.battle_ent;
     if ( !v220 )
       goto LABEL_193;
-    EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_10848, v220->fields.questId, 0LL);
-    EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_8097, 1, 0LL);
-    EncryptedPlayerPrefs__SetString((System_String_o *)StringLiteral_15123, (System_String_o *)StringLiteral_957, 0LL);
+    EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_10848/*"QUESTID"*/, v220->fields.questId, 0LL);
+    EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_8097/*"IsDuelMessagePack"*/, 1, 0LL);
+    EncryptedPlayerPrefs__SetString((System_String_o *)StringLiteral_15123/*"Version"*/, (System_String_o *)StringLiteral_957/*"0.6.17.1"*/, 0LL);
     v221 = v229->fields.battle_ent;
     if ( !v221 )
       goto LABEL_193;
-    EncryptedPlayerPrefs__SetLong((System_String_o *)StringLiteral_11516, v221->fields.id, 0LL);
-    if ( EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_2740, 0LL) )
+    EncryptedPlayerPrefs__SetLong((System_String_o *)StringLiteral_11516/*"SAVEKEY_"*/, v221->fields.id, 0LL);
+    if ( EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_2740/*"Battle"*/, 0LL) )
     {
       if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
       }
-      EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_2740, 0LL);
+      EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_2740/*"Battle"*/, 0LL);
     }
     v223 = v229->fields.waveClearNeedTurn;
     if ( (BYTE3(BattleData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BattleData_TypeInfo->_2.cctor_finished )
@@ -11692,10 +11692,10 @@ void __fastcall BattleData__SubBuffExitSvt(
 
   if ( (byte_40F6A37 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12508, targetSvt);
+    sub_B16FFC(&StringLiteral_12508/*"SVT_EXIT_PT_BUFF_INDIVI"*/, targetSvt);
     byte_40F6A37 = 1;
   }
-  BattleData__SubBuffTarget(this, (System_String_o *)StringLiteral_12508, targetSvt, v3);
+  BattleData__SubBuffTarget(this, (System_String_o *)StringLiteral_12508/*"SVT_EXIT_PT_BUFF_INDIVI"*/, targetSvt, v3);
 }
 
 
@@ -11755,10 +11755,10 @@ void __fastcall BattleData__SubBuffFromPT_18778888(
 
   if ( (byte_40F6A36 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12354, targetSvt);
+    sub_B16FFC(&StringLiteral_12354/*"SUB_PT_BUFF_INDIVI"*/, targetSvt);
     byte_40F6A36 = 1;
   }
-  BattleData__SubBuff(this, (System_String_o *)StringLiteral_12354, targetSvt, v3);
+  BattleData__SubBuff(this, (System_String_o *)StringLiteral_12354/*"SUB_PT_BUFF_INDIVI"*/, targetSvt, v3);
 }
 
 
@@ -12706,11 +12706,11 @@ bool __fastcall BattleData__checkAndGetOverrideBgm(
 
   if ( (byte_40F6A05 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, bgmName);
+    sub_B16FFC(&StringLiteral_1/*""*/, bgmName);
     byte_40F6A05 = 1;
   }
-  *bgmName = (System_String_o *)StringLiteral_1;
-  sub_B16F98(bgmName, StringLiteral_1);
+  *bgmName = (System_String_o *)StringLiteral_1/*""*/;
+  sub_B16F98(bgmName, StringLiteral_1/*""*/);
   overwriteBgmData_k__BackingField = this->fields._overwriteBgmData_k__BackingField;
   if ( !overwriteBgmData_k__BackingField
     || System_String__IsNullOrEmpty(overwriteBgmData_k__BackingField->fields._BgmName_k__BackingField, 0LL) )
@@ -12809,12 +12809,12 @@ bool __fastcall BattleData__checkEnablePlaySpeedOneFromFieldIdList(
     sub_B16FFC(&Method_System_Collections_Generic_List_string__Add__, *(_QWORD *)&id);
     sub_B16FFC(&Method_System_Collections_Generic_List_string__get_Count__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_string__get_Item__, v6);
-    sub_B16FFC(&StringLiteral_1223, v7);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v7);
     byte_40F6A04 = 1;
   }
   v8 = System_Int32__ToString((int32_t)&v18, 0LL);
   v9 = System_Int32__ToString((int32_t)&v17, 0LL);
-  v10 = System_String__Concat_43746016(v8, (System_String_o *)StringLiteral_1223, v9, 0LL);
+  v10 = System_String__Concat_43746016(v8, (System_String_o *)StringLiteral_1223/*":"*/, v9, 0LL);
   playedSpeedOneFieldIdList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this->fields.playedSpeedOneFieldIdList;
   if ( !playedSpeedOneFieldIdList )
 LABEL_11:
@@ -12942,7 +12942,7 @@ bool __fastcall BattleData__checkServantVoicePlayed(
     sub_B16FFC(&Method_System_Collections_Generic_HashSet_string__Contains__, v8);
     sub_B16FFC(&int_TypeInfo, v9);
     sub_B16FFC(&long_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_23493, v11);
+    sub_B16FFC(&StringLiteral_23493/*"{0},{1}"*/, v11);
     byte_40F6A0A = 1;
   }
   if ( condValue > 63 )
@@ -12951,7 +12951,7 @@ bool __fastcall BattleData__checkServantVoicePlayed(
     v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
     v23 = condValue;
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23);
-    v14 = System_String__Format_43739268((System_String_o *)StringLiteral_23493, v12, v13, 0LL);
+    v14 = System_String__Format_43739268((System_String_o *)StringLiteral_23493/*"{0},{1}"*/, v12, v13, 0LL);
     if ( this->fields.voicePlayedOver64Info )
       return System_Collections_Generic_HashSet_BattleBuffData_BuffData___Contains(
                (System_Collections_Generic_HashSet_BattleBuffData_BuffData__o *)this->fields.voicePlayedOver64Info,
@@ -13011,11 +13011,11 @@ bool __fastcall BattleData__checkTurnData(BattleData_o *this, const MethodInfo *
     sub_B16FFC(&Method_DataMasterBase_BattleMaster__BattleEntity__long__GetSingleEntity__, v3);
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_10848, v6);
-    sub_B16FFC(&StringLiteral_11516, v7);
-    sub_B16FFC(&StringLiteral_7590, v8);
-    sub_B16FFC(&StringLiteral_957, v9);
-    sub_B16FFC(&StringLiteral_15123, v10);
+    sub_B16FFC(&StringLiteral_10848/*"QUESTID"*/, v6);
+    sub_B16FFC(&StringLiteral_11516/*"SAVEKEY_"*/, v7);
+    sub_B16FFC(&StringLiteral_7590/*"Initial"*/, v8);
+    sub_B16FFC(&StringLiteral_957/*"0.6.17.1"*/, v9);
+    sub_B16FFC(&StringLiteral_15123/*"Version"*/, v10);
     byte_40F6A8A = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
@@ -13028,31 +13028,31 @@ bool __fastcall BattleData__checkTurnData(BattleData_o *this, const MethodInfo *
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_11516, 0LL) )
+    if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_11516/*"SAVEKEY_"*/, 0LL) )
       goto LABEL_33;
     if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    String = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_15123, 0LL);
-    if ( !StringLiteral_957 )
+    String = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_15123/*"Version"*/, 0LL);
+    if ( !StringLiteral_957/*"0.6.17.1"*/ )
       goto LABEL_38;
-    if ( System_String__Equals_43731072((System_String_o *)StringLiteral_957, String, 0LL) )
+    if ( System_String__Equals_43731072((System_String_o *)StringLiteral_957/*"0.6.17.1"*/, String, 0LL) )
     {
       if ( (WORD1(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
         && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
       }
-      if ( EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_10848, 0LL) )
+      if ( EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_10848/*"QUESTID"*/, 0LL) )
       {
         if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
         }
-        Int = EncryptedPlayerPrefs__GetInt((System_String_o *)StringLiteral_10848, 0LL);
+        Int = EncryptedPlayerPrefs__GetInt((System_String_o *)StringLiteral_10848/*"QUESTID"*/, 0LL);
         if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !DataManager_TypeInfo->_2.cctor_finished )
         {
@@ -13080,7 +13080,7 @@ LABEL_33:
       {
         j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
       }
-      EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11516, 0LL);
+      EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11516/*"SAVEKEY_"*/, 0LL);
       UnityEngine_PlayerPrefs__Save(0LL);
       return 0;
     }
@@ -13089,10 +13089,10 @@ LABEL_33:
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    v17 = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_15123, 0LL);
-    if ( !StringLiteral_7590 )
+    v17 = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_15123/*"Version"*/, 0LL);
+    if ( !StringLiteral_7590/*"Initial"*/ )
       goto LABEL_38;
-    if ( !System_String__Equals_43731072((System_String_o *)StringLiteral_7590, v17, 0LL) )
+    if ( !System_String__Equals_43731072((System_String_o *)StringLiteral_7590/*"Initial"*/, v17, 0LL) )
       goto LABEL_33;
   }
   return 0;
@@ -13115,11 +13115,11 @@ void __fastcall BattleData__checkTutorialData(BattleData_o *this, const MethodIn
 
   if ( (byte_40F6A8D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_13476, method);
-    sub_B16FFC(&StringLiteral_13472, v3);
-    sub_B16FFC(&StringLiteral_13473, v4);
-    sub_B16FFC(&StringLiteral_13474, v5);
-    sub_B16FFC(&StringLiteral_13475, v6);
+    sub_B16FFC(&StringLiteral_13476/*"TUTORIAL_QUEST_ID4_PHASE"*/, method);
+    sub_B16FFC(&StringLiteral_13472/*"TUTORIAL_QUEST_ID1"*/, v3);
+    sub_B16FFC(&StringLiteral_13473/*"TUTORIAL_QUEST_ID2"*/, v4);
+    sub_B16FFC(&StringLiteral_13474/*"TUTORIAL_QUEST_ID3"*/, v5);
+    sub_B16FFC(&StringLiteral_13475/*"TUTORIAL_QUEST_ID4"*/, v6);
     byte_40F6A8D = 1;
   }
   battle_ent = this->fields.battle_ent;
@@ -13127,7 +13127,7 @@ void __fastcall BattleData__checkTutorialData(BattleData_o *this, const MethodIn
   if ( !battle_ent )
     sub_B170D4();
   questId = battle_ent->fields.questId;
-  if ( questId == ConstantMaster__getValue((System_String_o *)StringLiteral_13472, 0LL) )
+  if ( questId == ConstantMaster__getValue((System_String_o *)StringLiteral_13472/*"TUTORIAL_QUEST_ID1"*/, 0LL) )
   {
     v9 = 1;
 LABEL_10:
@@ -13135,22 +13135,22 @@ LABEL_10:
     return;
   }
   v10 = battle_ent->fields.questId;
-  if ( v10 == ConstantMaster__getValue((System_String_o *)StringLiteral_13473, 0LL) )
+  if ( v10 == ConstantMaster__getValue((System_String_o *)StringLiteral_13473/*"TUTORIAL_QUEST_ID2"*/, 0LL) )
   {
     v9 = 2;
     goto LABEL_10;
   }
   v11 = battle_ent->fields.questId;
-  if ( v11 == ConstantMaster__getValue((System_String_o *)StringLiteral_13474, 0LL) )
+  if ( v11 == ConstantMaster__getValue((System_String_o *)StringLiteral_13474/*"TUTORIAL_QUEST_ID3"*/, 0LL) )
   {
     v9 = 3;
     goto LABEL_10;
   }
   v12 = battle_ent->fields.questId;
-  if ( v12 == ConstantMaster__getValue((System_String_o *)StringLiteral_13475, 0LL) )
+  if ( v12 == ConstantMaster__getValue((System_String_o *)StringLiteral_13475/*"TUTORIAL_QUEST_ID4"*/, 0LL) )
   {
     questPhase = battle_ent->fields.questPhase;
-    if ( questPhase == ConstantMaster__getValue((System_String_o *)StringLiteral_13476, 0LL) )
+    if ( questPhase == ConstantMaster__getValue((System_String_o *)StringLiteral_13476/*"TUTORIAL_QUEST_ID4_PHASE"*/, 0LL) )
     {
       v9 = 4;
       goto LABEL_10;
@@ -13803,13 +13803,13 @@ bool __fastcall BattleData__deleteSaveData(const MethodInfo *method)
   if ( (byte_40F6A8B & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_3353, v2);
-    sub_B16FFC(&StringLiteral_3354, v3);
-    sub_B16FFC(&StringLiteral_11516, v4);
-    sub_B16FFC(&StringLiteral_3375, v5);
-    sub_B16FFC(&StringLiteral_3244, v6);
-    sub_B16FFC(&StringLiteral_10850, v7);
-    sub_B16FFC(&StringLiteral_2522, v8);
+    sub_B16FFC(&StringLiteral_3353/*"CONTINUECOUNT"*/, v2);
+    sub_B16FFC(&StringLiteral_3354/*"CONTINUE_BATTLE_SAVEKEY"*/, v3);
+    sub_B16FFC(&StringLiteral_11516/*"SAVEKEY_"*/, v4);
+    sub_B16FFC(&StringLiteral_3375/*"CONTINUE_ITEM_SAVEKEY"*/, v5);
+    sub_B16FFC(&StringLiteral_3244/*"COMMAND_SPELL_BATTLE_SAVEKEY"*/, v6);
+    sub_B16FFC(&StringLiteral_10850/*"QUESTUSEDTURNSAVEKEY"*/, v7);
+    sub_B16FFC(&StringLiteral_2522/*"BATTLE_SVT_COMMON_FLAG"*/, v8);
     byte_40F6A8B = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -13817,13 +13817,13 @@ bool __fastcall BattleData__deleteSaveData(const MethodInfo *method)
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3354, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3244, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3375, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11516, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10850, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3353, 0LL);
-  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_2522, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3354/*"CONTINUE_BATTLE_SAVEKEY"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3244/*"COMMAND_SPELL_BATTLE_SAVEKEY"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3375/*"CONTINUE_ITEM_SAVEKEY"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11516/*"SAVEKEY_"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_10850/*"QUESTUSEDTURNSAVEKEY"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_3353/*"CONTINUECOUNT"*/, 0LL);
+  EncryptedPlayerPrefs__DeleteKey((System_String_o *)StringLiteral_2522/*"BATTLE_SVT_COMMON_FLAG"*/, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
   return 1;
 }
@@ -14029,21 +14029,21 @@ System_String_o *__fastcall BattleData__getActionList(BattleData_o *this, const 
     sub_B16FFC(&Method_BattleData___c__getActionList_b__524_1__, v19);
     sub_B16FFC(&Method_BattleData___c__getActionList_b__524_2__, v20);
     sub_B16FFC(&BattleData___c_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_307, v22);
-    sub_B16FFC(&StringLiteral_305, v23);
-    sub_B16FFC(&StringLiteral_700, v24);
-    sub_B16FFC(&StringLiteral_306, v25);
-    sub_B16FFC(&StringLiteral_23378, v26);
-    sub_B16FFC(&StringLiteral_276, v27);
-    sub_B16FFC(&StringLiteral_304, v28);
+    sub_B16FFC(&StringLiteral_307/*"\"logs\":"*/, v22);
+    sub_B16FFC(&StringLiteral_305/*"\"dt\":"*/, v23);
+    sub_B16FFC(&StringLiteral_700/*", "*/, v24);
+    sub_B16FFC(&StringLiteral_306/*"\"hd\":"*/, v25);
+    sub_B16FFC(&StringLiteral_23378/*"{ "*/, v26);
+    sub_B16FFC(&StringLiteral_276/*" }"*/, v27);
+    sub_B16FFC(&StringLiteral_304/*"\"data\":"*/, v28);
     byte_40F6A89 = 1;
   }
   v29 = (System_Text_StringBuilder_o *)sub_B170CC(System_Text_StringBuilder_TypeInfo, method, v2, v3, v4);
   System_Text_StringBuilder___ctor(v29, 0LL);
   if ( !v29 )
     sub_B170D4();
-  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_23378, 0LL);
-  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_307, 0LL);
+  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_23378/*"{ "*/, 0LL);
+  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_307/*"\"logs\":"*/, 0LL);
   System_Text_StringBuilder__Append_41917484(v29, 0x22u, 0LL);
   v30 = System_Linq_Enumerable__Take_BattleData_CommandHistory_(
           (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.comhistory,
@@ -14058,8 +14058,8 @@ System_String_o *__fastcall BattleData__getActionList(BattleData_o *this, const 
                      v32);
   System_Text_StringBuilder__Append_41914240(v29, CommandHistory, 0LL);
   System_Text_StringBuilder__Append_41917484(v29, 0x22u, 0LL);
-  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_700, 0LL);
-  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_305, 0LL);
+  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_700/*", "*/, 0LL);
+  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_305/*"\"dt\":"*/, 0LL);
   System_Text_StringBuilder__Append_41917484(v29, 0x22u, 0LL);
   EnemyServantList = (System_Collections_Generic_IEnumerable_TSource__o *)BattleData__getEnemyServantList(this, v34);
   v40 = System_Linq_Enumerable__Take_BattleData_CommandHistory_(
@@ -14173,15 +14173,15 @@ System_String_o *__fastcall BattleData__getActionList(BattleData_o *this, const 
                                                             (const MethodInfo_18C6320 *)Method_System_Linq_Enumerable_Aggregate_string___);
   System_Text_StringBuilder__Append_41914240(v29, UsedDeckNumberManager_LastUsedInfo, 0LL);
   System_Text_StringBuilder__Append_41917484(v29, 0x22u, 0LL);
-  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_700, 0LL);
-  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_306, 0LL);
+  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_700/*", "*/, 0LL);
+  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_306/*"\"hd\":"*/, 0LL);
   System_Text_StringBuilder__Append_41917484(v29, 0x22u, 0LL);
   System_Text_StringBuilder__Append_41917484(v29, 0x22u, 0LL);
-  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_700, 0LL);
-  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_304, 0LL);
+  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_700/*", "*/, 0LL);
+  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_304/*"\"data\":"*/, 0LL);
   System_Text_StringBuilder__Append_41917484(v29, 0x22u, 0LL);
   System_Text_StringBuilder__Append_41917484(v29, 0x22u, 0LL);
-  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_276, 0LL);
+  System_Text_StringBuilder__Append_41914240(v29, (System_String_o *)StringLiteral_276/*" }"*/, 0LL);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v29->klass->vtable._3_ToString.method)(
                               v29,
                               v29->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
@@ -15128,7 +15128,7 @@ int32_t __fastcall BattleData__getCommandSpellIdBattle(const MethodInfo *method)
   if ( (byte_40F6A7C & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_3244, v2);
+    sub_B16FFC(&StringLiteral_3244/*"COMMAND_SPELL_BATTLE_SAVEKEY"*/, v2);
     byte_40F6A7C = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -15136,7 +15136,7 @@ int32_t __fastcall BattleData__getCommandSpellIdBattle(const MethodInfo *method)
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  return EncryptedPlayerPrefs__GetInt_33186652((System_String_o *)StringLiteral_3244, 0, 0LL);
+  return EncryptedPlayerPrefs__GetInt_33186652((System_String_o *)StringLiteral_3244/*"COMMAND_SPELL_BATTLE_SAVEKEY"*/, 0, 0LL);
 }
 
 
@@ -15148,7 +15148,7 @@ int32_t __fastcall BattleData__getContinueBattleFlg(const MethodInfo *method)
   if ( (byte_40F6A76 & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_3354, v2);
+    sub_B16FFC(&StringLiteral_3354/*"CONTINUE_BATTLE_SAVEKEY"*/, v2);
     byte_40F6A76 = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -15156,7 +15156,7 @@ int32_t __fastcall BattleData__getContinueBattleFlg(const MethodInfo *method)
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  return EncryptedPlayerPrefs__GetInt_33186652((System_String_o *)StringLiteral_3354, 0, 0LL);
+  return EncryptedPlayerPrefs__GetInt_33186652((System_String_o *)StringLiteral_3354/*"CONTINUE_BATTLE_SAVEKEY"*/, 0, 0LL);
 }
 
 
@@ -17699,7 +17699,7 @@ int64_t __fastcall BattleData__getResumeBattleId(const MethodInfo *method)
   if ( (byte_40F6A73 & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11516, v2);
+    sub_B16FFC(&StringLiteral_11516/*"SAVEKEY_"*/, v2);
     byte_40F6A73 = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -17707,14 +17707,14 @@ int64_t __fastcall BattleData__getResumeBattleId(const MethodInfo *method)
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_11516, 0LL) )
+  if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_11516/*"SAVEKEY_"*/, 0LL) )
     return -1LL;
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  return EncryptedPlayerPrefs__GetLong((System_String_o *)StringLiteral_11516, 0LL);
+  return EncryptedPlayerPrefs__GetLong((System_String_o *)StringLiteral_11516/*"SAVEKEY_"*/, 0LL);
 }
 
 
@@ -17726,7 +17726,7 @@ int32_t __fastcall BattleData__getSavedQuestId(const MethodInfo *method)
   if ( (byte_40F6A74 & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_10848, v2);
+    sub_B16FFC(&StringLiteral_10848/*"QUESTID"*/, v2);
     byte_40F6A74 = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -17734,14 +17734,14 @@ int32_t __fastcall BattleData__getSavedQuestId(const MethodInfo *method)
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_10848, 0LL) )
+  if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_10848/*"QUESTID"*/, 0LL) )
     return 0;
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  return EncryptedPlayerPrefs__GetInt((System_String_o *)StringLiteral_10848, 0LL);
+  return EncryptedPlayerPrefs__GetInt((System_String_o *)StringLiteral_10848/*"QUESTID"*/, 0LL);
 }
 
 
@@ -17753,7 +17753,7 @@ int32_t __fastcall BattleData__getSavedQuestPhase(const MethodInfo *method)
   if ( (byte_40F6A75 & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_10849, v2);
+    sub_B16FFC(&StringLiteral_10849/*"QUESTPHASEID"*/, v2);
     byte_40F6A75 = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -17761,14 +17761,14 @@ int32_t __fastcall BattleData__getSavedQuestPhase(const MethodInfo *method)
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_10849, 0LL) )
+  if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_10849/*"QUESTPHASEID"*/, 0LL) )
     return 0;
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  return EncryptedPlayerPrefs__GetInt((System_String_o *)StringLiteral_10849, 0LL);
+  return EncryptedPlayerPrefs__GetInt((System_String_o *)StringLiteral_10849/*"QUESTPHASEID"*/, 0LL);
 }
 
 
@@ -18772,7 +18772,7 @@ System_Int32_array *__fastcall BattleData__getWaveClearTurn(const MethodInfo *me
     sub_B16FFC(&int___TypeInfo, v6);
     sub_B16FFC(&Method_BattleData___c__getWaveClearTurn_b__515_0__, v7);
     sub_B16FFC(&BattleData___c_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_10850, v9);
+    sub_B16FFC(&StringLiteral_10850/*"QUESTUSEDTURNSAVEKEY"*/, v9);
     byte_40F6A82 = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -18780,14 +18780,14 @@ System_Int32_array *__fastcall BattleData__getWaveClearTurn(const MethodInfo *me
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_10850, 0LL) )
+  if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_10850/*"QUESTUSEDTURNSAVEKEY"*/, 0LL) )
     return (System_Int32_array *)sub_B17014(int___TypeInfo, 0LL, v10);
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  String = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_10850, 0LL);
+  String = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_10850/*"QUESTUSEDTURNSAVEKEY"*/, 0LL);
   if ( !String )
     return (System_Int32_array *)sub_B17014(int___TypeInfo, 0LL, v10);
   v12 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v10);
@@ -20250,7 +20250,7 @@ bool __fastcall BattleData__isReserveResumeBattle(const MethodInfo *method)
   if ( (byte_40F6A83 & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11046, v2);
+    sub_B16FFC(&StringLiteral_11046/*"RESERVE_BATTKE_SAVEKEY"*/, v2);
     byte_40F6A83 = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -20258,14 +20258,14 @@ bool __fastcall BattleData__isReserveResumeBattle(const MethodInfo *method)
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_11046, 0LL) )
+  if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_11046/*"RESERVE_BATTKE_SAVEKEY"*/, 0LL) )
     return 0;
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  return EncryptedPlayerPrefs__GetInt((System_String_o *)StringLiteral_11046, 0LL) != 0;
+  return EncryptedPlayerPrefs__GetInt((System_String_o *)StringLiteral_11046/*"RESERVE_BATTKE_SAVEKEY"*/, 0LL) != 0;
 }
 
 
@@ -20628,7 +20628,7 @@ int32_t __fastcall BattleData__loadContinueCount(const MethodInfo *method)
   if ( (byte_40F6A80 & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_3353, v2);
+    sub_B16FFC(&StringLiteral_3353/*"CONTINUECOUNT"*/, v2);
     byte_40F6A80 = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -20636,7 +20636,7 @@ int32_t __fastcall BattleData__loadContinueCount(const MethodInfo *method)
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  return EncryptedPlayerPrefs__GetInt((System_String_o *)StringLiteral_3353, 0LL);
+  return EncryptedPlayerPrefs__GetInt((System_String_o *)StringLiteral_3353/*"CONTINUECOUNT"*/, 0LL);
 }
 
 
@@ -20662,13 +20662,13 @@ void __fastcall BattleData__loadFsmGameObject(BattleData_o *this, const MethodIn
 
   if ( (byte_40F6A0D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3463, method);
+    sub_B16FFC(&StringLiteral_3463/*"CameraFSM"*/, method);
     byte_40F6A0D = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm
     || (v4 = PlayMakerFSM__get_Fsm(fsm, 0LL)) == 0LL
-    || (FsmGameObject = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v4, (System_String_o *)StringLiteral_3463, 0LL),
+    || (FsmGameObject = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v4, (System_String_o *)StringLiteral_3463/*"CameraFSM"*/, 0LL),
         (perf = this->fields.perf) == 0LL)
     || (v7 = FsmGameObject, (camerafsm = (UnityEngine_Component_o *)perf->fields.camerafsm) == 0LL)
     || (gameObject = UnityEngine_Component__get_gameObject(camerafsm, 0LL), !v7) )
@@ -20934,13 +20934,13 @@ void __fastcall BattleData__loadMasterSkill(BattleData_o *this, const MethodInfo
     sub_B16FFC(&Method_BattleData___c__DisplayClass339_0__loadMasterSkill_b__0__, v35);
     sub_B16FFC(&BattleData___c__DisplayClass339_0_TypeInfo, v36);
     sub_B16FFC(&BattleData___c_TypeInfo, v37);
-    sub_B16FFC(&StringLiteral_19199, v38);
-    sub_B16FFC(&StringLiteral_17577, v39);
-    sub_B16FFC(&StringLiteral_19307, v40);
-    sub_B16FFC(&StringLiteral_19319, v41);
-    sub_B16FFC(&StringLiteral_22060, v42);
-    sub_B16FFC(&StringLiteral_17776, v43);
-    sub_B16FFC(&StringLiteral_20250, v44);
+    sub_B16FFC(&StringLiteral_19199/*"iconId"*/, v38);
+    sub_B16FFC(&StringLiteral_17577/*"condId"*/, v39);
+    sub_B16FFC(&StringLiteral_19307/*"id"*/, v40);
+    sub_B16FFC(&StringLiteral_19319/*"idx"*/, v41);
+    sub_B16FFC(&StringLiteral_22060/*"skills"*/, v42);
+    sub_B16FFC(&StringLiteral_17776/*"cutInView"*/, v43);
+    sub_B16FFC(&StringLiteral_20250/*"lv"*/, v44);
     byte_40F6A29 = 1;
   }
   skillIds = 0LL;
@@ -21031,7 +21031,7 @@ LABEL_19:
       v65 = (System_Xml_Schema_XmlSchemaObject_o *)OverwriteEquipSkills;
       if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)OverwriteEquipSkills,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_19199,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_19199/*"iconId"*/,
              &value,
              (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       {
@@ -21046,7 +21046,7 @@ LABEL_19:
       }
       if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v65,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_17776,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_17776/*"cutInView"*/,
              &v165,
              (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       {
@@ -21059,7 +21059,7 @@ LABEL_19:
       }
       if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v65,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_22060,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_22060/*"skills"*/,
              &v164,
              (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       {
@@ -21094,7 +21094,7 @@ LABEL_19:
             }
             if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
                    v71,
-                   (System_Xml_XmlQualifiedName_o *)StringLiteral_19307,
+                   (System_Xml_XmlQualifiedName_o *)StringLiteral_19307/*"id"*/,
                    &v163,
                    (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
             {
@@ -21111,7 +21111,7 @@ LABEL_19:
                 v51->m_Items[v70 + 1] = (int32_t)SkillLv->klass;
                 if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
                        v71,
-                       (System_Xml_XmlQualifiedName_o *)StringLiteral_20250,
+                       (System_Xml_XmlQualifiedName_o *)StringLiteral_20250/*"lv"*/,
                        &v162,
                        (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
                 {
@@ -21166,7 +21166,7 @@ LABEL_52:
       v65 = (System_Xml_Schema_XmlSchemaObject_o *)AddEquipSkills;
       if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)AddEquipSkills,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_19199,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_19199/*"iconId"*/,
              &v161,
              (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       {
@@ -21181,7 +21181,7 @@ LABEL_52:
       }
       if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v65,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_22060,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_22060/*"skills"*/,
              &v160,
              (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       {
@@ -21236,7 +21236,7 @@ LABEL_52:
             }
             if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
                    v71,
-                   (System_Xml_XmlQualifiedName_o *)StringLiteral_19307,
+                   (System_Xml_XmlQualifiedName_o *)StringLiteral_19307/*"id"*/,
                    &v159,
                    (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
             {
@@ -21255,7 +21255,7 @@ LABEL_52:
                 *(_DWORD *)(v85 + 32 + 4LL * (_QWORD)v65) = SkillLv->klass;
                 SkillLv = (System_Collections_Generic_List_TSource__o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
                                                                           v71,
-                                                                          (System_Xml_XmlQualifiedName_o *)StringLiteral_20250,
+                                                                          (System_Xml_XmlQualifiedName_o *)StringLiteral_20250/*"lv"*/,
                                                                           &v158,
                                                                           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
                 if ( ((unsigned __int8)SkillLv & 1) != 0 )
@@ -21282,7 +21282,7 @@ LABEL_52:
                 *(_DWORD *)(v151 + 4LL * (_QWORD)v65) = -1;
                 SkillLv = (System_Collections_Generic_List_TSource__o *)System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
                                                                           v71,
-                                                                          (System_Xml_XmlQualifiedName_o *)StringLiteral_17577,
+                                                                          (System_Xml_XmlQualifiedName_o *)StringLiteral_17577/*"condId"*/,
                                                                           &v157,
                                                                           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
                 if ( ((unsigned __int8)SkillLv & 1) != 0 )
@@ -21308,7 +21308,7 @@ LABEL_52:
                 addIdxs->m_Items[(_QWORD)v65 + 1] = -1;
                 if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
                        v71,
-                       (System_Xml_XmlQualifiedName_o *)StringLiteral_19319,
+                       (System_Xml_XmlQualifiedName_o *)StringLiteral_19319/*"idx"*/,
                        &v156,
                        (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
                 {
@@ -22282,15 +22282,15 @@ void __fastcall BattleData__loadQuest(BattleData_o *this, const MethodInfo *meth
     sub_B16FFC(&Method_BattleData___c__DisplayClass554_0__loadQuest_b__4__, v74);
     sub_B16FFC(&BattleData___c__DisplayClass554_0_TypeInfo, v75);
     sub_B16FFC(&BattleData___c_TypeInfo, v76);
-    sub_B16FFC(&StringLiteral_22376, v77);
-    sub_B16FFC(&StringLiteral_5049, v78);
-    sub_B16FFC(&StringLiteral_22973, v79);
-    sub_B16FFC(&StringLiteral_21301, v80);
-    sub_B16FFC(&StringLiteral_21876, v81);
-    sub_B16FFC(&StringLiteral_8097, v82);
-    sub_B16FFC(&StringLiteral_15571, v83);
-    sub_B16FFC(&StringLiteral_15807, v84);
-    sub_B16FFC(&StringLiteral_2740, v85);
+    sub_B16FFC(&StringLiteral_22376/*"svtId"*/, v77);
+    sub_B16FFC(&StringLiteral_5049/*"DUEL"*/, v78);
+    sub_B16FFC(&StringLiteral_22973/*"userSvtId"*/, v79);
+    sub_B16FFC(&StringLiteral_21301/*"p_svlist"*/, v80);
+    sub_B16FFC(&StringLiteral_21876/*"seqId"*/, v81);
+    sub_B16FFC(&StringLiteral_8097/*"IsDuelMessagePack"*/, v82);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v83);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v84);
+    sub_B16FFC(&StringLiteral_2740/*"Battle"*/, v85);
     byte_40F6A97 = 1;
   }
   BattleData__commonQuestLoad(this, method);
@@ -22299,8 +22299,8 @@ void __fastcall BattleData__loadQuest(BattleData_o *this, const MethodInfo *meth
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  Int_33186652 = EncryptedPlayerPrefs__GetInt_33186652((System_String_o *)StringLiteral_8097, 0, 0LL);
-  if ( EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_5049, 0LL) )
+  Int_33186652 = EncryptedPlayerPrefs__GetInt_33186652((System_String_o *)StringLiteral_8097/*"IsDuelMessagePack"*/, 0, 0LL);
+  if ( EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_5049/*"DUEL"*/, 0LL) )
   {
     if ( Int_33186652 )
     {
@@ -22309,7 +22309,7 @@ void __fastcall BattleData__loadQuest(BattleData_o *this, const MethodInfo *meth
       {
         j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
       }
-      String = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_5049, 0LL);
+      String = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_5049/*"DUEL"*/, 0LL);
       if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
       {
@@ -22338,7 +22338,7 @@ void __fastcall BattleData__loadQuest(BattleData_o *this, const MethodInfo *meth
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    v96 = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_5049, 0LL);
+    v96 = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_5049/*"DUEL"*/, 0LL);
     if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     {
@@ -22353,19 +22353,19 @@ void __fastcall BattleData__loadQuest(BattleData_o *this, const MethodInfo *meth
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_2740, 0LL) )
+    if ( !EncryptedPlayerPrefs__HasKey((System_String_o *)StringLiteral_2740/*"Battle"*/, 0LL) )
       goto LABEL_247;
     if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    v95 = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_2740, 0LL);
+    v95 = EncryptedPlayerPrefs__GetString((System_String_o *)StringLiteral_2740/*"Battle"*/, 0LL);
   }
   v97 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           v95,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -23041,7 +23041,7 @@ LABEL_161:
         else
         {
           v273 = System_Int32__ToString(v258, 0LL);
-          v274 = System_String__Concat_43743732((System_String_o *)StringLiteral_21301, v273, 0LL);
+          v274 = System_String__Concat_43743732((System_String_o *)StringLiteral_21301/*"p_svlist"*/, v273, 0LL);
           if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
           {
@@ -23152,7 +23152,7 @@ LABEL_208:
       {
         System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
           v307,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_22973,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_22973/*"userSvtId"*/,
           *(System_Xml_Schema_XmlSchemaObject_o **)(*(_QWORD *)&v308 + 8 * v306 + 32),
           (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
         v309 = *(_QWORD *)&v94[1].fields.cameraSize;
@@ -23164,7 +23164,7 @@ LABEL_208:
           v310 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v358);
           System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
             v307,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_21876,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_21876/*"seqId"*/,
             v310,
             (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
           v357 = BasicHelper__IndexValue_int_(
@@ -23175,7 +23175,7 @@ LABEL_208:
           v311 = (System_Xml_Schema_XmlSchemaObject_o *)j_il2cpp_value_box_0(int_TypeInfo, &v357);
           System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___Add(
             v307,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_22376,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_22376/*"svtId"*/,
             v311,
             (const MethodInfo_2DA3C18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
           tmpFirstNpPlayList = this->fields.tmpFirstNpPlayList;
@@ -23571,8 +23571,8 @@ void __fastcall BattleData__loadSaveTurnNstage(BattleData_o *this, const MethodI
     sub_B16FFC(&string_TypeInfo, v33);
     sub_B16FFC(&Method_BattleData___c__loadSaveTurnNstage_b__569_0__, v34);
     sub_B16FFC(&BattleData___c_TypeInfo, v35);
-    sub_B16FFC(&StringLiteral_8097, v36);
-    sub_B16FFC(&StringLiteral_18014, v37);
+    sub_B16FFC(&StringLiteral_8097/*"IsDuelMessagePack"*/, v36);
+    sub_B16FFC(&StringLiteral_18014/*"e_svlist"*/, v37);
     byte_40F6AA3 = 1;
   }
   v140[0] = 0;
@@ -23658,7 +23658,7 @@ LABEL_105:
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  Int_33186652 = EncryptedPlayerPrefs__GetInt_33186652((System_String_o *)StringLiteral_8097, 0, 0LL);
+  Int_33186652 = EncryptedPlayerPrefs__GetInt_33186652((System_String_o *)StringLiteral_8097/*"IsDuelMessagePack"*/, 0, 0LL);
   if ( !this->fields.battle_info )
     goto LABEL_137;
   v54 = Int_33186652;
@@ -23919,7 +23919,7 @@ LABEL_53:
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v72 = System_Int32__ToString((int32_t)v140, 0LL);
-    v73 = System_String__Concat_43743732((System_String_o *)StringLiteral_18014, v72, 0LL);
+    v73 = System_String__Concat_43743732((System_String_o *)StringLiteral_18014/*"e_svlist"*/, v72, 0LL);
     if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
     {
@@ -24788,7 +24788,7 @@ void __fastcall BattleData__removeServantVoicePlayed(
     sub_B16FFC(&Method_System_Collections_Generic_HashSet_string__Remove__, v9);
     sub_B16FFC(&int_TypeInfo, v10);
     sub_B16FFC(&long_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_23493, v12);
+    sub_B16FFC(&StringLiteral_23493/*"{0},{1}"*/, v12);
     byte_40F6A09 = 1;
   }
   if ( condValue > 63 )
@@ -24797,7 +24797,7 @@ void __fastcall BattleData__removeServantVoicePlayed(
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26);
     v25 = condValue;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25);
-    v15 = System_String__Format_43739268((System_String_o *)StringLiteral_23493, v13, v14, 0LL);
+    v15 = System_String__Format_43739268((System_String_o *)StringLiteral_23493/*"{0},{1}"*/, v13, v14, 0LL);
     if ( this->fields.voicePlayedOver64Info )
     {
       System_Collections_Generic_HashSet_BattleBuffData_BuffData___Remove(
@@ -25015,7 +25015,7 @@ void __fastcall BattleData__saveContinueCount(int32_t count, const MethodInfo *m
   if ( (byte_40F6A7F & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3353, v3);
+    sub_B16FFC(&StringLiteral_3353/*"CONTINUECOUNT"*/, v3);
     byte_40F6A7F = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -25023,7 +25023,7 @@ void __fastcall BattleData__saveContinueCount(int32_t count, const MethodInfo *m
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_3353, count, 0LL);
+  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_3353/*"CONTINUECOUNT"*/, count, 0LL);
 }
 
 
@@ -25132,8 +25132,8 @@ void __fastcall BattleData__saveWaveClearTurn(System_Int32_array *waveClearArray
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, method);
     sub_B16FFC(&string___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_10850, v5);
-    sub_B16FFC(&StringLiteral_698, v6);
+    sub_B16FFC(&StringLiteral_10850/*"QUESTUSEDTURNSAVEKEY"*/, v5);
+    sub_B16FFC(&StringLiteral_698/*","*/, v6);
     byte_40F6A81 = 1;
   }
   if ( waveClearArray )
@@ -25178,13 +25178,13 @@ LABEL_17:
       }
       while ( (__int64)v12 < (int)v10 );
     }
-    v16 = System_String__Join((System_String_o *)StringLiteral_698, v11, 0LL);
+    v16 = System_String__Join((System_String_o *)StringLiteral_698/*","*/, v11, 0LL);
     if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    EncryptedPlayerPrefs__SetString((System_String_o *)StringLiteral_10850, v16, 0LL);
+    EncryptedPlayerPrefs__SetString((System_String_o *)StringLiteral_10850/*"QUESTUSEDTURNSAVEKEY"*/, v16, 0LL);
   }
 }
 
@@ -25250,7 +25250,7 @@ void __fastcall BattleData__setCommandSpellIdBattle(int32_t commandSpellId, bool
   if ( (byte_40F6A7D & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, save);
-    sub_B16FFC(&StringLiteral_3244, v5);
+    sub_B16FFC(&StringLiteral_3244/*"COMMAND_SPELL_BATTLE_SAVEKEY"*/, v5);
     byte_40F6A7D = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -25258,7 +25258,7 @@ void __fastcall BattleData__setCommandSpellIdBattle(int32_t commandSpellId, bool
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_3244, commandSpellId, 0LL);
+  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_3244/*"COMMAND_SPELL_BATTLE_SAVEKEY"*/, commandSpellId, 0LL);
   if ( save )
     UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -25272,7 +25272,7 @@ void __fastcall BattleData__setContinueBattleFlg(int32_t continueFlg, bool save,
   if ( (byte_40F6A77 & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, save);
-    sub_B16FFC(&StringLiteral_3354, v5);
+    sub_B16FFC(&StringLiteral_3354/*"CONTINUE_BATTLE_SAVEKEY"*/, v5);
     byte_40F6A77 = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -25280,7 +25280,7 @@ void __fastcall BattleData__setContinueBattleFlg(int32_t continueFlg, bool save,
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_3354, continueFlg, 0LL);
+  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_3354/*"CONTINUE_BATTLE_SAVEKEY"*/, continueFlg, 0LL);
   if ( save )
     UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -25533,13 +25533,13 @@ void __fastcall BattleData__setReserveResumeBattle(
   if ( (byte_40F6A84 & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, *(_QWORD *)&questId);
-    sub_B16FFC(&StringLiteral_10849, v7);
-    sub_B16FFC(&StringLiteral_10848, v8);
-    sub_B16FFC(&StringLiteral_11046, v9);
+    sub_B16FFC(&StringLiteral_10849/*"QUESTPHASEID"*/, v7);
+    sub_B16FFC(&StringLiteral_10848/*"QUESTID"*/, v8);
+    sub_B16FFC(&StringLiteral_11046/*"RESERVE_BATTKE_SAVEKEY"*/, v9);
     byte_40F6A84 = 1;
   }
   v10 = isResume;
-  v11 = (System_String_o *)StringLiteral_11046;
+  v11 = (System_String_o *)StringLiteral_11046/*"RESERVE_BATTKE_SAVEKEY"*/;
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EncryptedPlayerPrefs_TypeInfo->_2.cctor_finished )
   {
@@ -25553,7 +25553,7 @@ void __fastcall BattleData__setReserveResumeBattle(
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_10848, questId, 0LL);
+    EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_10848/*"QUESTID"*/, questId, 0LL);
   }
   if ( questPhase )
   {
@@ -25562,7 +25562,7 @@ void __fastcall BattleData__setReserveResumeBattle(
     {
       j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
     }
-    EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_10849, questPhase, 0LL);
+    EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_10849/*"QUESTPHASEID"*/, questPhase, 0LL);
   }
   UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -25608,11 +25608,11 @@ void __fastcall BattleData__setResumeBattleId(
   if ( (byte_40F6A7E & 1) == 0 )
   {
     sub_B16FFC(&EncryptedPlayerPrefs_TypeInfo, *(_QWORD *)&questId);
-    sub_B16FFC(&StringLiteral_10849, v7);
-    sub_B16FFC(&StringLiteral_10848, v8);
-    sub_B16FFC(&StringLiteral_11516, v9);
-    sub_B16FFC(&StringLiteral_7590, v10);
-    sub_B16FFC(&StringLiteral_15123, v11);
+    sub_B16FFC(&StringLiteral_10849/*"QUESTPHASEID"*/, v7);
+    sub_B16FFC(&StringLiteral_10848/*"QUESTID"*/, v8);
+    sub_B16FFC(&StringLiteral_11516/*"SAVEKEY_"*/, v9);
+    sub_B16FFC(&StringLiteral_7590/*"Initial"*/, v10);
+    sub_B16FFC(&StringLiteral_15123/*"Version"*/, v11);
     byte_40F6A7E = 1;
   }
   if ( (BYTE3(EncryptedPlayerPrefs_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -25620,10 +25620,10 @@ void __fastcall BattleData__setResumeBattleId(
   {
     j_il2cpp_runtime_class_init_0(EncryptedPlayerPrefs_TypeInfo);
   }
-  EncryptedPlayerPrefs__SetLong((System_String_o *)StringLiteral_11516, battleId, 0LL);
-  EncryptedPlayerPrefs__SetString((System_String_o *)StringLiteral_15123, (System_String_o *)StringLiteral_7590, 0LL);
-  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_10848, questId, 0LL);
-  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_10849, questPhase, 0LL);
+  EncryptedPlayerPrefs__SetLong((System_String_o *)StringLiteral_11516/*"SAVEKEY_"*/, battleId, 0LL);
+  EncryptedPlayerPrefs__SetString((System_String_o *)StringLiteral_15123/*"Version"*/, (System_String_o *)StringLiteral_7590/*"Initial"*/, 0LL);
+  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_10848/*"QUESTID"*/, questId, 0LL);
+  EncryptedPlayerPrefs__SetInt((System_String_o *)StringLiteral_10849/*"QUESTPHASEID"*/, questPhase, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -26910,13 +26910,13 @@ System_String_o *__fastcall BattleData___c___getActionList_b__524_1(
 
   if ( (byte_40F84F3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22756, cd);
+    sub_B16FFC(&StringLiteral_22756/*"u"*/, cd);
     byte_40F84F3 = 1;
   }
   if ( !cd )
     sub_B170D4();
   v4 = System_Int32__ToString((int)cd + 16, 0LL);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_22756, v4, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_22756/*"u"*/, v4, 0LL);
 }
 
 

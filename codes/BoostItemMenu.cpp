@@ -279,8 +279,8 @@ void __fastcall BoostItemMenu__OnClickSetupConfirm(BoostItemMenu_o *this, const 
   if ( (byte_40FB163 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16940, v3);
-    sub_B16FFC(&StringLiteral_16939, v4);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, v3);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v4);
     byte_40FB163 = 1;
   }
   if ( this->fields.state == 2 )
@@ -297,9 +297,9 @@ void __fastcall BoostItemMenu__OnClickSetupConfirm(BoostItemMenu_o *this, const 
     if ( !setupConfirmSprite )
       sub_B170D4();
     if ( isBoostItemUseConfirm )
-      v7 = &StringLiteral_16939;
+      v7 = &StringLiteral_16939/*"btn_off"*/;
     else
-      v7 = &StringLiteral_16940;
+      v7 = &StringLiteral_16940/*"btn_on"*/;
     UISprite__set_spriteName(setupConfirmSprite, (System_String_o *)*v7, 0LL);
   }
 }
@@ -501,16 +501,16 @@ void __fastcall BoostItemMenu__Open(
     sub_B16FFC(&OptionManager_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
     sub_B16FFC(&SoundManager_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_2583, v20);
-    sub_B16FFC(&StringLiteral_16940, v21);
-    sub_B16FFC(&StringLiteral_2585, v22);
-    sub_B16FFC(&StringLiteral_2580, v23);
-    sub_B16FFC(&StringLiteral_2573, v24);
-    sub_B16FFC(&StringLiteral_2579, v25);
-    sub_B16FFC(&StringLiteral_2582, v26);
-    sub_B16FFC(&StringLiteral_2584, v27);
-    sub_B16FFC(&StringLiteral_16939, v28);
-    sub_B16FFC(&StringLiteral_2581, v29);
+    sub_B16FFC(&StringLiteral_2583/*"BOOST_ITEM_USE_OPTION_FRIEND_CHOCOLATE"*/, v20);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, v21);
+    sub_B16FFC(&StringLiteral_2585/*"BOOST_ITEM_USE_TITLE_FRIEND_CHOCOLATE"*/, v22);
+    sub_B16FFC(&StringLiteral_2580/*"BOOST_ITEM_USE_DETAIL"*/, v23);
+    sub_B16FFC(&StringLiteral_2573/*"BOOST_ITEM_USE_CANCEL"*/, v24);
+    sub_B16FFC(&StringLiteral_2579/*"BOOST_ITEM_USE_DECIDE"*/, v25);
+    sub_B16FFC(&StringLiteral_2582/*"BOOST_ITEM_USE_OPTION"*/, v26);
+    sub_B16FFC(&StringLiteral_2584/*"BOOST_ITEM_USE_TITILE"*/, v27);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v28);
+    sub_B16FFC(&StringLiteral_2581/*"BOOST_ITEM_USE_DETAIL_FRIEND_CHOCOLATE"*/, v29);
     byte_40FB15E = 1;
   }
   state = this->fields.state;
@@ -620,17 +620,17 @@ void __fastcall BoostItemMenu__Open(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v49 = LocalizationManager__Get((System_String_o *)StringLiteral_2585, 0LL);
+              v49 = LocalizationManager__Get((System_String_o *)StringLiteral_2585/*"BOOST_ITEM_USE_TITLE_FRIEND_CHOCOLATE"*/, 0LL);
               if ( !titleLabel )
                 goto LABEL_56;
               UILabel__set_text(titleLabel, v49, 0LL);
               titleDetailLabel = this->fields.titleDetailLabel;
-              v51 = LocalizationManager__Get((System_String_o *)StringLiteral_2581, 0LL);
+              v51 = LocalizationManager__Get((System_String_o *)StringLiteral_2581/*"BOOST_ITEM_USE_DETAIL_FRIEND_CHOCOLATE"*/, 0LL);
               if ( !titleDetailLabel )
                 goto LABEL_56;
               UILabel__set_text(titleDetailLabel, v51, 0LL);
               useConfirmOptionLabel = this->fields.useConfirmOptionLabel;
-              v53 = LocalizationManager__Get((System_String_o *)StringLiteral_2583, 0LL);
+              v53 = LocalizationManager__Get((System_String_o *)StringLiteral_2583/*"BOOST_ITEM_USE_OPTION_FRIEND_CHOCOLATE"*/, 0LL);
               if ( !useConfirmOptionLabel )
                 goto LABEL_56;
               UILabel__set_text(useConfirmOptionLabel, v53, 0LL);
@@ -649,17 +649,17 @@ void __fastcall BoostItemMenu__Open(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v65 = LocalizationManager__Get((System_String_o *)StringLiteral_2584, 0LL);
+              v65 = LocalizationManager__Get((System_String_o *)StringLiteral_2584/*"BOOST_ITEM_USE_TITILE"*/, 0LL);
               if ( !titleLabel )
                 goto LABEL_56;
               UILabel__set_text(titleLabel, v65, 0LL);
               v66 = this->fields.titleDetailLabel;
-              v67 = LocalizationManager__Get((System_String_o *)StringLiteral_2580, 0LL);
+              v67 = LocalizationManager__Get((System_String_o *)StringLiteral_2580/*"BOOST_ITEM_USE_DETAIL"*/, 0LL);
               if ( !v66 )
                 goto LABEL_56;
               UILabel__set_text(v66, v67, 0LL);
               v68 = this->fields.useConfirmOptionLabel;
-              v69 = LocalizationManager__Get((System_String_o *)StringLiteral_2582, 0LL);
+              v69 = LocalizationManager__Get((System_String_o *)StringLiteral_2582/*"BOOST_ITEM_USE_OPTION"*/, 0LL);
               if ( !v68 )
                 goto LABEL_56;
               UILabel__set_text(v68, v69, 0LL);
@@ -678,12 +678,12 @@ void __fastcall BoostItemMenu__Open(
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v72 = LocalizationManager__Get((System_String_o *)StringLiteral_2579, 0LL);
+            v72 = LocalizationManager__Get((System_String_o *)StringLiteral_2579/*"BOOST_ITEM_USE_DECIDE"*/, 0LL);
             if ( decideLabel )
             {
               UILabel__set_text(decideLabel, v72, 0LL);
               cancelLabel = this->fields.cancelLabel;
-              v74 = LocalizationManager__Get((System_String_o *)StringLiteral_2573, 0LL);
+              v74 = LocalizationManager__Get((System_String_o *)StringLiteral_2573/*"BOOST_ITEM_USE_CANCEL"*/, 0LL);
               if ( cancelLabel )
               {
                 UILabel__set_text(cancelLabel, v74, 0LL);
@@ -701,9 +701,9 @@ void __fastcall BoostItemMenu__Open(
                       if ( setupConfirmSprite )
                       {
                         if ( this->fields.isBoostItemUseConfirm )
-                          v80 = &StringLiteral_16940;
+                          v80 = &StringLiteral_16940/*"btn_on"*/;
                         else
-                          v80 = &StringLiteral_16939;
+                          v80 = &StringLiteral_16939/*"btn_off"*/;
                         UISprite__set_spriteName(setupConfirmSprite, (System_String_o *)*v80, 0LL);
                         this->fields.state = 1;
                         v85 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v81, v82, v83, v84);

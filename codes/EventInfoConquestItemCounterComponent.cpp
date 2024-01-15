@@ -78,8 +78,8 @@ void __fastcall EventInfoConquestItemCounterComponent__SetLabel(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&itemNum);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_5583, v10);
-    sub_B16FFC(&StringLiteral_5586, v11);
+    sub_B16FFC(&StringLiteral_5583/*"EVENT_CONQUEST_ITEM_FORMAT"*/, v10);
+    sub_B16FFC(&StringLiteral_5586/*"EVENT_CONQUEST_PRODUCT_FORMAT"*/, v11);
     byte_40FA0FF = 1;
   }
   itemNumLabel = this->fields.itemNumLabel;
@@ -88,7 +88,7 @@ void __fastcall EventInfoConquestItemCounterComponent__SetLabel(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5583, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5583/*"EVENT_CONQUEST_ITEM_FORMAT"*/, 0LL);
   v23 = itemNum;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23);
   v15 = System_String__Format(v13, v14, 0LL);
@@ -96,7 +96,7 @@ void __fastcall EventInfoConquestItemCounterComponent__SetLabel(
     goto LABEL_11;
   UILabel__set_text(itemNumLabel, v15, 0LL);
   productNumLabel = this->fields.productNumLabel;
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5586, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5586/*"EVENT_CONQUEST_PRODUCT_FORMAT"*/, 0LL);
   v22 = productNum - addNum;
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
   v19 = System_String__Format(v17, v18, 0LL);
@@ -152,8 +152,8 @@ void __fastcall EventInfoConquestItemCounterComponent__Start(
   if ( (byte_40FA0FD & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_5587, v3);
-    sub_B16FFC(&StringLiteral_5584, v4);
+    sub_B16FFC(&StringLiteral_5587/*"EVENT_CONQUEST_PRODUCT_NUM"*/, v3);
+    sub_B16FFC(&StringLiteral_5584/*"EVENT_CONQUEST_ITEM_NUM"*/, v4);
     byte_40FA0FD = 1;
   }
   itemNumTitleLabel = this->fields.itemNumTitleLabel;
@@ -162,11 +162,11 @@ void __fastcall EventInfoConquestItemCounterComponent__Start(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5584, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5584/*"EVENT_CONQUEST_ITEM_NUM"*/, 0LL);
   if ( !itemNumTitleLabel
     || (UILabel__set_text(itemNumTitleLabel, v6, 0LL),
         productNumTitleLabel = this->fields.productNumTitleLabel,
-        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5587, 0LL),
+        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5587/*"EVENT_CONQUEST_PRODUCT_NUM"*/, 0LL),
         !productNumTitleLabel)
     || (UILabel__set_text(productNumTitleLabel, v8, 0LL), (v9 = this->fields.itemNumTitleLabel) == 0LL)
     || (UILabel__SetCondensedScale(v9, this->fields.titleLabelMaxWidth, 0LL),

@@ -199,7 +199,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_8829, v8);
+    sub_B16FFC(&StringLiteral_8829/*"MYROOM_FAVORITE_STATUS"*/, v8);
     byte_40F9FB5 = 1;
   }
   if ( item && mode )
@@ -323,7 +323,7 @@ LABEL_52:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8829, 0LL);
+                  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8829/*"MYROOM_FAVORITE_STATUS"*/, 0LL);
                   if ( v31 )
                   {
                     UILabel__set_text(v31, v32, 0LL);
@@ -371,8 +371,8 @@ void __fastcall FavoriteChangeListViewItemDraw__SetMaskInfo(
   if ( (byte_40F9FB7 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_11584, v5);
-    sub_B16FFC(&StringLiteral_11607, v6);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v5);
+    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
     byte_40F9FB7 = 1;
   }
   if ( !item )
@@ -412,7 +412,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetMaskInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v15 = &StringLiteral_11607;
+      v15 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_38:
       v24 = LocalizationManager__Get((System_String_o *)*v15, 0LL);
       if ( v14 )
@@ -456,7 +456,7 @@ LABEL_32:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v15 = &StringLiteral_11584;
+      v15 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
       goto LABEL_38;
     }
   }

@@ -278,11 +278,11 @@ void __fastcall ClassBoardLockOpenConfirmDialog__Open(
     sub_B16FFC(&IClassBoardLockModel_TypeInfo, v15);
     sub_B16FFC(&IClassBoardSquareModel_TypeInfo, v16);
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_3010, v18);
-    sub_B16FFC(&StringLiteral_3008, v19);
-    sub_B16FFC(&StringLiteral_3006, v20);
-    sub_B16FFC(&StringLiteral_3007, v21);
-    sub_B16FFC(&StringLiteral_3009, v22);
+    sub_B16FFC(&StringLiteral_3010/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_TITLE"*/, v18);
+    sub_B16FFC(&StringLiteral_3008/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/, v19);
+    sub_B16FFC(&StringLiteral_3006/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_3007/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_DECIDE"*/, v21);
+    sub_B16FFC(&StringLiteral_3009/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/, v22);
     byte_40FB982 = 1;
   }
   v78 = 0;
@@ -324,7 +324,7 @@ void __fastcall ClassBoardLockOpenConfirmDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3010, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3010/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_51;
   UILabel__set_text(titleLabel, v36, 0LL);
@@ -426,7 +426,7 @@ LABEL_31:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v64 = LocalizationManager__Get((System_String_o *)StringLiteral_3009, 0LL);
+    v64 = LocalizationManager__Get((System_String_o *)StringLiteral_3009/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/, 0LL);
     if ( itemDetailLabel )
     {
       UILabel__set_text(itemDetailLabel, v64, 0LL);
@@ -446,7 +446,7 @@ LABEL_51:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v63 = LocalizationManager__Get((System_String_o *)StringLiteral_3008, 0LL);
+  v63 = LocalizationManager__Get((System_String_o *)StringLiteral_3008/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/, 0LL);
   if ( !itemDetailLabel )
     goto LABEL_51;
   UILabel__set_text(itemDetailLabel, v63, 0LL);
@@ -457,12 +457,12 @@ LABEL_45:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3006, 0LL);
+  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3006/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_CANCEL"*/, 0LL);
   if ( !cancelBtnLabel )
     goto LABEL_51;
   UILabel__set_text(cancelBtnLabel, v68, 0LL);
   decideBtnLabel = this->fields.decideBtnLabel;
-  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3007, 0LL);
+  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3007/*"CLASS_BOARD_LOCK_OPEN_CONFIRM_DIALOG_DECIDE"*/, 0LL);
   if ( !decideBtnLabel )
     goto LABEL_51;
   UILabel__set_text(decideBtnLabel, v70, 0LL);
@@ -514,8 +514,8 @@ System_String_o *__fastcall ClassBoardLockOpenConfirmDialog__get_closeBtnPath(
 {
   if ( (byte_40FB987 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15413, method);
+    sub_B16FFC(&StringLiteral_15413/*"Window/CancelBtn"*/, method);
     byte_40FB987 = 1;
   }
-  return (System_String_o *)StringLiteral_15413;
+  return (System_String_o *)StringLiteral_15413/*"Window/CancelBtn"*/;
 }

@@ -153,27 +153,27 @@ void __fastcall CommandCardDialog__GetSkillInfo(
 
   if ( (byte_40FA541 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, userCommandCode);
+    sub_B16FFC(&StringLiteral_1/*""*/, userCommandCode);
     byte_40FA541 = 1;
   }
   idList = 0LL;
   explanationList = 0LL;
   titleList = 0LL;
   *skillId = 0;
-  *skillName = (System_String_o *)StringLiteral_1;
+  *skillName = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)skillName,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     (System_String_array **)skillId,
     (System_String_array **)skillName,
     (System_Boolean_array **)skillDetail,
     (System_Int32_array **)method,
     v6,
     v7);
-  *skillDetail = (System_String_o *)StringLiteral_1;
+  *skillDetail = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)skillDetail,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     v12,
     v13,
     v14,
@@ -277,110 +277,110 @@ void __fastcall CommandCardDialog__Init(CommandCardDialog_o *this, const MethodI
   if ( (byte_40FA53C & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FA53C = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
   if ( !titleLabel )
     goto LABEL_69;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_69;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   equipmentWarningLabel = this->fields.equipmentWarningLabel;
   if ( !equipmentWarningLabel )
     goto LABEL_69;
-  UILabel__set_text(equipmentWarningLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(equipmentWarningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   removeWarningLabel = this->fields.removeWarningLabel;
   if ( !removeWarningLabel )
     goto LABEL_69;
-  UILabel__set_text(removeWarningLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(removeWarningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   itemInfoLabel = this->fields.itemInfoLabel;
   if ( !itemInfoLabel )
     goto LABEL_69;
-  UILabel__set_text(itemInfoLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(itemInfoLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   warningLabel = this->fields.warningLabel;
   if ( !warningLabel )
     goto LABEL_69;
-  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
   if ( !decideButtonLabel )
     goto LABEL_69;
-  UILabel__set_text(decideButtonLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(decideButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
   if ( !cancelButtonLabel )
     goto LABEL_69;
-  UILabel__set_text(cancelButtonLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeButtonLabel = this->fields.closeButtonLabel;
   if ( !closeButtonLabel )
     goto LABEL_69;
-  UILabel__set_text(closeButtonLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   haveQpLabel = this->fields.haveQpLabel;
   if ( !haveQpLabel )
     goto LABEL_69;
-  UILabel__set_text(haveQpLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(haveQpLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   haveQpTxtLabel = this->fields.haveQpTxtLabel;
   if ( !haveQpTxtLabel )
     goto LABEL_69;
-  UILabel__set_text(haveQpTxtLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(haveQpTxtLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   spendQpLabel = this->fields.spendQpLabel;
   if ( !spendQpLabel )
     goto LABEL_69;
-  UILabel__set_text(spendQpLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(spendQpLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   spendQpTxtLabel = this->fields.spendQpTxtLabel;
   if ( !spendQpTxtLabel )
     goto LABEL_69;
-  UILabel__set_text(spendQpTxtLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(spendQpTxtLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   haveItemTxtLabel = this->fields.haveItemTxtLabel;
   if ( !haveItemTxtLabel )
     goto LABEL_69;
-  UILabel__set_text(haveItemTxtLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(haveItemTxtLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   haveItemNumLabel = this->fields.haveItemNumLabel;
   if ( !haveItemNumLabel )
     goto LABEL_69;
-  UILabel__set_text(haveItemNumLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(haveItemNumLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   spendItemTxtLabel = this->fields.spendItemTxtLabel;
   if ( !spendItemTxtLabel )
     goto LABEL_69;
-  UILabel__set_text(spendItemTxtLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(spendItemTxtLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   spendItemNumLabel = this->fields.spendItemNumLabel;
   if ( !spendItemNumLabel )
     goto LABEL_69;
-  UILabel__set_text(spendItemNumLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(spendItemNumLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   overwriteCommandCodeWarningLabel = this->fields.overwriteCommandCodeWarningLabel;
   if ( !overwriteCommandCodeWarningLabel )
     goto LABEL_69;
-  UILabel__set_text(overwriteCommandCodeWarningLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(overwriteCommandCodeWarningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   equipedCommandCodeSkillName = this->fields.equipedCommandCodeSkillName;
   if ( !equipedCommandCodeSkillName )
     goto LABEL_69;
-  UILabel__set_text(equipedCommandCodeSkillName, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(equipedCommandCodeSkillName, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   equipedCommandCodeSkillDetail = this->fields.equipedCommandCodeSkillDetail;
   if ( !equipedCommandCodeSkillDetail )
     goto LABEL_69;
-  UILabel__set_text(equipedCommandCodeSkillDetail, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(equipedCommandCodeSkillDetail, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   overwriteCommandCodeSkillName = this->fields.overwriteCommandCodeSkillName;
   if ( !overwriteCommandCodeSkillName )
     goto LABEL_69;
-  UILabel__set_text(overwriteCommandCodeSkillName, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(overwriteCommandCodeSkillName, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   overwriteCommandCodeSkillDetail = this->fields.overwriteCommandCodeSkillDetail;
   if ( !overwriteCommandCodeSkillDetail )
     goto LABEL_69;
-  UILabel__set_text(overwriteCommandCodeSkillDetail, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(overwriteCommandCodeSkillDetail, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   answerBackLabel = this->fields.answerBackLabel;
   if ( !answerBackLabel )
     goto LABEL_69;
-  UILabel__set_text(answerBackLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(answerBackLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   lockResultLabel = this->fields.lockResultLabel;
   if ( !lockResultLabel )
     goto LABEL_69;
-  UILabel__set_text(lockResultLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(lockResultLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   itemNumLabel = this->fields.itemNumLabel;
   if ( !itemNumLabel )
     goto LABEL_69;
-  UILabel__set_text(itemNumLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(itemNumLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   canExecuteButtonsObj = this->fields.canExecuteButtonsObj;
   if ( !canExecuteButtonsObj )
     goto LABEL_69;
@@ -706,10 +706,10 @@ void __fastcall CommandCardDialog__OpenLockCommandCardResult(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v20);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_B16FFC(&StringLiteral_3224, v23);
-    sub_B16FFC(&StringLiteral_3225, v24);
-    sub_B16FFC(&StringLiteral_3252, v25);
-    sub_B16FFC(&StringLiteral_1, v26);
+    sub_B16FFC(&StringLiteral_3224/*"COMMAND_CODE_LOCK_RETURN_DETAIL_MSG"*/, v23);
+    sub_B16FFC(&StringLiteral_3225/*"COMMAND_CODE_LOCK_RETURN_MSG"*/, v24);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v25);
+    sub_B16FFC(&StringLiteral_1/*""*/, v26);
     byte_40FA53E = 1;
   }
   entity = 0LL;
@@ -816,7 +816,7 @@ void __fastcall CommandCardDialog__OpenLockCommandCardResult(
   {
     num = 0;
   }
-  age = (Il2CppObject *)StringLiteral_1;
+  age = (Il2CppObject *)StringLiteral_1/*""*/;
   v59 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !v59 )
     goto LABEL_65;
@@ -844,20 +844,20 @@ LABEL_66:
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_65;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   lockResultLabel = this->fields.lockResultLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_3225, 0LL);
+  v62 = LocalizationManager__Get((System_String_o *)StringLiteral_3225/*"COMMAND_CODE_LOCK_RETURN_MSG"*/, 0LL);
   v63 = System_String__Format(v62, age, 0LL);
   if ( !lockResultLabel )
     goto LABEL_65;
   UILabel__set_text(lockResultLabel, v63, 0LL);
   itemNumLabel = this->fields.itemNumLabel;
-  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_3224, 0LL);
+  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_3224/*"COMMAND_CODE_LOCK_RETURN_DETAIL_MSG"*/, 0LL);
   v99 = num - 1;
   v66 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v99);
   v98 = num;
@@ -867,7 +867,7 @@ LABEL_66:
     goto LABEL_65;
   UILabel__set_text(itemNumLabel, v68, 0LL);
   closeButtonLabel = this->fields.closeButtonLabel;
-  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeButtonLabel )
     goto LABEL_65;
   UILabel__set_text(closeButtonLabel, v70, 0LL);
@@ -1069,19 +1069,19 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_B16FFC(&StringLiteral_3221, v17);
-    sub_B16FFC(&StringLiteral_3226, v18);
-    sub_B16FFC(&StringLiteral_3222, v19);
-    sub_B16FFC(&StringLiteral_3220, v20);
-    sub_B16FFC(&StringLiteral_3228, v21);
-    sub_B16FFC(&StringLiteral_3253, v22);
-    sub_B16FFC(&StringLiteral_3251, v23);
-    sub_B16FFC(&StringLiteral_3252, v24);
-    sub_B16FFC(&StringLiteral_23395, v25);
-    sub_B16FFC(&StringLiteral_3227, v26);
-    sub_B16FFC(&StringLiteral_3223, v27);
-    sub_B16FFC(&StringLiteral_1, v28);
-    sub_B16FFC(&StringLiteral_3216, v29);
+    sub_B16FFC(&StringLiteral_3221/*"COMMAND_CODE_LOCK_EQUIP_WARNING_MSG"*/, v17);
+    sub_B16FFC(&StringLiteral_3226/*"COMMAND_CODE_LOCK_SPEND_ITEM"*/, v18);
+    sub_B16FFC(&StringLiteral_3222/*"COMMAND_CODE_LOCK_HAVE_ITEM"*/, v19);
+    sub_B16FFC(&StringLiteral_3220/*"COMMAND_CODE_LOCK_DEFAULT_WARNING_MSG"*/, v20);
+    sub_B16FFC(&StringLiteral_3228/*"COMMAND_CODE_NOT_CLEAR_ITEM_MSG"*/, v21);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v22);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v23);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v24);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v25);
+    sub_B16FFC(&StringLiteral_3227/*"COMMAND_CODE_LOCK_TITLE"*/, v26);
+    sub_B16FFC(&StringLiteral_3223/*"COMMAND_CODE_LOCK_MSG"*/, v27);
+    sub_B16FFC(&StringLiteral_1/*""*/, v28);
+    sub_B16FFC(&StringLiteral_3216/*"COMMAND_CODE_DETACHING_ITEM_ID"*/, v29);
     byte_40FA53F = 1;
   }
   entity = 0LL;
@@ -1091,12 +1091,12 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3227, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3227/*"COMMAND_CODE_LOCK_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_88;
   UILabel__set_text(titleLabel, v31, 0LL);
   messageLabel = this->fields.messageLabel;
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3223, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3223/*"COMMAND_CODE_LOCK_MSG"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_88;
   UILabel__set_text(messageLabel, v33, 0LL);
@@ -1108,13 +1108,13 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3221, 0LL);
+    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3221/*"COMMAND_CODE_LOCK_EQUIP_WARNING_MSG"*/, 0LL);
     if ( !removeWarningLabel )
       goto LABEL_88;
   }
   else
   {
-    v35 = (System_String_o *)StringLiteral_1;
+    v35 = (System_String_o *)StringLiteral_1/*""*/;
     if ( !removeWarningLabel )
       goto LABEL_88;
   }
@@ -1128,7 +1128,7 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3220, 0LL);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3220/*"COMMAND_CODE_LOCK_DEFAULT_WARNING_MSG"*/, 0LL);
   v39 = System_String__Concat_43743732(mText, v38, 0LL);
   UILabel__set_text(v36, v39, 0LL);
   if ( equipped )
@@ -1144,16 +1144,16 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_3226, 0LL);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_3226/*"COMMAND_CODE_LOCK_SPEND_ITEM"*/, 0LL);
   if ( !spendItemTxtLabel )
     goto LABEL_88;
   UILabel__set_text(spendItemTxtLabel, v42, 0LL);
   haveItemTxtLabel = this->fields.haveItemTxtLabel;
-  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_3222, 0LL);
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_3222/*"COMMAND_CODE_LOCK_HAVE_ITEM"*/, 0LL);
   if ( !haveItemTxtLabel )
     goto LABEL_88;
   UILabel__set_text(haveItemTxtLabel, v44, 0LL);
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3216, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3216/*"COMMAND_CODE_DETACHING_ITEM_ID"*/, 0LL);
   releaseItemObj = this->fields.releaseItemObj;
   v47 = Value;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1229,7 +1229,7 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
   haveItemNumLabel = this->fields.haveItemNumLabel;
   v117 = num;
   v70 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v117);
-  v71 = System_String__Format((System_String_o *)StringLiteral_23395, v70, 0LL);
+  v71 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v70, 0LL);
   if ( !haveItemNumLabel )
     goto LABEL_88;
   UILabel__set_text(haveItemNumLabel, v71, 0LL);
@@ -1243,7 +1243,7 @@ void __fastcall CommandCardDialog__OpenLockEquipSlot(
   }
   DETACH_NEED_ITEM_NUM = v72->static_fields->DETACH_NEED_ITEM_NUM;
   v74 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &DETACH_NEED_ITEM_NUM);
-  v75 = System_String__Format((System_String_o *)StringLiteral_23395, v74, 0LL);
+  v75 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v74, 0LL);
   if ( !spendItemNumLabel )
     goto LABEL_88;
   UILabel__set_text(spendItemNumLabel, v75, 0LL);
@@ -1299,12 +1299,12 @@ LABEL_88:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v99 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+    v99 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
     if ( !decideButtonLabel )
       goto LABEL_88;
     UILabel__set_text(decideButtonLabel, v99, 0LL);
     cancelButtonLabel = this->fields.cancelButtonLabel;
-    v101 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+    v101 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
     if ( !cancelButtonLabel )
       goto LABEL_88;
     UILabel__set_text(cancelButtonLabel, v101, 0LL);
@@ -1332,12 +1332,12 @@ LABEL_88:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v90 = LocalizationManager__Get((System_String_o *)StringLiteral_3228, 0LL);
+    v90 = LocalizationManager__Get((System_String_o *)StringLiteral_3228/*"COMMAND_CODE_NOT_CLEAR_ITEM_MSG"*/, 0LL);
     if ( !v89 )
       goto LABEL_88;
     UILabel__set_text(v89, v90, 0LL);
     closeButtonLabel = this->fields.closeButtonLabel;
-    v92 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+    v92 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( !closeButtonLabel )
       goto LABEL_88;
     UILabel__set_text(closeButtonLabel, v92, 0LL);
@@ -1426,11 +1426,11 @@ void __fastcall CommandCardDialog__OpenRemoveEquip(
     sub_B16FFC(&System_Action_TypeInfo, userCommandCode);
     sub_B16FFC(&Method_CommandCardDialog_EndOpen__, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_3236, v9);
-    sub_B16FFC(&StringLiteral_3232, v10);
-    sub_B16FFC(&StringLiteral_3253, v11);
-    sub_B16FFC(&StringLiteral_3251, v12);
-    sub_B16FFC(&StringLiteral_3233, v13);
+    sub_B16FFC(&StringLiteral_3236/*"COMMAND_CODE_REMOVE_TITLE"*/, v9);
+    sub_B16FFC(&StringLiteral_3232/*"COMMAND_CODE_REMOVE_DETAIL_MSG"*/, v10);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v11);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v12);
+    sub_B16FFC(&StringLiteral_3233/*"COMMAND_CODE_REMOVE_MSG"*/, v13);
     byte_40FA540 = 1;
   }
   titleLabel = this->fields.titleLabel;
@@ -1439,27 +1439,27 @@ void __fastcall CommandCardDialog__OpenRemoveEquip(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3236, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3236/*"COMMAND_CODE_REMOVE_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_24;
   UILabel__set_text(titleLabel, v15, 0LL);
   messageLabel = this->fields.messageLabel;
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3233, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3233/*"COMMAND_CODE_REMOVE_MSG"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_24;
   UILabel__set_text(messageLabel, v17, 0LL);
   removeDetailLabel = this->fields.removeDetailLabel;
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3232, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3232/*"COMMAND_CODE_REMOVE_DETAIL_MSG"*/, 0LL);
   if ( !removeDetailLabel )
     goto LABEL_24;
   UILabel__set_text(removeDetailLabel, v19, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_24;
   UILabel__set_text(decideButtonLabel, v21, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_24;
   UILabel__set_text(cancelButtonLabel, v23, 0LL);
@@ -1635,14 +1635,14 @@ void __fastcall CommandCardDialog__OpenUnlockCommandCardEquipment(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v14);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_B16FFC(&StringLiteral_3239, v17);
-    sub_B16FFC(&StringLiteral_3160, v18);
-    sub_B16FFC(&StringLiteral_3240, v19);
-    sub_B16FFC(&StringLiteral_3253, v20);
-    sub_B16FFC(&StringLiteral_3251, v21);
-    sub_B16FFC(&StringLiteral_9236, v22);
-    sub_B16FFC(&StringLiteral_3241, v23);
-    sub_B16FFC(&StringLiteral_3219, v24);
+    sub_B16FFC(&StringLiteral_3239/*"COMMAND_CODE_UNLOCK_CONFIRM_MSG"*/, v17);
+    sub_B16FFC(&StringLiteral_3160/*"COMBINE_HAVE_QP"*/, v18);
+    sub_B16FFC(&StringLiteral_3240/*"COMMAND_CODE_UNLOCK_SPEND_QP"*/, v19);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v20);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v21);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v22);
+    sub_B16FFC(&StringLiteral_3241/*"COMMAND_CODE_UNLOCK_TITLE"*/, v23);
+    sub_B16FFC(&StringLiteral_3219/*"COMMAND_CODE_ITEM_ITEM_INFO"*/, v24);
     byte_40FA53D = 1;
   }
   titleLabel = this->fields.titleLabel;
@@ -1651,22 +1651,22 @@ void __fastcall CommandCardDialog__OpenUnlockCommandCardEquipment(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3241, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3241/*"COMMAND_CODE_UNLOCK_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_61;
   UILabel__set_text(titleLabel, v26, 0LL);
   itemInfoLabel = this->fields.itemInfoLabel;
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3219, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3219/*"COMMAND_CODE_ITEM_ITEM_INFO"*/, 0LL);
   if ( !itemInfoLabel )
     goto LABEL_61;
   UILabel__set_text(itemInfoLabel, v28, 0LL);
   spendQpTxtLabel = this->fields.spendQpTxtLabel;
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3240, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3240/*"COMMAND_CODE_UNLOCK_SPEND_QP"*/, 0LL);
   if ( !spendQpTxtLabel )
     goto LABEL_61;
   UILabel__set_text(spendQpTxtLabel, v30, 0LL);
   haveQpTxtLabel = this->fields.haveQpTxtLabel;
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3160, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3160/*"COMBINE_HAVE_QP"*/, 0LL);
   if ( !haveQpTxtLabel )
     goto LABEL_61;
   UILabel__set_text(haveQpTxtLabel, v32, 0LL);
@@ -1675,17 +1675,17 @@ void __fastcall CommandCardDialog__OpenUnlockCommandCardEquipment(
     goto LABEL_61;
   haveQpLabel = this->fields.haveQpLabel;
   v35 = SelfUserGame;
-  v36 = System_Int32__ToString_38275808((int)SelfUserGame + 96, (System_String_o *)StringLiteral_9236, 0LL);
+  v36 = System_Int32__ToString_38275808((int)SelfUserGame + 96, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !haveQpLabel )
     goto LABEL_61;
   UILabel__set_text(haveQpLabel, v36, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_61;
   UILabel__set_text(decideButtonLabel, v38, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelButtonLabel )
     goto LABEL_61;
   UILabel__set_text(cancelButtonLabel, v40, 0LL);
@@ -1715,7 +1715,7 @@ void __fastcall CommandCardDialog__OpenUnlockCommandCardEquipment(
     goto LABEL_61;
   spendQpLabel = this->fields.spendQpLabel;
   v49 = Entity;
-  v50 = System_Int32__ToString_38275808((int)Entity + 24, (System_String_o *)StringLiteral_9236, 0LL);
+  v50 = System_Int32__ToString_38275808((int)Entity + 24, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !spendQpLabel )
     goto LABEL_61;
   UILabel__set_text(spendQpLabel, v50, 0LL);
@@ -1805,7 +1805,7 @@ LABEL_42:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v77 = LocalizationManager__Get((System_String_o *)StringLiteral_3239, 0LL);
+  v77 = LocalizationManager__Get((System_String_o *)StringLiteral_3239/*"COMMAND_CODE_UNLOCK_CONFIRM_MSG"*/, 0LL);
   if ( !answerBackLabel )
     goto LABEL_61;
   UILabel__set_text(answerBackLabel, v77, 0LL);
@@ -1896,7 +1896,7 @@ UnityEngine_GameObject_o *__fastcall CommandCardDialog__get_closeBtnObject(
   if ( (byte_40FA545 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3545, v3);
+    sub_B16FFC(&StringLiteral_3545/*"CancelButton"*/, v3);
     byte_40FA545 = 1;
   }
   canExecuteButtonsObj = this->fields.canExecuteButtonsObj;
@@ -1905,7 +1905,7 @@ UnityEngine_GameObject_o *__fastcall CommandCardDialog__get_closeBtnObject(
   transform = UnityEngine_GameObject__get_transform(canExecuteButtonsObj, 0LL);
   if ( !transform )
     goto LABEL_20;
-  v6 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_3545, 0LL);
+  v6 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_3545/*"CancelButton"*/, 0LL);
   if ( !v6 )
     goto LABEL_20;
   gameObject = UnityEngine_Component__get_gameObject(v6, 0LL);

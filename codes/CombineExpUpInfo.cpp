@@ -69,9 +69,9 @@ void __fastcall CombineExpUpInfo___ctor(CombineExpUpInfo_o *this, const MethodIn
     sub_B16FFC(&Method_System_Collections_Generic_List_SvtClassAttri_TYPE___ctor__, v4);
     sub_B16FFC(&System_Collections_Generic_List_SvtClassAttri_TYPE__TypeInfo, v5);
     sub_B16FFC(&string___TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_16928, v7);
-    sub_B16FFC(&StringLiteral_16883, v8);
-    sub_B16FFC(&StringLiteral_16925, v9);
+    sub_B16FFC(&StringLiteral_16928/*"btn_hp_"*/, v7);
+    sub_B16FFC(&StringLiteral_16883/*"btn_atk_"*/, v8);
+    sub_B16FFC(&StringLiteral_16925/*"btn_experience_"*/, v9);
     byte_40F98E5 = 1;
   }
   v10 = sub_B17014(string___TypeInfo, 3LL, v2);
@@ -79,13 +79,13 @@ void __fastcall CombineExpUpInfo___ctor(CombineExpUpInfo_o *this, const MethodIn
 LABEL_23:
     sub_B170D4();
   v17 = (struct System_String_array *)v10;
-  v18 = StringLiteral_16925;
-  if ( StringLiteral_16925 )
+  v18 = StringLiteral_16925/*"btn_experience_"*/;
+  if ( StringLiteral_16925/*"btn_experience_"*/ )
   {
-    v18 = sub_B170BC(StringLiteral_16925, v17->obj.klass->_1.element_class);
+    v18 = sub_B170BC(StringLiteral_16925/*"btn_experience_"*/, v17->obj.klass->_1.element_class);
     if ( !v18 )
       goto LABEL_22;
-    v19 = (System_Int32_array **)StringLiteral_16925;
+    v19 = (System_Int32_array **)StringLiteral_16925/*"btn_experience_"*/;
   }
   else
   {
@@ -95,13 +95,13 @@ LABEL_23:
     goto LABEL_21;
   v17->m_Items[0] = (System_String_o *)v19;
   sub_B16F98((BattleServantConfConponent_o *)v17->m_Items, v19, v11, v12, v13, v14, v15, v16);
-  v18 = StringLiteral_16883;
-  if ( StringLiteral_16883 )
+  v18 = StringLiteral_16883/*"btn_atk_"*/;
+  if ( StringLiteral_16883/*"btn_atk_"*/ )
   {
-    v18 = sub_B170BC(StringLiteral_16883, v17->obj.klass->_1.element_class);
+    v18 = sub_B170BC(StringLiteral_16883/*"btn_atk_"*/, v17->obj.klass->_1.element_class);
     if ( !v18 )
       goto LABEL_22;
-    v19 = (System_Int32_array **)StringLiteral_16883;
+    v19 = (System_Int32_array **)StringLiteral_16883/*"btn_atk_"*/;
   }
   else
   {
@@ -111,13 +111,13 @@ LABEL_23:
     goto LABEL_21;
   v17->m_Items[1] = (System_String_o *)v19;
   sub_B16F98((BattleServantConfConponent_o *)&v17->m_Items[1], v19, v11, v20, v21, v22, v23, v24);
-  v18 = StringLiteral_16928;
-  if ( StringLiteral_16928 )
+  v18 = StringLiteral_16928/*"btn_hp_"*/;
+  if ( StringLiteral_16928/*"btn_hp_"*/ )
   {
-    v18 = sub_B170BC(StringLiteral_16928, v17->obj.klass->_1.element_class);
+    v18 = sub_B170BC(StringLiteral_16928/*"btn_hp_"*/, v17->obj.klass->_1.element_class);
     if ( v18 )
     {
-      v19 = (System_Int32_array **)StringLiteral_16928;
+      v19 = (System_Int32_array **)StringLiteral_16928/*"btn_hp_"*/;
       goto LABEL_18;
     }
 LABEL_22:
@@ -1126,13 +1126,13 @@ void __fastcall CombineExpUpInfo__SetBtnState(
   if ( (byte_40F98E0 & 1) == 0 )
   {
     sub_B16FFC(&CombineExpUpInfo_TypeInfo, *(_QWORD *)&kind);
-    sub_B16FFC(&StringLiteral_21107, v6);
-    sub_B16FFC(&StringLiteral_16889, v7);
-    sub_B16FFC(&StringLiteral_21136, v8);
-    sub_B16FFC(&StringLiteral_17076, v9);
-    sub_B16FFC(&StringLiteral_17075, v10);
-    sub_B16FFC(&StringLiteral_17070, v11);
-    this = (CombineExpUpInfo_o *)sub_B16FFC(&StringLiteral_16888, v12);
+    sub_B16FFC(&StringLiteral_21107/*"off"*/, v6);
+    sub_B16FFC(&StringLiteral_16889/*"btn_bg_02_on"*/, v7);
+    sub_B16FFC(&StringLiteral_21136/*"on"*/, v8);
+    sub_B16FFC(&StringLiteral_17076/*"button_total"*/, v9);
+    sub_B16FFC(&StringLiteral_17075/*"button_storage"*/, v10);
+    sub_B16FFC(&StringLiteral_17070/*"button_possess"*/, v11);
+    this = (CombineExpUpInfo_o *)sub_B16FFC(&StringLiteral_16888/*"btn_bg_02_off"*/, v12);
     byte_40F98E0 = 1;
   }
   v13 = 4LL;
@@ -1158,7 +1158,7 @@ void __fastcall CombineExpUpInfo__SetBtnState(
       v18 = (UISprite_o *)*((_QWORD *)&btnSpriteList->obj.klass + v13);
       if ( !v18 )
         goto LABEL_49;
-      UISprite__set_spriteName(v18, (System_String_o *)StringLiteral_16889, 0LL);
+      UISprite__set_spriteName(v18, (System_String_o *)StringLiteral_16889/*"btn_bg_02_on"*/, 0LL);
       v19 = v5->fields.btnSpriteList;
       if ( !v19 )
         goto LABEL_49;
@@ -1191,7 +1191,7 @@ void __fastcall CombineExpUpInfo__SetBtnState(
         goto LABEL_50;
       v24 = (UISprite_o *)*((_QWORD *)&btnTxtSpriteList->obj.klass + v13);
       v25 = (System_String_o *)*((_QWORD *)&btnSpriteNameList->obj.klass + v13);
-      v26 = (System_String_o *)StringLiteral_21136;
+      v26 = (System_String_o *)StringLiteral_21136/*"on"*/;
     }
     else
     {
@@ -1208,7 +1208,7 @@ LABEL_50:
       v28 = (UISprite_o *)*((_QWORD *)&v27->obj.klass + v13);
       if ( !v28 )
         goto LABEL_49;
-      UISprite__set_spriteName(v28, (System_String_o *)StringLiteral_16888, 0LL);
+      UISprite__set_spriteName(v28, (System_String_o *)StringLiteral_16888/*"btn_bg_02_off"*/, 0LL);
       v29 = v5->fields.btnSpriteList;
       if ( !v29 )
         goto LABEL_49;
@@ -1241,7 +1241,7 @@ LABEL_50:
         goto LABEL_50;
       v24 = (UISprite_o *)*((_QWORD *)&v32->obj.klass + v13);
       v25 = (System_String_o *)*((_QWORD *)&v33->obj.klass + v13);
-      v26 = (System_String_o *)StringLiteral_21107;
+      v26 = (System_String_o *)StringLiteral_21107/*"off"*/;
     }
     v34 = System_String__Concat_43743732(v25, v26, 0LL);
     if ( !v24 )
@@ -1256,7 +1256,7 @@ LABEL_50:
       btnChangeSprite = v5->fields.btnChangeSprite;
       if ( btnChangeSprite )
       {
-        v36 = &StringLiteral_17076;
+        v36 = &StringLiteral_17076/*"button_total"*/;
         goto LABEL_47;
       }
 LABEL_49:
@@ -1265,7 +1265,7 @@ LABEL_49:
       btnChangeSprite = v5->fields.btnChangeSprite;
       if ( btnChangeSprite )
       {
-        v36 = &StringLiteral_17075;
+        v36 = &StringLiteral_17075/*"button_storage"*/;
         goto LABEL_47;
       }
       goto LABEL_49;
@@ -1273,7 +1273,7 @@ LABEL_49:
       btnChangeSprite = v5->fields.btnChangeSprite;
       if ( btnChangeSprite )
       {
-        v36 = &StringLiteral_17070;
+        v36 = &StringLiteral_17070/*"button_possess"*/;
 LABEL_47:
         UISprite__set_spriteName(btnChangeSprite, (System_String_o *)*v36, 0LL);
         return;

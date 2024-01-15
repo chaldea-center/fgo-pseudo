@@ -414,8 +414,8 @@ void __fastcall SoundPlayerListViewObject__onClickSelect(SoundPlayerListViewObje
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
     sub_B16FFC(&SoundPlayerListViewItem_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_21147, v4);
-    sub_B16FFC(&StringLiteral_21143, v5);
+    sub_B16FFC(&StringLiteral_21147/*"onClickSelectListView"*/, v4);
+    sub_B16FFC(&StringLiteral_21143/*"onClickCheckListView"*/, v5);
     byte_40F9D39 = 1;
   }
   linkItem = this->fields.linkItem;
@@ -442,7 +442,7 @@ void __fastcall SoundPlayerListViewObject__onClickSelect(SoundPlayerListViewObje
         manager = (UnityEngine_Component_o *)this->fields.manager;
         if ( manager )
         {
-          v10 = &StringLiteral_21143;
+          v10 = &StringLiteral_21143/*"onClickCheckListView"*/;
           goto LABEL_18;
         }
 LABEL_19:
@@ -451,7 +451,7 @@ LABEL_19:
         manager = (UnityEngine_Component_o *)this->fields.manager;
         if ( manager )
         {
-          v10 = &StringLiteral_21147;
+          v10 = &StringLiteral_21147/*"onClickSelectListView"*/;
 LABEL_18:
           UnityEngine_Component__SendMessage(manager, (System_String_o *)*v10, (Il2CppObject *)this, 0LL);
           return;

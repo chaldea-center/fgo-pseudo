@@ -618,14 +618,14 @@ System_String_o *__fastcall CheckCombineResStatus__getOpenSkillNameByCombine(
 
   if ( (byte_40FAF24 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, baseData);
+    sub_B16FFC(&StringLiteral_1/*""*/, baseData);
     byte_40FAF24 = 1;
   }
   v13 = 0LL;
   idList = 0LL;
   if ( !baseData )
     sub_B170D4();
-  v8 = (System_String_o *)StringLiteral_1;
+  v8 = (System_String_o *)StringLiteral_1/*""*/;
   UserServantEntity__getNextUseSkillInfo(baseData, &idList, &v13, increLv, limitCntSum, 1, 0LL);
   if ( v13 )
   {
@@ -692,12 +692,12 @@ System_String_o *__fastcall CheckCombineResStatus__getSvtEqSkillByCombine(
     sub_B16FFC(&System_Collections_Generic_List_ServantSkillEntity__TypeInfo, v13);
     sub_B16FFC(&Method_CheckCombineResStatus___c__getSvtEqSkillByCombine_b__11_0__, v14);
     sub_B16FFC(&CheckCombineResStatus___c_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40FAF25 = 1;
   }
   if ( !baseData )
     goto LABEL_19;
-  v17 = (System_String_o *)StringLiteral_1;
+  v17 = (System_String_o *)StringLiteral_1/*""*/;
   UseSvtEqSkillInfo = (System_Collections_Generic_IEnumerable_T__o *)UserServantEntity__getUseSvtEqSkillInfo(
                                                                        baseData,
                                                                        increLv,

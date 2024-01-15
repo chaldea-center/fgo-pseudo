@@ -30,7 +30,7 @@ void __fastcall BattleResultMasterUpStatusComponent__setData(
   if ( (byte_40FA3FC & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&oldVal);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FA3FC = 1;
   }
   oldParamLabel = (UnityEngine_Object_o *)this->fields.oldParamLabel;
@@ -48,7 +48,7 @@ void __fastcall BattleResultMasterUpStatusComponent__setData(
     if ( v8 )
       v9 = v8;
     else
-      v9 = (System_String_o *)StringLiteral_1;
+      v9 = (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v7, v9, 0LL);
   }
   newParamLabel = (UnityEngine_Object_o *)this->fields.newParamLabel;
@@ -66,7 +66,7 @@ void __fastcall BattleResultMasterUpStatusComponent__setData(
       if ( v12 )
         v13 = v12;
       else
-        v13 = (System_String_o *)StringLiteral_1;
+        v13 = (System_String_o *)StringLiteral_1/*""*/;
       UILabel__set_text(v11, v13, 0LL);
       return;
     }

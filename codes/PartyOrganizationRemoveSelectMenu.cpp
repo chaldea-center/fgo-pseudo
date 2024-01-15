@@ -140,42 +140,42 @@ void __fastcall PartyOrganizationRemoveSelectMenu__Init(
 
   if ( (byte_40F76DE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F76DE = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_13;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   nameLabel = this->fields.nameLabel;
   if ( !nameLabel )
     goto LABEL_13;
-  UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_13;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   copyLabel = this->fields.copyLabel;
   if ( !copyLabel )
     goto LABEL_13;
-  UILabel__set_text(copyLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(copyLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   removeAllLabel = this->fields.removeAllLabel;
   if ( !removeAllLabel )
     goto LABEL_13;
-  UILabel__set_text(removeAllLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(removeAllLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   initAllLabel = this->fields.initAllLabel;
   if ( !initAllLabel
-    || (UILabel__set_text(initAllLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(initAllLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (removeEquipLabel = this->fields.removeEquipLabel) == 0LL)
-    || (UILabel__set_text(removeEquipLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(removeEquipLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (changeNameLabel = this->fields.changeNameLabel) == 0LL)
-    || (UILabel__set_text(changeNameLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(changeNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL) )
   {
 LABEL_13:
     sub_B170D4();
   }
-  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -406,16 +406,16 @@ void __fastcall PartyOrganizationRemoveSelectMenu__Open(
     sub_B16FFC(&System_Action_TypeInfo, partyItem);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_PartyOrganizationRemoveSelectMenu_EndOpen__, v15);
-    sub_B16FFC(&StringLiteral_10335, v16);
-    sub_B16FFC(&StringLiteral_10338, v17);
-    sub_B16FFC(&StringLiteral_10341, v18);
-    sub_B16FFC(&StringLiteral_10343, v19);
-    sub_B16FFC(&StringLiteral_10336, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
-    sub_B16FFC(&StringLiteral_10339, v22);
-    sub_B16FFC(&StringLiteral_10342, v23);
-    sub_B16FFC(&StringLiteral_10337, v24);
-    sub_B16FFC(&StringLiteral_10340, v25);
+    sub_B16FFC(&StringLiteral_10335/*"PARTY_ORGANIZATION_REMOVE_SELECT_CANCEL"*/, v16);
+    sub_B16FFC(&StringLiteral_10338/*"PARTY_ORGANIZATION_REMOVE_SELECT_INIT_ALL"*/, v17);
+    sub_B16FFC(&StringLiteral_10341/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_ALL"*/, v18);
+    sub_B16FFC(&StringLiteral_10343/*"PARTY_ORGANIZATION_REMOVE_SELECT_TITLE"*/, v19);
+    sub_B16FFC(&StringLiteral_10336/*"PARTY_ORGANIZATION_REMOVE_SELECT_CHANGE_NAME"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
+    sub_B16FFC(&StringLiteral_10339/*"PARTY_ORGANIZATION_REMOVE_SELECT_MESSAGE"*/, v22);
+    sub_B16FFC(&StringLiteral_10342/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_EQUIP"*/, v23);
+    sub_B16FFC(&StringLiteral_10337/*"PARTY_ORGANIZATION_REMOVE_SELECT_COPY"*/, v24);
+    sub_B16FFC(&StringLiteral_10340/*"PARTY_ORGANIZATION_REMOVE_SELECT_NAME"*/, v25);
     byte_40F76DF = 1;
   }
   state = this->fields.state;
@@ -463,7 +463,7 @@ void __fastcall PartyOrganizationRemoveSelectMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10343, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10343/*"PARTY_ORGANIZATION_REMOVE_SELECT_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_62;
   v31 = menuKind | 8;
@@ -476,14 +476,14 @@ void __fastcall PartyOrganizationRemoveSelectMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10340, 0LL);
+    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10340/*"PARTY_ORGANIZATION_REMOVE_SELECT_NAME"*/, 0LL);
     v34 = System_String__Format(v33, (Il2CppObject *)partyItem->fields.deckName, 0LL);
     if ( !nameLabel )
       goto LABEL_62;
   }
   else
   {
-    v34 = (System_String_o *)StringLiteral_1;
+    v34 = (System_String_o *)StringLiteral_1/*""*/;
     if ( !nameLabel )
       goto LABEL_62;
   }
@@ -494,7 +494,7 @@ void __fastcall PartyOrganizationRemoveSelectMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_10339, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_10339/*"PARTY_ORGANIZATION_REMOVE_SELECT_MESSAGE"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_62;
   UILabel__set_text(messageLabel, v37, 0LL);
@@ -509,32 +509,32 @@ void __fastcall PartyOrganizationRemoveSelectMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10337, 0LL);
+  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10337/*"PARTY_ORGANIZATION_REMOVE_SELECT_COPY"*/, 0LL);
   if ( !copyLabel )
     goto LABEL_62;
   UILabel__set_text(copyLabel, v41, 0LL);
   removeAllLabel = this->fields.removeAllLabel;
-  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_10341, 0LL);
+  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_10341/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_ALL"*/, 0LL);
   if ( !removeAllLabel )
     goto LABEL_62;
   UILabel__set_text(removeAllLabel, v43, 0LL);
   initAllLabel = this->fields.initAllLabel;
-  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_10338, 0LL);
+  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_10338/*"PARTY_ORGANIZATION_REMOVE_SELECT_INIT_ALL"*/, 0LL);
   if ( !initAllLabel )
     goto LABEL_62;
   UILabel__set_text(initAllLabel, v45, 0LL);
   removeEquipLabel = this->fields.removeEquipLabel;
-  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_10342, 0LL);
+  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_10342/*"PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_EQUIP"*/, 0LL);
   if ( !removeEquipLabel )
     goto LABEL_62;
   UILabel__set_text(removeEquipLabel, v47, 0LL);
   changeNameLabel = this->fields.changeNameLabel;
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_10336, 0LL);
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_10336/*"PARTY_ORGANIZATION_REMOVE_SELECT_CHANGE_NAME"*/, 0LL);
   if ( !changeNameLabel )
     goto LABEL_62;
   UILabel__set_text(changeNameLabel, v49, 0LL);
   cancelLabel = this->fields.cancelLabel;
-  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_10335, 0LL);
+  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_10335/*"PARTY_ORGANIZATION_REMOVE_SELECT_CANCEL"*/, 0LL);
   if ( !cancelLabel )
     goto LABEL_62;
   UILabel__set_text(cancelLabel, v51, 0LL);
@@ -662,10 +662,10 @@ System_String_o *__fastcall PartyOrganizationRemoveSelectMenu__get_closeBtnPath(
 {
   if ( (byte_40F76E7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2729, method);
+    sub_B16FFC(&StringLiteral_2729/*"BaseWindow/CancelButton"*/, method);
     byte_40F76E7 = 1;
   }
-  return (System_String_o *)StringLiteral_2729;
+  return (System_String_o *)StringLiteral_2729/*"BaseWindow/CancelButton"*/;
 }
 
 

@@ -335,7 +335,7 @@ void __fastcall ServantStatusBattleListViewObject__OnClickButton(
 
   if ( (byte_40F871A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9924, method);
+    sub_B16FFC(&StringLiteral_9924/*"OnClickListViewButton"*/, method);
     byte_40F871A = 1;
   }
   if ( this->fields.linkItem )
@@ -343,7 +343,7 @@ void __fastcall ServantStatusBattleListViewObject__OnClickButton(
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9924, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9924/*"OnClickListViewButton"*/, (Il2CppObject *)this, 0LL);
   }
 }
 

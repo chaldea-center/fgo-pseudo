@@ -17,22 +17,22 @@ void __fastcall BattleSelectCommandComponent___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&BattleSelectCommandComponent_TypeInfo, v1);
     sub_B16FFC(&string___TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_17544, v4);
-    sub_B16FFC(&StringLiteral_17543, v5);
-    sub_B16FFC(&StringLiteral_17542, v6);
+    sub_B16FFC(&StringLiteral_17544/*"commandcard_select_3rd"*/, v4);
+    sub_B16FFC(&StringLiteral_17543/*"commandcard_select_2nd"*/, v5);
+    sub_B16FFC(&StringLiteral_17542/*"commandcard_select_1st"*/, v6);
     byte_40F7533 = 1;
   }
   v7 = sub_B17014(string___TypeInfo, 3LL, v2);
   if ( !v7 )
     sub_B170D4();
   v9 = (struct System_String_array *)v7;
-  v10 = StringLiteral_17542;
-  if ( StringLiteral_17542 )
+  v10 = StringLiteral_17542/*"commandcard_select_1st"*/;
+  if ( StringLiteral_17542/*"commandcard_select_1st"*/ )
   {
-    v10 = sub_B170BC(StringLiteral_17542, v9->obj.klass->_1.element_class);
+    v10 = sub_B170BC(StringLiteral_17542/*"commandcard_select_1st"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_21;
-    v11 = StringLiteral_17542;
+    v11 = StringLiteral_17542/*"commandcard_select_1st"*/;
   }
   else
   {
@@ -42,13 +42,13 @@ void __fastcall BattleSelectCommandComponent___cctor(const MethodInfo *method)
     goto LABEL_20;
   v9->m_Items[0] = (System_String_o *)v11;
   sub_B16F98(v9->m_Items, v11);
-  v10 = StringLiteral_17543;
-  if ( StringLiteral_17543 )
+  v10 = StringLiteral_17543/*"commandcard_select_2nd"*/;
+  if ( StringLiteral_17543/*"commandcard_select_2nd"*/ )
   {
-    v10 = sub_B170BC(StringLiteral_17543, v9->obj.klass->_1.element_class);
+    v10 = sub_B170BC(StringLiteral_17543/*"commandcard_select_2nd"*/, v9->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_21;
-    v11 = StringLiteral_17543;
+    v11 = StringLiteral_17543/*"commandcard_select_2nd"*/;
   }
   else
   {
@@ -58,13 +58,13 @@ void __fastcall BattleSelectCommandComponent___cctor(const MethodInfo *method)
     goto LABEL_20;
   v9->m_Items[1] = (System_String_o *)v11;
   sub_B16F98(&v9->m_Items[1], v11);
-  v10 = StringLiteral_17544;
-  if ( StringLiteral_17544 )
+  v10 = StringLiteral_17544/*"commandcard_select_3rd"*/;
+  if ( StringLiteral_17544/*"commandcard_select_3rd"*/ )
   {
-    v10 = sub_B170BC(StringLiteral_17544, v9->obj.klass->_1.element_class);
+    v10 = sub_B170BC(StringLiteral_17544/*"commandcard_select_3rd"*/, v9->obj.klass->_1.element_class);
     if ( v10 )
     {
-      v11 = StringLiteral_17544;
+      v11 = StringLiteral_17544/*"commandcard_select_3rd"*/;
       goto LABEL_18;
     }
 LABEL_21:

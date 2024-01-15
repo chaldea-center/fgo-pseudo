@@ -49,17 +49,17 @@ void __fastcall BitExpeditionFinishComponent___ctor(BitExpeditionFinishComponent
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__Animation___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_Dictionary_int__Animation__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_16692, v10);
-    sub_B16FFC(&StringLiteral_16694, v11);
-    sub_B16FFC(&StringLiteral_16693, v12);
-    sub_B16FFC(&StringLiteral_16695, v13);
+    sub_B16FFC(&StringLiteral_16692/*"bit_expedition_finish"*/, v10);
+    sub_B16FFC(&StringLiteral_16694/*"bit_expedition_finish_dog_{0}_end"*/, v11);
+    sub_B16FFC(&StringLiteral_16693/*"bit_expedition_finish_dog_{0}"*/, v12);
+    sub_B16FFC(&StringLiteral_16695/*"bit_expedition_finish_end"*/, v13);
     byte_40F908F = 1;
   }
-  v14 = (System_Int32_array **)StringLiteral_16692;
-  this->fields.FINISH_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_16692;
+  v14 = (System_Int32_array **)StringLiteral_16692/*"bit_expedition_finish"*/;
+  this->fields.FINISH_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_16692/*"bit_expedition_finish"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.FINISH_ANIMATION_NAME_BASE, v14, v2, v3, v4, v5, v6, v7);
-  v15 = (System_Int32_array **)StringLiteral_16695;
-  this->fields.FINISH_END_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_16695;
+  v15 = (System_Int32_array **)StringLiteral_16695/*"bit_expedition_finish_end"*/;
+  this->fields.FINISH_END_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_16695/*"bit_expedition_finish_end"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.FINISH_END_ANIMATION_NAME_BASE,
     v15,
@@ -69,11 +69,11 @@ void __fastcall BitExpeditionFinishComponent___ctor(BitExpeditionFinishComponent
     v19,
     v20,
     v21);
-  v22 = (System_Int32_array **)StringLiteral_16693;
-  this->fields.DOG_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_16693;
+  v22 = (System_Int32_array **)StringLiteral_16693/*"bit_expedition_finish_dog_{0}"*/;
+  this->fields.DOG_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_16693/*"bit_expedition_finish_dog_{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.DOG_ANIMATION_NAME_BASE, v22, v23, v24, v25, v26, v27, v28);
-  v29 = (System_Int32_array **)StringLiteral_16694;
-  this->fields.DOG_ANIMATION_NAME_BASE_END = (struct System_String_o *)StringLiteral_16694;
+  v29 = (System_Int32_array **)StringLiteral_16694/*"bit_expedition_finish_dog_{0}_end"*/;
+  this->fields.DOG_ANIMATION_NAME_BASE_END = (struct System_String_o *)StringLiteral_16694/*"bit_expedition_finish_dog_{0}_end"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.DOG_ANIMATION_NAME_BASE_END,
     v29,

@@ -641,7 +641,7 @@ void __fastcall ServantEquipEffectFilterController__RefreshContainers(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v17);
     sub_B16FFC(&Method_ServantEquipEffectFilterController_OnClick_Category__, v18);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v19);
-    sub_B16FFC(&StringLiteral_4244, v20);
+    sub_B16FFC(&StringLiteral_4244/*"Container_"*/, v20);
     byte_40FD067 = 1;
   }
   memset(&v70, 0, sizeof(v70));
@@ -729,7 +729,7 @@ LABEL_10:
                                  v40,
                                  *(_QWORD *)(*(_QWORD *)v40 + 368LL));
       groupType = *(_DWORD *)j_il2cpp_object_unbox_0(v41);
-      v43 = System_String__Concat_43743732((System_String_o *)StringLiteral_4244, v42, 0LL);
+      v43 = System_String__Concat_43743732((System_String_o *)StringLiteral_4244/*"Container_"*/, v42, 0LL);
       if ( !v39 )
         sub_B170D4();
       UnityEngine_Object__set_name(v39, v43, 0LL);
@@ -1063,17 +1063,17 @@ void __fastcall ServantEquipEffectFilterController__SetupLabelObject(
   if ( (byte_40FD064 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_11647, v3);
-    sub_B16FFC(&StringLiteral_11650, v4);
-    sub_B16FFC(&StringLiteral_11648, v5);
-    sub_B16FFC(&StringLiteral_11645, v6);
+    sub_B16FFC(&StringLiteral_11647/*"SERVANT_EQUIP_EFFECT_FILTER_BUTTON_DESELECT_ALL"*/, v3);
+    sub_B16FFC(&StringLiteral_11650/*"SERVANT_EQUIP_EFFECT_FILTER_TITLE"*/, v4);
+    sub_B16FFC(&StringLiteral_11648/*"SERVANT_EQUIP_EFFECT_FILTER_BUTTON_SELECT_ALL"*/, v5);
+    sub_B16FFC(&StringLiteral_11645/*"SERVANT_EFFECT_FILTER_TITLE"*/, v6);
     byte_40FD064 = 1;
   }
   lineSprite = (UILabel_o *)this->fields.lineSprite;
   if ( LODWORD(this->fields.displayGroups) == 4 )
-    v8 = (System_String_o **)&StringLiteral_11645;
+    v8 = (System_String_o **)&StringLiteral_11645/*"SERVANT_EFFECT_FILTER_TITLE"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_11650;
+    v8 = (System_String_o **)&StringLiteral_11650/*"SERVANT_EQUIP_EFFECT_FILTER_TITLE"*/;
   v9 = *v8;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1084,11 +1084,11 @@ void __fastcall ServantEquipEffectFilterController__SetupLabelObject(
   if ( !lineSprite
     || (UILabel__set_text(lineSprite, v10, 0LL),
         forceDeselectAllButtonLabel = this->fields.forceDeselectAllButtonLabel,
-        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11648, 0LL),
+        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11648/*"SERVANT_EQUIP_EFFECT_FILTER_BUTTON_SELECT_ALL"*/, 0LL),
         !forceDeselectAllButtonLabel)
     || (UILabel__set_text(forceDeselectAllButtonLabel, v12, 0LL),
         sort = (UILabel_o *)this->fields.sort,
-        v14 = LocalizationManager__Get((System_String_o *)StringLiteral_11647, 0LL),
+        v14 = LocalizationManager__Get((System_String_o *)StringLiteral_11647/*"SERVANT_EQUIP_EFFECT_FILTER_BUTTON_DESELECT_ALL"*/, 0LL),
         !sort) )
   {
     sub_B170D4();

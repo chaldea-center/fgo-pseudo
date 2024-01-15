@@ -14,14 +14,14 @@ void __fastcall SvtEqCombineListViewManager___cctor(const MethodInfo *method)
   if ( (byte_40FD65E & 1) == 0 )
   {
     sub_B16FFC(&SvtEqCombineListViewManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_13121, v8);
+    sub_B16FFC(&StringLiteral_13121/*"SvtEqCombine"*/, v8);
     byte_40FD65E = 1;
   }
   SvtEqCombineListViewManager_TypeInfo->static_fields->COLOR_VAL = 0.375;
   SvtEqCombineListViewManager_TypeInfo->static_fields->FILTER2_MAX_KIND_NUM = 1;
   static_fields = SvtEqCombineListViewManager_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_13121;
-  static_fields->SORT_SAVE_KEY = (struct System_String_o *)StringLiteral_13121;
+  v10 = (System_Int32_array **)StringLiteral_13121/*"SvtEqCombine"*/;
+  static_fields->SORT_SAVE_KEY = (struct System_String_o *)StringLiteral_13121/*"SvtEqCombine"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->SORT_SAVE_KEY, v10, v2, v3, v4, v5, v6, v7);
   SvtEqCombineListViewManager_TypeInfo->static_fields->isInitSystem = 0;
 }
@@ -773,8 +773,8 @@ void __fastcall SvtEqCombineListViewManager__CreateList(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&type);
     sub_B16FFC(&SvtEqCombineListViewManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_6831, v12);
-    sub_B16FFC(&StringLiteral_9242, v13);
+    sub_B16FFC(&StringLiteral_6831/*"GET_EXP_INFO"*/, v12);
+    sub_B16FFC(&StringLiteral_9242/*"NEED_QP_INFO"*/, v13);
     byte_40FD622 = 1;
   }
   this->fields.currentType = type;
@@ -933,12 +933,12 @@ LABEL_28:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v73 = LocalizationManager__Get((System_String_o *)StringLiteral_9242, 0LL);
+          v73 = LocalizationManager__Get((System_String_o *)StringLiteral_9242/*"NEED_QP_INFO"*/, 0LL);
           if ( spendQpInfoLabel )
           {
             UILabel__set_text(spendQpInfoLabel, v73, 0LL);
             getExpInfoLabel = this->fields.getExpInfoLabel;
-            v75 = LocalizationManager__Get((System_String_o *)StringLiteral_6831, 0LL);
+            v75 = LocalizationManager__Get((System_String_o *)StringLiteral_6831/*"GET_EXP_INFO"*/, 0LL);
             if ( getExpInfoLabel )
             {
               UILabel__set_text(getExpInfoLabel, v75, 0LL);
@@ -4633,8 +4633,8 @@ void __fastcall SvtEqCombineListViewManager__RefrashListDisp(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v18);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
     sub_B16FFC(&SvtEqCombineListViewItem_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_23433, v21);
-    sub_B16FFC(&StringLiteral_12413, v22);
+    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v21);
+    sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v22);
     byte_40FD629 = 1;
   }
   memset(&v96, 0, sizeof(v96));
@@ -4713,7 +4713,7 @@ LABEL_18:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   LODWORD(v92.fields.list) = this->fields.selectSum;
   v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v92);
   selectMax = this->fields.selectMax;
@@ -4775,7 +4775,7 @@ LABEL_18:
   spendQpLabel = this->fields.spendQpLabel;
   LODWORD(v92.fields.list) = this->fields.selectQp;
   v47 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v92);
-  v48 = System_String__Format((System_String_o *)StringLiteral_23433, v47, 0LL);
+  v48 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v47, 0LL);
   if ( !spendQpLabel )
     goto LABEL_94;
   UILabel__set_text(spendQpLabel, v48, 0LL);
@@ -4799,13 +4799,13 @@ LABEL_18:
   getBasicExpLabel = this->fields.getBasicExpLabel;
   LODWORD(v92.fields.list) = this->fields.selectExp;
   v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v92);
-  v56 = System_String__Format((System_String_o *)StringLiteral_23433, v55, 0LL);
+  v56 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v55, 0LL);
   if ( !getBasicExpLabel
     || (UILabel__set_text(getBasicExpLabel, v56, 0LL),
         getAccExpLabel = this->fields.getAccExpLabel,
         selectMax = this->fields.addTotalExp,
         v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &selectMax),
-        v59 = System_String__Format((System_String_o *)StringLiteral_23433, v58, 0LL),
+        v59 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v58, 0LL),
         !getAccExpLabel) )
   {
 LABEL_94:
@@ -5070,7 +5070,7 @@ void __fastcall SvtEqCombineListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_SvtEqCombineListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_SvtEqCombineListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_SvtEqCombineListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FD635 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -5085,7 +5085,7 @@ void __fastcall SvtEqCombineListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -5155,7 +5155,7 @@ void __fastcall SvtEqCombineListViewManager__RequestListObject_31517820(
     sub_B16FFC(&Method_System_Collections_Generic_List_SvtEqCombineListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_SvtEqCombineListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_SvtEqCombineListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FD636 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -5170,7 +5170,7 @@ void __fastcall SvtEqCombineListViewManager__RequestListObject_31517820(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -6244,8 +6244,8 @@ void __fastcall SvtEqCombineListViewManager__SetFilterButtonImage(
 
   if ( (byte_40FD648 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16927, method);
-    sub_B16FFC(&StringLiteral_16926, v3);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, method);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v3);
     byte_40FD648 = 1;
   }
   sort = this->fields.sort;
@@ -6254,9 +6254,9 @@ void __fastcall SvtEqCombineListViewManager__SetFilterButtonImage(
   {
     sub_B170D4();
   }
-  v7 = (System_String_o **)&StringLiteral_16926;
+  v7 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
   if ( !v6 )
-    v7 = (System_String_o **)&StringLiteral_16927;
+    v7 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
   UISprite__set_spriteName(filterSprite, *v7, 0LL);
 }
 
@@ -7292,8 +7292,8 @@ void __fastcall SvtEqCombineListViewManager__SetServantList(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
     sub_B16FFC(&SvtEqCombineListViewItem_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_23433, v24);
-    sub_B16FFC(&StringLiteral_12413, v25);
+    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v24);
+    sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v25);
     byte_40FD626 = 1;
   }
   *(_QWORD *)lateExp = 0LL;
@@ -7370,7 +7370,7 @@ LABEL_12:
   this->fields.userQP = qp;
   LODWORD(v164.fields.currentCryptoKey) = qp;
   v52 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v164);
-  v53 = System_String__Format((System_String_o *)StringLiteral_23433, v52, 0LL);
+  v53 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v52, 0LL);
   if ( !haveQpLabel )
     goto LABEL_111;
   UILabel__set_text(haveQpLabel, v53, 0LL);
@@ -7381,7 +7381,7 @@ LABEL_12:
   nextExpLabel = this->fields.nextExpLabel;
   svtEquipKeep = 0;
   v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtEquipKeep);
-  v56 = System_String__Format((System_String_o *)StringLiteral_23433, v55, 0LL);
+  v56 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v55, 0LL);
   if ( !nextExpLabel )
     goto LABEL_111;
   UILabel__set_text(nextExpLabel, v56, 0LL);
@@ -7511,7 +7511,7 @@ LABEL_44:
     v89 = this->fields.nextExpLabel;
     LODWORD(v164.fields.currentCryptoKey) = lateExp[0];
     v90 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v164);
-    v91 = System_String__Format((System_String_o *)StringLiteral_23433, v90, 0LL);
+    v91 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v90, 0LL);
     if ( !v89 )
       goto LABEL_111;
     UILabel__set_text(v89, v91, 0LL);
@@ -7620,7 +7620,7 @@ LABEL_64:
   v117 = this->fields.nextExpLabel;
   LODWORD(v164.fields.currentCryptoKey) = lateExp[0];
   v118 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v164);
-  v119 = System_String__Format((System_String_o *)StringLiteral_23433, v118, 0LL);
+  v119 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v118, 0LL);
   if ( !v117 )
     goto LABEL_111;
   UILabel__set_text(v117, v119, 0LL);
@@ -7736,7 +7736,7 @@ LABEL_106:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v146 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v146 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   LODWORD(v164.fields.currentCryptoKey) = v153;
   v147 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v164);
   svtEquipKeep = v157->fields.svtEquipKeep;
@@ -7791,12 +7791,12 @@ void __fastcall SvtEqCombineListViewManager__SetSortButtonImage(
   if ( (byte_40FD64E & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_17038, v4);
-    sub_B16FFC(&StringLiteral_16995, v5);
-    sub_B16FFC(&StringLiteral_16985, v6);
-    sub_B16FFC(&StringLiteral_17002, v7);
-    sub_B16FFC(&StringLiteral_16952, v8);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v4);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v5);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v6);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v7);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v8);
     byte_40FD64E = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -7833,7 +7833,7 @@ void __fastcall SvtEqCombineListViewManager__SetSortButtonImage(
       sortExplanationSprite = this->fields.sortExplanationSprite;
       if ( !sortExplanationSprite )
         goto LABEL_46;
-      v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+      v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
       UISprite__set_spriteName(sortExplanationSprite, *v17, 0LL);
       v18 = this->fields.sort;
       if ( !v18 )
@@ -7842,15 +7842,15 @@ void __fastcall SvtEqCombineListViewManager__SetSortButtonImage(
       if ( !v19 )
         goto LABEL_46;
       isAscendingOrder = v18->fields.isAscendingOrder;
-      v21 = (System_String_o **)&StringLiteral_16952;
-      v22 = (System_String_o **)&StringLiteral_16955;
+      v21 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+      v22 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
     }
     else
     {
       v23 = this->fields.sortExplanationSprite;
       if ( !v23 )
         goto LABEL_46;
-      v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+      v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
       UISprite__set_spriteName(v23, *v24, 0LL);
       v25 = this->fields.sort;
       if ( !v25 )
@@ -7859,8 +7859,8 @@ void __fastcall SvtEqCombineListViewManager__SetSortButtonImage(
       if ( !v19 )
         goto LABEL_46;
       isAscendingOrder = v25->fields.isAscendingOrder;
-      v21 = (System_String_o **)&StringLiteral_16955;
-      v22 = (System_String_o **)&StringLiteral_16952;
+      v21 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+      v22 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
     }
     if ( isAscendingOrder )
       v26 = v21;
@@ -7968,16 +7968,16 @@ void __fastcall SvtEqCombineListViewManager__SetStatusKind(
   if ( (byte_40FD623 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&modeKind);
-    sub_B16FFC(&StringLiteral_17057, v5);
-    sub_B16FFC(&StringLiteral_17060, v6);
-    sub_B16FFC(&StringLiteral_11699, v7);
-    sub_B16FFC(&StringLiteral_11700, v8);
-    sub_B16FFC(&StringLiteral_17073, v9);
-    sub_B16FFC(&StringLiteral_7016, v10);
-    sub_B16FFC(&StringLiteral_7015, v11);
-    sub_B16FFC(&StringLiteral_17074, v12);
-    sub_B16FFC(&StringLiteral_17059, v13);
-    sub_B16FFC(&StringLiteral_17058, v14);
+    sub_B16FFC(&StringLiteral_17057/*"button_allchoice_reg"*/, v5);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v6);
+    sub_B16FFC(&StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/, v7);
+    sub_B16FFC(&StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/, v8);
+    sub_B16FFC(&StringLiteral_17073/*"button_select_reg"*/, v9);
+    sub_B16FFC(&StringLiteral_7016/*"HEADER_MSG_SVTEQ_MATERIAL"*/, v10);
+    sub_B16FFC(&StringLiteral_7015/*"HEADER_MSG_SVTEQ_BASE"*/, v11);
+    sub_B16FFC(&StringLiteral_17074/*"button_select_unreg"*/, v12);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v13);
+    sub_B16FFC(&StringLiteral_17058/*"button_allchoice_unreg"*/, v14);
     byte_40FD623 = 1;
   }
   statusTabButton = this->fields.statusTabButton;
@@ -7995,9 +7995,9 @@ void __fastcall SvtEqCombineListViewManager__SetStatusKind(
   statusTabSprite = this->fields.statusTabSprite;
   if ( !statusTabSprite )
     goto LABEL_56;
-  v18 = (System_String_o **)&StringLiteral_17073;
+  v18 = (System_String_o **)&StringLiteral_17073/*"button_select_reg"*/;
   if ( modeKind )
-    v18 = (System_String_o **)&StringLiteral_17074;
+    v18 = (System_String_o **)&StringLiteral_17074/*"button_select_unreg"*/;
   UISprite__set_spriteName(statusTabSprite, *v18, 0LL);
   v19 = this->fields.statusTabButton;
   if ( !v19 )
@@ -8026,9 +8026,9 @@ void __fastcall SvtEqCombineListViewManager__SetStatusKind(
   lockTabSprite = this->fields.lockTabSprite;
   if ( !lockTabSprite )
     goto LABEL_56;
-  v25 = (System_String_o **)&StringLiteral_17059;
+  v25 = (System_String_o **)&StringLiteral_17059/*"button_alllock_reg"*/;
   if ( modeKind != 1 )
-    v25 = (System_String_o **)&StringLiteral_17060;
+    v25 = (System_String_o **)&StringLiteral_17060/*"button_alllock_unreg"*/;
   UISprite__set_spriteName(lockTabSprite, *v25, 0LL);
   v26 = this->fields.lockTabButton;
   if ( !v26 )
@@ -8057,9 +8057,9 @@ void __fastcall SvtEqCombineListViewManager__SetStatusKind(
   choiceTabSprite = this->fields.choiceTabSprite;
   if ( !choiceTabSprite )
     goto LABEL_56;
-  v32 = (System_String_o **)&StringLiteral_17057;
+  v32 = (System_String_o **)&StringLiteral_17057/*"button_allchoice_reg"*/;
   if ( modeKind != 2 )
-    v32 = (System_String_o **)&StringLiteral_17058;
+    v32 = (System_String_o **)&StringLiteral_17058/*"button_allchoice_unreg"*/;
   UISprite__set_spriteName(choiceTabSprite, *v32, 0LL);
   v33 = this->fields.choiceTabButton;
   if ( !v33 )
@@ -8083,7 +8083,7 @@ void __fastcall SvtEqCombineListViewManager__SetStatusKind(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v38 = &StringLiteral_7016;
+    v38 = &StringLiteral_7016/*"HEADER_MSG_SVTEQ_MATERIAL"*/;
   }
   else
   {
@@ -8095,7 +8095,7 @@ void __fastcall SvtEqCombineListViewManager__SetStatusKind(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v38 = &StringLiteral_7015;
+    v38 = &StringLiteral_7015/*"HEADER_MSG_SVTEQ_BASE"*/;
   }
   v39 = LocalizationManager__Get((System_String_o *)*v38, 0LL);
   if ( !combineInfoMsgLb )
@@ -8111,7 +8111,7 @@ LABEL_36:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v42 = &StringLiteral_11700;
+    v42 = &StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
   }
   else
   {
@@ -8123,7 +8123,7 @@ LABEL_36:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v42 = &StringLiteral_11699;
+    v42 = &StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
   }
   v43 = LocalizationManager__Get((System_String_o *)*v42, 0LL);
   if ( !v41 )

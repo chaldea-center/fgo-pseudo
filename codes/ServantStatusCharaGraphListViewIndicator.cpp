@@ -367,8 +367,8 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__SetPageIndex(
   v4 = this;
   if ( (byte_40F871D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19557, *(_QWORD *)&index);
-    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_B16FFC(&StringLiteral_19556, v5);
+    sub_B16FFC(&StringLiteral_19557/*"img_slider_on"*/, *(_QWORD *)&index);
+    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_B16FFC(&StringLiteral_19556/*"img_slider_off"*/, v5);
     byte_40F871D = 1;
   }
   pageMax = v4->fields.pageMax;
@@ -391,9 +391,9 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__SetPageIndex(
 LABEL_13:
         sub_B170D4();
       if ( index == (_DWORD)v7 )
-        v10 = &StringLiteral_19557;
+        v10 = &StringLiteral_19557/*"img_slider_on"*/;
       else
-        v10 = &StringLiteral_19556;
+        v10 = &StringLiteral_19556/*"img_slider_off"*/;
       UISprite__set_spriteName(v9, (System_String_o *)*v10, 0LL);
       ++v7;
     }
@@ -429,7 +429,7 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__SetPageMax(
   v4 = this;
   if ( (byte_40F871C & 1) == 0 )
   {
-    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_B16FFC(&StringLiteral_19556, *(_QWORD *)&max);
+    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_B16FFC(&StringLiteral_19556/*"img_slider_off"*/, *(_QWORD *)&max);
     byte_40F871C = 1;
   }
   pageSpriteList = v4->fields.pageSpriteList;
@@ -454,7 +454,7 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__SetPageMax(
     v9 = pageSpriteList->m_Items[v7];
     if ( v9 )
     {
-      v10 = (int)v7 >= v4->fields.pageMax ? 0LL : (System_String_o *)StringLiteral_19556;
+      v10 = (int)v7 >= v4->fields.pageMax ? 0LL : (System_String_o *)StringLiteral_19556/*"img_slider_off"*/;
       UISprite__set_spriteName(v9, v10, 0LL);
       pageSpriteList = v4->fields.pageSpriteList;
       ++v7;

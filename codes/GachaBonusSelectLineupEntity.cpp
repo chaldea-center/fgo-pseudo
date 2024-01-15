@@ -49,8 +49,8 @@ int32_t __fastcall GachaBonusSelectLineupEntity__GetSummonCategoryId(
 {
   if ( (byte_40FB35D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22341, *(_QWORD *)&defId);
+    sub_B16FFC(&StringLiteral_22341/*"summonCategoryId"*/, *(_QWORD *)&defId);
     byte_40FB35D = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22341, defId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22341/*"summonCategoryId"*/, defId, 0LL);
 }

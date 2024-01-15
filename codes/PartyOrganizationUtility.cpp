@@ -14,12 +14,12 @@ void __fastcall PartyOrganizationUtility___cctor(const MethodInfo *method)
   if ( (byte_40FDE20 & 1) == 0 )
   {
     sub_B16FFC(&PartyOrganizationUtility_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_6780, v8);
+    sub_B16FFC(&StringLiteral_6780/*"FriendshipUpItemUseState"*/, v8);
     byte_40FDE20 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)PartyOrganizationUtility_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_6780;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6780;
+  v10 = (System_Int32_array **)StringLiteral_6780/*"FriendshipUpItemUseState"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6780/*"FriendshipUpItemUseState"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -636,12 +636,12 @@ System_String_o *__fastcall PartyOrganizationUtility__GetRarityInvalidMessage(
     sub_B16FFC(&System_Math_TypeInfo, v14);
     sub_B16FFC(&Rarity_TypeInfo, v15);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_10177, v17);
-    sub_B16FFC(&StringLiteral_10181, v18);
-    sub_B16FFC(&StringLiteral_10180, v19);
-    sub_B16FFC(&StringLiteral_10176, v20);
-    sub_B16FFC(&StringLiteral_10179, v21);
-    sub_B16FFC(&StringLiteral_10178, v22);
+    sub_B16FFC(&StringLiteral_10177/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE2"*/, v17);
+    sub_B16FFC(&StringLiteral_10181/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE6"*/, v18);
+    sub_B16FFC(&StringLiteral_10180/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE5"*/, v19);
+    sub_B16FFC(&StringLiteral_10176/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE1"*/, v20);
+    sub_B16FFC(&StringLiteral_10179/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE4"*/, v21);
+    sub_B16FFC(&StringLiteral_10178/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE3"*/, v22);
     byte_40FDE16 = 1;
   }
   v23 = (System_Text_StringBuilder_o *)sub_B170CC(
@@ -656,19 +656,19 @@ System_String_o *__fastcall PartyOrganizationUtility__GetRarityInvalidMessage(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_10176, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_10176/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE1"*/, 0LL);
   v25 = System_String__Format(v24, (Il2CppObject *)servantName, 0LL);
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_10177, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_10177/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE2"*/, 0LL);
   if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
   RarityType = (Il2CppObject *)Rarity__getRarityType(servantRarity, 0LL);
   v28 = System_String__Format(v26, RarityType, 0LL);
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10178, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10178/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE3"*/, 0LL);
   v30 = System_String__Format(v29, (Il2CppObject *)equipName, 0LL);
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_10179, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_10179/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE4"*/, 0LL);
   v32 = System_String__Format(v31, (Il2CppObject *)skillName, 0LL);
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10180, 0LL);
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_10181, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10180/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE5"*/, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_10181/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_MESSAGE6"*/, 0LL);
   v35 = (Il2CppObject *)Rarity__getRarityType(actMaxRarity, 0LL);
   v36 = System_String__Format(v34, v35, 0LL);
   if ( !v25 || !v30 )
@@ -923,16 +923,16 @@ bool __fastcall PartyOrganizationUtility__IsRarityRestriction(
     sub_B16FFC(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v19);
     sub_B16FFC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v20);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    sub_B16FFC(&StringLiteral_1, v22);
+    sub_B16FFC(&StringLiteral_1/*""*/, v22);
     byte_40FDE14 = 1;
   }
   v53 = 0LL;
   entity = 0LL;
   skillLvEntity = 0LL;
-  *skillName = (System_String_o *)StringLiteral_1;
+  *skillName = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)skillName,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     (System_String_array **)actMaxRarity,
     *(System_String_array ***)&servantId,
     *(System_Boolean_array ***)&servantRarity,

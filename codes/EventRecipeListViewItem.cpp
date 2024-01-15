@@ -154,10 +154,10 @@ System_String_o *__fastcall EventRecipeListViewItem__get_InfoMessage(
 {
   if ( (byte_40F6108 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9280, method);
+    sub_B16FFC(&StringLiteral_9280/*"NONE"*/, method);
     byte_40F6108 = 1;
   }
-  return (System_String_o *)StringLiteral_9280;
+  return (System_String_o *)StringLiteral_9280/*"NONE"*/;
 }
 
 

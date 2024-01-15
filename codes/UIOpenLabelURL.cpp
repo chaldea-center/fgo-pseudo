@@ -14,12 +14,12 @@ void __fastcall UIOpenLabelURL___cctor(const MethodInfo *method)
   if ( (byte_4101D22 & 1) == 0 )
   {
     sub_B16FFC(&UIOpenLabelURL_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_15380, v8);
+    sub_B16FFC(&StringLiteral_15380/*"WebView:"*/, v8);
     byte_4101D22 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)UIOpenLabelURL_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_15380;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_15380;
+  v10 = (System_Int32_array **)StringLiteral_15380/*"WebView:"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_15380/*"WebView:"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -52,7 +52,7 @@ void __fastcall UIOpenLabelURL__OnClick(UIOpenLabelURL_o *this, const MethodInfo
     sub_B16FFC(&UICamera_TypeInfo, v4);
     sub_B16FFC(&UIOpenLabelURL_TypeInfo, v5);
     sub_B16FFC(&WebViewManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_4101D21 = 1;
   }
   Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
@@ -118,6 +118,6 @@ LABEL_31:
     {
       j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
     }
-    WebViewManager__OpenView((System_String_o *)StringLiteral_1, v14, 0LL, 0LL);
+    WebViewManager__OpenView((System_String_o *)StringLiteral_1/*""*/, v14, 0LL, 0LL);
   }
 }

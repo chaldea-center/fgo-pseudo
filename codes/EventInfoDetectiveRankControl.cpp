@@ -134,7 +134,7 @@ void __fastcall EventInfoDetectiveRankControl__Initialization(
     sub_B16FFC(&UnityEngine_GameObject_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_11235, v8);
+    sub_B16FFC(&StringLiteral_11235/*"RankUpEffect"*/, v8);
     byte_40FA10A = 1;
   }
   EventInfoUIProgressControl__Initialization((EventInfoUIProgressControl_o *)this, entity, 0LL);
@@ -166,7 +166,7 @@ void __fastcall EventInfoDetectiveRankControl__Initialization(
   {
     Object_29932412 = (struct UnityEngine_GameObject_o *)AssetData__GetObject_29932412(
                                                            mapMultiAssetData,
-                                                           (System_String_o *)StringLiteral_11235,
+                                                           (System_String_o *)StringLiteral_11235/*"RankUpEffect"*/,
                                                            0LL);
     if ( Object_29932412 && Object_29932412->klass != UnityEngine_GameObject_TypeInfo )
     {
@@ -470,7 +470,7 @@ void __fastcall EventInfoDetectiveRankControl__SetupCondtionText(
   if ( (byte_40FA10C & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&userRank);
-    sub_B16FFC(&StringLiteral_5655, v4);
+    sub_B16FFC(&StringLiteral_5655/*"EVENT_PROGRESS_NEXT_RANK_NONE"*/, v4);
     byte_40FA10C = 1;
   }
   nextEventProgressValueEntity = this->fields.nextEventProgressValueEntity;
@@ -488,7 +488,7 @@ LABEL_10:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  condMessage = LocalizationManager__Get((System_String_o *)StringLiteral_5655, 0LL);
+  condMessage = LocalizationManager__Get((System_String_o *)StringLiteral_5655/*"EVENT_PROGRESS_NEXT_RANK_NONE"*/, 0LL);
   if ( !conditionTextLabel )
     goto LABEL_10;
 LABEL_5:
@@ -526,8 +526,8 @@ void __fastcall EventInfoDetectiveRankControl__SetupMissionClearCount(
     sub_B16FFC(&EventInfoDetectiveRankControl_TypeInfo, v4);
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_5635, v7);
-    sub_B16FFC(&StringLiteral_3264, v8);
+    sub_B16FFC(&StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, v7);
+    sub_B16FFC(&StringLiteral_3264/*"COMMON_COUNT_OPERATOR_PLUS"*/, v8);
     byte_40FA10D = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -545,7 +545,7 @@ void __fastcall EventInfoDetectiveRankControl__SetupMissionClearCount(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5635, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
   v13 = EventInfoDetectiveRankControl_TypeInfo;
   if ( (BYTE3(EventInfoDetectiveRankControl_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventInfoDetectiveRankControl_TypeInfo->_2.cctor_finished )
@@ -568,7 +568,7 @@ void __fastcall EventInfoDetectiveRankControl__SetupMissionClearCount(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3264, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3264/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0LL);
     v17 = System_String__Concat_43743732(v17, v18, 0LL);
   }
   missionCountTextLabel = this->fields.missionCountTextLabel;
@@ -622,7 +622,7 @@ void __fastcall EventInfoDetectiveRankControl__SetupMissionStartedCount(
     sub_B16FFC(&Method_System_Collections_Generic_List_UserEventRandomMissionEntity__get_Count__, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_12413, v10);
+    sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v10);
     byte_40FA10E = 1;
   }
   missionStartedCountBgSprite = (UnityEngine_Object_o *)this->fields.missionStartedCountBgSprite;
@@ -684,7 +684,7 @@ void __fastcall EventInfoDetectiveRankControl__SetupMissionStartedCount(
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+                  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
                   if ( UserEventRandomMissionProgressList )
                   {
                     v25 = v24;
@@ -926,8 +926,8 @@ void __fastcall EventInfoDetectiveRankControl___c__DisplayClass26_0___PlayAnim_b
     sub_B16FFC(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__2__, v11);
     sub_B16FFC(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__3__, v12);
     sub_B16FFC(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__4__, v13);
-    sub_B16FFC(&StringLiteral_5656, v14);
-    sub_B16FFC(&StringLiteral_5657, v15);
+    sub_B16FFC(&StringLiteral_5656/*"EVENT_PROGRESS_RANKUP_MESSAGE"*/, v14);
+    sub_B16FFC(&StringLiteral_5657/*"EVENT_PROGRESS_RANKUP_TITLE"*/, v15);
     byte_40F6FCD = 1;
   }
   _4__this = this->fields.__4__this;
@@ -1012,8 +1012,8 @@ void __fastcall EventInfoDetectiveRankControl___c__DisplayClass26_0___PlayAnim_b
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5657, 0LL);
-  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_5656, 0LL);
+  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5657/*"EVENT_PROGRESS_RANKUP_TITLE"*/, 0LL);
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_5656/*"EVENT_PROGRESS_RANKUP_MESSAGE"*/, 0LL);
   v45 = System_String__Format_43739268(v44, orgMaterial, v41, 0LL);
   _9__4 = this->fields.__9__4;
   v51 = v45;

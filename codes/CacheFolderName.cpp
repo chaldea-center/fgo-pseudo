@@ -40,12 +40,12 @@ void __fastcall CacheFolderName___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string___ctor__, v6);
     sub_B16FFC(&System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_8935, v8);
-    sub_B16FFC(&StringLiteral_16630, v9);
-    sub_B16FFC(&StringLiteral_16157, v10);
-    sub_B16FFC(&StringLiteral_10594, v11);
-    sub_B16FFC(&StringLiteral_17792, v12);
-    sub_B16FFC(&StringLiteral_2091, v13);
+    sub_B16FFC(&StringLiteral_8935/*"MasterDataCaches"*/, v8);
+    sub_B16FFC(&StringLiteral_16630/*"bfaa"*/, v9);
+    sub_B16FFC(&StringLiteral_16157/*"a77d"*/, v10);
+    sub_B16FFC(&StringLiteral_10594/*"PaymentHistorys"*/, v11);
+    sub_B16FFC(&StringLiteral_17792/*"d713"*/, v12);
+    sub_B16FFC(&StringLiteral_2091/*"AssetCaches"*/, v13);
     byte_40FB54F = 1;
   }
   v14 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B170CC(
@@ -62,17 +62,17 @@ void __fastcall CacheFolderName___cctor(const MethodInfo *method)
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v14,
     0,
-    (System_String_o *)StringLiteral_2091,
+    (System_String_o *)StringLiteral_2091/*"AssetCaches"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v14,
     1,
-    (System_String_o *)StringLiteral_8935,
+    (System_String_o *)StringLiteral_8935/*"MasterDataCaches"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v14,
     2,
-    (System_String_o *)StringLiteral_10594,
+    (System_String_o *)StringLiteral_10594/*"PaymentHistorys"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
   static_fields = (BattleServantConfConponent_o *)CacheFolderName_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v14;
@@ -92,17 +92,17 @@ LABEL_6:
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v26,
     0,
-    (System_String_o *)StringLiteral_17792,
+    (System_String_o *)StringLiteral_17792/*"d713"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v26,
     1,
-    (System_String_o *)StringLiteral_16630,
+    (System_String_o *)StringLiteral_16630/*"bfaa"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v26,
     2,
-    (System_String_o *)StringLiteral_16157,
+    (System_String_o *)StringLiteral_16157/*"a77d"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__Add__);
   v27 = CacheFolderName_TypeInfo->static_fields;
   v27->convertedFolderList = (struct System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__o *)v26;
@@ -168,7 +168,7 @@ System_String_o *__fastcall CacheFolderName__convertFolderName(System_String_o *
       v9);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_CacheFolderName_FOLDER_NAME__string__get_Key__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_CacheFolderName_FOLDER_NAME__string__get_Value__, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FB54E = 1;
   }
   memset(&v26, 0, sizeof(v26));
@@ -186,7 +186,7 @@ System_String_o *__fastcall CacheFolderName__convertFolderName(System_String_o *
           folderList,
           name,
           (const MethodInfo_2DFFEFC *)Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsValue__) )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   v15 = CacheFolderName_TypeInfo;
   if ( (BYTE3(CacheFolderName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CacheFolderName_TypeInfo->_2.cctor_finished )
@@ -250,14 +250,14 @@ LABEL_30:
   else
   {
     v23 = 132;
-    Item = (System_String_o *)StringLiteral_1;
+    Item = (System_String_o *)StringLiteral_1/*""*/;
   }
 LABEL_27:
   System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string___Dispose(
     &v26,
     (const MethodInfo_26B4A30 *)Method_System_Collections_Generic_Dictionary_Enumerator_CacheFolderName_FOLDER_NAME__string__Dispose__);
   if ( v23 != 132 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   return Item;
 }
 
@@ -277,7 +277,7 @@ System_String_o *__fastcall CacheFolderName__getFolderName(int32_t name, const M
     sub_B16FFC(&CacheFolderName_TypeInfo, method);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FB54C = 1;
   }
   v6 = CacheFolderName_TypeInfo;
@@ -311,7 +311,7 @@ System_String_o *__fastcall CacheFolderName__getFolderName(int32_t name, const M
 LABEL_14:
     sub_B170D4();
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -330,7 +330,7 @@ System_String_o *__fastcall CacheFolderName__getFolderNameNotConverted(int32_t n
     sub_B16FFC(&CacheFolderName_TypeInfo, method);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__ContainsKey__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_CacheFolderName_FOLDER_NAME__string__get_Item__, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FB54D = 1;
   }
   v6 = CacheFolderName_TypeInfo;
@@ -364,5 +364,5 @@ System_String_o *__fastcall CacheFolderName__getFolderNameNotConverted(int32_t n
 LABEL_14:
     sub_B170D4();
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }

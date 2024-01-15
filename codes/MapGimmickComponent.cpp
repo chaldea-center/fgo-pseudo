@@ -17,17 +17,17 @@ void __fastcall MapGimmickComponent___ctor(MapGimmickComponent_o *this, const Me
 
   if ( (byte_40FB5CF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FB5CF = 1;
   }
   this->fields.mDepthBase = 30;
   this->fields.mEasingType = 17;
   *(_QWORD *)&this->fields.mScaleBase = 0x3ECCCCCD3F800000LL;
-  v9 = (System_Int32_array **)StringLiteral_1;
-  this->fields.mHideSeName = (struct System_String_o *)StringLiteral_1;
+  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.mHideSeName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.mHideSeName, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_1;
-  this->fields.mDispSeName = (struct System_String_o *)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.mDispSeName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.mDispSeName, v10, v11, v12, v13, v14, v15, v16);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -341,12 +341,12 @@ System_String_o *__fastcall MapGimmickComponent__GetGobjName(int32_t id, const M
   v5 = id;
   if ( (byte_40FB5C1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8911, method);
-    sub_B16FFC(&StringLiteral_960, v2);
+    sub_B16FFC(&StringLiteral_8911/*"MapGimmick_"*/, method);
+    sub_B16FFC(&StringLiteral_960/*"00"*/, v2);
     byte_40FB5C1 = 1;
   }
-  v3 = System_Int32__ToString_38275808((int32_t)&v5, (System_String_o *)StringLiteral_960, 0LL);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_8911, v3, 0LL);
+  v3 = System_Int32__ToString_38275808((int32_t)&v5, (System_String_o *)StringLiteral_960/*"00"*/, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_8911/*"MapGimmick_"*/, v3, 0LL);
 }
 
 
@@ -414,7 +414,7 @@ void __fastcall MapGimmickComponent__InitDefaultParam(MapGimmickComponent_o *thi
     sub_B16FFC(&Method_UnityEngine_GameObject_AddComponent_UISprite___, method);
     sub_B16FFC(&UnityEngine_GameObject_TypeInfo, v9);
     sub_B16FFC(&string_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_12944, v11);
+    sub_B16FFC(&StringLiteral_12944/*"Sprite"*/, v11);
     byte_40FB5C4 = 1;
   }
   __asm { FMOV            V0.2S, #1.0 }
@@ -447,7 +447,7 @@ void __fastcall MapGimmickComponent__InitDefaultParam(MapGimmickComponent_o *thi
     v26);
   *(_WORD *)&this->fields.isForceLoop = 0;
   v31 = (UnityEngine_GameObject_o *)sub_B170CC(UnityEngine_GameObject_TypeInfo, v27, v28, v29, v30);
-  UnityEngine_GameObject___ctor(v31, (System_String_o *)StringLiteral_12944, 0LL);
+  UnityEngine_GameObject___ctor(v31, (System_String_o *)StringLiteral_12944/*"Sprite"*/, 0LL);
   GameObjectExtensions__SetParent(v31, (UnityEngine_Component_o *)this, 0LL);
   if ( !v31
     || (v32 = UnityEngine_GameObject__AddComponent_UnitySynchronizationContext_SynchronizationContextBehavoir_(
@@ -1098,12 +1098,12 @@ void __fastcall MapGimmickComponent__Setup(
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v28);
     sub_B16FFC(&Method_MapGimmickComponent___c__DisplayClass23_0__Setup_b__0__, v29);
     sub_B16FFC(&MapGimmickComponent___c__DisplayClass23_0_TypeInfo, v30);
-    sub_B16FFC(&StringLiteral_23181, v31);
-    sub_B16FFC(&StringLiteral_964, v32);
-    sub_B16FFC(&StringLiteral_18988, v33);
-    sub_B16FFC(&StringLiteral_8894, v34);
-    sub_B16FFC(&StringLiteral_1, v35);
-    sub_B16FFC(&StringLiteral_8893, v36);
+    sub_B16FFC(&StringLiteral_23181/*"white00"*/, v31);
+    sub_B16FFC(&StringLiteral_964/*"000000"*/, v32);
+    sub_B16FFC(&StringLiteral_18988/*"gimmick_"*/, v33);
+    sub_B16FFC(&StringLiteral_8894/*"MapGimmickEffect_"*/, v34);
+    sub_B16FFC(&StringLiteral_1/*""*/, v35);
+    sub_B16FFC(&StringLiteral_8893/*"MapGimmickActionEffect_"*/, v36);
     byte_40FB5C5 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
@@ -1135,7 +1135,7 @@ void __fastcall MapGimmickComponent__Setup(
     goto LABEL_140;
   if ( MapGimmickEntity__IsMonoColorRect(v53, v52) )
   {
-    v54 = (System_String_o *)StringLiteral_23181;
+    v54 = (System_String_o *)StringLiteral_23181/*"white00"*/;
     p_mSprite = &this->fields.mSprite;
     mSprite = this->fields.mSprite;
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1149,8 +1149,8 @@ void __fastcall MapGimmickComponent__Setup(
   {
     if ( !*v51 )
       goto LABEL_140;
-    v57 = System_Int32__ToString_38275808((unsigned int)*v51 + 24, (System_String_o *)StringLiteral_964, 0LL);
-    v58 = System_String__Concat_43743732((System_String_o *)StringLiteral_18988, v57, 0LL);
+    v57 = System_Int32__ToString_38275808((unsigned int)*v51 + 24, (System_String_o *)StringLiteral_964/*"000000"*/, 0LL);
+    v58 = System_String__Concat_43743732((System_String_o *)StringLiteral_18988/*"gimmick_"*/, v57, 0LL);
     p_mSprite = &this->fields.mSprite;
     v59 = this->fields.mSprite;
     v54 = v58;
@@ -1236,7 +1236,7 @@ void __fastcall MapGimmickComponent__Setup(
     if ( !*v51 )
       goto LABEL_140;
     v72 = System_Int32__ToString((unsigned int)*v51 + 24, 0LL);
-    v73 = System_String__Concat_43743732((System_String_o *)StringLiteral_8894, v72, 0LL);
+    v73 = System_String__Concat_43743732((System_String_o *)StringLiteral_8894/*"MapGimmickEffect_"*/, v72, 0LL);
     EffectPrefab = MapGimmickComponent__GetEffectPrefab(
                      (MapGimmickComponent_o *)v73,
                      v73,
@@ -1505,7 +1505,7 @@ LABEL_112:
   if ( actionEffectId >= 1 )
   {
     v152 = System_Int32__ToString(v150, 0LL);
-    v153 = System_String__Concat_43743732((System_String_o *)StringLiteral_8893, v152, 0LL);
+    v153 = System_String__Concat_43743732((System_String_o *)StringLiteral_8893/*"MapGimmickActionEffect_"*/, v152, 0LL);
     v155 = MapGimmickComponent__GetEffectPrefab((MapGimmickComponent_o *)v153, v153, v67, multiAssetData, v154);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2083,7 +2083,7 @@ void __fastcall MapGimmickComponent___c__DisplayClass23_0___Setup_b__1(
     sub_B16FFC(&SceneJumpInfo_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    this = (MapGimmickComponent___c__DisplayClass23_0_o *)sub_B16FFC(&StringLiteral_1, v7);
+    this = (MapGimmickComponent___c__DisplayClass23_0_o *)sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F694B = 1;
   }
   if ( !byte_40F6975 )
@@ -2174,7 +2174,7 @@ LABEL_21:
     || (EventRewardSaveData__SaveCurrentEventData(v22->fields.eventId, 0LL), (v27 = v3->fields.eventDetailEnt) == 0LL)
     || (eventId = v27->fields.eventId,
         v29 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v23, v24, v25, v26),
-        SceneJumpInfo___ctor_29748028(v29, (System_String_o *)StringLiteral_1, eventId, 0LL),
+        SceneJumpInfo___ctor_29748028(v29, (System_String_o *)StringLiteral_1/*""*/, eventId, 0LL),
         !v29)
     || (SceneJumpInfo__SetReturnNowScene(v29, 0LL),
         (v30 = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )

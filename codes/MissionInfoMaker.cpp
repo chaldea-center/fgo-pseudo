@@ -23,19 +23,19 @@ void __fastcall MissionInfoMaker___cctor(const MethodInfo *method)
   if ( (byte_40F7BDA & 1) == 0 )
   {
     sub_B16FFC(&MissionInfoMaker_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16722, v8);
-    sub_B16FFC(&StringLiteral_5839, v9);
+    sub_B16FFC(&StringLiteral_16722/*"bit_present_get{0}"*/, v8);
+    sub_B16FFC(&StringLiteral_5839/*"Effect/Talk/bit_present_get{0}"*/, v9);
     byte_40F7BDA = 1;
   }
   MissionInfoMaker_TypeInfo->static_fields->NORMAL_ICON_PRIORITY = 0;
   MissionInfoMaker_TypeInfo->static_fields->MINI_ICON_SHOW_PRIORITY = 100;
   static_fields = MissionInfoMaker_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_5839;
-  static_fields->ITEM_GET_ASSET_NAME = (struct System_String_o *)StringLiteral_5839;
+  v11 = (System_Int32_array **)StringLiteral_5839/*"Effect/Talk/bit_present_get{0}"*/;
+  static_fields->ITEM_GET_ASSET_NAME = (struct System_String_o *)StringLiteral_5839/*"Effect/Talk/bit_present_get{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->ITEM_GET_ASSET_NAME, v11, v2, v3, v4, v5, v6, v7);
   v12 = MissionInfoMaker_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_16722;
-  v12->ITEM_GET_EFFECT_NAME = (struct System_String_o *)StringLiteral_16722;
+  v13 = (System_Int32_array **)StringLiteral_16722/*"bit_present_get{0}"*/;
+  v12->ITEM_GET_EFFECT_NAME = (struct System_String_o *)StringLiteral_16722/*"bit_present_get{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->ITEM_GET_EFFECT_NAME, v13, v14, v15, v16, v17, v18, v19);
   MissionInfoMaker_TypeInfo->static_fields->ITEM_GET_EFFECT_DEFAULT_ID = 3;
 }
@@ -78,7 +78,7 @@ System_String_o *__fastcall MissionInfoMaker__GetClosedMessage(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__, v9);
     sub_B16FFC(&Method_MissionInfoMaker___c__GetClosedMessage_b__12_0__, v10);
     sub_B16FFC(&MissionInfoMaker___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F7BCE = 1;
   }
   if ( entityList && entityList->fields._size >= 1 )
@@ -136,7 +136,7 @@ System_String_o *__fastcall MissionInfoMaker__GetClosedMessage(
   }
   else
   {
-    p_closedMessage = (System_String_o **)&StringLiteral_1;
+    p_closedMessage = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *p_closedMessage;
 }
@@ -288,7 +288,7 @@ System_String_o *__fastcall MissionInfoMaker__GetConditionMessage(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__, v9);
     sub_B16FFC(&Method_MissionInfoMaker___c__GetConditionMessage_b__11_0__, v10);
     sub_B16FFC(&MissionInfoMaker___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F7BCD = 1;
   }
   if ( entityList && entityList->fields._size >= 1 )
@@ -346,7 +346,7 @@ System_String_o *__fastcall MissionInfoMaker__GetConditionMessage(
   }
   else
   {
-    p_conditionMessage = (System_String_o **)&StringLiteral_1;
+    p_conditionMessage = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *p_conditionMessage;
 }
@@ -659,7 +659,7 @@ int32_t __fastcall MissionInfoMaker__GetItemGetEffectId(int32_t itemId, const Me
     sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v3);
     sub_B16FFC(&MissionInfoMaker_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_19933, v6);
+    sub_B16FFC(&StringLiteral_19933/*"itemGetEffectId"*/, v6);
     byte_40F7BD4 = 1;
   }
   entity = 0LL;
@@ -686,7 +686,7 @@ int32_t __fastcall MissionInfoMaker__GetItemGetEffectId(int32_t itemId, const Me
     if ( v9 )
       return ItemEntity__getScript(
                v9,
-               (System_String_o *)StringLiteral_19933,
+               (System_String_o *)StringLiteral_19933/*"itemGetEffectId"*/,
                MissionInfoMaker_TypeInfo->static_fields->ITEM_GET_EFFECT_DEFAULT_ID,
                0LL);
 LABEL_16:
@@ -1093,8 +1093,8 @@ System_String_o *__fastcall MissionInfoMaker__GetProgressText(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__, v17);
     sub_B16FFC(&Method_MissionInfoMaker___c__GetProgressText_b__13_0__, v18);
     sub_B16FFC(&MissionInfoMaker___c_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_23434, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_23434/*"{0:N0}/{1:N0}"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40F7BCF = 1;
   }
   memset(&v45, 0, sizeof(v45));
@@ -1153,7 +1153,7 @@ System_String_o *__fastcall MissionInfoMaker__GetProgressText(
 LABEL_32:
     sub_B170D4();
   if ( entityList->fields._size <= 0 || (unsigned int)progStatus < 2 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   condGroup = v33->fields.condGroup;
   v35 = progStatus - 3;
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
@@ -1206,7 +1206,7 @@ LABEL_32:
   v41 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v46);
   v44 = *targetNum;
   v42 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v44);
-  return System_String__Format_43739268((System_String_o *)StringLiteral_23434, v41, v42, 0LL);
+  return System_String__Format_43739268((System_String_o *)StringLiteral_23434/*"{0:N0}/{1:N0}"*/, v41, v42, 0LL);
 }
 
 
@@ -1398,7 +1398,7 @@ void __fastcall MissionInfoMaker__OpenCostumeReleaseDetail(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, callback);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_8729, v6);
+    sub_B16FFC(&StringLiteral_8729/*"MISSION_REWARD_FOMAT_COSTUME_RELEASE"*/, v6);
     byte_40F7BD8 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1406,7 +1406,7 @@ void __fastcall MissionInfoMaker__OpenCostumeReleaseDetail(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_8729, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_8729/*"MISSION_REWARD_FOMAT_COSTUME_RELEASE"*/, 0LL);
   if ( !costumeEntity
     || (v8 = System_String__Format(v7, (Il2CppObject *)costumeEntity->fields.name, 0LL),
         (Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )

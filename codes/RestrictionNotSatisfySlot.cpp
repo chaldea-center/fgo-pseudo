@@ -63,23 +63,23 @@ System_String_o *__fastcall RestrictionNotSatisfySlot__AddColorCodeAndFixMessage
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, message);
     sub_B16FFC(&string___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_26, v5);
-    sub_B16FFC(&StringLiteral_15581, v6);
-    sub_B16FFC(&StringLiteral_11064, v7);
-    sub_B16FFC(&StringLiteral_15680, v8);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v5);
+    sub_B16FFC(&StringLiteral_15581/*"[-]"*/, v6);
+    sub_B16FFC(&StringLiteral_11064/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, v7);
+    sub_B16FFC(&StringLiteral_15680/*"[FFFF00]"*/, v8);
     byte_40FC840 = 1;
   }
   v9 = sub_B17014(string___TypeInfo, 5LL, method);
   if ( !v9 )
     sub_B170D4();
   v16 = (System_String_array *)v9;
-  v17 = (System_String_o *)StringLiteral_15680;
-  if ( StringLiteral_15680 )
+  v17 = (System_String_o *)StringLiteral_15680/*"[FFFF00]"*/;
+  if ( StringLiteral_15680/*"[FFFF00]"*/ )
   {
-    v17 = (System_String_o *)sub_B170BC(StringLiteral_15680, v16->obj.klass->_1.element_class);
+    v17 = (System_String_o *)sub_B170BC(StringLiteral_15680/*"[FFFF00]"*/, v16->obj.klass->_1.element_class);
     if ( !v17 )
       goto LABEL_30;
-    v18 = (System_Int32_array **)StringLiteral_15680;
+    v18 = (System_Int32_array **)StringLiteral_15680/*"[FFFF00]"*/;
   }
   else
   {
@@ -107,13 +107,13 @@ System_String_o *__fastcall RestrictionNotSatisfySlot__AddColorCodeAndFixMessage
     v21,
     v22,
     v23);
-  v17 = (System_String_o *)StringLiteral_26;
-  if ( StringLiteral_26 )
+  v17 = (System_String_o *)StringLiteral_26/*"\n"*/;
+  if ( StringLiteral_26/*"\n"*/ )
   {
-    v17 = (System_String_o *)sub_B170BC(StringLiteral_26, v16->obj.klass->_1.element_class);
+    v17 = (System_String_o *)sub_B170BC(StringLiteral_26/*"\n"*/, v16->obj.klass->_1.element_class);
     if ( !v17 )
       goto LABEL_30;
-    v18 = (System_Int32_array **)StringLiteral_26;
+    v18 = (System_Int32_array **)StringLiteral_26/*"\n"*/;
   }
   else
   {
@@ -128,7 +128,7 @@ System_String_o *__fastcall RestrictionNotSatisfySlot__AddColorCodeAndFixMessage
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11064, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11064/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX"*/, 0LL);
   v34 = (System_Int32_array **)v17;
   if ( v17 )
   {
@@ -144,13 +144,13 @@ LABEL_30:
     goto LABEL_29;
   v16->m_Items[3] = (System_String_o *)v34;
   sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[3], v34, v10, v29, v30, v31, v32, v33);
-  v17 = (System_String_o *)StringLiteral_15581;
-  if ( StringLiteral_15581 )
+  v17 = (System_String_o *)StringLiteral_15581/*"[-]"*/;
+  if ( StringLiteral_15581/*"[-]"*/ )
   {
-    v17 = (System_String_o *)sub_B170BC(StringLiteral_15581, v16->obj.klass->_1.element_class);
+    v17 = (System_String_o *)sub_B170BC(StringLiteral_15581/*"[-]"*/, v16->obj.klass->_1.element_class);
     if ( v17 )
     {
-      v18 = (System_Int32_array **)StringLiteral_15581;
+      v18 = (System_Int32_array **)StringLiteral_15581/*"[-]"*/;
       goto LABEL_27;
     }
     goto LABEL_30;
@@ -342,9 +342,9 @@ System_String_o *__fastcall RestrictionNotSatisfySlot__RemoveColorCode(
   if ( (byte_40FC841 & 1) == 0 )
   {
     sub_B16FFC(&System_Text_RegularExpressions_Regex_TypeInfo, message);
-    sub_B16FFC(&StringLiteral_15704, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
-    sub_B16FFC(&StringLiteral_15705, v6);
+    sub_B16FFC(&StringLiteral_15704/*"[[]-[\\]]"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
+    sub_B16FFC(&StringLiteral_15705/*"[[][0-9A-F]{6}[\\]]"*/, v6);
     byte_40FC841 = 1;
   }
   if ( (BYTE3(System_Text_RegularExpressions_Regex_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -354,13 +354,13 @@ System_String_o *__fastcall RestrictionNotSatisfySlot__RemoveColorCode(
   }
   v7 = System_Text_RegularExpressions_Regex__Replace(
          message,
-         (System_String_o *)StringLiteral_15705,
-         (System_String_o *)StringLiteral_1,
+         (System_String_o *)StringLiteral_15705/*"[[][0-9A-F]{6}[\\]]"*/,
+         (System_String_o *)StringLiteral_1/*""*/,
          0LL);
   return System_Text_RegularExpressions_Regex__Replace(
            v7,
-           (System_String_o *)StringLiteral_15704,
-           (System_String_o *)StringLiteral_1,
+           (System_String_o *)StringLiteral_15704/*"[[]-[\\]]"*/,
+           (System_String_o *)StringLiteral_1/*""*/,
            0LL);
 }
 
@@ -713,10 +713,10 @@ void __fastcall RestrictionNotSatisfySlot__SetItem(
     sub_B16FFC(&Method_RestrictionNotSatisfySlot___c__DisplayClass14_0__SetItem_b__0__, v61);
     sub_B16FFC(&RestrictionNotSatisfySlot___c__DisplayClass14_0_TypeInfo, v62);
     sub_B16FFC(&RestrictionNotSatisfySlot___c_TypeInfo, v63);
-    sub_B16FFC(&StringLiteral_26, v64);
-    sub_B16FFC(&StringLiteral_20381, v65);
-    sub_B16FFC(&StringLiteral_11061, v66);
-    sub_B16FFC(&StringLiteral_1, v67);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v64);
+    sub_B16FFC(&StringLiteral_20381/*"member_txt_"*/, v65);
+    sub_B16FFC(&StringLiteral_11061/*"RESTRICTION_NOT_SATISFY_DIALOG_REQUIRED"*/, v66);
+    sub_B16FFC(&StringLiteral_1/*""*/, v67);
     byte_40FC83E = 1;
   }
   classImageIds = 0LL;
@@ -748,7 +748,7 @@ void __fastcall RestrictionNotSatisfySlot__SetItem(
     v74);
   numberSprite = this->fields.numberSprite;
   v77 = System_Int32__ToString((int32_t)&v286, 0LL);
-  v78 = System_String__Concat_43743732((System_String_o *)StringLiteral_20381, v77, 0LL);
+  v78 = System_String__Concat_43743732((System_String_o *)StringLiteral_20381/*"member_txt_"*/, v77, 0LL);
   if ( !numberSprite )
     goto LABEL_252;
   UISprite__set_spriteName(numberSprite, v78, 0LL);
@@ -920,8 +920,8 @@ void __fastcall RestrictionNotSatisfySlot__SetItem(
         goto LABEL_252;
       v122 = System_String__Replace_43750968(
                v121,
-               (System_String_o *)StringLiteral_26,
-               (System_String_o *)StringLiteral_1,
+               (System_String_o *)StringLiteral_26/*"\n"*/,
+               (System_String_o *)StringLiteral_1/*""*/,
                0LL);
       if ( !v91 )
         goto LABEL_252;
@@ -1013,7 +1013,7 @@ LABEL_231:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v264 = LocalizationManager__Get((System_String_o *)StringLiteral_11061, 0LL);
+            v264 = LocalizationManager__Get((System_String_o *)StringLiteral_11061/*"RESTRICTION_NOT_SATISFY_DIALOG_REQUIRED"*/, 0LL);
             if ( !v91 )
               goto LABEL_252;
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(

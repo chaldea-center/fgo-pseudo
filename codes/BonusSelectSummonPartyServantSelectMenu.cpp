@@ -242,7 +242,7 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__Open(
     sub_B16FFC(&Method_BonusSelectSummonPartyServantSelectMenu__Open_b__13_0__, v12);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
-    sub_B16FFC(&StringLiteral_12367, v15);
+    sub_B16FFC(&StringLiteral_12367/*"SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE"*/, v15);
     byte_40FB133 = 1;
   }
   this->fields.organizationItem = memberItem;
@@ -306,7 +306,7 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_12367, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_12367/*"SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE"*/, 0LL);
   if ( !guideMsgLabel
     || (UILabel__set_text(guideMsgLabel, v34, 0LL),
         (Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )

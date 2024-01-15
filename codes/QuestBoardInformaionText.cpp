@@ -29,12 +29,12 @@ void __fastcall QuestBoardInformaionText___cctor(const MethodInfo *method)
   if ( (byte_40FC6D1 & 1) == 0 )
   {
     sub_B16FFC(&QuestBoardInformaionText_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_17106, v8);
+    sub_B16FFC(&StringLiteral_17106/*"caldeagate_notice_{0:00}"*/, v8);
     byte_40FC6D1 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)QuestBoardInformaionText_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_17106;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17106;
+  v10 = (System_Int32_array **)StringLiteral_17106/*"caldeagate_notice_{0:00}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17106/*"caldeagate_notice_{0:00}"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   v11 = QuestBoardInformaionText_TypeInfo;
   v23.fields.r = 0.99608;
@@ -361,7 +361,7 @@ void __fastcall QuestBoardInformaionText__ChangeBehindText(QuestBoardInformaionT
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&object___TypeInfo, v5);
     sub_B16FFC(&float_TypeInfo, v6);
-    this = (QuestBoardInformaionText_o *)sub_B16FFC(&StringLiteral_1, v7);
+    this = (QuestBoardInformaionText_o *)sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FC6CA = 1;
   }
   eventCampaignEnt = (int32_t *)v3->fields.eventCampaignEnt;
@@ -436,8 +436,8 @@ LABEL_27:
     {
       if ( v31 )
       {
-        v63 = (System_Int32_array **)StringLiteral_1;
-        v31->fields._BehindText_k__BackingField = (struct System_String_o *)StringLiteral_1;
+        v63 = (System_Int32_array **)StringLiteral_1/*""*/;
+        v31->fields._BehindText_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
         sub_B16F98(
           (BattleServantConfConponent_o *)&v31->fields._BehindText_k__BackingField,
           v63,
@@ -572,14 +572,14 @@ void __fastcall QuestBoardInformaionText__CreateDispTextExtendIfNotExists(
   if ( (byte_40FC6CB & 1) == 0 )
   {
     sub_B16FFC(&TerminalBoardOptionTextData_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FC6CB = 1;
   }
   if ( !this->fields.dispTextExtend )
   {
     dispText = this->fields.dispText;
     v8 = (TerminalBoardOptionTextData_o *)sub_B170CC(TerminalBoardOptionTextData_TypeInfo, method, v2, v3, v4);
-    TerminalBoardOptionTextData___ctor(v8, (System_String_o *)StringLiteral_1, dispText, 0, 0LL);
+    TerminalBoardOptionTextData___ctor(v8, (System_String_o *)StringLiteral_1/*""*/, dispText, 0, 0LL);
     this->fields.dispTextExtend = v8;
     sub_B16F98(
       (BattleServantConfConponent_o *)&this->fields.dispTextExtend,
@@ -655,8 +655,8 @@ int32_t __fastcall QuestBoardInformaionText__GetDaliyDropUpRestCount(
     sub_B16FFC(&System_DateTime_TypeInfo, v4);
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_4536, v7);
-    sub_B16FFC(&StringLiteral_4535, v8);
+    sub_B16FFC(&StringLiteral_4536/*"DAILY_DROP_UP_RESET_AT"*/, v7);
+    sub_B16FFC(&StringLiteral_4535/*"DAILY_DROP_UP_COUNT"*/, v8);
     byte_40FC6CC = 1;
   }
   v28.fields.dateData = 0LL;
@@ -691,10 +691,10 @@ LABEL_27:
     Month = System_DateTime__get_Month(v30, 0LL);
     v31.fields.dateData = (uint64_t)&v28;
     Day = System_DateTime__get_Day(v31, 0LL);
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4536, 0LL);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4536/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
     v32.fields.dateData = (uint64_t)&t1;
     System_DateTime___ctor_15185024(v32, Year, Month, Day, Value, 0, 0, 0LL);
-    v17 = ConstantMaster__getValue((System_String_o *)StringLiteral_4536, 0LL);
+    v17 = ConstantMaster__getValue((System_String_o *)StringLiteral_4536/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
     NextDayTime_23686252 = NetworkManager__getNextDayTime_23686252(v17, 0LL);
     dateData = NetworkManager__getServerDateTime_23685560(NextDayTime_23686252, 0LL).fields.dateData;
     v20.fields.dateData = NetworkManager__getServerDateTime_23685560(Entity->fields.updatedAt, 0LL).fields.dateData;
@@ -734,7 +734,7 @@ LABEL_24:
     else
       LODWORD(Entity) = 0;
   }
-  v25 = ConstantMaster__getValue((System_String_o *)StringLiteral_4535, 0LL);
+  v25 = ConstantMaster__getValue((System_String_o *)StringLiteral_4535/*"DAILY_DROP_UP_COUNT"*/, 0LL);
   return (v25 - (_DWORD)Entity) & ~((v25 - (int)Entity) >> 31);
 }
 
@@ -754,10 +754,10 @@ System_String_o *__fastcall QuestBoardInformaionText__GetDaliyDropUpRestTimeStr(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&NetworkManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_4536, v4);
+    sub_B16FFC(&StringLiteral_4536/*"DAILY_DROP_UP_RESET_AT"*/, v4);
     byte_40FC6CD = 1;
   }
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4536, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4536/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {

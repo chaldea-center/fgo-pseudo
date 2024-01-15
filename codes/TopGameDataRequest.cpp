@@ -11,7 +11,7 @@ System_String_o *__fastcall TopGameDataRequest__getMockData(TopGameDataRequest_o
   if ( (byte_40FB7E9 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9136, v2);
+    sub_B16FFC(&StringLiteral_9136/*"MockTopGameDataRequest"*/, v2);
     byte_40FB7E9 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -19,7 +19,7 @@ System_String_o *__fastcall TopGameDataRequest__getMockData(TopGameDataRequest_o
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9136, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9136/*"MockTopGameDataRequest"*/, 0LL);
 }
 
 
@@ -31,7 +31,7 @@ System_String_o *__fastcall TopGameDataRequest__getMockURL(TopGameDataRequest_o 
   if ( (byte_40FB7EA & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9137, v2);
+    sub_B16FFC(&StringLiteral_9137/*"MockTopGameDataRequest.txt"*/, v2);
     byte_40FB7EA = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -53,7 +53,7 @@ System_String_o *__fastcall TopGameDataRequest__getMockURL(TopGameDataRequest_o 
   }
   return System_String__Concat_43743732(
            v3->static_fields->gameServerAddress,
-           (System_String_o *)StringLiteral_9137,
+           (System_String_o *)StringLiteral_9137/*"MockTopGameDataRequest.txt"*/,
            0LL);
 }
 
@@ -66,7 +66,7 @@ System_String_o *__fastcall TopGameDataRequest__getURL(TopGameDataRequest_o *thi
   if ( (byte_40FB7E8 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18884, v2);
+    sub_B16FFC(&StringLiteral_18884/*"gamedata/top"*/, v2);
     byte_40FB7E8 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -75,7 +75,7 @@ System_String_o *__fastcall TopGameDataRequest__getURL(TopGameDataRequest_o *thi
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18884, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18884/*"gamedata/top"*/, 0LL);
 }
 
 
@@ -156,19 +156,19 @@ void __fastcall TopGameDataRequest__requestCompleted(
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
     sub_B16FFC(&TopHomeRequest_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_21897, v13);
-    sub_B16FFC(&StringLiteral_17825, v14);
-    sub_B16FFC(&StringLiteral_21129, v15);
-    sub_B16FFC(&StringLiteral_17809, v16);
-    sub_B16FFC(&StringLiteral_16432, v17);
-    sub_B16FFC(&StringLiteral_20301, v18);
-    sub_B16FFC(&StringLiteral_20980, v19);
-    sub_B16FFC(&StringLiteral_16430, v20);
-    sub_B16FFC(&StringLiteral_23169, v21);
-    sub_B16FFC(&StringLiteral_16283, v22);
-    sub_B16FFC(&StringLiteral_18706, v23);
-    sub_B16FFC(&StringLiteral_23373, v24);
-    sub_B16FFC(&StringLiteral_951, v25);
+    sub_B16FFC(&StringLiteral_21897/*"serverHash"*/, v13);
+    sub_B16FFC(&StringLiteral_17825/*"dateVer"*/, v14);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v15);
+    sub_B16FFC(&StringLiteral_17809/*"dataVer"*/, v16);
+    sub_B16FFC(&StringLiteral_16432/*"assetbundleKey"*/, v17);
+    sub_B16FFC(&StringLiteral_20301/*"master"*/, v18);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v19);
+    sub_B16FFC(&StringLiteral_16430/*"assetbundle"*/, v20);
+    sub_B16FFC(&StringLiteral_23169/*"webview"*/, v21);
+    sub_B16FFC(&StringLiteral_16283/*"animalName"*/, v22);
+    sub_B16FFC(&StringLiteral_18706/*"folderName"*/, v23);
+    sub_B16FFC(&StringLiteral_23373/*"zooName"*/, v24);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v25);
     byte_40FB7EB = 1;
   }
   if ( this->fields._isNoRedirect_k__BackingField )
@@ -190,32 +190,32 @@ void __fastcall TopGameDataRequest__requestCompleted(
     || (v29 = v28, !ResponseData__checkError_30924960(v28, 0LL))
     || (success = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v29->fields.success) == 0LL )
   {
-    v26 = (System_String_o **)&StringLiteral_20980;
+    v26 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
     goto LABEL_68;
   }
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_17809,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_17809/*"dataVer"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
              success,
-             (System_Type_o *)StringLiteral_17809,
+             (System_Type_o *)StringLiteral_17809/*"dataVer"*/,
              (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_69;
     v32 = (System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
                                Item,
                                Item->klass->vtable[4].methodPtr);
-    v33 = (System_String_o *)StringLiteral_951;
+    v33 = (System_String_o *)StringLiteral_951/*"0"*/;
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_17825,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_17825/*"dateVer"*/,
            (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       v34 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
               success,
-              (System_Type_o *)StringLiteral_17825,
+              (System_Type_o *)StringLiteral_17825/*"dateVer"*/,
               (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !v34 )
         goto LABEL_69;
@@ -225,7 +225,7 @@ void __fastcall TopGameDataRequest__requestCompleted(
     }
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_20301,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_20301/*"master"*/,
            (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -233,7 +233,7 @@ void __fastcall TopGameDataRequest__requestCompleted(
       v37 = System_Int64__Parse(v33, 0LL);
       v38 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                               success,
-                              (System_Type_o *)StringLiteral_20301,
+                              (System_Type_o *)StringLiteral_20301/*"master"*/,
                               (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !Instance )
         goto LABEL_69;
@@ -242,12 +242,12 @@ void __fastcall TopGameDataRequest__requestCompleted(
   }
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_16430,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_16430/*"assetbundle"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v39 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
             success,
-            (System_Type_o *)StringLiteral_16430,
+            (System_Type_o *)StringLiteral_16430/*"assetbundle"*/,
             (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !v39 )
       goto LABEL_69;
@@ -274,12 +274,12 @@ void __fastcall TopGameDataRequest__requestCompleted(
       v44 = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)Dictionary_28953032;
       if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)Dictionary_28953032,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_18706,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_18706/*"folderName"*/,
              (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       {
         v45 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                 v44,
-                (System_Type_o *)StringLiteral_18706,
+                (System_Type_o *)StringLiteral_18706/*"folderName"*/,
                 (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !v45 )
           goto LABEL_69;
@@ -295,12 +295,12 @@ void __fastcall TopGameDataRequest__requestCompleted(
       }
       if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v44,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_16283,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_16283/*"animalName"*/,
              (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       {
         v47 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                 v44,
-                (System_Type_o *)StringLiteral_16283,
+                (System_Type_o *)StringLiteral_16283/*"animalName"*/,
                 (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !v47 )
           goto LABEL_69;
@@ -316,12 +316,12 @@ void __fastcall TopGameDataRequest__requestCompleted(
       }
       if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
              (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)v44,
-             (System_Xml_XmlQualifiedName_o *)StringLiteral_23373,
+             (System_Xml_XmlQualifiedName_o *)StringLiteral_23373/*"zooName"*/,
              (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       {
         v49 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                 v44,
-                (System_Type_o *)StringLiteral_23373,
+                (System_Type_o *)StringLiteral_23373/*"zooName"*/,
                 (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !v49 )
           goto LABEL_69;
@@ -339,12 +339,12 @@ void __fastcall TopGameDataRequest__requestCompleted(
   }
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_16432,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_16432/*"assetbundleKey"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v51 = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
             success,
-            (System_Type_o *)StringLiteral_16432,
+            (System_Type_o *)StringLiteral_16432/*"assetbundleKey"*/,
             (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !v51 )
       goto LABEL_69;
@@ -367,13 +367,13 @@ void __fastcall TopGameDataRequest__requestCompleted(
   }
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_23169,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_23169/*"webview"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v55 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     v56 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                             success,
-                            (System_Type_o *)StringLiteral_23169,
+                            (System_Type_o *)StringLiteral_23169/*"webview"*/,
                             (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !v55 )
       goto LABEL_69;
@@ -381,13 +381,13 @@ void __fastcall TopGameDataRequest__requestCompleted(
   }
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
          (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-         (System_Xml_XmlQualifiedName_o *)StringLiteral_21897,
+         (System_Xml_XmlQualifiedName_o *)StringLiteral_21897/*"serverHash"*/,
          (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     v57 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     v58 = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                             success,
-                            (System_Type_o *)StringLiteral_21897,
+                            (System_Type_o *)StringLiteral_21897/*"serverHash"*/,
                             (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( v57 )
     {
@@ -398,7 +398,7 @@ LABEL_69:
     sub_B170D4();
   }
 LABEL_4:
-  v26 = (System_String_o **)&StringLiteral_21129;
+  v26 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
 LABEL_68:
   RequestBase__completed((RequestBase_o *)this, *v26, 0LL);
 }

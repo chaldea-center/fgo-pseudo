@@ -394,34 +394,34 @@ System_String_o *__fastcall ServantSellMenu__GetTabTitleSpriteName(
 
   if ( (byte_40FBC28 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16981, *(_QWORD *)&kind);
-    sub_B16FFC(&StringLiteral_17020, v6);
-    sub_B16FFC(&StringLiteral_16978, v7);
-    sub_B16FFC(&StringLiteral_16979, v8);
-    sub_B16FFC(&StringLiteral_17021, v9);
-    sub_B16FFC(&StringLiteral_16982, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_16981/*"btn_txt_craftessence_off"*/, *(_QWORD *)&kind);
+    sub_B16FFC(&StringLiteral_17020/*"btn_txt_servant_off"*/, v6);
+    sub_B16FFC(&StringLiteral_16978/*"btn_txt_cc_off"*/, v7);
+    sub_B16FFC(&StringLiteral_16979/*"btn_txt_cc_on"*/, v8);
+    sub_B16FFC(&StringLiteral_17021/*"btn_txt_servant_on"*/, v9);
+    sub_B16FFC(&StringLiteral_16982/*"btn_txt_craftessence_on"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FBC28 = 1;
   }
   if ( kind == 2 )
   {
-    v12 = (System_String_o **)&StringLiteral_16978;
-    v13 = (System_String_o **)&StringLiteral_16979;
+    v12 = (System_String_o **)&StringLiteral_16978/*"btn_txt_cc_off"*/;
+    v13 = (System_String_o **)&StringLiteral_16979/*"btn_txt_cc_on"*/;
   }
   else if ( kind == 1 )
   {
-    v12 = (System_String_o **)&StringLiteral_16981;
-    v13 = (System_String_o **)&StringLiteral_16982;
+    v12 = (System_String_o **)&StringLiteral_16981/*"btn_txt_craftessence_off"*/;
+    v13 = (System_String_o **)&StringLiteral_16982/*"btn_txt_craftessence_on"*/;
   }
   else
   {
     if ( kind )
     {
-      v12 = (System_String_o **)&StringLiteral_1;
+      v12 = (System_String_o **)&StringLiteral_1/*""*/;
       return *v12;
     }
-    v12 = (System_String_o **)&StringLiteral_17020;
-    v13 = (System_String_o **)&StringLiteral_17021;
+    v12 = (System_String_o **)&StringLiteral_17020/*"btn_txt_servant_off"*/;
+    v13 = (System_String_o **)&StringLiteral_17021/*"btn_txt_servant_on"*/;
   }
   if ( isSelected )
     v12 = v13;
@@ -892,8 +892,8 @@ void __fastcall ServantSellMenu__SetTabButton(
 
   if ( (byte_40FBC27 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16896, tabButton);
-    sub_B16FFC(&StringLiteral_16898, v14);
+    sub_B16FFC(&StringLiteral_16896/*"btn_bg_12"*/, tabButton);
+    sub_B16FFC(&StringLiteral_16898/*"btn_bg_19"*/, v14);
     byte_40FBC27 = 1;
   }
   if ( !tabButton
@@ -913,9 +913,9 @@ void __fastcall ServantSellMenu__SetTabButton(
   {
     sub_B170D4();
   }
-  v18 = &StringLiteral_16898;
+  v18 = &StringLiteral_16898/*"btn_bg_19"*/;
   if ( selectedKind != tabKind )
-    v18 = &StringLiteral_16896;
+    v18 = &StringLiteral_16896/*"btn_bg_12"*/;
   UISprite__set_spriteName(tabSprite, (System_String_o *)*v18, 0LL);
   v19 = isInit;
   ((void (__fastcall *)(UICommonButton_o *, _QWORD, _BOOL4, Il2CppMethodPointer))tabButton->klass->vtable._14_SetState.method)(
@@ -1071,9 +1071,9 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
     sub_B16FFC(&int_TypeInfo, v6);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_2960, v9);
-    sub_B16FFC(&StringLiteral_2961, v10);
-    sub_B16FFC(&StringLiteral_2962, v11);
+    sub_B16FFC(&StringLiteral_2960/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, v9);
+    sub_B16FFC(&StringLiteral_2961/*"CHARA_GRAPH_TAB_SERVANT"*/, v10);
+    sub_B16FFC(&StringLiteral_2962/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, v11);
     byte_40FBC26 = 1;
   }
   *(_QWORD *)servantEquipSum = 0LL;
@@ -1135,7 +1135,7 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   v28 = v25[25];
   v29 = v25[26];
   v30 = v25[27];
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_2961, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_2961/*"CHARA_GRAPH_TAB_SERVANT"*/, 0LL);
   v64 = servantEquipSum[1];
   v32 = j_il2cpp_value_box_0(int_TypeInfo, &v64);
   if ( !SelfUserGame )
@@ -1173,7 +1173,7 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_2962, 0LL);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_2962/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, 0LL);
   v64 = servantEquipSum[0];
   v43 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v64);
   svtKeep = SelfUserGame->fields.svtEquipKeep;
@@ -1208,7 +1208,7 @@ void __fastcall ServantSellMenu__SetTabLabel(ServantSellMenu_o *this, int32_t ki
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_2960, 0LL);
+  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_2960/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, 0LL);
   v64 = Count;
   v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v64);
   if ( !byte_40F6094 )

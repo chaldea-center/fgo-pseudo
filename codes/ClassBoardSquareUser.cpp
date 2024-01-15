@@ -45,12 +45,12 @@ void __fastcall ClassBoardSquareUser__OnReleaseResponse(
   {
     sub_B16FFC(&Method_System_Action_IClassBoardSquareUser__Invoke__, result);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40FBA1E = 1;
   }
   if ( !result )
     goto LABEL_9;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     return;
   ClassBoardSquareUser__ReleaseSquare(this, v7);
   releaseResponseCallback = this->fields.releaseResponseCallback;

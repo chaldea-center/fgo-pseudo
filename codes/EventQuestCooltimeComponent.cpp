@@ -203,14 +203,14 @@ void __fastcall EventQuestCooltimeComponent__SetAssetData(
   if ( (byte_40FAC87 & 1) == 0 )
   {
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, assetData);
-    sub_B16FFC(&StringLiteral_8908, v5);
+    sub_B16FFC(&StringLiteral_8908/*"MapGimmickEffect_SpotCooltime"*/, v5);
     byte_40FAC87 = 1;
   }
   if ( !assetData )
     sub_B170D4();
   Object_WarBoardWaitTimeSetting = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                         assetData,
-                                                                        (System_String_o *)StringLiteral_8908,
+                                                                        (System_String_o *)StringLiteral_8908/*"MapGimmickEffect_SpotCooltime"*/,
                                                                         (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   this->fields.spotCooltimePrefab = Object_WarBoardWaitTimeSetting;
   sub_B16F98(
@@ -292,7 +292,7 @@ void __fastcall EventQuestCooltimeComponent__SetGimmickList(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
     sub_B16FFC(&Method_EventQuestCooltimeComponent___c__DisplayClass11_0__SetGimmickList_b__0__, v16);
     sub_B16FFC(&EventQuestCooltimeComponent___c__DisplayClass11_0_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_19840, v18);
+    sub_B16FFC(&StringLiteral_19840/*"isActiveCooltimeGimmick"*/, v18);
     byte_40FAC8A = 1;
   }
   memset(&v50, 0, sizeof(v50));
@@ -349,7 +349,7 @@ void __fastcall EventQuestCooltimeComponent__SetGimmickList(
         sub_B16F98((BattleServantConfConponent_o *)(v26 + 16), Entity, v33, v34, v35, v36, v37, v38);
         if ( *(_QWORD *)(v26 + 16) )
         {
-          ScriptIntParam = MapGimmickEntity__getScriptIntParam(v30, (System_String_o *)StringLiteral_19840, -1, 0LL);
+          ScriptIntParam = MapGimmickEntity__getScriptIntParam(v30, (System_String_o *)StringLiteral_19840/*"isActiveCooltimeGimmick"*/, -1, 0LL);
           spotCooltimeList = this->fields.spotCooltimeList;
           v45 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B170CC(
                                                                            System_Predicate_SpotCooltimeComponent__TypeInfo,

@@ -40,10 +40,10 @@ float __fastcall ServantCardAddEntity__GetAttackNpRate(ServantCardAddEntity_o *t
 {
   if ( (byte_40F94B4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16446, method);
+    sub_B16FFC(&StringLiteral_16446/*"attackNpRate"*/, method);
     byte_40F94B4 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_16446, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_16446/*"attackNpRate"*/, 1.0, 0LL);
 }
 
 
@@ -51,10 +51,10 @@ float __fastcall ServantCardAddEntity__GetDamageRate(ServantCardAddEntity_o *thi
 {
   if ( (byte_40F94B3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17797, method);
+    sub_B16FFC(&StringLiteral_17797/*"damageRate"*/, method);
     byte_40F94B3 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_17797, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_17797/*"damageRate"*/, 1.0, 0LL);
 }
 
 
@@ -62,10 +62,10 @@ float __fastcall ServantCardAddEntity__GetDefenseNpRate(ServantCardAddEntity_o *
 {
   if ( (byte_40F94B5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17876, method);
+    sub_B16FFC(&StringLiteral_17876/*"defenseNpRate"*/, method);
     byte_40F94B5 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_17876, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_17876/*"defenseNpRate"*/, 1.0, 0LL);
 }
 
 
@@ -73,10 +73,10 @@ float __fastcall ServantCardAddEntity__GetDropStarRate(ServantCardAddEntity_o *t
 {
   if ( (byte_40F94B6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17983, method);
+    sub_B16FFC(&StringLiteral_17983/*"dropStarRate"*/, method);
     byte_40F94B6 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_17983, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_17983/*"dropStarRate"*/, 1.0, 0LL);
 }
 
 

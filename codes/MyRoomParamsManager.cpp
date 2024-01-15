@@ -105,14 +105,14 @@ void __fastcall MyRoomParamsManager___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_List_int___ctor__, v1);
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v5);
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_8136, v7);
-    sub_B16FFC(&StringLiteral_8448, v8);
-    sub_B16FFC(&StringLiteral_8450, v9);
-    sub_B16FFC(&StringLiteral_8449, v10);
-    sub_B16FFC(&StringLiteral_5391, v11);
-    sub_B16FFC(&StringLiteral_8453, v12);
-    sub_B16FFC(&StringLiteral_8447, v13);
-    sub_B16FFC(&StringLiteral_8451, v14);
+    sub_B16FFC(&StringLiteral_8136/*"IsListActive"*/, v7);
+    sub_B16FFC(&StringLiteral_8448/*"LastPlayedEventId"*/, v8);
+    sub_B16FFC(&StringLiteral_8450/*"LastPlayedTitle"*/, v9);
+    sub_B16FFC(&StringLiteral_8449/*"LastPlayedQuestId"*/, v10);
+    sub_B16FFC(&StringLiteral_5391/*"DummyFolderHistory"*/, v11);
+    sub_B16FFC(&StringLiteral_8453/*"LastSelectSubFolderId"*/, v12);
+    sub_B16FFC(&StringLiteral_8447/*"LastPlayMovedQuestId"*/, v13);
+    sub_B16FFC(&StringLiteral_8451/*"LastPlayedWarId"*/, v14);
     byte_40F9B2F = 1;
   }
   MyRoomParamsManager_TypeInfo->static_fields->SETTING_PROLOG_PART1 = 11000;
@@ -161,24 +161,24 @@ void __fastcall MyRoomParamsManager___cctor(const MethodInfo *method)
   v35 = MyRoomParamsManager_TypeInfo;
   MyRoomParamsManager_TypeInfo->static_fields->temporaryLastSelectSubFolderId = 0;
   v36 = v35->static_fields;
-  v37 = (System_Int32_array **)StringLiteral_8449;
-  v36->SAVE_KEY_LAST_PLAY_QUEST_ID = (struct System_String_o *)StringLiteral_8449;
+  v37 = (System_Int32_array **)StringLiteral_8449/*"LastPlayedQuestId"*/;
+  v36->SAVE_KEY_LAST_PLAY_QUEST_ID = (struct System_String_o *)StringLiteral_8449/*"LastPlayedQuestId"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v36->SAVE_KEY_LAST_PLAY_QUEST_ID, v37, v38, v39, v40, v41, v42, v43);
   v44 = MyRoomParamsManager_TypeInfo->static_fields;
-  v45 = (System_Int32_array **)StringLiteral_8451;
-  v44->SAVE_KEY_LAST_PLAY_WAR_ID = (struct System_String_o *)StringLiteral_8451;
+  v45 = (System_Int32_array **)StringLiteral_8451/*"LastPlayedWarId"*/;
+  v44->SAVE_KEY_LAST_PLAY_WAR_ID = (struct System_String_o *)StringLiteral_8451/*"LastPlayedWarId"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v44->SAVE_KEY_LAST_PLAY_WAR_ID, v45, v46, v47, v48, v49, v50, v51);
   v52 = MyRoomParamsManager_TypeInfo->static_fields;
-  v53 = (System_Int32_array **)StringLiteral_8448;
-  v52->SAVE_KEY_LAST_PLAY_EVENT_ID = (struct System_String_o *)StringLiteral_8448;
+  v53 = (System_Int32_array **)StringLiteral_8448/*"LastPlayedEventId"*/;
+  v52->SAVE_KEY_LAST_PLAY_EVENT_ID = (struct System_String_o *)StringLiteral_8448/*"LastPlayedEventId"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v52->SAVE_KEY_LAST_PLAY_EVENT_ID, v53, v54, v55, v56, v57, v58, v59);
   v60 = MyRoomParamsManager_TypeInfo->static_fields;
-  v61 = (System_Int32_array **)StringLiteral_8450;
-  v60->SAVE_KEY_LAST_PLAY_TITLE = (struct System_String_o *)StringLiteral_8450;
+  v61 = (System_Int32_array **)StringLiteral_8450/*"LastPlayedTitle"*/;
+  v60->SAVE_KEY_LAST_PLAY_TITLE = (struct System_String_o *)StringLiteral_8450/*"LastPlayedTitle"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v60->SAVE_KEY_LAST_PLAY_TITLE, v61, v62, v63, v64, v65, v66, v67);
   v68 = MyRoomParamsManager_TypeInfo->static_fields;
-  v69 = (System_Int32_array **)StringLiteral_8453;
-  v68->SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID = (struct System_String_o *)StringLiteral_8453;
+  v69 = (System_Int32_array **)StringLiteral_8453/*"LastSelectSubFolderId"*/;
+  v68->SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID = (struct System_String_o *)StringLiteral_8453/*"LastSelectSubFolderId"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v68->SAVE_KEY_LAST_SELECT_SUB_FOLDER_ID,
     v69,
@@ -189,16 +189,16 @@ void __fastcall MyRoomParamsManager___cctor(const MethodInfo *method)
     v74,
     v75);
   v76 = MyRoomParamsManager_TypeInfo->static_fields;
-  v77 = (System_Int32_array **)StringLiteral_8136;
-  v76->SAVE_KEY_IS_LIST_ACTIVE = (struct System_String_o *)StringLiteral_8136;
+  v77 = (System_Int32_array **)StringLiteral_8136/*"IsListActive"*/;
+  v76->SAVE_KEY_IS_LIST_ACTIVE = (struct System_String_o *)StringLiteral_8136/*"IsListActive"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v76->SAVE_KEY_IS_LIST_ACTIVE, v77, v78, v79, v80, v81, v82, v83);
   v84 = MyRoomParamsManager_TypeInfo->static_fields;
-  v85 = (System_Int32_array **)StringLiteral_5391;
-  v84->SAVE_KEY_DUMMY_FOLDER_HISTORY = (struct System_String_o *)StringLiteral_5391;
+  v85 = (System_Int32_array **)StringLiteral_5391/*"DummyFolderHistory"*/;
+  v84->SAVE_KEY_DUMMY_FOLDER_HISTORY = (struct System_String_o *)StringLiteral_5391/*"DummyFolderHistory"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v84->SAVE_KEY_DUMMY_FOLDER_HISTORY, v85, v86, v87, v88, v89, v90, v91);
   v92 = MyRoomParamsManager_TypeInfo->static_fields;
-  v93 = (System_Int32_array **)StringLiteral_8447;
-  v92->SAVE_KEY_LAST_MOVED_QUEST_ID = (struct System_String_o *)StringLiteral_8447;
+  v93 = (System_Int32_array **)StringLiteral_8447/*"LastPlayMovedQuestId"*/;
+  v92->SAVE_KEY_LAST_MOVED_QUEST_ID = (struct System_String_o *)StringLiteral_8447/*"LastPlayMovedQuestId"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v92->SAVE_KEY_LAST_MOVED_QUEST_ID, v93, v94, v95, v96, v97, v98, v99);
 }
 
@@ -265,7 +265,7 @@ void __fastcall MyRoomParamsManager__InitParameter(const MethodInfo *method)
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_int__Clear__, v1);
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F9B27 = 1;
   }
   v10 = MyRoomParamsManager_TypeInfo;
@@ -314,7 +314,7 @@ void __fastcall MyRoomParamsManager__InitParameter(const MethodInfo *method)
     v10 = MyRoomParamsManager_TypeInfo;
   }
   v10->static_fields->_LastPlayEventId_k__BackingField = v13;
-  v14 = (System_Int32_array **)StringLiteral_1;
+  v14 = (System_Int32_array **)StringLiteral_1/*""*/;
   if ( !byte_40F9B92 )
   {
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v1);
@@ -456,7 +456,7 @@ void __fastcall MyRoomParamsManager__LastDummyPlaySaveData(
     sub_B16FFC(&Method_System_Collections_Generic_List_int___ctor___66737200, v9);
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v10);
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F9B2B = 1;
   }
   if ( history )
@@ -565,7 +565,7 @@ void __fastcall MyRoomParamsManager__LastDummyPlaySaveData(
         MyRoomParamsManager_TypeInfo->static_fields->LAST_PLAY_ID_DEFAULT_VALUE,
         MyRoomParamsManager_TypeInfo->static_fields->LAST_PLAY_ID_DEFAULT_VALUE,
         MyRoomParamsManager_TypeInfo->static_fields->LAST_PLAY_ID_DEFAULT_VALUE,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         0,
         v34);
       return;
@@ -980,7 +980,7 @@ void __fastcall MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
     sub_B16FFC(&Method_JsonManager_Deserialize_List_int____, v1);
     sub_B16FFC(&JsonManager_TypeInfo, v2);
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F9B29 = 1;
   }
   v5 = MyRoomParamsManager_TypeInfo;
@@ -1043,7 +1043,7 @@ void __fastcall MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
   v14->static_fields->_LastPlayEventId_k__BackingField = v13;
   String = (System_Int32_array **)UnityEngine_PlayerPrefs__GetString(
                                     v14->static_fields->SAVE_KEY_LAST_PLAY_TITLE,
-                                    (System_String_o *)StringLiteral_1,
+                                    (System_String_o *)StringLiteral_1/*""*/,
                                     0LL);
   if ( !byte_40F9B92 )
   {
@@ -1087,7 +1087,7 @@ void __fastcall MyRoomParamsManager__Load_SaveData(const MethodInfo *method)
   v27->static_fields->_LastSelectSubFolderId_k__BackingField = v26;
   v28 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString(
                           v27->static_fields->SAVE_KEY_DUMMY_FOLDER_HISTORY,
-                          (System_String_o *)StringLiteral_1,
+                          (System_String_o *)StringLiteral_1/*""*/,
                           0LL);
   if ( !System_String__IsNullOrEmpty((System_String_o *)v28, 0LL) )
   {

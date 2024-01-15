@@ -194,7 +194,7 @@ void __fastcall NoticeNumberComponent__SetNumber(
   if ( (byte_40F9360 & 1) == 0 )
   {
     sub_B16FFC(&NoticeNumberComponent_TypeInfo, *(_QWORD *)&number);
-    sub_B16FFC(&StringLiteral_690, v5);
+    sub_B16FFC(&StringLiteral_690/*"+"*/, v5);
     byte_40F9360 = 1;
   }
   v14 = 0;
@@ -227,7 +227,7 @@ void __fastcall NoticeNumberComponent__SetNumber(
     }
     v14 = DISP_NUMBER_MAX;
     v12 = System_Int32__ToString((int32_t)&v14, 0LL);
-    v13 = System_String__Concat_43743732(v12, (System_String_o *)StringLiteral_690, 0LL);
+    v13 = System_String__Concat_43743732(v12, (System_String_o *)StringLiteral_690/*"+"*/, 0LL);
   }
   if ( !numberLabel )
 LABEL_15:

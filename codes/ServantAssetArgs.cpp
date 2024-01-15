@@ -102,10 +102,10 @@ System_String_o *__fastcall ServantAssetArgs__GenerateUniqueKey(
 {
   if ( (byte_40F93F8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15842, para);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, para);
     byte_40F93F8 = 1;
   }
-  return System_String__Join((System_String_o *)StringLiteral_15842, para, 0LL);
+  return System_String__Join((System_String_o *)StringLiteral_15842/*"_"*/, para, 0LL);
 }
 
 

@@ -1477,13 +1477,13 @@ void __fastcall EventFortificationManager__SetFortificationWork(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_UIAtlas___, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_13544, v16);
+    sub_B16FFC(&StringLiteral_13544/*"Terminal/Atlas/TerminalAtlas"*/, v16);
     byte_40FB670 = 1;
   }
   entities = 0LL;
   memset(&v48, 0, sizeof(v48));
   UIAtlas = UnityEngine_Resources__Load_UIAtlas_(
-              (System_String_o *)StringLiteral_13544,
+              (System_String_o *)StringLiteral_13544/*"Terminal/Atlas/TerminalAtlas"*/,
               (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_UIAtlas___);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -2472,10 +2472,10 @@ void __fastcall EventFortificationManager___c__DisplayClass28_0___Init_b__0(
     sub_B16FFC(&DataManager_TypeInfo, v4);
     sub_B16FFC(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_16988, v7);
-    sub_B16FFC(&StringLiteral_6408, v8);
-    sub_B16FFC(&StringLiteral_16904, v9);
-    sub_B16FFC(&StringLiteral_18532, v10);
+    sub_B16FFC(&StringLiteral_16988/*"btn_txt_event_organization"*/, v7);
+    sub_B16FFC(&StringLiteral_6408/*"FORTIFICATION_EVENT_END_MSG"*/, v8);
+    sub_B16FFC(&StringLiteral_16904/*"btn_bg_event_organization"*/, v9);
+    sub_B16FFC(&StringLiteral_18532/*"event_tab_bg_mask"*/, v10);
     byte_40F6FAE = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -2523,7 +2523,7 @@ void __fastcall EventFortificationManager___c__DisplayClass28_0___Init_b__0(
                     {
                       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
                     }
-                    AtlasManager__SetEventUI_28584872(eventId, v35, (System_String_o *)StringLiteral_18532, 0LL);
+                    AtlasManager__SetEventUI_28584872(eventId, v35, (System_String_o *)StringLiteral_18532/*"event_tab_bg_mask"*/, 0LL);
                     if ( *p__4__this )
                     {
                       maskLb = (UnityEngine_Component_o *)(*p__4__this)->fields.maskLb;
@@ -2541,7 +2541,7 @@ void __fastcall EventFortificationManager___c__DisplayClass28_0___Init_b__0(
                             {
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                             }
-                            v39 = LocalizationManager__Get((System_String_o *)StringLiteral_6408, 0LL);
+                            v39 = LocalizationManager__Get((System_String_o *)StringLiteral_6408/*"FORTIFICATION_EVENT_END_MSG"*/, 0LL);
                             if ( v38 )
                             {
                               UILabel__set_text(v38, v39, 0LL);
@@ -2602,13 +2602,13 @@ LABEL_54:
   v25 = v23->fields.organizationBtnSp;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_28584872(v24, v25, (System_String_o *)StringLiteral_16904, 0LL);
+  AtlasManager__SetEventUI_28584872(v24, v25, (System_String_o *)StringLiteral_16904/*"btn_bg_event_organization"*/, 0LL);
   if ( !*p__4__this )
     goto LABEL_54;
   AtlasManager__SetEventUI_28584872(
     this->fields.eventId,
     (*p__4__this)->fields.organizationBtnTxtSp,
-    (System_String_o *)StringLiteral_16988,
+    (System_String_o *)StringLiteral_16988/*"btn_txt_event_organization"*/,
     0LL);
 LABEL_45:
   v40 = *p__4__this;
@@ -2856,7 +2856,7 @@ void __fastcall EventFortificationManager___c__DisplayClass32_0___CloseServantFo
     sub_B16FFC(&Method_EventFortificationManager___c__CloseServantFortificationList_b__32_2__, v8);
     sub_B16FFC(&Method_EventFortificationManager___c__DisplayClass32_0__CloseServantFortificationList_b__0__, v9);
     sub_B16FFC(&EventFortificationManager___c_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_16375, v11);
+    sub_B16FFC(&StringLiteral_16375/*"ar200"*/, v11);
     byte_40F6FB0 = 1;
   }
   if ( this->fields.servantData )
@@ -2865,7 +2865,7 @@ void __fastcall EventFortificationManager___c__DisplayClass32_0___CloseServantFo
     if ( (*((_BYTE *)Method_EventFortificationManager___c__DisplayClass32_0__CloseServantFortificationList_b__0__ + 75) & 2) != 0 )
       v12 = (_QWORD *)sub_B17004(Method_EventFortificationManager___c__DisplayClass32_0__CloseServantFortificationList_b__0__);
     v13 = (System_Reflection_MethodBase_o *)sub_B16FE0(v12, v12[3]);
-    OverwriteAssetSoundName__PlaySe(v13, (System_String_o *)StringLiteral_16375, 0LL);
+    OverwriteAssetSoundName__PlaySe(v13, (System_String_o *)StringLiteral_16375/*"ar200"*/, 0LL);
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )

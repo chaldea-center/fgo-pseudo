@@ -51,35 +51,35 @@ void __fastcall SceneList___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_SceneList_Type__string___ctor__, v5);
     sub_B16FFC(&System_Collections_Generic_Dictionary_SceneList_Type__string__TypeInfo, v6);
     sub_B16FFC(&SceneList_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_2773, v8);
-    sub_B16FFC(&StringLiteral_13103, v9);
-    sub_B16FFC(&StringLiteral_10561, v10);
-    sub_B16FFC(&StringLiteral_3991, v11);
-    sub_B16FFC(&StringLiteral_15365, v12);
-    sub_B16FFC(&StringLiteral_8940, v13);
-    sub_B16FFC(&StringLiteral_3990, v14);
-    sub_B16FFC(&StringLiteral_12663, v15);
-    sub_B16FFC(&StringLiteral_6706, v16);
-    sub_B16FFC(&StringLiteral_13107, v17);
-    sub_B16FFC(&StringLiteral_12656, v18);
-    sub_B16FFC(&StringLiteral_7589, v19);
-    sub_B16FFC(&StringLiteral_6173, v20);
-    sub_B16FFC(&StringLiteral_8942, v21);
-    sub_B16FFC(&StringLiteral_6779, v22);
-    sub_B16FFC(&StringLiteral_6737, v23);
-    sub_B16FFC(&StringLiteral_12790, v24);
-    sub_B16FFC(&StringLiteral_15360, v25);
-    sub_B16FFC(&StringLiteral_2772, v26);
-    sub_B16FFC(&StringLiteral_2765, v27);
-    sub_B16FFC(&StringLiteral_5176, v28);
-    sub_B16FFC(&StringLiteral_13570, v29);
-    sub_B16FFC(&StringLiteral_5899, v30);
-    sub_B16FFC(&StringLiteral_13113, v31);
-    sub_B16FFC(&StringLiteral_4140, v32);
-    sub_B16FFC(&StringLiteral_1, v33);
-    sub_B16FFC(&StringLiteral_9232, v34);
-    sub_B16FFC(&StringLiteral_14418, v35);
-    sub_B16FFC(&StringLiteral_4102, v36);
+    sub_B16FFC(&StringLiteral_2773/*"BattleScriptScene"*/, v8);
+    sub_B16FFC(&StringLiteral_13103/*"SummonEffectScene"*/, v9);
+    sub_B16FFC(&StringLiteral_10561/*"PartyOrganizationScene"*/, v10);
+    sub_B16FFC(&StringLiteral_3991/*"ClassBoardSelectScene"*/, v11);
+    sub_B16FFC(&StringLiteral_15365/*"WarehouseScene"*/, v12);
+    sub_B16FFC(&StringLiteral_8940/*"MasterFormationScene"*/, v13);
+    sub_B16FFC(&StringLiteral_3990/*"ClassBoardScene"*/, v14);
+    sub_B16FFC(&StringLiteral_12663/*"ServantListScene"*/, v15);
+    sub_B16FFC(&StringLiteral_6706/*"FollowerScene"*/, v16);
+    sub_B16FFC(&StringLiteral_13107/*"SummonScene"*/, v17);
+    sub_B16FFC(&StringLiteral_12656/*"ServantEquipListScene"*/, v18);
+    sub_B16FFC(&StringLiteral_7589/*"InitScene"*/, v19);
+    sub_B16FFC(&StringLiteral_6173/*"EventRewardScene"*/, v20);
+    sub_B16FFC(&StringLiteral_8942/*"MasterMissionScene"*/, v21);
+    sub_B16FFC(&StringLiteral_6779/*"FriendScene"*/, v22);
+    sub_B16FFC(&StringLiteral_6737/*"FormationScene"*/, v23);
+    sub_B16FFC(&StringLiteral_12790/*"ShopScene"*/, v24);
+    sub_B16FFC(&StringLiteral_15360/*"WarBoardScene"*/, v25);
+    sub_B16FFC(&StringLiteral_2772/*"BattleScene"*/, v26);
+    sub_B16FFC(&StringLiteral_2765/*"BattleDemoScene"*/, v27);
+    sub_B16FFC(&StringLiteral_5176/*"DebugTestScene"*/, v28);
+    sub_B16FFC(&StringLiteral_13570/*"TerminalScene"*/, v29);
+    sub_B16FFC(&StringLiteral_5899/*"EmptyScene"*/, v30);
+    sub_B16FFC(&StringLiteral_13113/*"SupportSelectScene"*/, v31);
+    sub_B16FFC(&StringLiteral_4140/*"CombineScene"*/, v32);
+    sub_B16FFC(&StringLiteral_1/*""*/, v33);
+    sub_B16FFC(&StringLiteral_9232/*"MyRoomScene"*/, v34);
+    sub_B16FFC(&StringLiteral_14418/*"TitleScene"*/, v35);
+    sub_B16FFC(&StringLiteral_4102/*"CoinRoomScene"*/, v36);
     byte_40FC8FB = 1;
   }
   v37 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B170CC(
@@ -96,147 +96,147 @@ void __fastcall SceneList___cctor(const MethodInfo *method)
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     -1,
-    (System_String_o *)StringLiteral_1,
+    (System_String_o *)StringLiteral_1/*""*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     0,
-    (System_String_o *)StringLiteral_7589,
+    (System_String_o *)StringLiteral_7589/*"InitScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     4,
-    (System_String_o *)StringLiteral_5176,
+    (System_String_o *)StringLiteral_5176/*"DebugTestScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     9,
-    (System_String_o *)StringLiteral_14418,
+    (System_String_o *)StringLiteral_14418/*"TitleScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     10,
-    (System_String_o *)StringLiteral_2772,
+    (System_String_o *)StringLiteral_2772/*"BattleScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     20,
-    (System_String_o *)StringLiteral_13107,
+    (System_String_o *)StringLiteral_13107/*"SummonScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     22,
-    (System_String_o *)StringLiteral_12790,
+    (System_String_o *)StringLiteral_12790/*"ShopScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     23,
-    (System_String_o *)StringLiteral_6779,
+    (System_String_o *)StringLiteral_6779/*"FriendScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     30,
-    (System_String_o *)StringLiteral_9232,
+    (System_String_o *)StringLiteral_9232/*"MyRoomScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     32,
-    (System_String_o *)StringLiteral_4140,
+    (System_String_o *)StringLiteral_4140/*"CombineScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     34,
-    (System_String_o *)StringLiteral_13570,
+    (System_String_o *)StringLiteral_13570/*"TerminalScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     35,
-    (System_String_o *)StringLiteral_6706,
+    (System_String_o *)StringLiteral_6706/*"FollowerScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     38,
-    (System_String_o *)StringLiteral_2773,
+    (System_String_o *)StringLiteral_2773/*"BattleScriptScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     39,
-    (System_String_o *)StringLiteral_6737,
+    (System_String_o *)StringLiteral_6737/*"FormationScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     40,
-    (System_String_o *)StringLiteral_10561,
+    (System_String_o *)StringLiteral_10561/*"PartyOrganizationScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     41,
-    (System_String_o *)StringLiteral_12663,
+    (System_String_o *)StringLiteral_12663/*"ServantListScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     42,
-    (System_String_o *)StringLiteral_12656,
+    (System_String_o *)StringLiteral_12656/*"ServantEquipListScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     44,
-    (System_String_o *)StringLiteral_8940,
+    (System_String_o *)StringLiteral_8940/*"MasterFormationScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     50,
-    (System_String_o *)StringLiteral_2765,
+    (System_String_o *)StringLiteral_2765/*"BattleDemoScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     60,
-    (System_String_o *)StringLiteral_13113,
+    (System_String_o *)StringLiteral_13113/*"SupportSelectScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     71,
-    (System_String_o *)StringLiteral_15365,
+    (System_String_o *)StringLiteral_15365/*"WarehouseScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     72,
-    (System_String_o *)StringLiteral_6173,
+    (System_String_o *)StringLiteral_6173/*"EventRewardScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     1000,
-    (System_String_o *)StringLiteral_5899,
+    (System_String_o *)StringLiteral_5899/*"EmptyScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     1001,
-    (System_String_o *)StringLiteral_13103,
+    (System_String_o *)StringLiteral_13103/*"SummonEffectScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     80,
-    (System_String_o *)StringLiteral_15360,
+    (System_String_o *)StringLiteral_15360/*"WarBoardScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     90,
-    (System_String_o *)StringLiteral_4102,
+    (System_String_o *)StringLiteral_4102/*"CoinRoomScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     91,
-    (System_String_o *)StringLiteral_3990,
+    (System_String_o *)StringLiteral_3990/*"ClassBoardScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     92,
-    (System_String_o *)StringLiteral_3991,
+    (System_String_o *)StringLiteral_3991/*"ClassBoardSelectScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v37,
     100,
-    (System_String_o *)StringLiteral_8942,
+    (System_String_o *)StringLiteral_8942/*"MasterMissionScene"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   static_fields = (BattleServantConfConponent_o *)SceneList_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v37;

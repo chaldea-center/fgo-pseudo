@@ -33,13 +33,13 @@ void __fastcall CombineCommandCardComponent__DispCommandCard(
 
   if ( (byte_40F9AAB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_14954, data);
+    sub_B16FFC(&StringLiteral_14954/*"Unlit/Transparent Colored"*/, data);
     byte_40F9AAB = 1;
   }
   CombineCommandCardComponent__SetCommandCardEnable(this, 1, (const MethodInfo *)userCommandCodeId);
   CombineCommandCardComponent__SetSpriteActive(v13, this->fields.selectedSprite, 0, v14);
   BattleCommandComponent__setData((BattleCommandComponent_o *)this, data, 0LL, 0, 1, 0, 0LL);
-  BattleCommandComponent__setShader((BattleCommandComponent_o *)this, (System_String_o *)StringLiteral_14954, 0LL);
+  BattleCommandComponent__setShader((BattleCommandComponent_o *)this, (System_String_o *)StringLiteral_14954/*"Unlit/Transparent Colored"*/, 0LL);
   BattleCommandComponent__updateView((BattleCommandComponent_o *)this, 1, 0, 1, 0, 0, 0LL);
   if ( (userCommandCodeId & 0x8000000000000000LL) != 0 )
   {
@@ -217,7 +217,7 @@ void __fastcall CombineCommandCardComponent__SetExceedableLabel(
     sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&commandCardParam);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_8797, v9);
+    sub_B16FFC(&StringLiteral_8797/*"MSG_ABLED_COMMAND_CARD_EXCEED"*/, v9);
     byte_40F9AAF = 1;
   }
   exceedableLabel = (UnityEngine_Object_o *)this->fields.exceedableLabel;
@@ -234,7 +234,7 @@ void __fastcall CombineCommandCardComponent__SetExceedableLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8797, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8797/*"MSG_ABLED_COMMAND_CARD_EXCEED"*/, 0LL);
     if ( !v11 )
       goto LABEL_17;
     UILabel__set_text(v11, v12, 0LL);
@@ -332,7 +332,7 @@ void __fastcall CombineCommandCardComponent__SetPowerUpCardValue(
     sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&commandCardParam);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_3212, v9);
+    sub_B16FFC(&StringLiteral_3212/*"COMMAND_CARD_EXCEED_STATUS_COMBINE"*/, v9);
     byte_40F9AAE = 1;
   }
   powerUpCardValue = (UnityEngine_Object_o *)this->fields.powerUpCardValue;
@@ -358,7 +358,7 @@ void __fastcall CombineCommandCardComponent__SetPowerUpCardValue(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3212, 0LL);
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3212/*"COMMAND_CARD_EXCEED_STATUS_COMBINE"*/, 0LL);
       NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(commandCardParam, 0LL);
       v16 = BalanceConfig_TypeInfo;
       if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

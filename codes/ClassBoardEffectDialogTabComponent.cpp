@@ -19,12 +19,12 @@ void __fastcall ClassBoardEffectDialogTabComponent___cctor(const MethodInfo *met
   if ( (byte_40FB93F & 1) == 0 )
   {
     sub_B16FFC(&ClassBoardEffectDialogTabComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16961, v8);
+    sub_B16FFC(&StringLiteral_16961/*"btn_tab_{0}"*/, v8);
     byte_40FB93F = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ClassBoardEffectDialogTabComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_16961;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16961;
+  v10 = (System_Int32_array **)StringLiteral_16961/*"btn_tab_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16961/*"btn_tab_{0}"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   v15.fields.r = 0.30196;
   v14 = (struct UnityEngine_Color_o)0LL;

@@ -38,22 +38,22 @@ void __fastcall Gender___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&Gender_TypeInfo, v1);
     sub_B16FFC(&string___TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_6313, v4);
-    sub_B16FFC(&StringLiteral_9808, v5);
-    sub_B16FFC(&StringLiteral_8588, v6);
+    sub_B16FFC(&StringLiteral_6313/*"FEMALE"*/, v4);
+    sub_B16FFC(&StringLiteral_9808/*"OTHER"*/, v5);
+    sub_B16FFC(&StringLiteral_8588/*"MALE"*/, v6);
     byte_40FF558 = 1;
   }
   v7 = sub_B17014(string___TypeInfo, 3LL, v2);
   if ( !v7 )
     sub_B170D4();
   v14 = (System_Int32_array **)v7;
-  v15 = StringLiteral_8588;
-  if ( StringLiteral_8588 )
+  v15 = StringLiteral_8588/*"MALE"*/;
+  if ( StringLiteral_8588/*"MALE"*/ )
   {
-    v15 = sub_B170BC(StringLiteral_8588, *(_QWORD *)&(*v14)->m_Items[9]);
+    v15 = sub_B170BC(StringLiteral_8588/*"MALE"*/, *(_QWORD *)&(*v14)->m_Items[9]);
     if ( !v15 )
       goto LABEL_21;
-    v16 = (System_Int32_array **)StringLiteral_8588;
+    v16 = (System_Int32_array **)StringLiteral_8588/*"MALE"*/;
   }
   else
   {
@@ -63,13 +63,13 @@ void __fastcall Gender___cctor(const MethodInfo *method)
     goto LABEL_20;
   v14[4] = (System_Int32_array *)v16;
   sub_B16F98((BattleServantConfConponent_o *)(v14 + 4), v16, v8, v9, v10, v11, v12, v13);
-  v15 = StringLiteral_6313;
-  if ( StringLiteral_6313 )
+  v15 = StringLiteral_6313/*"FEMALE"*/;
+  if ( StringLiteral_6313/*"FEMALE"*/ )
   {
-    v15 = sub_B170BC(StringLiteral_6313, *(_QWORD *)&(*v14)->m_Items[9]);
+    v15 = sub_B170BC(StringLiteral_6313/*"FEMALE"*/, *(_QWORD *)&(*v14)->m_Items[9]);
     if ( !v15 )
       goto LABEL_21;
-    v16 = (System_Int32_array **)StringLiteral_6313;
+    v16 = (System_Int32_array **)StringLiteral_6313/*"FEMALE"*/;
   }
   else
   {
@@ -79,13 +79,13 @@ void __fastcall Gender___cctor(const MethodInfo *method)
     goto LABEL_20;
   v14[5] = (System_Int32_array *)v16;
   sub_B16F98((BattleServantConfConponent_o *)(v14 + 5), v16, v8, v17, v18, v19, v20, v21);
-  v15 = StringLiteral_9808;
-  if ( StringLiteral_9808 )
+  v15 = StringLiteral_9808/*"OTHER"*/;
+  if ( StringLiteral_9808/*"OTHER"*/ )
   {
-    v15 = sub_B170BC(StringLiteral_9808, *(_QWORD *)&(*v14)->m_Items[9]);
+    v15 = sub_B170BC(StringLiteral_9808/*"OTHER"*/, *(_QWORD *)&(*v14)->m_Items[9]);
     if ( v15 )
     {
-      v16 = (System_Int32_array **)StringLiteral_9808;
+      v16 = (System_Int32_array **)StringLiteral_9808/*"OTHER"*/;
       goto LABEL_18;
     }
 LABEL_21:

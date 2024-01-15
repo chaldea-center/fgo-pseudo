@@ -522,7 +522,7 @@ System_String_o *__fastcall ViewEnemyEntity__getBattleName(ViewEnemyEntity_o *th
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
     sub_B16FFC(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v8);
     sub_B16FFC(&SingletonTemplate_clsQuestCheck__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_9280, v10);
+    sub_B16FFC(&StringLiteral_9280/*"NONE"*/, v10);
     byte_40FF71D = 1;
   }
   entity = 0LL;
@@ -569,7 +569,7 @@ System_String_o *__fastcall ViewEnemyEntity__getBattleName(ViewEnemyEntity_o *th
   {
 LABEL_22:
     name = this->fields.name;
-    if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_9280, 0LL) )
+    if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_9280/*"NONE"*/, 0LL) )
       return name;
     Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
@@ -605,10 +605,10 @@ int32_t __fastcall ViewEnemyEntity__getEnemyNameEffect(ViewEnemyEntity_o *this, 
 
   if ( (byte_40FF71F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18299, method);
+    sub_B16FFC(&StringLiteral_18299/*"enemyNameEffect"*/, method);
     byte_40FF71F = 1;
   }
-  return ViewEnemyEntity__getScript(this, (System_String_o *)StringLiteral_18299, 0, v2);
+  return ViewEnemyEntity__getScript(this, (System_String_o *)StringLiteral_18299/*"enemyNameEffect"*/, 0, v2);
 }
 
 

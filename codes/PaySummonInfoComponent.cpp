@@ -591,9 +591,9 @@ void __fastcall PaySummonInfoComponent__setPaySummonDispInfo(PaySummonInfoCompon
     sub_B16FFC(&int_TypeInfo, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_10397, v6);
-    sub_B16FFC(&StringLiteral_13308, v7);
-    sub_B16FFC(&StringLiteral_13309, v8);
+    sub_B16FFC(&StringLiteral_10397/*"PAY_SUMMON_DETAIL"*/, v6);
+    sub_B16FFC(&StringLiteral_13308/*"TICKET_NUM"*/, v7);
+    sub_B16FFC(&StringLiteral_13309/*"TICKET_SUMMON_DETAIL"*/, v8);
     byte_40F8F12 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -633,7 +633,7 @@ void __fastcall PaySummonInfoComponent__setPaySummonDispInfo(PaySummonInfoCompon
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_10397, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_10397/*"PAY_SUMMON_DETAIL"*/, 0LL);
     price = this->fields.price;
     v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &price);
     v20 = System_String__Format(v18, v19, 0LL);
@@ -685,7 +685,7 @@ LABEL_37:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_13309, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_13309/*"TICKET_SUMMON_DETAIL"*/, 0LL);
   if ( !paySummonDetailLb )
     goto LABEL_37;
   UILabel__set_text(paySummonDetailLb, v29, 0LL);
@@ -697,7 +697,7 @@ LABEL_37:
     goto LABEL_37;
   UnityEngine_GameObject__SetActive(v31, 1, 0LL);
   ticketNumLb = this->fields.ticketNumLb;
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_13308, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_13308/*"TICKET_NUM"*/, 0LL);
   ticketNum = this->fields.ticketNum;
   v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &ticketNum);
   v35 = System_String__Format(v33, v34, 0LL);

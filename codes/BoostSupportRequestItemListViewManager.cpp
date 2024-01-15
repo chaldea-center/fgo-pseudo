@@ -32,7 +32,7 @@ void __fastcall BoostSupportRequestItemListViewManager__CreateList(
   {
     sub_B16FFC(&BoostSupportRequsetItemListViewItem_TypeInfo, boostEntityList);
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewItem__Add__, v9);
-    sub_B16FFC(&StringLiteral_20998, v10);
+    sub_B16FFC(&StringLiteral_20998/*"no data(test label)"*/, v10);
     byte_40FB170 = 1;
   }
   if ( !boostEntityList )
@@ -75,7 +75,7 @@ LABEL_9:
   emptyMessageLabel = this->fields.emptyMessageLabel;
   if ( !emptyMessageLabel )
     goto LABEL_12;
-  UILabel__set_text(emptyMessageLabel, (System_String_o *)StringLiteral_20998, 0LL);
+  UILabel__set_text(emptyMessageLabel, (System_String_o *)StringLiteral_20998/*"no data(test label)"*/, 0LL);
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
 }
 
@@ -249,7 +249,7 @@ void __fastcall BoostSupportRequestItemListViewManager__RequestListObject(
       v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__GetEnumerator__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_BoostSupportRequestItemListViewObject__get_Count__, v8);
-    sub_B16FFC(&StringLiteral_10004, v9);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v9);
     byte_40FB172 = 1;
   }
   memset(&v19, 0, sizeof(v19));
@@ -264,7 +264,7 @@ void __fastcall BoostSupportRequestItemListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

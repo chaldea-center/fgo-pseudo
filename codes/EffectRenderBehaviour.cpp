@@ -141,11 +141,11 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Renderer___, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
     sub_B16FFC(&UnityEngine_ParticleSystemRenderer_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_15992, v6);
-    sub_B16FFC(&StringLiteral_15869, v7);
-    sub_B16FFC(&StringLiteral_15870, v8);
-    sub_B16FFC(&StringLiteral_15868, v9);
-    sub_B16FFC(&StringLiteral_15986, v10);
+    sub_B16FFC(&StringLiteral_15992/*"_Scaling"*/, v6);
+    sub_B16FFC(&StringLiteral_15869/*"_CameraInv"*/, v7);
+    sub_B16FFC(&StringLiteral_15870/*"_Center"*/, v8);
+    sub_B16FFC(&StringLiteral_15868/*"_Camera"*/, v9);
+    sub_B16FFC(&StringLiteral_15986/*"_RenderType"*/, v10);
     byte_40FE269 = 1;
   }
   memset(&v40, 0, sizeof(v40));
@@ -186,7 +186,7 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
       goto LABEL_22;
     UnityEngine_Material__SetVector(
       material,
-      (System_String_o *)StringLiteral_15870,
+      (System_String_o *)StringLiteral_15870/*"_Center"*/,
       *(UnityEngine_Vector4_o *)&v17,
       0LL);
     v21 = UnityEngine_Renderer__get_material(v14, 0LL);
@@ -197,7 +197,7 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
     *(UnityEngine_Vector4_o *)&v23 = UnityEngine_Vector4__op_Implicit(lossyScale, 0LL);
     if ( !v21 )
       goto LABEL_22;
-    UnityEngine_Material__SetVector(v21, (System_String_o *)StringLiteral_15992, *(UnityEngine_Vector4_o *)&v23, 0LL);
+    UnityEngine_Material__SetVector(v21, (System_String_o *)StringLiteral_15992/*"_Scaling"*/, *(UnityEngine_Vector4_o *)&v23, 0LL);
     v27 = UnityEngine_Renderer__get_material(v14, 0LL);
     current = UnityEngine_Camera__get_current(0LL);
     if ( !current )
@@ -207,7 +207,7 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
     if ( !v27 )
       goto LABEL_22;
     v37 = v39;
-    UnityEngine_Material__SetMatrix(v27, (System_String_o *)StringLiteral_15868, &v37, 0LL);
+    UnityEngine_Material__SetMatrix(v27, (System_String_o *)StringLiteral_15868/*"_Camera"*/, &v37, 0LL);
     v29 = UnityEngine_Renderer__get_material(v14, 0LL);
     v30 = UnityEngine_Camera__get_current(0LL);
     if ( !v30 )
@@ -218,7 +218,7 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
     v38 = v36;
     if ( !v29
       || (v35 = v38,
-          UnityEngine_Material__SetMatrix(v29, (System_String_o *)StringLiteral_15869, &v35, 0LL),
+          UnityEngine_Material__SetMatrix(v29, (System_String_o *)StringLiteral_15869/*"_CameraInv"*/, &v35, 0LL),
           v31 = UnityEngine_Renderer__get_material(v14, 0LL),
           renderMode = UnityEngine_ParticleSystemRenderer__get_renderMode(
                          (UnityEngine_ParticleSystemRenderer_o *)v14,
@@ -228,7 +228,7 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
 LABEL_22:
       sub_B170D4();
     }
-    UnityEngine_Material__SetInt(v31, (System_String_o *)StringLiteral_15986, renderMode, 0LL);
+    UnityEngine_Material__SetInt(v31, (System_String_o *)StringLiteral_15986/*"_RenderType"*/, renderMode, 0LL);
   }
 }
 
@@ -243,13 +243,13 @@ UnityEngine_Shader_o *__fastcall EffectRenderBehaviour___getCustomShader(
 
   if ( (byte_40FE267 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_610, sh);
+    sub_B16FFC(&StringLiteral_610/*"(Custom)"*/, sh);
     byte_40FE267 = 1;
   }
   if ( !sh )
     sub_B170D4();
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)sh, 0LL);
-  v5 = System_String__Concat_43743732(name, (System_String_o *)StringLiteral_610, 0LL);
+  v5 = System_String__Concat_43743732(name, (System_String_o *)StringLiteral_610/*"(Custom)"*/, 0LL);
   return UnityEngine_Shader__Find(v5, 0LL);
 }
 
@@ -270,8 +270,8 @@ UnityEngine_Shader_o *__fastcall EffectRenderBehaviour___getNonCustomShader(
   if ( (byte_40FE268 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, sh);
-    sub_B16FFC(&StringLiteral_610, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_610/*"(Custom)"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FE268 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -289,8 +289,8 @@ UnityEngine_Shader_o *__fastcall EffectRenderBehaviour___getNonCustomShader(
         sub_B170D4();
       v10 = System_String__Replace_43750968(
               name,
-              (System_String_o *)StringLiteral_610,
-              (System_String_o *)StringLiteral_1,
+              (System_String_o *)StringLiteral_610/*"(Custom)"*/,
+              (System_String_o *)StringLiteral_1/*""*/,
               0LL);
       return UnityEngine_Shader__Find(v10, 0LL);
     }
@@ -314,7 +314,7 @@ bool __fastcall EffectRenderBehaviour___isCustomShader(
   if ( (byte_40FE266 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, sh);
-    sub_B16FFC(&StringLiteral_610, v4);
+    sub_B16FFC(&StringLiteral_610/*"(Custom)"*/, v4);
     byte_40FE266 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -326,5 +326,5 @@ bool __fastcall EffectRenderBehaviour___isCustomShader(
     return 0;
   if ( !sh || (name = UnityEngine_Object__get_name((UnityEngine_Object_o *)sh, 0LL)) == 0LL )
     sub_B170D4();
-  return System_String__IndexOf_43816080(name, (System_String_o *)StringLiteral_610, 0LL) >= 0;
+  return System_String__IndexOf_43816080(name, (System_String_o *)StringLiteral_610/*"(Custom)"*/, 0LL) >= 0;
 }

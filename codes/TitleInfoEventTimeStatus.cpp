@@ -376,14 +376,14 @@ void __fastcall TitleInfoEventTimeStatus__SetLoop(
   if ( (byte_40F83E0 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&loop);
-    sub_B16FFC(&StringLiteral_1, v5);
-    sub_B16FFC(&StringLiteral_22593, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
+    sub_B16FFC(&StringLiteral_22593/*"time_status_icon_loop"*/, v6);
     byte_40F83E0 = 1;
   }
   dayCountTween = (UISprite_o *)this->fields.dayCountTween;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(dayCountTween, (System_String_o *)StringLiteral_22593, 0LL);
+  AtlasManager__SetEventUI(dayCountTween, (System_String_o *)StringLiteral_22593/*"time_status_icon_loop"*/, 0LL);
   v8 = (UnityEngine_Component_o *)this->fields.dayCountTween;
   if ( !v8 )
     goto LABEL_14;
@@ -414,7 +414,7 @@ LABEL_14:
   v13 = (UILabel_o *)this->fields.loopTitleSprite;
   if ( !v13 )
     goto LABEL_14;
-  UILabel__set_text(v13, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -443,10 +443,10 @@ void __fastcall TitleInfoEventTimeStatus__SetRestDay(
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&restDay);
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_22590, v7);
-    sub_B16FFC(&StringLiteral_22591, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
-    sub_B16FFC(&StringLiteral_13319, v10);
+    sub_B16FFC(&StringLiteral_22590/*"time_status_fes01"*/, v7);
+    sub_B16FFC(&StringLiteral_22591/*"time_status_fes02"*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
+    sub_B16FFC(&StringLiteral_13319/*"TIME_REST2_DAYS"*/, v10);
     byte_40F83E1 = 1;
   }
   restDayCountLabel = this->fields.restDayCountLabel;
@@ -457,14 +457,14 @@ void __fastcall TitleInfoEventTimeStatus__SetRestDay(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI((UISprite_o *)restDayCountLabel, (System_String_o *)StringLiteral_22590, 0LL);
+    AtlasManager__SetEventUI((UISprite_o *)restDayCountLabel, (System_String_o *)StringLiteral_22590/*"time_status_fes01"*/, 0LL);
     loopCountLabel = this->fields.loopCountLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_13319, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_13319/*"TIME_REST2_DAYS"*/, 0LL);
     v17 = restDay;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
     v15 = System_String__Format(v13, v14, 0LL);
@@ -481,11 +481,11 @@ LABEL_17:
   {
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   }
-  AtlasManager__SetEventUI((UISprite_o *)restDayCountLabel, (System_String_o *)StringLiteral_22591, 0LL);
+  AtlasManager__SetEventUI((UISprite_o *)restDayCountLabel, (System_String_o *)StringLiteral_22591/*"time_status_fes02"*/, 0LL);
   v16 = this->fields.loopCountLabel;
   if ( !v16 )
     goto LABEL_17;
-  UILabel__set_text(v16, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v16, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -619,13 +619,13 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v7);
     sub_B16FFC(&TimeStatusRecord_TypeInfo, v8);
     sub_B16FFC(&TitleInfoEventTimeStatus_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_22601, v10);
-    sub_B16FFC(&StringLiteral_22590, v11);
-    sub_B16FFC(&StringLiteral_22591, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
-    sub_B16FFC(&StringLiteral_13319, v14);
-    sub_B16FFC(&StringLiteral_22593, v15);
-    this = (TitleInfoEventTimeStatus_o *)sub_B16FFC(&StringLiteral_951, v16);
+    sub_B16FFC(&StringLiteral_22601/*"time_status_top"*/, v10);
+    sub_B16FFC(&StringLiteral_22590/*"time_status_fes01"*/, v11);
+    sub_B16FFC(&StringLiteral_22591/*"time_status_fes02"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
+    sub_B16FFC(&StringLiteral_13319/*"TIME_REST2_DAYS"*/, v14);
+    sub_B16FFC(&StringLiteral_22593/*"time_status_icon_loop"*/, v15);
+    this = (TitleInfoEventTimeStatus_o *)sub_B16FFC(&StringLiteral_951/*"0"*/, v16);
     byte_40F83DF = 1;
   }
   v73 = 0;
@@ -635,7 +635,7 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
   if ( !v4->fields.restDayTextSprite )
     goto LABEL_99;
   v18 = EventStatusEntity;
-  UILabel__set_text((UILabel_o *)v4->fields.restDayTextSprite, (System_String_o *)StringLiteral_951, 0LL);
+  UILabel__set_text((UILabel_o *)v4->fields.restDayTextSprite, (System_String_o *)StringLiteral_951/*"0"*/, 0LL);
   if ( v18 )
   {
     Day = EventStatusEntity__GetDay(v18, 0LL);
@@ -662,8 +662,8 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
   dayCountLabel = (UISprite_o *)v4->fields.dayCountLabel;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(dayCountLabel, (System_String_o *)StringLiteral_22601, 0LL);
-  v25 = AtlasManager__SetEventUI((UISprite_o *)v4->fields.dayCountTween, (System_String_o *)StringLiteral_22593, 0LL);
+  AtlasManager__SetEventUI(dayCountLabel, (System_String_o *)StringLiteral_22601/*"time_status_top"*/, 0LL);
+  v25 = AtlasManager__SetEventUI((UISprite_o *)v4->fields.dayCountTween, (System_String_o *)StringLiteral_22593/*"time_status_icon_loop"*/, 0LL);
   UserEventEntity = TitleInfoEventTimeStatus__GetUserEventEntity(
                       (TitleInfoEventTimeStatus_o *)v25,
                       eventDetailEntity->fields.eventId,
@@ -702,7 +702,7 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
     v37 = (UILabel_o *)v4->fields.loopTitleSprite;
     if ( !v37 )
       goto LABEL_99;
-    UILabel__set_text(v37, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v37, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     v34 = 0;
   }
   HIDWORD(v4[1].klass) = v34;
@@ -714,11 +714,11 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI(restDayCountLabel, (System_String_o *)StringLiteral_22591, 0LL);
+    AtlasManager__SetEventUI(restDayCountLabel, (System_String_o *)StringLiteral_22591/*"time_status_fes02"*/, 0LL);
     loopCountLabel = v4->fields.loopCountLabel;
     if ( !loopCountLabel )
       goto LABEL_99;
-    v43 = (System_String_o *)StringLiteral_1;
+    v43 = (System_String_o *)StringLiteral_1/*""*/;
   }
   else
   {
@@ -727,14 +727,14 @@ void __fastcall TitleInfoEventTimeStatus__Setup(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI(restDayCountLabel, (System_String_o *)StringLiteral_22590, 0LL);
+    AtlasManager__SetEventUI(restDayCountLabel, (System_String_o *)StringLiteral_22590/*"time_status_fes01"*/, 0LL);
     v39 = v4->fields.loopCountLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_13319, 0LL);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_13319/*"TIME_REST2_DAYS"*/, 0LL);
     v72 = v23;
     v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v72);
     v42 = System_String__Format(v40, v41, 0LL);

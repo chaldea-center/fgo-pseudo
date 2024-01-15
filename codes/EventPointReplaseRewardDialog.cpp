@@ -139,7 +139,7 @@ void __fastcall EventPointReplaseRewardDialog__Init(EventPointReplaseRewardDialo
   if ( (byte_40FAC5C & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FAC5C = 1;
   }
   if ( !this->fields.refuseInit )
@@ -147,11 +147,11 @@ void __fastcall EventPointReplaseRewardDialog__Init(EventPointReplaseRewardDialo
     titleLabel = this->fields.titleLabel;
     if ( titleLabel )
     {
-      UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       messageLabel = this->fields.messageLabel;
       if ( messageLabel )
       {
-        UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         v6 = (UnityEngine_Object_o *)this->fields.titleLabel;
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -163,7 +163,7 @@ void __fastcall EventPointReplaseRewardDialog__Init(EventPointReplaseRewardDialo
           v7 = this->fields.titleLabel;
           if ( !v7 )
             goto LABEL_26;
-          UILabel__set_text(v7, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         }
         v8 = (UnityEngine_Object_o *)this->fields.messageLabel;
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -176,7 +176,7 @@ void __fastcall EventPointReplaseRewardDialog__Init(EventPointReplaseRewardDialo
           v9 = this->fields.messageLabel;
           if ( !v9 )
             goto LABEL_26;
-          UILabel__set_text(v9, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(v9, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         }
         okBtnLabel = (UnityEngine_Object_o *)this->fields.okBtnLabel;
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -189,7 +189,7 @@ void __fastcall EventPointReplaseRewardDialog__Init(EventPointReplaseRewardDialo
           v11 = this->fields.okBtnLabel;
           if ( !v11 )
             goto LABEL_26;
-          UILabel__set_text(v11, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(v11, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         }
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
         if ( gameObject )
@@ -305,8 +305,8 @@ void __fastcall EventPointReplaseRewardDialog__Open(
     sub_B16FFC(&EventPointReplaseRewardDialog_TypeInfo, v19);
     sub_B16FFC(&LocalizationManager_TypeInfo, v20);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_3252, v22);
-    sub_B16FFC(&StringLiteral_1, v23);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v22);
+    sub_B16FFC(&StringLiteral_1/*""*/, v23);
     byte_40FAC5D = 1;
   }
   TargetPanel = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
@@ -352,7 +352,7 @@ void __fastcall EventPointReplaseRewardDialog__Open(
     v33 = this->fields.titleLabel;
     if ( !v33 )
       goto LABEL_71;
-    v34 = title ? title : (System_String_o *)StringLiteral_1;
+    v34 = title ? title : (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v33, v34, 0LL);
     v35 = (UnityEngine_Component_o *)this->fields.titleLabel;
     if ( !v35 )
@@ -409,7 +409,7 @@ void __fastcall EventPointReplaseRewardDialog__Open(
     v48 = this->fields.messageLabel;
     if ( !v48 )
       goto LABEL_71;
-    v49 = message ? message : (System_String_o *)StringLiteral_1;
+    v49 = message ? message : (System_String_o *)StringLiteral_1/*""*/;
     WrapControlText__textAdjust(v48, v49, v48->fields.mFontSize, 0, 0, 0LL);
     v50 = (UnityEngine_Component_o *)this->fields.messageLabel;
     if ( !v50 )
@@ -434,7 +434,7 @@ void __fastcall EventPointReplaseRewardDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v54 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+    v54 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( !v53 )
       goto LABEL_71;
     UILabel__set_text(v53, v54, 0LL);

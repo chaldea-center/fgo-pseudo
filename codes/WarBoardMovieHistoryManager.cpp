@@ -39,17 +39,17 @@ void __fastcall WarBoardMovieHistoryManager___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo___ctor__, v1);
     sub_B16FFC(&System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__TypeInfo, v8);
     sub_B16FFC(&WarBoardMovieHistoryManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_6605, v10);
-    sub_B16FFC(&StringLiteral_15361, v11);
+    sub_B16FFC(&StringLiteral_6605/*"Fgo_20220601"*/, v10);
+    sub_B16FFC(&StringLiteral_15361/*"WarBoardStartMovie"*/, v11);
     byte_40F8583 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarBoardMovieHistoryManager_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_6605;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6605;
+  v13 = (System_Int32_array **)StringLiteral_6605/*"Fgo_20220601"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6605/*"Fgo_20220601"*/;
   sub_B16F98(static_fields, v13, v2, v3, v4, v5, v6, v7);
   v14 = WarBoardMovieHistoryManager_TypeInfo->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_15361;
-  v14->SAVE_KEY_START_MOVIE = (struct System_String_o *)StringLiteral_15361;
+  v15 = (System_Int32_array **)StringLiteral_15361/*"WarBoardStartMovie"*/;
+  v14->SAVE_KEY_START_MOVIE = (struct System_String_o *)StringLiteral_15361/*"WarBoardStartMovie"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v14->SAVE_KEY_START_MOVIE, v15, v16, v17, v18, v19, v20, v21);
   WarBoardMovieHistoryManager_TypeInfo->static_fields->isModfiy = 0;
   v26 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -305,7 +305,7 @@ System_String_o *__fastcall WarBoardMovieHistoryManager__GetFilePath(const Metho
   {
     sub_B16FFC(&AndroidUtil_TypeInfo, v1);
     sub_B16FFC(&DatFileName_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_871, v3);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v3);
     byte_40F857B = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
@@ -314,7 +314,7 @@ System_String_o *__fastcall WarBoardMovieHistoryManager__GetFilePath(const Metho
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(39, 0LL);
-  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871, FileName, 0LL);
+  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871/*"/"*/, FileName, 0LL);
 }
 
 

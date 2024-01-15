@@ -51,17 +51,17 @@ void __fastcall PartyServantListViewManager___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&ListViewSort_TypeInfo, v1);
     sub_B16FFC(&PartyServantListViewManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_15359, v9);
-    sub_B16FFC(&StringLiteral_10562, v10);
+    sub_B16FFC(&StringLiteral_15359/*"WarBoardPartyServant"*/, v9);
+    sub_B16FFC(&StringLiteral_10562/*"PartyServant"*/, v10);
     byte_40FDE5C = 1;
   }
   static_fields = (BattleServantConfConponent_o *)PartyServantListViewManager_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_10562;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_10562;
+  v12 = (System_Int32_array **)StringLiteral_10562/*"PartyServant"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_10562/*"PartyServant"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = PartyServantListViewManager_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_15359;
-  v13->WAR_SORT_SAVE_KEY = (struct System_String_o *)StringLiteral_15359;
+  v14 = (System_Int32_array **)StringLiteral_15359/*"WarBoardPartyServant"*/;
+  v13->WAR_SORT_SAVE_KEY = (struct System_String_o *)StringLiteral_15359/*"WarBoardPartyServant"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->WAR_SORT_SAVE_KEY, v14, v15, v16, v17, v18, v19, v20);
   SORT_SAVE_KEY = PartyServantListViewManager_TypeInfo->static_fields->SORT_SAVE_KEY;
   v26 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v22, v23, v24, v25);
@@ -344,11 +344,11 @@ void __fastcall PartyServantListViewManager__CreateList(
     sub_B16FFC(&PartyServantListViewItem_TypeInfo, v30);
     sub_B16FFC(&PartyServantListViewManager_TypeInfo, v31);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v32);
-    sub_B16FFC(&StringLiteral_10293, v33);
-    sub_B16FFC(&StringLiteral_10291, v34);
-    sub_B16FFC(&StringLiteral_10292, v35);
-    sub_B16FFC(&StringLiteral_11842, v36);
-    sub_B16FFC(&StringLiteral_10290, v37);
+    sub_B16FFC(&StringLiteral_10293/*"PARTY_ORGANIZATION_COST_SPLIT"*/, v33);
+    sub_B16FFC(&StringLiteral_10291/*"PARTY_ORGANIZATION_COST_OVER_COLOR"*/, v34);
+    sub_B16FFC(&StringLiteral_10292/*"PARTY_ORGANIZATION_COST_RESTRICTION_COLOR"*/, v35);
+    sub_B16FFC(&StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, v36);
+    sub_B16FFC(&StringLiteral_10290/*"PARTY_ORGANIZATION_COST_COLOR"*/, v37);
     byte_40FDE44 = 1;
   }
   v161 = 0;
@@ -739,7 +739,7 @@ LABEL_97:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v128 = LocalizationManager__Get((System_String_o *)StringLiteral_10292, 0LL);
+    v128 = LocalizationManager__Get((System_String_o *)StringLiteral_10292/*"PARTY_ORGANIZATION_COST_RESTRICTION_COLOR"*/, 0LL);
     v161 = v127;
   }
   else
@@ -749,7 +749,7 @@ LABEL_97:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v128 = LocalizationManager__Get((System_String_o *)StringLiteral_10290, 0LL);
+    v128 = LocalizationManager__Get((System_String_o *)StringLiteral_10290/*"PARTY_ORGANIZATION_COST_COLOR"*/, 0LL);
   }
   maxCostLabel = this->fields.maxCostLabel;
   v130 = System_Int32__ToString((int32_t)&v161, 0LL);
@@ -763,7 +763,7 @@ LABEL_97:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v133 = LocalizationManager__Get((System_String_o *)StringLiteral_10293, 0LL);
+  v133 = LocalizationManager__Get((System_String_o *)StringLiteral_10293/*"PARTY_ORGANIZATION_COST_SPLIT"*/, 0LL);
   v134 = System_String__Concat_43743732(v128, v133, 0LL);
   if ( !splitCostLabel )
     goto LABEL_142;
@@ -782,7 +782,7 @@ LABEL_97:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v136 = LocalizationManager__Get((System_String_o *)StringLiteral_10291, 0LL);
+    v136 = LocalizationManager__Get((System_String_o *)StringLiteral_10291/*"PARTY_ORGANIZATION_COST_OVER_COLOR"*/, 0LL);
     cost = partyItem->fields.cost;
     v137 = System_Int32__ToString((int32_t)&cost, 0LL);
     v138 = v136;
@@ -848,7 +848,7 @@ LABEL_134:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v150 = LocalizationManager__Get((System_String_o *)StringLiteral_11842, 0LL);
+  v150 = LocalizationManager__Get((System_String_o *)StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_142;
   UILabel__set_text(emptyMessageLabel, v150, 0LL);
@@ -960,11 +960,11 @@ void __fastcall PartyServantListViewManager__CreateList_32564212(
     sub_B16FFC(&PartyServantListViewItem_TypeInfo, v15);
     sub_B16FFC(&PartyServantListViewManager_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_10293, v18);
-    sub_B16FFC(&StringLiteral_10291, v19);
-    sub_B16FFC(&StringLiteral_10292, v20);
-    sub_B16FFC(&StringLiteral_11842, v21);
-    sub_B16FFC(&StringLiteral_10290, v22);
+    sub_B16FFC(&StringLiteral_10293/*"PARTY_ORGANIZATION_COST_SPLIT"*/, v18);
+    sub_B16FFC(&StringLiteral_10291/*"PARTY_ORGANIZATION_COST_OVER_COLOR"*/, v19);
+    sub_B16FFC(&StringLiteral_10292/*"PARTY_ORGANIZATION_COST_RESTRICTION_COLOR"*/, v20);
+    sub_B16FFC(&StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, v21);
+    sub_B16FFC(&StringLiteral_10290/*"PARTY_ORGANIZATION_COST_COLOR"*/, v22);
     byte_40FDE45 = 1;
   }
   v95 = 0LL;
@@ -1125,7 +1125,7 @@ LABEL_34:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v62 = LocalizationManager__Get((System_String_o *)StringLiteral_10292, 0LL);
+    v62 = LocalizationManager__Get((System_String_o *)StringLiteral_10292/*"PARTY_ORGANIZATION_COST_RESTRICTION_COLOR"*/, 0LL);
     HIDWORD(v95) = v61;
   }
   else
@@ -1135,7 +1135,7 @@ LABEL_34:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v62 = LocalizationManager__Get((System_String_o *)StringLiteral_10290, 0LL);
+    v62 = LocalizationManager__Get((System_String_o *)StringLiteral_10290/*"PARTY_ORGANIZATION_COST_COLOR"*/, 0LL);
   }
   maxCostLabel = this->fields.maxCostLabel;
   v64 = System_Int32__ToString((int32_t)&v95 + 4, 0LL);
@@ -1149,7 +1149,7 @@ LABEL_34:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v67 = LocalizationManager__Get((System_String_o *)StringLiteral_10293, 0LL);
+  v67 = LocalizationManager__Get((System_String_o *)StringLiteral_10293/*"PARTY_ORGANIZATION_COST_SPLIT"*/, 0LL);
   v68 = System_String__Concat_43743732(v62, v67, 0LL);
   if ( !splitCostLabel )
     goto LABEL_78;
@@ -1163,7 +1163,7 @@ LABEL_34:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v71 = LocalizationManager__Get((System_String_o *)StringLiteral_10291, 0LL);
+    v71 = LocalizationManager__Get((System_String_o *)StringLiteral_10291/*"PARTY_ORGANIZATION_COST_OVER_COLOR"*/, 0LL);
     cost = partyItem->fields.cost;
     v62 = v71;
   }
@@ -1237,7 +1237,7 @@ LABEL_70:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v88 = LocalizationManager__Get((System_String_o *)StringLiteral_11842, 0LL);
+  v88 = LocalizationManager__Get((System_String_o *)StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_78;
   UILabel__set_text(emptyMessageLabel, v88, 0LL);
@@ -2703,7 +2703,7 @@ void __fastcall PartyServantListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyServantListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyServantListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_PartyServantListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FDE4C = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -2718,7 +2718,7 @@ void __fastcall PartyServantListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -2788,7 +2788,7 @@ void __fastcall PartyServantListViewManager__RequestListObject_32569448(
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyServantListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyServantListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_PartyServantListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FDE4D = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -2803,7 +2803,7 @@ void __fastcall PartyServantListViewManager__RequestListObject_32569448(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2851,8 +2851,8 @@ void __fastcall PartyServantListViewManager__SetFilterButtonImage(
 
   if ( (byte_40FDE53 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16927, method);
-    sub_B16FFC(&StringLiteral_16926, v3);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, method);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v3);
     byte_40FDE53 = 1;
   }
   sort = this->fields.sort;
@@ -2863,9 +2863,9 @@ void __fastcall PartyServantListViewManager__SetFilterButtonImage(
   {
     sub_B170D4();
   }
-  v7 = (System_String_o **)&StringLiteral_16926;
+  v7 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
   if ( !v6 )
-    v7 = (System_String_o **)&StringLiteral_16927;
+    v7 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
   UISprite__set_spriteName(filterSprite, *v7, 0LL);
 }
 
@@ -2949,7 +2949,7 @@ void __fastcall PartyServantListViewManager__SetMode_32568528(
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyServantListViewObject__get_Item__, v6);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
     sub_B16FFC(&Method_PartyServantListViewManager_OnMoveEnd__, v8);
-    sub_B16FFC(&StringLiteral_10004, v9);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v9);
     byte_40FDE4B = 1;
   }
   this->fields.initMode = mode;
@@ -2996,7 +2996,7 @@ LABEL_43:
         this->fields.callbackCount = 1;
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_10004,
+          (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
           0.0,
           0LL);
         return;
@@ -3231,12 +3231,12 @@ void __fastcall PartyServantListViewManager__SetSortButtonImage(
     sub_B16FFC(&System_Collections_Generic_List_int____TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_16955, v10);
-    sub_B16FFC(&StringLiteral_17038, v11);
-    sub_B16FFC(&StringLiteral_16995, v12);
-    sub_B16FFC(&StringLiteral_16985, v13);
-    sub_B16FFC(&StringLiteral_17002, v14);
-    sub_B16FFC(&StringLiteral_16952, v15);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v10);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v11);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v12);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v13);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v14);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v15);
     byte_40FDE57 = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -3277,7 +3277,7 @@ void __fastcall PartyServantListViewManager__SetSortButtonImage(
       sortExplanationSprite = this->fields.sortExplanationSprite;
       if ( !sortExplanationSprite )
         goto LABEL_52;
-      v25 = (System_String_o **)(v22->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+      v25 = (System_String_o **)(v22->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
       UISprite__set_spriteName(sortExplanationSprite, *v25, 0LL);
       v26 = this->fields.sort;
       if ( !v26 )
@@ -3286,15 +3286,15 @@ void __fastcall PartyServantListViewManager__SetSortButtonImage(
       if ( !v27 )
         goto LABEL_52;
       isAscendingOrder = v26->fields.isAscendingOrder;
-      v29 = (System_String_o **)&StringLiteral_16952;
-      v30 = (System_String_o **)&StringLiteral_16955;
+      v29 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+      v30 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
     }
     else
     {
       v31 = this->fields.sortExplanationSprite;
       if ( !v31 )
         goto LABEL_52;
-      v32 = (System_String_o **)(v22->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+      v32 = (System_String_o **)(v22->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
       UISprite__set_spriteName(v31, *v32, 0LL);
       v33 = this->fields.sort;
       if ( !v33 )
@@ -3303,8 +3303,8 @@ void __fastcall PartyServantListViewManager__SetSortButtonImage(
       if ( !v27 )
         goto LABEL_52;
       isAscendingOrder = v33->fields.isAscendingOrder;
-      v29 = (System_String_o **)&StringLiteral_16955;
-      v30 = (System_String_o **)&StringLiteral_16952;
+      v29 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+      v30 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
     }
     if ( isAscendingOrder )
       v34 = v29;

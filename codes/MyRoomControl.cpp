@@ -15,12 +15,12 @@ void __fastcall MyRoomControl___cctor(const MethodInfo *method)
   if ( (byte_40FC0C5 & 1) == 0 )
   {
     sub_B16FFC(&MyRoomControl_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_2544, v8);
+    sub_B16FFC(&StringLiteral_2544/*"BGM_MYROOM_1"*/, v8);
     byte_40FC0C5 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)MyRoomControl_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_2544;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2544;
+  v10 = (System_Int32_array **)StringLiteral_2544/*"BGM_MYROOM_1"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2544/*"BGM_MYROOM_1"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   v11 = MyRoomControl_TypeInfo;
   MyRoomControl_TypeInfo->static_fields->BUTTON_VOICE_PLAY = 1;
@@ -486,7 +486,7 @@ void __fastcall MyRoomControl__ChangeDisp(MyRoomControl_o *this, bool isSePlay, 
     sub_B16FFC(&Method_MyRoomControl__ChangeDisp_b__291_1__, v7);
     sub_B16FFC(&MyRoomControl_TypeInfo, v8);
     sub_B16FFC(&SoundManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_11353, v10);
+    sub_B16FFC(&StringLiteral_11353/*"ReleaseTouch"*/, v10);
     byte_40FC093 = 1;
   }
   moveTarget = 0LL;
@@ -610,7 +610,7 @@ LABEL_53:
             v79.fields.x = v36;
             v79.fields.y = v26;
             v79.fields.z = v31;
-            MyRoomControl__moveControl(this, this->fields.svtObj, v79, (System_String_o *)StringLiteral_11353, v38);
+            MyRoomControl__moveControl(this, this->fields.svtObj, v79, (System_String_o *)StringLiteral_11353/*"ReleaseTouch"*/, v38);
             v39 = 1;
             break;
           case 1:
@@ -646,7 +646,7 @@ LABEL_53:
             v84.fields.y = this->fields.moveBtnObjInitPos.fields.y;
             v84.fields.z = this->fields.moveBtnObjInitPos.fields.z;
             v84.fields.x = MyRoomControl_TypeInfo->static_fields->BUTTON_OUT_X;
-            MyRoomControl__moveControl(this, this->fields.moveBtnObj, v84, (System_String_o *)StringLiteral_11353, v53);
+            MyRoomControl__moveControl(this, this->fields.moveBtnObj, v84, (System_String_o *)StringLiteral_11353/*"ReleaseTouch"*/, v53);
             v85.fields.y = this->fields.helpBtnInitPos.fields.y;
             v85.fields.z = this->fields.helpBtnInitPos.fields.z;
             v85.fields.x = MyRoomControl_TypeInfo->static_fields->BUTTON_OUT_X;
@@ -904,8 +904,8 @@ void __fastcall MyRoomControl__CheckSceneJumpInfo(MyRoomControl_o *this, const M
   if ( (byte_40FC09F & 1) == 0 )
   {
     sub_B16FFC(&MyRoomRootComponent_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3056, v3);
-    sub_B16FFC(&StringLiteral_6864, v4);
+    sub_B16FFC(&StringLiteral_3056/*"CLICK_MATERIAL"*/, v3);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v4);
     byte_40FC09F = 1;
   }
   sceneJumpInfo = this->fields.sceneJumpInfo;
@@ -914,7 +914,7 @@ void __fastcall MyRoomControl__CheckSceneJumpInfo(MyRoomControl_o *this, const M
     myRoomFsm = this->fields.myRoomFsm;
     if ( myRoomFsm )
     {
-      v11 = (System_String_o *)StringLiteral_6864;
+      v11 = (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/;
       goto LABEL_14;
     }
 LABEL_15:
@@ -932,9 +932,9 @@ LABEL_15:
   if ( !this->fields.myRoomFsm )
     goto LABEL_15;
   if ( v8 )
-    v9 = &StringLiteral_3056;
+    v9 = &StringLiteral_3056/*"CLICK_MATERIAL"*/;
   else
-    v9 = &StringLiteral_6864;
+    v9 = &StringLiteral_6864/*"GO_NEXT"*/;
   v11 = (System_String_o *)*v9;
   myRoomFsm = this->fields.myRoomFsm;
 LABEL_14:
@@ -999,7 +999,7 @@ void __fastcall MyRoomControl__CloseMutlipleServant(MyRoomControl_o *this, const
 
   if ( (byte_40FC0AA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6662, method);
+    sub_B16FFC(&StringLiteral_6662/*"FinishedCloseMultiServant"*/, method);
     byte_40FC0AA = 1;
   }
   mBlocker = this->fields.mBlocker;
@@ -1050,7 +1050,7 @@ LABEL_22:
             v24 = this->fields.multipleStandFigureBacks;
             if ( v24 )
             {
-              v25 = v12 == v24->max_length - 1 ? (System_String_o *)StringLiteral_6662 : 0LL;
+              v25 = v12 == v24->max_length - 1 ? (System_String_o *)StringLiteral_6662/*"FinishedCloseMultiServant"*/ : 0LL;
               v26.fields.y = v21;
               v26.fields.x = flt_3137B90[(_DWORD)v10 == 4] + y;
               v26.fields.z = x + 0.0;
@@ -1107,7 +1107,7 @@ void __fastcall MyRoomControl__ClosePhotoCampaignServant(MyRoomControl_o *this, 
 
   if ( (byte_40FC0BE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6663, method);
+    sub_B16FFC(&StringLiteral_6663/*"FinishedClosePhotoCampaignServant"*/, method);
     byte_40FC0BE = 1;
   }
   MyRoomControl__SetBackButtonIgnore(this, 1, v2);
@@ -1121,7 +1121,7 @@ void __fastcall MyRoomControl__ClosePhotoCampaignServant(MyRoomControl_o *this, 
   v10.fields.x = v6;
   v10.fields.y = v5;
   v10.fields.z = v7;
-  MyRoomControl__moveControl(this, gameObject, v10, (System_String_o *)StringLiteral_6663, v9);
+  MyRoomControl__moveControl(this, gameObject, v10, (System_String_o *)StringLiteral_6663/*"FinishedClosePhotoCampaignServant"*/, v9);
 }
 
 
@@ -1189,11 +1189,11 @@ CRIMoviePlayer_o *__fastcall MyRoomControl__CreateCriMoviePlayerObject(MyRoomCon
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v2);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_GameObject___, v4);
-    sub_B16FFC(&StringLiteral_3423, v5);
+    sub_B16FFC(&StringLiteral_3423/*"CRIMovie/CRIMoviePlayerWithPanel"*/, v5);
     byte_40FC09C = 1;
   }
   UIAtlas = (UnityEngine_UI_Dropdown_DropdownItem_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                                        (System_String_o *)StringLiteral_3423,
+                                                        (System_String_o *)StringLiteral_3423/*"CRIMovie/CRIMoviePlayerWithPanel"*/,
                                                         (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_GameObject___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1478,7 +1478,7 @@ void __fastcall MyRoomControl__EndLoad(MyRoomControl_o *this, const MethodInfo *
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
     sub_B16FFC(&Method_MyRoomControl___c__EndLoad_b__201_0__, v5);
     sub_B16FFC(&MyRoomControl___c_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_8378, v7);
+    sub_B16FFC(&StringLiteral_8378/*"LOAD_END"*/, v7);
     byte_40FC06C = 1;
   }
   svtCtr = this->fields.svtCtr;
@@ -1548,7 +1548,7 @@ LABEL_21:
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     goto LABEL_23;
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8378, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8378/*"LOAD_END"*/, 0LL);
 }
 
 
@@ -1939,8 +1939,8 @@ void __fastcall MyRoomControl__FormChangeCheck(MyRoomControl_o *this, const Meth
 
   if ( (byte_40FC078 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9295, method);
-    sub_B16FFC(&StringLiteral_2941, v3);
+    sub_B16FFC(&StringLiteral_9295/*"NORMAL_FORM"*/, method);
+    sub_B16FFC(&StringLiteral_2941/*"CHANGE_FORM"*/, v3);
     byte_40FC078 = 1;
   }
   svtCtr = this->fields.svtCtr;
@@ -1959,7 +1959,7 @@ LABEL_12:
     myRoomFsm = this->fields.myRoomFsm;
     if ( myRoomFsm )
     {
-      v12 = (System_String_o *)StringLiteral_9295;
+      v12 = (System_String_o *)StringLiteral_9295/*"NORMAL_FORM"*/;
       goto LABEL_14;
     }
 LABEL_17:
@@ -1973,9 +1973,9 @@ LABEL_17:
   if ( !this->fields.myRoomFsm )
     goto LABEL_17;
   if ( v7->fields.form == FormId )
-    v10 = &StringLiteral_9295;
+    v10 = &StringLiteral_9295/*"NORMAL_FORM"*/;
   else
-    v10 = &StringLiteral_2941;
+    v10 = &StringLiteral_2941/*"CHANGE_FORM"*/;
   v12 = (System_String_o *)*v10;
   myRoomFsm = this->fields.myRoomFsm;
 LABEL_14:
@@ -2246,21 +2246,21 @@ void __fastcall MyRoomControl__GoToTitle(MyRoomControl_o *this, const MethodInfo
     sub_B16FFC(&Method_MyRoomControl__GoToTitle_b__281_0__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_8860, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_8860/*"MYROOM_TITLE_CONFIRM"*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FC08D = 1;
   }
   MyRoomControl__stopSvtVoice(this, method);
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(0, 0LL);
-  v10 = (System_String_o *)StringLiteral_1;
+  v10 = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8860, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_8860/*"MYROOM_TITLE_CONFIRM"*/, 0LL);
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v17 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
@@ -2469,21 +2469,21 @@ bool __fastcall MyRoomControl__IsScrollviewInShowPosition(MyRoomControl_o *this,
 
   if ( (byte_40FC074 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15336, method);
-    sub_B16FFC(&StringLiteral_7117, v3);
+    sub_B16FFC(&StringLiteral_15336/*"Wait_Action"*/, method);
+    sub_B16FFC(&StringLiteral_7117/*"Help"*/, v3);
     byte_40FC074 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     goto LABEL_16;
   ActiveStateName = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0LL);
-  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15336, 0LL) )
+  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15336/*"Wait_Action"*/, 0LL) )
   {
     v6 = this->fields.myRoomFsm;
     if ( !v6 )
       goto LABEL_16;
     v7 = PlayMakerFSM__get_ActiveStateName(v6, 0LL);
-    if ( System_String__op_Inequality(v7, (System_String_o *)StringLiteral_7117, 0LL) )
+    if ( System_String__op_Inequality(v7, (System_String_o *)StringLiteral_7117/*"Help"*/, 0LL) )
       return 0;
   }
   myRoomListCtr = (UnityEngine_Component_o *)this->fields.myRoomListCtr;
@@ -2585,7 +2585,7 @@ void __fastcall MyRoomControl__LoadPhotoCampaignAssets(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
     sub_B16FFC(&Method_MyRoomControl___c__DisplayClass345_0__LoadPhotoCampaignAssets_b__0__, v8);
     sub_B16FFC(&MyRoomControl___c__DisplayClass345_0_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_6184, v10);
+    sub_B16FFC(&StringLiteral_6184/*"EventUI/Prefabs/"*/, v10);
     byte_40FC0B3 = 1;
   }
   v11 = sub_B170CC(MyRoomControl___c__DisplayClass345_0_TypeInfo, *(_QWORD *)&eventId, method, v3, v4);
@@ -2596,7 +2596,7 @@ void __fastcall MyRoomControl__LoadPhotoCampaignAssets(
   sub_B16F98((BattleServantConfConponent_o *)(v11 + 16), (System_Int32_array **)this, v12, v13, v14, v15, v16, v17);
   *(_DWORD *)(v11 + 24) = eventId;
   v18 = System_Int32__ToString((int)v11 + 24, 0LL);
-  v19 = System_String__Concat_43743732((System_String_o *)StringLiteral_6184, v18, 0LL);
+  v19 = System_String__Concat_43743732((System_String_o *)StringLiteral_6184/*"EventUI/Prefabs/"*/, v18, 0LL);
   v24 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v20, v21, v22, v23);
   AssetLoader_LoadEndDataHandler___ctor(
     v24,
@@ -2645,13 +2645,13 @@ void __fastcall MyRoomControl__LoadScriptFileListAssetData(MyRoomControl_o *this
 
   if ( (byte_40FC060 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6864, method);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, method);
     byte_40FC060 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -2692,7 +2692,7 @@ void __fastcall MyRoomControl__LoadServantFormEnd(MyRoomControl_o *this, const M
   if ( (byte_40FC07D & 1) == 0 )
   {
     sub_B16FFC(&MyRoomControl_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_8378, v3);
+    sub_B16FFC(&StringLiteral_8378/*"LOAD_END"*/, v3);
     byte_40FC07D = 1;
   }
   playBtnImg = (UIWidget_o *)this->fields.playBtnImg;
@@ -2713,7 +2713,7 @@ void __fastcall MyRoomControl__LoadServantFormEnd(MyRoomControl_o *this, const M
   if ( !myRoomFsm )
 LABEL_9:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8378, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8378/*"LOAD_END"*/, 0LL);
 }
 
 
@@ -2762,14 +2762,14 @@ void __fastcall MyRoomControl__MyRoomlUIAnimationStart(
   x = movePos.fields.x;
   if ( (byte_40FC095 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9234, target);
+    sub_B16FFC(&StringLiteral_9234/*"MyRoomUIAnimationEnd"*/, target);
     byte_40FC095 = 1;
   }
   this->fields.isMyRoomUIAnimation = 1;
   v10.fields.y = y;
   v10.fields.z = z;
   v10.fields.x = x;
-  MyRoomControl__moveControl(this, target, v10, (System_String_o *)StringLiteral_9234, v4);
+  MyRoomControl__moveControl(this, target, v10, (System_String_o *)StringLiteral_9234/*"MyRoomUIAnimationEnd"*/, v4);
 }
 
 
@@ -2838,21 +2838,21 @@ void __fastcall MyRoomControl__OnClickBack(MyRoomControl_o *this, const MethodIn
     sub_B16FFC(&NetworkManager_TypeInfo, v4);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_3092, v7);
-    sub_B16FFC(&StringLiteral_3091, v8);
-    sub_B16FFC(&StringLiteral_3103, v9);
-    sub_B16FFC(&StringLiteral_3034, v10);
-    sub_B16FFC(&StringLiteral_3095, v11);
-    sub_B16FFC(&StringLiteral_3089, v12);
-    sub_B16FFC(&StringLiteral_3090, v13);
-    sub_B16FFC(&StringLiteral_3093, v14);
-    sub_B16FFC(&StringLiteral_3086, v15);
-    sub_B16FFC(&StringLiteral_3081, v16);
-    sub_B16FFC(&StringLiteral_13004, v17);
-    sub_B16FFC(&StringLiteral_3098, v18);
-    sub_B16FFC(&StringLiteral_3083, v19);
-    sub_B16FFC(&StringLiteral_3099, v20);
-    sub_B16FFC(&StringLiteral_3088, v21);
+    sub_B16FFC(&StringLiteral_3092/*"CLOSE_MATERIAL_COLLECTION"*/, v7);
+    sub_B16FFC(&StringLiteral_3091/*"CLOSE_MATERIAL"*/, v8);
+    sub_B16FFC(&StringLiteral_3103/*"CLOSE_USER_SERVANT_COIN"*/, v9);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, v10);
+    sub_B16FFC(&StringLiteral_3095/*"CLOSE_NOTICE"*/, v11);
+    sub_B16FFC(&StringLiteral_3089/*"CLOSE_GAMEOPTION"*/, v12);
+    sub_B16FFC(&StringLiteral_3090/*"CLOSE_ITEMLIST"*/, v13);
+    sub_B16FFC(&StringLiteral_3093/*"CLOSE_MATERIAL_COSTUME"*/, v14);
+    sub_B16FFC(&StringLiteral_3086/*"CLOSE_CONTINUE_DEVICE"*/, v15);
+    sub_B16FFC(&StringLiteral_3081/*"CLOSE_BLACKLIST"*/, v16);
+    sub_B16FFC(&StringLiteral_13004/*"State 5"*/, v17);
+    sub_B16FFC(&StringLiteral_3098/*"CLOSE_SERIAL_CODE"*/, v18);
+    sub_B16FFC(&StringLiteral_3083/*"CLOSE_CHANGE_PROFILE"*/, v19);
+    sub_B16FFC(&StringLiteral_3099/*"CLOSE_SOUND_PLAYER"*/, v20);
+    sub_B16FFC(&StringLiteral_3088/*"CLOSE_FAVORITE_CHANGE"*/, v21);
     byte_40FC092 = 1;
   }
   mMaterialEventLogListViewManager = this->fields.mMaterialEventLogListViewManager;
@@ -2938,26 +2938,26 @@ void __fastcall MyRoomControl__OnClickBack(MyRoomControl_o *this, const MethodIn
           return;
         type = this->fields.type;
       }
-      v38 = (MethodInfo *)StringLiteral_3034;
+      v38 = (MethodInfo *)StringLiteral_3034/*"CLICK_BACK"*/;
       v39 = 0;
       switch ( type )
       {
         case 0:
-          v40 = StringLiteral_3034;
-          MyRoomControl__ReleaseAsset(this, (const MethodInfo *)StringLiteral_3034);
+          v40 = StringLiteral_3034/*"CLICK_BACK"*/;
+          MyRoomControl__ReleaseAsset(this, (const MethodInfo *)StringLiteral_3034/*"CLICK_BACK"*/);
           v38 = (MethodInfo *)v40;
           goto LABEL_61;
         case 1:
-          v41 = &StringLiteral_3091;
+          v41 = &StringLiteral_3091/*"CLOSE_MATERIAL"*/;
           goto LABEL_52;
         case 2:
-          v42 = &StringLiteral_3092;
+          v42 = &StringLiteral_3092/*"CLOSE_MATERIAL_COLLECTION"*/;
           goto LABEL_60;
         case 3:
-          v42 = &StringLiteral_3090;
+          v42 = &StringLiteral_3090/*"CLOSE_ITEMLIST"*/;
           goto LABEL_60;
         case 4:
-          v42 = &StringLiteral_3083;
+          v42 = &StringLiteral_3083/*"CLOSE_CHANGE_PROFILE"*/;
           goto LABEL_60;
         case 5:
           optionComp = this->fields.optionComp;
@@ -2968,11 +2968,11 @@ void __fastcall MyRoomControl__OnClickBack(MyRoomControl_o *this, const MethodIn
           {
             v39 = 0;
             if ( optionSceneType_k__BackingField == 1 )
-              v38 = (MethodInfo *)StringLiteral_3081;
+              v38 = (MethodInfo *)StringLiteral_3081/*"CLOSE_BLACKLIST"*/;
           }
           else
           {
-            v42 = &StringLiteral_3089;
+            v42 = &StringLiteral_3089/*"CLOSE_GAMEOPTION"*/;
 LABEL_60:
             v38 = (MethodInfo *)*v42;
 LABEL_61:
@@ -2994,7 +2994,7 @@ LABEL_62:
           if ( myRoomFsm )
           {
             ActiveStateName = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0LL);
-            if ( !System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_13004, 0LL) )
+            if ( !System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_13004/*"State 5"*/, 0LL) )
               return;
             myRoomData = this->fields.myRoomData;
             if ( myRoomData )
@@ -3038,28 +3038,28 @@ LABEL_62:
           }
           break;
         case 6:
-          v41 = &StringLiteral_3095;
+          v41 = &StringLiteral_3095/*"CLOSE_NOTICE"*/;
 LABEL_52:
           v38 = (MethodInfo *)*v41;
           v39 = 1;
           goto LABEL_62;
         case 7:
-          v42 = &StringLiteral_3098;
+          v42 = &StringLiteral_3098/*"CLOSE_SERIAL_CODE"*/;
           goto LABEL_60;
         case 8:
-          v42 = &StringLiteral_3086;
+          v42 = &StringLiteral_3086/*"CLOSE_CONTINUE_DEVICE"*/;
           goto LABEL_60;
         case 9:
-          v42 = &StringLiteral_3088;
+          v42 = &StringLiteral_3088/*"CLOSE_FAVORITE_CHANGE"*/;
           goto LABEL_60;
         case 10:
-          v42 = &StringLiteral_3099;
+          v42 = &StringLiteral_3099/*"CLOSE_SOUND_PLAYER"*/;
           goto LABEL_60;
         case 11:
-          v42 = &StringLiteral_3093;
+          v42 = &StringLiteral_3093/*"CLOSE_MATERIAL_COSTUME"*/;
           goto LABEL_60;
         case 17:
-          v42 = &StringLiteral_3103;
+          v42 = &StringLiteral_3103/*"CLOSE_USER_SERVANT_COIN"*/;
           goto LABEL_60;
         default:
           goto LABEL_62;
@@ -3124,9 +3124,9 @@ void __fastcall MyRoomControl__OnClickChangeLimit(MyRoomControl_o *this, const M
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
     sub_B16FFC(&SoundManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_15336, v11);
-    sub_B16FFC(&StringLiteral_2945, v12);
-    sub_B16FFC(&StringLiteral_7117, v13);
+    sub_B16FFC(&StringLiteral_15336/*"Wait_Action"*/, v11);
+    sub_B16FFC(&StringLiteral_2945/*"CHANGE_LIMIT"*/, v12);
+    sub_B16FFC(&StringLiteral_7117/*"Help"*/, v13);
     byte_40FC073 = 1;
   }
   v14 = MyRoomControl_TypeInfo;
@@ -3142,13 +3142,13 @@ void __fastcall MyRoomControl__OnClickChangeLimit(MyRoomControl_o *this, const M
   if ( !myRoomFsm )
     goto LABEL_50;
   ActiveStateName = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0LL);
-  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15336, 0LL) )
+  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15336/*"Wait_Action"*/, 0LL) )
   {
     v18 = this->fields.myRoomFsm;
     if ( !v18 )
       goto LABEL_50;
     v19 = PlayMakerFSM__get_ActiveStateName(v18, 0LL);
-    if ( System_String__op_Inequality(v19, (System_String_o *)StringLiteral_7117, 0LL) )
+    if ( System_String__op_Inequality(v19, (System_String_o *)StringLiteral_7117/*"Help"*/, 0LL) )
       return;
   }
   if ( !this->fields.isServantMaterial )
@@ -3257,7 +3257,7 @@ LABEL_45:
       v40 = this->fields.myRoomFsm;
       if ( v40 )
       {
-        PlayMakerFSM__SendEvent(v40, (System_String_o *)StringLiteral_2945, 0LL);
+        PlayMakerFSM__SendEvent(v40, (System_String_o *)StringLiteral_2945/*"CHANGE_LIMIT"*/, 0LL);
         return;
       }
 LABEL_50:
@@ -3457,7 +3457,7 @@ void __fastcall MyRoomControl__OnClickPhotoCampaignBackGround(MyRoomControl_o *t
   if ( (byte_40FC0BB & 1) == 0 )
   {
     sub_B16FFC(&Method_MyRoomControl_OnClickPhotoCampaignBackGround__, method);
-    sub_B16FFC(&StringLiteral_6661, v3);
+    sub_B16FFC(&StringLiteral_6661/*"FinishedCloseFullScreenPhotoCampaign"*/, v3);
     byte_40FC0BB = 1;
   }
   localScale.fields.z = 0.0;
@@ -3547,8 +3547,8 @@ void __fastcall MyRoomControl__OnClickPhotoCampaignBackGround(MyRoomControl_o *t
     v67->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v68;
     p_eventReceiver = &v67->fields.eventReceiver;
     sub_B16F98((BattleServantConfConponent_o *)p_eventReceiver, v68, v69, v70, v71, v72, v73, v74);
-    v76 = (System_Int32_array **)StringLiteral_6661;
-    p_eventReceiver[1] = (struct UnityEngine_GameObject_o *)StringLiteral_6661;
+    v76 = (System_Int32_array **)StringLiteral_6661/*"FinishedCloseFullScreenPhotoCampaign"*/;
+    p_eventReceiver[1] = (struct UnityEngine_GameObject_o *)StringLiteral_6661/*"FinishedCloseFullScreenPhotoCampaign"*/;
     sub_B16F98((BattleServantConfConponent_o *)(p_eventReceiver + 1), v76, v77, v78, v79, v80, v81, v82);
   }
   else if ( photoCampaignState == 3 )
@@ -3753,21 +3753,21 @@ void __fastcall MyRoomControl__OnClickSelectMultipleServant(MyRoomControl_o *thi
     sub_B16FFC(&long___TypeInfo, v4);
     sub_B16FFC(&Method_MyRoomControl__OnClickSelectMultipleServant_b__322_0__, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_15336, v7);
-    sub_B16FFC(&StringLiteral_7117, v8);
+    sub_B16FFC(&StringLiteral_15336/*"Wait_Action"*/, v7);
+    sub_B16FFC(&StringLiteral_7117/*"Help"*/, v8);
     byte_40FC0A2 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     goto LABEL_17;
   ActiveStateName = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0LL);
-  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15336, 0LL) )
+  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15336/*"Wait_Action"*/, 0LL) )
   {
     v12 = this->fields.myRoomFsm;
     if ( !v12 )
       goto LABEL_17;
     v13 = PlayMakerFSM__get_ActiveStateName(v12, 0LL);
-    if ( System_String__op_Inequality(v13, (System_String_o *)StringLiteral_7117, 0LL) )
+    if ( System_String__op_Inequality(v13, (System_String_o *)StringLiteral_7117/*"Help"*/, 0LL) )
       return;
   }
   if ( !MyRoomControl__IsEnableMultipleViewButton(this, v11) )
@@ -3867,21 +3867,21 @@ void __fastcall MyRoomControl__OnClickSelectPhotoCampaign(MyRoomControl_o *this,
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_MyRoomControl_OnClickSelectPhotoCampaign__, v3);
     sub_B16FFC(&Method_MyRoomControl__OnClickSelectPhotoCampaign_b__346_0__, v4);
-    sub_B16FFC(&StringLiteral_15336, v5);
-    sub_B16FFC(&StringLiteral_7117, v6);
+    sub_B16FFC(&StringLiteral_15336/*"Wait_Action"*/, v5);
+    sub_B16FFC(&StringLiteral_7117/*"Help"*/, v6);
     byte_40FC0B4 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     goto LABEL_13;
   ActiveStateName = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0LL);
-  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15336, 0LL) )
+  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15336/*"Wait_Action"*/, 0LL) )
   {
     v10 = this->fields.myRoomFsm;
     if ( !v10 )
       goto LABEL_13;
     v11 = PlayMakerFSM__get_ActiveStateName(v10, 0LL);
-    if ( System_String__op_Inequality(v11, (System_String_o *)StringLiteral_7117, 0LL) )
+    if ( System_String__op_Inequality(v11, (System_String_o *)StringLiteral_7117/*"Help"*/, 0LL) )
       return;
   }
   IsEnablePhotoCampaignButton = MyRoomControl__IsEnablePhotoCampaignButton(this, v9);
@@ -3970,7 +3970,7 @@ void __fastcall MyRoomControl__OnClickSvt(MyRoomControl_o *this, const MethodInf
   {
     sub_B16FFC(&MyRoomControl_TypeInfo, method);
     sub_B16FFC(&SoundManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_10424, v5);
+    sub_B16FFC(&StringLiteral_10424/*"PLAY_VOICE"*/, v5);
     byte_40FC077 = 1;
   }
   if ( !this->fields.isServantMaterial && this->fields.isHeroine && this->fields.isHeroineReave )
@@ -4011,7 +4011,7 @@ LABEL_25:
       this->fields.isVoicePlaying = 1;
       if ( myRoomFsm )
       {
-        PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_10424, 0LL);
+        PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_10424/*"PLAY_VOICE"*/, 0LL);
         return;
       }
     }
@@ -4426,7 +4426,7 @@ void __fastcall MyRoomControl__ReleaseTouch(MyRoomControl_o *this, const MethodI
     sub_B16FFC(&Method_System_Collections_Generic_List_int__get_Count__, method);
     sub_B16FFC(&MyRoomControl_TypeInfo, v3);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_13004, v5);
+    sub_B16FFC(&StringLiteral_13004/*"State 5"*/, v5);
     byte_40FC097 = 1;
   }
   v6 = MyRoomControl_TypeInfo;
@@ -4495,7 +4495,7 @@ void __fastcall MyRoomControl__ReleaseTouch(MyRoomControl_o *this, const MethodI
   if ( !myRoomFsm )
     goto LABEL_39;
   ActiveStateName = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0LL);
-  v35 = System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_13004, 0LL);
+  v35 = System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_13004/*"State 5"*/, 0LL);
   if ( v32 >= 1 && v35 )
   {
     changeBtnImg = (UIWidget_o *)this->fields.changeBtnImg;
@@ -6270,7 +6270,7 @@ void __fastcall MyRoomControl___LoadServantForm_b__228_0(MyRoomControl_o *this, 
   {
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_MyRoomControl__LoadServantForm_b__228_1__, v4);
-    sub_B16FFC(&StringLiteral_8533, v5);
+    sub_B16FFC(&StringLiteral_8533/*"LoadServantFormEnd"*/, v5);
     byte_40FC0C9 = 1;
   }
   mState = this->fields.mState;
@@ -6328,7 +6328,7 @@ LABEL_18:
   v27 = UnityEngine_Transform__get_localPosition(v25, 0LL);
   v27.fields.x = -v20;
   v27.fields.y = v24;
-  MyRoomControl__moveControl(this, this->fields.svtObj, v27, (System_String_o *)StringLiteral_8533, v26);
+  MyRoomControl__moveControl(this, this->fields.svtObj, v27, (System_String_o *)StringLiteral_8533/*"LoadServantFormEnd"*/, v26);
 }
 
 
@@ -6362,13 +6362,13 @@ void __fastcall MyRoomControl___hideFavoriteSvt_b__273_0(MyRoomControl_o *this, 
 
   if ( (byte_40FC0CA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3094, method);
+    sub_B16FFC(&StringLiteral_3094/*"CLOSE_MENU"*/, method);
     byte_40FC0CA = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3094, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3094/*"CLOSE_MENU"*/, 0LL);
 }
 
 
@@ -6378,13 +6378,13 @@ void __fastcall MyRoomControl___hideSvtFigure_b__211_0(MyRoomControl_o *this, co
 
   if ( (byte_40FC0C8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_7053, method);
+    sub_B16FFC(&StringLiteral_7053/*"HIDE_END"*/, method);
     byte_40FC0C8 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_7053, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_7053/*"HIDE_END"*/, 0LL);
 }
 
 
@@ -6407,17 +6407,17 @@ void __fastcall MyRoomControl___setMySvtFigure_b__202_0(MyRoomControl_o *this, c
 
   if ( (byte_40FC0C7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8378, method);
-    sub_B16FFC(&StringLiteral_8379, v3);
+    sub_B16FFC(&StringLiteral_8378/*"LOAD_END"*/, method);
+    sub_B16FFC(&StringLiteral_8379/*"LOAD_END_TO_HELP"*/, v3);
     byte_40FC0C7 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
   if ( this->fields.type == 6 )
-    v5 = &StringLiteral_8379;
+    v5 = &StringLiteral_8379/*"LOAD_END_TO_HELP"*/;
   else
-    v5 = &StringLiteral_8378;
+    v5 = &StringLiteral_8378/*"LOAD_END"*/;
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)*v5, 0LL);
 }
 
@@ -6431,13 +6431,13 @@ void __fastcall MyRoomControl___setupSvtRand_b__184_0(
 
   if ( (byte_40FC0C6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6864, result);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, result);
     byte_40FC0C6 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -6455,14 +6455,14 @@ void __fastcall MyRoomControl__callbackChangeName(
 
   if ( (byte_40FC082 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11043, result);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_11041, v6);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, result);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v6);
     byte_40FC082 = 1;
   }
   if ( !result )
     goto LABEL_12;
-  if ( !System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129, 0LL) )
+  if ( !System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL) )
   {
     mstPfComp = this->fields.mstPfComp;
     if ( mstPfComp )
@@ -6471,7 +6471,7 @@ void __fastcall MyRoomControl__callbackChangeName(
       myRoomFsm = this->fields.myRoomFsm;
       if ( myRoomFsm )
       {
-        v9 = &StringLiteral_11041;
+        v9 = &StringLiteral_11041/*"REQUEST_NG"*/;
         goto LABEL_11;
       }
     }
@@ -6485,7 +6485,7 @@ LABEL_12:
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     goto LABEL_12;
-  v9 = &StringLiteral_11043;
+  v9 = &StringLiteral_11043/*"REQUEST_OK"*/;
 LABEL_11:
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)*v9, 0LL);
 }
@@ -6569,13 +6569,13 @@ void __fastcall MyRoomControl__endReflectionGameOption(MyRoomControl_o *this, co
 
   if ( (byte_40FC080 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11540, method);
+    sub_B16FFC(&StringLiteral_11540/*"SAVE_END"*/, method);
     byte_40FC080 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_11540, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_11540/*"SAVE_END"*/, 0LL);
 }
 
 
@@ -6917,7 +6917,7 @@ void __fastcall MyRoomControl__helpClose(MyRoomControl_o *this, const MethodInfo
     sub_B16FFC(&NetworkManager_TypeInfo, v4);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
     sub_B16FFC(&TutorialFlag_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
     byte_40FC091 = 1;
   }
   if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -7045,14 +7045,14 @@ void __fastcall MyRoomControl__hideSoundPlayer(MyRoomControl_o *this, const Meth
 
   if ( (byte_40FC08B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3094, method);
+    sub_B16FFC(&StringLiteral_3094/*"CLOSE_MENU"*/, method);
     byte_40FC08B = 1;
   }
   MyRoomControl__SetBackButtonIgnore(this, 1, v2);
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3094, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3094/*"CLOSE_MENU"*/, 0LL);
 }
 
 
@@ -7377,10 +7377,10 @@ void __fastcall MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInf
     sub_B16FFC(&MyRoomControl_StateEtc_TypeInfo, v16);
     sub_B16FFC(&Method_MyRoomControl___c__initMyRoom_b__179_0__, v17);
     sub_B16FFC(&MyRoomControl___c_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_10403, v19);
-    sub_B16FFC(&StringLiteral_16896, v20);
-    sub_B16FFC(&StringLiteral_6864, v21);
-    sub_B16FFC(&StringLiteral_8827, v22);
+    sub_B16FFC(&StringLiteral_10403/*"PHOTO_CAMPAIGN_BUTTON_TEXT"*/, v19);
+    sub_B16FFC(&StringLiteral_16896/*"btn_bg_12"*/, v20);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v21);
+    sub_B16FFC(&StringLiteral_8827/*"MULTIPLE_VIEW_BUTTON_TEXT"*/, v22);
     byte_40FC059 = 1;
   }
   moveShowPos.fields.z = 0.0;
@@ -7400,7 +7400,7 @@ void __fastcall MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInf
     myRoomFsm = this->fields.myRoomFsm;
     if ( myRoomFsm )
     {
-      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL);
+      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
       return;
     }
     goto LABEL_59;
@@ -7636,7 +7636,7 @@ void __fastcall MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInf
   changeServantListBtnSprite = this->fields.changeServantListBtnSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(changeServantListBtnSprite, (System_String_o *)StringLiteral_16896, 0LL);
+  AtlasManager__SetEventSprite(changeServantListBtnSprite, (System_String_o *)StringLiteral_16896/*"btn_bg_12"*/, 0LL);
   v110 = this->fields.changeServantListBtnSprite;
   if ( !v110 )
     goto LABEL_59;
@@ -7702,7 +7702,7 @@ LABEL_59:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v126 = LocalizationManager__Get((System_String_o *)StringLiteral_8827, 0LL);
+    v126 = LocalizationManager__Get((System_String_o *)StringLiteral_8827/*"MULTIPLE_VIEW_BUTTON_TEXT"*/, 0LL);
     if ( !multipleViewButtonLabel )
       goto LABEL_59;
     UILabel__set_text(multipleViewButtonLabel, v126, 0LL);
@@ -7770,7 +7770,7 @@ LABEL_96:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v146 = LocalizationManager__Get((System_String_o *)StringLiteral_10403, 0LL);
+    v146 = LocalizationManager__Get((System_String_o *)StringLiteral_10403/*"PHOTO_CAMPAIGN_BUTTON_TEXT"*/, 0LL);
     if ( !photoCampaignButtonLabel )
       goto LABEL_59;
     UILabel__set_text(photoCampaignButtonLabel, v146, 0LL);
@@ -8226,7 +8226,7 @@ void __fastcall MyRoomControl__requestChangeName(MyRoomControl_o *this, const Me
     sub_B16FFC(&Method_NetworkManager_getRequest_UserNameChangeRequest___, v3);
     sub_B16FFC(&NetworkManager_TypeInfo, v4);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_3899, v6);
+    sub_B16FFC(&StringLiteral_3899/*"ChangeUserName"*/, v6);
     byte_40FC081 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -8241,7 +8241,7 @@ void __fastcall MyRoomControl__requestChangeName(MyRoomControl_o *this, const Me
   variables = Fsm->fields.variables;
   if ( !variables )
     goto LABEL_14;
-  FsmString = HutongGames_PlayMaker_FsmVariables__GetFsmString(variables, (System_String_o *)StringLiteral_3899, 0LL);
+  FsmString = HutongGames_PlayMaker_FsmVariables__GetFsmString(variables, (System_String_o *)StringLiteral_3899/*"ChangeUserName"*/, 0LL);
   if ( !FsmString )
     goto LABEL_14;
   Value = HutongGames_PlayMaker_FsmString__get_Value(FsmString, 0LL);
@@ -8335,7 +8335,7 @@ void __fastcall MyRoomControl__resetSvtVoiceData(MyRoomControl_o *this, bool isR
     sub_B16FFC(&Method_System_Collections_Generic_List_int__get_Item__, v7);
     sub_B16FFC(&Method_MyRoomControl___c__DisplayClass212_0__resetSvtVoiceData_b__0__, v8);
     sub_B16FFC(&MyRoomControl___c__DisplayClass212_0_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_8378, v10);
+    sub_B16FFC(&StringLiteral_8378/*"LOAD_END"*/, v10);
     byte_40FC076 = 1;
   }
   v11 = sub_B170CC(MyRoomControl___c__DisplayClass212_0_TypeInfo, isReset, method, v3, v4);
@@ -8350,7 +8350,7 @@ void __fastcall MyRoomControl__resetSvtVoiceData(MyRoomControl_o *this, bool isR
     if ( myRoomFsm )
     {
 LABEL_7:
-      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8378, 0LL);
+      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8378/*"LOAD_END"*/, 0LL);
       return;
     }
 LABEL_15:
@@ -9303,7 +9303,7 @@ void __fastcall MyRoomControl__setSvtVoiceData(MyRoomControl_o *this, const Meth
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
     sub_B16FFC(&Method_MyRoomControl___c__setSvtVoiceData_b__200_0__, v8);
     sub_B16FFC(&MyRoomControl___c_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_8378, v10);
+    sub_B16FFC(&StringLiteral_8378/*"LOAD_END"*/, v10);
     byte_40FC06B = 1;
   }
   if ( this->fields.mBattleSetupInfo )
@@ -9311,7 +9311,7 @@ void __fastcall MyRoomControl__setSvtVoiceData(MyRoomControl_o *this, const Meth
     myRoomFsm = this->fields.myRoomFsm;
     if ( myRoomFsm )
     {
-      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8378, 0LL);
+      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8378/*"LOAD_END"*/, 0LL);
       return;
     }
 LABEL_27:
@@ -9410,7 +9410,7 @@ LABEL_27:
     v56 = this->fields.myRoomFsm;
     if ( !v56 )
       goto LABEL_27;
-    PlayMakerFSM__SendEvent(v56, (System_String_o *)StringLiteral_8378, 0LL);
+    PlayMakerFSM__SendEvent(v56, (System_String_o *)StringLiteral_8378/*"LOAD_END"*/, 0LL);
     this->fields.isVoicePlaying = 0;
   }
 }
@@ -9920,7 +9920,7 @@ void __fastcall MyRoomControl__setupSvtRand(MyRoomControl_o *this, const MethodI
     sub_B16FFC(&OptionManager_TypeInfo, v9);
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_6864, v12);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v12);
     byte_40FC05D = 1;
   }
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -9933,7 +9933,7 @@ void __fastcall MyRoomControl__setupSvtRand(MyRoomControl_o *this, const MethodI
     myRoomFsm = this->fields.myRoomFsm;
     if ( myRoomFsm )
     {
-      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL);
+      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
       return;
     }
 LABEL_40:
@@ -10879,7 +10879,7 @@ bool __fastcall MyRoomControl__InitServantMenu_d__250__MoveNext(
     sub_B16FFC(&Method_MyRoomControl__InitServantMenu_b__250_0__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&UnityEngine_WaitUntil_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_6864, v8);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v8);
     byte_40F8662 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -10910,7 +10910,7 @@ bool __fastcall MyRoomControl__InitServantMenu_d__250__MoveNext(
         myRoomFsm = _4__this->fields.myRoomFsm;
         if ( myRoomFsm )
         {
-          PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864, 0LL);
+          PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
           return 0;
         }
       }
@@ -11191,7 +11191,7 @@ bool __fastcall MyRoomControl__LoadMultipleServant_d__330__MoveNext(
     sub_B16FFC(&MyRoomControl___c__DisplayClass330_0_TypeInfo, v16);
     sub_B16FFC(&UIStandFigureRender_TypeInfo, v17);
     sub_B16FFC(&UnityEngine_WaitWhile_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_6664, v19);
+    sub_B16FFC(&StringLiteral_6664/*"FinishedFadeMultipleServant"*/, v19);
     byte_40F8663 = 1;
   }
   entity = 0LL;
@@ -11316,7 +11316,7 @@ bool __fastcall MyRoomControl__LoadMultipleServant_d__330__MoveNext(
         v124 = _4__this->fields.multipleStandFigureBacks;
         if ( v124 )
         {
-          v125 = v94 == v124->max_length - 1 ? (System_String_o *)StringLiteral_6664 : 0LL;
+          v125 = v94 == v124->max_length - 1 ? (System_String_o *)StringLiteral_6664/*"FinishedFadeMultipleServant"*/ : 0LL;
           v175.fields.x = v108;
           v175.fields.y = v102;
           v175.fields.z = v103;
@@ -11816,7 +11816,7 @@ bool __fastcall MyRoomControl__LoadPhotoCampaignServant_d__348__MoveNext(
     sub_B16FFC(&MyRoomControl___c__DisplayClass348_0_TypeInfo, v14);
     sub_B16FFC(&UIStandFigureRender_TypeInfo, v15);
     sub_B16FFC(&UnityEngine_WaitWhile_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_6665, v17);
+    sub_B16FFC(&StringLiteral_6665/*"FinishedFadePhotoServant"*/, v17);
     byte_40F8664 = 1;
   }
   entity = 0LL;
@@ -11871,7 +11871,7 @@ bool __fastcall MyRoomControl__LoadPhotoCampaignServant_d__348__MoveNext(
     v120.fields.x = svtPosX_5__4;
     v120.fields.y = svtPosY_5__5;
     v120.fields.z = v115;
-    MyRoomControl__moveControl(_4__this, v116, v120, (System_String_o *)StringLiteral_6665, 0LL);
+    MyRoomControl__moveControl(_4__this, v116, v120, (System_String_o *)StringLiteral_6665/*"FinishedFadePhotoServant"*/, 0LL);
     return 0;
   }
   if ( _1__state == 1 )
@@ -12603,7 +12603,7 @@ void __fastcall MyRoomControl___c__DisplayClass203_0___SetMyRoomStandFigure_b__1
   {
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_MyRoomControl___c__DisplayClass203_0__SetMyRoomStandFigure_b__2__, v3);
-    sub_B16FFC(&StringLiteral_11353, v4);
+    sub_B16FFC(&StringLiteral_11353/*"ReleaseTouch"*/, v4);
     byte_40F8659 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -12663,7 +12663,7 @@ void __fastcall MyRoomControl___c__DisplayClass203_0___SetMyRoomStandFigure_b__1
       v38,
       v38->fields.svtObj,
       *(UnityEngine_Vector3_o *)(&v37 - 2),
-      (System_String_o *)StringLiteral_11353,
+      (System_String_o *)StringLiteral_11353/*"ReleaseTouch"*/,
       0LL);
   }
   else if ( !mState )
@@ -12850,7 +12850,7 @@ void __fastcall MyRoomControl___c__DisplayClass205_0___SetMaterialSvtFigure_b__0
   {
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_MyRoomControl___c__DisplayClass205_0__SetMaterialSvtFigure_b__1__, v9);
-    sub_B16FFC(&StringLiteral_11353, v10);
+    sub_B16FFC(&StringLiteral_11353/*"ReleaseTouch"*/, v10);
     byte_40F865A = 1;
   }
   _4__this = this->fields.__4__this;
@@ -12980,7 +12980,7 @@ void __fastcall MyRoomControl___c__DisplayClass205_0___SetMaterialSvtFigure_b__0
       v60,
       v60->fields.svtObj,
       *(UnityEngine_Vector3_o *)(&v59 - 2),
-      (System_String_o *)StringLiteral_11353,
+      (System_String_o *)StringLiteral_11353/*"ReleaseTouch"*/,
       0LL);
   }
   else if ( !mState )
@@ -13063,7 +13063,7 @@ void __fastcall MyRoomControl___c__DisplayClass212_0___resetSvtVoiceData_b__0(
 
   if ( (byte_40F865B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8378, method);
+    sub_B16FFC(&StringLiteral_8378/*"LOAD_END"*/, method);
     byte_40F865B = 1;
   }
   _4__this = this->fields.__4__this;
@@ -13077,7 +13077,7 @@ void __fastcall MyRoomControl___c__DisplayClass212_0___resetSvtVoiceData_b__0(
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8378, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8378/*"LOAD_END"*/, 0LL);
 }
 
 
@@ -13403,8 +13403,8 @@ void __fastcall MyRoomControl___c__DisplayClass345_0___LoadPhotoCampaignAssets_b
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, v10);
     sub_B16FFC(&AtlasManager_TypeInfo, v11);
     sub_B16FFC(&Method_MyRoomControl___c__DisplayClass345_0__LoadPhotoCampaignAssets_b__1__, v12);
-    sub_B16FFC(&StringLiteral_16676, v13);
-    sub_B16FFC(&StringLiteral_16675, v14);
+    sub_B16FFC(&StringLiteral_16676/*"bit_camera_shutter"*/, v13);
+    sub_B16FFC(&StringLiteral_16675/*"bit_camera_iconblink"*/, v14);
     byte_40F865D = 1;
   }
   _4__this = this->fields.__4__this;
@@ -13424,7 +13424,7 @@ void __fastcall MyRoomControl___c__DisplayClass345_0___LoadPhotoCampaignAssets_b
     || (v16 = this->fields.__4__this,
         Object_WarBoardWaitTimeSetting = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                   assetData,
-                                                                  (System_String_o *)StringLiteral_16675,
+                                                                  (System_String_o *)StringLiteral_16675/*"bit_camera_iconblink"*/,
                                                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784),
         !v16)
     || (v16->fields.photoCampaignCameraEffect = (struct UnityEngine_GameObject_o *)Object_WarBoardWaitTimeSetting,
@@ -13440,7 +13440,7 @@ void __fastcall MyRoomControl___c__DisplayClass345_0___LoadPhotoCampaignAssets_b
         v24 = this->fields.__4__this,
         v25 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                        assetData,
-                                       (System_String_o *)StringLiteral_16676,
+                                       (System_String_o *)StringLiteral_16676/*"bit_camera_shutter"*/,
                                        (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784),
         !v24) )
   {
@@ -13492,9 +13492,9 @@ void __fastcall MyRoomControl___c__DisplayClass345_0___LoadPhotoCampaignAssets_b
   if ( (byte_40F865E & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19370, v3);
-    sub_B16FFC(&StringLiteral_10675, v4);
-    sub_B16FFC(&StringLiteral_10676, v5);
+    sub_B16FFC(&StringLiteral_19370/*"img_bg_shutter"*/, v3);
+    sub_B16FFC(&StringLiteral_10675/*"Polaroid_btn_shutter"*/, v4);
+    sub_B16FFC(&StringLiteral_10676/*"Polaroid_img_frame"*/, v5);
     byte_40F865E = 1;
   }
   _4__this = this->fields.__4__this;
@@ -13504,13 +13504,13 @@ void __fastcall MyRoomControl___c__DisplayClass345_0___LoadPhotoCampaignAssets_b
   photoCampaignFrameSprite = _4__this->fields.photoCampaignFrameSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_28584872(eventId, photoCampaignFrameSprite, (System_String_o *)StringLiteral_10676, 0LL);
+  AtlasManager__SetEventUI_28584872(eventId, photoCampaignFrameSprite, (System_String_o *)StringLiteral_10676/*"Polaroid_img_frame"*/, 0LL);
   v9 = this->fields.__4__this;
   if ( !v9
     || (AtlasManager__SetEventUI_28584872(
           this->fields.eventId,
           v9->fields.photoCampaignCameraButtonSprite,
-          (System_String_o *)StringLiteral_10675,
+          (System_String_o *)StringLiteral_10675/*"Polaroid_btn_shutter"*/,
           0LL),
         (v10 = this->fields.__4__this) == 0LL) )
   {
@@ -13520,7 +13520,7 @@ LABEL_10:
   AtlasManager__SetEventUI_28584872(
     this->fields.eventId,
     v10->fields.photoCampaignCameraButtonBgSprite,
-    (System_String_o *)StringLiteral_19370,
+    (System_String_o *)StringLiteral_19370/*"img_bg_shutter"*/,
     0LL);
 }
 
@@ -13615,7 +13615,7 @@ bool __fastcall MyRoomControl__initMaterial_d__248__MoveNext(
     sub_B16FFC(&Method_MyRoomControl__initMaterial_b__248_0__, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
     sub_B16FFC(&UnityEngine_WaitUntil_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_6864, v7);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v7);
     byte_40F8666 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -13631,7 +13631,7 @@ bool __fastcall MyRoomControl__initMaterial_d__248__MoveNext(
 LABEL_13:
       sub_B170D4();
     }
-    PlayMakerFSM__SendEvent(klass, (System_String_o *)StringLiteral_6864, 0LL);
+    PlayMakerFSM__SendEvent(klass, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
     return 0;
   }
   if ( _1__state )

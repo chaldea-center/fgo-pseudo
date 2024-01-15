@@ -673,11 +673,11 @@ void __fastcall BattleScriptRootComponent__EndRequestBattleScenario(
     sub_B16FFC(&Method_BattleScriptRootComponent___c__EndRequestBattleScenario_b__37_1__, v19);
     sub_B16FFC(&Method_BattleScriptRootComponent___c__EndRequestBattleScenario_b__37_2__, v20);
     sub_B16FFC(&BattleScriptRootComponent___c_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_18817, v22);
-    sub_B16FFC(&StringLiteral_21719, v23);
-    sub_B16FFC(&StringLiteral_698, v24);
-    sub_B16FFC(&StringLiteral_15571, v25);
-    sub_B16FFC(&StringLiteral_15807, v26);
+    sub_B16FFC(&StringLiteral_18817/*"freeShopIds"*/, v22);
+    sub_B16FFC(&StringLiteral_21719/*"returnRarePriShopIds"*/, v23);
+    sub_B16FFC(&StringLiteral_698/*","*/, v24);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v25);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v26);
     byte_40F7513 = 1;
   }
   talkInfo = this->fields.talkInfo;
@@ -693,9 +693,9 @@ void __fastcall BattleScriptRootComponent__EndRequestBattleScenario(
   ScriptManager__SaveTalkResumeInfo(v28, 0LL);
   ScriptManager__ClearSelectRouteArray(0LL);
   v29 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           jsonstr,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -709,9 +709,9 @@ void __fastcall BattleScriptRootComponent__EndRequestBattleScenario(
   }
   TerminalPramsManager__ReceiveQuestEndResultInfo(v30, 1, 0LL);
   v31 = (Il2CppObject *)System_String__Concat_43746016(
-                          (System_String_o *)StringLiteral_15571,
+                          (System_String_o *)StringLiteral_15571/*"["*/,
                           jsonstr,
-                          (System_String_o *)StringLiteral_15807,
+                          (System_String_o *)StringLiteral_15807/*"]"*/,
                           0LL);
   v32 = JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(
           v31,
@@ -775,8 +775,8 @@ void __fastcall BattleScriptRootComponent__EndRequestBattleScenario(
     v48 = (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                    v47,
                                    (const MethodInfo_2F27E24 *)Method_System_Collections_Generic_List_string__ToArray__);
-    v49 = System_String__Join((System_String_o *)StringLiteral_698, v48, 0LL);
-    UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_18817, v49, 0LL);
+    v49 = System_String__Join((System_String_o *)StringLiteral_698/*","*/, v48, 0LL);
+    UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_18817/*"freeShopIds"*/, v49, 0LL);
   }
   getSvts = (System_Collections_Generic_IEnumerable_TSource__o *)v35[5].fields.getSvts;
   if ( getSvts )
@@ -827,8 +827,8 @@ void __fastcall BattleScriptRootComponent__EndRequestBattleScenario(
     v62 = (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                    v61,
                                    (const MethodInfo_2F27E24 *)Method_System_Collections_Generic_List_string__ToArray__);
-    v63 = System_String__Join((System_String_o *)StringLiteral_698, v62, 0LL);
-    UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_21719, v63, 0LL);
+    v63 = System_String__Join((System_String_o *)StringLiteral_698/*","*/, v62, 0LL);
+    UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_21719/*"returnRarePriShopIds"*/, v63, 0LL);
   }
   UnityEngine_PlayerPrefs__Save(0LL);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -935,13 +935,13 @@ void __fastcall BattleScriptRootComponent__EndRequestBattleSetup(System_String_o
     sub_B16FFC(&ScriptManager_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_20980, v9);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v9);
     byte_40F750E = 1;
   }
   entity = 0LL;
   if ( !result )
     goto LABEL_22;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( Instance )
@@ -1190,7 +1190,7 @@ void __fastcall BattleScriptRootComponent__PlayStaffRoll(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v8);
     sub_B16FFC(&Method_BattleScriptRootComponent___c__DisplayClass48_0__PlayStaffRoll_b__0__, v9);
     sub_B16FFC(&BattleScriptRootComponent___c__DisplayClass48_0_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_5974, v11);
+    sub_B16FFC(&StringLiteral_5974/*"Endroll"*/, v11);
     byte_40F751E = 1;
   }
   v12 = (BattleScriptRootComponent___c__DisplayClass48_0_o *)sub_B170CC(
@@ -1217,7 +1217,7 @@ void __fastcall BattleScriptRootComponent__PlayStaffRoll(
     0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5974, v17, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5974/*"Endroll"*/, v17, 1, 0LL);
 }
 
 
@@ -1741,8 +1741,8 @@ void __fastcall BattleScriptRootComponent__SavePlayedNotMeetsScript(
     sub_B16FFC(&Method_DataManager_GetMaster_QuestPhaseMaster___, *(_QWORD *)&questId);
     sub_B16FFC(&DataManager_TypeInfo, v6);
     sub_B16FFC(&ScriptManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_16529, v8);
-    sub_B16FFC(&StringLiteral_21055, v9);
+    sub_B16FFC(&StringLiteral_16529/*"badEndId"*/, v8);
+    sub_B16FFC(&StringLiteral_21055/*"notMeets"*/, v9);
     byte_40F750D = 1;
   }
   ScriptIntParam = 0;
@@ -1754,7 +1754,7 @@ void __fastcall BattleScriptRootComponent__SavePlayedNotMeetsScript(
   Entity = QuestPhaseMaster__GetEntity(Master_WarQuestSelectionMaster, questId, phase, 0LL);
   if ( Entity )
   {
-    ScriptIntParam = QuestPhaseEntity__getScriptIntParam(Entity, (System_String_o *)StringLiteral_16529, 0, 0LL);
+    ScriptIntParam = QuestPhaseEntity__getScriptIntParam(Entity, (System_String_o *)StringLiteral_16529/*"badEndId"*/, 0, 0LL);
     if ( ScriptIntParam )
     {
       ScriptName_NotMeetsCond = System_Int32__ToString((int32_t)&ScriptIntParam, 0LL);
@@ -1768,7 +1768,7 @@ void __fastcall BattleScriptRootComponent__SavePlayedNotMeetsScript(
       }
       ScriptName_NotMeetsCond = ScriptManager__GetScriptName_NotMeetsCond(questId, phase, 0LL);
     }
-    v13 = System_String__Concat_43743732((System_String_o *)StringLiteral_21055, ScriptName_NotMeetsCond, 0LL);
+    v13 = System_String__Concat_43743732((System_String_o *)StringLiteral_21055/*"notMeets"*/, ScriptName_NotMeetsCond, 0LL);
     UnityEngine_PlayerPrefs__SetInt(v13, 1, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
@@ -2098,7 +2098,7 @@ void __fastcall BattleScriptRootComponent__StartMashuPowerUpAction(
     sub_B16FFC(&TutorialFlag_TypeInfo, v8);
     sub_B16FFC(&Method_BattleScriptRootComponent___c__DisplayClass44_0__StartMashuPowerUpAction_b__0__, v9);
     sub_B16FFC(&BattleScriptRootComponent___c__DisplayClass44_0_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_8594, v11);
+    sub_B16FFC(&StringLiteral_8594/*"MASHU_CHANGE_WAR_ID"*/, v11);
     byte_40F751A = 1;
   }
   v12 = (BattleScriptRootComponent___c__DisplayClass44_0_o *)sub_B170CC(
@@ -2130,7 +2130,7 @@ void __fastcall BattleScriptRootComponent__StartMashuPowerUpAction(
     v14 = TerminalPramsManager_TypeInfo;
   }
   WarId_k__BackingField = v14->static_fields->_WarId_k__BackingField;
-  if ( WarId_k__BackingField != ConstantMaster__getValue((System_String_o *)StringLiteral_8594, 0LL) )
+  if ( WarId_k__BackingField != ConstantMaster__getValue((System_String_o *)StringLiteral_8594/*"MASHU_CHANGE_WAR_ID"*/, 0LL) )
     goto LABEL_17;
   v12->fields.tutorial_flag_id = 115;
   if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -3444,8 +3444,8 @@ void __fastcall BattleScriptRootComponent__TransitionWarBoard(
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v6);
     sub_B16FFC(&Method_BattleScriptRootComponent___c__TransitionWarBoard_b__47_0__, v7);
     sub_B16FFC(&BattleScriptRootComponent___c_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_23735, v9);
-    sub_B16FFC(&StringLiteral_23736, v10);
+    sub_B16FFC(&StringLiteral_23735/*"バトルスクリプトエラー"*/, v9);
+    sub_B16FFC(&StringLiteral_23736/*"バトル前スクリプト以外のトークから聖杯戦争盤へ移動することはできません。\nターミナルへ戻ります。"*/, v10);
     byte_40F751D = 1;
   }
   if ( (BYTE3(ScriptManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -3469,8 +3469,8 @@ void __fastcall BattleScriptRootComponent__TransitionWarBoard(
     }
     static_fields = v23->static_fields;
     _9__47_0 = static_fields->__9__47_0;
-    v26 = (System_String_o *)StringLiteral_23736;
-    v27 = (System_String_o *)StringLiteral_23735;
+    v26 = (System_String_o *)StringLiteral_23736/*"バトル前スクリプト以外のトークから聖杯戦争盤へ移動することはできません。\nターミナルへ戻ります。"*/;
+    v27 = (System_String_o *)StringLiteral_23735/*"バトルスクリプトエラー"*/;
     if ( !_9__47_0 )
     {
       if ( (BYTE3(v23->vtable._0_Equals.methodPtr) & 4) != 0 && !v23->_2.cctor_finished )
@@ -4133,7 +4133,7 @@ void __fastcall BattleScriptRootComponent__beginStartUp(
     sub_B16FFC(&Method_DataManager_GetMasterData_WarMaster___, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
     sub_B16FFC(&BattleScriptRootComponent_TalkScriptInfo_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_6315, v8);
+    sub_B16FFC(&StringLiteral_6315/*"FES_WAR_ID"*/, v8);
     byte_40F74FC = 1;
   }
   if ( data )
@@ -4180,7 +4180,7 @@ LABEL_23:
   if ( QuestId )
   {
     id = QuestId->fields.id;
-    v16 = id == ConstantMaster__getValue((System_String_o *)StringLiteral_6315, 0LL);
+    v16 = id == ConstantMaster__getValue((System_String_o *)StringLiteral_6315/*"FES_WAR_ID"*/, 0LL);
   }
   else
   {
@@ -4201,12 +4201,12 @@ void __fastcall BattleScriptRootComponent_TalkScriptInfo___cctor(const MethodInf
   if ( (byte_40F71B3 & 1) == 0 )
   {
     sub_B16FFC(&BattleScriptRootComponent_TalkScriptInfo_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_1104, v2);
+    sub_B16FFC(&StringLiteral_1104/*"2.0"*/, v2);
     byte_40F71B3 = 1;
   }
   static_fields = BattleScriptRootComponent_TalkScriptInfo_TypeInfo->static_fields;
-  v4 = StringLiteral_1104;
-  static_fields->TalkResumeVersion = (struct System_String_o *)StringLiteral_1104;
+  v4 = StringLiteral_1104/*"2.0"*/;
+  static_fields->TalkResumeVersion = (struct System_String_o *)StringLiteral_1104/*"2.0"*/;
   sub_B16F98(static_fields, v4);
   BattleScriptRootComponent_TalkScriptInfo_TypeInfo->static_fields->WinResultMultiplicationValue = 100;
 }
@@ -5307,7 +5307,7 @@ void __fastcall BattleScriptRootComponent___c__DisplayClass48_0___PlayStaffRoll_
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&Method_BattleScriptRootComponent___c__DisplayClass48_1__PlayStaffRoll_b__1__, v11);
     sub_B16FFC(&BattleScriptRootComponent___c__DisplayClass48_1_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_5973, v13);
+    sub_B16FFC(&StringLiteral_5973/*"EndrolPanel"*/, v13);
     byte_40F71A7 = 1;
   }
   v14 = sub_B170CC(BattleScriptRootComponent___c__DisplayClass48_1_TypeInfo, data, method, v3, v4);
@@ -5323,7 +5323,7 @@ void __fastcall BattleScriptRootComponent___c__DisplayClass48_0___PlayStaffRoll_
     goto LABEL_18;
   Object_WarBoardWaitTimeSetting = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                                v15,
-                                                                               (System_String_o *)StringLiteral_5973,
+                                                                               (System_String_o *)StringLiteral_5973/*"EndrolPanel"*/,
                                                                                (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )

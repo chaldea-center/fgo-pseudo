@@ -163,7 +163,7 @@ void __fastcall FriendshipExceedControl__InitFriendshipExceed(
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_8809, v4);
+    sub_B16FFC(&StringLiteral_8809/*"MSG_PRESELECT_BASE_FRIENDSHIP_EXCEED"*/, v4);
     byte_40FB2AA = 1;
   }
   v5 = BalanceConfig_TypeInfo;
@@ -194,7 +194,7 @@ void __fastcall FriendshipExceedControl__InitFriendshipExceed(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_8809, 0LL);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_8809/*"MSG_PRESELECT_BASE_FRIENDSHIP_EXCEED"*/, 0LL);
     if ( !preSelectBaseLabel
       || (UILabel__set_text(preSelectBaseLabel, v15, 0LL),
           (v16 = (UnityEngine_Component_o *)this->fields.preSelectBaseLabel) == 0LL)
@@ -354,7 +354,7 @@ void __fastcall FriendshipExceedControl__OnClickExecute(FriendshipExceedControl_
   if ( (byte_40FB2B5 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3323, v3);
+    sub_B16FFC(&StringLiteral_3323/*"CONFIRM_TITLE_FRIENDSHIP_EXCEED_COMBINE"*/, v3);
     byte_40FB2B5 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -362,7 +362,7 @@ void __fastcall FriendshipExceedControl__OnClickExecute(FriendshipExceedControl_
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3323, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3323/*"CONFIRM_TITLE_FRIENDSHIP_EXCEED_COMBINE"*/, 0LL);
   if ( !this->fields.exeCombineDlg )
     sub_B170D4();
   SetRarityDialogControl__SetFriendshipExceedInfo(
@@ -873,11 +873,11 @@ void __fastcall FriendshipExceedControl__SetInfoMessage(
   if ( (byte_40FB2B6 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&state);
-    sub_B16FFC(&StringLiteral_7250, v5);
-    sub_B16FFC(&StringLiteral_8804, v6);
-    sub_B16FFC(&StringLiteral_5743, v7);
-    sub_B16FFC(&StringLiteral_12161, v8);
-    sub_B16FFC(&StringLiteral_12162, v9);
+    sub_B16FFC(&StringLiteral_7250/*"INFO_MSG_FRIENDSHIP_EXCEED"*/, v5);
+    sub_B16FFC(&StringLiteral_8804/*"MSG_FRIENDSHIP_EXCEED_BASE"*/, v6);
+    sub_B16FFC(&StringLiteral_5743/*"EXE_FRIENDSHIP_EXCEED_COMBINE_TXT"*/, v7);
+    sub_B16FFC(&StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/, v8);
+    sub_B16FFC(&StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, v9);
     byte_40FB2B6 = 1;
   }
   if ( state == 2 )
@@ -894,7 +894,7 @@ void __fastcall FriendshipExceedControl__SetInfoMessage(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v11 = &StringLiteral_5743;
+          v11 = &StringLiteral_5743/*"EXE_FRIENDSHIP_EXCEED_COMBINE_TXT"*/;
 LABEL_9:
           v12 = LocalizationManager__Get((System_String_o *)*v11, 0LL);
           if ( detailInfoLabel )
@@ -919,7 +919,7 @@ LABEL_35:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v18 = &StringLiteral_12162;
+        v18 = &StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/;
       }
       else
       {
@@ -929,7 +929,7 @@ LABEL_35:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v18 = &StringLiteral_12161;
+        v18 = &StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/;
       }
     }
     else
@@ -940,7 +940,7 @@ LABEL_35:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v18 = &StringLiteral_8804;
+      v18 = &StringLiteral_8804/*"MSG_FRIENDSHIP_EXCEED_BASE"*/;
     }
     v19 = LocalizationManager__Get((System_String_o *)*v18, 0LL);
     if ( detailInfoLabel )
@@ -965,7 +965,7 @@ LABEL_36:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v11 = &StringLiteral_7250;
+    v11 = &StringLiteral_7250/*"INFO_MSG_FRIENDSHIP_EXCEED"*/;
     goto LABEL_9;
   }
 }
@@ -1135,7 +1135,7 @@ void __fastcall FriendshipExceedControl__SetRequiredQpInfo(FriendshipExceedContr
 
   if ( (byte_40FB2AE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9236, method);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, method);
     byte_40FB2AE = 1;
   }
   if ( this->fields.isBaseSelected
@@ -1150,7 +1150,7 @@ void __fastcall FriendshipExceedControl__SetRequiredQpInfo(FriendshipExceedContr
     this->fields.requiredQp = 0;
   }
   requiredQpLabel = this->fields.requiredQpLabel;
-  v6 = System_Int32__ToString_38275808(v4, (System_String_o *)StringLiteral_9236, 0LL);
+  v6 = System_Int32__ToString_38275808(v4, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !requiredQpLabel )
 LABEL_13:
     sub_B170D4();
@@ -1249,14 +1249,14 @@ void __fastcall FriendshipExceedControl__SetUserQpInfo(FriendshipExceedControl_o
 
   if ( (byte_40FB2AD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9236, method);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, method);
     byte_40FB2AD = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame
     || (userQpLabel = this->fields.userQpLabel,
         this->fields.userQp = SelfUserGame->fields.qp,
-        v5 = System_Int32__ToString_38275808((int)this + 256, (System_String_o *)StringLiteral_9236, 0LL),
+        v5 = System_Int32__ToString_38275808((int)this + 256, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL),
         !userQpLabel) )
   {
     sub_B170D4();

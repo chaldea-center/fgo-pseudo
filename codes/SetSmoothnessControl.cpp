@@ -68,28 +68,28 @@ void __fastcall SetSmoothnessControl__Init(SetSmoothnessControl_o *this, const M
     sub_B16FFC(&OptionManager_TypeInfo, v6);
     sub_B16FFC(&Method_SetSmoothnessControl__Init_b__5_0__, v7);
     sub_B16FFC(&string___TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_9782, v9);
-    sub_B16FFC(&StringLiteral_9781, v10);
-    sub_B16FFC(&StringLiteral_9780, v11);
-    sub_B16FFC(&StringLiteral_19626, v12);
+    sub_B16FFC(&StringLiteral_9782/*"OPTION_SMOOTHNESS_BUTTON_2"*/, v9);
+    sub_B16FFC(&StringLiteral_9781/*"OPTION_SMOOTHNESS_BUTTON_1"*/, v10);
+    sub_B16FFC(&StringLiteral_9780/*"OPTION_SMOOTHNESS_ATTENTION"*/, v11);
+    sub_B16FFC(&StringLiteral_19626/*"img_txt_framerate"*/, v12);
     byte_40FF31A = 1;
   }
   LOWORD(this[1].klass) = 0;
   v13 = *(UISprite_o **)&this->fields.isHighQuality.fields.value;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetMyRoomImage(v13, (System_String_o *)StringLiteral_19626, 0LL);
+  AtlasManager__SetMyRoomImage(v13, (System_String_o *)StringLiteral_19626/*"img_txt_framerate"*/, 0LL);
   titleSptite = (UILabel_o *)this->fields.titleSptite;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_9780, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_9780/*"OPTION_SMOOTHNESS_ATTENTION"*/, 0LL);
   if ( !titleSptite
     || (UILabel__set_text(titleSptite, v15, 0LL),
         v17 = (System_String_array *)sub_B17014(string___TypeInfo, 2LL, v16),
-        v18 = LocalizationManager__Get((System_String_o *)StringLiteral_9781, 0LL),
+        v18 = LocalizationManager__Get((System_String_o *)StringLiteral_9781/*"OPTION_SMOOTHNESS_BUTTON_1"*/, 0LL),
         !v17) )
   {
 LABEL_25:
@@ -106,7 +106,7 @@ LABEL_25:
     goto LABEL_26;
   v17->m_Items[0] = (System_String_o *)v26;
   sub_B16F98((BattleServantConfConponent_o *)v17->m_Items, v26, v20, v21, v22, v23, v24, v25);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_9782, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_9782/*"OPTION_SMOOTHNESS_BUTTON_2"*/, 0LL);
   v32 = (System_Int32_array **)v18;
   if ( v18 )
   {

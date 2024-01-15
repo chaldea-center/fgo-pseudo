@@ -88,11 +88,11 @@ System_String_o *__fastcall EventBuddyPointResultComponent__GetFileNameFromRank(
   v5 = rank;
   if ( (byte_40FC58A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21610, *(_QWORD *)&rank);
+    sub_B16FFC(&StringLiteral_21610/*"rank_"*/, *(_QWORD *)&rank);
     byte_40FC58A = 1;
   }
   v3 = System_Int32__ToString((int32_t)&v5, 0LL);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_21610, v3, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_21610/*"rank_"*/, v3, 0LL);
 }
 
 

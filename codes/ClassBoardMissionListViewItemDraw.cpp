@@ -47,8 +47,8 @@ bool __fastcall ClassBoardMissionListViewItemDraw__SetItem(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, missionListViewItem);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_3016, v10);
-    sub_B16FFC(&StringLiteral_3015, v11);
+    sub_B16FFC(&StringLiteral_3016/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/, v10);
+    sub_B16FFC(&StringLiteral_3015/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/, v11);
     byte_40FB98D = 1;
   }
   conditionTitle = (UnityEngine_Object_o *)this->fields.conditionTitle;
@@ -65,7 +65,7 @@ bool __fastcall ClassBoardMissionListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3016, 0LL);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3016/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE"*/, 0LL);
     if ( !v13 )
       goto LABEL_32;
     UILabel__set_text(v13, v14, 0LL);
@@ -84,7 +84,7 @@ bool __fastcall ClassBoardMissionListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3015, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3015/*"CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG"*/, 0LL);
     if ( !v16 )
       goto LABEL_32;
     UILabel__set_text(v16, v17, 0LL);

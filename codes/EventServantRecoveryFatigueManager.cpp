@@ -223,23 +223,23 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   {
     sub_B16FFC(&EventServantRecoveryFatigueManager_EffectSet___TypeInfo, v1);
     sub_B16FFC(&EventServantRecoveryFatigueManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_18210, v9);
-    sub_B16FFC(&StringLiteral_21633, v10);
-    sub_B16FFC(&StringLiteral_18209, v11);
+    sub_B16FFC(&StringLiteral_18210/*"effect_prefab_2"*/, v9);
+    sub_B16FFC(&StringLiteral_21633/*"recovery{0}"*/, v10);
+    sub_B16FFC(&StringLiteral_18209/*"effect_prefab"*/, v11);
     byte_40FD1DB = 1;
   }
   *(_OWORD *)&v218[16] = 0u;
   static_fields = (BattleServantConfConponent_o *)EventServantRecoveryFatigueManager_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_21633;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21633;
+  v13 = (System_Int32_array **)StringLiteral_21633/*"recovery{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21633/*"recovery{0}"*/;
   sub_B16F98(static_fields, v13, v2, v3, v4, v5, v6, v7);
   EventServantRecoveryFatigueManager_TypeInfo->static_fields->defaultEventId = 80273;
   *(_QWORD *)&v218[16] = 0LL;
   v15 = sub_B17014(EventServantRecoveryFatigueManager_EffectSet___TypeInfo, 16LL, v14);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v16,
     v17,
     v18,
@@ -257,10 +257,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[16] = 0LL;
   *(_QWORD *)v218 = 0x200013991LL;
   *(_QWORD *)&v218[8] = 0xC2D6000000000000LL;
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v30,
     v31,
     v32,
@@ -276,10 +276,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[16] = 0LL;
   *(_QWORD *)v218 = 0x300013991LL;
   *(_QWORD *)&v218[8] = 0xC2AC0000C1000000LL;
-  *(_QWORD *)&v218[24] = StringLiteral_18210;
+  *(_QWORD *)&v218[24] = StringLiteral_18210/*"effect_prefab_2"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18210,
+    (System_Int32_array **)StringLiteral_18210/*"effect_prefab_2"*/,
     v41,
     v42,
     v43,
@@ -295,10 +295,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[16] = 0LL;
   *(_QWORD *)v218 = 0x400013991LL;
   *(_QWORD *)&v218[8] = 0xC2600000C2580000LL;
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v52,
     v53,
     v54,
@@ -314,10 +314,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[16] = 0LL;
   *(_QWORD *)v218 = 0x500013991LL;
   *(_QWORD *)&v218[8] = 0xC2C00000C1500000LL;
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v63,
     v64,
     v65,
@@ -333,10 +333,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x2000139BEuLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v74,
     v75,
     v76,
@@ -352,10 +352,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x3000139BEuLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v85,
     v86,
     v87,
@@ -371,10 +371,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x4000139BEuLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v96,
     v97,
     v98,
@@ -390,10 +390,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x5000139BEuLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v107,
     v108,
     v109,
@@ -409,10 +409,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x6000139BEuLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v118,
     v119,
     v120,
@@ -428,10 +428,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x200013A30uLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v129,
     v130,
     v131,
@@ -447,10 +447,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x300013A30uLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v140,
     v141,
     v142,
@@ -466,10 +466,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x400013A30uLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v151,
     v152,
     v153,
@@ -485,10 +485,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x600013A30uLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v162,
     v163,
     v164,
@@ -504,10 +504,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x700013A30uLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v173,
     v174,
     v175,
@@ -523,10 +523,10 @@ void __fastcall EventServantRecoveryFatigueManager___cctor(const MethodInfo *met
   *(_QWORD *)&v218[24] = 0LL;
   *(_OWORD *)v218 = 0x800013A30uLL;
   *(UnityEngine_Vector3_o *)&v218[8] = UnityEngine_Vector3__get_zero(0LL);
-  *(_QWORD *)&v218[24] = StringLiteral_18209;
+  *(_QWORD *)&v218[24] = StringLiteral_18209/*"effect_prefab"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v218[24],
-    (System_Int32_array **)StringLiteral_18209,
+    (System_Int32_array **)StringLiteral_18209/*"effect_prefab"*/,
     v184,
     v185,
     v186,
@@ -571,11 +571,11 @@ void __fastcall EventServantRecoveryFatigueManager___ctor(
 
   if ( (byte_40FD1DA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16382, method);
+    sub_B16FFC(&StringLiteral_16382/*"ar93"*/, method);
     byte_40FD1DA = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_16382;
-  this->fields.settingSe = (struct System_String_o *)StringLiteral_16382;
+  v9 = (System_Int32_array **)StringLiteral_16382/*"ar93"*/;
+  this->fields.settingSe = (struct System_String_o *)StringLiteral_16382/*"ar93"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.settingSe, v9, v2, v3, v4, v5, v6, v7);
   *(_QWORD *)&this->fields.openEffectTime = 0x400000003F800000LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
@@ -808,8 +808,8 @@ void __fastcall EventServantRecoveryFatigueManager__OnNoticeChangeBtn(
   if ( (byte_40FD1D5 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16940, v3);
-    sub_B16FFC(&StringLiteral_16939, v4);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, v3);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v4);
     byte_40FD1D5 = 1;
   }
   if ( !this->fields.isFatigueNotice )
@@ -823,7 +823,7 @@ void __fastcall EventServantRecoveryFatigueManager__OnNoticeChangeBtn(
     fatigueNoticeBtn = this->fields.fatigueNoticeBtn;
     if ( fatigueNoticeBtn )
     {
-      UIButton__set_normalSprite(fatigueNoticeBtn, (System_String_o *)StringLiteral_16940, 0LL);
+      UIButton__set_normalSprite(fatigueNoticeBtn, (System_String_o *)StringLiteral_16940/*"btn_on"*/, 0LL);
       v7 = 1;
       goto LABEL_14;
     }
@@ -839,7 +839,7 @@ LABEL_15:
   v5 = this->fields.fatigueNoticeBtn;
   if ( !v5 )
     goto LABEL_15;
-  UIButton__set_normalSprite(v5, (System_String_o *)StringLiteral_16939, 0LL);
+  UIButton__set_normalSprite(v5, (System_String_o *)StringLiteral_16939/*"btn_off"*/, 0LL);
   v7 = 0;
 LABEL_14:
   this->fields.isFatigueNotice = v7;
@@ -1210,8 +1210,8 @@ void __fastcall EventServantRecoveryFatigueManager__SetServantRecoveryFatigue(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventServantRecoveryFatigueItem__get_Item__, v24);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v25);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v26);
-    sub_B16FFC(&StringLiteral_2793, v27);
-    sub_B16FFC(&StringLiteral_16962, v28);
+    sub_B16FFC(&StringLiteral_2793/*"Bg/Sprite"*/, v27);
+    sub_B16FFC(&StringLiteral_16962/*"btn_txt_Complete_notification"*/, v28);
     byte_40FD1CE = 1;
   }
   memset(&v101, 0, sizeof(v101));
@@ -1245,7 +1245,7 @@ void __fastcall EventServantRecoveryFatigueManager__SetServantRecoveryFatigue(
   transform = UnityEngine_GameObject__get_transform(fatigueNotice, 0LL);
   if ( !transform )
     goto LABEL_80;
-  v42 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_2793, 0LL);
+  v42 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_2793/*"Bg/Sprite"*/, 0LL);
   if ( !v42 )
     goto LABEL_80;
   Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
@@ -1266,7 +1266,7 @@ void __fastcall EventServantRecoveryFatigueManager__SetServantRecoveryFatigue(
   {
     j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
   }
-  EventRewardRootComponent__setRewardInfoImg(v44, (System_String_o *)StringLiteral_16962, 0LL);
+  EventRewardRootComponent__setRewardInfoImg(v44, (System_String_o *)StringLiteral_16962/*"btn_txt_Complete_notification"*/, 0LL);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v44, 0LL);
   v104.fields.x = x;
   v104.fields.y = y;
@@ -1729,17 +1729,17 @@ void __fastcall EventServantRecoveryFatigueManager__setNoticeValue(
 
   if ( (byte_40FD1D4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40FD1D4 = 1;
   }
   fatigueNoticeBtn = this->fields.fatigueNoticeBtn;
   if ( !fatigueNoticeBtn )
     sub_B170D4();
   if ( this->fields.isFatigueNotice )
-    v5 = &StringLiteral_16940;
+    v5 = &StringLiteral_16940/*"btn_on"*/;
   else
-    v5 = &StringLiteral_16939;
+    v5 = &StringLiteral_16939/*"btn_off"*/;
   UIButton__set_normalSprite(fatigueNoticeBtn, (System_String_o *)*v5, 0LL);
 }
 

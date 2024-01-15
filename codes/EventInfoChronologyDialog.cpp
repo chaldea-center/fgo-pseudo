@@ -54,9 +54,9 @@ void __fastcall EventInfoChronologyDialog__Init(EventInfoChronologyDialog_o *thi
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_EventInfoChronologyComponent___, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_2977, v6);
-    sub_B16FFC(&StringLiteral_17358, v7);
-    sub_B16FFC(&StringLiteral_2976, v8);
+    sub_B16FFC(&StringLiteral_2977/*"CHRONOLOGY_DIALOG_TITLE"*/, v6);
+    sub_B16FFC(&StringLiteral_17358/*"chronology_line"*/, v7);
+    sub_B16FFC(&StringLiteral_2976/*"CHRONOLOGY_DIALOG_CLOSE"*/, v8);
     byte_40FB6FE = 1;
   }
   this->fields.state = 0;
@@ -71,12 +71,12 @@ void __fastcall EventInfoChronologyDialog__Init(EventInfoChronologyDialog_o *thi
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2977, 0LL);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_2977/*"CHRONOLOGY_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_30;
     UILabel__set_text(titleLabel, v16, 0LL);
     closeLabel = this->fields.closeLabel;
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2976, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2976/*"CHRONOLOGY_DIALOG_CLOSE"*/, 0LL);
     if ( !closeLabel )
       goto LABEL_30;
     UILabel__set_text(closeLabel, v18, 0LL);
@@ -86,12 +86,12 @@ void __fastcall EventInfoChronologyDialog__Init(EventInfoChronologyDialog_o *thi
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI(failySprite, (System_String_o *)StringLiteral_17358, 0LL);
+    AtlasManager__SetEventUI(failySprite, (System_String_o *)StringLiteral_17358/*"chronology_line"*/, 0LL);
     v20 = this->fields.failySprite;
     if ( !v20
       || (queenSprite = this->fields.queenSprite) == 0LL
       || (UISprite__set_atlas(queenSprite, v20->fields.mAtlas, 0LL), (v22 = this->fields.queenSprite) == 0LL)
-      || (UISprite__set_spriteName(v22, (System_String_o *)StringLiteral_17358, 0LL), (grid = this->fields.grid) == 0LL) )
+      || (UISprite__set_spriteName(v22, (System_String_o *)StringLiteral_17358/*"chronology_line"*/, 0LL), (grid = this->fields.grid) == 0LL) )
     {
 LABEL_30:
       sub_B170D4();

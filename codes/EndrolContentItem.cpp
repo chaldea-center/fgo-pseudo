@@ -51,7 +51,7 @@ void __fastcall EndrolContentItem__ChangeDisplayItems(EndrolContentItem_o *this,
 
   if ( (byte_40FE298 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FE298 = 1;
   }
   switch ( this->fields.nowType )
@@ -60,7 +60,7 @@ void __fastcall EndrolContentItem__ChangeDisplayItems(EndrolContentItem_o *this,
       imgSprite = this->fields.imgSprite;
       if ( !imgSprite )
         goto LABEL_56;
-      UISprite__set_spriteName(imgSprite, (System_String_o *)StringLiteral_1, 0LL);
+      UISprite__set_spriteName(imgSprite, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       v4 = (UnityEngine_Component_o *)this->fields.imgSprite;
       if ( !v4 )
         goto LABEL_56;
@@ -96,7 +96,7 @@ LABEL_14:
       v15 = this->fields.textLabel;
       if ( !v15 )
         goto LABEL_56;
-      UILabel__set_text(v15, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v15, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       v16 = (UnityEngine_Component_o *)this->fields.textLabel;
       if ( !v16 )
         goto LABEL_56;
@@ -137,11 +137,11 @@ LABEL_27:
       v24 = this->fields.imgSprite;
       if ( !v24 )
         goto LABEL_56;
-      UISprite__set_spriteName(v24, (System_String_o *)StringLiteral_1, 0LL);
+      UISprite__set_spriteName(v24, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       v25 = this->fields.textLabel;
       if ( !v25 )
         goto LABEL_56;
-      UILabel__set_text(v25, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v25, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       v26 = (UnityEngine_Component_o *)this->fields.imgSprite;
       if ( !v26 )
         goto LABEL_56;
@@ -181,7 +181,7 @@ LABEL_27:
       v35 = this->fields.imgSprite;
       if ( !v35 )
         goto LABEL_56;
-      UISprite__set_spriteName(v35, (System_String_o *)StringLiteral_1, 0LL);
+      UISprite__set_spriteName(v35, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       v36 = (UnityEngine_Component_o *)this->fields.imgSprite;
       if ( !v36 )
         goto LABEL_56;
@@ -236,7 +236,7 @@ void __fastcall EndrolContentItem__OnTriggerEnter(
 
   if ( (byte_40FE293 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5972, coll);
+    sub_B16FFC(&StringLiteral_5972/*"Endrol"*/, coll);
     byte_40FE293 = 1;
   }
   if ( !coll )
@@ -245,7 +245,7 @@ void __fastcall EndrolContentItem__OnTriggerEnter(
   if ( !gameObject )
     goto LABEL_9;
   tag = UnityEngine_GameObject__get_tag(gameObject, 0LL);
-  if ( System_String__op_Equality(tag, (System_String_o *)StringLiteral_5972, 0LL) )
+  if ( System_String__op_Equality(tag, (System_String_o *)StringLiteral_5972/*"Endrol"*/, 0LL) )
   {
     rootComponent = this->fields.rootComponent;
     if ( rootComponent )

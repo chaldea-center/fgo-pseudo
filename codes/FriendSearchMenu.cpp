@@ -229,29 +229,29 @@ void __fastcall FriendSearchMenu__Init(FriendSearchMenu_o *this, const MethodInf
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Collider___, method);
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIInput___, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FB288 = 1;
   }
   title1Label = this->fields.title1Label;
   if ( !title1Label )
     goto LABEL_11;
-  UILabel__set_text(title1Label, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(title1Label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   title2Label = this->fields.title2Label;
   if ( !title2Label )
     goto LABEL_11;
-  UILabel__set_text(title2Label, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(title2Label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   myAddressLabel = this->fields.myAddressLabel;
   if ( !myAddressLabel )
     goto LABEL_11;
-  UILabel__set_text(myAddressLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(myAddressLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   searchDataInput = (UnityEngine_Component_o *)this->fields.searchDataInput;
   if ( !searchDataInput
     || (Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                     searchDataInput,
                                     (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0LL
     || (v10 = (UIInput_o *)Component_WebViewObject,
-        UIInput__set_value((UIInput_o *)Component_WebViewObject, (System_String_o *)StringLiteral_1, 0LL),
-        UIInput__set_defaultText(v10, (System_String_o *)StringLiteral_1, 0LL),
+        UIInput__set_value((UIInput_o *)Component_WebViewObject, (System_String_o *)StringLiteral_1/*""*/, 0LL),
+        UIInput__set_defaultText(v10, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (v11 = (UnityEngine_Collider_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                            (UnityEngine_Component_o *)v10,
                                            (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL)
@@ -288,7 +288,7 @@ void __fastcall FriendSearchMenu__OnChangeServerInput(FriendSearchMenu_o *this, 
   if ( (byte_40FB28D & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIInput___, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FB28D = 1;
   }
   Chars = 0;
@@ -299,7 +299,7 @@ void __fastcall FriendSearchMenu__OnChangeServerInput(FriendSearchMenu_o *this, 
   if ( !Text )
     goto LABEL_21;
   v6 = Text;
-  v7 = (System_String_o *)StringLiteral_1;
+  v7 = (System_String_o *)StringLiteral_1/*""*/;
   if ( Text->fields.m_stringLength >= 1 )
   {
     v8 = 0;
@@ -405,7 +405,7 @@ void __fastcall FriendSearchMenu__OnClickCopy(FriendSearchMenu_o *this, const Me
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_3379, v8);
+    sub_B16FFC(&StringLiteral_3379/*"COPY_MY_ID"*/, v8);
     byte_40FB28E = 1;
   }
   if ( this->fields.state == 2 )
@@ -434,7 +434,7 @@ void __fastcall FriendSearchMenu__OnClickCopy(FriendSearchMenu_o *this, const Me
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3379, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3379/*"COPY_MY_ID"*/, 0LL);
     v17 = (NotificationDialog_ClickDelegate_o *)sub_B170CC(
                                                   NotificationDialog_ClickDelegate_TypeInfo,
                                                   v13,
@@ -571,17 +571,17 @@ void __fastcall FriendSearchMenu__Open(
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIInput___, v12);
     sub_B16FFC(&Method_FriendSearchMenu_EndOpen__, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_6473, v15);
-    sub_B16FFC(&StringLiteral_6475, v16);
-    sub_B16FFC(&StringLiteral_6476, v17);
-    sub_B16FFC(&StringLiteral_1, v18);
+    sub_B16FFC(&StringLiteral_6473/*"FRIEND_SEARCH_EXPLANATION"*/, v15);
+    sub_B16FFC(&StringLiteral_6475/*"FRIEND_SEARCH_TITLE1"*/, v16);
+    sub_B16FFC(&StringLiteral_6476/*"FRIEND_SEARCH_TITLE2"*/, v17);
+    sub_B16FFC(&StringLiteral_1/*""*/, v18);
     byte_40FB289 = 1;
   }
   p_searchId = (BattleServantConfConponent_o *)&this->fields.searchId;
   if ( isCodeClear || !p_searchId->klass )
   {
-    v20 = (System_Int32_array **)StringLiteral_1;
-    p_searchId->klass = (BattleServantConfConponent_c *)StringLiteral_1;
+    v20 = (System_Int32_array **)StringLiteral_1/*""*/;
+    p_searchId->klass = (BattleServantConfConponent_c *)StringLiteral_1/*""*/;
     sub_B16F98(p_searchId, v20, (System_String_array **)isCodeClear, (System_String_array **)method, v4, v5, v6, v7);
   }
   searchDataInput = (UnityEngine_Component_o *)this->fields.searchDataInput;
@@ -599,7 +599,7 @@ void __fastcall FriendSearchMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_6473, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_6473/*"FRIEND_SEARCH_EXPLANATION"*/, 0LL);
   UIInput__set_defaultText(v23, v24, 0LL);
   state = this->fields.state;
   if ( state == 3 )
@@ -634,12 +634,12 @@ void __fastcall FriendSearchMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_6475, 0LL);
+    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_6475/*"FRIEND_SEARCH_TITLE1"*/, 0LL);
     if ( title1Label )
     {
       UILabel__set_text(title1Label, v33, 0LL);
       title2Label = this->fields.title2Label;
-      v35 = LocalizationManager__Get((System_String_o *)StringLiteral_6476, 0LL);
+      v35 = LocalizationManager__Get((System_String_o *)StringLiteral_6476/*"FRIEND_SEARCH_TITLE2"*/, 0LL);
       if ( title2Label )
       {
         UILabel__set_text(title2Label, v35, 0LL);

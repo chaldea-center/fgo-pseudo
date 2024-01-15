@@ -525,7 +525,7 @@ void __fastcall FGOMeshExploder__CreateMeshPiece(
     sub_B16FFC(&System_Collections_Generic_List_Vector3__TypeInfo, v39);
     sub_B16FFC(&UnityEngine_Material___TypeInfo, v40);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v41);
-    sub_B16FFC(&StringLiteral_21380, v42);
+    sub_B16FFC(&StringLiteral_21380/*"piece"*/, v42);
     byte_40F9F2B = 1;
   }
   if ( !target )
@@ -785,7 +785,7 @@ LABEL_84:
   if ( v69->fields._size < 4 )
     return;
   v115 = (UnityEngine_GameObject_o *)sub_B170CC(UnityEngine_GameObject_TypeInfo, v85, v86, v87, v88);
-  UnityEngine_GameObject___ctor(v115, (System_String_o *)StringLiteral_21380, 0LL);
+  UnityEngine_GameObject___ctor(v115, (System_String_o *)StringLiteral_21380/*"piece"*/, 0LL);
   v116 = *(System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o **)&this->fields.exploded;
   if ( !v116 )
     goto LABEL_84;

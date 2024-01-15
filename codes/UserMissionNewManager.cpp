@@ -43,12 +43,12 @@ void __fastcall UserMissionNewManager___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo___ctor__, v1);
     sub_B16FFC(&System_Collections_Generic_List_UserMissionNewManager_UserMissionNewInfo__TypeInfo, v8);
     sub_B16FFC(&UserMissionNewManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_6592, v10);
+    sub_B16FFC(&StringLiteral_6592/*"Fgo_20160323_1"*/, v10);
     byte_40F9752 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)UserMissionNewManager_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_6592;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6592;
+  v12 = (System_Int32_array **)StringLiteral_6592/*"Fgo_20160323_1"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6592/*"Fgo_20160323_1"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = UserMissionNewManager_TypeInfo;
   UserMissionNewManager_TypeInfo->static_fields->isModfiy = 0;
@@ -823,7 +823,7 @@ System_String_o *__fastcall UserMissionNewManager__getSaveFileNameByEvent(int32_
   {
     sub_B16FFC(&AndroidUtil_TypeInfo, method);
     sub_B16FFC(&DatFileName_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_871, v4);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v4);
     byte_40F9748 = 1;
   }
   if ( (BYTE3(AndroidUtil_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AndroidUtil_TypeInfo->_2.cctor_finished )
@@ -832,7 +832,7 @@ System_String_o *__fastcall UserMissionNewManager__getSaveFileNameByEvent(int32_
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName_27471060 = DatFileName__getFileName_27471060(25, eventId, 0, 0LL);
-  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871, FileName_27471060, 0LL);
+  return System_String__Concat_43746016(DatFileSavePath, (System_String_o *)StringLiteral_871/*"/"*/, FileName_27471060, 0LL);
 }
 
 
@@ -855,14 +855,14 @@ void __fastcall UserMissionNewManager__setSaveFileName(int32_t eventId, const Me
   {
     sub_B16FFC(&DatFileName_TypeInfo, method);
     sub_B16FFC(&UserMissionNewManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_871, v4);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v4);
     byte_40F9747 = 1;
   }
   if ( (BYTE3(DatFileName_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName_27471060 = DatFileName__getFileName_27471060(25, eventId, 0, 0LL);
   v12 = (System_Int32_array **)System_String__Concat_43743732(
-                                 (System_String_o *)StringLiteral_871,
+                                 (System_String_o *)StringLiteral_871/*"/"*/,
                                  FileName_27471060,
                                  0LL);
   v13 = UserMissionNewManager_TypeInfo;

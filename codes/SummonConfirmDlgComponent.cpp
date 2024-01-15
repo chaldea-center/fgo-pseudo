@@ -254,55 +254,55 @@ void __fastcall SummonConfirmDlgComponent__Init(SummonConfirmDlgComponent_o *thi
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&SummonConfirmDlgComponent_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_3253, v5);
-    sub_B16FFC(&StringLiteral_3252, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v5);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F7CF4 = 1;
   }
   confirmTitleLabel = this->fields.confirmTitleLabel;
   if ( !confirmTitleLabel )
     goto LABEL_50;
-  UILabel__set_text(confirmTitleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(confirmTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   confirmDetailLabel = this->fields.confirmDetailLabel;
   if ( !confirmDetailLabel )
     goto LABEL_50;
-  UILabel__set_text(confirmDetailLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(confirmDetailLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   infoMsgLabel = this->fields.infoMsgLabel;
   if ( !infoMsgLabel )
     goto LABEL_50;
-  UILabel__set_text(infoMsgLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(infoMsgLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   msgLabel = this->fields.msgLabel;
   if ( !msgLabel )
     goto LABEL_50;
-  UILabel__set_text(msgLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(msgLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_50;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_50;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   extraTitleLabel = this->fields.extraTitleLabel;
   if ( !extraTitleLabel )
     goto LABEL_50;
-  UILabel__set_text(extraTitleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(extraTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   extraMessageLabel = this->fields.extraMessageLabel;
   if ( !extraMessageLabel )
     goto LABEL_50;
-  UILabel__set_text(extraMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(extraMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   confirmBtnLb = this->fields.confirmBtnLb;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !confirmBtnLb )
     goto LABEL_50;
   UILabel__set_text(confirmBtnLb, v17, 0LL);
   cancelBtnLb = this->fields.cancelBtnLb;
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_50;
   UILabel__set_text(cancelBtnLb, v19, 0LL);
@@ -521,8 +521,8 @@ void __fastcall SummonConfirmDlgComponent__OnEnable(SummonConfirmDlgComponent_o 
   if ( (byte_40F7D04 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_4203, v3);
-    sub_B16FFC(&StringLiteral_4205, v4);
+    sub_B16FFC(&StringLiteral_4203/*"ConfirmWindow/CloseButton"*/, v3);
+    sub_B16FFC(&StringLiteral_4205/*"ConfirmWindow/ConfirmBntInfo/CancleButton"*/, v4);
     byte_40F7D04 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -531,9 +531,9 @@ void __fastcall SummonConfirmDlgComponent__OnEnable(SummonConfirmDlgComponent_o 
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_4205, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_4205/*"ConfirmWindow/ConfirmBntInfo/CancleButton"*/, 0LL);
   v6 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_21111220(v6, (System_String_o *)StringLiteral_4203, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(v6, (System_String_o *)StringLiteral_4203/*"ConfirmWindow/CloseButton"*/, 0LL);
 }
 
 
@@ -642,8 +642,8 @@ void __fastcall SummonConfirmDlgComponent__Open(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v21);
     sub_B16FFC(&Method_SummonConfirmDlgComponent_EndOpen__, v22);
     sub_B16FFC(&SummonConfirmDlgComponent_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_3253, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
     byte_40F7CFC = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -674,7 +674,7 @@ void __fastcall SummonConfirmDlgComponent__Open(
     if ( title )
       v35 = title;
     else
-      v35 = (System_String_o *)StringLiteral_1;
+      v35 = (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v34, v35, 0LL);
   }
   confirmDetailLabel = (UnityEngine_Object_o *)this->fields.confirmDetailLabel;
@@ -688,7 +688,7 @@ void __fastcall SummonConfirmDlgComponent__Open(
     v37 = this->fields.confirmDetailLabel;
     if ( !v37 )
       goto LABEL_119;
-    v38 = msg ? msg : (System_String_o *)StringLiteral_1;
+    v38 = msg ? msg : (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v37, v38, 0LL);
     v39 = (UnityEngine_Component_o *)this->fields.confirmDetailLabel;
     if ( !v39 )
@@ -712,7 +712,7 @@ void __fastcall SummonConfirmDlgComponent__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      decideTxt = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+      decideTxt = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
     }
     if ( !v42 )
       goto LABEL_119;
@@ -1020,9 +1020,9 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmFree(
     sub_B16FFC(&SummonConfirmDlgComponent_TypeInfo, v9);
     sub_B16FFC(&SummonControl_TypeInfo, v10);
     sub_B16FFC(&UserGachaMaster_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_3311, v12);
-    sub_B16FFC(&StringLiteral_3310, v13);
-    sub_B16FFC(&StringLiteral_6465, v14);
+    sub_B16FFC(&StringLiteral_3311/*"CONFIRM_FREESUMMON_MSG"*/, v12);
+    sub_B16FFC(&StringLiteral_3310/*"CONFIRM_FREESUMMON_CAMPAIGN_MSG"*/, v13);
+    sub_B16FFC(&StringLiteral_6465/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_REMAIN_MSG"*/, v14);
     byte_40F7CFB = 1;
   }
   *(_QWORD *)remainNum = 0LL;
@@ -1064,7 +1064,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmFree(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3310, 0LL);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3310/*"CONFIRM_FREESUMMON_CAMPAIGN_MSG"*/, 0LL);
     v42 = maxNum;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42);
     v23 = System_String__Format_43739268(v21, v16, v22, 0LL);
@@ -1076,7 +1076,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmFree(
       goto LABEL_31;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
     campaignLabel = this->fields.campaignLabel;
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_6465, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_6465/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_REMAIN_MSG"*/, 0LL);
     v41 = remainNum[0];
     v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v41);
     v40 = maxNum;
@@ -1102,7 +1102,7 @@ LABEL_31:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3311, 0LL);
+    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3311/*"CONFIRM_FREESUMMON_MSG"*/, 0LL);
     v24 = System_String__Format(v38, v16, 0LL);
   }
   this->fields.state = 7;
@@ -1309,11 +1309,11 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmGroupSummon(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v27);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v28);
     sub_B16FFC(&Method_SummonConfirmDlgComponent_EndOpen__, v29);
-    sub_B16FFC(&StringLiteral_3315, v30);
-    sub_B16FFC(&StringLiteral_3253, v31);
-    sub_B16FFC(&StringLiteral_3313, v32);
-    sub_B16FFC(&StringLiteral_1, v33);
-    sub_B16FFC(&StringLiteral_3314, v34);
+    sub_B16FFC(&StringLiteral_3315/*"CONFIRM_GROUPSUMMON_STONEMSG"*/, v30);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v31);
+    sub_B16FFC(&StringLiteral_3313/*"CONFIRM_GROUPSUMMON_INFOMSG"*/, v32);
+    sub_B16FFC(&StringLiteral_1/*""*/, v33);
+    sub_B16FFC(&StringLiteral_3314/*"CONFIRM_GROUPSUMMON_INFOMSG_2"*/, v34);
     byte_40F7CFD = 1;
   }
   this->fields.callbackFunc = callback;
@@ -1398,7 +1398,7 @@ LABEL_15:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v58 = LocalizationManager__Get((System_String_o *)StringLiteral_3313, 0LL);
+        v58 = LocalizationManager__Get((System_String_o *)StringLiteral_3313/*"CONFIRM_GROUPSUMMON_INFOMSG"*/, 0LL);
         v60 = sub_B17014(object___TypeInfo, 4LL, v59);
         if ( v60 )
         {
@@ -1463,7 +1463,7 @@ LABEL_90:
   }
   if ( !v49 )
     goto LABEL_90;
-  age = (System_Int32_array **)StringLiteral_1;
+  age = (System_Int32_array **)StringLiteral_1/*""*/;
   if ( !System_String__IsNullOrEmpty(v49->fields.age, 0LL) )
     age = (System_Int32_array **)v49->fields.age;
   infoMsgLabel = this->fields.infoMsgLabel;
@@ -1472,7 +1472,7 @@ LABEL_90:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v90 = LocalizationManager__Get((System_String_o *)StringLiteral_3314, 0LL);
+  v90 = LocalizationManager__Get((System_String_o *)StringLiteral_3314/*"CONFIRM_GROUPSUMMON_INFOMSG_2"*/, 0LL);
   v60 = sub_B17014(object___TypeInfo, 4LL, v91);
   if ( !v60 )
     goto LABEL_90;
@@ -1539,7 +1539,7 @@ LABEL_59:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3315, 0LL);
+  v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3315/*"CONFIRM_GROUPSUMMON_STONEMSG"*/, 0LL);
   v120 = (System_Object_array *)sub_B17014(object___TypeInfo, 6LL, v119);
   v180 = v171;
   v60 = j_il2cpp_value_box_0(int_TypeInfo, &v180);
@@ -1634,7 +1634,7 @@ LABEL_91:
     goto LABEL_90;
   UILabel__set_text(msgLabel, v157, 0LL);
   confirmBtnLb = this->fields.confirmBtnLb;
-  v159 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v159 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !confirmBtnLb )
     goto LABEL_90;
   UILabel__set_text(confirmBtnLb, v159, 0LL);
@@ -1695,7 +1695,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmPoint(
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&havePointNum);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&SummonConfirmDlgComponent_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_3318, v15);
+    sub_B16FFC(&StringLiteral_3318/*"CONFIRM_POINTSUMMON_MSG"*/, v15);
     byte_40F7CFA = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1703,7 +1703,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmPoint(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3318, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3318/*"CONFIRM_POINTSUMMON_MSG"*/, 0LL);
   v31 = needPointNum;
   v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31);
   v30 = havePointNum;
@@ -1956,17 +1956,17 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmStone(
     sub_B16FFC(&object___TypeInfo, v31);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v32);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v33);
-    sub_B16FFC(&StringLiteral_3298, v34);
-    sub_B16FFC(&StringLiteral_3303, v35);
-    sub_B16FFC(&StringLiteral_3299, v36);
-    sub_B16FFC(&StringLiteral_3301, v37);
-    sub_B16FFC(&StringLiteral_3317, v38);
-    sub_B16FFC(&StringLiteral_3300, v39);
-    sub_B16FFC(&StringLiteral_12411, v40);
-    sub_B16FFC(&StringLiteral_3251, v41);
-    sub_B16FFC(&StringLiteral_12398, v42);
-    sub_B16FFC(&StringLiteral_12365, v43);
-    sub_B16FFC(&StringLiteral_3302, v44);
+    sub_B16FFC(&StringLiteral_3298/*"CONFIRM_BONUS_SELECT_SUMMON_LOW_MSG"*/, v34);
+    sub_B16FFC(&StringLiteral_3303/*"CONFIRM_CHARGESUMMON_PREFE_MSG"*/, v35);
+    sub_B16FFC(&StringLiteral_3299/*"CONFIRM_BONUS_SELECT_SUMMON_MSG"*/, v36);
+    sub_B16FFC(&StringLiteral_3301/*"CONFIRM_BONUS_SELECT_SUMMON_TITLE_{0}"*/, v37);
+    sub_B16FFC(&StringLiteral_3317/*"CONFIRM_PAYSUMMON_MSG"*/, v38);
+    sub_B16FFC(&StringLiteral_3300/*"CONFIRM_BONUS_SELECT_SUMMON_STONE_NUM"*/, v39);
+    sub_B16FFC(&StringLiteral_12411/*"SUMMON_STONEPAY_WARNING_MSG"*/, v40);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v41);
+    sub_B16FFC(&StringLiteral_12398/*"SUMMON_PU_STONEPAY_WARNING_MSG"*/, v42);
+    sub_B16FFC(&StringLiteral_12365/*"SUMMON_BONUS_SELECT_DIALOG_SUMMON"*/, v43);
+    sub_B16FFC(&StringLiteral_3302/*"CONFIRM_CHARGESUMMON_MSG"*/, v44);
     byte_40F7CF8 = 1;
   }
   this->fields.extraGiftEntList = giftEntList;
@@ -1986,7 +1986,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmStone(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v45 = &StringLiteral_3303;
+    v45 = &StringLiteral_3303/*"CONFIRM_CHARGESUMMON_PREFE_MSG"*/;
   }
   else if ( type == 7 )
   {
@@ -1995,7 +1995,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmStone(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v45 = &StringLiteral_3302;
+    v45 = &StringLiteral_3302/*"CONFIRM_CHARGESUMMON_MSG"*/;
   }
   else
   {
@@ -2004,7 +2004,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmStone(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v45 = &StringLiteral_3317;
+    v45 = &StringLiteral_3317/*"CONFIRM_PAYSUMMON_MSG"*/;
   }
   v46 = LocalizationManager__Get((System_String_o *)*v45, 0LL);
   v48 = (System_Object_array *)sub_B17014(object___TypeInfo, 8LL, v47);
@@ -2120,7 +2120,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmStone(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v100 = LocalizationManager__Get((System_String_o *)StringLiteral_12411, 0LL);
+  v100 = LocalizationManager__Get((System_String_o *)StringLiteral_12411/*"SUMMON_STONEPAY_WARNING_MSG"*/, 0LL);
   if ( isPickup )
   {
     v101 = haveChargeStoneNum;
@@ -2133,7 +2133,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmStone(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v106 = LocalizationManager__Get((System_String_o *)StringLiteral_12398, 0LL);
+    v106 = LocalizationManager__Get((System_String_o *)StringLiteral_12398/*"SUMMON_PU_STONEPAY_WARNING_MSG"*/, 0LL);
     DateTime = (Il2CppObject *)LocalizationManager__GetDateTime(summonCloseAt, 0LL);
     v108 = System_String__Format(v106, DateTime, 0LL);
     v100 = System_String__Concat_43743732(v100, v108, 0LL);
@@ -2166,20 +2166,20 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmStone(
     v114 = v24;
     v202 = gachaId;
     v115 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v202);
-    v116 = System_String__Format((System_String_o *)StringLiteral_3301, v115, 0LL);
+    v116 = System_String__Format((System_String_o *)StringLiteral_3301/*"CONFIRM_BONUS_SELECT_SUMMON_TITLE_{0}"*/, v115, 0LL);
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
     v117 = LocalizationManager__Get(v116, 0LL);
-    v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3299, 0LL);
+    v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3299/*"CONFIRM_BONUS_SELECT_SUMMON_MSG"*/, 0LL);
     v201 = price;
     v119 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v201);
     v200 = v114;
     v120 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v200);
     v121 = System_String__Format_43739268(v118, v119, v120, 0LL);
-    v122 = LocalizationManager__Get((System_String_o *)StringLiteral_3300, 0LL);
+    v122 = LocalizationManager__Get((System_String_o *)StringLiteral_3300/*"CONFIRM_BONUS_SELECT_SUMMON_STONE_NUM"*/, 0LL);
     v124 = sub_B17014(object___TypeInfo, 6LL, v123);
     v199 = v23;
     v49 = j_il2cpp_value_box_0(int_TypeInfo, &v199);
@@ -2238,7 +2238,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmStone(
                   *(_QWORD *)(v124 + 72) = v160;
                   sub_B16F98((BattleServantConfConponent_o *)(v124 + 72), v160, v51, v155, v156, v157, v158, v159);
                   v161 = System_String__Format_43822456(v122, (System_Object_array *)v124, 0LL);
-                  v162 = LocalizationManager__Get((System_String_o *)StringLiteral_3298, 0LL);
+                  v162 = LocalizationManager__Get((System_String_o *)StringLiteral_3298/*"CONFIRM_BONUS_SELECT_SUMMON_LOW_MSG"*/, 0LL);
                   v163 = (_QWORD **)Method_System_Array_Empty_object___;
                   v164 = **((_QWORD **)Method_System_Array_Empty_object___ + 6);
                   v165 = *(_WORD *)(v164 + 306);
@@ -2329,11 +2329,11 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmStone(
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v188 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+                    v188 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
                     if ( cancelBtnLb )
                     {
                       UILabel__set_text(cancelBtnLb, v188, 0LL);
-                      v189 = LocalizationManager__Get((System_String_o *)StringLiteral_12365, 0LL);
+                      v189 = LocalizationManager__Get((System_String_o *)StringLiteral_12365/*"SUMMON_BONUS_SELECT_DIALOG_SUMMON"*/, 0LL);
                       SummonConfirmDlgComponent__Open(this, 0LL, 0LL, v189, callback, 14.0, 0LL, v174, 0, 1, v190);
                       return;
                     }
@@ -2388,9 +2388,9 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmTicket(
   {
     sub_B16FFC(&int_TypeInfo, title);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_3319, v14);
-    sub_B16FFC(&StringLiteral_3320, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_3319/*"CONFIRM_TICKETSUMMON_MSG"*/, v14);
+    sub_B16FFC(&StringLiteral_3320/*"CONFIRM_TICKETSUMMON_MSG2"*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40F7CF9 = 1;
   }
   if ( num == 1 )
@@ -2400,7 +2400,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmTicket(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3319, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3319/*"CONFIRM_TICKETSUMMON_MSG"*/, 0LL);
     v28 = haveTicketNum;
     v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
     v27 = afterTicketNum;
@@ -2414,7 +2414,7 @@ void __fastcall SummonConfirmDlgComponent__OpenConfirmTicket(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3320, 0LL);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3320/*"CONFIRM_TICKETSUMMON_MSG2"*/, 0LL);
     v28 = num;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
     v27 = haveTicketNum;
@@ -2459,26 +2459,26 @@ void __fastcall SummonConfirmDlgComponent__OpenShortChargeStone(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&price);
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_12329, v11);
-    sub_B16FFC(&StringLiteral_12158, v12);
-    sub_B16FFC(&StringLiteral_340, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_12329/*"STONE_PURCHASE"*/, v11);
+    sub_B16FFC(&StringLiteral_12158/*"SHORT_HAVE_CHARGE_STONE"*/, v12);
+    sub_B16FFC(&StringLiteral_340/*"#,0"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40F7CF6 = 1;
   }
-  v15 = (System_String_o *)StringLiteral_1;
+  v15 = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_12158, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_12158/*"SHORT_HAVE_CHARGE_STONE"*/, 0LL);
   v24 = price;
   v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
   v23 = haveChargeStoneNum;
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23);
-  v19 = (Il2CppObject *)System_Int32__ToString_38275808((int32_t)&v25, (System_String_o *)StringLiteral_340, 0LL);
+  v19 = (Il2CppObject *)System_Int32__ToString_38275808((int32_t)&v25, (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
   v20 = System_String__Format_43744796(v16, v17, v18, v19, 0LL);
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_12329, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_12329/*"STONE_PURCHASE"*/, 0LL);
   this->fields.state = 2;
   SummonConfirmDlgComponent__Open(this, v15, v20, v21, callback, 14.0, 0LL, 0, 0, 0, v22);
 }
@@ -2505,8 +2505,8 @@ void __fastcall SummonConfirmDlgComponent__OpenShortPoint(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&havePoint);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_12159, v8);
-    sub_B16FFC(&StringLiteral_12157, v9);
+    sub_B16FFC(&StringLiteral_12159/*"SHORT_HAVE_POINT"*/, v8);
+    sub_B16FFC(&StringLiteral_12157/*"SHORT_DLG_TITLE"*/, v9);
     byte_40F7CF7 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2514,8 +2514,8 @@ void __fastcall SummonConfirmDlgComponent__OpenShortPoint(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12157, 0LL);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12159, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_12157/*"SHORT_DLG_TITLE"*/, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12159/*"SHORT_HAVE_POINT"*/, 0LL);
   v15 = havePoint;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
   v13 = System_String__Format(v11, v12, 0LL);
@@ -2547,9 +2547,9 @@ void __fastcall SummonConfirmDlgComponent__OpenShortStone(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&haveNum);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_12329, v8);
-    sub_B16FFC(&StringLiteral_12160, v9);
-    sub_B16FFC(&StringLiteral_12157, v10);
+    sub_B16FFC(&StringLiteral_12329/*"STONE_PURCHASE"*/, v8);
+    sub_B16FFC(&StringLiteral_12160/*"SHORT_HAVE_STONE"*/, v9);
+    sub_B16FFC(&StringLiteral_12157/*"SHORT_DLG_TITLE"*/, v10);
     byte_40F7CF5 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2557,12 +2557,12 @@ void __fastcall SummonConfirmDlgComponent__OpenShortStone(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12157, 0LL);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_12160, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12157/*"SHORT_DLG_TITLE"*/, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_12160/*"SHORT_HAVE_STONE"*/, 0LL);
   v17 = haveNum;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
   v14 = System_String__Format(v12, v13, 0LL);
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12329, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12329/*"STONE_PURCHASE"*/, 0LL);
   this->fields.state = 2;
   SummonConfirmDlgComponent__Open(this, v11, v14, v15, callback, 14.0, 0LL, 0, 0, 0, v16);
 }
@@ -2628,12 +2628,12 @@ void __fastcall SummonConfirmDlgComponent__SetBonusText(
     sub_B16FFC(&int_TypeInfo, v10);
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_12376, v13);
-    sub_B16FFC(&StringLiteral_12377, v14);
-    sub_B16FFC(&StringLiteral_12378, v15);
-    sub_B16FFC(&StringLiteral_12380, v16);
-    sub_B16FFC(&StringLiteral_12379, v17);
-    sub_B16FFC(&StringLiteral_1, v18);
+    sub_B16FFC(&StringLiteral_12376/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE"*/, v13);
+    sub_B16FFC(&StringLiteral_12377/*"SUMMON_CONFIRM_DLG_BONUS_TITLE"*/, v14);
+    sub_B16FFC(&StringLiteral_12378/*"SUMMON_CONFIRM_DLG_EXTRA_TITLE"*/, v15);
+    sub_B16FFC(&StringLiteral_12380/*"SUMMON_CONFIRM_DLG_NOT_GET_TITLE"*/, v16);
+    sub_B16FFC(&StringLiteral_12379/*"SUMMON_CONFIRM_DLG_NOT_GET_MSG"*/, v17);
+    sub_B16FFC(&StringLiteral_1/*""*/, v18);
     byte_40F7D00 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -2666,8 +2666,8 @@ void __fastcall SummonConfirmDlgComponent__SetBonusText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12378, 0LL);
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_12376, 0LL);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12378/*"SUMMON_CONFIRM_DLG_EXTRA_TITLE"*/, 0LL);
+    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_12376/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE"*/, 0LL);
     num = DataById->fields.num;
     v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num);
     v43 = System_String__Format(v41, v42, 0LL);
@@ -2703,8 +2703,8 @@ LABEL_37:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12377, 0LL);
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12376, 0LL);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12377/*"SUMMON_CONFIRM_DLG_BONUS_TITLE"*/, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12376/*"SUMMON_CONFIRM_DLG_BONUS_MESSAGE"*/, 0LL);
   v49 = DataById->fields.num;
   v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49);
   v30 = System_String__Format(v28, v29, 0LL);
@@ -2733,8 +2733,8 @@ LABEL_37:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12380, 0LL);
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_12379, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12380/*"SUMMON_CONFIRM_DLG_NOT_GET_TITLE"*/, 0LL);
+    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_12379/*"SUMMON_CONFIRM_DLG_NOT_GET_MSG"*/, 0LL);
     v48 = DataById->fields.num;
     v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v48);
     v31 = System_String__Format(v35, v36, 0LL);
@@ -3258,7 +3258,7 @@ void __fastcall SummonConfirmDlgComponent__setBtnInfoActive(
   if ( (byte_40F7CFE & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12357, v3);
+    sub_B16FFC(&StringLiteral_12357/*"SUMMON_AUTOSALE_BUTTON"*/, v3);
     byte_40F7CFE = 1;
   }
   state = this->fields.state;
@@ -3325,7 +3325,7 @@ LABEL_29:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12357, 0LL);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_12357/*"SUMMON_AUTOSALE_BUTTON"*/, 0LL);
     if ( !settingBtnLb )
       goto LABEL_31;
     UILabel__set_text(settingBtnLb, v9, 0LL);

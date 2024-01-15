@@ -101,9 +101,9 @@ void __fastcall EventInfoFortificationControl__CreateFortificationViewItem(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoFortificationViewItem__Add__, *(_QWORD *)&count);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_EventInfoFortificationViewItem___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_22132, v7);
-    sub_B16FFC(&StringLiteral_22134, v8);
-    sub_B16FFC(&StringLiteral_22131, v9);
+    sub_B16FFC(&StringLiteral_22132/*"spot_info_gauge_base_color"*/, v7);
+    sub_B16FFC(&StringLiteral_22134/*"spot_info_gauge_s"*/, v8);
+    sub_B16FFC(&StringLiteral_22131/*"spot_info_gauge_base"*/, v9);
     byte_40FA11B = 1;
   }
   if ( count >= 1 )
@@ -129,17 +129,17 @@ void __fastcall EventInfoFortificationControl__CreateFortificationViewItem(
         EventInfoUIBase__SetSpriteByLocalAtlas(
           (EventInfoUIBase_o *)this,
           (UISprite_o *)v13->fields.leftAnchor,
-          (System_String_o *)StringLiteral_22131,
+          (System_String_o *)StringLiteral_22131/*"spot_info_gauge_base"*/,
           0LL);
         EventInfoUIBase__SetSpriteByLocalAtlas(
           (EventInfoUIBase_o *)this,
           (UISprite_o *)v13->fields.rightAnchor,
-          (System_String_o *)StringLiteral_22134,
+          (System_String_o *)StringLiteral_22134/*"spot_info_gauge_s"*/,
           0LL);
         EventInfoUIBase__SetSpriteByLocalAtlas(
           (EventInfoUIBase_o *)this,
           (UISprite_o *)v13->fields.bottomAnchor,
-          (System_String_o *)StringLiteral_22132,
+          (System_String_o *)StringLiteral_22132/*"spot_info_gauge_base_color"*/,
           0LL);
         fortificationViewItemList = this->fields.fortificationViewItemList;
         if ( !fortificationViewItemList )
@@ -611,7 +611,7 @@ void __fastcall EventInfoFortificationControl__UpdateTotalRewardNum(
     sub_B16FFC(&DataManager_TypeInfo, v3);
     sub_B16FFC(&int_TypeInfo, v4);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_5635, v6);
+    sub_B16FFC(&StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, v6);
     byte_40FA11A = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -630,7 +630,7 @@ void __fastcall EventInfoFortificationControl__UpdateTotalRewardNum(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5635, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
   v14 = TotalFortificationRewardNum;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
   v13 = System_String__Format(v11, v12, 0LL);
@@ -649,7 +649,7 @@ void __fastcall EventInfoFortificationControl___Initialization_b__13_0(
 
   if ( (byte_40FA11E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18471, method);
+    sub_B16FFC(&StringLiteral_18471/*"event_progress_bg"*/, method);
     byte_40FA11E = 1;
   }
   eventUiEntity = this->fields.eventUiEntity;
@@ -658,7 +658,7 @@ void __fastcall EventInfoFortificationControl___Initialization_b__13_0(
         EventInfoUIBase__SetSpriteByLocalAtlas(
           (EventInfoUIBase_o *)this,
           this->fields.bgSprite,
-          (System_String_o *)StringLiteral_18471,
+          (System_String_o *)StringLiteral_18471/*"event_progress_bg"*/,
           0LL),
         (bgSprite = this->fields.bgSprite) == 0LL) )
   {

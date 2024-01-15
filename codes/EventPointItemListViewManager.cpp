@@ -38,7 +38,7 @@ void __fastcall EventPointItemListViewManager__CloseReplaseRewardDialog(
   v7 = eventId;
   if ( (byte_40FAC3A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5645, *(_QWORD *)&eventId);
+    sub_B16FFC(&StringLiteral_5645/*"EVENT_POINT_OPEN_REPLASE_REWARD_"*/, *(_QWORD *)&eventId);
     byte_40FAC3A = 1;
   }
   eventPointReplaseRewardDialog = this->fields.eventPointReplaseRewardDialog;
@@ -46,7 +46,7 @@ void __fastcall EventPointItemListViewManager__CloseReplaseRewardDialog(
     sub_B170D4();
   EventPointReplaseRewardDialog__Close_26647380(eventPointReplaseRewardDialog, 0LL, method);
   v5 = System_Int32__ToString((int32_t)&v7, 0LL);
-  v6 = System_String__Concat_43743732((System_String_o *)StringLiteral_5645, v5, 0LL);
+  v6 = System_String__Concat_43743732((System_String_o *)StringLiteral_5645/*"EVENT_POINT_OPEN_REPLASE_REWARD_"*/, v5, 0LL);
   UnityEngine_PlayerPrefs__SetInt(v6, 1, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -187,7 +187,7 @@ System_String_o *__fastcall EventPointItemListViewManager__GetGiftName(
     sub_B16FFC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v8);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FAC3C = 1;
   }
   if ( !gift )
@@ -234,7 +234,7 @@ System_String_o *__fastcall EventPointItemListViewManager__GetGiftName(
     goto LABEL_23;
   }
   if ( type != 1 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   v13 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !v13
     || (v14 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
@@ -303,20 +303,20 @@ System_String_o *__fastcall EventPointItemListViewManager__GetKindName(
   if ( (byte_40FAC3B & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, gift);
-    sub_B16FFC(&StringLiteral_5638, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_5638/*"EVENT_POINT_GIFT_ADD_COMMAND_CODE"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FAC3B = 1;
   }
   if ( !gift )
     sub_B170D4();
   if ( gift->fields.type != 11 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  return LocalizationManager__Get((System_String_o *)StringLiteral_5638, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_5638/*"EVENT_POINT_GIFT_ADD_COMMAND_CODE"*/, 0LL);
 }
 
 
@@ -741,13 +741,13 @@ void __fastcall EventPointItemListViewManager__OpenReplaseRewardDialog(
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v18);
     sub_B16FFC(&Method_EventPointItemListViewManager___c__DisplayClass20_0__OpenReplaseRewardDialog_b__0__, v19);
     sub_B16FFC(&EventPointItemListViewManager___c__DisplayClass20_0_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_26, v21);
-    sub_B16FFC(&StringLiteral_5645, v22);
-    sub_B16FFC(&StringLiteral_23674, v23);
-    sub_B16FFC(&StringLiteral_5637, v24);
-    sub_B16FFC(&StringLiteral_5639, v25);
-    sub_B16FFC(&StringLiteral_23700, v26);
-    sub_B16FFC(&StringLiteral_23699, v27);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v21);
+    sub_B16FFC(&StringLiteral_5645/*"EVENT_POINT_OPEN_REPLASE_REWARD_"*/, v22);
+    sub_B16FFC(&StringLiteral_23674/*"→　「"*/, v23);
+    sub_B16FFC(&StringLiteral_5637/*"EVENT_POINT_GIFT_ADD"*/, v24);
+    sub_B16FFC(&StringLiteral_5639/*"EVENT_POINT_GIFT_ADD_COUNT"*/, v25);
+    sub_B16FFC(&StringLiteral_23700/*"」"*/, v26);
+    sub_B16FFC(&StringLiteral_23699/*"「"*/, v27);
     byte_40FAC39 = 1;
   }
   v28 = sub_B170CC(
@@ -769,7 +769,7 @@ void __fastcall EventPointItemListViewManager__OpenReplaseRewardDialog(
     if ( *(_QWORD *)&eventRewardEntList->max_length )
     {
       v35 = System_Int32__ToString((int)v28 + 24, 0LL);
-      v36 = System_String__Concat_43743732((System_String_o *)StringLiteral_5645, v35, 0LL);
+      v36 = System_String__Concat_43743732((System_String_o *)StringLiteral_5645/*"EVENT_POINT_OPEN_REPLASE_REWARD_"*/, v35, 0LL);
       if ( !UnityEngine_PlayerPrefs__GetInt(v36, 0, 0LL) )
       {
         Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -869,7 +869,7 @@ LABEL_20:
                   goto LABEL_46;
                 DataById = (EventPointItemListViewManager_o *)System_Text_StringBuilder__Append_41914240(
                                                                 v56,
-                                                                (System_String_o *)StringLiteral_26,
+                                                                (System_String_o *)StringLiteral_26/*"\n"*/,
                                                                 0LL);
               }
               KindName = EventPointItemListViewManager__GetKindName(DataById, v59, v61);
@@ -879,9 +879,9 @@ LABEL_20:
                            v64);
               v66 = System_String__Concat_43747144(
                       KindName,
-                      (System_String_o *)StringLiteral_23699,
+                      (System_String_o *)StringLiteral_23699/*"「"*/,
                       GiftName,
-                      (System_String_o *)StringLiteral_23700,
+                      (System_String_o *)StringLiteral_23700/*"」"*/,
                       0LL);
               if ( !v66 )
                 goto LABEL_46;
@@ -889,7 +889,7 @@ LABEL_20:
               if ( !v56 )
                 goto LABEL_46;
               System_Text_StringBuilder__Append_41914240(v56, v67, 0LL);
-              appended = System_Text_StringBuilder__Append_41914240(v56, (System_String_o *)StringLiteral_23674, 0LL);
+              appended = System_Text_StringBuilder__Append_41914240(v56, (System_String_o *)StringLiteral_23674/*"→　「"*/, 0LL);
               v70 = EventPointItemListViewManager__GetGiftName((EventPointItemListViewManager_o *)appended, v62, v69);
               if ( !v62 )
                 goto LABEL_46;
@@ -903,8 +903,8 @@ LABEL_20:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v74 = LocalizationManager__Get((System_String_o *)StringLiteral_5639, 0LL);
-              v75 = System_String__Concat_43747144(v71, v73, v74, (System_String_o *)StringLiteral_23700, 0LL);
+              v74 = LocalizationManager__Get((System_String_o *)StringLiteral_5639/*"EVENT_POINT_GIFT_ADD_COUNT"*/, 0LL);
+              v75 = System_String__Concat_43747144(v71, v73, v74, (System_String_o *)StringLiteral_23700/*"」"*/, 0LL);
               System_Text_StringBuilder__Append_41914240(v56, v75, 0LL);
               size = v44->fields._size;
             }
@@ -912,7 +912,7 @@ LABEL_20:
           }
           eventPointReplaseRewardDialog = v88->fields.eventPointReplaseRewardDialog;
           v77 = System_Int32__ToString((int)v28 + 24, 0LL);
-          v78 = System_String__Concat_43743732((System_String_o *)StringLiteral_5637, v77, 0LL);
+          v78 = System_String__Concat_43743732((System_String_o *)StringLiteral_5637/*"EVENT_POINT_GIFT_ADD"*/, v77, 0LL);
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
           {
@@ -976,7 +976,7 @@ void __fastcall EventPointItemListViewManager__RequestInto(
     sub_B16FFC(&Method_EventPointItemListViewManager_OnMoveEnd__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventPointItemListViewObject__get_Count__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventPointItemListViewObject__get_Item__, v5);
-    sub_B16FFC(&StringLiteral_10004, v6);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v6);
     byte_40FAC43 = 1;
   }
   ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0LL);
@@ -1021,7 +1021,7 @@ LABEL_14:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.6,
       0LL);
   }
@@ -1063,7 +1063,7 @@ void __fastcall EventPointItemListViewManager__RequestListObject(
     sub_B16FFC(&Method_EventPointItemListViewManager_OnMoveEnd__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventPointItemListViewObject__GetEnumerator__, v11);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventPointItemListViewObject__get_Count__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FAC41 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -1078,7 +1078,7 @@ void __fastcall EventPointItemListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -1148,7 +1148,7 @@ void __fastcall EventPointItemListViewManager__RequestListObject_26640336(
     sub_B16FFC(&Method_EventPointItemListViewManager_OnMoveEnd__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventPointItemListViewObject__GetEnumerator__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventPointItemListViewObject__get_Count__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FAC42 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -1163,7 +1163,7 @@ void __fastcall EventPointItemListViewManager__RequestListObject_26640336(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -1239,7 +1239,7 @@ void __fastcall EventPointItemListViewManager__SetMode_26639368(
   if ( (byte_40FAC40 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&mode);
-    sub_B16FFC(&StringLiteral_11393, v5);
+    sub_B16FFC(&StringLiteral_11393/*"RequestInto"*/, v5);
     byte_40FAC40 = 1;
   }
   this->fields.initMode = mode;
@@ -1263,7 +1263,7 @@ void __fastcall EventPointItemListViewManager__SetMode_26639368(
     }
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_11393,
+      (System_String_o *)StringLiteral_11393/*"RequestInto"*/,
       0.0,
       0LL);
   }

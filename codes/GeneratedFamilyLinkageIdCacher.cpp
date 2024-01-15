@@ -83,14 +83,14 @@ System_String_o *__fastcall GeneratedFamilyLinkageIdCacher__CreateKeyOfFamilyLin
   if ( (byte_40FF55B & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&uniqueId);
-    sub_B16FFC(&StringLiteral_23549, v6);
+    sub_B16FFC(&StringLiteral_23549/*"{0}_{1}"*/, v6);
     byte_40FF55B = 1;
   }
   v11 = uniqueId;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11);
   v10 = linkageIndividuality;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return System_String__Format_43739268((System_String_o *)StringLiteral_23549, v7, v8, 0LL);
+  return System_String__Format_43739268((System_String_o *)StringLiteral_23549/*"{0}_{1}"*/, v7, v8, 0LL);
 }
 
 

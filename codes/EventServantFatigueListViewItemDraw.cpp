@@ -77,13 +77,13 @@ void __fastcall EventServantFatigueListViewItemDraw__SetFatigueMask(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11713, v6);
-    sub_B16FFC(&StringLiteral_11715, v7);
-    sub_B16FFC(&StringLiteral_11716, v8);
-    sub_B16FFC(&StringLiteral_11584, v9);
-    sub_B16FFC(&StringLiteral_11602, v10);
-    sub_B16FFC(&StringLiteral_11622, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_11713/*"SERVANT_RECOVER_CAN_NOT_SELECT"*/, v6);
+    sub_B16FFC(&StringLiteral_11715/*"SERVANT_SELECT_NO_SORTIE_FATIGURE"*/, v7);
+    sub_B16FFC(&StringLiteral_11716/*"SERVANT_SELECT_NO_SORTIE_FATIGURE_RECOVER"*/, v8);
+    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v9);
+    sub_B16FFC(&StringLiteral_11602/*"SELECT_NO_SORTIE_TITLE"*/, v10);
+    sub_B16FFC(&StringLiteral_11622/*"SERVANT_ALREADY_RECOVER_NOT_SELECT"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FD170 = 1;
   }
   if ( item )
@@ -110,7 +110,7 @@ void __fastcall EventServantFatigueListViewItemDraw__SetFatigueMask(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v19 = &StringLiteral_11584;
+      v19 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
 LABEL_24:
       v27 = LocalizationManager__Get((System_String_o *)*v19, 0LL);
       if ( v18 )
@@ -119,7 +119,7 @@ LABEL_24:
         statusLabelTime = this->fields.statusLabelTime;
         if ( statusLabelTime )
         {
-          UILabel__set_text(statusLabelTime, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(statusLabelTime, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           v29 = (UnityEngine_Component_o *)this->fields.statusLabel;
           if ( v29 )
           {
@@ -163,7 +163,7 @@ LABEL_75:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v19 = &StringLiteral_11713;
+        v19 = &StringLiteral_11713/*"SERVANT_RECOVER_CAN_NOT_SELECT"*/;
         goto LABEL_24;
       }
       fatigueTime = item->fields.fatigueTime;
@@ -192,7 +192,7 @@ LABEL_60:
         {
           if ( !v63 )
             goto LABEL_75;
-          v64 = (System_String_o *)StringLiteral_1;
+          v64 = (System_String_o *)StringLiteral_1/*""*/;
         }
         else
         {
@@ -201,7 +201,7 @@ LABEL_60:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v65 = LocalizationManager__Get((System_String_o *)StringLiteral_11713, 0LL);
+          v65 = LocalizationManager__Get((System_String_o *)StringLiteral_11713/*"SERVANT_RECOVER_CAN_NOT_SELECT"*/, 0LL);
           if ( !v63 )
             goto LABEL_75;
           v64 = v65;
@@ -213,7 +213,7 @@ LABEL_60:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v54 = LocalizationManager__Get((System_String_o *)StringLiteral_11622, 0LL);
+        v54 = LocalizationManager__Get((System_String_o *)StringLiteral_11622/*"SERVANT_ALREADY_RECOVER_NOT_SELECT"*/, 0LL);
         if ( !v43 )
           goto LABEL_75;
         goto LABEL_74;
@@ -236,12 +236,12 @@ LABEL_60:
       RestTime4 = LocalizationManager__GetRestTime4(v49, -1LL, 0LL);
       v51 = this->fields.statusLabel;
       v41 = (Il2CppObject *)RestTime4;
-      v52 = LocalizationManager__Get((System_String_o *)StringLiteral_11602, 0LL);
+      v52 = LocalizationManager__Get((System_String_o *)StringLiteral_11602/*"SELECT_NO_SORTIE_TITLE"*/, 0LL);
       if ( !v51 )
         goto LABEL_75;
       UILabel__set_text(v51, v52, 0LL);
       v43 = this->fields.statusLabelTime;
-      v44 = &StringLiteral_11716;
+      v44 = &StringLiteral_11716/*"SERVANT_SELECT_NO_SORTIE_FATIGURE_RECOVER"*/;
 LABEL_55:
       v53 = LocalizationManager__Get((System_String_o *)*v44, 0LL);
       v54 = System_String__Format(v53, v41, 0LL);
@@ -288,12 +288,12 @@ LABEL_74:
         v39 = LocalizationManager__GetRestTime4(v38, -1LL, 0LL);
         v40 = this->fields.statusLabel;
         v41 = (Il2CppObject *)v39;
-        v42 = LocalizationManager__Get((System_String_o *)StringLiteral_11602, 0LL);
+        v42 = LocalizationManager__Get((System_String_o *)StringLiteral_11602/*"SELECT_NO_SORTIE_TITLE"*/, 0LL);
         if ( !v40 )
           goto LABEL_75;
         UILabel__set_text(v40, v42, 0LL);
         v43 = this->fields.statusLabelTime;
-        v44 = &StringLiteral_11715;
+        v44 = &StringLiteral_11715/*"SERVANT_SELECT_NO_SORTIE_FATIGURE"*/;
         goto LABEL_55;
       }
     }
@@ -359,7 +359,7 @@ void __fastcall EventServantFatigueListViewItemDraw__SetItem(
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_11710, v9);
+    sub_B16FFC(&StringLiteral_11710/*"SERVANT_RECOVERY_FATIGUE_LIST_INDIVIDUALITY"*/, v9);
     byte_40FD16F = 1;
   }
   if ( item && mode )
@@ -393,7 +393,7 @@ void __fastcall EventServantFatigueListViewItemDraw__SetItem(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v18 = LocalizationManager__Get((System_String_o *)StringLiteral_11710, 0LL);
+                v18 = LocalizationManager__Get((System_String_o *)StringLiteral_11710/*"SERVANT_RECOVERY_FATIGUE_LIST_INDIVIDUALITY"*/, 0LL);
                 if ( individualityText )
                 {
                   UILabel__set_text(individualityText, v18, 0LL);

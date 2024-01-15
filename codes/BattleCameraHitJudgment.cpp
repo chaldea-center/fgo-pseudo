@@ -436,7 +436,7 @@ void __fastcall BattleCameraHitJudgment__BakeMesh(
     sub_B16FFC(&System_Predicate_int__TypeInfo, v15);
     sub_B16FFC(&Method_BattleCameraHitJudgment___c__DisplayClass28_0__BakeMesh_b__0__, v16);
     sub_B16FFC(&BattleCameraHitJudgment___c__DisplayClass28_0_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_16145, v18);
+    sub_B16FFC(&StringLiteral_16145/*"_xscale"*/, v18);
     byte_40FD460 = 1;
   }
   memset(&v64, 0, sizeof(v64));
@@ -558,12 +558,12 @@ LABEL_35:
                 material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)skinnedMesh, 0LL);
                 if ( !material )
                   goto LABEL_32;
-                if ( UnityEngine_Material__HasProperty_40721564(material, (System_String_o *)StringLiteral_16145, 0LL) )
+                if ( UnityEngine_Material__HasProperty_40721564(material, (System_String_o *)StringLiteral_16145/*"_xscale"*/, 0LL) )
                 {
                   v58 = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)skinnedMesh, 0LL);
                   if ( !v58 )
                     goto LABEL_32;
-                  Float = UnityEngine_Material__GetFloat(v58, (System_String_o *)StringLiteral_16145, 0LL);
+                  Float = UnityEngine_Material__GetFloat(v58, (System_String_o *)StringLiteral_16145/*"_xscale"*/, 0LL);
                   if ( !UnityEngine_Mathf__Approximately(Float, 1.0, 0LL) )
                   {
                     v60 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)meshCollider, 0LL);
@@ -1681,14 +1681,14 @@ System_Int32_array *__fastcall BattleCameraHitJudgment__get_XScaleApplySvtId(
   if ( (byte_40FD45C & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15512, v3);
+    sub_B16FFC(&StringLiteral_15512/*"X_SCALE_APPLY_SVTIDS"*/, v3);
     byte_40FD45C = 1;
   }
   xScaleApplySvtId = this->fields.xScaleApplySvtId;
   p_xScaleApplySvtId = (BattleServantConfConponent_o *)&this->fields.xScaleApplySvtId;
   if ( !xScaleApplySvtId )
   {
-    Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_15512, 0LL);
+    Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_15512/*"X_SCALE_APPLY_SVTIDS"*/, 0LL);
     if ( System_String__IsNullOrEmpty(Value, 0LL) )
       v8 = (System_Int32_array **)sub_B17014(int___TypeInfo, 0LL, v7);
     else

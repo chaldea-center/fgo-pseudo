@@ -786,8 +786,8 @@ void __fastcall BattleRootComponent__TransitionTerminalOrBattleScript(
     sub_B16FFC(&Method_BattleRootComponent___c__DisplayClass22_0__TransitionTerminalOrBattleScript_b__0__, v20);
     sub_B16FFC(&Method_BattleRootComponent___c__DisplayClass22_0__TransitionTerminalOrBattleScript_b__1__, v21);
     sub_B16FFC(&BattleRootComponent___c__DisplayClass22_0_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_2418, v23);
-    sub_B16FFC(&StringLiteral_2419, v24);
+    sub_B16FFC(&StringLiteral_2418/*"BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_MESSAGE"*/, v23);
+    sub_B16FFC(&StringLiteral_2419/*"BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_TITLE"*/, v24);
     byte_40F74F1 = 1;
   }
   entity = 0LL;
@@ -902,8 +902,8 @@ LABEL_67:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v70 = LocalizationManager__Get((System_String_o *)StringLiteral_2419, 0LL);
-      v71 = LocalizationManager__Get((System_String_o *)StringLiteral_2418, 0LL);
+      v70 = LocalizationManager__Get((System_String_o *)StringLiteral_2419/*"BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_TITLE"*/, 0LL);
+      v71 = LocalizationManager__Get((System_String_o *)StringLiteral_2418/*"BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_MESSAGE"*/, 0LL);
       v76 = (NotificationDialog_ClickDelegate_o *)sub_B170CC(
                                                     NotificationDialog_ClickDelegate_TypeInfo,
                                                     v72,
@@ -1102,11 +1102,11 @@ void __fastcall BattleRootComponent__beginInitialize(BattleRootComponent_o *this
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
     sub_B16FFC(&OptionManager_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__, v18);
-    sub_B16FFC(&StringLiteral_15312, v19);
+    sub_B16FFC(&StringLiteral_15312/*"WINGNAME"*/, v19);
     byte_40F74E8 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
-  Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_15312, 0LL);
+  Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_15312/*"WINGNAME"*/, 0LL);
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CatAndMouseGame_TypeInfo->_2.cctor_finished )
   {
@@ -1347,9 +1347,9 @@ void __fastcall BattleRootComponent__beginStartUp(
     sub_B16FFC(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v6);
     sub_B16FFC(&BattleLogic_LOGICTYPE___TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_20138, v9);
-    sub_B16FFC(&StringLiteral_10930, v10);
-    sub_B16FFC(&StringLiteral_21886, v11);
+    sub_B16FFC(&StringLiteral_20138/*"limitCount"*/, v9);
+    sub_B16FFC(&StringLiteral_10930/*"QUEST_START"*/, v10);
+    sub_B16FFC(&StringLiteral_21886/*"servantId"*/, v11);
     byte_40F74EC = 1;
   }
   if ( data )
@@ -1361,7 +1361,7 @@ void __fastcall BattleRootComponent__beginStartUp(
       Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
       Item = System_Collections_Generic_Dictionary_string__int___get_Item(
                (System_Collections_Generic_Dictionary_string__int__o *)data,
-               (System_String_o *)StringLiteral_21886,
+               (System_String_o *)StringLiteral_21886/*"servantId"*/,
                (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
       if ( !Instance )
         goto LABEL_23;
@@ -1369,7 +1369,7 @@ void __fastcall BattleRootComponent__beginStartUp(
       v15 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
       v16 = System_Collections_Generic_Dictionary_string__int___get_Item(
               (System_Collections_Generic_Dictionary_string__int__o *)data,
-              (System_String_o *)StringLiteral_20138,
+              (System_String_o *)StringLiteral_20138/*"limitCount"*/,
               (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
       if ( !v15 )
         goto LABEL_23;
@@ -1431,7 +1431,7 @@ LABEL_18:
   if ( !myFSM )
 LABEL_23:
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_10930, 0LL);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_10930/*"QUEST_START"*/, 0LL);
 }
 
 
@@ -1817,9 +1817,9 @@ bool __fastcall BattleRootComponent__LoadAsset_d__12__MoveNext(
     sub_B16FFC(&Method_BattleRootComponent___c__DisplayClass12_1__LoadAsset_b__3__, v20);
     sub_B16FFC(&BattleRootComponent___c__DisplayClass12_1_TypeInfo, v21);
     sub_B16FFC(&UnityEngine_WaitForEndOfFrame_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_2756, v23);
-    sub_B16FFC(&StringLiteral_2748, v24);
-    sub_B16FFC(&StringLiteral_14872, v25);
+    sub_B16FFC(&StringLiteral_2756/*"Battle/UniqueCamera/"*/, v23);
+    sub_B16FFC(&StringLiteral_2748/*"Battle/Field/{0}"*/, v24);
+    sub_B16FFC(&StringLiteral_14872/*"UniqueCameraPrefab"*/, v25);
     byte_40F719F = 1;
   }
   UniqueCameraId = 0;
@@ -1968,7 +1968,7 @@ LABEL_23:
     }
     v129 = v73->m_Items[v75 + 1];
     v76 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v129);
-    v77 = System_String__Format((System_String_o *)StringLiteral_2748, v76, 0LL);
+    v77 = System_String__Format((System_String_o *)StringLiteral_2748/*"Battle/Field/{0}"*/, v76, 0LL);
     v82 = p__8__1;
     v83 = (Il2CppObject *)*p__8__1;
     if ( !v83 )
@@ -2052,7 +2052,7 @@ LABEL_95:
     p__8__2 = &this->fields.__8__2;
     sub_B16F98(&this->fields.__8__2, v97);
     v98 = System_Int32__ToString((int32_t)&UniqueCameraId, 0LL);
-    v99 = System_String__Concat_43743732((System_String_o *)StringLiteral_2756, v98, 0LL);
+    v99 = System_String__Concat_43743732((System_String_o *)StringLiteral_2756/*"Battle/UniqueCamera/"*/, v98, 0LL);
     _8__2 = this->fields.__8__2;
     if ( !_8__2 )
       goto LABEL_102;
@@ -2113,7 +2113,7 @@ LABEL_13:
       v38 = _4__this->fields.perf;
       if ( !v38 )
         goto LABEL_102;
-      BattlePerformance__loadStorageObjectCamera(v38, uniqueCameraData, (System_String_o *)StringLiteral_14872, 0LL);
+      BattlePerformance__loadStorageObjectCamera(v38, uniqueCameraData, (System_String_o *)StringLiteral_14872/*"UniqueCameraPrefab"*/, 0LL);
       *p__8__2 = 0LL;
       sub_B16F98(p__8__2, 0LL);
     }
@@ -2499,11 +2499,11 @@ bool __fastcall BattleRootComponent__LoadAssetsIndependentToMainOne_d__13__MoveN
     sub_B16FFC(&Method_BattleRootComponent___c__DisplayClass13_0__LoadAssetsIndependentToMainOne_b__7__, v47);
     sub_B16FFC(&Method_BattleRootComponent___c__DisplayClass13_0__LoadAssetsIndependentToMainOne_b__8__, v48);
     sub_B16FFC(&BattleRootComponent___c__DisplayClass13_0_TypeInfo, v49);
-    sub_B16FFC(&StringLiteral_2431, v50);
-    sub_B16FFC(&StringLiteral_2426, v51);
-    sub_B16FFC(&StringLiteral_2746, v52);
-    sub_B16FFC(&StringLiteral_2747, v53);
-    sub_B16FFC(&StringLiteral_2740, v54);
+    sub_B16FFC(&StringLiteral_2431/*"BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE"*/, v50);
+    sub_B16FFC(&StringLiteral_2426/*"BATTLE_EFFECT_ID_3003001"*/, v51);
+    sub_B16FFC(&StringLiteral_2746/*"Battle/DropEffect/{0}"*/, v52);
+    sub_B16FFC(&StringLiteral_2747/*"Battle/Effect/"*/, v53);
+    sub_B16FFC(&StringLiteral_2740/*"Battle"*/, v54);
     byte_40F71A0 = 1;
   }
   v176 = 0;
@@ -2668,7 +2668,7 @@ LABEL_120:
       goto LABEL_48;
     AssetStorageLoadWrapper__LoadAudioAssetStorage(
       assetStorageLoadWrapper,
-      (System_String_o *)StringLiteral_2740,
+      (System_String_o *)StringLiteral_2740/*"Battle"*/,
       v116,
       1,
       0LL);
@@ -2689,7 +2689,7 @@ LABEL_120:
       {
         LODWORD(v170.fields._set) = v173.fields._current;
         v118 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v170);
-        v119 = System_String__Format((System_String_o *)StringLiteral_2746, v118, 0LL);
+        v119 = System_String__Format((System_String_o *)StringLiteral_2746/*"Battle/DropEffect/{0}"*/, v118, 0LL);
         _8__1 = (Il2CppObject *)this->fields.__8__1;
         ++this->fields._loadCntMax_5__2;
         if ( !_8__1 )
@@ -2877,7 +2877,7 @@ LABEL_48:
         }
         v176 = BattleEffectUtility__setBattleEffectId(BattleEffectId, 0LL);
         v63 = System_Int32__ToString((int32_t)&v176, 0LL);
-        v64 = System_String__Concat_43743732((System_String_o *)StringLiteral_2747, v63, 0LL);
+        v64 = System_String__Concat_43743732((System_String_o *)StringLiteral_2747/*"Battle/Effect/"*/, v63, 0LL);
         ++this->fields._loadCntMax_5__2;
         if ( _4__this )
         {
@@ -2925,14 +2925,14 @@ LABEL_48:
                 (const MethodInfo_2F0F98C *)Method_System_Collections_Generic_List_int___ctor___66737200);
               if ( v73 )
               {
-                Value = ConstantMaster__GetValue(v73, (System_String_o *)StringLiteral_2431, 0LL);
+                Value = ConstantMaster__GetValue(v73, (System_String_o *)StringLiteral_2431/*"BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE"*/, 0LL);
                 if ( v80 )
                 {
                   System_Collections_Generic_List_int___Add(
                     v80,
                     Value,
                     (const MethodInfo_2F104F0 *)Method_System_Collections_Generic_List_int__Add__);
-                  v82 = ConstantMaster__GetValue(v73, (System_String_o *)StringLiteral_2426, 0LL);
+                  v82 = ConstantMaster__GetValue(v73, (System_String_o *)StringLiteral_2426/*"BATTLE_EFFECT_ID_3003001"*/, 0LL);
                   System_Collections_Generic_List_int___Add(
                     v80,
                     v82,

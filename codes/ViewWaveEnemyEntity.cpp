@@ -158,7 +158,7 @@ System_String_o *__fastcall ViewWaveEnemyEntity__GetBattleName(ViewWaveEnemyEnti
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
     sub_B16FFC(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v8);
     sub_B16FFC(&SingletonTemplate_clsQuestCheck__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_9280, v10);
+    sub_B16FFC(&StringLiteral_9280/*"NONE"*/, v10);
     byte_40FF72F = 1;
   }
   entity = 0LL;
@@ -205,7 +205,7 @@ System_String_o *__fastcall ViewWaveEnemyEntity__GetBattleName(ViewWaveEnemyEnti
   {
 LABEL_22:
     name = this->fields.name;
-    if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_9280, 0LL) )
+    if ( !System_String__op_Equality(name, (System_String_o *)StringLiteral_9280/*"NONE"*/, 0LL) )
       return name;
     Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
@@ -241,10 +241,10 @@ int32_t __fastcall ViewWaveEnemyEntity__GetEnemyNameEffect(ViewWaveEnemyEntity_o
 
   if ( (byte_40FF730 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18299, method);
+    sub_B16FFC(&StringLiteral_18299/*"enemyNameEffect"*/, method);
     byte_40FF730 = 1;
   }
-  return ViewWaveEnemyEntity__GetScript(this, (System_String_o *)StringLiteral_18299, 0, v2);
+  return ViewWaveEnemyEntity__GetScript(this, (System_String_o *)StringLiteral_18299/*"enemyNameEffect"*/, 0, v2);
 }
 
 
@@ -298,10 +298,10 @@ bool __fastcall ViewWaveEnemyEntity__IsDispDanger(ViewWaveEnemyEntity_o *this, c
 {
   if ( (byte_40FF732 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23065, method);
+    sub_B16FFC(&StringLiteral_23065/*"viewWaveEnemyDispDanger"*/, method);
     byte_40FF732 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.enemyScript, (System_String_o *)StringLiteral_23065, 0, 0LL) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.enemyScript, (System_String_o *)StringLiteral_23065/*"viewWaveEnemyDispDanger"*/, 0, 0LL) > 0;
 }
 
 

@@ -197,13 +197,13 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
     sub_B16FFC(&UnityEngine_Material_TypeInfo, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
     sub_B16FFC(&UnityEngine_Texture2D_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_16037, v6);
-    sub_B16FFC(&StringLiteral_16023, v7);
-    sub_B16FFC(&StringLiteral_15939, v8);
-    sub_B16FFC(&StringLiteral_16076, v9);
-    sub_B16FFC(&StringLiteral_15985, v10);
-    sub_B16FFC(&StringLiteral_16020, v11);
-    sub_B16FFC(&StringLiteral_15965, v12);
+    sub_B16FFC(&StringLiteral_16037/*"_Weights"*/, v6);
+    sub_B16FFC(&StringLiteral_16023/*"_Threshold"*/, v7);
+    sub_B16FFC(&StringLiteral_15939/*"_Intensity"*/, v8);
+    sub_B16FFC(&StringLiteral_16076/*"_customColor0"*/, v9);
+    sub_B16FFC(&StringLiteral_15985/*"_Rect"*/, v10);
+    sub_B16FFC(&StringLiteral_16020/*"_Thickness"*/, v11);
+    sub_B16FFC(&StringLiteral_15965/*"_Offset"*/, v12);
     byte_40FAD8B = 1;
   }
   *(_QWORD *)&methoda.slot = 0LL;
@@ -238,29 +238,29 @@ void __fastcall FGOEdgeBlur__Blur(FGOEdgeBlur_o *this, const MethodInfo *method)
       goto LABEL_88;
     *(_QWORD *)&v116.fields.x = methoda.methodPointer;
     *(_QWORD *)&v116.fields.z = methoda.invoker_method;
-    UnityEngine_Material__SetVector(material, (System_String_o *)StringLiteral_15985, v116, 0LL);
+    UnityEngine_Material__SetVector(material, (System_String_o *)StringLiteral_15985/*"_Rect"*/, v116, 0LL);
     v26 = this->fields._material;
     if ( !v26 )
       goto LABEL_88;
-    UnityEngine_Material__SetFloat(v26, (System_String_o *)StringLiteral_16020, this->fields._thickness, 0LL);
+    UnityEngine_Material__SetFloat(v26, (System_String_o *)StringLiteral_16020/*"_Thickness"*/, this->fields._thickness, 0LL);
     v27 = this->fields._material;
     if ( !v27 )
       goto LABEL_88;
-    UnityEngine_Material__SetFloat(v27, (System_String_o *)StringLiteral_16023, this->fields._threshold, 0LL);
+    UnityEngine_Material__SetFloat(v27, (System_String_o *)StringLiteral_16023/*"_Threshold"*/, this->fields._threshold, 0LL);
     v28 = this->fields._material;
     if ( !v28 )
       goto LABEL_88;
-    UnityEngine_Material__SetFloat(v28, (System_String_o *)StringLiteral_15939, this->fields._intensity, 0LL);
+    UnityEngine_Material__SetFloat(v28, (System_String_o *)StringLiteral_15939/*"_Intensity"*/, this->fields._intensity, 0LL);
     v29 = this->fields._material;
     if ( !v29 )
       goto LABEL_88;
-    UnityEngine_Material__SetFloat(v29, (System_String_o *)StringLiteral_15965, this->fields._offset, 0LL);
+    UnityEngine_Material__SetFloat(v29, (System_String_o *)StringLiteral_15965/*"_Offset"*/, this->fields._offset, 0LL);
     v30 = this->fields._material;
     if ( !v30 )
       goto LABEL_88;
     UnityEngine_Material__SetFloatArray_40724896(
       v30,
-      (System_String_o *)StringLiteral_16037,
+      (System_String_o *)StringLiteral_16037/*"_Weights"*/,
       this->fields._weights,
       0LL);
     v31 = this->fields._texture;
@@ -393,13 +393,13 @@ LABEL_52:
     if ( !v74 )
       goto LABEL_88;
     UnityEngine_Material__set_mainTexture(v74, (UnityEngine_Texture_o *)this->fields._rt0, 0LL);
-    HasProperty_40721564 = UnityEngine_Material__HasProperty_40721564(v74, (System_String_o *)StringLiteral_16076, 0LL);
+    HasProperty_40721564 = UnityEngine_Material__HasProperty_40721564(v74, (System_String_o *)StringLiteral_16076/*"_customColor0"*/, 0LL);
     r = this->fields._color.fields.r;
     g = this->fields._color.fields.g;
     b = this->fields._color.fields.b;
     a = this->fields._color.fields.a;
     if ( HasProperty_40721564 )
-      UnityEngine_Material__SetColor(v74, (System_String_o *)StringLiteral_16076, *(UnityEngine_Color_o *)&r, 0LL);
+      UnityEngine_Material__SetColor(v74, (System_String_o *)StringLiteral_16076/*"_customColor0"*/, *(UnityEngine_Color_o *)&r, 0LL);
     else
       UnityEngine_Material__set_color(v74, *(UnityEngine_Color_o *)&r, 0LL);
     renderer = this->fields._renderer;

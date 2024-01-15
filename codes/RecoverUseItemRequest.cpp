@@ -18,12 +18,12 @@ void __fastcall RecoverUseItemRequest__beginRequest(
 
   if ( (byte_40FD2D3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21083, *(_QWORD *)&recoverId);
-    sub_B16FFC(&StringLiteral_21632, v7);
+    sub_B16FFC(&StringLiteral_21083/*"num"*/, *(_QWORD *)&recoverId);
+    sub_B16FFC(&StringLiteral_21632/*"recoverId"*/, v7);
     byte_40FD2D3 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21632, recoverId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21083, num, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21632/*"recoverId"*/, recoverId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21083/*"num"*/, num, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -36,7 +36,7 @@ System_String_o *__fastcall RecoverUseItemRequest__getURL(RecoverUseItemRequest_
   if ( (byte_40FD2D2 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19930, v2);
+    sub_B16FFC(&StringLiteral_19930/*"item/recover"*/, v2);
     byte_40FD2D2 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -45,7 +45,7 @@ System_String_o *__fastcall RecoverUseItemRequest__getURL(RecoverUseItemRequest_
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_19930, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_19930/*"item/recover"*/, 0LL);
 }
 
 
@@ -64,8 +64,8 @@ void __fastcall RecoverUseItemRequest__requestCompleted(
   if ( (byte_40FD2D4 & 1) == 0 )
   {
     sub_B16FFC(&ResponseCommandKind_TypeInfo, responseList);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40FD2D4 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -79,14 +79,14 @@ void __fastcall RecoverUseItemRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = (System_String_o **)&StringLiteral_21129;
+    v10 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = (System_String_o **)&StringLiteral_20980;
+    v10 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
   }
   NetworkManager_ResultCallbackFunc__Invoke(CallBack, *v10, 0LL);
 }

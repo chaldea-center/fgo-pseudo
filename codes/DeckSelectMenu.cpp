@@ -336,9 +336,9 @@ void __fastcall DeckSelectMenu__Open(
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, v13);
     sub_B16FFC(&Method_DeckSelectMenu_EndOpen__, v14);
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_10296, v16);
-    sub_B16FFC(&StringLiteral_10298, v17);
-    sub_B16FFC(&StringLiteral_10297, v18);
+    sub_B16FFC(&StringLiteral_10296/*"PARTY_ORGANIZATION_DECK_SELECT_CANCEL"*/, v16);
+    sub_B16FFC(&StringLiteral_10298/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_10297/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL"*/, v18);
     byte_40F5A7E = 1;
   }
   state = this->fields.state;
@@ -400,12 +400,12 @@ void __fastcall DeckSelectMenu__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_10298, 0LL);
+      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_10298/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE"*/, 0LL);
       if ( !titleLabel )
         goto LABEL_28;
       UILabel__set_text(titleLabel, v28, 0LL);
       titleDetailLabel = this->fields.titleDetailLabel;
-      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10297, 0LL);
+      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10297/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL"*/, 0LL);
       if ( !titleDetailLabel )
         goto LABEL_28;
       UILabel__set_text(titleDetailLabel, v30, 0LL);
@@ -416,7 +416,7 @@ void __fastcall DeckSelectMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_10296, 0LL);
+    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_10296/*"PARTY_ORGANIZATION_DECK_SELECT_CANCEL"*/, 0LL);
     if ( cancelLabel )
     {
       UILabel__set_text(cancelLabel, v32, 0LL);

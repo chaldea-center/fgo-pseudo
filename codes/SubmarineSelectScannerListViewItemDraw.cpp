@@ -62,12 +62,12 @@ System_String_o *__fastcall SubmarineSelectScannerListViewItemDraw__GetEventUIAs
   if ( (byte_40F7CCF & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6189, v3);
+    sub_B16FFC(&StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v3);
     byte_40F7CCF = 1;
   }
   v6 = eventId;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
-  return System_String__Format((System_String_o *)StringLiteral_6189, v4, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v4, 0LL);
 }
 
 
@@ -194,8 +194,8 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__LoadLocalAtlas(
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Add__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_23407, v9);
-    sub_B16FFC(&StringLiteral_5361, v10);
+    sub_B16FFC(&StringLiteral_23407/*"{0:D2}"*/, v9);
+    sub_B16FFC(&StringLiteral_5361/*"DownloadEventUIAtlas{0}{1}"*/, v10);
     byte_40F7CD3 = 1;
   }
   if ( this->fields.eventAssetData )
@@ -211,10 +211,10 @@ LABEL_18:
     {
       v22 = i;
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
-      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407, v15, 0LL);
+      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407/*"{0:D2}"*/, v15, 0LL);
       v21 = eventId;
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
-      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_5361, v17, v16, 0LL);
+      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_5361/*"DownloadEventUIAtlas{0}{1}"*/, v17, v16, 0LL);
       GameObjectFromEventUIAssetData = (UnityEngine_Object_o *)SubmarineSelectScannerListViewItemDraw__GetGameObjectFromEventUIAssetData(
                                                                  this,
                                                                  v18,
@@ -455,8 +455,8 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__UpdateUi(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
     sub_B16FFC(&Method_SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0__UpdateUi_b__0__, v11);
     sub_B16FFC(&SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_5711, v13);
-    sub_B16FFC(&StringLiteral_5714, v14);
+    sub_B16FFC(&StringLiteral_5711/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_PREFIX"*/, v13);
+    sub_B16FFC(&StringLiteral_5714/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/, v14);
     byte_40F7CCE = 1;
   }
   v15 = sub_B170CC(SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_TypeInfo, item, method, v3, v4);
@@ -514,7 +514,7 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__UpdateUi(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v44 = &StringLiteral_5711;
+    v44 = &StringLiteral_5711/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_PREFIX"*/;
   }
   else
   {
@@ -523,7 +523,7 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__UpdateUi(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v44 = &StringLiteral_5714;
+    v44 = &StringLiteral_5714/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/;
   }
   v45 = LocalizationManager__Get((System_String_o *)*v44, 0LL);
   if ( !itemDescLabel
@@ -565,8 +565,8 @@ void __fastcall SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0___U
   if ( (byte_40F7A7D & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21804, v3);
-    sub_B16FFC(&StringLiteral_19432, v4);
+    sub_B16FFC(&StringLiteral_21804/*"scan_icon_{0}"*/, v3);
+    sub_B16FFC(&StringLiteral_19432/*"img_list_bg02"*/, v4);
     byte_40F7A7D = 1;
   }
   item = this->fields.item;
@@ -577,7 +577,7 @@ void __fastcall SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0___U
     || (SubmarineSelectScannerListViewItemDraw__SetSpriteByLocalAtlas(
           v7,
           v7->fields.baseSpirte,
-          (System_String_o *)StringLiteral_19432,
+          (System_String_o *)StringLiteral_19432/*"img_list_bg02"*/,
           0LL),
         (v8 = this->fields.__4__this) == 0LL)
     || (v9 = this->fields.item) == 0LL )
@@ -587,7 +587,7 @@ void __fastcall SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0___U
   icon = v8->fields.icon;
   iconImageId_k__BackingField = v9->fields._iconImageId_k__BackingField;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconImageId_k__BackingField);
-  v12 = System_String__Format((System_String_o *)StringLiteral_21804, v11, 0LL);
+  v12 = System_String__Format((System_String_o *)StringLiteral_21804/*"scan_icon_{0}"*/, v11, 0LL);
   SubmarineSelectScannerListViewItemDraw__SetSpriteByLocalAtlas(v8, icon, v12, 0LL);
 }
 

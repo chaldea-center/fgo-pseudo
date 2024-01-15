@@ -146,7 +146,7 @@ void __fastcall BattleResultBondsDeckPerWaveComponent__SetWaveCount(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&current);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_2480, v8);
+    sub_B16FFC(&StringLiteral_2480/*"BATTLE_RESULT_BONDS_WAVE_COUNT"*/, v8);
     byte_40FA8EA = 1;
   }
   waveLabel = this->fields.waveLabel;
@@ -159,7 +159,7 @@ void __fastcall BattleResultBondsDeckPerWaveComponent__SetWaveCount(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_2480, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_2480/*"BATTLE_RESULT_BONDS_WAVE_COUNT"*/, 0LL);
   v21 = current;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
   v20 = max;

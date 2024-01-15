@@ -17,7 +17,7 @@ void __fastcall PresentBoxNotificationMenu__BackBuyBankItem(
 {
   if ( (byte_40F9FE6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10004, method);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, method);
     byte_40F9FE6 = 1;
   }
   if ( this->fields.state == 4 )
@@ -25,7 +25,7 @@ void __fastcall PresentBoxNotificationMenu__BackBuyBankItem(
     this->fields.state = 5;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.1,
       0LL);
   }
@@ -112,16 +112,16 @@ void __fastcall PresentBoxNotificationMenu__Init(PresentBoxNotificationMenu_o *t
 
   if ( (byte_40F9FE3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9FE3 = 1;
   }
   message1Label = this->fields.message1Label;
   if ( !message1Label
-    || (UILabel__set_text(message1Label, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(message1Label, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (message2Label = this->fields.message2Label) == 0LL)
-    || (UILabel__set_text(message2Label, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(message2Label, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL)
-    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (ItemListViewManager = this->fields.ItemListViewManager) == 0LL) )
   {
     sub_B170D4();
@@ -265,9 +265,9 @@ void __fastcall PresentBoxNotificationMenu__Open(
     sub_B16FFC(&System_Action_TypeInfo, presentList);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&Method_PresentBoxNotificationMenu_OnMoveEnd__, v8);
-    sub_B16FFC(&StringLiteral_10459, v9);
-    sub_B16FFC(&StringLiteral_10458, v10);
-    sub_B16FFC(&StringLiteral_10457, v11);
+    sub_B16FFC(&StringLiteral_10459/*"PRESENT_BOX_NOTIFICATION_MESSAGE2"*/, v9);
+    sub_B16FFC(&StringLiteral_10458/*"PRESENT_BOX_NOTIFICATION_MESSAGE1"*/, v10);
+    sub_B16FFC(&StringLiteral_10457/*"PRESENT_BOX_NOTIFICATION_CLOSE"*/, v11);
     byte_40F9FE4 = 1;
   }
   if ( !this->fields.state )
@@ -296,16 +296,16 @@ void __fastcall PresentBoxNotificationMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_10458, 0LL);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_10458/*"PRESENT_BOX_NOTIFICATION_MESSAGE1"*/, 0LL);
     if ( !message1Label )
       goto LABEL_14;
     UILabel__set_text(message1Label, v21, 0LL);
     message2Label = this->fields.message2Label;
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_10459, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_10459/*"PRESENT_BOX_NOTIFICATION_MESSAGE2"*/, 0LL);
     if ( !message2Label
       || (UILabel__set_text(message2Label, v23, 0LL),
           closeLabel = this->fields.closeLabel,
-          v25 = LocalizationManager__Get((System_String_o *)StringLiteral_10457, 0LL),
+          v25 = LocalizationManager__Get((System_String_o *)StringLiteral_10457/*"PRESENT_BOX_NOTIFICATION_CLOSE"*/, 0LL),
           !closeLabel)
       || (UILabel__set_text(closeLabel, v25, 0LL), (v26 = this->fields.ItemListViewManager) == 0LL) )
     {
@@ -369,10 +369,10 @@ System_String_o *__fastcall PresentBoxNotificationMenu__get_closeBtnPath(
 {
   if ( (byte_40F9FE9 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8869, method);
+    sub_B16FFC(&StringLiteral_8869/*"MainPanel/BaseView/CloseButton"*/, method);
     byte_40F9FE9 = 1;
   }
-  return (System_String_o *)StringLiteral_8869;
+  return (System_String_o *)StringLiteral_8869/*"MainPanel/BaseView/CloseButton"*/;
 }
 
 

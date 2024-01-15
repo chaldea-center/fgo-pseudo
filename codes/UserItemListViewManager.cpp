@@ -106,8 +106,8 @@ void __fastcall UserItemListViewManager__CreateList(UserItemListViewManager_o *t
     sub_B16FFC(&Method_UserItemListViewManager___c__CreateList_b__27_0__, v16);
     sub_B16FFC(&UserItemListViewManager___c_TypeInfo, v17);
     sub_B16FFC(&UserItemListViewItem_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_9282, v19);
-    sub_B16FFC(&StringLiteral_7017, v20);
+    sub_B16FFC(&StringLiteral_9282/*"NONITEM_NOTICE"*/, v19);
+    sub_B16FFC(&StringLiteral_7017/*"HEADER_NOTICE_MSG"*/, v20);
     byte_40F9721 = 1;
   }
   v21 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -136,7 +136,7 @@ void __fastcall UserItemListViewManager__CreateList(UserItemListViewManager_o *t
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_7017, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_7017/*"HEADER_NOTICE_MSG"*/, 0LL);
   if ( !infoLb )
     goto LABEL_51;
   UILabel__set_text(infoLb, v30, 0LL);
@@ -269,7 +269,7 @@ void __fastcall UserItemListViewManager__CreateList(UserItemListViewManager_o *t
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v83 = LocalizationManager__Get((System_String_o *)StringLiteral_9282, 0LL);
+    v83 = LocalizationManager__Get((System_String_o *)StringLiteral_9282/*"NONITEM_NOTICE"*/, 0LL);
     if ( nonItemNoticeLb )
     {
       UILabel__set_text(nonItemNoticeLb, v83, 0LL);
@@ -371,7 +371,7 @@ void __fastcall UserItemListViewManager__OnClickListView(
 
   if ( (byte_40F972A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11592, obj);
+    sub_B16FFC(&StringLiteral_11592/*"SELECT_ITEM"*/, obj);
     byte_40F972A = 1;
   }
   if ( !obj
@@ -390,7 +390,7 @@ void __fastcall UserItemListViewManager__OnClickListView(
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_11592, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_11592/*"SELECT_ITEM"*/, 0LL);
 }
 
 
@@ -483,7 +483,7 @@ void __fastcall UserItemListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_UserItemListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_UserItemListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_UserItemListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40F9727 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -498,7 +498,7 @@ void __fastcall UserItemListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -568,7 +568,7 @@ void __fastcall UserItemListViewManager__RequestListObject_24036100(
     sub_B16FFC(&Method_System_Collections_Generic_List_UserItemListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_UserItemListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_UserItemListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40F9728 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -583,7 +583,7 @@ void __fastcall UserItemListViewManager__RequestListObject_24036100(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -629,13 +629,13 @@ void __fastcall UserItemListViewManager__SelectItemDetail(
 
   if ( (byte_40F972D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3087, isDecide);
+    sub_B16FFC(&StringLiteral_3087/*"CLOSE_DETAIL"*/, isDecide);
     byte_40F972D = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3087, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3087/*"CLOSE_DETAIL"*/, 0LL);
 }
 
 

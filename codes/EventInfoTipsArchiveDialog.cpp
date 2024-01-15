@@ -39,13 +39,13 @@ void __fastcall EventInfoTipsArchiveDialog___ctor(EventInfoTipsArchiveDialog_o *
   if ( (byte_40FA199 & 1) == 0 )
   {
     sub_B16FFC(&BaseDialog_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16894, v9);
-    sub_B16FFC(&StringLiteral_16895, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_16894/*"btn_bg_08"*/, v9);
+    sub_B16FFC(&StringLiteral_16895/*"btn_bg_09"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FA199 = 1;
   }
-  v12 = (System_Int32_array **)StringLiteral_16895;
-  this->fields.onButtonName = (struct System_String_o *)StringLiteral_16895;
+  v12 = (System_Int32_array **)StringLiteral_16895/*"btn_bg_09"*/;
+  this->fields.onButtonName = (struct System_String_o *)StringLiteral_16895/*"btn_bg_09"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.onButtonName, v12, v2, v3, v4, v5, v6, v7);
   v36.fields.g = 0.20784;
   v36.fields.b = 0.20392;
@@ -55,8 +55,8 @@ void __fastcall EventInfoTipsArchiveDialog___ctor(EventInfoTipsArchiveDialog_o *
   var40.klass = 0LL;
   UnityEngine_Color___ctor(v36, v13, v14, v15, v16, (const MethodInfo *)&var40.name);
   this->fields.onButtonOutlineColor = *(struct UnityEngine_Color_o *)&var40.name;
-  v17 = (System_Int32_array **)StringLiteral_16894;
-  this->fields.offButtonName = (struct System_String_o *)StringLiteral_16894;
+  v17 = (System_Int32_array **)StringLiteral_16894/*"btn_bg_08"*/;
+  this->fields.offButtonName = (struct System_String_o *)StringLiteral_16894/*"btn_bg_08"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.offButtonName, v17, v18, v19, v20, v21, v22, v23);
   v37.fields.r = 0.0;
   v37.fields.g = 0.0;
@@ -65,8 +65,8 @@ void __fastcall EventInfoTipsArchiveDialog___ctor(EventInfoTipsArchiveDialog_o *
   *(_OWORD *)&var40.methodPointer = 0uLL;
   UnityEngine_Color___ctor(v37, v24, v25, v26, v27, &var40);
   this->fields.offButtonOutlineColor = *(struct UnityEngine_Color_o *)&var40.methodPointer;
-  v28 = (System_Int32_array **)StringLiteral_1;
-  this->fields.tabDisabledText = (struct System_String_o *)StringLiteral_1;
+  v28 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.tabDisabledText = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.tabDisabledText, v28, v29, v30, v31, v32, v33, v34);
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);

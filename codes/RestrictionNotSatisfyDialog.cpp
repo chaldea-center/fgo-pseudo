@@ -73,7 +73,7 @@ void __fastcall RestrictionNotSatisfyDialog__Init(RestrictionNotSatisfyDialog_o 
   if ( (byte_40FC837 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FC837 = 1;
   }
   buttonCloseLabel = (UnityEngine_Object_o *)this->fields.buttonCloseLabel;
@@ -87,7 +87,7 @@ void __fastcall RestrictionNotSatisfyDialog__Init(RestrictionNotSatisfyDialog_o 
     v5 = this->fields.buttonCloseLabel;
     if ( !v5 )
       goto LABEL_11;
-    UILabel__set_text(v5, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v5, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   this->fields.isButtonEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -264,9 +264,9 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v22);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v23);
     sub_B16FFC(&Method_RestrictionNotSatisfyDialog_EndOpen__, v24);
-    sub_B16FFC(&StringLiteral_11062, v25);
-    sub_B16FFC(&StringLiteral_11065, v26);
-    sub_B16FFC(&StringLiteral_10344, v27);
+    sub_B16FFC(&StringLiteral_11062/*"RESTRICTION_NOT_SATISFY_DIALOG_TITLE"*/, v25);
+    sub_B16FFC(&StringLiteral_11065/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_TITLE"*/, v26);
+    sub_B16FFC(&StringLiteral_10344/*"PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE"*/, v27);
     byte_40FC838 = 1;
   }
   memset(&v119, 0, sizeof(v119));
@@ -287,7 +287,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11062, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11062/*"RESTRICTION_NOT_SATISFY_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_107;
   UILabel__set_text(titleLabel, v29, 0LL);
@@ -311,7 +311,7 @@ void __fastcall RestrictionNotSatisfyDialog__Open(
     (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_RestrictionNotSatisfyWholeInfo___ctor__);
   this->fields.wholeInfoCount = 0;
   wholeRestrictionLabel = this->fields.wholeRestrictionLabel;
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_11065, 0LL);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_11065/*"RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_TITLE"*/, 0LL);
   if ( !wholeRestrictionLabel )
     goto LABEL_107;
   UILabel__set_text(wholeRestrictionLabel, v40, 0LL);
@@ -661,7 +661,7 @@ LABEL_107:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v109 = LocalizationManager__Get((System_String_o *)StringLiteral_10344, 0LL);
+    v109 = LocalizationManager__Get((System_String_o *)StringLiteral_10344/*"PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE"*/, 0LL);
     if ( v108 )
     {
       UILabel__set_text(v108, v109, 0LL);

@@ -112,7 +112,7 @@ void __fastcall ScrollPageIndicator__CreateIndicator(
     sub_B16FFC(&Method_ScrollPageIndicator___c__DisplayClass10_0__CreateIndicator_b__0__, v12);
     sub_B16FFC(&ScrollPageIndicator___c__DisplayClass10_0_TypeInfo, v13);
     sub_B16FFC(&UISprite___TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_19721, v15);
+    sub_B16FFC(&StringLiteral_19721/*"indicator"*/, v15);
     byte_40FE16D = 1;
   }
   v91 = 0;
@@ -179,7 +179,7 @@ void __fastcall ScrollPageIndicator__CreateIndicator(
             v47 = v35 + 1;
             v91 = v35 + 1;
             v48 = System_Int32__ToString((int32_t)&v91, 0LL);
-            v49 = System_String__Concat_43743732((System_String_o *)StringLiteral_19721, v48, 0LL);
+            v49 = System_String__Concat_43743732((System_String_o *)StringLiteral_19721/*"indicator"*/, v48, 0LL);
             if ( !v46 )
               break;
             UnityEngine_Object__set_name(v46, v49, 0LL);

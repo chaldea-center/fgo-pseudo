@@ -404,10 +404,10 @@ void __fastcall ServantOperationListViewObject__OnClickSelect(
     sub_B16FFC(&ServantOperationListViewManager_TypeInfo, v3);
     sub_B16FFC(&SoundManager_TypeInfo, v4);
     sub_B16FFC(&TutorialFlag_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_9938, v6);
-    sub_B16FFC(&StringLiteral_9912, v7);
-    sub_B16FFC(&StringLiteral_9936, v8);
-    sub_B16FFC(&StringLiteral_9934, v9);
+    sub_B16FFC(&StringLiteral_9938/*"OnClickSelectListView"*/, v6);
+    sub_B16FFC(&StringLiteral_9912/*"OnClickChoiceModeItem"*/, v7);
+    sub_B16FFC(&StringLiteral_9936/*"OnClickPushModeItem"*/, v8);
+    sub_B16FFC(&StringLiteral_9934/*"OnClickLockModeItem"*/, v9);
     byte_40FD750 = 1;
   }
   linkItem = this->fields.linkItem;
@@ -436,7 +436,7 @@ void __fastcall ServantOperationListViewObject__OnClickSelect(
                     (ServantOperationListViewItem_o *)this->fields.linkItem,
                     (const MethodInfo *)ServantOperationListViewItem_TypeInfo) )
             {
-              v16 = &StringLiteral_9936;
+              v16 = &StringLiteral_9936/*"OnClickPushModeItem"*/;
               goto LABEL_29;
             }
             goto LABEL_32;
@@ -452,7 +452,7 @@ void __fastcall ServantOperationListViewObject__OnClickSelect(
             if ( !TutorialFlag__Get_28023340(126, 0LL) )
             {
 LABEL_26:
-              v16 = &StringLiteral_9912;
+              v16 = &StringLiteral_9912/*"OnClickChoiceModeItem"*/;
               goto LABEL_29;
             }
             goto LABEL_32;
@@ -468,7 +468,7 @@ LABEL_26:
             if ( !TutorialFlag__Get_28023340(126, 0LL) )
             {
 LABEL_18:
-              v16 = &StringLiteral_9934;
+              v16 = &StringLiteral_9934/*"OnClickLockModeItem"*/;
 LABEL_29:
               v18 = (System_String_o *)*v16;
               v19 = (UnityEngine_Component_o *)manager;
@@ -498,7 +498,7 @@ LABEL_32:
         {
           v20 = (Il2CppObject *)Item;
           v19 = (UnityEngine_Component_o *)v22;
-          v18 = (System_String_o *)StringLiteral_9938;
+          v18 = (System_String_o *)StringLiteral_9938/*"OnClickSelectListView"*/;
           goto LABEL_30;
         }
       }
@@ -676,8 +676,8 @@ void __fastcall ServantOperationListViewObject__OnLongRelease(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
     sub_B16FFC(&ServantOperationListViewManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9991, v4);
-    sub_B16FFC(&StringLiteral_3546, v5);
+    sub_B16FFC(&StringLiteral_9991/*"OnLongPushListView"*/, v4);
+    sub_B16FFC(&StringLiteral_3546/*"CancelDragEnd"*/, v5);
     byte_40FD753 = 1;
   }
   if ( this->fields.linkItem )
@@ -706,14 +706,14 @@ void __fastcall ServantOperationListViewObject__OnLongRelease(
           return;
         UnityEngine_Component__SendMessage_40674196(
           (UnityEngine_Component_o *)manager,
-          (System_String_o *)StringLiteral_3546,
+          (System_String_o *)StringLiteral_3546/*"CancelDragEnd"*/,
           0LL);
         v10 = (UnityEngine_Component_o *)this->fields.manager;
         if ( v10 )
         {
           UnityEngine_Component__SendMessage(
             v10,
-            (System_String_o *)StringLiteral_9991,
+            (System_String_o *)StringLiteral_9991/*"OnLongPushListView"*/,
             (Il2CppObject *)this->fields.linkItem,
             0LL);
           return;

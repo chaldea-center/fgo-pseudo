@@ -248,7 +248,7 @@ void __fastcall QuestBoardListViewManager__BGChangeEffect(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
     sub_B16FFC(&Method_QuestBoardListViewManager__BGChangeEffect_b__131_0__, v13);
     sub_B16FFC(&Method_QuestBoardListViewManager__BGChangeEffect_b__131_1__, v14);
-    sub_B16FFC(&StringLiteral_2643, v15);
+    sub_B16FFC(&StringLiteral_2643/*"Back/back{0}"*/, v15);
     byte_40F9524 = 1;
   }
   mFolderBg = (UnityEngine_Component_o *)this->fields.mFolderBg;
@@ -310,7 +310,7 @@ void __fastcall QuestBoardListViewManager__BGChangeEffect(
                 v34 = this->fields.mFolderBg;
                 v57 = bgID;
                 v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v57);
-                v36 = System_String__Format((System_String_o *)StringLiteral_2643, v35, 0LL);
+                v36 = System_String__Format((System_String_o *)StringLiteral_2643/*"Back/back{0}"*/, v35, 0LL);
                 v41 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v37, v38, v39, v40);
                 v42 = &Method_QuestBoardListViewManager__BGChangeEffect_b__131_1__;
                 goto LABEL_21;
@@ -327,7 +327,7 @@ void __fastcall QuestBoardListViewManager__BGChangeEffect(
       {
         v58 = bgID;
         v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v58);
-        v55 = System_String__Format((System_String_o *)StringLiteral_2643, v54, 0LL);
+        v55 = System_String__Format((System_String_o *)StringLiteral_2643/*"Back/back{0}"*/, v54, 0LL);
         if ( v53 )
         {
           v51 = v55;
@@ -358,7 +358,7 @@ LABEL_32:
   v34 = this->fields.mFolderBg;
   v59 = bgID;
   v44 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v59);
-  v36 = System_String__Format((System_String_o *)StringLiteral_2643, v44, 0LL);
+  v36 = System_String__Format((System_String_o *)StringLiteral_2643/*"Back/back{0}"*/, v44, 0LL);
   v41 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v45, v46, v47, v48);
   v42 = &Method_QuestBoardListViewManager__BGChangeEffect_b__131_0__;
 LABEL_21:
@@ -561,7 +561,7 @@ void __fastcall QuestBoardListViewManager__CreateList(
     sub_B16FFC(&QuestBoardListViewItem_TypeInfo, v24);
     sub_B16FFC(&QuestBoardListViewManager_TypeInfo, v25);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_10926, v27);
+    sub_B16FFC(&StringLiteral_10926/*"QUEST_NONE"*/, v27);
     byte_40F950C = 1;
   }
   ListViewManager__DestroyList((ListViewManager_o *)this, 0LL);
@@ -696,7 +696,7 @@ void __fastcall QuestBoardListViewManager__CreateList(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_10926, 0LL);
+  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_10926/*"QUEST_NONE"*/, 0LL);
   if ( !mNoneLabel )
 LABEL_114:
     sub_B170D4();
@@ -5347,7 +5347,7 @@ void __fastcall QuestBoardListViewManager__SetupBlackMark(QuestBoardListViewMana
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
     sub_B16FFC(&Method_QuestBoardListViewManager___c__SetupBlackMark_b__137_0__, v10);
     sub_B16FFC(&QuestBoardListViewManager___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_18093, v12);
+    sub_B16FFC(&StringLiteral_18093/*"ef_blackpoint"*/, v12);
     byte_40F9528 = 1;
   }
   blackMarkPrefab = (UnityEngine_Object_o *)this->fields.blackMarkPrefab;
@@ -5429,7 +5429,7 @@ LABEL_23:
         p_blackMarkPrefab = (BattleServantConfConponent_o *)&this->fields.blackMarkPrefab;
         Object_WarBoardWaitTimeSetting = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                   effectAssetData,
-                                                                  (System_String_o *)StringLiteral_18093,
+                                                                  (System_String_o *)StringLiteral_18093/*"ef_blackpoint"*/,
                                                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
         p_blackMarkPrefab->klass = (BattleServantConfConponent_c *)Object_WarBoardWaitTimeSetting;
         sub_B16F98(p_blackMarkPrefab, Object_WarBoardWaitTimeSetting, v39, v40, v41, v42, v43, v44);
@@ -5572,18 +5572,18 @@ void __fastcall QuestBoardListViewManager__SetupBoardAppearAndDisappearEffect(
   {
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_16666, v4);
-    sub_B16FFC(&StringLiteral_16672, v5);
-    sub_B16FFC(&StringLiteral_16699, v6);
-    sub_B16FFC(&StringLiteral_16671, v7);
-    sub_B16FFC(&StringLiteral_16668, v8);
-    sub_B16FFC(&StringLiteral_16698, v9);
-    sub_B16FFC(&StringLiteral_16665, v10);
-    sub_B16FFC(&StringLiteral_16701, v11);
-    sub_B16FFC(&StringLiteral_16700, v12);
-    sub_B16FFC(&StringLiteral_16667, v13);
-    sub_B16FFC(&StringLiteral_16669, v14);
-    sub_B16FFC(&StringLiteral_16670, v15);
+    sub_B16FFC(&StringLiteral_16666/*"bit_board_appear2"*/, v4);
+    sub_B16FFC(&StringLiteral_16672/*"bit_board_disappear5"*/, v5);
+    sub_B16FFC(&StringLiteral_16699/*"bit_fade_black2"*/, v6);
+    sub_B16FFC(&StringLiteral_16671/*"bit_board_disappear4"*/, v7);
+    sub_B16FFC(&StringLiteral_16668/*"bit_board_disappear"*/, v8);
+    sub_B16FFC(&StringLiteral_16698/*"bit_fade_black"*/, v9);
+    sub_B16FFC(&StringLiteral_16665/*"bit_board_appear"*/, v10);
+    sub_B16FFC(&StringLiteral_16701/*"bit_fade_black4"*/, v11);
+    sub_B16FFC(&StringLiteral_16700/*"bit_fade_black3"*/, v12);
+    sub_B16FFC(&StringLiteral_16667/*"bit_board_appear3"*/, v13);
+    sub_B16FFC(&StringLiteral_16669/*"bit_board_disappear2"*/, v14);
+    sub_B16FFC(&StringLiteral_16670/*"bit_board_disappear3"*/, v15);
     byte_40F952B = 1;
   }
   mTerminalList = this->fields.mTerminalList;
@@ -5610,7 +5610,7 @@ void __fastcall QuestBoardListViewManager__SetupBoardAppearAndDisappearEffect(
         goto LABEL_115;
       Object_WarBoardWaitTimeSetting = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                             effectAssetData,
-                                                                            (System_String_o *)StringLiteral_16665,
+                                                                            (System_String_o *)StringLiteral_16665/*"bit_board_appear"*/,
                                                                             (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       this->fields.boardAppearEffectPrefab = Object_WarBoardWaitTimeSetting;
       sub_B16F98(
@@ -5636,7 +5636,7 @@ void __fastcall QuestBoardListViewManager__SetupBoardAppearAndDisappearEffect(
         goto LABEL_115;
       v30 = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                  v29,
-                                                 (System_String_o *)StringLiteral_16698,
+                                                 (System_String_o *)StringLiteral_16698/*"bit_fade_black"*/,
                                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       this->fields.boardAppearEffectFadePrefab = v30;
       sub_B16F98(
@@ -5668,7 +5668,7 @@ void __fastcall QuestBoardListViewManager__SetupBoardAppearAndDisappearEffect(
         goto LABEL_115;
       v43 = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                  v42,
-                                                 (System_String_o *)StringLiteral_16666,
+                                                 (System_String_o *)StringLiteral_16666/*"bit_board_appear2"*/,
                                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       this->fields.boardAppearEffectPrefab = v43;
       sub_B16F98(
@@ -5694,7 +5694,7 @@ void __fastcall QuestBoardListViewManager__SetupBoardAppearAndDisappearEffect(
         goto LABEL_115;
       v52 = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                  v51,
-                                                 (System_String_o *)StringLiteral_16700,
+                                                 (System_String_o *)StringLiteral_16700/*"bit_fade_black3"*/,
                                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       this->fields.boardAppearEffectFadePrefab = v52;
       sub_B16F98(
@@ -5726,7 +5726,7 @@ void __fastcall QuestBoardListViewManager__SetupBoardAppearAndDisappearEffect(
         goto LABEL_115;
       v80 = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                  v79,
-                                                 (System_String_o *)StringLiteral_16668,
+                                                 (System_String_o *)StringLiteral_16668/*"bit_board_disappear"*/,
                                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
       this->fields.boardDisappearEffectPrefab = v80;
       sub_B16F98(
@@ -5750,7 +5750,7 @@ void __fastcall QuestBoardListViewManager__SetupBoardAppearAndDisappearEffect(
     v88 = this->fields.effectAssetData;
     if ( !v88 )
       goto LABEL_115;
-    v89 = &StringLiteral_16669;
+    v89 = &StringLiteral_16669/*"bit_board_disappear2"*/;
     goto LABEL_81;
   }
   if ( v17 != v18->fields.TERMINAL_WHITE_MARK_EFFECT_BOARD_DISAPPEAR_EFFECT_ID )
@@ -5771,7 +5771,7 @@ LABEL_19:
         v38 = this->fields.effectAssetData;
         if ( !v38 )
           goto LABEL_115;
-        v39 = &StringLiteral_16669;
+        v39 = &StringLiteral_16669/*"bit_board_disappear2"*/;
         p_boardDisappear2EffectPrefab = (BattleServantConfConponent_o *)&this->fields.boardDisappear2EffectPrefab;
 LABEL_45:
         v60 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
@@ -5801,7 +5801,7 @@ LABEL_45:
             goto LABEL_115;
           v119 = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                       v118,
-                                                      (System_String_o *)StringLiteral_16667,
+                                                      (System_String_o *)StringLiteral_16667/*"bit_board_appear3"*/,
                                                       (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
           this->fields.nt2BoardAppearEffectPrefab = v119;
           sub_B16F98(
@@ -5825,7 +5825,7 @@ LABEL_45:
           v68 = this->fields.effectAssetData;
           if ( v68 )
           {
-            v69 = &StringLiteral_16701;
+            v69 = &StringLiteral_16701/*"bit_fade_black4"*/;
             p_nt2BoardAppearEffectFadePrefab = (BattleServantConfConponent_o *)&this->fields.nt2BoardAppearEffectFadePrefab;
             goto LABEL_52;
           }
@@ -5848,7 +5848,7 @@ LABEL_39:
       v38 = this->fields.effectAssetData;
       if ( !v38 )
         goto LABEL_115;
-      v39 = &StringLiteral_16672;
+      v39 = &StringLiteral_16672/*"bit_board_disappear5"*/;
       p_boardDisappear2EffectPrefab = (BattleServantConfConponent_o *)&this->fields.ntBoardAppearEffectPrefab;
       goto LABEL_45;
     }
@@ -5864,7 +5864,7 @@ LABEL_46:
       v68 = this->fields.effectAssetData;
       if ( v68 )
       {
-        v69 = &StringLiteral_16699;
+        v69 = &StringLiteral_16699/*"bit_fade_black2"*/;
         p_nt2BoardAppearEffectFadePrefab = (BattleServantConfConponent_o *)&this->fields.boardDisappearEffectFadePrefab;
 LABEL_52:
         v71 = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
@@ -5894,7 +5894,7 @@ LABEL_52:
       goto LABEL_115;
     v92 = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                v91,
-                                               (System_String_o *)StringLiteral_16670,
+                                               (System_String_o *)StringLiteral_16670/*"bit_board_disappear3"*/,
                                                (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     this->fields.boardDisappearEffectPrefab = v92;
     sub_B16F98(
@@ -5918,7 +5918,7 @@ LABEL_52:
     v88 = this->fields.effectAssetData;
     if ( !v88 )
       goto LABEL_115;
-    v89 = &StringLiteral_16671;
+    v89 = &StringLiteral_16671/*"bit_board_disappear4"*/;
 LABEL_81:
     v100 = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                 v88,
@@ -5949,7 +5949,7 @@ LABEL_82:
       goto LABEL_115;
     v109 = (struct UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                 v108,
-                                                (System_String_o *)StringLiteral_16699,
+                                                (System_String_o *)StringLiteral_16699/*"bit_fade_black2"*/,
                                                 (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
     this->fields.boardDisappearEffectFadePrefab = v109;
     sub_B16F98(
@@ -5973,7 +5973,7 @@ LABEL_82:
     v68 = this->fields.effectAssetData;
     if ( v68 )
     {
-      v69 = &StringLiteral_16672;
+      v69 = &StringLiteral_16672/*"bit_board_disappear5"*/;
       p_nt2BoardAppearEffectFadePrefab = (BattleServantConfConponent_o *)&this->fields.ntBoardAppearEffectPrefab;
       goto LABEL_52;
     }
@@ -6066,7 +6066,7 @@ void __fastcall QuestBoardListViewManager__SetupFortificationWarningDialog(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
     sub_B16FFC(&Method_QuestBoardListViewManager___c__DisplayClass139_0__SetupFortificationWarningDialog_b__0__, v8);
     sub_B16FFC(&QuestBoardListViewManager___c__DisplayClass139_0_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_6184, v10);
+    sub_B16FFC(&StringLiteral_6184/*"EventUI/Prefabs/"*/, v10);
     byte_40F952A = 1;
   }
   v11 = sub_B170CC(QuestBoardListViewManager___c__DisplayClass139_0_TypeInfo, *(_QWORD *)&eventId, func, method, v4);
@@ -6080,7 +6080,7 @@ void __fastcall QuestBoardListViewManager__SetupFortificationWarningDialog(
   *(_QWORD *)(v11 + 24) = func;
   sub_B16F98((BattleServantConfConponent_o *)(v11 + 24), (System_Int32_array **)func, v18, v19, v20, v21, v22, v23);
   v24 = System_Int32__ToString((int32_t)&v31, 0LL);
-  v25 = System_String__Concat_43743732((System_String_o *)StringLiteral_6184, v24, 0LL);
+  v25 = System_String__Concat_43743732((System_String_o *)StringLiteral_6184/*"EventUI/Prefabs/"*/, v24, 0LL);
   v30 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v26, v27, v28, v29);
   AssetLoader_LoadEndDataHandler___ctor(
     v30,
@@ -6151,7 +6151,7 @@ void __fastcall QuestBoardListViewManager__SetupWhiteMark(QuestBoardListViewMana
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
     sub_B16FFC(&Method_QuestBoardListViewManager___c__SetupWhiteMark_b__138_0__, v10);
     sub_B16FFC(&QuestBoardListViewManager___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_18152, v12);
+    sub_B16FFC(&StringLiteral_18152/*"ef_whitepoint"*/, v12);
     byte_40F9529 = 1;
   }
   whiteMarkPrefab = (UnityEngine_Object_o *)this->fields.whiteMarkPrefab;
@@ -6233,7 +6233,7 @@ LABEL_23:
         p_whiteMarkPrefab = (BattleServantConfConponent_o *)&this->fields.whiteMarkPrefab;
         Object_WarBoardWaitTimeSetting = (System_Int32_array **)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                   effectAssetData,
-                                                                  (System_String_o *)StringLiteral_18152,
+                                                                  (System_String_o *)StringLiteral_18152/*"ef_whitepoint"*/,
                                                                   (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
         p_whiteMarkPrefab->klass = (BattleServantConfConponent_c *)Object_WarBoardWaitTimeSetting;
         sub_B16F98(p_whiteMarkPrefab, Object_WarBoardWaitTimeSetting, v39, v40, v41, v42, v43, v44);
@@ -6288,7 +6288,7 @@ bool __fastcall QuestBoardListViewManager__TryGetFlagFromOnEventStart(
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, flagType);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Item__, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F951E = 1;
   }
   *flagType = -1;
@@ -6297,7 +6297,7 @@ bool __fastcall QuestBoardListViewManager__TryGetFlagFromOnEventStart(
     EventTutorialEntity = EventTutorialMaster__GetEventTutorialEntity(
                             eventEntity->fields.id,
                             79,
-                            (System_String_o *)StringLiteral_1,
+                            (System_String_o *)StringLiteral_1/*""*/,
                             0LL);
     if ( !EventTutorialEntity )
       goto LABEL_9;
@@ -6515,7 +6515,7 @@ void __fastcall QuestBoardListViewManager___BGChangeEffect_b__131_1(
 
   if ( (byte_40F9540 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11368, method);
+    sub_B16FFC(&StringLiteral_11368/*"RemoveTempBG"*/, method);
     byte_40F9540 = 1;
   }
   mFolderBgTemp = this->fields.mFolderBgTemp;
@@ -6531,8 +6531,8 @@ void __fastcall QuestBoardListViewManager___BGChangeEffect_b__131_1(
     sub_B170D4();
   }
   v6->fields.style = 0;
-  v13 = (System_Int32_array **)StringLiteral_11368;
-  v6->fields.callWhenFinished = (struct System_String_o *)StringLiteral_11368;
+  v13 = (System_Int32_array **)StringLiteral_11368/*"RemoveTempBG"*/;
+  v6->fields.callWhenFinished = (struct System_String_o *)StringLiteral_11368/*"RemoveTempBG"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v6->fields.callWhenFinished, v13, v7, v8, v9, v10, v11, v12);
 }
 
@@ -6612,7 +6612,7 @@ void __fastcall QuestBoardListViewManager__changeBG(
   {
     sub_B16FFC(&FSUtility_TypeInfo, callback);
     sub_B16FFC(&int_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_2643, v6);
+    sub_B16FFC(&StringLiteral_2643/*"Back/back{0}"*/, v6);
     byte_40F9523 = 1;
   }
   mFolderBg = (UnityEngine_Component_o *)this->fields.mFolderBg;
@@ -6632,7 +6632,7 @@ void __fastcall QuestBoardListViewManager__changeBG(
   v10 = this->fields.mFolderBg;
   v16 = this->fields.mRequestedBGid;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
-  v12 = System_String__Format((System_String_o *)StringLiteral_2643, v11, 0LL);
+  v12 = System_String__Format((System_String_o *)StringLiteral_2643/*"Back/back{0}"*/, v11, 0LL);
   if ( !v10 )
 LABEL_15:
     sub_B170D4();
@@ -6915,7 +6915,7 @@ bool __fastcall QuestBoardListViewManager__CoroutineLoadAsset_d__135__MoveNext(
     sub_B16FFC(&Method_QuestBoardListViewManager___c__DisplayClass135_0__CoroutineLoadAsset_b__2__, v15);
     sub_B16FFC(&QuestBoardListViewManager___c__DisplayClass135_0_TypeInfo, v16);
     sub_B16FFC(&UnityEngine_WaitUntil_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_13546, v18);
+    sub_B16FFC(&StringLiteral_13546/*"Terminal/Effect"*/, v18);
     byte_40FA2FC = 1;
   }
   _1__state = this->fields.__1__state;
@@ -6946,7 +6946,7 @@ bool __fastcall QuestBoardListViewManager__CoroutineLoadAsset_d__135__MoveNext(
       {
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       }
-      if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13546, v58, 1, 0LL) )
+      if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13546/*"Terminal/Effect"*/, v58, 1, 0LL) )
       {
         v59 = this->fields.__8__1;
         if ( !v59 )
@@ -7999,14 +7999,14 @@ void __fastcall QuestBoardListViewManager___c__DisplayClass139_0___SetupFortific
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_FortificationWarningDialogComponent___, v5);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_6743, v8);
+    sub_B16FFC(&StringLiteral_6743/*"FortificationWarningDialog"*/, v8);
     byte_40FA2FA = 1;
   }
   if ( !assetData )
     goto LABEL_18;
   Object_WarBoardWaitTimeSetting = AssetData__GetObject_WarBoardWaitTimeSetting_(
                                      assetData,
-                                     (System_String_o *)StringLiteral_6743,
+                                     (System_String_o *)StringLiteral_6743/*"FortificationWarningDialog"*/,
                                      (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   _4__this = this->fields.__4__this;
   if ( !_4__this )

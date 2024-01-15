@@ -15,12 +15,12 @@ void __fastcall EventRewardAssistConfirmDialog___cctor(const MethodInfo *method)
   if ( (byte_40F613E & 1) == 0 )
   {
     sub_B16FFC(&EventRewardAssistConfirmDialog_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18516, v8);
+    sub_B16FFC(&StringLiteral_18516/*"event_skill_icon_{0}{1:D2}"*/, v8);
     byte_40F613E = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventRewardAssistConfirmDialog_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_18516;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18516;
+  v10 = (System_Int32_array **)StringLiteral_18516/*"event_skill_icon_{0}{1:D2}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18516/*"event_skill_icon_{0}{1:D2}"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   v11 = EventRewardAssistConfirmDialog_TypeInfo;
   EventRewardAssistConfirmDialog_TypeInfo->static_fields->SKILL_NAME_LABEL_MAX_WIDTH = 270;
@@ -287,13 +287,13 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
     sub_B16FFC(&Method_EventRewardAssistConfirmDialog___c__DisplayClass22_0__Open_b__0__, v18);
     sub_B16FFC(&EventRewardAssistConfirmDialog___c__DisplayClass22_0_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_8348, v20);
-    sub_B16FFC(&StringLiteral_5678, v21);
-    sub_B16FFC(&StringLiteral_5677, v22);
-    sub_B16FFC(&StringLiteral_5680, v23);
-    sub_B16FFC(&StringLiteral_3255, v24);
-    sub_B16FFC(&StringLiteral_3258, v25);
-    sub_B16FFC(&StringLiteral_5676, v26);
+    sub_B16FFC(&StringLiteral_8348/*"LEVEL_INFO"*/, v20);
+    sub_B16FFC(&StringLiteral_5678/*"EVENT_REWARD_ASSIST_SKILL_MSG"*/, v21);
+    sub_B16FFC(&StringLiteral_5677/*"EVENT_REWARD_ASSIST_SKILL_LV"*/, v22);
+    sub_B16FFC(&StringLiteral_5680/*"EVENT_REWARD_ASSIST_SKILL_TITLE"*/, v23);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v24);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v25);
+    sub_B16FFC(&StringLiteral_5676/*"EVENT_REWARD_ASSIST_SKILL_CONFIRM"*/, v26);
     byte_40F6139 = 1;
   }
   v27 = sub_B170CC(EventRewardAssistConfirmDialog___c__DisplayClass22_0_TypeInfo, shopEnt, onDecide, method, v4);
@@ -443,7 +443,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                           {
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                           }
-                          v98 = LocalizationManager__Get((System_String_o *)StringLiteral_8348, 0LL);
+                          v98 = LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LEVEL_INFO"*/, 0LL);
                           v135 = v75;
                           v99 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v135);
                           v100 = System_String__Format(v98, v99, 0LL);
@@ -451,7 +451,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                           {
                             UILabel__set_text(skillLvLabel, v100, 0LL);
                             combineSkillLvLabel = this->fields.combineSkillLvLabel;
-                            v102 = LocalizationManager__Get((System_String_o *)StringLiteral_5677, 0LL);
+                            v102 = LocalizationManager__Get((System_String_o *)StringLiteral_5677/*"EVENT_REWARD_ASSIST_SKILL_LV"*/, 0LL);
                             v134 = skillLv;
                             v103 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v134);
                             v104 = System_String__Format(v102, v103, 0LL);
@@ -483,7 +483,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                                         0,
                                         0LL);
                                       titleLabel = this->fields.titleLabel;
-                                      v114 = LocalizationManager__Get((System_String_o *)StringLiteral_5680, 0LL);
+                                      v114 = LocalizationManager__Get((System_String_o *)StringLiteral_5680/*"EVENT_REWARD_ASSIST_SKILL_TITLE"*/, 0LL);
                                       v115 = System_String__Format(v114, v45, 0LL);
                                       if ( titleLabel )
                                       {
@@ -496,7 +496,7 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                                             EventRewardAssistConfirmDialog_TypeInfo->static_fields->TITLE_NAME_LABEL_MAX_WIDTH,
                                             0LL);
                                           detailMsgLabel = this->fields.detailMsgLabel;
-                                          v118 = LocalizationManager__Get((System_String_o *)StringLiteral_5678, 0LL);
+                                          v118 = LocalizationManager__Get((System_String_o *)StringLiteral_5678/*"EVENT_REWARD_ASSIST_SKILL_MSG"*/, 0LL);
                                           v119 = this->fields.skillNameLabel;
                                           if ( v119 )
                                           {
@@ -506,21 +506,21 @@ void __fastcall EventRewardAssistConfirmDialog__Open(
                                               UILabel__set_text(detailMsgLabel, v120, 0LL);
                                               confirmMsgLabel = this->fields.confirmMsgLabel;
                                               v122 = LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_5676,
+                                                       (System_String_o *)StringLiteral_5676/*"EVENT_REWARD_ASSIST_SKILL_CONFIRM"*/,
                                                        0LL);
                                               if ( confirmMsgLabel )
                                               {
                                                 UILabel__set_text(confirmMsgLabel, v122, 0LL);
                                                 decideLabel = this->fields.decideLabel;
                                                 v124 = LocalizationManager__Get(
-                                                         (System_String_o *)StringLiteral_3258,
+                                                         (System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/,
                                                          0LL);
                                                 if ( decideLabel )
                                                 {
                                                   UILabel__set_text(decideLabel, v124, 0LL);
                                                   cancelLabel = this->fields.cancelLabel;
                                                   v126 = LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_3255,
+                                                           (System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/,
                                                            0LL);
                                                   if ( cancelLabel )
                                                   {
@@ -585,10 +585,10 @@ System_String_o *__fastcall EventRewardAssistConfirmDialog__get_closeBtnPath(
 {
   if ( (byte_40F613C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15414, method);
+    sub_B16FFC(&StringLiteral_15414/*"Window/CancelButton"*/, method);
     byte_40F613C = 1;
   }
-  return (System_String_o *)StringLiteral_15414;
+  return (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/;
 }
 
 

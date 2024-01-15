@@ -122,8 +122,8 @@ void __fastcall ClassBoardLock__PlayReleaseEffect(ClassBoardLock_o *this, const 
     sub_B16FFC(&Method_ClassBoardLock__PlayReleaseEffect_b__13_0__, v3);
     sub_B16FFC(&IClassBoardSquareModel_TypeInfo, v4);
     sub_B16FFC(&int_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23557, v6);
-    sub_B16FFC(&StringLiteral_14956, v7);
+    sub_B16FFC(&StringLiteral_23557/*"{0}{1}"*/, v6);
+    sub_B16FFC(&StringLiteral_14956/*"Unlock"*/, v7);
     byte_40FB97C = 1;
   }
   LockModel = ClassBoardLock__get_LockModel(this, method);
@@ -152,8 +152,8 @@ LABEL_8:
   v22 = (*(__int64 (__fastcall **)(IClassBoardLockModel_o *, _QWORD))p_method)(v10, *(_QWORD *)(p_method + 8));
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
   v15 = System_String__Format_43739268(
-          (System_String_o *)StringLiteral_23557,
-          (Il2CppObject *)StringLiteral_14956,
+          (System_String_o *)StringLiteral_23557/*"{0}{1}"*/,
+          (Il2CppObject *)StringLiteral_14956/*"Unlock"*/,
           v14,
           0LL);
   v20 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v16, v17, v18, v19);
@@ -219,11 +219,11 @@ void __fastcall ClassBoardLock__SetupIcon(ClassBoardLock_o *this, const MethodIn
   {
     sub_B16FFC(&IClassBoardSquareModel_TypeInfo, method);
     sub_B16FFC(&int_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_20220, v4);
-    sub_B16FFC(&StringLiteral_20223, v5);
-    sub_B16FFC(&StringLiteral_20222, v6);
-    sub_B16FFC(&StringLiteral_20221, v7);
-    sub_B16FFC(&StringLiteral_20224, v8);
+    sub_B16FFC(&StringLiteral_20220/*"lock_light_{0}"*/, v4);
+    sub_B16FFC(&StringLiteral_20223/*"lock_stopper"*/, v5);
+    sub_B16FFC(&StringLiteral_20222/*"lock_on_{0}"*/, v6);
+    sub_B16FFC(&StringLiteral_20221/*"lock_off_{0}"*/, v7);
+    sub_B16FFC(&StringLiteral_20224/*"lock_{0}"*/, v8);
     byte_40FB979 = 1;
   }
   LockModel = ClassBoardLock__get_LockModel(this, method);
@@ -266,7 +266,7 @@ LABEL_8:
       IconAtlasManagerUnit = ClassBoardGlobalObject__get_IconAtlasManagerUnit(v15);
       v52 = v20;
       v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-      v25 = System_String__Format((System_String_o *)StringLiteral_20224, v24, 0LL);
+      v25 = System_String__Format((System_String_o *)StringLiteral_20224/*"lock_{0}"*/, v24, 0LL);
       if ( !IconAtlasManagerUnit )
         goto LABEL_42;
       v15 = (const MethodInfo *)AtlasManagerUnit__SetUI(IconAtlasManagerUnit, v22, v25, 0LL);
@@ -292,7 +292,7 @@ LABEL_16:
       v30 = ClassBoardGlobalObject__get_IconAtlasManagerUnit(v15);
       v52 = v20;
       v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-      v32 = System_String__Format((System_String_o *)StringLiteral_20222, v31, 0LL);
+      v32 = System_String__Format((System_String_o *)StringLiteral_20222/*"lock_on_{0}"*/, v31, 0LL);
       if ( !v30 )
         goto LABEL_42;
       v15 = (const MethodInfo *)AtlasManagerUnit__SetUI(v30, v29, v32, 0LL);
@@ -316,7 +316,7 @@ LABEL_22:
       v37 = ClassBoardGlobalObject__get_IconAtlasManagerUnit(v15);
       v52 = v20;
       v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-      v39 = System_String__Format((System_String_o *)StringLiteral_20221, v38, 0LL);
+      v39 = System_String__Format((System_String_o *)StringLiteral_20221/*"lock_off_{0}"*/, v38, 0LL);
       if ( !v37 )
         goto LABEL_42;
       v15 = (const MethodInfo *)AtlasManagerUnit__SetUI(v37, v36, v39, 0LL);
@@ -340,7 +340,7 @@ LABEL_28:
       v44 = ClassBoardGlobalObject__get_IconAtlasManagerUnit(v15);
       if ( !v44 )
         goto LABEL_42;
-      v15 = (const MethodInfo *)AtlasManagerUnit__SetUI(v44, v43, (System_String_o *)StringLiteral_20223, 0LL);
+      v15 = (const MethodInfo *)AtlasManagerUnit__SetUI(v44, v43, (System_String_o *)StringLiteral_20223/*"lock_stopper"*/, 0LL);
       LODWORD(v41) = iconSpritesLock->max_length;
       if ( (__int64)++v42 >= (int)v41 )
         goto LABEL_34;
@@ -362,7 +362,7 @@ LABEL_42:
       v49 = ClassBoardGlobalObject__get_IconAtlasManagerUnit(v15);
       v52 = v20;
       v50 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-      v51 = System_String__Format((System_String_o *)StringLiteral_20220, v50, 0LL);
+      v51 = System_String__Format((System_String_o *)StringLiteral_20220/*"lock_light_{0}"*/, v50, 0LL);
       if ( !v49 )
         goto LABEL_42;
       v15 = (const MethodInfo *)AtlasManagerUnit__SetUI(v49, v48, v51, 0LL);

@@ -1297,14 +1297,14 @@ ServantVoiceCond_array *__fastcall ServantVoiceEntity__getConds(
 
   if ( (byte_40FCAF2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15859, *(_QWORD *)&type);
+    sub_B16FFC(&StringLiteral_15859/*"_B050"*/, *(_QWORD *)&type);
     byte_40FCAF2 = 1;
   }
   if ( this->fields.type == type )
   {
     if ( !labelName )
       goto LABEL_25;
-    v7 = System_String__EndsWith(labelName, (System_String_o *)StringLiteral_15859, 0LL);
+    v7 = System_String__EndsWith(labelName, (System_String_o *)StringLiteral_15859/*"_B050"*/, 0LL);
     scriptJson = this->fields.scriptJson;
     if ( v7 )
     {
@@ -3089,7 +3089,7 @@ void __fastcall ServantVoiceEntity__getOverwriteData(
 
   if ( (byte_40FCAF1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15859, *(_QWORD *)&type);
+    sub_B16FFC(&StringLiteral_15859/*"_B050"*/, *(_QWORD *)&type);
     byte_40FCAF1 = 1;
   }
   *conds = 0LL;
@@ -3112,7 +3112,7 @@ void __fastcall ServantVoiceEntity__getOverwriteData(
     return;
   if ( !labelName )
     goto LABEL_26;
-  v30 = System_String__EndsWith(labelName, (System_String_o *)StringLiteral_15859, 0LL);
+  v30 = System_String__EndsWith(labelName, (System_String_o *)StringLiteral_15859/*"_B050"*/, 0LL);
   scriptJson = this->fields.scriptJson;
   if ( v30 )
   {
@@ -3330,11 +3330,11 @@ System_String_o *__fastcall ServantVoiceEntity__getVoiceAssetName_30033140(int32
   v4 = svtId;
   if ( (byte_40FCAE8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3947, method);
+    sub_B16FFC(&StringLiteral_3947/*"ChrVoice_"*/, method);
     byte_40FCAE8 = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v4, 0LL);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_3947, v2, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_3947/*"ChrVoice_"*/, v2, 0LL);
 }
 
 
@@ -3748,7 +3748,7 @@ System_Collections_Generic_List_ServantVoiceData____o *__fastcall ServantVoiceEn
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__, v12);
     sub_B16FFC(&System_Collections_Generic_List_ServantVoiceData____TypeInfo, v13);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_B16FFC(&StringLiteral_15859, v15);
+    sub_B16FFC(&StringLiteral_15859/*"_B050"*/, v15);
     byte_40FCAF0 = 1;
   }
   if ( this->fields.type != type )
@@ -3770,7 +3770,7 @@ System_Collections_Generic_List_ServantVoiceData____o *__fastcall ServantVoiceEn
     (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
   if ( !labelName )
     goto LABEL_40;
-  isVoicePlay = System_String__EndsWith(labelName, (System_String_o *)StringLiteral_15859, 0LL);
+  isVoicePlay = System_String__EndsWith(labelName, (System_String_o *)StringLiteral_15859/*"_B050"*/, 0LL);
   scriptJson = this->fields.scriptJson;
   if ( isVoicePlay )
   {

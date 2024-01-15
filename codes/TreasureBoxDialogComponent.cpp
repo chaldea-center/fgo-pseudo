@@ -23,17 +23,17 @@ void __fastcall TreasureBoxDialogComponent___cctor(const MethodInfo *method)
   if ( (byte_40FB862 & 1) == 0 )
   {
     sub_B16FFC(&TreasureBoxDialogComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19359, v8);
-    sub_B16FFC(&StringLiteral_2465, v9);
+    sub_B16FFC(&StringLiteral_19359/*"img_bg_ep"*/, v8);
+    sub_B16FFC(&StringLiteral_2465/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, v9);
     byte_40FB862 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TreasureBoxDialogComponent_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_19359;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19359;
+  v11 = (System_Int32_array **)StringLiteral_19359/*"img_bg_ep"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_19359/*"img_bg_ep"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = TreasureBoxDialogComponent_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_2465;
-  v12->EVENT_POINT_REWARD_AT = (struct System_String_o *)StringLiteral_2465;
+  v13 = (System_Int32_array **)StringLiteral_2465/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/;
+  v12->EVENT_POINT_REWARD_AT = (struct System_String_o *)StringLiteral_2465/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->EVENT_POINT_REWARD_AT, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -601,19 +601,19 @@ void __fastcall TreasureBoxDialogComponent__Open(
     sub_B16FFC(&Method_TreasureBoxDialogComponent___c__DisplayClass58_0__Open_b__0__, v29);
     sub_B16FFC(&Method_TreasureBoxDialogComponent___c__DisplayClass58_0__Open_b__1__, v30);
     sub_B16FFC(&TreasureBoxDialogComponent___c__DisplayClass58_0_TypeInfo, v31);
-    sub_B16FFC(&StringLiteral_13406, v32);
-    sub_B16FFC(&StringLiteral_13385, v33);
-    sub_B16FFC(&StringLiteral_13383, v34);
-    sub_B16FFC(&StringLiteral_690, v35);
-    sub_B16FFC(&StringLiteral_13388, v36);
-    sub_B16FFC(&StringLiteral_22700, v37);
-    sub_B16FFC(&StringLiteral_13384, v38);
-    sub_B16FFC(&StringLiteral_2468, v39);
-    sub_B16FFC(&StringLiteral_22706, v40);
-    sub_B16FFC(&StringLiteral_13387, v41);
-    sub_B16FFC(&StringLiteral_13389, v42);
-    sub_B16FFC(&StringLiteral_2463, v43);
-    sub_B16FFC(&StringLiteral_13386, v44);
+    sub_B16FFC(&StringLiteral_13406/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/, v32);
+    sub_B16FFC(&StringLiteral_13385/*"TREASURE_BOX_EVENT_ITEM_LINEUP_DIALOG_TITLE"*/, v33);
+    sub_B16FFC(&StringLiteral_13383/*"TREASURE_BOX_EVENT_GET_POINT_NUM"*/, v34);
+    sub_B16FFC(&StringLiteral_690/*"+"*/, v35);
+    sub_B16FFC(&StringLiteral_13388/*"TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE"*/, v36);
+    sub_B16FFC(&StringLiteral_22700/*"treasurechest_btn"*/, v37);
+    sub_B16FFC(&StringLiteral_13384/*"TREASURE_BOX_EVENT_ITEM_GET_DIALOG_TITLE"*/, v38);
+    sub_B16FFC(&StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v39);
+    sub_B16FFC(&StringLiteral_22706/*"treasurechest_img_bg_reward"*/, v40);
+    sub_B16FFC(&StringLiteral_13387/*"TREASURE_BOX_EVENT_POINT_REWARD"*/, v41);
+    sub_B16FFC(&StringLiteral_13389/*"TREASURE_BOX_EVENT_TOTAL_POINT_NUM"*/, v42);
+    sub_B16FFC(&StringLiteral_2463/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, v43);
+    sub_B16FFC(&StringLiteral_13386/*"TREASURE_BOX_EVENT_POINT"*/, v44);
     byte_40FB854 = 1;
   }
   v45 = sub_B170CC(
@@ -651,7 +651,7 @@ void __fastcall TreasureBoxDialogComponent__Open(
                               (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_22700, 0LL);
+  AtlasManager__SetEventUI((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_22700/*"treasurechest_btn"*/, 0LL);
   if ( !treasureBoxEnt )
     goto LABEL_109;
   AtlasManager__SetItem(this->fields.titleIcon, treasureBoxEnt->fields.iconId, 0LL);
@@ -738,7 +738,7 @@ void __fastcall TreasureBoxDialogComponent__Open(
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v132 = LocalizationManager__Get((System_String_o *)StringLiteral_13384, 0LL);
+                  v132 = LocalizationManager__Get((System_String_o *)StringLiteral_13384/*"TREASURE_BOX_EVENT_ITEM_GET_DIALOG_TITLE"*/, 0LL);
                   if ( titleLabel )
                   {
                     UILabel__set_text(titleLabel, v132, 0LL);
@@ -768,20 +768,20 @@ void __fastcall TreasureBoxDialogComponent__Open(
                         AtlasManager__SetItem(this->fields.getEventPointIcon, v136->fields.objectId, 0LL);
                         AtlasManager__SetEventUI(
                           this->fields.totalEventPointBg,
-                          (System_String_o *)StringLiteral_22706,
+                          (System_String_o *)StringLiteral_22706/*"treasurechest_img_bg_reward"*/,
                           0LL);
                         AtlasManager__SetEventUI(
                           this->fields.getEventPointBg,
-                          (System_String_o *)StringLiteral_22706,
+                          (System_String_o *)StringLiteral_22706/*"treasurechest_img_bg_reward"*/,
                           0LL);
                         getTitleLabel = this->fields.getTitleLabel;
-                        v138 = LocalizationManager__Get((System_String_o *)StringLiteral_13383, 0LL);
+                        v138 = LocalizationManager__Get((System_String_o *)StringLiteral_13383/*"TREASURE_BOX_EVENT_GET_POINT_NUM"*/, 0LL);
                         if ( getTitleLabel )
                         {
                           UILabel__set_text(getTitleLabel, v138, 0LL);
                           getNumLabel = this->fields.getNumLabel;
                           ComponentsInChildren_WarBoardControlPlayTalkUiComponent = (__int64)LocalizationManager__Get(
-                                                                                               (System_String_o *)StringLiteral_2468,
+                                                                                               (System_String_o *)StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/,
                                                                                                0LL);
                           if ( !v128->max_length )
                             goto LABEL_110;
@@ -792,7 +792,7 @@ void __fastcall TreasureBoxDialogComponent__Open(
                             v205 = this->fields.maxPlayCnt * v140->fields.num;
                             v142 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v205);
                             v143 = System_String__Format(v141, v142, 0LL);
-                            v144 = System_String__Concat_43743732((System_String_o *)StringLiteral_690, v143, 0LL);
+                            v144 = System_String__Concat_43743732((System_String_o *)StringLiteral_690/*"+"*/, v143, 0LL);
                             if ( getNumLabel )
                             {
                               UILabel__set_text(getNumLabel, v144, 0LL);
@@ -801,12 +801,12 @@ void __fastcall TreasureBoxDialogComponent__Open(
                                                     0LL);
                               totalTitleLabel = this->fields.totalTitleLabel;
                               v147 = EventPointNoGroup;
-                              v148 = LocalizationManager__Get((System_String_o *)StringLiteral_13389, 0LL);
+                              v148 = LocalizationManager__Get((System_String_o *)StringLiteral_13389/*"TREASURE_BOX_EVENT_TOTAL_POINT_NUM"*/, 0LL);
                               if ( totalTitleLabel )
                               {
                                 UILabel__set_text(totalTitleLabel, v148, 0LL);
                                 totalNumLabel = this->fields.totalNumLabel;
-                                v150 = LocalizationManager__Get((System_String_o *)StringLiteral_2468, 0LL);
+                                v150 = LocalizationManager__Get((System_String_o *)StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
                                 v204 = v147;
                                 v151 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v204);
                                 v152 = System_String__Format(v150, v151, 0LL);
@@ -864,7 +864,7 @@ void __fastcall TreasureBoxDialogComponent__Open(
                                       {
                                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                       }
-                                      v162 = LocalizationManager__Get((System_String_o *)StringLiteral_13406, 0LL);
+                                      v162 = LocalizationManager__Get((System_String_o *)StringLiteral_13406/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/, 0LL);
                                       if ( !v161 )
                                         goto LABEL_109;
                                       UILabel__set_text(v161, v162, 0LL);
@@ -912,21 +912,21 @@ LABEL_109:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v104 = LocalizationManager__Get((System_String_o *)StringLiteral_13386, 0LL);
+            v104 = LocalizationManager__Get((System_String_o *)StringLiteral_13386/*"TREASURE_BOX_EVENT_POINT"*/, 0LL);
             v105 = this->fields.titleLabel;
             v106 = (Il2CppObject *)v104;
-            v107 = LocalizationManager__Get((System_String_o *)StringLiteral_13388, 0LL);
+            v107 = LocalizationManager__Get((System_String_o *)StringLiteral_13388/*"TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE"*/, 0LL);
             v108 = System_String__Format(v107, v106, 0LL);
             if ( v105 )
             {
               UILabel__set_text(v105, v108, 0LL);
               titleNextItemLabel = this->fields.titleNextItemLabel;
-              v110 = LocalizationManager__Get((System_String_o *)StringLiteral_2463, 0LL);
+              v110 = LocalizationManager__Get((System_String_o *)StringLiteral_2463/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, 0LL);
               if ( titleNextItemLabel )
               {
                 UILabel__set_text(titleNextItemLabel, v110, 0LL);
                 titleAtLabel = this->fields.titleAtLabel;
-                v112 = LocalizationManager__Get((System_String_o *)StringLiteral_13387, 0LL);
+                v112 = LocalizationManager__Get((System_String_o *)StringLiteral_13387/*"TREASURE_BOX_EVENT_POINT_REWARD"*/, 0LL);
                 if ( titleAtLabel )
                 {
                   UILabel__set_text(titleAtLabel, v112, 0LL);
@@ -944,10 +944,10 @@ LABEL_109:
                       {
                         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
                       }
-                      AtlasManager__SetEventUI(eventPointBg, (System_String_o *)StringLiteral_22706, 0LL);
+                      AtlasManager__SetEventUI(eventPointBg, (System_String_o *)StringLiteral_22706/*"treasurechest_img_bg_reward"*/, 0LL);
                       AtlasManager__SetEventUI(
                         this->fields.eventPointRewardBg,
-                        (System_String_o *)StringLiteral_22706,
+                        (System_String_o *)StringLiteral_22706/*"treasurechest_img_bg_reward"*/,
                         0LL);
                       v116 = UserEventPointMaster__GetEventPointNoGroup(eventId, 0LL);
                       if ( v100 )
@@ -1004,7 +1004,7 @@ LABEL_110:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v165 = LocalizationManager__Get((System_String_o *)StringLiteral_13385, 0LL);
+    v165 = LocalizationManager__Get((System_String_o *)StringLiteral_13385/*"TREASURE_BOX_EVENT_ITEM_LINEUP_DIALOG_TITLE"*/, 0LL);
     v166 = System_String__Format(v165, (Il2CppObject *)eventItemName, 0LL);
     if ( !v164 )
       goto LABEL_109;
@@ -1406,10 +1406,10 @@ void __fastcall TreasureBoxDialogComponent__SetNextItemLabel(
   {
     sub_B16FFC(&long_TypeInfo, userEventPoint);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_2468, v8);
-    sub_B16FFC(&StringLiteral_2466, v9);
-    sub_B16FFC(&StringLiteral_2464, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v8);
+    sub_B16FFC(&StringLiteral_2466/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, v9);
+    sub_B16FFC(&StringLiteral_2464/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FB85C = 1;
   }
   nameText = 0LL;
@@ -1422,12 +1422,12 @@ void __fastcall TreasureBoxDialogComponent__SetNextItemLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2466, 0LL);
+    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2466/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
     if ( atLabel )
     {
       UILabel__set_text(atLabel, v20, 0LL);
       nextItemLabel = this->fields.nextItemLabel;
-      v22 = LocalizationManager__Get((System_String_o *)StringLiteral_2464, 0LL);
+      v22 = LocalizationManager__Get((System_String_o *)StringLiteral_2464/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
       if ( nextItemLabel )
       {
         UILabel__set_text(nextItemLabel, v22, 0LL);
@@ -1435,7 +1435,7 @@ void __fastcall TreasureBoxDialogComponent__SetNextItemLabel(
         if ( nextItemNameLabel )
         {
 LABEL_18:
-          v23 = (System_String_o *)StringLiteral_1;
+          v23 = (System_String_o *)StringLiteral_1/*""*/;
           goto LABEL_21;
         }
       }
@@ -1450,7 +1450,7 @@ LABEL_22:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2468, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
   v24 = eventRewardEnt->fields.point - userEventPoint;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v24);
   v15 = System_String__Format(v13, v14, 0LL);
@@ -2428,7 +2428,7 @@ bool __fastcall TreasureBoxDialogComponent__StartRewardAction_d__63__MoveNext(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, method);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_18150, v8);
+    sub_B16FFC(&StringLiteral_18150/*"ef_treasure_drop"*/, v8);
     byte_40F792A = 1;
   }
   _1__state = this->fields.__1__state;
@@ -2484,7 +2484,7 @@ bool __fastcall TreasureBoxDialogComponent__StartRewardAction_d__63__MoveNext(
         if ( Parent )
         {
           transform = UnityEngine_Component__get_transform(Parent, 0LL);
-          Effect = EventTreasureBoxPanelComponent__getEffect((System_String_o *)StringLiteral_18150, transform, 0LL);
+          Effect = EventTreasureBoxPanelComponent__getEffect((System_String_o *)StringLiteral_18150/*"ef_treasure_drop"*/, transform, 0LL);
           if ( Effect )
           {
             v29 = Effect;
@@ -2735,11 +2735,11 @@ void __fastcall TreasureBoxDialogComponent___c__DisplayClass58_0___Open_b__2(
 
   if ( (byte_40F7927 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12986, method);
+    sub_B16FFC(&StringLiteral_12986/*"StartDisp"*/, method);
     byte_40F7927 = 1;
   }
   _4__this = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
   if ( !_4__this )
     sub_B170D4();
-  UnityEngine_MonoBehaviour__StartCoroutine(_4__this, (System_String_o *)StringLiteral_12986, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine(_4__this, (System_String_o *)StringLiteral_12986/*"StartDisp"*/, 0LL);
 }

@@ -2437,7 +2437,7 @@ bool __fastcall WarBoardPieceData__HasCompletelyActionDisabledBuff(WarBoardPiece
     sub_B16FFC(&Method_System_Nullable_bool__get_HasValue__, v3);
     sub_B16FFC(&Method_System_Nullable_bool__get_Value__, v4);
     sub_B16FFC(&WarBoardPieceData_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_15267, v6);
+    sub_B16FFC(&StringLiteral_15267/*"WAR_BOARD_ACTION_DISABLED_BUFF_TYPES"*/, v6);
     byte_40F85FF = 1;
   }
   HasCompletelyActionDisabledBuff_k__BackingField = 0;
@@ -2456,7 +2456,7 @@ bool __fastcall WarBoardPieceData__HasCompletelyActionDisabledBuff(WarBoardPiece
         j_il2cpp_runtime_class_init_0(WarBoardPieceData_TypeInfo);
       }
       BuffTypesFromConstantStr = WarBoardPieceData__GetBuffTypesFromConstantStr(
-                                   (System_String_o *)StringLiteral_15267,
+                                   (System_String_o *)StringLiteral_15267/*"WAR_BOARD_ACTION_DISABLED_BUFF_TYPES"*/,
                                    method);
       if ( !this->fields._battleServant_k__BackingField
         || (v9 = this->fields.statusCache,

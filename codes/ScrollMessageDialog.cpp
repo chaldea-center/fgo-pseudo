@@ -111,7 +111,7 @@ void __fastcall ScrollMessageDialog__Init(ScrollMessageDialog_o *this, const Met
   if ( (byte_40FE164 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FE164 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
@@ -125,7 +125,7 @@ void __fastcall ScrollMessageDialog__Init(ScrollMessageDialog_o *this, const Met
     v5 = this->fields.titleLabel;
     if ( !v5 )
       goto LABEL_35;
-    UILabel__set_text(v5, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v5, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   secondTitleLabel = (UnityEngine_Object_o *)this->fields.secondTitleLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -138,7 +138,7 @@ void __fastcall ScrollMessageDialog__Init(ScrollMessageDialog_o *this, const Met
     v7 = this->fields.secondTitleLabel;
     if ( !v7 )
       goto LABEL_35;
-    UILabel__set_text(v7, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -151,7 +151,7 @@ void __fastcall ScrollMessageDialog__Init(ScrollMessageDialog_o *this, const Met
     v9 = this->fields.messageLabel;
     if ( !v9 )
       goto LABEL_35;
-    UILabel__set_text(v9, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v9, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   okBtn = (UnityEngine_Object_o *)this->fields.okBtn;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -177,7 +177,7 @@ void __fastcall ScrollMessageDialog__Init(ScrollMessageDialog_o *this, const Met
     v13 = this->fields.okBtnLabel;
     if ( !v13 )
       goto LABEL_35;
-    UILabel__set_text(v13, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -359,9 +359,9 @@ void __fastcall ScrollMessageDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v18);
     sub_B16FFC(&Method_ScrollMessageDialog_EndOpen__, v19);
-    sub_B16FFC(&StringLiteral_26, v20);
-    sub_B16FFC(&StringLiteral_3252, v21);
-    sub_B16FFC(&StringLiteral_1, v22);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v20);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v22);
     byte_40FE165 = 1;
   }
   this->fields.clickFunc = func;
@@ -376,8 +376,8 @@ void __fastcall ScrollMessageDialog__Open(
     (System_Int32_array *)method);
   if ( !v13 )
     goto LABEL_94;
-  v23 = (System_String_o *)StringLiteral_1;
-  if ( System_String__Contains(v13, (System_String_o *)StringLiteral_26, 0LL) )
+  v23 = (System_String_o *)StringLiteral_1/*""*/;
+  if ( System_String__Contains(v13, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL) )
   {
     v25 = (System_String_array *)sub_B17014(char___TypeInfo, 1LL, v24);
     if ( !v25 )
@@ -470,7 +470,7 @@ LABEL_95:
     v43 = this->fields.titleLabel;
     if ( !v43 )
       goto LABEL_94;
-    v44 = v13 ? v13 : (System_String_o *)StringLiteral_1;
+    v44 = v13 ? v13 : (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v43, v44, 0LL);
     v45 = this->fields.titleLabel;
     if ( !v45 )
@@ -488,7 +488,7 @@ LABEL_95:
     v47 = this->fields.secondTitleLabel;
     if ( !v47 )
       goto LABEL_94;
-    v48 = v23 ? v23 : (System_String_o *)StringLiteral_1;
+    v48 = v23 ? v23 : (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v47, v48, 0LL);
     v49 = this->fields.secondTitleLabel;
     if ( !v49 )
@@ -559,7 +559,7 @@ LABEL_95:
     if ( !v69
       || ((UILabel__set_fontSize(v69, this->fields.MESSAGE_FONT_SIZE, 0LL), message)
         ? (v70 = message)
-        : (v70 = (System_String_o *)StringLiteral_1),
+        : (v70 = (System_String_o *)StringLiteral_1/*""*/),
           WrapControlText__textBBCodeAdjust(
             this->fields.messageLabel,
             v70,
@@ -636,7 +636,7 @@ LABEL_94:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v89 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+    v89 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( v88 )
     {
       UILabel__set_text(v88, v89, 0LL);

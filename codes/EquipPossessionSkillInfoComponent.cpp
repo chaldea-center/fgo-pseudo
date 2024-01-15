@@ -97,7 +97,7 @@ void __fastcall EquipPossessionSkillInfoComponent__Initialize(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_2408, v4);
+    sub_B16FFC(&StringLiteral_2408/*"BATTLE_DIALOG_DETAIL_NOEQUIP"*/, v4);
     byte_40FC4F1 = 1;
   }
   equipSkillSprite = (UnityEngine_Object_o *)this->fields.equipSkillSprite;
@@ -166,7 +166,7 @@ void __fastcall EquipPossessionSkillInfoComponent__Initialize(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2408, 0LL);
+          v18 = LocalizationManager__Get((System_String_o *)StringLiteral_2408/*"BATTLE_DIALOG_DETAIL_NOEQUIP"*/, 0LL);
           if ( !v17 )
 LABEL_33:
             sub_B170D4();

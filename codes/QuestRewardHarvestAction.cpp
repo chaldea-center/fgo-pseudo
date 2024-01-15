@@ -436,10 +436,10 @@ void __fastcall QuestRewardHarvestAction__Setup(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v21);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_10878, v23);
-    sub_B16FFC(&StringLiteral_23611, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
-    sub_B16FFC(&StringLiteral_23856, v26);
+    sub_B16FFC(&StringLiteral_10878/*"QUEST_CLEAR_REWARD_GET"*/, v23);
+    sub_B16FFC(&StringLiteral_23611/*"×"*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
+    sub_B16FFC(&StringLiteral_23856/*"＋"*/, v26);
     byte_40FD5ED = 1;
   }
   v156 = 0LL;
@@ -701,7 +701,7 @@ LABEL_168:
   {
     v99 = (int)v98;
     v100 = 0LL;
-    arg1 = (Il2CppObject *)StringLiteral_23611;
+    arg1 = (Il2CppObject *)StringLiteral_23611/*"×"*/;
     while ( 1 )
     {
       v101 = this->fields.itemSprite;
@@ -781,7 +781,7 @@ LABEL_152:
       0,
       0LL);
     type = v104->fields.type;
-    age = (System_String_o *)StringLiteral_1;
+    age = (System_String_o *)StringLiteral_1/*""*/;
     switch ( type )
     {
       case 1:
@@ -833,7 +833,7 @@ LABEL_152:
         {
 LABEL_127:
           v125 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44107000(v121, 0LL);
-          v118 = StringLiteral_23611;
+          v118 = StringLiteral_23611/*"×"*/;
           age = v125;
           goto LABEL_128;
         }
@@ -857,9 +857,9 @@ LABEL_127:
           goto LABEL_168;
         age = entity->fields.age;
         IsCountableWithPlus = ItemType__IsCountableWithPlus(entity->fields.bannerId, 0LL);
-        v117 = (__int64 *)&StringLiteral_23856;
+        v117 = (__int64 *)&StringLiteral_23856/*"＋"*/;
         if ( !IsCountableWithPlus )
-          v117 = &StringLiteral_23611;
+          v117 = &StringLiteral_23611/*"×"*/;
         v118 = *v117;
 LABEL_128:
         arg1 = (Il2CppObject *)v118;
@@ -878,7 +878,7 @@ LABEL_129:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v128 = LocalizationManager__Get((System_String_o *)StringLiteral_10878, 0LL);
+          v128 = LocalizationManager__Get((System_String_o *)StringLiteral_10878/*"QUEST_CLEAR_REWARD_GET"*/, 0LL);
           num = v104->fields.num;
           v129 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num);
           v130 = System_String__Format_43744796(v128, (Il2CppObject *)age, arg1, v129, 0LL);

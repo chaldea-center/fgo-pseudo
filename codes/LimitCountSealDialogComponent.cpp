@@ -112,16 +112,16 @@ void __fastcall LimitCountSealDialogComponent__Init(LimitCountSealDialogComponen
 
   if ( (byte_40FC24C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FC24C = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (btnLabel = this->fields.btnLabel) == 0LL)
-    || (UILabel__set_text(btnLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(btnLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
     sub_B170D4();
@@ -151,7 +151,7 @@ void __fastcall LimitCountSealDialogComponent__OpenLimitCountSealDialog(
   if ( (byte_40FC24D & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, title);
-    sub_B16FFC(&StringLiteral_3252, v12);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v12);
     byte_40FC24D = 1;
   }
   this->fields.callbackFunc = callback;
@@ -178,7 +178,7 @@ void __fastcall LimitCountSealDialogComponent__OpenLimitCountSealDialog(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !btnLabel
     || (UILabel__set_text(btnLabel, v16, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
@@ -239,10 +239,10 @@ System_String_o *__fastcall LimitCountSealDialogComponent__get_closeBtnPath(
 {
   if ( (byte_40FC24F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15425, method);
+    sub_B16FFC(&StringLiteral_15425/*"Window/OkBtn"*/, method);
     byte_40FC24F = 1;
   }
-  return (System_String_o *)StringLiteral_15425;
+  return (System_String_o *)StringLiteral_15425/*"Window/OkBtn"*/;
 }
 
 

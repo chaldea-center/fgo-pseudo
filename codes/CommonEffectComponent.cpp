@@ -109,7 +109,7 @@ void __fastcall CommonEffectComponent__ForceLoop_18171892(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, isOverWrite);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_16090, v7);
+    sub_B16FFC(&StringLiteral_16090/*"_loop"*/, v7);
     byte_40F656A = 1;
   }
   requestAnimation = (int)this->fields.requestAnimation;
@@ -164,7 +164,7 @@ LABEL_45:
       v14 = this->fields.animationComponent;
       v15 = System_String__Concat_43743732(
               (System_String_o *)this->fields.asset,
-              (System_String_o *)StringLiteral_16090,
+              (System_String_o *)StringLiteral_16090/*"_loop"*/,
               0LL);
       if ( v14 )
       {
@@ -217,7 +217,7 @@ LABEL_29:
       v29 = this->fields.settedVoiceStr;
       v30 = System_String__Concat_43743732(
               (System_String_o *)this->fields.asset,
-              (System_String_o *)StringLiteral_16090,
+              (System_String_o *)StringLiteral_16090/*"_loop"*/,
               0LL);
       if ( v29 )
       {
@@ -299,7 +299,7 @@ void __fastcall CommonEffectComponent__ForceStart_18171164(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, isOverWrite);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_16090, v12);
+    sub_B16FFC(&StringLiteral_16090/*"_loop"*/, v12);
     byte_40F6569 = 1;
   }
   if ( LODWORD(this->fields.requestAnimation) == 2 )
@@ -349,7 +349,7 @@ void __fastcall CommonEffectComponent__ForceStart_18171164(
     v15 = this->fields.animationComponent;
     v16 = System_String__Concat_43743732(
             (System_String_o *)this->fields.asset,
-            (System_String_o *)StringLiteral_16090,
+            (System_String_o *)StringLiteral_16090/*"_loop"*/,
             0LL);
     if ( v15 )
     {
@@ -401,7 +401,7 @@ LABEL_16:
   v32 = this->fields.settedVoiceStr;
   v33 = System_String__Concat_43743732(
           (System_String_o *)this->fields.asset,
-          (System_String_o *)StringLiteral_16090,
+          (System_String_o *)StringLiteral_16090/*"_loop"*/,
           0LL);
   if ( !v32 )
     goto LABEL_40;
@@ -508,10 +508,10 @@ void __fastcall CommonEffectComponent__Init(
   if ( (byte_40F6566 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, isSkip);
-    sub_B16FFC(&StringLiteral_5794, v11);
-    sub_B16FFC(&StringLiteral_15842, v12);
-    sub_B16FFC(&StringLiteral_651, v13);
-    sub_B16FFC(&StringLiteral_608, v14);
+    sub_B16FFC(&StringLiteral_5794/*"Effect("*/, v11);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v12);
+    sub_B16FFC(&StringLiteral_651/*")"*/, v13);
+    sub_B16FFC(&StringLiteral_608/*"(Clone)"*/, v14);
     byte_40F6566 = 1;
   }
   if ( LODWORD(this->fields.requestAnimation) )
@@ -527,7 +527,7 @@ void __fastcall CommonEffectComponent__Init(
     sub_B16F98((BattleServantConfConponent_o *)&this->fields.baseName, name, v18, v19, v20, v21, v22, v23);
     if ( !*p_baseName )
       goto LABEL_39;
-    if ( System_String__EndsWith(*p_baseName, (System_String_o *)StringLiteral_608, 0LL) )
+    if ( System_String__EndsWith(*p_baseName, (System_String_o *)StringLiteral_608/*"(Clone)"*/, 0LL) )
     {
       if ( !*p_baseName )
         goto LABEL_39;
@@ -544,7 +544,7 @@ void __fastcall CommonEffectComponent__Init(
   {
     v31 = *p_baseName;
     v32 = System_Int32__ToString((int)this + 128, 0LL);
-    v33 = (System_Int32_array **)System_String__Concat_43746016(v31, (System_String_o *)StringLiteral_15842, v32, 0LL);
+    v33 = (System_Int32_array **)System_String__Concat_43746016(v31, (System_String_o *)StringLiteral_15842/*"_"*/, v32, 0LL);
     *p_baseName = (System_String_o *)v33;
     sub_B16F98((BattleServantConfConponent_o *)&this->fields.baseName, v33, v34, v35, v36, v37, v38, v39);
   }
@@ -576,9 +576,9 @@ void __fastcall CommonEffectComponent__Init(
   }
   v50 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v51 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_5794,
+          (System_String_o *)StringLiteral_5794/*"Effect("*/,
           this->fields.baseName,
-          (System_String_o *)StringLiteral_651,
+          (System_String_o *)StringLiteral_651/*")"*/,
           0LL);
   if ( !v50 )
     goto LABEL_39;
@@ -838,10 +838,10 @@ void __fastcall CommonEffectComponent__NextPlayAnimation(
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_16090, v11);
-    sub_B16FFC(&StringLiteral_16113, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
-    sub_B16FFC(&StringLiteral_16078, v14);
+    sub_B16FFC(&StringLiteral_16090/*"_loop"*/, v11);
+    sub_B16FFC(&StringLiteral_16113/*"_start"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
+    sub_B16FFC(&StringLiteral_16078/*"_end"*/, v14);
     byte_40F6568 = 1;
   }
   animationComponent = (UnityEngine_Object_o *)this->fields.animationComponent;
@@ -879,7 +879,7 @@ void __fastcall CommonEffectComponent__NextPlayAnimation(
         }
         v3 = 3;
       }
-      name = (struct System_String_o *)StringLiteral_1;
+      name = (struct System_String_o *)StringLiteral_1/*""*/;
       goto LABEL_134;
     }
     v31 = this->fields.settedVoiceStr;
@@ -985,7 +985,7 @@ LABEL_48:
       v94 = this->fields.settedVoiceStr;
       v95 = System_String__Concat_43743732(
               (System_String_o *)this->fields.asset,
-              (System_String_o *)StringLiteral_16113,
+              (System_String_o *)StringLiteral_16113/*"_start"*/,
               0LL);
       if ( !v94 )
         goto LABEL_139;
@@ -1020,7 +1020,7 @@ LABEL_48:
     v100 = this->fields.settedVoiceStr;
     v101 = System_String__Concat_43743732(
              (System_String_o *)this->fields.asset,
-             (System_String_o *)StringLiteral_16090,
+             (System_String_o *)StringLiteral_16090/*"_loop"*/,
              0LL);
     if ( !v100 )
       goto LABEL_139;
@@ -1031,7 +1031,7 @@ LABEL_124:
       v102 = this->fields.settedVoiceStr;
       v103 = System_String__Concat_43743732(
                (System_String_o *)this->fields.asset,
-               (System_String_o *)StringLiteral_16078,
+               (System_String_o *)StringLiteral_16078/*"_end"*/,
                0LL);
       if ( !v102 )
         goto LABEL_139;
@@ -1056,7 +1056,7 @@ LABEL_129:
     }
     else
     {
-      name = (struct System_String_o *)StringLiteral_1;
+      name = (struct System_String_o *)StringLiteral_1/*""*/;
       if ( !this )
         goto LABEL_139;
     }
@@ -1196,7 +1196,7 @@ LABEL_76:
       v76 = this->fields.animationComponent;
       v77 = System_String__Concat_43743732(
               (System_String_o *)this->fields.asset,
-              (System_String_o *)StringLiteral_16113,
+              (System_String_o *)StringLiteral_16113/*"_start"*/,
               0LL);
       if ( !v76 )
         goto LABEL_139;
@@ -1230,7 +1230,7 @@ LABEL_92:
       v82 = this->fields.animationComponent;
       v83 = System_String__Concat_43743732(
               (System_String_o *)this->fields.asset,
-              (System_String_o *)StringLiteral_16090,
+              (System_String_o *)StringLiteral_16090/*"_loop"*/,
               0LL);
       if ( !v82 )
         goto LABEL_139;
@@ -1246,7 +1246,7 @@ LABEL_92:
   v86 = this->fields.animationComponent;
   v87 = System_String__Concat_43743732(
           (System_String_o *)this->fields.asset,
-          (System_String_o *)StringLiteral_16078,
+          (System_String_o *)StringLiteral_16078/*"_end"*/,
           0LL);
   if ( !v86 )
     goto LABEL_139;
@@ -1285,7 +1285,7 @@ LABEL_139:
   }
 LABEL_100:
   v85 = this;
-  name = (struct System_String_o *)StringLiteral_1;
+  name = (struct System_String_o *)StringLiteral_1/*""*/;
   if ( !this )
     goto LABEL_139;
 LABEL_104:
@@ -2083,7 +2083,7 @@ void __fastcall CommonEffectComponent__StopInternal(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, force);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_16090, v13);
+    sub_B16FFC(&StringLiteral_16090/*"_loop"*/, v13);
     byte_40F656B = 1;
   }
   if ( LODWORD(this->fields.requestAnimation) == 2 )
@@ -2124,7 +2124,7 @@ LABEL_33:
     }
     v18 = System_String__Concat_43743732(
             (System_String_o *)this->fields.asset,
-            (System_String_o *)StringLiteral_16090,
+            (System_String_o *)StringLiteral_16090/*"_loop"*/,
             0LL);
     if ( !v15 )
       goto LABEL_33;
@@ -2175,7 +2175,7 @@ LABEL_25:
       {
         v25 = System_String__Concat_43743732(
                 (System_String_o *)this->fields.asset,
-                (System_String_o *)StringLiteral_16090,
+                (System_String_o *)StringLiteral_16090/*"_loop"*/,
                 0LL);
         if ( !v17 )
           goto LABEL_33;
@@ -2247,7 +2247,7 @@ void __fastcall CommonEffectComponent__Update(CommonEffectComponent_o *this, con
   if ( (byte_40F656F & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F656F = 1;
   }
   if ( LODWORD(this->fields.requestAnimation) < 3 )
@@ -2376,7 +2376,7 @@ LABEL_79:
         return;
     }
   }
-  if ( System_String__op_Inequality(*p_playAnimation, (System_String_o *)StringLiteral_1, 0LL) )
+  if ( System_String__op_Inequality(*p_playAnimation, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
   {
     v16 = (UnityEngine_Object_o *)this->fields.animationComponent;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

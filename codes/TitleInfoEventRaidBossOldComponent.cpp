@@ -14,12 +14,12 @@ void __fastcall TitleInfoEventRaidBossOldComponent___cctor(const MethodInfo *met
   if ( (byte_40FDFFE & 1) == 0 )
   {
     sub_B16FFC(&TitleInfoEventRaidBossOldComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_21586, v8);
+    sub_B16FFC(&StringLiteral_21586/*"raid_boss_icon_"*/, v8);
     byte_40FDFFE = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TitleInfoEventRaidBossOldComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_21586;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21586;
+  v10 = (System_Int32_array **)StringLiteral_21586/*"raid_boss_icon_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21586/*"raid_boss_icon_"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -558,7 +558,7 @@ void __fastcall TitleInfoEventRaidBossOldComponent__UpdateDisp(
     sub_B16FFC(&SingletonTemplate_clsQuestCheck__TypeInfo, v11);
     sub_B16FFC(&TitleInfoEventRaidBossOldComponent_TypeInfo, v12);
     sub_B16FFC(&TitleInfoEventRaidHpComponent_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_13367, v14);
+    sub_B16FFC(&StringLiteral_13367/*"TITLE_INFO_RAID_TOTALHP"*/, v14);
     byte_40FDFFD = 1;
   }
   entity = 0LL;
@@ -827,7 +827,7 @@ LABEL_66:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v72 = LocalizationManager__Get((System_String_o *)StringLiteral_13367, 0LL);
+    v72 = LocalizationManager__Get((System_String_o *)StringLiteral_13367/*"TITLE_INFO_RAID_TOTALHP"*/, 0LL);
     v94 = v47 - v48;
     v73 = System_Int64__ToString((int64_t)&v94, 0LL);
     NumberFormat_23125544 = (Il2CppObject *)LocalizationManager__GetNumberFormat_23125544(v73, 0LL);

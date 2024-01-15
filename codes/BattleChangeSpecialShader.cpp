@@ -113,11 +113,11 @@ void __fastcall BattleChangeSpecialShader__ChangeShader(BattleChangeSpecialShade
     sub_B16FFC(&Method_UnityEngine_Resources_Load_Texture2D___, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__, v6);
     sub_B16FFC(&UnityEngine_SkinnedMeshRenderer_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_15891, v8);
-    sub_B16FFC(&StringLiteral_15875, v9);
-    sub_B16FFC(&StringLiteral_4499, v10);
-    sub_B16FFC(&StringLiteral_12773, v11);
-    sub_B16FFC(&StringLiteral_15853, v12);
+    sub_B16FFC(&StringLiteral_15891/*"_Color"*/, v8);
+    sub_B16FFC(&StringLiteral_15875/*"_ChocoTex"*/, v9);
+    sub_B16FFC(&StringLiteral_4499/*"Custom/SoftEdgeUnlitCutZ_Choco"*/, v10);
+    sub_B16FFC(&StringLiteral_12773/*"Shaders/ChocoMap"*/, v11);
+    sub_B16FFC(&StringLiteral_15853/*"_AddColor"*/, v12);
     byte_40FD464 = 1;
   }
   methoda.methodPointer = 0LL;
@@ -206,9 +206,9 @@ LABEL_49:
     }
     if ( BattleActorControl__isChocoServant((BattleActorControl_o *)v13, 0LL) )
     {
-      v29 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4499, 0LL);
+      v29 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4499/*"Custom/SoftEdgeUnlitCutZ_Choco"*/, 0LL);
       UIAtlas = UnityEngine_Resources__Load_UIAtlas_(
-                  (System_String_o *)StringLiteral_12773,
+                  (System_String_o *)StringLiteral_12773/*"Shaders/ChocoMap"*/,
                   (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_Texture2D___);
       v31 = this->fields.targetRendererList;
       if ( !v31 )
@@ -270,11 +270,11 @@ LABEL_49:
                 v61.fields.g = g;
                 v61.fields.b = b;
                 v61.fields.a = a;
-                UnityEngine_Material__SetColor(v52, (System_String_o *)StringLiteral_15891, v61, 0LL);
+                UnityEngine_Material__SetColor(v52, (System_String_o *)StringLiteral_15891/*"_Color"*/, v61, 0LL);
                 *(_QWORD *)&v62.fields.r = methoda.methodPointer;
                 *(_QWORD *)&v62.fields.b = methoda.invoker_method;
-                UnityEngine_Material__SetColor(v52, (System_String_o *)StringLiteral_15853, v62, 0LL);
-                UnityEngine_Material__SetTexture(v52, (System_String_o *)StringLiteral_15875, v32, 0LL);
+                UnityEngine_Material__SetColor(v52, (System_String_o *)StringLiteral_15853/*"_AddColor"*/, v62, 0LL);
+                UnityEngine_Material__SetTexture(v52, (System_String_o *)StringLiteral_15875/*"_ChocoTex"*/, v32, 0LL);
                 max_length = v49->max_length;
               }
               while ( (int)++v50 < max_length );

@@ -234,10 +234,10 @@ int32_t __fastcall BuffTypeDetailEntity__GetShowStateWarBoardEnemyEquip(
 
   if ( (byte_40FB4FC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12802, *(_QWORD *)&defVal);
+    sub_B16FFC(&StringLiteral_12802/*"ShowStateWarBoardEnemyEquip"*/, *(_QWORD *)&defVal);
     byte_40FB4FC = 1;
   }
-  return BuffTypeDetailEntity__GetScript(this, (System_String_o *)StringLiteral_12802, defVal, v3);
+  return BuffTypeDetailEntity__GetScript(this, (System_String_o *)StringLiteral_12802/*"ShowStateWarBoardEnemyEquip"*/, defVal, v3);
 }
 
 

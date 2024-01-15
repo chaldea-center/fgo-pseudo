@@ -32,22 +32,22 @@ void __fastcall DataLostResetManager___cctor(const MethodInfo *method)
   if ( (byte_40FB40B & 1) == 0 )
   {
     sub_B16FFC(&DataLostResetManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_11413, v8);
-    sub_B16FFC(&StringLiteral_16726, v9);
-    sub_B16FFC(&StringLiteral_11416, v10);
+    sub_B16FFC(&StringLiteral_11413/*"ResetConfirmDialog"*/, v8);
+    sub_B16FFC(&StringLiteral_16726/*"bit_raidreset"*/, v9);
+    sub_B16FFC(&StringLiteral_11416/*"ResetSelectDialog"*/, v10);
     byte_40FB40B = 1;
   }
   static_fields = (BattleServantConfConponent_o *)DataLostResetManager_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_16726;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16726;
+  v12 = (System_Int32_array **)StringLiteral_16726/*"bit_raidreset"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16726/*"bit_raidreset"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = DataLostResetManager_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_11416;
-  v13->PREFAB_SELECT_DIALOG_NAME = (struct System_String_o *)StringLiteral_11416;
+  v14 = (System_Int32_array **)StringLiteral_11416/*"ResetSelectDialog"*/;
+  v13->PREFAB_SELECT_DIALOG_NAME = (struct System_String_o *)StringLiteral_11416/*"ResetSelectDialog"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->PREFAB_SELECT_DIALOG_NAME, v14, v15, v16, v17, v18, v19, v20);
   v21 = DataLostResetManager_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_11413;
-  v21->PREFAB_CONFIRM_DIALOG_NAME = (struct System_String_o *)StringLiteral_11413;
+  v22 = (System_Int32_array **)StringLiteral_11413/*"ResetConfirmDialog"*/;
+  v21->PREFAB_CONFIRM_DIALOG_NAME = (struct System_String_o *)StringLiteral_11413/*"ResetConfirmDialog"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->PREFAB_CONFIRM_DIALOG_NAME, v22, v23, v24, v25, v26, v27, v28);
 }
 
@@ -76,15 +76,15 @@ System_String_o *__fastcall DataLostResetManager__GetEventAssetName(
   if ( (byte_40FB403 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&warId);
-    sub_B16FFC(&StringLiteral_6189, v5);
-    sub_B16FFC(&StringLiteral_6190, v6);
+    sub_B16FFC(&StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v5);
+    sub_B16FFC(&StringLiteral_6190/*"EventUI/Prefabs/{0}/{1}"*/, v6);
     byte_40FB403 = 1;
   }
   if ( eventId )
   {
     v13 = eventId;
     v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
-    return System_String__Format((System_String_o *)StringLiteral_6189, v7, 0LL);
+    return System_String__Format((System_String_o *)StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v7, 0LL);
   }
   else
   {
@@ -92,7 +92,7 @@ System_String_o *__fastcall DataLostResetManager__GetEventAssetName(
     v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12);
     v11 = warId;
     v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11);
-    return System_String__Format_43739268((System_String_o *)StringLiteral_6190, v9, v10, 0LL);
+    return System_String__Format_43739268((System_String_o *)StringLiteral_6190/*"EventUI/Prefabs/{0}/{1}"*/, v9, v10, 0LL);
   }
 }
 
@@ -182,9 +182,9 @@ void __fastcall DataLostResetManager__OpenBattleResultResetDialog(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v17);
     sub_B16FFC(&Method_DataLostResetManager___c__DisplayClass8_0__OpenBattleResultResetDialog_b__0__, v18);
     sub_B16FFC(&DataLostResetManager___c__DisplayClass8_0_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_5595, v20);
-    sub_B16FFC(&StringLiteral_5597, v21);
-    sub_B16FFC(&StringLiteral_5596, v22);
+    sub_B16FFC(&StringLiteral_5595/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_BUTTON"*/, v20);
+    sub_B16FFC(&StringLiteral_5597/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_TITLE"*/, v21);
+    sub_B16FFC(&StringLiteral_5596/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_MESSAGE"*/, v22);
     byte_40FB406 = 1;
   }
   v23 = sub_B170CC(DataLostResetManager___c__DisplayClass8_0_TypeInfo, *(_QWORD *)&warId, closeAction, method, v4);
@@ -294,9 +294,9 @@ void __fastcall DataLostResetManager__OpenBattleResultResetDialog(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v62 = LocalizationManager__Get((System_String_o *)StringLiteral_5597, 0LL);
-        v63 = LocalizationManager__Get((System_String_o *)StringLiteral_5596, 0LL);
-        v64 = LocalizationManager__Get((System_String_o *)StringLiteral_5595, 0LL);
+        v62 = LocalizationManager__Get((System_String_o *)StringLiteral_5597/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_TITLE"*/, 0LL);
+        v63 = LocalizationManager__Get((System_String_o *)StringLiteral_5596/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_MESSAGE"*/, 0LL);
+        v64 = LocalizationManager__Get((System_String_o *)StringLiteral_5595/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_BUTTON"*/, 0LL);
         v69 = (ResetSelectDialog_ClickDelegate_o *)sub_B170CC(
                                                      ResetSelectDialog_ClickDelegate_TypeInfo,
                                                      v65,
@@ -417,9 +417,9 @@ void __fastcall DataLostResetManager__OpenConfirmDialog(
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v19);
     sub_B16FFC(&Method_DataLostResetManager___c__DisplayClass7_0__OpenConfirmDialog_b__0__, v20);
     sub_B16FFC(&DataLostResetManager___c__DisplayClass7_0_TypeInfo, v21);
-    sub_B16FFC(&StringLiteral_5603, v22);
-    sub_B16FFC(&StringLiteral_5602, v23);
-    sub_B16FFC(&StringLiteral_1, v24);
+    sub_B16FFC(&StringLiteral_5603/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_TITLE"*/, v22);
+    sub_B16FFC(&StringLiteral_5602/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_MESSAGE_"*/, v23);
+    sub_B16FFC(&StringLiteral_1/*""*/, v24);
     byte_40FB405 = 1;
   }
   v25 = sub_B170CC(
@@ -521,7 +521,7 @@ void __fastcall DataLostResetManager__OpenConfirmDialog(
             *(_QWORD *)&v74.fields.value.fields.z = 0LL;
             TerminalSceneComponent__LocateDialogToUiRoot(mInstance, *v47, v74, 0LL);
             v57 = System_Int32__ToString((int32_t)&v73, 0LL);
-            v58 = System_String__Concat_43743732((System_String_o *)StringLiteral_5602, v57, 0LL);
+            v58 = System_String__Concat_43743732((System_String_o *)StringLiteral_5602/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_MESSAGE_"*/, v57, 0LL);
             if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !LocalizationManager_TypeInfo->_2.cctor_finished )
             {
@@ -529,16 +529,16 @@ void __fastcall DataLostResetManager__OpenConfirmDialog(
             }
             v59 = LocalizationManager__Get(v58, 0LL);
             v60 = System_Int32__ToString((int32_t)&v73, 0LL);
-            v61 = System_String__Concat_43743732((System_String_o *)StringLiteral_5602, v60, 0LL);
+            v61 = System_String__Concat_43743732((System_String_o *)StringLiteral_5602/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_MESSAGE_"*/, v60, 0LL);
             v62 = System_String__op_Equality(v59, v61, 0LL);
             v63 = *v47;
-            v64 = v62 ? (System_String_o *)StringLiteral_1 : v59;
+            v64 = v62 ? (System_String_o *)StringLiteral_1/*""*/ : v59;
             if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !LocalizationManager_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v65 = LocalizationManager__Get((System_String_o *)StringLiteral_5603, 0LL);
+            v65 = LocalizationManager__Get((System_String_o *)StringLiteral_5603/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_TITLE"*/, 0LL);
             v66 = *(unsigned __int8 *)(v25 + 44);
             v67 = v65;
             v72 = (ResetConfirmDialog_ClickDelegate_o *)sub_B170CC(
@@ -696,11 +696,11 @@ void __fastcall DataLostResetManager__OpenResetSelectDialog(
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v22);
     sub_B16FFC(&Method_DataLostResetManager___c__DisplayClass6_0__OpenResetSelectDialog_b__0__, v23);
     sub_B16FFC(&DataLostResetManager___c__DisplayClass6_0_TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_15960, v25);
-    sub_B16FFC(&StringLiteral_5605, v26);
-    sub_B16FFC(&StringLiteral_5606, v27);
-    sub_B16FFC(&StringLiteral_5607, v28);
-    sub_B16FFC(&StringLiteral_1, v29);
+    sub_B16FFC(&StringLiteral_15960/*"_NO_CANCEL"*/, v25);
+    sub_B16FFC(&StringLiteral_5605/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_DECIDE"*/, v26);
+    sub_B16FFC(&StringLiteral_5606/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_MESSAGE_"*/, v27);
+    sub_B16FFC(&StringLiteral_5607/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_TITLE"*/, v28);
+    sub_B16FFC(&StringLiteral_1/*""*/, v29);
     byte_40FB404 = 1;
   }
   size = 0;
@@ -841,17 +841,17 @@ void __fastcall DataLostResetManager__OpenResetSelectDialog(
       if ( !DataLostBattleResetEntities )
         goto LABEL_87;
       v71 = DataLostBattleResetEntities;
-      resetMessage = (System_String_o *)StringLiteral_1;
+      resetMessage = (System_String_o *)StringLiteral_1/*""*/;
       size = DataLostBattleResetEntities->fields._size;
       v73 = (System_Int32_array **)sub_B17014(int___TypeInfo, 2LL, v70);
       *(_QWORD *)(v30 + 40) = v73;
       v74 = (__int64 *)(v30 + 40);
       sub_B16F98((BattleServantConfConponent_o *)(v30 + 40), v73, v75, v76, v77, v78, v79, v80);
       v81 = System_Int32__ToString((int32_t)&size, 0LL);
-      v82 = System_String__Concat_43743732((System_String_o *)StringLiteral_5606, v81, 0LL);
+      v82 = System_String__Concat_43743732((System_String_o *)StringLiteral_5606/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_MESSAGE_"*/, v81, 0LL);
       v83 = v82;
       if ( size >= 2 && *(_BYTE *)(v30 + 48) )
-        v83 = System_String__Concat_43743732(v82, (System_String_o *)StringLiteral_15960, 0LL);
+        v83 = System_String__Concat_43743732(v82, (System_String_o *)StringLiteral_15960/*"_NO_CANCEL"*/, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
@@ -860,7 +860,7 @@ void __fastcall DataLostResetManager__OpenResetSelectDialog(
       v84 = LocalizationManager__Get(v83, 0LL);
       v85 = (System_String_o *)System_String__op_Equality(v84, v83, 0LL);
       if ( ((unsigned __int8)v85 & 1) != 0 )
-        v88 = (System_String_o *)StringLiteral_1;
+        v88 = (System_String_o *)StringLiteral_1/*""*/;
       else
         v88 = v84;
       if ( size >= 2 )
@@ -903,7 +903,7 @@ LABEL_81:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v100 = LocalizationManager__Get((System_String_o *)StringLiteral_5607, 0LL);
+            v100 = LocalizationManager__Get((System_String_o *)StringLiteral_5607/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_TITLE"*/, 0LL);
             v101 = *(unsigned __int8 *)(v30 + 48);
             v102 = v100;
             v107 = (ResetSelectDialog_ClickDelegate_o *)sub_B170CC(
@@ -934,7 +934,7 @@ LABEL_87:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v85 = LocalizationManager__Get((System_String_o *)StringLiteral_5605, 0LL);
+        v85 = LocalizationManager__Get((System_String_o *)StringLiteral_5605/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_DECIDE"*/, 0LL);
         v89 = *v74;
         v90 = v85;
         if ( !v71->fields._size )
@@ -1653,7 +1653,7 @@ bool __fastcall DataLostResetManager__PlayGameOverAnimation_d__11__MoveNext(
     sub_B16FFC(&DataLostResetManager___c_TypeInfo, v23);
     sub_B16FFC(&UnityEngine_WaitForSeconds_TypeInfo, v24);
     sub_B16FFC(&UnityEngine_WaitWhile_TypeInfo, v25);
-    sub_B16FFC(&StringLiteral_1, v26);
+    sub_B16FFC(&StringLiteral_1/*""*/, v26);
     byte_40F8B28 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -1827,8 +1827,8 @@ bool __fastcall DataLostResetManager__PlayGameOverAnimation_d__11__MoveNext(
             {
               GameObjectExtensions__SafeSetParent_27425996(gameOverEffect, mInstance->fields.mEffectPanel, 0LL);
               this->fields._whiteOutTime_5__2 = 1.5;
-              v63 = (System_Int32_array **)StringLiteral_1;
-              this->fields._whiteOutSe_5__3 = (struct System_String_o *)StringLiteral_1;
+              v63 = (System_Int32_array **)StringLiteral_1/*""*/;
+              this->fields._whiteOutSe_5__3 = (struct System_String_o *)StringLiteral_1/*""*/;
               sub_B16F98(
                 (BattleServantConfConponent_o *)&this->fields._whiteOutSe_5__3,
                 v63,

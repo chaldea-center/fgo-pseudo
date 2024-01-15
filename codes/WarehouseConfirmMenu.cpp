@@ -123,26 +123,26 @@ void __fastcall WarehouseConfirmMenu__Init(WarehouseConfirmMenu_o *this, const M
 
   if ( (byte_40FA964 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FA964 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_9;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL)
-    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL) )
   {
 LABEL_9:
     sub_B170D4();
   }
-  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -344,28 +344,28 @@ void __fastcall WarehouseConfirmMenu__Open(
     sub_B16FFC(&int_TypeInfo, v14);
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
     sub_B16FFC(&Method_WarehouseConfirmMenu_EndOpen__, v16);
-    sub_B16FFC(&StringLiteral_15243, v17);
-    sub_B16FFC(&StringLiteral_15262, v18);
-    sub_B16FFC(&StringLiteral_15259, v19);
-    sub_B16FFC(&StringLiteral_15261, v20);
-    sub_B16FFC(&StringLiteral_15245, v21);
-    sub_B16FFC(&StringLiteral_15257, v22);
-    sub_B16FFC(&StringLiteral_15254, v23);
-    sub_B16FFC(&StringLiteral_15263, v24);
-    sub_B16FFC(&StringLiteral_15264, v25);
-    sub_B16FFC(&StringLiteral_15256, v26);
-    sub_B16FFC(&StringLiteral_15240, v27);
-    sub_B16FFC(&StringLiteral_15258, v28);
-    sub_B16FFC(&StringLiteral_15241, v29);
-    sub_B16FFC(&StringLiteral_15252, v30);
-    sub_B16FFC(&StringLiteral_15265, v31);
-    sub_B16FFC(&StringLiteral_15253, v32);
-    sub_B16FFC(&StringLiteral_15255, v33);
-    sub_B16FFC(&StringLiteral_15260, v34);
-    sub_B16FFC(&StringLiteral_15239, v35);
-    sub_B16FFC(&StringLiteral_15246, v36);
-    sub_B16FFC(&StringLiteral_15244, v37);
-    sub_B16FFC(&StringLiteral_15242, v38);
+    sub_B16FFC(&StringLiteral_15243/*"WAREHOUSE_CONFIRM_PUT_OUT_CANCEL"*/, v17);
+    sub_B16FFC(&StringLiteral_15262/*"WAREHOUSE_OVER_PUT_OUT_CLOSE"*/, v18);
+    sub_B16FFC(&StringLiteral_15259/*"WAREHOUSE_OVER_PUT_IN_SERVANT_EQUIP_MESSAGE"*/, v19);
+    sub_B16FFC(&StringLiteral_15261/*"WAREHOUSE_OVER_PUT_IN_TITLE"*/, v20);
+    sub_B16FFC(&StringLiteral_15245/*"WAREHOUSE_CONFIRM_PUT_OUT_MESSAGE"*/, v21);
+    sub_B16FFC(&StringLiteral_15257/*"WAREHOUSE_NOTIFICATION_PUT_OUT_TITLE"*/, v22);
+    sub_B16FFC(&StringLiteral_15254/*"WAREHOUSE_NOTIFICATION_PUT_IN_TITLE"*/, v23);
+    sub_B16FFC(&StringLiteral_15263/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_EQUIP_MESSAGE"*/, v24);
+    sub_B16FFC(&StringLiteral_15264/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_MESSAGE"*/, v25);
+    sub_B16FFC(&StringLiteral_15256/*"WAREHOUSE_NOTIFICATION_PUT_OUT_MESSAGE"*/, v26);
+    sub_B16FFC(&StringLiteral_15240/*"WAREHOUSE_CONFIRM_PUT_IN_DECIDE"*/, v27);
+    sub_B16FFC(&StringLiteral_15258/*"WAREHOUSE_OVER_PUT_IN_CLOSE"*/, v28);
+    sub_B16FFC(&StringLiteral_15241/*"WAREHOUSE_CONFIRM_PUT_IN_MESSAGE"*/, v29);
+    sub_B16FFC(&StringLiteral_15252/*"WAREHOUSE_NOTIFICATION_PUT_IN_CLOSE"*/, v30);
+    sub_B16FFC(&StringLiteral_15265/*"WAREHOUSE_OVER_PUT_OUT_TITLE"*/, v31);
+    sub_B16FFC(&StringLiteral_15253/*"WAREHOUSE_NOTIFICATION_PUT_IN_MESSAGE"*/, v32);
+    sub_B16FFC(&StringLiteral_15255/*"WAREHOUSE_NOTIFICATION_PUT_OUT_CLOSE"*/, v33);
+    sub_B16FFC(&StringLiteral_15260/*"WAREHOUSE_OVER_PUT_IN_SERVANT_MESSAGE"*/, v34);
+    sub_B16FFC(&StringLiteral_15239/*"WAREHOUSE_CONFIRM_PUT_IN_CANCEL"*/, v35);
+    sub_B16FFC(&StringLiteral_15246/*"WAREHOUSE_CONFIRM_PUT_OUT_TITLE"*/, v36);
+    sub_B16FFC(&StringLiteral_15244/*"WAREHOUSE_CONFIRM_PUT_OUT_DECIDE"*/, v37);
+    sub_B16FFC(&StringLiteral_15242/*"WAREHOUSE_CONFIRM_PUT_IN_TITLE"*/, v38);
     byte_40FA965 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
@@ -437,22 +437,22 @@ LABEL_29:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v62 = LocalizationManager__Get((System_String_o *)StringLiteral_15242, 0LL);
+            v62 = LocalizationManager__Get((System_String_o *)StringLiteral_15242/*"WAREHOUSE_CONFIRM_PUT_IN_TITLE"*/, 0LL);
             if ( !titleLabel )
               goto LABEL_84;
             UILabel__set_text(titleLabel, v62, 0LL);
             messageLabel = this->fields.messageLabel;
-            v64 = LocalizationManager__Get((System_String_o *)StringLiteral_15241, 0LL);
+            v64 = LocalizationManager__Get((System_String_o *)StringLiteral_15241/*"WAREHOUSE_CONFIRM_PUT_IN_MESSAGE"*/, 0LL);
             if ( !messageLabel )
               goto LABEL_84;
             UILabel__set_text(messageLabel, v64, 0LL);
             decideLabel = this->fields.decideLabel;
-            v66 = LocalizationManager__Get((System_String_o *)StringLiteral_15240, 0LL);
+            v66 = LocalizationManager__Get((System_String_o *)StringLiteral_15240/*"WAREHOUSE_CONFIRM_PUT_IN_DECIDE"*/, 0LL);
             if ( !decideLabel )
               goto LABEL_84;
             UILabel__set_text(decideLabel, v66, 0LL);
             cancelLabel = this->fields.cancelLabel;
-            v68 = &StringLiteral_15239;
+            v68 = &StringLiteral_15239/*"WAREHOUSE_CONFIRM_PUT_IN_CANCEL"*/;
             goto LABEL_80;
           case 2:
           case 3:
@@ -462,22 +462,22 @@ LABEL_29:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v74 = LocalizationManager__Get((System_String_o *)StringLiteral_15246, 0LL);
+            v74 = LocalizationManager__Get((System_String_o *)StringLiteral_15246/*"WAREHOUSE_CONFIRM_PUT_OUT_TITLE"*/, 0LL);
             if ( !v73 )
               goto LABEL_84;
             UILabel__set_text(v73, v74, 0LL);
             v75 = this->fields.messageLabel;
-            v76 = LocalizationManager__Get((System_String_o *)StringLiteral_15245, 0LL);
+            v76 = LocalizationManager__Get((System_String_o *)StringLiteral_15245/*"WAREHOUSE_CONFIRM_PUT_OUT_MESSAGE"*/, 0LL);
             if ( !v75 )
               goto LABEL_84;
             UILabel__set_text(v75, v76, 0LL);
             v77 = this->fields.decideLabel;
-            v78 = LocalizationManager__Get((System_String_o *)StringLiteral_15244, 0LL);
+            v78 = LocalizationManager__Get((System_String_o *)StringLiteral_15244/*"WAREHOUSE_CONFIRM_PUT_OUT_DECIDE"*/, 0LL);
             if ( !v77 )
               goto LABEL_84;
             UILabel__set_text(v77, v78, 0LL);
             cancelLabel = this->fields.cancelLabel;
-            v68 = &StringLiteral_15243;
+            v68 = &StringLiteral_15243/*"WAREHOUSE_CONFIRM_PUT_OUT_CANCEL"*/;
             goto LABEL_80;
           case 4:
           case 5:
@@ -487,17 +487,17 @@ LABEL_29:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v70 = LocalizationManager__Get((System_String_o *)StringLiteral_15254, 0LL);
+            v70 = LocalizationManager__Get((System_String_o *)StringLiteral_15254/*"WAREHOUSE_NOTIFICATION_PUT_IN_TITLE"*/, 0LL);
             if ( !v69 )
               goto LABEL_84;
             UILabel__set_text(v69, v70, 0LL);
             v71 = this->fields.messageLabel;
-            v72 = LocalizationManager__Get((System_String_o *)StringLiteral_15253, 0LL);
+            v72 = LocalizationManager__Get((System_String_o *)StringLiteral_15253/*"WAREHOUSE_NOTIFICATION_PUT_IN_MESSAGE"*/, 0LL);
             if ( !v71 )
               goto LABEL_84;
             UILabel__set_text(v71, v72, 0LL);
             cancelLabel = this->fields.closeLabel;
-            v68 = &StringLiteral_15252;
+            v68 = &StringLiteral_15252/*"WAREHOUSE_NOTIFICATION_PUT_IN_CLOSE"*/;
             goto LABEL_80;
           case 6:
           case 7:
@@ -507,17 +507,17 @@ LABEL_29:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v80 = LocalizationManager__Get((System_String_o *)StringLiteral_15257, 0LL);
+            v80 = LocalizationManager__Get((System_String_o *)StringLiteral_15257/*"WAREHOUSE_NOTIFICATION_PUT_OUT_TITLE"*/, 0LL);
             if ( !v79 )
               goto LABEL_84;
             UILabel__set_text(v79, v80, 0LL);
             v81 = this->fields.messageLabel;
-            v82 = LocalizationManager__Get((System_String_o *)StringLiteral_15256, 0LL);
+            v82 = LocalizationManager__Get((System_String_o *)StringLiteral_15256/*"WAREHOUSE_NOTIFICATION_PUT_OUT_MESSAGE"*/, 0LL);
             if ( !v81 )
               goto LABEL_84;
             UILabel__set_text(v81, v82, 0LL);
             cancelLabel = this->fields.closeLabel;
-            v68 = &StringLiteral_15255;
+            v68 = &StringLiteral_15255/*"WAREHOUSE_NOTIFICATION_PUT_OUT_CLOSE"*/;
             goto LABEL_80;
           case 8:
             v83 = this->fields.titleLabel;
@@ -526,12 +526,12 @@ LABEL_29:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v84 = LocalizationManager__Get((System_String_o *)StringLiteral_15261, 0LL);
+            v84 = LocalizationManager__Get((System_String_o *)StringLiteral_15261/*"WAREHOUSE_OVER_PUT_IN_TITLE"*/, 0LL);
             if ( !v83 )
               goto LABEL_84;
             UILabel__set_text(v83, v84, 0LL);
             v85 = this->fields.messageLabel;
-            v86 = &StringLiteral_15260;
+            v86 = &StringLiteral_15260/*"WAREHOUSE_OVER_PUT_IN_SERVANT_MESSAGE"*/;
             goto LABEL_66;
           case 9:
             v87 = this->fields.titleLabel;
@@ -540,12 +540,12 @@ LABEL_29:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v88 = LocalizationManager__Get((System_String_o *)StringLiteral_15261, 0LL);
+            v88 = LocalizationManager__Get((System_String_o *)StringLiteral_15261/*"WAREHOUSE_OVER_PUT_IN_TITLE"*/, 0LL);
             if ( !v87 )
               goto LABEL_84;
             UILabel__set_text(v87, v88, 0LL);
             v85 = this->fields.messageLabel;
-            v86 = &StringLiteral_15259;
+            v86 = &StringLiteral_15259/*"WAREHOUSE_OVER_PUT_IN_SERVANT_EQUIP_MESSAGE"*/;
 LABEL_66:
             v89 = LocalizationManager__Get((System_String_o *)*v86, 0LL);
             v106 = param1;
@@ -557,7 +557,7 @@ LABEL_66:
               goto LABEL_84;
             UILabel__set_text(v85, v92, 0LL);
             cancelLabel = this->fields.closeLabel;
-            v68 = &StringLiteral_15258;
+            v68 = &StringLiteral_15258/*"WAREHOUSE_OVER_PUT_IN_CLOSE"*/;
             goto LABEL_80;
           case 10:
             v93 = this->fields.titleLabel;
@@ -566,12 +566,12 @@ LABEL_66:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v94 = LocalizationManager__Get((System_String_o *)StringLiteral_15265, 0LL);
+            v94 = LocalizationManager__Get((System_String_o *)StringLiteral_15265/*"WAREHOUSE_OVER_PUT_OUT_TITLE"*/, 0LL);
             if ( !v93 )
               goto LABEL_84;
             UILabel__set_text(v93, v94, 0LL);
             v95 = this->fields.messageLabel;
-            v96 = &StringLiteral_15264;
+            v96 = &StringLiteral_15264/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_MESSAGE"*/;
             goto LABEL_78;
           case 11:
             v97 = this->fields.titleLabel;
@@ -580,12 +580,12 @@ LABEL_66:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v98 = LocalizationManager__Get((System_String_o *)StringLiteral_15265, 0LL);
+            v98 = LocalizationManager__Get((System_String_o *)StringLiteral_15265/*"WAREHOUSE_OVER_PUT_OUT_TITLE"*/, 0LL);
             if ( !v97 )
               goto LABEL_84;
             UILabel__set_text(v97, v98, 0LL);
             v95 = this->fields.messageLabel;
-            v96 = &StringLiteral_15263;
+            v96 = &StringLiteral_15263/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_EQUIP_MESSAGE"*/;
 LABEL_78:
             v99 = LocalizationManager__Get((System_String_o *)*v96, 0LL);
             v106 = param1;
@@ -597,7 +597,7 @@ LABEL_78:
               goto LABEL_84;
             UILabel__set_text(v95, v102, 0LL);
             cancelLabel = this->fields.closeLabel;
-            v68 = &StringLiteral_15262;
+            v68 = &StringLiteral_15262/*"WAREHOUSE_OVER_PUT_OUT_CLOSE"*/;
 LABEL_80:
             v103 = LocalizationManager__Get((System_String_o *)*v68, 0LL);
             if ( !cancelLabel )

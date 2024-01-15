@@ -152,13 +152,13 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_EventServantFatigueChangeDialogItem___, v20);
     sub_B16FFC(&LocalizationManager_TypeInfo, v21);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_11707, v23);
-    sub_B16FFC(&StringLiteral_11704, v24);
-    sub_B16FFC(&StringLiteral_3253, v25);
-    sub_B16FFC(&StringLiteral_3252, v26);
-    sub_B16FFC(&StringLiteral_11711, v27);
-    sub_B16FFC(&StringLiteral_11625, v28);
-    sub_B16FFC(&StringLiteral_11696, v29);
+    sub_B16FFC(&StringLiteral_11707/*"SERVANT_RECOVERY_FATIGUE_DIALOG_CONFIRM"*/, v23);
+    sub_B16FFC(&StringLiteral_11704/*"SERVANT_OUT_RECOVERY_FATIGUE_TEXT"*/, v24);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v25);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v26);
+    sub_B16FFC(&StringLiteral_11711/*"SERVANT_RECOVERY_FATIGUE_LIST_PICKUP_COLOR"*/, v27);
+    sub_B16FFC(&StringLiteral_11625/*"SERVANT_CHANGE_RECOVERY_FATIGUE_TEXT"*/, v28);
+    sub_B16FFC(&StringLiteral_11696/*"SERVANT_IN_RECOVERY_FATIGUE_TEXT"*/, v29);
     byte_40F9F99 = 1;
   }
   this->fields.clickFunc = func;
@@ -176,7 +176,7 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11711, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11711/*"SERVANT_RECOVERY_FATIGUE_LIST_PICKUP_COLOR"*/, 0LL);
   if ( !this->fields.titleLabel )
     goto LABEL_73;
   v31 = v30;
@@ -203,7 +203,7 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_11696, 0LL);
+    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_11696/*"SERVANT_IN_RECOVERY_FATIGUE_TEXT"*/, 0LL);
     if ( !inLabel )
       goto LABEL_73;
     UILabel__set_text(inLabel, v37, 0LL);
@@ -279,7 +279,7 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v55 = LocalizationManager__Get((System_String_o *)StringLiteral_11704, 0LL);
+    v55 = LocalizationManager__Get((System_String_o *)StringLiteral_11704/*"SERVANT_OUT_RECOVERY_FATIGUE_TEXT"*/, 0LL);
     if ( !outLabel )
       goto LABEL_73;
     UILabel__set_text(outLabel, v55, 0LL);
@@ -368,7 +368,7 @@ void __fastcall FatigueRecoveryConfirmationDialog__Setup(
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v78 = LocalizationManager__Get((System_String_o *)StringLiteral_11625, 0LL);
+            v78 = LocalizationManager__Get((System_String_o *)StringLiteral_11625/*"SERVANT_CHANGE_RECOVERY_FATIGUE_TEXT"*/, 0LL);
             if ( v77 )
             {
               UILabel__set_text(v77, v78, 0LL);
@@ -406,17 +406,17 @@ LABEL_65:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v86 = LocalizationManager__Get((System_String_o *)StringLiteral_11707, 0LL);
+  v86 = LocalizationManager__Get((System_String_o *)StringLiteral_11707/*"SERVANT_RECOVERY_FATIGUE_DIALOG_CONFIRM"*/, 0LL);
   if ( !confirmLabel )
     goto LABEL_73;
   UILabel__set_text(confirmLabel, v86, 0LL);
   buttonDecideLabel = this->fields.buttonDecideLabel;
-  v88 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v88 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !buttonDecideLabel )
     goto LABEL_73;
   UILabel__set_text(buttonDecideLabel, v88, 0LL);
   buttonCancelLabel = this->fields.buttonCancelLabel;
-  v90 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v90 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !buttonCancelLabel )
     goto LABEL_73;
   UILabel__set_text(buttonCancelLabel, v90, 0LL);

@@ -114,7 +114,7 @@ void __fastcall MasterMissionReceiveConfirmListViewItemDraw__SetItem(
     sub_B16FFC(&MasterMissionReceiveConfirmListViewItemDraw_TypeInfo, v15);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_8616, v18);
+    sub_B16FFC(&StringLiteral_8616/*"MASTER_MISSION_RECEIVE_CONFIRM_REWARD_FMT"*/, v18);
     byte_40FB25F = 1;
   }
   nameText = 0LL;
@@ -177,7 +177,7 @@ void __fastcall MasterMissionReceiveConfirmListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    CrossOperatorString = LocalizationManager__Get((System_String_o *)StringLiteral_8616, 0LL);
+    CrossOperatorString = LocalizationManager__Get((System_String_o *)StringLiteral_8616/*"MASTER_MISSION_RECEIVE_CONFIRM_REWARD_FMT"*/, 0LL);
     rewardLabel = this->fields.rewardLabel;
     format = CrossOperatorString;
     if ( !rewardLabel )

@@ -291,7 +291,7 @@ void __fastcall BattleActionCamera__Update(BattleActionCamera_o *this, const Met
   if ( (byte_40F6F2E & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12030, v3);
+    sub_B16FFC(&StringLiteral_12030/*"SHAKE"*/, v3);
     byte_40F6F2E = 1;
   }
   if ( this->fields.Shaking )
@@ -351,7 +351,7 @@ void __fastcall BattleActionCamera__Update(BattleActionCamera_o *this, const Met
         v19 = this->fields.perf;
         if ( v19 )
         {
-          BattlePerformance__sendLocalEventFieldMotion(v19, (System_String_o *)StringLiteral_12030, 0LL);
+          BattlePerformance__sendLocalEventFieldMotion(v19, (System_String_o *)StringLiteral_12030/*"SHAKE"*/, 0LL);
           return;
         }
 LABEL_25:
@@ -606,8 +606,8 @@ void __fastcall BattleActionCamera__initializeRegisterFsm(
 
   if ( (byte_40F6F27 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3458, targetFsm);
-    sub_B16FFC(&StringLiteral_3467, v5);
+    sub_B16FFC(&StringLiteral_3458/*"Camera"*/, targetFsm);
+    sub_B16FFC(&StringLiteral_3467/*"Camera_obj"*/, v5);
     byte_40F6F27 = 1;
   }
   if ( !targetFsm )
@@ -615,14 +615,14 @@ void __fastcall BattleActionCamera__initializeRegisterFsm(
   Fsm = PlayMakerFSM__get_Fsm(targetFsm, 0LL);
   if ( !Fsm )
     goto LABEL_15;
-  FsmGameObject = HutongGames_PlayMaker_Fsm__GetFsmGameObject(Fsm, (System_String_o *)StringLiteral_3458, 0LL);
+  FsmGameObject = HutongGames_PlayMaker_Fsm__GetFsmGameObject(Fsm, (System_String_o *)StringLiteral_3458/*"Camera"*/, 0LL);
   if ( !this->fields.mainFsm )
     goto LABEL_15;
   v8 = FsmGameObject;
   v9 = PlayMakerFSM__get_Fsm(this->fields.mainFsm, 0LL);
   if ( !v9 )
     goto LABEL_15;
-  v10 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v9, (System_String_o *)StringLiteral_3458, 0LL);
+  v10 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v9, (System_String_o *)StringLiteral_3458/*"Camera"*/, 0LL);
   if ( !v10 )
     goto LABEL_15;
   Value = HutongGames_PlayMaker_FsmGameObject__get_Value(v10, 0LL);
@@ -631,10 +631,10 @@ void __fastcall BattleActionCamera__initializeRegisterFsm(
   HutongGames_PlayMaker_FsmGameObject__set_Value(v8, Value, 0LL);
   v12 = PlayMakerFSM__get_Fsm(targetFsm, 0LL);
   if ( !v12
-    || (v13 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v12, (System_String_o *)StringLiteral_3467, 0LL),
+    || (v13 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v12, (System_String_o *)StringLiteral_3467/*"Camera_obj"*/, 0LL),
         (mainFsm = this->fields.mainFsm) == 0LL)
     || (v15 = v13, (v16 = PlayMakerFSM__get_Fsm(mainFsm, 0LL)) == 0LL)
-    || (v17 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v16, (System_String_o *)StringLiteral_3467, 0LL)) == 0LL
+    || (v17 = HutongGames_PlayMaker_Fsm__GetFsmGameObject(v16, (System_String_o *)StringLiteral_3467/*"Camera_obj"*/, 0LL)) == 0LL
     || (v18 = HutongGames_PlayMaker_FsmGameObject__get_Value(v17, 0LL), !v15) )
   {
 LABEL_15:
@@ -921,7 +921,7 @@ void __fastcall BattleActionCamera__registerCamera(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
     byte_40F6F2C = 1;
   }
   if ( cameraId )
@@ -977,7 +977,7 @@ LABEL_29:
       v20 = System_Int32__ToString((int32_t)&key, 0LL);
       if ( !Manager__loadCameraAction )
         goto LABEL_29;
-      v21 = v20 ? v20 : (System_String_o *)StringLiteral_1;
+      v21 = v20 ? v20 : (System_String_o *)StringLiteral_1/*""*/;
       UnityEngine_Object__set_name(Manager__loadCameraAction, v21, 0LL);
       Component_srcLineSprite = (PlayMakerFSM_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                     (UnityEngine_GameObject_o *)Manager__loadCameraAction,
@@ -1176,7 +1176,7 @@ void __fastcall BattleActionCamera__sendCameraEvent(
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Key__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_int__PlayMakerFSM__get_Value__, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_2908, v13);
+    sub_B16FFC(&StringLiteral_2908/*"CAMERA_END"*/, v13);
     byte_40F6F28 = 1;
   }
   memset(&v18, 0, sizeof(v18));
@@ -1211,7 +1211,7 @@ void __fastcall BattleActionCamera__sendCameraEvent(
       {
         if ( !value )
           sub_B170D4();
-        PlayMakerFSM__SendEvent((PlayMakerFSM_o *)value, (System_String_o *)StringLiteral_2908, 0LL);
+        PlayMakerFSM__SendEvent((PlayMakerFSM_o *)value, (System_String_o *)StringLiteral_2908/*"CAMERA_END"*/, 0LL);
       }
     }
   }

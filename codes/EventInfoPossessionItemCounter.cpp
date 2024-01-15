@@ -58,7 +58,7 @@ void __fastcall EventInfoPossessionItemCounter__Setup(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, entity);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    this = (EventInfoPossessionItemCounter_o *)sub_B16FFC(&StringLiteral_5653, v6);
+    this = (EventInfoPossessionItemCounter_o *)sub_B16FFC(&StringLiteral_5653/*"EVENT_POSSESSION_ITEM_TITLE"*/, v6);
     byte_40FA154 = 1;
   }
   if ( entity )
@@ -91,7 +91,7 @@ void __fastcall EventInfoPossessionItemCounter__Setup(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5653, 0LL);
+        v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5653/*"EVENT_POSSESSION_ITEM_TITLE"*/, 0LL);
         if ( v11 )
         {
           UILabel__set_text(v11, v12, 0LL);
@@ -135,7 +135,7 @@ void __fastcall EventInfoPossessionItemCounter__UpdateDisp(
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_5654, v7);
+    sub_B16FFC(&StringLiteral_5654/*"EVENT_POSSESSION_ITEM_VALUE"*/, v7);
     byte_40FA155 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -170,7 +170,7 @@ void __fastcall EventInfoPossessionItemCounter__UpdateDisp(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5654, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5654/*"EVENT_POSSESSION_ITEM_VALUE"*/, 0LL);
   itemNum = this->fields.itemNum;
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &itemNum);
   v17 = System_String__Format(v15, v16, 0LL);

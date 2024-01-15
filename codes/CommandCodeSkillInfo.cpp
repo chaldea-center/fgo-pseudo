@@ -71,9 +71,9 @@ void __fastcall CommandCodeSkillInfo__Set(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v15);
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_21611, v18);
-    sub_B16FFC(&StringLiteral_15843, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
+    sub_B16FFC(&StringLiteral_21611/*"rarity"*/, v18);
+    sub_B16FFC(&StringLiteral_15843/*"_0"*/, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
     byte_40FA5C3 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -110,7 +110,7 @@ void __fastcall CommandCodeSkillInfo__Set(
     CommandCodeName = this->fields.CommandCodeName;
     if ( !CommandCodeName )
       goto LABEL_40;
-    UILabel__set_text(CommandCodeName, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(CommandCodeName, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( isFirst )
     {
       v30 = this->fields.commandCodeIconBg;
@@ -156,9 +156,9 @@ void __fastcall CommandCodeSkillInfo__Set(
       RaritySpr = this->fields.RaritySpr;
       v42 = System_Int32__ToString((int)v24 + 64, 0LL);
       v43 = System_String__Concat_43746016(
-              (System_String_o *)StringLiteral_21611,
+              (System_String_o *)StringLiteral_21611/*"rarity"*/,
               v42,
-              (System_String_o *)StringLiteral_15843,
+              (System_String_o *)StringLiteral_15843/*"_0"*/,
               0LL);
       if ( !RaritySpr )
         goto LABEL_40;

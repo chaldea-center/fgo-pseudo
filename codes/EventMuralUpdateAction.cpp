@@ -32,22 +32,22 @@ void __fastcall EventMuralUpdateAction___cctor(const MethodInfo *method)
   if ( (byte_40FABE3 & 1) == 0 )
   {
     sub_B16FFC(&EventMuralUpdateAction_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16717, v8);
-    sub_B16FFC(&StringLiteral_16080, v9);
-    sub_B16FFC(&StringLiteral_16091, v10);
+    sub_B16FFC(&StringLiteral_16717/*"bit_mural_update{0}"*/, v8);
+    sub_B16FFC(&StringLiteral_16080/*"_f"*/, v9);
+    sub_B16FFC(&StringLiteral_16091/*"_m"*/, v10);
     byte_40FABE3 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventMuralUpdateAction_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_16717;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16717;
+  v12 = (System_Int32_array **)StringLiteral_16717/*"bit_mural_update{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16717/*"bit_mural_update{0}"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = EventMuralUpdateAction_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_16091;
-  v13->SPRITE_NAME_END_MALE = (struct System_String_o *)StringLiteral_16091;
+  v14 = (System_Int32_array **)StringLiteral_16091/*"_m"*/;
+  v13->SPRITE_NAME_END_MALE = (struct System_String_o *)StringLiteral_16091/*"_m"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->SPRITE_NAME_END_MALE, v14, v15, v16, v17, v18, v19, v20);
   v21 = EventMuralUpdateAction_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_16080;
-  v21->SPRITE_NAME_END_FEMALE = (struct System_String_o *)StringLiteral_16080;
+  v22 = (System_Int32_array **)StringLiteral_16080/*"_f"*/;
+  v21->SPRITE_NAME_END_FEMALE = (struct System_String_o *)StringLiteral_16080/*"_f"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->SPRITE_NAME_END_FEMALE, v22, v23, v24, v25, v26, v27, v28);
 }
 
@@ -739,7 +739,7 @@ void __fastcall EventMuralUpdateAction__Setup(EventMuralUpdateAction_o *this, co
     sub_B16FFC(&Method_EventMuralUpdateAction___c__DisplayClass24_0__Setup_b__1__, v12);
     sub_B16FFC(&Method_EventMuralUpdateAction___c__DisplayClass24_0__Setup_b__2__, v13);
     sub_B16FFC(&EventMuralUpdateAction___c__DisplayClass24_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_5621, v15);
+    sub_B16FFC(&StringLiteral_5621/*"EVENT_INFO_MURAL_DIALOG_DETAIL"*/, v15);
     byte_40FABDD = 1;
   }
   *(_QWORD *)total = 0LL;
@@ -897,7 +897,7 @@ LABEL_40:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v64 = LocalizationManager__Get((System_String_o *)StringLiteral_5621, 0LL);
+    v64 = LocalizationManager__Get((System_String_o *)StringLiteral_5621/*"EVENT_INFO_MURAL_DIALOG_DETAIL"*/, 0LL);
     v73 = total[0];
     v65 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v73);
     v72 = total[1];
@@ -1542,10 +1542,10 @@ bool __fastcall EventMuralUpdateAction___c__DisplayClass24_0___Setup_b__3(
   v9 = id;
   if ( (byte_40F7004 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4532, *(_QWORD *)&id);
+    sub_B16FFC(&StringLiteral_4532/*"D2"*/, *(_QWORD *)&id);
     byte_40F7004 = 1;
   }
-  v4 = System_Int32__ToString_38275808((int32_t)&v9, (System_String_o *)StringLiteral_4532, 0LL);
+  v4 = System_Int32__ToString_38275808((int32_t)&v9, (System_String_o *)StringLiteral_4532/*"D2"*/, 0LL);
   obj = (UnityEngine_Object_o *)this->fields.obj;
   if ( !obj )
     sub_B170D4();
@@ -1574,10 +1574,10 @@ bool __fastcall EventMuralUpdateAction___c__DisplayClass24_0___Setup_b__4(
   if ( (byte_40F7006 & 1) == 0 )
   {
     sub_B16FFC(&EventMuralUpdateAction_TypeInfo, *(_QWORD *)&id);
-    sub_B16FFC(&StringLiteral_4532, v4);
+    sub_B16FFC(&StringLiteral_4532/*"D2"*/, v4);
     byte_40F7006 = 1;
   }
-  v5 = System_Int32__ToString_38275808((int32_t)&v12, (System_String_o *)StringLiteral_4532, 0LL);
+  v5 = System_Int32__ToString_38275808((int32_t)&v12, (System_String_o *)StringLiteral_4532/*"D2"*/, 0LL);
   v6 = EventMuralUpdateAction_TypeInfo;
   if ( (BYTE3(EventMuralUpdateAction_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventMuralUpdateAction_TypeInfo->_2.cctor_finished )
@@ -1614,10 +1614,10 @@ bool __fastcall EventMuralUpdateAction___c__DisplayClass24_0___Setup_b__5(
   if ( (byte_40F7008 & 1) == 0 )
   {
     sub_B16FFC(&EventMuralUpdateAction_TypeInfo, *(_QWORD *)&id);
-    sub_B16FFC(&StringLiteral_4532, v4);
+    sub_B16FFC(&StringLiteral_4532/*"D2"*/, v4);
     byte_40F7008 = 1;
   }
-  v5 = System_Int32__ToString_38275808((int32_t)&v12, (System_String_o *)StringLiteral_4532, 0LL);
+  v5 = System_Int32__ToString_38275808((int32_t)&v12, (System_String_o *)StringLiteral_4532/*"D2"*/, 0LL);
   v6 = EventMuralUpdateAction_TypeInfo;
   if ( (BYTE3(EventMuralUpdateAction_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventMuralUpdateAction_TypeInfo->_2.cctor_finished )

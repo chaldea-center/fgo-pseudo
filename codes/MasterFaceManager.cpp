@@ -41,7 +41,7 @@ UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreateLocal(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UIMasterFaceTexture___, parent);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_14622, v7);
+    sub_B16FFC(&StringLiteral_14622/*"UIMasterFace"*/, v7);
     byte_40FB1B0 = 1;
   }
   masterFacePrefab = this->fields.masterFacePrefab;
@@ -67,7 +67,7 @@ UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreateLocal(
   x = localScale.fields.x;
   y = localScale.fields.y;
   z = localScale.fields.z;
-  UnityEngine_Object__set_name((UnityEngine_Object_o *)v10, (System_String_o *)StringLiteral_14622, 0LL);
+  UnityEngine_Object__set_name((UnityEngine_Object_o *)v10, (System_String_o *)StringLiteral_14622/*"UIMasterFace"*/, 0LL);
   if ( !parent )
     goto LABEL_13;
   v17 = UnityEngine_GameObject__get_transform(parent, 0LL);
@@ -151,9 +151,9 @@ UIMasterFaceTexture_o *__fastcall MasterFaceManager__CreateLocal_27242548(
   if ( (byte_40FB1B1 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, parent);
-    sub_B16FFC(&StringLiteral_746, v15);
-    sub_B16FFC(&StringLiteral_651, v16);
-    sub_B16FFC(&StringLiteral_14623, v17);
+    sub_B16FFC(&StringLiteral_746/*"-"*/, v15);
+    sub_B16FFC(&StringLiteral_651/*")"*/, v16);
+    sub_B16FFC(&StringLiteral_14623/*"UIMasterFace("*/, v17);
     byte_40FB1B1 = 1;
   }
   Local = (UnityEngine_Component_o *)MasterFaceManager__CreateLocal(this, parent, *(const MethodInfo **)&dispType);
@@ -166,13 +166,13 @@ LABEL_30:
     sub_B170D4();
   }
   v29 = (System_String_array *)v22;
-  v30 = (System_String_o *)StringLiteral_14623;
-  if ( StringLiteral_14623 )
+  v30 = (System_String_o *)StringLiteral_14623/*"UIMasterFace("*/;
+  if ( StringLiteral_14623/*"UIMasterFace("*/ )
   {
-    v30 = (System_String_o *)sub_B170BC(StringLiteral_14623, v29->obj.klass->_1.element_class);
+    v30 = (System_String_o *)sub_B170BC(StringLiteral_14623/*"UIMasterFace("*/, v29->obj.klass->_1.element_class);
     if ( !v30 )
       goto LABEL_29;
-    v31 = (System_Int32_array **)StringLiteral_14623;
+    v31 = (System_Int32_array **)StringLiteral_14623/*"UIMasterFace("*/;
   }
   else
   {
@@ -194,13 +194,13 @@ LABEL_30:
     goto LABEL_28;
   v29->m_Items[1] = (System_String_o *)v37;
   sub_B16F98((BattleServantConfConponent_o *)&v29->m_Items[1], v37, v23, v32, v33, v34, v35, v36);
-  v30 = (System_String_o *)StringLiteral_746;
-  if ( StringLiteral_746 )
+  v30 = (System_String_o *)StringLiteral_746/*"-"*/;
+  if ( StringLiteral_746/*"-"*/ )
   {
-    v30 = (System_String_o *)sub_B170BC(StringLiteral_746, v29->obj.klass->_1.element_class);
+    v30 = (System_String_o *)sub_B170BC(StringLiteral_746/*"-"*/, v29->obj.klass->_1.element_class);
     if ( !v30 )
       goto LABEL_29;
-    v31 = (System_Int32_array **)StringLiteral_746;
+    v31 = (System_Int32_array **)StringLiteral_746/*"-"*/;
   }
   else
   {
@@ -226,13 +226,13 @@ LABEL_29:
     goto LABEL_28;
   v29->m_Items[3] = (System_String_o *)v48;
   sub_B16F98((BattleServantConfConponent_o *)&v29->m_Items[3], v48, v23, v43, v44, v45, v46, v47);
-  v30 = (System_String_o *)StringLiteral_651;
-  if ( StringLiteral_651 )
+  v30 = (System_String_o *)StringLiteral_651/*")"*/;
+  if ( StringLiteral_651/*")"*/ )
   {
-    v30 = (System_String_o *)sub_B170BC(StringLiteral_651, v29->obj.klass->_1.element_class);
+    v30 = (System_String_o *)sub_B170BC(StringLiteral_651/*")"*/, v29->obj.klass->_1.element_class);
     if ( v30 )
     {
-      v31 = (System_Int32_array **)StringLiteral_651;
+      v31 = (System_Int32_array **)StringLiteral_651/*")"*/;
       goto LABEL_25;
     }
     goto LABEL_29;

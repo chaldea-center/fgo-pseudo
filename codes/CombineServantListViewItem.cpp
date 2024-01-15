@@ -5223,11 +5223,11 @@ System_String_o *__fastcall CombineServantListViewItem__ToString(
 
   if ( (byte_40FC924 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15043, method);
+    sub_B16FFC(&StringLiteral_15043/*"UserSvt "*/, method);
     byte_40FC924 = 1;
   }
   NameText = CombineServantListViewItem__get_NameText(this, method);
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_15043, NameText, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_15043/*"UserSvt "*/, NameText, 0LL);
 }
 
 
@@ -5290,12 +5290,12 @@ System_String_o *__fastcall CombineServantListViewItem__get_CostText(
   if ( (byte_40FC920 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18326, v3);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v3);
     byte_40FC920 = 1;
   }
   servantEntity = this->fields.servantEntity;
   if ( !servantEntity )
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
   cost = servantEntity->fields.cost;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -5436,10 +5436,10 @@ System_String_o *__fastcall CombineServantListViewItem__get_ImageName(
 {
   if ( (byte_40FC921 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FC921 = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -6266,12 +6266,12 @@ System_String_o *__fastcall CombineServantListViewItem__get_LevelText(
   if ( (byte_40FC91E & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18326, v3);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v3);
     byte_40FC91E = 1;
   }
   userSvtEntity = this->fields.userSvtEntity;
   if ( !userSvtEntity )
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
   lv = userSvtEntity->fields.lv;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -6305,12 +6305,12 @@ System_String_o *__fastcall CombineServantListViewItem__get_NameText(
   if ( (byte_40FC91D & 1) == 0 )
   {
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18326, v3);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, v3);
     byte_40FC91D = 1;
   }
   servantEntity = this->fields.servantEntity;
   if ( !servantEntity )
-    return (System_String_o *)StringLiteral_18326;
+    return (System_String_o *)StringLiteral_18326/*"error"*/;
   userSvtEntity = this->fields.userSvtEntity;
   if ( !userSvtEntity )
     sub_B170D4();

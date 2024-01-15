@@ -53,7 +53,7 @@ System_String_o *__fastcall GachaBonusSelectEntity__GetClassIconId(
   if ( (byte_40FB359 & 1) == 0 )
   {
     sub_B16FFC(&SvtClassAttri_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_4533, v4);
+    sub_B16FFC(&StringLiteral_4533/*"D3"*/, v4);
     byte_40FB359 = 1;
   }
   ClassId = GachaBonusSelectEntity__GetClassId(this, 1001, v2);
@@ -67,7 +67,7 @@ System_String_o *__fastcall GachaBonusSelectEntity__GetClassIconId(
     v5 = 1004;
 LABEL_13:
     ClassId = v5;
-    return System_Int32__ToString_38275808((int32_t)&ClassId, (System_String_o *)StringLiteral_4533, 0LL);
+    return System_Int32__ToString_38275808((int32_t)&ClassId, (System_String_o *)StringLiteral_4533/*"D3"*/, 0LL);
   }
   if ( (BYTE3(SvtClassAttri_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !SvtClassAttri_TypeInfo->_2.cctor_finished )
@@ -79,7 +79,7 @@ LABEL_13:
     v5 = 1005;
     goto LABEL_13;
   }
-  return System_Int32__ToString_38275808((int32_t)&ClassId, (System_String_o *)StringLiteral_4533, 0LL);
+  return System_Int32__ToString_38275808((int32_t)&ClassId, (System_String_o *)StringLiteral_4533/*"D3"*/, 0LL);
 }
 
 
@@ -91,8 +91,8 @@ int32_t __fastcall GachaBonusSelectEntity__GetClassId(
 {
   if ( (byte_40FB35A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17384, *(_QWORD *)&defId);
+    sub_B16FFC(&StringLiteral_17384/*"classId"*/, *(_QWORD *)&defId);
     byte_40FB35A = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17384, defId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17384/*"classId"*/, defId, 0LL);
 }

@@ -33,13 +33,13 @@ void __fastcall BattleMenuWindowComponent__Init(BattleMenuWindowComponent_o *thi
   if ( (byte_40FC491 & 1) == 0 )
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_19380, v3);
+    sub_B16FFC(&StringLiteral_19380/*"img_classchart"*/, v3);
     byte_40FC491 = 1;
   }
   classChartSp = this->fields.classChartSp;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetClassChart(classChartSp, (System_String_o *)StringLiteral_19380, 0LL);
+  AtlasManager__SetClassChart(classChartSp, (System_String_o *)StringLiteral_19380/*"img_classchart"*/, 0LL);
 }
 
 
@@ -313,13 +313,13 @@ void __fastcall BattleMenuWindowComponent__endCloseCkRetire(
 
   if ( (byte_40FC494 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5481, method);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, method);
     byte_40FC494 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481/*"END_PROC"*/, 0LL);
 }
 
 
@@ -331,13 +331,13 @@ void __fastcall BattleMenuWindowComponent__endCloseSetVolumeWindow(
 
   if ( (byte_40FC49C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5481, method);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, method);
     byte_40FC49C = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481/*"END_PROC"*/, 0LL);
 }
 
 
@@ -347,13 +347,13 @@ void __fastcall BattleMenuWindowComponent__endOpenCkRetire(BattleMenuWindowCompo
 
   if ( (byte_40FC496 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5481, method);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, method);
     byte_40FC496 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481/*"END_PROC"*/, 0LL);
 }
 
 
@@ -365,13 +365,13 @@ void __fastcall BattleMenuWindowComponent__endOpenItemListWindow(
 
   if ( (byte_40FC498 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5481, method);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, method);
     byte_40FC498 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481/*"END_PROC"*/, 0LL);
 }
 
 
@@ -384,7 +384,7 @@ void __fastcall BattleMenuWindowComponent__endOpenSetVolumeWindow(
 
   if ( (byte_40FC49A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5481, method);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, method);
     byte_40FC49A = 1;
   }
   setVolumeWindowMask = this->fields.setVolumeWindowMask;
@@ -393,7 +393,7 @@ void __fastcall BattleMenuWindowComponent__endOpenSetVolumeWindow(
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481/*"END_PROC"*/, 0LL);
 }
 
 
@@ -403,10 +403,10 @@ System_String_o *__fastcall BattleMenuWindowComponent__get_closeBtnPath(
 {
   if ( (byte_40FC49D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19941, method);
+    sub_B16FFC(&StringLiteral_19941/*"itemlist_win/Scroll Bar/close"*/, method);
     byte_40FC49D = 1;
   }
-  return (System_String_o *)StringLiteral_19941;
+  return (System_String_o *)StringLiteral_19941/*"itemlist_win/Scroll Bar/close"*/;
 }
 
 
@@ -463,7 +463,7 @@ void __fastcall BattleMenuWindowComponent__modeItemListWindow(
     sub_B16FFC(&Method_BattleMenuWindowComponent_endOpenItemListWindow__, method);
     sub_B16FFC(&BattleWindowComponent_EndCall_TypeInfo, v3);
     sub_B16FFC(&SoundManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_2912, v5);
+    sub_B16FFC(&StringLiteral_2912/*"CANCEL"*/, v5);
     byte_40FC497 = 1;
   }
   data = this->fields.data;
@@ -504,7 +504,7 @@ LABEL_17:
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     goto LABEL_17;
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_2912, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_2912/*"CANCEL"*/, 0LL);
 }
 
 
@@ -527,7 +527,7 @@ void __fastcall BattleMenuWindowComponent__modeRetire(BattleMenuWindowComponent_
     sub_B16FFC(&Method_BattleMenuWindowComponent_endOpenCkRetire__, method);
     sub_B16FFC(&BattleWindowComponent_EndCall_TypeInfo, v3);
     sub_B16FFC(&SoundManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_2912, v5);
+    sub_B16FFC(&StringLiteral_2912/*"CANCEL"*/, v5);
     byte_40FC495 = 1;
   }
   data = this->fields.data;
@@ -544,7 +544,7 @@ void __fastcall BattleMenuWindowComponent__modeRetire(BattleMenuWindowComponent_
     myFsm = this->fields.myFsm;
     if ( myFsm )
     {
-      PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_2912, 0LL);
+      PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_2912/*"CANCEL"*/, 0LL);
       return;
     }
 LABEL_15:

@@ -55,12 +55,12 @@ void __fastcall OtherUserSortDialog___cctor(const MethodInfo *method)
     sub_B16FFC(&FriendStatus_Kind_TypeInfo, v1);
     sub_B16FFC(&ListViewSort_TypeInfo, v5);
     sub_B16FFC(&OtherUserSortDialog_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_6707, v7);
-    sub_B16FFC(&StringLiteral_6778, v8);
+    sub_B16FFC(&StringLiteral_6707/*"FollowerSelect"*/, v7);
+    sub_B16FFC(&StringLiteral_6778/*"FriendOperation"*/, v8);
     byte_40F8006 = 1;
   }
   v9 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v9, (System_String_o *)StringLiteral_6707, 11, 0, 0LL);
+  ListViewSort___ctor_30208480(v9, (System_String_o *)StringLiteral_6707/*"FollowerSelect"*/, 11, 0, 0LL);
   static_fields = (BattleServantConfConponent_o *)OtherUserSortDialog_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v9;
   sub_B16F98(static_fields, (System_Int32_array **)v9, v11, v12, v13, v14, v15, v16);
@@ -73,7 +73,7 @@ void __fastcall OtherUserSortDialog___cctor(const MethodInfo *method)
                              v17,
                              *(_QWORD *)(*(_QWORD *)v17 + 368LL));
   v49 = *(_DWORD *)j_il2cpp_object_unbox_0(v18);
-  v20 = System_String__Concat_43743732((System_String_o *)StringLiteral_6778, v19, 0LL);
+  v20 = System_String__Concat_43743732((System_String_o *)StringLiteral_6778/*"FriendOperation"*/, v19, 0LL);
   v25 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v21, v22, v23, v24);
   ListViewSort___ctor_30208480(v25, v20, 3, 0, 0LL);
   v26 = OtherUserSortDialog_TypeInfo->static_fields;
@@ -97,7 +97,7 @@ LABEL_6:
                              v33,
                              *(_QWORD *)(*(_QWORD *)v33 + 368LL));
   v49 = *(_DWORD *)j_il2cpp_object_unbox_0(v34);
-  v36 = System_String__Concat_43743732((System_String_o *)StringLiteral_6778, v35, 0LL);
+  v36 = System_String__Concat_43743732((System_String_o *)StringLiteral_6778/*"FriendOperation"*/, v35, 0LL);
   v41 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v37, v38, v39, v40);
   ListViewSort___ctor_30208480(v41, v36, 3, 0, 0LL);
   v42 = OtherUserSortDialog_TypeInfo->static_fields;
@@ -832,12 +832,12 @@ void __fastcall OtherUserSortDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
     sub_B16FFC(&Method_OtherUserSortDialog_EndOpen__, v16);
     sub_B16FFC(&OtherUserSortDialog_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_9815, v18);
-    sub_B16FFC(&StringLiteral_9813, v19);
-    sub_B16FFC(&StringLiteral_9810, v20);
-    sub_B16FFC(&StringLiteral_9812, v21);
-    sub_B16FFC(&StringLiteral_9811, v22);
-    sub_B16FFC(&StringLiteral_9814, v23);
+    sub_B16FFC(&StringLiteral_9815/*"OTHER_USER_SORT_DIALOG_SORT_TITLE"*/, v18);
+    sub_B16FFC(&StringLiteral_9813/*"OTHER_USER_SORT_DIALOG_PRIORITY_TITLE"*/, v19);
+    sub_B16FFC(&StringLiteral_9810/*"OTHER_USER_SORT_DIALOG_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_9812/*"OTHER_USER_SORT_DIALOG_PRIORITY_DETAIL"*/, v21);
+    sub_B16FFC(&StringLiteral_9811/*"OTHER_USER_SORT_DIALOG_DECIDE"*/, v22);
+    sub_B16FFC(&StringLiteral_9814/*"OTHER_USER_SORT_DIALOG_SORT_DETAIL"*/, v23);
     byte_40F7FF3 = 1;
   }
   if ( !this->fields.state )
@@ -859,32 +859,32 @@ void __fastcall OtherUserSortDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9815, 0LL);
+    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9815/*"OTHER_USER_SORT_DIALOG_SORT_TITLE"*/, 0LL);
     if ( !sortTitleLabel )
       goto LABEL_59;
     UILabel__set_text(sortTitleLabel, v25, 0LL);
     sortExplanationLabel = this->fields.sortExplanationLabel;
-    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_9814, 0LL);
+    v27 = LocalizationManager__Get((System_String_o *)StringLiteral_9814/*"OTHER_USER_SORT_DIALOG_SORT_DETAIL"*/, 0LL);
     if ( !sortExplanationLabel )
       goto LABEL_59;
     UILabel__set_text(sortExplanationLabel, v27, 0LL);
     priorityTitleLabel = this->fields.priorityTitleLabel;
-    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_9813, 0LL);
+    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_9813/*"OTHER_USER_SORT_DIALOG_PRIORITY_TITLE"*/, 0LL);
     if ( !priorityTitleLabel )
       goto LABEL_59;
     UILabel__set_text(priorityTitleLabel, v29, 0LL);
     priorityExplanationLabel = this->fields.priorityExplanationLabel;
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_9812, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_9812/*"OTHER_USER_SORT_DIALOG_PRIORITY_DETAIL"*/, 0LL);
     if ( !priorityExplanationLabel )
       goto LABEL_59;
     UILabel__set_text(priorityExplanationLabel, v31, 0LL);
     decideLabel = this->fields.decideLabel;
-    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_9811, 0LL);
+    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_9811/*"OTHER_USER_SORT_DIALOG_DECIDE"*/, 0LL);
     if ( !decideLabel )
       goto LABEL_59;
     UILabel__set_text(decideLabel, v33, 0LL);
     cancelLabel = this->fields.cancelLabel;
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_9810, 0LL);
+    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_9810/*"OTHER_USER_SORT_DIALOG_CANCEL"*/, 0LL);
     if ( !cancelLabel )
       goto LABEL_59;
     UILabel__set_text(cancelLabel, v35, 0LL);
@@ -1145,8 +1145,8 @@ void __fastcall OtherUserSortDialog__SetPriorityButtonSelect(OtherUserSortDialog
   if ( (byte_40F7FF6 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_PriorityKind__get_Item__, method);
-    sub_B16FFC(&StringLiteral_16891, v4);
-    this = (OtherUserSortDialog_o *)sub_B16FFC(&StringLiteral_16890, v5);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v4);
+    this = (OtherUserSortDialog_o *)sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v5);
     byte_40F7FF6 = 1;
   }
   priorityButtons = v3->fields.priorityButtons;
@@ -1177,8 +1177,8 @@ LABEL_17:
           {
             v12 = (UISprite_o *)v11[4];
             v13 = (System_String_o **)(operationSortInfo->fields.priorityKind == priorityKindList->fields._items->m_Items[v7 + 1]
-                                     ? &StringLiteral_16890
-                                     : &StringLiteral_16891);
+                                     ? &StringLiteral_16890/*"btn_bg_03"*/
+                                     : &StringLiteral_16891/*"btn_bg_04"*/);
             UISprite__set_spriteName(v12, *v13, 0LL);
             priorityButtons = v3->fields.priorityButtons;
             ++v7;
@@ -1212,8 +1212,8 @@ void __fastcall OtherUserSortDialog__SetSortButtonSelect(OtherUserSortDialog_o *
   if ( (byte_40F7FF5 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B16FFC(&StringLiteral_16891, v4);
-    this = (OtherUserSortDialog_o *)sub_B16FFC(&StringLiteral_16890, v5);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v4);
+    this = (OtherUserSortDialog_o *)sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v5);
     byte_40F7FF5 = 1;
   }
   sortButtons = v3->fields.sortButtons;
@@ -1244,8 +1244,8 @@ LABEL_17:
           {
             v12 = (UISprite_o *)v11[4];
             v13 = (System_String_o **)(operationSortInfo->fields.sortKind == sortKindList->fields._items->m_Items[v7 + 1]
-                                     ? &StringLiteral_16890
-                                     : &StringLiteral_16891);
+                                     ? &StringLiteral_16890/*"btn_bg_03"*/
+                                     : &StringLiteral_16891/*"btn_bg_04"*/);
             UISprite__set_spriteName(v12, *v13, 0LL);
             sortButtons = v3->fields.sortButtons;
             ++v7;
@@ -1308,10 +1308,10 @@ System_String_o *__fastcall OtherUserSortDialog__get_closeBtnPath(
 {
   if ( (byte_40F8004 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15414, method);
+    sub_B16FFC(&StringLiteral_15414/*"Window/CancelButton"*/, method);
     byte_40F8004 = 1;
   }
-  return (System_String_o *)StringLiteral_15414;
+  return (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/;
 }
 
 

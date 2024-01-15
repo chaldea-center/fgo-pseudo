@@ -8,10 +8,10 @@ System_String_o *__fastcall TopSignupRequest__getMockData(TopSignupRequest_o *th
 {
   if ( (byte_40FB803 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FB803 = 1;
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -23,7 +23,7 @@ System_String_o *__fastcall TopSignupRequest__getURL(TopSignupRequest_o *this, c
   if ( (byte_40FB802 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_22036, v2);
+    sub_B16FFC(&StringLiteral_22036/*"signup/top"*/, v2);
     byte_40FB802 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -32,7 +32,7 @@ System_String_o *__fastcall TopSignupRequest__getURL(TopSignupRequest_o *this, c
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_22036, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_22036/*"signup/top"*/, 0LL);
 }
 
 
@@ -68,8 +68,8 @@ void __fastcall TopSignupRequest__requestCompleted(
     sub_B16FFC(&NetworkManager_TypeInfo, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_21129, v7);
-    sub_B16FFC(&StringLiteral_20980, v8);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v7);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v8);
     byte_40FB804 = 1;
   }
   dateData = 0LL;
@@ -108,11 +108,11 @@ void __fastcall TopSignupRequest__requestCompleted(
       sub_B170D4();
     }
     NetworkManager__WriteFriendCode(v21, 0LL);
-    v22 = (System_String_o **)&StringLiteral_21129;
+    v22 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
   }
   else
   {
-    v22 = (System_String_o **)&StringLiteral_20980;
+    v22 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, *v22, 0LL);
 }

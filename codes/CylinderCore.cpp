@@ -503,7 +503,7 @@ void __fastcall CylinderCore__Setup(
     sub_B16FFC(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__, v13);
     sub_B16FFC(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_8340, v16);
+    sub_B16FFC(&StringLiteral_8340/*"LAST_WAR_ID"*/, v16);
     byte_40FB3D9 = 1;
   }
   memset(&v58, 0, sizeof(v58));
@@ -520,7 +520,7 @@ void __fastcall CylinderCore__Setup(
           isFocusIn,
           1LL,
           this->klass->vtable._5_Awake.methodPtr),
-        Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8340, 0LL),
+        Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8340/*"LAST_WAR_ID"*/, 0LL),
         !warInfoList) )
   {
     sub_B170D4();
@@ -946,7 +946,7 @@ void __fastcall CylinderCore_StateZoomIn__GoNext(CylinderCore_StateZoomIn_o *thi
   if ( (byte_40F8B1B & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___, method);
-    sub_B16FFC(&StringLiteral_6864, v3);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v3);
     byte_40F8B1B = 1;
   }
   mCore = this->fields.mCore;
@@ -960,7 +960,7 @@ void __fastcall CylinderCore_StateZoomIn__GoNext(CylinderCore_StateZoomIn_o *thi
   {
     sub_B170D4();
   }
-  HutongGames_PlayMaker_Fsm__Event_14544876(Fsm, (System_String_o *)StringLiteral_6864, 0LL);
+  HutongGames_PlayMaker_Fsm__Event_14544876(Fsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -1503,7 +1503,7 @@ void __fastcall CylinderCore_StateZoomOut__GoNext(CylinderCore_StateZoomOut_o *t
   if ( (byte_40F8B1D & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___, method);
-    sub_B16FFC(&StringLiteral_6864, v3);
+    sub_B16FFC(&StringLiteral_6864/*"GO_NEXT"*/, v3);
     byte_40F8B1D = 1;
   }
   mCore = this->fields.mCore;
@@ -1517,7 +1517,7 @@ void __fastcall CylinderCore_StateZoomOut__GoNext(CylinderCore_StateZoomOut_o *t
   {
     sub_B170D4();
   }
-  HutongGames_PlayMaker_Fsm__Event_14544876(Fsm, (System_String_o *)StringLiteral_6864, 0LL);
+  HutongGames_PlayMaker_Fsm__Event_14544876(Fsm, (System_String_o *)StringLiteral_6864/*"GO_NEXT"*/, 0LL);
 }
 
 

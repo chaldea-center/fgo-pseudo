@@ -42,8 +42,8 @@ System_String_o *__fastcall FunctionGroupEntity__GetIconDetailText(
 {
   if ( (byte_40FB301 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19198, method);
+    sub_B16FFC(&StringLiteral_19198/*"iconDetailText"*/, method);
     byte_40FB301 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_19198, 0LL, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_19198/*"iconDetailText"*/, 0LL, 0LL);
 }

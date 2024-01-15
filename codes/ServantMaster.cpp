@@ -1456,7 +1456,7 @@ bool __fastcall ServantMaster__preProcess(ServantMaster_o *this, const MethodInf
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v5);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v6);
     sub_B16FFC(&ServantEntity_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FD6D9 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
@@ -1534,7 +1534,7 @@ LABEL_33:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
     }
     v29 = (System_Int32_array **)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit(
-                                   (System_String_o *)StringLiteral_1,
+                                   (System_String_o *)StringLiteral_1/*""*/,
                                    0LL);
     v28->klass = (BattleServantConfConponent_c *)v29;
     sub_B16F98(v28, v29, v30, v31, v32, v33, v34, v35);

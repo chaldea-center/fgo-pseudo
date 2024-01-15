@@ -39,7 +39,7 @@ System_String_array *__fastcall ServantCostumeMaster__GetCostumeNames(
   if ( (byte_40FD016 & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, releases);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FD016 = 1;
   }
   entity = 0LL;
@@ -84,13 +84,13 @@ LABEL_26:
       {
         if ( !v11 )
           goto LABEL_24;
-        v6 = (__int64)StringLiteral_1;
-        if ( StringLiteral_1 )
+        v6 = (__int64)StringLiteral_1/*""*/;
+        if ( StringLiteral_1/*""*/ )
         {
-          v6 = sub_B170BC(StringLiteral_1, v11->obj.klass->_1.element_class);
+          v6 = sub_B170BC(StringLiteral_1/*""*/, v11->obj.klass->_1.element_class);
           if ( !v6 )
             goto LABEL_26;
-          v7 = (System_Int32_array **)StringLiteral_1;
+          v7 = (System_Int32_array **)StringLiteral_1/*""*/;
         }
         else
         {

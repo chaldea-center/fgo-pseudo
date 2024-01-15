@@ -56,8 +56,8 @@ void __fastcall CommandSpellAddFunctionLabelComponent__SetData(
     sub_B16FFC(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, v9);
     sub_B16FFC(&DataManager_TypeInfo, v10);
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_3246, v12);
-    sub_B16FFC(&StringLiteral_3245, v13);
+    sub_B16FFC(&StringLiteral_3246/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/, v12);
+    sub_B16FFC(&StringLiteral_3245/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/, v13);
     byte_40FA5DD = 1;
   }
   entity = 0LL;
@@ -144,7 +144,7 @@ LABEL_25:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3245, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3245/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/, 0LL);
     if ( !addFunctionLabel )
       goto LABEL_42;
     UILabel__set_text(addFunctionLabel, v31, 0LL);
@@ -159,7 +159,7 @@ LABEL_25:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3246, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3246/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/, 0LL);
   if ( !addFunctionLabel
     || (UILabel__set_text(addFunctionLabel, v37, 0LL),
         v32 = (UIWidget_o *)this->fields.commandSpellIcon,

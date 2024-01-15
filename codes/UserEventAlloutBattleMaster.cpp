@@ -113,13 +113,13 @@ System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__o *__f
     sub_B16FFC(&System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtEquipInfo__TypeInfo, v17);
     sub_B16FFC(&System_Collections_Generic_List_object__TypeInfo, v18);
     sub_B16FFC(&System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_20117, v20);
-    sub_B16FFC(&StringLiteral_18080, v21);
-    sub_B16FFC(&StringLiteral_22373, v22);
-    sub_B16FFC(&StringLiteral_22376, v23);
-    sub_B16FFC(&StringLiteral_19307, v24);
-    sub_B16FFC(&StringLiteral_19337, v25);
-    sub_B16FFC(&StringLiteral_20250, v26);
+    sub_B16FFC(&StringLiteral_20117/*"lc"*/, v20);
+    sub_B16FFC(&StringLiteral_18080/*"ec"*/, v21);
+    sub_B16FFC(&StringLiteral_22373/*"svtEqs"*/, v22);
+    sub_B16FFC(&StringLiteral_22376/*"svtId"*/, v23);
+    sub_B16FFC(&StringLiteral_19307/*"id"*/, v24);
+    sub_B16FFC(&StringLiteral_19337/*"ilc"*/, v25);
+    sub_B16FFC(&StringLiteral_20250/*"lv"*/, v26);
     byte_40FAB3E = 1;
   }
   memset(&v82, 0, sizeof(v82));
@@ -166,7 +166,7 @@ LABEL_45:
     DicToInt = (UserEventAlloutBattleMaster_o *)UserEventAlloutBattleMaster__GetDicToInt(
                                                   v35,
                                                   (System_Collections_Generic_Dictionary_string__object__o *)current,
-                                                  (System_String_o *)StringLiteral_19307,
+                                                  (System_String_o *)StringLiteral_19307/*"id"*/,
                                                   v36);
     if ( !v34 )
       sub_B170D4();
@@ -174,31 +174,31 @@ LABEL_45:
     v39 = (UserEventAlloutBattleMaster_o *)UserEventAlloutBattleMaster__GetDicToInt(
                                              DicToInt,
                                              (System_Collections_Generic_Dictionary_string__object__o *)current,
-                                             (System_String_o *)StringLiteral_22376,
+                                             (System_String_o *)StringLiteral_22376/*"svtId"*/,
                                              v38);
     *(_DWORD *)(v34 + 20) = (_DWORD)v39;
     v41 = (UserEventAlloutBattleMaster_o *)UserEventAlloutBattleMaster__GetDicToInt(
                                              v39,
                                              (System_Collections_Generic_Dictionary_string__object__o *)current,
-                                             (System_String_o *)StringLiteral_20250,
+                                             (System_String_o *)StringLiteral_20250/*"lv"*/,
                                              v40);
     *(_DWORD *)(v34 + 24) = (_DWORD)v41;
     v43 = (UserEventAlloutBattleMaster_o *)UserEventAlloutBattleMaster__GetDicToInt(
                                              v41,
                                              (System_Collections_Generic_Dictionary_string__object__o *)current,
-                                             (System_String_o *)StringLiteral_20117,
+                                             (System_String_o *)StringLiteral_20117/*"lc"*/,
                                              v42);
     *(_DWORD *)(v34 + 28) = (_DWORD)v43;
     v45 = (UserEventAlloutBattleMaster_o *)UserEventAlloutBattleMaster__GetDicToInt(
                                              v43,
                                              (System_Collections_Generic_Dictionary_string__object__o *)current,
-                                             (System_String_o *)StringLiteral_19337,
+                                             (System_String_o *)StringLiteral_19337/*"ilc"*/,
                                              v44);
     *(_DWORD *)(v34 + 32) = (_DWORD)v45;
     *(_DWORD *)(v34 + 36) = UserEventAlloutBattleMaster__GetDicToInt(
                               v45,
                               (System_Collections_Generic_Dictionary_string__object__o *)current,
-                              (System_String_o *)StringLiteral_18080,
+                              (System_String_o *)StringLiteral_18080/*"ec"*/,
                               v46);
     v51 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
                                                                                                     System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtEquipInfo__TypeInfo,
@@ -216,7 +216,7 @@ LABEL_45:
       goto LABEL_45;
     if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
             (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)current,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_22373,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_22373/*"svtEqs"*/,
             &value,
             (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       goto LABEL_33;
@@ -271,7 +271,7 @@ LABEL_43:
       v71 = (UserEventAlloutBattleMaster_o *)UserEventAlloutBattleMaster__GetDicToInt(
                                                v69,
                                                (System_Collections_Generic_Dictionary_string__object__o *)v66,
-                                               (System_String_o *)StringLiteral_22376,
+                                               (System_String_o *)StringLiteral_22376/*"svtId"*/,
                                                v70);
       if ( !v68 )
         sub_B170D4();
@@ -279,7 +279,7 @@ LABEL_43:
       v68->fields.lc = UserEventAlloutBattleMaster__GetDicToInt(
                          v71,
                          (System_Collections_Generic_Dictionary_string__object__o *)v66,
-                         (System_String_o *)StringLiteral_20117,
+                         (System_String_o *)StringLiteral_20117/*"lc"*/,
                          v72);
       if ( !*v52 )
         sub_B170D4();
@@ -729,7 +729,7 @@ bool __fastcall UserEventAlloutBattleMaster__IsAlreadyUsedServant(
     sub_B16FFC(&Method_System_Collections_Generic_List_object__GetEnumerator__, v17);
     sub_B16FFC(&System_Collections_Generic_List_object__TypeInfo, v18);
     sub_B16FFC(&NetworkManager_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_22376, v20);
+    sub_B16FFC(&StringLiteral_22376/*"svtId"*/, v20);
     byte_40FAB3C = 1;
   }
   memset(&v41, 0, sizeof(v41));
@@ -803,7 +803,7 @@ LABEL_41:
         if ( UserEventAlloutBattleMaster__GetDicToInt(
                (UserEventAlloutBattleMaster_o *)v29,
                (System_Collections_Generic_Dictionary_string__object__o *)v40.fields.current,
-               (System_String_o *)StringLiteral_22376,
+               (System_String_o *)StringLiteral_22376/*"svtId"*/,
                v30) == svtId )
         {
           *(_DWORD *)&v38[2 * v25 + 20] = 148;

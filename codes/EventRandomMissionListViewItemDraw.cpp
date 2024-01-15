@@ -107,8 +107,8 @@ System_String_o *__fastcall EventRandomMissionListViewItemDraw__GetAchiveTimeTex
   if ( (byte_40F60A9 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_80, v3);
-    sub_B16FFC(&StringLiteral_13336, v4);
+    sub_B16FFC(&StringLiteral_80/*" "*/, v3);
+    sub_B16FFC(&StringLiteral_13336/*"TIME_REST_ACHIVE"*/, v4);
     byte_40F60A9 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -116,9 +116,9 @@ System_String_o *__fastcall EventRandomMissionListViewItemDraw__GetAchiveTimeTex
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_13336, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_13336/*"TIME_REST_ACHIVE"*/, 0LL);
   RestTime = LocalizationManager__GetRestTime(closeTime, 0LL);
-  return System_String__Concat_43746016(v5, (System_String_o *)StringLiteral_80, RestTime, 0LL);
+  return System_String__Concat_43746016(v5, (System_String_o *)StringLiteral_80/*" "*/, RestTime, 0LL);
 }
 
 
@@ -133,7 +133,7 @@ System_String_o *__fastcall EventRandomMissionListViewItemDraw__GetRestTimeText(
   if ( (byte_40F60A8 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_13348, v3);
+    sub_B16FFC(&StringLiteral_13348/*"TIME_REST_QUEST"*/, v3);
     byte_40F60A8 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -141,7 +141,7 @@ System_String_o *__fastcall EventRandomMissionListViewItemDraw__GetRestTimeText(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_13348, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_13348/*"TIME_REST_QUEST"*/, 0LL);
   RestTime = LocalizationManager__GetRestTime(endTime, 0LL);
   return System_String__Concat_43743732(v4, RestTime, 0LL);
 }
@@ -191,7 +191,7 @@ void __fastcall EventRandomMissionListViewItemDraw__InitDispResTime(
     sub_B16FFC(&EventRandomMissionListViewItem_TypeInfo, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_8725, v8);
+    sub_B16FFC(&StringLiteral_8725/*"MISSION_PERIOD_END"*/, v8);
     byte_40F60A5 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -302,7 +302,7 @@ LABEL_34:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8725, 0LL);
+    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8725/*"MISSION_PERIOD_END"*/, 0LL);
     if ( !timeOverLb )
       goto LABEL_51;
     UILabel__set_text(timeOverLb, v32, 0LL);
@@ -539,10 +539,10 @@ bool __fastcall EventRandomMissionListViewItemDraw__SetItem(
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v13);
     sub_B16FFC(&int_TypeInfo, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_16938, v16);
-    sub_B16FFC(&StringLiteral_20457, v17);
-    sub_B16FFC(&StringLiteral_20454, v18);
-    sub_B16FFC(&StringLiteral_20453, v19);
+    sub_B16FFC(&StringLiteral_16938/*"btn_mission_cancel"*/, v16);
+    sub_B16FFC(&StringLiteral_20457/*"mission_board_{0}01"*/, v17);
+    sub_B16FFC(&StringLiteral_20454/*"mission_board_rank_{0}{1:D2}"*/, v18);
+    sub_B16FFC(&StringLiteral_20453/*"mission_board_mask_{0}01"*/, v19);
     byte_40F60A4 = 1;
   }
   progTxt = 0LL;
@@ -708,7 +708,7 @@ LABEL_18:
       v51 = this->fields.baseSprite;
       currentEventId = v21->fields.currentEventId;
       v52 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId);
-      v54 = System_String__Format((System_String_o *)StringLiteral_20457, v52, 0LL);
+      v54 = System_String__Format((System_String_o *)StringLiteral_20457/*"mission_board_{0}01"*/, v52, 0LL);
       if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
       {
@@ -727,7 +727,7 @@ LABEL_18:
       v56 = this->fields.timeOverSprite;
       currentEventId = v21->fields.currentEventId;
       v57 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId);
-      v59 = System_String__Format((System_String_o *)StringLiteral_20453, v57, 0LL);
+      v59 = System_String__Format((System_String_o *)StringLiteral_20453/*"mission_board_mask_{0}01"*/, v57, 0LL);
       if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
       {
@@ -749,7 +749,7 @@ LABEL_18:
       {
         j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
       }
-      EventRewardRootComponent__setRewardInfoImg(v62, (System_String_o *)StringLiteral_16938, v61);
+      EventRewardRootComponent__setRewardInfoImg(v62, (System_String_o *)StringLiteral_16938/*"btn_mission_cancel"*/, v61);
       v63 = (UIWidget_o *)this->fields.rejectSprite;
       if ( (BYTE3(EventRandomMissionListViewItemDraw_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRandomMissionListViewItemDraw_TypeInfo->_2.cctor_finished )
@@ -799,7 +799,7 @@ LABEL_18:
       v71 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId);
       v86 = v69;
       v72 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v86);
-      v74 = System_String__Format_43739268((System_String_o *)StringLiteral_20454, v71, v72, 0LL);
+      v74 = System_String__Format_43739268((System_String_o *)StringLiteral_20454/*"mission_board_rank_{0}{1:D2}"*/, v71, v72, 0LL);
       if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
       {
@@ -1099,7 +1099,7 @@ void __fastcall EventRandomMissionListViewItemDraw__SetRewardStatusImg(
   if ( (byte_40F60A7 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&status);
-    sub_B16FFC(&StringLiteral_8725, v5);
+    sub_B16FFC(&StringLiteral_8725/*"MISSION_PERIOD_END"*/, v5);
     byte_40F60A7 = 1;
   }
   MissionListViewItemDraw__SetRewardStatusImg((MissionListViewItemDraw_o *)this, status, 0LL);
@@ -1119,7 +1119,7 @@ void __fastcall EventRandomMissionListViewItemDraw__SetRewardStatusImg(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_8725, 0LL);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_8725/*"MISSION_PERIOD_END"*/, 0LL);
     if ( !timeOverLb )
 LABEL_12:
       sub_B170D4();
@@ -1172,7 +1172,7 @@ void __fastcall EventRandomMissionListViewItemDraw__UpdateItem(
     sub_B16FFC(&MissionListViewItemDraw_TypeInfo, v10);
     sub_B16FFC(&NetworkManager_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_13355, v13);
+    sub_B16FFC(&StringLiteral_13355/*"TIME_REST_TIMEOVER"*/, v13);
     byte_40F60AA = 1;
   }
   if ( item && MissionListViewItem__get_EventMissionEntity((MissionListViewItem_o *)item, 0LL) )
@@ -1258,7 +1258,7 @@ LABEL_48:
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
             RestTime = LocalizationManager__GetRestTime(v29, 0LL);
-            v31 = LocalizationManager__Get((System_String_o *)StringLiteral_13355, 0LL);
+            v31 = LocalizationManager__Get((System_String_o *)StringLiteral_13355/*"TIME_REST_TIMEOVER"*/, 0LL);
             if ( !RestTime )
               goto LABEL_48;
             if ( System_String__Equals_43731072(RestTime, v31, 0LL) )

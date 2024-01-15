@@ -56,12 +56,12 @@ System_String_o *__fastcall SubmarineNewScannerDialog__GetEventUIAssetDataPath(
   if ( (byte_40F7C9D & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6189, v3);
+    sub_B16FFC(&StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v3);
     byte_40F7C9D = 1;
   }
   v6 = eventId;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
-  return System_String__Format((System_String_o *)StringLiteral_6189, v4, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_6189/*"EventUI/Prefabs/{0}"*/, v4, 0LL);
 }
 
 
@@ -99,26 +99,26 @@ void __fastcall SubmarineNewScannerDialog__Init(SubmarineNewScannerDialog_o *thi
   if ( (byte_40F7C99 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3252, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F7C99 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   upperMessageLabel = this->fields.upperMessageLabel;
   if ( !upperMessageLabel )
     goto LABEL_10;
-  UILabel__set_text(upperMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(upperMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   lowerMessageLabel = this->fields.lowerMessageLabel;
   if ( !lowerMessageLabel )
     goto LABEL_10;
-  UILabel__set_text(lowerMessageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(lowerMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
 LABEL_10:
     sub_B170D4();
@@ -221,8 +221,8 @@ void __fastcall SubmarineNewScannerDialog__LoadLocalAtlas(
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Add__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_23407, v9);
-    sub_B16FFC(&StringLiteral_5361, v10);
+    sub_B16FFC(&StringLiteral_23407/*"{0:D2}"*/, v9);
+    sub_B16FFC(&StringLiteral_5361/*"DownloadEventUIAtlas{0}{1}"*/, v10);
     byte_40F7CA1 = 1;
   }
   if ( this->fields.eventAssetData )
@@ -238,10 +238,10 @@ LABEL_18:
     {
       v22 = i;
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v22);
-      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407, v15, 0LL);
+      v16 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_23407/*"{0:D2}"*/, v15, 0LL);
       v21 = eventId;
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
-      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_5361, v17, v16, 0LL);
+      v18 = System_String__Format_43739268((System_String_o *)StringLiteral_5361/*"DownloadEventUIAtlas{0}{1}"*/, v17, v16, 0LL);
       GameObjectFromEventUIAssetData = (UnityEngine_Object_o *)SubmarineNewScannerDialog__GetGameObjectFromEventUIAssetData(
                                                                  this,
                                                                  v18,
@@ -366,8 +366,8 @@ void __fastcall SubmarineNewScannerDialog__Open(
     sub_B16FFC(&Method_SubmarineNewScannerDialog___c__DisplayClass10_0__Open_b__0__, v12);
     sub_B16FFC(&Method_SubmarineNewScannerDialog___c__DisplayClass10_0__Open_b__1__, v13);
     sub_B16FFC(&SubmarineNewScannerDialog___c__DisplayClass10_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_5704, v15);
-    sub_B16FFC(&StringLiteral_5703, v16);
+    sub_B16FFC(&StringLiteral_5704/*"EVENT_SUBMARINE_NEW_SCAN_ADDED_MESSAGE_UPPER"*/, v15);
+    sub_B16FFC(&StringLiteral_5703/*"EVENT_SUBMARINE_NEW_SCAN_ADDED_MESSAGE_LOWER"*/, v16);
     byte_40F7C9A = 1;
   }
   v17 = sub_B170CC(
@@ -403,7 +403,7 @@ void __fastcall SubmarineNewScannerDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5704, 0LL);
+    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5704/*"EVENT_SUBMARINE_NEW_SCAN_ADDED_MESSAGE_UPPER"*/, 0LL);
     if ( *(_QWORD *)v27 )
     {
       v30 = System_String__Format(v29, *(Il2CppObject **)(*(_QWORD *)v27 + 24LL), 0LL);
@@ -411,7 +411,7 @@ void __fastcall SubmarineNewScannerDialog__Open(
       {
         UILabel__set_text(upperMessageLabel, v30, 0LL);
         lowerMessageLabel = this->fields.lowerMessageLabel;
-        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_5703, 0LL);
+        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_5703/*"EVENT_SUBMARINE_NEW_SCAN_ADDED_MESSAGE_LOWER"*/, 0LL);
         if ( lowerMessageLabel )
         {
           UILabel__set_text(lowerMessageLabel, v32, 0LL);
@@ -638,7 +638,7 @@ void __fastcall SubmarineNewScannerDialog___c__DisplayClass10_0___Open_b__0(
   if ( (byte_40F7A7A & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21804, v3);
+    sub_B16FFC(&StringLiteral_21804/*"scan_icon_{0}"*/, v3);
     byte_40F7A7A = 1;
   }
   scanEntity = this->fields.scanEntity;
@@ -653,7 +653,7 @@ void __fastcall SubmarineNewScannerDialog___c__DisplayClass10_0___Open_b__0(
   iconSprite = v6->fields.iconSprite;
   iconImageId = v7->fields.iconImageId;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconImageId);
-  v10 = System_String__Format((System_String_o *)StringLiteral_21804, v9, 0LL);
+  v10 = System_String__Format((System_String_o *)StringLiteral_21804/*"scan_icon_{0}"*/, v9, 0LL);
   SubmarineNewScannerDialog__SetSpriteByLocalAtlas(v6, iconSprite, v10, 0LL);
 }
 

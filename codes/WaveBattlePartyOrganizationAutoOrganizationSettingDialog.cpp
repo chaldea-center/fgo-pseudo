@@ -23,17 +23,17 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationSettingDialog___cctor
   if ( (byte_40F6747 & 1) == 0 )
   {
     sub_B16FFC(&WaveBattlePartyOrganizationAutoOrganizationSettingDialog_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16891, v8);
-    sub_B16FFC(&StringLiteral_16890, v9);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v8);
+    sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v9);
     byte_40F6747 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WaveBattlePartyOrganizationAutoOrganizationSettingDialog_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_16890;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16890;
+  v11 = (System_Int32_array **)StringLiteral_16890/*"btn_bg_03"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16890/*"btn_bg_03"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = WaveBattlePartyOrganizationAutoOrganizationSettingDialog_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_16891;
-  v12->DISABLE_BUTTON_SPRITE = (struct System_String_o *)StringLiteral_16891;
+  v13 = (System_Int32_array **)StringLiteral_16891/*"btn_bg_04"*/;
+  v12->DISABLE_BUTTON_SPRITE = (struct System_String_o *)StringLiteral_16891/*"btn_bg_04"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->DISABLE_BUTTON_SPRITE, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -700,21 +700,21 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationSettingDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v12);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
     sub_B16FFC(&Method_WaveBattlePartyOrganizationAutoOrganizationSettingDialog_EndOpen__, v14);
-    sub_B16FFC(&StringLiteral_11890, v15);
-    sub_B16FFC(&StringLiteral_1770, v16);
-    sub_B16FFC(&StringLiteral_11841, v17);
-    sub_B16FFC(&StringLiteral_11677, v18);
-    sub_B16FFC(&StringLiteral_11759, v19);
-    sub_B16FFC(&StringLiteral_1769, v20);
-    sub_B16FFC(&StringLiteral_11763, v21);
-    sub_B16FFC(&StringLiteral_11840, v22);
-    sub_B16FFC(&StringLiteral_11839, v23);
-    sub_B16FFC(&StringLiteral_11837, v24);
-    sub_B16FFC(&StringLiteral_1771, v25);
-    sub_B16FFC(&StringLiteral_11760, v26);
-    sub_B16FFC(&StringLiteral_1772, v27);
-    sub_B16FFC(&StringLiteral_12003, v28);
-    sub_B16FFC(&StringLiteral_11838, v29);
+    sub_B16FFC(&StringLiteral_11890/*"SERVANT_SORT_RESET"*/, v15);
+    sub_B16FFC(&StringLiteral_1770/*"AUTO_ORGANIZATION_SETTING_KIND"*/, v16);
+    sub_B16FFC(&StringLiteral_11841/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, v17);
+    sub_B16FFC(&StringLiteral_11677/*"SERVANT_EQUIP_TAKE"*/, v18);
+    sub_B16FFC(&StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, v19);
+    sub_B16FFC(&StringLiteral_1769/*"AUTO_ORGANIZATION_SETTING_EXPLATION"*/, v20);
+    sub_B16FFC(&StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, v21);
+    sub_B16FFC(&StringLiteral_11840/*"SERVANT_SORT_FILTER_RARITY_SSRARE"*/, v22);
+    sub_B16FFC(&StringLiteral_11839/*"SERVANT_SORT_FILTER_RARITY_SRARE"*/, v23);
+    sub_B16FFC(&StringLiteral_11837/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/, v24);
+    sub_B16FFC(&StringLiteral_1771/*"AUTO_ORGANIZATION_SETTING_RARITY"*/, v25);
+    sub_B16FFC(&StringLiteral_11760/*"SERVANT_SORT_CLEAR"*/, v26);
+    sub_B16FFC(&StringLiteral_1772/*"AUTO_ORGANIZATION_SETTING_TITLE"*/, v27);
+    sub_B16FFC(&StringLiteral_12003/*"SERVANT_TAKE"*/, v28);
+    sub_B16FFC(&StringLiteral_11838/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, v29);
     byte_40F673B = 1;
   }
   if ( !this->fields.state )
@@ -792,77 +792,77 @@ void __fastcall WaveBattlePartyOrganizationAutoOrganizationSettingDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v60 = LocalizationManager__Get((System_String_o *)StringLiteral_1772, 0LL);
+    v60 = LocalizationManager__Get((System_String_o *)StringLiteral_1772/*"AUTO_ORGANIZATION_SETTING_TITLE"*/, 0LL);
     if ( titleLabel )
     {
       UILabel__set_text(titleLabel, v60, 0LL);
       decideLabel = this->fields.decideLabel;
-      v62 = LocalizationManager__Get((System_String_o *)StringLiteral_11763, 0LL);
+      v62 = LocalizationManager__Get((System_String_o *)StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, 0LL);
       if ( decideLabel )
       {
         UILabel__set_text(decideLabel, v62, 0LL);
         clearLabel = this->fields.clearLabel;
-        v64 = LocalizationManager__Get((System_String_o *)StringLiteral_11760, 0LL);
+        v64 = LocalizationManager__Get((System_String_o *)StringLiteral_11760/*"SERVANT_SORT_CLEAR"*/, 0LL);
         if ( clearLabel )
         {
           UILabel__set_text(clearLabel, v64, 0LL);
           cancelLabel = this->fields.cancelLabel;
-          v66 = LocalizationManager__Get((System_String_o *)StringLiteral_11759, 0LL);
+          v66 = LocalizationManager__Get((System_String_o *)StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, 0LL);
           if ( cancelLabel )
           {
             UILabel__set_text(cancelLabel, v66, 0LL);
             initializeLabel = this->fields.initializeLabel;
-            v68 = LocalizationManager__Get((System_String_o *)StringLiteral_11890, 0LL);
+            v68 = LocalizationManager__Get((System_String_o *)StringLiteral_11890/*"SERVANT_SORT_RESET"*/, 0LL);
             if ( initializeLabel )
             {
               UILabel__set_text(initializeLabel, v68, 0LL);
               explanationLabel = this->fields.explanationLabel;
-              v70 = LocalizationManager__Get((System_String_o *)StringLiteral_1769, 0LL);
+              v70 = LocalizationManager__Get((System_String_o *)StringLiteral_1769/*"AUTO_ORGANIZATION_SETTING_EXPLATION"*/, 0LL);
               if ( explanationLabel )
               {
                 UILabel__set_text(explanationLabel, v70, 0LL);
                 kindTitleLabel = this->fields.kindTitleLabel;
-                v72 = LocalizationManager__Get((System_String_o *)StringLiteral_1770, 0LL);
+                v72 = LocalizationManager__Get((System_String_o *)StringLiteral_1770/*"AUTO_ORGANIZATION_SETTING_KIND"*/, 0LL);
                 if ( kindTitleLabel )
                 {
                   UILabel__set_text(kindTitleLabel, v72, 0LL);
                   rarityTitleLabel = this->fields.rarityTitleLabel;
-                  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_1771, 0LL);
+                  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_1771/*"AUTO_ORGANIZATION_SETTING_RARITY"*/, 0LL);
                   if ( rarityTitleLabel )
                   {
                     UILabel__set_text(rarityTitleLabel, v74, 0LL);
                     kindServantLabel = this->fields.kindServantLabel;
-                    v76 = LocalizationManager__Get((System_String_o *)StringLiteral_12003, 0LL);
+                    v76 = LocalizationManager__Get((System_String_o *)StringLiteral_12003/*"SERVANT_TAKE"*/, 0LL);
                     if ( kindServantLabel )
                     {
                       UILabel__set_text(kindServantLabel, v76, 0LL);
                       kindServantEquipLabel = this->fields.kindServantEquipLabel;
-                      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_11677, 0LL);
+                      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_11677/*"SERVANT_EQUIP_TAKE"*/, 0LL);
                       if ( kindServantEquipLabel )
                       {
                         UILabel__set_text(kindServantEquipLabel, v78, 0LL);
                         rarity1Label = this->fields.rarity1Label;
-                        v80 = LocalizationManager__Get((System_String_o *)StringLiteral_11837, 0LL);
+                        v80 = LocalizationManager__Get((System_String_o *)StringLiteral_11837/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/, 0LL);
                         if ( rarity1Label )
                         {
                           UILabel__set_text(rarity1Label, v80, 0LL);
                           rarity2Label = this->fields.rarity2Label;
-                          v82 = LocalizationManager__Get((System_String_o *)StringLiteral_11841, 0LL);
+                          v82 = LocalizationManager__Get((System_String_o *)StringLiteral_11841/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, 0LL);
                           if ( rarity2Label )
                           {
                             UILabel__set_text(rarity2Label, v82, 0LL);
                             rarity3Label = this->fields.rarity3Label;
-                            v84 = LocalizationManager__Get((System_String_o *)StringLiteral_11838, 0LL);
+                            v84 = LocalizationManager__Get((System_String_o *)StringLiteral_11838/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, 0LL);
                             if ( rarity3Label )
                             {
                               UILabel__set_text(rarity3Label, v84, 0LL);
                               rarity4Label = this->fields.rarity4Label;
-                              v86 = LocalizationManager__Get((System_String_o *)StringLiteral_11839, 0LL);
+                              v86 = LocalizationManager__Get((System_String_o *)StringLiteral_11839/*"SERVANT_SORT_FILTER_RARITY_SRARE"*/, 0LL);
                               if ( rarity4Label )
                               {
                                 UILabel__set_text(rarity4Label, v86, 0LL);
                                 rarity5Label = this->fields.rarity5Label;
-                                v88 = LocalizationManager__Get((System_String_o *)StringLiteral_11840, 0LL);
+                                v88 = LocalizationManager__Get((System_String_o *)StringLiteral_11840/*"SERVANT_SORT_FILTER_RARITY_SSRARE"*/, 0LL);
                                 if ( rarity5Label )
                                 {
                                   UILabel__set_text(rarity5Label, v88, 0LL);
@@ -1155,10 +1155,10 @@ System_String_o *__fastcall WaveBattlePartyOrganizationAutoOrganizationSettingDi
 {
   if ( (byte_40F6745 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15414, method);
+    sub_B16FFC(&StringLiteral_15414/*"Window/CancelButton"*/, method);
     byte_40F6745 = 1;
   }
-  return (System_String_o *)StringLiteral_15414;
+  return (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/;
 }
 
 

@@ -23,17 +23,17 @@ void __fastcall WarBoardData___cctor(const MethodInfo *method)
   if ( (byte_40F89F7 & 1) == 0 )
   {
     sub_B16FFC(&WarBoardData_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_1664, v8);
-    sub_B16FFC(&StringLiteral_15171, v9);
+    sub_B16FFC(&StringLiteral_1664/*"AFTER_CONTINUE_DEVICE_FOR_WARBOARD"*/, v8);
+    sub_B16FFC(&StringLiteral_15171/*"WARBOARDDATA_SAVEDATA"*/, v9);
     byte_40F89F7 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarBoardData_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_15171;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_15171;
+  v11 = (System_Int32_array **)StringLiteral_15171/*"WARBOARDDATA_SAVEDATA"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_15171/*"WARBOARDDATA_SAVEDATA"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = WarBoardData_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_1664;
-  v12->AFTER_CONTINUE_DEVICE_FOR_WARBOARD_KEY = (struct System_String_o *)StringLiteral_1664;
+  v13 = (System_Int32_array **)StringLiteral_1664/*"AFTER_CONTINUE_DEVICE_FOR_WARBOARD"*/;
+  v12->AFTER_CONTINUE_DEVICE_FOR_WARBOARD_KEY = (struct System_String_o *)StringLiteral_1664/*"AFTER_CONTINUE_DEVICE_FOR_WARBOARD"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v12->AFTER_CONTINUE_DEVICE_FOR_WARBOARD_KEY,
     v13,
@@ -11992,15 +11992,15 @@ void __fastcall WarBoardData__SetRequest(WarBoardData_o *this, RequestBase_o *re
     sub_B16FFC(&Method_WarBoardData___c__SetRequest_b__156_1__, v20);
     sub_B16FFC(&Method_WarBoardData___c__SetRequest_b__156_2__, v21);
     sub_B16FFC(&WarBoardData___c_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_16821, v23);
-    sub_B16FFC(&StringLiteral_22377, v24);
-    sub_B16FFC(&StringLiteral_20316, v25);
-    sub_B16FFC(&StringLiteral_23100, v26);
-    sub_B16FFC(&StringLiteral_21080, v27);
-    sub_B16FFC(&StringLiteral_22150, v28);
-    sub_B16FFC(&StringLiteral_18930, v29);
-    sub_B16FFC(&StringLiteral_698, v30);
-    sub_B16FFC(&StringLiteral_15764, v31);
+    sub_B16FFC(&StringLiteral_16821/*"bossBattleInfo"*/, v23);
+    sub_B16FFC(&StringLiteral_22377/*"svtInfo"*/, v24);
+    sub_B16FFC(&StringLiteral_20316/*"masterInfo"*/, v25);
+    sub_B16FFC(&StringLiteral_23100/*"wallInfo"*/, v26);
+    sub_B16FFC(&StringLiteral_21080/*"null"*/, v27);
+    sub_B16FFC(&StringLiteral_22150/*"squareIndexInfo"*/, v28);
+    sub_B16FFC(&StringLiteral_18930/*"getItemInfo"*/, v29);
+    sub_B16FFC(&StringLiteral_698/*","*/, v30);
+    sub_B16FFC(&StringLiteral_15764/*"[{0}]"*/, v31);
     byte_40F89D6 = 1;
   }
   pieces = (System_Collections_Generic_IEnumerable_T__o *)this->fields.pieces;
@@ -12070,7 +12070,7 @@ void __fastcall WarBoardData__SetRequest(WarBoardData_o *this, RequestBase_o *re
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
   v49 = System_Convert__ToBase64String(v48, 0LL);
-  RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_22377, v49, 0LL);
+  RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_22377/*"svtInfo"*/, v49, 0LL);
   v50 = this->fields.serverData;
   if ( !v50 )
     goto LABEL_63;
@@ -12078,7 +12078,7 @@ void __fastcall WarBoardData__SetRequest(WarBoardData_o *this, RequestBase_o *re
   v52 = RequestBase__PackToMessagePack(request, v51, 0LL);
   v53 = CatAndMouseGame__CatGame5Bytes(v52, 0LL);
   v54 = System_Convert__ToBase64String(v53, 0LL);
-  RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_20316, v54, 0LL);
+  RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_20316/*"masterInfo"*/, v54, 0LL);
   items = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.items;
   if ( !items )
     goto LABEL_63;
@@ -12093,8 +12093,8 @@ void __fastcall WarBoardData__SetRequest(WarBoardData_o *this, RequestBase_o *re
     }
     v61 = v60->static_fields;
     _9__156_1 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__WarBoardPieceData__o *)v61->__9__156_1;
-    v63 = (System_String_o *)StringLiteral_698;
-    v64 = (System_String_o *)StringLiteral_15764;
+    v63 = (System_String_o *)StringLiteral_698/*","*/;
+    v64 = (System_String_o *)StringLiteral_15764/*"[{0}]"*/;
     if ( !_9__156_1 )
     {
       if ( (BYTE3(v60->vtable._0_Equals.methodPtr) & 4) != 0 && !v60->_2.cctor_finished )
@@ -12183,7 +12183,7 @@ void __fastcall WarBoardData__SetRequest(WarBoardData_o *this, RequestBase_o *re
   }
   else
   {
-    v65 = (Il2CppObject *)StringLiteral_21080;
+    v65 = (Il2CppObject *)StringLiteral_21080/*"null"*/;
   }
   v94 = RequestBase__PackToMessagePack(request, v65, 0LL);
   if ( (BYTE3(CatAndMouseGame_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -12198,7 +12198,7 @@ void __fastcall WarBoardData__SetRequest(WarBoardData_o *this, RequestBase_o *re
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
   v96 = System_Convert__ToBase64String(v95, 0LL);
-  RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_18930, v96, 0LL);
+  RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_18930/*"getItemInfo"*/, v96, 0LL);
   v97 = this->fields.serverData;
   if ( !v97 )
     goto LABEL_63;
@@ -12219,14 +12219,14 @@ void __fastcall WarBoardData__SetRequest(WarBoardData_o *this, RequestBase_o *re
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   }
   v102 = System_Convert__ToBase64String(v101, 0LL);
-  RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_23100, v102, 0LL);
+  RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_23100/*"wallInfo"*/, v102, 0LL);
   v103 = this->fields.serverData;
   if ( !v103
     || (v104 = (Il2CppObject *)JsonManager__toJson(&v103->fields.squareIndexInfo->obj, 0, 0, 0LL),
         v105 = RequestBase__PackToMessagePack(request, v104, 0LL),
         v106 = CatAndMouseGame__CatGame5Bytes(v105, 0LL),
         v107 = System_Convert__ToBase64String(v106, 0LL),
-        RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_22150, v107, 0LL),
+        RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_22150/*"squareIndexInfo"*/, v107, 0LL),
         (v108 = this->fields.serverData) == 0LL) )
   {
 LABEL_63:
@@ -12236,7 +12236,7 @@ LABEL_63:
   v110 = RequestBase__PackToMessagePack(request, v109, 0LL);
   v111 = CatAndMouseGame__CatGame5Bytes(v110, 0LL);
   v112 = System_Convert__ToBase64String(v111, 0LL);
-  RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_16821, v112, 0LL);
+  RequestBase__addField_30957164(request, (System_String_o *)StringLiteral_16821/*"bossBattleInfo"*/, v112, 0LL);
 }
 
 

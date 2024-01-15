@@ -14,12 +14,12 @@ void __fastcall QuestRacePointEntity___cctor(const MethodInfo *method)
   if ( (byte_40FD554 & 1) == 0 )
   {
     sub_B16FFC(&QuestRacePointEntity_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_23083, v8);
+    sub_B16FFC(&StringLiteral_23083/*"voice"*/, v8);
     byte_40FD554 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)QuestRacePointEntity_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_23083;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_23083;
+  v10 = (System_Int32_array **)StringLiteral_23083/*"voice"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_23083/*"voice"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -86,7 +86,7 @@ int32_t __fastcall QuestRacePointEntity__GetBoostTypeColor(QuestRacePointEntity_
   if ( (byte_40FD54F & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
-    sub_B16FFC(&StringLiteral_18196, v3);
+    sub_B16FFC(&StringLiteral_18196/*"effectColor"*/, v3);
     byte_40FD54F = 1;
   }
   value = 0LL;
@@ -95,7 +95,7 @@ int32_t __fastcall QuestRacePointEntity__GetBoostTypeColor(QuestRacePointEntity_
   {
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_18196,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_18196/*"effectColor"*/,
            &value,
            (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
@@ -137,7 +137,7 @@ int32_t __fastcall QuestRacePointEntity__GetEffectGrade(QuestRacePointEntity_o *
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v3);
     sub_B16FFC(&System_Enum_TypeInfo, v4);
     sub_B16FFC(&System_Type_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_18997, v6);
+    sub_B16FFC(&StringLiteral_18997/*"grade"*/, v6);
     byte_40FD550 = 1;
   }
   value = 0LL;
@@ -145,7 +145,7 @@ int32_t __fastcall QuestRacePointEntity__GetEffectGrade(QuestRacePointEntity_o *
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_18997,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_18997/*"grade"*/,
           &value,
           (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
@@ -217,7 +217,7 @@ System_String_o *__fastcall QuestRacePointEntity__GetSe(QuestRacePointEntity_o *
   {
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
     sub_B16FFC(&string_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_21838, v4);
+    sub_B16FFC(&StringLiteral_21838/*"se"*/, v4);
     byte_40FD551 = 1;
   }
   value = 0LL;
@@ -226,7 +226,7 @@ System_String_o *__fastcall QuestRacePointEntity__GetSe(QuestRacePointEntity_o *
   {
     if ( !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___TryGetValue(
             (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)result,
-            (System_Xml_XmlQualifiedName_o *)StringLiteral_21838,
+            (System_Xml_XmlQualifiedName_o *)StringLiteral_21838/*"se"*/,
             &value,
             (const MethodInfo_2DA5A18 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0LL;

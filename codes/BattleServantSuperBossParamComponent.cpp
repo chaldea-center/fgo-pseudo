@@ -111,7 +111,7 @@ System_String_o *__fastcall BattleServantSuperBossParamComponent__get_SuperBossH
   if ( (byte_40FCD3E & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_2520, v3);
+    sub_B16FFC(&StringLiteral_2520/*"BATTLE_SUPERBOSS_TOTALHP"*/, v3);
     byte_40FCD3E = 1;
   }
   result = this->fields.hpformat;
@@ -123,7 +123,7 @@ System_String_o *__fastcall BattleServantSuperBossParamComponent__get_SuperBossH
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_2520, 0LL);
+    v6 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_2520/*"BATTLE_SUPERBOSS_TOTALHP"*/, 0LL);
     p_hpformat->klass = (BattleServantConfConponent_c *)v6;
     sub_B16F98(p_hpformat, v6, v7, v8, v9, v10, v11, v12);
     return (System_String_o *)p_hpformat->klass;
@@ -333,13 +333,13 @@ void __fastcall BattleServantSuperBossParamComponent__setDownMessage(
 
   if ( (byte_40FCD42 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_951, method);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, method);
     byte_40FCD42 = 1;
   }
   superBosshplabel = this->fields.superBosshplabel;
   if ( !superBosshplabel )
     sub_B170D4();
-  UILabel__set_text(superBosshplabel, (System_String_o *)StringLiteral_951, 0LL);
+  UILabel__set_text(superBosshplabel, (System_String_o *)StringLiteral_951/*"0"*/, 0LL);
 }
 
 
@@ -380,7 +380,7 @@ void __fastcall BattleServantSuperBossParamComponent__updateStateString(
   if ( (byte_40FCD43 & 1) == 0 )
   {
     sub_B16FFC(&char___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FCD43 = 1;
   }
   data = this->fields.data;
@@ -438,7 +438,7 @@ LABEL_13:
   v14 = this->fields.stateLabel;
   if ( !v14 )
     goto LABEL_18;
-  v15 = (System_String_o *)StringLiteral_1;
+  v15 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_15:
   UILabel__set_text(v14, v15, 0LL);
 }

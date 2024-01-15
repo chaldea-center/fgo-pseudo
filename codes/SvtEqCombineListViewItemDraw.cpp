@@ -49,9 +49,9 @@ void __fastcall SvtEqCombineListViewItemDraw__SetInput(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_9286, v7);
-    sub_B16FFC(&StringLiteral_9287, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_9286/*"NONSELECT_MATERIAL"*/, v7);
+    sub_B16FFC(&StringLiteral_9287/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FD617 = 1;
   }
   if ( !item )
@@ -115,7 +115,7 @@ LABEL_12:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v19 = &StringLiteral_9287;
+        v19 = &StringLiteral_9287/*"NONSELECT_MATERIAL_BASE_LVMAX"*/;
 LABEL_55:
         v31 = LocalizationManager__Get((System_String_o *)*v19, 0LL);
         if ( maskLabel )
@@ -209,7 +209,7 @@ LABEL_69:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v19 = &StringLiteral_9286;
+          v19 = &StringLiteral_9286/*"NONSELECT_MATERIAL"*/;
           goto LABEL_55;
         }
       }
@@ -254,7 +254,7 @@ LABEL_69:
                       v33 = this->fields.maskLabel;
                       if ( v33 )
                       {
-                        v32 = (System_String_o *)StringLiteral_1;
+                        v32 = (System_String_o *)StringLiteral_1/*""*/;
                         goto LABEL_69;
                       }
                     }
@@ -410,13 +410,13 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_9286, v11);
-    sub_B16FFC(&StringLiteral_9287, v12);
-    sub_B16FFC(&StringLiteral_8801, v13);
-    sub_B16FFC(&StringLiteral_8402, v14);
-    sub_B16FFC(&StringLiteral_2972, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
-    sub_B16FFC(&StringLiteral_8403, v17);
+    sub_B16FFC(&StringLiteral_9286/*"NONSELECT_MATERIAL"*/, v11);
+    sub_B16FFC(&StringLiteral_9287/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, v12);
+    sub_B16FFC(&StringLiteral_8801/*"MSG_ABLED_SVTEP_LIMITUP"*/, v13);
+    sub_B16FFC(&StringLiteral_8402/*"LOCKMODE_SELECTED_SERVANT"*/, v14);
+    sub_B16FFC(&StringLiteral_2972/*"CHOICE_SERVANT"*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
+    sub_B16FFC(&StringLiteral_8403/*"LOCK_SERVANT"*/, v17);
     byte_40FD616 = 1;
   }
   if ( item && mode )
@@ -522,7 +522,7 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
     v39 = this->fields.statusTextLabel;
     if ( !v39 )
       goto LABEL_203;
-    UILabel__set_text(v39, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v39, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
     if ( !maskSprite )
       goto LABEL_203;
@@ -533,7 +533,7 @@ void __fastcall SvtEqCombineListViewItemDraw__SetItem(
     maskLabel = this->fields.maskLabel;
     if ( !maskLabel )
       goto LABEL_203;
-    UILabel__set_text(maskLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(maskLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     limitCountIcon = this->fields.limitCountIcon;
     if ( !limitCountIcon )
       goto LABEL_203;
@@ -584,7 +584,7 @@ LABEL_91:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v77 = LocalizationManager__Get((System_String_o *)StringLiteral_8801, 0LL);
+        v77 = LocalizationManager__Get((System_String_o *)StringLiteral_8801/*"MSG_ABLED_SVTEP_LIMITUP"*/, 0LL);
         if ( !v76 )
           goto LABEL_203;
         UILabel__set_text(v76, v77, 0LL);
@@ -621,7 +621,7 @@ LABEL_91:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v85 = LocalizationManager__Get((System_String_o *)StringLiteral_8403, 0LL);
+        v85 = LocalizationManager__Get((System_String_o *)StringLiteral_8403/*"LOCK_SERVANT"*/, 0LL);
         if ( !v84 )
           goto LABEL_203;
         UILabel__set_text(v84, v85, 0LL);
@@ -641,7 +641,7 @@ LABEL_91:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v89 = LocalizationManager__Get((System_String_o *)StringLiteral_9286, 0LL);
+        v89 = LocalizationManager__Get((System_String_o *)StringLiteral_9286/*"NONSELECT_MATERIAL"*/, 0LL);
         if ( !v88 )
           goto LABEL_203;
         UILabel__set_text(v88, v89, 0LL);
@@ -661,7 +661,7 @@ LABEL_91:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v93 = LocalizationManager__Get((System_String_o *)StringLiteral_2972, 0LL);
+        v93 = LocalizationManager__Get((System_String_o *)StringLiteral_2972/*"CHOICE_SERVANT"*/, 0LL);
         if ( !v92 )
           goto LABEL_203;
         UILabel__set_text(v92, v93, 0LL);
@@ -721,7 +721,7 @@ LABEL_91:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v104 = &StringLiteral_9287;
+        v104 = &StringLiteral_9287/*"NONSELECT_MATERIAL_BASE_LVMAX"*/;
         goto LABEL_176;
       }
       if ( (WORD1(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -799,7 +799,7 @@ LABEL_91:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v104 = &StringLiteral_9286;
+          v104 = &StringLiteral_9286/*"NONSELECT_MATERIAL"*/;
 LABEL_176:
           v116 = LocalizationManager__Get((System_String_o *)*v104, 0LL);
           if ( !v103 )
@@ -851,7 +851,7 @@ LABEL_190:
           v118 = this->fields.maskLabel;
           if ( !v118 )
             goto LABEL_203;
-          v117 = (System_String_o *)StringLiteral_1;
+          v117 = (System_String_o *)StringLiteral_1/*""*/;
           goto LABEL_190;
         }
       }
@@ -872,11 +872,11 @@ LABEL_191:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v127 = LocalizationManager__Get((System_String_o *)StringLiteral_8402, 0LL);
+            v127 = LocalizationManager__Get((System_String_o *)StringLiteral_8402/*"LOCKMODE_SELECTED_SERVANT"*/, 0LL);
           }
           else
           {
-            v127 = (System_String_o *)StringLiteral_1;
+            v127 = (System_String_o *)StringLiteral_1/*""*/;
           }
           v128 = this->fields.maskLabel;
           if ( v128 )
@@ -955,7 +955,7 @@ LABEL_203:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v63 = LocalizationManager__Get((System_String_o *)StringLiteral_9287, 0LL);
+      v63 = LocalizationManager__Get((System_String_o *)StringLiteral_9287/*"NONSELECT_MATERIAL_BASE_LVMAX"*/, 0LL);
       if ( !v62 )
         goto LABEL_203;
       v64 = v63;
@@ -995,7 +995,7 @@ LABEL_203:
       v65 = this->fields.maskLabel;
       if ( !v65 )
         goto LABEL_203;
-      v64 = (System_String_o *)StringLiteral_1;
+      v64 = (System_String_o *)StringLiteral_1/*""*/;
     }
     UILabel__set_text(v65, v64, 0LL);
 LABEL_86:

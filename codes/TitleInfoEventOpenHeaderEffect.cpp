@@ -62,15 +62,15 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
   v29 = eventId;
   if ( (byte_40FDFDD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16071, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_18126, v8);
+    sub_B16FFC(&StringLiteral_16071/*"_anim"*/, *(_QWORD *)&eventId);
+    sub_B16FFC(&StringLiteral_18126/*"ef_mapnamechange_"*/, v8);
     byte_40FDFDD = 1;
   }
   v9 = System_Int32__ToString((int32_t)&v29, 0LL);
   v10 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_18126,
+          (System_String_o *)StringLiteral_18126/*"ef_mapnamechange_"*/,
           v9,
-          (System_String_o *)StringLiteral_16071,
+          (System_String_o *)StringLiteral_16071/*"_anim"*/,
           0LL);
   this->fields.asset = (struct AssetData_o *)v10;
   sub_B16F98(

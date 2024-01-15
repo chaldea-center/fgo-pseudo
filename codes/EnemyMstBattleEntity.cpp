@@ -43,7 +43,7 @@ int32_t __fastcall EnemyMstBattleEntity__GetCommandSpellCntFromCutInId(
     sub_B16FFC(&char___TypeInfo, *(_QWORD *)&commandSpellCnt);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v6);
-    sub_B16FFC(&StringLiteral_17782, v7);
+    sub_B16FFC(&StringLiteral_17782/*"cutinId"*/, v7);
     byte_40FE2B7 = 1;
   }
   result = 0;
@@ -52,7 +52,7 @@ int32_t __fastcall EnemyMstBattleEntity__GetCommandSpellCntFromCutInId(
   {
     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
            (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-           (System_Xml_XmlQualifiedName_o *)StringLiteral_17782,
+           (System_Xml_XmlQualifiedName_o *)StringLiteral_17782/*"cutinId"*/,
            (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       v9 = this->fields.script;
@@ -60,7 +60,7 @@ int32_t __fastcall EnemyMstBattleEntity__GetCommandSpellCntFromCutInId(
         goto LABEL_18;
       Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v9,
-               (System_Type_o *)StringLiteral_17782,
+               (System_Type_o *)StringLiteral_17782/*"cutinId"*/,
                (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
       if ( !Item )
         goto LABEL_18;
@@ -111,10 +111,10 @@ int32_t __fastcall EnemyMstBattleEntity__GetOverwriteFrame(
 
   if ( (byte_40FE2B8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21274, *(_QWORD *)&defval);
+    sub_B16FFC(&StringLiteral_21274/*"overwriteEnemyMasterBackgroundId"*/, *(_QWORD *)&defval);
     byte_40FE2B8 = 1;
   }
-  return EnemyMstBattleEntity__getScript(this, (System_String_o *)StringLiteral_21274, defval, v3);
+  return EnemyMstBattleEntity__getScript(this, (System_String_o *)StringLiteral_21274/*"overwriteEnemyMasterBackgroundId"*/, defval, v3);
 }
 
 

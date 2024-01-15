@@ -206,33 +206,33 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
     sub_B16FFC(
       &Field__PrivateImplementationDetails__CAD09F9281692B25FCE895F0A7051452E5DD84B5F84FE368475EA22E3BE1CDFE,
       v6);
-    sub_B16FFC(&StringLiteral_8847, v7);
-    sub_B16FFC(&StringLiteral_8831, v8);
-    sub_B16FFC(&StringLiteral_14517, v9);
-    sub_B16FFC(&StringLiteral_8839, v10);
-    sub_B16FFC(&StringLiteral_8832, v11);
-    sub_B16FFC(&StringLiteral_8830, v12);
-    sub_B16FFC(&StringLiteral_8833, v13);
-    sub_B16FFC(&StringLiteral_8842, v14);
-    sub_B16FFC(&StringLiteral_8836, v15);
-    sub_B16FFC(&StringLiteral_8837, v16);
-    sub_B16FFC(&StringLiteral_8848, v17);
-    sub_B16FFC(&StringLiteral_22734, v18);
-    sub_B16FFC(&StringLiteral_8838, v19);
-    sub_B16FFC(&StringLiteral_8853, v20);
-    sub_B16FFC(&StringLiteral_8844, v21);
-    sub_B16FFC(&StringLiteral_8846, v22);
-    sub_B16FFC(&StringLiteral_19458, v23);
-    sub_B16FFC(&StringLiteral_8849, v24);
-    sub_B16FFC(&StringLiteral_8852, v25);
-    sub_B16FFC(&StringLiteral_8845, v26);
-    sub_B16FFC(&StringLiteral_19532, v27);
-    sub_B16FFC(&StringLiteral_14516, v28);
-    sub_B16FFC(&StringLiteral_8850, v29);
-    sub_B16FFC(&StringLiteral_1, v30);
-    sub_B16FFC(&StringLiteral_8834, v31);
-    sub_B16FFC(&StringLiteral_22735, v32);
-    sub_B16FFC(&StringLiteral_8835, v33);
+    sub_B16FFC(&StringLiteral_8847/*"MYROOM_MENU_NAME_3"*/, v7);
+    sub_B16FFC(&StringLiteral_8831/*"MYROOM_HELP_HELP_EXPLANATION"*/, v8);
+    sub_B16FFC(&StringLiteral_14517/*"Tutorial/tutorial_alpha"*/, v9);
+    sub_B16FFC(&StringLiteral_8839/*"MYROOM_HELP_TAKE_OVER_EXPLANATION"*/, v10);
+    sub_B16FFC(&StringLiteral_8832/*"MYROOM_HELP_ITEM_EXPLANATION"*/, v11);
+    sub_B16FFC(&StringLiteral_8830/*"MYROOM_HELP_FAVORITE_EXPLANATION"*/, v12);
+    sub_B16FFC(&StringLiteral_8833/*"MYROOM_HELP_MATERIAL_SERVANT_EXPLANATION"*/, v13);
+    sub_B16FFC(&StringLiteral_8842/*"MYROOM_MENU_NAME_1"*/, v14);
+    sub_B16FFC(&StringLiteral_8836/*"MYROOM_HELP_OPTION_EXPLANATION"*/, v15);
+    sub_B16FFC(&StringLiteral_8837/*"MYROOM_HELP_RETURN_TITLE_EXPLANATION"*/, v16);
+    sub_B16FFC(&StringLiteral_8848/*"MYROOM_MENU_NAME_4"*/, v17);
+    sub_B16FFC(&StringLiteral_22734/*"tutorial_0006"*/, v18);
+    sub_B16FFC(&StringLiteral_8838/*"MYROOM_HELP_SOUND_PLAYER_EXPLANATION"*/, v19);
+    sub_B16FFC(&StringLiteral_8853/*"MYROOM_MENU_NAME_9"*/, v20);
+    sub_B16FFC(&StringLiteral_8844/*"MYROOM_MENU_NAME_11"*/, v21);
+    sub_B16FFC(&StringLiteral_8846/*"MYROOM_MENU_NAME_2"*/, v22);
+    sub_B16FFC(&StringLiteral_19458/*"img_menuboard_01"*/, v23);
+    sub_B16FFC(&StringLiteral_8849/*"MYROOM_MENU_NAME_5"*/, v24);
+    sub_B16FFC(&StringLiteral_8852/*"MYROOM_MENU_NAME_8"*/, v25);
+    sub_B16FFC(&StringLiteral_8845/*"MYROOM_MENU_NAME_12"*/, v26);
+    sub_B16FFC(&StringLiteral_19532/*"img_shop_0"*/, v27);
+    sub_B16FFC(&StringLiteral_14516/*"Tutorial/tutorial_0006"*/, v28);
+    sub_B16FFC(&StringLiteral_8850/*"MYROOM_MENU_NAME_6"*/, v29);
+    sub_B16FFC(&StringLiteral_1/*""*/, v30);
+    sub_B16FFC(&StringLiteral_8834/*"MYROOM_HELP_MATERIAL_STORY_EXPLANATION"*/, v31);
+    sub_B16FFC(&StringLiteral_22735/*"tutorial_alpha"*/, v32);
+    sub_B16FFC(&StringLiteral_8835/*"MYROOM_HELP_MST_PROFILE_EXPLANATION"*/, v33);
     byte_40F9B02 = 1;
   }
   v34 = (System_Int32_array **)sub_B17014(MyRoomHelpListViewManager_MyRoomHelpItemInfo___TypeInfo, 11LL, v2);
@@ -245,9 +245,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v39,
     1,
-    (System_String_o *)StringLiteral_8834,
-    (System_String_o *)StringLiteral_19458,
-    (System_String_o *)StringLiteral_8844,
+    (System_String_o *)StringLiteral_8834/*"MYROOM_HELP_MATERIAL_STORY_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_8844/*"MYROOM_MENU_NAME_11"*/,
     0LL);
   if ( !v34 )
     sub_B170D4();
@@ -270,9 +270,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v52,
     2,
-    (System_String_o *)StringLiteral_8833,
-    (System_String_o *)StringLiteral_19458,
-    (System_String_o *)StringLiteral_8845,
+    (System_String_o *)StringLiteral_8833/*"MYROOM_HELP_MATERIAL_SERVANT_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_8845/*"MYROOM_MENU_NAME_12"*/,
     0LL);
   if ( v52 )
   {
@@ -293,9 +293,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v62,
     3,
-    (System_String_o *)StringLiteral_8832,
-    (System_String_o *)StringLiteral_19458,
-    (System_String_o *)StringLiteral_8842,
+    (System_String_o *)StringLiteral_8832/*"MYROOM_HELP_ITEM_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_8842/*"MYROOM_MENU_NAME_1"*/,
     0LL);
   if ( v62 )
   {
@@ -316,9 +316,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v72,
     5,
-    (System_String_o *)StringLiteral_8838,
-    (System_String_o *)StringLiteral_19458,
-    (System_String_o *)StringLiteral_8846,
+    (System_String_o *)StringLiteral_8838/*"MYROOM_HELP_SOUND_PLAYER_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_8846/*"MYROOM_MENU_NAME_2"*/,
     0LL);
   if ( v72 )
   {
@@ -339,9 +339,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v82,
     6,
-    (System_String_o *)StringLiteral_8835,
-    (System_String_o *)StringLiteral_19458,
-    (System_String_o *)StringLiteral_8847,
+    (System_String_o *)StringLiteral_8835/*"MYROOM_HELP_MST_PROFILE_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_8847/*"MYROOM_MENU_NAME_3"*/,
     0LL);
   if ( v82 )
   {
@@ -362,9 +362,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v92,
     7,
-    (System_String_o *)StringLiteral_8830,
-    (System_String_o *)StringLiteral_19458,
-    (System_String_o *)StringLiteral_8848,
+    (System_String_o *)StringLiteral_8830/*"MYROOM_HELP_FAVORITE_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_8848/*"MYROOM_MENU_NAME_4"*/,
     0LL);
   if ( v92 )
   {
@@ -385,9 +385,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v102,
     8,
-    (System_String_o *)StringLiteral_8831,
-    (System_String_o *)StringLiteral_19458,
-    (System_String_o *)StringLiteral_8849,
+    (System_String_o *)StringLiteral_8831/*"MYROOM_HELP_HELP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_8849/*"MYROOM_MENU_NAME_5"*/,
     0LL);
   if ( v102 )
   {
@@ -408,9 +408,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v112,
     9,
-    (System_String_o *)StringLiteral_8836,
-    (System_String_o *)StringLiteral_19458,
-    (System_String_o *)StringLiteral_8850,
+    (System_String_o *)StringLiteral_8836/*"MYROOM_HELP_OPTION_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_8850/*"MYROOM_MENU_NAME_6"*/,
     0LL);
   if ( v112 )
   {
@@ -431,9 +431,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v122,
     10,
-    (System_String_o *)StringLiteral_8839,
-    (System_String_o *)StringLiteral_19458,
-    (System_String_o *)StringLiteral_8852,
+    (System_String_o *)StringLiteral_8839/*"MYROOM_HELP_TAKE_OVER_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_8852/*"MYROOM_MENU_NAME_8"*/,
     0LL);
   if ( v122 )
   {
@@ -454,9 +454,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v132,
     11,
-    (System_String_o *)StringLiteral_8837,
-    (System_String_o *)StringLiteral_19458,
-    (System_String_o *)StringLiteral_8853,
+    (System_String_o *)StringLiteral_8837/*"MYROOM_HELP_RETURN_TITLE_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/,
+    (System_String_o *)StringLiteral_8853/*"MYROOM_MENU_NAME_9"*/,
     0LL);
   if ( v132 )
   {
@@ -477,9 +477,9 @@ void __fastcall MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   MyRoomHelpListViewManager_MyRoomHelpItemInfo___ctor(
     v142,
     12,
-    (System_String_o *)StringLiteral_1,
-    (System_String_o *)StringLiteral_19532,
-    (System_String_o *)StringLiteral_1,
+    (System_String_o *)StringLiteral_1/*""*/,
+    (System_String_o *)StringLiteral_19532/*"img_shop_0"*/,
+    (System_String_o *)StringLiteral_1/*""*/,
     0LL);
   if ( v142 )
   {
@@ -517,20 +517,20 @@ LABEL_38:
     v162,
     v163);
   v164 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v165 = (System_Int32_array **)StringLiteral_14516;
-  v164->HELP_BASE_SPRITE_PATH = (struct System_String_o *)StringLiteral_14516;
+  v165 = (System_Int32_array **)StringLiteral_14516/*"Tutorial/tutorial_0006"*/;
+  v164->HELP_BASE_SPRITE_PATH = (struct System_String_o *)StringLiteral_14516/*"Tutorial/tutorial_0006"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v164->HELP_BASE_SPRITE_PATH, v165, v166, v167, v168, v169, v170, v171);
   v172 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v173 = (System_Int32_array **)StringLiteral_22734;
-  v172->HELP_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_22734;
+  v173 = (System_Int32_array **)StringLiteral_22734/*"tutorial_0006"*/;
+  v172->HELP_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_22734/*"tutorial_0006"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v172->HELP_BASE_SPRITE_NAME, v173, v174, v175, v176, v177, v178, v179);
   v180 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v181 = (System_Int32_array **)StringLiteral_14517;
-  v180->HELP_BASE_ALPHA_PATH = (struct System_String_o *)StringLiteral_14517;
+  v181 = (System_Int32_array **)StringLiteral_14517/*"Tutorial/tutorial_alpha"*/;
+  v180->HELP_BASE_ALPHA_PATH = (struct System_String_o *)StringLiteral_14517/*"Tutorial/tutorial_alpha"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v180->HELP_BASE_ALPHA_PATH, v181, v182, v183, v184, v185, v186, v187);
   v188 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v189 = (System_Int32_array **)StringLiteral_22735;
-  v188->HELP_BASE_ALPHA_NAME = (struct System_String_o *)StringLiteral_22735;
+  v189 = (System_Int32_array **)StringLiteral_22735/*"tutorial_alpha"*/;
+  v188->HELP_BASE_ALPHA_NAME = (struct System_String_o *)StringLiteral_22735/*"tutorial_alpha"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v188->HELP_BASE_ALPHA_NAME, v189, v190, v191, v192, v193, v194, v195);
 }
 
@@ -1059,7 +1059,7 @@ void __fastcall MyRoomHelpListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_MyRoomHelpListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40F9AFF = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -1074,7 +1074,7 @@ void __fastcall MyRoomHelpListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -1144,7 +1144,7 @@ void __fastcall MyRoomHelpListViewManager__RequestListObject_24451348(
     sub_B16FFC(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_MyRoomHelpListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_MyRoomHelpListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40F9B00 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -1159,7 +1159,7 @@ void __fastcall MyRoomHelpListViewManager__RequestListObject_24451348(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2102,8 +2102,8 @@ void __fastcall MyRoomHelpListViewManager___c__DisplayClass25_0___LoadBaseSprite
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UITexture___, v5);
     sub_B16FFC(&UnityEngine_Material_TypeInfo, v6);
     sub_B16FFC(&MyRoomHelpListViewManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_4519, v8);
-    this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)sub_B16FFC(&StringLiteral_15952, v9);
+    sub_B16FFC(&StringLiteral_4519/*"Custom/SpriteWithMask"*/, v8);
+    this = (MyRoomHelpListViewManager___c__DisplayClass25_0_o *)sub_B16FFC(&StringLiteral_15952/*"_MaskTex"*/, v9);
     byte_40F8669 = 1;
   }
   _4__this = v3->fields.__4__this;
@@ -2164,7 +2164,7 @@ LABEL_32:
             Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                         transform,
                                         (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UITexture___);
-            v23 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519, 0LL);
+            v23 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4519/*"Custom/SpriteWithMask"*/, 0LL);
             v28 = (UnityEngine_Material_o *)sub_B170CC(UnityEngine_Material_TypeInfo, v24, v25, v26, v27);
             UnityEngine_Material___ctor(v28, v23, 0LL);
             if ( Component_WebViewObject )
@@ -2176,7 +2176,7 @@ LABEL_32:
               if ( v28 )
               {
                 UnityEngine_Material__set_mainTexture(v28, v15, 0LL);
-                UnityEngine_Material__SetTexture(v28, (System_String_o *)StringLiteral_15952, v19, 0LL);
+                UnityEngine_Material__SetTexture(v28, (System_String_o *)StringLiteral_15952/*"_MaskTex"*/, v19, 0LL);
                 v29 = v3->fields.__4__this;
                 if ( v29 )
                 {

@@ -42,8 +42,8 @@ void __fastcall CharaCutEffectComponent__CutinResume(CharaCutEffectComponent_o *
   if ( (byte_40FCFB9 & 1) == 0 )
   {
     sub_B16FFC(&Method_AssetData_GetObject_Texture2D___, method);
-    sub_B16FFC(&StringLiteral_9965, v4);
-    sub_B16FFC(&StringLiteral_4505, v5);
+    sub_B16FFC(&StringLiteral_9965/*"OnEndCutinEffect"*/, v4);
+    sub_B16FFC(&StringLiteral_4505/*"Custom/Sprite-ScriptActionFigureCut"*/, v5);
     byte_40FCFB9 = 1;
   }
   duration = this->fields.duration;
@@ -66,7 +66,7 @@ void __fastcall CharaCutEffectComponent__CutinResume(CharaCutEffectComponent_o *
   this->fields.addVolume = v9;
   if ( !v8 )
     goto LABEL_19;
-  UIImageRender__SetSharder(v8, (System_String_o *)StringLiteral_4505, 0LL);
+  UIImageRender__SetSharder(v8, (System_String_o *)StringLiteral_4505/*"Custom/Sprite-ScriptActionFigureCut"*/, 0LL);
   wipeData = this->fields.wipeData;
   if ( wipeData )
   {
@@ -106,8 +106,8 @@ LABEL_19:
       v23 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       v22->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v23;
       sub_B16F98((BattleServantConfConponent_o *)&v22->fields.eventReceiver, v23, v24, v25, v26, v27, v28, v29);
-      v30 = (System_Int32_array **)StringLiteral_9965;
-      v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9965;
+      v30 = (System_Int32_array **)StringLiteral_9965/*"OnEndCutinEffect"*/;
+      v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9965/*"OnEndCutinEffect"*/;
       sub_B16F98((BattleServantConfConponent_o *)&v22->fields.callWhenFinished, v30, v31, v32, v33, v34, v35, v36);
       return;
     }
@@ -147,7 +147,7 @@ void __fastcall CharaCutEffectComponent__CutinStart(
     sub_B16FFC(&AssetManager_TypeInfo, image);
     sub_B16FFC(&Method_CharaCutEffectComponent_EndLoadWipe__, v13);
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_15433, v15);
+    sub_B16FFC(&StringLiteral_15433/*"Wipe/"*/, v15);
     byte_40FCFB7 = 1;
   }
   this->fields.isCutBusy = 1;
@@ -162,7 +162,7 @@ void __fastcall CharaCutEffectComponent__CutinStart(
     v7,
     v8);
   this->fields.mgd = mgd;
-  v16 = System_String__Concat_43743732((System_String_o *)StringLiteral_15433, wipeName, 0LL);
+  v16 = System_String__Concat_43743732((System_String_o *)StringLiteral_15433/*"Wipe/"*/, wipeName, 0LL);
   v21 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v17, v18, v19, v20);
   AssetLoader_LoadEndDataHandler___ctor(v21, (Il2CppObject *)this, Method_CharaCutEffectComponent_EndLoadWipe__, 0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
@@ -201,7 +201,7 @@ void __fastcall CharaCutEffectComponent__CutoutStart(
   if ( (byte_40FCFBA & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, isSkip);
-    sub_B16FFC(&StringLiteral_9966, v7);
+    sub_B16FFC(&StringLiteral_9966/*"OnEndCutoutEffect"*/, v7);
     byte_40FCFBA = 1;
   }
   this->fields.duration = time;
@@ -228,8 +228,8 @@ void __fastcall CharaCutEffectComponent__CutoutStart(
     v11 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     v10->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v11;
     sub_B16F98((BattleServantConfConponent_o *)&v10->fields.eventReceiver, v11, v12, v13, v14, v15, v16, v17);
-    v18 = (System_Int32_array **)StringLiteral_9966;
-    v10->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9966;
+    v18 = (System_Int32_array **)StringLiteral_9966/*"OnEndCutoutEffect"*/;
+    v10->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9966/*"OnEndCutoutEffect"*/;
     sub_B16F98((BattleServantConfConponent_o *)&v10->fields.callWhenFinished, v18, v19, v20, v21, v22, v23, v24);
   }
 }

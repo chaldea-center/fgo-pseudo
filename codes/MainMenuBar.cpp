@@ -457,7 +457,7 @@ void __fastcall MainMenuBar__SetMenuActive(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&Method_UnityEngine_Resources_Load_GameObject___, v11);
-    sub_B16FFC(&StringLiteral_4170, v12);
+    sub_B16FFC(&StringLiteral_4170/*"CommonUI/MainMenuBarPrefab"*/, v12);
     byte_40F8E1E = 1;
   }
   if ( isActive )
@@ -513,7 +513,7 @@ void __fastcall MainMenuBar__SetMenuActive(
         if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0LL, 0LL) )
         {
           UIAtlas = (UnityEngine_UI_Dropdown_DropdownItem_o *)UnityEngine_Resources__Load_UIAtlas_(
-                                                                (System_String_o *)StringLiteral_4170,
+                                                                (System_String_o *)StringLiteral_4170/*"CommonUI/MainMenuBarPrefab"*/,
                                                                 (const MethodInfo_19E149C *)Method_UnityEngine_Resources_Load_GameObject___);
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !UnityEngine_Object_TypeInfo->_2.cctor_finished )

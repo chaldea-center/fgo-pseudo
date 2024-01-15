@@ -26,7 +26,7 @@ void __fastcall BattlePerformanceDefenceTarget__SetData(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&nowHp);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_2402, v10);
+    sub_B16FFC(&StringLiteral_2402/*"BATTLE_DEFENCE_TARGET_NAME_{0}"*/, v10);
     byte_40FC30E = 1;
   }
   if ( maxHp < 1 || uiId <= 0 )
@@ -39,7 +39,7 @@ void __fastcall BattlePerformanceDefenceTarget__SetData(
     BattlePerformanceDefenceTarget__SetIcon(this, uiId, *(const MethodInfo **)&maxHp);
     v17 = uiId;
     v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
-    v12 = System_String__Format((System_String_o *)StringLiteral_2402, v11, 0LL);
+    v12 = System_String__Format((System_String_o *)StringLiteral_2402/*"BATTLE_DEFENCE_TARGET_NAME_{0}"*/, v11, 0LL);
     name = this->fields.name;
     v14 = v12;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -109,18 +109,18 @@ void __fastcall BattlePerformanceDefenceTarget__SetIcon(
     sub_B16FFC(&AssetManager_TypeInfo, v5);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v6);
     sub_B16FFC(&int_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_2743, v8);
-    sub_B16FFC(&StringLiteral_2758, v9);
-    sub_B16FFC(&StringLiteral_19306, v10);
+    sub_B16FFC(&StringLiteral_2743/*"Battle/Common"*/, v8);
+    sub_B16FFC(&StringLiteral_2758/*"BattleAssetUIAtlas"*/, v9);
+    sub_B16FFC(&StringLiteral_19306/*"icon{0}"*/, v10);
     byte_40FC30F = 1;
   }
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2743, 0LL);
+  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_2743/*"Battle/Common"*/, 0LL);
   if ( !AssetStorage
     || (Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                        AssetStorage,
-                                                                       (System_String_o *)StringLiteral_2758,
+                                                                       (System_String_o *)StringLiteral_2758/*"BattleAssetUIAtlas"*/,
                                                                        (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784)) == 0LL
     || (Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                     Object_WarBoardWaitTimeSetting,
@@ -130,7 +130,7 @@ void __fastcall BattlePerformanceDefenceTarget__SetIcon(
         icon = this->fields.icon,
         v17 = uiId,
         v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17),
-        v16 = System_String__Format((System_String_o *)StringLiteral_19306, v15, 0LL),
+        v16 = System_String__Format((System_String_o *)StringLiteral_19306/*"icon{0}"*/, v15, 0LL),
         !icon) )
   {
     sub_B170D4();

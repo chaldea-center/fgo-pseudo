@@ -34,13 +34,13 @@ System_String_o *__fastcall MyRoomHelpListViewItem__ToString(MyRoomHelpListViewI
 
   if ( (byte_40F9AF1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12786, method);
+    sub_B16FFC(&StringLiteral_12786/*"ShopHelpItem "*/, method);
     byte_40F9AF1 = 1;
   }
   info = this->fields.info;
   if ( !info )
     sub_B170D4();
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_12786, info->fields.textCode, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_12786/*"ShopHelpItem "*/, info->fields.textCode, 0LL);
 }
 
 

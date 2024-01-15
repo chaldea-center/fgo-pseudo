@@ -89,15 +89,15 @@ void __fastcall MasterMissionComponent___cctor(const MethodInfo *method)
   if ( (byte_40FB230 & 1) == 0 )
   {
     sub_B16FFC(&MasterMissionComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_17000, v8);
-    sub_B16FFC(&StringLiteral_16999, v9);
-    sub_B16FFC(&StringLiteral_17006, v10);
-    sub_B16FFC(&StringLiteral_18100, v11);
-    sub_B16FFC(&StringLiteral_16998, v12);
-    sub_B16FFC(&StringLiteral_17004, v13);
-    sub_B16FFC(&StringLiteral_17007, v14);
-    sub_B16FFC(&StringLiteral_17001, v15);
-    sub_B16FFC(&StringLiteral_17005, v16);
+    sub_B16FFC(&StringLiteral_17000/*"btn_txt_off_limited"*/, v8);
+    sub_B16FFC(&StringLiteral_16999/*"btn_txt_off_extra"*/, v9);
+    sub_B16FFC(&StringLiteral_17006/*"btn_txt_on_limited"*/, v10);
+    sub_B16FFC(&StringLiteral_18100/*"ef_btn_blink"*/, v11);
+    sub_B16FFC(&StringLiteral_16998/*"btn_txt_off_daily"*/, v12);
+    sub_B16FFC(&StringLiteral_17004/*"btn_txt_on_daily"*/, v13);
+    sub_B16FFC(&StringLiteral_17007/*"btn_txt_on_weekly"*/, v14);
+    sub_B16FFC(&StringLiteral_17001/*"btn_txt_off_weekly"*/, v15);
+    sub_B16FFC(&StringLiteral_17005/*"btn_txt_on_extra"*/, v16);
     byte_40FB230 = 1;
   }
   MasterMissionComponent_TypeInfo->static_fields->DEFAULT_SVT_ID = 9000001;
@@ -105,40 +105,40 @@ void __fastcall MasterMissionComponent___cctor(const MethodInfo *method)
   v17 = MasterMissionComponent_TypeInfo;
   MasterMissionComponent_TypeInfo->static_fields->STONE_EXCHENGE_DISP_LIMIT = 99;
   static_fields = v17->static_fields;
-  v19 = (System_Int32_array **)StringLiteral_17004;
-  static_fields->DAILY_ON_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17004;
+  v19 = (System_Int32_array **)StringLiteral_17004/*"btn_txt_on_daily"*/;
+  static_fields->DAILY_ON_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17004/*"btn_txt_on_daily"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->DAILY_ON_SPRITE_LABEL, v19, v2, v3, v4, v5, v6, v7);
   v20 = MasterMissionComponent_TypeInfo->static_fields;
-  v21 = (System_Int32_array **)StringLiteral_16998;
-  v20->DAILY_OFF_SPRITE_LABEL = (struct System_String_o *)StringLiteral_16998;
+  v21 = (System_Int32_array **)StringLiteral_16998/*"btn_txt_off_daily"*/;
+  v20->DAILY_OFF_SPRITE_LABEL = (struct System_String_o *)StringLiteral_16998/*"btn_txt_off_daily"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v20->DAILY_OFF_SPRITE_LABEL, v21, v22, v23, v24, v25, v26, v27);
   v28 = MasterMissionComponent_TypeInfo->static_fields;
-  v29 = (System_Int32_array **)StringLiteral_17007;
-  v28->WEEKLY_ON_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17007;
+  v29 = (System_Int32_array **)StringLiteral_17007/*"btn_txt_on_weekly"*/;
+  v28->WEEKLY_ON_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17007/*"btn_txt_on_weekly"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v28->WEEKLY_ON_SPRITE_LABEL, v29, v30, v31, v32, v33, v34, v35);
   v36 = MasterMissionComponent_TypeInfo->static_fields;
-  v37 = (System_Int32_array **)StringLiteral_17001;
-  v36->WEEKLY_OFF_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17001;
+  v37 = (System_Int32_array **)StringLiteral_17001/*"btn_txt_off_weekly"*/;
+  v36->WEEKLY_OFF_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17001/*"btn_txt_off_weekly"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v36->WEEKLY_OFF_SPRITE_LABEL, v37, v38, v39, v40, v41, v42, v43);
   v44 = MasterMissionComponent_TypeInfo->static_fields;
-  v45 = (System_Int32_array **)StringLiteral_17005;
-  v44->EXTRA_ON_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17005;
+  v45 = (System_Int32_array **)StringLiteral_17005/*"btn_txt_on_extra"*/;
+  v44->EXTRA_ON_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17005/*"btn_txt_on_extra"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v44->EXTRA_ON_SPRITE_LABEL, v45, v46, v47, v48, v49, v50, v51);
   v52 = MasterMissionComponent_TypeInfo->static_fields;
-  v53 = (System_Int32_array **)StringLiteral_16999;
-  v52->EXTRA_OFF_SPRITE_LABEL = (struct System_String_o *)StringLiteral_16999;
+  v53 = (System_Int32_array **)StringLiteral_16999/*"btn_txt_off_extra"*/;
+  v52->EXTRA_OFF_SPRITE_LABEL = (struct System_String_o *)StringLiteral_16999/*"btn_txt_off_extra"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v52->EXTRA_OFF_SPRITE_LABEL, v53, v54, v55, v56, v57, v58, v59);
   v60 = MasterMissionComponent_TypeInfo->static_fields;
-  v61 = (System_Int32_array **)StringLiteral_17006;
-  v60->LIMITED_ON_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17006;
+  v61 = (System_Int32_array **)StringLiteral_17006/*"btn_txt_on_limited"*/;
+  v60->LIMITED_ON_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17006/*"btn_txt_on_limited"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v60->LIMITED_ON_SPRITE_LABEL, v61, v62, v63, v64, v65, v66, v67);
   v68 = MasterMissionComponent_TypeInfo->static_fields;
-  v69 = (System_Int32_array **)StringLiteral_17000;
-  v68->LIMITED_OFF_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17000;
+  v69 = (System_Int32_array **)StringLiteral_17000/*"btn_txt_off_limited"*/;
+  v68->LIMITED_OFF_SPRITE_LABEL = (struct System_String_o *)StringLiteral_17000/*"btn_txt_off_limited"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v68->LIMITED_OFF_SPRITE_LABEL, v69, v70, v71, v72, v73, v74, v75);
   v76 = MasterMissionComponent_TypeInfo->static_fields;
-  v77 = (System_Int32_array **)StringLiteral_18100;
-  v76->STONE_EXCHENGE_BUTTON_EFFECT_NAME = (struct System_String_o *)StringLiteral_18100;
+  v77 = (System_Int32_array **)StringLiteral_18100/*"ef_btn_blink"*/;
+  v76->STONE_EXCHENGE_BUTTON_EFFECT_NAME = (struct System_String_o *)StringLiteral_18100/*"ef_btn_blink"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v76->STONE_EXCHENGE_BUTTON_EFFECT_NAME, v77, v78, v79, v80, v81, v82, v83);
   v84 = MasterMissionComponent_TypeInfo;
   MasterMissionComponent_TypeInfo->static_fields->SLIDE_IN_TIME = 0.1;
@@ -609,10 +609,10 @@ void __fastcall MasterMissionComponent__ChangeViewCompleteMissionLb(
     sub_B16FFC(&Method_DataManager_GetMasterData_UserEventMissionMaster___, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_8715, v8);
-    sub_B16FFC(&StringLiteral_3274, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
-    sub_B16FFC(&StringLiteral_13336, v11);
+    sub_B16FFC(&StringLiteral_8715/*"MISSION_ACHIVE_MSG"*/, v8);
+    sub_B16FFC(&StringLiteral_3274/*"COMPLETE_MISSION_TIME_REST_ACHIVE"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
+    sub_B16FFC(&StringLiteral_13336/*"TIME_REST_ACHIVE"*/, v11);
     byte_40FB1F8 = 1;
   }
   MissionAchiveCount_k__BackingField = 0;
@@ -650,7 +650,7 @@ void __fastcall MasterMissionComponent__ChangeViewCompleteMissionLb(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_8715, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_8715/*"MISSION_ACHIVE_MSG"*/, 0LL);
   if ( !completeMissionCountMsgLb )
     goto LABEL_39;
   UILabel__set_text(completeMissionCountMsgLb, v21, 0LL);
@@ -696,7 +696,7 @@ void __fastcall MasterMissionComponent__ChangeViewCompleteMissionLb(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3274, 0LL);
+    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3274/*"COMPLETE_MISSION_TIME_REST_ACHIVE"*/, 0LL);
     if ( completeMissionAlertTitleLb )
     {
       UILabel__set_text(completeMissionAlertTitleLb, v36, 0LL);
@@ -711,7 +711,7 @@ void __fastcall MasterMissionComponent__ChangeViewCompleteMissionLb(
           completeMissionAlertMsgLb = this->fields.completeMissionAlertMsgLb;
           if ( completeMissionAlertMsgLb )
           {
-            v33 = (System_String_o *)StringLiteral_1;
+            v33 = (System_String_o *)StringLiteral_1/*""*/;
             goto LABEL_37;
           }
         }
@@ -724,18 +724,18 @@ LABEL_39:
   v29 = this->fields.completeMissionAlertNumLb;
   if ( !v29 )
     goto LABEL_39;
-  UILabel__set_text(v29, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v29, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v30 = this->fields.completeMissionAlertUnitLb;
   if ( !v30 )
     goto LABEL_39;
-  UILabel__set_text(v30, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v30, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v31 = this->fields.completeMissionAlertMsgLb;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_13336, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_13336/*"TIME_REST_ACHIVE"*/, 0LL);
   if ( !v31 )
     goto LABEL_39;
   v33 = v32;
@@ -767,7 +767,7 @@ void __fastcall MasterMissionComponent__CheckRewardAcceptable(MasterMissionCompo
   if ( (byte_40FB21A & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, method);
-    this = (MasterMissionComponent_o *)sub_B16FFC(&StringLiteral_11101, v4);
+    this = (MasterMissionComponent_o *)sub_B16FFC(&StringLiteral_11101/*"REWARD_ACCEPTABLE"*/, v4);
     byte_40FB21A = 1;
   }
   missionListViewManager = v3->fields.missionListViewManager;
@@ -807,7 +807,7 @@ LABEL_12:
   v3->fields.isBoardTouch = 1;
   if ( !myFsm )
     goto LABEL_11;
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_11101, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_11101/*"REWARD_ACCEPTABLE"*/, 0LL);
 }
 
 
@@ -1487,7 +1487,7 @@ void __fastcall MasterMissionComponent__OnClickBulkReceive(MasterMissionComponen
   if ( (byte_40FB22F & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_2621, v3);
+    sub_B16FFC(&StringLiteral_2621/*"BULK_RECEIVE"*/, v3);
     byte_40FB22F = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -1496,7 +1496,7 @@ void __fastcall MasterMissionComponent__OnClickBulkReceive(MasterMissionComponen
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_2621, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_2621/*"BULK_RECEIVE"*/, 0LL);
 }
 
 
@@ -1569,7 +1569,7 @@ void __fastcall MasterMissionComponent__OnClickCompleteMissionBtn(
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v11);
     sub_B16FFC(&Method_MasterMissionComponent___c__OnClickCompleteMissionBtn_b__146_1__, v12);
     sub_B16FFC(&MasterMissionComponent___c_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_3273, v14);
+    sub_B16FFC(&StringLiteral_3273/*"COMPLETE_MISSION_END"*/, v14);
     byte_40FB1FB = 1;
   }
   if ( this->fields.endFadein )
@@ -1644,7 +1644,7 @@ LABEL_50:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3273, 0LL);
+    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3273/*"COMPLETE_MISSION_END"*/, 0LL);
     v30 = (_QWORD **)Method_System_Array_Empty_object___;
     v31 = **((_QWORD **)Method_System_Array_Empty_object___ + 6);
     v32 = *(_WORD *)(v31 + 306);
@@ -2703,8 +2703,8 @@ void __fastcall MasterMissionComponent__PresentBoxOver(MasterMissionComponent_o 
     sub_B16FFC(&PresentBoxOverDialog_ClickDelegate_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
     sub_B16FFC(&Method_MasterMissionComponent__PresentBoxOver_b__188_0__, v4);
-    sub_B16FFC(&StringLiteral_8610, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_8610/*"MASTER_MISSION_PRESENT_BOX_OVER_MSG"*/, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FB21F = 1;
   }
   presentBoxOverDialog = this->fields.presentBoxOverDialog;
@@ -2713,7 +2713,7 @@ void __fastcall MasterMissionComponent__PresentBoxOver(MasterMissionComponent_o 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8610, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8610/*"MASTER_MISSION_PRESENT_BOX_OVER_MSG"*/, 0LL);
   v13 = (PresentBoxOverDialog_ClickDelegate_o *)sub_B170CC(
                                                   PresentBoxOverDialog_ClickDelegate_TypeInfo,
                                                   v9,
@@ -2727,7 +2727,7 @@ void __fastcall MasterMissionComponent__PresentBoxOver(MasterMissionComponent_o 
     0LL);
   if ( !presentBoxOverDialog )
     sub_B170D4();
-  PresentBoxOverDialog__Open(presentBoxOverDialog, (System_String_o *)StringLiteral_1, v8, v13, 26, 0LL);
+  PresentBoxOverDialog__Open(presentBoxOverDialog, (System_String_o *)StringLiteral_1/*""*/, v8, v13, 26, 0LL);
 }
 
 
@@ -3048,7 +3048,7 @@ void __fastcall MasterMissionComponent__ServantOver(MasterMissionComponent_o *th
     sub_B16FFC(&System_Action_SceneList_Type__TypeInfo, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_MasterMissionComponent_ServantOverDialogClose__, v5);
-    sub_B16FFC(&StringLiteral_8620, v6);
+    sub_B16FFC(&StringLiteral_8620/*"MASTER_MISSION_SERVANT_OVER_MSG"*/, v6);
     byte_40FB221 = 1;
   }
   overflowType = this->fields.overflowType;
@@ -3062,7 +3062,7 @@ void __fastcall MasterMissionComponent__ServantOver(MasterMissionComponent_o *th
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8620, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8620/*"MASTER_MISSION_SERVANT_OVER_MSG"*/, 0LL);
   if ( !servantOverDialog
     || (UserPresentBoxErrorDialog__Open(servantOverDialog, v10, 0LL),
         v11 = this->fields.servantOverDialog,
@@ -3110,7 +3110,7 @@ void __fastcall MasterMissionComponent__ServantOverDialogClose(
     sub_B16FFC(&System_Action_SceneList_Type__TypeInfo, v7);
     sub_B16FFC(&Method_MasterMissionComponent_ServantOverDialogClose__, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_3039, v10);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v10);
     byte_40FB222 = 1;
   }
   servantOverDialog = this->fields.servantOverDialog;
@@ -3142,7 +3142,7 @@ LABEL_9:
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     goto LABEL_9;
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3039, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3039/*"CLICK_CANCEL"*/, 0LL);
 }
 
 
@@ -4345,7 +4345,7 @@ void __fastcall MasterMissionComponent__SetupShopBtn(MasterMissionComponent_o *t
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&Method_DataManager_GetMasterData_ShopMaster___, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_16922, v5);
+    sub_B16FFC(&StringLiteral_16922/*"btn_event_3"*/, v5);
     byte_40FB1F5 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -4360,7 +4360,7 @@ void __fastcall MasterMissionComponent__SetupShopBtn(MasterMissionComponent_o *t
   shopBtnSp = this->fields.shopBtnSp;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner(shopBtnSp, (System_String_o *)StringLiteral_16922, 0LL);
+  AtlasManager__SetBanner(shopBtnSp, (System_String_o *)StringLiteral_16922/*"btn_event_3"*/, 0LL);
   AtlasManager__SetItem(this->fields.stoneIcon, 6, 0LL);
 }
 
@@ -4523,7 +4523,7 @@ void __fastcall MasterMissionComponent__UpdateStoneExchangeCount(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&Method_MasterMissionComponent___c__DisplayClass202_0__UpdateStoneExchangeCount_b__0__, v10);
     sub_B16FFC(&MasterMissionComponent___c__DisplayClass202_0_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_5818, v12);
+    sub_B16FFC(&StringLiteral_5818/*"Effect/Common"*/, v12);
     byte_40FB229 = 1;
   }
   v40 = 0;
@@ -4603,7 +4603,7 @@ LABEL_19:
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5818, v37, 1, 0LL);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5818/*"Effect/Common"*/, v37, 1, 0LL);
   }
   else
   {
@@ -4685,8 +4685,8 @@ void __fastcall MasterMissionComponent___OpenPresentBox_b__189_0(
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, hasGetServant);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11706, v6);
-    sub_B16FFC(&StringLiteral_3039, v7);
+    sub_B16FFC(&StringLiteral_11706/*"SERVANT_OVER"*/, v6);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v7);
     byte_40FB234 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -4750,9 +4750,9 @@ LABEL_28:
   if ( !myFsm )
     goto LABEL_33;
   if ( this->fields.overflowType )
-    v19 = &StringLiteral_11706;
+    v19 = &StringLiteral_11706/*"SERVANT_OVER"*/;
   else
-    v19 = &StringLiteral_3039;
+    v19 = &StringLiteral_3039/*"CLICK_CANCEL"*/;
   PlayMakerFSM__SendEvent(myFsm, (System_String_o *)*v19, 0LL);
 }
 
@@ -4845,7 +4845,7 @@ void __fastcall MasterMissionComponent___setRecieveModifyItem_b__192_0(
 
   if ( (byte_40FB235 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5466, method);
+    sub_B16FFC(&StringLiteral_5466/*"END_DISP"*/, method);
     byte_40FB235 = 1;
   }
   MasterMissionComponent__setMissionCompleteNum(this, method);
@@ -4853,7 +4853,7 @@ void __fastcall MasterMissionComponent___setRecieveModifyItem_b__192_0(
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5466, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5466/*"END_DISP"*/, 0LL);
 }
 
 
@@ -4921,11 +4921,11 @@ void __fastcall MasterMissionComponent__checkIsOpen(MasterMissionComponent_o *th
     sub_B16FFC(&Method_DataManager_GetMasterData_MstMissionDisplayInfoMaster___, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_8821, v6);
-    sub_B16FFC(&StringLiteral_8819, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
-    sub_B16FFC(&StringLiteral_8822, v9);
-    sub_B16FFC(&StringLiteral_8820, v10);
+    sub_B16FFC(&StringLiteral_8821/*"MST_REMISSON_MSG"*/, v6);
+    sub_B16FFC(&StringLiteral_8819/*"MST_REDISP_MSG"*/, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
+    sub_B16FFC(&StringLiteral_8822/*"MST_REMISSON_TITLE_TXT"*/, v9);
+    sub_B16FFC(&StringLiteral_8820/*"MST_REDISP_TITLE_TXT"*/, v10);
     byte_40FB1FE = 1;
   }
   this->fields.isNotNext = 0;
@@ -4974,11 +4974,11 @@ LABEL_16:
   LOBYTE(v25) = 0;
 LABEL_17:
   p_titleTxt = &this->fields.titleTxt;
-  v28 = (System_Int32_array **)StringLiteral_1;
-  this->fields.titleTxt = (struct System_String_o *)StringLiteral_1;
+  v28 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.titleTxt = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.titleTxt, v28, v17, v18, v19, v20, v21, v22);
-  v29 = (System_Int32_array **)StringLiteral_1;
-  this->fields.msgTxt = (struct System_String_o *)StringLiteral_1;
+  v29 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.msgTxt = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.msgTxt, v29, v30, v31, v32, v33, v34, v35);
   if ( v24 )
   {
@@ -4987,10 +4987,10 @@ LABEL_17:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v36 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8822, 0LL);
+    v36 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8822/*"MST_REMISSON_TITLE_TXT"*/, 0LL);
     *p_titleTxt = (struct System_String_o *)v36;
     sub_B16F98((BattleServantConfConponent_o *)&this->fields.titleTxt, v36, v37, v38, v39, v40, v41, v42);
-    v43 = &StringLiteral_8821;
+    v43 = &StringLiteral_8821/*"MST_REMISSON_MSG"*/;
 LABEL_27:
     v51 = LocalizationManager__Get((System_String_o *)*v43, 0LL);
     this->fields.msgTxt = v51;
@@ -5012,10 +5012,10 @@ LABEL_27:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v44 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8820, 0LL);
+    v44 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8820/*"MST_REDISP_TITLE_TXT"*/, 0LL);
     *p_titleTxt = (struct System_String_o *)v44;
     sub_B16F98((BattleServantConfConponent_o *)&this->fields.titleTxt, v44, v45, v46, v47, v48, v49, v50);
-    v43 = &StringLiteral_8819;
+    v43 = &StringLiteral_8819/*"MST_REDISP_MSG"*/;
     goto LABEL_27;
   }
 LABEL_28:
@@ -6809,21 +6809,21 @@ void __fastcall MasterMissionComponent__missionRewardCallback(
   {
     sub_B16FFC(&Method_JsonManager_DeserializeArray_MasterMissionComponent_resData___, result);
     sub_B16FFC(&JsonManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11043, v6);
-    sub_B16FFC(&StringLiteral_11041, v7);
-    sub_B16FFC(&StringLiteral_20980, v8);
-    sub_B16FFC(&StringLiteral_15571, v9);
-    sub_B16FFC(&StringLiteral_15807, v10);
+    sub_B16FFC(&StringLiteral_11043/*"REQUEST_OK"*/, v6);
+    sub_B16FFC(&StringLiteral_11041/*"REQUEST_NG"*/, v7);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v8);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v9);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v10);
     byte_40FB21C = 1;
   }
   if ( !result )
     goto LABEL_25;
-  if ( !System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( !System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     v13 = (Il2CppObject *)System_String__Concat_43746016(
-                            (System_String_o *)StringLiteral_15571,
+                            (System_String_o *)StringLiteral_15571/*"["*/,
                             result,
-                            (System_String_o *)StringLiteral_15807,
+                            (System_String_o *)StringLiteral_15807/*"]"*/,
                             0LL);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -6902,7 +6902,7 @@ LABEL_26:
           myFsm = this->fields.myFsm;
           if ( myFsm )
           {
-            v12 = &StringLiteral_11043;
+            v12 = &StringLiteral_11043/*"REQUEST_OK"*/;
             goto LABEL_24;
           }
         }
@@ -6914,7 +6914,7 @@ LABEL_25:
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     goto LABEL_25;
-  v12 = &StringLiteral_11041;
+  v12 = &StringLiteral_11041/*"REQUEST_NG"*/;
 LABEL_24:
   PlayMakerFSM__SendEvent(myFsm, (System_String_o *)*v12, 0LL);
 }
@@ -7213,10 +7213,10 @@ void __fastcall MasterMissionComponent__reDispMissionList(MasterMissionComponent
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v9);
     sub_B16FFC(&Method_MasterMissionComponent___c__reDispMissionList_b__150_0__, v10);
     sub_B16FFC(&MasterMissionComponent___c_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_8821, v12);
-    sub_B16FFC(&StringLiteral_8819, v13);
-    sub_B16FFC(&StringLiteral_8822, v14);
-    sub_B16FFC(&StringLiteral_8820, v15);
+    sub_B16FFC(&StringLiteral_8821/*"MST_REMISSON_MSG"*/, v12);
+    sub_B16FFC(&StringLiteral_8819/*"MST_REDISP_MSG"*/, v13);
+    sub_B16FFC(&StringLiteral_8822/*"MST_REMISSON_TITLE_TXT"*/, v14);
+    sub_B16FFC(&StringLiteral_8820/*"MST_REDISP_TITLE_TXT"*/, v15);
     byte_40FB1FF = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -7297,7 +7297,7 @@ LABEL_51:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v51 = LocalizationManager__Get((System_String_o *)StringLiteral_8822, 0LL);
+      v51 = LocalizationManager__Get((System_String_o *)StringLiteral_8822/*"MST_REMISSON_TITLE_TXT"*/, 0LL);
       this->fields.titleTxt = v51;
       sub_B16F98(
         (BattleServantConfConponent_o *)&this->fields.titleTxt,
@@ -7308,7 +7308,7 @@ LABEL_51:
         v55,
         v56,
         v57);
-      v58 = LocalizationManager__Get((System_String_o *)StringLiteral_8821, 0LL);
+      v58 = LocalizationManager__Get((System_String_o *)StringLiteral_8821/*"MST_REMISSON_MSG"*/, 0LL);
       this->fields.msgTxt = v58;
       sub_B16F98(
         (BattleServantConfConponent_o *)&this->fields.msgTxt,
@@ -7333,7 +7333,7 @@ LABEL_51:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v67 = &StringLiteral_8822;
+        v67 = &StringLiteral_8822/*"MST_REMISSON_TITLE_TXT"*/;
       }
       else
       {
@@ -7342,7 +7342,7 @@ LABEL_51:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v67 = &StringLiteral_8820;
+        v67 = &StringLiteral_8820/*"MST_REDISP_TITLE_TXT"*/;
       }
       v68 = LocalizationManager__Get((System_String_o *)*v67, 0LL);
       this->fields.titleTxt = v68;
@@ -7362,7 +7362,7 @@ LABEL_51:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v75 = &StringLiteral_8821;
+        v75 = &StringLiteral_8821/*"MST_REMISSON_MSG"*/;
       }
       else
       {
@@ -7371,7 +7371,7 @@ LABEL_51:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v75 = &StringLiteral_8819;
+        v75 = &StringLiteral_8819/*"MST_REDISP_MSG"*/;
       }
       v76 = LocalizationManager__Get((System_String_o *)*v75, 0LL);
       this->fields.msgTxt = v76;
@@ -7906,7 +7906,7 @@ void __fastcall MasterMissionComponent__setMissionCompleteNum(MasterMissionCompo
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&MasterMissionComponent_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_8609, v9);
+    sub_B16FFC(&StringLiteral_8609/*"MASTER_MISSION_COMPLETE_NUM"*/, v9);
     byte_40FB204 = 1;
   }
   this->fields.compMissionNum = 0;
@@ -7951,7 +7951,7 @@ LABEL_13:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_8609, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_8609/*"MASTER_MISSION_COMPLETE_NUM"*/, 0LL);
   if ( !this->fields.eventMissionInfo )
     goto LABEL_28;
   v19 = v18;
@@ -8652,14 +8652,14 @@ void __fastcall MasterMissionComponent___c___OnClickShopBtn_b__174_0(
     sub_B16FFC(&SceneJumpInfo_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v2);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_13021, v4);
+    sub_B16FFC(&StringLiteral_13021/*"StoneFragments"*/, v4);
     byte_40F6957 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__CloseMasterMission(Instance, 0LL),
         v10 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v6, v7, v8, v9),
-        SceneJumpInfo___ctor_29747932(v10, (System_String_o *)StringLiteral_13021, 0LL),
+        SceneJumpInfo___ctor_29747932(v10, (System_String_o *)StringLiteral_13021/*"StoneFragments"*/, 0LL),
         !v10)
     || (SceneJumpInfo__SetReturnNowScene(v10, 0LL),
         (v11 = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
@@ -8799,8 +8799,8 @@ void __fastcall MasterMissionComponent___c__DisplayClass181_0___BulkReceiveConfi
     sub_B16FFC(&Method_System_Collections_Generic_List_int__ToArray__, v11);
     sub_B16FFC(&Method_System_Collections_Generic_List_int___ctor__, v12);
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_3045, v14);
-    sub_B16FFC(&StringLiteral_3039, v15);
+    sub_B16FFC(&StringLiteral_3045/*"CLICK_DECIDE"*/, v14);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v15);
     byte_40F6958 = 1;
   }
   memset(&v32, 0, sizeof(v32));
@@ -8860,7 +8860,7 @@ void __fastcall MasterMissionComponent___c__DisplayClass181_0___BulkReceiveConfi
             myFsm = v30->fields.myFsm;
             if ( myFsm )
             {
-              v21 = &StringLiteral_3045;
+              v21 = &StringLiteral_3045/*"CLICK_DECIDE"*/;
               goto LABEL_18;
             }
           }
@@ -8873,7 +8873,7 @@ LABEL_21:
   myFsm = _4__this->fields.myFsm;
   if ( !myFsm )
     goto LABEL_21;
-  v21 = &StringLiteral_3039;
+  v21 = &StringLiteral_3039/*"CLICK_CANCEL"*/;
 LABEL_18:
   PlayMakerFSM__SendEvent(myFsm, (System_String_o *)*v21, 0LL);
 }
@@ -8899,9 +8899,9 @@ void __fastcall MasterMissionComponent___c__DisplayClass187_0___ReceiveResultLis
 
   if ( (byte_40F6959 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11706, method);
-    sub_B16FFC(&StringLiteral_10460, v3);
-    sub_B16FFC(&StringLiteral_3039, v4);
+    sub_B16FFC(&StringLiteral_11706/*"SERVANT_OVER"*/, method);
+    sub_B16FFC(&StringLiteral_10460/*"PRESENT_BOX_OVER"*/, v3);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v4);
     byte_40F6959 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -8912,7 +8912,7 @@ void __fastcall MasterMissionComponent___c__DisplayClass187_0___ReceiveResultLis
   {
     if ( myFsm )
     {
-      v7 = &StringLiteral_10460;
+      v7 = &StringLiteral_10460/*"PRESENT_BOX_OVER"*/;
       goto LABEL_11;
     }
 LABEL_12:
@@ -8921,9 +8921,9 @@ LABEL_12:
   if ( !myFsm )
     goto LABEL_12;
   if ( _4__this->fields.overflowType )
-    v7 = &StringLiteral_11706;
+    v7 = &StringLiteral_11706/*"SERVANT_OVER"*/;
   else
-    v7 = &StringLiteral_3039;
+    v7 = &StringLiteral_3039/*"CLICK_CANCEL"*/;
 LABEL_11:
   PlayMakerFSM__SendEvent(myFsm, (System_String_o *)*v7, 0LL);
 }
@@ -8973,8 +8973,8 @@ void __fastcall MasterMissionComponent___c__DisplayClass188_0___PresentBoxOver_b
 
   if ( (byte_40F695A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_11706, method);
-    sub_B16FFC(&StringLiteral_3039, v3);
+    sub_B16FFC(&StringLiteral_11706/*"SERVANT_OVER"*/, method);
+    sub_B16FFC(&StringLiteral_3039/*"CLICK_CANCEL"*/, v3);
     byte_40F695A = 1;
   }
   _4__this = this->fields.__4__this;
@@ -8989,9 +8989,9 @@ void __fastcall MasterMissionComponent___c__DisplayClass188_0___PresentBoxOver_b
 LABEL_11:
     sub_B170D4();
   if ( _4__this->fields.overflowType )
-    v5 = &StringLiteral_11706;
+    v5 = &StringLiteral_11706/*"SERVANT_OVER"*/;
   else
-    v5 = &StringLiteral_3039;
+    v5 = &StringLiteral_3039/*"CLICK_CANCEL"*/;
   PlayMakerFSM__SendEvent(_4__this->fields.myFsm, (System_String_o *)*v5, 0LL);
 }
 

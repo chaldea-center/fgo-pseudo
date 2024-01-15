@@ -313,12 +313,12 @@ bool __fastcall WarBoardTapWaitEffectPerformance__CheckAnimationEnd(
     sub_B16FFC(&System_IDisposable_TypeInfo, v5);
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v6);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_40FBB42 = 1;
   }
   if ( !this->fields.animationPlay )
     return 1;
-  name = (System_String_o *)StringLiteral_1;
+  name = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {

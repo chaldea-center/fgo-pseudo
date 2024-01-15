@@ -1316,7 +1316,7 @@ void __fastcall Spawner_SpawnerImpl__Despawn(
     sub_B16FFC(&Spawner_SpawnerImpl_TypeInfo, v20);
     sub_B16FFC(&Method_Spawner_SpawnerImpl___c__Despawn_b__17_0__, v21);
     sub_B16FFC(&Spawner_SpawnerImpl___c_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_9954, v23);
+    sub_B16FFC(&StringLiteral_9954/*"OnDespawn"*/, v23);
     byte_40F7A4A = 1;
   }
   if ( Spawner_SpawnerImpl__IsAlive(this, objectToDespawn, (const MethodInfo *)sendsDespawn) )
@@ -1325,7 +1325,7 @@ void __fastcall Spawner_SpawnerImpl__Despawn(
     {
       if ( !objectToDespawn )
         goto LABEL_52;
-      UnityEngine_GameObject__BroadcastMessage(objectToDespawn, (System_String_o *)StringLiteral_9954, 1, 0LL);
+      UnityEngine_GameObject__BroadcastMessage(objectToDespawn, (System_String_o *)StringLiteral_9954/*"OnDespawn"*/, 1, 0LL);
     }
     else if ( !objectToDespawn )
     {
@@ -1786,7 +1786,7 @@ void __fastcall Spawner_SpawnerImpl__Number(
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_Object__int__TryGetValue__, prefab);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_Object__int__set_Item__, v7);
     sub_B16FFC(&int_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_23487, v9);
+    sub_B16FFC(&StringLiteral_23487/*"{0}({1})"*/, v9);
     byte_40F7A48 = 1;
   }
   value = 0;
@@ -1810,7 +1810,7 @@ void __fastcall Spawner_SpawnerImpl__Number(
     || (name = (Il2CppObject *)UnityEngine_Object__get_name(prefab, 0LL),
         v16 = value,
         v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16),
-        v15 = System_String__Format_43739268((System_String_o *)StringLiteral_23487, name, v14, 0LL),
+        v15 = System_String__Format_43739268((System_String_o *)StringLiteral_23487/*"{0}({1})"*/, name, v14, 0LL),
         !obj) )
   {
 LABEL_8:
@@ -1923,7 +1923,7 @@ UnityEngine_GameObject_o *__fastcall Spawner_SpawnerImpl__Spawn(
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_GameObject__bool__set_Item__, v16);
     sub_B16FFC(&UnityEngine_GameObject_TypeInfo, v17);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_10025, v19);
+    sub_B16FFC(&StringLiteral_10025/*"OnSpawn"*/, v19);
     byte_40F7A47 = 1;
   }
   value = 0LL;
@@ -2023,7 +2023,7 @@ LABEL_17:
     Spawner_SpawnerImpl__Number(this, prefab, (UnityEngine_GameObject_o *)v22, v23);
 LABEL_26:
     UnityEngine_GameObject__SetActive(NextObjectInCache, 1, 0LL);
-    UnityEngine_GameObject__BroadcastMessage(NextObjectInCache, (System_String_o *)StringLiteral_10025, 1, 0LL);
+    UnityEngine_GameObject__BroadcastMessage(NextObjectInCache, (System_String_o *)StringLiteral_10025/*"OnSpawn"*/, 1, 0LL);
     return NextObjectInCache;
   }
   v28 = (Spawner_SpawnerImpl_o *)sub_B173C8(v22);

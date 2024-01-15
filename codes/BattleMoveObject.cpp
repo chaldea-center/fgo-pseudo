@@ -593,11 +593,11 @@ void __fastcall BattleMoveObject__startMoveTarget(BattleMoveObject_o *this, cons
     sub_B16FFC(&System_Collections_Hashtable_TypeInfo, v3);
     sub_B16FFC(&float_TypeInfo, v4);
     sub_B16FFC(&UnityEngine_Vector3_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_18046, v6);
-    sub_B16FFC(&StringLiteral_21162, v7);
-    sub_B16FFC(&StringLiteral_22584, v8);
-    sub_B16FFC(&StringLiteral_21419, v9);
-    sub_B16FFC(&StringLiteral_21173, v10);
+    sub_B16FFC(&StringLiteral_18046/*"easetype"*/, v6);
+    sub_B16FFC(&StringLiteral_21162/*"onOpenComplete"*/, v7);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v8);
+    sub_B16FFC(&StringLiteral_21419/*"position"*/, v9);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v10);
     sub_B16FFC(&iTween_TypeInfo, v11);
     byte_40F6AEB = 1;
   }
@@ -617,26 +617,26 @@ void __fastcall BattleMoveObject__startMoveTarget(BattleMoveObject_o *this, cons
   v19 = j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &position);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v17->klass->vtable._23_Add.method)(
     v17,
-    StringLiteral_21419,
+    StringLiteral_21419/*"position"*/,
     v19,
     v17->klass->vtable._24_Clear.methodPtr);
   v25 = 26;
   v20 = j_il2cpp_value_box_0(iTween_EaseType_TypeInfo, &v25);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v17->klass->vtable._23_Add.method)(
     v17,
-    StringLiteral_18046,
+    StringLiteral_18046/*"easetype"*/,
     v20,
     v17->klass->vtable._24_Clear.methodPtr);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v17->klass->vtable._23_Add.method)(
     v17,
-    StringLiteral_21173,
-    StringLiteral_21162,
+    StringLiteral_21173/*"oncomplete"*/,
+    StringLiteral_21162/*"onOpenComplete"*/,
     v17->klass->vtable._24_Clear.methodPtr);
   v24 = v12;
   v21 = j_il2cpp_value_box_0(float_TypeInfo, &v24);
   ((void (__fastcall *)(System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v17->klass->vtable._23_Add.method)(
     v17,
-    StringLiteral_22584,
+    StringLiteral_22584/*"time"*/,
     v21,
     v17->klass->vtable._24_Clear.methodPtr);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);

@@ -210,8 +210,8 @@ void __fastcall EventRandomMissionListViewManager__CreateList_17442688(
     sub_B16FFC(&NetworkManager_TypeInfo, v15);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_5688, v18);
-    sub_B16FFC(&StringLiteral_20448, v19);
+    sub_B16FFC(&StringLiteral_5688/*"EVENT_REWARD_RANDOM_MISSION_EMPTY"*/, v18);
+    sub_B16FFC(&StringLiteral_20448/*"mission_bg_"*/, v19);
     byte_40F60B1 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
@@ -222,7 +222,7 @@ void __fastcall EventRandomMissionListViewManager__CreateList_17442688(
   BYTE1(scrollView->fields.scrollWheelFactor) = 1;
   bgSprite = this->fields.bgSprite;
   v22 = System_Int32__ToString((int32_t)&key, 0LL);
-  v24 = System_String__Concat_43743732((System_String_o *)StringLiteral_20448, v22, 0LL);
+  v24 = System_String__Concat_43743732((System_String_o *)StringLiteral_20448/*"mission_bg_"*/, v22, 0LL);
   if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
   {
@@ -321,7 +321,7 @@ LABEL_30:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_5688, 0LL);
+    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_5688/*"EVENT_REWARD_RANDOM_MISSION_EMPTY"*/, 0LL);
     if ( !v50 )
       goto LABEL_48;
     UILabel__set_text(v50, v51, 0LL);
@@ -742,8 +742,8 @@ void __fastcall EventRandomMissionListViewManager__ShowRejectDialog(
     sub_B16FFC(&SoundManager_TypeInfo, v9);
     sub_B16FFC(&Method_EventRandomMissionListViewManager___c__DisplayClass22_0__ShowRejectDialog_b__0__, v10);
     sub_B16FFC(&EventRandomMissionListViewManager___c__DisplayClass22_0_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_5687, v12);
-    sub_B16FFC(&StringLiteral_5686, v13);
+    sub_B16FFC(&StringLiteral_5687/*"EVENT_REWARD_RANDOM_MISSION_DEL_CONFIRM_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_5686/*"EVENT_REWARD_RANDOM_MISSION_DEL_CONFIRM_MSG"*/, v13);
     byte_40F60B7 = 1;
   }
   v14 = sub_B170CC(EventRandomMissionListViewManager___c__DisplayClass22_0_TypeInfo, item, method, v3, v4);
@@ -762,8 +762,8 @@ void __fastcall EventRandomMissionListViewManager__ShowRejectDialog(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_5687, 0LL);
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5686, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_5687/*"EVENT_REWARD_RANDOM_MISSION_DEL_CONFIRM_TITLE"*/, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5686/*"EVENT_REWARD_RANDOM_MISSION_DEL_CONFIRM_MSG"*/, 0LL);
   if ( !*(_QWORD *)v21 )
     goto LABEL_13;
   v30 = System_String__Format(v29, *(Il2CppObject **)(*(_QWORD *)v21 + 192LL), 0LL);
@@ -927,7 +927,7 @@ void __fastcall EventRandomMissionListViewManager__randomMissionCancelCallback(
   if ( (byte_40F60B9 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewItem__Remove__, result);
-    sub_B16FFC(&StringLiteral_20980, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v5);
     byte_40F60B9 = 1;
   }
   v10.fields.z = 0.0;
@@ -935,7 +935,7 @@ void __fastcall EventRandomMissionListViewManager__randomMissionCancelCallback(
   offset = 0LL;
   if ( !result )
     goto LABEL_9;
-  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__Equals_43731072(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
     return;
   ListViewManager__GetScrollView((ListViewManager_o *)this, &v10, &offset, 0LL);
   itemList = (System_Collections_Generic_List_WarBoardManager_TaskList__o *)this->fields.itemList;

@@ -116,16 +116,16 @@ void __fastcall Rarity___cctor(const MethodInfo *method)
     sub_B16FFC(
       &Field__PrivateImplementationDetails__E21A6F698E635086E28EBB14EDC7838F22DB359A0D1A989690BA55DDA2096301,
       v5);
-    sub_B16FFC(&StringLiteral_17385, v6);
-    sub_B16FFC(&StringLiteral_10982, v7);
-    sub_B16FFC(&StringLiteral_10981, v8);
-    sub_B16FFC(&StringLiteral_10979, v9);
-    sub_B16FFC(&StringLiteral_10980, v10);
-    sub_B16FFC(&StringLiteral_10978, v11);
-    sub_B16FFC(&StringLiteral_10983, v12);
-    sub_B16FFC(&StringLiteral_17388, v13);
-    sub_B16FFC(&StringLiteral_17389, v14);
-    sub_B16FFC(&StringLiteral_17390, v15);
+    sub_B16FFC(&StringLiteral_17385/*"class_b_"*/, v6);
+    sub_B16FFC(&StringLiteral_10982/*"RARITY_TYPE_SSRARE"*/, v7);
+    sub_B16FFC(&StringLiteral_10981/*"RARITY_TYPE_SRARE"*/, v8);
+    sub_B16FFC(&StringLiteral_10979/*"RARITY_TYPE_NONE"*/, v9);
+    sub_B16FFC(&StringLiteral_10980/*"RARITY_TYPE_RARE"*/, v10);
+    sub_B16FFC(&StringLiteral_10978/*"RARITY_TYPE_COMMON"*/, v11);
+    sub_B16FFC(&StringLiteral_10983/*"RARITY_TYPE_UNCOMMON"*/, v12);
+    sub_B16FFC(&StringLiteral_17388/*"class_g_"*/, v13);
+    sub_B16FFC(&StringLiteral_17389/*"class_n_"*/, v14);
+    sub_B16FFC(&StringLiteral_17390/*"class_s_"*/, v15);
     byte_40F829A = 1;
   }
   v16 = (System_Array_o *)sub_B17014(int___TypeInfo, 6LL, v2);
@@ -138,13 +138,13 @@ void __fastcall Rarity___cctor(const MethodInfo *method)
   if ( !v25 )
     goto LABEL_68;
   v32 = (System_Int32_array **)v25;
-  v33 = StringLiteral_17389;
-  if ( StringLiteral_17389 )
+  v33 = StringLiteral_17389/*"class_n_"*/;
+  if ( StringLiteral_17389/*"class_n_"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_17389, *(_QWORD *)&(*v32)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_17389/*"class_n_"*/, *(_QWORD *)&(*v32)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_17389;
+    v34 = (System_Int32_array **)StringLiteral_17389/*"class_n_"*/;
   }
   else
   {
@@ -154,13 +154,13 @@ void __fastcall Rarity___cctor(const MethodInfo *method)
     goto LABEL_66;
   v32[4] = (System_Int32_array *)v34;
   sub_B16F98((BattleServantConfConponent_o *)(v32 + 4), v34, v26, v27, v28, v29, v30, v31);
-  v33 = StringLiteral_17385;
-  if ( StringLiteral_17385 )
+  v33 = StringLiteral_17385/*"class_b_"*/;
+  if ( StringLiteral_17385/*"class_b_"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_17385, *(_QWORD *)&(*v32)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_17385/*"class_b_"*/, *(_QWORD *)&(*v32)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_17385;
+    v34 = (System_Int32_array **)StringLiteral_17385/*"class_b_"*/;
   }
   else
   {
@@ -170,13 +170,13 @@ void __fastcall Rarity___cctor(const MethodInfo *method)
     goto LABEL_66;
   v32[5] = (System_Int32_array *)v34;
   sub_B16F98((BattleServantConfConponent_o *)(v32 + 5), v34, v26, v35, v36, v37, v38, v39);
-  v33 = StringLiteral_17385;
-  if ( StringLiteral_17385 )
+  v33 = StringLiteral_17385/*"class_b_"*/;
+  if ( StringLiteral_17385/*"class_b_"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_17385, *(_QWORD *)&(*v32)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_17385/*"class_b_"*/, *(_QWORD *)&(*v32)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_17385;
+    v34 = (System_Int32_array **)StringLiteral_17385/*"class_b_"*/;
   }
   else
   {
@@ -186,13 +186,13 @@ void __fastcall Rarity___cctor(const MethodInfo *method)
     goto LABEL_66;
   v32[6] = (System_Int32_array *)v34;
   sub_B16F98((BattleServantConfConponent_o *)(v32 + 6), v34, v26, v40, v41, v42, v43, v44);
-  v33 = StringLiteral_17390;
-  if ( StringLiteral_17390 )
+  v33 = StringLiteral_17390/*"class_s_"*/;
+  if ( StringLiteral_17390/*"class_s_"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_17390, *(_QWORD *)&(*v32)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_17390/*"class_s_"*/, *(_QWORD *)&(*v32)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_17390;
+    v34 = (System_Int32_array **)StringLiteral_17390/*"class_s_"*/;
   }
   else
   {
@@ -202,13 +202,13 @@ void __fastcall Rarity___cctor(const MethodInfo *method)
     goto LABEL_66;
   v32[7] = (System_Int32_array *)v34;
   sub_B16F98((BattleServantConfConponent_o *)(v32 + 7), v34, v26, v45, v46, v47, v48, v49);
-  v33 = StringLiteral_17388;
-  if ( StringLiteral_17388 )
+  v33 = StringLiteral_17388/*"class_g_"*/;
+  if ( StringLiteral_17388/*"class_g_"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_17388, *(_QWORD *)&(*v32)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_17388/*"class_g_"*/, *(_QWORD *)&(*v32)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_17388;
+    v34 = (System_Int32_array **)StringLiteral_17388/*"class_g_"*/;
   }
   else
   {
@@ -218,13 +218,13 @@ void __fastcall Rarity___cctor(const MethodInfo *method)
     goto LABEL_66;
   v32[8] = (System_Int32_array *)v34;
   sub_B16F98((BattleServantConfConponent_o *)(v32 + 8), v34, v26, v50, v51, v52, v53, v54);
-  v33 = StringLiteral_17388;
-  if ( StringLiteral_17388 )
+  v33 = StringLiteral_17388/*"class_g_"*/;
+  if ( StringLiteral_17388/*"class_g_"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_17388, *(_QWORD *)&(*v32)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_17388/*"class_g_"*/, *(_QWORD *)&(*v32)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_17388;
+    v34 = (System_Int32_array **)StringLiteral_17388/*"class_g_"*/;
   }
   else
   {
@@ -242,13 +242,13 @@ void __fastcall Rarity___cctor(const MethodInfo *method)
 LABEL_68:
     sub_B170D4();
   v74 = (System_Int32_array **)v68;
-  v33 = StringLiteral_10979;
-  if ( StringLiteral_10979 )
+  v33 = StringLiteral_10979/*"RARITY_TYPE_NONE"*/;
+  if ( StringLiteral_10979/*"RARITY_TYPE_NONE"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_10979, *(_QWORD *)&(*v74)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_10979/*"RARITY_TYPE_NONE"*/, *(_QWORD *)&(*v74)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_10979;
+    v34 = (System_Int32_array **)StringLiteral_10979/*"RARITY_TYPE_NONE"*/;
   }
   else
   {
@@ -258,13 +258,13 @@ LABEL_68:
     goto LABEL_66;
   v74[4] = (System_Int32_array *)v34;
   sub_B16F98((BattleServantConfConponent_o *)(v74 + 4), v34, v26, v69, v70, v71, v72, v73);
-  v33 = StringLiteral_10978;
-  if ( StringLiteral_10978 )
+  v33 = StringLiteral_10978/*"RARITY_TYPE_COMMON"*/;
+  if ( StringLiteral_10978/*"RARITY_TYPE_COMMON"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_10978, *(_QWORD *)&(*v74)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_10978/*"RARITY_TYPE_COMMON"*/, *(_QWORD *)&(*v74)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_10978;
+    v34 = (System_Int32_array **)StringLiteral_10978/*"RARITY_TYPE_COMMON"*/;
   }
   else
   {
@@ -274,13 +274,13 @@ LABEL_68:
     goto LABEL_66;
   v74[5] = (System_Int32_array *)v34;
   sub_B16F98((BattleServantConfConponent_o *)(v74 + 5), v34, v26, v75, v76, v77, v78, v79);
-  v33 = StringLiteral_10983;
-  if ( StringLiteral_10983 )
+  v33 = StringLiteral_10983/*"RARITY_TYPE_UNCOMMON"*/;
+  if ( StringLiteral_10983/*"RARITY_TYPE_UNCOMMON"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_10983, *(_QWORD *)&(*v74)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_10983/*"RARITY_TYPE_UNCOMMON"*/, *(_QWORD *)&(*v74)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_10983;
+    v34 = (System_Int32_array **)StringLiteral_10983/*"RARITY_TYPE_UNCOMMON"*/;
   }
   else
   {
@@ -290,13 +290,13 @@ LABEL_68:
     goto LABEL_66;
   v74[6] = (System_Int32_array *)v34;
   sub_B16F98((BattleServantConfConponent_o *)(v74 + 6), v34, v26, v80, v81, v82, v83, v84);
-  v33 = StringLiteral_10980;
-  if ( StringLiteral_10980 )
+  v33 = StringLiteral_10980/*"RARITY_TYPE_RARE"*/;
+  if ( StringLiteral_10980/*"RARITY_TYPE_RARE"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_10980, *(_QWORD *)&(*v74)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_10980/*"RARITY_TYPE_RARE"*/, *(_QWORD *)&(*v74)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_10980;
+    v34 = (System_Int32_array **)StringLiteral_10980/*"RARITY_TYPE_RARE"*/;
   }
   else
   {
@@ -306,13 +306,13 @@ LABEL_68:
     goto LABEL_66;
   v74[7] = (System_Int32_array *)v34;
   sub_B16F98((BattleServantConfConponent_o *)(v74 + 7), v34, v26, v85, v86, v87, v88, v89);
-  v33 = StringLiteral_10981;
-  if ( StringLiteral_10981 )
+  v33 = StringLiteral_10981/*"RARITY_TYPE_SRARE"*/;
+  if ( StringLiteral_10981/*"RARITY_TYPE_SRARE"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_10981, *(_QWORD *)&(*v74)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_10981/*"RARITY_TYPE_SRARE"*/, *(_QWORD *)&(*v74)->m_Items[9]);
     if ( !v33 )
       goto LABEL_67;
-    v34 = (System_Int32_array **)StringLiteral_10981;
+    v34 = (System_Int32_array **)StringLiteral_10981/*"RARITY_TYPE_SRARE"*/;
   }
   else
   {
@@ -322,13 +322,13 @@ LABEL_68:
     goto LABEL_66;
   v74[8] = (System_Int32_array *)v34;
   sub_B16F98((BattleServantConfConponent_o *)(v74 + 8), v34, v26, v90, v91, v92, v93, v94);
-  v33 = StringLiteral_10982;
-  if ( StringLiteral_10982 )
+  v33 = StringLiteral_10982/*"RARITY_TYPE_SSRARE"*/;
+  if ( StringLiteral_10982/*"RARITY_TYPE_SSRARE"*/ )
   {
-    v33 = sub_B170BC(StringLiteral_10982, *(_QWORD *)&(*v74)->m_Items[9]);
+    v33 = sub_B170BC(StringLiteral_10982/*"RARITY_TYPE_SSRARE"*/, *(_QWORD *)&(*v74)->m_Items[9]);
     if ( v33 )
     {
-      v34 = (System_Int32_array **)StringLiteral_10982;
+      v34 = (System_Int32_array **)StringLiteral_10982/*"RARITY_TYPE_SSRARE"*/;
       goto LABEL_64;
     }
 LABEL_67:
@@ -436,15 +436,15 @@ System_String_o *__fastcall Rarity__getIcon(int32_t rarity, const MethodInfo *me
   v5 = rarity;
   if ( (byte_40F8295 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21611, method);
-    sub_B16FFC(&StringLiteral_15843, v2);
+    sub_B16FFC(&StringLiteral_21611/*"rarity"*/, method);
+    sub_B16FFC(&StringLiteral_15843/*"_0"*/, v2);
     byte_40F8295 = 1;
   }
   v3 = System_Int32__ToString((int32_t)&v5, 0LL);
   return System_String__Concat_43746016(
-           (System_String_o *)StringLiteral_21611,
+           (System_String_o *)StringLiteral_21611/*"rarity"*/,
            v3,
-           (System_String_o *)StringLiteral_15843,
+           (System_String_o *)StringLiteral_15843/*"_0"*/,
            0LL);
 }
 
@@ -477,9 +477,9 @@ System_String_o *__fastcall Rarity__getIcon_21544656(
     sub_B16FFC(&Method_DataManager_GetMaster_ServantExceedMaster___, *(_QWORD *)&exceedCount);
     sub_B16FFC(&Method_DataManager_GetMaster_ServantLvDetailMaster___, v7);
     sub_B16FFC(&DataManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_21611, v9);
-    sub_B16FFC(&StringLiteral_15842, v10);
-    sub_B16FFC(&StringLiteral_15843, v11);
+    sub_B16FFC(&StringLiteral_21611/*"rarity"*/, v9);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v10);
+    sub_B16FFC(&StringLiteral_15843/*"_0"*/, v11);
     byte_40F8296 = 1;
   }
   v20 = 0;
@@ -487,9 +487,9 @@ System_String_o *__fastcall Rarity__getIcon_21544656(
   {
     v19 = System_Int32__ToString((int32_t)&v21, 0LL);
     return System_String__Concat_43746016(
-             (System_String_o *)StringLiteral_21611,
+             (System_String_o *)StringLiteral_21611/*"rarity"*/,
              v19,
-             (System_String_o *)StringLiteral_15843,
+             (System_String_o *)StringLiteral_15843/*"_0"*/,
              0LL);
   }
   else
@@ -510,9 +510,9 @@ System_String_o *__fastcall Rarity__getIcon_21544656(
     v16 = System_Int32__ToString((int32_t)&v21, 0LL);
     v17 = System_Int32__ToString((int32_t)&v20, 0LL);
     return System_String__Concat_43747144(
-             (System_String_o *)StringLiteral_21611,
+             (System_String_o *)StringLiteral_21611/*"rarity"*/,
              v16,
-             (System_String_o *)StringLiteral_15842,
+             (System_String_o *)StringLiteral_15842/*"_"*/,
              v17,
              0LL);
   }
@@ -541,11 +541,11 @@ System_String_o *__fastcall Rarity__getRarityType(int32_t rarityId, const Method
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&Rarity_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F8299 = 1;
   }
   if ( (unsigned int)(rarityId - 1) > 4 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   v6 = Rarity_TypeInfo;
   if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
   {

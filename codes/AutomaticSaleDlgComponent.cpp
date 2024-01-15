@@ -303,34 +303,34 @@ void __fastcall AutomaticSaleDlgComponent__Init(AutomaticSaleDlgComponent_o *thi
   if ( (byte_40F6E76 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_int__Clear__, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F6E76 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_13;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   msgLabel = this->fields.msgLabel;
   if ( !msgLabel )
     goto LABEL_13;
-  UILabel__set_text(msgLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(msgLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideLabel = this->fields.decideLabel;
   if ( !decideLabel )
     goto LABEL_13;
-  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   cancelLabel = this->fields.cancelLabel;
   if ( !cancelLabel )
     goto LABEL_13;
-  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   expTitleLb = this->fields.expTitleLb;
   if ( !expTitleLb )
     goto LABEL_13;
-  UILabel__set_text(expTitleLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(expTitleLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   fouTitleLb = this->fields.fouTitleLb;
   if ( !fouTitleLb
-    || (UILabel__set_text(fouTitleLb, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(fouTitleLb, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (equipTitleLb = this->fields.equipTitleLb) == 0LL)
-    || (UILabel__set_text(equipTitleLb, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(equipTitleLb, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (enableList = this->fields.enableList) == 0LL)
     || (System_Collections_Generic_List_int___Clear(
           enableList,
@@ -574,16 +574,16 @@ void __fastcall AutomaticSaleDlgComponent__Open(
     sub_B16FFC(&AutomaticSaleDlgComponent_TypeInfo, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__Add__, v8);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_12360, v10);
-    sub_B16FFC(&StringLiteral_12362, v11);
-    sub_B16FFC(&StringLiteral_11841, v12);
-    sub_B16FFC(&StringLiteral_3253, v13);
-    sub_B16FFC(&StringLiteral_12358, v14);
-    sub_B16FFC(&StringLiteral_12361, v15);
-    sub_B16FFC(&StringLiteral_3252, v16);
-    sub_B16FFC(&StringLiteral_11837, v17);
-    sub_B16FFC(&StringLiteral_12359, v18);
-    sub_B16FFC(&StringLiteral_11838, v19);
+    sub_B16FFC(&StringLiteral_12360/*"SUMMON_AUTOSALE_FOU_TXT"*/, v10);
+    sub_B16FFC(&StringLiteral_12362/*"SUMMON_AUTOSALE_TITLE"*/, v11);
+    sub_B16FFC(&StringLiteral_11841/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, v12);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v13);
+    sub_B16FFC(&StringLiteral_12358/*"SUMMON_AUTOSALE_EQUIP_TXT"*/, v14);
+    sub_B16FFC(&StringLiteral_12361/*"SUMMON_AUTOSALE_MSG"*/, v15);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v16);
+    sub_B16FFC(&StringLiteral_11837/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/, v17);
+    sub_B16FFC(&StringLiteral_12359/*"SUMMON_AUTOSALE_EXP_TXT"*/, v18);
+    sub_B16FFC(&StringLiteral_11838/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, v19);
     byte_40F6E77 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -606,37 +606,37 @@ void __fastcall AutomaticSaleDlgComponent__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12362, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12362/*"SUMMON_AUTOSALE_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_45;
   UILabel__set_text(titleLabel, v28, 0LL);
   msgLabel = this->fields.msgLabel;
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12361, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12361/*"SUMMON_AUTOSALE_MSG"*/, 0LL);
   if ( !msgLabel )
     goto LABEL_45;
   UILabel__set_text(msgLabel, v30, 0LL);
   decideLabel = this->fields.decideLabel;
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideLabel )
     goto LABEL_45;
   UILabel__set_text(decideLabel, v32, 0LL);
   cancelLabel = this->fields.cancelLabel;
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !cancelLabel )
     goto LABEL_45;
   UILabel__set_text(cancelLabel, v34, 0LL);
   expTitleLb = this->fields.expTitleLb;
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12359, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12359/*"SUMMON_AUTOSALE_EXP_TXT"*/, 0LL);
   if ( !expTitleLb )
     goto LABEL_45;
   UILabel__set_text(expTitleLb, v36, 0LL);
   fouTitleLb = this->fields.fouTitleLb;
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_12360, 0LL);
+  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_12360/*"SUMMON_AUTOSALE_FOU_TXT"*/, 0LL);
   if ( !fouTitleLb )
     goto LABEL_45;
   UILabel__set_text(fouTitleLb, v38, 0LL);
   equipTitleLb = this->fields.equipTitleLb;
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12358, 0LL);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12358/*"SUMMON_AUTOSALE_EQUIP_TXT"*/, 0LL);
   if ( !equipTitleLb )
     goto LABEL_45;
   UILabel__set_text(equipTitleLb, v40, 0LL);
@@ -654,7 +654,7 @@ void __fastcall AutomaticSaleDlgComponent__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_11837, 0LL);
+    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_11837/*"SERVANT_SORT_FILTER_RARITY_COMMON"*/, 0LL);
     if ( !v46 )
       goto LABEL_45;
     UILabel__set_text(v46, v47, 0LL);
@@ -664,7 +664,7 @@ void __fastcall AutomaticSaleDlgComponent__Open(
     if ( (unsigned int)(v44 + 1) >= v48->max_length )
       goto LABEL_46;
     v49 = v48->m_Items[(int)v44 + 1];
-    v50 = LocalizationManager__Get((System_String_o *)StringLiteral_11841, 0LL);
+    v50 = LocalizationManager__Get((System_String_o *)StringLiteral_11841/*"SERVANT_SORT_FILTER_RARITY_UNCOMMON"*/, 0LL);
     if ( !v49 )
       goto LABEL_45;
     UILabel__set_text(v49, v50, 0LL);
@@ -679,7 +679,7 @@ LABEL_46:
       sub_B170A0();
     }
     v53 = (UILabel_o *)(&v51->bounds)[(int)v44 + 4];
-    v54 = LocalizationManager__Get((System_String_o *)StringLiteral_11838, 0LL);
+    v54 = LocalizationManager__Get((System_String_o *)StringLiteral_11838/*"SERVANT_SORT_FILTER_RARITY_RARE"*/, 0LL);
     if ( !v53 )
       goto LABEL_45;
     UILabel__set_text(v53, v54, 0LL);
@@ -895,8 +895,8 @@ void __fastcall AutomaticSaleDlgComponent__SetButtonSelect(
     sub_B16FFC(&AutomaticSaleDlgComponent___c__DisplayClass41_0_TypeInfo, v10);
     sub_B16FFC(&Method_AutomaticSaleDlgComponent___c__DisplayClass41_1__SetButtonSelect_b__1__, v11);
     sub_B16FFC(&AutomaticSaleDlgComponent___c__DisplayClass41_1_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_16891, v13);
-    sub_B16FFC(&StringLiteral_16890, v14);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v13);
+    sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v14);
     byte_40F6E7C = 1;
   }
   v15 = (AutomaticSaleDlgComponent___c__DisplayClass41_0_o *)sub_B170CC(
@@ -944,9 +944,9 @@ void __fastcall AutomaticSaleDlgComponent__SetButtonSelect(
         if ( !v26 )
           break;
         if ( v29 )
-          v30 = &StringLiteral_16890;
+          v30 = &StringLiteral_16890/*"btn_bg_03"*/;
         else
-          v30 = &StringLiteral_16891;
+          v30 = &StringLiteral_16891/*"btn_bg_04"*/;
         UISprite__set_spriteName(v26, (System_String_o *)*v30, 0LL);
         v24 = v21->fields.i + 1;
         v31 = v21->fields.i - 7 < 0;
@@ -982,9 +982,9 @@ LABEL_22:
           (const MethodInfo_18B5C84 *)Method_BasicHelper_Any_int___);
   if ( !v35 )
     goto LABEL_21;
-  v38 = &StringLiteral_16890;
+  v38 = &StringLiteral_16890/*"btn_bg_03"*/;
   if ( !v37 )
-    v38 = &StringLiteral_16891;
+    v38 = &StringLiteral_16891/*"btn_bg_04"*/;
   UISprite__set_spriteName(v35, (System_String_o *)*v38, 0LL);
 }
 
@@ -1118,12 +1118,12 @@ void __fastcall AutomaticSaleDlgComponent__callbackUsetStatusFlagSet(
 
   if ( (byte_40F6E7F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21129, result);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, result);
     byte_40F6E7F = 1;
   }
   if ( !result )
     sub_B170D4();
-  v5 = System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129, 0LL);
+  v5 = System_String__Equals_43731072(result, (System_String_o *)StringLiteral_21129/*"ok"*/, 0LL);
   this->fields.state = 4;
   AutomaticSaleDlgComponent__SetButtonEnable(this, 0, v6);
   if ( v5 )

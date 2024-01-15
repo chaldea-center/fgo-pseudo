@@ -23,12 +23,12 @@ void __fastcall CombineCommandCodeListViewManager___cctor(const MethodInfo *meth
   {
     sub_B16FFC(&CombineCommandCodeListViewManager_TypeInfo, v1);
     sub_B16FFC(&ListViewSort_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_4137, v3);
+    sub_B16FFC(&StringLiteral_4137/*"CombineCommandCode"*/, v3);
     byte_40F9AD9 = 1;
   }
   v18 = 1;
   v4 = System_Int32__ToString((int32_t)&v18, 0LL);
-  v5 = System_String__Concat_43743732((System_String_o *)StringLiteral_4137, v4, 0LL);
+  v5 = System_String__Concat_43743732((System_String_o *)StringLiteral_4137/*"CombineCommandCode"*/, v4, 0LL);
   v10 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v6, v7, v8, v9);
   ListViewSort___ctor_30208480(v10, v5, 2, 0, 0LL);
   static_fields = (BattleServantConfConponent_o *)CombineCommandCodeListViewManager_TypeInfo->static_fields;
@@ -203,11 +203,11 @@ void __fastcall CombineCommandCodeListViewManager__CreateList(
     sub_B16FFC(&LocalizationManager_TypeInfo, v21);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v22);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
-    sub_B16FFC(&StringLiteral_19355, v24);
-    sub_B16FFC(&StringLiteral_3218, v25);
-    sub_B16FFC(&StringLiteral_19357, v26);
-    sub_B16FFC(&StringLiteral_19366, v27);
-    sub_B16FFC(&StringLiteral_12413, v28);
+    sub_B16FFC(&StringLiteral_19355/*"img_bg_arts"*/, v24);
+    sub_B16FFC(&StringLiteral_3218/*"COMMAND_CODE_EMPTY"*/, v25);
+    sub_B16FFC(&StringLiteral_19357/*"img_bg_buster"*/, v26);
+    sub_B16FFC(&StringLiteral_19366/*"img_bg_quick"*/, v27);
+    sub_B16FFC(&StringLiteral_12413/*"SUM_INFO"*/, v28);
     byte_40F9ABD = 1;
   }
   bgTxtSprite = (UnityEngine_Component_o *)this->fields.bgTxtSprite;
@@ -532,7 +532,7 @@ LABEL_82:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v117 = LocalizationManager__Get((System_String_o *)StringLiteral_3218, 0LL);
+  v117 = LocalizationManager__Get((System_String_o *)StringLiteral_3218/*"COMMAND_CODE_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_101;
   UILabel__set_text(emptyMessageLabel, v117, 0LL);
@@ -542,19 +542,19 @@ LABEL_82:
       commandCardTypeSprite = this->fields.commandCardTypeSprite;
       if ( !commandCardTypeSprite )
         goto LABEL_101;
-      v119 = &StringLiteral_19355;
+      v119 = &StringLiteral_19355/*"img_bg_arts"*/;
       goto LABEL_95;
     case 3:
       commandCardTypeSprite = this->fields.commandCardTypeSprite;
       if ( !commandCardTypeSprite )
         goto LABEL_101;
-      v119 = &StringLiteral_19366;
+      v119 = &StringLiteral_19366/*"img_bg_quick"*/;
       goto LABEL_95;
     case 2:
       commandCardTypeSprite = this->fields.commandCardTypeSprite;
       if ( !commandCardTypeSprite )
         goto LABEL_101;
-      v119 = &StringLiteral_19357;
+      v119 = &StringLiteral_19357/*"img_bg_buster"*/;
 LABEL_95:
       UISprite__set_spriteName(commandCardTypeSprite, (System_String_o *)*v119, 0LL);
       break;
@@ -565,7 +565,7 @@ LABEL_95:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v121 = LocalizationManager__Get((System_String_o *)StringLiteral_12413, 0LL);
+  v121 = LocalizationManager__Get((System_String_o *)StringLiteral_12413/*"SUM_INFO"*/, 0LL);
   LODWORD(v143.fields.currentCryptoKey) = v87;
   v122 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v143);
   v135 = CommandCodeFrameMax;
@@ -2410,7 +2410,7 @@ void __fastcall CombineCommandCodeListViewManager__RequestListObject(
     sub_B16FFC(&Method_CombineCommandCodeListViewManager_OnMoveEnd__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_CombineCommandCodeListViewObject__get_Count__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_CombineCommandCodeListViewObject__get_Item__, v9);
-    sub_B16FFC(&StringLiteral_10004, v10);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v10);
     byte_40F9AC6 = 1;
   }
   ObjectList = CombineCommandCodeListViewManager__get_ObjectList(this, *(const MethodInfo **)&mode);
@@ -2423,7 +2423,7 @@ void __fastcall CombineCommandCodeListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -2500,8 +2500,8 @@ void __fastcall CombineCommandCodeListViewManager__SetFilterButtonImage(
 
   if ( (byte_40F9AD3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16927, method);
-    sub_B16FFC(&StringLiteral_16926, v3);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, method);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v3);
     byte_40F9AD3 = 1;
   }
   sort = this->fields.sort;
@@ -2510,9 +2510,9 @@ void __fastcall CombineCommandCodeListViewManager__SetFilterButtonImage(
   {
     sub_B170D4();
   }
-  v7 = (System_String_o **)&StringLiteral_16926;
+  v7 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
   if ( !v6 )
-    v7 = (System_String_o **)&StringLiteral_16927;
+    v7 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
   UISprite__set_spriteName(filterSprite, *v7, 0LL);
 }
 
@@ -2669,7 +2669,7 @@ void __fastcall CombineCommandCodeListViewManager__SetSelectedCommandCodeData(
   if ( (byte_40F9ABF & 1) == 0 )
   {
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40F9ABF = 1;
   }
   idList = 0LL;
@@ -2687,11 +2687,11 @@ void __fastcall CombineCommandCodeListViewManager__SetSelectedCommandCodeData(
         skillName = this->fields.skillName;
         if ( skillName )
         {
-          UILabel__set_text(skillName, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(skillName, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           skillMessage = this->fields.skillMessage;
           if ( skillMessage )
           {
-            UILabel__set_text(skillMessage, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(skillMessage, (System_String_o *)StringLiteral_1/*""*/, 0LL);
             CombineCommandCodeListViewManager__SetDecideButtonStatus(this, 0, v30);
             equippedInfo = this->fields.equippedInfo;
             if ( equippedInfo )
@@ -2811,12 +2811,12 @@ void __fastcall CombineCommandCodeListViewManager__SetSortButtonImage(
   if ( (byte_40F9AD7 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_17038, v4);
-    sub_B16FFC(&StringLiteral_16995, v5);
-    sub_B16FFC(&StringLiteral_16985, v6);
-    sub_B16FFC(&StringLiteral_17002, v7);
-    sub_B16FFC(&StringLiteral_16952, v8);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v4);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v5);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v6);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v7);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v8);
     byte_40F9AD7 = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -2853,7 +2853,7 @@ void __fastcall CombineCommandCodeListViewManager__SetSortButtonImage(
         sortExplanationSprite = this->fields.sortExplanationSprite;
         if ( sortExplanationSprite )
         {
-          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
           UISprite__set_spriteName(sortExplanationSprite, *v17, 0LL);
           v18 = this->fields.sort;
           if ( v18 )
@@ -2862,8 +2862,8 @@ void __fastcall CombineCommandCodeListViewManager__SetSortButtonImage(
             if ( v19 )
             {
               isAscendingOrder = v18->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16952;
-              v22 = (System_String_o **)&StringLiteral_16955;
+              v21 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+              v22 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
 LABEL_32:
               if ( isAscendingOrder )
                 v26 = v21;
@@ -2880,7 +2880,7 @@ LABEL_32:
         v23 = this->fields.sortExplanationSprite;
         if ( v23 )
         {
-          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
           UISprite__set_spriteName(v23, *v24, 0LL);
           v25 = this->fields.sort;
           if ( v25 )
@@ -2889,8 +2889,8 @@ LABEL_32:
             if ( v19 )
             {
               isAscendingOrder = v25->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16955;
-              v22 = (System_String_o **)&StringLiteral_16952;
+              v21 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+              v22 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
               goto LABEL_32;
             }
           }
@@ -2953,15 +2953,15 @@ void __fastcall CombineCommandCodeListViewManager__SetStatusKind(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&modeKind);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_17057, v6);
-    sub_B16FFC(&StringLiteral_17060, v7);
-    sub_B16FFC(&StringLiteral_11699, v8);
-    sub_B16FFC(&StringLiteral_11700, v9);
-    sub_B16FFC(&StringLiteral_17073, v10);
-    sub_B16FFC(&StringLiteral_3156, v11);
-    sub_B16FFC(&StringLiteral_17074, v12);
-    sub_B16FFC(&StringLiteral_17059, v13);
-    sub_B16FFC(&StringLiteral_17058, v14);
+    sub_B16FFC(&StringLiteral_17057/*"button_allchoice_reg"*/, v6);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v7);
+    sub_B16FFC(&StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/, v8);
+    sub_B16FFC(&StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/, v9);
+    sub_B16FFC(&StringLiteral_17073/*"button_select_reg"*/, v10);
+    sub_B16FFC(&StringLiteral_3156/*"COMBINE_COMMAND_CODE_SELECT_COMMAND_CODE_MSG"*/, v11);
+    sub_B16FFC(&StringLiteral_17074/*"button_select_unreg"*/, v12);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v13);
+    sub_B16FFC(&StringLiteral_17058/*"button_allchoice_unreg"*/, v14);
     byte_40F9ABE = 1;
   }
   statusTabButton = this->fields.statusTabButton;
@@ -2979,9 +2979,9 @@ void __fastcall CombineCommandCodeListViewManager__SetStatusKind(
   statusTabSprite = this->fields.statusTabSprite;
   if ( !statusTabSprite )
     goto LABEL_47;
-  v18 = (System_String_o **)&StringLiteral_17073;
+  v18 = (System_String_o **)&StringLiteral_17073/*"button_select_reg"*/;
   if ( modeKind )
-    v18 = (System_String_o **)&StringLiteral_17074;
+    v18 = (System_String_o **)&StringLiteral_17074/*"button_select_unreg"*/;
   UISprite__set_spriteName(statusTabSprite, *v18, 0LL);
   v19 = this->fields.statusTabButton;
   if ( !v19 )
@@ -3005,9 +3005,9 @@ void __fastcall CombineCommandCodeListViewManager__SetStatusKind(
   lockTabSprite = this->fields.lockTabSprite;
   if ( !lockTabSprite )
     goto LABEL_47;
-  v23 = (System_String_o **)&StringLiteral_17059;
+  v23 = (System_String_o **)&StringLiteral_17059/*"button_alllock_reg"*/;
   if ( modeKind != 1 )
-    v23 = (System_String_o **)&StringLiteral_17060;
+    v23 = (System_String_o **)&StringLiteral_17060/*"button_alllock_unreg"*/;
   UISprite__set_spriteName(lockTabSprite, *v23, 0LL);
   v24 = this->fields.lockTabButton;
   if ( !v24 )
@@ -3031,9 +3031,9 @@ void __fastcall CombineCommandCodeListViewManager__SetStatusKind(
   choiceTabSprite = this->fields.choiceTabSprite;
   if ( !choiceTabSprite )
     goto LABEL_47;
-  v28 = (System_String_o **)&StringLiteral_17057;
+  v28 = (System_String_o **)&StringLiteral_17057/*"button_allchoice_reg"*/;
   if ( modeKind != 2 )
-    v28 = (System_String_o **)&StringLiteral_17058;
+    v28 = (System_String_o **)&StringLiteral_17058/*"button_allchoice_unreg"*/;
   UISprite__set_spriteName(choiceTabSprite, *v28, 0LL);
   v29 = this->fields.choiceTabButton;
   if ( !v29 )
@@ -3052,7 +3052,7 @@ void __fastcall CombineCommandCodeListViewManager__SetStatusKind(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v39 = &StringLiteral_11699;
+    v39 = &StringLiteral_11699/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
 LABEL_42:
     v40 = LocalizationManager__Get((System_String_o *)*v39, 0LL);
     if ( combineInfoMsgLb )
@@ -3071,7 +3071,7 @@ LABEL_42:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v39 = &StringLiteral_11700;
+    v39 = &StringLiteral_11700/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
     goto LABEL_42;
   }
   if ( v30 )
@@ -3082,7 +3082,7 @@ LABEL_42:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3156, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3156/*"COMBINE_COMMAND_CODE_SELECT_COMMAND_CODE_MSG"*/, 0LL);
   if ( !v31 )
 LABEL_47:
     sub_B170D4();

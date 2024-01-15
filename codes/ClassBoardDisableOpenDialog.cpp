@@ -192,10 +192,10 @@ void __fastcall ClassBoardDisableOpenDialog__Open(
     sub_B16FFC(&IClassBoardLockModel_TypeInfo, v13);
     sub_B16FFC(&IClassBoardSquareModel_TypeInfo, v14);
     sub_B16FFC(&LocalizationManager_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_2996, v16);
-    sub_B16FFC(&StringLiteral_2998, v17);
-    sub_B16FFC(&StringLiteral_2995, v18);
-    sub_B16FFC(&StringLiteral_2997, v19);
+    sub_B16FFC(&StringLiteral_2996/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_DETAIL"*/, v16);
+    sub_B16FFC(&StringLiteral_2998/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_LOCK"*/, v17);
+    sub_B16FFC(&StringLiteral_2995/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_CLOSE"*/, v18);
+    sub_B16FFC(&StringLiteral_2997/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_EFFECT"*/, v19);
     byte_40FB92D = 1;
   }
   v88 = 0;
@@ -240,7 +240,7 @@ void __fastcall ClassBoardDisableOpenDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_2998, 0LL);
+    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_2998/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_LOCK"*/, 0LL);
     if ( titleLabel )
     {
       UILabel__set_text(titleLabel, v29, 0LL);
@@ -365,7 +365,7 @@ LABEL_64:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_2997, 0LL);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_2997/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_TITLE_EFFECT"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_64;
   UILabel__set_text(titleLabel, v37, 0LL);
@@ -431,12 +431,12 @@ LABEL_58:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v79 = LocalizationManager__Get((System_String_o *)StringLiteral_2996, 0LL);
+  v79 = LocalizationManager__Get((System_String_o *)StringLiteral_2996/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_DETAIL"*/, 0LL);
   if ( !v78 )
     goto LABEL_64;
   UILabel__set_text(v78, v79, 0LL);
   closeBtnLabel = this->fields.closeBtnLabel;
-  v81 = LocalizationManager__Get((System_String_o *)StringLiteral_2995, 0LL);
+  v81 = LocalizationManager__Get((System_String_o *)StringLiteral_2995/*"CLASS_BOARD_DISABLE_OPEN_DIALOG_CLOSE"*/, 0LL);
   if ( !closeBtnLabel )
     goto LABEL_64;
   UILabel__set_text(closeBtnLabel, v81, 0LL);
@@ -454,8 +454,8 @@ System_String_o *__fastcall ClassBoardDisableOpenDialog__get_closeBtnPath(
 {
   if ( (byte_40FB931 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15415, method);
+    sub_B16FFC(&StringLiteral_15415/*"Window/CloseBtn"*/, method);
     byte_40FB931 = 1;
   }
-  return (System_String_o *)StringLiteral_15415;
+  return (System_String_o *)StringLiteral_15415/*"Window/CloseBtn"*/;
 }

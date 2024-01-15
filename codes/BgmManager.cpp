@@ -24,19 +24,19 @@ void __fastcall BgmManager___cctor(const MethodInfo *method)
   if ( (byte_40F905B & 1) == 0 )
   {
     sub_B16FFC(&BgmManager_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_2540, v8);
-    sub_B16FFC(&StringLiteral_2541, v9);
+    sub_B16FFC(&StringLiteral_2540/*"BGM_CHALDEA_1"*/, v8);
+    sub_B16FFC(&StringLiteral_2541/*"BGM_CHALDEA_2"*/, v9);
     byte_40F905B = 1;
   }
   BgmManager_TypeInfo->static_fields->DEFAULT_VOLUME = 1.0;
   BgmManager_TypeInfo->static_fields->LOW_VOLUME = 0.1;
   static_fields = BgmManager_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_2540;
-  static_fields->DEFAULT_MAIN_BGM_NAME = (struct System_String_o *)StringLiteral_2540;
+  v11 = (System_Int32_array **)StringLiteral_2540/*"BGM_CHALDEA_1"*/;
+  static_fields->DEFAULT_MAIN_BGM_NAME = (struct System_String_o *)StringLiteral_2540/*"BGM_CHALDEA_1"*/;
   sub_B16F98((BattleServantConfConponent_o *)&static_fields->DEFAULT_MAIN_BGM_NAME, v11, v2, v3, v4, v5, v6, v7);
   v12 = BgmManager_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_2541;
-  v12->COSMOS_IN_THE_LOSTBELT_BGM_NAME = (struct System_String_o *)StringLiteral_2541;
+  v13 = (System_Int32_array **)StringLiteral_2541/*"BGM_CHALDEA_2"*/;
+  v12->COSMOS_IN_THE_LOSTBELT_BGM_NAME = (struct System_String_o *)StringLiteral_2541/*"BGM_CHALDEA_2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->COSMOS_IN_THE_LOSTBELT_BGM_NAME, v13, v14, v15, v16, v17, v18, v19);
   v20 = BgmManager_TypeInfo;
   BgmManager_TypeInfo->static_fields->ADD_BIND_MAX = 5;

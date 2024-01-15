@@ -75,14 +75,14 @@ System_Collections_Generic_List_int__o *__fastcall UserBoxGachaEntity__GetReplac
     sub_B16FFC(&Method_System_Collections_Generic_List_object__get_Item__, v8);
     sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v9);
     sub_B16FFC(&System_Collections_Generic_List_object__TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_21682, v11);
+    sub_B16FFC(&StringLiteral_21682/*"replaceGiftIdList"*/, v11);
     byte_40FAAB6 = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
-          (System_Xml_XmlQualifiedName_o *)StringLiteral_21682,
+          (System_Xml_XmlQualifiedName_o *)StringLiteral_21682/*"replaceGiftIdList"*/,
           (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return 0LL;
@@ -91,7 +91,7 @@ System_Collections_Generic_List_int__o *__fastcall UserBoxGachaEntity__GetReplac
   if ( !v13
     || ((Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                   (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v13,
-                  (System_Type_o *)StringLiteral_21682,
+                  (System_Type_o *)StringLiteral_21682/*"replaceGiftIdList"*/,
                   (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) != 0LL
      && (v19 = *(&System_Collections_Generic_List_object__TypeInfo->_2.bitflags2 + 1),
          *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v19)

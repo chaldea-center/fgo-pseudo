@@ -123,7 +123,7 @@ void __fastcall OrganizationRootComponent__OnClickBack(OrganizationRootComponent
 
   if ( (byte_40F7FB2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3034, method);
+    sub_B16FFC(&StringLiteral_3034/*"CLICK_BACK"*/, method);
     byte_40F7FB2 = 1;
   }
   state = this->fields.state;
@@ -139,7 +139,7 @@ void __fastcall OrganizationRootComponent__OnClickBack(OrganizationRootComponent
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     sub_B170D4();
-  TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_3034, 0LL);
+  TitleInfoControl__sendEvent(titleInfo, (System_String_o *)StringLiteral_3034/*"CLICK_BACK"*/, 0LL);
 }
 
 
@@ -182,7 +182,7 @@ void __fastcall OrganizationRootComponent__OnMoveEnd(OrganizationRootComponent_o
     sub_B16FFC(&Method_OrganizationRootComponent_OnSelectTop__, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
     sub_B16FFC(&TutorialFlag_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_13462, v10);
+    sub_B16FFC(&StringLiteral_13462/*"TUTORIAL_MESSAGE_SHOP1"*/, v10);
     byte_40F7FB1 = 1;
   }
   switch ( this->fields.state )
@@ -227,7 +227,7 @@ void __fastcall OrganizationRootComponent__OnMoveEnd(OrganizationRootComponent_o
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_13462, 0LL);
+      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_13462/*"TUTORIAL_MESSAGE_SHOP1"*/, 0LL);
       if ( !Instance )
 LABEL_21:
         sub_B170D4();

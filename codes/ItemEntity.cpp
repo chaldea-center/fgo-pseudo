@@ -24,14 +24,14 @@ System_String_o *__fastcall ItemEntity__GetAnotherPayName(ItemEntity_o *this, co
 
   if ( (byte_40FC1C1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16291, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_16291/*"anotherPayName"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FC1C1 = 1;
   }
   return ItemEntity__getScript_28921972(
            this,
-           (System_String_o *)StringLiteral_16291,
-           (System_String_o *)StringLiteral_1,
+           (System_String_o *)StringLiteral_16291/*"anotherPayName"*/,
+           (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
 
@@ -67,8 +67,8 @@ System_String_o *__fastcall ItemEntity__GetCountTextWithPrefix(
   v12 = num;
   if ( (byte_40FC1BA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_690, *(_QWORD *)&num);
-    sub_B16FFC(&StringLiteral_23611, v5);
+    sub_B16FFC(&StringLiteral_690/*"+"*/, *(_QWORD *)&num);
+    sub_B16FFC(&StringLiteral_23611/*"×"*/, v5);
     byte_40FC1BA = 1;
   }
   if ( System_String__IsNullOrEmpty(this->fields.unit, 0LL) )
@@ -77,12 +77,12 @@ System_String_o *__fastcall ItemEntity__GetCountTextWithPrefix(
     if ( type <= 0x10 && ((1 << type) & 0x16002) != 0 )
     {
       CountText = ItemType__GetCountText(type, num, v6);
-      v9 = &StringLiteral_690;
+      v9 = &StringLiteral_690/*"+"*/;
     }
     else
     {
       CountText = ItemType__GetCountText(type, num, v6);
-      v9 = &StringLiteral_23611;
+      v9 = &StringLiteral_23611/*"×"*/;
     }
     return System_String__Concat_43743732((System_String_o *)*v9, CountText, 0LL);
   }
@@ -205,10 +205,10 @@ int32_t __fastcall ItemEntity__GetMaxNum(ItemEntity_o *this, const MethodInfo *m
 
   if ( (byte_40FC1C2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20358, method);
+    sub_B16FFC(&StringLiteral_20358/*"maxNum"*/, method);
     byte_40FC1C2 = 1;
   }
-  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_20358, 0, v2);
+  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_20358/*"maxNum"*/, 0, v2);
 }
 
 
@@ -219,14 +219,14 @@ System_String_o *__fastcall ItemEntity__GetOverwriteImageIdInfo(ItemEntity_o *th
 
   if ( (byte_40FC1BE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21277, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_21277/*"overwriteImageIdInfo"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FC1BE = 1;
   }
   return ItemEntity__getScript_28921972(
            this,
-           (System_String_o *)StringLiteral_21277,
-           (System_String_o *)StringLiteral_1,
+           (System_String_o *)StringLiteral_21277/*"overwriteImageIdInfo"*/,
+           (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
 
@@ -238,14 +238,14 @@ System_String_o *__fastcall ItemEntity__GetOverwritePresentboxDetail(ItemEntity_
 
   if ( (byte_40FC1BD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21284, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_21284/*"overwritePresentboxDetail"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FC1BD = 1;
   }
   return ItemEntity__getScript_28921972(
            this,
-           (System_String_o *)StringLiteral_21284,
-           (System_String_o *)StringLiteral_1,
+           (System_String_o *)StringLiteral_21284/*"overwritePresentboxDetail"*/,
+           (System_String_o *)StringLiteral_1/*""*/,
            v2);
 }
 
@@ -299,10 +299,10 @@ bool __fastcall ItemEntity__IsRewardDispTogether(ItemEntity_o *this, const Metho
 
   if ( (byte_40FC1BF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21398, method);
+    sub_B16FFC(&StringLiteral_21398/*"playEffect"*/, method);
     byte_40FC1BF = 1;
   }
-  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_21398, 0, v2) != 1;
+  return ItemEntity__getScript(this, (System_String_o *)StringLiteral_21398/*"playEffect"*/, 0, v2) != 1;
 }
 
 

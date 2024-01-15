@@ -42,30 +42,30 @@ void __fastcall MapButtonPrefab___cctor(const MethodInfo *method)
   if ( (byte_40FB58F & 1) == 0 )
   {
     sub_B16FFC(&MapButtonPrefab_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16897, v8);
-    sub_B16FFC(&StringLiteral_20292, v9);
-    sub_B16FFC(&StringLiteral_6013, v10);
-    sub_B16FFC(&StringLiteral_20291, v11);
+    sub_B16FFC(&StringLiteral_16897/*"btn_bg_16"*/, v8);
+    sub_B16FFC(&StringLiteral_20292/*"map_button_{0}_c"*/, v9);
+    sub_B16FFC(&StringLiteral_6013/*"EntryAnim"*/, v10);
+    sub_B16FFC(&StringLiteral_20291/*"map_button_{0}"*/, v11);
     byte_40FB58F = 1;
   }
   static_fields = (BattleServantConfConponent_o *)MapButtonPrefab_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_20291;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_20291;
+  v13 = (System_Int32_array **)StringLiteral_20291/*"map_button_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_20291/*"map_button_{0}"*/;
   sub_B16F98(static_fields, v13, v2, v3, v4, v5, v6, v7);
   v14 = MapButtonPrefab_TypeInfo->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_20292;
-  v14->MAP_CURRENT_BUTTON_SP_NAME = (struct System_String_o *)StringLiteral_20292;
+  v15 = (System_Int32_array **)StringLiteral_20292/*"map_button_{0}_c"*/;
+  v14->MAP_CURRENT_BUTTON_SP_NAME = (struct System_String_o *)StringLiteral_20292/*"map_button_{0}_c"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v14->MAP_CURRENT_BUTTON_SP_NAME, v15, v16, v17, v18, v19, v20, v21);
   v22 = MapButtonPrefab_TypeInfo->static_fields;
-  v23 = (System_Int32_array **)StringLiteral_16897;
-  v22->DEFAULT_BUTTON_SP = (struct System_String_o *)StringLiteral_16897;
+  v23 = (System_Int32_array **)StringLiteral_16897/*"btn_bg_16"*/;
+  v22->DEFAULT_BUTTON_SP = (struct System_String_o *)StringLiteral_16897/*"btn_bg_16"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v22->DEFAULT_BUTTON_SP, v23, v24, v25, v26, v27, v28, v29);
   v30 = MapButtonPrefab_TypeInfo;
   MapButtonPrefab_TypeInfo->static_fields->FRAME_IN_ANIM_DURATION = 0.2;
   v30->static_fields->FRAME_OUT_ANIM_DURATION = 0.1;
   v31 = v30->static_fields;
-  v32 = (System_Int32_array **)StringLiteral_6013;
-  v31->FUNC_ENTRY_ANIM = (struct System_String_o *)StringLiteral_6013;
+  v32 = (System_Int32_array **)StringLiteral_6013/*"EntryAnim"*/;
+  v31->FUNC_ENTRY_ANIM = (struct System_String_o *)StringLiteral_6013/*"EntryAnim"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v31->FUNC_ENTRY_ANIM, v32, v33, v34, v35, v36, v37, v38);
   MapButtonPrefab_TypeInfo->static_fields->MAP_BUTTON_GRID_HEIGHT = 57.0;
 }

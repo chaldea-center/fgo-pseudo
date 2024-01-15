@@ -64,48 +64,48 @@ void __fastcall DatFileName___cctor(const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string___ctor__, v6);
     sub_B16FFC(&System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_17400, v8);
-    sub_B16FFC(&StringLiteral_16616, v9);
-    sub_B16FFC(&StringLiteral_21892, v10);
-    sub_B16FFC(&StringLiteral_22797, v11);
-    sub_B16FFC(&StringLiteral_22992, v12);
-    sub_B16FFC(&StringLiteral_23155, v13);
-    sub_B16FFC(&StringLiteral_16470, v14);
-    sub_B16FFC(&StringLiteral_20346, v15);
-    sub_B16FFC(&StringLiteral_21356, v16);
-    sub_B16FFC(&StringLiteral_21894, v17);
-    sub_B16FFC(&StringLiteral_22983, v18);
-    sub_B16FFC(&StringLiteral_21900, v19);
-    sub_B16FFC(&StringLiteral_22989, v20);
-    sub_B16FFC(&StringLiteral_21498, v21);
-    sub_B16FFC(&StringLiteral_16615, v22);
-    sub_B16FFC(&StringLiteral_20347, v23);
-    sub_B16FFC(&StringLiteral_21893, v24);
-    sub_B16FFC(&StringLiteral_20309, v25);
-    sub_B16FFC(&StringLiteral_16469, v26);
-    sub_B16FFC(&StringLiteral_16614, v27);
-    sub_B16FFC(&StringLiteral_22988, v28);
-    sub_B16FFC(&StringLiteral_22609, v29);
-    sub_B16FFC(&StringLiteral_22993, v30);
-    sub_B16FFC(&StringLiteral_22987, v31);
-    sub_B16FFC(&StringLiteral_22982, v32);
-    sub_B16FFC(&StringLiteral_22984, v33);
-    sub_B16FFC(&StringLiteral_21238, v34);
-    sub_B16FFC(&StringLiteral_20103, v35);
-    sub_B16FFC(&StringLiteral_23153, v36);
-    sub_B16FFC(&StringLiteral_21357, v37);
-    sub_B16FFC(&StringLiteral_18839, v38);
-    sub_B16FFC(&StringLiteral_20307, v39);
-    sub_B16FFC(&StringLiteral_21550, v40);
-    sub_B16FFC(&StringLiteral_22986, v41);
-    sub_B16FFC(&StringLiteral_20308, v42);
-    sub_B16FFC(&StringLiteral_16613, v43);
-    sub_B16FFC(&StringLiteral_20348, v44);
-    sub_B16FFC(&StringLiteral_22991, v45);
-    sub_B16FFC(&StringLiteral_22037, v46);
-    sub_B16FFC(&StringLiteral_23154, v47);
-    sub_B16FFC(&StringLiteral_21833, v48);
-    sub_B16FFC(&StringLiteral_22990, v49);
+    sub_B16FFC(&StringLiteral_17400/*"clearrandommissionsave.dat"*/, v8);
+    sub_B16FFC(&StringLiteral_16616/*"battleuseitemrequestsave.dat"*/, v9);
+    sub_B16FFC(&StringLiteral_21892/*"servantcharactergraphexopen.dat"*/, v10);
+    sub_B16FFC(&StringLiteral_22797/*"unconfirmedpayment.dat"*/, v11);
+    sub_B16FFC(&StringLiteral_22992/*"userservantlocksave.dat"*/, v12);
+    sub_B16FFC(&StringLiteral_23155/*"warboardmoviehistorysave.dat"*/, v13);
+    sub_B16FFC(&StringLiteral_16470/*"authsave2.dat"*/, v14);
+    sub_B16FFC(&StringLiteral_20346/*"materialbranchroutesave.dat"*/, v15);
+    sub_B16FFC(&StringLiteral_21356/*"paymentsave.dat"*/, v16);
+    sub_B16FFC(&StringLiteral_21894/*"servantprofilelimitcount.dat"*/, v17);
+    sub_B16FFC(&StringLiteral_22983/*"usercommandcodenewsave.dat"*/, v18);
+    sub_B16FFC(&StringLiteral_21900/*"serversave.dat"*/, v19);
+    sub_B16FFC(&StringLiteral_22989/*"userservantcollectionsave.dat"*/, v20);
+    sub_B16FFC(&StringLiteral_21498/*"purchasebybankrequestsave.dat"*/, v21);
+    sub_B16FFC(&StringLiteral_16615/*"battleusecontinuerequestsave.dat"*/, v22);
+    sub_B16FFC(&StringLiteral_20347/*"materialgroupclearhistorysave.dat"*/, v23);
+    sub_B16FFC(&StringLiteral_21893/*"servantprofileeventjoin.dat"*/, v24);
+    sub_B16FFC(&StringLiteral_20309/*"masterDataList.dat"*/, v25);
+    sub_B16FFC(&StringLiteral_16469/*"authsave.dat"*/, v26);
+    sub_B16FFC(&StringLiteral_16614/*"battleusecontinueitemrequestsave.dat"*/, v27);
+    sub_B16FFC(&StringLiteral_22988/*"usermissionprogsave_{0}_{1}.dat"*/, v28);
+    sub_B16FFC(&StringLiteral_22609/*"tipsarchivestatesave_{0}.dat"*/, v29);
+    sub_B16FFC(&StringLiteral_22993/*"userservantnewsave.dat"*/, v30);
+    sub_B16FFC(&StringLiteral_22987/*"usermissionprogsave_{0}.dat"*/, v31);
+    sub_B16FFC(&StringLiteral_22982/*"usercommandcodecollectionsave.dat"*/, v32);
+    sub_B16FFC(&StringLiteral_22984/*"userequiplvsave.dat"*/, v33);
+    sub_B16FFC(&StringLiteral_21238/*"otherusernewsave.dat"*/, v34);
+    sub_B16FFC(&StringLiteral_20103/*"lastuseddecknumbersave.dat"*/, v35);
+    sub_B16FFC(&StringLiteral_23153/*"warboardcontinue.dat"*/, v36);
+    sub_B16FFC(&StringLiteral_21357/*"payment{0:D20}.dat"*/, v37);
+    sub_B16FFC(&StringLiteral_18839/*"friendcodesave.dat"*/, v38);
+    sub_B16FFC(&StringLiteral_20307/*"masterData.dat"*/, v39);
+    sub_B16FFC(&StringLiteral_21550/*"questhintdialogopensave.dat"*/, v40);
+    sub_B16FFC(&StringLiteral_22986/*"usermissionnewsave_{0}.dat"*/, v41);
+    sub_B16FFC(&StringLiteral_20308/*"masterDataCheck.dat"*/, v42);
+    sub_B16FFC(&StringLiteral_16613/*"battlecommandspellrequestsave.dat"*/, v43);
+    sub_B16FFC(&StringLiteral_20348/*"materialservantlimitcountsave.dat"*/, v44);
+    sub_B16FFC(&StringLiteral_22991/*"userservantcommentsave.dat"*/, v45);
+    sub_B16FFC(&StringLiteral_22037/*"signupsave.dat"*/, v46);
+    sub_B16FFC(&StringLiteral_23154/*"warboardmessagehistorysave.dat"*/, v47);
+    sub_B16FFC(&StringLiteral_21833/*"scriptsave.dat"*/, v48);
+    sub_B16FFC(&StringLiteral_22990/*"userservantcombinevoicesave.dat"*/, v49);
     byte_40FB3FE = 1;
   }
   v50 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B170CC(
@@ -122,212 +122,212 @@ void __fastcall DatFileName___cctor(const MethodInfo *method)
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     0,
-    (System_String_o *)StringLiteral_21833,
+    (System_String_o *)StringLiteral_21833/*"scriptsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     1,
-    (System_String_o *)StringLiteral_21498,
+    (System_String_o *)StringLiteral_21498/*"purchasebybankrequestsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     2,
-    (System_String_o *)StringLiteral_16615,
+    (System_String_o *)StringLiteral_16615/*"battleusecontinuerequestsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     3,
-    (System_String_o *)StringLiteral_16613,
+    (System_String_o *)StringLiteral_16613/*"battlecommandspellrequestsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     4,
-    (System_String_o *)StringLiteral_22990,
+    (System_String_o *)StringLiteral_22990/*"userservantcombinevoicesave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     5,
-    (System_String_o *)StringLiteral_22993,
+    (System_String_o *)StringLiteral_22993/*"userservantnewsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     6,
-    (System_String_o *)StringLiteral_22992,
+    (System_String_o *)StringLiteral_22992/*"userservantlocksave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     7,
-    (System_String_o *)StringLiteral_22989,
+    (System_String_o *)StringLiteral_22989/*"userservantcollectionsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     8,
-    (System_String_o *)StringLiteral_22984,
+    (System_String_o *)StringLiteral_22984/*"userequiplvsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     9,
-    (System_String_o *)StringLiteral_22983,
+    (System_String_o *)StringLiteral_22983/*"usercommandcodenewsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     10,
-    (System_String_o *)StringLiteral_22982,
+    (System_String_o *)StringLiteral_22982/*"usercommandcodecollectionsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     11,
-    (System_String_o *)StringLiteral_22991,
+    (System_String_o *)StringLiteral_22991/*"userservantcommentsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     12,
-    (System_String_o *)StringLiteral_21238,
+    (System_String_o *)StringLiteral_21238/*"otherusernewsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     13,
-    (System_String_o *)StringLiteral_20308,
+    (System_String_o *)StringLiteral_20308/*"masterDataCheck.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     14,
-    (System_String_o *)StringLiteral_20309,
+    (System_String_o *)StringLiteral_20309/*"masterDataList.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     15,
-    (System_String_o *)StringLiteral_20307,
+    (System_String_o *)StringLiteral_20307/*"masterData.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     16,
-    (System_String_o *)StringLiteral_16469,
+    (System_String_o *)StringLiteral_16469/*"authsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     17,
-    (System_String_o *)StringLiteral_16470,
+    (System_String_o *)StringLiteral_16470/*"authsave2.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     18,
-    (System_String_o *)StringLiteral_22037,
+    (System_String_o *)StringLiteral_22037/*"signupsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     19,
-    (System_String_o *)StringLiteral_21900,
+    (System_String_o *)StringLiteral_21900/*"serversave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     20,
-    (System_String_o *)StringLiteral_18839,
+    (System_String_o *)StringLiteral_18839/*"friendcodesave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     21,
-    (System_String_o *)StringLiteral_21356,
+    (System_String_o *)StringLiteral_21356/*"paymentsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     22,
-    (System_String_o *)StringLiteral_21357,
+    (System_String_o *)StringLiteral_21357/*"payment{0:D20}.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     23,
-    (System_String_o *)StringLiteral_22987,
+    (System_String_o *)StringLiteral_22987/*"usermissionprogsave_{0}.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     24,
-    (System_String_o *)StringLiteral_22988,
+    (System_String_o *)StringLiteral_22988/*"usermissionprogsave_{0}_{1}.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     25,
-    (System_String_o *)StringLiteral_22986,
+    (System_String_o *)StringLiteral_22986/*"usermissionnewsave_{0}.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     26,
-    (System_String_o *)StringLiteral_20348,
+    (System_String_o *)StringLiteral_20348/*"materialservantlimitcountsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     27,
-    (System_String_o *)StringLiteral_21894,
+    (System_String_o *)StringLiteral_21894/*"servantprofilelimitcount.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     28,
-    (System_String_o *)StringLiteral_21893,
+    (System_String_o *)StringLiteral_21893/*"servantprofileeventjoin.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     29,
-    (System_String_o *)StringLiteral_16614,
+    (System_String_o *)StringLiteral_16614/*"battleusecontinueitemrequestsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     30,
-    (System_String_o *)StringLiteral_16616,
+    (System_String_o *)StringLiteral_16616/*"battleuseitemrequestsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     31,
-    (System_String_o *)StringLiteral_22797,
+    (System_String_o *)StringLiteral_22797/*"unconfirmedpayment.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     32,
-    (System_String_o *)StringLiteral_21892,
+    (System_String_o *)StringLiteral_21892/*"servantcharactergraphexopen.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     33,
-    (System_String_o *)StringLiteral_21550,
+    (System_String_o *)StringLiteral_21550/*"questhintdialogopensave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     34,
-    (System_String_o *)StringLiteral_20103,
+    (System_String_o *)StringLiteral_20103/*"lastuseddecknumbersave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     35,
-    (System_String_o *)StringLiteral_20346,
+    (System_String_o *)StringLiteral_20346/*"materialbranchroutesave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     36,
-    (System_String_o *)StringLiteral_17400,
+    (System_String_o *)StringLiteral_17400/*"clearrandommissionsave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     37,
-    (System_String_o *)StringLiteral_20347,
+    (System_String_o *)StringLiteral_20347/*"materialgroupclearhistorysave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     38,
-    (System_String_o *)StringLiteral_23154,
+    (System_String_o *)StringLiteral_23154/*"warboardmessagehistorysave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     39,
-    (System_String_o *)StringLiteral_23155,
+    (System_String_o *)StringLiteral_23155/*"warboardmoviehistorysave.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     40,
-    (System_String_o *)StringLiteral_22609,
+    (System_String_o *)StringLiteral_22609/*"tipsarchivestatesave_{0}.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v50,
     41,
-    (System_String_o *)StringLiteral_23153,
+    (System_String_o *)StringLiteral_23153/*"warboardcontinue.dat"*/,
     (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__Add__);
   static_fields = (BattleServantConfConponent_o *)DatFileName_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v50;
@@ -359,7 +359,7 @@ System_String_o *__fastcall DatFileName__getFileName(int32_t name, const MethodI
     sub_B16FFC(&DatFileName_TypeInfo, v3);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__, v4);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FB3F9 = 1;
   }
   v7 = DatFileName_TypeInfo;
@@ -376,7 +376,7 @@ System_String_o *__fastcall DatFileName__getFileName(int32_t name, const MethodI
           name,
           (const MethodInfo_2DFFEC8 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
   {
-    Item = (System_String_o *)StringLiteral_1;
+    Item = (System_String_o *)StringLiteral_1/*""*/;
     goto LABEL_14;
   }
   v9 = DatFileName_TypeInfo;
@@ -415,7 +415,7 @@ System_String_o *__fastcall DatFileName__getFileNameNotConverted(int32_t name, c
     sub_B16FFC(&DatFileName_TypeInfo, method);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FB3FD = 1;
   }
   v6 = DatFileName_TypeInfo;
@@ -447,7 +447,7 @@ System_String_o *__fastcall DatFileName__getFileNameNotConverted(int32_t name, c
 LABEL_14:
     sub_B170D4();
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -474,7 +474,7 @@ System_String_o *__fastcall DatFileName__getFileName_27470680(int32_t name, int6
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__, v6);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__, v7);
     sub_B16FFC(&long_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FB3FA = 1;
   }
   v10 = DatFileName_TypeInfo;
@@ -491,7 +491,7 @@ System_String_o *__fastcall DatFileName__getFileName_27470680(int32_t name, int6
           name,
           (const MethodInfo_2DFFEC8 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
   {
-    Item = (System_String_o *)StringLiteral_1;
+    Item = (System_String_o *)StringLiteral_1/*""*/;
     goto LABEL_14;
   }
   v12 = DatFileName_TypeInfo;
@@ -548,7 +548,7 @@ System_String_o *__fastcall DatFileName__getFileName_27471060(
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__, v9);
     sub_B16FFC(&int_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FB3FB = 1;
   }
   v12 = DatFileName_TypeInfo;
@@ -565,7 +565,7 @@ System_String_o *__fastcall DatFileName__getFileName_27471060(
           name,
           (const MethodInfo_2DFFEC8 *)Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__) )
   {
-    Item = (System_String_o *)StringLiteral_1;
+    Item = (System_String_o *)StringLiteral_1/*""*/;
     goto LABEL_14;
   }
   v14 = DatFileName_TypeInfo;
@@ -618,7 +618,7 @@ System_String_o *__fastcall DatFileName__getFileName_27471476(
     sub_B16FFC(&DatFileName_TypeInfo, v7);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__ContainsKey__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DatFileName_FILE_NAME__string__get_Item__, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FB3FC = 1;
   }
   v11 = DatFileName_TypeInfo;
@@ -653,7 +653,7 @@ System_String_o *__fastcall DatFileName__getFileName_27471476(
 LABEL_21:
     sub_B170D4();
   }
-  Item = (System_String_o *)StringLiteral_1;
+  Item = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_14:
   if ( str2 )
     v16 = System_String__Format_43739268(Item, (Il2CppObject *)str1, (Il2CppObject *)str2, 0LL);

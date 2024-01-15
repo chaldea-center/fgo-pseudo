@@ -167,31 +167,31 @@ void __fastcall SummonCautionDlgComponent__Init(SummonCautionDlgComponent_o *thi
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_3253, v4);
-    sub_B16FFC(&StringLiteral_3252, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v4);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F7CEB = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_24;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_24;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   confirmBtnLabel = this->fields.confirmBtnLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !confirmBtnLabel )
     goto LABEL_24;
   UILabel__set_text(confirmBtnLabel, v10, 0LL);
   cancelBtnLb = this->fields.cancelBtnLb;
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_24;
   UILabel__set_text(cancelBtnLb, v12, 0LL);
@@ -342,12 +342,12 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v18);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v19);
     sub_B16FFC(&SummonCautionDlgComponent_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_12387, v21);
-    sub_B16FFC(&StringLiteral_3253, v22);
-    sub_B16FFC(&StringLiteral_12411, v23);
-    sub_B16FFC(&StringLiteral_3251, v24);
-    sub_B16FFC(&StringLiteral_12369, v25);
-    sub_B16FFC(&StringLiteral_12365, v26);
+    sub_B16FFC(&StringLiteral_12387/*"SUMMON_GROUP_STONEPAY_WARNING_MSG"*/, v21);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v22);
+    sub_B16FFC(&StringLiteral_12411/*"SUMMON_STONEPAY_WARNING_MSG"*/, v23);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v24);
+    sub_B16FFC(&StringLiteral_12369/*"SUMMON_BONUS_SELECT_WARNING_MSG"*/, v25);
+    sub_B16FFC(&StringLiteral_12365/*"SUMMON_BONUS_SELECT_DIALOG_SUMMON"*/, v26);
     byte_40F7CEC = 1;
   }
   this->fields.callbackFunc = callback;
@@ -374,7 +374,7 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !confirmBtnLabel )
     goto LABEL_62;
   UILabel__set_text(confirmBtnLabel, v30, 0LL);
@@ -435,8 +435,8 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v44 = LocalizationManager__Get((System_String_o *)StringLiteral_12411, 0LL);
-      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_12387, 0LL);
+      v44 = LocalizationManager__Get((System_String_o *)StringLiteral_12411/*"SUMMON_STONEPAY_WARNING_MSG"*/, 0LL);
+      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_12387/*"SUMMON_GROUP_STONEPAY_WARNING_MSG"*/, 0LL);
       DateTime = (Il2CppObject *)LocalizationManager__GetDateTime(summonCloseAt, 0LL);
       v47 = System_String__Format(v45, DateTime, 0LL);
       v48 = System_String__Concat_43743732(v44, v47, 0LL);
@@ -457,8 +457,8 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v50 = LocalizationManager__Get((System_String_o *)StringLiteral_12411, 0LL);
-      v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12369, 0LL);
+      v50 = LocalizationManager__Get((System_String_o *)StringLiteral_12411/*"SUMMON_STONEPAY_WARNING_MSG"*/, 0LL);
+      v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12369/*"SUMMON_BONUS_SELECT_WARNING_MSG"*/, 0LL);
       v52 = (Il2CppObject *)LocalizationManager__GetDateTime(summonCloseAt, 0LL);
       v53 = System_String__Format(v51, v52, 0LL);
       v54 = System_String__Concat_43743732(v50, v53, 0LL);
@@ -526,12 +526,12 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v73 = LocalizationManager__Get((System_String_o *)StringLiteral_12365, 0LL);
+              v73 = LocalizationManager__Get((System_String_o *)StringLiteral_12365/*"SUMMON_BONUS_SELECT_DIALOG_SUMMON"*/, 0LL);
               if ( v72 )
               {
                 UILabel__set_text(v72, v73, 0LL);
                 cancelBtnLb = this->fields.cancelBtnLb;
-                v75 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+                v75 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
                 if ( cancelBtnLb )
                 {
                   UILabel__set_text(cancelBtnLb, v75, 0LL);
@@ -624,10 +624,10 @@ System_String_o *__fastcall SummonCautionDlgComponent__get_closeBtnPath(
 {
   if ( (byte_40F7CEF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4205, method);
+    sub_B16FFC(&StringLiteral_4205/*"ConfirmWindow/ConfirmBntInfo/CancleButton"*/, method);
     byte_40F7CEF = 1;
   }
-  return (System_String_o *)StringLiteral_4205;
+  return (System_String_o *)StringLiteral_4205/*"ConfirmWindow/ConfirmBntInfo/CancleButton"*/;
 }
 
 

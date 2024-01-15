@@ -50,7 +50,7 @@ System_String_o *__fastcall UserQuestEntity__CreatePK(int64_t userId, int32_t qu
   if ( (byte_40F80DB & 1) == 0 )
   {
     sub_B16FFC(&UserQuestEntity_TypeInfo, *(_QWORD *)&questId);
-    sub_B16FFC(&StringLiteral_1223, v4);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v4);
     byte_40F80DB = 1;
   }
   v5 = UserQuestEntity_TypeInfo;
@@ -70,7 +70,7 @@ System_String_o *__fastcall UserQuestEntity__CreatePK(int64_t userId, int32_t qu
     }
     static_fields->oldId = userId;
     v7 = System_Int64__ToString((int64_t)&v20, 0LL);
-    v8 = (System_Int32_array **)System_String__Concat_43743732(v7, (System_String_o *)StringLiteral_1223, 0LL);
+    v8 = (System_Int32_array **)System_String__Concat_43743732(v7, (System_String_o *)StringLiteral_1223/*":"*/, 0LL);
     v9 = UserQuestEntity_TypeInfo->static_fields;
     v9->userIdString = (struct System_String_o *)v8;
     sub_B16F98((BattleServantConfConponent_o *)&v9->userIdString, v8, v10, v11, v12, v13, v14, v15);

@@ -62,23 +62,23 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   {
     sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
     sub_B16FFC(&string___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_17385, v5);
-    sub_B16FFC(&StringLiteral_17388, v6);
-    sub_B16FFC(&StringLiteral_17389, v7);
-    sub_B16FFC(&StringLiteral_17390, v8);
+    sub_B16FFC(&StringLiteral_17385/*"class_b_"*/, v5);
+    sub_B16FFC(&StringLiteral_17388/*"class_g_"*/, v6);
+    sub_B16FFC(&StringLiteral_17389/*"class_n_"*/, v7);
+    sub_B16FFC(&StringLiteral_17390/*"class_s_"*/, v8);
     byte_40FD095 = 1;
   }
   v9 = sub_B17014(string___TypeInfo, 8LL, v2);
   if ( !v9 )
     sub_B170D4();
   v16 = (struct System_String_array *)v9;
-  v17 = StringLiteral_17389;
-  if ( StringLiteral_17389 )
+  v17 = StringLiteral_17389/*"class_n_"*/;
+  if ( StringLiteral_17389/*"class_n_"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_17389, v16->obj.klass->_1.element_class);
+    v17 = sub_B170BC(StringLiteral_17389/*"class_n_"*/, v16->obj.klass->_1.element_class);
     if ( !v17 )
       goto LABEL_46;
-    v18 = (System_Int32_array **)StringLiteral_17389;
+    v18 = (System_Int32_array **)StringLiteral_17389/*"class_n_"*/;
   }
   else
   {
@@ -88,13 +88,13 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
     goto LABEL_45;
   v16->m_Items[0] = (System_String_o *)v18;
   sub_B16F98((BattleServantConfConponent_o *)v16->m_Items, v18, v10, v11, v12, v13, v14, v15);
-  v17 = StringLiteral_17385;
-  if ( StringLiteral_17385 )
+  v17 = StringLiteral_17385/*"class_b_"*/;
+  if ( StringLiteral_17385/*"class_b_"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_17385, v16->obj.klass->_1.element_class);
+    v17 = sub_B170BC(StringLiteral_17385/*"class_b_"*/, v16->obj.klass->_1.element_class);
     if ( !v17 )
       goto LABEL_46;
-    v18 = (System_Int32_array **)StringLiteral_17385;
+    v18 = (System_Int32_array **)StringLiteral_17385/*"class_b_"*/;
   }
   else
   {
@@ -104,13 +104,13 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
     goto LABEL_45;
   v16->m_Items[1] = (System_String_o *)v18;
   sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[1], v18, v10, v19, v20, v21, v22, v23);
-  v17 = StringLiteral_17390;
-  if ( StringLiteral_17390 )
+  v17 = StringLiteral_17390/*"class_s_"*/;
+  if ( StringLiteral_17390/*"class_s_"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_17390, v16->obj.klass->_1.element_class);
+    v17 = sub_B170BC(StringLiteral_17390/*"class_s_"*/, v16->obj.klass->_1.element_class);
     if ( !v17 )
       goto LABEL_46;
-    v18 = (System_Int32_array **)StringLiteral_17390;
+    v18 = (System_Int32_array **)StringLiteral_17390/*"class_s_"*/;
   }
   else
   {
@@ -120,13 +120,13 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
     goto LABEL_45;
   v16->m_Items[2] = (System_String_o *)v18;
   sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[2], v18, v10, v24, v25, v26, v27, v28);
-  v17 = StringLiteral_17388;
-  if ( StringLiteral_17388 )
+  v17 = StringLiteral_17388/*"class_g_"*/;
+  if ( StringLiteral_17388/*"class_g_"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_17388, v16->obj.klass->_1.element_class);
+    v17 = sub_B170BC(StringLiteral_17388/*"class_g_"*/, v16->obj.klass->_1.element_class);
     if ( !v17 )
       goto LABEL_46;
-    v18 = (System_Int32_array **)StringLiteral_17388;
+    v18 = (System_Int32_array **)StringLiteral_17388/*"class_g_"*/;
   }
   else
   {
@@ -136,13 +136,13 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
     goto LABEL_45;
   v16->m_Items[3] = (System_String_o *)v18;
   sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[3], v18, v10, v29, v30, v31, v32, v33);
-  v17 = StringLiteral_17388;
-  if ( StringLiteral_17388 )
+  v17 = StringLiteral_17388/*"class_g_"*/;
+  if ( StringLiteral_17388/*"class_g_"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_17388, v16->obj.klass->_1.element_class);
+    v17 = sub_B170BC(StringLiteral_17388/*"class_g_"*/, v16->obj.klass->_1.element_class);
     if ( !v17 )
       goto LABEL_46;
-    v18 = (System_Int32_array **)StringLiteral_17388;
+    v18 = (System_Int32_array **)StringLiteral_17388/*"class_g_"*/;
   }
   else
   {
@@ -152,13 +152,13 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
     goto LABEL_45;
   v16->m_Items[4] = (System_String_o *)v18;
   sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[4], v18, v10, v34, v35, v36, v37, v38);
-  v17 = StringLiteral_17388;
-  if ( StringLiteral_17388 )
+  v17 = StringLiteral_17388/*"class_g_"*/;
+  if ( StringLiteral_17388/*"class_g_"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_17388, v16->obj.klass->_1.element_class);
+    v17 = sub_B170BC(StringLiteral_17388/*"class_g_"*/, v16->obj.klass->_1.element_class);
     if ( !v17 )
       goto LABEL_46;
-    v18 = (System_Int32_array **)StringLiteral_17388;
+    v18 = (System_Int32_array **)StringLiteral_17388/*"class_g_"*/;
   }
   else
   {
@@ -168,13 +168,13 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
     goto LABEL_45;
   v16->m_Items[5] = (System_String_o *)v18;
   sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[5], v18, v10, v39, v40, v41, v42, v43);
-  v17 = StringLiteral_17389;
-  if ( StringLiteral_17389 )
+  v17 = StringLiteral_17389/*"class_n_"*/;
+  if ( StringLiteral_17389/*"class_n_"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_17389, v16->obj.klass->_1.element_class);
+    v17 = sub_B170BC(StringLiteral_17389/*"class_n_"*/, v16->obj.klass->_1.element_class);
     if ( !v17 )
       goto LABEL_46;
-    v18 = (System_Int32_array **)StringLiteral_17389;
+    v18 = (System_Int32_array **)StringLiteral_17389/*"class_n_"*/;
   }
   else
   {
@@ -184,13 +184,13 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
     goto LABEL_45;
   v16->m_Items[6] = (System_String_o *)v18;
   sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[6], v18, v10, v44, v45, v46, v47, v48);
-  v17 = StringLiteral_17389;
-  if ( StringLiteral_17389 )
+  v17 = StringLiteral_17389/*"class_n_"*/;
+  if ( StringLiteral_17389/*"class_n_"*/ )
   {
-    v17 = sub_B170BC(StringLiteral_17389, v16->obj.klass->_1.element_class);
+    v17 = sub_B170BC(StringLiteral_17389/*"class_n_"*/, v16->obj.klass->_1.element_class);
     if ( v17 )
     {
-      v18 = (System_Int32_array **)StringLiteral_17389;
+      v18 = (System_Int32_array **)StringLiteral_17389/*"class_n_"*/;
       goto LABEL_43;
     }
 LABEL_46:

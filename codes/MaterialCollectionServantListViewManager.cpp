@@ -58,19 +58,19 @@ void __fastcall MaterialCollectionServantListViewManager___cctor(const MethodInf
   {
     sub_B16FFC(&ListViewSort_TypeInfo, v1);
     sub_B16FFC(&MaterialCollectionServantListViewManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_8950, v6);
-    sub_B16FFC(&StringLiteral_8951, v7);
-    sub_B16FFC(&StringLiteral_8949, v8);
-    sub_B16FFC(&StringLiteral_8952, v9);
+    sub_B16FFC(&StringLiteral_8950/*"MaterialCollectionServant2"*/, v6);
+    sub_B16FFC(&StringLiteral_8951/*"MaterialCollectionServant4"*/, v7);
+    sub_B16FFC(&StringLiteral_8949/*"MaterialCollectionServant1"*/, v8);
+    sub_B16FFC(&StringLiteral_8952/*"MaterialCollectionServant5"*/, v9);
     byte_40FCB91 = 1;
   }
   v10 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v10, (System_String_o *)StringLiteral_8949, 27, 1, 0LL);
+  ListViewSort___ctor_30208480(v10, (System_String_o *)StringLiteral_8949/*"MaterialCollectionServant1"*/, 27, 1, 0LL);
   static_fields = (BattleServantConfConponent_o *)MaterialCollectionServantListViewManager_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v10;
   sub_B16F98(static_fields, (System_Int32_array **)v10, v12, v13, v14, v15, v16, v17);
   v22 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v18, v19, v20, v21);
-  ListViewSort___ctor_30208480(v22, (System_String_o *)StringLiteral_8950, 27, 1, 0LL);
+  ListViewSort___ctor_30208480(v22, (System_String_o *)StringLiteral_8950/*"MaterialCollectionServant2"*/, 27, 1, 0LL);
   v23 = MaterialCollectionServantListViewManager_TypeInfo->static_fields;
   v23->servantEquipSortInfo = v22;
   sub_B16F98(
@@ -83,7 +83,7 @@ void __fastcall MaterialCollectionServantListViewManager___cctor(const MethodInf
     v28,
     v29);
   v34 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v30, v31, v32, v33);
-  ListViewSort___ctor_30208480(v34, (System_String_o *)StringLiteral_8951, 27, 1, 0LL);
+  ListViewSort___ctor_30208480(v34, (System_String_o *)StringLiteral_8951/*"MaterialCollectionServant4"*/, 27, 1, 0LL);
   v35 = MaterialCollectionServantListViewManager_TypeInfo->static_fields;
   v35->commandCodeSortInfo = v34;
   sub_B16F98(
@@ -96,7 +96,7 @@ void __fastcall MaterialCollectionServantListViewManager___cctor(const MethodInf
     v40,
     v41);
   v46 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v42, v43, v44, v45);
-  ListViewSort___ctor_30208480(v46, (System_String_o *)StringLiteral_8952, 3, 1, 0LL);
+  ListViewSort___ctor_30208480(v46, (System_String_o *)StringLiteral_8952/*"MaterialCollectionServant5"*/, 3, 1, 0LL);
   v47 = MaterialCollectionServantListViewManager_TypeInfo->static_fields;
   v47->EventLogservantSortInfo = v46;
   sub_B16F98(
@@ -396,7 +396,7 @@ void __fastcall MaterialCollectionServantListViewManager__CreateList(
     sub_B16FFC(&MaterialCollectionServantListViewManager_TypeInfo, v9);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_11842, v12);
+    sub_B16FFC(&StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, v12);
     byte_40FCB74 = 1;
   }
   *(_QWORD *)findSum = 0LL;
@@ -652,7 +652,7 @@ LABEL_54:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v79 = LocalizationManager__Get((System_String_o *)StringLiteral_11842, 0LL);
+  v79 = LocalizationManager__Get((System_String_o *)StringLiteral_11842/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
 LABEL_67:
     sub_B170D4();
@@ -740,7 +740,7 @@ void __fastcall MaterialCollectionServantListViewManager__CreateValentineList(
     sub_B16FFC(&MaterialEventLogServantListViewItem_TypeInfo, v14);
     sub_B16FFC(&NetworkManager_TypeInfo, v15);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_B16FFC(&StringLiteral_11843, v17);
+    sub_B16FFC(&StringLiteral_11843/*"SERVANT_SORT_FILTER_RESULT_EMPTY_NEW_LINE"*/, v17);
     byte_40FCB75 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -836,7 +836,7 @@ void __fastcall MaterialCollectionServantListViewManager__CreateValentineList(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_11843, 0LL);
+  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_11843/*"SERVANT_SORT_FILTER_RESULT_EMPTY_NEW_LINE"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_44;
   UILabel__set_text(emptyMessageLabel, v48, 0LL);
@@ -2056,7 +2056,7 @@ void __fastcall MaterialCollectionServantListViewManager__RequestInto(
     sub_B16FFC(&Method_System_Collections_Generic_List_MaterialCollectionServantListViewObject__get_Count__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_List_MaterialCollectionServantListViewObject__get_Item__, v4);
     sub_B16FFC(&Method_MaterialCollectionServantListViewManager_OnMoveEnd__, v5);
-    sub_B16FFC(&StringLiteral_10004, v6);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v6);
     byte_40FCB80 = 1;
   }
   ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0LL);
@@ -2100,7 +2100,7 @@ LABEL_14:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2148,7 +2148,7 @@ void __fastcall MaterialCollectionServantListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_MaterialCollectionServantListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_MaterialCollectionServantListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_MaterialCollectionServantListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FCB7E = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -2163,7 +2163,7 @@ void __fastcall MaterialCollectionServantListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -2239,7 +2239,7 @@ void __fastcall MaterialCollectionServantListViewManager__RequestListObject_3009
     sub_B16FFC(&Method_System_Collections_Generic_List_MaterialCollectionServantListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_MaterialCollectionServantListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_MaterialCollectionServantListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FCB7F = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -2254,7 +2254,7 @@ void __fastcall MaterialCollectionServantListViewManager__RequestListObject_3009
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2306,10 +2306,10 @@ void __fastcall MaterialCollectionServantListViewManager__SetFilterButtonImage(
 
   if ( (byte_40FCB77 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16892, method);
-    sub_B16FFC(&StringLiteral_16893, v3);
-    sub_B16FFC(&StringLiteral_360, v4);
-    sub_B16FFC(&StringLiteral_347, v5);
+    sub_B16FFC(&StringLiteral_16892/*"btn_bg_05"*/, method);
+    sub_B16FFC(&StringLiteral_16893/*"btn_bg_06"*/, v3);
+    sub_B16FFC(&StringLiteral_360/*"#FE4545"*/, v4);
+    sub_B16FFC(&StringLiteral_347/*"#000000"*/, v5);
     byte_40FCB77 = 1;
   }
   *(_QWORD *)&v11.fields.r = 0LL;
@@ -2320,10 +2320,10 @@ void __fastcall MaterialCollectionServantListViewManager__SetFilterButtonImage(
   v7 = ListViewSort__CheckFilterDefaultAll(sort, -1, 0LL);
   if ( !this->fields.filterSprite )
     goto LABEL_12;
-  v8 = (System_String_o **)&StringLiteral_16892;
+  v8 = (System_String_o **)&StringLiteral_16892/*"btn_bg_05"*/;
   if ( !v7 )
-    v8 = (System_String_o **)&StringLiteral_16893;
-  v9 = v7 ? (System_String_o **)&StringLiteral_347 : (System_String_o **)&StringLiteral_360;
+    v8 = (System_String_o **)&StringLiteral_16893/*"btn_bg_06"*/;
+  v9 = v7 ? (System_String_o **)&StringLiteral_347/*"#000000"*/ : (System_String_o **)&StringLiteral_360/*"#FE4545"*/;
   UISprite__set_spriteName(this->fields.filterSprite, *v8, 0LL);
   *(_QWORD *)&v11.fields.r = 0LL;
   *(_QWORD *)&v11.fields.b = 0LL;
@@ -2510,12 +2510,12 @@ void __fastcall MaterialCollectionServantListViewManager__SetSortButtonImage(
   if ( (byte_40FCB8B & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_17038, v4);
-    sub_B16FFC(&StringLiteral_16995, v5);
-    sub_B16FFC(&StringLiteral_16985, v6);
-    sub_B16FFC(&StringLiteral_17002, v7);
-    sub_B16FFC(&StringLiteral_16952, v8);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_17038/*"btn_txt_up"*/, v4);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v5);
+    sub_B16FFC(&StringLiteral_16985/*"btn_txt_down"*/, v6);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v7);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v8);
     byte_40FCB8B = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -2552,7 +2552,7 @@ void __fastcall MaterialCollectionServantListViewManager__SetSortButtonImage(
         sortExplanationSprite = this->fields.sortExplanationSprite;
         if ( sortExplanationSprite )
         {
-          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+          v17 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
           UISprite__set_spriteName(sortExplanationSprite, *v17, 0LL);
           v18 = this->fields.sort;
           if ( v18 )
@@ -2561,8 +2561,8 @@ void __fastcall MaterialCollectionServantListViewManager__SetSortButtonImage(
             if ( v19 )
             {
               isAscendingOrder = v18->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16952;
-              v22 = (System_String_o **)&StringLiteral_16955;
+              v21 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
+              v22 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
 LABEL_32:
               if ( isAscendingOrder )
                 v26 = v21;
@@ -2579,7 +2579,7 @@ LABEL_32:
         v23 = this->fields.sortExplanationSprite;
         if ( v23 )
         {
-          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038 : &StringLiteral_16985);
+          v24 = (System_String_o **)(v14->fields.isAscendingOrder ? &StringLiteral_17038/*"btn_txt_up"*/ : &StringLiteral_16985/*"btn_txt_down"*/);
           UISprite__set_spriteName(v23, *v24, 0LL);
           v25 = this->fields.sort;
           if ( v25 )
@@ -2588,8 +2588,8 @@ LABEL_32:
             if ( v19 )
             {
               isAscendingOrder = v25->fields.isAscendingOrder;
-              v21 = (System_String_o **)&StringLiteral_16955;
-              v22 = (System_String_o **)&StringLiteral_16952;
+              v21 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
+              v22 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
               goto LABEL_32;
             }
           }
@@ -2618,10 +2618,10 @@ void __fastcall MaterialCollectionServantListViewManager__SetValentineFilterButt
 
   if ( (byte_40FCB78 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_360, method);
-    sub_B16FFC(&StringLiteral_16927, v3);
-    sub_B16FFC(&StringLiteral_347, v4);
-    sub_B16FFC(&StringLiteral_16926, v5);
+    sub_B16FFC(&StringLiteral_360/*"#FE4545"*/, method);
+    sub_B16FFC(&StringLiteral_16927/*"btn_filter_on"*/, v3);
+    sub_B16FFC(&StringLiteral_347/*"#000000"*/, v4);
+    sub_B16FFC(&StringLiteral_16926/*"btn_filter"*/, v5);
     byte_40FCB78 = 1;
   }
   *(_QWORD *)&v11.fields.r = 0LL;
@@ -2632,10 +2632,10 @@ void __fastcall MaterialCollectionServantListViewManager__SetValentineFilterButt
   v7 = ListViewSort__CheckFilterDefaultAll(sort, -1, 0LL);
   if ( !this->fields.filterSprite )
     goto LABEL_12;
-  v8 = (System_String_o **)&StringLiteral_16926;
+  v8 = (System_String_o **)&StringLiteral_16926/*"btn_filter"*/;
   if ( !v7 )
-    v8 = (System_String_o **)&StringLiteral_16927;
-  v9 = v7 ? (System_String_o **)&StringLiteral_347 : (System_String_o **)&StringLiteral_360;
+    v8 = (System_String_o **)&StringLiteral_16927/*"btn_filter_on"*/;
+  v9 = v7 ? (System_String_o **)&StringLiteral_347/*"#000000"*/ : (System_String_o **)&StringLiteral_360/*"#FE4545"*/;
   UISprite__set_spriteName(this->fields.filterSprite, *v8, 0LL);
   *(_QWORD *)&v11.fields.r = 0LL;
   *(_QWORD *)&v11.fields.b = 0LL;

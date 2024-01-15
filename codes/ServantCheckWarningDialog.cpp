@@ -72,26 +72,26 @@ void __fastcall ServantCheckWarningDialog__Init(ServantCheckWarningDialog_o *thi
   {
     sub_B16FFC(&UIProgressBar_OnDragFinished_TypeInfo, method);
     sub_B16FFC(&Method_ServantCheckWarningDialog_OnSliderDragFinished__, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F94FB = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
   if ( !titleLabel )
     goto LABEL_13;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   warningLabel = this->fields.warningLabel;
   if ( !warningLabel )
     goto LABEL_13;
-  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   decideButtonLabel = this->fields.decideButtonLabel;
   if ( !decideButtonLabel )
     goto LABEL_13;
-  UILabel__set_text(decideButtonLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(decideButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   cancelButtonLabel = this->fields.cancelButtonLabel;
   if ( !cancelButtonLabel )
     goto LABEL_13;
-  UILabel__set_text(cancelButtonLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   servantEquipListViewManager = (ListViewManager_o *)this->fields.servantEquipListViewManager;
   if ( !servantEquipListViewManager )
     goto LABEL_13;
@@ -224,7 +224,7 @@ void __fastcall ServantCheckWarningDialog__OnEnable(ServantCheckWarningDialog_o 
   if ( (byte_40F9502 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15422, v3);
+    sub_B16FFC(&StringLiteral_15422/*"Window/Objects/Buttons/CancelButton"*/, v3);
     byte_40F9502 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -233,7 +233,7 @@ void __fastcall ServantCheckWarningDialog__OnEnable(ServantCheckWarningDialog_o 
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15422, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15422/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
 }
 
 
@@ -315,11 +315,11 @@ void __fastcall ServantCheckWarningDialog__OpenSellCombineWarning(
     sub_B16FFC(&System_Action_TypeInfo, userSvtEntityList);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&Method_ServantCheckWarningDialog_EndOpen__, v8);
-    sub_B16FFC(&StringLiteral_11740, v9);
-    sub_B16FFC(&StringLiteral_3253, v10);
-    sub_B16FFC(&StringLiteral_3251, v11);
-    sub_B16FFC(&StringLiteral_11741, v12);
-    sub_B16FFC(&StringLiteral_11744, v13);
+    sub_B16FFC(&StringLiteral_11740/*"SERVANT_SELL_WARNING_COMBINE_BODY"*/, v9);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v10);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v11);
+    sub_B16FFC(&StringLiteral_11741/*"SERVANT_SELL_WARNING_COMBINE_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_11744/*"SERVANT_SELL_WARNING_SLIDER"*/, v13);
     byte_40F94FD = 1;
   }
   ServantCheckWarningDialog__Init(this, (const MethodInfo *)userSvtEntityList);
@@ -351,25 +351,25 @@ void __fastcall ServantCheckWarningDialog__OpenSellCombineWarning(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_11741, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_11741/*"SERVANT_SELL_WARNING_COMBINE_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_15;
   UILabel__set_text(titleLabel, v26, 0LL);
   warningLabel = this->fields.warningLabel;
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11740, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11740/*"SERVANT_SELL_WARNING_COMBINE_BODY"*/, 0LL);
   if ( !warningLabel )
     goto LABEL_15;
   UILabel__set_text(warningLabel, v28, 0LL);
   reInforeceLabel = this->fields.reInforeceLabel;
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11744, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11744/*"SERVANT_SELL_WARNING_SLIDER"*/, 0LL);
   if ( !reInforeceLabel
     || (UILabel__set_text(reInforeceLabel, v30, 0LL),
         decideButtonLabel = this->fields.decideButtonLabel,
-        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL),
+        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL),
         !decideButtonLabel)
     || (UILabel__set_text(decideButtonLabel, v32, 0LL),
         cancelButtonLabel = this->fields.cancelButtonLabel,
-        v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+        v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
         !cancelButtonLabel) )
   {
 LABEL_15:
@@ -427,11 +427,11 @@ void __fastcall ServantCheckWarningDialog__OpenSellMaterialTdWarning(
     sub_B16FFC(&System_Action_TypeInfo, userSvtEntityList);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&Method_ServantCheckWarningDialog_EndOpen__, v8);
-    sub_B16FFC(&StringLiteral_11742, v9);
-    sub_B16FFC(&StringLiteral_3253, v10);
-    sub_B16FFC(&StringLiteral_3251, v11);
-    sub_B16FFC(&StringLiteral_11743, v12);
-    sub_B16FFC(&StringLiteral_11744, v13);
+    sub_B16FFC(&StringLiteral_11742/*"SERVANT_SELL_WARNING_MATERIAL_TD_BODY"*/, v9);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v10);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v11);
+    sub_B16FFC(&StringLiteral_11743/*"SERVANT_SELL_WARNING_MATERIAL_TD_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_11744/*"SERVANT_SELL_WARNING_SLIDER"*/, v13);
     byte_40F94FF = 1;
   }
   ServantCheckWarningDialog__Init(this, (const MethodInfo *)userSvtEntityList);
@@ -463,25 +463,25 @@ void __fastcall ServantCheckWarningDialog__OpenSellMaterialTdWarning(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_11743, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_11743/*"SERVANT_SELL_WARNING_MATERIAL_TD_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_15;
   UILabel__set_text(titleLabel, v26, 0LL);
   warningLabel = this->fields.warningLabel;
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11742, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11742/*"SERVANT_SELL_WARNING_MATERIAL_TD_BODY"*/, 0LL);
   if ( !warningLabel )
     goto LABEL_15;
   UILabel__set_text(warningLabel, v28, 0LL);
   reInforeceLabel = this->fields.reInforeceLabel;
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11744, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11744/*"SERVANT_SELL_WARNING_SLIDER"*/, 0LL);
   if ( !reInforeceLabel
     || (UILabel__set_text(reInforeceLabel, v30, 0LL),
         decideButtonLabel = this->fields.decideButtonLabel,
-        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL),
+        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL),
         !decideButtonLabel)
     || (UILabel__set_text(decideButtonLabel, v32, 0LL),
         cancelButtonLabel = this->fields.cancelButtonLabel,
-        v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+        v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
         !cancelButtonLabel) )
   {
 LABEL_15:
@@ -539,11 +539,11 @@ void __fastcall ServantCheckWarningDialog__OpenSellSSRareWarning(
     sub_B16FFC(&System_Action_TypeInfo, userSvtEntityList);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&Method_ServantCheckWarningDialog_EndOpen__, v8);
-    sub_B16FFC(&StringLiteral_11745, v9);
-    sub_B16FFC(&StringLiteral_3253, v10);
-    sub_B16FFC(&StringLiteral_3251, v11);
-    sub_B16FFC(&StringLiteral_11746, v12);
-    sub_B16FFC(&StringLiteral_11744, v13);
+    sub_B16FFC(&StringLiteral_11745/*"SERVANT_SELL_WARNING_SSRARE_BODY"*/, v9);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v10);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v11);
+    sub_B16FFC(&StringLiteral_11746/*"SERVANT_SELL_WARNING_SSRARE_TITLE"*/, v12);
+    sub_B16FFC(&StringLiteral_11744/*"SERVANT_SELL_WARNING_SLIDER"*/, v13);
     byte_40F94FE = 1;
   }
   ServantCheckWarningDialog__Init(this, (const MethodInfo *)userSvtEntityList);
@@ -575,25 +575,25 @@ void __fastcall ServantCheckWarningDialog__OpenSellSSRareWarning(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_11746, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_11746/*"SERVANT_SELL_WARNING_SSRARE_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_15;
   UILabel__set_text(titleLabel, v26, 0LL);
   warningLabel = this->fields.warningLabel;
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11745, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11745/*"SERVANT_SELL_WARNING_SSRARE_BODY"*/, 0LL);
   if ( !warningLabel )
     goto LABEL_15;
   UILabel__set_text(warningLabel, v28, 0LL);
   reInforeceLabel = this->fields.reInforeceLabel;
-  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11744, 0LL);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11744/*"SERVANT_SELL_WARNING_SLIDER"*/, 0LL);
   if ( !reInforeceLabel
     || (UILabel__set_text(reInforeceLabel, v30, 0LL),
         decideButtonLabel = this->fields.decideButtonLabel,
-        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL),
+        v32 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL),
         !decideButtonLabel)
     || (UILabel__set_text(decideButtonLabel, v32, 0LL),
         cancelButtonLabel = this->fields.cancelButtonLabel,
-        v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+        v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
         !cancelButtonLabel) )
   {
 LABEL_15:
@@ -626,16 +626,16 @@ void __fastcall ServantCheckWarningDialog__SetSlider(
 
   if ( (byte_40F94FC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19559, sliderOn);
-    sub_B16FFC(&StringLiteral_19558, v5);
+    sub_B16FFC(&StringLiteral_19559/*"img_slider_thumb_locked"*/, sliderOn);
+    sub_B16FFC(&StringLiteral_19558/*"img_slider_thumb"*/, v5);
     byte_40F94FC = 1;
   }
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_16;
-  v7 = (System_String_o **)&StringLiteral_19558;
+  v7 = (System_String_o **)&StringLiteral_19558/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v7 = (System_String_o **)&StringLiteral_19559;
+    v7 = (System_String_o **)&StringLiteral_19559/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, *v7, 0LL);
   decideButton = this->fields.decideButton;
   if ( sliderOn )

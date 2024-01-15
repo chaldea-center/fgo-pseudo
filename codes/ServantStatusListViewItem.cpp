@@ -6113,17 +6113,17 @@ bool __fastcall ServantStatusListViewItem__GetVoiceInfo(
     sub_B16FFC(&LocalizationManager_TypeInfo, v20);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_B16FFC(&StringLiteral_14663, v23);
-    sub_B16FFC(&StringLiteral_9325, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
+    sub_B16FFC(&StringLiteral_14663/*"UNKNOWN_NAME_ILLUST"*/, v23);
+    sub_B16FFC(&StringLiteral_9325/*"NO_ENTRY_NAME_ILLUST"*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
     byte_410196C = 1;
   }
   entity = 0LL;
   v64 = 0LL;
-  *voice = (System_String_o *)StringLiteral_1;
+  *voice = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)voice,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     (System_String_array **)voice,
     (System_String_array **)isPlayVoice,
     (System_Boolean_array **)method,
@@ -6229,13 +6229,13 @@ LABEL_49:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v62 = &StringLiteral_9325;
+      v62 = &StringLiteral_9325/*"NO_ENTRY_NAME_ILLUST"*/;
       goto LABEL_43;
     }
     if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) == 0 )
     {
 LABEL_42:
-      v62 = &StringLiteral_14663;
+      v62 = &StringLiteral_14663/*"UNKNOWN_NAME_ILLUST"*/;
 LABEL_43:
       v60 = LocalizationManager__Get((System_String_o *)*v62, 0LL);
       *illust = v60;
@@ -6358,7 +6358,7 @@ bool __fastcall ServantStatusListViewItem__IsUpdateServantParameters(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, *(_QWORD *)&svtId);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_410196F = 1;
   }
   entity = 0LL;
@@ -6375,8 +6375,8 @@ bool __fastcall ServantStatusListViewItem__IsUpdateServantParameters(
   if ( !entity )
 LABEL_13:
     sub_B170D4();
-  CondTitle = ServantLimitAddEntity__GetCondTitle(entity, (System_String_o *)StringLiteral_1, 0LL);
-  if ( !System_String__op_Equality(CondTitle, (System_String_o *)StringLiteral_1, 0LL) )
+  CondTitle = ServantLimitAddEntity__GetCondTitle(entity, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  if ( !System_String__op_Equality(CondTitle, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
   {
     paramLimitCount = this->fields.paramLimitCount;
     if ( (paramLimitCount & 0x80000000) != 0 || paramLimitCount != imageLimitCount )

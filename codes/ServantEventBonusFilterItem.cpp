@@ -447,10 +447,10 @@ void __fastcall ServantEventBonusFilterItem__UpdateButton(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_11853, v4);
-    sub_B16FFC(&StringLiteral_16905, v5);
-    sub_B16FFC(&StringLiteral_11851, v6);
-    sub_B16FFC(&StringLiteral_16910, v7);
+    sub_B16FFC(&StringLiteral_11853/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_NOT_DISPLAY"*/, v4);
+    sub_B16FFC(&StringLiteral_16905/*"btn_bg_off"*/, v5);
+    sub_B16FFC(&StringLiteral_11851/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_DISPLAY"*/, v6);
+    sub_B16FFC(&StringLiteral_16910/*"btn_bg_on"*/, v7);
     byte_40FD092 = 1;
   }
   button = (UnityEngine_Component_o *)this->fields.button;
@@ -464,14 +464,14 @@ void __fastcall ServantEventBonusFilterItem__UpdateButton(
     goto LABEL_29;
   if ( !isHide )
   {
-    UISprite__set_spriteName((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_16910, 0LL);
+    UISprite__set_spriteName((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_16910/*"btn_bg_on"*/, 0LL);
     buttonLabel = this->fields.buttonLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_11851, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_11851/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_DISPLAY"*/, 0LL);
     if ( buttonLabel )
     {
       UILabel__set_text(buttonLabel, v22, 0LL);
@@ -501,14 +501,14 @@ void __fastcall ServantEventBonusFilterItem__UpdateButton(
 LABEL_29:
     sub_B170D4();
   }
-  UISprite__set_spriteName((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_16905, 0LL);
+  UISprite__set_spriteName((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_16905/*"btn_bg_off"*/, 0LL);
   v11 = this->fields.buttonLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11853, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11853/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_NOT_DISPLAY"*/, 0LL);
   if ( !v11 )
     goto LABEL_29;
   UILabel__set_text(v11, v12, 0LL);

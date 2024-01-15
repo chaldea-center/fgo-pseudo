@@ -179,8 +179,8 @@ void __fastcall PartyOrganizationEventPointListViewManager__CreateList(
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewItem__Remove__, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&PartyOrganizationEventPointListViewItem_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_10393, v10);
-    sub_B16FFC(&StringLiteral_10303, v11);
+    sub_B16FFC(&StringLiteral_10393/*"PARTY_ORGANIZATION_TOTAL_EVENT_POINT_INFO_TITLE"*/, v10);
+    sub_B16FFC(&StringLiteral_10303/*"PARTY_ORGANIZATION_EVENT_MEMBER_MESSAGE_EMPTY"*/, v11);
     byte_40FDC64 = 1;
   }
   v12 = this;
@@ -217,7 +217,7 @@ void __fastcall PartyOrganizationEventPointListViewManager__CreateList(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v21 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_10393, 0LL);
+  v21 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_10393/*"PARTY_ORGANIZATION_TOTAL_EVENT_POINT_INFO_TITLE"*/, 0LL);
   v26 = sub_B170CC(PartyOrganizationEventPointListViewItem_TypeInfo, v22, v23, v24, v25);
   *(_DWORD *)(v26 + 136) = 1;
   ListViewItem___ctor_30173668((ListViewItem_o *)v26, 0, 0LL);
@@ -588,7 +588,7 @@ LABEL_101:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v150 = LocalizationManager__Get((System_String_o *)StringLiteral_10303, 0LL);
+  v150 = LocalizationManager__Get((System_String_o *)StringLiteral_10303/*"PARTY_ORGANIZATION_EVENT_MEMBER_MESSAGE_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_106;
   UILabel__set_text(emptyMessageLabel, v150, 0LL);
@@ -1076,7 +1076,7 @@ void __fastcall PartyOrganizationEventPointListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyOrganizationEventPointListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyOrganizationEventPointListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_PartyOrganizationEventPointListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40FDC68 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -1091,7 +1091,7 @@ void __fastcall PartyOrganizationEventPointListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -1171,7 +1171,7 @@ void __fastcall PartyOrganizationEventPointListViewManager__RequestListObject_32
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyOrganizationEventPointListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyOrganizationEventPointListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_PartyOrganizationEventPointListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FDC69 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -1186,7 +1186,7 @@ void __fastcall PartyOrganizationEventPointListViewManager__RequestListObject_32
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -1287,7 +1287,7 @@ void __fastcall PartyOrganizationEventPointListViewManager__SetMode_32292804(
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyOrganizationEventPointListViewObject__get_Count__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_PartyOrganizationEventPointListViewObject__get_Item__, v6);
     sub_B16FFC(&Method_PartyOrganizationEventPointListViewManager_OnMoveEnd__, v7);
-    sub_B16FFC(&StringLiteral_10004, v8);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v8);
     byte_40FDC67 = 1;
   }
   this->fields.initMode = mode;
@@ -1320,7 +1320,7 @@ LABEL_22:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
     return;

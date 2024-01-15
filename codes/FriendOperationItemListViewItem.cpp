@@ -1096,7 +1096,7 @@ System_Collections_Generic_Dictionary_string__int__o *__fastcall FriendOperation
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v10);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1151, v12);
+    sub_B16FFC(&StringLiteral_1151/*"3"*/, v12);
     byte_40FD8E5 = 1;
   }
   v47 = 0LL;
@@ -1276,12 +1276,12 @@ LABEL_74:
                       break;
                     if ( System_Collections_Generic_Dictionary_XmlQualifiedName__int___ContainsKey(
                            (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)v45[4],
-                           (System_Xml_XmlQualifiedName_o *)StringLiteral_1151,
+                           (System_Xml_XmlQualifiedName_o *)StringLiteral_1151/*"3"*/,
                            (const MethodInfo_2D9C430 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
                     {
                       result = (System_Collections_Generic_Dictionary_string__int__o *)System_Collections_Generic_Dictionary_string__int___get_Item(
                                                                                          v46,
-                                                                                         (System_String_o *)StringLiteral_1151,
+                                                                                         (System_String_o *)StringLiteral_1151/*"3"*/,
                                                                                          (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
                       if ( (_DWORD)result )
                         break;
@@ -1463,9 +1463,9 @@ bool __fastcall FriendOperationItemListViewItem__SetSortValue(
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v6);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1102, v8);
-    sub_B16FFC(&StringLiteral_1004, v9);
-    sub_B16FFC(&StringLiteral_951, v10);
+    sub_B16FFC(&StringLiteral_1102/*"2"*/, v8);
+    sub_B16FFC(&StringLiteral_1004/*"1"*/, v9);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v10);
     byte_40FD8E6 = 1;
   }
   servantEntity = this->fields.servantEntity;
@@ -1521,13 +1521,13 @@ LABEL_10:
         {
           if ( priorityKind == 6 )
           {
-            v28 = &StringLiteral_1102;
+            v28 = &StringLiteral_1102/*"2"*/;
           }
           else
           {
             if ( priorityKind != 1 )
               goto LABEL_50;
-            v28 = &StringLiteral_951;
+            v28 = &StringLiteral_951/*"0"*/;
           }
           if ( System_Collections_Generic_Dictionary_XmlQualifiedName__int___ContainsKey(
                  (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)ValuesDictionary,
@@ -1569,21 +1569,21 @@ LABEL_84:
         }
         else if ( System_Collections_Generic_Dictionary_XmlQualifiedName__int___ContainsKey(
                     (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)ValuesDictionary,
-                    (System_Xml_XmlQualifiedName_o *)StringLiteral_951,
+                    (System_Xml_XmlQualifiedName_o *)StringLiteral_951/*"0"*/,
                     (const MethodInfo_2D9C430 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__)
                && System_Collections_Generic_Dictionary_XmlQualifiedName__int___ContainsKey(
                     (System_Collections_Generic_Dictionary_XmlQualifiedName__int__o *)ValuesDictionary,
-                    (System_Xml_XmlQualifiedName_o *)StringLiteral_1004,
+                    (System_Xml_XmlQualifiedName_o *)StringLiteral_1004/*"1"*/,
                     (const MethodInfo_2D9C430 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
         {
           if ( System_Collections_Generic_Dictionary_string__int___get_Item(
                  ValuesDictionary,
-                 (System_String_o *)StringLiteral_951,
+                 (System_String_o *)StringLiteral_951/*"0"*/,
                  (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__) == 1 )
           {
             Item = System_Collections_Generic_Dictionary_string__int___get_Item(
                      ValuesDictionary,
-                     (System_String_o *)StringLiteral_1004,
+                     (System_String_o *)StringLiteral_1004/*"1"*/,
                      (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
             v27 = 100000;
           }
@@ -1591,7 +1591,7 @@ LABEL_84:
           {
             if ( System_Collections_Generic_Dictionary_string__int___get_Item(
                    ValuesDictionary,
-                   (System_String_o *)StringLiteral_951,
+                   (System_String_o *)StringLiteral_951/*"0"*/,
                    (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__) != 2 )
             {
               sortValue0B = this->fields.sortValue0B;
@@ -1599,7 +1599,7 @@ LABEL_84:
             }
             Item = System_Collections_Generic_Dictionary_string__int___get_Item(
                      ValuesDictionary,
-                     (System_String_o *)StringLiteral_1004,
+                     (System_String_o *)StringLiteral_1004/*"1"*/,
                      (const MethodInfo_2D9C0F8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
             v27 = 100000000;
           }
@@ -2046,14 +2046,14 @@ System_String_o *__fastcall FriendOperationItemListViewItem__get_PlayerNameText(
 
   if ( (byte_40FD8E7 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18326, method);
+    sub_B16FFC(&StringLiteral_18326/*"error"*/, method);
     byte_40FD8E7 = 1;
   }
   otherUserGameEntity = this->fields.otherUserGameEntity;
   if ( otherUserGameEntity )
     p_userName = &otherUserGameEntity->fields.userName;
   else
-    p_userName = (System_String_o **)&StringLiteral_18326;
+    p_userName = (System_String_o **)&StringLiteral_18326/*"error"*/;
   return *p_userName;
 }
 
@@ -2144,7 +2144,7 @@ System_String_o *__fastcall FriendOperationItemListViewItem__get_SvtNameText(
   if ( (byte_40FD8E8 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3267, v4);
+    sub_B16FFC(&StringLiteral_3267/*"COMMON_NO_ENTRY"*/, v4);
     byte_40FD8E8 = 1;
   }
   servantEntity = this->fields.servantEntity;
@@ -2155,7 +2155,7 @@ System_String_o *__fastcall FriendOperationItemListViewItem__get_SvtNameText(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    return LocalizationManager__Get((System_String_o *)StringLiteral_3267, 0LL);
+    return LocalizationManager__Get((System_String_o *)StringLiteral_3267/*"COMMON_NO_ENTRY"*/, 0LL);
   }
   otherUserGameEntity = this->fields.otherUserGameEntity;
   if ( !otherUserGameEntity )

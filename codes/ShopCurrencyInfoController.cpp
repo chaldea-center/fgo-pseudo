@@ -61,7 +61,7 @@ System_String_o *__fastcall ShopCurrencyInfoController__GetCurrencyNumber(
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&NetworkManager_TypeInfo, v7);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_B16FFC(&StringLiteral_951, v9);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v9);
     byte_40FF835 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -217,7 +217,7 @@ LABEL_66:
       }
       return LocalizationManager__GetNumberFormat(mana, 0LL);
     default:
-      return (System_String_o *)StringLiteral_951;
+      return (System_String_o *)StringLiteral_951/*"0"*/;
   }
 }
 
@@ -240,19 +240,19 @@ System_String_o *__fastcall ShopCurrencyInfoController__GetCurrencySprite(
 
   if ( (byte_40FF834 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19369, *(_QWORD *)&kind);
-    sub_B16FFC(&StringLiteral_19364, v4);
-    sub_B16FFC(&StringLiteral_19361, v5);
-    sub_B16FFC(&StringLiteral_19362, v6);
-    sub_B16FFC(&StringLiteral_19354, v7);
-    sub_B16FFC(&StringLiteral_19367, v8);
-    sub_B16FFC(&StringLiteral_19363, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
-    sub_B16FFC(&StringLiteral_19371, v11);
+    sub_B16FFC(&StringLiteral_19369/*"img_bg_seed"*/, *(_QWORD *)&kind);
+    sub_B16FFC(&StringLiteral_19364/*"img_bg_mp"*/, v4);
+    sub_B16FFC(&StringLiteral_19361/*"img_bg_evocation"*/, v5);
+    sub_B16FFC(&StringLiteral_19362/*"img_bg_fragments"*/, v6);
+    sub_B16FFC(&StringLiteral_19354/*"img_bg_ap"*/, v7);
+    sub_B16FFC(&StringLiteral_19367/*"img_bg_rp"*/, v8);
+    sub_B16FFC(&StringLiteral_19363/*"img_bg_hgd"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
+    sub_B16FFC(&StringLiteral_19371/*"img_bg_spsummon"*/, v11);
     byte_40FF834 = 1;
   }
   if ( (unsigned int)(kind - 2) > 0x12 )
-    v12 = (System_String_o **)&StringLiteral_1;
+    v12 = (System_String_o **)&StringLiteral_1/*""*/;
   else
     v12 = (System_String_o **)*(&off_3D6AB80 + kind - 2);
   return *v12;
@@ -498,7 +498,7 @@ void __fastcall ShopCurrencyInfoController__RefreshCurrencyInfo(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&kind);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_19365, v8);
+    sub_B16FFC(&StringLiteral_19365/*"img_bg_pp"*/, v8);
     byte_40FF832 = 1;
   }
   this->fields.kind = kind;
@@ -626,7 +626,7 @@ LABEL_48:
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   v35 = v34;
-  v36 = (System_String_o *)StringLiteral_19365;
+  v36 = (System_String_o *)StringLiteral_19365/*"img_bg_pp"*/;
 LABEL_52:
   AtlasManager__SetShopBanner_28586476(v35, v36, 0LL);
 LABEL_56:
@@ -1314,7 +1314,7 @@ void __fastcall ShopCurrencyInfoController__ResetEventEnableTime(
 
   if ( (byte_40FF837 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, isLimitOver);
+    sub_B16FFC(&StringLiteral_1/*""*/, isLimitOver);
     byte_40FF837 = 1;
   }
   v10 = 152LL;
@@ -1350,12 +1350,12 @@ void __fastcall ShopCurrencyInfoController__ResetEventEnableTime(
     v17,
     v18);
   if ( !*p_eventItemTimeLabel
-    || (UILabel__set_text(*p_eventItemTimeLabel, (System_String_o *)StringLiteral_1, 0LL), !*p_eventItemRestLabel) )
+    || (UILabel__set_text(*p_eventItemTimeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL), !*p_eventItemRestLabel) )
   {
 LABEL_11:
     sub_B170D4();
   }
-  UILabel__set_text(*p_eventItemRestLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(*p_eventItemRestLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -1386,7 +1386,7 @@ void __fastcall ShopCurrencyInfoController__SetEventEnableTime(
 
   if ( (byte_40FF836 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15003, *(_QWORD *)&eventId);
+    sub_B16FFC(&StringLiteral_15003/*"UpdateRemainTime"*/, *(_QWORD *)&eventId);
     byte_40FF836 = 1;
   }
   v11 = 152LL;
@@ -1423,11 +1423,11 @@ void __fastcall ShopCurrencyInfoController__SetEventEnableTime(
   ShopCurrencyInfoController__UpdateRemainTime(this, v23);
   UnityEngine_MonoBehaviour__CancelInvoke_34803564(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_15003,
+    (System_String_o *)StringLiteral_15003/*"UpdateRemainTime"*/,
     0LL);
   UnityEngine_MonoBehaviour__InvokeRepeating(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_15003,
+    (System_String_o *)StringLiteral_15003/*"UpdateRemainTime"*/,
     1.0,
     1.0,
     0LL);
@@ -1503,10 +1503,10 @@ void __fastcall ShopCurrencyInfoController__SetEventItemRestTimeLabels(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
     sub_B16FFC(&Method_ShopCurrencyInfoController___c__SetEventItemRestTimeLabels_b__48_0__, v15);
     sub_B16FFC(&ShopCurrencyInfoController___c_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_13316, v17);
-    sub_B16FFC(&StringLiteral_12112, v18);
-    sub_B16FFC(&StringLiteral_1, v19);
-    sub_B16FFC(&StringLiteral_13338, v20);
+    sub_B16FFC(&StringLiteral_13316/*"TIME_OVER_EVENTREWARD"*/, v17);
+    sub_B16FFC(&StringLiteral_12112/*"SHOP_INDEFINITE_PERIOD"*/, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v19);
+    sub_B16FFC(&StringLiteral_13338/*"TIME_REST_EVENTREWARD"*/, v20);
     byte_40FF83B = 1;
   }
   if ( this->fields.kind != 6 )
@@ -1531,10 +1531,10 @@ void __fastcall ShopCurrencyInfoController__SetEventItemRestTimeLabels(
     {
       if ( !timeLabel )
         goto LABEL_61;
-      UILabel__set_text(timeLabel, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(timeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       if ( !restLabel )
         goto LABEL_61;
-      UILabel__set_text(restLabel, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(restLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       return;
     }
     eventEntity = *p_eventEntity;
@@ -1549,7 +1549,7 @@ void __fastcall ShopCurrencyInfoController__SetEventItemRestTimeLabels(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    RestTime2 = LocalizationManager__Get((System_String_o *)StringLiteral_12112, 0LL);
+    RestTime2 = LocalizationManager__Get((System_String_o *)StringLiteral_12112/*"SHOP_INDEFINITE_PERIOD"*/, 0LL);
     if ( !timeLabel )
       goto LABEL_61;
   }
@@ -1637,7 +1637,7 @@ LABEL_61:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v48 = &StringLiteral_13316;
+    v48 = &StringLiteral_13316/*"TIME_OVER_EVENTREWARD"*/;
   }
   else
   {
@@ -1646,7 +1646,7 @@ LABEL_61:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v48 = &StringLiteral_13338;
+    v48 = &StringLiteral_13338/*"TIME_REST_EVENTREWARD"*/;
   }
   v49 = LocalizationManager__Get((System_String_o *)*v48, 0LL);
   if ( !restLabel )
@@ -1702,12 +1702,12 @@ void __fastcall ShopCurrencyInfoController__StopUpdateRemainTime(
 {
   if ( (byte_40FF838 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15003, method);
+    sub_B16FFC(&StringLiteral_15003/*"UpdateRemainTime"*/, method);
     byte_40FF838 = 1;
   }
   UnityEngine_MonoBehaviour__CancelInvoke_34803564(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_15003,
+    (System_String_o *)StringLiteral_15003/*"UpdateRemainTime"*/,
     0LL);
 }
 

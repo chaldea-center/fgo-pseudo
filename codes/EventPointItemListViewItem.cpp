@@ -70,8 +70,8 @@ void __fastcall EventPointItemListViewItem___ctor(
 
   if ( (byte_40FAC2C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6043, rewardData);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_6043/*"Error"*/, rewardData);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FAC2C = 1;
   }
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
@@ -98,13 +98,13 @@ void __fastcall EventPointItemListViewItem___ctor(
     v21);
   this->fields.rewardObjectId = 0;
   p_nameTxt = &this->fields.nameTxt;
-  v23 = (System_Int32_array **)StringLiteral_6043;
-  this->fields.nameTxt = (struct System_String_o *)StringLiteral_6043;
+  v23 = (System_Int32_array **)StringLiteral_6043/*"Error"*/;
+  this->fields.nameTxt = (struct System_String_o *)StringLiteral_6043/*"Error"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.nameTxt, v23, v24, v25, v26, v27, v28, v29);
   this->fields.needPoint = 0LL;
   this->fields.iconId = 0;
-  v30 = (System_Int32_array **)StringLiteral_1;
-  this->fields.rewardDetailTxt = (struct System_String_o *)StringLiteral_1;
+  v30 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.rewardDetailTxt = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.rewardDetailTxt, v30, v31, v32, v33, v34, v35, v36);
   if ( !rewardData )
     goto LABEL_15;
@@ -377,7 +377,7 @@ System_String_o *__fastcall EventPointItemListViewItem__get_needPointTxt(
   {
     sub_B16FFC(&long_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_5640, v4);
+    sub_B16FFC(&StringLiteral_5640/*"EVENT_POINT_ITEM_REQUIRED_POINT"*/, v4);
     byte_40FAC2E = 1;
   }
   eventId = 0;
@@ -386,7 +386,7 @@ System_String_o *__fastcall EventPointItemListViewItem__get_needPointTxt(
     sub_B170D4();
   eventId = eventRewardEnt->fields.eventId;
   v6 = System_Int32__ToString((int32_t)&eventId, 0LL);
-  v7 = System_String__Concat_43743732((System_String_o *)StringLiteral_5640, v6, 0LL);
+  v7 = System_String__Concat_43743732((System_String_o *)StringLiteral_5640/*"EVENT_POINT_ITEM_REQUIRED_POINT"*/, v6, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -400,7 +400,7 @@ System_String_o *__fastcall EventPointItemListViewItem__get_needPointTxt(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5640, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5640/*"EVENT_POINT_ITEM_REQUIRED_POINT"*/, 0LL);
   }
   needPoint = this->fields.needPoint;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &needPoint);

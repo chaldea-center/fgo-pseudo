@@ -124,8 +124,8 @@ void __fastcall UserPresentHistoryListViewManager__CreateList(
     sub_B16FFC(&Method_UserPresentHistoryListViewManager___c__CreateList_b__2_0__, v15);
     sub_B16FFC(&UserPresentHistoryListViewManager___c_TypeInfo, v16);
     sub_B16FFC(&UserPresentHistoryListViewItem_TypeInfo, v17);
-    sub_B16FFC(&StringLiteral_10475, v18);
-    sub_B16FFC(&StringLiteral_1, v19);
+    sub_B16FFC(&StringLiteral_10475/*"PRESENT_HISTORY_DATE_TIME_FORMAT"*/, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v19);
     byte_40F8089 = 1;
   }
   v96 = 0LL;
@@ -195,7 +195,7 @@ void __fastcall UserPresentHistoryListViewManager__CreateList(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    format = LocalizationManager__Get((System_String_o *)StringLiteral_10475, 0LL);
+    format = LocalizationManager__Get((System_String_o *)StringLiteral_10475/*"PRESENT_HISTORY_DATE_TIME_FORMAT"*/, 0LL);
     v39 = 0;
     v40 = 0;
     while ( 1 )
@@ -278,7 +278,7 @@ LABEL_22:
       {
         v82 = this->fields.itemList;
         v83 = sub_B170CC(UserPresentHistoryListViewItem_TypeInfo, v61, v62, v63, v64);
-        v84 = (System_Int32_array **)StringLiteral_1;
+        v84 = (System_Int32_array **)StringLiteral_1/*""*/;
         ListViewItem___ctor_30173668((ListViewItem_o *)v83, v81, 0LL);
         *(_QWORD *)(v83 + 112) = v84;
         sub_B16F98((BattleServantConfConponent_o *)(v83 + 112), v84, v85, v86, v87, v88, v89, v90);

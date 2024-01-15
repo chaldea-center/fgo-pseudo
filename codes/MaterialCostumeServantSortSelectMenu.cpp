@@ -600,11 +600,11 @@ void __fastcall MaterialCostumeServantSortSelectMenu__Open(
     sub_B16FFC(
       &Field__PrivateImplementationDetails__254E546EEA15BA06916343C0FDAB6F3C2D1DB240CE5A73224D5036D7C8DFC2BE,
       v16);
-    sub_B16FFC(&StringLiteral_11890, v17);
-    sub_B16FFC(&StringLiteral_11759, v18);
-    sub_B16FFC(&StringLiteral_11763, v19);
-    sub_B16FFC(&StringLiteral_11892, v20);
-    sub_B16FFC(&StringLiteral_11760, v21);
+    sub_B16FFC(&StringLiteral_11890/*"SERVANT_SORT_RESET"*/, v17);
+    sub_B16FFC(&StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, v18);
+    sub_B16FFC(&StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, v19);
+    sub_B16FFC(&StringLiteral_11892/*"SERVANT_SORT_TITLE2"*/, v20);
+    sub_B16FFC(&StringLiteral_11760/*"SERVANT_SORT_CLEAR"*/, v21);
     byte_40FCC07 = 1;
   }
   if ( !this->fields.state )
@@ -654,27 +654,27 @@ void __fastcall MaterialCostumeServantSortSelectMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_11892, 0LL);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_11892/*"SERVANT_SORT_TITLE2"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_17;
     UILabel__set_text(titleLabel, v43, 0LL);
     decideLabel = this->fields.decideLabel;
-    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_11763, 0LL);
+    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, 0LL);
     if ( !decideLabel )
       goto LABEL_17;
     UILabel__set_text(decideLabel, v45, 0LL);
     cancelLabel = this->fields.cancelLabel;
-    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_11759, 0LL);
+    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, 0LL);
     if ( !cancelLabel )
       goto LABEL_17;
     UILabel__set_text(cancelLabel, v47, 0LL);
     clearLabel = this->fields.clearLabel;
-    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_11760, 0LL);
+    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_11760/*"SERVANT_SORT_CLEAR"*/, 0LL);
     if ( !clearLabel )
       goto LABEL_17;
     UILabel__set_text(clearLabel, v49, 0LL);
     allSelectResetLabel = this->fields.allSelectResetLabel;
-    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_11890, 0LL);
+    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_11890/*"SERVANT_SORT_RESET"*/, 0LL);
     if ( !allSelectResetLabel )
       goto LABEL_17;
     UILabel__set_text(allSelectResetLabel, v51, 0LL);

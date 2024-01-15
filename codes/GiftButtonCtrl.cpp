@@ -92,7 +92,7 @@ void __fastcall GiftButtonCtrl__OnBtnTouched(GiftButtonCtrl_o *this, const Metho
   if ( (byte_40FC10D & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_2620, v3);
+    sub_B16FFC(&StringLiteral_2620/*"BTN_GIFT"*/, v3);
     byte_40FC10D = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -101,7 +101,7 @@ void __fastcall GiftButtonCtrl__OnBtnTouched(GiftButtonCtrl_o *this, const Metho
   stateMachine = this->fields.stateMachine;
   if ( !stateMachine )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_2620, 0LL);
+  PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_2620/*"BTN_GIFT"*/, 0LL);
   ActionExtensions__Call(this->fields.OnGiftOpenAdditionalAction, 0LL);
 }
 
@@ -112,13 +112,13 @@ void __fastcall GiftButtonCtrl__OnButtonTouched(GiftButtonCtrl_o *this, const Me
 
   if ( (byte_40FC110 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2620, method);
+    sub_B16FFC(&StringLiteral_2620/*"BTN_GIFT"*/, method);
     byte_40FC110 = 1;
   }
   stateMachine = this->fields.stateMachine;
   if ( !stateMachine )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_2620, 0LL);
+  PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_2620/*"BTN_GIFT"*/, 0LL);
 }
 
 
@@ -151,7 +151,7 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceCloseFadedOut(
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_5728, v8);
+    sub_B16FFC(&StringLiteral_5728/*"EV_GIFT_EXIT"*/, v8);
     byte_40FC10F = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -224,7 +224,7 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceCloseFadedOut(
     stateMachine = this->fields.stateMachine;
     if ( stateMachine )
     {
-      PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_5728, 0LL);
+      PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_5728/*"EV_GIFT_EXIT"*/, 0LL);
       return;
     }
 LABEL_33:
@@ -248,19 +248,19 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceClosed(
 
   if ( (byte_40FC111 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6967, retrievedNewServant);
-    sub_B16FFC(&StringLiteral_5729, v5);
+    sub_B16FFC(&StringLiteral_6967/*"GotNewServantTrigger"*/, retrievedNewServant);
+    sub_B16FFC(&StringLiteral_5729/*"EV_GIFT_PROC_FIN"*/, v5);
     byte_40FC111 = 1;
   }
   stateMachine = this->fields.stateMachine;
   if ( !stateMachine
-    || (PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_5729, 0LL),
+    || (PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_5729/*"EV_GIFT_PROC_FIN"*/, 0LL),
         GiftButtonCtrl__InvalidateGiftInfo(this, v7),
         (v8 = this->fields.stateMachine) == 0LL)
     || (FsmVariables = PlayMakerFSM__get_FsmVariables(v8, 0LL)) == 0LL
     || (FsmBool = HutongGames_PlayMaker_FsmVariables__GetFsmBool(
                     FsmVariables,
-                    (System_String_o *)StringLiteral_6967,
+                    (System_String_o *)StringLiteral_6967/*"GotNewServantTrigger"*/,
                     0LL)) == 0LL )
   {
     sub_B170D4();
@@ -467,7 +467,7 @@ void __fastcall GiftButtonCtrl__SetGiftCount(GiftButtonCtrl_o *this, int32_t gif
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&giftCount);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FC10C = 1;
   }
   v7 = BalanceConfig_TypeInfo;
@@ -488,8 +488,8 @@ void __fastcall GiftButtonCtrl__SetGiftCount(GiftButtonCtrl_o *this, int32_t gif
   if ( !animFiles )
     goto LABEL_46;
   max_length = animFiles->max_length;
-  v14 = (System_String_o *)StringLiteral_1;
-  v15 = (System_String_o *)StringLiteral_1;
+  v14 = (System_String_o *)StringLiteral_1/*""*/;
+  v15 = (System_String_o *)StringLiteral_1/*""*/;
   if ( v12 <= max_length )
   {
     if ( v12 >= (unsigned int)max_length )

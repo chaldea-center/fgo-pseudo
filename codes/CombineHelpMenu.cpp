@@ -133,10 +133,10 @@ System_String_o *__fastcall CombineHelpMenu__get_closeBtnPath(CombineHelpMenu_o 
 {
   if ( (byte_40F9905 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4139, method);
+    sub_B16FFC(&StringLiteral_4139/*"CombineHelpListPanel/BaseWindow/UpperCloseButton"*/, method);
     byte_40F9905 = 1;
   }
-  return (System_String_o *)StringLiteral_4139;
+  return (System_String_o *)StringLiteral_4139/*"CombineHelpListPanel/BaseWindow/UpperCloseButton"*/;
 }
 
 

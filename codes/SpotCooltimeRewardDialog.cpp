@@ -203,8 +203,8 @@ void __fastcall SpotCooltimeRewardDialog__OnClickSwitchShowMode(
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
     sub_B16FFC(&SoundManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_22700, v8);
-    sub_B16FFC(&StringLiteral_22702, v9);
+    sub_B16FFC(&StringLiteral_22700/*"treasurechest_btn"*/, v8);
+    sub_B16FFC(&StringLiteral_22702/*"treasurechest_btn_on"*/, v9);
     byte_40FADB1 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -215,7 +215,7 @@ void __fastcall SpotCooltimeRewardDialog__OnClickSwitchShowMode(
   this->fields.isShowPossessionNum = !isShowPossessionNum;
   if ( !viewChangeButton )
     goto LABEL_30;
-  v12 = isShowPossessionNum ? (System_String_o **)&StringLiteral_22700 : (System_String_o **)&StringLiteral_22702;
+  v12 = isShowPossessionNum ? (System_String_o **)&StringLiteral_22700/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_22702/*"treasurechest_btn_on"*/;
   UIButton__set_normalSprite(viewChangeButton, *v12, 0LL);
   v13 = (UnityEngine_Component_o *)this->fields.viewChangeButton;
   if ( !v13 )
@@ -391,13 +391,13 @@ void __fastcall SpotCooltimeRewardDialog__Open(
     sub_B16FFC(&System_Collections_Generic_List_GameObject__TypeInfo, v12);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&Method_SpotCooltimeRewardDialog__Open_b__26_0__, v14);
-    sub_B16FFC(&StringLiteral_12256, v15);
-    sub_B16FFC(&StringLiteral_12261, v16);
-    sub_B16FFC(&StringLiteral_12259, v17);
-    sub_B16FFC(&StringLiteral_12262, v18);
-    sub_B16FFC(&StringLiteral_22700, v19);
-    sub_B16FFC(&StringLiteral_22706, v20);
-    sub_B16FFC(&StringLiteral_12258, v21);
+    sub_B16FFC(&StringLiteral_12256/*"SPOT_COOLTIME_REWARD_DIALOG_CLOSE"*/, v15);
+    sub_B16FFC(&StringLiteral_12261/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_QP_TITLE"*/, v16);
+    sub_B16FFC(&StringLiteral_12259/*"SPOT_COOLTIME_REWARD_DIALOG_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_12262/*"SPOT_COOLTIME_REWARD_VIEW_CHANGE"*/, v18);
+    sub_B16FFC(&StringLiteral_22700/*"treasurechest_btn"*/, v19);
+    sub_B16FFC(&StringLiteral_22706/*"treasurechest_img_bg_reward"*/, v20);
+    sub_B16FFC(&StringLiteral_12258/*"SPOT_COOLTIME_REWARD_DIALOG_GET_QP_TITLE"*/, v21);
     byte_40FADAD = 1;
   }
   viewChangeButton = (UnityEngine_Component_o *)this->fields.viewChangeButton;
@@ -409,12 +409,12 @@ void __fastcall SpotCooltimeRewardDialog__Open(
                               (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_22700, 0LL);
+  AtlasManager__SetEventUI((UISprite_o *)Component_WebViewObject, (System_String_o *)StringLiteral_22700/*"treasurechest_btn"*/, 0LL);
   v24 = this->fields.viewChangeButton;
   this->fields.isShowPossessionNum = 0;
   if ( !v24 )
     goto LABEL_36;
-  UIButton__set_normalSprite(v24, (System_String_o *)StringLiteral_22700, 0LL);
+  UIButton__set_normalSprite(v24, (System_String_o *)StringLiteral_22700/*"treasurechest_btn"*/, 0LL);
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
     goto LABEL_36;
@@ -483,32 +483,32 @@ void __fastcall SpotCooltimeRewardDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12262, 0LL);
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_12262/*"SPOT_COOLTIME_REWARD_VIEW_CHANGE"*/, 0LL);
   if ( !v46 )
     goto LABEL_36;
   UILabel__set_text(v46, v49, 0LL);
-  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_12256, 0LL);
+  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_12256/*"SPOT_COOLTIME_REWARD_DIALOG_CLOSE"*/, 0LL);
   if ( !v48 )
     goto LABEL_36;
   UILabel__set_text(v48, v50, 0LL);
   getQpTitle = this->fields.getQpTitle;
-  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_12258, 0LL);
+  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_12258/*"SPOT_COOLTIME_REWARD_DIALOG_GET_QP_TITLE"*/, 0LL);
   if ( !getQpTitle )
     goto LABEL_36;
   UILabel__set_text(getQpTitle, v52, 0LL);
   totalQpTitle = this->fields.totalQpTitle;
-  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_12261, 0LL);
+  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_12261/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_QP_TITLE"*/, 0LL);
   if ( !totalQpTitle )
     goto LABEL_36;
   UILabel__set_text(totalQpTitle, v54, 0LL);
   titleLabel = this->fields.titleLabel;
-  v56 = LocalizationManager__Get((System_String_o *)StringLiteral_12259, 0LL);
+  v56 = LocalizationManager__Get((System_String_o *)StringLiteral_12259/*"SPOT_COOLTIME_REWARD_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_36;
   UILabel__set_text(titleLabel, v56, 0LL);
   SpotCooltimeRewardDialog__SetQpLabel(this, rewardsInfo, v57);
-  AtlasManager__SetEventUI(this->fields.totalQpBg, (System_String_o *)StringLiteral_22706, 0LL);
-  AtlasManager__SetEventUI(this->fields.getQpBg, (System_String_o *)StringLiteral_22706, 0LL);
+  AtlasManager__SetEventUI(this->fields.totalQpBg, (System_String_o *)StringLiteral_22706/*"treasurechest_img_bg_reward"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.getQpBg, (System_String_o *)StringLiteral_22706/*"treasurechest_img_bg_reward"*/, 0LL);
   closeButton = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !closeButton )
     goto LABEL_36;
@@ -519,7 +519,7 @@ void __fastcall SpotCooltimeRewardDialog__Open(
           v59,
           1,
           (const MethodInfo_18BD5AC *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____66819560);
-  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_12256, 0LL);
+  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_12256/*"SPOT_COOLTIME_REWARD_DIALOG_CLOSE"*/, 0LL);
   if ( !v60 )
     goto LABEL_36;
   UILabel__set_text(v60, v61, 0LL);
@@ -658,8 +658,8 @@ void __fastcall SpotCooltimeRewardDialog__SetQpLabel(
     sub_B16FFC(&int_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_12260, v10);
-    this = (SpotCooltimeRewardDialog_o *)sub_B16FFC(&StringLiteral_12257, v11);
+    sub_B16FFC(&StringLiteral_12260/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_POINT_FORMAT"*/, v10);
+    this = (SpotCooltimeRewardDialog_o *)sub_B16FFC(&StringLiteral_12257/*"SPOT_COOLTIME_REWARD_DIALOG_GET_POINT_FORMAT"*/, v11);
     byte_40FADAE = 1;
   }
   if ( !dropItems )
@@ -742,7 +742,7 @@ LABEL_17:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12257, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12257/*"SPOT_COOLTIME_REWARD_DIALOG_GET_POINT_FORMAT"*/, 0LL);
   v30 = v14;
   v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30);
   v24 = System_String__Format(v22, v23, 0LL);
@@ -750,7 +750,7 @@ LABEL_17:
     goto LABEL_34;
   UILabel__set_text(getQpNumLabel, v24, 0LL);
   totalQpNumLabel = v4->fields.totalQpNumLabel;
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12260, 0LL);
+  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_12260/*"SPOT_COOLTIME_REWARD_DIALOG_TOTAL_POINT_FORMAT"*/, 0LL);
   v29 = qp;
   v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29);
   v28 = System_String__Format(v26, v27, 0LL);

@@ -35,12 +35,12 @@ void __fastcall BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_
   if ( (byte_40FB4A3 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&num);
-    sub_B16FFC(&StringLiteral_19423, v5);
+    sub_B16FFC(&StringLiteral_19423/*"img_gachatxt_{0:D2}"*/, v5);
     byte_40FB4A3 = 1;
   }
   v8 = num;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v8);
-  v7 = System_String__Format((System_String_o *)StringLiteral_19423, v6, 0LL);
+  v7 = System_String__Format((System_String_o *)StringLiteral_19423/*"img_gachatxt_{0:D2}"*/, v6, 0LL);
   if ( !sprite )
     sub_B170D4();
   UISprite__set_spriteName(sprite, v7, 0LL);

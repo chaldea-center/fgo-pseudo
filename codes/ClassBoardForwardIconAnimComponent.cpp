@@ -20,15 +20,15 @@ void __fastcall ClassBoardForwardIconAnimComponent___ctor(
 
   if ( (byte_40FB957 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19379, method);
-    sub_B16FFC(&StringLiteral_16918, v9);
+    sub_B16FFC(&StringLiteral_19379/*"img_class_{0}"*/, method);
+    sub_B16FFC(&StringLiteral_16918/*"btn_class"*/, v9);
     byte_40FB957 = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_19379;
-  this->fields.spriteNameFormatIcon = (struct System_String_o *)StringLiteral_19379;
+  v10 = (System_Int32_array **)StringLiteral_19379/*"img_class_{0}"*/;
+  this->fields.spriteNameFormatIcon = (struct System_String_o *)StringLiteral_19379/*"img_class_{0}"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.spriteNameFormatIcon, v10, v2, v3, v4, v5, v6, v7);
-  v11 = (System_Int32_array **)StringLiteral_16918;
-  this->fields.spriteNameButton = (struct System_String_o *)StringLiteral_16918;
+  v11 = (System_Int32_array **)StringLiteral_16918/*"btn_class"*/;
+  this->fields.spriteNameButton = (struct System_String_o *)StringLiteral_16918/*"btn_class"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.spriteNameButton, v11, v12, v13, v14, v15, v16, v17);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }

@@ -17,17 +17,17 @@ void __fastcall SkillInfo___ctor(SkillInfo_o *this, const MethodInfo *method)
 
   if ( (byte_40F9240 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F9240 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.id = 0LL;
   this->fields.charge = 0;
-  v3 = (System_Int32_array **)StringLiteral_1;
-  this->fields.title = (struct System_String_o *)StringLiteral_1;
+  v3 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.title, v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Int32_array **)StringLiteral_1;
-  this->fields.explanation = (struct System_String_o *)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.explanation = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.explanation, v10, v11, v12, v13, v14, v15, v16);
   this->fields.isUse = 0;
   *(_QWORD *)&this->fields.strengthStatus = 0LL;
@@ -75,8 +75,8 @@ System_String_o *__fastcall SkillInfo__GetMargeExplanation(
   if ( (byte_40F923E & 1) == 0 )
   {
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, isEquipExplanation);
-    sub_B16FFC(&StringLiteral_282, v7);
-    sub_B16FFC(&StringLiteral_279, v8);
+    sub_B16FFC(&StringLiteral_282/*" ＋ "*/, v7);
+    sub_B16FFC(&StringLiteral_279/*" ……"*/, v8);
     byte_40F923E = 1;
   }
   if ( !skillInfoList )
@@ -111,13 +111,13 @@ System_String_o *__fastcall SkillInfo__GetMargeExplanation(
             goto LABEL_19;
           if ( v14 >= 2 && !v15 )
           {
-            System_Text_StringBuilder__Append_41914240(v10, (System_String_o *)StringLiteral_279, 0LL);
+            System_Text_StringBuilder__Append_41914240(v10, (System_String_o *)StringLiteral_279/*" ……"*/, 0LL);
             return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v10->klass->vtable._3_ToString.method)(
                                         v10,
                                         v10->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
           }
           if ( System_Text_StringBuilder__get_Length(v10, 0LL) >= 1 )
-            System_Text_StringBuilder__Append_41914240(v10, (System_String_o *)StringLiteral_282, 0LL);
+            System_Text_StringBuilder__Append_41914240(v10, (System_String_o *)StringLiteral_282/*" ＋ "*/, 0LL);
           IsNullOrEmpty = System_Text_StringBuilder__Append_41914240(v10, explanation, 0LL);
         }
       }
@@ -154,12 +154,12 @@ System_String_o *__fastcall SkillInfo__GetMargeExplanation_23617588(
   if ( (byte_40F923F & 1) == 0 )
   {
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_282, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_282/*" ＋ "*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F923F = 1;
   }
   if ( !explanationList )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   v8 = *(_QWORD *)&explanationList->max_length;
   v9 = (System_Text_StringBuilder_o *)sub_B170CC(System_Text_StringBuilder_TypeInfo, method, v2, v3, v4);
   System_Text_StringBuilder___ctor_41908268(v9, 1024, 0LL);
@@ -181,7 +181,7 @@ System_String_o *__fastcall SkillInfo__GetMargeExplanation_23617588(
         if ( !v9 )
           goto LABEL_17;
         if ( System_Text_StringBuilder__get_Length(v9, 0LL) >= 1 )
-          System_Text_StringBuilder__Append_41914240(v9, (System_String_o *)StringLiteral_282, 0LL);
+          System_Text_StringBuilder__Append_41914240(v9, (System_String_o *)StringLiteral_282/*" ＋ "*/, 0LL);
         IsNullOrEmpty = System_Text_StringBuilder__Append_41914240(v9, v15, 0LL);
       }
       ++v13;
@@ -216,11 +216,11 @@ System_String_o *__fastcall SkillInfo__GetName(SkillInfo_o *this, const MethodIn
     sub_B16FFC(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F9241 = 1;
   }
   if ( this->fields.id < 1 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(

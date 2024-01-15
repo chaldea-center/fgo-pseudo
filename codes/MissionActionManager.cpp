@@ -911,7 +911,7 @@ void __fastcall MissionActionManager__doMissionAction(MissionActionManager_o *th
       sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v54);
       sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v55);
       sub_B16FFC(&TerminalTransitionInfo_TypeInfo, v56);
-      sub_B16FFC(&StringLiteral_1, v57);
+      sub_B16FFC(&StringLiteral_1/*""*/, v57);
       byte_40F7BC2 = 1;
     }
     eventMissionActionList = this->fields.eventMissionActionList;
@@ -1005,7 +1005,7 @@ LABEL_94:
           goto LABEL_129;
         CommonUI__OpenNotificationDialog(
           v83,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_1/*""*/,
           v84,
           v89,
           150,

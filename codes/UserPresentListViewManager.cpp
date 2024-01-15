@@ -19,11 +19,11 @@ void __fastcall UserPresentListViewManager___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&ListViewSort_TypeInfo, v1);
     sub_B16FFC(&UserPresentListViewManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_15041, v6);
+    sub_B16FFC(&StringLiteral_15041/*"UserPresent"*/, v6);
     byte_40F80C0 = 1;
   }
   v7 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_15041, 1, 0, 0LL);
+  ListViewSort___ctor_30208480(v7, (System_String_o *)StringLiteral_15041/*"UserPresent"*/, 1, 0, 0LL);
   static_fields = (BattleServantConfConponent_o *)UserPresentListViewManager_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v7;
   sub_B16F98(static_fields, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
@@ -288,7 +288,7 @@ void __fastcall UserPresentListViewManager__DlgForExpiredPresent(
     sub_B16FFC(&LocalizationManager_TypeInfo, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
     sub_B16FFC(&Method_UserPresentListViewManager__DlgForExpiredPresent_b__69_0__, v5);
-    sub_B16FFC(&StringLiteral_10474, v6);
+    sub_B16FFC(&StringLiteral_10474/*"PRESENT_EXPIRED_ERROR_MESSAGE"*/, v6);
     byte_40F80BF = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -297,7 +297,7 @@ void __fastcall UserPresentListViewManager__DlgForExpiredPresent(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10474, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10474/*"PRESENT_EXPIRED_ERROR_MESSAGE"*/, 0LL);
   v13 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v9, v10, v11, v12);
   System_Action___ctor(
     v13,
@@ -500,7 +500,7 @@ System_String_o *__fastcall UserPresentListViewManager__GetAllPresentStrings(
     sub_B16FFC(&Method_UserPresentListViewManager___c__GetAllPresentStrings_b__60_2__, v22);
     sub_B16FFC(&UserPresentListViewManager___c_TypeInfo, v23);
     sub_B16FFC(&UserPresentListViewItem_TypeInfo, v24);
-    sub_B16FFC(&StringLiteral_10479, v25);
+    sub_B16FFC(&StringLiteral_10479/*"PRESENT_INFO"*/, v25);
     byte_40F80B7 = 1;
   }
   presentAllSelectedList = this->fields.presentAllSelectedList;
@@ -731,7 +731,7 @@ System_String_o *__fastcall UserPresentListViewManager__GetAllPresentStrings(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v97 = LocalizationManager__Get((System_String_o *)StringLiteral_10479, 0LL);
+      v97 = LocalizationManager__Get((System_String_o *)StringLiteral_10479/*"PRESENT_INFO"*/, 0LL);
       if ( !v96 )
         break;
       v99 = v97;
@@ -2061,9 +2061,9 @@ void __fastcall UserPresentListViewManager__ReceiveMultiPresent(
     sub_B16FFC(&System_Collections_Generic_List_long__TypeInfo, v21);
     sub_B16FFC(&NetworkManager_TypeInfo, v22);
     sub_B16FFC(&UserPresentListViewItem_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_15571, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
-    sub_B16FFC(&StringLiteral_15807, v26);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v26);
     byte_40F80B6 = 1;
   }
   memset(&v74, 0, sizeof(v74));
@@ -2217,8 +2217,8 @@ LABEL_30:
     &v74,
     (const MethodInfo_2074050 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
   p_expiredPresents_k__BackingField = &this->fields._expiredPresents_k__BackingField;
-  v58 = (System_Int32_array **)StringLiteral_1;
-  this->fields._expiredPresents_k__BackingField = (struct System_String_o *)StringLiteral_1;
+  v58 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields._expiredPresents_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields._expiredPresents_k__BackingField,
     v58,
@@ -2234,9 +2234,9 @@ LABEL_30:
   {
     v65 = (System_Int32_array **)System_String__Concat_43747144(
                                    *p_expiredPresents_k__BackingField,
-                                   (System_String_o *)StringLiteral_15571,
+                                   (System_String_o *)StringLiteral_15571/*"["*/,
                                    (System_String_o *)v39->fields._items->m_Items[0],
-                                   (System_String_o *)StringLiteral_15807,
+                                   (System_String_o *)StringLiteral_15807/*"]"*/,
                                    0LL);
     *p_expiredPresents_k__BackingField = (System_String_o *)v65;
     sub_B16F98(
@@ -2327,8 +2327,8 @@ void __fastcall UserPresentListViewManager__RequestItemSelect(
     sub_B16FFC(&System_Collections_Generic_List_long__TypeInfo, v12);
     sub_B16FFC(&NetworkManager_TypeInfo, v13);
     sub_B16FFC(&UserPresentListViewItem_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_15571, v15);
-    sub_B16FFC(&StringLiteral_15807, v16);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v15);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v16);
     byte_40F80BE = 1;
   }
   v17 = (System_Collections_Generic_List_long__o *)sub_B170CC(
@@ -2427,9 +2427,9 @@ LABEL_27:
     if ( v37 )
     {
       v38 = System_String__Concat_43746016(
-              (System_String_o *)StringLiteral_15571,
+              (System_String_o *)StringLiteral_15571/*"["*/,
               v37[3],
-              (System_String_o *)StringLiteral_15807,
+              (System_String_o *)StringLiteral_15807/*"]"*/,
               0LL);
       this->fields._expiredPresents_k__BackingField = v38;
       sub_B16F98(
@@ -2497,7 +2497,7 @@ void __fastcall UserPresentListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_UserPresentListViewObject__GetEnumerator__, v10);
     sub_B16FFC(&Method_System_Collections_Generic_List_UserPresentListViewObject__get_Count__, v11);
     sub_B16FFC(&Method_UserPresentListViewManager_OnMoveEnd__, v12);
-    sub_B16FFC(&StringLiteral_10004, v13);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v13);
     byte_40F80AF = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -2512,7 +2512,7 @@ void __fastcall UserPresentListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -2582,7 +2582,7 @@ void __fastcall UserPresentListViewManager__RequestListObject_21348036(
     sub_B16FFC(&Method_System_Collections_Generic_List_UserPresentListViewObject__GetEnumerator__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_UserPresentListViewObject__get_Count__, v9);
     sub_B16FFC(&Method_UserPresentListViewManager_OnMoveEnd__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40F80B0 = 1;
   }
   memset(&v21, 0, sizeof(v21));
@@ -2597,7 +2597,7 @@ void __fastcall UserPresentListViewManager__RequestListObject_21348036(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -2780,10 +2780,10 @@ void __fastcall UserPresentListViewManager__SetSortButtonImage(
   if ( (byte_40F80BC & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16955, v3);
-    sub_B16FFC(&StringLiteral_16995, v4);
-    sub_B16FFC(&StringLiteral_17002, v5);
-    sub_B16FFC(&StringLiteral_16952, v6);
+    sub_B16FFC(&StringLiteral_16955/*"btn_sort_up"*/, v3);
+    sub_B16FFC(&StringLiteral_16995/*"btn_txt_new"*/, v4);
+    sub_B16FFC(&StringLiteral_17002/*"btn_txt_old"*/, v5);
+    sub_B16FFC(&StringLiteral_16952/*"btn_sort_down"*/, v6);
     byte_40F80BC = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
@@ -2817,7 +2817,7 @@ void __fastcall UserPresentListViewManager__SetSortButtonImage(
       sortExplanationSprite = this->fields.sortExplanationSprite;
       if ( sortExplanationSprite )
       {
-        v14 = (System_String_o **)(v12->fields.isAscendingOrder ? &StringLiteral_17002 : &StringLiteral_16995);
+        v14 = (System_String_o **)(v12->fields.isAscendingOrder ? &StringLiteral_17002/*"btn_txt_old"*/ : &StringLiteral_16995/*"btn_txt_new"*/);
         UISprite__set_spriteName(sortExplanationSprite, *v14, 0LL);
         v15 = this->fields.sort;
         if ( v15 )
@@ -2826,9 +2826,9 @@ void __fastcall UserPresentListViewManager__SetSortButtonImage(
           if ( v16 )
           {
             if ( v15->fields.isAscendingOrder )
-              v17 = (System_String_o **)&StringLiteral_16952;
+              v17 = (System_String_o **)&StringLiteral_16952/*"btn_sort_down"*/;
             else
-              v17 = (System_String_o **)&StringLiteral_16955;
+              v17 = (System_String_o **)&StringLiteral_16955/*"btn_sort_up"*/;
             UISprite__set_spriteName(v16, *v17, 0LL);
             return;
           }
@@ -3461,9 +3461,9 @@ void __fastcall UserPresentListViewManager__showErrorResultDlg(
   if ( (byte_40F80B8 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, callback);
-    sub_B16FFC(&StringLiteral_11034, v10);
-    sub_B16FFC(&StringLiteral_11030, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_11034/*"REJECT_NORMAL_TXT"*/, v10);
+    sub_B16FFC(&StringLiteral_11030/*"REJECT_ALL_TXT"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F80B8 = 1;
   }
   this->fields.receivecCallbackFunc = callback;
@@ -3484,7 +3484,7 @@ void __fastcall UserPresentListViewManager__showErrorResultDlg(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = &StringLiteral_11034;
+    v16 = &StringLiteral_11034/*"REJECT_NORMAL_TXT"*/;
     goto LABEL_14;
   }
   if ( (unsigned int)(kind - 1) <= 2 )
@@ -3494,12 +3494,12 @@ void __fastcall UserPresentListViewManager__showErrorResultDlg(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = &StringLiteral_11030;
+    v16 = &StringLiteral_11030/*"REJECT_ALL_TXT"*/;
 LABEL_14:
     v15 = LocalizationManager__Get((System_String_o *)*v16, 0LL);
     goto LABEL_15;
   }
-  v15 = (System_String_o *)StringLiteral_1;
+  v15 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_15:
   UserPresentListViewManager__OpenNoticeDlg(this, v15, v13);
 }

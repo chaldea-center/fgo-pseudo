@@ -123,17 +123,17 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Init(
   if ( (byte_40F9792 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F9792 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_37;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_37;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v6 = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -145,7 +145,7 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Init(
     v7 = this->fields.titleLabel;
     if ( !v7 )
       goto LABEL_37;
-    UILabel__set_text(v7, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v7, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   itemLabel = (UnityEngine_Object_o *)this->fields.itemLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -158,7 +158,7 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Init(
     v9 = this->fields.itemLabel;
     if ( !v9 )
       goto LABEL_37;
-    UILabel__set_text(v9, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v9, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   numLabel = (UnityEngine_Object_o *)this->fields.numLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -171,7 +171,7 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Init(
     v11 = this->fields.numLabel;
     if ( !v11 )
       goto LABEL_37;
-    UILabel__set_text(v11, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v11, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   v12 = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -184,7 +184,7 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Init(
     v13 = this->fields.messageLabel;
     if ( !v13 )
       goto LABEL_37;
-    UILabel__set_text(v13, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v13, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   okBtnLabel = (UnityEngine_Object_o *)this->fields.okBtnLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -197,7 +197,7 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Init(
     v15 = this->fields.okBtnLabel;
     if ( !v15 )
       goto LABEL_37;
-    UILabel__set_text(v15, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v15, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -340,11 +340,11 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Open(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
     sub_B16FFC(&Method_UserPresentBoxEventPointRewardDialog_EndOpen__, v11);
-    sub_B16FFC(&StringLiteral_26, v12);
-    sub_B16FFC(&StringLiteral_10431, v13);
-    sub_B16FFC(&StringLiteral_10432, v14);
-    sub_B16FFC(&StringLiteral_3252, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v12);
+    sub_B16FFC(&StringLiteral_10431/*"PRESENT_BOX_EVENT_POINT_REWARD_MESSAGE"*/, v13);
+    sub_B16FFC(&StringLiteral_10432/*"PRESENT_BOX_EVENT_POINT_REWARD_TITLE"*/, v14);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40F9793 = 1;
   }
   TargetPanel = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
@@ -389,8 +389,8 @@ LABEL_99:
   }
   v31 = (Il2CppObject *)*((_QWORD *)ItemData + 3);
   v32 = 4LL;
-  v33 = (System_String_o *)StringLiteral_1;
-  v34 = (System_String_o *)StringLiteral_1;
+  v33 = (System_String_o *)StringLiteral_1/*""*/;
+  v34 = (System_String_o *)StringLiteral_1/*""*/;
   while ( 1 )
   {
     v35 = v32 - 4;
@@ -398,8 +398,8 @@ LABEL_99:
       break;
     if ( (_DWORD)v32 != 4 )
     {
-      v33 = System_String__Concat_43743732(v33, (System_String_o *)StringLiteral_26, 0LL);
-      ItemData = System_String__Concat_43743732(v34, (System_String_o *)StringLiteral_26, 0LL);
+      v33 = System_String__Concat_43743732(v33, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
+      ItemData = System_String__Concat_43743732(v34, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
       eventPointReward = evpReward->fields.eventPointReward;
       if ( !eventPointReward )
         goto LABEL_99;
@@ -449,7 +449,7 @@ LABEL_100:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10432, 0LL);
+    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10432/*"PRESENT_BOX_EVENT_POINT_REWARD_TITLE"*/, 0LL);
     v42 = System_String__Format(v41, v31, 0LL);
     if ( !v40 )
       goto LABEL_99;
@@ -615,7 +615,7 @@ LABEL_100:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v83 = LocalizationManager__Get((System_String_o *)StringLiteral_10431, 0LL);
+    v83 = LocalizationManager__Get((System_String_o *)StringLiteral_10431/*"PRESENT_BOX_EVENT_POINT_REWARD_MESSAGE"*/, 0LL);
     v84 = System_String__Format(v83, v31, 0LL);
     if ( !v82 )
       goto LABEL_99;
@@ -635,7 +635,7 @@ LABEL_100:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v91 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+    v91 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     if ( v90 )
     {
       UILabel__set_text(v90, v91, 0LL);

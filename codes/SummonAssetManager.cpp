@@ -42,16 +42,16 @@ ServantRewardAction_o *__fastcall SummonAssetManager__InstantiateSvtGetPrefab(
     sub_B16FFC(&Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___, v7);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_12673, v10);
-    sub_B16FFC(&StringLiteral_12674, v11);
+    sub_B16FFC(&StringLiteral_12673/*"Servant_get_prefab"*/, v10);
+    sub_B16FFC(&StringLiteral_12674/*"Servant_get_prefab_for_battle"*/, v11);
     byte_40F7CE6 = 1;
   }
   result = (ServantRewardAction_o *)this->fields.summonAssets;
   if ( result )
   {
-    v13 = (System_String_o **)&StringLiteral_12674;
+    v13 = (System_String_o **)&StringLiteral_12674/*"Servant_get_prefab_for_battle"*/;
     if ( !isForBattle )
-      v13 = (System_String_o **)&StringLiteral_12673;
+      v13 = (System_String_o **)&StringLiteral_12673/*"Servant_get_prefab"*/;
     Object_WarBoardWaitTimeSetting = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                                  (AssetData_o *)result,
                                                                                  *v13,
@@ -132,7 +132,7 @@ void __fastcall SummonAssetManager__LoadSummonAssets(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
     sub_B16FFC(&Method_SummonAssetManager___c__DisplayClass1_0__LoadSummonAssets_b__0__, v8);
     sub_B16FFC(&SummonAssetManager___c__DisplayClass1_0_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_5833, v10);
+    sub_B16FFC(&StringLiteral_5833/*"Effect/Summon"*/, v10);
     byte_40F7CE5 = 1;
   }
   v11 = sub_B170CC(SummonAssetManager___c__DisplayClass1_0_TypeInfo, onLoad, method, v3, v4);
@@ -161,7 +161,7 @@ void __fastcall SummonAssetManager__LoadSummonAssets(
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     }
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5833, v29, 1, 0LL);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5833/*"Effect/Summon"*/, v29, 1, 0LL);
   }
 }
 

@@ -259,13 +259,13 @@ UnityEngine_Color_o __fastcall ModelLineComponent__GetMaterialColor(
 
   if ( (byte_40F7D5B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15891, method);
+    sub_B16FFC(&StringLiteral_15891/*"_Color"*/, method);
     byte_40F7D5B = 1;
   }
   Material = ModelLineComponent__GetMaterial(this, method);
   if ( !Material )
     sub_B170D4();
-  *(UnityEngine_Color_o *)&v4 = UnityEngine_Material__GetColor(Material, (System_String_o *)StringLiteral_15891, 0LL);
+  *(UnityEngine_Color_o *)&v4 = UnityEngine_Material__GetColor(Material, (System_String_o *)StringLiteral_15891/*"_Color"*/, 0LL);
   result.fields.a = v7;
   result.fields.b = v6;
   result.fields.g = v5;
@@ -356,7 +356,7 @@ void __fastcall ModelLineComponent__SetMaterialColor(
   r = color.fields.r;
   if ( (byte_40F7D5A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15891, method);
+    sub_B16FFC(&StringLiteral_15891/*"_Color"*/, method);
     byte_40F7D5A = 1;
   }
   Material = ModelLineComponent__GetMaterial(this, method);
@@ -366,7 +366,7 @@ void __fastcall ModelLineComponent__SetMaterialColor(
   v9.fields.a = a;
   v9.fields.r = r;
   v9.fields.g = g;
-  UnityEngine_Material__SetColor(Material, (System_String_o *)StringLiteral_15891, v9, 0LL);
+  UnityEngine_Material__SetColor(Material, (System_String_o *)StringLiteral_15891/*"_Color"*/, v9, 0LL);
 }
 
 
@@ -595,7 +595,7 @@ void __fastcall ModelLineComponent__SetQuestAfterActionScaleAnim_21043436(
   {
     sub_B16FFC(&Method_UITweener_Begin_TweenPosition___, isDisp);
     sub_B16FFC(&Method_UITweener_Begin_TweenScale___, v7);
-    sub_B16FFC(&StringLiteral_13010, v8);
+    sub_B16FFC(&StringLiteral_13010/*"StateQuestAfterActionEnd"*/, v8);
     byte_40F7D5D = 1;
   }
   v9 = UITweener__Begin_TweenWidth_(
@@ -623,8 +623,8 @@ void __fastcall ModelLineComponent__SetQuestAfterActionScaleAnim_21043436(
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v11->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v11->fields.eventReceiver, gameObject, v16, v17, v18, v19, v20, v21);
-  v22 = (System_Int32_array **)StringLiteral_13010;
-  v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_13010;
+  v22 = (System_Int32_array **)StringLiteral_13010/*"StateQuestAfterActionEnd"*/;
+  v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_13010/*"StateQuestAfterActionEnd"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v11->fields.callWhenFinished, v22, v23, v24, v25, v26, v27, v28);
   if ( time != 0.0 || isDisp )
   {

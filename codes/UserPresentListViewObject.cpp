@@ -237,7 +237,7 @@ void __fastcall UserPresentListViewObject__OnClickCheck(UserPresentListViewObjec
   if ( (byte_40F80CB & 1) == 0 )
   {
     sub_B16FFC(&UserPresentListViewItem_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9917, v3);
+    sub_B16FFC(&StringLiteral_9917/*"OnClickListCheck"*/, v3);
     byte_40F80CB = 1;
   }
   linkItem = this->fields.linkItem;
@@ -252,7 +252,7 @@ void __fastcall UserPresentListViewObject__OnClickCheck(UserPresentListViewObjec
       manager = (UnityEngine_Component_o *)this->fields.manager;
       if ( manager )
       {
-        UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9917, (Il2CppObject *)this, 0LL);
+        UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9917/*"OnClickListCheck"*/, (Il2CppObject *)this, 0LL);
         return;
       }
     }
@@ -273,7 +273,7 @@ void __fastcall UserPresentListViewObject__OnClickSelect(UserPresentListViewObje
   if ( (byte_40F80CA & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9922, v3);
+    sub_B16FFC(&StringLiteral_9922/*"OnClickListView"*/, v3);
     byte_40F80CA = 1;
   }
   if ( this->fields.linkItem )
@@ -287,7 +287,7 @@ void __fastcall UserPresentListViewObject__OnClickSelect(UserPresentListViewObje
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9922, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9922/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 

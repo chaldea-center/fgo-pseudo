@@ -91,26 +91,26 @@ void __fastcall LotteryShopBulkResultDialog__Init(LotteryShopBulkResultDialog_o 
   if ( (byte_40F8DF1 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3252, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F8DF1 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_10;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_10;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, v7);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v7);
   if ( !closeLabel )
 LABEL_10:
     sub_B170D4();
@@ -232,9 +232,9 @@ void __fastcall LotteryShopBulkResultDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v21);
     sub_B16FFC(&Method_LotteryShopBulkResultDialog__Open_b__11_0__, v22);
     sub_B16FFC(&LotteryShopBulkResultDialog_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_3252, v24);
-    sub_B16FFC(&StringLiteral_8423, v25);
-    sub_B16FFC(&StringLiteral_8422, v26);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v24);
+    sub_B16FFC(&StringLiteral_8423/*"LOTTERY_SHOP_BULK_BUY_RESULT_TITLE"*/, v25);
+    sub_B16FFC(&StringLiteral_8422/*"LOTTERY_SHOP_BULK_BUY_RESULT_MESSAGE"*/, v26);
     byte_40F8DF2 = 1;
   }
   memset(&v56, 0, 32);
@@ -254,17 +254,17 @@ void __fastcall LotteryShopBulkResultDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_8423, v27);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_8423/*"LOTTERY_SHOP_BULK_BUY_RESULT_TITLE"*/, v27);
   if ( !titleLabel )
     goto LABEL_33;
   UILabel__set_text(titleLabel, v29, 0LL);
   messageLabel = this->fields.messageLabel;
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8422, v31);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8422/*"LOTTERY_SHOP_BULK_BUY_RESULT_MESSAGE"*/, v31);
   if ( !messageLabel )
     goto LABEL_33;
   UILabel__set_text(messageLabel, v32, 0LL);
   closeLabel = this->fields.closeLabel;
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, v34);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v34);
   if ( !closeLabel )
     goto LABEL_33;
   UILabel__set_text(closeLabel, v35, 0LL);
@@ -369,8 +369,8 @@ System_String_o *__fastcall LotteryShopBulkResultDialog__get_closeBtnPath(
 {
   if ( (byte_40F8DF5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15416, method);
+    sub_B16FFC(&StringLiteral_15416/*"Window/CloseButton"*/, method);
     byte_40F8DF5 = 1;
   }
-  return (System_String_o *)StringLiteral_15416;
+  return (System_String_o *)StringLiteral_15416/*"Window/CloseButton"*/;
 }

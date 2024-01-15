@@ -220,8 +220,8 @@ System_String_o *__fastcall ServantLimitImageMaster__GetLimitCountSealedDialogMe
   if ( (byte_40FC806 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&svtId);
-    sub_B16FFC(&StringLiteral_8358, v7);
-    sub_B16FFC(&StringLiteral_8357, v8);
+    sub_B16FFC(&StringLiteral_8358/*"LIMIT_COUNT_SEALED_MESSAGE_"*/, v7);
+    sub_B16FFC(&StringLiteral_8357/*"LIMIT_COUNT_SEALED_MESSAGE"*/, v8);
     byte_40FC806 = 1;
   }
   LimitCountSealedServantName = (Il2CppObject *)ServantLimitImageMaster__GetLimitCountSealedServantName(
@@ -230,7 +230,7 @@ System_String_o *__fastcall ServantLimitImageMaster__GetLimitCountSealedDialogMe
                                                   limitCount,
                                                   method);
   v10 = System_Int32__ToString((int32_t)&v14, 0LL);
-  v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_8358, v10, 0LL);
+  v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_8358/*"LIMIT_COUNT_SEALED_MESSAGE_"*/, v10, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -244,7 +244,7 @@ System_String_o *__fastcall ServantLimitImageMaster__GetLimitCountSealedDialogMe
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8357, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8357/*"LIMIT_COUNT_SEALED_MESSAGE"*/, 0LL);
   }
   return System_String__Format(v12, LimitCountSealedServantName, 0LL);
 }
@@ -274,11 +274,11 @@ System_String_o *__fastcall ServantLimitImageMaster__GetLimitCountSealedServantN
     sub_B16FFC(&DataManager_TypeInfo, v7);
     sub_B16FFC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v8);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FC807 = 1;
   }
   entity = 0LL;
-  v11 = (System_String_o *)StringLiteral_1;
+  v11 = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
   Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_ServantMaster___);
@@ -621,11 +621,11 @@ System_String_o *__fastcall ServantLimitImageMaster__GetServantStatusExplanation
   if ( (byte_40FC808 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, key);
-    sub_B16FFC(&StringLiteral_15842, v5);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v5);
     byte_40FC808 = 1;
   }
   v6 = System_Int32__ToString((int32_t)&v10, 0LL);
-  v7 = System_String__Concat_43746016(key, (System_String_o *)StringLiteral_15842, v6, 0LL);
+  v7 = System_String__Concat_43746016(key, (System_String_o *)StringLiteral_15842/*"_"*/, v6, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {

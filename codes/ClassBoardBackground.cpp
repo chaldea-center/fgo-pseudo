@@ -10,11 +10,11 @@ void __fastcall ClassBoardBackground___ctor(ClassBoardBackground_o *this, const 
 
   if ( (byte_40FAF8E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15950, method);
+    sub_B16FFC(&StringLiteral_15950/*"_MainTex"*/, method);
     byte_40FAF8E = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_15950;
-  this->fields.iconMaterialPropertyName = (struct System_String_o *)StringLiteral_15950;
+  v9 = (System_Int32_array **)StringLiteral_15950/*"_MainTex"*/;
+  this->fields.iconMaterialPropertyName = (struct System_String_o *)StringLiteral_15950/*"_MainTex"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.iconMaterialPropertyName, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -410,8 +410,8 @@ void __fastcall ClassBoardBackground__PlayStartMainEffectPlayer(ClassBoardBackgr
     sub_B16FFC(&Method_ClassBoardBackground__PlayStartMainEffectPlayer_b__31_0__, v3);
     sub_B16FFC(&Method_ClassBoardEffectPlayer_GetData_int___, v4);
     sub_B16FFC(&int_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23557, v6);
-    sub_B16FFC(&StringLiteral_8870, v7);
+    sub_B16FFC(&StringLiteral_23557/*"{0}{1}"*/, v6);
+    sub_B16FFC(&StringLiteral_8870/*"MainTransition"*/, v7);
     byte_40FAF8B = 1;
   }
   startMainEffectPlayer = this->fields.startMainEffectPlayer;
@@ -424,8 +424,8 @@ void __fastcall ClassBoardBackground__PlayStartMainEffectPlayer(ClassBoardBackgr
   v19 = Data_int;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19);
   v12 = System_String__Format_43739268(
-          (System_String_o *)StringLiteral_23557,
-          (Il2CppObject *)StringLiteral_8870,
+          (System_String_o *)StringLiteral_23557/*"{0}{1}"*/,
+          (Il2CppObject *)StringLiteral_8870/*"MainTransition"*/,
           v11,
           0LL);
   v17 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v13, v14, v15, v16);
@@ -1142,13 +1142,13 @@ bool __fastcall ClassBoardBackground___c___SetClassIcon_b__28_2(
 
   if ( (byte_40F70C8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3998, x);
+    sub_B16FFC(&StringLiteral_3998/*"ClassIconEx2"*/, x);
     byte_40F70C8 = 1;
   }
   if ( !x )
     sub_B170D4();
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)x, 0LL);
-  return System_String__op_Equality(name, (System_String_o *)StringLiteral_3998, 0LL);
+  return System_String__op_Equality(name, (System_String_o *)StringLiteral_3998/*"ClassIconEx2"*/, 0LL);
 }
 
 
@@ -1174,7 +1174,7 @@ bool __fastcall ClassBoardBackground___c__DisplayClass28_0___SetClassIcon_b__0(
   if ( (byte_40F70CA & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, x);
-    sub_B16FFC(&StringLiteral_4000, v5);
+    sub_B16FFC(&StringLiteral_4000/*"ClassIcon{0}"*/, v5);
     byte_40F70CA = 1;
   }
   if ( !x )
@@ -1182,7 +1182,7 @@ bool __fastcall ClassBoardBackground___c__DisplayClass28_0___SetClassIcon_b__0(
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)x, 0LL);
   iconId = this->fields.iconId;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-  v8 = System_String__Format((System_String_o *)StringLiteral_4000, v7, 0LL);
+  v8 = System_String__Format((System_String_o *)StringLiteral_4000/*"ClassIcon{0}"*/, v7, 0LL);
   return System_String__op_Equality(name, v8, 0LL);
 }
 

@@ -12,11 +12,11 @@ void __fastcall EventInfoSpotCooltimeNoticeButton___ctor(
 
   if ( (byte_40FA170 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12249, method);
+    sub_B16FFC(&StringLiteral_12249/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/, method);
     byte_40FA170 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_12249;
-  this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE = (struct System_String_o *)StringLiteral_12249;
+  v9 = (System_Int32_array **)StringLiteral_12249/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
+  this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE = (struct System_String_o *)StringLiteral_12249/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE,
     v9,
@@ -41,13 +41,13 @@ System_String_o *__fastcall EventInfoSpotCooltimeNoticeButton__GetBgSpriteNameBy
 
   if ( (byte_40FA16F & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, *(_QWORD *)&eventId);
+    sub_B16FFC(&StringLiteral_1/*""*/, *(_QWORD *)&eventId);
     byte_40FA16F = 1;
   }
   EventInfo = EventInfoSpotCooltimeNoticeButton__GetEventInfo(this, eventId, method);
   p_BgSpriteName = &EventInfo->fields.BgSpriteName;
   if ( !EventInfo )
-    p_BgSpriteName = (System_String_o **)&StringLiteral_1;
+    p_BgSpriteName = (System_String_o **)&StringLiteral_1/*""*/;
   return *p_BgSpriteName;
 }
 
@@ -266,17 +266,17 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__UpdateButtonDisp(
 
   if ( (byte_40FA16D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40FA16D = 1;
   }
   noticeButton = this->fields.noticeButton;
   if ( !noticeButton )
     sub_B170D4();
   if ( this->fields.isButtonOn )
-    v5 = &StringLiteral_16940;
+    v5 = &StringLiteral_16940/*"btn_on"*/;
   else
-    v5 = &StringLiteral_16939;
+    v5 = &StringLiteral_16939/*"btn_off"*/;
   UIButton__set_normalSprite(noticeButton, (System_String_o *)*v5, 0LL);
 }
 

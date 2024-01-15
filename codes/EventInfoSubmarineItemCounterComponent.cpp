@@ -156,7 +156,7 @@ void __fastcall EventInfoSubmarineItemCounterComponent__Setup(
     sub_B16FFC(&AtlasManager_TypeInfo, eventUiValueEntity);
     sub_B16FFC(&EventInfoSubmarineItemCounterComponent_TypeInfo, v11);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_23395, v13);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v13);
     byte_40FA17F = 1;
   }
   this->fields.eventUiValueEntity = eventUiValueEntity;
@@ -208,7 +208,7 @@ void __fastcall EventInfoSubmarineItemCounterComponent__Setup(
         v23,
         num,
         EventInfoSubmarineItemCounterComponent_TypeInfo->static_fields->ANIMATION_TIME,
-        (System_String_o *)StringLiteral_23395,
+        (System_String_o *)StringLiteral_23395/*"{0:#,0}"*/,
         1,
         0LL);
       v24 = this->fields.countLabel;

@@ -18,15 +18,15 @@ void __fastcall EventFortificationRequest__beginRequest(
   if ( (byte_40FB680 & 1) == 0 )
   {
     sub_B16FFC(&JsonManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_18307, v7);
-    sub_B16FFC(&StringLiteral_18403, v8);
+    sub_B16FFC(&StringLiteral_18307/*"enterUserSvtInfo"*/, v7);
+    sub_B16FFC(&StringLiteral_18403/*"eventId"*/, v8);
     byte_40FB680 = 1;
   }
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v9 = JsonManager__toJson(&enterUserSvtInfo->obj, 0, 0, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18403, eventId, 0LL);
-  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_18307, v9, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18403/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField_30957164((RequestBase_o *)this, (System_String_o *)StringLiteral_18307/*"enterUserSvtInfo"*/, v9, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -41,7 +41,7 @@ System_String_o *__fastcall EventFortificationRequest__getURL(
   if ( (byte_40FB67F & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18390, v2);
+    sub_B16FFC(&StringLiteral_18390/*"event/fortification"*/, v2);
     byte_40FB67F = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -50,7 +50,7 @@ System_String_o *__fastcall EventFortificationRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18390, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18390/*"event/fortification"*/, 0LL);
 }
 
 

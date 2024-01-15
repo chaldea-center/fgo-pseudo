@@ -114,8 +114,8 @@ void __fastcall TitleInfoEventLeagueVsGaugeEffect__setup(
   if ( (byte_40FDFD3 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, point1);
-    sub_B16FFC(&StringLiteral_16779, v9);
-    this = (TitleInfoEventLeagueVsGaugeEffect_o *)sub_B16FFC(&StringLiteral_16780, v10);
+    sub_B16FFC(&StringLiteral_16779/*"bit_vs_gauge_part_1"*/, v9);
+    this = (TitleInfoEventLeagueVsGaugeEffect_o *)sub_B16FFC(&StringLiteral_16780/*"bit_vs_gauge_part_2"*/, v10);
     byte_40FDFD3 = 1;
   }
   m_ParticleSystem = 0LL;
@@ -239,7 +239,7 @@ void __fastcall TitleInfoEventLeagueVsGaugeEffect__setup(
                   v33 = v8->fields.gaugeSimpleAnim;
                   if ( v33 )
                   {
-                    v34 = &StringLiteral_16780;
+                    v34 = &StringLiteral_16780/*"bit_vs_gauge_part_2"*/;
 LABEL_54:
                     SimpleAnimation__Play_16380456(v33, (System_String_o *)*v34, 0LL);
                     return;
@@ -257,7 +257,7 @@ LABEL_54:
                   v53 = v8->fields.gaugeAnim;
                   if ( !v53 )
                     goto LABEL_69;
-                  v54 = &StringLiteral_16780;
+                  v54 = &StringLiteral_16780/*"bit_vs_gauge_part_2"*/;
 LABEL_67:
                   UnityEngine_Animation__Play_49744236(v53, (System_String_o *)*v54, 0LL);
                   return;
@@ -365,7 +365,7 @@ LABEL_70:
     v33 = v8->fields.gaugeSimpleAnim;
     if ( v33 )
     {
-      v34 = &StringLiteral_16779;
+      v34 = &StringLiteral_16779/*"bit_vs_gauge_part_1"*/;
       goto LABEL_54;
     }
 LABEL_69:
@@ -382,7 +382,7 @@ LABEL_69:
     v53 = v8->fields.gaugeAnim;
     if ( !v53 )
       goto LABEL_69;
-    v54 = &StringLiteral_16779;
+    v54 = &StringLiteral_16779/*"bit_vs_gauge_part_1"*/;
     goto LABEL_67;
   }
 }

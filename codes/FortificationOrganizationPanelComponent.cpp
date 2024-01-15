@@ -120,7 +120,7 @@ void __fastcall FortificationOrganizationPanelComponent__Open(
   if ( (byte_40FA776 & 1) == 0 )
   {
     sub_B16FFC(&CTouch_TypeInfo, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_1820, v14);
+    sub_B16FFC(&StringLiteral_1820/*"ActivationTouchFlag"*/, v14);
     byte_40FA776 = 1;
   }
   this->fields.mainPanel = mainPanel;
@@ -199,7 +199,7 @@ LABEL_18:
   MapZoom__SetZoomSize(mZoom, this->fields.zoomSize, 1, 0, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_1820,
+    (System_String_o *)StringLiteral_1820/*"ActivationTouchFlag"*/,
     0.05,
     0LL);
 }

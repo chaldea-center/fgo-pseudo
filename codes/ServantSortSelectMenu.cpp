@@ -45,18 +45,18 @@ void __fastcall ServantSortSelectMenu___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&ListViewSort_TypeInfo, v1);
     sub_B16FFC(&ServantSortSelectMenu_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_12666, v6);
-    sub_B16FFC(&StringLiteral_12667, v7);
-    sub_B16FFC(&StringLiteral_12668, v8);
+    sub_B16FFC(&StringLiteral_12666/*"ServantSortSelect1"*/, v6);
+    sub_B16FFC(&StringLiteral_12667/*"ServantSortSelect2"*/, v7);
+    sub_B16FFC(&StringLiteral_12668/*"ServantSortSelect4"*/, v8);
     byte_40F86F5 = 1;
   }
   v9 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v1, v2, v3, v4);
-  ListViewSort___ctor_30208480(v9, (System_String_o *)StringLiteral_12666, 3, 0, 0LL);
+  ListViewSort___ctor_30208480(v9, (System_String_o *)StringLiteral_12666/*"ServantSortSelect1"*/, 3, 0, 0LL);
   static_fields = (BattleServantConfConponent_o *)ServantSortSelectMenu_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v9;
   sub_B16F98(static_fields, (System_Int32_array **)v9, v11, v12, v13, v14, v15, v16);
   v21 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v17, v18, v19, v20);
-  ListViewSort___ctor_30208480(v21, (System_String_o *)StringLiteral_12667, 3, 0, 0LL);
+  ListViewSort___ctor_30208480(v21, (System_String_o *)StringLiteral_12667/*"ServantSortSelect2"*/, 3, 0, 0LL);
   v22 = ServantSortSelectMenu_TypeInfo->static_fields;
   v22->commonServantEquipSortInfo = v21;
   sub_B16F98(
@@ -69,7 +69,7 @@ void __fastcall ServantSortSelectMenu___cctor(const MethodInfo *method)
     v27,
     v28);
   v33 = (ListViewSort_o *)sub_B170CC(ListViewSort_TypeInfo, v29, v30, v31, v32);
-  ListViewSort___ctor_30208480(v33, (System_String_o *)StringLiteral_12668, 3, 0, 0LL);
+  ListViewSort___ctor_30208480(v33, (System_String_o *)StringLiteral_12668/*"ServantSortSelect4"*/, 3, 0, 0LL);
   v34 = ServantSortSelectMenu_TypeInfo->static_fields;
   v34->commandCodeSortInfo = v33;
   sub_B16F98(
@@ -2335,15 +2335,15 @@ void __fastcall ServantSortSelectMenu__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_ServantSortSelectMenu_EndOpen__, v15);
     sub_B16FFC(&ServantSortSelectMenu_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_12221, v17);
-    sub_B16FFC(&StringLiteral_12213, v18);
-    sub_B16FFC(&StringLiteral_12214, v19);
-    sub_B16FFC(&StringLiteral_11759, v20);
-    sub_B16FFC(&StringLiteral_2975, v21);
-    sub_B16FFC(&StringLiteral_11763, v22);
-    sub_B16FFC(&StringLiteral_2974, v23);
-    sub_B16FFC(&StringLiteral_12220, v24);
-    sub_B16FFC(&StringLiteral_2973, v25);
+    sub_B16FFC(&StringLiteral_12221/*"SORT_WINDOW_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_12213/*"SMART_SORT_DETAIL"*/, v18);
+    sub_B16FFC(&StringLiteral_12214/*"SMART_SORT_NAME"*/, v19);
+    sub_B16FFC(&StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_2975/*"CHOICE_SORT_NAME"*/, v21);
+    sub_B16FFC(&StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, v22);
+    sub_B16FFC(&StringLiteral_2974/*"CHOICE_SORT_DETAIL_REVERSE"*/, v23);
+    sub_B16FFC(&StringLiteral_12220/*"SORT_WINDOW_DETAIL"*/, v24);
+    sub_B16FFC(&StringLiteral_2973/*"CHOICE_SORT_DETAIL"*/, v25);
     byte_40F86C7 = 1;
   }
   if ( !this->fields.state )
@@ -2445,64 +2445,64 @@ void __fastcall ServantSortSelectMenu__Open(
                                 {
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
-                                v59 = LocalizationManager__Get((System_String_o *)StringLiteral_12221, 0LL);
+                                v59 = LocalizationManager__Get((System_String_o *)StringLiteral_12221/*"SORT_WINDOW_TITLE"*/, 0LL);
                                 if ( titleLabel )
                                 {
                                   UILabel__set_text(titleLabel, v59, 0LL);
                                   explanationLabel = this->fields.explanationLabel;
-                                  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_12220, 0LL);
+                                  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_12220/*"SORT_WINDOW_DETAIL"*/, 0LL);
                                   if ( explanationLabel )
                                   {
                                     UILabel__set_text(explanationLabel, v61, 0LL);
                                     decideLabel = this->fields.decideLabel;
-                                    v63 = LocalizationManager__Get((System_String_o *)StringLiteral_11763, 0LL);
+                                    v63 = LocalizationManager__Get((System_String_o *)StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, 0LL);
                                     if ( decideLabel )
                                     {
                                       UILabel__set_text(decideLabel, v63, 0LL);
                                       cancelLabel = this->fields.cancelLabel;
-                                      v65 = LocalizationManager__Get((System_String_o *)StringLiteral_11759, 0LL);
+                                      v65 = LocalizationManager__Get((System_String_o *)StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, 0LL);
                                       if ( cancelLabel )
                                       {
                                         UILabel__set_text(cancelLabel, v65, 0LL);
                                         smartSortLabel = this->fields.smartSortLabel;
-                                        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_12214, 0LL);
+                                        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_12214/*"SMART_SORT_NAME"*/, 0LL);
                                         if ( smartSortLabel )
                                         {
                                           UILabel__set_text(smartSortLabel, v67, 0LL);
                                           smartSortDetail = this->fields.smartSortDetail;
-                                          v69 = LocalizationManager__Get((System_String_o *)StringLiteral_12213, 0LL);
+                                          v69 = LocalizationManager__Get((System_String_o *)StringLiteral_12213/*"SMART_SORT_DETAIL"*/, 0LL);
                                           if ( smartSortDetail )
                                           {
                                             UILabel__set_text(smartSortDetail, v69, 0LL);
                                             costumeSmartSortLabel = this->fields.costumeSmartSortLabel;
-                                            v71 = LocalizationManager__Get((System_String_o *)StringLiteral_12214, 0LL);
+                                            v71 = LocalizationManager__Get((System_String_o *)StringLiteral_12214/*"SMART_SORT_NAME"*/, 0LL);
                                             if ( costumeSmartSortLabel )
                                             {
                                               UILabel__set_text(costumeSmartSortLabel, v71, 0LL);
                                               costumeSmartSortDetail = this->fields.costumeSmartSortDetail;
                                               v73 = LocalizationManager__Get(
-                                                      (System_String_o *)StringLiteral_12213,
+                                                      (System_String_o *)StringLiteral_12213/*"SMART_SORT_DETAIL"*/,
                                                       0LL);
                                               if ( costumeSmartSortDetail )
                                               {
                                                 UILabel__set_text(costumeSmartSortDetail, v73, 0LL);
                                                 smartChoiceLabel = this->fields.smartChoiceLabel;
                                                 v75 = LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_2975,
+                                                        (System_String_o *)StringLiteral_2975/*"CHOICE_SORT_NAME"*/,
                                                         0LL);
                                                 if ( smartChoiceLabel )
                                                 {
                                                   UILabel__set_text(smartChoiceLabel, v75, 0LL);
                                                   choiceSortLabel = this->fields.choiceSortLabel;
                                                   v77 = LocalizationManager__Get(
-                                                          (System_String_o *)StringLiteral_2975,
+                                                          (System_String_o *)StringLiteral_2975/*"CHOICE_SORT_NAME"*/,
                                                           0LL);
                                                   if ( choiceSortLabel )
                                                   {
                                                     UILabel__set_text(choiceSortLabel, v77, 0LL);
                                                     choiceSort2Label = this->fields.choiceSort2Label;
                                                     v79 = LocalizationManager__Get(
-                                                            (System_String_o *)StringLiteral_2975,
+                                                            (System_String_o *)StringLiteral_2975/*"CHOICE_SORT_NAME"*/,
                                                             0LL);
                                                     if ( choiceSort2Label )
                                                     {
@@ -2515,7 +2515,7 @@ void __fastcall ServantSortSelectMenu__Open(
                                                         {
                                                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                         }
-                                                        v81 = &StringLiteral_2974;
+                                                        v81 = &StringLiteral_2974/*"CHOICE_SORT_DETAIL_REVERSE"*/;
                                                       }
                                                       else
                                                       {
@@ -2524,7 +2524,7 @@ void __fastcall ServantSortSelectMenu__Open(
                                                         {
                                                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                                         }
-                                                        v81 = &StringLiteral_2973;
+                                                        v81 = &StringLiteral_2973/*"CHOICE_SORT_DETAIL"*/;
                                                       }
                                                       v82 = LocalizationManager__Get((System_String_o *)*v81, 0LL);
                                                       if ( smartChoiceDetail )
@@ -2857,8 +2857,8 @@ void __fastcall ServantSortSelectMenu__SetAllButtonSelect(ServantSortSelectMenu_
   if ( (byte_40F86D2 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B16FFC(&StringLiteral_16891, v4);
-    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890, v5);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v4);
+    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v5);
     byte_40F86D2 = 1;
   }
   allDispSortSprites = v3->fields.allDispSortSprites;
@@ -2889,8 +2889,8 @@ LABEL_16:
         {
           v12 = (UISprite_o *)v11[4];
           v13 = (System_String_o **)(operationSortInfo->fields.sortKind == servantBaseSelectList->fields._items->m_Items[v7 + 1]
-                                   ? &StringLiteral_16890
-                                   : &StringLiteral_16891);
+                                   ? &StringLiteral_16890/*"btn_bg_03"*/
+                                   : &StringLiteral_16891/*"btn_bg_04"*/);
           UISprite__set_spriteName(v12, *v13, 0LL);
           allDispSortSprites = v3->fields.allDispSortSprites;
           ++v7;
@@ -2965,8 +2965,8 @@ void __fastcall ServantSortSelectMenu__SetBuddyButtonSelect(ServantSortSelectMen
   if ( (byte_40F86D4 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B16FFC(&StringLiteral_16891, v4);
-    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890, v5);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v4);
+    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v5);
     byte_40F86D4 = 1;
   }
   buddyDispSortSprites = v3->fields.buddyDispSortSprites;
@@ -2997,8 +2997,8 @@ LABEL_16:
         {
           v12 = (UISprite_o *)v11[4];
           v13 = (System_String_o **)(operationSortInfo->fields.sortKind == buddySelectList->fields._items->m_Items[v7 + 1]
-                                   ? &StringLiteral_16890
-                                   : &StringLiteral_16891);
+                                   ? &StringLiteral_16890/*"btn_bg_03"*/
+                                   : &StringLiteral_16891/*"btn_bg_04"*/);
           UISprite__set_spriteName(v12, *v13, 0LL);
           buddyDispSortSprites = v3->fields.buddyDispSortSprites;
           ++v7;
@@ -3023,8 +3023,8 @@ void __fastcall ServantSortSelectMenu__SetChoiceSortButtonSelect(
 
   if ( (byte_40F86D9 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40F86D9 = 1;
   }
   switch ( this->fields.kind )
@@ -3054,9 +3054,9 @@ LABEL_16:
         sub_B170D4();
 LABEL_12:
       if ( operationSortInfo->fields.isChoiceSort )
-        v6 = &StringLiteral_16940;
+        v6 = &StringLiteral_16940/*"btn_on"*/;
       else
-        v6 = &StringLiteral_16939;
+        v6 = &StringLiteral_16939/*"btn_off"*/;
       UISprite__set_spriteName(choiceSort2BtnSprite, (System_String_o *)*v6, 0LL);
       return;
   }
@@ -3126,8 +3126,8 @@ void __fastcall ServantSortSelectMenu__SetCommandCodeButtonSelect(
   if ( (byte_40F86D7 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B16FFC(&StringLiteral_16891, v4);
-    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890, v5);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v4);
+    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v5);
     byte_40F86D7 = 1;
   }
   commandCodeDispSprites = v3->fields.commandCodeDispSprites;
@@ -3158,8 +3158,8 @@ LABEL_16:
         {
           v12 = (UISprite_o *)v11[4];
           v13 = (System_String_o **)(operationSortInfo->fields.sortKind == commandCodeSelectList->fields._items->m_Items[v7 + 1]
-                                   ? &StringLiteral_16890
-                                   : &StringLiteral_16891);
+                                   ? &StringLiteral_16890/*"btn_bg_03"*/
+                                   : &StringLiteral_16891/*"btn_bg_04"*/);
           UISprite__set_spriteName(v12, *v13, 0LL);
           commandCodeDispSprites = v3->fields.commandCodeDispSprites;
           ++v7;
@@ -3234,8 +3234,8 @@ void __fastcall ServantSortSelectMenu__SetCostumeButtonSelect(ServantSortSelectM
   if ( (byte_40F86D6 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B16FFC(&StringLiteral_16891, v4);
-    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890, v5);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v4);
+    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v5);
     byte_40F86D6 = 1;
   }
   costumeDispSprites = v3->fields.costumeDispSprites;
@@ -3266,8 +3266,8 @@ LABEL_16:
         {
           v12 = (UISprite_o *)v11[4];
           v13 = (System_String_o **)(operationSortInfo->fields.sortKind == servantCostumeSelectList->fields._items->m_Items[v7 + 1]
-                                   ? &StringLiteral_16890
-                                   : &StringLiteral_16891);
+                                   ? &StringLiteral_16890/*"btn_bg_03"*/
+                                   : &StringLiteral_16891/*"btn_bg_04"*/);
           UISprite__set_spriteName(v12, *v13, 0LL);
           costumeDispSprites = v3->fields.costumeDispSprites;
           ++v7;
@@ -3390,8 +3390,8 @@ void __fastcall ServantSortSelectMenu__SetFatigueButtonSelect(ServantSortSelectM
   if ( (byte_40F86D3 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B16FFC(&StringLiteral_16891, v4);
-    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890, v5);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v4);
+    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v5);
     byte_40F86D3 = 1;
   }
   fatigueDispSortSprites = v3->fields.fatigueDispSortSprites;
@@ -3422,8 +3422,8 @@ LABEL_16:
         {
           v12 = (UISprite_o *)v11[4];
           v13 = (System_String_o **)(operationSortInfo->fields.sortKind == fatigureSelectList->fields._items->m_Items[v7 + 1]
-                                   ? &StringLiteral_16890
-                                   : &StringLiteral_16891);
+                                   ? &StringLiteral_16890/*"btn_bg_03"*/
+                                   : &StringLiteral_16891/*"btn_bg_04"*/);
           UISprite__set_spriteName(v12, *v13, 0LL);
           fatigueDispSortSprites = v3->fields.fatigueDispSortSprites;
           ++v7;
@@ -3498,8 +3498,8 @@ void __fastcall ServantSortSelectMenu__SetNormalButtonSelect(ServantSortSelectMe
   if ( (byte_40F86D1 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B16FFC(&StringLiteral_16891, v4);
-    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890, v5);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v4);
+    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v5);
     byte_40F86D1 = 1;
   }
   normalSortButtons = v3->fields.normalSortButtons;
@@ -3530,8 +3530,8 @@ LABEL_17:
           {
             v12 = (UISprite_o *)v11[4];
             v13 = (System_String_o **)(operationSortInfo->fields.sortKind == servantSelectList->fields._items->m_Items[v7 + 1]
-                                     ? &StringLiteral_16890
-                                     : &StringLiteral_16891);
+                                     ? &StringLiteral_16890/*"btn_bg_03"*/
+                                     : &StringLiteral_16891/*"btn_bg_04"*/);
             UISprite__set_spriteName(v12, *v13, 0LL);
             normalSortButtons = v3->fields.normalSortButtons;
             ++v7;
@@ -3607,8 +3607,8 @@ void __fastcall ServantSortSelectMenu__SetShortButtonSelect(ServantSortSelectMen
   if ( (byte_40F86D5 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_SortKind__get_Item__, method);
-    sub_B16FFC(&StringLiteral_16891, v4);
-    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890, v5);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v4);
+    this = (ServantSortSelectMenu_o *)sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v5);
     byte_40F86D5 = 1;
   }
   shortDispSortSprites = v3->fields.shortDispSortSprites;
@@ -3639,8 +3639,8 @@ LABEL_16:
         {
           v12 = (UISprite_o *)v11[4];
           v13 = (System_String_o **)(operationSortInfo->fields.sortKind == servantEquipSelectList->fields._items->m_Items[v7 + 1]
-                                   ? &StringLiteral_16890
-                                   : &StringLiteral_16891);
+                                   ? &StringLiteral_16890/*"btn_bg_03"*/
+                                   : &StringLiteral_16891/*"btn_bg_04"*/);
           UISprite__set_spriteName(v12, *v13, 0LL);
           shortDispSortSprites = v3->fields.shortDispSortSprites;
           ++v7;
@@ -3665,8 +3665,8 @@ void __fastcall ServantSortSelectMenu__SetSmartSortButtonSelect(
 
   if ( (byte_40F86D8 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40F86D8 = 1;
   }
   if ( this->fields.kind == 5 )
@@ -3686,9 +3686,9 @@ LABEL_13:
       sub_B170D4();
   }
   if ( operationSortInfo->fields.isSmartSort )
-    v6 = &StringLiteral_16940;
+    v6 = &StringLiteral_16940/*"btn_on"*/;
   else
-    v6 = &StringLiteral_16939;
+    v6 = &StringLiteral_16939/*"btn_off"*/;
   UISprite__set_spriteName(costumeSmartSortBtnSprite, (System_String_o *)*v6, 0LL);
 }
 
@@ -3739,10 +3739,10 @@ System_String_o *__fastcall ServantSortSelectMenu__get_closeBtnPath(
 {
   if ( (byte_40F86F3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15414, method);
+    sub_B16FFC(&StringLiteral_15414/*"Window/CancelButton"*/, method);
     byte_40F86F3 = 1;
   }
-  return (System_String_o *)StringLiteral_15414;
+  return (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/;
 }
 
 

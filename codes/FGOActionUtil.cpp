@@ -25,13 +25,13 @@ UnityEngine_GameObject_o *__fastcall FGOActionUtil__getEffectObject(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, name);
     sub_B16FFC(&UnityEngine_GameObject_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_2744, v9);
-    sub_B16FFC(&StringLiteral_18155, v10);
+    sub_B16FFC(&StringLiteral_2744/*"Battle/CommonEffects/"*/, v9);
+    sub_B16FFC(&StringLiteral_18155/*"effect/"*/, v10);
     byte_40FAD0F = 1;
   }
   if ( folder == 2 )
   {
-    v11 = &StringLiteral_18155;
+    v11 = &StringLiteral_18155/*"effect/"*/;
 LABEL_15:
     v15 = System_String__Concat_43743732((System_String_o *)*v11, name, 0LL);
     result = (UnityEngine_GameObject_o *)UnityEngine_Resources__Load(v15, 0LL);
@@ -46,7 +46,7 @@ LABEL_15:
   {
     if ( folder )
       return 0LL;
-    v11 = &StringLiteral_2744;
+    v11 = &StringLiteral_2744/*"Battle/CommonEffects/"*/;
     goto LABEL_15;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

@@ -27,13 +27,13 @@ void __fastcall VoiceEffectComponent__LoadVoiceAsset(
   {
     sub_B16FFC(&int_TypeInfo, callback);
     sub_B16FFC(&SoundManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23549, v6);
+    sub_B16FFC(&StringLiteral_23549/*"{0}_{1}"*/, v6);
     byte_40FF744 = 1;
   }
   v7 = *(Il2CppObject **)&this->fields.voiceId;
   voicePath = (int)this->fields.voicePath;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &voicePath);
-  v9 = System_String__Format_43739268((System_String_o *)StringLiteral_23549, v7, v8, 0LL);
+  v9 = System_String__Format_43739268((System_String_o *)StringLiteral_23549/*"{0}_{1}"*/, v7, v8, 0LL);
   this[1].klass = (VoiceEffectComponent_c *)v9;
   sub_B16F98((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)v9, v10, v11, v12, v13, v14, v15);
   klass = (System_String_o *)this[1].klass;

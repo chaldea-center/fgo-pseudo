@@ -14,12 +14,12 @@ void __fastcall WarBoardRoadComponent___cctor(const MethodInfo *method)
   if ( (byte_40FBA72 & 1) == 0 )
   {
     sub_B16FFC(&WarBoardRoadComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_5379, v8);
+    sub_B16FFC(&StringLiteral_5379/*"DrawPath"*/, v8);
     byte_40FBA72 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarBoardRoadComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_5379;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5379;
+  v10 = (System_Int32_array **)StringLiteral_5379/*"DrawPath"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_5379/*"DrawPath"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -241,13 +241,13 @@ void __fastcall WarBoardRoadComponent__DisablePass(WarBoardRoadComponent_o *this
 
   if ( (byte_40FBA6E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21756, method);
+    sub_B16FFC(&StringLiteral_21756/*"road"*/, method);
     byte_40FBA6E = 1;
   }
   roadImage = this->fields.roadImage;
   if ( !roadImage )
     sub_B170D4();
-  UISprite__set_spriteName(roadImage, (System_String_o *)StringLiteral_21756, 0LL);
+  UISprite__set_spriteName(roadImage, (System_String_o *)StringLiteral_21756/*"road"*/, 0LL);
 }
 
 
@@ -257,13 +257,13 @@ void __fastcall WarBoardRoadComponent__EnablePass(WarBoardRoadComponent_o *this,
 
   if ( (byte_40FBA6D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21757, method);
+    sub_B16FFC(&StringLiteral_21757/*"road_on"*/, method);
     byte_40FBA6D = 1;
   }
   roadImage = this->fields.roadImage;
   if ( !roadImage )
     sub_B170D4();
-  UISprite__set_spriteName(roadImage, (System_String_o *)StringLiteral_21757, 0LL);
+  UISprite__set_spriteName(roadImage, (System_String_o *)StringLiteral_21757/*"road_on"*/, 0LL);
 }
 
 
@@ -325,7 +325,7 @@ void __fastcall WarBoardRoadComponent__Initialize(
   if ( (byte_40FBA6C & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, imageSetAtlas);
-    sub_B16FFC(&StringLiteral_21756, v17);
+    sub_B16FFC(&StringLiteral_21756/*"road"*/, v17);
     byte_40FBA6C = 1;
   }
   LODWORD(v44.invoker_method) = 0;
@@ -357,7 +357,7 @@ void __fastcall WarBoardRoadComponent__Initialize(
   v27 = this->fields.roadImage;
   if ( !v27 )
     goto LABEL_31;
-  UISprite__set_spriteName(v27, (System_String_o *)StringLiteral_21756, 0LL);
+  UISprite__set_spriteName(v27, (System_String_o *)StringLiteral_21756/*"road"*/, 0LL);
   v28 = this->fields.roadImage;
   if ( !v28 )
     goto LABEL_31;

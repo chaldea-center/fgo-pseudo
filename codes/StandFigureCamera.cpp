@@ -34,8 +34,8 @@ void __fastcall StandFigureCamera__OnPostRender(StandFigureCamera_o *this, const
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Camera___, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_11303, v4);
-    sub_B16FFC(&StringLiteral_13540, v5);
+    sub_B16FFC(&StringLiteral_11303/*"RednerTexture"*/, v4);
+    sub_B16FFC(&StringLiteral_13540/*"TempStandFigurenRednerTexture"*/, v5);
     byte_40FAE4F = 1;
   }
   if ( this->fields.state == 2 )
@@ -90,8 +90,8 @@ void __fastcall StandFigureCamera__OnPostRender(StandFigureCamera_o *this, const
             v23 = (UnityEngine_Object_o *)UnityEngine_Camera__get_targetTexture(v22, 0LL);
             if ( v23 )
             {
-              UnityEngine_Object__set_name(v23, (System_String_o *)StringLiteral_11303, 0LL);
-              UnityEngine_Object__set_name(v8, (System_String_o *)StringLiteral_13540, 0LL);
+              UnityEngine_Object__set_name(v23, (System_String_o *)StringLiteral_11303/*"RednerTexture"*/, 0LL);
+              UnityEngine_Object__set_name(v8, (System_String_o *)StringLiteral_13540/*"TempStandFigurenRednerTexture"*/, 0LL);
               manager = this->fields.manager;
               if ( manager )
               {
@@ -161,8 +161,8 @@ bool __fastcall StandFigureCamera__Request(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Camera___, recycleTexture);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11303, v6);
-    sub_B16FFC(&StringLiteral_11297, v7);
+    sub_B16FFC(&StringLiteral_11303/*"RednerTexture"*/, v6);
+    sub_B16FFC(&StringLiteral_11297/*"RecycleRednerTexture"*/, v7);
     byte_40FAE4D = 1;
   }
   if ( this->fields.state )
@@ -218,7 +218,7 @@ bool __fastcall StandFigureCamera__Request(
   v24 = (UnityEngine_Object_o *)UnityEngine_Camera__get_targetTexture(v23, 0LL);
   if ( !v24 )
     goto LABEL_27;
-  UnityEngine_Object__set_name(v24, (System_String_o *)StringLiteral_11303, 0LL);
+  UnityEngine_Object__set_name(v24, (System_String_o *)StringLiteral_11303/*"RednerTexture"*/, 0LL);
   v25 = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                   (UnityEngine_Component_o *)this,
                                   (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_Camera___);
@@ -242,7 +242,7 @@ bool __fastcall StandFigureCamera__Request(
   if ( !recycleTexture
     || (UnityEngine_Object__set_name(
           (UnityEngine_Object_o *)recycleTexture,
-          (System_String_o *)StringLiteral_11297,
+          (System_String_o *)StringLiteral_11297/*"RecycleRednerTexture"*/,
           0LL),
         *p_recycleTexture = recycleTexture,
         sub_B16F98(
@@ -308,8 +308,8 @@ bool __fastcall StandFigureCamera__RequestTypePoint(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Camera___, recycleTexture);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11303, v6);
-    sub_B16FFC(&StringLiteral_11297, v7);
+    sub_B16FFC(&StringLiteral_11303/*"RednerTexture"*/, v6);
+    sub_B16FFC(&StringLiteral_11297/*"RecycleRednerTexture"*/, v7);
     byte_40FAE4E = 1;
   }
   if ( this->fields.state )
@@ -365,7 +365,7 @@ bool __fastcall StandFigureCamera__RequestTypePoint(
   v24 = (UnityEngine_Object_o *)UnityEngine_Camera__get_targetTexture(v23, 0LL);
   if ( !v24 )
     goto LABEL_27;
-  UnityEngine_Object__set_name(v24, (System_String_o *)StringLiteral_11303, 0LL);
+  UnityEngine_Object__set_name(v24, (System_String_o *)StringLiteral_11303/*"RednerTexture"*/, 0LL);
   v25 = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                   (UnityEngine_Component_o *)this,
                                   (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_Camera___);
@@ -389,7 +389,7 @@ bool __fastcall StandFigureCamera__RequestTypePoint(
   if ( !recycleTexture
     || (UnityEngine_Object__set_name(
           (UnityEngine_Object_o *)recycleTexture,
-          (System_String_o *)StringLiteral_11297,
+          (System_String_o *)StringLiteral_11297/*"RecycleRednerTexture"*/,
           0LL),
         *p_recycleTexture = recycleTexture,
         sub_B16F98(

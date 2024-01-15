@@ -1157,18 +1157,18 @@ void __fastcall NpCombineControl__InitDispCombineInfo(NpCombineControl_o *this, 
   if ( (byte_40F9380 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_746, v3);
-    sub_B16FFC(&StringLiteral_9242, v4);
+    sub_B16FFC(&StringLiteral_746/*"-"*/, v3);
+    sub_B16FFC(&StringLiteral_9242/*"NEED_QP_INFO"*/, v4);
     byte_40F9380 = 1;
   }
   currentInfoLb = this->fields.currentInfoLb;
   if ( !currentInfoLb )
     goto LABEL_15;
-  UILabel__set_text(currentInfoLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(currentInfoLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   afterInfoLb = this->fields.afterInfoLb;
   if ( !afterInfoLb )
     goto LABEL_15;
-  UILabel__set_text(afterInfoLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(afterInfoLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   maxLvStatusInfo = this->fields.maxLvStatusInfo;
   if ( !maxLvStatusInfo )
     goto LABEL_15;
@@ -1179,7 +1179,7 @@ void __fastcall NpCombineControl__InitDispCombineInfo(NpCombineControl_o *this, 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9242, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9242/*"NEED_QP_INFO"*/, 0LL);
   if ( !needQpLb )
     goto LABEL_15;
   UILabel__set_text(needQpLb, v9, 0LL);
@@ -1249,7 +1249,7 @@ void __fastcall NpCombineControl__InitInfo(NpCombineControl_o *this, const Metho
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoData__get_Count__, v6);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_8812, v8);
+    sub_B16FFC(&StringLiteral_8812/*"MSG_PRESELECT_BASE_SVT"*/, v8);
     byte_40F937E = 1;
   }
   memset(&v32, 0, sizeof(v32));
@@ -1278,7 +1278,7 @@ void __fastcall NpCombineControl__InitInfo(NpCombineControl_o *this, const Metho
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8812, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8812/*"MSG_PRESELECT_BASE_SVT"*/, 0LL);
   if ( !preSelectBaseLb )
     goto LABEL_26;
   UILabel__set_text(preSelectBaseLb, v17, 0LL);
@@ -1628,8 +1628,8 @@ void __fastcall NpCombineControl__RefreshSvtNpCombineEndShowServant(NpCombineCon
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoData__get_Count__, v6);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_746, v9);
-    sub_B16FFC(&StringLiteral_9242, v10);
+    sub_B16FFC(&StringLiteral_746/*"-"*/, v9);
+    sub_B16FFC(&StringLiteral_9242/*"NEED_QP_INFO"*/, v10);
     byte_40F937F = 1;
   }
   memset(&v50, 0, sizeof(v50));
@@ -1644,11 +1644,11 @@ void __fastcall NpCombineControl__RefreshSvtNpCombineEndShowServant(NpCombineCon
   currentInfoLb = this->fields.currentInfoLb;
   if ( !currentInfoLb )
     goto LABEL_38;
-  UILabel__set_text(currentInfoLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(currentInfoLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   afterInfoLb = this->fields.afterInfoLb;
   if ( !afterInfoLb )
     goto LABEL_38;
-  UILabel__set_text(afterInfoLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(afterInfoLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   maxLvStatusInfo = this->fields.maxLvStatusInfo;
   if ( !maxLvStatusInfo )
     goto LABEL_38;
@@ -1659,7 +1659,7 @@ void __fastcall NpCombineControl__RefreshSvtNpCombineEndShowServant(NpCombineCon
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_9242, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_9242/*"NEED_QP_INFO"*/, 0LL);
   if ( !needQpLb )
     goto LABEL_38;
   UILabel__set_text(needQpLb, v17, 0LL);
@@ -2184,7 +2184,7 @@ void __fastcall NpCombineControl__SetCombineNpList(NpCombineControl_o *this, con
     sub_B16FFC(&Method_NpCombineControl_OnCenterOnChildFinished__, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
     sub_B16FFC(&SpringPanel_OnFinished_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_4533, v13);
+    sub_B16FFC(&StringLiteral_4533/*"D3"*/, v13);
     byte_40F9388 = 1;
   }
   idx = 0;
@@ -2299,7 +2299,7 @@ void __fastcall NpCombineControl__SetCombineNpList(NpCombineControl_o *this, con
                                                  transform,
                                                  0LL,
                                                  0LL);
-              v51 = System_Int32__ToString_38275808((int32_t)&idx, (System_String_o *)StringLiteral_4533, 0LL);
+              v51 = System_Int32__ToString_38275808((int32_t)&idx, (System_String_o *)StringLiteral_4533/*"D3"*/, 0LL);
               if ( !Object )
                 sub_B170D4();
               UnityEngine_Object__set_name(Object, v51, 0LL);
@@ -2497,14 +2497,14 @@ void __fastcall NpCombineControl__SetHaveQpInfo(NpCombineControl_o *this, const 
 
   if ( (byte_40F9381 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9236, method);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, method);
     byte_40F9381 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame
     || (haveQpLb = this->fields.haveQpLb,
         this->fields.haveQpVal = SelfUserGame->fields.qp,
-        v5 = System_Int32__ToString_38275808((int)this + 312, (System_String_o *)StringLiteral_9236, 0LL),
+        v5 = System_Int32__ToString_38275808((int)this + 312, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL),
         !haveQpLb) )
   {
     sub_B170D4();
@@ -2622,7 +2622,7 @@ void __fastcall NpCombineControl__SetNpCombineData(
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoData__get_Count__, v15);
     sub_B16FFC(&System_Collections_Generic_List_long__TypeInfo, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&StringLiteral_9236, v18);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v18);
     byte_40F938B = 1;
   }
   tmpTargetLv = 0;
@@ -2798,7 +2798,7 @@ LABEL_33:
       (const MethodInfo_2074050 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
   }
   qpLb = this->fields.qpLb;
-  v83 = System_Int32__ToString_38275808((int)this + 316, (System_String_o *)StringLiteral_9236, 0LL);
+  v83 = System_Int32__ToString_38275808((int)this + 316, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !qpLb )
     goto LABEL_59;
   UILabel__set_text(qpLb, v83, 0LL);
@@ -2914,11 +2914,11 @@ void __fastcall NpCombineControl__SetStateInfoMsg(NpCombineControl_o *this, int3
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, *(_QWORD *)&state);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_7009, v6);
-    sub_B16FFC(&StringLiteral_5746, v7);
-    sub_B16FFC(&StringLiteral_7253, v8);
-    sub_B16FFC(&StringLiteral_12162, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_7009/*"HEADER_MSG_NPUP_MATERIAL"*/, v6);
+    sub_B16FFC(&StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/, v7);
+    sub_B16FFC(&StringLiteral_7253/*"INFO_MSG_NPUP_BASE"*/, v8);
+    sub_B16FFC(&StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F9392 = 1;
   }
   detailInfoLb = (UnityEngine_Component_o *)this->fields.detailInfoLb;
@@ -2947,13 +2947,13 @@ LABEL_29:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v17 = &StringLiteral_7009;
+      v17 = &StringLiteral_7009/*"HEADER_MSG_NPUP_MATERIAL"*/;
     }
     else
     {
       if ( state != 2 )
       {
-        v18 = (System_String_o *)StringLiteral_1;
+        v18 = (System_String_o *)StringLiteral_1/*""*/;
         goto LABEL_27;
       }
       if ( this->fields._IsExeCombine_k__BackingField )
@@ -2963,7 +2963,7 @@ LABEL_29:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v17 = &StringLiteral_5746;
+        v17 = &StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/;
       }
       else
       {
@@ -2974,7 +2974,7 @@ LABEL_29:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v17 = &StringLiteral_12162;
+        v17 = &StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/;
       }
     }
   }
@@ -2985,7 +2985,7 @@ LABEL_29:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = &StringLiteral_7253;
+    v17 = &StringLiteral_7253/*"INFO_MSG_NPUP_BASE"*/;
   }
   v18 = LocalizationManager__Get((System_String_o *)*v17, 0LL);
 LABEL_27:
@@ -3079,7 +3079,7 @@ void __fastcall NpCombineControl__SetSvtNpCombineData(NpCombineControl_o *this, 
     sub_B16FFC(&Method_System_Collections_Generic_List_SvtUseNpData__get_Item__, v7);
     sub_B16FFC(&SetLevelUpData_TypeInfo, v8);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v9);
-    sub_B16FFC(&StringLiteral_951, v10);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v10);
     byte_40F938A = 1;
   }
   tmpTargetLv = 0;
@@ -3252,7 +3252,7 @@ LABEL_40:
       qpLb = this->fields.qpLb;
       if ( !qpLb )
         goto LABEL_40;
-      UILabel__set_text(qpLb, (System_String_o *)StringLiteral_951, 0LL);
+      UILabel__set_text(qpLb, (System_String_o *)StringLiteral_951/*"0"*/, 0LL);
       v71 = this->fields.maxLvStatusInfo;
       if ( !v71 )
         goto LABEL_40;

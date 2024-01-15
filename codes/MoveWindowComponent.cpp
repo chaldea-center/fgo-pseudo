@@ -75,11 +75,11 @@ void __fastcall MoveWindowComponent__closeWindow(MoveWindowComponent_o *this, co
     sub_B16FFC(&bool_TypeInfo, method);
     sub_B16FFC(&float_TypeInfo, v4);
     sub_B16FFC(&UnityEngine_Vector3_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_22584, v6);
-    sub_B16FFC(&StringLiteral_21150, v7);
-    sub_B16FFC(&StringLiteral_21419, v8);
-    sub_B16FFC(&StringLiteral_19856, v9);
-    sub_B16FFC(&StringLiteral_21173, v10);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v6);
+    sub_B16FFC(&StringLiteral_21150/*"onCloseComplete"*/, v7);
+    sub_B16FFC(&StringLiteral_21419/*"position"*/, v8);
+    sub_B16FFC(&StringLiteral_19856/*"isLocal"*/, v9);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v10);
     sub_B16FFC(&iTween_TypeInfo, v11);
     byte_40F7D7E = 1;
   }
@@ -97,7 +97,7 @@ void __fastcall MoveWindowComponent__closeWindow(MoveWindowComponent_o *this, co
     goto LABEL_12;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v13->klass->vtable._23_Add.method)(
     v13,
-    StringLiteral_19856,
+    StringLiteral_19856/*"isLocal"*/,
     v14,
     v13->klass->vtable._24_Clear.methodPtr);
   v15 = this->fields.table;
@@ -108,14 +108,14 @@ void __fastcall MoveWindowComponent__closeWindow(MoveWindowComponent_o *this, co
   if ( !v15
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v15->klass->vtable._23_Add.method)(
           v15,
-          StringLiteral_21419,
+          StringLiteral_21419/*"position"*/,
           v17,
           v15->klass->vtable._24_Clear.methodPtr),
         (v18 = this->fields.table) == 0LL)
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v18->klass->vtable._23_Add.method)(
           v18,
-          StringLiteral_21173,
-          StringLiteral_21150,
+          StringLiteral_21173/*"oncomplete"*/,
+          StringLiteral_21150/*"onCloseComplete"*/,
           v18->klass->vtable._24_Clear.methodPtr),
         v19 = this->fields.table,
         v24 = 1065353216,
@@ -127,7 +127,7 @@ LABEL_12:
   }
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v19->klass->vtable._23_Add.method)(
     v19,
-    StringLiteral_22584,
+    StringLiteral_22584/*"time"*/,
     v20,
     v19->klass->vtable._24_Clear.methodPtr);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -186,11 +186,11 @@ void __fastcall MoveWindowComponent__openWindow(MoveWindowComponent_o *this, con
     sub_B16FFC(&bool_TypeInfo, method);
     sub_B16FFC(&float_TypeInfo, v3);
     sub_B16FFC(&UnityEngine_Vector3_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_21162, v5);
-    sub_B16FFC(&StringLiteral_22584, v6);
-    sub_B16FFC(&StringLiteral_21419, v7);
-    sub_B16FFC(&StringLiteral_19856, v8);
-    sub_B16FFC(&StringLiteral_21173, v9);
+    sub_B16FFC(&StringLiteral_21162/*"onOpenComplete"*/, v5);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v6);
+    sub_B16FFC(&StringLiteral_21419/*"position"*/, v7);
+    sub_B16FFC(&StringLiteral_19856/*"isLocal"*/, v8);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v9);
     sub_B16FFC(&iTween_TypeInfo, v10);
     byte_40F7D7D = 1;
   }
@@ -207,7 +207,7 @@ void __fastcall MoveWindowComponent__openWindow(MoveWindowComponent_o *this, con
     goto LABEL_12;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v12->klass->vtable._23_Add.method)(
     v12,
-    StringLiteral_19856,
+    StringLiteral_19856/*"isLocal"*/,
     v13,
     v12->klass->vtable._24_Clear.methodPtr);
   v14 = this->fields.table;
@@ -218,14 +218,14 @@ void __fastcall MoveWindowComponent__openWindow(MoveWindowComponent_o *this, con
   if ( !v14
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v14->klass->vtable._23_Add.method)(
           v14,
-          StringLiteral_21419,
+          StringLiteral_21419/*"position"*/,
           v16,
           v14->klass->vtable._24_Clear.methodPtr),
         (v17 = this->fields.table) == 0LL)
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v17->klass->vtable._23_Add.method)(
           v17,
-          StringLiteral_21173,
-          StringLiteral_21162,
+          StringLiteral_21173/*"oncomplete"*/,
+          StringLiteral_21162/*"onOpenComplete"*/,
           v17->klass->vtable._24_Clear.methodPtr),
         v18 = this->fields.table,
         v23 = 1065353216,
@@ -237,7 +237,7 @@ LABEL_12:
   }
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v18->klass->vtable._23_Add.method)(
     v18,
-    StringLiteral_22584,
+    StringLiteral_22584/*"time"*/,
     v19,
     v18->klass->vtable._24_Clear.methodPtr);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);

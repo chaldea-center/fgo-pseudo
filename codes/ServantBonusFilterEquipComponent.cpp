@@ -235,8 +235,8 @@ int32_t __fastcall ServantBonusFilterEquipComponent__CreateList(
     sub_B16FFC(&SkillInfo_TypeInfo, v35);
     sub_B16FFC(&Method_ServantBonusFilterEquipComponent___c__CreateList_b__4_0__, v36);
     sub_B16FFC(&ServantBonusFilterEquipComponent___c_TypeInfo, v37);
-    sub_B16FFC(&StringLiteral_2825, v38);
-    sub_B16FFC(&StringLiteral_2827, v39);
+    sub_B16FFC(&StringLiteral_2825/*"BonusFilterEquipId"*/, v38);
+    sub_B16FFC(&StringLiteral_2827/*"BonusFilterGroupId"*/, v39);
     byte_40F9484 = 1;
   }
   eventUpVallInfo = 0LL;
@@ -594,13 +594,13 @@ LABEL_76:
   for ( i = idx; i < MaxIndividualFilter; ++i )
   {
     v120 = System_Int32__ToString((int32_t)&i, 0LL);
-    v121 = System_String__Concat_43743732((System_String_o *)StringLiteral_2825, v120, 0LL);
+    v121 = System_String__Concat_43743732((System_String_o *)StringLiteral_2825/*"BonusFilterEquipId"*/, v120, 0LL);
     UnityEngine_PlayerPrefs__DeleteKey(v121, 0LL);
   }
   for ( j = v72; j < MaxIndividualFilter; ++j )
   {
     v122 = System_Int32__ToString((int32_t)&j, 0LL);
-    v123 = System_String__Concat_43743732((System_String_o *)StringLiteral_2827, v122, 0LL);
+    v123 = System_String__Concat_43743732((System_String_o *)StringLiteral_2827/*"BonusFilterGroupId"*/, v122, 0LL);
     UnityEngine_PlayerPrefs__DeleteKey(v123, 0LL);
   }
   return idx + v72;

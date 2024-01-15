@@ -11,12 +11,12 @@ void __fastcall EventRewardVoicePlayCountView__Close(EventRewardVoicePlayCountVi
 
   if ( (byte_40FD139 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FD139 = 1;
   }
   countLabel = this->fields.countLabel;
   if ( !countLabel
-    || (UILabel__set_text(countLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(countLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
     sub_B170D4();
@@ -35,13 +35,13 @@ void __fastcall EventRewardVoicePlayCountView__ResetCount(
 
   if ( (byte_40FD13A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FD13A = 1;
   }
   countLabel = this->fields.countLabel;
   if ( !countLabel )
     sub_B170D4();
-  UILabel__set_text(countLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(countLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   EventRewardSaveData__DeletePlayCount(v4);
   EventRewardVoicePlayCountView__SetUp(this, v5);
 }
@@ -170,8 +170,8 @@ void __fastcall EventRewardVoicePlayCountView__SetUp(EventRewardVoicePlayCountVi
     sub_B16FFC(&object___TypeInfo, v5);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_26, v8);
-    sub_B16FFC(&StringLiteral_18404, v9);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v8);
+    sub_B16FFC(&StringLiteral_18404/*"eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}"*/, v9);
     byte_40FD138 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -358,7 +358,7 @@ LABEL_68:
               goto LABEL_68;
             v37->m_Items[4] = (Il2CppObject *)v68;
             sub_B16F98((BattleServantConfConponent_o *)&v37->m_Items[4], v68, v15, v63, v64, v65, v66, v67);
-            v69 = System_String__Format_43822456((System_String_o *)StringLiteral_18404, v37, 0LL);
+            v69 = System_String__Format_43822456((System_String_o *)StringLiteral_18404/*"eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}"*/, v37, 0LL);
             if ( !v36 )
               break;
           }
@@ -453,8 +453,8 @@ LABEL_71:
               goto LABEL_68;
             v71->m_Items[4] = (Il2CppObject *)v102;
             sub_B16F98((BattleServantConfConponent_o *)&v71->m_Items[4], v102, v15, v97, v98, v99, v100, v101);
-            v103 = System_String__Format_43822456((System_String_o *)StringLiteral_18404, v71, 0LL);
-            v69 = System_String__Concat_43746016(mText, (System_String_o *)StringLiteral_26, v103, 0LL);
+            v103 = System_String__Format_43822456((System_String_o *)StringLiteral_18404/*"eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}"*/, v71, 0LL);
+            v69 = System_String__Concat_43746016(mText, (System_String_o *)StringLiteral_26/*"\n"*/, v103, 0LL);
           }
           UILabel__set_text(v36, v69, 0LL);
           if ( (int)++v22 >= (int)v107 )

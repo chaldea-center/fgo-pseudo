@@ -717,13 +717,13 @@ void __fastcall MaterialEventLogServantSortSelectMenu__Open(
     sub_B16FFC(&ListViewSort_TypeInfo, v12);
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&Method_MaterialEventLogServantSortSelectMenu_EndOpen__, v14);
-    sub_B16FFC(&StringLiteral_11890, v15);
-    sub_B16FFC(&StringLiteral_11759, v16);
-    sub_B16FFC(&StringLiteral_11763, v17);
-    sub_B16FFC(&StringLiteral_11892, v18);
-    sub_B16FFC(&StringLiteral_11760, v19);
-    sub_B16FFC(&StringLiteral_11764, v20);
-    sub_B16FFC(&StringLiteral_11765, v21);
+    sub_B16FFC(&StringLiteral_11890/*"SERVANT_SORT_RESET"*/, v15);
+    sub_B16FFC(&StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, v16);
+    sub_B16FFC(&StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, v17);
+    sub_B16FFC(&StringLiteral_11892/*"SERVANT_SORT_TITLE2"*/, v18);
+    sub_B16FFC(&StringLiteral_11760/*"SERVANT_SORT_CLEAR"*/, v19);
+    sub_B16FFC(&StringLiteral_11764/*"SERVANT_SORT_EXPLANATION"*/, v20);
+    sub_B16FFC(&StringLiteral_11765/*"SERVANT_SORT_EXPLANATION2"*/, v21);
     byte_40F7B53 = 1;
   }
   if ( !this->fields.state )
@@ -786,37 +786,37 @@ LABEL_12:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v46 = LocalizationManager__Get((System_String_o *)StringLiteral_11892, 0LL);
+        v46 = LocalizationManager__Get((System_String_o *)StringLiteral_11892/*"SERVANT_SORT_TITLE2"*/, 0LL);
         if ( title2Label )
         {
           UILabel__set_text(title2Label, v46, 0LL);
           explanationLabel = this->fields.explanationLabel;
-          v48 = LocalizationManager__Get((System_String_o *)StringLiteral_11764, 0LL);
+          v48 = LocalizationManager__Get((System_String_o *)StringLiteral_11764/*"SERVANT_SORT_EXPLANATION"*/, 0LL);
           if ( explanationLabel )
           {
             UILabel__set_text(explanationLabel, v48, 0LL);
             explanationLabel2 = this->fields.explanationLabel2;
-            v50 = LocalizationManager__Get((System_String_o *)StringLiteral_11765, 0LL);
+            v50 = LocalizationManager__Get((System_String_o *)StringLiteral_11765/*"SERVANT_SORT_EXPLANATION2"*/, 0LL);
             if ( explanationLabel2 )
             {
               UILabel__set_text(explanationLabel2, v50, 0LL);
               decideLabel = this->fields.decideLabel;
-              v52 = LocalizationManager__Get((System_String_o *)StringLiteral_11763, 0LL);
+              v52 = LocalizationManager__Get((System_String_o *)StringLiteral_11763/*"SERVANT_SORT_DECIDE"*/, 0LL);
               if ( decideLabel )
               {
                 UILabel__set_text(decideLabel, v52, 0LL);
                 cancelLabel = this->fields.cancelLabel;
-                v54 = LocalizationManager__Get((System_String_o *)StringLiteral_11759, 0LL);
+                v54 = LocalizationManager__Get((System_String_o *)StringLiteral_11759/*"SERVANT_SORT_CANCEL"*/, 0LL);
                 if ( cancelLabel )
                 {
                   UILabel__set_text(cancelLabel, v54, 0LL);
                   clearLabel = this->fields.clearLabel;
-                  v56 = LocalizationManager__Get((System_String_o *)StringLiteral_11760, 0LL);
+                  v56 = LocalizationManager__Get((System_String_o *)StringLiteral_11760/*"SERVANT_SORT_CLEAR"*/, 0LL);
                   if ( clearLabel )
                   {
                     UILabel__set_text(clearLabel, v56, 0LL);
                     resetLabel = this->fields.resetLabel;
-                    v58 = LocalizationManager__Get((System_String_o *)StringLiteral_11890, 0LL);
+                    v58 = LocalizationManager__Get((System_String_o *)StringLiteral_11890/*"SERVANT_SORT_RESET"*/, 0LL);
                     if ( resetLabel )
                     {
                       UILabel__set_text(resetLabel, v58, 0LL);
@@ -971,8 +971,8 @@ void __fastcall MaterialEventLogServantSortSelectMenu__SetButtenSelect(
     sub_B16FFC(&FilterKindList_TypeInfo, v6);
     sub_B16FFC(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Contains__, v7);
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantFilterButtonControl__GetEnumerator__, v8);
-    sub_B16FFC(&StringLiteral_16891, v9);
-    sub_B16FFC(&StringLiteral_16890, v10);
+    sub_B16FFC(&StringLiteral_16891/*"btn_bg_04"*/, v9);
+    sub_B16FFC(&StringLiteral_16890/*"btn_bg_03"*/, v10);
     byte_40F7B5A = 1;
   }
   memset(&v30, 0, sizeof(v30));
@@ -985,7 +985,7 @@ void __fastcall MaterialEventLogServantSortSelectMenu__SetButtenSelect(
   operationSortInfo = this->fields.operationSortInfo;
   if ( !operationSortInfo || !Component_WebViewObject )
     goto LABEL_36;
-  v14 = (System_String_o **)(operationSortInfo->fields.sortKind == 27 ? &StringLiteral_16890 : &StringLiteral_16891);
+  v14 = (System_String_o **)(operationSortInfo->fields.sortKind == 27 ? &StringLiteral_16890/*"btn_bg_03"*/ : &StringLiteral_16891/*"btn_bg_04"*/);
   UISprite__set_spriteName((UISprite_o *)Component_WebViewObject, *v14, 0LL);
   sort2Button = (UnityEngine_Component_o *)this->fields.sort2Button;
   if ( !sort2Button )
@@ -996,7 +996,7 @@ void __fastcall MaterialEventLogServantSortSelectMenu__SetButtenSelect(
   v17 = this->fields.operationSortInfo;
   if ( !v17 || !v16 )
     goto LABEL_36;
-  v18 = (System_String_o **)(v17->fields.sortKind == 2 ? &StringLiteral_16890 : &StringLiteral_16891);
+  v18 = (System_String_o **)(v17->fields.sortKind == 2 ? &StringLiteral_16890/*"btn_bg_03"*/ : &StringLiteral_16891/*"btn_bg_04"*/);
   if ( (UISprite__set_spriteName((UISprite_o *)v16, *v18, 0LL),
         (sort3Button = (UnityEngine_Component_o *)this->fields.sort3Button) == 0LL)
     || (v20 = UnityEngine_Component__GetComponent_WebViewObject_(
@@ -1004,7 +1004,7 @@ void __fastcall MaterialEventLogServantSortSelectMenu__SetButtenSelect(
                 (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UISprite___),
         (v21 = this->fields.operationSortInfo) == 0LL)
     || !v20
-    || (v21->fields.sortKind != 9 ? (v22 = &StringLiteral_16891) : (v22 = &StringLiteral_16890),
+    || (v21->fields.sortKind != 9 ? (v22 = &StringLiteral_16891/*"btn_bg_04"*/) : (v22 = &StringLiteral_16890/*"btn_bg_03"*/),
         UISprite__set_spriteName((UISprite_o *)v20, (System_String_o *)*v22, 0LL),
         (useFilterButtonList = this->fields.useFilterButtonList) == 0LL) )
   {
@@ -1381,10 +1381,10 @@ System_String_o *__fastcall MaterialEventLogServantSortSelectMenu__get_closeBtnP
 {
   if ( (byte_40F7B63 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15414, method);
+    sub_B16FFC(&StringLiteral_15414/*"Window/CancelButton"*/, method);
     byte_40F7B63 = 1;
   }
-  return (System_String_o *)StringLiteral_15414;
+  return (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/;
 }
 
 

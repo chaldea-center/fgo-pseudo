@@ -87,7 +87,7 @@ void __fastcall ServantAppendPassiveSkillEntity__GetEffectExplanation(
     sub_B16FFC(&DataManager_TypeInfo, v9);
     sub_B16FFC(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v10);
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F93EB = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -138,8 +138,8 @@ void __fastcall ServantAppendPassiveSkillEntity__GetEffectExplanation(
       v19,
       v20,
       v21);
-    *explanation = (System_String_o *)StringLiteral_1;
-    EffectExplanation = (System_String_o *)StringLiteral_1;
+    *explanation = (System_String_o *)StringLiteral_1/*""*/;
+    EffectExplanation = (System_String_o *)StringLiteral_1/*""*/;
   }
   sub_B16F98(
     (BattleServantConfConponent_o *)explanation,

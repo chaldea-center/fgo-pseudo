@@ -57,7 +57,7 @@ void __fastcall BattleFieldConfConponent__InitAtlas(BattleFieldConfConponent_o *
     sub_B16FFC(&BattleDataDefine_TypeInfo, v4);
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_2758, v7);
+    sub_B16FFC(&StringLiteral_2758/*"BattleAssetUIAtlas"*/, v7);
     byte_40F8D50 = 1;
   }
   v8 = BattleDataDefine_TypeInfo;
@@ -75,7 +75,7 @@ void __fastcall BattleFieldConfConponent__InitAtlas(BattleFieldConfConponent_o *
     goto LABEL_17;
   Object_WarBoardWaitTimeSetting = (UnityEngine_GameObject_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                  AssetStorage,
-                                                                 (System_String_o *)StringLiteral_2758,
+                                                                 (System_String_o *)StringLiteral_2758/*"BattleAssetUIAtlas"*/,
                                                                  (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -247,10 +247,10 @@ System_String_o *__fastcall BattleFieldConfConponent__get_closeBtnPath(
 {
   if ( (byte_40F8D51 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17409, method);
+    sub_B16FFC(&StringLiteral_17409/*"close"*/, method);
     byte_40F8D51 = 1;
   }
-  return (System_String_o *)StringLiteral_17409;
+  return (System_String_o *)StringLiteral_17409/*"close"*/;
 }
 
 

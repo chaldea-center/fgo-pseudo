@@ -23,17 +23,17 @@ void __fastcall EventTowerListViewItemDraw___cctor(const MethodInfo *method)
   if ( (byte_40F9BB4 & 1) == 0 )
   {
     sub_B16FFC(&EventTowerListViewItemDraw_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_18536, v8);
-    sub_B16FFC(&StringLiteral_18537, v9);
+    sub_B16FFC(&StringLiteral_18536/*"event_tower_rewardget_"*/, v8);
+    sub_B16FFC(&StringLiteral_18537/*"event_towerbanner_"*/, v9);
     byte_40F9BB4 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventTowerListViewItemDraw_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_18537;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18537;
+  v11 = (System_Int32_array **)StringLiteral_18537/*"event_towerbanner_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_18537/*"event_towerbanner_"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = EventTowerListViewItemDraw_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_18536;
-  v12->REWARD_GET_NAME = (struct System_String_o *)StringLiteral_18536;
+  v13 = (System_Int32_array **)StringLiteral_18536/*"event_tower_rewardget_"*/;
+  v12->REWARD_GET_NAME = (struct System_String_o *)StringLiteral_18536/*"event_tower_rewardget_"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->REWARD_GET_NAME, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -105,8 +105,8 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, item);
     sub_B16FFC(&EventTowerListViewItemDraw_TypeInfo, v7);
     sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_5722, v9);
-    sub_B16FFC(&StringLiteral_960, v10);
+    sub_B16FFC(&StringLiteral_5722/*"EVENT_TOWER_HIDE_COND"*/, v9);
+    sub_B16FFC(&StringLiteral_960/*"00"*/, v10);
     byte_40F9BB3 = 1;
   }
   eventId = 0;
@@ -139,7 +139,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
               BANNER_NAME = EventTowerListViewItemDraw_TypeInfo->static_fields->BANNER_NAME;
               eventId = itemInfo->fields.eventId;
               v19 = System_Int32__ToString((int32_t)&eventId, 0LL);
-              v17 = System_String__Concat_43746016(BANNER_NAME, v19, (System_String_o *)StringLiteral_960, 0LL);
+              v17 = System_String__Concat_43746016(BANNER_NAME, v19, (System_String_o *)StringLiteral_960/*"00"*/, 0LL);
             }
             else
             {
@@ -227,7 +227,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                             v37 = System_String__Concat_43746016(
                                     REWARD_GET_NAME,
                                     v39,
-                                    (System_String_o *)StringLiteral_960,
+                                    (System_String_o *)StringLiteral_960/*"00"*/,
                                     0LL);
                           }
                           else
@@ -269,7 +269,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                             {
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                             }
-                            v45 = LocalizationManager__Get((System_String_o *)StringLiteral_5722, 0LL);
+                            v45 = LocalizationManager__Get((System_String_o *)StringLiteral_5722/*"EVENT_TOWER_HIDE_COND"*/, 0LL);
                             if ( v44 )
                             {
                               UILabel__set_text(v44, v45, 0LL);

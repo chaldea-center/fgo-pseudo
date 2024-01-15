@@ -31,13 +31,13 @@ System_String_o *__fastcall OrganizationTopListViewItem__ToString(
 
   if ( (byte_40F7FB5 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10116, method);
+    sub_B16FFC(&StringLiteral_10116/*"OrganizationTopItem "*/, method);
     byte_40F7FB5 = 1;
   }
   info = this->fields.info;
   if ( !info )
     sub_B170D4();
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_10116, info->fields.textCode, 0LL);
+  return System_String__Concat_43743732((System_String_o *)StringLiteral_10116/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
 }
 
 

@@ -80,7 +80,7 @@ void __fastcall PresentBoxInfoComponent__SetPresentBoxInfo(PresentBoxInfoCompone
   {
     sub_B16FFC(&BalanceConfig_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    this = (PresentBoxInfoComponent_o *)sub_B16FFC(&StringLiteral_1, v4);
+    this = (PresentBoxInfoComponent_o *)sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F8FD8 = 1;
   }
   PresentList = PresentBoxInfoComponent__GetPresentList(this, method);
@@ -102,8 +102,8 @@ void __fastcall PresentBoxInfoComponent__SetPresentBoxInfo(PresentBoxInfoCompone
   if ( !animFiles )
     goto LABEL_53;
   v15 = animFiles->max_length;
-  v16 = (System_String_o *)StringLiteral_1;
-  v17 = (System_String_o *)StringLiteral_1;
+  v16 = (System_String_o *)StringLiteral_1/*""*/;
+  v17 = (System_String_o *)StringLiteral_1/*""*/;
   if ( v14 <= v15 )
   {
     if ( v14 >= (unsigned int)v15 )

@@ -56,11 +56,11 @@ System_String_o *__fastcall ServantCommentAddMaster__GetConditionString(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, textType);
     sub_B16FFC(&ServantCommentEntity_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_3283, v14);
-    sub_B16FFC(&StringLiteral_1, v15);
+    sub_B16FFC(&StringLiteral_3283/*"COND_TYPE_AND_FLAVOR2"*/, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v15);
     byte_40FCE77 = 1;
   }
-  v16 = (System_String_o *)StringLiteral_1;
+  v16 = (System_String_o *)StringLiteral_1/*""*/;
   EntitiyList = (System_String_o *)ServantCommentAddMaster__GetEntitiyList(
                                      this,
                                      svtId,
@@ -142,7 +142,7 @@ LABEL_11:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3283, 0LL);
+          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3283/*"COND_TYPE_AND_FLAVOR2"*/, 0LL);
           v16 = System_String__Concat_43743732(v16, v38, 0LL);
         }
         p_monitor = v40;

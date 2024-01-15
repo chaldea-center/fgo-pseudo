@@ -23,17 +23,17 @@ void __fastcall AutoOrganizationServantBonusFilterEquipComponent___cctor(const M
   if ( (byte_40F6E67 & 1) == 0 )
   {
     sub_B16FFC(&AutoOrganizationServantBonusFilterEquipComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_2199, v8);
-    sub_B16FFC(&StringLiteral_2201, v9);
+    sub_B16FFC(&StringLiteral_2199/*"AutoOrganizationBonusFilterEquipId"*/, v8);
+    sub_B16FFC(&StringLiteral_2201/*"AutoOrganizationBonusFilterGroupId"*/, v9);
     byte_40F6E67 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)AutoOrganizationServantBonusFilterEquipComponent_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_2199;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2199;
+  v11 = (System_Int32_array **)StringLiteral_2199/*"AutoOrganizationBonusFilterEquipId"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2199/*"AutoOrganizationBonusFilterEquipId"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = AutoOrganizationServantBonusFilterEquipComponent_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_2201;
-  v12->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID = (struct System_String_o *)StringLiteral_2201;
+  v13 = (System_Int32_array **)StringLiteral_2201/*"AutoOrganizationBonusFilterGroupId"*/;
+  v12->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID = (struct System_String_o *)StringLiteral_2201/*"AutoOrganizationBonusFilterGroupId"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v12->SAVE_KEY_AUTO_ORGANIZATION_BONUS_FILTER_GROUP_ID,
     v13,

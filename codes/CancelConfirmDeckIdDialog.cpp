@@ -118,20 +118,20 @@ System_String_o *__fastcall CancelConfirmDeckIdDialog__CreateDeckIDString(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&deckNo);
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_12432, v11);
-    sub_B16FFC(&StringLiteral_12430, v12);
-    sub_B16FFC(&StringLiteral_12422, v13);
-    sub_B16FFC(&StringLiteral_12445, v14);
-    sub_B16FFC(&StringLiteral_12428, v15);
+    sub_B16FFC(&StringLiteral_12432/*"SUPPORT_EVENTQUEST"*/, v11);
+    sub_B16FFC(&StringLiteral_12430/*"SUPPORT_DECK_NOT_FIXED"*/, v12);
+    sub_B16FFC(&StringLiteral_12422/*"SUPPORT_DECKID_FREE"*/, v13);
+    sub_B16FFC(&StringLiteral_12445/*"SUPPORT_MAINQUEST"*/, v14);
+    sub_B16FFC(&StringLiteral_12428/*"SUPPORT_DECK_ID_FIXED"*/, v15);
     byte_40FCF08 = 1;
   }
-  v16 = (System_String_o **)&StringLiteral_12445;
+  v16 = (System_String_o **)&StringLiteral_12445/*"SUPPORT_MAINQUEST"*/;
   if ( !isMainQuestSupportDeck )
-    v16 = (System_String_o **)&StringLiteral_12432;
+    v16 = (System_String_o **)&StringLiteral_12432/*"SUPPORT_EVENTQUEST"*/;
   v17 = *v16;
-  v18 = (System_String_o **)&StringLiteral_12428;
+  v18 = (System_String_o **)&StringLiteral_12428/*"SUPPORT_DECK_ID_FIXED"*/;
   if ( !isFixed )
-    v18 = (System_String_o **)&StringLiteral_12422;
+    v18 = (System_String_o **)&StringLiteral_12422/*"SUPPORT_DECKID_FREE"*/;
   if ( deckID )
   {
     v19 = *v18;
@@ -151,7 +151,7 @@ System_String_o *__fastcall CancelConfirmDeckIdDialog__CreateDeckIDString(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12430, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12430/*"SUPPORT_DECK_NOT_FIXED"*/, 0LL);
   }
   v23 = v22;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -208,26 +208,26 @@ void __fastcall CancelConfirmDeckIdDialog__Init(CancelConfirmDeckIdDialog_o *thi
 
   if ( (byte_40FCF05 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FCF05 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_9;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   fixMessageLabel = this->fields.fixMessageLabel;
   if ( !fixMessageLabel
-    || (UILabel__set_text(fixMessageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(fixMessageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL) )
   {
 LABEL_9:
     sub_B170D4();
   }
-  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -346,13 +346,13 @@ void __fastcall CancelConfirmDeckIdDialog__Open(
     sub_B16FFC(&Method_CancelConfirmDeckIdDialog_EndOpen__, v17);
     sub_B16FFC(&LocalizationManager_TypeInfo, v18);
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_12444, v20);
-    sub_B16FFC(&StringLiteral_12423, v21);
-    sub_B16FFC(&StringLiteral_3253, v22);
-    sub_B16FFC(&StringLiteral_12421, v23);
-    sub_B16FFC(&StringLiteral_3251, v24);
-    sub_B16FFC(&StringLiteral_27, v25);
-    sub_B16FFC(&StringLiteral_12450, v26);
+    sub_B16FFC(&StringLiteral_12444/*"SUPPORT_LAST_DECKID"*/, v20);
+    sub_B16FFC(&StringLiteral_12423/*"SUPPORT_DECKID_QUESTION"*/, v21);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v22);
+    sub_B16FFC(&StringLiteral_12421/*"SUPPORT_CURRENT_DECKID"*/, v23);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v24);
+    sub_B16FFC(&StringLiteral_27/*"\n\n"*/, v25);
+    sub_B16FFC(&StringLiteral_12450/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/, v26);
     byte_40FCF06 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
@@ -381,12 +381,12 @@ void __fastcall CancelConfirmDeckIdDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12450, 0LL);
+    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_12450/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_29;
     UILabel__set_text(titleLabel, v30, 0LL);
     fixMessageLabel = this->fields.fixMessageLabel;
-    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_12423, 0LL);
+    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_12423/*"SUPPORT_DECKID_QUESTION"*/, 0LL);
     if ( !fixMessageLabel )
       goto LABEL_29;
     UILabel__set_text(fixMessageLabel, v32, 0LL);
@@ -399,14 +399,14 @@ void __fastcall CancelConfirmDeckIdDialog__Open(
     UnityEngine_GameObject__SetActive(v34, 1, 0LL);
     v39 = (System_Text_StringBuilder_o *)sub_B170CC(System_Text_StringBuilder_TypeInfo, v35, v36, v37, v38);
     System_Text_StringBuilder___ctor(v39, 0LL);
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12421, 0LL);
+    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_12421/*"SUPPORT_CURRENT_DECKID"*/, 0LL);
     if ( !v39 )
       goto LABEL_29;
     System_Text_StringBuilder__Append_41914240(v39, v40, 0LL);
     CancelConfirmDeckIdDialog__SetDeckInfo(this, v39, nowSupportDeckId, nowFixMainSupportDeckIds, 1, v41);
     CancelConfirmDeckIdDialog__SetDeckInfo(this, v39, nowSupportDeckId, nowFixEventSupportDeckIds, 0, v42);
-    System_Text_StringBuilder__Append_41914240(v39, (System_String_o *)StringLiteral_27, 0LL);
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_12444, 0LL);
+    System_Text_StringBuilder__Append_41914240(v39, (System_String_o *)StringLiteral_27/*"\n\n"*/, 0LL);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_12444/*"SUPPORT_LAST_DECKID"*/, 0LL);
     System_Text_StringBuilder__Append_41914240(v39, v43, 0LL);
     CancelConfirmDeckIdDialog__SetDeckInfo(this, v39, orgSupportDeckId, orgFixMainSupportDeckIds, 1, v44);
     CancelConfirmDeckIdDialog__SetDeckInfo(this, v39, orgSupportDeckId, orgFixEventSupportDeckIds, 0, v45);
@@ -483,11 +483,11 @@ void __fastcall CancelConfirmDeckIdDialog__Open(
             1LL,
             v64->klass->vtable._15_OnPress.methodPtr),
           decideLabel = this->fields.decideLabel,
-          v66 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL),
+          v66 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL),
           !decideLabel)
       || (UILabel__set_text(decideLabel, v66, 0LL),
           cancelLabel = this->fields.cancelLabel,
-          v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+          v68 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
           !cancelLabel) )
     {
 LABEL_29:
@@ -552,7 +552,7 @@ void __fastcall CancelConfirmDeckIdDialog__SetDeckInfo(
     sub_B16FFC(&System_Func_int__bool__TypeInfo, v13);
     sub_B16FFC(&Method_CancelConfirmDeckIdDialog___c__SetDeckInfo_b__19_0__, v14);
     sub_B16FFC(&CancelConfirmDeckIdDialog___c_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_26, v16);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v16);
     byte_40FCF07 = 1;
   }
   v17 = CancelConfirmDeckIdDialog___c_TypeInfo;
@@ -630,7 +630,7 @@ LABEL_30:
     v33 = 0LL;
     do
     {
-      appended = System_Text_StringBuilder__Append_41914240(sb, (System_String_o *)StringLiteral_26, 0LL);
+      appended = System_Text_StringBuilder__Append_41914240(sb, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
       if ( v33 == 0 && v29 < 1 )
       {
         DeckIDString = CancelConfirmDeckIdDialog__CreateDeckIDString(
@@ -716,10 +716,10 @@ System_String_o *__fastcall CancelConfirmDeckIdDialog__get_closeBtnPath(
 {
   if ( (byte_40FCF0B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4202, method);
+    sub_B16FFC(&StringLiteral_4202/*"ConfirmWindow/CancelButton"*/, method);
     byte_40FCF0B = 1;
   }
-  return (System_String_o *)StringLiteral_4202;
+  return (System_String_o *)StringLiteral_4202/*"ConfirmWindow/CancelButton"*/;
 }
 
 

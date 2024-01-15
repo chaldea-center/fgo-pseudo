@@ -93,8 +93,8 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_5544, v8);
-    sub_B16FFC(&StringLiteral_5543, v9);
+    sub_B16FFC(&StringLiteral_5544/*"EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT"*/, v8);
+    sub_B16FFC(&StringLiteral_5543/*"EVENT_ASSIST_SKILL_LEVEL_FORMAT"*/, v9);
     byte_40FB6DF = 1;
   }
   if ( this->fields.assistData )
@@ -190,7 +190,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v34 = LocalizationManager__Get((System_String_o *)StringLiteral_5543, 0LL);
+      v34 = LocalizationManager__Get((System_String_o *)StringLiteral_5543/*"EVENT_ASSIST_SKILL_LEVEL_FORMAT"*/, 0LL);
       lv = v15->fields.lv;
       v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
       v36 = System_String__Format(v34, v35, 0LL);
@@ -225,7 +225,7 @@ void __fastcall EventInfoAssistLevelCounterComponent__UpdateDisp(
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v45 = LocalizationManager__Get((System_String_o *)StringLiteral_5544, 0LL);
+            v45 = LocalizationManager__Get((System_String_o *)StringLiteral_5544/*"EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT"*/, 0LL);
             v48 = v43;
             v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v48);
             v47 = System_String__Format(v45, v46, 0LL);

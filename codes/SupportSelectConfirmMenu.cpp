@@ -126,26 +126,26 @@ void __fastcall SupportSelectConfirmMenu__Init(SupportSelectConfirmMenu_o *this,
 
   if ( (byte_40FD4FD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FD4FD = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_9;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeLabel = this->fields.closeLabel) == 0LL)
-    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(closeLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (cancelLabel = this->fields.cancelLabel) == 0LL)
-    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (decideLabel = this->fields.decideLabel) == 0LL) )
   {
 LABEL_9:
     sub_B170D4();
   }
-  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -231,15 +231,15 @@ void __fastcall SupportSelectConfirmMenu__Open(
 
   if ( (byte_40FD4FE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, *(_QWORD *)&kind);
+    sub_B16FFC(&StringLiteral_1/*""*/, *(_QWORD *)&kind);
     byte_40FD4FE = 1;
   }
   SupportSelectConfirmMenu__Open_31168264(
     this,
     kind,
     callback,
-    (System_String_o *)StringLiteral_1,
-    (System_String_o *)StringLiteral_1,
+    (System_String_o *)StringLiteral_1/*""*/,
+    (System_String_o *)StringLiteral_1/*""*/,
     v4);
 }
 
@@ -330,19 +330,19 @@ void __fastcall SupportSelectConfirmMenu__Open_31168264(
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_SupportSelectConfirmMenu_EndOpen__, v15);
-    sub_B16FFC(&StringLiteral_12484, v16);
-    sub_B16FFC(&StringLiteral_12447, v17);
-    sub_B16FFC(&StringLiteral_12486, v18);
-    sub_B16FFC(&StringLiteral_12501, v19);
-    sub_B16FFC(&StringLiteral_12496, v20);
-    sub_B16FFC(&StringLiteral_12493, v21);
-    sub_B16FFC(&StringLiteral_12494, v22);
-    sub_B16FFC(&StringLiteral_12483, v23);
-    sub_B16FFC(&StringLiteral_12502, v24);
-    sub_B16FFC(&StringLiteral_12497, v25);
-    sub_B16FFC(&StringLiteral_12500, v26);
-    sub_B16FFC(&StringLiteral_12448, v27);
-    sub_B16FFC(&StringLiteral_12485, v28);
+    sub_B16FFC(&StringLiteral_12484/*"SUPPORT_SELECT_EQUIP_CHANGE_TITLE"*/, v16);
+    sub_B16FFC(&StringLiteral_12447/*"SUPPORT_SELECT_ALL_CLEAR_TITLE"*/, v17);
+    sub_B16FFC(&StringLiteral_12486/*"SUPPORT_SELECT_EQUIP_CLEAR_WARNING"*/, v18);
+    sub_B16FFC(&StringLiteral_12501/*"SUPPORT_SELECT_WARNING_DIALOG_CLOSE"*/, v19);
+    sub_B16FFC(&StringLiteral_12496/*"SUPPORT_SELECT_SERVANT_CLEAR_TITLE"*/, v20);
+    sub_B16FFC(&StringLiteral_12493/*"SUPPORT_SELECT_NO_SERVANT_TITLE"*/, v21);
+    sub_B16FFC(&StringLiteral_12494/*"SUPPORT_SELECT_NO_SERVANT_WARNING"*/, v22);
+    sub_B16FFC(&StringLiteral_12483/*"SUPPORT_SELECT_EQUIP_CHANGE_MESSAGE"*/, v23);
+    sub_B16FFC(&StringLiteral_12502/*"SUPPORT_SELECT_WARNING_DIALOG_DECIDE"*/, v24);
+    sub_B16FFC(&StringLiteral_12497/*"SUPPORT_SELECT_SERVANT_CLEAR_WARNING"*/, v25);
+    sub_B16FFC(&StringLiteral_12500/*"SUPPORT_SELECT_WARNING_DIALOG_CANCEL"*/, v26);
+    sub_B16FFC(&StringLiteral_12448/*"SUPPORT_SELECT_ALL_CLEAR_WARNING"*/, v27);
+    sub_B16FFC(&StringLiteral_12485/*"SUPPORT_SELECT_EQUIP_CLEAR_TITLE"*/, v28);
     byte_40FD4FF = 1;
   }
   if ( (this->fields.state | 4) == 4 )
@@ -371,12 +371,12 @@ LABEL_73:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v31 = LocalizationManager__Get((System_String_o *)StringLiteral_12493, 0LL);
+        v31 = LocalizationManager__Get((System_String_o *)StringLiteral_12493/*"SUPPORT_SELECT_NO_SERVANT_TITLE"*/, 0LL);
         if ( !titleLabel )
           goto LABEL_73;
         UILabel__set_text(titleLabel, v31, 0LL);
         messageLabel = this->fields.messageLabel;
-        v33 = LocalizationManager__Get((System_String_o *)StringLiteral_12494, 0LL);
+        v33 = LocalizationManager__Get((System_String_o *)StringLiteral_12494/*"SUPPORT_SELECT_NO_SERVANT_WARNING"*/, 0LL);
         if ( !messageLabel )
           goto LABEL_73;
         UILabel__set_text(messageLabel, v33, 0LL);
@@ -409,12 +409,12 @@ LABEL_73:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v42 = LocalizationManager__Get((System_String_o *)StringLiteral_12496, 0LL);
+        v42 = LocalizationManager__Get((System_String_o *)StringLiteral_12496/*"SUPPORT_SELECT_SERVANT_CLEAR_TITLE"*/, 0LL);
         if ( !v41 )
           goto LABEL_73;
         UILabel__set_text(v41, v42, 0LL);
         v43 = this->fields.messageLabel;
-        v44 = &StringLiteral_12497;
+        v44 = &StringLiteral_12497/*"SUPPORT_SELECT_SERVANT_CLEAR_WARNING"*/;
         goto LABEL_34;
       case 3:
         v45 = this->fields.titleLabel;
@@ -423,12 +423,12 @@ LABEL_73:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v46 = LocalizationManager__Get((System_String_o *)StringLiteral_12485, 0LL);
+        v46 = LocalizationManager__Get((System_String_o *)StringLiteral_12485/*"SUPPORT_SELECT_EQUIP_CLEAR_TITLE"*/, 0LL);
         if ( !v45 )
           goto LABEL_73;
         UILabel__set_text(v45, v46, 0LL);
         v43 = this->fields.messageLabel;
-        v44 = &StringLiteral_12486;
+        v44 = &StringLiteral_12486/*"SUPPORT_SELECT_EQUIP_CLEAR_WARNING"*/;
         goto LABEL_34;
       case 4:
         v47 = this->fields.titleLabel;
@@ -437,12 +437,12 @@ LABEL_73:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v48 = LocalizationManager__Get((System_String_o *)StringLiteral_12447, 0LL);
+        v48 = LocalizationManager__Get((System_String_o *)StringLiteral_12447/*"SUPPORT_SELECT_ALL_CLEAR_TITLE"*/, 0LL);
         if ( !v47 )
           goto LABEL_73;
         UILabel__set_text(v47, v48, 0LL);
         v43 = this->fields.messageLabel;
-        v44 = &StringLiteral_12448;
+        v44 = &StringLiteral_12448/*"SUPPORT_SELECT_ALL_CLEAR_WARNING"*/;
 LABEL_34:
         v49 = LocalizationManager__Get((System_String_o *)*v44, 0LL);
         if ( !v43 )
@@ -481,17 +481,17 @@ LABEL_50:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v63 = LocalizationManager__Get((System_String_o *)StringLiteral_12501, 0LL);
+        v63 = LocalizationManager__Get((System_String_o *)StringLiteral_12501/*"SUPPORT_SELECT_WARNING_DIALOG_CLOSE"*/, 0LL);
         if ( !closeLabel )
           goto LABEL_73;
         UILabel__set_text(closeLabel, v63, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v65 = LocalizationManager__Get((System_String_o *)StringLiteral_12500, 0LL);
+        v65 = LocalizationManager__Get((System_String_o *)StringLiteral_12500/*"SUPPORT_SELECT_WARNING_DIALOG_CANCEL"*/, 0LL);
         if ( !cancelLabel )
           goto LABEL_73;
         UILabel__set_text(cancelLabel, v65, 0LL);
         decideLabel = this->fields.decideLabel;
-        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_12502, 0LL);
+        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_12502/*"SUPPORT_SELECT_WARNING_DIALOG_DECIDE"*/, 0LL);
         if ( !decideLabel )
           goto LABEL_73;
         UILabel__set_text(decideLabel, v67, 0LL);
@@ -545,12 +545,12 @@ LABEL_72:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v53 = LocalizationManager__Get((System_String_o *)StringLiteral_12484, 0LL);
+        v53 = LocalizationManager__Get((System_String_o *)StringLiteral_12484/*"SUPPORT_SELECT_EQUIP_CHANGE_TITLE"*/, 0LL);
         if ( !v52 )
           goto LABEL_73;
         UILabel__set_text(v52, v53, 0LL);
         v54 = this->fields.messageLabel;
-        v55 = LocalizationManager__Get((System_String_o *)StringLiteral_12483, 0LL);
+        v55 = LocalizationManager__Get((System_String_o *)StringLiteral_12483/*"SUPPORT_SELECT_EQUIP_CHANGE_MESSAGE"*/, 0LL);
         v56 = System_String__Format_43739268(v55, (Il2CppObject *)class1, (Il2CppObject *)class2, 0LL);
         if ( !v54 )
           goto LABEL_73;

@@ -14,12 +14,12 @@ void __fastcall ServantAddMaster___cctor(const MethodInfo *method)
   if ( (byte_40F93E1 & 1) == 0 )
   {
     sub_B16FFC(&ServantAddMaster_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_21431, v8);
+    sub_B16FFC(&StringLiteral_21431/*"presentDialogMessageId"*/, v8);
     byte_40F93E1 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ServantAddMaster_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_21431;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21431;
+  v10 = (System_Int32_array **)StringLiteral_21431/*"presentDialogMessageId"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_21431/*"presentDialogMessageId"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 

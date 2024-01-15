@@ -117,15 +117,15 @@ void __fastcall __noreturn BattleDebug__OutputError(
     v8 = (Il2CppObject *)((__int64 (__fastcall *)(System_Exception_o *, Il2CppMethodPointer))exception->klass->vtable._9_get_StackTrace.method)(
                            exception,
                            exception->klass->vtable._10_get_Source.methodPtr);
-    v10 = (System_String_o *)sub_B17000(&StringLiteral_9029, v9);
+    v10 = (System_String_o *)sub_B17000(&StringLiteral_9029/*"Message:\n{0}\nStackTrace:\n{1}\n"*/, v9);
     v4 = System_String__Format_43739268(v10, v7, v8, 0LL);
   }
   else
   {
-    v4 = (System_String_o *)sub_B17000(&StringLiteral_1, 0LL);
+    v4 = (System_String_o *)sub_B17000(&StringLiteral_1/*""*/, 0LL);
   }
   v11 = v4;
-  v12 = (System_String_o *)sub_B17000(&StringLiteral_26, v5);
+  v12 = (System_String_o *)sub_B17000(&StringLiteral_26/*"\n"*/, v5);
   v13 = System_String__Concat_43746016(errorText, v12, v11, 0LL);
   v15 = sub_B17000(&System_Exception_TypeInfo, v14);
   v20 = (System_Exception_o *)sub_B170CC(v15, v16, v17, v18, v19);
@@ -214,7 +214,7 @@ System_String_array *__fastcall BattleDebug__getLoglist(
     sub_B16FFC(&Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__0__, v12);
     sub_B16FFC(&Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__1__, v13);
     sub_B16FFC(&BattleDebug___c__DisplayClass7_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_1, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v15);
     byte_40F8C69 = 1;
   }
   v16 = sub_B170CC(BattleDebug___c__DisplayClass7_0_TypeInfo, *(_QWORD *)&tag, reverseFlg, method, v4);
@@ -308,7 +308,7 @@ bool __fastcall BattleDebug___c__DisplayClass7_0___getLoglist_b__0(
   if ( (byte_40F84FE & 1) == 0 )
   {
     sub_B16FFC(&BattleDebug_TAG_TypeInfo, s);
-    sub_B16FFC(&StringLiteral_1502, v5);
+    sub_B16FFC(&StringLiteral_1502/*"<{0}>"*/, v5);
     byte_40F84FE = 1;
   }
   p_fields = &this->fields;
@@ -319,7 +319,7 @@ bool __fastcall BattleDebug___c__DisplayClass7_0___getLoglist_b__0(
                                v7,
                                *(_QWORD *)(*(_QWORD *)v7 + 368LL)),
         p_fields->tag = *(_DWORD *)j_il2cpp_object_unbox_0(v8),
-        v10 = System_String__Format((System_String_o *)StringLiteral_1502, v9, 0LL),
+        v10 = System_String__Format((System_String_o *)StringLiteral_1502/*"<{0}>"*/, v9, 0LL),
         !s) )
   {
     sub_B170D4();
@@ -337,10 +337,10 @@ bool __fastcall BattleDebug___c__DisplayClass7_0___getLoglist_b__1(
 
   if ( (byte_40F84FF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23445, s);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, s);
     byte_40F84FF = 1;
   }
-  v5 = System_String__Format((System_String_o *)StringLiteral_23445, (Il2CppObject *)this->fields.serchText, 0LL);
+  v5 = System_String__Format((System_String_o *)StringLiteral_23445/*"{0}"*/, (Il2CppObject *)this->fields.serchText, 0LL);
   if ( !s )
     sub_B170D4();
   return System_String__IndexOf_43816080(s, v5, 0LL) >= 0;

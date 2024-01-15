@@ -156,7 +156,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitClassCompatibility(
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&BalanceConfig_TypeInfo, v3);
     sub_B16FFC(&CondType_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_17080, v5);
+    sub_B16FFC(&StringLiteral_17080/*"buttontxt_formation_20"*/, v5);
     byte_40F8969 = 1;
   }
   v6 = BalanceConfig_TypeInfo;
@@ -177,7 +177,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitClassCompatibility(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetPartyOrganizationImage(classCompatibilitySprite, (System_String_o *)StringLiteral_17080, 0LL);
+    AtlasManager__SetPartyOrganizationImage(classCompatibilitySprite, (System_String_o *)StringLiteral_17080/*"buttontxt_formation_20"*/, 0LL);
   }
 }
 
@@ -211,7 +211,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitCost(
     sub_B16FFC(&UnityEngine_GameObject_TypeInfo, v4);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
     sub_B16FFC(&System_Type_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_6717, v7);
+    sub_B16FFC(&StringLiteral_6717/*"Fonts/FGO-NumberFont-02"*/, v7);
     byte_40F8963 = 1;
   }
   v8 = (int)UnityEngine_GameObject_var;
@@ -219,7 +219,7 @@ void __fastcall WarBoardConfigurationUIContoroller__InitCost(
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
   v19.fields.value = v8;
   TypeFromHandle = System_Type__GetTypeFromHandle(v19, 0LL);
-  _34873004 = UnityEngine_Resources__Load_34873004((System_String_o *)StringLiteral_6717, TypeFromHandle, 0LL);
+  _34873004 = UnityEngine_Resources__Load_34873004((System_String_o *)StringLiteral_6717/*"Fonts/FGO-NumberFont-02"*/, TypeFromHandle, 0LL);
   if ( _34873004 )
   {
     if ( (UnityEngine_GameObject_c *)_34873004->klass == UnityEngine_GameObject_TypeInfo )
@@ -980,7 +980,7 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyAP(
   if ( (byte_40F8965 & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, *(_QWORD *)&ap);
-    sub_B16FFC(&StringLiteral_951, v6);
+    sub_B16FFC(&StringLiteral_951/*"0"*/, v6);
     byte_40F8965 = 1;
   }
   v20 = 0;
@@ -1027,7 +1027,7 @@ LABEL_22:
   v17 = this->fields.currentApLabel;
   if ( !v17 )
     goto LABEL_22;
-  v18 = (System_String_o *)StringLiteral_951;
+  v18 = (System_String_o *)StringLiteral_951/*"0"*/;
 LABEL_21:
   UILabel__set_text(v17, v18, 0LL);
 }
@@ -1216,9 +1216,9 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyCost(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v3);
-    sub_B16FFC(&StringLiteral_15211, v4);
-    sub_B16FFC(&StringLiteral_15209, v5);
-    sub_B16FFC(&StringLiteral_15210, v6);
+    sub_B16FFC(&StringLiteral_15211/*"WARBOARD_PARTY_ORGANIZATION_COST_SPLIT"*/, v4);
+    sub_B16FFC(&StringLiteral_15209/*"WARBOARD_PARTY_ORGANIZATION_COST_COLOR"*/, v5);
+    sub_B16FFC(&StringLiteral_15210/*"WARBOARD_PARTY_ORGANIZATION_COST_OVER_COLOR"*/, v6);
     byte_40F8964 = 1;
   }
   v26 = 0LL;
@@ -1246,7 +1246,7 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyCost(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_15209, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_15209/*"WARBOARD_PARTY_ORGANIZATION_COST_COLOR"*/, 0LL);
   maxCostLabel = this->fields.maxCostLabel;
   v16 = v14;
   v17 = System_Int32__ToString((int32_t)&v26, 0LL);
@@ -1255,7 +1255,7 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyCost(
     goto LABEL_24;
   UILabel__set_text(maxCostLabel, v18, 0LL);
   spritLabel = this->fields.spritLabel;
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_15211, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_15211/*"WARBOARD_PARTY_ORGANIZATION_COST_SPLIT"*/, 0LL);
   v21 = System_String__Concat_43743732(v16, v20, 0LL);
   if ( !spritLabel )
     goto LABEL_24;
@@ -1268,7 +1268,7 @@ void __fastcall WarBoardConfigurationUIContoroller__ModifyCost(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_15210, 0LL);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_15210/*"WARBOARD_PARTY_ORGANIZATION_COST_OVER_COLOR"*/, 0LL);
   }
   v23 = System_Int32__ToString((int32_t)&v26 + 4, 0LL);
   v24 = System_String__Concat_43743732(v16, v23, 0LL);
@@ -1673,10 +1673,10 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickReturnButton(
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
     sub_B16FFC(&Method_WarBoardConfigurationUIContoroller_OnClickReturnConfirmDialog__, v7);
-    sub_B16FFC(&StringLiteral_15218, v8);
-    sub_B16FFC(&StringLiteral_15217, v9);
-    sub_B16FFC(&StringLiteral_15220, v10);
-    sub_B16FFC(&StringLiteral_15219, v11);
+    sub_B16FFC(&StringLiteral_15218/*"WARBOARD_RETURN_CONFIRM_NO"*/, v8);
+    sub_B16FFC(&StringLiteral_15217/*"WARBOARD_RETURN_CONFIRM_MESSAGE"*/, v9);
+    sub_B16FFC(&StringLiteral_15220/*"WARBOARD_RETURN_CONFIRM_YES"*/, v10);
+    sub_B16FFC(&StringLiteral_15219/*"WARBOARD_RETURN_CONFIRM_TITLE"*/, v11);
     byte_40F8976 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -1702,10 +1702,10 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickReturnButton(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_15219, 0LL);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_15217, 0LL);
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_15220, 0LL);
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_15218, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_15219/*"WARBOARD_RETURN_CONFIRM_TITLE"*/, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_15217/*"WARBOARD_RETURN_CONFIRM_MESSAGE"*/, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_15220/*"WARBOARD_RETURN_CONFIRM_YES"*/, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_15218/*"WARBOARD_RETURN_CONFIRM_NO"*/, 0LL);
   v25 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v21,
@@ -1881,13 +1881,13 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickStartButton(
     sub_B16FFC(&Method_WarBoardConfigurationUIContoroller___c__OnClickStartButton_b__41_0__, v9);
     sub_B16FFC(&WarBoardConfigurationUIContoroller___c_TypeInfo, v10);
     sub_B16FFC(&Method_WarBoardConfigurationUIContoroller_OnClickStartConfirmDialog__, v11);
-    sub_B16FFC(&StringLiteral_15207, v12);
-    sub_B16FFC(&StringLiteral_15226, v13);
-    sub_B16FFC(&StringLiteral_15223, v14);
-    sub_B16FFC(&StringLiteral_15208, v15);
-    sub_B16FFC(&StringLiteral_15225, v16);
-    sub_B16FFC(&StringLiteral_15224, v17);
-    sub_B16FFC(&StringLiteral_15227, v18);
+    sub_B16FFC(&StringLiteral_15207/*"WARBOARD_PARTY_COST_OVER_MESSAGE"*/, v12);
+    sub_B16FFC(&StringLiteral_15226/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, v13);
+    sub_B16FFC(&StringLiteral_15223/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE"*/, v14);
+    sub_B16FFC(&StringLiteral_15208/*"WARBOARD_PARTY_COST_OVER_TITLE"*/, v15);
+    sub_B16FFC(&StringLiteral_15225/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, v16);
+    sub_B16FFC(&StringLiteral_15224/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE_FREE_SQUARE"*/, v17);
+    sub_B16FFC(&StringLiteral_15227/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, v18);
     byte_40F8974 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -1918,8 +1918,8 @@ void __fastcall WarBoardConfigurationUIContoroller__OnClickStartButton(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_15208, 0LL);
-      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_15207, 0LL);
+      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_15208/*"WARBOARD_PARTY_COST_OVER_TITLE"*/, 0LL);
+      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_15207/*"WARBOARD_PARTY_COST_OVER_MESSAGE"*/, 0LL);
       v32 = WarBoardConfigurationUIContoroller___c_TypeInfo;
       if ( (BYTE3(WarBoardConfigurationUIContoroller___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !WarBoardConfigurationUIContoroller___c_TypeInfo->_2.cctor_finished )
@@ -2011,10 +2011,10 @@ LABEL_40:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v46 = LocalizationManager__Get((System_String_o *)StringLiteral_15226, 0LL);
-    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_15224, 0LL);
-    v48 = LocalizationManager__Get((System_String_o *)StringLiteral_15227, 0LL);
-    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_15225, 0LL);
+    v46 = LocalizationManager__Get((System_String_o *)StringLiteral_15226/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, 0LL);
+    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_15224/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE_FREE_SQUARE"*/, 0LL);
+    v48 = LocalizationManager__Get((System_String_o *)StringLiteral_15227/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, 0LL);
+    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_15225/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, 0LL);
     v54 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                    CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                    v50,
@@ -2037,10 +2037,10 @@ LABEL_40:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v46 = LocalizationManager__Get((System_String_o *)StringLiteral_15226, 0LL);
-    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_15223, 0LL);
-    v48 = LocalizationManager__Get((System_String_o *)StringLiteral_15227, 0LL);
-    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_15225, 0LL);
+    v46 = LocalizationManager__Get((System_String_o *)StringLiteral_15226/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, 0LL);
+    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_15223/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE"*/, 0LL);
+    v48 = LocalizationManager__Get((System_String_o *)StringLiteral_15227/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, 0LL);
+    v49 = LocalizationManager__Get((System_String_o *)StringLiteral_15225/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, 0LL);
     v54 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                    CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                    v56,
@@ -2178,7 +2178,7 @@ void __fastcall WarBoardConfigurationUIContoroller__OnEnable(
   if ( (byte_40F8979 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_14467, v3);
+    sub_B16FFC(&StringLiteral_14467/*"TopBase/BackButton"*/, v3);
     byte_40F8979 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -2187,7 +2187,7 @@ void __fastcall WarBoardConfigurationUIContoroller__OnEnable(
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_14467, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_14467/*"TopBase/BackButton"*/, 0LL);
 }
 
 
@@ -2221,7 +2221,7 @@ void __fastcall WarBoardConfigurationUIContoroller__OpenHintDialog(
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v3);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
     sub_B16FFC(&Method_WarBoardConfigurationUIContoroller__OpenHintDialog_b__33_0__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F896F = 1;
   }
   if ( this->fields.questHintEntity || this->fields.questPhaseEntity )
@@ -2314,7 +2314,7 @@ void __fastcall WarBoardConfigurationUIContoroller__UpdateRuleButton(
   {
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_19275, v4);
+    sub_B16FFC(&StringLiteral_19275/*"icon_noticebg_01"*/, v4);
     byte_40F8971 = 1;
   }
   newRuleBg = this->fields.newRuleBg;
@@ -2323,7 +2323,7 @@ void __fastcall WarBoardConfigurationUIContoroller__UpdateRuleButton(
   AtlasManager__SetCommon(newRuleBg, 0LL);
   v6 = this->fields.newRuleBg;
   if ( !v6
-    || (UISprite__set_spriteName(v6, (System_String_o *)StringLiteral_19275, 0LL),
+    || (UISprite__set_spriteName(v6, (System_String_o *)StringLiteral_19275/*"icon_noticebg_01"*/, 0LL),
         newRuleObject = this->fields.newRuleObject,
         (Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__)) == 0LL)
     || (monitor = (WarBoardData_o *)Instance[4].monitor) == 0LL

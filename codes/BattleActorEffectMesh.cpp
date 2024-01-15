@@ -18,15 +18,15 @@ void __fastcall BattleActorEffectMesh___ctor(BattleActorEffectMesh_o *this, cons
 
   if ( (byte_40FDB18 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17355, method);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_17355/*"chr(Clone)"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FDB18 = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_17355;
-  this->fields.topNodeName = (struct System_String_o *)StringLiteral_17355;
+  v10 = (System_Int32_array **)StringLiteral_17355/*"chr(Clone)"*/;
+  this->fields.topNodeName = (struct System_String_o *)StringLiteral_17355/*"chr(Clone)"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.topNodeName, v10, v2, v3, v4, v5, v6, v7);
-  v11 = (System_Int32_array **)StringLiteral_1;
-  this->fields.meshObjName = (struct System_String_o *)StringLiteral_1;
+  v11 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.meshObjName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.meshObjName, v11, v12, v13, v14, v15, v16, v17);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }

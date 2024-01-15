@@ -237,7 +237,7 @@ void __fastcall TutorialNotificationMessage__Init(TutorialNotificationMessage_o 
   if ( (byte_40FB923 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FB923 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
@@ -251,7 +251,7 @@ void __fastcall TutorialNotificationMessage__Init(TutorialNotificationMessage_o 
     v5 = this->fields.messageLabel;
     if ( !v5 )
       goto LABEL_20;
-    UILabel__set_text(v5, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v5, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   touchObject = (UnityEngine_Object_o *)this->fields.touchObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -322,7 +322,7 @@ void __fastcall TutorialNotificationMessage__OnClickClose(
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
     sub_B16FFC(&SoundManager_TypeInfo, v6);
     sub_B16FFC(&Method_TutorialNotificationMessage_EndTurorialRequest__, v7);
-    sub_B16FFC(&StringLiteral_21129, v8);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v8);
     byte_40FB929 = 1;
   }
   if ( this->fields.isButtonEnable )
@@ -431,7 +431,7 @@ void __fastcall TutorialNotificationMessage__Open(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v18);
     sub_B16FFC(&Method_TutorialNotificationMessage_EndOpen__, v19);
     sub_B16FFC(&Method_TutorialNotificationMessage__Open_b__13_0__, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40FB924 = 1;
   }
   this->fields.selectCallbackFunc = selectCallback;
@@ -477,7 +477,7 @@ void __fastcall TutorialNotificationMessage__Open(
     if ( message )
       v26 = message;
     else
-      v26 = (System_String_o *)StringLiteral_1;
+      v26 = (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text(v24, v26, 0LL);
     v27 = this->fields.messageLabel;
     if ( fontSize < 1 )
@@ -555,7 +555,7 @@ void __fastcall TutorialNotificationMessage__OpenWithArrow(
   if ( (byte_40FB926 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, message);
-    sub_B16FFC(&StringLiteral_1, v14);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
     byte_40FB926 = 1;
   }
   this->fields.selectCallbackFunc = 0LL;
@@ -601,7 +601,7 @@ void __fastcall TutorialNotificationMessage__OpenWithArrow(
   if ( message )
     v19 = message;
   else
-    v19 = (System_String_o *)StringLiteral_1;
+    v19 = (System_String_o *)StringLiteral_1/*""*/;
   UILabel__set_text(v17, v19, 0LL);
   v20 = (UnityEngine_Component_o *)this->fields.messageLabel;
   if ( !v20 || (v21 = UnityEngine_Component__get_transform(v20, 0LL)) == 0LL )
@@ -722,8 +722,8 @@ void __fastcall TutorialNotificationMessage__Open_28029660(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v23);
     sub_B16FFC(&Method_TutorialNotificationMessage_EndOpen__, v24);
     sub_B16FFC(&Method_TutorialNotificationMessage__Open_b__14_0__, v25);
-    sub_B16FFC(&StringLiteral_1, v26);
-    sub_B16FFC(&StringLiteral_2643, v27);
+    sub_B16FFC(&StringLiteral_1/*""*/, v26);
+    sub_B16FFC(&StringLiteral_2643/*"Back/back{0}"*/, v27);
     byte_40FB925 = 1;
   }
   this->fields.selectCallbackFunc = callback;
@@ -848,7 +848,7 @@ void __fastcall TutorialNotificationMessage__Open_28029660(
   if ( message )
     v57 = message;
   else
-    v57 = (System_String_o *)StringLiteral_1;
+    v57 = (System_String_o *)StringLiteral_1/*""*/;
   UILabel__set_text(v55, v57, 0LL);
   v58 = this->fields.messageLabel;
   if ( fontSize < 1 )
@@ -894,7 +894,7 @@ LABEL_44:
   backTexture = this->fields.backTexture;
   c.fields.rgba = dlgBgId;
   v65 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &c);
-  v66 = System_String__Format((System_String_o *)StringLiteral_2643, v65, 0LL);
+  v66 = System_String__Format((System_String_o *)StringLiteral_2643/*"Back/back{0}"*/, v65, 0LL);
   v71 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v67, v68, v69, v70);
   System_Action___ctor(v71, (Il2CppObject *)this, Method_TutorialNotificationMessage__Open_b__14_0__, 0LL);
   if ( !backTexture )

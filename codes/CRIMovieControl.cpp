@@ -17,16 +17,16 @@ void __fastcall CRIMovieControl__Awake(CRIMovieControl_o *this, const MethodInfo
 
   if ( (byte_40FB514 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_771, method);
+    sub_B16FFC(&StringLiteral_771/*"--:--"*/, method);
     byte_40FB514 = 1;
   }
   nowTime = this->fields.nowTime;
   if ( !nowTime )
     goto LABEL_9;
-  UILabel__set_text(nowTime, (System_String_o *)StringLiteral_771, 0LL);
+  UILabel__set_text(nowTime, (System_String_o *)StringLiteral_771/*"--:--"*/, 0LL);
   endTime = this->fields.endTime;
   if ( !endTime
-    || (UILabel__set_text(endTime, (System_String_o *)StringLiteral_771, 0LL),
+    || (UILabel__set_text(endTime, (System_String_o *)StringLiteral_771/*"--:--"*/, 0LL),
         (seekBar = (UIProgressBar_o *)this->fields.seekBar) == 0LL)
     || (UIProgressBar__set_value(seekBar, 0.0, 0LL), (texture = (UnityEngine_Component_o *)this->fields.texture) == 0LL)
     || (transform = UnityEngine_Component__get_transform(texture, 0LL),
@@ -108,7 +108,7 @@ System_String_o *__fastcall CRIMovieControl__FrameToTimeString(
   if ( (byte_40FB515 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&frame);
-    sub_B16FFC(&StringLiteral_23531, v5);
+    sub_B16FFC(&StringLiteral_23531/*"{0}:{1:00}"*/, v5);
     byte_40FB515 = 1;
   }
   player = this->fields.player;
@@ -123,7 +123,7 @@ System_String_o *__fastcall CRIMovieControl__FrameToTimeString(
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
   v13 = (int)v9 % 60;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
-  return System_String__Format_43739268((System_String_o *)StringLiteral_23531, v10, v11, 0LL);
+  return System_String__Format_43739268((System_String_o *)StringLiteral_23531/*"{0}:{1:00}"*/, v10, v11, 0LL);
 }
 
 

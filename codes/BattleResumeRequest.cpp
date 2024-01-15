@@ -18,19 +18,19 @@ void __fastcall BattleResumeRequest__beginRequest(
 
   if ( (byte_40FA40C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21522, battleId);
-    sub_B16FFC(&StringLiteral_22896, v11);
-    sub_B16FFC(&StringLiteral_21520, v12);
-    sub_B16FFC(&StringLiteral_16585, v13);
+    sub_B16FFC(&StringLiteral_21522/*"questPhase"*/, battleId);
+    sub_B16FFC(&StringLiteral_22896/*"usedTurnList"*/, v11);
+    sub_B16FFC(&StringLiteral_21520/*"questId"*/, v12);
+    sub_B16FFC(&StringLiteral_16585/*"battleId"*/, v13);
     byte_40FA40C = 1;
   }
   this->fields.currentQuestId = questId;
-  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_16585, battleId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21520, questId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21522, questPhase, 0LL);
+  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_16585/*"battleId"*/, battleId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21520/*"questId"*/, questId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21522/*"questPhase"*/, questPhase, 0LL);
   RequestBase__addField_30957272(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_22896,
+    (System_String_o *)StringLiteral_22896/*"usedTurnList"*/,
     &usedTurnArray->obj,
     0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
@@ -44,7 +44,7 @@ System_String_o *__fastcall BattleResumeRequest__getMockData(BattleResumeRequest
   if ( (byte_40FA40B & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_9128, v2);
+    sub_B16FFC(&StringLiteral_9128/*"MockBattleResumeRequest"*/, v2);
     byte_40FA40B = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -52,7 +52,7 @@ System_String_o *__fastcall BattleResumeRequest__getMockData(BattleResumeRequest
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9128, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9128/*"MockBattleResumeRequest"*/, 0LL);
 }
 
 
@@ -64,7 +64,7 @@ System_String_o *__fastcall BattleResumeRequest__getURL(BattleResumeRequest_o *t
   if ( (byte_40FA40A & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16570, v2);
+    sub_B16FFC(&StringLiteral_16570/*"battle/resume"*/, v2);
     byte_40FA40A = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -73,7 +73,7 @@ System_String_o *__fastcall BattleResumeRequest__getURL(BattleResumeRequest_o *t
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_16570, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_16570/*"battle/resume"*/, 0LL);
 }
 
 
@@ -101,7 +101,7 @@ void __fastcall BattleResumeRequest__requestCompleted(
     sub_B16FFC(&JsonManager_TypeInfo, responseList);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_20980, v7);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v7);
     byte_40FA40D = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -170,6 +170,6 @@ void __fastcall BattleResumeRequest__requestCompleted(
   }
   else
   {
-    RequestBase__completed((RequestBase_o *)this, (System_String_o *)StringLiteral_20980, 0LL);
+    RequestBase__completed((RequestBase_o *)this, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL);
   }
 }

@@ -189,9 +189,9 @@ void __fastcall SoundPlayerShopItemComponent__setItemInfo(
     sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v13);
     sub_B16FFC(&int_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_23767, v16);
-    sub_B16FFC(&StringLiteral_23768, v17);
-    sub_B16FFC(&StringLiteral_23395, v18);
+    sub_B16FFC(&StringLiteral_23767/*"必要"*/, v16);
+    sub_B16FFC(&StringLiteral_23768/*"所持"*/, v17);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v18);
     byte_40F9D53 = 1;
   }
   *(_QWORD *)&methoda.token = 0LL;
@@ -262,22 +262,22 @@ LABEL_17:
   needTitleLb = this->fields.needTitleLb;
   if ( !needTitleLb )
     goto LABEL_39;
-  UILabel__set_text(needTitleLb, (System_String_o *)StringLiteral_23767, 0LL);
+  UILabel__set_text(needTitleLb, (System_String_o *)StringLiteral_23767/*"必要"*/, 0LL);
   haveTitleLb = this->fields.haveTitleLb;
   if ( !haveTitleLb )
     goto LABEL_39;
-  UILabel__set_text(haveTitleLb, (System_String_o *)StringLiteral_23768, 0LL);
+  UILabel__set_text(haveTitleLb, (System_String_o *)StringLiteral_23768/*"所持"*/, 0LL);
   haveNumLb = this->fields.haveNumLb;
   LODWORD(methoda.name) = this->fields.haveItemNum;
   v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &methoda.name);
-  v31 = System_String__Format((System_String_o *)StringLiteral_23395, v30, 0LL);
+  v31 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v30, 0LL);
   if ( !haveNumLb )
     goto LABEL_39;
   UILabel__set_text(haveNumLb, v31, 0LL);
   needNumLb = this->fields.needNumLb;
   LODWORD(methoda.methodPointer) = this->fields.needItemNum;
   v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &methoda);
-  v34 = System_String__Format((System_String_o *)StringLiteral_23395, v33, 0LL);
+  v34 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v33, 0LL);
   if ( !needNumLb )
     goto LABEL_39;
   UILabel__set_text(needNumLb, v34, 0LL);

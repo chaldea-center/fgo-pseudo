@@ -34,8 +34,8 @@ void __fastcall EventInfoHarvestGrowthDialog__Init(EventInfoHarvestGrowthDialog_
   if ( (byte_40FA127 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3252, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FA127 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -43,14 +43,14 @@ void __fastcall EventInfoHarvestGrowthDialog__Init(EventInfoHarvestGrowthDialog_
   this->fields.isClose = 0;
   if ( !titleLabel )
     goto LABEL_15;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_15;
   UILabel__set_text(closeLabel, v7, 0LL);
@@ -295,14 +295,14 @@ void __fastcall EventInfoHarvestGrowthDialog__Open(
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v27);
     sub_B16FFC(&Method_EventInfoHarvestGrowthDialog___c__DisplayClass21_0__Open_b__0__, v28);
     sub_B16FFC(&EventInfoHarvestGrowthDialog___c__DisplayClass21_0_TypeInfo, v29);
-    sub_B16FFC(&StringLiteral_5618, v30);
-    sub_B16FFC(&StringLiteral_19395, v31);
-    sub_B16FFC(&StringLiteral_19039, v32);
-    sub_B16FFC(&StringLiteral_5617, v33);
-    sub_B16FFC(&StringLiteral_5615, v34);
-    sub_B16FFC(&StringLiteral_5619, v35);
-    sub_B16FFC(&StringLiteral_1, v36);
-    sub_B16FFC(&StringLiteral_5616, v37);
+    sub_B16FFC(&StringLiteral_5618/*"EVENT_HARVEST_GROWTH_ITEM_NEW"*/, v30);
+    sub_B16FFC(&StringLiteral_19395/*"img_common_frame01"*/, v31);
+    sub_B16FFC(&StringLiteral_19039/*"harvestGrowthTitle"*/, v32);
+    sub_B16FFC(&StringLiteral_5617/*"EVENT_HARVEST_GROWTH_ITEM_GRADEUP"*/, v33);
+    sub_B16FFC(&StringLiteral_5615/*"EVENT_HARVEST_GROWTH_ITEM_ADD_FORMAT"*/, v34);
+    sub_B16FFC(&StringLiteral_5619/*"EVENT_HARVEST_GROWTH_MESSAGE"*/, v35);
+    sub_B16FFC(&StringLiteral_1/*""*/, v36);
+    sub_B16FFC(&StringLiteral_5616/*"EVENT_HARVEST_GROWTH_ITEM_FORMAT"*/, v37);
     byte_40FA128 = 1;
   }
   memset(&v143, 0, sizeof(v143));
@@ -326,7 +326,7 @@ void __fastcall EventInfoHarvestGrowthDialog__Open(
   Entity = QuestPhaseMaster__GetEntity(v42, harvestGrowthInfo->fields.questId, harvestGrowthInfo->fields.phase, 0LL);
   if ( !Entity )
     goto LABEL_99;
-  ScriptStr = QuestPhaseEntity__getScriptStr(Entity, (System_String_o *)StringLiteral_19039, 0LL, 0LL);
+  ScriptStr = QuestPhaseEntity__getScriptStr(Entity, (System_String_o *)StringLiteral_19039/*"harvestGrowthTitle"*/, 0LL, 0LL);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_99;
   v45 = ScriptStr;
@@ -543,13 +543,13 @@ LABEL_100:
       0LL);
     if ( *(_DWORD *)(v105 + 16) == 1 )
     {
-      v108 = (System_String_o **)&StringLiteral_19395;
+      v108 = (System_String_o **)&StringLiteral_19395/*"img_common_frame01"*/;
       v109 = 1;
       v110 = v104;
     }
     else
     {
-      v108 = (System_String_o **)&StringLiteral_1;
+      v108 = (System_String_o **)&StringLiteral_1/*""*/;
       v110 = v104;
       v109 = 0;
     }
@@ -561,7 +561,7 @@ LABEL_100:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v116 = LocalizationManager__Get((System_String_o *)StringLiteral_5616, 0LL);
+    v116 = LocalizationManager__Get((System_String_o *)StringLiteral_5616/*"EVENT_HARVEST_GROWTH_ITEM_FORMAT"*/, 0LL);
     LODWORD(v142.fields.list) = *(_DWORD *)(v105 + 28);
     v117 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142);
     if ( !v115 )
@@ -574,7 +574,7 @@ LABEL_100:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v118 = &StringLiteral_5617;
+      v118 = &StringLiteral_5617/*"EVENT_HARVEST_GROWTH_ITEM_GRADEUP"*/;
 LABEL_77:
       v119 = LocalizationManager__Get((System_String_o *)*v118, 0LL);
       v120 = (_QWORD **)Method_System_Array_Empty_object___;
@@ -611,7 +611,7 @@ LABEL_77:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v118 = &StringLiteral_5618;
+      v118 = &StringLiteral_5618/*"EVENT_HARVEST_GROWTH_ITEM_NEW"*/;
       goto LABEL_77;
     }
     if ( *(int *)(v105 + 32) >= 1 )
@@ -621,7 +621,7 @@ LABEL_77:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v101 = LocalizationManager__Get((System_String_o *)StringLiteral_5615, 0LL);
+      v101 = LocalizationManager__Get((System_String_o *)StringLiteral_5615/*"EVENT_HARVEST_GROWTH_ITEM_ADD_FORMAT"*/, 0LL);
       LODWORD(v142.fields.list) = *(_DWORD *)(v105 + 32);
       v102 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v142);
       System_Text_StringBuilder__AppendFormat(v115, v101, v102, 0LL);
@@ -651,7 +651,7 @@ LABEL_89:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v129 = LocalizationManager__Get((System_String_o *)StringLiteral_5619, 0LL);
+  v129 = LocalizationManager__Get((System_String_o *)StringLiteral_5619/*"EVENT_HARVEST_GROWTH_MESSAGE"*/, 0LL);
   if ( !v138 )
     goto LABEL_99;
   v130 = System_String__Format(v129, (Il2CppObject *)v138->fields.name, 0LL);

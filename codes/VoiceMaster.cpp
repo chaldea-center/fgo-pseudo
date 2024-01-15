@@ -306,7 +306,7 @@ VoiceInfo_array *__fastcall VoiceMaster__getEnableInfo(
     sub_B16FFC(&VoiceMaster___c__DisplayClass2_0_TypeInfo, v45);
     sub_B16FFC(&VoiceEntity_TypeInfo, v46);
     sub_B16FFC(&VoiceInfo_TypeInfo, v47);
-    sub_B16FFC(&StringLiteral_15842, v48);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v48);
     byte_40FF74A = 1;
   }
   v254 = 0;
@@ -482,7 +482,7 @@ LABEL_33:
                                v90,
                                *(_QWORD *)(*(_QWORD *)v90 + 368LL));
     v92 = System_Int32__ToString((int32_t)&v254, 0LL);
-    v93 = System_String__Concat_43746016(v92, (System_String_o *)StringLiteral_15842, v91, 0LL);
+    v93 = System_String__Concat_43746016(v92, (System_String_o *)StringLiteral_15842/*"_"*/, v91, 0LL);
     VoiceList_30036932 = ServantVoiceEntity__getVoiceList_30036932(
                            v89,
                            v86->fields.svtVoiceType,
@@ -1418,7 +1418,7 @@ int32_t __fastcall VoiceMaster__getFirstPlayPriority(
     sub_B16FFC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v7);
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v8);
     sub_B16FFC(&VoiceEntity_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_15842, v10);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v10);
     byte_40FF74C = 1;
   }
   v11 = 0;
@@ -1492,7 +1492,7 @@ LABEL_17:
       v26 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v25 + 360LL))(
                                  v25,
                                  *(_QWORD *)(*(_QWORD *)v25 + 368LL));
-      v27 = System_String__Concat_43743732((System_String_o *)StringLiteral_15842, v26, 0LL);
+      v27 = System_String__Concat_43743732((System_String_o *)StringLiteral_15842/*"_"*/, v26, 0LL);
       if ( !labelName )
         sub_B170D4();
       if ( System_String__EndsWith(labelName, v27, 0LL) )
@@ -1589,7 +1589,7 @@ int32_t __fastcall VoiceMaster__getFlagRequestNumber(
     sub_B16FFC(&NetworkManager_TypeInfo, v13);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
     sub_B16FFC(&VoiceEntity_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_15842, v16);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v16);
     byte_40FF74B = 1;
   }
   v17 = 0;
@@ -1663,7 +1663,7 @@ LABEL_17:
       v32 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v31 + 360LL))(
                                  v31,
                                  *(_QWORD *)(*(_QWORD *)v31 + 368LL));
-      v33 = System_String__Concat_43743732((System_String_o *)StringLiteral_15842, v32, 0LL);
+      v33 = System_String__Concat_43743732((System_String_o *)StringLiteral_15842/*"_"*/, v32, 0LL);
       if ( !labelName )
         sub_B170D4();
     }

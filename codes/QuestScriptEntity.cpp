@@ -320,10 +320,10 @@ int32_t __fastcall QuestScriptEntity__GetMaxPhase(QuestScriptEntity_o *this, con
 {
   if ( (byte_40F8234 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20360, method);
+    sub_B16FFC(&StringLiteral_20360/*"maxPhase"*/, method);
     byte_40F8234 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20360, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20360/*"maxPhase"*/, 0, 0LL);
 }
 
 
@@ -331,10 +331,10 @@ bool __fastcall QuestScriptEntity__IsMaterialLatestClear(QuestScriptEntity_o *th
 {
   if ( (byte_40F8233 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20343, method);
+    sub_B16FFC(&StringLiteral_20343/*"materialLatestClear"*/, method);
     byte_40F8233 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20343, 0, 0LL) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20343/*"materialLatestClear"*/, 0, 0LL) > 0;
 }
 
 
@@ -342,10 +342,10 @@ bool __fastcall QuestScriptEntity__IsNoneMstQuest(QuestScriptEntity_o *this, con
 {
   if ( (byte_40F8235 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21034, method);
+    sub_B16FFC(&StringLiteral_21034/*"noneQuest"*/, method);
     byte_40F8235 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21034, 0, 0LL) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21034/*"noneQuest"*/, 0, 0LL) > 0;
 }
 
 

@@ -106,8 +106,8 @@ System_String_o *__fastcall BattleFieldMotionComponent__GetMotionName(
 
   if ( (byte_40F72FF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8758, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_8758/*"MOTION_"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F72FF = 1;
   }
   if ( !baData )
@@ -116,7 +116,7 @@ System_String_o *__fastcall BattleFieldMotionComponent__GetMotionName(
   if ( !result )
   {
     v5 = System_Int32__ToString((int)baData + 48, 0LL);
-    return System_String__Concat_43743732((System_String_o *)StringLiteral_8758, v5, 0LL);
+    return System_String__Concat_43743732((System_String_o *)StringLiteral_8758/*"MOTION_"*/, v5, 0LL);
   }
   return result;
 }
@@ -597,7 +597,7 @@ void __fastcall BattleFieldMotionComponent__loadReplaceActor(
   if ( (byte_40F7302 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Queue_BattleActionData_ReplaceMember__Dequeue__, endEvent);
-    sub_B16FFC(&StringLiteral_1826, v5);
+    sub_B16FFC(&StringLiteral_1826/*"ActorObject"*/, v5);
     byte_40F7302 = 1;
   }
   replaceMember = (System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *)this->fields.replaceMember;
@@ -619,7 +619,7 @@ void __fastcall BattleFieldMotionComponent__loadReplaceActor(
     || (variables = Fsm->fields.variables) == 0LL
     || (FsmGameObject = HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
                           variables,
-                          (System_String_o *)StringLiteral_1826,
+                          (System_String_o *)StringLiteral_1826/*"ActorObject"*/,
                           0LL)) == 0LL
     || (HutongGames_PlayMaker_FsmGameObject__set_Value(FsmGameObject, v11, 0LL), (myFsm = this->fields.myFsm) == 0LL) )
   {
@@ -730,7 +730,7 @@ void __fastcall BattleFieldMotionComponent__setPerf(
 
   if ( (byte_40F72FD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10602, inperf);
+    sub_B16FFC(&StringLiteral_10602/*"Performance"*/, inperf);
     byte_40F72FD = 1;
   }
   this->fields.perf = inperf;
@@ -742,7 +742,7 @@ void __fastcall BattleFieldMotionComponent__setPerf(
     || (FsmVariables = PlayMakerFSM__get_FsmVariables(v6, 0LL)) == 0LL
     || (FsmGameObject = HutongGames_PlayMaker_FsmVariables__GetFsmGameObject(
                           FsmVariables,
-                          (System_String_o *)StringLiteral_10602,
+                          (System_String_o *)StringLiteral_10602/*"Performance"*/,
                           0LL),
         (v9 = (UnityEngine_Component_o *)*p_perf) == 0LL)
     || (v10 = FsmGameObject, gameObject = UnityEngine_Component__get_gameObject(v9, 0LL), !v10) )
@@ -807,7 +807,7 @@ void __fastcall BattleFieldMotionComponent__startReplaceActor(
   if ( (byte_40F7301 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Collections_Generic_Queue_BattleActionData_ReplaceMember__Enqueue__, endEvent);
-    sub_B16FFC(&StringLiteral_1826, v5);
+    sub_B16FFC(&StringLiteral_1826/*"ActorObject"*/, v5);
     byte_40F7301 = 1;
   }
   perf = this->fields.perf;
@@ -868,7 +868,7 @@ LABEL_13:
               {
                 FsmGameObject = HutongGames_PlayMaker_FsmVariables__FindFsmGameObject(
                                   variables,
-                                  (System_String_o *)StringLiteral_1826,
+                                  (System_String_o *)StringLiteral_1826/*"ActorObject"*/,
                                   0LL);
                 if ( FsmGameObject )
                 {
@@ -920,7 +920,7 @@ bool __fastcall BattleFieldMotionComponent__CameraCoroutine_d__44__MoveNext(
   if ( (byte_40F8517 & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12199, v3);
+    sub_B16FFC(&StringLiteral_12199/*"SKILL_E_ALL_PLAYER"*/, v3);
     byte_40F8517 = 1;
   }
   _1__state = this->fields.__1__state;
@@ -945,7 +945,7 @@ bool __fastcall BattleFieldMotionComponent__CameraCoroutine_d__44__MoveNext(
     if ( !v10 || (v11 = v10->fields.actioncamera) == 0LL )
 LABEL_16:
       sub_B170D4();
-    BattleActionCamera__sendMainEvent(v11, (System_String_o *)StringLiteral_12199, 0LL);
+    BattleActionCamera__sendMainEvent(v11, (System_String_o *)StringLiteral_12199/*"SKILL_E_ALL_PLAYER"*/, 0LL);
   }
   else if ( !_1__state )
   {

@@ -56,7 +56,7 @@ void __fastcall MaterialCostumeMenu__Close_30120400(
 
   if ( (byte_40FCBC9 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10026, callback);
+    sub_B16FFC(&StringLiteral_10026/*"OnStartClose"*/, callback);
     byte_40FCBC9 = 1;
   }
   this->fields.closeCallbackFunc = callback;
@@ -72,7 +72,7 @@ void __fastcall MaterialCostumeMenu__Close_30120400(
   this->fields.state = 4;
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10026,
+    (System_String_o *)StringLiteral_10026/*"OnStartClose"*/,
     0.1,
     0LL);
 }
@@ -502,7 +502,7 @@ void __fastcall MaterialCostumeMenu__Open(
 
   if ( (byte_40FCBC6 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10027, opened_act);
+    sub_B16FFC(&StringLiteral_10027/*"OnStartOpen"*/, opened_act);
     byte_40FCBC6 = 1;
   }
   if ( !this->fields.state )
@@ -548,7 +548,7 @@ LABEL_10:
     MaterialCostumeServantListViewManager__SetMode_30122228(v24, 1, v23);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10027,
+      (System_String_o *)StringLiteral_10027/*"OnStartOpen"*/,
       0.5,
       0LL);
   }

@@ -40,10 +40,10 @@ void __fastcall EventItemBoardComponent__OnClickItem(EventItemBoardComponent_o *
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
     sub_B16FFC(&SoundManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_14699, v9);
-    sub_B16FFC(&StringLiteral_3253, v10);
-    sub_B16FFC(&StringLiteral_3251, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_14699/*"USE_ITEM_CONFIRM_MSG"*/, v9);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v10);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F8828 = 1;
   }
   if ( this->fields.isEnableSelect )
@@ -61,21 +61,21 @@ void __fastcall EventItemBoardComponent__OnClickItem(EventItemBoardComponent_o *
         goto LABEL_23;
       if ( v14->fields.isClosed )
         return;
-      v15 = (System_String_o *)StringLiteral_1;
+      v15 = (System_String_o *)StringLiteral_1/*""*/;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
-      v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+      v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
       if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !SoundManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
       SoundManager__playSystemSe(0, 0LL);
-      v18 = LocalizationManager__Get((System_String_o *)StringLiteral_14699, 0LL);
+      v18 = LocalizationManager__Get((System_String_o *)StringLiteral_14699/*"USE_ITEM_CONFIRM_MSG"*/, 0LL);
       itemEntity = this->fields.itemEntity;
       if ( !itemEntity )
         goto LABEL_23;
@@ -225,9 +225,9 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
     sub_B16FFC(&int_TypeInfo, v12);
     sub_B16FFC(&NetworkManager_TypeInfo, v13);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_B16FFC(&StringLiteral_23433, v15);
-    sub_B16FFC(&StringLiteral_746, v16);
-    sub_B16FFC(&StringLiteral_18455, v17);
+    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v15);
+    sub_B16FFC(&StringLiteral_746/*"-"*/, v16);
+    sub_B16FFC(&StringLiteral_18455/*"event_item_board_description"*/, v17);
     byte_40F8827 = 1;
   }
   this->fields.isEnableSelect = 0;
@@ -269,19 +269,19 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
   itemNameLb = this->fields.itemNameLb;
   if ( !itemNameLb )
     goto LABEL_32;
-  UILabel__set_text(itemNameLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(itemNameLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   currentNumLb = this->fields.currentNumLb;
   if ( !currentNumLb )
     goto LABEL_32;
-  UILabel__set_text(currentNumLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(currentNumLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   spendNumLb = this->fields.spendNumLb;
   if ( !spendNumLb )
     goto LABEL_32;
-  UILabel__set_text(spendNumLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(spendNumLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   itemDetailLb = this->fields.itemDetailLb;
   if ( !itemDetailLb )
     goto LABEL_32;
-  UILabel__set_text(itemDetailLb, (System_String_o *)StringLiteral_746, 0LL);
+  UILabel__set_text(itemDetailLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
   itemIconInfo = (UnityEngine_Component_o *)this->fields.itemIconInfo;
   if ( !itemIconInfo )
     goto LABEL_32;
@@ -325,7 +325,7 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
                 v46 = this->fields.itemDetailLb;
                 Script_28921972 = ItemEntity__getScript_28921972(
                                     v45,
-                                    (System_String_o *)StringLiteral_18455,
+                                    (System_String_o *)StringLiteral_18455/*"event_item_board_description"*/,
                                     v45->fields.detail,
                                     0LL);
                 if ( v46 )
@@ -355,7 +355,7 @@ void __fastcall EventItemBoardComponent__SetItemBoardInfo(
                       v53 = this->fields.currentNumLb;
                       v58 = v52;
                       v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v58);
-                      v55 = System_String__Format((System_String_o *)StringLiteral_23433, v54, 0LL);
+                      v55 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v54, 0LL);
                       if ( v53 )
                       {
                         UILabel__set_text(v53, v55, 0LL);

@@ -370,7 +370,7 @@ bool __fastcall SpotAddMaster__TryGetOverwriteName(
     sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
     sub_B16FFC(&CondType_TypeInfo, v8);
     sub_B16FFC(&SpotAddEntity_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FAD9F = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
@@ -379,7 +379,7 @@ bool __fastcall SpotAddMaster__TryGetOverwriteName(
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
             (const MethodInfo_290DE84 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  klass = (System_Int32_array **)StringLiteral_1;
+  klass = (System_Int32_array **)StringLiteral_1/*""*/;
   if ( Count >= 1 )
   {
     v20 = Count;

@@ -239,12 +239,12 @@ void __fastcall EquipGraphListViewItemDraw__SetItem(
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v13);
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_26, v16);
-    sub_B16FFC(&StringLiteral_11583, v17);
-    sub_B16FFC(&StringLiteral_15289, v18);
-    sub_B16FFC(&StringLiteral_15290, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
-    sub_B16FFC(&StringLiteral_5513, v21);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v16);
+    sub_B16FFC(&StringLiteral_11583/*"SELECT_BONUS_SKILL_INVALID"*/, v17);
+    sub_B16FFC(&StringLiteral_15289/*"WAVE_BATTLE_EQUIP_UNIQUE"*/, v18);
+    sub_B16FFC(&StringLiteral_15290/*"WAVE_BATTLE_EQUIP_WAVE"*/, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
+    sub_B16FFC(&StringLiteral_5513/*"EQUIP_GRAPH_USE"*/, v21);
     byte_40FC4A8 = 1;
   }
   if ( !item || !mode )
@@ -301,7 +301,7 @@ void __fastcall EquipGraphListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11583, 0LL);
+    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_11583/*"SELECT_BONUS_SKILL_INVALID"*/, 0LL);
     if ( !v29 )
       goto LABEL_87;
     UILabel__set_text(v29, v30, 0LL);
@@ -317,7 +317,7 @@ void __fastcall EquipGraphListViewItemDraw__SetItem(
   {
     if ( !v29 )
       goto LABEL_87;
-    UILabel__set_text(this->fields.skillInvalidLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(this->fields.skillInvalidLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   if ( item->fields.isBase || item->fields.isOldBase )
     goto LABEL_24;
@@ -336,7 +336,7 @@ LABEL_24:
       v38 = this->fields.warningLabel;
       if ( !v38 )
         goto LABEL_87;
-      UILabel__set_text(v38, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v38, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       goto LABEL_28;
     }
     v51 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -362,7 +362,7 @@ LABEL_24:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v63 = LocalizationManager__Get((System_String_o *)StringLiteral_15290, 0LL);
+      v63 = LocalizationManager__Get((System_String_o *)StringLiteral_15290/*"WAVE_BATTLE_EQUIP_WAVE"*/, 0LL);
       UniqueOrganizedWave_k__BackingField = item->fields._UniqueOrganizedWave_k__BackingField;
       v64 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &UniqueOrganizedWave_k__BackingField);
       MaxWave_k__BackingField = item->fields._MaxWave_k__BackingField;
@@ -376,7 +376,7 @@ LABEL_24:
         (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         v51,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_26,
+        (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_26/*"\n"*/,
         (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
     }
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -384,7 +384,7 @@ LABEL_24:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_15289, 0LL);
+    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_15289/*"WAVE_BATTLE_EQUIP_UNIQUE"*/, 0LL);
     if ( !v51 )
       goto LABEL_87;
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
@@ -393,9 +393,9 @@ LABEL_24:
       (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
       v51,
-      (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_26,
+      (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_26/*"\n"*/,
       (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
-    v68 = LocalizationManager__Get((System_String_o *)StringLiteral_5513, 0LL);
+    v68 = LocalizationManager__Get((System_String_o *)StringLiteral_5513/*"EQUIP_GRAPH_USE"*/, 0LL);
     v60 = (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__;
     v59 = (EventMissionProgressRequest_Argument_ProgressData_o *)v68;
   }
@@ -424,7 +424,7 @@ LABEL_24:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v54 = LocalizationManager__Get((System_String_o *)StringLiteral_15290, 0LL);
+      v54 = LocalizationManager__Get((System_String_o *)StringLiteral_15290/*"WAVE_BATTLE_EQUIP_WAVE"*/, 0LL);
       UniqueOrganizedWave_k__BackingField = item->fields._OrganizedWave_k__BackingField;
       v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &UniqueOrganizedWave_k__BackingField);
       MaxWave_k__BackingField = item->fields._MaxWave_k__BackingField;
@@ -438,7 +438,7 @@ LABEL_24:
         (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         v51,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_26,
+        (EventMissionProgressRequest_Argument_ProgressData_o *)StringLiteral_26/*"\n"*/,
         (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
     }
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -446,7 +446,7 @@ LABEL_24:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v58 = LocalizationManager__Get((System_String_o *)StringLiteral_5513, 0LL);
+    v58 = LocalizationManager__Get((System_String_o *)StringLiteral_5513/*"EQUIP_GRAPH_USE"*/, 0LL);
     if ( !v51 )
       goto LABEL_87;
     v59 = (EventMissionProgressRequest_Argument_ProgressData_o *)v58;
@@ -455,7 +455,7 @@ LABEL_24:
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(v51, v59, v60);
   v69 = this->fields.warningLabel;
   v70 = System_String__Join_43799176(
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_1/*""*/,
           (System_Collections_Generic_IEnumerable_string__o *)v51,
           0LL);
   if ( !v69 )

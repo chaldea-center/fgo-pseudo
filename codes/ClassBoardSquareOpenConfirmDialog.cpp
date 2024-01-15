@@ -305,15 +305,15 @@ void __fastcall ClassBoardSquareOpenConfirmDialog__Open(
     sub_B16FFC(&Method_ClassBoardSquareOpenConfirmDialog___c__DisplayClass24_0__Open_b__0__, v21);
     sub_B16FFC(&Method_ClassBoardSquareOpenConfirmDialog___c__DisplayClass24_0__Open_b__1__, v22);
     sub_B16FFC(&ClassBoardSquareOpenConfirmDialog___c__DisplayClass24_0_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_3028, v24);
-    sub_B16FFC(&StringLiteral_3025, v25);
-    sub_B16FFC(&StringLiteral_3030, v26);
-    sub_B16FFC(&StringLiteral_3032, v27);
-    sub_B16FFC(&StringLiteral_3024, v28);
-    sub_B16FFC(&StringLiteral_3029, v29);
-    sub_B16FFC(&StringLiteral_3031, v30);
-    sub_B16FFC(&StringLiteral_3026, v31);
-    sub_B16FFC(&StringLiteral_3027, v32);
+    sub_B16FFC(&StringLiteral_3028/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/, v24);
+    sub_B16FFC(&StringLiteral_3025/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_DECIDE"*/, v25);
+    sub_B16FFC(&StringLiteral_3030/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM_AND_QP"*/, v26);
+    sub_B16FFC(&StringLiteral_3032/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_TITLE"*/, v27);
+    sub_B16FFC(&StringLiteral_3024/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_CANCEL"*/, v28);
+    sub_B16FFC(&StringLiteral_3029/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM"*/, v29);
+    sub_B16FFC(&StringLiteral_3031/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_QP"*/, v30);
+    sub_B16FFC(&StringLiteral_3026/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/, v31);
+    sub_B16FFC(&StringLiteral_3027/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_CONTAIN_QP"*/, v32);
     byte_40FBA13 = 1;
   }
   this->fields.classBoardSquare = square;
@@ -356,7 +356,7 @@ void __fastcall ClassBoardSquareOpenConfirmDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_3032, 0LL);
+  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_3032/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_68;
   UILabel__set_text(titleLabel, v47, 0LL);
@@ -396,7 +396,7 @@ LABEL_13:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v59 = &StringLiteral_3027;
+      v59 = &StringLiteral_3027/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_CONTAIN_QP"*/;
     }
     else
     {
@@ -405,7 +405,7 @@ LABEL_13:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v59 = &StringLiteral_3026;
+      v59 = &StringLiteral_3026/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL"*/;
     }
     goto LABEL_61;
   }
@@ -504,7 +504,7 @@ LABEL_39:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v59 = &StringLiteral_3030;
+    v59 = &StringLiteral_3030/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM_AND_QP"*/;
   }
   else if ( (v57 & ~v80 & v90 & 1) != 0 )
   {
@@ -514,7 +514,7 @@ LABEL_39:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v59 = &StringLiteral_3029;
+    v59 = &StringLiteral_3029/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_ITEM"*/;
   }
   else
   {
@@ -526,7 +526,7 @@ LABEL_39:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v59 = &StringLiteral_3028;
+      v59 = &StringLiteral_3028/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING"*/;
     }
     else
     {
@@ -535,7 +535,7 @@ LABEL_39:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v59 = &StringLiteral_3031;
+      v59 = &StringLiteral_3031/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_ITEM_DETAIL_WARNING_SHORTAGE_QP"*/;
     }
   }
 LABEL_61:
@@ -550,12 +550,12 @@ LABEL_61:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v94 = LocalizationManager__Get((System_String_o *)StringLiteral_3024, 0LL);
+  v94 = LocalizationManager__Get((System_String_o *)StringLiteral_3024/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_CANCEL"*/, 0LL);
   if ( !cancelBtnLabel )
     goto LABEL_68;
   UILabel__set_text(cancelBtnLabel, v94, 0LL);
   decideBtnLabel = this->fields.decideBtnLabel;
-  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_3025, 0LL);
+  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_3025/*"CLASS_BOARD_SQUARE_OPEN_CONFIRM_DIALOG_DECIDE"*/, 0LL);
   if ( !decideBtnLabel )
     goto LABEL_68;
   UILabel__set_text(decideBtnLabel, v96, 0LL);
@@ -716,10 +716,10 @@ System_String_o *__fastcall ClassBoardSquareOpenConfirmDialog__get_closeBtnPath(
 {
   if ( (byte_40FBA18 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15413, method);
+    sub_B16FFC(&StringLiteral_15413/*"Window/CancelBtn"*/, method);
     byte_40FBA18 = 1;
   }
-  return (System_String_o *)StringLiteral_15413;
+  return (System_String_o *)StringLiteral_15413/*"Window/CancelBtn"*/;
 }
 
 

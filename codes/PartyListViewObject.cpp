@@ -140,13 +140,13 @@ void __fastcall PartyListViewObject__EndShowEquip(PartyListViewObject_o *this, b
     sub_B16FFC(&ManagerConfig_TypeInfo, v4);
     sub_B16FFC(&Method_PartyListViewObject_EndCloseShowEquip__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_9996, v7);
+    sub_B16FFC(&StringLiteral_9996/*"OnModifyListView"*/, v7);
     byte_40FDDCA = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
     goto LABEL_14;
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9996, (Il2CppObject *)this, 0LL);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9996/*"OnModifyListView"*/, (Il2CppObject *)this, 0LL);
   scrollView = this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_14;
@@ -205,13 +205,13 @@ void __fastcall PartyListViewObject__EndShowServant(
     sub_B16FFC(&ManagerConfig_TypeInfo, v4);
     sub_B16FFC(&Method_PartyListViewObject_EndCloseShowServant__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_9996, v7);
+    sub_B16FFC(&StringLiteral_9996/*"OnModifyListView"*/, v7);
     byte_40FDDC6 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
     goto LABEL_14;
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9996, (Il2CppObject *)this, 0LL);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9996/*"OnModifyListView"*/, (Il2CppObject *)this, 0LL);
   scrollView = this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_14;
@@ -1252,7 +1252,7 @@ void __fastcall PartyListViewObject__SelectMemberEquip(
   if ( (byte_40FDDC4 & 1) == 0 )
   {
     sub_B16FFC(&PartyListViewItem_TypeInfo, *(_QWORD *)&m);
-    sub_B16FFC(&StringLiteral_9926, v5);
+    sub_B16FFC(&StringLiteral_9926/*"OnClickListViewChangeEquip"*/, v5);
     byte_40FDDC4 = 1;
   }
   v11 = 0;
@@ -1268,7 +1268,7 @@ void __fastcall PartyListViewObject__SelectMemberEquip(
         manager = (UnityEngine_Component_o *)this->fields.manager;
         v11 = m + 1;
         v9 = System_Int32__ToString((int32_t)&v11, 0LL);
-        v10 = System_String__Concat_43743732((System_String_o *)StringLiteral_9926, v9, 0LL);
+        v10 = System_String__Concat_43743732((System_String_o *)StringLiteral_9926/*"OnClickListViewChangeEquip"*/, v9, 0LL);
         if ( !manager )
           sub_B170D4();
         UnityEngine_Component__SendMessage(manager, v10, (Il2CppObject *)this, 0LL);
@@ -1295,7 +1295,7 @@ void __fastcall PartyListViewObject__SelectMemberServant(
   if ( (byte_40FDDC3 & 1) == 0 )
   {
     sub_B16FFC(&PartyListViewItem_TypeInfo, *(_QWORD *)&m);
-    sub_B16FFC(&StringLiteral_9927, v5);
+    sub_B16FFC(&StringLiteral_9927/*"OnClickListViewChangeServant"*/, v5);
     byte_40FDDC3 = 1;
   }
   v11 = 0;
@@ -1311,7 +1311,7 @@ void __fastcall PartyListViewObject__SelectMemberServant(
         manager = (UnityEngine_Component_o *)this->fields.manager;
         v11 = m + 1;
         v9 = System_Int32__ToString((int32_t)&v11, 0LL);
-        v10 = System_String__Concat_43743732((System_String_o *)StringLiteral_9927, v9, 0LL);
+        v10 = System_String__Concat_43743732((System_String_o *)StringLiteral_9927/*"OnClickListViewChangeServant"*/, v9, 0LL);
         if ( !manager )
           sub_B170D4();
         UnityEngine_Component__SendMessage(manager, v10, (Il2CppObject *)this, 0LL);

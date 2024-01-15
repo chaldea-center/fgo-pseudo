@@ -74,12 +74,12 @@ void __fastcall MyRoomStateMaterial___cctor(const MethodInfo *method)
   {
     sub_B16FFC(&MyRoomStateMaterial_TypeInfo, v1);
     sub_B16FFC(&GameEventType_TYPE___TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_6993, v4);
-    sub_B16FFC(&StringLiteral_2792, v5);
-    sub_B16FFC(&StringLiteral_6994, v6);
-    sub_B16FFC(&StringLiteral_6995, v7);
-    sub_B16FFC(&StringLiteral_6992, v8);
-    sub_B16FFC(&StringLiteral_8956, v9);
+    sub_B16FFC(&StringLiteral_6993/*"H020"*/, v4);
+    sub_B16FFC(&StringLiteral_2792/*"Bg/10500"*/, v5);
+    sub_B16FFC(&StringLiteral_6994/*"H4010"*/, v6);
+    sub_B16FFC(&StringLiteral_6995/*"H4020"*/, v7);
+    sub_B16FFC(&StringLiteral_6992/*"H010"*/, v8);
+    sub_B16FFC(&StringLiteral_8956/*"MaterialFinishReadQuestList"*/, v9);
     byte_40F9B7D = 1;
   }
   MyRoomStateMaterial_TypeInfo->static_fields->DEFAULT_FONT_SIZE = 28;
@@ -110,28 +110,28 @@ void __fastcall MyRoomStateMaterial___cctor(const MethodInfo *method)
     v16,
     v17);
   v21 = MyRoomStateMaterial_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_6992;
-  v21->SWIMSUIT_MELT_BIRTHDAY_VOICEID1 = (struct System_String_o *)StringLiteral_6992;
+  v22 = (System_Int32_array **)StringLiteral_6992/*"H010"*/;
+  v21->SWIMSUIT_MELT_BIRTHDAY_VOICEID1 = (struct System_String_o *)StringLiteral_6992/*"H010"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->SWIMSUIT_MELT_BIRTHDAY_VOICEID1, v22, v23, v24, v25, v26, v27, v28);
   v29 = MyRoomStateMaterial_TypeInfo->static_fields;
-  v30 = (System_Int32_array **)StringLiteral_6994;
-  v29->SWIMSUIT_MELT_BIRTHDAY_VOICEID2 = (struct System_String_o *)StringLiteral_6994;
+  v30 = (System_Int32_array **)StringLiteral_6994/*"H4010"*/;
+  v29->SWIMSUIT_MELT_BIRTHDAY_VOICEID2 = (struct System_String_o *)StringLiteral_6994/*"H4010"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v29->SWIMSUIT_MELT_BIRTHDAY_VOICEID2, v30, v31, v32, v33, v34, v35, v36);
   v37 = MyRoomStateMaterial_TypeInfo->static_fields;
-  v38 = (System_Int32_array **)StringLiteral_6993;
-  v37->SWIMSUIT_MELT_EVENT_VOICEID1 = (struct System_String_o *)StringLiteral_6993;
+  v38 = (System_Int32_array **)StringLiteral_6993/*"H020"*/;
+  v37->SWIMSUIT_MELT_EVENT_VOICEID1 = (struct System_String_o *)StringLiteral_6993/*"H020"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v37->SWIMSUIT_MELT_EVENT_VOICEID1, v38, v39, v40, v41, v42, v43, v44);
   v45 = MyRoomStateMaterial_TypeInfo->static_fields;
-  v46 = (System_Int32_array **)StringLiteral_6995;
-  v45->SWIMSUIT_MELT_EVENT_VOICEID2 = (struct System_String_o *)StringLiteral_6995;
+  v46 = (System_Int32_array **)StringLiteral_6995/*"H4020"*/;
+  v45->SWIMSUIT_MELT_EVENT_VOICEID2 = (struct System_String_o *)StringLiteral_6995/*"H4020"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v45->SWIMSUIT_MELT_EVENT_VOICEID2, v46, v47, v48, v49, v50, v51, v52);
   v53 = MyRoomStateMaterial_TypeInfo;
   MyRoomStateMaterial_TypeInfo->static_fields->MASHU_SWIMSUIT_ID = 11;
   v53->static_fields->QUEST_LIST_HEIGHT = 120.0;
   v53->static_fields->QUEST_LIST_OFFSET = 182.0;
   v54 = v53->static_fields;
-  v55 = (System_Int32_array **)StringLiteral_8956;
-  v54->SAVE_MARETIAL_FINISH_READ_QUEST_LIST = (struct System_String_o *)StringLiteral_8956;
+  v55 = (System_Int32_array **)StringLiteral_8956/*"MaterialFinishReadQuestList"*/;
+  v54->SAVE_MARETIAL_FINISH_READ_QUEST_LIST = (struct System_String_o *)StringLiteral_8956/*"MaterialFinishReadQuestList"*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)&v54->SAVE_MARETIAL_FINISH_READ_QUEST_LIST,
     v55,
@@ -142,8 +142,8 @@ void __fastcall MyRoomStateMaterial___cctor(const MethodInfo *method)
     v60,
     v61);
   v62 = MyRoomStateMaterial_TypeInfo->static_fields;
-  v63 = (System_Int32_array **)StringLiteral_2792;
-  v62->GachaBgPath = (struct System_String_o *)StringLiteral_2792;
+  v63 = (System_Int32_array **)StringLiteral_2792/*"Bg/10500"*/;
+  v62->GachaBgPath = (struct System_String_o *)StringLiteral_2792/*"Bg/10500"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v62->GachaBgPath, v63, v64, v65, v66, v67, v68, v69);
 }
 
@@ -494,7 +494,7 @@ void __fastcall MyRoomStateMaterial__AddMaterialEventJoin(
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass83_1__AddMaterialEventJoin_b__0__, v17);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass83_1_TypeInfo, v18);
     sub_B16FFC(&UserServantEntity_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_8626, v20);
+    sub_B16FFC(&StringLiteral_8626/*"MATERIAL_EVENT_JOIN"*/, v20);
     byte_40F9B47 = 1;
   }
   v21 = sub_B170CC(MyRoomStateMaterial___c__DisplayClass83_0_TypeInfo, materialList, uscEnt, *(_QWORD *)&svtId, method);
@@ -603,7 +603,7 @@ void __fastcall MyRoomStateMaterial__AddMaterialEventJoin(
                       {
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                       }
-                      v71 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8626, 0LL);
+                      v71 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8626/*"MATERIAL_EVENT_JOIN"*/, 0LL);
                       if ( v70 )
                       {
                         *(_QWORD *)(v70 + 16) = v71;
@@ -940,8 +940,8 @@ void __fastcall MyRoomStateMaterial__AddMaterialHomeVoice(
     sub_B16FFC(&Method_MyRoomStateMaterial___c__AddMaterialHomeVoice_b__93_0__, v29);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__AddMaterialHomeVoice_b__93_1__, v30);
     sub_B16FFC(&MyRoomStateMaterial___c_TypeInfo, v31);
-    sub_B16FFC(&StringLiteral_26, v32);
-    sub_B16FFC(&StringLiteral_1, v33);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v32);
+    sub_B16FFC(&StringLiteral_1/*""*/, v33);
     byte_40F9B51 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -1107,8 +1107,8 @@ LABEL_49:
           }
           v71 = (System_Int32_array **)System_String__Replace_43750968(
                                          v70,
-                                         (System_String_o *)StringLiteral_26,
-                                         (System_String_o *)StringLiteral_1,
+                                         (System_String_o *)StringLiteral_26/*"\n"*/,
+                                         (System_String_o *)StringLiteral_1/*""*/,
                                          0LL);
           *(_QWORD *)(v68 + 16) = v71;
           sub_B16F98((BattleServantConfConponent_o *)(v68 + 16), v71, v72, v73, v74, v75, v76, v77);
@@ -1357,8 +1357,8 @@ LABEL_181:
     }
     v134 = (System_Int32_array **)System_String__Replace_43750968(
                                     v133,
-                                    (System_String_o *)StringLiteral_26,
-                                    (System_String_o *)StringLiteral_1,
+                                    (System_String_o *)StringLiteral_26/*"\n"*/,
+                                    (System_String_o *)StringLiteral_1/*""*/,
                                     0LL);
     *(_QWORD *)(v131 + 16) = v134;
     sub_B16F98((BattleServantConfConponent_o *)(v131 + 16), v134, v135, v136, v137, v138, v139, v140);
@@ -1985,8 +1985,8 @@ void __fastcall MyRoomStateMaterial__AddMaterialLevelUp(
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass87_2__AddMaterialLevelUp_b__1__, v34);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass87_2_TypeInfo, v35);
     sub_B16FFC(&MyRoomStateMaterial___c_TypeInfo, v36);
-    sub_B16FFC(&StringLiteral_15842, v37);
-    sub_B16FFC(&StringLiteral_1004, v38);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v37);
+    sub_B16FFC(&StringLiteral_1004/*"1"*/, v38);
     byte_40F9B4B = 1;
   }
   v258 = 0;
@@ -2392,7 +2392,7 @@ LABEL_95:
           v171 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44107000(v169, 0LL);
           v172 = (System_Int32_array **)System_String__Concat_43746016(
                                           v170,
-                                          (System_String_o *)StringLiteral_15842,
+                                          (System_String_o *)StringLiteral_15842/*"_"*/,
                                           v171,
                                           0LL);
           *(_QWORD *)(v106 + 16) = v172;
@@ -2547,7 +2547,7 @@ LABEL_113:
 LABEL_144:
         v237 = *(System_String_o **)&v222->fields.missionTargetId;
         p_fields = (BattleServantConfConponent_o *)&v222->fields;
-        v238 = (System_Int32_array **)System_String__Format(v237, (Il2CppObject *)StringLiteral_1004, 0LL);
+        v238 = (System_Int32_array **)System_String__Format(v237, (Il2CppObject *)StringLiteral_1004/*"1"*/, 0LL);
         p_fields->klass = (BattleServantConfConponent_c *)v238;
         sub_B16F98(p_fields, v238, v239, v240, v241, v242, v243, v244);
         size = v81->fields._size;
@@ -2696,9 +2696,9 @@ void __fastcall MyRoomStateMaterial__AddMaterialLimitUp(
     sub_B16FFC(&Method_System_Collections_Generic_List_ServantChangeEntity__get_Item__, v16);
     sub_B16FFC(&LocalizationManager_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_B16FFC(&StringLiteral_8641, v19);
-    sub_B16FFC(&StringLiteral_8639, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_8641/*"MATERIAL_STORY_LIMIT_UP_{0}"*/, v19);
+    sub_B16FFC(&StringLiteral_8639/*"MATERIAL_STORY_AFTER_NAME_REVEAL"*/, v20);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40F9B4C = 1;
   }
   v89 = 0;
@@ -2799,7 +2799,7 @@ LABEL_84:
       }
       CondVoiceList = ServantVoiceEntity__getCondVoiceList(v39, 2, v41, 0LL);
       v43 = (Il2CppObject *)System_Int32__ToString((int32_t)&v89, 0LL);
-      v44 = System_String__Format((System_String_o *)StringLiteral_8641, v43, 0LL);
+      v44 = System_String__Format((System_String_o *)StringLiteral_8641/*"MATERIAL_STORY_LIMIT_UP_{0}"*/, v43, 0LL);
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
@@ -2813,11 +2813,11 @@ LABEL_84:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v46 = LocalizationManager__Get((System_String_o *)StringLiteral_8639, 0LL);
+        v46 = LocalizationManager__Get((System_String_o *)StringLiteral_8639/*"MATERIAL_STORY_AFTER_NAME_REVEAL"*/, 0LL);
       }
       else
       {
-        v46 = (System_String_o *)StringLiteral_1;
+        v46 = (System_String_o *)StringLiteral_1/*""*/;
       }
       v47 = uscEnt;
       v48 = System_String__Concat_43743732(v45, v46, 0LL);
@@ -3078,8 +3078,8 @@ void __fastcall MyRoomStateMaterial__AddMaterialNameReveal(
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass91_0_TypeInfo, v12);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass91_1__AddMaterialNameReveal_b__0__, v13);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass91_1_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_8642, v15);
-    sub_B16FFC(&StringLiteral_1, v16);
+    sub_B16FFC(&StringLiteral_8642/*"MATERIAL_STORY_NAME_REVEAL"*/, v15);
+    sub_B16FFC(&StringLiteral_1/*""*/, v16);
     byte_40F9B4F = 1;
   }
   v91 = 0;
@@ -3135,10 +3135,10 @@ void __fastcall MyRoomStateMaterial__AddMaterialNameReveal(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v52 = LocalizationManager__Get((System_String_o *)StringLiteral_8642, 0LL);
+      v52 = LocalizationManager__Get((System_String_o *)StringLiteral_8642/*"MATERIAL_STORY_NAME_REVEAL"*/, 0LL);
       if ( max_length <= 2 )
       {
-        v53 = (System_String_o *)StringLiteral_1;
+        v53 = (System_String_o *)StringLiteral_1/*""*/;
       }
       else
       {
@@ -3741,8 +3741,8 @@ void __fastcall MyRoomStateMaterial__AddMaterialReleaseCostume(
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass90_2_TypeInfo, v24);
     sub_B16FFC(&MyRoomStateMaterial___c_TypeInfo, v25);
     sub_B16FFC(&UserServantEntity_TypeInfo, v26);
-    sub_B16FFC(&StringLiteral_1, v27);
-    sub_B16FFC(&StringLiteral_8640, v28);
+    sub_B16FFC(&StringLiteral_1/*""*/, v27);
+    sub_B16FFC(&StringLiteral_8640/*"MATERIAL_STORY_COSTUME_GET"*/, v28);
     byte_40F9B4E = 1;
   }
   v164 = 0;
@@ -3959,12 +3959,12 @@ LABEL_59:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v138 = LocalizationManager__Get((System_String_o *)StringLiteral_8640, 0LL);
+      v138 = LocalizationManager__Get((System_String_o *)StringLiteral_8640/*"MATERIAL_STORY_COSTUME_GET"*/, 0LL);
       if ( !v102 )
         goto LABEL_59;
       v139 = v138;
       v140 = (int)v102->max_length <= 1
-           ? (System_String_o *)StringLiteral_1
+           ? (System_String_o *)StringLiteral_1/*""*/
            : System_Int32__ToString((int32_t)&v164, 0LL);
       v141 = (System_Int32_array **)System_String__Concat_43743732(v139, v140, 0LL);
       if ( !v137 )
@@ -4356,8 +4356,8 @@ void __fastcall MyRoomStateMaterial__AddMaterialSummon(
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass84_3_TypeInfo, v32);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass84_4__AddMaterialSummon_b__8__, v33);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass84_4_TypeInfo, v34);
-    sub_B16FFC(&StringLiteral_8643, v35);
-    sub_B16FFC(&StringLiteral_1, v36);
+    sub_B16FFC(&StringLiteral_8643/*"MATERIAL_STORY_SUMMON"*/, v35);
+    sub_B16FFC(&StringLiteral_1/*""*/, v36);
     byte_40F9B48 = 1;
   }
   v308 = 0;
@@ -4583,7 +4583,7 @@ LABEL_134:
                 OverwriteName = MyRoomStateMaterial__GetOverwriteName(
                                   v135,
                                   v115,
-                                  (System_String_o *)StringLiteral_1,
+                                  (System_String_o *)StringLiteral_1/*""*/,
                                   v136);
                 IsNullOrEmpty = System_String__IsNullOrEmpty(OverwriteName, 0LL);
                 if ( !*(_QWORD *)v112 )
@@ -4602,10 +4602,10 @@ LABEL_134:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v148 = LocalizationManager__Get((System_String_o *)StringLiteral_8643, 0LL);
+                  v148 = LocalizationManager__Get((System_String_o *)StringLiteral_8643/*"MATERIAL_STORY_SUMMON"*/, 0LL);
                   if ( (_DWORD)size == 1 )
                   {
-                    v149 = (System_String_o *)StringLiteral_1;
+                    v149 = (System_String_o *)StringLiteral_1/*""*/;
                   }
                   else
                   {
@@ -4843,10 +4843,10 @@ LABEL_134:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v234 = LocalizationManager__Get((System_String_o *)StringLiteral_8643, 0LL);
+        v234 = LocalizationManager__Get((System_String_o *)StringLiteral_8643/*"MATERIAL_STORY_SUMMON"*/, 0LL);
         if ( (_DWORD)size == 1 )
         {
-          v235 = (System_String_o *)StringLiteral_1;
+          v235 = (System_String_o *)StringLiteral_1/*""*/;
         }
         else
         {
@@ -5991,7 +5991,7 @@ void __fastcall MyRoomStateMaterial__CheckWarClear(
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass123_0__CheckWarClear_b__0__, v10);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass123_0__CheckWarClear_b__1__, v11);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass123_0_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_6315, v13);
+    sub_B16FFC(&StringLiteral_6315/*"FES_WAR_ID"*/, v13);
     byte_40F9B6A = 1;
   }
   v14 = sub_B170CC(MyRoomStateMaterial___c__DisplayClass123_0_TypeInfo, inf, end_act, method, v4);
@@ -6020,7 +6020,7 @@ LABEL_12:
   if ( QuestId )
   {
     id = QuestId->fields.id;
-    if ( id == ConstantMaster__getValue((System_String_o *)StringLiteral_6315, 0LL) )
+    if ( id == ConstantMaster__getValue((System_String_o *)StringLiteral_6315/*"FES_WAR_ID"*/, 0LL) )
     {
       v42 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v38, v39, v40, v41);
       System_Action___ctor(
@@ -6861,8 +6861,8 @@ System_Collections_Generic_List_MaterialEventLogListViewItem_Info__o *__fastcall
     sub_B16FFC(&SingletonTemplate_QuestTree__TypeInfo, v29);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass158_0__CreateMoveScriptList_b__0__, v30);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass158_0_TypeInfo, v31);
-    sub_B16FFC(&StringLiteral_8638, v32);
-    sub_B16FFC(&StringLiteral_1, v33);
+    sub_B16FFC(&StringLiteral_8638/*"MATERIAL_PROGRESS_SUFFIX"*/, v32);
+    sub_B16FFC(&StringLiteral_1/*""*/, v33);
     byte_40F9B7B = 1;
   }
   memset(&v169, 0, sizeof(v169));
@@ -7095,7 +7095,7 @@ LABEL_50:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v104 = LocalizationManager__Get((System_String_o *)StringLiteral_8638, 0LL);
+      v104 = LocalizationManager__Get((System_String_o *)StringLiteral_8638/*"MATERIAL_PROGRESS_SUFFIX"*/, 0LL);
       v105 = (System_Int32_array **)System_String__Concat_43743732(v101, v104, 0LL);
       p_fields->klass = (BattleServantConfConponent_c *)v105;
       sub_B16F98(p_fields, v105, v106, v107, v108, v109, v110, v111);
@@ -7165,8 +7165,8 @@ LABEL_65:
         v130 = (System_Int32_array **)current->fields.name;
         *(_QWORD *)(v123 + 24) = v130;
         sub_B16F98((BattleServantConfConponent_o *)(v123 + 24), v130, v124, v125, v126, v127, v128, v129);
-        v131 = (System_Int32_array **)StringLiteral_1;
-        *(_QWORD *)(v123 + 32) = StringLiteral_1;
+        v131 = (System_Int32_array **)StringLiteral_1/*""*/;
+        *(_QWORD *)(v123 + 32) = StringLiteral_1/*""*/;
         sub_B16F98((BattleServantConfConponent_o *)(v123 + 32), v131, v132, v133, v134, v135, v136, v137);
         *(_DWORD *)(v123 + 136) = 1;
         *(_DWORD *)(v123 + 40) = v154;
@@ -8245,7 +8245,7 @@ System_Collections_Generic_Dictionary_int__int__o *__fastcall MyRoomStateMateria
     sub_B16FFC(&JsonManager_TypeInfo, v11);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__, v12);
     sub_B16FFC(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__, v13);
-    sub_B16FFC(&StringLiteral_8957, v14);
+    sub_B16FFC(&StringLiteral_8957/*"MaterialPlayedBranchQuestData"*/, v14);
     byte_40F9B72 = 1;
   }
   memset(&v23, 0, sizeof(v23));
@@ -8259,7 +8259,7 @@ System_Collections_Generic_Dictionary_int__int__o *__fastcall MyRoomStateMateria
   System_Collections_Generic_Dictionary_int__int____ctor(
     v15,
     (const MethodInfo_2DDC410 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
-  String = UnityEngine_PlayerPrefs__GetString((System_String_o *)StringLiteral_8957, 0LL, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString((System_String_o *)StringLiteral_8957/*"MaterialPlayedBranchQuestData"*/, 0LL, 0LL);
   if ( !System_String__IsNullOrEmpty(String, 0LL) )
   {
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -9105,10 +9105,10 @@ void __fastcall MyRoomStateMaterial__InitMainStory(
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass76_3_TypeInfo, v64);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass76_4__InitMainStory_b__9__, v65);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass76_4_TypeInfo, v66);
-    sub_B16FFC(&StringLiteral_8632, v67);
-    sub_B16FFC(&StringLiteral_13472, v68);
-    sub_B16FFC(&StringLiteral_15363, v69);
-    sub_B16FFC(&StringLiteral_8635, v70);
+    sub_B16FFC(&StringLiteral_8632/*"MATERIAL_MAP_AVANT_TITLE"*/, v67);
+    sub_B16FFC(&StringLiteral_13472/*"TUTORIAL_QUEST_ID1"*/, v68);
+    sub_B16FFC(&StringLiteral_15363/*"WarEpilogue"*/, v69);
+    sub_B16FFC(&StringLiteral_8635/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, v70);
     byte_40F9B40 = 1;
   }
   isOpen = 0;
@@ -9368,7 +9368,7 @@ LABEL_241:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v162 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8632, 0LL);
+                v162 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8632/*"MATERIAL_MAP_AVANT_TITLE"*/, 0LL);
                 if ( !v161 )
                   sub_B170D4();
                 *(_QWORD *)(v161 + 16) = v162;
@@ -9498,7 +9498,7 @@ LABEL_241:
                       goto LABEL_148;
                     v212 = 0LL;
                   }
-                  if ( questId == ConstantMaster__getValue((System_String_o *)StringLiteral_13472, 0LL) )
+                  if ( questId == ConstantMaster__getValue((System_String_o *)StringLiteral_13472/*"TUTORIAL_QUEST_ID1"*/, 0LL) )
                   {
                     cQuestReleaseListP = v335;
                     goto LABEL_148;
@@ -9771,7 +9771,7 @@ LABEL_148:
               v111 = v330;
               if ( (MapControl_WarInfo__GetStatus(v149, 0LL) == 3 || MapControl_WarInfo__GetStatus(v149, 0LL) == 4)
                 && (v274 = System_Int32__ToString((int)v131 + 16, 0LL),
-                    v275 = System_String__Concat_43743732((System_String_o *)StringLiteral_15363, v274, 0LL),
+                    v275 = System_String__Concat_43743732((System_String_o *)StringLiteral_15363/*"WarEpilogue"*/, v274, 0LL),
                     MyRoomStateMaterial__IsExistScriptFile_24470356(v112, v275, v276)) )
               {
                 v281 = sub_B170CC(MyRoomStateMaterial___c__DisplayClass76_4_TypeInfo, v277, v278, v279, v280);
@@ -9815,7 +9815,7 @@ LABEL_148:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v302 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8635, 0LL);
+                v302 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8635/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0LL);
                 if ( !v301 )
                   sub_B170D4();
                 *(_QWORD *)(v301 + 16) = v302;
@@ -10135,7 +10135,7 @@ bool __fastcall MyRoomStateMaterial__IsCanPlay(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v10);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_15842, v12);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v12);
     byte_40F9B49 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -10189,7 +10189,7 @@ LABEL_48:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
     }
     v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44107000(id, 0LL);
-    v28 = System_String__Concat_43746016(v25, (System_String_o *)StringLiteral_15842, v27, 0LL);
+    v28 = System_String__Concat_43746016(v25, (System_String_o *)StringLiteral_15842/*"_"*/, v27, 0LL);
     EntityDefinitely = (UserServantCollectionEntity_o *)System_String__op_Equality(v28, voiceId, 0LL);
     if ( ((unsigned __int8)EntityDefinitely & 1) != 0 )
       break;
@@ -10554,7 +10554,7 @@ bool __fastcall MyRoomStateMaterial__IsExistScriptFileBranch(
   if ( (byte_40F9B37 & 1) == 0 )
   {
     sub_B16FFC(&ScriptManager_TypeInfo, *(_QWORD *)&playQuestId);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F9B37 = 1;
   }
   if ( !playType )
@@ -10680,10 +10680,10 @@ bool __fastcall MyRoomStateMaterial__IsExistScriptFile_24470356(
   if ( (byte_40F9B39 & 1) == 0 )
   {
     sub_B16FFC(&Method_System_Array_BinarySearch_string___, scriptName);
-    sub_B16FFC(&StringLiteral_867, v5);
+    sub_B16FFC(&StringLiteral_867/*".txt"*/, v5);
     byte_40F9B39 = 1;
   }
-  v6 = System_String__Concat_43743732(scriptName, (System_String_o *)StringLiteral_867, 0LL);
+  v6 = System_String__Concat_43743732(scriptName, (System_String_o *)StringLiteral_867/*".txt"*/, 0LL);
   return System_Array__BinarySearch_string_(
            this->fields.mScriptFileListStrs,
            v6,
@@ -10888,7 +10888,7 @@ void __fastcall MyRoomStateMaterial__OpenConfirmNextStoryDialog(
     sub_B16FFC(&SoundManager_TypeInfo, v14);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass109_0__OpenConfirmNextStoryDialog_b__0__, v15);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass109_0_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_8840, v17);
+    sub_B16FFC(&StringLiteral_8840/*"MYROOM_MATERIAL_COMFIRM_NEXT_STROY"*/, v17);
     byte_40F9B5E = 1;
   }
   v18 = sub_B170CC(MyRoomStateMaterial___c__DisplayClass109_0_TypeInfo, itm, method, v3, v4);
@@ -11013,7 +11013,7 @@ LABEL_20:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v79 = LocalizationManager__Get((System_String_o *)StringLiteral_8840, 0LL);
+                v79 = LocalizationManager__Get((System_String_o *)StringLiteral_8840/*"MYROOM_MATERIAL_COMFIRM_NEXT_STROY"*/, 0LL);
                 if ( *(_QWORD *)v77 )
                 {
                   v84 = *(System_String_o **)(*(_QWORD *)v77 + 16LL);
@@ -11503,8 +11503,8 @@ void __fastcall MyRoomStateMaterial__PlayQuestTalk_BattleAfter_TalkAfter(
     sub_B16FFC(&ScriptManager_TypeInfo, v11);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass122_0__PlayQuestTalk_BattleAfter_TalkAfter_b__0__, v12);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass122_0_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_2615, v14);
-    sub_B16FFC(&StringLiteral_8587, v15);
+    sub_B16FFC(&StringLiteral_2615/*"BRANCH_SCRIPT_PLAYED_TEMPORARY_SAVE"*/, v14);
+    sub_B16FFC(&StringLiteral_8587/*"MAIN_SCRIPT_PLAYED_TEMPORARY_SAVE"*/, v15);
     byte_40F9B69 = 1;
   }
   playQuestId = 0;
@@ -11522,12 +11522,12 @@ void __fastcall MyRoomStateMaterial__PlayQuestTalk_BattleAfter_TalkAfter(
   *(_QWORD *)(v16 + 24) = inf;
   v23 = (MaterialEventLogListViewItem_Info_o **)(v16 + 24);
   sub_B16F98((BattleServantConfConponent_o *)(v16 + 24), (System_Int32_array **)inf, v24, v25, v26, v27, v28, v29);
-  String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_8587, 0LL);
-  v31 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_2615, 0LL);
+  String_34837456 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_8587/*"MAIN_SCRIPT_PLAYED_TEMPORARY_SAVE"*/, 0LL);
+  v31 = UnityEngine_PlayerPrefs__GetString_34837456((System_String_o *)StringLiteral_2615/*"BRANCH_SCRIPT_PLAYED_TEMPORARY_SAVE"*/, 0LL);
   if ( !System_String__IsNullOrEmpty(String_34837456, 0LL) && !System_String__IsNullOrEmpty(v31, 0LL) )
   {
-    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_8587, 0LL);
-    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_2615, 0LL);
+    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_8587/*"MAIN_SCRIPT_PLAYED_TEMPORARY_SAVE"*/, 0LL);
+    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_2615/*"BRANCH_SCRIPT_PLAYED_TEMPORARY_SAVE"*/, 0LL);
   }
   playQuestId = questId;
   *(_DWORD *)(v16 + 32) = phase;
@@ -12011,7 +12011,7 @@ void __fastcall MyRoomStateMaterial__PlayStaffRoll(
     sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v8);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass124_0__PlayStaffRoll_b__0__, v9);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass124_0_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_5974, v11);
+    sub_B16FFC(&StringLiteral_5974/*"Endroll"*/, v11);
     byte_40F9B6B = 1;
   }
   v12 = sub_B170CC(MyRoomStateMaterial___c__DisplayClass124_0_TypeInfo, end_act, method, v3, v4);
@@ -12033,7 +12033,7 @@ void __fastcall MyRoomStateMaterial__PlayStaffRoll(
     0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5974, v29, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5974/*"Endroll"*/, v29, 1, 0LL);
 }
 
 
@@ -13155,12 +13155,12 @@ System_String_o *__fastcall MyRoomStateMaterial__SetPlayLimitCountMessage(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v17);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
     sub_B16FFC(&string___TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_8856, v20);
-    sub_B16FFC(&StringLiteral_8857, v21);
-    sub_B16FFC(&StringLiteral_8858, v22);
-    sub_B16FFC(&StringLiteral_8855, v23);
-    sub_B16FFC(&StringLiteral_8859, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
+    sub_B16FFC(&StringLiteral_8856/*"MYROOM_PLAYABLE_LIMIT_COUNT_2"*/, v20);
+    sub_B16FFC(&StringLiteral_8857/*"MYROOM_PLAYABLE_LIMIT_COUNT_3"*/, v21);
+    sub_B16FFC(&StringLiteral_8858/*"MYROOM_PLAYABLE_MSG_AND"*/, v22);
+    sub_B16FFC(&StringLiteral_8855/*"MYROOM_PLAYABLE_LIMIT_COUNT_1"*/, v23);
+    sub_B16FFC(&StringLiteral_8859/*"MYROOM_PLAYABLE_MSG_END"*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
     byte_40F9B53 = 1;
   }
   entity = 0LL;
@@ -13182,7 +13182,7 @@ System_String_o *__fastcall MyRoomStateMaterial__SetPlayLimitCountMessage(
   v30 = (ServantCostumeMaster_o *)v29;
   voicePrefix = itemInfo->fields.voicePrefix;
   voiceId = itemInfo->fields.voiceId;
-  v33 = (System_String_o *)StringLiteral_1;
+  v33 = (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
   {
@@ -13279,7 +13279,7 @@ System_String_o *__fastcall MyRoomStateMaterial__SetPlayLimitCountMessage(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v63 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8855, 0LL);
+  v63 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8855/*"MYROOM_PLAYABLE_LIMIT_COUNT_1"*/, 0LL);
   if ( !v62 )
     goto LABEL_69;
   v71 = (System_Int32_array **)v63;
@@ -13293,7 +13293,7 @@ System_String_o *__fastcall MyRoomStateMaterial__SetPlayLimitCountMessage(
     goto LABEL_70;
   *(_QWORD *)(v62 + 32) = v71;
   sub_B16F98((BattleServantConfConponent_o *)(v62 + 32), v71, v65, v66, v67, v68, v69, v70);
-  v63 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8856, 0LL);
+  v63 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8856/*"MYROOM_PLAYABLE_LIMIT_COUNT_2"*/, 0LL);
   v77 = (System_Int32_array **)v63;
   if ( v63 )
   {
@@ -13305,7 +13305,7 @@ System_String_o *__fastcall MyRoomStateMaterial__SetPlayLimitCountMessage(
     goto LABEL_70;
   *(_QWORD *)(v62 + 40) = v77;
   sub_B16F98((BattleServantConfConponent_o *)(v62 + 40), v77, v65, v72, v73, v74, v75, v76);
-  v63 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8857, 0LL);
+  v63 = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8857/*"MYROOM_PLAYABLE_LIMIT_COUNT_3"*/, 0LL);
   v83 = (System_Int32_array **)v63;
   if ( v63 )
   {
@@ -13378,7 +13378,7 @@ LABEL_70:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v92 = LocalizationManager__Get((System_String_o *)StringLiteral_8858, 0LL);
+              v92 = LocalizationManager__Get((System_String_o *)StringLiteral_8858/*"MYROOM_PLAYABLE_MSG_AND"*/, 0LL);
               v33 = System_String__Concat_43743732(v33, v92, 0LL);
             }
             if ( !entity )
@@ -13405,7 +13405,7 @@ LABEL_63:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v93 = LocalizationManager__Get((System_String_o *)StringLiteral_8859, 0LL);
+    v93 = LocalizationManager__Get((System_String_o *)StringLiteral_8859/*"MYROOM_PLAYABLE_MSG_END"*/, 0LL);
     return System_String__Concat_43743732(v33, v93, 0LL);
   }
   return v33;
@@ -13435,7 +13435,7 @@ void __fastcall MyRoomStateMaterial__SetPlayedBranchQuestData(
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_int__int__set_Item__, v6);
     sub_B16FFC(&JsonManager_TypeInfo, v7);
     sub_B16FFC(&MyRoomStateMaterial_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_8957, v9);
+    sub_B16FFC(&StringLiteral_8957/*"MaterialPlayedBranchQuestData"*/, v9);
     byte_40F9B73 = 1;
   }
   v10 = MyRoomStateMaterial_TypeInfo;
@@ -13472,7 +13472,7 @@ void __fastcall MyRoomStateMaterial__SetPlayedBranchQuestData(
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v13 = JsonManager__toJson((Il2CppObject *)v12, 0, 0, 0LL);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_8957, v13, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_8957/*"MaterialPlayedBranchQuestData"*/, v13, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -14884,14 +14884,14 @@ System_String_o *__fastcall MyRoomStateMaterial__getBranchScenarioFooterName(
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&quest_id);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_8625, v7);
+    sub_B16FFC(&StringLiteral_8625/*"MATERIAL_BRANCH_SCENARIO_{0:D8}_{1:D1}"*/, v7);
     byte_40F9B3C = 1;
   }
   v17 = quest_id;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
   v16 = id;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
-  v10 = System_String__Format_43739268((System_String_o *)StringLiteral_8625, v8, v9, 0LL);
+  v10 = System_String__Format_43739268((System_String_o *)StringLiteral_8625/*"MATERIAL_BRANCH_SCENARIO_{0:D8}_{1:D1}"*/, v8, v9, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -14910,7 +14910,7 @@ System_String_o *__fastcall MyRoomStateMaterial__getBranchScenarioFooterName(
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(v11, &v17);
   v16 = id;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
-  v14 = System_String__Format_43739268((System_String_o *)StringLiteral_8625, v12, v13, 0LL);
+  v14 = System_String__Format_43739268((System_String_o *)StringLiteral_8625/*"MATERIAL_BRANCH_SCENARIO_{0:D8}_{1:D1}"*/, v12, v13, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -15076,12 +15076,12 @@ System_String_o *__fastcall MyRoomStateMaterial__servantQuestRenamer(
 {
   if ( (byte_40F9B56 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23445, targetStr);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, targetStr);
     byte_40F9B56 = 1;
   }
   if ( !targetStr )
     sub_B170D4();
-  if ( System_String__Contains(targetStr, (System_String_o *)StringLiteral_23445, 0LL) )
+  if ( System_String__Contains(targetStr, (System_String_o *)StringLiteral_23445/*"{0}"*/, 0LL) )
     return System_String__Format(targetStr, (Il2CppObject *)svtName, 0LL);
   else
     return targetStr;
@@ -19238,8 +19238,8 @@ void __fastcall MyRoomStateMaterial_StateMainStorySub__begin(
     sub_B16FFC(&Method_MyRoomStateMaterial_StateMainStorySub___c__DisplayClass2_2__begin_b__3__, v46);
     sub_B16FFC(&MyRoomStateMaterial_StateMainStorySub___c__DisplayClass2_2_TypeInfo, v47);
     sub_B16FFC(&MyRoomStateMaterial_StateMainStorySub___c_TypeInfo, v48);
-    sub_B16FFC(&StringLiteral_8649, v49);
-    sub_B16FFC(&StringLiteral_8636, v50);
+    sub_B16FFC(&StringLiteral_8649/*"MATERIAL_TOP_OPENING"*/, v49);
+    sub_B16FFC(&StringLiteral_8636/*"MATERIAL_MAP_PROLOGUE"*/, v50);
     byte_40F8343 = 1;
   }
   v51 = sub_B170CC(MyRoomStateMaterial_StateMainStorySub___c__DisplayClass2_0_TypeInfo, that, method, v3, v4);
@@ -19383,7 +19383,7 @@ LABEL_25:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    MaterialString = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8649, 0LL);
+    MaterialString = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8649/*"MATERIAL_TOP_OPENING"*/, 0LL);
   }
   else
   {
@@ -19531,7 +19531,7 @@ LABEL_48:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v147 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8636, 0LL);
+    v147 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8636/*"MATERIAL_MAP_PROLOGUE"*/, 0LL);
     if ( !v146 )
       goto LABEL_211;
     *(_QWORD *)(v146 + 16) = v147;
@@ -20345,8 +20345,8 @@ void __fastcall MyRoomStateMaterial_StateMainStorySub___c__DisplayClass2_2___beg
     sub_B16FFC(&ScriptManager_TypeInfo, v7);
     sub_B16FFC(&Method_MyRoomStateMaterial_StateMainStorySub___c__DisplayClass2_3__begin_b__5__, v8);
     sub_B16FFC(&MyRoomStateMaterial_StateMainStorySub___c__DisplayClass2_3_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_13472, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_13472/*"TUTORIAL_QUEST_ID1"*/, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40F78E7 = 1;
   }
   v12 = sub_B170CC(MyRoomStateMaterial_StateMainStorySub___c__DisplayClass2_3_TypeInfo, method, v2, v3, v4);
@@ -20355,7 +20355,7 @@ void __fastcall MyRoomStateMaterial_StateMainStorySub___c__DisplayClass2_2___beg
     sub_B170D4();
   *(_QWORD *)(v12 + 24) = this;
   sub_B16F98((BattleServantConfConponent_o *)(v12 + 24), (System_Int32_array **)this, v13, v14, v15, v16, v17, v18);
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_13472, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_13472/*"TUTORIAL_QUEST_ID1"*/, 0LL);
   *(_DWORD *)(v12 + 16) = Value;
   *(_DWORD *)(v12 + 20) = 1;
   v20 = Value;
@@ -20370,7 +20370,7 @@ void __fastcall MyRoomStateMaterial_StateMainStorySub___c__DisplayClass2_2___beg
     v20,
     v21->static_fields->SETTING_PROLOG_PART1,
     0,
-    (System_String_o *)StringLiteral_1,
+    (System_String_o *)StringLiteral_1/*""*/,
     1,
     0LL);
   v22 = *(_DWORD *)(v12 + 16);
@@ -22326,10 +22326,10 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop__begin(
     sub_B16FFC(&Method_MyRoomStateMaterial_StateServantMenuTop___c__DisplayClass1_0__begin_b__3__, v21);
     sub_B16FFC(&Method_MyRoomStateMaterial_StateServantMenuTop___c__DisplayClass1_0__begin_b__6__, v22);
     sub_B16FFC(&MyRoomStateMaterial_StateServantMenuTop___c__DisplayClass1_0_TypeInfo, v23);
-    sub_B16FFC(&StringLiteral_8651, v24);
-    sub_B16FFC(&StringLiteral_8644, v25);
-    sub_B16FFC(&StringLiteral_8843, v26);
-    sub_B16FFC(&StringLiteral_8652, v27);
+    sub_B16FFC(&StringLiteral_8651/*"MATERIAL_TOP_SERVANT"*/, v24);
+    sub_B16FFC(&StringLiteral_8644/*"MATERIAL_TOP_COSTUME"*/, v25);
+    sub_B16FFC(&StringLiteral_8843/*"MYROOM_MENU_NAME_10"*/, v26);
+    sub_B16FFC(&StringLiteral_8652/*"MATERIAL_TOP_STORY"*/, v27);
     byte_40F8349 = 1;
   }
   memset(&v142, 0, sizeof(v142));
@@ -22364,7 +22364,7 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop__begin(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v47 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8651, 0LL);
+  v47 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8651/*"MATERIAL_TOP_SERVANT"*/, 0LL);
   if ( !v46 )
     goto LABEL_27;
   *(_QWORD *)(v46 + 16) = v47;
@@ -22390,7 +22390,7 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop__begin(
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__Add__);
   v69 = sub_B170CC(MaterialEventLogListViewItem_Info_TypeInfo, v65, v66, v67, v68);
   MaterialEventLogListViewItem_Info___ctor((MaterialEventLogListViewItem_Info_o *)v69, 0LL);
-  v70 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8644, 0LL);
+  v70 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8644/*"MATERIAL_TOP_COSTUME"*/, 0LL);
   if ( !v69 )
     goto LABEL_27;
   *(_QWORD *)(v69 + 16) = v70;
@@ -22414,7 +22414,7 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop__begin(
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__Add__);
   v92 = sub_B170CC(MaterialEventLogListViewItem_Info_TypeInfo, v88, v89, v90, v91);
   MaterialEventLogListViewItem_Info___ctor((MaterialEventLogListViewItem_Info_o *)v92, 0LL);
-  v93 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8652, 0LL);
+  v93 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8652/*"MATERIAL_TOP_STORY"*/, 0LL);
   if ( !v92 )
     goto LABEL_27;
   *(_QWORD *)(v92 + 16) = v93;
@@ -22446,7 +22446,7 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop__begin(
     (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_MaterialEventLogListViewItem_Info__Add__);
   v115 = sub_B170CC(MaterialEventLogListViewItem_Info_TypeInfo, v111, v112, v113, v114);
   MaterialEventLogListViewItem_Info___ctor((MaterialEventLogListViewItem_Info_o *)v115, 0LL);
-  v116 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8843, 0LL);
+  v116 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8843/*"MYROOM_MENU_NAME_10"*/, 0LL);
   if ( !v115 )
     goto LABEL_27;
   *(_QWORD *)(v115 + 16) = v116;
@@ -22572,7 +22572,7 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop___c__DisplayClass1_0___b
 
   if ( (byte_40F78EE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3057, itm);
+    sub_B16FFC(&StringLiteral_3057/*"CLICK_MATERIAL_COLLECTION"*/, itm);
     byte_40F78EE = 1;
   }
   that = this->fields.that;
@@ -22582,7 +22582,7 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop___c__DisplayClass1_0___b
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(mPlayMakerFSM, (System_String_o *)StringLiteral_3057, 0LL);
+  PlayMakerFSM__SendEvent(mPlayMakerFSM, (System_String_o *)StringLiteral_3057/*"CLICK_MATERIAL_COLLECTION"*/, 0LL);
 }
 
 
@@ -22597,7 +22597,7 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop___c__DisplayClass1_0___b
 
   if ( (byte_40F78EF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3058, itm);
+    sub_B16FFC(&StringLiteral_3058/*"CLICK_MATERIAL_COSTUME"*/, itm);
     byte_40F78EF = 1;
   }
   that = this->fields.that;
@@ -22607,7 +22607,7 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop___c__DisplayClass1_0___b
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(mPlayMakerFSM, (System_String_o *)StringLiteral_3058, 0LL);
+  PlayMakerFSM__SendEvent(mPlayMakerFSM, (System_String_o *)StringLiteral_3058/*"CLICK_MATERIAL_COSTUME"*/, 0LL);
 }
 
 
@@ -22740,7 +22740,7 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop___c__DisplayClass1_0___b
 
   if ( (byte_40F78F2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3078, itm);
+    sub_B16FFC(&StringLiteral_3078/*"CLICK_USER_SERVANT_COIN"*/, itm);
     byte_40F78F2 = 1;
   }
   that = this->fields.that;
@@ -22750,7 +22750,7 @@ void __fastcall MyRoomStateMaterial_StateServantMenuTop___c__DisplayClass1_0___b
   {
     sub_B170D4();
   }
-  PlayMakerFSM__SendEvent(mPlayMakerFSM, (System_String_o *)StringLiteral_3078, 0LL);
+  PlayMakerFSM__SendEvent(mPlayMakerFSM, (System_String_o *)StringLiteral_3078/*"CLICK_USER_SERVANT_COIN"*/, 0LL);
 }
 
 
@@ -23834,10 +23834,10 @@ void __fastcall MyRoomStateMaterial_StateTop__begin(
     sub_B16FFC(&Method_MyRoomStateMaterial_StateTop___c__DisplayClass3_0__begin_b__7__, v32);
     sub_B16FFC(&Method_MyRoomStateMaterial_StateTop___c__DisplayClass3_0__begin_b__9__, v33);
     sub_B16FFC(&MyRoomStateMaterial_StateTop___c__DisplayClass3_0_TypeInfo, v34);
-    sub_B16FFC(&StringLiteral_8645, v35);
-    sub_B16FFC(&StringLiteral_8647, v36);
-    sub_B16FFC(&StringLiteral_8646, v37);
-    sub_B16FFC(&StringLiteral_8648, v38);
+    sub_B16FFC(&StringLiteral_8645/*"MATERIAL_TOP_EVENT"*/, v35);
+    sub_B16FFC(&StringLiteral_8647/*"MATERIAL_TOP_MAIN_INTERLUDE"*/, v36);
+    sub_B16FFC(&StringLiteral_8646/*"MATERIAL_TOP_FREE"*/, v37);
+    sub_B16FFC(&StringLiteral_8648/*"MATERIAL_TOP_MAP"*/, v38);
     byte_40F834E = 1;
   }
   memset(&v185, 0, sizeof(v185));
@@ -23882,7 +23882,7 @@ void __fastcall MyRoomStateMaterial_StateTop__begin(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v65 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8648, 0LL);
+  v65 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8648/*"MATERIAL_TOP_MAP"*/, 0LL);
   if ( !v64 )
     goto LABEL_71;
   *(_QWORD *)(v64 + 16) = v65;
@@ -23921,7 +23921,7 @@ void __fastcall MyRoomStateMaterial_StateTop__begin(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v90 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8647, 0LL);
+    v90 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8647/*"MATERIAL_TOP_MAIN_INTERLUDE"*/, 0LL);
     if ( !v89 )
       goto LABEL_71;
     *(_QWORD *)(v89 + 16) = v90;
@@ -23967,7 +23967,7 @@ void __fastcall MyRoomStateMaterial_StateTop__begin(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v110 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8645, 0LL);
+    v110 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8645/*"MATERIAL_TOP_EVENT"*/, 0LL);
     if ( !v109 )
       goto LABEL_71;
     *(_QWORD *)(v109 + 16) = v110;
@@ -24013,7 +24013,7 @@ void __fastcall MyRoomStateMaterial_StateTop__begin(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v130 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8646, 0LL);
+    v130 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8646/*"MATERIAL_TOP_FREE"*/, 0LL);
     if ( !v129 )
       goto LABEL_71;
     *(_QWORD *)(v129 + 16) = v130;
@@ -26017,8 +26017,8 @@ bool __fastcall MyRoomStateMaterial__ConstructMaterialDataGradually_d__81__MoveN
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass81_8__ConstructMaterialDataGradually_b__18__, v121);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass81_8_TypeInfo, v122);
     sub_B16FFC(&MyRoomStateMaterial___c_TypeInfo, v123);
-    sub_B16FFC(&StringLiteral_8632, v124);
-    sub_B16FFC(&StringLiteral_5620, v125);
+    sub_B16FFC(&StringLiteral_8632/*"MATERIAL_MAP_AVANT_TITLE"*/, v124);
+    sub_B16FFC(&StringLiteral_5620/*"EVENT_ID_RAID_1"*/, v125);
     byte_40F86AE = 1;
   }
   isOpen[0] = 0;
@@ -26378,7 +26378,7 @@ bool __fastcall MyRoomStateMaterial__ConstructMaterialDataGradually_d__81__MoveN
           i,
           (const MethodInfo_2DDCF8C *)Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
       }
-      this->fields._eventIdRaid1_5__13 = ConstantMaster__getValue((System_String_o *)StringLiteral_5620, 0LL);
+      this->fields._eventIdRaid1_5__13 = ConstantMaster__getValue((System_String_o *)StringLiteral_5620/*"EVENT_ID_RAID_1"*/, 0LL);
       v508 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !v508 )
         sub_B170D4();
@@ -28374,7 +28374,7 @@ LABEL_245:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v632 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8632, 0LL);
+      v632 = (System_Int32_array **)LocalizationManager__Get((System_String_o *)StringLiteral_8632/*"MATERIAL_MAP_AVANT_TITLE"*/, 0LL);
       if ( !v631 )
         sub_B170D4();
       *(_QWORD *)(v631 + 16) = v632;
@@ -29870,7 +29870,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass107_0___chapterStartAct_b__
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v3);
     sub_B16FFC(&ScriptManager_TypeInfo, v4);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass107_0__chapterStartAct_b__1__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F8670 = 1;
   }
   itm = this->fields.itm;
@@ -29887,7 +29887,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass107_0___chapterStartAct_b__
   {
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
   }
-  MyRoomParamsManager__LastPlay_SaveData(quest_id, war_id, event_id, (System_String_o *)StringLiteral_1, 1, 0LL);
+  MyRoomParamsManager__LastPlay_SaveData(quest_id, war_id, event_id, (System_String_o *)StringLiteral_1/*""*/, 1, 0LL);
   v16 = this->fields.itm;
   if ( !v16 || (v17 = v16->fields._info_k__BackingField) == 0LL )
 LABEL_16:
@@ -29979,7 +29979,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass108_0___chapterStartActQues
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v3);
     sub_B16FFC(&ScriptManager_TypeInfo, v4);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass108_0__chapterStartActQuest_b__1__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F8671 = 1;
   }
   itm = this->fields.itm;
@@ -29996,7 +29996,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass108_0___chapterStartActQues
   {
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
   }
-  MyRoomParamsManager__LastPlay_SaveData(quest_id, war_id, event_id, (System_String_o *)StringLiteral_1, 1, 0LL);
+  MyRoomParamsManager__LastPlay_SaveData(quest_id, war_id, event_id, (System_String_o *)StringLiteral_1/*""*/, 1, 0LL);
   v16 = this->fields.itm;
   if ( !v16 || (v17 = v16->fields._info_k__BackingField) == 0LL )
 LABEL_16:
@@ -30565,7 +30565,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass117_0___PlayQuestTalk_b__0(
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v6);
     sub_B16FFC(&ScriptManager_TypeInfo, v7);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass117_0__PlayQuestTalk_b__1__, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F8677 = 1;
   }
   inf = this->fields.inf;
@@ -30581,7 +30581,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass117_0___PlayQuestTalk_b__0(
     {
       j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
     }
-    MyRoomParamsManager__LastPlay_SaveData(quest_id, war_id, event_id, (System_String_o *)StringLiteral_1, 1, 0LL);
+    MyRoomParamsManager__LastPlay_SaveData(quest_id, war_id, event_id, (System_String_o *)StringLiteral_1/*""*/, 1, 0LL);
     inf = this->fields.inf;
     if ( !inf )
       goto LABEL_17;
@@ -31357,7 +31357,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass124_0___PlayStaffRoll_b__0(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass124_1__PlayStaffRoll_b__1__, v11);
     sub_B16FFC(&MyRoomStateMaterial___c__DisplayClass124_1_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_5973, v13);
+    sub_B16FFC(&StringLiteral_5973/*"EndrolPanel"*/, v13);
     byte_40F867E = 1;
   }
   v14 = sub_B170CC(MyRoomStateMaterial___c__DisplayClass124_1_TypeInfo, data, method, v3, v4);
@@ -31373,7 +31373,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass124_0___PlayStaffRoll_b__0(
     goto LABEL_20;
   Object_WarBoardWaitTimeSetting = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                                v27,
-                                                                               (System_String_o *)StringLiteral_5973,
+                                                                               (System_String_o *)StringLiteral_5973/*"EndrolPanel"*/,
                                                                                (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -31668,7 +31668,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass153_0___StartAdv_b__0(
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v3);
     sub_B16FFC(&ScriptManager_TypeInfo, v4);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass153_0__StartAdv_b__1__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F8681 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -31687,7 +31687,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass153_0___StartAdv_b__0(
   {
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
   }
-  MyRoomParamsManager__LastPlay_SaveData(quest_id, war_id, event_id, (System_String_o *)StringLiteral_1, 1, 0LL);
+  MyRoomParamsManager__LastPlay_SaveData(quest_id, war_id, event_id, (System_String_o *)StringLiteral_1/*""*/, 1, 0LL);
   _9__1 = this->fields.__9__1;
   if ( !_9__1 )
   {
@@ -32236,7 +32236,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass70_0___SetupGachaBg_b__0(
     sub_B16FFC(&Method_AssetData_GetObject_GameObject____66802784, data);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_16631, v7);
+    sub_B16FFC(&StringLiteral_16631/*"bg"*/, v7);
     byte_40F8687 = 1;
   }
   if ( !data )
@@ -32244,7 +32244,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass70_0___SetupGachaBg_b__0(
   _4__this = this->fields.__4__this;
   Object_WarBoardWaitTimeSetting = (UnityEngine_UI_Dropdown_DropdownItem_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                                data,
-                                                                               (System_String_o *)StringLiteral_16631,
+                                                                               (System_String_o *)StringLiteral_16631/*"bg"*/,
                                                                                (const MethodInfo_18AFC60 *)Method_AssetData_GetObject_GameObject____66802784);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -32438,7 +32438,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass76_2___InitMainStory_b__3(
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_MyRoomStateMaterial__InitMainStory_b__76_7__, v5);
     sub_B16FFC(&Method_MyRoomStateMaterial__InitMainStory_b__76_8__, v6);
-    sub_B16FFC(&StringLiteral_8637, v7);
+    sub_B16FFC(&StringLiteral_8637/*"MATERIAL_MAP_QUEST_TITLE"*/, v7);
     byte_40F8688 = 1;
   }
   CS___8__locals1 = this->fields.CS___8__locals1;
@@ -32452,7 +32452,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass76_2___InitMainStory_b__3(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8637, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_8637/*"MATERIAL_MAP_QUEST_TITLE"*/, 0LL);
     if ( this->fields.questInfo )
     {
       v24 = v23;
@@ -32523,7 +32523,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass76_2___InitMainStory_b__3(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_8637, 0LL);
+  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_8637/*"MATERIAL_MAP_QUEST_TITLE"*/, 0LL);
   if ( !this->fields.questInfo )
     goto LABEL_36;
   v48 = v47;
@@ -32597,7 +32597,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass76_2___InitMainStory_b__5(
     sub_B16FFC(&Method_DataManager_GetMasterData_QuestMaster___, itm);
     sub_B16FFC(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40F8689 = 1;
   }
   entity = 0LL;
@@ -32636,7 +32636,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass76_2___InitMainStory_b__5(
                   goto LABEL_23;
                 v19 = ChapterSubStr;
                 if ( System_String__StartsWith(str, ChapterSubStr, 0LL) )
-                  str = System_String__Replace_43750968(str, v19, (System_String_o *)StringLiteral_1, 0LL);
+                  str = System_String__Replace_43750968(str, v19, (System_String_o *)StringLiteral_1/*""*/, 0LL);
               }
               CS___8__locals1 = this->fields.CS___8__locals1;
               if ( CS___8__locals1 )
@@ -33455,7 +33455,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass81_6___ConstructMaterialDat
     sub_B16FFC(&MyRoomParamsManager_TypeInfo, v3);
     sub_B16FFC(&ScriptManager_TypeInfo, v4);
     sub_B16FFC(&Method_MyRoomStateMaterial___c__DisplayClass81_5__ConstructMaterialDataGradually_b__13__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F8690 = 1;
   }
   itm = this->fields.itm;
@@ -33480,7 +33480,7 @@ void __fastcall MyRoomStateMaterial___c__DisplayClass81_6___ConstructMaterialDat
   {
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
   }
-  MyRoomParamsManager__LastPlay_SaveData(quest_id, war_id, event_id, (System_String_o *)StringLiteral_1, 1, 0LL);
+  MyRoomParamsManager__LastPlay_SaveData(quest_id, war_id, event_id, (System_String_o *)StringLiteral_1/*""*/, 1, 0LL);
   CS___8__locals5 = this->fields.CS___8__locals5;
   if ( !CS___8__locals5 )
 LABEL_17:

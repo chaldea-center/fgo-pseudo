@@ -393,9 +393,9 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__SetItem(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
     sub_B16FFC(&Method_SingletonTemplate_QuestTree__get_Instance__, v13);
     sub_B16FFC(&SingletonTemplate_QuestTree__TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_11927, v15);
-    sub_B16FFC(&StringLiteral_11929, v16);
-    sub_B16FFC(&StringLiteral_11928, v17);
+    sub_B16FFC(&StringLiteral_11927/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_INTERLUDE"*/, v15);
+    sub_B16FFC(&StringLiteral_11929/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_RAINFORCEMENT"*/, v16);
+    sub_B16FFC(&StringLiteral_11928/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_LIMIT_LIBERATION"*/, v17);
     byte_40FDEB8 = 1;
   }
   if ( !LOBYTE(this->fields.loadPrefab) )
@@ -412,12 +412,12 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__SetItem(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11927, 0LL);
+        v19 = LocalizationManager__Get((System_String_o *)StringLiteral_11927/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_INTERLUDE"*/, 0LL);
         if ( !explanation2Label )
           goto LABEL_101;
         UILabel__set_text(explanation2Label, v19, 0LL);
         titleBase = this->fields.titleBase;
-        v21 = LocalizationManager__Get((System_String_o *)StringLiteral_11929, 0LL);
+        v21 = LocalizationManager__Get((System_String_o *)StringLiteral_11929/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_RAINFORCEMENT"*/, 0LL);
         if ( !titleBase )
           goto LABEL_101;
         UILabel__set_text((UILabel_o *)titleBase, v21, 0LL);
@@ -534,7 +534,7 @@ LABEL_102:
                                     {
                                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                     }
-                                    v60 = LocalizationManager__Get((System_String_o *)StringLiteral_11928, 0LL);
+                                    v60 = LocalizationManager__Get((System_String_o *)StringLiteral_11928/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_LIMIT_LIBERATION"*/, 0LL);
                                     if ( !v59 )
                                       goto LABEL_101;
                                     UILabel__set_text(v59, v60, 0LL);

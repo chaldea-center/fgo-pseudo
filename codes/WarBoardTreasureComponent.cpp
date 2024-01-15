@@ -35,15 +35,15 @@ System_String_o *__fastcall WarBoardTreasureComponent__GetAnimationNameByRarity(
 
   if ( (byte_40FBB4D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12951, method);
-    sub_B16FFC(&StringLiteral_4163, v3);
-    sub_B16FFC(&StringLiteral_11244, v4);
-    sub_B16FFC(&StringLiteral_12953, v5);
-    sub_B16FFC(&StringLiteral_12952, v6);
-    sub_B16FFC(&StringLiteral_11242, v7);
-    sub_B16FFC(&StringLiteral_4165, v8);
-    sub_B16FFC(&StringLiteral_4164, v9);
-    sub_B16FFC(&StringLiteral_11243, v10);
+    sub_B16FFC(&StringLiteral_12951/*"SrareTreasureGet"*/, method);
+    sub_B16FFC(&StringLiteral_4163/*"CommonTreasureGet"*/, v3);
+    sub_B16FFC(&StringLiteral_11244/*"RareTreasureGetPlus2"*/, v4);
+    sub_B16FFC(&StringLiteral_12953/*"SrareTreasureGetPlus2"*/, v5);
+    sub_B16FFC(&StringLiteral_12952/*"SrareTreasureGetPlus"*/, v6);
+    sub_B16FFC(&StringLiteral_11242/*"RareTreasureGet"*/, v7);
+    sub_B16FFC(&StringLiteral_4165/*"CommonTreasureGetPlus2"*/, v8);
+    sub_B16FFC(&StringLiteral_4164/*"CommonTreasureGetPlus"*/, v9);
+    sub_B16FFC(&StringLiteral_11243/*"RareTreasureGetPlus"*/, v10);
     byte_40FBB4D = 1;
   }
   treasureData = this->fields.treasureData;
@@ -51,7 +51,7 @@ System_String_o *__fastcall WarBoardTreasureComponent__GetAnimationNameByRarity(
     sub_B170D4();
   v12 = WarBoardTreasureData__get_treasureIconId(treasureData, 0LL) - 1;
   if ( (unsigned int)v12 > 7 )
-    v13 = (System_String_o **)&StringLiteral_4163;
+    v13 = (System_String_o **)&StringLiteral_4163/*"CommonTreasureGet"*/;
   else
     v13 = (System_String_o **)*(&off_3D6A8A0 + v12);
   return *v13;
@@ -113,7 +113,7 @@ void __fastcall WarBoardTreasureComponent__Initialize(
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v11);
     sub_B16FFC(&UnityEngine_Transform___TypeInfo, v12);
     sub_B16FFC(&WarBoardTreasureComponent_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_19254, v14);
+    sub_B16FFC(&StringLiteral_19254/*"icon_drop_item_L_{0:00}"*/, v14);
     byte_40FBB47 = 1;
   }
   this->fields.treasureData = data;
@@ -157,7 +157,7 @@ void __fastcall WarBoardTreasureComponent__Initialize(
   }
   v49 = treasureIconId % v26->static_fields->RARITY_TYPE + 1;
   v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49);
-  v28 = System_String__Format((System_String_o *)StringLiteral_19254, v27, 0LL);
+  v28 = System_String__Format((System_String_o *)StringLiteral_19254/*"icon_drop_item_L_{0:00}"*/, v27, 0LL);
   if ( !v24 )
     goto LABEL_20;
   UISprite__set_spriteName(v24, v28, 0LL);

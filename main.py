@@ -11,12 +11,12 @@ import httpx
 
 def dum_json(obj, fp):
     data = json.dumps(obj, indent=2, ensure_ascii=False)
-    Path(fp).write_text(data, "utf8")
+    Path(fp).write_text(data, "utf-8")
     return data
 
 
 def load_json(fp):
-    return json.loads(Path(fp).read_text())
+    return json.loads(Path(fp).read_text("utf-8"))
 
 
 def download_apk():
@@ -90,7 +90,7 @@ def get_class_names(dump_folder: Path, output_fp: Path):
         cls_name = sep.split(method)[0]
         if cls_name and cls_name not in all_cls_names:
             all_cls_names.append(cls_name)
-    output_fp.write_text("\n".join(all_cls_names), "utf8")
+    output_fp.write_text("\n".join(all_cls_names), "utf-8")
     return all_cls_names
 
 

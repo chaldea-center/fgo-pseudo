@@ -101,7 +101,7 @@ System_String_o *__fastcall EventMissionActionInfo__getValMessage(
   v3 = this;
   if ( (byte_40F889E & 1) == 0 )
   {
-    this = (EventMissionActionInfo_o *)sub_B16FFC(&StringLiteral_1, method);
+    this = (EventMissionActionInfo_o *)sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40F889E = 1;
   }
   vals = v3->fields.vals;
@@ -116,7 +116,7 @@ System_String_o *__fastcall EventMissionActionInfo__getValMessage(
   }
   else
   {
-    m_Items = (System_String_o **)&StringLiteral_1;
+    m_Items = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *m_Items;
 }

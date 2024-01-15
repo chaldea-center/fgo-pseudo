@@ -10,11 +10,11 @@ void __fastcall MapFogData___ctor(MapFogData_o *this, const MethodInfo *method)
 
   if ( (byte_40FB5BC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15929, method);
+    sub_B16FFC(&StringLiteral_15929/*"_FogColor"*/, method);
     byte_40FB5BC = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_15929;
-  this->fields.propertyName = (struct System_String_o *)StringLiteral_15929;
+  v9 = (System_Int32_array **)StringLiteral_15929/*"_FogColor"*/;
+  this->fields.propertyName = (struct System_String_o *)StringLiteral_15929/*"_FogColor"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.propertyName, v9, v2, v3, v4, v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }

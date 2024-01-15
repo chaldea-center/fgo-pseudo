@@ -293,7 +293,7 @@ void __fastcall LocalNotificationManagerAndroid__Schedule(
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__, v10);
     sub_B16FFC(&Method_System_Nullable_Color___ctor__, v11);
     sub_B16FFC(&string_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_21063, v13);
+    sub_B16FFC(&StringLiteral_21063/*"notification_icon"*/, v13);
     byte_40F8D78 = 1;
   }
   dateData = 0LL;
@@ -315,10 +315,10 @@ void __fastcall LocalNotificationManagerAndroid__Schedule(
       message,
       v40,
       0LL);
-    methoda.return_type = (const Il2CppType *)StringLiteral_21063;
+    methoda.return_type = (const Il2CppType *)StringLiteral_21063/*"notification_icon"*/;
     sub_B16F98(
       (BattleServantConfConponent_o *)&methoda.return_type,
-      (System_Int32_array **)StringLiteral_21063,
+      (System_Int32_array **)StringLiteral_21063/*"notification_icon"*/,
       v15,
       v16,
       v17,

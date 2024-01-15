@@ -19,8 +19,8 @@ void __fastcall SetTDPlaySpeedControl__Init(SetTDPlaySpeedControl_o *this, const
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&OptionManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9788, v4);
-    sub_B16FFC(&StringLiteral_9787, v5);
+    sub_B16FFC(&StringLiteral_9788/*"OPTION_TD_PLAY_SPEED_EXPLANATION"*/, v4);
+    sub_B16FFC(&StringLiteral_9787/*"OPTION_TD_PLAY_SPEED_DISP"*/, v5);
     byte_40FF32D = 1;
   }
   tdPlaySpeedDispBtn = (UILabel_o *)this->fields.tdPlaySpeedDispBtn;
@@ -29,11 +29,11 @@ void __fastcall SetTDPlaySpeedControl__Init(SetTDPlaySpeedControl_o *this, const
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9787, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9787/*"OPTION_TD_PLAY_SPEED_DISP"*/, 0LL);
   if ( !tdPlaySpeedDispBtn
     || (UILabel__set_text(tdPlaySpeedDispBtn, v7, 0LL),
         v8 = *(UILabel_o **)&this->fields.isTDPlaySpeed,
-        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9788, 0LL),
+        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9788/*"OPTION_TD_PLAY_SPEED_EXPLANATION"*/, 0LL),
         !v8) )
   {
     sub_B170D4();
@@ -95,16 +95,16 @@ void __fastcall SetTDPlaySpeedControl__setDispValue(SetTDPlaySpeedControl_o *thi
 
   if ( (byte_40FF32E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40FF32E = 1;
   }
   tdPlaySpeedDispInfoLb = this->fields.tdPlaySpeedDispInfoLb;
   if ( !tdPlaySpeedDispInfoLb )
     sub_B170D4();
   if ( LOBYTE(this[1].klass) )
-    v5 = &StringLiteral_16939;
+    v5 = &StringLiteral_16939/*"btn_off"*/;
   else
-    v5 = &StringLiteral_16940;
+    v5 = &StringLiteral_16940/*"btn_on"*/;
   UIButton__set_normalSprite((UIButton_o *)tdPlaySpeedDispInfoLb, (System_String_o *)*v5, 0LL);
 }

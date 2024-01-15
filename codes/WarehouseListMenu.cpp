@@ -14,12 +14,12 @@ void __fastcall WarehouseListMenu___cctor(const MethodInfo *method)
   if ( (byte_40FA993 & 1) == 0 )
   {
     sub_B16FFC(&WarehouseListMenu_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_352, v8);
+    sub_B16FFC(&StringLiteral_352/*"#4C4C4C"*/, v8);
     byte_40FA993 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarehouseListMenu_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_352;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_352;
+  v10 = (System_Int32_array **)StringLiteral_352/*"#4C4C4C"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_352/*"#4C4C4C"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -2107,10 +2107,10 @@ void __fastcall WarehouseListMenu__OnSelectServant(
     sub_B16FFC(&Method_WarehouseListMenu_EndServantEquipStatus__, v29);
     sub_B16FFC(&Method_WarehouseListMenu_EndServantStatus__, v30);
     sub_B16FFC(&Method_WarehouseListMenu_OnSelectServant__, v31);
-    sub_B16FFC(&StringLiteral_11946, v32);
-    sub_B16FFC(&StringLiteral_11944, v33);
-    sub_B16FFC(&StringLiteral_11945, v34);
-    sub_B16FFC(&StringLiteral_11947, v35);
+    sub_B16FFC(&StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v32);
+    sub_B16FFC(&StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v33);
+    sub_B16FFC(&StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v34);
+    sub_B16FFC(&StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v35);
     byte_40FA983 = 1;
   }
   v36 = sub_B170CC(WarehouseListMenu___c__DisplayClass81_0_TypeInfo, *(_QWORD *)&result, list, *(_QWORD *)&n, method);
@@ -2262,8 +2262,8 @@ LABEL_48:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v142 = LocalizationManager__Get((System_String_o *)StringLiteral_11947, 0LL);
-    v143 = LocalizationManager__Get((System_String_o *)StringLiteral_11946, 0LL);
+    v142 = LocalizationManager__Get((System_String_o *)StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
+    v143 = LocalizationManager__Get((System_String_o *)StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
     v145 = (System_Object_array *)sub_B17014(object___TypeInfo, 6LL, v144);
     Rarity = UserServantEntity__getRarity(Entity, 0LL);
     if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
@@ -2372,8 +2372,8 @@ LABEL_130:
       v145->m_Items[5] = (Il2CppObject *)v190;
       sub_B16F98((BattleServantConfConponent_o *)&v145->m_Items[5], v190, v70, v185, v186, v187, v188, v189);
       v191 = System_String__Format_43822456(v143, v145, 0LL);
-      v192 = LocalizationManager__Get((System_String_o *)StringLiteral_11945, 0LL);
-      v193 = LocalizationManager__Get((System_String_o *)StringLiteral_11944, 0LL);
+      v192 = LocalizationManager__Get((System_String_o *)StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
+      v193 = LocalizationManager__Get((System_String_o *)StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
       v194 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v199 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                       CommonConfirmDialog_ClickDelegate_TypeInfo,
@@ -3280,33 +3280,33 @@ void __fastcall WarehouseListMenu__SetTabKind(
     sub_B16FFC(&LocalizationManager_TypeInfo, v13);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
     sub_B16FFC(&Method_WarehouseListMenu_OnSelectServant__, v15);
-    sub_B16FFC(&StringLiteral_16981, v16);
-    sub_B16FFC(&StringLiteral_17020, v17);
-    sub_B16FFC(&StringLiteral_19594, v18);
-    sub_B16FFC(&StringLiteral_17071, v19);
-    sub_B16FFC(&StringLiteral_17072, v20);
-    sub_B16FFC(&StringLiteral_17057, v21);
-    sub_B16FFC(&StringLiteral_16896, v22);
-    sub_B16FFC(&StringLiteral_17060, v23);
-    sub_B16FFC(&StringLiteral_17021, v24);
-    sub_B16FFC(&StringLiteral_17073, v25);
-    sub_B16FFC(&StringLiteral_16898, v26);
-    sub_B16FFC(&StringLiteral_16977, v27);
-    sub_B16FFC(&StringLiteral_15250, v28);
-    sub_B16FFC(&StringLiteral_15248, v29);
-    sub_B16FFC(&StringLiteral_16902, v30);
-    sub_B16FFC(&StringLiteral_16976, v31);
-    sub_B16FFC(&StringLiteral_16982, v32);
-    sub_B16FFC(&StringLiteral_15251, v33);
-    sub_B16FFC(&StringLiteral_15249, v34);
-    sub_B16FFC(&StringLiteral_16965, v35);
-    sub_B16FFC(&StringLiteral_19585, v36);
-    sub_B16FFC(&StringLiteral_16964, v37);
-    sub_B16FFC(&StringLiteral_15247, v38);
-    sub_B16FFC(&StringLiteral_17074, v39);
-    sub_B16FFC(&StringLiteral_17059, v40);
-    sub_B16FFC(&StringLiteral_16901, v41);
-    sub_B16FFC(&StringLiteral_17058, v42);
+    sub_B16FFC(&StringLiteral_16981/*"btn_txt_craftessence_off"*/, v16);
+    sub_B16FFC(&StringLiteral_17020/*"btn_txt_servant_off"*/, v17);
+    sub_B16FFC(&StringLiteral_19594/*"img_txt_cardspace"*/, v18);
+    sub_B16FFC(&StringLiteral_17071/*"button_push_reg"*/, v19);
+    sub_B16FFC(&StringLiteral_17072/*"button_push_unreg"*/, v20);
+    sub_B16FFC(&StringLiteral_17057/*"button_allchoice_reg"*/, v21);
+    sub_B16FFC(&StringLiteral_16896/*"btn_bg_12"*/, v22);
+    sub_B16FFC(&StringLiteral_17060/*"button_alllock_unreg"*/, v23);
+    sub_B16FFC(&StringLiteral_17021/*"btn_txt_servant_on"*/, v24);
+    sub_B16FFC(&StringLiteral_17073/*"button_select_reg"*/, v25);
+    sub_B16FFC(&StringLiteral_16898/*"btn_bg_19"*/, v26);
+    sub_B16FFC(&StringLiteral_16977/*"btn_txt_cardtoarchive_on"*/, v27);
+    sub_B16FFC(&StringLiteral_15250/*"WAREHOUSE_EXPLANATION_PUT_IN"*/, v28);
+    sub_B16FFC(&StringLiteral_15248/*"WAREHOUSE_EXPLANATION_LOCK"*/, v29);
+    sub_B16FFC(&StringLiteral_16902/*"btn_bg_25"*/, v30);
+    sub_B16FFC(&StringLiteral_16976/*"btn_txt_cardtoarchive_off"*/, v31);
+    sub_B16FFC(&StringLiteral_16982/*"btn_txt_craftessence_on"*/, v32);
+    sub_B16FFC(&StringLiteral_15251/*"WAREHOUSE_EXPLANATION_PUT_OUT"*/, v33);
+    sub_B16FFC(&StringLiteral_15249/*"WAREHOUSE_EXPLANATION_PUSH"*/, v34);
+    sub_B16FFC(&StringLiteral_16965/*"btn_txt_archivetocard_on"*/, v35);
+    sub_B16FFC(&StringLiteral_19585/*"img_txt_archivespace"*/, v36);
+    sub_B16FFC(&StringLiteral_16964/*"btn_txt_archivetocard_off"*/, v37);
+    sub_B16FFC(&StringLiteral_15247/*"WAREHOUSE_EXPLANATION_CHOICE"*/, v38);
+    sub_B16FFC(&StringLiteral_17074/*"button_select_unreg"*/, v39);
+    sub_B16FFC(&StringLiteral_17059/*"button_alllock_reg"*/, v40);
+    sub_B16FFC(&StringLiteral_16901/*"btn_bg_24"*/, v41);
+    sub_B16FFC(&StringLiteral_17058/*"button_allchoice_unreg"*/, v42);
     byte_40FA978 = 1;
   }
   v43 = !this->fields.isInitTab || isInit;
@@ -3384,9 +3384,9 @@ void __fastcall WarehouseListMenu__SetTabKind(
   servantTabTitleSprite = this->fields.servantTabTitleSprite;
   if ( !servantTabTitleSprite )
     goto LABEL_228;
-  v64 = (System_String_o **)&StringLiteral_17021;
+  v64 = (System_String_o **)&StringLiteral_17021/*"btn_txt_servant_on"*/;
   if ( v62 != 2 )
-    v64 = (System_String_o **)&StringLiteral_17020;
+    v64 = (System_String_o **)&StringLiteral_17020/*"btn_txt_servant_off"*/;
   UISprite__set_spriteName(servantTabTitleSprite, *v64, 0LL);
   servantTabLabel = this->fields.servantTabLabel;
   if ( !servantTabLabel )
@@ -3400,7 +3400,7 @@ void __fastcall WarehouseListMenu__SetTabKind(
   if ( !servantTabSprite )
     goto LABEL_228;
   v200 = isModify;
-  v71 = (System_String_o **)(v62 == 2 ? &StringLiteral_16898 : &StringLiteral_16896);
+  v71 = (System_String_o **)(v62 == 2 ? &StringLiteral_16898/*"btn_bg_19"*/ : &StringLiteral_16896/*"btn_bg_12"*/);
   UISprite__set_spriteName(servantTabSprite, *v71, 0LL);
   v72 = this->fields.servantTabButton;
   if ( !v72 )
@@ -3430,14 +3430,14 @@ void __fastcall WarehouseListMenu__SetTabKind(
   servantEquipTabTitleSprite = this->fields.servantEquipTabTitleSprite;
   if ( !servantEquipTabTitleSprite )
     goto LABEL_228;
-  v79 = (System_String_o **)&StringLiteral_16981;
+  v79 = (System_String_o **)&StringLiteral_16981/*"btn_txt_craftessence_off"*/;
   if ( v62 != 2 )
-    v79 = (System_String_o **)&StringLiteral_16982;
+    v79 = (System_String_o **)&StringLiteral_16982/*"btn_txt_craftessence_on"*/;
   UISprite__set_spriteName(servantEquipTabTitleSprite, *v79, 0LL);
   servantEquipTabSprite = this->fields.servantEquipTabSprite;
   if ( !servantEquipTabSprite )
     goto LABEL_228;
-  v81 = (System_String_o **)(v62 == 2 ? &StringLiteral_16896 : &StringLiteral_16898);
+  v81 = (System_String_o **)(v62 == 2 ? &StringLiteral_16896/*"btn_bg_12"*/ : &StringLiteral_16898/*"btn_bg_19"*/);
   UISprite__set_spriteName(servantEquipTabSprite, *v81, 0LL);
   servantEquipTabLabel = this->fields.servantEquipTabLabel;
   if ( !servantEquipTabLabel )
@@ -3475,14 +3475,14 @@ void __fastcall WarehouseListMenu__SetTabKind(
   putInTabTitleSprite = this->fields.putInTabTitleSprite;
   if ( !putInTabTitleSprite )
     goto LABEL_228;
-  v94 = (System_String_o **)&StringLiteral_16976;
+  v94 = (System_String_o **)&StringLiteral_16976/*"btn_txt_cardtoarchive_off"*/;
   if ( v92 != 3 )
-    v94 = (System_String_o **)&StringLiteral_16977;
+    v94 = (System_String_o **)&StringLiteral_16977/*"btn_txt_cardtoarchive_on"*/;
   UISprite__set_spriteName(putInTabTitleSprite, *v94, 0LL);
   putInTabSprite = this->fields.putInTabSprite;
   if ( !putInTabSprite )
     goto LABEL_228;
-  v96 = (System_String_o **)(v92 == 3 ? &StringLiteral_16901 : &StringLiteral_16902);
+  v96 = (System_String_o **)(v92 == 3 ? &StringLiteral_16901/*"btn_bg_24"*/ : &StringLiteral_16902/*"btn_bg_25"*/);
   UISprite__set_spriteName(putInTabSprite, *v96, 0LL);
   v97 = this->fields.putInTabButton;
   if ( !v97 )
@@ -3511,14 +3511,14 @@ void __fastcall WarehouseListMenu__SetTabKind(
   putOutTabTitleSprite = this->fields.putOutTabTitleSprite;
   if ( !putOutTabTitleSprite )
     goto LABEL_228;
-  v103 = (System_String_o **)&StringLiteral_16965;
+  v103 = (System_String_o **)&StringLiteral_16965/*"btn_txt_archivetocard_on"*/;
   if ( v92 != 3 )
-    v103 = (System_String_o **)&StringLiteral_16964;
+    v103 = (System_String_o **)&StringLiteral_16964/*"btn_txt_archivetocard_off"*/;
   UISprite__set_spriteName(putOutTabTitleSprite, *v103, 0LL);
   putOutTabSprite = this->fields.putOutTabSprite;
   if ( !putOutTabSprite )
     goto LABEL_228;
-  v105 = (System_String_o **)(v92 == 3 ? &StringLiteral_16902 : &StringLiteral_16901);
+  v105 = (System_String_o **)(v92 == 3 ? &StringLiteral_16902/*"btn_bg_25"*/ : &StringLiteral_16901/*"btn_bg_24"*/);
   UISprite__set_spriteName(putOutTabSprite, *v105, 0LL);
   v106 = this->fields.putOutTabButton;
   if ( !v106 )
@@ -3536,9 +3536,9 @@ void __fastcall WarehouseListMenu__SetTabKind(
   sendTitleSprite = this->fields.sendTitleSprite;
   if ( !sendTitleSprite )
     goto LABEL_228;
-  v110 = (System_String_o **)&StringLiteral_19594;
+  v110 = (System_String_o **)&StringLiteral_19594/*"img_txt_cardspace"*/;
   if ( v92 != 3 )
-    v110 = (System_String_o **)&StringLiteral_19585;
+    v110 = (System_String_o **)&StringLiteral_19585/*"img_txt_archivespace"*/;
   UISprite__set_spriteName(sendTitleSprite, *v110, 0LL);
   switch ( tabKind )
   {
@@ -3683,9 +3683,9 @@ LABEL_135:
       statusTabSprite = this->fields.statusTabSprite;
       if ( !statusTabSprite )
         goto LABEL_228;
-      v135 = (System_String_o **)&StringLiteral_17073;
+      v135 = (System_String_o **)&StringLiteral_17073/*"button_select_reg"*/;
       if ( modeKind )
-        v135 = (System_String_o **)&StringLiteral_17074;
+        v135 = (System_String_o **)&StringLiteral_17074/*"button_select_unreg"*/;
       UISprite__set_spriteName(statusTabSprite, *v135, 0LL);
       v136 = this->fields.statusTabButton;
       if ( !v136 )
@@ -3714,9 +3714,9 @@ LABEL_135:
       lockTabSprite = this->fields.lockTabSprite;
       if ( !lockTabSprite )
         goto LABEL_228;
-      v142 = (System_String_o **)&StringLiteral_17059;
+      v142 = (System_String_o **)&StringLiteral_17059/*"button_alllock_reg"*/;
       if ( modeKind != 1 )
-        v142 = (System_String_o **)&StringLiteral_17060;
+        v142 = (System_String_o **)&StringLiteral_17060/*"button_alllock_unreg"*/;
       UISprite__set_spriteName(lockTabSprite, *v142, 0LL);
       v143 = this->fields.lockTabButton;
       if ( !v143 )
@@ -3745,9 +3745,9 @@ LABEL_135:
       choiceTabSprite = this->fields.choiceTabSprite;
       if ( !choiceTabSprite )
         goto LABEL_228;
-      v149 = (System_String_o **)&StringLiteral_17057;
+      v149 = (System_String_o **)&StringLiteral_17057/*"button_allchoice_reg"*/;
       if ( modeKind != 2 )
-        v149 = (System_String_o **)&StringLiteral_17058;
+        v149 = (System_String_o **)&StringLiteral_17058/*"button_allchoice_unreg"*/;
       UISprite__set_spriteName(choiceTabSprite, *v149, 0LL);
       v150 = this->fields.choiceTabButton;
       if ( !v150 )
@@ -3776,9 +3776,9 @@ LABEL_135:
       v155 = this->fields.pushTabSprite;
       if ( !v155 )
         goto LABEL_228;
-      v156 = (System_String_o **)&StringLiteral_17071;
+      v156 = (System_String_o **)&StringLiteral_17071/*"button_push_reg"*/;
       if ( modeKind != 3 )
-        v156 = (System_String_o **)&StringLiteral_17072;
+        v156 = (System_String_o **)&StringLiteral_17072/*"button_push_unreg"*/;
       UISprite__set_spriteName(v155, *v156, 0LL);
       v157 = this->fields.pushTabButton;
       if ( v92 == 3 )
@@ -3850,7 +3850,7 @@ LABEL_118:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v164 = &StringLiteral_15250;
+        v164 = &StringLiteral_15250/*"WAREHOUSE_EXPLANATION_PUT_IN"*/;
       }
       else
       {
@@ -3862,7 +3862,7 @@ LABEL_118:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v164 = &StringLiteral_15251;
+        v164 = &StringLiteral_15251/*"WAREHOUSE_EXPLANATION_PUT_OUT"*/;
       }
       v177 = LocalizationManager__Get((System_String_o *)*v164, 0LL);
       if ( !explanationLabel )
@@ -3954,7 +3954,7 @@ LABEL_223:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v167 = LocalizationManager__Get((System_String_o *)StringLiteral_15248, 0LL);
+      v167 = LocalizationManager__Get((System_String_o *)StringLiteral_15248/*"WAREHOUSE_EXPLANATION_LOCK"*/, 0LL);
       if ( !v166 )
         goto LABEL_228;
       UILabel__set_text(v166, v167, 0LL);
@@ -3973,7 +3973,7 @@ LABEL_223:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v171 = LocalizationManager__Get((System_String_o *)StringLiteral_15247, 0LL);
+      v171 = LocalizationManager__Get((System_String_o *)StringLiteral_15247/*"WAREHOUSE_EXPLANATION_CHOICE"*/, 0LL);
       if ( !v170 )
         goto LABEL_228;
       UILabel__set_text(v170, v171, 0LL);
@@ -3992,7 +3992,7 @@ LABEL_223:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v173 = LocalizationManager__Get((System_String_o *)StringLiteral_15249, 0LL);
+      v173 = LocalizationManager__Get((System_String_o *)StringLiteral_15249/*"WAREHOUSE_EXPLANATION_PUSH"*/, 0LL);
       if ( !v172 )
         goto LABEL_228;
       UILabel__set_text(v172, v173, 0LL);

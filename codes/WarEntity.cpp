@@ -196,7 +196,7 @@ System_String_o *__fastcall WarEntity__GetNoticeText(WarEntity_o *this, const Me
   {
     sub_B16FFC(&Method_DataManager_GetMaster_WarAddMaster___, method);
     sub_B16FFC(&DataManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FA947 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -208,7 +208,7 @@ System_String_o *__fastcall WarEntity__GetNoticeText(WarEntity_o *this, const Me
            Master_WarQuestSelectionMaster,
            17,
            this->fields.id,
-           (System_String_o *)StringLiteral_1,
+           (System_String_o *)StringLiteral_1/*""*/,
            0LL);
 }
 

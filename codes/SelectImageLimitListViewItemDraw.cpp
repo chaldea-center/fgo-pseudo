@@ -46,9 +46,9 @@ void __fastcall SelectImageLimitListViewItemDraw__SetButton(
     sub_B16FFC(&Method_DataManager_GetMaster_ServantCostumeMaster___, item);
     sub_B16FFC(&DataManager_TypeInfo, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_11938, v7);
-    sub_B16FFC(&StringLiteral_16899, v8);
-    sub_B16FFC(&StringLiteral_16900, v9);
+    sub_B16FFC(&StringLiteral_11938/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v7);
+    sub_B16FFC(&StringLiteral_16899/*"btn_bg_20"*/, v8);
+    sub_B16FFC(&StringLiteral_16900/*"btn_bg_21"*/, v9);
     byte_40FE1D2 = 1;
   }
   entity = 0LL;
@@ -82,7 +82,7 @@ LABEL_27:
   {
     limitCount = item->fields.limitCount;
     v17 = System_Int32__ToString((int32_t)&limitCount, 0LL);
-    v18 = System_String__Concat_43743732((System_String_o *)StringLiteral_11938, v17, 0LL);
+    v18 = System_String__Concat_43743732((System_String_o *)StringLiteral_11938/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v17, 0LL);
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
@@ -179,9 +179,9 @@ LABEL_48:
   if ( !limitCountButtonSprite )
     goto LABEL_53;
   if ( item->fields.isSelected )
-    v30 = &StringLiteral_16900;
+    v30 = &StringLiteral_16900/*"btn_bg_21"*/;
   else
-    v30 = &StringLiteral_16899;
+    v30 = &StringLiteral_16899/*"btn_bg_20"*/;
   UISprite__set_spriteName(limitCountButtonSprite, (System_String_o *)*v30, 0LL);
 }
 

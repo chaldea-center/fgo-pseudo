@@ -645,9 +645,9 @@ void __fastcall ServantEquipEffectFilterContainer__SetupHeader(
     sub_B16FFC(&FunctionCategoryEntity_GroupType_TypeInfo, *(_QWORD *)&groupType);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
     sub_B16FFC(&ServantEquipEffectFilterContainer_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_3217, v8);
-    sub_B16FFC(&StringLiteral_11644, v9);
-    sub_B16FFC(&StringLiteral_11649, v10);
+    sub_B16FFC(&StringLiteral_3217/*"COMMAND_CODE_EFFECT_FILTER_GROUP_"*/, v8);
+    sub_B16FFC(&StringLiteral_11644/*"SERVANT_EFFECT_FILTER_GROUP_"*/, v9);
+    sub_B16FFC(&StringLiteral_11649/*"SERVANT_EQUIP_EFFECT_FILTER_GROUP_"*/, v10);
     byte_40FD05A = 1;
   }
   switch ( categoryFlag )
@@ -662,7 +662,7 @@ void __fastcall ServantEquipEffectFilterContainer__SetupHeader(
                                  v17,
                                  *(_QWORD *)(*(_QWORD *)v17 + 368LL));
       v15 = *(_DWORD *)j_il2cpp_object_unbox_0(v18);
-      v16 = &StringLiteral_11644;
+      v16 = &StringLiteral_11644/*"SERVANT_EFFECT_FILTER_GROUP_"*/;
       break;
     case 2:
       titleLabel = this->fields.titleLabel;
@@ -674,7 +674,7 @@ void __fastcall ServantEquipEffectFilterContainer__SetupHeader(
                                  v19,
                                  *(_QWORD *)(*(_QWORD *)v19 + 368LL));
       v15 = *(_DWORD *)j_il2cpp_object_unbox_0(v20);
-      v16 = &StringLiteral_3217;
+      v16 = &StringLiteral_3217/*"COMMAND_CODE_EFFECT_FILTER_GROUP_"*/;
       break;
     case 1:
       titleLabel = this->fields.titleLabel;
@@ -686,7 +686,7 @@ void __fastcall ServantEquipEffectFilterContainer__SetupHeader(
                                  v12,
                                  *(_QWORD *)(*(_QWORD *)v12 + 368LL));
       v15 = *(_DWORD *)j_il2cpp_object_unbox_0(v13);
-      v16 = &StringLiteral_11649;
+      v16 = &StringLiteral_11649/*"SERVANT_EQUIP_EFFECT_FILTER_GROUP_"*/;
       break;
     default:
       goto LABEL_17;

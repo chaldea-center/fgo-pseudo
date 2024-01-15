@@ -353,8 +353,8 @@ void __fastcall ClassBoardSelectIconComponent__Setup(
     sub_B16FFC(&Method_System_Linq_Enumerable_ToArray_AnimationState___, v11);
     sub_B16FFC(&IClassBoardResourceCatalog_TypeInfo, v12);
     sub_B16FFC(&int_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_19379, v14);
-    sub_B16FFC(&StringLiteral_16918, v15);
+    sub_B16FFC(&StringLiteral_19379/*"img_class_{0}"*/, v14);
+    sub_B16FFC(&StringLiteral_16918/*"btn_class"*/, v15);
     byte_40FB9D4 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
@@ -453,7 +453,7 @@ LABEL_13:
   classIconUi = this->fields.classIconUi;
   iconId = Entity_k__BackingField->fields.iconId;
   v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-  v55 = System_String__Format((System_String_o *)StringLiteral_19379, v54, 0LL);
+  v55 = System_String__Format((System_String_o *)StringLiteral_19379/*"img_class_{0}"*/, v54, 0LL);
   if ( !v52 )
     goto LABEL_46;
   AtlasManagerUnit__SetUI(v52, classIconUi, v55, 0LL);
@@ -482,7 +482,7 @@ LABEL_22:
   v61 = *(AtlasManagerUnit_o **)(v60 + 120);
   if ( !v61 )
     goto LABEL_46;
-  AtlasManagerUnit__SetUI(v61, this->fields.classButtonUi, (System_String_o *)StringLiteral_16918, 0LL);
+  AtlasManagerUnit__SetUI(v61, this->fields.classButtonUi, (System_String_o *)StringLiteral_16918/*"btn_class"*/, 0LL);
   v62 = resourceCatalog->klass;
   if ( *(_WORD *)&resourceCatalog->klass->_2.bitflags1 )
   {
@@ -512,7 +512,7 @@ LABEL_30:
   classIconUiDisabled = this->fields.classIconUiDisabled;
   v80 = v67->fields.iconId;
   v70 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v80);
-  v71 = System_String__Format((System_String_o *)StringLiteral_19379, v70, 0LL);
+  v71 = System_String__Format((System_String_o *)StringLiteral_19379/*"img_class_{0}"*/, v70, 0LL);
   if ( !v68 )
     goto LABEL_46;
   AtlasManagerUnit__SetUI(v68, classIconUiDisabled, v71, 0LL);
@@ -538,7 +538,7 @@ LABEL_39:
   v76 = (*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))v75)(resourceCatalog, *(_QWORD *)(v75 + 8));
   if ( !v76
     || (v77 = *(AtlasManagerUnit_o **)(v76 + 120)) == 0LL
-    || (AtlasManagerUnit__SetUI(v77, this->fields.classButtonUiDisabled, (System_String_o *)StringLiteral_16918, 0LL),
+    || (AtlasManagerUnit__SetUI(v77, this->fields.classButtonUiDisabled, (System_String_o *)StringLiteral_16918/*"btn_class"*/, 0LL),
         ClassBoardSelectIconComponent__UpdateUI(this, v78),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
@@ -749,12 +749,12 @@ void __fastcall ClassBoardSelectIconComponent_AnimClipInfo___ctor(
     sub_B16FFC(&Method_BasicHelper_ForEach_AnimationEvent___, v6);
     sub_B16FFC(&Method_ClassBoardSelectIconComponent_AnimClipInfo___c___ctor_b__25_0__, v7);
     sub_B16FFC(&ClassBoardSelectIconComponent_AnimClipInfo___c_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_9174, v9);
-    sub_B16FFC(&StringLiteral_9176, v10);
-    sub_B16FFC(&StringLiteral_12982, v11);
-    sub_B16FFC(&StringLiteral_14481, v12);
-    sub_B16FFC(&StringLiteral_6748, v13);
-    sub_B16FFC(&StringLiteral_12996, v14);
+    sub_B16FFC(&StringLiteral_9174/*"MoveEnd"*/, v9);
+    sub_B16FFC(&StringLiteral_9176/*"MoveStart"*/, v10);
+    sub_B16FFC(&StringLiteral_12982/*"StartBgAnim"*/, v11);
+    sub_B16FFC(&StringLiteral_14481/*"TransitionAnimStart"*/, v12);
+    sub_B16FFC(&StringLiteral_6748/*"ForwardIconAnimStart"*/, v13);
+    sub_B16FFC(&StringLiteral_12996/*"StartWhite"*/, v14);
     byte_40F70E9 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -818,32 +818,32 @@ void __fastcall ClassBoardSelectIconComponent_AnimClipInfo___ctor(
   UnityEngine_AnimationClip__set_events(animClip, (UnityEngine_AnimationEvent_array *)events, 0LL);
   this->fields._FadeInStartTime_k__BackingField = ClassBoardSelectIconComponent_AnimClipInfo__GetEventTimeByFunctionName(
                                                     this,
-                                                    (System_String_o *)StringLiteral_12996,
+                                                    (System_String_o *)StringLiteral_12996/*"StartWhite"*/,
                                                     0.0,
                                                     v37);
   this->fields._BgAnimStartTime_k__BackingField = ClassBoardSelectIconComponent_AnimClipInfo__GetEventTimeByFunctionName(
                                                     this,
-                                                    (System_String_o *)StringLiteral_12982,
+                                                    (System_String_o *)StringLiteral_12982/*"StartBgAnim"*/,
                                                     0.0,
                                                     v38);
   this->fields._IconMoveStartTime_k__BackingField = ClassBoardSelectIconComponent_AnimClipInfo__GetEventTimeByFunctionName(
                                                       this,
-                                                      (System_String_o *)StringLiteral_9176,
+                                                      (System_String_o *)StringLiteral_9176/*"MoveStart"*/,
                                                       0.0,
                                                       v39);
   this->fields._IconMoveEndTime_k__BackingField = ClassBoardSelectIconComponent_AnimClipInfo__GetEventTimeByFunctionName(
                                                     this,
-                                                    (System_String_o *)StringLiteral_9174,
+                                                    (System_String_o *)StringLiteral_9174/*"MoveEnd"*/,
                                                     0.0,
                                                     v40);
   this->fields._ForwardIconAnimStartTime_k__BackingField = ClassBoardSelectIconComponent_AnimClipInfo__GetEventTimeByFunctionName(
                                                              this,
-                                                             (System_String_o *)StringLiteral_6748,
+                                                             (System_String_o *)StringLiteral_6748/*"ForwardIconAnimStart"*/,
                                                              0.0,
                                                              v41);
   this->fields._TransitionAnimStartTime_k__BackingField = ClassBoardSelectIconComponent_AnimClipInfo__GetEventTimeByFunctionName(
                                                             this,
-                                                            (System_String_o *)StringLiteral_14481,
+                                                            (System_String_o *)StringLiteral_14481/*"TransitionAnimStart"*/,
                                                             0.0,
                                                             v42);
 }

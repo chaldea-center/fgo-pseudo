@@ -388,7 +388,7 @@ System_Collections_Generic_Dictionary_string__object__o *__fastcall SkillLvMaste
   if ( (byte_40F9274 & 1) == 0 )
   {
     sub_B16FFC(&Method_BasicHelper_GetValue_Dictionary_string__object____, *(_QWORD *)&skillId);
-    sub_B16FFC(&StringLiteral_12599, v8);
+    sub_B16FFC(&StringLiteral_12599/*"SelectAddInfo"*/, v8);
     byte_40F9274 = 1;
   }
   entity = 0LL;
@@ -400,7 +400,7 @@ System_Collections_Generic_Dictionary_string__object__o *__fastcall SkillLvMaste
       sub_B170D4();
     return (System_Collections_Generic_Dictionary_string__object__o *)BasicHelper__GetValue_string_(
                                                                         entity->fields.script,
-                                                                        (System_String_o *)StringLiteral_12599,
+                                                                        (System_String_o *)StringLiteral_12599/*"SelectAddInfo"*/,
                                                                         0LL,
                                                                         (const MethodInfo_18B7D04 *)Method_BasicHelper_GetValue_Dictionary_string__object____);
   }

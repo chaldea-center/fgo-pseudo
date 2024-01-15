@@ -29,8 +29,8 @@ void __fastcall SubmarineSelectScannerDialog__Init(SubmarineSelectScannerDialog_
   if ( (byte_40F7CC7 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3252, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40F7CC7 = 1;
   }
   this->fields.state = 0;
@@ -38,18 +38,18 @@ void __fastcall SubmarineSelectScannerDialog__Init(SubmarineSelectScannerDialog_
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_10;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_10;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
 LABEL_10:
     sub_B170D4();
@@ -248,8 +248,8 @@ void __fastcall SubmarineSelectScannerDialog__Open(
     sub_B16FFC(&Method_SubmarineSelectScannerDialog_OnSelectScanner__, v13);
     sub_B16FFC(&Method_SubmarineSelectScannerDialog___c__DisplayClass9_0__Open_b__0__, v14);
     sub_B16FFC(&SubmarineSelectScannerDialog___c__DisplayClass9_0_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_5710, v16);
-    sub_B16FFC(&StringLiteral_5712, v17);
+    sub_B16FFC(&StringLiteral_5710/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_MESSAGE"*/, v16);
+    sub_B16FFC(&StringLiteral_5712/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_TITLE"*/, v17);
     byte_40F7CC8 = 1;
   }
   v18 = sub_B170CC(
@@ -287,12 +287,12 @@ void __fastcall SubmarineSelectScannerDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_5712, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_5712/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_18;
   UILabel__set_text(titleLabel, v34, 0LL);
   messageLabel = this->fields.messageLabel;
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_5710, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_5710/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_MESSAGE"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_18;
   UILabel__set_text(messageLabel, v36, 0LL);

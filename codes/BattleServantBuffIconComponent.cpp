@@ -164,9 +164,9 @@ void __fastcall BattleServantBuffIconComponent__SetInterval(
     sub_B16FFC(&int_TypeInfo, interval);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_2368, v7);
-    sub_B16FFC(&StringLiteral_2367, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_2368/*"BATTLE_BUFF_ICON_INTERVAL_TURN"*/, v7);
+    sub_B16FFC(&StringLiteral_2367/*"BATTLE_BUFF_ICON_INTERVAL_COUNT"*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F89FF = 1;
   }
   intervalLabel = (UnityEngine_Object_o *)this->fields.intervalLabel;
@@ -180,7 +180,7 @@ void __fastcall BattleServantBuffIconComponent__SetInterval(
     v11 = this->fields.intervalLabel;
     if ( !v11 )
       goto LABEL_19;
-    UILabel__set_text(v11, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v11, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( interval )
     {
       IntervalVal = BattleBuffData_IntervalData__GetIntervalVal(interval, 0LL);
@@ -188,9 +188,9 @@ void __fastcall BattleServantBuffIconComponent__SetInterval(
       {
         v13 = IntervalVal;
         if ( BattleBuffData_IntervalData__get_HasIntervalTurn(interval, 0LL) )
-          v14 = (System_String_o **)&StringLiteral_2368;
+          v14 = (System_String_o **)&StringLiteral_2368/*"BATTLE_BUFF_ICON_INTERVAL_TURN"*/;
         else
-          v14 = (System_String_o **)&StringLiteral_2367;
+          v14 = (System_String_o **)&StringLiteral_2367/*"BATTLE_BUFF_ICON_INTERVAL_COUNT"*/;
         v15 = *v14;
         v16 = this->fields.intervalLabel;
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

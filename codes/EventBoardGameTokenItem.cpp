@@ -49,21 +49,21 @@ void __fastcall EventBoardGameTokenItem__Init(EventBoardGameTokenItem_o *this, c
 
   if ( (byte_40FC53A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FC53A = 1;
   }
   *(_DWORD *)&this->fields.haved = 0;
   *(&this->fields.haved + 4) = 0;
-  v9 = (System_Int32_array **)StringLiteral_1;
-  this->fields.tokenName = (struct System_String_o *)StringLiteral_1;
+  v9 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.tokenName = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.tokenName, v9, v2, v3, v4, v5, v6, v7);
-  v10 = (System_Int32_array **)StringLiteral_1;
-  this->fields.tokenImageId = (struct System_String_o *)StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.tokenImageId = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.tokenImageId, v10, v11, v12, v13, v14, v15, v16);
   tokenNameLabel = this->fields.tokenNameLabel;
   if ( !tokenNameLabel )
     sub_B170D4();
-  UILabel__set_text(tokenNameLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(tokenNameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.callback = 0LL;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.callback, 0LL, v18, v19, v20, v21, v22, v23);
 }
@@ -133,7 +133,7 @@ void __fastcall EventBoardGameTokenItem__SetItem(
 
   if ( (byte_40FC53B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22629, item);
+    sub_B16FFC(&StringLiteral_22629/*"token_enpty"*/, item);
     byte_40FC53B = 1;
   }
   if ( ent )
@@ -168,8 +168,8 @@ LABEL_15:
   v25 = *item;
   if ( !*item )
     goto LABEL_15;
-  v23 = (System_Int32_array **)StringLiteral_22629;
-  v25->fields.tokenImageId = (struct System_String_o *)StringLiteral_22629;
+  v23 = (System_Int32_array **)StringLiteral_22629/*"token_enpty"*/;
+  v25->fields.tokenImageId = (struct System_String_o *)StringLiteral_22629/*"token_enpty"*/;
   p_tokenImageId = (BattleServantConfConponent_o *)&v25->fields.tokenImageId;
 LABEL_12:
   sub_B16F98(
@@ -224,7 +224,7 @@ void __fastcall EventBoardGameTokenItem__SetTokenInfo(
 
   if ( (byte_40FC53C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, item);
+    sub_B16FFC(&StringLiteral_1/*""*/, item);
     byte_40FC53C = 1;
   }
   if ( !item )
@@ -264,7 +264,7 @@ void __fastcall EventBoardGameTokenItem__SetTokenInfo(
   {
     if ( !tokenNameLabel )
       goto LABEL_13;
-    v20 = (System_String_o *)StringLiteral_1;
+    v20 = (System_String_o *)StringLiteral_1/*""*/;
   }
   UILabel__set_text(tokenNameLabel, v20, 0LL);
   if ( System_String__IsNullOrEmpty(item->fields.tokenImageId, 0LL) )

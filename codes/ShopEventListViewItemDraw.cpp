@@ -335,11 +335,11 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&string_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_5695, v8);
-    sub_B16FFC(&StringLiteral_15598, v9);
-    sub_B16FFC(&StringLiteral_5693, v10);
-    sub_B16FFC(&StringLiteral_5696, v11);
-    this = (ShopEventListViewItemDraw_o *)sub_B16FFC(&StringLiteral_5694, v12);
+    sub_B16FFC(&StringLiteral_5695/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/, v8);
+    sub_B16FFC(&StringLiteral_15598/*"[000000]"*/, v9);
+    sub_B16FFC(&StringLiteral_5693/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, v10);
+    sub_B16FFC(&StringLiteral_5696/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, v11);
+    this = (ShopEventListViewItemDraw_o *)sub_B16FFC(&StringLiteral_5694/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/, v12);
     byte_40FF880 = 1;
   }
   rangeSprite = v6->fields.rangeSprite;
@@ -365,7 +365,7 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
         UILabel__set_text(nameTextLabel, NameText, 0LL);
         messageTextLabel = v6->fields.messageTextLabel;
         DetailText = ShopEventListViewItem__get_DetailText(item, v23);
-        v25 = System_String__Concat_43743732((System_String_o *)StringLiteral_15598, DetailText, 0LL);
+        v25 = System_String__Concat_43743732((System_String_o *)StringLiteral_15598/*"[000000]"*/, DetailText, 0LL);
         if ( messageTextLabel )
         {
           UILabel__set_text(messageTextLabel, v25, 0LL);
@@ -405,7 +405,7 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v41 = LocalizationManager__Get((System_String_o *)StringLiteral_5696, 0LL);
+                v41 = LocalizationManager__Get((System_String_o *)StringLiteral_5696/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0LL);
                 if ( !condMessageLabel )
                   goto LABEL_48;
                 UILabel__set_text(condMessageLabel, v41, 0LL);
@@ -420,7 +420,7 @@ void __fastcall ShopEventListViewItemDraw__SetItem(
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5693, 0LL);
+                v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5693/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0LL);
                 if ( !v42 )
                   goto LABEL_48;
                 UILabel__set_text(v42, v43, 0LL);
@@ -435,7 +435,7 @@ LABEL_51:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_5695, 0LL);
+                  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_5695/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/, 0LL);
                   if ( !v36 )
                     goto LABEL_48;
                   UILabel__set_text(v36, v37, 0LL);
@@ -450,7 +450,7 @@ LABEL_52:
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_5694, 0LL);
+                    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_5694/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/, 0LL);
                     if ( !v38 )
                       goto LABEL_48;
                     UILabel__set_text(v38, v39, 0LL);

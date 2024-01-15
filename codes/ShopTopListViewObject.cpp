@@ -133,7 +133,7 @@ void __fastcall ShopTopListViewObject__EventMove(ShopTopListViewObject_o *this, 
   if ( (byte_40F91B1 & 1) == 0 )
   {
     sub_B16FFC(&ListViewObject_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6160, v4);
+    sub_B16FFC(&StringLiteral_6160/*"EventMoveFinish"*/, v4);
     byte_40F91B1 = 1;
   }
   TargetPosition = ShopTopListViewObject__GetTargetPosition(this, this->fields.initMode, v2);
@@ -159,8 +159,8 @@ void __fastcall ShopTopListViewObject__EventMove(ShopTopListViewObject_o *this, 
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v11->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v11->fields.eventReceiver, gameObject, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Int32_array **)StringLiteral_6160;
-  v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6160;
+  v19 = (System_Int32_array **)StringLiteral_6160/*"EventMoveFinish"*/;
+  v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6160/*"EventMoveFinish"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v11->fields.callWhenFinished, v19, v20, v21, v22, v23, v24, v25);
 }
 
@@ -227,7 +227,7 @@ void __fastcall ShopTopListViewObject__EventStart(
   if ( (byte_40F91B0 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_ShopTopListViewObject___, *(_QWORD *)&initMode);
-    sub_B16FFC(&StringLiteral_6158, v7);
+    sub_B16FFC(&StringLiteral_6158/*"EventMove"*/, v7);
     byte_40F91B0 = 1;
   }
   this->fields.isBusy = 1;
@@ -263,7 +263,7 @@ void __fastcall ShopTopListViewObject__EventStart(
     UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v20, 0LL);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_6158,
+      (System_String_o *)StringLiteral_6158/*"EventMove"*/,
       delay,
       0LL);
   }

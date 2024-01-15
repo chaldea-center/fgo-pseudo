@@ -328,7 +328,7 @@ void __fastcall ServantStatusListViewItemDrawMain__SetItem(
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
     sub_B16FFC(&ServantSkillStrengthStatus_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FDEA2 = 1;
   }
   *(_QWORD *)secondMaxAdjustAtk = 0LL;
@@ -454,7 +454,7 @@ void __fastcall ServantStatusListViewItemDrawMain__SetItem(
       reinforceHpIconLabel = this->fields.reinforceHpIconLabel;
       if ( !reinforceHpIconLabel )
         goto LABEL_113;
-      UILabel__set_text((UILabel_o *)reinforceHpIconLabel, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text((UILabel_o *)reinforceHpIconLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       v34 = ServantStatusListViewItem__get_AdjustHp(item, 0LL);
       reinforceHpMaxLabel = (UIIconLabel_o *)this->fields.reinforceHpMaxLabel;
       if ( v34 >= SHIDWORD(maxAjustAtk) )
@@ -486,7 +486,7 @@ void __fastcall ServantStatusListViewItemDrawMain__SetItem(
       costLabel = this->fields.costLabel;
       if ( !costLabel )
         goto LABEL_113;
-      v41 = (System_String_o *)StringLiteral_1;
+      v41 = (System_String_o *)StringLiteral_1/*""*/;
     }
     else
     {
@@ -497,7 +497,7 @@ void __fastcall ServantStatusListViewItemDrawMain__SetItem(
       v43 = this->fields.reinforceHpIconLabel;
       if ( !v43 )
         goto LABEL_113;
-      UILabel__set_text((UILabel_o *)v43, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text((UILabel_o *)v43, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       v44 = (UIIconLabel_o *)this->fields.reinforceHpMaxLabel;
       if ( !v44 )
         goto LABEL_113;
@@ -505,7 +505,7 @@ void __fastcall ServantStatusListViewItemDrawMain__SetItem(
       costLabel = this->fields.costLabel;
       if ( !costLabel )
         goto LABEL_113;
-      v41 = (System_String_o *)StringLiteral_1;
+      v41 = (System_String_o *)StringLiteral_1/*""*/;
     }
     UILabel__set_text(costLabel, v41, 0LL);
     ExpInfo = ServantStatusListViewItem__GetExpInfo(item, (int32_t *)&exp, (int32_t *)&barExp[1], barExp, 0LL);

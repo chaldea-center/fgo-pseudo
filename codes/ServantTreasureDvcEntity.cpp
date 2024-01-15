@@ -91,7 +91,7 @@ bool __fastcall ServantTreasureDvcEntity__getEffectExplanation(
     sub_B16FFC(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__, v18);
     sub_B16FFC(&LocalizationManager_TypeInfo, v19);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
-    sub_B16FFC(&StringLiteral_1, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v21);
     byte_40FCAD9 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -139,10 +139,10 @@ bool __fastcall ServantTreasureDvcEntity__getEffectExplanation(
     v29,
     v30,
     v31);
-  *tdExplanation = (System_String_o *)StringLiteral_1;
+  *tdExplanation = (System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98(
     (BattleServantConfConponent_o *)tdExplanation,
-    (System_Int32_array **)StringLiteral_1,
+    (System_Int32_array **)StringLiteral_1/*""*/,
     v35,
     v36,
     v37,

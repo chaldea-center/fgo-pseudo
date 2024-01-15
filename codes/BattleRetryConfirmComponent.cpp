@@ -258,9 +258,9 @@ void __fastcall BattleRetryConfirmComponent__Init(BattleRetryConfirmComponent_o 
     sub_B16FFC(&Method_System_Collections_Generic_List_UIButton__get_Count__, v9);
     sub_B16FFC(&System_Collections_Generic_List_UIButton__TypeInfo, v10);
     sub_B16FFC(&LocalizationManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_2491, v12);
-    sub_B16FFC(&StringLiteral_2493, v13);
-    sub_B16FFC(&StringLiteral_2492, v14);
+    sub_B16FFC(&StringLiteral_2491/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_CANCEL"*/, v12);
+    sub_B16FFC(&StringLiteral_2493/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_MESSAGE"*/, v13);
+    sub_B16FFC(&StringLiteral_2492/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_DECIDE"*/, v14);
     byte_40F74DD = 1;
   }
   memset(&v37, 0, sizeof(v37));
@@ -350,17 +350,17 @@ LABEL_14:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_2493, 0LL);
+    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_2493/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
     if ( !mainText )
       goto LABEL_29;
     UILabel__set_text(mainText, v32, 0LL);
     cancelLabel = this->fields.cancelLabel;
-    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_2491, 0LL);
+    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_2491/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_CANCEL"*/, 0LL);
     if ( !cancelLabel )
       goto LABEL_29;
     UILabel__set_text(cancelLabel, v34, 0LL);
     confirmLabel = this->fields.confirmLabel;
-    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_2492, 0LL);
+    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_2492/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_DECIDE"*/, 0LL);
     if ( !confirmLabel )
       goto LABEL_29;
     UILabel__set_text(confirmLabel, v36, 0LL);
@@ -750,8 +750,8 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
     sub_B16FFC(&Method_SingletonTemplate_BoostFunctionUtility__get_Instance__, v11);
     sub_B16FFC(&SingletonTemplate_BoostFunctionUtility__TypeInfo, v12);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_11094, v14);
-    sub_B16FFC(&StringLiteral_2490, v15);
+    sub_B16FFC(&StringLiteral_11094/*"RETRIEVABLE_QUEST_CONFIRM_BOOST"*/, v14);
+    sub_B16FFC(&StringLiteral_2490/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_BOOST_SUPPORT_REQUEST"*/, v15);
     byte_40F74E2 = 1;
   }
   entity = 0LL;
@@ -834,7 +834,7 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
     if ( !v23 )
       goto LABEL_66;
     if ( BoostFunctionUtility__IsDisplayBoostSupportRequest(v23, QuestId_k__BackingField, PhaseCnt_k__BackingField, 0LL)
-      && ConstantMaster__getValue((System_String_o *)StringLiteral_11094, 0LL) == 1 )
+      && ConstantMaster__getValue((System_String_o *)StringLiteral_11094/*"RETRIEVABLE_QUEST_CONFIRM_BOOST"*/, 0LL) == 1 )
     {
       boostSupportRequestLabel = (UnityEngine_Object_o *)this->fields.boostSupportRequestLabel;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -850,7 +850,7 @@ void __fastcall BattleRetryConfirmComponent__SetBoostSupportRequestButton(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v26 = LocalizationManager__Get((System_String_o *)StringLiteral_2490, 0LL);
+        v26 = LocalizationManager__Get((System_String_o *)StringLiteral_2490/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_BOOST_SUPPORT_REQUEST"*/, 0LL);
         if ( !v25 )
           goto LABEL_66;
         UILabel__set_text(v25, v26, 0LL);
@@ -1161,7 +1161,7 @@ void __fastcall BattleRetryConfirmComponent__SetCostValueText(
 
   if ( (byte_40F74DC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, costPoint);
+    sub_B16FFC(&StringLiteral_1/*""*/, costPoint);
     byte_40F74DC = 1;
   }
   if ( !items )
@@ -1187,7 +1187,7 @@ LABEL_10:
   }
   if ( (_DWORD)v7 == 1 )
   {
-    v8 = System_String__op_Equality(costPoint->fields.useName, (System_String_o *)StringLiteral_1, 0LL);
+    v8 = System_String__op_Equality(costPoint->fields.useName, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( v8 )
     {
       v12 = *(_OWORD *)&costPoint->fields.useName;
@@ -1216,7 +1216,7 @@ LABEL_10:
   }
   if ( (_DWORD)v7 == 2 )
   {
-    if ( System_String__op_Equality(costPoint->fields.useName, (System_String_o *)StringLiteral_1, 0LL) )
+    if ( System_String__op_Equality(costPoint->fields.useName, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     {
 LABEL_17:
       v20 = *(_OWORD *)&costPoint->fields.useName;
@@ -1230,7 +1230,7 @@ LABEL_17:
     v7 = *(_QWORD *)&items->max_length;
   }
   if ( (_DWORD)v7 == 1
-    && System_String__op_Inequality(costPoint->fields.useName, (System_String_o *)StringLiteral_1, 0LL) )
+    && System_String__op_Inequality(costPoint->fields.useName, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
   {
     goto LABEL_17;
   }
@@ -2282,23 +2282,23 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
     sub_B16FFC(&Method_BattleRetryConfirmComponent___c__DisplayClass37_0__SetValues_b__0__, v26);
     sub_B16FFC(&BattleRetryConfirmComponent___c__DisplayClass37_0_TypeInfo, v27);
     sub_B16FFC(&BattleRetryConfirmComponent___c_TypeInfo, v28);
-    sub_B16FFC(&StringLiteral_26, v29);
-    sub_B16FFC(&StringLiteral_2499, v30);
-    sub_B16FFC(&StringLiteral_3349, v31);
-    sub_B16FFC(&StringLiteral_10909, v32);
-    sub_B16FFC(&StringLiteral_2497, v33);
-    sub_B16FFC(&StringLiteral_2498, v34);
-    sub_B16FFC(&StringLiteral_1729, v35);
-    sub_B16FFC(&StringLiteral_3350, v36);
-    sub_B16FFC(&StringLiteral_2503, v37);
-    sub_B16FFC(&StringLiteral_2502, v38);
-    sub_B16FFC(&StringLiteral_27, v39);
-    sub_B16FFC(&StringLiteral_2500, v40);
-    sub_B16FFC(&StringLiteral_2494, v41);
-    sub_B16FFC(&StringLiteral_1, v42);
-    sub_B16FFC(&StringLiteral_2501, v43);
-    sub_B16FFC(&StringLiteral_2495, v44);
-    sub_B16FFC(&StringLiteral_2496, v45);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v29);
+    sub_B16FFC(&StringLiteral_2499/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE"*/, v30);
+    sub_B16FFC(&StringLiteral_3349/*"CONSUME_TYPE_AP"*/, v31);
+    sub_B16FFC(&StringLiteral_10909/*"QUEST_ITEM_COST_OVER"*/, v32);
+    sub_B16FFC(&StringLiteral_2497/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT_VALUE"*/, v33);
+    sub_B16FFC(&StringLiteral_2498/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM"*/, v34);
+    sub_B16FFC(&StringLiteral_1729/*"AP_OVER_MAX_COLOR"*/, v35);
+    sub_B16FFC(&StringLiteral_3350/*"CONSUME_TYPE_RP"*/, v36);
+    sub_B16FFC(&StringLiteral_2503/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE_MAX"*/, v37);
+    sub_B16FFC(&StringLiteral_2502/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE"*/, v38);
+    sub_B16FFC(&StringLiteral_27/*"\n\n"*/, v39);
+    sub_B16FFC(&StringLiteral_2500/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE"*/, v40);
+    sub_B16FFC(&StringLiteral_2494/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT"*/, v41);
+    sub_B16FFC(&StringLiteral_1/*""*/, v42);
+    sub_B16FFC(&StringLiteral_2501/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM"*/, v43);
+    sub_B16FFC(&StringLiteral_2495/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT_VALUE"*/, v44);
+    sub_B16FFC(&StringLiteral_2496/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT"*/, v45);
     byte_40F74D5 = 1;
   }
   Act = 0;
@@ -2376,7 +2376,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v66 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3349, 0LL);
+  v66 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_3349/*"CONSUME_TYPE_AP"*/, 0LL);
   switch ( QuestEntity__GetConsumeType(v54, 0LL) )
   {
     case 1:
@@ -2385,7 +2385,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v67 = LocalizationManager__Get((System_String_o *)StringLiteral_3349, 0LL);
+      v67 = LocalizationManager__Get((System_String_o *)StringLiteral_3349/*"CONSUME_TYPE_AP"*/, 0LL);
       if ( !*p_userGameEntity )
         goto LABEL_196;
       v66 = (Il2CppObject *)v67;
@@ -2400,7 +2400,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v69 = LocalizationManager__Get((System_String_o *)StringLiteral_3350, 0LL);
+      v69 = LocalizationManager__Get((System_String_o *)StringLiteral_3350/*"CONSUME_TYPE_RP"*/, 0LL);
       if ( !*p_userGameEntity )
         goto LABEL_196;
       v66 = (Il2CppObject *)v69;
@@ -2424,11 +2424,11 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
     case 3:
       v205 = v46;
       v207 = this;
-      v216.fields.useName = (struct System_String_o *)StringLiteral_1;
-      v203 = (Il2CppObject *)StringLiteral_1;
-      sub_B16F98(&v216, StringLiteral_1);
-      v216.fields.useAmount = (struct System_String_o *)StringLiteral_1;
-      sub_B16F98(&v216.fields.useAmount, StringLiteral_1);
+      v216.fields.useName = (struct System_String_o *)StringLiteral_1/*""*/;
+      v203 = (Il2CppObject *)StringLiteral_1/*""*/;
+      sub_B16F98(&v216, StringLiteral_1/*""*/);
+      v216.fields.useAmount = (struct System_String_o *)StringLiteral_1/*""*/;
+      sub_B16F98(&v216.fields.useAmount, StringLiteral_1/*""*/);
       if ( !ItemConsumeEntity )
         goto LABEL_79;
       v72 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -2498,7 +2498,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
           goto LABEL_197;
         if ( nums->m_Items[v76 + 1] > qp )
         {
-          v86 = System_String__Concat_43743732((System_String_o *)StringLiteral_26, v83->fields.name, 0LL);
+          v86 = System_String__Concat_43743732((System_String_o *)StringLiteral_26/*"\n"*/, v83->fields.name, 0LL);
           if ( !v65 )
             goto LABEL_196;
           System_Text_StringBuilder__Append_41914240(v65, v86, 0LL);
@@ -2509,10 +2509,10 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v87 = LocalizationManager__Get((System_String_o *)StringLiteral_2498, 0LL);
+        v87 = LocalizationManager__Get((System_String_o *)StringLiteral_2498/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM"*/, 0LL);
         v215.fields.useName = System_String__Format(v87, (Il2CppObject *)v83->fields.name, 0LL);
         sub_B16F98(&v215, v215.fields.useName);
-        UserId = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_2499, 0LL);
+        UserId = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_2499/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE"*/, 0LL);
         v88 = ItemConsumeEntity->fields.nums;
         if ( !v88 )
           goto LABEL_196;
@@ -2523,7 +2523,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
         v90 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v218);
         v215.fields.useAmount = System_String__Format(v89, v90, 0LL);
         sub_B16F98(&v215.fields.useAmount, v215.fields.useAmount);
-        v91 = LocalizationManager__Get((System_String_o *)StringLiteral_2501, 0LL);
+        v91 = LocalizationManager__Get((System_String_o *)StringLiteral_2501/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM"*/, 0LL);
         v215.fields.possessionName = System_String__Format(v91, (Il2CppObject *)v83->fields.name, 0LL);
         sub_B16F98(&v215.fields.possessionName, v215.fields.possessionName);
         MaxNum = ItemEntity__GetMaxNum(v83, 0LL);
@@ -2534,7 +2534,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v97 = LocalizationManager__Get((System_String_o *)StringLiteral_2502, 0LL);
+          v97 = LocalizationManager__Get((System_String_o *)StringLiteral_2502/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE"*/, 0LL);
           LODWORD(v218.fields.useName) = qp;
           v98 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v218);
           v96 = System_String__Format(v97, v98, 0LL);
@@ -2546,7 +2546,7 @@ bool __fastcall BattleRetryConfirmComponent__SetValues(BattleRetryConfirmCompone
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v93 = LocalizationManager__Get((System_String_o *)StringLiteral_2503, 0LL);
+          v93 = LocalizationManager__Get((System_String_o *)StringLiteral_2503/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE_MAX"*/, 0LL);
           LODWORD(v218.fields.useName) = qp;
           v94 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v218);
           LODWORD(v212.fields.useName) = ItemEntity__GetMaxNum(v83, 0LL);
@@ -2660,7 +2660,7 @@ LABEL_160:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v182 = LocalizationManager__Get((System_String_o *)StringLiteral_1729, 0LL);
+            v182 = LocalizationManager__Get((System_String_o *)StringLiteral_1729/*"AP_OVER_MAX_COLOR"*/, 0LL);
             LODWORD(v218.fields.useName) = Act;
             v183 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v218);
             v181 = System_String__Format(v182, v183, 0LL);
@@ -2671,16 +2671,16 @@ LABEL_160:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v185 = LocalizationManager__Get((System_String_o *)StringLiteral_2496, 0LL);
+          v185 = LocalizationManager__Get((System_String_o *)StringLiteral_2496/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT"*/, 0LL);
           v216.fields.useName = System_String__Format(v185, v66, 0LL);
           sub_B16F98(&v216, v216.fields.useName);
-          v186 = LocalizationManager__Get((System_String_o *)StringLiteral_2497, 0LL);
+          v186 = LocalizationManager__Get((System_String_o *)StringLiteral_2497/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT_VALUE"*/, 0LL);
           v216.fields.useAmount = System_String__Format(v186, v180, 0LL);
           sub_B16F98(&v216.fields.useAmount, v216.fields.useAmount);
-          v187 = LocalizationManager__Get((System_String_o *)StringLiteral_2494, 0LL);
+          v187 = LocalizationManager__Get((System_String_o *)StringLiteral_2494/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT"*/, 0LL);
           v216.fields.possessionName = System_String__Format(v187, v66, 0LL);
           sub_B16F98(&v216.fields.possessionName, v216.fields.possessionName);
-          v188 = LocalizationManager__Get((System_String_o *)StringLiteral_2495, 0LL);
+          v188 = LocalizationManager__Get((System_String_o *)StringLiteral_2495/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_NOW_ACT_POINT_VALUE"*/, 0LL);
           LODWORD(v218.fields.useName) = actMax;
           v189 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v218);
           v216.fields.possessionAmount = System_String__Format_43739268(v188, v184, v189, 0LL);
@@ -2714,13 +2714,13 @@ LABEL_196:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v100 = LocalizationManager__Get((System_String_o *)StringLiteral_10909, 0LL);
+      v100 = LocalizationManager__Get((System_String_o *)StringLiteral_10909/*"QUEST_ITEM_COST_OVER"*/, 0LL);
       v101 = (Il2CppObject *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v65->klass->vtable._3_ToString.method)(
                                v65,
                                v65->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
       v102 = System_String__Format(v100, v101, 0LL);
-      v103 = System_String__Concat_43743732(v102, (System_String_o *)StringLiteral_27, 0LL);
-      v104 = LocalizationManager__Get((System_String_o *)StringLiteral_2500, 0LL);
+      v103 = System_String__Concat_43743732(v102, (System_String_o *)StringLiteral_27/*"\n\n"*/, 0LL);
+      v104 = LocalizationManager__Get((System_String_o *)StringLiteral_2500/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE"*/, 0LL);
       v105 = System_String__Concat_43743732(v103, v104, 0LL);
       v110 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v111 = BattleRetryConfirmComponent___c_TypeInfo;
@@ -2732,7 +2732,7 @@ LABEL_196:
       }
       static_fields = v111->static_fields;
       _9__37_1 = static_fields->__9__37_1;
-      v114 = (System_String_o *)StringLiteral_1;
+      v114 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !_9__37_1 )
       {
         if ( (BYTE3(v111->vtable._0_Equals.methodPtr) & 4) != 0 && !v111->_2.cctor_finished )
@@ -2757,7 +2757,7 @@ LABEL_196:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v117 = LocalizationManager__Get((System_String_o *)StringLiteral_3349, 0LL);
+      v117 = LocalizationManager__Get((System_String_o *)StringLiteral_3349/*"CONSUME_TYPE_AP"*/, 0LL);
       if ( !*p_userGameEntity )
         goto LABEL_196;
       v204 = (Il2CppObject *)v117;
@@ -2767,10 +2767,10 @@ LABEL_196:
       if ( !*p_userGameEntity )
         goto LABEL_196;
       v202 = (*p_userGameEntity)->fields.actMax;
-      v216.fields.useName = (struct System_String_o *)StringLiteral_1;
-      sub_B16F98(&v216, StringLiteral_1);
-      v216.fields.useAmount = (struct System_String_o *)StringLiteral_1;
-      sub_B16F98(&v216.fields.useAmount, StringLiteral_1);
+      v216.fields.useName = (struct System_String_o *)StringLiteral_1/*""*/;
+      sub_B16F98(&v216, StringLiteral_1/*""*/);
+      v216.fields.useAmount = (struct System_String_o *)StringLiteral_1/*""*/;
+      sub_B16F98(&v216.fields.useAmount, StringLiteral_1/*""*/);
       if ( !ItemConsumeEntity )
         goto LABEL_142;
       v118 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -2840,7 +2840,7 @@ LABEL_196:
           goto LABEL_197;
         if ( v128->m_Items[v122 + 1] > v127 )
         {
-          v129 = System_String__Concat_43743732((System_String_o *)StringLiteral_26, v126->fields.name, 0LL);
+          v129 = System_String__Concat_43743732((System_String_o *)StringLiteral_26/*"\n"*/, v126->fields.name, 0LL);
           if ( !v65 )
             goto LABEL_196;
           System_Text_StringBuilder__Append_41914240(v65, v129, 0LL);
@@ -2851,10 +2851,10 @@ LABEL_196:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v130 = LocalizationManager__Get((System_String_o *)StringLiteral_2498, 0LL);
+        v130 = LocalizationManager__Get((System_String_o *)StringLiteral_2498/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM"*/, 0LL);
         v214.fields.useName = System_String__Format(v130, (Il2CppObject *)v126->fields.name, 0LL);
         sub_B16F98(&v214, v214.fields.useName);
-        UserId = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_2499, 0LL);
+        UserId = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_2499/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE"*/, 0LL);
         v131 = ItemConsumeEntity->fields.nums;
         if ( !v131 )
           goto LABEL_196;
@@ -2869,7 +2869,7 @@ LABEL_197:
         v133 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v218);
         v214.fields.useAmount = System_String__Format(v132, v133, 0LL);
         sub_B16F98(&v214.fields.useAmount, v214.fields.useAmount);
-        v134 = LocalizationManager__Get((System_String_o *)StringLiteral_2501, 0LL);
+        v134 = LocalizationManager__Get((System_String_o *)StringLiteral_2501/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM"*/, 0LL);
         v214.fields.possessionName = System_String__Format(v134, (Il2CppObject *)v126->fields.name, 0LL);
         sub_B16F98(&v214.fields.possessionName, v214.fields.possessionName);
         v135 = ItemEntity__GetMaxNum(v126, 0LL);
@@ -2880,7 +2880,7 @@ LABEL_197:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v140 = LocalizationManager__Get((System_String_o *)StringLiteral_2502, 0LL);
+          v140 = LocalizationManager__Get((System_String_o *)StringLiteral_2502/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE"*/, 0LL);
           LODWORD(v218.fields.useName) = v127;
           v141 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v218);
           v139 = System_String__Format(v140, v141, 0LL);
@@ -2892,7 +2892,7 @@ LABEL_197:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v136 = LocalizationManager__Get((System_String_o *)StringLiteral_2503, 0LL);
+          v136 = LocalizationManager__Get((System_String_o *)StringLiteral_2503/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE_MAX"*/, 0LL);
           LODWORD(v218.fields.useName) = v127;
           v137 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v218);
           LODWORD(v212.fields.useName) = ItemEntity__GetMaxNum(v126, 0LL);
@@ -2929,13 +2929,13 @@ LABEL_142:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v143 = LocalizationManager__Get((System_String_o *)StringLiteral_10909, 0LL);
+      v143 = LocalizationManager__Get((System_String_o *)StringLiteral_10909/*"QUEST_ITEM_COST_OVER"*/, 0LL);
       v144 = (Il2CppObject *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v65->klass->vtable._3_ToString.method)(
                                v65,
                                v65->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
       v145 = System_String__Format(v143, v144, 0LL);
-      v146 = System_String__Concat_43743732(v145, (System_String_o *)StringLiteral_27, 0LL);
-      v147 = LocalizationManager__Get((System_String_o *)StringLiteral_2500, 0LL);
+      v146 = System_String__Concat_43743732(v145, (System_String_o *)StringLiteral_27/*"\n\n"*/, 0LL);
+      v147 = LocalizationManager__Get((System_String_o *)StringLiteral_2500/*"BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE"*/, 0LL);
       v148 = System_String__Concat_43743732(v146, v147, 0LL);
       v153 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v154 = BattleRetryConfirmComponent___c_TypeInfo;
@@ -2947,7 +2947,7 @@ LABEL_142:
       }
       v155 = v154->static_fields;
       _9__37_2 = v155->__9__37_2;
-      v157 = (System_String_o *)StringLiteral_1;
+      v157 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !_9__37_2 )
       {
         if ( (BYTE3(v154->vtable._0_Equals.methodPtr) & 4) != 0 && !v154->_2.cctor_finished )

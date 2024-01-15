@@ -15,7 +15,7 @@ void __fastcall LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo
   {
     sub_B16FFC(&SoundManager_TypeInfo, method);
     sub_B16FFC(&WebViewManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FCC46 = 1;
   }
   linkUrl = (int)this->fields.linkUrl;
@@ -43,7 +43,7 @@ void __fastcall LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo
     {
       j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
     }
-    WebViewManager__OpenView((System_String_o *)StringLiteral_1, klass, 0LL, 0LL);
+    WebViewManager__OpenView((System_String_o *)StringLiteral_1/*""*/, klass, 0LL, 0LL);
   }
 }
 

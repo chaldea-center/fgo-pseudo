@@ -19,16 +19,16 @@ void __fastcall BattleScenarioRequest__beginRequest(
   if ( (byte_40F74F8 & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, *(_QWORD *)&questId);
-    sub_B16FFC(&StringLiteral_21765, v9);
-    sub_B16FFC(&StringLiteral_21522, v10);
-    sub_B16FFC(&StringLiteral_21520, v11);
+    sub_B16FFC(&StringLiteral_21765/*"routeSelect"*/, v9);
+    sub_B16FFC(&StringLiteral_21522/*"questPhase"*/, v10);
+    sub_B16FFC(&StringLiteral_21520/*"questId"*/, v11);
     byte_40F74F8 = 1;
   }
   if ( !routeSelect )
     routeSelect = (System_Int32_array *)sub_B17014(int___TypeInfo, 0LL, *(_QWORD *)&questPhase);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21520, questId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21522, questPhase, 0LL);
-  RequestBase__addField_30957272((RequestBase_o *)this, (System_String_o *)StringLiteral_21765, &routeSelect->obj, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21520/*"questId"*/, questId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21522/*"questPhase"*/, questPhase, 0LL);
+  RequestBase__addField_30957272((RequestBase_o *)this, (System_String_o *)StringLiteral_21765/*"routeSelect"*/, &routeSelect->obj, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -41,7 +41,7 @@ System_String_o *__fastcall BattleScenarioRequest__getURL(BattleScenarioRequest_
   if ( (byte_40F74F7 & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_16572, v2);
+    sub_B16FFC(&StringLiteral_16572/*"battle/scenario"*/, v2);
     byte_40F74F7 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -50,7 +50,7 @@ System_String_o *__fastcall BattleScenarioRequest__getURL(BattleScenarioRequest_
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_16572, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_16572/*"battle/scenario"*/, 0LL);
 }
 
 

@@ -15,12 +15,12 @@ void __fastcall WarBoardPartyOrganizationListViewItemDraw___cctor(const MethodIn
   if ( (byte_40F85BA & 1) == 0 )
   {
     sub_B16FFC(&WarBoardPartyOrganizationListViewItemDraw_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_17380, v8);
+    sub_B16FFC(&StringLiteral_17380/*"class2_{0}"*/, v8);
     byte_40F85BA = 1;
   }
   static_fields = (BattleServantConfConponent_o *)WarBoardPartyOrganizationListViewItemDraw_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_17380;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17380;
+  v10 = (System_Int32_array **)StringLiteral_17380/*"class2_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17380/*"class2_{0}"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   v11 = WarBoardPartyOrganizationListViewItemDraw_TypeInfo;
   WarBoardPartyOrganizationListViewItemDraw_TypeInfo->static_fields->MESSAGE_X_SIZE_MAX = 1000;
@@ -749,13 +749,13 @@ void __fastcall WarBoardPartyOrganizationListViewItemDraw__SetItem(
     sub_B16FFC(&Rarity_TypeInfo, v26);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v27);
     sub_B16FFC(&WarBoardPartyOrganizationListViewItemDraw_TypeInfo, v28);
-    sub_B16FFC(&StringLiteral_19303, v29);
-    sub_B16FFC(&StringLiteral_690, v30);
-    sub_B16FFC(&StringLiteral_17640, v31);
-    sub_B16FFC(&StringLiteral_19267, v32);
-    sub_B16FFC(&StringLiteral_10359, v33);
-    sub_B16FFC(&StringLiteral_340, v34);
-    sub_B16FFC(&StringLiteral_1, v35);
+    sub_B16FFC(&StringLiteral_19303/*"icon_support_02"*/, v29);
+    sub_B16FFC(&StringLiteral_690/*"+"*/, v30);
+    sub_B16FFC(&StringLiteral_17640/*"correction_icon_"*/, v31);
+    sub_B16FFC(&StringLiteral_19267/*"icon_eventjoin_02"*/, v32);
+    sub_B16FFC(&StringLiteral_10359/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC"*/, v33);
+    sub_B16FFC(&StringLiteral_340/*"#,0"*/, v34);
+    sub_B16FFC(&StringLiteral_1/*""*/, v35);
     byte_40F85B7 = 1;
   }
   skillInfoList = 0LL;
@@ -934,13 +934,13 @@ void __fastcall WarBoardPartyOrganizationListViewItemDraw__SetItem(
     else
     {
       followerInfo = item->fields.followerInfo;
-      v81 = (System_String_o *)StringLiteral_1;
+      v81 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !followerInfo )
       {
         tdStrengthStatus = 0LL;
         lv = 0;
         frameType = 9;
-        v78 = (System_String_o *)StringLiteral_1;
+        v78 = (System_String_o *)StringLiteral_1/*""*/;
         goto LABEL_59;
       }
       imageSvtId = followerInfo->fields.imageSvtId;
@@ -1152,7 +1152,7 @@ LABEL_59:
             UIWidget__set_color(v136, *(UnityEngine_Color_o *)&v132, 0LL);
             v137 = this->fields.attackLabel;
             HIDWORD(v293) = PartyOrganizationListViewItem__get_MargeAtk(item, 0LL);
-            v138 = System_Int32__ToString_38275808((int32_t)&v293 + 4, (System_String_o *)StringLiteral_340, 0LL);
+            v138 = System_Int32__ToString_38275808((int32_t)&v293 + 4, (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
             if ( !v137 )
               goto LABEL_455;
             UILabel__set_text(v137, v138, 0LL);
@@ -1175,7 +1175,7 @@ LABEL_59:
             UIWidget__set_color(v144, *(UnityEngine_Color_o *)&v140, 0LL);
             v145 = this->fields.hpLabel;
             HIDWORD(v293) = PartyOrganizationListViewItem__get_MargeHp(item, 0LL);
-            v146 = System_Int32__ToString_38275808((int32_t)&v293 + 4, (System_String_o *)StringLiteral_340, 0LL);
+            v146 = System_Int32__ToString_38275808((int32_t)&v293 + 4, (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
             if ( !v145 )
               goto LABEL_455;
             UILabel__set_text(v145, v146, 0LL);
@@ -1206,7 +1206,7 @@ LABEL_59:
               v152 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v292);
               v291 = v150;
               v153 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v291);
-              v154 = System_String__Concat_43823436(v152, (Il2CppObject *)StringLiteral_690, v153, 0LL);
+              v154 = System_String__Concat_43823436(v152, (Il2CppObject *)StringLiteral_690/*"+"*/, v153, 0LL);
               if ( !v149 )
                 goto LABEL_455;
               UILabel__set_text(v149, v154, 0LL);
@@ -1400,7 +1400,7 @@ LABEL_328:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v235 = LocalizationManager__Get((System_String_o *)StringLiteral_10359, 0LL);
+                v235 = LocalizationManager__Get((System_String_o *)StringLiteral_10359/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC"*/, 0LL);
                 if ( !v234 )
                   goto LABEL_455;
                 UILabel__set_text(v234, v235, 0LL);
@@ -1567,7 +1567,7 @@ LABEL_383:
                 UnityEngine_Transform__set_localPosition(v266, v304, 0LL);
                 v267 = this->fields.correctionIconSprite;
                 v268 = System_Int32__ToString((int32_t)&v293, 0LL);
-                v269 = System_String__Concat_43743732((System_String_o *)StringLiteral_17640, v268, 0LL);
+                v269 = System_String__Concat_43743732((System_String_o *)StringLiteral_17640/*"correction_icon_"*/, v268, 0LL);
                 if ( !v267 )
                   goto LABEL_455;
                 UISprite__set_spriteName(v267, v269, 0LL);
@@ -1704,7 +1704,7 @@ LABEL_448:
             v223 = this->fields.supportSprite;
             if ( !v223 )
               goto LABEL_455;
-            v224 = &StringLiteral_19267;
+            v224 = &StringLiteral_19267/*"icon_eventjoin_02"*/;
           }
           else
           {
@@ -1716,7 +1716,7 @@ LABEL_448:
               v225 = 0LL;
               goto LABEL_327;
             }
-            v224 = &StringLiteral_19303;
+            v224 = &StringLiteral_19303/*"icon_support_02"*/;
           }
           v225 = (System_String_o *)*v224;
 LABEL_327:
@@ -1764,7 +1764,7 @@ LABEL_327:
             v182 = this->fields.levelLabel;
             if ( !v182 )
               goto LABEL_455;
-            UILabel__set_text(v182, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v182, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           }
           v183 = (UnityEngine_Object_o *)this->fields.raritySprite;
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1790,7 +1790,7 @@ LABEL_327:
             v186 = this->fields.attackLabel;
             if ( !v186 )
               goto LABEL_455;
-            UILabel__set_text(v186, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v186, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           }
           v187 = (UnityEngine_Object_o *)this->fields.hpLabel;
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1803,7 +1803,7 @@ LABEL_327:
             v188 = this->fields.hpLabel;
             if ( !v188 )
               goto LABEL_455;
-            UILabel__set_text(v188, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v188, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           }
           v189 = (UnityEngine_Object_o *)this->fields.costLabel;
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1816,7 +1816,7 @@ LABEL_327:
             v190 = this->fields.costLabel;
             if ( !v190 )
               goto LABEL_455;
-            UILabel__set_text(v190, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v190, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           }
           v191 = (UnityEngine_Object_o *)this->fields.skillListTreasureDevice;
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1957,7 +1957,7 @@ LABEL_327:
             v216 = this->fields.fixNpcMessageText;
             if ( !v216 )
               goto LABEL_455;
-            UILabel__set_text(v216, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v216, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           }
           isEventUpVal = 0;
           goto LABEL_413;

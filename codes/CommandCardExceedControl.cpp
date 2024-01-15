@@ -22,13 +22,13 @@ System_String_o *__fastcall CommandCardExceedControl__GetCombineButtonLabelText(
 
   if ( (byte_40FA587 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17083, *(_QWORD *)&stateType);
-    sub_B16FFC(&StringLiteral_17081, v6);
+    sub_B16FFC(&StringLiteral_17083/*"buttontxt_synthesis"*/, *(_QWORD *)&stateType);
+    sub_B16FFC(&StringLiteral_17081/*"buttontxt_notsynthesis"*/, v6);
     byte_40FA587 = 1;
   }
-  v7 = &StringLiteral_17083;
+  v7 = &StringLiteral_17083/*"buttontxt_synthesis"*/;
   if ( stateType == 2 && isExceedMax )
-    v7 = &StringLiteral_17081;
+    v7 = &StringLiteral_17081/*"buttontxt_notsynthesis"*/;
   return (System_String_o *)*v7;
 }
 
@@ -121,12 +121,12 @@ System_String_o *__fastcall CommandCardExceedControl__GetDetailLabelText(
   if ( (byte_40FA585 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&stateType);
-    sub_B16FFC(&StringLiteral_3207, v10);
-    sub_B16FFC(&StringLiteral_3208, v11);
-    sub_B16FFC(&StringLiteral_12162, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
-    sub_B16FFC(&StringLiteral_3214, v14);
-    sub_B16FFC(&StringLiteral_3213, v15);
+    sub_B16FFC(&StringLiteral_3207/*"COMMAND_CARD_EXCEED_CONFIRM_HEADER_MSG"*/, v10);
+    sub_B16FFC(&StringLiteral_3208/*"COMMAND_CARD_EXCEED_SELECT_BASE_HEADER_MSG"*/, v11);
+    sub_B16FFC(&StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
+    sub_B16FFC(&StringLiteral_3214/*"COMMAND_CARD_EXCEED_WARNING_MAX_HEADER_MSG"*/, v14);
+    sub_B16FFC(&StringLiteral_3213/*"COMMAND_CARD_EXCEED_WARNING_ITEM_HEADER_MSG"*/, v15);
     byte_40FA585 = 1;
   }
   switch ( stateType )
@@ -141,7 +141,7 @@ System_String_o *__fastcall CommandCardExceedControl__GetDetailLabelText(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v16 = &StringLiteral_3214;
+        v16 = &StringLiteral_3214/*"COMMAND_CARD_EXCEED_WARNING_MAX_HEADER_MSG"*/;
       }
       else if ( isItemEnough )
       {
@@ -152,7 +152,7 @@ System_String_o *__fastcall CommandCardExceedControl__GetDetailLabelText(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v16 = &StringLiteral_3207;
+          v16 = &StringLiteral_3207/*"COMMAND_CARD_EXCEED_CONFIRM_HEADER_MSG"*/;
         }
         else
         {
@@ -161,7 +161,7 @@ System_String_o *__fastcall CommandCardExceedControl__GetDetailLabelText(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v16 = &StringLiteral_12162;
+          v16 = &StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/;
         }
       }
       else
@@ -171,7 +171,7 @@ System_String_o *__fastcall CommandCardExceedControl__GetDetailLabelText(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v16 = &StringLiteral_3213;
+        v16 = &StringLiteral_3213/*"COMMAND_CARD_EXCEED_WARNING_ITEM_HEADER_MSG"*/;
       }
       return LocalizationManager__Get((System_String_o *)*v16, 0LL);
     case 0:
@@ -181,10 +181,10 @@ LABEL_6:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v16 = &StringLiteral_3208;
+      v16 = &StringLiteral_3208/*"COMMAND_CARD_EXCEED_SELECT_BASE_HEADER_MSG"*/;
       return LocalizationManager__Get((System_String_o *)*v16, 0LL);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -529,9 +529,9 @@ System_String_o *__fastcall CommandCardExceedControl__GetTargetSelectInfoLabelTe
   if ( (byte_40FA586 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&stateType);
-    sub_B16FFC(&StringLiteral_3209, v4);
-    sub_B16FFC(&StringLiteral_3211, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_3209/*"COMMAND_CARD_EXCEED_SELECT_BASE_MSG"*/, v4);
+    sub_B16FFC(&StringLiteral_3211/*"COMMAND_CARD_EXCEED_SELECT_COMMAND_CARD_MSG"*/, v5);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FA586 = 1;
   }
   if ( stateType == 4 )
@@ -541,7 +541,7 @@ System_String_o *__fastcall CommandCardExceedControl__GetTargetSelectInfoLabelTe
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v7 = &StringLiteral_3211;
+    v7 = &StringLiteral_3211/*"COMMAND_CARD_EXCEED_SELECT_COMMAND_CARD_MSG"*/;
     return LocalizationManager__Get((System_String_o *)*v7, 0LL);
   }
   if ( !stateType )
@@ -551,10 +551,10 @@ System_String_o *__fastcall CommandCardExceedControl__GetTargetSelectInfoLabelTe
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v7 = &StringLiteral_3209;
+    v7 = &StringLiteral_3209/*"COMMAND_CARD_EXCEED_SELECT_BASE_MSG"*/;
     return LocalizationManager__Get((System_String_o *)*v7, 0LL);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -807,19 +807,19 @@ void __fastcall CommandCardExceedControl__InitLabel(CommandCardExceedControl_o *
 
   if ( (byte_40FA581 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FA581 = 1;
   }
   detailLabel = this->fields.detailLabel;
   if ( !detailLabel
-    || (UILabel__set_text(detailLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(detailLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (userQpLabel = this->fields.userQpLabel) == 0LL)
-    || (UILabel__set_text(userQpLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(userQpLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (requiredQpLabel = this->fields.requiredQpLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(requiredQpLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(requiredQpLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
 
 
@@ -1578,7 +1578,7 @@ void __fastcall CommandCardExceedControl__SetInfoMessageLabels(
     sub_B16FFC(&Method_DataManager_GetMasterData_CommandCardRankParamMaster___, *(_QWORD *)&stateType);
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FA584 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -1657,7 +1657,7 @@ LABEL_16:
   requiredQpLabel = this->fields.requiredQpLabel;
   if ( useQp <= 0 )
   {
-    v38 = (System_String_o *)StringLiteral_1;
+    v38 = (System_String_o *)StringLiteral_1/*""*/;
     if ( !requiredQpLabel )
       goto LABEL_34;
   }

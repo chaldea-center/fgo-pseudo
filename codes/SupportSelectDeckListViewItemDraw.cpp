@@ -134,10 +134,10 @@ void __fastcall SupportSelectDeckListViewItemDraw__SetSupportData(
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v14);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
     sub_B16FFC(&SupportSelectListViewObject_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_12458, v17);
-    sub_B16FFC(&StringLiteral_12471, v18);
-    sub_B16FFC(&StringLiteral_12490, v19);
-    sub_B16FFC(&StringLiteral_12459, v20);
+    sub_B16FFC(&StringLiteral_12458/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT"*/, v17);
+    sub_B16FFC(&StringLiteral_12471/*"SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM"*/, v18);
+    sub_B16FFC(&StringLiteral_12490/*"SUPPORT_SELECT_NAME"*/, v19);
+    sub_B16FFC(&StringLiteral_12459/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND"*/, v20);
     byte_40FD50E = 1;
   }
   entity = 0LL;
@@ -151,14 +151,14 @@ void __fastcall SupportSelectDeckListViewItemDraw__SetSupportData(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12471, 0LL);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12471/*"SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM"*/, 0LL);
     v25 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(data->fields._deckId_k__BackingField, 0LL);
     v26 = System_String__Format(v24, v25, 0LL);
     if ( !supportNumberLabel )
       goto LABEL_93;
     UILabel__set_text(supportNumberLabel, v26, 0LL);
     deckNameLabel = this->fields.deckNameLabel;
-    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12490, 0LL);
+    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12490/*"SUPPORT_SELECT_NAME"*/, 0LL);
     v29 = System_String__Format(v28, (Il2CppObject *)data->fields._deckName_k__BackingField, 0LL);
     if ( !deckNameLabel )
       goto LABEL_93;
@@ -387,7 +387,7 @@ LABEL_94:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v74 = &StringLiteral_12459;
+      v74 = &StringLiteral_12459/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND"*/;
     }
     else
     {
@@ -399,7 +399,7 @@ LABEL_94:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v74 = &StringLiteral_12458;
+      v74 = &StringLiteral_12458/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT"*/;
     }
     v75 = LocalizationManager__Get((System_String_o *)*v74, 0LL);
     if ( !maskMessageLabel )

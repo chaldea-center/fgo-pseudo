@@ -326,7 +326,7 @@ bool __fastcall QuestScriptReleaseMaster__IsMaterialCondTypeQuestClearOnly(
     sub_B16FFC(&System_Collections_Generic_List_QuestScriptReleaseEntity__TypeInfo, v12);
     sub_B16FFC(&QuestScriptReleaseEntity_TypeInfo, v13);
     sub_B16FFC(&string___TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_1223, v15);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v15);
     byte_40F8258 = 1;
   }
   *checkCnt = 0;
@@ -371,13 +371,13 @@ LABEL_60:
       goto LABEL_58;
     v25->m_Items[0] = (System_String_o *)v34;
     sub_B16F98((BattleServantConfConponent_o *)v25->m_Items, v34, v28, v29, v30, v31, v32, v33);
-    v26 = (System_String_o *)StringLiteral_1223;
-    if ( StringLiteral_1223 )
+    v26 = (System_String_o *)StringLiteral_1223/*":"*/;
+    if ( StringLiteral_1223/*":"*/ )
     {
-      v26 = (System_String_o *)sub_B170BC(StringLiteral_1223, v25->obj.klass->_1.element_class);
+      v26 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v25->obj.klass->_1.element_class);
       if ( !v26 )
         goto LABEL_60;
-      v27 = (System_Int32_array **)StringLiteral_1223;
+      v27 = (System_Int32_array **)StringLiteral_1223/*":"*/;
     }
     else
     {
@@ -399,13 +399,13 @@ LABEL_60:
       goto LABEL_58;
     v25->m_Items[2] = (System_String_o *)v45;
     sub_B16F98((BattleServantConfConponent_o *)&v25->m_Items[2], v45, v28, v40, v41, v42, v43, v44);
-    v26 = (System_String_o *)StringLiteral_1223;
-    if ( StringLiteral_1223 )
+    v26 = (System_String_o *)StringLiteral_1223/*":"*/;
+    if ( StringLiteral_1223/*":"*/ )
     {
-      v26 = (System_String_o *)sub_B170BC(StringLiteral_1223, v25->obj.klass->_1.element_class);
+      v26 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v25->obj.klass->_1.element_class);
       if ( !v26 )
         goto LABEL_60;
-      v27 = (System_Int32_array **)StringLiteral_1223;
+      v27 = (System_Int32_array **)StringLiteral_1223/*":"*/;
     }
     else
     {
@@ -655,7 +655,7 @@ bool __fastcall QuestScriptReleaseMaster__IsOpenPhase(
     sub_B16FFC(
       &Field__PrivateImplementationDetails__AC238F709F8D4D4B646DA2EAEAC6061E1259849E571FA48771C830AD44CB9BD5,
       v20);
-    sub_B16FFC(&StringLiteral_1223, v21);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v21);
     byte_40F8259 = 1;
   }
   v84 = 0;
@@ -692,13 +692,13 @@ LABEL_73:
         goto LABEL_71;
       v26->m_Items[0] = (System_String_o *)v35;
       sub_B16F98((BattleServantConfConponent_o *)v26->m_Items, v35, v29, v30, v31, v32, v33, v34);
-      v27 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v27 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v27 = (System_String_o *)sub_B170BC(StringLiteral_1223, v26->obj.klass->_1.element_class);
+        v27 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v26->obj.klass->_1.element_class);
         if ( !v27 )
           goto LABEL_73;
-        v28 = (System_Int32_array **)StringLiteral_1223;
+        v28 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -720,13 +720,13 @@ LABEL_73:
         goto LABEL_71;
       v26->m_Items[2] = (System_String_o *)v48;
       sub_B16F98((BattleServantConfConponent_o *)&v26->m_Items[2], v48, v29, v43, v44, v45, v46, v47);
-      v27 = (System_String_o *)StringLiteral_1223;
-      if ( StringLiteral_1223 )
+      v27 = (System_String_o *)StringLiteral_1223/*":"*/;
+      if ( StringLiteral_1223/*":"*/ )
       {
-        v27 = (System_String_o *)sub_B170BC(StringLiteral_1223, v26->obj.klass->_1.element_class);
+        v27 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v26->obj.klass->_1.element_class);
         if ( !v27 )
           goto LABEL_73;
-        v28 = (System_Int32_array **)StringLiteral_1223;
+        v28 = (System_Int32_array **)StringLiteral_1223/*":"*/;
       }
       else
       {
@@ -976,7 +976,7 @@ bool __fastcall QuestScriptReleaseMaster__IsOpenPhaseForSuperBoss(
     sub_B16FFC(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, isOpen);
     sub_B16FFC(&QuestScriptReleaseEntity_TypeInfo, v8);
     sub_B16FFC(&string___TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1223, v10);
+    sub_B16FFC(&StringLiteral_1223/*":"*/, v10);
     byte_40F825A = 1;
   }
   v65 = 1;
@@ -1004,13 +1004,13 @@ LABEL_50:
       goto LABEL_49;
     v11->m_Items[0] = (System_String_o *)v21;
     sub_B16F98((BattleServantConfConponent_o *)v11->m_Items, v21, v14, v15, v16, v17, v18, v19);
-    v12 = (System_String_o *)StringLiteral_1223;
-    if ( StringLiteral_1223 )
+    v12 = (System_String_o *)StringLiteral_1223/*":"*/;
+    if ( StringLiteral_1223/*":"*/ )
     {
-      v12 = (System_String_o *)sub_B170BC(StringLiteral_1223, v11->obj.klass->_1.element_class);
+      v12 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v11->obj.klass->_1.element_class);
       if ( !v12 )
         goto LABEL_50;
-      v13 = (System_Int32_array **)StringLiteral_1223;
+      v13 = (System_Int32_array **)StringLiteral_1223/*":"*/;
     }
     else
     {
@@ -1032,13 +1032,13 @@ LABEL_50:
       goto LABEL_49;
     v11->m_Items[2] = (System_String_o *)v33;
     sub_B16F98((BattleServantConfConponent_o *)&v11->m_Items[2], v33, v14, v28, v29, v30, v31, v32);
-    v12 = (System_String_o *)StringLiteral_1223;
-    if ( StringLiteral_1223 )
+    v12 = (System_String_o *)StringLiteral_1223/*":"*/;
+    if ( StringLiteral_1223/*":"*/ )
     {
-      v12 = (System_String_o *)sub_B170BC(StringLiteral_1223, v11->obj.klass->_1.element_class);
+      v12 = (System_String_o *)sub_B170BC(StringLiteral_1223/*":"*/, v11->obj.klass->_1.element_class);
       if ( !v12 )
         goto LABEL_50;
-      v13 = (System_Int32_array **)StringLiteral_1223;
+      v13 = (System_Int32_array **)StringLiteral_1223/*":"*/;
     }
     else
     {

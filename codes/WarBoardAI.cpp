@@ -373,7 +373,7 @@ System_String_o *__fastcall WarBoardAI__ConvertForceGroupIndexToString(
   if ( (byte_40F8BBC & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&forceId);
-    sub_B16FFC(&StringLiteral_23494, v8);
+    sub_B16FFC(&StringLiteral_23494/*"{0},{1},{2}"*/, v8);
     byte_40F8BBC = 1;
   }
   v15 = forceId;
@@ -382,7 +382,7 @@ System_String_o *__fastcall WarBoardAI__ConvertForceGroupIndexToString(
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
   v13 = index;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
-  return System_String__Format_43744796((System_String_o *)StringLiteral_23494, v9, v10, v11, 0LL);
+  return System_String__Format_43744796((System_String_o *)StringLiteral_23494/*"{0},{1},{2}"*/, v9, v10, v11, 0LL);
 }
 
 

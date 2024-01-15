@@ -220,9 +220,9 @@ void __fastcall SupportServantEquipListViewItemDraw__SetItem(
     sub_B16FFC(&Method_System_Collections_Generic_List_UIWidget__get_Count__, v9);
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_11583, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
-    sub_B16FFC(&StringLiteral_5513, v14);
+    sub_B16FFC(&StringLiteral_11583/*"SELECT_BONUS_SKILL_INVALID"*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
+    sub_B16FFC(&StringLiteral_5513/*"EQUIP_GRAPH_USE"*/, v14);
     byte_40FD9BF = 1;
   }
   if ( !item || !mode )
@@ -298,7 +298,7 @@ void __fastcall SupportServantEquipListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11583, 0LL);
+    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11583/*"SELECT_BONUS_SKILL_INVALID"*/, 0LL);
     if ( !v27 )
       goto LABEL_74;
     UILabel__set_text(v27, v28, 0LL);
@@ -314,7 +314,7 @@ void __fastcall SupportServantEquipListViewItemDraw__SetItem(
   {
     if ( !v27 )
       goto LABEL_74;
-    UILabel__set_text(this->fields.skillInvalidLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(this->fields.skillInvalidLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   if ( item->fields.isBase )
   {
@@ -329,7 +329,7 @@ LABEL_35:
     v32 = this->fields.warningLabel;
     if ( !v32 )
       goto LABEL_74;
-    UILabel__set_text(v32, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v32, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     goto LABEL_46;
   }
   v33 = (UnityEngine_Component_o *)this->fields.maskSprite;
@@ -348,7 +348,7 @@ LABEL_35:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_5513, 0LL);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_5513/*"EQUIP_GRAPH_USE"*/, 0LL);
   if ( !v35 )
     goto LABEL_74;
   UILabel__set_text(v35, v36, 0LL);

@@ -272,13 +272,13 @@ void __fastcall EventInfoTipsArchiveButton___Initialization_b__6_0(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_EventInfoTipsArchiveDialog___, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_14384, v5);
-    sub_B16FFC(&StringLiteral_16384, v6);
+    sub_B16FFC(&StringLiteral_14384/*"TipsArchiveDialog"*/, v5);
+    sub_B16FFC(&StringLiteral_16384/*"archive_button"*/, v6);
     byte_40FA18E = 1;
   }
   v7 = EventInfoUIBase__InstantiateFromEventUIAssetData(
          (EventInfoUIBase_o *)this,
-         (System_String_o *)StringLiteral_14384,
+         (System_String_o *)StringLiteral_14384/*"TipsArchiveDialog"*/,
          0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -336,7 +336,7 @@ void __fastcall EventInfoTipsArchiveButton___Initialization_b__6_0(
           EventInfoUIBase__SetSpriteByLocalAtlas(
             (EventInfoUIBase_o *)this,
             this->fields.buttonSprite,
-            (System_String_o *)StringLiteral_16384,
+            (System_String_o *)StringLiteral_16384/*"archive_button"*/,
             0LL),
           (dialog = this->fields.dialog) == 0LL)
       || (AllNewDispCount = EventInfoTipsArchiveDialog__GetAllNewDispCount(dialog, v22),

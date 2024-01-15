@@ -87,12 +87,12 @@ void __fastcall TopMyRoomRequest__beginRequest(
   if ( (byte_40FB7FD & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, voicePlayedList);
-    sub_B16FFC(&StringLiteral_745, v5);
-    sub_B16FFC(&StringLiteral_698, v6);
-    sub_B16FFC(&StringLiteral_23087, v7);
-    sub_B16FFC(&StringLiteral_15571, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
-    this = (TopMyRoomRequest_o *)sub_B16FFC(&StringLiteral_15807, v10);
+    sub_B16FFC(&StringLiteral_745/*",["*/, v5);
+    sub_B16FFC(&StringLiteral_698/*","*/, v6);
+    sub_B16FFC(&StringLiteral_23087/*"voicePlayedList"*/, v7);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
+    this = (TopMyRoomRequest_o *)sub_B16FFC(&StringLiteral_15807/*"]"*/, v10);
     byte_40FB7FD = 1;
   }
   if ( !v3 )
@@ -100,7 +100,7 @@ LABEL_68:
     sub_B170D4();
   v74 = (RequestBase_o *)v4;
   v11 = *(_QWORD *)&v3->max_length;
-  v12 = (System_Int32_array **)StringLiteral_1;
+  v12 = (System_Int32_array **)StringLiteral_1/*""*/;
   if ( (int)v11 >= 1 )
   {
     v13 = 0LL;
@@ -115,13 +115,13 @@ LABEL_68:
           if ( !v16 )
             goto LABEL_68;
           v22 = (TopMyRoomRequest_o *)v16;
-          this = (TopMyRoomRequest_o *)StringLiteral_15571;
-          if ( StringLiteral_15571 )
+          this = (TopMyRoomRequest_o *)StringLiteral_15571/*"["*/;
+          if ( StringLiteral_15571/*"["*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_15571, v22->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_15571/*"["*/, v22->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            voicePlayedList = (System_Int32_array_array *)StringLiteral_15571;
+            voicePlayedList = (System_Int32_array_array *)StringLiteral_15571/*"["*/;
           }
           else
           {
@@ -161,13 +161,13 @@ LABEL_68:
             v35,
             v36,
             v37);
-          this = (TopMyRoomRequest_o *)StringLiteral_698;
-          if ( StringLiteral_698 )
+          this = (TopMyRoomRequest_o *)StringLiteral_698/*","*/;
+          if ( StringLiteral_698/*","*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_698, v22->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_698/*","*/, v22->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            voicePlayedList = (System_Int32_array_array *)StringLiteral_698;
+            voicePlayedList = (System_Int32_array_array *)StringLiteral_698/*","*/;
           }
           else
           {
@@ -207,13 +207,13 @@ LABEL_68:
             v57,
             v58,
             v59);
-          this = (TopMyRoomRequest_o *)StringLiteral_15807;
-          if ( StringLiteral_15807 )
+          this = (TopMyRoomRequest_o *)StringLiteral_15807/*"]"*/;
+          if ( StringLiteral_15807/*"]"*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_15807, v22->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_15807/*"]"*/, v22->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            voicePlayedList = (System_Int32_array_array *)StringLiteral_15807;
+            voicePlayedList = (System_Int32_array_array *)StringLiteral_15807/*"]"*/;
           }
           else
           {
@@ -252,13 +252,13 @@ LABEL_67:
             v25,
             v26,
             v27);
-          this = (TopMyRoomRequest_o *)StringLiteral_745;
-          if ( StringLiteral_745 )
+          this = (TopMyRoomRequest_o *)StringLiteral_745/*",["*/;
+          if ( StringLiteral_745/*",["*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_745, v22->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_745/*",["*/, v22->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            voicePlayedList = (System_Int32_array_array *)StringLiteral_745;
+            voicePlayedList = (System_Int32_array_array *)StringLiteral_745/*",["*/;
           }
           else
           {
@@ -298,13 +298,13 @@ LABEL_67:
             v46,
             v47,
             v48);
-          this = (TopMyRoomRequest_o *)StringLiteral_698;
-          if ( StringLiteral_698 )
+          this = (TopMyRoomRequest_o *)StringLiteral_698/*","*/;
+          if ( StringLiteral_698/*","*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_698, v22->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_698/*","*/, v22->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            voicePlayedList = (System_Int32_array_array *)StringLiteral_698;
+            voicePlayedList = (System_Int32_array_array *)StringLiteral_698/*","*/;
           }
           else
           {
@@ -344,13 +344,13 @@ LABEL_67:
             v68,
             v69,
             v70);
-          this = (TopMyRoomRequest_o *)StringLiteral_15807;
-          if ( StringLiteral_15807 )
+          this = (TopMyRoomRequest_o *)StringLiteral_15807/*"]"*/;
+          if ( StringLiteral_15807/*"]"*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_15807, v22->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B170BC(StringLiteral_15807/*"]"*/, v22->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            voicePlayedList = (System_Int32_array_array *)StringLiteral_15807;
+            voicePlayedList = (System_Int32_array_array *)StringLiteral_15807/*"]"*/;
           }
           else
           {
@@ -382,11 +382,11 @@ LABEL_67:
   }
 LABEL_65:
   v73 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_15571,
+          (System_String_o *)StringLiteral_15571/*"["*/,
           (System_String_o *)v12,
-          (System_String_o *)StringLiteral_15807,
+          (System_String_o *)StringLiteral_15807/*"]"*/,
           0LL);
-  RequestBase__addField_30957164(v74, (System_String_o *)StringLiteral_23087, v73, 0LL);
+  RequestBase__addField_30957164(v74, (System_String_o *)StringLiteral_23087/*"voicePlayedList"*/, v73, 0LL);
   RequestBase__beginRequest(v74, 0LL);
 }
 
@@ -399,7 +399,7 @@ System_String_o *__fastcall TopMyRoomRequest__getURL(TopMyRoomRequest_o *this, c
   if ( (byte_40FB7FC & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_17161, v2);
+    sub_B16FFC(&StringLiteral_17161/*"card/voice"*/, v2);
     byte_40FB7FC = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -408,7 +408,7 @@ System_String_o *__fastcall TopMyRoomRequest__getURL(TopMyRoomRequest_o *this, c
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17161, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_17161/*"card/voice"*/, 0LL);
 }
 
 
@@ -425,8 +425,8 @@ void __fastcall TopMyRoomRequest__requestCompleted(
   if ( (byte_40FB7FE & 1) == 0 )
   {
     sub_B16FFC(&ResponseCommandKind_TypeInfo, responseList);
-    sub_B16FFC(&StringLiteral_21129, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40FB7FE = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -436,8 +436,8 @@ void __fastcall TopMyRoomRequest__requestCompleted(
   }
   v7 = ResponseCommandKind__SearchData(5, responseList, 0LL);
   if ( v7 && ResponseData__checkError_30924960(v7, 0LL) )
-    v8 = (System_String_o **)&StringLiteral_21129;
+    v8 = (System_String_o **)&StringLiteral_21129/*"ok"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_20980;
+    v8 = (System_String_o **)&StringLiteral_20980/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, *v8, 0LL);
 }

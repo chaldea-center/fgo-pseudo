@@ -100,16 +100,16 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     sub_B16FFC(&bool_TypeInfo, parent);
     sub_B16FFC(&iTween_LoopType_TypeInfo, v7);
     sub_B16FFC(&float_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_23222, v9);
-    sub_B16FFC(&StringLiteral_18046, v10);
-    sub_B16FFC(&StringLiteral_21161, v11);
-    sub_B16FFC(&StringLiteral_22584, v12);
-    sub_B16FFC(&StringLiteral_21175, v13);
-    sub_B16FFC(&StringLiteral_17881, v14);
-    sub_B16FFC(&StringLiteral_20243, v15);
-    sub_B16FFC(&StringLiteral_20152, v16);
-    sub_B16FFC(&StringLiteral_19856, v17);
-    sub_B16FFC(&StringLiteral_21173, v18);
+    sub_B16FFC(&StringLiteral_23222/*"x"*/, v9);
+    sub_B16FFC(&StringLiteral_18046/*"easetype"*/, v10);
+    sub_B16FFC(&StringLiteral_21161/*"onMoveComplete"*/, v11);
+    sub_B16FFC(&StringLiteral_22584/*"time"*/, v12);
+    sub_B16FFC(&StringLiteral_21175/*"oncompletetarget"*/, v13);
+    sub_B16FFC(&StringLiteral_17881/*"delay"*/, v14);
+    sub_B16FFC(&StringLiteral_20243/*"looptype"*/, v15);
+    sub_B16FFC(&StringLiteral_20152/*"linear"*/, v16);
+    sub_B16FFC(&StringLiteral_19856/*"isLocal"*/, v17);
+    sub_B16FFC(&StringLiteral_21173/*"oncomplete"*/, v18);
     sub_B16FFC(&iTween_TypeInfo, v19);
     byte_40F7D79 = 1;
   }
@@ -174,7 +174,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_30;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v39->klass->vtable._23_Add.method)(
     v39,
-    StringLiteral_19856,
+    StringLiteral_19856/*"isLocal"*/,
     v40,
     v39->klass->vtable._24_Clear.methodPtr);
   v41 = this->fields.table;
@@ -184,7 +184,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_30;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v41->klass->vtable._23_Add.method)(
     v41,
-    StringLiteral_23222,
+    StringLiteral_23222/*"x"*/,
     v42,
     v41->klass->vtable._24_Clear.methodPtr);
   v43 = this->fields.table;
@@ -192,8 +192,8 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_30;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v43->klass->vtable._23_Add.method)(
     v43,
-    StringLiteral_21173,
-    StringLiteral_21161,
+    StringLiteral_21173/*"oncomplete"*/,
+    StringLiteral_21161/*"onMoveComplete"*/,
     v43->klass->vtable._24_Clear.methodPtr);
   v44 = this->fields.table;
   v45 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -201,7 +201,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_30;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, Il2CppMethodPointer))v44->klass->vtable._23_Add.method)(
     v44,
-    StringLiteral_21175,
+    StringLiteral_21175/*"oncompletetarget"*/,
     v45,
     v44->klass->vtable._24_Clear.methodPtr);
   v46 = this->fields.table;
@@ -209,8 +209,8 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_30;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v46->klass->vtable._23_Add.method)(
     v46,
-    StringLiteral_18046,
-    StringLiteral_20152,
+    StringLiteral_18046/*"easetype"*/,
+    StringLiteral_20152/*"linear"*/,
     v46->klass->vtable._24_Clear.methodPtr);
   v47 = this->fields.table;
   v56 = 1092616192;
@@ -219,7 +219,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_30;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v47->klass->vtable._23_Add.method)(
     v47,
-    StringLiteral_22584,
+    StringLiteral_22584/*"time"*/,
     v48,
     v47->klass->vtable._24_Clear.methodPtr);
   v49 = this->fields.table;
@@ -228,7 +228,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
   if ( !v49
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v49->klass->vtable._23_Add.method)(
           v49,
-          StringLiteral_17881,
+          StringLiteral_17881/*"delay"*/,
           v50,
           v49->klass->vtable._24_Clear.methodPtr),
         v51 = this->fields.table,
@@ -241,7 +241,7 @@ LABEL_30:
   }
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, __int64, Il2CppMethodPointer))v51->klass->vtable._23_Add.method)(
     v51,
-    StringLiteral_20243,
+    StringLiteral_20243/*"looptype"*/,
     v52,
     v51->klass->vtable._24_Clear.methodPtr);
   v53 = this->fields.table;

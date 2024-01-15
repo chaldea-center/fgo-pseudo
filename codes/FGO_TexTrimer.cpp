@@ -10,11 +10,11 @@ void __fastcall FGO_TexTrimer___ctor(FGO_TexTrimer_o *this, const MethodInfo *me
 
   if ( (byte_40F9F5D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16092, method);
+    sub_B16FFC(&StringLiteral_16092/*"_mainTex"*/, method);
     byte_40F9F5D = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_16092;
-  this->fields.targetTexName = (struct System_String_o *)StringLiteral_16092;
+  v9 = (System_Int32_array **)StringLiteral_16092/*"_mainTex"*/;
+  this->fields.targetTexName = (struct System_String_o *)StringLiteral_16092/*"_mainTex"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.targetTexName, v9, v2, v3, v4, v5, v6, v7);
   *(_QWORD *)&this->fields.EndXpx = 0x80000000800LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);

@@ -102,8 +102,8 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__EndBarrierAnim(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, startAction);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
     sub_B16FFC(&Method_WarBoardServantPieceBuffTurnComponent_EndBarrierAnim__, v10);
-    sub_B16FFC(&StringLiteral_2147, v11);
-    sub_B16FFC(&StringLiteral_16380, v12);
+    sub_B16FFC(&StringLiteral_2147/*"AttackUnable_end"*/, v11);
+    sub_B16FFC(&StringLiteral_16380/*"ar256"*/, v12);
     byte_40FBA8B = 1;
   }
   barrierAnimation = (UnityEngine_Object_o *)this->fields.barrierAnimation;
@@ -134,13 +134,13 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__EndBarrierAnim(
       if ( (*((_BYTE *)Method_WarBoardServantPieceBuffTurnComponent_EndBarrierAnim__ + 75) & 2) != 0 )
         v18 = (_QWORD *)sub_B17004(Method_WarBoardServantPieceBuffTurnComponent_EndBarrierAnim__);
       v19 = (System_Reflection_MethodBase_o *)sub_B16FE0(v18, v18[3]);
-      OverwriteAssetSoundName__PlaySe(v19, (System_String_o *)StringLiteral_16380, 0LL);
+      OverwriteAssetSoundName__PlaySe(v19, (System_String_o *)StringLiteral_16380/*"ar256"*/, 0LL);
     }
     v20 = this->fields.barrierAnimation;
     if ( !v20 )
 LABEL_16:
       sub_B170D4();
-    UnityEngine_Animation__Play_49744236(v20, (System_String_o *)StringLiteral_2147, 0LL);
+    UnityEngine_Animation__Play_49744236(v20, (System_String_o *)StringLiteral_2147/*"AttackUnable_end"*/, 0LL);
   }
 }
 
@@ -479,8 +479,8 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__StartBarrierAnim(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, endAction);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
     sub_B16FFC(&Method_WarBoardServantPieceBuffTurnComponent_StartBarrierAnim__, v8);
-    sub_B16FFC(&StringLiteral_16379, v9);
-    sub_B16FFC(&StringLiteral_2148, v10);
+    sub_B16FFC(&StringLiteral_16379/*"ar255"*/, v9);
+    sub_B16FFC(&StringLiteral_2148/*"AttackUnable_start"*/, v10);
     byte_40FBA8A = 1;
   }
   barrierAnimation = (UnityEngine_Object_o *)this->fields.barrierAnimation;
@@ -516,13 +516,13 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__StartBarrierAnim(
       if ( (*((_BYTE *)Method_WarBoardServantPieceBuffTurnComponent_StartBarrierAnim__ + 75) & 2) != 0 )
         v17 = (_QWORD *)sub_B17004(Method_WarBoardServantPieceBuffTurnComponent_StartBarrierAnim__);
       v18 = (System_Reflection_MethodBase_o *)sub_B16FE0(v17, v17[3]);
-      OverwriteAssetSoundName__PlaySe(v18, (System_String_o *)StringLiteral_16379, 0LL);
+      OverwriteAssetSoundName__PlaySe(v18, (System_String_o *)StringLiteral_16379/*"ar255"*/, 0LL);
     }
     v19 = this->fields.barrierAnimation;
     if ( !v19 )
 LABEL_18:
       sub_B170D4();
-    UnityEngine_Animation__Play_49744236(v19, (System_String_o *)StringLiteral_2148, 0LL);
+    UnityEngine_Animation__Play_49744236(v19, (System_String_o *)StringLiteral_2148/*"AttackUnable_start"*/, 0LL);
   }
 }
 
@@ -629,7 +629,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0___Se
     sub_B16FFC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v4);
     sub_B16FFC(&int_TypeInfo, v5);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_15178, v7);
+    sub_B16FFC(&StringLiteral_15178/*"WARBOARD_BUFF_STATE_REST_TURN"*/, v7);
     byte_40F786D = 1;
   }
   entity = 0LL;
@@ -711,7 +711,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0___Se
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_15178, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_15178/*"WARBOARD_BUFF_STATE_REST_TURN"*/, 0LL);
   v29 = this->fields.__4__this;
   if ( !v29 )
     goto LABEL_38;

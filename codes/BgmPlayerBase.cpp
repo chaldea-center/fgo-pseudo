@@ -1173,10 +1173,10 @@ System_String_o *__fastcall BgmPlayerBase__get_CueSheetName(BgmPlayerBase_o *thi
 {
   if ( (byte_40F9068 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2538, method);
+    sub_B16FFC(&StringLiteral_2538/*"BGM"*/, method);
     byte_40F9068 = 1;
   }
-  return (System_String_o *)StringLiteral_2538;
+  return (System_String_o *)StringLiteral_2538/*"BGM"*/;
 }
 
 

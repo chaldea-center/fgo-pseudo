@@ -102,11 +102,11 @@ void __fastcall BattleCommandParamComponent__setComboGuid(
 
   if ( (byte_40F69E3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18173, *(_QWORD *)&index);
-    sub_B16FFC(&StringLiteral_18174, v7);
-    sub_B16FFC(&StringLiteral_18172, v8);
-    sub_B16FFC(&StringLiteral_18175, v9);
-    sub_B16FFC(&StringLiteral_18171, v10);
+    sub_B16FFC(&StringLiteral_18173/*"effect/ef_cardcombo_u2"*/, *(_QWORD *)&index);
+    sub_B16FFC(&StringLiteral_18174/*"effect/ef_cardcombo_u3"*/, v7);
+    sub_B16FFC(&StringLiteral_18172/*"effect/ef_cardcombo_3a"*/, v8);
+    sub_B16FFC(&StringLiteral_18175/*"effect/ef_cardcombo_ua"*/, v9);
+    sub_B16FFC(&StringLiteral_18171/*"effect/ef_cardcombo_2a"*/, v10);
     byte_40F69E3 = 1;
   }
   BattleCommandParamComponent__resetComboGuid(this, *(const MethodInfo **)&index);
@@ -125,18 +125,18 @@ void __fastcall BattleCommandParamComponent__setComboGuid(
       samecount = combo->fields.samecount;
       if ( samecount == 2 )
       {
-        v17 = &StringLiteral_18173;
+        v17 = &StringLiteral_18173/*"effect/ef_cardcombo_u2"*/;
       }
       else
       {
         if ( samecount != 3 )
           return;
-        v17 = &StringLiteral_18174;
+        v17 = &StringLiteral_18174/*"effect/ef_cardcombo_u3"*/;
       }
     }
     else
     {
-      v17 = &StringLiteral_18175;
+      v17 = &StringLiteral_18175/*"effect/ef_cardcombo_ua"*/;
     }
   }
   else
@@ -148,13 +148,13 @@ void __fastcall BattleCommandParamComponent__setComboGuid(
     v18 = combo->fields.samecount;
     if ( v18 == 2 )
     {
-      v17 = &StringLiteral_18171;
+      v17 = &StringLiteral_18171/*"effect/ef_cardcombo_2a"*/;
     }
     else
     {
       if ( v18 != 3 )
         return;
-      v17 = &StringLiteral_18172;
+      v17 = &StringLiteral_18172/*"effect/ef_cardcombo_3a"*/;
     }
   }
   if ( *v17 )
@@ -281,12 +281,12 @@ void __fastcall BattleCommandParamComponent__setNo(
   if ( (byte_40F69E1 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&count);
-    sub_B16FFC(&StringLiteral_18177, v5);
+    sub_B16FFC(&StringLiteral_18177/*"effect/ef_command_{0:00}"*/, v5);
     byte_40F69E1 = 1;
   }
   v9 = count;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-  v7 = System_String__Format((System_String_o *)StringLiteral_18177, v6, 0LL);
+  v7 = System_String__Format((System_String_o *)StringLiteral_18177/*"effect/ef_command_{0:00}"*/, v6, 0LL);
   Object_19257936 = BaseMonoBehaviour__createObject_19257936(
                       (BaseMonoBehaviour_o *)this,
                       v7,

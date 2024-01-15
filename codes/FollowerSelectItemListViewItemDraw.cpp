@@ -228,10 +228,10 @@ void __fastcall FollowerSelectItemListViewItemDraw__Awake(
     sub_B16FFC(&AtlasManager_TypeInfo, method);
     sub_B16FFC(&Method_System_Collections_Generic_List_UIWidget___ctor__, v6);
     sub_B16FFC(&System_Collections_Generic_List_UIWidget__TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_19290, v8);
-    sub_B16FFC(&StringLiteral_19421, v9);
-    sub_B16FFC(&StringLiteral_19201, v10);
-    sub_B16FFC(&StringLiteral_19420, v11);
+    sub_B16FFC(&StringLiteral_19290/*"icon_skill_mini"*/, v8);
+    sub_B16FFC(&StringLiteral_19421/*"img_friend_skill"*/, v9);
+    sub_B16FFC(&StringLiteral_19201/*"icon_append_mini"*/, v10);
+    sub_B16FFC(&StringLiteral_19420/*"img_friend_appendskill"*/, v11);
     byte_40FA6EE = 1;
   }
   v12 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
@@ -256,10 +256,10 @@ void __fastcall FollowerSelectItemListViewItemDraw__Awake(
   skillIconSprite = this->fields.skillIconSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(skillIconSprite, (System_String_o *)StringLiteral_19290, 0LL);
-  AtlasManager__SetEventSprite(this->fields.skillTitleSprite, (System_String_o *)StringLiteral_19421, 0LL);
-  AtlasManager__SetEventSprite(this->fields.appendSkillIconSprite, (System_String_o *)StringLiteral_19201, 0LL);
-  AtlasManager__SetEventSprite(this->fields.appendSkillTitleSprite, (System_String_o *)StringLiteral_19420, 0LL);
+  AtlasManager__SetEventSprite(skillIconSprite, (System_String_o *)StringLiteral_19290/*"icon_skill_mini"*/, 0LL);
+  AtlasManager__SetEventSprite(this->fields.skillTitleSprite, (System_String_o *)StringLiteral_19421/*"img_friend_skill"*/, 0LL);
+  AtlasManager__SetEventSprite(this->fields.appendSkillIconSprite, (System_String_o *)StringLiteral_19201/*"icon_append_mini"*/, 0LL);
+  AtlasManager__SetEventSprite(this->fields.appendSkillTitleSprite, (System_String_o *)StringLiteral_19420/*"img_friend_appendskill"*/, 0LL);
 }
 
 
@@ -1204,37 +1204,37 @@ void __fastcall FollowerSelectItemListViewItemDraw__SetItem(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v35);
     sub_B16FFC(&SkillInfo___TypeInfo, v36);
     sub_B16FFC(&TitleInfoControl_TypeInfo, v37);
-    sub_B16FFC(&StringLiteral_3267, v38);
-    sub_B16FFC(&StringLiteral_6382, v39);
-    sub_B16FFC(&StringLiteral_6361, v40);
-    sub_B16FFC(&StringLiteral_11694, v41);
-    sub_B16FFC(&StringLiteral_9347, v42);
-    sub_B16FFC(&StringLiteral_6362, v43);
-    sub_B16FFC(&StringLiteral_6317, v44);
-    sub_B16FFC(&StringLiteral_9348, v45);
-    sub_B16FFC(&StringLiteral_11601, v46);
-    sub_B16FFC(&StringLiteral_13315, v47);
-    sub_B16FFC(&StringLiteral_9349, v48);
-    sub_B16FFC(&StringLiteral_6375, v49);
-    sub_B16FFC(&StringLiteral_6360, v50);
-    sub_B16FFC(&StringLiteral_19302, v51);
-    sub_B16FFC(&StringLiteral_9352, v52);
-    sub_B16FFC(&StringLiteral_19409, v53);
-    sub_B16FFC(&StringLiteral_12419, v54);
-    sub_B16FFC(&StringLiteral_12420, v55);
-    sub_B16FFC(&StringLiteral_6374, v56);
-    sub_B16FFC(&StringLiteral_6376, v57);
-    sub_B16FFC(&StringLiteral_6359, v58);
-    sub_B16FFC(&StringLiteral_17815, v59);
-    sub_B16FFC(&StringLiteral_6316, v60);
-    sub_B16FFC(&StringLiteral_9324, v61);
-    sub_B16FFC(&StringLiteral_9346, v62);
-    sub_B16FFC(&StringLiteral_15767, v63);
-    sub_B16FFC(&StringLiteral_1, v64);
-    sub_B16FFC(&StringLiteral_19269, v65);
-    sub_B16FFC(&StringLiteral_6363, v66);
-    sub_B16FFC(&StringLiteral_19268, v67);
-    sub_B16FFC(&StringLiteral_19445, v68);
+    sub_B16FFC(&StringLiteral_3267/*"COMMON_NO_ENTRY"*/, v38);
+    sub_B16FFC(&StringLiteral_6382/*"FOLLOWER_SELECT_TYPE_POINT_UP"*/, v39);
+    sub_B16FFC(&StringLiteral_6361/*"FOLLOWER_SELECT_FRIEND_CHOCO_REMAINING_COUNT_PREFIX_TEXT"*/, v40);
+    sub_B16FFC(&StringLiteral_11694/*"SERVANT_HIDE_NAME"*/, v41);
+    sub_B16FFC(&StringLiteral_9347/*"NP_DISABLE_COLOR_NAME"*/, v42);
+    sub_B16FFC(&StringLiteral_6362/*"FOLLOWER_SELECT_FRIEND_CHOCO_REMAINING_COUNT_SUFFIX_TEXT"*/, v43);
+    sub_B16FFC(&StringLiteral_6317/*"FFFFFF"*/, v44);
+    sub_B16FFC(&StringLiteral_9348/*"NP_HIDE_NAME"*/, v45);
+    sub_B16FFC(&StringLiteral_11601/*"SELECT_NO_SORTIE_TIMES_TO_RESTART"*/, v46);
+    sub_B16FFC(&StringLiteral_13315/*"TIME_BEFORE_TITLE_COLOR"*/, v47);
+    sub_B16FFC(&StringLiteral_9349/*"NP_HIDE_NAME_LEVEL"*/, v48);
+    sub_B16FFC(&StringLiteral_6375/*"FOLLOWER_SELECT_QUEST_RESTRICTION_WARNING2"*/, v49);
+    sub_B16FFC(&StringLiteral_6360/*"FOLLOWER_SELECT_FRIEND_CHOCO_DEFAULT_COLOR"*/, v50);
+    sub_B16FFC(&StringLiteral_19302/*"icon_support_01"*/, v51);
+    sub_B16FFC(&StringLiteral_9352/*"NP_MAX_COLOR_NAME"*/, v52);
+    sub_B16FFC(&StringLiteral_19409/*"img_frames_mask01"*/, v53);
+    sub_B16FFC(&StringLiteral_12419/*"SUPPORT_CLASS_BOARD_EFFECT_DISP_BUTTON"*/, v54);
+    sub_B16FFC(&StringLiteral_12420/*"SUPPORT_CLASS_BOARD_EFFECT_NOT_BUTTON"*/, v55);
+    sub_B16FFC(&StringLiteral_6374/*"FOLLOWER_SELECT_QUEST_RESTRICTION_WARNING"*/, v56);
+    sub_B16FFC(&StringLiteral_6376/*"FOLLOWER_SELECT_RECOMMENDED_TEXT"*/, v57);
+    sub_B16FFC(&StringLiteral_6359/*"FOLLOWER_SELECT_FRIEND_CHOCO_AVAILABLE_COLOR"*/, v58);
+    sub_B16FFC(&StringLiteral_17815/*"datalost_svt_select"*/, v59);
+    sub_B16FFC(&StringLiteral_6316/*"FFFF00"*/, v60);
+    sub_B16FFC(&StringLiteral_9324/*"NO_ENTRY_NAME"*/, v61);
+    sub_B16FFC(&StringLiteral_9346/*"NP_COLOR_NAME"*/, v62);
+    sub_B16FFC(&StringLiteral_15767/*"[{0}]+{1}[-]"*/, v63);
+    sub_B16FFC(&StringLiteral_1/*""*/, v64);
+    sub_B16FFC(&StringLiteral_19269/*"icon_friend"*/, v65);
+    sub_B16FFC(&StringLiteral_6363/*"FOLLOWER_SELECT_FRIEND_CHOCO_UNAVAILABLE_COLOR"*/, v66);
+    sub_B16FFC(&StringLiteral_19268/*"icon_follow"*/, v67);
+    sub_B16FFC(&StringLiteral_19445/*"img_listbg_02"*/, v68);
     byte_40FA6EF = 1;
   }
   tdInfo = 0LL;
@@ -1332,7 +1332,7 @@ void __fastcall FollowerSelectItemListViewItemDraw__SetItem(
       v85 = this->fields.dataLostMaskMessageLabel;
       if ( !v85 )
         goto LABEL_491;
-      UILabel__set_text(v85, (System_String_o *)StringLiteral_1, 0LL);
+      UILabel__set_text(v85, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       v86 = (UnityEngine_Component_o *)this->fields.dataLostMaskMessageLabel;
       if ( !v86 )
         goto LABEL_491;
@@ -1365,7 +1365,7 @@ LABEL_50:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v101 = LocalizationManager__Get((System_String_o *)StringLiteral_3267, 0LL);
+      v101 = LocalizationManager__Get((System_String_o *)StringLiteral_3267/*"COMMON_NO_ENTRY"*/, 0LL);
       if ( !svtNameRangeLabel )
         goto LABEL_177;
       UIRangeLabel__Set(svtNameRangeLabel, v101, 0LL, 1, 0, 0LL);
@@ -1388,7 +1388,7 @@ LABEL_50:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v155 = LocalizationManager__Get((System_String_o *)StringLiteral_13315, 0LL);
+          v155 = LocalizationManager__Get((System_String_o *)StringLiteral_13315/*"TIME_BEFORE_TITLE_COLOR"*/, 0LL);
           LoginTime = FollowerSelectItemListViewItem__get_LoginTime(item, 0LL);
           v157 = (Il2CppObject *)LocalizationManager__GetBeforeTime(LoginTime, 0LL);
           v158 = System_String__Format(v155, v157, 0LL);
@@ -1398,7 +1398,7 @@ LABEL_50:
           typeTextSprite = this->fields.typeTextSprite;
           if ( !typeTextSprite )
             goto LABEL_177;
-          v149 = &StringLiteral_19269;
+          v149 = &StringLiteral_19269/*"icon_friend"*/;
           goto LABEL_124;
         case 2:
           v160 = this->fields.playerNameLabel;
@@ -1417,7 +1417,7 @@ LABEL_50:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v165 = LocalizationManager__Get((System_String_o *)StringLiteral_13315, 0LL);
+          v165 = LocalizationManager__Get((System_String_o *)StringLiteral_13315/*"TIME_BEFORE_TITLE_COLOR"*/, 0LL);
           v166 = FollowerSelectItemListViewItem__get_LoginTime(item, 0LL);
           v167 = (Il2CppObject *)LocalizationManager__GetBeforeTime(v166, 0LL);
           v168 = System_String__Format(v165, v167, 0LL);
@@ -1434,8 +1434,8 @@ LABEL_50:
           v103 = this->fields.playerNameLabel;
           if ( !v103 )
             goto LABEL_177;
-          spriteName = (System_String_o *)StringLiteral_19445;
-          UILabel__set_text(v103, (System_String_o *)StringLiteral_1, 0LL);
+          spriteName = (System_String_o *)StringLiteral_19445/*"img_listbg_02"*/;
+          UILabel__set_text(v103, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           v104 = this->fields.playerLevelIconLabel;
           if ( !v104 )
             goto LABEL_177;
@@ -1443,11 +1443,11 @@ LABEL_50:
           v105 = this->fields.loginDataLabel;
           if ( !v105 )
             goto LABEL_177;
-          UILabel__set_text(v105, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(v105, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           v106 = this->fields.typeTextSprite;
           if ( !v106 )
             goto LABEL_177;
-          UISprite__set_spriteName(v106, (System_String_o *)StringLiteral_19302, 0LL);
+          UISprite__set_spriteName(v106, (System_String_o *)StringLiteral_19302/*"icon_support_01"*/, 0LL);
           v107 = this->fields.typeTextSprite;
           if ( !v107 )
             goto LABEL_177;
@@ -1483,7 +1483,7 @@ LABEL_50:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v144 = LocalizationManager__Get((System_String_o *)StringLiteral_13315, 0LL);
+          v144 = LocalizationManager__Get((System_String_o *)StringLiteral_13315/*"TIME_BEFORE_TITLE_COLOR"*/, 0LL);
           v145 = FollowerSelectItemListViewItem__get_LoginTime(item, 0LL);
           v146 = (Il2CppObject *)LocalizationManager__GetBeforeTime(v145, 0LL);
           v147 = System_String__Format(v144, v146, 0LL);
@@ -1493,7 +1493,7 @@ LABEL_50:
           typeTextSprite = this->fields.typeTextSprite;
           if ( !typeTextSprite )
             goto LABEL_177;
-          v149 = &StringLiteral_19268;
+          v149 = &StringLiteral_19268/*"icon_follow"*/;
 LABEL_124:
           UISprite__set_spriteName(typeTextSprite, (System_String_o *)*v149, 0LL);
           v159 = this->fields.typeTextSprite;
@@ -1525,7 +1525,7 @@ LABEL_139:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v174 = LocalizationManager__Get((System_String_o *)StringLiteral_9324, 0LL);
+          v174 = LocalizationManager__Get((System_String_o *)StringLiteral_9324/*"NO_ENTRY_NAME"*/, 0LL);
           if ( !svtNpRangeLabel )
             goto LABEL_177;
           UIRangeLabel__Set(svtNpRangeLabel, v174, 0LL, 1, 0, 0LL);
@@ -1549,11 +1549,11 @@ LABEL_149:
           friendPointData2Label = this->fields.friendPointData2Label;
           if ( !friendPointData2Label )
             goto LABEL_177;
-          UILabel__set_text(friendPointData2Label, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(friendPointData2Label, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           campaignLabel = this->fields.campaignLabel;
           if ( !campaignLabel )
             goto LABEL_177;
-          UILabel__set_text(campaignLabel, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(campaignLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           eventUpValIcon = (UnityEngine_Object_o *)this->fields.eventUpValIcon;
           if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1731,7 +1731,7 @@ LABEL_553:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v472 = LocalizationManager__Get((System_String_o *)StringLiteral_6374, 0LL);
+          v472 = LocalizationManager__Get((System_String_o *)StringLiteral_6374/*"FOLLOWER_SELECT_QUEST_RESTRICTION_WARNING"*/, 0LL);
           if ( !maskMessageLabel )
             goto LABEL_177;
           UILabel__set_text(maskMessageLabel, v472, 0LL);
@@ -1746,7 +1746,7 @@ LABEL_553:
           v475 = this->fields.warningMessageLabel;
           if ( !v475 )
             goto LABEL_177;
-          UILabel__set_text(v475, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(v475, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         }
         else
         {
@@ -1762,7 +1762,7 @@ LABEL_553:
             v555 = this->fields.maskMessageLabel;
             if ( !v555 )
               goto LABEL_177;
-            UILabel__set_text(v555, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v555, (System_String_o *)StringLiteral_1/*""*/, 0LL);
             v556 = this->fields.warningBase;
             if ( !v556 )
               goto LABEL_177;
@@ -1774,7 +1774,7 @@ LABEL_553:
             v558 = this->fields.warningMessageLabel;
             if ( !v558 )
               goto LABEL_177;
-            UILabel__set_text(v558, (System_String_o *)StringLiteral_1, 0LL);
+            UILabel__set_text(v558, (System_String_o *)StringLiteral_1/*""*/, 0LL);
             v476 = 0;
 LABEL_574:
             classCompatibilityIcon = (UnityEngine_Object_o *)this->fields.classCompatibilityIcon;
@@ -1919,7 +1919,7 @@ LABEL_606:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v507 = LocalizationManager__Get((System_String_o *)StringLiteral_6376, 0LL);
+              v507 = LocalizationManager__Get((System_String_o *)StringLiteral_6376/*"FOLLOWER_SELECT_RECOMMENDED_TEXT"*/, 0LL);
               if ( !v506 )
                 goto LABEL_177;
               UILabel__set_text(v506, v507, 0LL);
@@ -2030,7 +2030,7 @@ LABEL_640:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v546 = LocalizationManager__Get((System_String_o *)StringLiteral_6361, 0LL);
+                  v546 = LocalizationManager__Get((System_String_o *)StringLiteral_6361/*"FOLLOWER_SELECT_FRIEND_CHOCO_REMAINING_COUNT_PREFIX_TEXT"*/, 0LL);
                   if ( !numberOfUsabletimesPrefixLabel )
                     goto LABEL_177;
                   UILabel__set_text(numberOfUsabletimesPrefixLabel, v546, 0LL);
@@ -2040,7 +2040,7 @@ LABEL_640:
                     goto LABEL_177;
                   UILabel__set_text(numberOfUsabletimesLabel, v548, 0LL);
                   numberOfUsabletimesSuffixLabel = this->fields.numberOfUsabletimesSuffixLabel;
-                  v550 = LocalizationManager__Get((System_String_o *)StringLiteral_6362, 0LL);
+                  v550 = LocalizationManager__Get((System_String_o *)StringLiteral_6362/*"FOLLOWER_SELECT_FRIEND_CHOCO_REMAINING_COUNT_SUFFIX_TEXT"*/, 0LL);
                   if ( !numberOfUsabletimesSuffixLabel )
                     goto LABEL_177;
                   UILabel__set_text(numberOfUsabletimesSuffixLabel, v550, 0LL);
@@ -2051,9 +2051,9 @@ LABEL_640:
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v551 = LocalizationManager__Get((System_String_o *)StringLiteral_6359, 0LL);
+                    v551 = LocalizationManager__Get((System_String_o *)StringLiteral_6359/*"FOLLOWER_SELECT_FRIEND_CHOCO_AVAILABLE_COLOR"*/, 0LL);
                     UnityEngine_ColorUtility__TryParseHtmlString(v551, &color, 0LL);
-                    v552 = LocalizationManager__Get((System_String_o *)StringLiteral_6360, 0LL);
+                    v552 = LocalizationManager__Get((System_String_o *)StringLiteral_6360/*"FOLLOWER_SELECT_FRIEND_CHOCO_DEFAULT_COLOR"*/, 0LL);
                     UnityEngine_ColorUtility__TryParseHtmlString(v552, &v569, 0LL);
                   }
                   else
@@ -2063,7 +2063,7 @@ LABEL_640:
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v559 = LocalizationManager__Get((System_String_o *)StringLiteral_6363, 0LL);
+                    v559 = LocalizationManager__Get((System_String_o *)StringLiteral_6363/*"FOLLOWER_SELECT_FRIEND_CHOCO_UNAVAILABLE_COLOR"*/, 0LL);
                     UnityEngine_ColorUtility__TryParseHtmlString(v559, &color, 0LL);
                     friendChocolateSprite = (UIWidget_o *)this->fields.friendChocolateSprite;
                     if ( !friendChocolateSprite )
@@ -2116,7 +2116,7 @@ LABEL_177:
           v523 = this->fields.maskMessageLabel;
           if ( !v523 )
             goto LABEL_177;
-          UILabel__set_text(v523, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(v523, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           v524 = this->fields.warningBase;
           if ( !v524 )
             goto LABEL_177;
@@ -2131,7 +2131,7 @@ LABEL_177:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v527 = LocalizationManager__Get((System_String_o *)StringLiteral_6375, 0LL);
+          v527 = LocalizationManager__Get((System_String_o *)StringLiteral_6375/*"FOLLOWER_SELECT_QUEST_RESTRICTION_WARNING2"*/, 0LL);
           if ( !v526 )
             goto LABEL_177;
           UILabel__set_text(v526, v527, 0LL);
@@ -2197,7 +2197,7 @@ LABEL_192:
       goto LABEL_491;
     name = tdInfo->fields.name;
     v96 = TreasureDeviceLevelIcon;
-    v566 = (System_String_o *)StringLiteral_1;
+    v566 = (System_String_o *)StringLiteral_1/*""*/;
     if ( ServantLeaderInfo__IsNpc(v78, 0LL) )
     {
       dispLimitCount = v78->fields.dispLimitCount;
@@ -2310,7 +2310,7 @@ LABEL_192:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v240 = LocalizationManager__Get((System_String_o *)StringLiteral_13315, 0LL);
+        v240 = LocalizationManager__Get((System_String_o *)StringLiteral_13315/*"TIME_BEFORE_TITLE_COLOR"*/, 0LL);
         v241 = FollowerSelectItemListViewItem__get_LoginTime(item, 0LL);
         v242 = (Il2CppObject *)LocalizationManager__GetBeforeTime(v241, 0LL);
         v243 = System_String__Format(v240, v242, 0LL);
@@ -2320,7 +2320,7 @@ LABEL_192:
         v244 = this->fields.typeTextSprite;
         if ( !v244 )
           goto LABEL_491;
-        UISprite__set_spriteName(v244, (System_String_o *)StringLiteral_19269, 0LL);
+        UISprite__set_spriteName(v244, (System_String_o *)StringLiteral_19269/*"icon_friend"*/, 0LL);
         v245 = this->fields.typeTextSprite;
         if ( !v245 )
           goto LABEL_491;
@@ -2357,10 +2357,10 @@ LABEL_192:
             p_FollowFriendPoint = &v251->static_fields->FollowFriendPoint;
 LABEL_252:
             FollowerPointNotFriend = *p_FollowFriendPoint;
-            v271 = (System_String_o **)&StringLiteral_9352;
+            v271 = (System_String_o **)&StringLiteral_9352/*"NP_MAX_COLOR_NAME"*/;
             v234 = LocalizationManager_TypeInfo;
             if ( v96 <= 1 )
-              v271 = (System_String_o **)&StringLiteral_9346;
+              v271 = (System_String_o **)&StringLiteral_9346/*"NP_COLOR_NAME"*/;
             v265 = *v271;
             if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 )
             {
@@ -2394,14 +2394,14 @@ LABEL_262:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v277 = LocalizationManager__Get((System_String_o *)StringLiteral_11694, 0LL);
+              v277 = LocalizationManager__Get((System_String_o *)StringLiteral_11694/*"SERVANT_HIDE_NAME"*/, 0LL);
               if ( !v276 )
                 goto LABEL_491;
               UIRangeLabel__Set(v276, v277, 0LL, 1, 0, 0LL);
               v278 = this->fields.playerNameLabel;
               if ( !v278 )
                 goto LABEL_491;
-              UILabel__set_text(v278, (System_String_o *)StringLiteral_1, 0LL);
+              UILabel__set_text(v278, (System_String_o *)StringLiteral_1/*""*/, 0LL);
               if ( FollowerSelectItemListViewItem__get_FollowerType(item, 0LL) != 4 )
               {
                 if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -2409,7 +2409,7 @@ LABEL_262:
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v266 = LocalizationManager__Get((System_String_o *)StringLiteral_9349, 0LL);
+                v266 = LocalizationManager__Get((System_String_o *)StringLiteral_9349/*"NP_HIDE_NAME_LEVEL"*/, 0LL);
               }
             }
             else
@@ -2483,7 +2483,7 @@ LABEL_491:
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v295 = LocalizationManager__Get((System_String_o *)StringLiteral_6382, 0LL);
+              v295 = LocalizationManager__Get((System_String_o *)StringLiteral_6382/*"FOLLOWER_SELECT_TYPE_POINT_UP"*/, 0LL);
               TimesToRestart_k__BackingField = v294;
               v296 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &TimesToRestart_k__BackingField);
               v297 = System_String__Format(v295, v296, 0LL);
@@ -2497,7 +2497,7 @@ LABEL_491:
               v289 = this->fields.friendPointData2Label;
               if ( !v289 )
                 goto LABEL_491;
-              v290 = (System_String_o *)StringLiteral_1;
+              v290 = (System_String_o *)StringLiteral_1/*""*/;
             }
             UILabel__set_text(v289, v290, 0LL);
             IsFriendPointCampaign = FollowerSelectItemListViewItem__IsFriendPointCampaign(item, 0LL);
@@ -2533,7 +2533,7 @@ LABEL_491:
               if ( !v299 )
                 goto LABEL_491;
               v305 = this->fields.campaignLabel;
-              v304 = (System_String_o *)StringLiteral_1;
+              v304 = (System_String_o *)StringLiteral_1/*""*/;
             }
             UILabel__set_text(v305, v304, 0LL);
             v306 = (UnityEngine_Object_o *)this->fields.eventUpValIcon;
@@ -3050,7 +3050,7 @@ LABEL_457:
                   {
                     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
                   }
-                  AtlasManager__SetPartyOrganizationImage(v413, (System_String_o *)StringLiteral_17815, 0LL);
+                  AtlasManager__SetPartyOrganizationImage(v413, (System_String_o *)StringLiteral_17815/*"datalost_svt_select"*/, 0LL);
                   v414 = (UIWidget_o *)this->fields.dataLostMaskSprite;
                   *(UnityEngine_Color_o *)&v415 = UnityEngine_Color__get_white(0LL);
                   if ( !v414 )
@@ -3074,7 +3074,7 @@ LABEL_457:
                   v421 = this->fields.dataLostMaskSprite;
                   if ( !v421 )
                     goto LABEL_177;
-                  UISprite__set_spriteName(v421, (System_String_o *)StringLiteral_19409, 0LL);
+                  UISprite__set_spriteName(v421, (System_String_o *)StringLiteral_19409/*"img_frames_mask01"*/, 0LL);
                   *(UnityEngine_Color_o *)&v422 = UnityEngine_Color__get_black(0LL);
                   v425 = (UIWidget_o *)this->fields.dataLostMaskSprite;
                   if ( !v425 )
@@ -3087,7 +3087,7 @@ LABEL_457:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v428 = LocalizationManager__Get((System_String_o *)StringLiteral_11601, 0LL);
+                  v428 = LocalizationManager__Get((System_String_o *)StringLiteral_11601/*"SELECT_NO_SORTIE_TIMES_TO_RESTART"*/, 0LL);
                   TimesToRestart_k__BackingField = item->fields._TimesToRestart_k__BackingField;
                   v429 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &TimesToRestart_k__BackingField);
                   v430 = System_String__Format(v428, v429, 0LL);
@@ -3126,18 +3126,18 @@ LABEL_507:
                 v440 = this->fields.openClassBoardNumLabel;
                 if ( !v440 )
                   goto LABEL_177;
-                v439 = (System_String_o *)StringLiteral_1;
+                v439 = (System_String_o *)StringLiteral_1/*""*/;
               }
               else
               {
                 if ( item->fields._IsMaxOpenClassBoard_k__BackingField )
-                  v435 = (Il2CppObject **)&StringLiteral_6316;
+                  v435 = (Il2CppObject **)&StringLiteral_6316/*"FFFF00"*/;
                 else
-                  v435 = (Il2CppObject **)&StringLiteral_6317;
+                  v435 = (Il2CppObject **)&StringLiteral_6317/*"FFFFFF"*/;
                 v436 = *v435;
                 TimesToRestart_k__BackingField = item->fields._OpenClassBoardNum_k__BackingField;
                 v437 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &TimesToRestart_k__BackingField);
-                v438 = System_String__Format_43739268((System_String_o *)StringLiteral_15767, v436, v437, 0LL);
+                v438 = System_String__Format_43739268((System_String_o *)StringLiteral_15767/*"[{0}]+{1}[-]"*/, v436, v437, 0LL);
                 if ( !this->fields.openClassBoardNumLabel )
                   goto LABEL_177;
                 v439 = v438;
@@ -3183,7 +3183,7 @@ LABEL_507:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v452 = LocalizationManager__Get((System_String_o *)StringLiteral_12420, 0LL);
+                  v452 = LocalizationManager__Get((System_String_o *)StringLiteral_12420/*"SUPPORT_CLASS_BOARD_EFFECT_NOT_BUTTON"*/, 0LL);
                   if ( !v446 )
                     goto LABEL_177;
                   UILabel__set_text(v446, v452, 0LL);
@@ -3207,7 +3207,7 @@ LABEL_507:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v447 = LocalizationManager__Get((System_String_o *)StringLiteral_12419, 0LL);
+                  v447 = LocalizationManager__Get((System_String_o *)StringLiteral_12419/*"SUPPORT_CLASS_BOARD_EFFECT_DISP_BUTTON"*/, 0LL);
                   if ( !v446 )
                     goto LABEL_177;
                   UILabel__set_text(v446, v447, 0LL);
@@ -3265,7 +3265,7 @@ LABEL_249:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v258 = LocalizationManager__Get((System_String_o *)StringLiteral_13315, 0LL);
+        v258 = LocalizationManager__Get((System_String_o *)StringLiteral_13315/*"TIME_BEFORE_TITLE_COLOR"*/, 0LL);
         v259 = FollowerSelectItemListViewItem__get_LoginTime(item, 0LL);
         v260 = (Il2CppObject *)LocalizationManager__GetBeforeTime(v259, 0LL);
         v261 = System_String__Format(v258, v260, 0LL);
@@ -3284,7 +3284,7 @@ LABEL_249:
           v263 = BalanceConfig_TypeInfo;
         }
         static_fields = v263->static_fields;
-        v233 = (System_String_o **)&StringLiteral_9352;
+        v233 = (System_String_o **)&StringLiteral_9352/*"NP_MAX_COLOR_NAME"*/;
         v234 = LocalizationManager_TypeInfo;
         FollowerPointNotFriend = static_fields->FollowerPointNotFriend;
         goto LABEL_233;
@@ -3293,8 +3293,8 @@ LABEL_249:
         v128 = this->fields.playerNameLabel;
         if ( !v128 )
           goto LABEL_491;
-        v129 = StringLiteral_19445;
-        UILabel__set_text(v128, (System_String_o *)StringLiteral_1, 0LL);
+        v129 = StringLiteral_19445/*"img_listbg_02"*/;
+        UILabel__set_text(v128, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         v130 = this->fields.playerLevelIconLabel;
         if ( !v130 )
           goto LABEL_491;
@@ -3302,11 +3302,11 @@ LABEL_249:
         v131 = this->fields.loginDataLabel;
         if ( !v131 )
           goto LABEL_491;
-        UILabel__set_text(v131, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(v131, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         v132 = this->fields.typeTextSprite;
         if ( !v132 )
           goto LABEL_491;
-        UISprite__set_spriteName(v132, (System_String_o *)StringLiteral_19302, 0LL);
+        UISprite__set_spriteName(v132, (System_String_o *)StringLiteral_19302/*"icon_support_01"*/, 0LL);
         v133 = this->fields.typeTextSprite;
         if ( !v133 )
           goto LABEL_491;
@@ -3324,9 +3324,9 @@ LABEL_249:
         spriteName = (System_String_o *)v129;
         if ( FollowerSelectItemListViewItem__get_FollowerType(item, 0LL) == 3 )
         {
-          v136 = (System_String_o **)&StringLiteral_9352;
+          v136 = (System_String_o **)&StringLiteral_9352/*"NP_MAX_COLOR_NAME"*/;
           if ( v96 <= 1 )
-            v136 = (System_String_o **)&StringLiteral_9346;
+            v136 = (System_String_o **)&StringLiteral_9346/*"NP_COLOR_NAME"*/;
           v137 = *v136;
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -3342,8 +3342,8 @@ LABEL_249:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v138 = LocalizationManager__Get((System_String_o *)StringLiteral_9347, 0LL);
-          OverwriteTDName = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_9348, 0LL);
+          v138 = LocalizationManager__Get((System_String_o *)StringLiteral_9347/*"NP_DISABLE_COLOR_NAME"*/, 0LL);
+          OverwriteTDName = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_9348/*"NP_HIDE_NAME"*/, 0LL);
         }
         v267 = System_String__Format(v138, OverwriteTDName, 0LL);
         if ( !this->fields.supportInfoButton )
@@ -3375,7 +3375,7 @@ LABEL_249:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v225 = LocalizationManager__Get((System_String_o *)StringLiteral_13315, 0LL);
+        v225 = LocalizationManager__Get((System_String_o *)StringLiteral_13315/*"TIME_BEFORE_TITLE_COLOR"*/, 0LL);
         v226 = FollowerSelectItemListViewItem__get_LoginTime(item, 0LL);
         v227 = (Il2CppObject *)LocalizationManager__GetBeforeTime(v226, 0LL);
         v228 = System_String__Format(v225, v227, 0LL);
@@ -3385,7 +3385,7 @@ LABEL_249:
         v229 = this->fields.typeTextSprite;
         if ( !v229 )
           goto LABEL_491;
-        UISprite__set_spriteName(v229, (System_String_o *)StringLiteral_19268, 0LL);
+        UISprite__set_spriteName(v229, (System_String_o *)StringLiteral_19268/*"icon_follow"*/, 0LL);
         v230 = this->fields.typeTextSprite;
         if ( !v230 )
           goto LABEL_491;
@@ -3400,12 +3400,12 @@ LABEL_249:
           v231 = BalanceConfig_TypeInfo;
         }
         v232 = v231->static_fields;
-        v233 = (System_String_o **)&StringLiteral_9352;
+        v233 = (System_String_o **)&StringLiteral_9352/*"NP_MAX_COLOR_NAME"*/;
         v234 = LocalizationManager_TypeInfo;
         FollowerPointNotFriend = v232->FollowFriendPoint;
 LABEL_233:
         if ( v96 <= 1 )
-          v233 = (System_String_o **)&StringLiteral_9346;
+          v233 = (System_String_o **)&StringLiteral_9346/*"NP_COLOR_NAME"*/;
         v265 = *v233;
         if ( (BYTE3(v234->vtable._0_Equals.methodPtr) & 4) == 0 )
           goto LABEL_257;

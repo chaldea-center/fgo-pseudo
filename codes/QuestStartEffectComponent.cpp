@@ -181,15 +181,15 @@ void __fastcall QuestStartEffectComponent__SetParam(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&System_Text_RegularExpressions_Regex_TypeInfo, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_21530, v13);
-    sub_B16FFC(&StringLiteral_21529, v14);
-    sub_B16FFC(&StringLiteral_21531, v15);
-    sub_B16FFC(&StringLiteral_15708, v16);
-    sub_B16FFC(&StringLiteral_21533, v17);
-    sub_B16FFC(&StringLiteral_21525, v18);
-    sub_B16FFC(&StringLiteral_22319, v19);
-    sub_B16FFC(&StringLiteral_1, v20);
-    sub_B16FFC(&StringLiteral_22613, v21);
+    sub_B16FFC(&StringLiteral_21530/*"quest_free"*/, v13);
+    sub_B16FFC(&StringLiteral_21529/*"quest_event"*/, v14);
+    sub_B16FFC(&StringLiteral_21531/*"quest_heroic"*/, v15);
+    sub_B16FFC(&StringLiteral_15708/*"[^0-9]"*/, v16);
+    sub_B16FFC(&StringLiteral_21533/*"quest_main"*/, v17);
+    sub_B16FFC(&StringLiteral_21525/*"quest_Interlude"*/, v18);
+    sub_B16FFC(&StringLiteral_22319/*"sub_title_"*/, v19);
+    sub_B16FFC(&StringLiteral_1/*""*/, v20);
+    sub_B16FFC(&StringLiteral_22613/*"title_"*/, v21);
     byte_40F8263 = 1;
   }
   if ( !param
@@ -274,7 +274,7 @@ LABEL_20:
     if ( !v23->klass )
       goto LABEL_132;
     v40 = System_Int32__ToString((unsigned int)v23->klass + 48, 0LL);
-    v41 = System_String__Concat_43743732((System_String_o *)StringLiteral_22613, v40, 0LL);
+    v41 = System_String__Concat_43743732((System_String_o *)StringLiteral_22613/*"title_"*/, v40, 0LL);
     v42 = (UnityEngine_Object_o *)this->fields.titleLabelDecoration;
     v43 = v41;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -380,8 +380,8 @@ LABEL_54:
           }
           v63 = System_Text_RegularExpressions_Regex__Replace(
                   mText,
-                  (System_String_o *)StringLiteral_15708,
-                  (System_String_o *)StringLiteral_1,
+                  (System_String_o *)StringLiteral_15708/*"[^0-9]"*/,
+                  (System_String_o *)StringLiteral_1/*""*/,
                   0LL);
           UILabel__set_text(v61, v63, 0LL);
         }
@@ -423,7 +423,7 @@ LABEL_73:
         goto LABEL_132;
       v71 = (UISprite_o *)this->fields.messageManager;
       v72 = System_Int32__ToString((int)v70 + 48, 0LL);
-      v73 = System_String__Concat_43743732((System_String_o *)StringLiteral_22319, v72, 0LL);
+      v73 = System_String__Concat_43743732((System_String_o *)StringLiteral_22319/*"sub_title_"*/, v72, 0LL);
       if ( !v71 )
         goto LABEL_132;
       UISprite__set_spriteName(v71, v73, 0LL);
@@ -498,7 +498,7 @@ LABEL_73:
         v86 = (UILabel_o *)this->fields.messageSprite;
         if ( !v86 )
           goto LABEL_132;
-        UILabel__set_text(v86, (System_String_o *)StringLiteral_1, 0LL);
+        UILabel__set_text(v86, (System_String_o *)StringLiteral_1/*""*/, 0LL);
       }
     }
     else
@@ -544,19 +544,19 @@ LABEL_73:
       switch ( v23->klass->_1.byval_arg.bits )
       {
         case 1u:
-          v89 = &StringLiteral_21533;
+          v89 = &StringLiteral_21533/*"quest_main"*/;
           goto LABEL_124;
         case 2u:
-          v89 = &StringLiteral_21530;
+          v89 = &StringLiteral_21530/*"quest_free"*/;
           goto LABEL_124;
         case 3u:
-          v89 = &StringLiteral_21525;
+          v89 = &StringLiteral_21525/*"quest_Interlude"*/;
           goto LABEL_124;
         case 5u:
-          v89 = &StringLiteral_21529;
+          v89 = &StringLiteral_21529/*"quest_event"*/;
           goto LABEL_124;
         case 6u:
-          v89 = &StringLiteral_21531;
+          v89 = &StringLiteral_21531/*"quest_heroic"*/;
 LABEL_124:
           v88 = (System_String_o *)*v89;
           break;

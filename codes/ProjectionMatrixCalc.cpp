@@ -33,17 +33,17 @@ void __fastcall ProjectionMatrixCalc___ctor(ProjectionMatrixCalc_o *this, const 
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_Renderer___ctor__, method);
     sub_B16FFC(&System_Collections_Generic_List_Renderer__TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_15977, v10);
-    sub_B16FFC(&StringLiteral_15978, v11);
+    sub_B16FFC(&StringLiteral_15977/*"_ProjectorMatrixVP"*/, v10);
+    sub_B16FFC(&StringLiteral_15978/*"_ProjectorPos"*/, v11);
     byte_40FA031 = 1;
   }
   LODWORD(this->fields._targetRenderers) = 1065353216;
   *(_QWORD *)&this->fields._farClipPlane = 0x42C800003C23D70ALL;
-  v12 = (System_Int32_array **)StringLiteral_15977;
-  this->fields._shaderPropertyName_Pos = (struct System_String_o *)StringLiteral_15977;
+  v12 = (System_Int32_array **)StringLiteral_15977/*"_ProjectorMatrixVP"*/;
+  this->fields._shaderPropertyName_Pos = (struct System_String_o *)StringLiteral_15977/*"_ProjectorMatrixVP"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields._shaderPropertyName_Pos, v12, v2, v3, v4, v5, v6, v7);
-  v13 = (System_Int32_array **)StringLiteral_15978;
-  *(_QWORD *)&this->fields._useRendererBounds = StringLiteral_15978;
+  v13 = (System_Int32_array **)StringLiteral_15978/*"_ProjectorPos"*/;
+  *(_QWORD *)&this->fields._useRendererBounds = StringLiteral_15978/*"_ProjectorPos"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields._useRendererBounds, v13, v14, v15, v16, v17, v18, v19);
   BYTE1(this->fields.workRenderers) = 1;
   v24 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(

@@ -132,7 +132,7 @@ void __fastcall TutorialArrowMenu__Close(
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UIPanel___, callback);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
     sub_B16FFC(&TutorialArrowMenu_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_5924, v12);
+    sub_B16FFC(&StringLiteral_5924/*"EndCloseTutorialArrowMenu"*/, v12);
     byte_40FB8D6 = 1;
   }
   this->fields.callbackFunc = callback;
@@ -203,8 +203,8 @@ void __fastcall TutorialArrowMenu__Close(
           v19 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
           v18->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v19;
           sub_B16F98((BattleServantConfConponent_o *)&v18->fields.eventReceiver, v19, v20, v21, v22, v23, v24, v25);
-          v26 = (System_Int32_array **)StringLiteral_5924;
-          v18->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5924;
+          v26 = (System_Int32_array **)StringLiteral_5924/*"EndCloseTutorialArrowMenu"*/;
+          v18->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5924/*"EndCloseTutorialArrowMenu"*/;
           sub_B16F98((BattleServantConfConponent_o *)&v18->fields.callWhenFinished, v26, v27, v28, v29, v30, v31, v32);
           return;
         }
@@ -215,7 +215,7 @@ LABEL_26:
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_5924,
+    (System_String_o *)StringLiteral_5924/*"EndCloseTutorialArrowMenu"*/,
     0.1,
     0LL);
 }
@@ -702,7 +702,7 @@ void __fastcall TutorialArrowMenu__Open_28003280(
     sub_B16FFC(&Method_System_Collections_Generic_List_TutorialArrowMark__Add__, v16);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v17);
     sub_B16FFC(&TutorialArrowMenu_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_5954, v19);
+    sub_B16FFC(&StringLiteral_5954/*"EndOpenBaseDialog"*/, v19);
     byte_40FB8D4 = 1;
   }
   methoda.methodPointer = 0LL;
@@ -976,8 +976,8 @@ LABEL_85:
   v76 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v75->fields.eventReceiver = (struct UnityEngine_GameObject_o *)v76;
   sub_B16F98((BattleServantConfConponent_o *)&v75->fields.eventReceiver, v76, v77, v78, v79, v80, v81, v82);
-  v83 = (System_Int32_array **)StringLiteral_5954;
-  v75->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5954;
+  v83 = (System_Int32_array **)StringLiteral_5954/*"EndOpenBaseDialog"*/;
+  v75->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5954/*"EndOpenBaseDialog"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v75->fields.callWhenFinished, v83, v84, v85, v86, v87, v88, v89);
 }
 

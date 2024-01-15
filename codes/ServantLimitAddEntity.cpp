@@ -86,10 +86,10 @@ int32_t __fastcall ServantLimitAddEntity__GetAscensionAfterDialogId(
 
   if ( (byte_40FC7DA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16417, *(_QWORD *)&defaultValue);
+    sub_B16FFC(&StringLiteral_16417/*"ascensionAfterDialogId"*/, *(_QWORD *)&defaultValue);
     byte_40FC7DA = 1;
   }
-  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_16417, defaultValue, v3);
+  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_16417/*"ascensionAfterDialogId"*/, defaultValue, v3);
 }
 
 
@@ -100,12 +100,12 @@ System_String_o *__fastcall ServantLimitAddEntity__GetCondTitle(
 {
   if ( (byte_40FC7E1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21289, defaultValue);
+    sub_B16FFC(&StringLiteral_21289/*"overwriteServantParameterTitle"*/, defaultValue);
     byte_40FC7E1 = 1;
   }
   return EntityScriptUtil__GetStringValue(
            this->fields.script,
-           (System_String_o *)StringLiteral_21289,
+           (System_String_o *)StringLiteral_21289/*"overwriteServantParameterTitle"*/,
            defaultValue,
            0LL);
 }
@@ -119,10 +119,10 @@ int32_t __fastcall ServantLimitAddEntity__GetLimitCountUpResultServantLimitCount
 
   if ( (byte_40FC7D0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_20141, method);
+    sub_B16FFC(&StringLiteral_20141/*"limitCountUpResultServantLimitCount"*/, method);
     byte_40FC7D0 = 1;
   }
-  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_20141, -1, v2);
+  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_20141/*"limitCountUpResultServantLimitCount"*/, -1, v2);
 }
 
 
@@ -138,18 +138,18 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverWriteTDRank(
   if ( (byte_40FC7D7 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21252, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_21252/*"overWriteTDRank"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FC7D7 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21252, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21252/*"overWriteTDRank"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
     sub_B173C8(result);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -165,18 +165,18 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverWriteTDTypeText(
   if ( (byte_40FC7D8 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21254, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_21254/*"overWriteTDTypeText"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FC7D8 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21254, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21254/*"overWriteTDTypeText"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
     sub_B173C8(result);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -188,10 +188,10 @@ int32_t __fastcall ServantLimitAddEntity__GetOverwriteCvId(
 {
   if ( (byte_40FC7E0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21269, *(_QWORD *)&defaultCvId);
+    sub_B16FFC(&StringLiteral_21269/*"overwriteCv"*/, *(_QWORD *)&defaultCvId);
     byte_40FC7E0 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21269, defaultCvId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21269/*"overwriteCv"*/, defaultCvId, 0LL);
 }
 
 
@@ -207,18 +207,18 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteServantBattleName
   if ( (byte_40FC7D6 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21247, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_21247/*"overWriteServantBattleName"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FC7D6 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21247, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21247/*"overWriteServantBattleName"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
     sub_B173C8(result);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -234,18 +234,18 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteServantName(
   if ( (byte_40FC7D4 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21248, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_21248/*"overWriteServantName"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FC7D4 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21248, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21248/*"overWriteServantName"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
     sub_B173C8(result);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -255,10 +255,10 @@ System_Int32_array *__fastcall ServantLimitAddEntity__GetOverwriteServantParamet
 {
   if ( (byte_40FC7E3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21288, method);
+    sub_B16FFC(&StringLiteral_21288/*"overwriteServantParameter"*/, method);
     byte_40FC7E3 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_21288, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_21288/*"overwriteServantParameter"*/, 0LL, 0LL);
 }
 
 
@@ -274,18 +274,18 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteServantShortName(
   if ( (byte_40FC7D5 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21249, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_21249/*"overWriteServantShortName"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FC7D5 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21249, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21249/*"overWriteServantShortName"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
     sub_B173C8(result);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -312,13 +312,13 @@ System_String_array *__fastcall ServantLimitAddEntity__GetOverwriteShadowServant
   if ( (byte_40FC7DC & 1) == 0 )
   {
     sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18257, v4);
-    sub_B16FFC(&StringLiteral_10162, v5);
+    sub_B16FFC(&StringLiteral_18257/*"en_waist"*/, v4);
+    sub_B16FFC(&StringLiteral_10162/*"OverwriteShadowServantEffectNodes"*/, v5);
     byte_40FC7DC = 1;
   }
   ScriptStringArrayParam = ServantLimitAddEntity__GetScriptStringArrayParam(
                              this,
-                             (System_String_o *)StringLiteral_10162,
+                             (System_String_o *)StringLiteral_10162/*"OverwriteShadowServantEffectNodes"*/,
                              v2);
   if ( !ScriptStringArrayParam || (v8 = ScriptStringArrayParam, !*(_QWORD *)&ScriptStringArrayParam->max_length) )
   {
@@ -326,16 +326,16 @@ System_String_array *__fastcall ServantLimitAddEntity__GetOverwriteShadowServant
     if ( !v9 )
       sub_B170D4();
     v8 = (System_String_array *)v9;
-    v16 = StringLiteral_18257;
-    if ( StringLiteral_18257 )
+    v16 = StringLiteral_18257/*"en_waist"*/;
+    if ( StringLiteral_18257/*"en_waist"*/ )
     {
-      v16 = sub_B170BC(StringLiteral_18257, v8->obj.klass->_1.element_class);
+      v16 = sub_B170BC(StringLiteral_18257/*"en_waist"*/, v8->obj.klass->_1.element_class);
       if ( !v16 )
       {
         sub_B170F4(0LL);
         sub_B170A0();
       }
-      v17 = (System_Int32_array **)StringLiteral_18257;
+      v17 = (System_Int32_array **)StringLiteral_18257/*"en_waist"*/;
     }
     else
     {
@@ -359,10 +359,10 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteSvtDetailName(
 {
   if ( (byte_40FC7DE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21293, method);
+    sub_B16FFC(&StringLiteral_21293/*"overwriteSvtDetailName"*/, method);
     byte_40FC7DE = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21293, 0LL, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21293/*"overwriteSvtDetailName"*/, 0LL, 0LL);
 }
 
 
@@ -378,18 +378,18 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteTDFileName(
   if ( (byte_40FC7D3 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21250, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_21250/*"overWriteTDFileName"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FC7D3 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21250, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21250/*"overWriteTDFileName"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
     sub_B173C8(result);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -405,18 +405,18 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteTDName(
   if ( (byte_40FC7D1 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21251, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_21251/*"overWriteTDName"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FC7D1 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21251, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21251/*"overWriteTDName"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
     sub_B173C8(result);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -432,18 +432,18 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteTDRuby(
   if ( (byte_40FC7D2 & 1) == 0 )
   {
     sub_B16FFC(&string_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21253, v4);
-    sub_B16FFC(&StringLiteral_1, v5);
+    sub_B16FFC(&StringLiteral_21253/*"overWriteTDRuby"*/, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v5);
     byte_40FC7D2 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21253, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21253/*"overWriteTDRuby"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
     sub_B173C8(result);
   }
-  return (System_String_o *)StringLiteral_1;
+  return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
@@ -457,10 +457,10 @@ int32_t __fastcall ServantLimitAddEntity__GetRandomGroupIndex(ServantLimitAddEnt
   if ( (byte_40FC7D9 & 1) == 0 )
   {
     sub_B16FFC(&System_Convert_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21601, v4);
+    sub_B16FFC(&StringLiteral_21601/*"randomGroupIndex"*/, v4);
     byte_40FC7D9 = 1;
   }
-  ScriptObject = ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21601, v2);
+  ScriptObject = ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_21601/*"randomGroupIndex"*/, v2);
   if ( ScriptObject )
   {
     v6 = ScriptObject;
@@ -589,12 +589,12 @@ int32_t __fastcall ServantLimitAddEntity__GetServantParameterLimitCount(
 {
   if ( (byte_40FC7E2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21889, *(_QWORD *)&defaultLimitCount);
+    sub_B16FFC(&StringLiteral_21889/*"servantParameterLimitCount"*/, *(_QWORD *)&defaultLimitCount);
     byte_40FC7E2 = 1;
   }
   return EntityScriptUtil__GetIntValue(
            this->fields.script,
-           (System_String_o *)StringLiteral_21889,
+           (System_String_o *)StringLiteral_21889/*"servantParameterLimitCount"*/,
            defaultLimitCount,
            0LL);
 }
@@ -606,10 +606,10 @@ int32_t __fastcall ServantLimitAddEntity__GetWeaponEfect(ServantLimitAddEntity_o
 
   if ( (byte_40FC7CF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23163, method);
+    sub_B16FFC(&StringLiteral_23163/*"weaponEffect"*/, method);
     byte_40FC7CF = 1;
   }
-  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_23163, -1, v2);
+  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_23163/*"weaponEffect"*/, -1, v2);
 }
 
 
@@ -619,10 +619,10 @@ int32_t __fastcall ServantLimitAddEntity__GetWeaponGroup(ServantLimitAddEntity_o
 
   if ( (byte_40FC7CE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_23164, method);
+    sub_B16FFC(&StringLiteral_23164/*"weaponGroup"*/, method);
     byte_40FC7CE = 1;
   }
-  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_23164, -1, v2);
+  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_23164/*"weaponGroup"*/, -1, v2);
 }
 
 
@@ -630,10 +630,10 @@ bool __fastcall ServantLimitAddEntity__IsOverwriteCv(ServantLimitAddEntity_o *th
 {
   if ( (byte_40FC7DF & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21269, method);
+    sub_B16FFC(&StringLiteral_21269/*"overwriteCv"*/, method);
     byte_40FC7DF = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_21269, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_21269/*"overwriteCv"*/, 0LL);
 }
 
 
@@ -643,10 +643,10 @@ bool __fastcall ServantLimitAddEntity__IsOverwriteSvtDetailName(
 {
   if ( (byte_40FC7DD & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21293, method);
+    sub_B16FFC(&StringLiteral_21293/*"overwriteSvtDetailName"*/, method);
     byte_40FC7DD = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_21293, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_21293/*"overwriteSvtDetailName"*/, 0LL);
 }
 
 
@@ -933,7 +933,7 @@ int32_t __fastcall ServantLimitAddEntity___c___getScriptIntArrayParam_b__19_0(
 
   if ( (byte_40F7634 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, x);
+    sub_B16FFC(&StringLiteral_1/*""*/, x);
     byte_40F7634 = 1;
   }
   if ( x )
@@ -944,6 +944,6 @@ int32_t __fastcall ServantLimitAddEntity___c___getScriptIntArrayParam_b__19_0(
   else
     v4 = 0LL;
   if ( !v4 )
-    v4 = (System_String_o *)StringLiteral_1;
+    v4 = (System_String_o *)StringLiteral_1/*""*/;
   return System_Int32__Parse(v4, 0LL);
 }

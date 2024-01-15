@@ -105,8 +105,8 @@ WrapLineMessage_o *__fastcall BattleConcatLabelMessageComponent__CreateMessage(
   if ( (byte_40F69F1 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_WrapLineMessage___, text);
-    sub_B16FFC(&StringLiteral_26, v7);
-    sub_B16FFC(&StringLiteral_15748, v8);
+    sub_B16FFC(&StringLiteral_26/*"\n"*/, v7);
+    sub_B16FFC(&StringLiteral_15748/*"[r]"*/, v8);
     byte_40F69F1 = 1;
   }
   Object = BaseMonoBehaviour__createObject(
@@ -123,8 +123,8 @@ WrapLineMessage_o *__fastcall BattleConcatLabelMessageComponent__CreateMessage(
     || (v11 = (WrapLineMessage_o *)Component_srcLineSprite,
         v12 = System_String__Replace_43750968(
                 text,
-                (System_String_o *)StringLiteral_26,
-                (System_String_o *)StringLiteral_15748,
+                (System_String_o *)StringLiteral_26/*"\n"*/,
+                (System_String_o *)StringLiteral_15748/*"[r]"*/,
                 0LL),
         !v11) )
   {

@@ -16,14 +16,14 @@ void __fastcall BattleItemListWindowComponent__CloseWindow(
 
   if ( (byte_40F734D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3102, method);
-    sub_B16FFC(&StringLiteral_3101, v3);
+    sub_B16FFC(&StringLiteral_3102/*"CLOSE_TO_TACTICAL"*/, method);
+    sub_B16FFC(&StringLiteral_3101/*"CLOSE_TO_MENU"*/, v3);
     byte_40F734D = 1;
   }
   if ( this->fields.isFromBattleMenu )
-    v4 = (struct System_String_o **)&StringLiteral_3101;
+    v4 = (struct System_String_o **)&StringLiteral_3101/*"CLOSE_TO_MENU"*/;
   else
-    v4 = (struct System_String_o **)&StringLiteral_3102;
+    v4 = (struct System_String_o **)&StringLiteral_3102/*"CLOSE_TO_TACTICAL"*/;
   if ( !this
     || (v5 = *v4,
         this->fields.closeFsmEvent = *v4,
@@ -150,8 +150,8 @@ System_String_o *__fastcall BattleItemListWindowComponent__get_closeBtnPath(
 {
   if ( (byte_40F734E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12573, method);
+    sub_B16FFC(&StringLiteral_12573/*"Scroll Bar/item_list_close"*/, method);
     byte_40F734E = 1;
   }
-  return (System_String_o *)StringLiteral_12573;
+  return (System_String_o *)StringLiteral_12573/*"Scroll Bar/item_list_close"*/;
 }

@@ -14,12 +14,12 @@ void __fastcall ServantStatusDialog___cctor(const MethodInfo *method)
   if ( (byte_40F87E1 & 1) == 0 )
   {
     sub_B16FFC(&ServantStatusDialog_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_352, v8);
+    sub_B16FFC(&StringLiteral_352/*"#4C4C4C"*/, v8);
     byte_40F87E1 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)ServantStatusDialog_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_352;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_352;
+  v10 = (System_Int32_array **)StringLiteral_352/*"#4C4C4C"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_352/*"#4C4C4C"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -72,7 +72,7 @@ void __fastcall ServantStatusDialog___ctor(ServantStatusDialog_o *this, const Me
     sub_B16FFC(&bool___TypeInfo, method);
     sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, v4);
     sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_23096, v6);
+    sub_B16FFC(&StringLiteral_23096/*"wait"*/, v6);
     byte_40F87E0 = 1;
   }
   LODWORD(this->fields.titleInfo) = 1083283866;
@@ -126,8 +126,8 @@ void __fastcall ServantStatusDialog___ctor(ServantStatusDialog_o *this, const Me
     v33,
     v34,
     v35);
-  v36 = (System_Int32_array **)StringLiteral_23096;
-  *(_QWORD *)&this->fields.confirmDispLv = StringLiteral_23096;
+  v36 = (System_Int32_array **)StringLiteral_23096/*"wait"*/;
+  *(_QWORD *)&this->fields.confirmDispLv = StringLiteral_23096/*"wait"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.confirmDispLv, v36, v37, v38, v39, v40, v41, v42);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
@@ -149,11 +149,11 @@ void __fastcall ServantStatusDialog__BattleAssetLoadError(ServantStatusDialog_o 
   if ( (byte_40F8792 & 1) == 0 )
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40F8792 = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_1;
-  *(_QWORD *)&this->fields.isBattlePlay = StringLiteral_1;
+  v10 = (System_Int32_array **)StringLiteral_1/*""*/;
+  *(_QWORD *)&this->fields.isBattlePlay = StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.isBattlePlay, v10, v2, v3, v4, v5, v6, v7);
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
@@ -219,10 +219,10 @@ void __fastcall ServantStatusDialog__CancelInput(ServantStatusDialog_o *this, co
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v2);
     sub_B16FFC(&TouchEffectManager_TypeInfo, v3);
     sub_B16FFC(&UICamera_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_9958, v5);
-    sub_B16FFC(&StringLiteral_9978, v6);
-    sub_B16FFC(&StringLiteral_10008, v7);
-    sub_B16FFC(&StringLiteral_10017, v8);
+    sub_B16FFC(&StringLiteral_9958/*"OnDragEnd"*/, v5);
+    sub_B16FFC(&StringLiteral_9978/*"OnHover"*/, v6);
+    sub_B16FFC(&StringLiteral_10008/*"OnPress"*/, v7);
+    sub_B16FFC(&StringLiteral_10017/*"OnScrollStop"*/, v8);
     byte_40F878D = 1;
   }
   v9 = UICamera_TypeInfo;
@@ -252,7 +252,7 @@ void __fastcall ServantStatusDialog__CancelInput(ServantStatusDialog_o *this, co
       v12 = currentTouch->fields.last;
       if ( (BYTE3(UICamera_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !UICamera_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-      UICamera__Notify(v12, (System_String_o *)StringLiteral_9958, 0LL, 0LL);
+      UICamera__Notify(v12, (System_String_o *)StringLiteral_9958/*"OnDragEnd"*/, 0LL, 0LL);
     }
     dragged = (UnityEngine_Object_o *)currentTouch->fields.dragged;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -267,7 +267,7 @@ void __fastcall ServantStatusDialog__CancelInput(ServantStatusDialog_o *this, co
       v15 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v48);
       if ( (BYTE3(UICamera_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !UICamera_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-      UICamera__Notify(v14, (System_String_o *)StringLiteral_10008, v15, 0LL);
+      UICamera__Notify(v14, (System_String_o *)StringLiteral_10008/*"OnPress"*/, v15, 0LL);
     }
     current = (UnityEngine_Object_o *)currentTouch->fields.current;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -282,7 +282,7 @@ void __fastcall ServantStatusDialog__CancelInput(ServantStatusDialog_o *this, co
       v18 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v47);
       if ( (BYTE3(UICamera_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !UICamera_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-      UICamera__Notify(v17, (System_String_o *)StringLiteral_9978, v18, 0LL);
+      UICamera__Notify(v17, (System_String_o *)StringLiteral_9978/*"OnHover"*/, v18, 0LL);
     }
   }
   if ( (BYTE3(UICamera_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !UICamera_TypeInfo->_2.cctor_finished )
@@ -299,13 +299,13 @@ void __fastcall ServantStatusDialog__CancelInput(ServantStatusDialog_o *this, co
     v20 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v46);
     if ( (BYTE3(UICamera_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !UICamera_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-    UICamera__Notify(selectedObject, (System_String_o *)StringLiteral_10008, v20, 0LL);
+    UICamera__Notify(selectedObject, (System_String_o *)StringLiteral_10008/*"OnPress"*/, v20, 0LL);
     v45[0] = 1;
     v21 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v45);
-    UICamera__Notify(selectedObject, (System_String_o *)StringLiteral_9978, v21, 0LL);
+    UICamera__Notify(selectedObject, (System_String_o *)StringLiteral_9978/*"OnHover"*/, v21, 0LL);
     v44[0] = 0;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v44);
-    UICamera__Notify(selectedObject, (System_String_o *)StringLiteral_10017, v22, 0LL);
+    UICamera__Notify(selectedObject, (System_String_o *)StringLiteral_10017/*"OnScrollStop"*/, v22, 0LL);
   }
   if ( (BYTE3(UICamera_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !UICamera_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
@@ -1581,15 +1581,15 @@ void __fastcall ServantStatusDialog__EndInitLoad(ServantStatusDialog_o *this, co
     sub_B16FFC(&OptionManager_TypeInfo, v12);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
     sub_B16FFC(&TutorialFlag_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_11905, v15);
-    sub_B16FFC(&StringLiteral_11904, v16);
-    sub_B16FFC(&StringLiteral_11906, v17);
-    sub_B16FFC(&StringLiteral_11907, v18);
-    sub_B16FFC(&StringLiteral_11912, v19);
-    sub_B16FFC(&StringLiteral_11911, v20);
-    sub_B16FFC(&StringLiteral_3547, v21);
-    sub_B16FFC(&StringLiteral_1, v22);
-    sub_B16FFC(&StringLiteral_5945, v23);
+    sub_B16FFC(&StringLiteral_11905/*"SERVANT_STATUS_BATTLE_EXPLANATION2"*/, v15);
+    sub_B16FFC(&StringLiteral_11904/*"SERVANT_STATUS_BATTLE_EXPLANATION"*/, v16);
+    sub_B16FFC(&StringLiteral_11906/*"SERVANT_STATUS_BATTLE_EXPLANATION3"*/, v17);
+    sub_B16FFC(&StringLiteral_11907/*"SERVANT_STATUS_BATTLE_EXPLANATION_LIMIT_COUNT_SEALED_MSG"*/, v18);
+    sub_B16FFC(&StringLiteral_11912/*"SERVANT_STATUS_CLASS_NAME_SERVANT_EQUIP"*/, v19);
+    sub_B16FFC(&StringLiteral_11911/*"SERVANT_STATUS_CLASS_NAME_COMMAND_CODE"*/, v20);
+    sub_B16FFC(&StringLiteral_3547/*"CancelInput"*/, v21);
+    sub_B16FFC(&StringLiteral_1/*""*/, v22);
+    sub_B16FFC(&StringLiteral_5945/*"EndLoadInit"*/, v23);
     byte_40F878B = 1;
   }
   statusTabBase = this->fields.statusTabBase;
@@ -1852,7 +1852,7 @@ LABEL_53:
     v78 = IsOverwriteSvtDetailName;
     if ( (v77 & 0xFFFFFFFE) == 4 )
     {
-      Name = (System_String_o *)StringLiteral_1;
+      Name = (System_String_o *)StringLiteral_1/*""*/;
       if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !OptionManager_TypeInfo->_2.cctor_finished )
       {
@@ -2091,7 +2091,7 @@ LABEL_157:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        ClassName = LocalizationManager__Get((System_String_o *)StringLiteral_11912, 0LL);
+        ClassName = LocalizationManager__Get((System_String_o *)StringLiteral_11912/*"SERVANT_STATUS_CLASS_NAME_SERVANT_EQUIP"*/, 0LL);
       }
       else
       {
@@ -2131,7 +2131,7 @@ LABEL_157:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v69 = &StringLiteral_11905;
+          v69 = &StringLiteral_11905/*"SERVANT_STATUS_BATTLE_EXPLANATION2"*/;
         }
         else
         {
@@ -2140,7 +2140,7 @@ LABEL_157:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v69 = &StringLiteral_11906;
+          v69 = &StringLiteral_11906/*"SERVANT_STATUS_BATTLE_EXPLANATION3"*/;
         }
         goto LABEL_81;
       }
@@ -2151,7 +2151,7 @@ LABEL_157:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v142 = LocalizationManager__Get((System_String_o *)StringLiteral_11904, 0LL);
+      v142 = LocalizationManager__Get((System_String_o *)StringLiteral_11904/*"SERVANT_STATUS_BATTLE_EXPLANATION"*/, 0LL);
       if ( v141 )
       {
         UILabel__set_text((UILabel_o *)v141, v142, 0LL);
@@ -2178,7 +2178,7 @@ LABEL_157:
               {
                 ServantStatusExplanationText = ServantLimitImageMaster__GetServantStatusExplanationText(
                                                  v140,
-                                                 (System_String_o *)StringLiteral_11907,
+                                                 (System_String_o *)StringLiteral_11907/*"SERVANT_STATUS_BATTLE_EXPLANATION_LIMIT_COUNT_SEALED_MSG"*/,
                                                  v148,
                                                  0LL);
                 v150 = this->fields.markBase;
@@ -2224,7 +2224,7 @@ LABEL_219:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v69 = &StringLiteral_11911;
+    v69 = &StringLiteral_11911/*"SERVANT_STATUS_CLASS_NAME_COMMAND_CODE"*/;
 LABEL_81:
     v70 = LocalizationManager__Get((System_String_o *)*v69, 0LL);
     if ( !v68 )
@@ -2274,14 +2274,14 @@ LABEL_204:
   if ( v161 - 10 < 0x13 || v161 <= 0x24 && ((1LL << v161) & 0x11C0000000LL) != 0 )
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_5945,
+      (System_String_o *)StringLiteral_5945/*"EndLoadInit"*/,
       0.1,
       0LL);
   else
     ServantStatusDialog__StartStatusLoad(this, v160);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_3547,
+    (System_String_o *)StringLiteral_3547/*"CancelInput"*/,
     0.0,
     0LL);
 }
@@ -2384,7 +2384,7 @@ void __fastcall ServantStatusDialog__EndLoadInit(ServantStatusDialog_o *this, co
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
     sub_B16FFC(&TutorialFlag_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_13452, v5);
+    sub_B16FFC(&StringLiteral_13452/*"TUTORIAL_MESSAGE_FAVORITE1"*/, v5);
     byte_40F878E = 1;
   }
   if ( LOBYTE(this->fields.newProfileList) )
@@ -2402,7 +2402,7 @@ void __fastcall ServantStatusDialog__EndLoadInit(ServantStatusDialog_o *this, co
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v7 = LocalizationManager__Get((System_String_o *)StringLiteral_13452, 0LL);
+      v7 = LocalizationManager__Get((System_String_o *)StringLiteral_13452/*"TUTORIAL_MESSAGE_FAVORITE1"*/, 0LL);
       if ( !Instance )
         sub_B170D4();
       CommonUI__OpenTutorialNotificationDialog(Instance, v7, 106, 0LL, 0LL);
@@ -2574,7 +2574,7 @@ void __fastcall ServantStatusDialog__EndPlayVoice(ServantStatusDialog_o *this, c
 
   if ( (byte_40F87A4 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5970, method);
+    sub_B16FFC(&StringLiteral_5970/*"EndWaitVoice"*/, method);
     byte_40F87A4 = 1;
   }
   this->fields.voicePlayList = 0LL;
@@ -2597,7 +2597,7 @@ void __fastcall ServantStatusDialog__EndPlayVoice(ServantStatusDialog_o *this, c
       {
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_5970,
+          (System_String_o *)StringLiteral_5970/*"EndWaitVoice"*/,
           *(float *)(v20 + 24),
           0LL);
         return;
@@ -2768,7 +2768,7 @@ void __fastcall ServantStatusDialog__EndStatusLoad2(
     sub_B16FFC(&ServantStatusListViewManager_CallbackFunc_TypeInfo, data);
     sub_B16FFC(&Method_ServantStatusDialog_OnSelectStatus__, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_5945, v6);
+    sub_B16FFC(&StringLiteral_5945/*"EndLoadInit"*/, v6);
     byte_40F8791 = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -2813,7 +2813,7 @@ LABEL_10:
 LABEL_9:
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_5945,
+    (System_String_o *)StringLiteral_5945/*"EndLoadInit"*/,
     0.1,
     0LL);
 }
@@ -3969,9 +3969,9 @@ System_String_o *__fastcall ServantStatusDialog__GetVoiceAssetName(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, *(_QWORD *)&assetType);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&StringLiteral_9568, v10);
-    sub_B16FFC(&StringLiteral_3947, v11);
-    sub_B16FFC(&StringLiteral_12683, v12);
+    sub_B16FFC(&StringLiteral_9568/*"NoblePhantasm_"*/, v10);
+    sub_B16FFC(&StringLiteral_3947/*"ChrVoice_"*/, v11);
+    sub_B16FFC(&StringLiteral_12683/*"Servants_"*/, v12);
     byte_40F879E = 1;
   }
   v19 = 0;
@@ -5131,11 +5131,11 @@ void __fastcall ServantStatusDialog__OnClickFavorite(ServantStatusDialog_o *this
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v17);
     sub_B16FFC(&SoundManager_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_11936, v19);
-    sub_B16FFC(&StringLiteral_11934, v20);
-    sub_B16FFC(&StringLiteral_11933, v21);
-    sub_B16FFC(&StringLiteral_11937, v22);
-    sub_B16FFC(&StringLiteral_11935, v23);
+    sub_B16FFC(&StringLiteral_11936/*"SERVANT_STATUS_FAVORITE_CONFIRM_MESSAGE"*/, v19);
+    sub_B16FFC(&StringLiteral_11934/*"SERVANT_STATUS_FAVORITE_CONFIRM_DECIDE"*/, v20);
+    sub_B16FFC(&StringLiteral_11933/*"SERVANT_STATUS_FAVORITE_CONFIRM_CANCEL"*/, v21);
+    sub_B16FFC(&StringLiteral_11937/*"SERVANT_STATUS_FAVORITE_CONFIRM_TITLE"*/, v22);
+    sub_B16FFC(&StringLiteral_11935/*"SERVANT_STATUS_FAVORITE_CONFIRM_EVENT_JOIN_MESSAGE"*/, v23);
     byte_40F87D9 = 1;
   }
   if ( !BYTE2(this->fields.statusLoadAsset) && !BYTE1(this->fields.statusLoadAsset) )
@@ -5268,7 +5268,7 @@ void __fastcall ServantStatusDialog__OnClickFavorite(ServantStatusDialog_o *this
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v50 = LocalizationManager__Get((System_String_o *)StringLiteral_11936, 0LL);
+    v50 = LocalizationManager__Get((System_String_o *)StringLiteral_11936/*"SERVANT_STATUS_FAVORITE_CONFIRM_MESSAGE"*/, 0LL);
     v52 = sub_B17014(object___TypeInfo, 6LL, v51);
     Rarity = UserServantEntity__getRarity(Entity, 0LL);
     if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
@@ -5366,7 +5366,7 @@ void __fastcall ServantStatusDialog__OnClickFavorite(ServantStatusDialog_o *this
                       {
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                       }
-                      v103 = LocalizationManager__Get((System_String_o *)StringLiteral_11935, 0LL);
+                      v103 = LocalizationManager__Get((System_String_o *)StringLiteral_11935/*"SERVANT_STATUS_FAVORITE_CONFIRM_EVENT_JOIN_MESSAGE"*/, 0LL);
                       v101 = System_String__Concat_43743732(v101, v103, 0LL);
                     }
                   }
@@ -5376,9 +5376,9 @@ void __fastcall ServantStatusDialog__OnClickFavorite(ServantStatusDialog_o *this
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v105 = LocalizationManager__Get((System_String_o *)StringLiteral_11937, 0LL);
-                  v106 = LocalizationManager__Get((System_String_o *)StringLiteral_11934, 0LL);
-                  v107 = LocalizationManager__Get((System_String_o *)StringLiteral_11933, 0LL);
+                  v105 = LocalizationManager__Get((System_String_o *)StringLiteral_11937/*"SERVANT_STATUS_FAVORITE_CONFIRM_TITLE"*/, 0LL);
+                  v106 = LocalizationManager__Get((System_String_o *)StringLiteral_11934/*"SERVANT_STATUS_FAVORITE_CONFIRM_DECIDE"*/, 0LL);
+                  v107 = LocalizationManager__Get((System_String_o *)StringLiteral_11933/*"SERVANT_STATUS_FAVORITE_CONFIRM_CANCEL"*/, 0LL);
                   v112 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                                   CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                                   v108,
@@ -5732,10 +5732,10 @@ void __fastcall ServantStatusDialog__OnClickPush(ServantStatusDialog_o *this, co
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v17);
     sub_B16FFC(&SoundManager_TypeInfo, v18);
-    sub_B16FFC(&StringLiteral_11946, v19);
-    sub_B16FFC(&StringLiteral_11944, v20);
-    sub_B16FFC(&StringLiteral_11945, v21);
-    sub_B16FFC(&StringLiteral_11947, v22);
+    sub_B16FFC(&StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v19);
+    sub_B16FFC(&StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v21);
+    sub_B16FFC(&StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v22);
     byte_40F87DB = 1;
   }
   if ( !BYTE2(this->fields.statusLoadAsset) && !BYTE1(this->fields.statusLoadAsset) )
@@ -5880,7 +5880,7 @@ LABEL_86:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v52 = LocalizationManager__Get((System_String_o *)StringLiteral_11946, 0LL);
+    v52 = LocalizationManager__Get((System_String_o *)StringLiteral_11946/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
     v54 = sub_B17014(object___TypeInfo, 6LL, v53);
     Rarity = UserServantEntity__getRarity(Entity, 0LL);
     if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
@@ -5962,9 +5962,9 @@ LABEL_86:
                   sub_B16F98((BattleServantConfConponent_o *)(v54 + 72), v101, v58, v96, v97, v98, v99, v100);
                   v102 = System_String__Format_43822456(v52, (System_Object_array *)v54, 0LL);
                   v103 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-                  v104 = LocalizationManager__Get((System_String_o *)StringLiteral_11947, 0LL);
-                  v105 = LocalizationManager__Get((System_String_o *)StringLiteral_11945, 0LL);
-                  v106 = LocalizationManager__Get((System_String_o *)StringLiteral_11944, 0LL);
+                  v104 = LocalizationManager__Get((System_String_o *)StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
+                  v105 = LocalizationManager__Get((System_String_o *)StringLiteral_11945/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
+                  v106 = LocalizationManager__Get((System_String_o *)StringLiteral_11944/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
                   v111 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                                   CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                                   v107,
@@ -6126,15 +6126,15 @@ void __fastcall ServantStatusDialog__OnClickServantQuest(
     sub_B16FFC(&Method_SingletonTemplate_QuestTree__get_Instance__, v13);
     sub_B16FFC(&SingletonTemplate_QuestTree__TypeInfo, v14);
     sub_B16FFC(&SoundManager_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_23445, v16);
-    sub_B16FFC(&StringLiteral_11981, v17);
-    sub_B16FFC(&StringLiteral_11983, v18);
-    sub_B16FFC(&StringLiteral_11984, v19);
-    sub_B16FFC(&StringLiteral_11977, v20);
-    sub_B16FFC(&StringLiteral_11980, v21);
-    sub_B16FFC(&StringLiteral_11982, v22);
-    sub_B16FFC(&StringLiteral_11978, v23);
-    sub_B16FFC(&StringLiteral_11979, v24);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v16);
+    sub_B16FFC(&StringLiteral_11981/*"SERVANT_STATUS_SERVANT_QUEST_INTERLUDE_CONFIRM_MESSAGE"*/, v17);
+    sub_B16FFC(&StringLiteral_11983/*"SERVANT_STATUS_SERVANT_QUEST_RAINFORCEMENT_CONFIRM_MESSAGE"*/, v18);
+    sub_B16FFC(&StringLiteral_11984/*"SERVANT_STATUS_SERVANT_QUEST_RAINFORCEMENT_CONFIRM_TITLE"*/, v19);
+    sub_B16FFC(&StringLiteral_11977/*"SERVANT_STATUS_SERVANT_QUEST_CONFIRM_CANCEL"*/, v20);
+    sub_B16FFC(&StringLiteral_11980/*"SERVANT_STATUS_SERVANT_QUEST_INTERLUDE2_CONFIRM_TITLE"*/, v21);
+    sub_B16FFC(&StringLiteral_11982/*"SERVANT_STATUS_SERVANT_QUEST_INTERLUDE_CONFIRM_TITLE"*/, v22);
+    sub_B16FFC(&StringLiteral_11978/*"SERVANT_STATUS_SERVANT_QUEST_CONFIRM_DECIDE"*/, v23);
+    sub_B16FFC(&StringLiteral_11979/*"SERVANT_STATUS_SERVANT_QUEST_INTERLUDE2_CONFIRM_MESSAGE"*/, v24);
     byte_40F87CF = 1;
   }
   if ( !this->fields.individualityCallbackFunc && !this->fields.resultCallbackFunc )
@@ -6190,7 +6190,7 @@ LABEL_51:
   if ( !QuestName )
     goto LABEL_48;
   v32 = QuestName;
-  if ( System_String__Contains(QuestName, (System_String_o *)StringLiteral_23445, 0LL) )
+  if ( System_String__Contains(QuestName, (System_String_o *)StringLiteral_23445/*"{0}"*/, 0LL) )
   {
     Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
@@ -6234,8 +6234,8 @@ LABEL_51:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_11980, 0LL);
-        v50 = &StringLiteral_11979;
+        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_11980/*"SERVANT_STATUS_SERVANT_QUEST_INTERLUDE2_CONFIRM_TITLE"*/, 0LL);
+        v50 = &StringLiteral_11979/*"SERVANT_STATUS_SERVANT_QUEST_INTERLUDE2_CONFIRM_MESSAGE"*/;
       }
       else
       {
@@ -6244,8 +6244,8 @@ LABEL_51:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_11982, 0LL);
-        v50 = &StringLiteral_11981;
+        v49 = LocalizationManager__Get((System_String_o *)StringLiteral_11982/*"SERVANT_STATUS_SERVANT_QUEST_INTERLUDE_CONFIRM_TITLE"*/, 0LL);
+        v50 = &StringLiteral_11981/*"SERVANT_STATUS_SERVANT_QUEST_INTERLUDE_CONFIRM_MESSAGE"*/;
       }
       goto LABEL_46;
     }
@@ -6258,14 +6258,14 @@ LABEL_48:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_11984, 0LL);
-  v50 = &StringLiteral_11983;
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_11984/*"SERVANT_STATUS_SERVANT_QUEST_RAINFORCEMENT_CONFIRM_TITLE"*/, 0LL);
+  v50 = &StringLiteral_11983/*"SERVANT_STATUS_SERVANT_QUEST_RAINFORCEMENT_CONFIRM_MESSAGE"*/;
 LABEL_46:
   v51 = v49;
   v52 = LocalizationManager__Get((System_String_o *)*v50, 0LL);
   v53 = System_String__Format(v52, (Il2CppObject *)v32, 0LL);
-  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_11978, 0LL);
-  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_11977, 0LL);
+  v54 = LocalizationManager__Get((System_String_o *)StringLiteral_11978/*"SERVANT_STATUS_SERVANT_QUEST_CONFIRM_DECIDE"*/, 0LL);
+  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_11977/*"SERVANT_STATUS_SERVANT_QUEST_CONFIRM_CANCEL"*/, 0LL);
   v60 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v56,
@@ -6435,9 +6435,9 @@ void __fastcall ServantStatusDialog__OnClickTdSpeed(
     sub_B16FFC(&string_TypeInfo, v13);
     sub_B16FFC(&Method_ServantStatusDialog___c__DisplayClass202_0__OnClickTdSpeed_b__0__, v14);
     sub_B16FFC(&ServantStatusDialog___c__DisplayClass202_0_TypeInfo, v15);
-    sub_B16FFC(&StringLiteral_11986, v16);
-    sub_B16FFC(&StringLiteral_11987, v17);
-    sub_B16FFC(&StringLiteral_11988, v18);
+    sub_B16FFC(&StringLiteral_11986/*"SERVANT_STATUS_TD_SPEED_DIALOG_CANCEL"*/, v16);
+    sub_B16FFC(&StringLiteral_11987/*"SERVANT_STATUS_TD_SPEED_DIALOG_DECIDE"*/, v17);
+    sub_B16FFC(&StringLiteral_11988/*"SERVANT_STATUS_TD_SPEED_DIALOG_MESSAGE"*/, v18);
     byte_40F87D0 = 1;
   }
   v19 = sub_B170CC(ServantStatusDialog___c__DisplayClass202_0_TypeInfo, *(_QWORD *)&type, method, v3, v4);
@@ -6498,7 +6498,7 @@ LABEL_27:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_11988, 0LL);
+    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_11988/*"SERVANT_STATUS_TD_SPEED_DIALOG_MESSAGE"*/, 0LL);
     v38 = System_String__Format_43739268(v37, TDSpeedLocalization, v36, 0LL);
     v39 = *((_QWORD *)Method_SingletonMonoBehaviour_CommonUI__getInstance__ + 3);
     if ( (*(_BYTE *)(v39 + 306) & 1) == 0 )
@@ -6508,8 +6508,8 @@ LABEL_27:
       sub_AAFCFC(v40);
     v41 = **(CommonUI_o ***)(v40 + 184);
     Empty = string_TypeInfo->static_fields->Empty;
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_11987, 0LL);
-    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_11986, 0LL);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_11987/*"SERVANT_STATUS_TD_SPEED_DIALOG_DECIDE"*/, 0LL);
+    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_11986/*"SERVANT_STATUS_TD_SPEED_DIALOG_CANCEL"*/, 0LL);
     v49 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                    CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                    v45,
@@ -6832,13 +6832,13 @@ void __fastcall ServantStatusDialog__OnEnable(ServantStatusDialog_o *this, const
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_2715, v4);
+    sub_B16FFC(&StringLiteral_2715/*"Base/TitlePrefab/BackObj/BtnBg"*/, v4);
     byte_40F87DF = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_13;
-  v6 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_2715, 0LL);
+  v6 = (UnityEngine_Component_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_2715/*"Base/TitlePrefab/BackObj/BtnBg"*/, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -7444,7 +7444,7 @@ void __fastcall ServantStatusDialog__OnSelectVoice(
     sub_B16FFC(&Method_DataManager_GetMasterData_ServantVoiceMaster___, v10);
     sub_B16FFC(&Method_ServantStatusDialog_OnSelectVoice__, v11);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_15842, v13);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v13);
     byte_40F87B5 = 1;
   }
   VoicePrefix = 0;
@@ -7507,7 +7507,7 @@ void __fastcall ServantStatusDialog__OnSelectVoice(
         VoicePrefix = ServantLimitAddMaster__getVoicePrefix(MasterData_WarQuestSelectionMaster, v25, LimitCount, 0LL);
         v28 = System_Int32__ToString((int32_t)&VoicePrefix, 0LL);
         LabelName = ServantStatusVoiceListViewItem__get_LabelName(v24, 0LL);
-        v30 = System_String__Concat_43746016(v28, (System_String_o *)StringLiteral_15842, LabelName, 0LL);
+        v30 = System_String__Concat_43746016(v28, (System_String_o *)StringLiteral_15842/*"_"*/, LabelName, 0LL);
         switch ( ServantStatusVoiceListViewItem__get_PlayType(v24, 0LL) )
         {
           case 1:
@@ -7696,10 +7696,10 @@ void __fastcall ServantStatusDialog__OnclickRandomLimitCountMask(
     sub_B16FFC(&Method_ServantStatusDialog__OnclickRandomLimitCountMask_b__181_0__, v9);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__getInstance__, v10);
     sub_B16FFC(&SoundManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_11952, v12);
-    sub_B16FFC(&StringLiteral_11950, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
-    sub_B16FFC(&StringLiteral_11949, v15);
+    sub_B16FFC(&StringLiteral_11952/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_DIALOG_SETTING_OWN"*/, v12);
+    sub_B16FFC(&StringLiteral_11950/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_DECIDE"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
+    sub_B16FFC(&StringLiteral_11949/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_CANCEL"*/, v15);
     byte_40F87BB = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -7707,8 +7707,8 @@ void __fastcall ServantStatusDialog__OnclickRandomLimitCountMask(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_11950, 0LL);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11949, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_11950/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_DECIDE"*/, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_11949/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_CANCEL"*/, 0LL);
   LODWORD(this[1].klass) = maskType;
   if ( (unsigned int)(maskType - 1) < 2 )
   {
@@ -7770,7 +7770,7 @@ LABEL_32:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11952, 0LL);
+      v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11952/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_DIALOG_SETTING_OWN"*/, 0LL);
       v34 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                      CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                      v30,
@@ -7786,7 +7786,7 @@ LABEL_32:
         goto LABEL_32;
       CommonUI__OpenConfirmDecideDlg(
         v28,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         v29,
         v16,
         v18,
@@ -9787,8 +9787,8 @@ void __fastcall ServantStatusDialog__PlayBattleEffect(
     sub_B16FFC(&ServantAssetLoadManager_TypeInfo, v19);
     sub_B16FFC(&Method_ServantStatusDialog_OnSelectStatus__, v20);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    sub_B16FFC(&StringLiteral_2757, v22);
-    sub_B16FFC(&StringLiteral_16147, v23);
+    sub_B16FFC(&StringLiteral_2757/*"Battle2D"*/, v22);
+    sub_B16FFC(&StringLiteral_16147/*"_y0"*/, v23);
     byte_40F8799 = 1;
   }
   entity = 0LL;
@@ -10048,7 +10048,7 @@ void __fastcall ServantStatusDialog__PlayBattleEffect(
         BattleFBXComponent__SetTempShaderFloatProperty(
           (BattleFBXComponent_o *)v57,
           5000.0,
-          (System_String_o *)StringLiteral_16147,
+          (System_String_o *)StringLiteral_16147/*"_y0"*/,
           0LL);
       if ( (BYTE3(ServantAssetLoadManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
@@ -10114,7 +10114,7 @@ LABEL_93:
         v92,
         v93,
         v94);
-      v95 = UnityEngine_LayerMask__NameToLayer((System_String_o *)StringLiteral_2757, 0LL);
+      v95 = UnityEngine_LayerMask__NameToLayer((System_String_o *)StringLiteral_2757/*"Battle2D"*/, 0LL);
       if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       NGUITools__SetLayer((UnityEngine_GameObject_o *)Manager__loadBattleActor, v95, 0LL);
@@ -10570,13 +10570,13 @@ void __fastcall ServantStatusDialog__RandomLimitCountSettingResource(
     sub_B16FFC(&Method_ServantStatusDialog___c__DisplayClass206_0__RandomLimitCountSettingResource_b__1__, v18);
     sub_B16FFC(&Method_ServantStatusDialog___c__DisplayClass206_0__RandomLimitCountSettingResource_b__2__, v19);
     sub_B16FFC(&ServantStatusDialog___c__DisplayClass206_0_TypeInfo, v20);
-    sub_B16FFC(&StringLiteral_11967, v21);
-    sub_B16FFC(&StringLiteral_11965, v22);
-    sub_B16FFC(&StringLiteral_11950, v23);
-    sub_B16FFC(&StringLiteral_1, v24);
-    sub_B16FFC(&StringLiteral_11951, v25);
-    sub_B16FFC(&StringLiteral_11966, v26);
-    sub_B16FFC(&StringLiteral_11949, v27);
+    sub_B16FFC(&StringLiteral_11967/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_MESSAGE"*/, v21);
+    sub_B16FFC(&StringLiteral_11965/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_CANCEL"*/, v22);
+    sub_B16FFC(&StringLiteral_11950/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_DECIDE"*/, v23);
+    sub_B16FFC(&StringLiteral_1/*""*/, v24);
+    sub_B16FFC(&StringLiteral_11951/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_MESSAGE"*/, v25);
+    sub_B16FFC(&StringLiteral_11966/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_DECIDE"*/, v26);
+    sub_B16FFC(&StringLiteral_11949/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_CANCEL"*/, v27);
     byte_40F87D3 = 1;
   }
   v28 = sub_B170CC(ServantStatusDialog___c__DisplayClass206_0_TypeInfo, isOwnSetting, method, v3, v4);
@@ -10661,9 +10661,9 @@ void __fastcall ServantStatusDialog__RandomLimitCountSettingResource(
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v56 = LocalizationManager__Get((System_String_o *)StringLiteral_11967, 0LL);
-          v57 = LocalizationManager__Get((System_String_o *)StringLiteral_11966, 0LL);
-          v58 = LocalizationManager__Get((System_String_o *)StringLiteral_11965, 0LL);
+          v56 = LocalizationManager__Get((System_String_o *)StringLiteral_11967/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
+          v57 = LocalizationManager__Get((System_String_o *)StringLiteral_11966/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_DECIDE"*/, 0LL);
+          v58 = LocalizationManager__Get((System_String_o *)StringLiteral_11965/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_CANCEL"*/, 0LL);
           v63 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                          CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                          v59,
@@ -10690,9 +10690,9 @@ void __fastcall ServantStatusDialog__RandomLimitCountSettingResource(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v56 = LocalizationManager__Get((System_String_o *)StringLiteral_11951, 0LL);
-    v57 = LocalizationManager__Get((System_String_o *)StringLiteral_11950, 0LL);
-    v58 = LocalizationManager__Get((System_String_o *)StringLiteral_11949, 0LL);
+    v56 = LocalizationManager__Get((System_String_o *)StringLiteral_11951/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
+    v57 = LocalizationManager__Get((System_String_o *)StringLiteral_11950/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_DECIDE"*/, 0LL);
+    v58 = LocalizationManager__Get((System_String_o *)StringLiteral_11949/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_CANCEL"*/, 0LL);
     v63 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                    CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                    v67,
@@ -10707,7 +10707,7 @@ LABEL_42:
     {
       CommonUI__OpenConfirmDecideDlg(
         v55,
-        (System_String_o *)StringLiteral_1,
+        (System_String_o *)StringLiteral_1/*""*/,
         v56,
         v57,
         v58,
@@ -11084,16 +11084,16 @@ void __fastcall ServantStatusDialog__SetMark(ServantStatusDialog_o *this, const 
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_17067, v4);
-    sub_B16FFC(&StringLiteral_17071, v5);
-    sub_B16FFC(&StringLiteral_17072, v6);
-    sub_B16FFC(&StringLiteral_17068, v7);
-    sub_B16FFC(&StringLiteral_17062, v8);
-    sub_B16FFC(&StringLiteral_19256, v9);
-    sub_B16FFC(&StringLiteral_17061, v10);
-    sub_B16FFC(&StringLiteral_19257, v11);
-    sub_B16FFC(&StringLiteral_17063, v12);
-    sub_B16FFC(&StringLiteral_17064, v13);
+    sub_B16FFC(&StringLiteral_17067/*"button_lock_reg"*/, v4);
+    sub_B16FFC(&StringLiteral_17071/*"button_push_reg"*/, v5);
+    sub_B16FFC(&StringLiteral_17072/*"button_push_unreg"*/, v6);
+    sub_B16FFC(&StringLiteral_17068/*"button_lock_unreg"*/, v7);
+    sub_B16FFC(&StringLiteral_17062/*"button_choice_unreg"*/, v8);
+    sub_B16FFC(&StringLiteral_19256/*"icon_equip"*/, v9);
+    sub_B16FFC(&StringLiteral_17061/*"button_choice_reg"*/, v10);
+    sub_B16FFC(&StringLiteral_19257/*"icon_equip_cc"*/, v11);
+    sub_B16FFC(&StringLiteral_17063/*"button_favorite_reg"*/, v12);
+    sub_B16FFC(&StringLiteral_17064/*"button_favorite_unreg"*/, v13);
     byte_40F87AB = 1;
   }
   v14 = *(_QWORD **)&this->fields.isModify;
@@ -11125,7 +11125,7 @@ LABEL_8:
       choiceSprite = this->fields.choiceSprite;
       if ( !choiceSprite )
         goto LABEL_87;
-      v36 = (System_String_o **)(*(_BYTE *)(v34 + 325) ? &StringLiteral_17067 : &StringLiteral_17068);
+      v36 = (System_String_o **)(*(_BYTE *)(v34 + 325) ? &StringLiteral_17067/*"button_lock_reg"*/ : &StringLiteral_17068/*"button_lock_unreg"*/);
       UISprite__set_spriteName(choiceSprite, *v36, 0LL);
       v37 = *(_QWORD *)&this->fields.isModify;
       if ( !v37 )
@@ -11133,7 +11133,7 @@ LABEL_8:
       favoriteButton = this->fields.favoriteButton;
       if ( !favoriteButton )
         goto LABEL_87;
-      v39 = (System_String_o **)(*(_BYTE *)(v37 + 326) ? &StringLiteral_17061 : &StringLiteral_17062);
+      v39 = (System_String_o **)(*(_BYTE *)(v37 + 326) ? &StringLiteral_17061/*"button_choice_reg"*/ : &StringLiteral_17062/*"button_choice_unreg"*/);
       UISprite__set_spriteName((UISprite_o *)favoriteButton, *v39, 0LL);
       favoriteSprite = (UnityEngine_Component_o *)this->fields.favoriteSprite;
       if ( !favoriteSprite )
@@ -11162,9 +11162,9 @@ LABEL_8:
       v47 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44071692(&v70, 0LL);
       if ( !equipSprite )
         goto LABEL_87;
-      v48 = (System_String_o **)&StringLiteral_17063;
+      v48 = (System_String_o **)&StringLiteral_17063/*"button_favorite_reg"*/;
       if ( v46 != v47 )
-        v48 = (System_String_o **)&StringLiteral_17064;
+        v48 = (System_String_o **)&StringLiteral_17064/*"button_favorite_unreg"*/;
       UISprite__set_spriteName(equipSprite, *v48, 0LL);
       pushSprite = (UnityEngine_Object_o *)this->fields.pushSprite;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -11200,7 +11200,7 @@ LABEL_8:
           charaGraphListViewManager = this->fields.charaGraphListViewManager;
           if ( !charaGraphListViewManager )
             goto LABEL_87;
-          v56 = (System_String_o **)&StringLiteral_17072;
+          v56 = (System_String_o **)&StringLiteral_17072/*"button_push_unreg"*/;
         }
         else
         {
@@ -11232,11 +11232,11 @@ LABEL_8:
           v63 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44071692(&v69, 0LL);
           if ( !v61 )
             goto LABEL_87;
-          v56 = (System_String_o **)&StringLiteral_17071;
+          v56 = (System_String_o **)&StringLiteral_17071/*"button_push_reg"*/;
           v64 = v62 == v63;
           charaGraphListViewManager = v61;
           if ( !v64 )
-            v56 = (System_String_o **)&StringLiteral_17072;
+            v56 = (System_String_o **)&StringLiteral_17072/*"button_push_unreg"*/;
         }
         UISprite__set_spriteName((UISprite_o *)charaGraphListViewManager, *v56, 0LL);
       }
@@ -11253,7 +11253,7 @@ LABEL_8:
       v68 = this->fields.pushButton;
       if ( !v68 )
         goto LABEL_87;
-      UISprite__set_spriteName((UISprite_o *)v68, (System_String_o *)StringLiteral_19256, 0LL);
+      UISprite__set_spriteName((UISprite_o *)v68, (System_String_o *)StringLiteral_19256/*"icon_equip"*/, 0LL);
       return;
     }
     v14 = *(_QWORD **)&this->fields.isModify;
@@ -11272,12 +11272,12 @@ LABEL_8:
   v19 = this->fields.choiceSprite;
   if ( !v19 )
     goto LABEL_87;
-  v20 = (System_String_o **)(*(_BYTE *)(v18 + 325) ? &StringLiteral_17067 : &StringLiteral_17068);
+  v20 = (System_String_o **)(*(_BYTE *)(v18 + 325) ? &StringLiteral_17067/*"button_lock_reg"*/ : &StringLiteral_17068/*"button_lock_unreg"*/);
   if ( (UISprite__set_spriteName(v19, *v20, 0LL), (v21 = *(_QWORD *)&this->fields.isModify) == 0)
     || (v22 = this->fields.favoriteButton) == 0LL
     || (*(_BYTE *)(v21 + 326)
-      ? (v23 = (System_String_o **)&StringLiteral_17061)
-      : (v23 = (System_String_o **)&StringLiteral_17062),
+      ? (v23 = (System_String_o **)&StringLiteral_17061/*"button_choice_reg"*/)
+      : (v23 = (System_String_o **)&StringLiteral_17062/*"button_choice_unreg"*/),
         (UISprite__set_spriteName((UISprite_o *)v22, *v23, 0LL),
          (v24 = (UnityEngine_Component_o *)this->fields.favoriteSprite) == 0LL)
      || (v25 = UnityEngine_Component__get_gameObject(v24, 0LL)) == 0LL) )
@@ -11315,7 +11315,7 @@ LABEL_87:
   v32 = this->fields.pushButton;
   if ( !v32 )
     goto LABEL_87;
-  UISprite__set_spriteName((UISprite_o *)v32, (System_String_o *)StringLiteral_19257, 0LL);
+  UISprite__set_spriteName((UISprite_o *)v32, (System_String_o *)StringLiteral_19257/*"icon_equip_cc"*/, 0LL);
 }
 
 
@@ -11624,18 +11624,18 @@ void __fastcall ServantStatusDialog__SetTabKind(ServantStatusDialog_o *this, int
     sub_B16FFC(&Method_ServantStatusDialog_OnSelectFlavor__, v13);
     sub_B16FFC(&Method_ServantStatusDialog_OnSelectStatus__, v14);
     sub_B16FFC(&Method_ServantStatusDialog_OnSelectVoice__, v15);
-    sub_B16FFC(&StringLiteral_16983, v16);
-    sub_B16FFC(&StringLiteral_16967, v17);
-    sub_B16FFC(&StringLiteral_17030, v18);
-    sub_B16FFC(&StringLiteral_16896, v19);
-    sub_B16FFC(&StringLiteral_17029, v20);
-    sub_B16FFC(&StringLiteral_17040, v21);
-    sub_B16FFC(&StringLiteral_17011, v22);
-    sub_B16FFC(&StringLiteral_17039, v23);
-    sub_B16FFC(&StringLiteral_16898, v24);
-    sub_B16FFC(&StringLiteral_16984, v25);
-    sub_B16FFC(&StringLiteral_17010, v26);
-    sub_B16FFC(&StringLiteral_16966, v27);
+    sub_B16FFC(&StringLiteral_16983/*"btn_txt_detail_off"*/, v16);
+    sub_B16FFC(&StringLiteral_16967/*"btn_txt_battlecharacter_on"*/, v17);
+    sub_B16FFC(&StringLiteral_17030/*"btn_txt_status_on"*/, v18);
+    sub_B16FFC(&StringLiteral_16896/*"btn_bg_12"*/, v19);
+    sub_B16FFC(&StringLiteral_17029/*"btn_txt_status_off"*/, v20);
+    sub_B16FFC(&StringLiteral_17040/*"btn_txt_voice_on"*/, v21);
+    sub_B16FFC(&StringLiteral_17011/*"btn_txt_profile_on"*/, v22);
+    sub_B16FFC(&StringLiteral_17039/*"btn_txt_voice_off"*/, v23);
+    sub_B16FFC(&StringLiteral_16898/*"btn_bg_19"*/, v24);
+    sub_B16FFC(&StringLiteral_16984/*"btn_txt_detail_on"*/, v25);
+    sub_B16FFC(&StringLiteral_17010/*"btn_txt_profile_off"*/, v26);
+    sub_B16FFC(&StringLiteral_16966/*"btn_txt_battlecharacter_off"*/, v27);
     byte_40F87A9 = 1;
   }
   illust = 0LL;
@@ -11775,9 +11775,9 @@ LABEL_28:
               profileTitleSprite = this->fields.profileTitleSprite;
               if ( profileTitleSprite )
               {
-                v104 = (System_String_o **)&StringLiteral_17029;
+                v104 = (System_String_o **)&StringLiteral_17029/*"btn_txt_status_off"*/;
                 if ( !kind )
-                  v104 = (System_String_o **)&StringLiteral_17030;
+                  v104 = (System_String_o **)&StringLiteral_17030/*"btn_txt_status_on"*/;
                 UISprite__set_spriteName(profileTitleSprite, *v104, 0LL);
                 v105 = this->fields.profileTitleSprite;
                 if ( v105 )
@@ -11788,7 +11788,7 @@ LABEL_28:
                   profileSprite = this->fields.profileSprite;
                   if ( profileSprite )
                   {
-                    v107 = (System_String_o **)(kind ? &StringLiteral_16896 : &StringLiteral_16898);
+                    v107 = (System_String_o **)(kind ? &StringLiteral_16896/*"btn_bg_12"*/ : &StringLiteral_16898/*"btn_bg_19"*/);
                     UISprite__set_spriteName(profileSprite, *v107, 0LL);
                     v108 = this->fields.profileButton;
                     if ( v108 )
@@ -11828,7 +11828,7 @@ LABEL_28:
                                 {
                                   UISprite__set_spriteName(
                                     battleTitleSprite,
-                                    (System_String_o *)StringLiteral_17010,
+                                    (System_String_o *)StringLiteral_17010/*"btn_txt_profile_off"*/,
                                     0LL);
                                   v116 = this->fields.battleTitleSprite;
                                   if ( v116 )
@@ -11841,7 +11841,7 @@ LABEL_28:
                                     {
                                       UISprite__set_spriteName(
                                         battleSprite,
-                                        (System_String_o *)StringLiteral_16896,
+                                        (System_String_o *)StringLiteral_16896/*"btn_bg_12"*/,
                                         0LL);
                                       v118 = this->fields.battleButton;
                                       if ( v118 )
@@ -11872,9 +11872,9 @@ LABEL_28:
                                                 voiceTitleSprite = this->fields.voiceTitleSprite;
                                                 if ( voiceTitleSprite )
                                                 {
-                                                  v124 = (System_String_o **)&StringLiteral_16967;
+                                                  v124 = (System_String_o **)&StringLiteral_16967/*"btn_txt_battlecharacter_on"*/;
                                                   if ( kind != 2 )
-                                                    v124 = (System_String_o **)&StringLiteral_16966;
+                                                    v124 = (System_String_o **)&StringLiteral_16966/*"btn_txt_battlecharacter_off"*/;
                                                   UISprite__set_spriteName(voiceTitleSprite, *v124, 0LL);
                                                   v125 = this->fields.voiceTitleSprite;
                                                   if ( v125 )
@@ -11886,8 +11886,8 @@ LABEL_28:
                                                     if ( voiceSprite )
                                                     {
                                                       v127 = (System_String_o **)(kind == 2
-                                                                                ? &StringLiteral_16898
-                                                                                : &StringLiteral_16896);
+                                                                                ? &StringLiteral_16898/*"btn_bg_19"*/
+                                                                                : &StringLiteral_16896/*"btn_bg_12"*/);
                                                       UISprite__set_spriteName(voiceSprite, *v127, 0LL);
                                                       v128 = this->fields.voiceButton;
                                                       if ( v128 )
@@ -11933,7 +11933,7 @@ LABEL_28:
                                                                   {
                                                                     UISprite__set_spriteName(
                                                                       statusSprite,
-                                                                      (System_String_o *)StringLiteral_17039,
+                                                                      (System_String_o *)StringLiteral_17039/*"btn_txt_voice_off"*/,
                                                                       0LL);
                                                                     v136 = this->fields.statusSprite;
                                                                     if ( v136 )
@@ -11946,7 +11946,7 @@ LABEL_28:
                                                                       {
                                                                         UISprite__set_spriteName(
                                                                           (UISprite_o *)statusButton,
-                                                                          (System_String_o *)StringLiteral_16896,
+                                                                          (System_String_o *)StringLiteral_16896/*"btn_bg_12"*/,
                                                                           0LL);
                                                                         v138 = this->fields.profileNewIcon;
                                                                         if ( v138 )
@@ -12016,7 +12016,7 @@ LABEL_28:
       v97 = this->fields.battleTitleSprite;
       if ( !v97 )
         goto LABEL_288;
-      v98 = &StringLiteral_16984;
+      v98 = &StringLiteral_16984/*"btn_txt_detail_on"*/;
       goto LABEL_210;
     case 0xB:
     case 0xC:
@@ -12051,9 +12051,9 @@ LABEL_28:
       v43 = this->fields.profileTitleSprite;
       if ( !v43 )
         goto LABEL_288;
-      v44 = (System_String_o **)&StringLiteral_17029;
+      v44 = (System_String_o **)&StringLiteral_17029/*"btn_txt_status_off"*/;
       if ( !kind )
-        v44 = (System_String_o **)&StringLiteral_17030;
+        v44 = (System_String_o **)&StringLiteral_17030/*"btn_txt_status_on"*/;
       UISprite__set_spriteName(v43, *v44, 0LL);
       v45 = this->fields.profileTitleSprite;
       if ( !v45 )
@@ -12064,7 +12064,7 @@ LABEL_28:
       v46 = this->fields.profileSprite;
       if ( !v46 )
         goto LABEL_288;
-      v47 = (System_String_o **)(kind ? &StringLiteral_16896 : &StringLiteral_16898);
+      v47 = (System_String_o **)(kind ? &StringLiteral_16896/*"btn_bg_12"*/ : &StringLiteral_16898/*"btn_bg_19"*/);
       UISprite__set_spriteName(v46, *v47, 0LL);
       v48 = this->fields.profileButton;
       if ( !v48 )
@@ -12100,9 +12100,9 @@ LABEL_28:
       v55 = this->fields.battleTitleSprite;
       if ( !v55 )
         goto LABEL_288;
-      v56 = &StringLiteral_16984;
+      v56 = &StringLiteral_16984/*"btn_txt_detail_on"*/;
       if ( kind != 1 )
-        v56 = &StringLiteral_16983;
+        v56 = &StringLiteral_16983/*"btn_txt_detail_off"*/;
       UISprite__set_spriteName(v55, (System_String_o *)*v56, 0LL);
       v57 = this->fields.battleTitleSprite;
       if ( !v57 )
@@ -12113,7 +12113,7 @@ LABEL_28:
       v58 = this->fields.battleSprite;
       if ( !v58 )
         goto LABEL_288;
-      v59 = (System_String_o **)(kind == 1 ? &StringLiteral_16898 : &StringLiteral_16896);
+      v59 = (System_String_o **)(kind == 1 ? &StringLiteral_16898/*"btn_bg_19"*/ : &StringLiteral_16896/*"btn_bg_12"*/);
       UISprite__set_spriteName(v58, *v59, 0LL);
       v60 = this->fields.battleButton;
       if ( !v60 )
@@ -12158,9 +12158,9 @@ LABEL_28:
       v69 = this->fields.profileTitleSprite;
       if ( !v69 )
         goto LABEL_288;
-      v70 = (System_String_o **)&StringLiteral_17029;
+      v70 = (System_String_o **)&StringLiteral_17029/*"btn_txt_status_off"*/;
       if ( !kind )
-        v70 = (System_String_o **)&StringLiteral_17030;
+        v70 = (System_String_o **)&StringLiteral_17030/*"btn_txt_status_on"*/;
       UISprite__set_spriteName(v69, *v70, 0LL);
       v71 = this->fields.profileTitleSprite;
       if ( !v71 )
@@ -12171,9 +12171,9 @@ LABEL_28:
       v72 = this->fields.profileSprite;
       if ( !v72 )
         goto LABEL_288;
-      v73 = &StringLiteral_16898;
+      v73 = &StringLiteral_16898/*"btn_bg_19"*/;
       if ( kind )
-        v73 = &StringLiteral_16896;
+        v73 = &StringLiteral_16896/*"btn_bg_12"*/;
       UISprite__set_spriteName(v72, (System_String_o *)*v73, 0LL);
       v74 = this->fields.profileButton;
       if ( !v74 )
@@ -12209,7 +12209,7 @@ LABEL_28:
       v81 = this->fields.battleTitleSprite;
       if ( !v81 )
         goto LABEL_288;
-      UISprite__set_spriteName(v81, (System_String_o *)StringLiteral_16983, 0LL);
+      UISprite__set_spriteName(v81, (System_String_o *)StringLiteral_16983/*"btn_txt_detail_off"*/, 0LL);
       v82 = this->fields.battleTitleSprite;
       if ( !v82 )
         goto LABEL_288;
@@ -12219,7 +12219,7 @@ LABEL_28:
       v83 = this->fields.battleSprite;
       if ( !v83 )
         goto LABEL_288;
-      UISprite__set_spriteName(v83, (System_String_o *)StringLiteral_16896, 0LL);
+      UISprite__set_spriteName(v83, (System_String_o *)StringLiteral_16896/*"btn_bg_12"*/, 0LL);
       v84 = this->fields.battleButton;
       if ( !v84 )
         goto LABEL_288;
@@ -12258,7 +12258,7 @@ LABEL_28:
       v97 = this->fields.battleTitleSprite;
       if ( !v97 )
         goto LABEL_288;
-      v98 = &StringLiteral_17010;
+      v98 = &StringLiteral_17010/*"btn_txt_profile_off"*/;
 LABEL_210:
       UISprite__set_spriteName(v97, (System_String_o *)*v98, 0LL);
       v200 = this->fields.battleTitleSprite;
@@ -12270,7 +12270,7 @@ LABEL_210:
       v201 = this->fields.battleSprite;
       if ( !v201 )
         goto LABEL_288;
-      UISprite__set_spriteName(v201, (System_String_o *)StringLiteral_16898, 0LL);
+      UISprite__set_spriteName(v201, (System_String_o *)StringLiteral_16898/*"btn_bg_19"*/, 0LL);
       v202 = this->fields.battleButton;
       if ( !v202 )
         goto LABEL_288;
@@ -12328,9 +12328,9 @@ LABEL_216:
       v149 = this->fields.profileTitleSprite;
       if ( !v149 )
         goto LABEL_288;
-      v150 = (System_String_o **)&StringLiteral_17029;
+      v150 = (System_String_o **)&StringLiteral_17029/*"btn_txt_status_off"*/;
       if ( !kind )
-        v150 = (System_String_o **)&StringLiteral_17030;
+        v150 = (System_String_o **)&StringLiteral_17030/*"btn_txt_status_on"*/;
       UISprite__set_spriteName(v149, *v150, 0LL);
       v151 = this->fields.profileTitleSprite;
       if ( !v151 )
@@ -12341,7 +12341,7 @@ LABEL_216:
       v152 = this->fields.profileSprite;
       if ( !v152 )
         goto LABEL_288;
-      v153 = (System_String_o **)(kind ? &StringLiteral_16896 : &StringLiteral_16898);
+      v153 = (System_String_o **)(kind ? &StringLiteral_16896/*"btn_bg_12"*/ : &StringLiteral_16898/*"btn_bg_19"*/);
       UISprite__set_spriteName(v152, *v153, 0LL);
       v154 = this->fields.profileButton;
       if ( !v154 )
@@ -12377,9 +12377,9 @@ LABEL_216:
       v161 = this->fields.battleTitleSprite;
       if ( !v161 )
         goto LABEL_288;
-      v162 = (System_String_o **)&StringLiteral_17011;
+      v162 = (System_String_o **)&StringLiteral_17011/*"btn_txt_profile_on"*/;
       if ( kind != 1 )
-        v162 = (System_String_o **)&StringLiteral_17010;
+        v162 = (System_String_o **)&StringLiteral_17010/*"btn_txt_profile_off"*/;
       UISprite__set_spriteName(v161, *v162, 0LL);
       v163 = this->fields.battleTitleSprite;
       if ( !v163 )
@@ -12390,7 +12390,7 @@ LABEL_216:
       v164 = this->fields.battleSprite;
       if ( !v164 )
         goto LABEL_288;
-      v165 = (System_String_o **)(kind == 1 ? &StringLiteral_16898 : &StringLiteral_16896);
+      v165 = (System_String_o **)(kind == 1 ? &StringLiteral_16898/*"btn_bg_19"*/ : &StringLiteral_16896/*"btn_bg_12"*/);
       UISprite__set_spriteName(v164, *v165, 0LL);
       v166 = this->fields.battleButton;
       if ( !v166 )
@@ -12426,9 +12426,9 @@ LABEL_216:
       v173 = this->fields.voiceTitleSprite;
       if ( !v173 )
         goto LABEL_288;
-      v174 = (System_String_o **)&StringLiteral_16967;
+      v174 = (System_String_o **)&StringLiteral_16967/*"btn_txt_battlecharacter_on"*/;
       if ( kind != 2 )
-        v174 = (System_String_o **)&StringLiteral_16966;
+        v174 = (System_String_o **)&StringLiteral_16966/*"btn_txt_battlecharacter_off"*/;
       UISprite__set_spriteName(v173, *v174, 0LL);
       v175 = this->fields.voiceTitleSprite;
       if ( !v175 )
@@ -12440,9 +12440,9 @@ LABEL_216:
       if ( !v176 )
         goto LABEL_288;
       if ( kind == 2 )
-        v177 = &StringLiteral_16898;
+        v177 = &StringLiteral_16898/*"btn_bg_19"*/;
       else
-        v177 = &StringLiteral_16896;
+        v177 = &StringLiteral_16896/*"btn_bg_12"*/;
       UISprite__set_spriteName(v176, (System_String_o *)*v177, 0LL);
       v178 = this->fields.voiceButton;
       if ( !v178 )
@@ -12481,7 +12481,7 @@ LABEL_216:
         v246 = this->fields.statusSprite;
         if ( v246 )
         {
-          UISprite__set_spriteName(v246, (System_String_o *)StringLiteral_17039, 0LL);
+          UISprite__set_spriteName(v246, (System_String_o *)StringLiteral_17039/*"btn_txt_voice_off"*/, 0LL);
           v247 = this->fields.statusSprite;
           if ( v247 )
           {
@@ -12491,7 +12491,7 @@ LABEL_216:
             v248 = this->fields.statusButton;
             if ( v248 )
             {
-              UISprite__set_spriteName((UISprite_o *)v248, (System_String_o *)StringLiteral_16896, 0LL);
+              UISprite__set_spriteName((UISprite_o *)v248, (System_String_o *)StringLiteral_16896/*"btn_bg_12"*/, 0LL);
               v138 = this->fields.profileNewIcon;
               if ( v138 )
               {
@@ -12513,9 +12513,9 @@ LABEL_287:
       v186 = this->fields.statusSprite;
       if ( !v186 )
         goto LABEL_287;
-      v187 = (System_String_o **)&StringLiteral_17040;
+      v187 = (System_String_o **)&StringLiteral_17040/*"btn_txt_voice_on"*/;
       if ( !v32 )
-        v187 = (System_String_o **)&StringLiteral_17039;
+        v187 = (System_String_o **)&StringLiteral_17039/*"btn_txt_voice_off"*/;
       UISprite__set_spriteName(v186, *v187, 0LL);
       v188 = this->fields.statusSprite;
       if ( !v188 )
@@ -12526,7 +12526,7 @@ LABEL_287:
       v189 = this->fields.statusButton;
       if ( !v189 )
         goto LABEL_287;
-      v190 = (System_String_o **)(v32 ? &StringLiteral_16898 : &StringLiteral_16896);
+      v190 = (System_String_o **)(v32 ? &StringLiteral_16898/*"btn_bg_19"*/ : &StringLiteral_16896/*"btn_bg_12"*/);
       UISprite__set_spriteName((UISprite_o *)v189, *v190, 0LL);
       v191 = this->fields.profileNewIcon;
       if ( !v191 )
@@ -12813,7 +12813,7 @@ void __fastcall ServantStatusDialog__SetVisibleHighPriorityObject(
   if ( (byte_40F87AE & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, isVisible);
-    sub_B16FFC(&StringLiteral_23096, v5);
+    sub_B16FFC(&StringLiteral_23096/*"wait"*/, v5);
     byte_40F87AE = 1;
   }
   if ( LODWORD(this->fields.tabInitList) == 2 )
@@ -12838,7 +12838,7 @@ void __fastcall ServantStatusDialog__SetVisibleHighPriorityObject(
         v9 = *(BattleFBXComponent_o **)&this->fields.isBattleResourceLoading;
         if ( v9 )
         {
-          BattleFBXComponent__playAnimation(v9, (System_String_o *)StringLiteral_23096, 0LL);
+          BattleFBXComponent__playAnimation(v9, (System_String_o *)StringLiteral_23096/*"wait"*/, 0LL);
           return;
         }
 LABEL_14:
@@ -12868,8 +12868,8 @@ void __fastcall ServantStatusDialog__SetupBattleMask(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, item);
     sub_B16FFC(&OptionManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_11957, v6);
-    sub_B16FFC(&StringLiteral_11961, v7);
+    sub_B16FFC(&StringLiteral_11957/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_BATTLE"*/, v6);
+    sub_B16FFC(&StringLiteral_11961/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_BATTLE"*/, v7);
     byte_40F878C = 1;
   }
   if ( !item )
@@ -12894,7 +12894,7 @@ void __fastcall ServantStatusDialog__SetupBattleMask(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v11 = &StringLiteral_11957;
+      v11 = &StringLiteral_11957/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_BATTLE"*/;
       goto LABEL_22;
     }
     if ( !battleMaskInfoLabel )
@@ -12908,7 +12908,7 @@ void __fastcall ServantStatusDialog__SetupBattleMask(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v11 = &StringLiteral_11961;
+      v11 = &StringLiteral_11961/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_BATTLE"*/;
 LABEL_22:
       v13 = LocalizationManager__Get((System_String_o *)*v11, 0LL);
       if ( battleChr )
@@ -13882,7 +13882,7 @@ void __fastcall ServantStatusDialog__StopVoice(ServantStatusDialog_o *this, cons
   {
     sub_B16FFC(&System_Action_TypeInfo, method);
     sub_B16FFC(&Method_ServantStatusDialog_EndPlayVoice__, v6);
-    sub_B16FFC(&StringLiteral_5970, v7);
+    sub_B16FFC(&StringLiteral_5970/*"EndWaitVoice"*/, v7);
     byte_40F87A1 = 1;
   }
   if ( LODWORD(this->fields.tabInitList) == 3 && ((__int64)this->fields.battleLoadAsset & 0x80000000) == 0 )
@@ -13897,7 +13897,7 @@ void __fastcall ServantStatusDialog__StopVoice(ServantStatusDialog_o *this, cons
   {
     UnityEngine_MonoBehaviour__CancelInvoke_34803564(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_5970,
+      (System_String_o *)StringLiteral_5970/*"EndWaitVoice"*/,
       0LL);
     *(_QWORD *)&this->fields.voicePlayNum = 0LL;
     sub_B16F98((BattleServantConfConponent_o *)&this->fields.voicePlayNum, 0LL, v9, v10, v11, v12, v13, v14);

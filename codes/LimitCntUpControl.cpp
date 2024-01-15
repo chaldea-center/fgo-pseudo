@@ -31,9 +31,9 @@ void __fastcall LimitCntUpControl__CheckConductionWire(LimitCntUpControl_o *this
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_3277, v4);
-    sub_B16FFC(&StringLiteral_11578, v5);
-    sub_B16FFC(&StringLiteral_3278, v6);
+    sub_B16FFC(&StringLiteral_3277/*"CONDUCTION_COMBINE"*/, v4);
+    sub_B16FFC(&StringLiteral_11578/*"SEAL_COMBINE_LIMIT_TEXT_{0}"*/, v5);
+    sub_B16FFC(&StringLiteral_3278/*"CONDUCTION_COMBINE_MSG"*/, v6);
     byte_40FC23C = 1;
   }
   conductionWireInfo = this->fields.conductionWireInfo;
@@ -54,12 +54,12 @@ void __fastcall LimitCntUpControl__CheckConductionWire(LimitCntUpControl_o *this
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3278, 0LL);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3278/*"CONDUCTION_COMBINE_MSG"*/, 0LL);
     if ( !conductionInfoLabel )
       goto LABEL_24;
     UILabel__set_text(conductionInfoLabel, v10, 0LL);
     conductionButtonLabel = this->fields.conductionButtonLabel;
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3277, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3277/*"CONDUCTION_COMBINE"*/, 0LL);
     if ( !conductionButtonLabel )
       goto LABEL_24;
     UILabel__set_text(conductionButtonLabel, v12, 0LL);
@@ -83,7 +83,7 @@ void __fastcall LimitCntUpControl__CheckConductionWire(LimitCntUpControl_o *this
   v22[0] = v18;
   v22[1] = v17;
   v19 = (Il2CppObject *)j_il2cpp_value_box_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v22);
-  v20 = System_String__Format((System_String_o *)StringLiteral_11578, v19, 0LL);
+  v20 = System_String__Format((System_String_o *)StringLiteral_11578/*"SEAL_COMBINE_LIMIT_TEXT_{0}"*/, v19, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -378,7 +378,7 @@ void __fastcall LimitCntUpControl__InitLimitUp(LimitCntUpControl_o *this, const 
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoData__get_Count__, v6);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_8810, v8);
+    sub_B16FFC(&StringLiteral_8810/*"MSG_PRESELECT_BASE_LIMIT"*/, v8);
     byte_40FC237 = 1;
   }
   memset(&v30, 0, sizeof(v30));
@@ -412,7 +412,7 @@ void __fastcall LimitCntUpControl__InitLimitUp(LimitCntUpControl_o *this, const 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_8810, 0LL);
+  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_8810/*"MSG_PRESELECT_BASE_LIMIT"*/, 0LL);
   if ( !preSelectBaseLb
     || (UILabel__set_text(preSelectBaseLb, v16, 0LL),
         (v17 = (UnityEngine_Component_o *)this->fields.preSelectBaseLb) == 0LL)
@@ -474,7 +474,7 @@ void __fastcall LimitCntUpControl__OnClickExeLimitUp(LimitCntUpControl_o *this, 
   if ( (byte_40FC240 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3324, v3);
+    sub_B16FFC(&StringLiteral_3324/*"CONFIRM_TITLE_LIMITUP"*/, v3);
     byte_40FC240 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -482,7 +482,7 @@ void __fastcall LimitCntUpControl__OnClickExeLimitUp(LimitCntUpControl_o *this, 
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3324, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3324/*"CONFIRM_TITLE_LIMITUP"*/, 0LL);
   if ( !this->fields.exeCombineDlg )
     sub_B170D4();
   SetRarityDialogControl__SetLimitUpInfo(
@@ -711,7 +711,7 @@ void __fastcall LimitCntUpControl__SetHaveQpIno(LimitCntUpControl_o *this, const
 
   if ( (byte_40FC239 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9236, method);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, method);
     byte_40FC239 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -719,7 +719,7 @@ void __fastcall LimitCntUpControl__SetHaveQpIno(LimitCntUpControl_o *this, const
     || (this->fields.haveQpVal = SelfUserGame->fields.qp,
         p_haveQpVal = &this->fields.haveQpVal,
         v5 = *(UILabel_o **)(p_haveQpVal - 25),
-        v6 = System_Int32__ToString_38275808((int32_t)p_haveQpVal, (System_String_o *)StringLiteral_9236, 0LL),
+        v6 = System_Int32__ToString_38275808((int32_t)p_haveQpVal, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL),
         !v5) )
   {
     sub_B170D4();
@@ -880,7 +880,7 @@ void __fastcall LimitCntUpControl__SetLimitUpInfo(LimitCntUpControl_o *this, con
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_B16FFC(&StringLiteral_9236, v23);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v23);
     byte_40FC23D = 1;
   }
   entity = 0LL;
@@ -1055,7 +1055,7 @@ void __fastcall LimitCntUpControl__SetLimitUpInfo(LimitCntUpControl_o *this, con
   }
   else
   {
-    v82 = System_Int32__ToString_38275808((int)this + 256, (System_String_o *)StringLiteral_9236, 0LL);
+    v82 = System_Int32__ToString_38275808((int)this + 256, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
     if ( !qpLb )
       goto LABEL_88;
     UILabel__set_text(qpLb, v82, 0LL);
@@ -1231,13 +1231,13 @@ void __fastcall LimitCntUpControl__SetStateInfoMsg(LimitCntUpControl_o *this, in
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, *(_QWORD *)&state);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_5746, v6);
-    sub_B16FFC(&StringLiteral_7251, v7);
-    sub_B16FFC(&StringLiteral_8807, v8);
-    sub_B16FFC(&StringLiteral_12161, v9);
-    sub_B16FFC(&StringLiteral_8806, v10);
-    sub_B16FFC(&StringLiteral_12162, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/, v6);
+    sub_B16FFC(&StringLiteral_7251/*"INFO_MSG_LIMITUP"*/, v7);
+    sub_B16FFC(&StringLiteral_8807/*"MSG_MAXLV_LIMITUP_BASE"*/, v8);
+    sub_B16FFC(&StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/, v9);
+    sub_B16FFC(&StringLiteral_8806/*"MSG_LIMITUP_MAX"*/, v10);
+    sub_B16FFC(&StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FC241 = 1;
   }
   detailInfoLb = (UnityEngine_Component_o *)this->fields.detailInfoLb;
@@ -1266,7 +1266,7 @@ LABEL_12:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v19 = &StringLiteral_5746;
+      v19 = &StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/;
       goto LABEL_16;
     }
     if ( this->fields.isMaxLv )
@@ -1280,7 +1280,7 @@ LABEL_12:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v19 = &StringLiteral_12161;
+        v19 = &StringLiteral_12161/*"SHORT_ITEM_INFO_MSG"*/;
         goto LABEL_16;
       }
       if ( !this->fields.isQpNum )
@@ -1292,7 +1292,7 @@ LABEL_12:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v19 = &StringLiteral_12162;
+        v19 = &StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/;
         goto LABEL_16;
       }
       goto LABEL_12;
@@ -1303,9 +1303,9 @@ LABEL_12:
     if ( baseData )
     {
       if ( UserServantEntity__isLimitCountMax(baseData, 0LL) )
-        v24 = (System_String_o **)&StringLiteral_8806;
+        v24 = (System_String_o **)&StringLiteral_8806/*"MSG_LIMITUP_MAX"*/;
       else
-        v24 = (System_String_o **)&StringLiteral_8807;
+        v24 = (System_String_o **)&StringLiteral_8807/*"MSG_MAXLV_LIMITUP_BASE"*/;
       v20 = *v24;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1324,14 +1324,14 @@ LABEL_39:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v19 = &StringLiteral_7251;
+    v19 = &StringLiteral_7251/*"INFO_MSG_LIMITUP"*/;
 LABEL_16:
     v20 = (System_String_o *)*v19;
 LABEL_17:
     v21 = LocalizationManager__Get(v20, 0LL);
     goto LABEL_19;
   }
-  v21 = (System_String_o *)StringLiteral_1;
+  v21 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_19:
   v22 = this->fields.detailInfoLb;
   if ( !v22 )

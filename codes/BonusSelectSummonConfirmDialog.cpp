@@ -546,7 +546,7 @@ void __fastcall BonusSelectSummonConfirmDialog__Init(
     sub_B16FFC(&System_Collections_Generic_List_BonusSelectSummonPartyOrganizationListViewObject__TypeInfo, v6);
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject____66874888, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FB0E8 = 1;
   }
   prefab = (UnityEngine_Object_o *)this->fields.prefab;
@@ -635,11 +635,11 @@ LABEL_28:
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_28;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_28;
-  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageBg = this->fields.messageBg;
   if ( !messageBg )
     goto LABEL_28;
@@ -647,11 +647,11 @@ LABEL_28:
   buttonDecideLabel = this->fields.buttonDecideLabel;
   if ( !buttonDecideLabel )
     goto LABEL_28;
-  UILabel__set_text(buttonDecideLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(buttonDecideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   buttonCancelLabel = this->fields.buttonCancelLabel;
   if ( !buttonCancelLabel )
     goto LABEL_28;
-  UILabel__set_text(buttonCancelLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(buttonCancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   buttonDecide = this->fields.buttonDecide;
   this->fields.isButtonEnable = 0;
   if ( !buttonDecide )
@@ -1182,10 +1182,10 @@ void __fastcall BonusSelectSummonConfirmDialog__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v14);
     sub_B16FFC(&Method_BonusSelectSummonConfirmDialog___c__DisplayClass21_0__Open_b__0__, v15);
     sub_B16FFC(&BonusSelectSummonConfirmDialog___c__DisplayClass21_0_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_12364, v17);
-    sub_B16FFC(&StringLiteral_3253, v18);
-    sub_B16FFC(&StringLiteral_3251, v19);
-    sub_B16FFC(&StringLiteral_12366, v20);
+    sub_B16FFC(&StringLiteral_12364/*"SUMMON_BONUS_SELECT_DIALOG_MESSAGE"*/, v17);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v18);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v19);
+    sub_B16FFC(&StringLiteral_12366/*"SUMMON_BONUS_SELECT_DIALOG_TITLE"*/, v20);
     byte_40FB0E9 = 1;
   }
   v21 = sub_B170CC(
@@ -1248,20 +1248,20 @@ void __fastcall BonusSelectSummonConfirmDialog__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_12366, 0LL);
+  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_12366/*"SUMMON_BONUS_SELECT_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_15;
   UILabel__set_text(titleLabel, v53, 0LL);
   messageLabel = this->fields.messageLabel;
-  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_12364, 0LL);
+  v55 = LocalizationManager__Get((System_String_o *)StringLiteral_12364/*"SUMMON_BONUS_SELECT_DIALOG_MESSAGE"*/, 0LL);
   if ( !messageLabel
     || (UILabel__set_text(messageLabel, v55, 0LL),
         buttonDecideLabel = this->fields.buttonDecideLabel,
-        v57 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL),
+        v57 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL),
         !buttonDecideLabel)
     || (UILabel__set_text(buttonDecideLabel, v57, 0LL),
         buttonCancelLabel = this->fields.buttonCancelLabel,
-        v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL),
+        v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
         !buttonCancelLabel) )
   {
 LABEL_15:
@@ -1488,7 +1488,7 @@ void __fastcall BonusSelectSummonConfirmDialog__SetBackBtn(
   if ( (byte_40FB0F5 & 1) == 0 )
   {
     sub_B16FFC(&AndroidBackKeyManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15414, v3);
+    sub_B16FFC(&StringLiteral_15414/*"Window/CancelButton"*/, v3);
     byte_40FB0F5 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -1497,7 +1497,7 @@ void __fastcall BonusSelectSummonConfirmDialog__SetBackBtn(
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15414, 0LL);
+  AndroidBackKeyManager__AddBackBtn_21111220(transform, (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/, 0LL);
 }
 
 
@@ -2587,7 +2587,7 @@ void __fastcall BonusSelectSummonConfirmDialog___c__DisplayClass21_0___Open_b__0
     sub_B16FFC(&Method_BonusSelectSummonConfirmDialog___c__Open_b__21_1__, v7);
     sub_B16FFC(&Method_BonusSelectSummonConfirmDialog___c__DisplayClass21_0__Open_b__2__, v8);
     sub_B16FFC(&BonusSelectSummonConfirmDialog___c_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_16639, v10);
+    sub_B16FFC(&StringLiteral_16639/*"bg_white"*/, v10);
     byte_40F7093 = 1;
   }
   _4__this = this->fields.__4__this;
@@ -2596,7 +2596,7 @@ void __fastcall BonusSelectSummonConfirmDialog___c__DisplayClass21_0___Open_b__0
   messageBg = _4__this->fields.messageBg;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(messageBg, (System_String_o *)StringLiteral_16639, 0LL);
+  AtlasManager__SetPartyOrganizationImage(messageBg, (System_String_o *)StringLiteral_16639/*"bg_white"*/, 0LL);
   v13 = this->fields.__4__this;
   if ( !v13 )
     goto LABEL_25;

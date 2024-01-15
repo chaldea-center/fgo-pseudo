@@ -126,7 +126,7 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
     sub_B16FFC(&AtlasManager_TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FC4E1 = 1;
   }
   skillInfoList = 0LL;
@@ -269,11 +269,11 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
     v36 = this->fields.skillNameLabel;
     if ( !v36 )
       goto LABEL_129;
-    UILabel__set_text(v36, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v36, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     v37 = this->fields.skillExplanationLabel;
     if ( !v37 )
       goto LABEL_129;
-    UILabel__set_text(v37, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(v37, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     v38 = (UnityEngine_Component_o *)this->fields.noneEquipSprite;
     if ( !v38 )
       goto LABEL_129;

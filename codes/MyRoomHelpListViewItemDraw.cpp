@@ -68,9 +68,9 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
   {
     sub_B16FFC(&char___TypeInfo, item);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_19458, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
-    sub_B16FFC(&StringLiteral_19579, v10);
+    sub_B16FFC(&StringLiteral_19458/*"img_menuboard_01"*/, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
+    sub_B16FFC(&StringLiteral_19579/*"img_tutorial_txtbg"*/, v10);
     byte_40F9AF2 = 1;
   }
   if ( item )
@@ -103,8 +103,8 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
       {
         if ( !infoTextLabel )
           goto LABEL_44;
-        imageName = (System_String_o *)StringLiteral_19458;
-        v19 = (System_String_o *)StringLiteral_1;
+        imageName = (System_String_o *)StringLiteral_19458/*"img_menuboard_01"*/;
+        v19 = (System_String_o *)StringLiteral_1/*""*/;
       }
       else
       {
@@ -191,7 +191,7 @@ void __fastcall MyRoomHelpListViewItemDraw__SetItem(
                     baseTextSprite = this->fields.baseTextSprite;
                     if ( baseTextSprite )
                     {
-                      UISprite__set_spriteName(baseTextSprite, (System_String_o *)StringLiteral_19579, 0LL);
+                      UISprite__set_spriteName(baseTextSprite, (System_String_o *)StringLiteral_19579/*"img_tutorial_txtbg"*/, 0LL);
                       v50 = (UnityEngine_Component_o *)this->fields.infoTextLabel;
                       if ( v50 )
                       {

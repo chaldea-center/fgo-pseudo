@@ -728,14 +728,14 @@ void __fastcall MissionNotifyComponent__SetupAndPlay(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AdManager__get_Instance__, v22);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
-    sub_B16FFC(&StringLiteral_20336, v24);
-    sub_B16FFC(&StringLiteral_20335, v25);
-    sub_B16FFC(&StringLiteral_20331, v26);
-    sub_B16FFC(&StringLiteral_20333, v27);
-    sub_B16FFC(&StringLiteral_20334, v28);
-    sub_B16FFC(&StringLiteral_871, v29);
-    sub_B16FFC(&StringLiteral_9236, v30);
-    sub_B16FFC(&StringLiteral_20332, v31);
+    sub_B16FFC(&StringLiteral_20336/*"master_mission_weekly"*/, v24);
+    sub_B16FFC(&StringLiteral_20335/*"master_mission_special"*/, v25);
+    sub_B16FFC(&StringLiteral_20331/*"master_mission_daily"*/, v26);
+    sub_B16FFC(&StringLiteral_20333/*"master_mission_extra"*/, v27);
+    sub_B16FFC(&StringLiteral_20334/*"master_mission_panel"*/, v28);
+    sub_B16FFC(&StringLiteral_871/*"/"*/, v29);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v30);
+    sub_B16FFC(&StringLiteral_20332/*"master_mission_event"*/, v31);
     byte_40F7D34 = 1;
   }
   entity = 0LL;
@@ -857,9 +857,9 @@ void __fastcall MissionNotifyComponent__SetupAndPlay(
       (float)disp_info->fields.progressTo / (float)disp_info->fields.condition,
       0LL);
     progressLabel = this->fields.progressLabel;
-    v58 = System_Int32__ToString_38275808((int)disp_info + 44, (System_String_o *)StringLiteral_9236, 0LL);
-    v59 = System_Int32__ToString_38275808((int)disp_info + 48, (System_String_o *)StringLiteral_9236, 0LL);
-    v60 = System_String__Concat_43746016(v58, (System_String_o *)StringLiteral_871, v59, 0LL);
+    v58 = System_Int32__ToString_38275808((int)disp_info + 44, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
+    v59 = System_Int32__ToString_38275808((int)disp_info + 48, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
+    v60 = System_String__Concat_43746016(v58, (System_String_o *)StringLiteral_871/*"/"*/, v59, 0LL);
     if ( !progressLabel )
       goto LABEL_119;
     UILabel__set_text(progressLabel, v60, 0LL);
@@ -1097,22 +1097,22 @@ LABEL_87:
   {
     case 1:
     case 7:
-      v117 = &StringLiteral_20332;
+      v117 = &StringLiteral_20332/*"master_mission_event"*/;
       goto LABEL_98;
     case 2:
-      v117 = &StringLiteral_20336;
+      v117 = &StringLiteral_20336/*"master_mission_weekly"*/;
       goto LABEL_98;
     case 3:
-      v117 = &StringLiteral_20331;
+      v117 = &StringLiteral_20331/*"master_mission_daily"*/;
       goto LABEL_98;
     case 4:
-      v117 = &StringLiteral_20333;
+      v117 = &StringLiteral_20333/*"master_mission_extra"*/;
       goto LABEL_98;
     case 5:
-      v117 = &StringLiteral_20335;
+      v117 = &StringLiteral_20335/*"master_mission_special"*/;
       goto LABEL_98;
     case 6:
-      v117 = &StringLiteral_20334;
+      v117 = &StringLiteral_20334/*"master_mission_panel"*/;
 LABEL_98:
       v118 = (System_String_o *)*v117;
       break;

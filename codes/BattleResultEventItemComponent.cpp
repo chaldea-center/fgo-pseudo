@@ -42,27 +42,27 @@ void __fastcall BattleResultEventItemComponent___cctor(const MethodInfo *method)
   if ( (byte_40FA39B & 1) == 0 )
   {
     sub_B16FFC(&BattleResultEventItemComponent_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_19359, v8);
-    sub_B16FFC(&StringLiteral_2465, v9);
-    sub_B16FFC(&StringLiteral_19658, v10);
-    sub_B16FFC(&StringLiteral_19360, v11);
+    sub_B16FFC(&StringLiteral_19359/*"img_bg_ep"*/, v8);
+    sub_B16FFC(&StringLiteral_2465/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, v9);
+    sub_B16FFC(&StringLiteral_19658/*"img_txt_reward"*/, v10);
+    sub_B16FFC(&StringLiteral_19360/*"img_bg_events"*/, v11);
     byte_40FA39B = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BattleResultEventItemComponent_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_2465;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2465;
+  v13 = (System_Int32_array **)StringLiteral_2465/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2465/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/;
   sub_B16F98(static_fields, v13, v2, v3, v4, v5, v6, v7);
   v14 = BattleResultEventItemComponent_TypeInfo->static_fields;
-  v15 = (System_Int32_array **)StringLiteral_19658;
-  v14->EVENT_POINT_REWARD_TITLE_NAME = (struct System_String_o *)StringLiteral_19658;
+  v15 = (System_Int32_array **)StringLiteral_19658/*"img_txt_reward"*/;
+  v14->EVENT_POINT_REWARD_TITLE_NAME = (struct System_String_o *)StringLiteral_19658/*"img_txt_reward"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v14->EVENT_POINT_REWARD_TITLE_NAME, v15, v16, v17, v18, v19, v20, v21);
   v22 = BattleResultEventItemComponent_TypeInfo->static_fields;
-  v23 = (System_Int32_array **)StringLiteral_19360;
-  v22->EVENT_POINT_REWARD_BG_NAME = (struct System_String_o *)StringLiteral_19360;
+  v23 = (System_Int32_array **)StringLiteral_19360/*"img_bg_events"*/;
+  v22->EVENT_POINT_REWARD_BG_NAME = (struct System_String_o *)StringLiteral_19360/*"img_bg_events"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v22->EVENT_POINT_REWARD_BG_NAME, v23, v24, v25, v26, v27, v28, v29);
   v30 = BattleResultEventItemComponent_TypeInfo->static_fields;
-  v31 = (System_Int32_array **)StringLiteral_19359;
-  v30->EVENT_POINT_BG_TITLE_NAME = (struct System_String_o *)StringLiteral_19359;
+  v31 = (System_Int32_array **)StringLiteral_19359/*"img_bg_ep"*/;
+  v30->EVENT_POINT_BG_TITLE_NAME = (struct System_String_o *)StringLiteral_19359/*"img_bg_ep"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v30->EVENT_POINT_BG_TITLE_NAME, v31, v32, v33, v34, v35, v36, v37);
   v38 = BattleResultEventItemComponent_TypeInfo;
   BattleResultEventItemComponent_TypeInfo->static_fields->TITLE_AT_LABEL_MAX_WIDTH = 315;
@@ -123,8 +123,8 @@ void __fastcall BattleResultEventItemComponent__CheckNextGroup(
   {
     sub_B16FFC(&Method_System_Collections_Generic_List_BattleDropItem__ToArray__, method);
     sub_B16FFC(&Method_System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__get_Item__, v3);
-    sub_B16FFC(&StringLiteral_9721, v4);
-    sub_B16FFC(&StringLiteral_9268, v5);
+    sub_B16FFC(&StringLiteral_9721/*"OPEN"*/, v4);
+    sub_B16FFC(&StringLiteral_9268/*"NEXT"*/, v5);
     byte_40FA394 = 1;
   }
   if ( BattleResultEventItemComponent__isGetItems(this, method) )
@@ -132,7 +132,7 @@ void __fastcall BattleResultEventItemComponent__CheckNextGroup(
     myFsm = this->fields.myFsm;
     if ( myFsm )
     {
-      PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9721, 0LL);
+      PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9721/*"OPEN"*/, 0LL);
       dropInfoList = this->fields.dropInfoList;
       if ( dropInfoList )
       {
@@ -162,7 +162,7 @@ LABEL_13:
   v15 = this->fields.myFsm;
   if ( !v15 )
     goto LABEL_13;
-  PlayMakerFSM__SendEvent(v15, (System_String_o *)StringLiteral_9268, 0LL);
+  PlayMakerFSM__SendEvent(v15, (System_String_o *)StringLiteral_9268/*"NEXT"*/, 0LL);
 }
 
 
@@ -283,13 +283,13 @@ void __fastcall BattleResultEventItemComponent__EndCloseDialogCallBack(
 
   if ( (byte_40FA385 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3080, method);
+    sub_B16FFC(&StringLiteral_3080/*"CLOSE"*/, method);
     byte_40FA385 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3080, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3080/*"CLOSE"*/, 0LL);
 }
 
 
@@ -334,9 +334,9 @@ void __fastcall BattleResultEventItemComponent__Init(BattleResultEventItemCompon
     sub_B16FFC(&System_Collections_Generic_List_BattleResultEventItemComponent_EventDropItemInfo__TypeInfo, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_2465, v6);
-    sub_B16FFC(&StringLiteral_2469, v7);
-    sub_B16FFC(&StringLiteral_2463, v8);
+    sub_B16FFC(&StringLiteral_2465/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, v6);
+    sub_B16FFC(&StringLiteral_2469/*"BATTLE_RESULEVENTTITEM_TITLECONF"*/, v7);
+    sub_B16FFC(&StringLiteral_2463/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, v8);
     byte_40FA375 = 1;
   }
   window = this->fields.window;
@@ -358,11 +358,11 @@ void __fastcall BattleResultEventItemComponent__Init(BattleResultEventItemCompon
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2469, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2469/*"BATTLE_RESULEVENTTITEM_TITLECONF"*/, 0LL);
   if ( !v12 )
     goto LABEL_33;
   v13 = v12;
-  if ( !System_String__Equals_43731072(v12, (System_String_o *)StringLiteral_2469, 0LL) )
+  if ( !System_String__Equals_43731072(v12, (System_String_o *)StringLiteral_2469/*"BATTLE_RESULEVENTTITEM_TITLECONF"*/, 0LL) )
   {
     titleConfLabel = this->fields.titleConfLabel;
     if ( !titleConfLabel )
@@ -383,7 +383,7 @@ void __fastcall BattleResultEventItemComponent__Init(BattleResultEventItemCompon
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_2465, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_2465/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, 0LL);
     if ( !v16 )
       goto LABEL_33;
     UILabel__set_text(v16, v17, 0LL);
@@ -402,7 +402,7 @@ void __fastcall BattleResultEventItemComponent__Init(BattleResultEventItemCompon
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2463, 0LL);
+    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2463/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, 0LL);
     if ( v19 )
     {
       UILabel__set_text(v19, v20, 0LL);
@@ -541,7 +541,7 @@ void __fastcall BattleResultEventItemComponent__OpenCommonProcess(
   {
     sub_B16FFC(&Method_BattleResultEventItemComponent_endOpen__, method);
     sub_B16FFC(&BattleWindowComponent_EndCall_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_5477, v4);
+    sub_B16FFC(&StringLiteral_5477/*"END_OPEN"*/, v4);
     byte_40FA399 = 1;
   }
   touchNextRoot = this->fields.touchNextRoot;
@@ -552,7 +552,7 @@ void __fastcall BattleResultEventItemComponent__OpenCommonProcess(
   BattleResultEventItemComponent__UpdateShowModeChangeButton(this, v6);
   myFsm = this->fields.myFsm;
   if ( !myFsm
-    || (PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5477, 0LL),
+    || (PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5477/*"END_OPEN"*/, 0LL),
         window = this->fields.window,
         v13 = (BattleWindowComponent_EndCall_o *)sub_B170CC(BattleWindowComponent_EndCall_TypeInfo, v9, v10, v11, v12),
         BattleWindowComponent_EndCall___ctor(
@@ -649,7 +649,7 @@ System_String_o *__fastcall BattleResultEventItemComponent__SearchEventGroupPoin
     sub_B16FFC(&BattleResultEventItemComponent_TypeInfo, *(_QWORD *)&eventId);
     sub_B16FFC(&Method_BetterList_string__Contains__, v7);
     sub_B16FFC(&int_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_16150, v9);
+    sub_B16FFC(&StringLiteral_16150/*"_{0}_{1}"*/, v9);
     byte_40FA37D = 1;
   }
   v10 = BattleResultEventItemComponent_TypeInfo;
@@ -661,7 +661,7 @@ System_String_o *__fastcall BattleResultEventItemComponent__SearchEventGroupPoin
   }
   v11 = System_String__Concat_43743732(
           v10->static_fields->EVENT_POINT_BG_TITLE_NAME,
-          (System_String_o *)StringLiteral_16150,
+          (System_String_o *)StringLiteral_16150/*"_{0}_{1}"*/,
           0LL);
   v29 = eventId;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29);
@@ -740,7 +740,7 @@ void __fastcall BattleResultEventItemComponent__SetBgSprite(
   {
     sub_B16FFC(&BattleResultEventItemComponent_TypeInfo, *(_QWORD *)&imageId);
     sub_B16FFC(&Method_BetterList_string__Contains__, v4);
-    sub_B16FFC(&StringLiteral_15842, v5);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v5);
     byte_40FA380 = 1;
   }
   v6 = BattleResultEventItemComponent_TypeInfo;
@@ -752,7 +752,7 @@ void __fastcall BattleResultEventItemComponent__SetBgSprite(
   }
   EVENT_POINT_REWARD_BG_NAME = v6->static_fields->EVENT_POINT_REWARD_BG_NAME;
   v8 = System_Int32__ToString((int32_t)&v17, 0LL);
-  v9 = System_String__Concat_43746016(EVENT_POINT_REWARD_BG_NAME, (System_String_o *)StringLiteral_15842, v8, 0LL);
+  v9 = System_String__Concat_43746016(EVENT_POINT_REWARD_BG_NAME, (System_String_o *)StringLiteral_15842/*"_"*/, v8, 0LL);
   bgSp = this->fields.bgSp;
   if ( !bgSp )
     goto LABEL_17;
@@ -919,11 +919,11 @@ void __fastcall BattleResultEventItemComponent__SetNextItemLabel(
   {
     sub_B16FFC(&long_TypeInfo, userEventPoint);
     sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_2468, v8);
-    sub_B16FFC(&StringLiteral_2466, v9);
-    sub_B16FFC(&StringLiteral_2467, v10);
-    sub_B16FFC(&StringLiteral_2464, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v8);
+    sub_B16FFC(&StringLiteral_2466/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, v9);
+    sub_B16FFC(&StringLiteral_2467/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, v10);
+    sub_B16FFC(&StringLiteral_2464/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, v11);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40FA37E = 1;
   }
   countText = 0LL;
@@ -937,7 +937,7 @@ void __fastcall BattleResultEventItemComponent__SetNextItemLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2468, 0LL);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_2468/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
     v25 = eventRewardENt->fields.point - userEventPoint;
     v15 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v25);
     v16 = System_String__Format(v14, v15, 0LL);
@@ -953,9 +953,9 @@ void __fastcall BattleResultEventItemComponent__SetNextItemLabel(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2467, 0LL);
+        v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2467/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, 0LL);
         v20 = (Il2CppObject *)countText;
-        v21 = (Il2CppObject *)StringLiteral_1;
+        v21 = (Il2CppObject *)StringLiteral_1/*""*/;
       }
       else
       {
@@ -964,7 +964,7 @@ void __fastcall BattleResultEventItemComponent__SetNextItemLabel(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2467, 0LL);
+        v19 = LocalizationManager__Get((System_String_o *)StringLiteral_2467/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, 0LL);
         v20 = (Il2CppObject *)countText;
         v21 = (Il2CppObject *)nameText;
       }
@@ -981,12 +981,12 @@ LABEL_18:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2466, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2466/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
   if ( !v22 )
     goto LABEL_18;
   UILabel__set_text(v22, v23, 0LL);
   nextItemLabel = this->fields.nextItemLabel;
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2464, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_2464/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
   if ( !nextItemLabel )
     goto LABEL_18;
 LABEL_24:
@@ -1029,7 +1029,7 @@ void __fastcall BattleResultEventItemComponent__SetTitleSprite(
     sub_B16FFC(&BattleResultEventItemComponent_TypeInfo, *(_QWORD *)&currentGroup);
     sub_B16FFC(&Method_BetterList_string__Contains__, v5);
     sub_B16FFC(&int_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_19659, v7);
+    sub_B16FFC(&StringLiteral_19659/*"img_txt_reward_{0}_{1}"*/, v7);
     byte_40FA381 = 1;
   }
   if ( currentGroup < 1 )
@@ -1085,7 +1085,7 @@ LABEL_21:
     v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27);
     v26 = currentGroup;
     v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26);
-    v13 = System_String__Format_43739268((System_String_o *)StringLiteral_19659, v11, v12, 0LL);
+    v13 = System_String__Format_43739268((System_String_o *)StringLiteral_19659/*"img_txt_reward_{0}_{1}"*/, v11, v12, 0LL);
     if ( !v10 )
       goto LABEL_21;
     v14 = v13;
@@ -1463,14 +1463,14 @@ void __fastcall BattleResultEventItemComponent__UpdateShowModeChangeButton(
 
   if ( (byte_40FA396 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16899, method);
-    sub_B16FFC(&StringLiteral_16900, v3);
+    sub_B16FFC(&StringLiteral_16899/*"btn_bg_20"*/, method);
+    sub_B16FFC(&StringLiteral_16900/*"btn_bg_21"*/, v3);
     byte_40FA396 = 1;
   }
   showModeChangeButton = this->fields.showModeChangeButton;
   if ( !showModeChangeButton )
     goto LABEL_14;
-  v5 = (System_String_o **)(this->fields.isShowPossessionNum ? &StringLiteral_16900 : &StringLiteral_16899);
+  v5 = (System_String_o **)(this->fields.isShowPossessionNum ? &StringLiteral_16900/*"btn_bg_21"*/ : &StringLiteral_16899/*"btn_bg_20"*/);
   UIButton__set_normalSprite(showModeChangeButton, *v5, 0LL);
   showModeChanButtonLabelEffectColors = this->fields.showModeChanButtonLabelEffectColors;
   if ( !showModeChanButtonLabelEffectColors )
@@ -1843,13 +1843,13 @@ void __fastcall BattleResultEventItemComponent__endClose(
 
   if ( (byte_40FA393 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_5481, method);
+    sub_B16FFC(&StringLiteral_5481/*"END_PROC"*/, method);
     byte_40FA393 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_5481/*"END_PROC"*/, 0LL);
 }
 
 
@@ -1861,13 +1861,13 @@ void __fastcall BattleResultEventItemComponent__endCommandCodeDialogCallBack(
 
   if ( (byte_40FA38D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3080, method);
+    sub_B16FFC(&StringLiteral_3080/*"CLOSE"*/, method);
     byte_40FA38D = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3080, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3080/*"CLOSE"*/, 0LL);
 }
 
 
@@ -1879,13 +1879,13 @@ void __fastcall BattleResultEventItemComponent__endEventPointBuffDialogCallBack(
 
   if ( (byte_40FA391 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3080, method);
+    sub_B16FFC(&StringLiteral_3080/*"CLOSE"*/, method);
     byte_40FA391 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3080, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3080/*"CLOSE"*/, 0LL);
 }
 
 
@@ -1897,13 +1897,13 @@ void __fastcall BattleResultEventItemComponent__endItemDialogCallBack(
 
   if ( (byte_40FA389 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3080, method);
+    sub_B16FFC(&StringLiteral_3080/*"CLOSE"*/, method);
     byte_40FA389 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3080, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_3080/*"CLOSE"*/, 0LL);
 }
 
 
@@ -1916,12 +1916,12 @@ void __fastcall BattleResultEventItemComponent__endOpen(
 
   if ( (byte_40FA379 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9268, method);
+    sub_B16FFC(&StringLiteral_9268/*"NEXT"*/, method);
     byte_40FA379 = 1;
   }
   myFsm = this->fields.myFsm;
   if ( !myFsm
-    || (PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9268, 0LL),
+    || (PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9268/*"NEXT"*/, 0LL),
         (itemWindow = this->fields.itemWindow) == 0LL) )
   {
     sub_B170D4();
@@ -2237,14 +2237,14 @@ void __fastcall BattleResultEventItemComponent__setShowCommandCodeConf(
 
   if ( (byte_40FA38A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9728, commandCodeId);
+    sub_B16FFC(&StringLiteral_9728/*"OPEN_COMMANDCODE"*/, commandCodeId);
     byte_40FA38A = 1;
   }
   myFsm = this->fields.myFsm;
   this->fields.tmp_commandCodeId = commandCodeId;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9728, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9728/*"OPEN_COMMANDCODE"*/, 0LL);
 }
 
 
@@ -2290,14 +2290,14 @@ void __fastcall BattleResultEventItemComponent__setShowEventPointBuffConf(
 
   if ( (byte_40FA38E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9729, eventPointBuffId);
+    sub_B16FFC(&StringLiteral_9729/*"OPEN_EVENTPOINTBUFF"*/, eventPointBuffId);
     byte_40FA38E = 1;
   }
   myFsm = this->fields.myFsm;
   this->fields.tmp_eventPointBuffId = eventPointBuffId;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9729, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9729/*"OPEN_EVENTPOINTBUFF"*/, 0LL);
 }
 
 
@@ -2311,14 +2311,14 @@ void __fastcall BattleResultEventItemComponent__setShowItemConf(
 
   if ( (byte_40FA386 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9734, *(_QWORD *)&itemId);
+    sub_B16FFC(&StringLiteral_9734/*"OPEN_ITEM"*/, *(_QWORD *)&itemId);
     byte_40FA386 = 1;
   }
   myFsm = this->fields.myFsm;
   this->fields.tmp_itemId = itemId;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9734, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9734/*"OPEN_ITEM"*/, 0LL);
 }
 
 
@@ -2331,14 +2331,14 @@ void __fastcall BattleResultEventItemComponent__setShowServantConf(
 
   if ( (byte_40FA382 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9742, userSvtId);
+    sub_B16FFC(&StringLiteral_9742/*"OPEN_SERVANT"*/, userSvtId);
     byte_40FA382 = 1;
   }
   myFsm = this->fields.myFsm;
   this->fields.tmp_userSvtId = userSvtId;
   if ( !myFsm )
     sub_B170D4();
-  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9742, 0LL);
+  PlayMakerFSM__SendEvent(myFsm, (System_String_o *)StringLiteral_9742/*"OPEN_SERVANT"*/, 0LL);
 }
 
 

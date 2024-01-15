@@ -27,7 +27,7 @@ void __fastcall OverwriteBattleBgmData___ctor_21288700(
   {
     sub_B16FFC(&Method_DataManager_GetMaster_BgmMaster___, *(_QWORD *)&waveCount);
     sub_B16FFC(&DataManager_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_1, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v12);
     byte_40F801D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -46,7 +46,7 @@ void __fastcall OverwriteBattleBgmData___ctor_21288700(
       bgmName = BgmMaster__GetBgmFileName(
                   Master_WarQuestSelectionMaster,
                   bgmId,
-                  (System_String_o *)StringLiteral_1,
+                  (System_String_o *)StringLiteral_1/*""*/,
                   0LL);
       goto LABEL_10;
     }
@@ -126,7 +126,7 @@ OverwriteBattleBgmData_o *__fastcall OverwriteBattleBgmData__CreateInstanceFromS
     sub_B16FFC(&Method_DataManager_GetMaster_BgmMaster___, v7);
     sub_B16FFC(&DataManager_TypeInfo, v8);
     sub_B16FFC(&OverwriteBattleBgmData_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40F801E = 1;
   }
   if ( !sv )
@@ -154,7 +154,7 @@ OverwriteBattleBgmData_o *__fastcall OverwriteBattleBgmData__CreateInstanceFromS
   v13 = (System_Int32_array **)BasicHelper__IndexValue_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_(
                                  (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_array *)sv->fields.strParamArray,
                                  0,
-                                 (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *)StringLiteral_1,
+                                 (WellFired_USFGOPlayStandardCutInLimitCount_OverwriteStandFigure_o *)StringLiteral_1/*""*/,
                                  (const MethodInfo_18B82A4 *)Method_BasicHelper_IndexValue_string___);
   *(_QWORD *)(v11 + 24) = v13;
   sub_B16F98((BattleServantConfConponent_o *)(v11 + 24), v13, v14, v15, v16, v17, v18, v19);
@@ -168,7 +168,7 @@ OverwriteBattleBgmData_o *__fastcall OverwriteBattleBgmData__CreateInstanceFromS
       BgmFileName = (System_Int32_array **)BgmMaster__GetBgmFileName(
                                              Master_WarQuestSelectionMaster,
                                              *(_DWORD *)(v11 + 20),
-                                             (System_String_o *)StringLiteral_1,
+                                             (System_String_o *)StringLiteral_1/*""*/,
                                              0LL);
       *(_QWORD *)(v11 + 24) = BgmFileName;
       sub_B16F98((BattleServantConfConponent_o *)(v11 + 24), BgmFileName, v22, v23, v24, v25, v26, v27);

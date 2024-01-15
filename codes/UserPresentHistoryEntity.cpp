@@ -89,7 +89,7 @@ System_String_o *__fastcall UserPresentHistoryEntity__ToString(
   if ( (byte_40F8087 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_10479, v3);
+    sub_B16FFC(&StringLiteral_10479/*"PRESENT_INFO"*/, v3);
     byte_40F8087 = 1;
   }
   v4 = GiftName_GiftNameFactory__Create(this->fields.giftType, this->fields.objectId, this->fields.num, 0LL);
@@ -98,7 +98,7 @@ System_String_o *__fastcall UserPresentHistoryEntity__ToString(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10479, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10479/*"PRESENT_INFO"*/, 0LL);
   if ( !v4 )
     sub_B170D4();
   return System_String__Format_43739268(v5, (Il2CppObject *)v4->fields.name, (Il2CppObject *)v4->fields.count, 0LL);

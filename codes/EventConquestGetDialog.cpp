@@ -127,14 +127,14 @@ void __fastcall EventConquestGetDialog__Init(EventConquestGetDialog_o *this, con
     sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v3);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
     sub_B16FFC(&UnityEngine_Transform_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FC5D9 = 1;
   }
   itemGetDetailLabel = this->fields.itemGetDetailLabel;
   this->fields.state = 0;
   if ( !itemGetDetailLabel )
     goto LABEL_39;
-  UILabel__set_text(itemGetDetailLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(itemGetDetailLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   itemIconGrid = (UnityEngine_Component_o *)this->fields.itemIconGrid;
   if ( !itemIconGrid )
     goto LABEL_39;

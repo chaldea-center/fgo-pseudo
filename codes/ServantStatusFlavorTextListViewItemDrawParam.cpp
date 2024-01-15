@@ -64,7 +64,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetCondTitle(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
     sub_B16FFC(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v6);
     sub_B16FFC(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1, v8);
+    sub_B16FFC(&StringLiteral_1/*""*/, v8);
     byte_4101906 = 1;
   }
   titleName = (UnityEngine_GameObject_o *)this->fields.titleName;
@@ -78,7 +78,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetCondTitle(
     klass = this[1].klass;
     if ( !klass )
       goto LABEL_53;
-    UILabel__set_text((UILabel_o *)klass, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text((UILabel_o *)klass, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {

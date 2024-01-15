@@ -16,12 +16,12 @@ void __fastcall CoinRoomUtility___cctor(const MethodInfo *method)
   if ( (byte_40F9A90 & 1) == 0 )
   {
     sub_B16FFC(&CoinRoomUtility_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_4099, v8);
+    sub_B16FFC(&StringLiteral_4099/*"CoinRoom"*/, v8);
     byte_40F9A90 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)CoinRoomUtility_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_4099;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_4099;
+  v10 = (System_Int32_array **)StringLiteral_4099/*"CoinRoom"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_4099/*"CoinRoom"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
   v12.fields.dateData = (uint64_t)&v11;
   CoinRoomUtility_TypeInfo->static_fields->EFFECT_FADE_TIME = 0.5;
@@ -37,10 +37,10 @@ int32_t __fastcall CoinRoomUtility__CalcPoint(const MethodInfo *method)
 
   if ( (byte_40F9A86 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3123, v1);
+    sub_B16FFC(&StringLiteral_3123/*"COIN_ROOM_GET"*/, v1);
     byte_40F9A86 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_3123, 0LL);
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_3123/*"COIN_ROOM_GET"*/, 0LL);
 }
 
 
@@ -354,10 +354,10 @@ bool __fastcall CoinRoomUtility__IsTargetQuestClear(const MethodInfo *method)
     sub_B16FFC(&Method_DataManager_GetMasterData_UserQuestMaster___, v1);
     sub_B16FFC(&NetworkManager_TypeInfo, v2);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    sub_B16FFC(&StringLiteral_3128, v4);
+    sub_B16FFC(&StringLiteral_3128/*"COIN_ROOM_RELEASE_QUEST_ID"*/, v4);
     byte_40F9A8D = 1;
   }
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3128, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3128/*"COIN_ROOM_RELEASE_QUEST_ID"*/, 0LL);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
@@ -383,10 +383,10 @@ int32_t __fastcall CoinRoomUtility__MaxPoint(const MethodInfo *method)
 
   if ( (byte_40F9A87 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3126, v1);
+    sub_B16FFC(&StringLiteral_3126/*"COIN_ROOM_MAX"*/, v1);
     byte_40F9A87 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_3126, 0LL);
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_3126/*"COIN_ROOM_MAX"*/, 0LL);
 }
 
 
@@ -396,10 +396,10 @@ int32_t __fastcall CoinRoomUtility__MonthExchangeMaxNum(const MethodInfo *method
 
   if ( (byte_40F9A88 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3127, v1);
+    sub_B16FFC(&StringLiteral_3127/*"COIN_ROOM_MAX_NUM"*/, v1);
     byte_40F9A88 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_3127, 0LL);
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_3127/*"COIN_ROOM_MAX_NUM"*/, 0LL);
 }
 
 

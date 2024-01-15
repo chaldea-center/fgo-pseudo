@@ -185,10 +185,10 @@ bool __fastcall WarBoardActionTrendConditionEntity__IsIgnoreIndivUnreleasable(
 {
   if ( (byte_40F8C1E & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_7456, method);
+    sub_B16FFC(&StringLiteral_7456/*"IgnoreIndivUnreleaseable"*/, method);
     byte_40F8C1E = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7456, 0, 0LL) != 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7456/*"IgnoreIndivUnreleaseable"*/, 0, 0LL) != 0;
 }
 
 
@@ -198,10 +198,10 @@ bool __fastcall WarBoardActionTrendConditionEntity__IsIncludeIgnoreIndividuality
 {
   if ( (byte_40F8C1D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_7516, method);
+    sub_B16FFC(&StringLiteral_7516/*"IncludeIgnoreIndividuality"*/, method);
     byte_40F8C1D = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7516, 0, 0LL) != 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7516/*"IncludeIgnoreIndividuality"*/, 0, 0LL) != 0;
 }
 
 
@@ -211,10 +211,10 @@ bool __fastcall WarBoardActionTrendConditionEntity__IsIncludePassiveIndividualit
 {
   if ( (byte_40F8C1C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_7517, method);
+    sub_B16FFC(&StringLiteral_7517/*"IncludePassiveIndividuality"*/, method);
     byte_40F8C1C = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7517, 0, 0LL) != 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_7517/*"IncludePassiveIndividuality"*/, 0, 0LL) != 0;
 }
 
 
@@ -248,12 +248,12 @@ bool __fastcall WarBoardActionTrendConditionEntity__TryGetMultiIndividuality(
 {
   if ( (byte_40F8C1A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_7559, resValues);
+    sub_B16FFC(&StringLiteral_7559/*"Individuality"*/, resValues);
     byte_40F8C1A = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_7559,
+           (System_String_o *)StringLiteral_7559/*"Individuality"*/,
            resValues,
            0LL);
 }

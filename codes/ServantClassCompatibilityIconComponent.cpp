@@ -445,10 +445,10 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconImage(
 
   if ( (byte_40F9506 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19349, icon);
-    sub_B16FFC(&StringLiteral_19351, v10);
-    sub_B16FFC(&StringLiteral_19350, v11);
-    sub_B16FFC(&StringLiteral_19348, v12);
+    sub_B16FFC(&StringLiteral_19349/*"img_arrow_2"*/, icon);
+    sub_B16FFC(&StringLiteral_19351/*"img_arrow_4"*/, v10);
+    sub_B16FFC(&StringLiteral_19350/*"img_arrow_3"*/, v11);
+    sub_B16FFC(&StringLiteral_19348/*"img_arrow_1"*/, v12);
     byte_40F9506 = 1;
   }
   if ( !icon )
@@ -459,13 +459,13 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconImage(
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   if ( iconId == 1 )
   {
-    v14 = (System_String_o **)&StringLiteral_19348;
-    v15 = (System_String_o **)&StringLiteral_19350;
+    v14 = (System_String_o **)&StringLiteral_19348/*"img_arrow_1"*/;
+    v15 = (System_String_o **)&StringLiteral_19350/*"img_arrow_3"*/;
   }
   else
   {
-    v14 = (System_String_o **)&StringLiteral_19349;
-    v15 = (System_String_o **)&StringLiteral_19351;
+    v14 = (System_String_o **)&StringLiteral_19349/*"img_arrow_2"*/;
+    v15 = (System_String_o **)&StringLiteral_19351/*"img_arrow_4"*/;
   }
   if ( !advantage )
     v14 = v15;

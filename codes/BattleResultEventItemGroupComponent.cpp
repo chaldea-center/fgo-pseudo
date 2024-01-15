@@ -56,8 +56,8 @@ void __fastcall BattleResultEventItemGroupComponent__CommonPointViewFunc(
     sub_B16FFC(&long_TypeInfo, v20);
     sub_B16FFC(&System_Math_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_B16FFC(&StringLiteral_23395, v23);
-    sub_B16FFC(&StringLiteral_691, v24);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v23);
+    sub_B16FFC(&StringLiteral_691/*"+ {0:#,0}"*/, v24);
     byte_40FA39F = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -97,13 +97,13 @@ void __fastcall BattleResultEventItemGroupComponent__CommonPointViewFunc(
   UILabel__SetDefaultFont(getLabel, 0LL);
   v44 = v34;
   v35 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v44);
-  v36 = System_String__Format((System_String_o *)StringLiteral_691, v35, 0LL);
+  v36 = System_String__Format((System_String_o *)StringLiteral_691/*"+ {0:#,0}"*/, v35, 0LL);
   UILabel__set_text(getLabel, v36, 0LL);
   if ( !totalLabel
     || (UILabel__SetDefaultFont(totalLabel, 0LL),
         v43 = v32,
         v37 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v43),
-        v38 = System_String__Format((System_String_o *)StringLiteral_23395, v37, 0LL),
+        v38 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v37, 0LL),
         UILabel__set_text(totalLabel, v38, 0LL),
         (v39 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (v40 = (EventPointGroupMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
@@ -242,20 +242,20 @@ void __fastcall BattleResultEventItemGroupComponent__SetQpInfo(
   if ( (byte_40FA39C & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, *(_QWORD *)&totalQp);
-    sub_B16FFC(&StringLiteral_23395, v7);
-    sub_B16FFC(&StringLiteral_691, v8);
+    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v7);
+    sub_B16FFC(&StringLiteral_691/*"+ {0:#,0}"*/, v8);
     byte_40FA39C = 1;
   }
   getQpLabel = this->fields.getQpLabel;
   v16 = getQp;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
-  v11 = System_String__Format((System_String_o *)StringLiteral_691, v10, 0LL);
+  v11 = System_String__Format((System_String_o *)StringLiteral_691/*"+ {0:#,0}"*/, v10, 0LL);
   if ( !getQpLabel
     || (UILabel__set_text(getQpLabel, v11, 0LL),
         totalQpLabel = this->fields.totalQpLabel,
         v15 = totalQp,
         v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15),
-        v14 = System_String__Format((System_String_o *)StringLiteral_23395, v13, 0LL),
+        v14 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v13, 0LL),
         !totalQpLabel) )
   {
     sub_B170D4();

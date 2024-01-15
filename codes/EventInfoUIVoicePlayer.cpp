@@ -14,12 +14,12 @@ void __fastcall EventInfoUIVoicePlayer___cctor(const MethodInfo *method)
   if ( (byte_40F881B & 1) == 0 )
   {
     sub_B16FFC(&EventInfoUIVoicePlayer_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_6150, v8);
+    sub_B16FFC(&StringLiteral_6150/*"EventInfoUiVoiceHistory_"*/, v8);
     byte_40F881B = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventInfoUIVoicePlayer_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_6150;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6150;
+  v10 = (System_Int32_array **)StringLiteral_6150/*"EventInfoUiVoiceHistory_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_6150/*"EventInfoUiVoiceHistory_"*/;
   sub_B16F98(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
@@ -852,7 +852,7 @@ void __fastcall EventInfoUIVoicePlayer__LoadHistory(
     sub_B16FFC(&char___TypeInfo, *(_QWORD *)&eventId);
     sub_B16FFC(&EventInfoUIVoicePlayer_TypeInfo, v4);
     sub_B16FFC(&Method_System_Collections_Generic_List_int__Clear__, v5);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40F880B = 1;
   }
   playedIdList = this->fields.playedIdList;
@@ -871,7 +871,7 @@ void __fastcall EventInfoUIVoicePlayer__LoadHistory(
   SAVE_KEY_PREFIX_VOICE_HISTORY = v8->static_fields->SAVE_KEY_PREFIX_VOICE_HISTORY;
   v10 = System_Int32__ToString((int32_t)&v22, 0LL);
   v11 = System_String__Concat_43743732(SAVE_KEY_PREFIX_VOICE_HISTORY, v10, 0LL);
-  String = UnityEngine_PlayerPrefs__GetString(v11, (System_String_o *)StringLiteral_1, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(v11, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( System_String__IsNullOrEmpty(String, 0LL) )
     return;
   v14 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v13);
@@ -1004,11 +1004,11 @@ void __fastcall EventInfoUIVoicePlayer__SaveHistrory(
   {
     sub_B16FFC(&EventInfoUIVoicePlayer_TypeInfo, *(_QWORD *)&eventId);
     sub_B16FFC(&Method_System_String_Join_int___, v4);
-    sub_B16FFC(&StringLiteral_698, v5);
+    sub_B16FFC(&StringLiteral_698/*","*/, v5);
     byte_40F880D = 1;
   }
   v6 = System_String__Join_int_(
-         (System_String_o *)StringLiteral_698,
+         (System_String_o *)StringLiteral_698/*","*/,
          (System_Collections_Generic_IEnumerable_T__o *)this->fields.playedIdList,
          (const MethodInfo_224FA24 *)Method_System_String_Join_int___);
   v7 = EventInfoUIVoicePlayer_TypeInfo;

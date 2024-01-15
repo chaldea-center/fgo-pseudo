@@ -64,10 +64,10 @@ void __fastcall ServantCombineControl__CheckConductionWire(ServantCombineControl
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B16FFC(&StringLiteral_3279, v7);
-    sub_B16FFC(&StringLiteral_3282, v8);
-    sub_B16FFC(&StringLiteral_3281, v9);
-    sub_B16FFC(&StringLiteral_3280, v10);
+    sub_B16FFC(&StringLiteral_3279/*"CONDUCTION_LIMITUP"*/, v7);
+    sub_B16FFC(&StringLiteral_3282/*"CONDUCTION_LVEXCEED_MSG"*/, v8);
+    sub_B16FFC(&StringLiteral_3281/*"CONDUCTION_LVEXCEED"*/, v9);
+    sub_B16FFC(&StringLiteral_3280/*"CONDUCTION_LIMITUP_MSG"*/, v10);
     byte_40FCE40 = 1;
   }
   conductionWireInfo = this->fields.conductionWireInfo;
@@ -148,12 +148,12 @@ void __fastcall ServantCombineControl__CheckConductionWire(ServantCombineControl
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3282, 0LL);
+                v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3282/*"CONDUCTION_LVEXCEED_MSG"*/, 0LL);
                 if ( conductionWireLabel )
                 {
                   UILabel__set_text(conductionWireLabel, v29, 0LL);
                   conductionWireButtonLabel = this->fields.conductionWireButtonLabel;
-                  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3281, 0LL);
+                  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3281/*"CONDUCTION_LVEXCEED"*/, 0LL);
                   if ( conductionWireButtonLabel )
                   {
                     UILabel__set_text(conductionWireButtonLabel, v31, 0LL);
@@ -180,12 +180,12 @@ LABEL_41:
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3280, 0LL);
+          v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3280/*"CONDUCTION_LIMITUP_MSG"*/, 0LL);
           if ( !v33 )
             goto LABEL_41;
           UILabel__set_text(v33, v34, 0LL);
           v35 = this->fields.conductionWireButtonLabel;
-          v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3279, 0LL);
+          v36 = LocalizationManager__Get((System_String_o *)StringLiteral_3279/*"CONDUCTION_LIMITUP"*/, 0LL);
           if ( !v35 )
             goto LABEL_41;
           UILabel__set_text(v35, v36, 0LL);
@@ -882,8 +882,8 @@ void __fastcall ServantCombineControl__InitInfo(ServantCombineControl_o *this, c
 
   if ( (byte_40FCE3B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9236, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FCE3B = 1;
   }
   v33 = 0;
@@ -915,19 +915,19 @@ void __fastcall ServantCombineControl__InitInfo(ServantCombineControl_o *this, c
   currentLvLb = this->fields.currentLvLb;
   if ( !currentLvLb )
     goto LABEL_22;
-  UILabel__set_text(currentLvLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentLvLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   increLvLb = this->fields.increLvLb;
   if ( !increLvLb )
     goto LABEL_22;
-  UILabel__set_text(increLvLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(increLvLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   v14 = this->fields.increValLb;
   if ( !v14 )
     goto LABEL_22;
-  UILabel__set_text(v14, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(v14, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   getSkillLb = this->fields.getSkillLb;
   if ( !getSkillLb )
     goto LABEL_22;
-  UILabel__set_text(getSkillLb, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(getSkillLb, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   currentAdjustHpIconLabel = this->fields.currentAdjustHpIconLabel;
   if ( !currentAdjustHpIconLabel )
     goto LABEL_22;
@@ -935,7 +935,7 @@ void __fastcall ServantCombineControl__InitInfo(ServantCombineControl_o *this, c
   currentAdjustHpMaxLabel = this->fields.currentAdjustHpMaxLabel;
   if ( !currentAdjustHpMaxLabel )
     goto LABEL_22;
-  UILabel__set_text(currentAdjustHpMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentAdjustHpMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   currentAdjustAtkIconLabel = this->fields.currentAdjustAtkIconLabel;
   if ( !currentAdjustAtkIconLabel )
     goto LABEL_22;
@@ -943,12 +943,12 @@ void __fastcall ServantCombineControl__InitInfo(ServantCombineControl_o *this, c
   currentAdjustAtkMaxLabel = this->fields.currentAdjustAtkMaxLabel;
   if ( !currentAdjustAtkMaxLabel )
     goto LABEL_22;
-  UILabel__set_text(currentAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   ServantCombineControl__SetHaveQpInfo(this, v20);
   this->fields._spendQpVal_k__BackingField = 0;
   qpLb = this->fields.qpLb;
   v33 = 0;
-  v22 = System_Int32__ToString_38275808((int32_t)&v33, (System_String_o *)StringLiteral_9236, 0LL);
+  v22 = System_Int32__ToString_38275808((int32_t)&v33, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
   if ( !qpLb )
     goto LABEL_22;
   UILabel__set_text(qpLb, v22, 0LL);
@@ -1102,10 +1102,10 @@ void __fastcall ServantCombineControl__InitSvtCombine(ServantCombineControl_o *t
     sub_B16FFC(&TutorialFlag_TypeInfo, v11);
     sub_B16FFC(&Method_ServantCombineControl___c__InitSvtCombine_b__81_0__, v12);
     sub_B16FFC(&ServantCombineControl___c_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_8812, v14);
-    sub_B16FFC(&StringLiteral_6831, v15);
-    sub_B16FFC(&StringLiteral_9242, v16);
-    sub_B16FFC(&StringLiteral_1, v17);
+    sub_B16FFC(&StringLiteral_8812/*"MSG_PRESELECT_BASE_SVT"*/, v14);
+    sub_B16FFC(&StringLiteral_6831/*"GET_EXP_INFO"*/, v15);
+    sub_B16FFC(&StringLiteral_9242/*"NEED_QP_INFO"*/, v16);
+    sub_B16FFC(&StringLiteral_1/*""*/, v17);
     byte_40FCE38 = 1;
   }
   memset(&v69, 0, sizeof(v69));
@@ -1120,12 +1120,12 @@ LABEL_21:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_9242, 0LL);
+    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_9242/*"NEED_QP_INFO"*/, 0LL);
     if ( needQpLb )
     {
       UILabel__set_text(needQpLb, v37, 0LL);
       getExpLb = this->fields.getExpLb;
-      v39 = LocalizationManager__Get((System_String_o *)StringLiteral_6831, 0LL);
+      v39 = LocalizationManager__Get((System_String_o *)StringLiteral_6831/*"GET_EXP_INFO"*/, 0LL);
       if ( getExpLb )
       {
         UILabel__set_text(getExpLb, v39, 0LL);
@@ -1147,7 +1147,7 @@ LABEL_21:
         {
           UnityEngine_Behaviour__set_enabled(selectMaterialSvtBtn, 0, 0LL);
           preSelectBaseLb = this->fields.preSelectBaseLb;
-          v49 = LocalizationManager__Get((System_String_o *)StringLiteral_8812, 0LL);
+          v49 = LocalizationManager__Get((System_String_o *)StringLiteral_8812/*"MSG_PRESELECT_BASE_SVT"*/, 0LL);
           if ( preSelectBaseLb )
           {
             UILabel__set_text(preSelectBaseLb, v49, 0LL);
@@ -1287,7 +1287,7 @@ LABEL_44:
   currentAdjustHpMaxLabel = this->fields.currentAdjustHpMaxLabel;
   if ( !currentAdjustHpMaxLabel )
     goto LABEL_50;
-  UILabel__set_text(currentAdjustHpMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentAdjustHpMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   currentAdjustAtkIconLabel = this->fields.currentAdjustAtkIconLabel;
   if ( !currentAdjustAtkIconLabel )
     goto LABEL_50;
@@ -1295,7 +1295,7 @@ LABEL_44:
   currentAdjustAtkMaxLabel = this->fields.currentAdjustAtkMaxLabel;
   if ( !currentAdjustAtkMaxLabel )
     goto LABEL_50;
-  UILabel__set_text(currentAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   resAdjustInfo = this->fields.resAdjustInfo;
   if ( !resAdjustInfo )
     goto LABEL_50;
@@ -1821,7 +1821,7 @@ void __fastcall ServantCombineControl__OnClickExeCombine(ServantCombineControl_o
     sub_B16FFC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_3329, v6);
+    sub_B16FFC(&StringLiteral_3329/*"CONFIRM_TITLE_SVT_COMBINE"*/, v6);
     byte_40FCE46 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
@@ -1833,7 +1833,7 @@ void __fastcall ServantCombineControl__OnClickExeCombine(ServantCombineControl_o
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  IsStatusUp = LocalizationManager__Get((System_String_o *)StringLiteral_3329, 0LL);
+  IsStatusUp = LocalizationManager__Get((System_String_o *)StringLiteral_3329/*"CONFIRM_TITLE_SVT_COMBINE"*/, 0LL);
   selectMaterialUsrSvtIdList_k__BackingField = this->fields._selectMaterialUsrSvtIdList_k__BackingField;
   if ( !selectMaterialUsrSvtIdList_k__BackingField )
     goto LABEL_16;
@@ -1984,7 +1984,7 @@ void __fastcall ServantCombineControl__ResetCampaign(ServantCombineControl_o *th
 
   if ( (byte_40FCE3A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FCE3A = 1;
   }
   campaign = (UnityEngine_Component_o *)this->fields.campaign;
@@ -1994,7 +1994,7 @@ void __fastcall ServantCombineControl__ResetCampaign(ServantCombineControl_o *th
   {
     sub_B170D4();
   }
-  UILabel__set_text(campaignLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(campaignLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.campaiginListPerSelectSvt = 0LL;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.campaiginListPerSelectSvt, 0LL, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)&this->fields.campaiginPerSelectSvtListIndex = 0x3F80000000000000LL;
@@ -2216,7 +2216,7 @@ void __fastcall ServantCombineControl__SetBaseSvtCardImg(
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v41);
     sub_B16FFC(&Method_ServantCombineControl___c__SetBaseSvtCardImg_b__88_0__, v42);
     sub_B16FFC(&ServantCombineControl___c_TypeInfo, v43);
-    sub_B16FFC(&StringLiteral_1, v44);
+    sub_B16FFC(&StringLiteral_1/*""*/, v44);
     byte_40FCE3E = 1;
   }
   p_baseData = &this->fields.baseData;
@@ -2282,7 +2282,7 @@ void __fastcall ServantCombineControl__SetBaseSvtCardImg(
   currentAdjustHpMaxLabel = this->fields.currentAdjustHpMaxLabel;
   if ( !currentAdjustHpMaxLabel )
     goto LABEL_165;
-  UILabel__set_text(currentAdjustHpMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentAdjustHpMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !*p_baseData )
     goto LABEL_165;
   v53 = BalanceConfig_TypeInfo;
@@ -2314,7 +2314,7 @@ void __fastcall ServantCombineControl__SetBaseSvtCardImg(
   currentAdjustAtkMaxLabel = this->fields.currentAdjustAtkMaxLabel;
   if ( !currentAdjustAtkMaxLabel )
     goto LABEL_165;
-  UILabel__set_text(currentAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(currentAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   ServantCombineControl__CheckConductionWire(this, v58);
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -3034,9 +3034,9 @@ void __fastcall ServantCombineControl__SetCombineData(
     sub_B16FFC(&LocalizationManager_TypeInfo, v20);
     sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    sub_B16FFC(&StringLiteral_9236, v23);
-    sub_B16FFC(&StringLiteral_7242, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v23);
+    sub_B16FFC(&StringLiteral_7242/*"INCREMENT_SVTLEVEL"*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
     byte_40FCE42 = 1;
   }
   *(_QWORD *)afterAtk = 0LL;
@@ -3254,7 +3254,7 @@ void __fastcall ServantCombineControl__SetCombineData(
     qpLb = this->fields.qpLb;
     this->fields._spendQpVal_k__BackingField = spendQp;
     v218 = spendQp;
-    v108 = System_Int32__ToString_38275808((int32_t)&v218, (System_String_o *)StringLiteral_9236, 0LL);
+    v108 = System_Int32__ToString_38275808((int32_t)&v218, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL);
     if ( !qpLb )
       goto LABEL_140;
     UILabel__set_text(qpLb, v108, 0LL);
@@ -3351,7 +3351,7 @@ void __fastcall ServantCombineControl__SetCombineData(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v137 = LocalizationManager__Get((System_String_o *)StringLiteral_7242, 0LL);
+    v137 = LocalizationManager__Get((System_String_o *)StringLiteral_7242/*"INCREMENT_SVTLEVEL"*/, 0LL);
     increAmount = this->fields.increAmount;
     v138 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &increAmount);
     v139 = System_String__Format(v137, v138, 0LL);
@@ -3542,7 +3542,7 @@ LABEL_102:
     resAdjustHpMaxLabel = this->fields.resAdjustHpMaxLabel;
     if ( !resAdjustHpMaxLabel )
       goto LABEL_140;
-    UILabel__set_text(resAdjustHpMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+    UILabel__set_text(resAdjustHpMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( !*p_baseData )
       goto LABEL_140;
     v190 = BalanceConfig_TypeInfo;
@@ -3597,7 +3597,7 @@ LABEL_125:
         resAdjustAtkMaxLabel = this->fields.resAdjustAtkMaxLabel;
         if ( resAdjustAtkMaxLabel )
         {
-          UILabel__set_text(resAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1, 0LL);
+          UILabel__set_text(resAdjustAtkMaxLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
           v204 = (UIWidget_o *)this->fields.qpLb;
           if ( this->fields.haveQpVal >= this->fields._spendQpVal_k__BackingField )
           {
@@ -4302,14 +4302,14 @@ void __fastcall ServantCombineControl__SetHaveQpInfo(ServantCombineControl_o *th
 
   if ( (byte_40FCE3C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9236, method);
+    sub_B16FFC(&StringLiteral_9236/*"N0"*/, method);
     byte_40FCE3C = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame
     || (haveQpLb = this->fields.haveQpLb,
         this->fields.haveQpVal = SelfUserGame->fields.qp,
-        v5 = System_Int32__ToString_38275808((int)this + 476, (System_String_o *)StringLiteral_9236, 0LL),
+        v5 = System_Int32__ToString_38275808((int)this + 476, (System_String_o *)StringLiteral_9236/*"N0"*/, 0LL),
         !haveQpLb) )
   {
     sub_B170D4();
@@ -4454,12 +4454,12 @@ void __fastcall ServantCombineControl__SetRecommendedMaterial(ServantCombineCont
     sub_B16FFC(&Method_ServantCombineControl___c__DisplayClass107_0__SetRecommendedMaterial_b__2__, v11);
     sub_B16FFC(&ServantCombineControl___c__DisplayClass107_0_TypeInfo, v12);
     sub_B16FFC(&ServantCombineControl___c_TypeInfo, v13);
-    sub_B16FFC(&StringLiteral_11022, v14);
-    sub_B16FFC(&StringLiteral_11021, v15);
-    sub_B16FFC(&StringLiteral_11020, v16);
-    sub_B16FFC(&StringLiteral_3253, v17);
-    sub_B16FFC(&StringLiteral_3251, v18);
-    sub_B16FFC(&StringLiteral_1, v19);
+    sub_B16FFC(&StringLiteral_11022/*"RECOMMENDED_NOT_HAVE_QP_CONFIRM"*/, v14);
+    sub_B16FFC(&StringLiteral_11021/*"RECOMMENDED_NOT_HAVE_QP"*/, v15);
+    sub_B16FFC(&StringLiteral_11020/*"RECOMMENDED_NOT_EXIST_MSG"*/, v16);
+    sub_B16FFC(&StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, v17);
+    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v18);
+    sub_B16FFC(&StringLiteral_1/*""*/, v19);
     byte_40FCE4D = 1;
   }
   v20 = sub_B170CC(ServantCombineControl___c__DisplayClass107_0_TypeInfo, method, v2, v3, v4);
@@ -4493,9 +4493,9 @@ LABEL_33:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v61 = LocalizationManager__Get((System_String_o *)StringLiteral_11022, 0LL);
-    v62 = LocalizationManager__Get((System_String_o *)StringLiteral_3253, 0LL);
-    v63 = LocalizationManager__Get((System_String_o *)StringLiteral_3251, 0LL);
+    v61 = LocalizationManager__Get((System_String_o *)StringLiteral_11022/*"RECOMMENDED_NOT_HAVE_QP_CONFIRM"*/, 0LL);
+    v62 = LocalizationManager__Get((System_String_o *)StringLiteral_3253/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+    v63 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
     v68 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                    CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                    v64,
@@ -4509,7 +4509,7 @@ LABEL_33:
       0LL);
     if ( !Instance )
       goto LABEL_33;
-    CommonUI__OpenConfirmDialog_18236860(Instance, (System_String_o *)StringLiteral_1, v61, v62, v63, v68, 0, 0, 0, 0LL);
+    CommonUI__OpenConfirmDialog_18236860(Instance, (System_String_o *)StringLiteral_1/*""*/, v61, v62, v63, v68, 0, 0, 0, 0LL);
   }
   else
   {
@@ -4521,7 +4521,7 @@ LABEL_33:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v43 = LocalizationManager__Get((System_String_o *)StringLiteral_11020, 0LL);
+      v43 = LocalizationManager__Get((System_String_o *)StringLiteral_11020/*"RECOMMENDED_NOT_EXIST_MSG"*/, 0LL);
       v44 = ServantCombineControl___c_TypeInfo;
       if ( (BYTE3(ServantCombineControl___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !ServantCombineControl___c_TypeInfo->_2.cctor_finished )
@@ -4531,7 +4531,7 @@ LABEL_33:
       }
       static_fields = v44->static_fields;
       _9__107_1 = static_fields->__9__107_1;
-      v47 = (System_String_o *)StringLiteral_1;
+      v47 = (System_String_o *)StringLiteral_1/*""*/;
       if ( !_9__107_1 )
       {
         if ( (BYTE3(v44->vtable._0_Equals.methodPtr) & 4) != 0 && !v44->_2.cctor_finished )
@@ -4568,7 +4568,7 @@ LABEL_33:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v69 = LocalizationManager__Get((System_String_o *)StringLiteral_11021, 0LL);
+      v69 = LocalizationManager__Get((System_String_o *)StringLiteral_11021/*"RECOMMENDED_NOT_HAVE_QP"*/, 0LL);
       _9__107_1 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v70, v71, v72, v73);
       System_Action___ctor(
         _9__107_1,
@@ -4579,7 +4579,7 @@ LABEL_33:
         goto LABEL_33;
       v57 = (CommonUI_o *)v38;
       v59 = v69;
-      v58 = (System_String_o *)StringLiteral_1;
+      v58 = (System_String_o *)StringLiteral_1/*""*/;
       v56 = 28;
     }
     CommonUI__OpenNotificationDialog(v57, v58, v59, _9__107_1, -1, 0, 0, 0, 0, v56, 0, 0, 0LL, 0LL);
@@ -4637,11 +4637,11 @@ void __fastcall ServantCombineControl__SetStateInfoMsg(
   {
     sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, *(_QWORD *)&state);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_7248, v6);
-    sub_B16FFC(&StringLiteral_7257, v7);
-    sub_B16FFC(&StringLiteral_5746, v8);
-    sub_B16FFC(&StringLiteral_12162, v9);
-    sub_B16FFC(&StringLiteral_1, v10);
+    sub_B16FFC(&StringLiteral_7248/*"INFO_MSG_COMBINE_MATERIAL"*/, v6);
+    sub_B16FFC(&StringLiteral_7257/*"INFO_MSG_SVTCOMBINE_BASE"*/, v7);
+    sub_B16FFC(&StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/, v8);
+    sub_B16FFC(&StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v10);
     byte_40FCE4A = 1;
   }
   detailInfoLb = (UnityEngine_Component_o *)this->fields.detailInfoLb;
@@ -4670,13 +4670,13 @@ LABEL_29:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v17 = &StringLiteral_7248;
+      v17 = &StringLiteral_7248/*"INFO_MSG_COMBINE_MATERIAL"*/;
     }
     else
     {
       if ( state != 2 )
       {
-        v18 = (System_String_o *)StringLiteral_1;
+        v18 = (System_String_o *)StringLiteral_1/*""*/;
         goto LABEL_27;
       }
       if ( this->fields._IsExeCombine_k__BackingField )
@@ -4686,7 +4686,7 @@ LABEL_29:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v17 = &StringLiteral_5746;
+        v17 = &StringLiteral_5746/*"EXE_SUMMON_COMBINE_TXT"*/;
       }
       else
       {
@@ -4697,7 +4697,7 @@ LABEL_29:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v17 = &StringLiteral_12162;
+        v17 = &StringLiteral_12162/*"SHORT_QP_INFO_MSG"*/;
       }
     }
   }
@@ -4708,7 +4708,7 @@ LABEL_29:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = &StringLiteral_7257;
+    v17 = &StringLiteral_7257/*"INFO_MSG_SVTCOMBINE_BASE"*/;
   }
   v18 = LocalizationManager__Get((System_String_o *)*v17, 0LL);
 LABEL_27:
@@ -4753,7 +4753,7 @@ void __fastcall ServantCombineControl__SetupCampaign(
   {
     sub_B16FFC(&Method_DataManager_GetMasterData_EventCampaignMaster___, eventInfoData);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_19593, v6);
+    sub_B16FFC(&StringLiteral_19593/*"img_txt_campaign_"*/, v6);
     byte_40FCE3F = 1;
   }
   v26 = 0LL;
@@ -4794,7 +4794,7 @@ LABEL_11:
 LABEL_13:
   campaign = this->fields.campaign;
   v16 = System_Int32__ToString((int32_t)&v26 + 4, 0LL);
-  v17 = System_String__Concat_43743732((System_String_o *)StringLiteral_19593, v16, 0LL);
+  v17 = System_String__Concat_43743732((System_String_o *)StringLiteral_19593/*"img_txt_campaign_"*/, v16, 0LL);
   if ( !campaign )
     goto LABEL_22;
   UISprite__set_spriteName(campaign, v17, 0LL);
@@ -4843,7 +4843,7 @@ void __fastcall ServantCombineControl__ShowExceededSvtDlg(ServantCombineControl_
   if ( (byte_40FCE45 & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_3329, v3);
+    sub_B16FFC(&StringLiteral_3329/*"CONFIRM_TITLE_SVT_COMBINE"*/, v3);
     byte_40FCE45 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4851,7 +4851,7 @@ void __fastcall ServantCombineControl__ShowExceededSvtDlg(ServantCombineControl_
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3329, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3329/*"CONFIRM_TITLE_SVT_COMBINE"*/, 0LL);
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame || !this->fields.exeCombineDlg )
     sub_B170D4();
@@ -4893,7 +4893,7 @@ void __fastcall ServantCombineControl__ShowRareSvtDlg(ServantCombineControl_o *t
     sub_B16FFC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v3);
     sub_B16FFC(&LocalizationManager_TypeInfo, v4);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_B16FFC(&StringLiteral_3329, v6);
+    sub_B16FFC(&StringLiteral_3329/*"CONFIRM_TITLE_SVT_COMBINE"*/, v6);
     byte_40FCE44 = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -4901,7 +4901,7 @@ void __fastcall ServantCombineControl__ShowRareSvtDlg(ServantCombineControl_o *t
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3329, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_3329/*"CONFIRM_TITLE_SVT_COMBINE"*/, 0LL);
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
     goto LABEL_16;

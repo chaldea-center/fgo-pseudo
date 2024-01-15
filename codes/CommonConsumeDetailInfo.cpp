@@ -126,7 +126,7 @@ System_String_o *__fastcall CommonConsumeDetailInfo__GetTargetName(
   if ( (byte_40F6557 & 1) == 0 )
   {
     sub_B16FFC(&ItemEntity_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F6557 = 1;
   }
   targetEntity = this->fields.targetEntity;
@@ -138,7 +138,7 @@ System_String_o *__fastcall CommonConsumeDetailInfo__GetTargetName(
   }
   else
   {
-    p_monitor = (System_String_o **)&StringLiteral_1;
+    p_monitor = (System_String_o **)&StringLiteral_1/*""*/;
   }
   return *p_monitor;
 }

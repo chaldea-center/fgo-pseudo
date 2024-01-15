@@ -154,10 +154,10 @@ void __fastcall WarBoardBackMenuComponent__OnClickRetireButton(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
     sub_B16FFC(&SoundManager_TypeInfo, v5);
     sub_B16FFC(&Method_WarBoardBackMenuComponent_OnClickRetireConfirmDialogFinalCheck__, v6);
-    sub_B16FFC(&StringLiteral_15197, v7);
-    sub_B16FFC(&StringLiteral_15195, v8);
-    sub_B16FFC(&StringLiteral_15199, v9);
-    sub_B16FFC(&StringLiteral_15198, v10);
+    sub_B16FFC(&StringLiteral_15197/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/, v7);
+    sub_B16FFC(&StringLiteral_15195/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE"*/, v8);
+    sub_B16FFC(&StringLiteral_15199/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/, v9);
+    sub_B16FFC(&StringLiteral_15198/*"WARBOARD_MENU_RETIRE_CONFIRMATION_TITLE"*/, v10);
     byte_40F8C3E = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -169,10 +169,10 @@ void __fastcall WarBoardBackMenuComponent__OnClickRetireButton(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_15198, 0LL);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_15195, 0LL);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_15199, 0LL);
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_15197, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_15198/*"WARBOARD_MENU_RETIRE_CONFIRMATION_TITLE"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_15195/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_15199/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_15197/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/, 0LL);
   v20 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v16,
@@ -254,9 +254,9 @@ void __fastcall WarBoardBackMenuComponent__OnClickRetireConfirmDialogFinalCheck(
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
     sub_B16FFC(&Method_WarBoardBackMenuComponent_OnClickRetireConfirmDialog__, v8);
-    sub_B16FFC(&StringLiteral_15197, v9);
-    sub_B16FFC(&StringLiteral_15196, v10);
-    sub_B16FFC(&StringLiteral_15199, v11);
+    sub_B16FFC(&StringLiteral_15197/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/, v9);
+    sub_B16FFC(&StringLiteral_15196/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE_GET_TREASURE"*/, v10);
+    sub_B16FFC(&StringLiteral_15199/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/, v11);
     byte_40F8C3F = 1;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -289,9 +289,9 @@ LABEL_17:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_15196, 0LL);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_15199, 0LL);
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_15197, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_15196/*"WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE_GET_TREASURE"*/, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_15199/*"WARBOARD_MENU_RETIRE_CONFIRMATION_YES"*/, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_15197/*"WARBOARD_MENU_RETIRE_CONFIRMATION_NO"*/, 0LL);
   v24 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v20,
@@ -339,10 +339,10 @@ void __fastcall WarBoardBackMenuComponent__OnClickSuspendButton(
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
     sub_B16FFC(&SoundManager_TypeInfo, v5);
     sub_B16FFC(&Method_WarBoardBackMenuComponent_OnClickSusupendConfirmDialog__, v6);
-    sub_B16FFC(&StringLiteral_15202, v7);
-    sub_B16FFC(&StringLiteral_15204, v8);
-    sub_B16FFC(&StringLiteral_15203, v9);
-    sub_B16FFC(&StringLiteral_15201, v10);
+    sub_B16FFC(&StringLiteral_15202/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_NO"*/, v7);
+    sub_B16FFC(&StringLiteral_15204/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_YES"*/, v8);
+    sub_B16FFC(&StringLiteral_15203/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_TITLE"*/, v9);
+    sub_B16FFC(&StringLiteral_15201/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_MESSAGE"*/, v10);
     byte_40F8C3C = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -354,10 +354,10 @@ void __fastcall WarBoardBackMenuComponent__OnClickSuspendButton(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_15203, 0LL);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_15201, 0LL);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_15204, 0LL);
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_15202, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_15203/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_TITLE"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_15201/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_MESSAGE"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_15204/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_YES"*/, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_15202/*"WARBOARD_MENU_SUSPEND_CONFIRMATION_NO"*/, 0LL);
   v20 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                  CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                  v16,
@@ -449,10 +449,10 @@ void __fastcall WarBoardBackMenuComponent__Open(
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, suspendCallback);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_15200, v13);
-    sub_B16FFC(&StringLiteral_15193, v14);
-    sub_B16FFC(&StringLiteral_15194, v15);
-    sub_B16FFC(&StringLiteral_15205, v16);
+    sub_B16FFC(&StringLiteral_15200/*"WARBOARD_MENU_SUSPEND_BUTTON_LABEL"*/, v13);
+    sub_B16FFC(&StringLiteral_15193/*"WARBOARD_MENU_BACK_BUTTON_LABEL"*/, v14);
+    sub_B16FFC(&StringLiteral_15194/*"WARBOARD_MENU_RETIRE_BUTTON_LABEL"*/, v15);
+    sub_B16FFC(&StringLiteral_15205/*"WARBOARD_MENU_TITLE_LABEL"*/, v16);
     byte_40F8C3A = 1;
   }
   if ( !this->fields.state )
@@ -501,7 +501,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_15205, 0LL);
+      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_15205/*"WARBOARD_MENU_TITLE_LABEL"*/, 0LL);
       if ( !v30 )
         goto LABEL_42;
       UILabel__set_text(v30, v31, 0LL);
@@ -520,7 +520,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v34 = LocalizationManager__Get((System_String_o *)StringLiteral_15200, 0LL);
+      v34 = LocalizationManager__Get((System_String_o *)StringLiteral_15200/*"WARBOARD_MENU_SUSPEND_BUTTON_LABEL"*/, 0LL);
       if ( !v33 )
         goto LABEL_42;
       UILabel__set_text(v33, v34, 0LL);
@@ -539,7 +539,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v37 = LocalizationManager__Get((System_String_o *)StringLiteral_15194, 0LL);
+      v37 = LocalizationManager__Get((System_String_o *)StringLiteral_15194/*"WARBOARD_MENU_RETIRE_BUTTON_LABEL"*/, 0LL);
       if ( !v36 )
         goto LABEL_42;
       UILabel__set_text(v36, v37, 0LL);
@@ -558,7 +558,7 @@ void __fastcall WarBoardBackMenuComponent__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_15193, 0LL);
+      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_15193/*"WARBOARD_MENU_BACK_BUTTON_LABEL"*/, 0LL);
       if ( !v39 )
         goto LABEL_42;
       UILabel__set_text(v39, v40, 0LL);
@@ -583,8 +583,8 @@ System_String_o *__fastcall WarBoardBackMenuComponent__get_closeBtnPath(
 {
   if ( (byte_40F8C43 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2537, method);
+    sub_B16FFC(&StringLiteral_2537/*"BG/BackButton"*/, method);
     byte_40F8C43 = 1;
   }
-  return (System_String_o *)StringLiteral_2537;
+  return (System_String_o *)StringLiteral_2537/*"BG/BackButton"*/;
 }

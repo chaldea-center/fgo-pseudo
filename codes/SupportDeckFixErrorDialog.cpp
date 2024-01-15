@@ -40,19 +40,19 @@ void __fastcall SupportDeckFixErrorDialog__Init(SupportDeckFixErrorDialog_o *thi
 
   if ( (byte_40FD4CC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FD4CC = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (closeButtonLabel = this->fields.closeButtonLabel) == 0LL) )
   {
     sub_B170D4();
   }
-  UILabel__set_text(closeButtonLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(closeButtonLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -138,9 +138,9 @@ void __fastcall SupportDeckFixErrorDialog__Open(
     sub_B16FFC(&System_Action_TypeInfo, messageList);
     sub_B16FFC(&LocalizationManager_TypeInfo, v5);
     sub_B16FFC(&Method_SupportDeckFixErrorDialog_OnFinishedOpen__, v6);
-    sub_B16FFC(&StringLiteral_12424, v7);
-    sub_B16FFC(&StringLiteral_12427, v8);
-    sub_B16FFC(&StringLiteral_3252, v9);
+    sub_B16FFC(&StringLiteral_12424/*"SUPPORT_DECK_FIXED_ERROR_MESSAGE"*/, v7);
+    sub_B16FFC(&StringLiteral_12427/*"SUPPORT_DECK_FIXED_ERROR_TITLE"*/, v8);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v9);
     byte_40FD4CD = 1;
   }
   state = this->fields.state;
@@ -164,15 +164,15 @@ void __fastcall SupportDeckFixErrorDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_12427, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_12427/*"SUPPORT_DECK_FIXED_ERROR_TITLE"*/, 0LL);
     if ( !titleLabel
       || (UILabel__set_text(titleLabel, v17, 0LL),
           messageLabel = this->fields.messageLabel,
-          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_12424, 0LL),
+          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_12424/*"SUPPORT_DECK_FIXED_ERROR_MESSAGE"*/, 0LL),
           !messageLabel)
       || (UILabel__set_text(messageLabel, v19, 0LL),
           closeButtonLabel = this->fields.closeButtonLabel,
-          v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL),
+          v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
           !closeButtonLabel) )
     {
 LABEL_16:
@@ -192,8 +192,8 @@ System_String_o *__fastcall SupportDeckFixErrorDialog__get_closeBtnPath(
 {
   if ( (byte_40FD4D0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2733, method);
+    sub_B16FFC(&StringLiteral_2733/*"BaseWindow/CloseButton"*/, method);
     byte_40FD4D0 = 1;
   }
-  return (System_String_o *)StringLiteral_2733;
+  return (System_String_o *)StringLiteral_2733/*"BaseWindow/CloseButton"*/;
 }

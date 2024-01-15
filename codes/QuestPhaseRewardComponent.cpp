@@ -10,11 +10,11 @@ void __fastcall QuestPhaseRewardComponent___ctor(QuestPhaseRewardComponent_o *th
 
   if ( (byte_40FD547 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21505, method);
+    sub_B16FFC(&StringLiteral_21505/*"qev79"*/, method);
     byte_40FD547 = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_21505;
-  this->fields.DISP_SE = (struct System_String_o *)StringLiteral_21505;
+  v9 = (System_Int32_array **)StringLiteral_21505/*"qev79"*/;
+  this->fields.DISP_SE = (struct System_String_o *)StringLiteral_21505/*"qev79"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.DISP_SE, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -209,8 +209,8 @@ void __fastcall QuestPhaseRewardComponent__Init(QuestPhaseRewardComponent_o *thi
     sub_B16FFC(&DataManager_TypeInfo, v5);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
     sub_B16FFC(&SimpleAnimation_State_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_21459, v8);
-    sub_B16FFC(&StringLiteral_10927, v9);
+    sub_B16FFC(&StringLiteral_21459/*"progress_reward_board"*/, v8);
+    sub_B16FFC(&StringLiteral_10927/*"QUEST_PHASE_REWARD_OVERWRITE_SPRITE"*/, v9);
     byte_40FD541 = 1;
   }
   Component_WebViewObject = (struct UnityEngine_Animation_o *)UnityEngine_Component__GetComponent_WebViewObject_(
@@ -364,7 +364,7 @@ LABEL_38:
   Master_WarQuestSelectionMaster = (ConstantStrMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_ConstantStrMaster___);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_47;
-  Value = ConstantStrMaster__GetValue(Master_WarQuestSelectionMaster, (System_String_o *)StringLiteral_10927, 0LL);
+  Value = ConstantStrMaster__GetValue(Master_WarQuestSelectionMaster, (System_String_o *)StringLiteral_10927/*"QUEST_PHASE_REWARD_OVERWRITE_SPRITE"*/, 0LL);
   this->fields.overwriteSpriteName = Value;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.overwriteSpriteName,
@@ -382,7 +382,7 @@ LABEL_38:
   v64 = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( !v64 )
     goto LABEL_47;
-  UnityEngine_Object__set_name(v64, (System_String_o *)StringLiteral_21459, 0LL);
+  UnityEngine_Object__set_name(v64, (System_String_o *)StringLiteral_21459/*"progress_reward_board"*/, 0LL);
   countLabel = (UnityEngine_Component_o *)this->fields.countLabel;
   if ( !countLabel )
     goto LABEL_47;
@@ -434,7 +434,7 @@ void __fastcall QuestPhaseRewardComponent__Open(
     sub_B16FFC(&Method_DataManager_GetMaster_QuestPhaseMaster___, v6);
     sub_B16FFC(&DataManager_TypeInfo, v7);
     sub_B16FFC(&TerminalPramsManager_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_1, v9);
+    sub_B16FFC(&StringLiteral_1/*""*/, v9);
     byte_40FD542 = 1;
   }
   entity = 0LL;
@@ -512,7 +512,7 @@ void __fastcall QuestPhaseRewardComponent__Open(
     OverwriteImageIdByQuestPhaseReward = GiftDetailMaster__GetOverwriteImageIdByQuestPhaseReward(v22, giftId, 0LL);
     IsNullOrEmpty = (TerminalPramsManager_c *)System_String__op_Inequality(
                                                 OverwriteImageIdByQuestPhaseReward,
-                                                (System_String_o *)StringLiteral_1,
+                                                (System_String_o *)StringLiteral_1/*""*/,
                                                 0LL);
     if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
     {
@@ -632,14 +632,14 @@ void __fastcall QuestPhaseRewardComponent__OpenByItemIdAndNum(
     sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&itemId);
     sub_B16FFC(&int_TypeInfo, v9);
     sub_B16FFC(&LocalizationManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_21460, v11);
-    sub_B16FFC(&StringLiteral_8823, v12);
+    sub_B16FFC(&StringLiteral_21460/*"progress_reward_board_{0}"*/, v11);
+    sub_B16FFC(&StringLiteral_8823/*"MULTIPLE_INFO"*/, v12);
     byte_40FD543 = 1;
   }
   bgSprite = this->fields.bgSprite;
   v25 = itemId;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25);
-  v15 = System_String__Format((System_String_o *)StringLiteral_21460, v14, 0LL);
+  v15 = System_String__Format((System_String_o *)StringLiteral_21460/*"progress_reward_board_{0}"*/, v14, 0LL);
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventSprite(bgSprite, v15, 0LL);
@@ -649,7 +649,7 @@ void __fastcall QuestPhaseRewardComponent__OpenByItemIdAndNum(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8823, 0LL);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_8823/*"MULTIPLE_INFO"*/, 0LL);
   v24 = itemNum;
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
   v19 = System_String__Format(v17, v18, 0LL);

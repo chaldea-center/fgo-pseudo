@@ -44,11 +44,11 @@ void __fastcall DisplayEffectArgument___ctor(
   if ( (byte_40FBCDB & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, actObj);
-    sub_B16FFC(&StringLiteral_1, v17);
+    sub_B16FFC(&StringLiteral_1/*""*/, v17);
     byte_40FBCDB = 1;
   }
-  v18 = (System_Int32_array **)StringLiteral_1;
-  this->fields.attachNodeName = (struct System_String_o *)StringLiteral_1;
+  v18 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.attachNodeName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_attachNodeName = (BattleServantConfConponent_o *)&this->fields.attachNodeName;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.attachNodeName,

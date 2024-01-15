@@ -37,8 +37,8 @@ void __fastcall LimitCountIconComponent__Set(
 
   if ( (byte_40FC249 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19273, *(_QWORD *)&limitCount);
-    sub_B16FFC(&StringLiteral_19272, v7);
+    sub_B16FFC(&StringLiteral_19273/*"icon_limit_on"*/, *(_QWORD *)&limitCount);
+    sub_B16FFC(&StringLiteral_19272/*"icon_limit_off"*/, v7);
     byte_40FC249 = 1;
   }
   if ( limitMax <= 0 )
@@ -75,9 +75,9 @@ void __fastcall LimitCountIconComponent__Set(
         if ( !v16 )
           break;
         if ( (int)v14 >= limitCount )
-          v17 = (System_String_o **)&StringLiteral_19272;
+          v17 = (System_String_o **)&StringLiteral_19272/*"icon_limit_off"*/;
         else
-          v17 = (System_String_o **)&StringLiteral_19273;
+          v17 = (System_String_o **)&StringLiteral_19273/*"icon_limit_on"*/;
         UISprite__set_spriteName(v16, *v17, 0LL);
         if ( (int)++v14 >= max_length )
           return;

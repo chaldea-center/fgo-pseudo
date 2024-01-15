@@ -84,12 +84,12 @@ bool __fastcall RestrictionBaseEntity__GetOverwriteLimitCountSvtIds(
 
   if ( (byte_40FD38A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21279, overwriteLimitCountSvtIds);
-    sub_B16FFC(&StringLiteral_21280, v9);
-    sub_B16FFC(&StringLiteral_21278, v10);
+    sub_B16FFC(&StringLiteral_21279/*"overwriteLimitCountSvtIds"*/, overwriteLimitCountSvtIds);
+    sub_B16FFC(&StringLiteral_21280/*"overwriteLimitCounts"*/, v9);
+    sub_B16FFC(&StringLiteral_21278/*"overwriteLimitCountIconIds"*/, v10);
     byte_40FD38A = 1;
   }
-  IntArray = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_21279, 0LL, 0LL);
+  IntArray = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_21279/*"overwriteLimitCountSvtIds"*/, 0LL, 0LL);
   *overwriteLimitCountSvtIds = IntArray;
   sub_B16F98(
     (BattleServantConfConponent_o *)overwriteLimitCountSvtIds,
@@ -102,7 +102,7 @@ bool __fastcall RestrictionBaseEntity__GetOverwriteLimitCountSvtIds(
     v17);
   if ( *overwriteLimitCountSvtIds )
   {
-    v24 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_21280, 0LL, 0LL);
+    v24 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_21280/*"overwriteLimitCounts"*/, 0LL, 0LL);
     *overwriteLimitCounts = v24;
     sub_B16F98(
       (BattleServantConfConponent_o *)overwriteLimitCounts,
@@ -113,7 +113,7 @@ bool __fastcall RestrictionBaseEntity__GetOverwriteLimitCountSvtIds(
       v28,
       v29,
       v30);
-    v31 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_21278, 0LL, 0LL);
+    v31 = EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_21278/*"overwriteLimitCountIconIds"*/, 0LL, 0LL);
     *overwriteLimitCountIconIds = v31;
     sub_B16F98(
       (BattleServantConfConponent_o *)overwriteLimitCountIconIds,
@@ -141,10 +141,10 @@ int32_t __fastcall RestrictionBaseEntity__GetUserEventDeckNo(RestrictionBaseEnti
 {
   if ( (byte_40FD389 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22887, method);
+    sub_B16FFC(&StringLiteral_22887/*"useEventDeckNo"*/, method);
     byte_40FD389 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22887, 1, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22887/*"useEventDeckNo"*/, 1, 0LL);
 }
 
 

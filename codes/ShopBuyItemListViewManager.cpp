@@ -239,9 +239,9 @@ void __fastcall ShopBuyItemListViewManager__CreateList_34527020(
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v23);
     sub_B16FFC(&ShopBuyItemListViewItem_TypeInfo, v24);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
-    sub_B16FFC(&StringLiteral_12152, v26);
-    sub_B16FFC(&StringLiteral_12114, v27);
-    sub_B16FFC(&StringLiteral_5692, v28);
+    sub_B16FFC(&StringLiteral_12152/*"SHOP_SPECIAL_LIST_EMPTY"*/, v26);
+    sub_B16FFC(&StringLiteral_12114/*"SHOP_LIST_EMPTY"*/, v27);
+    sub_B16FFC(&StringLiteral_5692/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/, v28);
     byte_40FF7FF = 1;
   }
   entity = 0LL;
@@ -578,15 +578,15 @@ LABEL_117:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v107 = (System_String_o *)StringLiteral_5692;
+    v107 = (System_String_o *)StringLiteral_5692/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/;
   }
   else
   {
     emptyMessageLabel = v126->fields.emptyMessageLabel;
     if ( v126->fields.kind == 12 )
-      v108 = (__int64 *)&StringLiteral_12152;
+      v108 = (__int64 *)&StringLiteral_12152/*"SHOP_SPECIAL_LIST_EMPTY"*/;
     else
-      v108 = &StringLiteral_12114;
+      v108 = &StringLiteral_12114/*"SHOP_LIST_EMPTY"*/;
     v109 = (System_String_o *)*v108;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1600,7 +1600,7 @@ void __fastcall ShopBuyItemListViewManager__RequestListObject(
     sub_B16FFC(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject__get_Count__, v5);
     sub_B16FFC(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject__get_Item__, v6);
     sub_B16FFC(&Method_ShopBuyItemListViewManager_OnMoveEnd__, v7);
-    sub_B16FFC(&StringLiteral_10004, v8);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v8);
     byte_40FF80E = 1;
   }
   v9 = 6;
@@ -1656,7 +1656,7 @@ LABEL_14:
         }
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_10004,
+          (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
           v24,
           0LL);
       }
@@ -1826,10 +1826,10 @@ void __fastcall ShopBuyItemListViewManager__SetList(ShopBuyItemListViewManager_o
   {
     sub_B16FFC(&ListViewSort_TypeInfo, method);
     sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_17032, v7);
-    sub_B16FFC(&StringLiteral_17031, v8);
-    sub_B16FFC(&StringLiteral_5692, v9);
-    sub_B16FFC(&StringLiteral_16963, v10);
+    sub_B16FFC(&StringLiteral_17032/*"btn_txt_stock_02"*/, v7);
+    sub_B16FFC(&StringLiteral_17031/*"btn_txt_stock"*/, v8);
+    sub_B16FFC(&StringLiteral_5692/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/, v9);
+    sub_B16FFC(&StringLiteral_16963/*"btn_txt_all"*/, v10);
     byte_40FF80A = 1;
   }
   baseSortInfo = this->fields.baseSortInfo;
@@ -1852,14 +1852,14 @@ void __fastcall ShopBuyItemListViewManager__SetList(ShopBuyItemListViewManager_o
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5692, 0LL);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5692/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/, 0LL);
   if ( !emptyMessageLabel )
     goto LABEL_22;
   UILabel__set_text(emptyMessageLabel, v21, 0LL);
   filterStatus = this->fields.filterStatus;
   if ( filterStatus == 2 )
   {
-    ShopBuyItemListViewManager__SetFilterName(this, (System_String_o *)StringLiteral_17032, v22);
+    ShopBuyItemListViewManager__SetFilterName(this, (System_String_o *)StringLiteral_17032/*"btn_txt_stock_02"*/, v22);
     operationSortInfo = this->fields.operationSortInfo;
     if ( operationSortInfo )
     {
@@ -1876,7 +1876,7 @@ LABEL_22:
   }
   if ( filterStatus == 1 )
   {
-    ShopBuyItemListViewManager__SetFilterName(this, (System_String_o *)StringLiteral_17031, v22);
+    ShopBuyItemListViewManager__SetFilterName(this, (System_String_o *)StringLiteral_17031/*"btn_txt_stock"*/, v22);
     v24 = this->fields.operationSortInfo;
     if ( !v24 )
       goto LABEL_22;
@@ -1886,7 +1886,7 @@ LABEL_22:
   {
     if ( filterStatus )
       goto LABEL_20;
-    ShopBuyItemListViewManager__SetFilterName(this, (System_String_o *)StringLiteral_16963, v22);
+    ShopBuyItemListViewManager__SetFilterName(this, (System_String_o *)StringLiteral_16963/*"btn_txt_all"*/, v22);
     v24 = this->fields.operationSortInfo;
     if ( !v24 )
       goto LABEL_22;

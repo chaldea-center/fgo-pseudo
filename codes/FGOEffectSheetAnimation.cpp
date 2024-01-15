@@ -57,7 +57,7 @@ void __fastcall FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this,
   if ( (byte_40FAD8F & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15950, v3);
+    sub_B16FFC(&StringLiteral_15950/*"_MainTex"*/, v3);
     byte_40FAD8F = 1;
   }
   klass = (UnityEngine_Object_o *)this[1].klass;
@@ -85,7 +85,7 @@ void __fastcall FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this,
           v15.fields.x = (float)(1.0 / (float)uvAnimationTileY) * (float)(v12 % uvAnimationTileY),
           v15.fields.y = (float)(1.0 - (float)(1.0 / (float)SLODWORD(framesPerSecond)))
                        - (float)((float)(1.0 / (float)SLODWORD(framesPerSecond)) * (float)(v12 / uvAnimationTileY)),
-          UnityEngine_Material__SetTextureOffset(material, (System_String_o *)StringLiteral_15950, v15, 0LL),
+          UnityEngine_Material__SetTextureOffset(material, (System_String_o *)StringLiteral_15950/*"_MainTex"*/, v15, 0LL),
           (v13 = (UnityEngine_Renderer_o *)this[1].klass) == 0LL)
       || (v14 = UnityEngine_Renderer__get_material(v13, 0LL)) == 0LL )
     {
@@ -94,6 +94,6 @@ LABEL_16:
     }
     v16.fields.x = 1.0 / (float)uvAnimationTileY;
     v16.fields.y = 1.0 / (float)SLODWORD(framesPerSecond);
-    UnityEngine_Material__SetTextureScale(v14, (System_String_o *)StringLiteral_15950, v16, 0LL);
+    UnityEngine_Material__SetTextureScale(v14, (System_String_o *)StringLiteral_15950/*"_MainTex"*/, v16, 0LL);
   }
 }

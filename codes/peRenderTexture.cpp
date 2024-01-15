@@ -26,23 +26,23 @@ void __fastcall peRenderTexture___ctor(peRenderTexture_o *this, const MethodInfo
 
   if ( (byte_4106B13 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15949, method);
-    sub_B16FFC(&StringLiteral_15971, v9);
-    sub_B16FFC(&StringLiteral_15970, v10);
+    sub_B16FFC(&StringLiteral_15949/*"_MainCamVPMatrix"*/, method);
+    sub_B16FFC(&StringLiteral_15971/*"_ParallelViewMatrix"*/, v9);
+    sub_B16FFC(&StringLiteral_15970/*"_ParallelProjectionMatrix"*/, v10);
     byte_4106B13 = 1;
   }
   this->fields.changeCullingMask = -1;
   this->fields.boundsUpdateCount = -1;
   *(_OWORD *)&this->fields.textureWidth = xmmword_3174800;
   *(_QWORD *)&this->fields.textureFilterMode = 0xFFFFFFFF00000001LL;
-  v11 = (System_Int32_array **)StringLiteral_15949;
-  this->fields.MainCamVPMat = (struct System_String_o *)StringLiteral_15949;
+  v11 = (System_Int32_array **)StringLiteral_15949/*"_MainCamVPMatrix"*/;
+  this->fields.MainCamVPMat = (struct System_String_o *)StringLiteral_15949/*"_MainCamVPMatrix"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.MainCamVPMat, v11, v2, v3, v4, v5, v6, v7);
-  v12 = (System_Int32_array **)StringLiteral_15971;
-  this->fields.ParallelViewMat = (struct System_String_o *)StringLiteral_15971;
+  v12 = (System_Int32_array **)StringLiteral_15971/*"_ParallelViewMatrix"*/;
+  this->fields.ParallelViewMat = (struct System_String_o *)StringLiteral_15971/*"_ParallelViewMatrix"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.ParallelViewMat, v12, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Int32_array **)StringLiteral_15970;
-  this->fields.ParallelProjectionMat = (struct System_String_o *)StringLiteral_15970;
+  v19 = (System_Int32_array **)StringLiteral_15970/*"_ParallelProjectionMatrix"*/;
+  this->fields.ParallelProjectionMat = (struct System_String_o *)StringLiteral_15970/*"_ParallelProjectionMatrix"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.ParallelProjectionMat, v19, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)&this->fields._RBindex = 0x6E0000000ALL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
@@ -547,8 +547,8 @@ void __fastcall peRenderTexture__LateUpdate(peRenderTexture_o *this, const Metho
   if ( (byte_4106B0A & 1) == 0 )
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_15977, v3);
-    sub_B16FFC(&StringLiteral_15978, v4);
+    sub_B16FFC(&StringLiteral_15977/*"_ProjectorMatrixVP"*/, v3);
+    sub_B16FFC(&StringLiteral_15978/*"_ProjectorPos"*/, v4);
     byte_4106B0A = 1;
   }
   memset(&v51, 0, sizeof(v51));
@@ -657,7 +657,7 @@ void __fastcall peRenderTexture__LateUpdate(peRenderTexture_o *this, const Metho
         v48 = v44;
         if ( !sharedMaterial
           || (v41 = v48,
-              UnityEngine_Material__SetMatrix(sharedMaterial, (System_String_o *)StringLiteral_15977, &v41, 0LL),
+              UnityEngine_Material__SetMatrix(sharedMaterial, (System_String_o *)StringLiteral_15977/*"_ProjectorMatrixVP"*/, &v41, 0LL),
               (v39 = this->fields.boardrenderer) == 0LL)
           || (v40 = UnityEngine_Renderer__get_sharedMaterial(v39, 0LL)) == 0LL )
         {
@@ -668,7 +668,7 @@ LABEL_30:
         v56.fields.x = v35;
         v56.fields.y = v36;
         v56.fields.z = v37;
-        UnityEngine_Material__SetVector(v40, (System_String_o *)StringLiteral_15978, v56, 0LL);
+        UnityEngine_Material__SetVector(v40, (System_String_o *)StringLiteral_15978/*"_ProjectorPos"*/, v56, 0LL);
       }
     }
   }
@@ -963,7 +963,7 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_Camera___, v14);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
     sub_B16FFC(&UnityEngine_RenderTexture_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_15950, v17);
+    sub_B16FFC(&StringLiteral_15950/*"_MainTex"*/, v17);
     byte_4106B0B = 1;
   }
   memset(&i, 0, sizeof(i));
@@ -1307,7 +1307,7 @@ void __fastcall peRenderTexture__initialize(peRenderTexture_o *this, const Metho
                                 {
                                   UnityEngine_Material__SetTexture(
                                     sharedMaterial,
-                                    (System_String_o *)StringLiteral_15950,
+                                    (System_String_o *)StringLiteral_15950/*"_MainTex"*/,
                                     (UnityEngine_Texture_o *)*p_renderTexture,
                                     0LL);
 LABEL_95:

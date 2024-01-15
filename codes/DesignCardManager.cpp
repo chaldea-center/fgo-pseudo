@@ -66,11 +66,11 @@ System_String_o *__fastcall DesignCardManager__GetCommanCodeCardPath(
   if ( (byte_40FBC5A & 1) == 0 )
   {
     sub_B16FFC(&Rarity_TypeInfo, *(_QWORD *)&imageId);
-    sub_B16FFC(&StringLiteral_17636, v5);
-    sub_B16FFC(&StringLiteral_17635, v6);
-    sub_B16FFC(&StringLiteral_17376, v7);
-    sub_B16FFC(&StringLiteral_4148, v8);
-    sub_B16FFC(&StringLiteral_17637, v9);
+    sub_B16FFC(&StringLiteral_17636/*"cord_b"*/, v5);
+    sub_B16FFC(&StringLiteral_17635/*"cord"*/, v6);
+    sub_B16FFC(&StringLiteral_17376/*"class"*/, v7);
+    sub_B16FFC(&StringLiteral_4148/*"CommandCord/"*/, v8);
+    sub_B16FFC(&StringLiteral_17637/*"cord_n"*/, v9);
     byte_40FBC5A = 1;
   }
   if ( (BYTE3(Rarity_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !Rarity_TypeInfo->_2.cctor_finished )
@@ -79,19 +79,19 @@ System_String_o *__fastcall DesignCardManager__GetCommanCodeCardPath(
   if ( !DesignCardPrefix
     || (v11 = System_String__Replace_43750968(
                 DesignCardPrefix,
-                (System_String_o *)StringLiteral_17376,
-                (System_String_o *)StringLiteral_17635,
+                (System_String_o *)StringLiteral_17376/*"class"*/,
+                (System_String_o *)StringLiteral_17635/*"cord"*/,
                 0LL)) == 0LL )
   {
     sub_B170D4();
   }
   v12 = System_String__Replace_43750968(
           v11,
-          (System_String_o *)StringLiteral_17637,
-          (System_String_o *)StringLiteral_17636,
+          (System_String_o *)StringLiteral_17637/*"cord_n"*/,
+          (System_String_o *)StringLiteral_17636/*"cord_b"*/,
           0LL);
   v13 = System_Int32__ToString((int32_t)&v15, 0LL);
-  return System_String__Concat_43746016((System_String_o *)StringLiteral_4148, v12, v13, 0LL);
+  return System_String__Concat_43746016((System_String_o *)StringLiteral_4148/*"CommandCord/"*/, v12, v13, 0LL);
 }
 
 
@@ -111,7 +111,7 @@ System_String_o *__fastcall DesignCardManager__GetDesignCardPath(
   if ( (byte_40FBC59 & 1) == 0 )
   {
     sub_B16FFC(&Rarity_TypeInfo, *(_QWORD *)&imageId);
-    sub_B16FFC(&StringLiteral_3997, v7);
+    sub_B16FFC(&StringLiteral_3997/*"ClassCard/"*/, v7);
     byte_40FBC59 = 1;
   }
   v12 = 0;
@@ -124,7 +124,7 @@ System_String_o *__fastcall DesignCardManager__GetDesignCardPath(
     v9 = imageId + (imageId & 1) - 1;
   v12 = v9;
   v10 = System_Int32__ToString((int32_t)&v12, 0LL);
-  return System_String__Concat_43746016((System_String_o *)StringLiteral_3997, DesignCardPrefix, v10, 0LL);
+  return System_String__Concat_43746016((System_String_o *)StringLiteral_3997/*"ClassCard/"*/, DesignCardPrefix, v10, 0LL);
 }
 
 
@@ -141,7 +141,7 @@ System_String_o *__fastcall DesignCardManager__GetExceedFrameCardPath(
 
   if ( (byte_40FBC5B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_3997, *(_QWORD *)&imageId);
+    sub_B16FFC(&StringLiteral_3997/*"ClassCard/"*/, *(_QWORD *)&imageId);
     byte_40FBC5B = 1;
   }
   if ( this->fields.SVT_EQ_IMAGE_ID == imageId )
@@ -150,7 +150,7 @@ System_String_o *__fastcall DesignCardManager__GetExceedFrameCardPath(
     v7 = imageId + (imageId & 1) - 1;
   v10 = v7;
   v8 = System_Int32__ToString((int32_t)&v10, 0LL);
-  return System_String__Concat_43746016((System_String_o *)StringLiteral_3997, prefix, v8, 0LL);
+  return System_String__Concat_43746016((System_String_o *)StringLiteral_3997/*"ClassCard/"*/, prefix, v8, 0LL);
 }
 
 

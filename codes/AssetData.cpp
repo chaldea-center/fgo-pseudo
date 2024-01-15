@@ -40,15 +40,15 @@ void __fastcall AssetData___ctor(AssetData_o *this, int32_t type, System_String_
 
   if ( (byte_40FC9FA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, *(_QWORD *)&type);
+    sub_B16FFC(&StringLiteral_1/*""*/, *(_QWORD *)&type);
     byte_40FC9FA = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.type = type;
   this->fields.name = name;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.name, (System_Int32_array **)name, v7, v8, v9, v10, v11, v12);
-  v13 = (System_Int32_array **)StringLiteral_1;
-  this->fields.attrib = (struct System_String_o *)StringLiteral_1;
+  v13 = (System_Int32_array **)StringLiteral_1/*""*/;
+  this->fields.attrib = (struct System_String_o *)StringLiteral_1/*""*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.attrib, v13, v14, v15, v16, v17, v18, v19);
   this->fields.keyType = 0LL;
   p_keyType = &this->fields.keyType;
@@ -417,16 +417,16 @@ UnityEngine_Networking_UnityWebRequest_o *__fastcall AssetData__GetLoadRequest(
   if ( (byte_40FC9FC & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_22742, v3);
-    sub_B16FFC(&StringLiteral_21410, v4);
-    sub_B16FFC(&StringLiteral_19993, v5);
-    sub_B16FFC(&StringLiteral_19122, v6);
-    sub_B16FFC(&StringLiteral_17092, v7);
-    sub_B16FFC(&StringLiteral_19994, v8);
-    sub_B16FFC(&StringLiteral_23157, v9);
-    sub_B16FFC(&StringLiteral_23290, v10);
-    sub_B16FFC(&StringLiteral_21126, v11);
-    sub_B16FFC(&StringLiteral_19123, v12);
+    sub_B16FFC(&StringLiteral_22742/*"txt"*/, v3);
+    sub_B16FFC(&StringLiteral_21410/*"png"*/, v4);
+    sub_B16FFC(&StringLiteral_19993/*"jpeg"*/, v5);
+    sub_B16FFC(&StringLiteral_19122/*"htm"*/, v6);
+    sub_B16FFC(&StringLiteral_17092/*"bytes"*/, v7);
+    sub_B16FFC(&StringLiteral_19994/*"jpg"*/, v8);
+    sub_B16FFC(&StringLiteral_23157/*"wav"*/, v9);
+    sub_B16FFC(&StringLiteral_23290/*"xml"*/, v10);
+    sub_B16FFC(&StringLiteral_21126/*"ogg"*/, v11);
+    sub_B16FFC(&StringLiteral_19123/*"html"*/, v12);
     byte_40FC9FC = 1;
   }
   if ( this->fields.type )
@@ -454,26 +454,26 @@ UnityEngine_Networking_UnityWebRequest_o *__fastcall AssetData__GetLoadRequest(
     {
       if ( v21 != 126868124 )
       {
-        if ( v21 == 333626681 && System_String__op_Equality(Ext, (System_String_o *)StringLiteral_23157, 0LL) )
+        if ( v21 == 333626681 && System_String__op_Equality(Ext, (System_String_o *)StringLiteral_23157/*"wav"*/, 0LL) )
         {
           v22 = 20;
           return UnityEngine_Networking_UnityWebRequestMultimedia__GetAudioClip(v20, v22, 0LL);
         }
         return 0LL;
       }
-      v25 = &StringLiteral_19122;
+      v25 = &StringLiteral_19122/*"htm"*/;
       goto LABEL_38;
     }
     switch ( v21 )
     {
       case 0xA535A9EF:
-        v25 = &StringLiteral_22742;
+        v25 = &StringLiteral_22742/*"txt"*/;
         break;
       case 0x65B1D004u:
-        v25 = &StringLiteral_17092;
+        v25 = &StringLiteral_17092/*"bytes"*/;
         break;
       case 0x6835C29Cu:
-        v24 = &StringLiteral_21410;
+        v24 = &StringLiteral_21410/*"png"*/;
         goto LABEL_32;
       default:
         return 0LL;
@@ -487,29 +487,29 @@ LABEL_38:
   {
     if ( v21 != -1092644061 )
     {
-      if ( v21 == -868418412 && System_String__op_Equality(Ext, (System_String_o *)StringLiteral_21126, 0LL) )
+      if ( v21 == -868418412 && System_String__op_Equality(Ext, (System_String_o *)StringLiteral_21126/*"ogg"*/, 0LL) )
       {
         v22 = 14;
         return UnityEngine_Networking_UnityWebRequestMultimedia__GetAudioClip(v20, v22, 0LL);
       }
       return 0LL;
     }
-    v24 = &StringLiteral_19993;
+    v24 = &StringLiteral_19993/*"jpeg"*/;
     goto LABEL_32;
   }
   if ( v21 == -680155184 )
   {
-    v25 = &StringLiteral_19123;
+    v25 = &StringLiteral_19123/*"html"*/;
     goto LABEL_38;
   }
   if ( v21 == -630165834 )
   {
-    v25 = &StringLiteral_23290;
+    v25 = &StringLiteral_23290/*"xml"*/;
     goto LABEL_38;
   }
   if ( v21 != -624468176 )
     return 0LL;
-  v24 = &StringLiteral_19994;
+  v24 = &StringLiteral_19994/*"jpg"*/;
 LABEL_32:
   if ( !System_String__op_Equality(Ext, (System_String_o *)*v24, 0LL) )
     return 0LL;
@@ -1512,16 +1512,16 @@ bool __fastcall AssetData__SetData(
     sub_B16FFC(&UnityEngine_Networking_DownloadHandlerTexture_TypeInfo, v6);
     sub_B16FFC(&UnityEngine_Object___TypeInfo, v7);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_22742, v9);
-    sub_B16FFC(&StringLiteral_21410, v10);
-    sub_B16FFC(&StringLiteral_19993, v11);
-    sub_B16FFC(&StringLiteral_19122, v12);
-    sub_B16FFC(&StringLiteral_17092, v13);
-    sub_B16FFC(&StringLiteral_19994, v14);
-    sub_B16FFC(&StringLiteral_23157, v15);
-    sub_B16FFC(&StringLiteral_23290, v16);
-    sub_B16FFC(&StringLiteral_21126, v17);
-    sub_B16FFC(&StringLiteral_19123, v18);
+    sub_B16FFC(&StringLiteral_22742/*"txt"*/, v9);
+    sub_B16FFC(&StringLiteral_21410/*"png"*/, v10);
+    sub_B16FFC(&StringLiteral_19993/*"jpeg"*/, v11);
+    sub_B16FFC(&StringLiteral_19122/*"htm"*/, v12);
+    sub_B16FFC(&StringLiteral_17092/*"bytes"*/, v13);
+    sub_B16FFC(&StringLiteral_19994/*"jpg"*/, v14);
+    sub_B16FFC(&StringLiteral_23157/*"wav"*/, v15);
+    sub_B16FFC(&StringLiteral_23290/*"xml"*/, v16);
+    sub_B16FFC(&StringLiteral_21126/*"ogg"*/, v17);
+    sub_B16FFC(&StringLiteral_19123/*"html"*/, v18);
     byte_40FC9FD = 1;
   }
   p_objectList = &this->fields.objectList;
@@ -1545,14 +1545,14 @@ bool __fastcall AssetData__SetData(
       {
         if ( v22 == 333626681 )
         {
-          v23 = &StringLiteral_23157;
+          v23 = &StringLiteral_23157/*"wav"*/;
           goto LABEL_18;
         }
 LABEL_33:
         v25 = 0LL;
         goto LABEL_43;
       }
-      v28 = &StringLiteral_19122;
+      v28 = &StringLiteral_19122/*"htm"*/;
 LABEL_39:
       v36 = System_String__op_Equality(v21, (System_String_o *)*v28, 0LL);
       v25 = 0LL;
@@ -1566,12 +1566,12 @@ LABEL_39:
     }
     if ( v22 == -1523209745 )
     {
-      v28 = &StringLiteral_22742;
+      v28 = &StringLiteral_22742/*"txt"*/;
       goto LABEL_39;
     }
     if ( v22 == 1706151940 )
     {
-      v30 = System_String__op_Equality(v21, (System_String_o *)StringLiteral_17092, 0LL);
+      v30 = System_String__op_Equality(v21, (System_String_o *)StringLiteral_17092/*"bytes"*/, 0LL);
       v25 = 0LL;
       if ( v30 )
       {
@@ -1583,24 +1583,24 @@ LABEL_39:
     }
     if ( v22 != 1748353692 )
       goto LABEL_33;
-    v27 = &StringLiteral_21410;
+    v27 = &StringLiteral_21410/*"png"*/;
     goto LABEL_31;
   }
   if ( v22 > 0xCC3CFC94 )
   {
     if ( v22 == -680155184 )
     {
-      v28 = &StringLiteral_19123;
+      v28 = &StringLiteral_19123/*"html"*/;
       goto LABEL_39;
     }
     if ( v22 == -630165834 )
     {
-      v28 = &StringLiteral_23290;
+      v28 = &StringLiteral_23290/*"xml"*/;
       goto LABEL_39;
     }
     if ( v22 != -624468176 )
       goto LABEL_33;
-    v27 = &StringLiteral_19994;
+    v27 = &StringLiteral_19994/*"jpg"*/;
 LABEL_31:
     v29 = System_String__op_Equality(v21, (System_String_o *)*v27, 0LL);
     v25 = 0LL;
@@ -1617,12 +1617,12 @@ LABEL_31:
   }
   if ( v22 == -1092644061 )
   {
-    v27 = &StringLiteral_19993;
+    v27 = &StringLiteral_19993/*"jpeg"*/;
     goto LABEL_31;
   }
   if ( v22 != -868418412 )
     goto LABEL_33;
-  v23 = &StringLiteral_21126;
+  v23 = &StringLiteral_21126/*"ogg"*/;
 LABEL_18:
   v24 = System_String__op_Equality(v21, (System_String_o *)*v23, 0LL);
   v25 = 0LL;
@@ -1813,7 +1813,7 @@ System_String_o *__fastcall AssetData__get_CacheName(AssetData_o *this, const Me
     sub_B16FFC(&AndroidUtil_TypeInfo, method);
     sub_B16FFC(&AssetData_TypeInfo, v3);
     sub_B16FFC(&AssetManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_868, v5);
+    sub_B16FFC(&StringLiteral_868/*".unity3d"*/, v5);
     byte_40FC9F7 = 1;
   }
   Ext = AssetData__GetExt(this, method);
@@ -1855,7 +1855,7 @@ LABEL_20:
           v8->static_fields->ASSETBUNDLE_SPLIT_BASE_CHAR,
           v8->static_fields->ASSETBUNDLE_SPLIT_CACHE_CHAR,
           0LL);
-  v14 = System_String__Concat_43743732(v12, (System_String_o *)StringLiteral_868, 0LL);
+  v14 = System_String__Concat_43743732(v12, (System_String_o *)StringLiteral_868/*".unity3d"*/, 0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   return AssetManager__getShaName(v14, v13);
@@ -1889,7 +1889,7 @@ System_String_o *__fastcall AssetData__get_DownloadName(AssetData_o *this, const
   {
     sub_B16FFC(&AssetData_TypeInfo, method);
     sub_B16FFC(&AssetManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_868, v4);
+    sub_B16FFC(&StringLiteral_868/*".unity3d"*/, v4);
     byte_40FC9F6 = 1;
   }
   Ext = AssetData__GetExt(this, method);
@@ -1923,7 +1923,7 @@ LABEL_17:
          v7->static_fields->ASSETBUNDLE_SPLIT_BASE_CHAR,
          v7->static_fields->ASSETBUNDLE_SPLIT_HASH_CHAR,
          0LL);
-  v11 = System_String__Concat_43743732(v9, (System_String_o *)StringLiteral_868, 0LL);
+  v11 = System_String__Concat_43743732(v9, (System_String_o *)StringLiteral_868/*".unity3d"*/, 0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   return AssetManager__getShaName(v11, v10);
@@ -2018,14 +2018,14 @@ System_String_o *__fastcall AssetData__get_Path(AssetData_o *this, const MethodI
   if ( (byte_40FC9F8 & 1) == 0 )
   {
     sub_B16FFC(&AssetManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FC9F8 = 1;
   }
   type = this->fields.type;
   if ( type == 1 )
     return this->fields.name;
   if ( type )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( !byte_40F7AA7 )
@@ -2059,12 +2059,12 @@ System_String_o *__fastcall AssetData__get_Url(AssetData_o *this, const MethodIn
   if ( (byte_40FC9F5 & 1) == 0 )
   {
     sub_B16FFC(&AssetManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40FC9F5 = 1;
   }
   nowVersion = this->fields.nowVersion;
   if ( (nowVersion & 0x80000000) != 0 || nowVersion == this->fields.newVersion )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   return AssetManager__getUrlString_29924852(this, method);

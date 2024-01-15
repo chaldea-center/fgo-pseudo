@@ -15,15 +15,15 @@ void __fastcall BlankEarth___cctor(const MethodInfo *method)
   if ( (byte_40F90D3 & 1) == 0 )
   {
     sub_B16FFC(&BlankEarth_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16798, v8);
+    sub_B16FFC(&StringLiteral_16798/*"blankEarthRotateKey"*/, v8);
     byte_40F90D3 = 1;
   }
   static_fields = BlankEarth_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->SOUTH_POLE_ROTATE.fields.x = 0x4292000041F80000LL;
   static_fields->SOUTH_POLE_ROTATE.fields.z = 60.0;
   v10 = BlankEarth_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_16798;
-  v10->BLANK_EARTH_ROTATE_KEY = (struct System_String_o *)StringLiteral_16798;
+  v11 = (System_Int32_array **)StringLiteral_16798/*"blankEarthRotateKey"*/;
+  v10->BLANK_EARTH_ROTATE_KEY = (struct System_String_o *)StringLiteral_16798/*"blankEarthRotateKey"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v10->BLANK_EARTH_ROTATE_KEY, v11, v2, v3, v4, v5, v6, v7);
 }
 
@@ -40,15 +40,15 @@ void __fastcall BlankEarth___ctor(BlankEarth_o *this, const MethodInfo *method)
 
   if ( (byte_40F90D2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16377, method);
+    sub_B16FFC(&StringLiteral_16377/*"ar223"*/, method);
     byte_40F90D2 = 1;
   }
   *(_QWORD *)&this->fields.startupFadeTime = 0x3E0000003F000000LL;
   *(_OWORD *)&this->fields.greenwichOffset = xmmword_3134E70;
   *(_OWORD *)&this->fields.zoomOutSpdTime = xmmword_3134E80;
   *(_OWORD *)&this->fields.earthRadius = xmmword_3134E90;
-  v9 = (System_Int32_array **)StringLiteral_16377;
-  this->fields.startupSeName = (struct System_String_o *)StringLiteral_16377;
+  v9 = (System_Int32_array **)StringLiteral_16377/*"ar223"*/;
+  this->fields.startupSeName = (struct System_String_o *)StringLiteral_16377/*"ar223"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.startupSeName, v9, v2, v3, v4, v5, v6, v7);
   *(_QWORD *)&this->fields.zoomInEasingType = 0x300000003LL;
   this->fields.firstAnimTime = 3.0;
@@ -752,7 +752,7 @@ BlankEarthPoint_o *__fastcall BlankEarth__CreateSpot(
     sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v17);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v18);
     sub_B16FFC(&TerminalSceneComponent_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_2814, v20);
+    sub_B16FFC(&StringLiteral_2814/*"BlankEarthPoint_"*/, v20);
     byte_40F90C7 = 1;
   }
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -816,7 +816,7 @@ BlankEarthPoint_o *__fastcall BlankEarth__CreateSpot(
     goto LABEL_22;
   v34 = (UnityEngine_Object_o *)transform;
   v35 = System_Int32__ToString((int)spotEnt + 16, 0LL);
-  v36 = System_String__Concat_43743732((System_String_o *)StringLiteral_2814, v35, 0LL);
+  v36 = System_String__Concat_43743732((System_String_o *)StringLiteral_2814/*"BlankEarthPoint_"*/, v35, 0LL);
   if ( !v34
     || (UnityEngine_Object__set_name(v34, v36, 0LL),
         GameObjectExtensions__SetLocalPosition_27420076(v32, x, y, z, 0LL),
@@ -937,7 +937,7 @@ BlankEarthPoint_o *__fastcall BlankEarth__GetEarthPoint(BlankEarth_o *this, int3
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_BlankEarthPoint___, *(_QWORD *)&spotId);
     sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_2814, v5);
+    sub_B16FFC(&StringLiteral_2814/*"BlankEarthPoint_"*/, v5);
     byte_40F90C3 = 1;
   }
   earthSpotRoot = this->fields.earthSpotRoot;
@@ -945,7 +945,7 @@ BlankEarthPoint_o *__fastcall BlankEarth__GetEarthPoint(BlankEarth_o *this, int3
     goto LABEL_13;
   transform = UnityEngine_GameObject__get_transform(earthSpotRoot, 0LL);
   v8 = System_Int32__ToString((int32_t)&v14, 0LL);
-  v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_2814, v8, 0LL);
+  v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_2814/*"BlankEarthPoint_"*/, v8, 0LL);
   if ( !transform )
     goto LABEL_13;
   v10 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, v9, 0LL);
@@ -988,14 +988,14 @@ System_String_o *__fastcall BlankEarth__GetSpotPrefabName(BlankEarthSpotEntity_o
   if ( (byte_40F90C6 & 1) == 0 )
   {
     sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_5787, v3);
+    sub_B16FFC(&StringLiteral_5787/*"EarthPoint_{0:00000}"*/, v3);
     byte_40F90C6 = 1;
   }
   if ( !spot )
     sub_B170D4();
   objectId = spot->fields.objectId;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &objectId);
-  return System_String__Format((System_String_o *)StringLiteral_5787, v4, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_5787/*"EarthPoint_{0:00000}"*/, v4, 0LL);
 }
 
 
@@ -1632,7 +1632,7 @@ void __fastcall BlankEarth__SaveQuaternionAndTotalAngle(
   {
     sub_B16FFC(&BlankEarth_TypeInfo, method);
     sub_B16FFC(&string___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_698, v5);
+    sub_B16FFC(&StringLiteral_698/*","*/, v5);
     byte_40F90C9 = 1;
   }
   eulerAngles = UnityEngine_Quaternion__get_eulerAngles(qua, &methoda);
@@ -1658,13 +1658,13 @@ void __fastcall BlankEarth__SaveQuaternionAndTotalAngle(
     goto LABEL_35;
   v9->m_Items[0] = (System_String_o *)v19;
   sub_B16F98((BattleServantConfConponent_o *)v9->m_Items, v19, v13, v14, v15, v16, v17, v18);
-  v11 = (System_String_o *)StringLiteral_698;
-  if ( StringLiteral_698 )
+  v11 = (System_String_o *)StringLiteral_698/*","*/;
+  if ( StringLiteral_698/*","*/ )
   {
-    v11 = (System_String_o *)sub_B170BC(StringLiteral_698, v9->obj.klass->_1.element_class);
+    v11 = (System_String_o *)sub_B170BC(StringLiteral_698/*","*/, v9->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_36;
-    v12 = (System_Int32_array **)StringLiteral_698;
+    v12 = (System_Int32_array **)StringLiteral_698/*","*/;
   }
   else
   {
@@ -1686,13 +1686,13 @@ void __fastcall BlankEarth__SaveQuaternionAndTotalAngle(
     goto LABEL_35;
   v9->m_Items[2] = (System_String_o *)v31;
   sub_B16F98((BattleServantConfConponent_o *)&v9->m_Items[2], v31, v13, v26, v27, v28, v29, v30);
-  v11 = (System_String_o *)StringLiteral_698;
-  if ( StringLiteral_698 )
+  v11 = (System_String_o *)StringLiteral_698/*","*/;
+  if ( StringLiteral_698/*","*/ )
   {
-    v11 = (System_String_o *)sub_B170BC(StringLiteral_698, v9->obj.klass->_1.element_class);
+    v11 = (System_String_o *)sub_B170BC(StringLiteral_698/*","*/, v9->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_36;
-    v12 = (System_Int32_array **)StringLiteral_698;
+    v12 = (System_Int32_array **)StringLiteral_698/*","*/;
   }
   else
   {
@@ -1714,13 +1714,13 @@ void __fastcall BlankEarth__SaveQuaternionAndTotalAngle(
     goto LABEL_35;
   v9->m_Items[4] = (System_String_o *)v43;
   sub_B16F98((BattleServantConfConponent_o *)&v9->m_Items[4], v43, v13, v38, v39, v40, v41, v42);
-  v11 = (System_String_o *)StringLiteral_698;
-  if ( StringLiteral_698 )
+  v11 = (System_String_o *)StringLiteral_698/*","*/;
+  if ( StringLiteral_698/*","*/ )
   {
-    v11 = (System_String_o *)sub_B170BC(StringLiteral_698, v9->obj.klass->_1.element_class);
+    v11 = (System_String_o *)sub_B170BC(StringLiteral_698/*","*/, v9->obj.klass->_1.element_class);
     if ( !v11 )
       goto LABEL_36;
-    v12 = (System_Int32_array **)StringLiteral_698;
+    v12 = (System_Int32_array **)StringLiteral_698/*","*/;
   }
   else
   {
@@ -4560,7 +4560,7 @@ void __fastcall BlankEarth_StateZoomOut___c__DisplayClass0_0___begin_b__1(
 
   if ( (byte_40F78CA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18982, method);
+    sub_B16FFC(&StringLiteral_18982/*"gevINFOBAR_BACK"*/, method);
     byte_40F78CA = 1;
   }
   blankEarthTransform = this->fields.blankEarthTransform;
@@ -4630,7 +4630,7 @@ void __fastcall BlankEarth_StateZoomOut___c__DisplayClass0_0___begin_b__1(
     || (v22 = v21->fields.mTerminalList) == 0LL
     || (MyFsmP = ScrTerminalListTop__mfGetMyFsmP(v22, 0LL)) == 0LL
     || (Fsm = PlayMakerFSM__get_Fsm(MyFsmP, 0LL)) == 0LL
-    || (HutongGames_PlayMaker_Fsm__Event_14544876(Fsm, (System_String_o *)StringLiteral_18982, 0LL),
+    || (HutongGames_PlayMaker_Fsm__Event_14544876(Fsm, (System_String_o *)StringLiteral_18982/*"gevINFOBAR_BACK"*/, 0LL),
         (v25 = this->fields.that) == 0LL) )
   {
 LABEL_28:

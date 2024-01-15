@@ -13,7 +13,7 @@ void __fastcall BattleChrControl__OnAnimEvent(
 
   if ( (byte_40FD467 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9905, ev);
+    sub_B16FFC(&StringLiteral_9905/*"OnAnimEvent"*/, ev);
     byte_40FD467 = 1;
   }
   targetObject = this->fields.targetObject;
@@ -21,7 +21,7 @@ void __fastcall BattleChrControl__OnAnimEvent(
     sub_B170D4();
   UnityEngine_GameObject__SendMessage_40693300(
     targetObject,
-    (System_String_o *)StringLiteral_9905,
+    (System_String_o *)StringLiteral_9905/*"OnAnimEvent"*/,
     (Il2CppObject *)ev,
     0LL);
 }

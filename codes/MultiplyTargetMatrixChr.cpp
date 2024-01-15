@@ -18,15 +18,15 @@ void __fastcall MultiplyTargetMatrixChr___ctor(MultiplyTargetMatrixChr_o *this, 
 
   if ( (byte_40FC046 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16110, method);
-    sub_B16FFC(&StringLiteral_16083, v9);
+    sub_B16FFC(&StringLiteral_16110/*"_rootMatrix"*/, method);
+    sub_B16FFC(&StringLiteral_16083/*"_invrootMatrix"*/, v9);
     byte_40FC046 = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_16110;
-  this->fields.mainMatrix = (struct System_String_o *)StringLiteral_16110;
+  v10 = (System_Int32_array **)StringLiteral_16110/*"_rootMatrix"*/;
+  this->fields.mainMatrix = (struct System_String_o *)StringLiteral_16110/*"_rootMatrix"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.mainMatrix, v10, v2, v3, v4, v5, v6, v7);
-  v11 = (System_Int32_array **)StringLiteral_16083;
-  this->fields.invertMatrix = (struct System_String_o *)StringLiteral_16083;
+  v11 = (System_Int32_array **)StringLiteral_16083/*"_invrootMatrix"*/;
+  this->fields.invertMatrix = (struct System_String_o *)StringLiteral_16083/*"_invrootMatrix"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.invertMatrix, v11, v12, v13, v14, v15, v16, v17);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -261,8 +261,8 @@ UnityEngine_Transform_o *__fastcall MultiplyTargetMatrixChr__getChrTrans(
   {
     sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__, v2);
-    sub_B16FFC(&StringLiteral_17355, v3);
-    sub_B16FFC(&StringLiteral_17354, v4);
+    sub_B16FFC(&StringLiteral_17355/*"chr(Clone)"*/, v3);
+    sub_B16FFC(&StringLiteral_17354/*"chr"*/, v4);
     byte_40FC045 = 1;
   }
   Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__);
@@ -292,7 +292,7 @@ UnityEngine_Transform_o *__fastcall MultiplyTargetMatrixChr__getChrTrans(
       transform = UnityEngine_GameObject__get_transform(v9, 0LL);
       if ( !transform )
         goto LABEL_25;
-      v6 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_17355, 0LL);
+      v6 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_17355/*"chr(Clone)"*/, 0LL);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -306,7 +306,7 @@ UnityEngine_Transform_o *__fastcall MultiplyTargetMatrixChr__getChrTrans(
           v12 = UnityEngine_GameObject__get_transform(v11, 0LL);
           if ( v12 )
           {
-            v6 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(v12, (System_String_o *)StringLiteral_17354, 0LL);
+            v6 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(v12, (System_String_o *)StringLiteral_17354/*"chr"*/, 0LL);
             goto LABEL_21;
           }
         }

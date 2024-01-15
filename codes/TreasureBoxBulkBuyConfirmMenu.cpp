@@ -23,17 +23,17 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu___cctor(const MethodInfo *method)
   if ( (byte_40FB853 & 1) == 0 )
   {
     sub_B16FFC(&TreasureBoxBulkBuyConfirmMenu_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_17036, v8);
-    sub_B16FFC(&StringLiteral_17019, v9);
+    sub_B16FFC(&StringLiteral_17036/*"btn_txt_trade"*/, v8);
+    sub_B16FFC(&StringLiteral_17019/*"btn_txt_sale"*/, v9);
     byte_40FB853 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TreasureBoxBulkBuyConfirmMenu_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_17036;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17036;
+  v11 = (System_Int32_array **)StringLiteral_17036/*"btn_txt_trade"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17036/*"btn_txt_trade"*/;
   sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = TreasureBoxBulkBuyConfirmMenu_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_17019;
-  v12->DECIED_BTN_NAME_LIMIT_MATERIAL = (struct System_String_o *)StringLiteral_17019;
+  v13 = (System_Int32_array **)StringLiteral_17019/*"btn_txt_sale"*/;
+  v12->DECIED_BTN_NAME_LIMIT_MATERIAL = (struct System_String_o *)StringLiteral_17019/*"btn_txt_sale"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v12->DECIED_BTN_NAME_LIMIT_MATERIAL, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -501,13 +501,13 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v18);
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
     sub_B16FFC(&Method_TreasureBoxBulkBuyConfirmMenu_EndOpen__, v20);
-    sub_B16FFC(&StringLiteral_13391, v21);
-    sub_B16FFC(&StringLiteral_22705, v22);
-    sub_B16FFC(&StringLiteral_22709, v23);
-    sub_B16FFC(&StringLiteral_13390, v24);
-    sub_B16FFC(&StringLiteral_22704, v25);
-    sub_B16FFC(&StringLiteral_13381, v26);
-    sub_B16FFC(&StringLiteral_1, v27);
+    sub_B16FFC(&StringLiteral_13391/*"TREASURE_BOX_USER_EVENT_ITEM"*/, v21);
+    sub_B16FFC(&StringLiteral_22705/*"treasurechest_img_bg"*/, v22);
+    sub_B16FFC(&StringLiteral_22709/*"treasurechest_img_line"*/, v23);
+    sub_B16FFC(&StringLiteral_13390/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, v24);
+    sub_B16FFC(&StringLiteral_22704/*"treasurechest_btn_txt"*/, v25);
+    sub_B16FFC(&StringLiteral_13381/*"TREASURE_BOX_BULK_BUY_TITLE"*/, v26);
+    sub_B16FFC(&StringLiteral_1/*""*/, v27);
     byte_40FB844 = 1;
   }
   if ( !this->fields.state )
@@ -550,16 +550,16 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Open(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI(Component_srcLineSprite, (System_String_o *)StringLiteral_22705, 0LL);
-    AtlasManager__SetEventUI(this->fields.eventItemRootLine, (System_String_o *)StringLiteral_22709, 0LL);
-    AtlasManager__SetEventUI(this->fields.decideButtonImg, (System_String_o *)StringLiteral_22704, 0LL);
+    AtlasManager__SetEventUI(Component_srcLineSprite, (System_String_o *)StringLiteral_22705/*"treasurechest_img_bg"*/, 0LL);
+    AtlasManager__SetEventUI(this->fields.eventItemRootLine, (System_String_o *)StringLiteral_22709/*"treasurechest_img_line"*/, 0LL);
+    AtlasManager__SetEventUI(this->fields.decideButtonImg, (System_String_o *)StringLiteral_22704/*"treasurechest_btn_txt"*/, 0LL);
     titleLb = this->fields.titleLb;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_13381, 0LL);
+    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_13381/*"TREASURE_BOX_BULK_BUY_TITLE"*/, 0LL);
     if ( !titleLb )
       goto LABEL_31;
     UILabel__set_text(titleLb, v39, 0LL);
@@ -635,14 +635,14 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Open(
 LABEL_31:
       sub_B170D4();
     UILabel__set_fontSize(warningLabel, BalanceConfig_TypeInfo->static_fields->DefaultFontSize, 0LL);
-    TreasureBoxBulkBuyConfirmMenu__SetLabelText(v61, this->fields.warningLabel, (System_String_o *)StringLiteral_1, v62);
+    TreasureBoxBulkBuyConfirmMenu__SetLabelText(v61, this->fields.warningLabel, (System_String_o *)StringLiteral_1/*""*/, v62);
     TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(this, v63);
     TreasureBoxBulkBuyConfirmMenu__SetItemSlider(this, v64, v65);
     exchangeOrigin = this->fields.exchangeOrigin;
-    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_13390, 0LL);
+    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_13390/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, 0LL);
     TreasureBoxBulkBuyConfirmMenu__SetLabelText((TreasureBoxBulkBuyConfirmMenu_o *)v67, exchangeOrigin, v67, v68);
     exchangeDestination = this->fields.exchangeDestination;
-    v70 = LocalizationManager__Get((System_String_o *)StringLiteral_13391, 0LL);
+    v70 = LocalizationManager__Get((System_String_o *)StringLiteral_13391/*"TREASURE_BOX_USER_EVENT_ITEM"*/, 0LL);
     TreasureBoxBulkBuyConfirmMenu__SetLabelText((TreasureBoxBulkBuyConfirmMenu_o *)v70, exchangeDestination, v70, v71);
     this->fields.state = 1;
     v76 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v72, v73, v74, v75);
@@ -735,7 +735,7 @@ bool __fastcall TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(
   if ( (byte_40FB84C & 1) == 0 )
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12056, v3);
+    sub_B16FFC(&StringLiteral_12056/*"SHOP_BUY_CONFIRM_PERIOD_WARNING"*/, v3);
     byte_40FB84C = 1;
   }
   IsEnable = TreasureBoxBulkBuyConfirmMenu__IsEnable(this, method);
@@ -752,7 +752,7 @@ bool __fastcall TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12056, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12056/*"SHOP_BUY_CONFIRM_PERIOD_WARNING"*/, 0LL);
   TreasureBoxBulkBuyConfirmMenu__SetLabelText((TreasureBoxBulkBuyConfirmMenu_o *)v8, warningLabel, v8, v9);
   decideButton = this->fields.decideButton;
   if ( !decideButton

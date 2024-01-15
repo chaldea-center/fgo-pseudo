@@ -170,15 +170,15 @@ void __fastcall SupportSelectConfirmDeckMenu__Open(
     sub_B16FFC(&LocalizationManager_TypeInfo, v9);
     sub_B16FFC(&string_TypeInfo, v10);
     sub_B16FFC(&Method_SupportSelectConfirmDeckMenu_OnFinishedOpen__, v11);
-    sub_B16FFC(&StringLiteral_12464, v12);
-    sub_B16FFC(&StringLiteral_12463, v13);
-    sub_B16FFC(&StringLiteral_12469, v14);
-    sub_B16FFC(&StringLiteral_12466, v15);
-    sub_B16FFC(&StringLiteral_12465, v16);
-    sub_B16FFC(&StringLiteral_12467, v17);
-    sub_B16FFC(&StringLiteral_12468, v18);
-    sub_B16FFC(&StringLiteral_12470, v19);
-    sub_B16FFC(&StringLiteral_12451, v20);
+    sub_B16FFC(&StringLiteral_12464/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_DECK_NAME"*/, v12);
+    sub_B16FFC(&StringLiteral_12463/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_DECIDE"*/, v13);
+    sub_B16FFC(&StringLiteral_12469/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_MESSAGE"*/, v14);
+    sub_B16FFC(&StringLiteral_12466/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_TITLE"*/, v15);
+    sub_B16FFC(&StringLiteral_12465/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_MESSAGE"*/, v16);
+    sub_B16FFC(&StringLiteral_12467/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_MESSAGE"*/, v17);
+    sub_B16FFC(&StringLiteral_12468/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_TITLE"*/, v18);
+    sub_B16FFC(&StringLiteral_12470/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_TITLE"*/, v19);
+    sub_B16FFC(&StringLiteral_12451/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_CANCEL"*/, v20);
     byte_40FD4F5 = 1;
   }
   if ( this->fields.currentState == 2 )
@@ -195,12 +195,12 @@ void __fastcall SupportSelectConfirmDeckMenu__Open(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12468, 0LL);
+      v36 = LocalizationManager__Get((System_String_o *)StringLiteral_12468/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_TITLE"*/, 0LL);
       if ( !titleLabel )
         goto LABEL_38;
       UILabel__set_text(titleLabel, v36, 0LL);
       messageLabel = this->fields.messageLabel;
-      v25 = &StringLiteral_12467;
+      v25 = &StringLiteral_12467/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_MESSAGE"*/;
     }
     else
     {
@@ -212,17 +212,17 @@ void __fastcall SupportSelectConfirmDeckMenu__Open(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12466, 0LL);
+        v27 = LocalizationManager__Get((System_String_o *)StringLiteral_12466/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_TITLE"*/, 0LL);
         if ( !v26 )
           goto LABEL_38;
         UILabel__set_text(v26, v27, 0LL);
         v28 = this->fields.messageLabel;
-        v29 = LocalizationManager__Get((System_String_o *)StringLiteral_12465, 0LL);
+        v29 = LocalizationManager__Get((System_String_o *)StringLiteral_12465/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_MESSAGE"*/, 0LL);
         if ( !v28 )
           goto LABEL_38;
         UILabel__set_text(v28, v29, 0LL);
         nameLabel = this->fields.nameLabel;
-        v31 = LocalizationManager__Get((System_String_o *)StringLiteral_12464, 0LL);
+        v31 = LocalizationManager__Get((System_String_o *)StringLiteral_12464/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_DECK_NAME"*/, 0LL);
         if ( !supportData )
           goto LABEL_38;
         v32 = System_String__Format(v31, (Il2CppObject *)supportData->fields._deckName_k__BackingField, 0LL);
@@ -241,12 +241,12 @@ LABEL_31:
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v39 = LocalizationManager__Get((System_String_o *)StringLiteral_12463, 0LL);
+        v39 = LocalizationManager__Get((System_String_o *)StringLiteral_12463/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_DECIDE"*/, 0LL);
         if ( decideButtonLabel )
         {
           UILabel__set_text(decideButtonLabel, v39, 0LL);
           cancelButtonLabel = this->fields.cancelButtonLabel;
-          v41 = LocalizationManager__Get((System_String_o *)StringLiteral_12451, 0LL);
+          v41 = LocalizationManager__Get((System_String_o *)StringLiteral_12451/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_CANCEL"*/, 0LL);
           if ( cancelButtonLabel )
           {
             UILabel__set_text(cancelButtonLabel, v41, 0LL);
@@ -280,12 +280,12 @@ LABEL_38:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v23 = LocalizationManager__Get((System_String_o *)StringLiteral_12470, 0LL);
+      v23 = LocalizationManager__Get((System_String_o *)StringLiteral_12470/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_TITLE"*/, 0LL);
       if ( !v22 )
         goto LABEL_38;
       UILabel__set_text(v22, v23, 0LL);
       messageLabel = this->fields.messageLabel;
-      v25 = &StringLiteral_12469;
+      v25 = &StringLiteral_12469/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_MESSAGE"*/;
     }
     v37 = LocalizationManager__Get((System_String_o *)*v25, 0LL);
     if ( !messageLabel )
@@ -350,10 +350,10 @@ System_String_o *__fastcall SupportSelectConfirmDeckMenu__get_closeBtnPath(
 {
   if ( (byte_40FD4F9 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4202, method);
+    sub_B16FFC(&StringLiteral_4202/*"ConfirmWindow/CancelButton"*/, method);
     byte_40FD4F9 = 1;
   }
-  return (System_String_o *)StringLiteral_4202;
+  return (System_String_o *)StringLiteral_4202/*"ConfirmWindow/CancelButton"*/;
 }
 
 

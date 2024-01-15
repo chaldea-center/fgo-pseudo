@@ -12,11 +12,11 @@ void __fastcall ClassBoardEffectListDialog___ctor(ClassBoardEffectListDialog_o *
   if ( (byte_40FB94B & 1) == 0 )
   {
     sub_B16FFC(&BaseDialog_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_22394, v9);
+    sub_B16FFC(&StringLiteral_22394/*"sy2"*/, v9);
     byte_40FB94B = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_22394;
-  this->fields.onClickCloseSe = (struct System_String_o *)StringLiteral_22394;
+  v10 = (System_Int32_array **)StringLiteral_22394/*"sy2"*/;
+  this->fields.onClickCloseSe = (struct System_String_o *)StringLiteral_22394/*"sy2"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.onClickCloseSe, v10, v2, v3, v4, v5, v6, v7);
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -364,11 +364,11 @@ void __fastcall ClassBoardEffectListDialog__LoadEnd(ClassBoardEffectListDialog_o
 
   if ( (byte_40FB942 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6218, method);
+    sub_B16FFC(&StringLiteral_6218/*"ExecuteCallback"*/, method);
     byte_40FB942 = 1;
   }
   v3 = 1.0 / (float)UnityEngine_Application__get_targetFrameRate(0LL);
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6218, v3, 0LL);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6218/*"ExecuteCallback"*/, v3, 0LL);
 }
 
 
@@ -461,7 +461,7 @@ void __fastcall ClassBoardEffectListDialog__LoadSystemAsset(
     sub_B16FFC(&ChainableActionParallel_TypeInfo, v16);
     sub_B16FFC(&Method_ClassBoardEffectListDialog_LoadEnd__, v17);
     sub_B16FFC(&Method_ClassBoardEffectListDialog__LoadSystemAsset_b__23_0__, v18);
-    sub_B16FFC(&StringLiteral_3978, v19);
+    sub_B16FFC(&StringLiteral_3978/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/, v19);
     byte_40FB941 = 1;
   }
   this->fields.loadEndCallback = callback;
@@ -488,7 +488,7 @@ void __fastcall ClassBoardEffectListDialog__LoadSystemAsset(
     v30);
   assetStorageLoadWrapper = this->fields.assetStorageLoadWrapper;
   v36 = (AtlasManagerUnit_o *)sub_B170CC(AtlasManagerUnit_TypeInfo, v32, v33, v34, v35);
-  AtlasManagerUnit___ctor(v36, (System_String_o *)StringLiteral_3978, assetStorageLoadWrapper, 0LL);
+  AtlasManagerUnit___ctor(v36, (System_String_o *)StringLiteral_3978/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/, assetStorageLoadWrapper, 0LL);
   this->fields.iconAtlasManagerUnit = v36;
   sub_B16F98(
     (BattleServantConfConponent_o *)&this->fields.iconAtlasManagerUnit,
@@ -745,19 +745,19 @@ void __fastcall ClassBoardEffectListDialog__Open(
     sub_B16FFC(&Method_ClassBoardEffectListDialog___c__Open_b__27_0__, v31);
     sub_B16FFC(&Method_ClassBoardEffectListDialog___c__Open_b__27_1__, v32);
     sub_B16FFC(&ClassBoardEffectListDialog___c_TypeInfo, v33);
-    sub_B16FFC(&StringLiteral_3003, v34);
-    sub_B16FFC(&StringLiteral_3004, v35);
-    sub_B16FFC(&StringLiteral_3252, v36);
-    sub_B16FFC(&StringLiteral_1, v37);
+    sub_B16FFC(&StringLiteral_3003/*"CLASS_BOARD_EFFECT_LIST_TITLE"*/, v34);
+    sub_B16FFC(&StringLiteral_3004/*"CLASS_BOARD_EFFECT_LIST_TITLE_SUPPORT"*/, v35);
+    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v36);
+    sub_B16FFC(&StringLiteral_1/*""*/, v37);
     byte_40FB943 = 1;
   }
   entity = 0LL;
   memset(&v126, 0, sizeof(v126));
   v125 = 0LL;
-  v38 = (System_String_o **)&StringLiteral_3004;
+  v38 = (System_String_o **)&StringLiteral_3004/*"CLASS_BOARD_EFFECT_LIST_TITLE_SUPPORT"*/;
   TitleLabel = this->fields.TitleLabel;
   if ( !supportClassBoard )
-    v38 = (System_String_o **)&StringLiteral_3003;
+    v38 = (System_String_o **)&StringLiteral_3003/*"CLASS_BOARD_EFFECT_LIST_TITLE"*/;
   v40 = *v38;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1008,7 +1008,7 @@ LABEL_40:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3252, 0LL);
+      v118 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
       if ( !v117 )
         goto LABEL_85;
       v112 = v118;
@@ -1050,7 +1050,7 @@ LABEL_40:
       v111 = this->fields.closeButtonLabel;
       if ( !v111 )
         goto LABEL_85;
-      v112 = (System_String_o *)StringLiteral_1;
+      v112 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_83:
       UILabel__set_text(v111, v112, 0LL);
     }
@@ -1273,10 +1273,10 @@ System_String_o *__fastcall ClassBoardEffectListDialog__get_closeBtnPath(
 {
   if ( (byte_40FB94A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15415, method);
+    sub_B16FFC(&StringLiteral_15415/*"Window/CloseBtn"*/, method);
     byte_40FB94A = 1;
   }
-  return (System_String_o *)StringLiteral_15415;
+  return (System_String_o *)StringLiteral_15415/*"Window/CloseBtn"*/;
 }
 
 

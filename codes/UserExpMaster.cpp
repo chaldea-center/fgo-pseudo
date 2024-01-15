@@ -82,8 +82,8 @@ int32_t __fastcall UserExpMaster__getLevelMax(UserExpMaster_o *this, const Metho
 {
   if ( (byte_40F96A9 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8674, method);
+    sub_B16FFC(&StringLiteral_8674/*"MAX_USER_LV"*/, method);
     byte_40F96A9 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_8674, 0LL);
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_8674/*"MAX_USER_LV"*/, 0LL);
 }

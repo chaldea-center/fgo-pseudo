@@ -133,7 +133,7 @@ void __fastcall ShopEventListViewObject__EventMove(ShopEventListViewObject_o *th
   if ( (byte_40FF89A & 1) == 0 )
   {
     sub_B16FFC(&ListViewObject_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_6160, v4);
+    sub_B16FFC(&StringLiteral_6160/*"EventMoveFinish"*/, v4);
     byte_40FF89A = 1;
   }
   TargetPosition = ShopEventListViewObject__GetTargetPosition(this, this->fields.initMode, v2);
@@ -159,8 +159,8 @@ void __fastcall ShopEventListViewObject__EventMove(ShopEventListViewObject_o *th
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v11->fields.eventReceiver = (struct UnityEngine_GameObject_o *)gameObject;
   sub_B16F98((BattleServantConfConponent_o *)&v11->fields.eventReceiver, gameObject, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Int32_array **)StringLiteral_6160;
-  v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6160;
+  v19 = (System_Int32_array **)StringLiteral_6160/*"EventMoveFinish"*/;
+  v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6160/*"EventMoveFinish"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v11->fields.callWhenFinished, v19, v20, v21, v22, v23, v24, v25);
 }
 
@@ -227,7 +227,7 @@ void __fastcall ShopEventListViewObject__EventStart(
   if ( (byte_40FF899 & 1) == 0 )
   {
     sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_ShopEventListViewObject___, *(_QWORD *)&initMode);
-    sub_B16FFC(&StringLiteral_6158, v7);
+    sub_B16FFC(&StringLiteral_6158/*"EventMove"*/, v7);
     byte_40FF899 = 1;
   }
   this->fields.isBusy = 1;
@@ -263,7 +263,7 @@ void __fastcall ShopEventListViewObject__EventStart(
     UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v20, 0LL);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_6158,
+      (System_String_o *)StringLiteral_6158/*"EventMove"*/,
       delay,
       0LL);
   }
@@ -574,7 +574,7 @@ void __fastcall ShopEventListViewObject__OnClickEvent(ShopEventListViewObject_o 
 
   if ( (byte_40FF89C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9929, method);
+    sub_B16FFC(&StringLiteral_9929/*"OnClickListViewEvent"*/, method);
     byte_40FF89C = 1;
   }
   if ( this->fields.linkItem )
@@ -582,7 +582,7 @@ void __fastcall ShopEventListViewObject__OnClickEvent(ShopEventListViewObject_o 
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
       sub_B170D4();
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9929, (Il2CppObject *)this, 0LL);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9929/*"OnClickListViewEvent"*/, (Il2CppObject *)this, 0LL);
   }
 }
 

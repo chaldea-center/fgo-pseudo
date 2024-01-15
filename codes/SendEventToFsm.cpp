@@ -10,11 +10,11 @@ void __fastcall SendEventToFsm___ctor(SendEventToFsm_o *this, const MethodInfo *
 
   if ( (byte_40F93CB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21031, method);
+    sub_B16FFC(&StringLiteral_21031/*"none"*/, method);
     byte_40F93CB = 1;
   }
-  v9 = (System_Int32_array **)StringLiteral_21031;
-  this->fields.sendEvent = (struct System_String_o *)StringLiteral_21031;
+  v9 = (System_Int32_array **)StringLiteral_21031/*"none"*/;
+  this->fields.sendEvent = (struct System_String_o *)StringLiteral_21031/*"none"*/;
   sub_B16F98((BattleServantConfConponent_o *)&this->fields.sendEvent, v9, v2, v3, v4, v5, v6, v7);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }

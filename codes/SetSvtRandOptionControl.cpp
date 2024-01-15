@@ -19,8 +19,8 @@ void __fastcall SetSvtRandOptionControl__Init(SetSvtRandOptionControl_o *this, c
   {
     sub_B16FFC(&LocalizationManager_TypeInfo, method);
     sub_B16FFC(&OptionManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_9786, v4);
-    sub_B16FFC(&StringLiteral_9785, v5);
+    sub_B16FFC(&StringLiteral_9786/*"OPTION_SVT_RAND_DISP"*/, v4);
+    sub_B16FFC(&StringLiteral_9785/*"OPTION_SVT_EXPLANATION"*/, v5);
     byte_40FF321 = 1;
   }
   svtRandDispBtn = (UILabel_o *)this->fields.svtRandDispBtn;
@@ -29,11 +29,11 @@ void __fastcall SetSvtRandOptionControl__Init(SetSvtRandOptionControl_o *this, c
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9786, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9786/*"OPTION_SVT_RAND_DISP"*/, 0LL);
   if ( !svtRandDispBtn
     || (UILabel__set_text(svtRandDispBtn, v7, 0LL),
         v8 = *(UILabel_o **)&this->fields.isSvtRand,
-        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9785, 0LL),
+        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_9785/*"OPTION_SVT_EXPLANATION"*/, 0LL),
         !v8) )
   {
     sub_B170D4();
@@ -95,16 +95,16 @@ void __fastcall SetSvtRandOptionControl__setDispValue(SetSvtRandOptionControl_o 
 
   if ( (byte_40FF322 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16940, method);
-    sub_B16FFC(&StringLiteral_16939, v3);
+    sub_B16FFC(&StringLiteral_16940/*"btn_on"*/, method);
+    sub_B16FFC(&StringLiteral_16939/*"btn_off"*/, v3);
     byte_40FF322 = 1;
   }
   svtRandDispInfoLb = this->fields.svtRandDispInfoLb;
   if ( !svtRandDispInfoLb )
     sub_B170D4();
   if ( LOBYTE(this[1].klass) )
-    v5 = &StringLiteral_16940;
+    v5 = &StringLiteral_16940/*"btn_on"*/;
   else
-    v5 = &StringLiteral_16939;
+    v5 = &StringLiteral_16939/*"btn_off"*/;
   UIButton__set_normalSprite((UIButton_o *)svtRandDispInfoLb, (System_String_o *)*v5, 0LL);
 }

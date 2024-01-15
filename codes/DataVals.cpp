@@ -206,10 +206,10 @@ System_Int32_array *__fastcall DataVals__GetAndCheckIndividuality(DataVals_o *th
   if ( (byte_40FA428 & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FA428 = 1;
   }
-  StrParam = DataVals__GetStrParam(this, 55, (System_String_o *)StringLiteral_1, v2);
+  StrParam = DataVals__GetStrParam(this, 55, (System_String_o *)StringLiteral_1/*""*/, v2);
   if ( !System_String__IsNullOrEmpty(StrParam, 0LL) )
     return BasicHelper__Convert2IntArray(StrParam, 0x2Fu, 0LL);
   Param = DataVals__GetParam(this, 55, 0, v6);
@@ -652,10 +652,10 @@ System_Int32_array *__fastcall DataVals__GetLinkageTargetIndividualty(DataVals_o
   if ( (byte_40FA425 & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FA425 = 1;
   }
-  StrParam = DataVals__GetStrParam(this, 38, (System_String_o *)StringLiteral_1, v2);
+  StrParam = DataVals__GetStrParam(this, 38, (System_String_o *)StringLiteral_1/*""*/, v2);
   if ( !System_String__IsNullOrEmpty(StrParam, 0LL) )
     return BasicHelper__Convert2IntArray(StrParam, 0x2Fu, 0LL);
   Param = DataVals__GetParam(this, 38, 0, v6);
@@ -776,10 +776,10 @@ System_Int32_array *__fastcall DataVals__GetParamArray(DataVals_o *this, int32_t
   if ( (byte_40FA42F & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, *(_QWORD *)&paramType);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FA42F = 1;
   }
-  StrParam = DataVals__GetStrParam(this, paramType, (System_String_o *)StringLiteral_1, v3);
+  StrParam = DataVals__GetStrParam(this, paramType, (System_String_o *)StringLiteral_1/*""*/, v3);
   if ( !System_String__IsNullOrEmpty(StrParam, 0LL) )
     return BasicHelper__Convert2IntArray(StrParam, 0x2Fu, 0LL);
   Param = DataVals__GetParam(this, paramType, 0, v8);
@@ -816,12 +816,12 @@ System_String_array *__fastcall DataVals__GetParamAsStringArray(
   if ( (byte_40FA424 & 1) == 0 )
   {
     sub_B16FFC(&char___TypeInfo, *(_QWORD *)&type);
-    sub_B16FFC(&StringLiteral_1, v7);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
     byte_40FA424 = 1;
   }
   if ( !DataVals__IsStrParam(this, type, (const MethodInfo *)defaultValue) )
     return defaultValue;
-  StrParam = DataVals__GetStrParam(this, type, (System_String_o *)StringLiteral_1, v8);
+  StrParam = DataVals__GetStrParam(this, type, (System_String_o *)StringLiteral_1/*""*/, v8);
   if ( System_String__IsNullOrEmpty(StrParam, 0LL) )
     return defaultValue;
   v12 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v10);
@@ -858,10 +858,10 @@ System_Int32_array *__fastcall DataVals__GetSameBuffLimitTargetIndividuality(
   if ( (byte_40FA426 & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FA426 = 1;
   }
-  StrParam = DataVals__GetStrParam(this, 39, (System_String_o *)StringLiteral_1, v2);
+  StrParam = DataVals__GetStrParam(this, 39, (System_String_o *)StringLiteral_1/*""*/, v2);
   if ( !System_String__IsNullOrEmpty(StrParam, 0LL) )
     return BasicHelper__Convert2IntArray(StrParam, 0x2Fu, 0LL);
   Param = DataVals__GetParam(this, 39, 0, v6);
@@ -949,10 +949,10 @@ System_Int32_array *__fastcall DataVals__GetTargetList(DataVals_o *this, const M
   if ( (byte_40FA422 & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FA422 = 1;
   }
-  StrParam = DataVals__GetStrParam(this, 32, (System_String_o *)StringLiteral_1, v2);
+  StrParam = DataVals__GetStrParam(this, 32, (System_String_o *)StringLiteral_1/*""*/, v2);
   if ( !System_String__IsNullOrEmpty(StrParam, 0LL) )
     return BasicHelper__Convert2IntArray(StrParam, 0x2Fu, 0LL);
   Param = DataVals__GetParam(this, 32, 0, v6);
@@ -988,10 +988,10 @@ System_Int32_array *__fastcall DataVals__GetTargetRarityList(DataVals_o *this, c
   if ( (byte_40FA427 & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v4);
+    sub_B16FFC(&StringLiteral_1/*""*/, v4);
     byte_40FA427 = 1;
   }
-  StrParam = DataVals__GetStrParam(this, 43, (System_String_o *)StringLiteral_1, v2);
+  StrParam = DataVals__GetStrParam(this, 43, (System_String_o *)StringLiteral_1/*""*/, v2);
   if ( !System_String__IsNullOrEmpty(StrParam, 0LL) )
     return BasicHelper__Convert2IntArray(StrParam, 0x2Fu, 0LL);
   Param = DataVals__GetParam(this, 43, 0, v6);
@@ -1095,10 +1095,10 @@ System_Int32_array *__fastcall DataVals__GetValsList(DataVals_o *this, int32_t t
   if ( (byte_40FA423 & 1) == 0 )
   {
     sub_B16FFC(&int___TypeInfo, *(_QWORD *)&type);
-    sub_B16FFC(&StringLiteral_1, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v6);
     byte_40FA423 = 1;
   }
-  StrParam = DataVals__GetStrParam(this, type, (System_String_o *)StringLiteral_1, v3);
+  StrParam = DataVals__GetStrParam(this, type, (System_String_o *)StringLiteral_1/*""*/, v3);
   if ( !System_String__IsNullOrEmpty(StrParam, 0LL) )
     return BasicHelper__Convert2IntArray(StrParam, 0x2Fu, 0LL);
   Param = DataVals__GetParam(this, type, 0, v8);
@@ -1153,19 +1153,19 @@ bool __fastcall DataVals__IsAddIndividualty(DataVals_o *this, const MethodInfo *
 
   if ( (byte_40FA429 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FA429 = 1;
   }
   if ( DataVals__GetParam(this, 37, 0, v2) )
     return 1;
-  StrParam = DataVals__GetStrParam(this, 37, (System_String_o *)StringLiteral_1, v4);
+  StrParam = DataVals__GetStrParam(this, 37, (System_String_o *)StringLiteral_1/*""*/, v4);
   if ( !System_String__IsNullOrEmpty(StrParam, 0LL) || DataVals__GetParam(this, 112, 0, v6) )
   {
     return 1;
   }
   else
   {
-    v10 = DataVals__GetStrParam(this, 112, (System_String_o *)StringLiteral_1, v7);
+    v10 = DataVals__GetStrParam(this, 112, (System_String_o *)StringLiteral_1/*""*/, v7);
     return !System_String__IsNullOrEmpty(v10, 0LL);
   }
 }
@@ -1179,7 +1179,7 @@ bool __fastcall DataVals__IsAddLinkageTargetIndividualty(DataVals_o *this, const
 
   if ( (byte_40FA42A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1, method);
+    sub_B16FFC(&StringLiteral_1/*""*/, method);
     byte_40FA42A = 1;
   }
   if ( DataVals__GetParam(this, 38, 0, v2) )
@@ -1188,7 +1188,7 @@ bool __fastcall DataVals__IsAddLinkageTargetIndividualty(DataVals_o *this, const
   }
   else
   {
-    StrParam = DataVals__GetStrParam(this, 38, (System_String_o *)StringLiteral_1, v4);
+    StrParam = DataVals__GetStrParam(this, 38, (System_String_o *)StringLiteral_1/*""*/, v4);
     return !System_String__IsNullOrEmpty(StrParam, 0LL);
   }
 }
@@ -1343,7 +1343,7 @@ bool __fastcall DataVals__IsSatisfyAboveBelowCondition(
     sub_B16FFC(&System_Func_bool__int__bool__TypeInfo, v8);
     sub_B16FFC(&Method_DataVals___c__DisplayClass96_0__IsSatisfyAboveBelowCondition_b__0__, v9);
     sub_B16FFC(&DataVals___c__DisplayClass96_0_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_1278, v11);
+    sub_B16FFC(&StringLiteral_1278/*"<"*/, v11);
     byte_40FA430 = 1;
   }
   v12 = (DataVals___c__DisplayClass96_0_o *)sub_B170CC(
@@ -1362,7 +1362,7 @@ bool __fastcall DataVals__IsSatisfyAboveBelowCondition(
     (Il2CppObject *)v12,
     Method_DataVals___c__DisplayClass96_0__IsSatisfyAboveBelowCondition_b__0__,
     (const MethodInfo_2B73924 *)Method_System_Func_bool__int__bool___ctor__);
-  return DataVals__IsSatisfyRangeCondition(this, paramType, (System_String_o *)StringLiteral_1278, v17, v18);
+  return DataVals__IsSatisfyRangeCondition(this, paramType, (System_String_o *)StringLiteral_1278/*"<"*/, v17, v18);
 }
 
 
@@ -1429,14 +1429,14 @@ bool __fastcall DataVals__IsSatisfyRangeCondition(
     sub_B16FFC(&Method_System_Func_bool__int__bool__Invoke__, v9);
     sub_B16FFC(&System_Text_RegularExpressions_Regex_TypeInfo, v10);
     sub_B16FFC(&string___TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_632, v12);
-    sub_B16FFC(&StringLiteral_15789, v13);
-    sub_B16FFC(&StringLiteral_1, v14);
-    sub_B16FFC(&StringLiteral_396, v15);
+    sub_B16FFC(&StringLiteral_632/*"(^"*/, v12);
+    sub_B16FFC(&StringLiteral_15789/*"\\d+$|^\\d+"*/, v13);
+    sub_B16FFC(&StringLiteral_1/*""*/, v14);
+    sub_B16FFC(&StringLiteral_396/*"$)"*/, v15);
     byte_40FA431 = 1;
   }
   result = 0;
-  StrParam = DataVals__GetStrParam(this, paramType, (System_String_o *)StringLiteral_1, (const MethodInfo *)funcCompare);
+  StrParam = DataVals__GetStrParam(this, paramType, (System_String_o *)StringLiteral_1/*""*/, (const MethodInfo *)funcCompare);
   if ( System_String__IsNullOrEmpty(StrParam, 0LL) )
     return 1;
   v18 = sub_B17014(string___TypeInfo, 5LL, v17);
@@ -1444,13 +1444,13 @@ bool __fastcall DataVals__IsSatisfyRangeCondition(
 LABEL_44:
     sub_B170D4();
   v25 = (System_String_array *)v18;
-  v26 = StringLiteral_632;
-  if ( StringLiteral_632 )
+  v26 = StringLiteral_632/*"(^"*/;
+  if ( StringLiteral_632/*"(^"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_632, v25->obj.klass->_1.element_class);
+    v26 = sub_B170BC(StringLiteral_632/*"(^"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_46;
-    v27 = (System_Int32_array **)StringLiteral_632;
+    v27 = (System_Int32_array **)StringLiteral_632/*"(^"*/;
   }
   else
   {
@@ -1478,13 +1478,13 @@ LABEL_44:
     v30,
     v31,
     v32);
-  v26 = StringLiteral_15789;
-  if ( StringLiteral_15789 )
+  v26 = StringLiteral_15789/*"\\d+$|^\\d+"*/;
+  if ( StringLiteral_15789/*"\\d+$|^\\d+"*/ )
   {
-    v26 = sub_B170BC(StringLiteral_15789, v25->obj.klass->_1.element_class);
+    v26 = sub_B170BC(StringLiteral_15789/*"\\d+$|^\\d+"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_46;
-    v27 = (System_Int32_array **)StringLiteral_15789;
+    v27 = (System_Int32_array **)StringLiteral_15789/*"\\d+$|^\\d+"*/;
   }
   else
   {
@@ -1512,20 +1512,20 @@ LABEL_44:
     v40,
     v41,
     v42);
-  v26 = StringLiteral_396;
-  if ( !StringLiteral_396 )
+  v26 = StringLiteral_396/*"$)"*/;
+  if ( !StringLiteral_396/*"$)"*/ )
   {
     v27 = 0LL;
     goto LABEL_25;
   }
-  v26 = sub_B170BC(StringLiteral_396, v25->obj.klass->_1.element_class);
+  v26 = sub_B170BC(StringLiteral_396/*"$)"*/, v25->obj.klass->_1.element_class);
   if ( !v26 )
   {
 LABEL_46:
     sub_B170F4(v26);
     sub_B170A0();
   }
-  v27 = (System_Int32_array **)StringLiteral_396;
+  v27 = (System_Int32_array **)StringLiteral_396/*"$)"*/;
 LABEL_25:
   if ( v25->max_length <= 4 )
     goto LABEL_45;
@@ -1567,7 +1567,7 @@ LABEL_45:
       return 0;
     if ( !v53 )
       goto LABEL_44;
-    v54 = System_String__Replace_43750968(v53, compareKey, (System_String_o *)StringLiteral_1, 0LL);
+    v54 = System_String__Replace_43750968(v53, compareKey, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( !System_Int32__TryParse(v54, &result, 0LL) )
       return 0;
     v55 = System_String__StartsWith(v53, compareKey, 0LL);
@@ -1726,9 +1726,9 @@ void __fastcall DataVals__SetDependDataVals(
     sub_B16FFC(&Method_System_Collections_Generic_List_DataVals__Clear__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_DataVals___ctor__, v10);
     sub_B16FFC(&System_Collections_Generic_List_DataVals__TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_15571, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
-    sub_B16FFC(&StringLiteral_15807, v14);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v14);
     byte_40FA416 = 1;
   }
   result = 0;
@@ -1739,8 +1739,8 @@ void __fastcall DataVals__SetDependDataVals(
       (System_Collections_Generic_List_XWeaponTrail_Element__o *)dependDataValsList,
       (const MethodInfo_2F260E0 *)Method_System_Collections_Generic_List_DataVals__Clear__);
   v16 = &DataVals_TypeInfo;
-  v17 = (System_String_o **)&StringLiteral_15571;
-  v18 = (System_String_o **)&StringLiteral_1;
+  v17 = (System_String_o **)&StringLiteral_15571/*"["*/;
+  v18 = (System_String_o **)&StringLiteral_1/*""*/;
   v19 = 0;
   for ( i = 1; ; ++i )
   {
@@ -1788,7 +1788,7 @@ void __fastcall DataVals__SetDependDataVals(
     if ( !v23 || (v47 = System_String__Replace_43750968(v23, *v17, *v18, 0LL)) == 0LL )
 LABEL_23:
       sub_B170D4();
-    v48 = System_String__Replace_43750968(v47, (System_String_o *)StringLiteral_15807, *v18, 0LL);
+    v48 = System_String__Replace_43750968(v47, (System_String_o *)StringLiteral_15807/*"]"*/, *v18, 0LL);
     if ( System_Int32__TryParse(v48, &result, 0LL) )
     {
       v52 = (DataVals_o *)sub_B170CC(*v16, v49, v50, method, v51);
@@ -2014,9 +2014,9 @@ void __fastcall DataVals__SetType(DataVals_o *this, int32_t ft, const MethodInfo
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, v9);
     sub_B16FFC(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v10);
     sub_B16FFC(&DataVals_TYPE_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_15571, v12);
-    sub_B16FFC(&StringLiteral_1, v13);
-    sub_B16FFC(&StringLiteral_15807, v14);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v12);
+    sub_B16FFC(&StringLiteral_1/*""*/, v13);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v14);
     byte_40FA415 = 1;
   }
   *(_QWORD *)result = 0LL;
@@ -2024,19 +2024,19 @@ void __fastcall DataVals__SetType(DataVals_o *this, int32_t ft, const MethodInfo
   this->fields.funcType = ft;
   if ( !svals )
     goto LABEL_73;
-  v16 = (System_String_o **)&StringLiteral_1;
+  v16 = (System_String_o **)&StringLiteral_1/*""*/;
   v17 = System_String__Replace_43750968(
           svals,
-          (System_String_o *)StringLiteral_15571,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_15571/*"["*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   if ( !v17 )
     goto LABEL_73;
   v18 = &char___TypeInfo;
   v19 = System_String__Replace_43750968(
           v17,
-          (System_String_o *)StringLiteral_15807,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_15807/*"]"*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   v21 = sub_B17014(char___TypeInfo, 1LL, v20);
   if ( !v21 )
@@ -2478,13 +2478,13 @@ System_String_o *__fastcall DataVals__cutValue(
 
   if ( (byte_40FA418 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_698, key);
-    sub_B16FFC(&StringLiteral_1, v11);
+    sub_B16FFC(&StringLiteral_698/*","*/, key);
+    sub_B16FFC(&StringLiteral_1/*""*/, v11);
     byte_40FA418 = 1;
   }
   v33 = 58;
   v12 = System_Char__ToString((uint16_t)&v33, 0LL);
-  v13 = System_String__Concat_43746016((System_String_o *)StringLiteral_698, key, v12, 0LL);
+  v13 = System_String__Concat_43746016((System_String_o *)StringLiteral_698/*","*/, key, v12, 0LL);
   svals = this->fields.svals;
   p_svals = &this->fields.svals;
   v14 = svals;
@@ -2492,7 +2492,7 @@ System_String_o *__fastcall DataVals__cutValue(
     goto LABEL_16;
   v17 = System_String__IndexOf_43816080(v14, v13, 0LL);
   if ( v17 == -1 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   v18 = v17;
   if ( !*p_svals )
     goto LABEL_16;
@@ -2502,10 +2502,10 @@ System_String_o *__fastcall DataVals__cutValue(
   v20 = v19;
   v21 = System_String__IndexOf_43815828(*p_svals, endWord, v18, 0LL);
   if ( v20 == -1 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   v22 = v21;
   if ( v21 == -1 )
-    return (System_String_o *)StringLiteral_1;
+    return (System_String_o *)StringLiteral_1/*""*/;
   if ( !*p_svals )
     goto LABEL_16;
   v23 = System_String__Substring_43807468(*p_svals, v20, 1 - v20 + v21, 0LL);
@@ -2519,7 +2519,7 @@ System_String_o *__fastcall DataVals__cutValue(
         v25 = (System_Int32_array **)System_String__Replace_43750968(
                                        *p_svals,
                                        v24,
-                                       (System_String_o *)StringLiteral_1,
+                                       (System_String_o *)StringLiteral_1/*""*/,
                                        0LL);
         *p_svals = (System_String_o *)v25;
         sub_B16F98((BattleServantConfConponent_o *)p_svals, v25, v26, v27, v28, v29, v30, v31);
@@ -2800,9 +2800,9 @@ void __fastcall DataVals__loadActSet(DataVals_o *this, const MethodInfo *method)
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__int__Add__, v3);
     sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__, v4);
     sub_B16FFC(&DataVals_TYPE_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_15571, v6);
-    sub_B16FFC(&StringLiteral_1, v7);
-    sub_B16FFC(&StringLiteral_15807, v8);
+    sub_B16FFC(&StringLiteral_15571/*"["*/, v6);
+    sub_B16FFC(&StringLiteral_1/*""*/, v7);
+    sub_B16FFC(&StringLiteral_15807/*"]"*/, v8);
     byte_40FA41A = 1;
   }
   *(_QWORD *)result = 0LL;
@@ -2811,15 +2811,15 @@ void __fastcall DataVals__loadActSet(DataVals_o *this, const MethodInfo *method)
     goto LABEL_30;
   v10 = System_String__Replace_43750968(
           svals,
-          (System_String_o *)StringLiteral_15571,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_15571/*"["*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   if ( !v10 )
     goto LABEL_30;
   v11 = System_String__Replace_43750968(
           v10,
-          (System_String_o *)StringLiteral_15807,
-          (System_String_o *)StringLiteral_1,
+          (System_String_o *)StringLiteral_15807/*"]"*/,
+          (System_String_o *)StringLiteral_1/*""*/,
           0LL);
   v13 = sub_B17014(char___TypeInfo, 1LL, v12);
   if ( !v13 )
@@ -2839,7 +2839,7 @@ LABEL_30:
     v19 = (System_String_o **)(v13 + 32);
     while ( v18 < (unsigned int)v16 )
     {
-      v20 = (System_Xml_XmlQualifiedName_o *)StringLiteral_1;
+      v20 = (System_Xml_XmlQualifiedName_o *)StringLiteral_1/*""*/;
       v13 = System_Int32__TryParse(v19[v18], &result[1], 0LL);
       if ( (v13 & 1) == 0 )
       {

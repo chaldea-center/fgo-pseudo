@@ -87,11 +87,11 @@ void __fastcall SupportSelectRootComponent__CallbackUpdateDeckIdApi(
 
   if ( (byte_40FD270 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_12504, result);
+    sub_B16FFC(&StringLiteral_12504/*"SUPPORT_SETTING_SCENE_INITIAL_PAGE_INDEX"*/, result);
     byte_40FD270 = 1;
   }
   CenterNum = SupportSelectRootComponent__getCenterNum(this, (const MethodInfo *)result);
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_12504, CenterNum, 0LL);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_12504/*"SUPPORT_SETTING_SCENE_INITIAL_PAGE_INDEX"*/, CenterNum, 0LL);
   SupportSelectRootComponent__ReturnScene(this, result, v6);
 }
 
@@ -375,7 +375,7 @@ void __fastcall SupportSelectRootComponent__EndChangeDeckIdCancelConfirmMenu(
   if ( (byte_40FD281 & 1) == 0 )
   {
     sub_B16FFC(&SoundManager_TypeInfo, isDecide);
-    sub_B16FFC(&StringLiteral_21129, v5);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v5);
     byte_40FD281 = 1;
   }
   cancelConfirmDeckIdDialog = this->fields.cancelConfirmDeckIdDialog;
@@ -394,7 +394,7 @@ void __fastcall SupportSelectRootComponent__EndChangeDeckIdCancelConfirmMenu(
     if ( supportServantSelectMenu )
     {
       SupportServantSelectMenu__ClearScrollValue(supportServantSelectMenu, 0LL);
-      SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_21129, v8);
+      SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_21129/*"ok"*/, v8);
       return;
     }
 LABEL_14:
@@ -1524,8 +1524,8 @@ void __fastcall SupportSelectRootComponent__EndSupportSelectMenu(
     sub_B16FFC(&Method_SupportSelectRootComponent___c__EndSupportSelectMenu_b__66_1__, v35);
     sub_B16FFC(&Method_SupportSelectRootComponent___c__EndSupportSelectMenu_b__66_2__, v36);
     sub_B16FFC(&SupportSelectRootComponent___c_TypeInfo, v37);
-    sub_B16FFC(&StringLiteral_10317, v38);
-    sub_B16FFC(&StringLiteral_1, v39);
+    sub_B16FFC(&StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v38);
+    sub_B16FFC(&StringLiteral_1/*""*/, v39);
     byte_40FD271 = 1;
   }
   this->fields.classPos = classPos;
@@ -2021,7 +2021,7 @@ LABEL_144:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            v231 = LocalizationManager__Get((System_String_o *)StringLiteral_10317, 0LL);
+            v231 = LocalizationManager__Get((System_String_o *)StringLiteral_10317/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, 0LL);
             v232 = SupportSelectRootComponent___c_TypeInfo;
             if ( (BYTE3(SupportSelectRootComponent___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !SupportSelectRootComponent___c_TypeInfo->_2.cctor_finished )
@@ -2031,7 +2031,7 @@ LABEL_144:
             }
             v233 = v232->static_fields;
             _9__66_2 = v233->__9__66_2;
-            v235 = (System_String_o *)StringLiteral_1;
+            v235 = (System_String_o *)StringLiteral_1/*""*/;
             if ( !_9__66_2 )
             {
               if ( (BYTE3(v232->vtable._0_Equals.methodPtr) & 4) != 0 && !v232->_2.cctor_finished )
@@ -2569,10 +2569,10 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
     sub_B16FFC(&Method_SupportSelectRootComponent_EndCloseServantEquipListDecide__, v20);
     sub_B16FFC(&Method_SupportSelectRootComponent___c__DisplayClass71_0__EndSupportServantEquipListMenu_b__0__, v21);
     sub_B16FFC(&SupportSelectRootComponent___c__DisplayClass71_0_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_10175, v23);
-    sub_B16FFC(&StringLiteral_3255, v24);
-    sub_B16FFC(&StringLiteral_3258, v25);
-    sub_B16FFC(&StringLiteral_1, v26);
+    sub_B16FFC(&StringLiteral_10175/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, v23);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v24);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v25);
+    sub_B16FFC(&StringLiteral_1/*""*/, v26);
     byte_40FD274 = 1;
   }
   skillName = 0LL;
@@ -2745,7 +2745,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
                                 {
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
-                                v86 = LocalizationManager__Get((System_String_o *)StringLiteral_10175, 0LL);
+                                v86 = LocalizationManager__Get((System_String_o *)StringLiteral_10175/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, 0LL);
                                 System_Text_StringBuilder__Append_41914240(v85, v86, 0LL);
                                 v87 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                                 v92 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v88, v89, v90, v91);
@@ -2761,8 +2761,8 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
                                   v94 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v85->klass->vtable._3_ToString.method)(
                                                              v85,
                                                              v85->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-                                  v95 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-                                  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+                                  v95 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+                                  v96 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
                                   v101 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                                                   CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                                                   v97,
@@ -2778,7 +2778,7 @@ void __fastcall SupportSelectRootComponent__EndSupportServantEquipListMenu(
                                   {
                                     CommonUI__OpenConfirmDialog_18237500(
                                       v93,
-                                      (System_String_o *)StringLiteral_1,
+                                      (System_String_o *)StringLiteral_1/*""*/,
                                       v94,
                                       v95,
                                       v96,
@@ -3053,8 +3053,8 @@ System_Collections_Generic_List_string__o *__fastcall SupportSelectRootComponent
     sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v26);
     sub_B16FFC(&Method_SupportSelectRootComponent___c__DisplayClass81_0__GetFixedErrorList_b__0__, v27);
     sub_B16FFC(&SupportSelectRootComponent___c__DisplayClass81_0_TypeInfo, v28);
-    sub_B16FFC(&StringLiteral_12425, v29);
-    sub_B16FFC(&StringLiteral_12426, v30);
+    sub_B16FFC(&StringLiteral_12425/*"SUPPORT_DECK_FIXED_ERROR_SERVANT"*/, v29);
+    sub_B16FFC(&StringLiteral_12426/*"SUPPORT_DECK_FIXED_ERROR_SERVANT_NAME_ONLY"*/, v30);
     byte_40FD27C = 1;
   }
   entity = 0LL;
@@ -3266,7 +3266,7 @@ LABEL_77:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v76 = LocalizationManager__Get((System_String_o *)StringLiteral_12425, 0LL);
+                  v76 = LocalizationManager__Get((System_String_o *)StringLiteral_12425/*"SUPPORT_DECK_FIXED_ERROR_SERVANT"*/, 0LL);
                   v89 = v67;
                   v77 = j_il2cpp_value_box_0(int_TypeInfo, &v89);
                   if ( !v64 )
@@ -3283,7 +3283,7 @@ LABEL_77:
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v71 = LocalizationManager__Get((System_String_o *)StringLiteral_12426, 0LL);
+                  v71 = LocalizationManager__Get((System_String_o *)StringLiteral_12426/*"SUPPORT_DECK_FIXED_ERROR_SERVANT_NAME_ONLY"*/, 0LL);
                   if ( !v64 )
                     goto LABEL_76;
                   v72 = v71;
@@ -4111,10 +4111,10 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
     sub_B16FFC(&System_Text_StringBuilder_TypeInfo, v17);
     sub_B16FFC(&Method_SupportSelectRootComponent___c__DisplayClass69_0__OnBackSelect_b__0__, v18);
     sub_B16FFC(&SupportSelectRootComponent___c__DisplayClass69_0_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_10175, v20);
-    sub_B16FFC(&StringLiteral_3255, v21);
-    sub_B16FFC(&StringLiteral_3258, v22);
-    sub_B16FFC(&StringLiteral_1, v23);
+    sub_B16FFC(&StringLiteral_10175/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, v20);
+    sub_B16FFC(&StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, v21);
+    sub_B16FFC(&StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, v22);
+    sub_B16FFC(&StringLiteral_1/*""*/, v23);
     byte_40FD273 = 1;
   }
   skillName = 0LL;
@@ -4271,14 +4271,14 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
                             {
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                             }
-                            v83 = LocalizationManager__Get((System_String_o *)StringLiteral_10175, 0LL);
+                            v83 = LocalizationManager__Get((System_String_o *)StringLiteral_10175/*"PARTY_ORGANIZATION_BONUS_SKILL_INVALID_CONFIRM"*/, 0LL);
                             System_Text_StringBuilder__Append_41914240(v82, v83, 0LL);
                             v84 = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                             v85 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v82->klass->vtable._3_ToString.method)(
                                                        v82,
                                                        v82->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-                            v86 = LocalizationManager__Get((System_String_o *)StringLiteral_3258, 0LL);
-                            v87 = LocalizationManager__Get((System_String_o *)StringLiteral_3255, 0LL);
+                            v86 = LocalizationManager__Get((System_String_o *)StringLiteral_3258/*"COMMON_CONFIRM_YES"*/, 0LL);
+                            v87 = LocalizationManager__Get((System_String_o *)StringLiteral_3255/*"COMMON_CONFIRM_NO"*/, 0LL);
                             v92 = (CommonConfirmDialog_ClickDelegate_o *)sub_B170CC(
                                                                            CommonConfirmDialog_ClickDelegate_TypeInfo,
                                                                            v88,
@@ -4294,7 +4294,7 @@ void __fastcall SupportSelectRootComponent__OnBackSelect(
                             {
                               CommonUI__OpenConfirmDialog_18237500(
                                 v84,
-                                (System_String_o *)StringLiteral_1,
+                                (System_String_o *)StringLiteral_1/*""*/,
                                 v85,
                                 v86,
                                 v87,
@@ -4402,7 +4402,7 @@ void __fastcall SupportSelectRootComponent__OnClickBack(SupportSelectRootCompone
     sub_B16FFC(&SoundManager_TypeInfo, v8);
     sub_B16FFC(&Method_SupportSelectRootComponent_EndCancelConfirmMenu__, v9);
     sub_B16FFC(&Method_SupportSelectRootComponent_EndChangeDeckIdCancelConfirmMenu__, v10);
-    sub_B16FFC(&StringLiteral_21129, v11);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v11);
     byte_40FD280 = 1;
   }
   if ( !this->fields.supportInfoJump )
@@ -4466,7 +4466,7 @@ void __fastcall SupportSelectRootComponent__OnClickBack(SupportSelectRootCompone
       if ( supportServantSelectMenu )
       {
         SupportServantSelectMenu__ClearScrollValue(supportServantSelectMenu, 0LL);
-        SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_21129, v40);
+        SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_21129/*"ok"*/, v40);
         return;
       }
       goto LABEL_59;
@@ -5319,7 +5319,7 @@ void __fastcall SupportSelectRootComponent__RequestApi(SupportSelectRootComponen
     sub_B16FFC(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
     sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
     sub_B16FFC(&Method_SupportSelectRootComponent_CallbackUpdateDeckIdApi__, v7);
-    sub_B16FFC(&StringLiteral_21129, v8);
+    sub_B16FFC(&StringLiteral_21129/*"ok"*/, v8);
     byte_40FD26F = 1;
   }
   v9 = SupportSelectRootComponent__getCenterNum(this, method) + 1;
@@ -5359,7 +5359,7 @@ LABEL_25:
   else if ( !SupportSelectRootComponent__IsUpdateDeckId(this, v11) )
   {
 LABEL_23:
-    SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_21129, v18);
+    SupportSelectRootComponent__ReturnScene(this, (System_String_o *)StringLiteral_21129/*"ok"*/, v18);
     return;
   }
   Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -5486,11 +5486,11 @@ void __fastcall SupportSelectRootComponent__ReturnScene(
   {
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, result);
     sub_B16FFC(&SoundManager_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20980, v6);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
     byte_40FD283 = 1;
   }
   this->fields.state = 0;
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_20980/*"ng"*/, 0LL) )
   {
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -6923,7 +6923,7 @@ void __fastcall SupportSelectRootComponent__StartUp(SupportSelectRootComponent_o
     sub_B16FFC(&Method_SupportSelectRootComponent_EndSupportSelectMenu__, v9);
     sub_B16FFC(&Method_SupportSelectRootComponent_EndSupportServantDragSwap__, v10);
     sub_B16FFC(&Method_SupportSelectRootComponent_modifyCenterItemCallBack__, v11);
-    sub_B16FFC(&StringLiteral_12504, v12);
+    sub_B16FFC(&StringLiteral_12504/*"SUPPORT_SETTING_SCENE_INITIAL_PAGE_INDEX"*/, v12);
     byte_40FD269 = 1;
   }
   SupportSelectRootComponent__InitSupportServantData(this, method);
@@ -6932,7 +6932,7 @@ void __fastcall SupportSelectRootComponent__StartUp(SupportSelectRootComponent_o
   if ( !supportInfoJump )
   {
     EventTutorialMaster__CheckTutorial(-1, 48, 0LL, 0, 0, 0, 0, 0LL);
-    Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_12504, 0, 0LL);
+    Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_12504/*"SUPPORT_SETTING_SCENE_INITIAL_PAGE_INDEX"*/, 0, 0LL);
     v18 = BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -7507,7 +7507,7 @@ void __fastcall SupportSelectRootComponent__beginInitialize(
     sub_B16FFC(&BalanceConfig_TypeInfo, method);
     sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
     sub_B16FFC(&SupportServantData___TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_13122, v5);
+    sub_B16FFC(&StringLiteral_13122/*"SvtEqScrollBarValue"*/, v5);
     byte_40FD261 = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
@@ -7586,7 +7586,7 @@ void __fastcall SupportSelectRootComponent__beginInitialize(
       v32);
   }
   SupportSelectRootComponent__RefreshSupportServantData(this, v6);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13122, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_13122/*"SvtEqScrollBarValue"*/, 0LL);
   Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     sub_B170D4();

@@ -56,7 +56,7 @@ void __fastcall WarBoardEffectComponent__Initialize(
     sub_B16FFC(&int_TypeInfo, data);
     sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v11);
     sub_B16FFC(&UnityEngine_Transform___TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_23445, v13);
+    sub_B16FFC(&StringLiteral_23445/*"{0}"*/, v13);
     byte_40F63A4 = 1;
   }
   this->fields.effectData = data;
@@ -95,7 +95,7 @@ void __fastcall WarBoardEffectComponent__Initialize(
   v24 = this->fields.effectIcon;
   iconId = effectEntity->fields.iconId;
   v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId);
-  v26 = System_String__Format((System_String_o *)StringLiteral_23445, v25, 0LL);
+  v26 = System_String__Format((System_String_o *)StringLiteral_23445/*"{0}"*/, v25, 0LL);
   if ( !v24 )
     goto LABEL_17;
   UISprite__set_spriteName(v24, v26, 0LL);

@@ -32,22 +32,22 @@ void __fastcall LotteryShopBuyItemConfirmMenu___cctor(const MethodInfo *method)
   if ( (byte_40F8E09 & 1) == 0 )
   {
     sub_B16FFC(&LotteryShopBuyItemConfirmMenu_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_22705, v8);
-    sub_B16FFC(&StringLiteral_16987, v9);
-    sub_B16FFC(&StringLiteral_22709, v10);
+    sub_B16FFC(&StringLiteral_22705/*"treasurechest_img_bg"*/, v8);
+    sub_B16FFC(&StringLiteral_16987/*"btn_txt_event_"*/, v9);
+    sub_B16FFC(&StringLiteral_22709/*"treasurechest_img_line"*/, v10);
     byte_40F8E09 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields;
-  v12 = (System_Int32_array **)StringLiteral_16987;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16987;
+  v12 = (System_Int32_array **)StringLiteral_16987/*"btn_txt_event_"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16987/*"btn_txt_event_"*/;
   sub_B16F98(static_fields, v12, v2, v3, v4, v5, v6, v7);
   v13 = LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields;
-  v14 = (System_Int32_array **)StringLiteral_22705;
-  v13->PAY_INFO_BG_SPITE_NAME = (struct System_String_o *)StringLiteral_22705;
+  v14 = (System_Int32_array **)StringLiteral_22705/*"treasurechest_img_bg"*/;
+  v13->PAY_INFO_BG_SPITE_NAME = (struct System_String_o *)StringLiteral_22705/*"treasurechest_img_bg"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v13->PAY_INFO_BG_SPITE_NAME, v14, v15, v16, v17, v18, v19, v20);
   v21 = LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields;
-  v22 = (System_Int32_array **)StringLiteral_22709;
-  v21->PAY_INFO_LINE_SPITE_NAME = (struct System_String_o *)StringLiteral_22709;
+  v22 = (System_Int32_array **)StringLiteral_22709/*"treasurechest_img_line"*/;
+  v21->PAY_INFO_LINE_SPITE_NAME = (struct System_String_o *)StringLiteral_22709/*"treasurechest_img_line"*/;
   sub_B16F98((BattleServantConfConponent_o *)&v21->PAY_INFO_LINE_SPITE_NAME, v22, v23, v24, v25, v26, v27, v28);
   LotteryShopBuyItemConfirmMenu_TypeInfo->static_fields->randomShopBuyLimit = 10;
 }
@@ -363,7 +363,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Init(LotteryShopBuyItemConfirmMen
   if ( (byte_40F8E00 & 1) == 0 )
   {
     sub_B16FFC(&ShopBuyItemUtility_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1, v3);
+    sub_B16FFC(&StringLiteral_1/*""*/, v3);
     byte_40F8E00 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -376,7 +376,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Init(LotteryShopBuyItemConfirmMen
   {
     sub_B170D4();
   }
-  UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1, 0LL);
+  UILabel__set_text(nameLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   messageLabel = this->fields.messageLabel;
   if ( (BYTE3(ShopBuyItemUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ShopBuyItemUtility_TypeInfo->_2.cctor_finished )
@@ -681,12 +681,12 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Open(
     sub_B16FFC(&Method_LotteryShopBuyItemConfirmMenu_EndOpen__, v17);
     sub_B16FFC(&LotteryShopBuyItemConfirmMenu_TypeInfo, v18);
     sub_B16FFC(&NetworkManager_TypeInfo, v19);
-    sub_B16FFC(&StringLiteral_8426, v20);
-    sub_B16FFC(&StringLiteral_8424, v21);
-    sub_B16FFC(&StringLiteral_8427, v22);
-    sub_B16FFC(&StringLiteral_8425, v23);
-    sub_B16FFC(&StringLiteral_8718, v24);
-    sub_B16FFC(&StringLiteral_1, v25);
+    sub_B16FFC(&StringLiteral_8426/*"LOTTERY_SHOP_PAY_INFO"*/, v20);
+    sub_B16FFC(&StringLiteral_8424/*"LOTTERY_SHOP_HAVE_EVENT_ITEM"*/, v21);
+    sub_B16FFC(&StringLiteral_8427/*"LOTTERY_SHOP_SKIP_INFO"*/, v22);
+    sub_B16FFC(&StringLiteral_8425/*"LOTTERY_SHOP_NEED_EVENT_ITEM"*/, v23);
+    sub_B16FFC(&StringLiteral_8718/*"MISSION_ACTION_PRESENT_BOX_FULL_WARNING"*/, v24);
+    sub_B16FFC(&StringLiteral_1/*""*/, v25);
     byte_40F8DF9 = 1;
   }
   v99 = 0LL;
@@ -802,13 +802,13 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Open(
                                 {
                                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                 }
-                                v59 = LocalizationManager__Get((System_String_o *)StringLiteral_8718, v57);
+                                v59 = LocalizationManager__Get((System_String_o *)StringLiteral_8718/*"MISSION_ACTION_PRESENT_BOX_FULL_WARNING"*/, v57);
                                 if ( !warningLabel )
                                   goto LABEL_61;
                               }
                               else
                               {
-                                v59 = (System_String_o *)StringLiteral_1;
+                                v59 = (System_String_o *)StringLiteral_1/*""*/;
                                 if ( !warningLabel )
                                   goto LABEL_61;
                               }
@@ -879,22 +879,22 @@ void __fastcall LotteryShopBuyItemConfirmMenu__Open(
                                     {
                                       UILabel__set_text(haveNum, NumberFormatLong, 0LL);
                                       haveText = this->fields.haveText;
-                                      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_8424, v77);
+                                      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_8424/*"LOTTERY_SHOP_HAVE_EVENT_ITEM"*/, v77);
                                       if ( haveText )
                                       {
                                         UILabel__set_text(haveText, v78, 0LL);
                                         needText = this->fields.needText;
-                                        v81 = LocalizationManager__Get((System_String_o *)StringLiteral_8425, v80);
+                                        v81 = LocalizationManager__Get((System_String_o *)StringLiteral_8425/*"LOTTERY_SHOP_NEED_EVENT_ITEM"*/, v80);
                                         if ( needText )
                                         {
                                           UILabel__set_text(needText, v81, 0LL);
                                           payInfoLabel = this->fields.payInfoLabel;
-                                          v84 = LocalizationManager__Get((System_String_o *)StringLiteral_8426, v83);
+                                          v84 = LocalizationManager__Get((System_String_o *)StringLiteral_8426/*"LOTTERY_SHOP_PAY_INFO"*/, v83);
                                           if ( payInfoLabel )
                                           {
                                             UILabel__set_text(payInfoLabel, v84, 0LL);
                                             checkboxLabel = this->fields.checkboxLabel;
-                                            v87 = LocalizationManager__Get((System_String_o *)StringLiteral_8427, v86);
+                                            v87 = LocalizationManager__Get((System_String_o *)StringLiteral_8427/*"LOTTERY_SHOP_SKIP_INFO"*/, v86);
                                             if ( checkboxLabel )
                                             {
                                               UILabel__set_text(checkboxLabel, v87, 0LL);
@@ -1024,8 +1024,8 @@ void __fastcall LotteryShopBuyItemConfirmMenu__SetDecideButtonImage(
     sub_B16FFC(&DataManager_TypeInfo, v6);
     sub_B16FFC(&EventRewardRootComponent_TypeInfo, v7);
     sub_B16FFC(&LotteryShopBuyItemConfirmMenu_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_15842, v9);
-    sub_B16FFC(&StringLiteral_17036, v10);
+    sub_B16FFC(&StringLiteral_15842/*"_"*/, v9);
+    sub_B16FFC(&StringLiteral_17036/*"btn_txt_trade"*/, v10);
     byte_40F8DFB = 1;
   }
   v23 = 0;
@@ -1055,7 +1055,7 @@ void __fastcall LotteryShopBuyItemConfirmMenu__SetDecideButtonImage(
     VALENTINE_BTN_NAME = v15->static_fields->VALENTINE_BTN_NAME;
     v17 = System_Int32__ToString((int)shopEntity + 24, 0LL);
     v18 = System_Int32__ToString((int32_t)&v23, 0LL);
-    v19 = System_String__Concat_43747144(VALENTINE_BTN_NAME, v17, (System_String_o *)StringLiteral_15842, v18, 0LL);
+    v19 = System_String__Concat_43747144(VALENTINE_BTN_NAME, v17, (System_String_o *)StringLiteral_15842/*"_"*/, v18, 0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
     {
@@ -1074,7 +1074,7 @@ LABEL_20:
       v21 = this->fields.decideButtonImg;
       if ( v21 )
       {
-        UISprite__set_spriteName(v21, (System_String_o *)StringLiteral_17036, 0LL);
+        UISprite__set_spriteName(v21, (System_String_o *)StringLiteral_17036/*"btn_txt_trade"*/, 0LL);
         v22 = this->fields.decideButtonImg;
         if ( v22 )
         {

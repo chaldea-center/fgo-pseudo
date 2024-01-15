@@ -795,7 +795,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__RequestListObject(
     sub_B16FFC(&Method_EventInfoTipsArchiveListViewManager_OnMoveEnd__, v8);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__, v9);
     sub_B16FFC(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__get_Count__, v10);
-    sub_B16FFC(&StringLiteral_10004, v11);
+    sub_B16FFC(&StringLiteral_10004/*"OnMoveEnd"*/, v11);
     byte_40FA1B2 = 1;
   }
   memset(&v20, 0, sizeof(v20));
@@ -808,7 +808,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__RequestListObject(
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10004,
+      (System_String_o *)StringLiteral_10004/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }

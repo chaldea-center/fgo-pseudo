@@ -24,7 +24,7 @@ void __fastcall SetUserBirthDayRequest__beginRequest(
   {
     sub_B16FFC(&NetworkManager_TypeInfo, normalName);
     sub_B16FFC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v11);
-    sub_B16FFC(&StringLiteral_16656, v12);
+    sub_B16FFC(&StringLiteral_16656/*"birthDay"*/, v12);
     byte_40FF33E = 1;
   }
   Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
@@ -41,7 +41,7 @@ void __fastcall SetUserBirthDayRequest__beginRequest(
   }
   v17.fields.dateData = dateTime.fields.dateData;
   Time_23684488 = NetworkManager__getTime_23684488(v17, 0LL);
-  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_16656, Time_23684488, 0LL);
+  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_16656/*"birthDay"*/, Time_23684488, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -54,7 +54,7 @@ System_String_o *__fastcall SetUserBirthDayRequest__getURL(SetUserBirthDayReques
   if ( (byte_40FF33D & 1) == 0 )
   {
     sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21452, v2);
+    sub_B16FFC(&StringLiteral_21452/*"profile/editBirth"*/, v2);
     byte_40FF33D = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -63,7 +63,7 @@ System_String_o *__fastcall SetUserBirthDayRequest__getURL(SetUserBirthDayReques
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_21452, 0LL);
+  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_21452/*"profile/editBirth"*/, 0LL);
 }
 
 
@@ -100,7 +100,7 @@ void __fastcall SetUserBirthDayRequest__requestCompleted(
     sub_B16FFC(&NetworkManager_TypeInfo, v5);
     sub_B16FFC(&ResponseCommandKind_TypeInfo, v6);
     sub_B16FFC(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_20980, v8);
+    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v8);
     byte_40FF33F = 1;
   }
   dateData = 0LL;
@@ -146,7 +146,7 @@ LABEL_20:
   }
   else
   {
-    v22 = (System_String_o *)StringLiteral_20980;
+    v22 = (System_String_o *)StringLiteral_20980/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v22, 0LL);
 }
