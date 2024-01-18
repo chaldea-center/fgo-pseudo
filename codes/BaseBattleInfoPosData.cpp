@@ -9,22 +9,8 @@ void __fastcall BaseBattleInfoPosData__Init(
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._Perf_k__BackingField = perf;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)perf,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_B2C2F8(&this->fields, perf);
 }
 
 
@@ -70,20 +56,6 @@ void __fastcall BaseBattleInfoPosData__set_Perf(
         BattlePerformance_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._Perf_k__BackingField = value;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_B2C2F8(&this->fields, value);
 }

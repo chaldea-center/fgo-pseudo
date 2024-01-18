@@ -44,15 +44,15 @@ void __fastcall UserPresentListViewItem___ctor(
   System_Int32_array **v43; // x5
   System_Int32_array *v44; // x6
   System_Int32_array *v45; // x7
+  DataManager_o *Instance; // x0
+  __int64 v47; // x1
   struct System_String_o *message; // x1
-  System_String_array **v47; // x2
-  System_String_array **v48; // x3
-  System_Boolean_array **v49; // x4
-  System_Int32_array **v50; // x5
-  System_Int32_array *v51; // x6
-  System_Int32_array *v52; // x7
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
+  System_String_array **v49; // x2
+  System_String_array **v50; // x3
+  System_Boolean_array **v51; // x4
+  System_Int32_array **v52; // x5
+  System_Int32_array *v53; // x6
+  System_Int32_array *v54; // x7
   struct ServantEntity_o *Entity; // x1
   System_String_array **v56; // x2
   System_String_array **v57; // x3
@@ -62,44 +62,36 @@ void __fastcall UserPresentListViewItem___ctor(
   System_Int32_array *v61; // x7
   BattleServantConfConponent_o *p_svtEnt; // x0
   int32_t objectId; // w19
-  WebViewManager_o *v64; // x0
-  ServantCostumeMaster_o *v65; // x0
-  struct ServantCostumeEntity_o *v66; // x0
-  WebViewManager_o *v67; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *v68; // x0
-  WebViewManager_o *v69; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *v70; // x0
-  WebViewManager_o *v71; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *v72; // x0
+  struct ServantCostumeEntity_o *v64; // x0
 
-  if ( (byte_40F8094 & 1) == 0 )
+  if ( (byte_4185DAB & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_CommandCodeMaster___, *(_QWORD *)&index);
-    sub_B16FFC(&Method_DataManager_GetMasterData_EquipMaster___, v7);
-    sub_B16FFC(&Method_DataManager_GetMasterData_ItemMaster___, v8);
-    sub_B16FFC(&Method_DataManager_GetMasterData_ServantCostumeMaster___, v9);
-    sub_B16FFC(&Method_DataManager_GetMasterData_ServantMaster___, v10);
-    sub_B16FFC(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__, v11);
-    sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
-    sub_B16FFC(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v13);
-    sub_B16FFC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v14);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    byte_40F8094 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_CommandCodeMaster___, *(_QWORD *)&index);
+    sub_B2C35C(&Method_DataManager_GetMasterData_EquipMaster___, v7);
+    sub_B2C35C(&Method_DataManager_GetMasterData_ItemMaster___, v8);
+    sub_B2C35C(&Method_DataManager_GetMasterData_ServantCostumeMaster___, v9);
+    sub_B2C35C(&Method_DataManager_GetMasterData_ServantMaster___, v10);
+    sub_B2C35C(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__, v11);
+    sub_B2C35C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
+    sub_B2C35C(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v13);
+    sub_B2C35C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v14);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    byte_4185DAB = 1;
   }
-  ListViewItem___ctor_30173668((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
   this->fields.svtEnt = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.svtEnt, 0LL, v16, v17, v18, v19, v20, v21);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.svtEnt, 0LL, v16, v17, v18, v19, v20, v21);
   this->fields.itemEnt = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.itemEnt, 0LL, v22, v23, v24, v25, v26, v27);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.itemEnt, 0LL, v22, v23, v24, v25, v26, v27);
   this->fields.equipEnt = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.equipEnt, 0LL, v28, v29, v30, v31, v32, v33);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.equipEnt, 0LL, v28, v29, v30, v31, v32, v33);
   this->fields.commandCodeEnt = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.commandCodeEnt, 0LL, v34, v35, v36, v37, v38, v39);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.commandCodeEnt, 0LL, v34, v35, v36, v37, v38, v39);
   this->fields.usrPresentEnt = presentData;
   this->fields.checkBoxed = 0;
   this->fields.checkCount = -1;
   this->fields.blocked = 0;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.usrPresentEnt,
     (System_Int32_array **)presentData,
     v40,
@@ -110,108 +102,108 @@ void __fastcall UserPresentListViewItem___ctor(
     v45);
   if ( !presentData )
 LABEL_21:
-    sub_B170D4();
+    sub_B2C434(Instance, v47);
   UserPresentBoxEntity__GetInfo(presentData, &this->fields.presentName, &this->fields.presentNum, 0LL);
   this->fields.presentId = presentData->fields.presentId;
   this->fields.giftType = presentData->fields.giftType;
   message = presentData->fields.message;
   this->fields.presentMsg = message;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.presentMsg,
     (System_Int32_array **)message,
-    v47,
-    v48,
     v49,
     v50,
     v51,
-    v52);
+    v52,
+    v53,
+    v54);
   switch ( this->fields.giftType )
   {
     case 1:
     case 6:
     case 7:
-      Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_21;
-      MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                            (DataManager_o *)Instance,
-                                                                                            (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ServantMaster___);
-      if ( !MasterData_WarQuestSelectionMaster )
+      Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                    Instance,
+                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ServantMaster___);
+      if ( !Instance )
         goto LABEL_21;
       Entity = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                           MasterData_WarQuestSelectionMaster,
+                                           (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                            presentData->fields.objectId,
-                                           (const MethodInfo_266F388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                           (const MethodInfo_24E40D0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       this->fields.svtEnt = Entity;
       p_svtEnt = (BattleServantConfConponent_o *)&this->fields.svtEnt;
       break;
     case 2:
-      v69 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-      if ( !v69 )
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      if ( !Instance )
         goto LABEL_21;
-      v70 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                             (DataManager_o *)v69,
-                                                             (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ItemMaster___);
-      if ( !v70 )
+      Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                    Instance,
+                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ItemMaster___);
+      if ( !Instance )
         goto LABEL_21;
       Entity = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                           v70,
+                                           (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                            presentData->fields.objectId,
-                                           (const MethodInfo_266F388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                           (const MethodInfo_24E40D0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       this->fields.itemEnt = (struct ItemEntity_o *)Entity;
       p_svtEnt = (BattleServantConfConponent_o *)&this->fields.itemEnt;
       break;
     case 5:
-      v71 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-      if ( !v71 )
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      if ( !Instance )
         goto LABEL_21;
-      v72 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                             (DataManager_o *)v71,
-                                                             (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_EquipMaster___);
-      if ( !v72 )
+      Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                    Instance,
+                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EquipMaster___);
+      if ( !Instance )
         goto LABEL_21;
       Entity = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                           v72,
+                                           (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                            presentData->fields.objectId,
-                                           (const MethodInfo_266F388 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
+                                           (const MethodInfo_24E40D0 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
       this->fields.equipEnt = (struct EquipEntity_o *)Entity;
       p_svtEnt = (BattleServantConfConponent_o *)&this->fields.equipEnt;
       break;
     case 9:
       objectId = presentData->fields.objectId;
-      v64 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-      if ( !v64 )
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      if ( !Instance )
         goto LABEL_21;
-      v65 = (ServantCostumeMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                        (DataManager_o *)v64,
-                                        (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
-      if ( !v65 )
+      Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                    Instance,
+                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+      if ( !Instance )
         goto LABEL_21;
-      v66 = ServantCostumeMaster__GetEntity(v65, objectId / 100, objectId % 100, 0LL);
-      this->fields.costumeEnt = v66;
-      Entity = (struct ServantEntity_o *)v66;
+      v64 = ServantCostumeMaster__GetEntity((ServantCostumeMaster_o *)Instance, objectId / 100, objectId % 100, 0LL);
+      this->fields.costumeEnt = v64;
+      Entity = (struct ServantEntity_o *)v64;
       p_svtEnt = (BattleServantConfConponent_o *)&this->fields.costumeEnt;
       break;
     case 0xB:
-      v67 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-      if ( !v67 )
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      if ( !Instance )
         goto LABEL_21;
-      v68 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                             (DataManager_o *)v67,
-                                                             (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
-      if ( !v68 )
+      Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                    Instance,
+                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+      if ( !Instance )
         goto LABEL_21;
       Entity = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                           v68,
+                                           (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                            presentData->fields.objectId,
-                                           (const MethodInfo_266F388 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+                                           (const MethodInfo_24E40D0 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
       this->fields.commandCodeEnt = (struct CommandCodeEntity_o *)Entity;
       p_svtEnt = (BattleServantConfConponent_o *)&this->fields.commandCodeEnt;
       break;
     default:
       return;
   }
-  sub_B16F98(p_svtEnt, (System_Int32_array **)Entity, v56, v57, v58, v59, v60, v61);
+  sub_B2C2F8(p_svtEnt, (System_Int32_array **)Entity, v56, v57, v58, v59, v60, v61);
 }
 
 
@@ -226,27 +218,29 @@ bool __fastcall UserPresentListViewItem__SetSortValue(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
+  UserPresentListViewItem_o *v4; // x19
   __int64 v5; // x1
-  const MethodInfo *v6; // x1
   UserPresentBoxEntity_o *usrPresentEnt; // x20
-  UserPresentBoxEntity_o *v8; // x20
+  UserPresentBoxEntity_o *v7; // x20
   struct ItemEntity_o *itemEnt; // x8
-  int64_t v10; // x8
-  struct UserPresentBoxEntity_o *v11; // x9
+  int64_t v9; // x8
+  struct UserPresentBoxEntity_o *v10; // x9
   bool result; // w0
 
-  if ( (byte_40F8095 & 1) == 0 )
+  v4 = this;
+  if ( (byte_4185DAC & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, sort);
-    sub_B16FFC(&UserPresentBoxMaster_TypeInfo, v5);
-    byte_40F8095 = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, sort);
+    this = (UserPresentListViewItem_o *)sub_B2C35C(&UserPresentBoxMaster_TypeInfo, v5);
+    byte_4185DAC = 1;
   }
-  this->fields.sortValue0 = 0LL;
+  v4->fields.sortValue0 = 0LL;
   if ( !sort )
     goto LABEL_25;
-  if ( ListViewSort__GetFilter_30229884(sort, 13, 0LL) )
+  if ( ListViewSort__GetFilter_33936092(sort, 13, 0LL) )
   {
-    usrPresentEnt = this->fields.usrPresentEnt;
+    usrPresentEnt = v4->fields.usrPresentEnt;
+    this = (UserPresentListViewItem_o *)UserPresentBoxMaster_TypeInfo;
     if ( (BYTE3(UserPresentBoxMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UserPresentBoxMaster_TypeInfo->_2.cctor_finished )
     {
@@ -261,42 +255,45 @@ bool __fastcall UserPresentListViewItem__SetSortValue(
     {
       goto LABEL_15;
     }
-    v8 = this->fields.usrPresentEnt;
+    this = (UserPresentListViewItem_o *)UserPresentBoxMaster_TypeInfo;
+    v7 = v4->fields.usrPresentEnt;
     if ( (BYTE3(UserPresentBoxMaster_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UserPresentBoxMaster_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UserPresentBoxMaster_TypeInfo);
     }
-    if ( !v8 )
+    if ( !v7 )
       goto LABEL_25;
-    if ( UserPresentBoxEntity__IsEnableFlag(v8, UserPresentBoxMaster_TypeInfo->static_fields->IMPORTANT_FOR_LIMIT, 0LL) )
+    if ( UserPresentBoxEntity__IsEnableFlag(v7, UserPresentBoxMaster_TypeInfo->static_fields->IMPORTANT_FOR_LIMIT, 0LL) )
 LABEL_15:
-      this->fields.sortValue0 = 1LL;
+      v4->fields.sortValue0 = 1LL;
   }
-  if ( UserPresentListViewItem__isItemLimitedPeriod(this, v6) )
+  this = (UserPresentListViewItem_o *)UserPresentListViewItem__isItemLimitedPeriod(v4, (const MethodInfo *)sort);
+  if ( ((unsigned __int8)this & 1) != 0 )
   {
+    this = (UserPresentListViewItem_o *)BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     }
-    itemEnt = this->fields.itemEnt;
+    itemEnt = v4->fields.itemEnt;
     if ( itemEnt )
     {
-      v10 = BalanceConfig_TypeInfo->static_fields->NoneExpireTime - itemEnt->fields.endedAt;
+      v9 = BalanceConfig_TypeInfo->static_fields->NoneExpireTime - itemEnt->fields.endedAt;
       goto LABEL_23;
     }
 LABEL_25:
-    sub_B170D4();
+    sub_B2C434(this, sort);
   }
-  v10 = 0LL;
+  v9 = 0LL;
 LABEL_23:
-  v11 = this->fields.usrPresentEnt;
-  this->fields.sortValue0B = v10;
-  if ( !v11 )
+  v10 = v4->fields.usrPresentEnt;
+  v4->fields.sortValue0B = v9;
+  if ( !v10 )
     goto LABEL_25;
   result = 1;
-  this->fields.sortValue1 = v11->fields.presentId;
+  v4->fields.sortValue1 = v10->fields.presentId;
   return result;
 }
 
@@ -336,29 +333,29 @@ System_String_o *__fastcall UserPresentListViewItem__get_NameText(
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
+  __int64 v6; // x1
   ServantEntity_o *svtEnt; // x0
   struct ItemEntity_o *itemEnt; // x8
   struct EquipEntity_o *equipEnt; // x8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *name; // x19
   struct CommandCodeEntity_o *commandCodeEnt; // x8
-  System_String_o *v12; // x0
   struct ServantCostumeEntity_o *costumeEnt; // x8
 
-  if ( (byte_40F8096 & 1) == 0 )
+  if ( (byte_4185DAD & 1) == 0 )
   {
-    sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_8726/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/, v4);
-    sub_B16FFC(&StringLiteral_18326/*"error"*/, v5);
-    byte_40F8096 = 1;
+    sub_B2C35C(&LocalizationManager_TypeInfo, method);
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
+    sub_B2C35C(&StringLiteral_8755/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/, v4);
+    sub_B2C35C(&StringLiteral_18395/*"error"*/, v5);
+    byte_4185DAD = 1;
   }
-  if ( this->fields.svtEnt && Gift__IsServant_28854740(this->fields.giftType, 0LL) )
+  if ( this->fields.svtEnt && Gift__IsServant_27324084(this->fields.giftType, 0LL) )
   {
     svtEnt = this->fields.svtEnt;
     if ( svtEnt )
       return ServantEntity__getName(svtEnt, 0, -1, 0LL);
 LABEL_28:
-    sub_B170D4();
+    sub_B2C434(svtEnt, v6);
   }
   itemEnt = this->fields.itemEnt;
   if ( itemEnt && this->fields.giftType == 2 )
@@ -373,7 +370,7 @@ LABEL_16:
     {
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
     }
-    return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44107000(name, 0LL);
+    return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44796528(name, 0LL);
   }
   commandCodeEnt = this->fields.commandCodeEnt;
   if ( commandCodeEnt && this->fields.giftType == 11 )
@@ -382,17 +379,17 @@ LABEL_16:
     goto LABEL_16;
   }
   if ( !this->fields.costumeEnt || this->fields.giftType != 9 )
-    return (System_String_o *)StringLiteral_18326/*"error"*/;
+    return (System_String_o *)StringLiteral_18395/*"error"*/;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8726/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/, 0LL);
+  svtEnt = (ServantEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8755/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/, 0LL);
   costumeEnt = this->fields.costumeEnt;
   if ( !costumeEnt )
     goto LABEL_28;
-  return System_String__Format(v12, (Il2CppObject *)costumeEnt->fields.name, 0LL);
+  return System_String__Format((System_String_o *)svtEnt, (Il2CppObject *)costumeEnt->fields.name, 0LL);
 }
 
 
@@ -471,7 +468,7 @@ bool __fastcall UserPresentListViewItem__isItemLimitedPeriod(UserPresentListView
     {
       itemEnt = this->fields.itemEnt;
       if ( !itemEnt )
-        sub_B170D4();
+        sub_B2C434(usrPresentEnt, method);
       endedAt = itemEnt->fields.endedAt;
       LOBYTE(usrPresentEnt) = endedAt < UserPresentBoxEntity__expireAt(usrPresentEnt, 0LL);
     }
@@ -492,15 +489,16 @@ void __fastcall UserPresentListViewItem__setBlocked(
 {
   __int64 v5; // x1
   UnityEngine_Object_o *viewObject; // x21
-  const MethodInfo *v7; // x2
-  struct ListViewObject_o *v8; // x0
-  __int64 v9; // x9
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
+  struct ListViewObject_o *v9; // x0
+  __int64 v10; // x9
 
-  if ( (byte_40F8098 & 1) == 0 )
+  if ( (byte_4185DAF & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, blocked);
-    sub_B16FFC(&UserPresentListViewObject_TypeInfo, v5);
-    byte_40F8098 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, blocked);
+    sub_B2C35C(&UserPresentListViewObject_TypeInfo, v5);
+    byte_4185DAF = 1;
   }
   this->fields.blocked = blocked;
   viewObject = (UnityEngine_Object_o *)this->fields.viewObject;
@@ -511,19 +509,19 @@ void __fastcall UserPresentListViewItem__setBlocked(
   }
   if ( UnityEngine_Object__op_Inequality(viewObject, 0LL, 0LL) )
   {
-    v8 = this->fields.viewObject;
-    if ( v8 )
+    v9 = this->fields.viewObject;
+    if ( v9 )
     {
-      v9 = *(&UserPresentListViewObject_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&v8->klass->_2.bitflags2 + 1) >= (unsigned int)v9
-        && (UserPresentListViewObject_c *)v8->klass->_2.typeHierarchy[v9 - 1] == UserPresentListViewObject_TypeInfo )
+      v10 = *(&UserPresentListViewObject_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&v9->klass->_2.bitflags2 + 1) >= (unsigned int)v10
+        && (UserPresentListViewObject_c *)v9->klass->_2.typeHierarchy[v10 - 1] == UserPresentListViewObject_TypeInfo )
       {
-        UserPresentListViewObject__setBlocked((UserPresentListViewObject_o *)v8, blocked, v7);
+        UserPresentListViewObject__setBlocked((UserPresentListViewObject_o *)v9, blocked, v8);
         return;
       }
-      sub_B173C8(v8);
+      v9 = (struct ListViewObject_o *)sub_B2C728(v9);
     }
-    sub_B170D4();
+    sub_B2C434(v9, v7);
   }
 }
 
@@ -537,15 +535,16 @@ void __fastcall UserPresentListViewItem__setCheckBoxed(
 {
   __int64 v7; // x1
   UnityEngine_Object_o *viewObject; // x22
-  const MethodInfo *v9; // x3
-  struct ListViewObject_o *v10; // x0
-  __int64 v11; // x9
+  __int64 v9; // x1
+  const MethodInfo *v10; // x3
+  struct ListViewObject_o *v11; // x0
+  __int64 v12; // x9
 
-  if ( (byte_40F8097 & 1) == 0 )
+  if ( (byte_4185DAE & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, checkBoxed);
-    sub_B16FFC(&UserPresentListViewObject_TypeInfo, v7);
-    byte_40F8097 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, checkBoxed);
+    sub_B2C35C(&UserPresentListViewObject_TypeInfo, v7);
+    byte_4185DAE = 1;
   }
   this->fields.checkCount = count;
   this->fields.checkBoxed = checkBoxed;
@@ -557,18 +556,18 @@ void __fastcall UserPresentListViewItem__setCheckBoxed(
   }
   if ( UnityEngine_Object__op_Inequality(viewObject, 0LL, 0LL) )
   {
-    v10 = this->fields.viewObject;
-    if ( v10 )
+    v11 = this->fields.viewObject;
+    if ( v11 )
     {
-      v11 = *(&UserPresentListViewObject_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&v10->klass->_2.bitflags2 + 1) >= (unsigned int)v11
-        && (UserPresentListViewObject_c *)v10->klass->_2.typeHierarchy[v11 - 1] == UserPresentListViewObject_TypeInfo )
+      v12 = *(&UserPresentListViewObject_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&v11->klass->_2.bitflags2 + 1) >= (unsigned int)v12
+        && (UserPresentListViewObject_c *)v11->klass->_2.typeHierarchy[v12 - 1] == UserPresentListViewObject_TypeInfo )
       {
-        UserPresentListViewObject__setCheckBoxed((UserPresentListViewObject_o *)v10, checkBoxed, count, v9);
+        UserPresentListViewObject__setCheckBoxed((UserPresentListViewObject_o *)v11, checkBoxed, count, v10);
         return;
       }
-      sub_B173C8(v10);
+      v11 = (struct ListViewObject_o *)sub_B2C728(v11);
     }
-    sub_B170D4();
+    sub_B2C434(v11, v9);
   }
 }

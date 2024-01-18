@@ -1,13 +1,13 @@
 void __fastcall QuestRandomGroupEntity___ctor(QuestRandomGroupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FD55A & 1) == 0 )
+  if ( (byte_418AEDE & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FD55A = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_418AEDE = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall QuestRandomGroupEntity__CreatePK(
         int32_t probability,
         const MethodInfo *method)
 {
-  if ( (byte_40FD558 & 1) == 0 )
+  if ( (byte_418AEDC & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&randomGroupId);
-    byte_40FD558 = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&randomGroupId);
+    byte_418AEDC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            randomGroupId,
            probability,
-           (const MethodInfo_18C25C8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1732D30 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -51,26 +51,26 @@ QuestEntity_o *__fastcall QuestRandomGroupEntity__GetQuestEntity(
 {
   __int64 v3; // x1
   __int64 v4; // x1
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
+  DataManager_o *Instance; // x0
+  __int64 v6; // x1
 
-  if ( (byte_40FD559 & 1) == 0 )
+  if ( (byte_418AEDD & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_QuestMaster___, method);
-    sub_B16FFC(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v3);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_40FD559 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_QuestMaster___, method);
+    sub_B2C35C(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v3);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_418AEDD = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                              (DataManager_o *)Instance,
-                                                                                              (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0LL )
+    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                      Instance,
+                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_QuestMaster___)) == 0LL )
   {
-    sub_B170D4();
+    sub_B2C434(Instance, v6);
   }
   return (QuestEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                            MasterData_WarQuestSelectionMaster,
+                            (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                             this->fields.questId,
-                            (const MethodInfo_266F388 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+                            (const MethodInfo_24E40D0 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
 }

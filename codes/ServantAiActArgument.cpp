@@ -18,7 +18,7 @@ void __fastcall ServantAiActArgument___ctor(
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, 0LL);
   v8->fields._SvtData_k__BackingField = svtData;
   v8 = (ServantAiActArgument_o *)((char *)v8 + 32);
-  sub_B16F98((BattleServantConfConponent_o *)v8, (System_Int32_array **)svtData, v9, v10, v11, v12, v13, v14);
+  sub_B2C2F8((BattleServantConfConponent_o *)v8, (System_Int32_array **)svtData, v9, v10, v11, v12, v13, v14);
   LOBYTE(v8->monitor) = isNoMessage;
 }
 
@@ -33,10 +33,11 @@ void __fastcall ServantAiActArgument__InitCommonTask(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
+  ServantAiActArgument_o *v8; // x20
   struct AiBaseEntity_o *AiEnt_k__BackingField; // x8
   struct System_String_o *infoText; // x1
-  AiBaseEntity_o *v12; // x0
 
+  v8 = this;
   if ( !this->fields._IsNoMessage_k__BackingField )
   {
     AiEnt_k__BackingField = this->fields._AiEnt_k__BackingField;
@@ -44,7 +45,7 @@ void __fastcall ServantAiActArgument__InitCommonTask(
       goto LABEL_10;
     infoText = AiEnt_k__BackingField->fields.infoText;
     task->fields.motionMessage = infoText;
-    sub_B16F98(
+    sub_B2C2F8(
       (BattleServantConfConponent_o *)&task->fields.motionMessage,
       (System_Int32_array **)infoText,
       (System_String_array **)method,
@@ -54,14 +55,15 @@ void __fastcall ServantAiActArgument__InitCommonTask(
       v6,
       v7);
   }
-  v12 = this->fields._AiEnt_k__BackingField;
-  if ( !v12 )
+  this = (ServantAiActArgument_o *)v8->fields._AiEnt_k__BackingField;
+  if ( !this )
     goto LABEL_10;
-  if ( !AiBaseEntity__IsForcedActionSpeedAnyTime(v12, 0LL) )
+  this = (ServantAiActArgument_o *)AiBaseEntity__IsForcedActionSpeedAnyTime((AiBaseEntity_o *)this, 0LL);
+  if ( ((unsigned __int8)this & 1) == 0 )
     return;
   if ( !task )
 LABEL_10:
-    sub_B170D4();
+    sub_B2C434(this, task);
   task->fields.isForcedSpeedOne = 1;
 }
 
@@ -86,7 +88,7 @@ int32_t __fastcall ServantAiActArgument__get_UniqueId(ServantAiActArgument_o *th
 
   SvtData_k__BackingField = this->fields._SvtData_k__BackingField;
   if ( !SvtData_k__BackingField )
-    sub_B170D4();
+    sub_B2C434(this, method);
   return SvtData_k__BackingField->fields.uniqueId;
 }
 
@@ -112,7 +114,7 @@ void __fastcall ServantAiActArgument__set_SvtData(
   System_Int32_array *v7; // x7
 
   this->fields._SvtData_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._SvtData_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

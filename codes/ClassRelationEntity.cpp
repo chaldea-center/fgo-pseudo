@@ -1,28 +1,28 @@
 void __fastcall ClassRelationEntity___ctor(ClassRelationEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F99CE & 1) == 0 )
+  if ( (byte_41887E5 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40F99CE = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_41887E5 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ClassRelationEntity__CreatePK(int32_t atkClass, int32_t defClass, const MethodInfo *method)
 {
-  if ( (byte_40F99CD & 1) == 0 )
+  if ( (byte_41887E4 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&defClass);
-    byte_40F99CD = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&defClass);
+    byte_41887E4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            atkClass,
            defClass,
-           (const MethodInfo_18C21A0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

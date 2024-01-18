@@ -23,7 +23,7 @@ void __fastcall EventHeelPortraitListViewItemDraw__ClearNewImgSprite(
 
   newImgSprite = this->fields.newImgSprite;
   if ( !newImgSprite )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   ShiningIconComponent__Clear(newImgSprite, 0LL);
 }
 
@@ -33,6 +33,7 @@ void __fastcall EventHeelPortraitListViewItemDraw__SetItem(
         EventHeelPortraitListViewItem_o *item,
         const MethodInfo *method)
 {
+  EventHeelPortraitListViewItemDraw_o *v4; // x19
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
@@ -42,19 +43,16 @@ void __fastcall EventHeelPortraitListViewItemDraw__SetItem(
   System_String_o *v11; // x21
   int32_t eventId; // w22
   UISprite_o *heelPortraitSprite; // x23
-  ShiningIconComponent_o *newImgSprite; // x0
-  ShiningIconComponent_o *v15; // x0
-  UnityEngine_Component_o *v16; // x0
-  UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_40FB6A6 & 1) == 0 )
+  v4 = this;
+  if ( (byte_41890E2 & 1) == 0 )
   {
-    sub_B16FFC(&AtlasManager_TypeInfo, item);
-    sub_B16FFC(&System_Convert_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21417/*"portrait_unknown"*/, v6);
-    sub_B16FFC(&StringLiteral_19246/*"icon_common_new01"*/, v7);
-    byte_40FB6A6 = 1;
+    sub_B2C35C(&AtlasManager_TypeInfo, item);
+    sub_B2C35C(&System_Convert_TypeInfo, v5);
+    sub_B2C35C(&StringLiteral_21509/*"portrait_unknown"*/, v6);
+    this = (EventHeelPortraitListViewItemDraw_o *)sub_B2C35C(&StringLiteral_19320/*"icon_common_new01"*/, v7);
+    byte_41890E2 = 1;
   }
   if ( !item )
     goto LABEL_23;
@@ -70,43 +68,46 @@ void __fastcall EventHeelPortraitListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
     }
-    v11 = System_Convert__ToString_41756656(imageId, 0LL);
+    this = (EventHeelPortraitListViewItemDraw_o *)System_Convert__ToString_42142208(imageId, 0LL);
+    v11 = (System_String_o *)this;
   }
   else
   {
     p_Entity_k__BackingField = &item->fields._Entity_k__BackingField;
-    v11 = (System_String_o *)StringLiteral_21417/*"portrait_unknown"*/;
+    v11 = (System_String_o *)StringLiteral_21509/*"portrait_unknown"*/;
   }
   if ( !*p_Entity_k__BackingField )
 LABEL_23:
-    sub_B170D4();
+    sub_B2C434(this, item);
   eventId = (*p_Entity_k__BackingField)->fields.eventId;
-  heelPortraitSprite = this->fields.heelPortraitSprite;
+  heelPortraitSprite = v4->fields.heelPortraitSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_28584872(eventId, heelPortraitSprite, v11, 0LL);
+  AtlasManager__SetEventUI_28451336(eventId, heelPortraitSprite, v11, 0LL);
   if ( !item->fields._isHavePortrait_k__BackingField || item->fields._isDispDetailDialog_k__BackingField )
   {
-    newImgSprite = this->fields.newImgSprite;
-    if ( newImgSprite )
+    this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
+    if ( this )
     {
-      ShiningIconComponent__Clear(newImgSprite, 0LL);
+      ShiningIconComponent__Clear((ShiningIconComponent_o *)this, 0LL);
       return;
     }
     goto LABEL_23;
   }
-  v15 = this->fields.newImgSprite;
-  if ( !v15 )
+  this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
+  if ( !this )
     goto LABEL_23;
-  ShiningIconComponent__Set_33652672(v15, (System_String_o *)StringLiteral_19246/*"icon_common_new01"*/, 0LL);
-  v16 = (UnityEngine_Component_o *)this->fields.newImgSprite;
-  if ( !v16 )
+  ShiningIconComponent__Set_32979924((ShiningIconComponent_o *)this, (System_String_o *)StringLiteral_19320/*"icon_common_new01"*/, 0LL);
+  this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
+  if ( !this )
     goto LABEL_23;
-  transform = UnityEngine_Component__get_transform(v16, 0LL);
-  if ( !transform )
+  this = (EventHeelPortraitListViewItemDraw_o *)UnityEngine_Component__get_transform(
+                                                  (UnityEngine_Component_o *)this,
+                                                  0LL);
+  if ( !this )
     goto LABEL_23;
-  v18.fields.x = this->fields.ICON_SCALE;
-  v18.fields.y = v18.fields.x;
-  v18.fields.z = v18.fields.x;
-  UnityEngine_Transform__set_localScale(transform, v18, 0LL);
+  v14.fields.x = v4->fields.ICON_SCALE;
+  v14.fields.y = v14.fields.x;
+  v14.fields.z = v14.fields.x;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v14, 0LL);
 }

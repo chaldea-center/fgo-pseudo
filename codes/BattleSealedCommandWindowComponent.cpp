@@ -13,12 +13,12 @@ System_String_o *__fastcall BattleSealedCommandWindowComponent__get_closeBtnPath
         BattleSealedCommandWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40F7531 & 1) == 0 )
+  if ( (byte_4184E1B & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16919/*"btn_close"*/, method);
-    byte_40F7531 = 1;
+    sub_B2C35C(&StringLiteral_16985/*"btn_close"*/, method);
+    byte_4184E1B = 1;
   }
-  return (System_String_o *)StringLiteral_16919/*"btn_close"*/;
+  return (System_String_o *)StringLiteral_16985/*"btn_close"*/;
 }
 
 
@@ -35,28 +35,21 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
   __int64 v10; // x1
   __int64 v11; // x1
   UnityEngine_Object_o *confLabel; // x22
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x3
-  __int64 v16; // x4
-  UILabel_o *v17; // x0
   struct System_Nullable_int__o fontSize_k__BackingField; // x1
-  UILabel_o *v19; // x0
-  UnityEngine_Component_o *v20; // x0
-  UnityEngine_Transform_o *transform; // x0
+  UILabel_o *transform; // x0
   float z; // s2
   float x; // s0
   float y; // s1
 
-  if ( (byte_40F7530 & 1) == 0 )
+  if ( (byte_4184E1A & 1) == 0 )
   {
-    sub_B16FFC(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo, str);
-    sub_B16FFC(&Method_System_Nullable_Vector3__GetValueOrDefault__, v7);
-    sub_B16FFC(&Method_System_Nullable_int__GetValueOrDefault__, v8);
-    sub_B16FFC(&Method_System_Nullable_int__get_HasValue__, v9);
-    sub_B16FFC(&Method_System_Nullable_Vector3__get_HasValue__, v10);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v11);
-    byte_40F7530 = 1;
+    sub_B2C35C(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo, str);
+    sub_B2C35C(&Method_System_Nullable_Vector3__GetValueOrDefault__, v7);
+    sub_B2C35C(&Method_System_Nullable_int__GetValueOrDefault__, v8);
+    sub_B2C35C(&Method_System_Nullable_int__get_HasValue__, v9);
+    sub_B2C35C(&Method_System_Nullable_Vector3__get_HasValue__, v10);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v11);
+    byte_4184E1A = 1;
   }
   confLabel = (UnityEngine_Object_o *)this->fields.confLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -68,31 +61,26 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
   {
     if ( !args )
     {
-      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_B170CC(
-                                                                       BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo,
-                                                                       v13,
-                                                                       v14,
-                                                                       v15,
-                                                                       v16);
+      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_B2C42C(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
       BattleSealedCommandWindowComponent_LabelAdjustArgs___ctor(args, 0LL);
     }
-    v17 = this->fields.confLabel;
-    if ( v17 )
+    transform = this->fields.confLabel;
+    if ( transform )
     {
-      UILabel__set_text(v17, str, 0LL);
+      UILabel__set_text(transform, str, 0LL);
       if ( args )
       {
         fontSize_k__BackingField = args->fields._fontSize_k__BackingField;
-        v19 = this->fields.confLabel;
+        transform = this->fields.confLabel;
         if ( (*(_QWORD *)&fontSize_k__BackingField & 0xFF00000000LL) == 0 )
-          fontSize_k__BackingField.fields.value = this->fields.labelDefaultFontSize;
-        if ( v19 )
+          fontSize_k__BackingField = (struct System_Nullable_int__o)(unsigned int)this->fields.labelDefaultFontSize;
+        if ( transform )
         {
-          UILabel__set_fontSize(v19, fontSize_k__BackingField.fields.value, 0LL);
-          v20 = (UnityEngine_Component_o *)this->fields.confLabel;
-          if ( v20 )
+          UILabel__set_fontSize(transform, fontSize_k__BackingField.fields.value, 0LL);
+          transform = this->fields.confLabel;
+          if ( transform )
           {
-            transform = UnityEngine_Component__get_transform(v20, 0LL);
+            transform = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0LL);
             if ( (*(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.z & 0xFF00000000LL) != 0 )
             {
               LODWORD(z) = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.value.fields.z;
@@ -101,7 +89,10 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
               if ( transform )
               {
 LABEL_17:
-                UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&x, 0LL);
+                UnityEngine_Transform__set_localPosition(
+                  (UnityEngine_Transform_o *)transform,
+                  *(UnityEngine_Vector3_o *)&x,
+                  0LL);
                 return;
               }
             }
@@ -117,7 +108,7 @@ LABEL_17:
         }
       }
     }
-    sub_B170D4();
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_B2C434)(transform, fontSize_k__BackingField);
   }
 }
 

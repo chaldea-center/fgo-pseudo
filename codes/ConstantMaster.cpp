@@ -1,14 +1,14 @@
 void __fastcall ConstantMaster___ctor(ConstantMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FBD43 & 1) == 0 )
+  if ( (byte_41895E6 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_ConstantMaster__ConstantEntity__string___ctor__, method);
-    byte_40FBD43 = 1;
+    sub_B2C35C(&Method_DataMasterBase_ConstantMaster__ConstantEntity__string___ctor__, method);
+    byte_41895E6 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     99,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_ConstantMaster__ConstantEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_ConstantMaster__ConstantEntity__string___ctor__);
 }
 
 
@@ -18,22 +18,25 @@ float __fastcall ConstantMaster__GetRateValue(
         float def,
         const MethodInfo *method)
 {
+  _BOOL8 EntityFromId_ServantVoiceEntity; // x0
+  __int64 v8; // x1
   ServantVoiceEntity_o *result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_40FBD47 & 1) == 0 )
+  if ( (byte_41895EA & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
-    byte_40FBD47 = 1;
+    sub_B2C35C(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
+    byte_41895EA = 1;
   }
   result = 0LL;
-  if ( DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
-         (DataMasterBase_o *)this,
-         &result,
-         name,
-         (const MethodInfo_18C375C *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___) )
+  EntityFromId_ServantVoiceEntity = DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
+                                      (DataMasterBase_o *)this,
+                                      &result,
+                                      name,
+                                      (const MethodInfo_1733EC4 *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
+  if ( EntityFromId_ServantVoiceEntity )
   {
     if ( !result )
-      sub_B170D4();
+      sub_B2C434(EntityFromId_ServantVoiceEntity, v8);
     return (float)result->fields.type / 1000.0;
   }
   return def;
@@ -42,48 +45,54 @@ float __fastcall ConstantMaster__GetRateValue(
 
 int32_t __fastcall ConstantMaster__GetValue(ConstantMaster_o *this, System_String_o *name, const MethodInfo *method)
 {
+  _BOOL8 EntityFromId_ServantVoiceEntity; // x0
+  __int64 v6; // x1
   ServantVoiceEntity_o *result; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_40FBD45 & 1) == 0 )
+  if ( (byte_41895E8 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
-    byte_40FBD45 = 1;
+    sub_B2C35C(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
+    byte_41895E8 = 1;
   }
   result = 0LL;
-  if ( !DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
-          (DataMasterBase_o *)this,
-          &result,
-          name,
-          (const MethodInfo_18C375C *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___) )
+  EntityFromId_ServantVoiceEntity = DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
+                                      (DataMasterBase_o *)this,
+                                      &result,
+                                      name,
+                                      (const MethodInfo_1733EC4 *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
+  if ( !EntityFromId_ServantVoiceEntity )
     return -1;
   if ( !result )
-    sub_B170D4();
+    sub_B2C434(EntityFromId_ServantVoiceEntity, v6);
   return result->fields.type;
 }
 
 
-int32_t __fastcall ConstantMaster__GetValue_28461932(
+int32_t __fastcall ConstantMaster__GetValue_28238692(
         ConstantMaster_o *this,
         System_String_o *name,
         int32_t def,
         const MethodInfo *method)
 {
+  _BOOL8 EntityFromId_ServantVoiceEntity; // x0
+  __int64 v8; // x1
   ServantVoiceEntity_o *result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_40FBD46 & 1) == 0 )
+  if ( (byte_41895E9 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
-    byte_40FBD46 = 1;
+    sub_B2C35C(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, name);
+    byte_41895E9 = 1;
   }
   result = 0LL;
-  if ( DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
-         (DataMasterBase_o *)this,
-         &result,
-         name,
-         (const MethodInfo_18C375C *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___) )
+  EntityFromId_ServantVoiceEntity = DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
+                                      (DataMasterBase_o *)this,
+                                      &result,
+                                      name,
+                                      (const MethodInfo_1733EC4 *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
+  if ( EntityFromId_ServantVoiceEntity )
   {
     if ( !result )
-      sub_B170D4();
+      sub_B2C434(EntityFromId_ServantVoiceEntity, v8);
     return result->fields.type;
   }
   return def;
@@ -94,12 +103,12 @@ bool __fastcall ConstantMaster__IsDisableServantEffectFilter(const MethodInfo *m
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_40FBD4E & 1) == 0 )
+  if ( (byte_41895F1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_4583/*"DISABLE_SERVANT_EFFECT_FILTER"*/, v1);
-    byte_40FBD4E = 1;
+    sub_B2C35C(&StringLiteral_4598/*"DISABLE_SERVANT_EFFECT_FILTER"*/, v1);
+    byte_41895F1 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_4583/*"DISABLE_SERVANT_EFFECT_FILTER"*/, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_4598/*"DISABLE_SERVANT_EFFECT_FILTER"*/, v1) == 1;
 }
 
 
@@ -107,12 +116,12 @@ bool __fastcall ConstantMaster__IsFLAG20220101(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_40FBD49 & 1) == 0 )
+  if ( (byte_41895EC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6337/*"FLAG_20220101"*/, v1);
-    byte_40FBD49 = 1;
+    sub_B2C35C(&StringLiteral_6355/*"FLAG_20220101"*/, v1);
+    byte_41895EC = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6337/*"FLAG_20220101"*/, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6355/*"FLAG_20220101"*/, v1) == 1;
 }
 
 
@@ -120,12 +129,12 @@ bool __fastcall ConstantMaster__IsFLAG20220119(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_40FBD4A & 1) == 0 )
+  if ( (byte_41895ED & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6338/*"FLAG_20220119"*/, v1);
-    byte_40FBD4A = 1;
+    sub_B2C35C(&StringLiteral_6356/*"FLAG_20220119"*/, v1);
+    byte_41895ED = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6338/*"FLAG_20220119"*/, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6356/*"FLAG_20220119"*/, v1) == 1;
 }
 
 
@@ -133,12 +142,12 @@ bool __fastcall ConstantMaster__IsFLAG20220511(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_40FBD4B & 1) == 0 )
+  if ( (byte_41895EE & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6339/*"FLAG_20220511"*/, v1);
-    byte_40FBD4B = 1;
+    sub_B2C35C(&StringLiteral_6357/*"FLAG_20220511"*/, v1);
+    byte_41895EE = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6339/*"FLAG_20220511"*/, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6357/*"FLAG_20220511"*/, v1) == 1;
 }
 
 
@@ -146,12 +155,12 @@ bool __fastcall ConstantMaster__IsFLAG20220730(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_40FBD4D & 1) == 0 )
+  if ( (byte_41895F0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6340/*"FLAG_20220730"*/, v1);
-    byte_40FBD4D = 1;
+    sub_B2C35C(&StringLiteral_6358/*"FLAG_20220730"*/, v1);
+    byte_41895F0 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6340/*"FLAG_20220730"*/, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6358/*"FLAG_20220730"*/, v1) == 1;
 }
 
 
@@ -159,12 +168,12 @@ bool __fastcall ConstantMaster__IsFLAG20230402(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_40FBD4F & 1) == 0 )
+  if ( (byte_41895F2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6341/*"FLAG_20230402"*/, v1);
-    byte_40FBD4F = 1;
+    sub_B2C35C(&StringLiteral_6359/*"FLAG_20230402"*/, v1);
+    byte_41895F2 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6341/*"FLAG_20230402"*/, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6359/*"FLAG_20230402"*/, v1) == 1;
 }
 
 
@@ -172,12 +181,12 @@ bool __fastcall ConstantMaster__IsFlag20211217(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_40FBD48 & 1) == 0 )
+  if ( (byte_41895EB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_6336/*"FLAG_20211217"*/, v1);
-    byte_40FBD48 = 1;
+    sub_B2C35C(&StringLiteral_6354/*"FLAG_20211217"*/, v1);
+    byte_41895EB = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_6336/*"FLAG_20211217"*/, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_6354/*"FLAG_20211217"*/, v1) == 1;
 }
 
 
@@ -185,12 +194,12 @@ bool __fastcall ConstantMaster__IsNotUseRestrictionDialog(const MethodInfo *meth
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_40FBD50 & 1) == 0 )
+  if ( (byte_41895F3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9321/*"NOT_USE_RESTRICTION_DIALOG"*/, v1);
-    byte_40FBD50 = 1;
+    sub_B2C35C(&StringLiteral_9351/*"NOT_USE_RESTRICTION_DIALOG"*/, v1);
+    byte_41895F3 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_9321/*"NOT_USE_RESTRICTION_DIALOG"*/, v1) == 1;
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_9351/*"NOT_USE_RESTRICTION_DIALOG"*/, v1) == 1;
 }
 
 
@@ -210,12 +219,12 @@ bool __fastcall ConstantMaster__IsOtherImage(const MethodInfo *method)
   System_DateTime_o v13; // 0:x0.8
   System_DateTime_o v14; // 0:x1.8
 
-  if ( (byte_40FBD4C & 1) == 0 )
+  if ( (byte_41895EF & 1) == 0 )
   {
-    sub_B16FFC(&System_DateTime_TypeInfo, v1);
-    sub_B16FFC(&NetworkManager_TypeInfo, v2);
-    sub_B16FFC(&StringLiteral_8412/*"LOGIN_DAY"*/, v3);
-    byte_40FBD4C = 1;
+    sub_B2C35C(&System_DateTime_TypeInfo, v1);
+    sub_B2C35C(&NetworkManager_TypeInfo, v2);
+    sub_B2C35C(&StringLiteral_8441/*"LOGIN_DAY"*/, v3);
+    byte_41895EF = 1;
   }
   v9 = 0LL;
   dateData = 0LL;
@@ -225,8 +234,8 @@ bool __fastcall ConstantMaster__IsOtherImage(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   dateData = NetworkManager__getServerDateTime(0LL).fields.dateData;
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8412/*"LOGIN_DAY"*/, v4);
-  v9 = NetworkManager__getServerDateTime_23685560(Value, 0LL).fields.dateData;
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8441/*"LOGIN_DAY"*/, v4);
+  v9 = NetworkManager__getServerDateTime_26271756(Value, 0LL).fields.dateData;
   v11.fields.dateData = (uint64_t)&dateData;
   v6 = System_DateTime__get_Date(v11, 0LL).fields.dateData;
   v12.fields.dateData = (uint64_t)&v9;
@@ -252,36 +261,37 @@ int32_t __fastcall ConstantMaster__getValue(System_String_o *name, const MethodI
 {
   __int64 v3; // x1
   __int64 v4; // x1
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_o *MasterData_WarQuestSelectionMaster; // x0
+  DataManager_o *Instance; // x0
+  __int64 v6; // x1
   ServantVoiceEntity_o *result; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_40FBD44 & 1) == 0 )
+  if ( (byte_41895E7 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_ConstantMaster___, method);
-    sub_B16FFC(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, v3);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_40FBD44 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_ConstantMaster___, method);
+    sub_B2C35C(&Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___, v3);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_41895E7 = 1;
   }
   result = 0LL;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                             (DataManager_o *)Instance,
-                                                             (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ConstantMaster___);
-  if ( !MasterData_WarQuestSelectionMaster )
+  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                Instance,
+                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ConstantMaster___);
+  if ( !Instance )
     goto LABEL_10;
-  if ( DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
-         MasterData_WarQuestSelectionMaster,
-         &result,
-         name,
-         (const MethodInfo_18C375C *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___) )
+  Instance = (DataManager_o *)DataMasterBase__TryGetEntityFromId_ServantVoiceEntity_(
+                                (DataMasterBase_o *)Instance,
+                                &result,
+                                name,
+                                (const MethodInfo_1733EC4 *)Method_DataMasterBase_TryGetEntityFromId_ConstantEntity___);
+  if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     if ( result )
       return result->fields.type;
 LABEL_10:
-    sub_B170D4();
+    sub_B2C434(Instance, v6);
   }
   return -1;
 }

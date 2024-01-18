@@ -10,8 +10,8 @@ int32_t __fastcall LoginResponseCommand__ExecuteResponse(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_B170D4();
-  return !ResponseData__checkError_30924960(data, 0LL);
+    sub_B2C434(this, 0LL);
+  return !ResponseData__checkError_31019724(data, 0LL);
 }
 
 

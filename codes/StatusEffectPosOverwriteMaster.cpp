@@ -1,16 +1,16 @@
 void __fastcall StatusEffectPosOverwriteMaster___ctor(StatusEffectPosOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FAE89 & 1) == 0 )
+  if ( (byte_4188C8C & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__,
       method);
-    byte_40FAE89 = 1;
+    byte_4188C8C = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     299,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__);
 }
 
 
@@ -24,12 +24,12 @@ StatusEffectPosOverwriteEntity_o *__fastcall StatusEffectPosOverwriteMaster__Get
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40FAE87 & 1) == 0 )
+  if ( (byte_4188C8A & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__,
       *(_QWORD *)&statusEffectId);
-    byte_40FAE87 = 1;
+    byte_4188C8A = 1;
   }
   PK = StatusEffectPosOverwriteEntity__CreatePK(
          statusEffectId,
@@ -39,7 +39,7 @@ StatusEffectPosOverwriteEntity_o *__fastcall StatusEffectPosOverwriteMaster__Get
   return (StatusEffectPosOverwriteEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                                (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                                PK,
-                                               (const MethodInfo_266F7D8 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__);
+                                               (const MethodInfo_24E4520 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -54,17 +54,17 @@ bool __fastcall StatusEffectPosOverwriteMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40FAE88 & 1) == 0 )
+  if ( (byte_4188C8B & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__,
       entity);
-    byte_40FAE88 = 1;
+    byte_4188C8B = 1;
   }
   PK = StatusEffectPosOverwriteEntity__CreatePK(statusEffectId, svtId, svtLimitCount, *(const MethodInfo **)&svtId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__);
 }

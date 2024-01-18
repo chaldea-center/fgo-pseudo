@@ -44,10 +44,11 @@ void __fastcall BattleServantConfWindowPassiveSkillListComponent__SetActive(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v5; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B170D4();
+    sub_B2C434(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, val, 0LL);
 }
 
@@ -68,17 +69,15 @@ void __fastcall BattleServantConfWindowPassiveSkillListComponent__SetSkillTitle(
         const MethodInfo *method)
 {
   UISprite_o *skillTitle; // x0
-  UISprite_o *v7; // x0
-  struct UISprite_o *v8; // x0
 
   skillTitle = this->fields.skillTitle;
   if ( !skillTitle
-    || (UISprite__set_atlas(skillTitle, uiAtlas, 0LL), (v7 = this->fields.skillTitle) == 0LL)
-    || (UISprite__set_spriteName(v7, spriteName, 0LL), (v8 = this->fields.skillTitle) == 0LL) )
+    || (UISprite__set_atlas(skillTitle, uiAtlas, 0LL), (skillTitle = this->fields.skillTitle) == 0LL)
+    || (UISprite__set_spriteName(skillTitle, spriteName, 0LL), (skillTitle = this->fields.skillTitle) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(skillTitle, uiAtlas);
   }
-  ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v8->klass->vtable._33_MakePixelPerfect.method)(
-    v8,
-    v8->klass->vtable._34_get_minWidth.methodPtr);
+  ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))skillTitle->klass->vtable._33_MakePixelPerfect.method)(
+    skillTitle,
+    skillTitle->klass->vtable._34_get_minWidth.methodPtr);
 }

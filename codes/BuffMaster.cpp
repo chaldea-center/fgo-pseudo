@@ -1,36 +1,39 @@
 void __fastcall BuffMaster___ctor(BuffMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FB4F1 & 1) == 0 )
+  if ( (byte_4189762 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_BuffMaster__BuffEntity__int___ctor__, method);
-    byte_40FB4F1 = 1;
+    sub_B2C35C(&Method_DataMasterBase_BuffMaster__BuffEntity__int___ctor__, method);
+    byte_4189762 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     54,
-    (const MethodInfo_266F2EC *)Method_DataMasterBase_BuffMaster__BuffEntity__int___ctor__);
+    (const MethodInfo_24E4034 *)Method_DataMasterBase_BuffMaster__BuffEntity__int___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 int32_t __fastcall BuffMaster__GetBuffGroup(BuffMaster_o *this, int32_t buffId, int32_t def, const MethodInfo *method)
 {
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_40FB4F5 & 1) == 0 )
+  if ( (byte_4189766 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, *(_QWORD *)&buffId);
-    byte_40FB4F5 = 1;
+    sub_B2C35C(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, *(_QWORD *)&buffId);
+    byte_4189766 = 1;
   }
   entity = 0LL;
-  if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
+  v7 = DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
          (DataMasterBase_WarMaster__WarEntity__int__o *)this,
          &entity,
          buffId,
-         (const MethodInfo_266F3E4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
+         (const MethodInfo_24E412C *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+  if ( v7 )
   {
     if ( !entity )
-      sub_B170D4();
+      sub_B2C434(v7, v8);
     return (int32_t)entity->fields.emptyMessage;
   }
   return def;
@@ -40,22 +43,25 @@ int32_t __fastcall BuffMaster__GetBuffGroup(BuffMaster_o *this, int32_t buffId, 
 // local variable allocation has failed, the output may be wrong!
 int32_t __fastcall BuffMaster__GetBuffType(BuffMaster_o *this, int32_t buffId, int32_t def, const MethodInfo *method)
 {
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_40FB4F4 & 1) == 0 )
+  if ( (byte_4189765 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, *(_QWORD *)&buffId);
-    byte_40FB4F4 = 1;
+    sub_B2C35C(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, *(_QWORD *)&buffId);
+    byte_4189765 = 1;
   }
   entity = 0LL;
-  if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
+  v7 = DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
          (DataMasterBase_WarMaster__WarEntity__int__o *)this,
          &entity,
          buffId,
-         (const MethodInfo_266F3E4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
+         (const MethodInfo_24E412C *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+  if ( v7 )
   {
     if ( !entity )
-      sub_B170D4();
+      sub_B2C434(v7, v8);
     return *(&entity->fields.id + 1);
   }
   return def;
@@ -70,24 +76,25 @@ System_String_o *__fastcall BuffMaster__GetScriptStr(
         System_String_o *def,
         const MethodInfo *method)
 {
-  const MethodInfo *v9; // x3
+  __int64 v9; // x1
+  const MethodInfo *v10; // x3
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_40FB4F3 & 1) == 0 )
+  if ( (byte_4189764 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, *(_QWORD *)&buffId);
-    byte_40FB4F3 = 1;
+    sub_B2C35C(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, *(_QWORD *)&buffId);
+    byte_4189764 = 1;
   }
   entity = 0LL;
   if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
          (DataMasterBase_WarMaster__WarEntity__int__o *)this,
          &entity,
          buffId,
-         (const MethodInfo_266F3E4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
+         (const MethodInfo_24E412C *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
   {
     if ( !entity )
-      sub_B170D4();
-    return BuffEntity__getScript_27589352((BuffEntity_o *)entity, key, def, v9);
+      sub_B2C434(0LL, v9);
+    return BuffEntity__getScript_28343480((BuffEntity_o *)entity, key, def, v10);
   }
   return def;
 }
@@ -99,20 +106,20 @@ int32_t __fastcall BuffMaster__GetUnSubWhenContinueStatus(BuffMaster_o *this, in
   const MethodInfo *v5; // x1
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_40FB4F7 & 1) == 0 )
+  if ( (byte_4189768 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, *(_QWORD *)&buffId);
-    byte_40FB4F7 = 1;
+    sub_B2C35C(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, *(_QWORD *)&buffId);
+    byte_4189768 = 1;
   }
   entity = 0LL;
   if ( !DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
           (DataMasterBase_WarMaster__WarEntity__int__o *)this,
           &entity,
           buffId,
-          (const MethodInfo_266F3E4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
+          (const MethodInfo_24E412C *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__) )
     return 0;
   if ( !entity )
-    sub_B170D4();
+    sub_B2C434(0LL, v5);
   return BuffEntity__GetUnSubStateWhenContinueStatus((BuffEntity_o *)entity, v5);
 }
 
@@ -138,7 +145,7 @@ bool __fastcall BuffMaster__TryGetDisplayCardBottomImageName(
 {
   __int64 v9; // x1
   __int64 v10; // x1
-  bool v11; // w0
+  _BOOL8 v11; // x0
   System_String_array **v12; // x2
   System_String_array **v13; // x3
   System_Boolean_array **v14; // x4
@@ -148,32 +155,32 @@ bool __fastcall BuffMaster__TryGetDisplayCardBottomImageName(
   System_String_o *Value_string; // x1
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_40FB4F6 & 1) == 0 )
+  if ( (byte_4189767 & 1) == 0 )
   {
-    sub_B16FFC(&Method_BasicHelper_GetValue_string___, name);
-    sub_B16FFC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v9);
-    sub_B16FFC(&StringLiteral_5310/*"DisplayCardBottomImageName"*/, v10);
-    byte_40FB4F6 = 1;
+    sub_B2C35C(&Method_BasicHelper_GetValue_string___, name);
+    sub_B2C35C(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v9);
+    sub_B2C35C(&StringLiteral_5329/*"DisplayCardBottomImageName"*/, v10);
+    byte_4189767 = 1;
   }
   entity = 0LL;
   v11 = DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
           (DataMasterBase_WarMaster__WarEntity__int__o *)this,
           &entity,
           buffId,
-          (const MethodInfo_266F3E4 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+          (const MethodInfo_24E412C *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
   Value_string = 0LL;
   if ( v11 )
   {
     if ( !entity )
-      sub_B170D4();
+      sub_B2C434(v11, 0LL);
     Value_string = BasicHelper__GetValue_string_(
                      *(System_Collections_Generic_Dictionary_string__object__o **)&entity->fields.eventId,
-                     (System_String_o *)StringLiteral_5310/*"DisplayCardBottomImageName"*/,
+                     (System_String_o *)StringLiteral_5329/*"DisplayCardBottomImageName"*/,
                      defName,
-                     (const MethodInfo_18B7D04 *)Method_BasicHelper_GetValue_string___);
+                     (const MethodInfo_17283E8 *)Method_BasicHelper_GetValue_string___);
   }
   *name = Value_string;
-  sub_B16F98((BattleServantConfConponent_o *)name, (System_Int32_array **)Value_string, v12, v13, v14, v15, v16, v17);
+  sub_B2C2F8((BattleServantConfConponent_o *)name, (System_Int32_array **)Value_string, v12, v13, v14, v15, v16, v17);
   return !System_String__IsNullOrEmpty(*name, 0LL);
 }
 
@@ -186,80 +193,77 @@ System_Int32_array *__fastcall BuffMaster__get_StateEffectIdArray(BuffMaster_o *
 
 bool __fastcall BuffMaster__preProcess(BuffMaster_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
   __int64 v11; // x1
-  __int64 v12; // x1
+  System_Collections_Generic_List_int__o *v12; // x20
   __int64 v13; // x1
-  __int64 v14; // x1
-  System_Collections_Generic_List_int__o *v15; // x20
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  __int64 v15; // x1
+  __int64 v16; // x3
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x21
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
   unsigned __int64 v19; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v22; // x8
-  unsigned __int64 v23; // x10
-  int32_t *v24; // x11
-  __int64 v25; // x0
-  unsigned int *v26; // x0
-  BuffEntity_o *v27; // x22
-  __int64 v28; // x9
-  const MethodInfo *v29; // x1
-  const MethodInfo *v30; // x1
-  int32_t CardEffectId; // w1
+  __int64 v22; // x3
+  System_Collections_Generic_IEnumerator_T__c *v23; // x8
+  unsigned __int64 v24; // x10
+  int32_t *v25; // x11
+  __int64 v26; // x0
+  unsigned int *v27; // x0
+  __int64 v28; // x1
+  BuffEntity_o *v29; // x22
+  __int64 v30; // x9
+  const MethodInfo *v31; // x1
   const MethodInfo *v32; // x1
-  int32_t v33; // w0
-  System_Collections_Generic_IEnumerator_T__c *v34; // x8
-  unsigned __int64 v35; // x10
-  int32_t *v36; // x11
-  __int64 v37; // x0
-  struct System_Int32_array *v38; // x0
-  System_String_array **v39; // x2
-  System_String_array **v40; // x3
-  System_Boolean_array **v41; // x4
-  System_Int32_array **v42; // x5
-  System_Int32_array *v43; // x6
-  System_Int32_array *v44; // x7
+  __int64 CardEffectId; // x0
+  const MethodInfo *v34; // x1
+  int32_t v35; // w0
+  System_Collections_Generic_IEnumerator_T__c *v36; // x8
+  unsigned __int64 v37; // x10
+  int32_t *v38; // x11
+  __int64 v39; // x0
+  struct System_Int32_array *v40; // x0
+  System_String_array **v41; // x2
+  System_String_array **v42; // x3
+  System_Boolean_array **v43; // x4
+  System_Int32_array **v44; // x5
+  System_Int32_array *v45; // x6
+  System_Int32_array *v46; // x7
 
-  if ( (byte_40FB4F2 & 1) == 0 )
+  if ( (byte_4189763 & 1) == 0 )
   {
-    sub_B16FFC(&BuffEntity_TypeInfo, method);
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v6);
-    sub_B16FFC(&System_IDisposable_TypeInfo, v7);
-    sub_B16FFC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v8);
-    sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v9);
-    sub_B16FFC(&Method_System_Collections_Generic_List_int__Add__, v10);
-    sub_B16FFC(&Method_System_Collections_Generic_List_int__Contains__, v11);
-    sub_B16FFC(&Method_System_Collections_Generic_List_int__ToArray__, v12);
-    sub_B16FFC(&Method_System_Collections_Generic_List_int___ctor__, v13);
-    sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v14);
-    byte_40FB4F2 = 1;
+    sub_B2C35C(&BuffEntity_TypeInfo, method);
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v3);
+    sub_B2C35C(&System_IDisposable_TypeInfo, v4);
+    sub_B2C35C(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v5);
+    sub_B2C35C(&System_Collections_IEnumerator_TypeInfo, v6);
+    sub_B2C35C(&Method_System_Collections_Generic_List_int__Add__, v7);
+    sub_B2C35C(&Method_System_Collections_Generic_List_int__Contains__, v8);
+    sub_B2C35C(&Method_System_Collections_Generic_List_int__ToArray__, v9);
+    sub_B2C35C(&Method_System_Collections_Generic_List_int___ctor__, v10);
+    sub_B2C35C(&System_Collections_Generic_List_int__TypeInfo, v11);
+    byte_4189763 = 1;
   }
-  v15 = (System_Collections_Generic_List_int__o *)sub_B170CC(
-                                                    System_Collections_Generic_List_int__TypeInfo,
-                                                    method,
-                                                    v2,
-                                                    v3,
-                                                    v4);
+  v12 = (System_Collections_Generic_List_int__o *)sub_B2C42C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v15,
-    (const MethodInfo_2F0F794 *)Method_System_Collections_Generic_List_int___ctor__);
+    v12,
+    (const MethodInfo_2F6629C *)Method_System_Collections_Generic_List_int___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_41;
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_290E508 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2A0E96C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B170D4();
+    sub_B2C434(0LL, v15);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -279,113 +283,115 @@ bool __fastcall BuffMaster__preProcess(BuffMaster_o *this, const MethodInfo *met
     else
     {
 LABEL_9:
-      p_method = sub_AAFEF8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_AC5258(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v16);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v22 = Enumerator->klass;
+    v23 = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v23 = 0LL;
-      v24 = &v22->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v24 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v24 = 0LL;
+      v25 = &v23->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v25 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        ++v23;
-        v24 += 4;
-        if ( v23 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        ++v24;
+        v25 += 4;
+        if ( v24 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_16;
       }
-      v25 = (__int64)&v22->vtable[*v24].method;
+      v26 = (__int64)&v23->vtable[*v25].method;
     }
     else
     {
 LABEL_16:
-      v25 = sub_AAFEF8(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v26 = sub_AC5258(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL, v22);
     }
-    v26 = (unsigned int *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(
+    v27 = (unsigned int *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(
                             Enumerator,
-                            *(_QWORD *)(v25 + 8));
-    v27 = (BuffEntity_o *)v26;
-    if ( !v26 )
+                            *(_QWORD *)(v26 + 8));
+    v29 = (BuffEntity_o *)v27;
+    if ( !v27 )
       goto LABEL_38;
-    v28 = *(&BuffEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(unsigned __int8 *)(*(_QWORD *)v26 + 300LL) < (unsigned int)v28
-      || *(BuffEntity_c **)(*(_QWORD *)(*(_QWORD *)v26 + 200LL) + 8 * v28 - 8) != BuffEntity_TypeInfo )
+    v30 = *(&BuffEntity_TypeInfo->_2.bitflags2 + 1);
+    if ( *(unsigned __int8 *)(*(_QWORD *)v27 + 300LL) < (unsigned int)v30
+      || *(BuffEntity_c **)(*(_QWORD *)(*(_QWORD *)v27 + 200LL) + 8 * v30 - 8) != BuffEntity_TypeInfo )
     {
-      sub_B173C8(v26);
+      v27 = (unsigned int *)sub_B2C728(v27);
 LABEL_38:
-      sub_B170D4();
+      sub_B2C434(v27, v28);
     }
-    v29 = (const MethodInfo *)v26[26];
-    if ( (int)v29 >= 1 )
+    v31 = (const MethodInfo *)v27[26];
+    if ( (int)v31 >= 1 )
     {
-      if ( !v15 )
-        sub_B170D4();
+      if ( !v12 )
+        sub_B2C434(v27, v31);
       if ( !System_Collections_Generic_List_int___Contains(
-              v15,
-              (int32_t)v29,
-              (const MethodInfo_2F10944 *)Method_System_Collections_Generic_List_int__Contains__) )
+              v12,
+              (int32_t)v31,
+              (const MethodInfo_2F6744C *)Method_System_Collections_Generic_List_int__Contains__) )
         System_Collections_Generic_List_int___Add(
-          v15,
-          v27->fields.effectId,
-          (const MethodInfo_2F104F0 *)Method_System_Collections_Generic_List_int__Add__);
+          v12,
+          v29->fields.effectId,
+          (const MethodInfo_2F66FF8 *)Method_System_Collections_Generic_List_int__Add__);
     }
-    if ( BuffEntity__GetCardEffectId(v27, v29) >= 1 )
+    if ( BuffEntity__GetCardEffectId(v29, v31) >= 1 )
     {
-      CardEffectId = BuffEntity__GetCardEffectId(v27, v30);
-      if ( !v15 )
-        sub_B170D4();
+      CardEffectId = BuffEntity__GetCardEffectId(v29, v32);
+      if ( !v12 )
+        sub_B2C434(CardEffectId, (unsigned int)CardEffectId);
       if ( !System_Collections_Generic_List_int___Contains(
-              v15,
+              v12,
               CardEffectId,
-              (const MethodInfo_2F10944 *)Method_System_Collections_Generic_List_int__Contains__) )
+              (const MethodInfo_2F6744C *)Method_System_Collections_Generic_List_int__Contains__) )
       {
-        v33 = BuffEntity__GetCardEffectId(v27, v32);
+        v35 = BuffEntity__GetCardEffectId(v29, v34);
         System_Collections_Generic_List_int___Add(
-          v15,
-          v33,
-          (const MethodInfo_2F104F0 *)Method_System_Collections_Generic_List_int__Add__);
+          v12,
+          v35,
+          (const MethodInfo_2F66FF8 *)Method_System_Collections_Generic_List_int__Add__);
       }
     }
   }
-  v34 = Enumerator->klass;
+  v36 = Enumerator->klass;
   if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
   {
-    v35 = 0LL;
-    v36 = &v34->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v36 - 1) != System_IDisposable_TypeInfo )
+    v37 = 0LL;
+    v38 = &v36->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v35;
-      v36 += 4;
-      if ( v35 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+      ++v37;
+      v38 += 4;
+      if ( v37 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
         goto LABEL_33;
     }
-    v37 = (__int64)&v34->vtable[*v36].method;
+    v39 = (__int64)&v36->vtable[*v38].method;
   }
   else
   {
 LABEL_33:
-    v37 = sub_AAFEF8(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v39 = sub_AC5258(Enumerator, System_IDisposable_TypeInfo, 0LL, v22);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v37)(Enumerator, *(_QWORD *)(v37 + 8));
-  if ( !v15 )
+  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(
+                                                                                       Enumerator,
+                                                                                       *(_QWORD *)(v39 + 8));
+  if ( !v12 )
 LABEL_41:
-    sub_B170D4();
-  v38 = System_Collections_Generic_List_int___ToArray(
-          v15,
-          (const MethodInfo_2F125FC *)Method_System_Collections_Generic_List_int__ToArray__);
-  this->fields._StateEffectIdArray_k__BackingField = v38;
-  sub_B16F98(
+    sub_B2C434(list, v13);
+  v40 = System_Collections_Generic_List_int___ToArray(
+          v12,
+          (const MethodInfo_2F69104 *)Method_System_Collections_Generic_List_int__ToArray__);
+  this->fields._StateEffectIdArray_k__BackingField = v40;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._StateEffectIdArray_k__BackingField,
-    (System_Int32_array **)v38,
-    v39,
-    v40,
+    (System_Int32_array **)v40,
     v41,
     v42,
     v43,
-    v44);
+    v44,
+    v45,
+    v46);
   return 1;
 }
 
@@ -402,7 +408,7 @@ void __fastcall BuffMaster__set_StateEffectIdArray(
   System_Int32_array *v7; // x7
 
   this->fields._StateEffectIdArray_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._StateEffectIdArray_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

@@ -12,24 +12,21 @@ void __fastcall DragSelectComponent__Set(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *dragSelectObject; // x22
-  UnityEngine_GameObject_o *v8; // x0
+  __int64 v8; // x1
+  UnityEngine_GameObject_o *v9; // x0
   UnityEngine_Object_o *dragSeletBase; // x22
-  UnityEngine_GameObject_o *v10; // x0
   UnityEngine_Object_o *selectObject; // x21
-  UnityEngine_GameObject_o *v12; // x0
   UILabel_o *selectTextLabel; // x21
-  int v14; // w20
-  System_String_o *v15; // x0
-  struct UILabel_o *v16; // x0
+  int v13; // w20
   int32_t condensedWidth; // w1
-  int v18; // [xsp+Ch] [xbp-24h] BYREF
+  int v15; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_40FBCE5 & 1) == 0 )
+  if ( (byte_418947E & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
-    byte_40FBCE5 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
+    byte_418947E = 1;
   }
-  v18 = 0;
+  v15 = 0;
   dragSelectObject = (UnityEngine_Object_o *)this->fields.dragSelectObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -38,10 +35,10 @@ void __fastcall DragSelectComponent__Set(
   }
   if ( UnityEngine_Object__op_Inequality(dragSelectObject, 0LL, 0LL) )
   {
-    v8 = this->fields.dragSelectObject;
-    if ( !v8 )
+    v9 = this->fields.dragSelectObject;
+    if ( !v9 )
       goto LABEL_31;
-    UnityEngine_GameObject__SetActive(v8, dragSelectNum > 0, 0LL);
+    UnityEngine_GameObject__SetActive(v9, dragSelectNum > 0, 0LL);
   }
   dragSeletBase = (UnityEngine_Object_o *)this->fields.dragSeletBase;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -51,10 +48,10 @@ void __fastcall DragSelectComponent__Set(
   }
   if ( UnityEngine_Object__op_Inequality(dragSeletBase, 0LL, 0LL) )
   {
-    v10 = this->fields.dragSeletBase;
-    if ( !v10 )
+    v9 = this->fields.dragSeletBase;
+    if ( !v9 )
       goto LABEL_31;
-    UnityEngine_GameObject__SetActive(v10, dragSelectNum >= 0, 0LL);
+    UnityEngine_GameObject__SetActive(v9, dragSelectNum >= 0, 0LL);
   }
   selectObject = (UnityEngine_Object_o *)this->fields.selectObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -64,44 +61,44 @@ void __fastcall DragSelectComponent__Set(
   }
   if ( UnityEngine_Object__op_Inequality(selectObject, 0LL, 0LL) )
   {
-    v12 = this->fields.selectObject;
-    if ( v12 )
+    v9 = this->fields.selectObject;
+    if ( v9 )
     {
       if ( (selectNum & 0x80000000) != 0 )
       {
-        UnityEngine_GameObject__SetActive(v12, 0, 0LL);
+        UnityEngine_GameObject__SetActive(v9, 0, 0LL);
         return;
       }
-      UnityEngine_GameObject__SetActive(v12, 1, 0LL);
+      UnityEngine_GameObject__SetActive(v9, 1, 0LL);
       selectTextLabel = this->fields.selectTextLabel;
-      v14 = selectNum + 1;
-      v18 = v14;
-      v15 = System_Int32__ToString((int32_t)&v18, 0LL);
+      v13 = selectNum + 1;
+      v15 = v13;
+      v9 = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&v15, 0LL);
       if ( selectTextLabel )
       {
-        UILabel__set_text(selectTextLabel, v15, 0LL);
+        UILabel__set_text(selectTextLabel, (System_String_o *)v9, 0LL);
         if ( !this->fields.isCondensedScale )
           return;
-        v16 = this->fields.selectTextLabel;
-        if ( v14 >= 100 )
+        v9 = (UnityEngine_GameObject_o *)this->fields.selectTextLabel;
+        if ( v13 >= 100 )
         {
-          if ( v16 )
+          if ( v9 )
           {
             condensedWidth = this->fields.condensedWidth;
             goto LABEL_29;
           }
         }
-        else if ( v16 )
+        else if ( v9 )
         {
-          condensedWidth = v16->fields.mWidth;
+          condensedWidth = v9[6].fields.m_CachedPtr;
 LABEL_29:
-          UILabel__SetCondensedScale(v16, condensedWidth, 0LL);
+          UILabel__SetCondensedScale((UILabel_o *)v9, condensedWidth, 0LL);
           return;
         }
       }
     }
 LABEL_31:
-    sub_B170D4();
+    sub_B2C434(v9, v8);
   }
 }
 

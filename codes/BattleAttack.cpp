@@ -14,53 +14,45 @@ void __fastcall BattleAttack___ctor(
   System_Int32_array **v13; // x5
   System_Int32_array *v14; // x6
   System_Int32_array *v15; // x7
-  __int64 v16; // x1
-  __int64 v17; // x2
-  __int64 v18; // x3
-  __int64 v19; // x4
   int32_t AttackedInAction_k__BackingField; // w24
-  BattleAttack___c_c *v21; // x0
+  BattleAttack___c_c *v17; // x0
   struct BattleAttack___c_StaticFields *static_fields; // x8
   System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__o *_9__11_0; // x21
-  Il2CppObject *v24; // x22
-  struct BattleAttack___c_StaticFields *v25; // x0
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  __int64 v32; // x1
-  __int64 v33; // x2
-  __int64 v34; // x3
-  __int64 v35; // x4
-  int v36; // w24
-  BattleAttack___c_c *v37; // x0
-  struct BattleAttack___c_StaticFields *v38; // x8
+  Il2CppObject *v20; // x22
+  struct BattleAttack___c_StaticFields *v21; // x0
+  System_String_array **v22; // x2
+  System_String_array **v23; // x3
+  System_Boolean_array **v24; // x4
+  System_Int32_array **v25; // x5
+  System_Int32_array *v26; // x6
+  System_Int32_array *v27; // x7
+  int v28; // w24
+  BattleAttack___c_c *v29; // x0
+  struct BattleAttack___c_StaticFields *v30; // x8
   System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__o *_9__11_1; // x21
-  Il2CppObject *v40; // x22
-  struct BattleAttack___c_StaticFields *v41; // x0
-  System_String_array **v42; // x2
-  System_String_array **v43; // x3
-  System_Boolean_array **v44; // x4
-  System_Int32_array **v45; // x5
-  System_Int32_array *v46; // x6
-  System_Int32_array *v47; // x7
-  int v48; // w8
+  Il2CppObject *v32; // x22
+  struct BattleAttack___c_StaticFields *v33; // x0
+  System_String_array **v34; // x2
+  System_String_array **v35; // x3
+  System_Boolean_array **v36; // x4
+  System_Int32_array **v37; // x5
+  System_Int32_array *v38; // x6
+  System_Int32_array *v39; // x7
+  int v40; // w8
 
-  if ( (byte_40FDB1A & 1) == 0 )
+  if ( (byte_418AC46 & 1) == 0 )
   {
-    sub_B16FFC(&Method_BasicHelper_Any_BattleLogic_LOGICTYPE___, logicArray);
-    sub_B16FFC(&Method_System_Func_BattleLogic_LOGICTYPE__bool___ctor__, v5);
-    sub_B16FFC(&System_Func_BattleLogic_LOGICTYPE__bool__TypeInfo, v6);
-    sub_B16FFC(&Method_BattleAttack___c___ctor_b__11_0__, v7);
-    sub_B16FFC(&Method_BattleAttack___c___ctor_b__11_1__, v8);
-    sub_B16FFC(&BattleAttack___c_TypeInfo, v9);
-    byte_40FDB1A = 1;
+    sub_B2C35C(&Method_BasicHelper_Any_BattleLogic_LOGICTYPE___, logicArray);
+    sub_B2C35C(&Method_System_Func_BattleLogic_LOGICTYPE__bool___ctor__, v5);
+    sub_B2C35C(&System_Func_BattleLogic_LOGICTYPE__bool__TypeInfo, v6);
+    sub_B2C35C(&Method_BattleAttack___c___ctor_b__11_0__, v7);
+    sub_B2C35C(&Method_BattleAttack___c___ctor_b__11_1__, v8);
+    sub_B2C35C(&BattleAttack___c_TypeInfo, v9);
+    byte_418AC46 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._LogicArray_k__BackingField = logicArray;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._LogicArray_k__BackingField,
     (System_Int32_array **)logicArray,
     v10,
@@ -70,103 +62,93 @@ void __fastcall BattleAttack___ctor(
     v14,
     v15);
   AttackedInAction_k__BackingField = this->fields._AttackedInAction_k__BackingField;
-  v21 = BattleAttack___c_TypeInfo;
+  v17 = BattleAttack___c_TypeInfo;
   if ( (BYTE3(BattleAttack___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleAttack___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleAttack___c_TypeInfo);
-    v21 = BattleAttack___c_TypeInfo;
+    v17 = BattleAttack___c_TypeInfo;
   }
-  static_fields = v21->static_fields;
+  static_fields = v17->static_fields;
   _9__11_0 = (System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__o *)static_fields->__9__11_0;
   if ( !_9__11_0 )
   {
-    if ( (BYTE3(v21->vtable._0_Equals.methodPtr) & 4) != 0 && !v21->_2.cctor_finished )
+    if ( (BYTE3(v17->vtable._0_Equals.methodPtr) & 4) != 0 && !v17->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v21);
+      j_il2cpp_runtime_class_init_0(v17);
       static_fields = BattleAttack___c_TypeInfo->static_fields;
     }
-    v24 = (Il2CppObject *)static_fields->__9;
-    _9__11_0 = (System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__o *)sub_B170CC(
-                                                                                          System_Func_BattleLogic_LOGICTYPE__bool__TypeInfo,
-                                                                                          v16,
-                                                                                          v17,
-                                                                                          v18,
-                                                                                          v19);
+    v20 = (Il2CppObject *)static_fields->__9;
+    _9__11_0 = (System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__o *)sub_B2C42C(System_Func_BattleLogic_LOGICTYPE__bool__TypeInfo);
     System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool____ctor(
       _9__11_0,
-      v24,
+      v20,
       Method_BattleAttack___c___ctor_b__11_0__,
-      (const MethodInfo_2B67340 *)Method_System_Func_BattleLogic_LOGICTYPE__bool___ctor__);
-    v25 = BattleAttack___c_TypeInfo->static_fields;
-    v25->__9__11_0 = (struct System_Func_BattleLogic_LOGICTYPE__bool__o *)_9__11_0;
-    sub_B16F98(
-      (BattleServantConfConponent_o *)&v25->__9__11_0,
+      (const MethodInfo_270E404 *)Method_System_Func_BattleLogic_LOGICTYPE__bool___ctor__);
+    v21 = BattleAttack___c_TypeInfo->static_fields;
+    v21->__9__11_0 = (struct System_Func_BattleLogic_LOGICTYPE__bool__o *)_9__11_0;
+    sub_B2C2F8(
+      (BattleServantConfConponent_o *)&v21->__9__11_0,
       (System_Int32_array **)_9__11_0,
+      v22,
+      v23,
+      v24,
+      v25,
       v26,
-      v27,
-      v28,
-      v29,
-      v30,
-      v31);
+      v27);
   }
-  v36 = AttackedInAction_k__BackingField | BasicHelper__Any_ListViewSort_FilterCategoryKind_(
+  v28 = AttackedInAction_k__BackingField | BasicHelper__Any_ListViewSort_FilterCategoryKind_(
                                              (ListViewSort_FilterCategoryKind_array *)logicArray,
                                              (System_Func_T__bool__o *)_9__11_0,
-                                             (const MethodInfo_18B5E80 *)Method_BasicHelper_Any_BattleLogic_LOGICTYPE___);
-  this->fields._AttackedInAction_k__BackingField = v36;
-  v37 = BattleAttack___c_TypeInfo;
+                                             (const MethodInfo_1726564 *)Method_BasicHelper_Any_BattleLogic_LOGICTYPE___);
+  this->fields._AttackedInAction_k__BackingField = v28;
+  v29 = BattleAttack___c_TypeInfo;
   if ( (BYTE3(BattleAttack___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleAttack___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleAttack___c_TypeInfo);
-    v37 = BattleAttack___c_TypeInfo;
+    v29 = BattleAttack___c_TypeInfo;
   }
-  v38 = v37->static_fields;
-  _9__11_1 = (System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__o *)v38->__9__11_1;
+  v30 = v29->static_fields;
+  _9__11_1 = (System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__o *)v30->__9__11_1;
   if ( !_9__11_1 )
   {
-    if ( (BYTE3(v37->vtable._0_Equals.methodPtr) & 4) != 0 && !v37->_2.cctor_finished )
+    if ( (BYTE3(v29->vtable._0_Equals.methodPtr) & 4) != 0 && !v29->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v37);
-      v38 = BattleAttack___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v29);
+      v30 = BattleAttack___c_TypeInfo->static_fields;
     }
-    v40 = (Il2CppObject *)v38->__9;
-    _9__11_1 = (System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__o *)sub_B170CC(
-                                                                                          System_Func_BattleLogic_LOGICTYPE__bool__TypeInfo,
-                                                                                          v32,
-                                                                                          v33,
-                                                                                          v34,
-                                                                                          v35);
+    v32 = (Il2CppObject *)v30->__9;
+    _9__11_1 = (System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__o *)sub_B2C42C(System_Func_BattleLogic_LOGICTYPE__bool__TypeInfo);
     System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool____ctor(
       _9__11_1,
-      v40,
+      v32,
       Method_BattleAttack___c___ctor_b__11_1__,
-      (const MethodInfo_2B67340 *)Method_System_Func_BattleLogic_LOGICTYPE__bool___ctor__);
-    v41 = BattleAttack___c_TypeInfo->static_fields;
-    v41->__9__11_1 = (struct System_Func_BattleLogic_LOGICTYPE__bool__o *)_9__11_1;
-    sub_B16F98(
-      (BattleServantConfConponent_o *)&v41->__9__11_1,
+      (const MethodInfo_270E404 *)Method_System_Func_BattleLogic_LOGICTYPE__bool___ctor__);
+    v33 = BattleAttack___c_TypeInfo->static_fields;
+    v33->__9__11_1 = (struct System_Func_BattleLogic_LOGICTYPE__bool__o *)_9__11_1;
+    sub_B2C2F8(
+      (BattleServantConfConponent_o *)&v33->__9__11_1,
       (System_Int32_array **)_9__11_1,
-      v42,
-      v43,
-      v44,
-      v45,
-      v46,
-      v47);
+      v34,
+      v35,
+      v36,
+      v37,
+      v38,
+      v39);
   }
   if ( BasicHelper__Any_ListViewSort_FilterCategoryKind_(
          (ListViewSort_FilterCategoryKind_array *)logicArray,
          (System_Func_T__bool__o *)_9__11_1,
-         (const MethodInfo_18B5E80 *)Method_BasicHelper_Any_BattleLogic_LOGICTYPE___) )
+         (const MethodInfo_1726564 *)Method_BasicHelper_Any_BattleLogic_LOGICTYPE___) )
   {
-    v48 = 2;
+    v40 = 2;
   }
   else
   {
-    v48 = 0;
+    v40 = 0;
   }
-  this->fields._AttackedInAction_k__BackingField = v48 | v36;
+  this->fields._AttackedInAction_k__BackingField = v40 | v28;
 }
 
 
@@ -208,7 +190,7 @@ void __fastcall BattleAttack__set_LogicArray(
   System_Int32_array *v7; // x7
 
   this->fields._LogicArray_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._LogicArray_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -223,22 +205,25 @@ void __fastcall BattleAttack__set_LogicArray(
 void __fastcall BattleAttack___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  Il2CppObject *v5; // x19
-  struct BattleAttack___c_StaticFields *static_fields; // x0
+  Il2CppObject *v2; // x19
+  BattleServantConfConponent_o *static_fields; // x0
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
 
-  if ( (byte_40F84C4 & 1) == 0 )
+  if ( (byte_4186A24 & 1) == 0 )
   {
-    sub_B16FFC(&BattleAttack___c_TypeInfo, v1);
-    byte_40F84C4 = 1;
+    sub_B2C35C(&BattleAttack___c_TypeInfo, v1);
+    byte_4186A24 = 1;
   }
-  v5 = (Il2CppObject *)sub_B170CC(BattleAttack___c_TypeInfo, v1, v2, v3, v4);
-  System_Object___ctor(v5, 0LL);
-  static_fields = BattleAttack___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct BattleAttack___c_o *)v5;
-  sub_B16F98(static_fields, v5);
+  v2 = (Il2CppObject *)sub_B2C42C(BattleAttack___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  static_fields = (BattleServantConfConponent_o *)BattleAttack___c_TypeInfo->static_fields;
+  static_fields->klass = (BattleServantConfConponent_c *)v2;
+  sub_B2C2F8(static_fields, (System_Int32_array **)v2, v4, v5, v6, v7, v8, v9);
 }
 
 

@@ -20,15 +20,14 @@ void __fastcall RankObjectSwitchEffectSubComponent__RecvParam(
   __int64 v10; // x9
   __int64 v11; // x21
   __int64 v12; // x22
-  UnityEngine_GameObject_o *v13; // x0
-  il2cpp_array_size_t v14; // w21
-  UnityEngine_GameObject_o *v15; // x0
+  il2cpp_array_size_t v13; // w21
+  __int64 v14; // x0
 
   v4 = this;
-  if ( (byte_40F8293 & 1) == 0 )
+  if ( (byte_41860EA & 1) == 0 )
   {
-    this = (RankObjectSwitchEffectSubComponent_o *)sub_B16FFC(&RaceResultEffectParam_TypeInfo, param);
-    byte_40F8293 = 1;
+    this = (RankObjectSwitchEffectSubComponent_o *)sub_B2C35C(&RaceResultEffectParam_TypeInfo, param);
+    byte_41860EA = 1;
   }
   if ( param
     && (v5 = *(&RaceResultEffectParam_TypeInfo->_2.bitflags2 + 1), *(&param->klass->_2.bitflags2 + 1) >= (unsigned int)v5) )
@@ -45,7 +44,7 @@ void __fastcall RankObjectSwitchEffectSubComponent__RecvParam(
   switchObjectList = v4->fields.switchObjectList;
   if ( !switchObjectList )
 LABEL_27:
-    sub_B170D4();
+    sub_B2C434(this, param);
   max_length = switchObjectList->max_length;
   if ( v6
     && (monitor = v6[1].monitor) != 0LL
@@ -57,10 +56,10 @@ LABEL_27:
       v12 = 0LL;
       while ( (unsigned int)v12 < switchObjectList->max_length )
       {
-        v13 = switchObjectList->m_Items[(int)v12];
-        if ( !v13 )
+        this = (RankObjectSwitchEffectSubComponent_o *)switchObjectList->m_Items[(int)v12];
+        if ( !this )
           goto LABEL_27;
-        UnityEngine_GameObject__SetActive(v13, v11 == v12, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v11 == v12, 0LL);
         if ( (int)v12 + 1 >= max_length )
           return;
         switchObjectList = v4->fields.switchObjectList;
@@ -73,21 +72,21 @@ LABEL_27:
   }
   else if ( max_length >= 1 )
   {
-    v14 = 0;
-    while ( v14 < switchObjectList->max_length )
+    v13 = 0;
+    while ( v13 < switchObjectList->max_length )
     {
-      v15 = switchObjectList->m_Items[v14];
-      if ( !v15 )
+      this = (RankObjectSwitchEffectSubComponent_o *)switchObjectList->m_Items[v13];
+      if ( !this )
         goto LABEL_27;
-      UnityEngine_GameObject__SetActive(v15, 0, 0LL);
-      if ( (int)++v14 >= max_length )
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
+      if ( (int)++v13 >= max_length )
         return;
       switchObjectList = v4->fields.switchObjectList;
       if ( !switchObjectList )
         goto LABEL_27;
     }
 LABEL_29:
-    sub_B17100(this, param, method);
-    sub_B170A0();
+    v14 = sub_B2C460(this);
+    sub_B2C400(v14, 0LL);
   }
 }

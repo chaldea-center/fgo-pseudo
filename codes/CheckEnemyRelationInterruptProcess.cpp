@@ -13,12 +13,10 @@ void __fastcall CheckEnemyRelationInterruptProcess__AfterCreateAction(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  BattleLogicEnemyAi_o *logicEnemyAi; // x0
-
   if ( this->fields.isClearTempDead )
   {
-    if ( !logic || (logicEnemyAi = logic->fields.logicEnemyAi) == 0LL )
-      sub_B170D4();
-    BattleLogicEnemyAi__ClearTempDeadSvt(logicEnemyAi, 0LL);
+    if ( !logic || (this = (CheckEnemyRelationInterruptProcess_o *)logic->fields.logicEnemyAi) == 0LL )
+      sub_B2C434(this, logic);
+    BattleLogicEnemyAi__ClearTempDeadSvt((BattleLogicEnemyAi_o *)this, 0LL);
   }
 }

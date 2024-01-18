@@ -10,15 +10,14 @@ void __fastcall SetSelectSvtInfoComponent__setSvtInfo(
         const MethodInfo *method)
 {
   UnityEngine_Component_o *svtFaceInfo; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  ServantFaceIconComponent_o *v7; // x0
 
   svtFaceInfo = (UnityEngine_Component_o *)this->fields.svtFaceInfo;
   if ( !svtFaceInfo
-    || (gameObject = UnityEngine_Component__get_gameObject(svtFaceInfo, 0LL)) == 0LL
-    || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL), (v7 = this->fields.svtFaceInfo) == 0LL) )
+    || (svtFaceInfo = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(svtFaceInfo, 0LL)) == 0LL
+    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtFaceInfo, 1, 0LL),
+        (svtFaceInfo = (UnityEngine_Component_o *)this->fields.svtFaceInfo) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(svtFaceInfo, usrSvtId);
   }
-  ServantFaceIconComponent__Set_30705604(v7, usrSvtId, 0LL, 0LL, 0LL);
+  ServantFaceIconComponent__Set_30793276((ServantFaceIconComponent_o *)svtFaceInfo, usrSvtId, 0LL, 0LL, 0LL);
 }

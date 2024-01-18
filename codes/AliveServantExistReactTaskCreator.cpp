@@ -14,15 +14,19 @@ bool __fastcall AliveServantExistReactTaskCreator__IsCreatable(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( !AliveServantReactTaskCreator__IsCreatable(
-          (AliveServantReactTaskCreator_o *)this,
-          logic,
-          svtData,
-          priority,
-          method) )
+  _BOOL8 IsCreatable; // x0
+  __int64 v10; // x1
+
+  IsCreatable = AliveServantReactTaskCreator__IsCreatable(
+                  (AliveServantReactTaskCreator_o *)this,
+                  logic,
+                  svtData,
+                  priority,
+                  method);
+  if ( !IsCreatable )
     return 0;
   if ( !svtData )
-    sub_B170D4();
+    sub_B2C434(IsCreatable, v10);
   return ((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, _QWORD, _QWORD, Il2CppMethodPointer))svtData->klass->vtable._19_ExistAiThinking.method)(
            svtData,
            logic,

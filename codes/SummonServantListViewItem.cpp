@@ -15,89 +15,86 @@ void __fastcall SummonServantListViewItem___ctor(
   __int64 v19; // x1
   __int64 v20; // x1
   __int64 v21; // x1
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
-  CommandCodeEntity_o *Entity; // x0
+  DataManager_o *Instance; // x0
+  __int64 v23; // x1
   struct System_String_o *Name; // x0
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  DataMasterBase_WarMaster__WarEntity__int__o *v32; // x0
-  ServantEntity_o *v33; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v34; // x20
+  System_String_array **v25; // x2
+  System_String_array **v26; // x3
+  System_Boolean_array **v27; // x4
+  System_Int32_array **v28; // x5
+  System_Int32_array *v29; // x6
+  System_Int32_array *v30; // x7
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v31; // x20
 
-  if ( (byte_40FD4CB & 1) == 0 )
+  if ( (byte_418AE4F & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_CommandCodeMaster___, *(_QWORD *)&index);
-    sub_B16FFC(&Method_DataManager_GetMasterData_ServantMaster___, v17);
-    sub_B16FFC(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v18);
-    sub_B16FFC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v19);
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v20);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    byte_40FD4CB = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_CommandCodeMaster___, *(_QWORD *)&index);
+    sub_B2C35C(&Method_DataManager_GetMasterData_ServantMaster___, v17);
+    sub_B2C35C(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v18);
+    sub_B2C35C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v19);
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v20);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
+    byte_418AE4F = 1;
   }
-  ListViewItem___ctor_30173668((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
   this->fields.svtId = svtId;
   this->fields.usrSvtId = usrSvtId;
   this->fields.noticeNo = noticeNo;
   this->fields.isNew = isNew;
   this->fields.isRankUp = isRankUp;
   this->fields.commandCode = commandCode;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   if ( commandCode )
   {
-    MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                          (DataManager_o *)Instance,
-                                                                                          (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
-    if ( MasterData_WarQuestSelectionMaster )
+    Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                  Instance,
+                                  (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+    if ( Instance )
     {
-      Entity = (CommandCodeEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                        MasterData_WarQuestSelectionMaster,
-                                        svtId,
-                                        (const MethodInfo_266F388 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
-      if ( Entity )
+      Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+                                    (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
+                                    svtId,
+                                    (const MethodInfo_24E40D0 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+      if ( Instance )
       {
-        Name = CommandCodeEntity__GetName(Entity, 0LL);
+        Name = CommandCodeEntity__GetName((CommandCodeEntity_o *)Instance, 0LL);
         goto LABEL_14;
       }
     }
 LABEL_15:
-    sub_B170D4();
+    sub_B2C434(Instance, v23);
   }
-  v32 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                         (DataManager_o *)Instance,
-                                                         (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ServantMaster___);
-  if ( !v32 )
+  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                Instance,
+                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ServantMaster___);
+  if ( !Instance )
     goto LABEL_15;
-  v33 = (ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                             v32,
-                             svtId,
-                             (const MethodInfo_266F388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-  if ( !v33 )
+  Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+                                (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
+                                svtId,
+                                (const MethodInfo_24E40D0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+  if ( !Instance )
     goto LABEL_15;
-  v34 = ServantEntity__GetName(v33, -1, 0, -1, 0LL);
+  v31 = ServantEntity__GetName((ServantEntity_o *)Instance, -1, 0, -1, 0LL);
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
   }
-  Name = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44107000(v34, 0LL);
+  Name = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44796528(v31, 0LL);
 LABEL_14:
   this->fields.name = Name;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.name,
     (System_Int32_array **)Name,
+    v25,
     v26,
     v27,
     v28,
     v29,
-    v30,
-    v31);
+    v30);
 }
 
 
@@ -222,7 +219,7 @@ void __fastcall SummonServantListViewItem__set_ServantName(
   System_Int32_array *v7; // x7
 
   this->fields.name = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.name,
     (System_Int32_array **)value,
     (System_String_array **)method,

@@ -25,16 +25,17 @@ void __fastcall WarBoardPartyOrganizationListViewObject__Init(
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
   UnityEngine_Object_o *itemDraw; // x20
-  const MethodInfo *v11; // x3
-  WarBoardPartyOrganizationListViewItemDraw_o *v12; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x3
+  WarBoardPartyOrganizationListViewItemDraw_o *v13; // x0
 
-  if ( (byte_40F85C0 & 1) == 0 )
+  if ( (byte_4186577 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, onTapEvent);
-    byte_40F85C0 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, onTapEvent);
+    byte_4186577 = 1;
   }
   this->fields.onTapEvent = onTapEvent;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.onTapEvent,
     (System_Int32_array **)onTapEvent,
     (System_String_array **)method,
@@ -51,10 +52,10 @@ void __fastcall WarBoardPartyOrganizationListViewObject__Init(
   }
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v12 = this->fields.itemDraw;
-    if ( !v12 )
-      sub_B170D4();
-    WarBoardPartyOrganizationListViewItemDraw__SetItem(v12, this->fields.listViewItem, 3, v11);
+    v13 = this->fields.itemDraw;
+    if ( !v13 )
+      sub_B2C434(0LL, v11);
+    WarBoardPartyOrganizationListViewItemDraw__SetItem(v13, this->fields.listViewItem, 3, v12);
   }
 }
 
@@ -161,7 +162,7 @@ void __fastcall WarBoardPartyOrganizationListViewObject__SetItem(
   System_Int32_array *v7; // x7
 
   this->fields.listViewItem = item;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.listViewItem,
     (System_Int32_array **)item,
     (System_String_array **)method,

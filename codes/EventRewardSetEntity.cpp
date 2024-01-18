@@ -1,13 +1,13 @@
 void __fastcall EventRewardSetEntity___ctor(EventRewardSetEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FD134 & 1) == 0 )
+  if ( (byte_418A945 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FD134 = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_418A945 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall EventRewardSetEntity__CreatePK(
         int32_t id,
         const MethodInfo *method)
 {
-  if ( (byte_40FD133 & 1) == 0 )
+  if ( (byte_418A944 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&eventId);
-    byte_40FD133 = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&eventId);
+    byte_418A944 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            rewardSetType,
            eventId,
            id,
-           (const MethodInfo_18C25C8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1732D30 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

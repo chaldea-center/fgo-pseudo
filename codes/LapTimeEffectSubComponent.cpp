@@ -14,26 +14,23 @@ void __fastcall LapTimeEffectSubComponent__RecvParam(
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x10
-  UILabel_o *v10; // x0
+  System_String_o *Value; // x0
   System_String_o *v11; // x1
   int *v12; // x8
   __int64 v13; // x21
-  __int64 Value; // x0
-  __int64 v15; // x1
-  __int64 v16; // x2
   struct UILabel_o *label; // x19
-  System_String_o *LapTime; // x0
   void *monitor; // x8
-  int64_t v20; // x20
+  int64_t v16; // x20
+  __int64 v17; // x0
 
-  if ( (byte_40FC21C & 1) == 0 )
+  if ( (byte_41870F1 & 1) == 0 )
   {
-    sub_B16FFC(&LocalizationManager_TypeInfo, param);
-    sub_B16FFC(&RaceResultEffectParam_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_10966/*"RACE_TARGET_GOAL_RANK"*/, v6);
-    sub_B16FFC(&StringLiteral_1/*""*/, v7);
-    sub_B16FFC(&StringLiteral_5667/*"EVENT_RACE_RESULT_TIME_NONE"*/, v8);
-    byte_40FC21C = 1;
+    sub_B2C35C(&LocalizationManager_TypeInfo, param);
+    sub_B2C35C(&RaceResultEffectParam_TypeInfo, v5);
+    sub_B2C35C(&StringLiteral_11002/*"RACE_TARGET_GOAL_RANK"*/, v6);
+    sub_B2C35C(&StringLiteral_1/*""*/, v7);
+    sub_B2C35C(&StringLiteral_5683/*"EVENT_RACE_RESULT_TIME_NONE"*/, v8);
+    byte_41870F1 = 1;
   }
   if ( param
     && (v9 = *(&RaceResultEffectParam_TypeInfo->_2.bitflags2 + 1), *(&param->klass->_2.bitflags2 + 1) >= (unsigned int)v9)
@@ -42,7 +39,7 @@ void __fastcall LapTimeEffectSubComponent__RecvParam(
     && v12[6] >= 5 )
   {
     v13 = *((_QWORD *)v12 + 7);
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_10966/*"RACE_TARGET_GOAL_RANK"*/, 0LL);
+    Value = (System_String_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_11002/*"RACE_TARGET_GOAL_RANK"*/, 0LL);
     if ( v13 <= (int)Value )
     {
       monitor = param[1].monitor;
@@ -50,20 +47,20 @@ void __fastcall LapTimeEffectSubComponent__RecvParam(
         goto LABEL_24;
       if ( *((_DWORD *)monitor + 6) <= 4u )
       {
-        sub_B17100(Value, v15, v16);
-        sub_B170A0();
+        v17 = sub_B2C460(Value);
+        sub_B2C400(v17, 0LL);
       }
-      v20 = *((_QWORD *)monitor + 8);
+      v16 = *((_QWORD *)monitor + 8);
       label = this->fields.label;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      LapTime = LocalizationManager__GetLapTime(v20, 0LL);
+      Value = LocalizationManager__GetLapTime(v16, 0LL);
       if ( !label )
 LABEL_24:
-        sub_B170D4();
+        sub_B2C434(Value, param);
     }
     else
     {
@@ -73,19 +70,19 @@ LABEL_24:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      LapTime = LocalizationManager__Get((System_String_o *)StringLiteral_5667/*"EVENT_RACE_RESULT_TIME_NONE"*/, 0LL);
+      Value = LocalizationManager__Get((System_String_o *)StringLiteral_5683/*"EVENT_RACE_RESULT_TIME_NONE"*/, 0LL);
       if ( !label )
         goto LABEL_24;
     }
-    v11 = LapTime;
-    v10 = label;
+    v11 = Value;
+    Value = (System_String_o *)label;
   }
   else
   {
-    v10 = this->fields.label;
-    if ( !v10 )
+    Value = (System_String_o *)this->fields.label;
+    if ( !Value )
       goto LABEL_24;
     v11 = (System_String_o *)StringLiteral_1/*""*/;
   }
-  UILabel__set_text(v10, v11, 0LL);
+  UILabel__set_text((UILabel_o *)Value, v11, 0LL);
 }

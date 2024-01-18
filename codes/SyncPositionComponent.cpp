@@ -24,7 +24,7 @@ void __fastcall SyncPositionComponent__SetTarget(
   const MethodInfo *v9; // x1
 
   this->fields.targetTransform = targetTransform;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.targetTransform,
     (System_Int32_array **)targetTransform,
     (System_String_array **)method,
@@ -42,14 +42,15 @@ void __fastcall SyncPositionComponent__SyncPosition(SyncPositionComponent_o *thi
 {
   UnityEngine_Object_o *targetTransform; // x20
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Transform_o *v5; // x8
-  UnityEngine_Transform_o *v6; // x19
-  int v7; // s0
+  __int64 v5; // x1
+  UnityEngine_Transform_o *v6; // x8
+  UnityEngine_Transform_o *v7; // x19
+  int v8; // s0
 
-  if ( (byte_40FD695 & 1) == 0 )
+  if ( (byte_418B20B & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    byte_40FD695 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
+    byte_418B20B = 1;
   }
   targetTransform = (UnityEngine_Object_o *)this->fields.targetTransform;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -60,9 +61,9 @@ void __fastcall SyncPositionComponent__SyncPosition(SyncPositionComponent_o *thi
   if ( !UnityEngine_Object__op_Equality(targetTransform, 0LL, 0LL) )
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    v5 = this->fields.targetTransform;
-    if ( !v5 || (v6 = transform, *(UnityEngine_Vector3_o *)&v7 = UnityEngine_Transform__get_position(v5, 0LL), !v6) )
-      sub_B170D4();
-    UnityEngine_Transform__set_position(v6, *(UnityEngine_Vector3_o *)&v7, 0LL);
+    v6 = this->fields.targetTransform;
+    if ( !v6 || (v7 = transform, *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_position(v6, 0LL), !v7) )
+      sub_B2C434(transform, v5);
+    UnityEngine_Transform__set_position(v7, *(UnityEngine_Vector3_o *)&v8, 0LL);
   }
 }

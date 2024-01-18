@@ -1,14 +1,14 @@
 void __fastcall EventProgressValueMaster___ctor(EventProgressValueMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FAC84 & 1) == 0 )
+  if ( (byte_4187915 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_EventProgressValueMaster__EventProgressValueEntity__string___ctor__, method);
-    byte_40FAC84 = 1;
+    sub_B2C35C(&Method_DataMasterBase_EventProgressValueMaster__EventProgressValueEntity__string___ctor__, method);
+    byte_4187915 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     392,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_EventProgressValueMaster__EventProgressValueEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_EventProgressValueMaster__EventProgressValueEntity__string___ctor__);
 }
 
 
@@ -21,53 +21,49 @@ EventProgressValueEntity_o *__fastcall EventProgressValueMaster__GetCurrentEvent
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  System_Collections_Generic_List_EventProgressValueEntity__o *EntityListByEventId; // x0
+  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *EntityListByEventId; // x0
+  __int64 v9; // x1
   int32_t i; // w20
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  EventProgressValueEntity_o *v12; // x21
-  __int64 v13; // x10
-  int32_t monitor_high; // w22
-  int32_t monitor; // w24
+  EventProgressValueEntity_o *v11; // x21
+  __int64 v12; // x10
+  int32_t syncRoot_high; // w22
+  int32_t syncRoot; // w24
   int64_t klass_low; // x23
 
-  if ( (byte_40FAC86 & 1) == 0 )
+  if ( (byte_4187917 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, *(_QWORD *)&eventId);
-    sub_B16FFC(&CondType_TypeInfo, v5);
-    sub_B16FFC(&EventProgressValueEntity_TypeInfo, v6);
-    sub_B16FFC(&Method_System_Collections_Generic_List_EventProgressValueEntity__get_Count__, v7);
-    byte_40FAC86 = 1;
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, *(_QWORD *)&eventId);
+    sub_B2C35C(&CondType_TypeInfo, v5);
+    sub_B2C35C(&EventProgressValueEntity_TypeInfo, v6);
+    sub_B2C35C(&Method_System_Collections_Generic_List_EventProgressValueEntity__get_Count__, v7);
+    byte_4187917 = 1;
   }
-  EntityListByEventId = EventProgressValueMaster__GetEntityListByEventId(this, eventId, method);
+  EntityListByEventId = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)EventProgressValueMaster__GetEntityListByEventId(this, eventId, method);
   if ( !EntityListByEventId )
 LABEL_17:
-    sub_B170D4();
-  for ( i = EntityListByEventId->fields._size - 1; (i & 0x80000000) == 0; --i )
+    sub_B2C434(EntityListByEventId, v9);
+  for ( i = LODWORD(EntityListByEventId->fields._syncRoot) - 1; (i & 0x80000000) == 0; --i )
   {
-    list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-    if ( !list )
+    EntityListByEventId = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+    if ( !EntityListByEventId )
       goto LABEL_17;
-    Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-             list,
-             i,
-             (const MethodInfo_290DF28 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    if ( !Item )
+    EntityListByEventId = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(EntityListByEventId, i, (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    if ( !EntityListByEventId )
       goto LABEL_17;
-    v12 = (EventProgressValueEntity_o *)Item;
-    v13 = *(&EventProgressValueEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&Item->klass->_2.bitflags2 + 1) < (unsigned int)v13
-      || (EventProgressValueEntity_c *)Item->klass->_2.typeHierarchy[v13 - 1] != EventProgressValueEntity_TypeInfo )
+    v11 = (EventProgressValueEntity_o *)EntityListByEventId;
+    v12 = *(&EventProgressValueEntity_TypeInfo->_2.bitflags2 + 1);
+    if ( *(&EntityListByEventId->klass->_2.bitflags2 + 1) < (unsigned int)v12
+      || (EventProgressValueEntity_c *)EntityListByEventId->klass->_2.typeHierarchy[v12 - 1] != EventProgressValueEntity_TypeInfo )
     {
       goto LABEL_17;
     }
-    monitor = (int32_t)Item[1].monitor;
-    monitor_high = HIDWORD(Item[1].monitor);
-    klass_low = SLODWORD(Item[2].klass);
+    syncRoot = (int32_t)EntityListByEventId->fields._syncRoot;
+    syncRoot_high = HIDWORD(EntityListByEventId->fields._syncRoot);
+    klass_low = SLODWORD(EntityListByEventId[1].klass);
     if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    if ( CondType__IsOpen(monitor, monitor_high, klass_low, 0, 0LL) )
-      return v12;
+    if ( CondType__IsOpen(syncRoot, syncRoot_high, klass_low, 0, 0LL) )
+      return v11;
   }
   return 0LL;
 }
@@ -82,18 +78,18 @@ EventProgressValueEntity_o *__fastcall EventProgressValueMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40FAC82 & 1) == 0 )
+  if ( (byte_4187913 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_EventProgressValueMaster__EventProgressValueEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_40FAC82 = 1;
+    byte_4187913 = 1;
   }
   PK = EventProgressValueEntity__CreatePK(eventId, priority, *(const MethodInfo **)&priority);
   return (EventProgressValueEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                          (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                          PK,
-                                         (const MethodInfo_266F7D8 *)Method_DataMasterBase_EventProgressValueMaster__EventProgressValueEntity__string__GetEntity__);
+                                         (const MethodInfo_24E4520 *)Method_DataMasterBase_EventProgressValueMaster__EventProgressValueEntity__string__GetEntity__);
 }
 
 
@@ -103,82 +99,75 @@ System_Collections_Generic_List_EventProgressValueEntity__o *__fastcall EventPro
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v12; // x21
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v10; // x21
+  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v11; // x1
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
   int32_t Count; // w0
-  int32_t v15; // w22
-  int32_t v16; // w23
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v17; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *Item; // x0
-  __int64 v19; // x10
+  int32_t v14; // w22
+  int32_t v15; // w23
+  __int64 v16; // x10
 
-  if ( (byte_40FAC85 & 1) == 0 )
+  if ( (byte_4187916 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_B16FFC(&EventProgressValueEntity_TypeInfo, v8);
-    sub_B16FFC(&Method_System_Collections_Generic_List_EventProgressValueEntity__Add__, v9);
-    sub_B16FFC(&Method_System_Collections_Generic_List_EventProgressValueEntity___ctor__, v10);
-    sub_B16FFC(&System_Collections_Generic_List_EventProgressValueEntity__TypeInfo, v11);
-    byte_40FAC85 = 1;
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_B2C35C(&EventProgressValueEntity_TypeInfo, v6);
+    sub_B2C35C(&Method_System_Collections_Generic_List_EventProgressValueEntity__Add__, v7);
+    sub_B2C35C(&Method_System_Collections_Generic_List_EventProgressValueEntity___ctor__, v8);
+    sub_B2C35C(&System_Collections_Generic_List_EventProgressValueEntity__TypeInfo, v9);
+    byte_4187916 = 1;
   }
-  v12 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
-                                                                                                  System_Collections_Generic_List_EventProgressValueEntity__TypeInfo,
-                                                                                                  *(_QWORD *)&eventId,
-                                                                                                  method,
-                                                                                                  v3,
-                                                                                                  v4);
+  v10 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_EventProgressValueEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v12,
-    (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_EventProgressValueEntity___ctor__);
+    v10,
+    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_EventProgressValueEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_290DE84 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
-    v15 = Count;
-    v16 = 0;
+    v14 = Count;
+    v15 = 0;
     while ( 1 )
     {
-      v17 = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-      if ( !v17 )
+      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+      if ( !list )
         break;
-      Item = (EventMissionProgressRequest_Argument_ProgressData_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                                                      v17,
-                                                                      v16,
-                                                                      (const MethodInfo_290DF28 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-      if ( Item )
+      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
+                                                                                           list,
+                                                                                           v15,
+                                                                                           (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      if ( list )
       {
-        v19 = *(&EventProgressValueEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v19
-          && (EventProgressValueEntity_c *)Item->klass->_2.typeHierarchy[v19 - 1] == EventProgressValueEntity_TypeInfo
-          && Item->fields.missionTargetId == eventId )
+        v11 = list;
+        v16 = *(&EventProgressValueEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v16
+          && (EventProgressValueEntity_c *)list->klass->_2.typeHierarchy[v16 - 1] == EventProgressValueEntity_TypeInfo
+          && LODWORD(list->fields.items) == eventId )
         {
-          if ( !v12 )
+          if ( !v10 )
             break;
           System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-            v12,
-            Item,
-            (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_EventProgressValueEntity__Add__);
+            v10,
+            (EventMissionProgressRequest_Argument_ProgressData_o *)list,
+            (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_EventProgressValueEntity__Add__);
         }
       }
-      if ( ++v16 >= v15 )
-        return (System_Collections_Generic_List_EventProgressValueEntity__o *)v12;
+      if ( ++v15 >= v14 )
+        return (System_Collections_Generic_List_EventProgressValueEntity__o *)v10;
     }
 LABEL_15:
-    sub_B170D4();
+    sub_B2C434(list, v11);
   }
-  return (System_Collections_Generic_List_EventProgressValueEntity__o *)v12;
+  return (System_Collections_Generic_List_EventProgressValueEntity__o *)v10;
 }
 
 
@@ -192,17 +181,17 @@ bool __fastcall EventProgressValueMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40FAC83 & 1) == 0 )
+  if ( (byte_4187914 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_EventProgressValueMaster__EventProgressValueEntity__string__TryGetEntity__,
       entity);
-    byte_40FAC83 = 1;
+    byte_4187914 = 1;
   }
   PK = EventProgressValueEntity__CreatePK(eventId, priority, *(const MethodInfo **)&eventId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_EventProgressValueMaster__EventProgressValueEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_EventProgressValueMaster__EventProgressValueEntity__string__TryGetEntity__);
 }

@@ -4,7 +4,7 @@ int32_t __fastcall RarityRestrictedSkillUtil__GetOverwrittenRarity(
         const MethodInfo *method)
 {
   if ( !servantEntity )
-    sub_B170D4();
+    sub_B2C434(0LL, defaultRarity);
   if ( ServantEntity__checkIsHeroineSvt(servantEntity, 0LL) )
     return 3;
   else
@@ -18,28 +18,35 @@ bool __fastcall RarityRestrictedSkillUtil__IsDisabled(
         int32_t servantRarity,
         const MethodInfo *method)
 {
-  System_Int32_array *ActRarity; // x0
-  System_Int32_array *v8; // x21
-  int32_t v9; // w1
-  _BOOL4 v10; // w0
+  ServantEntity_o *v5; // x20
+  SkillLvEntity_o *v6; // x21
+  SkillLvEntity_o *v7; // x21
+  _BOOL4 v8; // w0
 
-  if ( (byte_40F829B & 1) == 0 )
+  v5 = servantEntity;
+  v6 = skillLvEntity;
+  if ( (byte_41860F2 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Array_IndexOf_int___, servantEntity);
-    byte_40F829B = 1;
+    skillLvEntity = (SkillLvEntity_o *)sub_B2C35C(&Method_System_Array_IndexOf_int___, servantEntity);
+    byte_41860F2 = 1;
   }
-  if ( !skillLvEntity
-    || (ActRarity = SkillLvEntity__GetActRarity(skillLvEntity, 0LL), !servantEntity)
-    || ((v8 = ActRarity, !ServantEntity__checkIsHeroineSvt(servantEntity, 0LL)) ? (v9 = servantRarity) : (v9 = 3), !v8) )
+  if ( !v6
+    || (skillLvEntity = (SkillLvEntity_o *)SkillLvEntity__GetActRarity(v6, 0LL), !v5)
+    || ((v7 = skillLvEntity,
+         skillLvEntity = (SkillLvEntity_o *)ServantEntity__checkIsHeroineSvt(v5, 0LL),
+         ((unsigned __int8)skillLvEntity & 1) == 0)
+      ? (servantEntity = (ServantEntity_o *)(unsigned int)servantRarity)
+      : (servantEntity = (ServantEntity_o *)(&dword_0 + 3)),
+        !v7) )
   {
-    sub_B170D4();
+    sub_B2C434(skillLvEntity, servantEntity);
   }
-  if ( *(_QWORD *)&v8->max_length )
+  if ( *(_QWORD *)&v7->fields.chargeTurn )
     return (unsigned int)System_Array__IndexOf_int_(
-                           v8,
-                           v9,
-                           (const MethodInfo_2045560 *)Method_System_Array_IndexOf_int___) >> 31;
+                           (System_Int32_array *)v7,
+                           (int32_t)servantEntity,
+                           (const MethodInfo_1FFD52C *)Method_System_Array_IndexOf_int___) >> 31;
   else
-    LOBYTE(v10) = 0;
-  return v10;
+    LOBYTE(v8) = 0;
+  return v8;
 }

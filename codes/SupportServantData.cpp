@@ -1,6 +1,6 @@
 void __fastcall SupportServantData___ctor(SupportServantData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
+  __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
@@ -12,707 +12,659 @@ void __fastcall SupportServantData___ctor(SupportServantData_o *this, const Meth
   __int64 v12; // x1
   __int64 v13; // x1
   __int64 v14; // x1
-  __int64 v15; // x1
-  BalanceConfig_c *v16; // x0
-  struct UserServantLeaderEntity_array *v17; // x0
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  __int64 v24; // x2
-  struct System_Int64_array *v25; // x0
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  __int64 v32; // x2
-  struct System_Int64_array *v33; // x0
-  System_String_array **v34; // x2
-  System_String_array **v35; // x3
-  System_Boolean_array **v36; // x4
-  System_Int32_array **v37; // x5
-  System_Int32_array *v38; // x6
-  System_Int32_array *v39; // x7
-  __int64 v40; // x2
-  struct System_Int64_array *v41; // x0
-  System_String_array **v42; // x2
-  System_String_array **v43; // x3
-  System_Boolean_array **v44; // x4
-  System_Int32_array **v45; // x5
-  System_Int32_array *v46; // x6
-  System_Int32_array *v47; // x7
-  __int64 v48; // x2
-  struct System_Int64_array *v49; // x0
-  System_String_array **v50; // x2
-  System_String_array **v51; // x3
-  System_Boolean_array **v52; // x4
-  System_Int32_array **v53; // x5
-  System_Int32_array *v54; // x6
-  System_Int32_array *v55; // x7
-  __int64 v56; // x2
-  __int64 v57; // x0
-  System_String_array **v58; // x2
-  System_String_array **v59; // x3
-  System_Boolean_array **v60; // x4
-  System_Int32_array **v61; // x5
-  System_Int32_array *v62; // x6
-  System_Int32_array *v63; // x7
-  struct System_String_array *v64; // x20
-  __int64 v65; // x0
-  System_Int32_array **v66; // x1
-  System_String_array **v67; // x3
-  System_Boolean_array **v68; // x4
-  System_Int32_array **v69; // x5
-  System_Int32_array *v70; // x6
-  System_Int32_array *v71; // x7
-  System_String_array **v72; // x3
-  System_Boolean_array **v73; // x4
-  System_Int32_array **v74; // x5
-  System_Int32_array *v75; // x6
-  System_Int32_array *v76; // x7
+  BalanceConfig_c *v15; // x0
+  struct UserServantLeaderEntity_array *v16; // x0
+  System_String_array **v17; // x2
+  System_String_array **v18; // x3
+  System_Boolean_array **v19; // x4
+  System_Int32_array **v20; // x5
+  System_Int32_array *v21; // x6
+  System_Int32_array *v22; // x7
+  struct System_Int64_array *v23; // x0
+  System_String_array **v24; // x2
+  System_String_array **v25; // x3
+  System_Boolean_array **v26; // x4
+  System_Int32_array **v27; // x5
+  System_Int32_array *v28; // x6
+  System_Int32_array *v29; // x7
+  struct System_Int64_array *v30; // x0
+  System_String_array **v31; // x2
+  System_String_array **v32; // x3
+  System_Boolean_array **v33; // x4
+  System_Int32_array **v34; // x5
+  System_Int32_array *v35; // x6
+  System_Int32_array *v36; // x7
+  struct System_Int64_array *v37; // x0
+  System_String_array **v38; // x2
+  System_String_array **v39; // x3
+  System_Boolean_array **v40; // x4
+  System_Int32_array **v41; // x5
+  System_Int32_array *v42; // x6
+  System_Int32_array *v43; // x7
+  struct System_Int64_array *v44; // x0
+  System_String_array **v45; // x2
+  System_String_array **v46; // x3
+  System_Boolean_array **v47; // x4
+  System_Int32_array **v48; // x5
+  System_Int32_array *v49; // x6
+  System_Int32_array *v50; // x7
+  __int64 v51; // x0
+  __int64 v52; // x1
+  System_String_array **v53; // x2
+  System_String_array **v54; // x3
+  System_Boolean_array **v55; // x4
+  System_Int32_array **v56; // x5
+  System_Int32_array *v57; // x6
+  System_Int32_array *v58; // x7
+  struct System_String_array *v59; // x20
+  __int64 v60; // x0
+  System_Int32_array **v61; // x1
+  System_String_array **v62; // x2
+  System_String_array **v63; // x3
+  System_Boolean_array **v64; // x4
+  System_Int32_array **v65; // x5
+  System_Int32_array *v66; // x6
+  System_Int32_array *v67; // x7
+  System_Int32_array **v68; // x1
+  System_String_array **v69; // x2
+  System_String_array **v70; // x3
+  System_Boolean_array **v71; // x4
+  System_Int32_array **v72; // x5
+  System_Int32_array *v73; // x6
+  System_Int32_array *v74; // x7
+  System_Int32_array **v75; // x1
+  System_String_array **v76; // x2
   System_String_array **v77; // x3
   System_Boolean_array **v78; // x4
   System_Int32_array **v79; // x5
   System_Int32_array *v80; // x6
   System_Int32_array *v81; // x7
-  System_String_array **v82; // x3
-  System_Boolean_array **v83; // x4
-  System_Int32_array **v84; // x5
-  System_Int32_array *v85; // x6
-  System_Int32_array *v86; // x7
-  System_String_array **v87; // x3
-  System_Boolean_array **v88; // x4
-  System_Int32_array **v89; // x5
-  System_Int32_array *v90; // x6
-  System_Int32_array *v91; // x7
-  System_String_array **v92; // x3
-  System_Boolean_array **v93; // x4
-  System_Int32_array **v94; // x5
-  System_Int32_array *v95; // x6
-  System_Int32_array *v96; // x7
-  System_String_array **v97; // x3
-  System_Boolean_array **v98; // x4
-  System_Int32_array **v99; // x5
-  System_Int32_array *v100; // x6
-  System_Int32_array *v101; // x7
-  System_String_array **v102; // x3
-  System_Boolean_array **v103; // x4
-  System_Int32_array **v104; // x5
-  System_Int32_array *v105; // x6
-  System_Int32_array *v106; // x7
-  System_String_array **v107; // x2
-  System_String_array **v108; // x3
-  System_Boolean_array **v109; // x4
-  System_Int32_array **v110; // x5
-  System_Int32_array *v111; // x6
-  System_Int32_array *v112; // x7
+  System_Int32_array **v82; // x1
+  System_String_array **v83; // x2
+  System_String_array **v84; // x3
+  System_Boolean_array **v85; // x4
+  System_Int32_array **v86; // x5
+  System_Int32_array *v87; // x6
+  System_Int32_array *v88; // x7
+  System_Int32_array **v89; // x1
+  System_String_array **v90; // x2
+  System_String_array **v91; // x3
+  System_Boolean_array **v92; // x4
+  System_Int32_array **v93; // x5
+  System_Int32_array *v94; // x6
+  System_Int32_array *v95; // x7
+  System_Int32_array **v96; // x1
+  System_String_array **v97; // x2
+  System_String_array **v98; // x3
+  System_Boolean_array **v99; // x4
+  System_Int32_array **v100; // x5
+  System_Int32_array *v101; // x6
+  System_Int32_array *v102; // x7
+  System_Int32_array **v103; // x1
+  System_String_array **v104; // x2
+  System_String_array **v105; // x3
+  System_Boolean_array **v106; // x4
+  System_Int32_array **v107; // x5
+  System_Int32_array *v108; // x6
+  System_Int32_array *v109; // x7
+  System_Int32_array **v110; // x1
+  System_String_array **v111; // x2
+  System_String_array **v112; // x3
+  System_Boolean_array **v113; // x4
+  System_Int32_array **v114; // x5
+  System_Int32_array *v115; // x6
+  System_Int32_array *v116; // x7
+  System_Int32_array **v117; // x1
+  System_String_array **v118; // x2
+  System_String_array **v119; // x3
+  System_Boolean_array **v120; // x4
+  System_Int32_array **v121; // x5
+  System_Int32_array *v122; // x6
+  System_Int32_array *v123; // x7
+  __int64 v124; // x0
+  __int64 v125; // x0
 
-  if ( (byte_40FD297 & 1) == 0 )
+  if ( (byte_418AC19 & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, method);
-    sub_B16FFC(&long___TypeInfo, v4);
-    sub_B16FFC(&string___TypeInfo, v5);
-    sub_B16FFC(&UserServantLeaderEntity___TypeInfo, v6);
-    sub_B16FFC(&StringLiteral_12439/*"SUPPORT_KIND_4"*/, v7);
-    sub_B16FFC(&StringLiteral_12442/*"SUPPORT_KIND_7"*/, v8);
-    sub_B16FFC(&StringLiteral_12437/*"SUPPORT_KIND_2"*/, v9);
-    sub_B16FFC(&StringLiteral_12440/*"SUPPORT_KIND_5"*/, v10);
-    sub_B16FFC(&StringLiteral_12443/*"SUPPORT_KIND_8"*/, v11);
-    sub_B16FFC(&StringLiteral_12438/*"SUPPORT_KIND_3"*/, v12);
-    sub_B16FFC(&StringLiteral_12436/*"SUPPORT_KIND_1"*/, v13);
-    sub_B16FFC(&StringLiteral_12435/*"SUPPORT_KIND_0"*/, v14);
-    sub_B16FFC(&StringLiteral_12441/*"SUPPORT_KIND_6"*/, v15);
-    byte_40FD297 = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, method);
+    sub_B2C35C(&long___TypeInfo, v3);
+    sub_B2C35C(&string___TypeInfo, v4);
+    sub_B2C35C(&UserServantLeaderEntity___TypeInfo, v5);
+    sub_B2C35C(&StringLiteral_12495/*"SUPPORT_KIND_4"*/, v6);
+    sub_B2C35C(&StringLiteral_12498/*"SUPPORT_KIND_7"*/, v7);
+    sub_B2C35C(&StringLiteral_12493/*"SUPPORT_KIND_2"*/, v8);
+    sub_B2C35C(&StringLiteral_12496/*"SUPPORT_KIND_5"*/, v9);
+    sub_B2C35C(&StringLiteral_12499/*"SUPPORT_KIND_8"*/, v10);
+    sub_B2C35C(&StringLiteral_12494/*"SUPPORT_KIND_3"*/, v11);
+    sub_B2C35C(&StringLiteral_12492/*"SUPPORT_KIND_1"*/, v12);
+    sub_B2C35C(&StringLiteral_12491/*"SUPPORT_KIND_0"*/, v13);
+    sub_B2C35C(&StringLiteral_12497/*"SUPPORT_KIND_6"*/, v14);
+    byte_418AC19 = 1;
   }
-  v16 = BalanceConfig_TypeInfo;
+  v15 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v16 = BalanceConfig_TypeInfo;
+    v15 = BalanceConfig_TypeInfo;
   }
-  v17 = (struct UserServantLeaderEntity_array *)sub_B17014(
+  v16 = (struct UserServantLeaderEntity_array *)sub_B2C374(
                                                   UserServantLeaderEntity___TypeInfo,
-                                                  (unsigned int)v16->static_fields->SupportDeckMemberMax,
-                                                  v2);
-  this->fields.userServantLeaderEntityList = v17;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v17, v18, v19, v20, v21, v22, v23);
-  v25 = (struct System_Int64_array *)sub_B17014(
+                                                  (unsigned int)v15->static_fields->SupportDeckMemberMax);
+  this->fields.userServantLeaderEntityList = v16;
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v16, v17, v18, v19, v20, v21, v22);
+  v23 = (struct System_Int64_array *)sub_B2C374(
                                        long___TypeInfo,
-                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SupportDeckMemberMax,
-                                       v24);
-  this->fields.servantIdList = v25;
-  sub_B16F98(
+                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SupportDeckMemberMax);
+  this->fields.servantIdList = v23;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.servantIdList,
-    (System_Int32_array **)v25,
+    (System_Int32_array **)v23,
+    v24,
+    v25,
     v26,
     v27,
     v28,
-    v29,
-    v30,
-    v31);
-  v33 = (struct System_Int64_array *)sub_B17014(
+    v29);
+  v30 = (struct System_Int64_array *)sub_B2C374(
                                        long___TypeInfo,
-                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SupportDeckMemberMax,
-                                       v32);
-  this->fields.oldServantIdList = v33;
-  sub_B16F98(
+                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SupportDeckMemberMax);
+  this->fields.oldServantIdList = v30;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.oldServantIdList,
-    (System_Int32_array **)v33,
+    (System_Int32_array **)v30,
+    v31,
+    v32,
+    v33,
     v34,
     v35,
-    v36,
-    v37,
-    v38,
-    v39);
-  v41 = (struct System_Int64_array *)sub_B17014(
+    v36);
+  v37 = (struct System_Int64_array *)sub_B2C374(
                                        long___TypeInfo,
-                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SupportDeckMemberMax,
-                                       v40);
-  this->fields.equipIdList = v41;
-  sub_B16F98(
+                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SupportDeckMemberMax);
+  this->fields.equipIdList = v37;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.equipIdList,
-    (System_Int32_array **)v41,
+    (System_Int32_array **)v37,
+    v38,
+    v39,
+    v40,
+    v41,
     v42,
-    v43,
-    v44,
+    v43);
+  v44 = (struct System_Int64_array *)sub_B2C374(
+                                       long___TypeInfo,
+                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SupportDeckMemberMax);
+  this->fields.oldEquipIdList = v44;
+  sub_B2C2F8(
+    (BattleServantConfConponent_o *)&this->fields.oldEquipIdList,
+    (System_Int32_array **)v44,
     v45,
     v46,
-    v47);
-  v49 = (struct System_Int64_array *)sub_B17014(
-                                       long___TypeInfo,
-                                       (unsigned int)BalanceConfig_TypeInfo->static_fields->SupportDeckMemberMax,
-                                       v48);
-  this->fields.oldEquipIdList = v49;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.oldEquipIdList,
-    (System_Int32_array **)v49,
-    v50,
-    v51,
-    v52,
-    v53,
-    v54,
-    v55);
-  v57 = sub_B17014(string___TypeInfo, 9LL, v56);
-  if ( !v57 )
-    sub_B170D4();
-  v64 = (struct System_String_array *)v57;
-  v65 = StringLiteral_12435/*"SUPPORT_KIND_0"*/;
-  if ( StringLiteral_12435/*"SUPPORT_KIND_0"*/ )
+    v47,
+    v48,
+    v49,
+    v50);
+  v51 = sub_B2C374(string___TypeInfo, 9LL);
+  if ( !v51 )
+    sub_B2C434(0LL, v52);
+  v59 = (struct System_String_array *)v51;
+  v60 = StringLiteral_12491/*"SUPPORT_KIND_0"*/;
+  if ( StringLiteral_12491/*"SUPPORT_KIND_0"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12435/*"SUPPORT_KIND_0"*/, v64->obj.klass->_1.element_class);
-    if ( !v65 )
+    v60 = sub_B2C41C(StringLiteral_12491/*"SUPPORT_KIND_0"*/, v59->obj.klass->_1.element_class);
+    if ( !v60 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12435/*"SUPPORT_KIND_0"*/;
+    v61 = (System_Int32_array **)StringLiteral_12491/*"SUPPORT_KIND_0"*/;
   }
   else
   {
-    v66 = 0LL;
+    v61 = 0LL;
   }
-  if ( !v64->max_length )
+  if ( !v59->max_length )
     goto LABEL_53;
-  v64->m_Items[0] = (System_String_o *)v66;
-  sub_B16F98((BattleServantConfConponent_o *)v64->m_Items, v66, v58, v59, v60, v61, v62, v63);
-  v65 = StringLiteral_12436/*"SUPPORT_KIND_1"*/;
-  if ( StringLiteral_12436/*"SUPPORT_KIND_1"*/ )
+  v59->m_Items[0] = (System_String_o *)v61;
+  sub_B2C2F8((BattleServantConfConponent_o *)v59->m_Items, v61, v53, v54, v55, v56, v57, v58);
+  v60 = StringLiteral_12492/*"SUPPORT_KIND_1"*/;
+  if ( StringLiteral_12492/*"SUPPORT_KIND_1"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12436/*"SUPPORT_KIND_1"*/, v64->obj.klass->_1.element_class);
-    if ( !v65 )
+    v60 = sub_B2C41C(StringLiteral_12492/*"SUPPORT_KIND_1"*/, v59->obj.klass->_1.element_class);
+    if ( !v60 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12436/*"SUPPORT_KIND_1"*/;
+    v68 = (System_Int32_array **)StringLiteral_12492/*"SUPPORT_KIND_1"*/;
   }
   else
   {
-    v66 = 0LL;
+    v68 = 0LL;
   }
-  if ( v64->max_length <= 1 )
+  if ( v59->max_length <= 1 )
     goto LABEL_53;
-  v64->m_Items[1] = (System_String_o *)v66;
-  sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[1], v66, v58, v67, v68, v69, v70, v71);
-  v65 = StringLiteral_12437/*"SUPPORT_KIND_2"*/;
-  if ( StringLiteral_12437/*"SUPPORT_KIND_2"*/ )
+  v59->m_Items[1] = (System_String_o *)v68;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v59->m_Items[1], v68, v62, v63, v64, v65, v66, v67);
+  v60 = StringLiteral_12493/*"SUPPORT_KIND_2"*/;
+  if ( StringLiteral_12493/*"SUPPORT_KIND_2"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12437/*"SUPPORT_KIND_2"*/, v64->obj.klass->_1.element_class);
-    if ( !v65 )
+    v60 = sub_B2C41C(StringLiteral_12493/*"SUPPORT_KIND_2"*/, v59->obj.klass->_1.element_class);
+    if ( !v60 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12437/*"SUPPORT_KIND_2"*/;
+    v75 = (System_Int32_array **)StringLiteral_12493/*"SUPPORT_KIND_2"*/;
   }
   else
   {
-    v66 = 0LL;
+    v75 = 0LL;
   }
-  if ( v64->max_length <= 2 )
+  if ( v59->max_length <= 2 )
     goto LABEL_53;
-  v64->m_Items[2] = (System_String_o *)v66;
-  sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[2], v66, v58, v72, v73, v74, v75, v76);
-  v65 = StringLiteral_12438/*"SUPPORT_KIND_3"*/;
-  if ( StringLiteral_12438/*"SUPPORT_KIND_3"*/ )
+  v59->m_Items[2] = (System_String_o *)v75;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v59->m_Items[2], v75, v69, v70, v71, v72, v73, v74);
+  v60 = StringLiteral_12494/*"SUPPORT_KIND_3"*/;
+  if ( StringLiteral_12494/*"SUPPORT_KIND_3"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12438/*"SUPPORT_KIND_3"*/, v64->obj.klass->_1.element_class);
-    if ( !v65 )
+    v60 = sub_B2C41C(StringLiteral_12494/*"SUPPORT_KIND_3"*/, v59->obj.klass->_1.element_class);
+    if ( !v60 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12438/*"SUPPORT_KIND_3"*/;
+    v82 = (System_Int32_array **)StringLiteral_12494/*"SUPPORT_KIND_3"*/;
   }
   else
   {
-    v66 = 0LL;
+    v82 = 0LL;
   }
-  if ( v64->max_length <= 3 )
+  if ( v59->max_length <= 3 )
     goto LABEL_53;
-  v64->m_Items[3] = (System_String_o *)v66;
-  sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[3], v66, v58, v77, v78, v79, v80, v81);
-  v65 = StringLiteral_12439/*"SUPPORT_KIND_4"*/;
-  if ( StringLiteral_12439/*"SUPPORT_KIND_4"*/ )
+  v59->m_Items[3] = (System_String_o *)v82;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v59->m_Items[3], v82, v76, v77, v78, v79, v80, v81);
+  v60 = StringLiteral_12495/*"SUPPORT_KIND_4"*/;
+  if ( StringLiteral_12495/*"SUPPORT_KIND_4"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12439/*"SUPPORT_KIND_4"*/, v64->obj.klass->_1.element_class);
-    if ( !v65 )
+    v60 = sub_B2C41C(StringLiteral_12495/*"SUPPORT_KIND_4"*/, v59->obj.klass->_1.element_class);
+    if ( !v60 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12439/*"SUPPORT_KIND_4"*/;
+    v89 = (System_Int32_array **)StringLiteral_12495/*"SUPPORT_KIND_4"*/;
   }
   else
   {
-    v66 = 0LL;
+    v89 = 0LL;
   }
-  if ( v64->max_length <= 4 )
+  if ( v59->max_length <= 4 )
     goto LABEL_53;
-  v64->m_Items[4] = (System_String_o *)v66;
-  sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[4], v66, v58, v82, v83, v84, v85, v86);
-  v65 = StringLiteral_12440/*"SUPPORT_KIND_5"*/;
-  if ( StringLiteral_12440/*"SUPPORT_KIND_5"*/ )
+  v59->m_Items[4] = (System_String_o *)v89;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v59->m_Items[4], v89, v83, v84, v85, v86, v87, v88);
+  v60 = StringLiteral_12496/*"SUPPORT_KIND_5"*/;
+  if ( StringLiteral_12496/*"SUPPORT_KIND_5"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12440/*"SUPPORT_KIND_5"*/, v64->obj.klass->_1.element_class);
-    if ( !v65 )
+    v60 = sub_B2C41C(StringLiteral_12496/*"SUPPORT_KIND_5"*/, v59->obj.klass->_1.element_class);
+    if ( !v60 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12440/*"SUPPORT_KIND_5"*/;
+    v96 = (System_Int32_array **)StringLiteral_12496/*"SUPPORT_KIND_5"*/;
   }
   else
   {
-    v66 = 0LL;
+    v96 = 0LL;
   }
-  if ( v64->max_length <= 5 )
+  if ( v59->max_length <= 5 )
     goto LABEL_53;
-  v64->m_Items[5] = (System_String_o *)v66;
-  sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[5], v66, v58, v87, v88, v89, v90, v91);
-  v65 = StringLiteral_12441/*"SUPPORT_KIND_6"*/;
-  if ( StringLiteral_12441/*"SUPPORT_KIND_6"*/ )
+  v59->m_Items[5] = (System_String_o *)v96;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v59->m_Items[5], v96, v90, v91, v92, v93, v94, v95);
+  v60 = StringLiteral_12497/*"SUPPORT_KIND_6"*/;
+  if ( StringLiteral_12497/*"SUPPORT_KIND_6"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12441/*"SUPPORT_KIND_6"*/, v64->obj.klass->_1.element_class);
-    if ( !v65 )
+    v60 = sub_B2C41C(StringLiteral_12497/*"SUPPORT_KIND_6"*/, v59->obj.klass->_1.element_class);
+    if ( !v60 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12441/*"SUPPORT_KIND_6"*/;
+    v103 = (System_Int32_array **)StringLiteral_12497/*"SUPPORT_KIND_6"*/;
   }
   else
   {
-    v66 = 0LL;
+    v103 = 0LL;
   }
-  if ( v64->max_length <= 6 )
+  if ( v59->max_length <= 6 )
     goto LABEL_53;
-  v64->m_Items[6] = (System_String_o *)v66;
-  sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[6], v66, v58, v92, v93, v94, v95, v96);
-  v65 = StringLiteral_12442/*"SUPPORT_KIND_7"*/;
-  if ( StringLiteral_12442/*"SUPPORT_KIND_7"*/ )
+  v59->m_Items[6] = (System_String_o *)v103;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v59->m_Items[6], v103, v97, v98, v99, v100, v101, v102);
+  v60 = StringLiteral_12498/*"SUPPORT_KIND_7"*/;
+  if ( StringLiteral_12498/*"SUPPORT_KIND_7"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12442/*"SUPPORT_KIND_7"*/, v64->obj.klass->_1.element_class);
-    if ( !v65 )
+    v60 = sub_B2C41C(StringLiteral_12498/*"SUPPORT_KIND_7"*/, v59->obj.klass->_1.element_class);
+    if ( !v60 )
       goto LABEL_54;
-    v66 = (System_Int32_array **)StringLiteral_12442/*"SUPPORT_KIND_7"*/;
+    v110 = (System_Int32_array **)StringLiteral_12498/*"SUPPORT_KIND_7"*/;
   }
   else
   {
-    v66 = 0LL;
+    v110 = 0LL;
   }
-  if ( v64->max_length <= 7 )
+  if ( v59->max_length <= 7 )
     goto LABEL_53;
-  v64->m_Items[7] = (System_String_o *)v66;
-  sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[7], v66, v58, v97, v98, v99, v100, v101);
-  v65 = StringLiteral_12443/*"SUPPORT_KIND_8"*/;
-  if ( StringLiteral_12443/*"SUPPORT_KIND_8"*/ )
+  v59->m_Items[7] = (System_String_o *)v110;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v59->m_Items[7], v110, v104, v105, v106, v107, v108, v109);
+  v60 = StringLiteral_12499/*"SUPPORT_KIND_8"*/;
+  if ( StringLiteral_12499/*"SUPPORT_KIND_8"*/ )
   {
-    v65 = sub_B170BC(StringLiteral_12443/*"SUPPORT_KIND_8"*/, v64->obj.klass->_1.element_class);
-    if ( v65 )
+    v60 = sub_B2C41C(StringLiteral_12499/*"SUPPORT_KIND_8"*/, v59->obj.klass->_1.element_class);
+    if ( v60 )
     {
-      v66 = (System_Int32_array **)StringLiteral_12443/*"SUPPORT_KIND_8"*/;
+      v117 = (System_Int32_array **)StringLiteral_12499/*"SUPPORT_KIND_8"*/;
       goto LABEL_51;
     }
 LABEL_54:
-    sub_B170F4(v65);
-    sub_B170A0();
+    v125 = sub_B2C454(v60);
+    sub_B2C400(v125, 0LL);
   }
-  v66 = 0LL;
+  v117 = 0LL;
 LABEL_51:
-  if ( v64->max_length <= 8 )
+  if ( v59->max_length <= 8 )
   {
 LABEL_53:
-    sub_B17100(v65, v66, v58);
-    sub_B170A0();
+    v124 = sub_B2C460(v60);
+    sub_B2C400(v124, 0LL);
   }
-  v64->m_Items[8] = (System_String_o *)v66;
-  sub_B16F98((BattleServantConfConponent_o *)&v64->m_Items[8], v66, v58, v102, v103, v104, v105, v106);
-  this->fields.className = v64;
-  sub_B16F98(
+  v59->m_Items[8] = (System_String_o *)v117;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v59->m_Items[8], v117, v111, v112, v113, v114, v115, v116);
+  this->fields.className = v59;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.className,
-    (System_Int32_array **)v64,
-    v107,
-    v108,
-    v109,
-    v110,
-    v111,
-    v112);
+    (System_Int32_array **)v59,
+    v118,
+    v119,
+    v120,
+    v121,
+    v122,
+    v123);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall SupportServantData__CopyData(
         SupportServantData_o *this,
         SupportServantData_o *data,
         bool isInit,
         const MethodInfo *method)
 {
+  SupportServantData_o *v6; // x20
   __int64 v7; // x1
   __int64 v8; // x1
   struct UserServantLeaderEntity_array *userServantLeaderEntityList; // x8
-  struct UserServantLeaderEntity_array *v10; // x0
+  System_Int32_array **v10; // x0
   System_String_array **v11; // x2
   System_String_array **v12; // x3
   System_Boolean_array **v13; // x4
   System_Int32_array **v14; // x5
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
-  __int64 v17; // x0
-  __int64 v18; // x1
-  System_String_array **v19; // x2
-  __int64 v20; // x3
-  __int64 v21; // x4
-  struct UserServantLeaderEntity_array *v22; // x8
-  __int64 v23; // x25
-  __int64 v24; // x26
+  struct UserServantLeaderEntity_array *v17; // x8
+  __int64 v18; // x25
+  __int64 v19; // x26
   unsigned __int64 max_length; // x9
-  unsigned __int64 v26; // x28
-  struct UserServantLeaderEntity_array *v27; // x21
-  UserServantLeaderEntity_o *v28; // x24
-  UserServantLeaderEntity_o *v29; // x23
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
-  System_Array_o *servantIdList; // x0
-  Il2CppObject *v36; // x0
-  System_String_array **v37; // x2
-  System_String_array **v38; // x3
-  System_Boolean_array **v39; // x4
-  System_Int32_array **v40; // x5
-  System_Int32_array *v41; // x6
-  System_Int32_array *v42; // x7
-  Il2CppObject *v43; // x22
-  struct System_Int64_array *v44; // x1
-  System_Array_o *oldServantIdList; // x0
-  Il2CppObject *v46; // x0
-  System_String_array **v47; // x2
-  System_String_array **v48; // x3
-  System_Boolean_array **v49; // x4
-  System_Int32_array **v50; // x5
-  System_Int32_array *v51; // x6
-  System_Int32_array *v52; // x7
-  struct System_Int64_array *v53; // x1
-  System_Array_o *equipIdList; // x0
-  Il2CppObject *v55; // x0
-  System_String_array **v56; // x2
-  System_String_array **v57; // x3
-  System_Boolean_array **v58; // x4
-  System_Int32_array **v59; // x5
-  System_Int32_array *v60; // x6
-  System_Int32_array *v61; // x7
-  struct System_Int64_array *v62; // x1
-  System_Array_o *oldEquipIdList; // x0
-  Il2CppObject *v64; // x0
-  System_String_array **v65; // x2
-  System_String_array **v66; // x3
-  System_Boolean_array **v67; // x4
-  System_Int32_array **v68; // x5
-  System_Int32_array *v69; // x6
-  System_Int32_array *v70; // x7
-  struct System_Int64_array *v71; // x1
+  unsigned __int64 v21; // x28
+  unsigned int *v22; // x21
+  UserServantLeaderEntity_o *v23; // x24
+  UserServantLeaderEntity_o *v24; // x23
+  System_String_array **v25; // x2
+  System_String_array **v26; // x3
+  System_Boolean_array **v27; // x4
+  System_Int32_array **v28; // x5
+  System_Int32_array *v29; // x6
+  System_Int32_array *v30; // x7
+  Il2CppObject *v31; // x0
+  System_String_array **v32; // x2
+  System_String_array **v33; // x3
+  System_Boolean_array **v34; // x4
+  System_Int32_array **v35; // x5
+  System_Int32_array *v36; // x6
+  System_Int32_array *v37; // x7
+  Il2CppObject *v38; // x22
+  System_Int32_array **v39; // x1
+  Il2CppObject *v40; // x0
+  System_String_array **v41; // x2
+  System_String_array **v42; // x3
+  System_Boolean_array **v43; // x4
+  System_Int32_array **v44; // x5
+  System_Int32_array *v45; // x6
+  System_Int32_array *v46; // x7
+  System_Int32_array **v47; // x1
+  Il2CppObject *v48; // x0
+  System_String_array **v49; // x2
+  System_String_array **v50; // x3
+  System_Boolean_array **v51; // x4
+  System_Int32_array **v52; // x5
+  System_Int32_array *v53; // x6
+  System_Int32_array *v54; // x7
+  System_Int32_array **v55; // x1
+  Il2CppObject *v56; // x0
+  System_String_array **v57; // x2
+  System_String_array **v58; // x3
+  System_Boolean_array **v59; // x4
+  System_Int32_array **v60; // x5
+  System_Int32_array *v61; // x6
+  System_Int32_array *v62; // x7
+  System_Int32_array **v63; // x1
+  System_String_array **v64; // x2
+  System_String_array **v65; // x3
+  System_Boolean_array **v66; // x4
+  System_Int32_array **v67; // x5
+  System_Int32_array *v68; // x6
+  System_Int32_array *v69; // x7
+  System_Int32_array **eventSetupInfo; // x1
+  System_Int32_array **eventSetupInfo2; // x1
   System_String_array **v72; // x2
   System_String_array **v73; // x3
   System_Boolean_array **v74; // x4
   System_Int32_array **v75; // x5
   System_Int32_array *v76; // x6
   System_Int32_array *v77; // x7
-  struct EventUpValSetupInfo_o *eventSetupInfo; // x1
-  struct EventUpValSetupInfo_o *eventSetupInfo2; // x1
-  System_String_array **v80; // x2
-  System_String_array **v81; // x3
-  System_Boolean_array **v82; // x4
-  System_Int32_array **v83; // x5
-  System_Int32_array *v84; // x6
-  System_Int32_array *v85; // x7
-  struct QuestRestrictionInfo_o *questRestrictionInfo; // x1
-  System_String_array **v87; // x2
-  System_String_array **v88; // x3
-  System_Boolean_array **v89; // x4
-  System_Int32_array **v90; // x5
-  System_Int32_array *v91; // x6
-  System_Int32_array *v92; // x7
-  struct System_String_o *deckName_k__BackingField; // x1
-  System_String_array **v94; // x2
-  System_String_array **v95; // x3
-  System_Boolean_array **v96; // x4
-  System_Int32_array **v97; // x5
-  System_Int32_array *v98; // x6
-  System_Int32_array *v99; // x7
-  struct System_String_o *oldDeckName_k__BackingField; // x1
-  System_String_array **v101; // x2
-  System_String_array **v102; // x3
-  System_Boolean_array **v103; // x4
-  System_Int32_array **v104; // x5
-  System_Int32_array *v105; // x6
-  System_Int32_array *v106; // x7
-  bool v107; // [xsp+Ch] [xbp-54h]
+  System_Int32_array **questRestrictionInfo; // x1
+  System_String_array **v79; // x2
+  System_String_array **v80; // x3
+  System_Boolean_array **v81; // x4
+  System_Int32_array **v82; // x5
+  System_Int32_array *v83; // x6
+  System_Int32_array *v84; // x7
+  System_Int32_array **deckName_k__BackingField; // x1
+  System_String_array **v86; // x2
+  System_String_array **v87; // x3
+  System_Boolean_array **v88; // x4
+  System_Int32_array **v89; // x5
+  System_Int32_array *v90; // x6
+  System_Int32_array *v91; // x7
+  System_Int32_array **oldDeckName_k__BackingField; // x1
+  System_String_array **v93; // x2
+  System_String_array **v94; // x3
+  System_Boolean_array **v95; // x4
+  System_Int32_array **v96; // x5
+  System_Int32_array *v97; // x6
+  System_Int32_array *v98; // x7
+  __int64 v99; // x0
+  __int64 v100; // x0
+  bool v101; // [xsp+Ch] [xbp-54h]
 
-  if ( (byte_40FD2A9 & 1) == 0 )
+  v6 = this;
+  if ( (byte_418AC2B & 1) == 0 )
   {
-    sub_B16FFC(&long___TypeInfo, data);
-    sub_B16FFC(&UserServantLeaderEntity___TypeInfo, v7);
-    sub_B16FFC(&UserServantLeaderEntity_TypeInfo, v8);
-    byte_40FD2A9 = 1;
+    sub_B2C35C(&long___TypeInfo, data);
+    sub_B2C35C(&UserServantLeaderEntity___TypeInfo, v7);
+    this = (SupportServantData_o *)sub_B2C35C(&UserServantLeaderEntity_TypeInfo, v8);
+    byte_418AC2B = 1;
   }
   if ( !data )
     goto LABEL_14;
   userServantLeaderEntityList = data->fields.userServantLeaderEntityList;
-  v107 = isInit;
+  v101 = isInit;
   if ( !userServantLeaderEntityList )
     goto LABEL_14;
-  v10 = (struct UserServantLeaderEntity_array *)sub_B17014(
-                                                  UserServantLeaderEntity___TypeInfo,
-                                                  userServantLeaderEntityList->max_length,
-                                                  isInit);
-  this->fields.userServantLeaderEntityList = v10;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v10, v11, v12, v13, v14, v15, v16);
-  v22 = data->fields.userServantLeaderEntityList;
-  if ( !v22 )
+  v10 = (System_Int32_array **)sub_B2C374(UserServantLeaderEntity___TypeInfo, userServantLeaderEntityList->max_length);
+  v6->fields.userServantLeaderEntityList = (struct UserServantLeaderEntity_array *)v10;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v6->fields, v10, v11, v12, v13, v14, v15, v16);
+  v17 = data->fields.userServantLeaderEntityList;
+  if ( !v17 )
     goto LABEL_14;
-  v23 = 4LL;
-  v24 = 32LL;
+  v18 = 4LL;
+  v19 = 8LL;
   while ( 1 )
   {
-    max_length = v22->max_length;
-    v26 = v23 - 4;
-    if ( v23 - 4 >= (int)max_length )
+    max_length = v17->max_length;
+    v21 = v18 - 4;
+    if ( v18 - 4 >= (int)max_length )
       break;
-    if ( v26 >= max_length )
+    if ( v21 >= max_length )
       goto LABEL_38;
-    v27 = this->fields.userServantLeaderEntityList;
-    v28 = (UserServantLeaderEntity_o *)*((_QWORD *)&v22->obj.klass + v23);
-    v29 = (UserServantLeaderEntity_o *)sub_B170CC(UserServantLeaderEntity_TypeInfo, v18, v19, v20, v21);
-    UserServantLeaderEntity___ctor_34309304(v29, v28, 0LL);
-    if ( v27 )
+    v22 = (unsigned int *)v6->fields.userServantLeaderEntityList;
+    v23 = (UserServantLeaderEntity_o *)*((_QWORD *)&v17->obj.klass + v18);
+    v24 = (UserServantLeaderEntity_o *)sub_B2C42C(UserServantLeaderEntity_TypeInfo);
+    UserServantLeaderEntity___ctor_34300840(v24, v23, 0LL);
+    if ( v22 )
     {
-      if ( v29 )
+      if ( v24 )
       {
-        v17 = sub_B170BC(v29, v27->obj.klass->_1.element_class);
-        if ( !v17 )
+        this = (SupportServantData_o *)sub_B2C41C(v24, *(_QWORD *)(*(_QWORD *)v22 + 64LL));
+        if ( !this )
         {
-          sub_B170F4(0LL);
-          sub_B170A0();
+          v100 = sub_B2C454(0LL);
+          sub_B2C400(v100, 0LL);
         }
       }
-      if ( v26 >= v27->max_length )
+      if ( v21 >= v22[6] )
       {
 LABEL_38:
-        sub_B17100(v17, v18, v19);
-        sub_B170A0();
+        v99 = sub_B2C460(this);
+        sub_B2C400(v99, 0LL);
       }
-      *((_QWORD *)&v27->obj.klass + v23) = v29;
-      sub_B16F98(
-        (BattleServantConfConponent_o *)((char *)v27 + v24),
-        (System_Int32_array **)v29,
-        v19,
-        v30,
-        v31,
-        v32,
-        v33,
-        v34);
-      v22 = data->fields.userServantLeaderEntityList;
-      ++v23;
-      v24 += 8LL;
-      if ( v22 )
+      *(_QWORD *)&v22[2 * v18] = v24;
+      sub_B2C2F8((BattleServantConfConponent_o *)&v22[v19], (System_Int32_array **)v24, v25, v26, v27, v28, v29, v30);
+      v17 = data->fields.userServantLeaderEntityList;
+      ++v18;
+      v19 += 2LL;
+      if ( v17 )
         continue;
     }
     goto LABEL_14;
   }
-  servantIdList = (System_Array_o *)data->fields.servantIdList;
-  if ( !servantIdList )
+  this = (SupportServantData_o *)data->fields.servantIdList;
+  if ( !this )
     goto LABEL_14;
-  v36 = System_Array__Clone(servantIdList, 0LL);
-  if ( v36 )
+  v31 = System_Array__Clone((System_Array_o *)this, 0LL);
+  if ( v31 )
   {
-    v43 = v36;
-    v44 = (struct System_Int64_array *)sub_B170BC(v36, long___TypeInfo);
-    if ( !v44 )
+    v38 = v31;
+    v39 = (System_Int32_array **)sub_B2C41C(v31, long___TypeInfo);
+    if ( !v39 )
     {
 LABEL_33:
-      sub_B173C8(v43);
+      sub_B2C728(v38);
       goto LABEL_34;
     }
   }
   else
   {
-    v44 = 0LL;
+    v39 = 0LL;
   }
-  this->fields.servantIdList = v44;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.servantIdList,
-    (System_Int32_array **)v44,
-    v37,
-    v38,
-    v39,
-    v40,
-    v41,
-    v42);
-  oldServantIdList = (System_Array_o *)data->fields.oldServantIdList;
-  if ( !oldServantIdList )
+  v6->fields.servantIdList = (struct System_Int64_array *)v39;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v6->fields.servantIdList, v39, v32, v33, v34, v35, v36, v37);
+  this = (SupportServantData_o *)data->fields.oldServantIdList;
+  if ( !this )
     goto LABEL_14;
-  v46 = System_Array__Clone(oldServantIdList, 0LL);
-  if ( v46 )
+  v40 = System_Array__Clone((System_Array_o *)this, 0LL);
+  if ( v40 )
   {
-    v43 = v46;
-    v53 = (struct System_Int64_array *)sub_B170BC(v46, long___TypeInfo);
-    if ( !v53 )
+    v38 = v40;
+    v47 = (System_Int32_array **)sub_B2C41C(v40, long___TypeInfo);
+    if ( !v47 )
       goto LABEL_33;
   }
   else
   {
-    v53 = 0LL;
+    v47 = 0LL;
   }
-  this->fields.oldServantIdList = v53;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.oldServantIdList,
-    (System_Int32_array **)v53,
-    v47,
-    v48,
-    v49,
-    v50,
-    v51,
-    v52);
-  equipIdList = (System_Array_o *)data->fields.equipIdList;
-  if ( !equipIdList )
+  v6->fields.oldServantIdList = (struct System_Int64_array *)v47;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v6->fields.oldServantIdList, v47, v41, v42, v43, v44, v45, v46);
+  this = (SupportServantData_o *)data->fields.equipIdList;
+  if ( !this )
     goto LABEL_14;
-  v55 = System_Array__Clone(equipIdList, 0LL);
-  if ( v55 )
+  v48 = System_Array__Clone((System_Array_o *)this, 0LL);
+  if ( v48 )
   {
-    v43 = v55;
-    v62 = (struct System_Int64_array *)sub_B170BC(v55, long___TypeInfo);
-    if ( !v62 )
+    v38 = v48;
+    v55 = (System_Int32_array **)sub_B2C41C(v48, long___TypeInfo);
+    if ( !v55 )
       goto LABEL_33;
   }
   else
   {
-    v62 = 0LL;
+    v55 = 0LL;
   }
-  this->fields.equipIdList = v62;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.equipIdList,
-    (System_Int32_array **)v62,
-    v56,
-    v57,
-    v58,
-    v59,
-    v60,
-    v61);
-  oldEquipIdList = (System_Array_o *)data->fields.oldEquipIdList;
-  if ( !oldEquipIdList )
+  v6->fields.equipIdList = (struct System_Int64_array *)v55;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v6->fields.equipIdList, v55, v49, v50, v51, v52, v53, v54);
+  this = (SupportServantData_o *)data->fields.oldEquipIdList;
+  if ( !this )
 LABEL_14:
-    sub_B170D4();
-  v64 = System_Array__Clone(oldEquipIdList, 0LL);
-  if ( v64 )
+    sub_B2C434(this, data);
+  v56 = System_Array__Clone((System_Array_o *)this, 0LL);
+  if ( v56 )
   {
-    v43 = v64;
-    v71 = (struct System_Int64_array *)sub_B170BC(v64, long___TypeInfo);
-    if ( v71 )
+    v38 = v56;
+    v63 = (System_Int32_array **)sub_B2C41C(v56, long___TypeInfo);
+    if ( v63 )
       goto LABEL_35;
     goto LABEL_33;
   }
 LABEL_34:
-  v71 = 0LL;
+  v63 = 0LL;
 LABEL_35:
-  this->fields.oldEquipIdList = v71;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.oldEquipIdList,
-    (System_Int32_array **)v71,
-    v65,
-    v66,
-    v67,
-    v68,
-    v69,
-    v70);
-  if ( v107 )
+  v6->fields.oldEquipIdList = (struct System_Int64_array *)v63;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v6->fields.oldEquipIdList, v63, v57, v58, v59, v60, v61, v62);
+  if ( v101 )
   {
-    this->fields.isFriendInfo = data->fields.isFriendInfo;
-    this->fields.kind = data->fields.kind;
-    this->fields.isSelectServant = data->fields.isSelectServant;
-    eventSetupInfo = data->fields.eventSetupInfo;
-    this->fields.eventSetupInfo = eventSetupInfo;
-    sub_B16F98(
-      (BattleServantConfConponent_o *)&this->fields.eventSetupInfo,
-      (System_Int32_array **)eventSetupInfo,
+    v6->fields.isFriendInfo = data->fields.isFriendInfo;
+    v6->fields.kind = data->fields.kind;
+    v6->fields.isSelectServant = data->fields.isSelectServant;
+    eventSetupInfo = (System_Int32_array **)data->fields.eventSetupInfo;
+    v6->fields.eventSetupInfo = (struct EventUpValSetupInfo_o *)eventSetupInfo;
+    sub_B2C2F8((BattleServantConfConponent_o *)&v6->fields.eventSetupInfo, eventSetupInfo, v64, v65, v66, v67, v68, v69);
+    eventSetupInfo2 = (System_Int32_array **)data->fields.eventSetupInfo2;
+    v6->fields.eventSetupInfo2 = (struct EventUpValSetupInfo_o *)eventSetupInfo2;
+    sub_B2C2F8(
+      (BattleServantConfConponent_o *)&v6->fields.eventSetupInfo2,
+      eventSetupInfo2,
       v72,
       v73,
       v74,
       v75,
       v76,
       v77);
-    eventSetupInfo2 = data->fields.eventSetupInfo2;
-    this->fields.eventSetupInfo2 = eventSetupInfo2;
-    sub_B16F98(
-      (BattleServantConfConponent_o *)&this->fields.eventSetupInfo2,
-      (System_Int32_array **)eventSetupInfo2,
+    questRestrictionInfo = (System_Int32_array **)data->fields.questRestrictionInfo;
+    v6->fields.questRestrictionInfo = (struct QuestRestrictionInfo_o *)questRestrictionInfo;
+    sub_B2C2F8(
+      (BattleServantConfConponent_o *)&v6->fields.questRestrictionInfo,
+      questRestrictionInfo,
+      v79,
       v80,
       v81,
       v82,
       v83,
-      v84,
-      v85);
-    questRestrictionInfo = data->fields.questRestrictionInfo;
-    this->fields.questRestrictionInfo = questRestrictionInfo;
-    sub_B16F98(
-      (BattleServantConfConponent_o *)&this->fields.questRestrictionInfo,
-      (System_Int32_array **)questRestrictionInfo,
+      v84);
+    v6->fields.pushUserServantId = data->fields.pushUserServantId;
+    v6->fields._deckId_k__BackingField = data->fields._deckId_k__BackingField;
+    deckName_k__BackingField = (System_Int32_array **)data->fields._deckName_k__BackingField;
+    v6->fields._deckName_k__BackingField = (struct System_String_o *)deckName_k__BackingField;
+    sub_B2C2F8(
+      (BattleServantConfConponent_o *)&v6->fields._deckName_k__BackingField,
+      deckName_k__BackingField,
+      v86,
       v87,
       v88,
       v89,
       v90,
-      v91,
-      v92);
-    this->fields.pushUserServantId = data->fields.pushUserServantId;
-    this->fields._deckId_k__BackingField = data->fields._deckId_k__BackingField;
-    deckName_k__BackingField = data->fields._deckName_k__BackingField;
-    this->fields._deckName_k__BackingField = deckName_k__BackingField;
-    sub_B16F98(
-      (BattleServantConfConponent_o *)&this->fields._deckName_k__BackingField,
-      (System_Int32_array **)deckName_k__BackingField,
+      v91);
+    oldDeckName_k__BackingField = (System_Int32_array **)data->fields._oldDeckName_k__BackingField;
+    v6->fields._oldDeckName_k__BackingField = (struct System_String_o *)oldDeckName_k__BackingField;
+    sub_B2C2F8(
+      (BattleServantConfConponent_o *)&v6->fields._oldDeckName_k__BackingField,
+      oldDeckName_k__BackingField,
+      v93,
       v94,
       v95,
       v96,
       v97,
-      v98,
-      v99);
-    oldDeckName_k__BackingField = data->fields._oldDeckName_k__BackingField;
-    this->fields._oldDeckName_k__BackingField = oldDeckName_k__BackingField;
-    sub_B16F98(
-      (BattleServantConfConponent_o *)&this->fields._oldDeckName_k__BackingField,
-      (System_Int32_array **)oldDeckName_k__BackingField,
-      v101,
-      v102,
-      v103,
-      v104,
-      v105,
-      v106);
+      v98);
   }
 }
 
@@ -729,41 +681,40 @@ SupportServantData_FollowerData_o *__fastcall SupportServantData__GetFollowerDat
         int32_t classPos,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
-  SupportServantData_o *v6; // x20
+  SupportServantData_o *v4; // x20
   struct System_Int64_array *servantIdList; // x8
   struct System_Int64_array *oldServantIdList; // x9
   struct System_Int64_array *equipIdList; // x8
   struct System_Int64_array *oldEquipIdList; // x9
-  SupportServantData_FollowerData_o *v11; // x21
-  struct System_Int64_array *v12; // x8
-  struct System_Int64_array *v13; // x8
+  SupportServantData_FollowerData_o *v9; // x21
+  struct System_Int64_array *v10; // x8
+  struct System_Int64_array *v11; // x8
+  __int64 v13; // x0
 
-  v6 = this;
-  if ( (byte_40FD2A2 & 1) == 0 )
+  v4 = this;
+  if ( (byte_418AC24 & 1) == 0 )
   {
-    this = (SupportServantData_o *)sub_B16FFC(&SupportServantData_FollowerData_TypeInfo, *(_QWORD *)&classPos);
-    byte_40FD2A2 = 1;
+    this = (SupportServantData_o *)sub_B2C35C(&SupportServantData_FollowerData_TypeInfo, *(_QWORD *)&classPos);
+    byte_418AC24 = 1;
   }
-  servantIdList = v6->fields.servantIdList;
+  servantIdList = v4->fields.servantIdList;
   if ( !servantIdList )
     goto LABEL_21;
   if ( servantIdList->max_length <= classPos )
     goto LABEL_22;
-  oldServantIdList = v6->fields.oldServantIdList;
+  oldServantIdList = v4->fields.oldServantIdList;
   if ( !oldServantIdList )
     goto LABEL_21;
   if ( oldServantIdList->max_length <= classPos )
     goto LABEL_22;
   if ( servantIdList->m_Items[classPos] != oldServantIdList->m_Items[classPos] )
     goto LABEL_14;
-  equipIdList = v6->fields.equipIdList;
+  equipIdList = v4->fields.equipIdList;
   if ( !equipIdList )
     goto LABEL_21;
   if ( equipIdList->max_length <= classPos )
     goto LABEL_22;
-  oldEquipIdList = v6->fields.oldEquipIdList;
+  oldEquipIdList = v4->fields.oldEquipIdList;
   if ( !oldEquipIdList )
     goto LABEL_21;
   if ( oldEquipIdList->max_length <= classPos )
@@ -771,39 +722,34 @@ SupportServantData_FollowerData_o *__fastcall SupportServantData__GetFollowerDat
   if ( equipIdList->m_Items[classPos] != oldEquipIdList->m_Items[classPos] )
   {
 LABEL_14:
-    v11 = (SupportServantData_FollowerData_o *)sub_B170CC(
-                                                 SupportServantData_FollowerData_TypeInfo,
-                                                 *(_QWORD *)&classPos,
-                                                 method,
-                                                 v3,
-                                                 v4);
-    SupportServantData_FollowerData___ctor(v11, 0LL);
-    if ( v11 )
+    v9 = (SupportServantData_FollowerData_o *)sub_B2C42C(SupportServantData_FollowerData_TypeInfo);
+    SupportServantData_FollowerData___ctor(v9, 0LL);
+    if ( v9 )
     {
-      v11->fields.supportDeckId = v6->fields._deckId_k__BackingField;
-      v11->fields.classId = classPos;
-      v12 = v6->fields.servantIdList;
-      if ( v12 )
+      v9->fields.supportDeckId = v4->fields._deckId_k__BackingField;
+      v9->fields.classId = classPos;
+      v10 = v4->fields.servantIdList;
+      if ( v10 )
       {
-        if ( v12->max_length <= classPos )
+        if ( v10->max_length <= classPos )
           goto LABEL_22;
-        v11->fields.userSvtId = v12->m_Items[classPos];
-        v13 = v6->fields.equipIdList;
-        if ( v13 )
+        v9->fields.userSvtId = v10->m_Items[classPos];
+        v11 = v4->fields.equipIdList;
+        if ( v11 )
         {
-          if ( v13->max_length > classPos )
+          if ( v11->max_length > classPos )
           {
-            v11->fields.userSvtEquipId = v13->m_Items[classPos];
-            return v11;
+            v9->fields.userSvtEquipId = v11->m_Items[classPos];
+            return v9;
           }
 LABEL_22:
-          sub_B17100(this, *(_QWORD *)&classPos, method);
-          sub_B170A0();
+          v13 = sub_B2C460(this);
+          sub_B2C400(v13, 0LL);
         }
       }
     }
 LABEL_21:
-    sub_B170D4();
+    sub_B2C434(this, *(_QWORD *)&classPos);
   }
   return 0LL;
 }
@@ -832,90 +778,88 @@ void __fastcall SupportServantData__Init(
   struct System_Int64_array *equipIdList; // x8
   struct System_Int64_array *oldServantIdList; // x8
   struct System_Int64_array *oldEquipIdList; // x8
-  UserServantLeaderEntity_o *EquipUserSvtId; // x0
+  int64_t Instance; // x0
   unsigned __int64 v16; // x24
   UserGameEntity_o *SelfUserGame; // x0
   UserGameEntity_o *v18; // x21
-  WebViewManager_o *Instance; // x0
-  UserServantLeaderMaster_o *MasterData_WarQuestSelectionMaster; // x0
   struct UserServantLeaderEntity_array *SupportDeck; // x0
-  System_String_array **v22; // x2
-  System_String_array **v23; // x3
-  System_Boolean_array **v24; // x4
-  System_Int32_array **v25; // x5
-  System_Int32_array *v26; // x6
-  System_Int32_array *v27; // x7
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
+  System_String_array **v20; // x2
+  System_String_array **v21; // x3
+  System_Boolean_array **v22; // x4
+  System_Int32_array **v23; // x5
+  System_Int32_array *v24; // x6
+  System_Int32_array *v25; // x7
+  System_String_array **v26; // x2
+  System_String_array **v27; // x3
+  System_Boolean_array **v28; // x4
+  System_Int32_array **v29; // x5
+  System_Int32_array *v30; // x6
+  System_Int32_array *v31; // x7
   struct UserServantLeaderEntity_array *userServantLeaderEntityList; // x23
   int max_length; // w8
-  unsigned int v35; // w24
-  struct System_Int64_array *v36; // x9
-  __int64 classId; // x8
-  struct System_Int64_array *v38; // x10
-  int64_t userSvtId; // x11
-  __int64 v40; // x25
-  struct System_Int64_array *v41; // x26
-  struct System_Int64_array *v42; // x27
-  System_String_array **v43; // x2
-  System_String_array **v44; // x3
-  System_Boolean_array **v45; // x4
-  System_Int32_array **v46; // x5
-  System_Int32_array *v47; // x6
-  System_Int32_array *v48; // x7
-  System_String_array **v49; // x2
-  System_String_array **v50; // x3
-  System_Boolean_array **v51; // x4
-  System_Int32_array **v52; // x5
-  System_Int32_array *v53; // x6
-  System_Int32_array *v54; // x7
-  WebViewManager_o *v55; // x0
-  UserSupportDeckMaster_o *v56; // x0
+  unsigned int v34; // w24
+  struct System_Int64_array *v35; // x9
+  __int64 v36; // x8
+  struct System_Int64_array *v37; // x10
+  int64_t v38; // x11
+  __int64 v39; // x25
+  struct System_Int64_array *v40; // x26
+  struct System_Int64_array *v41; // x27
+  System_String_array **v42; // x2
+  System_String_array **v43; // x3
+  System_Boolean_array **v44; // x4
+  System_Int32_array **v45; // x5
+  System_Int32_array *v46; // x6
+  System_Int32_array *v47; // x7
+  System_String_array **v48; // x2
+  System_String_array **v49; // x3
+  System_Boolean_array **v50; // x4
+  System_Int32_array **v51; // x5
+  System_Int32_array *v52; // x6
+  System_Int32_array *v53; // x7
   struct System_String_o *DeckName; // x0
-  System_String_array **v58; // x2
-  System_String_array **v59; // x3
-  System_Boolean_array **v60; // x4
-  System_Int32_array **v61; // x5
-  System_Int32_array *v62; // x6
-  System_Int32_array *v63; // x7
-  const MethodInfo *v64; // x1
-  System_String_array **v65; // x2
-  System_String_array **v66; // x3
-  System_Boolean_array **v67; // x4
-  System_Int32_array **v68; // x5
-  System_Int32_array *v69; // x6
-  System_Int32_array *v70; // x7
+  System_String_array **v55; // x2
+  System_String_array **v56; // x3
+  System_Boolean_array **v57; // x4
+  System_Int32_array **v58; // x5
+  System_Int32_array *v59; // x6
+  System_Int32_array *v60; // x7
+  const MethodInfo *v61; // x1
+  System_String_array **v62; // x2
+  System_String_array **v63; // x3
+  System_Boolean_array **v64; // x4
+  System_Int32_array **v65; // x5
+  System_Int32_array *v66; // x6
+  System_Int32_array *v67; // x7
   struct System_String_o *DefaultDeckName; // x0
-  System_String_array **v72; // x2
-  System_String_array **v73; // x3
-  System_Boolean_array **v74; // x4
-  System_Int32_array **v75; // x5
-  System_Int32_array *v76; // x6
-  System_Int32_array *v77; // x7
+  System_String_array **v69; // x2
+  System_String_array **v70; // x3
+  System_Boolean_array **v71; // x4
+  System_Int32_array **v72; // x5
+  System_Int32_array *v73; // x6
+  System_Int32_array *v74; // x7
   struct System_String_o *deckName_k__BackingField; // x1
+  __int64 v76; // x0
 
-  if ( (byte_40FD298 & 1) == 0 )
+  if ( (byte_418AC1A & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&deckId);
-    sub_B16FFC(&Method_DataManager_GetMasterData_UserServantLeaderMaster___, v7);
-    sub_B16FFC(&Method_DataManager_GetMasterData_UserSupportDeckMaster___, v8);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_40FD298 = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, *(_QWORD *)&deckId);
+    sub_B2C35C(&Method_DataManager_GetMasterData_UserServantLeaderMaster___, v7);
+    sub_B2C35C(&Method_DataManager_GetMasterData_UserSupportDeckMaster___, v8);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_418AC1A = 1;
   }
   for ( i = 4LL; ; ++i )
   {
-    EquipUserSvtId = (UserServantLeaderEntity_o *)BalanceConfig_TypeInfo;
+    Instance = (int64_t)BalanceConfig_TypeInfo;
     v16 = i - 4;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      EquipUserSvtId = (UserServantLeaderEntity_o *)BalanceConfig_TypeInfo;
+      Instance = (int64_t)BalanceConfig_TypeInfo;
     }
-    if ( (__int64)v16 >= *(int *)(EquipUserSvtId[2].fields.userId + 164) )
+    if ( (__int64)v16 >= *(int *)(*(_QWORD *)(Instance + 184) + 164LL) )
       break;
     servantIdList = this->fields.servantIdList;
     if ( !servantIdList )
@@ -945,158 +889,161 @@ void __fastcall SupportServantData__Init(
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   this->fields._deckId_k__BackingField = deckId;
   v18 = SelfUserGame;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
-  MasterData_WarQuestSelectionMaster = (UserServantLeaderMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                      (DataManager_o *)Instance,
-                                                                      (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_UserServantLeaderMaster___);
-  if ( !MasterData_WarQuestSelectionMaster )
+  Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                        (DataManager_o *)Instance,
+                        (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_UserServantLeaderMaster___);
+  if ( !Instance )
     goto LABEL_41;
   SupportDeck = UserServantLeaderMaster__getSupportDeck(
-                  MasterData_WarQuestSelectionMaster,
+                  (UserServantLeaderMaster_o *)Instance,
                   this->fields._deckId_k__BackingField,
                   0LL);
   this->fields.userServantLeaderEntityList = SupportDeck;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)SupportDeck,
+    v20,
+    v21,
     v22,
     v23,
     v24,
-    v25,
-    v26,
-    v27);
+    v25);
   userServantLeaderEntityList = this->fields.userServantLeaderEntityList;
   if ( !userServantLeaderEntityList )
     goto LABEL_41;
   max_length = userServantLeaderEntityList->max_length;
   if ( max_length >= 1 )
   {
-    v35 = 0;
-    while ( v35 < max_length )
+    v34 = 0;
+    while ( v34 < max_length )
     {
-      EquipUserSvtId = userServantLeaderEntityList->m_Items[v35];
-      if ( !EquipUserSvtId )
+      Instance = (int64_t)userServantLeaderEntityList->m_Items[v34];
+      if ( !Instance )
         goto LABEL_41;
-      if ( EquipUserSvtId->fields.supportDeckId == this->fields._deckId_k__BackingField )
+      if ( *(_DWORD *)(Instance + 48) == this->fields._deckId_k__BackingField )
       {
-        v36 = this->fields.oldServantIdList;
-        if ( !v36 )
+        v35 = this->fields.oldServantIdList;
+        if ( !v35 )
           goto LABEL_41;
-        classId = EquipUserSvtId->fields.classId;
-        if ( (unsigned int)classId >= v36->max_length )
+        v36 = *(int *)(Instance + 52);
+        if ( (unsigned int)v36 >= v35->max_length )
           break;
-        v38 = this->fields.servantIdList;
-        userSvtId = EquipUserSvtId->fields.userSvtId;
-        v36->m_Items[classId] = userSvtId;
-        if ( !v38 )
+        v37 = this->fields.servantIdList;
+        v38 = *(_QWORD *)(Instance + 56);
+        v35->m_Items[v36] = v38;
+        if ( !v37 )
           goto LABEL_41;
-        if ( (unsigned int)classId >= v38->max_length )
+        if ( (unsigned int)v36 >= v37->max_length )
           break;
-        v38->m_Items[classId] = userSvtId;
-        v40 = EquipUserSvtId->fields.classId;
-        v41 = this->fields.equipIdList;
-        v42 = this->fields.oldEquipIdList;
-        EquipUserSvtId = (UserServantLeaderEntity_o *)UserServantLeaderEntity__getEquipUserSvtId(EquipUserSvtId, 0LL);
-        if ( !v42 )
-          goto LABEL_41;
-        if ( (unsigned int)v40 >= v42->max_length )
-          break;
-        v42->m_Items[v40] = (int64_t)EquipUserSvtId;
+        v37->m_Items[v36] = v38;
+        v39 = *(int *)(Instance + 52);
+        v40 = this->fields.equipIdList;
+        v41 = this->fields.oldEquipIdList;
+        Instance = UserServantLeaderEntity__getEquipUserSvtId((UserServantLeaderEntity_o *)Instance, 0LL);
         if ( !v41 )
           goto LABEL_41;
-        if ( (unsigned int)v40 >= v41->max_length )
+        if ( (unsigned int)v39 >= v41->max_length )
           break;
-        v41->m_Items[v40] = (int64_t)EquipUserSvtId;
+        v41->m_Items[v39] = Instance;
+        if ( !v40 )
+          goto LABEL_41;
+        if ( (unsigned int)v39 >= v40->max_length )
+          break;
+        v40->m_Items[v39] = Instance;
       }
       max_length = userServantLeaderEntityList->max_length;
-      if ( (int)++v35 >= max_length )
+      if ( (int)++v34 >= max_length )
         goto LABEL_35;
     }
 LABEL_42:
-    sub_B17100(EquipUserSvtId, *(_QWORD *)&deckId, eventUpSetupInfo);
-    sub_B170A0();
+    v76 = sub_B2C460(Instance);
+    sub_B2C400(v76, 0LL);
   }
 LABEL_35:
   this->fields.isFriendInfo = 0;
   this->fields.isSelectServant = 0;
   this->fields.kind = 1;
   this->fields.eventSetupInfo2 = eventUpSetupInfo;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventSetupInfo2,
     (System_Int32_array **)eventUpSetupInfo,
-    (System_String_array **)eventUpSetupInfo,
+    v26,
+    v27,
     v28,
     v29,
     v30,
-    v31,
-    v32);
+    v31);
   this->fields.eventSetupInfo = eventUpSetupInfo;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventSetupInfo,
     (System_Int32_array **)eventUpSetupInfo,
+    v42,
     v43,
     v44,
     v45,
     v46,
-    v47,
-    v48);
+    v47);
   this->fields.questRestrictionInfo = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.questRestrictionInfo, 0LL, v49, v50, v51, v52, v53, v54);
-  v55 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !v55 )
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.questRestrictionInfo, 0LL, v48, v49, v50, v51, v52, v53);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !Instance )
     goto LABEL_41;
-  v56 = (UserSupportDeckMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                     (DataManager_o *)v55,
-                                     (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_UserSupportDeckMaster___);
-  if ( !v56 )
+  Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                        (DataManager_o *)Instance,
+                        (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_UserSupportDeckMaster___);
+  if ( !Instance )
     goto LABEL_41;
-  DeckName = UserSupportDeckMaster__getDeckName(v56, this->fields._deckId_k__BackingField, 0LL);
+  DeckName = UserSupportDeckMaster__getDeckName(
+               (UserSupportDeckMaster_o *)Instance,
+               this->fields._deckId_k__BackingField,
+               0LL);
   this->fields._deckName_k__BackingField = DeckName;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._deckName_k__BackingField,
     (System_Int32_array **)DeckName,
+    v55,
+    v56,
+    v57,
     v58,
     v59,
-    v60,
-    v61,
-    v62,
-    v63);
+    v60);
   if ( System_String__IsNullOrEmpty(this->fields._deckName_k__BackingField, 0LL) )
   {
-    DefaultDeckName = SupportServantData__getDefaultDeckName(this, v64);
+    DefaultDeckName = SupportServantData__getDefaultDeckName(this, v61);
     this->fields._deckName_k__BackingField = DefaultDeckName;
-    sub_B16F98(
+    sub_B2C2F8(
       (BattleServantConfConponent_o *)&this->fields._deckName_k__BackingField,
       (System_Int32_array **)DefaultDeckName,
+      v69,
+      v70,
+      v71,
       v72,
       v73,
-      v74,
-      v75,
-      v76,
-      v77);
+      v74);
   }
   deckName_k__BackingField = this->fields._deckName_k__BackingField;
   this->fields._oldDeckName_k__BackingField = deckName_k__BackingField;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._oldDeckName_k__BackingField,
     (System_Int32_array **)deckName_k__BackingField,
+    v62,
+    v63,
+    v64,
     v65,
     v66,
-    v67,
-    v68,
-    v69,
-    v70);
+    v67);
   if ( !v18 )
 LABEL_41:
-    sub_B170D4();
+    sub_B2C434(Instance, *(_QWORD *)&deckId);
   this->fields.pushUserServantId = v18->fields.pushUserSvtId;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SupportServantData__Init_30856296(
+void __fastcall SupportServantData__Init_30842024(
         SupportServantData_o *this,
         OtherUserGameEntity_o *otherData,
         int32_t friendKind,
@@ -1112,109 +1059,105 @@ void __fastcall SupportServantData__Init_30856296(
   struct UserServantLeaderEntity_array *userServantLeaderEntityList; // x21
   UserServantLeaderEntity_o *v16; // x27
   __int64 ServantLeaderInfo; // x0
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
-  struct UserServantLeaderEntity_array *v23; // x8
-  ServantLeaderInfo_o *v24; // x1
-  UserServantLeaderEntity_o *v25; // x0
+  ServantLeaderInfo_o *v18; // x1
+  System_String_array **v19; // x2
+  System_String_array **v20; // x3
+  System_Boolean_array **v21; // x4
+  System_Int32_array **v22; // x5
+  System_Int32_array *v23; // x6
+  System_Int32_array *v24; // x7
+  struct UserServantLeaderEntity_array *v25; // x8
   struct System_Int64_array *oldServantIdList; // x21
   struct System_Int64_array *servantIdList; // x27
   struct System_Int64_array *v28; // x8
   struct UserServantLeaderEntity_array *v29; // x8
   UserServantLeaderEntity_o *v30; // x27
-  System_Int32_array **EquipInfo; // x0
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
+  System_String_array **v31; // x2
+  System_String_array **v32; // x3
+  System_Boolean_array **v33; // x4
+  System_Int32_array **v34; // x5
+  System_Int32_array *v35; // x6
+  System_Int32_array *v36; // x7
   struct System_Int64_array *oldEquipIdList; // x21
   struct System_Int64_array *equipIdList; // x27
-  struct System_Int64_array *v40; // x8
-  Il2CppClass **v41; // x8
-  BalanceConfig_c *v42; // x0
-  int32_t v43; // w8
-  System_String_array **v44; // x2
-  System_String_array **v45; // x3
-  System_Boolean_array **v46; // x4
-  System_Int32_array **v47; // x5
-  System_Int32_array *v48; // x6
-  System_Int32_array *v49; // x7
-  System_String_array **v50; // x2
-  System_String_array **v51; // x3
-  System_Boolean_array **v52; // x4
-  System_Int32_array **v53; // x5
-  System_Int32_array *v54; // x6
-  System_Int32_array *v55; // x7
+  struct System_Int64_array *v39; // x8
+  Il2CppClass **v40; // x8
+  BalanceConfig_c *v41; // x0
+  int32_t v42; // w8
+  System_String_array **v43; // x2
+  System_String_array **v44; // x3
+  System_Boolean_array **v45; // x4
+  System_Int32_array **v46; // x5
+  System_Int32_array *v47; // x6
+  System_Int32_array *v48; // x7
+  System_String_array **v49; // x2
+  System_String_array **v50; // x3
+  System_Boolean_array **v51; // x4
+  System_Int32_array **v52; // x5
+  System_Int32_array *v53; // x6
+  System_Int32_array *v54; // x7
+  __int64 v55; // x0
+  __int64 v56; // x0
 
-  if ( (byte_40FD29A & 1) == 0 )
+  if ( (byte_418AC1C & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, otherData);
-    sub_B16FFC(&UserServantLeaderEntity_TypeInfo, v12);
-    byte_40FD29A = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, otherData);
+    sub_B2C35C(&UserServantLeaderEntity_TypeInfo, v12);
+    byte_418AC1C = 1;
   }
   v13 = 0LL;
   for ( i = 32LL; ; i += 8LL )
   {
-    v42 = BalanceConfig_TypeInfo;
+    v41 = BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v42 = BalanceConfig_TypeInfo;
+      v41 = BalanceConfig_TypeInfo;
     }
-    if ( (__int64)v13 >= v42->static_fields->SupportDeckMemberMax )
+    if ( (__int64)v13 >= v41->static_fields->SupportDeckMemberMax )
       break;
     userServantLeaderEntityList = this->fields.userServantLeaderEntityList;
-    v16 = (UserServantLeaderEntity_o *)sub_B170CC(
-                                         UserServantLeaderEntity_TypeInfo,
-                                         otherData,
-                                         *(_QWORD *)&friendKind,
-                                         isSelectServant,
-                                         eventSetupInfo);
+    v16 = (UserServantLeaderEntity_o *)sub_B2C42C(UserServantLeaderEntity_TypeInfo);
     UserServantLeaderEntity___ctor(v16, 0LL);
     if ( !userServantLeaderEntityList )
       goto LABEL_47;
     if ( v16 )
     {
-      ServantLeaderInfo = sub_B170BC(v16, userServantLeaderEntityList->obj.klass->_1.element_class);
+      ServantLeaderInfo = sub_B2C41C(v16, userServantLeaderEntityList->obj.klass->_1.element_class);
       if ( !ServantLeaderInfo )
       {
-        sub_B170F4(0LL);
-        sub_B170A0();
+        v56 = sub_B2C454(0LL);
+        sub_B2C400(v56, 0LL);
       }
     }
     if ( v13 >= userServantLeaderEntityList->max_length )
       goto LABEL_48;
     userServantLeaderEntityList->m_Items[v13] = v16;
-    sub_B16F98(
+    sub_B2C2F8(
       (BattleServantConfConponent_o *)((char *)userServantLeaderEntityList + i),
       (System_Int32_array **)v16,
-      *(System_String_array ***)&friendKind,
-      v18,
       v19,
       v20,
       v21,
-      v22);
+      v22,
+      v23,
+      v24);
     if ( !otherData )
       goto LABEL_47;
     ServantLeaderInfo = (__int64)OtherUserGameEntity__getServantLeaderInfo(otherData, v13, 0, displayType, deckId, 0LL);
     if ( ServantLeaderInfo )
     {
-      v23 = this->fields.userServantLeaderEntityList;
-      if ( !v23 )
-        goto LABEL_47;
-      if ( v13 >= v23->max_length )
-        goto LABEL_48;
-      v24 = (ServantLeaderInfo_o *)ServantLeaderInfo;
-      v25 = v23->m_Items[v13];
+      v25 = this->fields.userServantLeaderEntityList;
       if ( !v25 )
         goto LABEL_47;
-      UserServantLeaderEntity__setUserServantEntity_34310044(v25, v24, 0LL);
+      if ( v13 >= v25->max_length )
+        goto LABEL_48;
+      v18 = (ServantLeaderInfo_o *)ServantLeaderInfo;
+      ServantLeaderInfo = (__int64)v25->m_Items[v13];
+      if ( !ServantLeaderInfo )
+        goto LABEL_47;
+      UserServantLeaderEntity__setUserServantEntity_34301580((UserServantLeaderEntity_o *)ServantLeaderInfo, v18, 0LL);
       servantIdList = this->fields.servantIdList;
       oldServantIdList = this->fields.oldServantIdList;
       ServantLeaderInfo = OtherUserGameEntity__getUserSvtId(otherData, v13, displayType, 0LL);
@@ -1253,11 +1196,19 @@ void __fastcall SupportServantData__Init_30856296(
       if ( v13 >= v29->max_length )
         goto LABEL_48;
       v30 = v29->m_Items[v13];
-      EquipInfo = (System_Int32_array **)OtherUserGameEntity__getEquipInfo(otherData, v13, displayType, deckId, 0LL);
+      ServantLeaderInfo = (__int64)OtherUserGameEntity__getEquipInfo(otherData, v13, displayType, deckId, 0LL);
       if ( !v30 )
         goto LABEL_47;
-      v30->fields.equipTarget1 = (struct EquipTargetInfo_o *)EquipInfo;
-      sub_B16F98((BattleServantConfConponent_o *)&v30->fields.equipTarget1, EquipInfo, v32, v33, v34, v35, v36, v37);
+      v30->fields.equipTarget1 = (struct EquipTargetInfo_o *)ServantLeaderInfo;
+      sub_B2C2F8(
+        (BattleServantConfConponent_o *)&v30->fields.equipTarget1,
+        (System_Int32_array **)ServantLeaderInfo,
+        v31,
+        v32,
+        v33,
+        v34,
+        v35,
+        v36);
       equipIdList = this->fields.equipIdList;
       oldEquipIdList = this->fields.oldEquipIdList;
       ServantLeaderInfo = OtherUserGameEntity__getEquipUserSvtId(otherData, v13, displayType, deckId, 0LL);
@@ -1273,35 +1224,35 @@ void __fastcall SupportServantData__Init_30856296(
     }
     else
     {
-      v40 = this->fields.oldEquipIdList;
-      if ( !v40 )
+      v39 = this->fields.oldEquipIdList;
+      if ( !v39 )
         goto LABEL_47;
-      if ( v13 >= v40->max_length )
+      if ( v13 >= v39->max_length )
         goto LABEL_48;
       equipIdList = this->fields.equipIdList;
-      v40->m_Items[v13] = 0LL;
+      v39->m_Items[v13] = 0LL;
       if ( !equipIdList )
         goto LABEL_47;
       if ( v13 >= equipIdList->max_length )
       {
 LABEL_48:
-        sub_B17100(ServantLeaderInfo, otherData, *(_QWORD *)&friendKind);
-        sub_B170A0();
+        v55 = sub_B2C460(ServantLeaderInfo);
+        sub_B2C400(v55, 0LL);
       }
       ServantLeaderInfo = 0LL;
     }
-    v41 = &equipIdList->obj.klass + v13++;
-    v41[4] = (Il2CppClass *)ServantLeaderInfo;
+    v40 = &equipIdList->obj.klass + v13++;
+    v40[4] = (Il2CppClass *)ServantLeaderInfo;
   }
   if ( friendKind == 3 )
-    v43 = 4;
+    v42 = 4;
   else
-    v43 = 5;
+    v42 = 5;
   this->fields.isFriendInfo = 1;
   this->fields.isSelectServant = isSelectServant;
-  this->fields.kind = v43;
+  this->fields.kind = v42;
   this->fields.eventSetupInfo2 = eventSetupInfo;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventSetupInfo2,
     (System_Int32_array **)eventSetupInfo,
     *(System_String_array ***)&friendKind,
@@ -1311,26 +1262,26 @@ LABEL_48:
     *(System_Int32_array **)&deckId,
     (System_Int32_array *)method);
   this->fields.eventSetupInfo = eventSetupInfo;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventSetupInfo,
     (System_Int32_array **)eventSetupInfo,
+    v43,
     v44,
     v45,
     v46,
     v47,
-    v48,
-    v49);
+    v48);
   this->fields.questRestrictionInfo = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.questRestrictionInfo, 0LL, v50, v51, v52, v53, v54, v55);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.questRestrictionInfo, 0LL, v49, v50, v51, v52, v53, v54);
   if ( !otherData )
 LABEL_47:
-    sub_B170D4();
+    sub_B2C434(ServantLeaderInfo, v18);
   this->fields.pushUserServantId = otherData->fields.pushUserSvtId;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SupportServantData__Init_30858440(
+void __fastcall SupportServantData__Init_30844168(
         SupportServantData_o *this,
         FollowerInfo_o *followerInfo,
         int32_t friendKind,
@@ -1348,23 +1299,23 @@ void __fastcall SupportServantData__Init_30858440(
   struct UserServantLeaderEntity_array *userServantLeaderEntityList; // x20
   UserServantLeaderEntity_o *v20; // x23
   __int64 ServantLeaderInfo; // x0
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
+  __int64 v22; // x1
+  System_String_array **v23; // x2
+  System_String_array **v24; // x3
+  System_Boolean_array **v25; // x4
+  System_Int32_array **v26; // x5
+  System_Int32_array *v27; // x6
+  System_Int32_array *v28; // x7
   int32_t IndexForSupport; // w28
-  ServantLeaderInfo_o *v28; // x23
-  __int64 v29; // x20
-  __int64 v30; // x25
-  struct UserServantLeaderEntity_array *v31; // x8
-  UserServantLeaderEntity_o *v32; // x0
+  ServantLeaderInfo_o *v30; // x23
+  __int64 v31; // x20
+  __int64 v32; // x25
+  struct UserServantLeaderEntity_array *v33; // x8
   struct System_Int64_array *servantIdList; // x20
   struct System_Int64_array *oldServantIdList; // x23
-  struct System_Int64_array *v35; // x8
-  struct UserServantLeaderEntity_array *v36; // x8
-  UserServantLeaderEntity_o *v37; // x23
-  System_Int32_array **EquipTarget1; // x0
+  struct System_Int64_array *v36; // x8
+  struct UserServantLeaderEntity_array *v37; // x8
+  UserServantLeaderEntity_o *v38; // x23
   System_String_array **v39; // x2
   System_String_array **v40; // x3
   System_Boolean_array **v41; // x4
@@ -1389,23 +1340,25 @@ void __fastcall SupportServantData__Init_30858440(
   System_Int32_array **v60; // x5
   System_Int32_array *v61; // x6
   System_Int32_array *v62; // x7
-  int32_t v63; // [xsp+0h] [xbp-70h]
-  bool v64; // [xsp+4h] [xbp-6Ch]
-  struct EventUpValSetupInfo_o *v65; // [xsp+8h] [xbp-68h]
-  struct QuestRestrictionInfo_o *v66; // [xsp+10h] [xbp-60h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v68; // 0:x0.16
+  __int64 v63; // x0
+  __int64 v64; // x0
+  int32_t v65; // [xsp+0h] [xbp-70h]
+  bool v66; // [xsp+4h] [xbp-6Ch]
+  struct EventUpValSetupInfo_o *v67; // [xsp+8h] [xbp-68h]
+  struct QuestRestrictionInfo_o *v68; // [xsp+10h] [xbp-60h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v70; // 0:x0.16
 
-  if ( (byte_40FD29B & 1) == 0 )
+  if ( (byte_418AC1D & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, followerInfo);
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
-    sub_B16FFC(&UserServantLeaderEntity_TypeInfo, v15);
-    byte_40FD29B = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, followerInfo);
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
+    sub_B2C35C(&UserServantLeaderEntity_TypeInfo, v15);
+    byte_418AC1D = 1;
   }
-  v65 = eventSetupInfo;
-  v66 = questRestrictionInfo;
-  v63 = friendKind;
-  v64 = isSelectServant;
+  v67 = eventSetupInfo;
+  v68 = questRestrictionInfo;
+  v65 = friendKind;
+  v66 = isSelectServant;
   if ( questRestrictionInfo )
     ReturnTypeByQuestId = FollowerInfo__GetReturnTypeByQuestId(questRestrictionInfo->fields.questId, 0LL);
   else
@@ -1423,36 +1376,31 @@ void __fastcall SupportServantData__Init_30858440(
     if ( (__int64)v17 >= v49->static_fields->SupportDeckMemberMax )
       break;
     userServantLeaderEntityList = this->fields.userServantLeaderEntityList;
-    v20 = (UserServantLeaderEntity_o *)sub_B170CC(
-                                         UserServantLeaderEntity_TypeInfo,
-                                         followerInfo,
-                                         *(_QWORD *)&friendKind,
-                                         isSelectServant,
-                                         eventSetupInfo);
+    v20 = (UserServantLeaderEntity_o *)sub_B2C42C(UserServantLeaderEntity_TypeInfo);
     UserServantLeaderEntity___ctor(v20, 0LL);
     if ( !userServantLeaderEntityList )
       goto LABEL_54;
     if ( v20 )
     {
-      ServantLeaderInfo = sub_B170BC(v20, userServantLeaderEntityList->obj.klass->_1.element_class);
+      ServantLeaderInfo = sub_B2C41C(v20, userServantLeaderEntityList->obj.klass->_1.element_class);
       if ( !ServantLeaderInfo )
       {
-        sub_B170F4(0LL);
-        sub_B170A0();
+        v64 = sub_B2C454(0LL);
+        sub_B2C400(v64, 0LL);
       }
     }
     if ( v17 >= userServantLeaderEntityList->max_length )
       goto LABEL_55;
     userServantLeaderEntityList->m_Items[v17] = v20;
-    sub_B16F98(
+    sub_B2C2F8(
       (BattleServantConfConponent_o *)((char *)userServantLeaderEntityList + i),
       (System_Int32_array **)v20,
-      *(System_String_array ***)&friendKind,
-      v22,
       v23,
       v24,
       v25,
-      v26);
+      v26,
+      v27,
+      v28);
     if ( !followerInfo )
       goto LABEL_54;
     IndexForSupport = FollowerInfo__getIndexForSupport(followerInfo, v17, ReturnTypeByQuestId, deckId, 0LL);
@@ -1463,28 +1411,28 @@ void __fastcall SupportServantData__Init_30858440(
                                    0LL);
     if ( !ServantLeaderInfo )
       goto LABEL_25;
-    v28 = (ServantLeaderInfo_o *)ServantLeaderInfo;
-    v29 = *(_QWORD *)(ServantLeaderInfo + 48);
-    v30 = *(_QWORD *)(ServantLeaderInfo + 56);
+    v30 = (ServantLeaderInfo_o *)ServantLeaderInfo;
+    v31 = *(_QWORD *)(ServantLeaderInfo + 48);
+    v32 = *(_QWORD *)(ServantLeaderInfo + 56);
     if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     }
-    *(_QWORD *)&v68.fields.currentCryptoKey = v29;
-    *(_QWORD *)&v68.fields.fakeValue = v30;
-    ServantLeaderInfo = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44068536(v68, 0LL);
+    *(_QWORD *)&v70.fields.currentCryptoKey = v31;
+    *(_QWORD *)&v70.fields.fakeValue = v32;
+    ServantLeaderInfo = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44758064(v70, 0LL);
     if ( (_DWORD)ServantLeaderInfo )
     {
-      v31 = this->fields.userServantLeaderEntityList;
-      if ( !v31 )
+      v33 = this->fields.userServantLeaderEntityList;
+      if ( !v33 )
         goto LABEL_54;
-      if ( v17 >= v31->max_length )
+      if ( v17 >= v33->max_length )
         goto LABEL_55;
-      v32 = v31->m_Items[v17];
-      if ( !v32 )
+      ServantLeaderInfo = (__int64)v33->m_Items[v17];
+      if ( !ServantLeaderInfo )
         goto LABEL_54;
-      UserServantLeaderEntity__setUserServantEntity_34310044(v32, v28, 0LL);
+      UserServantLeaderEntity__setUserServantEntity_34301580((UserServantLeaderEntity_o *)ServantLeaderInfo, v30, 0LL);
       servantIdList = this->fields.servantIdList;
       oldServantIdList = this->fields.oldServantIdList;
       ServantLeaderInfo = FollowerInfo__getUserSvtId(followerInfo, IndexForSupport, ReturnTypeByQuestId, 0LL);
@@ -1501,13 +1449,13 @@ void __fastcall SupportServantData__Init_30858440(
     else
     {
 LABEL_25:
-      v35 = this->fields.oldServantIdList;
-      if ( !v35 )
+      v36 = this->fields.oldServantIdList;
+      if ( !v36 )
         goto LABEL_54;
-      if ( v17 >= v35->max_length )
+      if ( v17 >= v36->max_length )
         goto LABEL_55;
       servantIdList = this->fields.servantIdList;
-      v35->m_Items[v17] = 0LL;
+      v36->m_Items[v17] = 0LL;
       if ( !servantIdList )
         goto LABEL_54;
       if ( v17 >= servantIdList->max_length )
@@ -1518,21 +1466,29 @@ LABEL_25:
     ServantLeaderInfo = FollowerInfo__getEquipSvtId(followerInfo, IndexForSupport, ReturnTypeByQuestId, 0LL);
     if ( (_DWORD)ServantLeaderInfo )
     {
-      v36 = this->fields.userServantLeaderEntityList;
-      if ( !v36 )
-        goto LABEL_54;
-      if ( v17 >= v36->max_length )
-        goto LABEL_55;
-      v37 = v36->m_Items[v17];
-      EquipTarget1 = (System_Int32_array **)FollowerInfo__getEquipTarget1(
-                                              followerInfo,
-                                              IndexForSupport,
-                                              ReturnTypeByQuestId,
-                                              0LL);
+      v37 = this->fields.userServantLeaderEntityList;
       if ( !v37 )
         goto LABEL_54;
-      v37->fields.equipTarget1 = (struct EquipTargetInfo_o *)EquipTarget1;
-      sub_B16F98((BattleServantConfConponent_o *)&v37->fields.equipTarget1, EquipTarget1, v39, v40, v41, v42, v43, v44);
+      if ( v17 >= v37->max_length )
+        goto LABEL_55;
+      v38 = v37->m_Items[v17];
+      ServantLeaderInfo = (__int64)FollowerInfo__getEquipTarget1(
+                                     followerInfo,
+                                     IndexForSupport,
+                                     ReturnTypeByQuestId,
+                                     0LL);
+      if ( !v38 )
+        goto LABEL_54;
+      v38->fields.equipTarget1 = (struct EquipTargetInfo_o *)ServantLeaderInfo;
+      sub_B2C2F8(
+        (BattleServantConfConponent_o *)&v38->fields.equipTarget1,
+        (System_Int32_array **)ServantLeaderInfo,
+        v39,
+        v40,
+        v41,
+        v42,
+        v43,
+        v44);
       equipIdList = this->fields.equipIdList;
       oldEquipIdList = this->fields.oldEquipIdList;
       ServantLeaderInfo = FollowerInfo__getEquipUserSvtId(followerInfo, IndexForSupport, ReturnTypeByQuestId, 0LL);
@@ -1560,45 +1516,45 @@ LABEL_25:
       if ( v17 >= equipIdList->max_length )
       {
 LABEL_55:
-        sub_B17100(ServantLeaderInfo, followerInfo, *(_QWORD *)&friendKind);
-        sub_B170A0();
+        v63 = sub_B2C460(ServantLeaderInfo);
+        sub_B2C400(v63, 0LL);
       }
       ServantLeaderInfo = 0LL;
     }
     v48 = &equipIdList->obj.klass + v17++;
     v48[4] = (Il2CppClass *)ServantLeaderInfo;
   }
-  if ( v63 == 3 )
+  if ( v65 == 3 )
     v50 = 4;
   else
     v50 = 5;
   this->fields.isFriendInfo = 1;
-  this->fields.isSelectServant = v64;
+  this->fields.isSelectServant = v66;
   this->fields.kind = v50;
-  this->fields.eventSetupInfo2 = v65;
-  sub_B16F98(
+  this->fields.eventSetupInfo2 = v67;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventSetupInfo2,
-    (System_Int32_array **)v65,
+    (System_Int32_array **)v67,
     *(System_String_array ***)&friendKind,
     (System_String_array **)isSelectServant,
     (System_Boolean_array **)eventSetupInfo,
     (System_Int32_array **)questRestrictionInfo,
     *(System_Int32_array **)&deckId,
     (System_Int32_array *)method);
-  this->fields.eventSetupInfo = v65;
-  sub_B16F98(
+  this->fields.eventSetupInfo = v67;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventSetupInfo,
-    (System_Int32_array **)v65,
+    (System_Int32_array **)v67,
     v51,
     v52,
     v53,
     v54,
     v55,
     v56);
-  this->fields.questRestrictionInfo = v66;
-  sub_B16F98(
+  this->fields.questRestrictionInfo = v68;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.questRestrictionInfo,
-    (System_Int32_array **)v66,
+    (System_Int32_array **)v68,
     v57,
     v58,
     v59,
@@ -1607,7 +1563,7 @@ LABEL_55:
     v62);
   if ( !followerInfo )
 LABEL_54:
-    sub_B170D4();
+    sub_B2C434(ServantLeaderInfo, v22);
   this->fields.pushUserServantId = followerInfo->fields.pushUserSvtId;
 }
 
@@ -1652,7 +1608,7 @@ void __fastcall SupportServantData__ResetDeckName(SupportServantData_o *this, co
 
   DefaultDeckName = SupportServantData__getDefaultDeckName(this, method);
   this->fields._deckName_k__BackingField = DefaultDeckName;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._deckName_k__BackingField,
     (System_Int32_array **)DefaultDeckName,
     v4,
@@ -1674,23 +1630,23 @@ void __fastcall SupportServantData__ResetOld(SupportServantData_o *this, const M
   System_Int32_array *v7; // x7
   struct System_String_o *deckName_k__BackingField; // x1
   __int64 v10; // x1
-  __int64 v11; // x2
   __int64 i; // x20
   struct System_Int64_array *servantIdList; // x8
   struct System_Int64_array *oldServantIdList; // x9
   struct System_Int64_array *equipIdList; // x8
   struct System_Int64_array *oldEquipIdList; // x9
-  BalanceConfig_c *v17; // x0
-  unsigned __int64 v18; // x22
+  BalanceConfig_c *v16; // x0
+  unsigned __int64 v17; // x22
+  __int64 v18; // x0
 
-  if ( (byte_40FD2A7 & 1) == 0 )
+  if ( (byte_418AC29 & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, method);
-    byte_40FD2A7 = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, method);
+    byte_418AC29 = 1;
   }
   deckName_k__BackingField = this->fields._deckName_k__BackingField;
   this->fields._oldDeckName_k__BackingField = deckName_k__BackingField;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._oldDeckName_k__BackingField,
     (System_Int32_array **)deckName_k__BackingField,
     v2,
@@ -1701,41 +1657,41 @@ void __fastcall SupportServantData__ResetOld(SupportServantData_o *this, const M
     v7);
   for ( i = 4LL; ; ++i )
   {
-    v17 = BalanceConfig_TypeInfo;
-    v18 = i - 4;
+    v16 = BalanceConfig_TypeInfo;
+    v17 = i - 4;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v17 = BalanceConfig_TypeInfo;
+      v16 = BalanceConfig_TypeInfo;
     }
-    if ( (__int64)v18 >= v17->static_fields->SupportDeckMemberMax )
+    if ( (__int64)v17 >= v16->static_fields->SupportDeckMemberMax )
       break;
     servantIdList = this->fields.servantIdList;
     if ( !servantIdList )
       goto LABEL_18;
-    if ( v18 >= servantIdList->max_length )
+    if ( v17 >= servantIdList->max_length )
       goto LABEL_19;
     oldServantIdList = this->fields.oldServantIdList;
     if ( !oldServantIdList )
       goto LABEL_18;
-    if ( v18 >= oldServantIdList->max_length )
+    if ( v17 >= oldServantIdList->max_length )
       goto LABEL_19;
     *((_QWORD *)&oldServantIdList->obj.klass + i) = *((_QWORD *)&servantIdList->obj.klass + i);
     equipIdList = this->fields.equipIdList;
     if ( !equipIdList )
       goto LABEL_18;
-    if ( v18 >= equipIdList->max_length )
+    if ( v17 >= equipIdList->max_length )
       goto LABEL_19;
     oldEquipIdList = this->fields.oldEquipIdList;
     if ( !oldEquipIdList )
 LABEL_18:
-      sub_B170D4();
-    if ( v18 >= oldEquipIdList->max_length )
+      sub_B2C434(v16, v10);
+    if ( v17 >= oldEquipIdList->max_length )
     {
 LABEL_19:
-      sub_B17100(v17, v10, v11);
-      sub_B170A0();
+      v18 = sub_B2C460(v16);
+      sub_B2C400(v18, 0LL);
     }
     *((_QWORD *)&oldEquipIdList->obj.klass + i) = *((_QWORD *)&equipIdList->obj.klass + i);
   }
@@ -1752,30 +1708,30 @@ void __fastcall SupportServantData__SetOld(
   System_Int32_array **v5; // x5
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
-  struct System_String_o *oldDeckName_k__BackingField; // x1
-  __int64 v11; // x1
-  __int64 v12; // x2
+  SupportServantData_o *v9; // x20
+  System_Int32_array **oldDeckName_k__BackingField; // x1
   __int64 i; // x21
   struct System_Int64_array *servantIdList; // x8
   struct System_Int64_array *oldServantIdList; // x9
   struct System_Int64_array *equipIdList; // x8
   struct System_Int64_array *oldEquipIdList; // x9
-  BalanceConfig_c *v18; // x0
-  unsigned __int64 v19; // x23
+  unsigned __int64 v16; // x23
+  __int64 v17; // x0
 
-  if ( (byte_40FD2A8 & 1) == 0 )
+  v9 = this;
+  if ( (byte_418AC2A & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, data);
-    byte_40FD2A8 = 1;
+    this = (SupportServantData_o *)sub_B2C35C(&BalanceConfig_TypeInfo, data);
+    byte_418AC2A = 1;
   }
   if ( !data )
 LABEL_19:
-    sub_B170D4();
-  oldDeckName_k__BackingField = data->fields._oldDeckName_k__BackingField;
-  this->fields._oldDeckName_k__BackingField = oldDeckName_k__BackingField;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields._oldDeckName_k__BackingField,
-    (System_Int32_array **)oldDeckName_k__BackingField,
+    sub_B2C434(this, data);
+  oldDeckName_k__BackingField = (System_Int32_array **)data->fields._oldDeckName_k__BackingField;
+  v9->fields._oldDeckName_k__BackingField = (struct System_String_o *)oldDeckName_k__BackingField;
+  sub_B2C2F8(
+    (BattleServantConfConponent_o *)&v9->fields._oldDeckName_k__BackingField,
+    oldDeckName_k__BackingField,
     (System_String_array **)method,
     v3,
     v4,
@@ -1784,40 +1740,40 @@ LABEL_19:
     v7);
   for ( i = 4LL; ; ++i )
   {
-    v18 = BalanceConfig_TypeInfo;
-    v19 = i - 4;
+    this = (SupportServantData_o *)BalanceConfig_TypeInfo;
+    v16 = i - 4;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v18 = BalanceConfig_TypeInfo;
+      this = (SupportServantData_o *)BalanceConfig_TypeInfo;
     }
-    if ( (__int64)v19 >= v18->static_fields->SupportDeckMemberMax )
+    if ( (__int64)v16 >= SHIDWORD(this[1].fields.oldEquipIdList->m_Items[16]) )
       break;
     servantIdList = data->fields.servantIdList;
     if ( !servantIdList )
       goto LABEL_19;
-    if ( v19 >= servantIdList->max_length )
+    if ( v16 >= servantIdList->max_length )
       goto LABEL_20;
-    oldServantIdList = this->fields.oldServantIdList;
+    oldServantIdList = v9->fields.oldServantIdList;
     if ( !oldServantIdList )
       goto LABEL_19;
-    if ( v19 >= oldServantIdList->max_length )
+    if ( v16 >= oldServantIdList->max_length )
       goto LABEL_20;
     *((_QWORD *)&oldServantIdList->obj.klass + i) = *((_QWORD *)&servantIdList->obj.klass + i);
     equipIdList = data->fields.equipIdList;
     if ( !equipIdList )
       goto LABEL_19;
-    if ( v19 >= equipIdList->max_length )
+    if ( v16 >= equipIdList->max_length )
       goto LABEL_20;
-    oldEquipIdList = this->fields.oldEquipIdList;
+    oldEquipIdList = v9->fields.oldEquipIdList;
     if ( !oldEquipIdList )
       goto LABEL_19;
-    if ( v19 >= oldEquipIdList->max_length )
+    if ( v16 >= oldEquipIdList->max_length )
     {
 LABEL_20:
-      sub_B17100(v18, v11, v12);
-      sub_B170A0();
+      v17 = sub_B2C460(this);
+      sub_B2C400(v17, 0LL);
     }
     *((_QWORD *)&oldEquipIdList->obj.klass + i) = *((_QWORD *)&equipIdList->obj.klass + i);
   }
@@ -1833,20 +1789,21 @@ System_String_o *__fastcall SupportServantData__getClassName(
   SupportServantData_o *v4; // x20
   struct System_String_array *className; // x8
   System_String_o *v6; // x19
+  __int64 v8; // x0
 
   v4 = this;
-  if ( (byte_40FD2A6 & 1) == 0 )
+  if ( (byte_418AC28 & 1) == 0 )
   {
-    this = (SupportServantData_o *)sub_B16FFC(&LocalizationManager_TypeInfo, *(_QWORD *)&classPos);
-    byte_40FD2A6 = 1;
+    this = (SupportServantData_o *)sub_B2C35C(&LocalizationManager_TypeInfo, *(_QWORD *)&classPos);
+    byte_418AC28 = 1;
   }
   className = v4->fields.className;
   if ( !className )
-    sub_B170D4();
+    sub_B2C434(this, *(_QWORD *)&classPos);
   if ( className->max_length <= classPos )
   {
-    sub_B17100(this, *(_QWORD *)&classPos, method);
-    sub_B170A0();
+    v8 = sub_B2C460(this);
+    sub_B2C400(v8, 0LL);
   }
   v6 = className->m_Items[classPos];
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1868,37 +1825,37 @@ System_String_o *__fastcall SupportServantData__getDefaultDeckName(
   Il2CppObject *v6; // x0
   int32_t deckId_k__BackingField; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_40FD299 & 1) == 0 )
+  if ( (byte_418AC1B & 1) == 0 )
   {
-    sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_12491/*"SUPPORT_SELECT_NAME_BASE"*/, v4);
-    byte_40FD299 = 1;
+    sub_B2C35C(&int_TypeInfo, method);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v3);
+    sub_B2C35C(&StringLiteral_12547/*"SUPPORT_SELECT_NAME_BASE"*/, v4);
+    byte_418AC1B = 1;
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12491/*"SUPPORT_SELECT_NAME_BASE"*/, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_12547/*"SUPPORT_SELECT_NAME_BASE"*/, 0LL);
   deckId_k__BackingField = this->fields._deckId_k__BackingField;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &deckId_k__BackingField);
   return System_String__Format(v5, v6, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall SupportServantData__getEquip(SupportServantData_o *this, int32_t classPos, const MethodInfo *method)
 {
   struct System_Int64_array *equipIdList; // x8
+  __int64 v5; // x0
 
   equipIdList = this->fields.equipIdList;
   if ( !equipIdList )
-    sub_B170D4();
+    sub_B2C434(this, classPos);
   if ( equipIdList->max_length <= classPos )
   {
-    sub_B17100(this, *(_QWORD *)&classPos, method);
-    sub_B170A0();
+    v5 = sub_B2C460(this);
+    sub_B2C400(v5, 0LL);
   }
   return equipIdList->m_Items[classPos];
 }
@@ -1906,45 +1863,44 @@ int64_t __fastcall SupportServantData__getEquip(SupportServantData_o *this, int3
 
 int32_t __fastcall SupportServantData__getEquipSum(SupportServantData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  unsigned __int64 v4; // x21
-  int32_t v5; // w20
-  BalanceConfig_c *v6; // x0
+  unsigned __int64 v3; // x21
+  int32_t v4; // w20
+  BalanceConfig_c *v5; // x0
   struct System_Int64_array *equipIdList; // x8
+  __int64 v9; // x0
 
-  if ( (byte_40FD2A0 & 1) == 0 )
+  if ( (byte_418AC22 & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, method);
-    byte_40FD2A0 = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, method);
+    byte_418AC22 = 1;
   }
-  v4 = 0LL;
-  v5 = 0;
-  v6 = BalanceConfig_TypeInfo;
+  v3 = 0LL;
+  v4 = 0;
+  v5 = BalanceConfig_TypeInfo;
   while ( 1 )
   {
-    if ( (BYTE3(v6->vtable._0_Equals.methodPtr) & 4) != 0 && !v6->_2.cctor_finished )
+    if ( (BYTE3(v5->vtable._0_Equals.methodPtr) & 4) != 0 && !v5->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v6);
-      v6 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v5);
+      v5 = BalanceConfig_TypeInfo;
     }
-    if ( (__int64)v4 >= v6->static_fields->SupportDeckMemberMax )
+    if ( (__int64)v3 >= v5->static_fields->SupportDeckMemberMax )
       break;
     equipIdList = this->fields.equipIdList;
     if ( !equipIdList )
-      sub_B170D4();
-    if ( v4 >= equipIdList->max_length )
+      sub_B2C434(v5, method);
+    if ( v3 >= equipIdList->max_length )
     {
-      sub_B17100(v6, method, v2);
-      sub_B170A0();
+      v9 = sub_B2C460(v5);
+      sub_B2C400(v9, 0LL);
     }
-    if ( equipIdList->m_Items[v4++] )
-      ++v5;
+    if ( equipIdList->m_Items[v3++] )
+      ++v4;
   }
-  return v5;
+  return v4;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall SupportServantData__getMember(
         SupportServantData_o *this,
         int32_t classPos,
@@ -1952,14 +1908,15 @@ int64_t __fastcall SupportServantData__getMember(
 {
   struct UserServantLeaderEntity_array *userServantLeaderEntityList; // x8
   UserServantLeaderEntity_o *v4; // x8
+  __int64 v6; // x0
 
   userServantLeaderEntityList = this->fields.userServantLeaderEntityList;
   if ( !userServantLeaderEntityList )
-    sub_B170D4();
+    sub_B2C434(this, classPos);
   if ( userServantLeaderEntityList->max_length <= classPos )
   {
-    sub_B17100(this, *(_QWORD *)&classPos, method);
-    sub_B170A0();
+    v6 = sub_B2C460(this);
+    sub_B2C400(v6, 0LL);
   }
   v4 = userServantLeaderEntityList->m_Items[classPos];
   if ( v4 )
@@ -1969,61 +1926,61 @@ int64_t __fastcall SupportServantData__getMember(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall SupportServantData__getOldEquip(
         SupportServantData_o *this,
         int32_t classPos,
         const MethodInfo *method)
 {
   struct System_Int64_array *oldEquipIdList; // x8
+  __int64 v5; // x0
 
   oldEquipIdList = this->fields.oldEquipIdList;
   if ( !oldEquipIdList )
-    sub_B170D4();
+    sub_B2C434(this, classPos);
   if ( oldEquipIdList->max_length <= classPos )
   {
-    sub_B17100(this, *(_QWORD *)&classPos, method);
-    sub_B170A0();
+    v5 = sub_B2C460(this);
+    sub_B2C400(v5, 0LL);
   }
   return oldEquipIdList->m_Items[classPos];
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall SupportServantData__getOldServant(
         SupportServantData_o *this,
         int32_t classPos,
         const MethodInfo *method)
 {
   struct System_Int64_array *oldServantIdList; // x8
+  __int64 v5; // x0
 
   oldServantIdList = this->fields.oldServantIdList;
   if ( !oldServantIdList )
-    sub_B170D4();
+    sub_B2C434(this, classPos);
   if ( oldServantIdList->max_length <= classPos )
   {
-    sub_B17100(this, *(_QWORD *)&classPos, method);
-    sub_B170A0();
+    v5 = sub_B2C460(this);
+    sub_B2C400(v5, 0LL);
   }
   return oldServantIdList->m_Items[classPos];
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall SupportServantData__getServant(
         SupportServantData_o *this,
         int32_t classPos,
         const MethodInfo *method)
 {
   struct System_Int64_array *servantIdList; // x8
+  __int64 v5; // x0
 
   servantIdList = this->fields.servantIdList;
   if ( !servantIdList )
-    sub_B170D4();
+    sub_B2C434(this, classPos);
   if ( servantIdList->max_length <= classPos )
   {
-    sub_B17100(this, *(_QWORD *)&classPos, method);
-    sub_B170A0();
+    v5 = sub_B2C460(this);
+    sub_B2C400(v5, 0LL);
   }
   return servantIdList->m_Items[classPos];
 }
@@ -2031,59 +1988,59 @@ int64_t __fastcall SupportServantData__getServant(
 
 int32_t __fastcall SupportServantData__getServantSum(SupportServantData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  unsigned __int64 v4; // x21
-  int32_t v5; // w20
-  BalanceConfig_c *v6; // x0
+  unsigned __int64 v3; // x21
+  int32_t v4; // w20
+  BalanceConfig_c *v5; // x0
   struct System_Int64_array *servantIdList; // x8
+  __int64 v9; // x0
 
-  if ( (byte_40FD29F & 1) == 0 )
+  if ( (byte_418AC21 & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, method);
-    byte_40FD29F = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, method);
+    byte_418AC21 = 1;
   }
-  v4 = 0LL;
-  v5 = 0;
-  v6 = BalanceConfig_TypeInfo;
+  v3 = 0LL;
+  v4 = 0;
+  v5 = BalanceConfig_TypeInfo;
   while ( 1 )
   {
-    if ( (BYTE3(v6->vtable._0_Equals.methodPtr) & 4) != 0 && !v6->_2.cctor_finished )
+    if ( (BYTE3(v5->vtable._0_Equals.methodPtr) & 4) != 0 && !v5->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v6);
-      v6 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v5);
+      v5 = BalanceConfig_TypeInfo;
     }
-    if ( (__int64)v4 >= v6->static_fields->SupportDeckMemberMax )
+    if ( (__int64)v3 >= v5->static_fields->SupportDeckMemberMax )
       break;
     servantIdList = this->fields.servantIdList;
     if ( !servantIdList )
-      sub_B170D4();
-    if ( v4 >= servantIdList->max_length )
+      sub_B2C434(v5, method);
+    if ( v3 >= servantIdList->max_length )
     {
-      sub_B17100(v6, method, v2);
-      sub_B170A0();
+      v9 = sub_B2C460(v5);
+      sub_B2C400(v9, 0LL);
     }
-    if ( servantIdList->m_Items[v4++] )
-      ++v5;
+    if ( servantIdList->m_Items[v3++] )
+      ++v4;
   }
-  return v5;
+  return v4;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UserServantLeaderEntity_o *__fastcall SupportServantData__getUserServantLeaderEntity(
         SupportServantData_o *this,
         int32_t classPos,
         const MethodInfo *method)
 {
   struct UserServantLeaderEntity_array *userServantLeaderEntityList; // x8
+  __int64 v5; // x0
 
   userServantLeaderEntityList = this->fields.userServantLeaderEntityList;
   if ( !userServantLeaderEntityList )
-    sub_B170D4();
+    sub_B2C434(this, classPos);
   if ( userServantLeaderEntityList->max_length <= classPos )
   {
-    sub_B17100(this, *(_QWORD *)&classPos, method);
-    sub_B170A0();
+    v5 = sub_B2C460(this);
+    sub_B2C400(v5, 0LL);
   }
   return userServantLeaderEntityList->m_Items[classPos];
 }
@@ -2113,38 +2070,38 @@ bool __fastcall SupportServantData__get_IsFriendInfo(SupportServantData_o *this,
 
 bool __fastcall SupportServantData__get_IsNoServant(SupportServantData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  il2cpp_array_size_t v4; // w21
-  BalanceConfig_c *v5; // x0
+  il2cpp_array_size_t v3; // w21
+  BalanceConfig_c *v4; // x0
   struct System_Int64_array *servantIdList; // x8
-  __int64 v7; // x8
+  __int64 v6; // x8
+  __int64 v8; // x0
 
-  if ( (byte_40FD2A5 & 1) == 0 )
+  if ( (byte_418AC27 & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, method);
-    byte_40FD2A5 = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, method);
+    byte_418AC27 = 1;
   }
-  v4 = 0;
-  v5 = BalanceConfig_TypeInfo;
+  v3 = 0;
+  v4 = BalanceConfig_TypeInfo;
   while ( 1 )
   {
-    if ( (BYTE3(v5->vtable._0_Equals.methodPtr) & 4) != 0 && !v5->_2.cctor_finished )
+    if ( (BYTE3(v4->vtable._0_Equals.methodPtr) & 4) != 0 && !v4->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v4);
+      v4 = BalanceConfig_TypeInfo;
     }
-    if ( (signed int)v4 >= v5->static_fields->SupportDeckMemberMax )
+    if ( (signed int)v3 >= v4->static_fields->SupportDeckMemberMax )
       break;
     servantIdList = this->fields.servantIdList;
     if ( !servantIdList )
-      sub_B170D4();
-    if ( v4 >= servantIdList->max_length )
+      sub_B2C434(v4, method);
+    if ( v3 >= servantIdList->max_length )
     {
-      sub_B17100(v5, method, v2);
-      sub_B170A0();
+      v8 = sub_B2C460(v4);
+      sub_B2C400(v8, 0LL);
     }
-    v7 = servantIdList->m_Items[v4++];
-    if ( v7 > 0 )
+    v6 = servantIdList->m_Items[v3++];
+    if ( v6 > 0 )
       return 0;
   }
   return 1;
@@ -2204,11 +2161,12 @@ bool __fastcall SupportServantData__isUseServant(
   BalanceConfig_c *v6; // x0
   struct System_Int64_array *servantIdList; // x8
   int64_t v8; // x8
+  __int64 v10; // x0
 
-  if ( (byte_40FD2A1 & 1) == 0 )
+  if ( (byte_418AC23 & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, userSvtId);
-    byte_40FD2A1 = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, userSvtId);
+    byte_418AC23 = 1;
   }
   v5 = 0;
   v6 = BalanceConfig_TypeInfo;
@@ -2223,11 +2181,11 @@ bool __fastcall SupportServantData__isUseServant(
       break;
     servantIdList = this->fields.servantIdList;
     if ( !servantIdList )
-      sub_B170D4();
+      sub_B2C434(v6, userSvtId);
     if ( v5 >= servantIdList->max_length )
     {
-      sub_B17100(v6, userSvtId, method);
-      sub_B170A0();
+      v10 = sub_B2C460(v6);
+      sub_B2C400(v10, 0LL);
     }
     v8 = servantIdList->m_Items[v5++];
     if ( v8 == userSvtId )
@@ -2255,15 +2213,16 @@ void __fastcall SupportServantData__removeEquipData(
   struct EquipTargetInfo_o *v12; // x22
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // kr00_16
   struct System_Int64_array *equipIdList; // x8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v15; // [xsp+20h] [xbp-40h] BYREF
+  __int64 v15; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+20h] [xbp-40h] BYREF
 
   v3 = classPos;
   v4 = this;
-  if ( (byte_40FD29E & 1) == 0 )
+  if ( (byte_418AC20 & 1) == 0 )
   {
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&classPos);
-    this = (SupportServantData_o *)sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v5);
-    byte_40FD29E = 1;
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&classPos);
+    this = (SupportServantData_o *)sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v5);
+    byte_418AC20 = 1;
   }
   userServantLeaderEntityList = v4->fields.userServantLeaderEntityList;
   if ( !userServantLeaderEntityList )
@@ -2281,9 +2240,9 @@ void __fastcall SupportServantData__removeEquipData(
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
-  this = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v15, 0LL, 0LL);
-  v9 = *(_OWORD *)&v15.fields.currentCryptoKey;
-  *(_OWORD *)&equipTarget1->fields.userSvtId.fields.fakeValue = *(_OWORD *)&v15.fields.fakeValue;
+  this = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v16, 0LL, 0LL);
+  v9 = *(_OWORD *)&v16.fields.currentCryptoKey;
+  *(_OWORD *)&equipTarget1->fields.userSvtId.fields.fakeValue = *(_OWORD *)&v16.fields.fakeValue;
   *(_OWORD *)&equipTarget1->fields.userSvtId.fields.currentCryptoKey = v9;
   v10 = v4->fields.userServantLeaderEntityList;
   if ( !v10 )
@@ -2304,7 +2263,7 @@ void __fastcall SupportServantData__removeEquipData(
   this = *(SupportServantData_o **)&v13.fields.currentCryptoKey;
   if ( !v12 )
 LABEL_21:
-    sub_B170D4();
+    sub_B2C434(this, *(_QWORD *)&classPos);
   v12->fields.svtId = v13;
 LABEL_18:
   equipIdList = v4->fields.equipIdList;
@@ -2313,14 +2272,13 @@ LABEL_18:
   if ( equipIdList->max_length <= v3 )
   {
 LABEL_22:
-    sub_B17100(this, *(_QWORD *)&classPos, method);
-    sub_B170A0();
+    v15 = sub_B2C460(this);
+    sub_B2C400(v15, 0LL);
   }
   equipIdList->m_Items[v3] = 0LL;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall SupportServantData__removeServantData(
         SupportServantData_o *this,
         int32_t classPos,
@@ -2331,6 +2289,7 @@ void __fastcall SupportServantData__removeServantData(
   struct System_Int64_array *servantIdList; // x9
   struct UserServantLeaderEntity_array *v6; // x9
   UserServantLeaderEntity_o *v7; // x8
+  __int64 v8; // x0
 
   userServantLeaderEntityList = this->fields.userServantLeaderEntityList;
   if ( !userServantLeaderEntityList )
@@ -2340,7 +2299,7 @@ void __fastcall SupportServantData__removeServantData(
   v4 = userServantLeaderEntityList->m_Items[classPos];
   if ( !v4 || (v4->fields.userSvtId = 0LL, (servantIdList = this->fields.servantIdList) == 0LL) )
 LABEL_10:
-    sub_B170D4();
+    sub_B2C434(this, classPos);
   if ( servantIdList->max_length <= classPos )
     goto LABEL_11;
   servantIdList->m_Items[classPos] = 0LL;
@@ -2350,8 +2309,8 @@ LABEL_10:
   if ( v6->max_length <= classPos )
   {
 LABEL_11:
-    sub_B17100(this, *(_QWORD *)&classPos, method);
-    sub_B170A0();
+    v8 = sub_B2C460(this);
+    sub_B2C400(v8, 0LL);
   }
   v7 = v6->m_Items[classPos];
   if ( !v7 )
@@ -2368,6 +2327,7 @@ void __fastcall SupportServantData__setEquipData(
         int32_t svtId,
         const MethodInfo *method)
 {
+  int32_t v7; // w20
   SupportServantData_o *v8; // x22
   __int64 v9; // x1
   __int64 v10; // x1
@@ -2390,49 +2350,46 @@ void __fastcall SupportServantData__setEquipData(
   UserServantLeaderEntity_o *v27; // x8
   struct EquipTargetInfo_o *v28; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v29; // kr00_16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v30; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v31; // [xsp+20h] [xbp-60h]
+  __int64 v30; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v31; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v32; // [xsp+20h] [xbp-60h]
 
+  v7 = classPos;
   v8 = this;
-  if ( (byte_40FD29D & 1) == 0 )
+  if ( (byte_418AC1F & 1) == 0 )
   {
-    sub_B16FFC(&EquipTargetInfo_TypeInfo, *(_QWORD *)&classPos);
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
-    this = (SupportServantData_o *)sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v10);
-    byte_40FD29D = 1;
+    sub_B2C35C(&EquipTargetInfo_TypeInfo, *(_QWORD *)&classPos);
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
+    this = (SupportServantData_o *)sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v10);
+    byte_418AC1F = 1;
   }
   userServantLeaderEntityList = v8->fields.userServantLeaderEntityList;
   if ( !userServantLeaderEntityList )
     goto LABEL_26;
-  if ( userServantLeaderEntityList->max_length <= classPos )
+  if ( userServantLeaderEntityList->max_length <= v7 )
     goto LABEL_27;
-  v12 = userServantLeaderEntityList->m_Items[classPos];
+  v12 = userServantLeaderEntityList->m_Items[v7];
   if ( !v12 )
     goto LABEL_26;
   equipTarget1 = v12->fields.equipTarget1;
   p_equipTarget1 = (BattleServantConfConponent_o *)&v12->fields.equipTarget1;
   if ( !equipTarget1 )
   {
-    v15 = (EquipTargetInfo_o *)sub_B170CC(
-                                 EquipTargetInfo_TypeInfo,
-                                 *(_QWORD *)&classPos,
-                                 userSvtId,
-                                 *(_QWORD *)&svtId,
-                                 method);
+    v15 = (EquipTargetInfo_o *)sub_B2C42C(EquipTargetInfo_TypeInfo);
     EquipTargetInfo___ctor(v15, 0LL);
     p_equipTarget1->klass = (BattleServantConfConponent_c *)v15;
-    sub_B16F98(p_equipTarget1, (System_Int32_array **)v15, v16, v17, v18, v19, v20, v21);
+    sub_B2C2F8(p_equipTarget1, (System_Int32_array **)v15, v16, v17, v18, v19, v20, v21);
     userServantLeaderEntityList = v8->fields.userServantLeaderEntityList;
     if ( !userServantLeaderEntityList )
       goto LABEL_26;
   }
-  if ( userServantLeaderEntityList->max_length <= classPos )
+  if ( userServantLeaderEntityList->max_length <= v7 )
   {
 LABEL_27:
-    sub_B17100(this, *(_QWORD *)&classPos, userSvtId);
-    sub_B170A0();
+    v30 = sub_B2C460(this);
+    sub_B2C400(v30, 0LL);
   }
-  v22 = userServantLeaderEntityList->m_Items[classPos];
+  v22 = userServantLeaderEntityList->m_Items[v7];
   if ( !v22 )
     goto LABEL_26;
   v23 = v22->fields.equipTarget1;
@@ -2441,28 +2398,28 @@ LABEL_27:
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
-  this = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v30, userSvtId, 0LL);
-  v31 = v30;
+  this = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v31, userSvtId, 0LL);
+  v32 = v31;
   if ( !v23 )
     goto LABEL_26;
-  v24 = *(_OWORD *)&v31.fields.currentCryptoKey;
-  *(_OWORD *)&v23->fields.userSvtId.fields.fakeValue = *(_OWORD *)&v31.fields.fakeValue;
+  v24 = *(_OWORD *)&v32.fields.currentCryptoKey;
+  *(_OWORD *)&v23->fields.userSvtId.fields.fakeValue = *(_OWORD *)&v32.fields.fakeValue;
   *(_OWORD *)&v23->fields.userSvtId.fields.currentCryptoKey = v24;
   equipIdList = v8->fields.equipIdList;
   if ( !equipIdList )
     goto LABEL_26;
-  if ( equipIdList->max_length <= classPos )
+  if ( equipIdList->max_length <= v7 )
     goto LABEL_27;
-  equipIdList->m_Items[classPos] = userSvtId;
+  equipIdList->m_Items[v7] = userSvtId;
   if ( (svtId & 0x80000000) != 0 )
     return;
   v26 = v8->fields.userServantLeaderEntityList;
   if ( !v26 )
 LABEL_26:
-    sub_B170D4();
-  if ( v26->max_length <= classPos )
+    sub_B2C434(this, *(_QWORD *)&classPos);
+  if ( v26->max_length <= v7 )
     goto LABEL_27;
-  v27 = v26->m_Items[classPos];
+  v27 = v26->m_Items[v7];
   if ( !v27 )
     goto LABEL_26;
   v28 = v27->fields.equipTarget1;
@@ -2472,6 +2429,8 @@ LABEL_26:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
   v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(svtId, 0LL);
+  *(_QWORD *)&classPos = *(_QWORD *)&v29.fields.fakeValue;
+  this = *(SupportServantData_o **)&v29.fields.currentCryptoKey;
   if ( !v28 )
     goto LABEL_26;
   v28->fields.svtId = v29;
@@ -2485,104 +2444,104 @@ void __fastcall SupportServantData__setServantData(
         UserServantEntity_o *entity,
         const MethodInfo *method)
 {
-  __int64 v4; // x4
-  SupportServantData_o *v7; // x20
+  SupportServantData_o *v6; // x20
+  __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x1
   struct UserServantLeaderEntity_array *userServantLeaderEntityList; // x25
-  Il2CppClass **v12; // x22
-  BattleServantConfConponent_o *v13; // x22
-  Il2CppClass *v14; // t1
-  UserServantLeaderEntity_o *v15; // x23
+  Il2CppClass **v11; // x22
+  BattleServantConfConponent_o *v12; // x22
+  Il2CppClass *v13; // t1
+  UserServantLeaderEntity_o *v14; // x23
+  System_String_array **v15; // x2
   System_String_array **v16; // x3
   System_Boolean_array **v17; // x4
   System_Int32_array **v18; // x5
   System_Int32_array *v19; // x6
   System_Int32_array *v20; // x7
-  WebViewManager_o *Instance; // x0
-  struct UserServantLeaderEntity_array *v22; // x8
-  UserServantLeaderEntity_o *v23; // x0
-  __int128 v24; // q1
+  struct UserServantLeaderEntity_array *v21; // x8
+  __int128 v22; // q1
   struct System_Int64_array *servantIdList; // x20
+  __int64 v24; // x0
+  __int64 v25; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+0h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v27; // [xsp+20h] [xbp-60h]
 
-  v7 = this;
-  if ( (byte_40FD29C & 1) == 0 )
+  v6 = this;
+  if ( (byte_418AC1E & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_UserServantLeaderMaster___, *(_QWORD *)&classPos);
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v8);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    this = (SupportServantData_o *)sub_B16FFC(&UserServantLeaderEntity_TypeInfo, v10);
-    byte_40FD29C = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_UserServantLeaderMaster___, *(_QWORD *)&classPos);
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    this = (SupportServantData_o *)sub_B2C35C(&UserServantLeaderEntity_TypeInfo, v9);
+    byte_418AC1E = 1;
   }
-  userServantLeaderEntityList = v7->fields.userServantLeaderEntityList;
+  userServantLeaderEntityList = v6->fields.userServantLeaderEntityList;
   if ( !userServantLeaderEntityList )
     goto LABEL_21;
   if ( userServantLeaderEntityList->max_length <= classPos )
     goto LABEL_22;
-  v12 = &userServantLeaderEntityList->obj.klass + classPos;
-  v14 = v12[4];
-  v13 = (BattleServantConfConponent_o *)(v12 + 4);
-  if ( !v14 )
+  v11 = &userServantLeaderEntityList->obj.klass + classPos;
+  v13 = v11[4];
+  v12 = (BattleServantConfConponent_o *)(v11 + 4);
+  if ( !v13 )
   {
-    v15 = (UserServantLeaderEntity_o *)sub_B170CC(
-                                         UserServantLeaderEntity_TypeInfo,
-                                         *(_QWORD *)&classPos,
-                                         entity,
-                                         method,
-                                         v4);
-    UserServantLeaderEntity___ctor(v15, 0LL);
-    if ( v15 )
+    v14 = (UserServantLeaderEntity_o *)sub_B2C42C(UserServantLeaderEntity_TypeInfo);
+    UserServantLeaderEntity___ctor(v14, 0LL);
+    if ( v14 )
     {
-      this = (SupportServantData_o *)sub_B170BC(v15, userServantLeaderEntityList->obj.klass->_1.element_class);
+      this = (SupportServantData_o *)sub_B2C41C(v14, userServantLeaderEntityList->obj.klass->_1.element_class);
       if ( !this )
       {
-        sub_B170F4(0LL);
-        sub_B170A0();
+        v25 = sub_B2C454(0LL);
+        sub_B2C400(v25, 0LL);
       }
     }
     if ( userServantLeaderEntityList->max_length <= classPos )
     {
 LABEL_22:
-      sub_B17100(this, *(_QWORD *)&classPos, entity);
-      sub_B170A0();
+      v24 = sub_B2C460(this);
+      sub_B2C400(v24, 0LL);
     }
-    v13->klass = (BattleServantConfConponent_c *)v15;
-    sub_B16F98(v13, (System_Int32_array **)v15, (System_String_array **)entity, v16, v17, v18, v19, v20);
+    v12->klass = (BattleServantConfConponent_c *)v14;
+    sub_B2C2F8(v12, (System_Int32_array **)v14, v15, v16, v17, v18, v19, v20);
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance )
+  this = (SupportServantData_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !this )
     goto LABEL_21;
   this = (SupportServantData_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                   (DataManager_o *)Instance,
-                                   (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_UserServantLeaderMaster___);
-  v22 = v7->fields.userServantLeaderEntityList;
-  if ( !v22 )
+                                   (DataManager_o *)this,
+                                   (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_UserServantLeaderMaster___);
+  v21 = v6->fields.userServantLeaderEntityList;
+  if ( !v21 )
     goto LABEL_21;
-  if ( v22->max_length <= classPos )
+  if ( v21->max_length <= classPos )
     goto LABEL_22;
-  v23 = v22->m_Items[classPos];
-  if ( !v23 )
+  this = (SupportServantData_o *)v21->m_Items[classPos];
+  if ( !this )
     goto LABEL_21;
-  UserServantLeaderEntity__setUserServantEntity(v23, entity, classPos, v7->fields._deckId_k__BackingField, 0LL);
+  UserServantLeaderEntity__setUserServantEntity(
+    (UserServantLeaderEntity_o *)this,
+    entity,
+    classPos,
+    v6->fields._deckId_k__BackingField,
+    0LL);
   if ( !entity )
     goto LABEL_21;
-  v24 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
-  servantIdList = v7->fields.servantIdList;
+  v22 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
+  servantIdList = v6->fields.servantIdList;
   *(_OWORD *)&v27.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v27.fields.fakeValue = v24;
+  *(_OWORD *)&v27.fields.fakeValue = v22;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
   v26 = v27;
-  this = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44071692(&v26, 0LL);
+  this = (SupportServantData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44761220(&v26, 0LL);
   if ( !servantIdList )
 LABEL_21:
-    sub_B170D4();
+    sub_B2C434(this, *(_QWORD *)&classPos);
   if ( servantIdList->max_length <= classPos )
     goto LABEL_22;
   servantIdList->m_Items[classPos] = (int64_t)this;
@@ -2601,7 +2560,7 @@ void __fastcall SupportServantData__set_EventSetupInfo(
   System_Int32_array *v7; // x7
 
   this->fields.eventSetupInfo = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventSetupInfo,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -2640,7 +2599,7 @@ void __fastcall SupportServantData__set_deckName(
   System_Int32_array *v7; // x7
 
   this->fields._deckName_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._deckName_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -2664,7 +2623,7 @@ void __fastcall SupportServantData__set_oldDeckName(
   System_Int32_array *v7; // x7
 
   this->fields._oldDeckName_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._oldDeckName_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -2682,7 +2641,6 @@ System_String_o *__fastcall SupportServantData__updateCheck(
         int32_t classPos,
         const MethodInfo *method)
 {
-  int32_t v3; // w20
   SupportServantData_o *v4; // x19
   __int64 v5; // x1
   __int64 v6; // x1
@@ -2693,327 +2651,269 @@ System_String_o *__fastcall SupportServantData__updateCheck(
   struct System_Int64_array *oldServantIdList; // x9
   struct System_Int64_array *equipIdList; // x10
   struct System_Int64_array *oldEquipIdList; // x11
-  __int64 v15; // x0
+  System_String_array **v15; // x2
   System_String_array **v16; // x3
   System_Boolean_array **v17; // x4
   System_Int32_array **v18; // x5
   System_Int32_array *v19; // x6
   System_Int32_array *v20; // x7
-  System_String_array *v21; // x20
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  System_Int32_array **v27; // x21
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  System_Int32_array **v38; // x21
-  System_String_array **v39; // x3
-  System_Boolean_array **v40; // x4
-  System_Int32_array **v41; // x5
-  System_Int32_array *v42; // x6
-  System_Int32_array *v43; // x7
-  struct System_Int64_array *v44; // x8
+  SupportServantData_o *v21; // x20
+  System_Int32_array **v22; // x1
+  System_String_array **v23; // x2
+  System_String_array **v24; // x3
+  System_Boolean_array **v25; // x4
+  System_Int32_array **v26; // x5
+  System_Int32_array *v27; // x6
+  System_Int32_array *v28; // x7
+  System_Int32_array **v29; // x21
+  System_String_array **v30; // x2
+  System_String_array **v31; // x3
+  System_Boolean_array **v32; // x4
+  System_Int32_array **v33; // x5
+  System_Int32_array *v34; // x6
+  System_Int32_array *v35; // x7
+  System_Int32_array **v36; // x1
+  System_String_array **v37; // x2
+  System_String_array **v38; // x3
+  System_Boolean_array **v39; // x4
+  System_Int32_array **v40; // x5
+  System_Int32_array *v41; // x6
+  System_Int32_array *v42; // x7
+  System_Int32_array **v43; // x21
+  System_String_array **v44; // x2
   System_String_array **v45; // x3
   System_Boolean_array **v46; // x4
   System_Int32_array **v47; // x5
   System_Int32_array *v48; // x6
   System_Int32_array *v49; // x7
-  System_Int32_array **v50; // x21
-  System_String_array **v51; // x3
-  System_Boolean_array **v52; // x4
-  System_Int32_array **v53; // x5
-  System_Int32_array *v54; // x6
-  System_Int32_array *v55; // x7
-  struct System_Int64_array *v56; // x8
-  System_String_array **v57; // x3
-  System_Boolean_array **v58; // x4
-  System_Int32_array **v59; // x5
-  System_Int32_array *v60; // x6
-  System_Int32_array *v61; // x7
-  System_Int32_array **v62; // x19
-  System_String_array **v63; // x3
-  System_Boolean_array **v64; // x4
-  System_Int32_array **v65; // x5
-  System_Int32_array *v66; // x6
-  System_Int32_array *v67; // x7
+  System_Int32_array **v50; // x1
+  struct System_Int64_array *v51; // x8
+  System_String_array **v52; // x2
+  System_String_array **v53; // x3
+  System_Boolean_array **v54; // x4
+  System_Int32_array **v55; // x5
+  System_Int32_array *v56; // x6
+  System_Int32_array *v57; // x7
+  System_Int32_array **v58; // x21
+  System_String_array **v59; // x2
+  System_String_array **v60; // x3
+  System_Boolean_array **v61; // x4
+  System_Int32_array **v62; // x5
+  System_Int32_array *v63; // x6
+  System_Int32_array *v64; // x7
+  System_Int32_array **v65; // x1
+  struct System_Int64_array *v66; // x8
+  System_String_array **v67; // x2
+  System_String_array **v68; // x3
+  System_Boolean_array **v69; // x4
+  System_Int32_array **v70; // x5
+  System_Int32_array *v71; // x6
+  System_Int32_array *v72; // x7
+  System_Int32_array **v73; // x19
+  System_String_array **v74; // x2
+  System_String_array **v75; // x3
+  System_Boolean_array **v76; // x4
+  System_Int32_array **v77; // x5
+  System_Int32_array *v78; // x6
+  System_Int32_array *v79; // x7
+  System_Int32_array **v80; // x1
+  __int64 v81; // x0
+  __int64 v82; // x0
   int32_t deckId_k__BackingField; // [xsp+8h] [xbp-18h] BYREF
-  unsigned int v69; // [xsp+Ch] [xbp-14h] BYREF
+  unsigned int v84; // [xsp+Ch] [xbp-14h] BYREF
 
-  v3 = classPos;
   v4 = this;
-  v69 = classPos;
-  if ( (byte_40FD2A3 & 1) == 0 )
+  v84 = classPos;
+  if ( (byte_418AC25 & 1) == 0 )
   {
-    sub_B16FFC(&string___TypeInfo, *(_QWORD *)&classPos);
-    sub_B16FFC(&StringLiteral_739/*",\"userSvtId\":"*/, v5);
-    sub_B16FFC(&StringLiteral_23602/*"}"*/, v6);
-    sub_B16FFC(&StringLiteral_735/*",\"classId\":"*/, v7);
-    sub_B16FFC(&StringLiteral_738/*",\"userSvtEquipId\":"*/, v8);
-    this = (SupportServantData_o *)sub_B16FFC(&StringLiteral_23384/*"{\"supportDeckId\":"*/, v9);
-    byte_40FD2A3 = 1;
+    sub_B2C35C(&string___TypeInfo, *(_QWORD *)&classPos);
+    sub_B2C35C(&StringLiteral_740/*",\"userSvtId\":"*/, v5);
+    sub_B2C35C(&StringLiteral_23696/*"}"*/, v6);
+    sub_B2C35C(&StringLiteral_736/*",\"classId\":"*/, v7);
+    sub_B2C35C(&StringLiteral_739/*",\"userSvtEquipId\":"*/, v8);
+    this = (SupportServantData_o *)sub_B2C35C(&StringLiteral_23478/*"{\"supportDeckId\":"*/, v9);
+    byte_418AC25 = 1;
   }
   deckId_k__BackingField = 0;
   servantIdList = v4->fields.servantIdList;
   if ( !servantIdList )
     goto LABEL_58;
-  if ( servantIdList->max_length <= v3 )
+  if ( servantIdList->max_length <= classPos )
     goto LABEL_57;
   oldServantIdList = v4->fields.oldServantIdList;
   if ( !oldServantIdList )
     goto LABEL_58;
-  if ( oldServantIdList->max_length <= v3 )
+  if ( oldServantIdList->max_length <= classPos )
     goto LABEL_57;
   equipIdList = v4->fields.equipIdList;
   if ( !equipIdList )
     goto LABEL_58;
-  if ( equipIdList->max_length <= v3 )
+  if ( equipIdList->max_length <= classPos )
     goto LABEL_57;
   oldEquipIdList = v4->fields.oldEquipIdList;
   if ( !oldEquipIdList )
     goto LABEL_58;
-  if ( oldEquipIdList->max_length <= v3 )
+  if ( oldEquipIdList->max_length <= classPos )
     goto LABEL_57;
-  if ( servantIdList->m_Items[v3] == oldServantIdList->m_Items[v3]
-    && equipIdList->m_Items[v3] == oldEquipIdList->m_Items[v3] )
+  if ( servantIdList->m_Items[classPos] == oldServantIdList->m_Items[classPos]
+    && equipIdList->m_Items[classPos] == oldEquipIdList->m_Items[classPos] )
   {
     return 0LL;
   }
-  v15 = sub_B17014(string___TypeInfo, 9LL, method);
-  if ( !v15 )
+  this = (SupportServantData_o *)sub_B2C374(string___TypeInfo, 9LL);
+  if ( !this )
     goto LABEL_58;
-  v21 = (System_String_array *)v15;
-  this = (SupportServantData_o *)StringLiteral_23384/*"{\"supportDeckId\":"*/;
-  if ( StringLiteral_23384/*"{\"supportDeckId\":"*/ )
+  v21 = this;
+  this = (SupportServantData_o *)StringLiteral_23478/*"{\"supportDeckId\":"*/;
+  if ( StringLiteral_23478/*"{\"supportDeckId\":"*/ )
   {
-    this = (SupportServantData_o *)sub_B170BC(StringLiteral_23384/*"{\"supportDeckId\":"*/, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B2C41C(StringLiteral_23478/*"{\"supportDeckId\":"*/, v21->klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
-    *(_QWORD *)&classPos = StringLiteral_23384/*"{\"supportDeckId\":"*/;
+    v22 = (System_Int32_array **)StringLiteral_23478/*"{\"supportDeckId\":"*/;
   }
   else
   {
-    *(_QWORD *)&classPos = 0LL;
+    v22 = 0LL;
   }
-  if ( !v21->max_length )
+  if ( !LODWORD(v21->fields.servantIdList) )
     goto LABEL_57;
-  v21->m_Items[0] = *(System_String_o **)&classPos;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)v21->m_Items,
-    *(System_Int32_array ***)&classPos,
-    (System_String_array **)method,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+  v21->fields.oldServantIdList = (struct System_Int64_array *)v22;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.oldServantIdList, v22, v15, v16, v17, v18, v19, v20);
   deckId_k__BackingField = v4->fields._deckId_k__BackingField;
   this = (SupportServantData_o *)System_Int32__ToString((int32_t)&deckId_k__BackingField, 0LL);
-  v27 = (System_Int32_array **)this;
+  v29 = (System_Int32_array **)this;
   if ( this )
   {
-    this = (SupportServantData_o *)sub_B170BC(this, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B2C41C(this, v21->klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
   }
-  if ( v21->max_length <= 1 )
+  if ( LODWORD(v21->fields.servantIdList) <= 1 )
     goto LABEL_57;
-  v21->m_Items[1] = (System_String_o *)v27;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v21->m_Items[1],
-    v27,
-    (System_String_array **)method,
-    v22,
-    v23,
-    v24,
-    v25,
-    v26);
-  this = (SupportServantData_o *)StringLiteral_735/*",\"classId\":"*/;
-  if ( StringLiteral_735/*",\"classId\":"*/ )
+  v21->fields.equipIdList = (struct System_Int64_array *)v29;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.equipIdList, v29, v23, v24, v25, v26, v27, v28);
+  this = (SupportServantData_o *)StringLiteral_736/*",\"classId\":"*/;
+  if ( StringLiteral_736/*",\"classId\":"*/ )
   {
-    this = (SupportServantData_o *)sub_B170BC(StringLiteral_735/*",\"classId\":"*/, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B2C41C(StringLiteral_736/*",\"classId\":"*/, v21->klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
-    *(_QWORD *)&classPos = StringLiteral_735/*",\"classId\":"*/;
+    v36 = (System_Int32_array **)StringLiteral_736/*",\"classId\":"*/;
   }
   else
   {
-    *(_QWORD *)&classPos = 0LL;
+    v36 = 0LL;
   }
-  if ( v21->max_length <= 2 )
+  if ( LODWORD(v21->fields.servantIdList) <= 2 )
     goto LABEL_57;
-  v21->m_Items[2] = *(System_String_o **)&classPos;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v21->m_Items[2],
-    *(System_Int32_array ***)&classPos,
-    (System_String_array **)method,
-    v28,
-    v29,
-    v30,
-    v31,
-    v32);
-  this = (SupportServantData_o *)System_Int32__ToString((int32_t)&v69, 0LL);
-  v38 = (System_Int32_array **)this;
+  v21->fields.oldEquipIdList = (struct System_Int64_array *)v36;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.oldEquipIdList, v36, v30, v31, v32, v33, v34, v35);
+  this = (SupportServantData_o *)System_Int32__ToString((int32_t)&v84, 0LL);
+  v43 = (System_Int32_array **)this;
   if ( this )
   {
-    this = (SupportServantData_o *)sub_B170BC(this, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B2C41C(this, v21->klass->_1.element_class);
     if ( !this )
     {
 LABEL_59:
-      sub_B170F4(this);
-      sub_B170A0();
+      v82 = sub_B2C454(this);
+      sub_B2C400(v82, 0LL);
     }
   }
-  if ( v21->max_length <= 3 )
+  if ( LODWORD(v21->fields.servantIdList) <= 3 )
     goto LABEL_57;
-  v21->m_Items[3] = (System_String_o *)v38;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v21->m_Items[3],
-    v38,
-    (System_String_array **)method,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37);
-  this = (SupportServantData_o *)StringLiteral_739/*",\"userSvtId\":"*/;
-  if ( StringLiteral_739/*",\"userSvtId\":"*/ )
+  v21->fields.className = (struct System_String_array *)v43;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.className, v43, v37, v38, v39, v40, v41, v42);
+  this = (SupportServantData_o *)StringLiteral_740/*",\"userSvtId\":"*/;
+  if ( StringLiteral_740/*",\"userSvtId\":"*/ )
   {
-    this = (SupportServantData_o *)sub_B170BC(StringLiteral_739/*",\"userSvtId\":"*/, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B2C41C(StringLiteral_740/*",\"userSvtId\":"*/, v21->klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
-    *(_QWORD *)&classPos = StringLiteral_739/*",\"userSvtId\":"*/;
+    v50 = (System_Int32_array **)StringLiteral_740/*",\"userSvtId\":"*/;
   }
   else
   {
-    *(_QWORD *)&classPos = 0LL;
+    v50 = 0LL;
   }
-  if ( v21->max_length <= 4 )
+  if ( LODWORD(v21->fields.servantIdList) <= 4 )
     goto LABEL_57;
-  v21->m_Items[4] = *(System_String_o **)&classPos;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v21->m_Items[4],
-    *(System_Int32_array ***)&classPos,
-    (System_String_array **)method,
-    v39,
-    v40,
-    v41,
-    v42,
-    v43);
-  v44 = v4->fields.servantIdList;
-  if ( !v44 )
+  *(_QWORD *)&v21->fields.isFriendInfo = v50;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.isFriendInfo, v50, v44, v45, v46, v47, v48, v49);
+  v51 = v4->fields.servantIdList;
+  if ( !v51 )
     goto LABEL_58;
-  if ( v69 >= v44->max_length )
+  if ( v84 >= v51->max_length )
     goto LABEL_57;
-  this = (SupportServantData_o *)System_Int64__ToString((int64_t)&v44->m_Items[v69], 0LL);
-  v50 = (System_Int32_array **)this;
+  this = (SupportServantData_o *)System_Int64__ToString((int64_t)&v51->m_Items[v84], 0LL);
+  v58 = (System_Int32_array **)this;
   if ( this )
   {
-    this = (SupportServantData_o *)sub_B170BC(this, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B2C41C(this, v21->klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
   }
-  if ( v21->max_length <= 5 )
+  if ( LODWORD(v21->fields.servantIdList) <= 5 )
     goto LABEL_57;
-  v21->m_Items[5] = (System_String_o *)v50;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v21->m_Items[5],
-    v50,
-    (System_String_array **)method,
-    v45,
-    v46,
-    v47,
-    v48,
-    v49);
-  this = (SupportServantData_o *)StringLiteral_738/*",\"userSvtEquipId\":"*/;
-  if ( StringLiteral_738/*",\"userSvtEquipId\":"*/ )
+  *(_QWORD *)&v21->fields.isSelectServant = v58;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.isSelectServant, v58, v52, v53, v54, v55, v56, v57);
+  this = (SupportServantData_o *)StringLiteral_739/*",\"userSvtEquipId\":"*/;
+  if ( StringLiteral_739/*",\"userSvtEquipId\":"*/ )
   {
-    this = (SupportServantData_o *)sub_B170BC(StringLiteral_738/*",\"userSvtEquipId\":"*/, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B2C41C(StringLiteral_739/*",\"userSvtEquipId\":"*/, v21->klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
-    *(_QWORD *)&classPos = StringLiteral_738/*",\"userSvtEquipId\":"*/;
+    v65 = (System_Int32_array **)StringLiteral_739/*",\"userSvtEquipId\":"*/;
   }
   else
   {
-    *(_QWORD *)&classPos = 0LL;
+    v65 = 0LL;
   }
-  if ( v21->max_length <= 6 )
+  if ( LODWORD(v21->fields.servantIdList) <= 6 )
     goto LABEL_57;
-  v21->m_Items[6] = *(System_String_o **)&classPos;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v21->m_Items[6],
-    *(System_Int32_array ***)&classPos,
-    (System_String_array **)method,
-    v51,
-    v52,
-    v53,
-    v54,
-    v55);
-  v56 = v4->fields.equipIdList;
-  if ( !v56 )
+  v21->fields.eventSetupInfo = (struct EventUpValSetupInfo_o *)v65;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.eventSetupInfo, v65, v59, v60, v61, v62, v63, v64);
+  v66 = v4->fields.equipIdList;
+  if ( !v66 )
 LABEL_58:
-    sub_B170D4();
-  if ( v69 >= v56->max_length )
+    sub_B2C434(this, *(_QWORD *)&classPos);
+  if ( v84 >= v66->max_length )
     goto LABEL_57;
-  this = (SupportServantData_o *)System_Int64__ToString((int64_t)&v56->m_Items[v69], 0LL);
-  v62 = (System_Int32_array **)this;
+  this = (SupportServantData_o *)System_Int64__ToString((int64_t)&v66->m_Items[v84], 0LL);
+  v73 = (System_Int32_array **)this;
   if ( this )
   {
-    this = (SupportServantData_o *)sub_B170BC(this, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B2C41C(this, v21->klass->_1.element_class);
     if ( !this )
       goto LABEL_59;
   }
-  if ( v21->max_length <= 7 )
+  if ( LODWORD(v21->fields.servantIdList) <= 7 )
     goto LABEL_57;
-  v21->m_Items[7] = (System_String_o *)v62;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v21->m_Items[7],
-    v62,
-    (System_String_array **)method,
-    v57,
-    v58,
-    v59,
-    v60,
-    v61);
-  this = (SupportServantData_o *)StringLiteral_23602/*"}"*/;
-  if ( StringLiteral_23602/*"}"*/ )
+  v21->fields.eventSetupInfo2 = (struct EventUpValSetupInfo_o *)v73;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.eventSetupInfo2, v73, v67, v68, v69, v70, v71, v72);
+  this = (SupportServantData_o *)StringLiteral_23696/*"}"*/;
+  if ( StringLiteral_23696/*"}"*/ )
   {
-    this = (SupportServantData_o *)sub_B170BC(StringLiteral_23602/*"}"*/, v21->obj.klass->_1.element_class);
+    this = (SupportServantData_o *)sub_B2C41C(StringLiteral_23696/*"}"*/, v21->klass->_1.element_class);
     if ( this )
     {
-      *(_QWORD *)&classPos = StringLiteral_23602/*"}"*/;
+      v80 = (System_Int32_array **)StringLiteral_23696/*"}"*/;
       goto LABEL_55;
     }
     goto LABEL_59;
   }
-  *(_QWORD *)&classPos = 0LL;
+  v80 = 0LL;
 LABEL_55:
-  if ( v21->max_length <= 8 )
+  if ( LODWORD(v21->fields.servantIdList) <= 8 )
   {
 LABEL_57:
-    sub_B17100(this, *(_QWORD *)&classPos, method);
-    sub_B170A0();
+    v81 = sub_B2C460(this);
+    sub_B2C400(v81, 0LL);
   }
-  v21->m_Items[8] = *(System_String_o **)&classPos;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v21->m_Items[8],
-    *(System_Int32_array ***)&classPos,
-    (System_String_array **)method,
-    v63,
-    v64,
-    v65,
-    v66,
-    v67);
-  return System_String__Concat_43823856(v21, 0LL);
+  v21->fields.questRestrictionInfo = (struct QuestRestrictionInfo_o *)v80;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.questRestrictionInfo, v80, v74, v75, v76, v77, v78, v79);
+  return System_String__Concat_44385656((System_String_array *)v21, 0LL);
 }
 
 
@@ -3022,10 +2922,10 @@ System_String_o *__fastcall SupportServantData__updateNameCheck(SupportServantDa
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
-  __int64 v6; // x2
-  bool v7; // w8
+  bool v6; // w8
   System_String_o *result; // x0
-  __int64 v9; // x0
+  __int64 v8; // x0
+  __int64 v9; // x1
   System_String_array **v10; // x2
   System_String_array **v11; // x3
   System_Boolean_array **v12; // x4
@@ -3035,57 +2935,65 @@ System_String_o *__fastcall SupportServantData__updateNameCheck(SupportServantDa
   System_String_array *v16; // x19
   System_String_o *v17; // x0
   System_Int32_array **v18; // x1
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  System_Int32_array **v24; // x21
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
+  System_String_array **v19; // x2
+  System_String_array **v20; // x3
+  System_Boolean_array **v21; // x4
+  System_Int32_array **v22; // x5
+  System_Int32_array *v23; // x6
+  System_Int32_array *v24; // x7
+  System_Int32_array **v25; // x21
+  System_String_array **v26; // x2
+  System_String_array **v27; // x3
+  System_Boolean_array **v28; // x4
+  System_Int32_array **v29; // x5
+  System_Int32_array *v30; // x6
+  System_Int32_array *v31; // x7
+  System_Int32_array **v32; // x1
+  System_String_array **v33; // x2
+  System_String_array **v34; // x3
+  System_Boolean_array **v35; // x4
+  System_Int32_array **v36; // x5
+  System_Int32_array *v37; // x6
+  System_Int32_array *v38; // x7
   System_Int32_array **deckName_k__BackingField; // x20
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
+  System_String_array **v40; // x2
+  System_String_array **v41; // x3
+  System_Boolean_array **v42; // x4
+  System_Int32_array **v43; // x5
+  System_Int32_array *v44; // x6
+  System_Int32_array *v45; // x7
+  System_Int32_array **v46; // x1
+  __int64 v47; // x0
+  __int64 v48; // x0
   int32_t deckId_k__BackingField; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_40FD2A4 & 1) == 0 )
+  if ( (byte_418AC26 & 1) == 0 )
   {
-    sub_B16FFC(&string___TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23384/*"{\"supportDeckId\":"*/, v3);
-    sub_B16FFC(&StringLiteral_736/*",\"name\":\""*/, v4);
-    sub_B16FFC(&StringLiteral_311/*"\"}"*/, v5);
-    byte_40FD2A4 = 1;
+    sub_B2C35C(&string___TypeInfo, method);
+    sub_B2C35C(&StringLiteral_23478/*"{\"supportDeckId\":"*/, v3);
+    sub_B2C35C(&StringLiteral_737/*",\"name\":\""*/, v4);
+    sub_B2C35C(&StringLiteral_311/*"\"}"*/, v5);
+    byte_418AC26 = 1;
   }
   deckId_k__BackingField = 0;
-  v7 = System_String__op_Inequality(
+  v6 = System_String__op_Inequality(
          this->fields._deckName_k__BackingField,
          this->fields._oldDeckName_k__BackingField,
          0LL);
   result = 0LL;
-  if ( v7 )
+  if ( v6 )
   {
-    v9 = sub_B17014(string___TypeInfo, 5LL, v6);
-    if ( !v9 )
-      sub_B170D4();
-    v16 = (System_String_array *)v9;
-    v17 = (System_String_o *)StringLiteral_23384/*"{\"supportDeckId\":"*/;
-    if ( StringLiteral_23384/*"{\"supportDeckId\":"*/ )
+    v8 = sub_B2C374(string___TypeInfo, 5LL);
+    if ( !v8 )
+      sub_B2C434(0LL, v9);
+    v16 = (System_String_array *)v8;
+    v17 = (System_String_o *)StringLiteral_23478/*"{\"supportDeckId\":"*/;
+    if ( StringLiteral_23478/*"{\"supportDeckId\":"*/ )
     {
-      v17 = (System_String_o *)sub_B170BC(StringLiteral_23384/*"{\"supportDeckId\":"*/, v16->obj.klass->_1.element_class);
+      v17 = (System_String_o *)sub_B2C41C(StringLiteral_23478/*"{\"supportDeckId\":"*/, v16->obj.klass->_1.element_class);
       if ( !v17 )
         goto LABEL_29;
-      v18 = (System_Int32_array **)StringLiteral_23384/*"{\"supportDeckId\":"*/;
+      v18 = (System_Int32_array **)StringLiteral_23478/*"{\"supportDeckId\":"*/;
     }
     else
     {
@@ -3094,74 +3002,74 @@ System_String_o *__fastcall SupportServantData__updateNameCheck(SupportServantDa
     if ( !v16->max_length )
       goto LABEL_28;
     v16->m_Items[0] = (System_String_o *)v18;
-    sub_B16F98((BattleServantConfConponent_o *)v16->m_Items, v18, v10, v11, v12, v13, v14, v15);
+    sub_B2C2F8((BattleServantConfConponent_o *)v16->m_Items, v18, v10, v11, v12, v13, v14, v15);
     deckId_k__BackingField = this->fields._deckId_k__BackingField;
     v17 = System_Int32__ToString((int32_t)&deckId_k__BackingField, 0LL);
-    v24 = (System_Int32_array **)v17;
-    if ( !v17 || (v17 = (System_String_o *)sub_B170BC(v17, v16->obj.klass->_1.element_class)) != 0LL )
+    v25 = (System_Int32_array **)v17;
+    if ( !v17 || (v17 = (System_String_o *)sub_B2C41C(v17, v16->obj.klass->_1.element_class)) != 0LL )
     {
       if ( v16->max_length <= 1 )
         goto LABEL_28;
-      v16->m_Items[1] = (System_String_o *)v24;
-      sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[1], v24, v10, v19, v20, v21, v22, v23);
-      v17 = (System_String_o *)StringLiteral_736/*",\"name\":\""*/;
-      if ( StringLiteral_736/*",\"name\":\""*/ )
+      v16->m_Items[1] = (System_String_o *)v25;
+      sub_B2C2F8((BattleServantConfConponent_o *)&v16->m_Items[1], v25, v19, v20, v21, v22, v23, v24);
+      v17 = (System_String_o *)StringLiteral_737/*",\"name\":\""*/;
+      if ( StringLiteral_737/*",\"name\":\""*/ )
       {
-        v17 = (System_String_o *)sub_B170BC(StringLiteral_736/*",\"name\":\""*/, v16->obj.klass->_1.element_class);
+        v17 = (System_String_o *)sub_B2C41C(StringLiteral_737/*",\"name\":\""*/, v16->obj.klass->_1.element_class);
         if ( !v17 )
           goto LABEL_29;
-        v18 = (System_Int32_array **)StringLiteral_736/*",\"name\":\""*/;
+        v32 = (System_Int32_array **)StringLiteral_737/*",\"name\":\""*/;
       }
       else
       {
-        v18 = 0LL;
+        v32 = 0LL;
       }
       if ( v16->max_length <= 2 )
         goto LABEL_28;
-      v16->m_Items[2] = (System_String_o *)v18;
-      sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[2], v18, v10, v25, v26, v27, v28, v29);
+      v16->m_Items[2] = (System_String_o *)v32;
+      sub_B2C2F8((BattleServantConfConponent_o *)&v16->m_Items[2], v32, v26, v27, v28, v29, v30, v31);
       deckName_k__BackingField = (System_Int32_array **)this->fields._deckName_k__BackingField;
       if ( !deckName_k__BackingField
-        || (v17 = (System_String_o *)sub_B170BC(deckName_k__BackingField, v16->obj.klass->_1.element_class)) != 0LL )
+        || (v17 = (System_String_o *)sub_B2C41C(deckName_k__BackingField, v16->obj.klass->_1.element_class)) != 0LL )
       {
         if ( v16->max_length <= 3 )
           goto LABEL_28;
         v16->m_Items[3] = (System_String_o *)deckName_k__BackingField;
-        sub_B16F98(
+        sub_B2C2F8(
           (BattleServantConfConponent_o *)&v16->m_Items[3],
           deckName_k__BackingField,
-          v10,
-          v30,
-          v31,
-          v32,
           v33,
-          v34);
+          v34,
+          v35,
+          v36,
+          v37,
+          v38);
         v17 = (System_String_o *)StringLiteral_311/*"\"}"*/;
         if ( !StringLiteral_311/*"\"}"*/ )
         {
-          v18 = 0LL;
+          v46 = 0LL;
 LABEL_25:
           if ( v16->max_length > 4 )
           {
-            v16->m_Items[4] = (System_String_o *)v18;
-            sub_B16F98((BattleServantConfConponent_o *)&v16->m_Items[4], v18, v10, v36, v37, v38, v39, v40);
-            return System_String__Concat_43823856(v16, 0LL);
+            v16->m_Items[4] = (System_String_o *)v46;
+            sub_B2C2F8((BattleServantConfConponent_o *)&v16->m_Items[4], v46, v40, v41, v42, v43, v44, v45);
+            return System_String__Concat_44385656(v16, 0LL);
           }
 LABEL_28:
-          sub_B17100(v17, v18, v10);
-          sub_B170A0();
+          v47 = sub_B2C460(v17);
+          sub_B2C400(v47, 0LL);
         }
-        v17 = (System_String_o *)sub_B170BC(StringLiteral_311/*"\"}"*/, v16->obj.klass->_1.element_class);
+        v17 = (System_String_o *)sub_B2C41C(StringLiteral_311/*"\"}"*/, v16->obj.klass->_1.element_class);
         if ( v17 )
         {
-          v18 = (System_Int32_array **)StringLiteral_311/*"\"}"*/;
+          v46 = (System_Int32_array **)StringLiteral_311/*"\"}"*/;
           goto LABEL_25;
         }
       }
     }
 LABEL_29:
-    sub_B170F4(v17);
-    sub_B170A0();
+    v48 = sub_B2C454(v17);
+    sub_B2C400(v48, 0LL);
   }
   return result;
 }

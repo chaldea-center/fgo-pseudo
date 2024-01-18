@@ -1,13 +1,13 @@
 void __fastcall WarBoardMessageEntity___ctor(WarBoardMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F8568 & 1) == 0 )
+  if ( (byte_418651F & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40F8568 = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_418651F = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall WarBoardMessageEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_40F8567 & 1) == 0 )
+  if ( (byte_418651E & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&sceneType);
-    byte_40F8567 = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&sceneType);
+    byte_418651E = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            stageId,
            sceneType,
            idx,
-           (const MethodInfo_18C25C8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1732D30 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

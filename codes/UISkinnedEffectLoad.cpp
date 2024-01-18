@@ -13,31 +13,30 @@ System_String_array *__fastcall UISkinnedEffectLoad__GetEffectNames(
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  WebViewManager_o *Instance; // x0
   System_String_array *result; // x0
-  __int64 v10; // x1
-  __int64 v11; // x2
+  __int64 v9; // x1
   struct UISkinnedEffectLoad_skinEffect_array **p_skinEffects; // x21
   int32_t OverwriteUiVersion; // w0
-  const MethodInfo *v14; // x3
+  const MethodInfo *v12; // x3
   struct UISkinnedEffectLoad_ReplaceData_array *replaceDatas; // x8
+  __int64 v14; // x0
   System_Collections_Generic_List_string__o *EffectNameList; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4104927 & 1) == 0 )
+  if ( (byte_41915F7 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___, *(_QWORD *)&uiChangeType);
-    sub_B16FFC(&Method_System_Collections_Generic_List_string__ToArray__, v5);
-    sub_B16FFC(&ServantCommentManager_TypeInfo, v6);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4104927 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___, *(_QWORD *)&uiChangeType);
+    sub_B2C35C(&Method_System_Collections_Generic_List_string__ToArray__, v5);
+    sub_B2C35C(&ServantCommentManager_TypeInfo, v6);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_41915F7 = 1;
   }
   EffectNameList = 0LL;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance )
+  result = (System_String_array *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !result )
     goto LABEL_18;
   result = (System_String_array *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                    (DataManager_o *)Instance,
-                                    (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
+                                    (DataManager_o *)result,
+                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
   if ( result )
   {
     p_skinEffects = &this->fields.skinEffects;
@@ -48,12 +47,13 @@ System_String_array *__fastcall UISkinnedEffectLoad__GetEffectNames(
                                       0LL);
     if ( ((unsigned __int8)result & 1) != 0 )
     {
+      result = (System_String_array *)EffectNameList;
       if ( EffectNameList )
         return (System_String_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                         (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)EffectNameList,
-                                        (const MethodInfo_2F27E24 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                        (const MethodInfo_2EF65AC *)Method_System_Collections_Generic_List_string__ToArray__);
 LABEL_18:
-      sub_B170D4();
+      sub_B2C434(result, v9);
     }
   }
   else
@@ -68,7 +68,7 @@ LABEL_18:
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);
   }
   OverwriteUiVersion = ServantCommentManager__GetOverwriteUiVersion(0LL);
-  result = UISkinnedEffectLoad__GetReplaceEffectnames(this, uiChangeType, OverwriteUiVersion, v14);
+  result = UISkinnedEffectLoad__GetReplaceEffectnames(this, uiChangeType, OverwriteUiVersion, v12);
   if ( !result )
   {
 LABEL_14:
@@ -77,8 +77,8 @@ LABEL_14:
       goto LABEL_18;
     if ( replaceDatas->max_length <= uiChangeType )
     {
-      sub_B17100(result, v10, v11);
-      sub_B170A0();
+      v14 = sub_B2C460(result);
+      sub_B2C400(v14, 0LL);
     }
     return (System_String_array *)replaceDatas->m_Items[uiChangeType];
   }
@@ -110,7 +110,7 @@ System_String_array *__fastcall UISkinnedEffectLoad__GetReplaceEffectnames(
   {
     v8 = *(_QWORD *)(v7 + 8 * v6);
     if ( !v8 )
-      sub_B170D4();
+      sub_B2C434(this, uiChangeType);
     if ( *(_DWORD *)(v8 + 16) == uiChangeType && *(_DWORD *)(v8 + 20) == version )
       break;
     if ( (int)++v6 >= v5 )
@@ -133,19 +133,20 @@ void __fastcall UISkinnedEffectLoad__OnEnable(UISkinnedEffectLoad_o *this, const
 void __fastcall UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
-  int32_t UiFlag; // w0
-  const MethodInfo *v5; // x2
+  __int64 UiFlag; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
   struct UISkinnedEffectLoad_ReplaceData_array *replaceDatas; // x8
   System_String_array *EffectNames; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   int assetName_low; // w21
-  UnityEngine_GameObject_o *v10; // x19
+  UnityEngine_GameObject_o *v11; // x19
 
-  if ( (byte_4104926 & 1) == 0 )
+  if ( (byte_41915F6 & 1) == 0 )
   {
-    sub_B16FFC(&CommonEffectManager_TypeInfo, method);
-    sub_B16FFC(&ServantCommentManager_TypeInfo, v3);
-    byte_4104926 = 1;
+    sub_B2C35C(&CommonEffectManager_TypeInfo, method);
+    sub_B2C35C(&ServantCommentManager_TypeInfo, v3);
+    byte_41915F6 = 1;
   }
   if ( this->fields.replaceDatas )
   {
@@ -157,19 +158,19 @@ void __fastcall UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, con
     UiFlag = ServantCommentManager__GetUiFlag(0LL);
     replaceDatas = this->fields.replaceDatas;
     if ( !replaceDatas )
-      sub_B170D4();
-    if ( UiFlag < (signed int)replaceDatas->max_length )
+      sub_B2C434(UiFlag, v5);
+    if ( (int)UiFlag < (signed int)replaceDatas->max_length )
     {
-      EffectNames = UISkinnedEffectLoad__GetEffectNames(this, UiFlag, v5);
+      EffectNames = UISkinnedEffectLoad__GetEffectNames(this, UiFlag, v6);
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       assetName_low = LOBYTE(this->fields.assetName);
-      v10 = gameObject;
+      v11 = gameObject;
       if ( (BYTE3(CommonEffectManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !CommonEffectManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
       }
-      CommonEffectManager__SetSkinEffects(EffectNames, v10, assetName_low != 0, 0LL);
+      CommonEffectManager__SetSkinEffects(EffectNames, v11, assetName_low != 0, 0LL);
     }
   }
 }

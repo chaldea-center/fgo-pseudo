@@ -9,10 +9,10 @@ void __fastcall EventRewardAnotherPayConfirmDialog___cctor(const MethodInfo *met
   struct EventRewardAnotherPayConfirmDialog_StaticFields *v7; // x9
   struct EventRewardAnotherPayConfirmDialog_StaticFields *v8; // x9
 
-  if ( (byte_40F6138 & 1) == 0 )
+  if ( (byte_41887D4 & 1) == 0 )
   {
-    sub_B16FFC(&EventRewardAnotherPayConfirmDialog_TypeInfo, v1);
-    byte_40F6138 = 1;
+    sub_B2C35C(&EventRewardAnotherPayConfirmDialog_TypeInfo, v1);
+    byte_41887D4 = 1;
   }
   static_fields = EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->CANCEL_BUTTON_BASE_POS.fields.x = 0xC3600000C3200000LL;
@@ -62,10 +62,10 @@ void __fastcall EventRewardAnotherPayConfirmDialog___ctor(
         EventRewardAnotherPayConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40F6137 & 1) == 0 )
+  if ( (byte_41887D3 & 1) == 0 )
   {
-    sub_B16FFC(&BaseDialog_TypeInfo, method);
-    byte_40F6137 = 1;
+    sub_B2C35C(&BaseDialog_TypeInfo, method);
+    byte_41887D3 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -100,34 +100,32 @@ System_String_o *__fastcall EventRewardAnotherPayConfirmDialog__GetName(
   __int64 v7; // x1
   UserServantCollectionMaster_o *Master_WarQuestSelectionMaster; // x20
   int64_t UserId; // x0
-  int64_t v10; // x21
-  __int64 v11; // x22
-  __int64 v12; // x23
-  int32_t v13; // w0
+  __int64 v10; // x1
+  int64_t v11; // x21
+  __int64 v12; // x22
+  __int64 v13; // x23
   WarQuestSelectionMaster_o *v14; // x0
   __int64 v15; // x21
   __int64 v16; // x22
   ServantLimitImageMaster_o *v17; // x20
-  int32_t v18; // w0
-  int32_t ServantLimitCountSealAfter; // w0
-  int32_t v20; // w1
+  int32_t v18; // w1
   UserServantCollectionEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v23; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
-  if ( (byte_40F6135 & 1) == 0 )
+  if ( (byte_41887D1 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMaster_ServantLimitImageMaster___, svtEntity);
-    sub_B16FFC(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v4);
-    sub_B16FFC(&DataManager_TypeInfo, v5);
-    sub_B16FFC(&NetworkManager_TypeInfo, v6);
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
-    byte_40F6135 = 1;
+    sub_B2C35C(&Method_DataManager_GetMaster_ServantLimitImageMaster___, svtEntity);
+    sub_B2C35C(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v4);
+    sub_B2C35C(&DataManager_TypeInfo, v5);
+    sub_B2C35C(&NetworkManager_TypeInfo, v6);
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
+    byte_41887D1 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_WarQuestSelectionMaster = (UserServantCollectionMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -136,27 +134,27 @@ System_String_o *__fastcall EventRewardAnotherPayConfirmDialog__GetName(
   UserId = NetworkManager__get_UserId(0LL);
   if ( !svtEntity )
     goto LABEL_29;
-  v10 = UserId;
-  v12 = *(_QWORD *)&svtEntity->fields.id.fields.currentCryptoKey;
-  v11 = *(_QWORD *)&svtEntity->fields.id.fields.fakeValue;
+  v11 = UserId;
+  v13 = *(_QWORD *)&svtEntity->fields.id.fields.currentCryptoKey;
+  v12 = *(_QWORD *)&svtEntity->fields.id.fields.fakeValue;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  *(_QWORD *)&v23.fields.currentCryptoKey = v12;
-  *(_QWORD *)&v23.fields.fakeValue = v11;
-  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44068536(v23, 0LL);
+  *(_QWORD *)&v21.fields.currentCryptoKey = v13;
+  *(_QWORD *)&v21.fields.fakeValue = v12;
+  UserId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44758064(v21, 0LL);
   if ( !Master_WarQuestSelectionMaster )
     goto LABEL_29;
-  if ( !UserServantCollectionMaster__TryGetEntity(Master_WarQuestSelectionMaster, &entity, v10, v13, 0LL) )
+  if ( !UserServantCollectionMaster__TryGetEntity(Master_WarQuestSelectionMaster, &entity, v11, UserId, 0LL) )
   {
-    v20 = -1;
-    return ServantEntity__getName(svtEntity, v20, -1, 0LL);
+    v18 = -1;
+    return ServantEntity__getName(svtEntity, v18, -1, 0LL);
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  v14 = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  v14 = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   v16 = *(_QWORD *)&svtEntity->fields.id.fields.currentCryptoKey;
   v15 = *(_QWORD *)&svtEntity->fields.id.fields.fakeValue;
   v17 = (ServantLimitImageMaster_o *)v14;
@@ -165,26 +163,22 @@ System_String_o *__fastcall EventRewardAnotherPayConfirmDialog__GetName(
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  *(_QWORD *)&v24.fields.currentCryptoKey = v16;
-  *(_QWORD *)&v24.fields.fakeValue = v15;
-  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44068536(v24, 0LL);
+  *(_QWORD *)&v22.fields.currentCryptoKey = v16;
+  *(_QWORD *)&v22.fields.fakeValue = v15;
+  UserId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44758064(v22, 0LL);
   if ( !entity
     || !v17
-    || (ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
-                                       v17,
-                                       v18,
-                                       entity->fields.maxLimitCount,
-                                       0LL),
+    || (UserId = ServantLimitImageMaster__GetServantLimitCountSealAfter(v17, UserId, entity->fields.maxLimitCount, 0LL),
         !entity) )
   {
 LABEL_29:
-    sub_B170D4();
+    sub_B2C434(UserId, v10);
   }
-  if ( ServantLimitCountSealAfter == entity->fields.maxLimitCount )
-    v20 = -1;
+  if ( (_DWORD)UserId == entity->fields.maxLimitCount )
+    v18 = -1;
   else
-    v20 = ServantLimitCountSealAfter;
-  return ServantEntity__getName(svtEntity, v20, -1, 0LL);
+    v18 = UserId;
+  return ServantEntity__getName(svtEntity, v18, -1, 0LL);
 }
 
 
@@ -193,26 +187,24 @@ void __fastcall EventRewardAnotherPayConfirmDialog__Init(
         const MethodInfo *method)
 {
   ItemIconComponent_o *itemIcon; // x0
-  SkillIconComponent_o *skillIcon; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
 
   itemIcon = this->fields.itemIcon;
   if ( !itemIcon
-    || (ItemIconComponent__Clear(itemIcon, 0LL), (skillIcon = this->fields.skillIcon) == 0LL)
-    || (SkillIconComponent__Clear(skillIcon, 0LL),
-        (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+    || (ItemIconComponent__Clear(itemIcon, 0LL), (itemIcon = (ItemIconComponent_o *)this->fields.skillIcon) == 0LL)
+    || (SkillIconComponent__Clear((SkillIconComponent_o *)itemIcon, 0LL),
+        (itemIcon = (ItemIconComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(itemIcon, method);
   }
-  UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemIcon, 0, 0LL);
   this->fields.onDecide = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.onDecide, 0LL, v6, v7, v8, v9, v10, v11);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.onDecide, 0LL, v4, v5, v6, v7, v8, v9);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -223,13 +215,14 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OnClickAnotherBuy(
         const MethodInfo *method)
 {
   __int64 v3; // x1
+  __int64 v4; // x1
   struct System_Action_EventRewardAnotherPayConfirmDialog_BuyState__o *onDecide; // x0
 
-  if ( (byte_40F6134 & 1) == 0 )
+  if ( (byte_41887D0 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, method);
-    sub_B16FFC(&SoundManager_TypeInfo, v3);
-    byte_40F6134 = 1;
+    sub_B2C35C(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, method);
+    sub_B2C35C(&SoundManager_TypeInfo, v3);
+    byte_41887D0 = 1;
   }
   if ( this->fields.state == 1 )
   {
@@ -242,11 +235,11 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OnClickAnotherBuy(
     onDecide = this->fields.onDecide;
     this->fields.state = 0;
     if ( !onDecide )
-      sub_B170D4();
+      sub_B2C434(0LL, v4);
     System_Action_ShopRootConstants_State___Invoke(
       (System_Action_ShopRootConstants_State__o *)onDecide,
       3,
-      (const MethodInfo_24B6068 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
+      (const MethodInfo_24BA830 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
   }
 }
 
@@ -258,22 +251,20 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OnClickCancel(
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
-  System_String_o *v6; // x0
-  struct UILabel_o *cancelLabel; // x8
-  System_String_o *v8; // x1
   System_String_o *mText; // x0
-  bool v10; // w20
-  _QWORD *v11; // x8
-  System_Reflection_MethodBase_o *v12; // x0
-  struct System_Action_EventRewardAnotherPayConfirmDialog_BuyState__o *onDecide; // x0
+  System_String_o *v7; // x1
+  struct UILabel_o *cancelLabel; // x8
+  bool v9; // w20
+  _QWORD *v10; // x8
+  System_Reflection_MethodBase_o *v11; // x0
 
-  if ( (byte_40F6131 & 1) == 0 )
+  if ( (byte_41887CD & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, method);
-    sub_B16FFC(&Method_EventRewardAnotherPayConfirmDialog_OnClickCancel__, v3);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v5);
-    byte_40F6131 = 1;
+    sub_B2C35C(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, method);
+    sub_B2C35C(&Method_EventRewardAnotherPayConfirmDialog_OnClickCancel__, v3);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v4);
+    sub_B2C35C(&StringLiteral_3261/*"COMMON_CONFIRM_CLOSE"*/, v5);
+    byte_41887CD = 1;
   }
   if ( this->fields.state == 1 )
   {
@@ -282,29 +273,29 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OnClickCancel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+    mText = LocalizationManager__Get((System_String_o *)StringLiteral_3261/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
     cancelLabel = this->fields.cancelLabel;
     if ( !cancelLabel )
       goto LABEL_15;
-    v8 = v6;
+    v7 = mText;
     mText = cancelLabel->fields.mText;
     if ( !mText )
       goto LABEL_15;
-    v10 = System_String__Equals_43731072(mText, v8, 0LL);
-    v11 = Method_EventRewardAnotherPayConfirmDialog_OnClickCancel__;
+    v9 = System_String__Equals_44292872(mText, v7, 0LL);
+    v10 = Method_EventRewardAnotherPayConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_EventRewardAnotherPayConfirmDialog_OnClickCancel__ + 75) & 2) != 0 )
-      v11 = (_QWORD *)sub_B17004(Method_EventRewardAnotherPayConfirmDialog_OnClickCancel__);
-    v12 = (System_Reflection_MethodBase_o *)sub_B16FE0(v11, v11[3]);
-    OverwriteAssetSoundName__PlaySystemSe(v12, !v10, 0LL);
-    onDecide = this->fields.onDecide;
+      v10 = (_QWORD *)sub_B2C364(Method_EventRewardAnotherPayConfirmDialog_OnClickCancel__);
+    v11 = (System_Reflection_MethodBase_o *)sub_B2C340(v10, v10[3]);
+    OverwriteAssetSoundName__PlaySystemSe(v11, !v9, 0LL);
+    mText = (System_String_o *)this->fields.onDecide;
     this->fields.state = 0;
-    if ( !onDecide )
+    if ( !mText )
 LABEL_15:
-      sub_B170D4();
+      sub_B2C434(mText, v7);
     System_Action_ShopRootConstants_State___Invoke(
-      (System_Action_ShopRootConstants_State__o *)onDecide,
+      (System_Action_ShopRootConstants_State__o *)mText,
       0,
-      (const MethodInfo_24B6068 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
+      (const MethodInfo_24BA830 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
   }
 }
 
@@ -314,13 +305,14 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OnClickDecide(
         const MethodInfo *method)
 {
   __int64 v3; // x1
+  __int64 v4; // x1
   struct System_Action_EventRewardAnotherPayConfirmDialog_BuyState__o *onDecide; // x0
 
-  if ( (byte_40F6132 & 1) == 0 )
+  if ( (byte_41887CE & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, method);
-    sub_B16FFC(&SoundManager_TypeInfo, v3);
-    byte_40F6132 = 1;
+    sub_B2C35C(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, method);
+    sub_B2C35C(&SoundManager_TypeInfo, v3);
+    byte_41887CE = 1;
   }
   if ( this->fields.state == 1 )
   {
@@ -333,11 +325,11 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OnClickDecide(
     onDecide = this->fields.onDecide;
     this->fields.state = 0;
     if ( !onDecide )
-      sub_B170D4();
+      sub_B2C434(0LL, v4);
     System_Action_ShopRootConstants_State___Invoke(
       (System_Action_ShopRootConstants_State__o *)onDecide,
       1,
-      (const MethodInfo_24B6068 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
+      (const MethodInfo_24BA830 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
   }
 }
 
@@ -347,13 +339,14 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OnClickNormalBuy(
         const MethodInfo *method)
 {
   __int64 v3; // x1
+  __int64 v4; // x1
   struct System_Action_EventRewardAnotherPayConfirmDialog_BuyState__o *onDecide; // x0
 
-  if ( (byte_40F6133 & 1) == 0 )
+  if ( (byte_41887CF & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, method);
-    sub_B16FFC(&SoundManager_TypeInfo, v3);
-    byte_40F6133 = 1;
+    sub_B2C35C(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, method);
+    sub_B2C35C(&SoundManager_TypeInfo, v3);
+    byte_41887CF = 1;
   }
   if ( this->fields.state == 1 )
   {
@@ -366,11 +359,11 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OnClickNormalBuy(
     onDecide = this->fields.onDecide;
     this->fields.state = 0;
     if ( !onDecide )
-      sub_B170D4();
+      sub_B2C434(0LL, v4);
     System_Action_ShopRootConstants_State___Invoke(
       (System_Action_ShopRootConstants_State__o *)onDecide,
       2,
-      (const MethodInfo_24B6068 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
+      (const MethodInfo_24BA830 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
   }
 }
 
@@ -405,122 +398,107 @@ void __fastcall EventRewardAnotherPayConfirmDialog__Open(
   __int64 v29; // x1
   __int64 v30; // x1
   struct System_Action_EventRewardAnotherPayConfirmDialog_BuyState__o **p_onDecide; // x26
-  System_Object_array *AnotherPayItemIds; // x0
+  System_Action_ShopRootConstants_State__o *AnotherPayItemIds; // x0
   __int64 v33; // x1
-  System_String_array **v34; // x2
-  int32_t v35; // w24
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
-  WarEntity_o *v38; // x21
+  int32_t v34; // w24
+  WarEntity_o *v35; // x21
   ServantEntity_o *RelateServantEntity; // x0
-  ServantEntity_o *v40; // x25
-  UnityEngine_Component_o *itemIcon; // x0
-  int32_t v42; // w8
-  UnityEngine_GameObject_o *gameObject; // x0
-  ItemIconComponent_o *v44; // x0
+  ServantEntity_o *v37; // x25
+  int32_t v38; // w8
   int32_t eventId; // w24
-  __int64 v46; // x26
-  __int64 v47; // x27
-  int32_t v48; // w0
-  const MethodInfo *v49; // x3
-  const MethodInfo *v50; // x2
-  UILabel_o *resultLabel; // x0
-  EventRewardAnotherPayConfirmDialog_o *v52; // x0
-  const MethodInfo *v53; // x2
+  __int64 v40; // x26
+  __int64 v41; // x27
+  int32_t v42; // w0
+  const MethodInfo *v43; // x3
+  const MethodInfo *v44; // x2
+  EventRewardAnotherPayConfirmDialog_o *v45; // x0
+  const MethodInfo *v46; // x2
   Il2CppObject *Name; // x24
   System_String_o *ClassName; // x0
   UILabel_o *warnLabel; // x26
-  Il2CppObject *v57; // x25
-  System_String_o *v58; // x27
+  Il2CppObject *v50; // x25
+  System_String_o *v51; // x27
   Il2CppObject *AnotherPayName; // x0
-  System_String_o *v60; // x0
   UILabel_o *downerLabel; // x26
   UILabel_o *titleLabel; // x26
-  System_String_o *v63; // x22
-  Il2CppObject *v64; // x0
-  System_String_o *v65; // x0
+  System_String_o *v55; // x22
+  Il2CppObject *v56; // x0
   UILabel_o *upperLabel; // x22
-  System_String_o *v67; // x23
-  Il2CppObject *v68; // x0
-  System_String_o *v69; // x0
-  struct UILabel_o *v70; // x22
-  System_String_o *v71; // x23
-  Il2CppObject *v72; // x0
-  System_String_o *v73; // x0
-  System_String_o *v74; // x1
-  UILabel_o *v75; // x0
-  System_String_o *v76; // x27
-  Il2CppObject *v77; // x0
-  System_String_o *v78; // x0
-  UILabel_o *v79; // x26
-  System_String_o *v80; // x0
-  System_String_o *v81; // x0
-  UILabel_o *v82; // x26
-  System_String_o *v83; // x0
-  System_String_o *v84; // x0
-  const MethodInfo *v85; // x1
-  System_String_o *v86; // x23
-  __int64 v87; // x2
+  System_String_o *v58; // x23
+  Il2CppObject *v59; // x0
+  struct UILabel_o *v60; // x22
+  System_String_o *v61; // x23
+  Il2CppObject *v62; // x0
+  System_String_o *v63; // x1
+  UILabel_o *v64; // x0
+  System_String_o *v65; // x27
+  Il2CppObject *v66; // x0
+  UILabel_o *v67; // x26
+  System_String_o *v68; // x0
+  UILabel_o *v69; // x26
+  System_String_o *v70; // x0
+  const MethodInfo *v71; // x1
+  System_String_o *v72; // x23
+  System_String_array **v73; // x2
+  System_String_array **v74; // x3
+  System_Boolean_array **v75; // x4
+  System_Int32_array **v76; // x5
+  System_Int32_array *v77; // x6
+  System_Int32_array *v78; // x7
+  System_Int32_array **age; // x28
+  System_Object_array *v80; // x27
+  System_String_array **v81; // x2
+  System_String_array **v82; // x3
+  System_Boolean_array **v83; // x4
+  System_Int32_array **v84; // x5
+  System_Int32_array *v85; // x6
+  System_Int32_array *v86; // x7
+  System_String_array **v87; // x2
   System_String_array **v88; // x3
   System_Boolean_array **v89; // x4
   System_Int32_array **v90; // x5
   System_Int32_array *v91; // x6
   System_Int32_array *v92; // x7
-  System_Int32_array **age; // x28
-  System_Object_array *v94; // x27
-  System_String_array **v95; // x3
-  System_Boolean_array **v96; // x4
-  System_Int32_array **v97; // x5
-  System_Int32_array *v98; // x6
-  System_Int32_array *v99; // x7
-  System_String_array **v100; // x3
-  System_Boolean_array **v101; // x4
-  System_Int32_array **v102; // x5
-  System_Int32_array *v103; // x6
-  System_Int32_array *v104; // x7
-  System_String_array **v105; // x3
-  System_Boolean_array **v106; // x4
-  System_Int32_array **v107; // x5
-  System_Int32_array *v108; // x6
-  System_Int32_array *v109; // x7
-  System_Int32_array **v110; // x22
-  System_String_o *v111; // x0
-  EventRewardAnotherPayConfirmDialog_c *v112; // x0
-  const MethodInfo *v113; // x3
-  UnityEngine_GameObject_o *v114; // x0
-  __int64 v115; // x1
-  __int64 v116; // x2
-  __int64 v117; // x3
-  __int64 v118; // x4
-  System_Action_o *v119; // x20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v120; // 0:x0.16
+  System_String_array **v93; // x2
+  System_String_array **v94; // x3
+  System_Boolean_array **v95; // x4
+  System_Int32_array **v96; // x5
+  System_Int32_array *v97; // x6
+  System_Int32_array *v98; // x7
+  System_Int32_array **v99; // x22
+  EventRewardAnotherPayConfirmDialog_c *v100; // x0
+  const MethodInfo *v101; // x3
+  System_Action_o *v102; // x20
+  __int64 v103; // x0
+  __int64 v104; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v105; // 0:x0.16
 
-  if ( (byte_40F612C & 1) == 0 )
+  if ( (byte_41887C8 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, entity);
-    sub_B16FFC(&System_Action_TypeInfo, v13);
-    sub_B16FFC(&Method_DataManager_GetMasterData_ItemMaster___, v14);
-    sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v15);
-    sub_B16FFC(&Method_EventRewardAnotherPayConfirmDialog_EndOpen__, v16);
-    sub_B16FFC(&EventRewardAnotherPayConfirmDialog_TypeInfo, v17);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v18);
-    sub_B16FFC(&object___TypeInfo, v19);
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    sub_B16FFC(&string_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_1691/*"ANOTHER_PAY_ITEM_RECONFIRM_INFO"*/, v23);
-    sub_B16FFC(&StringLiteral_1690/*"ANOTHER_PAY_ITEM_CONFIRM_WARN_MSG"*/, v24);
-    sub_B16FFC(&StringLiteral_1684/*"ANOTHER_PAY_CONFIRM_TITLE"*/, v25);
-    sub_B16FFC(&StringLiteral_1686/*"ANOTHER_PAY_ITEM_CONFIRM_CHOICES_INFO"*/, v26);
-    sub_B16FFC(&StringLiteral_1689/*"ANOTHER_PAY_ITEM_CONFIRM_MSG"*/, v27);
-    sub_B16FFC(&StringLiteral_1687/*"ANOTHER_PAY_ITEM_CONFIRM_CHOICES_MSG"*/, v28);
-    sub_B16FFC(&StringLiteral_1685/*"ANOTHER_PAY_INFO_TITLE"*/, v29);
-    sub_B16FFC(&StringLiteral_1688/*"ANOTHER_PAY_ITEM_CONFIRM_INFO"*/, v30);
-    byte_40F612C = 1;
+    sub_B2C35C(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, entity);
+    sub_B2C35C(&System_Action_TypeInfo, v13);
+    sub_B2C35C(&Method_DataManager_GetMasterData_ItemMaster___, v14);
+    sub_B2C35C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v15);
+    sub_B2C35C(&Method_EventRewardAnotherPayConfirmDialog_EndOpen__, v16);
+    sub_B2C35C(&EventRewardAnotherPayConfirmDialog_TypeInfo, v17);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v18);
+    sub_B2C35C(&object___TypeInfo, v19);
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
+    sub_B2C35C(&string_TypeInfo, v22);
+    sub_B2C35C(&StringLiteral_1689/*"ANOTHER_PAY_ITEM_RECONFIRM_INFO"*/, v23);
+    sub_B2C35C(&StringLiteral_1688/*"ANOTHER_PAY_ITEM_CONFIRM_WARN_MSG"*/, v24);
+    sub_B2C35C(&StringLiteral_1682/*"ANOTHER_PAY_CONFIRM_TITLE"*/, v25);
+    sub_B2C35C(&StringLiteral_1684/*"ANOTHER_PAY_ITEM_CONFIRM_CHOICES_INFO"*/, v26);
+    sub_B2C35C(&StringLiteral_1687/*"ANOTHER_PAY_ITEM_CONFIRM_MSG"*/, v27);
+    sub_B2C35C(&StringLiteral_1685/*"ANOTHER_PAY_ITEM_CONFIRM_CHOICES_MSG"*/, v28);
+    sub_B2C35C(&StringLiteral_1683/*"ANOTHER_PAY_INFO_TITLE"*/, v29);
+    sub_B2C35C(&StringLiteral_1686/*"ANOTHER_PAY_ITEM_CONFIRM_INFO"*/, v30);
+    byte_41887C8 = 1;
   }
   this->fields.onDecide = onDecide;
   p_onDecide = &this->fields.onDecide;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.onDecide,
     (System_Int32_array **)onDecide,
     (System_String_array **)isChoices,
@@ -533,93 +511,97 @@ void __fastcall EventRewardAnotherPayConfirmDialog__Open(
     goto LABEL_78;
   if ( ShopEntity__GetAnotherPayItemIds(entity, 0LL) )
   {
-    AnotherPayItemIds = (System_Object_array *)ShopEntity__GetAnotherPayItemIds(entity, 0LL);
+    AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)ShopEntity__GetAnotherPayItemIds(entity, 0LL);
     if ( !AnotherPayItemIds )
       goto LABEL_78;
-    if ( !AnotherPayItemIds->max_length )
+    if ( !LODWORD(AnotherPayItemIds->fields.m_target) )
       goto LABEL_79;
-    v35 = (int32_t)AnotherPayItemIds->m_Items[0];
+    v34 = AnotherPayItemIds->fields.method;
   }
   else
   {
-    v35 = 0;
+    v34 = 0;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance )
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !AnotherPayItemIds )
     goto LABEL_78;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                        (DataManager_o *)Instance,
-                                                                                        (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ItemMaster___);
-  if ( !MasterData_WarQuestSelectionMaster )
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                                    (DataManager_o *)AnotherPayItemIds,
+                                                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ItemMaster___);
+  if ( !AnotherPayItemIds )
     goto LABEL_78;
-  v38 = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-          MasterData_WarQuestSelectionMaster,
-          v35,
-          (const MethodInfo_266F388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+  v35 = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+          (DataMasterBase_WarMaster__WarEntity__int__o *)AnotherPayItemIds,
+          v34,
+          (const MethodInfo_24E40D0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   RelateServantEntity = ShopEntity__GetRelateServantEntity(entity, 0LL);
-  if ( !v38 || (v40 = RelateServantEntity) == 0LL )
+  if ( !v35 || (v37 = RelateServantEntity) == 0LL )
   {
+    AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)*p_onDecide;
     if ( *p_onDecide )
     {
       System_Action_ShopRootConstants_State___Invoke(
-        (System_Action_ShopRootConstants_State__o *)*p_onDecide,
+        AnotherPayItemIds,
         2,
-        (const MethodInfo_24B6068 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
+        (const MethodInfo_24BA830 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
       return;
     }
     goto LABEL_78;
   }
-  itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)this->fields.itemIcon;
   if ( isReconfirm )
-    v42 = 2;
+    v38 = 2;
   else
-    v42 = 4;
+    v38 = 4;
   if ( isChoices )
-    v42 = 3;
-  this->fields.state = v42;
-  if ( !itemIcon )
+    v38 = 3;
+  this->fields.state = v38;
+  if ( !AnotherPayItemIds )
     goto LABEL_78;
-  gameObject = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
-  if ( !gameObject )
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)UnityEngine_Component__get_gameObject(
+                                                                    (UnityEngine_Component_o *)AnotherPayItemIds,
+                                                                    0LL);
+  if ( !AnotherPayItemIds )
     goto LABEL_78;
-  UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  v44 = this->fields.itemIcon;
-  if ( !v44 )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)AnotherPayItemIds, 1, 0LL);
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)this->fields.itemIcon;
+  if ( !AnotherPayItemIds )
     goto LABEL_78;
-  ItemIconComponent__SetItem(v44, v35, -1, 0LL);
+  ItemIconComponent__SetItem((ItemIconComponent_o *)AnotherPayItemIds, v34, -1, 0LL);
   eventId = entity->fields.eventId;
-  v47 = *(_QWORD *)&v40->fields.id.fields.currentCryptoKey;
-  v46 = *(_QWORD *)&v40->fields.id.fields.fakeValue;
+  v41 = *(_QWORD *)&v37->fields.id.fields.currentCryptoKey;
+  v40 = *(_QWORD *)&v37->fields.id.fields.fakeValue;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  *(_QWORD *)&v120.fields.currentCryptoKey = v47;
-  *(_QWORD *)&v120.fields.fakeValue = v46;
-  v48 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44068536(v120, 0LL);
-  EventRewardAnotherPayConfirmDialog__SetSvtPassiveSkillInfo(this, eventId, v48, v49);
-  EventRewardAnotherPayConfirmDialog__SetUIPositon(this, 1, v50);
-  resultLabel = this->fields.resultLabel;
-  if ( !resultLabel )
+  *(_QWORD *)&v105.fields.currentCryptoKey = v41;
+  *(_QWORD *)&v105.fields.fakeValue = v40;
+  v42 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44758064(v105, 0LL);
+  EventRewardAnotherPayConfirmDialog__SetSvtPassiveSkillInfo(this, eventId, v42, v43);
+  EventRewardAnotherPayConfirmDialog__SetUIPositon(this, 1, v44);
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)this->fields.resultLabel;
+  if ( !AnotherPayItemIds )
     goto LABEL_78;
-  UILabel__set_text(resultLabel, string_TypeInfo->static_fields->Empty, 0LL);
-  Name = (Il2CppObject *)EventRewardAnotherPayConfirmDialog__GetName(v52, v40, v53);
-  ClassName = ServantEntity__getClassName(v40, 0LL);
+  UILabel__set_text((UILabel_o *)AnotherPayItemIds, string_TypeInfo->static_fields->Empty, 0LL);
+  Name = (Il2CppObject *)EventRewardAnotherPayConfirmDialog__GetName(v45, v37, v46);
+  ClassName = ServantEntity__getClassName(v37, 0LL);
   warnLabel = this->fields.warnLabel;
-  v57 = (Il2CppObject *)ClassName;
+  v50 = (Il2CppObject *)ClassName;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v58 = LocalizationManager__Get((System_String_o *)StringLiteral_1690/*"ANOTHER_PAY_ITEM_CONFIRM_WARN_MSG"*/, 0LL);
-  AnotherPayName = (Il2CppObject *)ItemEntity__GetAnotherPayName((ItemEntity_o *)v38, 0LL);
-  v60 = System_String__Format(v58, AnotherPayName, 0LL);
+  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_1688/*"ANOTHER_PAY_ITEM_CONFIRM_WARN_MSG"*/, 0LL);
+  AnotherPayName = (Il2CppObject *)ItemEntity__GetAnotherPayName((ItemEntity_o *)v35, 0LL);
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)System_String__Format(v51, AnotherPayName, 0LL);
   if ( !warnLabel )
     goto LABEL_78;
-  UILabel__set_text(warnLabel, v60, 0LL);
+  UILabel__set_text(warnLabel, (System_String_o *)AnotherPayItemIds, 0LL);
   downerLabel = this->fields.downerLabel;
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)EventRewardAnotherPayConfirmDialog_TypeInfo;
   if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
   {
@@ -639,29 +621,29 @@ void __fastcall EventRewardAnotherPayConfirmDialog__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v63 = LocalizationManager__Get((System_String_o *)StringLiteral_1685/*"ANOTHER_PAY_INFO_TITLE"*/, 0LL);
-    v64 = (Il2CppObject *)ItemEntity__GetAnotherPayName((ItemEntity_o *)v38, 0LL);
-    v65 = System_String__Format(v63, v64, 0LL);
+    v55 = LocalizationManager__Get((System_String_o *)StringLiteral_1683/*"ANOTHER_PAY_INFO_TITLE"*/, 0LL);
+    v56 = (Il2CppObject *)ItemEntity__GetAnotherPayName((ItemEntity_o *)v35, 0LL);
+    AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)System_String__Format(v55, v56, 0LL);
     if ( titleLabel )
     {
-      UILabel__set_text(titleLabel, v65, 0LL);
+      UILabel__set_text(titleLabel, (System_String_o *)AnotherPayItemIds, 0LL);
       upperLabel = this->fields.upperLabel;
-      v67 = LocalizationManager__Get((System_String_o *)StringLiteral_1686/*"ANOTHER_PAY_ITEM_CONFIRM_CHOICES_INFO"*/, 0LL);
-      v68 = (Il2CppObject *)ItemEntity__GetAnotherPayName((ItemEntity_o *)v38, 0LL);
-      v69 = System_String__Format(v67, v68, 0LL);
+      v58 = LocalizationManager__Get((System_String_o *)StringLiteral_1684/*"ANOTHER_PAY_ITEM_CONFIRM_CHOICES_INFO"*/, 0LL);
+      v59 = (Il2CppObject *)ItemEntity__GetAnotherPayName((ItemEntity_o *)v35, 0LL);
+      AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)System_String__Format(v58, v59, 0LL);
       if ( upperLabel )
       {
-        UILabel__set_text(upperLabel, v69, 0LL);
-        v70 = this->fields.downerLabel;
-        v71 = LocalizationManager__Get((System_String_o *)StringLiteral_1687/*"ANOTHER_PAY_ITEM_CONFIRM_CHOICES_MSG"*/, 0LL);
-        v72 = (Il2CppObject *)ItemEntity__GetAnotherPayName((ItemEntity_o *)v38, 0LL);
-        v73 = System_String__Format(v71, v72, 0LL);
-        if ( v70 )
+        UILabel__set_text(upperLabel, (System_String_o *)AnotherPayItemIds, 0LL);
+        v60 = this->fields.downerLabel;
+        v61 = LocalizationManager__Get((System_String_o *)StringLiteral_1685/*"ANOTHER_PAY_ITEM_CONFIRM_CHOICES_MSG"*/, 0LL);
+        v62 = (Il2CppObject *)ItemEntity__GetAnotherPayName((ItemEntity_o *)v35, 0LL);
+        AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)System_String__Format(v61, v62, 0LL);
+        if ( v60 )
         {
-          v74 = v73;
-          v75 = v70;
+          v63 = (System_String_o *)AnotherPayItemIds;
+          v64 = v60;
 LABEL_54:
-          UILabel__set_text(v75, v74, 0LL);
+          UILabel__set_text(v64, v63, 0LL);
           goto LABEL_73;
         }
       }
@@ -673,19 +655,22 @@ LABEL_54:
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v76 = LocalizationManager__Get((System_String_o *)StringLiteral_1684/*"ANOTHER_PAY_CONFIRM_TITLE"*/, 0LL);
-  v77 = (Il2CppObject *)ItemEntity__GetAnotherPayName((ItemEntity_o *)v38, 0LL);
-  v78 = System_String__Format(v76, v77, 0LL);
+  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_1682/*"ANOTHER_PAY_CONFIRM_TITLE"*/, 0LL);
+  v66 = (Il2CppObject *)ItemEntity__GetAnotherPayName((ItemEntity_o *)v35, 0LL);
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)System_String__Format(v65, v66, 0LL);
   if ( !titleLabel )
     goto LABEL_78;
-  UILabel__set_text(titleLabel, v78, 0LL);
-  v79 = this->fields.downerLabel;
-  v80 = LocalizationManager__Get((System_String_o *)StringLiteral_1689/*"ANOTHER_PAY_ITEM_CONFIRM_MSG"*/, 0LL);
-  v81 = System_String__Format(v80, (Il2CppObject *)v38->fields.age, 0LL);
-  if ( !v79 )
+  UILabel__set_text(titleLabel, (System_String_o *)AnotherPayItemIds, 0LL);
+  v67 = this->fields.downerLabel;
+  v68 = LocalizationManager__Get((System_String_o *)StringLiteral_1687/*"ANOTHER_PAY_ITEM_CONFIRM_MSG"*/, 0LL);
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)System_String__Format(
+                                                                    v68,
+                                                                    (Il2CppObject *)v35->fields.age,
+                                                                    0LL);
+  if ( !v67 )
     goto LABEL_78;
-  UILabel__set_text(v79, v81, 0LL);
-  v82 = this->fields.upperLabel;
+  UILabel__set_text(v67, (System_String_o *)AnotherPayItemIds, 0LL);
+  v69 = this->fields.upperLabel;
   if ( isReconfirm )
   {
     if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -693,109 +678,118 @@ LABEL_54:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v83 = LocalizationManager__Get((System_String_o *)StringLiteral_1691/*"ANOTHER_PAY_ITEM_RECONFIRM_INFO"*/, 0LL);
-    v84 = System_String__Format_43744796(v83, (Il2CppObject *)v38->fields.age, v57, Name, 0LL);
-    if ( v82 )
+    v70 = LocalizationManager__Get((System_String_o *)StringLiteral_1689/*"ANOTHER_PAY_ITEM_RECONFIRM_INFO"*/, 0LL);
+    AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)System_String__Format_44306596(
+                                                                      v70,
+                                                                      (Il2CppObject *)v35->fields.age,
+                                                                      v50,
+                                                                      Name,
+                                                                      0LL);
+    if ( v69 )
     {
-      v74 = v84;
-      v75 = v82;
+      v63 = (System_String_o *)AnotherPayItemIds;
+      v64 = v69;
       goto LABEL_54;
     }
 LABEL_78:
-    sub_B170D4();
+    sub_B2C434(AnotherPayItemIds, v33);
   }
   if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v86 = LocalizationManager__Get((System_String_o *)StringLiteral_1688/*"ANOTHER_PAY_ITEM_CONFIRM_INFO"*/, 0LL);
-  AnotherPayItemIds = (System_Object_array *)sub_B17014(object___TypeInfo, 4LL, v87);
+  v72 = LocalizationManager__Get((System_String_o *)StringLiteral_1686/*"ANOTHER_PAY_ITEM_CONFIRM_INFO"*/, 0LL);
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)sub_B2C374(object___TypeInfo, 4LL);
   if ( !AnotherPayItemIds )
     goto LABEL_78;
-  age = (System_Int32_array **)v38->fields.age;
-  v94 = AnotherPayItemIds;
+  age = (System_Int32_array **)v35->fields.age;
+  v80 = (System_Object_array *)AnotherPayItemIds;
   if ( age )
   {
-    AnotherPayItemIds = (System_Object_array *)sub_B170BC(
-                                                 v38->fields.age,
-                                                 AnotherPayItemIds->obj.klass->_1.element_class);
+    AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)sub_B2C41C(
+                                                                      v35->fields.age,
+                                                                      AnotherPayItemIds->klass->_1.element_class);
     if ( !AnotherPayItemIds )
       goto LABEL_80;
   }
-  if ( !v94->max_length )
+  if ( !v80->max_length )
     goto LABEL_79;
-  v94->m_Items[0] = (Il2CppObject *)age;
-  sub_B16F98((BattleServantConfConponent_o *)v94->m_Items, age, v34, v88, v89, v90, v91, v92);
-  if ( v57 )
+  v80->m_Items[0] = (Il2CppObject *)age;
+  sub_B2C2F8((BattleServantConfConponent_o *)v80->m_Items, age, v73, v74, v75, v76, v77, v78);
+  if ( v50 )
   {
-    AnotherPayItemIds = (System_Object_array *)sub_B170BC(v57, v94->obj.klass->_1.element_class);
+    AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)sub_B2C41C(v50, v80->obj.klass->_1.element_class);
     if ( !AnotherPayItemIds )
       goto LABEL_80;
   }
-  if ( v94->max_length <= 1 )
+  if ( v80->max_length <= 1 )
     goto LABEL_79;
-  v94->m_Items[1] = v57;
-  sub_B16F98((BattleServantConfConponent_o *)&v94->m_Items[1], (System_Int32_array **)v57, v34, v95, v96, v97, v98, v99);
+  v80->m_Items[1] = v50;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v80->m_Items[1], (System_Int32_array **)v50, v81, v82, v83, v84, v85, v86);
   if ( Name )
   {
-    AnotherPayItemIds = (System_Object_array *)sub_B170BC(Name, v94->obj.klass->_1.element_class);
+    AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)sub_B2C41C(Name, v80->obj.klass->_1.element_class);
     if ( !AnotherPayItemIds )
       goto LABEL_80;
   }
-  if ( v94->max_length <= 2 )
+  if ( v80->max_length <= 2 )
     goto LABEL_79;
-  v94->m_Items[2] = Name;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v94->m_Items[2],
+  v80->m_Items[2] = Name;
+  sub_B2C2F8(
+    (BattleServantConfConponent_o *)&v80->m_Items[2],
     (System_Int32_array **)Name,
-    v34,
-    v100,
-    v101,
-    v102,
-    v103,
-    v104);
-  AnotherPayItemIds = (System_Object_array *)ShopEntity__getName(entity, 0LL);
-  v110 = (System_Int32_array **)AnotherPayItemIds;
+    v87,
+    v88,
+    v89,
+    v90,
+    v91,
+    v92);
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)ShopEntity__getName(entity, 0LL);
+  v99 = (System_Int32_array **)AnotherPayItemIds;
   if ( AnotherPayItemIds )
   {
-    AnotherPayItemIds = (System_Object_array *)sub_B170BC(AnotherPayItemIds, v94->obj.klass->_1.element_class);
+    AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)sub_B2C41C(
+                                                                      AnotherPayItemIds,
+                                                                      v80->obj.klass->_1.element_class);
     if ( !AnotherPayItemIds )
     {
 LABEL_80:
-      sub_B170F4(AnotherPayItemIds);
-      sub_B170A0();
+      v104 = sub_B2C454(AnotherPayItemIds);
+      sub_B2C400(v104, 0LL);
     }
   }
-  if ( v94->max_length <= 3 )
+  if ( v80->max_length <= 3 )
   {
 LABEL_79:
-    sub_B17100(AnotherPayItemIds, v33, v34);
-    sub_B170A0();
+    v103 = sub_B2C460(AnotherPayItemIds);
+    sub_B2C400(v103, 0LL);
   }
-  v94->m_Items[3] = (Il2CppObject *)v110;
-  sub_B16F98((BattleServantConfConponent_o *)&v94->m_Items[3], v110, v34, v105, v106, v107, v108, v109);
-  v111 = System_String__Format_43822456(v86, v94, 0LL);
-  if ( !v82 )
+  v80->m_Items[3] = (Il2CppObject *)v99;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v80->m_Items[3], v99, v93, v94, v95, v96, v97, v98);
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)System_String__Format_44384256(v72, v80, 0LL);
+  if ( !v69 )
     goto LABEL_78;
-  UILabel__set_text(v82, v111, 0LL);
+  UILabel__set_text(v69, (System_String_o *)AnotherPayItemIds, 0LL);
 LABEL_73:
-  v112 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+  v100 = EventRewardAnotherPayConfirmDialog_TypeInfo;
   if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-    v112 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+    v100 = EventRewardAnotherPayConfirmDialog_TypeInfo;
   }
-  EventRewardAnotherPayConfirmDialog__SetWindowSize(this, v112->static_fields->CONFIRM_WINDOW_SIZE, v85);
-  EventRewardAnotherPayConfirmDialog__SetButtonDisp(this, isChoices, (ItemEntity_o *)v38, v113);
-  v114 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  if ( !v114 )
+  EventRewardAnotherPayConfirmDialog__SetWindowSize(this, v100->static_fields->CONFIRM_WINDOW_SIZE, v71);
+  EventRewardAnotherPayConfirmDialog__SetButtonDisp(this, isChoices, (ItemEntity_o *)v35, v101);
+  AnotherPayItemIds = (System_Action_ShopRootConstants_State__o *)UnityEngine_Component__get_gameObject(
+                                                                    (UnityEngine_Component_o *)this,
+                                                                    0LL);
+  if ( !AnotherPayItemIds )
     goto LABEL_78;
-  UnityEngine_GameObject__SetActive(v114, 1, 0LL);
-  v119 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v115, v116, v117, v118);
-  System_Action___ctor(v119, (Il2CppObject *)this, Method_EventRewardAnotherPayConfirmDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v119, 0, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)AnotherPayItemIds, 1, 0LL);
+  v102 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  System_Action___ctor(v102, (Il2CppObject *)this, Method_EventRewardAnotherPayConfirmDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v102, 0, 0LL);
 }
 
 
@@ -825,78 +819,63 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OpenResult(
   __int64 v24; // x1
   __int64 v25; // x1
   struct System_Action_EventRewardAnotherPayConfirmDialog_BuyState__o **p_onDecide; // x23
-  UnityEngine_Component_o *itemIcon; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  ServantEntity_o *RelateServantEntity; // x0
-  ServantEntity_o *v30; // x22
+  __int64 v27; // x1
+  System_Action_ShopRootConstants_State__o *itemIcon; // x0
+  ServantEntity_o *v29; // x22
   int32_t eventId; // w23
-  __int64 v32; // x24
-  __int64 v33; // x25
-  int32_t v34; // w0
-  const MethodInfo *v35; // x3
-  UILabel_o *warnLabel; // x0
+  Il2CppObject *m_target; // x24
+  __int64 v32; // x25
+  int32_t v33; // w0
+  const MethodInfo *v34; // x3
   UILabel_o *titleLabel; // x23
   UILabel_o *upperLabel; // x25
   UILabel_o *downerLabel; // x26
   System_String_o *Empty; // x24
-  EventRewardAnotherPayConfirmDialog_o *v41; // x0
-  const MethodInfo *v42; // x2
+  EventRewardAnotherPayConfirmDialog_o *v39; // x0
+  const MethodInfo *v40; // x2
   Il2CppObject *Name; // x23
   System_String_o *ClassName; // x0
   UILabel_o *resultLabel; // x22
-  Il2CppObject *v46; // x24
-  __int64 *v47; // x8
-  System_String_o *v48; // x21
-  Il2CppObject *v49; // x0
-  System_String_o *v50; // x0
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
-  EventEntity_o *v53; // x0
-  const MethodInfo *v54; // x2
-  bool v55; // w1
-  UILabel_o *v56; // x21
-  System_String_o *v57; // x0
-  UILabel_o *v58; // x21
-  const MethodInfo *v59; // x1
-  EventRewardAnotherPayConfirmDialog_c *v60; // x0
-  System_Int32_array *AnotherPayItemIds; // x0
-  __int64 v62; // x1
-  __int64 v63; // x2
-  int32_t v64; // w20
-  WebViewManager_o *v65; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *v66; // x0
-  ItemEntity_o *v67; // x0
-  const MethodInfo *v68; // x3
-  UnityEngine_GameObject_o *v69; // x0
-  __int64 v70; // x1
-  __int64 v71; // x2
-  __int64 v72; // x3
-  __int64 v73; // x4
-  System_Action_o *v74; // x20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v75; // 0:x0.16
+  Il2CppObject *v44; // x24
+  __int64 *v45; // x8
+  System_String_o *v46; // x21
+  Il2CppObject *v47; // x0
+  EventEntity_o *v48; // x0
+  const MethodInfo *v49; // x2
+  bool v50; // w1
+  UILabel_o *v51; // x21
+  UILabel_o *v52; // x21
+  const MethodInfo *v53; // x1
+  EventRewardAnotherPayConfirmDialog_c *v54; // x0
+  int32_t v55; // w20
+  ItemEntity_o *v56; // x0
+  const MethodInfo *v57; // x3
+  System_Action_o *v58; // x20
+  __int64 v59; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v60; // 0:x0.16
 
-  if ( (byte_40F612D & 1) == 0 )
+  if ( (byte_41887C9 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, entity);
-    sub_B16FFC(&System_Action_TypeInfo, v12);
-    sub_B16FFC(&Method_DataManager_GetMasterData_EventMaster___, v13);
-    sub_B16FFC(&Method_DataManager_GetMasterData_ItemMaster___, v14);
-    sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v15);
-    sub_B16FFC(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v16);
-    sub_B16FFC(&Method_EventRewardAnotherPayConfirmDialog_EndOpen__, v17);
-    sub_B16FFC(&EventRewardAnotherPayConfirmDialog_TypeInfo, v18);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v19);
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
-    sub_B16FFC(&string_TypeInfo, v22);
-    sub_B16FFC(&StringLiteral_1694/*"ANOTHER_PAY_PURCHASED_CONFIRM_MSG"*/, v23);
-    sub_B16FFC(&StringLiteral_1693/*"ANOTHER_PAY_PERIOD_END_MSG"*/, v24);
-    sub_B16FFC(&StringLiteral_1695/*"ANOTHER_PAY_PURCHASED_EFFECT_CONFIRM_MSG"*/, v25);
-    byte_40F612D = 1;
+    sub_B2C35C(&Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__, entity);
+    sub_B2C35C(&System_Action_TypeInfo, v12);
+    sub_B2C35C(&Method_DataManager_GetMasterData_EventMaster___, v13);
+    sub_B2C35C(&Method_DataManager_GetMasterData_ItemMaster___, v14);
+    sub_B2C35C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v15);
+    sub_B2C35C(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v16);
+    sub_B2C35C(&Method_EventRewardAnotherPayConfirmDialog_EndOpen__, v17);
+    sub_B2C35C(&EventRewardAnotherPayConfirmDialog_TypeInfo, v18);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v19);
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v21);
+    sub_B2C35C(&string_TypeInfo, v22);
+    sub_B2C35C(&StringLiteral_1692/*"ANOTHER_PAY_PURCHASED_CONFIRM_MSG"*/, v23);
+    sub_B2C35C(&StringLiteral_1691/*"ANOTHER_PAY_PERIOD_END_MSG"*/, v24);
+    sub_B2C35C(&StringLiteral_1693/*"ANOTHER_PAY_PURCHASED_EFFECT_CONFIRM_MSG"*/, v25);
+    byte_41887C9 = 1;
   }
   this->fields.onDecide = onDecide;
   p_onDecide = &this->fields.onDecide;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.onDecide,
     (System_Int32_array **)onDecide,
     (System_String_array **)isAnotherItemOnly,
@@ -907,48 +886,51 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OpenResult(
     v7);
   if ( !entity )
   {
+    itemIcon = (System_Action_ShopRootConstants_State__o *)*p_onDecide;
     if ( *p_onDecide )
     {
       System_Action_ShopRootConstants_State___Invoke(
-        (System_Action_ShopRootConstants_State__o *)*p_onDecide,
+        itemIcon,
         0,
-        (const MethodInfo_24B6068 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
+        (const MethodInfo_24BA830 *)Method_System_Action_EventRewardAnotherPayConfirmDialog_BuyState__Invoke__);
       return;
     }
     goto LABEL_52;
   }
-  itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
+  itemIcon = (System_Action_ShopRootConstants_State__o *)this->fields.itemIcon;
   this->fields.state = 5;
   if ( !itemIcon )
     goto LABEL_52;
-  gameObject = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
-  if ( !gameObject )
+  itemIcon = (System_Action_ShopRootConstants_State__o *)UnityEngine_Component__get_gameObject(
+                                                           (UnityEngine_Component_o *)itemIcon,
+                                                           0LL);
+  if ( !itemIcon )
     goto LABEL_52;
-  UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
-  RelateServantEntity = ShopEntity__GetRelateServantEntity(entity, 0LL);
-  if ( !RelateServantEntity )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemIcon, 0, 0LL);
+  itemIcon = (System_Action_ShopRootConstants_State__o *)ShopEntity__GetRelateServantEntity(entity, 0LL);
+  if ( !itemIcon )
     goto LABEL_52;
-  v30 = RelateServantEntity;
+  v29 = (ServantEntity_o *)itemIcon;
   eventId = entity->fields.eventId;
-  v33 = *(_QWORD *)&RelateServantEntity->fields.id.fields.currentCryptoKey;
-  v32 = *(_QWORD *)&RelateServantEntity->fields.id.fields.fakeValue;
+  v32 = *(_QWORD *)&itemIcon->fields.method_ptr;
+  m_target = itemIcon->fields.m_target;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  *(_QWORD *)&v75.fields.currentCryptoKey = v33;
-  *(_QWORD *)&v75.fields.fakeValue = v32;
-  v34 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44068536(v75, 0LL);
-  EventRewardAnotherPayConfirmDialog__SetSvtPassiveSkillInfo(this, eventId, v34, v35);
-  warnLabel = this->fields.warnLabel;
-  if ( !warnLabel )
+  *(_QWORD *)&v60.fields.currentCryptoKey = v32;
+  *(_QWORD *)&v60.fields.fakeValue = m_target;
+  v33 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44758064(v60, 0LL);
+  EventRewardAnotherPayConfirmDialog__SetSvtPassiveSkillInfo(this, eventId, v33, v34);
+  itemIcon = (System_Action_ShopRootConstants_State__o *)this->fields.warnLabel;
+  if ( !itemIcon )
     goto LABEL_52;
   titleLabel = this->fields.titleLabel;
   upperLabel = this->fields.upperLabel;
   downerLabel = this->fields.downerLabel;
   Empty = string_TypeInfo->static_fields->Empty;
-  UILabel__set_text(warnLabel, Empty, 0LL);
+  UILabel__set_text((UILabel_o *)itemIcon, Empty, 0LL);
   if ( !downerLabel )
     goto LABEL_52;
   UILabel__set_text(downerLabel, Empty, 0LL);
@@ -958,10 +940,10 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OpenResult(
   if ( !titleLabel )
     goto LABEL_52;
   UILabel__set_text(titleLabel, Empty, 0LL);
-  Name = (Il2CppObject *)EventRewardAnotherPayConfirmDialog__GetName(v41, v30, v42);
-  ClassName = ServantEntity__getClassName(v30, 0LL);
+  Name = (Il2CppObject *)EventRewardAnotherPayConfirmDialog__GetName(v39, v29, v40);
+  ClassName = ServantEntity__getClassName(v29, 0LL);
   resultLabel = this->fields.resultLabel;
-  v46 = (Il2CppObject *)ClassName;
+  v44 = (Il2CppObject *)ClassName;
   if ( isAnotherItemOnly )
   {
     if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -969,7 +951,7 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OpenResult(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v47 = &StringLiteral_1694/*"ANOTHER_PAY_PURCHASED_CONFIRM_MSG"*/;
+    v45 = &StringLiteral_1692/*"ANOTHER_PAY_PURCHASED_CONFIRM_MSG"*/;
   }
   else
   {
@@ -978,100 +960,105 @@ void __fastcall EventRewardAnotherPayConfirmDialog__OpenResult(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v47 = &StringLiteral_1695/*"ANOTHER_PAY_PURCHASED_EFFECT_CONFIRM_MSG"*/;
+    v45 = &StringLiteral_1693/*"ANOTHER_PAY_PURCHASED_EFFECT_CONFIRM_MSG"*/;
   }
-  v48 = LocalizationManager__Get((System_String_o *)*v47, 0LL);
-  v49 = (Il2CppObject *)ShopEntity__getName(entity, 0LL);
-  v50 = System_String__Format_43744796(v48, v49, v46, Name, 0LL);
+  v46 = LocalizationManager__Get((System_String_o *)*v45, 0LL);
+  v47 = (Il2CppObject *)ShopEntity__getName(entity, 0LL);
+  itemIcon = (System_Action_ShopRootConstants_State__o *)System_String__Format_44306596(v46, v47, v44, Name, 0LL);
   if ( !resultLabel )
     goto LABEL_52;
-  UILabel__set_text(resultLabel, v50, 0LL);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance )
+  UILabel__set_text(resultLabel, (System_String_o *)itemIcon, 0LL);
+  itemIcon = (System_Action_ShopRootConstants_State__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !itemIcon )
     goto LABEL_52;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                        (DataManager_o *)Instance,
-                                                                                        (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_EventMaster___);
-  if ( !MasterData_WarQuestSelectionMaster )
+  itemIcon = (System_Action_ShopRootConstants_State__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                           (DataManager_o *)itemIcon,
+                                                           (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventMaster___);
+  if ( !itemIcon )
     goto LABEL_52;
-  v53 = (EventEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                           MasterData_WarQuestSelectionMaster,
+  v48 = (EventEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+                           (DataMasterBase_WarMaster__WarEntity__int__o *)itemIcon,
                            entity->fields.eventId,
-                           (const MethodInfo_266F388 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-  if ( v53 && !EventEntity__IsEventPeriod(v53, 0LL, 0LL) )
+                           (const MethodInfo_24E40D0 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+  if ( v48 && !EventEntity__IsEventPeriod(v48, 0LL, 0LL) )
   {
-    v56 = this->fields.downerLabel;
+    v51 = this->fields.downerLabel;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v57 = LocalizationManager__Get((System_String_o *)StringLiteral_1693/*"ANOTHER_PAY_PERIOD_END_MSG"*/, 0LL);
-    if ( !v56 )
+    itemIcon = (System_Action_ShopRootConstants_State__o *)LocalizationManager__Get(
+                                                             (System_String_o *)StringLiteral_1691/*"ANOTHER_PAY_PERIOD_END_MSG"*/,
+                                                             0LL);
+    if ( !v51 )
       goto LABEL_52;
-    UILabel__set_text(v56, v57, 0LL);
-    v58 = this->fields.downerLabel;
+    UILabel__set_text(v51, (System_String_o *)itemIcon, 0LL);
+    v52 = this->fields.downerLabel;
+    itemIcon = (System_Action_ShopRootConstants_State__o *)EventRewardAnotherPayConfirmDialog_TypeInfo;
     if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
     }
-    if ( !v58 )
+    if ( !v52 )
       goto LABEL_52;
     UILabel__set_fontSize(
-      v58,
+      v52,
       EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->DOWNER_LABEL_RESULT_FONT_SIZE,
       0LL);
-    v55 = 0;
+    v50 = 0;
   }
   else
   {
-    v55 = 1;
+    v50 = 1;
   }
-  EventRewardAnotherPayConfirmDialog__SetUIPositon(this, v55, v54);
-  v60 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+  EventRewardAnotherPayConfirmDialog__SetUIPositon(this, v50, v49);
+  v54 = EventRewardAnotherPayConfirmDialog_TypeInfo;
   if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-    v60 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+    v54 = EventRewardAnotherPayConfirmDialog_TypeInfo;
   }
-  EventRewardAnotherPayConfirmDialog__SetWindowSize(this, v60->static_fields->RESULT_WINDOW_SIZE, v59);
+  EventRewardAnotherPayConfirmDialog__SetWindowSize(this, v54->static_fields->RESULT_WINDOW_SIZE, v53);
   if ( ShopEntity__GetAnotherPayItemIds(entity, 0LL) )
   {
-    AnotherPayItemIds = ShopEntity__GetAnotherPayItemIds(entity, 0LL);
-    if ( !AnotherPayItemIds )
+    itemIcon = (System_Action_ShopRootConstants_State__o *)ShopEntity__GetAnotherPayItemIds(entity, 0LL);
+    if ( !itemIcon )
       goto LABEL_52;
-    if ( !AnotherPayItemIds->max_length )
+    if ( !LODWORD(itemIcon->fields.m_target) )
     {
-      sub_B17100(AnotherPayItemIds, v62, v63);
-      sub_B170A0();
+      v59 = sub_B2C460(itemIcon);
+      sub_B2C400(v59, 0LL);
     }
-    v64 = AnotherPayItemIds->m_Items[1];
+    v55 = itemIcon->fields.method;
   }
   else
   {
-    v64 = 0;
+    v55 = 0;
   }
-  v65 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !v65
-    || (v66 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                               (DataManager_o *)v65,
-                                                               (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL
-    || (v67 = (ItemEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                v66,
-                                v64,
-                                (const MethodInfo_266F388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__),
-        EventRewardAnotherPayConfirmDialog__SetButtonDisp(this, 0, v67, v68),
-        (v69 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+  itemIcon = (System_Action_ShopRootConstants_State__o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !itemIcon
+    || (itemIcon = (System_Action_ShopRootConstants_State__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                                 (DataManager_o *)itemIcon,
+                                                                 (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL
+    || (v56 = (ItemEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+                                (DataMasterBase_WarMaster__WarEntity__int__o *)itemIcon,
+                                v55,
+                                (const MethodInfo_24E40D0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__),
+        EventRewardAnotherPayConfirmDialog__SetButtonDisp(this, 0, v56, v57),
+        (itemIcon = (System_Action_ShopRootConstants_State__o *)UnityEngine_Component__get_gameObject(
+                                                                  (UnityEngine_Component_o *)this,
+                                                                  0LL)) == 0LL) )
   {
 LABEL_52:
-    sub_B170D4();
+    sub_B2C434(itemIcon, v27);
   }
-  UnityEngine_GameObject__SetActive(v69, 1, 0LL);
-  v74 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v70, v71, v72, v73);
-  System_Action___ctor(v74, (Il2CppObject *)this, Method_EventRewardAnotherPayConfirmDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v74, 0, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemIcon, 1, 0LL);
+  v58 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  System_Action___ctor(v58, (Il2CppObject *)this, Method_EventRewardAnotherPayConfirmDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v58, 0, 0LL);
 }
 
 
@@ -1089,65 +1076,44 @@ void __fastcall EventRewardAnotherPayConfirmDialog__SetButtonDisp(
   __int64 v11; // x1
   __int64 v12; // x1
   UILabel_o *cancelLabel; // x22
-  System_String_o *v14; // x0
+  System_String_o *decideButton; // x0
+  __int64 v15; // x1
   UILabel_o *decideLabel; // x22
-  System_String_o *v16; // x0
   UILabel_o *normalBuyLabel; // x22
-  System_String_o *v18; // x0
   UILabel_o *anotherBuyLabel; // x22
-  System_String_o *v20; // x0
-  System_String_o *v21; // x23
+  System_String_o *v19; // x23
   Il2CppObject *AnotherPayName; // x0
-  System_String_o *v23; // x0
   int32_t state; // w8
-  UILabel_o *v25; // x20
-  System_String_o *v26; // x0
-  UnityEngine_GameObject_o *decideButton; // x0
-  UnityEngine_GameObject_o *normalBuyButton; // x0
-  UnityEngine_GameObject_o *anotherBuyButton; // x0
-  UnityEngine_GameObject_o *cancelButton; // x0
+  UILabel_o *v22; // x20
   UnityEngine_GameObject_o *gameObject; // x19
-  EventRewardAnotherPayConfirmDialog_c *v32; // x8
+  EventRewardAnotherPayConfirmDialog_c *v24; // x8
   float *p_x; // x8
   float x; // s0
   float y; // s1
   float z; // s2
-  UnityEngine_GameObject_o *v37; // x0
-  UnityEngine_GameObject_o *v38; // x0
-  UnityEngine_GameObject_o *v39; // x0
-  UnityEngine_GameObject_o *v40; // x0
-  UnityEngine_GameObject_o *v41; // x20
-  EventRewardAnotherPayConfirmDialog_c *v42; // x8
-  UnityEngine_GameObject_o *v43; // x0
-  UnityEngine_GameObject_o *v44; // x0
+  UnityEngine_GameObject_o *v29; // x20
+  EventRewardAnotherPayConfirmDialog_c *v30; // x8
+  UnityEngine_GameObject_o *v31; // x0
   struct EventRewardAnotherPayConfirmDialog_StaticFields *static_fields; // x8
-  UnityEngine_GameObject_o *v46; // x0
-  UnityEngine_GameObject_o *v47; // x21
-  EventRewardAnotherPayConfirmDialog_c *v48; // x8
-  UnityEngine_GameObject_o *v49; // x0
-  UnityEngine_GameObject_o *v50; // x0
-  UnityEngine_GameObject_o *v51; // x0
-  UnityEngine_GameObject_o *v52; // x0
-  UnityEngine_GameObject_o *v53; // x0
-  EventRewardAnotherPayConfirmDialog_c *v54; // x8
-  float *v55; // x8
-  UnityEngine_GameObject_o *v56; // x0
-  UnityEngine_GameObject_o *v57; // x0
-  UnityEngine_GameObject_o *v58; // x0
-  UnityEngine_GameObject_o *v59; // x0
-  EventRewardAnotherPayConfirmDialog_c *v60; // x8
-  float *v61; // x8
+  UnityEngine_GameObject_o *v33; // x21
+  EventRewardAnotherPayConfirmDialog_c *v34; // x8
+  UnityEngine_GameObject_o *v35; // x0
+  EventRewardAnotherPayConfirmDialog_c *v36; // x8
+  float *v37; // x8
+  UnityEngine_GameObject_o *v38; // x0
+  EventRewardAnotherPayConfirmDialog_c *v39; // x8
+  float *v40; // x8
 
-  if ( (byte_40F6130 & 1) == 0 )
+  if ( (byte_41887CC & 1) == 0 )
   {
-    sub_B16FFC(&EventRewardAnotherPayConfirmDialog_TypeInfo, isChoices);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_9328/*"NO_QUEST_EVENT_SHOP_DECIDE_BUTTON"*/, v8);
-    sub_B16FFC(&StringLiteral_1683/*"ANOTHER_PAY_ANOTHER_BUY"*/, v9);
-    sub_B16FFC(&StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, v10);
-    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v11);
-    sub_B16FFC(&StringLiteral_1692/*"ANOTHER_PAY_NORMAL_BUY"*/, v12);
-    byte_40F6130 = 1;
+    sub_B2C35C(&EventRewardAnotherPayConfirmDialog_TypeInfo, isChoices);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v7);
+    sub_B2C35C(&StringLiteral_9358/*"NO_QUEST_EVENT_SHOP_DECIDE_BUTTON"*/, v8);
+    sub_B2C35C(&StringLiteral_1681/*"ANOTHER_PAY_ANOTHER_BUY"*/, v9);
+    sub_B2C35C(&StringLiteral_3260/*"COMMON_CONFIRM_CANCEL"*/, v10);
+    sub_B2C35C(&StringLiteral_3261/*"COMMON_CONFIRM_CLOSE"*/, v11);
+    sub_B2C35C(&StringLiteral_1690/*"ANOTHER_PAY_NORMAL_BUY"*/, v12);
+    byte_41887CC = 1;
   }
   cancelLabel = this->fields.cancelLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1155,74 +1121,74 @@ void __fastcall EventRewardAnotherPayConfirmDialog__SetButtonDisp(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3251/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_3260/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelLabel )
     goto LABEL_56;
-  UILabel__set_text(cancelLabel, v14, 0LL);
+  UILabel__set_text(cancelLabel, decideButton, 0LL);
   decideLabel = this->fields.decideLabel;
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_9328/*"NO_QUEST_EVENT_SHOP_DECIDE_BUTTON"*/, 0LL);
+  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_9358/*"NO_QUEST_EVENT_SHOP_DECIDE_BUTTON"*/, 0LL);
   if ( !decideLabel )
     goto LABEL_56;
-  UILabel__set_text(decideLabel, v16, 0LL);
+  UILabel__set_text(decideLabel, decideButton, 0LL);
   normalBuyLabel = this->fields.normalBuyLabel;
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_1692/*"ANOTHER_PAY_NORMAL_BUY"*/, 0LL);
+  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_1690/*"ANOTHER_PAY_NORMAL_BUY"*/, 0LL);
   if ( !normalBuyLabel )
     goto LABEL_56;
-  UILabel__set_text(normalBuyLabel, v18, 0LL);
+  UILabel__set_text(normalBuyLabel, decideButton, 0LL);
   anotherBuyLabel = this->fields.anotherBuyLabel;
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_1683/*"ANOTHER_PAY_ANOTHER_BUY"*/, 0LL);
+  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_1681/*"ANOTHER_PAY_ANOTHER_BUY"*/, 0LL);
   if ( !itemEntity )
     goto LABEL_56;
-  v21 = v20;
+  v19 = decideButton;
   AnotherPayName = (Il2CppObject *)ItemEntity__GetAnotherPayName(itemEntity, 0LL);
-  v23 = System_String__Format(v21, AnotherPayName, 0LL);
+  decideButton = System_String__Format(v19, AnotherPayName, 0LL);
   if ( !anotherBuyLabel )
     goto LABEL_56;
-  UILabel__set_text(anotherBuyLabel, v23, 0LL);
+  UILabel__set_text(anotherBuyLabel, decideButton, 0LL);
   state = this->fields.state;
   if ( state != 4 )
   {
     if ( state == 5 )
     {
-      v25 = this->fields.cancelLabel;
+      v22 = this->fields.cancelLabel;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
-      if ( v25 )
+      decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_3261/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+      if ( v22 )
       {
-        UILabel__set_text(v25, v26, 0LL);
-        decideButton = this->fields.decideButton;
+        UILabel__set_text(v22, decideButton, 0LL);
+        decideButton = (System_String_o *)this->fields.decideButton;
         if ( decideButton )
         {
-          UnityEngine_GameObject__SetActive(decideButton, 0, 0LL);
-          normalBuyButton = this->fields.normalBuyButton;
-          if ( normalBuyButton )
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 0, 0LL);
+          decideButton = (System_String_o *)this->fields.normalBuyButton;
+          if ( decideButton )
           {
-            UnityEngine_GameObject__SetActive(normalBuyButton, 0, 0LL);
-            anotherBuyButton = this->fields.anotherBuyButton;
-            if ( anotherBuyButton )
+            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 0, 0LL);
+            decideButton = (System_String_o *)this->fields.anotherBuyButton;
+            if ( decideButton )
             {
-              UnityEngine_GameObject__SetActive(anotherBuyButton, 0, 0LL);
-              cancelButton = this->fields.cancelButton;
-              if ( cancelButton )
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 0, 0LL);
+              decideButton = (System_String_o *)this->fields.cancelButton;
+              if ( decideButton )
               {
-                gameObject = UnityEngine_GameObject__get_gameObject(cancelButton, 0LL);
-                v32 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+                gameObject = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)decideButton, 0LL);
+                v24 = EventRewardAnotherPayConfirmDialog_TypeInfo;
                 if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                   && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-                  v32 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+                  v24 = EventRewardAnotherPayConfirmDialog_TypeInfo;
                 }
-                p_x = &v32->static_fields->CANCEL_BUTTON_BASE_POS.fields.x;
+                p_x = &v24->static_fields->CANCEL_BUTTON_BASE_POS.fields.x;
                 x = p_x[9];
                 y = p_x[10];
                 z = p_x[11];
 LABEL_54:
-                v44 = gameObject;
+                v31 = gameObject;
                 goto LABEL_55;
               }
             }
@@ -1232,48 +1198,48 @@ LABEL_54:
     }
     else
     {
-      v46 = this->fields.decideButton;
-      if ( v46 )
+      decideButton = (System_String_o *)this->fields.decideButton;
+      if ( decideButton )
       {
-        v47 = UnityEngine_GameObject__get_gameObject(v46, 0LL);
-        v48 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        v33 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)decideButton, 0LL);
+        v34 = EventRewardAnotherPayConfirmDialog_TypeInfo;
         if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-          v48 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+          v34 = EventRewardAnotherPayConfirmDialog_TypeInfo;
         }
-        GameObjectExtensions__SetLocalPosition(v47, v48->static_fields->DECIDE_BUTTON_BASE_POS, 0LL);
-        v49 = this->fields.decideButton;
-        if ( v49 )
+        GameObjectExtensions__SetLocalPosition(v33, v34->static_fields->DECIDE_BUTTON_BASE_POS, 0LL);
+        decideButton = (System_String_o *)this->fields.decideButton;
+        if ( decideButton )
         {
           if ( isChoices )
           {
-            UnityEngine_GameObject__SetActive(v49, 0, 0LL);
-            v50 = this->fields.normalBuyButton;
-            if ( v50 )
+            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 0, 0LL);
+            decideButton = (System_String_o *)this->fields.normalBuyButton;
+            if ( decideButton )
             {
-              UnityEngine_GameObject__SetActive(v50, 1, 0LL);
-              v51 = this->fields.anotherBuyButton;
-              if ( v51 )
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 1, 0LL);
+              decideButton = (System_String_o *)this->fields.anotherBuyButton;
+              if ( decideButton )
               {
-                UnityEngine_GameObject__SetActive(v51, 1, 0LL);
-                v52 = this->fields.cancelButton;
-                if ( v52 )
+                UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 1, 0LL);
+                decideButton = (System_String_o *)this->fields.cancelButton;
+                if ( decideButton )
                 {
-                  v53 = UnityEngine_GameObject__get_gameObject(v52, 0LL);
-                  v54 = EventRewardAnotherPayConfirmDialog_TypeInfo;
-                  gameObject = v53;
+                  v35 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)decideButton, 0LL);
+                  v36 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+                  gameObject = v35;
                   if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                     && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
                   {
                     j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-                    v54 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+                    v36 = EventRewardAnotherPayConfirmDialog_TypeInfo;
                   }
-                  v55 = &v54->static_fields->CANCEL_BUTTON_BASE_POS.fields.x;
-                  x = v55[3];
-                  y = v55[4];
-                  z = v55[5];
+                  v37 = &v36->static_fields->CANCEL_BUTTON_BASE_POS.fields.x;
+                  x = v37[3];
+                  y = v37[4];
+                  z = v37[5];
                   goto LABEL_54;
                 }
               }
@@ -1281,31 +1247,31 @@ LABEL_54:
           }
           else
           {
-            UnityEngine_GameObject__SetActive(v49, 1, 0LL);
-            v56 = this->fields.normalBuyButton;
-            if ( v56 )
+            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 1, 0LL);
+            decideButton = (System_String_o *)this->fields.normalBuyButton;
+            if ( decideButton )
             {
-              UnityEngine_GameObject__SetActive(v56, 0, 0LL);
-              v57 = this->fields.anotherBuyButton;
-              if ( v57 )
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 0, 0LL);
+              decideButton = (System_String_o *)this->fields.anotherBuyButton;
+              if ( decideButton )
               {
-                UnityEngine_GameObject__SetActive(v57, 0, 0LL);
-                v58 = this->fields.cancelButton;
-                if ( v58 )
+                UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 0, 0LL);
+                decideButton = (System_String_o *)this->fields.cancelButton;
+                if ( decideButton )
                 {
-                  v59 = UnityEngine_GameObject__get_gameObject(v58, 0LL);
-                  v60 = EventRewardAnotherPayConfirmDialog_TypeInfo;
-                  gameObject = v59;
+                  v38 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)decideButton, 0LL);
+                  v39 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+                  gameObject = v38;
                   if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                     && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
                   {
                     j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-                    v60 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+                    v39 = EventRewardAnotherPayConfirmDialog_TypeInfo;
                   }
-                  v61 = &v60->static_fields->CANCEL_BUTTON_BASE_POS.fields.x;
-                  x = *v61;
-                  y = v61[1];
-                  z = v61[2];
+                  v40 = &v39->static_fields->CANCEL_BUTTON_BASE_POS.fields.x;
+                  x = *v40;
+                  y = v40[1];
+                  z = v40[2];
                   goto LABEL_54;
                 }
               }
@@ -1315,42 +1281,42 @@ LABEL_54:
       }
     }
 LABEL_56:
-    sub_B170D4();
+    sub_B2C434(decideButton, v15);
   }
-  v37 = this->fields.decideButton;
-  if ( !v37 )
+  decideButton = (System_String_o *)this->fields.decideButton;
+  if ( !decideButton )
     goto LABEL_56;
-  UnityEngine_GameObject__SetActive(v37, 1, 0LL);
-  v38 = this->fields.normalBuyButton;
-  if ( !v38 )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 1, 0LL);
+  decideButton = (System_String_o *)this->fields.normalBuyButton;
+  if ( !decideButton )
     goto LABEL_56;
-  UnityEngine_GameObject__SetActive(v38, 0, 0LL);
-  v39 = this->fields.anotherBuyButton;
-  if ( !v39 )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 0, 0LL);
+  decideButton = (System_String_o *)this->fields.anotherBuyButton;
+  if ( !decideButton )
     goto LABEL_56;
-  UnityEngine_GameObject__SetActive(v39, 0, 0LL);
-  v40 = this->fields.decideButton;
-  if ( !v40 )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 0, 0LL);
+  decideButton = (System_String_o *)this->fields.decideButton;
+  if ( !decideButton )
     goto LABEL_56;
-  v41 = UnityEngine_GameObject__get_gameObject(v40, 0LL);
-  v42 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+  v29 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)decideButton, 0LL);
+  v30 = EventRewardAnotherPayConfirmDialog_TypeInfo;
   if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-    v42 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+    v30 = EventRewardAnotherPayConfirmDialog_TypeInfo;
   }
-  GameObjectExtensions__SetLocalPosition(v41, v42->static_fields->DECIDE_BUTTON_PURCHASED_POS, 0LL);
-  v43 = this->fields.cancelButton;
-  if ( !v43 )
+  GameObjectExtensions__SetLocalPosition(v29, v30->static_fields->DECIDE_BUTTON_PURCHASED_POS, 0LL);
+  decideButton = (System_String_o *)this->fields.cancelButton;
+  if ( !decideButton )
     goto LABEL_56;
-  v44 = UnityEngine_GameObject__get_gameObject(v43, 0LL);
+  v31 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)decideButton, 0LL);
   static_fields = EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields;
   x = static_fields->CANCEL_BUTTON_PURCHASED_POS.fields.x;
   y = static_fields->CANCEL_BUTTON_PURCHASED_POS.fields.y;
   z = static_fields->CANCEL_BUTTON_PURCHASED_POS.fields.z;
 LABEL_55:
-  GameObjectExtensions__SetLocalPosition(v44, *(UnityEngine_Vector3_o *)&x, 0LL);
+  GameObjectExtensions__SetLocalPosition(v31, *(UnityEngine_Vector3_o *)&x, 0LL);
 }
 
 
@@ -1361,7 +1327,7 @@ void __fastcall EventRewardAnotherPayConfirmDialog__SetSvtPassiveSkillInfo(
         int32_t svtId,
         const MethodInfo *method)
 {
-  __int64 v4; // x4
+  __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
@@ -1373,137 +1339,117 @@ void __fastcall EventRewardAnotherPayConfirmDialog__SetSvtPassiveSkillInfo(
   __int64 v16; // x1
   __int64 v17; // x1
   __int64 v18; // x1
-  __int64 v19; // x1
-  EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0_o *v20; // x22
-  __int64 v21; // x21
+  EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0_o *v19; // x22
+  DataManager_o *MasterData_WarQuestSelectionMaster; // x0
+  __int64 v21; // x1
   __int64 v22; // x21
-  DataManager_o *v23; // x0
-  ServantPassiveSkillMaster_o *MasterData_WarQuestSelectionMaster; // x0
+  __int64 v23; // x21
   System_Collections_Generic_IEnumerable_TSource__o *ServantSkillList; // x20
-  __int64 v26; // x1
-  __int64 v27; // x2
-  __int64 v28; // x3
-  __int64 v29; // x4
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v30; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v31; // x0
-  PurchaseByBank_UnityIap_Request_PurchaseResult_o *v32; // x0
-  int32_t v33; // w20
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *v35; // x0
+  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v25; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
+  PurchaseByBank_UnityIap_Request_PurchaseResult_o *v27; // x0
+  int32_t v28; // w20
   SkillEntity_o *Entity; // x21
-  SkillLvMaster_o *Master_WarQuestSelectionMaster; // x0
-  SkillLvEntity_o *v38; // x0
-  SkillLvEntity_o *v39; // x22
+  SkillLvEntity_o *v30; // x0
+  SkillLvEntity_o *v31; // x22
   UILabel_o *skillNameLabel; // x23
-  System_String_o *Name; // x0
   UILabel_o *skillDetailLabel; // x21
   System_String_o *Detail; // x0
-  SkillIconComponent_o *skillIcon; // x0
 
-  if ( (byte_40F612E & 1) == 0 )
+  if ( (byte_41887CA & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_ServantPassiveSkillMaster___, *(_QWORD *)&eventId);
-    sub_B16FFC(&Method_DataManager_GetMasterData_SkillMaster___, v8);
-    sub_B16FFC(&Method_DataManager_GetMaster_SkillLvMaster___, v9);
-    sub_B16FFC(&DataManager_TypeInfo, v10);
-    sub_B16FFC(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v11);
-    sub_B16FFC(&Method_System_Linq_Enumerable_FirstOrDefault_ServantPassiveSkillEntity___, v12);
-    sub_B16FFC(&Method_System_Linq_Enumerable_Where_ServantPassiveSkillEntity___, v13);
-    sub_B16FFC(&Method_System_Func_ServantPassiveSkillEntity__bool___ctor__, v14);
-    sub_B16FFC(&System_Func_ServantPassiveSkillEntity__bool__TypeInfo, v15);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v16);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_B16FFC(&Method_EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0__SetSvtPassiveSkillInfo_b__0__, v18);
-    sub_B16FFC(&EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0_TypeInfo, v19);
-    byte_40F612E = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_ServantPassiveSkillMaster___, *(_QWORD *)&eventId);
+    sub_B2C35C(&Method_DataManager_GetMasterData_SkillMaster___, v7);
+    sub_B2C35C(&Method_DataManager_GetMaster_SkillLvMaster___, v8);
+    sub_B2C35C(&DataManager_TypeInfo, v9);
+    sub_B2C35C(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v10);
+    sub_B2C35C(&Method_System_Linq_Enumerable_FirstOrDefault_ServantPassiveSkillEntity___, v11);
+    sub_B2C35C(&Method_System_Linq_Enumerable_Where_ServantPassiveSkillEntity___, v12);
+    sub_B2C35C(&Method_System_Func_ServantPassiveSkillEntity__bool___ctor__, v13);
+    sub_B2C35C(&System_Func_ServantPassiveSkillEntity__bool__TypeInfo, v14);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v15);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    sub_B2C35C(&Method_EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0__SetSvtPassiveSkillInfo_b__0__, v17);
+    sub_B2C35C(&EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0_TypeInfo, v18);
+    byte_41887CA = 1;
   }
-  v20 = (EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0_o *)sub_B170CC(
-                                                                        EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0_TypeInfo,
-                                                                        *(_QWORD *)&eventId,
-                                                                        *(_QWORD *)&svtId,
-                                                                        method,
-                                                                        v4);
-  EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0___ctor(v20, 0LL);
-  if ( !v20 )
+  v19 = (EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0_o *)sub_B2C42C(EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0_TypeInfo);
+  EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0___ctor(v19, 0LL);
+  if ( !v19 )
     goto LABEL_25;
-  v20->fields.eventId = eventId;
-  v21 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
-  if ( (*(_BYTE *)(v21 + 306) & 1) == 0 )
-    sub_AAFCFC(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
-  v22 = **(_QWORD **)(v21 + 192);
+  v19->fields.eventId = eventId;
+  v22 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
   if ( (*(_BYTE *)(v22 + 306) & 1) == 0 )
-    sub_AAFCFC(v22);
-  v23 = **(DataManager_o ***)(v22 + 184);
-  if ( !v23 )
+    sub_AC505C(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
+  v23 = **(_QWORD **)(v22 + 192);
+  if ( (*(_BYTE *)(v23 + 306) & 1) == 0 )
+    sub_AC505C(v23);
+  MasterData_WarQuestSelectionMaster = **(DataManager_o ***)(v23 + 184);
+  if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_25;
-  MasterData_WarQuestSelectionMaster = (ServantPassiveSkillMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                        v23,
-                                                                        (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ServantPassiveSkillMaster___);
+  MasterData_WarQuestSelectionMaster = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                          MasterData_WarQuestSelectionMaster,
+                                                          (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ServantPassiveSkillMaster___);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_25;
   ServantSkillList = (System_Collections_Generic_IEnumerable_TSource__o *)ServantPassiveSkillMaster__getServantSkillList(
-                                                                            MasterData_WarQuestSelectionMaster,
+                                                                            (ServantPassiveSkillMaster_o *)MasterData_WarQuestSelectionMaster,
                                                                             svtId,
                                                                             0LL);
-  v30 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B170CC(
-                                                                             System_Func_ServantPassiveSkillEntity__bool__TypeInfo,
-                                                                             v26,
-                                                                             v27,
-                                                                             v28,
-                                                                             v29);
+  v25 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B2C42C(System_Func_ServantPassiveSkillEntity__bool__TypeInfo);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
-    v30,
-    (Il2CppObject *)v20,
+    v25,
+    (Il2CppObject *)v19,
     Method_EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0__SetSvtPassiveSkillInfo_b__0__,
-    (const MethodInfo_2B6AB40 *)Method_System_Func_ServantPassiveSkillEntity__bool___ctor__);
-  v31 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
+    (const MethodInfo_2711C04 *)Method_System_Func_ServantPassiveSkillEntity__bool___ctor__);
+  v26 = System_Linq_Enumerable__Where_WarBoardManager_WarBoardOnboardSkillTarget_(
           ServantSkillList,
-          (System_Func_TSource__bool__o *)v30,
-          (const MethodInfo_19C8FE8 *)Method_System_Linq_Enumerable_Where_ServantPassiveSkillEntity___);
-  v32 = System_Linq_Enumerable__FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult_(
-          v31,
-          (const MethodInfo_18D7980 *)Method_System_Linq_Enumerable_FirstOrDefault_ServantPassiveSkillEntity___);
-  v33 = v32 ? HIDWORD(v32->fields.transactionId) : 0;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance )
+          (System_Func_TSource__bool__o *)v25,
+          (const MethodInfo_1A9F3E4 *)Method_System_Linq_Enumerable_Where_ServantPassiveSkillEntity___);
+  v27 = System_Linq_Enumerable__FirstOrDefault_PurchaseByBank_UnityIap_Request_PurchaseResult_(
+          v26,
+          (const MethodInfo_1A9066C *)Method_System_Linq_Enumerable_FirstOrDefault_ServantPassiveSkillEntity___);
+  v28 = v27 ? HIDWORD(v27->fields.transactionId) : 0;
+  MasterData_WarQuestSelectionMaster = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_25;
-  v35 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                         (DataManager_o *)Instance,
-                                                         (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_SkillMaster___);
-  if ( !v35 )
+  MasterData_WarQuestSelectionMaster = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                          MasterData_WarQuestSelectionMaster,
+                                                          (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_SkillMaster___);
+  if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_25;
   Entity = (SkillEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                              v35,
-                              v33,
-                              (const MethodInfo_266F388 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                              (DataMasterBase_WarMaster__WarEntity__int__o *)MasterData_WarQuestSelectionMaster,
+                              v28,
+                              (const MethodInfo_24E40D0 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (SkillLvMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_SkillLvMaster___);
-  if ( !Master_WarQuestSelectionMaster )
+  MasterData_WarQuestSelectionMaster = (DataManager_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_SkillLvMaster___);
+  if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_25;
-  v38 = SkillLvMaster__GetEntity(Master_WarQuestSelectionMaster, v33, 1, 0LL);
+  v30 = SkillLvMaster__GetEntity((SkillLvMaster_o *)MasterData_WarQuestSelectionMaster, v28, 1, 0LL);
   if ( Entity )
   {
-    v39 = v38;
-    if ( v38 )
+    v31 = v30;
+    if ( v30 )
     {
       skillNameLabel = this->fields.skillNameLabel;
-      Name = SkillEntity__getName(Entity, 0LL);
+      MasterData_WarQuestSelectionMaster = (DataManager_o *)SkillEntity__getName(Entity, 0LL);
       if ( skillNameLabel )
       {
-        UILabel__set_text(skillNameLabel, Name, 0LL);
+        UILabel__set_text(skillNameLabel, (System_String_o *)MasterData_WarQuestSelectionMaster, 0LL);
         skillDetailLabel = this->fields.skillDetailLabel;
-        Detail = SkillLvEntity__getDetail(v39, 0, 0LL);
+        Detail = SkillLvEntity__getDetail(v31, 0, 0LL);
         WrapControlText__textAdjust(skillDetailLabel, Detail, 22, 0, 0, 0LL);
-        skillIcon = this->fields.skillIcon;
-        if ( skillIcon )
+        MasterData_WarQuestSelectionMaster = (DataManager_o *)this->fields.skillIcon;
+        if ( MasterData_WarQuestSelectionMaster )
         {
-          SkillIconComponent__Set(skillIcon, v33, 0LL);
+          SkillIconComponent__Set((SkillIconComponent_o *)MasterData_WarQuestSelectionMaster, v28, 0LL);
           return;
         }
       }
 LABEL_25:
-      sub_B170D4();
+      sub_B2C434(MasterData_WarQuestSelectionMaster, v21);
     }
   }
 }
@@ -1517,51 +1463,38 @@ void __fastcall EventRewardAnotherPayConfirmDialog__SetUIPositon(
 {
   UnityEngine_GameObject_o *skill; // x20
   EventRewardAnotherPayConfirmDialog_c *v6; // x0
+  __int64 v7; // x1
   UnityEngine_Component_o *itemIcon; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Component_o *upperLabel; // x0
   UnityEngine_GameObject_o *v10; // x0
-  UnityEngine_Component_o *warnLabel; // x0
+  UnityEngine_GameObject_o *v11; // x0
   UnityEngine_GameObject_o *v12; // x0
-  UnityEngine_Component_o *downerLabel; // x0
-  UnityEngine_GameObject_o *v14; // x0
   struct EventRewardAnotherPayConfirmDialog_StaticFields *static_fields; // x8
   float WARN_LABEL_BASE_POS_Y; // s0
-  UnityEngine_GameObject_o *v17; // x20
-  EventRewardAnotherPayConfirmDialog_c *v18; // x0
-  UnityEngine_Component_o *v19; // x0
-  UnityEngine_GameObject_o *v20; // x0
-  UnityEngine_Component_o *v21; // x0
-  UnityEngine_GameObject_o *v22; // x0
-  UnityEngine_Component_o *v23; // x0
-  UnityEngine_GameObject_o *v24; // x0
-  UnityEngine_Component_o *v25; // x0
+  UnityEngine_GameObject_o *v15; // x20
+  EventRewardAnotherPayConfirmDialog_c *v16; // x0
+  UnityEngine_GameObject_o *v17; // x0
+  UnityEngine_GameObject_o *v18; // x0
+  UnityEngine_GameObject_o *v19; // x0
   float DOWNER_LABEL_CHOICES_POS_Y; // s1
-  UnityEngine_GameObject_o *v27; // x20
-  EventRewardAnotherPayConfirmDialog_c *v28; // x0
-  UnityEngine_Component_o *v29; // x0
-  UnityEngine_GameObject_o *v30; // x0
-  UnityEngine_Component_o *v31; // x0
-  UnityEngine_GameObject_o *v32; // x0
-  UnityEngine_Component_o *v33; // x0
-  UnityEngine_GameObject_o *v34; // x0
-  UnityEngine_Component_o *v35; // x0
-  struct EventRewardAnotherPayConfirmDialog_StaticFields *v36; // x8
+  UnityEngine_GameObject_o *v21; // x20
+  EventRewardAnotherPayConfirmDialog_c *v22; // x0
+  UnityEngine_GameObject_o *v23; // x0
+  UnityEngine_GameObject_o *v24; // x0
+  UnityEngine_GameObject_o *v25; // x0
+  struct EventRewardAnotherPayConfirmDialog_StaticFields *v26; // x8
   float DOWNER_LABEL_RESULT_POS_Y; // s0
-  UnityEngine_GameObject_o *v38; // x21
-  EventRewardAnotherPayConfirmDialog_c *v39; // x0
-  UnityEngine_Component_o *resultLabel; // x0
-  UnityEngine_GameObject_o *v41; // x0
-  EventRewardAnotherPayConfirmDialog_c *v42; // x0
-  UnityEngine_GameObject_o *v43; // x20
-  UnityEngine_Component_o *v44; // x0
-  UnityEngine_GameObject_o *v45; // x0
-  UnityEngine_Component_o *v46; // x0
+  UnityEngine_GameObject_o *v28; // x21
+  EventRewardAnotherPayConfirmDialog_c *v29; // x0
+  UnityEngine_GameObject_o *v30; // x0
+  EventRewardAnotherPayConfirmDialog_c *v31; // x0
+  UnityEngine_GameObject_o *v32; // x20
+  UnityEngine_GameObject_o *v33; // x0
 
-  if ( (byte_40F612F & 1) == 0 )
+  if ( (byte_41887CB & 1) == 0 )
   {
-    sub_B16FFC(&EventRewardAnotherPayConfirmDialog_TypeInfo, isEventPeriod);
-    byte_40F612F = 1;
+    sub_B2C35C(&EventRewardAnotherPayConfirmDialog_TypeInfo, isEventPeriod);
+    byte_41887CB = 1;
   }
   switch ( this->fields.state )
   {
@@ -1583,112 +1516,112 @@ void __fastcall EventRewardAnotherPayConfirmDialog__SetUIPositon(
         gameObject,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->ICON_BASE_POS_Y,
         0LL);
-      upperLabel = (UnityEngine_Component_o *)this->fields.upperLabel;
-      if ( !upperLabel )
+      itemIcon = (UnityEngine_Component_o *)this->fields.upperLabel;
+      if ( !itemIcon )
         goto LABEL_42;
-      v10 = UnityEngine_Component__get_gameObject(upperLabel, 0LL);
+      v10 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       GameObjectExtensions__SetLocalPositionY(
         v10,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->ICON_BASE_POS_Y
       + EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->UPPER_LABEL_POS_Y,
         0LL);
-      warnLabel = (UnityEngine_Component_o *)this->fields.warnLabel;
-      if ( !warnLabel )
+      itemIcon = (UnityEngine_Component_o *)this->fields.warnLabel;
+      if ( !itemIcon )
         goto LABEL_42;
-      v12 = UnityEngine_Component__get_gameObject(warnLabel, 0LL);
+      v11 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       GameObjectExtensions__SetLocalPositionY(
-        v12,
+        v11,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->WARN_LABEL_BASE_POS_Y,
         0LL);
-      downerLabel = (UnityEngine_Component_o *)this->fields.downerLabel;
-      if ( !downerLabel )
+      itemIcon = (UnityEngine_Component_o *)this->fields.downerLabel;
+      if ( !itemIcon )
         goto LABEL_42;
-      v14 = UnityEngine_Component__get_gameObject(downerLabel, 0LL);
+      v12 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       static_fields = EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields;
       WARN_LABEL_BASE_POS_Y = static_fields->WARN_LABEL_BASE_POS_Y;
       goto LABEL_20;
     case 3:
-      v27 = this->fields.skill;
-      v28 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+      v21 = this->fields.skill;
+      v22 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-        v28 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        v22 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       }
-      GameObjectExtensions__SetLocalPositionY(v27, v28->static_fields->SKILL_CHOICES_POS_Y, 0LL);
-      v29 = (UnityEngine_Component_o *)this->fields.itemIcon;
-      if ( !v29 )
+      GameObjectExtensions__SetLocalPositionY(v21, v22->static_fields->SKILL_CHOICES_POS_Y, 0LL);
+      itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
+      if ( !itemIcon )
         goto LABEL_42;
-      v30 = UnityEngine_Component__get_gameObject(v29, 0LL);
+      v23 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       GameObjectExtensions__SetLocalPositionY(
-        v30,
+        v23,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->ICON_CHOICES_POS_Y,
         0LL);
-      v31 = (UnityEngine_Component_o *)this->fields.upperLabel;
-      if ( !v31 )
+      itemIcon = (UnityEngine_Component_o *)this->fields.upperLabel;
+      if ( !itemIcon )
         goto LABEL_42;
-      v32 = UnityEngine_Component__get_gameObject(v31, 0LL);
+      v24 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       GameObjectExtensions__SetLocalPositionY(
-        v32,
+        v24,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->ICON_CHOICES_POS_Y
       + EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->UPPER_LABEL_CHOICES_POS_Y,
         0LL);
-      v33 = (UnityEngine_Component_o *)this->fields.warnLabel;
-      if ( !v33 )
+      itemIcon = (UnityEngine_Component_o *)this->fields.warnLabel;
+      if ( !itemIcon )
         goto LABEL_42;
-      v34 = UnityEngine_Component__get_gameObject(v33, 0LL);
+      v25 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       GameObjectExtensions__SetLocalPositionY(
-        v34,
+        v25,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->WARN_LABEL_CHOICES_POS_Y,
         0LL);
-      v35 = (UnityEngine_Component_o *)this->fields.downerLabel;
-      if ( !v35 )
+      itemIcon = (UnityEngine_Component_o *)this->fields.downerLabel;
+      if ( !itemIcon )
         goto LABEL_42;
-      v14 = UnityEngine_Component__get_gameObject(v35, 0LL);
-      v36 = EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields;
-      WARN_LABEL_BASE_POS_Y = v36->WARN_LABEL_CHOICES_POS_Y;
-      DOWNER_LABEL_CHOICES_POS_Y = v36->DOWNER_LABEL_CHOICES_POS_Y;
+      v12 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
+      v26 = EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields;
+      WARN_LABEL_BASE_POS_Y = v26->WARN_LABEL_CHOICES_POS_Y;
+      DOWNER_LABEL_CHOICES_POS_Y = v26->DOWNER_LABEL_CHOICES_POS_Y;
       goto LABEL_29;
     case 4:
-      v17 = this->fields.skill;
-      v18 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+      v15 = this->fields.skill;
+      v16 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-        v18 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        v16 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       }
-      GameObjectExtensions__SetLocalPositionY(v17, v18->static_fields->SKILL_PURCHASED_POS_Y, 0LL);
-      v19 = (UnityEngine_Component_o *)this->fields.itemIcon;
-      if ( !v19 )
+      GameObjectExtensions__SetLocalPositionY(v15, v16->static_fields->SKILL_PURCHASED_POS_Y, 0LL);
+      itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
+      if ( !itemIcon )
         goto LABEL_42;
-      v20 = UnityEngine_Component__get_gameObject(v19, 0LL);
+      v17 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       GameObjectExtensions__SetLocalPositionY(
-        v20,
+        v17,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->ICON_PURCHASED_POS_Y,
         0LL);
-      v21 = (UnityEngine_Component_o *)this->fields.upperLabel;
-      if ( !v21 )
+      itemIcon = (UnityEngine_Component_o *)this->fields.upperLabel;
+      if ( !itemIcon )
         goto LABEL_42;
-      v22 = UnityEngine_Component__get_gameObject(v21, 0LL);
+      v18 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       GameObjectExtensions__SetLocalPositionY(
-        v22,
+        v18,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->ICON_PURCHASED_POS_Y
       + EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->UPPER_LABEL_POS_Y,
         0LL);
-      v23 = (UnityEngine_Component_o *)this->fields.warnLabel;
-      if ( !v23 )
+      itemIcon = (UnityEngine_Component_o *)this->fields.warnLabel;
+      if ( !itemIcon )
         goto LABEL_42;
-      v24 = UnityEngine_Component__get_gameObject(v23, 0LL);
+      v19 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       GameObjectExtensions__SetLocalPositionY(
-        v24,
+        v19,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->WARN_LABEL_PURCHASED_POS_Y,
         0LL);
-      v25 = (UnityEngine_Component_o *)this->fields.downerLabel;
-      if ( !v25 )
+      itemIcon = (UnityEngine_Component_o *)this->fields.downerLabel;
+      if ( !itemIcon )
         goto LABEL_42;
-      v14 = UnityEngine_Component__get_gameObject(v25, 0LL);
+      v12 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       static_fields = EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields;
       WARN_LABEL_BASE_POS_Y = static_fields->WARN_LABEL_PURCHASED_POS_Y;
 LABEL_20:
@@ -1697,50 +1630,50 @@ LABEL_29:
       DOWNER_LABEL_RESULT_POS_Y = WARN_LABEL_BASE_POS_Y + DOWNER_LABEL_CHOICES_POS_Y;
       goto LABEL_30;
     case 5:
-      v38 = this->fields.skill;
-      v39 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+      v28 = this->fields.skill;
+      v29 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-        v39 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        v29 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       }
-      GameObjectExtensions__SetLocalPositionY(v38, v39->static_fields->SKILL_RESULT_POS_Y, 0LL);
-      resultLabel = (UnityEngine_Component_o *)this->fields.resultLabel;
-      if ( !resultLabel )
+      GameObjectExtensions__SetLocalPositionY(v28, v29->static_fields->SKILL_RESULT_POS_Y, 0LL);
+      itemIcon = (UnityEngine_Component_o *)this->fields.resultLabel;
+      if ( !itemIcon )
         goto LABEL_42;
-      v41 = UnityEngine_Component__get_gameObject(resultLabel, 0LL);
+      v30 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       GameObjectExtensions__SetLocalPositionY(
-        v41,
+        v30,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->RESULT_LABEL_POS_Y,
         0LL);
       if ( isEventPeriod )
         return;
-      v42 = EventRewardAnotherPayConfirmDialog_TypeInfo;
-      v43 = this->fields.skill;
+      v31 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+      v32 = this->fields.skill;
       if ( (BYTE3(EventRewardAnotherPayConfirmDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo);
-        v42 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        v31 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       }
-      GameObjectExtensions__SetLocalPositionY(v43, v42->static_fields->SKILL_RESULT_END_POS_Y, 0LL);
-      v44 = (UnityEngine_Component_o *)this->fields.resultLabel;
-      if ( !v44
-        || (v45 = UnityEngine_Component__get_gameObject(v44, 0LL),
+      GameObjectExtensions__SetLocalPositionY(v32, v31->static_fields->SKILL_RESULT_END_POS_Y, 0LL);
+      itemIcon = (UnityEngine_Component_o *)this->fields.resultLabel;
+      if ( !itemIcon
+        || (v33 = UnityEngine_Component__get_gameObject(itemIcon, 0LL),
             GameObjectExtensions__SetLocalPositionY(
-              v45,
+              v33,
               EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->RESULT_LABEL_PERIOD_POS_Y,
               0LL),
-            (v46 = (UnityEngine_Component_o *)this->fields.downerLabel) == 0LL) )
+            (itemIcon = (UnityEngine_Component_o *)this->fields.downerLabel) == 0LL) )
       {
 LABEL_42:
-        sub_B170D4();
+        sub_B2C434(itemIcon, v7);
       }
-      v14 = UnityEngine_Component__get_gameObject(v46, 0LL);
+      v12 = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
       DOWNER_LABEL_RESULT_POS_Y = EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->DOWNER_LABEL_RESULT_POS_Y;
 LABEL_30:
-      GameObjectExtensions__SetLocalPositionY(v14, DOWNER_LABEL_RESULT_POS_Y, 0LL);
+      GameObjectExtensions__SetLocalPositionY(v12, DOWNER_LABEL_RESULT_POS_Y, 0LL);
       return;
     default:
       return;
@@ -1757,21 +1690,20 @@ void __fastcall EventRewardAnotherPayConfirmDialog__SetWindowSize(
   UIWidget_o *window; // x0
   float y; // s8
   double x; // d0
-  UIWidget_o *v7; // x0
-  double v8; // d0
+  double v7; // d0
 
   window = this->fields.window;
   if ( !window
     || ((y = size.fields.y, size.fields.x != INFINITY) ? (x = size.fields.x) : (x = -size.fields.x),
         UIWidget__set_width(window, (int)x, 0LL),
-        (v7 = this->fields.window) == 0LL) )
+        (window = this->fields.window) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(window, method);
   }
-  v8 = y;
+  v7 = y;
   if ( y == INFINITY )
-    v8 = -INFINITY;
-  UIWidget__set_height(v7, (int)v8, 0LL);
+    v7 = -INFINITY;
+  UIWidget__set_height(window, (int)v7, 0LL);
 }
 
 
@@ -1779,12 +1711,12 @@ System_String_o *__fastcall EventRewardAnotherPayConfirmDialog__get_closeBtnPath
         EventRewardAnotherPayConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40F6136 & 1) == 0 )
+  if ( (byte_41887D2 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15414/*"Window/CancelButton"*/, method);
-    byte_40F6136 = 1;
+    sub_B2C35C(&StringLiteral_15477/*"Window/CancelButton"*/, method);
+    byte_41887D2 = 1;
   }
-  return (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/;
+  return (System_String_o *)StringLiteral_15477/*"Window/CancelButton"*/;
 }
 
 
@@ -1802,6 +1734,6 @@ bool __fastcall EventRewardAnotherPayConfirmDialog___c__DisplayClass54_0___SetSv
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_B170D4();
+    sub_B2C434(this, 0LL);
   return ent->fields.eventId == this->fields.eventId && ent->fields.commonReleaseId > 0;
 }

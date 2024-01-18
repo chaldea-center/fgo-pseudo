@@ -41,16 +41,16 @@ void __fastcall ProfileArrowInfoTouchComponent__OnDragEnd(
   float v11; // s8
   float v12; // s0
   float v13; // s0
+  __int64 v14; // x1
   ConnectMark_o *connectMark; // x0
-  ConnectMark_o *v15; // x0
   struct UnityEngine_Vector2_o v16; // [xsp+0h] [xbp-30h] BYREF
   UnityEngine_Vector2_o v17; // [xsp+8h] [xbp-28h] BYREF
   UnityEngine_Vector2_o v18; // 0:s0.4,4:s1.4
 
-  if ( (byte_40FA00F & 1) == 0 )
+  if ( (byte_4187A55 & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    byte_40FA00F = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    byte_4187A55 = 1;
   }
   up = UnityEngine_Vector2__get_up(0LL);
   y = up.fields.y;
@@ -58,10 +58,10 @@ void __fastcall ProfileArrowInfoTouchComponent__OnDragEnd(
   vec = this->fields.vec;
   v17 = up;
   v16 = vec;
-  if ( !byte_40F9197 )
+  if ( !byte_4186C20 )
   {
-    sub_B16FFC(&System_Math_TypeInfo, v3);
-    byte_40F9197 = 1;
+    sub_B2C35C(&System_Math_TypeInfo, v3);
+    byte_4186C20 = 1;
   }
   v18.fields.x = UnityEngine_Vector2__get_sqrMagnitude(*(UnityEngine_Vector2_o *)&x, (const MethodInfo *)&v17);
   v8 = v18.fields.x;
@@ -97,7 +97,7 @@ void __fastcall ProfileArrowInfoTouchComponent__OnDragEnd(
           return;
         }
 LABEL_26:
-        sub_B170D4();
+        sub_B2C434(connectMark, v14);
       }
       if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
         && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -105,10 +105,10 @@ LABEL_26:
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       }
       SoundManager__playSystemSe(7, 0LL);
-      v15 = this->fields.connectMark;
-      if ( !v15 )
+      connectMark = this->fields.connectMark;
+      if ( !connectMark )
         goto LABEL_26;
-      ConnectMark__NextServantProfile(v15, 0LL);
+      ConnectMark__NextServantProfile(connectMark, 0LL);
     }
   }
 }

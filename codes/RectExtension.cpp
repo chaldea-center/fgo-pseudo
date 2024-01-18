@@ -11,11 +11,12 @@ bool __fastcall RectExtension__HasAnyIntersects(
   il2cpp_array_size_t v10; // w21
   UnityEngine_Rect_o *v11; // x8
   UnityEngine_Rect_o *v12; // x22
-  UnityEngine_Rect_o v14; // [xsp+0h] [xbp-30h] BYREF
+  __int64 v14; // x0
+  UnityEngine_Rect_o v15; // [xsp+0h] [xbp-30h] BYREF
 
-  v14 = self;
+  v15 = self;
   if ( !rects )
-    sub_B170D4();
+    sub_B2C434(0LL, allowInverse);
   v8 = rects;
   v9 = allowInverse;
   v10 = rects->max_length - 1;
@@ -24,15 +25,15 @@ bool __fastcall RectExtension__HasAnyIntersects(
   {
     if ( v10 >= v8->max_length )
     {
-      sub_B17100(rects, allowInverse, method);
-      sub_B170A0();
+      v14 = sub_B2C460(rects);
+      sub_B2C400(v14, 0LL);
     }
     --v10;
     v12 = v11 - 1;
-    rects = (UnityEngine_Rect_array *)UnityEngine_Rect__Overlaps_34844908(
+    rects = (UnityEngine_Rect_array *)UnityEngine_Rect__Overlaps_35350340(
                                         *(UnityEngine_Rect_o *)((char *)v11 - 12),
                                         *(UnityEngine_Rect_o *)&v4,
-                                        (bool)&v14,
+                                        (bool)&v15,
                                         (const MethodInfo *)v9);
     v11 = v12;
     if ( ((unsigned __int8)rects & 1) != 0 )

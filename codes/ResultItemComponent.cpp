@@ -7,20 +7,18 @@ void __fastcall ResultItemComponent___ctor(ResultItemComponent_o *this, const Me
 void __fastcall ResultItemComponent__Clear(ResultItemComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *baseObject; // x0
-  UnityEngine_Component_o *bonusSprite; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  ItemIconComponent_o *itemIcon; // x0
 
   baseObject = this->fields.baseObject;
   if ( !baseObject
     || (UnityEngine_GameObject__SetActive(baseObject, 0, 0LL),
-        (bonusSprite = (UnityEngine_Component_o *)this->fields.bonusSprite) == 0LL)
-    || (gameObject = UnityEngine_Component__get_gameObject(bonusSprite, 0LL)) == 0LL
-    || (UnityEngine_GameObject__SetActive(gameObject, 0, 0LL), (itemIcon = this->fields.itemIcon) == 0LL) )
+        (baseObject = (UnityEngine_GameObject_o *)this->fields.bonusSprite) == 0LL)
+    || (baseObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseObject, 0LL)) == 0LL
+    || (UnityEngine_GameObject__SetActive(baseObject, 0, 0LL),
+        (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(baseObject, method);
   }
-  ItemIconComponent__Clear(itemIcon, 0LL);
+  ItemIconComponent__Clear((ItemIconComponent_o *)baseObject, 0LL);
 }
 
 
@@ -30,46 +28,52 @@ void __fastcall ResultItemComponent__Set(
         int32_t count,
         const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *baseObject; // x0
-  int prioredIconId; // w1
-  ItemIconComponent_o *itemIcon; // x0
+  GiftEntity_o *v4; // x20
+  ResultItemComponent_o *v5; // x21
   int32_t num; // w3
-  int32_t v11; // w3
+  int32_t v8; // w3
 
   if ( !giftEnt )
     goto LABEL_16;
+  v4 = giftEnt;
+  v5 = this;
   if ( giftEnt->fields.objectId < 1 )
   {
     ResultItemComponent__Clear(this, (const MethodInfo *)giftEnt);
     return;
   }
-  baseObject = this->fields.baseObject;
-  if ( !baseObject )
+  this = (ResultItemComponent_o *)this->fields.baseObject;
+  if ( !this )
     goto LABEL_16;
-  UnityEngine_GameObject__SetActive(baseObject, 1, 0LL);
-  prioredIconId = giftEnt->fields.prioredIconId;
-  itemIcon = this->fields.itemIcon;
-  if ( prioredIconId >= 1 )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+  giftEnt = (GiftEntity_o *)(unsigned int)v4->fields.prioredIconId;
+  this = (ResultItemComponent_o *)v5->fields.itemIcon;
+  if ( (int)giftEnt >= 1 )
   {
-    if ( itemIcon )
+    if ( this )
     {
-      if ( giftEnt->fields.num <= 1 )
+      if ( v4->fields.num <= 1 )
         num = -1;
       else
-        num = giftEnt->fields.num;
-      ItemIconComponent__SetItemImage_28931492(itemIcon, prioredIconId, giftEnt->fields.objectId, num, 0LL);
+        num = v4->fields.num;
+      ItemIconComponent__SetItemImage_27396512(
+        (ItemIconComponent_o *)this,
+        (int32_t)giftEnt,
+        v4->fields.objectId,
+        num,
+        0LL);
       return;
     }
 LABEL_16:
-    sub_B170D4();
+    sub_B2C434(this, giftEnt);
   }
-  if ( !itemIcon )
+  if ( !this )
     goto LABEL_16;
   if ( count < 1 )
-    v11 = -1;
+    v8 = -1;
   else
-    v11 = count;
-  ItemIconComponent__SetGift(itemIcon, giftEnt->fields.type, giftEnt->fields.objectId, v11, 0, 0LL);
+    v8 = count;
+  ItemIconComponent__SetGift((ItemIconComponent_o *)this, v4->fields.type, v4->fields.objectId, v8, 0, 0LL);
 }
 
 
@@ -81,7 +85,6 @@ void __fastcall ResultItemComponent__SetExtra(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *baseObject; // x0
-  ItemIconComponent_o *itemIcon; // x0
 
   if ( imgId < 1 )
   {
@@ -91,11 +94,12 @@ void __fastcall ResultItemComponent__SetExtra(
   {
     baseObject = this->fields.baseObject;
     if ( !baseObject
-      || (UnityEngine_GameObject__SetActive(baseObject, 1, 0LL), (itemIcon = this->fields.itemIcon) == 0LL) )
+      || (UnityEngine_GameObject__SetActive(baseObject, 1, 0LL),
+          (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0LL) )
     {
-      sub_B170D4();
+      sub_B2C434(baseObject, *(_QWORD *)&imgId);
     }
-    ItemIconComponent__SetItemImage_28925112(itemIcon, imgId, bgId, -1, -1, 0LL);
+    ItemIconComponent__SetItemImage_27393796((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 0LL);
   }
 }
 
@@ -115,7 +119,7 @@ void __fastcall ResultItemComponent__SetItemIconScale(
 
   itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
   if ( !itemIcon )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   z = vec.fields.z;
   y = vec.fields.y;
   x = vec.fields.x;
@@ -130,10 +134,12 @@ void __fastcall ResultItemComponent__SetItemIconScale(
 void __fastcall ResultItemComponent__SetRareItem(ResultItemComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o *bonusSprite; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
 
   bonusSprite = (UnityEngine_Component_o *)this->fields.bonusSprite;
-  if ( !bonusSprite || (gameObject = UnityEngine_Component__get_gameObject(bonusSprite, 0LL)) == 0LL )
-    sub_B170D4();
-  UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
+  if ( !bonusSprite
+    || (bonusSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bonusSprite, 0LL)) == 0LL )
+  {
+    sub_B2C434(bonusSprite, method);
+  }
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bonusSprite, 1, 0LL);
 }

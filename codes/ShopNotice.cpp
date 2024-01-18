@@ -9,54 +9,47 @@ void __fastcall ShopNotice__CompareShopListNotice(
         ShopListNotice_o *listNotice,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   int32_t LimitedType_k__BackingField; // w21
-  System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__o *v10; // x22
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x2
+  System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__o *v8; // x22
+  const MethodInfo *v9; // x3
+  const MethodInfo *v10; // x2
+  const MethodInfo *v11; // x2
+  const MethodInfo *v12; // x3
   const MethodInfo *v13; // x2
-  const MethodInfo *v14; // x3
-  const MethodInfo *v15; // x2
   int64_t PeriodTimeLimit_k__BackingField; // x8
   int64_t ExchangeServatTimeLimit_k__BackingField; // x1
 
-  if ( (byte_40FB75C & 1) == 0 )
+  if ( (byte_4189198 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType___ctor__, listNotice);
-    sub_B16FFC(&System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo, v7);
-    sub_B16FFC(&Method_ShopListNotice_GetShopLimitedType__, v8);
-    byte_40FB75C = 1;
+    sub_B2C35C(&Method_System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType___ctor__, listNotice);
+    sub_B2C35C(&System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo, v5);
+    sub_B2C35C(&Method_ShopListNotice_GetShopLimitedType__, v6);
+    byte_4189198 = 1;
   }
   if ( listNotice )
   {
     this->fields._IsShowNew_k__BackingField |= listNotice->fields._IsShowNew_k__BackingField;
     LimitedType_k__BackingField = listNotice->fields._LimitedType_k__BackingField;
-    v10 = (System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__o *)sub_B170CC(
-                                                                                     System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo,
-                                                                                     listNotice,
-                                                                                     method,
-                                                                                     v3,
-                                                                                     v4);
+    v8 = (System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__o *)sub_B2C42C(System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__TypeInfo);
     System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType____ctor(
-      v10,
+      v8,
       (Il2CppObject *)listNotice,
       Method_ShopListNotice_GetShopLimitedType__,
-      (const MethodInfo_2B78A00 *)Method_System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType___ctor__);
-    ShopNotice__SetLimitedType(this, LimitedType_k__BackingField, v10, v11);
+      (const MethodInfo_271FAC4 *)Method_System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType___ctor__);
+    ShopNotice__SetLimitedType(this, LimitedType_k__BackingField, v8, v9);
     this->fields._IsIndefiniteExchangeServant_k__BackingField |= listNotice->fields._IsIndefiniteExchangeServant_k__BackingField;
     this->fields._IsStartUpSummon_k__BackingField |= listNotice->fields._IsSpecialSummonable_k__BackingField;
     if ( listNotice->fields._LimitedType_k__BackingField )
     {
-      ShopNotice__SetPeriodTimeLimit(this, listNotice->fields._PeriodTimeLimit_k__BackingField, v12);
-      ShopNotice__SetMonthlyTimeLimit(this, listNotice->fields._MonthlyTimeLimit_k__BackingField, v13);
+      ShopNotice__SetPeriodTimeLimit(this, listNotice->fields._PeriodTimeLimit_k__BackingField, v10);
+      ShopNotice__SetMonthlyTimeLimit(this, listNotice->fields._MonthlyTimeLimit_k__BackingField, v11);
       ShopNotice__SetExchangeServantTimeLimit(
         this,
         listNotice->fields._ExchangeServatTimeLimit_k__BackingField,
         listNotice->fields._ExchangeServantEventId_k__BackingField,
-        v14);
+        v12);
       PeriodTimeLimit_k__BackingField = listNotice->fields._PeriodTimeLimit_k__BackingField;
       if ( PeriodTimeLimit_k__BackingField >= listNotice->fields._MonthlyTimeLimit_k__BackingField )
         PeriodTimeLimit_k__BackingField = listNotice->fields._MonthlyTimeLimit_k__BackingField;
@@ -64,7 +57,7 @@ void __fastcall ShopNotice__CompareShopListNotice(
         ExchangeServatTimeLimit_k__BackingField = listNotice->fields._ExchangeServatTimeLimit_k__BackingField;
       else
         ExchangeServatTimeLimit_k__BackingField = PeriodTimeLimit_k__BackingField;
-      ShopNotice__SetMostRecentTimeLimit(this, ExchangeServatTimeLimit_k__BackingField, v15);
+      ShopNotice__SetMostRecentTimeLimit(this, ExchangeServatTimeLimit_k__BackingField, v13);
     }
   }
 }
@@ -84,10 +77,10 @@ void __fastcall ShopNotice__SetExchangeServantTimeLimit(
 {
   int64_t ExchangeServantTimeLimit_k__BackingField; // x8
 
-  if ( (byte_40FB760 & 1) == 0 )
+  if ( (byte_418919C & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, timeLimit);
-    byte_40FB760 = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, timeLimit);
+    byte_418919C = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -109,7 +102,7 @@ void __fastcall ShopNotice__SetExchangeServantTimeLimit(
 void __fastcall ShopNotice__SetFlag(ShopNotice_o *this, int32_t type, const MethodInfo *method)
 {
   if ( (unsigned int)(type - 1) <= 3 )
-    type = dword_3137514[type - 1];
+    type = dword_31A38E4[type - 1];
   this->fields.limitedTypeFlag |= type;
 }
 
@@ -147,29 +140,33 @@ void __fastcall ShopNotice__SetLimitedType(
         const MethodInfo *method)
 {
   int32_t v5; // w21
+  ShopNotice_o *v6; // x19
   int v7; // w8
 
   v5 = type;
-  if ( (byte_40FB75D & 1) == 0 )
+  v6 = this;
+  if ( (byte_4189199 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__Invoke__, *(_QWORD *)&type);
-    byte_40FB75D = 1;
+    this = (ShopNotice_o *)sub_B2C35C(
+                             &Method_System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__Invoke__,
+                             *(_QWORD *)&type);
+    byte_4189199 = 1;
   }
-  if ( v5 && this->fields._LimitedType_k__BackingField != 30 )
+  if ( v5 && v6->fields._LimitedType_k__BackingField != 30 )
   {
     if ( (unsigned int)(v5 - 1) <= 3 )
-      v5 = dword_3137514[v5 - 1];
-    v7 = this->fields.limitedTypeFlag | v5;
-    this->fields.limitedTypeFlag = v7;
+      v5 = dword_31A38E4[v5 - 1];
+    v7 = v6->fields.limitedTypeFlag | v5;
+    v6->fields.limitedTypeFlag = v7;
     if ( !GetShopLimitedType )
-      sub_B170D4();
-    this->fields._LimitedType_k__BackingField = System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType___Invoke(
-                                                  GetShopLimitedType,
-                                                  (v7 & 2) != 0,
-                                                  (v7 & 4) != 0,
-                                                  (v7 & 8) != 0,
-                                                  (v7 & 0x10) != 0,
-                                                  (const MethodInfo_2B78A14 *)Method_System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__Invoke__);
+      sub_B2C434(this, *(_QWORD *)&type);
+    v6->fields._LimitedType_k__BackingField = System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType___Invoke(
+                                                GetShopLimitedType,
+                                                (v7 & 2) != 0,
+                                                (v7 & 4) != 0,
+                                                (v7 & 8) != 0,
+                                                (v7 & 0x10) != 0,
+                                                (const MethodInfo_271FAD8 *)Method_System_Func_bool__bool__bool__bool__ShopListNotice_ShopLimitedType__Invoke__);
   }
 }
 
@@ -178,10 +175,10 @@ void __fastcall ShopNotice__SetMonthlyTimeLimit(ShopNotice_o *this, int64_t time
 {
   int64_t MonthlyTimeLimit_k__BackingField; // x8
 
-  if ( (byte_40FB75F & 1) == 0 )
+  if ( (byte_418919B & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, timeLimit);
-    byte_40FB75F = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, timeLimit);
+    byte_418919B = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -202,10 +199,10 @@ void __fastcall ShopNotice__SetMostRecentTimeLimit(ShopNotice_o *this, int64_t t
 {
   int64_t MostRecentTimeLimit_k__BackingField; // x8
 
-  if ( (byte_40FB761 & 1) == 0 )
+  if ( (byte_418919D & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, timeLimit);
-    byte_40FB761 = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, timeLimit);
+    byte_418919D = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -226,10 +223,10 @@ void __fastcall ShopNotice__SetPeriodTimeLimit(ShopNotice_o *this, int64_t timeL
 {
   int64_t PeriodTimeLimit_k__BackingField; // x8
 
-  if ( (byte_40FB75E & 1) == 0 )
+  if ( (byte_418919A & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, timeLimit);
-    byte_40FB75E = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, timeLimit);
+    byte_418919A = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )

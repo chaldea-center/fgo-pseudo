@@ -1,14 +1,14 @@
 void __fastcall EventRewardExtraMaster___ctor(EventRewardExtraMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F615B & 1) == 0 )
+  if ( (byte_4184860 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__, method);
-    byte_40F615B = 1;
+    sub_B2C35C(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__, method);
+    byte_4184860 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     131,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ EventRewardExtraEntity_o *__fastcall EventRewardExtraMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40F6159 & 1) == 0 )
+  if ( (byte_418485E & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_40F6159 = 1;
+    byte_418485E = 1;
   }
   PK = EventRewardExtraEntity__CreatePK(eventId, point, (const MethodInfo *)point);
   return (EventRewardExtraEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                        (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                        PK,
-                                       (const MethodInfo_266F7D8 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__GetEntity__);
+                                       (const MethodInfo_24E4520 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__GetEntity__);
 }
 
 
@@ -46,15 +46,15 @@ bool __fastcall EventRewardExtraMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40F615A & 1) == 0 )
+  if ( (byte_418485F & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__, entity);
-    byte_40F615A = 1;
+    sub_B2C35C(&Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__, entity);
+    byte_418485F = 1;
   }
   PK = EventRewardExtraEntity__CreatePK(eventId, point, *(const MethodInfo **)&eventId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_EventRewardExtraMaster__EventRewardExtraEntity__string__TryGetEntity__);
 }

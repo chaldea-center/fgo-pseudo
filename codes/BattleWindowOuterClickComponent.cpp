@@ -30,7 +30,7 @@ void __fastcall BattleWindowOuterClickComponent__setClickCallBack(
   System_Int32_array *v7; // x7
 
   this->fields.clickCallBack = call;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.clickCallBack,
     (System_Int32_array **)call,
     (System_String_array **)method,
@@ -57,7 +57,7 @@ void __fastcall BattleWindowOuterClickComponent_OuterClickCall___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B16F98(p_method, object);
+  sub_B2C2F8(p_method, object);
 }
 
 
@@ -70,7 +70,7 @@ System_IAsyncResult_o *__fastcall BattleWindowOuterClickComponent_OuterClickCall
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_B16FA0(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_B2C300(this, &v5, callback, object);
 }
 
 
@@ -79,7 +79,7 @@ void __fastcall BattleWindowOuterClickComponent_OuterClickCall__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B16FA4(result, 0LL, method);
+  sub_B2C304(result, 0LL, method);
 }
 
 
@@ -88,139 +88,142 @@ void __fastcall BattleWindowOuterClickComponent_OuterClickCall__Invoke(
         const MethodInfo *method)
 {
   __int64 v2; // x2
-  __int64 v3; // x8
-  __int64 v5; // x23
-  BattleWindowOuterClickComponent_OuterClickCall_o **v6; // x24
-  __int64 v7; // x25
-  unsigned int v8; // w22
+  __int64 v3; // x3
+  __int64 v4; // x8
+  __int64 v6; // x23
+  BattleWindowOuterClickComponent_OuterClickCall_o **v7; // x24
+  __int64 v8; // x25
+  unsigned int v9; // w22
   __int64 class_0; // x0
-  __int64 v10; // x8
-  unsigned __int64 v11; // x10
-  _DWORD *v12; // x11
-  __int64 v13; // x0
-  __int64 v14; // x0
+  __int64 v11; // x3
+  __int64 v12; // x8
+  unsigned __int64 v13; // x10
+  _DWORD *v14; // x11
   __int64 v15; // x0
-  void (__fastcall **v16)(__int64 *, _QWORD); // x0
-  BattleWindowOuterClickComponent_OuterClickCall_o *v17; // x8
-  __int64 *v18; // x20
-  __int64 v19; // x21
-  void (__fastcall *v20)(__int64); // x22
-  char v21; // w22
-  char v22; // w0
-  __int64 v23; // x8
-  __int64 v24; // x1
-  __int64 v25; // x2
-  unsigned __int64 v26; // x10
-  _DWORD *v27; // x11
-  BattleWindowOuterClickComponent_OuterClickCall_o *v28; // [xsp+8h] [xbp-38h] BYREF
+  __int64 v16; // x0
+  __int64 v17; // x0
+  void (__fastcall **v18)(__int64 *, _QWORD); // x0
+  BattleWindowOuterClickComponent_OuterClickCall_o *v19; // x8
+  __int64 *v20; // x20
+  __int64 v21; // x21
+  void (__fastcall *v22)(__int64); // x22
+  char v23; // w22
+  char v24; // w0
+  __int64 v25; // x3
+  __int64 v26; // x8
+  __int64 v27; // x1
+  __int64 v28; // x2
+  unsigned __int64 v29; // x10
+  _DWORD *v30; // x11
+  BattleWindowOuterClickComponent_OuterClickCall_o *v31; // [xsp+8h] [xbp-38h] BYREF
 
-  v28 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
+  v31 = this;
+  v4 = *(_QWORD *)&this[1].fields.method_ptr;
+  if ( !v4 )
   {
-    v6 = &v28;
-    v5 = 1LL;
+    v7 = &v31;
+    v6 = 1LL;
     goto LABEL_5;
   }
-  v5 = *(_QWORD *)(v3 + 24);
-  if ( v5 )
+  v6 = *(_QWORD *)(v4 + 24);
+  if ( v6 )
   {
-    v6 = (BattleWindowOuterClickComponent_OuterClickCall_o **)(v3 + 32);
+    v7 = (BattleWindowOuterClickComponent_OuterClickCall_o **)(v4 + 32);
 LABEL_5:
-    v7 = 0LL;
+    v8 = 0LL;
     while ( 1 )
     {
-      v17 = v6[v7];
-      v18 = *(__int64 **)&v17->fields.method;
-      v19 = *(_QWORD *)&v17->fields.extra_arg;
-      v20 = *(void (__fastcall **)(__int64))&v17->fields.method_ptr;
-      if ( *(__int16 *)(v19 + 72) == -1 )
-        sub_B170B8(*(_QWORD *)&v17->fields.extra_arg, method, v2);
-      if ( (sub_B1702C(v19) & 1) == 0 )
+      v19 = v7[v8];
+      v20 = *(__int64 **)&v19->fields.method;
+      v21 = *(_QWORD *)&v19->fields.extra_arg;
+      v22 = *(void (__fastcall **)(__int64))&v19->fields.method_ptr;
+      if ( *(__int16 *)(v21 + 72) == -1 )
+        sub_B2C418(*(_QWORD *)&v19->fields.extra_arg, method, v2, v3);
+      if ( (sub_B2C38C(v21) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v19 + 74) )
+      if ( *(_BYTE *)(v21 + 74) )
         goto LABEL_35;
-      v20(v19);
+      v22(v21);
 LABEL_36:
-      if ( ++v7 == v5 )
+      if ( ++v8 == v6 )
         return;
     }
-    if ( v18 && *(__int16 *)(v19 + 72) != -1 && (*(_BYTE *)(*v18 + 277) & 1) == 0 && this->fields.m_target )
+    if ( v20 && *(__int16 *)(v21 + 72) != -1 && (*(_BYTE *)(*v20 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v21 = sub_B17024(v19);
-      v22 = sub_B17428(v19);
-      if ( (v21 & 1) != 0 )
+      v23 = sub_B2C384(v21);
+      v24 = sub_B2C788(v21);
+      if ( (v23 & 1) != 0 )
       {
-        if ( (v22 & 1) != 0 )
+        if ( (v24 & 1) != 0 )
         {
-          v23 = *v18;
-          v24 = *(_QWORD *)(v19 + 24);
-          v25 = *(unsigned __int16 *)(v19 + 72);
-          if ( *(_WORD *)(*v18 + 298) )
+          v26 = *v20;
+          v27 = *(_QWORD *)(v21 + 24);
+          v28 = *(unsigned __int16 *)(v21 + 72);
+          if ( *(_WORD *)(*v20 + 298) )
           {
-            v26 = 0LL;
-            v27 = (_DWORD *)(*(_QWORD *)(v23 + 176) + 8LL);
-            while ( *((_QWORD *)v27 - 1) != v24 )
+            v29 = 0LL;
+            v30 = (_DWORD *)(*(_QWORD *)(v26 + 176) + 8LL);
+            while ( *((_QWORD *)v30 - 1) != v27 )
             {
-              ++v26;
-              v27 += 4;
-              if ( v26 >= *(unsigned __int16 *)(*v18 + 298) )
+              ++v29;
+              v30 += 4;
+              if ( v29 >= *(unsigned __int16 *)(*v20 + 298) )
                 goto LABEL_34;
             }
-            v15 = v23 + 16LL * (*v27 + (int)v25) + 312;
+            v17 = v26 + 16LL * (*v30 + (int)v28) + 312;
           }
           else
           {
 LABEL_34:
-            v15 = sub_AAFEF8(v18, v24, v25);
+            v17 = sub_AC5258(v20, v27, v28, v25);
           }
-          v14 = *(_QWORD *)(v15 + 8);
+          v16 = *(_QWORD *)(v17 + 8);
         }
         else
         {
-          v14 = *(_QWORD *)(*v18 + 16LL * *(unsigned __int16 *)(v19 + 72) + 320);
+          v16 = *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320);
         }
-        v16 = (void (__fastcall **)(__int64 *, _QWORD))sub_B170AC(v14, v19);
-        (*v16)(v18, v16);
+        v18 = (void (__fastcall **)(__int64 *, _QWORD))sub_B2C40C(v16, v21);
+        (*v18)(v20, v18);
       }
       else
       {
-        v8 = *(unsigned __int16 *)(v19 + 72);
-        if ( (v22 & 1) != 0 )
+        v9 = *(unsigned __int16 *)(v21 + 72);
+        if ( (v24 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v19);
-          v10 = *v18;
-          if ( *(_WORD *)(*v18 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v21);
+          v12 = *v20;
+          if ( *(_WORD *)(*v20 + 298) )
           {
-            v11 = 0LL;
-            v12 = (_DWORD *)(*(_QWORD *)(v10 + 176) + 8LL);
-            while ( *((_QWORD *)v12 - 1) != class_0 )
+            v13 = 0LL;
+            v14 = (_DWORD *)(*(_QWORD *)(v12 + 176) + 8LL);
+            while ( *((_QWORD *)v14 - 1) != class_0 )
             {
-              ++v11;
-              v12 += 4;
-              if ( v11 >= *(unsigned __int16 *)(*v18 + 298) )
+              ++v13;
+              v14 += 4;
+              if ( v13 >= *(unsigned __int16 *)(*v20 + 298) )
                 goto LABEL_11;
             }
-            v13 = v10 + 16LL * (int)(*v12 + v8) + 312;
+            v15 = v12 + 16LL * (int)(*v14 + v9) + 312;
           }
           else
           {
 LABEL_11:
-            v13 = sub_AAFEF8(v18, class_0, v8);
+            v15 = sub_AC5258(v20, class_0, v9, v11);
           }
-          (*(void (__fastcall **)(__int64 *, _QWORD))v13)(v18, *(_QWORD *)(v13 + 8));
+          (*(void (__fastcall **)(__int64 *, _QWORD))v15)(v20, *(_QWORD *)(v15 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, _QWORD))(*v18 + 16LL * *(unsigned __int16 *)(v19 + 72) + 312))(
-            v18,
-            *(_QWORD *)(*v18 + 16LL * *(unsigned __int16 *)(v19 + 72) + 320));
+          (*(void (__fastcall **)(__int64 *, _QWORD))(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 312))(
+            v20,
+            *(_QWORD *)(*v20 + 16LL * *(unsigned __int16 *)(v21 + 72) + 320));
         }
       }
       goto LABEL_36;
     }
 LABEL_35:
-    ((void (__fastcall *)(__int64 *, __int64))v20)(v18, v19);
+    ((void (__fastcall *)(__int64 *, __int64))v22)(v20, v21);
     goto LABEL_36;
   }
 }

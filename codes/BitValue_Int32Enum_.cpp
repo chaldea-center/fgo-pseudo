@@ -1,11 +1,11 @@
-bool __fastcall BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const MethodInfo_2902444 *method)
+bool __fastcall BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const MethodInfo_2A021E4 *method)
 {
-  const MethodInfo_2902444 *v3; // x21
+  const MethodInfo_2A021E4 *v3; // x21
   char v6; // w0
   BitValue_T__c *klass; // x8
 
   if ( !this )
-    sub_B170D4();
+    sub_B2C434(0LL, val);
   v3 = method;
   v6 = ((__int64 (*)(void))method->klass->rgctx_data->_1_BitValue_T__Check->methodPointer)();
   klass = v3->klass;
@@ -17,14 +17,14 @@ bool __fastcall BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t va
 }
 
 
-void __fastcall BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo_29023B4 *method)
+void __fastcall BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo_2A02154 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x0
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_B170D4();
+    sub_B2C434(0LL, val);
   value = this->fields.value;
   this->fields.value = value & ~((__int64 (__fastcall *)(struct System_Func_T__int__o *, int32_t))method->klass->rgctx_data->_0_System_Func_T__int__Invoke->methodPointer)(
                                   convertFunc,
@@ -32,7 +32,7 @@ void __fastcall BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const
 }
 
 
-void __fastcall BitValue_Int32Enum___Reset(BitValue_T__o *this, const MethodInfo_29024B0 *method)
+void __fastcall BitValue_Int32Enum___Reset(BitValue_T__o *this, const MethodInfo_2A02250 *method)
 {
   this->fields.value = 0;
 }

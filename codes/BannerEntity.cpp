@@ -1,13 +1,13 @@
 void __fastcall BannerEntity___ctor(BannerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F6EE4 & 1) == 0 )
+  if ( (byte_41849E9 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_int___ctor__, method);
-    byte_40F6EE4 = 1;
+    sub_B2C35C(&Method_DataEntityBase_int___ctor__, method);
+    byte_41849E9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_266F234 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_24E3F7C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,21 +21,22 @@ int32_t __fastcall BannerEntity__GetBannerId(BannerEntity_o *this, const MethodI
 {
   __int64 v3; // x1
   BannerAddMaster_o *Master_WarQuestSelectionMaster; // x0
-  const MethodInfo *v5; // x3
+  __int64 v5; // x1
+  const MethodInfo *v6; // x3
   int32_t result; // w0
 
-  if ( (byte_40F6EE2 & 1) == 0 )
+  if ( (byte_41849E7 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMaster_BannerAddMaster___, method);
-    sub_B16FFC(&DataManager_TypeInfo, v3);
-    byte_40F6EE2 = 1;
+    sub_B2C35C(&Method_DataManager_GetMaster_BannerAddMaster___, method);
+    sub_B2C35C(&DataManager_TypeInfo, v3);
+    byte_41849E7 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (BannerAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_BannerAddMaster___);
+  Master_WarQuestSelectionMaster = (BannerAddMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_BannerAddMaster___);
   if ( !Master_WarQuestSelectionMaster )
-    sub_B170D4();
-  result = BannerAddMaster__getOverwriteBannerId(Master_WarQuestSelectionMaster, this->fields.bannerId, 1, v5);
+    sub_B2C434(0LL, v5);
+  result = BannerAddMaster__getOverwriteBannerId(Master_WarQuestSelectionMaster, this->fields.bannerId, 1, v6);
   if ( result == -1 )
     return this->fields.bannerId;
   return result;
@@ -56,26 +57,28 @@ System_String_array *__fastcall BannerEntity__GetLinkBody(
 {
   System_String_o *linkBody; // x20
   System_Char_array *v6; // x0
-  __int64 v7; // x2
+  System_Char_array *v7; // x1
+  __int64 v9; // x0
 
-  if ( (byte_40F6EE3 & 1) == 0 )
+  if ( (byte_41849E8 & 1) == 0 )
   {
-    sub_B16FFC(&char___TypeInfo, separator);
-    byte_40F6EE3 = 1;
+    sub_B2C35C(&char___TypeInfo, separator);
+    byte_41849E8 = 1;
   }
   linkBody = this->fields.linkBody;
-  v6 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, method);
+  v6 = (System_Char_array *)sub_B2C374(char___TypeInfo, 1LL);
   if ( !v6 )
     goto LABEL_7;
+  v7 = v6;
   if ( !v6->max_length )
   {
-    sub_B17100(v6, v6, v7);
-    sub_B170A0();
+    v9 = sub_B2C460(v6);
+    sub_B2C400(v9, 0LL);
   }
   v6->m_Items[2] = separator;
   if ( !linkBody )
 LABEL_7:
-    sub_B170D4();
+    sub_B2C434(v6, v7);
   return System_String__Split(linkBody, v6, 0LL);
 }
 
@@ -84,10 +87,10 @@ bool __fastcall BannerEntity__IsEnable(BannerEntity_o *this, const MethodInfo *m
 {
   int64_t Time; // x0
 
-  if ( (byte_40F6EE1 & 1) == 0 )
+  if ( (byte_41849E6 & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, method);
-    byte_40F6EE1 = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, method);
+    byte_41849E6 = 1;
   }
   if ( this->fields.bannerId < 1 || this->fields.terminalBannerPriority < 1 || this->fields.deviceType > 1u )
     return 0;

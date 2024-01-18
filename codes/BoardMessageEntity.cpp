@@ -1,28 +1,28 @@
 void __fastcall BoardMessageEntity___ctor(BoardMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FB0BC & 1) == 0 )
+  if ( (byte_4187D8D & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FB0BC = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4187D8D = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall BoardMessageEntity__CreatePK(int32_t id, int32_t warId, const MethodInfo *method)
 {
-  if ( (byte_40FB0BB & 1) == 0 )
+  if ( (byte_4187D8C & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&warId);
-    byte_40FB0BB = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&warId);
+    byte_4187D8C = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            warId,
-           (const MethodInfo_18C21A0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -56,6 +56,7 @@ BoardMessageEntity_TimeData_o *__fastcall BoardMessageEntity__GetScriptDataCondC
   int64_t v9; // x14
   _BOOL4 v10; // w15
   _BOOL4 v11; // w16
+  __int64 v13; // x0
 
   script = this->fields.script;
   if ( !script )
@@ -76,7 +77,7 @@ BoardMessageEntity_TimeData_o *__fastcall BoardMessageEntity__GetScriptDataCondC
     {
       v8 = script->m_Items[v5];
       if ( !v8 )
-        sub_B170D4();
+        sub_B2C434(this, nowTime);
       v9 = nowTime - v8->fields.startTime;
       v10 = v9 >= 0;
       v11 = v9 < v7;
@@ -90,8 +91,8 @@ BoardMessageEntity_TimeData_o *__fastcall BoardMessageEntity__GetScriptDataCondC
   }
   if ( v6 >= (unsigned int)v4 )
   {
-    sub_B17100(this, nowTime, method);
-    sub_B170A0();
+    v13 = sub_B2C460(this);
+    sub_B2C400(v13, 0LL);
   }
   return script->m_Items[v6];
 }

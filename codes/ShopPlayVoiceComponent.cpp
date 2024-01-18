@@ -50,11 +50,11 @@ void __fastcall ShopPlayVoiceComponent__EndLoadVoice(
   System_String_o *VoiceFromMaster; // x1
   const MethodInfo *v36; // x2
 
-  if ( (byte_40FB776 & 1) == 0 )
+  if ( (byte_41891B2 & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, *(_QWORD *)&state);
-    sub_B16FFC(&StringLiteral_12144/*"SHOP_SCENE_VOICE_WELCOME"*/, v12);
-    byte_40FB776 = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, *(_QWORD *)&state);
+    sub_B2C35C(&StringLiteral_12197/*"SHOP_SCENE_VOICE_WELCOME"*/, v12);
+    byte_41891B2 = 1;
   }
   p_voiceData = &this->fields.voiceData;
   voiceData = this->fields.voiceData;
@@ -67,13 +67,13 @@ void __fastcall ShopPlayVoiceComponent__EndLoadVoice(
     }
     SoundManager__releaseAudioAssetStorage(voiceData, 0LL);
     *p_voiceData = 0LL;
-    sub_B16F98((BattleServantConfConponent_o *)&this->fields.voiceData, 0LL, v15, v16, v17, v18, v19, v20);
+    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.voiceData, 0LL, v15, v16, v17, v18, v19, v20);
   }
   requestVoiceData = (System_Int32_array **)this->fields.requestVoiceData;
   if ( requestVoiceData )
   {
     *p_voiceData = (struct System_String_o *)requestVoiceData;
-    sub_B16F98(
+    sub_B2C2F8(
       (BattleServantConfConponent_o *)&this->fields.voiceData,
       requestVoiceData,
       (System_String_array **)isOverridePlayVoice,
@@ -83,7 +83,7 @@ void __fastcall ShopPlayVoiceComponent__EndLoadVoice(
       v6,
       v7);
     this->fields.requestVoiceData = 0LL;
-    sub_B16F98((BattleServantConfConponent_o *)&this->fields.requestVoiceData, 0LL, v22, v23, v24, v25, v26, v27);
+    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.requestVoiceData, 0LL, v22, v23, v24, v25, v26, v27);
     if ( isOverridePlayVoice )
     {
       BackVoiceMasterKey = ShopPlayVoiceConstants__GetBackVoiceMasterKey(playVoiceState, v29);
@@ -92,7 +92,7 @@ void __fastcall ShopPlayVoiceComponent__EndLoadVoice(
     }
     else if ( state != 9 )
     {
-      VoiceFromMaster = ShopPlayVoiceComponent__GetVoiceFromMaster(v28, (System_String_o *)StringLiteral_12144/*"SHOP_SCENE_VOICE_WELCOME"*/, v30);
+      VoiceFromMaster = ShopPlayVoiceComponent__GetVoiceFromMaster(v28, (System_String_o *)StringLiteral_12197/*"SHOP_SCENE_VOICE_WELCOME"*/, v30);
       ShopPlayVoiceComponent__PlayVoice(this, VoiceFromMaster, v36);
     }
   }
@@ -105,24 +105,24 @@ System_String_o *__fastcall ShopPlayVoiceComponent__GetVoiceFromMaster(
         const MethodInfo *method)
 {
   __int64 v4; // x1
-  WebViewManager_o *Instance; // x0
-  ConstantStrMaster_o *MasterData_WarQuestSelectionMaster; // x0
+  DataManager_o *Instance; // x0
+  __int64 v6; // x1
 
-  if ( (byte_40FB775 & 1) == 0 )
+  if ( (byte_41891B1 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_ConstantStrMaster___, masterKey);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_40FB775 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_ConstantStrMaster___, masterKey);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_41891B1 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (MasterData_WarQuestSelectionMaster = (ConstantStrMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                      (DataManager_o *)Instance,
-                                                                      (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
+    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                      Instance,
+                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
   {
-    sub_B170D4();
+    sub_B2C434(Instance, v6);
   }
-  return ConstantStrMaster__GetRandomVoice(MasterData_WarQuestSelectionMaster, masterKey, 0LL);
+  return ConstantStrMaster__GetRandomVoice((ConstantStrMaster_o *)Instance, masterKey, 0LL);
 }
 
 
@@ -135,82 +135,79 @@ void __fastcall ShopPlayVoiceComponent__InitPlayVoice(ShopPlayVoiceComponent_o *
 
 void __fastcall ShopPlayVoiceComponent__InvokedPlayVoiceList(ShopPlayVoiceComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  ShopPlayVoiceComponent_o *v3; // x19
+  ShopPlayVoiceComponent_o *v2; // x19
+  __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x1
   struct ServantVoiceData_array *voicePlayingList; // x8
   __int64 voicePlayingcnt; // x9
-  ServantVoiceData_o *v8; // x0
-  int32_t face; // w20
+  int32_t standFigureBack_high; // w20
   float FadeTime; // s0
-  StandFigureBack_o *standFigureBack; // x0
-  __int64 v12; // x3
-  __int64 v13; // x4
-  struct ServantVoiceData_array *v14; // x8
-  __int64 v15; // x9
-  ServantVoiceData_o *v16; // x8
+  struct ServantVoiceData_array *v9; // x8
+  __int64 v10; // x9
+  ServantVoiceData_o *v11; // x8
   System_String_o *voiceData; // x20
   System_String_o *id; // x21
-  SoundManager_c *v19; // x0
+  SoundManager_c *v14; // x0
   float DEFAULT_VOLUME; // s8
-  System_Action_o *v21; // x22
-  System_Int32_array **v22; // x1
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
+  System_Action_o *v16; // x22
+  System_Int32_array **v17; // x1
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
+  __int64 v24; // x0
 
-  v3 = this;
-  if ( (byte_40FB773 & 1) == 0 )
+  v2 = this;
+  if ( (byte_41891AF & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, method);
-    sub_B16FFC(&Method_ShopPlayVoiceComponent_PlayVoiceList__, v4);
-    this = (ShopPlayVoiceComponent_o *)sub_B16FFC(&SoundManager_TypeInfo, v5);
-    byte_40FB773 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, method);
+    sub_B2C35C(&Method_ShopPlayVoiceComponent_PlayVoiceList__, v3);
+    this = (ShopPlayVoiceComponent_o *)sub_B2C35C(&SoundManager_TypeInfo, v4);
+    byte_41891AF = 1;
   }
-  voicePlayingList = v3->fields.voicePlayingList;
+  voicePlayingList = v2->fields.voicePlayingList;
   if ( !voicePlayingList )
     goto LABEL_14;
-  voicePlayingcnt = v3->fields.voicePlayingcnt;
+  voicePlayingcnt = v2->fields.voicePlayingcnt;
   if ( (unsigned int)voicePlayingcnt >= voicePlayingList->max_length )
     goto LABEL_15;
-  v8 = voicePlayingList->m_Items[voicePlayingcnt];
-  if ( !v8
-    || (face = v8->fields.face,
-        FadeTime = ServantVoiceData__GetFadeTime(v8, 0LL),
-        (standFigureBack = v3->fields.standFigureBack) == 0LL)
-    || (StandFigureBack__SetFaceType(standFigureBack, face, FadeTime, 0, 0LL), (v14 = v3->fields.voicePlayingList) == 0LL) )
+  this = (ShopPlayVoiceComponent_o *)voicePlayingList->m_Items[voicePlayingcnt];
+  if ( !this
+    || (standFigureBack_high = HIDWORD(this->fields.standFigureBack),
+        FadeTime = ServantVoiceData__GetFadeTime((ServantVoiceData_o *)this, 0LL),
+        (this = (ShopPlayVoiceComponent_o *)v2->fields.standFigureBack) == 0LL)
+    || (StandFigureBack__SetFaceType((StandFigureBack_o *)this, standFigureBack_high, FadeTime, 0, 0LL),
+        (v9 = v2->fields.voicePlayingList) == 0LL) )
   {
 LABEL_14:
-    sub_B170D4();
+    sub_B2C434(this, method);
   }
-  v15 = v3->fields.voicePlayingcnt;
-  if ( (unsigned int)v15 >= v14->max_length )
+  v10 = v2->fields.voicePlayingcnt;
+  if ( (unsigned int)v10 >= v9->max_length )
   {
 LABEL_15:
-    sub_B17100(this, method, v2);
-    sub_B170A0();
+    v24 = sub_B2C460(this);
+    sub_B2C400(v24, 0LL);
   }
-  v16 = v14->m_Items[v15];
-  if ( !v16 )
+  v11 = v9->m_Items[v10];
+  if ( !v11 )
     goto LABEL_14;
-  voiceData = v3->fields.voiceData;
-  id = v16->fields.id;
-  v19 = SoundManager_TypeInfo;
+  voiceData = v2->fields.voiceData;
+  id = v11->fields.id;
+  v14 = SoundManager_TypeInfo;
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    v19 = SoundManager_TypeInfo;
+    v14 = SoundManager_TypeInfo;
   }
-  DEFAULT_VOLUME = v19->static_fields->DEFAULT_VOLUME;
-  v21 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, method, v2, v12, v13);
-  System_Action___ctor(v21, (Il2CppObject *)v3, Method_ShopPlayVoiceComponent_PlayVoiceList__, 0LL);
-  v22 = (System_Int32_array **)SoundManager__playVoice_24824004(voiceData, id, DEFAULT_VOLUME, v21, 0LL);
-  v3->fields.voicePlayer = (struct SePlayer_o *)v22;
-  sub_B16F98((BattleServantConfConponent_o *)&v3->fields.voicePlayer, v22, v23, v24, v25, v26, v27, v28);
+  DEFAULT_VOLUME = v14->static_fields->DEFAULT_VOLUME;
+  v16 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  System_Action___ctor(v16, (Il2CppObject *)v2, Method_ShopPlayVoiceComponent_PlayVoiceList__, 0LL);
+  v17 = (System_Int32_array **)SoundManager__playVoice_24786800(voiceData, id, DEFAULT_VOLUME, v16, 0LL);
+  v2->fields.voicePlayer = (struct SePlayer_o *)v17;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v2->fields.voicePlayer, v17, v18, v19, v20, v21, v22, v23);
 }
 
 
@@ -229,74 +226,67 @@ void __fastcall ShopPlayVoiceComponent__LoadVoice(
   __int64 v14; // x1
   __int64 v15; // x1
   __int64 v16; // x22
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
+  __int64 v17; // x0
+  __int64 v18; // x1
+  System_String_array **v19; // x2
+  System_String_array **v20; // x3
+  System_Boolean_array **v21; // x4
+  System_Int32_array **v22; // x5
+  System_Int32_array *v23; // x6
+  System_Int32_array *v24; // x7
   struct System_String_o **p_requestVoiceData; // x20
-  Il2CppObject *v24; // x0
-  System_Int32_array **v25; // x0
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  __int64 v32; // x1
-  __int64 v33; // x2
-  __int64 v34; // x3
-  __int64 v35; // x4
-  System_Action_o *v36; // x19
-  System_String_o *v37; // x20
-  int32_t v38; // [xsp+Ch] [xbp-34h] BYREF
+  Il2CppObject *v26; // x0
+  System_Int32_array **v27; // x0
+  System_String_array **v28; // x2
+  System_String_array **v29; // x3
+  System_Boolean_array **v30; // x4
+  System_Int32_array **v31; // x5
+  System_Int32_array *v32; // x6
+  System_Int32_array *v33; // x7
+  System_Action_o *v34; // x19
+  System_String_o *v35; // x20
+  int32_t v36; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_40FB76E & 1) == 0 )
+  if ( (byte_41891AA & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, *(_QWORD *)&figureSvtId);
-    sub_B16FFC(&int_TypeInfo, v11);
-    sub_B16FFC(&SoundManager_TypeInfo, v12);
-    sub_B16FFC(&Method_ShopPlayVoiceComponent___c__DisplayClass14_0__LoadVoice_b__0__, v13);
-    sub_B16FFC(&ShopPlayVoiceComponent___c__DisplayClass14_0_TypeInfo, v14);
-    sub_B16FFC(&StringLiteral_3947/*"ChrVoice_"*/, v15);
-    byte_40FB76E = 1;
+    sub_B2C35C(&System_Action_TypeInfo, *(_QWORD *)&figureSvtId);
+    sub_B2C35C(&int_TypeInfo, v11);
+    sub_B2C35C(&SoundManager_TypeInfo, v12);
+    sub_B2C35C(&Method_ShopPlayVoiceComponent___c__DisplayClass14_0__LoadVoice_b__0__, v13);
+    sub_B2C35C(&ShopPlayVoiceComponent___c__DisplayClass14_0_TypeInfo, v14);
+    sub_B2C35C(&StringLiteral_3963/*"ChrVoice_"*/, v15);
+    byte_41891AA = 1;
   }
-  v16 = sub_B170CC(
-          ShopPlayVoiceComponent___c__DisplayClass14_0_TypeInfo,
-          *(_QWORD *)&figureSvtId,
-          *(_QWORD *)&state,
-          isOverridePlayVoice,
-          *(_QWORD *)&playVoiceState);
+  v16 = sub_B2C42C(ShopPlayVoiceComponent___c__DisplayClass14_0_TypeInfo);
   ShopPlayVoiceComponent___c__DisplayClass14_0___ctor((ShopPlayVoiceComponent___c__DisplayClass14_0_o *)v16, 0LL);
   if ( !v16 )
-    sub_B170D4();
+    sub_B2C434(v17, v18);
   *(_QWORD *)(v16 + 16) = this;
-  sub_B16F98((BattleServantConfConponent_o *)(v16 + 16), (System_Int32_array **)this, v17, v18, v19, v20, v21, v22);
+  sub_B2C2F8((BattleServantConfConponent_o *)(v16 + 16), (System_Int32_array **)this, v19, v20, v21, v22, v23, v24);
   *(_DWORD *)(v16 + 24) = state;
   *(_BYTE *)(v16 + 28) = isOverridePlayVoice;
   *(_DWORD *)(v16 + 32) = playVoiceState;
   p_requestVoiceData = &this->fields.requestVoiceData;
   if ( !this->fields.requestVoiceData && !this->fields.voiceData )
   {
-    v38 = figureSvtId;
-    v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v38);
-    v25 = (System_Int32_array **)System_String__Concat((Il2CppObject *)StringLiteral_3947/*"ChrVoice_"*/, v24, 0LL);
-    *p_requestVoiceData = (struct System_String_o *)v25;
-    sub_B16F98((BattleServantConfConponent_o *)&this->fields.requestVoiceData, v25, v26, v27, v28, v29, v30, v31);
-    v36 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v32, v33, v34, v35);
+    v36 = figureSvtId;
+    v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v36);
+    v27 = (System_Int32_array **)System_String__Concat((Il2CppObject *)StringLiteral_3963/*"ChrVoice_"*/, v26, 0LL);
+    *p_requestVoiceData = (struct System_String_o *)v27;
+    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.requestVoiceData, v27, v28, v29, v30, v31, v32, v33);
+    v34 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
     System_Action___ctor(
-      v36,
+      v34,
       (Il2CppObject *)v16,
       Method_ShopPlayVoiceComponent___c__DisplayClass14_0__LoadVoice_b__0__,
       0LL);
-    v37 = *p_requestVoiceData;
+    v35 = *p_requestVoiceData;
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     }
-    SoundManager__loadAudioAssetStorage(v37, v36, 1, 0LL);
+    SoundManager__loadAudioAssetStorage(v35, v34, 1, 0LL);
   }
 }
 
@@ -313,11 +303,11 @@ void __fastcall ShopPlayVoiceComponent__PlayVoice(
   const MethodInfo *v9; // x1
   int32_t figureServantId; // w0
   int32_t SvtVoiceId; // w21
-  WebViewManager_o *Instance; // x0
+  DataManager_o *Instance; // x0
+  __int64 v13; // x1
   WarQuestSelectionMaster_o *MasterData_WarQuestSelectionMaster; // x0
   int32_t figureServantLimitCount; // w22
-  ServantVoiceMaster_o *v15; // x23
-  System_String_o *v16; // x0
+  ServantVoiceMaster_o *v16; // x23
   System_Collections_Generic_List_ServantVoiceData____o *EntityShopCombine; // x0
   System_String_array **v18; // x2
   System_String_array **v19; // x3
@@ -328,14 +318,14 @@ void __fastcall ShopPlayVoiceComponent__PlayVoice(
   struct ServantVoiceData_array *v24; // x1
   const MethodInfo *v25; // x1
 
-  if ( (byte_40FB771 & 1) == 0 )
+  if ( (byte_41891AD & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_ServantVoiceMaster___, name);
-    sub_B16FFC(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v5);
-    sub_B16FFC(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v6);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B16FFC(&StringLiteral_983/*"0_"*/, v8);
-    byte_40FB771 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_ServantVoiceMaster___, name);
+    sub_B2C35C(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v5);
+    sub_B2C35C(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v6);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_B2C35C(&StringLiteral_985/*"0_"*/, v8);
+    byte_41891AD = 1;
   }
   if ( !System_String__IsNullOrEmpty(name, 0LL) && this->fields.voiceData )
   {
@@ -343,25 +333,31 @@ void __fastcall ShopPlayVoiceComponent__PlayVoice(
     figureServantId = this->fields.figureServantId;
     this->fields.isPlayingVoice = 1;
     SvtVoiceId = ServantVoiceMaster__getSvtVoiceId(figureServantId, 0LL);
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                 (DataManager_o *)Instance,
-                                                 (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ServantVoiceMaster___),
+                                                 Instance,
+                                                 (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ServantVoiceMaster___),
           figureServantLimitCount = this->fields.figureServantLimitCount,
-          v15 = (ServantVoiceMaster_o *)MasterData_WarQuestSelectionMaster,
-          v16 = System_String__Concat_43743732((System_String_o *)StringLiteral_983/*"0_"*/, name, 0LL),
-          !v15) )
+          v16 = (ServantVoiceMaster_o *)MasterData_WarQuestSelectionMaster,
+          Instance = (DataManager_o *)System_String__Concat_44305532((System_String_o *)StringLiteral_985/*"0_"*/, name, 0LL),
+          !v16) )
     {
-      sub_B170D4();
+      sub_B2C434(Instance, v13);
     }
-    EntityShopCombine = ServantVoiceMaster__getEntityShopCombine(v15, 15, SvtVoiceId, figureServantLimitCount, v16, 0LL);
+    EntityShopCombine = ServantVoiceMaster__getEntityShopCombine(
+                          v16,
+                          15,
+                          SvtVoiceId,
+                          figureServantLimitCount,
+                          (System_String_o *)Instance,
+                          0LL);
     if ( EntityShopCombine && EntityShopCombine->fields._size >= 1 )
       v24 = EntityShopCombine->fields._items->m_Items[0];
     else
       v24 = 0LL;
     this->fields.voicePlayingList = v24;
-    sub_B16F98(
+    sub_B2C2F8(
       (BattleServantConfConponent_o *)&this->fields.voicePlayingList,
       (System_Int32_array **)v24,
       v18,
@@ -391,69 +387,68 @@ void __fastcall ShopPlayVoiceComponent__PlayVoiceFromMaster(
 
 void __fastcall ShopPlayVoiceComponent__PlayVoiceList(ShopPlayVoiceComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  ShopPlayVoiceComponent_o *v3; // x19
+  ShopPlayVoiceComponent_o *v2; // x19
   struct ServantVoiceData_array *voicePlayingList; // x8
-  int v5; // w9
+  int v4; // w9
   int max_length; // w10
-  ServantVoiceData_o *v7; // x8
-  StandFigureBack_o *standFigureBack; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
+  ServantVoiceData_o *v6; // x8
+  System_String_array **v7; // x2
+  System_String_array **v8; // x3
+  System_Boolean_array **v9; // x4
+  System_Int32_array **v10; // x5
+  System_Int32_array *v11; // x6
+  System_Int32_array *v12; // x7
   BattleServantConfConponent_o *p_voicePlayer; // x19
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
+  __int64 v20; // x0
 
-  v3 = this;
-  if ( (byte_40FB772 & 1) == 0 )
+  v2 = this;
+  if ( (byte_41891AE & 1) == 0 )
   {
-    this = (ShopPlayVoiceComponent_o *)sub_B16FFC(&StringLiteral_8050/*"InvokedPlayVoiceList"*/, method);
-    byte_40FB772 = 1;
+    this = (ShopPlayVoiceComponent_o *)sub_B2C35C(&StringLiteral_8079/*"InvokedPlayVoiceList"*/, method);
+    byte_41891AE = 1;
   }
-  voicePlayingList = v3->fields.voicePlayingList;
-  v5 = v3->fields.voicePlayingcnt + 1;
-  v3->fields.voicePlayingcnt = v5;
+  voicePlayingList = v2->fields.voicePlayingList;
+  v4 = v2->fields.voicePlayingcnt + 1;
+  v2->fields.voicePlayingcnt = v4;
   if ( voicePlayingList )
   {
     max_length = voicePlayingList->max_length;
-    if ( v5 < max_length )
+    if ( v4 < max_length )
     {
-      if ( v5 >= (unsigned int)max_length )
+      if ( v4 >= (unsigned int)max_length )
       {
-        sub_B17100(this, method, v2);
-        sub_B170A0();
+        v20 = sub_B2C460(this);
+        sub_B2C400(v20, 0LL);
       }
-      v7 = voicePlayingList->m_Items[v5];
-      if ( v7 )
+      v6 = voicePlayingList->m_Items[v4];
+      if ( v6 )
       {
         UnityEngine_MonoBehaviour__Invoke(
-          (UnityEngine_MonoBehaviour_o *)v3,
-          (System_String_o *)StringLiteral_8050/*"InvokedPlayVoiceList"*/,
-          v7->fields.delay,
+          (UnityEngine_MonoBehaviour_o *)v2,
+          (System_String_o *)StringLiteral_8079/*"InvokedPlayVoiceList"*/,
+          v6->fields.delay,
           0LL);
         return;
       }
 LABEL_10:
-      sub_B170D4();
+      sub_B2C434(this, method);
     }
   }
-  standFigureBack = v3->fields.standFigureBack;
-  if ( !standFigureBack )
+  this = (ShopPlayVoiceComponent_o *)v2->fields.standFigureBack;
+  if ( !this )
     goto LABEL_10;
-  StandFigureBack__SetFaceType(standFigureBack, v3->fields.defaultFaceType, 0.0, 0, 0LL);
-  v3->fields.voicePlayingList = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&v3->fields.voicePlayingList, 0LL, v9, v10, v11, v12, v13, v14);
-  v3->fields.voicePlayer = 0LL;
-  p_voicePlayer = (BattleServantConfConponent_o *)&v3->fields.voicePlayer;
-  sub_B16F98(p_voicePlayer, 0LL, v16, v17, v18, v19, v20, v21);
+  StandFigureBack__SetFaceType((StandFigureBack_o *)this, v2->fields.defaultFaceType, 0.0, 0, 0LL);
+  v2->fields.voicePlayingList = 0LL;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v2->fields.voicePlayingList, 0LL, v7, v8, v9, v10, v11, v12);
+  v2->fields.voicePlayer = 0LL;
+  p_voicePlayer = (BattleServantConfConponent_o *)&v2->fields.voicePlayer;
+  sub_B2C2F8(p_voicePlayer, 0LL, v14, v15, v16, v17, v18, v19);
   p_voicePlayer[-1].fields.isEquip = 0;
 }
 
@@ -471,10 +466,10 @@ bool __fastcall ShopPlayVoiceComponent__PlayVoiceOnce(
   System_String_o *VoiceFromMaster; // x0
   const MethodInfo *v12; // x2
 
-  if ( (byte_40FB770 & 1) == 0 )
+  if ( (byte_41891AC & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1/*""*/, name);
-    byte_40FB770 = 1;
+    sub_B2C35C(&StringLiteral_1/*""*/, name);
+    byte_41891AC = 1;
   }
   if ( System_String__op_Equality(name, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
     return 0;
@@ -508,13 +503,13 @@ void __fastcall ShopPlayVoiceComponent__QuitShopVoice(ShopPlayVoiceComponent_o *
   System_Int32_array *v17; // x6
   System_Int32_array *v18; // x7
 
-  if ( (byte_40FB76D & 1) == 0 )
+  if ( (byte_41891A9 & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    byte_40FB76D = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    byte_41891A9 = 1;
   }
   this->fields.requestVoiceData = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.requestVoiceData, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.requestVoiceData, 0LL, v2, v3, v4, v5, v6, v7);
   ShopPlayVoiceComponent__StopVoice(this, v9);
   voiceData = this->fields.voiceData;
   p_voiceData = (BattleServantConfConponent_o *)&this->fields.voiceData;
@@ -528,12 +523,11 @@ void __fastcall ShopPlayVoiceComponent__QuitShopVoice(ShopPlayVoiceComponent_o *
     }
     SoundManager__releaseAudioAssetStorage(v11, 0LL);
     p_voiceData->klass = 0LL;
-    sub_B16F98(p_voiceData, 0LL, v13, v14, v15, v16, v17, v18);
+    sub_B2C2F8(p_voiceData, 0LL, v13, v14, v15, v16, v17, v18);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ShopPlayVoiceComponent__ReloadVoice(
         ShopPlayVoiceComponent_o *this,
         StandFigureBack_o *standFigureBack,
@@ -549,64 +543,57 @@ void __fastcall ShopPlayVoiceComponent__ReloadVoice(
   __int64 v16; // x1
   __int64 v17; // x1
   __int64 v18; // x23
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
+  __int64 v19; // x0
+  __int64 v20; // x1
+  System_String_array **v21; // x2
+  System_String_array **v22; // x3
+  System_Boolean_array **v23; // x4
+  System_Int32_array **v24; // x5
+  System_Int32_array *v25; // x6
+  System_Int32_array *v26; // x7
+  System_String_array **v27; // x2
+  System_String_array **v28; // x3
+  System_Boolean_array **v29; // x4
+  System_Int32_array **v30; // x5
+  System_Int32_array *v31; // x6
+  System_Int32_array *v32; // x7
+  System_String_array **v33; // x2
+  System_String_array **v34; // x3
+  System_Boolean_array **v35; // x4
+  System_Int32_array **v36; // x5
+  System_Int32_array *v37; // x6
+  System_Int32_array *v38; // x7
   struct StandFigureBack_o **p_standFigureBack; // x19
-  Il2CppObject *v38; // x0
-  System_Int32_array **v39; // x0
-  System_String_array **v40; // x2
-  System_String_array **v41; // x3
-  System_Boolean_array **v42; // x4
-  System_Int32_array **v43; // x5
-  System_Int32_array *v44; // x6
-  System_Int32_array *v45; // x7
-  System_String_o *v46; // x19
-  __int64 v47; // x1
-  __int64 v48; // x2
-  __int64 v49; // x3
-  __int64 v50; // x4
-  System_Action_o *v51; // x20
-  int32_t v52; // [xsp+Ch] [xbp-44h] BYREF
+  Il2CppObject *v40; // x0
+  System_Int32_array **v41; // x0
+  System_String_array **v42; // x2
+  System_String_array **v43; // x3
+  System_Boolean_array **v44; // x4
+  System_Int32_array **v45; // x5
+  System_Int32_array *v46; // x6
+  System_Int32_array *v47; // x7
+  System_String_o *v48; // x19
+  System_Action_o *v49; // x20
+  int32_t v50; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_40FB76F & 1) == 0 )
+  if ( (byte_41891AB & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, standFigureBack);
-    sub_B16FFC(&int_TypeInfo, v13);
-    sub_B16FFC(&SoundManager_TypeInfo, v14);
-    sub_B16FFC(&Method_ShopPlayVoiceComponent___c__DisplayClass15_0__ReloadVoice_b__0__, v15);
-    sub_B16FFC(&ShopPlayVoiceComponent___c__DisplayClass15_0_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_3947/*"ChrVoice_"*/, v17);
-    byte_40FB76F = 1;
+    sub_B2C35C(&System_Action_TypeInfo, standFigureBack);
+    sub_B2C35C(&int_TypeInfo, v13);
+    sub_B2C35C(&SoundManager_TypeInfo, v14);
+    sub_B2C35C(&Method_ShopPlayVoiceComponent___c__DisplayClass15_0__ReloadVoice_b__0__, v15);
+    sub_B2C35C(&ShopPlayVoiceComponent___c__DisplayClass15_0_TypeInfo, v16);
+    sub_B2C35C(&StringLiteral_3963/*"ChrVoice_"*/, v17);
+    byte_41891AB = 1;
   }
-  v18 = sub_B170CC(
-          ShopPlayVoiceComponent___c__DisplayClass15_0_TypeInfo,
-          standFigureBack,
-          *(_QWORD *)&figureServantId,
-          *(_QWORD *)&figureServantLimitCount,
-          *(_QWORD *)&defaultFaceType);
+  v18 = sub_B2C42C(ShopPlayVoiceComponent___c__DisplayClass15_0_TypeInfo);
   ShopPlayVoiceComponent___c__DisplayClass15_0___ctor((ShopPlayVoiceComponent___c__DisplayClass15_0_o *)v18, 0LL);
   if ( !v18 )
-    sub_B170D4();
+    sub_B2C434(v19, v20);
   *(_QWORD *)(v18 + 16) = this;
-  sub_B16F98((BattleServantConfConponent_o *)(v18 + 16), (System_Int32_array **)this, v19, v20, v21, v22, v23, v24);
+  sub_B2C2F8((BattleServantConfConponent_o *)(v18 + 16), (System_Int32_array **)this, v21, v22, v23, v24, v25, v26);
   *(_QWORD *)(v18 + 24) = endReload;
-  sub_B16F98((BattleServantConfConponent_o *)(v18 + 24), (System_Int32_array **)endReload, v25, v26, v27, v28, v29, v30);
+  sub_B2C2F8((BattleServantConfConponent_o *)(v18 + 24), (System_Int32_array **)endReload, v27, v28, v29, v30, v31, v32);
   if ( this->fields.figureServantId == figureServantId )
   {
     ActionExtensions__Call(*(System_Action_o **)(v18 + 24), 0LL);
@@ -615,27 +602,27 @@ void __fastcall ShopPlayVoiceComponent__ReloadVoice(
   {
     this->fields.standFigureBack = standFigureBack;
     p_standFigureBack = &this->fields.standFigureBack;
-    sub_B16F98(
+    sub_B2C2F8(
       (BattleServantConfConponent_o *)p_standFigureBack,
       (System_Int32_array **)standFigureBack,
-      v31,
-      v32,
       v33,
       v34,
       v35,
-      v36);
+      v36,
+      v37,
+      v38);
     *((_DWORD *)p_standFigureBack + 2) = figureServantId;
     *((_DWORD *)p_standFigureBack + 3) = figureServantLimitCount;
     *((_DWORD *)p_standFigureBack + 4) = defaultFaceType;
-    v52 = figureServantId;
-    v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-    v39 = (System_Int32_array **)System_String__Concat((Il2CppObject *)StringLiteral_3947/*"ChrVoice_"*/, v38, 0LL);
-    p_standFigureBack[4] = (struct StandFigureBack_o *)v39;
-    sub_B16F98((BattleServantConfConponent_o *)(p_standFigureBack + 4), v39, v40, v41, v42, v43, v44, v45);
-    v46 = (System_String_o *)p_standFigureBack[4];
-    v51 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v47, v48, v49, v50);
+    v50 = figureServantId;
+    v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
+    v41 = (System_Int32_array **)System_String__Concat((Il2CppObject *)StringLiteral_3963/*"ChrVoice_"*/, v40, 0LL);
+    p_standFigureBack[4] = (struct StandFigureBack_o *)v41;
+    sub_B2C2F8((BattleServantConfConponent_o *)(p_standFigureBack + 4), v41, v42, v43, v44, v45, v46, v47);
+    v48 = (System_String_o *)p_standFigureBack[4];
+    v49 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
     System_Action___ctor(
-      v51,
+      v49,
       (Il2CppObject *)v18,
       Method_ShopPlayVoiceComponent___c__DisplayClass15_0__ReloadVoice_b__0__,
       0LL);
@@ -644,7 +631,7 @@ void __fastcall ShopPlayVoiceComponent__ReloadVoice(
     {
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     }
-    SoundManager__loadAudioAssetStorage(v46, v51, 1, 0LL);
+    SoundManager__loadAudioAssetStorage(v48, v49, 1, 0LL);
   }
 }
 
@@ -664,7 +651,7 @@ void __fastcall ShopPlayVoiceComponent__SetPlayVoiceComponent(
 
   this->fields.standFigureBack = standFigureBack;
   p_standFigureBack = &this->fields.standFigureBack;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.standFigureBack,
     (System_Int32_array **)standFigureBack,
     *(System_String_array ***)&figureServantId,
@@ -692,24 +679,23 @@ void __fastcall ShopPlayVoiceComponent__StopVoice(ShopPlayVoiceComponent_o *this
 {
   struct SePlayer_o *voicePlayer; // x8
   StandFigureBack_o *standFigureBack; // x0
-  SePlayer_o *v5; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
 
-  if ( (byte_40FB774 & 1) == 0 )
+  if ( (byte_41891B0 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_8050/*"InvokedPlayVoiceList"*/, method);
-    byte_40FB774 = 1;
+    sub_B2C35C(&StringLiteral_8079/*"InvokedPlayVoiceList"*/, method);
+    byte_41891B0 = 1;
   }
   voicePlayer = this->fields.voicePlayer;
   this->fields.isPlayingVoice = 0;
@@ -718,24 +704,24 @@ void __fastcall ShopPlayVoiceComponent__StopVoice(ShopPlayVoiceComponent_o *this
     standFigureBack = this->fields.standFigureBack;
     if ( !standFigureBack
       || (StandFigureBack__SetFaceType(standFigureBack, this->fields.defaultFaceType, 0.0, 0, 0LL),
-          (v5 = this->fields.voicePlayer) == 0LL) )
+          (standFigureBack = (StandFigureBack_o *)this->fields.voicePlayer) == 0LL) )
     {
-      sub_B170D4();
+      sub_B2C434(standFigureBack, method);
     }
-    SePlayer__Destroy(v5, 0LL);
+    SePlayer__Destroy((SePlayer_o *)standFigureBack, 0LL);
     this->fields.voicePlayer = 0LL;
-    sub_B16F98((BattleServantConfConponent_o *)&this->fields.voicePlayer, 0LL, v6, v7, v8, v9, v10, v11);
+    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.voicePlayer, 0LL, v5, v6, v7, v8, v9, v10);
     this->fields.voicePlayingList = 0LL;
-    sub_B16F98((BattleServantConfConponent_o *)&this->fields.voicePlayingList, 0LL, v12, v13, v14, v15, v16, v17);
+    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.voicePlayingList, 0LL, v11, v12, v13, v14, v15, v16);
   }
-  if ( UnityEngine_MonoBehaviour__IsInvoking_34803724(
+  if ( UnityEngine_MonoBehaviour__IsInvoking_35309156(
          (UnityEngine_MonoBehaviour_o *)this,
-         (System_String_o *)StringLiteral_8050/*"InvokedPlayVoiceList"*/,
+         (System_String_o *)StringLiteral_8079/*"InvokedPlayVoiceList"*/,
          0LL) )
   {
-    UnityEngine_MonoBehaviour__CancelInvoke_34803564(
+    UnityEngine_MonoBehaviour__CancelInvoke_35308996(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_8050/*"InvokedPlayVoiceList"*/,
+      (System_String_o *)StringLiteral_8079/*"InvokedPlayVoiceList"*/,
       0LL);
   }
 }
@@ -757,7 +743,7 @@ void __fastcall ShopPlayVoiceComponent___c__DisplayClass14_0___LoadVoice_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   ShopPlayVoiceComponent__EndLoadVoice(
     _4__this,
     this->fields.state,
@@ -779,34 +765,14 @@ void __fastcall ShopPlayVoiceComponent___c__DisplayClass15_0___ReloadVoice_b__0(
         ShopPlayVoiceComponent___c__DisplayClass15_0_o *this,
         const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
   struct ShopPlayVoiceComponent_o *_4__this; // x0
   System_String_o *voiceData; // x20
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  struct ShopPlayVoiceComponent_o *v17; // x0
-  System_Int32_array **requestVoiceData; // x1
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  struct ShopPlayVoiceComponent_o *v25; // x0
+  struct System_String_o *requestVoiceData; // x1
 
-  if ( (byte_40F79ED & 1) == 0 )
+  if ( (byte_418544E & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    byte_40F79ED = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    byte_418544E = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -820,29 +786,29 @@ void __fastcall ShopPlayVoiceComponent___c__DisplayClass15_0___ReloadVoice_b__0(
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     }
     SoundManager__releaseAudioAssetStorage(voiceData, 0LL);
-    v17 = this->fields.__4__this;
-    if ( !v17 )
+    _4__this = this->fields.__4__this;
+    if ( !_4__this )
       goto LABEL_14;
-    v17->fields.voiceData = 0LL;
-    sub_B16F98((BattleServantConfConponent_o *)&v17->fields.voiceData, 0LL, v11, v12, v13, v14, v15, v16);
+    _4__this->fields.voiceData = 0LL;
+    sub_B2C2F8(&_4__this->fields.voiceData, 0LL);
     _4__this = this->fields.__4__this;
     if ( !_4__this )
       goto LABEL_14;
   }
-  requestVoiceData = (System_Int32_array **)_4__this->fields.requestVoiceData;
+  requestVoiceData = _4__this->fields.requestVoiceData;
   if ( requestVoiceData )
   {
-    _4__this->fields.voiceData = (struct System_String_o *)requestVoiceData;
-    sub_B16F98((BattleServantConfConponent_o *)&_4__this->fields.voiceData, requestVoiceData, v2, v3, v4, v5, v6, v7);
-    v25 = this->fields.__4__this;
-    if ( v25 )
+    _4__this->fields.voiceData = requestVoiceData;
+    sub_B2C2F8(&_4__this->fields.voiceData, requestVoiceData);
+    _4__this = this->fields.__4__this;
+    if ( _4__this )
     {
-      v25->fields.requestVoiceData = 0LL;
-      sub_B16F98((BattleServantConfConponent_o *)&v25->fields.requestVoiceData, 0LL, v19, v20, v21, v22, v23, v24);
+      _4__this->fields.requestVoiceData = 0LL;
+      sub_B2C2F8(&_4__this->fields.requestVoiceData, 0LL);
       ActionExtensions__Call(this->fields.endReload, 0LL);
       return;
     }
 LABEL_14:
-    sub_B170D4();
+    sub_B2C434(_4__this, method);
   }
 }

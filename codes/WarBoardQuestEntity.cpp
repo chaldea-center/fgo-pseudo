@@ -1,13 +1,13 @@
 void __fastcall WarBoardQuestEntity___ctor(WarBoardQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FBA4D & 1) == 0 )
+  if ( (byte_418923A & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FBA4D = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_418923A = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall WarBoardQuestEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_40FBA4B & 1) == 0 )
+  if ( (byte_4189238 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questPhase);
-    byte_40FBA4B = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questPhase);
+    byte_4189238 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            questPhase,
-           (const MethodInfo_18C21A0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -41,10 +41,10 @@ System_String_o *__fastcall WarBoardQuestEntity__CreatePrimaryKey(
 
 bool __fastcall WarBoardQuestEntity__IsUseEventUI(WarBoardQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FBA4C & 1) == 0 )
+  if ( (byte_4189239 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19878/*"isUseEventUI"*/, method);
-    byte_40FBA4C = 1;
+    sub_B2C35C(&StringLiteral_19960/*"isUseEventUI"*/, method);
+    byte_4189239 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19878/*"isUseEventUI"*/, 0, 0LL) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19960/*"isUseEventUI"*/, 0, 0LL) > 0;
 }

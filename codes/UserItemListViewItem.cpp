@@ -11,27 +11,27 @@ void __fastcall UserItemListViewItem___ctor(
   System_Int32_array **v10; // x5
   System_Int32_array *v11; // x6
   System_Int32_array *v12; // x7
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  DataManager_o *Instance; // x0
+  __int64 v14; // x1
+  System_String_array **v15; // x2
+  System_String_array **v16; // x3
+  System_Boolean_array **v17; // x4
+  System_Int32_array **v18; // x5
+  System_Int32_array *v19; // x6
+  System_Int32_array *v20; // x7
   struct System_String_o *name; // x1
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
   WarEntity_o *Entity; // x0
 
-  if ( (byte_40F9715 & 1) == 0 )
+  if ( (byte_418700B & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_ItemMaster___, usrItemData);
-    sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v5);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_40F9715 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_ItemMaster___, usrItemData);
+    sub_B2C35C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v5);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_418700B = 1;
   }
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
   this->fields.itemData = usrItemData;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.itemData,
     (System_Int32_array **)usrItemData,
     v7,
@@ -48,29 +48,29 @@ void __fastcall UserItemListViewItem___ctor(
   this->fields.itemImgId = usrItemData->fields.itemImgId;
   name = usrItemData->fields.name;
   this->fields.itemName = name;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.itemName,
     (System_Int32_array **)name,
-    v13,
-    v14,
     v15,
     v16,
     v17,
-    v18);
+    v18,
+    v19,
+    v20);
   this->fields.itemNum = usrItemData->fields.num;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                              (DataManager_o *)Instance,
-                                                                                              (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
+    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                      Instance,
+                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL )
   {
 LABEL_9:
-    sub_B170D4();
+    sub_B2C434(Instance, v14);
   }
   Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-             MasterData_WarQuestSelectionMaster,
+             (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
              this->fields.itemId,
-             (const MethodInfo_266F388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_24E40D0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   if ( Entity )
     this->fields.itemLostTime = *(_QWORD *)&Entity->fields.eventId;
 }

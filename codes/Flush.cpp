@@ -4,8 +4,8 @@ __int64 __fastcall Flush(__int64 a1)
 
   if ( !*(_BYTE *)(a1 + 32) )
     return 0LL;
-  result = sub_A747C4(*(_QWORD *)a1, 1LL);
+  result = sub_A89B24(*(_QWORD *)a1, 1LL);
   if ( (unsigned int)result <= 1 )
-    return sub_B0CC7C(a1);
+    return sub_B21FDC(a1);
   return result;
 }

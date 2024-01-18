@@ -16,17 +16,17 @@ void __fastcall EventInfoUserEventPointControl__Awake(EventInfoUserEventPointCon
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
 
-  if ( (byte_40F881C & 1) == 0 )
+  if ( (byte_4188D22 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMaster_UserEventPointMaster___, method);
-    sub_B16FFC(&DataManager_TypeInfo, v3);
-    byte_40F881C = 1;
+    sub_B2C35C(&Method_DataManager_GetMaster_UserEventPointMaster___, method);
+    sub_B2C35C(&DataManager_TypeInfo, v3);
+    byte_4188D22 = 1;
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (struct UserEventPointMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_UserEventPointMaster___);
+  Master_WarQuestSelectionMaster = (struct UserEventPointMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_UserEventPointMaster___);
   this->fields.userEventPointMaster = Master_WarQuestSelectionMaster;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.userEventPointMaster,
     (System_Int32_array **)Master_WarQuestSelectionMaster,
     v5,
@@ -48,10 +48,10 @@ int64_t __fastcall EventInfoUserEventPointControl__GetUserEventPoint(
   UserEventPointMaster_o *userEventPointMaster; // x21
   int64_t UserId; // x0
 
-  if ( (byte_40F881D & 1) == 0 )
+  if ( (byte_4188D23 & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_40F881D = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4188D23 = 1;
   }
   userEventPointMaster = this->fields.userEventPointMaster;
   if ( !userEventPointMaster )
@@ -78,7 +78,7 @@ void __fastcall EventInfoUserEventPointControl__Initialization(
   System_Int32_array *v7; // x7
 
   this->fields.eventUiEntity = entity;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventUiEntity,
     (System_Int32_array **)entity,
     (System_String_array **)method,
@@ -101,9 +101,9 @@ void __fastcall EventInfoUserEventPointControl__Redisplay(
   __int64 v6; // x22
   int64_t v7; // x20
   EventUiValueEntity_o *v8; // x9
-  int32_t v9; // w0
-  const MethodInfo *v10; // x3
+  const MethodInfo *v9; // x3
   struct EventUiEntity_o *eventUiEntity; // x8
+  __int64 v11; // x0
 
   eventUiValueEntityList = this->fields.eventUiValueEntityList;
   if ( eventUiValueEntityList )
@@ -122,24 +122,24 @@ void __fastcall EventInfoUserEventPointControl__Redisplay(
       {
         if ( (unsigned int)v6 >= (unsigned int)v4 )
         {
-          sub_B17100(this, method, v2);
-          sub_B170A0();
+          v11 = sub_B2C460(this);
+          sub_B2C400(v11, 0LL);
         }
         v8 = eventUiValueEntityList->m_Items[v6];
         if ( !v8 )
 LABEL_14:
-          sub_B170D4();
+          sub_B2C434(this, method);
         if ( v8->fields.type == 2 )
         {
-          v9 = System_Int32__Parse(v8->fields.value, 0LL);
+          this = (EventInfoUserEventPointControl_o *)System_Int32__Parse(v8->fields.value, 0LL);
           eventUiEntity = v5->fields.eventUiEntity;
           if ( !eventUiEntity )
             goto LABEL_14;
           this = (EventInfoUserEventPointControl_o *)EventInfoUserEventPointControl__GetUserEventPoint(
                                                        v5,
                                                        eventUiEntity->fields.eventId,
-                                                       v9,
-                                                       v10);
+                                                       (int32_t)this,
+                                                       v9);
           v4 = *(_QWORD *)&eventUiValueEntityList->max_length;
           v7 += (int64_t)this;
         }
@@ -160,13 +160,14 @@ void __fastcall EventInfoUserEventPointControl__SetBgSprite(
   __int64 v5; // x1
   UnityEngine_Object_o *bgSprite; // x21
   UISprite_o *v7; // x21
-  struct UISprite_o *v8; // x0
+  __int64 v8; // x1
+  struct UISprite_o *v9; // x0
 
-  if ( (byte_40F881F & 1) == 0 )
+  if ( (byte_4188D25 & 1) == 0 )
   {
-    sub_B16FFC(&AtlasManager_TypeInfo, spriteName);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    byte_40F881F = 1;
+    sub_B2C35C(&AtlasManager_TypeInfo, spriteName);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
+    byte_4188D25 = 1;
   }
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -183,12 +184,12 @@ void __fastcall EventInfoUserEventPointControl__SetBgSprite(
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
     AtlasManager__SetEventUI(v7, spriteName, 0LL);
-    v8 = this->fields.bgSprite;
-    if ( !v8 )
-      sub_B170D4();
-    ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v8->klass->vtable._33_MakePixelPerfect.method)(
-      v8,
-      v8->klass->vtable._34_get_minWidth.methodPtr);
+    v9 = this->fields.bgSprite;
+    if ( !v9 )
+      sub_B2C434(0LL, v8);
+    ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v9->klass->vtable._33_MakePixelPerfect.method)(
+      v9,
+      v9->klass->vtable._34_get_minWidth.methodPtr);
   }
 }
 
@@ -210,18 +211,18 @@ void __fastcall EventInfoUserEventPointControl__SetPointLabel(
   int64_t UserPointEventMax; // x23
   Il2CppObject *v15; // x0
   System_String_o *v16; // x0
-  UILabel_o *v17; // x0
+  __int64 v17; // x1
   int64_t v18; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_40F881E & 1) == 0 )
+  if ( (byte_4188D24 & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, point);
-    sub_B16FFC(&long_TypeInfo, v5);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v6);
-    sub_B16FFC(&System_Math_TypeInfo, v7);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, v9);
-    byte_40F881E = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, point);
+    sub_B2C35C(&long_TypeInfo, v5);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v6);
+    sub_B2C35C(&System_Math_TypeInfo, v7);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v8);
+    sub_B2C35C(&StringLiteral_5651/*"EVENT_POINT_COMMON_FORMAT"*/, v9);
+    byte_4188D24 = 1;
   }
   pointLabel = (UnityEngine_Object_o *)this->fields.pointLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -237,7 +238,7 @@ void __fastcall EventInfoUserEventPointControl__SetPointLabel(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5635/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5651/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
     v13 = BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -248,7 +249,7 @@ void __fastcall EventInfoUserEventPointControl__SetPointLabel(
     UserPointEventMax = v13->static_fields->UserPointEventMax;
     if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v18 = System_Math__Min_44464240(point, UserPointEventMax, 0LL);
+    v18 = System_Math__Min_45012816(point, UserPointEventMax, 0LL);
     v15 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v18);
     v16 = System_String__Format(v12, v15, 0LL);
     if ( !v11 )
@@ -256,11 +257,11 @@ void __fastcall EventInfoUserEventPointControl__SetPointLabel(
     UILabel__set_text(v11, v16, 0LL);
     if ( !this->fields.isEnabledCondensedScale )
       return;
-    v17 = this->fields.pointLabel;
-    if ( !v17 )
+    v16 = (System_String_o *)this->fields.pointLabel;
+    if ( !v16 )
 LABEL_21:
-      sub_B170D4();
-    UILabel__SetCondensedScale(v17, this->fields.pointLabelWidth, 0LL);
+      sub_B2C434(v16, v17);
+    UILabel__SetCondensedScale((UILabel_o *)v16, this->fields.pointLabelWidth, 0LL);
   }
 }
 
@@ -280,7 +281,7 @@ void __fastcall EventInfoUserEventPointControl__Setup(
   if ( entitys )
   {
     this->fields.eventUiValueEntityList = entitys;
-    sub_B16F98(
+    sub_B2C2F8(
       (BattleServantConfConponent_o *)&this->fields.eventUiValueEntityList,
       (System_Int32_array **)entitys,
       (System_String_array **)method,

@@ -3,13 +3,13 @@ float __fastcall BattleCommand__getCriticalMagnification(BattleCommandData_o *da
   int32_t type; // w0
 
   if ( !data )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   type = BattleCommandData__get_type(data, method);
   return CardMaster__getCritical(type, data->fields.actionIndex, 0LL);
 }
 
 
-float __fastcall BattleCommand__getCriticalMagnification_18675060(
+float __fastcall BattleCommand__getCriticalMagnification_18346944(
         int32_t type,
         int32_t index,
         const MethodInfo *method)
@@ -29,13 +29,13 @@ float __fastcall BattleCommand__getMagnification(BattleCommandData_o *data, cons
   int32_t type; // w0
 
   if ( !data )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   type = BattleCommandData__get_type(data, method);
   return CardMaster__getAtk(type, data->fields.actionIndex, 0LL);
 }
 
 
-float __fastcall BattleCommand__getMagnification_18674948(int32_t type, int32_t index, const MethodInfo *method)
+float __fastcall BattleCommand__getMagnification_18346832(int32_t type, int32_t index, const MethodInfo *method)
 {
   return CardMaster__getAtk(type, index, 0LL);
 }
@@ -46,13 +46,13 @@ float __fastcall BattleCommand__getNpMagnification(BattleCommandData_o *command,
   int32_t type; // w0
 
   if ( !command )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   type = BattleCommandData__get_type(command, method);
   return CardMaster__getTdGauge(type, command->fields.actionIndex, 0LL);
 }
 
 
-float __fastcall BattleCommand__getNpMagnification_18675004(int32_t type, int32_t index, const MethodInfo *method)
+float __fastcall BattleCommand__getNpMagnification_18346888(int32_t type, int32_t index, const MethodInfo *method)
 {
   return CardMaster__getTdGauge(type, index, 0LL);
 }
@@ -111,48 +111,50 @@ bool __fastcall BattleCommand__isShowCommandAction(int32_t type, const MethodInf
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BattleCommand__setSprite(UISprite_o *sprite, int32_t type, const MethodInfo *method)
 {
+  UnityEngine_Behaviour_o *v4; // x19
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 *v7; // x8
 
-  if ( (byte_40F697A & 1) == 0 )
+  v4 = (UnityEngine_Behaviour_o *)sprite;
+  if ( (byte_418425A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19244/*"icon_commandcard_quick"*/, *(_QWORD *)&type);
-    sub_B16FFC(&StringLiteral_19242/*"icon_commandcard_buster"*/, v5);
-    sub_B16FFC(&StringLiteral_19241/*"icon_commandcard_arts"*/, v6);
-    byte_40F697A = 1;
+    sub_B2C35C(&StringLiteral_19318/*"icon_commandcard_quick"*/, *(_QWORD *)&type);
+    sub_B2C35C(&StringLiteral_19316/*"icon_commandcard_buster"*/, v5);
+    sprite = (UISprite_o *)sub_B2C35C(&StringLiteral_19315/*"icon_commandcard_arts"*/, v6);
+    byte_418425A = 1;
   }
   switch ( type )
   {
     case 3:
-      if ( sprite )
+      if ( v4 )
       {
-        UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)sprite, 1, 0LL);
-        v7 = &StringLiteral_19244/*"icon_commandcard_quick"*/;
+        UnityEngine_Behaviour__set_enabled(v4, 1, 0LL);
+        v7 = &StringLiteral_19318/*"icon_commandcard_quick"*/;
         goto LABEL_12;
       }
       goto LABEL_15;
     case 2:
-      if ( sprite )
+      if ( v4 )
       {
-        UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)sprite, 1, 0LL);
-        v7 = &StringLiteral_19242/*"icon_commandcard_buster"*/;
+        UnityEngine_Behaviour__set_enabled(v4, 1, 0LL);
+        v7 = &StringLiteral_19316/*"icon_commandcard_buster"*/;
         goto LABEL_12;
       }
 LABEL_15:
-      sub_B170D4();
+      sub_B2C434(sprite, *(_QWORD *)&type);
     case 1:
-      if ( sprite )
+      if ( v4 )
       {
-        UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)sprite, 1, 0LL);
-        v7 = &StringLiteral_19241/*"icon_commandcard_arts"*/;
+        UnityEngine_Behaviour__set_enabled(v4, 1, 0LL);
+        v7 = &StringLiteral_19315/*"icon_commandcard_arts"*/;
 LABEL_12:
-        UISprite__set_spriteName(sprite, (System_String_o *)*v7, 0LL);
+        UISprite__set_spriteName((UISprite_o *)v4, (System_String_o *)*v7, 0LL);
         return;
       }
       goto LABEL_15;
   }
-  if ( !sprite )
+  if ( !v4 )
     goto LABEL_15;
-  UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)sprite, 0, 0LL);
+  UnityEngine_Behaviour__set_enabled(v4, 0, 0LL);
 }

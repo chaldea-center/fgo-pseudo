@@ -1,14 +1,14 @@
 void __fastcall CombineQpSvtEquipMaster___ctor(CombineQpSvtEquipMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F9964 & 1) == 0 )
+  if ( (byte_4186225 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string___ctor__, method);
-    byte_40F9964 = 1;
+    sub_B2C35C(&Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string___ctor__, method);
+    byte_4186225 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     112,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ CombineQpSvtEquipEntity_o *__fastcall CombineQpSvtEquipMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40F9962 & 1) == 0 )
+  if ( (byte_4186223 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__GetEntity__,
       *(_QWORD *)&rarity);
-    byte_40F9962 = 1;
+    byte_4186223 = 1;
   }
   PK = CombineQpSvtEquipEntity__CreatePK(rarity, lv, *(const MethodInfo **)&lv);
   return (CombineQpSvtEquipEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                         (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                         PK,
-                                        (const MethodInfo_266F7D8 *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__GetEntity__);
+                                        (const MethodInfo_24E4520 *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__GetEntity__);
 }
 
 
@@ -46,15 +46,15 @@ bool __fastcall CombineQpSvtEquipMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40F9963 & 1) == 0 )
+  if ( (byte_4186224 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__TryGetEntity__, entity);
-    byte_40F9963 = 1;
+    sub_B2C35C(&Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__TryGetEntity__, entity);
+    byte_4186224 = 1;
   }
   PK = CombineQpSvtEquipEntity__CreatePK(rarity, lv, *(const MethodInfo **)&rarity);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_CombineQpSvtEquipMaster__CombineQpSvtEquipEntity__string__TryGetEntity__);
 }

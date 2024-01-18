@@ -2,10 +2,10 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject___ctor(
         BonusSelectSummonPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40FB10A & 1) == 0 )
+  if ( (byte_4187DDB & 1) == 0 )
   {
-    sub_B16FFC(&ListViewObject_TypeInfo, method);
-    byte_40FB10A = 1;
+    sub_B2C35C(&ListViewObject_TypeInfo, method);
+    byte_4187DDB = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -40,11 +40,12 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
   System_Int32_array **v13; // x5
   System_Int32_array *v14; // x6
   System_Int32_array *v15; // x7
-  const MethodInfo *v16; // x3
+  __int64 v16; // x1
+  const MethodInfo *v17; // x3
   BonusSelectSummonPartyOrganizationListViewItemDraw_o *itemDraw; // x0
 
   this->fields.listViewItem = item;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.listViewItem,
     (System_Int32_array **)item,
     (System_String_array **)onTapEvent,
@@ -54,7 +55,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
     v6,
     v7);
   this->fields.onTapEvent = onTapEvent;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.onTapEvent,
     (System_Int32_array **)onTapEvent,
     v10,
@@ -65,8 +66,8 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
     v15);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_B170D4();
-  BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v16);
+    sub_B2C434(0LL, v16);
+  BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v17);
   ((void (__fastcall *)(BonusSelectSummonPartyOrganizationListViewObject_o *, __int64, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
     this,
     1LL,
@@ -83,7 +84,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Modfy(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v2);
 }
 

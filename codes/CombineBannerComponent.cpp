@@ -6,22 +6,24 @@ void __fastcall CombineBannerComponent___ctor(CombineBannerComponent_o *this, co
 
 void __fastcall CombineBannerComponent__onOpenWebView(CombineBannerComponent_o *this, const MethodInfo *method)
 {
+  CombineBannerComponent_o *v2; // x19
   __int64 v3; // x1
   __int64 v4; // x1
   struct EventEntity_o *eventEntity; // x8
   System_String_o *linkBody; // x19
   System_String_o *WebViewAddress; // x19
 
-  if ( (byte_40F9AAA & 1) == 0 )
+  v2 = this;
+  if ( (byte_41888C7 & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&WebViewManager_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_1/*""*/, v4);
-    byte_40F9AAA = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, method);
+    sub_B2C35C(&WebViewManager_TypeInfo, v3);
+    this = (CombineBannerComponent_o *)sub_B2C35C(&StringLiteral_1/*""*/, v4);
+    byte_41888C7 = 1;
   }
-  eventEntity = this->fields.eventEntity;
+  eventEntity = v2->fields.eventEntity;
   if ( !eventEntity )
-    sub_B170D4();
+    sub_B2C434(this, method);
   linkBody = eventEntity->fields.linkBody;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -51,17 +53,17 @@ void __fastcall CombineBannerComponent__setBannerInfo(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_40F9AA9 & 1) == 0 )
+  if ( (byte_41888C6 & 1) == 0 )
   {
-    sub_B16FFC(&AtlasManager_TypeInfo, eventData);
-    byte_40F9AA9 = 1;
+    sub_B2C35C(&AtlasManager_TypeInfo, eventData);
+    byte_41888C6 = 1;
   }
   bannerSprite = this->fields.bannerSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner_28582848(bannerSprite, eventData, 0LL);
+  AtlasManager__SetBanner_28449312(bannerSprite, eventData, 0LL);
   this->fields.eventEntity = eventData;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventEntity,
     (System_Int32_array **)eventData,
     v6,

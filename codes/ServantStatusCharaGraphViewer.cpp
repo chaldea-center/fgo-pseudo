@@ -13,7 +13,7 @@ void __fastcall ServantStatusCharaGraphViewer__DeactivateScrollViewObjects(
   viewerListViewManager = this->fields.viewerListViewManager;
   this->fields._IsAbleToSwitchDispMode_k__BackingField = 0;
   if ( !viewerListViewManager )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   viewerListViewManager->fields.currentPhase = 0;
   ListViewManager__DestroyList((ListViewManager_o *)viewerListViewManager, 0LL);
 }
@@ -28,7 +28,7 @@ void __fastcall ServantStatusCharaGraphViewer__FadeoutFrameScrollViewObjects(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   ServantStatusCharaGraphViewerListViewManager__PlayFadeOutObjectFrame(viewerListViewManager, delay, method);
 }
 
@@ -37,18 +37,20 @@ ServantStatusCharaGraphListViewItem_o *__fastcall ServantStatusCharaGraphViewer_
         ServantStatusCharaGraphViewer_o *this,
         const MethodInfo *method)
 {
+  ServantStatusCharaGraphViewer_o *v2; // x19
   struct ServantStatusCharaGraphViewerListViewManager_o *viewerListViewManager; // x8
   ServantStatusCharaGraphListViewItem_o *centerItem; // x8
   __int64 v5; // x11
 
-  if ( (byte_40F8764 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4185FE9 & 1) == 0 )
   {
-    sub_B16FFC(&ServantStatusCharaGraphListViewItem_TypeInfo, method);
-    byte_40F8764 = 1;
+    this = (ServantStatusCharaGraphViewer_o *)sub_B2C35C(&ServantStatusCharaGraphListViewItem_TypeInfo, method);
+    byte_4185FE9 = 1;
   }
-  viewerListViewManager = this->fields.viewerListViewManager;
+  viewerListViewManager = v2->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B170D4();
+    sub_B2C434(this, method);
   centerItem = (ServantStatusCharaGraphListViewItem_o *)viewerListViewManager->fields.centerItem;
   if ( !centerItem )
     return 0LL;
@@ -76,8 +78,7 @@ bool __fastcall ServantStatusCharaGraphViewer__IsAbleToPinch(
   struct ServantStatusCharaGraphViewerListViewManager_o *viewerListViewManager; // x0
   struct ListViewItem_o *centerItem; // x20
   UnityEngine_Vector2_o CenterPosition; // kr00_8
-  ListViewManager_o *v6; // x0
-  float v7; // s8
+  float v6; // s8
 
   if ( this->fields.currentDispType != 2 )
     return 1;
@@ -88,34 +89,29 @@ bool __fastcall ServantStatusCharaGraphViewer__IsAbleToPinch(
   if ( !centerItem )
     return 0;
   CenterPosition = ServantStatusCharaGraphViewerListViewManager__get_CenterPosition(viewerListViewManager, method);
-  v6 = (ListViewManager_o *)this->fields.viewerListViewManager;
-  if ( !v6 )
+  viewerListViewManager = this->fields.viewerListViewManager;
+  if ( !viewerListViewManager )
 LABEL_11:
-    sub_B170D4();
+    sub_B2C434(viewerListViewManager, method);
   if ( centerItem->fields.basePosition.fields.y <= CenterPosition.fields.y )
-    v7 = CenterPosition.fields.y - CenterPosition.fields.x;
+    v6 = CenterPosition.fields.y - CenterPosition.fields.x;
   else
-    v7 = CenterPosition.fields.x - CenterPosition.fields.y;
-  return v7 < (float)(COERCE_FLOAT(LODWORD(ListViewManager__getPitch(v6, 0LL).fields.y)) * 0.01);
+    v6 = CenterPosition.fields.x - CenterPosition.fields.y;
+  return v6 < (float)(COERCE_FLOAT(LODWORD(ListViewManager__getPitch((ListViewManager_o *)viewerListViewManager, 0LL).fields.y))
+                    * 0.01);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ServantStatusCharaGraphViewer__SetDispType(
         ServantStatusCharaGraphViewer_o *this,
         int32_t dispType,
         const MethodInfo *method)
 {
-  struct UIPanel_o *v4; // x0
-  long double v5; // q0
-  struct UIPanel_o *v6; // x0
-  UIPanel_c *klass; // x8
-  struct UIPanel_o *v8; // x0
-  struct UIPanel_o *v9; // x0
-  const MethodInfo *v10; // x2
-  ServantStatusCharaGraphViewerListViewManager_o *v11; // x0
   ServantStatusCharaGraphViewerListViewManager_o *viewerListViewManager; // x0
-  struct UIPanel_o *dragObjRootPanel; // x0
-  struct UIPanel_o *listViewPanel; // x0
+  long double v5; // q0
+  ServantStatusCharaGraphViewerListViewManager_c *klass; // x8
+  const MethodInfo *v7; // x2
 
   this->fields.currentDispType = dispType;
   switch ( dispType )
@@ -125,65 +121,65 @@ void __fastcall ServantStatusCharaGraphViewer__SetDispType(
       if ( viewerListViewManager )
       {
         ServantStatusCharaGraphViewerListViewManager__SetEnableScroll(viewerListViewManager, 1, method);
-        dragObjRootPanel = this->fields.dragObjRootPanel;
-        if ( dragObjRootPanel )
+        viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
+        if ( viewerListViewManager )
         {
-          ((void (__fastcall *)(struct UIPanel_o *, Il2CppMethodPointer, float))dragObjRootPanel->klass->vtable._8_set_alpha.method)(
-            dragObjRootPanel,
-            dragObjRootPanel->klass->vtable._9_CalculateFinalAlpha.methodPtr,
+          ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, Il2CppMethodPointer, float))viewerListViewManager->klass->vtable._8_ItemDragEnd.method)(
+            viewerListViewManager,
+            viewerListViewManager->klass->vtable._9_SetSortKind.methodPtr,
             0.0);
-          listViewPanel = this->fields.listViewPanel;
-          if ( listViewPanel )
+          viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.listViewPanel;
+          if ( viewerListViewManager )
           {
-            klass = listViewPanel->klass;
+            klass = viewerListViewManager->klass;
             LODWORD(v5) = 1.0;
             goto LABEL_15;
           }
         }
       }
 LABEL_17:
-      sub_B170D4();
+      sub_B2C434(viewerListViewManager, *(_QWORD *)&dispType);
     case 1:
-      v8 = this->fields.dragObjRootPanel;
-      if ( v8 )
+      viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
+      if ( viewerListViewManager )
       {
-        ((void (__fastcall *)(struct UIPanel_o *, Il2CppMethodPointer, const MethodInfo *, float))v8->klass->vtable._8_set_alpha.method)(
-          v8,
-          v8->klass->vtable._9_CalculateFinalAlpha.methodPtr,
+        ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, Il2CppMethodPointer, const MethodInfo *, float))viewerListViewManager->klass->vtable._8_ItemDragEnd.method)(
+          viewerListViewManager,
+          viewerListViewManager->klass->vtable._9_SetSortKind.methodPtr,
           method,
           1.0);
-        v9 = this->fields.listViewPanel;
-        if ( v9 )
+        viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.listViewPanel;
+        if ( viewerListViewManager )
         {
-          ((void (__fastcall *)(struct UIPanel_o *, Il2CppMethodPointer, float))v9->klass->vtable._8_set_alpha.method)(
-            v9,
-            v9->klass->vtable._9_CalculateFinalAlpha.methodPtr,
+          ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, Il2CppMethodPointer, float))viewerListViewManager->klass->vtable._8_ItemDragEnd.method)(
+            viewerListViewManager,
+            viewerListViewManager->klass->vtable._9_SetSortKind.methodPtr,
             0.0);
-          v11 = this->fields.viewerListViewManager;
-          if ( v11 )
+          viewerListViewManager = this->fields.viewerListViewManager;
+          if ( viewerListViewManager )
           {
-            ServantStatusCharaGraphViewerListViewManager__SetEnableScroll(v11, 0, v10);
+            ServantStatusCharaGraphViewerListViewManager__SetEnableScroll(viewerListViewManager, 0, v7);
             return;
           }
         }
       }
       goto LABEL_17;
     case 0:
-      v4 = this->fields.dragObjRootPanel;
-      if ( v4 )
+      viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.dragObjRootPanel;
+      if ( viewerListViewManager )
       {
-        ((void (__fastcall *)(struct UIPanel_o *, Il2CppMethodPointer, const MethodInfo *, float))v4->klass->vtable._8_set_alpha.method)(
-          v4,
-          v4->klass->vtable._9_CalculateFinalAlpha.methodPtr,
+        ((void (__fastcall *)(ServantStatusCharaGraphViewerListViewManager_o *, Il2CppMethodPointer, const MethodInfo *, float))viewerListViewManager->klass->vtable._8_ItemDragEnd.method)(
+          viewerListViewManager,
+          viewerListViewManager->klass->vtable._9_SetSortKind.methodPtr,
           method,
           0.0);
-        v6 = this->fields.listViewPanel;
-        if ( v6 )
+        viewerListViewManager = (ServantStatusCharaGraphViewerListViewManager_o *)this->fields.listViewPanel;
+        if ( viewerListViewManager )
         {
-          klass = v6->klass;
+          klass = viewerListViewManager->klass;
           LODWORD(v5) = 0;
 LABEL_15:
-          ((void (__fastcall *)(long double))klass->vtable._8_set_alpha.method)(v5);
+          ((void (__fastcall *)(long double))klass->vtable._8_ItemDragEnd.method)(v5);
           return;
         }
       }
@@ -201,7 +197,7 @@ void __fastcall ServantStatusCharaGraphViewer__SetItemDataType(
 
   viewerListViewManager = this->fields.viewerListViewManager;
   if ( !viewerListViewManager )
-    sub_B170D4();
+    sub_B2C434(0LL, dispType);
   ServantStatusCharaGraphViewerListViewManager__SetItemDataType(viewerListViewManager, dispType, method);
 }
 
@@ -212,13 +208,14 @@ void __fastcall ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *viewerListViewManager; // x21
-  const MethodInfo *v6; // x2
-  ServantStatusCharaGraphViewerListViewManager_o *v7; // x0
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
+  ServantStatusCharaGraphViewerListViewManager_o *v8; // x0
 
-  if ( (byte_40F8765 & 1) == 0 )
+  if ( (byte_4185FEA & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, onModifyScrollViewCenter);
-    byte_40F8765 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, onModifyScrollViewCenter);
+    byte_4185FEA = 1;
   }
   viewerListViewManager = (UnityEngine_Object_o *)this->fields.viewerListViewManager;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -228,10 +225,10 @@ void __fastcall ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(
   }
   if ( UnityEngine_Object__op_Inequality(viewerListViewManager, 0LL, 0LL) )
   {
-    v7 = this->fields.viewerListViewManager;
-    if ( !v7 )
-      sub_B170D4();
-    ServantStatusCharaGraphViewerListViewManager__SetModifyScrollViewCenter(v7, onModifyScrollViewCenter, v6);
+    v8 = this->fields.viewerListViewManager;
+    if ( !v8 )
+      sub_B2C434(0LL, v6);
+    ServantStatusCharaGraphViewerListViewManager__SetModifyScrollViewCenter(v8, onModifyScrollViewCenter, v7);
   }
 }
 
@@ -252,7 +249,7 @@ void __fastcall ServantStatusCharaGraphViewer__Setup(
     viewerListViewManager = this->fields.viewerListViewManager;
     this->fields._IsAbleToSwitchDispMode_k__BackingField = 1;
     if ( !viewerListViewManager )
-      sub_B170D4();
+      sub_B2C434(0LL, v7);
     ServantStatusCharaGraphViewerListViewManager__CreateList(viewerListViewManager, currentIndex, items, v8);
   }
   else

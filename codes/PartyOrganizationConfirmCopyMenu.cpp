@@ -2,10 +2,10 @@ void __fastcall PartyOrganizationConfirmCopyMenu___ctor(
         PartyOrganizationConfirmCopyMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40FDC1C & 1) == 0 )
+  if ( (byte_418B67F & 1) == 0 )
   {
-    sub_B16FFC(&BaseDialog_TypeInfo, method);
-    byte_40FDC1C = 1;
+    sub_B2C35C(&BaseDialog_TypeInfo, method);
+    byte_418B67F = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -33,7 +33,7 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B16F98(p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
+    sub_B2C2F8(p_callbackFunc, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
     PartyOrganizationConfirmCopyMenu_CallbackFunc__Invoke(v9, result, 0LL);
   }
 }
@@ -45,11 +45,11 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Close(
 {
   const MethodInfo *v2; // x2
 
-  PartyOrganizationConfirmCopyMenu__Close_32254536(this, 0LL, v2);
+  PartyOrganizationConfirmCopyMenu__Close_32155496(this, 0LL, v2);
 }
 
 
-void __fastcall PartyOrganizationConfirmCopyMenu__Close_32254536(
+void __fastcall PartyOrganizationConfirmCopyMenu__Close_32155496(
         PartyOrganizationConfirmCopyMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -60,20 +60,16 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Close_32254536(
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
   __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x3
-  __int64 v14; // x4
-  System_Action_o *v15; // x20
+  System_Action_o *v11; // x20
 
-  if ( (byte_40FDC19 & 1) == 0 )
+  if ( (byte_418B67C & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, callback);
-    sub_B16FFC(&Method_PartyOrganizationConfirmCopyMenu_EndClose__, v10);
-    byte_40FDC19 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, callback);
+    sub_B2C35C(&Method_PartyOrganizationConfirmCopyMenu_EndClose__, v10);
+    byte_418B67C = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -83,9 +79,9 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Close_32254536(
     v6,
     v7);
   this->fields.state = 4;
-  v15 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v11, v12, v13, v14);
-  System_Action___ctor(v15, (Il2CppObject *)this, Method_PartyOrganizationConfirmCopyMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v15, 0LL);
+  v11 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_PartyOrganizationConfirmCopyMenu_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
@@ -110,7 +106,7 @@ void __fastcall PartyOrganizationConfirmCopyMenu__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B16F98(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_B2C2F8(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     System_Action__Invoke(v10, 0LL);
   }
 }
@@ -129,27 +125,24 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Init(
         const MethodInfo *method)
 {
   UILabel_o *titleLabel; // x0
-  UILabel_o *messageLabel; // x0
-  UILabel_o *decideLabel; // x0
-  UILabel_o *cancelLabel; // x0
 
-  if ( (byte_40FDC17 & 1) == 0 )
+  if ( (byte_418B67A & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_1/*""*/, method);
-    byte_40FDC17 = 1;
+    sub_B2C35C(&StringLiteral_1/*""*/, method);
+    byte_418B67A = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
-        (messageLabel = this->fields.messageLabel) == 0LL)
-    || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
-        (decideLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(decideLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
-        (cancelLabel = this->fields.cancelLabel) == 0LL) )
+        (titleLabel = this->fields.messageLabel) == 0LL)
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
+        (titleLabel = this->fields.decideLabel) == 0LL)
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
+        (titleLabel = this->fields.cancelLabel) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(titleLabel, method);
   }
-  UILabel__set_text(cancelLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -161,10 +154,10 @@ void __fastcall PartyOrganizationConfirmCopyMenu__OnClickCancel(
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_40FDC1B & 1) == 0 )
+  if ( (byte_418B67E & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    byte_40FDC1B = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    byte_418B67E = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -186,10 +179,10 @@ void __fastcall PartyOrganizationConfirmCopyMenu__OnClickDecide(
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_40FDC1A & 1) == 0 )
+  if ( (byte_418B67D & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    byte_40FDC1A = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    byte_418B67D = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -227,44 +220,30 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Open(
   __int64 v21; // x1
   int32_t state; // w8
   UnityEngine_GameObject_o *gameObject; // x0
-  struct UICommonButton_o *decideButton; // x0
-  struct UICommonButton_o *cancelButton; // x0
-  DeckListViewItemDraw_o *baseDeckObject; // x0
-  DeckListViewItemDraw_o *editDeckObject; // x0
+  __int64 v24; // x1
   UILabel_o *baseDeckTitleLabel; // x21
-  System_String_o *v29; // x0
   UILabel_o *editDeckTitleLabel; // x21
-  System_String_o *v31; // x0
   UILabel_o *titleLabel; // x20
-  System_String_o *v33; // x0
   UILabel_o *messageLabel; // x20
-  System_String_o *v35; // x0
   UILabel_o *decideLabel; // x20
-  System_String_o *v37; // x0
   UILabel_o *cancelLabel; // x20
-  System_String_o *v39; // x0
-  UnityEngine_Component_o *v40; // x0
-  UnityEngine_GameObject_o *v41; // x20
-  __int64 v42; // x1
-  __int64 v43; // x2
-  __int64 v44; // x3
-  __int64 v45; // x4
-  System_Action_o *v46; // x20
+  UnityEngine_GameObject_o *v31; // x20
+  System_Action_o *v32; // x20
   struct PartyOrganizationConfirmCopyMenu_CallbackFunc_o **p_callbackFunc; // x19
 
-  if ( (byte_40FDC18 & 1) == 0 )
+  if ( (byte_418B67B & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_B16FFC(&AndroidBackKeyManager_TypeInfo, v13);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v14);
-    sub_B16FFC(&Method_PartyOrganizationConfirmCopyMenu_EndOpen__, v15);
-    sub_B16FFC(&StringLiteral_10199/*"PARTY_ORGANIZATION_CONFIRM_COPY_FROM_PARTY_TITLE"*/, v16);
-    sub_B16FFC(&StringLiteral_10201/*"PARTY_ORGANIZATION_CONFIRM_COPY_TITLE"*/, v17);
-    sub_B16FFC(&StringLiteral_10197/*"PARTY_ORGANIZATION_CONFIRM_COPY_CANCEL"*/, v18);
-    sub_B16FFC(&StringLiteral_10200/*"PARTY_ORGANIZATION_CONFIRM_COPY_MESSAGE"*/, v19);
-    sub_B16FFC(&StringLiteral_10198/*"PARTY_ORGANIZATION_CONFIRM_COPY_DECIDE"*/, v20);
-    sub_B16FFC(&StringLiteral_10202/*"PARTY_ORGANIZATION_CONFIRM_COPY_TO_PARTY_TITLE"*/, v21);
-    byte_40FDC18 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_B2C35C(&AndroidBackKeyManager_TypeInfo, v13);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v14);
+    sub_B2C35C(&Method_PartyOrganizationConfirmCopyMenu_EndOpen__, v15);
+    sub_B2C35C(&StringLiteral_10232/*"PARTY_ORGANIZATION_CONFIRM_COPY_FROM_PARTY_TITLE"*/, v16);
+    sub_B2C35C(&StringLiteral_10234/*"PARTY_ORGANIZATION_CONFIRM_COPY_TITLE"*/, v17);
+    sub_B2C35C(&StringLiteral_10230/*"PARTY_ORGANIZATION_CONFIRM_COPY_CANCEL"*/, v18);
+    sub_B2C35C(&StringLiteral_10233/*"PARTY_ORGANIZATION_CONFIRM_COPY_MESSAGE"*/, v19);
+    sub_B2C35C(&StringLiteral_10231/*"PARTY_ORGANIZATION_CONFIRM_COPY_DECIDE"*/, v20);
+    sub_B2C35C(&StringLiteral_10235/*"PARTY_ORGANIZATION_CONFIRM_COPY_TO_PARTY_TITLE"*/, v21);
+    byte_418B67B = 1;
   }
   state = this->fields.state;
   if ( state != 4 )
@@ -273,7 +252,7 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Open(
     {
       this->fields.callbackFunc = callback;
       p_callbackFunc = &this->fields.callbackFunc;
-      sub_B16F98(
+      sub_B2C2F8(
         (BattleServantConfConponent_o *)p_callbackFunc,
         (System_Int32_array **)callback,
         (System_String_array **)basePartyItem,
@@ -289,7 +268,7 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Open(
       return;
   }
   this->fields.callbackFunc = callback;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callback,
     (System_String_array **)basePartyItem,
@@ -302,45 +281,45 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Open(
   if ( !gameObject )
     goto LABEL_32;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  decideButton = this->fields.decideButton;
-  if ( !decideButton )
+  gameObject = (UnityEngine_GameObject_o *)this->fields.decideButton;
+  if ( !gameObject )
     goto LABEL_32;
-  ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))decideButton->klass->vtable._14_SetState.method)(
-    decideButton,
+  ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))gameObject->klass[1]._1.implementedInterfaces)(
+    gameObject,
     0LL,
     1LL,
-    decideButton->klass->vtable._15_OnPress.methodPtr);
-  cancelButton = this->fields.cancelButton;
-  if ( !cancelButton )
+    gameObject->klass[1]._1.interfaceOffsets);
+  gameObject = (UnityEngine_GameObject_o *)this->fields.cancelButton;
+  if ( !gameObject )
     goto LABEL_32;
-  ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))cancelButton->klass->vtable._14_SetState.method)(
-    cancelButton,
+  ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))gameObject->klass[1]._1.implementedInterfaces)(
+    gameObject,
     0LL,
     1LL,
-    cancelButton->klass->vtable._15_OnPress.methodPtr);
-  baseDeckObject = this->fields.baseDeckObject;
-  if ( !baseDeckObject )
+    gameObject->klass[1]._1.interfaceOffsets);
+  gameObject = (UnityEngine_GameObject_o *)this->fields.baseDeckObject;
+  if ( !gameObject )
     goto LABEL_32;
-  DeckListViewItemDraw__SetItem_25779096(baseDeckObject, basePartyItem, 2, 0LL);
-  editDeckObject = this->fields.editDeckObject;
-  if ( !editDeckObject )
+  DeckListViewItemDraw__SetItem_16750152((DeckListViewItemDraw_o *)gameObject, basePartyItem, 2, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)this->fields.editDeckObject;
+  if ( !gameObject )
     goto LABEL_32;
-  DeckListViewItemDraw__SetItem_25779096(editDeckObject, editPartyItem, 2, 0LL);
+  DeckListViewItemDraw__SetItem_16750152((DeckListViewItemDraw_o *)gameObject, editPartyItem, 2, 0LL);
   baseDeckTitleLabel = this->fields.baseDeckTitleLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_10199/*"PARTY_ORGANIZATION_CONFIRM_COPY_FROM_PARTY_TITLE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10232/*"PARTY_ORGANIZATION_CONFIRM_COPY_FROM_PARTY_TITLE"*/, 0LL);
   if ( !baseDeckTitleLabel )
     goto LABEL_32;
-  UILabel__set_text(baseDeckTitleLabel, v29, 0LL);
+  UILabel__set_text(baseDeckTitleLabel, (System_String_o *)gameObject, 0LL);
   editDeckTitleLabel = this->fields.editDeckTitleLabel;
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_10202/*"PARTY_ORGANIZATION_CONFIRM_COPY_TO_PARTY_TITLE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10235/*"PARTY_ORGANIZATION_CONFIRM_COPY_TO_PARTY_TITLE"*/, 0LL);
   if ( !editDeckTitleLabel )
     goto LABEL_32;
-  UILabel__set_text(editDeckTitleLabel, v31, 0LL);
+  UILabel__set_text(editDeckTitleLabel, (System_String_o *)gameObject, 0LL);
   if ( kind )
     goto LABEL_25;
   titleLabel = this->fields.titleLabel;
@@ -349,41 +328,41 @@ void __fastcall PartyOrganizationConfirmCopyMenu__Open(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_10201/*"PARTY_ORGANIZATION_CONFIRM_COPY_TITLE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10234/*"PARTY_ORGANIZATION_CONFIRM_COPY_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_32;
-  UILabel__set_text(titleLabel, v33, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
   messageLabel = this->fields.messageLabel;
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_10200/*"PARTY_ORGANIZATION_CONFIRM_COPY_MESSAGE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10233/*"PARTY_ORGANIZATION_CONFIRM_COPY_MESSAGE"*/, 0LL);
   if ( !messageLabel
-    || (UILabel__set_text(messageLabel, v35, 0LL),
+    || (UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL),
         decideLabel = this->fields.decideLabel,
-        v37 = LocalizationManager__Get((System_String_o *)StringLiteral_10198/*"PARTY_ORGANIZATION_CONFIRM_COPY_DECIDE"*/, 0LL),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10231/*"PARTY_ORGANIZATION_CONFIRM_COPY_DECIDE"*/, 0LL),
         !decideLabel)
-    || (UILabel__set_text(decideLabel, v37, 0LL),
+    || (UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0LL),
         cancelLabel = this->fields.cancelLabel,
-        v39 = LocalizationManager__Get((System_String_o *)StringLiteral_10197/*"PARTY_ORGANIZATION_CONFIRM_COPY_CANCEL"*/, 0LL),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10230/*"PARTY_ORGANIZATION_CONFIRM_COPY_CANCEL"*/, 0LL),
         !cancelLabel) )
   {
 LABEL_32:
-    sub_B170D4();
+    sub_B2C434(gameObject, v24);
   }
-  UILabel__set_text(cancelLabel, v39, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0LL);
 LABEL_25:
-  v40 = (UnityEngine_Component_o *)this->fields.cancelButton;
-  if ( !v40 )
+  gameObject = (UnityEngine_GameObject_o *)this->fields.cancelButton;
+  if ( !gameObject )
     goto LABEL_32;
-  v41 = UnityEngine_Component__get_gameObject(v40, 0LL);
+  v31 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
   if ( (BYTE3(AndroidBackKeyManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !AndroidBackKeyManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AndroidBackKeyManager_TypeInfo);
   }
-  AndroidBackKeyManager__AddBackBtn(v41, 0LL);
+  AndroidBackKeyManager__AddBackBtn(v31, 0LL);
   this->fields.state = 1;
-  v46 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v42, v43, v44, v45);
-  System_Action___ctor(v46, (Il2CppObject *)this, Method_PartyOrganizationConfirmCopyMenu_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v46, 0, 0LL);
+  v32 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  System_Action___ctor(v32, (Il2CppObject *)this, Method_PartyOrganizationConfirmCopyMenu_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v32, 0, 0LL);
 }
 
 
@@ -402,10 +381,10 @@ void __fastcall PartyOrganizationConfirmCopyMenu__add_callbackFunc(
   PartyOrganizationConfirmCopyMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_40FDC15 & 1) == 0 )
+  if ( (byte_418B678 & 1) == 0 )
   {
-    sub_B16FFC(&PartyOrganizationConfirmCopyMenu_CallbackFunc_TypeInfo, value);
-    byte_40FDC15 = 1;
+    sub_B2C35C(&PartyOrganizationConfirmCopyMenu_CallbackFunc_TypeInfo, value);
+    byte_418B678 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -418,13 +397,13 @@ void __fastcall PartyOrganizationConfirmCopyMenu__add_callbackFunc(
       if ( (PartyOrganizationConfirmCopyMenu_CallbackFunc_c *)v8->klass != PartyOrganizationConfirmCopyMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B0BA14(p_callbackFunc, v8, v6);
+    v9 = sub_B20D74(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B173C8(v8);
+  sub_B2C728(v8);
   PartyOrganizationConfirmCopyMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -443,10 +422,10 @@ void __fastcall PartyOrganizationConfirmCopyMenu__remove_callbackFunc(
   PartyOrganizationConfirmCopyMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_40FDC16 & 1) == 0 )
+  if ( (byte_418B679 & 1) == 0 )
   {
-    sub_B16FFC(&PartyOrganizationConfirmCopyMenu_CallbackFunc_TypeInfo, value);
-    byte_40FDC16 = 1;
+    sub_B2C35C(&PartyOrganizationConfirmCopyMenu_CallbackFunc_TypeInfo, value);
+    byte_418B679 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -459,13 +438,13 @@ void __fastcall PartyOrganizationConfirmCopyMenu__remove_callbackFunc(
       if ( (PartyOrganizationConfirmCopyMenu_CallbackFunc_c *)v8->klass != PartyOrganizationConfirmCopyMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B0BA14(p_callbackFunc, v8, v6);
+    v9 = sub_B20D74(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B173C8(v8);
+  sub_B2C728(v8);
   PartyOrganizationConfirmCopyMenu__Init(v11, v12);
 }
 
@@ -477,27 +456,15 @@ void __fastcall PartyOrganizationConfirmCopyMenu_CallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  intptr_t *p_method; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = **(_QWORD **)&method;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B16F98(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  p_method = &this->fields.method;
+  *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
+  *((_QWORD *)p_method - 2) = v4;
+  sub_B2C2F8(p_method, object);
 }
 
 
@@ -513,14 +480,14 @@ System_IAsyncResult_o *__fastcall PartyOrganizationConfirmCopyMenu_CallbackFunc_
   char v10[4]; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10[0] = result;
-  if ( (byte_40F8372 & 1) == 0 )
+  if ( (byte_4185288 & 1) == 0 )
   {
-    sub_B16FFC(&bool_TypeInfo, result);
-    byte_40F8372 = 1;
+    sub_B2C35C(&bool_TypeInfo, result);
+    byte_4185288 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_B16FA0(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B2C300(this, v9, callback, object);
 }
 
 
@@ -529,7 +496,7 @@ void __fastcall PartyOrganizationConfirmCopyMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B16FA4(result, 0LL, method);
+  sub_B2C304(result, 0LL, method);
 }
 
 
@@ -539,140 +506,143 @@ void __fastcall PartyOrganizationConfirmCopyMenu_CallbackFunc__Invoke(
         bool result,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v6; // x24
-  PartyOrganizationConfirmCopyMenu_CallbackFunc_o **v7; // x25
-  __int64 v8; // x26
-  unsigned int v9; // w23
+  __int64 v3; // x3
+  __int64 v4; // x8
+  __int64 v7; // x24
+  PartyOrganizationConfirmCopyMenu_CallbackFunc_o **v8; // x25
+  __int64 v9; // x26
+  unsigned int v10; // w23
   __int64 class_0; // x0
-  __int64 v11; // x8
-  unsigned __int64 v12; // x10
-  _DWORD *v13; // x11
-  __int64 v14; // x0
-  __int64 v15; // x0
+  __int64 v12; // x3
+  __int64 v13; // x8
+  unsigned __int64 v14; // x10
+  _DWORD *v15; // x11
   __int64 v16; // x0
-  void (__fastcall **v17)(__int64 *, bool, _QWORD); // x0
-  PartyOrganizationConfirmCopyMenu_CallbackFunc_o *v18; // x8
-  __int64 *v19; // x21
-  __int64 v20; // x22
-  void (__fastcall *v21)(bool, __int64); // x23
-  char v22; // w23
-  char v23; // w0
-  __int64 v24; // x8
-  __int64 v25; // x1
-  __int64 v26; // x2
-  unsigned __int64 v27; // x10
-  _DWORD *v28; // x11
-  PartyOrganizationConfirmCopyMenu_CallbackFunc_o *v29; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v17; // x0
+  __int64 v18; // x0
+  void (__fastcall **v19)(__int64 *, bool, _QWORD); // x0
+  PartyOrganizationConfirmCopyMenu_CallbackFunc_o *v20; // x8
+  __int64 *v21; // x21
+  __int64 v22; // x22
+  void (__fastcall *v23)(bool, __int64); // x23
+  char v24; // w23
+  char v25; // w0
+  __int64 v26; // x3
+  __int64 v27; // x8
+  __int64 v28; // x1
+  __int64 v29; // x2
+  unsigned __int64 v30; // x10
+  _DWORD *v31; // x11
+  PartyOrganizationConfirmCopyMenu_CallbackFunc_o *v32; // [xsp+8h] [xbp-48h] BYREF
 
-  v29 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
+  v32 = this;
+  v4 = *(_QWORD *)&this[1].fields.method_ptr;
+  if ( !v4 )
   {
-    v7 = &v29;
-    v6 = 1LL;
+    v8 = &v32;
+    v7 = 1LL;
     goto LABEL_5;
   }
-  v6 = *(_QWORD *)(v3 + 24);
-  if ( v6 )
+  v7 = *(_QWORD *)(v4 + 24);
+  if ( v7 )
   {
-    v7 = (PartyOrganizationConfirmCopyMenu_CallbackFunc_o **)(v3 + 32);
+    v8 = (PartyOrganizationConfirmCopyMenu_CallbackFunc_o **)(v4 + 32);
 LABEL_5:
-    v8 = 0LL;
+    v9 = 0LL;
     while ( 1 )
     {
-      v18 = v7[v8];
-      v19 = *(__int64 **)&v18->fields.method;
-      v20 = *(_QWORD *)&v18->fields.extra_arg;
-      v21 = *(void (__fastcall **)(bool, __int64))&v18->fields.method_ptr;
-      if ( *(__int16 *)(v20 + 72) == -1 )
-        sub_B170B8(*(_QWORD *)&v18->fields.extra_arg, result, method);
-      if ( (sub_B1702C(v20) & 1) == 0 )
+      v20 = v8[v9];
+      v21 = *(__int64 **)&v20->fields.method;
+      v22 = *(_QWORD *)&v20->fields.extra_arg;
+      v23 = *(void (__fastcall **)(bool, __int64))&v20->fields.method_ptr;
+      if ( *(__int16 *)(v22 + 72) == -1 )
+        sub_B2C418(*(_QWORD *)&v20->fields.extra_arg, result, method, v3);
+      if ( (sub_B2C38C(v22) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v20 + 74) != 1 )
+      if ( *(_BYTE *)(v22 + 74) != 1 )
         goto LABEL_36;
-      v21(result, v20);
+      v23(result, v22);
 LABEL_37:
-      if ( ++v8 == v6 )
+      if ( ++v9 == v7 )
         return;
     }
-    if ( v19 && *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
+    if ( v21 && *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v22 = sub_B17024(v20);
-      v23 = sub_B17428(v20);
-      if ( (v22 & 1) != 0 )
+      v24 = sub_B2C384(v22);
+      v25 = sub_B2C788(v22);
+      if ( (v24 & 1) != 0 )
       {
-        if ( (v23 & 1) != 0 )
+        if ( (v25 & 1) != 0 )
         {
-          v24 = *v19;
-          v25 = *(_QWORD *)(v20 + 24);
-          v26 = *(unsigned __int16 *)(v20 + 72);
-          if ( *(_WORD *)(*v19 + 298) )
+          v27 = *v21;
+          v28 = *(_QWORD *)(v22 + 24);
+          v29 = *(unsigned __int16 *)(v22 + 72);
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v27 = 0LL;
-            v28 = (_DWORD *)(*(_QWORD *)(v24 + 176) + 8LL);
-            while ( *((_QWORD *)v28 - 1) != v25 )
+            v30 = 0LL;
+            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((_QWORD *)v31 - 1) != v28 )
             {
-              ++v27;
-              v28 += 4;
-              if ( v27 >= *(unsigned __int16 *)(*v19 + 298) )
+              ++v30;
+              v31 += 4;
+              if ( v30 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_35;
             }
-            v16 = v24 + 16LL * (*v28 + (int)v26) + 312;
+            v18 = v27 + 16LL * (*v31 + (int)v29) + 312;
           }
           else
           {
 LABEL_35:
-            v16 = sub_AAFEF8(v19, v25, v26);
+            v18 = sub_AC5258(v21, v28, v29, v26);
           }
-          v15 = *(_QWORD *)(v16 + 8);
+          v17 = *(_QWORD *)(v18 + 8);
         }
         else
         {
-          v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
+          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
         }
-        v17 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B170AC(v15, v20);
-        (*v17)(v19, result, v17);
+        v19 = (void (__fastcall **)(__int64 *, bool, _QWORD))sub_B2C40C(v17, v22);
+        (*v19)(v21, result, v19);
       }
       else
       {
-        v9 = *(unsigned __int16 *)(v20 + 72);
-        if ( (v23 & 1) != 0 )
+        v10 = *(unsigned __int16 *)(v22 + 72);
+        if ( (v25 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v20);
-          v11 = *v19;
-          if ( *(_WORD *)(*v19 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v22);
+          v13 = *v21;
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v12 = 0LL;
-            v13 = (_DWORD *)(*(_QWORD *)(v11 + 176) + 8LL);
-            while ( *((_QWORD *)v13 - 1) != class_0 )
+            v14 = 0LL;
+            v15 = (_DWORD *)(*(_QWORD *)(v13 + 176) + 8LL);
+            while ( *((_QWORD *)v15 - 1) != class_0 )
             {
-              ++v12;
-              v13 += 4;
-              if ( v12 >= *(unsigned __int16 *)(*v19 + 298) )
+              ++v14;
+              v15 += 4;
+              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_11;
             }
-            v14 = v11 + 16LL * (int)(*v13 + v9) + 312;
+            v16 = v13 + 16LL * (int)(*v15 + v10) + 312;
           }
           else
           {
 LABEL_11:
-            v14 = sub_AAFEF8(v19, class_0, v9);
+            v16 = sub_AC5258(v21, class_0, v10, v12);
           }
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v14)(v19, result, *(_QWORD *)(v14 + 8));
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))v16)(v21, result, *(_QWORD *)(v16 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 312))(
-            v19,
+          (*(void (__fastcall **)(__int64 *, bool, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
+            v21,
             result,
-            *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320));
+            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
         }
       }
       goto LABEL_37;
     }
 LABEL_36:
-    ((void (__fastcall *)(__int64 *, bool, __int64))v21)(v19, result, v20);
+    ((void (__fastcall *)(__int64 *, bool, __int64))v23)(v21, result, v22);
     goto LABEL_37;
   }
 }

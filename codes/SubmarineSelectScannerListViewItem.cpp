@@ -9,21 +9,15 @@ void __fastcall SubmarineSelectScannerListViewItem___ctor(
         const MethodInfo *method)
 {
   SubmarineSelectScannerListViewItem_o *v13; // x24
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
 
   v13 = this;
-  ListViewItem___ctor_30173668((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
   v13->fields._name_k__BackingField = name;
   v13 = (SubmarineSelectScannerListViewItem_o *)((char *)v13 + 128);
   LODWORD(v13[-1].fields._consumeItemDetail_k__BackingField) = eventId;
   HIDWORD(v13[-1].fields._consumeItemDetail_k__BackingField) = scanId;
   *(_DWORD *)&v13[-1].fields._enabled_k__BackingField = iconImageId;
-  sub_B16F98((BattleServantConfConponent_o *)v13, (System_Int32_array **)name, v14, v15, v16, v17, v18, v19);
+  sub_B2C2F8(v13, name);
   LOBYTE(v13->fields.selectNum) = enabled;
 }
 
@@ -81,22 +75,8 @@ void __fastcall SubmarineSelectScannerListViewItem__set_consumeItemDetail(
         System_String_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._consumeItemDetail_k__BackingField = value;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields._consumeItemDetail_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_B2C2F8(&this->fields._consumeItemDetail_k__BackingField, value);
 }
 
 
@@ -132,22 +112,8 @@ void __fastcall SubmarineSelectScannerListViewItem__set_name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._name_k__BackingField = value;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields._name_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_B2C2F8(&this->fields._name_k__BackingField, value);
 }
 
 

@@ -1,13 +1,13 @@
 void __fastcall OpeningMovieEntity___ctor(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F7F5C & 1) == 0 )
+  if ( (byte_418513F & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_int___ctor__, method);
-    byte_40F7F5C = 1;
+    sub_B2C35C(&Method_DataEntityBase_int___ctor__, method);
+    byte_418513F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_266F234 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_24E3F7C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,12 +19,12 @@ int32_t __fastcall OpeningMovieEntity__CreatePrimaryKey(OpeningMovieEntity_o *th
 
 int32_t __fastcall OpeningMovieEntity__GetGroupId(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F7F5A & 1) == 0 )
+  if ( (byte_418513D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19013/*"groupId"*/, method);
-    byte_40F7F5A = 1;
+    sub_B2C35C(&StringLiteral_19086/*"groupId"*/, method);
+    byte_418513D = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19013/*"groupId"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19086/*"groupId"*/, 0, 0LL);
 }
 
 
@@ -44,23 +44,23 @@ System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEnt
   System_TimeSpan_o v15; // 0:x0.8
   System_TimeSpan_o v16; // 0:x0.8
 
-  if ( (byte_40F7F5B & 1) == 0 )
+  if ( (byte_418513E & 1) == 0 )
   {
-    sub_B16FFC(&int_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23572/*"{0}分{1}秒"*/, v3);
-    sub_B16FFC(&StringLiteral_23574/*"{0}秒"*/, v4);
-    byte_40F7F5B = 1;
+    sub_B2C35C(&int_TypeInfo, method);
+    sub_B2C35C(&StringLiteral_23666/*"{0}分{1}秒"*/, v3);
+    sub_B2C35C(&StringLiteral_23668/*"{0}秒"*/, v4);
+    byte_418513E = 1;
   }
   v11 = 0LL;
   v12.fields._ticks = (int64_t)&v11;
-  System_TimeSpan___ctor_41331124(v12, 0, 0, this->fields.moviePlayTime, 0LL);
+  System_TimeSpan___ctor_41712580(v12, 0, 0, this->fields.moviePlayTime, 0LL);
   v13.fields._ticks = (int64_t)&v11;
   if ( System_TimeSpan__get_Minutes(v13, 0LL) < 1 )
   {
     v16.fields._ticks = (int64_t)&v11;
     Seconds = System_TimeSpan__get_Seconds(v16, 0LL);
     v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds);
-    return System_String__Format((System_String_o *)StringLiteral_23574/*"{0}秒"*/, v8, 0LL);
+    return System_String__Format((System_String_o *)StringLiteral_23668/*"{0}秒"*/, v8, 0LL);
   }
   else
   {
@@ -70,7 +70,7 @@ System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEnt
     v15.fields._ticks = (int64_t)&v11;
     v9 = System_TimeSpan__get_Seconds(v15, 0LL);
     v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-    return System_String__Format_43739268((System_String_o *)StringLiteral_23572/*"{0}分{1}秒"*/, v5, v6, 0LL);
+    return System_String__Format_44301068((System_String_o *)StringLiteral_23666/*"{0}分{1}秒"*/, v5, v6, 0LL);
   }
 }
 
@@ -93,17 +93,17 @@ bool __fastcall OpeningMovieEntity__IsEnable(
   __int64 v8; // x1
   __int64 v9; // x8
   int32_t v10; // w22
-  WebViewManager_o *Instance; // x0
-  CommonReleaseMaster_o *MasterData_WarQuestSelectionMaster; // x0
+  DataManager_o *Instance; // x0
+  __int64 v12; // x1
   bool IsOpen; // w0
 
   Time = nowTime;
-  if ( (byte_40F7F57 & 1) == 0 )
+  if ( (byte_418513A & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, nowTime);
-    sub_B16FFC(&NetworkManager_TypeInfo, v7);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_40F7F57 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_CommonReleaseMaster___, nowTime);
+    sub_B2C35C(&NetworkManager_TypeInfo, v7);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_418513A = 1;
   }
   if ( !Time )
   {
@@ -125,15 +125,15 @@ bool __fastcall OpeningMovieEntity__IsEnable(
       return IsOpen && Time >= this->fields.startedAt;
     return IsOpen && OpeningMovieEntity__IsEventPeriod(this, Time, (const MethodInfo *)isMaterial);
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (MasterData_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                        (DataManager_o *)Instance,
-                                                                        (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                      Instance,
+                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_B170D4();
+    sub_B2C434(Instance, v12);
   }
-  IsOpen = CommonReleaseMaster__IsOpen(MasterData_WarQuestSelectionMaster, v10, 0LL, 0, 0LL);
+  IsOpen = CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, v10, 0LL, 0, 0LL);
   if ( !isMaterial )
     return IsOpen && OpeningMovieEntity__IsEventPeriod(this, Time, (const MethodInfo *)isMaterial);
   return IsOpen && Time >= this->fields.startedAt;
@@ -148,10 +148,10 @@ bool __fastcall OpeningMovieEntity__IsEventPeriod(
   int64_t Time; // x20
 
   Time = nowTime;
-  if ( (byte_40F7F58 & 1) == 0 )
+  if ( (byte_418513B & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, nowTime);
-    byte_40F7F58 = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, nowTime);
+    byte_418513B = 1;
   }
   if ( !Time )
   {
@@ -169,35 +169,37 @@ bool __fastcall OpeningMovieEntity__IsEventPeriod(
 bool __fastcall OpeningMovieEntity__IsRegisterMaterial(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
-  WebViewManager_o *Instance; // x0
-  CommonReleaseMaster_o *MasterData_WarQuestSelectionMaster; // x0
-  CommonReleaseEntity_array *List; // x0
-  CommonReleaseEntity_o *v7; // x8
+  DataManager_o *Instance; // x0
+  __int64 v5; // x1
+  struct System_Collections_Generic_Dictionary_int__DataMasterBase__o *lookup; // x8
 
-  if ( (byte_40F7F59 & 1) == 0 )
+  if ( (byte_418513C & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_40F7F59 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_418513C = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
-  MasterData_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                  (DataManager_o *)Instance,
-                                                                  (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
-  if ( !MasterData_WarQuestSelectionMaster )
+  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                Instance,
+                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+  if ( !Instance )
     goto LABEL_10;
-  List = CommonReleaseMaster__getList(MasterData_WarQuestSelectionMaster, this->fields.materialCommonReleaseId, 0LL);
-  if ( !List )
+  Instance = (DataManager_o *)CommonReleaseMaster__getList(
+                                (CommonReleaseMaster_o *)Instance,
+                                this->fields.materialCommonReleaseId,
+                                0LL);
+  if ( !Instance )
     goto LABEL_10;
-  if ( List->max_length == 1 )
+  if ( LODWORD(Instance->fields.datalist) == 1 )
   {
-    v7 = List->m_Items[0];
-    if ( v7 )
-      return v7->fields.condType != 92;
+    lookup = Instance->fields.lookup;
+    if ( lookup )
+      return HIDWORD(lookup->fields.entries) != 92;
 LABEL_10:
-    sub_B170D4();
+    sub_B2C434(Instance, v5);
   }
   return 1;
 }

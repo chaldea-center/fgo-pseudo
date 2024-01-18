@@ -16,18 +16,18 @@ void __fastcall FortificationGauge___ctor(FortificationGauge_o *this, const Meth
   System_Int32_array *v16; // x6
   System_Int32_array *v17; // x7
 
-  if ( (byte_40FA76E & 1) == 0 )
+  if ( (byte_418A829 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_2484/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/, method);
-    sub_B16FFC(&StringLiteral_2485/*"BATTLE_RESULT_FORTIFICATION_MAX"*/, v9);
-    byte_40FA76E = 1;
+    sub_B2C35C(&StringLiteral_2494/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/, method);
+    sub_B2C35C(&StringLiteral_2495/*"BATTLE_RESULT_FORTIFICATION_MAX"*/, v9);
+    byte_418A829 = 1;
   }
-  v10 = (System_Int32_array **)StringLiteral_2484/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/;
-  this->fields.GET_POINT_LOCALIZE_KEY = (struct System_String_o *)StringLiteral_2484/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.GET_POINT_LOCALIZE_KEY, v10, v2, v3, v4, v5, v6, v7);
-  v11 = (System_Int32_array **)StringLiteral_2485/*"BATTLE_RESULT_FORTIFICATION_MAX"*/;
-  this->fields.MAX_LOCALIZE_KEY = (struct System_String_o *)StringLiteral_2485/*"BATTLE_RESULT_FORTIFICATION_MAX"*/;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.MAX_LOCALIZE_KEY, v11, v12, v13, v14, v15, v16, v17);
+  v10 = (System_Int32_array **)StringLiteral_2494/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/;
+  this->fields.GET_POINT_LOCALIZE_KEY = (struct System_String_o *)StringLiteral_2494/*"BATTLE_RESULT_FORTIFICATION_GET_POINT"*/;
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.GET_POINT_LOCALIZE_KEY, v10, v2, v3, v4, v5, v6, v7);
+  v11 = (System_Int32_array **)StringLiteral_2495/*"BATTLE_RESULT_FORTIFICATION_MAX"*/;
+  this->fields.MAX_LOCALIZE_KEY = (struct System_String_o *)StringLiteral_2495/*"BATTLE_RESULT_FORTIFICATION_MAX"*/;
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.MAX_LOCALIZE_KEY, v11, v12, v13, v14, v15, v16, v17);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -48,62 +48,48 @@ void __fastcall FortificationGauge__SetData(
   __int64 v12; // x1
   __int64 v13; // x1
   BattleFortificationInfo_o **p_fortificationInfo; // x20
+  System_String_o *itemIcon; // x0
+  __int64 v16; // x1
   struct BattleFortificationInfo_o *fortificationInfo; // x8
   System_String_o *GET_POINT_LOCALIZE_KEY; // x21
-  System_String_o *v17; // x0
-  System_String_o *v18; // x22
+  System_String_o *v19; // x0
+  System_String_o *v20; // x22
   UILabel_o *getForitificationPoint; // x21
-  System_String_o *v20; // x0
-  System_String_o *v21; // x22
-  Il2CppObject *v22; // x0
-  System_String_o *v23; // x0
-  __int64 v24; // x0
-  Il2CppObject *v25; // x21
-  Il2CppObject *v26; // x0
+  System_String_o *v22; // x22
+  Il2CppObject *v23; // x0
+  Il2CppObject *v24; // x21
+  Il2CppObject *v25; // x0
+  System_String_o *v26; // x0
   System_String_o *v27; // x0
-  System_String_o *v28; // x0
-  bool v29; // w0
   UIWidget_o *bg; // x21
-  struct UISprite_o *v31; // x0
-  int v32; // s0
+  int v29; // s0
   GiftEntity_o *GiftEntity; // x0
-  int32_t *v37; // x21
-  ItemIconComponent_o *itemIcon; // x0
-  ItemIconComponent_o *v39; // x0
-  int32_t MaxFortificationPoint; // w0
-  BattleFortificationInfo_o *v41; // x8
-  int v42; // w21
-  UnityEngine_GameObject_o *getIcon; // x0
+  int32_t *v34; // x21
+  BattleFortificationInfo_o *v35; // x8
+  int v36; // w21
   int32_t totalFortificationPoint; // w22
   int32_t getFortificationPoint; // w23
-  UnityEngine_Component_o *surplusGaugeBar; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  UIProgressBar_o *v48; // x0
-  UIProgressBar_o *v49; // x0
-  struct BattleFortificationInfo_o *v50; // x8
-  UIProgressBar_o *v51; // x0
-  float v52; // s0
-  UIProgressBar_o *beforeGaugeBar; // x0
-  struct BattleFortificationInfo_o *v54; // x8
-  UIProgressBar_o *getGaugeBar; // x0
+  struct BattleFortificationInfo_o *v39; // x8
+  float v40; // s0
+  struct BattleFortificationInfo_o *v41; // x8
   int32_t FortificationWorkType; // [xsp+8h] [xbp-48h] BYREF
   int32_t eventId; // [xsp+Ch] [xbp-44h] BYREF
   UnityEngine_Color_o color; // [xsp+10h] [xbp-40h] BYREF
 
-  if ( (byte_40FA76D & 1) == 0 )
+  if ( (byte_418A828 & 1) == 0 )
   {
-    sub_B16FFC(&int_TypeInfo, info);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_19395/*"img_common_frame01"*/, v11);
-    sub_B16FFC(&StringLiteral_9236/*"N0"*/, v12);
-    sub_B16FFC(&StringLiteral_2483/*"BATTLE_RESULT_FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v13);
-    byte_40FA76D = 1;
+    sub_B2C35C(&int_TypeInfo, info);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v10);
+    sub_B2C35C(&StringLiteral_19469/*"img_common_frame01"*/, v11);
+    sub_B2C35C(&StringLiteral_9266/*"N0"*/, v12);
+    sub_B2C35C(&StringLiteral_2493/*"BATTLE_RESULT_FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v13);
+    byte_418A828 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
   this->fields.fortificationInfo = info;
   p_fortificationInfo = &this->fields.fortificationInfo;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.fortificationInfo,
     (System_Int32_array **)info,
     (System_String_array **)method,
@@ -116,152 +102,169 @@ void __fastcall FortificationGauge__SetData(
   if ( !fortificationInfo )
     goto LABEL_45;
   GET_POINT_LOCALIZE_KEY = this->fields.GET_POINT_LOCALIZE_KEY;
-  v17 = System_Int32__ToString((int)fortificationInfo + 16, 0LL);
-  v18 = System_String__Concat_43743732(GET_POINT_LOCALIZE_KEY, v17, 0LL);
+  v19 = System_Int32__ToString((int)fortificationInfo + 16, 0LL);
+  v20 = System_String__Concat_44305532(GET_POINT_LOCALIZE_KEY, v19, 0LL);
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( !LocalizationManager__ContainsKey(v18, 0LL) )
-    v18 = this->fields.GET_POINT_LOCALIZE_KEY;
+  if ( !LocalizationManager__ContainsKey(v20, 0LL) )
+    v20 = this->fields.GET_POINT_LOCALIZE_KEY;
   getForitificationPoint = this->fields.getForitificationPoint;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v20 = LocalizationManager__Get(v18, 0LL);
+  itemIcon = LocalizationManager__Get(v20, 0LL);
   if ( !*p_fortificationInfo )
     goto LABEL_45;
-  v21 = v20;
-  v22 = (Il2CppObject *)System_Int32__ToString_38275808(
+  v22 = itemIcon;
+  v23 = (Il2CppObject *)System_Int32__ToString_38381416(
                           (unsigned int)*p_fortificationInfo + 28,
-                          (System_String_o *)StringLiteral_9236/*"N0"*/,
+                          (System_String_o *)StringLiteral_9266/*"N0"*/,
                           0LL);
-  v23 = System_String__Format(v21, v22, 0LL);
+  itemIcon = System_String__Format(v22, v23, 0LL);
   if ( !getForitificationPoint )
     goto LABEL_45;
-  UILabel__set_text(getForitificationPoint, v23, 0LL);
+  UILabel__set_text(getForitificationPoint, itemIcon, 0LL);
   if ( !*p_fortificationInfo )
     goto LABEL_45;
   eventId = (*p_fortificationInfo)->fields.eventId;
-  v24 = j_il2cpp_value_box_0(int_TypeInfo, &eventId);
+  itemIcon = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
   if ( !*p_fortificationInfo )
     goto LABEL_45;
-  v25 = (Il2CppObject *)v24;
+  v24 = (Il2CppObject *)itemIcon;
   FortificationWorkType = BattleFortificationInfo__GetFortificationWorkType(*p_fortificationInfo, 0LL);
-  v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &FortificationWorkType);
-  v27 = System_String__Format_43739268((System_String_o *)StringLiteral_2483/*"BATTLE_RESULT_FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v25, v26, 0LL);
-  v28 = LocalizationManager__Get(v27, 0LL);
-  v29 = UnityEngine_ColorUtility__TryParseHtmlString(v28, &color, 0LL);
+  v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &FortificationWorkType);
+  v26 = System_String__Format_44301068((System_String_o *)StringLiteral_2493/*"BATTLE_RESULT_FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}"*/, v24, v25, 0LL);
+  v27 = LocalizationManager__Get(v26, 0LL);
+  itemIcon = (System_String_o *)UnityEngine_ColorUtility__TryParseHtmlString(v27, &color, 0LL);
   bg = (UIWidget_o *)this->fields.bg;
-  if ( v29 )
+  if ( ((unsigned __int8)itemIcon & 1) != 0 )
   {
     if ( !bg )
       goto LABEL_45;
     UIWidget__set_color((UIWidget_o *)this->fields.bg, color, 0LL);
-    v31 = this->fields.bg;
-    if ( !v31 )
+    itemIcon = (System_String_o *)this->fields.bg;
+    if ( !itemIcon )
       goto LABEL_45;
-    ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer, float))v31->klass->vtable._8_set_alpha.method)(
-      v31,
-      v31->klass->vtable._9_CalculateFinalAlpha.methodPtr,
+    ((void (__fastcall *)(System_String_o *, Il2CppMethodPointer, float))itemIcon->klass->vtable._8_System_IConvertible_ToChar.method)(
+      itemIcon,
+      itemIcon->klass->vtable._9_System_IConvertible_ToSByte.methodPtr,
       0.8);
   }
   else
   {
-    *(UnityEngine_Color_o *)&v32 = UnityEngine_Color__get_white(0LL);
+    *(UnityEngine_Color_o *)&v29 = UnityEngine_Color__get_white(0LL);
     if ( !bg )
       goto LABEL_45;
-    UIWidget__set_color(bg, *(UnityEngine_Color_o *)&v32, 0LL);
+    UIWidget__set_color(bg, *(UnityEngine_Color_o *)&v29, 0LL);
   }
+  itemIcon = (System_String_o *)*p_fortificationInfo;
   if ( !*p_fortificationInfo )
     goto LABEL_45;
-  GiftEntity = BattleFortificationInfo__GetGiftEntity(*p_fortificationInfo, 0LL);
+  GiftEntity = BattleFortificationInfo__GetGiftEntity((BattleFortificationInfo_o *)itemIcon, 0LL);
   if ( GiftEntity )
   {
-    v37 = (int32_t *)GiftEntity;
-    itemIcon = this->fields.itemIcon;
+    v34 = (int32_t *)GiftEntity;
+    itemIcon = (System_String_o *)this->fields.itemIcon;
     if ( !itemIcon )
       goto LABEL_45;
-    ItemIconComponent__SetGift(itemIcon, v37[5], v37[6], v37[7], 0, 0LL);
-    v39 = this->fields.itemIcon;
-    if ( !v39 )
+    ItemIconComponent__SetGift((ItemIconComponent_o *)itemIcon, v34[5], v34[6], v34[7], 0, 0LL);
+    itemIcon = (System_String_o *)this->fields.itemIcon;
+    if ( !itemIcon )
       goto LABEL_45;
-    ItemIconComponent__setFrameSprite(v39, v37[5] == 1, (System_String_o *)StringLiteral_19395/*"img_common_frame01"*/, 0LL);
+    ItemIconComponent__setFrameSprite(
+      (ItemIconComponent_o *)itemIcon,
+      v34[5] == 1,
+      (System_String_o *)StringLiteral_19469/*"img_common_frame01"*/,
+      0LL);
   }
+  itemIcon = (System_String_o *)*p_fortificationInfo;
   if ( !*p_fortificationInfo )
     goto LABEL_45;
-  MaxFortificationPoint = BattleFortificationInfo__GetMaxFortificationPoint(*p_fortificationInfo, 0LL);
-  v41 = *p_fortificationInfo;
+  itemIcon = (System_String_o *)BattleFortificationInfo__GetMaxFortificationPoint(
+                                  (BattleFortificationInfo_o *)itemIcon,
+                                  0LL);
+  v35 = *p_fortificationInfo;
   if ( !*p_fortificationInfo )
     goto LABEL_45;
-  v42 = MaxFortificationPoint;
-  getIcon = this->fields.getIcon;
-  if ( !getIcon )
+  v36 = (int)itemIcon;
+  itemIcon = (System_String_o *)this->fields.getIcon;
+  if ( !itemIcon )
     goto LABEL_45;
-  totalFortificationPoint = v41->fields.totalFortificationPoint;
-  getFortificationPoint = v41->fields.getFortificationPoint;
-  UnityEngine_GameObject__SetActive(getIcon, totalFortificationPoint < getFortificationPoint, 0LL);
-  surplusGaugeBar = (UnityEngine_Component_o *)this->fields.surplusGaugeBar;
-  if ( !surplusGaugeBar )
+  totalFortificationPoint = v35->fields.totalFortificationPoint;
+  getFortificationPoint = v35->fields.getFortificationPoint;
+  UnityEngine_GameObject__SetActive(
+    (UnityEngine_GameObject_o *)itemIcon,
+    totalFortificationPoint < getFortificationPoint,
+    0LL);
+  itemIcon = (System_String_o *)this->fields.surplusGaugeBar;
+  if ( !itemIcon )
     goto LABEL_45;
-  gameObject = UnityEngine_Component__get_gameObject(surplusGaugeBar, 0LL);
-  if ( !gameObject )
+  itemIcon = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)itemIcon, 0LL);
+  if ( !itemIcon )
     goto LABEL_45;
-  UnityEngine_GameObject__SetActive(gameObject, totalFortificationPoint < getFortificationPoint, 0LL);
+  UnityEngine_GameObject__SetActive(
+    (UnityEngine_GameObject_o *)itemIcon,
+    totalFortificationPoint < getFortificationPoint,
+    0LL);
   if ( totalFortificationPoint >= getFortificationPoint )
   {
-    beforeGaugeBar = this->fields.beforeGaugeBar;
-    if ( beforeGaugeBar )
+    itemIcon = (System_String_o *)this->fields.beforeGaugeBar;
+    if ( itemIcon )
     {
       UIProgressBar__set_value(
-        beforeGaugeBar,
-        (float)(totalFortificationPoint - getFortificationPoint) / (float)v42,
+        (UIProgressBar_o *)itemIcon,
+        (float)(totalFortificationPoint - getFortificationPoint) / (float)v36,
         0LL);
-      v54 = this->fields.fortificationInfo;
-      if ( v54 )
+      v41 = this->fields.fortificationInfo;
+      if ( v41 )
       {
-        getGaugeBar = this->fields.getGaugeBar;
-        if ( getGaugeBar )
+        itemIcon = (System_String_o *)this->fields.getGaugeBar;
+        if ( itemIcon )
         {
-          UIProgressBar__set_value(getGaugeBar, (float)v54->fields.totalFortificationPoint / (float)v42, 0LL);
-          v51 = this->fields.surplusGaugeBar;
-          if ( v51 )
+          UIProgressBar__set_value(
+            (UIProgressBar_o *)itemIcon,
+            (float)v41->fields.totalFortificationPoint / (float)v36,
+            0LL);
+          itemIcon = (System_String_o *)this->fields.surplusGaugeBar;
+          if ( itemIcon )
           {
-            v52 = 0.0;
+            v40 = 0.0;
             goto LABEL_44;
           }
         }
       }
     }
 LABEL_45:
-    sub_B170D4();
+    sub_B2C434(itemIcon, v16);
   }
   if ( !*p_fortificationInfo )
     goto LABEL_45;
-  v48 = this->fields.beforeGaugeBar;
-  if ( !v48 )
+  itemIcon = (System_String_o *)this->fields.beforeGaugeBar;
+  if ( !itemIcon )
     goto LABEL_45;
   UIProgressBar__set_value(
-    v48,
+    (UIProgressBar_o *)itemIcon,
     (float)((*p_fortificationInfo)->fields.totalFortificationPoint
-          + v42
+          + v36
           - (*p_fortificationInfo)->fields.getFortificationPoint)
-  / (float)v42,
+  / (float)v36,
     0LL);
-  v49 = this->fields.getGaugeBar;
-  if ( !v49 )
+  itemIcon = (System_String_o *)this->fields.getGaugeBar;
+  if ( !itemIcon )
     goto LABEL_45;
-  UIProgressBar__set_value(v49, 1.0, 0LL);
-  v50 = this->fields.fortificationInfo;
-  if ( !v50 )
+  UIProgressBar__set_value((UIProgressBar_o *)itemIcon, 1.0, 0LL);
+  v39 = this->fields.fortificationInfo;
+  if ( !v39 )
     goto LABEL_45;
-  v51 = this->fields.surplusGaugeBar;
-  if ( !v51 )
+  itemIcon = (System_String_o *)this->fields.surplusGaugeBar;
+  if ( !itemIcon )
     goto LABEL_45;
-  v52 = (float)v50->fields.totalFortificationPoint / (float)v42;
+  v40 = (float)v39->fields.totalFortificationPoint / (float)v36;
 LABEL_44:
-  UIProgressBar__set_value(v51, v52, 0LL);
+  UIProgressBar__set_value((UIProgressBar_o *)itemIcon, v40, 0LL);
 }

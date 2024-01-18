@@ -1,9 +1,9 @@
 void __fastcall UpdateFieldViewActionData___ctor(UpdateFieldViewActionData_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FAA98 & 1) == 0 )
+  if ( (byte_4188A76 & 1) == 0 )
   {
-    sub_B16FFC(&BattleActionData_TypeInfo, method);
-    byte_40FAA98 = 1;
+    sub_B2C35C(&BattleActionData_TypeInfo, method);
+    byte_4188A76 = 1;
   }
   if ( (BYTE3(BattleActionData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleActionData_TypeInfo->_2.cctor_finished )
@@ -21,6 +21,6 @@ void __fastcall UpdateFieldViewActionData__ExecAction(
         const MethodInfo *method)
 {
   if ( !perf )
-    sub_B170D4();
+    sub_B2C434(this, 0LL);
   BattlePerformance__UpdateFieldView(perf, 0LL);
 }

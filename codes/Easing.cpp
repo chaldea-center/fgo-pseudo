@@ -271,7 +271,7 @@ LABEL_50:
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_Color_o __fastcall Easing__Func_33156124(
+UnityEngine_Color_o __fastcall Easing__Func_33138088(
         UnityEngine_Color_o from,
         UnityEngine_Color_o to,
         float t,
@@ -357,8 +357,8 @@ UnityEngine_Color_o __fastcall Easing__Func_33156124(
     case 1:
       goto LABEL_21;
     case 2:
-      v51 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, -1.0, 0LL);
-      *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(v51, t, 0LL);
+      v51 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, -1.0, 0LL);
+      *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(v51, t, 0LL);
       v19 = t + -2.0;
       break;
     case 3:
@@ -368,8 +368,8 @@ UnityEngine_Color_o __fastcall Easing__Func_33156124(
         v20 = 0.5;
         goto LABEL_20;
       }
-      v60 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, -1.0, 0LL);
-      *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(v60, 0.5, 0LL);
+      v60 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, -1.0, 0LL);
+      *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(v60, 0.5, 0LL);
       v19 = (float)((float)(v14 + -1.0) * (float)((float)(v14 + -1.0) + -2.0)) + -1.0;
       break;
     case 4:
@@ -386,7 +386,7 @@ UnityEngine_Color_o __fastcall Easing__Func_33156124(
         goto LABEL_18;
       }
       v43 = v14 + -2.0;
-      *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
+      *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
       v44 = v43 * v43;
       goto LABEL_47;
     case 7:
@@ -401,7 +401,7 @@ UnityEngine_Color_o __fastcall Easing__Func_33156124(
         v25 = 0.5;
         goto LABEL_16;
       }
-      *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
+      *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
       v19 = 2.0
           - (float)((float)(v14 + -2.0)
                   * (float)((float)(v14 + -2.0) * (float)((float)(v14 + -2.0) * (float)(v14 + -2.0))));
@@ -419,34 +419,34 @@ LABEL_12:
       if ( (float)(t + t) >= 1.0 )
       {
         v43 = v14 + -2.0;
-        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
+        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
         v44 = v43 * (float)(v43 * (float)(v43 * v43));
 LABEL_47:
         v19 = (float)(v43 * v44) + 2.0;
       }
       else
       {
-        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
+        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
 LABEL_15:
         v25 = v14;
 LABEL_16:
-        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, v25, 0LL);
+        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, v25, 0LL);
 LABEL_17:
         v23 = v14;
 LABEL_18:
-        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, v23, 0LL);
+        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, v23, 0LL);
 LABEL_19:
         v20 = v14;
 LABEL_20:
-        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, v20, 0LL);
+        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, v20, 0LL);
 LABEL_21:
-        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, v14, 0LL);
+        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, v14, 0LL);
 LABEL_22:
         v19 = v14;
       }
       break;
     case 13:
-      v52 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, -1.0, 0LL);
+      v52 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, -1.0, 0LL);
       v48 = v52.fields.r;
       v46 = v52.fields.b;
       v47 = v52.fields.g;
@@ -456,7 +456,7 @@ LABEL_22:
       v53.fields.b = v46;
       v53.fields.g = v47;
       v53.fields.a = a;
-      v54 = UnityEngine_Color__op_Multiply_40667136(v53, v26, 0LL);
+      v54 = UnityEngine_Color__op_Multiply_40634308(v53, v26, 0LL);
       v64.fields.r = v15;
       v64.fields.g = v16;
       v64.fields.b = v17;
@@ -467,7 +467,7 @@ LABEL_22:
       v31 = sinf(t * 1.5708);
       goto LABEL_33;
     case 15:
-      v55 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, -1.0, 0LL);
+      v55 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, -1.0, 0LL);
       v56 = UnityEngine_Color__op_Division(v55, 2.0, 0LL);
       v32 = v56.fields.r;
       v33 = v56.fields.g;
@@ -487,7 +487,7 @@ LABEL_28:
       goto LABEL_34;
     case 18:
       v37 = t + t;
-      v57 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
+      v57 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
       v32 = v57.fields.r;
       v33 = v57.fields.g;
       v34 = v57.fields.b;
@@ -512,7 +512,7 @@ LABEL_34:
       v14 = t + t;
       if ( (float)(t + t) >= 1.0 )
       {
-        v61 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
+        v61 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, 0.5, 0LL);
         v32 = v61.fields.r;
         v33 = v61.fields.g;
         v34 = v61.fields.b;
@@ -521,10 +521,10 @@ LABEL_34:
       }
       else
       {
-        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, -1.0, 0LL);
+        *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, -1.0, 0LL);
         v38 = 0.5;
 LABEL_37:
-        v58 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, v38, 0LL);
+        v58 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, v38, 0LL);
         v32 = v58.fields.r;
         v33 = v58.fields.g;
         v36 = sqrtf(1.0 - (float)(v14 * v14));
@@ -542,7 +542,7 @@ LABEL_39:
     default:
       goto LABEL_42;
   }
-  *(UnityEngine_Color_o *)&v27 = UnityEngine_Color__op_Multiply_40667136(*(UnityEngine_Color_o *)&v10, v19, 0LL);
+  *(UnityEngine_Color_o *)&v27 = UnityEngine_Color__op_Multiply_40634308(*(UnityEngine_Color_o *)&v10, v19, 0LL);
 LABEL_41:
   v65.fields.a = v49;
   v65.fields.r = r;
@@ -566,7 +566,7 @@ LABEL_42:
 }
 
 
-float __fastcall Easing__Func_33157772(float from, float to, float t, int32_t type, const MethodInfo *method)
+float __fastcall Easing__Func_33139736(float from, float to, float t, int32_t type, const MethodInfo *method)
 {
   float v5; // s8
   float v6; // s9

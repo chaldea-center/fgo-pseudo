@@ -9,20 +9,20 @@ System_Int32_array *__fastcall PartyAllFieldTargetAggregator__GetCandidate(
         const MethodInfo *method)
 {
   BattleData_o *battleData; // x20
-  int32_t actorId; // w0
+  BattleData_o *actorId; // x0
+  __int64 v5; // x1
   bool isEnemyID; // w20
-  BattleData_o *v6; // x0
 
   battleData = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0LL);
-  actorId = TargetAggregator__get_actorId((TargetAggregator_o *)this, 0LL);
+  actorId = (BattleData_o *)TargetAggregator__get_actorId((TargetAggregator_o *)this, 0LL);
   if ( !battleData
-    || (isEnemyID = BattleData__isEnemyID(battleData, actorId, 0LL),
-        (v6 = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0LL)) == 0LL) )
+    || (isEnemyID = BattleData__isEnemyID(battleData, (int32_t)actorId, 0LL),
+        (actorId = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0LL)) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(actorId, v5);
   }
   if ( isEnemyID )
-    return BattleData__getFieldEnemyServantIDList(v6, 0, 0LL);
+    return BattleData__getFieldEnemyServantIDList(actorId, 0, 0LL);
   else
-    return BattleData__getFieldPlayerServantIDList(v6, 0LL, 0LL);
+    return BattleData__getFieldPlayerServantIDList(actorId, 0LL, 0LL);
 }

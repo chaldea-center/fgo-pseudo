@@ -1,14 +1,14 @@
 void __fastcall UserQuestRouteMaster___ctor(UserQuestRouteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F8100 & 1) == 0 )
+  if ( (byte_4185E17 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string___ctor__, method);
-    byte_40F8100 = 1;
+    sub_B2C35C(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string___ctor__, method);
+    byte_4185E17 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     285,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ UserQuestRouteEntity_o *__fastcall UserQuestRouteMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40F80FE & 1) == 0 )
+  if ( (byte_4185E15 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__GetEntity__, userId);
-    byte_40F80FE = 1;
+    sub_B2C35C(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__GetEntity__, userId);
+    byte_4185E15 = 1;
   }
   PK = UserQuestRouteEntity__CreatePK(userId, questId, routeId, *(const MethodInfo **)&routeId);
   return (UserQuestRouteEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                      (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                      PK,
-                                     (const MethodInfo_266F7D8 *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__GetEntity__);
+                                     (const MethodInfo_24E4520 *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool __fastcall UserQuestRouteMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40F80FF & 1) == 0 )
+  if ( (byte_4185E16 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__TryGetEntity__, entity);
-    byte_40F80FF = 1;
+    sub_B2C35C(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__TryGetEntity__, entity);
+    byte_4185E16 = 1;
   }
   PK = UserQuestRouteEntity__CreatePK(userId, questId, routeId, *(const MethodInfo **)&questId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__TryGetEntity__);
 }
 
 

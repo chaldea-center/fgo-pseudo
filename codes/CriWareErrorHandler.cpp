@@ -17,55 +17,47 @@ void __fastcall CriWareErrorHandler__Awake(CriWareErrorHandler_o *this, const Me
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
-  CriWareErrorHandler_c *v6; // x0
+  CriWareErrorHandler_c *inited; // x0
   const MethodInfo *v7; // x1
   const MethodInfo *v8; // x1
   const MethodInfo *v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x2
-  __int64 v12; // x3
-  __int64 v13; // x4
-  CriWareErrorHandler_ErrorCallbackFunc_o *v14; // x20
-  const MethodInfo *v15; // x1
+  CriWareErrorHandler_ErrorCallbackFunc_o *v10; // x20
+  const MethodInfo *v11; // x1
   UnityEngine_Component_o *transform; // x0
+  __int64 v13; // x1
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_40F033D & 1) == 0 )
+  if ( (byte_417DF1D & 1) == 0 )
   {
-    sub_B16FFC(&Method_CriWareErrorHandler_ErrorCallbackFromNative__, method);
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, v3);
-    sub_B16FFC(&CriWareErrorHandler_ErrorCallbackFunc_TypeInfo, v4);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    byte_40F033D = 1;
+    sub_B2C35C(&Method_CriWareErrorHandler_ErrorCallbackFromNative__, method);
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, v3);
+    sub_B2C35C(&CriWareErrorHandler_ErrorCallbackFunc_TypeInfo, v4);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
+    byte_417DF1D = 1;
   }
-  v6 = CriWareErrorHandler_TypeInfo;
+  inited = CriWareErrorHandler_TypeInfo;
   if ( (BYTE3(CriWareErrorHandler_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CriWareErrorHandler_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CriWareErrorHandler_TypeInfo);
-    v6 = CriWareErrorHandler_TypeInfo;
+    inited = CriWareErrorHandler_TypeInfo;
   }
-  if ( ++v6->static_fields->initializationCount == 1 )
+  if ( ++inited->static_fields->initializationCount == 1 )
   {
-    if ( (BYTE3(v6->vtable._0_Equals.methodPtr) & 4) != 0 && !v6->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v6);
-    CriWareErrorHandler__CRIWAREA2E6711B((const MethodInfo *)v6);
+    if ( (BYTE3(inited->vtable._0_Equals.methodPtr) & 4) != 0 && !inited->_2.cctor_finished )
+      inited = (CriWareErrorHandler_c *)j_il2cpp_runtime_class_init_0(inited);
+    CriWareErrorHandler__CRIWAREA2E6711B((const MethodInfo *)inited);
     CriWareErrorHandler__CRIWARE527DA518(BYTE1(this->fields.messageBufferCounts), v7);
     CriWareErrorHandler__CRIWARE063A11A2(*((_DWORD *)&this->fields + 7), v8);
     CriWareErrorHandler__CRIWAREDBC6F415(this->fields.messageBufferCounts, v9);
-    v14 = (CriWareErrorHandler_ErrorCallbackFunc_o *)sub_B170CC(
-                                                       CriWareErrorHandler_ErrorCallbackFunc_TypeInfo,
-                                                       v10,
-                                                       v11,
-                                                       v12,
-                                                       v13);
-    CriWareErrorHandler_ErrorCallbackFunc___ctor(v14, 0LL, Method_CriWareErrorHandler_ErrorCallbackFromNative__, 0LL);
-    CriWareErrorHandler__CRIWARED1107B8D(v14, v15);
+    v10 = (CriWareErrorHandler_ErrorCallbackFunc_o *)sub_B2C42C(CriWareErrorHandler_ErrorCallbackFunc_TypeInfo);
+    CriWareErrorHandler_ErrorCallbackFunc___ctor(v10, 0LL, Method_CriWareErrorHandler_ErrorCallbackFromNative__, 0LL);
+    CriWareErrorHandler__CRIWARED1107B8D(v10, v11);
     if ( BYTE2(this->fields.messageBufferCounts) )
     {
       transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       if ( !transform )
-        sub_B170D4();
+        sub_B2C434(0LL, v13);
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(transform, 0LL);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -82,7 +74,7 @@ void __fastcall CriWareErrorHandler__Awake(CriWareErrorHandler_o *this, const Me
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_34809464((UnityEngine_Object_o *)this, 0LL);
+    UnityEngine_Object__Destroy_35314896((UnityEngine_Object_o *)this, 0LL);
   }
 }
 
@@ -94,8 +86,8 @@ void __fastcall CriWareErrorHandler__CRIWARE063A11A2(uint32_t length, const Meth
   int v5; // [xsp+28h] [xbp-18h]
   char v6; // [xsp+2Ch] [xbp-14h]
 
-  v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))qword_40F0348;
-  if ( !qword_40F0348 )
+  v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))qword_417DF28;
+  if ( !qword_417DF28 )
   {
     v4[0] = (__int64)"cri_ware_unity";
     v4[1] = 14LL;
@@ -104,8 +96,8 @@ void __fastcall CriWareErrorHandler__CRIWARE063A11A2(uint32_t length, const Meth
     v4[4] = 0x200000000LL;
     v5 = 4;
     v6 = 0;
-    v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))sub_B17480(v4);
-    qword_40F0348 = (__int64)v2;
+    v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))sub_B2C7E0(v4);
+    qword_417DF28 = (__int64)v2;
   }
   v2(length, method);
 }
@@ -118,8 +110,8 @@ void __fastcall CriWareErrorHandler__CRIWARE3BCC893C(const MethodInfo *method)
   int v3; // [xsp+28h] [xbp-18h]
   char v4; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (void (*)(void))qword_40F0358;
-  if ( !qword_40F0358 )
+  v1 = (void (*)(void))qword_417DF38;
+  if ( !qword_417DF38 )
   {
     v2[0] = (__int64)"cri_ware_unity";
     v2[1] = 14LL;
@@ -128,8 +120,8 @@ void __fastcall CriWareErrorHandler__CRIWARE3BCC893C(const MethodInfo *method)
     v2[4] = 0x200000000LL;
     v3 = 0;
     v4 = 0;
-    v1 = (void (*)(void))sub_B17480(v2);
-    qword_40F0358 = (__int64)v1;
+    v1 = (void (*)(void))sub_B2C7E0(v2);
+    qword_417DF38 = (__int64)v1;
   }
   v1();
 }
@@ -142,8 +134,8 @@ void __fastcall CriWareErrorHandler__CRIWARE4A393AE0(const MethodInfo *method)
   int v3; // [xsp+28h] [xbp-18h]
   char v4; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (void (*)(void))qword_40F0368;
-  if ( !qword_40F0368 )
+  v1 = (void (*)(void))qword_417DF48;
+  if ( !qword_417DF48 )
   {
     v2[0] = (__int64)"cri_ware_unity";
     v2[1] = 14LL;
@@ -152,8 +144,8 @@ void __fastcall CriWareErrorHandler__CRIWARE4A393AE0(const MethodInfo *method)
     v2[4] = 0x200000000LL;
     v3 = 0;
     v4 = 0;
-    v1 = (void (*)(void))sub_B17480(v2);
-    qword_40F0368 = (__int64)v1;
+    v1 = (void (*)(void))sub_B2C7E0(v2);
+    qword_417DF48 = (__int64)v1;
   }
   v1();
 }
@@ -166,8 +158,8 @@ void __fastcall CriWareErrorHandler__CRIWARE527DA518(bool sw, const MethodInfo *
   int v5; // [xsp+28h] [xbp-18h]
   char v6; // [xsp+2Ch] [xbp-14h]
 
-  v2 = (void (__fastcall *)(bool, const MethodInfo *))qword_40F0378;
-  if ( !qword_40F0378 )
+  v2 = (void (__fastcall *)(bool, const MethodInfo *))qword_417DF58;
+  if ( !qword_417DF58 )
   {
     v4[0] = (__int64)"cri_ware_unity";
     v4[1] = 14LL;
@@ -176,8 +168,8 @@ void __fastcall CriWareErrorHandler__CRIWARE527DA518(bool sw, const MethodInfo *
     v4[4] = 0x200000000LL;
     v5 = 4;
     v6 = 0;
-    v2 = (void (__fastcall *)(bool, const MethodInfo *))sub_B17480(v4);
-    qword_40F0378 = (__int64)v2;
+    v2 = (void (__fastcall *)(bool, const MethodInfo *))sub_B2C7E0(v4);
+    qword_417DF58 = (__int64)v2;
   }
   v2(sw, method);
 }
@@ -190,8 +182,8 @@ intptr_t __fastcall CriWareErrorHandler__CRIWARE841C0338(const MethodInfo *metho
   int v4; // [xsp+28h] [xbp-18h]
   char v5; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (const MethodInfo *)qword_40F0370;
-  if ( !qword_40F0370 )
+  v1 = (const MethodInfo *)qword_417DF50;
+  if ( !qword_417DF50 )
   {
     v3[0] = (__int64)"cri_ware_unity";
     v3[1] = 14LL;
@@ -200,9 +192,9 @@ intptr_t __fastcall CriWareErrorHandler__CRIWARE841C0338(const MethodInfo *metho
     v3[4] = 0x200000000LL;
     v4 = 0;
     v5 = 0;
-    method = (const MethodInfo *)sub_B17480(v3);
+    method = (const MethodInfo *)sub_B2C7E0(v3);
     v1 = method;
-    qword_40F0370 = (__int64)method;
+    qword_417DF50 = (__int64)method;
   }
   return ((__int64 (__fastcall *)(const MethodInfo *))v1)(method);
 }
@@ -215,8 +207,8 @@ void __fastcall CriWareErrorHandler__CRIWAREA2E6711B(const MethodInfo *method)
   int v3; // [xsp+28h] [xbp-18h]
   char v4; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (void (*)(void))qword_40F0350;
-  if ( !qword_40F0350 )
+  v1 = (void (*)(void))qword_417DF30;
+  if ( !qword_417DF30 )
   {
     v2[0] = (__int64)"cri_ware_unity";
     v2[1] = 14LL;
@@ -225,8 +217,8 @@ void __fastcall CriWareErrorHandler__CRIWAREA2E6711B(const MethodInfo *method)
     v2[4] = 0x200000000LL;
     v3 = 0;
     v4 = 0;
-    v1 = (void (*)(void))sub_B17480(v2);
-    qword_40F0350 = (__int64)v1;
+    v1 = (void (*)(void))sub_B2C7E0(v2);
+    qword_417DF30 = (__int64)v1;
   }
   v1();
 }
@@ -244,7 +236,7 @@ void __fastcall CriWareErrorHandler__CRIWARED1107B8D(
   int v8; // [xsp+28h] [xbp-18h]
   char v9; // [xsp+2Ch] [xbp-14h]
 
-  if ( !qword_40F0380 )
+  if ( !qword_417DF60 )
   {
     v7[0] = (__int64)"cri_ware_unity";
     v7[1] = 14LL;
@@ -253,10 +245,10 @@ void __fastcall CriWareErrorHandler__CRIWARED1107B8D(
     v7[4] = 0x200000000LL;
     v8 = 8;
     v9 = 0;
-    qword_40F0380 = (__int64 (__fastcall *)(_QWORD))sub_B17480(v7);
+    qword_417DF60 = (__int64 (__fastcall *)(_QWORD))sub_B2C7E0(v7);
   }
-  v6 = sub_B17478(callback, method, v2, v3, v4);
-  qword_40F0380(v6);
+  v6 = sub_B2C7D8(callback, method, v2, v3, v4);
+  qword_417DF60(v6);
 }
 
 
@@ -267,8 +259,8 @@ void __fastcall CriWareErrorHandler__CRIWAREDBC6F415(bool sw, const MethodInfo *
   int v5; // [xsp+28h] [xbp-18h]
   char v6; // [xsp+2Ch] [xbp-14h]
 
-  v2 = (void (__fastcall *)(bool, const MethodInfo *))qword_40F0360;
-  if ( !qword_40F0360 )
+  v2 = (void (__fastcall *)(bool, const MethodInfo *))qword_417DF40;
+  if ( !qword_417DF40 )
   {
     v4[0] = (__int64)"cri_ware_unity";
     v4[1] = 14LL;
@@ -277,8 +269,8 @@ void __fastcall CriWareErrorHandler__CRIWAREDBC6F415(bool sw, const MethodInfo *
     v4[4] = 0x200000000LL;
     v5 = 4;
     v6 = 0;
-    v2 = (void (__fastcall *)(bool, const MethodInfo *))sub_B17480(v4);
-    qword_40F0360 = (__int64)v2;
+    v2 = (void (__fastcall *)(bool, const MethodInfo *))sub_B2C7E0(v4);
+    qword_417DF40 = (__int64)v2;
   }
   v2(sw, method);
 }
@@ -303,7 +295,7 @@ void __fastcall CriWareErrorHandler__DequeueErrorMessages(CriWareErrorHandler_o 
   __int64 v3; // x1
   __int64 v4; // x1
   int v5; // w23
-  CriWareErrorHandler_c *v6; // x0
+  CriWareErrorHandler_c *inited; // x0
   intptr_t v7; // w22
   System_String_o *v8; // x0
   System_String_o *v9; // x20
@@ -313,26 +305,26 @@ void __fastcall CriWareErrorHandler__DequeueErrorMessages(CriWareErrorHandler_o 
   int v13; // [xsp+8h] [xbp-68h]
   int v14; // [xsp+18h] [xbp-58h]
 
-  if ( (byte_40F0341 & 1) == 0 )
+  if ( (byte_417DF21 & 1) == 0 )
   {
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, method);
-    sub_B16FFC(&IntPtr_TypeInfo, v2);
-    sub_B16FFC(&System_Runtime_InteropServices_Marshal_TypeInfo, v3);
-    sub_B16FFC(&string_TypeInfo, v4);
-    byte_40F0341 = 1;
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, method);
+    sub_B2C35C(&IntPtr_TypeInfo, v2);
+    sub_B2C35C(&System_Runtime_InteropServices_Marshal_TypeInfo, v3);
+    sub_B2C35C(&string_TypeInfo, v4);
+    byte_417DF21 = 1;
   }
   v14 = 0;
   v5 = 0;
   do
   {
-    v6 = CriWareErrorHandler_TypeInfo;
+    inited = CriWareErrorHandler_TypeInfo;
     v13 = v5;
     if ( (BYTE3(CriWareErrorHandler_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CriWareErrorHandler_TypeInfo->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(CriWareErrorHandler_TypeInfo);
+      inited = (CriWareErrorHandler_c *)j_il2cpp_runtime_class_init_0(CriWareErrorHandler_TypeInfo);
     }
-    v7 = CriWareErrorHandler__CRIWARE841C0338((const MethodInfo *)v6);
+    v7 = CriWareErrorHandler__CRIWARE841C0338((const MethodInfo *)inited);
     if ( System_IntPtr__op_Equality(v7, 0, 0LL) )
       break;
     if ( (BYTE3(System_Runtime_InteropServices_Marshal_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -363,10 +355,10 @@ void __fastcall CriWareErrorHandler__DequeueErrorMessages(CriWareErrorHandler_o 
 
 void __fastcall CriWareErrorHandler__ErrorCallbackFromNative(System_String_o *errmsg, const MethodInfo *method)
 {
-  if ( (byte_40F0344 & 1) == 0 )
+  if ( (byte_417DF24 & 1) == 0 )
   {
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, method);
-    byte_40F0344 = 1;
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, method);
+    byte_417DF24 = 1;
   }
   if ( (BYTE3(CriWareErrorHandler_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CriWareErrorHandler_TypeInfo->_2.cctor_finished )
@@ -382,12 +374,14 @@ void __fastcall CriWareErrorHandler__HandleMessage(System_String_o *errmsg, cons
   CriWareErrorHandler_c *v3; // x0
   struct CriWareErrorHandler_StaticFields *static_fields; // x8
   CriWareErrorHandler_Callback_o *OnCallback; // x8
+  __int64 inited; // x0
+  __int64 v7; // x1
   CriWareErrorHandler_Callback_o *callback; // x8
 
-  if ( (byte_40F0342 & 1) == 0 )
+  if ( (byte_417DF22 & 1) == 0 )
   {
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, method);
-    byte_40F0342 = 1;
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, method);
+    byte_417DF22 = 1;
   }
   if ( errmsg )
   {
@@ -420,7 +414,7 @@ LABEL_36:
       {
         if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) != 0 && !v3->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v3);
+          inited = j_il2cpp_runtime_class_init_0(v3);
           OnCallback = CriWareErrorHandler_TypeInfo->static_fields->OnCallback;
           if ( !OnCallback )
             goto LABEL_33;
@@ -438,14 +432,14 @@ LABEL_36:
       {
         if ( (BYTE3(v3->vtable._0_Equals.methodPtr) & 4) == 0
           || v3->_2.cctor_finished
-          || (j_il2cpp_runtime_class_init_0(v3),
+          || (inited = j_il2cpp_runtime_class_init_0(v3),
               (callback = CriWareErrorHandler_TypeInfo->static_fields->callback) != 0LL) )
         {
           CriWareErrorHandler_Callback__Invoke(callback, errmsg, 0LL);
           return;
         }
 LABEL_33:
-        sub_B170D4();
+        sub_B2C434(inited, v7);
       }
     }
     else
@@ -464,10 +458,10 @@ void __fastcall CriWareErrorHandler__OnDestroy(CriWareErrorHandler_o *this, cons
   const MethodInfo *v3; // x0
   const MethodInfo *v4; // x0
 
-  if ( (byte_40F0340 & 1) == 0 )
+  if ( (byte_417DF20 & 1) == 0 )
   {
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, method);
-    byte_40F0340 = 1;
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, method);
+    byte_417DF20 = 1;
   }
   v2 = CriWareErrorHandler_TypeInfo;
   if ( (BYTE3(CriWareErrorHandler_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -491,10 +485,10 @@ void __fastcall CriWareErrorHandler__OnDisable(CriWareErrorHandler_o *this, cons
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_40F033F & 1) == 0 )
+  if ( (byte_417DF1F & 1) == 0 )
   {
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, method);
-    byte_40F033F = 1;
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, method);
+    byte_417DF1F = 1;
   }
   CriMonoBehaviour__OnDisable((CriMonoBehaviour_o *)this, method);
   if ( (BYTE3(CriWareErrorHandler_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -510,51 +504,44 @@ void __fastcall CriWareErrorHandler__OnEnable(CriWareErrorHandler_o *this, const
 {
   __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x3
-  __int64 v8; // x4
-  CriWareErrorHandler_ErrorCallbackFunc_o *v9; // x19
-  const MethodInfo *v10; // x1
+  CriWareErrorHandler_ErrorCallbackFunc_o *v5; // x19
+  const MethodInfo *v6; // x1
 
-  if ( (byte_40F033E & 1) == 0 )
+  if ( (byte_417DF1E & 1) == 0 )
   {
-    sub_B16FFC(&Method_CriWareErrorHandler_ErrorCallbackFromNative__, method);
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, v3);
-    sub_B16FFC(&CriWareErrorHandler_ErrorCallbackFunc_TypeInfo, v4);
-    byte_40F033E = 1;
+    sub_B2C35C(&Method_CriWareErrorHandler_ErrorCallbackFromNative__, method);
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, v3);
+    sub_B2C35C(&CriWareErrorHandler_ErrorCallbackFunc_TypeInfo, v4);
+    byte_417DF1E = 1;
   }
   CriMonoBehaviour__OnEnable((CriMonoBehaviour_o *)this, method);
-  v9 = (CriWareErrorHandler_ErrorCallbackFunc_o *)sub_B170CC(
-                                                    CriWareErrorHandler_ErrorCallbackFunc_TypeInfo,
-                                                    v5,
-                                                    v6,
-                                                    v7,
-                                                    v8);
-  CriWareErrorHandler_ErrorCallbackFunc___ctor(v9, 0LL, Method_CriWareErrorHandler_ErrorCallbackFromNative__, 0LL);
+  v5 = (CriWareErrorHandler_ErrorCallbackFunc_o *)sub_B2C42C(CriWareErrorHandler_ErrorCallbackFunc_TypeInfo);
+  CriWareErrorHandler_ErrorCallbackFunc___ctor(v5, 0LL, Method_CriWareErrorHandler_ErrorCallbackFromNative__, 0LL);
   if ( (BYTE3(CriWareErrorHandler_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CriWareErrorHandler_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CriWareErrorHandler_TypeInfo);
   }
-  CriWareErrorHandler__CRIWARED1107B8D(v9, v10);
+  CriWareErrorHandler__CRIWARED1107B8D(v5, v6);
 }
 
 
 void __fastcall CriWareErrorHandler__OutputDefaultLog(System_String_o *errmsg, const MethodInfo *method)
 {
+  System_String_o *v2; // x19
   __int64 v3; // x1
 
-  if ( (byte_40F0343 & 1) == 0 )
+  v2 = errmsg;
+  if ( (byte_417DF23 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15167/*"W"*/, method);
-    sub_B16FFC(&StringLiteral_5413/*"E"*/, v3);
-    byte_40F0343 = 1;
+    sub_B2C35C(&StringLiteral_15227/*"W"*/, method);
+    errmsg = (System_String_o *)sub_B2C35C(&StringLiteral_5432/*"E"*/, v3);
+    byte_417DF23 = 1;
   }
-  if ( !errmsg )
-    sub_B170D4();
-  if ( !System_String__StartsWith(errmsg, (System_String_o *)StringLiteral_5413/*"E"*/, 0LL) )
-    System_String__StartsWith(errmsg, (System_String_o *)StringLiteral_15167/*"W"*/, 0LL);
+  if ( !v2 )
+    sub_B2C434(errmsg, method);
+  if ( !System_String__StartsWith(v2, (System_String_o *)StringLiteral_5432/*"E"*/, 0LL) )
+    System_String__StartsWith(v2, (System_String_o *)StringLiteral_15227/*"W"*/, 0LL);
 }
 
 
@@ -577,11 +564,11 @@ void __fastcall CriWareErrorHandler__add_OnCallback(CriWareErrorHandler_Callback
   CriWareErrorHandler_Callback_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_40F033B & 1) == 0 )
+  if ( (byte_417DF1B & 1) == 0 )
   {
-    sub_B16FFC(&CriWareErrorHandler_Callback_TypeInfo, method);
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, v3);
-    byte_40F033B = 1;
+    sub_B2C35C(&CriWareErrorHandler_Callback_TypeInfo, method);
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, v3);
+    byte_417DF1B = 1;
   }
   v4 = CriWareErrorHandler_TypeInfo;
   if ( (BYTE3(CriWareErrorHandler_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -607,13 +594,13 @@ void __fastcall CriWareErrorHandler__add_OnCallback(CriWareErrorHandler_Callback
       j_il2cpp_runtime_class_init_0(CriWareErrorHandler_TypeInfo);
       v8 = CriWareErrorHandler_TypeInfo;
     }
-    v9 = sub_B0BA14(&v8->static_fields->OnCallback, v7, OnCallback);
+    v9 = sub_B20D74(&v8->static_fields->OnCallback, v7, OnCallback);
     v10 = OnCallback == (System_Delegate_o *)v9;
     OnCallback = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (CriWareErrorHandler_Callback_o *)sub_B173C8(v6);
+  v11 = (CriWareErrorHandler_Callback_o *)sub_B2C728(v6);
   CriWareErrorHandler__remove_OnCallback(v11, v12);
 }
 
@@ -623,10 +610,10 @@ System_String_o *__fastcall CriWareErrorHandler__get_errorMessage(const MethodIn
   __int64 v1; // x1
   CriWareErrorHandler_c *v2; // x0
 
-  if ( (byte_40F0339 & 1) == 0 )
+  if ( (byte_417DF19 & 1) == 0 )
   {
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, v1);
-    byte_40F0339 = 1;
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, v1);
+    byte_417DF19 = 1;
   }
   v2 = CriWareErrorHandler_TypeInfo;
   if ( (BYTE3(CriWareErrorHandler_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -652,11 +639,11 @@ void __fastcall CriWareErrorHandler__remove_OnCallback(CriWareErrorHandler_Callb
   CriWareErrorHandler_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_40F033C & 1) == 0 )
+  if ( (byte_417DF1C & 1) == 0 )
   {
-    sub_B16FFC(&CriWareErrorHandler_Callback_TypeInfo, method);
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, v3);
-    byte_40F033C = 1;
+    sub_B2C35C(&CriWareErrorHandler_Callback_TypeInfo, method);
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, v3);
+    byte_417DF1C = 1;
   }
   v4 = CriWareErrorHandler_TypeInfo;
   if ( (BYTE3(CriWareErrorHandler_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -682,43 +669,37 @@ void __fastcall CriWareErrorHandler__remove_OnCallback(CriWareErrorHandler_Callb
       j_il2cpp_runtime_class_init_0(CriWareErrorHandler_TypeInfo);
       v8 = CriWareErrorHandler_TypeInfo;
     }
-    v9 = sub_B0BA14(&v8->static_fields->OnCallback, v7, OnCallback);
+    v9 = sub_B20D74(&v8->static_fields->OnCallback, v7, OnCallback);
     v10 = OnCallback == (System_Delegate_o *)v9;
     OnCallback = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (CriWareErrorHandler_o *)sub_B173C8(v6);
+  v11 = (CriWareErrorHandler_o *)sub_B2C728(v6);
   CriWareErrorHandler__Awake(v11, v12);
 }
 
 
 void __fastcall CriWareErrorHandler__set_errorMessage(System_String_o *value, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  CriWareErrorHandler_c *v9; // x0
-  BattleServantConfConponent_o *static_fields; // x0
+  CriWareErrorHandler_c *v3; // x0
+  struct CriWareErrorHandler_StaticFields *static_fields; // x0
 
-  if ( (byte_40F033A & 1) == 0 )
+  if ( (byte_417DF1A & 1) == 0 )
   {
-    sub_B16FFC(&CriWareErrorHandler_TypeInfo, method);
-    byte_40F033A = 1;
+    sub_B2C35C(&CriWareErrorHandler_TypeInfo, method);
+    byte_417DF1A = 1;
   }
-  v9 = CriWareErrorHandler_TypeInfo;
+  v3 = CriWareErrorHandler_TypeInfo;
   if ( (BYTE3(CriWareErrorHandler_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CriWareErrorHandler_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CriWareErrorHandler_TypeInfo);
-    v9 = CriWareErrorHandler_TypeInfo;
+    v3 = CriWareErrorHandler_TypeInfo;
   }
-  static_fields = (BattleServantConfConponent_o *)v9->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)value;
-  sub_B16F98(static_fields, (System_Int32_array **)value, v2, v3, v4, v5, v6, v7);
+  static_fields = v3->static_fields;
+  static_fields->_errorMessage_k__BackingField = value;
+  sub_B2C2F8(static_fields, value);
 }
 
 
@@ -741,7 +722,7 @@ void __fastcall CriWareErrorHandler_Callback___ctor(
   p_method = (BattleServantConfConponent_o *)&this->fields.method;
   p_method->monitor = *(void **)&method;
   p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B16F98(
+  sub_B2C2F8(
     p_method,
     (System_Int32_array **)object,
     *(System_String_array ***)&method,
@@ -764,7 +745,7 @@ System_IAsyncResult_o *__fastcall CriWareErrorHandler_Callback__BeginInvoke(
 
   v6[0] = (__int64)message;
   v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B16FA0(this, v6, callback, object);
+  return (System_IAsyncResult_o *)sub_B2C300(this, v6, callback, object);
 }
 
 
@@ -773,7 +754,7 @@ void __fastcall CriWareErrorHandler_Callback__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B16FA4(result, 0LL, method);
+  sub_B2C304(result, 0LL, method);
 }
 
 
@@ -782,242 +763,247 @@ void __fastcall CriWareErrorHandler_Callback__Invoke(
         System_String_o *message,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v6; // x24
-  CriWareErrorHandler_Callback_o **v7; // x25
+  __int64 v3; // x3
+  __int64 v4; // x8
+  __int64 v7; // x24
+  CriWareErrorHandler_Callback_o **v8; // x25
   __int64 i; // x26
-  unsigned int v9; // w22
+  unsigned int v10; // w22
   __int64 class_0; // x0
-  System_String_c *v11; // x8
-  unsigned __int64 v12; // x10
-  int32_t *v13; // x11
-  __int64 v14; // x0
-  __int64 v15; // x0
-  unsigned int v16; // w23
+  __int64 v12; // x3
+  System_String_c *v13; // x8
+  unsigned __int64 v14; // x10
+  int32_t *v15; // x11
+  __int64 v16; // x0
   __int64 v17; // x0
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  _DWORD *v20; // x11
-  __int64 v21; // x0
-  __int64 v22; // x0
-  __int64 v23; // x0
-  void (__fastcall **v24)(System_String_o *, _QWORD); // x0
+  unsigned int v18; // w23
+  __int64 v19; // x0
+  __int64 v20; // x3
+  __int64 v21; // x8
+  unsigned __int64 v22; // x10
+  _DWORD *v23; // x11
+  __int64 v24; // x0
   __int64 v25; // x0
-  void (__fastcall **v26)(__int64 *, System_String_o *, _QWORD); // x0
-  CriWareErrorHandler_Callback_o *v27; // x8
-  __int64 v28; // x21
-  __int64 *v29; // x22
-  void (__fastcall *v30)(System_String_o *, __int64); // x23
-  char v31; // w0
-  int v32; // w8
-  char v33; // w23
+  __int64 v26; // x0
+  void (__fastcall **v27)(System_String_o *, _QWORD); // x0
+  __int64 v28; // x0
+  void (__fastcall **v29)(__int64 *, System_String_o *, _QWORD); // x0
+  CriWareErrorHandler_Callback_o *v30; // x8
+  __int64 v31; // x21
+  __int64 *v32; // x22
+  void (__fastcall *v33)(System_String_o *, __int64); // x23
   char v34; // w0
-  __int64 v35; // x8
-  __int64 v36; // x1
-  __int64 v37; // x2
-  unsigned __int64 v38; // x10
-  _DWORD *v39; // x11
-  char v40; // w22
-  char v41; // w0
+  int v35; // w8
+  char v36; // w23
+  char v37; // w0
+  __int64 v38; // x3
+  __int64 v39; // x8
+  __int64 v40; // x1
+  __int64 v41; // x2
+  unsigned __int64 v42; // x10
+  _DWORD *v43; // x11
+  char v44; // w22
+  char v45; // w0
+  __int64 v46; // x3
   System_String_c *klass; // x8
-  __int64 v43; // x1
-  __int64 v44; // x2
-  unsigned __int64 v45; // x10
+  __int64 v48; // x1
+  __int64 v49; // x2
+  unsigned __int64 v50; // x10
   int32_t *p_offset; // x11
-  CriWareErrorHandler_Callback_o *v47; // [xsp+8h] [xbp-48h] BYREF
+  CriWareErrorHandler_Callback_o *v52; // [xsp+8h] [xbp-48h] BYREF
 
-  v47 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
+  v52 = this;
+  v4 = *(_QWORD *)&this[1].fields.method_ptr;
+  if ( !v4 )
   {
-    v7 = &v47;
-    v6 = 1LL;
+    v8 = &v52;
+    v7 = 1LL;
     goto LABEL_5;
   }
-  v6 = *(_QWORD *)(v3 + 24);
-  if ( v6 )
+  v7 = *(_QWORD *)(v4 + 24);
+  if ( v7 )
   {
-    v7 = (CriWareErrorHandler_Callback_o **)(v3 + 32);
+    v8 = (CriWareErrorHandler_Callback_o **)(v4 + 32);
 LABEL_5:
-    for ( i = 0LL; i != v6; ++i )
+    for ( i = 0LL; i != v7; ++i )
     {
-      v27 = v7[i];
-      v29 = *(__int64 **)&v27->fields.method;
-      v28 = *(_QWORD *)&v27->fields.extra_arg;
-      v30 = *(void (__fastcall **)(System_String_o *, __int64))&v27->fields.method_ptr;
-      if ( *(__int16 *)(v28 + 72) == -1 )
-        sub_B170B8(*(_QWORD *)&v27->fields.extra_arg, message, method);
-      v31 = sub_B1702C(v28);
-      v32 = *(unsigned __int8 *)(v28 + 74);
-      if ( (v31 & 1) != 0 )
+      v30 = v8[i];
+      v32 = *(__int64 **)&v30->fields.method;
+      v31 = *(_QWORD *)&v30->fields.extra_arg;
+      v33 = *(void (__fastcall **)(System_String_o *, __int64))&v30->fields.method_ptr;
+      if ( *(__int16 *)(v31 + 72) == -1 )
+        sub_B2C418(*(_QWORD *)&v30->fields.extra_arg, message, method, v3);
+      v34 = sub_B2C38C(v31);
+      v35 = *(unsigned __int8 *)(v31 + 74);
+      if ( (v34 & 1) != 0 )
       {
-        if ( v32 == 1 )
+        if ( v35 == 1 )
           goto LABEL_58;
       }
       else
       {
-        if ( v32 != 1 )
+        if ( v35 != 1 )
         {
-          if ( *(__int16 *)(v28 + 72) != -1 && this->fields.m_target )
+          if ( *(__int16 *)(v31 + 72) != -1 && this->fields.m_target )
           {
-            v40 = sub_B17024(v28);
-            v41 = sub_B17428(v28);
-            if ( (v40 & 1) != 0 )
+            v44 = sub_B2C384(v31);
+            v45 = sub_B2C788(v31);
+            if ( (v44 & 1) != 0 )
             {
-              if ( (v41 & 1) != 0 )
+              if ( (v45 & 1) != 0 )
               {
                 klass = message->klass;
-                v43 = *(_QWORD *)(v28 + 24);
-                v44 = *(unsigned __int16 *)(v28 + 72);
+                v48 = *(_QWORD *)(v31 + 24);
+                v49 = *(unsigned __int16 *)(v31 + 72);
                 if ( *(_WORD *)&message->klass->_2.bitflags1 )
                 {
-                  v45 = 0LL;
+                  v50 = 0LL;
                   p_offset = &klass->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)p_offset - 1) != v43 )
+                  while ( *((_QWORD *)p_offset - 1) != v48 )
                   {
-                    ++v45;
+                    ++v50;
                     p_offset += 4;
-                    if ( v45 >= *(unsigned __int16 *)&message->klass->_2.bitflags1 )
+                    if ( v50 >= *(unsigned __int16 *)&message->klass->_2.bitflags1 )
                       goto LABEL_57;
                   }
-                  v23 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v44);
+                  v26 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v49);
                 }
                 else
                 {
 LABEL_57:
-                  v23 = sub_AAFEF8(message, v43, v44);
+                  v26 = sub_AC5258(message, v48, v49, v46);
                 }
-                v15 = *(_QWORD *)(v23 + 8);
+                v17 = *(_QWORD *)(v26 + 8);
               }
               else
               {
-                v15 = *((_QWORD *)&message->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72));
+                v17 = *((_QWORD *)&message->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v31 + 72));
               }
-              v24 = (void (__fastcall **)(System_String_o *, _QWORD))sub_B170AC(v15, v28);
-              (*v24)(message, v24);
+              v27 = (void (__fastcall **)(System_String_o *, _QWORD))sub_B2C40C(v17, v31);
+              (*v27)(message, v27);
             }
             else
             {
-              v9 = *(unsigned __int16 *)(v28 + 72);
-              if ( (v41 & 1) != 0 )
+              v10 = *(unsigned __int16 *)(v31 + 72);
+              if ( (v45 & 1) != 0 )
               {
-                class_0 = j_il2cpp_method_get_class_0(v28);
-                v11 = message->klass;
+                class_0 = j_il2cpp_method_get_class_0(v31);
+                v13 = message->klass;
                 if ( *(_WORD *)&message->klass->_2.bitflags1 )
                 {
-                  v12 = 0LL;
-                  v13 = &v11->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)v13 - 1) != class_0 )
+                  v14 = 0LL;
+                  v15 = &v13->_1.interfaceOffsets->offset;
+                  while ( *((_QWORD *)v15 - 1) != class_0 )
                   {
-                    ++v12;
-                    v13 += 4;
-                    if ( v12 >= *(unsigned __int16 *)&message->klass->_2.bitflags1 )
+                    ++v14;
+                    v15 += 4;
+                    if ( v14 >= *(unsigned __int16 *)&message->klass->_2.bitflags1 )
                       goto LABEL_11;
                   }
-                  v14 = (__int64)(&v11->vtable._0_Equals.method + 2 * (int)(*v13 + v9));
+                  v16 = (__int64)(&v13->vtable._0_Equals.method + 2 * (int)(*v15 + v10));
                 }
                 else
                 {
 LABEL_11:
-                  v14 = sub_AAFEF8(message, class_0, v9);
+                  v16 = sub_AC5258(message, class_0, v10, v12);
                 }
-                (*(void (__fastcall **)(System_String_o *, _QWORD))v14)(message, *(_QWORD *)(v14 + 8));
+                (*(void (__fastcall **)(System_String_o *, _QWORD))v16)(message, *(_QWORD *)(v16 + 8));
               }
               else
               {
                 (*((void (__fastcall **)(System_String_o *, _QWORD))&message->klass->vtable._0_Equals.method
-                 + 2 * *(unsigned __int16 *)(v28 + 72)))(
+                 + 2 * *(unsigned __int16 *)(v31 + 72)))(
                   message,
-                  *((_QWORD *)&message->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72)));
+                  *((_QWORD *)&message->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v31 + 72)));
               }
             }
             continue;
           }
 LABEL_58:
-          v30(message, v28);
+          v33(message, v31);
           continue;
         }
-        if ( !v29 )
+        if ( !v32 )
           goto LABEL_58;
-        if ( *(__int16 *)(v28 + 72) != -1 && (*(_BYTE *)(*v29 + 277) & 1) == 0 && this->fields.m_target )
+        if ( *(__int16 *)(v31 + 72) != -1 && (*(_BYTE *)(*v32 + 277) & 1) == 0 && this->fields.m_target )
         {
-          v33 = sub_B17024(v28);
-          v34 = sub_B17428(v28);
-          if ( (v33 & 1) != 0 )
+          v36 = sub_B2C384(v31);
+          v37 = sub_B2C788(v31);
+          if ( (v36 & 1) != 0 )
           {
-            if ( (v34 & 1) != 0 )
+            if ( (v37 & 1) != 0 )
             {
-              v35 = *v29;
-              v36 = *(_QWORD *)(v28 + 24);
-              v37 = *(unsigned __int16 *)(v28 + 72);
-              if ( *(_WORD *)(*v29 + 298) )
+              v39 = *v32;
+              v40 = *(_QWORD *)(v31 + 24);
+              v41 = *(unsigned __int16 *)(v31 + 72);
+              if ( *(_WORD *)(*v32 + 298) )
               {
-                v38 = 0LL;
-                v39 = (_DWORD *)(*(_QWORD *)(v35 + 176) + 8LL);
-                while ( *((_QWORD *)v39 - 1) != v36 )
+                v42 = 0LL;
+                v43 = (_DWORD *)(*(_QWORD *)(v39 + 176) + 8LL);
+                while ( *((_QWORD *)v43 - 1) != v40 )
                 {
-                  ++v38;
-                  v39 += 4;
-                  if ( v38 >= *(unsigned __int16 *)(*v29 + 298) )
+                  ++v42;
+                  v43 += 4;
+                  if ( v42 >= *(unsigned __int16 *)(*v32 + 298) )
                     goto LABEL_48;
                 }
-                v25 = v35 + 16LL * (*v39 + (int)v37) + 312;
+                v28 = v39 + 16LL * (*v43 + (int)v41) + 312;
               }
               else
               {
 LABEL_48:
-                v25 = sub_AAFEF8(v29, v36, v37);
+                v28 = sub_AC5258(v32, v40, v41, v38);
               }
-              v22 = *(_QWORD *)(v25 + 8);
+              v25 = *(_QWORD *)(v28 + 8);
             }
             else
             {
-              v22 = *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320);
+              v25 = *(_QWORD *)(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 320);
             }
-            v26 = (void (__fastcall **)(__int64 *, System_String_o *, _QWORD))sub_B170AC(v22, v28);
-            (*v26)(v29, message, v26);
+            v29 = (void (__fastcall **)(__int64 *, System_String_o *, _QWORD))sub_B2C40C(v25, v31);
+            (*v29)(v32, message, v29);
           }
           else
           {
-            v16 = *(unsigned __int16 *)(v28 + 72);
-            if ( (v34 & 1) != 0 )
+            v18 = *(unsigned __int16 *)(v31 + 72);
+            if ( (v37 & 1) != 0 )
             {
-              v17 = j_il2cpp_method_get_class_0(v28);
-              v18 = *v29;
-              if ( *(_WORD *)(*v29 + 298) )
+              v19 = j_il2cpp_method_get_class_0(v31);
+              v21 = *v32;
+              if ( *(_WORD *)(*v32 + 298) )
               {
-                v19 = 0LL;
-                v20 = (_DWORD *)(*(_QWORD *)(v18 + 176) + 8LL);
-                while ( *((_QWORD *)v20 - 1) != v17 )
+                v22 = 0LL;
+                v23 = (_DWORD *)(*(_QWORD *)(v21 + 176) + 8LL);
+                while ( *((_QWORD *)v23 - 1) != v19 )
                 {
-                  ++v19;
-                  v20 += 4;
-                  if ( v19 >= *(unsigned __int16 *)(*v29 + 298) )
+                  ++v22;
+                  v23 += 4;
+                  if ( v22 >= *(unsigned __int16 *)(*v32 + 298) )
                     goto LABEL_19;
                 }
-                v21 = v18 + 16LL * (int)(*v20 + v16) + 312;
+                v24 = v21 + 16LL * (int)(*v23 + v18) + 312;
               }
               else
               {
 LABEL_19:
-                v21 = sub_AAFEF8(v29, v17, v16);
+                v24 = sub_AC5258(v32, v19, v18, v20);
               }
-              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))v21)(v29, message, *(_QWORD *)(v21 + 8));
+              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))v24)(v32, message, *(_QWORD *)(v24 + 8));
             }
             else
             {
-              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))(*v29
-                                                                           + 16LL * *(unsigned __int16 *)(v28 + 72)
+              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))(*v32
+                                                                           + 16LL * *(unsigned __int16 *)(v31 + 72)
                                                                            + 312))(
-                v29,
+                v32,
                 message,
-                *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320));
+                *(_QWORD *)(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 320));
             }
           }
           continue;
         }
       }
-      ((void (__fastcall *)(__int64 *, System_String_o *, __int64))v30)(v29, message, v28);
+      ((void (__fastcall *)(__int64 *, System_String_o *, __int64))v33)(v32, message, v31);
     }
   }
 }
@@ -1042,7 +1028,7 @@ void __fastcall CriWareErrorHandler_ErrorCallbackFunc___ctor(
   p_method = (BattleServantConfConponent_o *)&this->fields.method;
   p_method->monitor = *(void **)&method;
   p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B16F98(
+  sub_B2C2F8(
     p_method,
     (System_Int32_array **)object,
     *(System_String_array ***)&method,
@@ -1065,7 +1051,7 @@ System_IAsyncResult_o *__fastcall CriWareErrorHandler_ErrorCallbackFunc__BeginIn
 
   v6[0] = (__int64)errmsg;
   v6[1] = 0LL;
-  return (System_IAsyncResult_o *)sub_B16FA0(this, v6, callback, object);
+  return (System_IAsyncResult_o *)sub_B2C300(this, v6, callback, object);
 }
 
 
@@ -1074,7 +1060,7 @@ void __fastcall CriWareErrorHandler_ErrorCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B16FA4(result, 0LL, method);
+  sub_B2C304(result, 0LL, method);
 }
 
 
@@ -1083,242 +1069,247 @@ void __fastcall CriWareErrorHandler_ErrorCallbackFunc__Invoke(
         System_String_o *errmsg,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v6; // x24
-  CriWareErrorHandler_ErrorCallbackFunc_o **v7; // x25
+  __int64 v3; // x3
+  __int64 v4; // x8
+  __int64 v7; // x24
+  CriWareErrorHandler_ErrorCallbackFunc_o **v8; // x25
   __int64 i; // x26
-  unsigned int v9; // w22
+  unsigned int v10; // w22
   __int64 class_0; // x0
-  System_String_c *v11; // x8
-  unsigned __int64 v12; // x10
-  int32_t *v13; // x11
-  __int64 v14; // x0
-  __int64 v15; // x0
-  unsigned int v16; // w23
+  __int64 v12; // x3
+  System_String_c *v13; // x8
+  unsigned __int64 v14; // x10
+  int32_t *v15; // x11
+  __int64 v16; // x0
   __int64 v17; // x0
-  __int64 v18; // x8
-  unsigned __int64 v19; // x10
-  _DWORD *v20; // x11
-  __int64 v21; // x0
-  __int64 v22; // x0
-  __int64 v23; // x0
-  void (__fastcall **v24)(System_String_o *, _QWORD); // x0
+  unsigned int v18; // w23
+  __int64 v19; // x0
+  __int64 v20; // x3
+  __int64 v21; // x8
+  unsigned __int64 v22; // x10
+  _DWORD *v23; // x11
+  __int64 v24; // x0
   __int64 v25; // x0
-  void (__fastcall **v26)(__int64 *, System_String_o *, _QWORD); // x0
-  CriWareErrorHandler_ErrorCallbackFunc_o *v27; // x8
-  __int64 v28; // x21
-  __int64 *v29; // x22
-  void (__fastcall *v30)(System_String_o *, __int64); // x23
-  char v31; // w0
-  int v32; // w8
-  char v33; // w23
+  __int64 v26; // x0
+  void (__fastcall **v27)(System_String_o *, _QWORD); // x0
+  __int64 v28; // x0
+  void (__fastcall **v29)(__int64 *, System_String_o *, _QWORD); // x0
+  CriWareErrorHandler_ErrorCallbackFunc_o *v30; // x8
+  __int64 v31; // x21
+  __int64 *v32; // x22
+  void (__fastcall *v33)(System_String_o *, __int64); // x23
   char v34; // w0
-  __int64 v35; // x8
-  __int64 v36; // x1
-  __int64 v37; // x2
-  unsigned __int64 v38; // x10
-  _DWORD *v39; // x11
-  char v40; // w22
-  char v41; // w0
+  int v35; // w8
+  char v36; // w23
+  char v37; // w0
+  __int64 v38; // x3
+  __int64 v39; // x8
+  __int64 v40; // x1
+  __int64 v41; // x2
+  unsigned __int64 v42; // x10
+  _DWORD *v43; // x11
+  char v44; // w22
+  char v45; // w0
+  __int64 v46; // x3
   System_String_c *klass; // x8
-  __int64 v43; // x1
-  __int64 v44; // x2
-  unsigned __int64 v45; // x10
+  __int64 v48; // x1
+  __int64 v49; // x2
+  unsigned __int64 v50; // x10
   int32_t *p_offset; // x11
-  CriWareErrorHandler_ErrorCallbackFunc_o *v47; // [xsp+8h] [xbp-48h] BYREF
+  CriWareErrorHandler_ErrorCallbackFunc_o *v52; // [xsp+8h] [xbp-48h] BYREF
 
-  v47 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
+  v52 = this;
+  v4 = *(_QWORD *)&this[1].fields.method_ptr;
+  if ( !v4 )
   {
-    v7 = &v47;
-    v6 = 1LL;
+    v8 = &v52;
+    v7 = 1LL;
     goto LABEL_5;
   }
-  v6 = *(_QWORD *)(v3 + 24);
-  if ( v6 )
+  v7 = *(_QWORD *)(v4 + 24);
+  if ( v7 )
   {
-    v7 = (CriWareErrorHandler_ErrorCallbackFunc_o **)(v3 + 32);
+    v8 = (CriWareErrorHandler_ErrorCallbackFunc_o **)(v4 + 32);
 LABEL_5:
-    for ( i = 0LL; i != v6; ++i )
+    for ( i = 0LL; i != v7; ++i )
     {
-      v27 = v7[i];
-      v29 = *(__int64 **)&v27->fields.method;
-      v28 = *(_QWORD *)&v27->fields.extra_arg;
-      v30 = *(void (__fastcall **)(System_String_o *, __int64))&v27->fields.method_ptr;
-      if ( *(__int16 *)(v28 + 72) == -1 )
-        sub_B170B8(*(_QWORD *)&v27->fields.extra_arg, errmsg, method);
-      v31 = sub_B1702C(v28);
-      v32 = *(unsigned __int8 *)(v28 + 74);
-      if ( (v31 & 1) != 0 )
+      v30 = v8[i];
+      v32 = *(__int64 **)&v30->fields.method;
+      v31 = *(_QWORD *)&v30->fields.extra_arg;
+      v33 = *(void (__fastcall **)(System_String_o *, __int64))&v30->fields.method_ptr;
+      if ( *(__int16 *)(v31 + 72) == -1 )
+        sub_B2C418(*(_QWORD *)&v30->fields.extra_arg, errmsg, method, v3);
+      v34 = sub_B2C38C(v31);
+      v35 = *(unsigned __int8 *)(v31 + 74);
+      if ( (v34 & 1) != 0 )
       {
-        if ( v32 == 1 )
+        if ( v35 == 1 )
           goto LABEL_58;
       }
       else
       {
-        if ( v32 != 1 )
+        if ( v35 != 1 )
         {
-          if ( *(__int16 *)(v28 + 72) != -1 && this->fields.m_target )
+          if ( *(__int16 *)(v31 + 72) != -1 && this->fields.m_target )
           {
-            v40 = sub_B17024(v28);
-            v41 = sub_B17428(v28);
-            if ( (v40 & 1) != 0 )
+            v44 = sub_B2C384(v31);
+            v45 = sub_B2C788(v31);
+            if ( (v44 & 1) != 0 )
             {
-              if ( (v41 & 1) != 0 )
+              if ( (v45 & 1) != 0 )
               {
                 klass = errmsg->klass;
-                v43 = *(_QWORD *)(v28 + 24);
-                v44 = *(unsigned __int16 *)(v28 + 72);
+                v48 = *(_QWORD *)(v31 + 24);
+                v49 = *(unsigned __int16 *)(v31 + 72);
                 if ( *(_WORD *)&errmsg->klass->_2.bitflags1 )
                 {
-                  v45 = 0LL;
+                  v50 = 0LL;
                   p_offset = &klass->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)p_offset - 1) != v43 )
+                  while ( *((_QWORD *)p_offset - 1) != v48 )
                   {
-                    ++v45;
+                    ++v50;
                     p_offset += 4;
-                    if ( v45 >= *(unsigned __int16 *)&errmsg->klass->_2.bitflags1 )
+                    if ( v50 >= *(unsigned __int16 *)&errmsg->klass->_2.bitflags1 )
                       goto LABEL_57;
                   }
-                  v23 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v44);
+                  v26 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset + 2 * (int)v49);
                 }
                 else
                 {
 LABEL_57:
-                  v23 = sub_AAFEF8(errmsg, v43, v44);
+                  v26 = sub_AC5258(errmsg, v48, v49, v46);
                 }
-                v15 = *(_QWORD *)(v23 + 8);
+                v17 = *(_QWORD *)(v26 + 8);
               }
               else
               {
-                v15 = *((_QWORD *)&errmsg->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72));
+                v17 = *((_QWORD *)&errmsg->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v31 + 72));
               }
-              v24 = (void (__fastcall **)(System_String_o *, _QWORD))sub_B170AC(v15, v28);
-              (*v24)(errmsg, v24);
+              v27 = (void (__fastcall **)(System_String_o *, _QWORD))sub_B2C40C(v17, v31);
+              (*v27)(errmsg, v27);
             }
             else
             {
-              v9 = *(unsigned __int16 *)(v28 + 72);
-              if ( (v41 & 1) != 0 )
+              v10 = *(unsigned __int16 *)(v31 + 72);
+              if ( (v45 & 1) != 0 )
               {
-                class_0 = j_il2cpp_method_get_class_0(v28);
-                v11 = errmsg->klass;
+                class_0 = j_il2cpp_method_get_class_0(v31);
+                v13 = errmsg->klass;
                 if ( *(_WORD *)&errmsg->klass->_2.bitflags1 )
                 {
-                  v12 = 0LL;
-                  v13 = &v11->_1.interfaceOffsets->offset;
-                  while ( *((_QWORD *)v13 - 1) != class_0 )
+                  v14 = 0LL;
+                  v15 = &v13->_1.interfaceOffsets->offset;
+                  while ( *((_QWORD *)v15 - 1) != class_0 )
                   {
-                    ++v12;
-                    v13 += 4;
-                    if ( v12 >= *(unsigned __int16 *)&errmsg->klass->_2.bitflags1 )
+                    ++v14;
+                    v15 += 4;
+                    if ( v14 >= *(unsigned __int16 *)&errmsg->klass->_2.bitflags1 )
                       goto LABEL_11;
                   }
-                  v14 = (__int64)(&v11->vtable._0_Equals.method + 2 * (int)(*v13 + v9));
+                  v16 = (__int64)(&v13->vtable._0_Equals.method + 2 * (int)(*v15 + v10));
                 }
                 else
                 {
 LABEL_11:
-                  v14 = sub_AAFEF8(errmsg, class_0, v9);
+                  v16 = sub_AC5258(errmsg, class_0, v10, v12);
                 }
-                (*(void (__fastcall **)(System_String_o *, _QWORD))v14)(errmsg, *(_QWORD *)(v14 + 8));
+                (*(void (__fastcall **)(System_String_o *, _QWORD))v16)(errmsg, *(_QWORD *)(v16 + 8));
               }
               else
               {
                 (*((void (__fastcall **)(System_String_o *, _QWORD))&errmsg->klass->vtable._0_Equals.method
-                 + 2 * *(unsigned __int16 *)(v28 + 72)))(
+                 + 2 * *(unsigned __int16 *)(v31 + 72)))(
                   errmsg,
-                  *((_QWORD *)&errmsg->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v28 + 72)));
+                  *((_QWORD *)&errmsg->klass->vtable._1_Finalize.methodPtr + 2 * *(unsigned __int16 *)(v31 + 72)));
               }
             }
             continue;
           }
 LABEL_58:
-          v30(errmsg, v28);
+          v33(errmsg, v31);
           continue;
         }
-        if ( !v29 )
+        if ( !v32 )
           goto LABEL_58;
-        if ( *(__int16 *)(v28 + 72) != -1 && (*(_BYTE *)(*v29 + 277) & 1) == 0 && this->fields.m_target )
+        if ( *(__int16 *)(v31 + 72) != -1 && (*(_BYTE *)(*v32 + 277) & 1) == 0 && this->fields.m_target )
         {
-          v33 = sub_B17024(v28);
-          v34 = sub_B17428(v28);
-          if ( (v33 & 1) != 0 )
+          v36 = sub_B2C384(v31);
+          v37 = sub_B2C788(v31);
+          if ( (v36 & 1) != 0 )
           {
-            if ( (v34 & 1) != 0 )
+            if ( (v37 & 1) != 0 )
             {
-              v35 = *v29;
-              v36 = *(_QWORD *)(v28 + 24);
-              v37 = *(unsigned __int16 *)(v28 + 72);
-              if ( *(_WORD *)(*v29 + 298) )
+              v39 = *v32;
+              v40 = *(_QWORD *)(v31 + 24);
+              v41 = *(unsigned __int16 *)(v31 + 72);
+              if ( *(_WORD *)(*v32 + 298) )
               {
-                v38 = 0LL;
-                v39 = (_DWORD *)(*(_QWORD *)(v35 + 176) + 8LL);
-                while ( *((_QWORD *)v39 - 1) != v36 )
+                v42 = 0LL;
+                v43 = (_DWORD *)(*(_QWORD *)(v39 + 176) + 8LL);
+                while ( *((_QWORD *)v43 - 1) != v40 )
                 {
-                  ++v38;
-                  v39 += 4;
-                  if ( v38 >= *(unsigned __int16 *)(*v29 + 298) )
+                  ++v42;
+                  v43 += 4;
+                  if ( v42 >= *(unsigned __int16 *)(*v32 + 298) )
                     goto LABEL_48;
                 }
-                v25 = v35 + 16LL * (*v39 + (int)v37) + 312;
+                v28 = v39 + 16LL * (*v43 + (int)v41) + 312;
               }
               else
               {
 LABEL_48:
-                v25 = sub_AAFEF8(v29, v36, v37);
+                v28 = sub_AC5258(v32, v40, v41, v38);
               }
-              v22 = *(_QWORD *)(v25 + 8);
+              v25 = *(_QWORD *)(v28 + 8);
             }
             else
             {
-              v22 = *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320);
+              v25 = *(_QWORD *)(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 320);
             }
-            v26 = (void (__fastcall **)(__int64 *, System_String_o *, _QWORD))sub_B170AC(v22, v28);
-            (*v26)(v29, errmsg, v26);
+            v29 = (void (__fastcall **)(__int64 *, System_String_o *, _QWORD))sub_B2C40C(v25, v31);
+            (*v29)(v32, errmsg, v29);
           }
           else
           {
-            v16 = *(unsigned __int16 *)(v28 + 72);
-            if ( (v34 & 1) != 0 )
+            v18 = *(unsigned __int16 *)(v31 + 72);
+            if ( (v37 & 1) != 0 )
             {
-              v17 = j_il2cpp_method_get_class_0(v28);
-              v18 = *v29;
-              if ( *(_WORD *)(*v29 + 298) )
+              v19 = j_il2cpp_method_get_class_0(v31);
+              v21 = *v32;
+              if ( *(_WORD *)(*v32 + 298) )
               {
-                v19 = 0LL;
-                v20 = (_DWORD *)(*(_QWORD *)(v18 + 176) + 8LL);
-                while ( *((_QWORD *)v20 - 1) != v17 )
+                v22 = 0LL;
+                v23 = (_DWORD *)(*(_QWORD *)(v21 + 176) + 8LL);
+                while ( *((_QWORD *)v23 - 1) != v19 )
                 {
-                  ++v19;
-                  v20 += 4;
-                  if ( v19 >= *(unsigned __int16 *)(*v29 + 298) )
+                  ++v22;
+                  v23 += 4;
+                  if ( v22 >= *(unsigned __int16 *)(*v32 + 298) )
                     goto LABEL_19;
                 }
-                v21 = v18 + 16LL * (int)(*v20 + v16) + 312;
+                v24 = v21 + 16LL * (int)(*v23 + v18) + 312;
               }
               else
               {
 LABEL_19:
-                v21 = sub_AAFEF8(v29, v17, v16);
+                v24 = sub_AC5258(v32, v19, v18, v20);
               }
-              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))v21)(v29, errmsg, *(_QWORD *)(v21 + 8));
+              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))v24)(v32, errmsg, *(_QWORD *)(v24 + 8));
             }
             else
             {
-              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))(*v29
-                                                                           + 16LL * *(unsigned __int16 *)(v28 + 72)
+              (*(void (__fastcall **)(__int64 *, System_String_o *, _QWORD))(*v32
+                                                                           + 16LL * *(unsigned __int16 *)(v31 + 72)
                                                                            + 312))(
-                v29,
+                v32,
                 errmsg,
-                *(_QWORD *)(*v29 + 16LL * *(unsigned __int16 *)(v28 + 72) + 320));
+                *(_QWORD *)(*v32 + 16LL * *(unsigned __int16 *)(v31 + 72) + 320));
             }
           }
           continue;
         }
       }
-      ((void (__fastcall *)(__int64 *, System_String_o *, __int64))v30)(v29, errmsg, v28);
+      ((void (__fastcall *)(__int64 *, System_String_o *, __int64))v33)(v32, errmsg, v31);
     }
   }
 }

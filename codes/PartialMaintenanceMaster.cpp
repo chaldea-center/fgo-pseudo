@@ -1,14 +1,14 @@
 void __fastcall PartialMaintenanceMaster___ctor(PartialMaintenanceMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F802D & 1) == 0 )
+  if ( (byte_4185212 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__, method);
-    byte_40F802D = 1;
+    sub_B2C35C(&Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__, method);
+    byte_4185212 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     156,
-    (const MethodInfo_266F2EC *)Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__);
+    (const MethodInfo_24E4034 *)Method_DataMasterBase_PartialMaintenanceMaster__PartialMaintenanceEntity__int___ctor__);
 }
 
 
@@ -20,22 +20,21 @@ bool __fastcall PartialMaintenanceMaster__isChaliceMaintenaceEnd(
   __int64 v4; // x1
   __int64 v5; // x1
   int64_t Time; // x0
-  int64_t v7; // x20
+  __int64 v7; // x1
+  int64_t v8; // x20
   int32_t Count; // w0
-  int32_t v9; // w21
-  int32_t v10; // w22
-  bool v11; // w23
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  __int64 v14; // x10
+  int32_t v10; // w21
+  int32_t v11; // w22
+  bool v12; // w23
+  __int64 v13; // x10
 
-  if ( (byte_40F802E & 1) == 0 )
+  if ( (byte_4185213 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
-    sub_B16FFC(&NetworkManager_TypeInfo, v4);
-    sub_B16FFC(&PartialMaintenanceEntity_TypeInfo, v5);
-    byte_40F802E = 1;
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
+    sub_B2C35C(&NetworkManager_TypeInfo, v4);
+    sub_B2C35C(&PartialMaintenanceEntity_TypeInfo, v5);
+    byte_4185213 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -45,39 +44,39 @@ bool __fastcall PartialMaintenanceMaster__isChaliceMaintenaceEnd(
   Time = NetworkManager__getTime(0LL);
   if ( !this->fields.list )
     goto LABEL_19;
-  v7 = Time;
+  v8 = Time;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list,
-            (const MethodInfo_290DE84 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
-    v9 = Count;
-    v10 = 0;
-    v11 = 1;
+    v10 = Count;
+    v11 = 0;
+    v12 = 1;
     while ( 1 )
     {
-      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-      if ( !list )
+      Time = (int64_t)this->fields.list;
+      if ( !Time )
         break;
-      Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-               list,
-               v10,
-               (const MethodInfo_290DF28 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-      if ( !Item )
+      Time = (int64_t)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
+                        (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Time,
+                        v11,
+                        (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      if ( !Time )
         break;
-      v14 = *(&PartialMaintenanceEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&Item->klass->_2.bitflags2 + 1) < (unsigned int)v14
-        || (PartialMaintenanceEntity_c *)Item->klass->_2.typeHierarchy[v14 - 1] != PartialMaintenanceEntity_TypeInfo )
+      v13 = *(&PartialMaintenanceEntity_TypeInfo->_2.bitflags2 + 1);
+      if ( *(unsigned __int8 *)(*(_QWORD *)Time + 300LL) < (unsigned int)v13
+        || *(PartialMaintenanceEntity_c **)(*(_QWORD *)(*(_QWORD *)Time + 200LL) + 8 * v13 - 8) != PartialMaintenanceEntity_TypeInfo )
       {
         break;
       }
-      if ( LODWORD(Item[1].klass) == 2 )
-        v11 = v7 >= (__int64)Item[2].monitor;
-      if ( ++v10 >= v9 )
-        return v11;
+      if ( *(_DWORD *)(Time + 16) == 2 )
+        v12 = v8 >= *(_QWORD *)(Time + 40);
+      if ( ++v11 >= v10 )
+        return v12;
     }
 LABEL_19:
-    sub_B170D4();
+    sub_B2C434(Time, v7);
   }
   return 1;
 }
@@ -105,44 +104,43 @@ bool __fastcall PartialMaintenanceMaster__isMaintenanceNow(
   int32_t Count; // w0
   int32_t v9; // w21
   int32_t v10; // w22
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v11; // x0
   System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  const MethodInfo *v13; // x2
-  __int64 v14; // x10
+  const MethodInfo *v12; // x2
+  __int64 v13; // x10
 
-  if ( (byte_40F802F & 1) == 0 )
+  if ( (byte_4185214 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&mainteType);
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_B16FFC(&PartialMaintenanceEntity_TypeInfo, v6);
-    byte_40F802F = 1;
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&mainteType);
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_B2C35C(&PartialMaintenanceEntity_TypeInfo, v6);
+    byte_4185214 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_14:
-    sub_B170D4();
+    sub_B2C434(list, *(_QWORD *)&mainteType);
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_290DE84 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count < 1 )
     return 0;
   v9 = Count;
   v10 = 0;
   while ( 1 )
   {
-    v11 = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-    if ( !v11 )
+    list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+    if ( !list )
       goto LABEL_14;
     Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-             v11,
+             list,
              v10,
-             (const MethodInfo_290DF28 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+             (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
     if ( Item )
     {
-      v14 = *(&PartialMaintenanceEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v14
-        && (PartialMaintenanceEntity_c *)Item->klass->_2.typeHierarchy[v14 - 1] == PartialMaintenanceEntity_TypeInfo
-        && PartialMaintenanceEntity__isMaintenanceNow((PartialMaintenanceEntity_o *)Item, mainteType, v13) )
+      v13 = *(&PartialMaintenanceEntity_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v13
+        && (PartialMaintenanceEntity_c *)Item->klass->_2.typeHierarchy[v13 - 1] == PartialMaintenanceEntity_TypeInfo
+        && PartialMaintenanceEntity__isMaintenanceNow((PartialMaintenanceEntity_o *)Item, mainteType, v12) )
       {
         return 1;
       }

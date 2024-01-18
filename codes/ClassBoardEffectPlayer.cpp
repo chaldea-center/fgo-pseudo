@@ -4,7 +4,7 @@ void __fastcall ClassBoardEffectPlayer___ctor(ClassBoardEffectPlayer_o *this, co
 }
 
 
-void __fastcall ClassBoardEffectPlayer___ctor_28066828(
+void __fastcall ClassBoardEffectPlayer___ctor_28123700(
         ClassBoardEffectPlayer_o *this,
         System_String_o *playerName,
         const MethodInfo *method)
@@ -18,7 +18,7 @@ void __fastcall ClassBoardEffectPlayer___ctor_28066828(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._Name_k__BackingField = playerName;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)playerName, v5, v6, v7, v8, v9, v10);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)playerName, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -38,55 +38,55 @@ void __fastcall ClassBoardEffectPlayer__End(ClassBoardEffectPlayer_o *this, cons
   if ( endCallback )
     System_Action__Invoke(endCallback, 0LL);
   p_endCallback->klass = 0LL;
-  sub_B16F98(p_endCallback, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B2C2F8(p_endCallback, 0LL, v2, v3, v4, v5, v6, v7);
 }
 
 
-bool __fastcall ClassBoardEffectPlayer__GetData_bool_(ClassBoardEffectPlayer_o *this, const MethodInfo_18BBF40 *method)
+bool __fastcall ClassBoardEffectPlayer__GetData_bool_(ClassBoardEffectPlayer_o *this, const MethodInfo_172C6A8 *method)
 {
   Il2CppObject *data; // x20
   Il2CppClass *_0_T; // x19
   ClassBoardEffectPlayer_o *v5; // x0
-  const MethodInfo_18BBFA4 *v6; // x1
+  const MethodInfo_172C70C *v6; // x1
 
   data = this->fields.data;
   _0_T = method->rgctx_data->_0_T;
   if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_AAFCFC(method->rgctx_data->_0_T);
+    this = (ClassBoardEffectPlayer_o *)sub_AC505C(method->rgctx_data->_0_T);
   if ( !data )
-    sub_B170D4();
+    sub_B2C434(this, method);
   if ( data->klass->_1.element_class == _0_T->_1.element_class )
     return *(_BYTE *)j_il2cpp_object_unbox_0(data);
-  v5 = (ClassBoardEffectPlayer_o *)sub_B173C8(data);
+  v5 = (ClassBoardEffectPlayer_o *)sub_B2C728(data);
   return ClassBoardEffectPlayer__GetData_int_(v5, v6);
 }
 
 
 int32_t __fastcall ClassBoardEffectPlayer__GetData_int_(
         ClassBoardEffectPlayer_o *this,
-        const MethodInfo_18BBFA4 *method)
+        const MethodInfo_172C70C *method)
 {
   Il2CppObject *data; // x20
   Il2CppClass *_0_T; // x19
   ClassBoardEffectPlayer_o *v5; // x0
-  const MethodInfo_18BC008 *v6; // x1
+  const MethodInfo_172C770 *v6; // x1
 
   data = this->fields.data;
   _0_T = method->rgctx_data->_0_T;
   if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_AAFCFC(method->rgctx_data->_0_T);
+    this = (ClassBoardEffectPlayer_o *)sub_AC505C(method->rgctx_data->_0_T);
   if ( !data )
-    sub_B170D4();
+    sub_B2C434(this, method);
   if ( data->klass->_1.element_class == _0_T->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(data);
-  v5 = (ClassBoardEffectPlayer_o *)sub_B173C8(data);
+  v5 = (ClassBoardEffectPlayer_o *)sub_B2C728(data);
   return (unsigned int)ClassBoardEffectPlayer__GetData_object_(v5, v6);
 }
 
 
 Il2CppObject *__fastcall ClassBoardEffectPlayer__GetData_object_(
         ClassBoardEffectPlayer_o *this,
-        const MethodInfo_18BC008 *method)
+        const MethodInfo_172C770 *method)
 {
   Il2CppObject *data; // x20
   Il2CppClass *_0_T; // x19
@@ -95,13 +95,13 @@ Il2CppObject *__fastcall ClassBoardEffectPlayer__GetData_object_(
   data = this->fields.data;
   _0_T = method->rgctx_data->_0_T;
   if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_AAFCFC(method->rgctx_data->_0_T);
+    sub_AC505C(method->rgctx_data->_0_T);
   if ( data )
   {
-    result = (Il2CppObject *)sub_B170BC(data, _0_T);
+    result = (Il2CppObject *)sub_B2C41C(data, _0_T);
     if ( result )
       return result;
-    sub_B173C8(data);
+    sub_B2C728(data);
   }
   return 0LL;
 }
@@ -120,7 +120,7 @@ void __fastcall ClassBoardEffectPlayer__Play(ClassBoardEffectPlayer_o *this, con
 void __fastcall ClassBoardEffectPlayer__SetData_bool_(
         ClassBoardEffectPlayer_o *this,
         bool obj,
-        const MethodInfo_18BC060 *method)
+        const MethodInfo_172C7C8 *method)
 {
   Il2CppClass *_0_T; // x20
   Il2CppObject *v5; // x0
@@ -135,17 +135,17 @@ void __fastcall ClassBoardEffectPlayer__SetData_bool_(
   v12[0] = obj;
   _0_T = method->rgctx_data->_0_T;
   if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_AAFCFC(method->rgctx_data->_0_T);
+    sub_AC505C(method->rgctx_data->_0_T);
   v5 = (Il2CppObject *)j_il2cpp_value_box_0(_0_T, v12);
   this->fields.data = v5;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.data, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.data, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
 }
 
 
 void __fastcall ClassBoardEffectPlayer__SetData_int_(
         ClassBoardEffectPlayer_o *this,
         int32_t obj,
-        const MethodInfo_18BC0C0 *method)
+        const MethodInfo_172C828 *method)
 {
   Il2CppClass *_0_T; // x20
   Il2CppObject *v5; // x0
@@ -160,17 +160,17 @@ void __fastcall ClassBoardEffectPlayer__SetData_int_(
   v12 = obj;
   _0_T = method->rgctx_data->_0_T;
   if ( (BYTE2(_0_T->vtable[0].methodPtr) & 1) == 0 )
-    sub_AAFCFC(method->rgctx_data->_0_T);
+    sub_AC505C(method->rgctx_data->_0_T);
   v5 = (Il2CppObject *)j_il2cpp_value_box_0(_0_T, &v12);
   this->fields.data = v5;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.data, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.data, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
 }
 
 
 void __fastcall ClassBoardEffectPlayer__SetData_object_(
         ClassBoardEffectPlayer_o *this,
         Il2CppObject *obj,
-        const MethodInfo_18BC11C *method)
+        const MethodInfo_172C884 *method)
 {
   System_String_array **v3; // x3
   System_Boolean_array **v4; // x4
@@ -179,7 +179,7 @@ void __fastcall ClassBoardEffectPlayer__SetData_object_(
   System_Int32_array *v7; // x7
 
   this->fields.data = obj;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.data,
     (System_Int32_array **)obj,
     (System_String_array **)method,
@@ -203,7 +203,7 @@ void __fastcall ClassBoardEffectPlayer__SetEndEvent(
   System_Int32_array *v7; // x7
 
   this->fields.endCallback = callback;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.endCallback,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -227,7 +227,7 @@ void __fastcall ClassBoardEffectPlayer__SetPlayEvent(
   System_Int32_array *v7; // x7
 
   this->fields.playCallback = callback;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.playCallback,
     (System_Int32_array **)callback,
     (System_String_array **)method,

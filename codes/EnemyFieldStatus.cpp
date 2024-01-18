@@ -14,42 +14,41 @@ System_Double_array *__fastcall EnemyFieldStatus__getAiParam(
         AiBaseEntity_o *aiBaseEntity,
         const MethodInfo *method)
 {
+  BattleFieldStatus_o *v10; // x19
   int32_t v11; // w0
-  __int64 v12; // x2
-  int v13; // w19
-  System_Double_array *result; // x0
-  __int64 v15; // x1
-  __int64 v16; // x2
+  int v12; // w19
+  __int64 v13; // x0
 
-  if ( (byte_40FE2B3 & 1) == 0 )
+  v10 = (BattleFieldStatus_o *)this;
+  if ( (byte_418BD95 & 1) == 0 )
   {
-    sub_B16FFC(&double___TypeInfo, bData);
-    byte_40FE2B3 = 1;
+    this = (EnemyFieldStatus_o *)sub_B2C35C(&double___TypeInfo, bData);
+    byte_418BD95 = 1;
   }
   if ( param == 20 )
   {
     if ( !bData )
       goto LABEL_13;
-    v11 = BattleFieldStatus__CommonRestCount((BattleFieldStatus_o *)this, bData->fields.enemy_datalist, 0LL);
+    v11 = BattleFieldStatus__CommonRestCount(v10, bData->fields.enemy_datalist, 0LL);
   }
   else
   {
     if ( param != 19 )
-      return this->fields.wkZeroParam;
+      return v10->fields.wkZeroParam;
     if ( !bData )
 LABEL_13:
-      sub_B170D4();
-    v11 = BattleFieldStatus__CommonAliveCount((BattleFieldStatus_o *)this, bData->fields.enemy_datalist, 0LL);
+      sub_B2C434(this, bData);
+    v11 = BattleFieldStatus__CommonAliveCount(v10, bData->fields.enemy_datalist, 0LL);
   }
-  v13 = v11;
-  result = (System_Double_array *)sub_B17014(double___TypeInfo, 1LL, v12);
-  if ( !result )
+  v12 = v11;
+  this = (EnemyFieldStatus_o *)sub_B2C374(double___TypeInfo, 1LL);
+  if ( !this )
     goto LABEL_13;
-  if ( !result->max_length )
+  if ( !LODWORD(this[1].klass) )
   {
-    sub_B17100(result, v15, v16);
-    sub_B170A0();
+    v13 = sub_B2C460(this);
+    sub_B2C400(v13, 0LL);
   }
-  result->m_Items[0] = (double)v13;
-  return result;
+  *(double *)&this[1].monitor = (double)v12;
+  return (System_Double_array *)this;
 }

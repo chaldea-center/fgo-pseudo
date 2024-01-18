@@ -5,82 +5,27 @@ void __fastcall CommonConsumeDetailInfo___ctor(
         Il2CppObject *userOwnStatusEntity,
         const MethodInfo *method)
 {
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  const MethodInfo *v27; // x1
-  struct CommonConsumeEntity_o *v28; // x8
+  __int64 v9; // x0
+  const MethodInfo *v10; // x1
+  struct CommonConsumeEntity_o *v11; // x8
   struct System_String_o *TargetName; // x0
-  System_String_array **v30; // x2
-  System_String_array **v31; // x3
-  System_Boolean_array **v32; // x4
-  System_Int32_array **v33; // x5
-  System_Int32_array *v34; // x6
-  System_Int32_array *v35; // x7
-  const MethodInfo *v36; // x1
+  const MethodInfo *v13; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.CommonConsumeEntity = commonConsumeEntity;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)commonConsumeEntity,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14);
+  sub_B2C2F8(&this->fields, commonConsumeEntity);
   this->fields.targetEntity = targetEntity;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.targetEntity,
-    (System_Int32_array **)targetEntity,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+  sub_B2C2F8(&this->fields.targetEntity, targetEntity);
   this->fields.userOwnStatusEntity = userOwnStatusEntity;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.userOwnStatusEntity,
-    (System_Int32_array **)userOwnStatusEntity,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25,
-    v26);
-  v28 = this->fields.CommonConsumeEntity;
-  if ( !v28 )
-    sub_B170D4();
-  this->fields._Num_k__BackingField = v28->fields.num;
-  TargetName = CommonConsumeDetailInfo__GetTargetName(this, v27);
+  sub_B2C2F8(&this->fields.userOwnStatusEntity, userOwnStatusEntity);
+  v11 = this->fields.CommonConsumeEntity;
+  if ( !v11 )
+    sub_B2C434(v9, v10);
+  this->fields._Num_k__BackingField = v11->fields.num;
+  TargetName = CommonConsumeDetailInfo__GetTargetName(this, v10);
   this->fields._Name_k__BackingField = TargetName;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields._Name_k__BackingField,
-    (System_Int32_array **)TargetName,
-    v30,
-    v31,
-    v32,
-    v33,
-    v34,
-    v35);
-  this->fields._IsOwnedEnoughly_k__BackingField = CommonConsumeDetailInfo__CheckIsOwnedEnoughly(this, v36);
+  sub_B2C2F8(&this->fields._Name_k__BackingField, TargetName);
+  this->fields._IsOwnedEnoughly_k__BackingField = CommonConsumeDetailInfo__CheckIsOwnedEnoughly(this, v13);
 }
 
 
@@ -95,11 +40,11 @@ bool __fastcall CommonConsumeDetailInfo__CheckIsOwnedEnoughly(
   Il2CppObject *userOwnStatusEntity; // x8
   __int64 v8; // x11
 
-  if ( (byte_40F6558 & 1) == 0 )
+  if ( (byte_4183E1B & 1) == 0 )
   {
-    sub_B16FFC(&ItemEntity_TypeInfo, method);
-    sub_B16FFC(&UserItemEntity_TypeInfo, v3);
-    byte_40F6558 = 1;
+    sub_B2C35C(&ItemEntity_TypeInfo, method);
+    sub_B2C35C(&UserItemEntity_TypeInfo, v3);
+    byte_4183E1B = 1;
   }
   targetEntity = this->fields.targetEntity;
   result = targetEntity
@@ -123,11 +68,11 @@ System_String_o *__fastcall CommonConsumeDetailInfo__GetTargetName(
   __int64 v5; // x11
   System_String_o **p_monitor; // x8
 
-  if ( (byte_40F6557 & 1) == 0 )
+  if ( (byte_4183E1A & 1) == 0 )
   {
-    sub_B16FFC(&ItemEntity_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_1/*""*/, v3);
-    byte_40F6557 = 1;
+    sub_B2C35C(&ItemEntity_TypeInfo, method);
+    sub_B2C35C(&StringLiteral_1/*""*/, v3);
+    byte_4183E1A = 1;
   }
   targetEntity = this->fields.targetEntity;
   if ( targetEntity
@@ -178,22 +123,8 @@ void __fastcall CommonConsumeDetailInfo__set_Name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._Name_k__BackingField = value;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields._Name_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_B2C2F8(&this->fields._Name_k__BackingField, value);
 }
 
 

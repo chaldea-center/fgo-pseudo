@@ -20,21 +20,21 @@ void __fastcall EventRankingRoundInfo___cctor(const MethodInfo *method)
   System_Int32_array *v18; // x6
   System_Int32_array *v19; // x7
 
-  if ( (byte_40F60EC & 1) == 0 )
+  if ( (byte_4188788 & 1) == 0 )
   {
-    sub_B16FFC(&EventRankingRoundInfo_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_16899/*"btn_bg_20"*/, v8);
-    sub_B16FFC(&StringLiteral_16900/*"btn_bg_21"*/, v9);
-    byte_40F60EC = 1;
+    sub_B2C35C(&EventRankingRoundInfo_TypeInfo, v1);
+    sub_B2C35C(&StringLiteral_16965/*"btn_bg_20"*/, v8);
+    sub_B2C35C(&StringLiteral_16966/*"btn_bg_21"*/, v9);
+    byte_4188788 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)EventRankingRoundInfo_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_16900/*"btn_bg_21"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16900/*"btn_bg_21"*/;
-  sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
+  v11 = (System_Int32_array **)StringLiteral_16966/*"btn_bg_21"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_16966/*"btn_bg_21"*/;
+  sub_B2C2F8(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = EventRankingRoundInfo_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_16899/*"btn_bg_20"*/;
-  v12->NON_SELECT_SPRITE_NAME = (struct System_String_o *)StringLiteral_16899/*"btn_bg_20"*/;
-  sub_B16F98((BattleServantConfConponent_o *)&v12->NON_SELECT_SPRITE_NAME, v13, v14, v15, v16, v17, v18, v19);
+  v13 = (System_Int32_array **)StringLiteral_16965/*"btn_bg_20"*/;
+  v12->NON_SELECT_SPRITE_NAME = (struct System_String_o *)StringLiteral_16965/*"btn_bg_20"*/;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v12->NON_SELECT_SPRITE_NAME, v13, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -48,10 +48,10 @@ void __fastcall EventRankingRoundInfo__OnClikcButton(EventRankingRoundInfo_o *th
 {
   EventRankingRoundInfo_ClickFunc_o *onClickFunc; // x0
 
-  if ( (byte_40F60EB & 1) == 0 )
+  if ( (byte_4188787 & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    byte_40F60EB = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    byte_4188787 = 1;
   }
   if ( this->fields.isSelect )
   {
@@ -66,12 +66,13 @@ void __fastcall EventRankingRoundInfo__OnClikcButton(EventRankingRoundInfo_o *th
   {
     onClickFunc = this->fields.onClickFunc;
     if ( !onClickFunc )
-      sub_B170D4();
+      sub_B2C434(0LL, method);
     EventRankingRoundInfo_ClickFunc__Invoke(onClickFunc, this->fields.roundNum, 0LL);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventRankingRoundInfo__SetRoundInfo(
         EventRankingRoundInfo_o *this,
         bool isOpen,
@@ -80,48 +81,46 @@ void __fastcall EventRankingRoundInfo__SetRoundInfo(
         EventRankingRoundInfo_ClickFunc_o *callback,
         const MethodInfo *method)
 {
-  struct UICommonButton_o *baseButton; // x0
+  UnityEngine_GameObject_o *baseButton; // x0
   __int64 v11; // x1
-  UnityEngine_GameObject_o *maskObject; // x0
-  UILabel_o *roundLabel; // x0
   struct EventRankingRoundInfo_ClickFunc_o **p_onClickFunc; // x19
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
 
-  baseButton = this->fields.baseButton;
+  baseButton = (UnityEngine_GameObject_o *)this->fields.baseButton;
   if ( !baseButton
     || (!isOpen ? (v11 = 3LL) : (v11 = 0LL),
-        (((void (__fastcall *)(struct UICommonButton_o *, __int64, __int64, Il2CppMethodPointer, EventRankingRoundInfo_ClickFunc_o *, const MethodInfo *))baseButton->klass->vtable._14_SetState.method)(
+        (((void (__fastcall *)(UnityEngine_GameObject_o *, __int64, __int64, Il2CppRuntimeInterfaceOffsetPair *, EventRankingRoundInfo_ClickFunc_o *, const MethodInfo *))baseButton->klass[1]._1.implementedInterfaces)(
            baseButton,
            v11,
            1LL,
-           baseButton->klass->vtable._15_OnPress.methodPtr,
+           baseButton->klass[1]._1.interfaceOffsets,
            callback,
            method),
-         (maskObject = this->fields.maskObject) == 0LL)
-     || (UnityEngine_GameObject__SetActive(maskObject, !isOpen, 0LL),
-         roundLabel = this->fields.roundLabel,
+         (baseButton = this->fields.maskObject) == 0LL)
+     || (UnityEngine_GameObject__SetActive(baseButton, !isOpen, 0LL),
+         baseButton = (UnityEngine_GameObject_o *)this->fields.roundLabel,
          this->fields.roundNum = roundIndex,
-         !roundLabel)) )
+         !baseButton)) )
   {
-    sub_B170D4();
+    sub_B2C434(baseButton, isOpen);
   }
-  UILabel__set_text(roundLabel, roundName, 0LL);
+  UILabel__set_text((UILabel_o *)baseButton, roundName, 0LL);
   this->fields.onClickFunc = callback;
   p_onClickFunc = &this->fields.onClickFunc;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)p_onClickFunc,
     (System_Int32_array **)callback,
+    v14,
+    v15,
     v16,
     v17,
     v18,
-    v19,
-    v20,
-    v21);
+    v19);
   *((_BYTE *)p_onClickFunc - 4) = 0;
 }
 
@@ -137,47 +136,46 @@ void __fastcall EventRankingRoundInfo__SetSelectInfo(
   float b; // s9
   float g; // s10
   float r; // s11
-  UnityEngine_GameObject_o *gameObject; // x0
-  UILabel_o *roundLabel; // x0
+  UILabel_o *gameObject; // x0
+  __int64 v11; // x1
   UISprite_o *roundSprite; // x20
-  EventRankingRoundInfo_c *v13; // x0
-  System_String_o **p_SELECTED_SPRITE_NAME; // x8
-  UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  System_String_o **onPostFill; // x8
+  UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = color.fields.a;
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_40F60EA & 1) == 0 )
+  if ( (byte_4188786 & 1) == 0 )
   {
-    sub_B16FFC(&EventRankingRoundInfo_TypeInfo, isSelect);
-    byte_40F60EA = 1;
+    sub_B2C35C(&EventRankingRoundInfo_TypeInfo, isSelect);
+    byte_4188786 = 1;
   }
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_18;
-  if ( UnityEngine_GameObject__get_activeSelf(gameObject, 0LL) )
+  if ( UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)gameObject, 0LL) )
   {
-    roundLabel = this->fields.roundLabel;
+    gameObject = this->fields.roundLabel;
     this->fields.isSelect = isSelect;
-    if ( !roundLabel )
+    if ( !gameObject )
       goto LABEL_18;
-    v15.fields.r = r;
-    v15.fields.g = g;
-    v15.fields.b = b;
-    v15.fields.a = a;
-    UILabel__set_effectColor(roundLabel, v15, 0LL);
+    v14.fields.r = r;
+    v14.fields.g = g;
+    v14.fields.b = b;
+    v14.fields.a = a;
+    UILabel__set_effectColor(gameObject, v14, 0LL);
     roundSprite = this->fields.roundSprite;
-    v13 = EventRankingRoundInfo_TypeInfo;
+    gameObject = (UILabel_o *)EventRankingRoundInfo_TypeInfo;
     if ( isSelect )
     {
       if ( (WORD1(EventRankingRoundInfo_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
         && !EventRankingRoundInfo_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EventRankingRoundInfo_TypeInfo);
-        v13 = EventRankingRoundInfo_TypeInfo;
+        gameObject = (UILabel_o *)EventRankingRoundInfo_TypeInfo;
       }
-      p_SELECTED_SPRITE_NAME = &v13->static_fields->SELECTED_SPRITE_NAME;
+      onPostFill = (System_String_o **)gameObject->fields.onPostFill;
       if ( !roundSprite )
         goto LABEL_18;
       goto LABEL_17;
@@ -186,17 +184,17 @@ void __fastcall EventRankingRoundInfo__SetSelectInfo(
       && !EventRankingRoundInfo_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventRankingRoundInfo_TypeInfo);
-      v13 = EventRankingRoundInfo_TypeInfo;
+      gameObject = (UILabel_o *)EventRankingRoundInfo_TypeInfo;
     }
-    p_SELECTED_SPRITE_NAME = &v13->static_fields->NON_SELECT_SPRITE_NAME;
+    onPostFill = (System_String_o **)&gameObject->fields.onPostFill->monitor;
     if ( roundSprite )
     {
 LABEL_17:
-      UISprite__set_spriteName(roundSprite, *p_SELECTED_SPRITE_NAME, 0LL);
+      UISprite__set_spriteName(roundSprite, *onPostFill, 0LL);
       return;
     }
 LABEL_18:
-    sub_B170D4();
+    sub_B2C434(gameObject, v11);
   }
 }
 
@@ -208,27 +206,15 @@ void __fastcall EventRankingRoundInfo_ClickFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-  struct BattleServantClassBoardSkillEffectListComponent_o *v8; // x8
-  BattleServantConfConponent_o *p_method; // x0
+  __int64 v4; // x8
+  intptr_t *p_method; // x0
 
-  v8 = **(struct BattleServantClassBoardSkillEffectListComponent_o ***)&method;
+  v4 = **(_QWORD **)&method;
   *(_QWORD *)&this->fields.method = object;
-  p_method = (BattleServantConfConponent_o *)&this->fields.method;
-  p_method->monitor = *(void **)&method;
-  p_method[-1].fields.classBoardSkillObj = v8;
-  sub_B16F98(
-    p_method,
-    (System_Int32_array **)object,
-    *(System_String_array ***)&method,
-    (System_String_array **)a4,
-    v4,
-    v5,
-    v6,
-    v7);
+  p_method = &this->fields.method;
+  *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
+  *((_QWORD *)p_method - 2) = v4;
+  sub_B2C2F8(p_method, object);
 }
 
 
@@ -244,14 +230,14 @@ System_IAsyncResult_o *__fastcall EventRankingRoundInfo_ClickFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-24h] BYREF
 
   v10 = num;
-  if ( (byte_40F7025 & 1) == 0 )
+  if ( (byte_4184B59 & 1) == 0 )
   {
-    sub_B16FFC(&int_TypeInfo, *(_QWORD *)&num);
-    byte_40F7025 = 1;
+    sub_B2C35C(&int_TypeInfo, *(_QWORD *)&num);
+    byte_4184B59 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_B16FA0(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_B2C300(this, v9, callback, object);
 }
 
 
@@ -260,7 +246,7 @@ void __fastcall EventRankingRoundInfo_ClickFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B16FA4(result, 0LL, method);
+  sub_B2C304(result, 0LL, method);
 }
 
 
@@ -270,140 +256,143 @@ void __fastcall EventRankingRoundInfo_ClickFunc__Invoke(
         int32_t num,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v6; // x24
-  EventRankingRoundInfo_ClickFunc_o **v7; // x25
-  __int64 v8; // x26
-  unsigned int v9; // w23
+  __int64 v3; // x3
+  __int64 v4; // x8
+  __int64 v7; // x24
+  EventRankingRoundInfo_ClickFunc_o **v8; // x25
+  __int64 v9; // x26
+  unsigned int v10; // w23
   __int64 class_0; // x0
-  __int64 v11; // x8
-  unsigned __int64 v12; // x10
-  _DWORD *v13; // x11
-  __int64 v14; // x0
-  __int64 v15; // x0
+  __int64 v12; // x3
+  __int64 v13; // x8
+  unsigned __int64 v14; // x10
+  _DWORD *v15; // x11
   __int64 v16; // x0
-  void (__fastcall **v17)(__int64 *, _QWORD, _QWORD); // x0
-  EventRankingRoundInfo_ClickFunc_o *v18; // x8
-  __int64 *v19; // x21
-  __int64 v20; // x22
-  void (__fastcall *v21)(_QWORD, __int64); // x23
-  char v22; // w23
-  char v23; // w0
-  __int64 v24; // x8
-  __int64 v25; // x1
-  __int64 v26; // x2
-  unsigned __int64 v27; // x10
-  _DWORD *v28; // x11
-  EventRankingRoundInfo_ClickFunc_o *v29; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v17; // x0
+  __int64 v18; // x0
+  void (__fastcall **v19)(__int64 *, _QWORD, _QWORD); // x0
+  EventRankingRoundInfo_ClickFunc_o *v20; // x8
+  __int64 *v21; // x21
+  __int64 v22; // x22
+  void (__fastcall *v23)(_QWORD, __int64); // x23
+  char v24; // w23
+  char v25; // w0
+  __int64 v26; // x3
+  __int64 v27; // x8
+  __int64 v28; // x1
+  __int64 v29; // x2
+  unsigned __int64 v30; // x10
+  _DWORD *v31; // x11
+  EventRankingRoundInfo_ClickFunc_o *v32; // [xsp+8h] [xbp-48h] BYREF
 
-  v29 = this;
-  v3 = *(_QWORD *)&this[1].fields.method_ptr;
-  if ( !v3 )
+  v32 = this;
+  v4 = *(_QWORD *)&this[1].fields.method_ptr;
+  if ( !v4 )
   {
-    v7 = &v29;
-    v6 = 1LL;
+    v8 = &v32;
+    v7 = 1LL;
     goto LABEL_5;
   }
-  v6 = *(_QWORD *)(v3 + 24);
-  if ( v6 )
+  v7 = *(_QWORD *)(v4 + 24);
+  if ( v7 )
   {
-    v7 = (EventRankingRoundInfo_ClickFunc_o **)(v3 + 32);
+    v8 = (EventRankingRoundInfo_ClickFunc_o **)(v4 + 32);
 LABEL_5:
-    v8 = 0LL;
+    v9 = 0LL;
     while ( 1 )
     {
-      v18 = v7[v8];
-      v19 = *(__int64 **)&v18->fields.method;
-      v20 = *(_QWORD *)&v18->fields.extra_arg;
-      v21 = *(void (__fastcall **)(_QWORD, __int64))&v18->fields.method_ptr;
-      if ( *(__int16 *)(v20 + 72) == -1 )
-        sub_B170B8(*(_QWORD *)&v18->fields.extra_arg, *(_QWORD *)&num, method);
-      if ( (sub_B1702C(v20) & 1) == 0 )
+      v20 = v8[v9];
+      v21 = *(__int64 **)&v20->fields.method;
+      v22 = *(_QWORD *)&v20->fields.extra_arg;
+      v23 = *(void (__fastcall **)(_QWORD, __int64))&v20->fields.method_ptr;
+      if ( *(__int16 *)(v22 + 72) == -1 )
+        sub_B2C418(*(_QWORD *)&v20->fields.extra_arg, *(_QWORD *)&num, method, v3);
+      if ( (sub_B2C38C(v22) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v20 + 74) != 1 )
+      if ( *(_BYTE *)(v22 + 74) != 1 )
         goto LABEL_36;
-      v21((unsigned int)num, v20);
+      v23((unsigned int)num, v22);
 LABEL_37:
-      if ( ++v8 == v6 )
+      if ( ++v9 == v7 )
         return;
     }
-    if ( v19 && *(__int16 *)(v20 + 72) != -1 && (*(_BYTE *)(*v19 + 277) & 1) == 0 && this->fields.m_target )
+    if ( v21 && *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v22 = sub_B17024(v20);
-      v23 = sub_B17428(v20);
-      if ( (v22 & 1) != 0 )
+      v24 = sub_B2C384(v22);
+      v25 = sub_B2C788(v22);
+      if ( (v24 & 1) != 0 )
       {
-        if ( (v23 & 1) != 0 )
+        if ( (v25 & 1) != 0 )
         {
-          v24 = *v19;
-          v25 = *(_QWORD *)(v20 + 24);
-          v26 = *(unsigned __int16 *)(v20 + 72);
-          if ( *(_WORD *)(*v19 + 298) )
+          v27 = *v21;
+          v28 = *(_QWORD *)(v22 + 24);
+          v29 = *(unsigned __int16 *)(v22 + 72);
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v27 = 0LL;
-            v28 = (_DWORD *)(*(_QWORD *)(v24 + 176) + 8LL);
-            while ( *((_QWORD *)v28 - 1) != v25 )
+            v30 = 0LL;
+            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((_QWORD *)v31 - 1) != v28 )
             {
-              ++v27;
-              v28 += 4;
-              if ( v27 >= *(unsigned __int16 *)(*v19 + 298) )
+              ++v30;
+              v31 += 4;
+              if ( v30 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_35;
             }
-            v16 = v24 + 16LL * (*v28 + (int)v26) + 312;
+            v18 = v27 + 16LL * (*v31 + (int)v29) + 312;
           }
           else
           {
 LABEL_35:
-            v16 = sub_AAFEF8(v19, v25, v26);
+            v18 = sub_AC5258(v21, v28, v29, v26);
           }
-          v15 = *(_QWORD *)(v16 + 8);
+          v17 = *(_QWORD *)(v18 + 8);
         }
         else
         {
-          v15 = *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320);
+          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
         }
-        v17 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B170AC(v15, v20);
-        (*v17)(v19, (unsigned int)num, v17);
+        v19 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD))sub_B2C40C(v17, v22);
+        (*v19)(v21, (unsigned int)num, v19);
       }
       else
       {
-        v9 = *(unsigned __int16 *)(v20 + 72);
-        if ( (v23 & 1) != 0 )
+        v10 = *(unsigned __int16 *)(v22 + 72);
+        if ( (v25 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v20);
-          v11 = *v19;
-          if ( *(_WORD *)(*v19 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v22);
+          v13 = *v21;
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v12 = 0LL;
-            v13 = (_DWORD *)(*(_QWORD *)(v11 + 176) + 8LL);
-            while ( *((_QWORD *)v13 - 1) != class_0 )
+            v14 = 0LL;
+            v15 = (_DWORD *)(*(_QWORD *)(v13 + 176) + 8LL);
+            while ( *((_QWORD *)v15 - 1) != class_0 )
             {
-              ++v12;
-              v13 += 4;
-              if ( v12 >= *(unsigned __int16 *)(*v19 + 298) )
+              ++v14;
+              v15 += 4;
+              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_11;
             }
-            v14 = v11 + 16LL * (int)(*v13 + v9) + 312;
+            v16 = v13 + 16LL * (int)(*v15 + v10) + 312;
           }
           else
           {
 LABEL_11:
-            v14 = sub_AAFEF8(v19, class_0, v9);
+            v16 = sub_AC5258(v21, class_0, v10, v12);
           }
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v14)(v19, (unsigned int)num, *(_QWORD *)(v14 + 8));
+          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))v16)(v21, (unsigned int)num, *(_QWORD *)(v16 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 312))(
-            v19,
+          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
+            v21,
             (unsigned int)num,
-            *(_QWORD *)(*v19 + 16LL * *(unsigned __int16 *)(v20 + 72) + 320));
+            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
         }
       }
       goto LABEL_37;
     }
 LABEL_36:
-    ((void (__fastcall *)(__int64 *, _QWORD, __int64))v21)(v19, (unsigned int)num, v20);
+    ((void (__fastcall *)(__int64 *, _QWORD, __int64))v23)(v21, (unsigned int)num, v22);
     goto LABEL_37;
   }
 }

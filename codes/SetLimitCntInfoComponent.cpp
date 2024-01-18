@@ -4,16 +4,16 @@ void __fastcall SetLimitCntInfoComponent___ctor(SetLimitCntInfoComponent_o *this
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall SetLimitCntInfoComponent__setEnableOnImg(
         SetLimitCntInfoComponent_o *this,
         bool isOn,
         const MethodInfo *method)
 {
   UnityEngine_Component_o *onImg; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
 
   onImg = (UnityEngine_Component_o *)this->fields.onImg;
-  if ( !onImg || (gameObject = UnityEngine_Component__get_gameObject(onImg, 0LL)) == 0LL )
-    sub_B170D4();
-  UnityEngine_GameObject__SetActive(gameObject, isOn, 0LL);
+  if ( !onImg || (onImg = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(onImg, 0LL)) == 0LL )
+    sub_B2C434(onImg, isOn);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)onImg, isOn, 0LL);
 }

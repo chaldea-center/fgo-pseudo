@@ -23,49 +23,40 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
   UnityEngine_Object_o *detailLabel; // x21
   UnityEngine_Object_o *closeLabel; // x21
   UnityEngine_Object_o *scrollView; // x21
-  BattleData_c *inited; // x0
+  BattleData_c *v17; // x0
   int32_t EventId; // w21
   EventCommandAssistMaster_o *Master_WarQuestSelectionMaster; // x0
-  EventCommandAssistMaster_o *v20; // x22
+  __int64 v20; // x1
+  EventCommandAssistMaster_o *v21; // x22
   EventCommandAssistEntity_o *CurrentEntity; // x0
   int32_t commandAssistId; // w2
-  EventCommandAssistEntity_o *v23; // x20
+  EventCommandAssistEntity_o *v24; // x20
   EventCommandAssistEntity_o *MaxLevelEntity; // x0
-  EventCommandAssistEntity_o *v25; // x22
-  UILabel_o *v26; // x21
-  System_String_o *v27; // x0
+  EventCommandAssistEntity_o *v26; // x22
+  UILabel_o *v27; // x21
+  System_String_o *v28; // x0
   Il2CppObject *name; // x24
-  System_String_o *v29; // x23
-  Il2CppObject *v30; // x25
-  Il2CppObject *v31; // x0
-  System_String_o *v32; // x0
-  UILabel_o *v33; // x0
-  SkillLvMaster_o *v34; // x0
+  System_String_o *v30; // x23
+  Il2CppObject *v31; // x25
+  Il2CppObject *v32; // x0
   SkillLvEntity_o *Entity; // x0
-  UILabel_o *v36; // x21
-  System_String_o *Detail_23602036; // x0
-  UILabel_o *v38; // x0
-  UILabel_o *v39; // x20
-  System_String_o *v40; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  UIWidget_o *v42; // x0
-  UIScrollView_o *v43; // x0
-  UnityEngine_GameObject_o *v44; // x0
-  int32_t v45; // [xsp+8h] [xbp-48h] BYREF
+  UILabel_o *v34; // x21
+  UILabel_o *v35; // x20
+  int32_t v36; // [xsp+8h] [xbp-48h] BYREF
   int32_t lv; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_40F697B & 1) == 0 )
+  if ( (byte_418425B & 1) == 0 )
   {
-    sub_B16FFC(&BattleData_TypeInfo, commandData);
-    sub_B16FFC(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
-    sub_B16FFC(&Method_DataManager_GetMaster_SkillLvMaster___, v6);
-    sub_B16FFC(&DataManager_TypeInfo, v7);
-    sub_B16FFC(&int_TypeInfo, v8);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v9);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_3193/*"COMMAND_ASSIST_NAME"*/, v11);
-    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v12);
-    byte_40F697B = 1;
+    sub_B2C35C(&BattleData_TypeInfo, commandData);
+    sub_B2C35C(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
+    sub_B2C35C(&Method_DataManager_GetMaster_SkillLvMaster___, v6);
+    sub_B2C35C(&DataManager_TypeInfo, v7);
+    sub_B2C35C(&int_TypeInfo, v8);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v9);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v10);
+    sub_B2C35C(&StringLiteral_3202/*"COMMAND_ASSIST_NAME"*/, v11);
+    sub_B2C35C(&StringLiteral_3261/*"COMMON_CONFIRM_CLOSE"*/, v12);
+    byte_418425B = 1;
   }
   commandAssistNameLabel = (UnityEngine_Object_o *)this->fields.commandAssistNameLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -99,22 +90,22 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
         }
         if ( !UnityEngine_Object__op_Equality(scrollView, 0LL, 0LL) )
         {
-          inited = BattleData_TypeInfo;
+          v17 = BattleData_TypeInfo;
           if ( (BYTE3(BattleData_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !BattleData_TypeInfo->_2.cctor_finished )
           {
-            inited = (BattleData_c *)j_il2cpp_runtime_class_init_0(BattleData_TypeInfo);
+            j_il2cpp_runtime_class_init_0(BattleData_TypeInfo);
           }
-          EventId = BattleData__GetEventId((const MethodInfo *)inited);
+          EventId = BattleData__GetEventId((const MethodInfo *)v17);
           if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !DataManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
           }
-          Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+          Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
           if ( commandData )
           {
-            v20 = Master_WarQuestSelectionMaster;
+            v21 = Master_WarQuestSelectionMaster;
             if ( Master_WarQuestSelectionMaster )
             {
               CurrentEntity = EventCommandAssistMaster__GetCurrentEntity(
@@ -125,83 +116,105 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                                 0,
                                 0LL);
               commandAssistId = commandData->fields.commandAssistId;
-              v23 = CurrentEntity;
-              MaxLevelEntity = EventCommandAssistMaster__GetMaxLevelEntity(v20, EventId, commandAssistId, 0LL);
-              if ( MaxLevelEntity && v23 )
+              v24 = CurrentEntity;
+              MaxLevelEntity = EventCommandAssistMaster__GetMaxLevelEntity(v21, EventId, commandAssistId, 0LL);
+              if ( MaxLevelEntity && v24 )
               {
-                v25 = MaxLevelEntity;
-                v26 = this->fields.commandAssistNameLabel;
+                v26 = MaxLevelEntity;
+                v27 = this->fields.commandAssistNameLabel;
                 if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                   && !LocalizationManager_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                 }
-                v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3193/*"COMMAND_ASSIST_NAME"*/, 0LL);
-                name = (Il2CppObject *)v23->fields.name;
-                v29 = v27;
-                lv = v23->fields.lv;
-                v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
-                v45 = v25->fields.lv;
-                v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45);
-                v32 = System_String__Format_43744796(v29, name, v30, v31, 0LL);
-                if ( !v26 )
+                v28 = LocalizationManager__Get((System_String_o *)StringLiteral_3202/*"COMMAND_ASSIST_NAME"*/, 0LL);
+                name = (Il2CppObject *)v24->fields.name;
+                v30 = v28;
+                lv = v24->fields.lv;
+                v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
+                v36 = v26->fields.lv;
+                v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v36);
+                Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)System_String__Format_44306596(
+                                                                                 v30,
+                                                                                 name,
+                                                                                 v31,
+                                                                                 v32,
+                                                                                 0LL);
+                if ( !v27 )
                   goto LABEL_54;
-                UILabel__set_text(v26, v32, 0LL);
-                v33 = this->fields.commandAssistNameLabel;
-                if ( !v33 )
+                UILabel__set_text(v27, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
+                Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)this->fields.commandAssistNameLabel;
+                if ( !Master_WarQuestSelectionMaster )
                   goto LABEL_54;
-                UILabel__SetCondensedScale(v33, 750, 0LL);
+                UILabel__SetCondensedScale((UILabel_o *)Master_WarQuestSelectionMaster, 750, 0LL);
               }
-              if ( v23 )
+              if ( v24 )
               {
                 if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                   && !DataManager_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
                 }
-                v34 = (SkillLvMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_SkillLvMaster___);
-                if ( !v34 )
+                Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_SkillLvMaster___);
+                if ( !Master_WarQuestSelectionMaster )
                   goto LABEL_54;
-                Entity = SkillLvMaster__GetEntity(v34, v23->fields.skillId, v23->fields.skillLv, 0LL);
+                Entity = SkillLvMaster__GetEntity(
+                           (SkillLvMaster_o *)Master_WarQuestSelectionMaster,
+                           v24->fields.skillId,
+                           v24->fields.skillLv,
+                           0LL);
                 if ( Entity )
                 {
-                  v36 = this->fields.detailLabel;
-                  Detail_23602036 = SkillLvEntity__getDetail_23602036(Entity, v23->fields.skillLv, 0, 0LL);
-                  if ( !v36 )
+                  v34 = this->fields.detailLabel;
+                  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)SkillLvEntity__getDetail_23775852(
+                                                                                   Entity,
+                                                                                   v24->fields.skillLv,
+                                                                                   0,
+                                                                                   0LL);
+                  if ( !v34 )
                     goto LABEL_54;
-                  UILabel__set_text(v36, Detail_23602036, 0LL);
-                  v38 = this->fields.detailLabel;
-                  if ( !v38 )
+                  UILabel__set_text(v34, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
+                  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)this->fields.detailLabel;
+                  if ( !Master_WarQuestSelectionMaster )
                     goto LABEL_54;
-                  UILabel__SetCondensedScale(v38, 656, 0LL);
+                  UILabel__SetCondensedScale((UILabel_o *)Master_WarQuestSelectionMaster, 656, 0LL);
                 }
               }
-              v39 = this->fields.closeLabel;
+              v35 = this->fields.closeLabel;
               if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !LocalizationManager_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              v40 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
-              if ( v39 )
+              Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)LocalizationManager__Get(
+                                                                               (System_String_o *)StringLiteral_3261/*"COMMON_CONFIRM_CLOSE"*/,
+                                                                               0LL);
+              if ( v35 )
               {
-                UILabel__set_text(v39, v40, 0LL);
-                gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-                if ( gameObject )
+                UILabel__set_text(v35, (System_String_o *)Master_WarQuestSelectionMaster, 0LL);
+                Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)UnityEngine_Component__get_gameObject(
+                                                                                 (UnityEngine_Component_o *)this,
+                                                                                 0LL);
+                if ( Master_WarQuestSelectionMaster )
                 {
-                  UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-                  v42 = (UIWidget_o *)this->fields.detailLabel;
-                  if ( v42 )
+                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster, 1, 0LL);
+                  Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)this->fields.detailLabel;
+                  if ( Master_WarQuestSelectionMaster )
                   {
-                    UIWidget__ResizeCollider(v42, 0LL);
-                    v43 = this->fields.scrollView;
-                    if ( v43 )
+                    UIWidget__ResizeCollider((UIWidget_o *)Master_WarQuestSelectionMaster, 0LL);
+                    Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)this->fields.scrollView;
+                    if ( Master_WarQuestSelectionMaster )
                     {
-                      UIScrollView__ResetPosition(v43, 0LL);
-                      v44 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-                      if ( v44 )
+                      UIScrollView__ResetPosition((UIScrollView_o *)Master_WarQuestSelectionMaster, 0LL);
+                      Master_WarQuestSelectionMaster = (EventCommandAssistMaster_o *)UnityEngine_Component__get_gameObject(
+                                                                                       (UnityEngine_Component_o *)this,
+                                                                                       0LL);
+                      if ( Master_WarQuestSelectionMaster )
                       {
-                        UnityEngine_GameObject__SetActive(v44, 0, 0LL);
+                        UnityEngine_GameObject__SetActive(
+                          (UnityEngine_GameObject_o *)Master_WarQuestSelectionMaster,
+                          0,
+                          0LL);
                         return;
                       }
                     }
@@ -211,7 +224,7 @@ void __fastcall BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
             }
           }
 LABEL_54:
-          sub_B170D4();
+          sub_B2C434(Master_WarQuestSelectionMaster, v20);
         }
       }
     }
@@ -223,10 +236,10 @@ System_String_o *__fastcall BattleCommandAssistDetailWindowComponent__get_closeB
         BattleCommandAssistDetailWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40F697C & 1) == 0 )
+  if ( (byte_418425C & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_17410/*"closeBtn"*/, method);
-    byte_40F697C = 1;
+    sub_B2C35C(&StringLiteral_17476/*"closeBtn"*/, method);
+    byte_418425C = 1;
   }
-  return (System_String_o *)StringLiteral_17410/*"closeBtn"*/;
+  return (System_String_o *)StringLiteral_17476/*"closeBtn"*/;
 }

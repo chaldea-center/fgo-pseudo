@@ -9,13 +9,14 @@ void __fastcall PresentSelectableItemComponent__OnClickItem(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *dialog; // x20
-  const MethodInfo *v4; // x4
-  struct PresentSelectableDlgComponent_o *v5; // x0
+  __int64 v4; // x1
+  const MethodInfo *v5; // x4
+  struct PresentSelectableDlgComponent_o *v6; // x0
 
-  if ( (byte_40FA004 & 1) == 0 )
+  if ( (byte_4187A4A & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    byte_40FA004 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
+    byte_4187A4A = 1;
   }
   if ( this->fields.isEnableSelect )
   {
@@ -27,16 +28,16 @@ void __fastcall PresentSelectableItemComponent__OnClickItem(
     }
     if ( UnityEngine_Object__op_Inequality(dialog, 0LL, 0LL) )
     {
-      v5 = this->fields.dialog;
-      if ( !v5 )
-        sub_B170D4();
-      if ( !v5->fields.isClosed )
+      v6 = this->fields.dialog;
+      if ( !v6 )
+        sub_B2C434(0LL, v4);
+      if ( !v6->fields.isClosed )
         PresentSelectableDlgComponent__OpenItemConfirmDlg(
-          v5,
+          v6,
           this->fields.itemSelectEnt,
           this->fields.itemEnt,
           this->fields.itemHold,
-          v4);
+          v5);
     }
   }
 }
@@ -52,7 +53,7 @@ void __fastcall PresentSelectableItemComponent__setEnableSelectItem(
   {
     maskImg = this->fields.maskImg;
     if ( !maskImg )
-      sub_B170D4();
+      sub_B2C434(0LL, method);
     UnityEngine_GameObject__SetActive(maskImg, 1, 0LL);
   }
 }
@@ -86,72 +87,51 @@ int32_t __fastcall PresentSelectableItemComponent__setItemInfo(
   System_Int32_array **v27; // x5
   System_Int32_array *v28; // x6
   System_Int32_array *v29; // x7
-  UnityEngine_GameObject_o *maskImg; // x0
-  UILabel_o *itemNameLb; // x0
-  UILabel_o *currentNumLb; // x0
-  UILabel_o *spendNumLb; // x0
-  UILabel_o *itemDetailLb; // x0
+  const MethodInfo *v30; // x1
+  int64_t maskImg; // x0
   UILabel_o *currentInfoLb; // x23
-  System_String_o *v36; // x0
-  UnityEngine_Component_o *itemIconInfo; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  GiftEntity_array *GiftData; // x0
-  const MethodInfo *v40; // x1
-  __int64 v41; // x2
-  __int64 v42; // x8
-  GiftEntity_o *v43; // x23
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
-  int32_t objectId; // w2
+  __int64 v33; // x8
+  _DWORD *v34; // x23
+  int32_t v35; // w2
   struct ItemEntity_o **p_itemEnt; // x23
   struct ItemEntity_o *itemEnt; // x8
-  ItemIconComponent_o *v49; // x0
-  UnityEngine_GameObject_o *ticketObj; // x0
-  ItemIconComponent_o *ticketSp; // x0
-  struct ItemEntity_o *v52; // x8
-  UILabel_o *v53; // x22
+  struct ItemEntity_o *v38; // x8
+  UILabel_o *itemNameLb; // x22
   System_String_o *name; // x24
-  Il2CppObject *v55; // x0
-  System_String_o *v56; // x1
-  System_String_o *v57; // x0
-  WebViewManager_o *v58; // x0
-  UserItemMaster_o *v59; // x22
-  int64_t UserId; // x0
-  UserItemEntity_o *EntityDefinitely; // x0
-  int32_t num; // w8
-  UILabel_o *v63; // x22
-  Il2CppObject *v64; // x0
-  System_String_o *v65; // x0
-  UILabel_o *v66; // x22
-  System_String_o *v67; // x0
-  UILabel_o *v68; // x0
-  UIWidget_o *v69; // x21
-  bool v70; // cc
-  int v71; // s0
-  UnityEngine_GameObject_o *v75; // x0
-  int32_t v77; // [xsp+Ch] [xbp-44h] BYREF
+  Il2CppObject *v41; // x0
+  System_String_o *v42; // x1
+  UserItemMaster_o *MasterData_WarQuestSelectionMaster; // x22
+  int32_t v44; // w8
+  UILabel_o *currentNumLb; // x22
+  Il2CppObject *v46; // x0
+  UILabel_o *spendNumLb; // x22
+  UIWidget_o *v48; // x21
+  bool v49; // cc
+  int v50; // s0
+  __int64 v55; // x0
+  int32_t v56; // [xsp+Ch] [xbp-44h] BYREF
   int32_t giftNum; // [xsp+18h] [xbp-38h] BYREF
   int32_t requireNum; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_40FA003 & 1) == 0 )
+  if ( (byte_4187A49 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_ItemMaster___, data);
-    sub_B16FFC(&Method_DataManager_GetMasterData_UserItemMaster___, v13);
-    sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v14);
-    sub_B16FFC(&int_TypeInfo, v15);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v16);
-    sub_B16FFC(&NetworkManager_TypeInfo, v17);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_B16FFC(&StringLiteral_23433/*"{0:N0}"*/, v19);
-    sub_B16FFC(&StringLiteral_746/*"-"*/, v20);
-    sub_B16FFC(&StringLiteral_10470/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/, v21);
-    sub_B16FFC(&StringLiteral_278/*" ×{0}"*/, v22);
-    sub_B16FFC(&StringLiteral_1/*""*/, v23);
-    byte_40FA003 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_ItemMaster___, data);
+    sub_B2C35C(&Method_DataManager_GetMasterData_UserItemMaster___, v13);
+    sub_B2C35C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v14);
+    sub_B2C35C(&int_TypeInfo, v15);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v16);
+    sub_B2C35C(&NetworkManager_TypeInfo, v17);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
+    sub_B2C35C(&StringLiteral_23527/*"{0:N0}"*/, v19);
+    sub_B2C35C(&StringLiteral_747/*"-"*/, v20);
+    sub_B2C35C(&StringLiteral_10503/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/, v21);
+    sub_B2C35C(&StringLiteral_278/*" ×{0}"*/, v22);
+    sub_B2C35C(&StringLiteral_1/*""*/, v23);
+    byte_4187A49 = 1;
   }
   requireNum = 0;
   this->fields.itemSelectEnt = data;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.itemSelectEnt,
     (System_Int32_array **)data,
     *(System_String_array ***)&ticketsHave,
@@ -162,7 +142,7 @@ int32_t __fastcall PresentSelectableItemComponent__setItemInfo(
     v7);
   this->fields.dialog = dlg;
   this->fields.isEnableSelect = 0;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.dialog,
     (System_Int32_array **)dlg,
     v24,
@@ -171,181 +151,185 @@ int32_t __fastcall PresentSelectableItemComponent__setItemInfo(
     v27,
     v28,
     v29);
-  maskImg = this->fields.maskImg;
+  maskImg = (int64_t)this->fields.maskImg;
   if ( !maskImg )
     goto LABEL_53;
-  UnityEngine_GameObject__SetActive(maskImg, 0, 0LL);
-  itemNameLb = this->fields.itemNameLb;
-  if ( !itemNameLb )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskImg, 0, 0LL);
+  maskImg = (int64_t)this->fields.itemNameLb;
+  if ( !maskImg )
     goto LABEL_53;
-  UILabel__set_text(itemNameLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
-  currentNumLb = this->fields.currentNumLb;
-  if ( !currentNumLb )
+  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_747/*"-"*/, 0LL);
+  maskImg = (int64_t)this->fields.currentNumLb;
+  if ( !maskImg )
     goto LABEL_53;
-  UILabel__set_text(currentNumLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
-  spendNumLb = this->fields.spendNumLb;
-  if ( !spendNumLb )
+  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_747/*"-"*/, 0LL);
+  maskImg = (int64_t)this->fields.spendNumLb;
+  if ( !maskImg )
     goto LABEL_53;
-  UILabel__set_text(spendNumLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
-  itemDetailLb = this->fields.itemDetailLb;
-  if ( !itemDetailLb )
+  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_747/*"-"*/, 0LL);
+  maskImg = (int64_t)this->fields.itemDetailLb;
+  if ( !maskImg )
     goto LABEL_53;
-  UILabel__set_text(itemDetailLb, (System_String_o *)StringLiteral_746/*"-"*/, 0LL);
+  UILabel__set_text((UILabel_o *)maskImg, (System_String_o *)StringLiteral_747/*"-"*/, 0LL);
   currentInfoLb = this->fields.currentInfoLb;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_10470/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/, 0LL);
+  maskImg = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_10503/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/, 0LL);
   if ( !currentInfoLb )
     goto LABEL_53;
-  UILabel__set_text(currentInfoLb, v36, 0LL);
-  itemIconInfo = (UnityEngine_Component_o *)this->fields.itemIconInfo;
-  if ( !itemIconInfo )
+  UILabel__set_text(currentInfoLb, (System_String_o *)maskImg, 0LL);
+  maskImg = (int64_t)this->fields.itemIconInfo;
+  if ( !maskImg )
     goto LABEL_53;
-  gameObject = UnityEngine_Component__get_gameObject(itemIconInfo, 0LL);
-  if ( !gameObject )
+  maskImg = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskImg, 0LL);
+  if ( !maskImg )
     goto LABEL_53;
-  UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskImg, 1, 0LL);
   if ( !data )
     goto LABEL_53;
-  GiftData = ItemSelectEntity__GetGiftData(data, 0LL);
-  if ( GiftData )
+  maskImg = (int64_t)ItemSelectEntity__GetGiftData(data, 0LL);
+  if ( maskImg )
   {
-    v42 = *(_QWORD *)&GiftData->max_length;
-    if ( v42 )
+    v33 = *(_QWORD *)(maskImg + 24);
+    if ( v33 )
     {
-      if ( !(_DWORD)v42 )
+      if ( !(_DWORD)v33 )
       {
-        sub_B17100(GiftData, v40, v41);
-        sub_B170A0();
+        v55 = sub_B2C460(maskImg);
+        sub_B2C400(v55, 0LL);
       }
-      v43 = GiftData->m_Items[0];
-      if ( !v43 )
+      v34 = *(_DWORD **)(maskImg + 32);
+      if ( !v34 )
         goto LABEL_53;
-      this->fields.giftNum = v43->fields.num;
-      if ( v43->fields.type == 2 )
+      this->fields.giftNum = v34[7];
+      if ( v34[5] == 2 )
       {
-        Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-        if ( !Instance )
+        maskImg = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        if ( !maskImg )
           goto LABEL_53;
-        MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                              (DataManager_o *)Instance,
-                                                                                              (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ItemMaster___);
-        if ( !MasterData_WarQuestSelectionMaster )
+        maskImg = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                             (DataManager_o *)maskImg,
+                             (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ItemMaster___);
+        if ( !maskImg )
           goto LABEL_53;
-        objectId = v43->fields.objectId;
+        v35 = v34[6];
         p_itemEnt = &this->fields.itemEnt;
-        if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-               MasterData_WarQuestSelectionMaster,
-               (WarEntity_o **)&this->fields.itemEnt,
-               objectId,
-               (const MethodInfo_266F3E4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+        maskImg = DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
+                    (DataMasterBase_WarMaster__WarEntity__int__o *)maskImg,
+                    (WarEntity_o **)&this->fields.itemEnt,
+                    v35,
+                    (const MethodInfo_24E412C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+        if ( (maskImg & 1) != 0 )
         {
           itemEnt = this->fields.itemEnt;
           if ( itemEnt )
           {
-            v49 = this->fields.itemIconInfo;
-            if ( v49 )
+            maskImg = (int64_t)this->fields.itemIconInfo;
+            if ( maskImg )
             {
-              ItemIconComponent__SetItemImage(v49, itemEnt->fields.imageId, 0LL);
-              ticketObj = this->fields.ticketObj;
-              if ( ticketObj )
+              ItemIconComponent__SetItemImage((ItemIconComponent_o *)maskImg, itemEnt->fields.imageId, 0LL);
+              maskImg = (int64_t)this->fields.ticketObj;
+              if ( maskImg )
               {
                 if ( ticketImgId <= 0 )
                 {
-                  UnityEngine_GameObject__SetActive(ticketObj, 0, 0LL);
+                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskImg, 0, 0LL);
                 }
                 else
                 {
-                  UnityEngine_GameObject__SetActive(ticketObj, 1, 0LL);
-                  ticketSp = this->fields.ticketSp;
-                  if ( !ticketSp )
+                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskImg, 1, 0LL);
+                  maskImg = (int64_t)this->fields.ticketSp;
+                  if ( !maskImg )
                     goto LABEL_53;
-                  ItemIconComponent__SetItemImage(ticketSp, ticketImgId, 0LL);
+                  ItemIconComponent__SetItemImage((ItemIconComponent_o *)maskImg, ticketImgId, 0LL);
                 }
-                v52 = this->fields.itemEnt;
-                if ( v52 )
+                v38 = this->fields.itemEnt;
+                if ( v38 )
                 {
-                  v53 = this->fields.itemNameLb;
-                  name = v52->fields.name;
+                  itemNameLb = this->fields.itemNameLb;
+                  name = v38->fields.name;
                   if ( this->fields.giftNum <= 1 )
                   {
-                    v56 = (System_String_o *)StringLiteral_1/*""*/;
+                    v42 = (System_String_o *)StringLiteral_1/*""*/;
                   }
                   else
                   {
                     giftNum = this->fields.giftNum;
-                    v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &giftNum);
-                    v56 = System_String__Format((System_String_o *)StringLiteral_278/*" ×{0}"*/, v55, 0LL);
+                    v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &giftNum);
+                    v42 = System_String__Format((System_String_o *)StringLiteral_278/*" ×{0}"*/, v41, 0LL);
                   }
-                  v57 = System_String__Concat_43743732(name, v56, 0LL);
-                  if ( v53 )
+                  maskImg = (int64_t)System_String__Concat_44305532(name, v42, 0LL);
+                  if ( itemNameLb )
                   {
-                    UILabel__set_text(v53, v57, 0LL);
-                    v58 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-                    if ( v58 )
+                    UILabel__set_text(itemNameLb, (System_String_o *)maskImg, 0LL);
+                    maskImg = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                    if ( maskImg )
                     {
-                      v59 = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                  (DataManager_o *)v58,
-                                                  (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                      MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                                                 (DataManager_o *)maskImg,
+                                                                                 (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_UserItemMaster___);
                       if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                         && !NetworkManager_TypeInfo->_2.cctor_finished )
                       {
                         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
                       }
-                      UserId = NetworkManager__get_UserId(0LL);
+                      maskImg = NetworkManager__get_UserId(0LL);
                       if ( *p_itemEnt )
                       {
-                        if ( v59 )
+                        if ( MasterData_WarQuestSelectionMaster )
                         {
-                          EntityDefinitely = UserItemMaster__GetEntityDefinitely(
-                                               v59,
-                                               UserId,
+                          maskImg = (int64_t)UserItemMaster__GetEntityDefinitely(
+                                               MasterData_WarQuestSelectionMaster,
+                                               maskImg,
                                                (*p_itemEnt)->fields.id,
                                                0LL);
-                          if ( EntityDefinitely )
+                          if ( maskImg )
                           {
-                            num = EntityDefinitely->fields.num;
-                            this->fields.itemHold = num;
+                            v44 = *(_DWORD *)(maskImg + 28);
+                            this->fields.itemHold = v44;
                             requireNum = data->fields.requireNum;
-                            v63 = this->fields.currentNumLb;
-                            v77 = num;
-                            v64 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v77);
-                            v65 = System_String__Format((System_String_o *)StringLiteral_23433/*"{0:N0}"*/, v64, 0LL);
-                            if ( v63 )
+                            currentNumLb = this->fields.currentNumLb;
+                            v56 = v44;
+                            v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v56);
+                            maskImg = (int64_t)System_String__Format((System_String_o *)StringLiteral_23527/*"{0:N0}"*/, v46, 0LL);
+                            if ( currentNumLb )
                             {
-                              UILabel__set_text(v63, v65, 0LL);
-                              v66 = this->fields.spendNumLb;
-                              v67 = System_Int32__ToString((int32_t)&requireNum, 0LL);
-                              if ( v66 )
+                              UILabel__set_text(currentNumLb, (System_String_o *)maskImg, 0LL);
+                              spendNumLb = this->fields.spendNumLb;
+                              maskImg = (int64_t)System_Int32__ToString((int32_t)&requireNum, 0LL);
+                              if ( spendNumLb )
                               {
-                                UILabel__set_text(v66, v67, 0LL);
-                                v68 = this->fields.itemDetailLb;
-                                if ( v68 )
+                                UILabel__set_text(spendNumLb, (System_String_o *)maskImg, 0LL);
+                                maskImg = (int64_t)this->fields.itemDetailLb;
+                                if ( maskImg )
                                 {
-                                  UILabel__set_text(v68, data->fields.detail, 0LL);
-                                  v69 = (UIWidget_o *)this->fields.spendNumLb;
-                                  v70 = requireNum <= ticketsHave;
+                                  UILabel__set_text((UILabel_o *)maskImg, data->fields.detail, 0LL);
+                                  v48 = (UIWidget_o *)this->fields.spendNumLb;
+                                  v49 = requireNum <= ticketsHave;
                                   this->fields.isEnableSelect = requireNum <= ticketsHave;
-                                  if ( v70 )
+                                  if ( v49 )
                                   {
-                                    *(UnityEngine_Color_o *)&v71 = UnityEngine_Color__get_white(0LL);
-                                    if ( !v69 )
+                                    *(UnityEngine_Color_o *)&v50 = UnityEngine_Color__get_white(0LL);
+                                    if ( !v48 )
                                       goto LABEL_53;
                                   }
                                   else
                                   {
-                                    *(UnityEngine_Color_o *)&v71 = UnityEngine_Color__get_red(0LL);
-                                    if ( !v69 )
+                                    *(UnityEngine_Color_o *)&v50 = UnityEngine_Color__get_red(0LL);
+                                    if ( !v48 )
                                       goto LABEL_53;
                                   }
-                                  UIWidget__set_color(v69, *(UnityEngine_Color_o *)&v71, 0LL);
-                                  v75 = this->fields.maskImg;
-                                  if ( v75 )
+                                  UIWidget__set_color(v48, *(UnityEngine_Color_o *)&v50, 0LL);
+                                  maskImg = (int64_t)this->fields.maskImg;
+                                  if ( maskImg )
                                   {
-                                    UnityEngine_GameObject__SetActive(v75, !this->fields.isEnableSelect, 0LL);
+                                    UnityEngine_GameObject__SetActive(
+                                      (UnityEngine_GameObject_o *)maskImg,
+                                      !this->fields.isEnableSelect,
+                                      0LL);
                                     goto LABEL_52;
                                   }
                                 }
@@ -361,12 +345,12 @@ int32_t __fastcall PresentSelectableItemComponent__setItemInfo(
             }
           }
 LABEL_53:
-          sub_B170D4();
+          sub_B2C434(maskImg, v30);
         }
       }
     }
   }
 LABEL_52:
-  PresentSelectableItemComponent__setEnableSelectItem(this, v40);
+  PresentSelectableItemComponent__setEnableSelectItem(this, v30);
   return this->fields.giftNum;
 }

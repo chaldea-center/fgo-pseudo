@@ -21,15 +21,14 @@ void __fastcall ObjectSwitchEffectSubComponent__RecvParam(
   __int64 v12; // x9
   __int64 v13; // x21
   __int64 v14; // x22
-  UnityEngine_GameObject_o *v15; // x0
-  unsigned int v16; // w21
-  UnityEngine_GameObject_o *v17; // x0
+  unsigned int v15; // w21
+  __int64 v16; // x0
 
   v4 = this;
-  if ( (byte_40F7F40 & 1) == 0 )
+  if ( (byte_4185123 & 1) == 0 )
   {
-    this = (ObjectSwitchEffectSubComponent_o *)sub_B16FFC(&RaceResultEffectParam_TypeInfo, param);
-    byte_40F7F40 = 1;
+    this = (ObjectSwitchEffectSubComponent_o *)sub_B2C35C(&RaceResultEffectParam_TypeInfo, param);
+    byte_4185123 = 1;
   }
   if ( param
     && (v5 = *(&RaceResultEffectParam_TypeInfo->_2.bitflags2 + 1), *(&param->klass->_2.bitflags2 + 1) >= (unsigned int)v5) )
@@ -46,7 +45,7 @@ void __fastcall ObjectSwitchEffectSubComponent__RecvParam(
   klass = v4[1].klass;
   if ( !klass )
 LABEL_28:
-    sub_B170D4();
+    sub_B2C434(this, param);
   namespaze = (int)klass->_1.namespaze;
   if ( !v6 )
     goto LABEL_22;
@@ -68,10 +67,10 @@ LABEL_28:
       v14 = 0LL;
       while ( (unsigned int)v14 < LODWORD(klass->_1.namespaze) )
       {
-        v15 = (UnityEngine_GameObject_o *)*((_QWORD *)&klass->_1.byval_arg.data + (int)v14);
-        if ( !v15 )
+        this = (ObjectSwitchEffectSubComponent_o *)*((_QWORD *)&klass->_1.byval_arg.data + (int)v14);
+        if ( !this )
           goto LABEL_28;
-        UnityEngine_GameObject__SetActive(v15, v13 == v14, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v13 == v14, 0LL);
         if ( (int)v14 + 1 >= namespaze )
           return;
         klass = v4[1].klass;
@@ -87,22 +86,22 @@ LABEL_28:
 LABEL_22:
     if ( namespaze >= 1 )
     {
-      v16 = 0;
-      while ( v16 < LODWORD(klass->_1.namespaze) )
+      v15 = 0;
+      while ( v15 < LODWORD(klass->_1.namespaze) )
       {
-        v17 = (UnityEngine_GameObject_o *)*((_QWORD *)&klass->_1.byval_arg.data + (int)v16);
-        if ( !v17 )
+        this = (ObjectSwitchEffectSubComponent_o *)*((_QWORD *)&klass->_1.byval_arg.data + (int)v15);
+        if ( !this )
           goto LABEL_28;
-        UnityEngine_GameObject__SetActive(v17, 0, 0LL);
-        if ( (int)++v16 >= namespaze )
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
+        if ( (int)++v15 >= namespaze )
           return;
         klass = v4[1].klass;
         if ( !klass )
           goto LABEL_28;
       }
 LABEL_30:
-      sub_B17100(this, param, method);
-      sub_B170A0();
+      v16 = sub_B2C460(this);
+      sub_B2C400(v16, 0LL);
     }
   }
 }

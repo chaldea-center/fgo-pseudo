@@ -1,16 +1,16 @@
 void __fastcall EventRewardSceneReleaseMaster___ctor(EventRewardSceneReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FD130 & 1) == 0 )
+  if ( (byte_418A941 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_EventRewardSceneReleaseMaster__EventRewardSceneReleaseEntity__string___ctor__,
       method);
-    byte_40FD130 = 1;
+    byte_418A941 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     194,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_EventRewardSceneReleaseMaster__EventRewardSceneReleaseEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_EventRewardSceneReleaseMaster__EventRewardSceneReleaseEntity__string___ctor__);
 }
 
 
@@ -24,18 +24,18 @@ EventRewardSceneReleaseEntity_o *__fastcall EventRewardSceneReleaseMaster__GetEn
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40FD12E & 1) == 0 )
+  if ( (byte_418A93F & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_EventRewardSceneReleaseMaster__EventRewardSceneReleaseEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_40FD12E = 1;
+    byte_418A93F = 1;
   }
   PK = EventRewardSceneReleaseEntity__CreatePK(eventId, slot, condType, *(const MethodInfo **)&condType);
   return (EventRewardSceneReleaseEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                               (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                               PK,
-                                              (const MethodInfo_266F7D8 *)Method_DataMasterBase_EventRewardSceneReleaseMaster__EventRewardSceneReleaseEntity__string__GetEntity__);
+                                              (const MethodInfo_24E4520 *)Method_DataMasterBase_EventRewardSceneReleaseMaster__EventRewardSceneReleaseEntity__string__GetEntity__);
 }
 
 
@@ -50,19 +50,19 @@ bool __fastcall EventRewardSceneReleaseMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40FD12F & 1) == 0 )
+  if ( (byte_418A940 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_EventRewardSceneReleaseMaster__EventRewardSceneReleaseEntity__string__TryGetEntity__,
       entity);
-    byte_40FD12F = 1;
+    byte_418A940 = 1;
   }
   PK = EventRewardSceneReleaseEntity__CreatePK(eventId, slot, condType, *(const MethodInfo **)&slot);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_EventRewardSceneReleaseMaster__EventRewardSceneReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_EventRewardSceneReleaseMaster__EventRewardSceneReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -75,45 +75,43 @@ EventRewardSceneReleaseEntity_o *__fastcall EventRewardSceneReleaseMaster__getEn
 {
   __int64 v7; // x1
   __int64 v8; // x1
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  EventRewardSceneReleaseEntity_o *result; // x0
   int32_t Count; // w0
   int32_t v11; // w22
   int32_t v12; // w23
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v13; // x0
-  EventRewardSceneReleaseEntity_o *result; // x0
-  __int64 v15; // x10
+  __int64 v13; // x10
 
-  if ( (byte_40FD131 & 1) == 0 )
+  if ( (byte_418A942 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_B16FFC(&EventRewardSceneReleaseEntity_TypeInfo, v8);
-    byte_40FD131 = 1;
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_B2C35C(&EventRewardSceneReleaseEntity_TypeInfo, v8);
+    byte_418A942 = 1;
   }
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-  if ( !list )
+  result = (EventRewardSceneReleaseEntity_o *)this->fields.list;
+  if ( !result )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-            list,
-            (const MethodInfo_290DE84 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
+            (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v11 = Count;
     v12 = 0;
     while ( 1 )
     {
-      v13 = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-      if ( !v13 )
-        break;
-      result = (EventRewardSceneReleaseEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                                    v13,
-                                                    v12,
-                                                    (const MethodInfo_290DF28 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      result = (EventRewardSceneReleaseEntity_o *)this->fields.list;
       if ( !result )
         break;
-      v15 = *(&EventRewardSceneReleaseEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&result->klass->_2.bitflags2 + 1) < (unsigned int)v15
-        || (EventRewardSceneReleaseEntity_c *)result->klass->_2.typeHierarchy[v15 - 1] != EventRewardSceneReleaseEntity_TypeInfo )
+      result = (EventRewardSceneReleaseEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
+                                                    (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
+                                                    v12,
+                                                    (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      if ( !result )
+        break;
+      v13 = *(&EventRewardSceneReleaseEntity_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&result->klass->_2.bitflags2 + 1) < (unsigned int)v13
+        || (EventRewardSceneReleaseEntity_c *)result->klass->_2.typeHierarchy[v13 - 1] != EventRewardSceneReleaseEntity_TypeInfo )
       {
         break;
       }
@@ -123,7 +121,7 @@ EventRewardSceneReleaseEntity_o *__fastcall EventRewardSceneReleaseMaster__getEn
         return 0LL;
     }
 LABEL_15:
-    sub_B170D4();
+    sub_B2C434(result, *(_QWORD *)&eventId);
   }
   return 0LL;
 }
@@ -138,51 +136,49 @@ int32_t __fastcall EventRewardSceneReleaseMaster__getReleaseTabImageId(
 {
   __int64 v7; // x1
   __int64 v8; // x1
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  void *list; // x0
   int32_t Count; // w0
   int32_t v11; // w22
   int32_t v12; // w23
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v13; // x0
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  __int64 v15; // x10
+  __int64 v13; // x10
 
-  if ( (byte_40FD132 & 1) == 0 )
+  if ( (byte_418A943 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_B16FFC(&EventRewardSceneReleaseEntity_TypeInfo, v8);
-    byte_40FD132 = 1;
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_B2C35C(&EventRewardSceneReleaseEntity_TypeInfo, v8);
+    byte_418A943 = 1;
   }
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+  list = this->fields.list;
   if ( !list )
 LABEL_15:
-    sub_B170D4();
+    sub_B2C434(list, *(_QWORD *)&eventId);
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-            list,
-            (const MethodInfo_290DE84 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
+            (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count < 1 )
     return 0;
   v11 = Count;
   v12 = 0;
   while ( 1 )
   {
-    v13 = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-    if ( !v13 )
+    list = this->fields.list;
+    if ( !list )
       goto LABEL_15;
-    Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-             v13,
+    list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
+             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
              v12,
-             (const MethodInfo_290DF28 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    if ( !Item )
+             (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    if ( !list )
       goto LABEL_15;
-    v15 = *(&EventRewardSceneReleaseEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&Item->klass->_2.bitflags2 + 1) < (unsigned int)v15
-      || (EventRewardSceneReleaseEntity_c *)Item->klass->_2.typeHierarchy[v15 - 1] != EventRewardSceneReleaseEntity_TypeInfo )
+    v13 = *(&EventRewardSceneReleaseEntity_TypeInfo->_2.bitflags2 + 1);
+    if ( *(unsigned __int8 *)(*(_QWORD *)list + 300LL) < (unsigned int)v13
+      || *(EventRewardSceneReleaseEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * v13 - 8) != EventRewardSceneReleaseEntity_TypeInfo )
     {
       goto LABEL_15;
     }
-    if ( LODWORD(Item[1].klass) == eventId && HIDWORD(Item[1].klass) == slot )
-      return HIDWORD(Item[2].klass);
+    if ( *((_DWORD *)list + 4) == eventId && *((_DWORD *)list + 5) == slot )
+      return *((_DWORD *)list + 9);
     if ( ++v12 >= v11 )
       return 0;
   }

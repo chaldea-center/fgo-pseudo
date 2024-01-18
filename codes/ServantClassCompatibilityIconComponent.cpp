@@ -1,90 +1,87 @@
 void __fastcall ServantClassCompatibilityIconComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
+  __int64 v2; // x1
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
-  __int64 v6; // x1
-  System_Array_o *v7; // x19
+  System_Array_o *v6; // x19
   BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  __int64 v15; // x2
-  System_Array_o *v16; // x19
-  struct ServantClassCompatibilityIconComponent_StaticFields *v17; // x0
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  __int64 v24; // x2
-  System_Array_o *v25; // x19
-  struct ServantClassCompatibilityIconComponent_StaticFields *v26; // x0
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  System_RuntimeFieldHandle_o v33; // 0:w1.4
-  System_RuntimeFieldHandle_o v34; // 0:w1.4
-  System_RuntimeFieldHandle_o v35; // 0:w1.4
+  System_String_array **v8; // x2
+  System_String_array **v9; // x3
+  System_Boolean_array **v10; // x4
+  System_Int32_array **v11; // x5
+  System_Int32_array *v12; // x6
+  System_Int32_array *v13; // x7
+  System_Array_o *v14; // x19
+  struct ServantClassCompatibilityIconComponent_StaticFields *v15; // x0
+  System_String_array **v16; // x2
+  System_String_array **v17; // x3
+  System_Boolean_array **v18; // x4
+  System_Int32_array **v19; // x5
+  System_Int32_array *v20; // x6
+  System_Int32_array *v21; // x7
+  System_Array_o *v22; // x19
+  struct ServantClassCompatibilityIconComponent_StaticFields *v23; // x0
+  System_String_array **v24; // x2
+  System_String_array **v25; // x3
+  System_Boolean_array **v26; // x4
+  System_Int32_array **v27; // x5
+  System_Int32_array *v28; // x6
+  System_Int32_array *v29; // x7
+  System_RuntimeFieldHandle_o v30; // 0:w1.4
+  System_RuntimeFieldHandle_o v31; // 0:w1.4
+  System_RuntimeFieldHandle_o v32; // 0:w1.4
 
-  if ( (byte_40F9508 & 1) == 0 )
+  if ( (byte_4189E77 & 1) == 0 )
   {
-    sub_B16FFC(&ServantClassCompatibilityIconComponent_TypeInfo, v1);
-    sub_B16FFC(&float___TypeInfo, v3);
-    sub_B16FFC(
+    sub_B2C35C(&ServantClassCompatibilityIconComponent_TypeInfo, v1);
+    sub_B2C35C(&float___TypeInfo, v2);
+    sub_B2C35C(
       &Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003,
-      v4);
-    sub_B16FFC(
+      v3);
+    sub_B2C35C(
       &Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436,
-      v5);
-    sub_B16FFC(
+      v4);
+    sub_B2C35C(
       &Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528,
-      v6);
-    byte_40F9508 = 1;
+      v5);
+    byte_4189E77 = 1;
   }
-  v7 = (System_Array_o *)sub_B17014(float___TypeInfo, 5LL, v2);
-  v33.fields.value = Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_42629164(v7, v33, 0LL);
+  v6 = (System_Array_o *)sub_B2C374(float___TypeInfo, 5LL);
+  v30.fields.value = Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43133304(v6, v30, 0LL);
   static_fields = (BattleServantConfConponent_o *)ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v7;
-  sub_B16F98(static_fields, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
-  v16 = (System_Array_o *)sub_B17014(float___TypeInfo, 5LL, v15);
-  v34.fields.value = Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_42629164(v16, v34, 0LL);
-  v17 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
-  v17->POSITION_X_DOWN = (struct System_Single_array *)v16;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v17->POSITION_X_DOWN,
-    (System_Int32_array **)v16,
+  static_fields->klass = (BattleServantConfConponent_c *)v6;
+  sub_B2C2F8(static_fields, (System_Int32_array **)v6, v8, v9, v10, v11, v12, v13);
+  v14 = (System_Array_o *)sub_B2C374(float___TypeInfo, 5LL);
+  v31.fields.value = Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43133304(v14, v31, 0LL);
+  v15 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
+  v15->POSITION_X_DOWN = (struct System_Single_array *)v14;
+  sub_B2C2F8(
+    (BattleServantConfConponent_o *)&v15->POSITION_X_DOWN,
+    (System_Int32_array **)v14,
+    v16,
+    v17,
     v18,
     v19,
     v20,
-    v21,
-    v22,
-    v23);
-  v25 = (System_Array_o *)sub_B17014(float___TypeInfo, 5LL, v24);
-  v35.fields.value = Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_42629164(v25, v35, 0LL);
-  v26 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
-  v26->POSITION_X_CENTER = (struct System_Single_array *)v25;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&v26->POSITION_X_CENTER,
-    (System_Int32_array **)v25,
+    v21);
+  v22 = (System_Array_o *)sub_B2C374(float___TypeInfo, 5LL);
+  v32.fields.value = Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43133304(v22, v32, 0LL);
+  v23 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
+  v23->POSITION_X_CENTER = (struct System_Single_array *)v22;
+  sub_B2C2F8(
+    (BattleServantConfConponent_o *)&v23->POSITION_X_CENTER,
+    (System_Int32_array **)v22,
+    v24,
+    v25,
+    v26,
     v27,
     v28,
-    v29,
-    v30,
-    v31,
-    v32);
+    v29);
 }
 
 
@@ -101,18 +98,14 @@ void __fastcall ServantClassCompatibilityIconComponent__Clear(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *upIconSprite; // x20
-  UISprite_o *v4; // x0
-  UnityEngine_Component_o *v5; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v4; // x1
+  UISprite_o *gameObject; // x0
   UnityEngine_Object_o *downIconSprite; // x20
-  UISprite_o *v8; // x0
-  UnityEngine_Component_o *v9; // x0
-  UnityEngine_GameObject_o *v10; // x0
 
-  if ( (byte_40F9504 & 1) == 0 )
+  if ( (byte_4189E73 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    byte_40F9504 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
+    byte_4189E73 = 1;
   }
   upIconSprite = (UnityEngine_Object_o *)this->fields.upIconSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -122,17 +115,17 @@ void __fastcall ServantClassCompatibilityIconComponent__Clear(
   }
   if ( UnityEngine_Object__op_Inequality(upIconSprite, 0LL, 0LL) )
   {
-    v4 = this->fields.upIconSprite;
-    if ( !v4 )
-      goto LABEL_20;
-    UISprite__set_spriteName(v4, 0LL, 0LL);
-    v5 = (UnityEngine_Component_o *)this->fields.upIconSprite;
-    if ( !v5 )
-      goto LABEL_20;
-    gameObject = UnityEngine_Component__get_gameObject(v5, 0LL);
+    gameObject = this->fields.upIconSprite;
     if ( !gameObject )
       goto LABEL_20;
-    UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
+    UISprite__set_spriteName(gameObject, 0LL, 0LL);
+    gameObject = this->fields.upIconSprite;
+    if ( !gameObject )
+      goto LABEL_20;
+    gameObject = (UISprite_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+    if ( !gameObject )
+      goto LABEL_20;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   }
   downIconSprite = (UnityEngine_Object_o *)this->fields.downIconSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -142,23 +135,23 @@ void __fastcall ServantClassCompatibilityIconComponent__Clear(
   }
   if ( UnityEngine_Object__op_Inequality(downIconSprite, 0LL, 0LL) )
   {
-    v8 = this->fields.downIconSprite;
-    if ( v8 )
+    gameObject = this->fields.downIconSprite;
+    if ( gameObject )
     {
-      UISprite__set_spriteName(v8, 0LL, 0LL);
-      v9 = (UnityEngine_Component_o *)this->fields.downIconSprite;
-      if ( v9 )
+      UISprite__set_spriteName(gameObject, 0LL, 0LL);
+      gameObject = this->fields.downIconSprite;
+      if ( gameObject )
       {
-        v10 = UnityEngine_Component__get_gameObject(v9, 0LL);
-        if ( v10 )
+        gameObject = (UISprite_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+        if ( gameObject )
         {
-          UnityEngine_GameObject__SetActive(v10, 0, 0LL);
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
           return;
         }
       }
     }
 LABEL_20:
-    sub_B170D4();
+    sub_B2C434(gameObject, v4);
   }
 }
 
@@ -177,54 +170,44 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIcon(
   UnityEngine_Object_o *upIconSprite; // x23
   UnityEngine_Object_o *downIconSprite; // x23
   bool v14; // w0
-  WebViewManager_o *Instance; // x0
-  ClassRelationMaster_o *MasterData_WarQuestSelectionMaster; // x0
-  __int64 v17; // x1
-  const MethodInfo *v18; // x2
-  __int64 v19; // x8
-  ClassRelationMaster_o *v20; // x25
-  unsigned __int64 v21; // x27
+  DataManager_o *Instance; // x0
+  UISprite_o *v16; // x1
+  __int64 v17; // x8
+  ClassRelationMaster_o *v18; // x25
+  unsigned __int64 v19; // x27
   int32_t advIconId; // w24
-  int32_t v23; // w23
-  int32_t v24; // w26
+  int32_t v21; // w23
+  int32_t v22; // w26
+  const MethodInfo *v23; // x5
+  bool v24; // zf
   const MethodInfo *v25; // x5
-  bool v26; // zf
-  UnityEngine_Component_o *v27; // x0
-  UnityEngine_GameObject_o *v28; // x0
-  UnityEngine_Component_o *v29; // x0
-  UnityEngine_GameObject_o *v30; // x0
-  ServantClassCompatibilityIconComponent_o *v31; // x0
-  const MethodInfo *v32; // x5
-  UISprite_o *v33; // x1
-  UISprite_o *v34; // x21
-  UISprite_c *klass; // x8
+  const MethodInfo *v26; // x2
+  UISprite_o *v27; // x21
+  System_Collections_Generic_List_string__c *klass; // x8
+  const MethodInfo *v29; // x2
   struct System_Single_array *POSITION_X_DOWN; // x8
-  UISprite_o *v37; // x1
-  float v38; // s0
-  UnityEngine_Component_o *v39; // x0
-  UnityEngine_GameObject_o *v40; // x0
-  ServantClassCompatibilityIconComponent_o *v41; // x0
-  const MethodInfo *v42; // x5
-  struct UISprite_o *v43; // x21
+  UISprite_o *v31; // x1
+  float v32; // s0
+  ServantClassCompatibilityIconComponent_o *v33; // x0
+  const MethodInfo *v34; // x5
+  struct UISprite_o *v35; // x21
+  struct System_String_array *items; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  struct System_Int32_array *buckets; // x8
-  UnityEngine_Component_o *v46; // x0
-  UnityEngine_GameObject_o *v47; // x0
-  UnityEngine_Component_o *v48; // x0
-  UnityEngine_GameObject_o *v49; // x0
-  ClassRelationEntity_o *v50; // [xsp+8h] [xbp-68h] BYREF
+  UnityEngine_GameObject_o *v38; // x0
+  __int64 v39; // x0
+  ClassRelationEntity_o *v40; // [xsp+8h] [xbp-68h] BYREF
   ClassRelationEntity_o *entity; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_40F9505 & 1) == 0 )
+  if ( (byte_4189E74 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_ClassRelationMaster___, *(_QWORD *)&classId);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&ServantClassCompatibilityIconComponent_TypeInfo, v10);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    byte_40F9505 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_ClassRelationMaster___, *(_QWORD *)&classId);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v9);
+    sub_B2C35C(&ServantClassCompatibilityIconComponent_TypeInfo, v10);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    byte_4189E74 = 1;
   }
   entity = 0LL;
-  v50 = 0LL;
+  v40 = 0LL;
   if ( dispMode == 5 )
     goto LABEL_8;
   upIconSprite = (UnityEngine_Object_o *)this->fields.upIconSprite;
@@ -248,34 +231,29 @@ LABEL_8:
     ServantClassCompatibilityIconComponent__Clear(this, *(const MethodInfo **)&classId);
     return;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_66;
-  MasterData_WarQuestSelectionMaster = (ClassRelationMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                  (DataManager_o *)Instance,
-                                                                  (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ClassRelationMaster___);
-  v19 = *(_QWORD *)&targetClassIds->max_length;
-  if ( (int)v19 >= 1 )
+  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                Instance,
+                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ClassRelationMaster___);
+  v17 = *(_QWORD *)&targetClassIds->max_length;
+  if ( (int)v17 >= 1 )
   {
-    v20 = MasterData_WarQuestSelectionMaster;
-    v21 = 0LL;
+    v18 = (ClassRelationMaster_o *)Instance;
+    v19 = 0LL;
     advIconId = 0;
-    v23 = 0;
+    v21 = 0;
     while ( 1 )
     {
-      if ( v21 >= (unsigned int)v19 )
+      if ( v19 >= (unsigned int)v17 )
         goto LABEL_67;
-      if ( !v20 )
+      if ( !v18 )
         goto LABEL_66;
-      v24 = targetClassIds->m_Items[v21 + 1];
-      ClassRelationMaster__TryGetEntity(v20, &entity, classId, v24, 0LL);
-      MasterData_WarQuestSelectionMaster = (ClassRelationMaster_o *)ClassRelationMaster__TryGetEntity(
-                                                                      v20,
-                                                                      &v50,
-                                                                      v24,
-                                                                      classId,
-                                                                      0LL);
-      if ( !entity || !v50 )
+      v22 = targetClassIds->m_Items[v19 + 1];
+      ClassRelationMaster__TryGetEntity(v18, &entity, classId, v22, 0LL);
+      Instance = (DataManager_o *)ClassRelationMaster__TryGetEntity(v18, &v40, v22, classId, 0LL);
+      if ( !entity || !v40 )
         break;
       if ( entity->fields.advIconId )
       {
@@ -284,142 +262,148 @@ LABEL_8:
         else
           advIconId = entity->fields.advIconId;
       }
-      else if ( !v50->fields.advIconId )
+      else if ( !v40->fields.advIconId )
       {
         break;
       }
-      if ( v50->fields.advIconId )
-        v26 = v23 == 1;
+      if ( v40->fields.advIconId )
+        v24 = v21 == 1;
       else
-        v26 = 1;
-      if ( !v26 )
-        v23 = v50->fields.advIconId;
+        v24 = 1;
+      if ( !v24 )
+        v21 = v40->fields.advIconId;
 LABEL_38:
-      LODWORD(v19) = targetClassIds->max_length;
-      if ( (__int64)++v21 >= (int)v19 )
+      LODWORD(v17) = targetClassIds->max_length;
+      if ( (__int64)++v19 >= (int)v17 )
       {
         if ( advIconId )
         {
           ServantClassCompatibilityIconComponent__SetIconImage(
-            (ServantClassCompatibilityIconComponent_o *)MasterData_WarQuestSelectionMaster,
+            (ServantClassCompatibilityIconComponent_o *)Instance,
             this->fields.upIconSprite,
             advIconId,
             dispMode,
             1,
-            v25);
-          v33 = this->fields.downIconSprite;
-          if ( v23 )
+            v23);
+          v16 = this->fields.downIconSprite;
+          if ( v21 )
           {
-            ServantClassCompatibilityIconComponent__SetIconImage(v31, v33, v23, dispMode, 0, v32);
-            v34 = this->fields.upIconSprite;
-            MasterData_WarQuestSelectionMaster = (ClassRelationMaster_o *)ServantClassCompatibilityIconComponent_TypeInfo;
+            ServantClassCompatibilityIconComponent__SetIconImage(
+              (ServantClassCompatibilityIconComponent_o *)Instance,
+              v16,
+              v21,
+              dispMode,
+              0,
+              v25);
+            v27 = this->fields.upIconSprite;
+            Instance = (DataManager_o *)ServantClassCompatibilityIconComponent_TypeInfo;
             if ( (BYTE3(ServantClassCompatibilityIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !ServantClassCompatibilityIconComponent_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(ServantClassCompatibilityIconComponent_TypeInfo);
-              MasterData_WarQuestSelectionMaster = (ClassRelationMaster_o *)ServantClassCompatibilityIconComponent_TypeInfo;
+              Instance = (DataManager_o *)ServantClassCompatibilityIconComponent_TypeInfo;
             }
-            klass = (UISprite_c *)MasterData_WarQuestSelectionMaster[2].fields._lookup->klass;
+            klass = Instance[1].fields.saveNameList->klass;
             if ( klass )
             {
               if ( LODWORD(klass->_1.namespaze) <= dispMode )
                 goto LABEL_67;
               ServantClassCompatibilityIconComponent__SetIconPosition(
-                (ServantClassCompatibilityIconComponent_o *)MasterData_WarQuestSelectionMaster,
-                v34,
+                (ServantClassCompatibilityIconComponent_o *)Instance,
+                v27,
                 *((float *)&klass->_1.byval_arg.data + dispMode),
-                v18);
+                v26);
               POSITION_X_DOWN = ServantClassCompatibilityIconComponent_TypeInfo->static_fields->POSITION_X_DOWN;
               if ( POSITION_X_DOWN )
               {
                 if ( POSITION_X_DOWN->max_length > dispMode )
                 {
-                  v37 = this->fields.downIconSprite;
-                  v38 = POSITION_X_DOWN->m_Items[dispMode + 1];
+                  v31 = this->fields.downIconSprite;
+                  v32 = POSITION_X_DOWN->m_Items[dispMode + 1];
                   goto LABEL_62;
                 }
 LABEL_67:
-                sub_B17100(MasterData_WarQuestSelectionMaster, v17, v18);
-                sub_B170A0();
+                v39 = sub_B2C460(Instance);
+                sub_B2C400(v39, 0LL);
               }
             }
 LABEL_66:
-            sub_B170D4();
+            sub_B2C434(Instance, v16);
           }
-          if ( !v33 )
+          if ( !v16 )
             goto LABEL_66;
-          gameObject = UnityEngine_Component__get_gameObject(
-                         (UnityEngine_Component_o *)this->fields.downIconSprite,
-                         0LL);
-          if ( !gameObject )
+          Instance = (DataManager_o *)UnityEngine_Component__get_gameObject(
+                                        (UnityEngine_Component_o *)this->fields.downIconSprite,
+                                        0LL);
+          if ( !Instance )
             goto LABEL_66;
-          UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
-          v43 = this->fields.upIconSprite;
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
+          v35 = this->fields.upIconSprite;
 LABEL_56:
-          MasterData_WarQuestSelectionMaster = (ClassRelationMaster_o *)ServantClassCompatibilityIconComponent_TypeInfo;
+          Instance = (DataManager_o *)ServantClassCompatibilityIconComponent_TypeInfo;
           if ( (BYTE3(ServantClassCompatibilityIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !ServantClassCompatibilityIconComponent_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(ServantClassCompatibilityIconComponent_TypeInfo);
-            MasterData_WarQuestSelectionMaster = (ClassRelationMaster_o *)ServantClassCompatibilityIconComponent_TypeInfo;
+            Instance = (DataManager_o *)ServantClassCompatibilityIconComponent_TypeInfo;
           }
-          buckets = MasterData_WarQuestSelectionMaster[2].fields._lookup->fields.buckets;
-          if ( !buckets )
+          items = Instance[1].fields.saveNameList->fields._items;
+          if ( !items )
             goto LABEL_66;
-          if ( buckets->max_length <= dispMode )
+          if ( items->max_length <= dispMode )
             goto LABEL_67;
-          v38 = *(float *)&buckets->m_Items[dispMode + 1];
-          v37 = v43;
+          v32 = *((float *)items->m_Items + dispMode);
+          v31 = v35;
 LABEL_62:
           ServantClassCompatibilityIconComponent__SetIconPosition(
-            (ServantClassCompatibilityIconComponent_o *)MasterData_WarQuestSelectionMaster,
-            v37,
-            v38,
-            v18);
+            (ServantClassCompatibilityIconComponent_o *)Instance,
+            v31,
+            v32,
+            v29);
           if ( (dispMode & 0xFFFFFFFE) == 2 )
           {
-            v46 = (UnityEngine_Component_o *)this->fields.upIconSprite;
-            if ( !v46 )
+            Instance = (DataManager_o *)this->fields.upIconSprite;
+            if ( !Instance )
               goto LABEL_66;
-            v47 = UnityEngine_Component__get_gameObject(v46, 0LL);
-            GameObjectExtensions__SetLocalScale_27422124(v47, 0.8, 0LL);
-            v48 = (UnityEngine_Component_o *)this->fields.downIconSprite;
-            if ( !v48 )
+            gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+            GameObjectExtensions__SetLocalScale_31328080(gameObject, 0.8, 0LL);
+            Instance = (DataManager_o *)this->fields.downIconSprite;
+            if ( !Instance )
               goto LABEL_66;
-            v49 = UnityEngine_Component__get_gameObject(v48, 0LL);
-            GameObjectExtensions__SetLocalScale_27422124(v49, 0.8, 0LL);
+            v38 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+            GameObjectExtensions__SetLocalScale_31328080(v38, 0.8, 0LL);
           }
         }
-        else if ( v23 )
+        else if ( v21 )
         {
-          v39 = (UnityEngine_Component_o *)this->fields.upIconSprite;
-          if ( !v39 )
+          Instance = (DataManager_o *)this->fields.upIconSprite;
+          if ( !Instance )
             goto LABEL_66;
-          v40 = UnityEngine_Component__get_gameObject(v39, 0LL);
-          if ( !v40 )
+          Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+          if ( !Instance )
             goto LABEL_66;
-          UnityEngine_GameObject__SetActive(v40, 0, 0LL);
-          ServantClassCompatibilityIconComponent__SetIconImage(v41, this->fields.downIconSprite, v23, dispMode, 0, v42);
-          v43 = this->fields.downIconSprite;
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
+          ServantClassCompatibilityIconComponent__SetIconImage(v33, this->fields.downIconSprite, v21, dispMode, 0, v34);
+          v35 = this->fields.downIconSprite;
           goto LABEL_56;
         }
         return;
       }
     }
-    v27 = (UnityEngine_Component_o *)this->fields.upIconSprite;
-    if ( !v27 )
+    Instance = (DataManager_o *)this->fields.upIconSprite;
+    if ( !Instance )
       goto LABEL_66;
-    v28 = UnityEngine_Component__get_gameObject(v27, 0LL);
-    if ( !v28 )
+    Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+    if ( !Instance )
       goto LABEL_66;
-    UnityEngine_GameObject__SetActive(v28, 0, 0LL);
-    v29 = (UnityEngine_Component_o *)this->fields.downIconSprite;
-    if ( !v29 )
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
+    Instance = (DataManager_o *)this->fields.downIconSprite;
+    if ( !Instance )
       goto LABEL_66;
-    v30 = UnityEngine_Component__get_gameObject(v29, 0LL);
-    if ( !v30 )
+    Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+    if ( !Instance )
       goto LABEL_66;
-    UnityEngine_GameObject__SetActive(v30, 0, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
     goto LABEL_38;
   }
 }
@@ -436,63 +420,62 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconImage(
   __int64 v10; // x1
   __int64 v11; // x1
   __int64 v12; // x1
-  UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o **v14; // x8
-  System_String_o **v15; // x9
-  int32_t height; // w1
-  UISpriteData_o *AtlasSprite; // x0
-  UISpriteData_o *v18; // x0
+  System_String_o **v13; // x8
+  System_String_o **v14; // x9
+  int32_t downIconSprite_high; // w1
 
-  if ( (byte_40F9506 & 1) == 0 )
+  if ( (byte_4189E75 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19349/*"img_arrow_2"*/, icon);
-    sub_B16FFC(&StringLiteral_19351/*"img_arrow_4"*/, v10);
-    sub_B16FFC(&StringLiteral_19350/*"img_arrow_3"*/, v11);
-    sub_B16FFC(&StringLiteral_19348/*"img_arrow_1"*/, v12);
-    byte_40F9506 = 1;
+    sub_B2C35C(&StringLiteral_19423/*"img_arrow_2"*/, icon);
+    sub_B2C35C(&StringLiteral_19425/*"img_arrow_4"*/, v10);
+    sub_B2C35C(&StringLiteral_19424/*"img_arrow_3"*/, v11);
+    this = (ServantClassCompatibilityIconComponent_o *)sub_B2C35C(&StringLiteral_19422/*"img_arrow_1"*/, v12);
+    byte_4189E75 = 1;
   }
   if ( !icon )
     goto LABEL_18;
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)icon, 0LL);
-  if ( !gameObject )
+  this = (ServantClassCompatibilityIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                       (UnityEngine_Component_o *)icon,
+                                                       0LL);
+  if ( !this )
     goto LABEL_18;
-  UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
   if ( iconId == 1 )
   {
-    v14 = (System_String_o **)&StringLiteral_19348/*"img_arrow_1"*/;
-    v15 = (System_String_o **)&StringLiteral_19350/*"img_arrow_3"*/;
+    v13 = (System_String_o **)&StringLiteral_19422/*"img_arrow_1"*/;
+    v14 = (System_String_o **)&StringLiteral_19424/*"img_arrow_3"*/;
   }
   else
   {
-    v14 = (System_String_o **)&StringLiteral_19349/*"img_arrow_2"*/;
-    v15 = (System_String_o **)&StringLiteral_19351/*"img_arrow_4"*/;
+    v13 = (System_String_o **)&StringLiteral_19423/*"img_arrow_2"*/;
+    v14 = (System_String_o **)&StringLiteral_19425/*"img_arrow_4"*/;
   }
   if ( !advantage )
-    v14 = v15;
-  UISprite__set_spriteName(icon, *v14, 0LL);
+    v13 = v14;
+  UISprite__set_spriteName(icon, *v13, 0LL);
   if ( dispMode != 4 )
   {
-    AtlasSprite = UISprite__GetAtlasSprite(icon, 0LL);
-    if ( AtlasSprite )
+    this = (ServantClassCompatibilityIconComponent_o *)UISprite__GetAtlasSprite(icon, 0LL);
+    if ( this )
     {
-      UIWidget__set_width((UIWidget_o *)icon, AtlasSprite->fields.width, 0LL);
-      v18 = UISprite__GetAtlasSprite(icon, 0LL);
-      if ( v18 )
+      UIWidget__set_width((UIWidget_o *)icon, (int32_t)this->fields.downIconSprite, 0LL);
+      this = (ServantClassCompatibilityIconComponent_o *)UISprite__GetAtlasSprite(icon, 0LL);
+      if ( this )
       {
-        height = v18->fields.height;
+        downIconSprite_high = HIDWORD(this->fields.downIconSprite);
         goto LABEL_17;
       }
     }
 LABEL_18:
-    sub_B170D4();
+    sub_B2C434(this, icon);
   }
   UIWidget__set_width((UIWidget_o *)icon, 22, 0LL);
   if ( iconId == 1 )
-    height = 32;
+    downIconSprite_high = 32;
   else
-    height = 24;
+    downIconSprite_high = 24;
 LABEL_17:
-  UIWidget__set_height((UIWidget_o *)icon, height, 0LL);
+  UIWidget__set_height((UIWidget_o *)icon, downIconSprite_high, 0LL);
 }
 
 
@@ -503,30 +486,35 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconPosition(
         const MethodInfo *method)
 {
   __int64 v6; // x1
-  UnityEngine_GameObject_o *gameObject; // x0
   srcLineSprite_o *Component_srcLineSprite; // x20
-  UnityEngine_GameObject_o *v9; // x0
+  UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_40F9507 & 1) == 0 )
+  if ( (byte_4189E76 & 1) == 0 )
   {
-    sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, icon);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v6);
-    byte_40F9507 = 1;
+    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, icon);
+    this = (ServantClassCompatibilityIconComponent_o *)sub_B2C35C(&UnityEngine_Object_TypeInfo, v6);
+    byte_4189E76 = 1;
   }
   if ( !icon )
     goto LABEL_12;
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)icon, 0LL);
-  if ( !gameObject )
+  this = (ServantClassCompatibilityIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                       (UnityEngine_Component_o *)icon,
+                                                       0LL);
+  if ( !this )
     goto LABEL_12;
   Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                              gameObject,
-                              (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                              (UnityEngine_GameObject_o *)this,
+                              (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_srcLineSprite, 0LL, 0LL) )
+  this = (ServantClassCompatibilityIconComponent_o *)UnityEngine_Object__op_Inequality(
+                                                       (UnityEngine_Object_o *)Component_srcLineSprite,
+                                                       0LL,
+                                                       0LL);
+  if ( ((unsigned __int8)this & 1) != 0 )
   {
     if ( Component_srcLineSprite )
     {
@@ -535,8 +523,8 @@ void __fastcall ServantClassCompatibilityIconComponent__SetIconPosition(
       return;
     }
 LABEL_12:
-    sub_B170D4();
+    sub_B2C434(this, icon);
   }
-  v9 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)icon, 0LL);
-  GameObjectExtensions__SetLocalPositionX(v9, x, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)icon, 0LL);
+  GameObjectExtensions__SetLocalPositionX(gameObject, x, 0LL);
 }

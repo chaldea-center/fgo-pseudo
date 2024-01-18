@@ -11,27 +11,29 @@ IFriendshipGauge_o *__fastcall FriendshipGaugeSelector__GetGauge(
         int32_t friendshipExceedCount,
         const MethodInfo *method)
 {
+  FriendshipGaugeSelector_o *v6; // x19
   IFriendshipGauge_o *friendshipGaugeEx; // x19
   IFriendshipGauge_c *klass; // x8
   unsigned __int64 v9; // x10
   IFriendshipGauge_c **p_offset; // x11
   __int64 p_method; // x0
 
-  if ( (byte_40FB2C6 & 1) == 0 )
+  v6 = this;
+  if ( (byte_418A4BA & 1) == 0 )
   {
-    sub_B16FFC(&IFriendshipGauge_TypeInfo, *(_QWORD *)&maxFriendShipRank);
-    byte_40FB2C6 = 1;
+    this = (FriendshipGaugeSelector_o *)sub_B2C35C(&IFriendshipGauge_TypeInfo, *(_QWORD *)&maxFriendShipRank);
+    byte_418A4BA = 1;
   }
   if ( friendshipExceedCount && friendshipExceedCount + maxFriendShipRank >= 11 )
   {
-    friendshipGaugeEx = (IFriendshipGauge_o *)this->fields.friendshipGaugeEx;
+    friendshipGaugeEx = (IFriendshipGauge_o *)v6->fields.friendshipGaugeEx;
     if ( !friendshipGaugeEx )
 LABEL_15:
-      sub_B170D4();
+      sub_B2C434(this, *(_QWORD *)&maxFriendShipRank);
   }
   else
   {
-    friendshipGaugeEx = (IFriendshipGauge_o *)this->fields.friendshipGauge;
+    friendshipGaugeEx = (IFriendshipGauge_o *)v6->fields.friendshipGauge;
     if ( !friendshipGaugeEx )
       goto LABEL_15;
   }
@@ -52,7 +54,7 @@ LABEL_15:
   else
   {
 LABEL_12:
-    p_method = sub_AAFEF8(friendshipGaugeEx, IFriendshipGauge_TypeInfo, 6LL);
+    p_method = sub_AC5258(friendshipGaugeEx, IFriendshipGauge_TypeInfo, 6LL, method);
   }
   (*(void (__fastcall **)(IFriendshipGauge_o *, _QWORD))p_method)(friendshipGaugeEx, *(_QWORD *)(p_method + 8));
   return friendshipGaugeEx;

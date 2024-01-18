@@ -5,7 +5,7 @@ void __fastcall WarBoardUnPlayEventData___ctor(WarBoardUnPlayEventData_o *this, 
 }
 
 
-void __fastcall WarBoardUnPlayEventData___ctor_26378488(
+void __fastcall WarBoardUnPlayEventData___ctor_26815596(
         WarBoardUnPlayEventData_o *this,
         int32_t id,
         int32_t scriptId,
@@ -17,14 +17,17 @@ void __fastcall WarBoardUnPlayEventData___ctor_26378488(
 }
 
 
-void __fastcall WarBoardUnPlayEventData___ctor_26378544(
+void __fastcall WarBoardUnPlayEventData___ctor_26815652(
         WarBoardUnPlayEventData_o *this,
         WarBoardUnPlayEventData_SaveData_o *saveData,
         const MethodInfo *method)
 {
+  __int64 v5; // x0
+  __int64 v6; // x1
+
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !saveData )
-    sub_B170D4();
+    sub_B2C434(v5, v6);
   this->fields._eventId_k__BackingField = saveData->fields.eventId;
   this->fields._eventScriptId_k__BackingField = saveData->fields.eventScriptId;
 }
@@ -71,14 +74,17 @@ void __fastcall WarBoardUnPlayEventData_SaveData___ctor(
 }
 
 
-void __fastcall WarBoardUnPlayEventData_SaveData___ctor_20451404(
+void __fastcall WarBoardUnPlayEventData_SaveData___ctor_22661988(
         WarBoardUnPlayEventData_SaveData_o *this,
         WarBoardUnPlayEventData_o *eventData,
         const MethodInfo *method)
 {
+  __int64 v5; // x0
+  __int64 v6; // x1
+
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !eventData )
-    sub_B170D4();
+    sub_B2C434(v5, v6);
   this->fields.eventId = eventData->fields._eventId_k__BackingField;
   this->fields.eventScriptId = eventData->fields._eventScriptId_k__BackingField;
 }

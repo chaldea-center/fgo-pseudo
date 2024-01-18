@@ -1,13 +1,13 @@
 void __fastcall QuestReleaseOverwriteEntity___ctor(QuestReleaseOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FD574 & 1) == 0 )
+  if ( (byte_418AEF8 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FD574 = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_418AEF8 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,29 +15,28 @@ QuestReleaseEntity_o *__fastcall QuestReleaseOverwriteEntity__ConvertToQuestRele
         QuestReleaseOverwriteEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  QuestReleaseEntity_o *v6; // x20
-  const MethodInfo *v7; // x1
+  QuestReleaseEntity_o *v3; // x20
+  const MethodInfo *v4; // x1
+  __int64 v5; // x0
+  __int64 v6; // x1
   QuestReleaseEntity_o *result; // x0
 
-  if ( (byte_40FD572 & 1) == 0 )
+  if ( (byte_418AEF6 & 1) == 0 )
   {
-    sub_B16FFC(&QuestReleaseEntity_TypeInfo, method);
-    byte_40FD572 = 1;
+    sub_B2C35C(&QuestReleaseEntity_TypeInfo, method);
+    byte_418AEF6 = 1;
   }
-  v6 = (QuestReleaseEntity_o *)sub_B170CC(QuestReleaseEntity_TypeInfo, method, v2, v3, v4);
-  QuestReleaseEntity___ctor(v6, v7);
-  if ( !v6 )
-    sub_B170D4();
-  result = v6;
-  v6->fields.questId = this->fields.questId;
-  v6->fields.type = this->fields.condType;
-  v6->fields.targetId = this->fields.condId;
-  v6->fields.value = this->fields.condNum;
-  v6->fields.closedMessageId = this->fields.closedMessageId;
-  v6->fields.imagePriority = this->fields.imagePriority;
+  v3 = (QuestReleaseEntity_o *)sub_B2C42C(QuestReleaseEntity_TypeInfo);
+  QuestReleaseEntity___ctor(v3, v4);
+  if ( !v3 )
+    sub_B2C434(v5, v6);
+  result = v3;
+  v3->fields.questId = this->fields.questId;
+  v3->fields.type = this->fields.condType;
+  v3->fields.targetId = this->fields.condId;
+  v3->fields.value = this->fields.condNum;
+  v3->fields.closedMessageId = this->fields.closedMessageId;
+  v3->fields.imagePriority = this->fields.imagePriority;
   return result;
 }
 
@@ -49,16 +48,16 @@ System_String_o *__fastcall QuestReleaseOverwriteEntity__CreatePK(
         int32_t imagePriority,
         const MethodInfo *method)
 {
-  if ( (byte_40FD571 & 1) == 0 )
+  if ( (byte_418AEF5 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
-    byte_40FD571 = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
+    byte_418AEF5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            priority,
            imagePriority,
-           (const MethodInfo_18C25C8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1732D30 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -85,18 +84,19 @@ bool __fastcall QuestReleaseOverwriteEntity__IsPeriod(
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  DataMasterBase_WarMaster__WarEntity__int__o *Master_WarQuestSelectionMaster; // x0
+  WarQuestSelectionMaster_o *Master_WarQuestSelectionMaster; // x0
+  __int64 v9; // x1
   int64_t endedAt; // x8
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
   Time = nowTime;
-  if ( (byte_40FD573 & 1) == 0 )
+  if ( (byte_418AEF7 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMaster_EventMaster___, nowTime);
-    sub_B16FFC(&DataManager_TypeInfo, v5);
-    sub_B16FFC(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v6);
-    sub_B16FFC(&NetworkManager_TypeInfo, v7);
-    byte_40FD573 = 1;
+    sub_B2C35C(&Method_DataManager_GetMaster_EventMaster___, nowTime);
+    sub_B2C35C(&DataManager_TypeInfo, v5);
+    sub_B2C35C(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v6);
+    sub_B2C35C(&NetworkManager_TypeInfo, v7);
+    byte_418AEF7 = 1;
   }
   entity = 0LL;
   if ( !Time )
@@ -112,15 +112,16 @@ bool __fastcall QuestReleaseOverwriteEntity__IsPeriod(
     goto LABEL_19;
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_EventMaster___);
+  Master_WarQuestSelectionMaster = DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_WarQuestSelectionMaster )
 LABEL_23:
-    sub_B170D4();
-  if ( !DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-          Master_WarQuestSelectionMaster,
-          &entity,
-          this->fields.eventId,
-          (const MethodInfo_266F3E4 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+    sub_B2C434(Master_WarQuestSelectionMaster, v9);
+  Master_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
+                                                                  (DataMasterBase_WarMaster__WarEntity__int__o *)Master_WarQuestSelectionMaster,
+                                                                  &entity,
+                                                                  this->fields.eventId,
+                                                                  (const MethodInfo_24E412C *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+  if ( ((unsigned __int8)Master_WarQuestSelectionMaster & 1) == 0 )
   {
 LABEL_19:
     if ( this->fields.startedAt <= Time )

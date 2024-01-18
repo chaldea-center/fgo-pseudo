@@ -1,28 +1,28 @@
 void __fastcall ServantProfilePushEntity___ctor(ServantProfilePushEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FBB90 & 1) == 0 )
+  if ( (byte_4189BD4 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FBB90 = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4189BD4 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantProfilePushEntity__CreatePK(int32_t svtId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_40FBB8F & 1) == 0 )
+  if ( (byte_4189BD3 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_40FBB8F = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_4189BD3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            idx,
-           (const MethodInfo_18C21A0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -40,10 +40,10 @@ bool __fastcall ServantProfilePushEntity__TimeCheck(ServantProfilePushEntity_o *
 {
   int64_t Time; // x0
 
-  if ( (byte_40FBB8D & 1) == 0 )
+  if ( (byte_4189BD1 & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, method);
-    byte_40FBB8D = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, method);
+    byte_4189BD1 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -57,10 +57,10 @@ bool __fastcall ServantProfilePushEntity__TimeCheck(ServantProfilePushEntity_o *
 
 bool __fastcall ServantProfilePushEntity__TimeEnd(ServantProfilePushEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FBB8E & 1) == 0 )
+  if ( (byte_4189BD2 & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, method);
-    byte_40FBB8E = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, method);
+    byte_4189BD2 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )

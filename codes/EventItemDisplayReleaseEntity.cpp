@@ -1,13 +1,13 @@
 void __fastcall EventItemDisplayReleaseEntity___ctor(EventItemDisplayReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F8844 & 1) == 0 )
+  if ( (byte_4188D4A & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_int___ctor__, method);
-    byte_40F8844 = 1;
+    sub_B2C35C(&Method_DataEntityBase_int___ctor__, method);
+    byte_4188D4A = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_266F234 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_24E3F7C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -26,10 +26,10 @@ bool __fastcall EventItemDisplayReleaseEntity__IsCondEnable(
   int32_t targetId; // w19
   int32_t condType; // w20
 
-  if ( (byte_40F8843 & 1) == 0 )
+  if ( (byte_4188D49 & 1) == 0 )
   {
-    sub_B16FFC(&CondType_TypeInfo, method);
-    byte_40F8843 = 1;
+    sub_B2C35C(&CondType_TypeInfo, method);
+    byte_4188D49 = 1;
   }
   condType = this->fields.condType;
   targetId = this->fields.targetId;

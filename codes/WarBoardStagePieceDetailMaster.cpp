@@ -1,16 +1,16 @@
 void __fastcall WarBoardStagePieceDetailMaster___ctor(WarBoardStagePieceDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FBB25 & 1) == 0 )
+  if ( (byte_4189312 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__,
       method);
-    byte_40FBB25 = 1;
+    byte_4189312 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     360,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__);
 }
 
 
@@ -25,12 +25,12 @@ WarBoardStagePieceDetailEntity_o *__fastcall WarBoardStagePieceDetailMaster__Get
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40FBB23 & 1) == 0 )
+  if ( (byte_4189310 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__,
       *(_QWORD *)&stageId);
-    byte_40FBB23 = 1;
+    byte_4189310 = 1;
   }
   PK = WarBoardStagePieceDetailEntity__CreatePK(
          stageId,
@@ -41,7 +41,7 @@ WarBoardStagePieceDetailEntity_o *__fastcall WarBoardStagePieceDetailMaster__Get
   return (WarBoardStagePieceDetailEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                                (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                                PK,
-                                               (const MethodInfo_266F7D8 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__);
+                                               (const MethodInfo_24E4520 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__);
 }
 
 
@@ -57,17 +57,17 @@ bool __fastcall WarBoardStagePieceDetailMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40FBB24 & 1) == 0 )
+  if ( (byte_4189311 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__,
       entity);
-    byte_40FBB24 = 1;
+    byte_4189311 = 1;
   }
   PK = WarBoardStagePieceDetailEntity__CreatePK(stageId, forceId, groupId, pieceIndex, *(const MethodInfo **)&groupId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__);
 }

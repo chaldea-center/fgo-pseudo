@@ -1,42 +1,34 @@
 void __fastcall CombineInitData___ctor(CombineInitData_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v6; // x1
-  System_Collections_Generic_List_int__o *v7; // x20
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  __int64 v3; // x1
+  System_Collections_Generic_List_int__o *v4; // x20
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_40F9911 & 1) == 0 )
+  if ( (byte_41861D2 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_Generic_List_int___ctor__, method);
-    sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v6);
-    byte_40F9911 = 1;
+    sub_B2C35C(&Method_System_Collections_Generic_List_int___ctor__, method);
+    sub_B2C35C(&System_Collections_Generic_List_int__TypeInfo, v3);
+    byte_41861D2 = 1;
   }
-  v7 = (System_Collections_Generic_List_int__o *)sub_B170CC(
-                                                   System_Collections_Generic_List_int__TypeInfo,
-                                                   method,
-                                                   v2,
-                                                   v3,
-                                                   v4);
+  v4 = (System_Collections_Generic_List_int__o *)sub_B2C42C(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v7,
-    (const MethodInfo_2F0F794 *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.eventIdList = v7;
-  sub_B16F98(
+    v4,
+    (const MethodInfo_2F6629C *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.eventIdList = v4;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventIdList,
-    (System_Int32_array **)v7,
+    (System_Int32_array **)v4,
+    v5,
+    v6,
+    v7,
     v8,
     v9,
-    v10,
-    v11,
-    v12,
-    v13);
+    v10);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -49,60 +41,58 @@ EventCampaignEntity_o *__fastcall CombineInitData__getCombineEventData(
 {
   __int64 v5; // x1
   __int64 v6; // x1
-  WebViewManager_o *Instance; // x0
-  WarEntity_array *Entitys_WarMaster__WarEntity; // x0
-  __int64 v9; // x1
-  __int64 v10; // x2
-  int max_length; // w8
-  __int64 v12; // x9
-  EventCampaignEntity_o *v13; // x21
-  System_Collections_Generic_List_int__o *eventIdList; // x0
+  void *Instance; // x0
+  __int64 v8; // x1
+  int v9; // w8
+  __int64 v10; // x9
+  EventCampaignEntity_o *v11; // x21
+  __int64 v13; // x0
 
-  if ( (byte_40F9910 & 1) == 0 )
+  if ( (byte_41861D1 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_getEntitys_EventCampaignMaster__EventCampaignEntity___, *(_QWORD *)&eventId);
-    sub_B16FFC(&Method_System_Collections_Generic_List_int__Add__, v5);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_40F9910 = 1;
+    sub_B2C35C(&Method_DataManager_getEntitys_EventCampaignMaster__EventCampaignEntity___, *(_QWORD *)&eventId);
+    sub_B2C35C(&Method_System_Collections_Generic_List_int__Add__, v5);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_41861D1 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
-  Entitys_WarMaster__WarEntity = DataManager__getEntitys_WarMaster__WarEntity_(
-                                   (DataManager_o *)Instance,
-                                   (const MethodInfo_18C3518 *)Method_DataManager_getEntitys_EventCampaignMaster__EventCampaignEntity___);
-  if ( Entitys_WarMaster__WarEntity )
+  Instance = DataManager__getEntitys_WarMaster__WarEntity_(
+               (DataManager_o *)Instance,
+               (const MethodInfo_1733C80 *)Method_DataManager_getEntitys_EventCampaignMaster__EventCampaignEntity___);
+  if ( Instance )
   {
-    max_length = Entitys_WarMaster__WarEntity->max_length;
-    if ( max_length >= 1 )
+    v9 = *((_DWORD *)Instance + 6);
+    if ( v9 >= 1 )
     {
-      v12 = 0LL;
+      v10 = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v12 >= max_length )
+        if ( (unsigned int)v10 >= v9 )
         {
-          sub_B17100(Entitys_WarMaster__WarEntity, v9, v10);
-          sub_B170A0();
+          v13 = sub_B2C460(Instance);
+          sub_B2C400(v13, 0LL);
         }
-        v13 = (EventCampaignEntity_o *)Entitys_WarMaster__WarEntity->m_Items[v12];
-        if ( !v13 )
+        v11 = (EventCampaignEntity_o *)*((_QWORD *)Instance + v10 + 4);
+        if ( !v11 )
           goto LABEL_15;
-        if ( v13->fields.eventId == eventId )
+        if ( v11->fields.eventId == eventId )
           break;
-        if ( (int)++v12 >= max_length )
+        if ( (int)++v10 >= v9 )
           return 0LL;
       }
-      eventIdList = this->fields.eventIdList;
-      if ( eventIdList )
+      Instance = this->fields.eventIdList;
+      if ( Instance )
       {
         System_Collections_Generic_List_int___Add(
-          eventIdList,
+          (System_Collections_Generic_List_int__o *)Instance,
           eventId,
-          (const MethodInfo_2F104F0 *)Method_System_Collections_Generic_List_int__Add__);
-        return v13;
+          (const MethodInfo_2F66FF8 *)Method_System_Collections_Generic_List_int__Add__);
+        return v11;
       }
 LABEL_15:
-      sub_B170D4();
+      sub_B2C434(Instance, v8);
     }
   }
   return 0LL;
@@ -122,80 +112,70 @@ void __fastcall CombineInitData__getEventData(CombineInitData_o *this, const Met
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  WebViewManager_o *Instance; // x0
-  EventMaster_o *MasterData_WarQuestSelectionMaster; // x0
+  DataManager_o *Instance; // x0
+  __int64 v9; // x1
   EventMaster_o *v10; // x21
   EventEntity_array *EnableEntityList; // x20
-  EventEntity_array *v12; // x0
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x3
-  __int64 v16; // x4
-  EventEntity_array *v17; // x21
-  System_Collections_Generic_List_RegexCharClass_SingleRange__o *v18; // x22
-  struct EventEntity_array *v19; // x0
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
+  DataManager_o *v12; // x21
+  System_Collections_Generic_List_RegexCharClass_SingleRange__o *v13; // x22
+  struct EventEntity_array *v14; // x0
+  System_String_array **v15; // x2
+  System_String_array **v16; // x3
+  System_Boolean_array **v17; // x4
+  System_Int32_array **v18; // x5
+  System_Int32_array *v19; // x6
+  System_Int32_array *v20; // x7
 
-  if ( (byte_40F990F & 1) == 0 )
+  if ( (byte_41861D0 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_EventMaster___, method);
-    sub_B16FFC(&Method_System_Collections_Generic_List_EventEntity__AddRange__, v3);
-    sub_B16FFC(&Method_System_Collections_Generic_List_EventEntity__ToArray__, v4);
-    sub_B16FFC(&Method_System_Collections_Generic_List_EventEntity___ctor___66731144, v5);
-    sub_B16FFC(&System_Collections_Generic_List_EventEntity__TypeInfo, v6);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_40F990F = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_EventMaster___, method);
+    sub_B2C35C(&Method_System_Collections_Generic_List_EventEntity__AddRange__, v3);
+    sub_B2C35C(&Method_System_Collections_Generic_List_EventEntity__ToArray__, v4);
+    sub_B2C35C(&Method_System_Collections_Generic_List_EventEntity___ctor___67305328, v5);
+    sub_B2C35C(&System_Collections_Generic_List_EventEntity__TypeInfo, v6);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_41861D0 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (MasterData_WarQuestSelectionMaster = (EventMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                (DataManager_o *)Instance,
-                                                                (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL
-    || (v10 = MasterData_WarQuestSelectionMaster,
-        EnableEntityList = EventMaster__GetEnableEntityList(MasterData_WarQuestSelectionMaster, 5, 1, 0LL),
-        v12 = EventMaster__GetEnableEntityList(v10, 13, 1, 0LL),
+    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                      Instance,
+                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL
+    || (v10 = (EventMaster_o *)Instance,
+        EnableEntityList = EventMaster__GetEnableEntityList((EventMaster_o *)Instance, 5, 1, 0LL),
+        Instance = (DataManager_o *)EventMaster__GetEnableEntityList(v10, 13, 1, 0LL),
         !EnableEntityList)
-    || (v17 = v12) == 0LL
-    || (v18 = (System_Collections_Generic_List_RegexCharClass_SingleRange__o *)sub_B170CC(
-                                                                                 System_Collections_Generic_List_EventEntity__TypeInfo,
-                                                                                 v13,
-                                                                                 v14,
-                                                                                 v15,
-                                                                                 v16),
+    || (v12 = Instance) == 0LL
+    || (v13 = (System_Collections_Generic_List_RegexCharClass_SingleRange__o *)sub_B2C42C(System_Collections_Generic_List_EventEntity__TypeInfo),
         System_Collections_Generic_List_RegexCharClass_SingleRange____ctor(
-          v18,
-          v17->max_length + EnableEntityList->max_length,
-          (const MethodInfo_2F250E4 *)Method_System_Collections_Generic_List_EventEntity___ctor___66731144),
-        !v18) )
+          v13,
+          LODWORD(v12->fields.datalist) + EnableEntityList->max_length,
+          (const MethodInfo_2EF386C *)Method_System_Collections_Generic_List_EventEntity___ctor___67305328),
+        !v13) )
   {
-    sub_B170D4();
+    sub_B2C434(Instance, v9);
   }
   System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule___AddRange(
-    (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)v18,
+    (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)v13,
     (System_Collections_Generic_IEnumerable_T__o *)EnableEntityList,
-    (const MethodInfo_2F25F28 *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
+    (const MethodInfo_2EF46B0 *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
   System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule___AddRange(
-    (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)v18,
-    (System_Collections_Generic_IEnumerable_T__o *)v17,
-    (const MethodInfo_2F25F28 *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
-  v19 = (struct EventEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                      (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v18,
-                                      (const MethodInfo_2F27E24 *)Method_System_Collections_Generic_List_EventEntity__ToArray__);
-  this->fields.combineEventList = v19;
-  sub_B16F98(
+    (System_Collections_Generic_List_TimeZoneInfo_AdjustmentRule__o *)v13,
+    (System_Collections_Generic_IEnumerable_T__o *)v12,
+    (const MethodInfo_2EF46B0 *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
+  v14 = (struct EventEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
+                                      (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v13,
+                                      (const MethodInfo_2EF65AC *)Method_System_Collections_Generic_List_EventEntity__ToArray__);
+  this->fields.combineEventList = v14;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.combineEventList,
-    (System_Int32_array **)v19,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+    (System_Int32_array **)v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
 }
 
 

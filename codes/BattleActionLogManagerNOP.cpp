@@ -1,22 +1,21 @@
 void __fastcall BattleActionLogManagerNOP___ctor(BattleActionLogManagerNOP_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  struct System_Byte_array *v4; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  struct System_Byte_array *v3; // x0
+  System_String_array **v4; // x2
+  System_String_array **v5; // x3
+  System_Boolean_array **v6; // x4
+  System_Int32_array **v7; // x5
+  System_Int32_array *v8; // x6
+  System_Int32_array *v9; // x7
 
-  if ( (byte_40FDA72 & 1) == 0 )
+  if ( (byte_418B859 & 1) == 0 )
   {
-    sub_B16FFC(&byte___TypeInfo, method);
-    byte_40FDA72 = 1;
+    sub_B2C35C(&byte___TypeInfo, method);
+    byte_418B859 = 1;
   }
-  v4 = (struct System_Byte_array *)sub_B17014(byte___TypeInfo, 1LL, v2);
-  this->fields.dummy = v4;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v4, v5, v6, v7, v8, v9, v10);
+  v3 = (struct System_Byte_array *)sub_B2C374(byte___TypeInfo, 1LL);
+  this->fields.dummy = v3;
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 

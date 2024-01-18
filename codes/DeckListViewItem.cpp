@@ -4,24 +4,9 @@ void __fastcall DeckListViewItem___ctor(
         PartyListViewItem_o *partyItem,
         const MethodInfo *method)
 {
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-
-  ListViewItem___ctor_30173668((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
   this->fields.partyItem = partyItem;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.partyItem,
-    (System_Int32_array **)partyItem,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
+  sub_B2C2F8(&this->fields.partyItem, partyItem);
 }
 
 
@@ -40,7 +25,7 @@ PartyOrganizationListViewItem_o *__fastcall DeckListViewItem__GetMember(
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_B170D4();
+    sub_B2C434(0LL, num);
   return PartyListViewItem__GetMember(partyItem, num, 0LL);
 }
 
@@ -62,7 +47,7 @@ UserDeckEntity_o *__fastcall DeckListViewItem__GetUserDeck(
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_B170D4();
+    sub_B2C434(0LL, baseItem);
   return PartyListViewItem__GetUserDeck(partyItem, baseItem, 0LL);
 }
 
@@ -73,7 +58,7 @@ int64_t __fastcall DeckListViewItem__get_DeckId(DeckListViewItem_o *this, const 
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_B170D4();
+    sub_B2C434(this, method);
   return partyItem->fields.id;
 }
 
@@ -84,7 +69,7 @@ System_String_o *__fastcall DeckListViewItem__get_DeckName(DeckListViewItem_o *t
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_B170D4();
+    sub_B2C434(this, method);
   return partyItem->fields.deckName;
 }
 
@@ -95,6 +80,6 @@ int32_t __fastcall DeckListViewItem__get_DeckNum(DeckListViewItem_o *this, const
 
   partyItem = this->fields.partyItem;
   if ( !partyItem )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   return PartyListViewItem__get_DeckNum(partyItem, 0LL);
 }

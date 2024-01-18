@@ -2,44 +2,42 @@ void __fastcall SupportSelectDeckListViewItemDraw___ctor(
         SupportSelectDeckListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x1
-  BalanceConfig_c *v5; // x0
-  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v6; // x0
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
+  __int64 v3; // x1
+  BalanceConfig_c *v4; // x0
+  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v5; // x0
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_40FD50F & 1) == 0 )
+  if ( (byte_418AE93 & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, method);
-    sub_B16FFC(&SupportSelectDeckListViewItemDraw_ClassInfo___TypeInfo, v4);
-    byte_40FD50F = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, method);
+    sub_B2C35C(&SupportSelectDeckListViewItemDraw_ClassInfo___TypeInfo, v3);
+    byte_418AE93 = 1;
   }
-  v5 = BalanceConfig_TypeInfo;
+  v4 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v5 = BalanceConfig_TypeInfo;
+    v4 = BalanceConfig_TypeInfo;
   }
-  v6 = (struct SupportSelectDeckListViewItemDraw_ClassInfo_array *)sub_B17014(
+  v5 = (struct SupportSelectDeckListViewItemDraw_ClassInfo_array *)sub_B2C374(
                                                                      SupportSelectDeckListViewItemDraw_ClassInfo___TypeInfo,
-                                                                     (unsigned int)v5->static_fields->SupportDeckMemberMax,
-                                                                     v2);
-  this->fields.memberObjectList = v6;
-  sub_B16F98(
+                                                                     (unsigned int)v4->static_fields->SupportDeckMemberMax);
+  this->fields.memberObjectList = v5;
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.memberObjectList,
-    (System_Int32_array **)v6,
+    (System_Int32_array **)v5,
+    v6,
     v7,
     v8,
     v9,
     v10,
-    v11,
-    v12);
+    v11);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -68,77 +66,62 @@ void __fastcall SupportSelectDeckListViewItemDraw__SetSupportData(
   UserGameEntity_o *v23; // x23
   System_String_o *v24; // x25
   Il2CppObject *v25; // x0
-  System_String_o *v26; // x0
+  __int64 Instance; // x0
+  __int64 v27; // x1
   UILabel_o *deckNameLabel; // x24
-  System_String_o *v28; // x0
   System_String_o *v29; // x0
-  WebViewManager_o *Instance; // x0
-  __int64 MasterData_WarQuestSelectionMaster; // x0
-  __int64 v32; // x1
-  int64_t v33; // x2
   struct SupportSelectDeckListViewItemDraw_ClassInfo_array *memberObjectList; // x8
-  DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *v35; // x24
-  __int64 v36; // x28
+  DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *v31; // x24
+  __int64 v32; // x28
   int max_length; // w9
-  unsigned int v38; // w25
-  __int64 v39; // x8
-  ServantFaceIconComponent_o *v40; // x0
-  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v41; // x8
-  __int64 v42; // x8
-  UnityEngine_Object_o *v43; // x26
-  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v44; // x8
-  __int64 v45; // x8
-  UnityEngine_Component_o *v46; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  System_Int64_array *v48; // x26
-  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v49; // x9
-  __int64 v50; // x9
-  UISprite_o *v51; // x27
-  System_String_o *v52; // x0
-  int64_t Servant; // x0
-  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v54; // x8
-  __int64 v55; // x8
-  __int64 v56; // x27
-  ServantFaceIconComponent_o *v57; // x0
-  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v58; // x8
-  __int64 v59; // x8
-  UnityEngine_Object_o *v60; // x26
-  __int128 v61; // q0
+  unsigned int v34; // w25
+  __int64 v35; // x8
+  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v36; // x8
+  __int64 v37; // x8
+  UnityEngine_Object_o *v38; // x26
+  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v39; // x8
+  __int64 v40; // x8
+  System_Int64_array *v41; // x26
+  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v42; // x9
+  __int64 v43; // x9
+  UISprite_o *v44; // x27
+  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v45; // x8
+  __int64 v46; // x8
+  __int64 v47; // x27
+  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v48; // x8
+  __int64 v49; // x8
+  UnityEngine_Object_o *v50; // x26
+  __int128 v51; // q0
   int64_t pushUserSvtId; // x26
-  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v63; // x8
-  __int64 v64; // x8
-  UnityEngine_Component_o *v65; // x0
-  UnityEngine_GameObject_o *v66; // x0
-  System_String_o *ClassIconSpriteName; // x0
-  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v68; // x8
-  __int64 v69; // x8
-  ServantFaceIconComponent_o *v70; // x0
-  UnityEngine_Component_o *maskSprite; // x0
-  UnityEngine_GameObject_o *v72; // x0
+  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v53; // x8
+  __int64 v54; // x8
+  int64_t v55; // x2
+  struct SupportSelectDeckListViewItemDraw_ClassInfo_array *v56; // x8
+  __int64 v57; // x8
   UILabel_o *maskMessageLabel; // x19
-  __int64 *v74; // x8
-  System_String_o *v75; // x0
-  bool v76; // [xsp+8h] [xbp-A8h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v77; // [xsp+10h] [xbp-A0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v78; // [xsp+30h] [xbp-80h]
+  __int64 *v59; // x8
+  __int64 v60; // x0
+  bool v61; // [xsp+8h] [xbp-A8h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v62; // [xsp+10h] [xbp-A0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v63; // [xsp+30h] [xbp-80h]
   UserServantEntity_o *entity; // [xsp+58h] [xbp-58h] BYREF
 
-  if ( (byte_40FD50E & 1) == 0 )
+  if ( (byte_418AE92 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_UserServantMaster___, data);
-    sub_B16FFC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v9);
-    sub_B16FFC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v10);
-    sub_B16FFC(&long___TypeInfo, v11);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v12);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v13);
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v14);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&SupportSelectListViewObject_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_12458/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT"*/, v17);
-    sub_B16FFC(&StringLiteral_12471/*"SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM"*/, v18);
-    sub_B16FFC(&StringLiteral_12490/*"SUPPORT_SELECT_NAME"*/, v19);
-    sub_B16FFC(&StringLiteral_12459/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND"*/, v20);
-    byte_40FD50E = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_UserServantMaster___, data);
+    sub_B2C35C(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v9);
+    sub_B2C35C(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v10);
+    sub_B2C35C(&long___TypeInfo, v11);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v12);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v13);
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v14);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_B2C35C(&SupportSelectListViewObject_TypeInfo, v16);
+    sub_B2C35C(&StringLiteral_12514/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT"*/, v17);
+    sub_B2C35C(&StringLiteral_12527/*"SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM"*/, v18);
+    sub_B2C35C(&StringLiteral_12546/*"SUPPORT_SELECT_NAME"*/, v19);
+    sub_B2C35C(&StringLiteral_12515/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND"*/, v20);
+    byte_418AE92 = 1;
   }
   entity = 0LL;
   if ( data )
@@ -151,136 +134,136 @@ void __fastcall SupportSelectDeckListViewItemDraw__SetSupportData(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12471/*"SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM"*/, 0LL);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12527/*"SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM"*/, 0LL);
     v25 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(data->fields._deckId_k__BackingField, 0LL);
-    v26 = System_String__Format(v24, v25, 0LL);
+    Instance = (__int64)System_String__Format(v24, v25, 0LL);
     if ( !supportNumberLabel )
       goto LABEL_93;
-    UILabel__set_text(supportNumberLabel, v26, 0LL);
+    UILabel__set_text(supportNumberLabel, (System_String_o *)Instance, 0LL);
     deckNameLabel = this->fields.deckNameLabel;
-    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_12490/*"SUPPORT_SELECT_NAME"*/, 0LL);
-    v29 = System_String__Format(v28, (Il2CppObject *)data->fields._deckName_k__BackingField, 0LL);
+    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_12546/*"SUPPORT_SELECT_NAME"*/, 0LL);
+    Instance = (__int64)System_String__Format(v29, (Il2CppObject *)data->fields._deckName_k__BackingField, 0LL);
     if ( !deckNameLabel )
       goto LABEL_93;
-    v76 = isSameKind;
-    UILabel__set_text(deckNameLabel, v29, 0LL);
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v61 = isSameKind;
+    UILabel__set_text(deckNameLabel, (System_String_o *)Instance, 0LL);
+    Instance = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_93;
-    MasterData_WarQuestSelectionMaster = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                    (DataManager_o *)Instance,
-                                                    (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_UserServantMaster___);
+    Instance = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                          (DataManager_o *)Instance,
+                          (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_UserServantMaster___);
     memberObjectList = this->fields.memberObjectList;
     if ( !memberObjectList )
       goto LABEL_93;
-    v35 = (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)MasterData_WarQuestSelectionMaster;
-    v36 = 4LL;
+    v31 = (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)Instance;
+    v32 = 4LL;
     while ( 1 )
     {
       max_length = memberObjectList->max_length;
-      v38 = v36 - 4;
-      if ( (int)v36 - 4 >= max_length )
+      v34 = v32 - 4;
+      if ( (int)v32 - 4 >= max_length )
         break;
-      if ( v38 >= max_length )
+      if ( v34 >= max_length )
         goto LABEL_94;
-      v39 = *((_QWORD *)&memberObjectList->obj.klass + v36);
-      if ( !v39 )
+      v35 = *((_QWORD *)&memberObjectList->obj.klass + v32);
+      if ( !v35 )
         goto LABEL_93;
-      v40 = *(ServantFaceIconComponent_o **)(v39 + 24);
-      if ( !v40 )
+      Instance = *(_QWORD *)(v35 + 24);
+      if ( !Instance )
         goto LABEL_93;
-      ServantFaceIconComponent__Clear(v40, 0LL);
-      v41 = this->fields.memberObjectList;
-      if ( !v41 )
+      ServantFaceIconComponent__Clear((ServantFaceIconComponent_o *)Instance, 0LL);
+      v36 = this->fields.memberObjectList;
+      if ( !v36 )
         goto LABEL_93;
-      if ( v38 >= v41->max_length )
+      if ( v34 >= v36->max_length )
         goto LABEL_94;
-      v42 = *((_QWORD *)&v41->obj.klass + v36);
-      if ( !v42 )
+      v37 = *((_QWORD *)&v36->obj.klass + v32);
+      if ( !v37 )
         goto LABEL_93;
-      v43 = *(UnityEngine_Object_o **)(v42 + 32);
+      v38 = *(UnityEngine_Object_o **)(v37 + 32);
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      MasterData_WarQuestSelectionMaster = UnityEngine_Object__op_Inequality(v43, 0LL, 0LL);
-      if ( (MasterData_WarQuestSelectionMaster & 1) != 0 )
+      Instance = UnityEngine_Object__op_Inequality(v38, 0LL, 0LL);
+      if ( (Instance & 1) != 0 )
       {
-        v44 = this->fields.memberObjectList;
-        if ( !v44 )
+        v39 = this->fields.memberObjectList;
+        if ( !v39 )
           goto LABEL_93;
-        if ( v38 >= v44->max_length )
+        if ( v34 >= v39->max_length )
           goto LABEL_94;
-        v45 = *((_QWORD *)&v44->obj.klass + v36);
-        if ( !v45 )
+        v40 = *((_QWORD *)&v39->obj.klass + v32);
+        if ( !v40 )
           goto LABEL_93;
-        v46 = *(UnityEngine_Component_o **)(v45 + 32);
-        if ( !v46 )
+        Instance = *(_QWORD *)(v40 + 32);
+        if ( !Instance )
           goto LABEL_93;
-        gameObject = UnityEngine_Component__get_gameObject(v46, 0LL);
-        if ( !gameObject )
+        Instance = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+        if ( !Instance )
           goto LABEL_93;
-        UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
       }
-      v48 = (System_Int64_array *)sub_B17014(long___TypeInfo, 1LL, v33);
-      MasterData_WarQuestSelectionMaster = SupportServantData__getEquip(data, v38, 0LL);
-      if ( !v48 )
+      v41 = (System_Int64_array *)sub_B2C374(long___TypeInfo, 1LL);
+      Instance = SupportServantData__getEquip(data, v34, 0LL);
+      if ( !v41 )
         goto LABEL_93;
-      if ( !v48->max_length )
+      if ( !v41->max_length )
         goto LABEL_94;
-      v48->m_Items[0] = MasterData_WarQuestSelectionMaster;
-      MasterData_WarQuestSelectionMaster = SupportServantData__getServant(data, v38, 0LL);
-      v49 = this->fields.memberObjectList;
-      if ( !v49 )
+      v41->m_Items[0] = Instance;
+      Instance = SupportServantData__getServant(data, v34, 0LL);
+      v42 = this->fields.memberObjectList;
+      if ( !v42 )
         goto LABEL_93;
-      if ( v38 >= v49->max_length )
+      if ( v34 >= v42->max_length )
       {
 LABEL_94:
-        sub_B17100(MasterData_WarQuestSelectionMaster, v32, v33);
-        sub_B170A0();
+        v60 = sub_B2C460(Instance);
+        sub_B2C400(v60, 0LL);
       }
-      v50 = *((_QWORD *)&v49->obj.klass + v36);
-      if ( !v50 )
+      v43 = *((_QWORD *)&v42->obj.klass + v32);
+      if ( !v43 )
         goto LABEL_93;
-      v51 = *(UISprite_o **)(v50 + 16);
-      if ( MasterData_WarQuestSelectionMaster < 1 )
+      v44 = *(UISprite_o **)(v43 + 16);
+      if ( Instance < 1 )
       {
         if ( (WORD1(SupportSelectListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
           && !SupportSelectListViewObject_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(SupportSelectListViewObject_TypeInfo);
         }
-        ClassIconSpriteName = SupportSelectListViewObject__GetClassIconSpriteName(v38, 0, 0LL);
-        if ( !v51 )
+        Instance = (__int64)SupportSelectListViewObject__GetClassIconSpriteName(v34, 0, 0LL);
+        if ( !v44 )
           goto LABEL_93;
-        UISprite__set_spriteName(v51, ClassIconSpriteName, 0LL);
-        if ( !v48->max_length )
+        UISprite__set_spriteName(v44, (System_String_o *)Instance, 0LL);
+        if ( !v41->max_length )
           goto LABEL_94;
-        v33 = v48->m_Items[0];
-        if ( v33 >= 1 )
+        v55 = v41->m_Items[0];
+        if ( v55 >= 1 )
         {
-          if ( !v35 )
+          if ( !v31 )
             goto LABEL_93;
-          MasterData_WarQuestSelectionMaster = DataMasterBase_UserServantStorageMaster__UserServantEntity__long___TryGetEntity(
-                                                 v35,
-                                                 &entity,
-                                                 v33,
-                                                 (const MethodInfo_266F60C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-          if ( (MasterData_WarQuestSelectionMaster & 1) != 0 )
+          Instance = DataMasterBase_UserServantStorageMaster__UserServantEntity__long___TryGetEntity(
+                       v31,
+                       &entity,
+                       v55,
+                       (const MethodInfo_24E4354 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+          if ( (Instance & 1) != 0 )
           {
-            v68 = this->fields.memberObjectList;
-            if ( !v68 )
+            v56 = this->fields.memberObjectList;
+            if ( !v56 )
               goto LABEL_93;
-            if ( v38 >= v68->max_length )
+            if ( v34 >= v56->max_length )
               goto LABEL_94;
-            v69 = *((_QWORD *)&v68->obj.klass + v36);
-            if ( !v69 )
+            v57 = *((_QWORD *)&v56->obj.klass + v32);
+            if ( !v57 )
               goto LABEL_93;
-            v70 = *(ServantFaceIconComponent_o **)(v69 + 24);
-            if ( !v70 )
+            Instance = *(_QWORD *)(v57 + 24);
+            if ( !Instance )
               goto LABEL_93;
-            ServantFaceIconComponent__SetEquip(v70, entity, 0LL);
+            ServantFaceIconComponent__SetEquip((ServantFaceIconComponent_o *)Instance, entity, 0LL);
           }
         }
       }
@@ -291,95 +274,99 @@ LABEL_94:
         {
           j_il2cpp_runtime_class_init_0(SupportSelectListViewObject_TypeInfo);
         }
-        v52 = SupportSelectListViewObject__GetClassIconSpriteName(v38, 1, 0LL);
-        if ( !v51 )
+        Instance = (__int64)SupportSelectListViewObject__GetClassIconSpriteName(v34, 1, 0LL);
+        if ( !v44 )
           goto LABEL_93;
-        UISprite__set_spriteName(v51, v52, 0LL);
-        Servant = SupportServantData__getServant(data, v38, 0LL);
-        if ( !v35 )
+        UISprite__set_spriteName(v44, (System_String_o *)Instance, 0LL);
+        Instance = SupportServantData__getServant(data, v34, 0LL);
+        if ( !v31 )
           goto LABEL_93;
-        MasterData_WarQuestSelectionMaster = (__int64)DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
-                                                        v35,
-                                                        Servant,
-                                                        (const MethodInfo_266F5B0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-        v54 = this->fields.memberObjectList;
-        if ( !v54 )
+        Instance = (__int64)DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
+                              v31,
+                              Instance,
+                              (const MethodInfo_24E42F8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+        v45 = this->fields.memberObjectList;
+        if ( !v45 )
           goto LABEL_93;
-        if ( v38 >= v54->max_length )
+        if ( v34 >= v45->max_length )
           goto LABEL_94;
-        v55 = *((_QWORD *)&v54->obj.klass + v36);
-        if ( !v55 )
+        v46 = *((_QWORD *)&v45->obj.klass + v32);
+        if ( !v46 )
           goto LABEL_93;
-        v56 = MasterData_WarQuestSelectionMaster;
-        v57 = *(ServantFaceIconComponent_o **)(v55 + 24);
-        if ( !v57 )
+        v47 = Instance;
+        Instance = *(_QWORD *)(v46 + 24);
+        if ( !Instance )
           goto LABEL_93;
-        ServantFaceIconComponent__Set_30706244(v57, (UserServantEntity_o *)v56, v48, 0LL, 0LL, 0LL);
-        v58 = this->fields.memberObjectList;
-        if ( !v58 )
+        ServantFaceIconComponent__Set_30793916(
+          (ServantFaceIconComponent_o *)Instance,
+          (UserServantEntity_o *)v47,
+          v41,
+          0LL,
+          0LL,
+          0LL);
+        v48 = this->fields.memberObjectList;
+        if ( !v48 )
           goto LABEL_93;
-        if ( v38 >= v58->max_length )
+        if ( v34 >= v48->max_length )
           goto LABEL_94;
-        v59 = *((_QWORD *)&v58->obj.klass + v36);
-        if ( !v59 )
+        v49 = *((_QWORD *)&v48->obj.klass + v32);
+        if ( !v49 )
           goto LABEL_93;
-        v60 = *(UnityEngine_Object_o **)(v59 + 32);
+        v50 = *(UnityEngine_Object_o **)(v49 + 32);
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        MasterData_WarQuestSelectionMaster = UnityEngine_Object__op_Inequality(v60, 0LL, 0LL);
-        if ( (MasterData_WarQuestSelectionMaster & 1) != 0 )
+        Instance = UnityEngine_Object__op_Inequality(v50, 0LL, 0LL);
+        if ( (Instance & 1) != 0 )
         {
-          if ( !v23 || !v56 )
+          if ( !v23 || !v47 )
             goto LABEL_93;
-          v61 = *(_OWORD *)(v56 + 32);
+          v51 = *(_OWORD *)(v47 + 32);
           pushUserSvtId = v23->fields.pushUserSvtId;
-          *(_OWORD *)&v78.fields.currentCryptoKey = *(_OWORD *)(v56 + 16);
-          *(_OWORD *)&v78.fields.fakeValue = v61;
+          *(_OWORD *)&v63.fields.currentCryptoKey = *(_OWORD *)(v47 + 16);
+          *(_OWORD *)&v63.fields.fakeValue = v51;
           if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
           }
-          v77 = v78;
-          MasterData_WarQuestSelectionMaster = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44071692(
-                                                 &v77,
-                                                 0LL);
-          if ( pushUserSvtId == MasterData_WarQuestSelectionMaster )
+          v62 = v63;
+          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44761220(&v62, 0LL);
+          if ( pushUserSvtId == Instance )
           {
-            v63 = this->fields.memberObjectList;
-            if ( !v63 )
+            v53 = this->fields.memberObjectList;
+            if ( !v53 )
               goto LABEL_93;
-            if ( v38 >= v63->max_length )
+            if ( v34 >= v53->max_length )
               goto LABEL_94;
-            v64 = *((_QWORD *)&v63->obj.klass + v36);
-            if ( !v64 )
+            v54 = *((_QWORD *)&v53->obj.klass + v32);
+            if ( !v54 )
               goto LABEL_93;
-            v65 = *(UnityEngine_Component_o **)(v64 + 32);
-            if ( !v65 )
+            Instance = *(_QWORD *)(v54 + 32);
+            if ( !Instance )
               goto LABEL_93;
-            v66 = UnityEngine_Component__get_gameObject(v65, 0LL);
-            if ( !v66 )
+            Instance = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+            if ( !Instance )
               goto LABEL_93;
-            UnityEngine_GameObject__SetActive(v66, 1, 0LL);
+            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
           }
         }
       }
       memberObjectList = this->fields.memberObjectList;
-      ++v36;
+      ++v32;
       if ( !memberObjectList )
         goto LABEL_93;
     }
-    maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
-    if ( !maskSprite )
+    Instance = (__int64)this->fields.maskSprite;
+    if ( !Instance )
       goto LABEL_93;
-    v72 = UnityEngine_Component__get_gameObject(maskSprite, 0LL);
-    if ( !v72 )
+    Instance = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+    if ( !Instance )
       goto LABEL_93;
-    UnityEngine_GameObject__SetActive(v72, !isPossibleSelect, 0LL);
-    if ( v76 )
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, !isPossibleSelect, 0LL);
+    if ( v61 )
     {
       maskMessageLabel = this->fields.maskMessageLabel;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -387,7 +374,7 @@ LABEL_94:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v74 = &StringLiteral_12459/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND"*/;
+      v59 = &StringLiteral_12515/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND"*/;
     }
     else
     {
@@ -399,13 +386,13 @@ LABEL_94:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v74 = &StringLiteral_12458/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT"*/;
+      v59 = &StringLiteral_12514/*"SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT"*/;
     }
-    v75 = LocalizationManager__Get((System_String_o *)*v74, 0LL);
+    Instance = (__int64)LocalizationManager__Get((System_String_o *)*v59, 0LL);
     if ( !maskMessageLabel )
 LABEL_93:
-      sub_B170D4();
-    UILabel__set_text(maskMessageLabel, v75, 0LL);
+      sub_B2C434(Instance, v27);
+    UILabel__set_text(maskMessageLabel, (System_String_o *)Instance, 0LL);
   }
 }
 

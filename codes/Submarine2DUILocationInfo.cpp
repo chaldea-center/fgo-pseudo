@@ -3,87 +3,74 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
 {
   __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x2
-  __int64 v7; // x3
-  __int64 v8; // x4
-  System_Collections_Generic_List_Rect__o *v9; // x20
-  int v10; // s0
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  UnityEngine_Rect_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  System_Collections_Generic_List_Rect__o *v5; // x20
+  __int64 v6; // x0
+  __int64 v7; // x1
+  int v8; // s0
+  UnityEngine_Rect_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_40F7C21 & 1) == 0 )
+  if ( (byte_418578D & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_Generic_List_Rect__Add__, method);
-    sub_B16FFC(&Method_System_Collections_Generic_List_Rect___ctor__, v3);
-    sub_B16FFC(&System_Collections_Generic_List_Rect__TypeInfo, v4);
-    byte_40F7C21 = 1;
+    sub_B2C35C(&Method_System_Collections_Generic_List_Rect__Add__, method);
+    sub_B2C35C(&Method_System_Collections_Generic_List_Rect___ctor__, v3);
+    sub_B2C35C(&System_Collections_Generic_List_Rect__TypeInfo, v4);
+    byte_418578D = 1;
   }
   Base2DUILocationInfo___ctor((Base2DUILocationInfo_o *)this, 0LL);
-  v9 = (System_Collections_Generic_List_Rect__o *)sub_B170CC(
-                                                    System_Collections_Generic_List_Rect__TypeInfo,
-                                                    v5,
-                                                    v6,
-                                                    v7,
-                                                    v8);
+  v5 = (System_Collections_Generic_List_Rect__o *)sub_B2C42C(System_Collections_Generic_List_Rect__TypeInfo);
   System_Collections_Generic_List_Rect____ctor(
-    v9,
-    (const MethodInfo_2E934A4 *)Method_System_Collections_Generic_List_Rect___ctor__);
-  ((void (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._8_GetScanDialogRect.method)(
-    this,
-    this->klass->vtable._9_GetStorageRect.methodPtr);
-  if ( !v9 )
-    sub_B170D4();
+    v5,
+    (const MethodInfo_2F06D58 *)Method_System_Collections_Generic_List_Rect___ctor__);
+  v6 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._8_GetScanDialogRect.method)(
+         this,
+         this->klass->vtable._9_GetStorageRect.methodPtr);
+  if ( !v5 )
+    sub_B2C434(v6, v7);
   System_Collections_Generic_List_Rect___Add(
-    v9,
-    *(UnityEngine_Rect_o *)&v10,
-    (const MethodInfo_2E94238 *)Method_System_Collections_Generic_List_Rect__Add__);
-  v20.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, void *))this->klass->vtable._9_GetStorageRect.method)(
+    v5,
+    *(UnityEngine_Rect_o *)&v8,
+    (const MethodInfo_2F07AEC *)Method_System_Collections_Generic_List_Rect__Add__);
+  v12.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, void *))this->klass->vtable._9_GetStorageRect.method)(
                         this,
                         this->klass[1]._1.image);
   System_Collections_Generic_List_Rect___Add(
-    v9,
-    v20,
-    (const MethodInfo_2E94238 *)Method_System_Collections_Generic_List_Rect__Add__);
-  v21.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._4_GetTitleInfoRect.method)(
+    v5,
+    v12,
+    (const MethodInfo_2F07AEC *)Method_System_Collections_Generic_List_Rect__Add__);
+  v13.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._4_GetTitleInfoRect.method)(
                         this,
                         this->klass->vtable._5_GetMenuButtonRect.methodPtr);
   System_Collections_Generic_List_Rect___Add(
-    v9,
-    v21,
-    (const MethodInfo_2E94238 *)Method_System_Collections_Generic_List_Rect__Add__);
-  v22.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._6_GetMapChangeButtonRect.method)(
+    v5,
+    v13,
+    (const MethodInfo_2F07AEC *)Method_System_Collections_Generic_List_Rect__Add__);
+  v14.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._6_GetMapChangeButtonRect.method)(
                         this,
                         this->klass->vtable._7_GetMasterIconSurroundsRect.methodPtr);
   System_Collections_Generic_List_Rect___Add(
-    v9,
-    v22,
-    (const MethodInfo_2E94238 *)Method_System_Collections_Generic_List_Rect__Add__);
-  v23.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._5_GetMenuButtonRect.method)(
+    v5,
+    v14,
+    (const MethodInfo_2F07AEC *)Method_System_Collections_Generic_List_Rect__Add__);
+  v15.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._5_GetMenuButtonRect.method)(
                         this,
                         this->klass->vtable._6_GetMapChangeButtonRect.methodPtr);
   System_Collections_Generic_List_Rect___Add(
-    v9,
-    v23,
-    (const MethodInfo_2E94238 *)Method_System_Collections_Generic_List_Rect__Add__);
-  v24.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._7_GetMasterIconSurroundsRect.method)(
+    v5,
+    v15,
+    (const MethodInfo_2F07AEC *)Method_System_Collections_Generic_List_Rect__Add__);
+  v16.fields.m_XMin = ((float (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._7_GetMasterIconSurroundsRect.method)(
                         this,
                         this->klass->vtable._8_GetScanDialogRect.methodPtr);
   System_Collections_Generic_List_Rect___Add(
-    v9,
-    v24,
-    (const MethodInfo_2E94238 *)Method_System_Collections_Generic_List_Rect__Add__);
-  this->fields._rects_k__BackingField = v9;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)v9, v14, v15, v16, v17, v18, v19);
+    v5,
+    v16,
+    (const MethodInfo_2F07AEC *)Method_System_Collections_Generic_List_Rect__Add__);
+  this->fields._rects_k__BackingField = v5;
+  sub_B2C2F8(&this->fields, v5);
 }
 
 

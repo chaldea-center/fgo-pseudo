@@ -1,28 +1,28 @@
 void __fastcall AttriRelationEntity___ctor(AttriRelationEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FBF2A & 1) == 0 )
+  if ( (byte_41898EA & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FBF2A = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_41898EA = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall AttriRelationEntity__CreatePK(int32_t atkAttri, int32_t defAttri, const MethodInfo *method)
 {
-  if ( (byte_40FBF29 & 1) == 0 )
+  if ( (byte_41898E9 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&defAttri);
-    byte_40FBF29 = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&defAttri);
+    byte_41898E9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            atkAttri,
            defAttri,
-           (const MethodInfo_18C21A0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

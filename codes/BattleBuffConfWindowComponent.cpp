@@ -41,42 +41,42 @@ void __fastcall BattleBuffConfWindowComponent__setData(
 {
   __int64 v5; // x1
   __int64 v6; // x1
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
-  WarEntity_o *Entity; // x0
-  WarEntity_o *v10; // x21
-  BattleServantBuffIconComponent_o *buffIcon; // x0
-  UILabel_o *nameLabel; // x0
-  UILabel_o *detailLabel; // x0
+  DataManager_o *Instance; // x0
+  __int64 v8; // x1
+  DataManager_o *v9; // x21
 
-  if ( (byte_40FD3B0 & 1) == 0 )
+  if ( (byte_418AC69 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_BuffMaster___, *(_QWORD *)&buffId);
-    sub_B16FFC(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v5);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_40FD3B0 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_BuffMaster___, *(_QWORD *)&buffId);
+    sub_B2C35C(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__, v5);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_418AC69 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                        (DataManager_o *)Instance,
-                                                                                        (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_BuffMaster___);
-  if ( !MasterData_WarQuestSelectionMaster )
+  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                Instance,
+                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_BuffMaster___);
+  if ( !Instance )
     goto LABEL_10;
-  Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-             MasterData_WarQuestSelectionMaster,
-             buffId,
-             (const MethodInfo_266F388 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+  Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+                                (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
+                                buffId,
+                                (const MethodInfo_24E40D0 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   this->fields.buffId = buffId;
-  if ( !Entity
-    || (v10 = Entity, (buffIcon = this->fields.buffIcon) == 0LL)
-    || (BattleServantBuffIconComponent__setIcon(buffIcon, v10->fields.id, 0LL),
-        (nameLabel = this->fields.nameLabel) == 0LL)
-    || (UILabel__set_text(nameLabel, v10->fields.age, 0LL), (detailLabel = this->fields.detailLabel) == 0LL) )
+  if ( !Instance
+    || (v9 = Instance, (Instance = (DataManager_o *)this->fields.buffIcon) == 0LL)
+    || (BattleServantBuffIconComponent__setIcon(
+          (BattleServantBuffIconComponent_o *)Instance,
+          v9->fields.m_CachedPtr,
+          0LL),
+        (Instance = (DataManager_o *)this->fields.nameLabel) == 0LL)
+    || (UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v9->fields.datalist, 0LL),
+        (Instance = (DataManager_o *)this->fields.detailLabel) == 0LL) )
   {
 LABEL_10:
-    sub_B170D4();
+    sub_B2C434(Instance, v8);
   }
-  UILabel__set_text(detailLabel, v10->fields.name, 0LL);
+  UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v9->fields.lookup, 0LL);
 }

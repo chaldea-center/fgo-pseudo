@@ -16,5 +16,5 @@ void __fastcall EventPointBehavior___ctor(EventPointBehavior_o *this, const Meth
   *(_QWORD *)&v2[-1].fields.limitCount = 0LL;
   *(_QWORD *)&v2[-1].fields.bgId = 0LL;
   LODWORD(v2[-1].fields.voiceIds) = 0;
-  sub_B16F98((BattleServantConfConponent_o *)v2, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B2C2F8((BattleServantConfConponent_o *)v2, 0LL, v3, v4, v5, v6, v7, v8);
 }

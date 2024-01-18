@@ -27,38 +27,41 @@ void __fastcall FadeOutScript__Start(FadeOutScript_o *this, const MethodInfo *me
 void __fastcall FadeOutScript__Update(FadeOutScript_o *this, const MethodInfo *method)
 {
   UnityEngine_Renderer_o *Component_WebViewObject; // x0
-  UnityEngine_Material_o *material; // x0
-  UnityEngine_Renderer_o *v5; // x0
-  UnityEngine_Material_o *v6; // x0
-  UnityEngine_Material_o *v7; // x20
+  __int64 v4; // x1
+  UnityEngine_Material_o *v5; // x20
   UnityEngine_Color_o color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_40F9F96 & 1) == 0 )
+  if ( (byte_41885E9 & 1) == 0 )
   {
-    sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    byte_40F9F96 = 1;
+    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    byte_41885E9 = 1;
   }
   Component_WebViewObject = (UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                         (UnityEngine_Component_o *)this,
-                                                        (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                        (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !Component_WebViewObject )
     goto LABEL_9;
-  material = UnityEngine_Renderer__get_material(Component_WebViewObject, 0LL);
-  if ( !material )
+  Component_WebViewObject = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(Component_WebViewObject, 0LL);
+  if ( !Component_WebViewObject )
     goto LABEL_9;
-  color = UnityEngine_Material__get_color(material, 0LL);
+  color = UnityEngine_Material__get_color((UnityEngine_Material_o *)Component_WebViewObject, 0LL);
   if ( color.fields.a < 0.0 )
     return;
-  v5 = (UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                   (UnityEngine_Component_o *)this,
-                                   (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_Renderer___);
-  if ( !v5 || (v6 = UnityEngine_Renderer__get_material(v5, 0LL)) == 0LL )
+  Component_WebViewObject = (UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_WebViewObject_(
+                                                        (UnityEngine_Component_o *)this,
+                                                        (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+  if ( !Component_WebViewObject
+    || (Component_WebViewObject = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(
+                                                              Component_WebViewObject,
+                                                              0LL)) == 0LL )
+  {
 LABEL_9:
-    sub_B170D4();
-  v7 = v6;
-  v9 = UnityEngine_Material__get_color(v6, 0LL);
-  v10 = UnityEngine_Color__op_Subtraction(v9, *(UnityEngine_Color_o *)&this->fields.alpha.fields.g, 0LL);
-  UnityEngine_Material__set_color(v7, v10, 0LL);
+    sub_B2C434(Component_WebViewObject, v4);
+  }
+  v5 = (UnityEngine_Material_o *)Component_WebViewObject;
+  v7 = UnityEngine_Material__get_color((UnityEngine_Material_o *)Component_WebViewObject, 0LL);
+  v8 = UnityEngine_Color__op_Subtraction(v7, *(UnityEngine_Color_o *)&this->fields.alpha.fields.g, 0LL);
+  UnityEngine_Material__set_color(v5, v8, 0LL);
 }

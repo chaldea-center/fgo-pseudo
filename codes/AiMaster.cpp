@@ -1,14 +1,14 @@
 void __fastcall AiMaster___ctor(AiMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F7EE3 & 1) == 0 )
+  if ( (byte_4185A81 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_AiMaster__AiEntity__string___ctor__, method);
-    byte_40F7EE3 = 1;
+    sub_B2C35C(&Method_DataMasterBase_AiMaster__AiEntity__string___ctor__, method);
+    byte_4185A81 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     103,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_AiMaster__AiEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_AiMaster__AiEntity__string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ AiEntity_o *__fastcall AiMaster__GetEntity(AiMaster_o *this, int32_t id, int32_t
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40F7EE1 & 1) == 0 )
+  if ( (byte_4185A7F & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_AiMaster__AiEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_40F7EE1 = 1;
+    sub_B2C35C(&Method_DataMasterBase_AiMaster__AiEntity__string__GetEntity__, *(_QWORD *)&id);
+    byte_4185A7F = 1;
   }
   PK = AiBaseEntity__CreatePK(id, idx, *(const MethodInfo **)&idx);
   return (AiEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                          (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                          PK,
-                         (const MethodInfo_266F7D8 *)Method_DataMasterBase_AiMaster__AiEntity__string__GetEntity__);
+                         (const MethodInfo_24E4520 *)Method_DataMasterBase_AiMaster__AiEntity__string__GetEntity__);
 }
 
 
@@ -40,25 +40,25 @@ bool __fastcall AiMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40F7EE2 & 1) == 0 )
+  if ( (byte_4185A80 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_AiMaster__AiEntity__string__TryGetEntity__, entity);
-    byte_40F7EE2 = 1;
+    sub_B2C35C(&Method_DataMasterBase_AiMaster__AiEntity__string__TryGetEntity__, entity);
+    byte_4185A80 = 1;
   }
   PK = AiBaseEntity__CreatePK(id, idx, *(const MethodInfo **)&id);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_AiMaster__AiEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_AiMaster__AiEntity__string__TryGetEntity__);
 }
 
 
 AiEntity_array *__fastcall AiMaster__getListFormGroupId(int32_t id, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
@@ -66,81 +66,76 @@ AiEntity_array *__fastcall AiMaster__getListFormGroupId(int32_t id, const Method
   __int64 v10; // x1
   __int64 v11; // x1
   __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v13; // x19
+  DataManager_o *Instance; // x0
   __int64 v15; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v16; // x19
-  WebViewManager_o *Instance; // x0
-  WarQuestSelectionMaster_o *MasterData_WarQuestSelectionMaster; // x0
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  __int64 v16; // x1
+  __int64 v17; // x3
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  unsigned __int64 v22; // x10
+  unsigned __int64 v20; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v25; // x8
-  unsigned __int64 v26; // x10
-  int32_t *v27; // x11
-  __int64 v28; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *v29; // x0
+  __int64 v23; // x3
+  System_Collections_Generic_IEnumerator_T__c *v24; // x8
+  unsigned __int64 v25; // x10
+  int32_t *v26; // x11
+  __int64 v27; // x0
+  EventMissionProgressRequest_Argument_ProgressData_o *v28; // x0
+  __int64 v29; // x1
   __int64 v30; // x10
   System_Collections_Generic_IEnumerator_T__c *v31; // x8
   unsigned __int64 v32; // x10
   int32_t *v33; // x11
   __int64 v34; // x0
 
-  if ( (byte_40F7EE4 & 1) == 0 )
+  if ( (byte_4185A82 & 1) == 0 )
   {
-    sub_B16FFC(&AiEntity_TypeInfo, method);
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v6);
-    sub_B16FFC(&Method_DataManager_GetMasterData_AiMaster___, v7);
-    sub_B16FFC(&System_IDisposable_TypeInfo, v8);
-    sub_B16FFC(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v9);
-    sub_B16FFC(&System_Collections_IEnumerator_TypeInfo, v10);
-    sub_B16FFC(&Method_System_Collections_Generic_List_AiEntity__Add__, v11);
-    sub_B16FFC(&Method_System_Collections_Generic_List_AiEntity__ToArray__, v12);
-    sub_B16FFC(&Method_System_Collections_Generic_List_AiEntity___ctor__, v13);
-    sub_B16FFC(&System_Collections_Generic_List_AiEntity__TypeInfo, v14);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    byte_40F7EE4 = 1;
+    sub_B2C35C(&AiEntity_TypeInfo, method);
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, v3);
+    sub_B2C35C(&Method_DataManager_GetMasterData_AiMaster___, v4);
+    sub_B2C35C(&System_IDisposable_TypeInfo, v5);
+    sub_B2C35C(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v6);
+    sub_B2C35C(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_B2C35C(&Method_System_Collections_Generic_List_AiEntity__Add__, v8);
+    sub_B2C35C(&Method_System_Collections_Generic_List_AiEntity__ToArray__, v9);
+    sub_B2C35C(&Method_System_Collections_Generic_List_AiEntity___ctor__, v10);
+    sub_B2C35C(&System_Collections_Generic_List_AiEntity__TypeInfo, v11);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    byte_4185A82 = 1;
   }
-  v16 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
-                                                                                                  System_Collections_Generic_List_AiEntity__TypeInfo,
-                                                                                                  method,
-                                                                                                  v2,
-                                                                                                  v3,
-                                                                                                  v4);
+  v13 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_AiEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v16,
-    (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_AiEntity___ctor__);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v13,
+    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_AiEntity___ctor__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_37;
-  MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                         (DataManager_o *)Instance,
-                                         (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_AiMaster___);
-  if ( !MasterData_WarQuestSelectionMaster )
+  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                Instance,
+                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_AiMaster___);
+  if ( !Instance )
     goto LABEL_37;
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)MasterData_WarQuestSelectionMaster->fields.list;
-  if ( !list )
+  Instance = (DataManager_o *)Instance->fields.lookup;
+  if ( !Instance )
     goto LABEL_37;
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
-                 list,
-                 (const MethodInfo_290E508 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Instance,
+                 (const MethodInfo_2A0E96C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B170D4();
+    sub_B2C434(0LL, v16);
   while ( 1 )
   {
     klass = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v22 = 0LL;
+      v20 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v22;
+        ++v20;
         p_offset += 4;
-        if ( v22 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        if ( v20 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_11;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -148,52 +143,52 @@ AiEntity_array *__fastcall AiMaster__getListFormGroupId(int32_t id, const Method
     else
     {
 LABEL_11:
-      p_method = sub_AAFEF8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_AC5258(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v17);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v25 = Enumerator->klass;
+    v24 = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v26 = 0LL;
-      v27 = &v25->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v27 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v25 = 0LL;
+      v26 = &v24->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v26 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        ++v26;
-        v27 += 4;
-        if ( v26 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        ++v25;
+        v26 += 4;
+        if ( v25 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_18;
       }
-      v28 = (__int64)&v25->vtable[*v27].method;
+      v27 = (__int64)&v24->vtable[*v26].method;
     }
     else
     {
 LABEL_18:
-      v28 = sub_AAFEF8(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
+      v27 = sub_AC5258(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL, v23);
     }
-    v29 = (EventMissionProgressRequest_Argument_ProgressData_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v28)(
+    v28 = (EventMissionProgressRequest_Argument_ProgressData_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(
                                                                    Enumerator,
-                                                                   *(_QWORD *)(v28 + 8));
-    if ( !v29 )
+                                                                   *(_QWORD *)(v27 + 8));
+    if ( !v28 )
       goto LABEL_35;
     v30 = *(&AiEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&v29->klass->_2.bitflags2 + 1) < (unsigned int)v30
-      || (AiEntity_c *)v29->klass->_2.typeHierarchy[v30 - 1] != AiEntity_TypeInfo )
+    if ( *(&v28->klass->_2.bitflags2 + 1) < (unsigned int)v30
+      || (AiEntity_c *)v28->klass->_2.typeHierarchy[v30 - 1] != AiEntity_TypeInfo )
     {
-      sub_B173C8(v29);
+      v28 = (EventMissionProgressRequest_Argument_ProgressData_o *)sub_B2C728(v28);
 LABEL_35:
-      sub_B170D4();
+      sub_B2C434(v28, v29);
     }
-    if ( v29->fields.missionTargetId == id )
+    if ( v28->fields.missionTargetId == id )
     {
-      if ( !v16 )
-        sub_B170D4();
+      if ( !v13 )
+        sub_B2C434(v28, AiEntity_TypeInfo);
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v16,
-        v29,
-        (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_AiEntity__Add__);
+        v13,
+        v28,
+        (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_AiEntity__Add__);
     }
   }
   v31 = Enumerator->klass;
@@ -213,13 +208,15 @@ LABEL_35:
   else
   {
 LABEL_30:
-    v34 = sub_AAFEF8(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v34 = sub_AC5258(Enumerator, System_IDisposable_TypeInfo, 0LL, v23);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v34)(Enumerator, *(_QWORD *)(v34 + 8));
-  if ( !v16 )
+  Instance = (DataManager_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v34)(
+                                Enumerator,
+                                *(_QWORD *)(v34 + 8));
+  if ( !v13 )
 LABEL_37:
-    sub_B170D4();
+    sub_B2C434(Instance, v15);
   return (AiEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                             (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v16,
-                             (const MethodInfo_2F27E24 *)Method_System_Collections_Generic_List_AiEntity__ToArray__);
+                             (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v13,
+                             (const MethodInfo_2EF65AC *)Method_System_Collections_Generic_List_AiEntity__ToArray__);
 }

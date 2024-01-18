@@ -12,10 +12,10 @@ void __fastcall ServantCostumeEventBalloon__Set(
 {
   UISprite_o *itemSprite; // x20
 
-  if ( (byte_40FCED1 & 1) == 0 )
+  if ( (byte_4189F38 & 1) == 0 )
   {
-    sub_B16FFC(&AtlasManager_TypeInfo, *(_QWORD *)&itemId);
-    byte_40FCED1 = 1;
+    sub_B2C35C(&AtlasManager_TypeInfo, *(_QWORD *)&itemId);
+    byte_4189F38 = 1;
   }
   itemSprite = this->fields.itemSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )

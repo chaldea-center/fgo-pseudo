@@ -1,5 +1,15 @@
 void __fastcall TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
+  if ( (byte_418BA18 & 1) == 0 )
+  {
+    sub_B2C35C(&CommonEffectComponent_TypeInfo, method);
+    byte_418BA18 = 1;
+  }
+  if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+    && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
+  }
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
 }
 
@@ -8,11 +18,11 @@ void __fastcall TitleInfoEventOpenHeaderEffect__animEndFunc(
         TitleInfoEventOpenHeaderEffect_o *this,
         const MethodInfo *method)
 {
-  System_Action_o *klass; // x0
+  System_Action_o *animEndCallback; // x0
 
-  klass = (System_Action_o *)this[1].klass;
-  if ( klass )
-    ActionExtensions__Call(klass, 0LL);
+  animEndCallback = this->fields.animEndCallback;
+  if ( animEndCallback )
+    ActionExtensions__Call(animEndCallback, 0LL);
 }
 
 
@@ -20,11 +30,11 @@ void __fastcall TitleInfoEventOpenHeaderEffect__changeUIFunc(
         TitleInfoEventOpenHeaderEffect_o *this,
         const MethodInfo *method)
 {
-  System_Action_o *animEndCallback; // x0
+  System_Action_o *changeUiCallback; // x0
 
-  animEndCallback = this->fields.animEndCallback;
-  if ( animEndCallback )
-    ActionExtensions__Call(animEndCallback, 0LL);
+  changeUiCallback = this->fields.changeUiCallback;
+  if ( changeUiCallback )
+    ActionExtensions__Call(changeUiCallback, 0LL);
 }
 
 
@@ -38,7 +48,7 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
 {
   __int64 v8; // x1
   System_String_o *v9; // x0
-  System_String_o *v10; // x0
+  struct System_String_o *v10; // x0
   System_String_array **v11; // x2
   System_String_array **v12; // x3
   System_Boolean_array **v13; // x4
@@ -60,21 +70,21 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
   int32_t v29; // [xsp+Ch] [xbp-24h] BYREF
 
   v29 = eventId;
-  if ( (byte_40FDFDD & 1) == 0 )
+  if ( (byte_418BA17 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_16071/*"_anim"*/, *(_QWORD *)&eventId);
-    sub_B16FFC(&StringLiteral_18126/*"ef_mapnamechange_"*/, v8);
-    byte_40FDFDD = 1;
+    sub_B2C35C(&StringLiteral_16134/*"_anim"*/, *(_QWORD *)&eventId);
+    sub_B2C35C(&StringLiteral_18194/*"ef_mapnamechange_"*/, v8);
+    byte_418BA17 = 1;
   }
   v9 = System_Int32__ToString((int32_t)&v29, 0LL);
-  v10 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_18126/*"ef_mapnamechange_"*/,
+  v10 = System_String__Concat_44307816(
+          (System_String_o *)StringLiteral_18194/*"ef_mapnamechange_"*/,
           v9,
-          (System_String_o *)StringLiteral_16071/*"_anim"*/,
+          (System_String_o *)StringLiteral_16134/*"_anim"*/,
           0LL);
-  this->fields.asset = (struct AssetData_o *)v10;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.asset,
+  this->fields.baseName = v10;
+  sub_B2C2F8(
+    (BattleServantConfConponent_o *)&this->fields.baseName,
     (System_Int32_array **)v10,
     v11,
     v12,
@@ -82,9 +92,9 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
     v14,
     v15,
     v16);
-  this->fields.animEndCallback = changeUiCallback;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.animEndCallback,
+  this->fields.changeUiCallback = changeUiCallback;
+  sub_B2C2F8(
+    (BattleServantConfConponent_o *)&this->fields.changeUiCallback,
     (System_Int32_array **)changeUiCallback,
     v17,
     v18,
@@ -92,6 +102,14 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
     v20,
     v21,
     v22);
-  this[1].klass = (TitleInfoEventOpenHeaderEffect_c *)endCallback;
-  sub_B16F98((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)endCallback, v23, v24, v25, v26, v27, v28);
+  this->fields.animEndCallback = endCallback;
+  sub_B2C2F8(
+    (BattleServantConfConponent_o *)&this->fields.animEndCallback,
+    (System_Int32_array **)endCallback,
+    v23,
+    v24,
+    v25,
+    v26,
+    v27,
+    v28);
 }

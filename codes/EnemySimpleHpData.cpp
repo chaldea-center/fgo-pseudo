@@ -3,9 +3,12 @@ void __fastcall EnemySimpleHpData___ctor(
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
+  __int64 v5; // x0
+  __int64 v6; // x1
+
   SimpleHpData___ctor((SimpleHpData_o *)this, svtData, 0LL);
   if ( !svtData )
-    sub_B170D4();
+    sub_B2C434(v5, v6);
   this->fields._NextTpTurn_k__BackingField = svtData->fields.nexttpturn;
   this->fields._MaxTpTurn_k__BackingField = svtData->fields.maxtpturn;
 }

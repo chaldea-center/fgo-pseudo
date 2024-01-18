@@ -23,7 +23,7 @@ void __fastcall CombineListItemInfo___ctor(
   this->fields.kind = kind;
   this->fields.type = type;
   this->fields.spriteName = spriteName;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.spriteName,
     (System_Int32_array **)spriteName,
     v11,
@@ -33,7 +33,7 @@ void __fastcall CombineListItemInfo___ctor(
     v15,
     v16);
   this->fields.eventData = eventData;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.eventData,
     (System_Int32_array **)eventData,
     v17,

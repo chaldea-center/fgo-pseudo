@@ -1,26 +1,53 @@
 void __fastcall QuestStartEffectComponent___ctor(QuestStartEffectComponent_o *this, const MethodInfo *method)
 {
+  if ( (byte_41860B9 & 1) == 0 )
+  {
+    sub_B2C35C(&CommonEffectComponent_TypeInfo, method);
+    byte_41860B9 = 1;
+  }
+  if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+    && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
+  }
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
 }
 
 
 void __fastcall QuestStartEffectComponent__RefreshPanel(QuestStartEffectComponent_o *this, const MethodInfo *method)
 {
+  UnityEngine_Object_o *basePanel; // x20
+  __int64 v4; // x1
+  UnityEngine_Component_o *gameObject; // x0
   UnityEngine_Object_o *base2Panel; // x20
-  UnityEngine_Component_o *v4; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Component_o *v6; // x0
-  UnityEngine_GameObject_o *v7; // x0
-  struct System_String_o *overwriteEffectNameForTapSkip; // x20
-  struct System_String_o *v9; // x0
-  UnityEngine_GameObject_o *v10; // x0
-  struct System_String_o *v11; // x0
-  UnityEngine_GameObject_o *v12; // x0
 
-  if ( (byte_40F8264 & 1) == 0 )
+  if ( (byte_41860B8 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    byte_40F8264 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
+    byte_41860B8 = 1;
+  }
+  basePanel = (UnityEngine_Object_o *)this->fields.basePanel;
+  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  }
+  if ( UnityEngine_Object__op_Inequality(basePanel, 0LL, 0LL) )
+  {
+    gameObject = (UnityEngine_Component_o *)this->fields.basePanel;
+    if ( !gameObject )
+      goto LABEL_22;
+    gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+    if ( !gameObject )
+      goto LABEL_22;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
+    gameObject = (UnityEngine_Component_o *)this->fields.basePanel;
+    if ( !gameObject )
+      goto LABEL_22;
+    gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+    if ( !gameObject )
+      goto LABEL_22;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
   }
   base2Panel = (UnityEngine_Object_o *)this->fields.base2Panel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -30,50 +57,27 @@ void __fastcall QuestStartEffectComponent__RefreshPanel(QuestStartEffectComponen
   }
   if ( UnityEngine_Object__op_Inequality(base2Panel, 0LL, 0LL) )
   {
-    v4 = (UnityEngine_Component_o *)this->fields.base2Panel;
-    if ( !v4 )
-      goto LABEL_22;
-    gameObject = UnityEngine_Component__get_gameObject(v4, 0LL);
-    if ( !gameObject )
-      goto LABEL_22;
-    UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
-    v6 = (UnityEngine_Component_o *)this->fields.base2Panel;
-    if ( !v6 )
-      goto LABEL_22;
-    v7 = UnityEngine_Component__get_gameObject(v6, 0LL);
-    if ( !v7 )
-      goto LABEL_22;
-    UnityEngine_GameObject__SetActive(v7, 1, 0LL);
-  }
-  overwriteEffectNameForTapSkip = this->fields.overwriteEffectNameForTapSkip;
-  if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-    && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  }
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)overwriteEffectNameForTapSkip, 0LL, 0LL) )
-  {
-    v9 = this->fields.overwriteEffectNameForTapSkip;
-    if ( v9 )
+    gameObject = (UnityEngine_Component_o *)this->fields.base2Panel;
+    if ( gameObject )
     {
-      v10 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v9, 0LL);
-      if ( v10 )
+      gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+      if ( gameObject )
       {
-        UnityEngine_GameObject__SetActive(v10, 0, 0LL);
-        v11 = this->fields.overwriteEffectNameForTapSkip;
-        if ( v11 )
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
+        gameObject = (UnityEngine_Component_o *)this->fields.base2Panel;
+        if ( gameObject )
         {
-          v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v11, 0LL);
-          if ( v12 )
+          gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+          if ( gameObject )
           {
-            UnityEngine_GameObject__SetActive(v12, 1, 0LL);
+            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
             return;
           }
         }
       }
     }
 LABEL_22:
-    sub_B170D4();
+    sub_B2C434(gameObject, v4);
   }
 }
 
@@ -101,105 +105,75 @@ void __fastcall QuestStartEffectComponent__SetParam(
   __int64 v20; // x1
   __int64 v21; // x1
   __int64 v22; // x9
-  QuestStartEffectComponent_o *v23; // x20
-  _BOOL8 v24; // x0
-  __int64 v25; // x1
-  __int64 v26; // x2
-  struct UILabel_o *messageLabel; // x21
-  int leftAnchor; // w8
-  unsigned int v29; // w22
-  UnityEngine_Component_o *v30; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
+  struct CommonEffectParam_o **p_commonParam; // x20
+  UnityEngine_Component_o *gameObject; // x0
+  __int64 questMessageLabelMaxLine; // x1
   struct UISprite_array *titleSpriteDecoration; // x21
   int max_length; // w8
-  unsigned int v34; // w22
-  UnityEngine_Component_o *v35; // x0
-  UnityEngine_GameObject_o *v36; // x0
-  UnityEngine_Object_o *titleLabelDecoration; // x21
-  UnityEngine_Component_o *v38; // x0
-  UnityEngine_GameObject_o *v39; // x0
-  System_String_o *v40; // x0
-  System_String_o *v41; // x0
-  UnityEngine_Object_o *v42; // x22
-  System_String_o *v43; // x21
-  struct UISprite_array *v44; // x8
-  UIAtlas_o *v45; // x0
-  UISprite_o *v46; // x0
-  struct UISprite_array *v47; // x0
-  UnityEngine_Component_o *v48; // x0
-  UnityEngine_GameObject_o *v49; // x0
-  UnityEngine_Object_o *v50; // x21
-  UnityEngine_Component_o *v51; // x0
-  UnityEngine_GameObject_o *v52; // x0
-  struct UILabel_o *v53; // x21
-  int v54; // w8
-  unsigned int v55; // w22
-  UnityEngine_Component_o *v56; // x0
-  UnityEngine_GameObject_o *v57; // x0
-  UnityEngine_Object_o *v58; // x21
-  QuestStartEffectComponent_c *klass; // x8
-  UILabel_o *v60; // x0
-  UILabel_o *v61; // x21
+  unsigned int v28; // w22
+  struct UISprite_array *titleLabelDecoration; // x21
+  int v30; // w8
+  unsigned int v31; // w22
+  UnityEngine_Object_o *titleSprite; // x21
+  System_String_o *v33; // x0
+  System_String_o *v34; // x0
+  UnityEngine_Object_o *v35; // x22
+  System_String_o *v36; // x21
+  struct UISprite_o *v37; // x8
+  UnityEngine_Object_o *titleLabel; // x21
+  struct UISprite_array *v39; // x21
+  int v40; // w8
+  unsigned int v41; // w22
+  UnityEngine_Object_o *v42; // x21
+  struct CommonEffectParam_o *commonParam; // x8
+  struct UILabel_o *v44; // x21
   System_String_o *mText; // x22
-  System_String_o *v63; // x0
-  struct UISprite_array *v64; // x21
-  int v65; // w8
-  unsigned int v66; // w22
-  UnityEngine_Component_o *v67; // x0
-  UnityEngine_GameObject_o *v68; // x0
-  UnityEngine_Object_o *messageManager; // x21
-  QuestStartEffectComponent_c *v70; // x8
-  UISprite_o *v71; // x21
-  System_String_o *v72; // x0
-  System_String_o *v73; // x0
-  struct ScriptLineMessage_o *v74; // x0
-  UnityEngine_Object_o *typeSprite; // x21
-  bool IsNullOrEmpty; // w0
-  struct UISprite_o *v77; // x8
-  UnityEngine_Object_o *v78; // x21
-  QuestStartEffectComponent_c *v79; // x8
-  UILabel_o *v80; // x0
-  int32_t v81; // w1
-  UILabel_o *v82; // x0
-  QuestStartEffectComponent_c *v83; // x8
-  struct UISprite_o *v84; // x0
+  System_String_o *v46; // x0
+  struct UISprite_array *v47; // x21
+  int v48; // w8
+  unsigned int v49; // w22
   UnityEngine_Object_o *messageSprite; // x21
-  UILabel_o *v86; // x0
-  UnityEngine_Object_o *basePanel; // x21
-  System_String_o *v88; // x1
-  __int64 *v89; // x8
-  UISprite_o *v90; // x0
-  struct UIPanel_o *v91; // x0
-  System_String_o *asset; // x20
-  WebViewManager_o *Instance; // x0
-  QuestStartEffectComponent_o *v94; // x0
-  const MethodInfo *v95; // x1
+  struct CommonEffectParam_o *v51; // x8
+  UISprite_o *v52; // x21
+  System_String_o *v53; // x0
+  UnityEngine_Object_o *messageManager; // x21
+  struct ScriptLineMessage_o *v55; // x8
+  UnityEngine_Object_o *v56; // x21
+  struct CommonEffectParam_o *v57; // x8
+  struct CommonEffectParam_o *v58; // x8
+  UnityEngine_Object_o *messageLabel; // x21
+  UnityEngine_Object_o *typeSprite; // x21
+  __int64 *v61; // x8
+  System_String_o *baseName; // x20
+  __int64 v63; // x0
+  QuestStartEffectComponent_o *v64; // x0
+  const MethodInfo *v65; // x1
 
-  if ( (byte_40F8263 & 1) == 0 )
+  if ( (byte_41860B7 & 1) == 0 )
   {
-    sub_B16FFC(&CommonEffectParam_TypeInfo, param);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v10);
-    sub_B16FFC(&System_Text_RegularExpressions_Regex_TypeInfo, v11);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v12);
-    sub_B16FFC(&StringLiteral_21530/*"quest_free"*/, v13);
-    sub_B16FFC(&StringLiteral_21529/*"quest_event"*/, v14);
-    sub_B16FFC(&StringLiteral_21531/*"quest_heroic"*/, v15);
-    sub_B16FFC(&StringLiteral_15708/*"[^0-9]"*/, v16);
-    sub_B16FFC(&StringLiteral_21533/*"quest_main"*/, v17);
-    sub_B16FFC(&StringLiteral_21525/*"quest_Interlude"*/, v18);
-    sub_B16FFC(&StringLiteral_22319/*"sub_title_"*/, v19);
-    sub_B16FFC(&StringLiteral_1/*""*/, v20);
-    sub_B16FFC(&StringLiteral_22613/*"title_"*/, v21);
-    byte_40F8263 = 1;
+    sub_B2C35C(&CommonEffectParam_TypeInfo, param);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v10);
+    sub_B2C35C(&System_Text_RegularExpressions_Regex_TypeInfo, v11);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v12);
+    sub_B2C35C(&StringLiteral_21622/*"quest_free"*/, v13);
+    sub_B2C35C(&StringLiteral_21621/*"quest_event"*/, v14);
+    sub_B2C35C(&StringLiteral_21623/*"quest_heroic"*/, v15);
+    sub_B2C35C(&StringLiteral_15771/*"[^0-9]"*/, v16);
+    sub_B2C35C(&StringLiteral_21625/*"quest_main"*/, v17);
+    sub_B2C35C(&StringLiteral_21617/*"quest_Interlude"*/, v18);
+    sub_B2C35C(&StringLiteral_22411/*"sub_title_"*/, v19);
+    sub_B2C35C(&StringLiteral_1/*""*/, v20);
+    sub_B2C35C(&StringLiteral_22706/*"title_"*/, v21);
+    byte_41860B7 = 1;
   }
   if ( !param
     || (v22 = *(&CommonEffectParam_TypeInfo->_2.bitflags2 + 1), *(&param->klass->_2.bitflags2 + 1) >= (unsigned int)v22)
     && (CommonEffectParam_c *)param->klass->_2.typeHierarchy[v22 - 1] == CommonEffectParam_TypeInfo )
   {
-    v23 = this + 1;
-    this[1].klass = (QuestStartEffectComponent_c *)param;
-    sub_B16F98(
-      (BattleServantConfConponent_o *)&this[1],
+    p_commonParam = &this->fields.commonParam;
+    this->fields.commonParam = (struct CommonEffectParam_o *)param;
+    sub_B2C2F8(
+      (BattleServantConfConponent_o *)&this->fields.commonParam,
       (System_Int32_array **)param,
       (System_String_array **)method,
       v3,
@@ -207,143 +181,145 @@ void __fastcall QuestStartEffectComponent__SetParam(
       v5,
       v6,
       v7);
-    messageLabel = this->fields.messageLabel;
-    if ( !messageLabel )
-      goto LABEL_132;
-    leftAnchor = (int)messageLabel->fields.leftAnchor;
-    if ( leftAnchor >= 1 )
-    {
-      v29 = 0;
-      while ( v29 < leftAnchor )
-      {
-        v30 = (UnityEngine_Component_o *)*((_QWORD *)&messageLabel->fields.rightAnchor + (int)v29);
-        if ( !v30 )
-          goto LABEL_132;
-        gameObject = UnityEngine_Component__get_gameObject(v30, 0LL);
-        if ( !gameObject )
-          goto LABEL_132;
-        UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
-        leftAnchor = (int)messageLabel->fields.leftAnchor;
-        if ( (int)++v29 >= leftAnchor )
-          goto LABEL_13;
-      }
-LABEL_133:
-      sub_B17100(v24, v25, v26);
-      sub_B170A0();
-    }
-LABEL_13:
     titleSpriteDecoration = this->fields.titleSpriteDecoration;
     if ( !titleSpriteDecoration )
       goto LABEL_132;
     max_length = titleSpriteDecoration->max_length;
     if ( max_length >= 1 )
     {
-      v34 = 0;
-      while ( v34 < max_length )
+      v28 = 0;
+      while ( v28 < max_length )
       {
-        v35 = (UnityEngine_Component_o *)titleSpriteDecoration->m_Items[v34];
-        if ( !v35 )
+        gameObject = (UnityEngine_Component_o *)titleSpriteDecoration->m_Items[v28];
+        if ( !gameObject )
           goto LABEL_132;
-        v36 = UnityEngine_Component__get_gameObject(v35, 0LL);
-        if ( !v36 )
+        gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+        if ( !gameObject )
           goto LABEL_132;
-        UnityEngine_GameObject__SetActive(v36, 0, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
         max_length = titleSpriteDecoration->max_length;
-        if ( (int)++v34 >= max_length )
+        if ( (int)++v28 >= max_length )
+          goto LABEL_13;
+      }
+LABEL_133:
+      v63 = sub_B2C460(gameObject);
+      sub_B2C400(v63, 0LL);
+    }
+LABEL_13:
+    titleLabelDecoration = this->fields.titleLabelDecoration;
+    if ( !titleLabelDecoration )
+      goto LABEL_132;
+    v30 = titleLabelDecoration->max_length;
+    if ( v30 >= 1 )
+    {
+      v31 = 0;
+      while ( v31 < v30 )
+      {
+        gameObject = (UnityEngine_Component_o *)titleLabelDecoration->m_Items[v31];
+        if ( !gameObject )
+          goto LABEL_132;
+        gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+        if ( !gameObject )
+          goto LABEL_132;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
+        v30 = titleLabelDecoration->max_length;
+        if ( (int)++v31 >= v30 )
           goto LABEL_20;
       }
       goto LABEL_133;
     }
 LABEL_20:
-    titleLabelDecoration = (UnityEngine_Object_o *)this->fields.titleLabelDecoration;
+    titleSprite = (UnityEngine_Object_o *)this->fields.titleSprite;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    if ( UnityEngine_Object__op_Inequality(titleLabelDecoration, 0LL, 0LL) )
+    gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(titleSprite, 0LL, 0LL);
+    if ( ((unsigned __int8)gameObject & 1) != 0 )
     {
-      v38 = (UnityEngine_Component_o *)this->fields.titleLabelDecoration;
-      if ( !v38 )
+      gameObject = (UnityEngine_Component_o *)this->fields.titleSprite;
+      if ( !gameObject )
         goto LABEL_132;
-      v39 = UnityEngine_Component__get_gameObject(v38, 0LL);
-      if ( !v39 )
+      gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+      if ( !gameObject )
         goto LABEL_132;
-      UnityEngine_GameObject__SetActive(v39, 0, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
     }
-    if ( !v23->klass )
+    if ( !*p_commonParam )
       goto LABEL_132;
-    v40 = System_Int32__ToString((unsigned int)v23->klass + 48, 0LL);
-    v41 = System_String__Concat_43743732((System_String_o *)StringLiteral_22613/*"title_"*/, v40, 0LL);
-    v42 = (UnityEngine_Object_o *)this->fields.titleLabelDecoration;
-    v43 = v41;
+    v33 = System_Int32__ToString((unsigned int)*p_commonParam + 48, 0LL);
+    v34 = System_String__Concat_44305532((System_String_o *)StringLiteral_22706/*"title_"*/, v33, 0LL);
+    v35 = (UnityEngine_Object_o *)this->fields.titleSprite;
+    v36 = v34;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    if ( !UnityEngine_Object__op_Inequality(v42, 0LL, 0LL) )
+    gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(v35, 0LL, 0LL);
+    if ( ((unsigned __int8)gameObject & 1) == 0 )
       goto LABEL_54;
-    v44 = this->fields.titleLabelDecoration;
-    if ( !v44 )
+    v37 = this->fields.titleSprite;
+    if ( !v37 )
       goto LABEL_132;
-    v45 = (UIAtlas_o *)v44->m_Items[53];
-    if ( !v45 )
+    gameObject = (UnityEngine_Component_o *)v37->fields.mAtlas;
+    if ( !gameObject )
       goto LABEL_132;
-    if ( UIAtlas__GetSprite(v45, v43, 0LL) )
+    if ( UIAtlas__GetSprite((UIAtlas_o *)gameObject, v36, 0LL) )
     {
-      v46 = (UISprite_o *)this->fields.titleLabelDecoration;
-      if ( !v46 )
+      gameObject = (UnityEngine_Component_o *)this->fields.titleSprite;
+      if ( !gameObject )
         goto LABEL_132;
-      UISprite__set_spriteName(v46, v43, 0LL);
-      v47 = this->fields.titleLabelDecoration;
-      if ( !v47 )
+      UISprite__set_spriteName((UISprite_o *)gameObject, v36, 0LL);
+      gameObject = (UnityEngine_Component_o *)this->fields.titleSprite;
+      if ( !gameObject )
         goto LABEL_132;
-      ((void (__fastcall *)(struct UISprite_array *, Il2CppMethodPointer))v47->obj.klass->vtable[33].method)(
-        v47,
-        v47->obj.klass->vtable[34].methodPtr);
-      v48 = (UnityEngine_Component_o *)this->fields.titleLabelDecoration;
-      if ( !v48 )
+      ((void (__fastcall *)(UnityEngine_Component_o *, void *))gameObject->klass[2]._1.typeMetadataHandle)(
+        gameObject,
+        gameObject->klass[2]._1.interopData);
+      gameObject = (UnityEngine_Component_o *)this->fields.titleSprite;
+      if ( !gameObject )
         goto LABEL_132;
-      v49 = UnityEngine_Component__get_gameObject(v48, 0LL);
-      if ( !v49 )
+      gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+      if ( !gameObject )
         goto LABEL_132;
-      UnityEngine_GameObject__SetActive(v49, 1, 0LL);
-      v50 = *(UnityEngine_Object_o **)&this->fields.isTitleLabelNumberOnly;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
+      titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      v24 = UnityEngine_Object__op_Inequality(v50, 0LL, 0LL);
-      if ( v24 )
+      gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(titleLabel, 0LL, 0LL);
+      if ( ((unsigned __int8)gameObject & 1) != 0 )
       {
-        v51 = *(UnityEngine_Component_o **)&this->fields.isTitleLabelNumberOnly;
-        if ( !v51 )
+        gameObject = (UnityEngine_Component_o *)this->fields.titleLabel;
+        if ( !gameObject )
           goto LABEL_132;
-        v52 = UnityEngine_Component__get_gameObject(v51, 0LL);
-        if ( !v52 )
+        gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+        if ( !gameObject )
           goto LABEL_132;
-        UnityEngine_GameObject__SetActive(v52, 0, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
       }
-      v53 = this->fields.messageLabel;
-      if ( !v53 )
+      v39 = this->fields.titleSpriteDecoration;
+      if ( !v39 )
         goto LABEL_132;
-      v54 = (int)v53->fields.leftAnchor;
-      if ( v54 >= 1 )
+      v40 = v39->max_length;
+      if ( v40 >= 1 )
       {
-        v55 = 0;
-        while ( v55 < v54 )
+        v41 = 0;
+        while ( v41 < v40 )
         {
-          v56 = (UnityEngine_Component_o *)*((_QWORD *)&v53->fields.rightAnchor + (int)v55);
-          if ( !v56 )
+          gameObject = (UnityEngine_Component_o *)v39->m_Items[v41];
+          if ( !gameObject )
             goto LABEL_132;
-          v57 = UnityEngine_Component__get_gameObject(v56, 0LL);
-          if ( !v57 )
+          gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+          if ( !gameObject )
             goto LABEL_132;
-          UnityEngine_GameObject__SetActive(v57, 1, 0LL);
-          v54 = (int)v53->fields.leftAnchor;
-          if ( (int)++v55 >= v54 )
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
+          v40 = v39->max_length;
+          if ( (int)++v41 >= v40 )
             goto LABEL_73;
         }
         goto LABEL_133;
@@ -352,57 +328,58 @@ LABEL_20:
     else
     {
 LABEL_54:
-      v58 = *(UnityEngine_Object_o **)&this->fields.isTitleLabelNumberOnly;
+      v42 = (UnityEngine_Object_o *)this->fields.titleLabel;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      if ( UnityEngine_Object__op_Inequality(v58, 0LL, 0LL) )
+      gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(v42, 0LL, 0LL);
+      if ( ((unsigned __int8)gameObject & 1) != 0 )
       {
-        klass = this[1].klass;
-        if ( !klass )
+        commonParam = this->fields.commonParam;
+        if ( !commonParam )
           goto LABEL_132;
-        v60 = *(UILabel_o **)&this->fields.isTitleLabelNumberOnly;
-        if ( !v60 )
+        gameObject = (UnityEngine_Component_o *)this->fields.titleLabel;
+        if ( !gameObject )
           goto LABEL_132;
-        UILabel__set_text(v60, (System_String_o *)klass->_1.name, 0LL);
-        if ( LOBYTE(this->fields.titleSprite) )
+        UILabel__set_text((UILabel_o *)gameObject, commonParam->fields.title, 0LL);
+        if ( this->fields.isTitleLabelNumberOnly )
         {
-          v61 = *(UILabel_o **)&this->fields.isTitleLabelNumberOnly;
-          if ( !v61 )
+          v44 = this->fields.titleLabel;
+          if ( !v44 )
             goto LABEL_132;
-          mText = v61->fields.mText;
+          mText = v44->fields.mText;
           if ( (BYTE3(System_Text_RegularExpressions_Regex_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !System_Text_RegularExpressions_Regex_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(System_Text_RegularExpressions_Regex_TypeInfo);
           }
-          v63 = System_Text_RegularExpressions_Regex__Replace(
+          v46 = System_Text_RegularExpressions_Regex__Replace(
                   mText,
-                  (System_String_o *)StringLiteral_15708/*"[^0-9]"*/,
+                  (System_String_o *)StringLiteral_15771/*"[^0-9]"*/,
                   (System_String_o *)StringLiteral_1/*""*/,
                   0LL);
-          UILabel__set_text(v61, v63, 0LL);
+          UILabel__set_text(v44, v46, 0LL);
         }
-        v64 = this->fields.titleSpriteDecoration;
-        if ( !v64 )
+        v47 = this->fields.titleLabelDecoration;
+        if ( !v47 )
           goto LABEL_132;
-        v65 = v64->max_length;
-        if ( v65 >= 1 )
+        v48 = v47->max_length;
+        if ( v48 >= 1 )
         {
-          v66 = 0;
-          while ( v66 < v65 )
+          v49 = 0;
+          while ( v49 < v48 )
           {
-            v67 = (UnityEngine_Component_o *)v64->m_Items[v66];
-            if ( !v67 )
+            gameObject = (UnityEngine_Component_o *)v47->m_Items[v49];
+            if ( !gameObject )
               goto LABEL_132;
-            v68 = UnityEngine_Component__get_gameObject(v67, 0LL);
-            if ( !v68 )
+            gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+            if ( !gameObject )
               goto LABEL_132;
-            UnityEngine_GameObject__SetActive(v68, 1, 0LL);
-            v65 = v64->max_length;
-            if ( (int)++v66 >= v65 )
+            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
+            v48 = v47->max_length;
+            if ( (int)++v49 >= v48 )
               goto LABEL_73;
           }
           goto LABEL_133;
@@ -410,29 +387,132 @@ LABEL_54:
       }
     }
 LABEL_73:
+    messageSprite = (UnityEngine_Object_o *)this->fields.messageSprite;
+    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    }
+    gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(messageSprite, 0LL, 0LL);
+    if ( ((unsigned __int8)gameObject & 1) != 0 )
+    {
+      v51 = this->fields.commonParam;
+      if ( !v51 )
+        goto LABEL_132;
+      v52 = this->fields.messageSprite;
+      v53 = System_Int32__ToString((int)v51 + 48, 0LL);
+      gameObject = (UnityEngine_Component_o *)System_String__Concat_44305532(
+                                                (System_String_o *)StringLiteral_22411/*"sub_title_"*/,
+                                                v53,
+                                                0LL);
+      if ( !v52 )
+        goto LABEL_132;
+      UISprite__set_spriteName(v52, (System_String_o *)gameObject, 0LL);
+      gameObject = (UnityEngine_Component_o *)this->fields.messageSprite;
+      if ( !gameObject )
+        goto LABEL_132;
+      ((void (__fastcall *)(UnityEngine_Component_o *, void *))gameObject->klass[2]._1.typeMetadataHandle)(
+        gameObject,
+        gameObject->klass[2]._1.interopData);
+    }
     messageManager = (UnityEngine_Object_o *)this->fields.messageManager;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    if ( UnityEngine_Object__op_Inequality(messageManager, 0LL, 0LL) )
+    gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(messageManager, 0LL, 0LL);
+    if ( ((unsigned __int8)gameObject & 1) != 0 )
     {
-      v70 = this[1].klass;
-      if ( !v70 )
+      if ( !*p_commonParam )
         goto LABEL_132;
-      v71 = (UISprite_o *)this->fields.messageManager;
-      v72 = System_Int32__ToString((int)v70 + 48, 0LL);
-      v73 = System_String__Concat_43743732((System_String_o *)StringLiteral_22319/*"sub_title_"*/, v72, 0LL);
-      if ( !v71 )
-        goto LABEL_132;
-      UISprite__set_spriteName(v71, v73, 0LL);
-      v74 = this->fields.messageManager;
-      if ( !v74 )
-        goto LABEL_132;
-      ((void (__fastcall *)(struct ScriptLineMessage_o *, Il2CppMethodPointer))v74->klass[1].vtable._6_PreProcSetRubyLabel.method)(
-        v74,
-        v74->klass[1].vtable._7_SetText.methodPtr);
+      gameObject = (UnityEngine_Component_o *)System_String__IsNullOrEmpty((*p_commonParam)->fields.messageRuby, 0LL);
+      if ( ((unsigned __int8)gameObject & 1) != 0 )
+      {
+        if ( !*p_commonParam )
+          goto LABEL_132;
+        gameObject = (UnityEngine_Component_o *)System_String__IsNullOrEmpty((*p_commonParam)->fields.message, 0LL);
+        v55 = this->fields.messageManager;
+        if ( ((unsigned __int8)gameObject & 1) != 0 )
+        {
+          if ( !v55 )
+            goto LABEL_132;
+          ScriptLineMessage__DeleteLabels(this->fields.messageManager, 0LL);
+        }
+        else
+        {
+          if ( !*p_commonParam || !v55 )
+            goto LABEL_132;
+          ((void (__fastcall *)(struct ScriptLineMessage_o *, struct System_String_o *, _QWORD, _QWORD, _QWORD, _QWORD, void *))v55->klass->vtable._7_SetText.method)(
+            this->fields.messageManager,
+            (*p_commonParam)->fields.message,
+            0LL,
+            0LL,
+            0LL,
+            0LL,
+            v55->klass[1]._1.image);
+        }
+      }
+      else
+      {
+        v58 = this->fields.commonParam;
+        if ( !v58 )
+          goto LABEL_132;
+        gameObject = (UnityEngine_Component_o *)this->fields.messageManager;
+        if ( !gameObject )
+          goto LABEL_132;
+        (*(void (__fastcall **)(UnityEngine_Component_o *, struct System_String_o *, _QWORD, _QWORD, _QWORD, _QWORD, Il2CppClass *))&gameObject->klass[1]._1.this_arg.bits)(
+          gameObject,
+          v58->fields.messageRuby,
+          0LL,
+          0LL,
+          0LL,
+          0LL,
+          gameObject->klass[1]._1.element_class);
+      }
+      messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
+      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      }
+      if ( UnityEngine_Object__op_Inequality(messageLabel, 0LL, 0LL) )
+      {
+        gameObject = (UnityEngine_Component_o *)this->fields.messageLabel;
+        if ( !gameObject )
+          goto LABEL_132;
+        UILabel__set_text((UILabel_o *)gameObject, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+      }
+    }
+    else
+    {
+      v56 = (UnityEngine_Object_o *)this->fields.messageLabel;
+      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      }
+      gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(v56, 0LL, 0LL);
+      if ( ((unsigned __int8)gameObject & 1) != 0 )
+      {
+        v57 = this->fields.commonParam;
+        if ( !v57 )
+          goto LABEL_132;
+        gameObject = (UnityEngine_Component_o *)this->fields.messageLabel;
+        if ( !gameObject )
+          goto LABEL_132;
+        UILabel__set_text((UILabel_o *)gameObject, v57->fields.message, 0LL);
+        if ( !*p_commonParam )
+          goto LABEL_132;
+        questMessageLabelMaxLine = (unsigned int)(*p_commonParam)->fields.questMessageLabelMaxLine;
+        if ( (int)questMessageLabelMaxLine >= 1 )
+        {
+          gameObject = (UnityEngine_Component_o *)this->fields.messageLabel;
+          if ( !gameObject )
+            goto LABEL_132;
+          UILabel__set_maxLineCount((UILabel_o *)gameObject, questMessageLabelMaxLine, 0LL);
+        }
+      }
     }
     typeSprite = (UnityEngine_Object_o *)this->fields.typeSprite;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -440,158 +520,59 @@ LABEL_73:
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    if ( UnityEngine_Object__op_Inequality(typeSprite, 0LL, 0LL) )
+    gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(typeSprite, 0LL, 0LL);
+    if ( ((unsigned __int8)gameObject & 1) != 0 )
     {
-      if ( !v23->klass )
+      if ( !*p_commonParam )
         goto LABEL_132;
-      if ( System_String__IsNullOrEmpty((System_String_o *)v23->klass->_1.byval_arg.data, 0LL) )
+      questMessageLabelMaxLine = 0LL;
+      switch ( (*p_commonParam)->fields.type )
       {
-        if ( !v23->klass )
-          goto LABEL_132;
-        IsNullOrEmpty = System_String__IsNullOrEmpty((System_String_o *)v23->klass->_1.namespaze, 0LL);
-        v77 = this->fields.typeSprite;
-        if ( IsNullOrEmpty )
-        {
-          if ( !v77 )
-            goto LABEL_132;
-          ScriptLineMessage__DeleteLabels((ScriptLineMessage_o *)this->fields.typeSprite, 0LL);
-        }
-        else
-        {
-          if ( !v23->klass || !v77 )
-            goto LABEL_132;
-          ((void (__fastcall *)(struct UISprite_o *, const char *, _QWORD, _QWORD, _QWORD, _QWORD, Il2CppMethodPointer))v77->klass->vtable._7_get_alpha.method)(
-            this->fields.typeSprite,
-            v23->klass->_1.namespaze,
-            0LL,
-            0LL,
-            0LL,
-            0LL,
-            v77->klass->vtable._8_set_alpha.methodPtr);
-        }
-      }
-      else
-      {
-        v83 = this[1].klass;
-        if ( !v83 )
-          goto LABEL_132;
-        v84 = this->fields.typeSprite;
-        if ( !v84 )
-          goto LABEL_132;
-        ((void (__fastcall *)(struct UISprite_o *, void *, _QWORD, _QWORD, _QWORD, _QWORD, Il2CppMethodPointer))v84->klass->vtable._7_get_alpha.method)(
-          v84,
-          v83->_1.byval_arg.data,
-          0LL,
-          0LL,
-          0LL,
-          0LL,
-          v84->klass->vtable._8_set_alpha.methodPtr);
-      }
-      messageSprite = (UnityEngine_Object_o *)this->fields.messageSprite;
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      if ( UnityEngine_Object__op_Inequality(messageSprite, 0LL, 0LL) )
-      {
-        v86 = (UILabel_o *)this->fields.messageSprite;
-        if ( !v86 )
-          goto LABEL_132;
-        UILabel__set_text(v86, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-      }
-    }
-    else
-    {
-      v78 = (UnityEngine_Object_o *)this->fields.messageSprite;
-      if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      }
-      if ( UnityEngine_Object__op_Inequality(v78, 0LL, 0LL) )
-      {
-        v79 = this[1].klass;
-        if ( !v79 )
-          goto LABEL_132;
-        v80 = (UILabel_o *)this->fields.messageSprite;
-        if ( !v80 )
-          goto LABEL_132;
-        UILabel__set_text(v80, (System_String_o *)v79->_1.namespaze, 0LL);
-        if ( !v23->klass )
-          goto LABEL_132;
-        v81 = *(&v23->klass->_1.byval_arg.bits + 1);
-        if ( v81 >= 1 )
-        {
-          v82 = (UILabel_o *)this->fields.messageSprite;
-          if ( !v82 )
-            goto LABEL_132;
-          UILabel__set_maxLineCount(v82, v81, 0LL);
-        }
-      }
-    }
-    basePanel = (UnityEngine_Object_o *)this->fields.basePanel;
-    if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-      && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    }
-    if ( UnityEngine_Object__op_Inequality(basePanel, 0LL, 0LL) )
-    {
-      if ( !v23->klass )
-        goto LABEL_132;
-      v88 = 0LL;
-      switch ( v23->klass->_1.byval_arg.bits )
-      {
-        case 1u:
-          v89 = &StringLiteral_21533/*"quest_main"*/;
+        case 1:
+          v61 = &StringLiteral_21625/*"quest_main"*/;
           goto LABEL_124;
-        case 2u:
-          v89 = &StringLiteral_21530/*"quest_free"*/;
+        case 2:
+          v61 = &StringLiteral_21622/*"quest_free"*/;
           goto LABEL_124;
-        case 3u:
-          v89 = &StringLiteral_21525/*"quest_Interlude"*/;
+        case 3:
+          v61 = &StringLiteral_21617/*"quest_Interlude"*/;
           goto LABEL_124;
-        case 5u:
-          v89 = &StringLiteral_21529/*"quest_event"*/;
+        case 5:
+          v61 = &StringLiteral_21621/*"quest_event"*/;
           goto LABEL_124;
-        case 6u:
-          v89 = &StringLiteral_21531/*"quest_heroic"*/;
+        case 6:
+          v61 = &StringLiteral_21623/*"quest_heroic"*/;
 LABEL_124:
-          v88 = (System_String_o *)*v89;
+          questMessageLabelMaxLine = *v61;
           break;
         default:
           break;
       }
-      v90 = (UISprite_o *)this->fields.basePanel;
-      if ( !v90 )
+      gameObject = (UnityEngine_Component_o *)this->fields.typeSprite;
+      if ( !gameObject )
         goto LABEL_132;
-      UISprite__set_spriteName(v90, v88, 0LL);
-      v91 = this->fields.basePanel;
-      if ( !v91 )
+      UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)questMessageLabelMaxLine, 0LL);
+      gameObject = (UnityEngine_Component_o *)this->fields.typeSprite;
+      if ( !gameObject )
         goto LABEL_132;
-      ((void (__fastcall *)(struct UIPanel_o *, Il2CppRuntimeInterfaceOffsetPair *))v91->klass[1]._1.implementedInterfaces)(
-        v91,
-        v91->klass[1]._1.interfaceOffsets);
+      ((void (__fastcall *)(UnityEngine_Component_o *, void *))gameObject->klass[2]._1.typeMetadataHandle)(
+        gameObject,
+        gameObject->klass[2]._1.interopData);
     }
-    asset = (System_String_o *)this->fields.asset;
-    if ( !System_String__IsNullOrEmpty((System_String_o *)this->fields.commonParam, 0LL) )
-      asset = (System_String_o *)this->fields.commonParam;
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    if ( Instance )
+    baseName = this->fields.baseName;
+    if ( !System_String__IsNullOrEmpty(this->fields.overwriteEffectNameForTapSkip, 0LL) )
+      baseName = this->fields.overwriteEffectNameForTapSkip;
+    gameObject = (UnityEngine_Component_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    if ( gameObject )
     {
-      ScriptManager__InitQuestStartEffectSkip(
-        (ScriptManager_o *)Instance,
-        (System_String_o *)this->fields.asset,
-        asset,
-        0LL);
+      ScriptManager__InitQuestStartEffectSkip((ScriptManager_o *)gameObject, this->fields.baseName, baseName, 0LL);
       return;
     }
 LABEL_132:
-    sub_B170D4();
+    sub_B2C434(gameObject, questMessageLabelMaxLine);
   }
-  v94 = (QuestStartEffectComponent_o *)sub_B173C8(param);
-  QuestStartEffectComponent__RefreshPanel(v94, v95);
+  v64 = (QuestStartEffectComponent_o *)sub_B2C728(param);
+  QuestStartEffectComponent__RefreshPanel(v64, v65);
 }
 
 

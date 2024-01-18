@@ -1,9 +1,9 @@
 void __fastcall DataNameKind___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
@@ -478,2861 +478,2876 @@ void __fastcall DataNameKind___cctor(const MethodInfo *method)
   __int64 v476; // x1
   __int64 v477; // x1
   System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *v478; // x19
+  __int64 v479; // x0
+  __int64 v480; // x1
   BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v480; // x2
-  System_String_array **v481; // x3
-  System_Boolean_array **v482; // x4
-  System_Int32_array **v483; // x5
-  System_Int32_array *v484; // x6
-  System_Int32_array *v485; // x7
+  System_String_array **v482; // x2
+  System_String_array **v483; // x3
+  System_Boolean_array **v484; // x4
+  System_Int32_array **v485; // x5
+  System_Int32_array *v486; // x6
+  System_Int32_array *v487; // x7
 
-  if ( (byte_40FA413 & 1) == 0 )
+  if ( (byte_4188E0E & 1) == 0 )
   {
-    sub_B16FFC(&DataNameKind_TypeInfo, v1);
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__, v5);
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string___ctor__, v6);
-    sub_B16FFC(&System_Collections_Generic_Dictionary_DataNameKind_Kind__string__TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_20642/*"mstEventMissionConditionDetail"*/, v8);
-    sub_B16FFC(&StringLiteral_20842/*"mstTreasureBoxGift"*/, v9);
-    sub_B16FFC(&StringLiteral_20577/*"mstCommandCodeComment"*/, v10);
-    sub_B16FFC(&StringLiteral_20638/*"mstEventMissionAction"*/, v11);
-    sub_B16FFC(&StringLiteral_22917/*"userEventAlloutBattle"*/, v12);
-    sub_B16FFC(&StringLiteral_20604/*"mstEventBonusFilterGroupInfo"*/, v13);
-    sub_B16FFC(&StringLiteral_20749/*"mstQuestReleaseOverwrite"*/, v14);
-    sub_B16FFC(&StringLiteral_20724/*"mstMapGimmickRelease"*/, v15);
-    sub_B16FFC(&StringLiteral_20701/*"mstGachaExtraGift"*/, v16);
-    sub_B16FFC(&StringLiteral_21074/*"npcSvtFollowerIndividuality"*/, v17);
-    sub_B16FFC(&StringLiteral_20606/*"mstEventBossStatusUi"*/, v18);
-    sub_B16FFC(&StringLiteral_22967/*"userSvtAppendPassiveSkillLv"*/, v19);
-    sub_B16FFC(&StringLiteral_20561/*"mstClassRelation"*/, v20);
-    sub_B16FFC(&StringLiteral_20523/*"mstAiAct"*/, v21);
-    sub_B16FFC(&StringLiteral_20793/*"mstSvtAnimationOverwrite"*/, v22);
-    sub_B16FFC(&StringLiteral_20751/*"mstQuestRestriction"*/, v23);
-    sub_B16FFC(&StringLiteral_20588/*"mstCv"*/, v24);
-    sub_B16FFC(&StringLiteral_22922/*"userEventDigging"*/, v25);
-    sub_B16FFC(&StringLiteral_22527/*"tblUserGame"*/, v26);
-    sub_B16FFC(&StringLiteral_20617/*"mstEventDataLostBattle"*/, v27);
-    sub_B16FFC(&StringLiteral_20607/*"mstEventBuddyPoint"*/, v28);
-    sub_B16FFC(&StringLiteral_20539/*"mstBgmRelease"*/, v29);
-    sub_B16FFC(&StringLiteral_20819/*"mstSvtMaterialTd"*/, v30);
-    sub_B16FFC(&StringLiteral_20582/*"mstCommonRelease"*/, v31);
-    sub_B16FFC(&StringLiteral_20689/*"mstFriendship"*/, v32);
-    sub_B16FFC(&StringLiteral_22903/*"userClassBoardSquare"*/, v33);
-    sub_B16FFC(&StringLiteral_20586/*"mstConstantLong"*/, v34);
-    sub_B16FFC(&StringLiteral_20560/*"mstClassBoardSquare"*/, v35);
-    sub_B16FFC(&StringLiteral_22971/*"userSvtCommandCode"*/, v36);
-    sub_B16FFC(&StringLiteral_20736/*"mstQuestBehavior"*/, v37);
-    sub_B16FFC(&StringLiteral_20818/*"mstSvtMaterialFolder"*/, v38);
-    sub_B16FFC(&StringLiteral_20889/*"mstWarBoardStagePieceDetail"*/, v39);
-    sub_B16FFC(&StringLiteral_20605/*"mstEventBonusFilterGroupMember"*/, v40);
-    sub_B16FFC(&StringLiteral_20740/*"mstQuestHint"*/, v41);
-    sub_B16FFC(&StringLiteral_20580/*"mstCommandSpell"*/, v42);
-    sub_B16FFC(&StringLiteral_20521/*"mstAdCheckPoint"*/, v43);
-    sub_B16FFC(&StringLiteral_20733/*"mstPrivilege"*/, v44);
-    sub_B16FFC(&StringLiteral_20543/*"mstBoardMessageRelease"*/, v45);
-    sub_B16FFC(&StringLiteral_20704/*"mstGachaRelease"*/, v46);
-    sub_B16FFC(&StringLiteral_22913/*"userDeleteReservation"*/, v47);
-    sub_B16FFC(&StringLiteral_20841/*"mstTreasureBox"*/, v48);
-    sub_B16FFC(&StringLiteral_20595/*"mstEquipExp"*/, v49);
-    sub_B16FFC(&StringLiteral_20602/*"mstEventBoardGameTokenReward"*/, v50);
-    sub_B16FFC(&StringLiteral_20799/*"mstSvtCoin"*/, v51);
-    sub_B16FFC(&StringLiteral_20828/*"mstSvtScriptMultiple"*/, v52);
-    sub_B16FFC(&StringLiteral_20728/*"mstMaterialFolder"*/, v53);
-    sub_B16FFC(&StringLiteral_20613/*"mstEventCombineCostume"*/, v54);
-    sub_B16FFC(&StringLiteral_20738/*"mstQuestDateRange"*/, v55);
-    sub_B16FFC(&StringLiteral_20885/*"mstWarBoardStageBoss"*/, v56);
-    sub_B16FFC(&StringLiteral_20550/*"mstBuffConvert"*/, v57);
-    sub_B16FFC(&StringLiteral_20529/*"mstAuraEffect"*/, v58);
-    sub_B16FFC(&StringLiteral_20660/*"mstEventRaceResult"*/, v59);
-    sub_B16FFC(&StringLiteral_20766/*"mstSetItem"*/, v60);
-    sub_B16FFC(&StringLiteral_20759/*"mstRecover"*/, v61);
-    sub_B16FFC(&StringLiteral_20675/*"mstEventStatusQuest"*/, v62);
-    sub_B16FFC(&StringLiteral_22919/*"userEventCooltimeReward"*/, v63);
-    sub_B16FFC(&StringLiteral_20863/*"mstWarBoardActionTrendGroup"*/, v64);
-    sub_B16FFC(&StringLiteral_22959/*"userQuestRoute"*/, v65);
-    sub_B16FFC(&StringLiteral_20779/*"mstSkillLv"*/, v66);
-    sub_B16FFC(&StringLiteral_20811/*"mstSvtGroup"*/, v67);
-    sub_B16FFC(&StringLiteral_20850/*"mstVoiceClosedMessage"*/, v68);
-    sub_B16FFC(&StringLiteral_20625/*"mstEventExpeditionPiece"*/, v69);
-    sub_B16FFC(&StringLiteral_20820/*"mstSvtMultiPortrait"*/, v70);
-    sub_B16FFC(&StringLiteral_20628/*"mstEventFilter"*/, v71);
-    sub_B16FFC(&StringLiteral_22949/*"userItem"*/, v72);
-    sub_B16FFC(&StringLiteral_20624/*"mstEventExpedition"*/, v73);
-    sub_B16FFC(&StringLiteral_20659/*"mstEventRace"*/, v74);
-    sub_B16FFC(&StringLiteral_20752/*"mstQuestRestrictionInfo"*/, v75);
-    sub_B16FFC(&StringLiteral_20750/*"mstQuestReset"*/, v76);
-    sub_B16FFC(&StringLiteral_22923/*"userEventExpedition"*/, v77);
-    sub_B16FFC(&StringLiteral_20631/*"mstEventFortificationSvt"*/, v78);
-    sub_B16FFC(&StringLiteral_20890/*"mstWarBoardStageReinforcements"*/, v79);
-    sub_B16FFC(&StringLiteral_20555/*"mstClassBoardBase"*/, v80);
-    sub_B16FFC(&StringLiteral_20591/*"mstEnemyMaster"*/, v81);
-    sub_B16FFC(&StringLiteral_20530/*"mstAuraEffectPosOverwrite"*/, v82);
-    sub_B16FFC(&StringLiteral_20763/*"mstRestrictionSlot"*/, v83);
-    sub_B16FFC(&StringLiteral_20706/*"mstGachaSub"*/, v84);
-    sub_B16FFC(&StringLiteral_20679/*"mstEventSvtPointRank"*/, v85);
-    sub_B16FFC(&StringLiteral_20652/*"mstEventPointGroup"*/, v86);
-    sub_B16FFC(&StringLiteral_20599/*"mstEventAdd"*/, v87);
-    sub_B16FFC(&StringLiteral_20593/*"mstEquip"*/, v88);
-    sub_B16FFC(&StringLiteral_20664/*"mstEventRecipeGift"*/, v89);
-    sub_B16FFC(&StringLiteral_20837/*"mstTelop"*/, v90);
-    sub_B16FFC(&StringLiteral_22969/*"userSvtCollection"*/, v91);
-    sub_B16FFC(&StringLiteral_22928/*"userEventMissionFix"*/, v92);
-    sub_B16FFC(&StringLiteral_20761/*"mstRestrictionBase"*/, v93);
-    sub_B16FFC(&StringLiteral_20839/*"mstTips"*/, v94);
-    sub_B16FFC(&StringLiteral_20531/*"mstBankShop"*/, v95);
-    sub_B16FFC(&StringLiteral_20687/*"mstEventVoicePlay"*/, v96);
-    sub_B16FFC(&StringLiteral_20630/*"mstEventFortificationDetail"*/, v97);
-    sub_B16FFC(&StringLiteral_22935/*"userEventSuperBoss"*/, v98);
-    sub_B16FFC(&StringLiteral_20629/*"mstEventFortification"*/, v99);
-    sub_B16FFC(&StringLiteral_20677/*"mstEventSvt"*/, v100);
-    sub_B16FFC(&StringLiteral_20854/*"mstVoicePlayGroup"*/, v101);
-    sub_B16FFC(&StringLiteral_22921/*"userEventDeck"*/, v102);
-    sub_B16FFC(&StringLiteral_20781/*"mstSpotAdd"*/, v103);
-    sub_B16FFC(&StringLiteral_20573/*"mstCombineSkill"*/, v104);
-    sub_B16FFC(&StringLiteral_20882/*"mstWarBoardSquare"*/, v105);
-    sub_B16FFC(&StringLiteral_20551/*"mstBuffTypeDetail"*/, v106);
-    sub_B16FFC(&StringLiteral_20860/*"mstWarBoardActionPointClass"*/, v107);
-    sub_B16FFC(&StringLiteral_22952/*"userPresentBox"*/, v108);
-    sub_B16FFC(&StringLiteral_22936/*"userEventSvtPoint"*/, v109);
-    sub_B16FFC(&StringLiteral_22639/*"totalEventPoint"*/, v110);
-    sub_B16FFC(&StringLiteral_20575/*"mstCommandCardRankParam"*/, v111);
-    sub_B16FFC(&StringLiteral_20865/*"mstWarBoardCommonRelease"*/, v112);
-    sub_B16FFC(&StringLiteral_20791/*"mstSvt"*/, v113);
-    sub_B16FFC(&StringLiteral_22960/*"userShop"*/, v114);
-    sub_B16FFC(&StringLiteral_20600/*"mstEventBoardGameCell"*/, v115);
-    sub_B16FFC(&StringLiteral_20658/*"mstEventQuestCooltime"*/, v116);
-    sub_B16FFC(&StringLiteral_20694/*"mstFuncTypeDetail"*/, v117);
-    sub_B16FFC(&StringLiteral_20788/*"mstStatusEffectPosOverwrite"*/, v118);
-    sub_B16FFC(&StringLiteral_18399/*"eventBoostItemUsed"*/, v119);
-    sub_B16FFC(&StringLiteral_20769/*"mstShopDetail"*/, v120);
-    sub_B16FFC(&StringLiteral_20718/*"mstMapButton"*/, v121);
-    sub_B16FFC(&StringLiteral_20892/*"mstWarBoardTacticalTrend"*/, v122);
-    sub_B16FFC(&StringLiteral_20790/*"mstSubEquip"*/, v123);
-    sub_B16FFC(&StringLiteral_20784/*"mstSpotPath"*/, v124);
-    sub_B16FFC(&StringLiteral_20570/*"mstCombineMaterial"*/, v125);
-    sub_B16FFC(&StringLiteral_20569/*"mstCombineLimitRelease"*/, v126);
-    sub_B16FFC(&StringLiteral_20846/*"mstTreasureDeviceLv"*/, v127);
-    sub_B16FFC(&StringLiteral_20680/*"mstEventTower"*/, v128);
-    sub_B16FFC(&StringLiteral_20773/*"mstSkill"*/, v129);
-    sub_B16FFC(&StringLiteral_20821/*"mstSvtPassiveSkill"*/, v130);
-    sub_B16FFC(&StringLiteral_20832/*"mstSvtTreasureDeviceAdd"*/, v131);
-    sub_B16FFC(&StringLiteral_22956/*"userQuest"*/, v132);
-    sub_B16FFC(&StringLiteral_20641/*"mstEventMissionCondition"*/, v133);
-    sub_B16FFC(&StringLiteral_20859/*"mstWarBoardActionPoint"*/, v134);
-    sub_B16FFC(&StringLiteral_20563/*"mstClosedMessage"*/, v135);
-    sub_B16FFC(&StringLiteral_20667/*"mstEventRewardExtra"*/, v136);
-    sub_B16FFC(&StringLiteral_20650/*"mstEventPointActivity"*/, v137);
-    sub_B16FFC(&StringLiteral_20657/*"mstEventQuest"*/, v138);
-    sub_B16FFC(&StringLiteral_20537/*"mstBattleMessageGroup"*/, v139);
-    sub_B16FFC(&StringLiteral_23063/*"viewQuestInfo"*/, v140);
-    sub_B16FFC(&StringLiteral_20824/*"mstSvtProfilePush"*/, v141);
-    sub_B16FFC(&StringLiteral_20845/*"mstTreasureDeviceDetail"*/, v142);
-    sub_B16FFC(&StringLiteral_22901/*"userBlacklist"*/, v143);
-    sub_B16FFC(&StringLiteral_20623/*"mstEventEquipSkillRelease"*/, v144);
-    sub_B16FFC(&StringLiteral_22904/*"userCoinRoom"*/, v145);
-    sub_B16FFC(&StringLiteral_20587/*"mstConstantStr"*/, v146);
-    sub_B16FFC(&StringLiteral_20789/*"mstStoneShop"*/, v147);
-    sub_B16FFC(&StringLiteral_20840/*"mstTotalLogin"*/, v148);
-    sub_B16FFC(&StringLiteral_20731/*"mstOpeningMovie"*/, v149);
-    sub_B16FFC(&StringLiteral_20585/*"mstConstant"*/, v150);
-    sub_B16FFC(&StringLiteral_20758/*"mstQuestSpotRelease"*/, v151);
-    sub_B16FFC(&StringLiteral_20578/*"mstCommandCodeSkill"*/, v152);
-    sub_B16FFC(&StringLiteral_20734/*"mstQuest"*/, v153);
-    sub_B16FFC(&StringLiteral_20683/*"mstEventTutorialCond"*/, v154);
-    sub_B16FFC(&StringLiteral_20858/*"mstWarBoard"*/, v155);
-    sub_B16FFC(&StringLiteral_20661/*"mstEventRaid"*/, v156);
-    sub_B16FFC(&StringLiteral_20538/*"mstBgm"*/, v157);
-    sub_B16FFC(&StringLiteral_20673/*"mstEventScriptRelease"*/, v158);
-    sub_B16FFC(&StringLiteral_22955/*"userProfile"*/, v159);
-    sub_B16FFC(&StringLiteral_20640/*"mstEventMissionAdd"*/, v160);
-    sub_B16FFC(&StringLiteral_20855/*"mstVoiceRelease"*/, v161);
-    sub_B16FFC(&StringLiteral_20747/*"mstQuestRandomGroup"*/, v162);
-    sub_B16FFC(&StringLiteral_20771/*"mstShopRelease"*/, v163);
-    sub_B16FFC(&StringLiteral_22976/*"userSvtStorage"*/, v164);
-    sub_B16FFC(&StringLiteral_22966/*"userSvtAppendPassiveSkill"*/, v165);
-    sub_B16FFC(&StringLiteral_20792/*"mstSvtAdd"*/, v166);
-    sub_B16FFC(&StringLiteral_20541/*"mstBlankEarthSpotNavimenu"*/, v167);
-    sub_B16FFC(&StringLiteral_20535/*"mstBattleMasterImage"*/, v168);
-    sub_B16FFC(&StringLiteral_20775/*"mstSkillDetail"*/, v169);
-    sub_B16FFC(&StringLiteral_20726/*"mstMasterMission"*/, v170);
-    sub_B16FFC(&StringLiteral_20822/*"mstSvtPassiveSkillRelease"*/, v171);
-    sub_B16FFC(&StringLiteral_20780/*"mstSpot"*/, v172);
-    sub_B16FFC(&StringLiteral_20637/*"mstEventMission"*/, v173);
-    sub_B16FFC(&StringLiteral_20572/*"mstCombineQpSvtEquip"*/, v174);
-    sub_B16FFC(&StringLiteral_20649/*"mstEventPoint"*/, v175);
-    sub_B16FFC(&StringLiteral_20671/*"mstEventRewardSet"*/, v176);
-    sub_B16FFC(&StringLiteral_20646/*"mstEventPanelMapDetail"*/, v177);
-    sub_B16FFC(&StringLiteral_20797/*"mstSvtCardAdd"*/, v178);
-    sub_B16FFC(&StringLiteral_20717/*"mstMap"*/, v179);
-    sub_B16FFC(&StringLiteral_20620/*"mstEventDigging"*/, v180);
-    sub_B16FFC(&StringLiteral_22942/*"userGacha"*/, v181);
-    sub_B16FFC(&StringLiteral_20748/*"mstQuestRelease"*/, v182);
-    sub_B16FFC(&StringLiteral_20619/*"mstEventDetail"*/, v183);
-    sub_B16FFC(&StringLiteral_20725/*"mstMapLayer"*/, v184);
-    sub_B16FFC(&StringLiteral_20869/*"mstWarBoardFutureActionTrend"*/, v185);
-    sub_B16FFC(&StringLiteral_20778/*"mstSkillIndividuality"*/, v186);
-    sub_B16FFC(&StringLiteral_20547/*"mstBoxGachaBaseDetail"*/, v187);
-    sub_B16FFC(&StringLiteral_22526/*"tblFriend"*/, v188);
-    sub_B16FFC(&StringLiteral_16624/*"beforeBirthDay"*/, v189);
-    sub_B16FFC(&StringLiteral_20635/*"mstEventItemDisplayRelease"*/, v190);
-    sub_B16FFC(&StringLiteral_16566/*"battle"*/, v191);
-    sub_B16FFC(&StringLiteral_20770/*"mstShopGroup"*/, v192);
-    sub_B16FFC(&StringLiteral_20528/*"mstAttriRelation"*/, v193);
-    sub_B16FFC(&StringLiteral_22905/*"userCommandCode"*/, v194);
-    sub_B16FFC(&StringLiteral_20611/*"mstEventCampaignRelease"*/, v195);
-    sub_B16FFC(&StringLiteral_20808/*"mstSvtFilter"*/, v196);
-    sub_B16FFC(&StringLiteral_20746/*"mstQuestRacePoint"*/, v197);
-    sub_B16FFC(&StringLiteral_21237/*"otherUserGame"*/, v198);
-    sub_B16FFC(&StringLiteral_20634/*"mstEventItemDisplayGroup"*/, v199);
-    sub_B16FFC(&StringLiteral_20553/*"mstCard"*/, v200);
-    sub_B16FFC(&StringLiteral_20536/*"mstBattleMessage"*/, v201);
-    sub_B16FFC(&StringLiteral_20764/*"mstRestrictionSlotDetail"*/, v202);
-    sub_B16FFC(&StringLiteral_20532/*"mstBanner"*/, v203);
-    sub_B16FFC(&StringLiteral_20592/*"mstEnemyMasterBattle"*/, v204);
-    sub_B16FFC(&StringLiteral_20633/*"mstEventItemDisplay"*/, v205);
-    sub_B16FFC(&StringLiteral_20552/*"mstCampaignInfo"*/, v206);
-    sub_B16FFC(&StringLiteral_20831/*"mstSvtTreasureDevice"*/, v207);
-    sub_B16FFC(&StringLiteral_20830/*"mstSvtSkillRelease"*/, v208);
-    sub_B16FFC(&StringLiteral_20584/*"mstCompleteMission"*/, v209);
-    sub_B16FFC(&StringLiteral_20567/*"mstCombineLimit"*/, v210);
-    sub_B16FFC(&StringLiteral_20545/*"mstBoxGacha"*/, v211);
-    sub_B16FFC(&StringLiteral_20852/*"mstVoiceMaterialCond"*/, v212);
-    sub_B16FFC(&StringLiteral_20705/*"mstGachaStoryAdjust"*/, v213);
-    sub_B16FFC(&StringLiteral_20848/*"mstUserExp"*/, v214);
-    sub_B16FFC(&StringLiteral_20871/*"mstWarBoardItem"*/, v215);
-    sub_B16FFC(&StringLiteral_20594/*"mstEquipAdd"*/, v216);
-    sub_B16FFC(&StringLiteral_20589/*"mstDialogMessage"*/, v217);
-    sub_B16FFC(&StringLiteral_21073/*"npcSvtFollower"*/, v218);
-    sub_B16FFC(&StringLiteral_20534/*"mstBattleBg"*/, v219);
-    sub_B16FFC(&StringLiteral_20556/*"mstClassBoardClass"*/, v220);
-    sub_B16FFC(&StringLiteral_22929/*"userEventPoint"*/, v221);
-    sub_B16FFC(&StringLiteral_20798/*"mstSvtChange"*/, v222);
-    sub_B16FFC(&StringLiteral_20870/*"mstWarBoardIndividualityClass"*/, v223);
-    sub_B16FFC(&StringLiteral_20644/*"mstEventMural"*/, v224);
-    sub_B16FFC(&StringLiteral_20715/*"mstItemSelect"*/, v225);
-    sub_B16FFC(&StringLiteral_20812/*"mstSvtIndividuality"*/, v226);
-    sub_B16FFC(&StringLiteral_22916/*"userEvent"*/, v227);
-    sub_B16FFC(&StringLiteral_20893/*"mstWarBoardTreasure"*/, v228);
-    sub_B16FFC(&StringLiteral_20817/*"mstSvtLvDetail"*/, v229);
-    sub_B16FFC(&StringLiteral_20878/*"mstWarBoardRatingOffset"*/, v230);
-    sub_B16FFC(&StringLiteral_20743/*"mstQuestPhaseDetail"*/, v231);
-    sub_B16FFC(&StringLiteral_20768/*"mstShopAction"*/, v232);
-    sub_B16FFC(&StringLiteral_20729/*"mstMyroomAdd"*/, v233);
-    sub_B16FFC(&StringLiteral_20678/*"mstEventSvtFatigue"*/, v234);
-    sub_B16FFC(&StringLiteral_20626/*"mstEventFactory"*/, v235);
-    sub_B16FFC(&StringLiteral_22943/*"userGachaDrawHistory"*/, v236);
-    sub_B16FFC(&StringLiteral_22938/*"userFollower"*/, v237);
-    sub_B16FFC(&StringLiteral_20879/*"mstWarBoardRatingOffsetGroup"*/, v238);
-    sub_B16FFC(&StringLiteral_22968/*"userSvtCoin"*/, v239);
-    sub_B16FFC(&StringLiteral_20672/*"mstEventScript"*/, v240);
-    sub_B16FFC(&StringLiteral_20829/*"mstSvtSkill"*/, v241);
-    sub_B16FFC(&StringLiteral_20783/*"mstSpotLayer"*/, v242);
-    sub_B16FFC(&StringLiteral_22970/*"userSvtCommandCard"*/, v243);
-    sub_B16FFC(&StringLiteral_22957/*"userQuestInfo"*/, v244);
-    sub_B16FFC(&StringLiteral_20590/*"mstEffect"*/, v245);
-    sub_B16FFC(&StringLiteral_20714/*"mstItem"*/, v246);
-    sub_B16FFC(&StringLiteral_20653/*"mstEventPointGroupAdd"*/, v247);
-    sub_B16FFC(&StringLiteral_20741/*"mstQuestMessage"*/, v248);
-    sub_B16FFC(&StringLiteral_21069/*"npcFollowerRelease"*/, v249);
-    sub_B16FFC(&StringLiteral_20691/*"mstFuncCategory"*/, v250);
-    sub_B16FFC(&StringLiteral_20872/*"mstWarBoardMessage"*/, v251);
-    sub_B16FFC(&StringLiteral_22946/*"userGame"*/, v252);
-    sub_B16FFC(&StringLiteral_20708/*"mstGift"*/, v253);
-    sub_B16FFC(&StringLiteral_20880/*"mstWarBoardReinforcements"*/, v254);
-    sub_B16FFC(&StringLiteral_20601/*"mstEventBoardGameToken"*/, v255);
-    sub_B16FFC(&StringLiteral_20722/*"mstMapGimmickLayer"*/, v256);
-    sub_B16FFC(&StringLiteral_20801/*"mstSvtCommandCodeUnlock"*/, v257);
-    sub_B16FFC(&StringLiteral_20527/*"mstAssist"*/, v258);
-    sub_B16FFC(&StringLiteral_23064/*"viewWaveEnemy"*/, v259);
-    sub_B16FFC(&StringLiteral_21072/*"npcSvtEquip"*/, v260);
-    sub_B16FFC(&StringLiteral_20755/*"mstQuestScriptMaterialNext"*/, v261);
-    sub_B16FFC(&StringLiteral_20807/*"mstSvtExp"*/, v262);
-    sub_B16FFC(&StringLiteral_22965/*"userSvt"*/, v263);
-    sub_B16FFC(&StringLiteral_23061/*"viewEnemy"*/, v264);
-    sub_B16FFC(&StringLiteral_20685/*"mstEventUiRelease"*/, v265);
-    sub_B16FFC(&StringLiteral_22640/*"totalEventRace"*/, v266);
-    sub_B16FFC(&StringLiteral_20688/*"mstFieldMotion"*/, v267);
-    sub_B16FFC(&StringLiteral_20662/*"mstEventRandomMission"*/, v268);
-    sub_B16FFC(&StringLiteral_20669/*"mstEventRewardScene"*/, v269);
-    sub_B16FFC(&StringLiteral_20566/*"mstCombineCostume"*/, v270);
-    sub_B16FFC(&StringLiteral_20565/*"mstCombineAppendPassiveSkill"*/, v271);
-    sub_B16FFC(&StringLiteral_20622/*"mstEventDiggingReward"*/, v272);
-    sub_B16FFC(&StringLiteral_20861/*"mstWarBoardActionTrend"*/, v273);
-    sub_B16FFC(&StringLiteral_20696/*"mstGachaAppend"*/, v274);
-    sub_B16FFC(&StringLiteral_20883/*"mstWarBoardSquareIndexGroup"*/, v275);
-    sub_B16FFC(&StringLiteral_20690/*"mstFunc"*/, v276);
-    sub_B16FFC(&StringLiteral_20615/*"mstEventConquestReward"*/, v277);
-    sub_B16FFC(&StringLiteral_20866/*"mstWarBoardEffect"*/, v278);
-    sub_B16FFC(&StringLiteral_20895/*"mstWarQuestSelection"*/, v279);
-    sub_B16FFC(&StringLiteral_22910/*"userDeck"*/, v280);
-    sub_B16FFC(&StringLiteral_20727/*"mstMasterMissionDisplayInfo"*/, v281);
-    sub_B16FFC(&StringLiteral_20894/*"mstWarGroup"*/, v282);
-    sub_B16FFC(&StringLiteral_20767/*"mstShop"*/, v283);
-    sub_B16FFC(&StringLiteral_20875/*"mstWarBoardPartySkill"*/, v284);
-    sub_B16FFC(&StringLiteral_20651/*"mstEventPointBuff"*/, v285);
-    sub_B16FFC(&StringLiteral_22964/*"userSupportDeck"*/, v286);
-    sub_B16FFC(&StringLiteral_20785/*"mstSpotRoad"*/, v287);
-    sub_B16FFC(&StringLiteral_20836/*"mstSvtVoiceRelation"*/, v288);
-    sub_B16FFC(&StringLiteral_20568/*"mstCombineLimitGift"*/, v289);
-    sub_B16FFC(&StringLiteral_20616/*"mstEventCooltimeReward"*/, v290);
-    sub_B16FFC(&StringLiteral_20608/*"mstEventBulletinBoard"*/, v291);
-    sub_B16FFC(&StringLiteral_20666/*"mstEventRewardBg"*/, v292);
-    sub_B16FFC(&StringLiteral_20548/*"mstBoxGachaTalk"*/, v293);
-    sub_B16FFC(&StringLiteral_20692/*"mstFuncDisp"*/, v294);
-    sub_B16FFC(&StringLiteral_20826/*"mstSvtScript"*/, v295);
-    sub_B16FFC(&StringLiteral_20719/*"mstMapCond"*/, v296);
-    sub_B16FFC(&StringLiteral_22924/*"userEventFortification"*/, v297);
-    sub_B16FFC(&StringLiteral_20874/*"mstWarBoardOnboardSkill"*/, v298);
-    sub_B16FFC(&StringLiteral_20702/*"mstGachaGroup"*/, v299);
-    sub_B16FFC(&StringLiteral_23062/*"viewQuestEnemyInfo"*/, v300);
-    sub_B16FFC(&StringLiteral_20802/*"mstSvtComment"*/, v301);
-    sub_B16FFC(&StringLiteral_20844/*"mstTreasureDevice"*/, v302);
-    sub_B16FFC(&StringLiteral_22951/*"userNpcSvtRecord"*/, v303);
-    sub_B16FFC(&StringLiteral_20643/*"mstEventMissionGroup"*/, v304);
-    sub_B16FFC(&StringLiteral_22958/*"userQuestRecord"*/, v305);
-    sub_B16FFC(&StringLiteral_20762/*"mstRestrictionMessage"*/, v306);
-    sub_B16FFC(&StringLiteral_20710/*"mstGiftDetail"*/, v307);
-    sub_B16FFC(&StringLiteral_20707/*"mstGachaTicket"*/, v308);
-    sub_B16FFC(&StringLiteral_21376/*"pickupUserFollower"*/, v309);
-    sub_B16FFC(&StringLiteral_20674/*"mstEventStatus"*/, v310);
-    sub_B16FFC(&StringLiteral_20803/*"mstSvtCommentAdd"*/, v311);
-    sub_B16FFC(&StringLiteral_21068/*"npcFollower"*/, v312);
-    sub_B16FFC(&StringLiteral_20614/*"mstEventCommandAssist"*/, v313);
-    sub_B16FFC(&StringLiteral_18410/*"eventSvtFatigue"*/, v314);
-    sub_B16FFC(&StringLiteral_20699/*"mstGachaBonusSelectLineup"*/, v315);
-    sub_B16FFC(&StringLiteral_20609/*"mstEventBulletinBoardRelease"*/, v316);
-    sub_B16FFC(&StringLiteral_20806/*"mstSvtExceed"*/, v317);
-    sub_B16FFC(&StringLiteral_20816/*"mstSvtLimitSpoilerProtection"*/, v318);
-    sub_B16FFC(&StringLiteral_20835/*"mstSvtVoice"*/, v319);
-    sub_B16FFC(&StringLiteral_20765/*"mstRestrictionWhole"*/, v320);
-    sub_B16FFC(&StringLiteral_22945/*"userGachaExtraCount"*/, v321);
-    sub_B16FFC(&StringLiteral_20681/*"mstEventTowerReward"*/, v322);
-    sub_B16FFC(&StringLiteral_20562/*"mstClassRelationOverwrite"*/, v323);
-    sub_B16FFC(&StringLiteral_20522/*"mstAi"*/, v324);
-    sub_B16FFC(&StringLiteral_22902/*"userBoxGacha"*/, v325);
-    sub_B16FFC(&StringLiteral_20796/*"mstSvtCard"*/, v326);
-    sub_B16FFC(&StringLiteral_22944/*"userGachaDrawLog"*/, v327);
-    sub_B16FFC(&StringLiteral_20884/*"mstWarBoardStage"*/, v328);
-    sub_B16FFC(&StringLiteral_22914/*"userEquip"*/, v329);
-    sub_B16FFC(&StringLiteral_20668/*"mstEventRewardGuideRelease"*/, v330);
-    sub_B16FFC(&StringLiteral_20557/*"mstClassBoardCommandSpell"*/, v331);
-    sub_B16FFC(&StringLiteral_20697/*"mstGachaBehavior"*/, v332);
-    sub_B16FFC(&StringLiteral_20856/*"mstWar"*/, v333);
-    sub_B16FFC(&StringLiteral_20603/*"mstEventBonusFilter"*/, v334);
-    sub_B16FFC(&StringLiteral_20757/*"mstQuestScriptRelease"*/, v335);
-    sub_B16FFC(&StringLiteral_22925/*"userEventMap"*/, v336);
-    sub_B16FFC(&StringLiteral_20648/*"mstEventPanelSpot"*/, v337);
-    sub_B16FFC(&StringLiteral_20554/*"mstClass"*/, v338);
-    sub_B16FFC(&StringLiteral_22900/*"userAccessary"*/, v339);
-    sub_B16FFC(&StringLiteral_20814/*"mstSvtLimitAdd"*/, v340);
-    sub_B16FFC(&StringLiteral_20756/*"mstQuestScriptMaterialOverwrite"*/, v341);
-    sub_B16FFC(&StringLiteral_17496/*"combineExp"*/, v342);
-    sub_B16FFC(&StringLiteral_22939/*"userFormation"*/, v343);
-    sub_B16FFC(&StringLiteral_20873/*"mstWarBoardMessageScript"*/, v344);
-    sub_B16FFC(&StringLiteral_20656/*"mstEventProgressValue"*/, v345);
-    sub_B16FFC(&StringLiteral_22977/*"userSvtVoicePlayed"*/, v346);
-    sub_B16FFC(&StringLiteral_20809/*"mstSvtFlag"*/, v347);
-    sub_B16FFC(&StringLiteral_20542/*"mstBoardMessage"*/, v348);
-    sub_B16FFC(&StringLiteral_20647/*"mstEventPanelScan"*/, v349);
-    sub_B16FFC(&StringLiteral_20815/*"mstSvtLimitImage"*/, v350);
-    sub_B16FFC(&StringLiteral_20621/*"mstEventDiggingBlock"*/, v351);
-    sub_B16FFC(&StringLiteral_22933/*"userEventRandomMission"*/, v352);
-    sub_B16FFC(&StringLiteral_20525/*"mstArea"*/, v353);
-    sub_B16FFC(&StringLiteral_22641/*"totalEventRaid"*/, v354);
-    sub_B16FFC(&StringLiteral_21053/*"notEndEventMissionFix"*/, v355);
-    sub_B16FFC(&StringLiteral_20772/*"mstShopScript"*/, v356);
-    sub_B16FFC(&StringLiteral_22926/*"userEventMission"*/, v357);
-    sub_B16FFC(&StringLiteral_20639/*"mstEventMissionActionAdd"*/, v358);
-    sub_B16FFC(&StringLiteral_20574/*"mstCombineTd"*/, v359);
-    sub_B16FFC(&StringLiteral_20544/*"mstBoost"*/, v360);
-    sub_B16FFC(&StringLiteral_20827/*"mstSvtScriptAdd"*/, v361);
-    sub_B16FFC(&StringLiteral_20546/*"mstBoxGachaBase"*/, v362);
-    sub_B16FFC(&StringLiteral_20533/*"mstBannerAdd"*/, v363);
-    sub_B16FFC(&StringLiteral_20520/*"mstAccessary"*/, v364);
-    sub_B16FFC(&StringLiteral_20847/*"mstTreasureDeviceSequenceWeight"*/, v365);
-    sub_B16FFC(&StringLiteral_22931/*"userEventRace"*/, v366);
-    sub_B16FFC(&StringLiteral_20739/*"mstQuestGroup"*/, v367);
-    sub_B16FFC(&StringLiteral_20655/*"mstEventPointUpperRelease"*/, v368);
-    sub_B16FFC(&StringLiteral_22975/*"userSvtLeader"*/, v369);
-    sub_B16FFC(&StringLiteral_20813/*"mstSvtLimit"*/, v370);
-    sub_B16FFC(&StringLiteral_22937/*"userFollow"*/, v371);
-    sub_B16FFC(&StringLiteral_20636/*"mstEventLocationCampaign"*/, v372);
-    sub_B16FFC(&StringLiteral_20571/*"mstCombineQp"*/, v373);
-    sub_B16FFC(&StringLiteral_20598/*"mstEvent"*/, v374);
-    sub_B16FFC(&StringLiteral_20810/*"mstSvtFlagRelease"*/, v375);
-    sub_B16FFC(&StringLiteral_22940/*"userFriendPointGachaFreeDrawCampaignLog"*/, v376);
-    sub_B16FFC(&StringLiteral_22954/*"userPrivilege"*/, v377);
-    sub_B16FFC(&StringLiteral_20576/*"mstCommandCode"*/, v378);
-    sub_B16FFC(&StringLiteral_20794/*"mstSvtAppendPassiveSkill"*/, v379);
-    sub_B16FFC(&StringLiteral_20632/*"mstEventGroup"*/, v380);
-    sub_B16FFC(&StringLiteral_20698/*"mstGachaBonusSelect"*/, v381);
-    sub_B16FFC(&StringLiteral_22918/*"userEventBoardGameToken"*/, v382);
-    sub_B16FFC(&StringLiteral_20881/*"mstWarBoardRoad"*/, v383);
-    sub_B16FFC(&StringLiteral_20549/*"mstBuff"*/, v384);
-    sub_B16FFC(&StringLiteral_23121/*"warBoardData"*/, v385);
-    sub_B16FFC(&StringLiteral_20713/*"mstIllustrator"*/, v386);
-    sub_B16FFC(&StringLiteral_22636/*"totalBoxGacha"*/, v387);
-    sub_B16FFC(&StringLiteral_20825/*"mstSvtRarity"*/, v388);
-    sub_B16FFC(&StringLiteral_20857/*"mstWarAdd"*/, v389);
-    sub_B16FFC(&StringLiteral_22941/*"userFriendRequestHistory"*/, v390);
-    sub_B16FFC(&StringLiteral_22897/*"user"*/, v391);
-    sub_B16FFC(&StringLiteral_16831/*"boxGachaHistory"*/, v392);
-    sub_B16FFC(&StringLiteral_20693/*"mstFuncGroup"*/, v393);
-    sub_B16FFC(&StringLiteral_20581/*"mstCommonConsume"*/, v394);
-    sub_B16FFC(&StringLiteral_20868/*"mstWarBoardEventScript"*/, v395);
-    sub_B16FFC(&StringLiteral_20709/*"mstGiftAdd"*/, v396);
-    sub_B16FFC(&StringLiteral_20684/*"mstEventUi"*/, v397);
-    sub_B16FFC(&StringLiteral_20782/*"mstSpotImage"*/, v398);
-    sub_B16FFC(&StringLiteral_20805/*"mstSvtCostumeRelease"*/, v399);
-    sub_B16FFC(&StringLiteral_20720/*"mstMapGimmick"*/, v400);
-    sub_B16FFC(&StringLiteral_20682/*"mstEventTutorial"*/, v401);
-    sub_B16FFC(&StringLiteral_20891/*"mstWarBoardStageWall"*/, v402);
-    sub_B16FFC(&StringLiteral_20524/*"mstAiField"*/, v403);
-    sub_B16FFC(&StringLiteral_20834/*"mstSvtTreasureDeviceRelease"*/, v404);
-    sub_B16FFC(&StringLiteral_20742/*"mstQuestPhase"*/, v405);
-    sub_B16FFC(&StringLiteral_22920/*"userEventDataLost"*/, v406);
-    sub_B16FFC(&StringLiteral_20795/*"mstSvtAppendPassiveSkillUnlock"*/, v407);
-    sub_B16FFC(&StringLiteral_20833/*"mstSvtTreasureDeviceDamage"*/, v408);
-    sub_B16FFC(&StringLiteral_20786/*"mstStage"*/, v409);
-    sub_B16FFC(&StringLiteral_20564/*"mstCombine"*/, v410);
-    sub_B16FFC(&StringLiteral_20610/*"mstEventCampaign"*/, v411);
-    sub_B16FFC(&StringLiteral_20888/*"mstWarBoardStageNpc"*/, v412);
-    sub_B16FFC(&StringLiteral_18557/*"exchangeSvt"*/, v413);
-    sub_B16FFC(&StringLiteral_20787/*"mstStageRemap"*/, v414);
-    sub_B16FFC(&StringLiteral_20760/*"mstRestriction"*/, v415);
-    sub_B16FFC(&StringLiteral_20753/*"mstQuestScript"*/, v416);
-    sub_B16FFC(&StringLiteral_20670/*"mstEventRewardSceneRelease"*/, v417);
-    sub_B16FFC(&StringLiteral_20851/*"mstVoiceCond"*/, v418);
-    sub_B16FFC(&StringLiteral_22963/*"userSubEquip"*/, v419);
-    sub_B16FFC(&StringLiteral_20663/*"mstEventRecipe"*/, v420);
-    sub_B16FFC(&StringLiteral_20804/*"mstSvtCostume"*/, v421);
-    sub_B16FFC(&StringLiteral_20823/*"mstSvtProfile"*/, v422);
-    sub_B16FFC(&StringLiteral_20583/*"mstCommonRestriction"*/, v423);
-    sub_B16FFC(&StringLiteral_22947/*"userHeelPortrait"*/, v424);
-    sub_B16FFC(&StringLiteral_20777/*"mstSkillGroupOverwrite"*/, v425);
-    sub_B16FFC(&StringLiteral_22906/*"userCommandCodeCollection"*/, v426);
-    sub_B16FFC(&StringLiteral_20579/*"mstCommandCodeSkillRelease"*/, v427);
-    sub_B16FFC(&StringLiteral_20745/*"mstQuestPickup"*/, v428);
-    sub_B16FFC(&StringLiteral_20887/*"mstWarBoardStageLayout"*/, v429);
-    sub_B16FFC(&StringLiteral_20862/*"mstWarBoardActionTrendCond"*/, v430);
-    sub_B16FFC(&StringLiteral_20612/*"mstEventCombine"*/, v431);
-    sub_B16FFC(&StringLiteral_20876/*"mstWarBoardQuest"*/, v432);
-    sub_B16FFC(&StringLiteral_20737/*"mstQuestConsumeItem"*/, v433);
-    sub_B16FFC(&StringLiteral_20744/*"mstQuestPhaseDetailAdd"*/, v434);
-    sub_B16FFC(&StringLiteral_20712/*"mstHeelPortrait"*/, v435);
-    sub_B16FFC(&StringLiteral_22953/*"userPresentHistory"*/, v436);
-    sub_B16FFC(&StringLiteral_20877/*"mstWarBoardRatingBase"*/, v437);
-    sub_B16FFC(&StringLiteral_20703/*"mstGachaImage"*/, v438);
-    sub_B16FFC(&StringLiteral_20596/*"mstEquipImage"*/, v439);
-    sub_B16FFC(&StringLiteral_22932/*"userEventRaid"*/, v440);
-    sub_B16FFC(&StringLiteral_20800/*"mstSvtCollection"*/, v441);
-    sub_B16FFC(&StringLiteral_18841/*"friendshipQuestDialogInfo"*/, v442);
-    sub_B16FFC(&StringLiteral_20730/*"mstNews"*/, v443);
-    sub_B16FFC(&StringLiteral_20695/*"mstGacha"*/, v444);
-    sub_B16FFC(&StringLiteral_20776/*"mstSkillGroup"*/, v445);
-    sub_B16FFC(&StringLiteral_20711/*"mstGuide"*/, v446);
-    sub_B16FFC(&StringLiteral_20559/*"mstClassBoardLock"*/, v447);
-    sub_B16FFC(&StringLiteral_20654/*"mstEventPointUpper"*/, v448);
-    sub_B16FFC(&StringLiteral_20540/*"mstBlankEarthSpot"*/, v449);
-    sub_B16FFC(&StringLiteral_20838/*"mstTerminalOverwrite"*/, v450);
-    sub_B16FFC(&StringLiteral_20597/*"mstEquipSkill"*/, v451);
-    sub_B16FFC(&StringLiteral_20686/*"mstEventUiValue"*/, v452);
-    sub_B16FFC(&StringLiteral_22908/*"userContinue"*/, v453);
-    sub_B16FFC(&StringLiteral_20735/*"mstQuestAdd"*/, v454);
-    sub_B16FFC(&StringLiteral_20558/*"mstClassBoardLine"*/, v455);
-    sub_B16FFC(&StringLiteral_22849/*"updateProfileDialogInfo"*/, v456);
-    sub_B16FFC(&StringLiteral_20849/*"mstVoice"*/, v457);
-    sub_B16FFC(&StringLiteral_22927/*"userEventMissionConditionDetail"*/, v458);
-    sub_B16FFC(&StringLiteral_20526/*"mstAssetbundleKey"*/, v459);
-    sub_B16FFC(&StringLiteral_20645/*"mstEventPanelMap"*/, v460);
-    sub_B16FFC(&StringLiteral_22950/*"userLogin"*/, v461);
-    sub_B16FFC(&StringLiteral_20716/*"mstLoginQuest"*/, v462);
-    sub_B16FFC(&StringLiteral_20732/*"mstPartialMaintenance"*/, v463);
-    sub_B16FFC(&StringLiteral_22934/*"userEventSpot"*/, v464);
-    sub_B16FFC(&StringLiteral_20665/*"mstEventReward"*/, v465);
-    sub_B16FFC(&StringLiteral_20618/*"mstEventDataLostBattleReset"*/, v466);
-    sub_B16FFC(&StringLiteral_20886/*"mstWarBoardStageDetail"*/, v467);
-    sub_B16FFC(&StringLiteral_22930/*"userEventQuestCooltime"*/, v468);
-    sub_B16FFC(&StringLiteral_20754/*"mstQuestScriptBranchMaterial"*/, v469);
-    sub_B16FFC(&StringLiteral_20627/*"mstEventFatigueRecovery"*/, v470);
-    sub_B16FFC(&StringLiteral_20864/*"mstWarBoardAi"*/, v471);
-    sub_B16FFC(&StringLiteral_20843/*"mstTreasureBoxTalk"*/, v472);
-    sub_B16FFC(&StringLiteral_20867/*"mstWarBoardEvent"*/, v473);
-    sub_B16FFC(&StringLiteral_20853/*"mstVoicePlayCond"*/, v474);
-    sub_B16FFC(&StringLiteral_20700/*"mstGachaDetail"*/, v475);
-    sub_B16FFC(&StringLiteral_20676/*"mstEventSuperBoss"*/, v476);
-    sub_B16FFC(&StringLiteral_20774/*"mstSkillAdd"*/, v477);
-    byte_40FA413 = 1;
+    sub_B2C35C(&DataNameKind_TypeInfo, v1);
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__, v2);
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string___ctor__, v3);
+    sub_B2C35C(&System_Collections_Generic_Dictionary_DataNameKind_Kind__string__TypeInfo, v4);
+    sub_B2C35C(&StringLiteral_20727/*"mstEventMissionConditionDetail"*/, v5);
+    sub_B2C35C(&StringLiteral_20930/*"mstTreasureBoxGift"*/, v6);
+    sub_B2C35C(&StringLiteral_20662/*"mstCommandCodeComment"*/, v7);
+    sub_B2C35C(&StringLiteral_20723/*"mstEventMissionAction"*/, v8);
+    sub_B2C35C(&StringLiteral_23010/*"userEventAlloutBattle"*/, v9);
+    sub_B2C35C(&StringLiteral_20689/*"mstEventBonusFilterGroupInfo"*/, v10);
+    sub_B2C35C(&StringLiteral_20836/*"mstQuestReleaseOverwrite"*/, v11);
+    sub_B2C35C(&StringLiteral_20811/*"mstMapGimmickRelease"*/, v12);
+    sub_B2C35C(&StringLiteral_20786/*"mstGachaExtraGift"*/, v13);
+    sub_B2C35C(&StringLiteral_21162/*"npcSvtFollowerIndividuality"*/, v14);
+    sub_B2C35C(&StringLiteral_20691/*"mstEventBossStatusUi"*/, v15);
+    sub_B2C35C(&StringLiteral_23060/*"userSvtAppendPassiveSkillLv"*/, v16);
+    sub_B2C35C(&StringLiteral_20646/*"mstClassRelation"*/, v17);
+    sub_B2C35C(&StringLiteral_20608/*"mstAiAct"*/, v18);
+    sub_B2C35C(&StringLiteral_20880/*"mstSvtAnimationOverwrite"*/, v19);
+    sub_B2C35C(&StringLiteral_20838/*"mstQuestRestriction"*/, v20);
+    sub_B2C35C(&StringLiteral_20673/*"mstCv"*/, v21);
+    sub_B2C35C(&StringLiteral_23015/*"userEventDigging"*/, v22);
+    sub_B2C35C(&StringLiteral_22620/*"tblUserGame"*/, v23);
+    sub_B2C35C(&StringLiteral_20702/*"mstEventDataLostBattle"*/, v24);
+    sub_B2C35C(&StringLiteral_20692/*"mstEventBuddyPoint"*/, v25);
+    sub_B2C35C(&StringLiteral_20624/*"mstBgmRelease"*/, v26);
+    sub_B2C35C(&StringLiteral_20906/*"mstSvtMaterialTd"*/, v27);
+    sub_B2C35C(&StringLiteral_20667/*"mstCommonRelease"*/, v28);
+    sub_B2C35C(&StringLiteral_20774/*"mstFriendship"*/, v29);
+    sub_B2C35C(&StringLiteral_22996/*"userClassBoardSquare"*/, v30);
+    sub_B2C35C(&StringLiteral_20671/*"mstConstantLong"*/, v31);
+    sub_B2C35C(&StringLiteral_20645/*"mstClassBoardSquare"*/, v32);
+    sub_B2C35C(&StringLiteral_23064/*"userSvtCommandCode"*/, v33);
+    sub_B2C35C(&StringLiteral_20823/*"mstQuestBehavior"*/, v34);
+    sub_B2C35C(&StringLiteral_20905/*"mstSvtMaterialFolder"*/, v35);
+    sub_B2C35C(&StringLiteral_20977/*"mstWarBoardStagePieceDetail"*/, v36);
+    sub_B2C35C(&StringLiteral_20690/*"mstEventBonusFilterGroupMember"*/, v37);
+    sub_B2C35C(&StringLiteral_20827/*"mstQuestHint"*/, v38);
+    sub_B2C35C(&StringLiteral_20665/*"mstCommandSpell"*/, v39);
+    sub_B2C35C(&StringLiteral_20606/*"mstAdCheckPoint"*/, v40);
+    sub_B2C35C(&StringLiteral_20820/*"mstPrivilege"*/, v41);
+    sub_B2C35C(&StringLiteral_20628/*"mstBoardMessageRelease"*/, v42);
+    sub_B2C35C(&StringLiteral_20789/*"mstGachaRelease"*/, v43);
+    sub_B2C35C(&StringLiteral_23006/*"userDeleteReservation"*/, v44);
+    sub_B2C35C(&StringLiteral_20929/*"mstTreasureBox"*/, v45);
+    sub_B2C35C(&StringLiteral_20680/*"mstEquipExp"*/, v46);
+    sub_B2C35C(&StringLiteral_20687/*"mstEventBoardGameTokenReward"*/, v47);
+    sub_B2C35C(&StringLiteral_20886/*"mstSvtCoin"*/, v48);
+    sub_B2C35C(&StringLiteral_20916/*"mstSvtScriptMultiple"*/, v49);
+    sub_B2C35C(&StringLiteral_20815/*"mstMaterialFolder"*/, v50);
+    sub_B2C35C(&StringLiteral_20698/*"mstEventCombineCostume"*/, v51);
+    sub_B2C35C(&StringLiteral_20825/*"mstQuestDateRange"*/, v52);
+    sub_B2C35C(&StringLiteral_20973/*"mstWarBoardStageBoss"*/, v53);
+    sub_B2C35C(&StringLiteral_20635/*"mstBuffConvert"*/, v54);
+    sub_B2C35C(&StringLiteral_20614/*"mstAuraEffect"*/, v55);
+    sub_B2C35C(&StringLiteral_20745/*"mstEventRaceResult"*/, v56);
+    sub_B2C35C(&StringLiteral_20853/*"mstSetItem"*/, v57);
+    sub_B2C35C(&StringLiteral_20846/*"mstRecover"*/, v58);
+    sub_B2C35C(&StringLiteral_20760/*"mstEventStatusQuest"*/, v59);
+    sub_B2C35C(&StringLiteral_23012/*"userEventCooltimeReward"*/, v60);
+    sub_B2C35C(&StringLiteral_20951/*"mstWarBoardActionTrendGroup"*/, v61);
+    sub_B2C35C(&StringLiteral_23052/*"userQuestRoute"*/, v62);
+    sub_B2C35C(&StringLiteral_20866/*"mstSkillLv"*/, v63);
+    sub_B2C35C(&StringLiteral_20898/*"mstSvtGroup"*/, v64);
+    sub_B2C35C(&StringLiteral_20938/*"mstVoiceClosedMessage"*/, v65);
+    sub_B2C35C(&StringLiteral_20710/*"mstEventExpeditionPiece"*/, v66);
+    sub_B2C35C(&StringLiteral_20907/*"mstSvtMultiPortrait"*/, v67);
+    sub_B2C35C(&StringLiteral_20713/*"mstEventFilter"*/, v68);
+    sub_B2C35C(&StringLiteral_23042/*"userItem"*/, v69);
+    sub_B2C35C(&StringLiteral_20709/*"mstEventExpedition"*/, v70);
+    sub_B2C35C(&StringLiteral_20744/*"mstEventRace"*/, v71);
+    sub_B2C35C(&StringLiteral_20839/*"mstQuestRestrictionInfo"*/, v72);
+    sub_B2C35C(&StringLiteral_20837/*"mstQuestReset"*/, v73);
+    sub_B2C35C(&StringLiteral_23016/*"userEventExpedition"*/, v74);
+    sub_B2C35C(&StringLiteral_20716/*"mstEventFortificationSvt"*/, v75);
+    sub_B2C35C(&StringLiteral_20978/*"mstWarBoardStageReinforcements"*/, v76);
+    sub_B2C35C(&StringLiteral_20640/*"mstClassBoardBase"*/, v77);
+    sub_B2C35C(&StringLiteral_20676/*"mstEnemyMaster"*/, v78);
+    sub_B2C35C(&StringLiteral_20615/*"mstAuraEffectPosOverwrite"*/, v79);
+    sub_B2C35C(&StringLiteral_20850/*"mstRestrictionSlot"*/, v80);
+    sub_B2C35C(&StringLiteral_20791/*"mstGachaSub"*/, v81);
+    sub_B2C35C(&StringLiteral_20764/*"mstEventSvtPointRank"*/, v82);
+    sub_B2C35C(&StringLiteral_20737/*"mstEventPointGroup"*/, v83);
+    sub_B2C35C(&StringLiteral_20684/*"mstEventAdd"*/, v84);
+    sub_B2C35C(&StringLiteral_20678/*"mstEquip"*/, v85);
+    sub_B2C35C(&StringLiteral_20749/*"mstEventRecipeGift"*/, v86);
+    sub_B2C35C(&StringLiteral_20925/*"mstTelop"*/, v87);
+    sub_B2C35C(&StringLiteral_23062/*"userSvtCollection"*/, v88);
+    sub_B2C35C(&StringLiteral_23021/*"userEventMissionFix"*/, v89);
+    sub_B2C35C(&StringLiteral_20848/*"mstRestrictionBase"*/, v90);
+    sub_B2C35C(&StringLiteral_20927/*"mstTips"*/, v91);
+    sub_B2C35C(&StringLiteral_20616/*"mstBankShop"*/, v92);
+    sub_B2C35C(&StringLiteral_20772/*"mstEventVoicePlay"*/, v93);
+    sub_B2C35C(&StringLiteral_20715/*"mstEventFortificationDetail"*/, v94);
+    sub_B2C35C(&StringLiteral_23028/*"userEventSuperBoss"*/, v95);
+    sub_B2C35C(&StringLiteral_20714/*"mstEventFortification"*/, v96);
+    sub_B2C35C(&StringLiteral_20762/*"mstEventSvt"*/, v97);
+    sub_B2C35C(&StringLiteral_20942/*"mstVoicePlayGroup"*/, v98);
+    sub_B2C35C(&StringLiteral_23014/*"userEventDeck"*/, v99);
+    sub_B2C35C(&StringLiteral_20868/*"mstSpotAdd"*/, v100);
+    sub_B2C35C(&StringLiteral_20658/*"mstCombineSkill"*/, v101);
+    sub_B2C35C(&StringLiteral_20970/*"mstWarBoardSquare"*/, v102);
+    sub_B2C35C(&StringLiteral_20636/*"mstBuffTypeDetail"*/, v103);
+    sub_B2C35C(&StringLiteral_20948/*"mstWarBoardActionPointClass"*/, v104);
+    sub_B2C35C(&StringLiteral_23045/*"userPresentBox"*/, v105);
+    sub_B2C35C(&StringLiteral_23029/*"userEventSvtPoint"*/, v106);
+    sub_B2C35C(&StringLiteral_22732/*"totalEventPoint"*/, v107);
+    sub_B2C35C(&StringLiteral_20660/*"mstCommandCardRankParam"*/, v108);
+    sub_B2C35C(&StringLiteral_20953/*"mstWarBoardCommonRelease"*/, v109);
+    sub_B2C35C(&StringLiteral_20878/*"mstSvt"*/, v110);
+    sub_B2C35C(&StringLiteral_23053/*"userShop"*/, v111);
+    sub_B2C35C(&StringLiteral_20685/*"mstEventBoardGameCell"*/, v112);
+    sub_B2C35C(&StringLiteral_20743/*"mstEventQuestCooltime"*/, v113);
+    sub_B2C35C(&StringLiteral_20779/*"mstFuncTypeDetail"*/, v114);
+    sub_B2C35C(&StringLiteral_20875/*"mstStatusEffectPosOverwrite"*/, v115);
+    sub_B2C35C(&StringLiteral_18468/*"eventBoostItemUsed"*/, v116);
+    sub_B2C35C(&StringLiteral_20856/*"mstShopDetail"*/, v117);
+    sub_B2C35C(&StringLiteral_20803/*"mstMapButton"*/, v118);
+    sub_B2C35C(&StringLiteral_20980/*"mstWarBoardTacticalTrend"*/, v119);
+    sub_B2C35C(&StringLiteral_20877/*"mstSubEquip"*/, v120);
+    sub_B2C35C(&StringLiteral_20871/*"mstSpotPath"*/, v121);
+    sub_B2C35C(&StringLiteral_20655/*"mstCombineMaterial"*/, v122);
+    sub_B2C35C(&StringLiteral_20654/*"mstCombineLimitRelease"*/, v123);
+    sub_B2C35C(&StringLiteral_20934/*"mstTreasureDeviceLv"*/, v124);
+    sub_B2C35C(&StringLiteral_20765/*"mstEventTower"*/, v125);
+    sub_B2C35C(&StringLiteral_20860/*"mstSkill"*/, v126);
+    sub_B2C35C(&StringLiteral_20909/*"mstSvtPassiveSkill"*/, v127);
+    sub_B2C35C(&StringLiteral_20920/*"mstSvtTreasureDeviceAdd"*/, v128);
+    sub_B2C35C(&StringLiteral_23049/*"userQuest"*/, v129);
+    sub_B2C35C(&StringLiteral_20726/*"mstEventMissionCondition"*/, v130);
+    sub_B2C35C(&StringLiteral_20947/*"mstWarBoardActionPoint"*/, v131);
+    sub_B2C35C(&StringLiteral_20648/*"mstClosedMessage"*/, v132);
+    sub_B2C35C(&StringLiteral_20752/*"mstEventRewardExtra"*/, v133);
+    sub_B2C35C(&StringLiteral_20735/*"mstEventPointActivity"*/, v134);
+    sub_B2C35C(&StringLiteral_20742/*"mstEventQuest"*/, v135);
+    sub_B2C35C(&StringLiteral_20622/*"mstBattleMessageGroup"*/, v136);
+    sub_B2C35C(&StringLiteral_23157/*"viewQuestInfo"*/, v137);
+    sub_B2C35C(&StringLiteral_20912/*"mstSvtProfilePush"*/, v138);
+    sub_B2C35C(&StringLiteral_20933/*"mstTreasureDeviceDetail"*/, v139);
+    sub_B2C35C(&StringLiteral_22994/*"userBlacklist"*/, v140);
+    sub_B2C35C(&StringLiteral_20708/*"mstEventEquipSkillRelease"*/, v141);
+    sub_B2C35C(&StringLiteral_22997/*"userCoinRoom"*/, v142);
+    sub_B2C35C(&StringLiteral_20672/*"mstConstantStr"*/, v143);
+    sub_B2C35C(&StringLiteral_20876/*"mstStoneShop"*/, v144);
+    sub_B2C35C(&StringLiteral_20928/*"mstTotalLogin"*/, v145);
+    sub_B2C35C(&StringLiteral_20818/*"mstOpeningMovie"*/, v146);
+    sub_B2C35C(&StringLiteral_20670/*"mstConstant"*/, v147);
+    sub_B2C35C(&StringLiteral_20845/*"mstQuestSpotRelease"*/, v148);
+    sub_B2C35C(&StringLiteral_20663/*"mstCommandCodeSkill"*/, v149);
+    sub_B2C35C(&StringLiteral_20821/*"mstQuest"*/, v150);
+    sub_B2C35C(&StringLiteral_20768/*"mstEventTutorialCond"*/, v151);
+    sub_B2C35C(&StringLiteral_20946/*"mstWarBoard"*/, v152);
+    sub_B2C35C(&StringLiteral_20746/*"mstEventRaid"*/, v153);
+    sub_B2C35C(&StringLiteral_20623/*"mstBgm"*/, v154);
+    sub_B2C35C(&StringLiteral_20758/*"mstEventScriptRelease"*/, v155);
+    sub_B2C35C(&StringLiteral_23048/*"userProfile"*/, v156);
+    sub_B2C35C(&StringLiteral_20725/*"mstEventMissionAdd"*/, v157);
+    sub_B2C35C(&StringLiteral_20943/*"mstVoiceRelease"*/, v158);
+    sub_B2C35C(&StringLiteral_20834/*"mstQuestRandomGroup"*/, v159);
+    sub_B2C35C(&StringLiteral_20858/*"mstShopRelease"*/, v160);
+    sub_B2C35C(&StringLiteral_23069/*"userSvtStorage"*/, v161);
+    sub_B2C35C(&StringLiteral_23059/*"userSvtAppendPassiveSkill"*/, v162);
+    sub_B2C35C(&StringLiteral_20879/*"mstSvtAdd"*/, v163);
+    sub_B2C35C(&StringLiteral_20626/*"mstBlankEarthSpotNavimenu"*/, v164);
+    sub_B2C35C(&StringLiteral_20620/*"mstBattleMasterImage"*/, v165);
+    sub_B2C35C(&StringLiteral_20862/*"mstSkillDetail"*/, v166);
+    sub_B2C35C(&StringLiteral_20813/*"mstMasterMission"*/, v167);
+    sub_B2C35C(&StringLiteral_20910/*"mstSvtPassiveSkillRelease"*/, v168);
+    sub_B2C35C(&StringLiteral_20867/*"mstSpot"*/, v169);
+    sub_B2C35C(&StringLiteral_20722/*"mstEventMission"*/, v170);
+    sub_B2C35C(&StringLiteral_20657/*"mstCombineQpSvtEquip"*/, v171);
+    sub_B2C35C(&StringLiteral_20734/*"mstEventPoint"*/, v172);
+    sub_B2C35C(&StringLiteral_20756/*"mstEventRewardSet"*/, v173);
+    sub_B2C35C(&StringLiteral_20731/*"mstEventPanelMapDetail"*/, v174);
+    sub_B2C35C(&StringLiteral_20884/*"mstSvtCardAdd"*/, v175);
+    sub_B2C35C(&StringLiteral_20802/*"mstMap"*/, v176);
+    sub_B2C35C(&StringLiteral_20705/*"mstEventDigging"*/, v177);
+    sub_B2C35C(&StringLiteral_23035/*"userGacha"*/, v178);
+    sub_B2C35C(&StringLiteral_20835/*"mstQuestRelease"*/, v179);
+    sub_B2C35C(&StringLiteral_20704/*"mstEventDetail"*/, v180);
+    sub_B2C35C(&StringLiteral_20812/*"mstMapLayer"*/, v181);
+    sub_B2C35C(&StringLiteral_20957/*"mstWarBoardFutureActionTrend"*/, v182);
+    sub_B2C35C(&StringLiteral_20865/*"mstSkillIndividuality"*/, v183);
+    sub_B2C35C(&StringLiteral_20632/*"mstBoxGachaBaseDetail"*/, v184);
+    sub_B2C35C(&StringLiteral_22619/*"tblFriend"*/, v185);
+    sub_B2C35C(&StringLiteral_16688/*"beforeBirthDay"*/, v186);
+    sub_B2C35C(&StringLiteral_20720/*"mstEventItemDisplayRelease"*/, v187);
+    sub_B2C35C(&StringLiteral_16630/*"battle"*/, v188);
+    sub_B2C35C(&StringLiteral_20857/*"mstShopGroup"*/, v189);
+    sub_B2C35C(&StringLiteral_20613/*"mstAttriRelation"*/, v190);
+    sub_B2C35C(&StringLiteral_22998/*"userCommandCode"*/, v191);
+    sub_B2C35C(&StringLiteral_20696/*"mstEventCampaignRelease"*/, v192);
+    sub_B2C35C(&StringLiteral_20895/*"mstSvtFilter"*/, v193);
+    sub_B2C35C(&StringLiteral_20833/*"mstQuestRacePoint"*/, v194);
+    sub_B2C35C(&StringLiteral_21327/*"otherUserGame"*/, v195);
+    sub_B2C35C(&StringLiteral_20719/*"mstEventItemDisplayGroup"*/, v196);
+    sub_B2C35C(&StringLiteral_20638/*"mstCard"*/, v197);
+    sub_B2C35C(&StringLiteral_20621/*"mstBattleMessage"*/, v198);
+    sub_B2C35C(&StringLiteral_20851/*"mstRestrictionSlotDetail"*/, v199);
+    sub_B2C35C(&StringLiteral_20617/*"mstBanner"*/, v200);
+    sub_B2C35C(&StringLiteral_20677/*"mstEnemyMasterBattle"*/, v201);
+    sub_B2C35C(&StringLiteral_20718/*"mstEventItemDisplay"*/, v202);
+    sub_B2C35C(&StringLiteral_20637/*"mstCampaignInfo"*/, v203);
+    sub_B2C35C(&StringLiteral_20919/*"mstSvtTreasureDevice"*/, v204);
+    sub_B2C35C(&StringLiteral_20918/*"mstSvtSkillRelease"*/, v205);
+    sub_B2C35C(&StringLiteral_20669/*"mstCompleteMission"*/, v206);
+    sub_B2C35C(&StringLiteral_20652/*"mstCombineLimit"*/, v207);
+    sub_B2C35C(&StringLiteral_20630/*"mstBoxGacha"*/, v208);
+    sub_B2C35C(&StringLiteral_20940/*"mstVoiceMaterialCond"*/, v209);
+    sub_B2C35C(&StringLiteral_20790/*"mstGachaStoryAdjust"*/, v210);
+    sub_B2C35C(&StringLiteral_20936/*"mstUserExp"*/, v211);
+    sub_B2C35C(&StringLiteral_20959/*"mstWarBoardItem"*/, v212);
+    sub_B2C35C(&StringLiteral_20679/*"mstEquipAdd"*/, v213);
+    sub_B2C35C(&StringLiteral_20674/*"mstDialogMessage"*/, v214);
+    sub_B2C35C(&StringLiteral_21161/*"npcSvtFollower"*/, v215);
+    sub_B2C35C(&StringLiteral_20619/*"mstBattleBg"*/, v216);
+    sub_B2C35C(&StringLiteral_20641/*"mstClassBoardClass"*/, v217);
+    sub_B2C35C(&StringLiteral_23022/*"userEventPoint"*/, v218);
+    sub_B2C35C(&StringLiteral_20885/*"mstSvtChange"*/, v219);
+    sub_B2C35C(&StringLiteral_20958/*"mstWarBoardIndividualityClass"*/, v220);
+    sub_B2C35C(&StringLiteral_20729/*"mstEventMural"*/, v221);
+    sub_B2C35C(&StringLiteral_20800/*"mstItemSelect"*/, v222);
+    sub_B2C35C(&StringLiteral_20899/*"mstSvtIndividuality"*/, v223);
+    sub_B2C35C(&StringLiteral_23009/*"userEvent"*/, v224);
+    sub_B2C35C(&StringLiteral_20981/*"mstWarBoardTreasure"*/, v225);
+    sub_B2C35C(&StringLiteral_20904/*"mstSvtLvDetail"*/, v226);
+    sub_B2C35C(&StringLiteral_20966/*"mstWarBoardRatingOffset"*/, v227);
+    sub_B2C35C(&StringLiteral_20830/*"mstQuestPhaseDetail"*/, v228);
+    sub_B2C35C(&StringLiteral_20855/*"mstShopAction"*/, v229);
+    sub_B2C35C(&StringLiteral_20816/*"mstMyroomAdd"*/, v230);
+    sub_B2C35C(&StringLiteral_20763/*"mstEventSvtFatigue"*/, v231);
+    sub_B2C35C(&StringLiteral_20711/*"mstEventFactory"*/, v232);
+    sub_B2C35C(&StringLiteral_23036/*"userGachaDrawHistory"*/, v233);
+    sub_B2C35C(&StringLiteral_23031/*"userFollower"*/, v234);
+    sub_B2C35C(&StringLiteral_20967/*"mstWarBoardRatingOffsetGroup"*/, v235);
+    sub_B2C35C(&StringLiteral_23061/*"userSvtCoin"*/, v236);
+    sub_B2C35C(&StringLiteral_20757/*"mstEventScript"*/, v237);
+    sub_B2C35C(&StringLiteral_20917/*"mstSvtSkill"*/, v238);
+    sub_B2C35C(&StringLiteral_20870/*"mstSpotLayer"*/, v239);
+    sub_B2C35C(&StringLiteral_23063/*"userSvtCommandCard"*/, v240);
+    sub_B2C35C(&StringLiteral_23050/*"userQuestInfo"*/, v241);
+    sub_B2C35C(&StringLiteral_20675/*"mstEffect"*/, v242);
+    sub_B2C35C(&StringLiteral_20799/*"mstItem"*/, v243);
+    sub_B2C35C(&StringLiteral_20738/*"mstEventPointGroupAdd"*/, v244);
+    sub_B2C35C(&StringLiteral_20828/*"mstQuestMessage"*/, v245);
+    sub_B2C35C(&StringLiteral_21157/*"npcFollowerRelease"*/, v246);
+    sub_B2C35C(&StringLiteral_20776/*"mstFuncCategory"*/, v247);
+    sub_B2C35C(&StringLiteral_20960/*"mstWarBoardMessage"*/, v248);
+    sub_B2C35C(&StringLiteral_23039/*"userGame"*/, v249);
+    sub_B2C35C(&StringLiteral_20793/*"mstGift"*/, v250);
+    sub_B2C35C(&StringLiteral_20968/*"mstWarBoardReinforcements"*/, v251);
+    sub_B2C35C(&StringLiteral_20686/*"mstEventBoardGameToken"*/, v252);
+    sub_B2C35C(&StringLiteral_20807/*"mstMapGimmickLayer"*/, v253);
+    sub_B2C35C(&StringLiteral_20888/*"mstSvtCommandCodeUnlock"*/, v254);
+    sub_B2C35C(&StringLiteral_20612/*"mstAssist"*/, v255);
+    sub_B2C35C(&StringLiteral_23158/*"viewWaveEnemy"*/, v256);
+    sub_B2C35C(&StringLiteral_21160/*"npcSvtEquip"*/, v257);
+    sub_B2C35C(&StringLiteral_20842/*"mstQuestScriptMaterialNext"*/, v258);
+    sub_B2C35C(&StringLiteral_20894/*"mstSvtExp"*/, v259);
+    sub_B2C35C(&StringLiteral_23058/*"userSvt"*/, v260);
+    sub_B2C35C(&StringLiteral_23155/*"viewEnemy"*/, v261);
+    sub_B2C35C(&StringLiteral_20770/*"mstEventUiRelease"*/, v262);
+    sub_B2C35C(&StringLiteral_22733/*"totalEventRace"*/, v263);
+    sub_B2C35C(&StringLiteral_20773/*"mstFieldMotion"*/, v264);
+    sub_B2C35C(&StringLiteral_20747/*"mstEventRandomMission"*/, v265);
+    sub_B2C35C(&StringLiteral_20754/*"mstEventRewardScene"*/, v266);
+    sub_B2C35C(&StringLiteral_20651/*"mstCombineCostume"*/, v267);
+    sub_B2C35C(&StringLiteral_20650/*"mstCombineAppendPassiveSkill"*/, v268);
+    sub_B2C35C(&StringLiteral_20707/*"mstEventDiggingReward"*/, v269);
+    sub_B2C35C(&StringLiteral_20949/*"mstWarBoardActionTrend"*/, v270);
+    sub_B2C35C(&StringLiteral_20781/*"mstGachaAppend"*/, v271);
+    sub_B2C35C(&StringLiteral_20971/*"mstWarBoardSquareIndexGroup"*/, v272);
+    sub_B2C35C(&StringLiteral_20775/*"mstFunc"*/, v273);
+    sub_B2C35C(&StringLiteral_20700/*"mstEventConquestReward"*/, v274);
+    sub_B2C35C(&StringLiteral_20954/*"mstWarBoardEffect"*/, v275);
+    sub_B2C35C(&StringLiteral_20983/*"mstWarQuestSelection"*/, v276);
+    sub_B2C35C(&StringLiteral_23003/*"userDeck"*/, v277);
+    sub_B2C35C(&StringLiteral_20814/*"mstMasterMissionDisplayInfo"*/, v278);
+    sub_B2C35C(&StringLiteral_20982/*"mstWarGroup"*/, v279);
+    sub_B2C35C(&StringLiteral_20854/*"mstShop"*/, v280);
+    sub_B2C35C(&StringLiteral_20963/*"mstWarBoardPartySkill"*/, v281);
+    sub_B2C35C(&StringLiteral_20736/*"mstEventPointBuff"*/, v282);
+    sub_B2C35C(&StringLiteral_23057/*"userSupportDeck"*/, v283);
+    sub_B2C35C(&StringLiteral_20872/*"mstSpotRoad"*/, v284);
+    sub_B2C35C(&StringLiteral_20924/*"mstSvtVoiceRelation"*/, v285);
+    sub_B2C35C(&StringLiteral_20653/*"mstCombineLimitGift"*/, v286);
+    sub_B2C35C(&StringLiteral_20701/*"mstEventCooltimeReward"*/, v287);
+    sub_B2C35C(&StringLiteral_20693/*"mstEventBulletinBoard"*/, v288);
+    sub_B2C35C(&StringLiteral_20751/*"mstEventRewardBg"*/, v289);
+    sub_B2C35C(&StringLiteral_20633/*"mstBoxGachaTalk"*/, v290);
+    sub_B2C35C(&StringLiteral_20777/*"mstFuncDisp"*/, v291);
+    sub_B2C35C(&StringLiteral_20914/*"mstSvtScript"*/, v292);
+    sub_B2C35C(&StringLiteral_20804/*"mstMapCond"*/, v293);
+    sub_B2C35C(&StringLiteral_23017/*"userEventFortification"*/, v294);
+    sub_B2C35C(&StringLiteral_20962/*"mstWarBoardOnboardSkill"*/, v295);
+    sub_B2C35C(&StringLiteral_20787/*"mstGachaGroup"*/, v296);
+    sub_B2C35C(&StringLiteral_23156/*"viewQuestEnemyInfo"*/, v297);
+    sub_B2C35C(&StringLiteral_20889/*"mstSvtComment"*/, v298);
+    sub_B2C35C(&StringLiteral_20932/*"mstTreasureDevice"*/, v299);
+    sub_B2C35C(&StringLiteral_23044/*"userNpcSvtRecord"*/, v300);
+    sub_B2C35C(&StringLiteral_20728/*"mstEventMissionGroup"*/, v301);
+    sub_B2C35C(&StringLiteral_23051/*"userQuestRecord"*/, v302);
+    sub_B2C35C(&StringLiteral_20849/*"mstRestrictionMessage"*/, v303);
+    sub_B2C35C(&StringLiteral_20795/*"mstGiftDetail"*/, v304);
+    sub_B2C35C(&StringLiteral_20792/*"mstGachaTicket"*/, v305);
+    sub_B2C35C(&StringLiteral_21468/*"pickupUserFollower"*/, v306);
+    sub_B2C35C(&StringLiteral_20759/*"mstEventStatus"*/, v307);
+    sub_B2C35C(&StringLiteral_20890/*"mstSvtCommentAdd"*/, v308);
+    sub_B2C35C(&StringLiteral_20908/*"mstSvtOverwrite"*/, v309);
+    sub_B2C35C(&StringLiteral_21156/*"npcFollower"*/, v310);
+    sub_B2C35C(&StringLiteral_20699/*"mstEventCommandAssist"*/, v311);
+    sub_B2C35C(&StringLiteral_18479/*"eventSvtFatigue"*/, v312);
+    sub_B2C35C(&StringLiteral_20784/*"mstGachaBonusSelectLineup"*/, v313);
+    sub_B2C35C(&StringLiteral_20694/*"mstEventBulletinBoardRelease"*/, v314);
+    sub_B2C35C(&StringLiteral_20893/*"mstSvtExceed"*/, v315);
+    sub_B2C35C(&StringLiteral_20903/*"mstSvtLimitSpoilerProtection"*/, v316);
+    sub_B2C35C(&StringLiteral_20923/*"mstSvtVoice"*/, v317);
+    sub_B2C35C(&StringLiteral_20852/*"mstRestrictionWhole"*/, v318);
+    sub_B2C35C(&StringLiteral_23038/*"userGachaExtraCount"*/, v319);
+    sub_B2C35C(&StringLiteral_20809/*"mstMapGimmickPath"*/, v320);
+    sub_B2C35C(&StringLiteral_20766/*"mstEventTowerReward"*/, v321);
+    sub_B2C35C(&StringLiteral_20647/*"mstClassRelationOverwrite"*/, v322);
+    sub_B2C35C(&StringLiteral_20607/*"mstAi"*/, v323);
+    sub_B2C35C(&StringLiteral_22995/*"userBoxGacha"*/, v324);
+    sub_B2C35C(&StringLiteral_20883/*"mstSvtCard"*/, v325);
+    sub_B2C35C(&StringLiteral_23037/*"userGachaDrawLog"*/, v326);
+    sub_B2C35C(&StringLiteral_20972/*"mstWarBoardStage"*/, v327);
+    sub_B2C35C(&StringLiteral_23007/*"userEquip"*/, v328);
+    sub_B2C35C(&StringLiteral_20753/*"mstEventRewardGuideRelease"*/, v329);
+    sub_B2C35C(&StringLiteral_20642/*"mstClassBoardCommandSpell"*/, v330);
+    sub_B2C35C(&StringLiteral_20782/*"mstGachaBehavior"*/, v331);
+    sub_B2C35C(&StringLiteral_20944/*"mstWar"*/, v332);
+    sub_B2C35C(&StringLiteral_20688/*"mstEventBonusFilter"*/, v333);
+    sub_B2C35C(&StringLiteral_20844/*"mstQuestScriptRelease"*/, v334);
+    sub_B2C35C(&StringLiteral_23018/*"userEventMap"*/, v335);
+    sub_B2C35C(&StringLiteral_20733/*"mstEventPanelSpot"*/, v336);
+    sub_B2C35C(&StringLiteral_20639/*"mstClass"*/, v337);
+    sub_B2C35C(&StringLiteral_22993/*"userAccessary"*/, v338);
+    sub_B2C35C(&StringLiteral_20901/*"mstSvtLimitAdd"*/, v339);
+    sub_B2C35C(&StringLiteral_20843/*"mstQuestScriptMaterialOverwrite"*/, v340);
+    sub_B2C35C(&StringLiteral_17563/*"combineExp"*/, v341);
+    sub_B2C35C(&StringLiteral_23032/*"userFormation"*/, v342);
+    sub_B2C35C(&StringLiteral_20961/*"mstWarBoardMessageScript"*/, v343);
+    sub_B2C35C(&StringLiteral_20741/*"mstEventProgressValue"*/, v344);
+    sub_B2C35C(&StringLiteral_23070/*"userSvtVoicePlayed"*/, v345);
+    sub_B2C35C(&StringLiteral_20896/*"mstSvtFlag"*/, v346);
+    sub_B2C35C(&StringLiteral_20627/*"mstBoardMessage"*/, v347);
+    sub_B2C35C(&StringLiteral_20732/*"mstEventPanelScan"*/, v348);
+    sub_B2C35C(&StringLiteral_20902/*"mstSvtLimitImage"*/, v349);
+    sub_B2C35C(&StringLiteral_20706/*"mstEventDiggingBlock"*/, v350);
+    sub_B2C35C(&StringLiteral_23026/*"userEventRandomMission"*/, v351);
+    sub_B2C35C(&StringLiteral_20610/*"mstArea"*/, v352);
+    sub_B2C35C(&StringLiteral_22734/*"totalEventRaid"*/, v353);
+    sub_B2C35C(&StringLiteral_21141/*"notEndEventMissionFix"*/, v354);
+    sub_B2C35C(&StringLiteral_20859/*"mstShopScript"*/, v355);
+    sub_B2C35C(&StringLiteral_23019/*"userEventMission"*/, v356);
+    sub_B2C35C(&StringLiteral_20724/*"mstEventMissionActionAdd"*/, v357);
+    sub_B2C35C(&StringLiteral_20659/*"mstCombineTd"*/, v358);
+    sub_B2C35C(&StringLiteral_20629/*"mstBoost"*/, v359);
+    sub_B2C35C(&StringLiteral_20915/*"mstSvtScriptAdd"*/, v360);
+    sub_B2C35C(&StringLiteral_20631/*"mstBoxGachaBase"*/, v361);
+    sub_B2C35C(&StringLiteral_20618/*"mstBannerAdd"*/, v362);
+    sub_B2C35C(&StringLiteral_20605/*"mstAccessary"*/, v363);
+    sub_B2C35C(&StringLiteral_20935/*"mstTreasureDeviceSequenceWeight"*/, v364);
+    sub_B2C35C(&StringLiteral_23024/*"userEventRace"*/, v365);
+    sub_B2C35C(&StringLiteral_20826/*"mstQuestGroup"*/, v366);
+    sub_B2C35C(&StringLiteral_20740/*"mstEventPointUpperRelease"*/, v367);
+    sub_B2C35C(&StringLiteral_23068/*"userSvtLeader"*/, v368);
+    sub_B2C35C(&StringLiteral_20900/*"mstSvtLimit"*/, v369);
+    sub_B2C35C(&StringLiteral_23030/*"userFollow"*/, v370);
+    sub_B2C35C(&StringLiteral_20721/*"mstEventLocationCampaign"*/, v371);
+    sub_B2C35C(&StringLiteral_20656/*"mstCombineQp"*/, v372);
+    sub_B2C35C(&StringLiteral_20683/*"mstEvent"*/, v373);
+    sub_B2C35C(&StringLiteral_20897/*"mstSvtFlagRelease"*/, v374);
+    sub_B2C35C(&StringLiteral_23033/*"userFriendPointGachaFreeDrawCampaignLog"*/, v375);
+    sub_B2C35C(&StringLiteral_23047/*"userPrivilege"*/, v376);
+    sub_B2C35C(&StringLiteral_20661/*"mstCommandCode"*/, v377);
+    sub_B2C35C(&StringLiteral_20881/*"mstSvtAppendPassiveSkill"*/, v378);
+    sub_B2C35C(&StringLiteral_20717/*"mstEventGroup"*/, v379);
+    sub_B2C35C(&StringLiteral_20783/*"mstGachaBonusSelect"*/, v380);
+    sub_B2C35C(&StringLiteral_23011/*"userEventBoardGameToken"*/, v381);
+    sub_B2C35C(&StringLiteral_20969/*"mstWarBoardRoad"*/, v382);
+    sub_B2C35C(&StringLiteral_20634/*"mstBuff"*/, v383);
+    sub_B2C35C(&StringLiteral_23215/*"warBoardData"*/, v384);
+    sub_B2C35C(&StringLiteral_20798/*"mstIllustrator"*/, v385);
+    sub_B2C35C(&StringLiteral_22729/*"totalBoxGacha"*/, v386);
+    sub_B2C35C(&StringLiteral_20913/*"mstSvtRarity"*/, v387);
+    sub_B2C35C(&StringLiteral_20945/*"mstWarAdd"*/, v388);
+    sub_B2C35C(&StringLiteral_20810/*"mstMapGimmickPathRelease"*/, v389);
+    sub_B2C35C(&StringLiteral_23034/*"userFriendRequestHistory"*/, v390);
+    sub_B2C35C(&StringLiteral_22990/*"user"*/, v391);
+    sub_B2C35C(&StringLiteral_16897/*"boxGachaHistory"*/, v392);
+    sub_B2C35C(&StringLiteral_20778/*"mstFuncGroup"*/, v393);
+    sub_B2C35C(&StringLiteral_20666/*"mstCommonConsume"*/, v394);
+    sub_B2C35C(&StringLiteral_20956/*"mstWarBoardEventScript"*/, v395);
+    sub_B2C35C(&StringLiteral_20794/*"mstGiftAdd"*/, v396);
+    sub_B2C35C(&StringLiteral_20769/*"mstEventUi"*/, v397);
+    sub_B2C35C(&StringLiteral_20869/*"mstSpotImage"*/, v398);
+    sub_B2C35C(&StringLiteral_20892/*"mstSvtCostumeRelease"*/, v399);
+    sub_B2C35C(&StringLiteral_20805/*"mstMapGimmick"*/, v400);
+    sub_B2C35C(&StringLiteral_20767/*"mstEventTutorial"*/, v401);
+    sub_B2C35C(&StringLiteral_20979/*"mstWarBoardStageWall"*/, v402);
+    sub_B2C35C(&StringLiteral_20609/*"mstAiField"*/, v403);
+    sub_B2C35C(&StringLiteral_20922/*"mstSvtTreasureDeviceRelease"*/, v404);
+    sub_B2C35C(&StringLiteral_20829/*"mstQuestPhase"*/, v405);
+    sub_B2C35C(&StringLiteral_23013/*"userEventDataLost"*/, v406);
+    sub_B2C35C(&StringLiteral_20882/*"mstSvtAppendPassiveSkillUnlock"*/, v407);
+    sub_B2C35C(&StringLiteral_20921/*"mstSvtTreasureDeviceDamage"*/, v408);
+    sub_B2C35C(&StringLiteral_20873/*"mstStage"*/, v409);
+    sub_B2C35C(&StringLiteral_20649/*"mstCombine"*/, v410);
+    sub_B2C35C(&StringLiteral_20695/*"mstEventCampaign"*/, v411);
+    sub_B2C35C(&StringLiteral_20976/*"mstWarBoardStageNpc"*/, v412);
+    sub_B2C35C(&StringLiteral_18627/*"exchangeSvt"*/, v413);
+    sub_B2C35C(&StringLiteral_20874/*"mstStageRemap"*/, v414);
+    sub_B2C35C(&StringLiteral_20847/*"mstRestriction"*/, v415);
+    sub_B2C35C(&StringLiteral_20840/*"mstQuestScript"*/, v416);
+    sub_B2C35C(&StringLiteral_20755/*"mstEventRewardSceneRelease"*/, v417);
+    sub_B2C35C(&StringLiteral_20939/*"mstVoiceCond"*/, v418);
+    sub_B2C35C(&StringLiteral_23056/*"userSubEquip"*/, v419);
+    sub_B2C35C(&StringLiteral_20748/*"mstEventRecipe"*/, v420);
+    sub_B2C35C(&StringLiteral_20891/*"mstSvtCostume"*/, v421);
+    sub_B2C35C(&StringLiteral_20911/*"mstSvtProfile"*/, v422);
+    sub_B2C35C(&StringLiteral_20668/*"mstCommonRestriction"*/, v423);
+    sub_B2C35C(&StringLiteral_23040/*"userHeelPortrait"*/, v424);
+    sub_B2C35C(&StringLiteral_20864/*"mstSkillGroupOverwrite"*/, v425);
+    sub_B2C35C(&StringLiteral_22999/*"userCommandCodeCollection"*/, v426);
+    sub_B2C35C(&StringLiteral_20664/*"mstCommandCodeSkillRelease"*/, v427);
+    sub_B2C35C(&StringLiteral_20832/*"mstQuestPickup"*/, v428);
+    sub_B2C35C(&StringLiteral_20975/*"mstWarBoardStageLayout"*/, v429);
+    sub_B2C35C(&StringLiteral_20950/*"mstWarBoardActionTrendCond"*/, v430);
+    sub_B2C35C(&StringLiteral_20697/*"mstEventCombine"*/, v431);
+    sub_B2C35C(&StringLiteral_20964/*"mstWarBoardQuest"*/, v432);
+    sub_B2C35C(&StringLiteral_20824/*"mstQuestConsumeItem"*/, v433);
+    sub_B2C35C(&StringLiteral_20831/*"mstQuestPhaseDetailAdd"*/, v434);
+    sub_B2C35C(&StringLiteral_20797/*"mstHeelPortrait"*/, v435);
+    sub_B2C35C(&StringLiteral_23046/*"userPresentHistory"*/, v436);
+    sub_B2C35C(&StringLiteral_20965/*"mstWarBoardRatingBase"*/, v437);
+    sub_B2C35C(&StringLiteral_20788/*"mstGachaImage"*/, v438);
+    sub_B2C35C(&StringLiteral_20681/*"mstEquipImage"*/, v439);
+    sub_B2C35C(&StringLiteral_23025/*"userEventRaid"*/, v440);
+    sub_B2C35C(&StringLiteral_20887/*"mstSvtCollection"*/, v441);
+    sub_B2C35C(&StringLiteral_18913/*"friendshipQuestDialogInfo"*/, v442);
+    sub_B2C35C(&StringLiteral_20817/*"mstNews"*/, v443);
+    sub_B2C35C(&StringLiteral_20780/*"mstGacha"*/, v444);
+    sub_B2C35C(&StringLiteral_20863/*"mstSkillGroup"*/, v445);
+    sub_B2C35C(&StringLiteral_20796/*"mstGuide"*/, v446);
+    sub_B2C35C(&StringLiteral_20644/*"mstClassBoardLock"*/, v447);
+    sub_B2C35C(&StringLiteral_20739/*"mstEventPointUpper"*/, v448);
+    sub_B2C35C(&StringLiteral_20625/*"mstBlankEarthSpot"*/, v449);
+    sub_B2C35C(&StringLiteral_20926/*"mstTerminalOverwrite"*/, v450);
+    sub_B2C35C(&StringLiteral_20682/*"mstEquipSkill"*/, v451);
+    sub_B2C35C(&StringLiteral_20771/*"mstEventUiValue"*/, v452);
+    sub_B2C35C(&StringLiteral_23001/*"userContinue"*/, v453);
+    sub_B2C35C(&StringLiteral_20822/*"mstQuestAdd"*/, v454);
+    sub_B2C35C(&StringLiteral_20643/*"mstClassBoardLine"*/, v455);
+    sub_B2C35C(&StringLiteral_22942/*"updateProfileDialogInfo"*/, v456);
+    sub_B2C35C(&StringLiteral_20937/*"mstVoice"*/, v457);
+    sub_B2C35C(&StringLiteral_23020/*"userEventMissionConditionDetail"*/, v458);
+    sub_B2C35C(&StringLiteral_20611/*"mstAssetbundleKey"*/, v459);
+    sub_B2C35C(&StringLiteral_20730/*"mstEventPanelMap"*/, v460);
+    sub_B2C35C(&StringLiteral_23043/*"userLogin"*/, v461);
+    sub_B2C35C(&StringLiteral_20801/*"mstLoginQuest"*/, v462);
+    sub_B2C35C(&StringLiteral_20819/*"mstPartialMaintenance"*/, v463);
+    sub_B2C35C(&StringLiteral_23027/*"userEventSpot"*/, v464);
+    sub_B2C35C(&StringLiteral_20750/*"mstEventReward"*/, v465);
+    sub_B2C35C(&StringLiteral_20703/*"mstEventDataLostBattleReset"*/, v466);
+    sub_B2C35C(&StringLiteral_20974/*"mstWarBoardStageDetail"*/, v467);
+    sub_B2C35C(&StringLiteral_23023/*"userEventQuestCooltime"*/, v468);
+    sub_B2C35C(&StringLiteral_20841/*"mstQuestScriptBranchMaterial"*/, v469);
+    sub_B2C35C(&StringLiteral_20712/*"mstEventFatigueRecovery"*/, v470);
+    sub_B2C35C(&StringLiteral_20952/*"mstWarBoardAi"*/, v471);
+    sub_B2C35C(&StringLiteral_20931/*"mstTreasureBoxTalk"*/, v472);
+    sub_B2C35C(&StringLiteral_20955/*"mstWarBoardEvent"*/, v473);
+    sub_B2C35C(&StringLiteral_20941/*"mstVoicePlayCond"*/, v474);
+    sub_B2C35C(&StringLiteral_20785/*"mstGachaDetail"*/, v475);
+    sub_B2C35C(&StringLiteral_20761/*"mstEventSuperBoss"*/, v476);
+    sub_B2C35C(&StringLiteral_20861/*"mstSkillAdd"*/, v477);
+    byte_4188E0E = 1;
   }
-  v478 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B170CC(
-                                                                            System_Collections_Generic_Dictionary_DataNameKind_Kind__string__TypeInfo,
-                                                                            v1,
-                                                                            v2,
-                                                                            v3,
-                                                                            v4);
+  v478 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B2C42C(System_Collections_Generic_Dictionary_DataNameKind_Kind__string__TypeInfo);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string____ctor(
     v478,
-    (const MethodInfo_2DFF0A0 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string___ctor__);
+    (const MethodInfo_2E457D0 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string___ctor__);
   if ( !v478 )
-    sub_B170D4();
+    sub_B2C434(v479, v480);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     0,
     0LL,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     1,
-    (System_String_o *)StringLiteral_20791/*"mstSvt"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20878/*"mstSvt"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     2,
-    (System_String_o *)StringLiteral_20802/*"mstSvtComment"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20889/*"mstSvtComment"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     3,
-    (System_String_o *)StringLiteral_20823/*"mstSvtProfile"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20911/*"mstSvtProfile"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     4,
-    (System_String_o *)StringLiteral_20856/*"mstWar"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20944/*"mstWar"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     5,
-    (System_String_o *)StringLiteral_16566/*"battle"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16630/*"battle"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     6,
-    (System_String_o *)StringLiteral_20844/*"mstTreasureDevice"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20932/*"mstTreasureDevice"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     7,
-    (System_String_o *)StringLiteral_20813/*"mstSvtLimit"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20900/*"mstSvtLimit"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     8,
-    (System_String_o *)StringLiteral_20831/*"mstSvtTreasureDevice"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20919/*"mstSvtTreasureDevice"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     9,
-    (System_String_o *)StringLiteral_20554/*"mstClass"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20639/*"mstClass"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     10,
-    (System_String_o *)StringLiteral_20826/*"mstSvtScript"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20914/*"mstSvtScript"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     11,
-    (System_String_o *)StringLiteral_20796/*"mstSvtCard"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20883/*"mstSvtCard"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     12,
-    (System_String_o *)StringLiteral_20829/*"mstSvtSkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20917/*"mstSvtSkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     13,
-    (System_String_o *)StringLiteral_20821/*"mstSvtPassiveSkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20909/*"mstSvtPassiveSkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     14,
-    (System_String_o *)StringLiteral_22965/*"userSvt"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23058/*"userSvt"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     15,
-    (System_String_o *)StringLiteral_22976/*"userSvtStorage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23069/*"userSvtStorage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     16,
-    (System_String_o *)StringLiteral_20786/*"mstStage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20873/*"mstStage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     17,
-    (System_String_o *)StringLiteral_20811/*"mstSvtGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20898/*"mstSvtGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     18,
-    (System_String_o *)StringLiteral_20540/*"mstBlankEarthSpot"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20625/*"mstBlankEarthSpot"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     19,
-    (System_String_o *)StringLiteral_20780/*"mstSpot"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20867/*"mstSpot"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     20,
-    (System_String_o *)StringLiteral_20782/*"mstSpotImage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20869/*"mstSpotImage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     21,
-    (System_String_o *)StringLiteral_20785/*"mstSpotRoad"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20872/*"mstSpotRoad"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     22,
-    (System_String_o *)StringLiteral_20720/*"mstMapGimmick"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20805/*"mstMapGimmick"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     23,
-    (System_String_o *)StringLiteral_20708/*"mstGift"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20793/*"mstGift"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     24,
-    (System_String_o *)StringLiteral_20709/*"mstGiftAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20794/*"mstGiftAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     25,
-    (System_String_o *)StringLiteral_20790/*"mstSubEquip"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20877/*"mstSubEquip"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     26,
-    (System_String_o *)StringLiteral_22897/*"user"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22990/*"user"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     27,
-    (System_String_o *)StringLiteral_22946/*"userGame"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23039/*"userGame"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     28,
-    (System_String_o *)StringLiteral_22910/*"userDeck"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23003/*"userDeck"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     29,
-    (System_String_o *)StringLiteral_22969/*"userSvtCollection"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23062/*"userSvtCollection"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     30,
-    (System_String_o *)StringLiteral_20689/*"mstFriendship"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20774/*"mstFriendship"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     31,
-    (System_String_o *)StringLiteral_20695/*"mstGacha"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20780/*"mstGacha"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     32,
-    (System_String_o *)StringLiteral_20703/*"mstGachaImage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20788/*"mstGachaImage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     33,
-    (System_String_o *)StringLiteral_22942/*"userGacha"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23035/*"userGacha"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     34,
-    (System_String_o *)StringLiteral_22949/*"userItem"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23042/*"userItem"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     35,
-    (System_String_o *)StringLiteral_20714/*"mstItem"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20799/*"mstItem"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     36,
-    (System_String_o *)StringLiteral_20707/*"mstGachaTicket"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20792/*"mstGachaTicket"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     37,
-    (System_String_o *)StringLiteral_20520/*"mstAccessary"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20605/*"mstAccessary"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     38,
-    (System_String_o *)StringLiteral_22900/*"userAccessary"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22993/*"userAccessary"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     39,
-    (System_String_o *)StringLiteral_22963/*"userSubEquip"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23056/*"userSubEquip"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     40,
-    (System_String_o *)StringLiteral_22527/*"tblUserGame"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22620/*"tblUserGame"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     41,
-    (System_String_o *)StringLiteral_20767/*"mstShop"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20854/*"mstShop"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     42,
-    (System_String_o *)StringLiteral_20789/*"mstStoneShop"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20876/*"mstStoneShop"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     43,
-    (System_String_o *)StringLiteral_20531/*"mstBankShop"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20616/*"mstBankShop"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     44,
-    (System_String_o *)StringLiteral_20772/*"mstShopScript"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20859/*"mstShopScript"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     45,
-    (System_String_o *)StringLiteral_20593/*"mstEquip"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20678/*"mstEquip"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     46,
-    (System_String_o *)StringLiteral_20595/*"mstEquipExp"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20680/*"mstEquipExp"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     47,
-    (System_String_o *)StringLiteral_20597/*"mstEquipSkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20682/*"mstEquipSkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     48,
-    (System_String_o *)StringLiteral_22914/*"userEquip"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23007/*"userEquip"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     49,
-    (System_String_o *)StringLiteral_22939/*"userFormation"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23032/*"userFormation"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     50,
-    (System_String_o *)StringLiteral_20773/*"mstSkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20860/*"mstSkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     51,
-    (System_String_o *)StringLiteral_20779/*"mstSkillLv"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20866/*"mstSkillLv"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     52,
-    (System_String_o *)StringLiteral_20775/*"mstSkillDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20862/*"mstSkillDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     53,
-    (System_String_o *)StringLiteral_20690/*"mstFunc"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20775/*"mstFunc"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     54,
-    (System_String_o *)StringLiteral_20549/*"mstBuff"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20634/*"mstBuff"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     55,
-    (System_String_o *)StringLiteral_20704/*"mstGachaRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20789/*"mstGachaRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     56,
-    (System_String_o *)StringLiteral_22956/*"userQuest"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23049/*"userQuest"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     57,
-    (System_String_o *)StringLiteral_22957/*"userQuestInfo"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23050/*"userQuestInfo"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     58,
-    (System_String_o *)StringLiteral_22958/*"userQuestRecord"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23051/*"userQuestRecord"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     59,
-    (System_String_o *)StringLiteral_20848/*"mstUserExp"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20936/*"mstUserExp"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     60,
-    (System_String_o *)StringLiteral_20730/*"mstNews"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20817/*"mstNews"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     61,
-    (System_String_o *)StringLiteral_20837/*"mstTelop"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20925/*"mstTelop"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     62,
-    (System_String_o *)StringLiteral_21237/*"otherUserGame"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21327/*"otherUserGame"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     63,
-    (System_String_o *)StringLiteral_22526/*"tblFriend"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22619/*"tblFriend"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     64,
-    (System_String_o *)StringLiteral_22952/*"userPresentBox"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23045/*"userPresentBox"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     65,
-    (System_String_o *)StringLiteral_20598/*"mstEvent"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20683/*"mstEvent"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     66,
-    (System_String_o *)StringLiteral_20734/*"mstQuest"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20821/*"mstQuest"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     67,
-    (System_String_o *)StringLiteral_20735/*"mstQuestAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20822/*"mstQuestAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     68,
-    (System_String_o *)StringLiteral_20748/*"mstQuestRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20835/*"mstQuestRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     69,
-    (System_String_o *)StringLiteral_20742/*"mstQuestPhase"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20829/*"mstQuestPhase"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     70,
-    (System_String_o *)StringLiteral_20743/*"mstQuestPhaseDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20830/*"mstQuestPhaseDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     71,
-    (System_String_o *)StringLiteral_20739/*"mstQuestGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20826/*"mstQuestGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     72,
-    (System_String_o *)StringLiteral_20747/*"mstQuestRandomGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20834/*"mstQuestRandomGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     73,
-    (System_String_o *)StringLiteral_20737/*"mstQuestConsumeItem"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20824/*"mstQuestConsumeItem"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     74,
-    (System_String_o *)StringLiteral_20741/*"mstQuestMessage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20828/*"mstQuestMessage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     75,
-    (System_String_o *)StringLiteral_23063/*"viewQuestInfo"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23157/*"viewQuestInfo"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     76,
-    (System_String_o *)StringLiteral_23061/*"viewEnemy"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23155/*"viewEnemy"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     77,
-    (System_String_o *)StringLiteral_23062/*"viewQuestEnemyInfo"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23156/*"viewQuestEnemyInfo"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     78,
-    (System_String_o *)StringLiteral_20525/*"mstArea"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20610/*"mstArea"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     79,
-    (System_String_o *)StringLiteral_20538/*"mstBgm"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20623/*"mstBgm"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     80,
-    (System_String_o *)StringLiteral_20657/*"mstEventQuest"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20742/*"mstEventQuest"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     81,
-    (System_String_o *)StringLiteral_20610/*"mstEventCampaign"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20695/*"mstEventCampaign"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     82,
-    (System_String_o *)StringLiteral_20571/*"mstCombineQp"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20656/*"mstCombineQp"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     83,
-    (System_String_o *)StringLiteral_20570/*"mstCombineMaterial"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20655/*"mstCombineMaterial"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     84,
-    (System_String_o *)StringLiteral_20612/*"mstEventCombine"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20697/*"mstEventCombine"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     85,
-    (System_String_o *)StringLiteral_20807/*"mstSvtExp"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20894/*"mstSvtExp"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     86,
-    (System_String_o *)StringLiteral_20573/*"mstCombineSkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20658/*"mstCombineSkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     87,
-    (System_String_o *)StringLiteral_20574/*"mstCombineTd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20659/*"mstCombineTd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     88,
-    (System_String_o *)StringLiteral_20713/*"mstIllustrator"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20798/*"mstIllustrator"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     89,
-    (System_String_o *)StringLiteral_20588/*"mstCv"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20673/*"mstCv"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     90,
-    (System_String_o *)StringLiteral_20846/*"mstTreasureDeviceLv"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20934/*"mstTreasureDeviceLv"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     91,
-    (System_String_o *)StringLiteral_20845/*"mstTreasureDeviceDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20933/*"mstTreasureDeviceDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     92,
-    (System_String_o *)StringLiteral_22938/*"userFollower"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23031/*"userFollower"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     93,
-    (System_String_o *)StringLiteral_21068/*"npcFollower"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21156/*"npcFollower"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     94,
-    (System_String_o *)StringLiteral_21073/*"npcSvtFollower"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21161/*"npcSvtFollower"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     95,
-    (System_String_o *)StringLiteral_22916/*"userEvent"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23009/*"userEvent"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     96,
-    (System_String_o *)StringLiteral_22955/*"userProfile"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23048/*"userProfile"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     97,
-    (System_String_o *)StringLiteral_22960/*"userShop"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23053/*"userShop"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     98,
-    (System_String_o *)StringLiteral_22908/*"userContinue"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23001/*"userContinue"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     99,
-    (System_String_o *)StringLiteral_20585/*"mstConstant"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20670/*"mstConstant"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     100,
-    (System_String_o *)StringLiteral_20586/*"mstConstantLong"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20671/*"mstConstantLong"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     101,
-    (System_String_o *)StringLiteral_20587/*"mstConstantStr"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20672/*"mstConstantStr"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     102,
-    (System_String_o *)StringLiteral_20580/*"mstCommandSpell"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20665/*"mstCommandSpell"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     103,
-    (System_String_o *)StringLiteral_20522/*"mstAi"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20607/*"mstAi"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     104,
-    (System_String_o *)StringLiteral_20523/*"mstAiAct"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20608/*"mstAiAct"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     105,
-    (System_String_o *)StringLiteral_20835/*"mstSvtVoice"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20923/*"mstSvtVoice"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     106,
-    (System_String_o *)StringLiteral_20528/*"mstAttriRelation"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20613/*"mstAttriRelation"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     107,
-    (System_String_o *)StringLiteral_20561/*"mstClassRelation"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20646/*"mstClassRelation"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     108,
-    (System_String_o *)StringLiteral_20590/*"mstEffect"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20675/*"mstEffect"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     109,
-    (System_String_o *)StringLiteral_20596/*"mstEquipImage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20681/*"mstEquipImage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     110,
-    (System_String_o *)StringLiteral_20567/*"mstCombineLimit"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20652/*"mstCombineLimit"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     111,
-    (System_String_o *)StringLiteral_20553/*"mstCard"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20638/*"mstCard"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     112,
-    (System_String_o *)StringLiteral_20572/*"mstCombineQpSvtEquip"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20657/*"mstCombineQpSvtEquip"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     113,
-    (System_String_o *)StringLiteral_20814/*"mstSvtLimitAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20901/*"mstSvtLimitAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     114,
-    (System_String_o *)StringLiteral_20825/*"mstSvtRarity"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20913/*"mstSvtRarity"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     115,
-    (System_String_o *)StringLiteral_20766/*"mstSetItem"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20853/*"mstSetItem"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     116,
-    (System_String_o *)StringLiteral_20759/*"mstRecover"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20846/*"mstRecover"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     117,
-    (System_String_o *)StringLiteral_20532/*"mstBanner"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20617/*"mstBanner"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     118,
-    (System_String_o *)StringLiteral_20771/*"mstShopRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20858/*"mstShopRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     119,
-    (System_String_o *)StringLiteral_20665/*"mstEventReward"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20750/*"mstEventReward"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     120,
-    (System_String_o *)StringLiteral_20619/*"mstEventDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20704/*"mstEventDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     121,
-    (System_String_o *)StringLiteral_20677/*"mstEventSvt"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20762/*"mstEventSvt"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     122,
-    (System_String_o *)StringLiteral_20545/*"mstBoxGacha"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20630/*"mstBoxGacha"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     123,
-    (System_String_o *)StringLiteral_20546/*"mstBoxGachaBase"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20631/*"mstBoxGachaBase"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     124,
-    (System_String_o *)StringLiteral_20548/*"mstBoxGachaTalk"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20633/*"mstBoxGachaTalk"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     125,
-    (System_String_o *)StringLiteral_22902/*"userBoxGacha"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22995/*"userBoxGacha"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     126,
-    (System_String_o *)StringLiteral_16831/*"boxGachaHistory"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16897/*"boxGachaHistory"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     127,
-    (System_String_o *)StringLiteral_20534/*"mstBattleBg"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20619/*"mstBattleBg"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     128,
-    (System_String_o *)StringLiteral_20839/*"mstTips"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20927/*"mstTips"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     129,
-    (System_String_o *)StringLiteral_22950/*"userLogin"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23043/*"userLogin"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     130,
-    (System_String_o *)StringLiteral_20849/*"mstVoice"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20937/*"mstVoice"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     131,
-    (System_String_o *)StringLiteral_20667/*"mstEventRewardExtra"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20752/*"mstEventRewardExtra"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     132,
-    (System_String_o *)StringLiteral_20637/*"mstEventMission"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20722/*"mstEventMission"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     133,
-    (System_String_o *)StringLiteral_20641/*"mstEventMissionCondition"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20726/*"mstEventMissionCondition"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     134,
-    (System_String_o *)StringLiteral_20642/*"mstEventMissionConditionDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20727/*"mstEventMissionConditionDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     135,
-    (System_String_o *)StringLiteral_20638/*"mstEventMissionAction"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20723/*"mstEventMissionAction"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     136,
-    (System_String_o *)StringLiteral_20639/*"mstEventMissionActionAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20724/*"mstEventMissionActionAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     139,
-    (System_String_o *)StringLiteral_20584/*"mstCompleteMission"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20669/*"mstCompleteMission"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     137,
-    (System_String_o *)StringLiteral_20640/*"mstEventMissionAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20725/*"mstEventMissionAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     138,
-    (System_String_o *)StringLiteral_20671/*"mstEventRewardSet"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20756/*"mstEventRewardSet"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     140,
-    (System_String_o *)StringLiteral_22926/*"userEventMission"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23019/*"userEventMission"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     141,
-    (System_String_o *)StringLiteral_22927/*"userEventMissionConditionDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23020/*"userEventMissionConditionDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     142,
-    (System_String_o *)StringLiteral_20547/*"mstBoxGachaBaseDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20632/*"mstBoxGachaBaseDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     143,
-    (System_String_o *)StringLiteral_20563/*"mstClosedMessage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20648/*"mstClosedMessage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     144,
-    (System_String_o *)StringLiteral_22975/*"userSvtLeader"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23068/*"userSvtLeader"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     145,
-    (System_String_o *)StringLiteral_20693/*"mstFuncGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20778/*"mstFuncGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     146,
-    (System_String_o *)StringLiteral_20661/*"mstEventRaid"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20746/*"mstEventRaid"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     147,
-    (System_String_o *)StringLiteral_22641/*"totalEventRaid"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22734/*"totalEventRaid"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     148,
-    (System_String_o *)StringLiteral_22932/*"userEventRaid"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23025/*"userEventRaid"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     149,
-    (System_String_o *)StringLiteral_20649/*"mstEventPoint"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20734/*"mstEventPoint"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     150,
-    (System_String_o *)StringLiteral_20652/*"mstEventPointGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20737/*"mstEventPointGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     151,
-    (System_String_o *)StringLiteral_22639/*"totalEventPoint"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22732/*"totalEventPoint"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     152,
-    (System_String_o *)StringLiteral_22929/*"userEventPoint"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23022/*"userEventPoint"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     153,
-    (System_String_o *)StringLiteral_22953/*"userPresentHistory"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23046/*"userPresentHistory"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     154,
-    (System_String_o *)StringLiteral_20726/*"mstMasterMission"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20813/*"mstMasterMission"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     155,
-    (System_String_o *)StringLiteral_20806/*"mstSvtExceed"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20893/*"mstSvtExceed"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     156,
-    (System_String_o *)StringLiteral_20732/*"mstPartialMaintenance"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20819/*"mstPartialMaintenance"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     157,
-    (System_String_o *)StringLiteral_20711/*"mstGuide"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20796/*"mstGuide"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     158,
-    (System_String_o *)StringLiteral_20727/*"mstMasterMissionDisplayInfo"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20814/*"mstMasterMissionDisplayInfo"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     159,
-    (System_String_o *)StringLiteral_20702/*"mstGachaGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20787/*"mstGachaGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     160,
-    (System_String_o *)StringLiteral_20750/*"mstQuestReset"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20837/*"mstQuestReset"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     161,
-    (System_String_o *)StringLiteral_20857/*"mstWarAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20945/*"mstWarAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     162,
-    (System_String_o *)StringLiteral_20633/*"mstEventItemDisplay"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20718/*"mstEventItemDisplay"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     163,
-    (System_String_o *)StringLiteral_20634/*"mstEventItemDisplayGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20719/*"mstEventItemDisplayGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     164,
-    (System_String_o *)StringLiteral_20635/*"mstEventItemDisplayRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20720/*"mstEventItemDisplayRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     165,
-    (System_String_o *)StringLiteral_20682/*"mstEventTutorial"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20767/*"mstEventTutorial"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     166,
-    (System_String_o *)StringLiteral_20683/*"mstEventTutorialCond"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20768/*"mstEventTutorialCond"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     167,
-    (System_String_o *)StringLiteral_20855/*"mstVoiceRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20943/*"mstVoiceRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     168,
-    (System_String_o *)StringLiteral_20676/*"mstEventSuperBoss"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20761/*"mstEventSuperBoss"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     169,
-    (System_String_o *)StringLiteral_22935/*"userEventSuperBoss"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23028/*"userEventSuperBoss"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     170,
-    (System_String_o *)StringLiteral_20753/*"mstQuestScript"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20840/*"mstQuestScript"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     171,
-    (System_String_o *)StringLiteral_20757/*"mstQuestScriptRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20844/*"mstQuestScriptRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     172,
-    (System_String_o *)StringLiteral_20728/*"mstMaterialFolder"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20815/*"mstMaterialFolder"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     173,
-    (System_String_o *)StringLiteral_20760/*"mstRestriction"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20847/*"mstRestriction"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     174,
-    (System_String_o *)StringLiteral_20751/*"mstQuestRestriction"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20838/*"mstQuestRestriction"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     175,
-    (System_String_o *)StringLiteral_20836/*"mstSvtVoiceRelation"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20924/*"mstSvtVoiceRelation"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     176,
-    (System_String_o *)StringLiteral_20769/*"mstShopDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20856/*"mstShopDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     177,
-    (System_String_o *)StringLiteral_20827/*"mstSvtScriptAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20915/*"mstSvtScriptAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     178,
-    (System_String_o *)StringLiteral_20564/*"mstCombine"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20649/*"mstCombine"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     179,
-    (System_String_o *)StringLiteral_20524/*"mstAiField"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20609/*"mstAiField"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     180,
-    (System_String_o *)StringLiteral_20803/*"mstSvtCommentAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20890/*"mstSvtCommentAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     181,
-    (System_String_o *)StringLiteral_20628/*"mstEventFilter"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20713/*"mstEventFilter"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     182,
-    (System_String_o *)StringLiteral_22964/*"userSupportDeck"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23057/*"userSupportDeck"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     183,
-    (System_String_o *)StringLiteral_20669/*"mstEventRewardScene"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20754/*"mstEventRewardScene"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     184,
-    (System_String_o *)StringLiteral_20687/*"mstEventVoicePlay"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20772/*"mstEventVoicePlay"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     185,
-    (System_String_o *)StringLiteral_20706/*"mstGachaSub"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20791/*"mstGachaSub"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     186,
-    (System_String_o *)StringLiteral_20700/*"mstGachaDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20785/*"mstGachaDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     187,
-    (System_String_o *)StringLiteral_20698/*"mstGachaBonusSelect"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20783/*"mstGachaBonusSelect"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     188,
-    (System_String_o *)StringLiteral_20699/*"mstGachaBonusSelectLineup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20784/*"mstGachaBonusSelectLineup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     189,
-    (System_String_o *)StringLiteral_20798/*"mstSvtChange"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20885/*"mstSvtChange"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     190,
-    (System_String_o *)StringLiteral_20851/*"mstVoiceCond"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20939/*"mstVoiceCond"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     191,
-    (System_String_o *)StringLiteral_20539/*"mstBgmRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20624/*"mstBgmRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     192,
-    (System_String_o *)StringLiteral_20729/*"mstMyroomAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20816/*"mstMyroomAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     193,
-    (System_String_o *)StringLiteral_20768/*"mstShopAction"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20855/*"mstShopAction"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     194,
-    (System_String_o *)StringLiteral_20670/*"mstEventRewardSceneRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20755/*"mstEventRewardSceneRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     195,
-    (System_String_o *)StringLiteral_20717/*"mstMap"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20802/*"mstMap"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     196,
-    (System_String_o *)StringLiteral_20719/*"mstMapCond"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20804/*"mstMapCond"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     197,
-    (System_String_o *)StringLiteral_20718/*"mstMapButton"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20803/*"mstMapButton"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     198,
-    (System_String_o *)StringLiteral_20533/*"mstBannerAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20618/*"mstBannerAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     199,
-    (System_String_o *)StringLiteral_20736/*"mstQuestBehavior"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20823/*"mstQuestBehavior"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     200,
-    (System_String_o *)StringLiteral_20599/*"mstEventAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20684/*"mstEventAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     201,
-    (System_String_o *)StringLiteral_20840/*"mstTotalLogin"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20928/*"mstTotalLogin"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     202,
-    (System_String_o *)StringLiteral_20808/*"mstSvtFilter"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20895/*"mstSvtFilter"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     203,
-    (System_String_o *)StringLiteral_20566/*"mstCombineCostume"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20651/*"mstCombineCostume"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     204,
-    (System_String_o *)StringLiteral_20804/*"mstSvtCostume"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20891/*"mstSvtCostume"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     205,
-    (System_String_o *)StringLiteral_20805/*"mstSvtCostumeRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20892/*"mstSvtCostumeRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     206,
-    (System_String_o *)StringLiteral_22941/*"userFriendRequestHistory"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23034/*"userFriendRequestHistory"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     207,
-    (System_String_o *)StringLiteral_22901/*"userBlacklist"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22994/*"userBlacklist"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     208,
-    (System_String_o *)StringLiteral_20715/*"mstItemSelect"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20800/*"mstItemSelect"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     209,
-    (System_String_o *)StringLiteral_20659/*"mstEventRace"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20744/*"mstEventRace"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     210,
-    (System_String_o *)StringLiteral_20660/*"mstEventRaceResult"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20745/*"mstEventRaceResult"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     211,
-    (System_String_o *)StringLiteral_20746/*"mstQuestRacePoint"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20833/*"mstQuestRacePoint"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     212,
-    (System_String_o *)StringLiteral_22931/*"userEventRace"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23024/*"userEventRace"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     213,
-    (System_String_o *)StringLiteral_20672/*"mstEventScript"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20757/*"mstEventScript"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     214,
-    (System_String_o *)StringLiteral_20673/*"mstEventScriptRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20758/*"mstEventScriptRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     215,
-    (System_String_o *)StringLiteral_20784/*"mstSpotPath"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20871/*"mstSpotPath"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     216,
-    (System_String_o *)StringLiteral_20781/*"mstSpotAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20868/*"mstSpotAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     217,
-    (System_String_o *)StringLiteral_22640/*"totalEventRace"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22733/*"totalEventRace"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     218,
-    (System_String_o *)StringLiteral_20653/*"mstEventPointGroupAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20738/*"mstEventPointGroupAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     219,
-    (System_String_o *)StringLiteral_20854/*"mstVoicePlayGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20942/*"mstVoicePlayGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     220,
-    (System_String_o *)StringLiteral_20853/*"mstVoicePlayCond"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20941/*"mstVoicePlayCond"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     221,
-    (System_String_o *)StringLiteral_20705/*"mstGachaStoryAdjust"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20790/*"mstGachaStoryAdjust"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     222,
-    (System_String_o *)StringLiteral_20809/*"mstSvtFlag"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20896/*"mstSvtFlag"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     223,
-    (System_String_o *)StringLiteral_20810/*"mstSvtFlagRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20897/*"mstSvtFlagRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     224,
-    (System_String_o *)StringLiteral_20636/*"mstEventLocationCampaign"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20721/*"mstEventLocationCampaign"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     225,
-    (System_String_o *)StringLiteral_20552/*"mstCampaignInfo"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20637/*"mstCampaignInfo"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     226,
-    (System_String_o *)StringLiteral_20589/*"mstDialogMessage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20674/*"mstDialogMessage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     227,
-    (System_String_o *)StringLiteral_20812/*"mstSvtIndividuality"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20899/*"mstSvtIndividuality"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     228,
-    (System_String_o *)StringLiteral_20542/*"mstBoardMessage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20627/*"mstBoardMessage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     229,
-    (System_String_o *)StringLiteral_20543/*"mstBoardMessageRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20628/*"mstBoardMessageRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     230,
-    (System_String_o *)StringLiteral_20678/*"mstEventSvtFatigue"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20763/*"mstEventSvtFatigue"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     231,
-    (System_String_o *)StringLiteral_22921/*"userEventDeck"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23014/*"userEventDeck"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     232,
-    (System_String_o *)StringLiteral_20680/*"mstEventTower"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20765/*"mstEventTower"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     233,
-    (System_String_o *)StringLiteral_20681/*"mstEventTowerReward"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20766/*"mstEventTowerReward"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     234,
-    (System_String_o *)StringLiteral_20608/*"mstEventBulletinBoard"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20693/*"mstEventBulletinBoard"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     235,
-    (System_String_o *)StringLiteral_20609/*"mstEventBulletinBoardRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20694/*"mstEventBulletinBoardRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     236,
-    (System_String_o *)StringLiteral_20626/*"mstEventFactory"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20711/*"mstEventFactory"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     237,
-    (System_String_o *)StringLiteral_20770/*"mstShopGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20857/*"mstShopGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     238,
-    (System_String_o *)StringLiteral_20529/*"mstAuraEffect"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20614/*"mstAuraEffect"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     239,
-    (System_String_o *)StringLiteral_20530/*"mstAuraEffectPosOverwrite"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20615/*"mstAuraEffectPosOverwrite"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     240,
-    (System_String_o *)StringLiteral_22928/*"userEventMissionFix"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23021/*"userEventMissionFix"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     241,
-    (System_String_o *)StringLiteral_21053/*"notEndEventMissionFix"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21141/*"notEndEventMissionFix"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     242,
-    (System_String_o *)StringLiteral_20591/*"mstEnemyMaster"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20676/*"mstEnemyMaster"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     243,
-    (System_String_o *)StringLiteral_20592/*"mstEnemyMasterBattle"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20677/*"mstEnemyMasterBattle"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     244,
-    (System_String_o *)StringLiteral_20830/*"mstSvtSkillRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20918/*"mstSvtSkillRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     245,
-    (System_String_o *)StringLiteral_20822/*"mstSvtPassiveSkillRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20910/*"mstSvtPassiveSkillRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     246,
-    (System_String_o *)StringLiteral_20834/*"mstSvtTreasureDeviceRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20922/*"mstSvtTreasureDeviceRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     247,
-    (System_String_o *)StringLiteral_20724/*"mstMapGimmickRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20811/*"mstMapGimmickRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     248,
-    (System_String_o *)StringLiteral_20576/*"mstCommandCode"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20661/*"mstCommandCode"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     249,
-    (System_String_o *)StringLiteral_20801/*"mstSvtCommandCodeUnlock"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20888/*"mstSvtCommandCodeUnlock"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     250,
-    (System_String_o *)StringLiteral_22905/*"userCommandCode"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22998/*"userCommandCode"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     251,
-    (System_String_o *)StringLiteral_22906/*"userCommandCodeCollection"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22999/*"userCommandCodeCollection"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     252,
-    (System_String_o *)StringLiteral_22971/*"userSvtCommandCode"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23064/*"userSvtCommandCode"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     253,
-    (System_String_o *)StringLiteral_20578/*"mstCommandCodeSkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20663/*"mstCommandCodeSkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     254,
-    (System_String_o *)StringLiteral_20579/*"mstCommandCodeSkillRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20664/*"mstCommandCodeSkillRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     255,
-    (System_String_o *)StringLiteral_20577/*"mstCommandCodeComment"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20662/*"mstCommandCodeComment"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     256,
-    (System_String_o *)StringLiteral_20674/*"mstEventStatus"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20759/*"mstEventStatus"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     257,
-    (System_String_o *)StringLiteral_20675/*"mstEventStatusQuest"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20760/*"mstEventStatusQuest"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     258,
-    (System_String_o *)StringLiteral_20583/*"mstCommonRestriction"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20668/*"mstCommonRestriction"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     259,
-    (System_String_o *)StringLiteral_20651/*"mstEventPointBuff"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20736/*"mstEventPointBuff"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     260,
-    (System_String_o *)StringLiteral_22937/*"userFollow"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23030/*"userFollow"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     261,
-    (System_String_o *)StringLiteral_20668/*"mstEventRewardGuideRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20753/*"mstEventRewardGuideRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     262,
-    (System_String_o *)StringLiteral_21072/*"npcSvtEquip"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21160/*"npcSvtEquip"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     263,
-    (System_String_o *)StringLiteral_20611/*"mstEventCampaignRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20696/*"mstEventCampaignRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     264,
-    (System_String_o *)StringLiteral_20818/*"mstSvtMaterialFolder"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20905/*"mstSvtMaterialFolder"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     265,
-    (System_String_o *)StringLiteral_20623/*"mstEventEquipSkillRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20708/*"mstEventEquipSkillRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     266,
-    (System_String_o *)StringLiteral_20650/*"mstEventPointActivity"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20735/*"mstEventPointActivity"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     267,
-    (System_String_o *)StringLiteral_20691/*"mstFuncCategory"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20776/*"mstFuncCategory"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     268,
-    (System_String_o *)StringLiteral_20745/*"mstQuestPickup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20832/*"mstQuestPickup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     269,
-    (System_String_o *)StringLiteral_20684/*"mstEventUi"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20769/*"mstEventUi"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     270,
-    (System_String_o *)StringLiteral_20685/*"mstEventUiRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20770/*"mstEventUiRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     271,
-    (System_String_o *)StringLiteral_20686/*"mstEventUiValue"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20771/*"mstEventUiValue"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     272,
-    (System_String_o *)StringLiteral_20615/*"mstEventConquestReward"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20700/*"mstEventConquestReward"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     273,
-    (System_String_o *)StringLiteral_21069/*"npcFollowerRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21157/*"npcFollowerRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     274,
-    (System_String_o *)StringLiteral_20603/*"mstEventBonusFilter"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20688/*"mstEventBonusFilter"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     275,
-    (System_String_o *)StringLiteral_20604/*"mstEventBonusFilterGroupInfo"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20689/*"mstEventBonusFilterGroupInfo"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     276,
-    (System_String_o *)StringLiteral_20605/*"mstEventBonusFilterGroupMember"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20690/*"mstEventBonusFilterGroupMember"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     277,
-    (System_String_o *)StringLiteral_22945/*"userGachaExtraCount"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23038/*"userGachaExtraCount"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     278,
-    (System_String_o *)StringLiteral_20575/*"mstCommandCardRankParam"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20660/*"mstCommandCardRankParam"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     279,
-    (System_String_o *)StringLiteral_22970/*"userSvtCommandCard"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23063/*"userSvtCommandCard"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     280,
-    (System_String_o *)StringLiteral_20733/*"mstPrivilege"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20820/*"mstPrivilege"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     281,
-    (System_String_o *)StringLiteral_22954/*"userPrivilege"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23047/*"userPrivilege"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     282,
-    (System_String_o *)StringLiteral_20738/*"mstQuestDateRange"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20825/*"mstQuestDateRange"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     283,
-    (System_String_o *)StringLiteral_20654/*"mstEventPointUpper"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20739/*"mstEventPointUpper"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     284,
-    (System_String_o *)StringLiteral_20655/*"mstEventPointUpperRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20740/*"mstEventPointUpperRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     285,
-    (System_String_o *)StringLiteral_22959/*"userQuestRoute"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23052/*"userQuestRoute"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     286,
-    (System_String_o *)StringLiteral_20606/*"mstEventBossStatusUi"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20691/*"mstEventBossStatusUi"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     287,
-    (System_String_o *)StringLiteral_20582/*"mstCommonRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20667/*"mstCommonRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     288,
-    (System_String_o *)StringLiteral_20758/*"mstQuestSpotRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20845/*"mstQuestSpotRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     289,
-    (System_String_o *)StringLiteral_20852/*"mstVoiceMaterialCond"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20940/*"mstVoiceMaterialCond"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     290,
-    (System_String_o *)StringLiteral_20562/*"mstClassRelationOverwrite"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20647/*"mstClassRelationOverwrite"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     291,
-    (System_String_o *)StringLiteral_20632/*"mstEventGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20717/*"mstEventGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     292,
-    (System_String_o *)StringLiteral_20526/*"mstAssetbundleKey"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20611/*"mstAssetbundleKey"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     293,
-    (System_String_o *)StringLiteral_22636/*"totalBoxGacha"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22729/*"totalBoxGacha"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     294,
-    (System_String_o *)StringLiteral_20833/*"mstSvtTreasureDeviceDamage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20921/*"mstSvtTreasureDeviceDamage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     295,
-    (System_String_o *)StringLiteral_18410/*"eventSvtFatigue"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18479/*"eventSvtFatigue"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     296,
-    (System_String_o *)StringLiteral_20666/*"mstEventRewardBg"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20751/*"mstEventRewardBg"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     297,
-    (System_String_o *)StringLiteral_20627/*"mstEventFatigueRecovery"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20712/*"mstEventFatigueRecovery"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     298,
-    (System_String_o *)StringLiteral_18399/*"eventBoostItemUsed"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18468/*"eventBoostItemUsed"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     299,
-    (System_String_o *)StringLiteral_20788/*"mstStatusEffectPosOverwrite"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20875/*"mstStatusEffectPosOverwrite"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     300,
-    (System_String_o *)StringLiteral_20744/*"mstQuestPhaseDetailAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20831/*"mstQuestPhaseDetailAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     301,
-    (System_String_o *)StringLiteral_20850/*"mstVoiceClosedMessage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20938/*"mstVoiceClosedMessage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     302,
-    (System_String_o *)StringLiteral_20787/*"mstStageRemap"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20874/*"mstStageRemap"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     303,
-    (System_String_o *)StringLiteral_17496/*"combineExp"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17563/*"combineExp"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     304,
-    (System_String_o *)StringLiteral_20600/*"mstEventBoardGameCell"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20685/*"mstEventBoardGameCell"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     305,
-    (System_String_o *)StringLiteral_20601/*"mstEventBoardGameToken"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20686/*"mstEventBoardGameToken"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     306,
-    (System_String_o *)StringLiteral_20602/*"mstEventBoardGameTokenReward"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20687/*"mstEventBoardGameTokenReward"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     307,
-    (System_String_o *)StringLiteral_22918/*"userEventBoardGameToken"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23011/*"userEventBoardGameToken"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     308,
-    (System_String_o *)StringLiteral_20793/*"mstSvtAnimationOverwrite"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20880/*"mstSvtAnimationOverwrite"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     309,
-    (System_String_o *)StringLiteral_20731/*"mstOpeningMovie"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20818/*"mstOpeningMovie"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     310,
-    (System_String_o *)StringLiteral_20816/*"mstSvtLimitSpoilerProtection"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20903/*"mstSvtLimitSpoilerProtection"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     311,
-    (System_String_o *)StringLiteral_21376/*"pickupUserFollower"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21468/*"pickupUserFollower"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     312,
-    (System_String_o *)StringLiteral_20800/*"mstSvtCollection"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20887/*"mstSvtCollection"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     313,
-    (System_String_o *)StringLiteral_20697/*"mstGachaBehavior"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20782/*"mstGachaBehavior"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     314,
-    (System_String_o *)StringLiteral_20658/*"mstEventQuestCooltime"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20743/*"mstEventQuestCooltime"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     315,
-    (System_String_o *)StringLiteral_22930/*"userEventQuestCooltime"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23023/*"userEventQuestCooltime"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     316,
-    (System_String_o *)StringLiteral_20544/*"mstBoost"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20629/*"mstBoost"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     317,
-    (System_String_o *)StringLiteral_20858/*"mstWarBoard"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20946/*"mstWarBoard"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     318,
-    (System_String_o *)StringLiteral_20882/*"mstWarBoardSquare"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20970/*"mstWarBoardSquare"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     319,
-    (System_String_o *)StringLiteral_20881/*"mstWarBoardRoad"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20969/*"mstWarBoardRoad"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     320,
-    (System_String_o *)StringLiteral_20884/*"mstWarBoardStage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20972/*"mstWarBoardStage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     321,
-    (System_String_o *)StringLiteral_20859/*"mstWarBoardActionPoint"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20947/*"mstWarBoardActionPoint"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     322,
-    (System_String_o *)StringLiteral_20861/*"mstWarBoardActionTrend"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20949/*"mstWarBoardActionTrend"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     323,
-    (System_String_o *)StringLiteral_20892/*"mstWarBoardTacticalTrend"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20980/*"mstWarBoardTacticalTrend"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     324,
-    (System_String_o *)StringLiteral_20887/*"mstWarBoardStageLayout"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20975/*"mstWarBoardStageLayout"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     325,
-    (System_String_o *)StringLiteral_20888/*"mstWarBoardStageNpc"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20976/*"mstWarBoardStageNpc"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     326,
-    (System_String_o *)StringLiteral_20891/*"mstWarBoardStageWall"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20979/*"mstWarBoardStageWall"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     327,
-    (System_String_o *)StringLiteral_20864/*"mstWarBoardAi"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20952/*"mstWarBoardAi"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     328,
-    (System_String_o *)StringLiteral_20877/*"mstWarBoardRatingBase"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20965/*"mstWarBoardRatingBase"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     329,
-    (System_String_o *)StringLiteral_20878/*"mstWarBoardRatingOffset"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20966/*"mstWarBoardRatingOffset"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     330,
-    (System_String_o *)StringLiteral_20871/*"mstWarBoardItem"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20959/*"mstWarBoardItem"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     331,
-    (System_String_o *)StringLiteral_20893/*"mstWarBoardTreasure"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20981/*"mstWarBoardTreasure"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     332,
-    (System_String_o *)StringLiteral_20876/*"mstWarBoardQuest"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20964/*"mstWarBoardQuest"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     333,
-    (System_String_o *)StringLiteral_23121/*"warBoardData"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23215/*"warBoardData"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     334,
-    (System_String_o *)StringLiteral_20870/*"mstWarBoardIndividualityClass"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20958/*"mstWarBoardIndividualityClass"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     335,
-    (System_String_o *)StringLiteral_20862/*"mstWarBoardActionTrendCond"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20950/*"mstWarBoardActionTrendCond"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     336,
-    (System_String_o *)StringLiteral_20860/*"mstWarBoardActionPointClass"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20948/*"mstWarBoardActionPointClass"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     337,
-    (System_String_o *)StringLiteral_20880/*"mstWarBoardReinforcements"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20968/*"mstWarBoardReinforcements"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     338,
-    (System_String_o *)StringLiteral_20890/*"mstWarBoardStageReinforcements"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20978/*"mstWarBoardStageReinforcements"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     339,
-    (System_String_o *)StringLiteral_20645/*"mstEventPanelMap"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20730/*"mstEventPanelMap"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     340,
-    (System_String_o *)StringLiteral_20646/*"mstEventPanelMapDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20731/*"mstEventPanelMapDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     341,
-    (System_String_o *)StringLiteral_20648/*"mstEventPanelSpot"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20733/*"mstEventPanelSpot"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     342,
-    (System_String_o *)StringLiteral_20647/*"mstEventPanelScan"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20732/*"mstEventPanelScan"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     343,
-    (System_String_o *)StringLiteral_20620/*"mstEventDigging"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20705/*"mstEventDigging"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     344,
-    (System_String_o *)StringLiteral_20622/*"mstEventDiggingReward"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20707/*"mstEventDiggingReward"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     345,
-    (System_String_o *)StringLiteral_20621/*"mstEventDiggingBlock"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20706/*"mstEventDiggingBlock"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     346,
-    (System_String_o *)StringLiteral_22922/*"userEventDigging"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23015/*"userEventDigging"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     347,
-    (System_String_o *)StringLiteral_20581/*"mstCommonConsume"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20666/*"mstCommonConsume"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     348,
-    (System_String_o *)StringLiteral_22925/*"userEventMap"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23018/*"userEventMap"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     349,
-    (System_String_o *)StringLiteral_22934/*"userEventSpot"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23027/*"userEventSpot"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     350,
-    (System_String_o *)StringLiteral_20894/*"mstWarGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20982/*"mstWarGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     351,
-    (System_String_o *)StringLiteral_20815/*"mstSvtLimitImage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20902/*"mstSvtLimitImage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     352,
-    (System_String_o *)StringLiteral_18841/*"friendshipQuestDialogInfo"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18913/*"friendshipQuestDialogInfo"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     353,
-    (System_String_o *)StringLiteral_20752/*"mstQuestRestrictionInfo"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20839/*"mstQuestRestrictionInfo"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     354,
-    (System_String_o *)StringLiteral_20527/*"mstAssist"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20612/*"mstAssist"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     355,
-    (System_String_o *)StringLiteral_20866/*"mstWarBoardEffect"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20954/*"mstWarBoardEffect"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     356,
-    (System_String_o *)StringLiteral_20874/*"mstWarBoardOnboardSkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20962/*"mstWarBoardOnboardSkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     357,
-    (System_String_o *)StringLiteral_16624/*"beforeBirthDay"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16688/*"beforeBirthDay"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     358,
-    (System_String_o *)StringLiteral_20716/*"mstLoginQuest"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20801/*"mstLoginQuest"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     359,
-    (System_String_o *)StringLiteral_20613/*"mstEventCombineCostume"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20698/*"mstEventCombineCostume"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     360,
-    (System_String_o *)StringLiteral_20889/*"mstWarBoardStagePieceDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20977/*"mstWarBoardStagePieceDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     361,
-    (System_String_o *)StringLiteral_20832/*"mstSvtTreasureDeviceAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20920/*"mstSvtTreasureDeviceAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     362,
-    (System_String_o *)StringLiteral_20774/*"mstSkillAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20861/*"mstSkillAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     363,
-    (System_String_o *)StringLiteral_20817/*"mstSvtLvDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20904/*"mstSvtLvDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     364,
-    (System_String_o *)StringLiteral_20696/*"mstGachaAppend"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20781/*"mstGachaAppend"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     365,
-    (System_String_o *)StringLiteral_22944/*"userGachaDrawLog"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23037/*"userGachaDrawLog"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     366,
-    (System_String_o *)StringLiteral_20794/*"mstSvtAppendPassiveSkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20881/*"mstSvtAppendPassiveSkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     367,
-    (System_String_o *)StringLiteral_22966/*"userSvtAppendPassiveSkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23059/*"userSvtAppendPassiveSkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     368,
-    (System_String_o *)StringLiteral_22967/*"userSvtAppendPassiveSkillLv"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23060/*"userSvtAppendPassiveSkillLv"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     369,
-    (System_String_o *)StringLiteral_20795/*"mstSvtAppendPassiveSkillUnlock"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20882/*"mstSvtAppendPassiveSkillUnlock"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     370,
-    (System_String_o *)StringLiteral_20565/*"mstCombineAppendPassiveSkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20650/*"mstCombineAppendPassiveSkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     371,
-    (System_String_o *)StringLiteral_20799/*"mstSvtCoin"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20886/*"mstSvtCoin"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     372,
-    (System_String_o *)StringLiteral_22968/*"userSvtCoin"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23061/*"userSvtCoin"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     373,
-    (System_String_o *)StringLiteral_20792/*"mstSvtAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20879/*"mstSvtAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     374,
-    (System_String_o *)StringLiteral_20841/*"mstTreasureBox"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20929/*"mstTreasureBox"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     375,
-    (System_String_o *)StringLiteral_20842/*"mstTreasureBoxGift"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20930/*"mstTreasureBoxGift"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     376,
-    (System_String_o *)StringLiteral_20843/*"mstTreasureBoxTalk"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20931/*"mstTreasureBoxTalk"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     377,
-    (System_String_o *)StringLiteral_22923/*"userEventExpedition"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23016/*"userEventExpedition"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     378,
-    (System_String_o *)StringLiteral_20624/*"mstEventExpedition"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20709/*"mstEventExpedition"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     379,
-    (System_String_o *)StringLiteral_20625/*"mstEventExpeditionPiece"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20710/*"mstEventExpeditionPiece"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     380,
-    (System_String_o *)StringLiteral_20663/*"mstEventRecipe"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20748/*"mstEventRecipe"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     381,
-    (System_String_o *)StringLiteral_20664/*"mstEventRecipeGift"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20749/*"mstEventRecipeGift"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     382,
-    (System_String_o *)StringLiteral_22924/*"userEventFortification"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23017/*"userEventFortification"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     383,
-    (System_String_o *)StringLiteral_20629/*"mstEventFortification"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20714/*"mstEventFortification"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     384,
-    (System_String_o *)StringLiteral_20630/*"mstEventFortificationDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20715/*"mstEventFortificationDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     385,
-    (System_String_o *)StringLiteral_20631/*"mstEventFortificationSvt"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20716/*"mstEventFortificationSvt"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     386,
-    (System_String_o *)StringLiteral_22977/*"userSvtVoicePlayed"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23070/*"userSvtVoicePlayed"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     387,
-    (System_String_o *)StringLiteral_22849/*"updateProfileDialogInfo"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22942/*"updateProfileDialogInfo"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     388,
-    (System_String_o *)StringLiteral_20819/*"mstSvtMaterialTd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20906/*"mstSvtMaterialTd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     389,
-    (System_String_o *)StringLiteral_20535/*"mstBattleMasterImage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20620/*"mstBattleMasterImage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     390,
-    (System_String_o *)StringLiteral_22940/*"userFriendPointGachaFreeDrawCampaignLog"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23033/*"userFriendPointGachaFreeDrawCampaignLog"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     391,
-    (System_String_o *)StringLiteral_22933/*"userEventRandomMission"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23026/*"userEventRandomMission"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     392,
-    (System_String_o *)StringLiteral_20656/*"mstEventProgressValue"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20741/*"mstEventProgressValue"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     393,
-    (System_String_o *)StringLiteral_20820/*"mstSvtMultiPortrait"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20907/*"mstSvtMultiPortrait"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     394,
-    (System_String_o *)StringLiteral_20662/*"mstEventRandomMission"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20747/*"mstEventRandomMission"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     395,
-    (System_String_o *)StringLiteral_22943/*"userGachaDrawHistory"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23036/*"userGachaDrawHistory"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     396,
-    (System_String_o *)StringLiteral_22904/*"userCoinRoom"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22997/*"userCoinRoom"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     397,
-    (System_String_o *)StringLiteral_20607/*"mstEventBuddyPoint"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20692/*"mstEventBuddyPoint"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     398,
-    (System_String_o *)StringLiteral_20679/*"mstEventSvtPointRank"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20764/*"mstEventSvtPointRank"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     399,
-    (System_String_o *)StringLiteral_22936/*"userEventSvtPoint"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23029/*"userEventSvtPoint"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     400,
-    (System_String_o *)StringLiteral_20688/*"mstFieldMotion"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20773/*"mstFieldMotion"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     401,
-    (System_String_o *)StringLiteral_22913/*"userDeleteReservation"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23006/*"userDeleteReservation"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     402,
-    (System_String_o *)StringLiteral_20828/*"mstSvtScriptMultiple"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20916/*"mstSvtScriptMultiple"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     403,
-    (System_String_o *)StringLiteral_20594/*"mstEquipAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20679/*"mstEquipAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     404,
-    (System_String_o *)StringLiteral_20749/*"mstQuestReleaseOverwrite"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20836/*"mstQuestReleaseOverwrite"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     405,
-    (System_String_o *)StringLiteral_22917/*"userEventAlloutBattle"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23010/*"userEventAlloutBattle"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     406,
-    (System_String_o *)StringLiteral_20755/*"mstQuestScriptMaterialNext"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20842/*"mstQuestScriptMaterialNext"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     407,
-    (System_String_o *)StringLiteral_20536/*"mstBattleMessage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20621/*"mstBattleMessage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     408,
-    (System_String_o *)StringLiteral_20537/*"mstBattleMessageGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20622/*"mstBattleMessageGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     409,
-    (System_String_o *)StringLiteral_22951/*"userNpcSvtRecord"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23044/*"userNpcSvtRecord"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     410,
-    (System_String_o *)StringLiteral_20551/*"mstBuffTypeDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20636/*"mstBuffTypeDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     411,
-    (System_String_o *)StringLiteral_20872/*"mstWarBoardMessage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20960/*"mstWarBoardMessage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     412,
-    (System_String_o *)StringLiteral_20875/*"mstWarBoardPartySkill"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20963/*"mstWarBoardPartySkill"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     413,
-    (System_String_o *)StringLiteral_20873/*"mstWarBoardMessageScript"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20961/*"mstWarBoardMessageScript"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     414,
-    (System_String_o *)StringLiteral_20895/*"mstWarQuestSelection"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20983/*"mstWarQuestSelection"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     415,
-    (System_String_o *)StringLiteral_20886/*"mstWarBoardStageDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20974/*"mstWarBoardStageDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     416,
-    (System_String_o *)StringLiteral_20756/*"mstQuestScriptMaterialOverwrite"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20843/*"mstQuestScriptMaterialOverwrite"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     417,
-    (System_String_o *)StringLiteral_20754/*"mstQuestScriptBranchMaterial"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20841/*"mstQuestScriptBranchMaterial"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     418,
-    (System_String_o *)StringLiteral_20521/*"mstAdCheckPoint"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20606/*"mstAdCheckPoint"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     419,
-    (System_String_o *)StringLiteral_20710/*"mstGiftDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20795/*"mstGiftDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     420,
-    (System_String_o *)StringLiteral_20568/*"mstCombineLimitGift"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20653/*"mstCombineLimitGift"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     421,
-    (System_String_o *)StringLiteral_20616/*"mstEventCooltimeReward"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20701/*"mstEventCooltimeReward"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     422,
-    (System_String_o *)StringLiteral_22919/*"userEventCooltimeReward"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23012/*"userEventCooltimeReward"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     423,
-    (System_String_o *)StringLiteral_20556/*"mstClassBoardClass"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20641/*"mstClassBoardClass"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     424,
-    (System_String_o *)StringLiteral_20555/*"mstClassBoardBase"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20640/*"mstClassBoardBase"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     425,
-    (System_String_o *)StringLiteral_20558/*"mstClassBoardLine"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20643/*"mstClassBoardLine"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     426,
-    (System_String_o *)StringLiteral_20559/*"mstClassBoardLock"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20644/*"mstClassBoardLock"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     427,
-    (System_String_o *)StringLiteral_20560/*"mstClassBoardSquare"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20645/*"mstClassBoardSquare"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     428,
-    (System_String_o *)StringLiteral_20557/*"mstClassBoardCommandSpell"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20642/*"mstClassBoardCommandSpell"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     429,
-    (System_String_o *)StringLiteral_22903/*"userClassBoardSquare"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22996/*"userClassBoardSquare"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     430,
-    (System_String_o *)StringLiteral_20797/*"mstSvtCardAdd"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20884/*"mstSvtCardAdd"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     431,
-    (System_String_o *)StringLiteral_20725/*"mstMapLayer"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20812/*"mstMapLayer"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     432,
-    (System_String_o *)StringLiteral_20783/*"mstSpotLayer"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20870/*"mstSpotLayer"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     433,
-    (System_String_o *)StringLiteral_20722/*"mstMapGimmickLayer"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20807/*"mstMapGimmickLayer"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     434,
-    (System_String_o *)StringLiteral_20617/*"mstEventDataLostBattle"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20702/*"mstEventDataLostBattle"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     435,
-    (System_String_o *)StringLiteral_20618/*"mstEventDataLostBattleReset"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20703/*"mstEventDataLostBattleReset"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     436,
-    (System_String_o *)StringLiteral_22920/*"userEventDataLost"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23013/*"userEventDataLost"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     437,
-    (System_String_o *)StringLiteral_20740/*"mstQuestHint"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20827/*"mstQuestHint"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     438,
-    (System_String_o *)StringLiteral_20694/*"mstFuncTypeDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20779/*"mstFuncTypeDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     439,
-    (System_String_o *)StringLiteral_20550/*"mstBuffConvert"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20635/*"mstBuffConvert"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     440,
-    (System_String_o *)StringLiteral_20776/*"mstSkillGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20863/*"mstSkillGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     441,
-    (System_String_o *)StringLiteral_20777/*"mstSkillGroupOverwrite"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20864/*"mstSkillGroupOverwrite"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     442,
-    (System_String_o *)StringLiteral_20778/*"mstSkillIndividuality"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20865/*"mstSkillIndividuality"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     443,
-    (System_String_o *)StringLiteral_20761/*"mstRestrictionBase"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20848/*"mstRestrictionBase"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     444,
-    (System_String_o *)StringLiteral_20763/*"mstRestrictionSlot"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20850/*"mstRestrictionSlot"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     445,
-    (System_String_o *)StringLiteral_20764/*"mstRestrictionSlotDetail"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20851/*"mstRestrictionSlotDetail"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     446,
-    (System_String_o *)StringLiteral_20762/*"mstRestrictionMessage"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20849/*"mstRestrictionMessage"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     447,
-    (System_String_o *)StringLiteral_20765/*"mstRestrictionWhole"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20852/*"mstRestrictionWhole"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     448,
-    (System_String_o *)StringLiteral_20692/*"mstFuncDisp"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20777/*"mstFuncDisp"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     449,
-    (System_String_o *)StringLiteral_20614/*"mstEventCommandAssist"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20699/*"mstEventCommandAssist"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     450,
-    (System_String_o *)StringLiteral_20643/*"mstEventMissionGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20728/*"mstEventMissionGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     451,
-    (System_String_o *)StringLiteral_20569/*"mstCombineLimitRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20654/*"mstCombineLimitRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     452,
-    (System_String_o *)StringLiteral_20847/*"mstTreasureDeviceSequenceWeight"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20935/*"mstTreasureDeviceSequenceWeight"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     453,
-    (System_String_o *)StringLiteral_20712/*"mstHeelPortrait"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20797/*"mstHeelPortrait"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     454,
-    (System_String_o *)StringLiteral_22947/*"userHeelPortrait"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23040/*"userHeelPortrait"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     455,
-    (System_String_o *)StringLiteral_21074/*"npcSvtFollowerIndividuality"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21162/*"npcSvtFollowerIndividuality"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     456,
-    (System_String_o *)StringLiteral_20701/*"mstGachaExtraGift"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20786/*"mstGachaExtraGift"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     457,
-    (System_String_o *)StringLiteral_20644/*"mstEventMural"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20729/*"mstEventMural"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     458,
-    (System_String_o *)StringLiteral_23064/*"viewWaveEnemy"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23158/*"viewWaveEnemy"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     459,
-    (System_String_o *)StringLiteral_20541/*"mstBlankEarthSpotNavimenu"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20626/*"mstBlankEarthSpotNavimenu"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     460,
-    (System_String_o *)StringLiteral_20838/*"mstTerminalOverwrite"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20926/*"mstTerminalOverwrite"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     461,
-    (System_String_o *)StringLiteral_18557/*"exchangeSvt"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18627/*"exchangeSvt"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     462,
-    (System_String_o *)StringLiteral_20865/*"mstWarBoardCommonRelease"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20953/*"mstWarBoardCommonRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     463,
-    (System_String_o *)StringLiteral_20867/*"mstWarBoardEvent"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20955/*"mstWarBoardEvent"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     464,
-    (System_String_o *)StringLiteral_20868/*"mstWarBoardEventScript"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20956/*"mstWarBoardEventScript"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     465,
-    (System_String_o *)StringLiteral_20885/*"mstWarBoardStageBoss"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20973/*"mstWarBoardStageBoss"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     466,
-    (System_String_o *)StringLiteral_20883/*"mstWarBoardSquareIndexGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20971/*"mstWarBoardSquareIndexGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     467,
-    (System_String_o *)StringLiteral_20863/*"mstWarBoardActionTrendGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20951/*"mstWarBoardActionTrendGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     468,
-    (System_String_o *)StringLiteral_20879/*"mstWarBoardRatingOffsetGroup"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20967/*"mstWarBoardRatingOffsetGroup"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     469,
-    (System_String_o *)StringLiteral_20869/*"mstWarBoardFutureActionTrend"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20957/*"mstWarBoardFutureActionTrend"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
     v478,
     470,
-    (System_String_o *)StringLiteral_20824/*"mstSvtProfilePush"*/,
-    (const MethodInfo_2DFFC54 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20912/*"mstSvtProfilePush"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v478,
+    471,
+    (System_String_o *)StringLiteral_20809/*"mstMapGimmickPath"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v478,
+    472,
+    (System_String_o *)StringLiteral_20810/*"mstMapGimmickPathRelease"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
+    v478,
+    473,
+    (System_String_o *)StringLiteral_20908/*"mstSvtOverwrite"*/,
+    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__Add__);
   static_fields = (BattleServantConfConponent_o *)DataNameKind_TypeInfo->static_fields;
   static_fields->klass = (BattleServantConfConponent_c *)v478;
-  sub_B16F98(static_fields, (System_Int32_array **)v478, v480, v481, v482, v483, v484, v485);
+  sub_B2C2F8(static_fields, (System_Int32_array **)v478, v482, v483, v484, v485, v486, v487);
 }
 
 
@@ -3348,11 +3363,11 @@ System_String_o *__fastcall DataNameKind__GetName(int32_t kind, const MethodInfo
   DataNameKind_c *v4; // x0
   System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *nameList; // x0
 
-  if ( (byte_40FA412 & 1) == 0 )
+  if ( (byte_4188E0D & 1) == 0 )
   {
-    sub_B16FFC(&DataNameKind_TypeInfo, method);
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__get_Item__, v3);
-    byte_40FA412 = 1;
+    sub_B2C35C(&DataNameKind_TypeInfo, method);
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__get_Item__, v3);
+    byte_4188E0D = 1;
   }
   v4 = DataNameKind_TypeInfo;
   if ( (BYTE3(DataNameKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataNameKind_TypeInfo->_2.cctor_finished )
@@ -3362,9 +3377,9 @@ System_String_o *__fastcall DataNameKind__GetName(int32_t kind, const MethodInfo
   }
   nameList = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)v4->static_fields->nameList;
   if ( !nameList )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   return System_Collections_Generic_Dictionary_Voice_BATTLE__string___get_Item(
            nameList,
            kind,
-           (const MethodInfo_2DFFB90 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__get_Item__);
+           (const MethodInfo_2E462C0 *)Method_System_Collections_Generic_Dictionary_DataNameKind_Kind__string__get_Item__);
 }

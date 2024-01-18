@@ -2,10 +2,10 @@ void __fastcall ServantStatusListViewItemDrawAppendSkill___cctor(const MethodInf
 {
   __int64 v1; // x1
 
-  if ( (byte_40FDE85 & 1) == 0 )
+  if ( (byte_418D18F & 1) == 0 )
   {
-    sub_B16FFC(&ServantStatusListViewItemDrawAppendSkill_TypeInfo, v1);
-    byte_40FDE85 = 1;
+    sub_B2C35C(&ServantStatusListViewItemDrawAppendSkill_TypeInfo, v1);
+    byte_418D18F = 1;
   }
   ServantStatusListViewItemDrawAppendSkill_TypeInfo->static_fields->SKILL_BASE_POS_Y = -25.0;
   ServantStatusListViewItemDrawAppendSkill_TypeInfo->static_fields->SKILL_BASE_HEIGHT = 105;
@@ -17,43 +17,27 @@ void __fastcall ServantStatusListViewItemDrawAppendSkill___ctor(
         ServantStatusListViewItemDrawAppendSkill_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v6; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x20
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  __int64 v3; // x1
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v4; // x20
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_40FDE84 & 1) == 0 )
+  if ( (byte_418D18E & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
-    sub_B16FFC(&System_Collections_Generic_List_GameObject__TypeInfo, v6);
-    byte_40FDE84 = 1;
+    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
+    sub_B2C35C(&System_Collections_Generic_List_GameObject__TypeInfo, v3);
+    byte_418D18E = 1;
   }
-  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
-                                                                                                 System_Collections_Generic_List_GameObject__TypeInfo,
-                                                                                                 method,
-                                                                                                 v2,
-                                                                                                 v3,
-                                                                                                 v4);
+  v4 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v7,
-    (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  *(_QWORD *)&this->fields.baseSize.fields.x = v7;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.baseSize,
-    (System_Int32_array **)v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13);
+    v4,
+    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  *(_QWORD *)&this->fields.baseSize.fields.x = v4;
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.baseSize, (System_Int32_array **)v4, v5, v6, v7, v8, v9, v10);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -62,43 +46,47 @@ void __fastcall ServantStatusListViewItemDrawAppendSkill__Awake(
         ServantStatusListViewItemDrawAppendSkill_o *this,
         const MethodInfo *method)
 {
+  ServantStatusListViewItemDrawAppendSkill_o *v2; // x19
   struct UISprite_o *titleSprite; // x8
   int32x2_t v4; // d0
-  UnityEngine_Component_o *titleTextSprite; // x0
-  UnityEngine_Transform_o *transform; // x0
-  ServantStatusListViewItemDrawAppendSkill_c *v7; // x0
+  ServantStatusListViewItemDrawAppendSkill_c *v5; // x0
   float SKILL_BASE_POS_Y; // w8
 
-  if ( (byte_40FDE82 & 1) == 0 )
+  v2 = this;
+  if ( (byte_418D18C & 1) == 0 )
   {
-    sub_B16FFC(&ServantStatusListViewItemDrawAppendSkill_TypeInfo, method);
-    byte_40FDE82 = 1;
+    this = (ServantStatusListViewItemDrawAppendSkill_o *)sub_B2C35C(
+                                                           &ServantStatusListViewItemDrawAppendSkill_TypeInfo,
+                                                           method);
+    byte_418D18C = 1;
   }
-  titleSprite = this->fields.titleSprite;
+  titleSprite = v2->fields.titleSprite;
   if ( !titleSprite
     || (v4.n64_u64[0] = *(unsigned __int64 *)&titleSprite->fields.mWidth,
-        titleTextSprite = (UnityEngine_Component_o *)this->fields.titleTextSprite,
-        this->fields.titleBasePosition.fields.y = 0.0,
-        *(float32x2_t *)&this->fields.baseSize.fields.z = vcvt_f32_s32(v4),
-        !titleTextSprite)
-    || (transform = UnityEngine_Component__get_transform(titleTextSprite, 0LL)) == 0LL )
+        this = (ServantStatusListViewItemDrawAppendSkill_o *)v2->fields.titleTextSprite,
+        v2->fields.titleBasePosition.fields.y = 0.0,
+        *(float32x2_t *)&v2->fields.baseSize.fields.z = vcvt_f32_s32(v4),
+        !this)
+    || (this = (ServantStatusListViewItemDrawAppendSkill_o *)UnityEngine_Component__get_transform(
+                                                               (UnityEngine_Component_o *)this,
+                                                               0LL)) == 0LL )
   {
-    sub_B170D4();
+    sub_B2C434(this, method);
   }
-  *(UnityEngine_Vector3_o *)&this->fields.titleBasePosition.fields.z = UnityEngine_Transform__get_localPosition(
-                                                                         transform,
-                                                                         0LL);
-  v7 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
+  *(UnityEngine_Vector3_o *)&v2->fields.titleBasePosition.fields.z = UnityEngine_Transform__get_localPosition(
+                                                                       (UnityEngine_Transform_o *)this,
+                                                                       0LL);
+  v5 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
   if ( (BYTE3(ServantStatusListViewItemDrawAppendSkill_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ServantStatusListViewItemDrawAppendSkill_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantStatusListViewItemDrawAppendSkill_TypeInfo);
-    v7 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
+    v5 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
   }
-  SKILL_BASE_POS_Y = v7->static_fields->SKILL_BASE_POS_Y;
-  LODWORD(this[1].klass) = 0;
-  this->fields.skillBasePosition.fields.z = 0.0;
-  *((float *)&this->fields.skillBasePosition + 3) = SKILL_BASE_POS_Y;
+  SKILL_BASE_POS_Y = v5->static_fields->SKILL_BASE_POS_Y;
+  LODWORD(v2[1].klass) = 0;
+  v2->fields.skillBasePosition.fields.z = 0.0;
+  *((float *)&v2->fields.skillBasePosition + 3) = SKILL_BASE_POS_Y;
 }
 
 
@@ -116,6 +104,7 @@ void __fastcall ServantStatusListViewItemDrawAppendSkill__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
+  ServantStatusListViewItemDrawAppendSkill_o *v6; // x19
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
@@ -131,116 +120,103 @@ void __fastcall ServantStatusListViewItemDrawAppendSkill__SetItem(
   System_Collections_Generic_List_XWeaponTrail_Element__o *v19; // x23
   unsigned __int64 v20; // x22
   UnityEngine_Object_o *v21; // x23
-  System_Collections_Generic_List_WarBoardManager_TaskList__o *v22; // x0
-  struct UnityEngine_GameObject_o *srcSkillObj; // x21
-  System_String_o *v24; // x0
-  struct UILabel_o *explanationLabel; // x21
-  struct UILabel_o *v26; // x0
-  ServantStatusSkillComponent_o *Component_srcLineSprite; // x0
-  __int64 v28; // x1
-  __int64 v29; // x2
-  System_Int32_array *v30; // x8
-  unsigned __int64 v31; // x27
-  int v32; // w26
-  int32_t v33; // w20
+  UILabel_o *srcSkillObj; // x21
+  UISprite_o *explanationLabel; // x21
+  const MethodInfo *v24; // x6
+  System_Int32_array *v25; // x8
+  unsigned __int64 v26; // x27
+  int v27; // w26
+  int32_t v28; // w20
   unsigned __int64 max_length; // x9
   UnityEngine_UI_Dropdown_DropdownItem_o *skillList; // x21
-  UnityEngine_GameObject_o *v36; // x0
-  UnityEngine_GameObject_o *v37; // x21
+  UnityEngine_GameObject_o *v31; // x21
   UnityEngine_Transform_o *transform; // x22
-  UnityEngine_Transform_o *v39; // x0
-  ServantStatusSkillComponent_o *v40; // x22
+  ServantStatusListViewItemDrawAppendSkill_o *v33; // x22
   int32_t Height; // w0
-  ServantStatusListViewItemDrawAppendSkill_c *v42; // x8
-  int32_t v43; // w22
-  int32_t v44; // w0
+  ServantStatusListViewItemDrawAppendSkill_c *v35; // x8
+  int32_t v36; // w22
   float x; // s8
   float z; // s9
   float y; // s10
   UnityEngine_Object_o *baseSprite; // x20
-  float v49; // s8
-  UnityEngine_BoxCollider_o *v50; // x0
-  UIWidget_o *titleSprite; // x0
-  double v52; // d0
-  UIWidget_o *v53; // x0
-  double v54; // d0
-  UnityEngine_Component_o *titleTextSprite; // x0
-  int v56; // w20
-  float v57; // s8
-  float v58; // s11
-  float v59; // s9
-  UnityEngine_Transform_o *v60; // x0
-  float v61; // s10
-  __int64 v62; // x20
-  float v63; // s8
-  float v64; // s9
-  __int64 v65; // x22
-  float v66; // s10
-  int v67; // w8
-  __int64 v68; // x8
-  UnityEngine_GameObject_o *v69; // x21
-  ServantStatusSkillComponent_o *v70; // x20
-  UnityEngine_Transform_o *v71; // x0
-  int32_t v72; // w0
-  ServantStatusListViewItemDrawAppendSkill_c *v73; // x8
-  int32_t v74; // w20
-  int32_t v75; // w0
+  float v41; // s8
+  double v42; // d0
+  double v43; // d0
+  int v44; // w20
+  float v45; // s8
+  float v46; // s11
+  float v47; // s9
+  float v48; // s10
+  __int64 v49; // x20
+  float v50; // s8
+  float v51; // s9
+  __int64 v52; // x22
+  float v53; // s10
+  int v54; // w8
+  __int64 v55; // x8
+  UnityEngine_GameObject_o *v56; // x21
+  ServantStatusSkillComponent_o *Component_srcLineSprite; // x20
+  int32_t v58; // w0
+  ServantStatusListViewItemDrawAppendSkill_c *v59; // x8
+  int32_t v60; // w20
+  __int64 v61; // x0
   System_Int32_array *lvList; // [xsp+8h] [xbp-98h] BYREF
   System_Boolean_array *releaseStateList; // [xsp+10h] [xbp-90h] BYREF
   System_String_array *explanationList; // [xsp+18h] [xbp-88h] BYREF
   System_String_array *titleList; // [xsp+20h] [xbp-80h] BYREF
   System_Int32_array *idList; // [xsp+28h] [xbp-78h] BYREF
   UnityEngine_Vector3_o one; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v82; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v83; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v84; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_40FDE83 & 1) == 0 )
+  v6 = this;
+  if ( (byte_418D18D & 1) == 0 )
   {
-    sub_B16FFC(&AtlasManager_TypeInfo, item);
-    sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_ServantStatusSkillComponent___, v7);
-    sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Add__, v8);
-    sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__Clear__, v9);
-    sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Count__, v10);
-    sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__get_Item__, v11);
-    sub_B16FFC(&Method_System_Collections_Generic_List_GameObject__set_Item__, v12);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v13);
-    sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v15);
-    sub_B16FFC(&ServantStatusListViewItemDrawAppendSkill_TypeInfo, v16);
-    sub_B16FFC(&StringLiteral_11932/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, v17);
-    sub_B16FFC(&StringLiteral_19613/*"img_txt_extraskill_title"*/, v18);
-    byte_40FDE83 = 1;
+    sub_B2C35C(&AtlasManager_TypeInfo, item);
+    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_ServantStatusSkillComponent___, v7);
+    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__Add__, v8);
+    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__Clear__, v9);
+    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__get_Count__, v10);
+    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__get_Item__, v11);
+    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__set_Item__, v12);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v13);
+    sub_B2C35C(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v15);
+    sub_B2C35C(&ServantStatusListViewItemDrawAppendSkill_TypeInfo, v16);
+    sub_B2C35C(&StringLiteral_11982/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, v17);
+    this = (ServantStatusListViewItemDrawAppendSkill_o *)sub_B2C35C(&StringLiteral_19687/*"img_txt_extraskill_title"*/, v18);
+    byte_418D18D = 1;
   }
   titleList = 0LL;
   idList = 0LL;
   releaseStateList = 0LL;
   explanationList = 0LL;
   lvList = 0LL;
-  v19 = *(System_Collections_Generic_List_XWeaponTrail_Element__o **)&this->fields.baseSize.fields.x;
+  v19 = *(System_Collections_Generic_List_XWeaponTrail_Element__o **)&v6->fields.baseSize.fields.x;
   if ( !v19 )
     goto LABEL_13;
   v20 = 0LL;
   while ( (__int64)v20 < v19->fields._size )
   {
     if ( v20 >= (unsigned int)v19->fields._size )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
     v21 = (UnityEngine_Object_o *)v19->fields._items->m_Items[v20];
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_34809464(v21, 0LL);
-    v22 = *(System_Collections_Generic_List_WarBoardManager_TaskList__o **)&this->fields.baseSize.fields.x;
-    if ( v22 )
+    UnityEngine_Object__Destroy_35314896(v21, 0LL);
+    this = *(ServantStatusListViewItemDrawAppendSkill_o **)&v6->fields.baseSize.fields.x;
+    if ( this )
     {
       System_Collections_Generic_List_WarBoardManager_TaskList___set_Item(
-        v22,
+        (System_Collections_Generic_List_WarBoardManager_TaskList__o *)this,
         v20,
         0LL,
-        (const MethodInfo_2F25A30 *)Method_System_Collections_Generic_List_GameObject__set_Item__);
-      v19 = *(System_Collections_Generic_List_XWeaponTrail_Element__o **)&this->fields.baseSize.fields.x;
+        (const MethodInfo_2EF41B8 *)Method_System_Collections_Generic_List_GameObject__set_Item__);
+      v19 = *(System_Collections_Generic_List_XWeaponTrail_Element__o **)&v6->fields.baseSize.fields.x;
       ++v20;
       if ( v19 )
         continue;
@@ -249,33 +225,35 @@ void __fastcall ServantStatusListViewItemDrawAppendSkill__SetItem(
   }
   System_Collections_Generic_List_XWeaponTrail_Element___Clear(
     v19,
-    (const MethodInfo_2F260E0 *)Method_System_Collections_Generic_List_GameObject__Clear__);
-  LODWORD(this->fields.baseCollider) = mode;
+    (const MethodInfo_2EF4868 *)Method_System_Collections_Generic_List_GameObject__Clear__);
+  LODWORD(v6->fields.baseCollider) = mode;
   if ( item && mode )
   {
-    srcSkillObj = this->fields.srcSkillObj;
+    srcSkillObj = (UILabel_o *)v6->fields.srcSkillObj;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_11932/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/, 0LL);
+    this = (ServantStatusListViewItemDrawAppendSkill_o *)LocalizationManager__Get(
+                                                           (System_String_o *)StringLiteral_11982/*"SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE"*/,
+                                                           0LL);
     if ( srcSkillObj )
     {
-      UILabel__set_text((UILabel_o *)srcSkillObj, v24, 0LL);
-      explanationLabel = this->fields.explanationLabel;
+      UILabel__set_text(srcSkillObj, (System_String_o *)this, 0LL);
+      explanationLabel = (UISprite_o *)v6->fields.explanationLabel;
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      AtlasManager__SetEventSprite((UISprite_o *)explanationLabel, (System_String_o *)StringLiteral_19613/*"img_txt_extraskill_title"*/, 0LL);
-      v26 = this->fields.explanationLabel;
-      if ( v26 )
+      AtlasManager__SetEventSprite(explanationLabel, (System_String_o *)StringLiteral_19687/*"img_txt_extraskill_title"*/, 0LL);
+      this = (ServantStatusListViewItemDrawAppendSkill_o *)v6->fields.explanationLabel;
+      if ( this )
       {
-        ((void (__fastcall *)(struct UILabel_o *, Il2CppMethodPointer))v26->klass->vtable._33_MakePixelPerfect.method)(
-          v26,
-          v26->klass->vtable._34_get_minWidth.methodPtr);
+        ((void (__fastcall *)(ServantStatusListViewItemDrawAppendSkill_o *, Il2CppMethodPointer))this->klass[1].vtable._0_Equals.method)(
+          this,
+          this->klass[1].vtable._1_Finalize.methodPtr);
         ServantStatusListViewItem__GetAppendPassiveSkillInfo(
           item,
           &idList,
@@ -283,203 +261,209 @@ void __fastcall ServantStatusListViewItemDrawAppendSkill__SetItem(
           &explanationList,
           &releaseStateList,
           &lvList,
-          0LL);
-        v30 = idList;
+          v24);
+        v25 = idList;
         if ( !idList )
           return;
-        v31 = 0LL;
-        v32 = 0;
-        v33 = 1;
+        v26 = 0LL;
+        v27 = 0;
+        v28 = 1;
         while ( 1 )
         {
-          max_length = v30->max_length;
-          if ( (__int64)v31 >= (int)max_length )
+          max_length = v25->max_length;
+          if ( (__int64)v26 >= (int)max_length )
             break;
-          if ( v31 >= max_length )
+          if ( v26 >= max_length )
             goto LABEL_83;
-          if ( v30->m_Items[v31 + 1] >= 1 )
+          if ( v25->m_Items[v26 + 1] >= 1 )
           {
-            skillList = (UnityEngine_UI_Dropdown_DropdownItem_o *)this->fields.skillList;
+            skillList = (UnityEngine_UI_Dropdown_DropdownItem_o *)v6->fields.skillList;
             if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             }
-            v36 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
-                                                skillList,
-                                                (const MethodInfo_19DE20C *)Method_UnityEngine_Object_Instantiate_GameObject___);
-            if ( !v36 )
+            this = (ServantStatusListViewItemDrawAppendSkill_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
+                                                                   skillList,
+                                                                   (const MethodInfo_2095E38 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            if ( !this )
               goto LABEL_13;
-            v37 = v36;
-            transform = UnityEngine_GameObject__get_transform(v36, 0LL);
-            v39 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+            v31 = (UnityEngine_GameObject_o *)this;
+            transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
+            this = (ServantStatusListViewItemDrawAppendSkill_o *)UnityEngine_Component__get_transform(
+                                                                   (UnityEngine_Component_o *)v6,
+                                                                   0LL);
             if ( !transform )
               goto LABEL_13;
-            UnityEngine_Transform__SetParent_34930292(transform, v39, 0, 0LL);
+            UnityEngine_Transform__SetParent_35435768(transform, (UnityEngine_Transform_o *)this, 0, 0LL);
             one = UnityEngine_Vector3__get_one(0LL);
-            GameObjectExtensions__SetLocalScale(v37, one, 0LL);
-            Component_srcLineSprite = (ServantStatusSkillComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                                         v37,
-                                                                         (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusSkillComponent___);
+            GameObjectExtensions__SetLocalScale(v31, one, 0LL);
+            this = (ServantStatusListViewItemDrawAppendSkill_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+                                                                   v31,
+                                                                   (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_ServantStatusSkillComponent___);
             if ( !idList )
               goto LABEL_13;
-            if ( v31 >= idList->max_length )
+            if ( v26 >= idList->max_length )
               goto LABEL_83;
             if ( !titleList )
               goto LABEL_13;
-            if ( v31 >= titleList->max_length )
+            if ( v26 >= titleList->max_length )
               goto LABEL_83;
             if ( !explanationList )
               goto LABEL_13;
-            if ( v31 >= explanationList->max_length )
+            if ( v26 >= explanationList->max_length )
               goto LABEL_83;
             if ( !releaseStateList )
               goto LABEL_13;
-            if ( v31 >= releaseStateList->max_length )
+            if ( v26 >= releaseStateList->max_length )
               goto LABEL_83;
             if ( !lvList )
               goto LABEL_13;
-            if ( v31 >= lvList->max_length )
+            if ( v26 >= lvList->max_length )
             {
 LABEL_83:
-              sub_B17100(Component_srcLineSprite, v28, v29);
-              sub_B170A0();
+              v61 = sub_B2C460(this);
+              sub_B2C400(v61, 0LL);
             }
-            v40 = Component_srcLineSprite;
-            if ( !Component_srcLineSprite )
+            v33 = this;
+            if ( !this )
               goto LABEL_13;
             ServantStatusSkillComponent__SetItem(
-              Component_srcLineSprite,
-              v33,
-              idList->m_Items[v31 + 1],
-              titleList->m_Items[v31],
-              explanationList->m_Items[v31],
-              releaseStateList->m_Items[v31 + 4],
-              lvList->m_Items[v31 + 1],
+              (ServantStatusSkillComponent_o *)this,
+              v28,
+              idList->m_Items[v26 + 1],
+              titleList->m_Items[v26],
+              explanationList->m_Items[v26],
+              releaseStateList->m_Items[v26 + 4],
+              lvList->m_Items[v26 + 1],
               0LL);
-            Height = ServantStatusSkillComponent__GetHeight(v40, 0LL);
-            v42 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
-            v43 = Height;
+            Height = ServantStatusSkillComponent__GetHeight((ServantStatusSkillComponent_o *)v33, 0LL);
+            v35 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
+            v36 = Height;
             if ( (BYTE3(ServantStatusListViewItemDrawAppendSkill_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !ServantStatusListViewItemDrawAppendSkill_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(ServantStatusListViewItemDrawAppendSkill_TypeInfo);
-              v42 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
+              v35 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
             }
-            v44 = UnityEngine_Mathf__Max_40727628(
-                    v42->static_fields->ADJUST_HEIGHT + v43,
-                    v42->static_fields->SKILL_BASE_HEIGHT,
-                    0LL);
-            if ( !*(_QWORD *)&this->fields.baseSize.fields.x )
+            this = (ServantStatusListViewItemDrawAppendSkill_o *)UnityEngine_Mathf__Max_40694800(
+                                                                   v35->static_fields->ADJUST_HEIGHT + v36,
+                                                                   v35->static_fields->SKILL_BASE_HEIGHT,
+                                                                   0LL);
+            if ( !*(_QWORD *)&v6->fields.baseSize.fields.x )
               goto LABEL_13;
-            v32 += v44;
+            v27 += (int)this;
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              *(System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o **)&this->fields.baseSize.fields.x,
-              (EventMissionProgressRequest_Argument_ProgressData_o *)v37,
-              (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_GameObject__Add__);
-            v30 = idList;
-            ++v33;
+              *(System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o **)&v6->fields.baseSize.fields.x,
+              (EventMissionProgressRequest_Argument_ProgressData_o *)v31,
+              (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_GameObject__Add__);
+            v25 = idList;
+            ++v28;
           }
-          ++v31;
-          if ( !v30 )
+          ++v26;
+          if ( !v25 )
             goto LABEL_13;
         }
-        z = this->fields.baseSize.fields.z;
-        x = this->fields.titleBasePosition.fields.x;
-        y = this->fields.titleBasePosition.fields.y;
-        baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
+        z = v6->fields.baseSize.fields.z;
+        x = v6->fields.titleBasePosition.fields.x;
+        y = v6->fields.titleBasePosition.fields.y;
+        baseSprite = (UnityEngine_Object_o *)v6->fields.baseSprite;
         if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        v49 = x + (float)v32;
+        v41 = x + (float)v27;
         if ( UnityEngine_Object__op_Inequality(baseSprite, 0LL, 0LL) )
         {
-          v50 = (UnityEngine_BoxCollider_o *)this->fields.baseSprite;
-          if ( !v50 )
+          this = (ServantStatusListViewItemDrawAppendSkill_o *)v6->fields.baseSprite;
+          if ( !this )
             goto LABEL_13;
-          v82.fields.x = z;
-          v82.fields.y = v49;
-          v82.fields.z = y;
-          UnityEngine_BoxCollider__set_size(v50, v82, 0LL);
+          v68.fields.x = z;
+          v68.fields.y = v41;
+          v68.fields.z = y;
+          UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, v68, 0LL);
         }
-        titleSprite = (UIWidget_o *)this->fields.titleSprite;
-        if ( titleSprite )
+        this = (ServantStatusListViewItemDrawAppendSkill_o *)v6->fields.titleSprite;
+        if ( this )
         {
-          v52 = z;
+          v42 = z;
           if ( z == INFINITY )
-            v52 = -z;
-          UIWidget__set_width(titleSprite, (int)v52, 0LL);
-          v53 = (UIWidget_o *)this->fields.titleSprite;
-          if ( v53 )
+            v42 = -z;
+          UIWidget__set_width((UIWidget_o *)this, (int)v42, 0LL);
+          this = (ServantStatusListViewItemDrawAppendSkill_o *)v6->fields.titleSprite;
+          if ( this )
           {
-            v54 = v49;
-            if ( v49 == INFINITY )
-              v54 = -INFINITY;
-            UIWidget__set_height(v53, (int)v54, 0LL);
-            titleTextSprite = (UnityEngine_Component_o *)this->fields.titleTextSprite;
-            v56 = v32 >= 0 ? v32 : v32 + 1;
-            if ( titleTextSprite )
+            v43 = v41;
+            if ( v41 == INFINITY )
+              v43 = -INFINITY;
+            UIWidget__set_height((UIWidget_o *)this, (int)v43, 0LL);
+            this = (ServantStatusListViewItemDrawAppendSkill_o *)v6->fields.titleTextSprite;
+            v44 = v27 >= 0 ? v27 : v27 + 1;
+            if ( this )
             {
-              v57 = this->fields.titleBasePosition.fields.z;
-              v58 = this->fields.skillBasePosition.fields.x;
-              v59 = this->fields.skillBasePosition.fields.y;
-              v60 = UnityEngine_Component__get_transform(titleTextSprite, 0LL);
-              if ( v60 )
+              v45 = v6->fields.titleBasePosition.fields.z;
+              v46 = v6->fields.skillBasePosition.fields.x;
+              v47 = v6->fields.skillBasePosition.fields.y;
+              this = (ServantStatusListViewItemDrawAppendSkill_o *)UnityEngine_Component__get_transform(
+                                                                     (UnityEngine_Component_o *)this,
+                                                                     0LL);
+              if ( this )
               {
-                v61 = (float)(v56 >> 1);
-                v83.fields.y = v58 + v61;
-                v83.fields.x = v57;
-                v83.fields.z = v59;
-                UnityEngine_Transform__set_localPosition(v60, v83, 0LL);
-                v62 = *(_QWORD *)&this->fields.baseSize.fields.x;
-                if ( v62 )
+                v48 = (float)(v44 >> 1);
+                v69.fields.y = v46 + v48;
+                v69.fields.x = v45;
+                v69.fields.z = v47;
+                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v69, 0LL);
+                v49 = *(_QWORD *)&v6->fields.baseSize.fields.x;
+                if ( v49 )
                 {
-                  v63 = this->fields.skillBasePosition.fields.z;
-                  v64 = *(float *)&this[1].klass;
-                  v65 = 0LL;
-                  v66 = *((float *)&this->fields.skillBasePosition + 3) + v61;
+                  v50 = v6->fields.skillBasePosition.fields.z;
+                  v51 = *(float *)&v6[1].klass;
+                  v52 = 0LL;
+                  v53 = *((float *)&v6->fields.skillBasePosition + 3) + v48;
                   while ( 1 )
                   {
-                    v67 = *(_DWORD *)(v62 + 24);
-                    if ( (int)v65 >= v67 )
+                    v54 = *(_DWORD *)(v49 + 24);
+                    if ( (int)v52 >= v54 )
                       return;
-                    if ( v67 <= (unsigned int)v65 )
-                      System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
-                    v68 = *(_QWORD *)(v62 + 16) + 8 * v65;
-                    v69 = *(UnityEngine_GameObject_o **)(v68 + 32);
-                    if ( v69 )
+                    if ( v54 <= (unsigned int)v52 )
+                      System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+                    v55 = *(_QWORD *)(v49 + 16) + 8 * v52;
+                    v56 = *(UnityEngine_GameObject_o **)(v55 + 32);
+                    if ( v56 )
                     {
-                      v70 = (ServantStatusSkillComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                                               *(UnityEngine_GameObject_o **)(v68 + 32),
-                                                               (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusSkillComponent___);
-                      v71 = UnityEngine_GameObject__get_transform(v69, 0LL);
-                      if ( v71 )
+                      Component_srcLineSprite = (ServantStatusSkillComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+                                                                                   *(UnityEngine_GameObject_o **)(v55 + 32),
+                                                                                   (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_ServantStatusSkillComponent___);
+                      this = (ServantStatusListViewItemDrawAppendSkill_o *)UnityEngine_GameObject__get_transform(
+                                                                             v56,
+                                                                             0LL);
+                      if ( this )
                       {
-                        v84.fields.x = v63;
-                        v84.fields.y = v66;
-                        v84.fields.z = v64;
-                        UnityEngine_Transform__set_localPosition(v71, v84, 0LL);
-                        if ( v70 )
+                        v70.fields.x = v50;
+                        v70.fields.y = v53;
+                        v70.fields.z = v51;
+                        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v70, 0LL);
+                        if ( Component_srcLineSprite )
                         {
-                          v72 = ServantStatusSkillComponent__GetHeight(v70, 0LL);
-                          v73 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
-                          v74 = v72;
+                          v58 = ServantStatusSkillComponent__GetHeight(Component_srcLineSprite, 0LL);
+                          v59 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
+                          v60 = v58;
                           if ( (BYTE3(ServantStatusListViewItemDrawAppendSkill_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                             && !ServantStatusListViewItemDrawAppendSkill_TypeInfo->_2.cctor_finished )
                           {
                             j_il2cpp_runtime_class_init_0(ServantStatusListViewItemDrawAppendSkill_TypeInfo);
-                            v73 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
+                            v59 = ServantStatusListViewItemDrawAppendSkill_TypeInfo;
                           }
-                          v75 = UnityEngine_Mathf__Max_40727628(
-                                  v73->static_fields->ADJUST_HEIGHT + v74,
-                                  v73->static_fields->SKILL_BASE_HEIGHT,
-                                  0LL);
-                          v62 = *(_QWORD *)&this->fields.baseSize.fields.x;
-                          v66 = v66 - (float)v75;
-                          ++v65;
-                          if ( v62 )
+                          this = (ServantStatusListViewItemDrawAppendSkill_o *)UnityEngine_Mathf__Max_40694800(
+                                                                                 v59->static_fields->ADJUST_HEIGHT + v60,
+                                                                                 v59->static_fields->SKILL_BASE_HEIGHT,
+                                                                                 0LL);
+                          v49 = *(_QWORD *)&v6->fields.baseSize.fields.x;
+                          v53 = v53 - (float)(int)this;
+                          ++v52;
+                          if ( v49 )
                             continue;
                         }
                       }
@@ -494,6 +478,6 @@ LABEL_83:
       }
     }
 LABEL_13:
-    sub_B170D4();
+    sub_B2C434(this, item);
   }
 }

@@ -24,11 +24,11 @@ void __fastcall VoiceInfo___ctor(VoiceInfo_o *this, const MethodInfo *method)
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v2->fields.isCanPlay = 0;
   v2->fields.overwriteName = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&v2->fields.overwriteName, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B2C2F8((BattleServantConfConponent_o *)&v2->fields.overwriteName, 0LL, v3, v4, v5, v6, v7, v8);
   v2->fields.overwriteNameDefault = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&v2->fields.overwriteNameDefault, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_B2C2F8((BattleServantConfConponent_o *)&v2->fields.overwriteNameDefault, 0LL, v9, v10, v11, v12, v13, v14);
   v2->fields.servantVoiceConds = 0LL;
   v2 = (VoiceInfo_o *)((char *)v2 + 56);
   v2[-1].fields.servantVoiceConds = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)v2, 0LL, v15, v16, v17, v18, v19, v20);
+  sub_B2C2F8((BattleServantConfConponent_o *)v2, 0LL, v15, v16, v17, v18, v19, v20);
 }

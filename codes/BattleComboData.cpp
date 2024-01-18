@@ -1,19 +1,18 @@
 void __fastcall BattleComboData___ctor(BattleComboData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x2
-  struct System_Boolean_array *v4; // x1
+  struct System_Boolean_array *v3; // x1
 
-  if ( (byte_40F6978 & 1) == 0 )
+  if ( (byte_4184258 & 1) == 0 )
   {
-    sub_B16FFC(&bool___TypeInfo, method);
-    byte_40F6978 = 1;
+    sub_B2C35C(&bool___TypeInfo, method);
+    byte_4184258 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.flash = 0;
   this->fields.samecount = 0;
-  v4 = (struct System_Boolean_array *)sub_B17014(bool___TypeInfo, 3LL, v3);
-  this->fields.sameflg = v4;
-  sub_B16F98(&this->fields.sameflg, v4);
+  v3 = (struct System_Boolean_array *)sub_B2C374(bool___TypeInfo, 3LL);
+  this->fields.sameflg = v3;
+  sub_B2C2F8(&this->fields.sameflg, v3);
 }
 
 
@@ -22,10 +21,10 @@ bool __fastcall BattleComboData__AchieveAnyChain(BattleComboData_o *this, const 
   int32_t samecount; // w20
   BattleDataDefine_c *v4; // x0
 
-  if ( (byte_40F6979 & 1) == 0 )
+  if ( (byte_4184259 & 1) == 0 )
   {
-    sub_B16FFC(&BattleDataDefine_TypeInfo, method);
-    byte_40F6979 = 1;
+    sub_B2C35C(&BattleDataDefine_TypeInfo, method);
+    byte_4184259 = 1;
   }
   if ( this->fields.flash )
     return 1;

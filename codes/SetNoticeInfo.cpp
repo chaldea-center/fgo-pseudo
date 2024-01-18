@@ -2,10 +2,10 @@ void __fastcall SetNoticeInfo___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_40FC3D8 & 1) == 0 )
+  if ( (byte_418B97B & 1) == 0 )
   {
-    sub_B16FFC(&SetNoticeInfo_TypeInfo, v1);
-    byte_40FC3D8 = 1;
+    sub_B2C35C(&SetNoticeInfo_TypeInfo, v1);
+    byte_418B97B = 1;
   }
   SetNoticeInfo_TypeInfo->static_fields->isApRecover = 1;
   SetNoticeInfo_TypeInfo->static_fields->isGameNotice = 1;
@@ -23,10 +23,10 @@ bool __fastcall SetNoticeInfo__GetisApRecover(const MethodInfo *method)
   __int64 v1; // x1
   SetNoticeInfo_c *v2; // x0
 
-  if ( (byte_40FC3D5 & 1) == 0 )
+  if ( (byte_418B978 & 1) == 0 )
   {
-    sub_B16FFC(&SetNoticeInfo_TypeInfo, v1);
-    byte_40FC3D5 = 1;
+    sub_B2C35C(&SetNoticeInfo_TypeInfo, v1);
+    byte_418B978 = 1;
   }
   v2 = SetNoticeInfo_TypeInfo;
   if ( (BYTE3(SetNoticeInfo_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -44,10 +44,10 @@ bool __fastcall SetNoticeInfo__GetisGameNotice(const MethodInfo *method)
   __int64 v1; // x1
   SetNoticeInfo_c *v2; // x0
 
-  if ( (byte_40FC3D7 & 1) == 0 )
+  if ( (byte_418B97A & 1) == 0 )
   {
-    sub_B16FFC(&SetNoticeInfo_TypeInfo, v1);
-    byte_40FC3D7 = 1;
+    sub_B2C35C(&SetNoticeInfo_TypeInfo, v1);
+    byte_418B97A = 1;
   }
   v2 = SetNoticeInfo_TypeInfo;
   if ( (BYTE3(SetNoticeInfo_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -64,10 +64,10 @@ void __fastcall SetNoticeInfo__SetisApRecover(bool isNotice, const MethodInfo *m
 {
   SetNoticeInfo_c *v3; // x0
 
-  if ( (byte_40FC3D4 & 1) == 0 )
+  if ( (byte_418B977 & 1) == 0 )
   {
-    sub_B16FFC(&SetNoticeInfo_TypeInfo, method);
-    byte_40FC3D4 = 1;
+    sub_B2C35C(&SetNoticeInfo_TypeInfo, method);
+    byte_418B977 = 1;
   }
   v3 = SetNoticeInfo_TypeInfo;
   if ( (BYTE3(SetNoticeInfo_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -84,10 +84,10 @@ void __fastcall SetNoticeInfo__SetisGameNotice(bool isNotice, const MethodInfo *
 {
   SetNoticeInfo_c *v3; // x0
 
-  if ( (byte_40FC3D6 & 1) == 0 )
+  if ( (byte_418B979 & 1) == 0 )
   {
-    sub_B16FFC(&SetNoticeInfo_TypeInfo, method);
-    byte_40FC3D6 = 1;
+    sub_B2C35C(&SetNoticeInfo_TypeInfo, method);
+    byte_418B979 = 1;
   }
   v3 = SetNoticeInfo_TypeInfo;
   if ( (BYTE3(SetNoticeInfo_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

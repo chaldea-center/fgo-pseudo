@@ -10,12 +10,11 @@ void __fastcall FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, con
 {
   _BOOL8 v3; // x0
   __int64 v4; // x1
-  __int64 v5; // x2
   struct UnityEngine_MeshRenderer_array *renderers; // x20
   int max_length; // w8
-  __int64 v8; // x21
-  UnityEngine_Renderer_o *v9; // x0
-  UnityEngine_Material_o *material; // x0
+  __int64 v7; // x21
+  UnityEngine_Renderer_o *material; // x0
+  __int64 v9; // x0
 
   v3 = UnityEngine_Color__op_Inequality(
          *(UnityEngine_Color_o *)&this->fields.backupColor.fields.g,
@@ -30,22 +29,28 @@ void __fastcall FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, con
       max_length = renderers->max_length;
       if ( max_length >= 1 )
       {
-        v8 = 0LL;
+        v7 = 0LL;
         do
         {
-          if ( (unsigned int)v8 >= max_length )
+          if ( (unsigned int)v7 >= max_length )
           {
-            sub_B17100(v3, v4, v5);
-            sub_B170A0();
+            v9 = sub_B2C460(v3);
+            sub_B2C400(v9, 0LL);
           }
-          v9 = (UnityEngine_Renderer_o *)renderers->m_Items[v8];
-          if ( !v9 || (material = UnityEngine_Renderer__get_material(v9, 0LL)) == 0LL )
-            sub_B170D4();
-          UnityEngine_Material__set_color(material, *(UnityEngine_Color_o *)&this->fields.color.fields.g, 0LL);
+          material = (UnityEngine_Renderer_o *)renderers->m_Items[v7];
+          if ( !material
+            || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0LL)) == 0LL )
+          {
+            sub_B2C434(material, v4);
+          }
+          UnityEngine_Material__set_color(
+            (UnityEngine_Material_o *)material,
+            *(UnityEngine_Color_o *)&this->fields.color.fields.g,
+            0LL);
           max_length = renderers->max_length;
-          ++v8;
+          ++v7;
         }
-        while ( (int)v8 < max_length );
+        while ( (int)v7 < max_length );
       }
     }
   }

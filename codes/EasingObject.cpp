@@ -36,11 +36,11 @@ void __fastcall EasingObject__Play(
         int32_t easingType,
         const MethodInfo *method)
 {
-  EasingObject__Play_33167332(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
+  EasingObject__Play_33149296(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
 }
 
 
-void __fastcall EasingObject__Play_33167332(
+void __fastcall EasingObject__Play_33149296(
         EasingObject_o *this,
         float from,
         float to,
@@ -76,7 +76,7 @@ void __fastcall EasingObject__Play_33167332(
   this->fields.mTime = UnityEngine_Time__get_time(0LL);
   this->fields.mDelay = v15;
   *(_QWORD *)&this->fields.mIsPause = endAct;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.mIsPause,
     (System_Int32_array **)endAct,
     v16,
@@ -88,7 +88,7 @@ void __fastcall EasingObject__Play_33167332(
   this->fields.mEndAct = procAct;
   p_mEndAct = &this->fields.mEndAct;
   *((float *)p_mEndAct - 5) = from;
-  sub_B16F98((BattleServantConfConponent_o *)p_mEndAct, (System_Int32_array **)procAct, v23, v24, v25, v26, v27, v28);
+  sub_B2C2F8((BattleServantConfConponent_o *)p_mEndAct, (System_Int32_array **)procAct, v23, v24, v25, v26, v27, v28);
   *((_DWORD *)p_mEndAct + 6) = easingType;
   *((float *)p_mEndAct - 2) = delay;
   *((_BYTE *)p_mEndAct + 28) = 0;
@@ -165,7 +165,7 @@ void __fastcall EasingObject__Update(EasingObject_o *this, const MethodInfo *met
           v8 = 1.0;
         else
           v8 = v7;
-        v9 = Easing__Func_33157772(this->fields.mTo, this->fields.mNow, v8, (int32_t)this[1].klass, v6);
+        v9 = Easing__Func_33139736(this->fields.mTo, this->fields.mNow, v8, (int32_t)this[1].klass, v6);
         mEndAct = this->fields.mEndAct;
         this->fields.mStartTime = v9;
         if ( mEndAct )

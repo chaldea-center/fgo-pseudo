@@ -9,15 +9,15 @@ void __fastcall Fgo_Assertions_Assert___cctor(const MethodInfo *method)
   System_Int32_array *v7; // x7
   struct Fgo_Assertions_Assert_StaticFields *static_fields; // x0
 
-  if ( (byte_4108945 & 1) == 0 )
+  if ( (byte_41966F5 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, v1);
-    byte_4108945 = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, v1);
+    byte_41966F5 = 1;
   }
   Fgo_Assertions_Assert_TypeInfo->static_fields->enable = 1;
   static_fields = Fgo_Assertions_Assert_TypeInfo->static_fields;
   static_fields->onFailedAction = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&static_fields->onFailedAction, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B2C2F8((BattleServantConfConponent_o *)&static_fields->onFailedAction, 0LL, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -37,10 +37,10 @@ void __fastcall Fgo_Assertions_Assert__AreApproximatelyEqual(
 
   v13 = expected;
   v12 = actual;
-  if ( (byte_4108938 & 1) == 0 )
+  if ( (byte_41966E8 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, method);
-    byte_4108938 = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, method);
+    byte_41966E8 = 1;
   }
   if ( !UnityEngine_Mathf__Approximately(expected, actual, 0LL) )
   {
@@ -71,10 +71,10 @@ void __fastcall Fgo_Assertions_Assert__AreEqual(
 
   v10 = actual;
   v11 = expected;
-  if ( (byte_4108939 & 1) == 0 )
+  if ( (byte_41966E9 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, *(_QWORD *)&actual);
-    byte_4108939 = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, *(_QWORD *)&actual);
+    byte_41966E9 = 1;
   }
   if ( expected != actual )
   {
@@ -90,7 +90,7 @@ void __fastcall Fgo_Assertions_Assert__AreEqual(
 }
 
 
-void __fastcall Fgo_Assertions_Assert__AreEqual_49878608(
+void __fastcall Fgo_Assertions_Assert__AreEqual_50313672(
         int64_t expected,
         int64_t actual,
         System_String_o *message,
@@ -104,10 +104,10 @@ void __fastcall Fgo_Assertions_Assert__AreEqual_49878608(
 
   v10 = actual;
   v11 = expected;
-  if ( (byte_410893A & 1) == 0 )
+  if ( (byte_41966EA & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, actual);
-    byte_410893A = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, actual);
+    byte_41966EA = 1;
   }
   if ( expected != actual )
   {
@@ -123,7 +123,7 @@ void __fastcall Fgo_Assertions_Assert__AreEqual_49878608(
 }
 
 
-void __fastcall Fgo_Assertions_Assert__AreEqual_49878788(
+void __fastcall Fgo_Assertions_Assert__AreEqual_50313852(
         UnityEngine_Object_o *expected,
         UnityEngine_Object_o *actual,
         System_String_o *message,
@@ -131,16 +131,18 @@ void __fastcall Fgo_Assertions_Assert__AreEqual_49878788(
 {
   __int64 v7; // x1
   __int64 v8; // x1
+  _BOOL8 v9; // x0
+  __int64 v10; // x1
   System_String_o *name; // x21
-  const MethodInfo *v10; // x3
-  System_String_o *v11; // x20
+  const MethodInfo *v12; // x3
+  System_String_o *v13; // x20
 
-  if ( (byte_410893B & 1) == 0 )
+  if ( (byte_41966EB & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, actual);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_21080/*"null"*/, v8);
-    byte_410893B = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, actual);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v7);
+    sub_B2C35C(&StringLiteral_21168/*"null"*/, v8);
+    byte_41966EB = 1;
   }
   if ( expected )
     goto LABEL_16;
@@ -174,9 +176,10 @@ LABEL_39:
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        if ( UnityEngine_Object__op_Equality(expected, 0LL, 0LL) )
+        v9 = UnityEngine_Object__op_Equality(expected, 0LL, 0LL);
+        if ( v9 )
         {
-          name = (System_String_o *)StringLiteral_21080/*"null"*/;
+          name = (System_String_o *)StringLiteral_21168/*"null"*/;
         }
         else
         {
@@ -189,25 +192,26 @@ LABEL_39:
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        if ( UnityEngine_Object__op_Equality(actual, 0LL, 0LL) )
+        v9 = UnityEngine_Object__op_Equality(actual, 0LL, 0LL);
+        if ( v9 )
         {
-          v11 = (System_String_o *)StringLiteral_21080/*"null"*/;
+          v13 = (System_String_o *)StringLiteral_21168/*"null"*/;
 LABEL_32:
           if ( (BYTE3(Fgo_Assertions_Assert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
           }
-          Fgo_Assertions_Assert__OnFailed(message, name, v11, v10);
+          Fgo_Assertions_Assert__OnFailed(message, name, v13, v12);
           return;
         }
         if ( actual )
         {
-          v11 = UnityEngine_Object__get_name(actual, 0LL);
+          v13 = UnityEngine_Object__get_name(actual, 0LL);
           goto LABEL_32;
         }
 LABEL_36:
-        sub_B170D4();
+        sub_B2C434(v9, v10);
       }
     }
   }
@@ -218,7 +222,7 @@ void __fastcall Fgo_Assertions_Assert__AreEqual_object_(
         Il2CppObject *expected,
         Il2CppObject *actual,
         System_String_o *message,
-        const MethodInfo_250DDA0 *method)
+        const MethodInfo_171FB50 *method)
 {
   __int64 v7; // x1
   __int64 v8; // x1
@@ -229,28 +233,28 @@ void __fastcall Fgo_Assertions_Assert__AreEqual_object_(
   System_String_o *v13; // x21
   System_String_o *v14; // x20
 
-  if ( (byte_4102A06 & 1) == 0 )
+  if ( (byte_4187209 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, actual);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_21080/*"null"*/, v8);
-    byte_4102A06 = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, actual);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v7);
+    sub_B2C35C(&StringLiteral_21168/*"null"*/, v8);
+    byte_4187209 = 1;
   }
   if ( expected != actual )
   {
-    v9 = sub_B170BC(expected, UnityEngine_Object_TypeInfo);
+    v9 = sub_B2C41C(expected, UnityEngine_Object_TypeInfo);
     if ( !actual && v9
-      || (v10 = sub_B170BC(actual, UnityEngine_Object_TypeInfo), !expected) && v10
-      || sub_B170BC(expected, UnityEngine_Object_TypeInfo) && sub_B170BC(actual, UnityEngine_Object_TypeInfo) )
+      || (v10 = sub_B2C41C(actual, UnityEngine_Object_TypeInfo), !expected) && v10
+      || sub_B2C41C(expected, UnityEngine_Object_TypeInfo) && sub_B2C41C(actual, UnityEngine_Object_TypeInfo) )
     {
-      v11 = (UnityEngine_Object_o *)sub_B170BC(actual, UnityEngine_Object_TypeInfo);
+      v11 = (UnityEngine_Object_o *)sub_B2C41C(actual, UnityEngine_Object_TypeInfo);
       if ( (BYTE3(Fgo_Assertions_Assert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
       }
-      v12 = (UnityEngine_Object_o *)sub_B170BC(expected, UnityEngine_Object_TypeInfo);
-      Fgo_Assertions_Assert__AreEqual_49878788(v12, v11, message, 0LL);
+      v12 = (UnityEngine_Object_o *)sub_B2C41C(expected, UnityEngine_Object_TypeInfo);
+      Fgo_Assertions_Assert__AreEqual_50313852(v12, v11, message, 0LL);
       return;
     }
     if ( expected )
@@ -268,11 +272,11 @@ void __fastcall Fgo_Assertions_Assert__AreEqual_object_(
     }
     else
     {
-      v13 = (System_String_o *)StringLiteral_21080/*"null"*/;
+      v13 = (System_String_o *)StringLiteral_21168/*"null"*/;
       if ( !actual )
       {
 LABEL_20:
-        v14 = (System_String_o *)StringLiteral_21080/*"null"*/;
+        v14 = (System_String_o *)StringLiteral_21168/*"null"*/;
 LABEL_21:
         if ( (BYTE3(Fgo_Assertions_Assert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
@@ -309,16 +313,16 @@ void __fastcall Fgo_Assertions_Assert__AreNotApproximatelyEqual(
 
   v15 = expected;
   v14 = actual;
-  if ( (byte_410893C & 1) == 0 )
+  if ( (byte_41966EC & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_21041/*"not "*/, v7);
-    byte_410893C = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, method);
+    sub_B2C35C(&StringLiteral_21129/*"not "*/, v7);
+    byte_41966EC = 1;
   }
   if ( UnityEngine_Mathf__Approximately(expected, actual, 0LL) )
   {
     v9 = System_Single__ToString(v8, (const MethodInfo *)&v15);
-    v10 = System_String__Concat_43743732((System_String_o *)StringLiteral_21041/*"not "*/, v9, 0LL);
+    v10 = System_String__Concat_44305532((System_String_o *)StringLiteral_21129/*"not "*/, v9, 0LL);
     v13 = System_Single__ToString(v11, (const MethodInfo *)&v14);
     if ( (BYTE3(Fgo_Assertions_Assert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
@@ -347,16 +351,16 @@ void __fastcall Fgo_Assertions_Assert__AreNotEqual(
 
   v12 = actual;
   v13 = expected;
-  if ( (byte_410893D & 1) == 0 )
+  if ( (byte_41966ED & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, *(_QWORD *)&actual);
-    sub_B16FFC(&StringLiteral_21041/*"not "*/, v7);
-    byte_410893D = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, *(_QWORD *)&actual);
+    sub_B2C35C(&StringLiteral_21129/*"not "*/, v7);
+    byte_41966ED = 1;
   }
   if ( expected == actual )
   {
     v8 = System_Int32__ToString((int32_t)&v13, 0LL);
-    v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_21041/*"not "*/, v8, 0LL);
+    v9 = System_String__Concat_44305532((System_String_o *)StringLiteral_21129/*"not "*/, v8, 0LL);
     v11 = System_Int32__ToString((int32_t)&v12, 0LL);
     if ( (BYTE3(Fgo_Assertions_Assert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
@@ -368,7 +372,7 @@ void __fastcall Fgo_Assertions_Assert__AreNotEqual(
 }
 
 
-void __fastcall Fgo_Assertions_Assert__AreNotEqual_49879732(
+void __fastcall Fgo_Assertions_Assert__AreNotEqual_50314796(
         int64_t expected,
         int64_t actual,
         System_String_o *message,
@@ -384,16 +388,16 @@ void __fastcall Fgo_Assertions_Assert__AreNotEqual_49879732(
 
   v12 = actual;
   v13 = expected;
-  if ( (byte_410893E & 1) == 0 )
+  if ( (byte_41966EE & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, actual);
-    sub_B16FFC(&StringLiteral_21041/*"not "*/, v7);
-    byte_410893E = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, actual);
+    sub_B2C35C(&StringLiteral_21129/*"not "*/, v7);
+    byte_41966EE = 1;
   }
   if ( expected == actual )
   {
     v8 = System_Int64__ToString((int64_t)&v13, 0LL);
-    v9 = System_String__Concat_43743732((System_String_o *)StringLiteral_21041/*"not "*/, v8, 0LL);
+    v9 = System_String__Concat_44305532((System_String_o *)StringLiteral_21129/*"not "*/, v8, 0LL);
     v11 = System_Int64__ToString((int64_t)&v12, 0LL);
     if ( (BYTE3(Fgo_Assertions_Assert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
@@ -405,7 +409,7 @@ void __fastcall Fgo_Assertions_Assert__AreNotEqual_49879732(
 }
 
 
-void __fastcall Fgo_Assertions_Assert__AreNotEqual_49879952(
+void __fastcall Fgo_Assertions_Assert__AreNotEqual_50315016(
         UnityEngine_Object_o *expected,
         UnityEngine_Object_o *actual,
         System_String_o *message,
@@ -414,11 +418,11 @@ void __fastcall Fgo_Assertions_Assert__AreNotEqual_49879952(
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_410893F & 1) == 0 )
+  if ( (byte_41966EF & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, actual);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    byte_410893F = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, actual);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v7);
+    byte_41966EF = 1;
   }
   if ( !expected )
   {
@@ -462,22 +466,22 @@ void __fastcall Fgo_Assertions_Assert__AreNotEqual_object_(
         Il2CppObject *expected,
         Il2CppObject *actual,
         System_String_o *message,
-        const MethodInfo_18AF62C *method)
+        const MethodInfo_171FD10 *method)
 {
   __int64 v8; // x1
   __int64 v9; // x0
   __int64 v10; // x0
   UnityEngine_Object_o *v11; // x21
   UnityEngine_Object_o *v12; // x0
-  const MethodInfo_18AF62C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_171FD10_RGCTXs *rgctx_data; // x8
   Il2CppObject *v14; // x0
   Il2CppObject *v15; // x1
 
-  if ( (byte_40FA5FC & 1) == 0 )
+  if ( (byte_418720A & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, actual);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    byte_40FA5FC = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, actual);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v8);
+    byte_418720A = 1;
   }
   if ( expected == actual )
   {
@@ -491,12 +495,12 @@ void __fastcall Fgo_Assertions_Assert__AreNotEqual_object_(
     v15 = expected;
     goto LABEL_18;
   }
-  v9 = sub_B170BC(expected, UnityEngine_Object_TypeInfo);
+  v9 = sub_B2C41C(expected, UnityEngine_Object_TypeInfo);
   if ( actual || !v9 )
   {
-    v10 = sub_B170BC(actual, UnityEngine_Object_TypeInfo);
+    v10 = sub_B2C41C(actual, UnityEngine_Object_TypeInfo);
     if ( (expected || !v10)
-      && (!sub_B170BC(expected, UnityEngine_Object_TypeInfo) || !sub_B170BC(actual, UnityEngine_Object_TypeInfo)) )
+      && (!sub_B2C41C(expected, UnityEngine_Object_TypeInfo) || !sub_B2C41C(actual, UnityEngine_Object_TypeInfo)) )
     {
       if ( !expected
         || (((__int64 (__fastcall *)(Il2CppObject *, Il2CppObject *, Il2CppMethodPointer))expected->klass->vtable[0].method)(
@@ -522,14 +526,14 @@ LABEL_18:
       return;
     }
   }
-  v11 = (UnityEngine_Object_o *)sub_B170BC(actual, UnityEngine_Object_TypeInfo);
+  v11 = (UnityEngine_Object_o *)sub_B2C41C(actual, UnityEngine_Object_TypeInfo);
   if ( (BYTE3(Fgo_Assertions_Assert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
   }
-  v12 = (UnityEngine_Object_o *)sub_B170BC(expected, UnityEngine_Object_TypeInfo);
-  Fgo_Assertions_Assert__AreNotEqual_49879952(v12, v11, message, 0LL);
+  v12 = (UnityEngine_Object_o *)sub_B2C41C(expected, UnityEngine_Object_TypeInfo);
+  Fgo_Assertions_Assert__AreNotEqual_50315016(v12, v11, message, 0LL);
 }
 
 
@@ -538,12 +542,12 @@ void __fastcall Fgo_Assertions_Assert__IsAssetDataNotNull(
         System_String_o *assetName,
         const MethodInfo *method)
 {
-  if ( (byte_4108943 & 1) == 0 )
+  if ( (byte_41966F3 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15648/*"[AssetData]\n{0}をロードできませんでした"*/, assetName);
-    byte_4108943 = 1;
+    sub_B2C35C(&StringLiteral_15711/*"[AssetData]\n{0}をロードできませんでした"*/, assetName);
+    byte_41966F3 = 1;
   }
-  System_String__Format((System_String_o *)StringLiteral_15648/*"[AssetData]\n{0}をロードできませんでした"*/, (Il2CppObject *)assetName, 0LL);
+  System_String__Format((System_String_o *)StringLiteral_15711/*"[AssetData]\n{0}をロードできませんでした"*/, (Il2CppObject *)assetName, 0LL);
 }
 
 
@@ -555,11 +559,11 @@ void __fastcall Fgo_Assertions_Assert__IsFalse(bool condition, System_String_o *
   bool v8; // [xsp+Ch] [xbp-14h] BYREF
 
   v8 = condition;
-  if ( (byte_4108941 & 1) == 0 )
+  if ( (byte_41966F1 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, message);
-    sub_B16FFC(&StringLiteral_6560/*"False"*/, v5);
-    byte_4108941 = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, message);
+    sub_B2C35C(&StringLiteral_6584/*"False"*/, v5);
+    byte_41966F1 = 1;
   }
   if ( condition )
   {
@@ -569,7 +573,7 @@ void __fastcall Fgo_Assertions_Assert__IsFalse(bool condition, System_String_o *
     {
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
     }
-    Fgo_Assertions_Assert__OnFailed(message, (System_String_o *)StringLiteral_6560/*"False"*/, v7, v6);
+    Fgo_Assertions_Assert__OnFailed(message, (System_String_o *)StringLiteral_6584/*"False"*/, v7, v6);
   }
 }
 
@@ -577,7 +581,7 @@ void __fastcall Fgo_Assertions_Assert__IsFalse(bool condition, System_String_o *
 void __fastcall Fgo_Assertions_Assert__IsNotNull_object_(
         Il2CppObject *value,
         System_String_o *message,
-        const MethodInfo_18AF7E0 *method)
+        const MethodInfo_171FEC4 *method)
 {
   __int64 v5; // x1
   __int64 v6; // x1
@@ -585,15 +589,15 @@ void __fastcall Fgo_Assertions_Assert__IsNotNull_object_(
   UnityEngine_Object_c *v8; // x1
   UnityEngine_Object_o *v9; // x0
 
-  if ( (byte_40FA5FD & 1) == 0 )
+  if ( (byte_418720B & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, message);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21080/*"null"*/, v6);
-    sub_B16FFC(&StringLiteral_21050/*"not null"*/, v7);
-    byte_40FA5FD = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, message);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
+    sub_B2C35C(&StringLiteral_21168/*"null"*/, v6);
+    sub_B2C35C(&StringLiteral_21138/*"not null"*/, v7);
+    byte_418720B = 1;
   }
-  if ( !sub_B170BC(value, UnityEngine_Object_TypeInfo) )
+  if ( !sub_B2C41C(value, UnityEngine_Object_TypeInfo) )
   {
     if ( value )
       return;
@@ -606,7 +610,7 @@ void __fastcall Fgo_Assertions_Assert__IsNotNull_object_(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v8 = UnityEngine_Object_TypeInfo;
   }
-  v9 = (UnityEngine_Object_o *)sub_B170BC(value, v8);
+  v9 = (UnityEngine_Object_o *)sub_B2C41C(value, v8);
   if ( UnityEngine_Object__op_Equality(v9, 0LL, 0LL) )
   {
 LABEL_8:
@@ -617,8 +621,8 @@ LABEL_8:
     }
     Fgo_Assertions_Assert__OnFailed(
       message,
-      (System_String_o *)StringLiteral_21050/*"not null"*/,
-      (System_String_o *)StringLiteral_21080/*"null"*/,
+      (System_String_o *)StringLiteral_21138/*"not null"*/,
+      (System_String_o *)StringLiteral_21168/*"null"*/,
       0LL);
   }
 }
@@ -627,7 +631,7 @@ LABEL_8:
 void __fastcall Fgo_Assertions_Assert__IsNull_object_(
         Il2CppObject *value,
         System_String_o *message,
-        const MethodInfo_18AF8F0 *method)
+        const MethodInfo_171FFD4 *method)
 {
   __int64 v5; // x1
   __int64 v6; // x1
@@ -635,15 +639,15 @@ void __fastcall Fgo_Assertions_Assert__IsNull_object_(
   UnityEngine_Object_c *v8; // x1
   UnityEngine_Object_o *v9; // x0
 
-  if ( (byte_40FA5FE & 1) == 0 )
+  if ( (byte_418720C & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, message);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_21080/*"null"*/, v6);
-    sub_B16FFC(&StringLiteral_21050/*"not null"*/, v7);
-    byte_40FA5FE = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, message);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
+    sub_B2C35C(&StringLiteral_21168/*"null"*/, v6);
+    sub_B2C35C(&StringLiteral_21138/*"not null"*/, v7);
+    byte_418720C = 1;
   }
-  if ( !sub_B170BC(value, UnityEngine_Object_TypeInfo) )
+  if ( !sub_B2C41C(value, UnityEngine_Object_TypeInfo) )
   {
     if ( !value )
       return;
@@ -656,7 +660,7 @@ void __fastcall Fgo_Assertions_Assert__IsNull_object_(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v8 = UnityEngine_Object_TypeInfo;
   }
-  v9 = (UnityEngine_Object_o *)sub_B170BC(value, v8);
+  v9 = (UnityEngine_Object_o *)sub_B2C41C(value, v8);
   if ( UnityEngine_Object__op_Inequality(v9, 0LL, 0LL) )
   {
 LABEL_10:
@@ -667,8 +671,8 @@ LABEL_10:
     }
     Fgo_Assertions_Assert__OnFailed(
       message,
-      (System_String_o *)StringLiteral_21080/*"null"*/,
-      (System_String_o *)StringLiteral_21050/*"not null"*/,
+      (System_String_o *)StringLiteral_21168/*"null"*/,
+      (System_String_o *)StringLiteral_21138/*"not null"*/,
       0LL);
   }
 }
@@ -677,14 +681,14 @@ LABEL_10:
 void __fastcall Fgo_Assertions_Assert__IsSerializeFieldNotNull_object_(
         Il2CppObject *value,
         System_String_o *fieldName,
-        const MethodInfo_18AFA00 *method)
+        const MethodInfo_17200E4 *method)
 {
-  if ( (byte_40FA5FF & 1) == 0 )
+  if ( (byte_418720D & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_15692/*"[SerializeField]\n{0}の参照が切れています"*/, fieldName);
-    byte_40FA5FF = 1;
+    sub_B2C35C(&StringLiteral_15755/*"[SerializeField]\n{0}の参照が切れています"*/, fieldName);
+    byte_418720D = 1;
   }
-  System_String__Format((System_String_o *)StringLiteral_15692/*"[SerializeField]\n{0}の参照が切れています"*/, (Il2CppObject *)fieldName, 0LL);
+  System_String__Format((System_String_o *)StringLiteral_15755/*"[SerializeField]\n{0}の参照が切れています"*/, (Il2CppObject *)fieldName, 0LL);
 }
 
 
@@ -696,11 +700,11 @@ void __fastcall Fgo_Assertions_Assert__IsTrue(bool condition, System_String_o *m
   bool v8; // [xsp+Ch] [xbp-14h] BYREF
 
   v8 = condition;
-  if ( (byte_4108942 & 1) == 0 )
+  if ( (byte_41966F2 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, message);
-    sub_B16FFC(&StringLiteral_14493/*"True"*/, v5);
-    byte_4108942 = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, message);
+    sub_B2C35C(&StringLiteral_14553/*"True"*/, v5);
+    byte_41966F2 = 1;
   }
   if ( !condition )
   {
@@ -710,7 +714,7 @@ void __fastcall Fgo_Assertions_Assert__IsTrue(bool condition, System_String_o *m
     {
       j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
     }
-    Fgo_Assertions_Assert__OnFailed(message, (System_String_o *)StringLiteral_14493/*"True"*/, v7, v6);
+    Fgo_Assertions_Assert__OnFailed(message, (System_String_o *)StringLiteral_14553/*"True"*/, v7, v6);
   }
 }
 
@@ -727,16 +731,17 @@ void __fastcall Fgo_Assertions_Assert__OnFailed(
   Fgo_Assertions_Assert_c *v10; // x8
   struct Fgo_Assertions_Assert_StaticFields *static_fields; // x9
   struct System_Action_string__o *onFailedAction; // x0
+  __int64 v13; // x1
 
-  if ( (byte_4108936 & 1) == 0 )
+  if ( (byte_41966E6 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Action_string__Invoke__, expected);
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_23447/*"{0}\n(expected={1}, actual={2})"*/, v8);
-    byte_4108936 = 1;
+    sub_B2C35C(&Method_System_Action_string__Invoke__, expected);
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, v7);
+    sub_B2C35C(&StringLiteral_23541/*"{0}\n(expected={1}, actual={2})"*/, v8);
+    byte_41966E6 = 1;
   }
-  v9 = System_String__Format_43744796(
-         (System_String_o *)StringLiteral_23447/*"{0}\n(expected={1}, actual={2})"*/,
+  v9 = System_String__Format_44306596(
+         (System_String_o *)StringLiteral_23541/*"{0}\n(expected={1}, actual={2})"*/,
          (Il2CppObject *)message,
          (Il2CppObject *)expected,
          (Il2CppObject *)actual,
@@ -765,12 +770,12 @@ void __fastcall Fgo_Assertions_Assert__OnFailed(
         j_il2cpp_runtime_class_init_0(v10);
         onFailedAction = Fgo_Assertions_Assert_TypeInfo->static_fields->onFailedAction;
         if ( !onFailedAction )
-          sub_B170D4();
+          sub_B2C434(0LL, v13);
       }
       System_Action_Uri___Invoke(
         (System_Action_Uri__o *)onFailedAction,
         (System_Uri_o *)v9,
-        (const MethodInfo_24B7324 *)Method_System_Action_string__Invoke__);
+        (const MethodInfo_24BBAEC *)Method_System_Action_string__Invoke__);
     }
   }
 }
@@ -786,59 +791,63 @@ void __fastcall Fgo_Assertions_Assert__OnFailedAreNotEqual(
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  System_String_o *v11; // x21
+  _BOOL8 v11; // x0
+  __int64 v12; // x1
+  System_String_o *v13; // x21
   System_String_o *name; // x0
-  const MethodInfo *v13; // x3
-  System_String_o *v14; // x20
+  const MethodInfo *v15; // x3
+  System_String_o *v16; // x20
 
-  if ( (byte_4108940 & 1) == 0 )
+  if ( (byte_41966F0 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, actual);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_21080/*"null"*/, v8);
-    sub_B16FFC(&StringLiteral_21050/*"not null"*/, v9);
-    sub_B16FFC(&StringLiteral_21041/*"not "*/, v10);
-    byte_4108940 = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, actual);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v7);
+    sub_B2C35C(&StringLiteral_21168/*"null"*/, v8);
+    sub_B2C35C(&StringLiteral_21138/*"not null"*/, v9);
+    sub_B2C35C(&StringLiteral_21129/*"not "*/, v10);
+    byte_41966F0 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Equality(expected, 0LL, 0LL) )
+  v11 = UnityEngine_Object__op_Equality(expected, 0LL, 0LL);
+  if ( v11 )
   {
-    v11 = (System_String_o *)StringLiteral_21050/*"not null"*/;
+    v13 = (System_String_o *)StringLiteral_21138/*"not null"*/;
   }
   else
   {
     if ( !expected )
       goto LABEL_21;
     name = UnityEngine_Object__get_name(expected, 0LL);
-    v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_21041/*"not "*/, name, 0LL);
+    v13 = System_String__Concat_44305532((System_String_o *)StringLiteral_21129/*"not "*/, name, 0LL);
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( !UnityEngine_Object__op_Equality(actual, 0LL, 0LL) )
+  v11 = UnityEngine_Object__op_Equality(actual, 0LL, 0LL);
+  if ( !v11 )
   {
     if ( actual )
     {
-      v14 = UnityEngine_Object__get_name(actual, 0LL);
+      v16 = UnityEngine_Object__get_name(actual, 0LL);
       goto LABEL_17;
     }
 LABEL_21:
-    sub_B170D4();
+    sub_B2C434(v11, v12);
   }
-  v14 = (System_String_o *)StringLiteral_21080/*"null"*/;
+  v16 = (System_String_o *)StringLiteral_21168/*"null"*/;
 LABEL_17:
   if ( (BYTE3(Fgo_Assertions_Assert_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !Fgo_Assertions_Assert_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(Fgo_Assertions_Assert_TypeInfo);
   }
-  Fgo_Assertions_Assert__OnFailed(message, v11, v14, v13);
+  Fgo_Assertions_Assert__OnFailed(message, v13, v16, v15);
 }
 
 
@@ -846,7 +855,7 @@ void __fastcall Fgo_Assertions_Assert__OnFailedAreNotEqual_object_(
         Il2CppObject *expected,
         Il2CppObject *actual,
         System_String_o *message,
-        const MethodInfo_18AFA50 *method)
+        const MethodInfo_1720134 *method)
 {
   __int64 v7; // x1
   __int64 v8; // x1
@@ -855,29 +864,29 @@ void __fastcall Fgo_Assertions_Assert__OnFailedAreNotEqual_object_(
   System_String_o *v11; // x21
   System_String_o *v12; // x20
 
-  if ( (byte_40FA600 & 1) == 0 )
+  if ( (byte_418720E & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, actual);
-    sub_B16FFC(&StringLiteral_21080/*"null"*/, v7);
-    sub_B16FFC(&StringLiteral_21050/*"not null"*/, v8);
-    sub_B16FFC(&StringLiteral_21041/*"not "*/, v9);
-    byte_40FA600 = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, actual);
+    sub_B2C35C(&StringLiteral_21168/*"null"*/, v7);
+    sub_B2C35C(&StringLiteral_21138/*"not null"*/, v8);
+    sub_B2C35C(&StringLiteral_21129/*"not "*/, v9);
+    byte_418720E = 1;
   }
   if ( !expected )
   {
-    v11 = (System_String_o *)StringLiteral_21050/*"not null"*/;
+    v11 = (System_String_o *)StringLiteral_21138/*"not null"*/;
     if ( actual )
       goto LABEL_5;
 LABEL_7:
-    v12 = (System_String_o *)StringLiteral_21080/*"null"*/;
+    v12 = (System_String_o *)StringLiteral_21168/*"null"*/;
     goto LABEL_8;
   }
-  v10 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, System_String_o *, const MethodInfo_18AFA50 *))expected->klass->vtable[3].method)(
+  v10 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, System_String_o *, const MethodInfo_1720134 *))expected->klass->vtable[3].method)(
                              expected,
                              expected->klass->vtable[4].methodPtr,
                              message,
                              method);
-  v11 = System_String__Concat_43743732((System_String_o *)StringLiteral_21041/*"not "*/, v10, 0LL);
+  v11 = System_String__Concat_44305532((System_String_o *)StringLiteral_21129/*"not "*/, v10, 0LL);
   if ( !actual )
     goto LABEL_7;
 LABEL_5:
@@ -905,16 +914,16 @@ void __fastcall Fgo_Assertions_Assert__OnFailedDataEntityExists(
   const MethodInfo *v8; // x3
   System_String_o *v9; // x19
 
-  if ( (byte_4108944 & 1) == 0 )
+  if ( (byte_41966F4 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, key);
-    sub_B16FFC(&StringLiteral_21080/*"null"*/, v5);
-    sub_B16FFC(&StringLiteral_21050/*"not null"*/, v6);
-    sub_B16FFC(&StringLiteral_15673/*"[DataEntity]\nデータ名={0}、キー名={1}が存在しません"*/, v7);
-    byte_4108944 = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, key);
+    sub_B2C35C(&StringLiteral_21168/*"null"*/, v5);
+    sub_B2C35C(&StringLiteral_21138/*"not null"*/, v6);
+    sub_B2C35C(&StringLiteral_15736/*"[DataEntity]\nデータ名={0}、キー名={1}が存在しません"*/, v7);
+    byte_41966F4 = 1;
   }
-  v9 = System_String__Format_43739268(
-         (System_String_o *)StringLiteral_15673/*"[DataEntity]\nデータ名={0}、キー名={1}が存在しません"*/,
+  v9 = System_String__Format_44301068(
+         (System_String_o *)StringLiteral_15736/*"[DataEntity]\nデータ名={0}、キー名={1}が存在しません"*/,
          (Il2CppObject *)name,
          (Il2CppObject *)key,
          0LL);
@@ -925,8 +934,8 @@ void __fastcall Fgo_Assertions_Assert__OnFailedDataEntityExists(
   }
   Fgo_Assertions_Assert__OnFailed(
     v9,
-    (System_String_o *)StringLiteral_21050/*"not null"*/,
-    (System_String_o *)StringLiteral_21080/*"null"*/,
+    (System_String_o *)StringLiteral_21138/*"not null"*/,
+    (System_String_o *)StringLiteral_21168/*"null"*/,
     v8);
 }
 
@@ -948,12 +957,12 @@ void __fastcall Fgo_Assertions_Assert__SetOnFailedAction(
   Fgo_Assertions_Assert_c *v13; // x0
   struct Fgo_Assertions_Assert_StaticFields *static_fields; // x0
 
-  if ( (byte_4108937 & 1) == 0 )
+  if ( (byte_41966E7 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_Assert_TypeInfo, force);
-    sub_B16FFC(&UnityEngine_Debug_TypeInfo, v10);
-    sub_B16FFC(&StringLiteral_23771/*"既に表明違反時の処理が設定されています"*/, v11);
-    byte_4108937 = 1;
+    sub_B2C35C(&Fgo_Assertions_Assert_TypeInfo, force);
+    sub_B2C35C(&UnityEngine_Debug_TypeInfo, v10);
+    sub_B2C35C(&StringLiteral_23870/*"既に表明違反時の処理が設定されています"*/, v11);
+    byte_41966E7 = 1;
   }
   if ( !force )
   {
@@ -971,7 +980,7 @@ void __fastcall Fgo_Assertions_Assert__SetOnFailedAction(
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
       }
-      UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_23771/*"既に表明違反時の処理が設定されています"*/, 0LL);
+      UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_23870/*"既に表明違反時の処理が設定されています"*/, 0LL);
     }
   }
   v13 = Fgo_Assertions_Assert_TypeInfo;
@@ -983,7 +992,7 @@ void __fastcall Fgo_Assertions_Assert__SetOnFailedAction(
   }
   static_fields = v13->static_fields;
   static_fields->onFailedAction = action;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&static_fields->onFailedAction,
     (System_Int32_array **)action,
     (System_String_array **)method,
@@ -998,52 +1007,44 @@ void __fastcall Fgo_Assertions_Assert__SetOnFailedAction(
 void __fastcall Fgo_Assertions_AssertQueue___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x1
-  __int64 v6; // x1
-  System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *v7; // x19
+  __int64 v2; // x1
+  __int64 v3; // x1
+  System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *v4; // x19
   BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v9; // x2
-  System_String_array **v10; // x3
-  System_Boolean_array **v11; // x4
-  System_Int32_array **v12; // x5
-  System_Int32_array *v13; // x6
-  System_Int32_array *v14; // x7
-  Fgo_Assertions_AssertQueue_c *v15; // x8
-  struct Fgo_Assertions_AssertQueue_StaticFields *v16; // x0
-  System_String_array **v17; // x2
-  System_String_array **v18; // x3
-  System_Boolean_array **v19; // x4
-  System_Int32_array **v20; // x5
-  System_Int32_array *v21; // x6
-  System_Int32_array *v22; // x7
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
+  Fgo_Assertions_AssertQueue_c *v12; // x8
+  struct Fgo_Assertions_AssertQueue_StaticFields *v13; // x0
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
 
-  if ( (byte_410894B & 1) == 0 )
+  if ( (byte_41966FB & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_AssertQueue_TypeInfo, v1);
-    sub_B16FFC(&Method_System_Collections_Generic_Queue_string___ctor__, v5);
-    sub_B16FFC(&System_Collections_Generic_Queue_string__TypeInfo, v6);
-    byte_410894B = 1;
+    sub_B2C35C(&Fgo_Assertions_AssertQueue_TypeInfo, v1);
+    sub_B2C35C(&Method_System_Collections_Generic_Queue_string___ctor__, v2);
+    sub_B2C35C(&System_Collections_Generic_Queue_string__TypeInfo, v3);
+    byte_41966FB = 1;
   }
-  v7 = (System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *)sub_B170CC(
-                                                                       System_Collections_Generic_Queue_string__TypeInfo,
-                                                                       v1,
-                                                                       v2,
-                                                                       v3,
-                                                                       v4);
+  v4 = (System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *)sub_B2C42C(System_Collections_Generic_Queue_string__TypeInfo);
   System_Collections_Generic_Queue_CFNetwork_GetProxyData____ctor(
-    v7,
-    (const MethodInfo_2B15EA4 *)Method_System_Collections_Generic_Queue_string___ctor__);
+    v4,
+    (const MethodInfo_295D884 *)Method_System_Collections_Generic_Queue_string___ctor__);
   static_fields = (BattleServantConfConponent_o *)Fgo_Assertions_AssertQueue_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v7;
-  sub_B16F98(static_fields, (System_Int32_array **)v7, v9, v10, v11, v12, v13, v14);
-  v15 = Fgo_Assertions_AssertQueue_TypeInfo;
+  static_fields->klass = (BattleServantConfConponent_c *)v4;
+  sub_B2C2F8(static_fields, (System_Int32_array **)v4, v6, v7, v8, v9, v10, v11);
+  v12 = Fgo_Assertions_AssertQueue_TypeInfo;
   Fgo_Assertions_AssertQueue_TypeInfo->static_fields->isReady = 1;
-  v16 = v15->static_fields;
-  v16->onFailedAction = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&v16->onFailedAction, 0LL, v17, v18, v19, v20, v21, v22);
+  v13 = v12->static_fields;
+  v13->onFailedAction = 0LL;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v13->onFailedAction, 0LL, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -1054,11 +1055,11 @@ void __fastcall Fgo_Assertions_AssertQueue__Clear(const MethodInfo *method)
   Fgo_Assertions_AssertQueue_c *v3; // x0
   System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__o *queue; // x0
 
-  if ( (byte_410894A & 1) == 0 )
+  if ( (byte_41966FA & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_AssertQueue_TypeInfo, v1);
-    sub_B16FFC(&Method_System_Collections_Generic_Queue_string__Clear__, v2);
-    byte_410894A = 1;
+    sub_B2C35C(&Fgo_Assertions_AssertQueue_TypeInfo, v1);
+    sub_B2C35C(&Method_System_Collections_Generic_Queue_string__Clear__, v2);
+    byte_41966FA = 1;
   }
   v3 = Fgo_Assertions_AssertQueue_TypeInfo;
   if ( (BYTE3(Fgo_Assertions_AssertQueue_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1069,10 +1070,10 @@ void __fastcall Fgo_Assertions_AssertQueue__Clear(const MethodInfo *method)
   }
   queue = (System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__o *)v3->static_fields->queue;
   if ( !queue )
-    sub_B170D4();
+    sub_B2C434(0LL, v1);
   System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___Clear(
     queue,
-    (const MethodInfo_2B16138 *)Method_System_Collections_Generic_Queue_string__Clear__);
+    (const MethodInfo_295DB18 *)Method_System_Collections_Generic_Queue_string__Clear__);
 }
 
 
@@ -1087,12 +1088,12 @@ void __fastcall Fgo_Assertions_AssertQueue__Dequeue(const MethodInfo *method)
   System_String_o *ProxyData___Dequeue; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4108949 & 1) == 0 )
+  if ( (byte_41966F9 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_AssertQueue_TypeInfo, v1);
-    sub_B16FFC(&Method_System_Collections_Generic_Queue_string__Dequeue__, v2);
-    sub_B16FFC(&Method_System_Collections_Generic_Queue_string__get_Count__, v3);
-    byte_4108949 = 1;
+    sub_B2C35C(&Fgo_Assertions_AssertQueue_TypeInfo, v1);
+    sub_B2C35C(&Method_System_Collections_Generic_Queue_string__Dequeue__, v2);
+    sub_B2C35C(&Method_System_Collections_Generic_Queue_string__get_Count__, v3);
+    byte_41966F9 = 1;
   }
   v4 = Fgo_Assertions_AssertQueue_TypeInfo;
   if ( (BYTE3(Fgo_Assertions_AssertQueue_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1114,12 +1115,12 @@ void __fastcall Fgo_Assertions_AssertQueue__Dequeue(const MethodInfo *method)
     {
       ProxyData___Dequeue = (System_String_o *)System_Collections_Generic_Queue_CFNetwork_GetProxyData___Dequeue(
                                                  queue,
-                                                 (const MethodInfo_2B166B0 *)Method_System_Collections_Generic_Queue_string__Dequeue__);
+                                                 (const MethodInfo_295E090 *)Method_System_Collections_Generic_Queue_string__Dequeue__);
       Fgo_Assertions_AssertQueue__OnFailed(ProxyData___Dequeue, v8);
       return;
     }
 LABEL_16:
-    sub_B170D4();
+    sub_B2C434(v4, v1);
   }
   if ( (WORD1(v4->vtable._0_Equals.methodPtr) & 0x400) != 0 && !v4->_2.cctor_finished )
   {
@@ -1139,11 +1140,11 @@ void __fastcall Fgo_Assertions_AssertQueue__Enqueue(System_String_o *message, co
   struct Fgo_Assertions_AssertQueue_StaticFields *static_fields; // x10
   bool *p_isReady; // x9
 
-  if ( (byte_4108948 & 1) == 0 )
+  if ( (byte_41966F8 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_AssertQueue_TypeInfo, method);
-    sub_B16FFC(&Method_System_Collections_Generic_Queue_string__Enqueue__, v3);
-    byte_4108948 = 1;
+    sub_B2C35C(&Fgo_Assertions_AssertQueue_TypeInfo, method);
+    sub_B2C35C(&Method_System_Collections_Generic_Queue_string__Enqueue__, v3);
+    byte_41966F8 = 1;
   }
   v4 = Fgo_Assertions_AssertQueue_TypeInfo;
   v5 = WORD1(Fgo_Assertions_AssertQueue_TypeInfo->vtable._0_Equals.methodPtr);
@@ -1184,11 +1185,11 @@ void __fastcall Fgo_Assertions_AssertQueue__Enqueue(System_String_o *message, co
       static_fields = Fgo_Assertions_AssertQueue_TypeInfo->static_fields;
     }
     if ( !static_fields->queue )
-      sub_B170D4();
+      sub_B2C434(0LL, method);
     System_Collections_Generic_Queue_CFNetwork_GetProxyData___Enqueue(
       (System_Collections_Generic_Queue_CFNetwork_GetProxyData__o *)static_fields->queue,
       (Mono_Net_CFNetwork_GetProxyData_o *)message,
-      (const MethodInfo_2B16498 *)Method_System_Collections_Generic_Queue_string__Enqueue__);
+      (const MethodInfo_295DE78 *)Method_System_Collections_Generic_Queue_string__Enqueue__);
   }
 }
 
@@ -1200,14 +1201,16 @@ void __fastcall Fgo_Assertions_AssertQueue__OnFailed(System_String_o *message, c
   __int64 v5; // x1
   Fgo_Assertions_AssertQueue_c *v6; // x0
   struct System_Action_string__o *onFailedAction; // x8
+  __int64 v8; // x0
+  __int64 v9; // x1
 
-  if ( (byte_4108946 & 1) == 0 )
+  if ( (byte_41966F6 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Action_string__Invoke__, method);
-    sub_B16FFC(&Fgo_Assertions_AssertQueue_TypeInfo, v3);
-    sub_B16FFC(&UnityEngine_Debug_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_23785/*"表明違反時処理が設定されていません"*/, v5);
-    byte_4108946 = 1;
+    sub_B2C35C(&Method_System_Action_string__Invoke__, method);
+    sub_B2C35C(&Fgo_Assertions_AssertQueue_TypeInfo, v3);
+    sub_B2C35C(&UnityEngine_Debug_TypeInfo, v4);
+    sub_B2C35C(&StringLiteral_23885/*"表明違反時処理が設定されていません"*/, v5);
+    byte_41966F6 = 1;
   }
   v6 = Fgo_Assertions_AssertQueue_TypeInfo;
   if ( (BYTE3(Fgo_Assertions_AssertQueue_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1224,12 +1227,12 @@ void __fastcall Fgo_Assertions_AssertQueue__OnFailed(System_String_o *message, c
       j_il2cpp_runtime_class_init_0(v6);
       onFailedAction = Fgo_Assertions_AssertQueue_TypeInfo->static_fields->onFailedAction;
       if ( !onFailedAction )
-        sub_B170D4();
+        sub_B2C434(v8, v9);
     }
     System_Action_Uri___Invoke(
       (System_Action_Uri__o *)onFailedAction,
       (System_Uri_o *)message,
-      (const MethodInfo_24B7324 *)Method_System_Action_string__Invoke__);
+      (const MethodInfo_24BBAEC *)Method_System_Action_string__Invoke__);
   }
   else
   {
@@ -1238,7 +1241,7 @@ void __fastcall Fgo_Assertions_AssertQueue__OnFailed(System_String_o *message, c
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
     }
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_23785/*"表明違反時処理が設定されていません"*/, 0LL);
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_23885/*"表明違反時処理が設定されていません"*/, 0LL);
   }
 }
 
@@ -1256,10 +1259,10 @@ void __fastcall Fgo_Assertions_AssertQueue__SetOnFailedAction(
   Fgo_Assertions_AssertQueue_c *v9; // x0
   struct Fgo_Assertions_AssertQueue_StaticFields *static_fields; // x0
 
-  if ( (byte_4108947 & 1) == 0 )
+  if ( (byte_41966F7 & 1) == 0 )
   {
-    sub_B16FFC(&Fgo_Assertions_AssertQueue_TypeInfo, method);
-    byte_4108947 = 1;
+    sub_B2C35C(&Fgo_Assertions_AssertQueue_TypeInfo, method);
+    byte_41966F7 = 1;
   }
   v9 = Fgo_Assertions_AssertQueue_TypeInfo;
   if ( (BYTE3(Fgo_Assertions_AssertQueue_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1270,7 +1273,7 @@ void __fastcall Fgo_Assertions_AssertQueue__SetOnFailedAction(
   }
   static_fields = v9->static_fields;
   static_fields->onFailedAction = action;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&static_fields->onFailedAction,
     (System_Int32_array **)action,
     v2,

@@ -1,13 +1,13 @@
 void __fastcall UserBlacklistEntity___ctor(UserBlacklistEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FAAB2 & 1) == 0 )
+  if ( (byte_4188A90 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FAAB2 = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4188A90 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +16,15 @@ System_String_o *__fastcall UserBlacklistEntity__CreatePK(
         int64_t targetUserId,
         const MethodInfo *method)
 {
-  if ( (byte_40FAAB0 & 1) == 0 )
+  if ( (byte_4188A8E & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_long__long___, targetUserId);
-    byte_40FAAB0 = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_long__long___, targetUserId);
+    byte_4188A8E = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long_(
            userId,
            targetUserId,
-           (const MethodInfo_18C2368 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
+           (const MethodInfo_1732AD0 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
 }
 
 
@@ -44,10 +44,10 @@ int64_t __fastcall UserBlacklistEntity__getOtherUserId(UserBlacklistEntity_o *th
   int64_t v4; // x0
   __int64 v5; // x8
 
-  if ( (byte_40FAAB1 & 1) == 0 )
+  if ( (byte_4188A8F & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, method);
-    byte_40FAAB1 = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, method);
+    byte_4188A8F = 1;
   }
   userId = this->fields.userId;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0

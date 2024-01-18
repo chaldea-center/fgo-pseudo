@@ -1,28 +1,28 @@
 void __fastcall EventTowerEntity___ctor(EventTowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F9BB0 & 1) == 0 )
+  if ( (byte_418822B & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40F9BB0 = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_418822B = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventTowerEntity__CreatePK(int32_t eventId, int32_t towerId, const MethodInfo *method)
 {
-  if ( (byte_40F9BAF & 1) == 0 )
+  if ( (byte_418822A & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&towerId);
-    byte_40F9BAF = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&towerId);
+    byte_418822A = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            towerId,
-           (const MethodInfo_18C21A0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

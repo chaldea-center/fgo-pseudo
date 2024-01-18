@@ -1,13 +1,13 @@
 void __fastcall ShiningIconManager___ctor(ShiningIconManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FF367 & 1) == 0 )
+  if ( (byte_418BC89 & 1) == 0 )
   {
-    sub_B16FFC(&Method_SingletonMonoBehaviour_ShiningIconManager___ctor__, method);
-    byte_40FF367 = 1;
+    sub_B2C35C(&Method_SingletonMonoBehaviour_ShiningIconManager___ctor__, method);
+    byte_418BC89 = 1;
   }
   SingletonMonoBehaviour_WebViewManager____ctor(
     (SingletonMonoBehaviour_WebViewManager__o *)this,
-    (const MethodInfo_2A552A4 *)Method_SingletonMonoBehaviour_ShiningIconManager___ctor__);
+    (const MethodInfo_28419D4 *)Method_SingletonMonoBehaviour_ShiningIconManager___ctor__);
 }
 
 

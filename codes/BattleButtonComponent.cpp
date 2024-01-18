@@ -8,27 +8,30 @@ bool __fastcall BattleButtonComponent__get_isHide(BattleButtonComponent_o *this,
 {
   __int64 v3; // x1
   UnityEngine_Object_o *Component_WebViewObject; // x19
+  _BOOL8 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_40FD45A & 1) == 0 )
+  if ( (byte_418AD12 & 1) == 0 )
   {
-    sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Collider___, method);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    byte_40FD45A = 1;
+    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_Collider___, method);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v3);
+    byte_418AD12 = 1;
   }
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
     return 0;
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                      (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( !UnityEngine_Object__op_Implicit(Component_WebViewObject, 0LL) )
+  v5 = UnityEngine_Object__op_Implicit(Component_WebViewObject, 0LL);
+  if ( !v5 )
     return 0;
   if ( !Component_WebViewObject )
-    sub_B170D4();
+    sub_B2C434(v5, v6);
   return UnityEngine_Collider__get_enabled((UnityEngine_Collider_o *)Component_WebViewObject, 0LL);
 }
 
@@ -37,27 +40,30 @@ bool __fastcall BattleButtonComponent__get_isHide(BattleButtonComponent_o *this,
 void __fastcall BattleButtonComponent__set_isHide(BattleButtonComponent_o *this, bool value, const MethodInfo *method)
 {
   __int64 v5; // x1
-  UnityEngine_Collider_o *Component_WebViewObject; // x21
+  UnityEngine_Object_o *Component_WebViewObject; // x21
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_40FD45B & 1) == 0 )
+  if ( (byte_418AD13 & 1) == 0 )
   {
-    sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Collider___, value);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    byte_40FD45B = 1;
+    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_Collider___, value);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
+    byte_418AD13 = 1;
   }
-  Component_WebViewObject = (UnityEngine_Collider_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                        (UnityEngine_Component_o *)this,
-                                                        (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_Collider___);
+  Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
+                                                      (UnityEngine_Component_o *)this,
+                                                      (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_WebViewObject, 0LL, 0LL) )
+  v7 = UnityEngine_Object__op_Inequality(Component_WebViewObject, 0LL, 0LL);
+  if ( v7 )
   {
     if ( !Component_WebViewObject )
-      sub_B170D4();
-    UnityEngine_Collider__set_enabled(Component_WebViewObject, value, 0LL);
+      sub_B2C434(v7, v8);
+    UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, value, 0LL);
   }
   else
   {

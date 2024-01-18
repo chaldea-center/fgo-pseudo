@@ -1,13 +1,13 @@
 void __fastcall AiActEntity___ctor(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F7EB7 & 1) == 0 )
+  if ( (byte_4185A55 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_int___ctor__, method);
-    byte_40F7EB7 = 1;
+    sub_B2C35C(&Method_DataEntityBase_int___ctor__, method);
+    byte_4185A55 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_266F234 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_24E3F7C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,23 +19,23 @@ int32_t __fastcall AiActEntity__CreatePrimaryKey(AiActEntity_o *this, const Meth
 
 int32_t __fastcall AiActEntity__GetNoTargetNoActionType(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F7EB6 & 1) == 0 )
+  if ( (byte_4185A54 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_21014/*"noTargetNoActionType"*/, method);
-    byte_40F7EB6 = 1;
+    sub_B2C35C(&StringLiteral_21102/*"noTargetNoActionType"*/, method);
+    byte_4185A54 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21014/*"noTargetNoActionType"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21102/*"noTargetNoActionType"*/, 0, 0LL);
 }
 
 
 bool __fastcall AiActEntity__IsIncludeDeathSvt(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F7EB4 & 1) == 0 )
+  if ( (byte_4185A52 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_19692/*"includeDeathSvt"*/, method);
-    byte_40F7EB4 = 1;
+    sub_B2C35C(&StringLiteral_19766/*"includeDeathSvt"*/, method);
+    byte_4185A52 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_19692/*"includeDeathSvt"*/, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_19766/*"includeDeathSvt"*/, 0LL);
 }
 
 
@@ -44,14 +44,14 @@ bool __fastcall AiActEntity__TryGetMultiIndividuality(
         System_Int32_array_array **resValues,
         const MethodInfo *method)
 {
-  if ( (byte_40F7EB5 & 1) == 0 )
+  if ( (byte_4185A53 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_7559/*"Individuality"*/, resValues);
-    byte_40F7EB5 = 1;
+    sub_B2C35C(&StringLiteral_7587/*"Individuality"*/, resValues);
+    byte_4185A53 = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_7559/*"Individuality"*/,
+           (System_String_o *)StringLiteral_7587/*"Individuality"*/,
            resValues,
            0LL);
 }

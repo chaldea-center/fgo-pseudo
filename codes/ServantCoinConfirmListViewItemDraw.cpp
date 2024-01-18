@@ -11,9 +11,11 @@ void __fastcall ServantCoinConfirmListViewItemDraw__SetItem(
         ServantCoinConfirmListViewItem_o *item,
         const MethodInfo *method)
 {
-  ItemIconComponent_o *itemIcon; // x0
-
-  if ( !item || (itemIcon = this->fields.itemIcon) == 0LL )
-    sub_B170D4();
-  ItemIconComponent__SetItem(itemIcon, item->fields._ItemId_k__BackingField, item->fields._Num_k__BackingField, 0LL);
+  if ( !item || (this = (ServantCoinConfirmListViewItemDraw_o *)this->fields.itemIcon) == 0LL )
+    sub_B2C434(this, item);
+  ItemIconComponent__SetItem(
+    (ItemIconComponent_o *)this,
+    item->fields._ItemId_k__BackingField,
+    item->fields._Num_k__BackingField,
+    0LL);
 }

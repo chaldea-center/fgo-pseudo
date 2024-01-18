@@ -1,28 +1,28 @@
 void __fastcall RestrictionSlotDetailEntity___ctor(RestrictionSlotDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FC84D & 1) == 0 )
+  if ( (byte_418BB6E & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FC84D = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_418BB6E = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall RestrictionSlotDetailEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_40FC84C & 1) == 0 )
+  if ( (byte_418BB6D & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_40FC84C = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_418BB6D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_18C21A0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -68,6 +68,7 @@ bool __fastcall RestrictionSlotDetailEntity__IsSearchVals(
   unsigned __int64 v7; // x9
   signed int max_length; // w13
   __int64 v9; // x15
+  __int64 v10; // x0
 
   result = 0;
   if ( vList )
@@ -88,8 +89,8 @@ bool __fastcall RestrictionSlotDetailEntity__IsSearchVals(
           if ( v7 >= v6 )
           {
 LABEL_16:
-            sub_B17100(0LL, vList, method);
-            sub_B170A0();
+            v10 = sub_B2C460(0LL);
+            sub_B2C400(v10, 0LL);
           }
           max_length = vList->max_length;
           if ( max_length >= 1 )

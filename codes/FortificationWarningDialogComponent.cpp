@@ -2,10 +2,10 @@ void __fastcall FortificationWarningDialogComponent___ctor(
         FortificationWarningDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40FA77E & 1) == 0 )
+  if ( (byte_418A839 & 1) == 0 )
   {
-    sub_B16FFC(&BaseDialog_TypeInfo, method);
-    byte_40FA77E = 1;
+    sub_B2C35C(&BaseDialog_TypeInfo, method);
+    byte_418A839 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -20,48 +20,47 @@ void __fastcall FortificationWarningDialogComponent__Close(
   __int64 v3; // x1
   __int64 v4; // x1
   UnityEngine_Component_o *checkedSp; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x3
-  __int64 v10; // x4
+  __int64 v6; // x1
   bool activeSelf; // w20
-  TerminalPramsManager_c *v12; // x0
-  System_Action_o *v13; // x20
+  TerminalPramsManager_c *v8; // x0
+  System_Action_o *v9; // x20
 
-  if ( (byte_40FA77C & 1) == 0 )
+  if ( (byte_418A837 & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, method);
-    sub_B16FFC(&Method_FortificationWarningDialogComponent__Close_b__16_0__, v3);
-    sub_B16FFC(&TerminalPramsManager_TypeInfo, v4);
-    byte_40FA77C = 1;
+    sub_B2C35C(&System_Action_TypeInfo, method);
+    sub_B2C35C(&Method_FortificationWarningDialogComponent__Close_b__16_0__, v3);
+    sub_B2C35C(&TerminalPramsManager_TypeInfo, v4);
+    byte_418A837 = 1;
   }
   checkedSp = (UnityEngine_Component_o *)this->fields.checkedSp;
   this->fields.state = 4;
-  if ( !checkedSp || (gameObject = UnityEngine_Component__get_gameObject(checkedSp, 0LL)) == 0LL )
-    sub_B170D4();
-  activeSelf = UnityEngine_GameObject__get_activeSelf(gameObject, 0LL);
+  if ( !checkedSp
+    || (checkedSp = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(checkedSp, 0LL)) == 0LL )
+  {
+    sub_B2C434(checkedSp, method);
+  }
+  activeSelf = UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)checkedSp, 0LL);
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
   }
-  if ( !byte_40F6E21 )
+  if ( !byte_4184710 )
   {
-    sub_B16FFC(&TerminalPramsManager_TypeInfo, v7);
-    byte_40F6E21 = 1;
+    sub_B2C35C(&TerminalPramsManager_TypeInfo, v6);
+    byte_4184710 = 1;
   }
-  v12 = TerminalPramsManager_TypeInfo;
+  v8 = TerminalPramsManager_TypeInfo;
   if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v12 = TerminalPramsManager_TypeInfo;
+    v8 = TerminalPramsManager_TypeInfo;
   }
-  v12->static_fields->_isFortificationCheck_k__BackingField = activeSelf;
-  v13 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v7, v8, v9, v10);
-  System_Action___ctor(v13, (Il2CppObject *)this, Method_FortificationWarningDialogComponent__Close_b__16_0__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v13, 0LL);
+  v8->static_fields->_isFortificationCheck_k__BackingField = activeSelf;
+  v9 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  System_Action___ctor(v9, (Il2CppObject *)this, Method_FortificationWarningDialogComponent__Close_b__16_0__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
 }
 
 
@@ -70,10 +69,11 @@ void __fastcall FortificationWarningDialogComponent__Init(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v4; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B170D4();
+    sub_B2C434(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -86,10 +86,10 @@ void __fastcall FortificationWarningDialogComponent__OnClickCancel(
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_40FA77B & 1) == 0 )
+  if ( (byte_418A836 & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    byte_40FA77B = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    byte_418A836 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -109,31 +109,33 @@ void __fastcall FortificationWarningDialogComponent__OnClickCheckBtn(
         FortificationWarningDialogComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Component_o *checkedSp; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Component_o *v5; // x8
   UnityEngine_GameObject_o *v6; // x19
-  UnityEngine_GameObject_o *v7; // x0
-  bool activeSelf; // w0
 
-  if ( (byte_40FA779 & 1) == 0 )
+  if ( (byte_418A834 & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    byte_40FA779 = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    byte_418A834 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playSystemSe(0, 0LL);
   checkedSp = (UnityEngine_Component_o *)this->fields.checkedSp;
   if ( !checkedSp
-    || (gameObject = UnityEngine_Component__get_gameObject(checkedSp, 0LL),
+    || (checkedSp = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(checkedSp, 0LL),
         (v5 = (UnityEngine_Component_o *)this->fields.checkedSp) == 0LL)
-    || (v6 = gameObject, (v7 = UnityEngine_Component__get_gameObject(v5, 0LL)) == 0LL)
-    || (activeSelf = UnityEngine_GameObject__get_activeSelf(v7, 0LL), !v6) )
+    || (v6 = (UnityEngine_GameObject_o *)checkedSp,
+        (checkedSp = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(v5, 0LL)) == 0LL)
+    || (checkedSp = (UnityEngine_Component_o *)UnityEngine_GameObject__get_activeSelf(
+                                                 (UnityEngine_GameObject_o *)checkedSp,
+                                                 0LL),
+        !v6) )
   {
-    sub_B170D4();
+    sub_B2C434(checkedSp, v3);
   }
-  UnityEngine_GameObject__SetActive(v6, !activeSelf, 0LL);
+  UnityEngine_GameObject__SetActive(v6, ((unsigned __int8)checkedSp & 1) == 0, 0LL);
 }
 
 
@@ -151,26 +153,22 @@ void __fastcall FortificationWarningDialogComponent__OnClickDecide(
   TerminalPramsManager_c *v10; // x0
   int32_t EventID; // w20
   EventRewardSceneMaster_o *Master_WarQuestSelectionMaster; // x0
-  EventRewardSceneEntity_array *EntityFromIdAndEventType; // x0
-  const MethodInfo *v14; // x1
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
-  EventRewardSceneEntity_o *v18; // x8
-  int32_t slot; // w22
-  SceneJumpInfo_o *v20; // x21
-  AvalonSceneManager_o *Instance; // x0
+  const MethodInfo *v13; // x1
+  struct System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o *list; // x8
+  int items_high; // w22
+  SceneJumpInfo_o *v16; // x21
+  __int64 v17; // x0
 
-  if ( (byte_40FA77A & 1) == 0 )
+  if ( (byte_418A835 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMaster_EventRewardSceneMaster___, method);
-    sub_B16FFC(&DataManager_TypeInfo, v3);
-    sub_B16FFC(&SceneJumpInfo_TypeInfo, v4);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
-    sub_B16FFC(&SoundManager_TypeInfo, v6);
-    sub_B16FFC(&TerminalPramsManager_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1/*""*/, v8);
-    byte_40FA77A = 1;
+    sub_B2C35C(&Method_DataManager_GetMaster_EventRewardSceneMaster___, method);
+    sub_B2C35C(&DataManager_TypeInfo, v3);
+    sub_B2C35C(&SceneJumpInfo_TypeInfo, v4);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
+    sub_B2C35C(&SoundManager_TypeInfo, v6);
+    sub_B2C35C(&TerminalPramsManager_TypeInfo, v7);
+    sub_B2C35C(&StringLiteral_1/*""*/, v8);
+    byte_418A835 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -186,10 +184,10 @@ void __fastcall FortificationWarningDialogComponent__OnClickDecide(
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     }
-    if ( !byte_40F6044 )
+    if ( !byte_4183C67 )
     {
-      sub_B16FFC(&TerminalPramsManager_TypeInfo, v9);
-      byte_40F6044 = 1;
+      sub_B2C35C(&TerminalPramsManager_TypeInfo, v9);
+      byte_4183C67 = 1;
     }
     v10 = TerminalPramsManager_TypeInfo;
     if ( (BYTE3(TerminalPramsManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -201,44 +199,49 @@ void __fastcall FortificationWarningDialogComponent__OnClickDecide(
     EventID = WarMaster__getEventID(v10->static_fields->_WarId_k__BackingField, 0LL);
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (EventRewardSceneMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_EventRewardSceneMaster___);
+    Master_WarQuestSelectionMaster = (EventRewardSceneMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_EventRewardSceneMaster___);
     if ( Master_WarQuestSelectionMaster )
     {
-      EntityFromIdAndEventType = EventRewardSceneMaster__getEntityFromIdAndEventType(
-                                   Master_WarQuestSelectionMaster,
-                                   EventID,
-                                   15,
-                                   0LL);
-      if ( !EntityFromIdAndEventType )
+      Master_WarQuestSelectionMaster = (EventRewardSceneMaster_o *)EventRewardSceneMaster__getEntityFromIdAndEventType(
+                                                                     Master_WarQuestSelectionMaster,
+                                                                     EventID,
+                                                                     15,
+                                                                     0LL);
+      if ( !Master_WarQuestSelectionMaster )
       {
 LABEL_25:
-        FortificationWarningDialogComponent__Close(this, v14);
+        FortificationWarningDialogComponent__Close(this, v13);
         return;
       }
-      if ( !EntityFromIdAndEventType->max_length )
+      if ( !LODWORD(Master_WarQuestSelectionMaster->fields._MasterName_k__BackingField) )
       {
-        sub_B17100(EntityFromIdAndEventType, v14, v15);
-        sub_B170A0();
+        v17 = sub_B2C460(Master_WarQuestSelectionMaster);
+        sub_B2C400(v17, 0LL);
       }
-      v18 = EntityFromIdAndEventType->m_Items[0];
-      if ( v18 )
+      list = Master_WarQuestSelectionMaster->fields.list;
+      if ( list )
       {
-        slot = v18->fields.slot;
-        v20 = (SceneJumpInfo_o *)sub_B170CC(SceneJumpInfo_TypeInfo, v14, v15, v16, v17);
-        SceneJumpInfo___ctor_29748100(v20, (System_String_o *)StringLiteral_1/*""*/, EventID, slot + 1, 0LL);
-        if ( v20 )
+        items_high = HIDWORD(list->fields.items);
+        v16 = (SceneJumpInfo_o *)sub_B2C42C(SceneJumpInfo_TypeInfo);
+        SceneJumpInfo___ctor_17293040(v16, (System_String_o *)StringLiteral_1/*""*/, EventID, items_high + 1, 0LL);
+        if ( v16 )
         {
-          SceneJumpInfo__SetReturnNowScene(v20, 0LL);
-          Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-          if ( Instance )
+          SceneJumpInfo__SetReturnNowScene(v16, 0LL);
+          Master_WarQuestSelectionMaster = (EventRewardSceneMaster_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+          if ( Master_WarQuestSelectionMaster )
           {
-            AvalonSceneManager__transitionScene(Instance, 72, 1, (Il2CppObject *)v20, 0LL);
+            AvalonSceneManager__transitionScene(
+              (AvalonSceneManager_o *)Master_WarQuestSelectionMaster,
+              72,
+              1,
+              (Il2CppObject *)v16,
+              0LL);
             goto LABEL_25;
           }
         }
       }
     }
-    sub_B170D4();
+    sub_B2C434(Master_WarQuestSelectionMaster, v13);
   }
 }
 
@@ -256,31 +259,24 @@ void __fastcall FortificationWarningDialogComponent__Open(
   __int64 v9; // x1
   UILabel_o *titleLb; // x20
   System_String_o *v11; // x0
+  __int64 v12; // x1
   UILabel_o *descriptionLb; // x20
-  System_String_o *v13; // x0
   UILabel_o *checkBoxLb; // x20
-  System_String_o *v15; // x0
   UILabel_o *decideButtonLb; // x20
-  System_String_o *v17; // x0
   UILabel_o *cancelButtonLb; // x20
-  System_String_o *v19; // x0
-  __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x3
-  __int64 v23; // x4
-  System_Action_o *v24; // x20
+  System_Action_o *v17; // x20
 
-  if ( (byte_40FA778 & 1) == 0 )
+  if ( (byte_418A833 & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, method);
-    sub_B16FFC(&Method_FortificationWarningDialogComponent__Open_b__11_0__, v3);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_6409/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/, v5);
-    sub_B16FFC(&StringLiteral_6422/*"FORTIFICATION_WARNING_DIALOG_TITLE"*/, v6);
-    sub_B16FFC(&StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, v7);
-    sub_B16FFC(&StringLiteral_6421/*"FORTIFICATION_WARNING_DIALOG_DESCRIPTION"*/, v8);
-    sub_B16FFC(&StringLiteral_6420/*"FORTIFICATION_WARNING_DIALOG_CHECKBOX"*/, v9);
-    byte_40FA778 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, method);
+    sub_B2C35C(&Method_FortificationWarningDialogComponent__Open_b__11_0__, v3);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v4);
+    sub_B2C35C(&StringLiteral_6427/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/, v5);
+    sub_B2C35C(&StringLiteral_6440/*"FORTIFICATION_WARNING_DIALOG_TITLE"*/, v6);
+    sub_B2C35C(&StringLiteral_3261/*"COMMON_CONFIRM_CLOSE"*/, v7);
+    sub_B2C35C(&StringLiteral_6439/*"FORTIFICATION_WARNING_DIALOG_DESCRIPTION"*/, v8);
+    sub_B2C35C(&StringLiteral_6438/*"FORTIFICATION_WARNING_DIALOG_CHECKBOX"*/, v9);
+    byte_418A833 = 1;
   }
   if ( !this->fields.state )
   {
@@ -290,35 +286,35 @@ void __fastcall FortificationWarningDialogComponent__Open(
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_6422/*"FORTIFICATION_WARNING_DIALOG_TITLE"*/, 0LL);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_6440/*"FORTIFICATION_WARNING_DIALOG_TITLE"*/, 0LL);
     if ( !titleLb )
       goto LABEL_13;
     UILabel__set_text(titleLb, v11, 0LL);
     descriptionLb = this->fields.descriptionLb;
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_6421/*"FORTIFICATION_WARNING_DIALOG_DESCRIPTION"*/, 0LL);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_6439/*"FORTIFICATION_WARNING_DIALOG_DESCRIPTION"*/, 0LL);
     if ( !descriptionLb )
       goto LABEL_13;
-    UILabel__set_text(descriptionLb, v13, 0LL);
+    UILabel__set_text(descriptionLb, v11, 0LL);
     checkBoxLb = this->fields.checkBoxLb;
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_6420/*"FORTIFICATION_WARNING_DIALOG_CHECKBOX"*/, 0LL);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_6438/*"FORTIFICATION_WARNING_DIALOG_CHECKBOX"*/, 0LL);
     if ( !checkBoxLb
-      || (UILabel__set_text(checkBoxLb, v15, 0LL),
+      || (UILabel__set_text(checkBoxLb, v11, 0LL),
           decideButtonLb = this->fields.decideButtonLb,
-          v17 = LocalizationManager__Get((System_String_o *)StringLiteral_6409/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/, 0LL),
+          v11 = LocalizationManager__Get((System_String_o *)StringLiteral_6427/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/, 0LL),
           !decideButtonLb)
-      || (UILabel__set_text(decideButtonLb, v17, 0LL),
+      || (UILabel__set_text(decideButtonLb, v11, 0LL),
           cancelButtonLb = this->fields.cancelButtonLb,
-          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
+          v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3261/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
           !cancelButtonLb) )
     {
 LABEL_13:
-      sub_B170D4();
+      sub_B2C434(v11, v12);
     }
-    UILabel__set_text(cancelButtonLb, v19, 0LL);
+    UILabel__set_text(cancelButtonLb, v11, 0LL);
     this->fields.state = 1;
-    v24 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v20, v21, v22, v23);
-    System_Action___ctor(v24, (Il2CppObject *)this, Method_FortificationWarningDialogComponent__Open_b__11_0__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v24, 0, 0LL);
+    v17 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+    System_Action___ctor(v17, (Il2CppObject *)this, Method_FortificationWarningDialogComponent__Open_b__11_0__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v17, 0, 0LL);
   }
 }
 
@@ -344,12 +340,13 @@ UnityEngine_GameObject_o *__fastcall FortificationWarningDialogComponent__get_cl
         const MethodInfo *method)
 {
   UnityEngine_Object_o *cancelButton; // x20
-  UnityEngine_Component_o *v5; // x0
+  __int64 v4; // x1
+  UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_40FA77D & 1) == 0 )
+  if ( (byte_418A838 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    byte_40FA77D = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
+    byte_418A838 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -359,8 +356,8 @@ UnityEngine_GameObject_o *__fastcall FortificationWarningDialogComponent__get_cl
   }
   if ( UnityEngine_Object__op_Equality(cancelButton, 0LL, 0LL) )
     return 0LL;
-  v5 = (UnityEngine_Component_o *)this->fields.cancelButton;
-  if ( !v5 )
-    sub_B170D4();
-  return UnityEngine_Component__get_gameObject(v5, 0LL);
+  v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
+  if ( !v6 )
+    sub_B2C434(0LL, v4);
+  return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

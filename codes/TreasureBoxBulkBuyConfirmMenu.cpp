@@ -20,30 +20,30 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu___cctor(const MethodInfo *method)
   System_Int32_array *v18; // x6
   System_Int32_array *v19; // x7
 
-  if ( (byte_40FB853 & 1) == 0 )
+  if ( (byte_418998B & 1) == 0 )
   {
-    sub_B16FFC(&TreasureBoxBulkBuyConfirmMenu_TypeInfo, v1);
-    sub_B16FFC(&StringLiteral_17036/*"btn_txt_trade"*/, v8);
-    sub_B16FFC(&StringLiteral_17019/*"btn_txt_sale"*/, v9);
-    byte_40FB853 = 1;
+    sub_B2C35C(&TreasureBoxBulkBuyConfirmMenu_TypeInfo, v1);
+    sub_B2C35C(&StringLiteral_17102/*"btn_txt_trade"*/, v8);
+    sub_B2C35C(&StringLiteral_17085/*"btn_txt_sale"*/, v9);
+    byte_418998B = 1;
   }
   static_fields = (BattleServantConfConponent_o *)TreasureBoxBulkBuyConfirmMenu_TypeInfo->static_fields;
-  v11 = (System_Int32_array **)StringLiteral_17036/*"btn_txt_trade"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17036/*"btn_txt_trade"*/;
-  sub_B16F98(static_fields, v11, v2, v3, v4, v5, v6, v7);
+  v11 = (System_Int32_array **)StringLiteral_17102/*"btn_txt_trade"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_17102/*"btn_txt_trade"*/;
+  sub_B2C2F8(static_fields, v11, v2, v3, v4, v5, v6, v7);
   v12 = TreasureBoxBulkBuyConfirmMenu_TypeInfo->static_fields;
-  v13 = (System_Int32_array **)StringLiteral_17019/*"btn_txt_sale"*/;
-  v12->DECIED_BTN_NAME_LIMIT_MATERIAL = (struct System_String_o *)StringLiteral_17019/*"btn_txt_sale"*/;
-  sub_B16F98((BattleServantConfConponent_o *)&v12->DECIED_BTN_NAME_LIMIT_MATERIAL, v13, v14, v15, v16, v17, v18, v19);
+  v13 = (System_Int32_array **)StringLiteral_17085/*"btn_txt_sale"*/;
+  v12->DECIED_BTN_NAME_LIMIT_MATERIAL = (struct System_String_o *)StringLiteral_17085/*"btn_txt_sale"*/;
+  sub_B2C2F8((BattleServantConfConponent_o *)&v12->DECIED_BTN_NAME_LIMIT_MATERIAL, v13, v14, v15, v16, v17, v18, v19);
 }
 
 
 void __fastcall TreasureBoxBulkBuyConfirmMenu___ctor(TreasureBoxBulkBuyConfirmMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FB852 & 1) == 0 )
+  if ( (byte_418998A & 1) == 0 )
   {
-    sub_B16FFC(&BaseDialog_TypeInfo, method);
-    byte_40FB852 = 1;
+    sub_B2C35C(&BaseDialog_TypeInfo, method);
+    byte_418998A = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -71,7 +71,7 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__CallOnClose(
   if ( onClose )
   {
     p_onClose->klass = 0LL;
-    sub_B16F98(p_onClose, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B2C2F8(p_onClose, 0LL, v2, v3, v4, v5, v6, v7);
     System_Action__Invoke(v9, 0LL);
   }
 }
@@ -92,10 +92,10 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__CallOnDecide(
   System_Action_int__o *v11; // x21
   struct System_Action_int__o *onDecide; // t1
 
-  if ( (byte_40FB84A & 1) == 0 )
+  if ( (byte_4189982 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Action_int__Invoke__, *(_QWORD *)&result);
-    byte_40FB84A = 1;
+    sub_B2C35C(&Method_System_Action_int__Invoke__, *(_QWORD *)&result);
+    byte_4189982 = 1;
   }
   onDecide = this->fields.onDecide;
   p_onDecide = (BattleServantConfConponent_o *)&this->fields.onDecide;
@@ -103,8 +103,8 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__CallOnDecide(
   if ( onDecide )
   {
     p_onDecide->klass = 0LL;
-    sub_B16F98(p_onDecide, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
-    System_Action_int___Invoke(v11, result, (const MethodInfo_24B5D94 *)Method_System_Action_int__Invoke__);
+    sub_B2C2F8(p_onDecide, 0LL, (System_String_array **)method, v3, v4, v5, v6, v7);
+    System_Action_int___Invoke(v11, result, (const MethodInfo_24BA55C *)Method_System_Action_int__Invoke__);
   }
 }
 
@@ -113,11 +113,11 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Close(TreasureBoxBulkBuyConfirmMe
 {
   const MethodInfo *v2; // x2
 
-  TreasureBoxBulkBuyConfirmMenu__Close_27965904(this, 0LL, v2);
+  TreasureBoxBulkBuyConfirmMenu__Close_28560140(this, 0LL, v2);
 }
 
 
-void __fastcall TreasureBoxBulkBuyConfirmMenu__Close_27965904(
+void __fastcall TreasureBoxBulkBuyConfirmMenu__Close_28560140(
         TreasureBoxBulkBuyConfirmMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -128,20 +128,16 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Close_27965904(
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
   __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x3
-  __int64 v14; // x4
-  System_Action_o *v15; // x20
+  System_Action_o *v11; // x20
 
-  if ( (byte_40FB849 & 1) == 0 )
+  if ( (byte_4189981 & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, callback);
-    sub_B16FFC(&Method_TreasureBoxBulkBuyConfirmMenu_EndClose__, v10);
-    byte_40FB849 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, callback);
+    sub_B2C35C(&Method_TreasureBoxBulkBuyConfirmMenu_EndClose__, v10);
+    byte_4189981 = 1;
   }
   this->fields.onClose = callback;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.onClose,
     (System_Int32_array **)callback,
     (System_String_array **)method,
@@ -151,9 +147,9 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Close_27965904(
     v6,
     v7);
   this->fields.state = 4;
-  v15 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v11, v12, v13, v14);
-  System_Action___ctor(v15, (Il2CppObject *)this, Method_TreasureBoxBulkBuyConfirmMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v15, 0LL);
+  v11 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_TreasureBoxBulkBuyConfirmMenu_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
@@ -162,14 +158,15 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__EndClose(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v4; // x1
+  __int64 v4; // x1
+  const MethodInfo *v5; // x1
 
   TreasureBoxBulkBuyConfirmMenu__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B170D4();
+    sub_B2C434(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
-  TreasureBoxBulkBuyConfirmMenu__CallOnClose(this, v4);
+  TreasureBoxBulkBuyConfirmMenu__CallOnClose(this, v5);
 }
 
 
@@ -184,21 +181,19 @@ int32_t __fastcall TreasureBoxBulkBuyConfirmMenu__GetItemSliderMax(
         UserGameEntity_o *userGameEntity,
         const MethodInfo *method)
 {
-  int32_t result; // w0
+  __int64 UserItemBuyableCount; // x0
+  __int64 v5; // x1
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
-  int32_t maxDrawNumOnce; // w8
+  int maxDrawNumOnce; // w8
 
-  result = TreasureBoxBulkBuyConfirmMenu__GetUserItemBuyableCount(this, userGameEntity, method);
+  UserItemBuyableCount = TreasureBoxBulkBuyConfirmMenu__GetUserItemBuyableCount(this, userGameEntity, method);
   treasureBoxEntity = this->fields.treasureBoxEntity;
   if ( !treasureBoxEntity )
-    sub_B170D4();
+    sub_B2C434(UserItemBuyableCount, v5);
   maxDrawNumOnce = treasureBoxEntity->fields.maxDrawNumOnce;
-  if ( result > maxDrawNumOnce )
-  {
-    if ( maxDrawNumOnce )
-      return maxDrawNumOnce;
-  }
-  return result;
+  if ( (int)UserItemBuyableCount > maxDrawNumOnce && maxDrawNumOnce )
+    LODWORD(UserItemBuyableCount) = maxDrawNumOnce;
+  return UserItemBuyableCount;
 }
 
 
@@ -209,64 +204,64 @@ int32_t __fastcall TreasureBoxBulkBuyConfirmMenu__GetUserItemBuyableCount(
 {
   __int64 v4; // x1
   __int64 v5; // x1
-  WebViewManager_o *Instance; // x0
+  int64_t Instance; // x0
+  __int64 v7; // x1
   UserItemMaster_o *MasterData_WarQuestSelectionMaster; // x20
-  int64_t UserId; // x0
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
-  UserItemEntity_o *EntityDefinitely; // x0
 
-  if ( (byte_40FB848 & 1) == 0 )
+  if ( (byte_4189980 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_UserItemMaster___, userGameEntity);
-    sub_B16FFC(&NetworkManager_TypeInfo, v4);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_40FB848 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_UserItemMaster___, userGameEntity);
+    sub_B2C35C(&NetworkManager_TypeInfo, v4);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4189980 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              (DataManager_o *)Instance,
-                                                             (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                             (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  UserId = NetworkManager__get_UserId(0LL);
+  Instance = NetworkManager__get_UserId(0LL);
   treasureBoxEntity = this->fields.treasureBoxEntity;
   if ( !treasureBoxEntity
     || !MasterData_WarQuestSelectionMaster
-    || (EntityDefinitely = UserItemMaster__GetEntityDefinitely(
-                             MasterData_WarQuestSelectionMaster,
-                             UserId,
-                             treasureBoxEntity->fields.iconId,
-                             0LL)) == 0LL )
+    || (Instance = (int64_t)UserItemMaster__GetEntityDefinitely(
+                              MasterData_WarQuestSelectionMaster,
+                              Instance,
+                              treasureBoxEntity->fields.iconId,
+                              0LL)) == 0 )
   {
 LABEL_11:
-    sub_B170D4();
+    sub_B2C434(Instance, v7);
   }
-  return EntityDefinitely->fields.num / this->fields.payNum;
+  return *(_DWORD *)(Instance + 28) / this->fields.payNum;
 }
 
 
 void __fastcall TreasureBoxBulkBuyConfirmMenu__Init(TreasureBoxBulkBuyConfirmMenu_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  __int64 v4; // x1
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B170D4();
+    sub_B2C434(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   this->fields.treasureBoxEntity = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.treasureBoxEntity, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.treasureBoxEntity, 0LL, v5, v6, v7, v8, v9, v10);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
 
@@ -278,43 +273,42 @@ bool __fastcall TreasureBoxBulkBuyConfirmMenu__IsEnable(
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
+  DataManager_o *Instance; // x0
+  __int64 v7; // x1
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
   WarEntity_o *Entity; // x19
-  int64_t Time; // x0
 
-  if ( (byte_40FB84D & 1) == 0 )
+  if ( (byte_4189985 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_EventMaster___, method);
-    sub_B16FFC(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v3);
-    sub_B16FFC(&NetworkManager_TypeInfo, v4);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_40FB84D = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_EventMaster___, method);
+    sub_B2C35C(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v3);
+    sub_B2C35C(&NetworkManager_TypeInfo, v4);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4189985 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                        (DataManager_o *)Instance,
-                                                                                        (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_EventMaster___);
+  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                Instance,
+                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventMaster___);
   treasureBoxEntity = this->fields.treasureBoxEntity;
-  if ( !treasureBoxEntity || !MasterData_WarQuestSelectionMaster )
+  if ( !treasureBoxEntity || !Instance )
     goto LABEL_11;
   Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-             MasterData_WarQuestSelectionMaster,
+             (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
              treasureBoxEntity->fields.eventId,
-             (const MethodInfo_266F388 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+             (const MethodInfo_24E40D0 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  Time = NetworkManager__getTime(0LL);
+  Instance = (DataManager_o *)NetworkManager__getTime(0LL);
   if ( !Entity )
 LABEL_11:
-    sub_B170D4();
-  return Time <= (__int64)Entity->fields.coordinate;
+    sub_B2C434(Instance, v7);
+  return (__int64)Instance <= (__int64)Entity->fields.coordinate;
 }
 
 
@@ -329,10 +323,10 @@ int64_t __fastcall TreasureBoxBulkBuyConfirmMenu__ItemMaxOverCheck(
   int64_t UserItemMax; // x8
 
   v5 = count;
-  if ( (byte_40FB850 & 1) == 0 )
+  if ( (byte_4189988 & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, count);
-    byte_40FB850 = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, count);
+    byte_4189988 = 1;
   }
   v6 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -359,13 +353,14 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__OnClickCancel(
         TreasureBoxBulkBuyConfirmMenu_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UISliderWithButton_o *itemSlider; // x0
-  const MethodInfo *v4; // x2
+  const MethodInfo *v5; // x2
 
-  if ( (byte_40FB84E & 1) == 0 )
+  if ( (byte_4189986 & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    byte_40FB84E = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    byte_4189986 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -378,9 +373,9 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__OnClickCancel(
     SoundManager__playSystemSe(1, 0LL);
     itemSlider = this->fields.itemSlider;
     if ( !itemSlider )
-      sub_B170D4();
+      sub_B2C434(0LL, v3);
     UISliderWithButton__grayMode(itemSlider, 0LL);
-    TreasureBoxBulkBuyConfirmMenu__Close_27965904(this, 0LL, v4);
+    TreasureBoxBulkBuyConfirmMenu__Close_28560140(this, 0LL, v5);
   }
 }
 
@@ -392,10 +387,10 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__OnClickDecide(
   int32_t decideSe; // w20
   const MethodInfo *v4; // x2
 
-  if ( (byte_40FB84B & 1) == 0 )
+  if ( (byte_4189983 & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    byte_40FB84B = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    byte_4189983 = 1;
   }
   if ( this->fields.state == 2 && !TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(this, method) )
   {
@@ -447,73 +442,60 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Open(
   System_Int32_array *v33; // x6
   System_Int32_array *v34; // x7
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *exchangeBase; // x0
+  __int64 v36; // x1
   UISprite_o *Component_srcLineSprite; // x21
   UILabel_o *titleLb; // x21
-  System_String_o *v39; // x0
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
-  WebViewManager_o *v42; // x0
-  CommonConsumeMaster_o *v43; // x0
-  CommonConsumeEntity_array *IdEntityList; // x0
-  __int64 v45; // x1
-  __int64 v46; // x2
-  CommonConsumeEntity_o *v47; // x8
-  int32_t num; // w9
+  _DWORD *monitor; // x8
+  int32_t v40; // w9
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
-  EventItemComponent_o *eventTreasureBoxItemInfo; // x0
-  struct TreasureBoxEntity_o *v51; // x8
-  ItemIconComponent_o *eventItemIcon; // x0
+  struct TreasureBoxEntity_o *v42; // x8
   UserGameEntity_o *SelfUserGame; // x0
-  const MethodInfo *v54; // x2
+  const MethodInfo *v44; // x2
   int32_t ItemSliderMax; // w0
   int32_t payNum; // w8
   UILabel_o *exchangeDestinationCount; // x20
   System_String_o *NumberFormatLong; // x0
-  const MethodInfo *v59; // x3
+  const MethodInfo *v49; // x3
   UILabel_o *warningLabel; // x20
-  TreasureBoxBulkBuyConfirmMenu_o *v61; // x0
-  const MethodInfo *v62; // x3
-  const MethodInfo *v63; // x1
-  UserGameEntity_o *v64; // x1
-  const MethodInfo *v65; // x2
+  TreasureBoxBulkBuyConfirmMenu_o *v51; // x0
+  const MethodInfo *v52; // x3
+  const MethodInfo *v53; // x1
+  UserGameEntity_o *v54; // x1
+  const MethodInfo *v55; // x2
   UILabel_o *exchangeOrigin; // x20
-  System_String_o *v67; // x0
-  const MethodInfo *v68; // x3
+  System_String_o *v57; // x0
+  const MethodInfo *v58; // x3
   UILabel_o *exchangeDestination; // x20
-  System_String_o *v70; // x0
-  const MethodInfo *v71; // x3
-  __int64 v72; // x1
-  __int64 v73; // x2
-  __int64 v74; // x3
-  __int64 v75; // x4
-  System_Action_o *v76; // x20
+  System_String_o *v60; // x0
+  const MethodInfo *v61; // x3
+  System_Action_o *v62; // x20
+  __int64 v63; // x0
 
-  if ( (byte_40FB844 & 1) == 0 )
+  if ( (byte_418997C & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, treasure);
-    sub_B16FFC(&AtlasManager_TypeInfo, v12);
-    sub_B16FFC(&BalanceConfig_TypeInfo, v13);
-    sub_B16FFC(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v14);
-    sub_B16FFC(&Method_DataManager_GetMasterData_ItemMaster___, v15);
-    sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v16);
-    sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v17);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v18);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
-    sub_B16FFC(&Method_TreasureBoxBulkBuyConfirmMenu_EndOpen__, v20);
-    sub_B16FFC(&StringLiteral_13391/*"TREASURE_BOX_USER_EVENT_ITEM"*/, v21);
-    sub_B16FFC(&StringLiteral_22705/*"treasurechest_img_bg"*/, v22);
-    sub_B16FFC(&StringLiteral_22709/*"treasurechest_img_line"*/, v23);
-    sub_B16FFC(&StringLiteral_13390/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, v24);
-    sub_B16FFC(&StringLiteral_22704/*"treasurechest_btn_txt"*/, v25);
-    sub_B16FFC(&StringLiteral_13381/*"TREASURE_BOX_BULK_BUY_TITLE"*/, v26);
-    sub_B16FFC(&StringLiteral_1/*""*/, v27);
-    byte_40FB844 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, treasure);
+    sub_B2C35C(&AtlasManager_TypeInfo, v12);
+    sub_B2C35C(&BalanceConfig_TypeInfo, v13);
+    sub_B2C35C(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v14);
+    sub_B2C35C(&Method_DataManager_GetMasterData_ItemMaster___, v15);
+    sub_B2C35C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v16);
+    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v17);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v18);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
+    sub_B2C35C(&Method_TreasureBoxBulkBuyConfirmMenu_EndOpen__, v20);
+    sub_B2C35C(&StringLiteral_13447/*"TREASURE_BOX_USER_EVENT_ITEM"*/, v21);
+    sub_B2C35C(&StringLiteral_22798/*"treasurechest_img_bg"*/, v22);
+    sub_B2C35C(&StringLiteral_22802/*"treasurechest_img_line"*/, v23);
+    sub_B2C35C(&StringLiteral_13446/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, v24);
+    sub_B2C35C(&StringLiteral_22797/*"treasurechest_btn_txt"*/, v25);
+    sub_B2C35C(&StringLiteral_13437/*"TREASURE_BOX_BULK_BUY_TITLE"*/, v26);
+    sub_B2C35C(&StringLiteral_1/*""*/, v27);
+    byte_418997C = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.onDecide = onDecide;
-    sub_B16F98(
+    sub_B2C2F8(
       (BattleServantConfConponent_o *)&this->fields.onDecide,
       (System_Int32_array **)onDecide,
       (System_String_array **)onDecide,
@@ -524,7 +506,7 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Open(
       v7);
     this->fields.treasureBoxEntity = treasure;
     p_treasureBoxEntity = &this->fields.treasureBoxEntity;
-    sub_B16F98(
+    sub_B2C2F8(
       (BattleServantConfConponent_o *)&this->fields.treasureBoxEntity,
       (System_Int32_array **)treasure,
       v29,
@@ -537,85 +519,88 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Open(
     if ( !gameObject )
       goto LABEL_31;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-    exchangeBase = this->fields.exchangeBase;
+    gameObject = this->fields.exchangeBase;
     this->fields.decideSe = se;
     this->fields.buyCount = 1;
-    if ( !exchangeBase )
+    if ( !gameObject )
       goto LABEL_31;
     Component_srcLineSprite = (UISprite_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
-                                              exchangeBase,
-                                              (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                              gameObject,
+                                              (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI(Component_srcLineSprite, (System_String_o *)StringLiteral_22705/*"treasurechest_img_bg"*/, 0LL);
-    AtlasManager__SetEventUI(this->fields.eventItemRootLine, (System_String_o *)StringLiteral_22709/*"treasurechest_img_line"*/, 0LL);
-    AtlasManager__SetEventUI(this->fields.decideButtonImg, (System_String_o *)StringLiteral_22704/*"treasurechest_btn_txt"*/, 0LL);
+    AtlasManager__SetEventUI(Component_srcLineSprite, (System_String_o *)StringLiteral_22798/*"treasurechest_img_bg"*/, 0LL);
+    AtlasManager__SetEventUI(this->fields.eventItemRootLine, (System_String_o *)StringLiteral_22802/*"treasurechest_img_line"*/, 0LL);
+    AtlasManager__SetEventUI(this->fields.decideButtonImg, (System_String_o *)StringLiteral_22797/*"treasurechest_btn_txt"*/, 0LL);
     titleLb = this->fields.titleLb;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v39 = LocalizationManager__Get((System_String_o *)StringLiteral_13381/*"TREASURE_BOX_BULK_BUY_TITLE"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13437/*"TREASURE_BOX_BULK_BUY_TITLE"*/, 0LL);
     if ( !titleLb )
       goto LABEL_31;
-    UILabel__set_text(titleLb, v39, 0LL);
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    if ( !Instance )
+    UILabel__set_text(titleLb, (System_String_o *)gameObject, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( !gameObject )
       goto LABEL_31;
-    MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                          (DataManager_o *)Instance,
-                                                                                          (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ItemMaster___);
+    gameObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                               (DataManager_o *)gameObject,
+                                               (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ItemMaster___);
     if ( !*p_treasureBoxEntity )
       goto LABEL_31;
-    if ( !MasterData_WarQuestSelectionMaster )
+    if ( !gameObject )
       goto LABEL_31;
     DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-      MasterData_WarQuestSelectionMaster,
+      (DataMasterBase_WarMaster__WarEntity__int__o *)gameObject,
       (*p_treasureBoxEntity)->fields.iconId,
-      (const MethodInfo_266F388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    v42 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    if ( !v42 )
+      (const MethodInfo_24E40D0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( !gameObject )
       goto LABEL_31;
-    v43 = (CommonConsumeMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                     (DataManager_o *)v42,
-                                     (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+    gameObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                               (DataManager_o *)gameObject,
+                                               (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
     if ( !*p_treasureBoxEntity )
       goto LABEL_31;
-    if ( !v43 )
+    if ( !gameObject )
       goto LABEL_31;
-    IdEntityList = CommonConsumeMaster__GetIdEntityList(v43, (*p_treasureBoxEntity)->fields.commonConsumeId, 0LL);
-    if ( !IdEntityList )
+    gameObject = (UnityEngine_GameObject_o *)CommonConsumeMaster__GetIdEntityList(
+                                               (CommonConsumeMaster_o *)gameObject,
+                                               (*p_treasureBoxEntity)->fields.commonConsumeId,
+                                               0LL);
+    if ( !gameObject )
       goto LABEL_31;
-    if ( !IdEntityList->max_length )
+    if ( !LODWORD(gameObject[1].klass) )
     {
-      sub_B17100(IdEntityList, v45, v46);
-      sub_B170A0();
+      v63 = sub_B2C460(gameObject);
+      sub_B2C400(v63, 0LL);
     }
-    v47 = IdEntityList->m_Items[0];
-    if ( !v47 )
+    monitor = gameObject[1].monitor;
+    if ( !monitor )
       goto LABEL_31;
-    num = v47->fields.num;
+    v40 = monitor[8];
     treasureBoxEntity = this->fields.treasureBoxEntity;
-    this->fields.payNum = num;
+    this->fields.payNum = v40;
     if ( !treasureBoxEntity )
       goto LABEL_31;
-    eventTreasureBoxItemInfo = this->fields.eventTreasureBoxItemInfo;
-    if ( !eventTreasureBoxItemInfo )
+    gameObject = (UnityEngine_GameObject_o *)this->fields.eventTreasureBoxItemInfo;
+    if ( !gameObject )
       goto LABEL_31;
-    EventItemComponent__Set(eventTreasureBoxItemInfo, treasureBoxEntity->fields.iconId, 0LL);
-    v51 = this->fields.treasureBoxEntity;
-    if ( !v51 )
+    EventItemComponent__Set((EventItemComponent_o *)gameObject, treasureBoxEntity->fields.iconId, 0LL);
+    v42 = this->fields.treasureBoxEntity;
+    if ( !v42 )
       goto LABEL_31;
-    eventItemIcon = this->fields.eventItemIcon;
-    if ( !eventItemIcon )
+    gameObject = (UnityEngine_GameObject_o *)this->fields.eventItemIcon;
+    if ( !gameObject )
       goto LABEL_31;
-    ItemIconComponent__SetItem(eventItemIcon, v51->fields.iconId, -1, 0LL);
+    ItemIconComponent__SetItem((ItemIconComponent_o *)gameObject, v42->fields.iconId, -1, 0LL);
     SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-    ItemSliderMax = TreasureBoxBulkBuyConfirmMenu__GetItemSliderMax(this, SelfUserGame, v54);
+    ItemSliderMax = TreasureBoxBulkBuyConfirmMenu__GetItemSliderMax(this, SelfUserGame, v44);
     payNum = this->fields.payNum;
     exchangeDestinationCount = this->fields.exchangeDestinationCount;
     this->fields.buyCount = ItemSliderMax;
@@ -624,8 +609,9 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Open(
       (TreasureBoxBulkBuyConfirmMenu_o *)NumberFormatLong,
       exchangeDestinationCount,
       NumberFormatLong,
-      v59);
+      v49);
     warningLabel = this->fields.warningLabel;
+    gameObject = (UnityEngine_GameObject_o *)BalanceConfig_TypeInfo;
     if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
@@ -633,21 +619,21 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__Open(
     }
     if ( !warningLabel )
 LABEL_31:
-      sub_B170D4();
+      sub_B2C434(gameObject, v36);
     UILabel__set_fontSize(warningLabel, BalanceConfig_TypeInfo->static_fields->DefaultFontSize, 0LL);
-    TreasureBoxBulkBuyConfirmMenu__SetLabelText(v61, this->fields.warningLabel, (System_String_o *)StringLiteral_1/*""*/, v62);
-    TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(this, v63);
-    TreasureBoxBulkBuyConfirmMenu__SetItemSlider(this, v64, v65);
+    TreasureBoxBulkBuyConfirmMenu__SetLabelText(v51, this->fields.warningLabel, (System_String_o *)StringLiteral_1/*""*/, v52);
+    TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(this, v53);
+    TreasureBoxBulkBuyConfirmMenu__SetItemSlider(this, v54, v55);
     exchangeOrigin = this->fields.exchangeOrigin;
-    v67 = LocalizationManager__Get((System_String_o *)StringLiteral_13390/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, 0LL);
-    TreasureBoxBulkBuyConfirmMenu__SetLabelText((TreasureBoxBulkBuyConfirmMenu_o *)v67, exchangeOrigin, v67, v68);
+    v57 = LocalizationManager__Get((System_String_o *)StringLiteral_13446/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, 0LL);
+    TreasureBoxBulkBuyConfirmMenu__SetLabelText((TreasureBoxBulkBuyConfirmMenu_o *)v57, exchangeOrigin, v57, v58);
     exchangeDestination = this->fields.exchangeDestination;
-    v70 = LocalizationManager__Get((System_String_o *)StringLiteral_13391/*"TREASURE_BOX_USER_EVENT_ITEM"*/, 0LL);
-    TreasureBoxBulkBuyConfirmMenu__SetLabelText((TreasureBoxBulkBuyConfirmMenu_o *)v70, exchangeDestination, v70, v71);
+    v60 = LocalizationManager__Get((System_String_o *)StringLiteral_13447/*"TREASURE_BOX_USER_EVENT_ITEM"*/, 0LL);
+    TreasureBoxBulkBuyConfirmMenu__SetLabelText((TreasureBoxBulkBuyConfirmMenu_o *)v60, exchangeDestination, v60, v61);
     this->fields.state = 1;
-    v76 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v72, v73, v74, v75);
-    System_Action___ctor(v76, (Il2CppObject *)this, Method_TreasureBoxBulkBuyConfirmMenu_EndOpen__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v76, 0, 0LL);
+    v62 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+    System_Action___ctor(v62, (Il2CppObject *)this, Method_TreasureBoxBulkBuyConfirmMenu_EndOpen__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v62, 0, 0LL);
   }
 }
 
@@ -658,12 +644,11 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__SetItemSlider(
         const MethodInfo *method)
 {
   UISliderWithButton_o *itemSlider; // x0
-  UISliderWithButton_o *v5; // x0
 
   itemSlider = this->fields.itemSlider;
-  if ( !itemSlider || (UISliderWithButton__normalMode(itemSlider, 0LL), (v5 = this->fields.itemSlider) == 0LL) )
-    sub_B170D4();
-  UISliderWithButton__init(v5, this->fields.buyCount, 1, 1, 0LL);
+  if ( !itemSlider || (UISliderWithButton__normalMode(itemSlider, 0LL), (itemSlider = this->fields.itemSlider) == 0LL) )
+    sub_B2C434(itemSlider, userGameEntity);
+  UISliderWithButton__init(itemSlider, this->fields.buyCount, 1, 1, 0LL);
 }
 
 
@@ -674,21 +659,23 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__SetLabelActive(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v7; // x1
 
-  if ( (byte_40FB845 & 1) == 0 )
+  if ( (byte_418997D & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, label);
-    byte_40FB845 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, label);
+    byte_418997D = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)label, 0LL, 0LL) )
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)label, 0LL, 0LL);
+  if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !label || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)label, 0LL)) == 0LL )
-      sub_B170D4();
+      sub_B2C434(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
   }
 }
@@ -700,20 +687,24 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__SetLabelText(
         System_String_o *text,
         const MethodInfo *method)
 {
-  if ( (byte_40FB846 & 1) == 0 )
+  _BOOL8 v6; // x0
+  __int64 v7; // x1
+
+  if ( (byte_418997E & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, label);
-    byte_40FB846 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, label);
+    byte_418997E = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)label, 0LL, 0LL) )
+  v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)label, 0LL, 0LL);
+  if ( !v6 )
   {
     if ( !label )
-      sub_B170D4();
+      sub_B2C434(v6, v7);
     WrapControlText__textAdjust(label, text, label->fields.mFontSize, 0, 0, 0LL);
   }
 }
@@ -729,14 +720,14 @@ bool __fastcall TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(
   UILabel_o *warningLabel; // x20
   System_String_o *v8; // x0
   const MethodInfo *v9; // x3
-  struct UICommonButton_o *decideButton; // x0
-  UnityEngine_GameObject_o *exchangeBase; // x0
+  __int64 v10; // x1
+  UnityEngine_GameObject_o *decideButton; // x0
 
-  if ( (byte_40FB84C & 1) == 0 )
+  if ( (byte_4189984 & 1) == 0 )
   {
-    sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_12056/*"SHOP_BUY_CONFIRM_PERIOD_WARNING"*/, v3);
-    byte_40FB84C = 1;
+    sub_B2C35C(&LocalizationManager_TypeInfo, method);
+    sub_B2C35C(&StringLiteral_12107/*"SHOP_BUY_CONFIRM_PERIOD_WARNING"*/, v3);
+    byte_4189984 = 1;
   }
   IsEnable = TreasureBoxBulkBuyConfirmMenu__IsEnable(this, method);
   if ( IsEnable )
@@ -752,20 +743,20 @@ bool __fastcall TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12056/*"SHOP_BUY_CONFIRM_PERIOD_WARNING"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12107/*"SHOP_BUY_CONFIRM_PERIOD_WARNING"*/, 0LL);
   TreasureBoxBulkBuyConfirmMenu__SetLabelText((TreasureBoxBulkBuyConfirmMenu_o *)v8, warningLabel, v8, v9);
-  decideButton = this->fields.decideButton;
+  decideButton = (UnityEngine_GameObject_o *)this->fields.decideButton;
   if ( !decideButton
-    || (((void (__fastcall *)(struct UICommonButton_o *, __int64, _QWORD, Il2CppMethodPointer))decideButton->klass->vtable._14_SetState.method)(
+    || (((void (__fastcall *)(UnityEngine_GameObject_o *, __int64, _QWORD, Il2CppRuntimeInterfaceOffsetPair *))decideButton->klass[1]._1.implementedInterfaces)(
           decideButton,
           3LL,
           0LL,
-          decideButton->klass->vtable._15_OnPress.methodPtr),
-        (exchangeBase = this->fields.exchangeBase) == 0LL) )
+          decideButton->klass[1]._1.interfaceOffsets),
+        (decideButton = this->fields.exchangeBase) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(decideButton, v10);
   }
-  UnityEngine_GameObject__SetActive(exchangeBase, 0, 0LL);
+  UnityEngine_GameObject__SetActive(decideButton, 0, 0LL);
   return 1;
 }
 
@@ -776,20 +767,24 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__SetSpriteName(
         System_String_o *spriteName,
         const MethodInfo *method)
 {
-  if ( (byte_40FB847 & 1) == 0 )
+  _BOOL8 v6; // x0
+  __int64 v7; // x1
+
+  if ( (byte_418997F & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, sprite);
-    byte_40FB847 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, sprite);
+    byte_418997F = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)sprite, 0LL, 0LL) )
+  v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)sprite, 0LL, 0LL);
+  if ( !v6 )
   {
     if ( !sprite )
-      sub_B170D4();
+      sub_B2C434(v6, v7);
     UISprite__set_spriteName(sprite, spriteName, 0LL);
   }
 }
@@ -806,7 +801,7 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__SetWarningActive(
 
   exchangeBase = this->fields.exchangeBase;
   if ( !exchangeBase )
-    sub_B170D4();
+    sub_B2C434(0LL, isActive);
   UnityEngine_GameObject__SetActive(exchangeBase, !isActive, 0LL);
   TreasureBoxBulkBuyConfirmMenu__SetLabelActive(v6, this->fields.warningLabel, isActive, v7);
 }
@@ -817,29 +812,32 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__SliderValueChange(
         const MethodInfo *method)
 {
   UISliderWithButton_o *itemSlider; // x0
-  TreasureBoxBulkBuyConfirmMenu_o *v4; // x0
-  const MethodInfo *v5; // x3
+  const MethodInfo *v4; // x3
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
-  int32_t v7; // w21
+  int32_t v6; // w21
   UILabel_o *exchangeDestinationCount; // x20
   int32_t payNum; // w19
   System_String_o *NumberFormatLong; // x0
-  const MethodInfo *v11; // x3
+  const MethodInfo *v10; // x3
 
-  if ( (byte_40FB84F & 1) == 0 )
+  if ( (byte_4189987 & 1) == 0 )
   {
-    sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    byte_40FB84F = 1;
+    sub_B2C35C(&LocalizationManager_TypeInfo, method);
+    byte_4189987 = 1;
   }
   itemSlider = this->fields.itemSlider;
   if ( !itemSlider
-    || (v4 = (TreasureBoxBulkBuyConfirmMenu_o *)UISliderWithButton__sliderValueChange(itemSlider, 0LL),
+    || (itemSlider = (UISliderWithButton_o *)UISliderWithButton__sliderValueChange(itemSlider, 0LL),
         (treasureBoxEntity = this->fields.treasureBoxEntity) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(itemSlider, method);
   }
-  v7 = TreasureBoxBulkBuyConfirmMenu__ItemMaxOverCheck(v4, (int)v4, treasureBoxEntity->fields.maxDrawNumOnce, v5);
-  this->fields.buyCount = v7;
+  v6 = TreasureBoxBulkBuyConfirmMenu__ItemMaxOverCheck(
+         (TreasureBoxBulkBuyConfirmMenu_o *)itemSlider,
+         (int)itemSlider,
+         treasureBoxEntity->fields.maxDrawNumOnce,
+         v4);
+  this->fields.buyCount = v6;
   exchangeDestinationCount = this->fields.exchangeDestinationCount;
   payNum = this->fields.payNum;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -847,12 +845,12 @@ void __fastcall TreasureBoxBulkBuyConfirmMenu__SliderValueChange(
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  NumberFormatLong = LocalizationManager__GetNumberFormatLong(payNum * v7, 0LL);
+  NumberFormatLong = LocalizationManager__GetNumberFormatLong(payNum * v6, 0LL);
   TreasureBoxBulkBuyConfirmMenu__SetLabelText(
     (TreasureBoxBulkBuyConfirmMenu_o *)NumberFormatLong,
     exchangeDestinationCount,
     NumberFormatLong,
-    v11);
+    v10);
 }
 
 
@@ -861,12 +859,13 @@ UnityEngine_GameObject_o *__fastcall TreasureBoxBulkBuyConfirmMenu__get_closeBtn
         const MethodInfo *method)
 {
   UnityEngine_Object_o *cancelButton; // x20
-  UnityEngine_Component_o *v5; // x0
+  __int64 v4; // x1
+  UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_40FB851 & 1) == 0 )
+  if ( (byte_4189989 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    byte_40FB851 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
+    byte_4189989 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -876,8 +875,8 @@ UnityEngine_GameObject_o *__fastcall TreasureBoxBulkBuyConfirmMenu__get_closeBtn
   }
   if ( UnityEngine_Object__op_Equality(cancelButton, 0LL, 0LL) )
     return 0LL;
-  v5 = (UnityEngine_Component_o *)this->fields.cancelButton;
-  if ( !v5 )
-    sub_B170D4();
-  return UnityEngine_Component__get_gameObject(v5, 0LL);
+  v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
+  if ( !v6 )
+    sub_B2C434(0LL, v4);
+  return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

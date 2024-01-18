@@ -19,102 +19,94 @@ void __fastcall CancelConfirmItemDraw__SetItem(
   __int64 v13; // x1
   __int64 v14; // x1
   UnityEngine_Component_o *maskSprite; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  UILabel_o *warningText; // x0
-  UnityEngine_Component_o *pushSprite; // x0
-  UnityEngine_GameObject_o *v19; // x0
-  ServantFaceIconComponent_o *servantFaceIcon; // x0
-  UnityEngine_Component_o *v21; // x0
-  UnityEngine_GameObject_o *v22; // x0
-  UILabel_o *v23; // x21
-  System_String_o *v24; // x0
-  UserGameEntity_o *SelfUserGame; // x0
-  __int128 v26; // q0
-  __int128 v27; // q1
-  int64_t pushUserSvtId; // x20
-  bool v29; // zf
-  System_String_o *v30; // x20
-  UnityEngine_Component_o *v31; // x0
-  UnityEngine_GameObject_o *v32; // x0
-  DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *MasterData_WarQuestSelectionMaster; // x0
-  __int64 v34; // x1
-  __int64 v35; // x2
-  WebViewManager_o *Instance; // x0
-  UserServantEntity_o *Entity; // x0
-  UISprite_o *baseSprite; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v39; // [xsp+0h] [xbp-60h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v40; // [xsp+20h] [xbp-40h]
+  UILabel_o *warningText; // x21
+  __int128 v17; // q0
+  __int128 v18; // q1
+  UnityEngine_Component_c *klass; // x20
+  bool v20; // zf
+  System_String_o *v21; // x20
+  __int64 v22; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+0h] [xbp-60h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_40FCF0D & 1) == 0 )
+  if ( (byte_418A095 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_UserServantMaster___, userServantEntity);
-    sub_B16FFC(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v7);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B16FFC(&TutorialFlag_TypeInfo, v11);
-    sub_B16FFC(&StringLiteral_11594/*"SELECT_NO_SORTIE"*/, v12);
-    sub_B16FFC(&StringLiteral_18748/*"formation_blank_small"*/, v13);
-    sub_B16FFC(&StringLiteral_1/*""*/, v14);
-    byte_40FCF0D = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_UserServantMaster___, userServantEntity);
+    sub_B2C35C(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v7);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v8);
+    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_B2C35C(&TutorialFlag_TypeInfo, v11);
+    sub_B2C35C(&StringLiteral_11630/*"SELECT_NO_SORTIE"*/, v12);
+    sub_B2C35C(&StringLiteral_18820/*"formation_blank_small"*/, v13);
+    sub_B2C35C(&StringLiteral_1/*""*/, v14);
+    byte_418A095 = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
   if ( !maskSprite )
     goto LABEL_41;
-  gameObject = UnityEngine_Component__get_gameObject(maskSprite, 0LL);
-  if ( !gameObject )
+  maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0LL);
+  if ( !maskSprite )
     goto LABEL_41;
-  UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
-  warningText = this->fields.warningText;
-  if ( !warningText )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 0, 0LL);
+  maskSprite = (UnityEngine_Component_o *)this->fields.warningText;
+  if ( !maskSprite )
     goto LABEL_41;
-  UILabel__set_text(warningText, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  pushSprite = (UnityEngine_Component_o *)this->fields.pushSprite;
-  if ( !pushSprite )
+  UILabel__set_text((UILabel_o *)maskSprite, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  maskSprite = (UnityEngine_Component_o *)this->fields.pushSprite;
+  if ( !maskSprite )
     goto LABEL_41;
-  v19 = UnityEngine_Component__get_gameObject(pushSprite, 0LL);
-  if ( !v19 )
+  maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0LL);
+  if ( !maskSprite )
     goto LABEL_41;
-  UnityEngine_GameObject__SetActive(v19, 0, 0LL);
-  servantFaceIcon = this->fields.servantFaceIcon;
-  if ( !servantFaceIcon )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 0, 0LL);
+  maskSprite = (UnityEngine_Component_o *)this->fields.servantFaceIcon;
+  if ( !maskSprite )
     goto LABEL_41;
   if ( !userServantEntity )
   {
-    ServantFaceIconComponent__Clear(servantFaceIcon, 0LL);
+    ServantFaceIconComponent__Clear((ServantFaceIconComponent_o *)maskSprite, 0LL);
     if ( !equipIdList )
       goto LABEL_41;
     if ( !equipIdList->max_length )
       goto LABEL_42;
-    v30 = (System_String_o *)StringLiteral_18748/*"formation_blank_small"*/;
+    v21 = (System_String_o *)StringLiteral_18820/*"formation_blank_small"*/;
     if ( !equipIdList->m_Items[0] )
       goto LABEL_39;
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    if ( !Instance )
+    maskSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( !maskSprite )
       goto LABEL_41;
-    MasterData_WarQuestSelectionMaster = (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)DataManager__GetMasterData_WarQuestSelectionMaster_((DataManager_o *)Instance, (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_UserServantMaster___);
+    maskSprite = (UnityEngine_Component_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                              (DataManager_o *)maskSprite,
+                                              (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !equipIdList->max_length )
     {
 LABEL_42:
-      sub_B17100(MasterData_WarQuestSelectionMaster, v34, v35);
-      sub_B170A0();
+      v22 = sub_B2C460(maskSprite);
+      sub_B2C400(v22, 0LL);
     }
-    if ( MasterData_WarQuestSelectionMaster )
+    if ( maskSprite )
     {
-      Entity = DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
-                 MasterData_WarQuestSelectionMaster,
-                 equipIdList->m_Items[0],
-                 (const MethodInfo_266F5B0 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+      maskSprite = (UnityEngine_Component_o *)DataMasterBase_UserServantStorageMaster__UserServantEntity__long___GetEntity(
+                                                (DataMasterBase_UserServantStorageMaster__UserServantEntity__long__o *)maskSprite,
+                                                equipIdList->m_Items[0],
+                                                (const MethodInfo_24E42F8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
       if ( this->fields.servantFaceIcon )
       {
-        ServantFaceIconComponent__SetEquip(this->fields.servantFaceIcon, Entity, 0LL);
+        ServantFaceIconComponent__SetEquip(this->fields.servantFaceIcon, (UserServantEntity_o *)maskSprite, 0LL);
         goto LABEL_39;
       }
     }
 LABEL_41:
-    sub_B170D4();
+    sub_B2C434(maskSprite, userServantEntity);
   }
-  ServantFaceIconComponent__Set_30706244(servantFaceIcon, userServantEntity, equipIdList, 0LL, 0LL, 0LL);
+  ServantFaceIconComponent__Set_30793916(
+    (ServantFaceIconComponent_o *)maskSprite,
+    userServantEntity,
+    equipIdList,
+    0LL,
+    0LL,
+    0LL);
   if ( UserServantEntity__IsHeroine(userServantEntity, 0LL) )
   {
     if ( (BYTE3(TutorialFlag_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -122,61 +114,63 @@ LABEL_41:
     {
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
     }
-    if ( TutorialFlag__Get_28023340(126, 0LL) )
+    if ( TutorialFlag__Get_28617756(126, 0LL) )
     {
-      v21 = (UnityEngine_Component_o *)this->fields.maskSprite;
-      if ( !v21 )
+      maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
+      if ( !maskSprite )
         goto LABEL_41;
-      v22 = UnityEngine_Component__get_gameObject(v21, 0LL);
-      if ( !v22 )
+      maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0LL);
+      if ( !maskSprite )
         goto LABEL_41;
-      UnityEngine_GameObject__SetActive(v22, 1, 0LL);
-      v23 = this->fields.warningText;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 1, 0LL);
+      warningText = this->fields.warningText;
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_11594/*"SELECT_NO_SORTIE"*/, 0LL);
-      if ( !v23 )
+      maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11630/*"SELECT_NO_SORTIE"*/, 0LL);
+      if ( !warningText )
         goto LABEL_41;
-      UILabel__set_text(v23, v24, 0LL);
+      UILabel__set_text(warningText, (System_String_o *)maskSprite, 0LL);
     }
   }
-  SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  if ( !SelfUserGame )
+  maskSprite = (UnityEngine_Component_o *)UserGameMaster__getSelfUserGame(0LL);
+  if ( !maskSprite )
     goto LABEL_41;
-  v26 = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
-  v27 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
-  pushUserSvtId = SelfUserGame->fields.pushUserSvtId;
-  *(_OWORD *)&v40.fields.currentCryptoKey = v26;
-  *(_OWORD *)&v40.fields.fakeValue = v27;
+  v17 = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
+  v18 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
+  klass = maskSprite[5].klass;
+  *(_OWORD *)&v24.fields.currentCryptoKey = v17;
+  *(_OWORD *)&v24.fields.fakeValue = v18;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
-  v39 = v40;
-  v29 = pushUserSvtId == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44071692(&v39, 0LL);
-  v30 = 0LL;
-  if ( v29 )
+  v23 = v24;
+  v20 = klass == (UnityEngine_Component_c *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44761220(
+                                              &v23,
+                                              0LL);
+  v21 = 0LL;
+  if ( v20 )
   {
-    v31 = (UnityEngine_Component_o *)this->fields.pushSprite;
-    if ( v31 )
+    maskSprite = (UnityEngine_Component_o *)this->fields.pushSprite;
+    if ( maskSprite )
     {
-      v32 = UnityEngine_Component__get_gameObject(v31, 0LL);
-      if ( v32 )
+      maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0LL);
+      if ( maskSprite )
       {
-        UnityEngine_GameObject__SetActive(v32, 1, 0LL);
-        v30 = 0LL;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 1, 0LL);
+        v21 = 0LL;
         goto LABEL_39;
       }
     }
     goto LABEL_41;
   }
 LABEL_39:
-  baseSprite = this->fields.baseSprite;
-  if ( !baseSprite )
+  maskSprite = (UnityEngine_Component_o *)this->fields.baseSprite;
+  if ( !maskSprite )
     goto LABEL_41;
-  UISprite__set_spriteName(baseSprite, v30, 0LL);
+  UISprite__set_spriteName((UISprite_o *)maskSprite, v21, 0LL);
 }

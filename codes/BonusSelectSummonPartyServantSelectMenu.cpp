@@ -2,10 +2,10 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu___ctor(
         BonusSelectSummonPartyServantSelectMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40FB137 & 1) == 0 )
+  if ( (byte_4187E08 & 1) == 0 )
   {
-    sub_B16FFC(&BaseMenu_TypeInfo, method);
-    byte_40FB137 = 1;
+    sub_B2C35C(&BaseMenu_TypeInfo, method);
+    byte_4187E08 = 1;
   }
   if ( (BYTE3(BaseMenu_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -26,24 +26,22 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__Close(
         BonusSelectSummonPartyServantListViewItem_o *item,
         const MethodInfo *method)
 {
+  BonusSelectSummonPartyServantSelectMenu_o *v4; // x19
   __int64 v5; // x1
   __int64 v6; // x1
   struct ServantEntity_o *servantEntity; // x8
   struct BonusSelectSummonPartyOrganizationListViewItem_o *baseItem; // x9
-  BonusSelectSummonPartyOrganizationListViewItem_o *organizationItem; // x0
-  CommonUI_o *Instance; // x0
-  __int64 v11; // x1
-  __int64 v12; // x2
-  __int64 v13; // x3
-  __int64 v14; // x4
-  System_Action_o *v15; // x20
+  System_Action_o *v9; // x20
 
-  if ( (byte_40FB134 & 1) == 0 )
+  v4 = this;
+  if ( (byte_4187E05 & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, item);
-    sub_B16FFC(&Method_BonusSelectSummonPartyServantSelectMenu__Close_b__14_0__, v5);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    byte_40FB134 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, item);
+    sub_B2C35C(&Method_BonusSelectSummonPartyServantSelectMenu__Close_b__14_0__, v5);
+    this = (BonusSelectSummonPartyServantSelectMenu_o *)sub_B2C35C(
+                                                          &Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
+                                                          v6);
+    byte_4187E05 = 1;
   }
   if ( !item )
     goto LABEL_14;
@@ -56,21 +54,26 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__Close(
     else
       LODWORD(servantEntity) = 0;
   }
-  organizationItem = this->fields.organizationItem;
-  if ( !organizationItem )
+  this = (BonusSelectSummonPartyServantSelectMenu_o *)v4->fields.organizationItem;
+  if ( !this )
     goto LABEL_14;
   if ( (_DWORD)servantEntity )
-    BonusSelectSummonPartyOrganizationListViewItem__Empty(organizationItem, (const MethodInfo *)item);
+    BonusSelectSummonPartyOrganizationListViewItem__Empty(
+      (BonusSelectSummonPartyOrganizationListViewItem_o *)this,
+      (const MethodInfo *)item);
   else
-    BonusSelectSummonPartyOrganizationListViewItem__Modify(organizationItem, item, method);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  if ( !Instance )
+    BonusSelectSummonPartyOrganizationListViewItem__Modify(
+      (BonusSelectSummonPartyOrganizationListViewItem_o *)this,
+      item,
+      method);
+  this = (BonusSelectSummonPartyServantSelectMenu_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  if ( !this )
 LABEL_14:
-    sub_B170D4();
-  CommonUI__SetFadeMaskCollider(Instance, 1, 0LL);
-  v15 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v11, v12, v13, v14);
-  System_Action___ctor(v15, (Il2CppObject *)this, Method_BonusSelectSummonPartyServantSelectMenu__Close_b__14_0__, 0LL);
-  BaseMenu__Close((BaseMenu_o *)this, v15, 0LL);
+    sub_B2C434(this, item);
+  CommonUI__SetFadeMaskCollider((CommonUI_o *)this, 1, 0LL);
+  v9 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  System_Action___ctor(v9, (Il2CppObject *)v4, Method_BonusSelectSummonPartyServantSelectMenu__Close_b__14_0__, 0LL);
+  BaseMenu__Close((BaseMenu_o *)v4, v9, 0LL);
 }
 
 
@@ -88,11 +91,11 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__Init(
 
   partyServantListViewManager = (ListViewManager_o *)this->fields.partyServantListViewManager;
   if ( !partyServantListViewManager )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   ListViewManager__DestroyList(partyServantListViewManager, 0LL);
   this->fields.state = 0;
   this->fields.organizationItem = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.organizationItem, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.organizationItem, 0LL, v4, v5, v6, v7, v8, v9);
   BaseMenu__Init((BaseMenu_o *)this, 0LL);
 }
 
@@ -107,20 +110,15 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__OnClickCancel(
   ListViewManager_o *partyServantListViewManager; // x0
   _QWORD *v7; // x0
   System_Reflection_MethodBase_o *v8; // x0
-  CommonUI_o *Instance; // x0
-  __int64 v10; // x1
-  __int64 v11; // x2
-  __int64 v12; // x3
-  __int64 v13; // x4
-  System_Action_o *v14; // x20
+  System_Action_o *v9; // x20
 
-  if ( (byte_40FB135 & 1) == 0 )
+  if ( (byte_4187E06 & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, method);
-    sub_B16FFC(&Method_BonusSelectSummonPartyServantSelectMenu_OnClickCancel__, v3);
-    sub_B16FFC(&Method_BonusSelectSummonPartyServantSelectMenu__OnClickCancel_b__15_0__, v4);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_40FB135 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, method);
+    sub_B2C35C(&Method_BonusSelectSummonPartyServantSelectMenu_OnClickCancel__, v3);
+    sub_B2C35C(&Method_BonusSelectSummonPartyServantSelectMenu__OnClickCancel_b__15_0__, v4);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4187E06 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -134,24 +132,24 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__OnClickCancel(
     this->fields.state = 3;
     v7 = Method_BonusSelectSummonPartyServantSelectMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_BonusSelectSummonPartyServantSelectMenu_OnClickCancel__ + 75) & 2) != 0 )
-      v7 = (_QWORD *)sub_B17004(Method_BonusSelectSummonPartyServantSelectMenu_OnClickCancel__);
-    v8 = (System_Reflection_MethodBase_o *)sub_B16FE0(v7, v7[3]);
+      v7 = (_QWORD *)sub_B2C364(Method_BonusSelectSummonPartyServantSelectMenu_OnClickCancel__);
+    v8 = (System_Reflection_MethodBase_o *)sub_B2C340(v7, v7[3]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 1, 0LL);
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    if ( Instance )
+    partyServantListViewManager = (ListViewManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    if ( partyServantListViewManager )
     {
-      CommonUI__SetFadeMaskCollider(Instance, 1, 0LL);
-      v14 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v10, v11, v12, v13);
+      CommonUI__SetFadeMaskCollider((CommonUI_o *)partyServantListViewManager, 1, 0LL);
+      v9 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
       System_Action___ctor(
-        v14,
+        v9,
         (Il2CppObject *)this,
         Method_BonusSelectSummonPartyServantSelectMenu__OnClickCancel_b__15_0__,
         0LL);
-      BaseMenu__Close((BaseMenu_o *)this, v14, 0LL);
+      BaseMenu__Close((BaseMenu_o *)this, v9, 0LL);
       return;
     }
 LABEL_12:
-    sub_B170D4();
+    sub_B2C434(partyServantListViewManager, method);
   }
 }
 
@@ -164,34 +162,33 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__OnClickScaleChange(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
   BonusSelectSummonPartyServantListViewManager_o *partyServantListViewManager; // x0
-  const MethodInfo *v7; // x1
-  BonusSelectSummonPartyServantListViewManager_o *v8; // x0
   UISprite_o *scaleChangeTabSprite; // x19
-  System_String_o *ScaleButtonSpriteName; // x0
 
-  if ( (byte_40FB136 & 1) == 0 )
+  if ( (byte_4187E07 & 1) == 0 )
   {
-    sub_B16FFC(&Method_BonusSelectSummonPartyServantSelectMenu_OnClickScaleChange__, method);
-    byte_40FB136 = 1;
+    sub_B2C35C(&Method_BonusSelectSummonPartyServantSelectMenu_OnClickScaleChange__, method);
+    byte_4187E07 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_BonusSelectSummonPartyServantSelectMenu_OnClickScaleChange__;
     if ( (*((_BYTE *)Method_BonusSelectSummonPartyServantSelectMenu_OnClickScaleChange__ + 75) & 2) != 0 )
-      v3 = (_QWORD *)sub_B17004(Method_BonusSelectSummonPartyServantSelectMenu_OnClickScaleChange__);
-    v4 = (System_Reflection_MethodBase_o *)sub_B16FE0(v3, v3[3]);
+      v3 = (_QWORD *)sub_B2C364(Method_BonusSelectSummonPartyServantSelectMenu_OnClickScaleChange__);
+    v4 = (System_Reflection_MethodBase_o *)sub_B2C340(v3, v3[3]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0LL);
     partyServantListViewManager = this->fields.partyServantListViewManager;
     if ( !partyServantListViewManager
       || (BonusSelectSummonPartyServantListViewManager__ChangeIconScale(partyServantListViewManager, v5),
-          (v8 = this->fields.partyServantListViewManager) == 0LL)
+          (partyServantListViewManager = this->fields.partyServantListViewManager) == 0LL)
       || (scaleChangeTabSprite = this->fields.scaleChangeTabSprite,
-          ScaleButtonSpriteName = BonusSelectSummonPartyServantListViewManager__GetScaleButtonSpriteName(v8, v7),
+          partyServantListViewManager = (BonusSelectSummonPartyServantListViewManager_o *)BonusSelectSummonPartyServantListViewManager__GetScaleButtonSpriteName(
+                                                                                            partyServantListViewManager,
+                                                                                            v5),
           !scaleChangeTabSprite) )
     {
-      sub_B170D4();
+      sub_B2C434(partyServantListViewManager, v5);
     }
-    UISprite__set_spriteName(scaleChangeTabSprite, ScaleButtonSpriteName, 0LL);
+    UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)partyServantListViewManager, 0LL);
   }
 }
 
@@ -216,37 +213,25 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__Open(
   System_Int32_array **v19; // x5
   System_Int32_array *v20; // x6
   System_Int32_array *v21; // x7
+  const MethodInfo *v22; // x1
   TitleInfoControl_o *titleInfo; // x0
-  TitleInfoControl_o *v23; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v25; // x3
-  BonusSelectSummonPartyServantListViewManager_o *partyServantListViewManager; // x0
-  const MethodInfo *v27; // x1
-  BonusSelectSummonPartyServantListViewManager_o *v28; // x0
+  const MethodInfo *v24; // x3
   UISprite_o *scaleChangeTabSprite; // x20
-  System_String_o *ScaleButtonSpriteName; // x0
-  const MethodInfo *v31; // x2
-  BonusSelectSummonPartyServantListViewManager_o *v32; // x0
+  const MethodInfo *v26; // x2
   UILabel_o *guideMsgLabel; // x20
-  System_String_o *v34; // x0
-  CommonUI_o *Instance; // x0
-  __int64 v36; // x1
-  __int64 v37; // x2
-  __int64 v38; // x3
-  __int64 v39; // x4
-  System_Action_o *v40; // x20
+  System_Action_o *v28; // x20
 
-  if ( (byte_40FB133 & 1) == 0 )
+  if ( (byte_4187E04 & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, memberItem);
-    sub_B16FFC(&Method_BonusSelectSummonPartyServantSelectMenu__Open_b__13_0__, v12);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v13);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
-    sub_B16FFC(&StringLiteral_12367/*"SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE"*/, v15);
-    byte_40FB133 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, memberItem);
+    sub_B2C35C(&Method_BonusSelectSummonPartyServantSelectMenu__Open_b__13_0__, v12);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v13);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
+    sub_B2C35C(&StringLiteral_12422/*"SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE"*/, v15);
+    byte_4187E04 = 1;
   }
   this->fields.organizationItem = memberItem;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.organizationItem,
     (System_Int32_array **)memberItem,
     (System_String_array **)notPossibleSvtIdList,
@@ -256,7 +241,7 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__Open(
     v6,
     v7);
   this->fields.closeCallbackFunc = closeCallbackFunc;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)closeCallbackFunc,
     v16,
@@ -269,55 +254,60 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu__Open(
   if ( !titleInfo )
     goto LABEL_17;
   TitleInfoControl__setTitleInfo(titleInfo, 0LL, 1, 0LL, 88, 0LL);
-  v23 = this->fields.titleInfo;
-  if ( !v23 )
+  titleInfo = this->fields.titleInfo;
+  if ( !titleInfo )
     goto LABEL_17;
-  TitleInfoControl__setBackBtnSprite_19608808(v23, 1, 0, 0, 0LL);
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  if ( !gameObject )
+  TitleInfoControl__setBackBtnSprite_19529688(titleInfo, 1, 0, 0, 0LL);
+  titleInfo = (TitleInfoControl_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  if ( !titleInfo )
     goto LABEL_17;
-  UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 1, 0LL);
   if ( !memberItem )
     goto LABEL_17;
-  partyServantListViewManager = this->fields.partyServantListViewManager;
+  titleInfo = (TitleInfoControl_o *)this->fields.partyServantListViewManager;
   this->fields.isSelectedSvt = memberItem->fields.servantEntity != 0LL;
-  if ( !partyServantListViewManager )
+  if ( !titleInfo )
     goto LABEL_17;
   BonusSelectSummonPartyServantListViewManager__CreateList(
-    partyServantListViewManager,
+    (BonusSelectSummonPartyServantListViewManager_o *)titleInfo,
     memberItem->fields.gachaBonusSelectEntity,
     notPossibleSvtIdList,
-    v25);
-  v28 = this->fields.partyServantListViewManager;
-  if ( !v28 )
+    v24);
+  titleInfo = (TitleInfoControl_o *)this->fields.partyServantListViewManager;
+  if ( !titleInfo )
     goto LABEL_17;
   scaleChangeTabSprite = this->fields.scaleChangeTabSprite;
-  ScaleButtonSpriteName = BonusSelectSummonPartyServantListViewManager__GetScaleButtonSpriteName(v28, v27);
+  titleInfo = (TitleInfoControl_o *)BonusSelectSummonPartyServantListViewManager__GetScaleButtonSpriteName(
+                                      (BonusSelectSummonPartyServantListViewManager_o *)titleInfo,
+                                      v22);
   if ( !scaleChangeTabSprite )
     goto LABEL_17;
-  UISprite__set_spriteName(scaleChangeTabSprite, ScaleButtonSpriteName, 0LL);
-  v32 = this->fields.partyServantListViewManager;
-  if ( !v32 )
+  UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)titleInfo, 0LL);
+  titleInfo = (TitleInfoControl_o *)this->fields.partyServantListViewManager;
+  if ( !titleInfo )
     goto LABEL_17;
-  BonusSelectSummonPartyServantListViewManager__SetMode(v32, 2, v31);
+  BonusSelectSummonPartyServantListViewManager__SetMode(
+    (BonusSelectSummonPartyServantListViewManager_o *)titleInfo,
+    2,
+    v26);
   guideMsgLabel = this->fields.guideMsgLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_12367/*"SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE"*/, 0LL);
+  titleInfo = (TitleInfoControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12422/*"SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE"*/, 0LL);
   if ( !guideMsgLabel
-    || (UILabel__set_text(guideMsgLabel, v34, 0LL),
-        (Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+    || (UILabel__set_text(guideMsgLabel, (System_String_o *)titleInfo, 0LL),
+        (titleInfo = (TitleInfoControl_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
 LABEL_17:
-    sub_B170D4();
+    sub_B2C434(titleInfo, v22);
   }
-  CommonUI__SetFadeMaskCollider(Instance, 1, 0LL);
-  v40 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, v36, v37, v38, v39);
-  System_Action___ctor(v40, (Il2CppObject *)this, Method_BonusSelectSummonPartyServantSelectMenu__Open_b__13_0__, 0LL);
-  BaseMenu__Open((BaseMenu_o *)this, v40, 0LL);
+  CommonUI__SetFadeMaskCollider((CommonUI_o *)titleInfo, 1, 0LL);
+  v28 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  System_Action___ctor(v28, (Il2CppObject *)this, Method_BonusSelectSummonPartyServantSelectMenu__Open_b__13_0__, 0LL);
+  BaseMenu__Open((BaseMenu_o *)this, v28, 0LL);
 }
 
 
@@ -326,16 +316,17 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu___Close_b__14_0(
         const MethodInfo *method)
 {
   CommonUI_o *Instance; // x0
+  __int64 v4; // x1
 
-  if ( (byte_40FB139 & 1) == 0 )
+  if ( (byte_4187E0A & 1) == 0 )
   {
-    sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_40FB139 = 1;
+    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4187E0A = 1;
   }
   ActionExtensions__Call(this->fields.closeCallbackFunc, 0LL);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_B170D4();
+    sub_B2C434(0LL, v4);
   CommonUI__SetFadeMaskCollider(Instance, 0, 0LL);
 }
 
@@ -345,16 +336,17 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu___OnClickCancel_b__15_0(
         const MethodInfo *method)
 {
   CommonUI_o *Instance; // x0
+  __int64 v4; // x1
 
-  if ( (byte_40FB13A & 1) == 0 )
+  if ( (byte_4187E0B & 1) == 0 )
   {
-    sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_40FB13A = 1;
+    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4187E0B = 1;
   }
   ActionExtensions__Call(this->fields.closeCallbackFunc, 0LL);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_B170D4();
+    sub_B2C434(0LL, v4);
   CommonUI__SetFadeMaskCollider(Instance, 0, 0LL);
 }
 
@@ -364,15 +356,16 @@ void __fastcall BonusSelectSummonPartyServantSelectMenu___Open_b__13_0(
         const MethodInfo *method)
 {
   CommonUI_o *Instance; // x0
+  __int64 v4; // x1
 
-  if ( (byte_40FB138 & 1) == 0 )
+  if ( (byte_4187E09 & 1) == 0 )
   {
-    sub_B16FFC(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_40FB138 = 1;
+    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4187E09 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_B170D4();
+    sub_B2C434(0LL, v4);
   CommonUI__SetFadeMaskCollider(Instance, 0, 0LL);
   this->fields.state = 2;
 }

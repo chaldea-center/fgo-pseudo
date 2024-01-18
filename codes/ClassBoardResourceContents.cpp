@@ -16,7 +16,7 @@ void __fastcall ClassBoardResourceContents__SetBoardUIAtlas(
   System_Int32_array *v7; // x7
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (System_Int32_array **)boardUiAtlasManagerUnit,
     (System_String_array **)method,
@@ -58,7 +58,7 @@ void __fastcall ClassBoardResourceContents__SetContents(
   System_Int32_array *v29; // x7
 
   this->fields._Square_k__BackingField = square;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)square,
     (System_String_array **)line,
@@ -68,7 +68,7 @@ void __fastcall ClassBoardResourceContents__SetContents(
     v6,
     v7);
   this->fields._Line_k__BackingField = line;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._Line_k__BackingField,
     (System_Int32_array **)line,
     v12,
@@ -78,7 +78,7 @@ void __fastcall ClassBoardResourceContents__SetContents(
     v16,
     v17);
   this->fields._Lock_k__BackingField = lockAsset;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._Lock_k__BackingField,
     (System_Int32_array **)lockAsset,
     v18,
@@ -88,7 +88,7 @@ void __fastcall ClassBoardResourceContents__SetContents(
     v22,
     v23);
   this->fields._Blank_k__BackingField = blank;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._Blank_k__BackingField,
     (System_Int32_array **)blank,
     v24,
@@ -112,7 +112,7 @@ void __fastcall ClassBoardResourceContents__SetContentsBgModel(
   System_Int32_array *v7; // x7
 
   this->fields._BgModel_k__BackingField = bgModel;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._BgModel_k__BackingField,
     (System_Int32_array **)bgModel,
     (System_String_array **)method,
@@ -136,7 +136,7 @@ void __fastcall ClassBoardResourceContents__SetContentsBoardSelectView(
   System_Int32_array *v7; // x7
 
   this->fields._BoardSelectViewPrefab_k__BackingField = boardSelectViewPrefab;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (System_Int32_array **)boardSelectViewPrefab,
     (System_String_array **)method,
@@ -184,7 +184,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
   System_Int32_array *v36; // x7
 
   this->fields._DisableOpenDialog_k__BackingField = classBoardDisableOpenDialog;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (System_Int32_array **)classBoardDisableOpenDialog,
     (System_String_array **)classBoardSquareOpenConfirmDialog,
@@ -194,7 +194,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
     (System_Int32_array *)method,
     v7);
   this->fields._SquareOpenConfirmDialog_k__BackingField = classBoardSquareOpenConfirmDialog;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (System_Int32_array **)classBoardSquareOpenConfirmDialog,
     v13,
@@ -204,7 +204,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
     v17,
     v18);
   this->fields._LockOpenConfirmDialog_k__BackingField = classBoardLockOpenConfirmDialog;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (System_Int32_array **)classBoardLockOpenConfirmDialog,
     v19,
@@ -214,7 +214,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
     v23,
     v24);
   this->fields._LockReleaseConditionDialog_k__BackingField = classBoardLockReleaseConditionDialog;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (System_Int32_array **)classBoardLockReleaseConditionDialog,
     v25,
@@ -224,7 +224,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
     v29,
     v30);
   this->fields._SquareDetailDialog_k__BackingField = classBoardSquareDetailDialog;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (System_Int32_array **)classBoardSquareDetailDialog,
     v31,
@@ -248,7 +248,7 @@ void __fastcall ClassBoardResourceContents__SetContentsForwardIconAnimObject(
   System_Int32_array *v7; // x7
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = prefab;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (System_Int32_array **)prefab,
     (System_String_array **)method,
@@ -290,7 +290,7 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
   System_Int32_array *v29; // x7
 
   this->fields._BoardUiController_k__BackingField = uiController;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._BoardUiController_k__BackingField,
     (System_Int32_array **)uiController,
     (System_String_array **)boardUiAtlasManagerUnit,
@@ -300,7 +300,7 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
     v6,
     v7);
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (System_Int32_array **)boardUiAtlasManagerUnit,
     v12,
@@ -310,7 +310,7 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
     v16,
     v17);
   this->fields._IconAtlasManagerUnit_k__BackingField = iconAtlasManagerUnit;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (System_Int32_array **)iconAtlasManagerUnit,
     v18,
@@ -320,7 +320,7 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
     v22,
     v23);
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = classUiAtlasManagerUnit;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (System_Int32_array **)classUiAtlasManagerUnit,
     v24,
@@ -472,7 +472,7 @@ void __fastcall ClassBoardResourceContents__set_BgModel(
   System_Int32_array *v7; // x7
 
   this->fields._BgModel_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._BgModel_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -496,7 +496,7 @@ void __fastcall ClassBoardResourceContents__set_Blank(
   System_Int32_array *v7; // x7
 
   this->fields._Blank_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._Blank_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -520,7 +520,7 @@ void __fastcall ClassBoardResourceContents__set_BoardSelectViewPrefab(
   System_Int32_array *v7; // x7
 
   this->fields._BoardSelectViewPrefab_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -544,7 +544,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
   System_Int32_array *v7; // x7
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -568,7 +568,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiController(
   System_Int32_array *v7; // x7
 
   this->fields._BoardUiController_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._BoardUiController_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -592,7 +592,7 @@ void __fastcall ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
   System_Int32_array *v7; // x7
 
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -616,7 +616,7 @@ void __fastcall ClassBoardResourceContents__set_DisableOpenDialog(
   System_Int32_array *v7; // x7
 
   this->fields._DisableOpenDialog_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -640,7 +640,7 @@ void __fastcall ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
   System_Int32_array *v7; // x7
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -664,7 +664,7 @@ void __fastcall ClassBoardResourceContents__set_IconAtlasManagerUnit(
   System_Int32_array *v7; // x7
 
   this->fields._IconAtlasManagerUnit_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -688,7 +688,7 @@ void __fastcall ClassBoardResourceContents__set_Line(
   System_Int32_array *v7; // x7
 
   this->fields._Line_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._Line_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -712,7 +712,7 @@ void __fastcall ClassBoardResourceContents__set_Lock(
   System_Int32_array *v7; // x7
 
   this->fields._Lock_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._Lock_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -736,7 +736,7 @@ void __fastcall ClassBoardResourceContents__set_LockOpenConfirmDialog(
   System_Int32_array *v7; // x7
 
   this->fields._LockOpenConfirmDialog_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -760,7 +760,7 @@ void __fastcall ClassBoardResourceContents__set_LockReleaseConditionDialog(
   System_Int32_array *v7; // x7
 
   this->fields._LockReleaseConditionDialog_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -784,7 +784,7 @@ void __fastcall ClassBoardResourceContents__set_Square(
   System_Int32_array *v7; // x7
 
   this->fields._Square_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -808,7 +808,7 @@ void __fastcall ClassBoardResourceContents__set_SquareDetailDialog(
   System_Int32_array *v7; // x7
 
   this->fields._SquareDetailDialog_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -832,7 +832,7 @@ void __fastcall ClassBoardResourceContents__set_SquareOpenConfirmDialog(
   System_Int32_array *v7; // x7
 
   this->fields._SquareOpenConfirmDialog_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

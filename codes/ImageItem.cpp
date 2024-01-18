@@ -10,7 +10,7 @@ bool __fastcall ImageItem__IsTreasure(int32_t id, const MethodInfo *method)
 }
 
 
-bool __fastcall ImageItem__IsTreasure_28888404(int32_t id, const MethodInfo *method)
+bool __fastcall ImageItem__IsTreasure_27362400(int32_t id, const MethodInfo *method)
 {
   return (unsigned int)(id - 1) < 3;
 }

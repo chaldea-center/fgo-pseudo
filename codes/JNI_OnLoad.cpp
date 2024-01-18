@@ -4,7 +4,7 @@ jint JNI_OnLoad(JavaVM *vm, void *reserved)
 
   __android_log_print(4, "IL2CPP", "JNI_OnLoad");
   result = 65542;
-  qword_40F26C8 = (__int64)vm;
-  qword_40F26E8 = (__int64)sub_A83900;
+  qword_41802A8 = (__int64)vm;
+  qword_41802C8 = (__int64)sub_A98C60;
   return result;
 }

@@ -18,15 +18,20 @@ void __fastcall BattleActionEffect_AddChangeMaxHpBuff__PartialAfterEffectProc(
         BattleServantData_o *svt,
         const MethodInfo *method)
 {
-  int32_t MaxHp; // w0
-  int32_t v7; // w21
+  BattleActionEffect_AddChangeMaxHpBuff_o *v4; // x20
+  int32_t v6; // w21
 
-  if ( !svt || (MaxHp = BattleServantData__getMaxHp(svt, 0LL), !svt->fields.buffData) )
-    sub_B170D4();
-  v7 = MaxHp;
-  BattleBuffData__AddForceBuff(svt->fields.buffData, this->fields.buffArray, 0LL);
-  if ( this->fields.diffVal )
-    BattleServantData__CheckUpdateUpdownOnlyDisplayHp(svt, v7, 1, 0LL);
+  if ( !svt
+    || (v4 = this,
+        this = (BattleActionEffect_AddChangeMaxHpBuff_o *)BattleServantData__getMaxHp(svt, 0LL),
+        !svt->fields.buffData) )
+  {
+    sub_B2C434(this, data);
+  }
+  v6 = (int)this;
+  BattleBuffData__AddForceBuff(svt->fields.buffData, v4->fields.buffArray, 0LL);
+  if ( v4->fields.diffVal )
+    BattleServantData__CheckUpdateUpdownOnlyDisplayHp(svt, v6, 1, 0LL);
 }
 
 
@@ -37,7 +42,7 @@ void __fastcall BattleActionEffect_AddChangeMaxHpBuff__PartialPreActionProc(
         const MethodInfo *method)
 {
   if ( !svt || !svt->fields.buffData )
-    sub_B170D4();
+    sub_B2C434(this, data);
   BattleBuffData__DelForceBuff(svt->fields.buffData, this->fields.buffArray, 0LL);
 }
 
@@ -78,7 +83,7 @@ void __fastcall BattleActionEffect_BaseField__AfterEffectProc(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_B170D4();
+    sub_B2C434(this, 0LL);
   ((void (__fastcall *)(BattleActionEffect_BaseField_o *, BattleData_o *, struct BattleFieldEnvironmentData_o *, void *))this->klass->vtable._6_PartialAfterEffectProc.method)(
     this,
     data,
@@ -119,7 +124,7 @@ void __fastcall BattleActionEffect_BaseServant__AfterEffectProc(
   BattleServantData_o *ServantData; // x0
 
   if ( !data )
-    sub_B170D4();
+    sub_B2C434(this, 0LL);
   ServantData = BattleData__getServantData(data, this->fields.targetId, 0LL);
   if ( ServantData )
     ((void (__fastcall *)(BattleActionEffect_BaseServant_o *, BattleData_o *, BattleServantData_o *, void *))this->klass->vtable._6_PartialAfterEffectProc.method)(
@@ -136,7 +141,7 @@ BattleServantData_o *__fastcall BattleActionEffect_BaseServant__GetServant(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_B170D4();
+    sub_B2C434(this, 0LL);
   return BattleData__getServantData(data, this->fields.targetId, 0LL);
 }
 
@@ -171,26 +176,28 @@ void __fastcall BattleActionEffect_LossHPFunc__PartialAfterEffectProc(
         BattleServantData_o *svt,
         const MethodInfo *method)
 {
-  _BOOL4 isSafe; // w20
+  BattleActionEffect_LossHPFunc_o *v5; // x21
+  int32_t isSafe; // w20
   int32_t NowHp; // w0
   int32_t lossHp; // w22
   int32_t v9; // w21
   int32_t v10; // w1
 
-  if ( (byte_40F9185 & 1) == 0 )
+  v5 = this;
+  if ( (byte_4186C0F & 1) == 0 )
   {
-    sub_B16FFC(&System_Math_TypeInfo, data);
-    byte_40F9185 = 1;
+    this = (BattleActionEffect_LossHPFunc_o *)sub_B2C35C(&System_Math_TypeInfo, data);
+    byte_4186C0F = 1;
   }
   if ( !svt )
-    sub_B170D4();
-  isSafe = this->fields.isSafe;
+    sub_B2C434(this, data);
+  isSafe = v5->fields.isSafe;
   NowHp = BattleServantData__getNowHp(svt, 0LL);
-  lossHp = this->fields.lossHp;
+  lossHp = v5->fields.lossHp;
   v9 = NowHp;
   if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v10 = System_Math__Max_44463768(v9 - lossHp, isSafe, 0LL);
+  v10 = System_Math__Max_45012344(v9 - lossHp, isSafe, 0LL);
   BattleServantData__setHp(svt, v10, 0, 0LL);
 }
 
@@ -216,7 +223,7 @@ BattleActionEffect_MaxHpBuffServant_o *__fastcall BattleActionEffect_MaxHpBuffSe
   System_Int32_array *v7; // x7
 
   this->fields.buffArray = buffArray;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.buffArray,
     (System_Int32_array **)buffArray,
     *(System_String_array ***)&targetId,
@@ -251,7 +258,7 @@ void __fastcall BattleActionEffect_MaxHpBuffServant__PreActionProc(
   int32_t NowHp; // w0
 
   if ( !data )
-    sub_B170D4();
+    sub_B2C434(this, 0LL);
   ServantData = BattleData__getServantData(data, this->fields.targetId, 0LL);
   if ( ServantData )
   {
@@ -282,14 +289,19 @@ void __fastcall BattleActionEffect_SubChangeMaxHpBuff__PartialAfterEffectProc(
         BattleServantData_o *svt,
         const MethodInfo *method)
 {
-  int32_t MaxHp; // w0
-  int32_t v7; // w21
+  BattleActionEffect_SubChangeMaxHpBuff_o *v4; // x20
+  int32_t v6; // w21
 
-  if ( !svt || (MaxHp = BattleServantData__getMaxHp(svt, 0LL), !svt->fields.buffData) )
-    sub_B170D4();
-  v7 = MaxHp;
-  BattleBuffData__DelForceBuff(svt->fields.buffData, this->fields.buffArray, 0LL);
-  BattleServantData__CheckUpdateUpdownOnlyDisplayHp(svt, v7, 0, 0LL);
+  if ( !svt
+    || (v4 = this,
+        this = (BattleActionEffect_SubChangeMaxHpBuff_o *)BattleServantData__getMaxHp(svt, 0LL),
+        !svt->fields.buffData) )
+  {
+    sub_B2C434(this, data);
+  }
+  v6 = (int)this;
+  BattleBuffData__DelForceBuff(svt->fields.buffData, v4->fields.buffArray, 0LL);
+  BattleServantData__CheckUpdateUpdownOnlyDisplayHp(svt, v6, 0, 0LL);
 }
 
 
@@ -300,7 +312,7 @@ void __fastcall BattleActionEffect_SubChangeMaxHpBuff__PartialPreActionProc(
         const MethodInfo *method)
 {
   if ( !svt || !svt->fields.buffData )
-    sub_B170D4();
+    sub_B2C434(this, data);
   BattleBuffData__AddForceBuff(svt->fields.buffData, this->fields.buffArray, 0LL);
 }
 
@@ -320,7 +332,7 @@ void __fastcall BattleActionEffect_UpdateAllInfo__PartialAfterEffectProc(
         const MethodInfo *method)
 {
   if ( !fieldData )
-    sub_B170D4();
+    sub_B2C434(this, data);
   BattleFieldEnvironmentData__UpdateAllView(fieldData, 0LL);
 }
 
@@ -339,9 +351,7 @@ void __fastcall BattleActionEffect_UpdateFieldInfo__PartialAfterEffectProc(
         BattleFieldEnvironmentData_o *fieldData,
         const MethodInfo *method)
 {
-  BattlePerformance_o *perf; // x0
-
-  if ( !data || (perf = data->fields.perf) == 0LL )
-    sub_B170D4();
-  BattlePerformance__UpdateFieldView(perf, 0LL);
+  if ( !data || (this = (BattleActionEffect_UpdateFieldInfo_o *)data->fields.perf) == 0LL )
+    sub_B2C434(this, data);
+  BattlePerformance__UpdateFieldView((BattlePerformance_o *)this, 0LL);
 }

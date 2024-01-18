@@ -18,55 +18,33 @@ void __fastcall ServantListViewItemDraw__SetInput(
   __int64 v12; // x1
   __int64 v13; // x1
   UnityEngine_Object_o *baseButton; // x22
-  UnityEngine_Component_o *v15; // x0
-  UnityEngine_Collider_o *Component_WebViewObject; // x0
-  struct UICommonButton_o *v17; // x0
+  __int64 v15; // x1
+  UnityEngine_Component_o *Component_WebViewObject; // x0
   UnityEngine_Object_o *lockSprite; // x21
-  UnityEngine_Component_o *v19; // x0
   UnityEngine_GameObject_o *gameObject; // x21
-  bool IsDispLock; // w0
   UnityEngine_Object_o *choiceSprite; // x21
-  UnityEngine_Component_o *v23; // x0
-  UnityEngine_GameObject_o *v24; // x21
-  bool IsDispChoice; // w0
+  UnityEngine_GameObject_o *v20; // x21
   UnityEngine_Object_o *friendShipSprite; // x21
-  UnityEngine_Component_o *v27; // x0
-  UnityEngine_GameObject_o *v28; // x0
   UnityEngine_Object_o *chocolateSprite; // x21
-  UnityEngine_Component_o *v30; // x0
-  UnityEngine_GameObject_o *v31; // x0
-  UnityEngine_Component_o *v32; // x0
-  UnityEngine_GameObject_o *v33; // x0
-  UILabel_o *v34; // x0
-  struct UILabel_o *v35; // x21
-  __int64 *v36; // x8
-  UnityEngine_Component_o *maskSprite; // x0
-  UnityEngine_GameObject_o *v38; // x0
-  UILabel_o *warningLabel; // x0
-  System_String_o *v40; // x1
-  System_String_o *v41; // x0
+  struct UILabel_o *warningLabel; // x21
+  __int64 *v24; // x8
+  System_String_o *v25; // x1
   UnityEngine_Object_o *pushSprite; // x21
-  UnityEngine_Component_o *v43; // x0
-  UnityEngine_GameObject_o *v44; // x0
-  ServantFaceIconComponent_o *servantFaceIcon; // x0
   UnityEngine_Object_o *materialTdSprite; // x21
-  UnityEngine_Component_o *v47; // x0
-  UnityEngine_GameObject_o *v48; // x0
-  UISprite_o *v49; // x21
-  ServantFaceIconComponent_o *v50; // x0
-  UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
+  UISprite_o *v28; // x21
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_40FD6A5 & 1) == 0 )
+  if ( (byte_418B21C & 1) == 0 )
   {
-    sub_B16FFC(&AtlasManager_TypeInfo, item);
-    sub_B16FFC(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, v10);
-    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v11);
-    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v12);
-    sub_B16FFC(&StringLiteral_1/*""*/, v13);
-    byte_40FD6A5 = 1;
+    sub_B2C35C(&AtlasManager_TypeInfo, item);
+    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v8);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v9);
+    sub_B2C35C(&StringLiteral_21828/*"ribbon_noblephantasmup_01"*/, v10);
+    sub_B2C35C(&StringLiteral_11620/*"SELECT_CANNOT"*/, v11);
+    sub_B2C35C(&StringLiteral_11643/*"SELECT_SERVANT_EVENT_JOIN"*/, v12);
+    sub_B2C35C(&StringLiteral_1/*""*/, v13);
+    byte_418B21C = 1;
   }
   if ( !item )
     return;
@@ -78,23 +56,23 @@ void __fastcall ServantListViewItemDraw__SetInput(
   }
   if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
   {
-    v15 = (UnityEngine_Component_o *)this->fields.baseButton;
-    if ( !v15 )
-      goto LABEL_84;
-    Component_WebViewObject = (UnityEngine_Collider_o *)UnityEngine_Component__GetComponent_WebViewObject_(
-                                                          v15,
-                                                          (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_Collider___);
+    Component_WebViewObject = (UnityEngine_Component_o *)this->fields.baseButton;
     if ( !Component_WebViewObject )
       goto LABEL_84;
-    UnityEngine_Collider__set_enabled(Component_WebViewObject, isInput, 0LL);
-    v17 = this->fields.baseButton;
-    if ( !v17 )
+    Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
+                                                           Component_WebViewObject,
+                                                           (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Collider___);
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))v17->klass->vtable._14_SetState.method)(
-      v17,
+    UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, isInput, 0LL);
+    Component_WebViewObject = (UnityEngine_Component_o *)this->fields.baseButton;
+    if ( !Component_WebViewObject )
+      goto LABEL_84;
+    ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_WebViewObject->klass[1]._1.implementedInterfaces)(
+      Component_WebViewObject,
       0LL,
       1LL,
-      v17->klass->vtable._15_OnPress.methodPtr);
+      Component_WebViewObject->klass[1]._1.interfaceOffsets);
   }
   lockSprite = (UnityEngine_Object_o *)this->fields.lockSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -104,14 +82,14 @@ void __fastcall ServantListViewItemDraw__SetInput(
   }
   if ( UnityEngine_Object__op_Inequality(lockSprite, 0LL, 0LL) )
   {
-    v19 = (UnityEngine_Component_o *)this->fields.lockSprite;
-    if ( !v19 )
+    Component_WebViewObject = (UnityEngine_Component_o *)this->fields.lockSprite;
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    gameObject = UnityEngine_Component__get_gameObject(v19, 0LL);
-    IsDispLock = ServantListViewItem__get_IsDispLock(item, 0LL);
+    gameObject = UnityEngine_Component__get_gameObject(Component_WebViewObject, 0LL);
+    Component_WebViewObject = (UnityEngine_Component_o *)ServantListViewItem__get_IsDispLock(item, 0LL);
     if ( !gameObject )
       goto LABEL_84;
-    UnityEngine_GameObject__SetActive(gameObject, IsDispLock, 0LL);
+    UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)Component_WebViewObject & 1, 0LL);
   }
   choiceSprite = (UnityEngine_Object_o *)this->fields.choiceSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -121,14 +99,14 @@ void __fastcall ServantListViewItemDraw__SetInput(
   }
   if ( UnityEngine_Object__op_Inequality(choiceSprite, 0LL, 0LL) )
   {
-    v23 = (UnityEngine_Component_o *)this->fields.choiceSprite;
-    if ( !v23 )
+    Component_WebViewObject = (UnityEngine_Component_o *)this->fields.choiceSprite;
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    v24 = UnityEngine_Component__get_gameObject(v23, 0LL);
-    IsDispChoice = ServantListViewItem__get_IsDispChoice(item, 0LL);
-    if ( !v24 )
+    v20 = UnityEngine_Component__get_gameObject(Component_WebViewObject, 0LL);
+    Component_WebViewObject = (UnityEngine_Component_o *)ServantListViewItem__get_IsDispChoice(item, 0LL);
+    if ( !v20 )
       goto LABEL_84;
-    UnityEngine_GameObject__SetActive(v24, IsDispChoice, 0LL);
+    UnityEngine_GameObject__SetActive(v20, (unsigned __int8)Component_WebViewObject & 1, 0LL);
   }
   friendShipSprite = (UnityEngine_Object_o *)this->fields.friendShipSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -138,13 +116,18 @@ void __fastcall ServantListViewItemDraw__SetInput(
   }
   if ( UnityEngine_Object__op_Inequality(friendShipSprite, 0LL, 0LL) )
   {
-    v27 = (UnityEngine_Component_o *)this->fields.friendShipSprite;
-    if ( !v27 )
+    Component_WebViewObject = (UnityEngine_Component_o *)this->fields.friendShipSprite;
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    v28 = UnityEngine_Component__get_gameObject(v27, 0LL);
-    if ( !v28 )
+    Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
+                                                           Component_WebViewObject,
+                                                           0LL);
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    UnityEngine_GameObject__SetActive(v28, item->fields.isFriendShipSvtEq, 0LL);
+    UnityEngine_GameObject__SetActive(
+      (UnityEngine_GameObject_o *)Component_WebViewObject,
+      item->fields.isFriendShipSvtEq,
+      0LL);
   }
   chocolateSprite = (UnityEngine_Object_o *)this->fields.chocolateSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -154,45 +137,54 @@ void __fastcall ServantListViewItemDraw__SetInput(
   }
   if ( UnityEngine_Object__op_Inequality(chocolateSprite, 0LL, 0LL) )
   {
-    v30 = (UnityEngine_Component_o *)this->fields.chocolateSprite;
-    if ( !v30 )
+    Component_WebViewObject = (UnityEngine_Component_o *)this->fields.chocolateSprite;
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    v31 = UnityEngine_Component__get_gameObject(v30, 0LL);
-    if ( !v31 )
+    Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
+                                                           Component_WebViewObject,
+                                                           0LL);
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    UnityEngine_GameObject__SetActive(v31, item->fields.isChocolateSvtEquip, 0LL);
+    UnityEngine_GameObject__SetActive(
+      (UnityEngine_GameObject_o *)Component_WebViewObject,
+      item->fields.isChocolateSvtEquip,
+      0LL);
   }
   if ( !item->fields.isLeave && item->fields.isEnabled )
   {
-    maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
-    if ( !maskSprite )
+    Component_WebViewObject = (UnityEngine_Component_o *)this->fields.maskSprite;
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    v38 = UnityEngine_Component__get_gameObject(maskSprite, 0LL);
-    if ( !v38 )
+    Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
+                                                           Component_WebViewObject,
+                                                           0LL);
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    UnityEngine_GameObject__SetActive(v38, 0, 0LL);
-    warningLabel = this->fields.warningLabel;
-    if ( !warningLabel )
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_WebViewObject, 0, 0LL);
+    Component_WebViewObject = (UnityEngine_Component_o *)this->fields.warningLabel;
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    v40 = (System_String_o *)StringLiteral_1/*""*/;
+    v25 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_61:
-    UILabel__set_text(warningLabel, v40, 0LL);
+    UILabel__set_text((UILabel_o *)Component_WebViewObject, v25, 0LL);
     goto LABEL_62;
   }
-  v32 = (UnityEngine_Component_o *)this->fields.maskSprite;
-  if ( !v32 )
+  Component_WebViewObject = (UnityEngine_Component_o *)this->fields.maskSprite;
+  if ( !Component_WebViewObject )
     goto LABEL_84;
-  v33 = UnityEngine_Component__get_gameObject(v32, 0LL);
-  if ( !v33 )
+  Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
+                                                         Component_WebViewObject,
+                                                         0LL);
+  if ( !Component_WebViewObject )
     goto LABEL_84;
-  UnityEngine_GameObject__SetActive(v33, 1, 0LL);
-  v34 = this->fields.warningLabel;
-  if ( !v34 )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_WebViewObject, 1, 0LL);
+  Component_WebViewObject = (UnityEngine_Component_o *)this->fields.warningLabel;
+  if ( !Component_WebViewObject )
     goto LABEL_84;
-  UILabel__set_text(v34, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  UILabel__set_text((UILabel_o *)Component_WebViewObject, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !item->fields.isEnabled )
   {
-    v35 = this->fields.warningLabel;
+    warningLabel = this->fields.warningLabel;
     if ( item->fields.isEventJoin )
     {
       if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -200,7 +192,7 @@ LABEL_61:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v36 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
+      v24 = &StringLiteral_11643/*"SELECT_SERVANT_EVENT_JOIN"*/;
     }
     else
     {
@@ -209,13 +201,13 @@ LABEL_61:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v36 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
+      v24 = &StringLiteral_11620/*"SELECT_CANNOT"*/;
     }
-    v41 = LocalizationManager__Get((System_String_o *)*v36, 0LL);
-    if ( !v35 )
+    Component_WebViewObject = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v24, 0LL);
+    if ( !warningLabel )
       goto LABEL_84;
-    v40 = v41;
-    warningLabel = v35;
+    v25 = (System_String_o *)Component_WebViewObject;
+    Component_WebViewObject = (UnityEngine_Component_o *)warningLabel;
     goto LABEL_61;
   }
 LABEL_62:
@@ -227,18 +219,20 @@ LABEL_62:
   }
   if ( UnityEngine_Object__op_Inequality(pushSprite, 0LL, 0LL) )
   {
-    v43 = (UnityEngine_Component_o *)this->fields.pushSprite;
-    if ( !v43 )
+    Component_WebViewObject = (UnityEngine_Component_o *)this->fields.pushSprite;
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    v44 = UnityEngine_Component__get_gameObject(v43, 0LL);
-    if ( !v44 )
+    Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
+                                                           Component_WebViewObject,
+                                                           0LL);
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    UnityEngine_GameObject__SetActive(v44, item->fields.isPush, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_WebViewObject, item->fields.isPush, 0LL);
   }
-  servantFaceIcon = this->fields.servantFaceIcon;
-  if ( !servantFaceIcon )
+  Component_WebViewObject = (UnityEngine_Component_o *)this->fields.servantFaceIcon;
+  if ( !Component_WebViewObject )
     goto LABEL_84;
-  ServantFaceIconComponent__ResetIconLabelScale(servantFaceIcon, 0LL);
+  ServantFaceIconComponent__ResetIconLabelScale((ServantFaceIconComponent_o *)Component_WebViewObject, 0LL);
   materialTdSprite = (UnityEngine_Object_o *)this->fields.materialTdSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -247,35 +241,43 @@ LABEL_62:
   }
   if ( UnityEngine_Object__op_Inequality(materialTdSprite, 0LL, 0LL) )
   {
-    v47 = (UnityEngine_Component_o *)this->fields.materialTdSprite;
-    if ( !v47 )
+    Component_WebViewObject = (UnityEngine_Component_o *)this->fields.materialTdSprite;
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    v48 = UnityEngine_Component__get_gameObject(v47, 0LL);
-    if ( !v48 )
+    Component_WebViewObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
+                                                           Component_WebViewObject,
+                                                           0LL);
+    if ( !Component_WebViewObject )
       goto LABEL_84;
-    UnityEngine_GameObject__SetActive(v48, item->fields.isMaterialTdSvt, 0LL);
+    UnityEngine_GameObject__SetActive(
+      (UnityEngine_GameObject_o *)Component_WebViewObject,
+      item->fields.isMaterialTdSvt,
+      0LL);
     if ( item->fields.isMaterialTdSvt )
     {
-      v49 = this->fields.materialTdSprite;
+      v28 = this->fields.materialTdSprite;
       if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !AtlasManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       }
-      AtlasManager__SetEventSprite(v49, (System_String_o *)StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, 0LL);
+      AtlasManager__SetEventSprite(v28, (System_String_o *)StringLiteral_21828/*"ribbon_noblephantasmup_01"*/, 0LL);
       if ( item->fields.isNeedAdjustIconLabelScale )
       {
-        v50 = this->fields.servantFaceIcon;
-        if ( v50 )
+        Component_WebViewObject = (UnityEngine_Component_o *)this->fields.servantFaceIcon;
+        if ( Component_WebViewObject )
         {
-          v51.fields.x = 0.65;
-          v51.fields.y = 1.0;
-          v51.fields.z = 1.0;
-          ServantFaceIconComponent__AdjustIconLabelScale(v50, v51, 0LL);
+          v29.fields.x = 0.65;
+          v29.fields.y = 1.0;
+          v29.fields.z = 1.0;
+          ServantFaceIconComponent__AdjustIconLabelScale(
+            (ServantFaceIconComponent_o *)Component_WebViewObject,
+            v29,
+            0LL);
           return;
         }
 LABEL_84:
-        sub_B170D4();
+        sub_B2C434(Component_WebViewObject, v15);
       }
     }
   }
@@ -300,60 +302,35 @@ void __fastcall ServantListViewItemDraw__SetItem(
   ServantFaceIconComponent_o *servantFaceIcon; // x0
   UnityEngine_Object_o *partyIcon; // x21
   FlashingIconComponent_o *v18; // x21
-  bool IsParty; // w1
   UnityEngine_Object_o *useSprite; // x21
-  UnityEngine_Component_o *v21; // x0
   _BOOL4 isUse; // w21
-  UnityEngine_GameObject_o *gameObject; // x0
-  UISprite_o *v24; // x0
-  __int64 *v25; // x8
+  __int64 *v21; // x8
   UnityEngine_Object_o *lockSprite; // x21
-  UnityEngine_Component_o *v27; // x0
-  UnityEngine_GameObject_o *v28; // x21
-  bool IsDispLock; // w0
+  UnityEngine_GameObject_o *gameObject; // x21
   UnityEngine_Object_o *choiceSprite; // x21
-  UnityEngine_Component_o *v31; // x0
-  UnityEngine_GameObject_o *v32; // x21
-  bool IsDispChoice; // w0
+  UnityEngine_GameObject_o *v25; // x21
   UnityEngine_Object_o *friendShipSprite; // x21
-  UnityEngine_Component_o *v35; // x0
-  UnityEngine_GameObject_o *v36; // x0
   UnityEngine_Object_o *chocolateSprite; // x21
-  UnityEngine_Component_o *v38; // x0
-  UnityEngine_GameObject_o *v39; // x0
-  UnityEngine_Component_o *v40; // x0
-  UnityEngine_GameObject_o *v41; // x0
-  UILabel_o *v42; // x0
-  struct UILabel_o *v43; // x21
-  __int64 *v44; // x8
-  UnityEngine_Component_o *maskSprite; // x0
-  UnityEngine_GameObject_o *v46; // x0
-  UILabel_o *warningLabel; // x0
-  System_String_o *v48; // x1
-  System_String_o *v49; // x0
+  struct UILabel_o *warningLabel; // x21
+  __int64 *v29; // x8
+  System_String_o *v30; // x1
   UnityEngine_Object_o *pushSprite; // x21
-  UnityEngine_Component_o *v51; // x0
-  UnityEngine_GameObject_o *v52; // x0
-  ServantFaceIconComponent_o *v53; // x0
   UnityEngine_Object_o *materialTdSprite; // x21
-  UnityEngine_Component_o *v55; // x0
-  UnityEngine_GameObject_o *v56; // x0
-  UISprite_o *v57; // x21
-  ServantFaceIconComponent_o *v58; // x0
-  UnityEngine_Vector3_o v59; // 0:s0.4,4:s1.4,8:s2.4
+  UISprite_o *v33; // x21
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_40FD6A4 & 1) == 0 )
+  if ( (byte_418B21B & 1) == 0 )
   {
-    sub_B16FFC(&AtlasManager_TypeInfo, item);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v7);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, v9);
-    sub_B16FFC(&StringLiteral_11584/*"SELECT_CANNOT"*/, v10);
-    sub_B16FFC(&StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/, v11);
-    sub_B16FFC(&StringLiteral_19256/*"icon_equip"*/, v12);
-    sub_B16FFC(&StringLiteral_1/*""*/, v13);
-    sub_B16FFC(&StringLiteral_19257/*"icon_equip_cc"*/, v14);
-    byte_40FD6A4 = 1;
+    sub_B2C35C(&AtlasManager_TypeInfo, item);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v7);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v8);
+    sub_B2C35C(&StringLiteral_21828/*"ribbon_noblephantasmup_01"*/, v9);
+    sub_B2C35C(&StringLiteral_11620/*"SELECT_CANNOT"*/, v10);
+    sub_B2C35C(&StringLiteral_11643/*"SELECT_SERVANT_EVENT_JOIN"*/, v11);
+    sub_B2C35C(&StringLiteral_19330/*"icon_equip"*/, v12);
+    sub_B2C35C(&StringLiteral_1/*""*/, v13);
+    sub_B2C35C(&StringLiteral_19331/*"icon_equip_cc"*/, v14);
+    byte_418B21B = 1;
   }
   if ( !item || !mode )
     return;
@@ -363,7 +340,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     if ( !servantFaceIcon )
       goto LABEL_104;
-    ServantFaceIconComponent__Set_30711528(
+    ServantFaceIconComponent__Set_30799200(
       servantFaceIcon,
       userCommandCodeEntity,
       item->fields.iconLabelInfo1,
@@ -374,7 +351,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     if ( !servantFaceIcon )
       goto LABEL_104;
-    ServantFaceIconComponent__Set_30631556(
+    ServantFaceIconComponent__Set_30719352(
       servantFaceIcon,
       item->fields.userSvtEntity,
       item->fields.iconLabelInfo1,
@@ -387,22 +364,24 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(partyIcon, 0LL, 0LL) )
+  servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Object__op_Inequality(partyIcon, 0LL, 0LL);
+  if ( ((unsigned __int8)servantFaceIcon & 1) != 0 )
   {
     v18 = this->fields.partyIcon;
     if ( item->fields.isUse )
     {
-      IsParty = 0;
+      userCommandCodeEntity = 0LL;
       if ( !v18 )
         goto LABEL_104;
     }
     else
     {
-      IsParty = ServantListViewItem__get_IsParty(item, 0LL);
+      servantFaceIcon = (ServantFaceIconComponent_o *)ServantListViewItem__get_IsParty(item, 0LL);
+      userCommandCodeEntity = (UserCommandCodeEntity_o *)((unsigned __int8)servantFaceIcon & 1);
       if ( !v18 )
         goto LABEL_104;
     }
-    FlashingIconComponent__Set_23222596(v18, IsParty, 0LL);
+    FlashingIconComponent__Set_23093612(v18, (bool)userCommandCodeEntity, 0LL);
   }
   useSprite = (UnityEngine_Object_o *)this->fields.useSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -412,28 +391,30 @@ void __fastcall ServantListViewItemDraw__SetItem(
   }
   if ( UnityEngine_Object__op_Inequality(useSprite, 0LL, 0LL) )
   {
-    v21 = (UnityEngine_Component_o *)this->fields.useSprite;
-    if ( !v21 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.useSprite;
+    if ( !servantFaceIcon )
       goto LABEL_104;
     isUse = item->fields.isUse;
-    gameObject = UnityEngine_Component__get_gameObject(v21, 0LL);
-    if ( !gameObject )
+    servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                      (UnityEngine_Component_o *)servantFaceIcon,
+                                                      0LL);
+    if ( !servantFaceIcon )
       goto LABEL_104;
     if ( isUse )
     {
-      UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-      v24 = this->fields.useSprite;
-      if ( !v24 )
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 1, 0LL);
+      servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.useSprite;
+      if ( !servantFaceIcon )
         goto LABEL_104;
       if ( item->fields.userCommandCodeEntity )
-        v25 = &StringLiteral_19257/*"icon_equip_cc"*/;
+        v21 = &StringLiteral_19331/*"icon_equip_cc"*/;
       else
-        v25 = &StringLiteral_19256/*"icon_equip"*/;
-      UISprite__set_spriteName(v24, (System_String_o *)*v25, 0LL);
+        v21 = &StringLiteral_19330/*"icon_equip"*/;
+      UISprite__set_spriteName((UISprite_o *)servantFaceIcon, (System_String_o *)*v21, 0LL);
     }
     else
     {
-      UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 0, 0LL);
     }
   }
   lockSprite = (UnityEngine_Object_o *)this->fields.lockSprite;
@@ -444,14 +425,14 @@ void __fastcall ServantListViewItemDraw__SetItem(
   }
   if ( UnityEngine_Object__op_Inequality(lockSprite, 0LL, 0LL) )
   {
-    v27 = (UnityEngine_Component_o *)this->fields.lockSprite;
-    if ( !v27 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.lockSprite;
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    v28 = UnityEngine_Component__get_gameObject(v27, 0LL);
-    IsDispLock = ServantListViewItem__get_IsDispLock(item, 0LL);
-    if ( !v28 )
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantFaceIcon, 0LL);
+    servantFaceIcon = (ServantFaceIconComponent_o *)ServantListViewItem__get_IsDispLock(item, 0LL);
+    if ( !gameObject )
       goto LABEL_104;
-    UnityEngine_GameObject__SetActive(v28, IsDispLock, 0LL);
+    UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)servantFaceIcon & 1, 0LL);
   }
   choiceSprite = (UnityEngine_Object_o *)this->fields.choiceSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -461,14 +442,14 @@ void __fastcall ServantListViewItemDraw__SetItem(
   }
   if ( UnityEngine_Object__op_Inequality(choiceSprite, 0LL, 0LL) )
   {
-    v31 = (UnityEngine_Component_o *)this->fields.choiceSprite;
-    if ( !v31 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.choiceSprite;
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    v32 = UnityEngine_Component__get_gameObject(v31, 0LL);
-    IsDispChoice = ServantListViewItem__get_IsDispChoice(item, 0LL);
-    if ( !v32 )
+    v25 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantFaceIcon, 0LL);
+    servantFaceIcon = (ServantFaceIconComponent_o *)ServantListViewItem__get_IsDispChoice(item, 0LL);
+    if ( !v25 )
       goto LABEL_104;
-    UnityEngine_GameObject__SetActive(v32, IsDispChoice, 0LL);
+    UnityEngine_GameObject__SetActive(v25, (unsigned __int8)servantFaceIcon & 1, 0LL);
   }
   friendShipSprite = (UnityEngine_Object_o *)this->fields.friendShipSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -478,13 +459,15 @@ void __fastcall ServantListViewItemDraw__SetItem(
   }
   if ( UnityEngine_Object__op_Inequality(friendShipSprite, 0LL, 0LL) )
   {
-    v35 = (UnityEngine_Component_o *)this->fields.friendShipSprite;
-    if ( !v35 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.friendShipSprite;
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    v36 = UnityEngine_Component__get_gameObject(v35, 0LL);
-    if ( !v36 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                      (UnityEngine_Component_o *)servantFaceIcon,
+                                                      0LL);
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    UnityEngine_GameObject__SetActive(v36, item->fields.isFriendShipSvtEq, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, item->fields.isFriendShipSvtEq, 0LL);
   }
   chocolateSprite = (UnityEngine_Object_o *)this->fields.chocolateSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -494,45 +477,54 @@ void __fastcall ServantListViewItemDraw__SetItem(
   }
   if ( UnityEngine_Object__op_Inequality(chocolateSprite, 0LL, 0LL) )
   {
-    v38 = (UnityEngine_Component_o *)this->fields.chocolateSprite;
-    if ( !v38 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.chocolateSprite;
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    v39 = UnityEngine_Component__get_gameObject(v38, 0LL);
-    if ( !v39 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                      (UnityEngine_Component_o *)servantFaceIcon,
+                                                      0LL);
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    UnityEngine_GameObject__SetActive(v39, item->fields.isChocolateSvtEquip, 0LL);
+    UnityEngine_GameObject__SetActive(
+      (UnityEngine_GameObject_o *)servantFaceIcon,
+      item->fields.isChocolateSvtEquip,
+      0LL);
   }
   if ( !item->fields.isLeave && item->fields.isEnabled )
   {
-    maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
-    if ( !maskSprite )
+    servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.maskSprite;
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    v46 = UnityEngine_Component__get_gameObject(maskSprite, 0LL);
-    if ( !v46 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                      (UnityEngine_Component_o *)servantFaceIcon,
+                                                      0LL);
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    UnityEngine_GameObject__SetActive(v46, 0, 0LL);
-    warningLabel = this->fields.warningLabel;
-    if ( !warningLabel )
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 0, 0LL);
+    servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.warningLabel;
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    v48 = (System_String_o *)StringLiteral_1/*""*/;
+    v30 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_81:
-    UILabel__set_text(warningLabel, v48, 0LL);
+    UILabel__set_text((UILabel_o *)servantFaceIcon, v30, 0LL);
     goto LABEL_82;
   }
-  v40 = (UnityEngine_Component_o *)this->fields.maskSprite;
-  if ( !v40 )
+  servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.maskSprite;
+  if ( !servantFaceIcon )
     goto LABEL_104;
-  v41 = UnityEngine_Component__get_gameObject(v40, 0LL);
-  if ( !v41 )
+  servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                    (UnityEngine_Component_o *)servantFaceIcon,
+                                                    0LL);
+  if ( !servantFaceIcon )
     goto LABEL_104;
-  UnityEngine_GameObject__SetActive(v41, 1, 0LL);
-  v42 = this->fields.warningLabel;
-  if ( !v42 )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 1, 0LL);
+  servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.warningLabel;
+  if ( !servantFaceIcon )
     goto LABEL_104;
-  UILabel__set_text(v42, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  UILabel__set_text((UILabel_o *)servantFaceIcon, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !item->fields.isEnabled )
   {
-    v43 = this->fields.warningLabel;
+    warningLabel = this->fields.warningLabel;
     if ( item->fields.isEventJoin )
     {
       if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -540,7 +532,7 @@ LABEL_81:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v44 = &StringLiteral_11607/*"SELECT_SERVANT_EVENT_JOIN"*/;
+      v29 = &StringLiteral_11643/*"SELECT_SERVANT_EVENT_JOIN"*/;
     }
     else
     {
@@ -549,13 +541,13 @@ LABEL_81:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v44 = &StringLiteral_11584/*"SELECT_CANNOT"*/;
+      v29 = &StringLiteral_11620/*"SELECT_CANNOT"*/;
     }
-    v49 = LocalizationManager__Get((System_String_o *)*v44, 0LL);
-    if ( !v43 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v29, 0LL);
+    if ( !warningLabel )
       goto LABEL_104;
-    v48 = v49;
-    warningLabel = v43;
+    v30 = (System_String_o *)servantFaceIcon;
+    servantFaceIcon = (ServantFaceIconComponent_o *)warningLabel;
     goto LABEL_81;
   }
 LABEL_82:
@@ -567,18 +559,20 @@ LABEL_82:
   }
   if ( UnityEngine_Object__op_Inequality(pushSprite, 0LL, 0LL) )
   {
-    v51 = (UnityEngine_Component_o *)this->fields.pushSprite;
-    if ( !v51 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.pushSprite;
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    v52 = UnityEngine_Component__get_gameObject(v51, 0LL);
-    if ( !v52 )
+    servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                      (UnityEngine_Component_o *)servantFaceIcon,
+                                                      0LL);
+    if ( !servantFaceIcon )
       goto LABEL_104;
-    UnityEngine_GameObject__SetActive(v52, item->fields.isPush, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, item->fields.isPush, 0LL);
   }
-  v53 = this->fields.servantFaceIcon;
-  if ( !v53 )
+  servantFaceIcon = this->fields.servantFaceIcon;
+  if ( !servantFaceIcon )
     goto LABEL_104;
-  ServantFaceIconComponent__ResetIconLabelScale(v53, 0LL);
+  ServantFaceIconComponent__ResetIconLabelScale(servantFaceIcon, 0LL);
   materialTdSprite = (UnityEngine_Object_o *)this->fields.materialTdSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -587,29 +581,34 @@ LABEL_82:
   }
   if ( !UnityEngine_Object__op_Inequality(materialTdSprite, 0LL, 0LL) )
     return;
-  v55 = (UnityEngine_Component_o *)this->fields.materialTdSprite;
-  if ( !v55 || (v56 = UnityEngine_Component__get_gameObject(v55, 0LL)) == 0LL )
+  servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.materialTdSprite;
+  if ( !servantFaceIcon
+    || (servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                          (UnityEngine_Component_o *)servantFaceIcon,
+                                                          0LL)) == 0LL )
+  {
 LABEL_104:
-    sub_B170D4();
-  UnityEngine_GameObject__SetActive(v56, item->fields.isMaterialTdSvt, 0LL);
+    sub_B2C434(servantFaceIcon, userCommandCodeEntity);
+  }
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, item->fields.isMaterialTdSvt, 0LL);
   if ( item->fields.isMaterialTdSvt )
   {
-    v57 = this->fields.materialTdSprite;
+    v33 = this->fields.materialTdSprite;
     if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !AtlasManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventSprite(v57, (System_String_o *)StringLiteral_21736/*"ribbon_noblephantasmup_01"*/, 0LL);
+    AtlasManager__SetEventSprite(v33, (System_String_o *)StringLiteral_21828/*"ribbon_noblephantasmup_01"*/, 0LL);
     if ( item->fields.isNeedAdjustIconLabelScale )
     {
-      v58 = this->fields.servantFaceIcon;
-      if ( !v58 )
+      servantFaceIcon = this->fields.servantFaceIcon;
+      if ( !servantFaceIcon )
         goto LABEL_104;
-      v59.fields.x = 0.65;
-      v59.fields.y = 1.0;
-      v59.fields.z = 1.0;
-      ServantFaceIconComponent__AdjustIconLabelScale(v58, v59, 0LL);
+      v34.fields.x = 0.65;
+      v34.fields.y = 1.0;
+      v34.fields.z = 1.0;
+      ServantFaceIconComponent__AdjustIconLabelScale(servantFaceIcon, v34, 0LL);
     }
   }
 }

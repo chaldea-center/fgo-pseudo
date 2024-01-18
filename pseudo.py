@@ -124,7 +124,7 @@ def generate_pseudocode(save_folder: Path):
         k: json.dumps(v, ensure_ascii=False)
         for k,v in string_literals.items()
     }
-    def _repl_match(match:re.Match[str])->str:
+    def _repl_match(match:re.Match)->str:
         key = match.group(0)
         value = string_literals.get(key)
         if value is None:

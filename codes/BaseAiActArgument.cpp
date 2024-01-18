@@ -4,32 +4,11 @@ void __fastcall BaseAiActArgument___ctor(
         AiBaseEntity_o *aiEnt,
         const MethodInfo *method)
 {
-  System_String_array **v7; // x2
-  System_String_array **v8; // x3
-  System_Boolean_array **v9; // x4
-  System_Int32_array **v10; // x5
-  System_Int32_array *v11; // x6
-  System_Int32_array *v12; // x7
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._AiActEnt_k__BackingField = aiActEnt;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)aiActEnt, v7, v8, v9, v10, v11, v12);
+  sub_B2C2F8(&this->fields, aiActEnt);
   this->fields._AiEnt_k__BackingField = aiEnt;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields._AiEnt_k__BackingField,
-    (System_Int32_array **)aiEnt,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_B2C2F8(&this->fields._AiEnt_k__BackingField, aiEnt);
 }
 
 
@@ -42,59 +21,58 @@ void __fastcall BaseAiActArgument__InitCommonTask(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask(
         BaseAiActArgument_o *this,
         BattleLogicBaseAi_o *logicAi,
         int32_t actType,
         const MethodInfo *method)
 {
-  __int64 v4; // x4
-  BattleLogicTask_o *v8; // x22
-  const MethodInfo *v9; // x3
+  BattleLogicTask_o *v7; // x22
+  const MethodInfo *v8; // x3
 
-  if ( (byte_40F6EEA & 1) == 0 )
+  if ( (byte_41849EF & 1) == 0 )
   {
-    sub_B16FFC(&BaseAiActBattleLogicTask_TypeInfo, logicAi);
-    byte_40F6EEA = 1;
+    sub_B2C35C(&BaseAiActBattleLogicTask_TypeInfo, logicAi);
+    byte_41849EF = 1;
   }
-  v8 = (BattleLogicTask_o *)sub_B170CC(BaseAiActBattleLogicTask_TypeInfo, logicAi, *(_QWORD *)&actType, method, v4);
-  BattleLogicTask___ctor(v8, 0LL);
-  v8->fields.actiontype = actType;
-  return BaseAiActArgument__MakeTask_19245568(this, (BaseAiActBattleLogicTask_o *)v8, logicAi, v9);
+  v7 = (BattleLogicTask_o *)sub_B2C42C(BaseAiActBattleLogicTask_TypeInfo);
+  BattleLogicTask___ctor(v7, 0LL);
+  v7->fields.actiontype = actType;
+  return BaseAiActArgument__MakeTask_19201872(this, (BaseAiActBattleLogicTask_o *)v7, logicAi, v8);
 }
 
 
-BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_19245568(
+BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_19201872(
         BaseAiActArgument_o *this,
         BaseAiActBattleLogicTask_o *task,
         BattleLogicBaseAi_o *logicAi,
         const MethodInfo *method)
 {
+  BaseAiActArgument_o *v5; // x20
   int32_t v6; // w21
-  int32_t v7; // w0
 
   if ( !logicAi
-    || (v6 = ((__int64 (__fastcall *)(BattleLogicBaseAi_o *, Il2CppMethodPointer))logicAi->klass->vtable._4_get_ActorType.method)(
+    || (v5 = this,
+        v6 = ((__int64 (__fastcall *)(BattleLogicBaseAi_o *, Il2CppMethodPointer))logicAi->klass->vtable._4_get_ActorType.method)(
                logicAi,
                logicAi->klass->vtable._5_get_PartySvtIds.methodPtr),
-        v7 = ((__int64 (__fastcall *)(BaseAiActArgument_o *, Il2CppMethodPointer))this->klass->vtable._4_get_UniqueId.method)(
-               this,
-               this->klass->vtable._5_InitCommonTask.methodPtr),
+        this = (BaseAiActArgument_o *)((__int64 (__fastcall *)(BaseAiActArgument_o *, Il2CppMethodPointer))v5->klass->vtable._4_get_UniqueId.method)(
+                                        v5,
+                                        v5->klass->vtable._5_InitCommonTask.methodPtr),
         !task) )
   {
-    sub_B170D4();
+    sub_B2C434(this, task);
   }
-  BattleLogicTask__setActor((BattleLogicTask_o *)task, v6, v7, 0LL);
+  BattleLogicTask__setActor((BattleLogicTask_o *)task, v6, (int32_t)this, 0LL);
   ((void (__fastcall *)(BaseAiActBattleLogicTask_o *, struct AiActEntity_o *, struct AiBaseEntity_o *, void *))task->klass->vtable._8_Init.method)(
     task,
-    this->fields._AiActEnt_k__BackingField,
-    this->fields._AiEnt_k__BackingField,
+    v5->fields._AiActEnt_k__BackingField,
+    v5->fields._AiEnt_k__BackingField,
     task->klass[1]._1.image);
-  ((void (__fastcall *)(BaseAiActArgument_o *, BaseAiActBattleLogicTask_o *, void *))this->klass->vtable._5_InitCommonTask.method)(
-    this,
+  ((void (__fastcall *)(BaseAiActArgument_o *, BaseAiActBattleLogicTask_o *, void *))v5->klass->vtable._5_InitCommonTask.method)(
+    v5,
     task,
-    this->klass[1]._1.image);
+    v5->klass[1]._1.image);
   return (BattleLogicTask_o *)task;
 }
 
@@ -122,22 +100,8 @@ void __fastcall BaseAiActArgument__set_AiActEnt(
         AiActEntity_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._AiActEnt_k__BackingField = value;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_B2C2F8(&this->fields, value);
 }
 
 
@@ -146,20 +110,6 @@ void __fastcall BaseAiActArgument__set_AiEnt(
         AiBaseEntity_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._AiEnt_k__BackingField = value;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields._AiEnt_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_B2C2F8(&this->fields._AiEnt_k__BackingField, value);
 }

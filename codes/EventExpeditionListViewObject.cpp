@@ -1,9 +1,9 @@
 void __fastcall EventExpeditionListViewObject___ctor(EventExpeditionListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FC684 & 1) == 0 )
+  if ( (byte_418A3BB & 1) == 0 )
   {
-    sub_B16FFC(&ListViewObject_TypeInfo, method);
-    byte_40FC684 = 1;
+    sub_B2C35C(&ListViewObject_TypeInfo, method);
+    byte_418A3BB = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -16,37 +16,38 @@ void __fastcall EventExpeditionListViewObject___ctor(EventExpeditionListViewObje
 
 void __fastcall EventExpeditionListViewObject__Awake(EventExpeditionListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   struct EventExpeditionListViewItemDraw_o *Component_srcLineSprite; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_40FC67D & 1) == 0 )
+  if ( (byte_418A3B4 & 1) == 0 )
   {
-    sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewItemDraw___, method);
-    byte_40FC67D = 1;
+    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewItemDraw___, method);
+    byte_418A3B4 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B170D4();
+    sub_B2C434(0LL, v3);
   Component_srcLineSprite = (struct EventExpeditionListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                           dispObject,
-                                                                          (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewItemDraw___);
+                                                                          (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
-    v5,
     v6,
     v7,
     v8,
     v9,
-    v10);
+    v10,
+    v11);
 }
 
 
@@ -57,10 +58,10 @@ EventExpeditionListViewItem_o *__fastcall EventExpeditionListViewObject__GetItem
   struct ListViewItem_o *linkItem; // x8
   __int64 v4; // x11
 
-  if ( (byte_40FC67F & 1) == 0 )
+  if ( (byte_418A3B6 & 1) == 0 )
   {
-    sub_B16FFC(&EventExpeditionListViewItem_TypeInfo, method);
-    byte_40FC67F = 1;
+    sub_B2C35C(&EventExpeditionListViewItem_TypeInfo, method);
+    byte_418A3B6 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -83,7 +84,7 @@ void __fastcall EventExpeditionListViewObject__Init(
   __int64 v6; // x11
   EventExpeditionListViewItem_o *v7; // x22
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Transform_o *v9; // x0
+  __int64 v9; // x1
   BattleServantConfConponent_o *p_callbackFunc; // x20
   System_String_array **v11; // x2
   System_String_array **v12; // x3
@@ -109,10 +110,10 @@ void __fastcall EventExpeditionListViewObject__Init(
   System_Int32_array *v32; // x7
   System_Action_o *v33; // x19
 
-  if ( (byte_40FC680 & 1) == 0 )
+  if ( (byte_418A3B7 & 1) == 0 )
   {
-    sub_B16FFC(&EventExpeditionListViewItem_TypeInfo, callbackFunc);
-    byte_40FC680 = 1;
+    sub_B2C35C(&EventExpeditionListViewItem_TypeInfo, callbackFunc);
+    byte_418A3B7 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -131,14 +132,14 @@ void __fastcall EventExpeditionListViewObject__Init(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
-        (v9 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(transform, v9);
   }
-  UnityEngine_Transform__set_localScale(v9, this->fields.baseScale, 0LL);
+  UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callbackFunc,
     v11,
@@ -199,7 +200,7 @@ void __fastcall EventExpeditionListViewObject__Init(
   if ( v33 )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B16F98(p_callbackFunc, 0LL, v27, v28, v29, v30, v31, v32);
+    sub_B2C2F8(p_callbackFunc, 0LL, v27, v28, v29, v30, v31, v32);
     System_Action__Invoke(v33, 0LL);
   }
 }
@@ -215,23 +216,22 @@ bool __fastcall EventExpeditionListViewObject__IsAllUserItemEnough(
   signed int max_length; // w8
   unsigned int v7; // w21
   CommonConsumeEntity_o *v8; // x25
-  WebViewManager_o *Instance; // x0
   WarQuestSelectionMaster_o *MasterData_WarQuestSelectionMaster; // x0
-  UserItemMaster_o *v11; // x20
-  int64_t UserId; // x0
+  UserItemMaster_o *v10; // x20
+  __int64 v12; // x0
   UserItemEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_40FC682 & 1) == 0 )
+  if ( (byte_418A3B9 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_UserItemMaster___, consumeList);
-    sub_B16FFC(&NetworkManager_TypeInfo, v4);
-    this = (EventExpeditionListViewObject_o *)sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_40FC682 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_UserItemMaster___, consumeList);
+    sub_B2C35C(&NetworkManager_TypeInfo, v4);
+    this = (EventExpeditionListViewObject_o *)sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_418A3B9 = 1;
   }
   entity = 0LL;
   if ( !consumeList )
 LABEL_19:
-    sub_B170D4();
+    sub_B2C434(this, consumeList);
   max_length = consumeList->max_length;
   if ( max_length < 1 )
     return 1;
@@ -240,30 +240,30 @@ LABEL_19:
   {
     if ( v7 >= max_length )
     {
-      sub_B17100(this, consumeList, method);
-      sub_B170A0();
+      v12 = sub_B2C460(this);
+      sub_B2C400(v12, 0LL);
     }
     v8 = consumeList->m_Items[v7];
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    if ( !Instance )
+    this = (EventExpeditionListViewObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( !this )
       goto LABEL_19;
     MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                           (DataManager_o *)Instance,
-                                           (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                           (DataManager_o *)this,
+                                           (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_UserItemMaster___);
     entity = 0LL;
-    v11 = (UserItemMaster_o *)MasterData_WarQuestSelectionMaster;
+    v10 = (UserItemMaster_o *)MasterData_WarQuestSelectionMaster;
     if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     }
-    UserId = NetworkManager__get_UserId(0LL);
-    if ( !v8 || !v11 )
+    this = (EventExpeditionListViewObject_o *)NetworkManager__get_UserId(0LL);
+    if ( !v8 || !v10 )
       goto LABEL_19;
     this = (EventExpeditionListViewObject_o *)UserItemMaster__TryGetEntity(
-                                                v11,
+                                                v10,
                                                 &entity,
-                                                UserId,
+                                                (int64_t)this,
                                                 v8->fields.objectId,
                                                 0LL);
     if ( ((unsigned __int8)this & 1) == 0 )
@@ -285,15 +285,15 @@ void __fastcall EventExpeditionListViewObject__OnClickSelect(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_40FC683 & 1) == 0 )
+  if ( (byte_418A3BA & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_9922/*"OnClickListView"*/, method);
-    byte_40FC683 = 1;
+    sub_B2C35C(&StringLiteral_9954/*"OnClickListView"*/, method);
+    byte_418A3BA = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
-    sub_B170D4();
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9922/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
+    sub_B2C434(0LL, method);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9954/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
 }
 
 
@@ -303,7 +303,7 @@ void __fastcall EventExpeditionListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_30205928((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_33907092((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -316,14 +316,15 @@ void __fastcall EventExpeditionListViewObject__SetupDisp(
   __int64 v5; // x10
   bool v6; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  const MethodInfo *v8; // x3
-  EventExpeditionListViewItemDraw_o *v9; // x0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x3
+  EventExpeditionListViewItemDraw_o *v10; // x0
 
-  if ( (byte_40FC681 & 1) == 0 )
+  if ( (byte_418A3B8 & 1) == 0 )
   {
-    sub_B16FFC(&EventExpeditionListViewItem_TypeInfo, method);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v3);
-    byte_40FC681 = 1;
+    sub_B2C35C(&EventExpeditionListViewItem_TypeInfo, method);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v3);
+    byte_418A3B8 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -348,10 +349,10 @@ LABEL_8:
   }
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_B170D4();
-    EventExpeditionListViewItemDraw__SetItem(v9, (EventExpeditionListViewItem_o *)linkItem, this->fields.dispMode, v8);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_B2C434(0LL, v8);
+    EventExpeditionListViewItemDraw__SetItem(v10, (EventExpeditionListViewItem_o *)linkItem, this->fields.dispMode, v9);
   }
 }
 
@@ -364,12 +365,14 @@ void __fastcall EventExpeditionListViewObject__Update(EventExpeditionListViewObj
   EventExpeditionListViewItem_c *v6; // x10
   EventExpeditionListViewItem_o *v7; // x20
   EventExpeditionListViewItemDraw_o *itemDraw; // x21
-  const MethodInfo *v9; // x3
+  __int64 v9; // x0
+  __int64 v10; // x1
+  const MethodInfo *v11; // x3
 
-  if ( (byte_40FC67E & 1) == 0 )
+  if ( (byte_418A3B5 & 1) == 0 )
   {
-    sub_B16FFC(&EventExpeditionListViewItem_TypeInfo, method);
-    byte_40FC67E = 1;
+    sub_B2C35C(&EventExpeditionListViewItem_TypeInfo, method);
+    byte_418A3B5 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -384,8 +387,8 @@ void __fastcall EventExpeditionListViewObject__Update(EventExpeditionListViewObj
         itemDraw = this->fields.itemDraw;
         EventExpeditionListViewObject__Init(this, 0LL, v2);
         if ( !itemDraw )
-          sub_B170D4();
-        EventExpeditionListViewItemDraw__UpdateItem(itemDraw, v7, this->fields.dispMode, v9);
+          sub_B2C434(v9, v10);
+        EventExpeditionListViewItemDraw__UpdateItem(itemDraw, v7, this->fields.dispMode, v11);
       }
     }
   }
@@ -407,10 +410,10 @@ void __fastcall EventExpeditionListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_40FC67B & 1) == 0 )
+  if ( (byte_418A3B2 & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, value);
-    byte_40FC67B = 1;
+    sub_B2C35C(&System_Action_TypeInfo, value);
+    byte_418A3B2 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -423,13 +426,13 @@ void __fastcall EventExpeditionListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B0BA14(p_callbackFunc, v8, v6);
+    v9 = sub_B20D74(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B173C8(v8);
+  sub_B2C728(v8);
   EventExpeditionListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -456,10 +459,10 @@ void __fastcall EventExpeditionListViewObject__remove_callbackFunc(
   EventExpeditionListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_40FC67C & 1) == 0 )
+  if ( (byte_418A3B3 & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, value);
-    byte_40FC67C = 1;
+    sub_B2C35C(&System_Action_TypeInfo, value);
+    byte_418A3B3 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -472,12 +475,12 @@ void __fastcall EventExpeditionListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B0BA14(p_callbackFunc, v8, v6);
+    v9 = sub_B20D74(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_B173C8(v8);
+  sub_B2C728(v8);
   EventExpeditionListViewObject__Awake(v11, v12);
 }

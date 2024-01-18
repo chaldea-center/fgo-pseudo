@@ -2,17 +2,17 @@ void __fastcall UserServantAppendPassiveSkillMaster___ctor(
         UserServantAppendPassiveSkillMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40F810D & 1) == 0 )
+  if ( (byte_4185E25 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string___ctor__,
       method);
-    byte_40F810D = 1;
+    byte_4185E25 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     367,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string___ctor__);
 }
 
 
@@ -25,18 +25,18 @@ UserServantAppendPassiveSkillEntity_o *__fastcall UserServantAppendPassiveSkillM
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40F810B & 1) == 0 )
+  if ( (byte_4185E23 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__GetEntity__,
       userId);
-    byte_40F810B = 1;
+    byte_4185E23 = 1;
   }
   PK = UserServantAppendPassiveSkillEntity__CreatePK(userId, svtId, *(const MethodInfo **)&svtId);
   return (UserServantAppendPassiveSkillEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                                     (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                                     PK,
-                                                    (const MethodInfo_266F7D8 *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__GetEntity__);
+                                                    (const MethodInfo_24E4520 *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__GetEntity__);
 }
 
 
@@ -49,17 +49,17 @@ bool __fastcall UserServantAppendPassiveSkillMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40F810C & 1) == 0 )
+  if ( (byte_4185E24 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__TryGetEntity__,
       entity);
-    byte_40F810C = 1;
+    byte_4185E24 = 1;
   }
   PK = UserServantAppendPassiveSkillEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__TryGetEntity__);
 }

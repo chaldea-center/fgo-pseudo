@@ -13,62 +13,62 @@ bool __fastcall Target__Check(int32_t cktype, int32_t type, const MethodInfo *me
 // local variable allocation has failed, the output may be wrong!
 bool __fastcall Target__CheckAressSkill(BattleData_o *bData, int32_t taskActorType, const MethodInfo *method)
 {
+  BattleData_o *v4; // x19
   __int64 v5; // x1
   struct BattleActionData_o *beforeAction; // x20
   __int64 v7; // x19
   __int64 v8; // x19
-  DataManager_o *v9; // x0
-  WarQuestSelectionMaster_o *MasterData_WarQuestSelectionMaster; // x0
   struct BattleSkillInfoData_o *skillInfo; // x8
-  SkillLvMaster_o *v12; // x19
-  int32_t v13; // w0
-  struct BattleSkillInfoData_o *v14; // x8
+  SkillLvMaster_o *v10; // x19
+  struct BattleSkillInfoData_o *v11; // x8
   SkillLvEntity_o *Entity; // x0
 
-  if ( (byte_40F6C3C & 1) == 0 )
+  v4 = bData;
+  if ( (byte_418452A & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_SkillLvMaster___, *(_QWORD *)&taskActorType);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v5);
-    byte_40F6C3C = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_SkillLvMaster___, *(_QWORD *)&taskActorType);
+    bData = (BattleData_o *)sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v5);
+    byte_418452A = 1;
   }
-  if ( !bData )
+  if ( !v4 )
     goto LABEL_19;
   if ( taskActorType != 1 )
     return 0;
-  if ( !bData->fields.isMultiTargetBattle )
+  if ( !v4->fields.isMultiTargetBattle )
     return 0;
-  beforeAction = bData->fields.beforeAction;
+  beforeAction = v4->fields.beforeAction;
   if ( !beforeAction || !beforeAction->fields.skillInfo )
     return 0;
   v7 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
   if ( (*(_BYTE *)(v7 + 306) & 1) == 0 )
-    sub_AAFCFC(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
+    sub_AC505C(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
   v8 = **(_QWORD **)(v7 + 192);
   if ( (*(_BYTE *)(v8 + 306) & 1) == 0 )
-    sub_AAFCFC(v8);
-  v9 = **(DataManager_o ***)(v8 + 184);
-  if ( !v9
-    || (MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                               v9,
-                                               (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_SkillLvMaster___),
+    sub_AC505C(v8);
+  bData = **(BattleData_o ***)(v8 + 184);
+  if ( !bData
+    || (bData = (BattleData_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                  (DataManager_o *)bData,
+                                  (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_SkillLvMaster___),
         (skillInfo = beforeAction->fields.skillInfo) == 0LL)
-    || (v12 = (SkillLvMaster_o *)MasterData_WarQuestSelectionMaster,
-        v13 = ((__int64 (__fastcall *)(struct BattleSkillInfoData_o *, Il2CppMethodPointer))skillInfo->klass->vtable._5_get_skillId.method)(
-                beforeAction->fields.skillInfo,
-                skillInfo->klass->vtable._6_get_IndividualityArray.methodPtr),
-        (v14 = beforeAction->fields.skillInfo) == 0LL)
-    || !v12 )
+    || (v10 = (SkillLvMaster_o *)bData,
+        bData = (BattleData_o *)((__int64 (__fastcall *)(struct BattleSkillInfoData_o *, Il2CppMethodPointer))skillInfo->klass->vtable._5_get_skillId.method)(
+                                  beforeAction->fields.skillInfo,
+                                  skillInfo->klass->vtable._6_get_IndividualityArray.methodPtr),
+        (v11 = beforeAction->fields.skillInfo) == 0LL)
+    || !v10 )
   {
 LABEL_19:
-    sub_B170D4();
+    sub_B2C434(bData, *(_QWORD *)&taskActorType);
   }
-  Entity = SkillLvMaster__GetEntity(v12, v13, v14->fields.skilllv, 0LL);
+  Entity = SkillLvMaster__GetEntity(v10, (int32_t)bData, v11->fields.skilllv, 0LL);
   if ( Entity )
     return SkillLvEntity__IsAress(Entity, 0LL);
   return 0;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall Target__GetAliveFieldRandomTargetId(
         BattleData_o *battleData,
         bool isEnemyID,
@@ -78,8 +78,7 @@ int32_t __fastcall Target__GetAliveFieldRandomTargetId(
   System_Collections_ICollection_o *AliveFieldEnemyServantIDList; // x0
   System_Collections_ICollection_o *v5; // x19
   __int64 Next; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v8; // x0
 
   if ( !battleData )
     goto LABEL_10;
@@ -94,16 +93,17 @@ int32_t __fastcall Target__GetAliveFieldRandomTargetId(
                                                                          0LL,
                                                                          0LL);
   v5 = AliveFieldEnemyServantIDList;
-  if ( BasicHelper__IsNullOrEmpty(AliveFieldEnemyServantIDList, 0LL) )
+  battleData = (BattleData_o *)BasicHelper__IsNullOrEmpty(AliveFieldEnemyServantIDList, 0LL);
+  if ( ((unsigned __int8)battleData & 1) != 0 )
     return -1;
   if ( !v5 )
 LABEL_10:
-    sub_B170D4();
+    sub_B2C434(battleData, isEnemyID);
   Next = BattleRandom__getNext((int32_t)v5[1].monitor, 0LL);
   if ( (unsigned int)Next >= LODWORD(v5[1].monitor) )
   {
-    sub_B17100(Next, v8, v9);
-    sub_B170A0();
+    v8 = sub_B2C460(Next);
+    sub_B2C400(v8, 0LL);
   }
   return *((_DWORD *)&v5[2].klass + (int)Next);
 }
@@ -133,163 +133,90 @@ TargetAggregator_o *__fastcall Target__GetTargetAggregator(
   __int64 v25; // x1
   __int64 v26; // x1
   __int64 v27; // x1
-  __int64 v28; // x25
-  __int64 v29; // x1
-  __int64 v30; // x2
-  __int64 v31; // x3
-  __int64 v32; // x4
-  TargetAggregator_Args_o *v33; // x26
-  System_String_array **v34; // x2
-  System_String_array **v35; // x3
-  System_Boolean_array **v36; // x4
-  System_Int32_array **v37; // x5
-  System_Int32_array *v38; // x6
-  System_Int32_array *v39; // x7
+  PartyAllFieldTargetAggregator_o *v28; // x25
+  TargetAggregator_Args_o *v29; // x26
+  __int64 v30; // x0
+  __int64 v31; // x1
 
-  if ( (byte_40F6C3D & 1) == 0 )
+  if ( (byte_418452B & 1) == 0 )
   {
-    sub_B16FFC(&TargetAggregator_Args_TypeInfo, *(_QWORD *)&actorId);
-    sub_B16FFC(&NoneTargetAggregator_TypeInfo, v15);
-    sub_B16FFC(&OpponentAllFieldTargetAggregator_TypeInfo, v16);
-    sub_B16FFC(&OpponentFullTargetAggregator_TypeInfo, v17);
-    sub_B16FFC(&OpponentOtherFullTargetAggregator_TypeInfo, v18);
-    sub_B16FFC(&OpponentOtherTargetAggregator_TypeInfo, v19);
-    sub_B16FFC(&OpponentRangeAggregator_TypeInfo, v20);
-    sub_B16FFC(&PartyAllFieldTargetAggregator_TypeInfo, v21);
-    sub_B16FFC(&PartyFullTargetAggregator_TypeInfo, v22);
-    sub_B16FFC(&PartyLowsetHpRateTargetChoicer_TypeInfo, v23);
-    sub_B16FFC(&PartyLowsetHpValueTargetChoicer_TypeInfo, v24);
-    sub_B16FFC(&PartyOneOtherTargetAggregator_TypeInfo, v25);
-    sub_B16FFC(&PartyOtherFullTargetAggregator_TypeInfo, v26);
-    sub_B16FFC(&PartyOtherTargetAggregator_TypeInfo, v27);
-    byte_40F6C3D = 1;
+    sub_B2C35C(&TargetAggregator_Args_TypeInfo, *(_QWORD *)&actorId);
+    sub_B2C35C(&NoneTargetAggregator_TypeInfo, v15);
+    sub_B2C35C(&OpponentAllFieldTargetAggregator_TypeInfo, v16);
+    sub_B2C35C(&OpponentFullTargetAggregator_TypeInfo, v17);
+    sub_B2C35C(&OpponentOtherFullTargetAggregator_TypeInfo, v18);
+    sub_B2C35C(&OpponentOtherTargetAggregator_TypeInfo, v19);
+    sub_B2C35C(&OpponentRangeAggregator_TypeInfo, v20);
+    sub_B2C35C(&PartyAllFieldTargetAggregator_TypeInfo, v21);
+    sub_B2C35C(&PartyFullTargetAggregator_TypeInfo, v22);
+    sub_B2C35C(&PartyLowsetHpRateTargetChoicer_TypeInfo, v23);
+    sub_B2C35C(&PartyLowsetHpValueTargetChoicer_TypeInfo, v24);
+    sub_B2C35C(&PartyOneOtherTargetAggregator_TypeInfo, v25);
+    sub_B2C35C(&PartyOtherFullTargetAggregator_TypeInfo, v26);
+    sub_B2C35C(&PartyOtherTargetAggregator_TypeInfo, v27);
+    byte_418452B = 1;
   }
   switch ( type )
   {
     case 3:
-      v28 = sub_B170CC(
-              PartyAllFieldTargetAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
-      PartyAllFieldTargetAggregator___ctor((PartyAllFieldTargetAggregator_o *)v28, 0LL);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(PartyAllFieldTargetAggregator_TypeInfo);
+      PartyAllFieldTargetAggregator___ctor(v28, 0LL);
       break;
     case 6:
-      v28 = sub_B170CC(
-              OpponentAllFieldTargetAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(OpponentAllFieldTargetAggregator_TypeInfo);
       OpponentAllFieldTargetAggregator___ctor((OpponentAllFieldTargetAggregator_o *)v28, 0LL);
       break;
     case 7:
-      v28 = sub_B170CC(
-              PartyFullTargetAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(PartyFullTargetAggregator_TypeInfo);
       PartyFullTargetAggregator___ctor((PartyFullTargetAggregator_o *)v28, 0LL);
       break;
     case 8:
-      v28 = sub_B170CC(
-              OpponentFullTargetAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(OpponentFullTargetAggregator_TypeInfo);
       OpponentFullTargetAggregator___ctor((OpponentFullTargetAggregator_o *)v28, 0LL);
       break;
     case 9:
-      v28 = sub_B170CC(
-              PartyOtherTargetAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(PartyOtherTargetAggregator_TypeInfo);
       PartyOtherTargetAggregator___ctor((PartyOtherTargetAggregator_o *)v28, 0LL);
       break;
     case 10:
-      v28 = sub_B170CC(
-              PartyOneOtherTargetAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(PartyOneOtherTargetAggregator_TypeInfo);
       PartyOneOtherTargetAggregator___ctor((PartyOneOtherTargetAggregator_o *)v28, 0LL);
       break;
     case 12:
-      v28 = sub_B170CC(
-              OpponentOtherTargetAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(OpponentOtherTargetAggregator_TypeInfo);
       OpponentOtherTargetAggregator___ctor((OpponentOtherTargetAggregator_o *)v28, 0LL);
       break;
     case 14:
-      v28 = sub_B170CC(
-              PartyOtherFullTargetAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(PartyOtherFullTargetAggregator_TypeInfo);
       PartyOtherFullTargetAggregator___ctor((PartyOtherFullTargetAggregator_o *)v28, 0LL);
       break;
     case 15:
-      v28 = sub_B170CC(
-              OpponentOtherFullTargetAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(OpponentOtherFullTargetAggregator_TypeInfo);
       OpponentOtherFullTargetAggregator___ctor((OpponentOtherFullTargetAggregator_o *)v28, 0LL);
       break;
     case 28:
-      v28 = sub_B170CC(
-              PartyLowsetHpValueTargetChoicer_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(PartyLowsetHpValueTargetChoicer_TypeInfo);
       PartyLowsetHpValueTargetChoicer___ctor((PartyLowsetHpValueTargetChoicer_o *)v28, 0LL);
       break;
     case 29:
-      v28 = sub_B170CC(
-              PartyLowsetHpRateTargetChoicer_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(PartyLowsetHpRateTargetChoicer_TypeInfo);
       PartyLowsetHpRateTargetChoicer___ctor((PartyLowsetHpRateTargetChoicer_o *)v28, 0LL);
       break;
     case 30:
-      v28 = sub_B170CC(
-              OpponentRangeAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(OpponentRangeAggregator_TypeInfo);
       OpponentRangeAggregator___ctor((OpponentRangeAggregator_o *)v28, 0LL);
       break;
     default:
-      v28 = sub_B170CC(
-              NoneTargetAggregator_TypeInfo,
-              *(_QWORD *)&actorId,
-              *(_QWORD *)&targetId,
-              *(_QWORD *)&pttargetId,
-              *(_QWORD *)&type);
+      v28 = (PartyAllFieldTargetAggregator_o *)sub_B2C42C(NoneTargetAggregator_TypeInfo);
       NoneTargetAggregator___ctor((NoneTargetAggregator_o *)v28, 0LL);
       break;
   }
-  v33 = (TargetAggregator_Args_o *)sub_B170CC(TargetAggregator_Args_TypeInfo, v29, v30, v31, v32);
-  TargetAggregator_Args___ctor(v33, battleData, actorId, targetId, pttargetId, taskActorType, battleTargetArgs, 0LL);
+  v29 = (TargetAggregator_Args_o *)sub_B2C42C(TargetAggregator_Args_TypeInfo);
+  TargetAggregator_Args___ctor(v29, battleData, actorId, targetId, pttargetId, taskActorType, battleTargetArgs, 0LL);
   if ( !v28 )
-    sub_B170D4();
-  *(_QWORD *)(v28 + 16) = v33;
-  sub_B16F98((BattleServantConfConponent_o *)(v28 + 16), (System_Int32_array **)v33, v34, v35, v36, v37, v38, v39);
+    sub_B2C434(v30, v31);
+  v28->fields.args = v29;
+  sub_B2C2F8(&v28->fields, v29);
   return (TargetAggregator_o *)v28;
 }
 
@@ -304,7 +231,7 @@ bool __fastcall Target__IsActorPlayerSide(
   if ( (actorId & 0x80000000) != 0 )
     return (taskActorType != 5) & !Target__CheckAressSkill(bData, taskActorType, *(const MethodInfo **)&taskActorType);
   if ( !bData )
-    sub_B170D4();
+    sub_B2C434(0LL, actorId);
   return BattleData__isPlayerID(bData, actorId, 0LL);
 }
 
@@ -319,59 +246,57 @@ System_Int32_array *__fastcall Target__getOrderOneTargetIdArray(
 {
   __int64 v9; // x1
   __int64 v10; // x0
-  System_Int32_array *v11; // x21
-  int32_t v12; // w0
-  __int64 v13; // x2
+  __int64 v11; // x1
+  System_Int32_array *v12; // x21
+  int32_t v13; // w0
   int v14; // w10
   il2cpp_array_size_t v15; // w20
-  __int64 v16; // x0
-  __int64 v17; // x1
-  __int64 v18; // x2
+  __int64 v17; // x0
 
-  if ( (byte_40F6C3B & 1) == 0 )
+  if ( (byte_4184529 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Array_IndexOf_int___, *(_QWORD *)&excludeId);
-    sub_B16FFC(&int___TypeInfo, v9);
-    byte_40F6C3B = 1;
+    sub_B2C35C(&Method_System_Array_IndexOf_int___, *(_QWORD *)&excludeId);
+    sub_B2C35C(&int___TypeInfo, v9);
+    byte_4184529 = 1;
   }
-  v10 = sub_B17014(int___TypeInfo, 0LL, isOrderDesc);
+  v10 = sub_B2C374(int___TypeInfo, 0LL);
   if ( !checkIdArray )
     goto LABEL_18;
-  v11 = (System_Int32_array *)v10;
+  v12 = (System_Int32_array *)v10;
   if ( *(_QWORD *)&checkIdArray->max_length )
   {
     if ( isOrderDesc )
       System_Array__Reverse((System_Array_o *)checkIdArray, 0LL);
-    v12 = System_Array__IndexOf_int_(
+    v13 = System_Array__IndexOf_int_(
             checkIdArray,
             excludeId,
-            (const MethodInfo_2045560 *)Method_System_Array_IndexOf_int___);
-    v14 = v12 - 1;
+            (const MethodInfo_1FFD52C *)Method_System_Array_IndexOf_int___);
+    v14 = v13 - 1;
     if ( !isPrev )
       v14 = 0;
-    v15 = v12 >= 1 ? v14 : v12 == 0;
+    v15 = v13 >= 1 ? v14 : v13 == 0;
     if ( (signed int)v15 < (signed int)checkIdArray->max_length )
     {
-      v16 = sub_B17014(int___TypeInfo, 1LL, v13);
+      v10 = sub_B2C374(int___TypeInfo, 1LL);
       if ( v15 >= checkIdArray->max_length )
         goto LABEL_19;
-      v11 = (System_Int32_array *)v16;
-      if ( v16 )
+      v12 = (System_Int32_array *)v10;
+      if ( v10 )
       {
-        if ( *(_DWORD *)(v16 + 24) )
+        if ( *(_DWORD *)(v10 + 24) )
         {
-          *(_DWORD *)(v16 + 32) = checkIdArray->m_Items[v15 + 1];
-          return v11;
+          *(_DWORD *)(v10 + 32) = checkIdArray->m_Items[v15 + 1];
+          return v12;
         }
 LABEL_19:
-        sub_B17100(v16, v17, v18);
-        sub_B170A0();
+        v17 = sub_B2C460(v10);
+        sub_B2C400(v17, 0LL);
       }
 LABEL_18:
-      sub_B170D4();
+      sub_B2C434(v10, v11);
     }
   }
-  return v11;
+  return v12;
 }
 
 
@@ -386,12 +311,12 @@ System_Int32_array *__fastcall Target__getTargetIds(
 {
   const MethodInfo *v8; // [xsp+10h] [xbp-10h]
 
-  return Target__getTargetIds_19019748(bdata, actorId, targetId, pttargetId, tgType, 0, 0, tvals, 0, 0LL, v8);
+  return Target__getTargetIds_18697816(bdata, actorId, targetId, pttargetId, tgType, 0, 0, tvals, 0, 0LL, v8);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_Int32_array *__fastcall Target__getTargetIds_19019748(
+System_Int32_array *__fastcall Target__getTargetIds_18697816(
         BattleData_o *bdata,
         int32_t actorId,
         int32_t targetId,
@@ -404,190 +329,182 @@ System_Int32_array *__fastcall Target__getTargetIds_19019748(
         Target_BattleTargetArgs_o *args,
         const MethodInfo *method)
 {
-  int32_t RevengeTargetUniqueId; // w22
+  __int64 v18; // x1
   __int64 v19; // x1
   __int64 v20; // x1
   __int64 v21; // x1
   __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x2
+  __int64 v23; // x0
+  __int64 v24; // x1
   const MethodInfo *v25; // x3
-  System_Int32_array *v26; // x19
-  __int64 v27; // x0
-  __int64 v28; // x1
-  __int64 v29; // x2
-  __int64 v30; // x2
-  const MethodInfo *v31; // x7
-  bool IsActorPlayerSide; // w28
+  System_Int32_array *v26; // x28
+  const MethodInfo *v27; // x7
+  bool IsActorPlayerSide; // w19
   System_Int32_array *result; // x0
   TargetAggregator_o *TargetAggregator; // x0
-  __int64 v35; // x1
-  __int64 v36; // x2
-  System_Int32_array *v37; // x22
+  __int64 v31; // x1
+  __int64 v32; // x1
+  System_Int32_array *v33; // x22
   System_Int32_array *FieldPlayerServantIDList; // x0
-  __int64 v39; // x1
-  __int64 v40; // x2
+  __int64 v35; // x1
+  __int64 v36; // x0
   System_Int32_array *AliveFieldPlayerServantIDList; // x0
-  __int64 v42; // x1
-  __int64 v43; // x2
-  __int64 v44; // x3
-  __int64 v45; // x4
-  System_Int32_array *v46; // x0
-  const MethodInfo *v47; // x4
+  System_Int32_array *v38; // x0
+  const MethodInfo *v39; // x4
   System_Int32_array *AliveFieldSvtIdArray; // x0
+  const MethodInfo *v41; // x4
+  BattleServantData_o *v42; // x0
+  System_Int32_array *v43; // x0
+  bool v44; // w8
+  __int64 v45; // x1
+  __int64 v46; // x1
+  int32_t v47; // w8
+  System_Int32_array *v48; // x0
   const MethodInfo *v49; // x4
-  BattleServantData_o *v50; // x0
-  __int64 v51; // x2
-  __int64 v52; // x0
-  __int64 v53; // x1
-  __int64 v54; // x2
-  System_Int32_array *v55; // x19
-  System_Int32_array *v56; // x0
-  __int64 v57; // x1
-  __int64 v58; // x2
-  __int64 v59; // x3
-  __int64 v60; // x4
-  __int64 v61; // x1
-  __int64 v62; // x2
-  __int64 v63; // x1
-  __int64 v64; // x2
-  System_Int32_array *v65; // x0
-  const MethodInfo *v66; // x4
-  System_Int32_array *v67; // x21
+  System_Int32_array *v50; // x19
   BattleServantData_o *ServantData; // x0
-  __int64 v69; // x1
-  bool v70; // w0
-  const MethodInfo *v71; // x3
-  __int64 AliveFieldRandomTargetId; // x0
-  __int64 v73; // x1
-  __int64 v74; // x2
-  __int64 v75; // x0
-  __int64 v76; // x1
-  __int64 v77; // x2
+  __int64 v52; // x1
+  __int64 v53; // x0
+  System_Int32_array *v54; // x22
+  bool v55; // w0
+  const MethodInfo *v56; // x3
+  __int64 v57; // x0
+  __int64 v58; // x1
+  __int64 v59; // x0
+  __int64 v60; // x1
+  __int64 v61; // x0
   bool isEnemyID; // w0
-  const MethodInfo *v79; // x3
-  __int64 v80; // x1
-  __int64 v81; // x2
+  const MethodInfo *v63; // x3
+  __int64 AliveFieldRandomTargetId; // x0
+  __int64 v65; // x1
   System_Int32_array *AliveFieldEnemyServantIDList; // x0
-  __int64 v83; // x1
-  __int64 v84; // x2
-  __int64 v85; // x3
-  __int64 v86; // x4
-  BattleServantData_o *v87; // x0
-  __int64 v88; // x1
-  System_Int32_array *v89; // x0
-  const MethodInfo *v90; // x4
-  System_Int32_array *v91; // x22
-  System_Collections_Generic_List_int__o *v92; // x20
-  __int64 v93; // x0
-  __int64 v94; // x1
-  __int64 v95; // x8
-  unsigned __int64 v96; // x19
-  int32_t v97; // w0
+  BattleServantData_o *v67; // x0
+  __int64 v68; // x1
+  __int64 v69; // x0
+  System_Int32_array *v70; // x0
+  const MethodInfo *v71; // x4
+  System_Int32_array *v72; // x19
+  System_Collections_Generic_List_int__o *v73; // x20
+  __int64 v74; // x0
+  __int64 v75; // x1
+  __int64 v76; // x8
+  unsigned __int64 v77; // x22
+  int32_t v78; // w0
   unsigned int Next; // w21
-  __int64 v99; // x2
-  __int64 v100; // x0
-  __int64 v101; // x1
-  __int64 v102; // x2
-  System_Int32_array *v103; // x19
-  System_Int32_array *v104; // x21
-  __int64 v105; // x0
-  __int64 v106; // x1
-  __int64 v107; // x8
-  unsigned __int64 v108; // x19
-  int32_t v109; // w0
-  __int64 v110; // x2
-  __int64 v111; // x0
-  __int64 v112; // x1
-  __int64 v113; // x2
-  System_Int32_array *v114; // x21
-  __int64 v115; // x0
-  __int64 v116; // x1
-  __int64 v117; // x8
-  unsigned __int64 v118; // x19
+  __int64 v80; // x0
+  __int64 v81; // x1
+  __int64 v82; // x0
+  System_Int32_array *v83; // x19
+  __int64 v84; // x0
+  __int64 v85; // x1
+  __int64 v86; // x8
+  unsigned __int64 v87; // x21
+  int32_t v88; // w0
+  __int64 v89; // x0
+  __int64 v90; // x1
+  __int64 v91; // x0
+  bool v92; // w8
+  System_Int32_array *v93; // x19
+  __int64 v94; // x0
+  __int64 v95; // x1
+  __int64 v96; // x8
+  unsigned __int64 v97; // x21
   int32_t size; // w0
-  __int64 v120; // x2
-  __int64 v121; // x0
-  __int64 v122; // x1
-  __int64 v123; // x2
-  System_Int32_array *v124; // [xsp+8h] [xbp-58h]
+  __int64 v99; // x0
+  __int64 v100; // x1
+  __int64 v101; // x0
+  __int64 v102; // x1
+  __int64 v103; // x0
+  __int64 v104; // x0
+  __int64 v105; // x0
+  __int64 v106; // x0
+  __int64 v107; // x0
+  __int64 v108; // x0
+  __int64 v109; // x0
+  __int64 v110; // x0
+  __int64 v111; // x0
+  __int64 v112; // x0
+  __int64 v113; // x0
+  __int64 v114; // x0
+  __int64 v115; // x0
+  System_Int32_array *v117; // [xsp+8h] [xbp-58h]
 
-  RevengeTargetUniqueId = targetId;
-  if ( (byte_40F6C3A & 1) == 0 )
+  if ( (byte_4184528 & 1) == 0 )
   {
-    sub_B16FFC(&int___TypeInfo, *(_QWORD *)&actorId);
-    sub_B16FFC(&Method_System_Collections_Generic_List_int__Add__, v19);
-    sub_B16FFC(&Method_System_Collections_Generic_List_int___ctor__, v20);
-    sub_B16FFC(&Method_System_Collections_Generic_List_int__get_Count__, v21);
-    sub_B16FFC(&Method_System_Collections_Generic_List_int__get_Item__, v22);
-    sub_B16FFC(&System_Collections_Generic_List_int__TypeInfo, v23);
-    byte_40F6C3A = 1;
+    sub_B2C35C(&int___TypeInfo, *(_QWORD *)&actorId);
+    sub_B2C35C(&Method_System_Collections_Generic_List_int__Add__, v18);
+    sub_B2C35C(&Method_System_Collections_Generic_List_int___ctor__, v19);
+    sub_B2C35C(&Method_System_Collections_Generic_List_int__get_Count__, v20);
+    sub_B2C35C(&Method_System_Collections_Generic_List_int__get_Item__, v21);
+    sub_B2C35C(&System_Collections_Generic_List_int__TypeInfo, v22);
+    byte_4184528 = 1;
   }
-  v124 = (System_Int32_array *)sub_B17014(int___TypeInfo, 0LL, *(_QWORD *)&targetId);
+  v23 = sub_B2C374(int___TypeInfo, 0LL);
+  v117 = (System_Int32_array *)v23;
   if ( !bdata )
-    goto LABEL_123;
+    goto LABEL_133;
   v26 = 0LL;
   if ( !BattleData__IsAiNpcID(bdata, actorId, 0LL) )
     goto LABEL_8;
-  v27 = sub_B17014(int___TypeInfo, 1LL, v24);
-  if ( !v27 )
-LABEL_123:
-    sub_B170D4();
-  v26 = (System_Int32_array *)v27;
-  if ( !*(_DWORD *)(v27 + 24) )
+  v23 = sub_B2C374(int___TypeInfo, 1LL);
+  if ( !v23 )
+LABEL_133:
+    sub_B2C434(v23, v24);
+  v26 = (System_Int32_array *)v23;
+  if ( !*(_DWORD *)(v23 + 24) )
   {
-    sub_B17100(v27, v28, v29);
-    sub_B170A0();
+    v106 = sub_B2C460(v23);
+    sub_B2C400(v106, 0LL);
   }
-  *(_DWORD *)(v27 + 32) = actorId;
+  *(_DWORD *)(v23 + 32) = actorId;
 LABEL_8:
   IsActorPlayerSide = Target__IsActorPlayerSide(bdata, actorId, taskActorType, v25);
-  result = v124;
+  result = v117;
   switch ( type )
   {
     case 0:
     case 25:
-      result = (System_Int32_array *)sub_B17014(int___TypeInfo, 1LL, v30);
-      v37 = result;
+      result = (System_Int32_array *)sub_B2C374(int___TypeInfo, 1LL);
+      v33 = result;
       if ( !result )
-        sub_B170D4();
+        sub_B2C434(0LL, v32);
       if ( !result->max_length )
       {
-        sub_B17100(result, v35, v36);
-        sub_B170A0();
+        v107 = sub_B2C460(result);
+        sub_B2C400(v107, 0LL);
       }
       result->m_Items[1] = actorId;
       if ( actorId == -1 )
       {
         FieldPlayerServantIDList = BattleData__getFieldPlayerServantIDList(bdata, 0LL, 0LL);
         if ( !FieldPlayerServantIDList )
-          sub_B170D4();
+          sub_B2C434(0LL, v35);
         if ( !FieldPlayerServantIDList->max_length )
         {
-          sub_B17100(FieldPlayerServantIDList, v39, v40);
-          sub_B170A0();
+          v111 = sub_B2C460(FieldPlayerServantIDList);
+          sub_B2C400(v111, 0LL);
         }
-        if ( !v37->max_length )
+        if ( !v33->max_length )
         {
-          sub_B17100(FieldPlayerServantIDList, v39, v40);
-          sub_B170A0();
+          v36 = sub_B2C460(FieldPlayerServantIDList);
+          sub_B2C400(v36, 0LL);
         }
-        goto LABEL_41;
+        goto LABEL_38;
       }
       return result;
     case 1:
-      v67 = (System_Int32_array *)sub_B17014(int___TypeInfo, 1LL, v30);
+      v50 = (System_Int32_array *)sub_B2C374(int___TypeInfo, 1LL);
       ServantData = BattleData__getServantData(bdata, pttargetId, 0LL);
       if ( !ServantData )
-        goto LABEL_121;
-      if ( !v67 )
-        sub_B170D4();
-      if ( !v67->max_length )
+        return (System_Int32_array *)sub_B2C374(int___TypeInfo, 0LL);
+      if ( !v50 )
+        sub_B2C434(ServantData, v52);
+      if ( !v50->max_length )
       {
-        sub_B17100(ServantData, v69, v51);
-        sub_B170A0();
+        v53 = sub_B2C460(ServantData);
+        sub_B2C400(v53, 0LL);
       }
-      goto LABEL_66;
+      goto LABEL_125;
     case 2:
     case 5:
       return result;
@@ -597,16 +514,17 @@ LABEL_8:
       else
         return BattleData__getFieldPlayerServantIDList(bdata, v26, 0LL);
     case 4:
-      v75 = sub_B17014(int___TypeInfo, 1LL, v30);
-      v55 = (System_Int32_array *)v75;
-      if ( !v75 )
-        sub_B170D4();
-      if ( !*(_DWORD *)(v75 + 24) )
+      v59 = sub_B2C374(int___TypeInfo, 1LL);
+      v50 = (System_Int32_array *)v59;
+      if ( !v59 )
+        sub_B2C434(0LL, v60);
+      pttargetId = targetId;
+      if ( !*(_DWORD *)(v59 + 24) )
       {
-        sub_B17100(v75, v76, v77);
-        sub_B170A0();
+        v61 = sub_B2C460(v59);
+        sub_B2C400(v61, 0LL);
       }
-      goto LABEL_56;
+      goto LABEL_125;
     case 6:
       if ( BattleData__isEnemyID(bdata, actorId, 0LL) )
         return BattleData__getFieldPlayerServantIDList(bdata, 0LL, 0LL);
@@ -615,13 +533,19 @@ LABEL_8:
     case 7:
       if ( BattleData__isEnemyID(bdata, actorId, 0LL) )
         return BattleData__getEnemyServantIDList(bdata, 1, 0, 0LL);
+      if ( args )
+        v92 = !Target_BattleTargetArgs__IsCheckDead(args, 0LL);
       else
-        return BattleData__getPlayerServantIDList(bdata, 1, v26, 0LL);
+        v92 = 1;
+      return BattleData__getPlayerServantIDList(bdata, v92, v26, 0LL);
     case 8:
-      if ( BattleData__isEnemyID(bdata, actorId, 0LL) )
-        return BattleData__getPlayerServantIDList(bdata, 1, 0LL, 0LL);
-      else
+      if ( !BattleData__isEnemyID(bdata, actorId, 0LL) )
         return BattleData__getEnemyServantIDList(bdata, 1, IsActorPlayerSide, 0LL);
+      if ( args )
+        v44 = !Target_BattleTargetArgs__IsCheckDead(args, 0LL);
+      else
+        v44 = 1;
+      return BattleData__getPlayerServantIDList(bdata, v44, 0LL, 0LL);
     case 9:
     case 10:
     case 12:
@@ -633,317 +557,301 @@ LABEL_8:
       TargetAggregator = Target__GetTargetAggregator(
                            bdata,
                            actorId,
-                           RevengeTargetUniqueId,
+                           targetId,
                            pttargetId,
                            type,
                            taskActorType,
                            args,
-                           v31);
+                           v27);
       if ( !TargetAggregator )
-        sub_B170D4();
+        sub_B2C434(0LL, v31);
       return (System_Int32_array *)((__int64 (__fastcall *)(TargetAggregator_o *, const char *))TargetAggregator->klass[1]._1.gc_desc)(
                                      TargetAggregator,
                                      TargetAggregator->klass[1]._1.name);
     case 11:
-      v37 = (System_Int32_array *)sub_B17014(int___TypeInfo, 1LL, v30);
+      v50 = (System_Int32_array *)sub_B2C374(int___TypeInfo, 1LL);
       isEnemyID = BattleData__isEnemyID(bdata, actorId, 0LL);
-      AliveFieldRandomTargetId = Target__GetAliveFieldRandomTargetId(bdata, isEnemyID, 0, v79);
-      if ( !v37 )
-        sub_B170D4();
-      if ( !v37->max_length )
+      AliveFieldRandomTargetId = Target__GetAliveFieldRandomTargetId(bdata, isEnemyID, 0, v63);
+      if ( !v50 )
+        sub_B2C434(AliveFieldRandomTargetId, v65);
+      if ( !v50->max_length )
       {
-        sub_B17100(AliveFieldRandomTargetId, v80, v81);
-        sub_B170A0();
+        v110 = sub_B2C460(AliveFieldRandomTargetId);
+        sub_B2C400(v110, 0LL);
       }
-      goto LABEL_59;
+      v50->m_Items[1] = AliveFieldRandomTargetId;
+      return v50;
     case 13:
-      v37 = (System_Int32_array *)sub_B17014(int___TypeInfo, 1LL, v30);
-      v70 = BattleData__isEnemyID(bdata, actorId, 0LL);
-      AliveFieldRandomTargetId = Target__GetAliveFieldRandomTargetId(bdata, !v70, IsActorPlayerSide, v71);
-      if ( !v37 )
-        sub_B170D4();
-      if ( !v37->max_length )
+      v54 = (System_Int32_array *)sub_B2C374(int___TypeInfo, 1LL);
+      v55 = BattleData__isEnemyID(bdata, actorId, 0LL);
+      v57 = Target__GetAliveFieldRandomTargetId(bdata, !v55, IsActorPlayerSide, v56);
+      if ( !v54 )
+        sub_B2C434(v57, v58);
+      if ( !v54->max_length )
       {
-        sub_B17100(AliveFieldRandomTargetId, v73, v74);
-        sub_B170A0();
+        v109 = sub_B2C460(v57);
+        sub_B2C400(v109, 0LL);
       }
-LABEL_59:
-      v37->m_Items[1] = AliveFieldRandomTargetId;
-      return v37;
+      v54->m_Items[1] = v57;
+      return v54;
     case 16:
-      v67 = (System_Int32_array *)sub_B17014(int___TypeInfo, 1LL, v30);
-      v87 = BattleData__getServantData(bdata, pttargetId, 0LL);
-      if ( !v87 )
-        goto LABEL_121;
+      v50 = (System_Int32_array *)sub_B2C374(int___TypeInfo, 1LL);
+      v67 = BattleData__getServantData(bdata, pttargetId, 0LL);
       if ( !v67 )
-        sub_B170D4();
-      if ( !v67->max_length )
+        return (System_Int32_array *)sub_B2C374(int___TypeInfo, 0LL);
+      if ( !v50 )
+        sub_B2C434(v67, v68);
+      if ( !v50->max_length )
       {
-        sub_B17100(v87, v88, v51);
-        sub_B170A0();
+        v69 = sub_B2C460(v67);
+        sub_B2C400(v69, 0LL);
       }
-LABEL_66:
-      v67->m_Items[1] = pttargetId;
-      return v67;
+      goto LABEL_125;
     case 17:
-      result = (System_Int32_array *)sub_B17014(int___TypeInfo, 1LL, v30);
-      v37 = result;
+      result = (System_Int32_array *)sub_B2C374(int___TypeInfo, 1LL);
+      v33 = result;
       if ( !result )
-        sub_B170D4();
+        sub_B2C434(0LL, v45);
       if ( !result->max_length )
       {
-        sub_B17100(result, v61, v62);
-        sub_B170A0();
+        v108 = sub_B2C460(result);
+        sub_B2C400(v108, 0LL);
       }
       result->m_Items[1] = actorId;
-      if ( actorId != -1 )
-        return result;
-      FieldPlayerServantIDList = BattleData__getFieldPlayerServantIDList(bdata, 0LL, 0LL);
-      if ( !FieldPlayerServantIDList )
-        sub_B170D4();
-      if ( !FieldPlayerServantIDList->max_length )
+      if ( actorId == -1 )
       {
-        sub_B17100(FieldPlayerServantIDList, v63, v64);
-        sub_B170A0();
+        FieldPlayerServantIDList = BattleData__getFieldPlayerServantIDList(bdata, 0LL, 0LL);
+        if ( !FieldPlayerServantIDList )
+          sub_B2C434(0LL, v46);
+        if ( !FieldPlayerServantIDList->max_length )
+        {
+          v114 = sub_B2C460(FieldPlayerServantIDList);
+          sub_B2C400(v114, 0LL);
+        }
+        if ( !v33->max_length )
+        {
+          v115 = sub_B2C460(FieldPlayerServantIDList);
+          sub_B2C400(v115, 0LL);
+        }
+LABEL_38:
+        v47 = FieldPlayerServantIDList->m_Items[1];
+        result = v33;
+        v33->m_Items[1] = v47;
       }
-      if ( !v37->max_length )
-      {
-        sub_B17100(FieldPlayerServantIDList, v63, v64);
-        sub_B170A0();
-      }
-LABEL_41:
-      v37->m_Items[1] = FieldPlayerServantIDList->m_Items[1];
-      return v37;
+      return result;
     case 18:
       if ( BattleData__isEnemyID(bdata, actorId, 0LL) )
         AliveFieldEnemyServantIDList = BattleData__getAliveFieldEnemyServantIDList(bdata, 0, 0LL);
       else
         AliveFieldEnemyServantIDList = BattleData__getAliveFieldPlayerServantIDList(bdata, 0LL, 0LL);
-      v114 = AliveFieldEnemyServantIDList;
-      v92 = (System_Collections_Generic_List_int__o *)sub_B170CC(
-                                                        System_Collections_Generic_List_int__TypeInfo,
-                                                        v83,
-                                                        v84,
-                                                        v85,
-                                                        v86);
+      v93 = AliveFieldEnemyServantIDList;
+      v73 = (System_Collections_Generic_List_int__o *)sub_B2C42C(System_Collections_Generic_List_int__TypeInfo);
       System_Collections_Generic_List_int____ctor(
-        v92,
-        (const MethodInfo_2F0F794 *)Method_System_Collections_Generic_List_int___ctor__);
-      if ( !v114 )
-        sub_B170D4();
-      v117 = *(_QWORD *)&v114->max_length;
-      if ( (int)v117 >= 1 )
+        v73,
+        (const MethodInfo_2F6629C *)Method_System_Collections_Generic_List_int___ctor__);
+      if ( !v93 )
+        sub_B2C434(v94, v95);
+      v96 = *(_QWORD *)&v93->max_length;
+      if ( (int)v96 >= 1 )
       {
-        v118 = 0LL;
+        v97 = 0LL;
         do
         {
-          if ( v118 >= (unsigned int)v117 )
+          if ( v97 >= (unsigned int)v96 )
           {
-            sub_B17100(v115, v116, v51);
-            sub_B170A0();
+            v105 = sub_B2C460(v94);
+            sub_B2C400(v105, 0LL);
           }
-          v116 = (unsigned int)v114->m_Items[v118 + 1];
-          if ( (_DWORD)v116 != pttargetId )
+          v95 = (unsigned int)v93->m_Items[v97 + 1];
+          if ( (_DWORD)v95 != pttargetId )
           {
-            if ( !v92 )
-              sub_B170D4();
+            if ( !v73 )
+              sub_B2C434(v94, v95);
             System_Collections_Generic_List_int___Add(
-              v92,
-              v116,
-              (const MethodInfo_2F104F0 *)Method_System_Collections_Generic_List_int__Add__);
+              v73,
+              v95,
+              (const MethodInfo_2F66FF8 *)Method_System_Collections_Generic_List_int__Add__);
           }
-          LODWORD(v117) = v114->max_length;
-          ++v118;
+          LODWORD(v96) = v93->max_length;
+          ++v97;
         }
-        while ( (__int64)v118 < (int)v117 );
+        while ( (__int64)v97 < (int)v96 );
       }
-      if ( !v92 )
-        sub_B170D4();
-      size = v92->fields._size;
+      if ( !v73 )
+        sub_B2C434(v94, v95);
+      size = v73->fields._size;
       if ( !size )
-        goto LABEL_121;
+        return (System_Int32_array *)sub_B2C374(int___TypeInfo, 0LL);
       Next = BattleRandom__getNext(size, 0LL);
-      v121 = sub_B17014(int___TypeInfo, 1LL, v120);
-      v103 = (System_Int32_array *)v121;
-      if ( v92->fields._size <= Next )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
-      if ( !v121 )
-        sub_B170D4();
-      if ( !*(_DWORD *)(v121 + 24) )
+      v99 = sub_B2C374(int___TypeInfo, 1LL);
+      v50 = (System_Int32_array *)v99;
+      if ( v73->fields._size <= Next )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+      if ( !v99 )
+        sub_B2C434(0LL, v100);
+      if ( !*(_DWORD *)(v99 + 24) )
       {
-        sub_B17100(v121, v122, v123);
-        sub_B170A0();
+        v113 = sub_B2C460(v99);
+        sub_B2C400(v113, 0LL);
       }
-      goto LABEL_120;
+      goto LABEL_117;
     case 19:
       if ( BattleData__isEnemyID(bdata, actorId, 0LL) )
         AliveFieldPlayerServantIDList = BattleData__getAliveFieldEnemyServantIDList(bdata, 0, 0LL);
       else
         AliveFieldPlayerServantIDList = BattleData__getAliveFieldPlayerServantIDList(bdata, 0LL, 0LL);
-      v91 = AliveFieldPlayerServantIDList;
-      v92 = (System_Collections_Generic_List_int__o *)sub_B170CC(
-                                                        System_Collections_Generic_List_int__TypeInfo,
-                                                        v42,
-                                                        v43,
-                                                        v44,
-                                                        v45);
+      v72 = AliveFieldPlayerServantIDList;
+      v73 = (System_Collections_Generic_List_int__o *)sub_B2C42C(System_Collections_Generic_List_int__TypeInfo);
       System_Collections_Generic_List_int____ctor(
-        v92,
-        (const MethodInfo_2F0F794 *)Method_System_Collections_Generic_List_int___ctor__);
-      if ( !v91 )
-        sub_B170D4();
-      v95 = *(_QWORD *)&v91->max_length;
-      if ( (int)v95 >= 1 )
+        v73,
+        (const MethodInfo_2F6629C *)Method_System_Collections_Generic_List_int___ctor__);
+      if ( !v72 )
+        sub_B2C434(v74, v75);
+      v76 = *(_QWORD *)&v72->max_length;
+      if ( (int)v76 >= 1 )
       {
-        v96 = 0LL;
+        v77 = 0LL;
         do
         {
-          if ( v96 >= (unsigned int)v95 )
+          if ( v77 >= (unsigned int)v76 )
           {
-            sub_B17100(v93, v94, v51);
-            sub_B170A0();
+            v103 = sub_B2C460(v74);
+            sub_B2C400(v103, 0LL);
           }
-          v94 = (unsigned int)v91->m_Items[v96 + 1];
-          if ( (_DWORD)v94 != actorId )
+          v75 = (unsigned int)v72->m_Items[v77 + 1];
+          if ( (_DWORD)v75 != actorId )
           {
-            if ( !v92 )
-              sub_B170D4();
+            if ( !v73 )
+              sub_B2C434(v74, v75);
             System_Collections_Generic_List_int___Add(
-              v92,
-              v94,
-              (const MethodInfo_2F104F0 *)Method_System_Collections_Generic_List_int__Add__);
+              v73,
+              v75,
+              (const MethodInfo_2F66FF8 *)Method_System_Collections_Generic_List_int__Add__);
           }
-          LODWORD(v95) = v91->max_length;
-          ++v96;
+          LODWORD(v76) = v72->max_length;
+          ++v77;
         }
-        while ( (__int64)v96 < (int)v95 );
+        while ( (__int64)v77 < (int)v76 );
       }
-      if ( !v92 )
-        sub_B170D4();
-      v97 = v92->fields._size;
-      if ( !v97 )
-        goto LABEL_121;
-      Next = BattleRandom__getNext(v97, 0LL);
-      v100 = sub_B17014(int___TypeInfo, 1LL, v99);
-      v103 = (System_Int32_array *)v100;
-      if ( v92->fields._size <= Next )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
-      if ( !v100 )
-        sub_B170D4();
-      if ( !*(_DWORD *)(v100 + 24) )
+      if ( !v73 )
+        sub_B2C434(v74, v75);
+      v78 = v73->fields._size;
+      if ( !v78 )
+        return (System_Int32_array *)sub_B2C374(int___TypeInfo, 0LL);
+      Next = BattleRandom__getNext(v78, 0LL);
+      v80 = sub_B2C374(int___TypeInfo, 1LL);
+      v50 = (System_Int32_array *)v80;
+      if ( v73->fields._size <= Next )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+      if ( !v80 )
+        sub_B2C434(0LL, v81);
+      if ( !*(_DWORD *)(v80 + 24) )
       {
-        sub_B17100(v100, v101, v102);
-        sub_B170A0();
+        v82 = sub_B2C460(v80);
+        sub_B2C400(v82, 0LL);
       }
-      goto LABEL_120;
+      goto LABEL_117;
     case 20:
       if ( BattleData__isEnemyID(bdata, actorId, 0LL) )
-        v56 = BattleData__getAliveFieldPlayerServantIDList(bdata, 0LL, 0LL);
+        v43 = BattleData__getAliveFieldPlayerServantIDList(bdata, 0LL, 0LL);
       else
-        v56 = BattleData__getAliveFieldEnemyServantIDList(bdata, IsActorPlayerSide, 0LL);
-      v104 = v56;
-      v92 = (System_Collections_Generic_List_int__o *)sub_B170CC(
-                                                        System_Collections_Generic_List_int__TypeInfo,
-                                                        v57,
-                                                        v58,
-                                                        v59,
-                                                        v60);
+        v43 = BattleData__getAliveFieldEnemyServantIDList(bdata, IsActorPlayerSide, 0LL);
+      v83 = v43;
+      v73 = (System_Collections_Generic_List_int__o *)sub_B2C42C(System_Collections_Generic_List_int__TypeInfo);
       System_Collections_Generic_List_int____ctor(
-        v92,
-        (const MethodInfo_2F0F794 *)Method_System_Collections_Generic_List_int___ctor__);
-      if ( !v104 )
-        sub_B170D4();
-      v107 = *(_QWORD *)&v104->max_length;
-      if ( (int)v107 >= 1 )
+        v73,
+        (const MethodInfo_2F6629C *)Method_System_Collections_Generic_List_int___ctor__);
+      if ( !v83 )
+        sub_B2C434(v84, v85);
+      v86 = *(_QWORD *)&v83->max_length;
+      if ( (int)v86 >= 1 )
       {
-        v108 = 0LL;
+        v87 = 0LL;
         do
         {
-          if ( v108 >= (unsigned int)v107 )
+          if ( v87 >= (unsigned int)v86 )
           {
-            sub_B17100(v105, v106, v51);
-            sub_B170A0();
+            v104 = sub_B2C460(v84);
+            sub_B2C400(v104, 0LL);
           }
-          v106 = (unsigned int)v104->m_Items[v108 + 1];
-          if ( (_DWORD)v106 != RevengeTargetUniqueId )
+          v85 = (unsigned int)v83->m_Items[v87 + 1];
+          if ( (_DWORD)v85 != targetId )
           {
-            if ( !v92 )
-              sub_B170D4();
+            if ( !v73 )
+              sub_B2C434(v84, v85);
             System_Collections_Generic_List_int___Add(
-              v92,
-              v106,
-              (const MethodInfo_2F104F0 *)Method_System_Collections_Generic_List_int__Add__);
+              v73,
+              v85,
+              (const MethodInfo_2F66FF8 *)Method_System_Collections_Generic_List_int__Add__);
           }
-          LODWORD(v107) = v104->max_length;
-          ++v108;
+          LODWORD(v86) = v83->max_length;
+          ++v87;
         }
-        while ( (__int64)v108 < (int)v107 );
+        while ( (__int64)v87 < (int)v86 );
       }
-      if ( !v92 )
-        sub_B170D4();
-      v109 = v92->fields._size;
-      if ( !v109 )
-        goto LABEL_121;
-      Next = BattleRandom__getNext(v109, 0LL);
-      v111 = sub_B17014(int___TypeInfo, 1LL, v110);
-      v103 = (System_Int32_array *)v111;
-      if ( v92->fields._size <= Next )
-        System_ThrowHelper__ThrowArgumentOutOfRangeException_41329284(0LL);
-      if ( !v111 )
-        sub_B170D4();
-      if ( !*(_DWORD *)(v111 + 24) )
+      if ( !v73 )
+        sub_B2C434(v84, v85);
+      v88 = v73->fields._size;
+      if ( !v88 )
+        return (System_Int32_array *)sub_B2C374(int___TypeInfo, 0LL);
+      Next = BattleRandom__getNext(v88, 0LL);
+      v89 = sub_B2C374(int___TypeInfo, 1LL);
+      v50 = (System_Int32_array *)v89;
+      if ( v73->fields._size <= Next )
+        System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+      if ( !v89 )
+        sub_B2C434(0LL, v90);
+      if ( !*(_DWORD *)(v89 + 24) )
       {
-        sub_B17100(v111, v112, v113);
-        sub_B170A0();
+        v91 = sub_B2C460(v89);
+        sub_B2C400(v91, 0LL);
       }
-LABEL_120:
-      result = v103;
-      v103->m_Items[1] = v92->fields._items->m_Items[Next + 1];
-      break;
+LABEL_117:
+      v50->m_Items[1] = v73->fields._items->m_Items[Next + 1];
+      return v50;
     case 21:
       AliveFieldSvtIdArray = BattleData__getAliveFieldSvtIdArray(bdata, actorId, 1, tvals, isIncludeIgnoreIndiv, 0LL);
-      return Target__getOrderOneTargetIdArray(AliveFieldSvtIdArray, actorId, 0, 0, v49);
+      return Target__getOrderOneTargetIdArray(AliveFieldSvtIdArray, actorId, 0, 0, v41);
     case 22:
-      v65 = BattleData__getAliveFieldSvtIdArray(bdata, actorId, 1, tvals, isIncludeIgnoreIndiv, 0LL);
-      return Target__getOrderOneTargetIdArray(v65, actorId, 0, 1, v66);
+      v48 = BattleData__getAliveFieldSvtIdArray(bdata, actorId, 1, tvals, isIncludeIgnoreIndiv, 0LL);
+      return Target__getOrderOneTargetIdArray(v48, actorId, 0, 1, v49);
     case 23:
-      v46 = BattleData__getAliveFieldSvtIdArray(bdata, actorId, 1, tvals, isIncludeIgnoreIndiv, 0LL);
-      return Target__getOrderOneTargetIdArray(v46, actorId, 1, 1, v47);
+      v38 = BattleData__getAliveFieldSvtIdArray(bdata, actorId, 1, tvals, isIncludeIgnoreIndiv, 0LL);
+      return Target__getOrderOneTargetIdArray(v38, actorId, 1, 1, v39);
     case 24:
-      v89 = BattleData__getAliveFieldSvtIdArray(bdata, actorId, 1, 0LL, 0, 0LL);
-      return Target__getOrderOneTargetIdArray(v89, actorId, 1, 0, v90);
+      v70 = BattleData__getAliveFieldSvtIdArray(bdata, actorId, 1, 0LL, 0, 0LL);
+      return Target__getOrderOneTargetIdArray(v70, actorId, 1, 0, v71);
     case 26:
       return BattleData__GetAliveFieldServantIDArray(bdata, 0, actorId, 0LL);
     case 27:
-      v50 = BattleData__getServantData(bdata, actorId, 0LL);
-      if ( v50 && checkRevengeId )
-        RevengeTargetUniqueId = BattleServantData__getRevengeTargetUniqueId(v50, 0LL);
-      if ( BattleData__getServantData(bdata, RevengeTargetUniqueId, 0LL) )
+      v42 = BattleData__getServantData(bdata, actorId, 0LL);
+      if ( v42 )
       {
-        v52 = sub_B17014(int___TypeInfo, 1LL, v51);
-        v55 = (System_Int32_array *)v52;
-        if ( !v52 )
-          sub_B170D4();
-        if ( !*(_DWORD *)(v52 + 24) )
-        {
-          sub_B17100(v52, v53, v54);
-          sub_B170A0();
-        }
-LABEL_56:
-        v55->m_Items[1] = RevengeTargetUniqueId;
-        result = v55;
+        pttargetId = targetId;
+        if ( checkRevengeId )
+          pttargetId = BattleServantData__getRevengeTargetUniqueId(v42, 0LL);
       }
       else
       {
-LABEL_121:
-        result = (System_Int32_array *)sub_B17014(int___TypeInfo, 0LL, v51);
+        pttargetId = targetId;
       }
-      break;
+      if ( !BattleData__getServantData(bdata, pttargetId, 0LL) )
+        return (System_Int32_array *)sub_B2C374(int___TypeInfo, 0LL);
+      v101 = sub_B2C374(int___TypeInfo, 1LL);
+      v50 = (System_Int32_array *)v101;
+      if ( !v101 )
+        sub_B2C434(0LL, v102);
+      if ( !*(_DWORD *)(v101 + 24) )
+      {
+        v112 = sub_B2C460(v101);
+        sub_B2C400(v112, 0LL);
+      }
+LABEL_125:
+      v50->m_Items[1] = pttargetId;
+      return v50;
     default:
-      result = v124;
-      break;
+      return v117;
   }
-  return result;
 }
 
 
@@ -1000,16 +908,20 @@ void __fastcall Target_BattleTargetArgs___ctor(
         DataVals_o *dataVals,
         const MethodInfo *method)
 {
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
-
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.dataVals = dataVals;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)dataVals, v5, v6, v7, v8, v9, v10);
+  sub_B2C2F8(&this->fields, dataVals);
+}
+
+
+bool __fastcall Target_BattleTargetArgs__IsCheckDead(Target_BattleTargetArgs_o *this, const MethodInfo *method)
+{
+  DataVals_o *dataVals; // x0
+
+  dataVals = this->fields.dataVals;
+  if ( !dataVals )
+    sub_B2C434(0LL, method);
+  return DataVals__isCheckDead(dataVals, 0LL);
 }
 
 
@@ -1017,65 +929,59 @@ System_Int32_array *__fastcall Target_BattleTargetArgs__get_EnemyRange(
         Target_BattleTargetArgs_o *this,
         const MethodInfo *method)
 {
-  BattleServantConfConponent_o *p_enemyRange; // x19
-  System_Int32_array **enemyRange; // x20
+  struct System_Int32_array **p_enemyRange; // x19
+  System_Int32_array *enemyRange; // x20
   DataVals_o *dataVals; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  _QWORD **v12; // x21
-  __int64 v13; // x20
-  __int16 v14; // w8
-  __int64 v15; // x20
-  __int64 v16; // x20
-  __int64 v17; // x20
+  _QWORD **v6; // x21
+  __int64 v7; // x20
+  __int16 v8; // w8
+  __int64 v9; // x20
+  __int64 v10; // x20
+  __int64 v11; // x20
 
-  if ( (byte_40F779A & 1) == 0 )
+  if ( (byte_41847E5 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Array_Empty_int___, method);
-    byte_40F779A = 1;
+    sub_B2C35C(&Method_System_Array_Empty_int___, method);
+    byte_41847E5 = 1;
   }
-  p_enemyRange = (BattleServantConfConponent_o *)&this->fields.enemyRange;
-  enemyRange = (System_Int32_array **)this->fields.enemyRange;
+  p_enemyRange = &this->fields.enemyRange;
+  enemyRange = this->fields.enemyRange;
   if ( !enemyRange )
   {
     dataVals = this->fields.dataVals;
     if ( !dataVals )
-      sub_B170D4();
-    enemyRange = (System_Int32_array **)DataVals__GetParamArray(dataVals, 135, 0LL);
+      sub_B2C434(0LL, method);
+    enemyRange = DataVals__GetParamArray(dataVals, 135, 0LL);
     if ( !enemyRange )
     {
-      v12 = (_QWORD **)Method_System_Array_Empty_int___;
-      v13 = **((_QWORD **)Method_System_Array_Empty_int___ + 6);
-      v14 = *(_WORD *)(v13 + 306);
-      if ( (v14 & 1) == 0 )
+      v6 = (_QWORD **)Method_System_Array_Empty_int___;
+      v7 = **((_QWORD **)Method_System_Array_Empty_int___ + 6);
+      v8 = *(_WORD *)(v7 + 306);
+      if ( (v8 & 1) == 0 )
       {
-        sub_AAFCFC(**((_QWORD **)Method_System_Array_Empty_int___ + 6));
-        v14 = *(_WORD *)(v13 + 306);
+        sub_AC505C(**((_QWORD **)Method_System_Array_Empty_int___ + 6));
+        v8 = *(_WORD *)(v7 + 306);
       }
-      if ( (v14 & 0x400) != 0 )
+      if ( (v8 & 0x400) != 0 )
       {
-        v15 = *v12[6];
-        if ( (*(_BYTE *)(v15 + 306) & 1) == 0 )
-          sub_AAFCFC(*v12[6]);
-        if ( !*(_DWORD *)(v15 + 224) )
+        v9 = *v6[6];
+        if ( (*(_BYTE *)(v9 + 306) & 1) == 0 )
+          sub_AC505C(*v6[6]);
+        if ( !*(_DWORD *)(v9 + 224) )
         {
-          v16 = *v12[6];
-          if ( (*(_BYTE *)(v16 + 306) & 1) == 0 )
-            sub_AAFCFC(*v12[6]);
-          j_il2cpp_runtime_class_init_0(v16);
+          v10 = *v6[6];
+          if ( (*(_BYTE *)(v10 + 306) & 1) == 0 )
+            sub_AC505C(*v6[6]);
+          j_il2cpp_runtime_class_init_0(v10);
         }
       }
-      v17 = *v12[6];
-      if ( (*(_BYTE *)(v17 + 306) & 1) == 0 )
-        sub_AAFCFC(*v12[6]);
-      enemyRange = **(System_Int32_array ****)(v17 + 184);
+      v11 = *v6[6];
+      if ( (*(_BYTE *)(v11 + 306) & 1) == 0 )
+        sub_AC505C(*v6[6]);
+      enemyRange = **(System_Int32_array ***)(v11 + 184);
     }
-    p_enemyRange->klass = (BattleServantConfConponent_c *)enemyRange;
-    sub_B16F98(p_enemyRange, enemyRange, v6, v7, v8, v9, v10, v11);
+    *p_enemyRange = enemyRange;
+    sub_B2C2F8(p_enemyRange, enemyRange);
   }
-  return (System_Int32_array *)enemyRange;
+  return enemyRange;
 }

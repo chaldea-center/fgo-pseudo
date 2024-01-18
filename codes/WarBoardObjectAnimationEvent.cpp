@@ -11,19 +11,17 @@ void __fastcall WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *children; // x21
-  _BOOL8 v6; // x0
+  struct UIWidget_array *v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x2
-  UIWidget_o *v9; // x0
   WarBoardObjectAnimationEvent_c *klass; // x8
   const char *namespaze; // x21
-  unsigned int v12; // w22
-  UIWidget_o *v13; // x0
+  unsigned int v10; // w22
+  __int64 v11; // x0
 
-  if ( (byte_40F8586 & 1) == 0 )
+  if ( (byte_418653D & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&value);
-    byte_40F8586 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&value);
+    byte_418653D = 1;
   }
   if ( !LOBYTE(this->fields.myWidget) )
     WarBoardObjectAnimationEvent__Init(this, *(const MethodInfo **)&value);
@@ -33,13 +31,13 @@ void __fastcall WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  v6 = UnityEngine_Object__op_Inequality(children, 0LL, 0LL);
-  if ( v6 )
+  v6 = (struct UIWidget_array *)UnityEngine_Object__op_Inequality(children, 0LL, 0LL);
+  if ( ((unsigned __int8)v6 & 1) != 0 )
   {
-    v9 = (UIWidget_o *)this->fields.children;
-    if ( !v9 )
+    v6 = this->fields.children;
+    if ( !v6 )
       goto LABEL_19;
-    UIWidget__set_depth(v9, v9->fields.mDepth + value, 0LL);
+    UIWidget__set_depth((UIWidget_o *)v6, LODWORD(v6->m_Items[17]) + value, 0LL);
   }
   klass = this[1].klass;
   if ( klass )
@@ -49,25 +47,25 @@ void __fastcall WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
     {
       if ( (int)namespaze >= 1 )
       {
-        v12 = 0;
+        v10 = 0;
         do
         {
-          if ( v12 >= LODWORD(klass->_1.namespaze) )
+          if ( v10 >= LODWORD(klass->_1.namespaze) )
           {
-            sub_B17100(v6, v7, v8);
-            sub_B170A0();
+            v11 = sub_B2C460(v6);
+            sub_B2C400(v11, 0LL);
           }
-          v13 = (UIWidget_o *)*((_QWORD *)&klass->_1.byval_arg.data + (int)v12);
-          if ( !v13 )
+          v6 = (struct UIWidget_array *)*((_QWORD *)&klass->_1.byval_arg.data + (int)v10);
+          if ( !v6 )
             break;
-          UIWidget__set_depth(v13, v13->fields.mDepth + value, 0LL);
-          if ( (int)++v12 >= (int)namespaze )
+          UIWidget__set_depth((UIWidget_o *)v6, LODWORD(v6->m_Items[17]) + value, 0LL);
+          if ( (int)++v10 >= (int)namespaze )
             return;
           klass = this[1].klass;
         }
         while ( klass );
 LABEL_19:
-        sub_B170D4();
+        sub_B2C434(v6, v7);
       }
     }
   }
@@ -79,19 +77,20 @@ void __fastcall WarBoardObjectAnimationEvent__ForceEndInProgressTask(
         const MethodInfo *method)
 {
   WebViewManager_o *Instance; // x0
-  struct System_Action_o *callbackFunc; // x8
+  __int64 v3; // x1
+  __int64 v4; // x8
 
-  if ( (byte_40F8588 & 1) == 0 )
+  if ( (byte_418653F & 1) == 0 )
   {
-    sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_40F8588 = 1;
+    sub_B2C35C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_418653F = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_B170D4();
-  callbackFunc = Instance[9].fields.callbackFunc;
-  if ( callbackFunc )
-    BYTE1(callbackFunc->fields.m_target) = 1;
+    sub_B2C434(0LL, v3);
+  v4 = *(_QWORD *)&Instance[9].fields.isButtonEnable;
+  if ( v4 )
+    *(_BYTE *)(v4 + 25) = 1;
 }
 
 
@@ -110,19 +109,20 @@ void __fastcall WarBoardObjectAnimationEvent__ForceEndWallBreakAnimTask(
         const MethodInfo *method)
 {
   WebViewManager_o *Instance; // x0
-  __int64 v3; // x8
+  __int64 v3; // x1
+  struct WebViewObject_o *webView; // x8
 
-  if ( (byte_40F8589 & 1) == 0 )
+  if ( (byte_4186540 & 1) == 0 )
   {
-    sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_40F8589 = 1;
+    sub_B2C35C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_4186540 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_B170D4();
-  v3 = *(_QWORD *)&Instance[9].fields.isButtonEnable;
-  if ( v3 )
-    *(_BYTE *)(v3 + 25) = 1;
+    sub_B2C434(0LL, v3);
+  webView = Instance[9].fields.webView;
+  if ( webView )
+    BYTE1(webView->fields.onJS) = 1;
 }
 
 
@@ -146,12 +146,12 @@ void __fastcall WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_
   System_Int32_array *v18; // x6
   System_Int32_array *v19; // x7
 
-  if ( (byte_40F8584 & 1) == 0 )
+  if ( (byte_418653B & 1) == 0 )
   {
-    sub_B16FFC(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
-    sub_B16FFC(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____66819968, v3);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v4);
-    byte_40F8584 = 1;
+    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
+    sub_B2C35C(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____67395072, v3);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v4);
+    byte_418653B = 1;
   }
   if ( !LOBYTE(this->fields.myWidget) )
   {
@@ -160,9 +160,9 @@ void __fastcall WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_
       ComponentsInChildren_WarBoardControlPlayTalkUiComponent = (WarBoardObjectAnimationEvent_c *)UnityEngine_Component__GetComponentsInChildren_WarBoardControlPlayTalkUiComponent_(
                                                                                                     (UnityEngine_Component_o *)this,
                                                                                                     1,
-                                                                                                    (const MethodInfo_18BD854 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____66819968);
+                                                                                                    (const MethodInfo_172DFBC *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____67395072);
       this[1].klass = ComponentsInChildren_WarBoardControlPlayTalkUiComponent;
-      sub_B16F98(
+      sub_B2C2F8(
         (BattleServantConfConponent_o *)&this[1],
         (System_Int32_array **)ComponentsInChildren_WarBoardControlPlayTalkUiComponent,
         v6,
@@ -182,9 +182,9 @@ void __fastcall WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_
     {
       Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                   (UnityEngine_Component_o *)this,
-                                  (const MethodInfo_18BD428 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                  (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       this->fields.children = (struct UIWidget_array *)Component_WebViewObject;
-      sub_B16F98(
+      sub_B2C2F8(
         (BattleServantConfConponent_o *)&this->fields.children,
         (System_Int32_array **)Component_WebViewObject,
         v14,
@@ -206,73 +206,71 @@ void __fastcall WarBoardObjectAnimationEvent__SetDispBgDiff(
 {
   __int64 v4; // x1
   __int64 v5; // x1
-  WebViewManager_o *Instance; // x0
-  __int64 v7; // x2
-  WebViewManager_o *v8; // x1
-  System_String_array *v9; // x0
-  __int64 v10; // x21
-  System_String_array *v11; // x19
-  WebViewManager_o *v12; // x20
-  unsigned __int64 v13; // x22
-  unsigned __int64 v14; // x23
-  unsigned __int64 v15; // x24
-  System_String_o **v16; // x26
-  char v17; // w21
-  WarBoardBackgroundComponent_o *basePanel; // x0
+  System_Char_array *Instance; // x0
+  System_Char_array *v7; // x1
+  __int64 v8; // x21
+  System_Char_array *v9; // x19
+  System_Char_array *v10; // x20
+  unsigned __int64 v11; // x22
+  unsigned __int64 v12; // x23
+  unsigned __int64 v13; // x24
+  System_String_o **v14; // x26
+  char v15; // w21
+  __int64 v16; // x0
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_40F8587 & 1) == 0 )
+  if ( (byte_418653E & 1) == 0 )
   {
-    sub_B16FFC(&char___TypeInfo, value);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    sub_B16FFC(&StringLiteral_14493/*"True"*/, v5);
-    byte_40F8587 = 1;
+    sub_B2C35C(&char___TypeInfo, value);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    sub_B2C35C(&StringLiteral_14553/*"True"*/, v5);
+    byte_418653E = 1;
   }
   result = 0;
-  Instance = (WebViewManager_o *)sub_B17014(char___TypeInfo, 1LL, method);
+  Instance = (System_Char_array *)sub_B2C374(char___TypeInfo, 1LL);
   if ( !Instance )
     goto LABEL_18;
-  v8 = Instance;
-  if ( !LODWORD(Instance->fields.basePanel) )
+  v7 = Instance;
+  if ( !Instance->max_length )
     goto LABEL_17;
-  LOWORD(Instance->fields.baseWindow) = 44;
-  if ( !value || (v9 = System_String__Split(value, (System_Char_array *)Instance, 0LL)) == 0LL )
+  Instance->m_Items[2] = 44;
+  if ( !value || (Instance = (System_Char_array *)System_String__Split(value, Instance, 0LL)) == 0LL )
 LABEL_18:
-    sub_B170D4();
-  v10 = *(_QWORD *)&v9->max_length;
-  v11 = v9;
-  if ( (int)v10 >= 2 )
+    sub_B2C434(Instance, v7);
+  v8 = *(_QWORD *)&Instance->max_length;
+  v9 = Instance;
+  if ( (int)v8 >= 2 )
   {
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    v12 = Instance;
-    v13 = 0LL;
-    v14 = 0LL;
-    v15 = (unsigned int)v10 >> 1;
-    while ( v13 + 1 < v11->max_length )
+    Instance = (System_Char_array *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    v10 = Instance;
+    v11 = 0LL;
+    v12 = 0LL;
+    v13 = (unsigned int)v8 >> 1;
+    while ( v11 + 1 < v9->max_length )
     {
-      v16 = (System_String_o **)(&v11->obj.klass + v13);
-      Instance = (WebViewManager_o *)System_String__op_Equality(v16[5], (System_String_o *)StringLiteral_14493/*"True"*/, 0LL);
-      if ( v13 >= v11->max_length )
+      v14 = (System_String_o **)(&v9->obj.klass + v11);
+      Instance = (System_Char_array *)System_String__op_Equality(v14[5], (System_String_o *)StringLiteral_14553/*"True"*/, 0LL);
+      if ( v11 >= v9->max_length )
         break;
-      v17 = (char)Instance;
-      Instance = (WebViewManager_o *)System_Int32__TryParse(v16[4], &result, 0LL);
+      v15 = (char)Instance;
+      Instance = (System_Char_array *)System_Int32__TryParse(v14[4], &result, 0LL);
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
-        if ( !v12 )
+        if ( !v10 )
           goto LABEL_18;
-        basePanel = (WarBoardBackgroundComponent_o *)v12[3].fields.basePanel;
-        if ( !basePanel )
+        Instance = *(System_Char_array **)&v10->m_Items[158];
+        if ( !Instance )
           goto LABEL_18;
-        WarBoardBackgroundComponent__SetDispBgDiff(basePanel, result, v17 & 1, 0LL);
+        WarBoardBackgroundComponent__SetDispBgDiff((WarBoardBackgroundComponent_o *)Instance, result, v15 & 1, 0LL);
       }
-      ++v14;
-      v13 += 2LL;
-      if ( v14 >= v15 )
+      ++v12;
+      v11 += 2LL;
+      if ( v12 >= v13 )
         return;
     }
 LABEL_17:
-    sub_B17100(Instance, v8, v7);
-    sub_B170A0();
+    v16 = sub_B2C460(Instance);
+    sub_B2C400(v16, 0LL);
   }
 }
 
@@ -283,69 +281,68 @@ void __fastcall WarBoardObjectAnimationEvent__SetWidgetDepth(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  System_String_array *v6; // x0
-  __int64 v7; // x2
-  System_String_array *v8; // x1
-  __int64 v9; // x8
-  System_String_array *v10; // x20
-  unsigned __int64 v11; // x23
+  System_Char_array *v6; // x0
+  System_Char_array *v7; // x1
+  __int64 v8; // x8
+  System_Char_array *v9; // x20
+  unsigned __int64 v10; // x23
   unsigned __int64 max_length; // x8
-  __int64 v13; // x9
-  __int64 v14; // x24
-  System_String_o *v15; // x21
-  unsigned __int64 v16; // x9
+  __int64 v12; // x9
+  __int64 v13; // x24
+  System_String_o *v14; // x21
+  unsigned __int64 v15; // x9
   UnityEngine_Object_o *children; // x22
-  UnityEngine_Object_o *v18; // x0
   System_String_o *name; // x0
-  UIWidget_o *v20; // x0
   WarBoardObjectAnimationEvent_c *klass; // x8
   const char *namespaze; // x22
-  int v23; // w26
-  int v24; // w9
-  __int64 v25; // x27
-  UnityEngine_Object_o *v26; // x0
-  System_String_o *v27; // x0
-  WarBoardObjectAnimationEvent_c *v28; // x8
-  UIWidget_o *v29; // x0
+  int v20; // w26
+  int v21; // w9
+  __int64 v22; // x27
+  System_String_o *v23; // x0
+  WarBoardObjectAnimationEvent_c *v24; // x8
+  __int64 v25; // x0
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_40F8585 & 1) == 0 )
+  if ( (byte_418653C & 1) == 0 )
   {
-    sub_B16FFC(&char___TypeInfo, nameAndDepth);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v5);
-    byte_40F8585 = 1;
+    sub_B2C35C(&char___TypeInfo, nameAndDepth);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
+    byte_418653C = 1;
   }
   result = 0;
   if ( !LOBYTE(this->fields.myWidget) )
     WarBoardObjectAnimationEvent__Init(this, (const MethodInfo *)nameAndDepth);
-  v6 = (System_String_array *)sub_B17014(char___TypeInfo, 1LL, method);
+  v6 = (System_Char_array *)sub_B2C374(char___TypeInfo, 1LL);
   if ( !v6 )
     goto LABEL_40;
-  v8 = v6;
+  v7 = v6;
   if ( !v6->max_length )
     goto LABEL_38;
-  LOWORD(v6->m_Items[0]) = 44;
-  if ( !nameAndDepth || (v6 = System_String__Split(nameAndDepth, (System_Char_array *)v6, 0LL)) == 0LL )
+  v6->m_Items[2] = 44;
+  if ( !nameAndDepth || (v6 = (System_Char_array *)System_String__Split(nameAndDepth, v6, 0LL)) == 0LL )
 LABEL_40:
-    sub_B170D4();
-  v9 = *(_QWORD *)&v6->max_length;
-  v10 = v6;
-  if ( (int)v9 >= 2 )
+    sub_B2C434(v6, v7);
+  v8 = *(_QWORD *)&v6->max_length;
+  v9 = v6;
+  if ( (int)v8 >= 2 )
   {
-    v11 = (unsigned int)v9 >> 1;
-    if ( (_DWORD)v11 )
+    v10 = (unsigned int)v8 >> 1;
+    if ( (_DWORD)v10 )
     {
       max_length = (unsigned int)*(_QWORD *)&v6->max_length;
+      v12 = 0LL;
       v13 = 0LL;
-      v14 = 0LL;
       while ( 1 )
       {
-        v15 = *(System_String_o **)((char *)v10->m_Items + (v14 << 33 >> 29));
-        v16 = v13 | 1;
+        v14 = *(System_String_o **)((char *)&v9->m_Items[2] + (v13 << 33 >> 29));
+        v15 = v12 | 1;
         result = 0;
-        if ( v16 >= max_length )
+        if ( v15 >= max_length )
           goto LABEL_38;
-        v6 = (System_String_array *)System_Int32__TryParse(v10->m_Items[(int)v16], &result, 0LL);
+        v6 = (System_Char_array *)System_Int32__TryParse(
+                                    *(System_String_o **)&v9->m_Items[4 * (int)v15 + 2],
+                                    &result,
+                                    0LL);
         if ( ((unsigned __int8)v6 & 1) != 0 )
         {
           children = (UnityEngine_Object_o *)this->fields.children;
@@ -354,20 +351,20 @@ LABEL_40:
           {
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           }
-          v6 = (System_String_array *)UnityEngine_Object__op_Inequality(children, 0LL, 0LL);
+          v6 = (System_Char_array *)UnityEngine_Object__op_Inequality(children, 0LL, 0LL);
           if ( ((unsigned __int8)v6 & 1) != 0 )
           {
-            v18 = (UnityEngine_Object_o *)this->fields.children;
-            if ( !v18 )
+            v6 = (System_Char_array *)this->fields.children;
+            if ( !v6 )
               goto LABEL_40;
-            name = UnityEngine_Object__get_name(v18, 0LL);
-            v6 = (System_String_array *)System_String__op_Equality(name, v15, 0LL);
+            name = UnityEngine_Object__get_name((UnityEngine_Object_o *)v6, 0LL);
+            v6 = (System_Char_array *)System_String__op_Equality(name, v14, 0LL);
             if ( ((unsigned __int8)v6 & 1) != 0 )
             {
-              v20 = (UIWidget_o *)this->fields.children;
-              if ( !v20 )
+              v6 = (System_Char_array *)this->fields.children;
+              if ( !v6 )
                 goto LABEL_40;
-              UIWidget__set_depth(v20, result, 0LL);
+              UIWidget__set_depth((UIWidget_o *)v6, result, 0LL);
             }
           }
           klass = this[1].klass;
@@ -382,47 +379,47 @@ LABEL_40:
           }
         }
 LABEL_36:
-        if ( ++v14 >= v11 )
+        if ( ++v13 >= v10 )
           return;
-        max_length = v10->max_length;
-        v13 = 2 * v14;
-        if ( 2 * v14 >= max_length )
+        max_length = v9->max_length;
+        v12 = 2 * v13;
+        if ( 2 * v13 >= max_length )
           goto LABEL_38;
       }
-      v23 = 1;
+      v20 = 1;
       while ( 1 )
       {
-        v24 = v23 - 1;
-        if ( (unsigned int)(v23 - 1) >= LODWORD(klass->_1.namespaze) )
+        v21 = v20 - 1;
+        if ( (unsigned int)(v20 - 1) >= LODWORD(klass->_1.namespaze) )
           break;
-        v25 = v24;
-        v26 = (UnityEngine_Object_o *)*((_QWORD *)&klass->_1.byval_arg.data + v24);
-        if ( !v26 )
+        v22 = v21;
+        v6 = (System_Char_array *)*((_QWORD *)&klass->_1.byval_arg.data + v21);
+        if ( !v6 )
           goto LABEL_40;
-        v27 = UnityEngine_Object__get_name(v26, 0LL);
-        v6 = (System_String_array *)System_String__op_Equality(v27, v15, 0LL);
+        v23 = UnityEngine_Object__get_name((UnityEngine_Object_o *)v6, 0LL);
+        v6 = (System_Char_array *)System_String__op_Equality(v23, v14, 0LL);
         if ( ((unsigned __int8)v6 & 1) != 0 )
         {
-          v28 = this[1].klass;
-          if ( !v28 )
+          v24 = this[1].klass;
+          if ( !v24 )
             goto LABEL_40;
-          if ( (unsigned int)v25 >= LODWORD(v28->_1.namespaze) )
+          if ( (unsigned int)v22 >= LODWORD(v24->_1.namespaze) )
             break;
-          v29 = (UIWidget_o *)*((_QWORD *)&v28->_1.byval_arg.data + v25);
-          if ( !v29 )
+          v6 = (System_Char_array *)*((_QWORD *)&v24->_1.byval_arg.data + v22);
+          if ( !v6 )
             goto LABEL_40;
-          UIWidget__set_depth(v29, result, 0LL);
+          UIWidget__set_depth((UIWidget_o *)v6, result, 0LL);
         }
-        if ( v23 >= (int)namespaze )
+        if ( v20 >= (int)namespaze )
           goto LABEL_36;
         klass = this[1].klass;
-        ++v23;
+        ++v20;
         if ( !klass )
           goto LABEL_40;
       }
 LABEL_38:
-      sub_B17100(v6, v8, v7);
-      sub_B170A0();
+      v25 = sub_B2C460(v6);
+      sub_B2C400(v25, 0LL);
     }
   }
 }

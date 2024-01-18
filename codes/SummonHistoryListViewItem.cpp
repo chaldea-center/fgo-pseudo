@@ -14,15 +14,15 @@ void __fastcall SummonHistoryListViewItem___ctor(
   System_Int32_array *v13; // x7
 
   v7 = this;
-  ListViewItem___ctor_30173668((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
   v7->fields._Message_k__BackingField = message;
   v7 = (SummonHistoryListViewItem_o *)((char *)v7 + 112);
-  sub_B16F98((BattleServantConfConponent_o *)v7, (System_Int32_array **)message, v8, v9, v10, v11, v12, v13);
+  sub_B2C2F8((BattleServantConfConponent_o *)v7, (System_Int32_array **)message, v8, v9, v10, v11, v12, v13);
   LODWORD(v7->monitor) = layout;
 }
 
 
-void __fastcall SummonHistoryListViewItem___ctor_28733976(
+void __fastcall SummonHistoryListViewItem___ctor_28706476(
         SummonHistoryListViewItem_o *this,
         int32_t index,
         System_String_o *message,
@@ -46,9 +46,9 @@ void __fastcall SummonHistoryListViewItem___ctor_28733976(
   System_Int32_array *v23; // x7
 
   v11 = this;
-  ListViewItem___ctor_30173668((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
   v11->fields._Message_k__BackingField = message;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&v11->fields._Message_k__BackingField,
     (System_Int32_array **)message,
     v12,
@@ -60,7 +60,7 @@ void __fastcall SummonHistoryListViewItem___ctor_28733976(
   v11->fields._Title_k__BackingField = title;
   v11 = (SummonHistoryListViewItem_o *)((char *)v11 + 128);
   v11[-1].fields._itemID_k__BackingField = layout;
-  sub_B16F98((BattleServantConfConponent_o *)v11, (System_Int32_array **)title, v18, v19, v20, v21, v22, v23);
+  sub_B2C2F8((BattleServantConfConponent_o *)v11, (System_Int32_array **)title, v18, v19, v20, v21, v22, v23);
   LODWORD(v11->monitor) = objectId;
 }
 
@@ -114,7 +114,7 @@ void __fastcall SummonHistoryListViewItem__set_Message(
   System_Int32_array *v7; // x7
 
   this->fields._Message_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._Message_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -138,7 +138,7 @@ void __fastcall SummonHistoryListViewItem__set_Title(
   System_Int32_array *v7; // x7
 
   this->fields._Title_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._Title_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

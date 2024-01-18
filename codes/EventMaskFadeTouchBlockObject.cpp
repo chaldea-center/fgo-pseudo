@@ -23,7 +23,7 @@ void __fastcall EventMaskFadeTouchBlockObject__OnClickObject(
   {
     System_Action__Invoke(onClickCallback, 0LL);
     p_onClickCallback->klass = 0LL;
-    sub_B16F98(p_onClickCallback, 0LL, v4, v5, v6, v7, v8, v9);
+    sub_B2C2F8(p_onClickCallback, 0LL, v4, v5, v6, v7, v8, v9);
   }
 }
 
@@ -48,7 +48,7 @@ void __fastcall EventMaskFadeTouchBlockObject__RemoveCallback(
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0LL;
-      sub_B16F98(p_onClickCallback, 0LL, v3, v4, v5, v6, v7, v8);
+      sub_B2C2F8(p_onClickCallback, 0LL, v3, v4, v5, v6, v7, v8);
     }
   }
 }
@@ -75,7 +75,7 @@ void __fastcall EventMaskFadeTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (BattleServantConfConponent_c *)callback;
-      sub_B16F98(p_onClickCallback, (System_Int32_array **)callback, v5, v6, v7, v8, v9, v10);
+      sub_B2C2F8(p_onClickCallback, (System_Int32_array **)callback, v5, v6, v7, v8, v9, v10);
     }
   }
 }

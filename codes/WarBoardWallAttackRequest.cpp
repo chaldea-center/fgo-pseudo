@@ -28,10 +28,10 @@ void __fastcall WarBoardWallAttackRequest__backgroundErrorRetry(
         WarBoardWallAttackRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40FA91E & 1) == 0 )
+  if ( (byte_41888FC & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, method);
-    byte_40FA91E = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, method);
+    byte_41888FC = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -61,27 +61,29 @@ void __fastcall WarBoardWallAttackRequest__beginRequest(
   __int64 v21; // x1
   __int64 v22; // x1
   __int64 v23; // x1
+  __int64 v24; // x0
+  __int64 v25; // x1
 
-  if ( (byte_40FA91D & 1) == 0 )
+  if ( (byte_41888FB & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_22171/*"stageId"*/, *(_QWORD *)&stageId);
-    sub_B16FFC(&StringLiteral_16619/*"befSquareIndex"*/, v18);
-    sub_B16FFC(&StringLiteral_21382/*"pieceIndex"*/, v19);
-    sub_B16FFC(&StringLiteral_19013/*"groupId"*/, v20);
-    sub_B16FFC(&StringLiteral_18734/*"forceId"*/, v21);
-    sub_B16FFC(&StringLiteral_16221/*"aftSquareIndex"*/, v22);
-    sub_B16FFC(&StringLiteral_22523/*"targetWallId"*/, v23);
-    byte_40FA91D = 1;
+    sub_B2C35C(&StringLiteral_22263/*"stageId"*/, *(_QWORD *)&stageId);
+    sub_B2C35C(&StringLiteral_16683/*"befSquareIndex"*/, v18);
+    sub_B2C35C(&StringLiteral_21474/*"pieceIndex"*/, v19);
+    sub_B2C35C(&StringLiteral_19086/*"groupId"*/, v20);
+    sub_B2C35C(&StringLiteral_18806/*"forceId"*/, v21);
+    sub_B2C35C(&StringLiteral_16286/*"aftSquareIndex"*/, v22);
+    sub_B2C35C(&StringLiteral_22616/*"targetWallId"*/, v23);
+    byte_41888FB = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22171/*"stageId"*/, stageId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18734/*"forceId"*/, forceId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19013/*"groupId"*/, groupId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21382/*"pieceIndex"*/, pieceIndex, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22523/*"targetWallId"*/, targetWallId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16619/*"befSquareIndex"*/, befSquareIndex, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16221/*"aftSquareIndex"*/, aftSquareIndex, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22263/*"stageId"*/, stageId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18806/*"forceId"*/, forceId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19086/*"groupId"*/, groupId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21474/*"pieceIndex"*/, pieceIndex, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22616/*"targetWallId"*/, targetWallId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16683/*"befSquareIndex"*/, befSquareIndex, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16286/*"aftSquareIndex"*/, aftSquareIndex, 0LL);
   if ( !warBoardData )
-    sub_B170D4();
+    sub_B2C434(v24, v25);
   WarBoardData__SetRequest(warBoardData, (RequestBase_o *)this, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
@@ -94,11 +96,11 @@ System_String_o *__fastcall WarBoardWallAttackRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_40FA91C & 1) == 0 )
+  if ( (byte_41888FA & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_23119/*"warBoard/wallAttack"*/, v2);
-    byte_40FA91C = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, method);
+    sub_B2C35C(&StringLiteral_23213/*"warBoard/wallAttack"*/, v2);
+    byte_41888FA = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -106,7 +108,7 @@ System_String_o *__fastcall WarBoardWallAttackRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_23119/*"warBoard/wallAttack"*/, 0LL);
+  return System_String__Concat_44305532(BaseUrl, (System_String_o *)StringLiteral_23213/*"warBoard/wallAttack"*/, 0LL);
 }
 
 
@@ -135,15 +137,15 @@ void __fastcall WarBoardWallAttackRequest__requestCompleted(
   Il2CppObject *v14; // x0
   System_String_o *v15; // x1
 
-  if ( (byte_40FA91F & 1) == 0 )
+  if ( (byte_41888FD & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
-    sub_B16FFC(&JsonManager_TypeInfo, v6);
-    sub_B16FFC(&ResponseCommandKind_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v8);
-    sub_B16FFC(&StringLiteral_23121/*"warBoardData"*/, v9);
-    byte_40FA91F = 1;
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
+    sub_B2C35C(&JsonManager_TypeInfo, v6);
+    sub_B2C35C(&ResponseCommandKind_TypeInfo, v7);
+    sub_B2C35C(&StringLiteral_21068/*"ng"*/, v8);
+    sub_B2C35C(&StringLiteral_23215/*"warBoardData"*/, v9);
+    byte_41888FD = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -152,26 +154,26 @@ void __fastcall WarBoardWallAttackRequest__requestCompleted(
   }
   v10 = ResponseCommandKind__SearchData(96, responseList, 0LL);
   if ( v10
-    && (v11 = v10, ResponseData__checkError_30924960(v10, 0LL))
+    && (v11 = v10, ResponseData__checkError_31019724(v10, 0LL))
     && (success = (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v11->fields.success) != 0LL )
   {
     Item = (Il2CppObject *)System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
                              success,
-                             (System_Type_o *)StringLiteral_23121/*"warBoardData"*/,
-                             (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                             (System_Type_o *)StringLiteral_23215/*"warBoardData"*/,
+                             (const MethodInfo_2DB1BFC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v14 = RequestBase__UnpackToMessagePack((RequestBase_o *)this, Item, 0LL);
     System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
       (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)success,
-      (System_Xml_XmlQualifiedName_o *)StringLiteral_23121/*"warBoardData"*/,
+      (System_Xml_XmlQualifiedName_o *)StringLiteral_23215/*"warBoardData"*/,
       (System_Xml_Schema_XmlSchemaObject_o *)v14,
-      (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+      (const MethodInfo_2DB1C98 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v15 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0LL);
   }
   else
   {
-    v15 = (System_String_o *)StringLiteral_20980/*"ng"*/;
+    v15 = (System_String_o *)StringLiteral_21068/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v15, 0LL);
 }

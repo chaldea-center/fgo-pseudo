@@ -13,13 +13,13 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *baseButton; // x20
-  struct UICommonButton_o *v6; // x0
+  __int64 v6; // x1
   struct UICommonButton_o *v7; // x0
 
-  if ( (byte_40F8117 & 1) == 0 )
+  if ( (byte_4185E2F & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, item);
-    byte_40F8117 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, item);
+    byte_4185E2F = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -29,15 +29,15 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
   }
   if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
   {
-    v6 = this->fields.baseButton;
-    if ( !v6
-      || (((void (__fastcall *)(struct UICommonButton_o *, __int64, Il2CppMethodPointer))v6->klass->vtable._5_set_isEnabled.method)(
-            v6,
+    v7 = this->fields.baseButton;
+    if ( !v7
+      || (((void (__fastcall *)(struct UICommonButton_o *, __int64, Il2CppMethodPointer))v7->klass->vtable._5_set_isEnabled.method)(
+            v7,
             1LL,
-            v6->klass->vtable._6_OnInit.methodPtr),
+            v7->klass->vtable._6_OnInit.methodPtr),
           (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_B170D4();
+      sub_B2C434(v7, v6);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))v7->klass->vtable._14_SetState.method)(
       v7,
@@ -57,19 +57,17 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
   __int64 v7; // x1
   struct SvtCoinEntity_o *svtCoinEntity; // x8
   ItemIconComponent_o *itemIcon; // x0
-  int32_t itemId; // w1
-  UIIconLabel_o *iconInfoLabel; // x0
+  __int64 itemId; // x1
   struct UserSvtCoinEntity_o *userSvtCoinEntity; // x8
   UILabel_o *possessionNum; // x19
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x0
-  int v16; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v13; // x0
+  int v14; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_40F8116 & 1) == 0 )
+  if ( (byte_4185E2E & 1) == 0 )
   {
-    sub_B16FFC(&int_TypeInfo, item);
-    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v7);
-    byte_40F8116 = 1;
+    sub_B2C35C(&int_TypeInfo, item);
+    sub_B2C35C(&StringLiteral_23489/*"{0:#,0}"*/, v7);
+    byte_4185E2E = 1;
   }
   if ( item && mode )
   {
@@ -77,31 +75,31 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
     itemIcon = this->fields.itemIcon;
     if ( svtCoinEntity )
     {
-      itemId = svtCoinEntity->fields.itemId;
+      itemId = (unsigned int)svtCoinEntity->fields.itemId;
       if ( !itemIcon )
         goto LABEL_15;
     }
     else
     {
-      itemId = 0;
+      itemId = 0LL;
       if ( !itemIcon )
         goto LABEL_15;
     }
     ItemIconComponent__SetItem(itemIcon, itemId, -1, 0LL);
-    iconInfoLabel = this->fields.iconInfoLabel;
-    if ( !iconInfoLabel )
+    itemIcon = (ItemIconComponent_o *)this->fields.iconInfoLabel;
+    if ( !itemIcon )
       goto LABEL_15;
-    UIIconLabel__Set(iconInfoLabel, item->fields.iconLabelInfo, 0LL);
+    UIIconLabel__Set((UIIconLabel_o *)itemIcon, item->fields.iconLabelInfo, 0LL);
     userSvtCoinEntity = item->fields.userSvtCoinEntity;
     possessionNum = this->fields.possessionNum;
     if ( userSvtCoinEntity )
       LODWORD(userSvtCoinEntity) = userSvtCoinEntity->fields.num;
-    v16 = (int)userSvtCoinEntity;
-    v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
-    v15 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v14, 0LL);
+    v14 = (int)userSvtCoinEntity;
+    v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
+    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_23489/*"{0:#,0}"*/, v13, 0LL);
     if ( !possessionNum )
 LABEL_15:
-      sub_B170D4();
-    UILabel__set_text(possessionNum, v15, 0LL);
+      sub_B2C434(itemIcon, itemId);
+    UILabel__set_text(possessionNum, (System_String_o *)itemIcon, 0LL);
   }
 }

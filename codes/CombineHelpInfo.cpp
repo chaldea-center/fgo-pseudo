@@ -24,7 +24,7 @@ void __fastcall CombineHelpInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v10->fields.kind = kind;
   v10->fields.textCode = textCode;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&v10->fields.textCode,
     (System_Int32_array **)textCode,
     v11,
@@ -35,6 +35,6 @@ void __fastcall CombineHelpInfo___ctor(
     v16);
   v10->fields.imageName = imageName;
   v10 = (CombineHelpInfo_o *)((char *)v10 + 32);
-  sub_B16F98((BattleServantConfConponent_o *)v10, (System_Int32_array **)imageName, v17, v18, v19, v20, v21, v22);
+  sub_B2C2F8((BattleServantConfConponent_o *)v10, (System_Int32_array **)imageName, v17, v18, v19, v20, v21, v22);
   LODWORD(v10->monitor) = line;
 }

@@ -27,9 +27,9 @@ void __fastcall PresentBoxNotificationListViewItem___ctor(
   System_Int32_array **v26; // x5
   System_Int32_array *v27; // x6
   System_Int32_array *v28; // x7
+  DataManager_o *Instance; // x0
+  __int64 v30; // x1
   int32_t giftType; // w8
-  WebViewManager_o *v30; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *v31; // x0
   struct ServantEntity_o *Entity; // x1
   System_String_array **v33; // x2
   System_String_array **v34; // x3
@@ -38,21 +38,19 @@ void __fastcall PresentBoxNotificationListViewItem___ctor(
   System_Int32_array *v37; // x6
   System_Int32_array *v38; // x7
   BattleServantConfConponent_o *p_svtEntity; // x0
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
 
-  if ( (byte_40F8FDA & 1) == 0 )
+  if ( (byte_4186B75 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&index);
-    sub_B16FFC(&Method_DataManager_GetMasterData_ServantMaster___, v7);
-    sub_B16FFC(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
-    sub_B16FFC(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v9);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    byte_40F8FDA = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&index);
+    sub_B2C35C(&Method_DataManager_GetMasterData_ServantMaster___, v7);
+    sub_B2C35C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
+    sub_B2C35C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v9);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    byte_4186B75 = 1;
   }
-  ListViewItem___ctor_30173668((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
   this->fields.entity = e;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.entity,
     (System_Int32_array **)e,
     v11,
@@ -62,53 +60,53 @@ void __fastcall PresentBoxNotificationListViewItem___ctor(
     v15,
     v16);
   this->fields.itemEntity = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.itemEntity, 0LL, v17, v18, v19, v20, v21, v22);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.itemEntity, 0LL, v17, v18, v19, v20, v21, v22);
   this->fields.svtEntity = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.svtEntity, 0LL, v23, v24, v25, v26, v27, v28);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.svtEntity, 0LL, v23, v24, v25, v26, v27, v28);
   if ( !e )
     goto LABEL_15;
   UserPresentBoxEntity__GetInfo(e, &this->fields.presentName, &this->fields.presentCount, 0LL);
   giftType = e->fields.giftType;
   if ( (unsigned int)(giftType - 6) < 2 || giftType == 1 )
   {
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
-      MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                            (DataManager_o *)Instance,
-                                                                                            (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ServantMaster___);
-      if ( MasterData_WarQuestSelectionMaster )
+      Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                    Instance,
+                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ServantMaster___);
+      if ( Instance )
       {
         Entity = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                             MasterData_WarQuestSelectionMaster,
+                                             (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                              e->fields.objectId,
-                                             (const MethodInfo_266F388 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                             (const MethodInfo_24E40D0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         this->fields.svtEntity = Entity;
         p_svtEntity = (BattleServantConfConponent_o *)&this->fields.svtEntity;
         goto LABEL_13;
       }
     }
 LABEL_15:
-    sub_B170D4();
+    sub_B2C434(Instance, v30);
   }
   if ( giftType == 2 )
   {
-    v30 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    if ( v30 )
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( Instance )
     {
-      v31 = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                             (DataManager_o *)v30,
-                                                             (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_ItemMaster___);
-      if ( v31 )
+      Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                    Instance,
+                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ItemMaster___);
+      if ( Instance )
       {
         Entity = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-                                             v31,
+                                             (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                              e->fields.objectId,
-                                             (const MethodInfo_266F388 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                             (const MethodInfo_24E40D0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
         this->fields.itemEntity = (struct ItemEntity_o *)Entity;
         p_svtEntity = (BattleServantConfConponent_o *)&this->fields.itemEntity;
 LABEL_13:
-        sub_B16F98(p_svtEntity, (System_Int32_array **)Entity, v33, v34, v35, v36, v37, v38);
+        sub_B2C2F8(p_svtEntity, (System_Int32_array **)Entity, v33, v34, v35, v36, v37, v38);
         return;
       }
     }
@@ -129,12 +127,12 @@ System_String_o *__fastcall PresentBoxNotificationListViewItem__ToString(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40F8FDB & 1) == 0 )
+  if ( (byte_4186B76 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_10714/*"Present "*/, method);
-    byte_40F8FDB = 1;
+    sub_B2C35C(&StringLiteral_10750/*"Present "*/, method);
+    byte_4186B76 = 1;
   }
-  return System_String__Concat_43743732((System_String_o *)StringLiteral_10714/*"Present "*/, this->fields.presentName, 0LL);
+  return System_String__Concat_44305532((System_String_o *)StringLiteral_10750/*"Present "*/, this->fields.presentName, 0LL);
 }
 
 

@@ -11,5 +11,5 @@ void __fastcall EventTowerReward___ctor(EventTowerReward_o *this, const MethodIn
   *(_OWORD *)&this->fields.iconId = 0u;
   *(_OWORD *)&this->fields.limitCount = 0u;
   *(_OWORD *)&this->fields.eventId = 0u;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields.voiceIds, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.voiceIds, 0LL, v3, v4, v5, v6, v7, v8);
 }

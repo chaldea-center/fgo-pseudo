@@ -13,11 +13,11 @@ void __fastcall UpdateIntervalBuffViewBattleLogicTask___ctor(
 
   v4 = (BattleServantConfConponent_o *)this;
   BattleLogicTask___ctor((BattleLogicTask_o *)this, 0LL);
-  v4->fields.AbillityTab = (struct UnityEngine_GameObject_o *)actData;
-  v4 = (BattleServantConfConponent_o *)((char *)v4 + 208);
-  LODWORD(v4[-1].fields.npSpeedChange) = 58;
-  sub_B16F98(v4, (System_Int32_array **)actData, v5, v6, v7, v8, v9, v10);
-  BYTE5(v4[-1].fields.BattleAssetUIAtlas) = 1;
+  v4->fields.BattleServantAbilityObj = (struct UnityEngine_GameObject_o *)actData;
+  v4 = (BattleServantConfConponent_o *)((char *)v4 + 224);
+  LODWORD(v4[-1].fields.CardAndCommandObj) = 58;
+  sub_B2C2F8(v4, (System_Int32_array **)actData, v5, v6, v7, v8, v9, v10);
+  BYTE1(v4[-1].fields.BattleAssetUIAtlas) = 1;
 }
 
 
@@ -26,24 +26,17 @@ BattleActionData_o *__fastcall UpdateIntervalBuffViewBattleLogicTask__MakeAction
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
   BattleActionData_o *baseActData; // x19
-  UpdateViewIntervalBuffActionData_o *v7; // x20
-  const MethodInfo *v8; // x2
+  UpdateViewIntervalBuffActionData_o *v5; // x20
+  const MethodInfo *v6; // x2
 
-  if ( (byte_40FAA9A & 1) == 0 )
+  if ( (byte_4188A78 & 1) == 0 )
   {
-    sub_B16FFC(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
-    byte_40FAA9A = 1;
+    sub_B2C35C(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
+    byte_4188A78 = 1;
   }
   baseActData = this->fields.baseActData;
-  v7 = (UpdateViewIntervalBuffActionData_o *)sub_B170CC(
-                                               UpdateViewIntervalBuffActionData_TypeInfo,
-                                               logic,
-                                               method,
-                                               v3,
-                                               v4);
-  UpdateViewIntervalBuffActionData___ctor(v7, baseActData, v8);
-  return (BattleActionData_o *)v7;
+  v5 = (UpdateViewIntervalBuffActionData_o *)sub_B2C42C(UpdateViewIntervalBuffActionData_TypeInfo);
+  UpdateViewIntervalBuffActionData___ctor(v5, baseActData, v6);
+  return (BattleActionData_o *)v5;
 }

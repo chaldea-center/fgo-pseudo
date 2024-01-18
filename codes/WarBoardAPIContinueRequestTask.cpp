@@ -6,7 +6,7 @@ void __fastcall WarBoardAPIContinueRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_22956192(
+  WarBoardAPIRequestTask___ctor_22725128(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
@@ -21,9 +21,9 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
 {
   __int64 v3; // x1
   __int64 v4; // x1
-  WebViewManager_o *Instance; // x0
-  WarBoardData_o *monitor; // x20
-  RequestBase_o *Request_WarBoardWallAttackRequest; // x0
+  WarBoardContinueRequest_o *Instance; // x0
+  __int64 v6; // x1
+  WarBoardData_o *paramString; // x20
   WarBoardContinueRequest_o *v8; // x21
   System_String_array **v9; // x2
   System_String_array **v10; // x3
@@ -33,42 +33,43 @@ void __fastcall WarBoardAPIContinueRequestTask__SetRequest(
   System_Int32_array *v14; // x7
   int32_t id; // w0
 
-  if ( (byte_40F8C00 & 1) == 0 )
+  if ( (byte_4186792 & 1) == 0 )
   {
-    sub_B16FFC(&Method_NetworkManager_getRequest_WarBoardContinueRequest___, method);
-    sub_B16FFC(&NetworkManager_TypeInfo, v3);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_40F8C00 = 1;
+    sub_B2C35C(&Method_NetworkManager_getRequest_WarBoardContinueRequest___, method);
+    sub_B2C35C(&NetworkManager_TypeInfo, v3);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_4186792 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardContinueRequest_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
-  monitor = (WarBoardData_o *)Instance[4].monitor;
+  paramString = (WarBoardData_o *)Instance[10].fields.paramString;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
-  Request_WarBoardWallAttackRequest = (RequestBase_o *)NetworkManager__getRequest_WarBoardWallAttackRequest_(
-                                                         0LL,
-                                                         (const MethodInfo_19DD960 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
-  if ( !Request_WarBoardWallAttackRequest )
+  Instance = (WarBoardContinueRequest_o *)NetworkManager__getRequest_WarBoardWallAttackRequest_(
+                                            0LL,
+                                            (const MethodInfo_1AB4500 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+  if ( !Instance )
     goto LABEL_12;
-  v8 = (WarBoardContinueRequest_o *)Request_WarBoardWallAttackRequest;
-  if ( !RequestBase__beginRetryRequest(Request_WarBoardWallAttackRequest, 0, 0LL) )
+  v8 = Instance;
+  Instance = (WarBoardContinueRequest_o *)RequestBase__beginRetryRequest((RequestBase_o *)Instance, 0, 0LL);
+  if ( ((unsigned __int8)Instance & 1) == 0 )
   {
-    if ( monitor )
+    if ( paramString )
     {
-      id = WarBoardData__get_id(monitor, 0LL);
-      WarBoardContinueRequest__beginRequest(v8, id, this->fields.consumeType, monitor, 0LL);
+      id = WarBoardData__get_id(paramString, 0LL);
+      WarBoardContinueRequest__beginRequest(v8, id, this->fields.consumeType, paramString, 0LL);
       goto LABEL_11;
     }
 LABEL_12:
-    sub_B170D4();
+    sub_B2C434(Instance, v6);
   }
 LABEL_11:
   this->fields.request = (struct RequestBase_o *)v8;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.request,
     (System_Int32_array **)v8,
     v9,

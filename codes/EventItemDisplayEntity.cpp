@@ -1,28 +1,28 @@
 void __fastcall EventItemDisplayEntity___ctor(EventItemDisplayEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F8838 & 1) == 0 )
+  if ( (byte_4188D3E & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40F8838 = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4188D3E = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventItemDisplayEntity__CreatePK(int32_t id, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_40F8836 & 1) == 0 )
+  if ( (byte_4188D3C & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&eventId);
-    byte_40F8836 = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&eventId);
+    byte_4188D3C = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            eventId,
-           (const MethodInfo_18C21A0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -63,25 +63,24 @@ bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this,
   __int64 v4; // x1
   __int64 v5; // x1
   int64_t Time; // x0
-  WebViewManager_o *Instance; // x0
-  WarQuestSelectionMaster_o *MasterData_WarQuestSelectionMaster; // x0
-  const MethodInfo *v9; // x1
-  __int64 v10; // x2
+  DataManager_o *Instance; // x0
+  const MethodInfo *v8; // x1
   struct System_Int32_array *conditionDetailIds; // x20
-  __int64 v12; // x8
-  DataMasterBase_WarMaster__WarEntity__int__o *v13; // x19
-  unsigned __int64 v14; // x21
+  __int64 v10; // x8
+  DataMasterBase_WarMaster__WarEntity__int__o *v11; // x19
+  unsigned __int64 v12; // x21
+  __int64 v14; // x0
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_40F8837 & 1) == 0 )
+  if ( (byte_4188D3D & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___, method);
-    sub_B16FFC(
+    sub_B2C35C(&Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___, method);
+    sub_B2C35C(
       &Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__,
       v3);
-    sub_B16FFC(&NetworkManager_TypeInfo, v4);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_40F8837 = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, v4);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4188D3D = 1;
   }
   entity = 0LL;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -92,50 +91,51 @@ bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this,
   Time = NetworkManager__getTime(0LL);
   if ( Time < this->fields.openedAt || Time >= this->fields.closedAt )
     return 0;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
-  MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                         (DataManager_o *)Instance,
-                                         (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
+  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                Instance,
+                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
   conditionDetailIds = this->fields.conditionDetailIds;
   if ( !conditionDetailIds )
     goto LABEL_20;
-  v12 = *(_QWORD *)&conditionDetailIds->max_length;
-  if ( (int)v12 >= 1 )
+  v10 = *(_QWORD *)&conditionDetailIds->max_length;
+  if ( (int)v10 >= 1 )
   {
-    v13 = (DataMasterBase_WarMaster__WarEntity__int__o *)MasterData_WarQuestSelectionMaster;
-    v14 = 0LL;
+    v11 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
+    v12 = 0LL;
     while ( 1 )
     {
-      if ( v14 >= (unsigned int)v12 )
+      if ( v12 >= (unsigned int)v10 )
       {
-        sub_B17100(MasterData_WarQuestSelectionMaster, v9, v10);
-        sub_B170A0();
+        v14 = sub_B2C460(Instance);
+        sub_B2C400(v14, 0LL);
       }
-      if ( !v13 )
+      if ( !v11 )
         break;
-      MasterData_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                                                                          v13,
-                                                                          &entity,
-                                                                          conditionDetailIds->m_Items[v14 + 1],
-                                                                          (const MethodInfo_266F3E4 *)Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
-      if ( ((unsigned __int8)MasterData_WarQuestSelectionMaster & 1) != 0 )
+      Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
+                                    v11,
+                                    &entity,
+                                    conditionDetailIds->m_Items[v12 + 1],
+                                    (const MethodInfo_24E412C *)Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
+      if ( ((unsigned __int8)Instance & 1) != 0 )
       {
+        Instance = (DataManager_o *)entity;
         if ( !entity )
           break;
-        MasterData_WarQuestSelectionMaster = (WarQuestSelectionMaster_o *)EventItemDisplayReleaseEntity__IsCondEnable(
-                                                                            (EventItemDisplayReleaseEntity_o *)entity,
-                                                                            v9);
-        if ( ((unsigned __int8)MasterData_WarQuestSelectionMaster & 1) == 0 )
+        Instance = (DataManager_o *)EventItemDisplayReleaseEntity__IsCondEnable(
+                                      (EventItemDisplayReleaseEntity_o *)entity,
+                                      v8);
+        if ( ((unsigned __int8)Instance & 1) == 0 )
           return 0;
       }
-      LODWORD(v12) = conditionDetailIds->max_length;
-      if ( (__int64)++v14 >= (int)v12 )
+      LODWORD(v10) = conditionDetailIds->max_length;
+      if ( (__int64)++v12 >= (int)v10 )
         return 1;
     }
 LABEL_20:
-    sub_B170D4();
+    sub_B2C434(Instance, v8);
   }
   return 1;
 }

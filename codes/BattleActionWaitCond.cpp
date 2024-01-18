@@ -78,7 +78,7 @@ void __fastcall BattleActionWaitCond_UntilSideEffectInvisible___ctor(
   v4->fields._closeBtnObject = (struct UnityEngine_GameObject_o *)perf;
   v4 = (BattleServantConfConponent_o *)((char *)v4 + 24);
   *(_DWORD *)&v4[-1].fields.isOpenAfter = 1067450368;
-  sub_B16F98(v4, (System_Int32_array **)perf, v5, v6, v7, v8, v9, v10);
+  sub_B2C2F8(v4, (System_Int32_array **)perf, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -90,6 +90,6 @@ bool __fastcall BattleActionWaitCond_UntilSideEffectInvisible__IsWaitCond(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_B170D4();
+    sub_B2C434(this, method);
   return perf->fields._WaitDispEffectCount_k__BackingField > 0;
 }

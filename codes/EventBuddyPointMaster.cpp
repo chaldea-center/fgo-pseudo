@@ -1,14 +1,14 @@
 void __fastcall EventBuddyPointMaster___ctor(EventBuddyPointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FC582 & 1) == 0 )
+  if ( (byte_418A253 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__, method);
-    byte_40FC582 = 1;
+    sub_B2C35C(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__, method);
+    byte_418A253 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     397,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,18 @@ EventBuddyPointEntity_o *__fastcall EventBuddyPointMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40FC580 & 1) == 0 )
+  if ( (byte_418A251 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_40FC580 = 1;
+    byte_418A251 = 1;
   }
   PK = EventBuddyPointEntity__CreatePK(eventId, questId, questPhase, *(const MethodInfo **)&questPhase);
   return (EventBuddyPointEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                       (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                       PK,
-                                      (const MethodInfo_266F7D8 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__GetEntity__);
+                                      (const MethodInfo_24E4520 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__GetEntity__);
 }
 
 
@@ -47,69 +47,67 @@ EventBuddyPointEntity_o *__fastcall EventBuddyPointMaster__GetEntityIncludeQuest
 {
   __int64 v9; // x1
   __int64 v10; // x1
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  void *list; // x0
   EventBuddyPointEntity_o *v12; // x25
   EventBuddyPointEntity_o *v13; // x24
   int32_t v14; // w23
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v15; // x0
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  __int64 v17; // x10
-  int klass_high; // w8
-  int monitor; // w8
+  __int64 v15; // x10
+  int v16; // w8
+  int v17; // w8
 
-  if ( (byte_40FC583 & 1) == 0 )
+  if ( (byte_418A254 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
-    sub_B16FFC(&EventBuddyPointEntity_TypeInfo, v10);
-    byte_40FC583 = 1;
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
+    sub_B2C35C(&EventBuddyPointEntity_TypeInfo, v10);
+    byte_418A254 = 1;
   }
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+  list = this->fields.list;
   if ( !list )
 LABEL_21:
-    sub_B170D4();
+    sub_B2C434(list, *(_QWORD *)&eventId);
   v12 = 0LL;
   v13 = 0LL;
   v14 = 0;
   while ( v14 < System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-                  list,
-                  (const MethodInfo_290DE84 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
+                  (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
   {
-    v15 = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-    if ( !v15 )
+    list = this->fields.list;
+    if ( !list )
       goto LABEL_21;
-    Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-             v15,
+    list = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
+             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
              v14,
-             (const MethodInfo_290DF28 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-    if ( !Item )
+             (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+    if ( !list )
       goto LABEL_21;
-    v17 = *(&EventBuddyPointEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(&Item->klass->_2.bitflags2 + 1) < (unsigned int)v17
-      || (EventBuddyPointEntity_c *)Item->klass->_2.typeHierarchy[v17 - 1] != EventBuddyPointEntity_TypeInfo )
+    v15 = *(&EventBuddyPointEntity_TypeInfo->_2.bitflags2 + 1);
+    if ( *(unsigned __int8 *)(*(_QWORD *)list + 300LL) < (unsigned int)v15
+      || *(EventBuddyPointEntity_c **)(*(_QWORD *)(*(_QWORD *)list + 200LL) + 8 * v15 - 8) != EventBuddyPointEntity_TypeInfo )
     {
       goto LABEL_21;
     }
-    if ( LODWORD(Item[1].klass) == eventId )
+    if ( *((_DWORD *)list + 4) == eventId )
     {
-      klass_high = HIDWORD(Item[1].klass);
-      if ( klass_high >= 1 && klass_high == questId )
+      v16 = *((_DWORD *)list + 5);
+      if ( v16 >= 1 && v16 == questId )
       {
-        monitor = (int)Item[1].monitor;
-        if ( monitor >= 1 && monitor == questPhase )
+        v17 = *((_DWORD *)list + 6);
+        if ( v17 >= 1 && v17 == questPhase )
         {
-          v12 = (EventBuddyPointEntity_o *)Item;
+          v12 = (EventBuddyPointEntity_o *)list;
           break;
         }
-        if ( !monitor )
-          v12 = (EventBuddyPointEntity_o *)Item;
+        if ( !v17 )
+          v12 = (EventBuddyPointEntity_o *)list;
       }
-      else if ( !klass_high )
+      else if ( !v16 )
       {
-        v13 = (EventBuddyPointEntity_o *)Item;
+        v13 = (EventBuddyPointEntity_o *)list;
       }
     }
-    list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+    list = this->fields.list;
     ++v14;
     if ( !list )
       goto LABEL_21;
@@ -132,15 +130,15 @@ bool __fastcall EventBuddyPointMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40FC581 & 1) == 0 )
+  if ( (byte_418A252 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__, entity);
-    byte_40FC581 = 1;
+    sub_B2C35C(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__, entity);
+    byte_418A252 = 1;
   }
   PK = EventBuddyPointEntity__CreatePK(eventId, questId, questPhase, *(const MethodInfo **)&questId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__);
 }

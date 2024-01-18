@@ -16,15 +16,8 @@ void __fastcall PanelComponentBase__ClickPanel(PanelComponentBase_o *this, const
 
 void __fastcall PanelComponentBase__Initialize(PanelComponentBase_o *this, const MethodInfo *method)
 {
-  System_String_array **v2; // x2
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._OnClickPanel_k__BackingField = 0LL;
-  sub_B16F98((BattleServantConfConponent_o *)&this->fields._OnClickPanel_k__BackingField, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B2C2F8(&this->fields._OnClickPanel_k__BackingField, 0LL);
 }
 
 
@@ -35,12 +28,13 @@ void __fastcall PanelComponentBase__SetClosedPanelVisible(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *closedPanel; // x21
-  UnityEngine_GameObject_o *v6; // x0
+  __int64 v6; // x1
+  UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_40F8020 & 1) == 0 )
+  if ( (byte_4185205 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, value);
-    byte_40F8020 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, value);
+    byte_4185205 = 1;
   }
   closedPanel = (UnityEngine_Object_o *)this->fields.closedPanel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -50,10 +44,10 @@ void __fastcall PanelComponentBase__SetClosedPanelVisible(
   }
   if ( UnityEngine_Object__op_Inequality(closedPanel, 0LL, 0LL) )
   {
-    v6 = this->fields.closedPanel;
-    if ( !v6 )
-      sub_B170D4();
-    UnityEngine_GameObject__SetActive(v6, value, 0LL);
+    v7 = this->fields.closedPanel;
+    if ( !v7 )
+      sub_B2C434(0LL, v6);
+    UnityEngine_GameObject__SetActive(v7, value, 0LL);
   }
 }
 
@@ -63,22 +57,8 @@ void __fastcall PanelComponentBase__SetTheCallBackWhenClickPanel(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._OnClickPanel_k__BackingField = callback;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields._OnClickPanel_k__BackingField,
-    (System_Int32_array **)callback,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_B2C2F8(&this->fields._OnClickPanel_k__BackingField, callback);
 }
 
 
@@ -93,20 +73,6 @@ void __fastcall PanelComponentBase__set_OnClickPanel(
         System_Action_o *value,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields._OnClickPanel_k__BackingField = value;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields._OnClickPanel_k__BackingField,
-    (System_Int32_array **)value,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_B2C2F8(&this->fields._OnClickPanel_k__BackingField, value);
 }

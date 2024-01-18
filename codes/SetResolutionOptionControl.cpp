@@ -6,6 +6,7 @@ void __fastcall SetResolutionOptionControl___ctor(SetResolutionOptionControl_o *
 
 void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *this, const MethodInfo *method)
 {
+  SetResolutionOptionControl_o *v2; // x19
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
@@ -16,81 +17,69 @@ void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *t
   struct UIButton_o *normalButton; // x8
   __int128 v11; // q0
   struct UILabel_o *lowLabel; // x8
-  UIButton_o *v13; // x0
-  struct System_String_o *normalSprite; // x0
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
-  UIButton_o *lowButton; // x0
-  System_Int32_array **v22; // x0
-  System_String_array **v23; // x2
-  System_String_array **v24; // x3
-  System_Boolean_array **v25; // x4
-  System_Int32_array **v26; // x5
-  System_Int32_array *v27; // x6
-  System_Int32_array *v28; // x7
+  System_Int32_array **normalSprite; // x0
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
+  System_Int32_array **v20; // x0
+  System_String_array **v21; // x2
+  System_String_array **v22; // x3
+  System_Boolean_array **v23; // x4
+  System_Int32_array **v24; // x5
+  System_Int32_array *v25; // x6
+  System_Int32_array *v26; // x7
   bool IsEnableResolutionSetting; // w0
   UILabel_o *normalLabel; // x20
-  System_String_o **v31; // x8
-  System_String_o *v32; // x21
-  System_String_o *v33; // x0
-  UILabel_o *v34; // x20
-  System_String_o *v35; // x0
-  UILabel_o *v36; // x20
-  System_String_o *v37; // x0
+  System_String_o **v29; // x8
+  System_String_o *v30; // x21
+  UILabel_o *v31; // x20
+  UILabel_o *v32; // x20
   int32_t ResolutionType; // w1
-  const MethodInfo *v39; // x2
+  const MethodInfo *v34; // x2
 
-  if ( (byte_40FF301 & 1) == 0 )
+  v2 = this;
+  if ( (byte_418BC1F & 1) == 0 )
   {
-    sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&OptionManager_TypeInfo, v3);
-    sub_B16FFC(&ResolutionManager_TypeInfo, v4);
-    sub_B16FFC(&StringLiteral_9770/*"OPTION_RERSOLUTION_INFO_DISABLE"*/, v5);
-    sub_B16FFC(&StringLiteral_9769/*"OPTION_RERSOLUTION_INFO"*/, v6);
-    sub_B16FFC(&StringLiteral_9772/*"OPTION_RERSOLUTION_NORMAL"*/, v7);
-    sub_B16FFC(&StringLiteral_9771/*"OPTION_RERSOLUTION_LOW"*/, v8);
-    byte_40FF301 = 1;
+    sub_B2C35C(&LocalizationManager_TypeInfo, method);
+    sub_B2C35C(&OptionManager_TypeInfo, v3);
+    sub_B2C35C(&ResolutionManager_TypeInfo, v4);
+    sub_B2C35C(&StringLiteral_9800/*"OPTION_RERSOLUTION_INFO_DISABLE"*/, v5);
+    sub_B2C35C(&StringLiteral_9799/*"OPTION_RERSOLUTION_INFO"*/, v6);
+    sub_B2C35C(&StringLiteral_9802/*"OPTION_RERSOLUTION_NORMAL"*/, v7);
+    this = (SetResolutionOptionControl_o *)sub_B2C35C(&StringLiteral_9801/*"OPTION_RERSOLUTION_LOW"*/, v8);
+    byte_418BC1F = 1;
   }
-  if ( LOBYTE(this->fields.onButtonOutlineColor.fields.g) )
+  if ( LOBYTE(v2->fields.onButtonOutlineColor.fields.g) )
   {
-    klass_low = LOBYTE(this[1].klass);
+    klass_low = LOBYTE(v2[1].klass);
   }
   else
   {
-    normalButton = this->fields.normalButton;
-    LOBYTE(this->fields.onButtonOutlineColor.fields.g) = 1;
+    normalButton = v2->fields.normalButton;
+    LOBYTE(v2->fields.onButtonOutlineColor.fields.g) = 1;
     if ( !normalButton )
       goto LABEL_26;
     v11 = *(_OWORD *)&normalButton[1].fields.mSprite2D;
-    lowLabel = this->fields.lowLabel;
-    *(_OWORD *)&this->fields.onButtonOutlineColor.fields.b = v11;
+    lowLabel = v2->fields.lowLabel;
+    *(_OWORD *)&v2->fields.onButtonOutlineColor.fields.b = v11;
     if ( !lowLabel )
       goto LABEL_26;
-    v13 = *(UIButton_o **)&this->fields.isInit;
-    *(struct UnityEngine_Color_o *)&this->fields.offButtonOutlineColor.fields.b = lowLabel->fields.mEffectColor;
-    if ( !v13 )
+    this = *(SetResolutionOptionControl_o **)&v2->fields.isInit;
+    *(struct UnityEngine_Color_o *)&v2->fields.offButtonOutlineColor.fields.b = lowLabel->fields.mEffectColor;
+    if ( !this )
       goto LABEL_26;
-    normalSprite = UIButton__get_normalSprite(v13, 0LL);
-    this->fields.offButtonName = normalSprite;
-    sub_B16F98(
-      (BattleServantConfConponent_o *)&this->fields.offButtonName,
-      (System_Int32_array **)normalSprite,
-      v15,
-      v16,
-      v17,
-      v18,
-      v19,
-      v20);
-    lowButton = this->fields.lowButton;
-    if ( !lowButton )
+    normalSprite = (System_Int32_array **)UIButton__get_normalSprite((UIButton_o *)this, 0LL);
+    v2->fields.offButtonName = (struct System_String_o *)normalSprite;
+    sub_B2C2F8((BattleServantConfConponent_o *)&v2->fields.offButtonName, normalSprite, v14, v15, v16, v17, v18, v19);
+    this = (SetResolutionOptionControl_o *)v2->fields.lowButton;
+    if ( !this )
       goto LABEL_26;
-    v22 = (System_Int32_array **)UIButton__get_normalSprite(lowButton, 0LL);
-    *(_QWORD *)&this->fields.enableResolutionSetting = v22;
-    sub_B16F98((BattleServantConfConponent_o *)&this->fields.enableResolutionSetting, v22, v23, v24, v25, v26, v27, v28);
+    v20 = (System_Int32_array **)UIButton__get_normalSprite((UIButton_o *)this, 0LL);
+    *(_QWORD *)&v2->fields.enableResolutionSetting = v20;
+    sub_B2C2F8((BattleServantConfConponent_o *)&v2->fields.enableResolutionSetting, v20, v21, v22, v23, v24, v25, v26);
     if ( (BYTE3(ResolutionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !ResolutionManager_TypeInfo->_2.cctor_finished )
     {
@@ -98,41 +87,41 @@ void __fastcall SetResolutionOptionControl__Init(SetResolutionOptionControl_o *t
     }
     IsEnableResolutionSetting = ResolutionManager__IsEnableResolutionSetting(0LL);
     klass_low = IsEnableResolutionSetting;
-    LOBYTE(this[1].klass) = IsEnableResolutionSetting;
+    LOBYTE(v2[1].klass) = IsEnableResolutionSetting;
   }
-  normalLabel = this->fields.normalLabel;
+  normalLabel = v2->fields.normalLabel;
   if ( klass_low )
-    v31 = (System_String_o **)&StringLiteral_9769/*"OPTION_RERSOLUTION_INFO"*/;
+    v29 = (System_String_o **)&StringLiteral_9799/*"OPTION_RERSOLUTION_INFO"*/;
   else
-    v31 = (System_String_o **)&StringLiteral_9770/*"OPTION_RERSOLUTION_INFO_DISABLE"*/;
-  v32 = *v31;
+    v29 = (System_String_o **)&StringLiteral_9800/*"OPTION_RERSOLUTION_INFO_DISABLE"*/;
+  v30 = *v29;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v33 = LocalizationManager__Get(v32, 0LL);
+  this = (SetResolutionOptionControl_o *)LocalizationManager__Get(v30, 0LL);
   if ( !normalLabel
-    || (UILabel__set_text(normalLabel, v33, 0LL),
-        v34 = this->fields.lowLabel,
-        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_9772/*"OPTION_RERSOLUTION_NORMAL"*/, 0LL),
-        !v34)
-    || (UILabel__set_text(v34, v35, 0LL),
-        v36 = (UILabel_o *)this->fields.normalButton,
-        v37 = LocalizationManager__Get((System_String_o *)StringLiteral_9771/*"OPTION_RERSOLUTION_LOW"*/, 0LL),
-        !v36) )
+    || (UILabel__set_text(normalLabel, (System_String_o *)this, 0LL),
+        v31 = v2->fields.lowLabel,
+        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9802/*"OPTION_RERSOLUTION_NORMAL"*/, 0LL),
+        !v31)
+    || (UILabel__set_text(v31, (System_String_o *)this, 0LL),
+        v32 = (UILabel_o *)v2->fields.normalButton,
+        this = (SetResolutionOptionControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9801/*"OPTION_RERSOLUTION_LOW"*/, 0LL),
+        !v32) )
   {
 LABEL_26:
-    sub_B170D4();
+    sub_B2C434(this, method);
   }
-  UILabel__set_text(v36, v37, 0LL);
+  UILabel__set_text(v32, (System_String_o *)this, 0LL);
   if ( (BYTE3(OptionManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   }
   ResolutionType = OptionManager__GetResolutionType(0LL);
-  SetResolutionOptionControl__RefreshDisplay(this, ResolutionType, v39);
+  SetResolutionOptionControl__RefreshDisplay(v2, ResolutionType, v34);
 }
 
 
@@ -143,11 +132,11 @@ void __fastcall SetResolutionOptionControl__OnClickLowButton(
   __int64 v3; // x1
   const MethodInfo *v4; // x2
 
-  if ( (byte_40FF303 & 1) == 0 )
+  if ( (byte_418BC21 & 1) == 0 )
   {
-    sub_B16FFC(&OptionManager_TypeInfo, method);
-    sub_B16FFC(&SoundManager_TypeInfo, v3);
-    byte_40FF303 = 1;
+    sub_B2C35C(&OptionManager_TypeInfo, method);
+    sub_B2C35C(&SoundManager_TypeInfo, v3);
+    byte_418BC21 = 1;
   }
   if ( LOBYTE(this[1].klass) )
   {
@@ -184,11 +173,11 @@ void __fastcall SetResolutionOptionControl__OnClickNormalButton(
   __int64 v3; // x1
   const MethodInfo *v4; // x2
 
-  if ( (byte_40FF302 & 1) == 0 )
+  if ( (byte_418BC20 & 1) == 0 )
   {
-    sub_B16FFC(&OptionManager_TypeInfo, method);
-    sub_B16FFC(&SoundManager_TypeInfo, v3);
-    byte_40FF302 = 1;
+    sub_B2C35C(&OptionManager_TypeInfo, method);
+    sub_B2C35C(&SoundManager_TypeInfo, v3);
+    byte_418BC20 = 1;
   }
   if ( LOBYTE(this[1].klass) )
   {
@@ -224,36 +213,27 @@ void __fastcall SetResolutionOptionControl__RefreshDisplay(
         int32_t type,
         const MethodInfo *method)
 {
-  UILabel_o *v4; // x0
-  UILabel_o *v5; // x0
-  UIButton_o *v6; // x0
-  UIButton_o *v7; // x0
-  System_String_o *offButtonName; // x1
   UILabel_o *lowLabel; // x0
-  UILabel_o *normalButton; // x0
-  UIButton_o *lowButton; // x0
-  UIButton_o *v12; // x0
-  UIWidget_o *v13; // x20
-  int v14; // s0
-  UIButtonColor_o *v18; // x20
-  int v19; // s0
-  _DWORD *v23; // x20
-  int v24; // s0
-  int v25; // s1
-  int v26; // s2
-  int v27; // s3
-  _DWORD *v28; // x20
-  int v29; // s0
-  int v30; // s1
-  int v31; // s2
-  int v32; // s3
-  _DWORD *v33; // x19
-  int v34; // s0
-  int v35; // s1
-  int v36; // s2
-  int v37; // s3
-  UILabel_o *v38; // x0
-  UIButton_o *v39; // x0
+  System_String_o *offButtonName; // x1
+  UIWidget_o *normalButton; // x20
+  int v7; // s0
+  UIButtonColor_o *v11; // x20
+  int v12; // s0
+  _DWORD *v16; // x20
+  int v17; // s0
+  int v18; // s1
+  int v19; // s2
+  int v20; // s3
+  _DWORD *v21; // x20
+  int v22; // s0
+  int v23; // s1
+  int v24; // s2
+  int v25; // s3
+  _DWORD *v26; // x19
+  int v27; // s0
+  int v28; // s1
+  int v29; // s2
+  int v30; // s3
 
   if ( !LOBYTE(this[1].klass) )
   {
@@ -261,55 +241,55 @@ void __fastcall SetResolutionOptionControl__RefreshDisplay(
     if ( lowLabel )
     {
       UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.onButtonOutlineColor.fields.b, 0LL);
-      normalButton = (UILabel_o *)this->fields.normalButton;
-      if ( normalButton )
+      lowLabel = (UILabel_o *)this->fields.normalButton;
+      if ( lowLabel )
       {
-        UILabel__set_effectColor(
-          normalButton,
-          *(UnityEngine_Color_o *)&this->fields.offButtonOutlineColor.fields.b,
-          0LL);
-        lowButton = this->fields.lowButton;
-        if ( lowButton )
+        UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.offButtonOutlineColor.fields.b, 0LL);
+        lowLabel = (UILabel_o *)this->fields.lowButton;
+        if ( lowLabel )
         {
-          UIButton__set_normalSprite(lowButton, this->fields.offButtonName, 0LL);
-          v12 = *(UIButton_o **)&this->fields.isInit;
-          if ( v12 )
+          UIButton__set_normalSprite((UIButton_o *)lowLabel, this->fields.offButtonName, 0LL);
+          lowLabel = *(UILabel_o **)&this->fields.isInit;
+          if ( lowLabel )
           {
-            UIButton__set_normalSprite(v12, *(System_String_o **)&this->fields.enableResolutionSetting, 0LL);
-            v13 = (UIWidget_o *)this->fields.normalButton;
-            *(UnityEngine_Color_o *)&v14 = UnityEngine_Color__get_grey(0LL);
-            if ( v13 )
+            UIButton__set_normalSprite(
+              (UIButton_o *)lowLabel,
+              *(System_String_o **)&this->fields.enableResolutionSetting,
+              0LL);
+            normalButton = (UIWidget_o *)this->fields.normalButton;
+            *(UnityEngine_Color_o *)&v7 = UnityEngine_Color__get_grey(0LL);
+            if ( normalButton )
             {
-              UIWidget__set_color(v13, *(UnityEngine_Color_o *)&v14, 0LL);
-              v18 = *(UIButtonColor_o **)&this->fields.isInit;
-              *(UnityEngine_Color_o *)&v19 = UnityEngine_Color__get_grey(0LL);
-              if ( v18 )
+              UIWidget__set_color(normalButton, *(UnityEngine_Color_o *)&v7, 0LL);
+              v11 = *(UIButtonColor_o **)&this->fields.isInit;
+              *(UnityEngine_Color_o *)&v12 = UnityEngine_Color__get_grey(0LL);
+              if ( v11 )
               {
-                UIButtonColor__set_defaultColor(v18, *(UnityEngine_Color_o *)&v19, 0LL);
-                v23 = *(_DWORD **)&this->fields.isInit;
-                *(UnityEngine_Color_o *)&v24 = UnityEngine_Color__get_grey(0LL);
-                if ( v23 )
+                UIButtonColor__set_defaultColor(v11, *(UnityEngine_Color_o *)&v12, 0LL);
+                v16 = *(_DWORD **)&this->fields.isInit;
+                *(UnityEngine_Color_o *)&v17 = UnityEngine_Color__get_grey(0LL);
+                if ( v16 )
                 {
-                  v23[8] = v24;
-                  v23[9] = v25;
-                  v23[10] = v26;
-                  v23[11] = v27;
-                  v28 = *(_DWORD **)&this->fields.isInit;
-                  *(UnityEngine_Color_o *)&v29 = UnityEngine_Color__get_grey(0LL);
-                  if ( v28 )
+                  v16[8] = v17;
+                  v16[9] = v18;
+                  v16[10] = v19;
+                  v16[11] = v20;
+                  v21 = *(_DWORD **)&this->fields.isInit;
+                  *(UnityEngine_Color_o *)&v22 = UnityEngine_Color__get_grey(0LL);
+                  if ( v21 )
                   {
-                    v28[12] = v29;
-                    v28[13] = v30;
-                    v28[14] = v31;
-                    v28[15] = v32;
-                    v33 = *(_DWORD **)&this->fields.isInit;
-                    *(UnityEngine_Color_o *)&v34 = UnityEngine_Color__get_grey(0LL);
-                    if ( v33 )
+                    v21[12] = v22;
+                    v21[13] = v23;
+                    v21[14] = v24;
+                    v21[15] = v25;
+                    v26 = *(_DWORD **)&this->fields.isInit;
+                    *(UnityEngine_Color_o *)&v27 = UnityEngine_Color__get_grey(0LL);
+                    if ( v26 )
                     {
-                      v33[16] = v34;
-                      v33[17] = v35;
-                      v33[18] = v36;
-                      v33[19] = v37;
+                      v26[16] = v27;
+                      v26[17] = v28;
+                      v26[18] = v29;
+                      v26[19] = v30;
                       return;
                     }
                   }
@@ -322,22 +302,22 @@ void __fastcall SetResolutionOptionControl__RefreshDisplay(
     }
     goto LABEL_24;
   }
-  v4 = this->fields.lowLabel;
+  lowLabel = this->fields.lowLabel;
   if ( !type )
   {
-    if ( v4 )
+    if ( lowLabel )
     {
-      UILabel__set_effectColor(v4, *(UnityEngine_Color_o *)&this->fields.onButtonOutlineColor.fields.b, 0LL);
-      v38 = (UILabel_o *)this->fields.normalButton;
-      if ( v38 )
+      UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.onButtonOutlineColor.fields.b, 0LL);
+      lowLabel = (UILabel_o *)this->fields.normalButton;
+      if ( lowLabel )
       {
-        UILabel__set_effectColor(v38, *(UnityEngine_Color_o *)&this->fields.offButtonOutlineColor.fields.b, 0LL);
-        v39 = this->fields.lowButton;
-        if ( v39 )
+        UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.offButtonOutlineColor.fields.b, 0LL);
+        lowLabel = (UILabel_o *)this->fields.lowButton;
+        if ( lowLabel )
         {
-          UIButton__set_normalSprite(v39, this->fields.offButtonName, 0LL);
-          v7 = *(UIButton_o **)&this->fields.isInit;
-          if ( v7 )
+          UIButton__set_normalSprite((UIButton_o *)lowLabel, this->fields.offButtonName, 0LL);
+          lowLabel = *(UILabel_o **)&this->fields.isInit;
+          if ( lowLabel )
           {
             offButtonName = *(System_String_o **)&this->fields.enableResolutionSetting;
             goto LABEL_23;
@@ -346,23 +326,23 @@ void __fastcall SetResolutionOptionControl__RefreshDisplay(
       }
     }
 LABEL_24:
-    sub_B170D4();
+    sub_B2C434(lowLabel, *(_QWORD *)&type);
   }
-  if ( !v4 )
+  if ( !lowLabel )
     goto LABEL_24;
-  UILabel__set_effectColor(v4, *(UnityEngine_Color_o *)&this->fields.offButtonOutlineColor.fields.b, 0LL);
-  v5 = (UILabel_o *)this->fields.normalButton;
-  if ( !v5 )
+  UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.offButtonOutlineColor.fields.b, 0LL);
+  lowLabel = (UILabel_o *)this->fields.normalButton;
+  if ( !lowLabel )
     goto LABEL_24;
-  UILabel__set_effectColor(v5, *(UnityEngine_Color_o *)&this->fields.onButtonOutlineColor.fields.b, 0LL);
-  v6 = this->fields.lowButton;
-  if ( !v6 )
+  UILabel__set_effectColor(lowLabel, *(UnityEngine_Color_o *)&this->fields.onButtonOutlineColor.fields.b, 0LL);
+  lowLabel = (UILabel_o *)this->fields.lowButton;
+  if ( !lowLabel )
     goto LABEL_24;
-  UIButton__set_normalSprite(v6, *(System_String_o **)&this->fields.enableResolutionSetting, 0LL);
-  v7 = *(UIButton_o **)&this->fields.isInit;
-  if ( !v7 )
+  UIButton__set_normalSprite((UIButton_o *)lowLabel, *(System_String_o **)&this->fields.enableResolutionSetting, 0LL);
+  lowLabel = *(UILabel_o **)&this->fields.isInit;
+  if ( !lowLabel )
     goto LABEL_24;
   offButtonName = this->fields.offButtonName;
 LABEL_23:
-  UIButton__set_normalSprite(v7, offButtonName, 0LL);
+  UIButton__set_normalSprite((UIButton_o *)lowLabel, offButtonName, 0LL);
 }

@@ -7,13 +7,14 @@ void __fastcall CommandSpellObjectComponent___ctor(CommandSpellObjectComponent_o
 void __fastcall CommandSpellObjectComponent__onClickUse(CommandSpellObjectComponent_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
+  __int64 v4; // x1
   CommandSpellWindowComponent_o *target; // x0
 
-  if ( (byte_40FA5FB & 1) == 0 )
+  if ( (byte_4188145 & 1) == 0 )
   {
-    sub_B16FFC(&SeManager_TypeInfo, method);
-    sub_B16FFC(&SoundManager_TypeInfo, v3);
-    byte_40FA5FB = 1;
+    sub_B2C35C(&SeManager_TypeInfo, method);
+    sub_B2C35C(&SoundManager_TypeInfo, v3);
+    byte_4188145 = 1;
   }
   if ( this->fields.touchFlg )
   {
@@ -22,7 +23,7 @@ void __fastcall CommandSpellObjectComponent__onClickUse(CommandSpellObjectCompon
     SeManager__PlayCommonSe(9, 0LL);
     target = this->fields.target;
     if ( !target )
-      sub_B170D4();
+      sub_B2C434(0LL, v4);
     CommandSpellWindowComponent__UseSpell(target, this->fields.Id, 0LL);
   }
   else
@@ -55,126 +56,125 @@ void __fastcall CommandSpellObjectComponent__setData(
   __int64 v16; // x1
   __int64 v17; // x1
   __int64 v18; // x1
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
-  WarEntity_o *Entity; // x0
-  WarEntity_o *v22; // x23
-  UILabel_o *label_name; // x0
-  UILabel_o *label_conf; // x0
+  DataManager_o *Instance; // x0
+  __int64 v20; // x1
+  DataManager_o *v21; // x23
   UILabel_o *label_count; // x24
-  int32_t *v26; // x22
-  System_String_o *v27; // x25
-  System_String_o *v28; // x0
-  System_String_o *v29; // x0
+  int32_t *p_DispLog; // x22
+  System_String_o *v24; // x25
+  System_String_o *v25; // x0
   UILabel_o *unitLabel; // x24
-  System_String_o *v31; // x0
-  BalanceConfig_c *v32; // x0
+  BalanceConfig_c *v27; // x0
   int32_t ClassBoardReleaseQuestId; // w24
-  const MethodInfo *v34; // x3
+  const MethodInfo *v29; // x3
   ClassBoardCommandSpellMaster_o *Master_WarQuestSelectionMaster; // x0
-  struct UILabel_o *v36; // x23
+  struct UILabel_o *label_conf; // x23
   System_String_o *mText; // x24
-  System_String_o *v38; // x0
-  System_String_o *v39; // x0
+  System_String_o *v33; // x0
+  System_String_o *v34; // x0
 
-  if ( (byte_40FA5F9 & 1) == 0 )
+  if ( (byte_4188143 & 1) == 0 )
   {
-    sub_B16FFC(&BalanceConfig_TypeInfo, *(_QWORD *)&mode);
-    sub_B16FFC(&CondType_TypeInfo, v9);
-    sub_B16FFC(&Method_DataManager_GetMasterData_CommandSpellMaster___, v10);
-    sub_B16FFC(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, v11);
-    sub_B16FFC(&DataManager_TypeInfo, v12);
-    sub_B16FFC(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__, v13);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v14);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_B16FFC(&StringLiteral_14700/*"USE_MASTER_SPELL"*/, v16);
-    sub_B16FFC(&StringLiteral_3243/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/, v17);
-    sub_B16FFC(&StringLiteral_8623/*"MASTER_SPELL_UNIT"*/, v18);
-    byte_40FA5F9 = 1;
+    sub_B2C35C(&BalanceConfig_TypeInfo, *(_QWORD *)&mode);
+    sub_B2C35C(&CondType_TypeInfo, v9);
+    sub_B2C35C(&Method_DataManager_GetMasterData_CommandSpellMaster___, v10);
+    sub_B2C35C(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, v11);
+    sub_B2C35C(&DataManager_TypeInfo, v12);
+    sub_B2C35C(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__, v13);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v14);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_B2C35C(&StringLiteral_14760/*"USE_MASTER_SPELL"*/, v16);
+    sub_B2C35C(&StringLiteral_3252/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/, v17);
+    sub_B2C35C(&StringLiteral_8652/*"MASTER_SPELL_UNIT"*/, v18);
+    byte_4188143 = 1;
   }
   this->fields.Id = Id;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                        (DataManager_o *)Instance,
-                                                                                        (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
-  if ( !MasterData_WarQuestSelectionMaster )
+  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                Instance,
+                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommandSpellMaster___);
+  if ( !Instance )
     goto LABEL_31;
-  Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-             MasterData_WarQuestSelectionMaster,
-             Id,
-             (const MethodInfo_266F388 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
-  if ( !Entity )
+  Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+                                (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
+                                Id,
+                                (const MethodInfo_24E40D0 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+  if ( !Instance )
     goto LABEL_31;
-  v22 = Entity;
-  label_name = this->fields.label_name;
-  if ( !label_name )
+  v21 = Instance;
+  Instance = (DataManager_o *)this->fields.label_name;
+  if ( !Instance )
     goto LABEL_31;
-  UILabel__set_text(label_name, v22->fields.name, 0LL);
-  label_conf = this->fields.label_conf;
-  if ( !label_conf )
+  UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v21->fields.lookup, 0LL);
+  Instance = (DataManager_o *)this->fields.label_conf;
+  if ( !Instance )
     goto LABEL_31;
-  UILabel__set_text(label_conf, v22->fields.longName, 0LL);
+  UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v21->fields.masterDataBytes, 0LL);
   label_count = this->fields.label_count;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v26 = &v22->fields.id + 1;
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_14700/*"USE_MASTER_SPELL"*/, 0LL);
-  v28 = System_Int32__ToString((int)v22 + 20, 0LL);
-  v29 = System_String__Concat_43743732(v27, v28, 0LL);
+  p_DispLog = (int32_t *)&v21->fields._DispLog;
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_14760/*"USE_MASTER_SPELL"*/, 0LL);
+  v25 = System_Int32__ToString((int)v21 + 20, 0LL);
+  Instance = (DataManager_o *)System_String__Concat_44305532(v24, v25, 0LL);
   if ( !label_count )
     goto LABEL_31;
-  UILabel__set_text(label_count, v29, 0LL);
+  UILabel__set_text(label_count, (System_String_o *)Instance, 0LL);
   unitLabel = this->fields.unitLabel;
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_8623/*"MASTER_SPELL_UNIT"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8652/*"MASTER_SPELL_UNIT"*/, 0LL);
   if ( !unitLabel )
     goto LABEL_31;
-  UILabel__set_text(unitLabel, v31, 0LL);
-  v32 = BalanceConfig_TypeInfo;
+  UILabel__set_text(unitLabel, (System_String_o *)Instance, 0LL);
+  v27 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v32 = BalanceConfig_TypeInfo;
+    v27 = BalanceConfig_TypeInfo;
   }
-  ClassBoardReleaseQuestId = v32->static_fields->ClassBoardReleaseQuestId;
+  ClassBoardReleaseQuestId = v27->static_fields->ClassBoardReleaseQuestId;
   if ( (BYTE3(CondType_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  if ( CondType__IsQuestClear_25438860(ClassBoardReleaseQuestId, -1, 0, 0LL) )
+  if ( CondType__IsQuestClear_25746984(ClassBoardReleaseQuestId, -1, 0, 0LL) )
   {
     if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_WarQuestSelectionMaster = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_18C3224 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+    Master_WarQuestSelectionMaster = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
     if ( Master_WarQuestSelectionMaster )
     {
-      if ( ClassBoardCommandSpellMaster__IsAddFunctionCommandSpell(Master_WarQuestSelectionMaster, v22->fields.id, 0LL) )
+      Instance = (DataManager_o *)ClassBoardCommandSpellMaster__IsAddFunctionCommandSpell(
+                                    Master_WarQuestSelectionMaster,
+                                    v21->fields.m_CachedPtr,
+                                    0LL);
+      if ( ((unsigned __int8)Instance & 1) != 0 )
       {
-        v36 = this->fields.label_conf;
-        if ( v36 )
+        label_conf = this->fields.label_conf;
+        if ( label_conf )
         {
-          mText = v36->fields.mText;
+          mText = label_conf->fields.mText;
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_3243/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/, 0LL);
-          v39 = System_String__Concat_43743732(mText, v38, 0LL);
-          UILabel__set_text(v36, v39, 0LL);
+          v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3252/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/, 0LL);
+          v34 = System_String__Concat_44305532(mText, v33, 0LL);
+          UILabel__set_text(label_conf, v34, 0LL);
           goto LABEL_30;
         }
 LABEL_31:
-        sub_B170D4();
+        sub_B2C434(Instance, v20);
       }
     }
   }
 LABEL_30:
-  this->fields.Consume = *v26;
-  CommandSpellObjectComponent__updateIsUse(this, mode, count, v34);
+  this->fields.Consume = *p_DispLog;
+  CommandSpellObjectComponent__updateIsUse(this, mode, count, v29);
 }
 
 
@@ -196,51 +196,49 @@ void __fastcall CommandSpellObjectComponent__updateIsUse(
 {
   __int64 v7; // x1
   __int64 v8; // x1
-  WebViewManager_o *Instance; // x0
-  DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x0
-  WarEntity_o *Entity; // x0
-  UnityEngine_Behaviour_o *coverSprite; // x0
-  bool v13; // w8
+  DataManager_o *Instance; // x0
+  __int64 v10; // x1
+  bool v11; // w8
 
-  if ( (byte_40FA5FA & 1) == 0 )
+  if ( (byte_4188144 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_CommandSpellMaster___, *(_QWORD *)&mode);
-    sub_B16FFC(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__, v7);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_40FA5FA = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_CommandSpellMaster___, *(_QWORD *)&mode);
+    sub_B2C35C(&Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__, v7);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4188144 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
-  MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                        (DataManager_o *)Instance,
-                                                                                        (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_CommandSpellMaster___);
-  if ( !MasterData_WarQuestSelectionMaster )
+  Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                Instance,
+                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommandSpellMaster___);
+  if ( !Instance )
     goto LABEL_14;
-  Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
-             MasterData_WarQuestSelectionMaster,
-             this->fields.Id,
-             (const MethodInfo_266F388 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
+  Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+                                (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
+                                this->fields.Id,
+                                (const MethodInfo_24E40D0 *)Method_DataMasterBase_CommandSpellMaster__CommandSpellEntity__int__GetEntity__);
   if ( mode == 1 )
   {
-    if ( !Entity )
+    if ( !Instance )
       goto LABEL_14;
-    if ( LODWORD(Entity->fields.age) == 2 )
+    if ( LODWORD(Instance->fields.datalist) == 2 )
       count = 0;
   }
-  coverSprite = (UnityEngine_Behaviour_o *)this->fields.coverSprite;
-  if ( !coverSprite )
+  Instance = (DataManager_o *)this->fields.coverSprite;
+  if ( !Instance )
 LABEL_14:
-    sub_B170D4();
+    sub_B2C434(Instance, v10);
   if ( this->fields.Consume <= count )
   {
-    UnityEngine_Behaviour__set_enabled(coverSprite, 0, 0LL);
-    v13 = 1;
+    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Instance, 0, 0LL);
+    v11 = 1;
   }
   else
   {
-    UnityEngine_Behaviour__set_enabled(coverSprite, 1, 0LL);
-    v13 = 0;
+    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Instance, 1, 0LL);
+    v11 = 0;
   }
-  this->fields.touchFlg = v13;
+  this->fields.touchFlg = v11;
 }

@@ -2,14 +2,14 @@ void __fastcall EventBoardGameTokenRewardEntity___ctor(
         EventBoardGameTokenRewardEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40FC54F & 1) == 0 )
+  if ( (byte_418A21E & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FC54F = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_418A21E = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ System_String_o *__fastcall EventBoardGameTokenRewardEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_40FC54E & 1) == 0 )
+  if ( (byte_418A21D & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questId);
-    byte_40FC54E = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questId);
+    byte_418A21D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            questId,
            questPhase,
-           (const MethodInfo_18C25C8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1732D30 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

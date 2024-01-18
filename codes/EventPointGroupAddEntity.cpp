@@ -1,13 +1,13 @@
 void __fastcall EventPointGroupAddEntity___ctor(EventPointGroupAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FAC1E & 1) == 0 )
+  if ( (byte_41878AF & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FAC1E = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_41878AF = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall EventPointGroupAddEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_40FAC1C & 1) == 0 )
+  if ( (byte_41878AD & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&termId);
-    byte_40FAC1C = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&termId);
+    byte_41878AD = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            termId,
            groupId,
            priority,
-           (const MethodInfo_18C2910 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_1733078 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -54,10 +54,10 @@ bool __fastcall EventPointGroupAddEntity__IsAvailable(EventPointGroupAddEntity_o
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_40FAC1D & 1) == 0 )
+  if ( (byte_41878AE & 1) == 0 )
   {
-    sub_B16FFC(&CondType_TypeInfo, method);
-    byte_40FAC1D = 1;
+    sub_B2C35C(&CondType_TypeInfo, method);
+    byte_41878AE = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

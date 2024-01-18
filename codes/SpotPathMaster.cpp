@@ -1,14 +1,14 @@
 void __fastcall SpotPathMaster___ctor(SpotPathMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FADD5 & 1) == 0 )
+  if ( (byte_4188BD8 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__, method);
-    byte_40FADD5 = 1;
+    sub_B2C35C(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__, method);
+    byte_4188BD8 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     215,
-    (const MethodInfo_266F2EC *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
+    (const MethodInfo_24E4034 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
 }
 
 
@@ -44,28 +44,26 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
 {
   __int64 v9; // x1
   __int64 v10; // x1
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
+  SpotPathEntity_o *result; // x0
   int32_t Count; // w0
   int v13; // w23
   int32_t v14; // w21
   int32_t v15; // w22
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v16; // x0
-  SpotPathEntity_o *result; // x0
-  __int64 v18; // x10
+  __int64 v16; // x10
 
-  if ( (byte_40FADD6 & 1) == 0 )
+  if ( (byte_4188BD9 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
-    sub_B16FFC(&SpotPathEntity_TypeInfo, v10);
-    byte_40FADD6 = 1;
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
+    sub_B2C35C(&SpotPathEntity_TypeInfo, v10);
+    byte_4188BD9 = 1;
   }
-  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-  if ( !list )
+  result = (SpotPathEntity_o *)this->fields.list;
+  if ( !result )
     goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-            list,
-            (const MethodInfo_290DE84 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
+            (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v13 = termId + 100 * eventId;
@@ -73,18 +71,18 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
     v15 = 0;
     while ( 1 )
     {
-      v16 = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-      if ( !v16 )
-        break;
-      result = (SpotPathEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                     v16,
-                                     v15,
-                                     (const MethodInfo_290DF28 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      result = (SpotPathEntity_o *)this->fields.list;
       if ( !result )
         break;
-      v18 = *(&SpotPathEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&result->klass->_2.bitflags2 + 1) < (unsigned int)v18
-        || (SpotPathEntity_c *)result->klass->_2.typeHierarchy[v18 - 1] != SpotPathEntity_TypeInfo )
+      result = (SpotPathEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
+                                     (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
+                                     v15,
+                                     (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      if ( !result )
+        break;
+      v16 = *(&SpotPathEntity_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&result->klass->_2.bitflags2 + 1) < (unsigned int)v16
+        || (SpotPathEntity_c *)result->klass->_2.typeHierarchy[v16 - 1] != SpotPathEntity_TypeInfo )
       {
         break;
       }
@@ -94,7 +92,7 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
         return 0LL;
     }
 LABEL_16:
-    sub_B170D4();
+    sub_B2C434(result, *(_QWORD *)&eventId);
   }
   return 0LL;
 }

@@ -2,17 +2,17 @@ void __fastcall WarBoardActionTrendConditionMaster___ctor(
         WarBoardActionTrendConditionMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40F8C1F & 1) == 0 )
+  if ( (byte_41867B1 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__,
       method);
-    byte_40F8C1F = 1;
+    byte_41867B1 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     335,
-    (const MethodInfo_266F2EC *)Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
+    (const MethodInfo_24E4034 *)Method_DataMasterBase_WarBoardActionTrendConditionMaster__WarBoardActionTrendConditionEntity__int___ctor__);
 }
 
 
@@ -31,19 +31,20 @@ bool __fastcall WarBoardActionTrendConditionMaster__HasMatchCondition(
   unsigned __int64 v12; // x26
   int32_t v13; // w22
   bool result; // w0
+  __int64 v15; // x0
 
   v6 = condEntityArray;
-  if ( (byte_40F8C20 & 1) == 0 )
+  if ( (byte_41867B2 & 1) == 0 )
   {
-    condEntityArray = (WarBoardActionTrendConditionEntity_array *)sub_B16FFC(
+    condEntityArray = (WarBoardActionTrendConditionEntity_array *)sub_B2C35C(
                                                                     &Method_System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__Invoke__,
                                                                     matchCond);
-    byte_40F8C20 = 1;
+    byte_41867B2 = 1;
   }
   *condType = 0;
   if ( !v6 )
 LABEL_18:
-    sub_B170D4();
+    sub_B2C434(condEntityArray, matchCond);
   max_length = v6->max_length;
   if ( max_length < 1 )
     return 0;
@@ -53,8 +54,8 @@ LABEL_18:
     if ( v8 >= max_length )
     {
 LABEL_19:
-      sub_B17100(condEntityArray, matchCond, condType);
-      sub_B170A0();
+      v15 = sub_B2C460(condEntityArray);
+      sub_B2C400(v15, 0LL);
     }
     v9 = v6->m_Items[v8];
     if ( !v9 )
@@ -81,7 +82,7 @@ LABEL_15:
     condEntityArray = (WarBoardActionTrendConditionEntity_array *)System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool___Invoke(
                                                                     matchCond,
                                                                     v13,
-                                                                    (const MethodInfo_2B67354 *)Method_System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__Invoke__);
+                                                                    (const MethodInfo_270E418 *)Method_System_Func_WarBoardActionTrendConditionEntity_ConditionType__bool__Invoke__);
     if ( ((unsigned __int8)condEntityArray & 1) != 0 )
       break;
     LODWORD(v11) = conditionTypes->max_length;

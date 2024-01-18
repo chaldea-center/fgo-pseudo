@@ -12,27 +12,18 @@ void __fastcall CoinRoomCoinIconDraw__ResetItem(
 {
   __int64 v6; // x1
   UnityEngine_Object_o *baseButton; // x21
-  struct UICommonButton_o *v8; // x0
-  struct UICommonButton_o *v9; // x0
+  __int64 v8; // x1
   UnityEngine_GameObject_o *infoObject; // x0
-  UILabel_o *infoLabel; // x0
-  UILabel_o *selectedNumLabel; // x0
-  const MethodInfo *v13; // x3
-  UnityEngine_GameObject_o *v14; // x0
-  UnityEngine_GameObject_o *canStrengthObject; // x0
-  UnityEngine_GameObject_o *v16; // x0
-  UnityEngine_GameObject_o *v17; // x0
+  const MethodInfo *v10; // x3
   _BOOL4 isHeroine_k__BackingField; // w8
-  char v19; // w1
-  bool v20; // w2
-  DragSelectComponent_o *dragSelect; // x0
-  DragSelectComponent_o *v22; // x0
+  char v12; // w1
+  bool v13; // w2
 
-  if ( (byte_40F9A14 & 1) == 0 )
+  if ( (byte_4188831 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, iconItem);
-    sub_B16FFC(&StringLiteral_1/*""*/, v6);
-    byte_40F9A14 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, iconItem);
+    sub_B2C35C(&StringLiteral_1/*""*/, v6);
+    byte_4188831 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -42,72 +33,75 @@ void __fastcall CoinRoomCoinIconDraw__ResetItem(
   }
   if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
   {
-    v8 = this->fields.baseButton;
-    if ( !v8 )
+    infoObject = (UnityEngine_GameObject_o *)this->fields.baseButton;
+    if ( !infoObject )
       goto LABEL_26;
-    ((void (__fastcall *)(struct UICommonButton_o *, __int64, Il2CppMethodPointer))v8->klass->vtable._5_set_isEnabled.method)(
-      v8,
+    ((void (__fastcall *)(UnityEngine_GameObject_o *, __int64, void *))infoObject->klass[1]._1.namespaze)(
+      infoObject,
       1LL,
-      v8->klass->vtable._6_OnInit.methodPtr);
-    v9 = this->fields.baseButton;
-    if ( !v9 )
+      infoObject->klass[1]._1.byval_arg.data);
+    infoObject = (UnityEngine_GameObject_o *)this->fields.baseButton;
+    if ( !infoObject )
       goto LABEL_26;
-    ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))v9->klass->vtable._14_SetState.method)(
-      v9,
+    ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))infoObject->klass[1]._1.implementedInterfaces)(
+      infoObject,
       0LL,
       1LL,
-      v9->klass->vtable._15_OnPress.methodPtr);
+      infoObject->klass[1]._1.interfaceOffsets);
   }
   infoObject = this->fields.infoObject;
   if ( !infoObject )
     goto LABEL_26;
   UnityEngine_GameObject__SetActive(infoObject, 0, 0LL);
-  infoLabel = this->fields.infoLabel;
-  if ( !infoLabel )
+  infoObject = (UnityEngine_GameObject_o *)this->fields.infoLabel;
+  if ( !infoObject )
     goto LABEL_26;
-  UILabel__set_text(infoLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-  selectedNumLabel = this->fields.selectedNumLabel;
-  if ( !selectedNumLabel )
+  UILabel__set_text((UILabel_o *)infoObject, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  infoObject = (UnityEngine_GameObject_o *)this->fields.selectedNumLabel;
+  if ( !infoObject )
     goto LABEL_26;
-  UILabel__set_text(selectedNumLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  UILabel__set_text((UILabel_o *)infoObject, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   if ( !iconItem )
     goto LABEL_26;
   if ( iconItem->fields._isCanStrength_k__BackingField )
   {
-    v14 = this->fields.infoObject;
-    if ( !v14 )
+    infoObject = this->fields.infoObject;
+    if ( !infoObject )
       goto LABEL_26;
-    UnityEngine_GameObject__SetActive(v14, 0, 0LL);
-    canStrengthObject = this->fields.canStrengthObject;
-    if ( !canStrengthObject )
+    UnityEngine_GameObject__SetActive(infoObject, 0, 0LL);
+    infoObject = this->fields.canStrengthObject;
+    if ( !infoObject )
       goto LABEL_26;
-    UnityEngine_GameObject__SetActive(canStrengthObject, 1, 0LL);
+    UnityEngine_GameObject__SetActive(infoObject, 1, 0LL);
   }
   if ( !iconItem->fields._isHeroine_k__BackingField )
   {
-    v20 = 0;
-    v19 = !iconItem->fields._isTouchEnabled_k__BackingField;
+    v13 = 0;
+    v12 = !iconItem->fields._isTouchEnabled_k__BackingField;
     goto LABEL_23;
   }
-  v16 = this->fields.infoObject;
-  if ( !v16 || (UnityEngine_GameObject__SetActive(v16, 1, 0LL), (v17 = this->fields.canStrengthObject) == 0LL) )
+  infoObject = this->fields.infoObject;
+  if ( !infoObject
+    || (UnityEngine_GameObject__SetActive(infoObject, 1, 0LL), (infoObject = this->fields.canStrengthObject) == 0LL) )
+  {
 LABEL_26:
-    sub_B170D4();
-  UnityEngine_GameObject__SetActive(v17, 0, 0LL);
+    sub_B2C434(infoObject, v8);
+  }
+  UnityEngine_GameObject__SetActive(infoObject, 0, 0LL);
   isHeroine_k__BackingField = iconItem->fields._isHeroine_k__BackingField;
-  v19 = 1;
+  v12 = 1;
   iconItem->fields._isTouchEnabled_k__BackingField = 0;
-  v20 = isHeroine_k__BackingField;
+  v13 = isHeroine_k__BackingField;
 LABEL_23:
-  CoinRoomCoinIconDraw__SetEnabledMask(this, v19, v20, v13);
-  dragSelect = this->fields.dragSelect;
-  if ( !dragSelect )
+  CoinRoomCoinIconDraw__SetEnabledMask(this, v12, v13, v10);
+  infoObject = (UnityEngine_GameObject_o *)this->fields.dragSelect;
+  if ( !infoObject )
     goto LABEL_26;
-  DragSelectComponent__setOverHundredNumCondensedScale(dragSelect, -1, 0LL);
-  v22 = this->fields.dragSelect;
-  if ( !v22 )
+  DragSelectComponent__setOverHundredNumCondensedScale((DragSelectComponent_o *)infoObject, -1, 0LL);
+  infoObject = (UnityEngine_GameObject_o *)this->fields.dragSelect;
+  if ( !infoObject )
     goto LABEL_26;
-  DragSelectComponent__Set(v22, -1, -1, 0LL);
+  DragSelectComponent__Set((DragSelectComponent_o *)infoObject, -1, -1, 0LL);
 }
 
 
@@ -121,56 +115,48 @@ void __fastcall CoinRoomCoinIconDraw__SetEnabledMask(
   __int64 v7; // x1
   __int64 v8; // x1
   UnityEngine_Component_o *maskSprite; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *infoObject; // x0
-  UnityEngine_Component_o *infoLabel; // x0
-  UnityEngine_GameObject_o *v13; // x0
-  UnityEngine_Component_o *selectedNumLabel; // x0
-  UnityEngine_GameObject_o *v15; // x0
-  UnityEngine_GameObject_o *canStrengthObject; // x0
-  UILabel_o *v17; // x20
-  __int64 *v18; // x8
-  System_String_o *v19; // x0
+  UILabel_o *infoLabel; // x20
+  __int64 *v11; // x8
 
-  if ( (byte_40F9A15 & 1) == 0 )
+  if ( (byte_4188832 & 1) == 0 )
   {
-    sub_B16FFC(&LocalizationManager_TypeInfo, enabled);
-    sub_B16FFC(&StringLiteral_3117/*"COIN_ROOM_CAN_NOT_SELECTED"*/, v7);
-    sub_B16FFC(&StringLiteral_3120/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/, v8);
-    byte_40F9A15 = 1;
+    sub_B2C35C(&LocalizationManager_TypeInfo, enabled);
+    sub_B2C35C(&StringLiteral_3126/*"COIN_ROOM_CAN_NOT_SELECTED"*/, v7);
+    sub_B2C35C(&StringLiteral_3129/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/, v8);
+    byte_4188832 = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
   if ( !maskSprite )
     goto LABEL_24;
-  gameObject = UnityEngine_Component__get_gameObject(maskSprite, 0LL);
-  if ( !gameObject )
+  maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0LL);
+  if ( !maskSprite )
     goto LABEL_24;
-  UnityEngine_GameObject__SetActive(gameObject, enabled, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, enabled, 0LL);
   if ( enabled )
   {
-    infoObject = this->fields.infoObject;
-    if ( infoObject )
+    maskSprite = (UnityEngine_Component_o *)this->fields.infoObject;
+    if ( maskSprite )
     {
-      UnityEngine_GameObject__SetActive(infoObject, 1, 0LL);
-      infoLabel = (UnityEngine_Component_o *)this->fields.infoLabel;
-      if ( infoLabel )
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 1, 0LL);
+      maskSprite = (UnityEngine_Component_o *)this->fields.infoLabel;
+      if ( maskSprite )
       {
-        v13 = UnityEngine_Component__get_gameObject(infoLabel, 0LL);
-        if ( v13 )
+        maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0LL);
+        if ( maskSprite )
         {
-          UnityEngine_GameObject__SetActive(v13, 1, 0LL);
-          selectedNumLabel = (UnityEngine_Component_o *)this->fields.selectedNumLabel;
-          if ( selectedNumLabel )
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 1, 0LL);
+          maskSprite = (UnityEngine_Component_o *)this->fields.selectedNumLabel;
+          if ( maskSprite )
           {
-            v15 = UnityEngine_Component__get_gameObject(selectedNumLabel, 0LL);
-            if ( v15 )
+            maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0LL);
+            if ( maskSprite )
             {
-              UnityEngine_GameObject__SetActive(v15, 0, 0LL);
-              canStrengthObject = this->fields.canStrengthObject;
-              if ( canStrengthObject )
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 0, 0LL);
+              maskSprite = (UnityEngine_Component_o *)this->fields.canStrengthObject;
+              if ( maskSprite )
               {
-                UnityEngine_GameObject__SetActive(canStrengthObject, 0, 0LL);
-                v17 = this->fields.infoLabel;
+                UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 0, 0LL);
+                infoLabel = this->fields.infoLabel;
                 if ( isHeroine )
                 {
                   if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -178,7 +164,7 @@ void __fastcall CoinRoomCoinIconDraw__SetEnabledMask(
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v18 = &StringLiteral_3117/*"COIN_ROOM_CAN_NOT_SELECTED"*/;
+                  v11 = &StringLiteral_3126/*"COIN_ROOM_CAN_NOT_SELECTED"*/;
                 }
                 else
                 {
@@ -187,12 +173,12 @@ void __fastcall CoinRoomCoinIconDraw__SetEnabledMask(
                   {
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
-                  v18 = &StringLiteral_3120/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/;
+                  v11 = &StringLiteral_3129/*"COIN_ROOM_COIN_ICON_NOT_SELECT"*/;
                 }
-                v19 = LocalizationManager__Get((System_String_o *)*v18, 0LL);
-                if ( v17 )
+                maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v11, 0LL);
+                if ( infoLabel )
                 {
-                  UILabel__set_text(v17, v19, 0LL);
+                  UILabel__set_text(infoLabel, (System_String_o *)maskSprite, 0LL);
                   return;
                 }
               }
@@ -202,7 +188,7 @@ void __fastcall CoinRoomCoinIconDraw__SetEnabledMask(
       }
     }
 LABEL_24:
-    sub_B170D4();
+    sub_B2C434(maskSprite, enabled);
   }
 }
 
@@ -219,33 +205,21 @@ void __fastcall CoinRoomCoinIconDraw__SetItem(
   __int64 v11; // x1
   __int64 v12; // x1
   ItemIconComponent_o *itemIcon; // x0
-  UIIconLabel_o *iconInfoLabel; // x0
   UILabel_o *possessionNum; // x22
-  Il2CppObject *v16; // x0
-  System_String_o *v17; // x0
-  UnityEngine_Component_o *v18; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  UILabel_o *infoLabel; // x0
-  DragSelectComponent_o *dragSelect; // x0
-  UnityEngine_GameObject_o *infoObject; // x0
-  UnityEngine_GameObject_o *canStrengthObject; // x0
-  const MethodInfo *v24; // x4
-  UnityEngine_GameObject_o *v25; // x0
-  UnityEngine_GameObject_o *v26; // x0
-  UnityEngine_GameObject_o *v27; // x0
-  UILabel_o *v28; // x21
-  System_String_o *v29; // x0
-  const MethodInfo *v30; // x3
+  Il2CppObject *v15; // x0
+  const MethodInfo *v16; // x4
+  UILabel_o *infoLabel; // x21
+  const MethodInfo *v18; // x3
   int32_t num_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_40F9A12 & 1) == 0 )
+  if ( (byte_418882F & 1) == 0 )
   {
-    sub_B16FFC(&int_TypeInfo, iconItem);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_23395/*"{0:#,0}"*/, v10);
-    sub_B16FFC(&StringLiteral_3117/*"COIN_ROOM_CAN_NOT_SELECTED"*/, v11);
-    sub_B16FFC(&StringLiteral_1/*""*/, v12);
-    byte_40F9A12 = 1;
+    sub_B2C35C(&int_TypeInfo, iconItem);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v9);
+    sub_B2C35C(&StringLiteral_23489/*"{0:#,0}"*/, v10);
+    sub_B2C35C(&StringLiteral_3126/*"COIN_ROOM_CAN_NOT_SELECTED"*/, v11);
+    sub_B2C35C(&StringLiteral_1/*""*/, v12);
+    byte_418882F = 1;
   }
   if ( iconItem && mode )
   {
@@ -253,53 +227,58 @@ void __fastcall CoinRoomCoinIconDraw__SetItem(
     if ( itemIcon )
     {
       ItemIconComponent__SetItem(itemIcon, iconItem->fields._itemId_k__BackingField, -1, 0LL);
-      iconInfoLabel = this->fields.iconInfoLabel;
-      if ( iconInfoLabel )
+      itemIcon = (ItemIconComponent_o *)this->fields.iconInfoLabel;
+      if ( itemIcon )
       {
-        UIIconLabel__Set(iconInfoLabel, iconItem->fields.iconLabelInfo, 0LL);
+        UIIconLabel__Set((UIIconLabel_o *)itemIcon, iconItem->fields.iconLabelInfo, 0LL);
         possessionNum = this->fields.possessionNum;
         num_k__BackingField = iconItem->fields._num_k__BackingField;
-        v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num_k__BackingField);
-        v17 = System_String__Format((System_String_o *)StringLiteral_23395/*"{0:#,0}"*/, v16, 0LL);
+        v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num_k__BackingField);
+        itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_23489/*"{0:#,0}"*/, v15, 0LL);
         if ( possessionNum )
         {
-          UILabel__set_text(possessionNum, v17, 0LL);
+          UILabel__set_text(possessionNum, (System_String_o *)itemIcon, 0LL);
           if ( !isSelectDialog )
           {
-            v18 = (UnityEngine_Component_o *)this->fields.iconInfoLabel;
-            if ( !v18 )
+            itemIcon = (ItemIconComponent_o *)this->fields.iconInfoLabel;
+            if ( !itemIcon )
               goto LABEL_30;
-            gameObject = UnityEngine_Component__get_gameObject(v18, 0LL);
-            if ( !gameObject )
+            itemIcon = (ItemIconComponent_o *)UnityEngine_Component__get_gameObject(
+                                                (UnityEngine_Component_o *)itemIcon,
+                                                0LL);
+            if ( !itemIcon )
               goto LABEL_30;
-            UnityEngine_GameObject__SetActive(gameObject, iconItem->fields._isDisplayNumber_k__BackingField, 0LL);
+            UnityEngine_GameObject__SetActive(
+              (UnityEngine_GameObject_o *)itemIcon,
+              iconItem->fields._isDisplayNumber_k__BackingField,
+              0LL);
           }
-          infoLabel = this->fields.infoLabel;
-          if ( infoLabel )
+          itemIcon = (ItemIconComponent_o *)this->fields.infoLabel;
+          if ( itemIcon )
           {
-            UILabel__set_text(infoLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-            dragSelect = this->fields.dragSelect;
-            if ( dragSelect )
+            UILabel__set_text((UILabel_o *)itemIcon, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+            itemIcon = (ItemIconComponent_o *)this->fields.dragSelect;
+            if ( itemIcon )
             {
-              DragSelectComponent__Set(dragSelect, -1, -1, 0LL);
-              infoObject = this->fields.infoObject;
-              if ( infoObject )
+              DragSelectComponent__Set((DragSelectComponent_o *)itemIcon, -1, -1, 0LL);
+              itemIcon = (ItemIconComponent_o *)this->fields.infoObject;
+              if ( itemIcon )
               {
-                UnityEngine_GameObject__SetActive(infoObject, 0, 0LL);
-                canStrengthObject = this->fields.canStrengthObject;
-                if ( canStrengthObject )
+                UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemIcon, 0, 0LL);
+                itemIcon = (ItemIconComponent_o *)this->fields.canStrengthObject;
+                if ( itemIcon )
                 {
-                  UnityEngine_GameObject__SetActive(canStrengthObject, 0, 0LL);
+                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemIcon, 0, 0LL);
                   if ( iconItem->fields._isCanStrength_k__BackingField && !isSelectDialog )
                   {
-                    v25 = this->fields.infoObject;
-                    if ( !v25 )
+                    itemIcon = (ItemIconComponent_o *)this->fields.infoObject;
+                    if ( !itemIcon )
                       goto LABEL_30;
-                    UnityEngine_GameObject__SetActive(v25, 0, 0LL);
-                    v26 = this->fields.canStrengthObject;
-                    if ( !v26 )
+                    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemIcon, 0, 0LL);
+                    itemIcon = (ItemIconComponent_o *)this->fields.canStrengthObject;
+                    if ( !itemIcon )
                       goto LABEL_30;
-                    UnityEngine_GameObject__SetActive(v26, 1, 0LL);
+                    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemIcon, 1, 0LL);
                   }
                   if ( !iconItem->fields._isHeroine_k__BackingField )
                   {
@@ -309,29 +288,31 @@ LABEL_28:
                       iconItem,
                       iconItem->fields._selectedNum_k__BackingField,
                       0,
-                      v24);
+                      v16);
                     CoinRoomCoinIconDraw__SetEnabledMask(
                       this,
                       !iconItem->fields._isTouchEnabled_k__BackingField,
                       iconItem->fields._isHeroine_k__BackingField,
-                      v30);
+                      v18);
                     return;
                   }
-                  v27 = this->fields.infoObject;
-                  if ( v27 )
+                  itemIcon = (ItemIconComponent_o *)this->fields.infoObject;
+                  if ( itemIcon )
                   {
-                    UnityEngine_GameObject__SetActive(v27, 1, 0LL);
+                    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemIcon, 1, 0LL);
                     iconItem->fields._isTouchEnabled_k__BackingField = 0;
-                    v28 = this->fields.infoLabel;
+                    infoLabel = this->fields.infoLabel;
                     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                       && !LocalizationManager_TypeInfo->_2.cctor_finished )
                     {
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     }
-                    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3117/*"COIN_ROOM_CAN_NOT_SELECTED"*/, 0LL);
-                    if ( v28 )
+                    itemIcon = (ItemIconComponent_o *)LocalizationManager__Get(
+                                                        (System_String_o *)StringLiteral_3126/*"COIN_ROOM_CAN_NOT_SELECTED"*/,
+                                                        0LL);
+                    if ( infoLabel )
                     {
-                      UILabel__set_text(v28, v29, 0LL);
+                      UILabel__set_text(infoLabel, (System_String_o *)itemIcon, 0LL);
                       goto LABEL_28;
                     }
                   }
@@ -343,7 +324,7 @@ LABEL_28:
       }
     }
 LABEL_30:
-    sub_B170D4();
+    sub_B2C434(itemIcon, iconItem);
   }
 }
 
@@ -360,28 +341,21 @@ void __fastcall CoinRoomCoinIconDraw__UpdateItem(
   __int64 v10; // x1
   __int64 v11; // x1
   UnityEngine_Object_o *baseButton; // x22
-  struct UICommonButton_o *v13; // x0
-  struct UICommonButton_o *v14; // x0
   UnityEngine_GameObject_o *infoObject; // x0
-  UnityEngine_GameObject_o *canStrengthObject; // x0
-  System_String_o *v17; // x0
-  System_String_o *v18; // x21
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v14; // x1
+  System_String_o *v15; // x21
   UILabel_o *selectedNumLabel; // x22
-  Il2CppObject *v21; // x0
-  System_String_o *v22; // x0
-  DragSelectComponent_o *dragSelect; // x0
-  DragSelectComponent_o *v24; // x0
+  Il2CppObject *v17; // x0
   int32_t selectedNum_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_40F9A13 & 1) == 0 )
+  if ( (byte_4188830 & 1) == 0 )
   {
-    sub_B16FFC(&int_TypeInfo, iconItem);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v8);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_1/*""*/, v10);
-    sub_B16FFC(&StringLiteral_3119/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, v11);
-    byte_40F9A13 = 1;
+    sub_B2C35C(&int_TypeInfo, iconItem);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v8);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v9);
+    sub_B2C35C(&StringLiteral_1/*""*/, v10);
+    sub_B2C35C(&StringLiteral_3128/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, v11);
+    byte_4188830 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -389,61 +363,62 @@ void __fastcall CoinRoomCoinIconDraw__UpdateItem(
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
+  infoObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL);
+  if ( ((unsigned __int8)infoObject & 1) != 0 )
   {
-    v13 = this->fields.baseButton;
-    if ( !v13 )
+    infoObject = (UnityEngine_GameObject_o *)this->fields.baseButton;
+    if ( !infoObject )
       goto LABEL_26;
-    ((void (__fastcall *)(struct UICommonButton_o *, __int64, Il2CppMethodPointer))v13->klass->vtable._5_set_isEnabled.method)(
-      v13,
+    ((void (__fastcall *)(UnityEngine_GameObject_o *, __int64, void *))infoObject->klass[1]._1.namespaze)(
+      infoObject,
       1LL,
-      v13->klass->vtable._6_OnInit.methodPtr);
-    v14 = this->fields.baseButton;
-    if ( !v14 )
+      infoObject->klass[1]._1.byval_arg.data);
+    infoObject = (UnityEngine_GameObject_o *)this->fields.baseButton;
+    if ( !infoObject )
       goto LABEL_26;
-    ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))v14->klass->vtable._14_SetState.method)(
-      v14,
-      0LL,
-      1LL,
-      v14->klass->vtable._15_OnPress.methodPtr);
+    infoObject = (UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))infoObject->klass[1]._1.implementedInterfaces)(
+                                               infoObject,
+                                               0LL,
+                                               1LL,
+                                               infoObject->klass[1]._1.interfaceOffsets);
   }
   if ( !num )
     return;
   if ( !iconItem )
 LABEL_26:
-    sub_B170D4();
+    sub_B2C434(infoObject, v14);
   if ( iconItem->fields._selectedNum_k__BackingField >= 1 )
   {
     infoObject = this->fields.infoObject;
     if ( infoObject )
     {
       UnityEngine_GameObject__SetActive(infoObject, 1, 0LL);
-      canStrengthObject = this->fields.canStrengthObject;
-      if ( canStrengthObject )
+      infoObject = this->fields.canStrengthObject;
+      if ( infoObject )
       {
-        UnityEngine_GameObject__SetActive(canStrengthObject, 0, 0LL);
+        UnityEngine_GameObject__SetActive(infoObject, 0, 0LL);
         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !LocalizationManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3119/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, 0LL);
+        infoObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3128/*"COIN_ROOM_COIN_ICON_CONFIRM_NUM"*/, 0LL);
         if ( this->fields.selectedNumLabel )
         {
-          v18 = v17;
-          gameObject = UnityEngine_Component__get_gameObject(
+          v15 = (System_String_o *)infoObject;
+          infoObject = UnityEngine_Component__get_gameObject(
                          (UnityEngine_Component_o *)this->fields.selectedNumLabel,
                          0LL);
-          if ( gameObject )
+          if ( infoObject )
           {
-            UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
+            UnityEngine_GameObject__SetActive(infoObject, 1, 0LL);
             selectedNumLabel = this->fields.selectedNumLabel;
             selectedNum_k__BackingField = iconItem->fields._selectedNum_k__BackingField;
-            v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &selectedNum_k__BackingField);
-            v22 = System_String__Format(v18, v21, 0LL);
+            v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &selectedNum_k__BackingField);
+            infoObject = (UnityEngine_GameObject_o *)System_String__Format(v15, v17, 0LL);
             if ( selectedNumLabel )
             {
-              UILabel__set_text(selectedNumLabel, v22, 0LL);
+              UILabel__set_text(selectedNumLabel, (System_String_o *)infoObject, 0LL);
               goto LABEL_22;
             }
           }
@@ -453,12 +428,12 @@ LABEL_26:
     goto LABEL_26;
   }
 LABEL_22:
-  dragSelect = this->fields.dragSelect;
-  if ( !dragSelect )
+  infoObject = (UnityEngine_GameObject_o *)this->fields.dragSelect;
+  if ( !infoObject )
     goto LABEL_26;
-  DragSelectComponent__setOverHundredNumCondensedScale(dragSelect, -1, 0LL);
-  v24 = this->fields.dragSelect;
-  if ( !v24 )
+  DragSelectComponent__setOverHundredNumCondensedScale((DragSelectComponent_o *)infoObject, -1, 0LL);
+  infoObject = (UnityEngine_GameObject_o *)this->fields.dragSelect;
+  if ( !infoObject )
     goto LABEL_26;
-  DragSelectComponent__Set(v24, iconItem->fields.selectNum, -1, 0LL);
+  DragSelectComponent__Set((DragSelectComponent_o *)infoObject, iconItem->fields.selectNum, -1, 0LL);
 }

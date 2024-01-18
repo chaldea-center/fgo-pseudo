@@ -18,18 +18,18 @@ __int64 __fastcall DllGetActivationFactory(__int64 a1, __int64 *a2)
   v16 = a1;
   if ( !a1 || !a2 )
     return v2;
-  v15 = dword_40F30C8;
+  v15 = dword_4180CA8;
   v4 = j__pthread_self_0();
-  if ( v4 == qword_40F3108 )
+  if ( v4 == qword_4180CE8 )
   {
-    v10 = dword_40F3110 + 1;
+    v10 = dword_4180CF0 + 1;
     goto LABEL_17;
   }
   v5 = v4;
   v6 = 0;
   do
   {
-    v7 = __ldaxr(dword_40F30C8);
+    v7 = __ldaxr(dword_4180CA8);
     if ( v7 != v6 )
     {
       __clrex();
@@ -37,7 +37,7 @@ LABEL_9:
       v8 = 0;
       goto LABEL_10;
     }
-    if ( __stxr(v6 + 1, dword_40F30C8) )
+    if ( __stxr(v6 + 1, dword_4180CA8) )
       goto LABEL_9;
     v8 = 1;
 LABEL_10:
@@ -50,23 +50,23 @@ LABEL_10:
   {
     do
     {
-      sub_D0C598(dword_40F30C8, 2LL, 0xFFFFFFFFLL);
+      sub_D2444C(dword_4180CA8, 2LL, 0xFFFFFFFFLL);
       do
-        v9 = __ldxr(dword_40F30C8);
-      while ( __stxr(2u, dword_40F30C8) );
+        v9 = __ldxr(dword_4180CA8);
+      while ( __stxr(2u, dword_4180CA8) );
     }
     while ( v9 );
   }
-  qword_40F3108 = v5;
+  qword_4180CE8 = v5;
   v10 = 1;
 LABEL_17:
-  dword_40F3110 = v10;
-  if ( (byte_40F3118 & 1) != 0 )
+  dword_4180CF0 = v10;
+  if ( (byte_4180CF8 & 1) != 0 )
   {
 LABEL_20:
-    v11 = (__int64 *)sub_AD2094(&qword_40F30B0, &v16);
-    if ( v11 == &qword_40F30B8 )
-      sub_A855FC(v16, &v14);
+    v11 = (__int64 *)sub_AE73F4(&qword_4180C90, &v16);
+    if ( v11 == &qword_4180C98 )
+      sub_A9A95C(v16, &v14);
     v12 = v11[5];
     (*(void (__fastcall **)(__int64))(*(_QWORD *)v12 + 8LL))(v12);
     v2 = 0;
@@ -74,13 +74,13 @@ LABEL_20:
   }
   else
   {
-    if ( (sub_AA9BB4("IL2CPP Root Domain") & 1) != 0 )
+    if ( (sub_ABEF14("IL2CPP Root Domain") & 1) != 0 )
     {
-      byte_40F3118 = 1;
+      byte_4180CF8 = 1;
       goto LABEL_20;
     }
     v2 = -2146233082;
   }
-  sub_A889A4(&v15);
+  sub_A9DD04(&v15);
   return v2;
 }

@@ -1,94 +1,59 @@
 void __fastcall BattleSeManager___ctor(BattleSeManager_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v14; // x20
-  __int64 v15; // x1
-  __int64 v16; // x2
-  __int64 v17; // x3
-  __int64 v18; // x4
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v19; // x20
-  __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x3
-  __int64 v23; // x4
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v24; // x20
-  __int64 v25; // x1
-  __int64 v26; // x2
-  __int64 v27; // x3
-  __int64 v28; // x4
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v29; // x20
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v11; // x20
+  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v12; // x20
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v13; // x20
+  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *v14; // x20
 
-  if ( (byte_40F752F & 1) == 0 )
+  if ( (byte_4184E19 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, method);
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler___ctor__, v6);
-    sub_B16FFC(&System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__TypeInfo, v7);
-    sub_B16FFC(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v8);
-    sub_B16FFC(&Method_System_Collections_Generic_List_string___ctor__, v9);
-    sub_B16FFC(&Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer___ctor__, v10);
-    sub_B16FFC(&System_Collections_Generic_List_string__TypeInfo, v11);
-    sub_B16FFC(&System_Collections_Generic_List_BattleSeManager_BattleSePlayer__TypeInfo, v12);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_BattleSeManager___ctor__, v13);
-    byte_40F752F = 1;
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, method);
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler___ctor__, v3);
+    sub_B2C35C(&System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__TypeInfo, v4);
+    sub_B2C35C(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v5);
+    sub_B2C35C(&Method_System_Collections_Generic_List_string___ctor___67320968, v6);
+    sub_B2C35C(&Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer___ctor__, v7);
+    sub_B2C35C(&System_Collections_Generic_List_string__TypeInfo, v8);
+    sub_B2C35C(&System_Collections_Generic_List_BattleSeManager_BattleSePlayer__TypeInfo, v9);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_BattleSeManager___ctor__, v10);
+    byte_4184E19 = 1;
   }
   LODWORD(this->fields.playingList) = 1065353216;
-  v14 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
-                                                                                                  System_Collections_Generic_List_BattleSeManager_BattleSePlayer__TypeInfo,
-                                                                                                  method,
-                                                                                                  v2,
-                                                                                                  v3,
-                                                                                                  v4);
+  v11 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_BattleSeManager_BattleSePlayer__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
+    v11,
+    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer___ctor__);
+  this->fields.loadInfos = (struct System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__o *)v11;
+  sub_B2C2F8(&this->fields.loadInfos, v11);
+  v12 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B2C42C(System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__TypeInfo);
+  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
+    v12,
+    (const MethodInfo_2DB1110 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler___ctor__);
+  this->fields.effectMaster = (struct EffectMaster_o *)v12;
+  sub_B2C2F8(&this->fields.effectMaster, v12);
+  v13 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
+    v13,
+    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_string___ctor___67320968);
+  this->fields.seToAssetTable = (struct System_Collections_Generic_Dictionary_string__string__o *)v13;
+  sub_B2C2F8(&this->fields.seToAssetTable, v13);
+  v14 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B2C42C(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
     v14,
-    (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer___ctor__);
-  this->fields.loadInfos = (struct System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__o *)v14;
-  sub_B16F98(&this->fields.loadInfos, v14);
-  v19 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B170CC(
-                                                                                        System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__TypeInfo,
-                                                                                        v15,
-                                                                                        v16,
-                                                                                        v17,
-                                                                                        v18);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
-    v19,
-    (const MethodInfo_2DA3068 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler___ctor__);
-  this->fields.effectMaster = (struct EffectMaster_o *)v19;
-  sub_B16F98(&this->fields.effectMaster, v19);
-  v24 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
-                                                                                                  System_Collections_Generic_List_string__TypeInfo,
-                                                                                                  v20,
-                                                                                                  v21,
-                                                                                                  v22,
-                                                                                                  v23);
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v24,
-    (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_string___ctor__);
-  this->fields.seToAssetTable = (struct System_Collections_Generic_Dictionary_string__string__o *)v24;
-  sub_B16F98(&this->fields.seToAssetTable, v24);
-  v29 = (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)sub_B170CC(
-                                                                                        System_Collections_Generic_Dictionary_string__string__TypeInfo,
-                                                                                        v25,
-                                                                                        v26,
-                                                                                        v27,
-                                                                                        v28);
-  System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject____ctor(
-    v29,
-    (const MethodInfo_2DA3068 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-  this[1].klass = (BattleSeManager_c *)v29;
-  sub_B16F98(&this[1], v29);
+    (const MethodInfo_2DB1110 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+  this[1].klass = (BattleSeManager_c *)v14;
+  sub_B2C2F8(&this[1], v14);
   SingletonMonoBehaviour_WebViewManager____ctor(
     (SingletonMonoBehaviour_WebViewManager__o *)this,
-    (const MethodInfo_2A552A4 *)Method_SingletonMonoBehaviour_BattleSeManager___ctor__);
+    (const MethodInfo_28419D4 *)Method_SingletonMonoBehaviour_BattleSeManager___ctor__);
 }
 
 
@@ -105,42 +70,38 @@ void __fastcall BattleSeManager__DownloadSoundAsset(
   __int64 v11; // x1
   struct EffectMaster_o *effectMaster; // x0
   System_String_o *v13; // x20
-  __int64 v14; // x1
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
-  AssetLoader_LoadEndDataHandler_o *v18; // x21
+  AssetLoader_LoadEndDataHandler_o *v14; // x21
 
-  if ( (byte_40F752B & 1) == 0 )
+  if ( (byte_4184E15 & 1) == 0 )
   {
-    sub_B16FFC(&AssetManager_TypeInfo, cat);
-    sub_B16FFC(&Method_BattleSeManager_LoadEndAsset__, v7);
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__, v8);
-    sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_2180/*"Audio/Battle"*/, v10);
-    sub_B16FFC(&StringLiteral_826/*".acb.bytes"*/, v11);
-    byte_40F752B = 1;
+    sub_B2C35C(&AssetManager_TypeInfo, cat);
+    sub_B2C35C(&Method_BattleSeManager_LoadEndAsset__, v7);
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__, v8);
+    sub_B2C35C(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
+    sub_B2C35C(&StringLiteral_2186/*"Audio/Battle"*/, v10);
+    sub_B2C35C(&StringLiteral_827/*".acb.bytes"*/, v11);
+    byte_4184E15 = 1;
   }
   if ( !this->fields.assetStorageList )
     BattleSeManager__Initialize(this, (const MethodInfo *)cat);
   effectMaster = this->fields.effectMaster;
   if ( !effectMaster )
-    sub_B170D4();
+    sub_B2C434(0LL, cat);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)effectMaster,
     (System_Xml_XmlQualifiedName_o *)cat,
     (System_Xml_Schema_XmlSchemaObject_o *)callbackFunc,
-    (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__);
-  v13 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_2180/*"Audio/Battle"*/,
+    (const MethodInfo_2DB1C98 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__);
+  v13 = System_String__Concat_44307816(
+          (System_String_o *)StringLiteral_2186/*"Audio/Battle"*/,
           cat,
-          (System_String_o *)StringLiteral_826/*".acb.bytes"*/,
+          (System_String_o *)StringLiteral_827/*".acb.bytes"*/,
           0LL);
-  v18 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v14, v15, v16, v17);
-  AssetLoader_LoadEndDataHandler___ctor(v18, (Il2CppObject *)this, Method_BattleSeManager_LoadEndAsset__, 0LL);
+  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_B2C42C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  AssetLoader_LoadEndDataHandler___ctor(v14, (Il2CppObject *)this, Method_BattleSeManager_LoadEndAsset__, 0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__downloadAssetStorage(v13, v18, 1, 0LL);
+  AssetManager__downloadAssetStorage(v13, v14, 1, 0LL);
 }
 
 
@@ -148,107 +109,104 @@ void __fastcall BattleSeManager__Initialize(BattleSeManager_o *this, const Metho
 {
   __int64 v3; // x1
   WebViewManager_o *Instance; // x0
+  __int64 v5; // x1
   WarQuestSelectionMaster_o *MasterData_WarQuestSelectionMaster; // x0
 
-  if ( (byte_40F7529 & 1) == 0 )
+  if ( (byte_4184E13 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_EffectMaster___, method);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_40F7529 = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_EffectMaster___, method);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4184E13 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_B170D4();
+    sub_B2C434(0LL, v5);
   MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
                                          (DataManager_o *)Instance,
-                                         (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_EffectMaster___);
+                                         (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EffectMaster___);
   this->fields.assetStorageList = (struct System_Collections_Generic_List_string__o *)MasterData_WarQuestSelectionMaster;
-  sub_B16F98(&this->fields.assetStorageList, MasterData_WarQuestSelectionMaster);
+  sub_B2C2F8(&this->fields.assetStorageList, MasterData_WarQuestSelectionMaster);
 }
 
 
 void __fastcall BattleSeManager__LoadEndAsset(BattleSeManager_o *this, AssetData_o *data, const MethodInfo *method)
 {
+  BattleSeManager_o **v4; // x20
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  struct System_Collections_Generic_Dictionary_string__string__o *seToAssetTable; // x0
-  System_String_array *ObjectNameList; // x0
-  __int64 v10; // x1
-  __int64 v11; // x2
-  __int64 v12; // x8
-  System_String_array *v13; // x21
-  unsigned __int64 v14; // x22
-  BattleSeManager_c *klass; // x0
-  struct EffectMaster_o *effectMaster; // x0
-  struct EffectMaster_o *v17; // x0
+  struct System_Collections_Generic_List_BattleSeManager_BattleSePlayer__o *playingList; // x8
+  BattleSeManager_o *v9; // x21
+  unsigned __int64 v10; // x22
   UnityEngine_Purchasing_IStoreExtension_o *Item; // x0
+  __int64 v12; // x0
 
-  if ( (byte_40F752C & 1) == 0 )
+  v4 = (BattleSeManager_o **)this;
+  if ( (byte_4184E16 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__ContainsKey__,
       data);
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__get_Item__, v5);
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, v6);
-    sub_B16FFC(&Method_System_Collections_Generic_List_string__Add__, v7);
-    byte_40F752C = 1;
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__get_Item__, v5);
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__, v6);
+    this = (BattleSeManager_o *)sub_B2C35C(&Method_System_Collections_Generic_List_string__Add__, v7);
+    byte_4184E16 = 1;
   }
   if ( !data )
     goto LABEL_17;
-  seToAssetTable = this->fields.seToAssetTable;
-  if ( !seToAssetTable )
+  this = v4[7];
+  if ( !this )
     goto LABEL_17;
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-    (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)seToAssetTable,
+    (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)this,
     (EventMissionProgressRequest_Argument_ProgressData_o *)data->fields.name,
-    (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_string__Add__);
-  ObjectNameList = AssetData__GetObjectNameList(data, 0LL);
-  if ( !ObjectNameList )
+    (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_string__Add__);
+  this = (BattleSeManager_o *)AssetData__GetObjectNameList(data, 0LL);
+  if ( !this )
     goto LABEL_17;
-  v12 = *(_QWORD *)&ObjectNameList->max_length;
-  v13 = ObjectNameList;
-  if ( (int)v12 >= 1 )
+  playingList = this->fields.playingList;
+  v9 = this;
+  if ( (int)playingList >= 1 )
   {
-    v14 = 0LL;
+    v10 = 0LL;
     while ( 1 )
     {
-      if ( v14 >= (unsigned int)v12 )
+      if ( v10 >= (unsigned int)playingList )
       {
-        sub_B17100(ObjectNameList, v10, v11);
-        sub_B170A0();
+        v12 = sub_B2C460(this);
+        sub_B2C400(v12, 0LL);
       }
-      klass = this[1].klass;
-      if ( !klass )
+      this = v4[8];
+      if ( !this )
         break;
       System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
-        (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)klass,
-        (System_Xml_XmlQualifiedName_o *)v13->m_Items[v14],
+        (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
+        *((System_Xml_XmlQualifiedName_o **)&v9->fields.loadInfos + v10),
         (System_Xml_Schema_XmlSchemaObject_o *)data->fields.name,
-        (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-      LODWORD(v12) = v13->max_length;
-      if ( (__int64)++v14 >= (int)v12 )
+        (const MethodInfo_2DB1C98 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+      LODWORD(playingList) = v9->fields.playingList;
+      if ( (__int64)++v10 >= (int)playingList )
         goto LABEL_11;
     }
 LABEL_17:
-    sub_B170D4();
+    sub_B2C434(this, data);
   }
 LABEL_11:
-  effectMaster = this->fields.effectMaster;
-  if ( !effectMaster )
+  this = v4[5];
+  if ( !this )
     goto LABEL_17;
   if ( System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
-         (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)effectMaster,
+         (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)this,
          (System_Xml_XmlQualifiedName_o *)data->fields.name,
-         (const MethodInfo_2DA3E8C *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__ContainsKey__) )
+         (const MethodInfo_2DB1F34 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__ContainsKey__) )
   {
-    v17 = this->fields.effectMaster;
-    if ( !v17 )
+    this = v4[5];
+    if ( !this )
       goto LABEL_17;
     Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
-             (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)v17,
+             (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)this,
              (System_Type_o *)data->fields.name,
-             (const MethodInfo_2DA3B54 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__get_Item__);
+             (const MethodInfo_2DB1BFC *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__get_Item__);
     if ( Item )
       AssetLoader_LoadEndDataHandler__Invoke((AssetLoader_LoadEndDataHandler_o *)Item, data, 0LL);
   }
@@ -268,42 +226,38 @@ void __fastcall BattleSeManager__LoadSoundAsset(
   __int64 v11; // x1
   struct EffectMaster_o *effectMaster; // x0
   System_String_o *v13; // x20
-  __int64 v14; // x1
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
-  AssetLoader_LoadEndDataHandler_o *v18; // x21
+  AssetLoader_LoadEndDataHandler_o *v14; // x21
 
-  if ( (byte_40F752A & 1) == 0 )
+  if ( (byte_4184E14 & 1) == 0 )
   {
-    sub_B16FFC(&AssetManager_TypeInfo, cat);
-    sub_B16FFC(&Method_BattleSeManager_LoadEndAsset__, v7);
-    sub_B16FFC(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__, v8);
-    sub_B16FFC(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_B16FFC(&StringLiteral_2180/*"Audio/Battle"*/, v10);
-    sub_B16FFC(&StringLiteral_826/*".acb.bytes"*/, v11);
-    byte_40F752A = 1;
+    sub_B2C35C(&AssetManager_TypeInfo, cat);
+    sub_B2C35C(&Method_BattleSeManager_LoadEndAsset__, v7);
+    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__, v8);
+    sub_B2C35C(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
+    sub_B2C35C(&StringLiteral_2186/*"Audio/Battle"*/, v10);
+    sub_B2C35C(&StringLiteral_827/*".acb.bytes"*/, v11);
+    byte_4184E14 = 1;
   }
   if ( !this->fields.assetStorageList )
     BattleSeManager__Initialize(this, (const MethodInfo *)cat);
   effectMaster = this->fields.effectMaster;
   if ( !effectMaster )
-    sub_B170D4();
+    sub_B2C434(0LL, cat);
   System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___set_Item(
     (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)effectMaster,
     (System_Xml_XmlQualifiedName_o *)cat,
     (System_Xml_Schema_XmlSchemaObject_o *)callbackFunc,
-    (const MethodInfo_2DA3BF0 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__);
-  v13 = System_String__Concat_43746016(
-          (System_String_o *)StringLiteral_2180/*"Audio/Battle"*/,
+    (const MethodInfo_2DB1C98 *)Method_System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__set_Item__);
+  v13 = System_String__Concat_44307816(
+          (System_String_o *)StringLiteral_2186/*"Audio/Battle"*/,
           cat,
-          (System_String_o *)StringLiteral_826/*".acb.bytes"*/,
+          (System_String_o *)StringLiteral_827/*".acb.bytes"*/,
           0LL);
-  v18 = (AssetLoader_LoadEndDataHandler_o *)sub_B170CC(AssetLoader_LoadEndDataHandler_TypeInfo, v14, v15, v16, v17);
-  AssetLoader_LoadEndDataHandler___ctor(v18, (Il2CppObject *)this, Method_BattleSeManager_LoadEndAsset__, 0LL);
+  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_B2C42C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  AssetLoader_LoadEndDataHandler___ctor(v14, (Il2CppObject *)this, Method_BattleSeManager_LoadEndAsset__, 0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__downloadAssetStorage(v13, v18, 1, 0LL);
+  AssetManager__downloadAssetStorage(v13, v14, 1, 0LL);
 }
 
 
@@ -331,59 +285,45 @@ BattleSeManager_BattleSePlayer_o *__fastcall BattleSeManager__SearchPlayingSe(
         System_String_o *seName,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  BattleSeManager___c__DisplayClass14_0_o *v11; // x21
+  BattleSeManager___c__DisplayClass14_0_o *v9; // x21
+  __int64 v10; // x0
+  __int64 v11; // x1
   struct System_Collections_Generic_Dictionary_string__AssetLoader_LoadEndDataHandler__o *loadInfos; // x19
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x3
-  __int64 v16; // x4
-  System_Predicate_peRenderTexture_ChangeLayerObject__o *v17; // x20
+  System_Predicate_peRenderTexture_ChangeLayerObject__o *v13; // x20
 
-  if ( (byte_40F752D & 1) == 0 )
+  if ( (byte_4184E17 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer__Find__, seName);
-    sub_B16FFC(&Method_System_Predicate_BattleSeManager_BattleSePlayer___ctor__, v7);
-    sub_B16FFC(&System_Predicate_BattleSeManager_BattleSePlayer__TypeInfo, v8);
-    sub_B16FFC(&Method_BattleSeManager___c__DisplayClass14_0__SearchPlayingSe_b__0__, v9);
-    sub_B16FFC(&BattleSeManager___c__DisplayClass14_0_TypeInfo, v10);
-    byte_40F752D = 1;
+    sub_B2C35C(&Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer__Find__, seName);
+    sub_B2C35C(&Method_System_Predicate_BattleSeManager_BattleSePlayer___ctor__, v5);
+    sub_B2C35C(&System_Predicate_BattleSeManager_BattleSePlayer__TypeInfo, v6);
+    sub_B2C35C(&Method_BattleSeManager___c__DisplayClass14_0__SearchPlayingSe_b__0__, v7);
+    sub_B2C35C(&BattleSeManager___c__DisplayClass14_0_TypeInfo, v8);
+    byte_4184E17 = 1;
   }
-  v11 = (BattleSeManager___c__DisplayClass14_0_o *)sub_B170CC(
-                                                     BattleSeManager___c__DisplayClass14_0_TypeInfo,
-                                                     seName,
-                                                     method,
-                                                     v3,
-                                                     v4);
-  BattleSeManager___c__DisplayClass14_0___ctor(v11, 0LL);
-  if ( !v11
-    || (v11->fields.seName = seName,
-        sub_B16F98(&v11->fields, seName),
+  v9 = (BattleSeManager___c__DisplayClass14_0_o *)sub_B2C42C(BattleSeManager___c__DisplayClass14_0_TypeInfo);
+  BattleSeManager___c__DisplayClass14_0___ctor(v9, 0LL);
+  if ( !v9
+    || (v9->fields.seName = seName,
+        sub_B2C2F8(&v9->fields, seName),
         loadInfos = this->fields.loadInfos,
-        v17 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B170CC(
-                                                                         System_Predicate_BattleSeManager_BattleSePlayer__TypeInfo,
-                                                                         v13,
-                                                                         v14,
-                                                                         v15,
-                                                                         v16),
+        v13 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B2C42C(System_Predicate_BattleSeManager_BattleSePlayer__TypeInfo),
         System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
-          v17,
-          (Il2CppObject *)v11,
+          v13,
+          (Il2CppObject *)v9,
           Method_BattleSeManager___c__DisplayClass14_0__SearchPlayingSe_b__0__,
-          (const MethodInfo_2B0B204 *)Method_System_Predicate_BattleSeManager_BattleSePlayer___ctor__),
+          (const MethodInfo_2952BE4 *)Method_System_Predicate_BattleSeManager_BattleSePlayer___ctor__),
         !loadInfos) )
   {
-    sub_B170D4();
+    sub_B2C434(v10, v11);
   }
   return (BattleSeManager_BattleSePlayer_o *)System_Collections_Generic_List_peRenderTexture_ChangeLayerObject___Find(
                                                (System_Collections_Generic_List_peRenderTexture_ChangeLayerObject__o *)loadInfos,
-                                               (System_Predicate_T__o *)v17,
-                                               (const MethodInfo_2F26598 *)Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer__Find__);
+                                               (System_Predicate_T__o *)v13,
+                                               (const MethodInfo_2EF4D20 *)Method_System_Collections_Generic_List_BattleSeManager_BattleSePlayer__Find__);
 }
 
 
@@ -410,26 +350,24 @@ BattleSeManager_BattleSePlayer_o *__fastcall BattleSeManager__playBattleSe(
         const MethodInfo *method)
 {
   BattleSeManager_BattleSePlayer_o *v12; // x0
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x3
-  __int64 v16; // x4
-  BattleSeManager_BattleSePlayer_o *v17; // x23
+  BattleSeManager_BattleSePlayer_o *v13; // x23
+  __int64 v14; // x0
+  __int64 v15; // x1
 
-  if ( (byte_40F752E & 1) == 0 )
+  if ( (byte_4184E18 & 1) == 0 )
   {
-    sub_B16FFC(&BattleSeManager_BattleSePlayer_TypeInfo, assetName);
-    byte_40F752E = 1;
+    sub_B2C35C(&BattleSeManager_BattleSePlayer_TypeInfo, assetName);
+    byte_4184E18 = 1;
   }
   v12 = BattleSeManager__SearchPlayingSe(this, seName, (const MethodInfo *)seName);
   if ( v12 )
     BattleSeManager_BattleSePlayer__Stop(v12, 0LL);
-  v17 = (BattleSeManager_BattleSePlayer_o *)sub_B170CC(BattleSeManager_BattleSePlayer_TypeInfo, v13, v14, v15, v16);
-  BattleSeManager_BattleSePlayer___ctor(v17, this, assetName, seName, volume, callback, 0LL);
-  if ( !v17 )
-    sub_B170D4();
-  BattleSeManager_BattleSePlayer__Play(v17, 0LL);
-  return v17;
+  v13 = (BattleSeManager_BattleSePlayer_o *)sub_B2C42C(BattleSeManager_BattleSePlayer_TypeInfo);
+  BattleSeManager_BattleSePlayer___ctor(v13, this, assetName, seName, volume, callback, 0LL);
+  if ( !v13 )
+    sub_B2C434(v14, v15);
+  BattleSeManager_BattleSePlayer__Play(v13, 0LL);
+  return v13;
 }
 
 
@@ -456,15 +394,15 @@ void __fastcall BattleSeManager_BattleSePlayer___ctor(
   v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v12->fields.manager = manager;
-  sub_B16F98(&v12->fields, manager);
+  sub_B2C2F8(&v12->fields, manager);
   v12->fields.assetName = assetName;
-  sub_B16F98(&v12->fields.assetName, assetName);
+  sub_B2C2F8(&v12->fields.assetName, assetName);
   v12->fields.seName = seName;
-  sub_B16F98(&v12->fields.seName, seName);
+  sub_B2C2F8(&v12->fields.seName, seName);
   v12->fields.callback = callback;
   v12 = (BattleSeManager_BattleSePlayer_o *)((char *)v12 + 48);
   *(float *)&v12[-1].fields.player = volume;
-  sub_B16F98(v12, callback);
+  sub_B2C2F8(v12, callback);
 }
 
 
@@ -477,46 +415,43 @@ void __fastcall BattleSeManager_BattleSePlayer__FinishCallback(
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   BattleSeManager__OnFinished(manager, this, 0LL);
   callback = this->fields.callback;
   if ( callback )
     System_Action__Invoke(callback, 0LL);
   this->fields.player = 0LL;
-  sub_B16F98(&this->fields.player, 0LL);
+  sub_B2C2F8(&this->fields.player, 0LL);
 }
 
 
 void __fastcall BattleSeManager_BattleSePlayer__Play(BattleSeManager_BattleSePlayer_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v6; // x1
-  __int64 v7; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
   System_String_o *assetName; // x20
   System_String_o *seName; // x21
   float volume; // s8
-  System_Action_o *v11; // x22
-  struct SePlayer_o *v12; // x0
+  System_Action_o *v8; // x22
+  struct SePlayer_o *v9; // x0
 
-  if ( (byte_40F71B4 & 1) == 0 )
+  if ( (byte_41850BE & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, method);
-    sub_B16FFC(&Method_BattleSeManager_BattleSePlayer_FinishCallback__, v6);
-    sub_B16FFC(&SoundManager_TypeInfo, v7);
-    byte_40F71B4 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, method);
+    sub_B2C35C(&Method_BattleSeManager_BattleSePlayer_FinishCallback__, v3);
+    sub_B2C35C(&SoundManager_TypeInfo, v4);
+    byte_41850BE = 1;
   }
   assetName = this->fields.assetName;
   seName = this->fields.seName;
   volume = this->fields.volume;
-  v11 = (System_Action_o *)sub_B170CC(System_Action_TypeInfo, method, v2, v3, v4);
-  System_Action___ctor(v11, (Il2CppObject *)this, Method_BattleSeManager_BattleSePlayer_FinishCallback__, 0LL);
+  v8 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  System_Action___ctor(v8, (Il2CppObject *)this, Method_BattleSeManager_BattleSePlayer_FinishCallback__, 0LL);
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  v12 = SoundManager__playVoice_24824004(assetName, seName, volume, v11, 0LL);
-  this->fields.player = v12;
-  sub_B16F98(&this->fields.player, v12);
+  v9 = SoundManager__playVoice_24786800(assetName, seName, volume, v8, 0LL);
+  this->fields.player = v9;
+  sub_B2C2F8(&this->fields.player, v9);
 }
 
 
@@ -524,6 +459,7 @@ void __fastcall BattleSeManager_BattleSePlayer__Stop(BattleSeManager_BattleSePla
 {
   SePlayer_o *player; // x0
   struct SePlayer_o **p_player; // x20
+  __int64 v5; // x1
   BattleSeManager_o *manager; // x0
 
   p_player = &this->fields.player;
@@ -533,10 +469,10 @@ void __fastcall BattleSeManager_BattleSePlayer__Stop(BattleSeManager_BattleSePla
     SePlayer__StopSe(player, 0.0, 0LL);
     manager = this->fields.manager;
     if ( !manager )
-      sub_B170D4();
+      sub_B2C434(0LL, v5);
     BattleSeManager__OnFinished(manager, this, 0LL);
     this->fields.player = 0LL;
-    sub_B16F98(p_player, 0LL);
+    sub_B2C2F8(p_player, 0LL);
   }
 }
 
@@ -569,6 +505,6 @@ bool __fastcall BattleSeManager___c__DisplayClass14_0___SearchPlayingSe_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_B170D4();
+    sub_B2C434(this, 0LL);
   return System_String__op_Equality(x->fields.seName, this->fields.seName, 0LL);
 }

@@ -15,21 +15,21 @@ bool __fastcall AliveServantAiTask__IsActable(
         const MethodInfo *method)
 {
   BattleServantData_o *svtData; // x0
-  BattleData_o *data; // x0
 
   svtData = this->fields.svtData;
   if ( !svtData )
     goto LABEL_7;
-  if ( BattleServantData__isAlive(svtData, 0, 0LL) )
+  svtData = (BattleServantData_o *)BattleServantData__isAlive(svtData, 0, 0LL);
+  if ( ((unsigned __int8)svtData & 1) != 0 )
   {
     if ( logic )
     {
-      data = logic->fields.data;
-      if ( data )
-        return BattleData__checkAlivePlayers(data, 0LL);
+      svtData = (BattleServantData_o *)logic->fields.data;
+      if ( svtData )
+        return BattleData__checkAlivePlayers((BattleData_o *)svtData, 0LL);
     }
 LABEL_7:
-    sub_B170D4();
+    sub_B2C434(svtData, logic);
   }
   return 0;
 }

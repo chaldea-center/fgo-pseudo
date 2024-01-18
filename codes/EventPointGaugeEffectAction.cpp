@@ -22,7 +22,7 @@ void __fastcall EventPointGaugeEffectAction__OnPlayGaugeBarAnime(
   p_gaugeStartAction = (BattleServantConfConponent_o *)&this->fields.gaugeStartAction;
   v9 = gaugeStartAction;
   p_gaugeStartAction->klass = 0LL;
-  sub_B16F98(p_gaugeStartAction, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B2C2F8(p_gaugeStartAction, 0LL, v2, v3, v4, v5, v6, v7);
   if ( gaugeStartAction )
     System_Action__Invoke(v9, 0LL);
 }
@@ -40,7 +40,7 @@ void __fastcall EventPointGaugeEffectAction__Setup(
   System_Int32_array *v7; // x7
 
   this->fields.gaugeStartAction = gaugeStartAct;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.gaugeStartAction,
     (System_Int32_array **)gaugeStartAct,
     (System_String_array **)method,

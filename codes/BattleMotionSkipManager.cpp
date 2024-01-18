@@ -3,22 +3,20 @@ void __fastcall BattleMotionSkipManager___ctor(
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
-  BaseMotionSkip_o *v7; // x21
+  BaseMotionSkip_o *v5; // x21
 
-  if ( (byte_40F6AE8 & 1) == 0 )
+  if ( (byte_41843D1 & 1) == 0 )
   {
-    sub_B16FFC(&BaseMotionSkip_TypeInfo, perf);
-    byte_40F6AE8 = 1;
+    sub_B2C35C(&BaseMotionSkip_TypeInfo, perf);
+    byte_41843D1 = 1;
   }
-  v7 = (BaseMotionSkip_o *)sub_B170CC(BaseMotionSkip_TypeInfo, perf, method, v3, v4);
-  BaseMotionSkip___ctor(v7, 0LL);
-  this->fields.defaultMotionSkip = v7;
-  sub_B16F98(&this->fields, v7);
+  v5 = (BaseMotionSkip_o *)sub_B2C42C(BaseMotionSkip_TypeInfo);
+  BaseMotionSkip___ctor(v5, 0LL);
+  this->fields.defaultMotionSkip = v5;
+  sub_B2C2F8(&this->fields, v5);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._Perf_k__BackingField = perf;
-  sub_B16F98(&this->fields._Perf_k__BackingField, perf);
+  sub_B2C2F8(&this->fields._Perf_k__BackingField, perf);
 }
 
 
@@ -33,13 +31,13 @@ void __fastcall BattleMotionSkipManager__ReleaseMotionSkip(BattleMotionSkipManag
   {
     mainMotionSkip = this->fields.defaultMotionSkip;
     if ( !mainMotionSkip )
-      sub_B170D4();
+      sub_B2C434(0LL, method);
   }
   ((void (__fastcall *)(struct BaseMotionSkip_o *, Il2CppMethodPointer))mainMotionSkip->klass->vtable._7_Release.method)(
     mainMotionSkip,
     mainMotionSkip->klass->vtable._8_ResetSkipTimeScale.methodPtr);
   *p_mainMotionSkip = 0LL;
-  sub_B16F98(p_mainMotionSkip, 0LL);
+  sub_B2C2F8(p_mainMotionSkip, 0LL);
 }
 
 
@@ -48,25 +46,28 @@ void __fastcall BattleMotionSkipManager__SetMotionSkip(
         BattleSkillInfoData_o *skillInfo,
         const MethodInfo *method)
 {
-  struct BaseMotionSkip_o *v5; // x0
   struct BaseMotionSkip_o *mainMotionSkip; // x0
+  __int64 v6; // x1
+  struct BaseMotionSkip_o *v7; // x0
+  long double v8; // q0
 
   BattleMotionSkipManager__ReleaseMotionSkip(this, (const MethodInfo *)skillInfo);
   if ( !skillInfo
-    || (v5 = (struct BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleSkillInfoData_o *, Il2CppMethodPointer))skillInfo->klass->vtable._14_MakeSkillSkip.method)(
+    || (v7 = (struct BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleSkillInfoData_o *, Il2CppMethodPointer))skillInfo->klass->vtable._14_MakeSkillSkip.method)(
                                           skillInfo,
                                           skillInfo->klass->vtable._15_CommonMakeSkillSkip.methodPtr),
-        this->fields.mainMotionSkip = v5,
-        sub_B16F98(&this->fields.mainMotionSkip, v5),
+        this->fields.mainMotionSkip = v7,
+        *(__n128 *)&v8 = sub_B2C2F8(&this->fields.mainMotionSkip, v7),
         (mainMotionSkip = this->fields.mainMotionSkip) == 0LL)
     && (mainMotionSkip = this->fields.defaultMotionSkip) == 0LL )
   {
-    sub_B170D4();
+    sub_B2C434(mainMotionSkip, v6);
   }
-  ((void (__fastcall *)(struct BaseMotionSkip_o *, BattleMotionSkipManager_o *, Il2CppMethodPointer))mainMotionSkip->klass->vtable._6_Init.method)(
+  ((void (__fastcall *)(struct BaseMotionSkip_o *, BattleMotionSkipManager_o *, Il2CppMethodPointer, long double))mainMotionSkip->klass->vtable._6_Init.method)(
     mainMotionSkip,
     this,
-    mainMotionSkip->klass->vtable._7_Release.methodPtr);
+    mainMotionSkip->klass->vtable._7_Release.methodPtr,
+    v8);
 }
 
 
@@ -97,7 +98,7 @@ void __fastcall BattleMotionSkipManager__set_Current(
         const MethodInfo *method)
 {
   this->fields.mainMotionSkip = value;
-  sub_B16F98(&this->fields.mainMotionSkip, value);
+  sub_B2C2F8(&this->fields.mainMotionSkip, value);
 }
 
 
@@ -107,5 +108,5 @@ void __fastcall BattleMotionSkipManager__set_Perf(
         const MethodInfo *method)
 {
   this->fields._Perf_k__BackingField = value;
-  sub_B16F98(&this->fields._Perf_k__BackingField, value);
+  sub_B2C2F8(&this->fields._Perf_k__BackingField, value);
 }

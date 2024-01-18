@@ -1,9 +1,9 @@
 void __fastcall SoundPlayerListViewObject___ctor(SoundPlayerListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F9D3A & 1) == 0 )
+  if ( (byte_4187708 & 1) == 0 )
   {
-    sub_B16FFC(&ListViewObject_TypeInfo, method);
-    byte_40F9D3A = 1;
+    sub_B2C35C(&ListViewObject_TypeInfo, method);
+    byte_4187708 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -16,37 +16,38 @@ void __fastcall SoundPlayerListViewObject___ctor(SoundPlayerListViewObject_o *th
 
 void __fastcall SoundPlayerListViewObject__Awake(SoundPlayerListViewObject_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   struct SoundPlayerListViewItemDraw_o *Component_srcLineSprite; // x0
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_40F9D34 & 1) == 0 )
+  if ( (byte_4187702 & 1) == 0 )
   {
-    sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewItemDraw___, method);
-    byte_40F9D34 = 1;
+    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewItemDraw___, method);
+    byte_4187702 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B170D4();
+    sub_B2C434(0LL, v3);
   Component_srcLineSprite = (struct SoundPlayerListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                       dispObject,
-                                                                      (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewItemDraw___);
+                                                                      (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_SoundPlayerListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
-    v5,
     v6,
     v7,
     v8,
     v9,
-    v10);
+    v10,
+    v11);
 }
 
 
@@ -57,10 +58,10 @@ SoundPlayerListViewItem_o *__fastcall SoundPlayerListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 v4; // x11
 
-  if ( (byte_40F9D35 & 1) == 0 )
+  if ( (byte_4187703 & 1) == 0 )
   {
-    sub_B16FFC(&SoundPlayerListViewItem_TypeInfo, method);
-    byte_40F9D35 = 1;
+    sub_B2C35C(&SoundPlayerListViewItem_TypeInfo, method);
+    byte_4187703 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -89,7 +90,7 @@ void __fastcall SoundPlayerListViewObject__Init(
   __int64 v12; // x10
   int32_t v13; // w24
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Transform_o *v15; // x0
+  __int64 v15; // x1
   BattleServantConfConponent_o *p_callbackFunc; // x21
   System_String_array **v17; // x2
   System_String_array **v18; // x3
@@ -108,10 +109,10 @@ void __fastcall SoundPlayerListViewObject__Init(
   int32_t v31; // w8
   System_Action_o *klass; // x19
 
-  if ( (byte_40F9D37 & 1) == 0 )
+  if ( (byte_4187705 & 1) == 0 )
   {
-    sub_B16FFC(&SoundPlayerListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_40F9D37 = 1;
+    sub_B2C35C(&SoundPlayerListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4187705 = 1;
   }
   linkItem = this->fields.linkItem;
   state = this->fields.state;
@@ -137,14 +138,14 @@ void __fastcall SoundPlayerListViewObject__Init(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
-        (v15 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(transform, v15);
   }
-  UnityEngine_Transform__set_localScale(v15, this->fields.baseScale, 0LL);
+  UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callbackFunc,
     v17,
@@ -183,7 +184,7 @@ LABEL_19:
       if ( p_callbackFunc->klass )
       {
         p_callbackFunc->klass = 0LL;
-        sub_B16F98(p_callbackFunc, 0LL, v24, v25, v26, v27, v28, v29);
+        sub_B2C2F8(p_callbackFunc, 0LL, v24, v25, v26, v27, v28, v29);
         System_Action__Invoke(klass, 0LL);
       }
       return;
@@ -198,7 +199,7 @@ void __fastcall SoundPlayerListViewObject__InitItem(SoundPlayerListViewObject_o 
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SoundPlayerListViewObject__Init_24870992(
+void __fastcall SoundPlayerListViewObject__Init_24833788(
         SoundPlayerListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -212,7 +213,7 @@ void __fastcall SoundPlayerListViewObject__Init_24870992(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SoundPlayerListViewObject__Init_24872456(
+void __fastcall SoundPlayerListViewObject__Init_24835252(
         SoundPlayerListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -234,7 +235,7 @@ void __fastcall SoundPlayerListViewObject__Init_24872456(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SoundPlayerListViewObject__Init_24872520(
+void __fastcall SoundPlayerListViewObject__Init_24835316(
         SoundPlayerListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -262,12 +263,14 @@ void __fastcall SoundPlayerListViewObject__SetInput(
 {
   __int64 v5; // x1
   UnityEngine_Object_o *itemDraw; // x20
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_40F9D36 & 1) == 0 )
+  if ( (byte_4187704 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, isInput);
-    sub_B16FFC(&SoundPlayerListViewItem_TypeInfo, v5);
-    byte_40F9D36 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, isInput);
+    sub_B2C35C(&SoundPlayerListViewItem_TypeInfo, v5);
+    byte_4187704 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -276,8 +279,9 @@ void __fastcall SoundPlayerListViewObject__SetInput(
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) && !this->fields.itemDraw )
-    sub_B170D4();
+  v7 = UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL);
+  if ( v7 && !this->fields.itemDraw )
+    sub_B2C434(v7, v8);
 }
 
 
@@ -287,12 +291,12 @@ void __fastcall SoundPlayerListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_30205928((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_33907092((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall SoundPlayerListViewObject__SetItem_24873576(
+void __fastcall SoundPlayerListViewObject__SetItem_24836372(
         SoundPlayerListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -309,14 +313,15 @@ void __fastcall SoundPlayerListViewObject__SetupDisp(SoundPlayerListViewObject_o
   __int64 v5; // x10
   bool v6; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  const MethodInfo *v8; // x3
-  SoundPlayerListViewItemDraw_o *v9; // x0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x3
+  SoundPlayerListViewItemDraw_o *v10; // x0
 
-  if ( (byte_40F9D38 & 1) == 0 )
+  if ( (byte_4187706 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, method);
-    sub_B16FFC(&SoundPlayerListViewItem_TypeInfo, v3);
-    byte_40F9D38 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
+    sub_B2C35C(&SoundPlayerListViewItem_TypeInfo, v3);
+    byte_4187706 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -341,10 +346,10 @@ LABEL_8:
   }
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_B170D4();
-    SoundPlayerListViewItemDraw__SetItem(v9, (SoundPlayerListViewItem_o *)linkItem, this->fields.dispMode, v8);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_B2C434(0LL, v8);
+    SoundPlayerListViewItemDraw__SetItem(v10, (SoundPlayerListViewItem_o *)linkItem, this->fields.dispMode, v9);
   }
 }
 
@@ -364,10 +369,10 @@ void __fastcall SoundPlayerListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_40F9D32 & 1) == 0 )
+  if ( (byte_4187700 & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, value);
-    byte_40F9D32 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, value);
+    byte_4187700 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -380,13 +385,13 @@ void __fastcall SoundPlayerListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B0BA14(p_callbackFunc, v8, v6);
+    v9 = sub_B20D74(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SoundPlayerListViewObject_o *)sub_B173C8(v8);
+  v11 = (SoundPlayerListViewObject_o *)sub_B2C728(v8);
   SoundPlayerListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -401,24 +406,25 @@ SoundPlayerListViewItemDraw_o *__fastcall SoundPlayerListViewObject__getItemDraw
 
 void __fastcall SoundPlayerListViewObject__onClickSelect(SoundPlayerListViewObject_o *this, const MethodInfo *method)
 {
+  SoundPlayerListViewObject_o *v2; // x19
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
   struct ListViewItem_o *linkItem; // x8
   __int64 v7; // x11
   int32_t sortIndex; // w8
-  UnityEngine_Component_o *manager; // x0
-  __int64 *v10; // x8
+  __int64 *v9; // x8
 
-  if ( (byte_40F9D39 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4187707 & 1) == 0 )
   {
-    sub_B16FFC(&SoundManager_TypeInfo, method);
-    sub_B16FFC(&SoundPlayerListViewItem_TypeInfo, v3);
-    sub_B16FFC(&StringLiteral_21147/*"onClickSelectListView"*/, v4);
-    sub_B16FFC(&StringLiteral_21143/*"onClickCheckListView"*/, v5);
-    byte_40F9D39 = 1;
+    sub_B2C35C(&SoundManager_TypeInfo, method);
+    sub_B2C35C(&SoundPlayerListViewItem_TypeInfo, v3);
+    sub_B2C35C(&StringLiteral_21237/*"onClickSelectListView"*/, v4);
+    this = (SoundPlayerListViewObject_o *)sub_B2C35C(&StringLiteral_21233/*"onClickCheckListView"*/, v5);
+    byte_4187707 = 1;
   }
-  linkItem = this->fields.linkItem;
+  linkItem = v2->fields.linkItem;
   if ( linkItem )
   {
     v7 = *(&SoundPlayerListViewItem_TypeInfo->_2.bitflags2 + 1);
@@ -439,21 +445,25 @@ void __fastcall SoundPlayerListViewObject__onClickSelect(SoundPlayerListViewObje
         SoundManager__playSystemSe(2, method);
         break;
       case 1:
-        manager = (UnityEngine_Component_o *)this->fields.manager;
-        if ( manager )
+        this = (SoundPlayerListViewObject_o *)v2->fields.manager;
+        if ( this )
         {
-          v10 = &StringLiteral_21143/*"onClickCheckListView"*/;
+          v9 = &StringLiteral_21233/*"onClickCheckListView"*/;
           goto LABEL_18;
         }
 LABEL_19:
-        sub_B170D4();
+        sub_B2C434(this, method);
       case 0:
-        manager = (UnityEngine_Component_o *)this->fields.manager;
-        if ( manager )
+        this = (SoundPlayerListViewObject_o *)v2->fields.manager;
+        if ( this )
         {
-          v10 = &StringLiteral_21147/*"onClickSelectListView"*/;
+          v9 = &StringLiteral_21237/*"onClickSelectListView"*/;
 LABEL_18:
-          UnityEngine_Component__SendMessage(manager, (System_String_o *)*v10, (Il2CppObject *)this, 0LL);
+          UnityEngine_Component__SendMessage(
+            (UnityEngine_Component_o *)this,
+            (System_String_o *)*v9,
+            (Il2CppObject *)v2,
+            0LL);
           return;
         }
         goto LABEL_19;
@@ -476,10 +486,10 @@ void __fastcall SoundPlayerListViewObject__remove_callbackFunc(
   SoundPlayerListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_40F9D33 & 1) == 0 )
+  if ( (byte_4187701 & 1) == 0 )
   {
-    sub_B16FFC(&System_Action_TypeInfo, value);
-    byte_40F9D33 = 1;
+    sub_B2C35C(&System_Action_TypeInfo, value);
+    byte_4187701 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -492,12 +502,12 @@ void __fastcall SoundPlayerListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B0BA14(p_callbackFunc, v8, v6);
+    v9 = sub_B20D74(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SoundPlayerListViewObject_o *)sub_B173C8(v8);
+  v11 = (SoundPlayerListViewObject_o *)sub_B2C728(v8);
   SoundPlayerListViewObject__Awake(v11, v12);
 }

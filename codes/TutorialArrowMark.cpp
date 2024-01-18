@@ -15,94 +15,90 @@ void __fastcall TutorialArrowMark__Init(
   float x; // s9
   __int64 v8; // x1
   UnityEngine_Component_o *messageLabel; // x0
-  UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *oldArrow; // x0
-  UnityEngine_GameObject_o *arrow; // x0
-  UnityEngine_GameObject_o *touchIcon; // x0
-  UILabel_o *v14; // x20
-  System_String_o *v15; // x0
+  UILabel_o *v10; // x20
   UnityEngine_Transform_o *rotation; // x20
-  int v17; // s0
-  float v21; // s0
+  int v12; // s0
+  float v16; // s0
   UnityEngine_Transform_o *touchIconPosition; // x20
-  float v23; // s11
+  float v18; // s11
   unsigned int localPosition; // s0
-  UnityEngine_Transform_o *v25; // x0
-  float v26; // s10
-  float v27; // s1
-  UnityEngine_Transform_o *v28; // x0
-  float v29; // s12
-  UnityEngine_Transform_o *transform; // x0
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  float v20; // s10
+  float v21; // s1
+  float v22; // s12
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_40FB8CE & 1) == 0 )
+  if ( (byte_4189A07 & 1) == 0 )
   {
-    sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_13403/*"TUTORIAL_ARROW_MARK_MESSAGE"*/, v8);
-    byte_40FB8CE = 1;
+    sub_B2C35C(&LocalizationManager_TypeInfo, method);
+    sub_B2C35C(&StringLiteral_13459/*"TUTORIAL_ARROW_MARK_MESSAGE"*/, v8);
+    byte_4189A07 = 1;
   }
   messageLabel = (UnityEngine_Component_o *)this->fields.messageLabel;
   if ( !messageLabel )
     goto LABEL_18;
-  gameObject = UnityEngine_Component__get_gameObject(messageLabel, 0LL);
-  if ( !gameObject )
+  messageLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageLabel, 0LL);
+  if ( !messageLabel )
     goto LABEL_18;
-  UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
-  oldArrow = this->fields.oldArrow;
-  if ( !oldArrow )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 0, 0LL);
+  messageLabel = (UnityEngine_Component_o *)this->fields.oldArrow;
+  if ( !messageLabel )
     goto LABEL_18;
-  UnityEngine_GameObject__SetActive(oldArrow, 0, 0LL);
-  arrow = this->fields.arrow;
-  if ( !arrow )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 0, 0LL);
+  messageLabel = (UnityEngine_Component_o *)this->fields.arrow;
+  if ( !messageLabel )
     goto LABEL_18;
-  UnityEngine_GameObject__SetActive(arrow, 1, 0LL);
-  touchIcon = this->fields.touchIcon;
-  if ( !touchIcon )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 1, 0LL);
+  messageLabel = (UnityEngine_Component_o *)this->fields.touchIcon;
+  if ( !messageLabel )
     goto LABEL_18;
-  UnityEngine_GameObject__SetActive(touchIcon, 1, 0LL);
-  v14 = this->fields.messageLabel;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 1, 0LL);
+  v10 = this->fields.messageLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_13403/*"TUTORIAL_ARROW_MARK_MESSAGE"*/, 0LL);
-  if ( !v14 )
+  messageLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13459/*"TUTORIAL_ARROW_MARK_MESSAGE"*/, 0LL);
+  if ( !v10 )
     goto LABEL_18;
-  UILabel__set_text(v14, v15, 0LL);
+  UILabel__set_text(v10, (System_String_o *)messageLabel, 0LL);
   rotation = this->fields.rotation;
-  *(UnityEngine_Quaternion_o *)&v17 = UnityEngine_Quaternion__Euler(0.0, 0.0, way, 0LL);
+  *(UnityEngine_Quaternion_o *)&v12 = UnityEngine_Quaternion__Euler(0.0, 0.0, way, 0LL);
   if ( !rotation )
     goto LABEL_18;
-  UnityEngine_Transform__set_localRotation(rotation, *(UnityEngine_Quaternion_o *)&v17, 0LL);
-  v21 = sinf(way * 0.017453);
+  UnityEngine_Transform__set_localRotation(rotation, *(UnityEngine_Quaternion_o *)&v12, 0LL);
+  v16 = sinf(way * 0.017453);
   touchIconPosition = this->fields.touchIconPosition;
   if ( !touchIconPosition )
     goto LABEL_18;
-  v23 = v21;
+  v18 = v16;
   localPosition = (unsigned int)UnityEngine_Transform__get_localPosition(this->fields.touchIconPosition, 0LL);
-  v25 = this->fields.touchIconPosition;
-  if ( !v25 )
+  messageLabel = (UnityEngine_Component_o *)this->fields.touchIconPosition;
+  if ( !messageLabel )
     goto LABEL_18;
-  v26 = *(float *)&localPosition;
-  *(UnityEngine_Vector3_o *)(&v27 - 1) = UnityEngine_Transform__get_localPosition(v25, 0LL);
-  v28 = this->fields.touchIconPosition;
-  if ( !v28
-    || (v29 = v27,
-        v31 = UnityEngine_Transform__get_localPosition(v28, 0LL),
-        v31.fields.y = (float)(fabsf(v23) * 40.0) + v29,
-        v31.fields.x = v26,
-        UnityEngine_Transform__set_localPosition(touchIconPosition, v31, 0LL),
-        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+  v20 = *(float *)&localPosition;
+  *(UnityEngine_Vector3_o *)(&v21 - 1) = UnityEngine_Transform__get_localPosition(
+                                           (UnityEngine_Transform_o *)messageLabel,
+                                           0LL);
+  messageLabel = (UnityEngine_Component_o *)this->fields.touchIconPosition;
+  if ( !messageLabel
+    || (v22 = v21,
+        v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)messageLabel, 0LL),
+        v23.fields.y = (float)(fabsf(v18) * 40.0) + v22,
+        v23.fields.x = v20,
+        UnityEngine_Transform__set_localPosition(touchIconPosition, v23, 0LL),
+        (messageLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
+                                                     (UnityEngine_Component_o *)this,
+                                                     0LL)) == 0LL) )
   {
 LABEL_18:
-    sub_B170D4();
+    sub_B2C434(messageLabel, method);
   }
-  v32.fields.x = x;
-  v32.fields.y = y;
-  v32.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition(transform, v32, 0LL);
+  v24.fields.x = x;
+  v24.fields.y = y;
+  v24.fields.z = 0.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)messageLabel, v24, 0LL);
 }

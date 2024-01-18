@@ -10,10 +10,12 @@ void __fastcall UserOwnStone___ctor(
   System_Int32_array **v10; // x5
   System_Int32_array *v11; // x6
   System_Int32_array *v12; // x7
+  __int64 v13; // x0
+  __int64 v14; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._ItemEntity_k__BackingField,
     (System_Int32_array **)itemEntity,
     v7,
@@ -23,6 +25,6 @@ void __fastcall UserOwnStone___ctor(
     v11,
     v12);
   if ( !userGameEntity )
-    sub_B170D4();
+    sub_B2C434(v13, v14);
   this->fields._Num_k__BackingField = userGameEntity->fields.stone;
 }

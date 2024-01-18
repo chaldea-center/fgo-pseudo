@@ -1,13 +1,13 @@
 void __fastcall CombineEntity___ctor(CombineEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40F98DA & 1) == 0 )
+  if ( (byte_418619B & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_int___ctor__, method);
-    byte_40F98DA = 1;
+    sub_B2C35C(&Method_DataEntityBase_int___ctor__, method);
+    byte_418619B = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_266F234 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_24E3F7C *)Method_DataEntityBase_int___ctor__);
 }
 
 

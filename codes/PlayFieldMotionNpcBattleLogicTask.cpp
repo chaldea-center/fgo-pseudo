@@ -15,7 +15,7 @@ void __fastcall PlayFieldMotionNpcBattleLogicTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, 0LL);
   this->fields.actiontype = 44;
   this->fields.motionName = motionName;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.motionName,
     (System_Int32_array **)motionName,
     v9,
@@ -46,17 +46,15 @@ BattleActionData_o *__fastcall PlayFieldMotionNpcBattleLogicTask__MakeActionData
 {
   const MethodInfo *v5; // x1
   int32_t TargetId; // w22
-  __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x3
-  __int64 v10; // x4
-  PlayFieldMotionNpcActionData_o *v11; // x21
-  const MethodInfo *v12; // x2
+  PlayFieldMotionNpcActionData_o *v7; // x21
+  const MethodInfo *v8; // x2
+  __int64 v9; // x0
+  __int64 v10; // x1
 
-  if ( (byte_40F8F6E & 1) == 0 )
+  if ( (byte_4186B09 & 1) == 0 )
   {
-    sub_B16FFC(&PlayFieldMotionNpcActionData_TypeInfo, logic);
-    byte_40F8F6E = 1;
+    sub_B2C35C(&PlayFieldMotionNpcActionData_TypeInfo, logic);
+    byte_4186B09 = 1;
   }
   if ( (((__int64 (__fastcall *)(PlayFieldMotionNpcBattleLogicTask_o *, BattleLogic_o *, void *))this->klass->vtable._8_IsMakeAble.method)(
           this,
@@ -64,11 +62,11 @@ BattleActionData_o *__fastcall PlayFieldMotionNpcBattleLogicTask__MakeActionData
           this->klass[1]._1.image) & 1) == 0 )
     return 0LL;
   TargetId = PlayFieldMotionNpcBattleLogicTask__get_TargetId(this, v5);
-  v11 = (PlayFieldMotionNpcActionData_o *)sub_B170CC(PlayFieldMotionNpcActionData_TypeInfo, v7, v8, v9, v10);
-  PlayFieldMotionNpcActionData___ctor(v11, TargetId, v12);
+  v7 = (PlayFieldMotionNpcActionData_o *)sub_B2C42C(PlayFieldMotionNpcActionData_TypeInfo);
+  PlayFieldMotionNpcActionData___ctor(v7, TargetId, v8);
   if ( !logic )
-    sub_B170D4();
-  return BattleLogic__CreateCommonFieldPlayMotion(logic, (BattleLogicTask_o *)this, (BattleActionData_o *)v11, 0LL);
+    sub_B2C434(v9, v10);
+  return BattleLogic__CreateCommonFieldPlayMotion(logic, (BattleLogicTask_o *)this, (BattleActionData_o *)v7, 0LL);
 }
 
 
@@ -76,14 +74,14 @@ int32_t __fastcall PlayFieldMotionNpcBattleLogicTask__get_TargetId(
         PlayFieldMotionNpcBattleLogicTask_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_40F8F6D & 1) == 0 )
+  if ( (byte_4186B08 & 1) == 0 )
   {
-    sub_B16FFC(&Method_BasicHelper_IndexValue_int____66807072, method);
-    byte_40F8F6D = 1;
+    sub_B2C35C(&Method_BasicHelper_IndexValue_int____67381984, method);
+    byte_4186B08 = 1;
   }
   return BasicHelper__IndexValue_int_(
            this->fields.targetIdlist,
            0,
            -1,
-           (const MethodInfo_18B81B4 *)Method_BasicHelper_IndexValue_int____66807072);
+           (const MethodInfo_172891C *)Method_BasicHelper_IndexValue_int____67381984);
 }

@@ -15,82 +15,83 @@ void __fastcall WarBoardUIUtility__ShowRuleDialog(System_Action_o *callbackFunc,
   _QWORD *v15; // x0
   System_Reflection_MethodBase_o *v16; // x0
   WarBoardManager_o *Instance; // x20
-  WebViewManager_o *v18; // x0
-  WarQuestSelectionMaster_o *MasterData_WarQuestSelectionMaster; // x0
+  __int64 MasterData_WarQuestSelectionMaster; // x0
+  __int64 v19; // x1
   WarBoardData_o *warBoardData_k__BackingField; // x22
   int winCondId; // w23
   WarBoardStageDetailMaster_o *v22; // x21
-  int32_t id; // w0
   WarBoardStageDetailEntity_o *WarBoardStageDetailEntity; // x0
-  WarBoardStageDetailEntity_o *v25; // x23
+  WarBoardStageDetailEntity_o *v24; // x23
   bool HasNewWinCond; // w21
-  __int64 v27; // x2
-  System_Object_array *v28; // x20
-  System_Char_array *WebViewAddress_23699452; // x0
-  System_Char_array *v30; // x1
-  System_String_array **v31; // x2
-  System_String_array **v32; // x3
-  System_Boolean_array **v33; // x4
-  System_Int32_array **v34; // x5
-  System_Int32_array *v35; // x6
-  System_Int32_array *v36; // x7
-  System_Int32_array **v37; // x24
-  System_String_array **v38; // x3
-  System_Boolean_array **v39; // x4
-  System_Int32_array **v40; // x5
-  System_Int32_array *v41; // x6
-  System_Int32_array *v42; // x7
+  System_Object_array *v26; // x20
+  System_String_array **v27; // x2
+  System_String_array **v28; // x3
+  System_Boolean_array **v29; // x4
+  System_Int32_array **v30; // x5
+  System_Int32_array *v31; // x6
+  System_Int32_array *v32; // x7
+  System_Int32_array **v33; // x24
+  System_String_array **v34; // x2
+  System_String_array **v35; // x3
+  System_Boolean_array **v36; // x4
+  System_Int32_array **v37; // x5
+  System_Int32_array *v38; // x6
+  System_Int32_array *v39; // x7
   System_Int32_array **detailUrl; // x23
-  System_String_array **v44; // x3
-  System_Boolean_array **v45; // x4
-  System_Int32_array **v46; // x5
-  System_Int32_array *v47; // x6
-  System_Int32_array *v48; // x7
-  System_Int32_array **v49; // x22
-  __int64 v50; // x1
-  __int64 v51; // x2
-  NetworkManager_c *v52; // x0
+  System_String_array **v41; // x2
+  System_String_array **v42; // x3
+  System_Boolean_array **v43; // x4
+  System_Int32_array **v44; // x5
+  System_Int32_array *v45; // x6
+  System_Int32_array *v46; // x7
+  System_Int32_array **v47; // x22
+  __int64 v48; // x1
+  NetworkManager_c *v49; // x0
   System_String_o *gameServerAddress; // x22
-  System_String_array **v54; // x3
-  System_Boolean_array **v55; // x4
-  System_Int32_array **v56; // x5
-  System_Int32_array *v57; // x6
-  System_Int32_array *v58; // x7
-  System_Int32_array **v59; // x22
-  System_String_array **v60; // x3
-  System_Boolean_array **v61; // x4
-  System_Int32_array **v62; // x5
-  System_Int32_array *v63; // x6
-  System_Int32_array *v64; // x7
-  System_Int32_array **v65; // x21
-  System_String_o *v66; // x20
-  System_String_o *v67; // x21
-  _BOOL4 v68; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v69; // [xsp+Ch] [xbp-34h] BYREF
+  System_String_array **v51; // x2
+  System_String_array **v52; // x3
+  System_Boolean_array **v53; // x4
+  System_Int32_array **v54; // x5
+  System_Int32_array *v55; // x6
+  System_Int32_array *v56; // x7
+  System_Int32_array **v57; // x22
+  System_String_array **v58; // x2
+  System_String_array **v59; // x3
+  System_Boolean_array **v60; // x4
+  System_Int32_array **v61; // x5
+  System_Int32_array *v62; // x6
+  System_Int32_array *v63; // x7
+  System_Int32_array **v64; // x21
+  System_String_o *v65; // x20
+  System_String_o *v66; // x21
+  __int64 v67; // x0
+  __int64 v68; // x0
+  _BOOL4 v69; // [xsp+8h] [xbp-38h] BYREF
+  int32_t id; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_40FA909 & 1) == 0 )
+  if ( (byte_41888E7 & 1) == 0 )
   {
-    sub_B16FFC(&char___TypeInfo, method);
-    sub_B16FFC(&Method_DataManager_GetMasterData_WarBoardStageDetailMaster___, v3);
-    sub_B16FFC(&int_TypeInfo, v4);
-    sub_B16FFC(&LocalizationManager_TypeInfo, v5);
-    sub_B16FFC(&NetworkManager_TypeInfo, v6);
-    sub_B16FFC(&object___TypeInfo, v7);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v10);
-    sub_B16FFC(&Method_WarBoardUIUtility_ShowRuleDialog__, v11);
-    sub_B16FFC(&WebViewManager_TypeInfo, v12);
-    sub_B16FFC(&StringLiteral_23562/*"{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}"*/, v13);
-    sub_B16FFC(&StringLiteral_15309/*"WEB_VIEW_TITLE_WARBOARD_RULE"*/, v14);
-    byte_40FA909 = 1;
+    sub_B2C35C(&char___TypeInfo, method);
+    sub_B2C35C(&Method_DataManager_GetMasterData_WarBoardStageDetailMaster___, v3);
+    sub_B2C35C(&int_TypeInfo, v4);
+    sub_B2C35C(&LocalizationManager_TypeInfo, v5);
+    sub_B2C35C(&NetworkManager_TypeInfo, v6);
+    sub_B2C35C(&object___TypeInfo, v7);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v8);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v10);
+    sub_B2C35C(&Method_WarBoardUIUtility_ShowRuleDialog__, v11);
+    sub_B2C35C(&WebViewManager_TypeInfo, v12);
+    sub_B2C35C(&StringLiteral_23656/*"{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}"*/, v13);
+    sub_B2C35C(&StringLiteral_15371/*"WEB_VIEW_TITLE_WARBOARD_RULE"*/, v14);
+    byte_41888E7 = 1;
   }
   v15 = Method_WarBoardUIUtility_ShowRuleDialog__;
   if ( (*((_BYTE *)Method_WarBoardUIUtility_ShowRuleDialog__ + 75) & 2) != 0 )
-    v15 = (_QWORD *)sub_B17004(Method_WarBoardUIUtility_ShowRuleDialog__);
-  v16 = (System_Reflection_MethodBase_o *)sub_B16FE0(v15, v15[3]);
+    v15 = (_QWORD *)sub_B2C364(Method_WarBoardUIUtility_ShowRuleDialog__);
+  v16 = (System_Reflection_MethodBase_o *)sub_B2C340(v15, v15[3]);
   OverwriteAssetSoundName__PlaySystemSe(v16, 0, 0LL);
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -98,12 +99,12 @@ void __fastcall WarBoardUIUtility__ShowRuleDialog(System_Action_o *callbackFunc,
   }
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
   {
-    v18 = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    if ( v18 )
+    MasterData_WarQuestSelectionMaster = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( MasterData_WarQuestSelectionMaster )
     {
-      MasterData_WarQuestSelectionMaster = DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                             (DataManager_o *)v18,
-                                             (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_WarBoardStageDetailMaster___);
+      MasterData_WarQuestSelectionMaster = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                      (DataManager_o *)MasterData_WarQuestSelectionMaster,
+                                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_WarBoardStageDetailMaster___);
       if ( Instance )
       {
         warBoardData_k__BackingField = Instance->fields._warBoardData_k__BackingField;
@@ -111,139 +112,139 @@ void __fastcall WarBoardUIUtility__ShowRuleDialog(System_Action_o *callbackFunc,
         {
           winCondId = warBoardData_k__BackingField->fields.winCondId;
           v22 = (WarBoardStageDetailMaster_o *)MasterData_WarQuestSelectionMaster;
-          id = WarBoardData__get_id(Instance->fields._warBoardData_k__BackingField, 0LL);
+          MasterData_WarQuestSelectionMaster = WarBoardData__get_id(Instance->fields._warBoardData_k__BackingField, 0LL);
           if ( v22 )
           {
             WarBoardStageDetailEntity = WarBoardStageDetailMaster__GetWarBoardStageDetailEntity(
                                           v22,
-                                          id,
+                                          MasterData_WarQuestSelectionMaster,
                                           winCondId & (unsigned int)~(winCondId >> 31),
                                           0LL);
             if ( !WarBoardStageDetailEntity )
               return;
-            v25 = WarBoardStageDetailEntity;
+            v24 = WarBoardStageDetailEntity;
             WarBoardManager__SetMapTouchEnable(Instance, 0, 0, 0LL);
             WarBoardManager__HideSimplePopup(Instance, 0LL, 0LL);
             HasNewWinCond = WarBoardData__HasNewWinCond(warBoardData_k__BackingField, 0LL);
-            v28 = (System_Object_array *)sub_B17014(object___TypeInfo, 5LL, v27);
+            v26 = (System_Object_array *)sub_B2C374(object___TypeInfo, 5LL);
             if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !NetworkManager_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
             }
-            WebViewAddress_23699452 = (System_Char_array *)NetworkManager__getWebViewAddress_23699452(13, 0LL);
-            if ( v28 )
+            MasterData_WarQuestSelectionMaster = (__int64)NetworkManager__getWebViewAddress_26285648(13, 0LL);
+            if ( v26 )
             {
-              v37 = (System_Int32_array **)WebViewAddress_23699452;
-              if ( WebViewAddress_23699452 )
+              v33 = (System_Int32_array **)MasterData_WarQuestSelectionMaster;
+              if ( MasterData_WarQuestSelectionMaster )
               {
-                WebViewAddress_23699452 = (System_Char_array *)sub_B170BC(
-                                                                 WebViewAddress_23699452,
-                                                                 v28->obj.klass->_1.element_class);
-                if ( !WebViewAddress_23699452 )
+                MasterData_WarQuestSelectionMaster = sub_B2C41C(
+                                                       MasterData_WarQuestSelectionMaster,
+                                                       v26->obj.klass->_1.element_class);
+                if ( !MasterData_WarQuestSelectionMaster )
                   goto LABEL_51;
               }
-              if ( !v28->max_length )
+              if ( !v26->max_length )
                 goto LABEL_50;
-              v28->m_Items[0] = (Il2CppObject *)v37;
-              sub_B16F98((BattleServantConfConponent_o *)v28->m_Items, v37, v31, v32, v33, v34, v35, v36);
-              detailUrl = (System_Int32_array **)v25->fields.detailUrl;
+              v26->m_Items[0] = (Il2CppObject *)v33;
+              sub_B2C2F8((BattleServantConfConponent_o *)v26->m_Items, v33, v27, v28, v29, v30, v31, v32);
+              detailUrl = (System_Int32_array **)v24->fields.detailUrl;
               if ( detailUrl )
               {
-                WebViewAddress_23699452 = (System_Char_array *)sub_B170BC(detailUrl, v28->obj.klass->_1.element_class);
-                if ( !WebViewAddress_23699452 )
+                MasterData_WarQuestSelectionMaster = sub_B2C41C(detailUrl, v26->obj.klass->_1.element_class);
+                if ( !MasterData_WarQuestSelectionMaster )
                   goto LABEL_51;
               }
-              if ( v28->max_length <= 1 )
+              if ( v26->max_length <= 1 )
                 goto LABEL_50;
-              v28->m_Items[1] = (Il2CppObject *)detailUrl;
-              sub_B16F98((BattleServantConfConponent_o *)&v28->m_Items[1], detailUrl, v31, v38, v39, v40, v41, v42);
-              v69 = WarBoardData__get_id(warBoardData_k__BackingField, 0LL);
-              WebViewAddress_23699452 = (System_Char_array *)j_il2cpp_value_box_0(int_TypeInfo, &v69);
-              v49 = (System_Int32_array **)WebViewAddress_23699452;
-              if ( WebViewAddress_23699452 )
+              v26->m_Items[1] = (Il2CppObject *)detailUrl;
+              sub_B2C2F8((BattleServantConfConponent_o *)&v26->m_Items[1], detailUrl, v34, v35, v36, v37, v38, v39);
+              id = WarBoardData__get_id(warBoardData_k__BackingField, 0LL);
+              MasterData_WarQuestSelectionMaster = j_il2cpp_value_box_0(int_TypeInfo, &id);
+              v47 = (System_Int32_array **)MasterData_WarQuestSelectionMaster;
+              if ( MasterData_WarQuestSelectionMaster )
               {
-                WebViewAddress_23699452 = (System_Char_array *)sub_B170BC(
-                                                                 WebViewAddress_23699452,
-                                                                 v28->obj.klass->_1.element_class);
-                if ( !WebViewAddress_23699452 )
+                MasterData_WarQuestSelectionMaster = sub_B2C41C(
+                                                       MasterData_WarQuestSelectionMaster,
+                                                       v26->obj.klass->_1.element_class);
+                if ( !MasterData_WarQuestSelectionMaster )
                   goto LABEL_51;
               }
-              if ( v28->max_length <= 2 )
+              if ( v26->max_length <= 2 )
                 goto LABEL_50;
-              v28->m_Items[2] = (Il2CppObject *)v49;
-              sub_B16F98((BattleServantConfConponent_o *)&v28->m_Items[2], v49, v31, v44, v45, v46, v47, v48);
-              if ( !byte_40FA9CF )
+              v26->m_Items[2] = (Il2CppObject *)v47;
+              sub_B2C2F8((BattleServantConfConponent_o *)&v26->m_Items[2], v47, v41, v42, v43, v44, v45, v46);
+              if ( !byte_41889AD )
               {
-                sub_B16FFC(&NetworkManager_TypeInfo, v50);
-                byte_40FA9CF = 1;
+                sub_B2C35C(&NetworkManager_TypeInfo, v48);
+                byte_41889AD = 1;
               }
-              v52 = NetworkManager_TypeInfo;
+              v49 = NetworkManager_TypeInfo;
               if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !NetworkManager_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-                v52 = NetworkManager_TypeInfo;
+                v49 = NetworkManager_TypeInfo;
               }
-              gameServerAddress = v52->static_fields->gameServerAddress;
-              WebViewAddress_23699452 = (System_Char_array *)sub_B17014(char___TypeInfo, 1LL, v51);
-              if ( WebViewAddress_23699452 )
+              gameServerAddress = v49->static_fields->gameServerAddress;
+              MasterData_WarQuestSelectionMaster = sub_B2C374(char___TypeInfo, 1LL);
+              if ( MasterData_WarQuestSelectionMaster )
               {
-                v30 = WebViewAddress_23699452;
-                if ( !WebViewAddress_23699452->max_length )
+                v19 = MasterData_WarQuestSelectionMaster;
+                if ( !*(_DWORD *)(MasterData_WarQuestSelectionMaster + 24) )
                   goto LABEL_50;
-                WebViewAddress_23699452->m_Items[2] = 47;
+                *(_WORD *)(MasterData_WarQuestSelectionMaster + 32) = 47;
                 if ( gameServerAddress )
                 {
-                  WebViewAddress_23699452 = (System_Char_array *)System_String__TrimEnd(
-                                                                   gameServerAddress,
-                                                                   WebViewAddress_23699452,
-                                                                   0LL);
-                  v59 = (System_Int32_array **)WebViewAddress_23699452;
-                  if ( !WebViewAddress_23699452
-                    || (WebViewAddress_23699452 = (System_Char_array *)sub_B170BC(
-                                                                         WebViewAddress_23699452,
-                                                                         v28->obj.klass->_1.element_class)) != 0LL )
+                  MasterData_WarQuestSelectionMaster = (__int64)System_String__TrimEnd(
+                                                                  gameServerAddress,
+                                                                  (System_Char_array *)MasterData_WarQuestSelectionMaster,
+                                                                  0LL);
+                  v57 = (System_Int32_array **)MasterData_WarQuestSelectionMaster;
+                  if ( !MasterData_WarQuestSelectionMaster
+                    || (MasterData_WarQuestSelectionMaster = sub_B2C41C(
+                                                               MasterData_WarQuestSelectionMaster,
+                                                               v26->obj.klass->_1.element_class)) != 0 )
                   {
-                    if ( v28->max_length <= 3 )
+                    if ( v26->max_length <= 3 )
                       goto LABEL_50;
-                    v28->m_Items[3] = (Il2CppObject *)v59;
-                    sub_B16F98((BattleServantConfConponent_o *)&v28->m_Items[3], v59, v31, v54, v55, v56, v57, v58);
-                    v68 = HasNewWinCond;
-                    WebViewAddress_23699452 = (System_Char_array *)j_il2cpp_value_box_0(int_TypeInfo, &v68);
-                    v65 = (System_Int32_array **)WebViewAddress_23699452;
-                    if ( !WebViewAddress_23699452
-                      || (WebViewAddress_23699452 = (System_Char_array *)sub_B170BC(
-                                                                           WebViewAddress_23699452,
-                                                                           v28->obj.klass->_1.element_class)) != 0LL )
+                    v26->m_Items[3] = (Il2CppObject *)v57;
+                    sub_B2C2F8((BattleServantConfConponent_o *)&v26->m_Items[3], v57, v51, v52, v53, v54, v55, v56);
+                    v69 = HasNewWinCond;
+                    MasterData_WarQuestSelectionMaster = j_il2cpp_value_box_0(int_TypeInfo, &v69);
+                    v64 = (System_Int32_array **)MasterData_WarQuestSelectionMaster;
+                    if ( !MasterData_WarQuestSelectionMaster
+                      || (MasterData_WarQuestSelectionMaster = sub_B2C41C(
+                                                                 MasterData_WarQuestSelectionMaster,
+                                                                 v26->obj.klass->_1.element_class)) != 0 )
                     {
-                      if ( v28->max_length > 4 )
+                      if ( v26->max_length > 4 )
                       {
-                        v28->m_Items[4] = (Il2CppObject *)v65;
-                        sub_B16F98((BattleServantConfConponent_o *)&v28->m_Items[4], v65, v31, v60, v61, v62, v63, v64);
-                        v66 = System_String__Format_43822456((System_String_o *)StringLiteral_23562/*"{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}"*/, v28, 0LL);
+                        v26->m_Items[4] = (Il2CppObject *)v64;
+                        sub_B2C2F8((BattleServantConfConponent_o *)&v26->m_Items[4], v64, v58, v59, v60, v61, v62, v63);
+                        v65 = System_String__Format_44384256((System_String_o *)StringLiteral_23656/*"{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}"*/, v26, 0LL);
                         if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                           && !LocalizationManager_TypeInfo->_2.cctor_finished )
                         {
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                         }
-                        v67 = LocalizationManager__Get((System_String_o *)StringLiteral_15309/*"WEB_VIEW_TITLE_WARBOARD_RULE"*/, 0LL);
+                        v66 = LocalizationManager__Get((System_String_o *)StringLiteral_15371/*"WEB_VIEW_TITLE_WARBOARD_RULE"*/, 0LL);
                         if ( (BYTE3(WebViewManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                           && !WebViewManager_TypeInfo->_2.cctor_finished )
                         {
                           j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
                         }
-                        WebViewManager__OpenView(v67, v66, callbackFunc, 0LL);
+                        WebViewManager__OpenView(v66, v65, callbackFunc, 0LL);
                         return;
                       }
 LABEL_50:
-                      sub_B17100(WebViewAddress_23699452, v30, v31);
-                      sub_B170A0();
+                      v67 = sub_B2C460(MasterData_WarQuestSelectionMaster);
+                      sub_B2C400(v67, 0LL);
                     }
                   }
 LABEL_51:
-                  sub_B170F4(WebViewAddress_23699452);
-                  sub_B170A0();
+                  v68 = sub_B2C454(MasterData_WarQuestSelectionMaster);
+                  sub_B2C400(v68, 0LL);
                 }
               }
             }
@@ -251,6 +252,6 @@ LABEL_51:
         }
       }
     }
-    sub_B170D4();
+    sub_B2C434(MasterData_WarQuestSelectionMaster, v19);
   }
 }

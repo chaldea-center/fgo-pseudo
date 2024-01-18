@@ -1,13 +1,13 @@
 void __fastcall ServantCollectionEntity___ctor(ServantCollectionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FCE2E & 1) == 0 )
+  if ( (byte_4189E95 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_string___ctor__, method);
-    byte_40FCE2E = 1;
+    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4189E95 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_266F2D4 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall ServantCollectionEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_40FCE2C & 1) == 0 )
+  if ( (byte_4189E93 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
-    byte_40FCE2C = 1;
+    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
+    byte_4189E93 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            collectionNo,
            priority,
-           (const MethodInfo_18C21A0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -52,28 +52,32 @@ bool __fastcall ServantCollectionEntity__IsOpenCondition(ServantCollectionEntity
   __int64 v3; // x1
   __int64 v4; // x20
   __int64 v5; // x20
-  DataManager_o *v6; // x0
-  CommonReleaseMaster_o *MasterData_WarQuestSelectionMaster; // x0
+  DataManager_o *MasterData_WarQuestSelectionMaster; // x0
 
-  if ( (byte_40FCE2D & 1) == 0 )
+  if ( (byte_4189E94 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v3);
-    byte_40FCE2D = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v3);
+    byte_4189E94 = 1;
   }
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3);
   if ( (*(_BYTE *)(v4 + 306) & 1) == 0 )
-    sub_AAFCFC(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
+    sub_AC505C(*((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 3));
   v5 = **(_QWORD **)(v4 + 192);
   if ( (*(_BYTE *)(v5 + 306) & 1) == 0 )
-    sub_AAFCFC(v5);
-  v6 = **(DataManager_o ***)(v5 + 184);
-  if ( !v6
-    || (MasterData_WarQuestSelectionMaster = (CommonReleaseMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                        v6,
-                                                                        (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+    sub_AC505C(v5);
+  MasterData_WarQuestSelectionMaster = **(DataManager_o ***)(v5 + 184);
+  if ( !MasterData_WarQuestSelectionMaster
+    || (MasterData_WarQuestSelectionMaster = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                                MasterData_WarQuestSelectionMaster,
+                                                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_B170D4();
+    sub_B2C434(MasterData_WarQuestSelectionMaster, method);
   }
-  return CommonReleaseMaster__IsOpen(MasterData_WarQuestSelectionMaster, this->fields.commonReleaseId, 0LL, 0, 0LL);
+  return CommonReleaseMaster__IsOpen(
+           (CommonReleaseMaster_o *)MasterData_WarQuestSelectionMaster,
+           this->fields.commonReleaseId,
+           0LL,
+           0,
+           0LL);
 }

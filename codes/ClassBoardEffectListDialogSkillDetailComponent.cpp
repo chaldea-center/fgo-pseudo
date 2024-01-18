@@ -2,7 +2,7 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent___ctor(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.detailMinHeight = xmmword_3137710;
+  *(_OWORD *)&this->fields.detailMinHeight = xmmword_31A3BE0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -27,7 +27,7 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__Init(
   System_Int32_array *v7; // x7
 
   this->fields.listComponent = listComponent;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.listComponent,
     (System_Int32_array **)listComponent,
     (System_String_array **)method,
@@ -49,65 +49,65 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
         const MethodInfo *method)
 {
   UILabel_o *effectNameLabel; // x0
-  UILabel_o *v14; // x0
-  const MethodInfo *v15; // x2
+  const MethodInfo *v14; // x2
   float ContentHeight; // s0
-  UIWidget_o *background; // x0
-  float v18; // s8
-  double v19; // d0
-  const MethodInfo *v20; // x2
-  System_String_o *ClassBoardSkillIconName; // x0
-  const MethodInfo *v22; // x3
+  float v16; // s8
+  double v17; // d0
+  const MethodInfo *v18; // x2
+  const MethodInfo *v19; // x3
   struct ClassBoardEffectListDialogSkillListComponent_o *listComponent; // x8
-  System_String_o *v24; // x2
-  ClassBoardEffectListDialog_o *dialog; // x0
+  System_String_o *v21; // x2
 
-  if ( (byte_40FB94C & 1) == 0 )
+  if ( (byte_41894D2 & 1) == 0 )
   {
-    sub_B16FFC(&ClassBoardUtility_TypeInfo, name);
-    byte_40FB94C = 1;
+    sub_B2C35C(&ClassBoardUtility_TypeInfo, name);
+    byte_41894D2 = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
     goto LABEL_17;
   UILabel__set_text(effectNameLabel, name, 0LL);
-  v14 = this->fields.effectNameLabel;
-  if ( !v14 )
+  effectNameLabel = this->fields.effectNameLabel;
+  if ( !effectNameLabel )
     goto LABEL_17;
-  UILabel__UpdateCondensedScaleComponent(v14, 0LL);
-  ContentHeight = ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAndGetContentHeight(this, detail, v15);
-  background = (UIWidget_o *)this->fields.background;
-  if ( !background )
+  UILabel__UpdateCondensedScaleComponent(effectNameLabel, 0LL);
+  ContentHeight = ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAndGetContentHeight(this, detail, v14);
+  effectNameLabel = (UILabel_o *)this->fields.background;
+  if ( !effectNameLabel )
     goto LABEL_17;
-  v18 = ContentHeight;
+  v16 = ContentHeight;
   if ( ContentHeight == INFINITY )
-    v19 = -ContentHeight;
+    v17 = -ContentHeight;
   else
-    v19 = ContentHeight;
-  UIWidget__set_height(background, (int)v19, 0LL);
+    v17 = ContentHeight;
+  UIWidget__set_height((UIWidget_o *)effectNameLabel, (int)v17, 0LL);
   if ( (BYTE3(ClassBoardUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ClassBoardUtility_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
   }
-  ClassBoardSkillIconName = ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, v20);
+  effectNameLabel = (UILabel_o *)ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, v18);
   if ( !fromBattleSvtWindow )
   {
     listComponent = this->fields.listComponent;
     if ( listComponent )
     {
-      v24 = ClassBoardSkillIconName;
-      dialog = listComponent->fields.dialog;
-      if ( dialog )
+      v21 = (System_String_o *)effectNameLabel;
+      effectNameLabel = (UILabel_o *)listComponent->fields.dialog;
+      if ( effectNameLabel )
       {
-        ClassBoardEffectListDialog__SetIcon(dialog, this->fields.effectIcon, v24, v22);
-        return v18 + (float)this->fields.adjustSetPosY;
+        ClassBoardEffectListDialog__SetIcon(
+          (ClassBoardEffectListDialog_o *)effectNameLabel,
+          this->fields.effectIcon,
+          v21,
+          v19);
+        return v16 + (float)this->fields.adjustSetPosY;
       }
     }
 LABEL_17:
-    sub_B170D4();
+    sub_B2C434(effectNameLabel, name);
   }
-  return v18 + (float)this->fields.adjustSetPosY;
+  return v16 + (float)this->fields.adjustSetPosY;
 }
 
 
@@ -117,10 +117,9 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAn
         const MethodInfo *method)
 {
   UILabel_o *effectDetailLabel; // x0
-  UnityEngine_Component_o *v6; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   float LocalPositionY; // s0
-  struct UILabel_o *v9; // x8
+  struct UILabel_o *v8; // x8
   int32_t detailMinHeight; // s3
   float result; // s0
 
@@ -134,15 +133,15 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAn
           this->fields.detailFontSize,
           this->fields.detailMaxHeight,
           0LL),
-        (v6 = (UnityEngine_Component_o *)this->fields.effectDetailLabel) == 0LL)
-    || (gameObject = UnityEngine_Component__get_gameObject(v6, 0LL),
+        (effectDetailLabel = this->fields.effectDetailLabel) == 0LL)
+    || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)effectDetailLabel, 0LL),
         LocalPositionY = GameObjectExtensions__GetLocalPositionY(gameObject, 0LL),
-        (v9 = this->fields.effectDetailLabel) == 0LL) )
+        (v8 = this->fields.effectDetailLabel) == 0LL) )
   {
-    sub_B170D4();
+    sub_B2C434(effectDetailLabel, detail);
   }
   detailMinHeight = this->fields.detailMinHeight;
-  result = (float)(fabsf(LocalPositionY) + (float)v9->fields.mHeight) + (float)this->fields.detailUnderMargin;
+  result = (float)(fabsf(LocalPositionY) + (float)v8->fields.mHeight) + (float)this->fields.detailUnderMargin;
   if ( result < (float)detailMinHeight )
     return (float)detailMinHeight;
   return result;
@@ -156,6 +155,6 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetIconFromBattl
         const MethodInfo *method)
 {
   if ( !atlasManagerUnit )
-    sub_B170D4();
+    sub_B2C434(this, 0LL);
   AtlasManagerUnit__SetUI(atlasManagerUnit, this->fields.effectIcon, spriteName, 0LL);
 }

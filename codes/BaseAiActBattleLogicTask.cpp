@@ -25,25 +25,22 @@ void __fastcall BaseAiActBattleLogicTask__InterruptAction(
         const MethodInfo *method)
 {
   BattleActionData_array **p_interruptActions; // x19
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  _BOOL8 IsNullOrEmpty; // x0
+  __int64 v7; // x1
 
   if ( addAction )
   {
     p_interruptActions = &this->fields.interruptActions;
-    if ( !BasicHelper__IsNullOrEmpty(
-            (System_Collections_ICollection_o *)this->fields.interruptActions,
-            (const MethodInfo *)addAction) )
+    IsNullOrEmpty = BasicHelper__IsNullOrEmpty(
+                      (System_Collections_ICollection_o *)this->fields.interruptActions,
+                      (const MethodInfo *)addAction);
+    if ( !IsNullOrEmpty )
     {
       if ( !perf )
-        sub_B170D4();
+        sub_B2C434(IsNullOrEmpty, v7);
       BattlePerformance__addActionData(perf, *p_interruptActions, 0LL);
       *p_interruptActions = 0LL;
-      sub_B16F98((BattleServantConfConponent_o *)p_interruptActions, 0LL, v6, v7, v8, v9, v10, v11);
+      sub_B2C2F8(p_interruptActions, 0LL);
     }
   }
 }
@@ -54,20 +51,6 @@ void __fastcall BaseAiActBattleLogicTask__SetInterruptAction(
         BattleActionData_array *actions,
         const MethodInfo *method)
 {
-  System_String_array **v3; // x3
-  System_Boolean_array **v4; // x4
-  System_Int32_array **v5; // x5
-  System_Int32_array *v6; // x6
-  System_Int32_array *v7; // x7
-
   this->fields.interruptActions = actions;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this->fields.interruptActions,
-    (System_Int32_array **)actions,
-    (System_String_array **)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_B2C2F8(&this->fields.interruptActions, actions);
 }

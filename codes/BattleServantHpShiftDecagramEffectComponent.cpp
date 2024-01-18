@@ -2,6 +2,16 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent___ctor(
         BattleServantHpShiftDecagramEffectComponent_o *this,
         const MethodInfo *method)
 {
+  if ( (byte_418A528 & 1) == 0 )
+  {
+    sub_B2C35C(&CommonEffectComponent_TypeInfo, method);
+    byte_418A528 = 1;
+  }
+  if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+    && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
+  }
   CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
 }
 
@@ -12,27 +22,28 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIcon(
         int32_t index,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *klass; // x21
-  const MethodInfo *v6; // x3
-  BattleServantHpShiftComponent_o *v7; // x0
+  UnityEngine_Object_o *Parent_k__BackingField; // x21
+  __int64 v6; // x1
+  const MethodInfo *v7; // x3
+  BattleServantHpShiftComponent_o *v8; // x0
 
-  if ( (byte_40FCCE2 & 1) == 0 )
+  if ( (byte_418A526 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_40FCCE2 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_418A526 = 1;
   }
-  klass = (UnityEngine_Object_o *)this[1].klass;
+  Parent_k__BackingField = (UnityEngine_Object_o *)this->fields._Parent_k__BackingField;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(klass, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(Parent_k__BackingField, 0LL, 0LL) )
   {
-    v7 = (BattleServantHpShiftComponent_o *)this[1].klass;
-    if ( !v7 )
-      sub_B170D4();
-    BattleServantHpShiftComponent__UpdateIconActive(v7, index, 1, v6);
+    v8 = this->fields._Parent_k__BackingField;
+    if ( !v8 )
+      sub_B2C434(0LL, v6);
+    BattleServantHpShiftComponent__UpdateIconActive(v8, index, 1, v7);
   }
 }
 
@@ -43,27 +54,28 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__UpdateIconInactive(
         int32_t index,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *klass; // x21
-  const MethodInfo *v6; // x3
-  BattleServantHpShiftComponent_o *v7; // x0
+  UnityEngine_Object_o *Parent_k__BackingField; // x21
+  __int64 v6; // x1
+  const MethodInfo *v7; // x3
+  BattleServantHpShiftComponent_o *v8; // x0
 
-  if ( (byte_40FCCE3 & 1) == 0 )
+  if ( (byte_418A527 & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_40FCCE3 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_418A527 = 1;
   }
-  klass = (UnityEngine_Object_o *)this[1].klass;
+  Parent_k__BackingField = (UnityEngine_Object_o *)this->fields._Parent_k__BackingField;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(klass, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(Parent_k__BackingField, 0LL, 0LL) )
   {
-    v7 = (BattleServantHpShiftComponent_o *)this[1].klass;
-    if ( !v7 )
-      sub_B170D4();
-    BattleServantHpShiftComponent__UpdateIconActive(v7, index, 0, v6);
+    v8 = this->fields._Parent_k__BackingField;
+    if ( !v8 )
+      sub_B2C434(0LL, v6);
+    BattleServantHpShiftComponent__UpdateIconActive(v8, index, 0, v7);
   }
 }
 
@@ -72,7 +84,7 @@ BattleServantHpShiftComponent_o *__fastcall BattleServantHpShiftDecagramEffectCo
         BattleServantHpShiftDecagramEffectComponent_o *this,
         const MethodInfo *method)
 {
-  return (BattleServantHpShiftComponent_o *)this[1].klass;
+  return this->fields._Parent_k__BackingField;
 }
 
 
@@ -87,9 +99,9 @@ void __fastcall BattleServantHpShiftDecagramEffectComponent__set_Parent(
   System_Int32_array *v6; // x6
   System_Int32_array *v7; // x7
 
-  this[1].klass = (BattleServantHpShiftDecagramEffectComponent_c *)value;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)&this[1],
+  this->fields._Parent_k__BackingField = value;
+  sub_B2C2F8(
+    (BattleServantConfConponent_o *)&this->fields._Parent_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
     v3,

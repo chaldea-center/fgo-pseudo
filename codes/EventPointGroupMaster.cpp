@@ -1,14 +1,14 @@
 void __fastcall EventPointGroupMaster___ctor(EventPointGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FAC28 & 1) == 0 )
+  if ( (byte_41878B9 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string___ctor__, method);
-    byte_40FAC28 = 1;
+    sub_B2C35C(&Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string___ctor__, method);
+    byte_41878B9 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     150,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ EventPointGroupEntity_o *__fastcall EventPointGroupMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40FAC26 & 1) == 0 )
+  if ( (byte_41878B7 & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_40FAC26 = 1;
+    byte_41878B7 = 1;
   }
   PK = EventPointGroupEntity__CreatePK(eventId, groupId, *(const MethodInfo **)&groupId);
   return (EventPointGroupEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                       (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                       PK,
-                                      (const MethodInfo_266F7D8 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__GetEntity__);
+                                      (const MethodInfo_24E4520 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__GetEntity__);
 }
 
 
@@ -44,81 +44,84 @@ System_Int32_array *__fastcall EventPointGroupMaster__GetTermedIconIds(
         System_Int32_array *groupIds,
         const MethodInfo *method)
 {
+  EventPointGroupMaster_o *v8; // x22
   __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x0
-  __int64 v12; // x1
-  __int64 v13; // x2
-  const MethodInfo *v14; // x4
-  __int64 v15; // x8
-  System_Int32_array *v16; // x23
-  unsigned __int64 v17; // x24
+  const MethodInfo *v11; // x4
+  __int64 v12; // x8
+  System_Int32_array *v13; // x23
+  unsigned __int64 v14; // x24
   int32_t iconId; // w8
-  WebViewManager_o *Instance; // x0
-  EventPointGroupAddMaster_o *MasterData_WarQuestSelectionMaster; // x0
-  const MethodInfo *v21; // x5
+  const MethodInfo *v16; // x5
+  __int64 v18; // x0
   EventPointGroupEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_40FAC2B & 1) == 0 )
+  v8 = this;
+  if ( (byte_41878BC & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_EventPointGroupAddMaster___, *(_QWORD *)&eventId);
-    sub_B16FFC(&int___TypeInfo, v9);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    byte_40FAC2B = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_EventPointGroupAddMaster___, *(_QWORD *)&eventId);
+    sub_B2C35C(&int___TypeInfo, v9);
+    this = (EventPointGroupMaster_o *)sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    byte_41878BC = 1;
   }
   entity = 0LL;
   if ( !groupIds )
     goto LABEL_20;
-  v11 = sub_B17014(int___TypeInfo, groupIds->max_length, *(_QWORD *)&termId);
-  v15 = *(_QWORD *)&groupIds->max_length;
-  v16 = (System_Int32_array *)v11;
-  if ( (int)v15 >= 1 )
+  this = (EventPointGroupMaster_o *)sub_B2C374(int___TypeInfo, groupIds->max_length);
+  v12 = *(_QWORD *)&groupIds->max_length;
+  v13 = (System_Int32_array *)this;
+  if ( (int)v12 >= 1 )
   {
-    v17 = 0LL;
-    while ( v17 < (unsigned int)v15 )
+    v14 = 0LL;
+    while ( v14 < (unsigned int)v12 )
     {
-      v11 = EventPointGroupMaster__TryGetEntity(this, &entity, eventId, groupIds->m_Items[v17 + 1], v14);
-      if ( (v11 & 1) != 0 )
+      this = (EventPointGroupMaster_o *)EventPointGroupMaster__TryGetEntity(
+                                          v8,
+                                          &entity,
+                                          eventId,
+                                          groupIds->m_Items[v14 + 1],
+                                          v11);
+      if ( ((unsigned __int8)this & 1) != 0 )
       {
-        if ( !entity || !v16 )
+        if ( !entity || !v13 )
           goto LABEL_20;
-        if ( v17 >= v16->max_length )
+        if ( v14 >= v13->max_length )
           break;
         iconId = entity->fields.iconId;
       }
       else
       {
-        if ( !v16 )
+        if ( !v13 )
           goto LABEL_20;
-        if ( v17 >= v16->max_length )
+        if ( v14 >= v13->max_length )
           break;
         iconId = 0;
       }
-      v16->m_Items[v17 + 1] = iconId;
-      LODWORD(v15) = groupIds->max_length;
-      if ( (__int64)++v17 >= (int)v15 )
+      v13->m_Items[v14 + 1] = iconId;
+      LODWORD(v12) = groupIds->max_length;
+      if ( (__int64)++v14 >= (int)v12 )
         goto LABEL_16;
     }
-    sub_B17100(v11, v12, v13);
-    sub_B170A0();
+    v18 = sub_B2C460(this);
+    sub_B2C400(v18, 0LL);
   }
 LABEL_16:
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !Instance
-    || (MasterData_WarQuestSelectionMaster = (EventPointGroupAddMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                             (DataManager_o *)Instance,
-                                                                             (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_EventPointGroupAddMaster___)) == 0LL )
+  this = (EventPointGroupMaster_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  if ( !this
+    || (this = (EventPointGroupMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                            (DataManager_o *)this,
+                                            (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventPointGroupAddMaster___)) == 0LL )
   {
 LABEL_20:
-    sub_B170D4();
+    sub_B2C434(this, *(_QWORD *)&eventId);
   }
   return EventPointGroupAddMaster__GetTermedIconIds(
-           MasterData_WarQuestSelectionMaster,
+           (EventPointGroupAddMaster_o *)this,
            eventId,
            termId,
            groupIds,
-           v16,
-           v21);
+           v13,
+           v16);
 }
 
 
@@ -132,17 +135,17 @@ bool __fastcall EventPointGroupMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40FAC27 & 1) == 0 )
+  if ( (byte_41878B8 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__TryGetEntity__, entity);
-    byte_40FAC27 = 1;
+    sub_B2C35C(&Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__TryGetEntity__, entity);
+    byte_41878B8 = 1;
   }
   PK = EventPointGroupEntity__CreatePK(eventId, groupId, *(const MethodInfo **)&eventId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__TryGetEntity__);
 }
 
 
@@ -161,22 +164,22 @@ EventPointGroupEntity_o *__fastcall EventPointGroupMaster__getEntity(
   int32_t v13; // [xsp+8h] [xbp-28h] BYREF
   int32_t v14; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_40FAC29 & 1) == 0 )
+  if ( (byte_41878BA & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_getEntityFromKey_EventPointGroupEntity___, *(_QWORD *)&event_id);
-    sub_B16FFC(&int_TypeInfo, v7);
-    sub_B16FFC(&StringLiteral_1223/*":"*/, v8);
-    byte_40FAC29 = 1;
+    sub_B2C35C(&Method_DataMasterBase_getEntityFromKey_EventPointGroupEntity___, *(_QWORD *)&event_id);
+    sub_B2C35C(&int_TypeInfo, v7);
+    sub_B2C35C(&StringLiteral_1225/*":"*/, v8);
+    byte_41878BA = 1;
   }
   v14 = event_id;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
   v13 = group_id;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
-  v11 = System_String__Concat_43823436(v9, (Il2CppObject *)StringLiteral_1223/*":"*/, v10, 0LL);
+  v11 = System_String__Concat_44385236(v9, (Il2CppObject *)StringLiteral_1225/*":"*/, v10, 0LL);
   return (EventPointGroupEntity_o *)DataMasterBase__getEntityFromKey_object_(
                                       (DataMasterBase_o *)this,
                                       v11,
-                                      (const MethodInfo_18C3A2C *)Method_DataMasterBase_getEntityFromKey_EventPointGroupEntity___);
+                                      (const MethodInfo_1734194 *)Method_DataMasterBase_getEntityFromKey_EventPointGroupEntity___);
 }
 
 
@@ -186,91 +189,83 @@ EventPointGroupEntity_array *__fastcall EventPointGroupMaster__getEntityList(
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v13; // x21
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v11; // x21
+  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v12; // x1
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  int32_t Count; // w0
-  int32_t v16; // w22
-  int32_t v17; // w23
-  System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v18; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *Item; // x0
-  __int64 v20; // x10
+  int32_t v14; // w22
+  int32_t v15; // w23
+  __int64 v16; // x10
 
-  if ( (byte_40FAC2A & 1) == 0 )
+  if ( (byte_41878BB & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B16FFC(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_B16FFC(&EventPointGroupEntity_TypeInfo, v8);
-    sub_B16FFC(&Method_System_Collections_Generic_List_EventPointGroupEntity__Add__, v9);
-    sub_B16FFC(&Method_System_Collections_Generic_List_EventPointGroupEntity__ToArray__, v10);
-    sub_B16FFC(&Method_System_Collections_Generic_List_EventPointGroupEntity___ctor__, v11);
-    sub_B16FFC(&System_Collections_Generic_List_EventPointGroupEntity__TypeInfo, v12);
-    byte_40FAC2A = 1;
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_B2C35C(&EventPointGroupEntity_TypeInfo, v6);
+    sub_B2C35C(&Method_System_Collections_Generic_List_EventPointGroupEntity__Add__, v7);
+    sub_B2C35C(&Method_System_Collections_Generic_List_EventPointGroupEntity__ToArray__, v8);
+    sub_B2C35C(&Method_System_Collections_Generic_List_EventPointGroupEntity___ctor__, v9);
+    sub_B2C35C(&System_Collections_Generic_List_EventPointGroupEntity__TypeInfo, v10);
+    byte_41878BB = 1;
   }
-  v13 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B170CC(
-                                                                                                  System_Collections_Generic_List_EventPointGroupEntity__TypeInfo,
-                                                                                                  *(_QWORD *)&eventId,
-                                                                                                  method,
-                                                                                                  v3,
-                                                                                                  v4);
+  v11 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_EventPointGroupEntity__TypeInfo);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v13,
-    (const MethodInfo_2F25014 *)Method_System_Collections_Generic_List_EventPointGroupEntity___ctor__);
+    v11,
+    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_EventPointGroupEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_16;
-  Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
-            list,
-            (const MethodInfo_290DE84 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  if ( Count >= 1 )
+  list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
+                                                                                       list,
+                                                                                       (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  if ( (int)list >= 1 )
   {
-    v16 = Count;
-    v17 = 0;
+    v14 = (int)list;
+    v15 = 0;
     while ( 1 )
     {
-      v18 = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-      if ( !v18 )
+      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
+      if ( !list )
         break;
-      Item = (EventMissionProgressRequest_Argument_ProgressData_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                                                      v18,
-                                                                      v17,
-                                                                      (const MethodInfo_290DF28 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
-      if ( !Item )
+      list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
+                                                                                           list,
+                                                                                           v15,
+                                                                                           (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      if ( !list )
         break;
-      v20 = *(&EventPointGroupEntity_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&Item->klass->_2.bitflags2 + 1) < (unsigned int)v20
-        || (EventPointGroupEntity_c *)Item->klass->_2.typeHierarchy[v20 - 1] != EventPointGroupEntity_TypeInfo )
+      v12 = list;
+      v16 = *(&EventPointGroupEntity_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&list->klass->_2.bitflags2 + 1) < (unsigned int)v16
+        || (EventPointGroupEntity_c *)list->klass->_2.typeHierarchy[v16 - 1] != EventPointGroupEntity_TypeInfo )
       {
         break;
       }
-      if ( Item->fields.missionTargetId == eventId )
+      if ( LODWORD(list->fields.items) == eventId )
       {
-        if ( !v13 )
+        if ( !v11 )
           break;
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-          v13,
-          Item,
-          (const MethodInfo_2F25CD8 *)Method_System_Collections_Generic_List_EventPointGroupEntity__Add__);
+          v11,
+          (EventMissionProgressRequest_Argument_ProgressData_o *)list,
+          (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_EventPointGroupEntity__Add__);
       }
-      if ( ++v17 >= v16 )
+      if ( ++v15 >= v14 )
         goto LABEL_14;
     }
 LABEL_16:
-    sub_B170D4();
+    sub_B2C434(list, v12);
   }
 LABEL_14:
-  if ( !v13 )
+  if ( !v11 )
     goto LABEL_16;
   return (EventPointGroupEntity_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
-                                          (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v13,
-                                          (const MethodInfo_2F27E24 *)Method_System_Collections_Generic_List_EventPointGroupEntity__ToArray__);
+                                          (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)v11,
+                                          (const MethodInfo_2EF65AC *)Method_System_Collections_Generic_List_EventPointGroupEntity__ToArray__);
 }
 
 
@@ -280,9 +275,10 @@ int32_t __fastcall EventPointGroupMaster__getEventJoinGroupNum(
         const MethodInfo *method)
 {
   EventPointGroupEntity_array *EntityList; // x0
+  __int64 v4; // x1
 
   EntityList = EventPointGroupMaster__getEntityList(this, eventId, method);
   if ( !EntityList )
-    sub_B170D4();
+    sub_B2C434(0LL, v4);
   return EntityList->max_length;
 }

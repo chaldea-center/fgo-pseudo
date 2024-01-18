@@ -1,16 +1,16 @@
 void __fastcall AuraEffectPosOverwriteMaster___ctor(AuraEffectPosOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FBF3F & 1) == 0 )
+  if ( (byte_41898FF & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__,
       method);
-    byte_40FBF3F = 1;
+    byte_41898FF = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     239,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
 }
 
 
@@ -24,18 +24,18 @@ AuraEffectPosOverwriteEntity_o *__fastcall AuraEffectPosOverwriteMaster__GetEnti
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40FBF3D & 1) == 0 )
+  if ( (byte_41898FD & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__,
       *(_QWORD *)&auraEffectId);
-    byte_40FBF3D = 1;
+    byte_41898FD = 1;
   }
   PK = AuraEffectPosOverwriteEntity__CreatePK(auraEffectId, svtId, svtLimitCount, *(const MethodInfo **)&svtLimitCount);
   return (AuraEffectPosOverwriteEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                              (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                              PK,
-                                             (const MethodInfo_266F7D8 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
+                                             (const MethodInfo_24E4520 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -47,7 +47,7 @@ bool __fastcall AuraEffectPosOverwriteMaster__IsExistAuraPosOverwriteSettings(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_B170D4();
+    sub_B2C434(svtId, limitCount);
   return ent->fields.auraEffectId == effectId && ent->fields.svtId == svtId && ent->fields.svtLimitCount == limitCount;
 }
 
@@ -63,17 +63,17 @@ bool __fastcall AuraEffectPosOverwriteMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40FBF3E & 1) == 0 )
+  if ( (byte_41898FE & 1) == 0 )
   {
-    sub_B16FFC(
+    sub_B2C35C(
       &Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__,
       entity);
-    byte_40FBF3E = 1;
+    byte_41898FE = 1;
   }
   PK = AuraEffectPosOverwriteEntity__CreatePK(auraEffectId, svtId, svtLimitCount, *(const MethodInfo **)&svtId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
 }

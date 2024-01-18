@@ -26,9 +26,9 @@ void __fastcall ShopTopListViewItem___ctor(
   System_Int32_array *v28; // x6
   System_Int32_array *v29; // x7
 
-  ListViewItem___ctor_30173668((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
   this->fields.info = info;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.info,
     (System_Int32_array **)info,
     v12,
@@ -39,7 +39,7 @@ void __fastcall ShopTopListViewItem___ctor(
     v17);
   this->fields._IsUse_k__BackingField = isUse;
   this->fields.shopListNotice = shopListNotice;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.shopListNotice,
     (System_Int32_array **)shopListNotice,
     v18,
@@ -49,7 +49,7 @@ void __fastcall ShopTopListViewItem___ctor(
     v22,
     v23);
   this->fields._ShopNoticeTween_k__BackingField = shopNoticeTween;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._ShopNoticeTween_k__BackingField,
     (System_Int32_array **)shopNoticeTween,
     v24,
@@ -73,7 +73,7 @@ void __fastcall ShopTopListViewItem__SetShopListNotice(
   System_Int32_array *v7; // x7
 
   this->fields.shopListNotice = shopListNotice;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.shopListNotice,
     (System_Int32_array **)shopListNotice,
     (System_String_array **)method,
@@ -119,24 +119,26 @@ System_String_o *__fastcall ShopTopListViewItem__get_ImageName(ShopTopListViewIt
 
   info = this->fields.info;
   if ( !info )
-    sub_B170D4();
+    sub_B2C434(this, method);
   return info->fields._ImageName_k__BackingField;
 }
 
 
 System_String_o *__fastcall ShopTopListViewItem__get_InfoText(ShopTopListViewItem_o *this, const MethodInfo *method)
 {
+  ShopTopListViewItem_o *v2; // x19
   struct ShopTopItemInfo_o *info; // x8
   System_String_o *TextCode_k__BackingField; // x19
 
-  if ( (byte_40FB7DA & 1) == 0 )
+  v2 = this;
+  if ( (byte_4189216 & 1) == 0 )
   {
-    sub_B16FFC(&LocalizationManager_TypeInfo, method);
-    byte_40FB7DA = 1;
+    this = (ShopTopListViewItem_o *)sub_B2C35C(&LocalizationManager_TypeInfo, method);
+    byte_4189216 = 1;
   }
-  info = this->fields.info;
+  info = v2->fields.info;
   if ( !info )
-    sub_B170D4();
+    sub_B2C434(this, method);
   TextCode_k__BackingField = info->fields._TextCode_k__BackingField;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -153,7 +155,7 @@ bool __fastcall ShopTopListViewItem__get_IsBlank(ShopTopListViewItem_o *this, co
 
   info = this->fields.info;
   if ( !info )
-    sub_B170D4();
+    sub_B2C434(this, method);
   return info->fields._Kind_k__BackingField == 21;
 }
 
@@ -171,33 +173,33 @@ bool __fastcall ShopTopListViewItem__get_IsIndefiniteExchangeServant(
 
 bool __fastcall ShopTopListViewItem__get_IsPeriod(ShopTopListViewItem_o *this, const MethodInfo *method)
 {
+  ShopTopListViewItem_o *v2; // x19
   __int64 v3; // x1
   struct ShopTopItemInfo_o *info; // x8
-  WebViewManager_o *Instance; // x0
-  EventMaster_o *MasterData_WarQuestSelectionMaster; // x0
 
-  if ( (byte_40FB7DB & 1) == 0 )
+  v2 = this;
+  if ( (byte_4189217 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataManager_GetMasterData_EventMaster___, method);
-    sub_B16FFC(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_40FB7DB = 1;
+    sub_B2C35C(&Method_DataManager_GetMasterData_EventMaster___, method);
+    this = (ShopTopListViewItem_o *)sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4189217 = 1;
   }
-  info = this->fields.info;
+  info = v2->fields.info;
   if ( !info )
     goto LABEL_9;
   if ( info->fields._Kind_k__BackingField == 5 )
   {
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A54F38 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    if ( Instance )
+    this = (ShopTopListViewItem_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( this )
     {
-      MasterData_WarQuestSelectionMaster = (EventMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                              (DataManager_o *)Instance,
-                                                              (const MethodInfo_18C3284 *)Method_DataManager_GetMasterData_EventMaster___);
-      if ( MasterData_WarQuestSelectionMaster )
-        return EventMaster__IsEnableEventShop(MasterData_WarQuestSelectionMaster, 0LL);
+      this = (ShopTopListViewItem_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                        (DataManager_o *)this,
+                                        (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventMaster___);
+      if ( this )
+        return EventMaster__IsEnableEventShop((EventMaster_o *)this, 0LL);
     }
 LABEL_9:
-    sub_B170D4();
+    sub_B2C434(this, method);
   }
   return 0;
 }
@@ -290,7 +292,7 @@ int32_t __fastcall ShopTopListViewItem__get_ShopType(ShopTopListViewItem_o *this
 
   info = this->fields.info;
   if ( !info )
-    sub_B170D4();
+    sub_B2C434(this, method);
   return info->fields._ShopType_k__BackingField;
 }
 
@@ -301,7 +303,7 @@ int32_t __fastcall ShopTopListViewItem__get_State(ShopTopListViewItem_o *this, c
 
   info = this->fields.info;
   if ( !info )
-    sub_B170D4();
+    sub_B2C434(this, method);
   return info->fields._State_k__BackingField;
 }
 
@@ -324,7 +326,7 @@ void __fastcall ShopTopListViewItem__set_ShopNoticeTween(
   System_Int32_array *v7; // x7
 
   this->fields._ShopNoticeTween_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields._ShopNoticeTween_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

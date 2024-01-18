@@ -17,16 +17,16 @@ void __fastcall BgmPlayArgs___ctor(
   float value; // s0
   BgmManager_c *v20; // x0
 
-  if ( (byte_40F9061 & 1) == 0 )
+  if ( (byte_41875B5 & 1) == 0 )
   {
-    sub_B16FFC(&BgmManager_TypeInfo, bgmName);
-    sub_B16FFC(&Method_System_Nullable_float__GetValueOrDefault__, v11);
-    sub_B16FFC(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_40F9061 = 1;
+    sub_B2C35C(&BgmManager_TypeInfo, bgmName);
+    sub_B2C35C(&Method_System_Nullable_float__GetValueOrDefault__, v11);
+    sub_B2C35C(&Method_System_Nullable_float__get_HasValue__, v12);
+    byte_41875B5 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)bgmName,
     v13,
@@ -64,6 +64,7 @@ void __fastcall BgmPlayArgs__Update(
 {
   bool has_value; // w21
   int64_t value; // x19
+  BgmPlayArgs_o *v9; // x20
   __int64 v10; // x1
   __int64 v11; // x1
   __int64 v12; // x1
@@ -72,33 +73,34 @@ void __fastcall BgmPlayArgs__Update(
 
   has_value = startTime.fields.has_value;
   value = startTime.fields.value;
-  if ( (byte_40F9062 & 1) == 0 )
+  v9 = this;
+  if ( (byte_41875B6 & 1) == 0 )
   {
-    sub_B16FFC(&Method_System_Nullable_long__GetValueOrDefault__, volume);
-    sub_B16FFC(&Method_System_Nullable_float__GetValueOrDefault__, v10);
-    sub_B16FFC(&Method_System_Nullable_long__get_HasValue__, v11);
-    sub_B16FFC(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_40F9062 = 1;
+    sub_B2C35C(&Method_System_Nullable_long__GetValueOrDefault__, volume);
+    sub_B2C35C(&Method_System_Nullable_float__GetValueOrDefault__, v10);
+    sub_B2C35C(&Method_System_Nullable_long__get_HasValue__, v11);
+    this = (BgmPlayArgs_o *)sub_B2C35C(&Method_System_Nullable_float__get_HasValue__, v12);
+    byte_41875B6 = 1;
   }
   if ( (*(_QWORD *)&volume & 0xFF00000000LL) != 0 )
   {
-    if ( !this )
-      sub_B170D4();
+    if ( !v9 )
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_B2C434)(this, volume);
     Volume_k__BackingField = volume.fields.value;
   }
   else
   {
-    Volume_k__BackingField = this->fields._Volume_k__BackingField;
+    Volume_k__BackingField = v9->fields._Volume_k__BackingField;
   }
-  this->fields._Volume_k__BackingField = Volume_k__BackingField;
+  v9->fields._Volume_k__BackingField = Volume_k__BackingField;
   if ( (*(_QWORD *)&fadeTime & 0xFF00000000LL) != 0 )
     FadeTime_k__BackingField = fadeTime.fields.value;
   else
-    FadeTime_k__BackingField = this->fields._FadeTime_k__BackingField;
-  this->fields._FadeTime_k__BackingField = FadeTime_k__BackingField;
+    FadeTime_k__BackingField = v9->fields._FadeTime_k__BackingField;
+  v9->fields._FadeTime_k__BackingField = FadeTime_k__BackingField;
   if ( !has_value )
-    value = this->fields._StartTime_k__BackingField;
-  this->fields._StartTime_k__BackingField = value;
+    value = v9->fields._StartTime_k__BackingField;
+  v9->fields._StartTime_k__BackingField = value;
 }
 
 
@@ -135,7 +137,7 @@ void __fastcall BgmPlayArgs__set_BgmName(BgmPlayArgs_o *this, System_String_o *v
   System_Int32_array *v7; // x7
 
   this->fields._BgmName_k__BackingField = value;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,

@@ -1,14 +1,14 @@
 void __fastcall ServantExpMaster___ctor(ServantExpMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FD0A2 & 1) == 0 )
+  if ( (byte_418AB64 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string___ctor__, method);
-    byte_40FD0A2 = 1;
+    sub_B2C35C(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string___ctor__, method);
+    byte_418AB64 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     85,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ServantExpEntity_o *__fastcall ServantExpMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40FD0A0 & 1) == 0 )
+  if ( (byte_418AB62 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__GetEntity__, *(_QWORD *)&type);
-    byte_40FD0A0 = 1;
+    sub_B2C35C(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__GetEntity__, *(_QWORD *)&type);
+    byte_418AB62 = 1;
   }
   PK = ServantExpEntity__CreatePK(type, lv, *(const MethodInfo **)&lv);
   return (ServantExpEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                  (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                  PK,
-                                 (const MethodInfo_266F7D8 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__GetEntity__);
+                                 (const MethodInfo_24E4520 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +44,17 @@ bool __fastcall ServantExpMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40FD0A1 & 1) == 0 )
+  if ( (byte_418AB63 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__TryGetEntity__, entity);
-    byte_40FD0A1 = 1;
+    sub_B2C35C(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__TryGetEntity__, entity);
+    byte_418AB63 = 1;
   }
   PK = ServantExpEntity__CreatePK(type, lv, *(const MethodInfo **)&type);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__TryGetEntity__);
 }
 
 

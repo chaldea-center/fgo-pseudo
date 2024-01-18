@@ -9,12 +9,12 @@ void __fastcall FollowdRemoveRequest__beginRequest(
         int64_t followId,
         const MethodInfo *method)
 {
-  if ( (byte_40F8EBF & 1) == 0 )
+  if ( (byte_41869D1 & 1) == 0 )
   {
-    sub_B16FFC(&StringLiteral_18709/*"followId"*/, followId);
-    byte_40F8EBF = 1;
+    sub_B2C35C(&StringLiteral_18781/*"followId"*/, followId);
+    byte_41869D1 = 1;
   }
-  RequestBase__addField_30956696((RequestBase_o *)this, (System_String_o *)StringLiteral_18709/*"followId"*/, followId, 0LL);
+  RequestBase__addField_31051460((RequestBase_o *)this, (System_String_o *)StringLiteral_18781/*"followId"*/, followId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -24,11 +24,11 @@ System_String_o *__fastcall FollowdRemoveRequest__getURL(FollowdRemoveRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_40F8EBE & 1) == 0 )
+  if ( (byte_41869D0 & 1) == 0 )
   {
-    sub_B16FFC(&NetworkManager_TypeInfo, method);
-    sub_B16FFC(&StringLiteral_18708/*"follow/remove"*/, v2);
-    byte_40F8EBE = 1;
+    sub_B2C35C(&NetworkManager_TypeInfo, method);
+    sub_B2C35C(&StringLiteral_18780/*"follow/remove"*/, v2);
+    byte_41869D0 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -36,7 +36,7 @@ System_String_o *__fastcall FollowdRemoveRequest__getURL(FollowdRemoveRequest_o 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_43743732(BaseUrl, (System_String_o *)StringLiteral_18708/*"follow/remove"*/, 0LL);
+  return System_String__Concat_44305532(BaseUrl, (System_String_o *)StringLiteral_18780/*"follow/remove"*/, 0LL);
 }
 
 
@@ -52,12 +52,12 @@ void __fastcall FollowdRemoveRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_40F8EC0 & 1) == 0 )
+  if ( (byte_41869D2 & 1) == 0 )
   {
-    sub_B16FFC(&JsonManager_TypeInfo, responseList);
-    sub_B16FFC(&ResponseCommandKind_TypeInfo, v5);
-    sub_B16FFC(&StringLiteral_20980/*"ng"*/, v6);
-    byte_40F8EC0 = 1;
+    sub_B2C35C(&JsonManager_TypeInfo, responseList);
+    sub_B2C35C(&ResponseCommandKind_TypeInfo, v5);
+    sub_B2C35C(&StringLiteral_21068/*"ng"*/, v6);
+    byte_41869D2 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -65,7 +65,7 @@ void __fastcall FollowdRemoveRequest__requestCompleted(
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
   v7 = ResponseCommandKind__SearchData(81, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_30924960(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_31019724(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -74,7 +74,7 @@ void __fastcall FollowdRemoveRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_20980/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_21068/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

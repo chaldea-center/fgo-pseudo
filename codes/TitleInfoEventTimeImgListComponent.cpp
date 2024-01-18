@@ -2,10 +2,10 @@ void __fastcall TitleInfoEventTimeImgListComponent___cctor(const MethodInfo *met
 {
   __int64 v1; // x1
 
-  if ( (byte_40F83DA & 1) == 0 )
+  if ( (byte_4186389 & 1) == 0 )
   {
-    sub_B16FFC(&TitleInfoEventTimeImgListComponent_TypeInfo, v1);
-    byte_40F83DA = 1;
+    sub_B2C35C(&TitleInfoEventTimeImgListComponent_TypeInfo, v1);
+    byte_4186389 = 1;
   }
   TitleInfoEventTimeImgListComponent_TypeInfo->static_fields->TIME_STATUS_ICON_MOVE_TIME = 0.5;
   TitleInfoEventTimeImgListComponent_TypeInfo->static_fields->TIME_STATUS_STEP_MAX = 4;
@@ -25,12 +25,12 @@ void __fastcall TitleInfoEventTimeImgListComponent__AddTimeAnime(
         System_Action_o *changeDayCallback,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x19
+  __int64 v8; // x19
+  UnityEngine_Component_o *grid; // x0
+  __int64 v10; // x1
   System_String_array **v11; // x2
   System_String_array **v12; // x3
   System_Boolean_array **v13; // x4
@@ -47,43 +47,37 @@ void __fastcall TitleInfoEventTimeImgListComponent__AddTimeAnime(
   const MethodInfo *v24; // x2
   int32_t timeStep; // w8
   TitleInfoEventTimeImgListComponent_TimeState_array *stateList; // x1
-  UnityEngine_Component_o *grid; // x0
-  UnityEngine_GameObject_o *gameObject; // x21
-  struct UIGrid_o *v29; // x8
-  TweenPosition_o *v30; // x20
-  System_Int32_array **v31; // x0
-  System_String_array **v32; // x2
-  System_String_array **v33; // x3
-  System_Boolean_array **v34; // x4
-  System_Int32_array **v35; // x5
-  System_Int32_array *v36; // x6
-  System_Int32_array *v37; // x7
-  __int64 v38; // x1
-  __int64 v39; // x2
-  __int64 v40; // x3
-  __int64 v41; // x4
-  EventDelegate_Callback_o *v42; // x21
-  UnityEngine_Vector3_o v43; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_GameObject_o *v27; // x21
+  struct UIGrid_o *v28; // x8
+  TweenPosition_o *v29; // x20
+  System_String_array **v30; // x2
+  System_String_array **v31; // x3
+  System_Boolean_array **v32; // x4
+  System_Int32_array **v33; // x5
+  System_Int32_array *v34; // x6
+  System_Int32_array *v35; // x7
+  EventDelegate_Callback_o *v36; // x21
+  UnityEngine_Vector3_o v37; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_40F83D8 & 1) == 0 )
+  if ( (byte_4186387 & 1) == 0 )
   {
-    sub_B16FFC(&EventDelegate_Callback_TypeInfo, changeDayCallback);
-    sub_B16FFC(&TitleInfoEventTimeImgListComponent_TypeInfo, v7);
-    sub_B16FFC(&Method_TitleInfoEventTimeImgListComponent___c__DisplayClass19_0__AddTimeAnime_b__0__, v8);
-    sub_B16FFC(&TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_TypeInfo, v9);
-    byte_40F83D8 = 1;
+    sub_B2C35C(&EventDelegate_Callback_TypeInfo, changeDayCallback);
+    sub_B2C35C(&TitleInfoEventTimeImgListComponent_TypeInfo, v5);
+    sub_B2C35C(&Method_TitleInfoEventTimeImgListComponent___c__DisplayClass19_0__AddTimeAnime_b__0__, v6);
+    sub_B2C35C(&TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_TypeInfo, v7);
+    byte_4186387 = 1;
   }
-  v10 = sub_B170CC(TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_TypeInfo, changeDayCallback, method, v3, v4);
+  v8 = sub_B2C42C(TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_TypeInfo);
   TitleInfoEventTimeImgListComponent___c__DisplayClass19_0___ctor(
-    (TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_o *)v10,
+    (TitleInfoEventTimeImgListComponent___c__DisplayClass19_0_o *)v8,
     0LL);
-  if ( !v10 )
+  if ( !v8 )
     goto LABEL_15;
-  *(_QWORD *)(v10 + 16) = this;
-  sub_B16F98((BattleServantConfConponent_o *)(v10 + 16), (System_Int32_array **)this, v11, v12, v13, v14, v15, v16);
-  *(_QWORD *)(v10 + 24) = changeDayCallback;
-  sub_B16F98(
-    (BattleServantConfConponent_o *)(v10 + 24),
+  *(_QWORD *)(v8 + 16) = this;
+  sub_B2C2F8((BattleServantConfConponent_o *)(v8 + 16), (System_Int32_array **)this, v11, v12, v13, v14, v15, v16);
+  *(_QWORD *)(v8 + 24) = changeDayCallback;
+  sub_B2C2F8(
+    (BattleServantConfConponent_o *)(v8 + 24),
     (System_Int32_array **)changeDayCallback,
     v17,
     v18,
@@ -97,46 +91,55 @@ void __fastcall TitleInfoEventTimeImgListComponent__AddTimeAnime(
     stateList = this->fields.stateList;
     this->fields.timeStep = timeStep + 1;
     if ( timeStep + 1 == TitleInfoEventTimeImgListComponent__GetChangeDayStep(v23, stateList, v24) )
-      ActionExtensions__Call(*(System_Action_o **)(v10 + 24), 0LL);
+      ActionExtensions__Call(*(System_Action_o **)(v8 + 24), 0LL);
     grid = (UnityEngine_Component_o *)this->fields.grid;
     if ( grid )
     {
-      gameObject = UnityEngine_Component__get_gameObject(grid, 0LL);
+      grid = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(grid, 0LL);
+      v27 = (UnityEngine_GameObject_o *)grid;
       if ( (BYTE3(TitleInfoEventTimeImgListComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !TitleInfoEventTimeImgListComponent_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(TitleInfoEventTimeImgListComponent_TypeInfo);
       }
-      v29 = this->fields.grid;
-      if ( v29 )
+      v28 = this->fields.grid;
+      if ( v28 )
       {
-        v43.fields.z = 0.0;
-        v43.fields.y = *(float *)&v29->fields.animateSmoothly * (float)this->fields.timeStep;
-        v43.fields.x = 0.0;
-        v30 = TweenPosition__Begin(
-                gameObject,
+        v37.fields.z = 0.0;
+        v37.fields.y = *(float *)&v28->fields.animateSmoothly * (float)this->fields.timeStep;
+        v37.fields.x = 0.0;
+        v29 = TweenPosition__Begin(
+                v27,
                 TitleInfoEventTimeImgListComponent_TypeInfo->static_fields->TIME_STATUS_ICON_MOVE_TIME,
-                v43,
+                v37,
                 0LL);
-        v31 = (System_Int32_array **)UnityEngine_AnimationCurve__EaseInOut(0.0, 0.0, 1.0, 1.0, 0LL);
-        if ( v30 )
+        grid = (UnityEngine_Component_o *)UnityEngine_AnimationCurve__EaseInOut(0.0, 0.0, 1.0, 1.0, 0LL);
+        if ( v29 )
         {
-          v30->fields.animationCurve = (struct UnityEngine_AnimationCurve_o *)v31;
-          sub_B16F98((BattleServantConfConponent_o *)&v30->fields.animationCurve, v31, v32, v33, v34, v35, v36, v37);
-          v30->fields.ignoreTimeScale = 0;
-          v42 = (EventDelegate_Callback_o *)sub_B170CC(EventDelegate_Callback_TypeInfo, v38, v39, v40, v41);
+          v29->fields.animationCurve = (struct UnityEngine_AnimationCurve_o *)grid;
+          sub_B2C2F8(
+            (BattleServantConfConponent_o *)&v29->fields.animationCurve,
+            (System_Int32_array **)grid,
+            v30,
+            v31,
+            v32,
+            v33,
+            v34,
+            v35);
+          v29->fields.ignoreTimeScale = 0;
+          v36 = (EventDelegate_Callback_o *)sub_B2C42C(EventDelegate_Callback_TypeInfo);
           EventDelegate_Callback___ctor(
-            v42,
-            (Il2CppObject *)v10,
+            v36,
+            (Il2CppObject *)v8,
             Method_TitleInfoEventTimeImgListComponent___c__DisplayClass19_0__AddTimeAnime_b__0__,
             0LL);
-          UITweener__SetOnFinished((UITweener_o *)v30, v42, 0LL);
+          UITweener__SetOnFinished((UITweener_o *)v29, v36, 0LL);
           return;
         }
       }
     }
 LABEL_15:
-    sub_B170D4();
+    sub_B2C434(grid, v10);
   }
 }
 
@@ -155,14 +158,15 @@ void __fastcall TitleInfoEventTimeImgListComponent__CreateIcon(
   UnityEngine_Component_o *grid; // x1
   UnityEngine_GameObject_o *v12; // x20
   TitleInfoEventTimeImgListViewObject_o *Component_srcLineSprite; // x0
-  const MethodInfo *v14; // x2
+  __int64 v14; // x1
+  const MethodInfo *v15; // x2
 
-  if ( (byte_40F83D7 & 1) == 0 )
+  if ( (byte_4186386 & 1) == 0 )
   {
-    sub_B16FFC(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewObject___, *(_QWORD *)&state);
-    sub_B16FFC(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, v8);
-    byte_40F83D7 = 1;
+    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewObject___, *(_QWORD *)&state);
+    sub_B2C35C(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, v8);
+    byte_4186386 = 1;
   }
   iconPrefab = this->fields.iconPrefab;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -172,7 +176,7 @@ void __fastcall TitleInfoEventTimeImgListComponent__CreateIcon(
   }
   v10 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                       (UnityEngine_UI_Dropdown_DropdownItem_o *)iconPrefab,
-                                      (const MethodInfo_19DE20C *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                      (const MethodInfo_2095E38 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   grid = (UnityEngine_Component_o *)this->fields.grid;
   v12 = v10;
   GameObjectExtensions__SafeSetParent(v10, grid, 0LL);
@@ -180,11 +184,11 @@ void __fastcall TitleInfoEventTimeImgListComponent__CreateIcon(
   if ( !v12
     || (Component_srcLineSprite = (TitleInfoEventTimeImgListViewObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                              v12,
-                                                                             (const MethodInfo_19D14E0 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewObject___)) == 0LL )
+                                                                             (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewObject___)) == 0LL )
   {
-    sub_B170D4();
+    sub_B2C434(Component_srcLineSprite, v14);
   }
-  TitleInfoEventTimeImgListViewObject__Init(Component_srcLineSprite, state, v14);
+  TitleInfoEventTimeImgListViewObject__Init(Component_srcLineSprite, state, v15);
 }
 
 
@@ -197,11 +201,12 @@ void __fastcall TitleInfoEventTimeImgListComponent__CreateIconList(
   unsigned __int64 v5; // x20
   unsigned __int64 max_length; // x9
   struct UIGrid_o *grid; // x9
+  __int64 v8; // x0
 
   stateList = this->fields.stateList;
   if ( !stateList )
 LABEL_7:
-    sub_B170D4();
+    sub_B2C434(this, method);
   v5 = 0LL;
   while ( 1 )
   {
@@ -210,8 +215,8 @@ LABEL_7:
       break;
     if ( v5 >= max_length )
     {
-      sub_B17100(this, method, v2);
-      sub_B170A0();
+      v8 = sub_B2C460(this);
+      sub_B2C400(v8, 0LL);
     }
     grid = this->fields.grid;
     if ( grid )
@@ -242,6 +247,7 @@ int32_t __fastcall TitleInfoEventTimeImgListComponent__GetChangeDayStep(
   int32_t v6; // w12
   _BOOL4 v7; // w12
   bool v8; // zf
+  __int64 v9; // x0
 
   if ( list && (int)*(_QWORD *)&list->max_length >= 1 )
   {
@@ -252,8 +258,8 @@ int32_t __fastcall TitleInfoEventTimeImgListComponent__GetChangeDayStep(
     {
       if ( v4 >= v3 )
       {
-        sub_B17100(v4, list, method);
-        sub_B170A0();
+        v9 = sub_B2C460(v4);
+        sub_B2C400(v9, 0LL);
       }
       v6 = list->m_Items[v4 + 1];
       if ( v6 == 2 )
@@ -293,44 +299,44 @@ TitleInfoEventTimeImgListComponent_TimeState_array *__fastcall TitleInfoEventTim
   TitleInfoEventTimeImgListComponent_TimeState_array *v10; // x19
   __int64 v11; // x1
 
-  if ( (byte_40F83D9 & 1) == 0 )
+  if ( (byte_4186388 & 1) == 0 )
   {
-    sub_B16FFC(&TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, *(_QWORD *)&start);
-    sub_B16FFC(
+    sub_B2C35C(&TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, *(_QWORD *)&start);
+    sub_B2C35C(
       &Field__PrivateImplementationDetails__05DC715F8E536C7C410383B0D77EB649831DF1DFAD839486E54FFC948EA3E3B2,
       v4);
-    sub_B16FFC(
+    sub_B2C35C(
       &Field__PrivateImplementationDetails__08B06BA91C8EC8563FBA7CD4038FA9699D8AD7B3FD34E52E42FDBCBBDA783FFD,
       v5);
-    sub_B16FFC(
+    sub_B2C35C(
       &Field__PrivateImplementationDetails__7AA877887B42A89E842F39316984E430348FB949C60728DA491E02F952A0143D,
       v6);
-    sub_B16FFC(
+    sub_B2C35C(
       &Field__PrivateImplementationDetails__F68E148E70B6BFBDF5687AC243823CCFE66F0BA41CEBDBD9DC74421EEEF39CEE,
       v7);
-    byte_40F83D9 = 1;
+    byte_4186388 = 1;
   }
   switch ( start )
   {
     case 0:
-      v8 = (System_Array_o *)sub_B17014(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL, method);
+      v8 = (System_Array_o *)sub_B2C374(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
       v9 = &Field__PrivateImplementationDetails__7AA877887B42A89E842F39316984E430348FB949C60728DA491E02F952A0143D;
       goto LABEL_9;
     case 1:
-      v8 = (System_Array_o *)sub_B17014(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL, method);
+      v8 = (System_Array_o *)sub_B2C374(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
       v9 = &Field__PrivateImplementationDetails__F68E148E70B6BFBDF5687AC243823CCFE66F0BA41CEBDBD9DC74421EEEF39CEE;
       goto LABEL_9;
     case 2:
-      v8 = (System_Array_o *)sub_B17014(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL, method);
+      v8 = (System_Array_o *)sub_B2C374(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
       v9 = &Field__PrivateImplementationDetails__05DC715F8E536C7C410383B0D77EB649831DF1DFAD839486E54FFC948EA3E3B2;
       goto LABEL_9;
     case 3:
-      v8 = (System_Array_o *)sub_B17014(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL, method);
+      v8 = (System_Array_o *)sub_B2C374(TitleInfoEventTimeImgListComponent_TimeState___TypeInfo, 4LL);
       v9 = &Field__PrivateImplementationDetails__08B06BA91C8EC8563FBA7CD4038FA9699D8AD7B3FD34E52E42FDBCBBDA783FFD;
 LABEL_9:
       v11 = *v9;
       v10 = (TitleInfoEventTimeImgListComponent_TimeState_array *)v8;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_42629164(
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_43133304(
         v8,
         (System_RuntimeFieldHandle_o)v11,
         0LL);
@@ -343,7 +349,6 @@ LABEL_9:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall TitleInfoEventTimeImgListComponent__GetStepCount(
         TitleInfoEventTimeImgListComponent_o *this,
         TitleInfoEventTimeImgListComponent_TimeState_array *list,
@@ -352,9 +357,10 @@ int32_t __fastcall TitleInfoEventTimeImgListComponent__GetStepCount(
 {
   signed int max_length; // w8
   __int64 v5; // x0
+  __int64 v6; // x0
 
   if ( !list )
-    sub_B170D4();
+    sub_B2C434(this, 0LL);
   max_length = list->max_length;
   if ( max_length < 1 )
   {
@@ -367,8 +373,8 @@ int32_t __fastcall TitleInfoEventTimeImgListComponent__GetStepCount(
     {
       if ( (unsigned int)v5 >= max_length )
       {
-        sub_B17100(v5, list, *(_QWORD *)&end);
-        sub_B170A0();
+        v6 = sub_B2C460(v5);
+        sub_B2C400(v6, 0LL);
       }
       if ( list->m_Items[(int)v5 + 1] == end )
         break;
@@ -400,7 +406,7 @@ void __fastcall TitleInfoEventTimeImgListComponent__Init(
   this->fields.endState = end;
   StateList = TitleInfoEventTimeImgListComponent__GetStateList(this, start, *(const MethodInfo **)&end);
   this->fields.stateList = StateList;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.stateList,
     (System_Int32_array **)StateList,
     v6,
@@ -468,6 +474,6 @@ void __fastcall TitleInfoEventTimeImgListComponent___c__DisplayClass19_0___AddTi
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B170D4();
+    sub_B2C434(0LL, method);
   TitleInfoEventTimeImgListComponent__AddTimeAnime(_4__this, this->fields.changeDayCallback, 0LL);
 }

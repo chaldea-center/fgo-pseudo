@@ -6,10 +6,10 @@ void __fastcall BoxGachaUtility___cctor(const MethodInfo *method)
   struct BoxGachaUtility_StaticFields *v4; // x9
   int32x2_t *v5; // x8
 
-  if ( (byte_40FB4A4 & 1) == 0 )
+  if ( (byte_4189714 & 1) == 0 )
   {
-    sub_B16FFC(&BoxGachaUtility_TypeInfo, v1);
-    byte_40FB4A4 = 1;
+    sub_B2C35C(&BoxGachaUtility_TypeInfo, v1);
+    byte_4189714 = 1;
   }
   static_fields = BoxGachaUtility_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NORMAL_ITEM_SIZE.fields.x = 0x3F3AE1483F400000LL;
@@ -30,19 +30,20 @@ void __fastcall BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_
   __int64 v5; // x1
   Il2CppObject *v6; // x0
   System_String_o *v7; // x0
-  int32_t v8; // [xsp+Ch] [xbp-14h] BYREF
+  __int64 v8; // x1
+  int32_t v9; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_40FB4A3 & 1) == 0 )
+  if ( (byte_4189713 & 1) == 0 )
   {
-    sub_B16FFC(&int_TypeInfo, *(_QWORD *)&num);
-    sub_B16FFC(&StringLiteral_19423/*"img_gachatxt_{0:D2}"*/, v5);
-    byte_40FB4A3 = 1;
+    sub_B2C35C(&int_TypeInfo, *(_QWORD *)&num);
+    sub_B2C35C(&StringLiteral_19497/*"img_gachatxt_{0:D2}"*/, v5);
+    byte_4189713 = 1;
   }
-  v8 = num;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v8);
-  v7 = System_String__Format((System_String_o *)StringLiteral_19423/*"img_gachatxt_{0:D2}"*/, v6, 0LL);
+  v9 = num;
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
+  v7 = System_String__Format((System_String_o *)StringLiteral_19497/*"img_gachatxt_{0:D2}"*/, v6, 0LL);
   if ( !sprite )
-    sub_B170D4();
+    sub_B2C434(v7, v8);
   UISprite__set_spriteName(sprite, v7, 0LL);
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))sprite->klass->vtable._33_MakePixelPerfect.method)(
     sprite,
@@ -50,6 +51,7 @@ void __fastcall BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
         int32_t gachaTime,
         UISprite_o *oneDigit,
@@ -57,67 +59,63 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
         UISprite_o *threeDigit,
         const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *v9; // x0
-  UnityEngine_GameObject_o *v10; // x0
-  const MethodInfo *v11; // x2
-  UnityEngine_GameObject_o *v12; // x0
-  float v13; // s0
-  int v14; // w8
-  int32_t v15; // w10
-  bool v16; // cc
+  int v8; // w20
+  const MethodInfo *v9; // x2
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v18; // x0
+  float v11; // s0
+  int v12; // w8
+  int v13; // w10
+  bool v14; // cc
+  const MethodInfo *v15; // x2
+  const MethodInfo *v16; // x2
+  const MethodInfo *v17; // x2
+  const MethodInfo *v18; // x2
   const MethodInfo *v19; // x2
-  const MethodInfo *v20; // x2
-  const MethodInfo *v21; // x2
-  UnityEngine_GameObject_o *v22; // x0
-  UnityEngine_GameObject_o *v23; // x0
-  const MethodInfo *v24; // x2
-  const MethodInfo *v25; // x2
 
-  if ( (byte_40FB4A2 & 1) == 0 )
+  v8 = gachaTime;
+  if ( (byte_4189712 & 1) == 0 )
   {
-    sub_B16FFC(&BoxGachaUtility_TypeInfo, oneDigit);
-    byte_40FB4A2 = 1;
+    *(_QWORD *)&gachaTime = sub_B2C35C(&BoxGachaUtility_TypeInfo, oneDigit);
+    byte_4189712 = 1;
   }
-  if ( gachaTime < 10 )
+  if ( v8 < 10 )
     goto LABEL_42;
-  v14 = 0;
-  v15 = gachaTime;
+  v12 = 0;
+  v13 = v8;
   do
   {
-    v16 = v15 <= 99;
-    v15 /= 10;
-    ++v14;
+    v14 = v13 <= 99;
+    v13 /= 10;
+    ++v12;
   }
-  while ( !v16 );
-  switch ( v14 )
+  while ( !v14 );
+  switch ( v12 )
   {
     case 2:
       if ( twoDigit )
       {
-        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0LL);
-        if ( gameObject )
+        *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0LL);
+        if ( *(_QWORD *)&gachaTime )
         {
-          UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
+          UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 1, 0LL);
           if ( threeDigit )
           {
-            v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0LL);
-            if ( v18 )
+            *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0LL);
+            if ( *(_QWORD *)&gachaTime )
             {
-              UnityEngine_GameObject__SetActive(v18, 1, 0LL);
+              UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 1, 0LL);
               if ( (BYTE3(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !BoxGachaUtility_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
               }
-              BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, gachaTime % 10, v19);
-              BoxGachaUtility__SetBoxGachaNumSprite(twoDigit, gachaTime % 100, v20);
-              BoxGachaUtility__SetBoxGachaNumSprite(threeDigit, gachaTime / 100, v21);
+              BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8 % 10, v15);
+              BoxGachaUtility__SetBoxGachaNumSprite(twoDigit, v8 % 100, v16);
+              BoxGachaUtility__SetBoxGachaNumSprite(threeDigit, v8 / 100, v17);
               if ( oneDigit )
               {
-                v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)oneDigit, 0LL);
-                v13 = 15.0;
+                gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)oneDigit, 0LL);
+                v11 = 15.0;
                 goto LABEL_13;
               }
             }
@@ -125,31 +123,31 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
         }
       }
 LABEL_39:
-      sub_B170D4();
+      sub_B2C434(*(_QWORD *)&gachaTime, oneDigit);
     case 1:
       if ( twoDigit )
       {
-        v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0LL);
-        if ( v22 )
+        *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0LL);
+        if ( *(_QWORD *)&gachaTime )
         {
-          UnityEngine_GameObject__SetActive(v22, 1, 0LL);
+          UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 1, 0LL);
           if ( threeDigit )
           {
-            v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0LL);
-            if ( v23 )
+            *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0LL);
+            if ( *(_QWORD *)&gachaTime )
             {
-              UnityEngine_GameObject__SetActive(v23, 0, 0LL);
+              UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0LL);
               if ( (BYTE3(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !BoxGachaUtility_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
               }
-              BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, gachaTime % 10, v24);
-              BoxGachaUtility__SetBoxGachaNumSprite(twoDigit, gachaTime / 10, v25);
+              BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8 % 10, v18);
+              BoxGachaUtility__SetBoxGachaNumSprite(twoDigit, v8 / 10, v19);
               if ( oneDigit )
               {
-                v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)oneDigit, 0LL);
-                v13 = 4.0;
+                gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)oneDigit, 0LL);
+                v11 = 4.0;
                 goto LABEL_13;
               }
             }
@@ -161,28 +159,28 @@ LABEL_39:
 LABEL_42:
       if ( twoDigit )
       {
-        v9 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0LL);
-        if ( v9 )
+        *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0LL);
+        if ( *(_QWORD *)&gachaTime )
         {
-          UnityEngine_GameObject__SetActive(v9, 0, 0LL);
+          UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0LL);
           if ( threeDigit )
           {
-            v10 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0LL);
-            if ( v10 )
+            *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0LL);
+            if ( *(_QWORD *)&gachaTime )
             {
-              UnityEngine_GameObject__SetActive(v10, 0, 0LL);
+              UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0LL);
               if ( (BYTE3(BoxGachaUtility_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                 && !BoxGachaUtility_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
               }
-              BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, gachaTime, v11);
+              BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8, v9);
               if ( oneDigit )
               {
-                v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)oneDigit, 0LL);
-                v13 = -8.0;
+                gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)oneDigit, 0LL);
+                v11 = -8.0;
 LABEL_13:
-                GameObjectExtensions__SetLocalPositionX(v12, v13, 0LL);
+                GameObjectExtensions__SetLocalPositionX(gameObject, v11, 0LL);
                 return;
               }
             }

@@ -1,14 +1,14 @@
 void __fastcall UserBlacklistMaster___ctor(UserBlacklistMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_40FAAB5 & 1) == 0 )
+  if ( (byte_4188A93 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string___ctor__, method);
-    byte_40FAAB5 = 1;
+    sub_B2C35C(&Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string___ctor__, method);
+    byte_4188A93 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     207,
-    (const MethodInfo_266F73C *)Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string___ctor__);
+    (const MethodInfo_24E4484 *)Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ UserBlacklistEntity_o *__fastcall UserBlacklistMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_40FAAB3 & 1) == 0 )
+  if ( (byte_4188A91 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__GetEntity__, userId);
-    byte_40FAAB3 = 1;
+    sub_B2C35C(&Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__GetEntity__, userId);
+    byte_4188A91 = 1;
   }
   PK = UserBlacklistEntity__CreatePK(userId, targetUserId, (const MethodInfo *)targetUserId);
   return (UserBlacklistEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                     (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                     PK,
-                                    (const MethodInfo_266F7D8 *)Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__GetEntity__);
+                                    (const MethodInfo_24E4520 *)Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__GetEntity__);
 }
 
 
@@ -42,15 +42,15 @@ bool __fastcall UserBlacklistMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_40FAAB4 & 1) == 0 )
+  if ( (byte_4188A92 & 1) == 0 )
   {
-    sub_B16FFC(&Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__TryGetEntity__, entity);
-    byte_40FAAB4 = 1;
+    sub_B2C35C(&Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__TryGetEntity__, entity);
+    byte_4188A92 = 1;
   }
   PK = UserBlacklistEntity__CreatePK(userId, targetUserId, (const MethodInfo *)userId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_266F830 *)Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__TryGetEntity__);
+           (const MethodInfo_24E4578 *)Method_DataMasterBase_UserBlacklistMaster__UserBlacklistEntity__string__TryGetEntity__);
 }

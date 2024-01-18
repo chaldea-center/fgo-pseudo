@@ -15,16 +15,16 @@ void __fastcall SpawnerEventHandler__Init(SpawnerEventHandler_o *this, const Met
   System_Int32_array *v8; // x6
   System_Int32_array *v9; // x7
 
-  if ( (byte_40F9D7D & 1) == 0 )
+  if ( (byte_418774C & 1) == 0 )
   {
-    sub_B16FFC(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___, method);
-    byte_40F9D7D = 1;
+    sub_B2C35C(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___, method);
+    byte_418774C = 1;
   }
   ComponentsInChildren_USTimelineContainer = (System_Int32_array **)UnityEngine_Component__GetComponentsInChildren_USTimelineContainer_(
                                                                       (UnityEngine_Component_o *)this,
-                                                                      (const MethodInfo_18BD830 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+                                                                      (const MethodInfo_172DF98 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
   *(_QWORD *)&this->fields.isInitilized = ComponentsInChildren_USTimelineContainer;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.isInitilized,
     ComponentsInChildren_USTimelineContainer,
     v4,
@@ -39,38 +39,39 @@ void __fastcall SpawnerEventHandler__Init(SpawnerEventHandler_o *this, const Met
 
 void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v4; // x8
-  __int64 v5; // x20
-  int v6; // w9
-  UnityEngine_ParticleSystem_o *v7; // x0
+  SpawnerEventHandler_o *v2; // x19
+  __int64 v3; // x8
+  __int64 v4; // x20
+  int v5; // w9
+  __int64 v6; // x0
 
+  v2 = this;
   if ( !LOBYTE(this[1].klass) )
     SpawnerEventHandler__Init(this, method);
-  v4 = *(_QWORD *)&this->fields.isInitilized;
-  if ( v4 && LOBYTE(this->fields.particleArray) )
+  v3 = *(_QWORD *)&v2->fields.isInitilized;
+  if ( v3 && LOBYTE(v2->fields.particleArray) )
   {
-    v5 = 0LL;
+    v4 = 0LL;
     while ( 1 )
     {
-      v6 = *(_DWORD *)(v4 + 24);
-      if ( (int)v5 >= v6 )
+      v5 = *(_DWORD *)(v3 + 24);
+      if ( (int)v4 >= v5 )
         break;
-      if ( (unsigned int)v5 >= v6 )
+      if ( (unsigned int)v4 >= v5 )
       {
-        sub_B17100(this, method, v2);
-        sub_B170A0();
+        v6 = sub_B2C460(this);
+        sub_B2C400(v6, 0LL);
       }
-      v7 = *(UnityEngine_ParticleSystem_o **)(v4 + 8 * v5 + 32);
-      if ( v7 )
+      this = *(SpawnerEventHandler_o **)(v3 + 8 * v4 + 32);
+      if ( this )
       {
-        UnityEngine_ParticleSystem__set_time(v7, 0.0, 0LL);
-        v4 = *(_QWORD *)&this->fields.isInitilized;
-        ++v5;
-        if ( v4 )
+        UnityEngine_ParticleSystem__set_time((UnityEngine_ParticleSystem_o *)this, 0.0, 0LL);
+        v3 = *(_QWORD *)&v2->fields.isInitilized;
+        ++v4;
+        if ( v3 )
           continue;
       }
-      sub_B170D4();
+      sub_B2C434(this, method);
     }
   }
 }

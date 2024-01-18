@@ -5,16 +5,18 @@ void __fastcall BattleLogicServantTask___ctor(
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x3
-  int32_t v8; // w1
+  __int64 v7; // x0
+  __int64 v8; // x1
+  const MethodInfo *v9; // x3
+  int32_t v10; // w1
 
   BattleLogicTask___ctor((BattleLogicTask_o *)this, *(const MethodInfo **)&actionType);
   this->fields.actiontype = actionType;
   if ( !svtData )
-    sub_B170D4();
+    sub_B2C434(v7, v8);
   if ( svtData->fields.isEnemy )
-    v8 = 3;
+    v10 = 3;
   else
-    v8 = 2;
-  BattleLogicTask__setActor((BattleLogicTask_o *)this, v8, svtData->fields.uniqueId, v7);
+    v10 = 2;
+  BattleLogicTask__setActor((BattleLogicTask_o *)this, v10, svtData->fields.uniqueId, v9);
 }

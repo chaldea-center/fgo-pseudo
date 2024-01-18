@@ -77,7 +77,7 @@ void __fastcall MoveObject__Play(
   this->fields.mTime = UnityEngine_Time__get_time(0LL);
   this->fields.mDelay = v14;
   *(_QWORD *)&this->fields.mIsPause = endAct;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.mIsPause,
     (System_Int32_array **)endAct,
     v15,
@@ -94,7 +94,7 @@ void __fastcall MoveObject__Play(
           0LL);
   this->fields.mEndAct = procAct;
   *(UnityEngine_Vector3_o *)&this->fields.mNow.fields.y = v27;
-  sub_B16F98(
+  sub_B2C2F8(
     (BattleServantConfConponent_o *)&this->fields.mEndAct,
     (System_Int32_array **)procAct,
     v21,

@@ -32,104 +32,91 @@ void __fastcall TitleInfoEventLeagueVsGaugeEffect__setup(
   double v13; // d0
   struct UnityEngine_ParticleSystem_array *gaugeParticle; // x8
   unsigned int max_length; // w9
-  UnityEngine_ParticleSystem_o *v16; // x0
+  struct UnityEngine_ParticleSystem_array *v16; // x8
   struct UnityEngine_ParticleSystem_array *v17; // x8
-  UnityEngine_ParticleSystem_o *v18; // x0
+  struct UnityEngine_ParticleSystem_array *v18; // x8
   struct UnityEngine_ParticleSystem_array *v19; // x8
-  UnityEngine_ParticleSystem_o *v20; // x0
-  struct UnityEngine_ParticleSystem_array *v21; // x8
-  UnityEngine_ParticleSystem_o *v22; // x0
-  struct UnityEngine_ParticleSystem_array *v23; // x8
-  UnityEngine_Component_o *v24; // x0
-  float v25; // s9
-  float v26; // s8
+  float v20; // s9
+  float v21; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  struct UnityEngine_ParticleSystem_array *v28; // x8
-  UnityEngine_Component_o *v29; // x0
-  float v30; // s8
-  UnityEngine_GameObject_o *v31; // x0
+  struct UnityEngine_ParticleSystem_array *v23; // x8
+  float v24; // s8
+  UnityEngine_GameObject_o *v25; // x0
   UnityEngine_Object_o *gaugeSimpleAnim; // x20
-  SimpleAnimation_o *v33; // x0
-  __int64 *v34; // x8
-  UnityEngine_ParticleSystem_o *v35; // x0
-  struct UnityEngine_ParticleSystem_array *v36; // x8
-  UnityEngine_ParticleSystem_o *v37; // x0
-  struct UnityEngine_ParticleSystem_array *v38; // x8
-  UnityEngine_ParticleSystem_o *v39; // x0
-  struct UnityEngine_ParticleSystem_array *v40; // x8
-  UnityEngine_ParticleSystem_o *v41; // x0
-  struct UnityEngine_ParticleSystem_array *v42; // x8
-  UnityEngine_Component_o *v43; // x0
-  float v44; // s9
-  float v45; // s8
-  UnityEngine_GameObject_o *v46; // x0
-  struct UnityEngine_ParticleSystem_array *v47; // x8
-  UnityEngine_Component_o *v48; // x0
-  float v49; // s8
-  UnityEngine_GameObject_o *v50; // x0
-  UnityEngine_Object_o *v51; // x20
+  __int64 *v27; // x8
+  struct UnityEngine_ParticleSystem_array *v28; // x8
+  struct UnityEngine_ParticleSystem_array *v29; // x8
+  struct UnityEngine_ParticleSystem_array *v30; // x8
+  struct UnityEngine_ParticleSystem_array *v31; // x8
+  float v32; // s9
+  float v33; // s8
+  UnityEngine_GameObject_o *v34; // x0
+  struct UnityEngine_ParticleSystem_array *v35; // x8
+  float v36; // s8
+  UnityEngine_GameObject_o *v37; // x0
+  UnityEngine_Object_o *v38; // x20
   UnityEngine_Object_o *gaugeAnim; // x20
-  UnityEngine_Animation_o *v53; // x0
-  __int64 *v54; // x8
-  UnityEngine_Object_o *v55; // x20
-  UnityEngine_ParticleSystem_MinMaxCurve_o v56; // [xsp+0h] [xbp-1C0h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v57; // [xsp+20h] [xbp-1A0h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v58; // [xsp+40h] [xbp-180h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v59; // [xsp+60h] [xbp-160h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v60; // [xsp+80h] [xbp-140h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v61; // [xsp+A0h] [xbp-120h] BYREF
-  struct UnityEngine_ParticleSystem_o *v62; // [xsp+C8h] [xbp-F8h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v63; // [xsp+D0h] [xbp-F0h] BYREF
-  struct UnityEngine_ParticleSystem_o *v64; // [xsp+F8h] [xbp-C8h] BYREF
-  struct UnityEngine_ParticleSystem_o *v65; // [xsp+100h] [xbp-C0h] BYREF
-  struct UnityEngine_ParticleSystem_o *v66; // [xsp+108h] [xbp-B8h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v67; // [xsp+110h] [xbp-B0h] BYREF
-  struct UnityEngine_ParticleSystem_o *v68; // [xsp+138h] [xbp-88h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v69; // [xsp+140h] [xbp-80h] BYREF
-  struct UnityEngine_ParticleSystem_o *v70; // [xsp+160h] [xbp-60h] BYREF
-  struct UnityEngine_ParticleSystem_o *v71; // [xsp+168h] [xbp-58h] BYREF
+  __int64 *v40; // x8
+  UnityEngine_Object_o *v41; // x20
+  __int64 v42; // x0
+  UnityEngine_ParticleSystem_MinMaxCurve_o v43; // [xsp+0h] [xbp-1C0h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v44; // [xsp+20h] [xbp-1A0h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v45; // [xsp+40h] [xbp-180h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v46; // [xsp+60h] [xbp-160h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v47; // [xsp+80h] [xbp-140h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v48; // [xsp+A0h] [xbp-120h] BYREF
+  struct UnityEngine_ParticleSystem_o *v49; // [xsp+C8h] [xbp-F8h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v50; // [xsp+D0h] [xbp-F0h] BYREF
+  struct UnityEngine_ParticleSystem_o *v51; // [xsp+F8h] [xbp-C8h] BYREF
+  struct UnityEngine_ParticleSystem_o *v52; // [xsp+100h] [xbp-C0h] BYREF
+  struct UnityEngine_ParticleSystem_o *v53; // [xsp+108h] [xbp-B8h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v54; // [xsp+110h] [xbp-B0h] BYREF
+  struct UnityEngine_ParticleSystem_o *v55; // [xsp+138h] [xbp-88h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v56; // [xsp+140h] [xbp-80h] BYREF
+  struct UnityEngine_ParticleSystem_o *v57; // [xsp+160h] [xbp-60h] BYREF
+  struct UnityEngine_ParticleSystem_o *v58; // [xsp+168h] [xbp-58h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+178h] [xbp-48h] BYREF
-  UnityEngine_ParticleSystem_ShapeModule_o v73; // 0:x0.8
-  UnityEngine_ParticleSystem_ShapeModule_o v74; // 0:x0.8
-  UnityEngine_ParticleSystem_ShapeModule_o v75; // 0:x0.8
-  UnityEngine_ParticleSystem_ShapeModule_o v76; // 0:x0.8
-  UnityEngine_ParticleSystem_EmissionModule_o v77; // 0:x0.8
-  UnityEngine_ParticleSystem_EmissionModule_o v78; // 0:x0.8
-  UnityEngine_ParticleSystem_EmissionModule_o v79; // 0:x0.8
-  UnityEngine_ParticleSystem_EmissionModule_o v80; // 0:x0.8
-  UnityEngine_ParticleSystem_ShapeModule_o v81; // 0:x0.8
-  UnityEngine_ParticleSystem_ShapeModule_o v82; // 0:x0.8
-  UnityEngine_ParticleSystem_ShapeModule_o v83; // 0:x0.8
-  UnityEngine_ParticleSystem_ShapeModule_o v84; // 0:x0.8
-  UnityEngine_ParticleSystem_EmissionModule_o v85; // 0:x0.8
-  UnityEngine_ParticleSystem_EmissionModule_o v86; // 0:x0.8
-  UnityEngine_ParticleSystem_EmissionModule_o v87; // 0:x0.8
-  UnityEngine_ParticleSystem_EmissionModule_o v88; // 0:x0.8
+  UnityEngine_ParticleSystem_ShapeModule_o v60; // 0:x0.8
+  UnityEngine_ParticleSystem_ShapeModule_o v61; // 0:x0.8
+  UnityEngine_ParticleSystem_ShapeModule_o v62; // 0:x0.8
+  UnityEngine_ParticleSystem_ShapeModule_o v63; // 0:x0.8
+  UnityEngine_ParticleSystem_EmissionModule_o v64; // 0:x0.8
+  UnityEngine_ParticleSystem_EmissionModule_o v65; // 0:x0.8
+  UnityEngine_ParticleSystem_EmissionModule_o v66; // 0:x0.8
+  UnityEngine_ParticleSystem_EmissionModule_o v67; // 0:x0.8
+  UnityEngine_ParticleSystem_ShapeModule_o v68; // 0:x0.8
+  UnityEngine_ParticleSystem_ShapeModule_o v69; // 0:x0.8
+  UnityEngine_ParticleSystem_ShapeModule_o v70; // 0:x0.8
+  UnityEngine_ParticleSystem_ShapeModule_o v71; // 0:x0.8
+  UnityEngine_ParticleSystem_EmissionModule_o v72; // 0:x0.8
+  UnityEngine_ParticleSystem_EmissionModule_o v73; // 0:x0.8
+  UnityEngine_ParticleSystem_EmissionModule_o v74; // 0:x0.8
+  UnityEngine_ParticleSystem_EmissionModule_o v75; // 0:x0.8
   UnityEngine_Vector3_o scale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v90; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v91; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v92; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v77; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v78; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v79; // 0:s0.4,4:s1.4,8:s2.4
 
   v8 = this;
-  if ( (byte_40FDFD3 & 1) == 0 )
+  if ( (byte_418BA0D & 1) == 0 )
   {
-    sub_B16FFC(&UnityEngine_Object_TypeInfo, point1);
-    sub_B16FFC(&StringLiteral_16779/*"bit_vs_gauge_part_1"*/, v9);
-    this = (TitleInfoEventLeagueVsGaugeEffect_o *)sub_B16FFC(&StringLiteral_16780/*"bit_vs_gauge_part_2"*/, v10);
-    byte_40FDFD3 = 1;
+    sub_B2C35C(&UnityEngine_Object_TypeInfo, point1);
+    sub_B2C35C(&StringLiteral_16845/*"bit_vs_gauge_part_1"*/, v9);
+    this = (TitleInfoEventLeagueVsGaugeEffect_o *)sub_B2C35C(&StringLiteral_16846/*"bit_vs_gauge_part_2"*/, v10);
+    byte_418BA0D = 1;
   }
   m_ParticleSystem = 0LL;
-  v70 = 0LL;
-  v71 = 0LL;
-  v68 = 0LL;
-  v65 = 0LL;
-  v66 = 0LL;
-  v64 = 0LL;
-  v62 = 0LL;
-  memset(&v69, 0, sizeof(v69));
-  memset(&v67, 0, sizeof(v67));
-  memset(&v63, 0, sizeof(v63));
-  memset(&v61, 0, sizeof(v61));
+  v57 = 0LL;
+  v58 = 0LL;
+  v55 = 0LL;
+  v52 = 0LL;
+  v53 = 0LL;
+  v51 = 0LL;
+  v49 = 0LL;
+  memset(&v56, 0, sizeof(v56));
+  memset(&v54, 0, sizeof(v54));
+  memset(&v50, 0, sizeof(v50));
+  memset(&v48, 0, sizeof(v48));
   if ( point1 == point2 )
   {
     v11 = 0.5;
@@ -149,85 +136,85 @@ void __fastcall TitleInfoEventLeagueVsGaugeEffect__setup(
   {
     if ( max_length > 3 )
     {
-      v16 = gaugeParticle->m_Items[3];
+      this = (TitleInfoEventLeagueVsGaugeEffect_o *)gaugeParticle->m_Items[3];
+      if ( !this )
+        goto LABEL_69;
+      m_ParticleSystem = UnityEngine_ParticleSystem__get_shape((UnityEngine_ParticleSystem_o *)this, 0LL).fields.m_ParticleSystem;
+      v60.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+      scale = UnityEngine_ParticleSystem_ShapeModule__get_scale(v60, 0LL);
+      scale.fields.x = v12 + v12;
+      v61.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+      UnityEngine_ParticleSystem_ShapeModule__set_scale(v61, scale, 0LL);
+      v16 = v8->fields.gaugeParticle;
       if ( !v16 )
         goto LABEL_69;
-      m_ParticleSystem = UnityEngine_ParticleSystem__get_shape(v16, 0LL).fields.m_ParticleSystem;
-      v73.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
-      scale = UnityEngine_ParticleSystem_ShapeModule__get_scale(v73, 0LL);
-      scale.fields.x = v12 + v12;
-      v74.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
-      UnityEngine_ParticleSystem_ShapeModule__set_scale(v74, scale, 0LL);
-      v17 = v8->fields.gaugeParticle;
-      if ( !v17 )
-        goto LABEL_69;
-      if ( v17->max_length > 2 )
+      if ( v16->max_length > 2 )
       {
-        v18 = v17->m_Items[2];
-        if ( !v18 )
+        this = (TitleInfoEventLeagueVsGaugeEffect_o *)v16->m_Items[2];
+        if ( !this )
           goto LABEL_69;
-        v71 = UnityEngine_ParticleSystem__get_shape(v18, 0LL).fields.m_ParticleSystem;
-        v75.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v71;
-        v90 = UnityEngine_ParticleSystem_ShapeModule__get_scale(v75, 0LL);
-        v90.fields.x = v11 + v11;
-        v76.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v71;
-        UnityEngine_ParticleSystem_ShapeModule__set_scale(v76, v90, 0LL);
-        v19 = v8->fields.gaugeParticle;
-        if ( !v19 )
+        v58 = UnityEngine_ParticleSystem__get_shape((UnityEngine_ParticleSystem_o *)this, 0LL).fields.m_ParticleSystem;
+        v62.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v58;
+        v77 = UnityEngine_ParticleSystem_ShapeModule__get_scale(v62, 0LL);
+        v77.fields.x = v11 + v11;
+        v63.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v58;
+        UnityEngine_ParticleSystem_ShapeModule__set_scale(v63, v77, 0LL);
+        v17 = v8->fields.gaugeParticle;
+        if ( !v17 )
           goto LABEL_69;
-        if ( v19->max_length > 3 )
+        if ( v17->max_length > 3 )
         {
-          v20 = v19->m_Items[3];
-          if ( !v20 )
+          this = (TitleInfoEventLeagueVsGaugeEffect_o *)v17->m_Items[3];
+          if ( !this )
             goto LABEL_69;
-          v70 = UnityEngine_ParticleSystem__get_emission(v20, 0LL).fields.m_ParticleSystem;
-          v77.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v70;
-          UnityEngine_ParticleSystem_EmissionModule__get_rateOverTime(&v60, v77, 0LL);
-          v69 = v60;
-          UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v69, v12 * 35.0, 0LL);
-          v78.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v70;
-          v59 = v69;
-          UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(v78, &v59, 0LL);
-          v21 = v8->fields.gaugeParticle;
-          if ( !v21 )
+          v57 = UnityEngine_ParticleSystem__get_emission((UnityEngine_ParticleSystem_o *)this, 0LL).fields.m_ParticleSystem;
+          v64.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v57;
+          UnityEngine_ParticleSystem_EmissionModule__get_rateOverTime(&v47, v64, 0LL);
+          v56 = v47;
+          UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v56, v12 * 35.0, 0LL);
+          v65.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v57;
+          v46 = v56;
+          UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(v65, &v46, 0LL);
+          v18 = v8->fields.gaugeParticle;
+          if ( !v18 )
             goto LABEL_69;
-          if ( v21->max_length > 2 )
+          if ( v18->max_length > 2 )
           {
-            v22 = v21->m_Items[2];
-            if ( !v22 )
+            this = (TitleInfoEventLeagueVsGaugeEffect_o *)v18->m_Items[2];
+            if ( !this )
               goto LABEL_69;
-            v68 = UnityEngine_ParticleSystem__get_emission(v22, 0LL).fields.m_ParticleSystem;
-            v79.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v68;
-            UnityEngine_ParticleSystem_EmissionModule__get_rateOverTime(&v60, v79, 0LL);
-            v67 = v60;
-            UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v67, v11 * 35.0, 0LL);
-            v80.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v68;
-            v58 = v67;
-            UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(v80, &v58, 0LL);
-            v23 = v8->fields.gaugeParticle;
-            if ( !v23 )
+            v55 = UnityEngine_ParticleSystem__get_emission((UnityEngine_ParticleSystem_o *)this, 0LL).fields.m_ParticleSystem;
+            v66.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v55;
+            UnityEngine_ParticleSystem_EmissionModule__get_rateOverTime(&v47, v66, 0LL);
+            v54 = v47;
+            UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v54, v11 * 35.0, 0LL);
+            v67.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v55;
+            v45 = v54;
+            UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(v67, &v45, 0LL);
+            v19 = v8->fields.gaugeParticle;
+            if ( !v19 )
               goto LABEL_69;
-            if ( v23->max_length > 3 )
+            if ( v19->max_length > 3 )
             {
-              v24 = (UnityEngine_Component_o *)v23->m_Items[3];
-              if ( !v24 )
+              this = (TitleInfoEventLeagueVsGaugeEffect_o *)v19->m_Items[3];
+              if ( !this )
                 goto LABEL_69;
-              v25 = v11 * 10.0;
-              v26 = (float)((float)(v25 + (float)((float)(v12 * 10.0) * 0.5)) * v8->fields.GAUGE_SIZE_DEF)
+              v20 = v11 * 10.0;
+              v21 = (float)((float)(v20 + (float)((float)(v12 * 10.0) * 0.5)) * v8->fields.GAUGE_SIZE_DEF)
                   * v8->fields.GAUGE_SIZE_FACTOR;
-              gameObject = UnityEngine_Component__get_gameObject(v24, 0LL);
-              GameObjectExtensions__SetLocalPositionX(gameObject, v26, 0LL);
-              v28 = v8->fields.gaugeParticle;
-              if ( !v28 )
+              gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+              GameObjectExtensions__SetLocalPositionX(gameObject, v21, 0LL);
+              v23 = v8->fields.gaugeParticle;
+              if ( !v23 )
                 goto LABEL_69;
-              if ( v28->max_length > 2 )
+              if ( v23->max_length > 2 )
               {
-                v29 = (UnityEngine_Component_o *)v28->m_Items[2];
-                if ( !v29 )
+                this = (TitleInfoEventLeagueVsGaugeEffect_o *)v23->m_Items[2];
+                if ( !this )
                   goto LABEL_69;
-                v30 = (float)((float)(v25 * 0.5) * v8->fields.GAUGE_SIZE_DEF) * v8->fields.GAUGE_SIZE_FACTOR;
-                v31 = UnityEngine_Component__get_gameObject(v29, 0LL);
-                GameObjectExtensions__SetLocalPositionX(v31, v30, 0LL);
+                v24 = (float)((float)(v20 * 0.5) * v8->fields.GAUGE_SIZE_DEF) * v8->fields.GAUGE_SIZE_FACTOR;
+                v25 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+                GameObjectExtensions__SetLocalPositionX(v25, v24, 0LL);
                 gaugeSimpleAnim = (UnityEngine_Object_o *)v8->fields.gaugeSimpleAnim;
                 if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
                   && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -236,12 +223,12 @@ void __fastcall TitleInfoEventLeagueVsGaugeEffect__setup(
                 }
                 if ( UnityEngine_Object__op_Inequality(gaugeSimpleAnim, 0LL, 0LL) )
                 {
-                  v33 = v8->fields.gaugeSimpleAnim;
-                  if ( v33 )
+                  this = (TitleInfoEventLeagueVsGaugeEffect_o *)v8->fields.gaugeSimpleAnim;
+                  if ( this )
                   {
-                    v34 = &StringLiteral_16780/*"bit_vs_gauge_part_2"*/;
+                    v27 = &StringLiteral_16846/*"bit_vs_gauge_part_2"*/;
 LABEL_54:
-                    SimpleAnimation__Play_16380456(v33, (System_String_o *)*v34, 0LL);
+                    SimpleAnimation__Play_16486620((SimpleAnimation_o *)this, (System_String_o *)*v27, 0LL);
                     return;
                   }
                   goto LABEL_69;
@@ -254,12 +241,12 @@ LABEL_54:
                 }
                 if ( UnityEngine_Object__op_Inequality(gaugeAnim, 0LL, 0LL) )
                 {
-                  v53 = v8->fields.gaugeAnim;
-                  if ( !v53 )
+                  this = (TitleInfoEventLeagueVsGaugeEffect_o *)v8->fields.gaugeAnim;
+                  if ( !this )
                     goto LABEL_69;
-                  v54 = &StringLiteral_16780/*"bit_vs_gauge_part_2"*/;
+                  v40 = &StringLiteral_16846/*"bit_vs_gauge_part_2"*/;
 LABEL_67:
-                  UnityEngine_Animation__Play_49744236(v53, (System_String_o *)*v54, 0LL);
+                  UnityEngine_Animation__Play_50201580((UnityEngine_Animation_o *)this, (System_String_o *)*v40, 0LL);
                   return;
                 }
                 return;
@@ -270,119 +257,119 @@ LABEL_67:
       }
     }
 LABEL_70:
-    sub_B17100(this, point1, point2);
-    sub_B170A0();
+    v42 = sub_B2C460(this);
+    sub_B2C400(v42, 0LL);
   }
   if ( max_length <= 1 )
     goto LABEL_70;
-  v35 = gaugeParticle->m_Items[1];
+  this = (TitleInfoEventLeagueVsGaugeEffect_o *)gaugeParticle->m_Items[1];
+  if ( !this )
+    goto LABEL_69;
+  v53 = UnityEngine_ParticleSystem__get_shape((UnityEngine_ParticleSystem_o *)this, 0LL).fields.m_ParticleSystem;
+  v68.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v53;
+  v78 = UnityEngine_ParticleSystem_ShapeModule__get_scale(v68, 0LL);
+  v78.fields.x = v12 + v12;
+  v69.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v53;
+  UnityEngine_ParticleSystem_ShapeModule__set_scale(v69, v78, 0LL);
+  v28 = v8->fields.gaugeParticle;
+  if ( !v28 )
+    goto LABEL_69;
+  if ( !v28->max_length )
+    goto LABEL_70;
+  this = (TitleInfoEventLeagueVsGaugeEffect_o *)v28->m_Items[0];
+  if ( !this )
+    goto LABEL_69;
+  v52 = UnityEngine_ParticleSystem__get_shape((UnityEngine_ParticleSystem_o *)this, 0LL).fields.m_ParticleSystem;
+  v70.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v52;
+  v79 = UnityEngine_ParticleSystem_ShapeModule__get_scale(v70, 0LL);
+  v79.fields.x = v11 + v11;
+  v71.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v52;
+  UnityEngine_ParticleSystem_ShapeModule__set_scale(v71, v79, 0LL);
+  v29 = v8->fields.gaugeParticle;
+  if ( !v29 )
+    goto LABEL_69;
+  if ( v29->max_length <= 1 )
+    goto LABEL_70;
+  this = (TitleInfoEventLeagueVsGaugeEffect_o *)v29->m_Items[1];
+  if ( !this )
+    goto LABEL_69;
+  v51 = UnityEngine_ParticleSystem__get_emission((UnityEngine_ParticleSystem_o *)this, 0LL).fields.m_ParticleSystem;
+  v72.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v51;
+  UnityEngine_ParticleSystem_EmissionModule__get_rateOverTime(&v47, v72, 0LL);
+  v50 = v47;
+  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v50, v12 * 35.0, 0LL);
+  v73.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v51;
+  v44 = v50;
+  UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(v73, &v44, 0LL);
+  v30 = v8->fields.gaugeParticle;
+  if ( !v30 )
+    goto LABEL_69;
+  if ( !v30->max_length )
+    goto LABEL_70;
+  this = (TitleInfoEventLeagueVsGaugeEffect_o *)v30->m_Items[0];
+  if ( !this )
+    goto LABEL_69;
+  v49 = UnityEngine_ParticleSystem__get_emission((UnityEngine_ParticleSystem_o *)this, 0LL).fields.m_ParticleSystem;
+  v74.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v49;
+  UnityEngine_ParticleSystem_EmissionModule__get_rateOverTime(&v47, v74, 0LL);
+  v48 = v47;
+  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v48, v11 * 35.0, 0LL);
+  v75.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v49;
+  v43 = v48;
+  UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(v75, &v43, 0LL);
+  v31 = v8->fields.gaugeParticle;
+  if ( !v31 )
+    goto LABEL_69;
+  if ( v31->max_length <= 1 )
+    goto LABEL_70;
+  this = (TitleInfoEventLeagueVsGaugeEffect_o *)v31->m_Items[1];
+  if ( !this )
+    goto LABEL_69;
+  v32 = v11 * 10.0;
+  v33 = (float)((float)(v32 + (float)((float)(v12 * 10.0) * 0.5)) * v8->fields.GAUGE_SIZE_DEF)
+      * v8->fields.GAUGE_SIZE_FACTOR;
+  v34 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  GameObjectExtensions__SetLocalPositionX(v34, v33, 0LL);
+  v35 = v8->fields.gaugeParticle;
   if ( !v35 )
     goto LABEL_69;
-  v66 = UnityEngine_ParticleSystem__get_shape(v35, 0LL).fields.m_ParticleSystem;
-  v81.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v66;
-  v91 = UnityEngine_ParticleSystem_ShapeModule__get_scale(v81, 0LL);
-  v91.fields.x = v12 + v12;
-  v82.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v66;
-  UnityEngine_ParticleSystem_ShapeModule__set_scale(v82, v91, 0LL);
-  v36 = v8->fields.gaugeParticle;
-  if ( !v36 )
-    goto LABEL_69;
-  if ( !v36->max_length )
+  if ( !v35->max_length )
     goto LABEL_70;
-  v37 = v36->m_Items[0];
-  if ( !v37 )
+  this = (TitleInfoEventLeagueVsGaugeEffect_o *)v35->m_Items[0];
+  if ( !this )
     goto LABEL_69;
-  v65 = UnityEngine_ParticleSystem__get_shape(v37, 0LL).fields.m_ParticleSystem;
-  v83.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v65;
-  v92 = UnityEngine_ParticleSystem_ShapeModule__get_scale(v83, 0LL);
-  v92.fields.x = v11 + v11;
-  v84.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v65;
-  UnityEngine_ParticleSystem_ShapeModule__set_scale(v84, v92, 0LL);
-  v38 = v8->fields.gaugeParticle;
-  if ( !v38 )
-    goto LABEL_69;
-  if ( v38->max_length <= 1 )
-    goto LABEL_70;
-  v39 = v38->m_Items[1];
-  if ( !v39 )
-    goto LABEL_69;
-  v64 = UnityEngine_ParticleSystem__get_emission(v39, 0LL).fields.m_ParticleSystem;
-  v85.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v64;
-  UnityEngine_ParticleSystem_EmissionModule__get_rateOverTime(&v60, v85, 0LL);
-  v63 = v60;
-  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v63, v12 * 35.0, 0LL);
-  v86.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v64;
-  v57 = v63;
-  UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(v86, &v57, 0LL);
-  v40 = v8->fields.gaugeParticle;
-  if ( !v40 )
-    goto LABEL_69;
-  if ( !v40->max_length )
-    goto LABEL_70;
-  v41 = v40->m_Items[0];
-  if ( !v41 )
-    goto LABEL_69;
-  v62 = UnityEngine_ParticleSystem__get_emission(v41, 0LL).fields.m_ParticleSystem;
-  v87.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v62;
-  UnityEngine_ParticleSystem_EmissionModule__get_rateOverTime(&v60, v87, 0LL);
-  v61 = v60;
-  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v61, v11 * 35.0, 0LL);
-  v88.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v62;
-  v56 = v61;
-  UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(v88, &v56, 0LL);
-  v42 = v8->fields.gaugeParticle;
-  if ( !v42 )
-    goto LABEL_69;
-  if ( v42->max_length <= 1 )
-    goto LABEL_70;
-  v43 = (UnityEngine_Component_o *)v42->m_Items[1];
-  if ( !v43 )
-    goto LABEL_69;
-  v44 = v11 * 10.0;
-  v45 = (float)((float)(v44 + (float)((float)(v12 * 10.0) * 0.5)) * v8->fields.GAUGE_SIZE_DEF)
-      * v8->fields.GAUGE_SIZE_FACTOR;
-  v46 = UnityEngine_Component__get_gameObject(v43, 0LL);
-  GameObjectExtensions__SetLocalPositionX(v46, v45, 0LL);
-  v47 = v8->fields.gaugeParticle;
-  if ( !v47 )
-    goto LABEL_69;
-  if ( !v47->max_length )
-    goto LABEL_70;
-  v48 = (UnityEngine_Component_o *)v47->m_Items[0];
-  if ( !v48 )
-    goto LABEL_69;
-  v49 = (float)((float)(v44 * 0.5) * v8->fields.GAUGE_SIZE_DEF) * v8->fields.GAUGE_SIZE_FACTOR;
-  v50 = UnityEngine_Component__get_gameObject(v48, 0LL);
-  GameObjectExtensions__SetLocalPositionX(v50, v49, 0LL);
-  v51 = (UnityEngine_Object_o *)v8->fields.gaugeSimpleAnim;
+  v36 = (float)((float)(v32 * 0.5) * v8->fields.GAUGE_SIZE_DEF) * v8->fields.GAUGE_SIZE_FACTOR;
+  v37 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  GameObjectExtensions__SetLocalPositionX(v37, v36, 0LL);
+  v38 = (UnityEngine_Object_o *)v8->fields.gaugeSimpleAnim;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v51, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v38, 0LL, 0LL) )
   {
-    v33 = v8->fields.gaugeSimpleAnim;
-    if ( v33 )
+    this = (TitleInfoEventLeagueVsGaugeEffect_o *)v8->fields.gaugeSimpleAnim;
+    if ( this )
     {
-      v34 = &StringLiteral_16779/*"bit_vs_gauge_part_1"*/;
+      v27 = &StringLiteral_16845/*"bit_vs_gauge_part_1"*/;
       goto LABEL_54;
     }
 LABEL_69:
-    sub_B170D4();
+    sub_B2C434(this, point1);
   }
-  v55 = (UnityEngine_Object_o *)v8->fields.gaugeAnim;
+  v41 = (UnityEngine_Object_o *)v8->fields.gaugeAnim;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  if ( UnityEngine_Object__op_Inequality(v55, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v41, 0LL, 0LL) )
   {
-    v53 = v8->fields.gaugeAnim;
-    if ( !v53 )
+    this = (TitleInfoEventLeagueVsGaugeEffect_o *)v8->fields.gaugeAnim;
+    if ( !this )
       goto LABEL_69;
-    v54 = &StringLiteral_16779/*"bit_vs_gauge_part_1"*/;
+    v40 = &StringLiteral_16845/*"bit_vs_gauge_part_1"*/;
     goto LABEL_67;
   }
 }
