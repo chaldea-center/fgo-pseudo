@@ -10,7 +10,7 @@ void __fastcall ServantNpCommandCardComponent__Clear(ServantNpCommandCardCompone
 
   cardSprite = (UnityEngine_Behaviour_o *)this->fields.cardSprite;
   if ( !cardSprite )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   UnityEngine_Behaviour__set_enabled(cardSprite, 0, 0LL);
 }
 

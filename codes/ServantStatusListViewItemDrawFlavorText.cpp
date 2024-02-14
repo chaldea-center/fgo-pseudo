@@ -24,42 +24,41 @@ void __fastcall ServantStatusListViewItemDrawFlavorText__SetItem(
 {
   __int64 v7; // x1
   UIWidget_o *IsConst; // x0
-  __int64 v9; // x1
   struct ServantCommentEntity_array *svtCommentEntityList; // x22
   int max_length; // w8
   System_String_o *Comment; // x20
-  unsigned int v13; // w23
-  Il2CppClass **v14; // x8
-  ServantCommentEntity_o *v15; // x21
+  unsigned int v12; // w23
+  Il2CppClass **v13; // x8
+  ServantCommentEntity_o *v14; // x21
   int32_t mHeight; // w23
   UnityEngine_Vector2_o printedSize; // kr00_8
   UnityEngine_Object_o *baseCollider; // x20
   double y; // d9
   UnityEngine_Object_o *titleBase; // x20
   UnityEngine_Object_o *baseSprite; // x21
-  int32_t v22; // w20
-  int v23; // w23
-  int v24; // s0
-  float v25; // s1
-  float v27; // s1
-  UnityEngine_Object_o *v28; // x21
-  float v29; // s0
-  float v30; // s2
-  float v31; // s11
-  float v32; // s12
-  float v33; // s0
-  float v34; // s2
-  float v35; // s9
-  float v36; // s10
-  __int64 v37; // x0
+  int32_t v21; // w20
+  int v22; // w23
+  int v23; // s0
+  float v24; // s1
+  float v26; // s1
+  UnityEngine_Object_o *v27; // x21
+  float v28; // s0
+  float v29; // s2
+  float v30; // s11
+  float v31; // s12
+  float v32; // s0
+  float v33; // s2
+  float v34; // s9
+  float v35; // s10
+  __int64 v36; // x0
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_418A7C9 & 1) == 0 )
+  if ( (byte_42186B2 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, item);
-    sub_B2C35C(&StringLiteral_1/*""*/, v7);
-    byte_418A7C9 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, item);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v7);
+    byte_42186B2 = 1;
   }
   ServantStatusListViewItemDraw__SetItem((ServantStatusListViewItemDraw_o *)this, item, mode, 0LL);
   if ( item && mode && LOBYTE(this[1].klass) )
@@ -72,26 +71,26 @@ void __fastcall ServantStatusListViewItemDrawFlavorText__SetItem(
       Comment = (System_String_o *)StringLiteral_1/*""*/;
       if ( max_length >= 1 )
       {
-        v13 = 0;
+        v12 = 0;
         while ( 1 )
         {
-          if ( v13 >= max_length )
+          if ( v12 >= max_length )
           {
-            v37 = sub_B2C460(IsConst);
-            sub_B2C400(v37, 0LL);
+            v36 = sub_B0D9A8(IsConst);
+            sub_B0D948(v36, 0LL);
           }
-          v14 = &svtCommentEntityList->obj.klass + (int)v13;
-          v15 = (ServantCommentEntity_o *)v14[4];
-          if ( !v15 )
+          v13 = &svtCommentEntityList->obj.klass + (int)v12;
+          v14 = (ServantCommentEntity_o *)v13[4];
+          if ( !v14 )
             goto LABEL_55;
-          IsConst = (UIWidget_o *)ServantCommentEntity__IsConst((ServantCommentEntity_o *)v14[4], 0LL);
+          IsConst = (UIWidget_o *)ServantCommentEntity__IsConst((ServantCommentEntity_o *)v13[4], 0LL);
           if ( ((unsigned __int8)IsConst & 1) != 0 )
             break;
           max_length = svtCommentEntityList->max_length;
-          if ( (int)++v13 >= max_length )
+          if ( (int)++v12 >= max_length )
             goto LABEL_16;
         }
-        Comment = ServantCommentEntity__GetComment(v15, 0LL);
+        Comment = ServantCommentEntity__GetComment(v14, 0LL);
       }
 LABEL_16:
       IsConst = *(UIWidget_o **)&this->fields.isFirst;
@@ -139,42 +138,42 @@ LABEL_16:
               UnityEngine_Object__op_Inequality(titleBase, 0LL, 0LL);
             }
             baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
-            v22 = (int)y;
+            v21 = (int)y;
             if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             }
-            v23 = v22 - mHeight;
+            v22 = v21 - mHeight;
             if ( UnityEngine_Object__op_Inequality(baseSprite, 0LL, 0LL) )
             {
               IsConst = (UIWidget_o *)this->fields.baseSprite;
               if ( !IsConst )
                 goto LABEL_55;
-              *(UnityEngine_Vector3_o *)&v24 = UnityEngine_BoxCollider__get_size(
+              *(UnityEngine_Vector3_o *)&v23 = UnityEngine_BoxCollider__get_size(
                                                  (UnityEngine_BoxCollider_o *)IsConst,
                                                  0LL);
               IsConst = (UIWidget_o *)this->fields.baseSprite;
               if ( !IsConst )
                 goto LABEL_55;
-              v27 = v25 + (float)v23;
+              v26 = v24 + (float)v22;
               UnityEngine_BoxCollider__set_size(
                 (UnityEngine_BoxCollider_o *)IsConst,
-                *(UnityEngine_Vector3_o *)&v24,
+                *(UnityEngine_Vector3_o *)&v23,
                 0LL);
             }
-            v28 = (UnityEngine_Object_o *)this->fields.titleBase;
+            v27 = (UnityEngine_Object_o *)this->fields.titleBase;
             if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             }
-            if ( UnityEngine_Object__op_Inequality(v28, 0LL, 0LL) )
+            if ( UnityEngine_Object__op_Inequality(v27, 0LL, 0LL) )
             {
               IsConst = (UIWidget_o *)this->fields.titleBase;
               if ( !IsConst )
                 goto LABEL_55;
-              UIWidget__set_height(IsConst, IsConst->fields.mHeight + v23, 0LL);
+              UIWidget__set_height(IsConst, IsConst->fields.mHeight + v22, 0LL);
             }
             IsConst = *(UIWidget_o **)&this->fields.isFirst;
             if ( IsConst )
@@ -182,28 +181,28 @@ LABEL_16:
               IsConst = (UIWidget_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)IsConst, 0LL);
               if ( IsConst )
               {
-                *(UnityEngine_Vector3_o *)&v29 = UnityEngine_Transform__get_localPosition(
+                *(UnityEngine_Vector3_o *)&v28 = UnityEngine_Transform__get_localPosition(
                                                    (UnityEngine_Transform_o *)IsConst,
                                                    0LL);
                 IsConst = (UIWidget_o *)this->fields.messageLabel;
                 if ( IsConst )
                 {
+                  v30 = v28;
                   v31 = v29;
-                  v32 = v30;
                   IsConst = (UIWidget_o *)UnityEngine_GameObject__get_transform(
                                             (UnityEngine_GameObject_o *)IsConst,
                                             0LL);
                   if ( IsConst )
                   {
-                    *(UnityEngine_Vector3_o *)&v33 = UnityEngine_Transform__get_localPosition(
+                    *(UnityEngine_Vector3_o *)&v32 = UnityEngine_Transform__get_localPosition(
                                                        (UnityEngine_Transform_o *)IsConst,
                                                        0LL);
                     IsConst = *(UIWidget_o **)&this->fields.isFirst;
                     if ( IsConst )
                     {
+                      v34 = v32;
                       v35 = v33;
-                      v36 = v34;
-                      UIWidget__set_height(IsConst, v22, 0LL);
+                      UIWidget__set_height(IsConst, v21, 0LL);
                       IsConst = *(UIWidget_o **)&this->fields.isFirst;
                       if ( IsConst )
                       {
@@ -212,10 +211,10 @@ LABEL_16:
                                                   0LL);
                         if ( IsConst )
                         {
-                          v38.fields.y = (float)(printedSize.fields.y * 0.5) + -14.0;
-                          v38.fields.x = v31;
-                          v38.fields.z = v32;
-                          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsConst, v38, 0LL);
+                          v37.fields.y = (float)(printedSize.fields.y * 0.5) + -14.0;
+                          v37.fields.x = v30;
+                          v37.fields.z = v31;
+                          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsConst, v37, 0LL);
                           IsConst = (UIWidget_o *)this->fields.messageLabel;
                           if ( IsConst )
                           {
@@ -224,10 +223,10 @@ LABEL_16:
                                                       0LL);
                             if ( IsConst )
                             {
-                              v39.fields.y = (float)(printedSize.fields.y * 0.5) + 20.0;
-                              v39.fields.x = v35;
-                              v39.fields.z = v36;
-                              UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsConst, v39, 0LL);
+                              v38.fields.y = (float)(printedSize.fields.y * 0.5) + 20.0;
+                              v38.fields.x = v34;
+                              v38.fields.z = v35;
+                              UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsConst, v38, 0LL);
                               return;
                             }
                           }
@@ -243,6 +242,6 @@ LABEL_16:
       }
     }
 LABEL_55:
-    sub_B2C434(IsConst, v9);
+    sub_B0D97C(IsConst);
   }
 }

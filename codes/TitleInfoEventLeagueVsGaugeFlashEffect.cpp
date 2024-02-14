@@ -34,7 +34,7 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__endAnim(
   p_endCallBack = (BattleServantConfConponent_o *)&this->fields.endCallBack;
   v9 = endCallBack;
   p_endCallBack->klass = 0LL;
-  sub_B2C2F8(p_endCallBack, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B0D840(p_endCallBack, 0LL, v2, v3, v4, v5, v6, v7);
   if ( endCallBack )
     ActionExtensions__Call(v9, 0LL);
 }
@@ -73,12 +73,12 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__setup(
   int32_t v31; // [xsp+Ch] [xbp-34h] BYREF
 
   v10 = this;
-  if ( (byte_418BA0E & 1) == 0 )
+  if ( (byte_4218816 & 1) == 0 )
   {
-    sub_B2C35C(&int_TypeInfo, *(_QWORD *)&joinGroupId);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v11);
-    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_B2C35C(&StringLiteral_16843/*"bit_vs_gauge_flash_"*/, v12);
-    byte_418BA0E = 1;
+    sub_B0D8A4(&int_TypeInfo, *(_QWORD *)&joinGroupId);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v11);
+    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_B0D8A4(&StringLiteral_16893/*"bit_vs_gauge_flash_"*/, v12);
+    byte_4218816 = 1;
   }
   if ( point1 == point2 )
   {
@@ -106,8 +106,8 @@ void __fastcall TitleInfoEventLeagueVsGaugeFlashEffect__setup(
   if ( v17->max_length <= 1 )
   {
 LABEL_34:
-    v30 = sub_B2C460(this);
-    sub_B2C400(v30, 0LL);
+    v30 = sub_B0D9A8(this);
+    sub_B0D948(v30, 0LL);
   }
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v17->m_Items[1];
   if ( !this )
@@ -115,7 +115,7 @@ LABEL_34:
   UIProgressBar__set_value((UIProgressBar_o *)this, v14, 0LL);
   v31 = joinGroupId;
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31);
-  v19 = System_String__Concat((Il2CppObject *)StringLiteral_16843/*"bit_vs_gauge_flash_"*/, v18, 0LL);
+  v19 = System_String__Concat((Il2CppObject *)StringLiteral_16893/*"bit_vs_gauge_flash_"*/, v18, 0LL);
   gaugeSimpleAnim = (UnityEngine_Object_o *)v10->fields.gaugeSimpleAnim;
   v21 = v19;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -147,12 +147,12 @@ LABEL_34:
       this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeAnim;
       if ( this )
       {
-        UnityEngine_Animation__Play_50201580((UnityEngine_Animation_o *)this, v21, 0LL);
+        UnityEngine_Animation__Play_50564840((UnityEngine_Animation_o *)this, v21, 0LL);
         goto LABEL_32;
       }
     }
 LABEL_33:
-    sub_B2C434(this, *(_QWORD *)&joinGroupId);
+    sub_B0D97C(this);
   }
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
@@ -166,10 +166,10 @@ LABEL_29:
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
     goto LABEL_33;
-  SimpleAnimation__Play_16486620((SimpleAnimation_o *)this, v21, 0LL);
+  SimpleAnimation__Play_50482404((SimpleAnimation_o *)this, v21, 0LL);
 LABEL_32:
   v10->fields.endCallBack = callback;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v10->fields.endCallBack,
     (System_Int32_array **)callback,
     v22,

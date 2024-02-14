@@ -8,21 +8,20 @@ GiftEntity_o *__fastcall MasterLvRewardInfo__getGiftEntity(MasterLvRewardInfo_o 
 {
   __int64 v3; // x1
   DataManager_o *Instance; // x0
-  __int64 v5; // x1
 
-  if ( (byte_418594D & 1) == 0 )
+  if ( (byte_4212A89 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_GiftMaster___, method);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_418594D = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_GiftMaster___, method);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4212A89 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
+                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
   {
-    sub_B2C434(Instance, v5);
+    sub_B0D97C(Instance);
   }
   return GiftMaster__GetEntity(
            (GiftMaster_o *)Instance,

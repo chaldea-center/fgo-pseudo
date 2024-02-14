@@ -1,7 +1,7 @@
 void __fastcall ResponseCommandKind___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x1
+  __int64 v2; // x2
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
@@ -126,9 +126,9 @@ void __fastcall ResponseCommandKind___cctor(const MethodInfo *method)
   __int64 v124; // x1
   __int64 v125; // x1
   __int64 v126; // x1
-  System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *v127; // x19
-  __int64 v128; // x0
-  __int64 v129; // x1
+  __int64 v127; // x1
+  System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *v128; // x19
+  __int64 v129; // x0
   BattleServantConfConponent_o *static_fields; // x0
   System_String_array **v131; // x2
   System_String_array **v132; // x3
@@ -137,765 +137,768 @@ void __fastcall ResponseCommandKind___cctor(const MethodInfo *method)
   System_Int32_array *v135; // x6
   System_Int32_array *v136; // x7
 
-  if ( (byte_418ADD8 & 1) == 0 )
+  if ( (byte_4217C14 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__, v1);
-    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string___ctor__, v2);
-    sub_B2C35C(&System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__TypeInfo, v3);
-    sub_B2C35C(&ResponseCommandKind_TypeInfo, v4);
-    sub_B2C35C(&StringLiteral_17234/*"card_combine"*/, v5);
-    sub_B2C35C(&StringLiteral_17249/*"card_statussync"*/, v6);
-    sub_B2C35C(&StringLiteral_18903/*"friend_accept"*/, v7);
-    sub_B2C35C(&StringLiteral_19157/*"home"*/, v8);
-    sub_B2C35C(&StringLiteral_23244/*"war_board_treasure"*/, v9);
-    sub_B2C35C(&StringLiteral_16670/*"battle_scenario"*/, v10);
-    sub_B2C35C(&StringLiteral_18582/*"event_scan_panel_map"*/, v11);
-    sub_B2C35C(&StringLiteral_16902/*"box_gacha_draw"*/, v12);
-    sub_B2C35C(&StringLiteral_22791/*"treasure_box_draw"*/, v13);
-    sub_B2C35C(&StringLiteral_23238/*"war_board_master_attack"*/, v14);
-    sub_B2C35C(&StringLiteral_23237/*"war_board_finish"*/, v15);
-    sub_B2C35C(&StringLiteral_16676/*"battle_use_continue_item"*/, v16);
-    sub_B2C35C(&StringLiteral_18498/*"event_deck_setup"*/, v17);
-    sub_B2C35C(&StringLiteral_17494/*"coin_room_put"*/, v18);
-    sub_B2C35C(&StringLiteral_17235/*"card_combine_costume"*/, v19);
-    sub_B2C35C(&StringLiteral_16668/*"battle_result"*/, v20);
-    sub_B2C35C(&StringLiteral_18907/*"friend_offer"*/, v21);
-    sub_B2C35C(&StringLiteral_16863/*"blacklist_top"*/, v22);
-    sub_B2C35C(&StringLiteral_20311/*"login"*/, v23);
-    sub_B2C35C(&StringLiteral_18909/*"friend_remove"*/, v24);
-    sub_B2C35C(&StringLiteral_23245/*"war_board_turn_end"*/, v25);
-    sub_B2C35C(&StringLiteral_17239/*"card_combine_skill"*/, v26);
-    sub_B2C35C(&StringLiteral_18532/*"event_mission_notify"*/, v27);
-    sub_B2C35C(&StringLiteral_17919/*"debug_server_time"*/, v28);
-    sub_B2C35C(&StringLiteral_21543/*"profile"*/, v29);
-    sub_B2C35C(&StringLiteral_18569/*"event_receive_cooltime_reward"*/, v30);
-    sub_B2C35C(&StringLiteral_23074/*"user_status_flag_set"*/, v31);
-    sub_B2C35C(&StringLiteral_23240/*"war_board_reinforcements"*/, v32);
-    sub_B2C35C(&StringLiteral_17242/*"card_favorite"*/, v33);
-    sub_B2C35C(&StringLiteral_16674/*"battle_turn"*/, v34);
-    sub_B2C35C(&StringLiteral_23243/*"war_board_start"*/, v35);
-    sub_B2C35C(&StringLiteral_23236/*"war_board_continue"*/, v36);
-    sub_B2C35C(&StringLiteral_22476/*"svt_equip_combine"*/, v37);
-    sub_B2C35C(&StringLiteral_22831/*"tutorial_set"*/, v38);
-    sub_B2C35C(&StringLiteral_22336/*"storage_takeout"*/, v39);
-    sub_B2C35C(&StringLiteral_16599/*"bank_status"*/, v40);
-    sub_B2C35C(&StringLiteral_21589/*"purchase_by_stone"*/, v41);
-    sub_B2C35C(&StringLiteral_18906/*"friend_message_hide_sync"*/, v42);
-    sub_B2C35C(&StringLiteral_17606/*"command_code_statussync"*/, v43);
-    sub_B2C35C(&StringLiteral_23227/*"war_board_battle_result"*/, v44);
-    sub_B2C35C(&StringLiteral_21548/*"profile_edit_name"*/, v45);
-    sub_B2C35C(&StringLiteral_22127/*"signup"*/, v46);
-    sub_B2C35C(&StringLiteral_18499/*"event_digging"*/, v47);
-    sub_B2C35C(&StringLiteral_17604/*"command_code_lock"*/, v48);
-    sub_B2C35C(&StringLiteral_17452/*"class_board_release_lock"*/, v49);
-    sub_B2C35C(&StringLiteral_23239/*"war_board_move"*/, v50);
-    sub_B2C35C(&StringLiteral_17607/*"command_code_unlock"*/, v51);
-    sub_B2C35C(&StringLiteral_21961/*"sell_svt"*/, v52);
-    sub_B2C35C(&StringLiteral_21748/*"regist_account"*/, v53);
-    sub_B2C35C(&StringLiteral_16669/*"battle_resume"*/, v54);
-    sub_B2C35C(&StringLiteral_18795/*"follower_edit_name"*/, v55);
-    sub_B2C35C(&StringLiteral_17602/*"command_code_attach"*/, v56);
-    sub_B2C35C(&StringLiteral_18527/*"event_location"*/, v57);
-    sub_B2C35C(&StringLiteral_17603/*"command_code_detach"*/, v58);
-    sub_B2C35C(&StringLiteral_17605/*"command_code_setstatus"*/, v59);
-    sub_B2C35C(&StringLiteral_18505/*"event_expedition_finish"*/, v60);
-    sub_B2C35C(&StringLiteral_17918/*"debug_quest"*/, v61);
-    sub_B2C35C(&StringLiteral_18533/*"event_mission_random_cancel"*/, v62);
-    sub_B2C35C(&StringLiteral_21588/*"purchase_by_bank"*/, v63);
-    sub_B2C35C(&StringLiteral_18910/*"friend_top"*/, v64);
-    sub_B2C35C(&StringLiteral_18955/*"gamedata"*/, v65);
-    sub_B2C35C(&StringLiteral_18583/*"event_script_flag_on"*/, v66);
-    sub_B2C35C(&StringLiteral_18796/*"follower_setup"*/, v67);
-    sub_B2C35C(&StringLiteral_18506/*"event_expedition_start"*/, v68);
-    sub_B2C35C(&StringLiteral_17686/*"continue_decide"*/, v69);
-    sub_B2C35C(&StringLiteral_18905/*"friend_lock_sync"*/, v70);
-    sub_B2C35C(&StringLiteral_17250/*"card_svt_flag"*/, v71);
-    sub_B2C35C(&StringLiteral_21526/*"present_receive"*/, v72);
-    sub_B2C35C(&StringLiteral_17687/*"continue_input"*/, v73);
-    sub_B2C35C(&StringLiteral_18908/*"friend_reject"*/, v74);
-    sub_B2C35C(&StringLiteral_18507/*"event_fortification"*/, v75);
-    sub_B2C35C(&StringLiteral_18573/*"event_reset_digging"*/, v76);
-    sub_B2C35C(&StringLiteral_16862/*"blacklist_remove"*/, v77);
-    sub_B2C35C(&StringLiteral_18570/*"event_recoverySync"*/, v78);
-    sub_B2C35C(&StringLiteral_23246/*"war_board_wall_attack"*/, v79);
-    sub_B2C35C(&StringLiteral_22335/*"storage_takein"*/, v80);
-    sub_B2C35C(&StringLiteral_17490/*"code_input"*/, v81);
-    sub_B2C35C(&StringLiteral_18951/*"gacha_draw"*/, v82);
-    sub_B2C35C(&StringLiteral_23235/*"war_board_command_spell"*/, v83);
-    sub_B2C35C(&StringLiteral_17453/*"class_board_release_square"*/, v84);
-    sub_B2C35C(&StringLiteral_18904/*"friend_cancel"*/, v85);
-    sub_B2C35C(&StringLiteral_17240/*"card_combine_td"*/, v86);
-    sub_B2C35C(&StringLiteral_16667/*"battle_reset"*/, v87);
-    sub_B2C35C(&StringLiteral_21578/*"purchase"*/, v88);
-    sub_B2C35C(&StringLiteral_18534/*"event_mission_receive"*/, v89);
-    sub_B2C35C(&StringLiteral_17238/*"card_combine_passive_skill"*/, v90);
-    sub_B2C35C(&StringLiteral_20021/*"item_recover"*/, v91);
-    sub_B2C35C(&StringLiteral_16666/*"battle_quest_route"*/, v92);
-    sub_B2C35C(&StringLiteral_22830/*"tutorial_event_flag_set"*/, v93);
-    sub_B2C35C(&StringLiteral_16660/*"battle_command_spell"*/, v94);
-    sub_B2C35C(&StringLiteral_17928/*"deck_edit_name"*/, v95);
-    sub_B2C35C(&StringLiteral_17608/*"command_spell"*/, v96);
-    sub_B2C35C(&StringLiteral_23242/*"war_board_setup"*/, v97);
-    sub_B2C35C(&StringLiteral_16861/*"blacklist_regist"*/, v98);
-    sub_B2C35C(&StringLiteral_16675/*"battle_use_continue"*/, v99);
-    sub_B2C35C(&StringLiteral_16671/*"battle_setup"*/, v100);
-    sub_B2C35C(&StringLiteral_18783/*"follow_remove"*/, v101);
-    sub_B2C35C(&StringLiteral_20022/*"item_use"*/, v102);
-    sub_B2C35C(&StringLiteral_21677/*"raid_auto_update"*/, v103);
-    sub_B2C35C(&StringLiteral_18782/*"follow_assign"*/, v104);
-    sub_B2C35C(&StringLiteral_17688/*"continue_prepare"*/, v105);
-    sub_B2C35C(&StringLiteral_22829/*"tutorial_clear"*/, v106);
-    sub_B2C35C(&StringLiteral_18497/*"event_daily_point"*/, v107);
-    sub_B2C35C(&StringLiteral_16903/*"box_gacha_reset"*/, v108);
-    sub_B2C35C(&StringLiteral_17472/*"client_api_error_dialog"*/, v109);
-    sub_B2C35C(&StringLiteral_23241/*"war_board_resume"*/, v110);
-    sub_B2C35C(&StringLiteral_17241/*"card_command_card_exceed"*/, v111);
-    sub_B2C35C(&StringLiteral_23071/*"user_formation"*/, v112);
-    sub_B2C35C(&StringLiteral_17243/*"card_friendship_exceed"*/, v113);
-    sub_B2C35C(&StringLiteral_22477/*"svt_equip_set"*/, v114);
-    sub_B2C35C(&StringLiteral_17920/*"debug_update_user"*/, v115);
-    sub_B2C35C(&StringLiteral_18572/*"event_reset_data_lost_battle"*/, v116);
-    sub_B2C35C(&StringLiteral_23004/*"userDelete"*/, v117);
-    sub_B2C35C(&StringLiteral_17929/*"deck_setup"*/, v118);
-    sub_B2C35C(&StringLiteral_17237/*"card_combine_limit_special"*/, v119);
-    sub_B2C35C(&StringLiteral_17410/*"check_date_version"*/, v120);
-    sub_B2C35C(&StringLiteral_21547/*"profile_edit_birth"*/, v121);
-    sub_B2C35C(&StringLiteral_17246/*"card_locksync"*/, v122);
-    sub_B2C35C(&StringLiteral_17236/*"card_combine_exceed"*/, v123);
-    sub_B2C35C(&StringLiteral_17245/*"card_limit"*/, v124);
-    sub_B2C35C(&StringLiteral_23234/*"war_board_buff_save"*/, v125);
-    sub_B2C35C(&StringLiteral_18496/*"event_create_recipe"*/, v126);
-    byte_418ADD8 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__, v1);
+    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string___ctor__, v3);
+    sub_B0D8A4(&System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__TypeInfo, v4);
+    sub_B0D8A4(&ResponseCommandKind_TypeInfo, v5);
+    sub_B0D8A4(&StringLiteral_17286/*"card_combine"*/, v6);
+    sub_B0D8A4(&StringLiteral_17301/*"card_statussync"*/, v7);
+    sub_B0D8A4(&StringLiteral_18961/*"friend_accept"*/, v8);
+    sub_B0D8A4(&StringLiteral_19218/*"home"*/, v9);
+    sub_B0D8A4(&StringLiteral_23322/*"war_board_treasure"*/, v10);
+    sub_B0D8A4(&StringLiteral_16719/*"battle_scenario"*/, v11);
+    sub_B0D8A4(&StringLiteral_18640/*"event_scan_panel_map"*/, v12);
+    sub_B0D8A4(&StringLiteral_16952/*"box_gacha_draw"*/, v13);
+    sub_B0D8A4(&StringLiteral_22867/*"treasure_box_draw"*/, v14);
+    sub_B0D8A4(&StringLiteral_23316/*"war_board_master_attack"*/, v15);
+    sub_B0D8A4(&StringLiteral_23315/*"war_board_finish"*/, v16);
+    sub_B0D8A4(&StringLiteral_16725/*"battle_use_continue_item"*/, v17);
+    sub_B0D8A4(&StringLiteral_18555/*"event_deck_setup"*/, v18);
+    sub_B0D8A4(&StringLiteral_17550/*"coin_room_put"*/, v19);
+    sub_B0D8A4(&StringLiteral_17287/*"card_combine_costume"*/, v20);
+    sub_B0D8A4(&StringLiteral_16717/*"battle_result"*/, v21);
+    sub_B0D8A4(&StringLiteral_18965/*"friend_offer"*/, v22);
+    sub_B0D8A4(&StringLiteral_16913/*"blacklist_top"*/, v23);
+    sub_B0D8A4(&StringLiteral_20374/*"login"*/, v24);
+    sub_B0D8A4(&StringLiteral_18967/*"friend_remove"*/, v25);
+    sub_B0D8A4(&StringLiteral_23323/*"war_board_turn_end"*/, v26);
+    sub_B0D8A4(&StringLiteral_17291/*"card_combine_skill"*/, v27);
+    sub_B0D8A4(&StringLiteral_18590/*"event_mission_notify"*/, v28);
+    sub_B0D8A4(&StringLiteral_17975/*"debug_server_time"*/, v29);
+    sub_B0D8A4(&StringLiteral_21613/*"profile"*/, v30);
+    sub_B0D8A4(&StringLiteral_18627/*"event_receive_cooltime_reward"*/, v31);
+    sub_B0D8A4(&StringLiteral_23151/*"user_status_flag_set"*/, v32);
+    sub_B0D8A4(&StringLiteral_23318/*"war_board_reinforcements"*/, v33);
+    sub_B0D8A4(&StringLiteral_17294/*"card_favorite"*/, v34);
+    sub_B0D8A4(&StringLiteral_16723/*"battle_turn"*/, v35);
+    sub_B0D8A4(&StringLiteral_23321/*"war_board_start"*/, v36);
+    sub_B0D8A4(&StringLiteral_23314/*"war_board_continue"*/, v37);
+    sub_B0D8A4(&StringLiteral_22552/*"svt_equip_combine"*/, v38);
+    sub_B0D8A4(&StringLiteral_22907/*"tutorial_set"*/, v39);
+    sub_B0D8A4(&StringLiteral_22412/*"storage_takeout"*/, v40);
+    sub_B0D8A4(&StringLiteral_16648/*"bank_status"*/, v41);
+    sub_B0D8A4(&StringLiteral_21659/*"purchase_by_stone"*/, v42);
+    sub_B0D8A4(&StringLiteral_18964/*"friend_message_hide_sync"*/, v43);
+    sub_B0D8A4(&StringLiteral_17662/*"command_code_statussync"*/, v44);
+    sub_B0D8A4(&StringLiteral_23305/*"war_board_battle_result"*/, v45);
+    sub_B0D8A4(&StringLiteral_21618/*"profile_edit_name"*/, v46);
+    sub_B0D8A4(&StringLiteral_22202/*"signup"*/, v47);
+    sub_B0D8A4(&StringLiteral_18556/*"event_digging"*/, v48);
+    sub_B0D8A4(&StringLiteral_17660/*"command_code_lock"*/, v49);
+    sub_B0D8A4(&StringLiteral_17508/*"class_board_release_lock"*/, v50);
+    sub_B0D8A4(&StringLiteral_23317/*"war_board_move"*/, v51);
+    sub_B0D8A4(&StringLiteral_17663/*"command_code_unlock"*/, v52);
+    sub_B0D8A4(&StringLiteral_22034/*"sell_svt"*/, v53);
+    sub_B0D8A4(&StringLiteral_21818/*"regist_account"*/, v54);
+    sub_B0D8A4(&StringLiteral_16718/*"battle_resume"*/, v55);
+    sub_B0D8A4(&StringLiteral_18853/*"follower_edit_name"*/, v56);
+    sub_B0D8A4(&StringLiteral_17658/*"command_code_attach"*/, v57);
+    sub_B0D8A4(&StringLiteral_18586/*"event_location"*/, v58);
+    sub_B0D8A4(&StringLiteral_17659/*"command_code_detach"*/, v59);
+    sub_B0D8A4(&StringLiteral_17661/*"command_code_setstatus"*/, v60);
+    sub_B0D8A4(&StringLiteral_18562/*"event_expedition_finish"*/, v61);
+    sub_B0D8A4(&StringLiteral_17974/*"debug_quest"*/, v62);
+    sub_B0D8A4(&StringLiteral_18591/*"event_mission_random_cancel"*/, v63);
+    sub_B0D8A4(&StringLiteral_21658/*"purchase_by_bank"*/, v64);
+    sub_B0D8A4(&StringLiteral_18968/*"friend_top"*/, v65);
+    sub_B0D8A4(&StringLiteral_19013/*"gamedata"*/, v66);
+    sub_B0D8A4(&StringLiteral_18641/*"event_script_flag_on"*/, v67);
+    sub_B0D8A4(&StringLiteral_18854/*"follower_setup"*/, v68);
+    sub_B0D8A4(&StringLiteral_18563/*"event_expedition_start"*/, v69);
+    sub_B0D8A4(&StringLiteral_17742/*"continue_decide"*/, v70);
+    sub_B0D8A4(&StringLiteral_18963/*"friend_lock_sync"*/, v71);
+    sub_B0D8A4(&StringLiteral_17302/*"card_svt_flag"*/, v72);
+    sub_B0D8A4(&StringLiteral_21596/*"present_receive"*/, v73);
+    sub_B0D8A4(&StringLiteral_17743/*"continue_input"*/, v74);
+    sub_B0D8A4(&StringLiteral_18966/*"friend_reject"*/, v75);
+    sub_B0D8A4(&StringLiteral_18564/*"event_fortification"*/, v76);
+    sub_B0D8A4(&StringLiteral_18631/*"event_reset_digging"*/, v77);
+    sub_B0D8A4(&StringLiteral_16912/*"blacklist_remove"*/, v78);
+    sub_B0D8A4(&StringLiteral_18628/*"event_recoverySync"*/, v79);
+    sub_B0D8A4(&StringLiteral_23324/*"war_board_wall_attack"*/, v80);
+    sub_B0D8A4(&StringLiteral_22411/*"storage_takein"*/, v81);
+    sub_B0D8A4(&StringLiteral_17546/*"code_input"*/, v82);
+    sub_B0D8A4(&StringLiteral_19009/*"gacha_draw"*/, v83);
+    sub_B0D8A4(&StringLiteral_23313/*"war_board_command_spell"*/, v84);
+    sub_B0D8A4(&StringLiteral_17509/*"class_board_release_square"*/, v85);
+    sub_B0D8A4(&StringLiteral_18962/*"friend_cancel"*/, v86);
+    sub_B0D8A4(&StringLiteral_17292/*"card_combine_td"*/, v87);
+    sub_B0D8A4(&StringLiteral_16716/*"battle_reset"*/, v88);
+    sub_B0D8A4(&StringLiteral_21648/*"purchase"*/, v89);
+    sub_B0D8A4(&StringLiteral_18592/*"event_mission_receive"*/, v90);
+    sub_B0D8A4(&StringLiteral_17290/*"card_combine_passive_skill"*/, v91);
+    sub_B0D8A4(&StringLiteral_20084/*"item_recover"*/, v92);
+    sub_B0D8A4(&StringLiteral_16715/*"battle_quest_route"*/, v93);
+    sub_B0D8A4(&StringLiteral_22906/*"tutorial_event_flag_set"*/, v94);
+    sub_B0D8A4(&StringLiteral_16709/*"battle_command_spell"*/, v95);
+    sub_B0D8A4(&StringLiteral_17984/*"deck_edit_name"*/, v96);
+    sub_B0D8A4(&StringLiteral_17664/*"command_spell"*/, v97);
+    sub_B0D8A4(&StringLiteral_23320/*"war_board_setup"*/, v98);
+    sub_B0D8A4(&StringLiteral_16911/*"blacklist_regist"*/, v99);
+    sub_B0D8A4(&StringLiteral_16724/*"battle_use_continue"*/, v100);
+    sub_B0D8A4(&StringLiteral_16720/*"battle_setup"*/, v101);
+    sub_B0D8A4(&StringLiteral_18841/*"follow_remove"*/, v102);
+    sub_B0D8A4(&StringLiteral_20085/*"item_use"*/, v103);
+    sub_B0D8A4(&StringLiteral_21747/*"raid_auto_update"*/, v104);
+    sub_B0D8A4(&StringLiteral_18840/*"follow_assign"*/, v105);
+    sub_B0D8A4(&StringLiteral_17744/*"continue_prepare"*/, v106);
+    sub_B0D8A4(&StringLiteral_22905/*"tutorial_clear"*/, v107);
+    sub_B0D8A4(&StringLiteral_18554/*"event_daily_point"*/, v108);
+    sub_B0D8A4(&StringLiteral_16953/*"box_gacha_reset"*/, v109);
+    sub_B0D8A4(&StringLiteral_17528/*"client_api_error_dialog"*/, v110);
+    sub_B0D8A4(&StringLiteral_23319/*"war_board_resume"*/, v111);
+    sub_B0D8A4(&StringLiteral_17293/*"card_command_card_exceed"*/, v112);
+    sub_B0D8A4(&StringLiteral_23148/*"user_formation"*/, v113);
+    sub_B0D8A4(&StringLiteral_17295/*"card_friendship_exceed"*/, v114);
+    sub_B0D8A4(&StringLiteral_22553/*"svt_equip_set"*/, v115);
+    sub_B0D8A4(&StringLiteral_17976/*"debug_update_user"*/, v116);
+    sub_B0D8A4(&StringLiteral_18630/*"event_reset_data_lost_battle"*/, v117);
+    sub_B0D8A4(&StringLiteral_23080/*"userDelete"*/, v118);
+    sub_B0D8A4(&StringLiteral_17985/*"deck_setup"*/, v119);
+    sub_B0D8A4(&StringLiteral_17289/*"card_combine_limit_special"*/, v120);
+    sub_B0D8A4(&StringLiteral_17465/*"check_date_version"*/, v121);
+    sub_B0D8A4(&StringLiteral_21617/*"profile_edit_birth"*/, v122);
+    sub_B0D8A4(&StringLiteral_17298/*"card_locksync"*/, v123);
+    sub_B0D8A4(&StringLiteral_17288/*"card_combine_exceed"*/, v124);
+    sub_B0D8A4(&StringLiteral_17297/*"card_limit"*/, v125);
+    sub_B0D8A4(&StringLiteral_23312/*"war_board_buff_save"*/, v126);
+    sub_B0D8A4(&StringLiteral_18553/*"event_create_recipe"*/, v127);
+    byte_4217C14 = 1;
   }
-  v127 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B2C42C(System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__TypeInfo);
+  v128 = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)sub_B0D974(
+                                                                            System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__TypeInfo,
+                                                                            v1,
+                                                                            v2);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string____ctor(
-    v127,
-    (const MethodInfo_2E457D0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string___ctor__);
-  if ( !v127 )
-    sub_B2C434(v128, v129);
+    v128,
+    (const MethodInfo_2EA610C *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string___ctor__);
+  if ( !v128 )
+    sub_B0D97C(v129);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     0,
     0LL,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     1,
-    (System_String_o *)StringLiteral_22127/*"signup"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22202/*"signup"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     2,
-    (System_String_o *)StringLiteral_21748/*"regist_account"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21818/*"regist_account"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     3,
-    (System_String_o *)StringLiteral_18955/*"gamedata"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_19013/*"gamedata"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     4,
-    (System_String_o *)StringLiteral_20311/*"login"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20374/*"login"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     5,
-    (System_String_o *)StringLiteral_19157/*"home"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_19218/*"home"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     6,
-    (System_String_o *)StringLiteral_18951/*"gacha_draw"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_19009/*"gacha_draw"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     7,
-    (System_String_o *)StringLiteral_17929/*"deck_setup"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17985/*"deck_setup"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     8,
-    (System_String_o *)StringLiteral_23071/*"user_formation"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23148/*"user_formation"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     9,
-    (System_String_o *)StringLiteral_21578/*"purchase"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21648/*"purchase"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     10,
-    (System_String_o *)StringLiteral_21589/*"purchase_by_stone"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21659/*"purchase_by_stone"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     11,
-    (System_String_o *)StringLiteral_21588/*"purchase_by_bank"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21658/*"purchase_by_bank"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     12,
-    (System_String_o *)StringLiteral_21961/*"sell_svt"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22034/*"sell_svt"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     13,
-    (System_String_o *)StringLiteral_18907/*"friend_offer"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18965/*"friend_offer"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     14,
-    (System_String_o *)StringLiteral_18903/*"friend_accept"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18961/*"friend_accept"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     15,
-    (System_String_o *)StringLiteral_18908/*"friend_reject"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18966/*"friend_reject"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     16,
-    (System_String_o *)StringLiteral_18904/*"friend_cancel"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18962/*"friend_cancel"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     17,
-    (System_String_o *)StringLiteral_18909/*"friend_remove"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18967/*"friend_remove"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     18,
-    (System_String_o *)StringLiteral_21543/*"profile"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21613/*"profile"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     19,
-    (System_String_o *)StringLiteral_21548/*"profile_edit_name"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21618/*"profile_edit_name"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     20,
-    (System_String_o *)StringLiteral_16671/*"battle_setup"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16720/*"battle_setup"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     21,
-    (System_String_o *)StringLiteral_16674/*"battle_turn"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16723/*"battle_turn"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     22,
-    (System_String_o *)StringLiteral_16668/*"battle_result"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16717/*"battle_result"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     23,
-    (System_String_o *)StringLiteral_16660/*"battle_command_spell"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16709/*"battle_command_spell"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     24,
-    (System_String_o *)StringLiteral_16675/*"battle_use_continue"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16724/*"battle_use_continue"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     25,
-    (System_String_o *)StringLiteral_17234/*"card_combine"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17286/*"card_combine"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     26,
-    (System_String_o *)StringLiteral_17239/*"card_combine_skill"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17291/*"card_combine_skill"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     27,
-    (System_String_o *)StringLiteral_17240/*"card_combine_td"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17292/*"card_combine_td"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     28,
-    (System_String_o *)StringLiteral_17243/*"card_friendship_exceed"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17295/*"card_friendship_exceed"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     29,
-    (System_String_o *)StringLiteral_21526/*"present_receive"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21596/*"present_receive"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     30,
-    (System_String_o *)StringLiteral_17490/*"code_input"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17546/*"code_input"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     31,
-    (System_String_o *)StringLiteral_17688/*"continue_prepare"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17744/*"continue_prepare"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     32,
-    (System_String_o *)StringLiteral_17687/*"continue_input"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17743/*"continue_input"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     33,
-    (System_String_o *)StringLiteral_17686/*"continue_decide"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17742/*"continue_decide"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     34,
-    (System_String_o *)StringLiteral_17242/*"card_favorite"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17294/*"card_favorite"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     35,
-    (System_String_o *)StringLiteral_22831/*"tutorial_set"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22907/*"tutorial_set"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     36,
-    (System_String_o *)StringLiteral_22829/*"tutorial_clear"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22905/*"tutorial_clear"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     37,
-    (System_String_o *)StringLiteral_16669/*"battle_resume"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16718/*"battle_resume"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     38,
-    (System_String_o *)StringLiteral_17245/*"card_limit"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17297/*"card_limit"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     39,
-    (System_String_o *)StringLiteral_22477/*"svt_equip_set"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22553/*"svt_equip_set"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     40,
-    (System_String_o *)StringLiteral_22476/*"svt_equip_combine"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22552/*"svt_equip_combine"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     41,
-    (System_String_o *)StringLiteral_17918/*"debug_quest"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17974/*"debug_quest"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     42,
-    (System_String_o *)StringLiteral_21547/*"profile_edit_birth"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21617/*"profile_edit_birth"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     43,
-    (System_String_o *)StringLiteral_20022/*"item_use"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20085/*"item_use"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     44,
-    (System_String_o *)StringLiteral_20021/*"item_recover"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20084/*"item_recover"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     45,
-    (System_String_o *)StringLiteral_17608/*"command_spell"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17664/*"command_spell"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     46,
-    (System_String_o *)StringLiteral_16902/*"box_gacha_draw"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16952/*"box_gacha_draw"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     47,
-    (System_String_o *)StringLiteral_16903/*"box_gacha_reset"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16953/*"box_gacha_reset"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     48,
-    (System_String_o *)StringLiteral_18532/*"event_mission_notify"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18590/*"event_mission_notify"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     49,
-    (System_String_o *)StringLiteral_18534/*"event_mission_receive"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18592/*"event_mission_receive"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     50,
-    (System_String_o *)StringLiteral_18796/*"follower_setup"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18854/*"follower_setup"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     51,
-    (System_String_o *)StringLiteral_16670/*"battle_scenario"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16719/*"battle_scenario"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     52,
-    (System_String_o *)StringLiteral_17928/*"deck_edit_name"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17984/*"deck_edit_name"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     53,
-    (System_String_o *)StringLiteral_17919/*"debug_server_time"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17975/*"debug_server_time"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     54,
-    (System_String_o *)StringLiteral_17236/*"card_combine_exceed"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17288/*"card_combine_exceed"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     55,
-    (System_String_o *)StringLiteral_17246/*"card_locksync"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17298/*"card_locksync"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     56,
-    (System_String_o *)StringLiteral_22830/*"tutorial_event_flag_set"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22906/*"tutorial_event_flag_set"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     57,
-    (System_String_o *)StringLiteral_22335/*"storage_takein"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22411/*"storage_takein"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     58,
-    (System_String_o *)StringLiteral_22336/*"storage_takeout"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22412/*"storage_takeout"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     59,
-    (System_String_o *)StringLiteral_18795/*"follower_edit_name"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18853/*"follower_edit_name"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     60,
-    (System_String_o *)StringLiteral_16599/*"bank_status"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16648/*"bank_status"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     61,
-    (System_String_o *)StringLiteral_17235/*"card_combine_costume"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17287/*"card_combine_costume"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     62,
-    (System_String_o *)StringLiteral_16863/*"blacklist_top"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16913/*"blacklist_top"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     63,
-    (System_String_o *)StringLiteral_16861/*"blacklist_regist"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16911/*"blacklist_regist"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     64,
-    (System_String_o *)StringLiteral_16862/*"blacklist_remove"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16912/*"blacklist_remove"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     65,
-    (System_String_o *)StringLiteral_18906/*"friend_message_hide_sync"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18964/*"friend_message_hide_sync"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     66,
-    (System_String_o *)StringLiteral_18583/*"event_script_flag_on"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18641/*"event_script_flag_on"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     67,
-    (System_String_o *)StringLiteral_17250/*"card_svt_flag"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17302/*"card_svt_flag"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     68,
-    (System_String_o *)StringLiteral_18527/*"event_location"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18586/*"event_location"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     69,
-    (System_String_o *)StringLiteral_17249/*"card_statussync"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17301/*"card_statussync"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     70,
-    (System_String_o *)StringLiteral_17605/*"command_code_setstatus"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17661/*"command_code_setstatus"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     71,
-    (System_String_o *)StringLiteral_17606/*"command_code_statussync"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17662/*"command_code_statussync"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     72,
-    (System_String_o *)StringLiteral_18570/*"event_recoverySync"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18628/*"event_recoverySync"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     73,
-    (System_String_o *)StringLiteral_18498/*"event_deck_setup"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18555/*"event_deck_setup"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     74,
-    (System_String_o *)StringLiteral_23074/*"user_status_flag_set"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23151/*"user_status_flag_set"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     75,
-    (System_String_o *)StringLiteral_18910/*"friend_top"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18968/*"friend_top"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     76,
-    (System_String_o *)StringLiteral_17602/*"command_code_attach"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17658/*"command_code_attach"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     77,
-    (System_String_o *)StringLiteral_17603/*"command_code_detach"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17659/*"command_code_detach"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     78,
-    (System_String_o *)StringLiteral_17607/*"command_code_unlock"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17663/*"command_code_unlock"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     79,
-    (System_String_o *)StringLiteral_17920/*"debug_update_user"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17976/*"debug_update_user"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     80,
-    (System_String_o *)StringLiteral_18782/*"follow_assign"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18840/*"follow_assign"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     81,
-    (System_String_o *)StringLiteral_18783/*"follow_remove"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18841/*"follow_remove"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     82,
-    (System_String_o *)StringLiteral_18497/*"event_daily_point"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18554/*"event_daily_point"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     83,
-    (System_String_o *)StringLiteral_17241/*"card_command_card_exceed"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17293/*"card_command_card_exceed"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     84,
-    (System_String_o *)StringLiteral_17237/*"card_combine_limit_special"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17289/*"card_combine_limit_special"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     85,
-    (System_String_o *)StringLiteral_16666/*"battle_quest_route"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16715/*"battle_quest_route"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     86,
-    (System_String_o *)StringLiteral_18905/*"friend_lock_sync"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18963/*"friend_lock_sync"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     87,
-    (System_String_o *)StringLiteral_21677/*"raid_auto_update"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_21747/*"raid_auto_update"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     88,
-    (System_String_o *)StringLiteral_17604/*"command_code_lock"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17660/*"command_code_lock"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     89,
-    (System_String_o *)StringLiteral_23243/*"war_board_start"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23321/*"war_board_start"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     90,
-    (System_String_o *)StringLiteral_23242/*"war_board_setup"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23320/*"war_board_setup"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     91,
-    (System_String_o *)StringLiteral_23234/*"war_board_buff_save"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23312/*"war_board_buff_save"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     92,
-    (System_String_o *)StringLiteral_23239/*"war_board_move"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23317/*"war_board_move"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     93,
-    (System_String_o *)StringLiteral_23244/*"war_board_treasure"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23322/*"war_board_treasure"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     94,
-    (System_String_o *)StringLiteral_23245/*"war_board_turn_end"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23323/*"war_board_turn_end"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     95,
-    (System_String_o *)StringLiteral_23238/*"war_board_master_attack"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23316/*"war_board_master_attack"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     96,
-    (System_String_o *)StringLiteral_23246/*"war_board_wall_attack"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23324/*"war_board_wall_attack"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     97,
-    (System_String_o *)StringLiteral_23235/*"war_board_command_spell"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23313/*"war_board_command_spell"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     98,
-    (System_String_o *)StringLiteral_23227/*"war_board_battle_result"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23305/*"war_board_battle_result"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     99,
-    (System_String_o *)StringLiteral_23237/*"war_board_finish"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23315/*"war_board_finish"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     100,
-    (System_String_o *)StringLiteral_23241/*"war_board_resume"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23319/*"war_board_resume"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     101,
-    (System_String_o *)StringLiteral_23236/*"war_board_continue"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23314/*"war_board_continue"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     102,
-    (System_String_o *)StringLiteral_23240/*"war_board_reinforcements"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23318/*"war_board_reinforcements"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     103,
-    (System_String_o *)StringLiteral_18582/*"event_scan_panel_map"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18640/*"event_scan_panel_map"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     104,
-    (System_String_o *)StringLiteral_16676/*"battle_use_continue_item"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16725/*"battle_use_continue_item"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     105,
-    (System_String_o *)StringLiteral_17410/*"check_date_version"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17465/*"check_date_version"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     106,
-    (System_String_o *)StringLiteral_20022/*"item_use"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_20085/*"item_use"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     107,
-    (System_String_o *)StringLiteral_17238/*"card_combine_passive_skill"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17290/*"card_combine_passive_skill"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     108,
-    (System_String_o *)StringLiteral_22791/*"treasure_box_draw"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_22867/*"treasure_box_draw"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     109,
-    (System_String_o *)StringLiteral_18533/*"event_mission_random_cancel"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18591/*"event_mission_random_cancel"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     110,
-    (System_String_o *)StringLiteral_17494/*"coin_room_put"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17550/*"coin_room_put"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     111,
-    (System_String_o *)StringLiteral_23004/*"userDelete"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_23080/*"userDelete"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     112,
-    (System_String_o *)StringLiteral_16667/*"battle_reset"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_16716/*"battle_reset"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     113,
-    (System_String_o *)StringLiteral_18499/*"event_digging"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18556/*"event_digging"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     114,
-    (System_String_o *)StringLiteral_18573/*"event_reset_digging"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18631/*"event_reset_digging"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     115,
-    (System_String_o *)StringLiteral_18506/*"event_expedition_start"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18563/*"event_expedition_start"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     116,
-    (System_String_o *)StringLiteral_18505/*"event_expedition_finish"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18562/*"event_expedition_finish"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     117,
-    (System_String_o *)StringLiteral_17472/*"client_api_error_dialog"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17528/*"client_api_error_dialog"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     118,
-    (System_String_o *)StringLiteral_18569/*"event_receive_cooltime_reward"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18627/*"event_receive_cooltime_reward"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     119,
-    (System_String_o *)StringLiteral_18496/*"event_create_recipe"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18553/*"event_create_recipe"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     120,
-    (System_String_o *)StringLiteral_18507/*"event_fortification"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18564/*"event_fortification"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     121,
-    (System_String_o *)StringLiteral_17453/*"class_board_release_square"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17509/*"class_board_release_square"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     122,
-    (System_String_o *)StringLiteral_17452/*"class_board_release_lock"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_17508/*"class_board_release_lock"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   System_Collections_Generic_Dictionary_Voice_BATTLE__string___Add(
-    v127,
+    v128,
     123,
-    (System_String_o *)StringLiteral_18572/*"event_reset_data_lost_battle"*/,
-    (const MethodInfo_2E46384 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
+    (System_String_o *)StringLiteral_18630/*"event_reset_data_lost_battle"*/,
+    (const MethodInfo_2EA6CC0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__Add__);
   static_fields = (BattleServantConfConponent_o *)ResponseCommandKind_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v127;
-  sub_B2C2F8(static_fields, (System_Int32_array **)v127, v131, v132, v133, v134, v135, v136);
+  static_fields->klass = (BattleServantConfConponent_c *)v128;
+  sub_B0D840(static_fields, (System_Int32_array **)v128, v131, v132, v133, v134, v135, v136);
 }
 
 
@@ -911,11 +914,11 @@ System_String_o *__fastcall ResponseCommandKind__GetName(int32_t kind, const Met
   ResponseCommandKind_c *v4; // x0
   System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *nameList; // x0
 
-  if ( (byte_418ADD6 & 1) == 0 )
+  if ( (byte_4217C12 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__get_Item__, method);
-    sub_B2C35C(&ResponseCommandKind_TypeInfo, v3);
-    byte_418ADD6 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__get_Item__, method);
+    sub_B0D8A4(&ResponseCommandKind_TypeInfo, v3);
+    byte_4217C12 = 1;
   }
   v4 = ResponseCommandKind_TypeInfo;
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -926,11 +929,11 @@ System_String_o *__fastcall ResponseCommandKind__GetName(int32_t kind, const Met
   }
   nameList = (System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)v4->static_fields->nameList;
   if ( !nameList )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   return System_Collections_Generic_Dictionary_Voice_BATTLE__string___get_Item(
            nameList,
            kind,
-           (const MethodInfo_2E462C0 *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__get_Item__);
+           (const MethodInfo_2EA6BFC *)Method_System_Collections_Generic_Dictionary_ResponseCommandKind_Kind__string__get_Item__);
 }
 
 
@@ -940,17 +943,16 @@ ResponseData_o *__fastcall ResponseCommandKind__SearchData(
         const MethodInfo *method)
 {
   System_String_o *Name; // x0
-  __int64 v6; // x1
   signed int max_length; // w8
-  System_String_o *v8; // x20
-  unsigned int v9; // w22
-  ResponseData_o *v10; // x21
-  __int64 v12; // x0
+  System_String_o *v7; // x20
+  unsigned int v8; // w22
+  ResponseData_o *v9; // x21
+  __int64 v11; // x0
 
-  if ( (byte_418ADD7 & 1) == 0 )
+  if ( (byte_4217C13 & 1) == 0 )
   {
-    sub_B2C35C(&ResponseCommandKind_TypeInfo, responseList);
-    byte_418ADD7 = 1;
+    sub_B0D8A4(&ResponseCommandKind_TypeInfo, responseList);
+    byte_4217C13 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -963,27 +965,27 @@ ResponseData_o *__fastcall ResponseCommandKind__SearchData(
   max_length = responseList->max_length;
   if ( max_length >= 1 )
   {
-    v8 = Name;
-    v9 = 0;
+    v7 = Name;
+    v8 = 0;
     while ( 1 )
     {
-      if ( v9 >= max_length )
+      if ( v8 >= max_length )
       {
-        v12 = sub_B2C460(Name);
-        sub_B2C400(v12, 0LL);
+        v11 = sub_B0D9A8(Name);
+        sub_B0D948(v11, 0LL);
       }
-      v10 = responseList->m_Items[v9];
-      if ( !v10 )
+      v9 = responseList->m_Items[v8];
+      if ( !v9 )
         break;
-      Name = (System_String_o *)System_String__op_Equality(v10->fields.nid, v8, 0LL);
+      Name = (System_String_o *)System_String__op_Equality(v9->fields.nid, v7, 0LL);
       if ( ((unsigned __int8)Name & 1) != 0 )
-        return v10;
+        return v9;
       max_length = responseList->max_length;
-      if ( (int)++v9 >= max_length )
+      if ( (int)++v8 >= max_length )
         return 0LL;
     }
 LABEL_16:
-    sub_B2C434(Name, v6);
+    sub_B0D97C(Name);
   }
   return 0LL;
 }

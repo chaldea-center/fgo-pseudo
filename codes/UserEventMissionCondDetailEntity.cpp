@@ -2,14 +2,14 @@ void __fastcall UserEventMissionCondDetailEntity___ctor(
         UserEventMissionCondDetailEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4188B71 & 1) == 0 )
+  if ( (byte_4215C32 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4188B71 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4215C32 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,15 +19,15 @@ System_String_o *__fastcall UserEventMissionCondDetailEntity__CreatePK(
         int32_t conditionDetailId,
         const MethodInfo *method)
 {
-  if ( (byte_4188B70 & 1) == 0 )
+  if ( (byte_4215C31 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&conditionDetailId);
-    byte_4188B70 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&conditionDetailId);
+    byte_4215C31 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            conditionDetailId,
-           (const MethodInfo_1732A38 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_171354C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

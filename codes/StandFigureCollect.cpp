@@ -19,9 +19,9 @@ void __fastcall StandFigureCollect___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._entity_k__BackingField = entity;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)entity, v7, v8, v9, v10, v11, v12);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)entity, v7, v8, v9, v10, v11, v12);
   this->fields._standFigure_k__BackingField = standFigure;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._standFigure_k__BackingField,
     (System_Int32_array **)standFigure,
     v13,
@@ -59,7 +59,7 @@ void __fastcall StandFigureCollect__set_entity(
   System_Int32_array *v7; // x7
 
   this->fields._entity_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -83,7 +83,7 @@ void __fastcall StandFigureCollect__set_standFigure(
   System_Int32_array *v7; // x7
 
   this->fields._standFigure_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._standFigure_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

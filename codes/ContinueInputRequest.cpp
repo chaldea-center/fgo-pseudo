@@ -12,24 +12,24 @@ void __fastcall ContinueInputRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4189642 & 1) == 0 )
+  if ( (byte_42164AF & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_17681/*"continueKey"*/, continueKey);
-    sub_B2C35C(&StringLiteral_17683/*"continuePass"*/, v7);
-    byte_4189642 = 1;
+    sub_B0D8A4(&StringLiteral_17737/*"continueKey"*/, continueKey);
+    sub_B0D8A4(&StringLiteral_17739/*"continuePass"*/, v7);
+    byte_42164AF = 1;
   }
-  RequestBase__addField_31051928((RequestBase_o *)this, (System_String_o *)StringLiteral_17681/*"continueKey"*/, continueKey, 0LL);
-  RequestBase__addField_31051928((RequestBase_o *)this, (System_String_o *)StringLiteral_17683/*"continuePass"*/, continuePass, 0LL);
+  RequestBase__addField_30435648((RequestBase_o *)this, (System_String_o *)StringLiteral_17737/*"continueKey"*/, continueKey, 0LL);
+  RequestBase__addField_30435648((RequestBase_o *)this, (System_String_o *)StringLiteral_17739/*"continuePass"*/, continuePass, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall ContinueInputRequest__getMockData(ContinueInputRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4189641 & 1) == 0 )
+  if ( (byte_42164AE & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_1/*""*/, method);
-    byte_4189641 = 1;
+    sub_B0D8A4(&StringLiteral_1/*""*/, method);
+    byte_42164AE = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -40,11 +40,11 @@ System_String_o *__fastcall ContinueInputRequest__getURL(ContinueInputRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4189640 & 1) == 0 )
+  if ( (byte_42164AD & 1) == 0 )
   {
-    sub_B2C35C(&NetworkManager_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_17679/*"continue/input"*/, v2);
-    byte_4189640 = 1;
+    sub_B0D8A4(&NetworkManager_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_17735/*"continue/input"*/, v2);
+    byte_42164AD = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -52,7 +52,7 @@ System_String_o *__fastcall ContinueInputRequest__getURL(ContinueInputRequest_o 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44305532(BaseUrl, (System_String_o *)StringLiteral_17679/*"continue/input"*/, 0LL);
+  return System_String__Concat_43849904(BaseUrl, (System_String_o *)StringLiteral_17735/*"continue/input"*/, 0LL);
 }
 
 
@@ -68,12 +68,12 @@ void __fastcall ContinueInputRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_4189643 & 1) == 0 )
+  if ( (byte_42164B0 & 1) == 0 )
   {
-    sub_B2C35C(&JsonManager_TypeInfo, responseList);
-    sub_B2C35C(&ResponseCommandKind_TypeInfo, v5);
-    sub_B2C35C(&StringLiteral_21068/*"ng"*/, v6);
-    byte_4189643 = 1;
+    sub_B0D8A4(&JsonManager_TypeInfo, responseList);
+    sub_B0D8A4(&ResponseCommandKind_TypeInfo, v5);
+    sub_B0D8A4(&StringLiteral_21137/*"ng"*/, v6);
+    byte_42164B0 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -81,7 +81,7 @@ void __fastcall ContinueInputRequest__requestCompleted(
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
   v7 = ResponseCommandKind__SearchData(32, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_31019724(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_30403444(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -90,7 +90,7 @@ void __fastcall ContinueInputRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21068/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_21137/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

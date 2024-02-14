@@ -8,17 +8,17 @@ void __fastcall EventRewardVoicePlayCountView__Close(EventRewardVoicePlayCountVi
 {
   UILabel_o *countLabel; // x0
 
-  if ( (byte_418A94A & 1) == 0 )
+  if ( (byte_4217943 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_1/*""*/, method);
-    byte_418A94A = 1;
+    sub_B0D8A4(&StringLiteral_1/*""*/, method);
+    byte_4217943 = 1;
   }
   countLabel = this->fields.countLabel;
   if ( !countLabel
     || (UILabel__set_text(countLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (countLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B2C434(countLabel, method);
+    sub_B0D97C(countLabel);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)countLabel, 0, 0LL);
 }
@@ -32,14 +32,14 @@ void __fastcall EventRewardVoicePlayCountView__ResetCount(
   const MethodInfo *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_418A94B & 1) == 0 )
+  if ( (byte_4217944 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_1/*""*/, method);
-    byte_418A94B = 1;
+    sub_B0D8A4(&StringLiteral_1/*""*/, method);
+    byte_4217944 = 1;
   }
   countLabel = this->fields.countLabel;
   if ( !countLabel )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   UILabel__set_text(countLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   EventRewardSaveData__DeletePlayCount(v4);
   EventRewardVoicePlayCountView__SetUp(this, v5);
@@ -56,20 +56,20 @@ void __fastcall EventRewardVoicePlayCountView__SetUp(EventRewardVoicePlayCountVi
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 gameObject; // x0
-  __int64 v11; // x1
-  __int64 v12; // x22
-  unsigned int v13; // w23
-  __int64 v14; // x20
-  __int64 v15; // x22
-  unsigned int v16; // w28
-  __int64 v17; // x20
-  int32_t v18; // w24
-  int32_t v19; // w25
-  int32_t v20; // w23
-  __int64 v21; // x26
-  __int64 v22; // x27
-  int32_t v23; // w0
-  const MethodInfo *v24; // x4
+  __int64 v11; // x22
+  unsigned int v12; // w23
+  __int64 v13; // x20
+  __int64 v14; // x22
+  unsigned int v15; // w28
+  __int64 v16; // x20
+  int32_t v17; // w24
+  int32_t v18; // w25
+  int32_t v19; // w23
+  __int64 v20; // x26
+  __int64 v21; // x27
+  int32_t v22; // w0
+  const MethodInfo *v23; // x4
+  __int64 v24; // x1
   struct UILabel_o *countLabel; // x8
   int32_t EventVoicePlayCount_k__BackingField; // w27
   struct UILabel_o *v27; // x23
@@ -163,34 +163,34 @@ void __fastcall EventRewardVoicePlayCountView__SetUp(EventRewardVoicePlayCountVi
   int v115; // [xsp+4Ch] [xbp-54h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v116; // 0:x0.16
 
-  if ( (byte_418A949 & 1) == 0 )
+  if ( (byte_4217942 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventMaster___, method);
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventVoicePlayMaster___, v3);
-    sub_B2C35C(&int_TypeInfo, v4);
-    sub_B2C35C(&object___TypeInfo, v5);
-    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_B2C35C(&StringLiteral_26/*"\n"*/, v8);
-    sub_B2C35C(&StringLiteral_18473/*"eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}"*/, v9);
-    byte_418A949 = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventMaster___, method);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventVoicePlayMaster___, v3);
+    sub_B0D8A4(&int_TypeInfo, v4);
+    sub_B0D8A4(&object___TypeInfo, v5);
+    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_B0D8A4(&StringLiteral_26/*"\n"*/, v8);
+    sub_B0D8A4(&StringLiteral_18530/*"eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}"*/, v9);
+    byte_4217942 = 1;
   }
   gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_70;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
-  gameObject = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  gameObject = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !gameObject )
     goto LABEL_70;
   gameObject = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
                           (DataManager_o *)gameObject,
-                          (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventMaster___);
+                          (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !gameObject )
     goto LABEL_70;
   gameObject = (__int64)EventMaster__GetEnableExistEventRewardEntityList((EventMaster_o *)gameObject, 0LL);
   if ( gameObject )
   {
-    v12 = gameObject;
+    v11 = gameObject;
     v107 = *(_QWORD *)(gameObject + 24);
     if ( v107 )
     {
@@ -198,29 +198,29 @@ void __fastcall EventRewardVoicePlayCountView__SetUp(EventRewardVoicePlayCountVi
       {
         if ( !(_DWORD)v107 )
           goto LABEL_68;
-        v13 = 0;
+        v12 = 0;
         v106 = gameObject;
         while ( 1 )
         {
-          v14 = *(_QWORD *)(v12 + 8LL * (int)v13 + 32);
-          gameObject = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          v13 = *(_QWORD *)(v11 + 8LL * (int)v12 + 32);
+          gameObject = (__int64)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !gameObject )
             goto LABEL_70;
           gameObject = (__int64)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                   (DataManager_o *)gameObject,
-                                  (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventVoicePlayMaster___);
-          if ( !v14 )
+                                  (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventVoicePlayMaster___);
+          if ( !v13 )
             goto LABEL_70;
-          v108 = v13;
+          v108 = v12;
           if ( !gameObject )
             goto LABEL_70;
           gameObject = (__int64)EventVoicePlayMaster__GetTargetEventIdEntityList(
                                   (EventVoicePlayMaster_o *)gameObject,
-                                  *(_DWORD *)(v14 + 16),
+                                  *(_DWORD *)(v13 + 16),
                                   0LL);
           if ( gameObject )
           {
-            v15 = gameObject;
+            v14 = gameObject;
             v109 = *(_QWORD *)(gameObject + 24);
             if ( v109 )
             {
@@ -229,43 +229,43 @@ void __fastcall EventRewardVoicePlayCountView__SetUp(EventRewardVoicePlayCountVi
             }
           }
 LABEL_66:
-          v12 = v106;
-          v13 = v108 + 1;
+          v11 = v106;
+          v12 = v108 + 1;
           if ( (int)(v108 + 1) >= (int)v107 )
             return;
-          if ( v13 >= *(_DWORD *)(v106 + 24) )
+          if ( v12 >= *(_DWORD *)(v106 + 24) )
             goto LABEL_68;
         }
         if ( !(_DWORD)v109 )
         {
 LABEL_68:
-          v104 = sub_B2C460(gameObject);
-          sub_B2C400(v104, 0LL);
+          v104 = sub_B0D9A8(gameObject);
+          sub_B0D948(v104, 0LL);
         }
-        v16 = 0;
+        v15 = 0;
         while ( 1 )
         {
-          v17 = *(_QWORD *)(v15 + 8LL * (int)v16 + 32);
-          if ( !v17 )
+          v16 = *(_QWORD *)(v14 + 8LL * (int)v15 + 32);
+          if ( !v16 )
             break;
-          v19 = *(_DWORD *)(v17 + 16);
-          v18 = *(_DWORD *)(v17 + 20);
-          v20 = *(_DWORD *)(v17 + 24);
-          v21 = *(_QWORD *)(v17 + 28);
-          v22 = *(_QWORD *)(v17 + 36);
+          v18 = *(_DWORD *)(v16 + 16);
+          v17 = *(_DWORD *)(v16 + 20);
+          v19 = *(_DWORD *)(v16 + 24);
+          v20 = *(_QWORD *)(v16 + 28);
+          v21 = *(_QWORD *)(v16 + 36);
           if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           }
-          *(_QWORD *)&v116.fields.currentCryptoKey = v21;
-          *(_QWORD *)&v116.fields.fakeValue = v22;
-          v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44758064(v116, 0LL);
-          EventRewardSaveData__LoadEventVoicePlayCount(v19, v18, v20, v23, v24);
-          if ( !byte_4188045 )
+          *(_QWORD *)&v116.fields.currentCryptoKey = v20;
+          *(_QWORD *)&v116.fields.fakeValue = v21;
+          v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v116, 0LL);
+          EventRewardSaveData__LoadEventVoicePlayCount(v18, v17, v19, v22, v23);
+          if ( !byte_4214F5D )
           {
-            gameObject = sub_B2C35C(&EventRewardSaveData_TypeInfo, v11);
-            byte_4188045 = 1;
+            gameObject = sub_B0D8A4(&EventRewardSaveData_TypeInfo, v24);
+            byte_4214F5D = 1;
           }
           countLabel = this->fields.countLabel;
           if ( !countLabel )
@@ -275,77 +275,77 @@ LABEL_68:
           v27 = this->fields.countLabel;
           if ( (gameObject & 1) != 0 )
           {
-            v28 = (System_Object_array *)sub_B2C374(object___TypeInfo, 5LL);
-            v115 = *(_DWORD *)(v17 + 16);
+            v28 = (System_Object_array *)sub_B0D8BC(object___TypeInfo, 5LL);
+            v115 = *(_DWORD *)(v16 + 16);
             gameObject = j_il2cpp_value_box_0(int_TypeInfo, &v115);
             if ( !v28 )
               break;
             v35 = (System_Int32_array **)gameObject;
             if ( gameObject )
             {
-              gameObject = sub_B2C41C(gameObject, v28->obj.klass->_1.element_class);
+              gameObject = sub_B0D964(gameObject, v28->obj.klass->_1.element_class);
               if ( !gameObject )
                 goto LABEL_71;
             }
             if ( !v28->max_length )
               goto LABEL_68;
             v28->m_Items[0] = (Il2CppObject *)v35;
-            sub_B2C2F8((BattleServantConfConponent_o *)v28->m_Items, v35, v29, v30, v31, v32, v33, v34);
-            v114 = *(_DWORD *)(v17 + 20);
+            sub_B0D840((BattleServantConfConponent_o *)v28->m_Items, v35, v29, v30, v31, v32, v33, v34);
+            v114 = *(_DWORD *)(v16 + 20);
             gameObject = j_il2cpp_value_box_0(int_TypeInfo, &v114);
             v42 = (System_Int32_array **)gameObject;
             if ( gameObject )
             {
-              gameObject = sub_B2C41C(gameObject, v28->obj.klass->_1.element_class);
+              gameObject = sub_B0D964(gameObject, v28->obj.klass->_1.element_class);
               if ( !gameObject )
                 goto LABEL_71;
             }
             if ( v28->max_length <= 1 )
               goto LABEL_68;
             v28->m_Items[1] = (Il2CppObject *)v42;
-            sub_B2C2F8((BattleServantConfConponent_o *)&v28->m_Items[1], v42, v36, v37, v38, v39, v40, v41);
-            v113 = *(_DWORD *)(v17 + 24);
+            sub_B0D840((BattleServantConfConponent_o *)&v28->m_Items[1], v42, v36, v37, v38, v39, v40, v41);
+            v113 = *(_DWORD *)(v16 + 24);
             gameObject = j_il2cpp_value_box_0(int_TypeInfo, &v113);
             v49 = (System_Int32_array **)gameObject;
             if ( gameObject )
             {
-              gameObject = sub_B2C41C(gameObject, v28->obj.klass->_1.element_class);
+              gameObject = sub_B0D964(gameObject, v28->obj.klass->_1.element_class);
               if ( !gameObject )
                 goto LABEL_71;
             }
             if ( v28->max_length <= 2 )
               goto LABEL_68;
             v28->m_Items[2] = (Il2CppObject *)v49;
-            sub_B2C2F8((BattleServantConfConponent_o *)&v28->m_Items[2], v49, v43, v44, v45, v46, v47, v48);
-            v50 = *(_QWORD *)(v17 + 36);
-            v111 = *(_QWORD *)(v17 + 28);
+            sub_B0D840((BattleServantConfConponent_o *)&v28->m_Items[2], v49, v43, v44, v45, v46, v47, v48);
+            v50 = *(_QWORD *)(v16 + 36);
+            v111 = *(_QWORD *)(v16 + 28);
             v112 = v50;
             gameObject = j_il2cpp_value_box_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, &v111);
             v57 = (System_Int32_array **)gameObject;
             if ( gameObject )
             {
-              gameObject = sub_B2C41C(gameObject, v28->obj.klass->_1.element_class);
+              gameObject = sub_B0D964(gameObject, v28->obj.klass->_1.element_class);
               if ( !gameObject )
                 goto LABEL_71;
             }
             if ( v28->max_length <= 3 )
               goto LABEL_68;
             v28->m_Items[3] = (Il2CppObject *)v57;
-            sub_B2C2F8((BattleServantConfConponent_o *)&v28->m_Items[3], v57, v51, v52, v53, v54, v55, v56);
+            sub_B0D840((BattleServantConfConponent_o *)&v28->m_Items[3], v57, v51, v52, v53, v54, v55, v56);
             v110 = EventVoicePlayCount_k__BackingField;
             gameObject = j_il2cpp_value_box_0(int_TypeInfo, &v110);
             v64 = (System_Int32_array **)gameObject;
             if ( gameObject )
             {
-              gameObject = sub_B2C41C(gameObject, v28->obj.klass->_1.element_class);
+              gameObject = sub_B0D964(gameObject, v28->obj.klass->_1.element_class);
               if ( !gameObject )
                 goto LABEL_71;
             }
             if ( v28->max_length <= 4 )
               goto LABEL_68;
             v28->m_Items[4] = (Il2CppObject *)v64;
-            sub_B2C2F8((BattleServantConfConponent_o *)&v28->m_Items[4], v64, v58, v59, v60, v61, v62, v63);
-            gameObject = (__int64)System_String__Format_44384256((System_String_o *)StringLiteral_18473/*"eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}"*/, v28, 0LL);
+            sub_B0D840((BattleServantConfConponent_o *)&v28->m_Items[4], v64, v58, v59, v60, v61, v62, v63);
+            gameObject = (__int64)System_String__Format_43928628((System_String_o *)StringLiteral_18530/*"eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}"*/, v28, 0LL);
             if ( !v27 )
               break;
           }
@@ -354,91 +354,91 @@ LABEL_68:
             if ( !v27 )
               break;
             mText = v27->fields.mText;
-            v66 = (System_Object_array *)sub_B2C374(object___TypeInfo, 5LL);
-            v115 = *(_DWORD *)(v17 + 16);
+            v66 = (System_Object_array *)sub_B0D8BC(object___TypeInfo, 5LL);
+            v115 = *(_DWORD *)(v16 + 16);
             gameObject = j_il2cpp_value_box_0(int_TypeInfo, &v115);
             if ( !v66 )
               break;
             v73 = (System_Int32_array **)gameObject;
             if ( gameObject )
             {
-              gameObject = sub_B2C41C(gameObject, v66->obj.klass->_1.element_class);
+              gameObject = sub_B0D964(gameObject, v66->obj.klass->_1.element_class);
               if ( !gameObject )
                 goto LABEL_71;
             }
             if ( !v66->max_length )
               goto LABEL_68;
             v66->m_Items[0] = (Il2CppObject *)v73;
-            sub_B2C2F8((BattleServantConfConponent_o *)v66->m_Items, v73, v67, v68, v69, v70, v71, v72);
-            v114 = *(_DWORD *)(v17 + 20);
+            sub_B0D840((BattleServantConfConponent_o *)v66->m_Items, v73, v67, v68, v69, v70, v71, v72);
+            v114 = *(_DWORD *)(v16 + 20);
             gameObject = j_il2cpp_value_box_0(int_TypeInfo, &v114);
             v80 = (System_Int32_array **)gameObject;
             if ( gameObject )
             {
-              gameObject = sub_B2C41C(gameObject, v66->obj.klass->_1.element_class);
+              gameObject = sub_B0D964(gameObject, v66->obj.klass->_1.element_class);
               if ( !gameObject )
                 goto LABEL_71;
             }
             if ( v66->max_length <= 1 )
               goto LABEL_68;
             v66->m_Items[1] = (Il2CppObject *)v80;
-            sub_B2C2F8((BattleServantConfConponent_o *)&v66->m_Items[1], v80, v74, v75, v76, v77, v78, v79);
-            v113 = *(_DWORD *)(v17 + 24);
+            sub_B0D840((BattleServantConfConponent_o *)&v66->m_Items[1], v80, v74, v75, v76, v77, v78, v79);
+            v113 = *(_DWORD *)(v16 + 24);
             gameObject = j_il2cpp_value_box_0(int_TypeInfo, &v113);
             v87 = (System_Int32_array **)gameObject;
             if ( gameObject )
             {
-              gameObject = sub_B2C41C(gameObject, v66->obj.klass->_1.element_class);
+              gameObject = sub_B0D964(gameObject, v66->obj.klass->_1.element_class);
               if ( !gameObject )
                 goto LABEL_71;
             }
             if ( v66->max_length <= 2 )
               goto LABEL_68;
             v66->m_Items[2] = (Il2CppObject *)v87;
-            sub_B2C2F8((BattleServantConfConponent_o *)&v66->m_Items[2], v87, v81, v82, v83, v84, v85, v86);
-            v88 = *(_QWORD *)(v17 + 36);
-            v111 = *(_QWORD *)(v17 + 28);
+            sub_B0D840((BattleServantConfConponent_o *)&v66->m_Items[2], v87, v81, v82, v83, v84, v85, v86);
+            v88 = *(_QWORD *)(v16 + 36);
+            v111 = *(_QWORD *)(v16 + 28);
             v112 = v88;
             gameObject = j_il2cpp_value_box_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, &v111);
             v95 = (System_Int32_array **)gameObject;
             if ( gameObject )
             {
-              gameObject = sub_B2C41C(gameObject, v66->obj.klass->_1.element_class);
+              gameObject = sub_B0D964(gameObject, v66->obj.klass->_1.element_class);
               if ( !gameObject )
                 goto LABEL_71;
             }
             if ( v66->max_length <= 3 )
               goto LABEL_68;
             v66->m_Items[3] = (Il2CppObject *)v95;
-            sub_B2C2F8((BattleServantConfConponent_o *)&v66->m_Items[3], v95, v89, v90, v91, v92, v93, v94);
+            sub_B0D840((BattleServantConfConponent_o *)&v66->m_Items[3], v95, v89, v90, v91, v92, v93, v94);
             v110 = EventVoicePlayCount_k__BackingField;
             gameObject = j_il2cpp_value_box_0(int_TypeInfo, &v110);
             v102 = (System_Int32_array **)gameObject;
             if ( gameObject )
             {
-              gameObject = sub_B2C41C(gameObject, v66->obj.klass->_1.element_class);
+              gameObject = sub_B0D964(gameObject, v66->obj.klass->_1.element_class);
               if ( !gameObject )
               {
 LABEL_71:
-                v105 = sub_B2C454(gameObject);
-                sub_B2C400(v105, 0LL);
+                v105 = sub_B0D99C(gameObject);
+                sub_B0D948(v105, 0LL);
               }
             }
             if ( v66->max_length <= 4 )
               goto LABEL_68;
             v66->m_Items[4] = (Il2CppObject *)v102;
-            sub_B2C2F8((BattleServantConfConponent_o *)&v66->m_Items[4], v102, v96, v97, v98, v99, v100, v101);
-            v103 = System_String__Format_44384256((System_String_o *)StringLiteral_18473/*"eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}"*/, v66, 0LL);
-            gameObject = (__int64)System_String__Concat_44307816(mText, (System_String_o *)StringLiteral_26/*"\n"*/, v103, 0LL);
+            sub_B0D840((BattleServantConfConponent_o *)&v66->m_Items[4], v102, v96, v97, v98, v99, v100, v101);
+            v103 = System_String__Format_43928628((System_String_o *)StringLiteral_18530/*"eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}"*/, v66, 0LL);
+            gameObject = (__int64)System_String__Concat_43852188(mText, (System_String_o *)StringLiteral_26/*"\n"*/, v103, 0LL);
           }
           UILabel__set_text(v27, (System_String_o *)gameObject, 0LL);
-          if ( (int)++v16 >= (int)v109 )
+          if ( (int)++v15 >= (int)v109 )
             goto LABEL_66;
-          if ( v16 >= *(_DWORD *)(v15 + 24) )
+          if ( v15 >= *(_DWORD *)(v14 + 24) )
             goto LABEL_68;
         }
 LABEL_70:
-        sub_B2C434(gameObject, v11);
+        sub_B0D97C(gameObject);
       }
     }
   }

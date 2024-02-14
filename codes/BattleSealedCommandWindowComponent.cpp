@@ -13,12 +13,12 @@ System_String_o *__fastcall BattleSealedCommandWindowComponent__get_closeBtnPath
         BattleSealedCommandWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4184E1B & 1) == 0 )
+  if ( (byte_4211D4A & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_16985/*"btn_close"*/, method);
-    byte_4184E1B = 1;
+    sub_B0D8A4(&StringLiteral_17036/*"btn_close"*/, method);
+    byte_4211D4A = 1;
   }
-  return (System_String_o *)StringLiteral_16985/*"btn_close"*/;
+  return (System_String_o *)StringLiteral_17036/*"btn_close"*/;
 }
 
 
@@ -35,21 +35,23 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
   __int64 v10; // x1
   __int64 v11; // x1
   UnityEngine_Object_o *confLabel; // x22
-  struct System_Nullable_int__o fontSize_k__BackingField; // x1
+  __int64 v13; // x1
+  __int64 v14; // x2
   UILabel_o *transform; // x0
+  struct System_Nullable_int__o fontSize_k__BackingField; // x1
   float z; // s2
   float x; // s0
   float y; // s1
 
-  if ( (byte_4184E1A & 1) == 0 )
+  if ( (byte_4211D49 & 1) == 0 )
   {
-    sub_B2C35C(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo, str);
-    sub_B2C35C(&Method_System_Nullable_Vector3__GetValueOrDefault__, v7);
-    sub_B2C35C(&Method_System_Nullable_int__GetValueOrDefault__, v8);
-    sub_B2C35C(&Method_System_Nullable_int__get_HasValue__, v9);
-    sub_B2C35C(&Method_System_Nullable_Vector3__get_HasValue__, v10);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v11);
-    byte_4184E1A = 1;
+    sub_B0D8A4(&BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo, str);
+    sub_B0D8A4(&Method_System_Nullable_Vector3__GetValueOrDefault__, v7);
+    sub_B0D8A4(&Method_System_Nullable_int__GetValueOrDefault__, v8);
+    sub_B0D8A4(&Method_System_Nullable_int__get_HasValue__, v9);
+    sub_B0D8A4(&Method_System_Nullable_Vector3__get_HasValue__, v10);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v11);
+    byte_4211D49 = 1;
   }
   confLabel = (UnityEngine_Object_o *)this->fields.confLabel;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -61,7 +63,10 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
   {
     if ( !args )
     {
-      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_B2C42C(BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo);
+      args = (BattleSealedCommandWindowComponent_LabelAdjustArgs_o *)sub_B0D974(
+                                                                       BattleSealedCommandWindowComponent_LabelAdjustArgs_TypeInfo,
+                                                                       v13,
+                                                                       v14);
       BattleSealedCommandWindowComponent_LabelAdjustArgs___ctor(args, 0LL);
     }
     transform = this->fields.confLabel;
@@ -73,7 +78,7 @@ void __fastcall BattleSealedCommandWindowComponent__setLabel(
         fontSize_k__BackingField = args->fields._fontSize_k__BackingField;
         transform = this->fields.confLabel;
         if ( (*(_QWORD *)&fontSize_k__BackingField & 0xFF00000000LL) == 0 )
-          fontSize_k__BackingField = (struct System_Nullable_int__o)(unsigned int)this->fields.labelDefaultFontSize;
+          fontSize_k__BackingField.fields.value = this->fields.labelDefaultFontSize;
         if ( transform )
         {
           UILabel__set_fontSize(transform, fontSize_k__BackingField.fields.value, 0LL);
@@ -108,7 +113,7 @@ LABEL_17:
         }
       }
     }
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_B2C434)(transform, fontSize_k__BackingField);
+    sub_B0D97C(transform);
   }
 }
 

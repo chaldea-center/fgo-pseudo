@@ -11,9 +11,9 @@ void __fastcall SupportDeckFixErrorListViewItem___ctor(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23700744((ListViewItem_o *)this, index, 0LL);
   this->fields.message = message;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.message,
     (System_Int32_array **)message,
     v6,

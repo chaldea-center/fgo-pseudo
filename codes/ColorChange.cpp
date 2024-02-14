@@ -107,7 +107,7 @@ UnityEngine_Color_o __fastcall ColorChange__PingPong(
     v20 = g;
     v21 = b;
   }
-  *(UnityEngine_Color_o *)&v22 = Easing__Func_33138088(
+  *(UnityEngine_Color_o *)&v22 = Easing__Func_32658764(
                                    *(UnityEngine_Color_o *)&v15,
                                    *(UnityEngine_Color_o *)&v19,
                                    timea,
@@ -167,7 +167,7 @@ void __fastcall ColorChange__Play(
   v11->fields.mNowCount = count;
   v11->fields.mDelay = 0.0;
   *(_QWORD *)&v11->fields.mPause = endAct;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v11->fields.mPause,
     (System_Int32_array **)endAct,
     v21,
@@ -182,7 +182,7 @@ void __fastcall ColorChange__Play(
   *(float *)&v11[-1].fields.mNowCount = g;
   v11[-1].fields.mDelay = b;
   *(float *)&v11[-1].fields.mProcessAct = a;
-  sub_B2C2F8((BattleServantConfConponent_o *)v11, (System_Int32_array **)procAct, v27, v28, v29, v30, v31, v32);
+  sub_B0D840((BattleServantConfConponent_o *)v11, (System_Int32_array **)procAct, v27, v28, v29, v30, v31, v32);
   LODWORD(v11->fields.mFromColor.fields.r) = easingType;
   *(float *)&v11[-1].fields.mEasingType = delay;
   LOBYTE(v11->fields.mFromColor.fields.g) = 0;
@@ -299,7 +299,7 @@ void __fastcall ColorChange__Update(ColorChange_o *this, const MethodInfo *metho
                                          time,
                                          klass,
                                          v6)
-                                     : Easing__Func_33138088(
+                                     : Easing__Func_32658764(
                                          *(UnityEngine_Color_o *)&g,
                                          *(UnityEngine_Color_o *)&v12,
                                          time,

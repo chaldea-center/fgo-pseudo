@@ -1,16 +1,16 @@
 void __fastcall UserServantCommandCardMaster___ctor(UserServantCommandCardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4185EAE & 1) == 0 )
+  if ( (byte_4212CB5 & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_DataMasterBase_UserServantCommandCardMaster__UserServantCommandCardEntity__string___ctor__,
       method);
-    byte_4185EAE = 1;
+    byte_4212CB5 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     279,
-    (const MethodInfo_24E4484 *)Method_DataMasterBase_UserServantCommandCardMaster__UserServantCommandCardEntity__string___ctor__);
+    (const MethodInfo_2669F88 *)Method_DataMasterBase_UserServantCommandCardMaster__UserServantCommandCardEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,18 @@ UserServantCommandCardEntity_o *__fastcall UserServantCommandCardMaster__GetEnti
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4185EAC & 1) == 0 )
+  if ( (byte_4212CB3 & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_DataMasterBase_UserServantCommandCardMaster__UserServantCommandCardEntity__string__GetEntity__,
       userId);
-    byte_4185EAC = 1;
+    byte_4212CB3 = 1;
   }
   PK = UserServantCommandCardEntity__CreatePK(userId, svtId, (const MethodInfo *)svtId);
   return (UserServantCommandCardEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                              (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                              PK,
-                                             (const MethodInfo_24E4520 *)Method_DataMasterBase_UserServantCommandCardMaster__UserServantCommandCardEntity__string__GetEntity__);
+                                             (const MethodInfo_266A024 *)Method_DataMasterBase_UserServantCommandCardMaster__UserServantCommandCardEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool __fastcall UserServantCommandCardMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4185EAD & 1) == 0 )
+  if ( (byte_4212CB4 & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_DataMasterBase_UserServantCommandCardMaster__UserServantCommandCardEntity__string__TryGetEntity__,
       entity);
-    byte_4185EAD = 1;
+    byte_4212CB4 = 1;
   }
   PK = UserServantCommandCardEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_24E4578 *)Method_DataMasterBase_UserServantCommandCardMaster__UserServantCommandCardEntity__string__TryGetEntity__);
+           (const MethodInfo_266A07C *)Method_DataMasterBase_UserServantCommandCardMaster__UserServantCommandCardEntity__string__TryGetEntity__);
 }

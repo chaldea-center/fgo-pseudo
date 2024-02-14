@@ -42,7 +42,7 @@ int32_t __fastcall FuncList__getRate(int32_t intype, System_Int32_array *vals, c
 }
 
 
-int32_t __fastcall FuncList__getRate_29860344(int32_t type, System_Int32_array *vals, const MethodInfo *method)
+int32_t __fastcall FuncList__getRate_29219880(int32_t type, System_Int32_array *vals, const MethodInfo *method)
 {
   if ( vals && (int)vals->max_length >= 1 )
     return vals->m_Items[1];
@@ -123,8 +123,8 @@ int32_t __fastcall FuncList__getValueFronIndex(System_Int32_array *vals, int32_t
     {
       if ( max_length <= (unsigned int)index )
       {
-        v4 = sub_B2C460(vals);
-        sub_B2C400(v4, 0LL);
+        v4 = sub_B0D9A8(vals);
+        sub_B0D948(v4, 0LL);
       }
       LODWORD(vals) = vals->m_Items[index + 1];
     }
@@ -149,31 +149,30 @@ bool __fastcall FuncList__isDamage(int32_t funcType, const MethodInfo *method)
 {
   __int64 v3; // x1
   __int64 v4; // x0
-  __int64 v5; // x1
-  __int64 v6; // x20
-  System_String_o *v7; // x19
-  int32_t v9; // [xsp+Ch] [xbp-14h] BYREF
+  __int64 v5; // x20
+  System_String_o *v6; // x19
+  int32_t v8; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_418A4E0 & 1) == 0 )
+  if ( (byte_4217207 & 1) == 0 )
   {
-    sub_B2C35C(&FuncList_TYPE_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_4552/*"DAMAGE"*/, v3);
-    byte_418A4E0 = 1;
+    sub_B0D8A4(&FuncList_TYPE_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_4568/*"DAMAGE"*/, v3);
+    byte_4217207 = 1;
   }
-  v9 = funcType;
-  v4 = j_il2cpp_value_box_0(FuncList_TYPE_TypeInfo, &v9);
+  v8 = funcType;
+  v4 = j_il2cpp_value_box_0(FuncList_TYPE_TypeInfo, &v8);
   if ( !v4
-    || (v6 = v4,
-        v7 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v4 + 360LL))(
+    || (v5 = v4,
+        v6 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v4 + 360LL))(
                                   v4,
                                   *(_QWORD *)(*(_QWORD *)v4 + 368LL)),
-        v4 = j_il2cpp_object_unbox_0(v6),
-        v9 = *(_DWORD *)v4,
-        !v7) )
+        v4 = j_il2cpp_object_unbox_0(v5),
+        v8 = *(_DWORD *)v4,
+        !v6) )
   {
-    sub_B2C434(v4, v5);
+    sub_B0D97C(v4);
   }
-  return System_String__Contains(v7, (System_String_o *)StringLiteral_4552/*"DAMAGE"*/, 0LL);
+  return System_String__Contains(v6, (System_String_o *)StringLiteral_4568/*"DAMAGE"*/, 0LL);
 }
 
 

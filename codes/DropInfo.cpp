@@ -6,13 +6,13 @@ void __fastcall DropInfo___ctor(DropInfo_o *this, const MethodInfo *method)
 
 bool __fastcall DropInfo__isItem(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsItem_27324028(this->fields.type, 0LL);
+  return Gift__IsItem_26783148(this->fields.type, 0LL);
 }
 
 
 bool __fastcall DropInfo__isServant(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsServant_27324084(this->fields.type, 0LL);
+  return Gift__IsServant_26783204(this->fields.type, 0LL);
 }
 
 

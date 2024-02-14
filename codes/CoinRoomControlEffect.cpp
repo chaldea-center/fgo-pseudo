@@ -10,9 +10,9 @@ System_Collections_IEnumerator_o *__fastcall CoinRoomControlEffect__AddValue(
         CoinRoomControlEffect_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
+  __int64 v2; // x2
+  __int64 v4; // x20
+  __int64 v5; // x0
   System_String_array **v6; // x2
   System_String_array **v7; // x3
   System_Boolean_array **v8; // x4
@@ -20,18 +20,18 @@ System_Collections_IEnumerator_o *__fastcall CoinRoomControlEffect__AddValue(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_418886D & 1) == 0 )
+  if ( (byte_421477E & 1) == 0 )
   {
-    sub_B2C35C(&CoinRoomControlEffect__AddValue_d__10_TypeInfo, method);
-    byte_418886D = 1;
+    sub_B0D8A4(&CoinRoomControlEffect__AddValue_d__10_TypeInfo, method);
+    byte_421477E = 1;
   }
-  v3 = sub_B2C42C(CoinRoomControlEffect__AddValue_d__10_TypeInfo);
-  CoinRoomControlEffect__AddValue_d__10___ctor((CoinRoomControlEffect__AddValue_d__10_o *)v3, 0, 0LL);
-  if ( !v3 )
-    sub_B2C434(v4, v5);
-  *(_QWORD *)(v3 + 32) = this;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
-  return (System_Collections_IEnumerator_o *)v3;
+  v4 = sub_B0D974(CoinRoomControlEffect__AddValue_d__10_TypeInfo, method, v2);
+  CoinRoomControlEffect__AddValue_d__10___ctor((CoinRoomControlEffect__AddValue_d__10_o *)v4, 0, 0LL);
+  if ( !v4 )
+    sub_B0D97C(v5);
+  *(_QWORD *)(v4 + 32) = this;
+  sub_B0D840((BattleServantConfConponent_o *)(v4 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_IEnumerator_o *)v4;
 }
 
 
@@ -50,7 +50,7 @@ void __fastcall CoinRoomControlEffect__KeyEventStartAddValue(
 
   this->fields.actionTime = time;
   v4 = CoinRoomControlEffect__AddValue(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_35309748((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_34930128((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
 }
 
 
@@ -73,7 +73,7 @@ void __fastcall CoinRoomControlEffect__SetValue(
   this->fields.endValue = endValue;
   this->fields.devideValue = maxValue;
   if ( !targetParticle )
-    sub_B2C434(0LL, startValue);
+    sub_B0D97C(0LL);
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main(targetParticle, 0LL).fields.m_ParticleSystem;
   UnityEngine_ParticleSystem_MinMaxCurve__op_Implicit(
     &v8,
@@ -140,14 +140,14 @@ bool __fastcall CoinRoomControlEffect__AddValue_d__10__MoveNext(
       if ( this )
       {
         v4->fields._mainModule_5__5 = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)this, 0LL);
-        sub_B2C2F8(&v4->fields._mainModule_5__5, 0LL);
+        sub_B0D840(&v4->fields._mainModule_5__5, 0LL);
         v4->fields._time_5__6 = 0.0;
         v7 = 0.0;
         goto LABEL_7;
       }
     }
 LABEL_11:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   }
   time_5__6 = this->fields._time_5__6;
   this->fields.__1__state = -1;
@@ -174,7 +174,7 @@ LABEL_7:
   UnityEngine_ParticleSystem_MainModule__set_startSize(v16, &v13, 0LL);
   v4->fields.__2__current = 0LL;
   p__2__current = &v4->fields.__2__current;
-  sub_B2C2F8(p__2__current, 0LL);
+  sub_B0D840(p__2__current, 0LL);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -194,14 +194,16 @@ void __fastcall __noreturn CoinRoomControlEffect__AddValue_d__10__System_Collect
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_B2C360(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B2C42C(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B2C360(&Method_CoinRoomControlEffect__AddValue_d__10_System_Collections_IEnumerator_Reset__);
-  sub_B2C400(v3, v4);
+  v2 = sub_B0D8A8(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_B0D974(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_B0D8A8(&Method_CoinRoomControlEffect__AddValue_d__10_System_Collections_IEnumerator_Reset__);
+  sub_B0D948(v5, v6);
 }
 
 

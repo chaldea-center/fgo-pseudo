@@ -1,13 +1,13 @@
 void __fastcall EventUiReleaseEntity___ctor(EventUiReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_41882A8 & 1) == 0 )
+  if ( (byte_421511A & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
-    byte_41882A8 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
+    byte_421511A = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.eventUiId = 0LL;
   *(_QWORD *)&this->fields.idx = 0LL;
   this->fields.condNum = 0;
@@ -22,16 +22,16 @@ System_String_o *__fastcall EventUiReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_41882A9 & 1) == 0 )
+  if ( (byte_421511B & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
-    byte_41882A9 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
+    byte_421511B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventUiId,
            priority,
            idx,
-           (const MethodInfo_1732D30 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1713844 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

@@ -4,7 +4,7 @@ void __fastcall GachaRqParamData___ctor(GachaRqParamData_o *this, const MethodIn
 }
 
 
-void __fastcall GachaRqParamData___ctor_31316164(
+void __fastcall GachaRqParamData___ctor_31167804(
         GachaRqParamData_o *this,
         int32_t gachaType,
         int32_t gachaId,
@@ -42,7 +42,7 @@ void __fastcall GachaRqParamData___ctor_31316164(
   this->fields.gachaResourceNum = gachaResourceNum;
   this->fields.ticketItemId = ticketItemId;
   this->fields.storyAdjustIds = storyAdjustIds;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.storyAdjustIds,
     (System_Int32_array **)storyAdjustIds,
     v20,
@@ -53,7 +53,7 @@ void __fastcall GachaRqParamData___ctor_31316164(
     v25);
   this->fields.selectBonusList = selectBonusList;
   this->fields.isAppendSummon = isAppendSummon;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.selectBonusList,
     (System_Int32_array **)selectBonusList,
     v26,

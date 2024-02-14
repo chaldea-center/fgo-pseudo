@@ -30,7 +30,7 @@ __int64 __fastcall ReadZStream(__int64 *a1, __int64 a2, int a3)
             *(_DWORD *)(v6 + 8) = v7;
             *(_QWORD *)v6 = v8;
           }
-          result = sub_A9096C(*a1, 2LL);
+          result = sub_A73978(*a1, 2LL);
           if ( (_DWORD)result )
             break;
           if ( !*(_DWORD *)(v6 + 32) )

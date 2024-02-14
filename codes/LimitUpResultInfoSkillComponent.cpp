@@ -34,11 +34,11 @@ void __fastcall LimitUpResultInfoSkillComponent__Setup(
   ServantSkillStrengthStatus_o *v20; // x24
   UnityEngine_Vector2Int_o v21; // 0:x6.8
 
-  if ( (byte_4187132 & 1) == 0 )
+  if ( (byte_4213EEA & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___, *(_QWORD *)&skillId);
-    sub_B2C35C(&ServantSkillStrengthStatus_TypeInfo, v13);
-    byte_4187132 = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___, *(_QWORD *)&skillId);
+    sub_B0D8A4(&ServantSkillStrengthStatus_TypeInfo, v13);
+    byte_4213EEA = 1;
   }
   iconLimitUp = this->fields.iconLimitUp;
   if ( !iconLimitUp )
@@ -64,7 +64,7 @@ void __fastcall LimitUpResultInfoSkillComponent__Setup(
     {
       PATH = ServantSkillStrengthStatus_TypeInfo->static_fields->PATH;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)iconLimitUp, 0LL);
-      iconLimitUp = (SkillIconComponent_o *)BaseMonoBehaviour__createObject_19214240(
+      iconLimitUp = (SkillIconComponent_o *)BaseMonoBehaviour__createObject_18711800(
                                               (BaseMonoBehaviour_o *)this,
                                               PATH,
                                               transform,
@@ -74,7 +74,7 @@ void __fastcall LimitUpResultInfoSkillComponent__Setup(
       {
         Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                     (UnityEngine_GameObject_o *)iconLimitUp,
-                                    (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+                                    (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
         nameLimitUpLabel = this->fields.nameLimitUpLabel;
         v20 = (ServantSkillStrengthStatus_o *)Component_srcLineSprite;
         iconLimitUp = (SkillIconComponent_o *)ServantSkillEntity__GetStrengthStatus(svtSkillEntity, 0LL);
@@ -95,7 +95,7 @@ void __fastcall LimitUpResultInfoSkillComponent__Setup(
       }
     }
 LABEL_15:
-    sub_B2C434(iconLimitUp, *(_QWORD *)&skillId);
+    sub_B0D97C(iconLimitUp);
   }
 LABEL_14:
   LimitUpResultInfoComponent__Setup((LimitUpResultInfoComponent_o *)this, title, detail, v15);

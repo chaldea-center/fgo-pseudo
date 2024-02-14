@@ -19,39 +19,38 @@ void __fastcall LimitUpResultInfoComponent__Open(
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Transform_o *transform; // x20
   UnityEngine_GameObject_o *v7; // x0
-  __int64 v8; // x1
-  int v9; // s0
-  UnityEngine_Transform_o *v12; // x20
-  int v13; // s0
-  UnityEngine_Transform_o *v16; // x20
-  int v17; // s0
-  UnityEngine_Transform_o *v20; // x20
-  int v21; // s0
+  int v8; // s0
+  UnityEngine_Transform_o *v11; // x20
+  int v12; // s0
+  UnityEngine_Transform_o *v15; // x20
+  int v16; // s0
+  UnityEngine_Transform_o *v19; // x20
+  int v20; // s0
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   GameObjectExtensions__SetParent(gameObject, (UnityEngine_Component_o *)parent, 0LL);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  *(UnityEngine_Vector3_o *)&v9 = UnityEngine_Vector3__get_zero(0LL);
+  *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Vector3__get_zero(0LL);
   if ( !transform )
     goto LABEL_7;
-  UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v9, 0LL);
-  v12 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  *(UnityEngine_Vector3_o *)&v13 = UnityEngine_Vector3__get_zero(0LL);
-  if ( !v12 )
+  UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v8, 0LL);
+  v11 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  *(UnityEngine_Vector3_o *)&v12 = UnityEngine_Vector3__get_zero(0LL);
+  if ( !v11 )
     goto LABEL_7;
-  UnityEngine_Transform__set_localPosition(v12, *(UnityEngine_Vector3_o *)&v13, 0LL);
-  v16 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  *(UnityEngine_Vector3_o *)&v17 = UnityEngine_Vector3__get_zero(0LL);
-  if ( !v16
-    || (UnityEngine_Transform__set_eulerAngles(v16, *(UnityEngine_Vector3_o *)&v17, 0LL),
-        v20 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL),
-        *(UnityEngine_Vector3_o *)&v21 = UnityEngine_Vector3__get_one(0LL),
-        !v20)
-    || (UnityEngine_Transform__set_localScale(v20, *(UnityEngine_Vector3_o *)&v21, 0LL),
+  UnityEngine_Transform__set_localPosition(v11, *(UnityEngine_Vector3_o *)&v12, 0LL);
+  v15 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  *(UnityEngine_Vector3_o *)&v16 = UnityEngine_Vector3__get_zero(0LL);
+  if ( !v15
+    || (UnityEngine_Transform__set_eulerAngles(v15, *(UnityEngine_Vector3_o *)&v16, 0LL),
+        v19 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL),
+        *(UnityEngine_Vector3_o *)&v20 = UnityEngine_Vector3__get_one(0LL),
+        !v19)
+    || (UnityEngine_Transform__set_localScale(v19, *(UnityEngine_Vector3_o *)&v20, 0LL),
         (v7 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_7:
-    sub_B2C434(v7, v8);
+    sub_B0D97C(v7);
   }
   UnityEngine_GameObject__SetActive(v7, 1, 0LL);
 }
@@ -67,11 +66,11 @@ void __fastcall LimitUpResultInfoComponent__Setup(
   UILabel_o *titleLabel; // x0
   UISprite_o *lineSprite; // x19
 
-  if ( (byte_418712F & 1) == 0 )
+  if ( (byte_4213EE7 & 1) == 0 )
   {
-    sub_B2C35C(&AtlasManager_TypeInfo, title);
-    sub_B2C35C(&StringLiteral_20234/*"line_whiteAlpha"*/, v7);
-    byte_418712F = 1;
+    sub_B0D8A4(&AtlasManager_TypeInfo, title);
+    sub_B0D8A4(&StringLiteral_20297/*"line_whiteAlpha"*/, v7);
+    byte_4213EE7 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -79,11 +78,11 @@ void __fastcall LimitUpResultInfoComponent__Setup(
     || (WrapControlText__textAdjust(titleLabel, detail, titleLabel->fields.mFontSize, 0, 0, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B2C434(titleLabel, title);
+    sub_B0D97C(titleLabel);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   lineSprite = this->fields.lineSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_20234/*"line_whiteAlpha"*/, 0LL);
+  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_20297/*"line_whiteAlpha"*/, 0LL);
 }

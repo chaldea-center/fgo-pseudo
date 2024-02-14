@@ -13,7 +13,7 @@ void __fastcall SpecifiedSceneInfo___ctor(SpecifiedSceneInfo_o *this, const Meth
   v2->fields._closeBtnObject = 0LL;
   v2 = (BattleServantConfConponent_o *)((char *)v2 + 24);
   *(_QWORD *)&v2[-1].fields.isOpenAfter = 0LL;
-  sub_B2C2F8(v2, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B0D840(v2, 0LL, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -30,5 +30,5 @@ void __fastcall SpecifiedSceneInfo__InitParameter(SpecifiedSceneInfo_o *this, co
   this->fields.nextSceneParam = 0LL;
   p_nextSceneParam = &this->fields.nextSceneParam;
   *(p_nextSceneParam - 1) = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)p_nextSceneParam, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B0D840((BattleServantConfConponent_o *)p_nextSceneParam, 0LL, v2, v3, v4, v5, v6, v7);
 }

@@ -17,16 +17,16 @@ void __fastcall BgmPlayArgs___ctor(
   float value; // s0
   BgmManager_c *v20; // x0
 
-  if ( (byte_41875B5 & 1) == 0 )
+  if ( (byte_4214078 & 1) == 0 )
   {
-    sub_B2C35C(&BgmManager_TypeInfo, bgmName);
-    sub_B2C35C(&Method_System_Nullable_float__GetValueOrDefault__, v11);
-    sub_B2C35C(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_41875B5 = 1;
+    sub_B0D8A4(&BgmManager_TypeInfo, bgmName);
+    sub_B0D8A4(&Method_System_Nullable_float__GetValueOrDefault__, v11);
+    sub_B0D8A4(&Method_System_Nullable_float__get_HasValue__, v12);
+    byte_4214078 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)bgmName,
     v13,
@@ -74,18 +74,18 @@ void __fastcall BgmPlayArgs__Update(
   has_value = startTime.fields.has_value;
   value = startTime.fields.value;
   v9 = this;
-  if ( (byte_41875B6 & 1) == 0 )
+  if ( (byte_4214079 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Nullable_long__GetValueOrDefault__, volume);
-    sub_B2C35C(&Method_System_Nullable_float__GetValueOrDefault__, v10);
-    sub_B2C35C(&Method_System_Nullable_long__get_HasValue__, v11);
-    this = (BgmPlayArgs_o *)sub_B2C35C(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_41875B6 = 1;
+    sub_B0D8A4(&Method_System_Nullable_long__GetValueOrDefault__, volume);
+    sub_B0D8A4(&Method_System_Nullable_float__GetValueOrDefault__, v10);
+    sub_B0D8A4(&Method_System_Nullable_long__get_HasValue__, v11);
+    this = (BgmPlayArgs_o *)sub_B0D8A4(&Method_System_Nullable_float__get_HasValue__, v12);
+    byte_4214079 = 1;
   }
   if ( (*(_QWORD *)&volume & 0xFF00000000LL) != 0 )
   {
     if ( !v9 )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_B2C434)(this, volume);
+      sub_B0D97C(this);
     Volume_k__BackingField = volume.fields.value;
   }
   else
@@ -137,7 +137,7 @@ void __fastcall BgmPlayArgs__set_BgmName(BgmPlayArgs_o *this, System_String_o *v
   System_Int32_array *v7; // x7
 
   this->fields._BgmName_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,

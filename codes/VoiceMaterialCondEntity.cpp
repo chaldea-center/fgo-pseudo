@@ -1,13 +1,13 @@
 void __fastcall VoiceMaterialCondEntity___ctor(VoiceMaterialCondEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_418D2DD & 1) == 0 )
+  if ( (byte_421A2CC & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
-    byte_418D2DD = 1;
+    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
+    byte_421A2CC = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall VoiceMaterialCondEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_418D2DC & 1) == 0 )
+  if ( (byte_421A2CB & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_long__long__string__long___, *(_QWORD *)&voicePrefix);
-    byte_418D2DC = 1;
+    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_long__long__string__long___, *(_QWORD *)&voicePrefix);
+    byte_421A2CB = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__string__long_(
            svtId,
            voicePrefix,
            voiceId,
            idx,
-           (const MethodInfo_1733288 *)Method_DataEntityBase_CreateMultiplePK_long__long__string__long___);
+           (const MethodInfo_1713E44 *)Method_DataEntityBase_CreateMultiplePK_long__long__string__long___);
 }
 
 
@@ -48,11 +48,11 @@ System_String_o *__fastcall VoiceMaterialCondEntity__CreatePrimaryKey(
   const MethodInfo *v11; // x4
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_418D2DB & 1) == 0 )
+  if ( (byte_421A2CA & 1) == 0 )
   {
-    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
-    byte_418D2DB = 1;
+    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
+    byte_421A2CA = 1;
   }
   v5 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v4 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -63,7 +63,7 @@ System_String_o *__fastcall VoiceMaterialCondEntity__CreatePrimaryKey(
   }
   *(_QWORD *)&v13.fields.currentCryptoKey = v5;
   *(_QWORD *)&v13.fields.fakeValue = v4;
-  v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44758064(v13, 0LL);
+  v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v13, 0LL);
   voicePrefix = this->fields.voicePrefix;
   voiceId = this->fields.voiceId;
   v9 = v6;
@@ -72,7 +72,7 @@ System_String_o *__fastcall VoiceMaterialCondEntity__CreatePrimaryKey(
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
   }
-  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44796528(voiceId, 0LL);
+  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_44201040(voiceId, 0LL);
   return VoiceMaterialCondEntity__CreatePK(v9, voicePrefix, v10, this->fields.idx, v11);
 }
 
@@ -91,14 +91,14 @@ int32_t __fastcall VoiceMaterialCondEntity__getCondValue(VoiceMaterialCondEntity
 
   condValues = this->fields.condValues;
   if ( !condValues )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   v3 = *(_QWORD *)&condValues->max_length;
   if ( !v3 )
     return 0;
   if ( !(_DWORD)v3 )
   {
-    v5 = sub_B2C460(this);
-    sub_B2C400(v5, 0LL);
+    v5 = sub_B0D9A8(this);
+    sub_B0D948(v5, 0LL);
   }
   return condValues->m_Items[1];
 }

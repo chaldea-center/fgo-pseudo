@@ -12,24 +12,23 @@ System_String_array *__fastcall EventSaveData__GetValueByArray(
 {
   System_String_o *value; // x20
   System_Char_array *v6; // x0
-  __int64 v7; // x1
-  __int64 v9; // x0
+  __int64 v8; // x0
 
-  if ( (byte_418A94C & 1) == 0 )
+  if ( (byte_4217945 & 1) == 0 )
   {
-    sub_B2C35C(&char___TypeInfo, separator);
-    byte_418A94C = 1;
+    sub_B0D8A4(&char___TypeInfo, separator);
+    byte_4217945 = 1;
   }
   value = this->fields.value;
   if ( !value )
     return 0LL;
-  v6 = (System_Char_array *)sub_B2C374(char___TypeInfo, 1LL);
+  v6 = (System_Char_array *)sub_B0D8BC(char___TypeInfo, 1LL);
   if ( !v6 )
-    sub_B2C434(0LL, v7);
+    sub_B0D97C(0LL);
   if ( !v6->max_length )
   {
-    v9 = sub_B2C460(v6);
-    sub_B2C400(v9, 0LL);
+    v8 = sub_B0D9A8(v6);
+    sub_B0D948(v8, 0LL);
   }
   v6->m_Items[2] = separator;
   return System_String__Split(value, v6, 0LL);
@@ -58,7 +57,7 @@ void __fastcall EventSaveData__SetValueByArray(
     v6 = System_Char__ToString((uint16_t)&v14, 0LL);
     v7 = System_String__Join(v6, valueArray, 0LL);
     this->fields.value = v7;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)&this->fields.value,
       (System_Int32_array **)v7,
       v8,

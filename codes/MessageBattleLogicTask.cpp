@@ -12,19 +12,18 @@ BattleActionData_o *__fastcall MessageBattleLogicTask__CreateInitActionData(
 {
   BattleActionData_o *v5; // x21
   __int64 ActorId; // x0
-  __int64 v7; // x1
   BattleActionData_o *result; // x0
 
-  if ( (byte_41881F3 & 1) == 0 )
+  if ( (byte_4214E2D & 1) == 0 )
   {
-    sub_B2C35C(&BattleActionData_TypeInfo, msgEnt);
-    byte_41881F3 = 1;
+    sub_B0D8A4(&BattleActionData_TypeInfo, msgEnt);
+    byte_4214E2D = 1;
   }
-  v5 = (BattleActionData_o *)sub_B2C42C(BattleActionData_TypeInfo);
+  v5 = (BattleActionData_o *)sub_B0D974(BattleActionData_TypeInfo, msgEnt, method);
   BattleActionData___ctor(v5, 0LL);
   ActorId = BattleLogicTask__getActorId((BattleLogicTask_o *)this, 0LL);
   if ( !v5 || (v5->fields.actorId = ActorId, !msgEnt) )
-    sub_B2C434(ActorId, v7);
+    sub_B0D97C(ActorId);
   v5->fields.motionId = msgEnt->fields.motionId;
   v5->fields.state = BattleLogicTask__ConvertActorToActionState((BattleLogicTask_o *)this, 0LL);
   result = v5;
@@ -40,7 +39,7 @@ void __fastcall MessageBattleLogicTask__Init(
         const MethodInfo *method)
 {
   if ( !aiActEnt || (this->fields.isMsgGroup = aiActEnt->fields.type == 73, !aiEnt) )
-    sub_B2C434(this, aiActEnt);
+    sub_B0D97C(this);
   this->fields.value = AiBaseEntity__getActionValue(aiEnt, 0LL);
 }
 
@@ -66,11 +65,11 @@ BattleActionData_o *__fastcall MessageBattleLogicTask__MakeActionData(
   __int64 v18; // x0
 
   v4 = this;
-  if ( (byte_41881F2 & 1) == 0 )
+  if ( (byte_4214E2C & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMaster_BattleMessageMaster___, logic);
-    this = (MessageBattleLogicTask_o *)sub_B2C35C(&DataManager_TypeInfo, v5);
-    byte_41881F2 = 1;
+    sub_B0D8A4(&Method_DataManager_GetMaster_BattleMessageMaster___, logic);
+    this = (MessageBattleLogicTask_o *)sub_B0D8A4(&DataManager_TypeInfo, v5);
+    byte_4214E2C = 1;
   }
   if ( v4->fields.isMsgGroup )
   {
@@ -90,10 +89,10 @@ BattleActionData_o *__fastcall MessageBattleLogicTask__MakeActionData(
   }
   if ( (BYTE3(DataManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (MessageBattleLogicTask_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_BattleMessageMaster___);
+  this = (MessageBattleLogicTask_o *)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_BattleMessageMaster___);
   if ( !this )
 LABEL_32:
-    sub_B2C434(this, logic);
+    sub_B0D97C(this);
   Entities = BattleMessageMaster__GetEntities((BattleMessageMaster_o *)this, value, 0LL);
   this = (MessageBattleLogicTask_o *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)Entities, 0LL);
   if ( ((unsigned __int8)this & 1) == 0 )
@@ -103,8 +102,8 @@ LABEL_32:
       if ( !Entities->max_length )
       {
 LABEL_33:
-        v18 = sub_B2C460(this);
-        sub_B2C400(v18, 0LL);
+        v18 = sub_B0D9A8(this);
+        sub_B0D948(v18, 0LL);
       }
       this = (MessageBattleLogicTask_o *)MessageBattleLogicTask__CreateInitActionData(v4, Entities->m_Items[0], v9);
       if ( logic )
@@ -151,7 +150,7 @@ LABEL_28:
           this = (MessageBattleLogicTask_o *)logic->fields.perf;
           if ( !this )
             goto LABEL_32;
-          BattlePerformance__addActionData_18594788((BattlePerformance_o *)this, InitActionData, 0LL);
+          BattlePerformance__addActionData_18166504((BattlePerformance_o *)this, InitActionData, 0LL);
           InitActionData = MessageBattleLogicTask__CreateInitActionData(v4, v14, v16);
 LABEL_27:
           this = (MessageBattleLogicTask_o *)BattleLogic__get_ParseBattleMsg(logic, 0LL);
@@ -163,7 +162,7 @@ LABEL_29:
         this = (MessageBattleLogicTask_o *)logic->fields.perf;
         if ( this )
         {
-          BattlePerformance__addActionData_18594788((BattlePerformance_o *)this, InitActionData, 0LL);
+          BattlePerformance__addActionData_18166504((BattlePerformance_o *)this, InitActionData, 0LL);
           return 0LL;
         }
       }

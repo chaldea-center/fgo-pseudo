@@ -11,12 +11,18 @@ SimpleAnimation_o *__fastcall SubmarineSilhouetteComponent__get_AnimationCompone
   __int64 v3; // x1
   UnityEngine_Object_o *mAnimation; // x21
   struct SimpleAnimation_o *Component_WebViewObject; // x0
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_418584D & 1) == 0 )
+  if ( (byte_4215F60 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, method);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v3);
-    byte_418584D = 1;
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, method);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4215F60 = 1;
   }
   mAnimation = (UnityEngine_Object_o *)this->fields.mAnimation;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -28,9 +34,17 @@ SimpleAnimation_o *__fastcall SubmarineSilhouetteComponent__get_AnimationCompone
   {
     Component_WebViewObject = (struct SimpleAnimation_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                             (UnityEngine_Component_o *)this,
-                                                            (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                                                            (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
     this->fields.mAnimation = Component_WebViewObject;
-    sub_B2C2F8(&this->fields.mAnimation, Component_WebViewObject);
+    sub_B0D840(
+      (BattleServantConfConponent_o *)&this->fields.mAnimation,
+      (System_Int32_array **)Component_WebViewObject,
+      v6,
+      v7,
+      v8,
+      v9,
+      v10,
+      v11);
   }
   return this->fields.mAnimation;
 }

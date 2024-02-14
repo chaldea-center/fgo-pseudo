@@ -1,14 +1,14 @@
 void __fastcall UserExpMaster___ctor(UserExpMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4186F9D & 1) == 0 )
+  if ( (byte_42136DE & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int___ctor__, method);
-    byte_4186F9D = 1;
+    sub_B0D8A4(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int___ctor__, method);
+    byte_42136DE = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     59,
-    (const MethodInfo_24E4034 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int___ctor__);
+    (const MethodInfo_2669B38 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int___ctor__);
 }
 
 
@@ -18,15 +18,15 @@ UserExpEntity_o *__fastcall UserExpMaster__getEntityFromLevel(
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_4186F9E & 1) == 0 )
+  if ( (byte_42136DF & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__, *(_QWORD *)&lv);
-    byte_4186F9E = 1;
+    sub_B0D8A4(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__, *(_QWORD *)&lv);
+    byte_42136DF = 1;
   }
   return (UserExpEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                               (DataMasterBase_WarMaster__WarEntity__int__o *)this,
                               lv,
-                              (const MethodInfo_24E40D0 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+                              (const MethodInfo_2669BD4 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
 }
 
 
@@ -43,10 +43,10 @@ int32_t __fastcall UserExpMaster__getLevel(
   int32_t v10; // w23
 
   v6 = this;
-  if ( (byte_4186FA0 & 1) == 0 )
+  if ( (byte_42136E1 & 1) == 0 )
   {
-    this = (UserExpMaster_o *)sub_B2C35C(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__, exp);
-    byte_4186FA0 = 1;
+    this = (UserExpMaster_o *)sub_B0D8A4(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__, exp);
+    byte_42136E1 = 1;
   }
   LevelMax = UserExpMaster__getLevelMax(this, (const MethodInfo *)exp);
   if ( LevelMax >= start_lv )
@@ -55,7 +55,7 @@ int32_t __fastcall UserExpMaster__getLevel(
     Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                (DataMasterBase_WarMaster__WarEntity__int__o *)v6,
                start_lv,
-               (const MethodInfo_24E40D0 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+               (const MethodInfo_2669BD4 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
     if ( Entity )
     {
       v10 = start_lv + 1;
@@ -69,7 +69,7 @@ int32_t __fastcall UserExpMaster__getLevel(
         Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                    (DataMasterBase_WarMaster__WarEntity__int__o *)v6,
                    v10++,
-                   (const MethodInfo_24E40D0 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+                   (const MethodInfo_2669BD4 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
       }
       while ( Entity );
     }
@@ -80,10 +80,10 @@ int32_t __fastcall UserExpMaster__getLevel(
 
 int32_t __fastcall UserExpMaster__getLevelMax(UserExpMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4186F9F & 1) == 0 )
+  if ( (byte_42136E0 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_8703/*"MAX_USER_LV"*/, method);
-    byte_4186F9F = 1;
+    sub_B0D8A4(&StringLiteral_8725/*"MAX_USER_LV"*/, method);
+    byte_42136E0 = 1;
   }
-  return ConstantMaster__getValue((System_String_o *)StringLiteral_8703/*"MAX_USER_LV"*/, 0LL);
+  return ConstantMaster__getValue((System_String_o *)StringLiteral_8725/*"MAX_USER_LV"*/, 0LL);
 }

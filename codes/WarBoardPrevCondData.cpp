@@ -5,7 +5,7 @@ void __fastcall WarBoardPrevCondData___ctor(WarBoardPrevCondData_o *this, const 
 }
 
 
-void __fastcall WarBoardPrevCondData___ctor_27739336(
+void __fastcall WarBoardPrevCondData___ctor_27781792(
         WarBoardPrevCondData_o *this,
         int32_t id,
         int32_t turn,
@@ -17,17 +17,16 @@ void __fastcall WarBoardPrevCondData___ctor_27739336(
 }
 
 
-void __fastcall WarBoardPrevCondData___ctor_27739392(
+void __fastcall WarBoardPrevCondData___ctor_27781848(
         WarBoardPrevCondData_o *this,
         WarBoardPrevCondData_SaveData_o *saveData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !saveData )
-    sub_B2C434(v5, v6);
+    sub_B0D97C(v5);
   this->fields._condId_k__BackingField = saveData->fields.condId;
   this->fields._clearedTurn_k__BackingField = saveData->fields.clearedTurn;
 }
@@ -77,17 +76,16 @@ void __fastcall WarBoardPrevCondData_SaveData___ctor(WarBoardPrevCondData_SaveDa
 }
 
 
-void __fastcall WarBoardPrevCondData_SaveData___ctor_22650752(
+void __fastcall WarBoardPrevCondData_SaveData___ctor_22739212(
         WarBoardPrevCondData_SaveData_o *this,
         WarBoardPrevCondData_o *prevCondData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !prevCondData )
-    sub_B2C434(v5, v6);
+    sub_B0D97C(v5);
   this->fields.condId = prevCondData->fields._condId_k__BackingField;
   this->fields.clearedTurn = prevCondData->fields._clearedTurn_k__BackingField;
 }

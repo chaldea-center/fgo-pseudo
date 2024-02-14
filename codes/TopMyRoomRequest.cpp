@@ -97,20 +97,20 @@ void __fastcall TopMyRoomRequest__beginRequest(
   RequestBase_o *v89; // [xsp+8h] [xbp-58h]
 
   v4 = this;
-  if ( (byte_4189934 & 1) == 0 )
+  if ( (byte_42167A0 & 1) == 0 )
   {
-    sub_B2C35C(&string___TypeInfo, voicePlayedList);
-    sub_B2C35C(&StringLiteral_746/*",["*/, v5);
-    sub_B2C35C(&StringLiteral_699/*","*/, v6);
-    sub_B2C35C(&StringLiteral_23181/*"voicePlayedList"*/, v7);
-    sub_B2C35C(&StringLiteral_15634/*"["*/, v8);
-    sub_B2C35C(&StringLiteral_1/*""*/, v9);
-    this = (TopMyRoomRequest_o *)sub_B2C35C(&StringLiteral_15870/*"]"*/, v10);
-    byte_4189934 = 1;
+    sub_B0D8A4(&string___TypeInfo, voicePlayedList);
+    sub_B0D8A4(&StringLiteral_752/*",["*/, v5);
+    sub_B0D8A4(&StringLiteral_705/*","*/, v6);
+    sub_B0D8A4(&StringLiteral_23259/*"voicePlayedList"*/, v7);
+    sub_B0D8A4(&StringLiteral_15681/*"["*/, v8);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v9);
+    this = (TopMyRoomRequest_o *)sub_B0D8A4(&StringLiteral_15917/*"]"*/, v10);
+    byte_42167A0 = 1;
   }
   if ( !voicePlayedList )
 LABEL_68:
-    sub_B2C434(this, voicePlayedList);
+    sub_B0D97C(this);
   v89 = (RequestBase_o *)v4;
   v11 = *(_QWORD *)&voicePlayedList->max_length;
   v12 = (System_Int32_array **)StringLiteral_1/*""*/;
@@ -124,17 +124,17 @@ LABEL_68:
       {
         if ( System_String__IsNullOrEmpty((System_String_o *)v12, 0LL) )
         {
-          this = (TopMyRoomRequest_o *)sub_B2C374(string___TypeInfo, 5LL);
+          this = (TopMyRoomRequest_o *)sub_B0D8BC(string___TypeInfo, 5LL);
           if ( !this )
             goto LABEL_68;
           v21 = this;
-          this = (TopMyRoomRequest_o *)StringLiteral_15634/*"["*/;
-          if ( StringLiteral_15634/*"["*/ )
+          this = (TopMyRoomRequest_o *)StringLiteral_15681/*"["*/;
+          if ( StringLiteral_15681/*"["*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(StringLiteral_15634/*"["*/, v21->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(StringLiteral_15681/*"["*/, v21->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            v22 = (System_Int32_array **)StringLiteral_15634/*"["*/;
+            v22 = (System_Int32_array **)StringLiteral_15681/*"["*/;
           }
           else
           {
@@ -143,28 +143,28 @@ LABEL_68:
           if ( !LODWORD(v21->fields.paramInteger) )
             break;
           v21->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)v22;
-          sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.paramString, v22, v15, v16, v17, v18, v19, v20);
+          sub_B0D840((BattleServantConfConponent_o *)&v21->fields.paramString, v22, v15, v16, v17, v18, v19, v20);
           if ( !v14->max_length )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v14 + 32, 0LL);
           v42 = (System_Int32_array **)this;
           if ( this )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(this, v21->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(this, v21->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
           }
           if ( LODWORD(v21->fields.paramInteger) <= 1 )
             break;
           v21[1].klass = (TopMyRoomRequest_c *)v42;
-          sub_B2C2F8((BattleServantConfConponent_o *)&v21[1], v42, v36, v37, v38, v39, v40, v41);
-          this = (TopMyRoomRequest_o *)StringLiteral_699/*","*/;
-          if ( StringLiteral_699/*","*/ )
+          sub_B0D840((BattleServantConfConponent_o *)&v21[1], v42, v36, v37, v38, v39, v40, v41);
+          this = (TopMyRoomRequest_o *)StringLiteral_705/*","*/;
+          if ( StringLiteral_705/*","*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(StringLiteral_699/*","*/, v21->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(StringLiteral_705/*","*/, v21->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            v49 = (System_Int32_array **)StringLiteral_699/*","*/;
+            v49 = (System_Int32_array **)StringLiteral_705/*","*/;
           }
           else
           {
@@ -173,28 +173,28 @@ LABEL_68:
           if ( LODWORD(v21->fields.paramInteger) <= 2 )
             break;
           v21[1].monitor = v49;
-          sub_B2C2F8((BattleServantConfConponent_o *)&v21[1].monitor, v49, v43, v44, v45, v46, v47, v48);
+          sub_B0D840((BattleServantConfConponent_o *)&v21[1].monitor, v49, v43, v44, v45, v46, v47, v48);
           if ( v14->max_length <= 1 )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v14 + 36, 0LL);
           v70 = (System_Int32_array **)this;
           if ( this )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(this, v21->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(this, v21->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
           }
           if ( LODWORD(v21->fields.paramInteger) <= 3 )
             break;
           v21[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)v70;
-          sub_B2C2F8((BattleServantConfConponent_o *)&v21[1].fields, v70, v64, v65, v66, v67, v68, v69);
-          this = (TopMyRoomRequest_o *)StringLiteral_15870/*"]"*/;
-          if ( StringLiteral_15870/*"]"*/ )
+          sub_B0D840((BattleServantConfConponent_o *)&v21[1].fields, v70, v64, v65, v66, v67, v68, v69);
+          this = (TopMyRoomRequest_o *)StringLiteral_15917/*"]"*/;
+          if ( StringLiteral_15917/*"]"*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(StringLiteral_15870/*"]"*/, v21->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(StringLiteral_15917/*"]"*/, v21->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            v77 = (System_Int32_array **)StringLiteral_15870/*"]"*/;
+            v77 = (System_Int32_array **)StringLiteral_15917/*"]"*/;
           }
           else
           {
@@ -207,31 +207,31 @@ LABEL_68:
         }
         else
         {
-          this = (TopMyRoomRequest_o *)sub_B2C374(string___TypeInfo, 6LL);
+          this = (TopMyRoomRequest_o *)sub_B0D8BC(string___TypeInfo, 6LL);
           if ( !this )
             goto LABEL_68;
           v21 = this;
           if ( v12 )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(v12, this->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(v12, this->klass->_1.element_class);
             if ( !this )
             {
 LABEL_67:
-              v88 = sub_B2C454(this);
-              sub_B2C400(v88, 0LL);
+              v88 = sub_B0D99C(this);
+              sub_B0D948(v88, 0LL);
             }
           }
           if ( !LODWORD(v21->fields.paramInteger) )
             break;
           v21->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)v12;
-          sub_B2C2F8((BattleServantConfConponent_o *)&v21->fields.paramString, v12, v23, v24, v25, v26, v27, v28);
-          this = (TopMyRoomRequest_o *)StringLiteral_746/*",["*/;
-          if ( StringLiteral_746/*",["*/ )
+          sub_B0D840((BattleServantConfConponent_o *)&v21->fields.paramString, v12, v23, v24, v25, v26, v27, v28);
+          this = (TopMyRoomRequest_o *)StringLiteral_752/*",["*/;
+          if ( StringLiteral_752/*",["*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(StringLiteral_746/*",["*/, v21->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(StringLiteral_752/*",["*/, v21->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            v35 = (System_Int32_array **)StringLiteral_746/*",["*/;
+            v35 = (System_Int32_array **)StringLiteral_752/*",["*/;
           }
           else
           {
@@ -240,28 +240,28 @@ LABEL_67:
           if ( LODWORD(v21->fields.paramInteger) <= 1 )
             break;
           v21[1].klass = (TopMyRoomRequest_c *)v35;
-          sub_B2C2F8((BattleServantConfConponent_o *)&v21[1], v35, v29, v30, v31, v32, v33, v34);
+          sub_B0D840((BattleServantConfConponent_o *)&v21[1], v35, v29, v30, v31, v32, v33, v34);
           if ( !v14->max_length )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v14 + 32, 0LL);
           v56 = (System_Int32_array **)this;
           if ( this )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(this, v21->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(this, v21->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
           }
           if ( LODWORD(v21->fields.paramInteger) <= 2 )
             break;
           v21[1].monitor = v56;
-          sub_B2C2F8((BattleServantConfConponent_o *)&v21[1].monitor, v56, v50, v51, v52, v53, v54, v55);
-          this = (TopMyRoomRequest_o *)StringLiteral_699/*","*/;
-          if ( StringLiteral_699/*","*/ )
+          sub_B0D840((BattleServantConfConponent_o *)&v21[1].monitor, v56, v50, v51, v52, v53, v54, v55);
+          this = (TopMyRoomRequest_o *)StringLiteral_705/*","*/;
+          if ( StringLiteral_705/*","*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(StringLiteral_699/*","*/, v21->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(StringLiteral_705/*","*/, v21->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            v63 = (System_Int32_array **)StringLiteral_699/*","*/;
+            v63 = (System_Int32_array **)StringLiteral_705/*","*/;
           }
           else
           {
@@ -270,28 +270,28 @@ LABEL_67:
           if ( LODWORD(v21->fields.paramInteger) <= 3 )
             break;
           v21[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)v63;
-          sub_B2C2F8((BattleServantConfConponent_o *)&v21[1].fields, v63, v57, v58, v59, v60, v61, v62);
+          sub_B0D840((BattleServantConfConponent_o *)&v21[1].fields, v63, v57, v58, v59, v60, v61, v62);
           if ( v14->max_length <= 1 )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v14 + 36, 0LL);
           v84 = (System_Int32_array **)this;
           if ( this )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(this, v21->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(this, v21->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
           }
           if ( LODWORD(v21->fields.paramInteger) <= 4 )
             break;
           v21[1].fields.paramInteger = (struct System_Collections_Generic_Dictionary_string__int__o *)v84;
-          sub_B2C2F8((BattleServantConfConponent_o *)&v21[1].fields.paramInteger, v84, v78, v79, v80, v81, v82, v83);
-          this = (TopMyRoomRequest_o *)StringLiteral_15870/*"]"*/;
-          if ( StringLiteral_15870/*"]"*/ )
+          sub_B0D840((BattleServantConfConponent_o *)&v21[1].fields.paramInteger, v84, v78, v79, v80, v81, v82, v83);
+          this = (TopMyRoomRequest_o *)StringLiteral_15917/*"]"*/;
+          if ( StringLiteral_15917/*"]"*/ )
           {
-            this = (TopMyRoomRequest_o *)sub_B2C41C(StringLiteral_15870/*"]"*/, v21->klass->_1.element_class);
+            this = (TopMyRoomRequest_o *)sub_B0D964(StringLiteral_15917/*"]"*/, v21->klass->_1.element_class);
             if ( !this )
               goto LABEL_67;
-            v77 = (System_Int32_array **)StringLiteral_15870/*"]"*/;
+            v77 = (System_Int32_array **)StringLiteral_15917/*"]"*/;
           }
           else
           {
@@ -302,24 +302,24 @@ LABEL_67:
           v21[1].fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)v77;
           p_paramInteger = (BattleServantConfConponent_o *)&v21[1].fields.paramString;
         }
-        sub_B2C2F8(p_paramInteger, v77, v71, v72, v73, v74, v75, v76);
-        this = (TopMyRoomRequest_o *)System_String__Concat_44385656((System_String_array *)v21, 0LL);
+        sub_B0D840(p_paramInteger, v77, v71, v72, v73, v74, v75, v76);
+        this = (TopMyRoomRequest_o *)System_String__Concat_43930028((System_String_array *)v21, 0LL);
         v12 = (System_Int32_array **)this;
       }
       LODWORD(v11) = voicePlayedList->max_length;
       if ( (__int64)++v13 >= (int)v11 )
         goto LABEL_65;
     }
-    v87 = sub_B2C460(this);
-    sub_B2C400(v87, 0LL);
+    v87 = sub_B0D9A8(this);
+    sub_B0D948(v87, 0LL);
   }
 LABEL_65:
-  v86 = System_String__Concat_44307816(
-          (System_String_o *)StringLiteral_15634/*"["*/,
+  v86 = System_String__Concat_43852188(
+          (System_String_o *)StringLiteral_15681/*"["*/,
           (System_String_o *)v12,
-          (System_String_o *)StringLiteral_15870/*"]"*/,
+          (System_String_o *)StringLiteral_15917/*"]"*/,
           0LL);
-  RequestBase__addField_31051928(v89, (System_String_o *)StringLiteral_23181/*"voicePlayedList"*/, v86, 0LL);
+  RequestBase__addField_30435648(v89, (System_String_o *)StringLiteral_23259/*"voicePlayedList"*/, v86, 0LL);
   RequestBase__beginRequest(v89, 0LL);
 }
 
@@ -329,11 +329,11 @@ System_String_o *__fastcall TopMyRoomRequest__getURL(TopMyRoomRequest_o *this, c
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4189933 & 1) == 0 )
+  if ( (byte_421679F & 1) == 0 )
   {
-    sub_B2C35C(&NetworkManager_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_17227/*"card/voice"*/, v2);
-    byte_4189933 = 1;
+    sub_B0D8A4(&NetworkManager_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_17279/*"card/voice"*/, v2);
+    byte_421679F = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -341,7 +341,7 @@ System_String_o *__fastcall TopMyRoomRequest__getURL(TopMyRoomRequest_o *this, c
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44305532(BaseUrl, (System_String_o *)StringLiteral_17227/*"card/voice"*/, 0LL);
+  return System_String__Concat_43849904(BaseUrl, (System_String_o *)StringLiteral_17279/*"card/voice"*/, 0LL);
 }
 
 
@@ -355,12 +355,12 @@ void __fastcall TopMyRoomRequest__requestCompleted(
   ResponseData_o *v7; // x0
   __int64 *v8; // x8
 
-  if ( (byte_4189935 & 1) == 0 )
+  if ( (byte_42167A1 & 1) == 0 )
   {
-    sub_B2C35C(&ResponseCommandKind_TypeInfo, responseList);
-    sub_B2C35C(&StringLiteral_21218/*"ok"*/, v5);
-    sub_B2C35C(&StringLiteral_21068/*"ng"*/, v6);
-    byte_4189935 = 1;
+    sub_B0D8A4(&ResponseCommandKind_TypeInfo, responseList);
+    sub_B0D8A4(&StringLiteral_21287/*"ok"*/, v5);
+    sub_B0D8A4(&StringLiteral_21137/*"ng"*/, v6);
+    byte_42167A1 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -368,9 +368,9 @@ void __fastcall TopMyRoomRequest__requestCompleted(
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
   v7 = ResponseCommandKind__SearchData(5, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_31019724(v7, 0LL) )
-    v8 = &StringLiteral_21218/*"ok"*/;
+  if ( v7 && ResponseData__checkError_30403444(v7, 0LL) )
+    v8 = &StringLiteral_21287/*"ok"*/;
   else
-    v8 = &StringLiteral_21068/*"ng"*/;
+    v8 = &StringLiteral_21137/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
 }

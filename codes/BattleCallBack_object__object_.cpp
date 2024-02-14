@@ -3,7 +3,7 @@ void __fastcall BattleCallBack_object__object____ctor(
         Il2CppObject *arg1,
         Il2CppObject *arg2,
         System_Action_T1__T2__o *callBack,
-        const MethodInfo_2D600DC *method)
+        const MethodInfo_2D54F30 *method)
 {
   System_String_array **v9; // x2
   System_String_array **v10; // x3
@@ -25,12 +25,12 @@ void __fastcall BattleCallBack_object__object____ctor(
   System_Int32_array *v26; // x7
 
   if ( !this )
-    sub_B2C434(0LL, arg1);
+    sub_B0D97C(0LL);
   BattleCallBackBase___ctor((BattleCallBackBase_o *)this, 0LL);
   this->fields.arg1 = arg1;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)arg1, v9, v10, v11, v12, v13, v14);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)arg1, v9, v10, v11, v12, v13, v14);
   this->fields.arg2 = arg2;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.arg2,
     (System_Int32_array **)arg2,
     v15,
@@ -40,7 +40,7 @@ void __fastcall BattleCallBack_object__object____ctor(
     v19,
     v20);
   this->fields.callBack = callBack;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.callBack,
     (System_Int32_array **)callBack,
     v21,
@@ -52,7 +52,7 @@ void __fastcall BattleCallBack_object__object____ctor(
 }
 
 
-void __fastcall BattleCallBack_object__object___call(BattleCallBack_T1__T2__o *this, const MethodInfo_2D60148 *method)
+void __fastcall BattleCallBack_object__object___call(BattleCallBack_T1__T2__o *this, const MethodInfo_2D54F9C *method)
 {
   ((void (__fastcall *)(struct System_Action_T1__T2__o *, Il2CppObject *, Il2CppObject *))method->klass->rgctx_data->_0_ActionExtensions_Call_T1__T2_->methodPointer)(
     this->fields.callBack,

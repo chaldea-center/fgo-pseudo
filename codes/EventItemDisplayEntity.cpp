@@ -1,28 +1,28 @@
 void __fastcall EventItemDisplayEntity___ctor(EventItemDisplayEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4188D3E & 1) == 0 )
+  if ( (byte_42159E6 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4188D3E = 1;
+    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
+    byte_42159E6 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventItemDisplayEntity__CreatePK(int32_t id, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4188D3C & 1) == 0 )
+  if ( (byte_42159E4 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&eventId);
-    byte_4188D3C = 1;
+    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&eventId);
+    byte_42159E4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            eventId,
-           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_171341C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -64,23 +64,23 @@ bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this,
   __int64 v5; // x1
   int64_t Time; // x0
   DataManager_o *Instance; // x0
-  const MethodInfo *v8; // x1
   struct System_Int32_array *conditionDetailIds; // x20
-  __int64 v10; // x8
-  DataMasterBase_WarMaster__WarEntity__int__o *v11; // x19
-  unsigned __int64 v12; // x21
+  __int64 v9; // x8
+  DataMasterBase_WarMaster__WarEntity__int__o *v10; // x19
+  unsigned __int64 v11; // x21
+  const MethodInfo *v12; // x1
   __int64 v14; // x0
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4188D3D & 1) == 0 )
+  if ( (byte_42159E5 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___, method);
-    sub_B2C35C(
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___, method);
+    sub_B0D8A4(
       &Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__,
       v3);
-    sub_B2C35C(&NetworkManager_TypeInfo, v4);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4188D3D = 1;
+    sub_B0D8A4(&NetworkManager_TypeInfo, v4);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_42159E5 = 1;
   }
   entity = 0LL;
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -91,34 +91,34 @@ bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this,
   Time = NetworkManager__getTime(0LL);
   if ( Time < this->fields.openedAt || Time >= this->fields.closedAt )
     return 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
+                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventItemDisplayReleaseMaster___);
   conditionDetailIds = this->fields.conditionDetailIds;
   if ( !conditionDetailIds )
     goto LABEL_20;
-  v10 = *(_QWORD *)&conditionDetailIds->max_length;
-  if ( (int)v10 >= 1 )
+  v9 = *(_QWORD *)&conditionDetailIds->max_length;
+  if ( (int)v9 >= 1 )
   {
-    v11 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
-    v12 = 0LL;
+    v10 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
+    v11 = 0LL;
     while ( 1 )
     {
-      if ( v12 >= (unsigned int)v10 )
+      if ( v11 >= (unsigned int)v9 )
       {
-        v14 = sub_B2C460(Instance);
-        sub_B2C400(v14, 0LL);
+        v14 = sub_B0D9A8(Instance);
+        sub_B0D948(v14, 0LL);
       }
-      if ( !v11 )
+      if ( !v10 )
         break;
       Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                                    v11,
+                                    v10,
                                     &entity,
-                                    conditionDetailIds->m_Items[v12 + 1],
-                                    (const MethodInfo_24E412C *)Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
+                                    conditionDetailIds->m_Items[v11 + 1],
+                                    (const MethodInfo_2669C30 *)Method_DataMasterBase_EventItemDisplayReleaseMaster__EventItemDisplayReleaseEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
         Instance = (DataManager_o *)entity;
@@ -126,16 +126,16 @@ bool __fastcall EventItemDisplayEntity__IsEnable(EventItemDisplayEntity_o *this,
           break;
         Instance = (DataManager_o *)EventItemDisplayReleaseEntity__IsCondEnable(
                                       (EventItemDisplayReleaseEntity_o *)entity,
-                                      v8);
+                                      v12);
         if ( ((unsigned __int8)Instance & 1) == 0 )
           return 0;
       }
-      LODWORD(v10) = conditionDetailIds->max_length;
-      if ( (__int64)++v12 >= (int)v10 )
+      LODWORD(v9) = conditionDetailIds->max_length;
+      if ( (__int64)++v11 >= (int)v9 )
         return 1;
     }
 LABEL_20:
-    sub_B2C434(Instance, v8);
+    sub_B0D97C(Instance);
   }
   return 1;
 }

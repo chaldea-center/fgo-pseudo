@@ -15,10 +15,10 @@ void __fastcall EventHeelPortraitListViewItem___ctor(
   System_Int32_array *v15; // x7
 
   v9 = this;
-  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23700744((ListViewItem_o *)this, index, 0LL);
   v9->fields._Entity_k__BackingField = heelPortraitEntity;
   v9 = (EventHeelPortraitListViewItem_o *)((char *)v9 + 112);
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)v9,
     (System_Int32_array **)heelPortraitEntity,
     v10,
@@ -77,7 +77,7 @@ void __fastcall EventHeelPortraitListViewItem__set_Entity(
   System_Int32_array *v7; // x7
 
   this->fields._Entity_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._Entity_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

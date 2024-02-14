@@ -2,67 +2,66 @@ void __fastcall FortificationAssetManager___ctor(FortificationAssetManager_o *th
 {
   __int64 v3; // x1
   __int64 v4; // x0
-  __int64 v5; // x1
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  struct System_String_array *v12; // x20
-  __int64 v13; // x0
-  System_Int32_array **v14; // x1
-  System_String_array **v15; // x2
-  System_String_array **v16; // x3
-  System_Boolean_array **v17; // x4
-  System_Int32_array **v18; // x5
-  System_Int32_array *v19; // x6
-  System_Int32_array *v20; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
+  struct System_String_array *v11; // x20
+  __int64 v12; // x0
+  System_Int32_array **v13; // x1
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
+  __int64 v20; // x0
   __int64 v21; // x0
-  __int64 v22; // x0
 
-  if ( (byte_418AA9C & 1) == 0 )
+  if ( (byte_42175DB & 1) == 0 )
   {
-    sub_B2C35C(&string___TypeInfo, method);
-    sub_B2C35C(&StringLiteral_6202/*"EventUI/Prefabs/"*/, v3);
-    byte_418AA9C = 1;
+    sub_B0D8A4(&string___TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_6219/*"EventUI/Prefabs/"*/, v3);
+    byte_42175DB = 1;
   }
-  v4 = sub_B2C374(string___TypeInfo, 1LL);
+  v4 = sub_B0D8BC(string___TypeInfo, 1LL);
   if ( !v4 )
-    sub_B2C434(0LL, v5);
-  v12 = (struct System_String_array *)v4;
-  v13 = StringLiteral_6202/*"EventUI/Prefabs/"*/;
-  if ( StringLiteral_6202/*"EventUI/Prefabs/"*/ )
+    sub_B0D97C(0LL);
+  v11 = (struct System_String_array *)v4;
+  v12 = StringLiteral_6219/*"EventUI/Prefabs/"*/;
+  if ( StringLiteral_6219/*"EventUI/Prefabs/"*/ )
   {
-    v13 = sub_B2C41C(StringLiteral_6202/*"EventUI/Prefabs/"*/, v12->obj.klass->_1.element_class);
-    if ( !v13 )
+    v12 = sub_B0D964(StringLiteral_6219/*"EventUI/Prefabs/"*/, v11->obj.klass->_1.element_class);
+    if ( !v12 )
     {
-      v22 = sub_B2C454(0LL);
-      sub_B2C400(v22, 0LL);
+      v21 = sub_B0D99C(0LL);
+      sub_B0D948(v21, 0LL);
     }
-    v14 = (System_Int32_array **)StringLiteral_6202/*"EventUI/Prefabs/"*/;
+    v13 = (System_Int32_array **)StringLiteral_6219/*"EventUI/Prefabs/"*/;
   }
   else
   {
-    v14 = 0LL;
+    v13 = 0LL;
   }
-  if ( !v12->max_length )
+  if ( !v11->max_length )
   {
-    v21 = sub_B2C460(v13);
-    sub_B2C400(v21, 0LL);
+    v20 = sub_B0D9A8(v12);
+    sub_B0D948(v20, 0LL);
   }
-  v12->m_Items[0] = (System_String_o *)v14;
-  sub_B2C2F8((BattleServantConfConponent_o *)v12->m_Items, v14, v6, v7, v8, v9, v10, v11);
-  this->fields.loadAssetNames = v12;
-  sub_B2C2F8(
+  v11->m_Items[0] = (System_String_o *)v13;
+  sub_B0D840((BattleServantConfConponent_o *)v11->m_Items, v13, v5, v6, v7, v8, v9, v10);
+  this->fields.loadAssetNames = v11;
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.loadAssetNames,
-    (System_Int32_array **)v12,
+    (System_Int32_array **)v11,
+    v14,
     v15,
     v16,
     v17,
     v18,
-    v19,
-    v20);
+    v19);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -85,79 +84,80 @@ void __fastcall FortificationAssetManager__GetAssets(
   __int64 v9; // x1
   __int64 v10; // x19
   __int64 v11; // x0
-  __int64 v12; // x1
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
   struct System_String_array *loadAssetNames; // x8
-  System_String_o *v26; // x20
-  System_String_o *v27; // x0
-  System_String_o *v28; // x20
-  AssetLoader_LoadEndDataHandler_o *v29; // x21
-  __int64 v30; // x0
+  System_String_o *v25; // x20
+  System_String_o *v26; // x0
+  System_String_o *v27; // x20
+  __int64 v28; // x1
+  __int64 v29; // x2
+  AssetLoader_LoadEndDataHandler_o *v30; // x21
+  __int64 v31; // x0
 
-  if ( (byte_418AA99 & 1) == 0 )
+  if ( (byte_42175D8 & 1) == 0 )
   {
-    sub_B2C35C(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_B2C35C(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
-    sub_B2C35C(&Method_FortificationAssetManager___c__DisplayClass73_0__GetAssets_b__0__, v8);
-    sub_B2C35C(&FortificationAssetManager___c__DisplayClass73_0_TypeInfo, v9);
-    byte_418AA99 = 1;
+    sub_B0D8A4(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_B0D8A4(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_B0D8A4(&Method_FortificationAssetManager___c__DisplayClass73_0__GetAssets_b__0__, v8);
+    sub_B0D8A4(&FortificationAssetManager___c__DisplayClass73_0_TypeInfo, v9);
+    byte_42175D8 = 1;
   }
-  v10 = sub_B2C42C(FortificationAssetManager___c__DisplayClass73_0_TypeInfo);
+  v10 = sub_B0D974(FortificationAssetManager___c__DisplayClass73_0_TypeInfo, *(_QWORD *)&eventId, finishCallback);
   FortificationAssetManager___c__DisplayClass73_0___ctor((FortificationAssetManager___c__DisplayClass73_0_o *)v10, 0LL);
   if ( !v10
     || (*(_QWORD *)(v10 + 16) = this,
-        sub_B2C2F8(
+        sub_B0D840(
           (BattleServantConfConponent_o *)(v10 + 16),
           (System_Int32_array **)this,
+          v12,
           v13,
           v14,
           v15,
           v16,
-          v17,
-          v18),
+          v17),
         *(_DWORD *)(v10 + 24) = eventId,
         *(_QWORD *)(v10 + 32) = finishCallback,
-        sub_B2C2F8(
+        sub_B0D840(
           (BattleServantConfConponent_o *)(v10 + 32),
           (System_Int32_array **)finishCallback,
+          v18,
           v19,
           v20,
           v21,
           v22,
-          v23,
-          v24),
+          v23),
         (loadAssetNames = this->fields.loadAssetNames) == 0LL) )
   {
-    sub_B2C434(v11, v12);
+    sub_B0D97C(v11);
   }
   if ( !loadAssetNames->max_length )
   {
-    v30 = sub_B2C460(v11);
-    sub_B2C400(v30, 0LL);
+    v31 = sub_B0D9A8(v11);
+    sub_B0D948(v31, 0LL);
   }
-  v26 = loadAssetNames->m_Items[0];
-  v27 = System_Int32__ToString((int)v10 + 24, 0LL);
-  v28 = System_String__Concat_44305532(v26, v27, 0LL);
-  v29 = (AssetLoader_LoadEndDataHandler_o *)sub_B2C42C(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v25 = loadAssetNames->m_Items[0];
+  v26 = System_Int32__ToString((int)v10 + 24, 0LL);
+  v27 = System_String__Concat_43849904(v25, v26, 0LL);
+  v30 = (AssetLoader_LoadEndDataHandler_o *)sub_B0D974(AssetLoader_LoadEndDataHandler_TypeInfo, v28, v29);
   AssetLoader_LoadEndDataHandler___ctor(
-    v29,
+    v30,
     (Il2CppObject *)v10,
     Method_FortificationAssetManager___c__DisplayClass73_0__GetAssets_b__0__,
     0LL);
   if ( (BYTE3(AssetManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(v28, v29, 1, 0LL);
+  AssetManager__loadAssetStorage(v27, v30, 1, 0LL);
 }
 
 
@@ -171,22 +171,21 @@ UnityEngine_Texture2D_o *__fastcall FortificationAssetManager__GetOrganizationBg
 {
   __int64 v9; // x1
   DataManager_o *Instance; // x0
-  __int64 v11; // x1
   UnityEngine_Texture2D_o **p_organizationSlotBgTex2_k__BackingField; // x8
 
-  if ( (byte_418AA9A & 1) == 0 )
+  if ( (byte_42175D9 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventRewardBgMaster___, *(_QWORD *)&eventId);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_418AA9A = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventRewardBgMaster___, *(_QWORD *)&eventId);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_42175D9 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventRewardBgMaster___)) == 0LL )
+                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventRewardBgMaster___)) == 0LL )
   {
-    sub_B2C434(Instance, v11);
+    sub_B0D97C(Instance);
   }
   switch ( EventRewardBgMaster__GetEventRewardSlotBgId((EventRewardBgMaster_o *)Instance, eventId, slot, 0LL) )
   {
@@ -340,18 +339,18 @@ void __fastcall FortificationAssetManager__Release(
   System_Int32_array *v111; // x6
   System_Int32_array *v112; // x7
 
-  if ( (byte_418AA9B & 1) == 0 )
+  if ( (byte_42175DA & 1) == 0 )
   {
-    sub_B2C35C(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_418AA9B = 1;
+    sub_B0D8A4(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_42175DA = 1;
   }
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__ReleaseEventUI_28451204(eventId, 0LL);
+  AtlasManager__ReleaseEventUI_27921720(eventId, 0LL);
   this->fields._fortificationCamera_k__BackingField = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields, 0LL, v5, v6, v7, v8, v9, v10);
   this->fields._autoFortificationButton_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._autoFortificationButton_k__BackingField,
     0LL,
     v11,
@@ -361,7 +360,7 @@ void __fastcall FortificationAssetManager__Release(
     v15,
     v16);
   this->fields._organizationPanel_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationPanel_k__BackingField,
     0LL,
     v17,
@@ -371,7 +370,7 @@ void __fastcall FortificationAssetManager__Release(
     v21,
     v22);
   this->fields._organizationBgTex_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationBgTex_k__BackingField,
     0LL,
     v23,
@@ -381,7 +380,7 @@ void __fastcall FortificationAssetManager__Release(
     v27,
     v28);
   this->fields._organizationBgTex2_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationBgTex2_k__BackingField,
     0LL,
     v29,
@@ -391,7 +390,7 @@ void __fastcall FortificationAssetManager__Release(
     v33,
     v34);
   this->fields._organizationBgTex3_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationBgTex3_k__BackingField,
     0LL,
     v35,
@@ -401,7 +400,7 @@ void __fastcall FortificationAssetManager__Release(
     v39,
     v40);
   this->fields._organizationBgTex4_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationBgTex4_k__BackingField,
     0LL,
     v41,
@@ -411,7 +410,7 @@ void __fastcall FortificationAssetManager__Release(
     v45,
     v46);
   this->fields._organizationBgTex5_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationBgTex5_k__BackingField,
     0LL,
     v47,
@@ -421,7 +420,7 @@ void __fastcall FortificationAssetManager__Release(
     v51,
     v52);
   this->fields._organizationSlotBgTex_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationSlotBgTex_k__BackingField,
     0LL,
     v53,
@@ -431,7 +430,7 @@ void __fastcall FortificationAssetManager__Release(
     v57,
     v58);
   this->fields._organizationSlotBgTex2_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationSlotBgTex2_k__BackingField,
     0LL,
     v59,
@@ -441,7 +440,7 @@ void __fastcall FortificationAssetManager__Release(
     v63,
     v64);
   this->fields._organizationSlotBgTex3_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationSlotBgTex3_k__BackingField,
     0LL,
     v65,
@@ -451,7 +450,7 @@ void __fastcall FortificationAssetManager__Release(
     v69,
     v70);
   this->fields._organizationSlotBgTex4_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationSlotBgTex4_k__BackingField,
     0LL,
     v71,
@@ -461,7 +460,7 @@ void __fastcall FortificationAssetManager__Release(
     v75,
     v76);
   this->fields._organizationSlotBgTex5_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationSlotBgTex5_k__BackingField,
     0LL,
     v77,
@@ -471,7 +470,7 @@ void __fastcall FortificationAssetManager__Release(
     v81,
     v82);
   this->fields._eventFortificationWorkObj_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._eventFortificationWorkObj_k__BackingField,
     0LL,
     v83,
@@ -481,7 +480,7 @@ void __fastcall FortificationAssetManager__Release(
     v87,
     v88);
   this->fields._eventFortificationWorkMiniObj_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._eventFortificationWorkMiniObj_k__BackingField,
     0LL,
     v89,
@@ -491,7 +490,7 @@ void __fastcall FortificationAssetManager__Release(
     v93,
     v94);
   this->fields._eventFortificationListViewPanel_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._eventFortificationListViewPanel_k__BackingField,
     0LL,
     v95,
@@ -501,7 +500,7 @@ void __fastcall FortificationAssetManager__Release(
     v99,
     v100);
   this->fields._fortificationConfirmDialog_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._fortificationConfirmDialog_k__BackingField,
     0LL,
     v101,
@@ -511,7 +510,7 @@ void __fastcall FortificationAssetManager__Release(
     v105,
     v106);
   this->fields._fortificationAutomaticDialog_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._fortificationAutomaticDialog_k__BackingField,
     0LL,
     v107,
@@ -679,7 +678,7 @@ void __fastcall FortificationAssetManager__set_autoFortificationButton(
   System_Int32_array *v7; // x7
 
   this->fields._autoFortificationButton_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._autoFortificationButton_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -703,7 +702,7 @@ void __fastcall FortificationAssetManager__set_eventFortificationListViewPanel(
   System_Int32_array *v7; // x7
 
   this->fields._eventFortificationListViewPanel_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._eventFortificationListViewPanel_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -727,7 +726,7 @@ void __fastcall FortificationAssetManager__set_eventFortificationWorkMiniObj(
   System_Int32_array *v7; // x7
 
   this->fields._eventFortificationWorkMiniObj_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._eventFortificationWorkMiniObj_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -751,7 +750,7 @@ void __fastcall FortificationAssetManager__set_eventFortificationWorkObj(
   System_Int32_array *v7; // x7
 
   this->fields._eventFortificationWorkObj_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._eventFortificationWorkObj_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -775,7 +774,7 @@ void __fastcall FortificationAssetManager__set_fortificationAutomaticDialog(
   System_Int32_array *v7; // x7
 
   this->fields._fortificationAutomaticDialog_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._fortificationAutomaticDialog_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -799,7 +798,7 @@ void __fastcall FortificationAssetManager__set_fortificationCamera(
   System_Int32_array *v7; // x7
 
   this->fields._fortificationCamera_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -823,7 +822,7 @@ void __fastcall FortificationAssetManager__set_fortificationConfirmDialog(
   System_Int32_array *v7; // x7
 
   this->fields._fortificationConfirmDialog_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._fortificationConfirmDialog_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -847,7 +846,7 @@ void __fastcall FortificationAssetManager__set_organizationBgTex(
   System_Int32_array *v7; // x7
 
   this->fields._organizationBgTex_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationBgTex_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -871,7 +870,7 @@ void __fastcall FortificationAssetManager__set_organizationBgTex2(
   System_Int32_array *v7; // x7
 
   this->fields._organizationBgTex2_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationBgTex2_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -895,7 +894,7 @@ void __fastcall FortificationAssetManager__set_organizationBgTex3(
   System_Int32_array *v7; // x7
 
   this->fields._organizationBgTex3_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationBgTex3_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -919,7 +918,7 @@ void __fastcall FortificationAssetManager__set_organizationBgTex4(
   System_Int32_array *v7; // x7
 
   this->fields._organizationBgTex4_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationBgTex4_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -943,7 +942,7 @@ void __fastcall FortificationAssetManager__set_organizationBgTex5(
   System_Int32_array *v7; // x7
 
   this->fields._organizationBgTex5_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationBgTex5_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -967,7 +966,7 @@ void __fastcall FortificationAssetManager__set_organizationPanel(
   System_Int32_array *v7; // x7
 
   this->fields._organizationPanel_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationPanel_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -991,7 +990,7 @@ void __fastcall FortificationAssetManager__set_organizationSlotBgTex(
   System_Int32_array *v7; // x7
 
   this->fields._organizationSlotBgTex_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationSlotBgTex_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -1015,7 +1014,7 @@ void __fastcall FortificationAssetManager__set_organizationSlotBgTex2(
   System_Int32_array *v7; // x7
 
   this->fields._organizationSlotBgTex2_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationSlotBgTex2_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -1039,7 +1038,7 @@ void __fastcall FortificationAssetManager__set_organizationSlotBgTex3(
   System_Int32_array *v7; // x7
 
   this->fields._organizationSlotBgTex3_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationSlotBgTex3_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -1063,7 +1062,7 @@ void __fastcall FortificationAssetManager__set_organizationSlotBgTex4(
   System_Int32_array *v7; // x7
 
   this->fields._organizationSlotBgTex4_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationSlotBgTex4_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -1087,7 +1086,7 @@ void __fastcall FortificationAssetManager__set_organizationSlotBgTex5(
   System_Int32_array *v7; // x7
 
   this->fields._organizationSlotBgTex5_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._organizationSlotBgTex5_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -1174,262 +1173,264 @@ void __fastcall FortificationAssetManager___c__DisplayClass73_0___GetAssets_b__0
   struct FortificationAssetManager_o *v63; // x21
   struct FortificationAssetManager_o *v64; // x21
   struct FortificationAssetManager_o *v65; // x21
+  __int64 v66; // x1
+  __int64 v67; // x2
   System_Action_o *_9__1; // x21
-  int32_t v67; // w20
-  int32_t v68; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v69; // [xsp+Ch] [xbp-54h] BYREF
-  int32_t v70; // [xsp+10h] [xbp-50h] BYREF
-  int32_t v71; // [xsp+14h] [xbp-4Ch] BYREF
-  int32_t v72; // [xsp+18h] [xbp-48h] BYREF
-  int32_t v73; // [xsp+1Ch] [xbp-44h] BYREF
-  int32_t v74; // [xsp+20h] [xbp-40h] BYREF
-  int32_t v75; // [xsp+24h] [xbp-3Ch] BYREF
-  int32_t v76; // [xsp+28h] [xbp-38h] BYREF
+  int32_t v69; // w20
+  int32_t v70; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v71; // [xsp+Ch] [xbp-54h] BYREF
+  int32_t v72; // [xsp+10h] [xbp-50h] BYREF
+  int32_t v73; // [xsp+14h] [xbp-4Ch] BYREF
+  int32_t v74; // [xsp+18h] [xbp-48h] BYREF
+  int32_t v75; // [xsp+1Ch] [xbp-44h] BYREF
+  int32_t v76; // [xsp+20h] [xbp-40h] BYREF
+  int32_t v77; // [xsp+24h] [xbp-3Ch] BYREF
+  int32_t v78; // [xsp+28h] [xbp-38h] BYREF
   int32_t eventId; // [xsp+2Ch] [xbp-34h] BYREF
 
   v4 = this;
-  if ( (byte_41841D7 & 1) == 0 )
+  if ( (byte_4210F56 & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, assetData);
-    sub_B2C35C(&Method_AssetData_GetObject_GameObject____67377624, v5);
-    sub_B2C35C(&Method_AssetData_GetObject_Texture2D____67377648, v6);
-    sub_B2C35C(&AtlasManager_TypeInfo, v7);
-    sub_B2C35C(&int_TypeInfo, v8);
-    sub_B2C35C(&Method_FortificationAssetManager___c__DisplayClass73_0__GetAssets_b__1__, v9);
-    sub_B2C35C(&StringLiteral_18486/*"event_bg_little_{0}01"*/, v10);
-    sub_B2C35C(&StringLiteral_18494/*"event_bg_{0}04"*/, v11);
-    sub_B2C35C(&StringLiteral_18489/*"event_bg_little_{0}04"*/, v12);
-    sub_B2C35C(&StringLiteral_18487/*"event_bg_little_{0}02"*/, v13);
-    sub_B2C35C(&StringLiteral_18488/*"event_bg_little_{0}03"*/, v14);
-    sub_B2C35C(&StringLiteral_6163/*"EventFortificationListViewPanel"*/, v15);
-    sub_B2C35C(&StringLiteral_6768/*"FortificationWork"*/, v16);
-    sub_B2C35C(&StringLiteral_18492/*"event_bg_{0}02"*/, v17);
-    sub_B2C35C(&StringLiteral_6769/*"FortificationWorkMini"*/, v18);
-    sub_B2C35C(&StringLiteral_18493/*"event_bg_{0}03"*/, v19);
-    sub_B2C35C(&StringLiteral_18491/*"event_bg_{0}01"*/, v20);
-    sub_B2C35C(&StringLiteral_18495/*"event_bg_{0}05"*/, v21);
-    sub_B2C35C(&StringLiteral_6765/*"FortificationConfirmDialog"*/, v22);
-    sub_B2C35C(&StringLiteral_6763/*"FortificationAutomaticDialog"*/, v23);
-    sub_B2C35C(&StringLiteral_18490/*"event_bg_little_{0}05"*/, v24);
-    sub_B2C35C(&StringLiteral_6764/*"FortificationCamera"*/, v25);
-    sub_B2C35C(&StringLiteral_6766/*"FortificationOrganizationPanel"*/, v26);
-    this = (FortificationAssetManager___c__DisplayClass73_0_o *)sub_B2C35C(&StringLiteral_2199/*"AutoFortificationButton"*/, v27);
-    byte_41841D7 = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, assetData);
+    sub_B0D8A4(&Method_AssetData_GetObject_GameObject____67951440, v5);
+    sub_B0D8A4(&Method_AssetData_GetObject_Texture2D____67951464, v6);
+    sub_B0D8A4(&AtlasManager_TypeInfo, v7);
+    sub_B0D8A4(&int_TypeInfo, v8);
+    sub_B0D8A4(&Method_FortificationAssetManager___c__DisplayClass73_0__GetAssets_b__1__, v9);
+    sub_B0D8A4(&StringLiteral_18543/*"event_bg_little_{0}01"*/, v10);
+    sub_B0D8A4(&StringLiteral_18551/*"event_bg_{0}04"*/, v11);
+    sub_B0D8A4(&StringLiteral_18546/*"event_bg_little_{0}04"*/, v12);
+    sub_B0D8A4(&StringLiteral_18544/*"event_bg_little_{0}02"*/, v13);
+    sub_B0D8A4(&StringLiteral_18545/*"event_bg_little_{0}03"*/, v14);
+    sub_B0D8A4(&StringLiteral_6180/*"EventFortificationListViewPanel"*/, v15);
+    sub_B0D8A4(&StringLiteral_6787/*"FortificationWork"*/, v16);
+    sub_B0D8A4(&StringLiteral_18549/*"event_bg_{0}02"*/, v17);
+    sub_B0D8A4(&StringLiteral_6788/*"FortificationWorkMini"*/, v18);
+    sub_B0D8A4(&StringLiteral_18550/*"event_bg_{0}03"*/, v19);
+    sub_B0D8A4(&StringLiteral_18548/*"event_bg_{0}01"*/, v20);
+    sub_B0D8A4(&StringLiteral_18552/*"event_bg_{0}05"*/, v21);
+    sub_B0D8A4(&StringLiteral_6784/*"FortificationConfirmDialog"*/, v22);
+    sub_B0D8A4(&StringLiteral_6782/*"FortificationAutomaticDialog"*/, v23);
+    sub_B0D8A4(&StringLiteral_18547/*"event_bg_little_{0}05"*/, v24);
+    sub_B0D8A4(&StringLiteral_6783/*"FortificationCamera"*/, v25);
+    sub_B0D8A4(&StringLiteral_6785/*"FortificationOrganizationPanel"*/, v26);
+    this = (FortificationAssetManager___c__DisplayClass73_0_o *)sub_B0D8A4(&StringLiteral_2209/*"AutoFortificationButton"*/, v27);
+    byte_4210F56 = 1;
   }
   if ( !assetData )
     goto LABEL_29;
   _4__this = v4->fields.__4__this;
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
-                                                                (System_String_o *)StringLiteral_6764/*"FortificationCamera"*/,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_GameObject____67377624);
+                                                                (System_String_o *)StringLiteral_6783/*"FortificationCamera"*/,
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_GameObject____67951440);
   if ( !_4__this )
     goto LABEL_29;
   _4__this->fields._fortificationCamera_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_B2C2F8(&_4__this->fields, this);
+  sub_B0D840(&_4__this->fields, this);
   v29 = v4->fields.__4__this;
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
-                                                                (System_String_o *)StringLiteral_2199/*"AutoFortificationButton"*/,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_GameObject____67377624);
+                                                                (System_String_o *)StringLiteral_2209/*"AutoFortificationButton"*/,
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_GameObject____67951440);
   if ( !v29 )
     goto LABEL_29;
   v29->fields._autoFortificationButton_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_B2C2F8(&v29->fields._autoFortificationButton_k__BackingField, this);
+  sub_B0D840(&v29->fields._autoFortificationButton_k__BackingField, this);
   v30 = v4->fields.__4__this;
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
-                                                                (System_String_o *)StringLiteral_6766/*"FortificationOrganizationPanel"*/,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_GameObject____67377624);
+                                                                (System_String_o *)StringLiteral_6785/*"FortificationOrganizationPanel"*/,
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_GameObject____67951440);
   if ( !v30 )
     goto LABEL_29;
   v30->fields._organizationPanel_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_B2C2F8(&v30->fields._organizationPanel_k__BackingField, this);
+  sub_B0D840(&v30->fields._organizationPanel_k__BackingField, this);
   v31 = v4->fields.__4__this;
   eventId = v4->fields.eventId;
   v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId);
-  v33 = System_String__Format((System_String_o *)StringLiteral_18491/*"event_bg_{0}01"*/, v32, 0LL);
+  v33 = System_String__Format((System_String_o *)StringLiteral_18548/*"event_bg_{0}01"*/, v32, 0LL);
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
                                                                 v33,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_Texture2D____67377648);
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
   if ( !v31 )
     goto LABEL_29;
   v31->fields._organizationBgTex_k__BackingField = (struct UnityEngine_Texture2D_o *)this;
-  sub_B2C2F8(&v31->fields._organizationBgTex_k__BackingField, this);
+  sub_B0D840(&v31->fields._organizationBgTex_k__BackingField, this);
   v34 = v4->fields.__4__this;
-  v76 = v4->fields.eventId;
-  v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v76);
-  v36 = System_String__Format((System_String_o *)StringLiteral_18492/*"event_bg_{0}02"*/, v35, 0LL);
+  v78 = v4->fields.eventId;
+  v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v78);
+  v36 = System_String__Format((System_String_o *)StringLiteral_18549/*"event_bg_{0}02"*/, v35, 0LL);
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
                                                                 v36,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_Texture2D____67377648);
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
   if ( !v34 )
     goto LABEL_29;
   v34->fields._organizationBgTex2_k__BackingField = (struct UnityEngine_Texture2D_o *)this;
-  sub_B2C2F8(&v34->fields._organizationBgTex2_k__BackingField, this);
+  sub_B0D840(&v34->fields._organizationBgTex2_k__BackingField, this);
   v37 = v4->fields.__4__this;
-  v75 = v4->fields.eventId;
-  v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v75);
-  v39 = System_String__Format((System_String_o *)StringLiteral_18493/*"event_bg_{0}03"*/, v38, 0LL);
+  v77 = v4->fields.eventId;
+  v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v77);
+  v39 = System_String__Format((System_String_o *)StringLiteral_18550/*"event_bg_{0}03"*/, v38, 0LL);
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
                                                                 v39,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_Texture2D____67377648);
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
   if ( !v37 )
     goto LABEL_29;
   v37->fields._organizationBgTex3_k__BackingField = (struct UnityEngine_Texture2D_o *)this;
-  sub_B2C2F8(&v37->fields._organizationBgTex3_k__BackingField, this);
+  sub_B0D840(&v37->fields._organizationBgTex3_k__BackingField, this);
   v40 = v4->fields.__4__this;
-  v74 = v4->fields.eventId;
-  v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v74);
-  v42 = System_String__Format((System_String_o *)StringLiteral_18494/*"event_bg_{0}04"*/, v41, 0LL);
+  v76 = v4->fields.eventId;
+  v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v76);
+  v42 = System_String__Format((System_String_o *)StringLiteral_18551/*"event_bg_{0}04"*/, v41, 0LL);
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
                                                                 v42,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_Texture2D____67377648);
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
   if ( !v40 )
     goto LABEL_29;
   v40->fields._organizationBgTex4_k__BackingField = (struct UnityEngine_Texture2D_o *)this;
-  sub_B2C2F8(&v40->fields._organizationBgTex4_k__BackingField, this);
+  sub_B0D840(&v40->fields._organizationBgTex4_k__BackingField, this);
   v43 = v4->fields.__4__this;
-  v73 = v4->fields.eventId;
-  v44 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v73);
-  v45 = System_String__Format((System_String_o *)StringLiteral_18495/*"event_bg_{0}05"*/, v44, 0LL);
+  v75 = v4->fields.eventId;
+  v44 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v75);
+  v45 = System_String__Format((System_String_o *)StringLiteral_18552/*"event_bg_{0}05"*/, v44, 0LL);
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
                                                                 v45,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_Texture2D____67377648);
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
   if ( !v43 )
     goto LABEL_29;
   v43->fields._organizationBgTex5_k__BackingField = (struct UnityEngine_Texture2D_o *)this;
-  sub_B2C2F8(&v43->fields._organizationBgTex5_k__BackingField, this);
+  sub_B0D840(&v43->fields._organizationBgTex5_k__BackingField, this);
   v46 = v4->fields.__4__this;
-  v72 = v4->fields.eventId;
-  v47 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v72);
-  v48 = System_String__Format((System_String_o *)StringLiteral_18486/*"event_bg_little_{0}01"*/, v47, 0LL);
+  v74 = v4->fields.eventId;
+  v47 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v74);
+  v48 = System_String__Format((System_String_o *)StringLiteral_18543/*"event_bg_little_{0}01"*/, v47, 0LL);
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
                                                                 v48,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_Texture2D____67377648);
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
   if ( !v46 )
     goto LABEL_29;
   v46->fields._organizationSlotBgTex_k__BackingField = (struct UnityEngine_Texture2D_o *)this;
-  sub_B2C2F8(&v46->fields._organizationSlotBgTex_k__BackingField, this);
+  sub_B0D840(&v46->fields._organizationSlotBgTex_k__BackingField, this);
   v49 = v4->fields.__4__this;
-  v71 = v4->fields.eventId;
-  v50 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v71);
-  v51 = System_String__Format((System_String_o *)StringLiteral_18487/*"event_bg_little_{0}02"*/, v50, 0LL);
+  v73 = v4->fields.eventId;
+  v50 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v73);
+  v51 = System_String__Format((System_String_o *)StringLiteral_18544/*"event_bg_little_{0}02"*/, v50, 0LL);
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
                                                                 v51,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_Texture2D____67377648);
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
   if ( !v49 )
     goto LABEL_29;
   v49->fields._organizationSlotBgTex2_k__BackingField = (struct UnityEngine_Texture2D_o *)this;
-  sub_B2C2F8(&v49->fields._organizationSlotBgTex2_k__BackingField, this);
+  sub_B0D840(&v49->fields._organizationSlotBgTex2_k__BackingField, this);
   v52 = v4->fields.__4__this;
-  v70 = v4->fields.eventId;
-  v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v70);
-  v54 = System_String__Format((System_String_o *)StringLiteral_18488/*"event_bg_little_{0}03"*/, v53, 0LL);
+  v72 = v4->fields.eventId;
+  v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v72);
+  v54 = System_String__Format((System_String_o *)StringLiteral_18545/*"event_bg_little_{0}03"*/, v53, 0LL);
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
                                                                 v54,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_Texture2D____67377648);
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
   if ( !v52 )
     goto LABEL_29;
   v52->fields._organizationSlotBgTex3_k__BackingField = (struct UnityEngine_Texture2D_o *)this;
-  sub_B2C2F8(&v52->fields._organizationSlotBgTex3_k__BackingField, this);
+  sub_B0D840(&v52->fields._organizationSlotBgTex3_k__BackingField, this);
   v55 = v4->fields.__4__this;
-  v69 = v4->fields.eventId;
-  v56 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v69);
-  v57 = System_String__Format((System_String_o *)StringLiteral_18489/*"event_bg_little_{0}04"*/, v56, 0LL);
+  v71 = v4->fields.eventId;
+  v56 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v71);
+  v57 = System_String__Format((System_String_o *)StringLiteral_18546/*"event_bg_little_{0}04"*/, v56, 0LL);
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
                                                                 v57,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_Texture2D____67377648);
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
   if ( !v55 )
     goto LABEL_29;
   v55->fields._organizationSlotBgTex4_k__BackingField = (struct UnityEngine_Texture2D_o *)this;
-  sub_B2C2F8(&v55->fields._organizationSlotBgTex4_k__BackingField, this);
+  sub_B0D840(&v55->fields._organizationSlotBgTex4_k__BackingField, this);
   v58 = v4->fields.__4__this;
-  v68 = v4->fields.eventId;
-  v59 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v68);
-  v60 = System_String__Format((System_String_o *)StringLiteral_18490/*"event_bg_little_{0}05"*/, v59, 0LL);
+  v70 = v4->fields.eventId;
+  v59 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v70);
+  v60 = System_String__Format((System_String_o *)StringLiteral_18547/*"event_bg_little_{0}05"*/, v59, 0LL);
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
                                                                 v60,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_Texture2D____67377648);
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_Texture2D____67951464);
   if ( !v58 )
     goto LABEL_29;
   v58->fields._organizationSlotBgTex5_k__BackingField = (struct UnityEngine_Texture2D_o *)this;
-  sub_B2C2F8(&v58->fields._organizationSlotBgTex5_k__BackingField, this);
+  sub_B0D840(&v58->fields._organizationSlotBgTex5_k__BackingField, this);
   v61 = v4->fields.__4__this;
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
-                                                                (System_String_o *)StringLiteral_6768/*"FortificationWork"*/,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_GameObject____67377624);
+                                                                (System_String_o *)StringLiteral_6787/*"FortificationWork"*/,
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_GameObject____67951440);
   if ( !v61 )
     goto LABEL_29;
   v61->fields._eventFortificationWorkObj_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_B2C2F8(&v61->fields._eventFortificationWorkObj_k__BackingField, this);
+  sub_B0D840(&v61->fields._eventFortificationWorkObj_k__BackingField, this);
   v62 = v4->fields.__4__this;
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
-                                                                (System_String_o *)StringLiteral_6769/*"FortificationWorkMini"*/,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_GameObject____67377624);
+                                                                (System_String_o *)StringLiteral_6788/*"FortificationWorkMini"*/,
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_GameObject____67951440);
   if ( !v62 )
     goto LABEL_29;
   v62->fields._eventFortificationWorkMiniObj_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_B2C2F8(&v62->fields._eventFortificationWorkMiniObj_k__BackingField, this);
+  sub_B0D840(&v62->fields._eventFortificationWorkMiniObj_k__BackingField, this);
   v63 = v4->fields.__4__this;
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
-                                                                (System_String_o *)StringLiteral_6163/*"EventFortificationListViewPanel"*/,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_GameObject____67377624);
+                                                                (System_String_o *)StringLiteral_6180/*"EventFortificationListViewPanel"*/,
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_GameObject____67951440);
   if ( !v63 )
     goto LABEL_29;
   v63->fields._eventFortificationListViewPanel_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_B2C2F8(&v63->fields._eventFortificationListViewPanel_k__BackingField, this);
+  sub_B0D840(&v63->fields._eventFortificationListViewPanel_k__BackingField, this);
   v64 = v4->fields.__4__this;
   this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                 assetData,
-                                                                (System_String_o *)StringLiteral_6765/*"FortificationConfirmDialog"*/,
-                                                                (const MethodInfo_1720344 *)Method_AssetData_GetObject_GameObject____67377624);
+                                                                (System_String_o *)StringLiteral_6784/*"FortificationConfirmDialog"*/,
+                                                                (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_GameObject____67951440);
   if ( !v64
     || (v64->fields._fortificationConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this,
-        sub_B2C2F8(&v64->fields._fortificationConfirmDialog_k__BackingField, this),
+        sub_B0D840(&v64->fields._fortificationConfirmDialog_k__BackingField, this),
         v65 = v4->fields.__4__this,
         this = (FortificationAssetManager___c__DisplayClass73_0_o *)AssetData__GetObject_WarBoardWaitTimeSetting_(
                                                                       assetData,
-                                                                      (System_String_o *)StringLiteral_6763/*"FortificationAutomaticDialog"*/,
-                                                                      (const MethodInfo_1720344 *)Method_AssetData_GetObject_GameObject____67377624),
+                                                                      (System_String_o *)StringLiteral_6782/*"FortificationAutomaticDialog"*/,
+                                                                      (const MethodInfo_1700DD0 *)Method_AssetData_GetObject_GameObject____67951440),
         !v65)
     || (v65->fields._fortificationAutomaticDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this,
-        sub_B2C2F8(&v65->fields._fortificationAutomaticDialog_k__BackingField, this),
+        sub_B0D840(&v65->fields._fortificationAutomaticDialog_k__BackingField, this),
         (this = (FortificationAssetManager___c__DisplayClass73_0_o *)v4->fields.__4__this) == 0LL) )
   {
 LABEL_29:
-    sub_B2C434(this, assetData);
+    sub_B0D97C(this);
   }
   FortificationAssetManager__AssertionCheck((FortificationAssetManager_o *)this, 0LL);
   _9__1 = v4->fields.__9__1;
-  v67 = v4->fields.eventId;
+  v69 = v4->fields.eventId;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v66, v67);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_FortificationAssetManager___c__DisplayClass73_0__GetAssets_b__1__,
       0LL);
     v4->fields.__9__1 = _9__1;
-    sub_B2C2F8(&v4->fields.__9__1, _9__1);
+    sub_B0D840(&v4->fields.__9__1, _9__1);
   }
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI_28451024(v67, _9__1, 1, 0LL);
+  AtlasManager__LoadEventUI_27921540(v69, _9__1, 1, 0LL);
 }
 
 

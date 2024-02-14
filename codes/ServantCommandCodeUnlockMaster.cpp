@@ -1,16 +1,16 @@
 void __fastcall ServantCommandCodeUnlockMaster___ctor(ServantCommandCodeUnlockMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4189ED4 & 1) == 0 )
+  if ( (byte_4215EF7 & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string___ctor__,
       method);
-    byte_4189ED4 = 1;
+    byte_4215EF7 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     249,
-    (const MethodInfo_24E4484 *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string___ctor__);
+    (const MethodInfo_2669F88 *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string___ctor__);
 }
 
 
@@ -23,18 +23,18 @@ ServantCommandCodeUnlockEntity_o *__fastcall ServantCommandCodeUnlockMaster__Get
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4189ED2 & 1) == 0 )
+  if ( (byte_4215EF5 & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__GetEntity__,
       *(_QWORD *)&svtId);
-    byte_4189ED2 = 1;
+    byte_4215EF5 = 1;
   }
   PK = ServantCommandCodeUnlockEntity__CreatePK(svtId, cardIdx, *(const MethodInfo **)&cardIdx);
   return (ServantCommandCodeUnlockEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                                (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                                PK,
-                                               (const MethodInfo_24E4520 *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__GetEntity__);
+                                               (const MethodInfo_266A024 *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__GetEntity__);
 }
 
 
@@ -48,17 +48,17 @@ bool __fastcall ServantCommandCodeUnlockMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4189ED3 & 1) == 0 )
+  if ( (byte_4215EF6 & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__TryGetEntity__,
       entity);
-    byte_4189ED3 = 1;
+    byte_4215EF6 = 1;
   }
   PK = ServantCommandCodeUnlockEntity__CreatePK(svtId, cardIdx, *(const MethodInfo **)&svtId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_24E4578 *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__TryGetEntity__);
+           (const MethodInfo_266A07C *)Method_DataMasterBase_ServantCommandCodeUnlockMaster__ServantCommandCodeUnlockEntity__string__TryGetEntity__);
 }

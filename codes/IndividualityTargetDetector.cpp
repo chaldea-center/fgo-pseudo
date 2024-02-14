@@ -14,29 +14,28 @@ void __fastcall IndividualityTargetDetector___ctor(
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
   _BOOL8 IsIncludeIgnoreIndividuality; // x0
-  __int64 v18; // x1
   struct System_Int32_array_array *SortedMultiIndividuality; // x0
   BattleServantConfConponent_o *p_multiIndividuality; // x21
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
+  System_String_array **v20; // x2
+  System_String_array **v21; // x3
+  System_Boolean_array **v22; // x4
+  System_Int32_array **v23; // x5
+  System_Int32_array *v24; // x6
+  System_Int32_array *v25; // x7
   _BYTE *monitor; // x21
-  struct IWarBoardObjectData_IndivGetArgs_o *v28; // x21
-  struct IWarBoardObjectData_IndivGetArgs_o *v29; // x20
+  struct IWarBoardObjectData_IndivGetArgs_o *v27; // x21
+  struct IWarBoardObjectData_IndivGetArgs_o *v28; // x20
 
-  if ( (byte_4188F74 & 1) == 0 )
+  if ( (byte_4215CD7 & 1) == 0 )
   {
-    sub_B2C35C(&IWarBoardObjectData_IndivGetArgs_TypeInfo, entity);
-    byte_4188F74 = 1;
+    sub_B0D8A4(&IWarBoardObjectData_IndivGetArgs_TypeInfo, entity);
+    byte_4215CD7 = 1;
   }
-  v9 = (IWarBoardObjectData_IndivGetArgs_o *)sub_B2C42C(IWarBoardObjectData_IndivGetArgs_TypeInfo);
+  v9 = (IWarBoardObjectData_IndivGetArgs_o *)sub_B0D974(IWarBoardObjectData_IndivGetArgs_TypeInfo, entity, root);
   IWarBoardObjectData_IndivGetArgs___ctor(v9, 0LL);
   this->fields.indivGetArgs = v9;
   p_indivGetArgs = &this->fields.indivGetArgs;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.indivGetArgs,
     (System_Int32_array **)v9,
     v11,
@@ -52,23 +51,23 @@ void __fastcall IndividualityTargetDetector___ctor(
   SortedMultiIndividuality = WarBoardActionTrendConditionEntity__GetSortedMultiIndividuality(entity, 0LL);
   this->fields.multiIndividuality = SortedMultiIndividuality;
   p_multiIndividuality = (BattleServantConfConponent_o *)&this->fields.multiIndividuality;
-  sub_B2C2F8(p_multiIndividuality, (System_Int32_array **)SortedMultiIndividuality, v21, v22, v23, v24, v25, v26);
+  sub_B0D840(p_multiIndividuality, (System_Int32_array **)SortedMultiIndividuality, v20, v21, v22, v23, v24, v25);
   monitor = p_multiIndividuality->monitor;
   IsIncludeIgnoreIndividuality = WarBoardActionTrendConditionEntity__IsIncludeIgnoreIndividuality(entity, 0LL);
   if ( !monitor
     || (monitor[16] = IsIncludeIgnoreIndividuality,
-        v28 = *p_indivGetArgs,
+        v27 = *p_indivGetArgs,
         IsIncludeIgnoreIndividuality = WarBoardActionTrendConditionEntity__IsIncludePassiveIndividuality(entity, 0LL),
-        !v28)
-    || (v28->fields.IsIncludePassiveIndividuality = IsIncludeIgnoreIndividuality,
-        v29 = *p_indivGetArgs,
+        !v27)
+    || (v27->fields.IsIncludePassiveIndividuality = IsIncludeIgnoreIndividuality,
+        v28 = *p_indivGetArgs,
         IsIncludeIgnoreIndividuality = WarBoardActionTrendConditionEntity__IsIgnoreIndivUnreleasable(entity, 0LL),
-        !v29) )
+        !v28) )
   {
 LABEL_8:
-    sub_B2C434(IsIncludeIgnoreIndividuality, v18);
+    sub_B0D97C(IsIncludeIgnoreIndividuality);
   }
-  v29->fields.IsIgnoreIndivUnreleasable = IsIncludeIgnoreIndividuality;
+  v28->fields.IsIgnoreIndivUnreleasable = IsIncludeIgnoreIndividuality;
 }
 
 
@@ -77,42 +76,41 @@ void __fastcall IndividualityTargetDetector__AggregateTargetObject(
         IWarBoardObjectData_array *objectArray,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  IndividualityTargetDetector_o *v5; // x20
+  IndividualityTargetDetector_o *v4; // x20
+  __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x1
   signed int max_length; // w8
   signed int i; // w23
-  WarBoardAIRoute_RouteData_o *v10; // x21
+  WarBoardAIRoute_RouteData_o *v9; // x21
   WarBoardAIRoute_RouteData_c *klass; // x8
-  unsigned __int64 v12; // x10
+  unsigned __int64 v11; // x10
   IWarBoardObjectData_c **p_offset; // x11
-  __int64 v14; // x0
-  WarBoardAIRoute_RouteData_c *v15; // x8
-  __int64 v16; // x10
-  WarBoardAIRoute_RouteData_o *v17; // x9
+  __int64 v13; // x0
+  WarBoardAIRoute_RouteData_c *v14; // x8
+  __int64 v15; // x10
+  WarBoardAIRoute_RouteData_o *v16; // x9
   int teamCondType; // w10
   struct WarBoardAiTargetCacher_o *Root; // x10
-  struct WarBoardAiTargetCacher_o *v20; // x10
+  struct WarBoardAiTargetCacher_o *v19; // x10
   struct IWarBoardObjectData_IndivGetArgs_o *indivGetArgs; // x22
-  unsigned __int64 v22; // x10
-  IWarBoardObjectData_c **v23; // x11
-  __int64 v24; // x0
-  System_Int32_array *v25; // x0
-  const MethodInfo *v26; // x2
-  __int64 v27; // x0
+  unsigned __int64 v21; // x10
+  IWarBoardObjectData_c **v22; // x11
+  __int64 v23; // x0
+  System_Int32_array *v24; // x0
+  const MethodInfo *v25; // x2
+  __int64 v26; // x0
 
-  v5 = this;
-  if ( (byte_4188F75 & 1) == 0 )
+  v4 = this;
+  if ( (byte_4215CD8 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_HashSet_IWarBoardObjectData__Add__, objectArray);
-    sub_B2C35C(&IWarBoardObjectData_TypeInfo, v6);
-    this = (IndividualityTargetDetector_o *)sub_B2C35C(&WarBoardPieceData_TypeInfo, v7);
-    byte_4188F75 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_HashSet_IWarBoardObjectData__Add__, objectArray);
+    sub_B0D8A4(&IWarBoardObjectData_TypeInfo, v5);
+    this = (IndividualityTargetDetector_o *)sub_B0D8A4(&WarBoardPieceData_TypeInfo, v6);
+    byte_4215CD8 = 1;
   }
   if ( !objectArray )
 LABEL_47:
-    sub_B2C434(this, objectArray);
+    sub_B0D97C(this);
   max_length = objectArray->max_length;
   if ( max_length >= 1 )
   {
@@ -120,65 +118,65 @@ LABEL_47:
     {
       if ( i >= (unsigned int)max_length )
       {
-        v27 = sub_B2C460(this);
-        sub_B2C400(v27, 0LL);
+        v26 = sub_B0D9A8(this);
+        sub_B0D948(v26, 0LL);
       }
-      v10 = (WarBoardAIRoute_RouteData_o *)objectArray->m_Items[i];
-      if ( !v10 )
+      v9 = (WarBoardAIRoute_RouteData_o *)objectArray->m_Items[i];
+      if ( !v9 )
         goto LABEL_47;
-      klass = v10->klass;
-      if ( *(_WORD *)&v10->klass->_2.bitflags1 )
+      klass = v9->klass;
+      if ( *(_WORD *)&v9->klass->_2.bitflags1 )
       {
-        v12 = 0LL;
+        v11 = 0LL;
         p_offset = (IWarBoardObjectData_c **)&klass->_1.interfaceOffsets->offset;
         while ( *(p_offset - 1) != IWarBoardObjectData_TypeInfo )
         {
-          ++v12;
+          ++v11;
           p_offset += 2;
-          if ( v12 >= *(unsigned __int16 *)&v10->klass->_2.bitflags1 )
+          if ( v11 >= *(unsigned __int16 *)&v9->klass->_2.bitflags1 )
             goto LABEL_12;
         }
-        v14 = (__int64)(&klass->vtable._2_GetHashCode.method + 2 * *(_DWORD *)p_offset);
+        v13 = (__int64)(&klass->vtable._2_GetHashCode.method + 2 * *(_DWORD *)p_offset);
       }
       else
       {
 LABEL_12:
-        v14 = sub_AC5258(v10, IWarBoardObjectData_TypeInfo, 2LL, v3);
+        v13 = sub_AA67A0(v9, IWarBoardObjectData_TypeInfo, 2LL);
       }
-      this = (IndividualityTargetDetector_o *)(*(__int64 (__fastcall **)(WarBoardAIRoute_RouteData_o *, _QWORD))v14)(
-                                                v10,
-                                                *(_QWORD *)(v14 + 8));
+      this = (IndividualityTargetDetector_o *)(*(__int64 (__fastcall **)(WarBoardAIRoute_RouteData_o *, _QWORD))v13)(
+                                                v9,
+                                                *(_QWORD *)(v13 + 8));
       if ( ((unsigned __int8)this & 1) == 0 )
         goto LABEL_45;
-      v15 = v10->klass;
-      v16 = *(&WarBoardPieceData_TypeInfo->_2.bitflags2 + 1);
-      if ( *(&v10->klass->_2.bitflags2 + 1) >= (unsigned int)v16 )
+      v14 = v9->klass;
+      v15 = *(&WarBoardPieceData_TypeInfo->_2.bitflags2 + 1);
+      if ( *(&v9->klass->_2.bitflags2 + 1) >= (unsigned int)v15 )
       {
-        if ( (WarBoardPieceData_c *)v15->_2.typeHierarchy[v16 - 1] == WarBoardPieceData_TypeInfo )
-          v17 = v10;
+        if ( (WarBoardPieceData_c *)v14->_2.typeHierarchy[v15 - 1] == WarBoardPieceData_TypeInfo )
+          v16 = v9;
         else
-          v17 = 0LL;
+          v16 = 0LL;
       }
       else
       {
-        v17 = 0LL;
+        v16 = 0LL;
       }
-      teamCondType = v5->fields.teamCondType;
+      teamCondType = v4->fields.teamCondType;
       if ( teamCondType <= 77 )
       {
         if ( teamCondType != 76 )
         {
-          if ( teamCondType != 77 || !v17 )
+          if ( teamCondType != 77 || !v16 )
             goto LABEL_36;
 LABEL_28:
-          Root = v5->fields.Root;
+          Root = v4->fields.Root;
           if ( !Root )
             goto LABEL_47;
-          if ( HIDWORD(v17->fields.flagNow) == Root->fields._ForceId_k__BackingField )
+          if ( HIDWORD(v16->fields.flagNow) == Root->fields._ForceId_k__BackingField )
             goto LABEL_36;
           goto LABEL_45;
         }
-        if ( !v17 )
+        if ( !v16 )
           goto LABEL_45;
       }
       else
@@ -187,55 +185,55 @@ LABEL_28:
         {
           if ( teamCondType != 111 )
             goto LABEL_36;
-          if ( !v17 )
+          if ( !v16 )
             goto LABEL_45;
           goto LABEL_28;
         }
-        if ( !v17 )
+        if ( !v16 )
           goto LABEL_36;
       }
-      v20 = v5->fields.Root;
-      if ( !v20 )
+      v19 = v4->fields.Root;
+      if ( !v19 )
         goto LABEL_47;
-      if ( HIDWORD(v17->fields.flagNow) != v20->fields._ForceId_k__BackingField )
+      if ( HIDWORD(v16->fields.flagNow) != v19->fields._ForceId_k__BackingField )
       {
 LABEL_36:
-        indivGetArgs = v5->fields.indivGetArgs;
-        if ( *(_WORD *)&v15->_2.bitflags1 )
+        indivGetArgs = v4->fields.indivGetArgs;
+        if ( *(_WORD *)&v14->_2.bitflags1 )
         {
-          v22 = 0LL;
-          v23 = (IWarBoardObjectData_c **)&v15->_1.interfaceOffsets->offset;
-          while ( *(v23 - 1) != IWarBoardObjectData_TypeInfo )
+          v21 = 0LL;
+          v22 = (IWarBoardObjectData_c **)&v14->_1.interfaceOffsets->offset;
+          while ( *(v22 - 1) != IWarBoardObjectData_TypeInfo )
           {
-            ++v22;
-            v23 += 2;
-            if ( v22 >= *(unsigned __int16 *)&v15->_2.bitflags1 )
+            ++v21;
+            v22 += 2;
+            if ( v21 >= *(unsigned __int16 *)&v14->_2.bitflags1 )
               goto LABEL_40;
           }
-          v24 = (__int64)(&v15->vtable._6_get_FlagNow.method + 2 * *(_DWORD *)v23);
+          v23 = (__int64)(&v14->vtable._6_get_FlagNow.method + 2 * *(_DWORD *)v22);
         }
         else
         {
 LABEL_40:
-          v24 = sub_AC5258(v10, IWarBoardObjectData_TypeInfo, 6LL, v3);
+          v23 = sub_AA67A0(v9, IWarBoardObjectData_TypeInfo, 6LL);
         }
-        v25 = (System_Int32_array *)(*(__int64 (__fastcall **)(WarBoardAIRoute_RouteData_o *, struct IWarBoardObjectData_IndivGetArgs_o *, _QWORD))v24)(
-                                      v10,
+        v24 = (System_Int32_array *)(*(__int64 (__fastcall **)(WarBoardAIRoute_RouteData_o *, struct IWarBoardObjectData_IndivGetArgs_o *, _QWORD))v23)(
+                                      v9,
                                       indivGetArgs,
-                                      *(_QWORD *)(v24 + 8));
+                                      *(_QWORD *)(v23 + 8));
         this = (IndividualityTargetDetector_o *)Individuality__CheckSignedMultiIndividuality(
-                                                  v25,
-                                                  v5->fields.multiIndividuality,
-                                                  v26);
+                                                  v24,
+                                                  v4->fields.multiIndividuality,
+                                                  v25);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
-          this = (IndividualityTargetDetector_o *)v5->fields._TargetObjectHashSet_k__BackingField;
+          this = (IndividualityTargetDetector_o *)v4->fields._TargetObjectHashSet_k__BackingField;
           if ( !this )
             goto LABEL_47;
           this = (IndividualityTargetDetector_o *)System_Collections_Generic_HashSet_WarBoardAIRoute_RouteData___Add(
                                                     (System_Collections_Generic_HashSet_WarBoardAIRoute_RouteData__o *)this,
-                                                    v10,
-                                                    (const MethodInfo_2D8CC18 *)Method_System_Collections_Generic_HashSet_IWarBoardObjectData__Add__);
+                                                    v9,
+                                                    (const MethodInfo_2C7CB94 *)Method_System_Collections_Generic_HashSet_IWarBoardObjectData__Add__);
         }
       }
 LABEL_45:
@@ -267,11 +265,11 @@ bool __fastcall IndividualityTargetDetector__IsSameCondition(
 
   v3 = t;
   v4 = this;
-  if ( (byte_4188F76 & 1) == 0 )
+  if ( (byte_4215CD9 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Linq_Enumerable_SequenceEqual_int___, t);
-    this = (IndividualityTargetDetector_o *)sub_B2C35C(&IndividualityTargetDetector_TypeInfo, v5);
-    byte_4188F76 = 1;
+    sub_B0D8A4(&Method_System_Linq_Enumerable_SequenceEqual_int___, t);
+    this = (IndividualityTargetDetector_o *)sub_B0D8A4(&IndividualityTargetDetector_TypeInfo, v5);
+    byte_4215CD9 = 1;
   }
   if ( !v3 )
     goto LABEL_28;
@@ -302,7 +300,7 @@ bool __fastcall IndividualityTargetDetector__IsSameCondition(
   indivGetArgs = v4->fields.indivGetArgs;
   if ( !indivGetArgs || (monitor = v3[1].monitor) == 0LL )
 LABEL_30:
-    sub_B2C434(this, t);
+    sub_B0D97C(this);
   if ( !indivGetArgs->fields.IsIncludeIgnoreIndividuality != (monitor[16] != 0)
     && !indivGetArgs->fields.IsIncludePassiveIndividuality != (monitor[17] != 0)
     && !indivGetArgs->fields.IsIgnoreIndivUnreleasable != (monitor[18] != 0)
@@ -323,15 +321,15 @@ LABEL_30:
       if ( i - 4 >= (unsigned __int64)LODWORD(v14->_1.namespaze) )
       {
 LABEL_31:
-        v16 = sub_B2C460(this);
-        sub_B2C400(v16, 0LL);
+        v16 = sub_B0D9A8(this);
+        sub_B0D948(v16, 0LL);
       }
       this = (IndividualityTargetDetector_o *)System_Linq_Enumerable__SequenceEqual_int_(
                                                 *((System_Collections_Generic_IEnumerable_TSource__o **)&multiIndividuality->obj.klass
                                                 + i),
                                                 *((System_Collections_Generic_IEnumerable_TSource__o **)&v14->_1.image
                                                 + i),
-                                                (const MethodInfo_1A984CC *)Method_System_Linq_Enumerable_SequenceEqual_int___);
+                                                (const MethodInfo_1B53798 *)Method_System_Linq_Enumerable_SequenceEqual_int___);
       if ( ((unsigned __int8)this & 1) == 0 )
         break;
       multiIndividuality = v4->fields.multiIndividuality;

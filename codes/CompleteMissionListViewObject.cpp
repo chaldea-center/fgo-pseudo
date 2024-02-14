@@ -11,10 +11,10 @@ CompleteMissionListViewItem_o *__fastcall CompleteMissionListViewObject__GetItem
   struct ListViewItem_o *linkItem; // x8
   __int64 v4; // x11
 
-  if ( (byte_4187F71 & 1) == 0 )
+  if ( (byte_4214E88 & 1) == 0 )
   {
-    sub_B2C35C(&CompleteMissionListViewItem_TypeInfo, method);
-    byte_4187F71 = 1;
+    sub_B0D8A4(&CompleteMissionListViewItem_TypeInfo, method);
+    byte_4214E88 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -37,13 +37,12 @@ void __fastcall CompleteMissionListViewObject__OnChangeAlphaAnim(
   __int64 v5; // x11
   struct ListViewManager_o *v6; // x20
   CompleteMissionListViewItemDraw_o *CompleteMissionItemDraw; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x2
+  const MethodInfo *v8; // x2
 
-  if ( (byte_4187F72 & 1) == 0 )
+  if ( (byte_4214E89 & 1) == 0 )
   {
-    sub_B2C35C(&CompleteMissionListViewManager_TypeInfo, method);
-    byte_4187F72 = 1;
+    sub_B0D8A4(&CompleteMissionListViewManager_TypeInfo, method);
+    byte_4214E89 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -64,11 +63,11 @@ void __fastcall CompleteMissionListViewObject__OnChangeAlphaAnim(
     }
     CompleteMissionItemDraw = CompleteMissionListViewObject__get_CompleteMissionItemDraw(this, v3);
     if ( !CompleteMissionItemDraw )
-      sub_B2C434(0LL, v8);
+      sub_B0D97C(0LL);
     CompleteMissionListViewItemDraw__ChangeNextRewardIcon(
       CompleteMissionItemDraw,
       (CompleteMissionListViewManager_o *)v6,
-      v9);
+      v8);
   }
 }
 
@@ -86,10 +85,10 @@ CompleteMissionListViewItemDraw_o *__fastcall CompleteMissionListViewObject__get
   struct MissionListViewItemDraw_o *itemDraw; // x8
   __int64 v4; // x11
 
-  if ( (byte_4187F70 & 1) == 0 )
+  if ( (byte_4214E87 & 1) == 0 )
   {
-    sub_B2C35C(&CompleteMissionListViewItemDraw_TypeInfo, method);
-    byte_4187F70 = 1;
+    sub_B0D8A4(&CompleteMissionListViewItemDraw_TypeInfo, method);
+    byte_4214E87 = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )

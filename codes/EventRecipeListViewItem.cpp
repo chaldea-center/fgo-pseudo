@@ -23,28 +23,27 @@ void __fastcall EventRecipeListViewItem___ctor(
   System_Int32_array *v24; // x6
   System_Int32_array *v25; // x7
   DataManager_o *Instance; // x0
-  __int64 v27; // x1
   struct CommonConsumeEntity_array *SortedEntityList; // x0
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
-  struct EventRecipeEntity_o *v35; // x8
+  System_String_array **v28; // x2
+  System_String_array **v29; // x3
+  System_Boolean_array **v30; // x4
+  System_Int32_array **v31; // x5
+  System_Int32_array *v32; // x6
+  System_Int32_array *v33; // x7
+  struct EventRecipeEntity_o *v34; // x8
   char IsOpen; // w8
 
-  if ( (byte_41887A3 & 1) == 0 )
+  if ( (byte_4214A5F & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_CommonConsumeMaster___, *(_QWORD *)&index);
-    sub_B2C35C(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v11);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    byte_41887A3 = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_CommonConsumeMaster___, *(_QWORD *)&index);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v11);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    byte_4214A5F = 1;
   }
-  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23700744((ListViewItem_o *)this, index, 0LL);
   this->fields.eventRecipeEntity = eventRecipeEntity;
   p_eventRecipeEntity = &this->fields.eventRecipeEntity;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.eventRecipeEntity,
     (System_Int32_array **)eventRecipeEntity,
     v14,
@@ -54,7 +53,7 @@ void __fastcall EventRecipeListViewItem___ctor(
     v18,
     v19);
   this->fields.eventRecipeGiftEntity = eventRecipeGiftEntity;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.eventRecipeGiftEntity,
     (System_Int32_array **)eventRecipeGiftEntity,
     v20,
@@ -64,12 +63,12 @@ void __fastcall EventRecipeListViewItem___ctor(
     v24,
     v25);
   this->fields.currentEventId = eventId;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
   if ( !*p_eventRecipeEntity )
     goto LABEL_14;
   if ( !Instance )
@@ -79,33 +78,33 @@ void __fastcall EventRecipeListViewItem___ctor(
                        (*p_eventRecipeEntity)->fields.commonConsumeId,
                        0LL);
   this->fields.commonConsumeEntity = SortedEntityList;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.commonConsumeEntity,
     (System_Int32_array **)SortedEntityList,
+    v28,
     v29,
     v30,
     v31,
     v32,
-    v33,
-    v34);
-  v35 = this->fields.eventRecipeEntity;
-  if ( !v35 )
+    v33);
+  v34 = this->fields.eventRecipeEntity;
+  if ( !v34 )
     goto LABEL_14;
-  if ( !v35->fields.commonReleaseId )
+  if ( !v34->fields.commonReleaseId )
   {
     IsOpen = 1;
     goto LABEL_13;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
+                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
         !*p_eventRecipeEntity)
     || !Instance )
   {
 LABEL_14:
-    sub_B2C434(Instance, v27);
+    sub_B0D97C(Instance);
   }
   IsOpen = CommonReleaseMaster__IsOpen(
              (CommonReleaseMaster_o *)Instance,
@@ -126,7 +125,7 @@ System_String_o *__fastcall EventRecipeListViewItem__get_ClosedMessage(
 
   eventRecipeEntity = this->fields.eventRecipeEntity;
   if ( !eventRecipeEntity )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return eventRecipeEntity->fields.closedMessage;
 }
 
@@ -155,12 +154,12 @@ System_String_o *__fastcall EventRecipeListViewItem__get_InfoMessage(
         EventRecipeListViewItem_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_41887A4 & 1) == 0 )
+  if ( (byte_4214A60 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_9310/*"NONE"*/, method);
-    byte_41887A4 = 1;
+    sub_B0D8A4(&StringLiteral_9333/*"NONE"*/, method);
+    byte_4214A60 = 1;
   }
-  return (System_String_o *)StringLiteral_9310/*"NONE"*/;
+  return (System_String_o *)StringLiteral_9333/*"NONE"*/;
 }
 
 
@@ -190,7 +189,7 @@ System_String_o *__fastcall EventRecipeListViewItem__get_NameText(
 
   eventRecipeEntity = this->fields.eventRecipeEntity;
   if ( !eventRecipeEntity )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return eventRecipeEntity->fields.name;
 }
 
@@ -209,7 +208,7 @@ int32_t __fastcall EventRecipeListViewItem__get_RecipeId(EventRecipeListViewItem
 
   eventRecipeEntity = this->fields.eventRecipeEntity;
   if ( !eventRecipeEntity )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return eventRecipeEntity->fields.id;
 }
 
@@ -225,13 +224,13 @@ int32_t __fastcall EventRecipeListViewItem__get_TopIconId(EventRecipeListViewIte
     goto LABEL_5;
   if ( !eventRecipeGiftEntity->max_length )
   {
-    v5 = sub_B2C460(this);
-    sub_B2C400(v5, 0LL);
+    v5 = sub_B0D9A8(this);
+    sub_B0D948(v5, 0LL);
   }
   v3 = eventRecipeGiftEntity->m_Items[0];
   if ( !v3 )
 LABEL_5:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return v3->fields.topIconId;
 }
 
@@ -242,6 +241,6 @@ int32_t __fastcall EventRecipeListViewItem__get_teaIconId(EventRecipeListViewIte
 
   eventRecipeEntity = this->fields.eventRecipeEntity;
   if ( !eventRecipeEntity )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return eventRecipeEntity->fields.iconId;
 }

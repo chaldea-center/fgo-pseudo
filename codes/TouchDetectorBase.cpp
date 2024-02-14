@@ -13,10 +13,10 @@ void __fastcall TouchDetectorBase__CheckUpdateCurrentTouchCount(TouchDetectorBas
   int32_t TouchCount; // w2
   TouchDetectorBase_TouchInfo_o *v8; // x0
 
-  if ( (byte_418995A & 1) == 0 )
+  if ( (byte_42167C6 & 1) == 0 )
   {
-    sub_B2C35C(&Method_ActionExtensions_Call_int__int___, method);
-    byte_418995A = 1;
+    sub_B0D8A4(&Method_ActionExtensions_Call_int__int___, method);
+    byte_42167C6 = 1;
   }
   CurrentTouchInfo_k__BackingField = this->fields._CurrentTouchInfo_k__BackingField;
   if ( CurrentTouchInfo_k__BackingField )
@@ -41,7 +41,7 @@ void __fastcall TouchDetectorBase__CheckUpdateCurrentTouchCount(TouchDetectorBas
       OnChangeTouchCount_k__BackingField,
       currentTouchCountCache,
       TouchCount,
-      (const MethodInfo_2D65BD0 *)Method_ActionExtensions_Call_int__int___);
+      (const MethodInfo_2D96758 *)Method_ActionExtensions_Call_int__int___);
     v8 = this->fields._CurrentTouchInfo_k__BackingField;
     if ( v8 )
       LODWORD(v8) = TouchDetectorBase_TouchInfo__get_TouchCount(v8, 0LL);
@@ -72,9 +72,9 @@ void __fastcall TouchDetectorBase__ClearTouchInfo(TouchDetectorBase_o *this, con
   System_Int32_array *v20; // x7
 
   this->fields._StartTouchInfo_k__BackingField = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields, 0LL, v2, v3, v4, v5, v6, v7);
   this->fields._CurrentTouchInfo_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._CurrentTouchInfo_k__BackingField,
     0LL,
     v9,
@@ -84,7 +84,7 @@ void __fastcall TouchDetectorBase__ClearTouchInfo(TouchDetectorBase_o *this, con
     v13,
     v14);
   this->fields._PrevTouchInfo_k__BackingField = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._PrevTouchInfo_k__BackingField,
     0LL,
     v15,
@@ -171,7 +171,7 @@ void __fastcall TouchDetectorBase__set_CurrentTouchInfo(
   System_Int32_array *v7; // x7
 
   this->fields._CurrentTouchInfo_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._CurrentTouchInfo_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -204,7 +204,7 @@ void __fastcall TouchDetectorBase__set_OnChangeTouchCount(
   System_Int32_array *v7; // x7
 
   this->fields._OnChangeTouchCount_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._OnChangeTouchCount_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -228,7 +228,7 @@ void __fastcall TouchDetectorBase__set_PrevTouchInfo(
   System_Int32_array *v7; // x7
 
   this->fields._PrevTouchInfo_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._PrevTouchInfo_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -252,7 +252,7 @@ void __fastcall TouchDetectorBase__set_StartTouchInfo(
   System_Int32_array *v7; // x7
 
   this->fields._StartTouchInfo_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -276,45 +276,49 @@ void __fastcall TouchDetectorBase_TouchInfo___ctor(
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  System_Collections_Generic_List_Vector2__o *v11; // x21
+  __int64 v11; // x1
+  __int64 v12; // x2
+  System_Collections_Generic_List_Vector2__o *v13; // x21
   System_Collections_Generic_List_Vector2__o *TouchPosList_k__BackingField; // x0
-  __int64 v13; // x1
   TouchDetectorBase_TouchInfo_Fields *p_fields; // x20
-  UnityEngine_Vector2_o v15; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v16; // 0:s0.4,4:s1.4
 
   y = primaryTouchPos.fields.y;
   x = primaryTouchPos.fields.x;
-  if ( (byte_418535A & 1) == 0 )
+  if ( (byte_42125C2 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_Vector2__AddRange__, optionalTouchPosArray);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Vector2__Add__, v8);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Vector2___ctor__, v9);
-    sub_B2C35C(&System_Collections_Generic_List_Vector2__TypeInfo, v10);
-    byte_418535A = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Vector2__AddRange__, optionalTouchPosArray);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Vector2__Add__, v8);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Vector2___ctor__, v9);
+    sub_B0D8A4(&System_Collections_Generic_List_Vector2__TypeInfo, v10);
+    byte_42125C2 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v11 = (System_Collections_Generic_List_Vector2__o *)sub_B2C42C(System_Collections_Generic_List_Vector2__TypeInfo);
+  v13 = (System_Collections_Generic_List_Vector2__o *)sub_B0D974(
+                                                        System_Collections_Generic_List_Vector2__TypeInfo,
+                                                        v11,
+                                                        v12);
   System_Collections_Generic_List_Vector2____ctor(
-    v11,
-    (const MethodInfo_2EDA4C4 *)Method_System_Collections_Generic_List_Vector2___ctor__);
-  if ( !v11
-    || (v15.fields.x = x,
-        v15.fields.y = y,
+    v13,
+    (const MethodInfo_2ED3BC0 *)Method_System_Collections_Generic_List_Vector2___ctor__);
+  if ( !v13
+    || (v16.fields.x = x,
+        v16.fields.y = y,
         System_Collections_Generic_List_Vector2___Add(
-          v11,
-          v15,
-          (const MethodInfo_2EDB228 *)Method_System_Collections_Generic_List_Vector2__Add__),
-        this->fields._TouchPosList_k__BackingField = v11,
+          v13,
+          v16,
+          (const MethodInfo_2ED4924 *)Method_System_Collections_Generic_List_Vector2__Add__),
+        this->fields._TouchPosList_k__BackingField = v13,
         p_fields = &this->fields,
-        sub_B2C2F8(p_fields, v11),
+        sub_B0D840(p_fields, v13),
         (TouchPosList_k__BackingField = p_fields->_TouchPosList_k__BackingField) == 0LL) )
   {
-    sub_B2C434(TouchPosList_k__BackingField, v13);
+    sub_B0D97C(TouchPosList_k__BackingField);
   }
   System_Collections_Generic_List_Vector2___AddRange(
     TouchPosList_k__BackingField,
     (System_Collections_Generic_IEnumerable_T__o *)optionalTouchPosArray,
-    (const MethodInfo_2EDB48C *)Method_System_Collections_Generic_List_Vector2__AddRange__);
+    (const MethodInfo_2ED4B88 *)Method_System_Collections_Generic_List_Vector2__AddRange__);
 }
 
 
@@ -325,54 +329,53 @@ UnityEngine_Vector2_o __fastcall TouchDetectorBase_TouchInfo__get_TouchCenter(
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
-  UnityEngine_Vector2_o v6; // x1
   UnityEngine_Vector2_o zero; // kr00_8
   System_Collections_Generic_List_Vector2__o *TouchPosList_k__BackingField; // x0
   float x; // s8
   float y; // s9
-  const MethodInfo *v11; // x1
+  const MethodInfo *v10; // x1
   int32_t TouchCount; // w0
-  float v13; // s0
-  float v14; // s1
-  System_Collections_Generic_List_Enumerator_T__o v15; // [xsp+8h] [xbp-58h] BYREF
+  float v12; // s0
+  float v13; // s1
+  System_Collections_Generic_List_Enumerator_T__o v14; // [xsp+8h] [xbp-58h] BYREF
   System_Collections_Generic_List_Enumerator_T__o i; // [xsp+20h] [xbp-40h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4185359 & 1) == 0 )
+  if ( (byte_42125C1 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_Vector2__Dispose__, method);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_Vector2__MoveNext__, v3);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_Vector2__get_Current__, v4);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Vector2__GetEnumerator__, v5);
-    byte_4185359 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_Vector2__Dispose__, method);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_Vector2__MoveNext__, v3);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_Vector2__get_Current__, v4);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Vector2__GetEnumerator__, v5);
+    byte_42125C1 = 1;
   }
   memset(&i, 0, sizeof(i));
   zero = UnityEngine_Vector2__get_zero(0LL);
   TouchPosList_k__BackingField = this->fields._TouchPosList_k__BackingField;
   if ( !TouchPosList_k__BackingField )
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_B2C434)(0LL, v6);
+    sub_B0D97C(0LL);
   x = zero.fields.x;
   y = zero.fields.y;
   System_Collections_Generic_List_Vector2___GetEnumerator(
-    &v15,
+    &v14,
     TouchPosList_k__BackingField,
-    (const MethodInfo_2EDC0F8 *)Method_System_Collections_Generic_List_Vector2__GetEnumerator__);
-  for ( i = v15;
+    (const MethodInfo_2ED57F4 *)Method_System_Collections_Generic_List_Vector2__GetEnumerator__);
+  for ( i = v14;
         System_Collections_Generic_List_Enumerator_Vector2___MoveNext(
           &i,
-          (const MethodInfo_20EEBB8 *)Method_System_Collections_Generic_List_Enumerator_Vector2__MoveNext__);
+          (const MethodInfo_2116CDC *)Method_System_Collections_Generic_List_Enumerator_Vector2__MoveNext__);
         y = y + *((float *)&i.fields.current + 1) )
   {
     x = x + *(float *)&i.fields.current;
   }
   System_Collections_Generic_List_Enumerator_Vector2___Dispose(
     &i,
-    (const MethodInfo_20EEBB4 *)Method_System_Collections_Generic_List_Enumerator_Vector2__Dispose__);
-  TouchCount = TouchDetectorBase_TouchInfo__get_TouchCount(this, v11);
-  v13 = x / (float)TouchCount;
-  v14 = y / (float)TouchCount;
-  result.fields.y = v14;
-  result.fields.x = v13;
+    (const MethodInfo_2116CD8 *)Method_System_Collections_Generic_List_Enumerator_Vector2__Dispose__);
+  TouchCount = TouchDetectorBase_TouchInfo__get_TouchCount(this, v10);
+  v12 = x / (float)TouchCount;
+  v13 = y / (float)TouchCount;
+  result.fields.y = v13;
+  result.fields.x = v12;
   return result;
 }
 
@@ -385,16 +388,16 @@ int32_t __fastcall TouchDetectorBase_TouchInfo__get_TouchCount(
   struct System_Collections_Generic_List_Vector2__o *TouchPosList_k__BackingField; // x8
 
   v2 = this;
-  if ( (byte_4185357 & 1) == 0 )
+  if ( (byte_42125BF & 1) == 0 )
   {
-    this = (TouchDetectorBase_TouchInfo_o *)sub_B2C35C(
+    this = (TouchDetectorBase_TouchInfo_o *)sub_B0D8A4(
                                               &Method_System_Collections_Generic_List_Vector2__get_Count__,
                                               method);
-    byte_4185357 = 1;
+    byte_42125BF = 1;
   }
   TouchPosList_k__BackingField = v2->fields._TouchPosList_k__BackingField;
   if ( !TouchPosList_k__BackingField )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return TouchPosList_k__BackingField->fields._size;
 }
 
@@ -413,104 +416,103 @@ float __fastcall TouchDetectorBase_TouchInfo__get_TouchInterval(
   System_Collections_Generic_List_Vector2__o *TouchPosList_k__BackingField; // x0
   int v10; // w28
   float v11; // s8
-  __int64 v12; // x1
-  System_Collections_Generic_List_Vector2__o *v13; // x0
+  System_Collections_Generic_List_Vector2__o *v12; // x0
   const void *genericMethod; // d9
-  void (__fastcall *v15)(); // d0
+  void (__fastcall *v14)(); // d0
   float magnitude; // s0
-  int v17; // s1
-  int v18; // w22
-  int v19; // w19
-  _BYTE v21[32]; // [xsp+10h] [xbp-D0h] BYREF
-  int v22; // [xsp+30h] [xbp-B0h]
+  int v16; // s1
+  int v17; // w22
+  int v18; // w19
+  _BYTE v20[32]; // [xsp+10h] [xbp-D0h] BYREF
+  int v21; // [xsp+30h] [xbp-B0h]
   MethodInfo methoda; // [xsp+38h] [xbp-A8h] BYREF
   System_Nullable_float__o p_touchIntervalCache; // 0:x0.8
-  System_Nullable_float__o v25; // 0:x0.8
+  System_Nullable_float__o v24; // 0:x0.8
 
-  if ( (byte_4185358 & 1) == 0 )
+  if ( (byte_42125C0 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_Vector2__Dispose__, method);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_Vector2__MoveNext__, v3);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_Vector2__get_Current__, v4);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Vector2__GetEnumerator__, v5);
-    sub_B2C35C(&Method_System_Nullable_float___ctor__, v6);
-    sub_B2C35C(&Method_System_Nullable_float__get_HasValue__, v7);
-    sub_B2C35C(&Method_System_Nullable_float__get_Value__, v8);
-    byte_4185358 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_Vector2__Dispose__, method);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_Vector2__MoveNext__, v3);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_Vector2__get_Current__, v4);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Vector2__GetEnumerator__, v5);
+    sub_B0D8A4(&Method_System_Nullable_float___ctor__, v6);
+    sub_B0D8A4(&Method_System_Nullable_float__get_HasValue__, v7);
+    sub_B0D8A4(&Method_System_Nullable_float__get_Value__, v8);
+    byte_42125C0 = 1;
   }
   memset(&methoda.parameters, 0, 24);
   memset(&methoda, 0, 32);
-  v22 = 0;
+  v21 = 0;
   p_touchIntervalCache = (System_Nullable_float__o)&this->fields.touchIntervalCache;
   if ( !this->fields.touchIntervalCache.fields.has_value )
   {
     TouchPosList_k__BackingField = this->fields._TouchPosList_k__BackingField;
     if ( !TouchPosList_k__BackingField )
-      sub_B2C434(0LL, method);
+      sub_B0D97C(0LL);
     System_Collections_Generic_List_Vector2___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)v21,
+      (System_Collections_Generic_List_Enumerator_T__o *)v20,
       TouchPosList_k__BackingField,
-      (const MethodInfo_2EDC0F8 *)Method_System_Collections_Generic_List_Vector2__GetEnumerator__);
-    methoda.genericMethod = *(const void **)&v21[16];
-    *(_OWORD *)&methoda.parameters = *(_OWORD *)v21;
+      (const MethodInfo_2ED57F4 *)Method_System_Collections_Generic_List_Vector2__GetEnumerator__);
+    methoda.genericMethod = *(const void **)&v20[16];
+    *(_OWORD *)&methoda.parameters = *(_OWORD *)v20;
     v10 = 0;
     v11 = 10.0;
     while ( System_Collections_Generic_List_Enumerator_Vector2___MoveNext(
               (System_Collections_Generic_List_Enumerator_T__o *)&methoda.parameters,
-              (const MethodInfo_20EEBB8 *)Method_System_Collections_Generic_List_Enumerator_Vector2__MoveNext__) )
+              (const MethodInfo_2116CDC *)Method_System_Collections_Generic_List_Enumerator_Vector2__MoveNext__) )
     {
-      v13 = this->fields._TouchPosList_k__BackingField;
-      if ( !v13 )
-        sub_B2C434(0LL, v12);
+      v12 = this->fields._TouchPosList_k__BackingField;
+      if ( !v12 )
+        sub_B0D97C(0LL);
       genericMethod = methoda.genericMethod;
       System_Collections_Generic_List_Vector2___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)v21,
-        v13,
-        (const MethodInfo_2EDC0F8 *)Method_System_Collections_Generic_List_Vector2__GetEnumerator__);
-      methoda.klass = *(Il2CppClass **)&v21[16];
-      *(_OWORD *)&methoda.invoker_method = *(_OWORD *)v21;
+        (System_Collections_Generic_List_Enumerator_T__o *)v20,
+        v12,
+        (const MethodInfo_2ED57F4 *)Method_System_Collections_Generic_List_Vector2__GetEnumerator__);
+      methoda.klass = *(Il2CppClass **)&v20[16];
+      *(_OWORD *)&methoda.invoker_method = *(_OWORD *)v20;
       while ( System_Collections_Generic_List_Enumerator_Vector2___MoveNext(
                 (System_Collections_Generic_List_Enumerator_T__o *)&methoda.invoker_method,
-                (const MethodInfo_20EEBB8 *)Method_System_Collections_Generic_List_Enumerator_Vector2__MoveNext__) )
+                (const MethodInfo_2116CDC *)Method_System_Collections_Generic_List_Enumerator_Vector2__MoveNext__) )
       {
-        v15 = (void (__fastcall *)())vsub_f32((float32x2_t)genericMethod, (float32x2_t)methoda.klass).n64_u64[0];
-        methoda.methodPointer = v15;
-        magnitude = UnityEngine_Vector2__get_magnitude(*(UnityEngine_Vector2_o *)(&v17 - 1), &methoda);
+        v14 = (void (__fastcall *)())vsub_f32((float32x2_t)genericMethod, (float32x2_t)methoda.klass).n64_u64[0];
+        methoda.methodPointer = v14;
+        magnitude = UnityEngine_Vector2__get_magnitude(*(UnityEngine_Vector2_o *)(&v16 - 1), &methoda);
         if ( v11 < magnitude )
           v11 = magnitude;
       }
-      *(_DWORD *)&v21[4 * v10 + 24] = 128;
-      v18 = ++v22;
+      *(_DWORD *)&v20[4 * v10 + 24] = 128;
+      v17 = ++v21;
       System_Collections_Generic_List_Enumerator_Vector2___Dispose(
         (System_Collections_Generic_List_Enumerator_T__o *)&methoda.invoker_method,
-        (const MethodInfo_20EEBB4 *)Method_System_Collections_Generic_List_Enumerator_Vector2__Dispose__);
+        (const MethodInfo_2116CD8 *)Method_System_Collections_Generic_List_Enumerator_Vector2__Dispose__);
       v10 = 0;
-      if ( v18 )
+      if ( v17 )
       {
-        v10 = v18;
-        if ( *(_DWORD *)&v21[4 * v18 + 20] == 128 )
+        v10 = v17;
+        if ( *(_DWORD *)&v20[4 * v17 + 20] == 128 )
         {
-          v10 = v18 - 1;
-          v22 = v18 - 1;
+          v10 = v17 - 1;
+          v21 = v17 - 1;
         }
       }
     }
-    *(_DWORD *)&v21[4 * v10 + 24] = 153;
-    v19 = ++v22;
+    *(_DWORD *)&v20[4 * v10 + 24] = 153;
+    v18 = ++v21;
     System_Collections_Generic_List_Enumerator_Vector2___Dispose(
       (System_Collections_Generic_List_Enumerator_T__o *)&methoda.parameters,
-      (const MethodInfo_20EEBB4 *)Method_System_Collections_Generic_List_Enumerator_Vector2__Dispose__);
-    if ( v19 && *(_DWORD *)&v21[4 * v19 + 20] == 153 )
-      v22 = v19 - 1;
-    v25 = (System_Nullable_float__o)v21;
-    *(_QWORD *)v21 = 0LL;
-    System_Nullable_float____ctor(v25, v11, (const MethodInfo_21536DC *)Method_System_Nullable_float___ctor__);
+      (const MethodInfo_2116CD8 *)Method_System_Collections_Generic_List_Enumerator_Vector2__Dispose__);
+    if ( v18 && *(_DWORD *)&v20[4 * v18 + 20] == 153 )
+      v21 = v18 - 1;
+    v24 = (System_Nullable_float__o)v20;
+    *(_QWORD *)v20 = 0LL;
+    System_Nullable_float____ctor(v24, v11, (const MethodInfo_2981438 *)Method_System_Nullable_float___ctor__);
     p_touchIntervalCache = (System_Nullable_float__o)&this->fields.touchIntervalCache;
-    this->fields.touchIntervalCache = *(struct System_Nullable_float__o *)v21;
+    this->fields.touchIntervalCache = *(struct System_Nullable_float__o *)v20;
   }
   return System_Nullable_float___get_Value(
            p_touchIntervalCache,
-           (const MethodInfo_21536F4 *)Method_System_Nullable_float__get_Value__);
+           (const MethodInfo_2981450 *)Method_System_Nullable_float__get_Value__);
 }
 
 
@@ -528,5 +530,5 @@ void __fastcall TouchDetectorBase_TouchInfo__set_TouchPosList(
         const MethodInfo *method)
 {
   this->fields._TouchPosList_k__BackingField = value;
-  sub_B2C2F8(&this->fields, value);
+  sub_B0D840(&this->fields, value);
 }

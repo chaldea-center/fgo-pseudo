@@ -1,34 +1,38 @@
 void __fastcall BattleRankUpSkillInfoData___ctor(BattleRankUpSkillInfoData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v4; // x20
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  __int64 v2; // x2
+  __int64 v4; // x1
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x20
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_4188538 & 1) == 0 )
+  if ( (byte_4215216 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_BattleSkillInfoData___ctor__, method);
-    sub_B2C35C(&System_Collections_Generic_List_BattleSkillInfoData__TypeInfo, v3);
-    byte_4188538 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleSkillInfoData___ctor__, method);
+    sub_B0D8A4(&System_Collections_Generic_List_BattleSkillInfoData__TypeInfo, v4);
+    byte_4215216 = 1;
   }
-  v4 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_BattleSkillInfoData__TypeInfo);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
+                                                                                                 System_Collections_Generic_List_BattleSkillInfoData__TypeInfo,
+                                                                                                 method,
+                                                                                                 v2);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v4,
-    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_BattleSkillInfoData___ctor__);
-  this->fields.rankUpList = (struct System_Collections_Generic_List_BattleSkillInfoData__o *)v4;
-  sub_B2C2F8(
-    (BattleServantConfConponent_o *)&this->fields.rankUpList,
-    (System_Int32_array **)v4,
     v5,
+    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_BattleSkillInfoData___ctor__);
+  this->fields.rankUpList = (struct System_Collections_Generic_List_BattleSkillInfoData__o *)v5;
+  sub_B0D840(
+    (BattleServantConfConponent_o *)&this->fields.rankUpList,
+    (System_Int32_array **)v5,
     v6,
     v7,
     v8,
     v9,
-    v10);
+    v10,
+    v11);
   BattleSkillInfoData___ctor((BattleSkillInfoData_o *)this, 0LL);
 }
 
@@ -39,17 +43,17 @@ BattleSkillInfoData_array *__fastcall BattleRankUpSkillInfoData__GetLoadArray(
 {
   struct System_Collections_Generic_List_BattleSkillInfoData__o *rankUpList; // x0
 
-  if ( (byte_4188537 & 1) == 0 )
+  if ( (byte_4215215 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_BattleSkillInfoData__ToArray__, method);
-    byte_4188537 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleSkillInfoData__ToArray__, method);
+    byte_4215215 = 1;
   }
   rankUpList = this->fields.rankUpList;
   if ( !rankUpList )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   return (BattleSkillInfoData_array *)System_Collections_Generic_List_WarBoardUiData_SaveData___ToArray(
                                         (System_Collections_Generic_List_WarBoardUiData_SaveData__o *)rankUpList,
-                                        (const MethodInfo_2EF65AC *)Method_System_Collections_Generic_List_BattleSkillInfoData__ToArray__);
+                                        (const MethodInfo_2FC7834 *)Method_System_Collections_Generic_List_BattleSkillInfoData__ToArray__);
 }
 
 
@@ -58,7 +62,6 @@ int32_t __fastcall BattleRankUpSkillInfoData__GetRankUpState(
         const MethodInfo *method)
 {
   __int64 FixRank; // x0
-  __int64 v4; // x1
   struct BattleBuffData_SkillRankChangeData_o *rankChangeData; // x8
 
   if ( !this->fields.rankChangeData )
@@ -68,7 +71,7 @@ int32_t __fastcall BattleRankUpSkillInfoData__GetRankUpState(
     return 0;
   rankChangeData = this->fields.rankChangeData;
   if ( !rankChangeData )
-    sub_B2C434(FixRank, v4);
+    sub_B0D97C(FixRank);
   if ( rankChangeData->fields._IsAddRightAfter_k__BackingField )
     return 1;
   else
@@ -92,14 +95,13 @@ bool __fastcall BattleRankUpSkillInfoData__IsChangeable(BattleRankUpSkillInfoDat
 
 void __fastcall BattleRankUpSkillInfoData__UseSkill(BattleRankUpSkillInfoData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   BattleBuffData_SkillRankChangeData_o *rankChangeData; // x0
 
   if ( this->fields.rankChangeData && BattleRankUpSkillInfoData__get_FixRank(this, method) >= 1 )
   {
     rankChangeData = this->fields.rankChangeData;
     if ( !rankChangeData )
-      sub_B2C434(0LL, v3);
+      sub_B0D97C(0LL);
     BattleBuffData_SkillRankChangeData__UseBuff(rankChangeData, 0LL);
   }
 }
@@ -109,13 +111,12 @@ int32_t __fastcall BattleRankUpSkillInfoData__getCutInId(BattleRankUpSkillInfoDa
 {
   const MethodInfo *v3; // x1
   BattleSkillInfoData_o *Current; // x0
-  __int64 v5; // x1
 
   if ( !BattleRankUpSkillInfoData__get_Current(this, method) )
     return BattleSkillInfoData__getCutInId((BattleSkillInfoData_o *)this, 0LL);
   Current = BattleRankUpSkillInfoData__get_Current(this, v3);
   if ( !Current )
-    sub_B2C434(0LL, v5);
+    sub_B0D97C(0LL);
   return ((__int64 (__fastcall *)(BattleSkillInfoData_o *, Il2CppMethodPointer))Current->klass->vtable._7_getCutInId.method)(
            Current,
            Current->klass->vtable._8_PreLoad.methodPtr);
@@ -129,10 +130,10 @@ BattleSkillInfoData_o *__fastcall BattleRankUpSkillInfoData__get_Current(
   System_Collections_Generic_List_T__o *rankUpList; // x20
   int32_t FixRank; // w1
 
-  if ( (byte_4188536 & 1) == 0 )
+  if ( (byte_4215214 & 1) == 0 )
   {
-    sub_B2C35C(&Method_BasicHelper_IndexValue_BattleSkillInfoData___, method);
-    byte_4188536 = 1;
+    sub_B0D8A4(&Method_BasicHelper_IndexValue_BattleSkillInfoData___, method);
+    byte_4215214 = 1;
   }
   rankUpList = (System_Collections_Generic_List_T__o *)this->fields.rankUpList;
   FixRank = BattleRankUpSkillInfoData__get_FixRank(this, method);
@@ -140,7 +141,7 @@ BattleSkillInfoData_o *__fastcall BattleRankUpSkillInfoData__get_Current(
                                     rankUpList,
                                     FixRank,
                                     0LL,
-                                    (const MethodInfo_1728994 *)Method_BasicHelper_IndexValue_BattleSkillInfoData___);
+                                    (const MethodInfo_1709420 *)Method_BasicHelper_IndexValue_BattleSkillInfoData___);
 }
 
 
@@ -177,10 +178,10 @@ int32_t __fastcall BattleRankUpSkillInfoData__get_FixRank(BattleRankUpSkillInfoD
   int32_t RankUpCount_k__BackingField; // w19
   int32_t RankUpLimit; // w20
 
-  if ( (byte_4188535 & 1) == 0 )
+  if ( (byte_4215213 & 1) == 0 )
   {
-    sub_B2C35C(&System_Math_TypeInfo, method);
-    byte_4188535 = 1;
+    sub_B0D8A4(&System_Math_TypeInfo, method);
+    byte_4215213 = 1;
   }
   rankChangeData = this->fields.rankChangeData;
   if ( rankChangeData )
@@ -190,7 +191,7 @@ int32_t __fastcall BattleRankUpSkillInfoData__get_FixRank(BattleRankUpSkillInfoD
   RankUpLimit = BattleRankUpSkillInfoData__get_RankUpLimit(this, method);
   if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  return System_Math__Min_44967328(RankUpCount_k__BackingField, RankUpLimit, 0LL);
+  return System_Math__Min_44514512(RankUpCount_k__BackingField, RankUpLimit, 0LL);
 }
 
 
@@ -221,16 +222,16 @@ int32_t __fastcall BattleRankUpSkillInfoData__get_RankUpLimit(
   struct System_Collections_Generic_List_BattleSkillInfoData__o *rankUpList; // x8
 
   v2 = this;
-  if ( (byte_4188534 & 1) == 0 )
+  if ( (byte_4215212 & 1) == 0 )
   {
-    this = (BattleRankUpSkillInfoData_o *)sub_B2C35C(
+    this = (BattleRankUpSkillInfoData_o *)sub_B0D8A4(
                                             &Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__,
                                             method);
-    byte_4188534 = 1;
+    byte_4215212 = 1;
   }
   rankUpList = v2->fields.rankUpList;
   if ( !rankUpList )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return rankUpList->fields._size - 1;
 }
 
@@ -239,13 +240,12 @@ int32_t __fastcall BattleRankUpSkillInfoData__get_skillId(BattleRankUpSkillInfoD
 {
   const MethodInfo *v3; // x1
   BattleSkillInfoData_o *Current; // x0
-  __int64 v5; // x1
 
   if ( !BattleRankUpSkillInfoData__get_Current(this, method) )
     return this->fields._skillId;
   Current = BattleRankUpSkillInfoData__get_Current(this, v3);
   if ( !Current )
-    sub_B2C434(0LL, v5);
+    sub_B0D97C(0LL);
   return ((__int64 (__fastcall *)(BattleSkillInfoData_o *, Il2CppMethodPointer))Current->klass->vtable._5_get_skillId.method)(
            Current,
            Current->klass->vtable._6_get_IndividualityArray.methodPtr);

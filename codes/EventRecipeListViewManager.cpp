@@ -10,47 +10,45 @@ void __fastcall EventRecipeListViewManager__CheckOpenQuest(
         const MethodInfo *method)
 {
   CommonUI_o *Instance; // x0
-  __int64 currentEventId; // x1
   struct UserEventPointEntity_array *oldUserEventPoint; // x8
-  __int64 v8; // x9
-  UserEventPointEntity_o *v9; // x8
+  __int64 v7; // x9
+  UserEventPointEntity_o *v8; // x8
   int64_t value; // x2
-  __int64 v11; // x0
+  __int64 v10; // x0
 
-  if ( (byte_41887B4 & 1) == 0 )
+  if ( (byte_42112EF & 1) == 0 )
   {
-    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, response);
-    byte_41887B4 = 1;
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, response);
+    byte_42112EF = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !response )
     goto LABEL_11;
   oldUserEventPoint = response->fields.oldUserEventPoint;
   if ( !oldUserEventPoint )
     goto LABEL_11;
-  v8 = *(_QWORD *)&oldUserEventPoint->max_length;
-  currentEventId = (unsigned int)this->fields.currentEventId;
-  if ( !v8 )
+  v7 = *(_QWORD *)&oldUserEventPoint->max_length;
+  if ( !v7 )
   {
     value = 0LL;
     if ( Instance )
       goto LABEL_9;
 LABEL_11:
-    sub_B2C434(Instance, currentEventId);
+    sub_B0D97C(Instance);
   }
-  if ( !(_DWORD)v8 )
+  if ( !(_DWORD)v7 )
   {
-    v11 = sub_B2C460(Instance);
-    sub_B2C400(v11, 0LL);
+    v10 = sub_B0D9A8(Instance);
+    sub_B0D948(v10, 0LL);
   }
-  v9 = oldUserEventPoint->m_Items[0];
-  if ( !v9 )
+  v8 = oldUserEventPoint->m_Items[0];
+  if ( !v8 )
     goto LABEL_11;
-  value = v9->fields.value;
+  value = v8->fields.value;
   if ( !Instance )
     goto LABEL_11;
 LABEL_9:
-  CommonUI__CheckOpenQuestByEventPoint(Instance, currentEventId, value, 0LL, 0, 0LL);
+  CommonUI__CheckOpenQuestByEventPoint(Instance, this->fields.currentEventId, value, 0LL, 0, 0LL);
 }
 
 
@@ -66,28 +64,27 @@ void __fastcall EventRecipeListViewManager__CreateList(
   __int64 v10; // x1
   __int64 v11; // x1
   DataManager_o *Instance; // x0
-  __int64 v13; // x1
   signed int max_length; // w8
-  unsigned int v15; // w26
-  EventRecipeEntity_o *v16; // x22
-  const MethodInfo *v17; // x2
+  unsigned int v14; // w26
+  EventRecipeEntity_o *v15; // x22
   EventRecipeGiftEntity_array *SortedEntityArray; // x0
   int32_t id; // w24
-  EventRecipeGiftEntity_array *v20; // x25
+  EventRecipeGiftEntity_array *v18; // x25
+  __int64 v19; // x1
+  __int64 v20; // x2
   EventRecipeListViewItem_o *v21; // x23
-  const MethodInfo *v22; // x5
   UILabel_o *emptyMessageLabel; // x19
-  __int64 v24; // x0
+  __int64 v23; // x0
 
-  if ( (byte_41887AB & 1) == 0 )
+  if ( (byte_42112E6 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventRecipeGiftMaster___, eventRecipeEntities);
-    sub_B2C35C(&EventRecipeListViewItem_TypeInfo, v7);
-    sub_B2C35C(&Method_System_Collections_Generic_List_ListViewItem__Add__, v8);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v9);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B2C35C(&StringLiteral_5710/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/, v11);
-    byte_41887AB = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventRecipeGiftMaster___, eventRecipeEntities);
+    sub_B0D8A4(&EventRecipeListViewItem_TypeInfo, v7);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewItem__Add__, v8);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v9);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_B0D8A4(&StringLiteral_5726/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/, v11);
+    byte_42112E6 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   if ( !eventRecipeEntities )
@@ -95,46 +92,46 @@ void __fastcall EventRecipeListViewManager__CreateList(
   max_length = eventRecipeEntities->max_length;
   if ( max_length >= 1 )
   {
-    v15 = 0;
+    v14 = 0;
     while ( 1 )
     {
-      if ( v15 >= max_length )
+      if ( v14 >= max_length )
       {
-        v24 = sub_B2C460(Instance);
-        sub_B2C400(v24, 0LL);
+        v23 = sub_B0D9A8(Instance);
+        sub_B0D948(v23, 0LL);
       }
-      v16 = eventRecipeEntities->m_Items[v15];
-      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v15 = eventRecipeEntities->m_Items[v14];
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         break;
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventRecipeGiftMaster___);
-      if ( !v16 )
+                                    (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventRecipeGiftMaster___);
+      if ( !v15 )
         break;
       if ( !Instance )
         break;
       SortedEntityArray = EventRecipeGiftMaster__GetSortedEntityArray(
                             (EventRecipeGiftMaster_o *)Instance,
-                            v16->fields.id,
-                            v17);
-      id = v16->fields.id;
-      v20 = SortedEntityArray;
-      v21 = (EventRecipeListViewItem_o *)sub_B2C42C(EventRecipeListViewItem_TypeInfo);
-      EventRecipeListViewItem___ctor(v21, id, v16, v20, eventId, v22);
+                            v15->fields.id,
+                            0LL);
+      id = v15->fields.id;
+      v18 = SortedEntityArray;
+      v21 = (EventRecipeListViewItem_o *)sub_B0D974(EventRecipeListViewItem_TypeInfo, v19, v20);
+      EventRecipeListViewItem___ctor(v21, id, v15, v18, eventId, 0LL);
       Instance = (DataManager_o *)this->fields.itemList;
       if ( !Instance )
         break;
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Instance,
         (EventMissionProgressRequest_Argument_ProgressData_o *)v21,
-        (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
+        (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
       max_length = eventRecipeEntities->max_length;
-      if ( (int)++v15 >= max_length )
+      if ( (int)++v14 >= max_length )
         goto LABEL_12;
     }
 LABEL_18:
-    sub_B2C434(Instance, v13);
+    sub_B0D97C(Instance);
   }
 LABEL_12:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
@@ -147,7 +144,7 @@ LABEL_12:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5710/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/, 0LL);
+    Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5726/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/, 0LL);
     if ( !emptyMessageLabel )
       goto LABEL_18;
     UILabel__set_text(emptyMessageLabel, (System_String_o *)Instance, 0LL);
@@ -176,104 +173,88 @@ void __fastcall EventRecipeListViewManager__CreateRecipeResponse(
   __int64 v18; // x1
   __int64 v19; // x1
   __int64 v20; // x1
-  __int64 v21; // x20
+  EventRecipeListViewManager___c__DisplayClass33_0_o *v21; // x20
   void *playVoiceAction; // x0
   __int64 v23; // x1
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
+  __int64 v24; // x2
   System_Collections_Generic_IEnumerable_TSource__o *eventRecipeEntities; // x21
-  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v31; // x23
-  System_Int32_array **v32; // x0
-  EventRecipeEntity_o **v33; // x21
-  System_String_array **v34; // x2
-  System_String_array **v35; // x3
-  System_Boolean_array **v36; // x4
-  System_Int32_array **v37; // x5
-  System_Int32_array *v38; // x6
-  System_Int32_array *v39; // x7
-  __int64 v40; // x8
-  Il2CppObject *v41; // x22
-  System_Int32_array **v42; // x0
-  __int64 *v43; // x22
-  System_String_array **v44; // x2
-  System_String_array **v45; // x3
-  System_Boolean_array **v46; // x4
-  System_Int32_array **v47; // x5
-  System_Int32_array *v48; // x6
-  System_Int32_array *v49; // x7
-  System_String_array **v50; // x2
-  System_String_array **v51; // x3
-  System_Boolean_array **v52; // x4
-  System_Int32_array **v53; // x5
-  System_Int32_array *v54; // x6
-  System_Int32_array *v55; // x7
-  __int64 v56; // x8
-  __int64 v57; // x8
-  System_Int32_array **v58; // x1
-  System_Int32_array *v59; // x22
-  __int64 v60; // x8
-  const MethodInfo *v61; // x1
-  const MethodInfo *v62; // x2
+  System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *v26; // x23
+  WarBoardData_SquareRangeSearch_o *v27; // x0
+  EventRecipeEntity_o **p_eventRecipeEntity; // x21
+  struct EventRecipeEntity_o *eventRecipeEntity; // x8
+  Il2CppObject *v30; // x22
+  UserPresentBoxWindow_resData_array *v31; // x0
+  struct EventRecipeListViewManager_resData_array **p_res; // x22
+  struct EventRecipeListViewManager_resData_array *v33; // x8
+  EventRecipeListViewManager_resData_o *v34; // x8
+  struct BattleDropItem_array *resultEventRewardInfos; // x1
+  System_Int32_array *recipeGiftIds; // x22
+  struct EventRecipeListViewManager_resData_array *res; // x8
+  const MethodInfo *v38; // x1
+  __int64 v39; // x1
+  __int64 v40; // x2
   RecipeRewardDialogComponent_o *recipeRewardDialog; // x25
-  BattleDropItem_array *v64; // x23
-  EventRecipeEntity_o *v65; // x21
-  EventRecipeGiftEntity_o *v66; // x24
-  System_Action_o *v67; // x26
-  RecipeRewardDialogComponent_GetEffect_o *v68; // x20
-  const MethodInfo *v69; // x1
-  __int64 v70; // x0
+  BattleDropItem_array *v42; // x23
+  EventRecipeEntity_o *v43; // x21
+  EventRecipeGiftEntity_o *v44; // x24
+  System_Action_o *v45; // x26
+  __int64 v46; // x1
+  __int64 v47; // x2
+  RecipeRewardDialogComponent_GetEffect_o *v48; // x20
+  const MethodInfo *v49; // x1
+  __int64 v50; // x0
 
-  if ( (byte_41887B2 & 1) == 0 )
+  if ( (byte_42112ED & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Action_int__string____Action__Invoke__, result);
-    sub_B2C35C(&System_Action_TypeInfo, v5);
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventRecipeGiftMaster___, v6);
-    sub_B2C35C(&Method_System_Linq_Enumerable_FirstOrDefault_EventRecipeEntity___, v7);
-    sub_B2C35C(&Method_EventRecipeListViewManager_GetEffect__, v8);
-    sub_B2C35C(&Method_System_Func_EventRecipeEntity__bool___ctor__, v9);
-    sub_B2C35C(&System_Func_EventRecipeEntity__bool__TypeInfo, v10);
-    sub_B2C35C(&RecipeRewardDialogComponent_GetEffect_TypeInfo, v11);
-    sub_B2C35C(&Method_JsonManager_DeserializeArray_EventRecipeListViewManager_resData___, v12);
-    sub_B2C35C(&JsonManager_TypeInfo, v13);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_B2C35C(&Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__0__, v15);
-    sub_B2C35C(&Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__1__, v16);
-    sub_B2C35C(&EventRecipeListViewManager___c__DisplayClass33_0_TypeInfo, v17);
-    sub_B2C35C(&StringLiteral_21068/*"ng"*/, v18);
-    sub_B2C35C(&StringLiteral_15634/*"["*/, v19);
-    sub_B2C35C(&StringLiteral_15870/*"]"*/, v20);
-    byte_41887B2 = 1;
+    sub_B0D8A4(&Method_System_Action_int__string____Action__Invoke__, result);
+    sub_B0D8A4(&System_Action_TypeInfo, v5);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventRecipeGiftMaster___, v6);
+    sub_B0D8A4(&Method_System_Linq_Enumerable_FirstOrDefault_EventRecipeEntity___, v7);
+    sub_B0D8A4(&Method_EventRecipeListViewManager_GetEffect__, v8);
+    sub_B0D8A4(&Method_System_Func_EventRecipeEntity__bool___ctor__, v9);
+    sub_B0D8A4(&System_Func_EventRecipeEntity__bool__TypeInfo, v10);
+    sub_B0D8A4(&RecipeRewardDialogComponent_GetEffect_TypeInfo, v11);
+    sub_B0D8A4(&Method_JsonManager_DeserializeArray_EventRecipeListViewManager_resData___, v12);
+    sub_B0D8A4(&JsonManager_TypeInfo, v13);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    sub_B0D8A4(&Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__0__, v15);
+    sub_B0D8A4(&Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__1__, v16);
+    sub_B0D8A4(&EventRecipeListViewManager___c__DisplayClass33_0_TypeInfo, v17);
+    sub_B0D8A4(&StringLiteral_21137/*"ng"*/, v18);
+    sub_B0D8A4(&StringLiteral_15681/*"["*/, v19);
+    sub_B0D8A4(&StringLiteral_15917/*"]"*/, v20);
+    byte_42112ED = 1;
   }
-  v21 = sub_B2C42C(EventRecipeListViewManager___c__DisplayClass33_0_TypeInfo);
-  EventRecipeListViewManager___c__DisplayClass33_0___ctor(
-    (EventRecipeListViewManager___c__DisplayClass33_0_o *)v21,
-    0LL);
+  v21 = (EventRecipeListViewManager___c__DisplayClass33_0_o *)sub_B0D974(
+                                                                EventRecipeListViewManager___c__DisplayClass33_0_TypeInfo,
+                                                                result,
+                                                                method);
+  EventRecipeListViewManager___c__DisplayClass33_0___ctor(v21, 0LL);
   if ( !v21 )
     goto LABEL_28;
-  *(_QWORD *)(v21 + 16) = this;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v21 + 16), (System_Int32_array **)this, v24, v25, v26, v27, v28, v29);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_21068/*"ng"*/, 0LL) )
+  v21->fields.__4__this = this;
+  sub_B0D840(&v21->fields, this);
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_21137/*"ng"*/, 0LL) )
     return;
   eventRecipeEntities = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.eventRecipeEntities;
-  v31 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B2C42C(System_Func_EventRecipeEntity__bool__TypeInfo);
+  v26 = (System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool__o *)sub_B0D974(
+                                                                             System_Func_EventRecipeEntity__bool__TypeInfo,
+                                                                             v23,
+                                                                             v24);
   System_Func_WarBoardManager_WarBoardOnboardSkillTarget__bool____ctor(
-    v31,
+    v26,
     (Il2CppObject *)v21,
     Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__0__,
-    (const MethodInfo_2711C04 *)Method_System_Func_EventRecipeEntity__bool___ctor__);
-  v32 = (System_Int32_array **)System_Linq_Enumerable__FirstOrDefault_WarBoardData_SquareRangeSearch_(
-                                 eventRecipeEntities,
-                                 (System_Func_TSource__bool__o *)v31,
-                                 (const MethodInfo_1A9113C *)Method_System_Linq_Enumerable_FirstOrDefault_EventRecipeEntity___);
-  v33 = (EventRecipeEntity_o **)(v21 + 32);
-  *(_QWORD *)(v21 + 32) = v32;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v21 + 32), v32, v34, v35, v36, v37, v38, v39);
-  v40 = *(_QWORD *)(v21 + 32);
-  if ( !v40 )
+    (const MethodInfo_26189B8 *)Method_System_Func_EventRecipeEntity__bool___ctor__);
+  v27 = System_Linq_Enumerable__FirstOrDefault_WarBoardData_SquareRangeSearch_(
+          eventRecipeEntities,
+          (System_Func_TSource__bool__o *)v26,
+          (const MethodInfo_1B4C408 *)Method_System_Linq_Enumerable_FirstOrDefault_EventRecipeEntity___);
+  p_eventRecipeEntity = &v21->fields.eventRecipeEntity;
+  v21->fields.eventRecipeEntity = (struct EventRecipeEntity_o *)v27;
+  sub_B0D840(&v21->fields.eventRecipeEntity, v27);
+  eventRecipeEntity = v21->fields.eventRecipeEntity;
+  if ( !eventRecipeEntity )
     goto LABEL_28;
   playVoiceAction = this->fields.playVoiceAction;
   if ( !playVoiceAction )
@@ -281,22 +262,22 @@ void __fastcall EventRecipeListViewManager__CreateRecipeResponse(
   System_Action_int__string__string___Invoke(
     (System_Action_int__string__string__o *)playVoiceAction,
     this->fields.svtId,
-    *(System_String_o **)(v40 + 72),
+    (System_String_o *)eventRecipeEntity->fields.voiceIds,
     0LL,
-    (const MethodInfo_24CAF68 *)Method_System_Action_int__string____Action__Invoke__);
-  v41 = (Il2CppObject *)System_String__Concat_44307816(
-                          (System_String_o *)StringLiteral_15634/*"["*/,
+    (const MethodInfo_247DECC *)Method_System_Action_int__string____Action__Invoke__);
+  v30 = (Il2CppObject *)System_String__Concat_43852188(
+                          (System_String_o *)StringLiteral_15681/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_15870/*"]"*/,
+                          (System_String_o *)StringLiteral_15917/*"]"*/,
                           0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v42 = (System_Int32_array **)JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(
-                                 v41,
-                                 (const MethodInfo_1AACFE4 *)Method_JsonManager_DeserializeArray_EventRecipeListViewManager_resData___);
-  *(_QWORD *)(v21 + 40) = v42;
-  v43 = (__int64 *)(v21 + 40);
-  sub_B2C2F8((BattleServantConfConponent_o *)(v21 + 40), v42, v44, v45, v46, v47, v48, v49);
+  v31 = JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(
+          v30,
+          (const MethodInfo_1B682B0 *)Method_JsonManager_DeserializeArray_EventRecipeListViewManager_resData___);
+  v21->fields.res = (struct EventRecipeListViewManager_resData_array *)v31;
+  p_res = &v21->fields.res;
+  sub_B0D840(&v21->fields.res, v31);
   playVoiceAction = this->fields.touchPanel;
   if ( !playVoiceAction )
     goto LABEL_28;
@@ -308,72 +289,72 @@ void __fastcall EventRecipeListViewManager__CreateRecipeResponse(
   if ( !playVoiceAction )
     goto LABEL_28;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)playVoiceAction, 0, 0LL);
-  v56 = *v43;
-  if ( !*v43 )
+  v33 = *p_res;
+  if ( !*p_res )
     goto LABEL_28;
-  if ( !*(_DWORD *)(v56 + 24) )
+  if ( !v33->max_length )
     goto LABEL_29;
-  v57 = *(_QWORD *)(v56 + 32);
-  if ( !v57 )
+  v34 = v33->m_Items[0];
+  if ( !v34 )
     goto LABEL_28;
-  v59 = *(System_Int32_array **)(v57 + 16);
-  v58 = *(System_Int32_array ***)(v57 + 24);
-  *(_QWORD *)(v21 + 24) = v58;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v21 + 24), v58, v50, v51, v52, v53, v54, v55);
-  v60 = *(_QWORD *)(v21 + 40);
-  if ( !v60 )
+  recipeGiftIds = v34->fields.recipeGiftIds;
+  resultEventRewardInfos = v34->fields.resultEventRewardInfos;
+  v21->fields.resultEventRewardInfos = resultEventRewardInfos;
+  sub_B0D840(&v21->fields.resultEventRewardInfos, resultEventRewardInfos);
+  res = v21->fields.res;
+  if ( !res )
     goto LABEL_28;
-  if ( !*(_DWORD *)(v60 + 24) )
+  if ( !res->max_length )
     goto LABEL_29;
-  if ( !*(_QWORD *)(v60 + 32) )
+  if ( !res->m_Items[0] )
     goto LABEL_28;
   playVoiceAction = this->fields.recipeRewardDialog;
   if ( !playVoiceAction
     || (RecipeRewardDialogComponent__Init((RecipeRewardDialogComponent_o *)playVoiceAction, 0LL),
         (playVoiceAction = this->fields.recipePointRewardDialog) == 0LL)
     || (RecipePointRewardDialogComponent__Init((RecipePointRewardDialogComponent_o *)playVoiceAction, 0LL),
-        EventRecipeListViewManager__RequestListObject(this, v61),
-        (playVoiceAction = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+        EventRecipeListViewManager__RequestListObject(this, v38),
+        (playVoiceAction = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (playVoiceAction = DataManager__GetMasterData_WarQuestSelectionMaster_(
                             (DataManager_o *)playVoiceAction,
-                            (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventRecipeGiftMaster___),
-        !*v33)
+                            (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventRecipeGiftMaster___),
+        !*p_eventRecipeEntity)
     || !playVoiceAction
     || (playVoiceAction = EventRecipeGiftMaster__GetSortedEntityArray(
                             (EventRecipeGiftMaster_o *)playVoiceAction,
-                            (*v33)->fields.id,
-                            v62)) == 0LL )
+                            (*p_eventRecipeEntity)->fields.id,
+                            0LL)) == 0LL )
   {
 LABEL_28:
-    sub_B2C434(playVoiceAction, v23);
+    sub_B0D97C(playVoiceAction);
   }
   if ( !*((_DWORD *)playVoiceAction + 6) )
   {
 LABEL_29:
-    v70 = sub_B2C460(playVoiceAction);
-    sub_B2C400(v70, 0LL);
+    v50 = sub_B0D9A8(playVoiceAction);
+    sub_B0D948(v50, 0LL);
   }
   recipeRewardDialog = this->fields.recipeRewardDialog;
-  v64 = *(BattleDropItem_array **)(v21 + 24);
-  v65 = *v33;
-  v66 = (EventRecipeGiftEntity_o *)*((_QWORD *)playVoiceAction + 4);
-  v67 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  v42 = v21->fields.resultEventRewardInfos;
+  v43 = *p_eventRecipeEntity;
+  v44 = (EventRecipeGiftEntity_o *)*((_QWORD *)playVoiceAction + 4);
+  v45 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v39, v40);
   System_Action___ctor(
-    v67,
+    v45,
     (Il2CppObject *)v21,
     Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__1__,
     0LL);
-  v68 = (RecipeRewardDialogComponent_GetEffect_o *)sub_B2C42C(RecipeRewardDialogComponent_GetEffect_TypeInfo);
+  v48 = (RecipeRewardDialogComponent_GetEffect_o *)sub_B0D974(RecipeRewardDialogComponent_GetEffect_TypeInfo, v46, v47);
   RecipeRewardDialogComponent_GetEffect___ctor(
-    v68,
+    v48,
     (Il2CppObject *)this,
     Method_EventRecipeListViewManager_GetEffect__,
     0LL);
   if ( !recipeRewardDialog )
     goto LABEL_28;
-  RecipeRewardDialogComponent__Open(recipeRewardDialog, v59, v64, v65, v66, v67, v68, 0LL);
+  RecipeRewardDialogComponent__Open(recipeRewardDialog, recipeGiftIds, v42, v43, v44, v45, v48, 0LL);
   ActionExtensions__Call(this->fields.recipeCallback, 0LL);
-  EventRecipeListViewManager__UpdateEventItemList(this, v69);
+  EventRecipeListViewManager__UpdateEventItemList(this, v49);
 }
 
 
@@ -381,36 +362,17 @@ void __fastcall EventRecipeListViewManager__DestroyList(EventRecipeListViewManag
 {
   RecipeAssetManager_o *assetManager; // x0
   UnityEngine_Object_o *recipeConfirmDialog; // x20
-  __int64 v5; // x1
   UnityEngine_Component_o *currencyInfoController; // x0
   UnityEngine_Object_o *gameObject; // x21
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
   UnityEngine_Object_o *recipeRewardDialog; // x20
-  UnityEngine_Object_o *v15; // x21
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
+  UnityEngine_Object_o *v8; // x21
   UnityEngine_Object_o *recipePointRewardDialog; // x20
-  UnityEngine_Object_o *v23; // x21
-  System_String_array **v24; // x2
-  System_String_array **v25; // x3
-  System_Boolean_array **v26; // x4
-  System_Int32_array **v27; // x5
-  System_Int32_array *v28; // x6
-  System_Int32_array *v29; // x7
+  UnityEngine_Object_o *v10; // x21
 
-  if ( (byte_41887AC & 1) == 0 )
+  if ( (byte_42112E7 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    byte_41887AC = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    byte_42112E7 = 1;
   }
   ListViewManager__DestroyList((ListViewManager_o *)this, 0LL);
   assetManager = this->fields.assetManager;
@@ -433,9 +395,9 @@ void __fastcall EventRecipeListViewManager__DestroyList(EventRecipeListViewManag
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_35314896(gameObject, 0LL);
+    UnityEngine_Object__Destroy_34935276(gameObject, 0LL);
     this->fields.recipeConfirmDialog = 0LL;
-    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.recipeConfirmDialog, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_B0D840(&this->fields.recipeConfirmDialog, 0LL);
   }
   recipeRewardDialog = (UnityEngine_Object_o *)this->fields.recipeRewardDialog;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -448,15 +410,15 @@ void __fastcall EventRecipeListViewManager__DestroyList(EventRecipeListViewManag
     currencyInfoController = (UnityEngine_Component_o *)this->fields.recipeRewardDialog;
     if ( !currencyInfoController )
       goto LABEL_34;
-    v15 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(currencyInfoController, 0LL);
+    v8 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(currencyInfoController, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_35314896(v15, 0LL);
+    UnityEngine_Object__Destroy_34935276(v8, 0LL);
     this->fields.recipeRewardDialog = 0LL;
-    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.recipeRewardDialog, 0LL, v16, v17, v18, v19, v20, v21);
+    sub_B0D840(&this->fields.recipeRewardDialog, 0LL);
   }
   recipePointRewardDialog = (UnityEngine_Object_o *)this->fields.recipePointRewardDialog;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -469,20 +431,20 @@ void __fastcall EventRecipeListViewManager__DestroyList(EventRecipeListViewManag
     currencyInfoController = (UnityEngine_Component_o *)this->fields.recipePointRewardDialog;
     if ( !currencyInfoController )
       goto LABEL_34;
-    v23 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(currencyInfoController, 0LL);
+    v10 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(currencyInfoController, 0LL);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_35314896(v23, 0LL);
+    UnityEngine_Object__Destroy_34935276(v10, 0LL);
     this->fields.recipePointRewardDialog = 0LL;
-    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.recipePointRewardDialog, 0LL, v24, v25, v26, v27, v28, v29);
+    sub_B0D840(&this->fields.recipePointRewardDialog, 0LL);
   }
   currencyInfoController = (UnityEngine_Component_o *)this->fields.currencyInfoController;
   if ( !currencyInfoController )
 LABEL_34:
-    sub_B2C434(currencyInfoController, v5);
+    sub_B0D97C(currencyInfoController);
   ShopCurrencyInfoController__StopUpdateRemainTime((ShopCurrencyInfoController_o *)currencyInfoController, 0LL);
 }
 
@@ -504,11 +466,11 @@ UnityEngine_GameObject_o *__fastcall EventRecipeListViewManager__GetEffect(
   int v14; // s0
 
   v4 = this;
-  if ( (byte_41887B3 & 1) == 0 )
+  if ( (byte_42112EE & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Object_Instantiate_GameObject___, parentTransform);
-    this = (EventRecipeListViewManager_o *)sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
-    byte_41887B3 = 1;
+    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_GameObject___, parentTransform);
+    this = (EventRecipeListViewManager_o *)sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
+    byte_42112EE = 1;
   }
   assetManager = v4->fields.assetManager;
   if ( !assetManager )
@@ -521,7 +483,7 @@ UnityEngine_GameObject_o *__fastcall EventRecipeListViewManager__GetEffect(
   }
   this = (EventRecipeListViewManager_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                            recipeDropEffetct_k__BackingField,
-                                           (const MethodInfo_2095E38 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                           (const MethodInfo_204A984 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !this )
     goto LABEL_12;
   v8 = (UnityEngine_GameObject_o *)this;
@@ -537,7 +499,7 @@ UnityEngine_GameObject_o *__fastcall EventRecipeListViewManager__GetEffect(
         !v13) )
   {
 LABEL_12:
-    sub_B2C434(this, parentTransform);
+    sub_B0D97C(this);
   }
   UnityEngine_Transform__set_localScale(v13, *(UnityEngine_Vector3_o *)&v14, 0LL);
   return v8;
@@ -566,157 +528,102 @@ void __fastcall EventRecipeListViewManager__Init(
   __int64 v23; // x1
   __int64 v24; // x1
   __int64 v25; // x1
-  __int64 v26; // x21
+  EventRecipeListViewManager___c__DisplayClass24_0_o *v26; // x21
   DataManager_o *Instance; // x0
-  __int64 v28; // x1
-  System_String_array **v29; // x2
-  System_String_array **v30; // x3
-  System_Boolean_array **v31; // x4
-  System_Int32_array **v32; // x5
-  System_Int32_array *v33; // x6
-  System_Int32_array *v34; // x7
-  struct System_Action_BattleDropItem____int__Action__o *v35; // x26
-  struct PresentBoxOverDialog_o *v36; // x24
+  struct System_Action_BattleDropItem____int__Action__o *v28; // x26
+  struct PresentBoxOverDialog_o *v29; // x24
   System_Int32_array *EventItemList; // x28
-  struct System_Action_int__string____Action__o *v38; // x25
-  struct UnityEngine_GameObject_o *v39; // x23
+  struct System_Action_int__string____Action__o *v31; // x25
+  struct UnityEngine_GameObject_o *v32; // x23
   WarEntity_o *Entity; // x0
   struct ShopCurrencyInfoController_o *currencyInfoController; // x20
-  EventDetailEntity_o *v42; // x27
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v43; // x22
-  System_String_array **v44; // x2
-  System_String_array **v45; // x3
-  System_Boolean_array **v46; // x4
-  System_Int32_array **v47; // x5
-  System_Int32_array *v48; // x6
-  System_Int32_array *v49; // x7
-  ShopCurrencyInfoController_o *v50; // x20
-  int32_t v51; // w22
-  int32_t v52; // w8
-  System_String_array **v53; // x2
-  System_String_array **v54; // x3
-  System_Boolean_array **v55; // x4
-  System_Int32_array **v56; // x5
-  System_Int32_array *v57; // x6
-  System_Int32_array *v58; // x7
-  System_String_array **v59; // x2
-  System_String_array **v60; // x3
-  System_Boolean_array **v61; // x4
-  System_Int32_array **v62; // x5
-  System_Int32_array *v63; // x6
-  System_Int32_array *v64; // x7
-  System_String_array **v65; // x2
-  System_String_array **v66; // x3
-  System_Boolean_array **v67; // x4
-  System_Int32_array **v68; // x5
-  System_Int32_array *v69; // x6
-  System_Int32_array *v70; // x7
-  System_String_array **v71; // x2
-  System_String_array **v72; // x3
-  System_Boolean_array **v73; // x4
-  System_Int32_array **v74; // x5
-  System_Int32_array *v75; // x6
-  System_Int32_array *v76; // x7
-  System_String_array **v77; // x2
-  System_String_array **v78; // x3
-  System_Boolean_array **v79; // x4
-  System_Int32_array **v80; // x5
-  System_Int32_array *v81; // x6
-  System_Int32_array *v82; // x7
-  System_String_array **v83; // x2
-  System_String_array **v84; // x3
-  System_Boolean_array **v85; // x4
-  System_Int32_array **v86; // x5
-  System_Int32_array *v87; // x6
-  System_Int32_array *v88; // x7
+  EventDetailEntity_o *v35; // x27
+  __int64 v36; // x1
+  __int64 v37; // x2
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v38; // x22
+  ShopCurrencyInfoController_o *v39; // x20
+  int32_t v40; // w22
+  int32_t v41; // w8
+  __int64 v42; // x1
+  __int64 v43; // x2
   RecipeAssetManager_o *assetManager; // x20
-  BattleServantConfConponent_o *p_assetManager; // x19
-  RecipeAssetManager_o *v91; // x20
-  System_String_array **v92; // x2
-  System_String_array **v93; // x3
-  System_Boolean_array **v94; // x4
-  System_Int32_array **v95; // x5
-  System_Int32_array *v96; // x6
-  System_Int32_array *v97; // x7
-  int32_t v98; // w19
-  System_Action_o *v99; // x22
-  struct System_Action_o *v101; // [xsp+10h] [xbp-60h]
+  struct RecipeAssetManager_o **p_assetManager; // x19
+  RecipeAssetManager_o *v46; // x20
+  int32_t v47; // w19
+  System_Action_o *v48; // x22
+  struct System_Action_o *v50; // [xsp+10h] [xbp-60h]
 
-  if ( (byte_41887AA & 1) == 0 )
+  if ( (byte_42112E5 & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventDetailMaster___, v17);
-    sub_B2C35C(&Method_DataManager_GetMasterData_ShopMaster___, v18);
-    sub_B2C35C(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v19);
-    sub_B2C35C(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__, v20);
-    sub_B2C35C(&System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo, v21);
-    sub_B2C35C(&RecipeAssetManager_TypeInfo, v22);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
-    sub_B2C35C(&Method_EventRecipeListViewManager___c__DisplayClass24_0__Init_b__0__, v24);
-    sub_B2C35C(&EventRecipeListViewManager___c__DisplayClass24_0_TypeInfo, v25);
-    byte_41887AA = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, *(_QWORD *)&eventId);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventDetailMaster___, v17);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_ShopMaster___, v18);
+    sub_B0D8A4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v19);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__, v20);
+    sub_B0D8A4(&System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo, v21);
+    sub_B0D8A4(&RecipeAssetManager_TypeInfo, v22);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
+    sub_B0D8A4(&Method_EventRecipeListViewManager___c__DisplayClass24_0__Init_b__0__, v24);
+    sub_B0D8A4(&EventRecipeListViewManager___c__DisplayClass24_0_TypeInfo, v25);
+    byte_42112E5 = 1;
   }
-  v26 = sub_B2C42C(EventRecipeListViewManager___c__DisplayClass24_0_TypeInfo);
-  EventRecipeListViewManager___c__DisplayClass24_0___ctor(
-    (EventRecipeListViewManager___c__DisplayClass24_0_o *)v26,
-    0LL);
+  v26 = (EventRecipeListViewManager___c__DisplayClass24_0_o *)sub_B0D974(
+                                                                EventRecipeListViewManager___c__DisplayClass24_0_TypeInfo,
+                                                                *(_QWORD *)&eventId,
+                                                                *(_QWORD *)&svtId);
+  EventRecipeListViewManager___c__DisplayClass24_0___ctor(v26, 0LL);
   if ( !v26 )
     goto LABEL_19;
-  *(_QWORD *)(v26 + 16) = this;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v26 + 16), (System_Int32_array **)this, v29, v30, v31, v32, v33, v34);
-  *(_DWORD *)(v26 + 24) = eventId;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v26->fields.__4__this = this;
+  sub_B0D840(&v26->fields, this);
+  v26->fields.eventId = eventId;
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
-  v101 = recipeCallback;
+  v50 = recipeCallback;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ShopMaster___);
+                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ShopMaster___);
   if ( !Instance )
     goto LABEL_19;
-  v35 = requestCallBack;
-  v36 = boxOverDlg;
-  EventItemList = ShopMaster__GetEventItemList((ShopMaster_o *)Instance, *(_DWORD *)(v26 + 24), 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v28 = requestCallBack;
+  v29 = boxOverDlg;
+  EventItemList = ShopMaster__GetEventItemList((ShopMaster_o *)Instance, v26->fields.eventId, 0LL);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
-  v38 = playVoice;
-  v39 = maskPanle;
+  v31 = playVoice;
+  v32 = maskPanle;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !Instance )
     goto LABEL_19;
   Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
              (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
-             *(_DWORD *)(v26 + 24),
-             (const MethodInfo_24E40D0 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+             v26->fields.eventId,
+             (const MethodInfo_2669BD4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
   currencyInfoController = this->fields.currencyInfoController;
-  v42 = (EventDetailEntity_o *)Entity;
-  v43 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
+  v35 = (EventDetailEntity_o *)Entity;
+  v38 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
+                                                                                                  System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo,
+                                                                                                  v36,
+                                                                                                  v37);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v43,
-    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
+    v38,
+    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
   if ( !currencyInfoController )
     goto LABEL_19;
-  currencyInfoController->fields.objectList = (struct System_Collections_Generic_List_ShopBuyItemListViewObject__o *)v43;
-  sub_B2C2F8(
-    (BattleServantConfConponent_o *)&currencyInfoController->fields.objectList,
-    (System_Int32_array **)v43,
-    v44,
-    v45,
-    v46,
-    v47,
-    v48,
-    v49);
-  if ( !v42 )
+  currencyInfoController->fields.objectList = (struct System_Collections_Generic_List_ShopBuyItemListViewObject__o *)v38;
+  sub_B0D840(&currencyInfoController->fields.objectList, v38);
+  if ( !v35 )
     goto LABEL_19;
-  v50 = this->fields.currencyInfoController;
-  v51 = *(_DWORD *)(v26 + 24);
-  Instance = (DataManager_o *)EventDetailEntity__IsForcedAdjustmentDialog(v42, 0LL);
-  if ( !v50 )
+  v39 = this->fields.currencyInfoController;
+  v40 = v26->fields.eventId;
+  Instance = (DataManager_o *)EventDetailEntity__IsForcedAdjustmentDialog(v35, 0LL);
+  if ( !v39 )
     goto LABEL_19;
-  ShopCurrencyInfoController__RefreshEventItemInfo(v50, 6, v51, 1, EventItemList, (unsigned __int8)Instance & 1, 0LL);
+  ShopCurrencyInfoController__RefreshEventItemInfo(v39, 6, v40, 1, EventItemList, (unsigned __int8)Instance & 1, 0LL);
   Instance = (DataManager_o *)this->fields.currencyInfoController;
   if ( !Instance )
     goto LABEL_19;
@@ -725,68 +632,20 @@ void __fastcall EventRecipeListViewManager__Init(
     goto LABEL_19;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
   this->fields.svtId = svtId;
-  v52 = *(_DWORD *)(v26 + 24);
-  this->fields.recipeCallback = v101;
-  this->fields.currentEventId = v52;
-  sub_B2C2F8(
-    (BattleServantConfConponent_o *)&this->fields.recipeCallback,
-    (System_Int32_array **)v101,
-    v53,
-    v54,
-    v55,
-    v56,
-    v57,
-    v58);
-  this->fields.requestCallBack = v35;
-  sub_B2C2F8(
-    (BattleServantConfConponent_o *)&this->fields.requestCallBack,
-    (System_Int32_array **)v35,
-    v59,
-    v60,
-    v61,
-    v62,
-    v63,
-    v64);
-  this->fields.playVoiceAction = v38;
-  sub_B2C2F8(
-    (BattleServantConfConponent_o *)&this->fields.playVoiceAction,
-    (System_Int32_array **)v38,
-    v65,
-    v66,
-    v67,
-    v68,
-    v69,
-    v70);
-  this->fields.presentBoxOverDlg = v36;
-  sub_B2C2F8(
-    (BattleServantConfConponent_o *)&this->fields.presentBoxOverDlg,
-    (System_Int32_array **)v36,
-    v71,
-    v72,
-    v73,
-    v74,
-    v75,
-    v76);
+  v41 = v26->fields.eventId;
+  this->fields.recipeCallback = v50;
+  this->fields.currentEventId = v41;
+  sub_B0D840(&this->fields.recipeCallback, v50);
+  this->fields.requestCallBack = v28;
+  sub_B0D840(&this->fields.requestCallBack, v28);
+  this->fields.playVoiceAction = v31;
+  sub_B0D840(&this->fields.playVoiceAction, v31);
+  this->fields.presentBoxOverDlg = v29;
+  sub_B0D840(&this->fields.presentBoxOverDlg, v29);
   this->fields.boxOverDlgCloseCallBack = boxOverDlgCallBack;
-  sub_B2C2F8(
-    (BattleServantConfConponent_o *)&this->fields.boxOverDlgCloseCallBack,
-    (System_Int32_array **)boxOverDlgCallBack,
-    v77,
-    v78,
-    v79,
-    v80,
-    v81,
-    v82);
-  this->fields.maskPanel = v39;
-  sub_B2C2F8(
-    (BattleServantConfConponent_o *)&this->fields.maskPanel,
-    (System_Int32_array **)v39,
-    v83,
-    v84,
-    v85,
-    v86,
-    v87,
-    v88);
+  sub_B0D840(&this->fields.boxOverDlgCloseCallBack, boxOverDlgCallBack);
+  this->fields.maskPanel = v32;
+  sub_B0D840(&this->fields.maskPanel, v32);
   Instance = (DataManager_o *)this->fields.touchPanel;
   if ( !Instance )
     goto LABEL_19;
@@ -797,24 +656,24 @@ void __fastcall EventRecipeListViewManager__Init(
   assetManager = this->fields.assetManager;
   if ( !assetManager )
   {
-    p_assetManager = (BattleServantConfConponent_o *)&this->fields.assetManager;
-    v91 = (RecipeAssetManager_o *)sub_B2C42C(RecipeAssetManager_TypeInfo);
-    RecipeAssetManager___ctor(v91, 0LL);
-    p_assetManager->klass = (BattleServantConfConponent_c *)v91;
-    sub_B2C2F8(p_assetManager, (System_Int32_array **)v91, v92, v93, v94, v95, v96, v97);
-    assetManager = (RecipeAssetManager_o *)p_assetManager->klass;
+    p_assetManager = &this->fields.assetManager;
+    v46 = (RecipeAssetManager_o *)sub_B0D974(RecipeAssetManager_TypeInfo, v42, v43);
+    RecipeAssetManager___ctor(v46, 0LL);
+    *p_assetManager = v46;
+    sub_B0D840(p_assetManager, v46);
+    assetManager = *p_assetManager;
   }
-  v98 = *(_DWORD *)(v26 + 24);
-  v99 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  v47 = v26->fields.eventId;
+  v48 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v42, v43);
   System_Action___ctor(
-    v99,
+    v48,
     (Il2CppObject *)v26,
     Method_EventRecipeListViewManager___c__DisplayClass24_0__Init_b__0__,
     0LL);
   if ( !assetManager )
 LABEL_19:
-    sub_B2C434(Instance, v28);
-  RecipeAssetManager__GetAssets(assetManager, v98, v99, 0LL);
+    sub_B0D97C(Instance);
+  RecipeAssetManager__GetAssets(assetManager, v47, v48, 0LL);
 }
 
 
@@ -849,7 +708,7 @@ void __fastcall EventRecipeListViewManager__LocateDialogToRecipePanel(
                                                   0LL)) == 0LL) )
   {
 LABEL_7:
-    sub_B2C434(this, dialog);
+    sub_B0D97C(this);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
 }
@@ -865,29 +724,31 @@ void __fastcall EventRecipeListViewManager__OnClickDecide(
   __int64 v6; // x1
   __int64 v7; // x1
   EventRecipeConfirmDialogComponent_o *recipeConfirmDialog; // x0
-  NetworkManager_ResultCallbackFunc_o *v9; // x21
+  __int64 v9; // x1
+  __int64 v10; // x2
+  NetworkManager_ResultCallbackFunc_o *v11; // x21
 
-  if ( (byte_41887B1 & 1) == 0 )
+  if ( (byte_42112EC & 1) == 0 )
   {
-    sub_B2C35C(&Method_EventRecipeListViewManager_CreateRecipeResponse__, *(_QWORD *)&createNum);
-    sub_B2C35C(&Method_NetworkManager_getRequest_CreateRecipeRequest___, v5);
-    sub_B2C35C(&NetworkManager_TypeInfo, v6);
-    sub_B2C35C(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    byte_41887B1 = 1;
+    sub_B0D8A4(&Method_EventRecipeListViewManager_CreateRecipeResponse__, *(_QWORD *)&createNum);
+    sub_B0D8A4(&Method_NetworkManager_getRequest_CreateRecipeRequest___, v5);
+    sub_B0D8A4(&NetworkManager_TypeInfo, v6);
+    sub_B0D8A4(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    byte_42112EC = 1;
   }
   recipeConfirmDialog = this->fields.recipeConfirmDialog;
   if ( !recipeConfirmDialog )
     goto LABEL_12;
-  EventRecipeConfirmDialogComponent__Close(recipeConfirmDialog, *(const MethodInfo **)&createNum);
+  EventRecipeConfirmDialogComponent__Close(recipeConfirmDialog, 0LL);
   recipeConfirmDialog = (EventRecipeConfirmDialogComponent_o *)this->fields.maskPanel;
   if ( !recipeConfirmDialog )
     goto LABEL_12;
   if ( createNum > 0 )
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)recipeConfirmDialog, 1, 0LL);
-    v9 = (NetworkManager_ResultCallbackFunc_o *)sub_B2C42C(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v11 = (NetworkManager_ResultCallbackFunc_o *)sub_B0D974(NetworkManager_ResultCallbackFunc_TypeInfo, v9, v10);
     NetworkManager_ResultCallbackFunc___ctor(
-      v9,
+      v11,
       (Il2CppObject *)this,
       Method_EventRecipeListViewManager_CreateRecipeResponse__,
       0LL);
@@ -897,8 +758,8 @@ void __fastcall EventRecipeListViewManager__OnClickDecide(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     }
     recipeConfirmDialog = (EventRecipeConfirmDialogComponent_o *)NetworkManager__getRequest_WarBoardWallAttackRequest_(
-                                                                   v9,
-                                                                   (const MethodInfo_1AB4500 *)Method_NetworkManager_getRequest_CreateRecipeRequest___);
+                                                                   v11,
+                                                                   (const MethodInfo_2049D98 *)Method_NetworkManager_getRequest_CreateRecipeRequest___);
     if ( recipeConfirmDialog )
     {
       CreateRecipeRequest__beginRequest(
@@ -909,7 +770,7 @@ void __fastcall EventRecipeListViewManager__OnClickDecide(
       return;
     }
 LABEL_12:
-    sub_B2C434(recipeConfirmDialog, *(_QWORD *)&createNum);
+    sub_B0D97C(recipeConfirmDialog);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)recipeConfirmDialog, 0, 0LL);
 }
@@ -927,45 +788,46 @@ void __fastcall EventRecipeListViewManager__OnClickListView(
   __int64 v9; // x1
   __int64 v10; // x1
   void *maskPanel; // x0
+  const MethodInfo *v12; // x1
   int32_t dispMode; // w8
-  const MethodInfo *v13; // x1
-  __int64 v14; // x8
+  const MethodInfo *v14; // x1
   DataMasterBase_WarMaster__WarEntity__int__o *MasterData_WarQuestSelectionMaster; // x21
   const MethodInfo *v16; // x1
-  __int64 v17; // x8
+  const MethodInfo *v17; // x1
   EventRecipeConfirmDialogComponent_o *recipeConfirmDialog; // x21
   EventRecipeEntity_o *v19; // x22
-  EventRecipeGiftEntity_array *v20; // x20
-  System_Action_int__o *v21; // x23
-  const MethodInfo *v22; // x6
+  __int64 v20; // x1
+  __int64 v21; // x2
+  EventRecipeGiftEntity_array *v22; // x20
+  System_Action_int__o *v23; // x23
   WarEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_41887B0 & 1) == 0 )
+  if ( (byte_42112EB & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Action_int___ctor__, obj);
-    sub_B2C35C(&System_Action_int__TypeInfo, v5);
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventRecipeMaster___, v6);
-    sub_B2C35C(&Method_DataMasterBase_EventRecipeMaster__EventRecipeEntity__int__TryGetEntity__, v7);
-    sub_B2C35C(&Method_EventRecipeListViewManager_OnClickDecide__, v8);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_B2C35C(&SoundManager_TypeInfo, v10);
-    byte_41887B0 = 1;
+    sub_B0D8A4(&Method_System_Action_int___ctor__, obj);
+    sub_B0D8A4(&System_Action_int__TypeInfo, v5);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventRecipeMaster___, v6);
+    sub_B0D8A4(&Method_DataMasterBase_EventRecipeMaster__EventRecipeEntity__int__TryGetEntity__, v7);
+    sub_B0D8A4(&Method_EventRecipeListViewManager_OnClickDecide__, v8);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_B0D8A4(&SoundManager_TypeInfo, v10);
+    byte_42112EB = 1;
   }
   entity = 0LL;
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
-    goto LABEL_29;
+    goto LABEL_27;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 1, 0LL);
   if ( !obj )
-    goto LABEL_29;
+    goto LABEL_27;
   dispMode = obj->fields.dispMode;
   if ( !dispMode )
-    goto LABEL_26;
+    goto LABEL_24;
   if ( (dispMode & 0xFFFFFFFE) != 2 )
     return;
-  maskPanel = EventRecipeListViewObject__GetItem(obj, (const MethodInfo *)obj);
+  maskPanel = EventRecipeListViewObject__GetItem(obj, v12);
   if ( !maskPanel )
-    goto LABEL_29;
+    goto LABEL_27;
   if ( *((_BYTE *)maskPanel + 136) )
   {
     if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
@@ -974,66 +836,59 @@ void __fastcall EventRecipeListViewManager__OnClickListView(
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     }
     SoundManager__playSystemSe(0, 0LL);
-    maskPanel = EventRecipeListViewObject__GetItem(obj, v13);
+    maskPanel = EventRecipeListViewObject__GetItem(obj, v14);
     if ( maskPanel )
     {
-      v14 = *((_QWORD *)maskPanel + 14);
-      if ( v14 )
+      this->fields.selectRecipeId = EventRecipeListViewItem__get_RecipeId((EventRecipeListViewItem_o *)maskPanel, 0LL);
+      maskPanel = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      if ( maskPanel )
       {
-        this->fields.selectRecipeId = *(_DWORD *)(v14 + 16);
-        maskPanel = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
+                                                                                              (DataManager_o *)maskPanel,
+                                                                                              (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventRecipeMaster___);
+        maskPanel = EventRecipeListViewObject__GetItem(obj, v16);
         if ( maskPanel )
         {
-          MasterData_WarQuestSelectionMaster = (DataMasterBase_WarMaster__WarEntity__int__o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                                                                                (DataManager_o *)maskPanel,
-                                                                                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventRecipeMaster___);
-          maskPanel = EventRecipeListViewObject__GetItem(obj, v16);
-          if ( maskPanel )
+          maskPanel = (void *)EventRecipeListViewItem__get_RecipeId((EventRecipeListViewItem_o *)maskPanel, 0LL);
+          if ( MasterData_WarQuestSelectionMaster )
           {
-            v17 = *((_QWORD *)maskPanel + 14);
-            if ( v17 )
+            if ( !DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
+                    MasterData_WarQuestSelectionMaster,
+                    &entity,
+                    (int32_t)maskPanel,
+                    (const MethodInfo_2669C30 *)Method_DataMasterBase_EventRecipeMaster__EventRecipeEntity__int__TryGetEntity__) )
+              goto LABEL_24;
+            recipeConfirmDialog = this->fields.recipeConfirmDialog;
+            v19 = (EventRecipeEntity_o *)entity;
+            maskPanel = EventRecipeListViewObject__GetItem(obj, v17);
+            if ( maskPanel )
             {
-              if ( MasterData_WarQuestSelectionMaster )
+              v22 = (EventRecipeGiftEntity_array *)*((_QWORD *)maskPanel + 15);
+              v23 = (System_Action_int__o *)sub_B0D974(System_Action_int__TypeInfo, v20, v21);
+              System_Action_int____ctor(
+                v23,
+                (Il2CppObject *)this,
+                Method_EventRecipeListViewManager_OnClickDecide__,
+                (const MethodInfo_246D4AC *)Method_System_Action_int___ctor__);
+              if ( recipeConfirmDialog )
               {
-                if ( !DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                        MasterData_WarQuestSelectionMaster,
-                        &entity,
-                        *(_DWORD *)(v17 + 16),
-                        (const MethodInfo_24E412C *)Method_DataMasterBase_EventRecipeMaster__EventRecipeEntity__int__TryGetEntity__) )
-                  goto LABEL_26;
-                recipeConfirmDialog = this->fields.recipeConfirmDialog;
-                v19 = (EventRecipeEntity_o *)entity;
-                maskPanel = EventRecipeListViewObject__GetItem(obj, (const MethodInfo *)obj);
-                if ( maskPanel )
-                {
-                  v20 = (EventRecipeGiftEntity_array *)*((_QWORD *)maskPanel + 15);
-                  v21 = (System_Action_int__o *)sub_B2C42C(System_Action_int__TypeInfo);
-                  System_Action_int____ctor(
-                    v21,
-                    (Il2CppObject *)this,
-                    Method_EventRecipeListViewManager_OnClickDecide__,
-                    (const MethodInfo_24BA548 *)Method_System_Action_int___ctor__);
-                  if ( recipeConfirmDialog )
-                  {
-                    EventRecipeConfirmDialogComponent__Open(
-                      recipeConfirmDialog,
-                      v19,
-                      v20,
-                      v21,
-                      this->fields.presentBoxOverDlg,
-                      this->fields.boxOverDlgCloseCallBack,
-                      v22);
-                    goto LABEL_26;
-                  }
-                }
+                EventRecipeConfirmDialogComponent__Open(
+                  recipeConfirmDialog,
+                  v19,
+                  v22,
+                  v23,
+                  this->fields.presentBoxOverDlg,
+                  this->fields.boxOverDlgCloseCallBack,
+                  0LL);
+                goto LABEL_24;
               }
             }
           }
         }
       }
     }
-LABEL_29:
-    sub_B2C434(maskPanel, obj);
+LABEL_27:
+    sub_B0D97C(maskPanel);
   }
   if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
     && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -1041,10 +896,10 @@ LABEL_29:
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   }
   SoundManager__playSystemSe(2, 0LL);
-LABEL_26:
+LABEL_24:
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
-    goto LABEL_29;
+    goto LABEL_27;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 0, 0LL);
 }
 
@@ -1055,13 +910,12 @@ void __fastcall EventRecipeListViewManager__OnMoveEnd(EventRecipeListViewManager
   bool v4; // vf
   int32_t v5; // w8
   UnityEngine_Object_o *scrollView; // x20
-  __int64 v7; // x1
-  struct UIScrollView_o *v8; // x0
+  struct UIScrollView_o *v7; // x0
 
-  if ( (byte_41887AF & 1) == 0 )
+  if ( (byte_42112EA & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    byte_41887AF = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    byte_42112EA = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -1080,13 +934,13 @@ void __fastcall EventRecipeListViewManager__OnMoveEnd(EventRecipeListViewManager
       }
       if ( UnityEngine_Object__op_Inequality(scrollView, 0LL, 0LL) )
       {
-        v8 = this->fields.scrollView;
-        if ( !v8 )
-          sub_B2C434(0LL, v7);
-        ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v8->klass->vtable._8_UpdateScrollbars.method)(
-          v8,
+        v7 = this->fields.scrollView;
+        if ( !v7 )
+          sub_B0D97C(0LL);
+        ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v7->klass->vtable._8_UpdateScrollbars.method)(
+          v7,
           1LL,
-          v8->klass->vtable._9_SetDragAmount.methodPtr);
+          v7->klass->vtable._9_SetDragAmount.methodPtr);
       }
     }
   }
@@ -1105,40 +959,40 @@ void __fastcall EventRecipeListViewManager__RequestListObject(
   __int64 v8; // x1
   __int64 v9; // x1
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *ObjectList; // x0
-  __int64 v11; // x1
   int32_t size; // w8
+  __int64 v12; // x1
+  __int64 v13; // x2
   Il2CppObject *current; // x20
-  System_Action_o *v14; // x21
-  __int64 v15; // x0
-  __int64 v16; // x1
+  System_Action_o *v15; // x21
+  __int64 v16; // x0
   const MethodInfo *v17; // x3
   System_Collections_Generic_List_Enumerator_T__o v18; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_41887AE & 1) == 0 )
+  if ( (byte_42112E9 & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, method);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_EventRecipeListViewObject__Dispose__, v3);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_EventRecipeListViewObject__MoveNext__, v4);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_EventRecipeListViewObject__get_Current__, v5);
-    sub_B2C35C(&Method_EventRecipeListViewManager_OnMoveEnd__, v6);
-    sub_B2C35C(&Method_System_Collections_Generic_List_EventRecipeListViewObject__GetEnumerator__, v7);
-    sub_B2C35C(&Method_System_Collections_Generic_List_EventRecipeListViewObject__get_Count__, v8);
-    sub_B2C35C(&StringLiteral_10036/*"OnMoveEnd"*/, v9);
-    byte_41887AE = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, method);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_EventRecipeListViewObject__Dispose__, v3);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_EventRecipeListViewObject__MoveNext__, v4);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_EventRecipeListViewObject__get_Current__, v5);
+    sub_B0D8A4(&Method_EventRecipeListViewManager_OnMoveEnd__, v6);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_EventRecipeListViewObject__GetEnumerator__, v7);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_EventRecipeListViewObject__get_Count__, v8);
+    sub_B0D8A4(&StringLiteral_10060/*"OnMoveEnd"*/, v9);
+    byte_42112E9 = 1;
   }
   memset(&v18, 0, sizeof(v18));
   ObjectList = (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)EventRecipeListViewManager__get_ObjectList(
                                                                                                 this,
                                                                                                 method);
   if ( !ObjectList )
-    sub_B2C434(0LL, v11);
+    sub_B0D97C(0LL);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10036/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_10060/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -1148,21 +1002,21 @@ void __fastcall EventRecipeListViewManager__RequestListObject(
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
       &v18,
       ObjectList,
-      (const MethodInfo_2EF52DC *)Method_System_Collections_Generic_List_EventRecipeListViewObject__GetEnumerator__);
+      (const MethodInfo_2FC6564 *)Method_System_Collections_Generic_List_EventRecipeListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
               &v18,
-              (const MethodInfo_20EA42C *)Method_System_Collections_Generic_List_Enumerator_EventRecipeListViewObject__MoveNext__) )
+              (const MethodInfo_2112550 *)Method_System_Collections_Generic_List_Enumerator_EventRecipeListViewObject__MoveNext__) )
     {
       current = v18.fields.current;
-      v14 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
-      System_Action___ctor(v14, (Il2CppObject *)this, Method_EventRecipeListViewManager_OnMoveEnd__, 0LL);
+      v15 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v12, v13);
+      System_Action___ctor(v15, (Il2CppObject *)this, Method_EventRecipeListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_B2C434(v15, v16);
-      EventRecipeListViewObject__Init_26695196((EventRecipeListViewObject_o *)current, 3, v14, 1.0, v17);
+        sub_B0D97C(v16);
+      EventRecipeListViewObject__Init_18268952((EventRecipeListViewObject_o *)current, 3, v15, 1.0, v17);
     }
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
       &v18,
-      (const MethodInfo_20EA428 *)Method_System_Collections_Generic_List_Enumerator_EventRecipeListViewObject__Dispose__);
+      (const MethodInfo_211254C *)Method_System_Collections_Generic_List_Enumerator_EventRecipeListViewObject__Dispose__);
   }
 }
 
@@ -1186,27 +1040,26 @@ void __fastcall EventRecipeListViewManager__SetObjectItem(
   __int64 v7; // x1
   System_Action_o *v8; // x20
   __int64 v9; // x0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x3
-  __int64 v12; // x10
+  const MethodInfo *v10; // x3
+  __int64 v11; // x10
 
-  if ( (byte_41887AD & 1) == 0 )
+  if ( (byte_42112E8 & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, obj);
-    sub_B2C35C(&Method_EventRecipeListViewManager_OnMoveEnd__, v6);
-    sub_B2C35C(&EventRecipeListViewObject_TypeInfo, v7);
-    byte_41887AD = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, obj);
+    sub_B0D8A4(&Method_EventRecipeListViewManager_OnMoveEnd__, v6);
+    sub_B0D8A4(&EventRecipeListViewObject_TypeInfo, v7);
+    byte_42112E8 = 1;
   }
-  v8 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, obj, item);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_EventRecipeListViewManager_OnMoveEnd__, 0LL);
   if ( !obj
-    || (v12 = *(&EventRecipeListViewObject_TypeInfo->_2.bitflags2 + 1),
-        *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v12)
-    || (EventRecipeListViewObject_c *)obj->klass->_2.typeHierarchy[v12 - 1] != EventRecipeListViewObject_TypeInfo )
+    || (v11 = *(&EventRecipeListViewObject_TypeInfo->_2.bitflags2 + 1),
+        *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v11)
+    || (EventRecipeListViewObject_c *)obj->klass->_2.typeHierarchy[v11 - 1] != EventRecipeListViewObject_TypeInfo )
   {
-    sub_B2C434(v9, v10);
+    sub_B0D97C(v9);
   }
-  EventRecipeListViewObject__Init_26695196((EventRecipeListViewObject_o *)obj, 3, v8, 1.0, v11);
+  EventRecipeListViewObject__Init_18268952((EventRecipeListViewObject_o *)obj, 3, v8, 1.0, v10);
 }
 
 
@@ -1221,51 +1074,31 @@ void __fastcall EventRecipeListViewManager__SetRecipeObject(
   UnityEngine_Object_o *recipeRewardDialog; // x21
   struct RecipeRewardDialogComponent_o **p_recipeRewardDialog; // x20
   UnityEngine_GameObject_o *v9; // x0
-  __int64 v10; // x1
   struct RecipeAssetManager_o *assetManager; // x8
   UnityEngine_UI_Dropdown_DropdownItem_o *recipeRewardDialog_k__BackingField; // x21
   struct RecipeRewardDialogComponent_o *Component_srcLineSprite; // x0
-  System_String_array **v14; // x2
-  System_String_array **v15; // x3
-  System_Boolean_array **v16; // x4
-  System_Int32_array **v17; // x5
-  System_Int32_array *v18; // x6
-  System_Int32_array *v19; // x7
-  const MethodInfo *v20; // x2
+  const MethodInfo *v13; // x2
   UnityEngine_Object_o *recipePointRewardDialog; // x21
   struct RecipePointRewardDialogComponent_o **p_recipePointRewardDialog; // x20
-  struct RecipeAssetManager_o *v23; // x8
+  struct RecipeAssetManager_o *v16; // x8
   UnityEngine_UI_Dropdown_DropdownItem_o *recipePointRewardDialog_k__BackingField; // x21
-  struct RecipePointRewardDialogComponent_o *v25; // x0
-  System_String_array **v26; // x2
-  System_String_array **v27; // x3
-  System_Boolean_array **v28; // x4
-  System_Int32_array **v29; // x5
-  System_Int32_array *v30; // x6
-  System_Int32_array *v31; // x7
-  const MethodInfo *v32; // x2
+  struct RecipePointRewardDialogComponent_o *v18; // x0
+  const MethodInfo *v19; // x2
   UnityEngine_Object_o *recipeConfirmDialog; // x21
   struct EventRecipeConfirmDialogComponent_o **p_recipeConfirmDialog; // x20
-  const MethodInfo *v35; // x2
-  struct RecipeAssetManager_o *v36; // x8
+  struct RecipeAssetManager_o *v22; // x8
   UnityEngine_UI_Dropdown_DropdownItem_o *recipeConfirmDialog_k__BackingField; // x21
-  struct EventRecipeConfirmDialogComponent_o *v38; // x0
-  System_String_array **v39; // x2
-  System_String_array **v40; // x3
-  System_Boolean_array **v41; // x4
-  System_Int32_array **v42; // x5
-  System_Int32_array *v43; // x6
-  System_Int32_array *v44; // x7
-  const MethodInfo *v45; // x2
+  struct EventRecipeConfirmDialogComponent_o *v24; // x0
+  const MethodInfo *v25; // x2
 
-  if ( (byte_41887A9 & 1) == 0 )
+  if ( (byte_42112E4 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_EventRecipeConfirmDialogComponent___, method);
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_RecipePointRewardDialogComponent___, v3);
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_RecipeRewardDialogComponent___, v4);
-    sub_B2C35C(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v6);
-    byte_41887A9 = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_EventRecipeConfirmDialogComponent___, method);
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_RecipePointRewardDialogComponent___, v3);
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_RecipeRewardDialogComponent___, v4);
+    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v6);
+    byte_42112E4 = 1;
   }
   recipeRewardDialog = (UnityEngine_Object_o *)this->fields.recipeRewardDialog;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -1288,23 +1121,15 @@ void __fastcall EventRecipeListViewManager__SetRecipeObject(
     }
     v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                        recipeRewardDialog_k__BackingField,
-                                       (const MethodInfo_2095E38 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                       (const MethodInfo_204A984 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v9 )
       goto LABEL_37;
     Component_srcLineSprite = (struct RecipeRewardDialogComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                         v9,
-                                                                        (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_RecipeRewardDialogComponent___);
+                                                                        (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_RecipeRewardDialogComponent___);
     this->fields.recipeRewardDialog = Component_srcLineSprite;
-    sub_B2C2F8(
-      (BattleServantConfConponent_o *)&this->fields.recipeRewardDialog,
-      (System_Int32_array **)Component_srcLineSprite,
-      v14,
-      v15,
-      v16,
-      v17,
-      v18,
-      v19);
-    EventRecipeListViewManager__LocateDialogToRecipePanel(this, (BaseDialog_o *)this->fields.recipeRewardDialog, v20);
+    sub_B0D840(&this->fields.recipeRewardDialog, Component_srcLineSprite);
+    EventRecipeListViewManager__LocateDialogToRecipePanel(this, (BaseDialog_o *)this->fields.recipeRewardDialog, v13);
   }
   v9 = (UnityEngine_GameObject_o *)*p_recipeRewardDialog;
   if ( !*p_recipeRewardDialog )
@@ -1320,10 +1145,10 @@ void __fastcall EventRecipeListViewManager__SetRecipeObject(
   v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(recipePointRewardDialog, 0LL, 0LL);
   if ( ((unsigned __int8)v9 & 1) != 0 )
   {
-    v23 = this->fields.assetManager;
-    if ( !v23 )
+    v16 = this->fields.assetManager;
+    if ( !v16 )
       goto LABEL_37;
-    recipePointRewardDialog_k__BackingField = (UnityEngine_UI_Dropdown_DropdownItem_o *)v23->fields._recipePointRewardDialog_k__BackingField;
+    recipePointRewardDialog_k__BackingField = (UnityEngine_UI_Dropdown_DropdownItem_o *)v16->fields._recipePointRewardDialog_k__BackingField;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -1331,26 +1156,18 @@ void __fastcall EventRecipeListViewManager__SetRecipeObject(
     }
     v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                        recipePointRewardDialog_k__BackingField,
-                                       (const MethodInfo_2095E38 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                       (const MethodInfo_204A984 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v9 )
       goto LABEL_37;
-    v25 = (struct RecipePointRewardDialogComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+    v18 = (struct RecipePointRewardDialogComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                          v9,
-                                                         (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_RecipePointRewardDialogComponent___);
-    this->fields.recipePointRewardDialog = v25;
-    sub_B2C2F8(
-      (BattleServantConfConponent_o *)&this->fields.recipePointRewardDialog,
-      (System_Int32_array **)v25,
-      v26,
-      v27,
-      v28,
-      v29,
-      v30,
-      v31);
+                                                         (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_RecipePointRewardDialogComponent___);
+    this->fields.recipePointRewardDialog = v18;
+    sub_B0D840(&this->fields.recipePointRewardDialog, v18);
     EventRecipeListViewManager__LocateDialogToRecipePanel(
       this,
       (BaseDialog_o *)this->fields.recipePointRewardDialog,
-      v32);
+      v19);
   }
   v9 = (UnityEngine_GameObject_o *)*p_recipePointRewardDialog;
   if ( !*p_recipePointRewardDialog )
@@ -1366,10 +1183,10 @@ void __fastcall EventRecipeListViewManager__SetRecipeObject(
   v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(recipeConfirmDialog, 0LL, 0LL);
   if ( ((unsigned __int8)v9 & 1) != 0 )
   {
-    v36 = this->fields.assetManager;
-    if ( v36 )
+    v22 = this->fields.assetManager;
+    if ( v22 )
     {
-      recipeConfirmDialog_k__BackingField = (UnityEngine_UI_Dropdown_DropdownItem_o *)v36->fields._recipeConfirmDialog_k__BackingField;
+      recipeConfirmDialog_k__BackingField = (UnityEngine_UI_Dropdown_DropdownItem_o *)v22->fields._recipeConfirmDialog_k__BackingField;
       if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
         && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       {
@@ -1377,37 +1194,29 @@ void __fastcall EventRecipeListViewManager__SetRecipeObject(
       }
       v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_Dropdown_DropdownItem_(
                                          recipeConfirmDialog_k__BackingField,
-                                         (const MethodInfo_2095E38 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                         (const MethodInfo_204A984 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( v9 )
       {
-        v38 = (struct EventRecipeConfirmDialogComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
+        v24 = (struct EventRecipeConfirmDialogComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                               v9,
-                                                              (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_EventRecipeConfirmDialogComponent___);
-        this->fields.recipeConfirmDialog = v38;
-        sub_B2C2F8(
-          (BattleServantConfConponent_o *)&this->fields.recipeConfirmDialog,
-          (System_Int32_array **)v38,
-          v39,
-          v40,
-          v41,
-          v42,
-          v43,
-          v44);
+                                                              (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_EventRecipeConfirmDialogComponent___);
+        this->fields.recipeConfirmDialog = v24;
+        sub_B0D840(&this->fields.recipeConfirmDialog, v24);
         EventRecipeListViewManager__LocateDialogToRecipePanel(
           this,
           (BaseDialog_o *)this->fields.recipeConfirmDialog,
-          v45);
+          v25);
         goto LABEL_35;
       }
     }
 LABEL_37:
-    sub_B2C434(v9, v10);
+    sub_B0D97C(v9);
   }
 LABEL_35:
   v9 = (UnityEngine_GameObject_o *)*p_recipeConfirmDialog;
   if ( !*p_recipeConfirmDialog )
     goto LABEL_37;
-  EventRecipeConfirmDialogComponent__Init((EventRecipeConfirmDialogComponent_o *)v9, this->fields.currentEventId, v35);
+  EventRecipeConfirmDialogComponent__Init((EventRecipeConfirmDialogComponent_o *)v9, this->fields.currentEventId, 0LL);
 }
 
 
@@ -1419,7 +1228,7 @@ void __fastcall EventRecipeListViewManager__StopUpdateRemainTime(
 
   currencyInfoController = this->fields.currencyInfoController;
   if ( !currencyInfoController )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   ShopCurrencyInfoController__StopUpdateRemainTime(currencyInfoController, 0LL);
 }
 
@@ -1432,7 +1241,7 @@ void __fastcall EventRecipeListViewManager__UpdateEventItemList(
 
   currencyInfoController = this->fields.currencyInfoController;
   if ( !currencyInfoController )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   ShopCurrencyInfoController__RefreshEventItemWindow(currencyInfoController, 6, this->fields.currentEventId, 1, 0LL);
 }
 
@@ -1445,7 +1254,7 @@ int32_t __fastcall EventRecipeListViewManager__get_ItemBaseWindowHeight(
 
   currencyInfoController = this->fields.currencyInfoController;
   if ( !currencyInfoController )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return currencyInfoController->fields._ItemBaseWindowHeight_k__BackingField;
 }
 
@@ -1454,7 +1263,7 @@ System_Collections_Generic_List_EventRecipeListViewObject__o *__fastcall EventRe
         EventRecipeListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
@@ -1462,47 +1271,49 @@ System_Collections_Generic_List_EventRecipeListViewObject__o *__fastcall EventRe
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v11; // x19
-  __int64 v12; // x1
+  __int64 v11; // x1
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v12; // x19
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x20
   _BOOL8 v15; // x0
-  __int64 v16; // x1
   EventMissionProgressRequest_Argument_ProgressData_o *Component_srcLineSprite; // x0
-  System_Collections_Generic_List_Enumerator_T__o v19; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v20; // [xsp+20h] [xbp-50h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v18; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v19; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_41887A8 & 1) == 0 )
+  if ( (byte_42112E3 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___, v5);
-    sub_B2C35C(&Method_System_Collections_Generic_List_EventRecipeListViewObject__Add__, v6);
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_B2C35C(&Method_System_Collections_Generic_List_EventRecipeListViewObject___ctor__, v8);
-    sub_B2C35C(&System_Collections_Generic_List_EventRecipeListViewObject__TypeInfo, v9);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v10);
-    byte_41887A8 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v4);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v5);
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___, v6);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_EventRecipeListViewObject__Add__, v7);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v8);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_EventRecipeListViewObject___ctor__, v9);
+    sub_B0D8A4(&System_Collections_Generic_List_EventRecipeListViewObject__TypeInfo, v10);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v11);
+    byte_42112E3 = 1;
   }
-  memset(&v20, 0, sizeof(v20));
-  v11 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_EventRecipeListViewObject__TypeInfo);
+  memset(&v19, 0, sizeof(v19));
+  v12 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
+                                                                                                  System_Collections_Generic_List_EventRecipeListViewObject__TypeInfo,
+                                                                                                  method,
+                                                                                                  v2);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v11,
-    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_EventRecipeListViewObject___ctor__);
+    v12,
+    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_EventRecipeListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_B2C434(0LL, v12);
+    sub_B0D97C(0LL);
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-    &v19,
+    &v18,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)objectList,
-    (const MethodInfo_2EF52DC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v20 = v19;
+    (const MethodInfo_2FC6564 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v19 = v18;
   while ( System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-            &v20,
-            (const MethodInfo_20EA42C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v19,
+            (const MethodInfo_2112550 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v20.fields.current;
+    current = v19.fields.current;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -1512,22 +1323,22 @@ System_Collections_Generic_List_EventRecipeListViewObject__o *__fastcall EventRe
     if ( v15 )
     {
       if ( !current )
-        sub_B2C434(v15, v16);
+        sub_B0D97C(v15);
       Component_srcLineSprite = (EventMissionProgressRequest_Argument_ProgressData_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                                          (UnityEngine_GameObject_o *)current,
-                                                                                         (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___);
-      if ( !v11 )
-        sub_B2C434(Component_srcLineSprite, Component_srcLineSprite);
+                                                                                         (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_EventRecipeListViewObject___);
+      if ( !v12 )
+        sub_B0D97C(Component_srcLineSprite);
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-        v11,
+        v12,
         Component_srcLineSprite,
-        (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_EventRecipeListViewObject__Add__);
+        (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_EventRecipeListViewObject__Add__);
     }
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-    &v20,
-    (const MethodInfo_20EA428 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  return (System_Collections_Generic_List_EventRecipeListViewObject__o *)v11;
+    &v19,
+    (const MethodInfo_211254C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  return (System_Collections_Generic_List_EventRecipeListViewObject__o *)v12;
 }
 
 
@@ -1548,22 +1359,22 @@ void __fastcall EventRecipeListViewManager___c__DisplayClass24_0___Init_b__0(
   struct EventRecipeListViewManager_o *v5; // x8
   struct EventRecipeListViewManager_o *v6; // x8
 
-  if ( (byte_4184B62 & 1) == 0 )
+  if ( (byte_4211BC9 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventRecipeMaster___, method);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4184B62 = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventRecipeMaster___, method);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4211BC9 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_11;
   EventRecipeListViewManager__SetRecipeObject(_4__this, 0LL);
-  _4__this = (EventRecipeListViewManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  _4__this = (EventRecipeListViewManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !_4__this )
     goto LABEL_11;
   _4__this = (EventRecipeListViewManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                (DataManager_o *)_4__this,
-                                               (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventRecipeMaster___);
+                                               (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventRecipeMaster___);
   v5 = this->fields.__4__this;
   if ( !v5
     || !_4__this
@@ -1573,7 +1384,7 @@ void __fastcall EventRecipeListViewManager___c__DisplayClass24_0___Init_b__0(
                                                      0LL),
         (v6 = this->fields.__4__this) == 0LL)
     || (v6->fields.eventRecipeEntities = (struct EventRecipeEntity_array *)_4__this,
-        sub_B2C2F8(&v6->fields.eventRecipeEntities, _4__this),
+        sub_B0D840(&v6->fields.eventRecipeEntities, _4__this),
         (_4__this = this->fields.__4__this) == 0LL)
     || (EventRecipeListViewManager__CreateList(
           _4__this,
@@ -1583,7 +1394,7 @@ void __fastcall EventRecipeListViewManager___c__DisplayClass24_0___Init_b__0(
         (_4__this = this->fields.__4__this) == 0LL) )
   {
 LABEL_11:
-    sub_B2C434(_4__this, method);
+    sub_B0D97C(_4__this);
   }
   EventRecipeListViewManager__SetCallBack(_4__this, 0LL);
 }
@@ -1605,7 +1416,7 @@ bool __fastcall EventRecipeListViewManager___c__DisplayClass33_0___CreateRecipeR
   struct EventRecipeListViewManager_o *_4__this; // x8
 
   if ( !x || (_4__this = this->fields.__4__this) == 0LL )
-    sub_B2C434(this, x);
+    sub_B0D97C(this);
   return x->fields.id == _4__this->fields.selectRecipeId;
 }
 
@@ -1614,82 +1425,83 @@ void __fastcall EventRecipeListViewManager___c__DisplayClass33_0___CreateRecipeR
         EventRecipeListViewManager___c__DisplayClass33_0_o *this,
         const MethodInfo *method)
 {
-  Il2CppObject *v2; // x20
-  __int64 v3; // x1
+  __int64 v2; // x2
+  Il2CppObject *v3; // x20
   __int64 v4; // x1
   __int64 v5; // x1
+  __int64 v6; // x1
   BattleDropItem_array *monitor; // x19
   Il2CppClass *klass; // x8
   RecipePointRewardDialogComponent_o *methodPtr; // x21
-  System_Action_o *v9; // x24
+  System_Action_o *v10; // x24
   int32_t methodPtr_high; // w22
-  EventRecipeEntity_o *v11; // x23
-  System_Action_T1__T2__T3__o *v12; // x21
-  System_Action_o *v13; // x22
+  EventRecipeEntity_o *v12; // x23
+  System_Action_T1__T2__T3__o *v13; // x21
+  System_Action_o *v14; // x22
 
-  v2 = (Il2CppObject *)this;
-  if ( (byte_4184B63 & 1) == 0 )
+  v3 = (Il2CppObject *)this;
+  if ( (byte_4211BCA & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Action_BattleDropItem____int__Action__Invoke__, method);
-    sub_B2C35C(&System_Action_TypeInfo, v3);
-    sub_B2C35C(&Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__2__, v4);
-    this = (EventRecipeListViewManager___c__DisplayClass33_0_o *)sub_B2C35C(
+    sub_B0D8A4(&Method_System_Action_BattleDropItem____int__Action__Invoke__, method);
+    sub_B0D8A4(&System_Action_TypeInfo, v4);
+    sub_B0D8A4(&Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__2__, v5);
+    this = (EventRecipeListViewManager___c__DisplayClass33_0_o *)sub_B0D8A4(
                                                                    &Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__3__,
-                                                                   v5);
-    byte_4184B63 = 1;
+                                                                   v6);
+    byte_4211BCA = 1;
   }
-  monitor = (BattleDropItem_array *)v2[1].monitor;
+  monitor = (BattleDropItem_array *)v3[1].monitor;
   if ( !monitor )
     goto LABEL_14;
-  klass = v2[1].klass;
+  klass = v3[1].klass;
   if ( !klass )
     goto LABEL_14;
   if ( *(_QWORD *)&monitor->max_length )
   {
     methodPtr = (RecipePointRewardDialogComponent_o *)klass->vtable[5].methodPtr;
-    v9 = (System_Action_o *)v2[3].monitor;
+    v10 = (System_Action_o *)v3[3].monitor;
     methodPtr_high = HIDWORD(klass->vtable[3].methodPtr);
-    v11 = (EventRecipeEntity_o *)v2[2].klass;
-    if ( !v9 )
+    v12 = (EventRecipeEntity_o *)v3[2].klass;
+    if ( !v10 )
     {
-      v9 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, method, v2);
       System_Action___ctor(
-        v9,
-        v2,
+        v10,
+        v3,
         Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__2__,
         0LL);
-      v2[3].monitor = v9;
-      sub_B2C2F8(&v2[3].monitor, v9);
+      v3[3].monitor = v10;
+      sub_B0D840(&v3[3].monitor, v10);
     }
     if ( methodPtr )
     {
-      RecipePointRewardDialogComponent__Open(methodPtr, v11, monitor, methodPtr_high, v9, 0LL);
+      RecipePointRewardDialogComponent__Open(methodPtr, v12, monitor, methodPtr_high, v10, 0LL);
       return;
     }
 LABEL_14:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   }
-  v12 = (System_Action_T1__T2__T3__o *)klass->vtable[2].method;
-  v13 = (System_Action_o *)v2[4].klass;
-  if ( !v13 )
+  v13 = (System_Action_T1__T2__T3__o *)klass->vtable[2].method;
+  v14 = (System_Action_o *)v3[4].klass;
+  if ( !v14 )
   {
-    v13 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+    v14 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, method, v2);
     System_Action___ctor(
-      v13,
-      v2,
+      v14,
+      v3,
       Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__3__,
       0LL);
-    v2[4].klass = (Il2CppClass *)v13;
-    sub_B2C2F8(&v2[4], v13);
+    v3[4].klass = (Il2CppClass *)v14;
+    sub_B0D840(&v3[4], v14);
   }
-  if ( !v12 )
+  if ( !v13 )
     goto LABEL_14;
   System_Action_object__int__object___Invoke(
-    v12,
+    v13,
     &monitor->obj,
     0,
-    (Il2CppObject *)v13,
-    (const MethodInfo_24CBE88 *)Method_System_Action_BattleDropItem____int__Action__Invoke__);
+    (Il2CppObject *)v14,
+    (const MethodInfo_247EDEC *)Method_System_Action_BattleDropItem____int__Action__Invoke__);
 }
 
 
@@ -1697,50 +1509,51 @@ void __fastcall EventRecipeListViewManager___c__DisplayClass33_0___CreateRecipeR
         EventRecipeListViewManager___c__DisplayClass33_0_o *this,
         const MethodInfo *method)
 {
-  Il2CppObject *v2; // x19
-  __int64 v3; // x1
+  __int64 v2; // x2
+  Il2CppObject *v3; // x19
   __int64 v4; // x1
+  __int64 v5; // x1
   Il2CppClass *klass; // x8
-  System_Action_T1__T2__T3__o *v6; // x20
-  System_Action_o *v7; // x22
+  System_Action_T1__T2__T3__o *v7; // x20
+  System_Action_o *v8; // x22
   Il2CppObject *monitor; // x21
 
-  v2 = (Il2CppObject *)this;
-  if ( (byte_4184B64 & 1) == 0 )
+  v3 = (Il2CppObject *)this;
+  if ( (byte_4211BCB & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Action_BattleDropItem____int__Action__Invoke__, method);
-    sub_B2C35C(&System_Action_TypeInfo, v3);
-    this = (EventRecipeListViewManager___c__DisplayClass33_0_o *)sub_B2C35C(
+    sub_B0D8A4(&Method_System_Action_BattleDropItem____int__Action__Invoke__, method);
+    sub_B0D8A4(&System_Action_TypeInfo, v4);
+    this = (EventRecipeListViewManager___c__DisplayClass33_0_o *)sub_B0D8A4(
                                                                    &Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__4__,
-                                                                   v4);
-    byte_4184B64 = 1;
+                                                                   v5);
+    byte_4211BCB = 1;
   }
-  klass = v2[1].klass;
+  klass = v3[1].klass;
   if ( !klass )
     goto LABEL_8;
-  v6 = (System_Action_T1__T2__T3__o *)klass->vtable[2].method;
-  v7 = (System_Action_o *)v2[3].klass;
-  monitor = (Il2CppObject *)v2[1].monitor;
-  if ( !v7 )
+  v7 = (System_Action_T1__T2__T3__o *)klass->vtable[2].method;
+  v8 = (System_Action_o *)v3[3].klass;
+  monitor = (Il2CppObject *)v3[1].monitor;
+  if ( !v8 )
   {
-    v7 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, method, v2);
     System_Action___ctor(
-      v7,
-      v2,
+      v8,
+      v3,
       Method_EventRecipeListViewManager___c__DisplayClass33_0__CreateRecipeResponse_b__4__,
       0LL);
-    v2[3].klass = (Il2CppClass *)v7;
-    sub_B2C2F8(&v2[3], v7);
+    v3[3].klass = (Il2CppClass *)v8;
+    sub_B0D840(&v3[3], v8);
   }
-  if ( !v6 )
+  if ( !v7 )
 LABEL_8:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   System_Action_object__int__object___Invoke(
-    v6,
+    v7,
     monitor,
     0,
-    (Il2CppObject *)v7,
-    (const MethodInfo_24CBE88 *)Method_System_Action_BattleDropItem____int__Action__Invoke__);
+    (Il2CppObject *)v8,
+    (const MethodInfo_247EDEC *)Method_System_Action_BattleDropItem____int__Action__Invoke__);
 }
 
 
@@ -1756,13 +1569,13 @@ void __fastcall EventRecipeListViewManager___c__DisplayClass33_0___CreateRecipeR
     goto LABEL_5;
   if ( !res->max_length )
   {
-    v3 = sub_B2C460(this);
-    sub_B2C400(v3, 0LL);
+    v3 = sub_B0D9A8(this);
+    sub_B0D948(v3, 0LL);
   }
   this = (EventRecipeListViewManager___c__DisplayClass33_0_o *)this->fields.__4__this;
   if ( !this )
 LABEL_5:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   EventRecipeListViewManager__CheckOpenQuest((EventRecipeListViewManager_o *)this, res->m_Items[0], 0LL);
 }
 
@@ -1779,13 +1592,13 @@ void __fastcall EventRecipeListViewManager___c__DisplayClass33_0___CreateRecipeR
     goto LABEL_5;
   if ( !res->max_length )
   {
-    v3 = sub_B2C460(this);
-    sub_B2C400(v3, 0LL);
+    v3 = sub_B0D9A8(this);
+    sub_B0D948(v3, 0LL);
   }
   this = (EventRecipeListViewManager___c__DisplayClass33_0_o *)this->fields.__4__this;
   if ( !this )
 LABEL_5:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   EventRecipeListViewManager__CheckOpenQuest((EventRecipeListViewManager_o *)this, res->m_Items[0], 0LL);
 }
 

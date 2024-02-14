@@ -16,7 +16,7 @@ void __fastcall PlayFieldMotionBattleLogicTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, 0LL);
   v6->fields.motionName = motionName;
   v6 = (PlayFieldMotionBattleLogicTask_o *)((char *)v6 + 104);
-  *(_DWORD *)&v6[-1].fields.isCanCounterTask = 44;
-  sub_B2C2F8((BattleServantConfConponent_o *)v6, (System_Int32_array **)motionName, v7, v8, v9, v10, v11, v12);
+  v6[-1].fields._AiTimingPriority_k__BackingField = 44;
+  sub_B0D840((BattleServantConfConponent_o *)v6, (System_Int32_array **)motionName, v7, v8, v9, v10, v11, v12);
   LOBYTE(v6->fields.command) = isForcedSpeedOne;
 }

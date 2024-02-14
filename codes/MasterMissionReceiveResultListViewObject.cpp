@@ -2,10 +2,10 @@ void __fastcall MasterMissionReceiveResultListViewObject___ctor(
         MasterMissionReceiveResultListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4189CD4 & 1) == 0 )
+  if ( (byte_4216B26 & 1) == 0 )
   {
-    sub_B2C35C(&ListViewObject_TypeInfo, method);
-    byte_4189CD4 = 1;
+    sub_B0D8A4(&ListViewObject_TypeInfo, method);
+    byte_4216B26 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -20,38 +20,37 @@ void __fastcall MasterMissionReceiveResultListViewObject__Awake(
         MasterMissionReceiveResultListViewObject_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   struct MasterMissionReceiveResultListViewItemDraw_o *Component_srcLineSprite; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_4189CD2 & 1) == 0 )
+  if ( (byte_4216B24 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___, method);
-    byte_4189CD2 = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___, method);
+    byte_4216B24 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B2C434(0LL, v3);
+    sub_B0D97C(0LL);
   Component_srcLineSprite = (struct MasterMissionReceiveResultListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                                      dispObject,
-                                                                                     (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___);
+                                                                                     (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_MasterMissionReceiveResultListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
+    v5,
     v6,
     v7,
     v8,
     v9,
-    v10,
-    v11);
+    v10);
 }
 
 
@@ -85,7 +84,7 @@ void __fastcall MasterMissionReceiveResultListViewObject__SetItem(
     goto LABEL_13;
   v8 = this;
   item->fields.viewObject = (struct ListViewObject_o *)this;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&item->fields.viewObject,
     (System_Int32_array **)this,
     (System_String_array **)seed,
@@ -95,7 +94,7 @@ void __fastcall MasterMissionReceiveResultListViewObject__SetItem(
     v6,
     v7);
   v8->fields.linkItem = item;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v8->fields.linkItem,
     (System_Int32_array **)item,
     v11,
@@ -152,7 +151,7 @@ void __fastcall MasterMissionReceiveResultListViewObject__SetItem(
         !v28) )
   {
 LABEL_13:
-    sub_B2C434(this, item);
+    sub_B0D97C(this);
   }
   UnityEngine_GameObject__set_layer(v28, (int32_t)this, 0LL);
   ListViewObject__SetVisible((ListViewObject_o *)v8, 1, 0LL);
@@ -173,14 +172,13 @@ void __fastcall MasterMissionReceiveResultListViewObject__SetupDisp(
   struct ListViewItem_o *v6; // x21
   UnityEngine_Object_o *itemDraw; // x20
   MasterMissionReceiveResultListViewItemDraw_o *v8; // x0
-  __int64 v9; // x1
-  const MethodInfo *v10; // x2
+  const MethodInfo *v9; // x2
 
-  if ( (byte_4189CD3 & 1) == 0 )
+  if ( (byte_4216B25 & 1) == 0 )
   {
-    sub_B2C35C(&MasterMissionReceiveResultListViewItem_TypeInfo, method);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4189CD3 = 1;
+    sub_B0D8A4(&MasterMissionReceiveResultListViewItem_TypeInfo, method);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4216B25 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -207,7 +205,7 @@ void __fastcall MasterMissionReceiveResultListViewObject__SetupDisp(
   if ( ((unsigned __int8)v8 & 1) != 0 )
   {
     if ( !v6 || (v8 = this->fields.itemDraw) == 0LL )
-      sub_B2C434(v8, v9);
-    MasterMissionReceiveResultListViewItemDraw__SetItem(v8, (System_String_o *)v6[1].klass, v10);
+      sub_B0D97C(v8);
+    MasterMissionReceiveResultListViewItemDraw__SetItem(v8, (System_String_o *)v6[1].klass, v9);
   }
 }

@@ -24,10 +24,10 @@ void __fastcall SoundPlayerListViewItem___ctor(
   System_Int32_array *v24; // x7
   const MethodInfo *v25; // x1
 
-  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23700744((ListViewItem_o *)this, index, 0LL);
   this->fields.index = index;
   this->fields.bgmEntity = inputBgmEntity;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.bgmEntity,
     (System_Int32_array **)inputBgmEntity,
     v7,
@@ -39,9 +39,9 @@ void __fastcall SoundPlayerListViewItem___ctor(
   this->fields.openType = 0;
   *(_DWORD *)&this->fields._isDisp_k__BackingField = 65537;
   this->fields.itemIds = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.itemIds, 0LL, v13, v14, v15, v16, v17, v18);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.itemIds, 0LL, v13, v14, v15, v16, v17, v18);
   this->fields.prices = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.prices, 0LL, v19, v20, v21, v22, v23, v24);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.prices, 0LL, v19, v20, v21, v22, v23, v24);
   SoundPlayerListViewItem__analyzeOpenType(this, v25);
 }
 
@@ -67,29 +67,28 @@ void __fastcall SoundPlayerListViewItem__analyzeOpenType(SoundPlayerListViewItem
   struct BgmEntity_o *bgmEntity; // x8
   int32_t shopId; // w20
   DataManager_o *Instance; // x0
-  __int64 v16; // x1
-  struct BgmEntity_o *v17; // x8
+  struct BgmEntity_o *v16; // x8
   struct System_String_o *name; // x1
-  System_String_array **v19; // x2
-  System_String_array **v20; // x3
-  System_Boolean_array **v21; // x4
-  System_Int32_array **v22; // x5
-  System_Int32_array *v23; // x6
-  System_Int32_array *v24; // x7
-  struct System_Int32_array *v25; // x1
-  System_Int32_array **v26; // x1
-  const MethodInfo *v27; // x2
-  struct BgmEntity_o *v28; // x8
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
+  struct System_Int32_array *v24; // x1
+  System_Int32_array **v25; // x1
+  const MethodInfo *v26; // x2
+  struct BgmEntity_o *v27; // x8
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_41876E5 & 1) == 0 )
+  if ( (byte_4214B1C & 1) == 0 )
   {
-    sub_B2C35C(&CondType_TypeInfo, method);
-    sub_B2C35C(&Method_DataManager_GetMasterData_ShopMaster___, v9);
-    sub_B2C35C(&Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__, v10);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B2C35C(&StringLiteral_1/*""*/, v12);
-    byte_41876E5 = 1;
+    sub_B0D8A4(&CondType_TypeInfo, method);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_ShopMaster___, v9);
+    sub_B0D8A4(&Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__, v10);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v12);
+    byte_4214B1C = 1;
   }
   entity = 0LL;
   bgmEntity = this->fields.bgmEntity;
@@ -105,20 +104,20 @@ void __fastcall SoundPlayerListViewItem__analyzeOpenType(SoundPlayerListViewItem
         this->fields.openType = 0;
         return;
       }
-      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_23;
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ShopMaster___);
-      v17 = this->fields.bgmEntity;
-      if ( !v17 || !Instance )
+                                    (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ShopMaster___);
+      v16 = this->fields.bgmEntity;
+      if ( !v16 || !Instance )
         goto LABEL_23;
       Instance = (DataManager_o *)DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                                     (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                     &entity,
-                                    v17->fields.shopId,
-                                    (const MethodInfo_24E412C *)Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__);
+                                    v16->fields.shopId,
+                                    (const MethodInfo_2669C30 *)Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
         if ( !entity )
@@ -127,7 +126,7 @@ void __fastcall SoundPlayerListViewItem__analyzeOpenType(SoundPlayerListViewItem
         {
           name = entity->fields.name;
           this->fields.itemIds = (struct System_Int32_array *)name;
-          sub_B2C2F8(
+          sub_B0D840(
             (BattleServantConfConponent_o *)&this->fields.itemIds,
             (System_Int32_array **)name,
             v2,
@@ -138,36 +137,36 @@ void __fastcall SoundPlayerListViewItem__analyzeOpenType(SoundPlayerListViewItem
             v7);
           if ( !entity )
             goto LABEL_23;
-          v25 = *(struct System_Int32_array **)&entity->fields.startType;
-          this->fields.prices = v25;
-          sub_B2C2F8(
+          v24 = *(struct System_Int32_array **)&entity->fields.startType;
+          this->fields.prices = v24;
+          sub_B0D840(
             (BattleServantConfConponent_o *)&this->fields.prices,
-            (System_Int32_array **)v25,
+            (System_Int32_array **)v24,
+            v18,
             v19,
             v20,
             v21,
             v22,
-            v23,
-            v24);
+            v23);
           this->fields.openType = 1;
           this->fields._isShop_k__BackingField = 1;
         }
       }
     }
-    v26 = (System_Int32_array **)StringLiteral_1/*""*/;
+    v25 = (System_Int32_array **)StringLiteral_1/*""*/;
     this->fields.notOpenStr = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.notOpenStr, v26, v2, v3, v4, v5, v6, v7);
+    sub_B0D840((BattleServantConfConponent_o *)&this->fields.notOpenStr, v25, v2, v3, v4, v5, v6, v7);
     if ( this->fields.openType == 2 )
       return;
-    v28 = this->fields.bgmEntity;
-    if ( v28 )
+    v27 = this->fields.bgmEntity;
+    if ( v27 )
     {
-      if ( SoundPlayerListViewItem__isBgmLock_24825024(v28->fields.id, &this->fields.notOpenStr, v27) )
+      if ( SoundPlayerListViewItem__isBgmLock_25015652(v27->fields.id, &this->fields.notOpenStr, v26) )
         this->fields.openType = 2;
       return;
     }
 LABEL_23:
-    sub_B2C434(Instance, v16);
+    sub_B0D97C(Instance);
   }
 }
 
@@ -179,15 +178,14 @@ void __fastcall SoundPlayerListViewItem__applyUi(SoundPlayerListViewItem_o *this
   __int64 v5; // x11
   UnityEngine_Object_o *v6; // x20
   SoundPlayerListViewItemDraw_o *monitor; // x0
-  __int64 v8; // x1
+  const MethodInfo *v8; // x2
   const MethodInfo *v9; // x2
-  const MethodInfo *v10; // x2
 
-  if ( (byte_41876E4 & 1) == 0 )
+  if ( (byte_4214B1B & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    sub_B2C35C(&SoundPlayerListViewObject_TypeInfo, v3);
-    byte_41876E4 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    sub_B0D8A4(&SoundPlayerListViewObject_TypeInfo, v3);
+    byte_4214B1B = 1;
   }
   viewObject = this->fields.viewObject;
   if ( viewObject
@@ -213,12 +211,12 @@ void __fastcall SoundPlayerListViewItem__applyUi(SoundPlayerListViewItem_o *this
   {
     if ( !v6
       || (monitor = (SoundPlayerListViewItemDraw_o *)v6[5].monitor) == 0LL
-      || (SoundPlayerListViewItemDraw__apllyDisp(monitor, this, v9),
+      || (SoundPlayerListViewItemDraw__apllyDisp(monitor, this, v8),
           (monitor = (SoundPlayerListViewItemDraw_o *)v6[5].monitor) == 0LL) )
     {
-      sub_B2C434(monitor, v8);
+      sub_B0D97C(monitor);
     }
-    SoundPlayerListViewItemDraw__applyUi(monitor, this, v10);
+    SoundPlayerListViewItemDraw__applyUi(monitor, this, v9);
   }
 }
 
@@ -230,14 +228,13 @@ void __fastcall SoundPlayerListViewItem__attachPlayEffect(SoundPlayerListViewIte
   __int64 v5; // x11
   UnityEngine_Object_o *v6; // x20
   SoundPlayerListViewItemDraw_o *monitor; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x2
+  const MethodInfo *v8; // x2
 
-  if ( (byte_41876E3 & 1) == 0 )
+  if ( (byte_4214B1A & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    sub_B2C35C(&SoundPlayerListViewObject_TypeInfo, v3);
-    byte_41876E3 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    sub_B0D8A4(&SoundPlayerListViewObject_TypeInfo, v3);
+    byte_4214B1A = 1;
   }
   viewObject = this->fields.viewObject;
   if ( viewObject
@@ -262,8 +259,8 @@ void __fastcall SoundPlayerListViewItem__attachPlayEffect(SoundPlayerListViewIte
   if ( ((unsigned __int8)monitor & 1) == 0 )
   {
     if ( !v6 || (monitor = (SoundPlayerListViewItemDraw_o *)v6[5].monitor) == 0LL )
-      sub_B2C434(monitor, v8);
-    SoundPlayerListViewItemDraw__attachPlayEffect(monitor, this, v9);
+      sub_B0D97C(monitor);
+    SoundPlayerListViewItemDraw__attachPlayEffect(monitor, this, v8);
   }
 }
 
@@ -275,10 +272,10 @@ System_String_o *__fastcall SoundPlayerListViewItem__getBgmCueName(
   struct BgmEntity_o *bgmEntity; // x8
   System_String_o **p_fileName; // x8
 
-  if ( (byte_41876EA & 1) == 0 )
+  if ( (byte_4214B21 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_1/*""*/, method);
-    byte_41876EA = 1;
+    sub_B0D8A4(&StringLiteral_1/*""*/, method);
+    byte_4214B21 = 1;
   }
   bgmEntity = this->fields.bgmEntity;
   if ( bgmEntity )
@@ -334,10 +331,10 @@ System_String_o *__fastcall SoundPlayerListViewItem__getTitleName(
   struct BgmEntity_o *bgmEntity; // x8
   System_String_o **p_name; // x8
 
-  if ( (byte_41876E9 & 1) == 0 )
+  if ( (byte_4214B20 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_1/*""*/, method);
-    byte_41876E9 = 1;
+    sub_B0D8A4(&StringLiteral_1/*""*/, method);
+    byte_4214B20 = 1;
   }
   bgmEntity = this->fields.bgmEntity;
   if ( bgmEntity )
@@ -385,17 +382,17 @@ bool __fastcall SoundPlayerListViewItem__isBgmLock(int32_t bgmId, const MethodIn
   const MethodInfo *v2; // x2
   System_String_o *closedMessage; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_41876E6 & 1) == 0 )
+  if ( (byte_4214B1D & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_1/*""*/, method);
-    byte_41876E6 = 1;
+    sub_B0D8A4(&StringLiteral_1/*""*/, method);
+    byte_4214B1D = 1;
   }
   closedMessage = (System_String_o *)StringLiteral_1/*""*/;
-  return SoundPlayerListViewItem__isBgmLock_24825024(bgmId, &closedMessage, v2);
+  return SoundPlayerListViewItem__isBgmLock_25015652(bgmId, &closedMessage, v2);
 }
 
 
-bool __fastcall SoundPlayerListViewItem__isBgmLock_24825024(
+bool __fastcall SoundPlayerListViewItem__isBgmLock_25015652(
         int32_t bgmId,
         System_String_o **closedMessage,
         const MethodInfo *method)
@@ -433,231 +430,243 @@ bool __fastcall SoundPlayerListViewItem__isBgmLock_24825024(
   __int64 v34; // x1
   __int64 v35; // x1
   void *Instance; // x0
-  __int64 v37; // x1
   BgmReleaseMaster_o *MasterData_WarQuestSelectionMaster; // x22
-  DataMasterBase_WarMaster__WarEntity__int__o *v39; // x20
+  DataMasterBase_WarMaster__WarEntity__int__o *v38; // x20
   BgmReleaseEntity_array *Entitys; // x22
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v41; // x21
-  const MethodInfo *v42; // x2
-  __int64 v43; // x19
-  il2cpp_array_size_t v44; // w27
-  BgmReleaseEntity_o *v45; // x23
+  __int64 v40; // x1
+  __int64 v41; // x2
+  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v42; // x21
+  const MethodInfo *v43; // x2
+  __int64 v44; // x19
+  il2cpp_array_size_t v45; // w27
+  BgmReleaseEntity_o *v46; // x23
   int32_t type; // w24
-  char v47; // w24
+  char v48; // w24
+  __int64 v49; // x1
+  __int64 v50; // x2
   int32_t priority; // w25
-  SoundPlayerListViewItem_BgmPriorityData_o *v49; // x26
+  SoundPlayerListViewItem_BgmPriorityData_o *v52; // x26
   WarBoardEvalValueSquare_EvalValueSquare_o *Item; // x0
   int32_t condGroup; // w26
-  SoundPlayerListViewItem_BgmPriorityData_o *v52; // x25
-  const MethodInfo *v53; // x4
-  __int64 v54; // x0
+  SoundPlayerListViewItem_BgmPriorityData_o *v55; // x25
+  const MethodInfo *v56; // x4
+  __int64 v57; // x0
   System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *Keys; // x23
-  System_Collections_Generic_List_int__o *v56; // x22
+  __int64 v59; // x1
+  __int64 v60; // x2
+  System_Collections_Generic_List_int__o *v61; // x22
+  __int64 v62; // x1
+  __int64 v63; // x2
   struct SoundPlayerListViewItem___c_StaticFields *static_fields; // x8
   System_Comparison_int__o *_9__37_0; // x23
-  Il2CppObject *v59; // x24
-  struct SoundPlayerListViewItem___c_StaticFields *v60; // x0
-  System_String_array **v61; // x2
-  System_String_array **v62; // x3
-  System_Boolean_array **v63; // x4
-  System_Int32_array **v64; // x5
-  System_Int32_array *v65; // x6
-  System_Int32_array *v66; // x7
-  WarBoardEvalValueSquare_EvalValueSquare_o *v67; // x0
-  __int64 v68; // x1
+  Il2CppObject *v66; // x24
+  struct SoundPlayerListViewItem___c_StaticFields *v67; // x0
+  System_String_array **v68; // x2
+  System_String_array **v69; // x3
+  System_Boolean_array **v70; // x4
+  System_Int32_array **v71; // x5
+  System_Int32_array *v72; // x6
+  System_Int32_array *v73; // x7
+  WarBoardEvalValueSquare_EvalValueSquare_o *v74; // x0
   System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__o *squareData; // x22
-  System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *v70; // x23
-  System_Collections_Generic_List_int__o *v71; // x24
-  System_Collections_Generic_List_int__o *v72; // x23
-  __int64 v73; // x0
-  __int64 v74; // x1
-  int v75; // w28
-  WarBoardEvalValueSquare_EvalValueSquare_o *v76; // x0
+  System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *v76; // x23
   __int64 v77; // x1
-  char v78; // w26
-  int v79; // w8
-  _BOOL8 v80; // x0
-  __int64 v81; // x1
-  __int64 v82; // x24
-  _BOOL8 v83; // x0
-  __int64 v84; // x1
-  int32_t v85; // w1
-  const MethodInfo *v86; // x4
+  __int64 v78; // x2
+  System_Collections_Generic_List_int__o *v79; // x24
+  __int64 v80; // x1
+  __int64 v81; // x2
+  System_Collections_Generic_List_int__o *v82; // x23
+  __int64 v83; // x0
+  int v84; // w28
+  WarBoardEvalValueSquare_EvalValueSquare_o *v85; // x0
+  char v86; // w26
   int v87; // w8
-  int v88; // w8
-  char v89; // w23
-  int v90; // w8
-  int v91; // w9
+  _BOOL8 v88; // x0
+  __int64 v89; // x24
+  _BOOL8 v90; // x0
+  int32_t v91; // w1
+  const MethodInfo *v92; // x4
+  int v93; // w8
+  int v94; // w8
+  char v95; // w23
+  int v96; // w8
+  int v97; // w9
   bool result; // w0
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v94; // [xsp+8h] [xbp-F8h]
-  SoundPlayerListViewItem_BgmReleaseData_o v95; // [xsp+10h] [xbp-F0h] BYREF
-  __int128 v96; // [xsp+20h] [xbp-E0h]
-  _DWORD v97[5]; // [xsp+30h] [xbp-D0h]
-  int v98; // [xsp+44h] [xbp-BCh]
+  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v100; // [xsp+8h] [xbp-F8h]
+  SoundPlayerListViewItem_BgmReleaseData_o v101; // [xsp+10h] [xbp-F0h] BYREF
+  __int128 v102; // [xsp+20h] [xbp-E0h]
+  _DWORD v103[5]; // [xsp+30h] [xbp-D0h]
+  int v104; // [xsp+44h] [xbp-BCh]
   WarEntity_o *entity; // [xsp+48h] [xbp-B8h] BYREF
-  SoundPlayerListViewItem_BgmReleaseData_o v100; // [xsp+50h] [xbp-B0h] BYREF
-  __int128 v101; // [xsp+60h] [xbp-A0h]
-  System_Collections_Generic_List_Enumerator_int__o v102; // [xsp+70h] [xbp-90h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v103; // [xsp+90h] [xbp-70h] BYREF
-  SoundPlayerListViewItem_BgmReleaseData_o v104; // 0:x0.16
+  SoundPlayerListViewItem_BgmReleaseData_o v106; // [xsp+50h] [xbp-B0h] BYREF
+  __int128 v107; // [xsp+60h] [xbp-A0h]
+  System_Collections_Generic_List_Enumerator_int__o v108; // [xsp+70h] [xbp-90h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v109; // [xsp+90h] [xbp-70h] BYREF
+  SoundPlayerListViewItem_BgmReleaseData_o v110; // 0:x0.16
 
-  if ( (byte_41876E7 & 1) == 0 )
+  if ( (byte_4214B1E & 1) == 0 )
   {
-    sub_B2C35C(&SoundPlayerListViewItem_BgmPriorityData_TypeInfo, closedMessage);
-    sub_B2C35C(&Method_System_Comparison_int___ctor__, v4);
-    sub_B2C35C(&System_Comparison_int__TypeInfo, v5);
-    sub_B2C35C(&Method_DataManager_GetMasterData_BgmReleaseMaster___, v6);
-    sub_B2C35C(&Method_DataManager_GetMasterData_ClosedMessageMaster___, v7);
-    sub_B2C35C(&Method_DataMasterBase_ClosedMessageMaster__ClosedMessageEntity__int__TryGetEntity__, v8);
-    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__Add__, v9);
-    sub_B2C35C(
+    sub_B0D8A4(&SoundPlayerListViewItem_BgmPriorityData_TypeInfo, closedMessage);
+    sub_B0D8A4(&Method_System_Comparison_int___ctor__, v4);
+    sub_B0D8A4(&System_Comparison_int__TypeInfo, v5);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_BgmReleaseMaster___, v6);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_ClosedMessageMaster___, v7);
+    sub_B0D8A4(&Method_DataMasterBase_ClosedMessageMaster__ClosedMessageEntity__int__TryGetEntity__, v8);
+    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__Add__, v9);
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__ContainsKey__,
       v10);
-    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData___ctor__, v11);
-    sub_B2C35C(
+    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData___ctor__, v11);
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Count__,
       v12);
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Item__,
       v13);
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__get_Item__,
       v14);
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Keys__,
       v15);
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__get_Keys__,
       v16);
-    sub_B2C35C(&System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__TypeInfo, v17);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v18);
-    sub_B2C35C(
+    sub_B0D8A4(&System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__TypeInfo, v17);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v18);
+    sub_B0D8A4(
       &Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewItem_BgmReleaseData__Dispose__,
       v19);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v20);
-    sub_B2C35C(
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v20);
+    sub_B0D8A4(
       &Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewItem_BgmReleaseData__MoveNext__,
       v21);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v22);
-    sub_B2C35C(
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v22);
+    sub_B0D8A4(
       &Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewItem_BgmReleaseData__get_Current__,
       v23);
-    sub_B2C35C(&Method_System_Collections_Generic_List_int__Add__, v24);
-    sub_B2C35C(&Method_System_Collections_Generic_List_int__Contains__, v25);
-    sub_B2C35C(&Method_System_Collections_Generic_List_int__GetEnumerator__, v26);
-    sub_B2C35C(&Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__GetEnumerator__, v27);
-    sub_B2C35C(&Method_System_Collections_Generic_List_int__Sort___67311520, v28);
-    sub_B2C35C(&Method_System_Collections_Generic_List_int___ctor__, v29);
-    sub_B2C35C(&Method_System_Collections_Generic_List_int___ctor___67311384, v30);
-    sub_B2C35C(&System_Collections_Generic_List_int__TypeInfo, v31);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v32);
-    sub_B2C35C(&SoundPlayerComponent_TypeInfo, v33);
-    sub_B2C35C(&Method_SoundPlayerListViewItem___c__isBgmLock_b__37_0__, v34);
-    sub_B2C35C(&SoundPlayerListViewItem___c_TypeInfo, v35);
-    byte_41876E7 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_int__Add__, v24);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_int__Contains__, v25);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_int__GetEnumerator__, v26);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__GetEnumerator__, v27);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_int__Sort___67885080, v28);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_int___ctor__, v29);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_int___ctor___67884944, v30);
+    sub_B0D8A4(&System_Collections_Generic_List_int__TypeInfo, v31);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v32);
+    sub_B0D8A4(&SoundPlayerComponent_TypeInfo, v33);
+    sub_B0D8A4(&Method_SoundPlayerListViewItem___c__isBgmLock_b__37_0__, v34);
+    sub_B0D8A4(&SoundPlayerListViewItem___c_TypeInfo, v35);
+    byte_4214B1E = 1;
   }
-  memset(&v103, 0, sizeof(v103));
-  v101 = 0u;
-  memset(&v102, 0, sizeof(v102));
-  v100 = (SoundPlayerListViewItem_BgmReleaseData_o)0;
+  memset(&v109, 0, sizeof(v109));
+  v107 = 0u;
+  memset(&v108, 0, sizeof(v108));
+  v106 = (SoundPlayerListViewItem_BgmReleaseData_o)0;
   entity = 0LL;
-  v98 = 0;
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v104 = 0;
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_73;
   MasterData_WarQuestSelectionMaster = (BgmReleaseMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                (DataManager_o *)Instance,
-                                                               (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_BgmReleaseMaster___);
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                                               (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_BgmReleaseMaster___);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_73;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ClosedMessageMaster___);
+               (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ClosedMessageMaster___);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_73;
-  v39 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
+  v38 = (DataMasterBase_WarMaster__WarEntity__int__o *)Instance;
   Entitys = BgmReleaseMaster__getEntitys(MasterData_WarQuestSelectionMaster, bgmId, 0LL);
-  v41 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B2C42C(System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__TypeInfo);
+  v42 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B0D974(
+                                                                                                   System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__TypeInfo,
+                                                                                                   v40,
+                                                                                                   v41);
   System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare____ctor(
-    v41,
-    (const MethodInfo_2E63B98 *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData___ctor__);
+    v42,
+    (const MethodInfo_2E8F874 *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData___ctor__);
   if ( !Entitys )
     goto LABEL_73;
-  v43 = *(_QWORD *)&Entitys->max_length;
-  v94 = v41;
-  if ( (int)v43 >= 1 )
+  v44 = *(_QWORD *)&Entitys->max_length;
+  v100 = v42;
+  if ( (int)v44 >= 1 )
   {
-    v44 = 0;
+    v45 = 0;
     while ( 1 )
     {
-      v45 = Entitys->m_Items[v44];
-      if ( !v45 )
+      v46 = Entitys->m_Items[v45];
+      if ( !v46 )
         break;
-      if ( v45->fields.targetIds )
+      if ( v46->fields.targetIds )
       {
-        type = v45->fields.type;
+        type = v46->fields.type;
         if ( (BYTE3(SoundPlayerComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
           && !SoundPlayerComponent_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(SoundPlayerComponent_TypeInfo);
         }
-        Instance = (void *)SoundPlayerComponent__checkOpen(v45, type, v42);
-        if ( !v41 )
+        Instance = (void *)SoundPlayerComponent__checkOpen(v46, type, v43);
+        if ( !v42 )
           break;
-        v47 = (char)Instance;
+        v48 = (char)Instance;
         if ( !System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData___ContainsKey(
-                (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)v41,
-                v45->fields.priority,
-                (const MethodInfo_2E649C0 *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__ContainsKey__) )
+                (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)v42,
+                v46->fields.priority,
+                (const MethodInfo_2E9069C *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__ContainsKey__) )
         {
-          priority = v45->fields.priority;
-          v49 = (SoundPlayerListViewItem_BgmPriorityData_o *)sub_B2C42C(SoundPlayerListViewItem_BgmPriorityData_TypeInfo);
-          SoundPlayerListViewItem_BgmPriorityData___ctor(v49, 0LL);
-          v41 = v94;
+          priority = v46->fields.priority;
+          v52 = (SoundPlayerListViewItem_BgmPriorityData_o *)sub_B0D974(
+                                                               SoundPlayerListViewItem_BgmPriorityData_TypeInfo,
+                                                               v49,
+                                                               v50);
+          SoundPlayerListViewItem_BgmPriorityData___ctor(v52, 0LL);
+          v42 = v100;
           System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___Add(
-            v94,
+            v100,
             priority,
-            (WarBoardEvalValueSquare_EvalValueSquare_o *)v49,
-            (const MethodInfo_2E6474C *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__Add__);
+            (WarBoardEvalValueSquare_EvalValueSquare_o *)v52,
+            (const MethodInfo_2E90428 *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__Add__);
         }
         Item = System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
-                 v41,
-                 v45->fields.priority,
-                 (const MethodInfo_2E64688 *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__get_Item__);
-        condGroup = v45->fields.condGroup;
-        v52 = (SoundPlayerListViewItem_BgmPriorityData_o *)Item;
-        v104.fields.bgmReleaseEntity = (struct BgmReleaseEntity_o *)(v47 & 1);
-        *(_QWORD *)&v104.fields.releaseCheck = &v95;
-        v95 = (SoundPlayerListViewItem_BgmReleaseData_o)0LL;
-        SoundPlayerListViewItem_BgmReleaseData___ctor(v104, (bool)v45, 0LL, v53);
-        if ( !v52 )
+                 v42,
+                 v46->fields.priority,
+                 (const MethodInfo_2E90364 *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__get_Item__);
+        condGroup = v46->fields.condGroup;
+        v55 = (SoundPlayerListViewItem_BgmPriorityData_o *)Item;
+        v110.fields.bgmReleaseEntity = (struct BgmReleaseEntity_o *)(v48 & 1);
+        *(_QWORD *)&v110.fields.releaseCheck = &v101;
+        v101 = (SoundPlayerListViewItem_BgmReleaseData_o)0LL;
+        SoundPlayerListViewItem_BgmReleaseData___ctor(v110, (bool)v46, 0LL, v56);
+        if ( !v55 )
           break;
-        SoundPlayerListViewItem_BgmPriorityData__AddBgmReleaseData(v52, condGroup, v95, 0LL);
-        v41 = v94;
+        SoundPlayerListViewItem_BgmPriorityData__AddBgmReleaseData(v55, condGroup, v101, 0LL);
+        v42 = v100;
       }
-      if ( (int)++v44 >= (int)v43 )
+      if ( (int)++v45 >= (int)v44 )
         goto LABEL_22;
-      if ( v44 >= Entitys->max_length )
+      if ( v45 >= Entitys->max_length )
       {
-        v54 = sub_B2C460(Instance);
-        sub_B2C400(v54, 0LL);
+        v57 = sub_B0D9A8(Instance);
+        sub_B0D948(v57, 0LL);
       }
     }
 LABEL_73:
-    sub_B2C434(Instance, v37);
+    sub_B0D97C(Instance);
   }
 LABEL_22:
-  if ( !v41 )
+  if ( !v42 )
     goto LABEL_73;
   Keys = System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData___get_Keys(
-           (System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__o *)v41,
-           (const MethodInfo_2E64358 *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__get_Keys__);
-  v56 = (System_Collections_Generic_List_int__o *)sub_B2C42C(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_49702036(
-    v56,
+           (System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__o *)v42,
+           (const MethodInfo_2E90034 *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__get_Keys__);
+  v61 = (System_Collections_Generic_List_int__o *)sub_B0D974(System_Collections_Generic_List_int__TypeInfo, v59, v60);
+  System_Collections_Generic_List_int____ctor_50000796(
+    v61,
     (System_Collections_Generic_IEnumerable_T__o *)Keys,
-    (const MethodInfo_2F66494 *)Method_System_Collections_Generic_List_int___ctor___67311384);
+    (const MethodInfo_2FAF39C *)Method_System_Collections_Generic_List_int___ctor___67884944);
   Instance = SoundPlayerListViewItem___c_TypeInfo;
   if ( (BYTE3(SoundPlayerListViewItem___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !SoundPlayerListViewItem___c_TypeInfo->_2.cctor_finished )
@@ -674,197 +683,203 @@ LABEL_22:
       j_il2cpp_runtime_class_init_0(Instance);
       static_fields = SoundPlayerListViewItem___c_TypeInfo->static_fields;
     }
-    v59 = (Il2CppObject *)static_fields->__9;
-    _9__37_0 = (System_Comparison_int__o *)sub_B2C42C(System_Comparison_int__TypeInfo);
+    v66 = (Il2CppObject *)static_fields->__9;
+    _9__37_0 = (System_Comparison_int__o *)sub_B0D974(System_Comparison_int__TypeInfo, v62, v63);
     System_Comparison_int____ctor(
       _9__37_0,
-      v59,
+      v66,
       Method_SoundPlayerListViewItem___c__isBgmLock_b__37_0__,
-      (const MethodInfo_25D74C4 *)Method_System_Comparison_int___ctor__);
-    v60 = SoundPlayerListViewItem___c_TypeInfo->static_fields;
-    v60->__9__37_0 = _9__37_0;
-    sub_B2C2F8(
-      (BattleServantConfConponent_o *)&v60->__9__37_0,
+      (const MethodInfo_241155C *)Method_System_Comparison_int___ctor__);
+    v67 = SoundPlayerListViewItem___c_TypeInfo->static_fields;
+    v67->__9__37_0 = _9__37_0;
+    sub_B0D840(
+      (BattleServantConfConponent_o *)&v67->__9__37_0,
       (System_Int32_array **)_9__37_0,
-      v61,
-      v62,
-      v63,
-      v64,
-      v65,
-      v66);
+      v68,
+      v69,
+      v70,
+      v71,
+      v72,
+      v73);
   }
-  if ( !v56 )
+  if ( !v61 )
     goto LABEL_73;
-  System_Collections_Generic_List_int___Sort_49713300(
-    v56,
+  System_Collections_Generic_List_int___Sort_50012060(
+    v61,
     (System_Comparison_T__o *)_9__37_0,
-    (const MethodInfo_2F69094 *)Method_System_Collections_Generic_List_int__Sort___67311520);
+    (const MethodInfo_2FB1F9C *)Method_System_Collections_Generic_List_int__Sort___67885080);
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v95,
-    v56,
-    (const MethodInfo_2F67E3C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  *(_QWORD *)&v103.fields.current = v96;
-  *(SoundPlayerListViewItem_BgmReleaseData_o *)&v103.fields.list = v95;
+    (System_Collections_Generic_List_Enumerator_T__o *)&v101,
+    v61,
+    (const MethodInfo_2FB0D44 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  *(_QWORD *)&v109.fields.current = v102;
+  *(SoundPlayerListViewItem_BgmReleaseData_o *)&v109.fields.list = v101;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-            &v103,
-            (const MethodInfo_20E7EC0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            &v109,
+            (const MethodInfo_210FFE4 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
-    v67 = System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
-            v94,
-            v103.fields.current,
-            (const MethodInfo_2E64688 *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__get_Item__);
-    if ( !v67 )
-      sub_B2C434(0LL, v68);
-    squareData = (System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__o *)v67->fields.squareData;
+    v74 = System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
+            v100,
+            v109.fields.current,
+            (const MethodInfo_2E90364 *)Method_System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__get_Item__);
+    if ( !v74 )
+      sub_B0D97C(0LL);
+    squareData = (System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData__o *)v74->fields.squareData;
     if ( squareData
       && System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Count(
-           (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)v67->fields.squareData,
-           (const MethodInfo_2E64348 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Count__) >= 1 )
+           (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)v74->fields.squareData,
+           (const MethodInfo_2E90024 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Count__) >= 1 )
     {
-      v70 = System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData___get_Keys(
+      v76 = System_Collections_Generic_Dictionary_int__SoundPlayerListViewItem_BgmPriorityData___get_Keys(
               squareData,
-              (const MethodInfo_2E64358 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Keys__);
-      v71 = (System_Collections_Generic_List_int__o *)sub_B2C42C(System_Collections_Generic_List_int__TypeInfo);
-      System_Collections_Generic_List_int____ctor_49702036(
-        v71,
-        (System_Collections_Generic_IEnumerable_T__o *)v70,
-        (const MethodInfo_2F66494 *)Method_System_Collections_Generic_List_int___ctor___67311384);
-      v72 = (System_Collections_Generic_List_int__o *)sub_B2C42C(System_Collections_Generic_List_int__TypeInfo);
+              (const MethodInfo_2E90034 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Keys__);
+      v79 = (System_Collections_Generic_List_int__o *)sub_B0D974(
+                                                        System_Collections_Generic_List_int__TypeInfo,
+                                                        v77,
+                                                        v78);
+      System_Collections_Generic_List_int____ctor_50000796(
+        v79,
+        (System_Collections_Generic_IEnumerable_T__o *)v76,
+        (const MethodInfo_2FAF39C *)Method_System_Collections_Generic_List_int___ctor___67884944);
+      v82 = (System_Collections_Generic_List_int__o *)sub_B0D974(
+                                                        System_Collections_Generic_List_int__TypeInfo,
+                                                        v80,
+                                                        v81);
       System_Collections_Generic_List_int____ctor(
-        v72,
-        (const MethodInfo_2F6629C *)Method_System_Collections_Generic_List_int___ctor__);
-      if ( !v71 )
-        sub_B2C434(v73, v74);
+        v82,
+        (const MethodInfo_2FAF1A4 *)Method_System_Collections_Generic_List_int___ctor__);
+      if ( !v79 )
+        sub_B0D97C(v83);
       System_Collections_Generic_List_int___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v95,
-        v71,
-        (const MethodInfo_2F67E3C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-      v75 = 0;
-      *(_QWORD *)&v102.fields.current = v96;
-      *(SoundPlayerListViewItem_BgmReleaseData_o *)&v102.fields.list = v95;
+        (System_Collections_Generic_List_Enumerator_T__o *)&v101,
+        v79,
+        (const MethodInfo_2FB0D44 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+      v84 = 0;
+      *(_QWORD *)&v108.fields.current = v102;
+      *(SoundPlayerListViewItem_BgmReleaseData_o *)&v108.fields.list = v101;
       while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-                &v102,
-                (const MethodInfo_20E7EC0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+                &v108,
+                (const MethodInfo_210FFE4 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
       {
-        v76 = System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
+        v85 = System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
                 (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)squareData,
-                v102.fields.current,
-                (const MethodInfo_2E64688 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Item__);
-        if ( !v76 )
-          sub_B2C434(0LL, v77);
+                v108.fields.current,
+                (const MethodInfo_2E90364 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Item__);
+        if ( !v85 )
+          sub_B0D97C(0LL);
         System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData___GetEnumerator(
-          (System_Collections_Generic_List_Enumerator_T__o *)&v95,
-          (System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__o *)v76,
-          (const MethodInfo_2EB9DCC *)Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__GetEnumerator__);
-        v78 = 0;
-        v79 = v75;
-        v100 = v95;
-        v101 = v96;
+          (System_Collections_Generic_List_Enumerator_T__o *)&v101,
+          (System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__o *)v85,
+          (const MethodInfo_2F080E4 *)Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__GetEnumerator__);
+        v86 = 0;
+        v87 = v84;
+        v106 = v101;
+        v107 = v102;
 LABEL_42:
-        v75 = v79;
+        v84 = v87;
         while ( 1 )
         {
-          v80 = System_Collections_Generic_List_Enumerator_SoundPlayerListViewItem_BgmReleaseData___MoveNext(
-                  (System_Collections_Generic_List_Enumerator_T__o *)&v100,
-                  (const MethodInfo_255A314 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewItem_BgmReleaseData__MoveNext__);
-          if ( !v80 )
+          v88 = System_Collections_Generic_List_Enumerator_SoundPlayerListViewItem_BgmReleaseData___MoveNext(
+                  (System_Collections_Generic_List_Enumerator_T__o *)&v106,
+                  (const MethodInfo_22967FC *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewItem_BgmReleaseData__MoveNext__);
+          if ( !v88 )
             break;
-          if ( !(_BYTE)v101 )
+          if ( !(_BYTE)v107 )
           {
-            v82 = *((_QWORD *)&v101 + 1);
-            if ( !*((_QWORD *)&v101 + 1) )
-              sub_B2C434(v80, v81);
-            if ( !v39 )
-              sub_B2C434(v80, v81);
-            v83 = DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
-                    v39,
+            v89 = *((_QWORD *)&v107 + 1);
+            if ( !*((_QWORD *)&v107 + 1) )
+              sub_B0D97C(v88);
+            if ( !v38 )
+              sub_B0D97C(v88);
+            v90 = DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
+                    v38,
                     &entity,
-                    *(_DWORD *)(*((_QWORD *)&v101 + 1) + 52LL),
-                    (const MethodInfo_24E412C *)Method_DataMasterBase_ClosedMessageMaster__ClosedMessageEntity__int__TryGetEntity__);
-            v78 = 1;
-            if ( v83 )
+                    *(_DWORD *)(*((_QWORD *)&v107 + 1) + 52LL),
+                    (const MethodInfo_2669C30 *)Method_DataMasterBase_ClosedMessageMaster__ClosedMessageEntity__int__TryGetEntity__);
+            v86 = 1;
+            if ( v90 )
             {
-              if ( !v72 )
-                sub_B2C434(v83, v84);
-              v78 = 1;
+              if ( !v82 )
+                sub_B0D97C(v90);
+              v86 = 1;
               if ( !System_Collections_Generic_List_int___Contains(
-                      v72,
-                      *(_DWORD *)(v82 + 52),
-                      (const MethodInfo_2F6744C *)Method_System_Collections_Generic_List_int__Contains__) )
+                      v82,
+                      *(_DWORD *)(v89 + 52),
+                      (const MethodInfo_2FB0354 *)Method_System_Collections_Generic_List_int__Contains__) )
               {
                 SoundPlayerListViewItem__setNotOpenStr(
                   (ClosedMessageEntity_o *)entity,
-                  v85,
-                  v75 & 1,
+                  v91,
+                  v84 & 1,
                   closedMessage,
-                  v86);
-                v78 = 1;
+                  v92);
+                v86 = 1;
                 System_Collections_Generic_List_int___Add(
-                  v72,
-                  *(_DWORD *)(v82 + 52),
-                  (const MethodInfo_2F66FF8 *)Method_System_Collections_Generic_List_int__Add__);
-                v79 = 1;
+                  v82,
+                  *(_DWORD *)(v89 + 52),
+                  (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
+                v87 = 1;
                 goto LABEL_42;
               }
             }
           }
         }
-        v97[v98++] = 460;
+        v103[v104++] = 460;
         System_Collections_Generic_List_Enumerator_SoundPlayerListViewItem_BgmReleaseData___Dispose(
-          (System_Collections_Generic_List_Enumerator_T__o *)&v100,
-          (const MethodInfo_255A310 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewItem_BgmReleaseData__Dispose__);
-        v87 = v98;
-        if ( v98 && v97[v98 - 1] == 460 )
-          v87 = --v98;
-        if ( (v78 & 1) == 0 )
+          (System_Collections_Generic_List_Enumerator_T__o *)&v106,
+          (const MethodInfo_22967F8 *)Method_System_Collections_Generic_List_Enumerator_SoundPlayerListViewItem_BgmReleaseData__Dispose__);
+        v93 = v104;
+        if ( v104 && v103[v104 - 1] == 460 )
+          v93 = --v104;
+        if ( (v86 & 1) == 0 )
         {
-          v97[v87] = 497;
-          v88 = v98;
-          v89 = 1;
+          v103[v93] = 497;
+          v94 = v104;
+          v95 = 1;
           goto LABEL_60;
         }
       }
-      v89 = 0;
-      v97[v98] = 497;
-      v88 = v98;
+      v95 = 0;
+      v103[v104] = 497;
+      v94 = v104;
 LABEL_60:
-      v98 = v88 + 1;
+      v104 = v94 + 1;
       System_Collections_Generic_List_Enumerator_int___Dispose(
-        &v102,
-        (const MethodInfo_20E7EBC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-      v90 = v98;
-      if ( v98 && v97[v98 - 1] == 497 )
-        v90 = --v98;
-      if ( (v89 & 1) == 0 )
+        &v108,
+        (const MethodInfo_210FFE0 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+      v96 = v104;
+      if ( v104 && v103[v104 - 1] == 497 )
+        v96 = --v104;
+      if ( (v95 & 1) == 0 )
       {
-        v97[v90] = 536;
-        ++v98;
+        v103[v96] = 536;
+        ++v104;
         System_Collections_Generic_List_Enumerator_int___Dispose(
-          &v103,
-          (const MethodInfo_20E7EBC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+          &v109,
+          (const MethodInfo_210FFE0 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
         result = 1;
         goto LABEL_67;
       }
     }
   }
-  v97[v98++] = 534;
+  v103[v104++] = 534;
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v103,
-    (const MethodInfo_20E7EBC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    &v109,
+    (const MethodInfo_210FFE0 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
   result = 0;
 LABEL_67:
-  if ( !v98 )
+  if ( !v104 )
     return 0;
-  v91 = v97[v98 - 1];
-  if ( v91 == 534 )
+  v97 = v103[v104 - 1];
+  if ( v97 == 534 )
   {
     result = 0;
   }
-  else if ( v91 != 536 )
+  else if ( v97 != 536 )
   {
     return 0;
   }
-  --v98;
+  --v104;
   return result;
 }
 
@@ -892,22 +907,22 @@ void __fastcall SoundPlayerListViewItem__setNotOpenStr(
   System_Int32_array *v20; // x6
   System_Int32_array *v21; // x7
 
-  if ( (byte_41876E8 & 1) == 0 )
+  if ( (byte_4214B1F & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_26/*"\n"*/, *(_QWORD *)&kind);
-    byte_41876E8 = 1;
+    sub_B0D8A4(&StringLiteral_26/*"\n"*/, *(_QWORD *)&kind);
+    byte_4214B1F = 1;
   }
   if ( closedMesEntity )
   {
     if ( isNewLine )
     {
-      v8 = System_String__Concat_44305532(*closedMessage, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
+      v8 = System_String__Concat_43849904(*closedMessage, (System_String_o *)StringLiteral_26/*"\n"*/, 0LL);
       *closedMessage = v8;
-      sub_B2C2F8((BattleServantConfConponent_o *)closedMessage, (System_Int32_array **)v8, v9, v10, v11, v12, v13, v14);
+      sub_B0D840((BattleServantConfConponent_o *)closedMessage, (System_Int32_array **)v8, v9, v10, v11, v12, v13, v14);
     }
-    v15 = System_String__Concat_44305532(*closedMessage, closedMesEntity->fields.message, 0LL);
+    v15 = System_String__Concat_43849904(*closedMessage, closedMesEntity->fields.message, 0LL);
     *closedMessage = v15;
-    sub_B2C2F8((BattleServantConfConponent_o *)closedMessage, (System_Int32_array **)v15, v16, v17, v18, v19, v20, v21);
+    sub_B0D840((BattleServantConfConponent_o *)closedMessage, (System_Int32_array **)v15, v16, v17, v18, v19, v20, v21);
   }
 }
 
@@ -969,7 +984,7 @@ void __fastcall SoundPlayerListViewItem__set_playEffect(
   System_Int32_array *v7; // x7
 
   this->fields._playEffect_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._playEffect_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -992,17 +1007,17 @@ void __fastcall SoundPlayerListViewItem__startOpenAnim(
   __int64 v8; // x11
   UnityEngine_Object_o *v9; // x21
   SoundPlayerListViewItemDraw_o *v10; // x0
-  SoundPlayerListViewManager_o *v11; // x1
-  const MethodInfo *v12; // x4
+  const MethodInfo *v11; // x4
   void *monitor; // x8
-  __int64 v14; // x11
+  __int64 v13; // x11
+  SoundPlayerListViewManager_o *v14; // x1
 
-  if ( (byte_41876E2 & 1) == 0 )
+  if ( (byte_4214B19 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, endCallback);
-    sub_B2C35C(&SoundPlayerListViewManager_TypeInfo, v5);
-    sub_B2C35C(&SoundPlayerListViewObject_TypeInfo, v6);
-    byte_41876E2 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, endCallback);
+    sub_B0D8A4(&SoundPlayerListViewManager_TypeInfo, v5);
+    sub_B0D8A4(&SoundPlayerListViewObject_TypeInfo, v6);
+    byte_4214B19 = 1;
   }
   viewObject = this->fields.viewObject;
   if ( viewObject
@@ -1028,17 +1043,17 @@ void __fastcall SoundPlayerListViewItem__startOpenAnim(
   {
     if ( !v9
       || ((monitor = v9[1].monitor) != 0LL
-       && (v14 = *(&SoundPlayerListViewManager_TypeInfo->_2.bitflags2 + 1),
-           *(unsigned __int8 *)(*(_QWORD *)monitor + 300LL) >= (unsigned int)v14)
-        ? (*(SoundPlayerListViewManager_c **)(*(_QWORD *)(*(_QWORD *)monitor + 200LL) + 8 * v14 - 8) != SoundPlayerListViewManager_TypeInfo
-         ? (v11 = 0LL)
-         : (v11 = (SoundPlayerListViewManager_o *)v9[1].monitor))
-        : (v11 = 0LL),
+       && (v13 = *(&SoundPlayerListViewManager_TypeInfo->_2.bitflags2 + 1),
+           *(unsigned __int8 *)(*(_QWORD *)monitor + 300LL) >= (unsigned int)v13)
+        ? (*(SoundPlayerListViewManager_c **)(*(_QWORD *)(*(_QWORD *)monitor + 200LL) + 8 * v13 - 8) != SoundPlayerListViewManager_TypeInfo
+         ? (v14 = 0LL)
+         : (v14 = (SoundPlayerListViewManager_o *)v9[1].monitor))
+        : (v14 = 0LL),
           (v10 = (SoundPlayerListViewItemDraw_o *)v9[5].monitor) == 0LL) )
     {
-      sub_B2C434(v10, v11);
+      sub_B0D97C(v10);
     }
-    SoundPlayerListViewItemDraw__startOpenAnim(v10, v11, this, endCallback, v12);
+    SoundPlayerListViewItemDraw__startOpenAnim(v10, v14, this, endCallback, v11);
   }
 }
 
@@ -1047,23 +1062,27 @@ void __fastcall SoundPlayerListViewItem_BgmPriorityData___ctor(
         SoundPlayerListViewItem_BgmPriorityData_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v4; // x20
+  __int64 v2; // x2
+  __int64 v4; // x1
+  System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *v5; // x20
 
-  if ( (byte_4184759 & 1) == 0 )
+  if ( (byte_42116EE & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData____ctor__,
       method);
-    sub_B2C35C(&System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___TypeInfo, v3);
-    byte_4184759 = 1;
+    sub_B0D8A4(&System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___TypeInfo, v4);
+    byte_42116EE = 1;
   }
-  v4 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B2C42C(System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)sub_B0D974(
+                                                                                                  System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___TypeInfo,
+                                                                                                  method,
+                                                                                                  v2);
   System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare____ctor(
-    v4,
-    (const MethodInfo_2E63B98 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData____ctor__);
-  this->fields.collectList = (struct System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___o *)v4;
-  sub_B2C2F8(&this->fields, v4);
+    v5,
+    (const MethodInfo_2E8F874 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData____ctor__);
+  this->fields.collectList = (struct System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___o *)v5;
+  sub_B0D840(&this->fields, v5);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -1083,27 +1102,29 @@ void __fastcall SoundPlayerListViewItem_BgmPriorityData__AddBgmReleaseData(
   __int64 v11; // x1
   __int64 v12; // x1
   System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *collectList; // x0
-  struct System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___o *v14; // x23
-  System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__o *v15; // x24
-  SoundPlayerListViewItem_BgmReleaseData_o v16; // 0:x1.16
+  __int64 v14; // x1
+  __int64 v15; // x2
+  struct System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___o *v16; // x23
+  System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__o *v17; // x24
+  SoundPlayerListViewItem_BgmReleaseData_o v18; // 0:x1.16
 
   bgmReleaseEntity = data.fields.bgmReleaseEntity;
   v5 = *(_QWORD *)&data.fields.releaseCheck;
-  if ( (byte_4184758 & 1) == 0 )
+  if ( (byte_42116ED & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___ContainsKey__,
       *(_QWORD *)&condGroup);
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Item__,
       v8);
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___set_Item__,
       v9);
-    sub_B2C35C(&Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__Add__, v10);
-    sub_B2C35C(&Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData___ctor__, v11);
-    sub_B2C35C(&System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__TypeInfo, v12);
-    byte_4184758 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__Add__, v10);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData___ctor__, v11);
+    sub_B0D8A4(&System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__TypeInfo, v12);
+    byte_42116ED = 1;
   }
   collectList = (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)this->fields.collectList;
   if ( !collectList )
@@ -1111,37 +1132,40 @@ void __fastcall SoundPlayerListViewItem_BgmPriorityData__AddBgmReleaseData(
   if ( !System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData___ContainsKey(
           collectList,
           condGroup,
-          (const MethodInfo_2E649C0 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___ContainsKey__) )
+          (const MethodInfo_2E9069C *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___ContainsKey__) )
   {
-    v14 = this->fields.collectList;
-    v15 = (System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__o *)sub_B2C42C(System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__TypeInfo);
+    v16 = this->fields.collectList;
+    v17 = (System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__o *)sub_B0D974(
+                                                                                         System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__TypeInfo,
+                                                                                         v14,
+                                                                                         v15);
     System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData____ctor(
-      v15,
-      (const MethodInfo_2EB816C *)Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData___ctor__);
-    if ( !v14 )
+      v17,
+      (const MethodInfo_2F06484 *)Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData___ctor__);
+    if ( !v16 )
       goto LABEL_10;
     System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData___set_Item(
-      (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)v14,
+      (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)v16,
       condGroup,
-      (WarBoardAIRoute_RouteData_o *)v15,
-      (const MethodInfo_2E64724 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___set_Item__);
+      (WarBoardAIRoute_RouteData_o *)v17,
+      (const MethodInfo_2E90400 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___set_Item__);
   }
   collectList = (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)this->fields.collectList;
   if ( !collectList
     || (collectList = (System_Collections_Generic_Dictionary_int__WarBoardAIRoute_RouteData__o *)System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___get_Item(
                                                                                                    (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)collectList,
                                                                                                    condGroup,
-                                                                                                   (const MethodInfo_2E64688 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Item__)) == 0LL )
+                                                                                                   (const MethodInfo_2E90364 *)Method_System_Collections_Generic_Dictionary_int__List_SoundPlayerListViewItem_BgmReleaseData___get_Item__)) == 0LL )
   {
 LABEL_10:
-    sub_B2C434(collectList, *(_QWORD *)&condGroup);
+    sub_B0D97C(collectList);
   }
-  *(_QWORD *)&v16.fields.releaseCheck = v5;
-  v16.fields.bgmReleaseEntity = bgmReleaseEntity;
+  *(_QWORD *)&v18.fields.releaseCheck = v5;
+  v18.fields.bgmReleaseEntity = bgmReleaseEntity;
   System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData___Add(
     (System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__o *)collectList,
-    v16,
-    (const MethodInfo_2EB8EFC *)Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__Add__);
+    v18,
+    (const MethodInfo_2F07214 *)Method_System_Collections_Generic_List_SoundPlayerListViewItem_BgmReleaseData__Add__);
 }
 
 
@@ -1157,26 +1181,27 @@ void __fastcall SoundPlayerListViewItem_BgmReleaseData___ctor(
   **(_BYTE **)&this.fields.releaseCheck = (__int64)this.fields.bgmReleaseEntity & 1;
   v4 = (_QWORD *)(*(_QWORD *)&this.fields.releaseCheck + 8LL);
   *v4 = releaseCheck;
-  sub_B2C2F8(v4, releaseCheck);
+  sub_B0D840(v4, releaseCheck);
 }
 
 
 void __fastcall SoundPlayerListViewItem___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
+  __int64 v2; // x2
+  Il2CppObject *v3; // x19
   struct SoundPlayerListViewItem___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4184757 & 1) == 0 )
+  if ( (byte_42116EC & 1) == 0 )
   {
-    sub_B2C35C(&SoundPlayerListViewItem___c_TypeInfo, v1);
-    byte_4184757 = 1;
+    sub_B0D8A4(&SoundPlayerListViewItem___c_TypeInfo, v1);
+    byte_42116EC = 1;
   }
-  v2 = (Il2CppObject *)sub_B2C42C(SoundPlayerListViewItem___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
+  v3 = (Il2CppObject *)sub_B0D974(SoundPlayerListViewItem___c_TypeInfo, v1, v2);
+  System_Object___ctor(v3, 0LL);
   static_fields = SoundPlayerListViewItem___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct SoundPlayerListViewItem___c_o *)v2;
-  sub_B2C2F8(static_fields, v2);
+  static_fields->__9 = (struct SoundPlayerListViewItem___c_o *)v3;
+  sub_B0D840(static_fields, v3);
 }
 
 

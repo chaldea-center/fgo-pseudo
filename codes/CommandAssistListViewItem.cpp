@@ -24,12 +24,12 @@ void __fastcall CommandAssistListViewItem___ctor(
   System_Int32_array *v27; // x7
 
   v15 = this;
-  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23700744((ListViewItem_o *)this, index, 0LL);
   v15->fields._EventId_k__BackingField = eventId;
   v15->fields._AssistId_k__BackingField = assistId;
   v15->fields._IconImageId_k__BackingField = iconImageId;
   v15->fields._Name_k__BackingField = name;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v15->fields._Name_k__BackingField,
     (System_Int32_array **)name,
     v16,
@@ -40,7 +40,7 @@ void __fastcall CommandAssistListViewItem___ctor(
     v21);
   v15->fields._Detail_k__BackingField = detail;
   v15 = (CommandAssistListViewItem_o *)((char *)v15 + 136);
-  sub_B2C2F8((BattleServantConfConponent_o *)v15, (System_Int32_array **)detail, v22, v23, v24, v25, v26, v27);
+  sub_B0D840((BattleServantConfConponent_o *)v15, (System_Int32_array **)detail, v22, v23, v24, v25, v26, v27);
   LOBYTE(v15->monitor) = isLast;
 }
 
@@ -108,7 +108,7 @@ void __fastcall CommandAssistListViewItem__set_Detail(
   System_Int32_array *v7; // x7
 
   this->fields._Detail_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._Detail_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -159,7 +159,7 @@ void __fastcall CommandAssistListViewItem__set_Name(
   System_Int32_array *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._Name_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

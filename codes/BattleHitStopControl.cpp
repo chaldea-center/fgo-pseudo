@@ -8,37 +8,41 @@ void __fastcall BattleHitStopControl__Clear(BattleHitStopControl_o *this, const 
 {
   struct System_Collections_Generic_List_GameObject__o *stopobjlist; // x0
 
-  if ( (byte_4184BAA & 1) == 0 )
+  if ( (byte_42117EA & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__Clear__, method);
-    byte_4184BAA = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__Clear__, method);
+    byte_42117EA = 1;
   }
   stopobjlist = this->fields.stopobjlist;
   if ( !stopobjlist )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   System_Collections_Generic_List_XWeaponTrail_Element___Clear(
     (System_Collections_Generic_List_XWeaponTrail_Element__o *)stopobjlist,
-    (const MethodInfo_2EF4868 *)Method_System_Collections_Generic_List_GameObject__Clear__);
+    (const MethodInfo_2FC5AF0 *)Method_System_Collections_Generic_List_GameObject__Clear__);
 }
 
 
 void __fastcall BattleHitStopControl__Start(BattleHitStopControl_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v4; // x20
+  __int64 v2; // x2
+  __int64 v4; // x1
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x20
 
-  if ( (byte_4184BA9 & 1) == 0 )
+  if ( (byte_42117E9 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
-    sub_B2C35C(&System_Collections_Generic_List_GameObject__TypeInfo, v3);
-    byte_4184BA9 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
+    sub_B0D8A4(&System_Collections_Generic_List_GameObject__TypeInfo, v4);
+    byte_42117E9 = 1;
   }
-  v4 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_GameObject__TypeInfo);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
+                                                                                                 System_Collections_Generic_List_GameObject__TypeInfo,
+                                                                                                 method,
+                                                                                                 v2);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v4,
-    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.stopobjlist = (struct System_Collections_Generic_List_GameObject__o *)v4;
-  sub_B2C2F8(&this->fields.stopobjlist, v4);
+    v5,
+    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.stopobjlist = (struct System_Collections_Generic_List_GameObject__o *)v5;
+  sub_B0D840(&this->fields.stopobjlist, v5);
 }
 
 
@@ -47,7 +51,7 @@ void __fastcall BattleHitStopControl__actWait(BattleHitStopControl_o *this, floa
   System_Collections_IEnumerator_o *v4; // x1
 
   v4 = BattleHitStopControl__stopwaitCor(this, time, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_35309748((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_34930128((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
 }
 
 
@@ -58,18 +62,18 @@ void __fastcall BattleHitStopControl__setTargetObject(
 {
   struct System_Collections_Generic_List_GameObject__o *stopobjlist; // x0
 
-  if ( (byte_4184BAB & 1) == 0 )
+  if ( (byte_42117EB & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__Add__, obj);
-    byte_4184BAB = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__Add__, obj);
+    byte_42117EB = 1;
   }
   stopobjlist = this->fields.stopobjlist;
   if ( !stopobjlist )
-    sub_B2C434(0LL, obj);
+    sub_B0D97C(0LL);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)stopobjlist,
     (EventMissionProgressRequest_Argument_ProgressData_o *)obj,
-    (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_GameObject__Add__);
+    (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_GameObject__Add__);
 }
 
 
@@ -78,23 +82,26 @@ System_Collections_IEnumerator_o *__fastcall BattleHitStopControl__stopwaitCor(
         float time,
         const MethodInfo *method)
 {
-  BattleHitStopControl__stopwaitCor_d__5_o *v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
+  __int64 v3; // x2
+  BattleHitStopControl__stopwaitCor_d__5_o *v6; // x20
+  __int64 v7; // x0
 
-  if ( (byte_4184BAC & 1) == 0 )
+  if ( (byte_42117EC & 1) == 0 )
   {
-    sub_B2C35C(&BattleHitStopControl__stopwaitCor_d__5_TypeInfo, method);
-    byte_4184BAC = 1;
+    sub_B0D8A4(&BattleHitStopControl__stopwaitCor_d__5_TypeInfo, method);
+    byte_42117EC = 1;
   }
-  v5 = (BattleHitStopControl__stopwaitCor_d__5_o *)sub_B2C42C(BattleHitStopControl__stopwaitCor_d__5_TypeInfo);
-  BattleHitStopControl__stopwaitCor_d__5___ctor(v5, 0, 0LL);
-  if ( !v5 )
-    sub_B2C434(v6, v7);
-  v5->fields.__4__this = this;
-  sub_B2C2F8(&v5->fields.__4__this, this);
-  v5->fields.time = time;
-  return (System_Collections_IEnumerator_o *)v5;
+  v6 = (BattleHitStopControl__stopwaitCor_d__5_o *)sub_B0D974(
+                                                     BattleHitStopControl__stopwaitCor_d__5_TypeInfo,
+                                                     method,
+                                                     v3);
+  BattleHitStopControl__stopwaitCor_d__5___ctor(v6, 0, 0LL);
+  if ( !v6 )
+    sub_B0D97C(v7);
+  v6->fields.__4__this = this;
+  sub_B0D840(&v6->fields.__4__this, this);
+  v6->fields.time = time;
+  return (System_Collections_IEnumerator_o *)v6;
 }
 
 
@@ -133,9 +140,9 @@ bool __fastcall BattleHitStopControl__stopwaitCor_d__5__MoveNext(
   System_Int32_array **v20; // x1
   BattleServantConfConponent_o *p__2__current; // x19
   bool result; // w0
-  __int64 v23; // x1
-  __int64 v24; // x1
   float time; // s8
+  __int64 v24; // x1
+  __int64 v25; // x2
   UnityEngine_WaitForSeconds_o *v26; // x20
   System_String_array **v27; // x2
   System_String_array **v28; // x3
@@ -147,17 +154,17 @@ bool __fastcall BattleHitStopControl__stopwaitCor_d__5__MoveNext(
   System_Collections_Generic_List_Enumerator_T__o i; // [xsp+20h] [xbp-40h] BYREF
 
   v8 = this;
-  if ( (byte_4186A7B & 1) == 0 )
+  if ( (byte_4213908 & 1) == 0 )
   {
-    sub_B2C35C(&DefCoroutine_TypeInfo, method);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v9);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v10);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v11);
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v12);
-    sub_B2C35C(&UnityEngine_WaitForSeconds_TypeInfo, v13);
-    sub_B2C35C(&StringLiteral_21806/*"resumeAnimation"*/, v14);
-    this = (BattleHitStopControl__stopwaitCor_d__5_o *)sub_B2C35C(&StringLiteral_22329/*"stopAnimation"*/, v15);
-    byte_4186A7B = 1;
+    sub_B0D8A4(&DefCoroutine_TypeInfo, method);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v9);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v10);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v11);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v12);
+    sub_B0D8A4(&UnityEngine_WaitForSeconds_TypeInfo, v13);
+    sub_B0D8A4(&StringLiteral_21877/*"resumeAnimation"*/, v14);
+    this = (BattleHitStopControl__stopwaitCor_d__5_o *)sub_B0D8A4(&StringLiteral_22405/*"stopAnimation"*/, v15);
+    byte_4213908 = 1;
   }
   memset(&i, 0, sizeof(i));
   _1__state = v8->fields.__1__state;
@@ -173,27 +180,27 @@ bool __fastcall BattleHitStopControl__stopwaitCor_d__5__MoveNext(
         System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
           &v33,
           (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this,
-          (const MethodInfo_2EF52DC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+          (const MethodInfo_2FC6564 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
         for ( i = v33;
               System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
                 &i,
-                (const MethodInfo_20EA42C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-              UnityEngine_GameObject__SendMessage_40660564(
+                (const MethodInfo_2112550 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+              UnityEngine_GameObject__SendMessage_40784904(
                 (UnityEngine_GameObject_o *)i.fields.current,
-                (System_String_o *)StringLiteral_21806/*"resumeAnimation"*/,
+                (System_String_o *)StringLiteral_21877/*"resumeAnimation"*/,
                 0LL) )
         {
           if ( !i.fields.current )
-            sub_B2C434(0LL, v24);
+            sub_B0D97C(0LL);
         }
         System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
           &i,
-          (const MethodInfo_20EA428 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+          (const MethodInfo_211254C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
         return 0;
       }
     }
 LABEL_27:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   }
   if ( _1__state != 1 )
   {
@@ -211,7 +218,7 @@ LABEL_27:
       v20 = *static_fields;
       v8->fields.__2__current = (Il2CppObject *)*static_fields;
       p__2__current = (BattleServantConfConponent_o *)&v8->fields.__2__current;
-      sub_B2C2F8(p__2__current, v20, v2, v3, v4, v5, v6, v7);
+      sub_B0D840(p__2__current, v20, v2, v3, v4, v5, v6, v7);
       result = 1;
       *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = 1;
       return result;
@@ -227,27 +234,27 @@ LABEL_27:
   System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
     &v33,
     (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)this,
-    (const MethodInfo_2EF52DC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_2FC6564 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   for ( i = v33;
         System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
           &i,
-          (const MethodInfo_20EA42C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-        UnityEngine_GameObject__SendMessage_40660564(
+          (const MethodInfo_2112550 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+        UnityEngine_GameObject__SendMessage_40784904(
           (UnityEngine_GameObject_o *)i.fields.current,
-          (System_String_o *)StringLiteral_22329/*"stopAnimation"*/,
+          (System_String_o *)StringLiteral_22405/*"stopAnimation"*/,
           0LL) )
   {
     if ( !i.fields.current )
-      sub_B2C434(0LL, v23);
+      sub_B0D97C(0LL);
   }
   System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
     &i,
-    (const MethodInfo_20EA428 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_211254C *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   time = v8->fields.time;
-  v26 = (UnityEngine_WaitForSeconds_o *)sub_B2C42C(UnityEngine_WaitForSeconds_TypeInfo);
+  v26 = (UnityEngine_WaitForSeconds_o *)sub_B0D974(UnityEngine_WaitForSeconds_TypeInfo, v24, v25);
   UnityEngine_WaitForSeconds___ctor(v26, time, 0LL);
   v8->fields.__2__current = (Il2CppObject *)v26;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v8->fields.__2__current,
     (System_Int32_array **)v26,
     v27,
@@ -275,14 +282,16 @@ void __fastcall __noreturn BattleHitStopControl__stopwaitCor_d__5__System_Collec
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_B2C360(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B2C42C(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B2C360(&Method_BattleHitStopControl__stopwaitCor_d__5_System_Collections_IEnumerator_Reset__);
-  sub_B2C400(v3, v4);
+  v2 = sub_B0D8A8(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_B0D974(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_B0D8A8(&Method_BattleHitStopControl__stopwaitCor_d__5_System_Collections_IEnumerator_Reset__);
+  sub_B0D948(v5, v6);
 }
 
 

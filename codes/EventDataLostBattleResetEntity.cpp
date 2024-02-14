@@ -1,13 +1,13 @@
 void __fastcall EventDataLostBattleResetEntity___ctor(EventDataLostBattleResetEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_418A32F & 1) == 0 )
+  if ( (byte_4216F0F & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
-    byte_418A32F = 1;
+    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4216F0F = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall EventDataLostBattleResetEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_418A32E & 1) == 0 )
+  if ( (byte_4216F0E & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_418A32E = 1;
+    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_4216F0E = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            dataLostBattleId,
            idx,
-           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_171341C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

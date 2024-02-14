@@ -1,14 +1,14 @@
 void __fastcall TreasureBoxMaster___ctor(TreasureBoxMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_41899A5 & 1) == 0 )
+  if ( (byte_4216811 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_TreasureBoxMaster__TreasureBoxEntity__int___ctor__, method);
-    byte_41899A5 = 1;
+    sub_B0D8A4(&Method_DataMasterBase_TreasureBoxMaster__TreasureBoxEntity__int___ctor__, method);
+    byte_4216811 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     374,
-    (const MethodInfo_24E4034 *)Method_DataMasterBase_TreasureBoxMaster__TreasureBoxEntity__int___ctor__);
+    (const MethodInfo_2669B38 *)Method_DataMasterBase_TreasureBoxMaster__TreasureBoxEntity__int___ctor__);
 }
 
 
@@ -28,19 +28,19 @@ TreasureBoxEntity_o *__fastcall TreasureBoxMaster__GetTreasureBoxData(
   TreasureBoxEntity_o *result; // x0
   __int64 v14; // x10
 
-  if ( (byte_41899A6 & 1) == 0 )
+  if ( (byte_4216812 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_B2C35C(&TreasureBoxEntity_TypeInfo, v8);
-    byte_41899A6 = 1;
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_B0D8A4(&TreasureBoxEntity_TypeInfo, v8);
+    byte_4216812 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             list,
-            (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v11 = Count;
@@ -53,7 +53,7 @@ TreasureBoxEntity_o *__fastcall TreasureBoxMaster__GetTreasureBoxData(
       result = (TreasureBoxEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                         list,
                                         v12,
-                                        (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                        (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( result )
       {
         v14 = *(&TreasureBoxEntity_TypeInfo->_2.bitflags2 + 1);
@@ -69,7 +69,7 @@ TreasureBoxEntity_o *__fastcall TreasureBoxMaster__GetTreasureBoxData(
         return 0LL;
     }
 LABEL_15:
-    sub_B2C434(list, *(_QWORD *)&eventId);
+    sub_B0D97C(list);
   }
   return 0LL;
 }

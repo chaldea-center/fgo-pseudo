@@ -2,10 +2,10 @@ void __fastcall EventUpValIconComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_41882B6 & 1) == 0 )
+  if ( (byte_4215128 & 1) == 0 )
   {
-    sub_B2C35C(&EventUpValIconComponent_TypeInfo, v1);
-    byte_41882B6 = 1;
+    sub_B0D8A4(&EventUpValIconComponent_TypeInfo, v1);
+    byte_4215128 = 1;
   }
   EventUpValIconComponent_TypeInfo->static_fields->MESSAGE_X_SIZE_MAX = 1000;
   EventUpValIconComponent_TypeInfo->static_fields->SERVANT_POINT_X_SIZE_MAX = 96;
@@ -34,13 +34,13 @@ void __fastcall EventUpValIconComponent___ctor(EventUpValIconComponent_o *this, 
   v8 = 1.0;
   v9 = 1.0;
   *(_QWORD *)&v14 = 0LL;
-  UnityEngine_Color___ctor_40633184(*(UnityEngine_Color_o *)(&v2 - 3), v3, v4, v5, (const MethodInfo *)&v14);
+  UnityEngine_Color___ctor_40757524(*(UnityEngine_Color_o *)(&v2 - 3), v3, v4, v5, (const MethodInfo *)&v14);
   *(_OWORD *)&this->fields.COLOR_NORMAL.fields.b = v14;
   v15.fields.r = 0.32941;
   v13 = 0uLL;
   v15.fields.g = 0.32941;
   v15.fields.b = 0.32941;
-  UnityEngine_Color___ctor_40633184(v15, v10, v11, v12, (const MethodInfo *)&v13);
+  UnityEngine_Color___ctor_40757524(v15, v10, v11, v12, (const MethodInfo *)&v13);
   *(_OWORD *)&this->fields.COLOR_INVALID.fields.b = v13;
   SwitchParameterDisplayComponent___ctor((SwitchParameterDisplayComponent_o *)this, 0LL);
 }
@@ -57,7 +57,7 @@ void __fastcall EventUpValIconComponent__Clear(EventUpValIconComponent_o *this, 
   const MethodInfo *v9; // x1
 
   *(_QWORD *)&this->fields.servantId = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.servantId, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.servantId, 0LL, v2, v3, v4, v5, v6, v7);
   EventUpValIconComponent__ClearParam(this, v9);
 }
 
@@ -65,11 +65,10 @@ void __fastcall EventUpValIconComponent__Clear(EventUpValIconComponent_o *this, 
 void __fastcall EventUpValIconComponent__ClearParam(EventUpValIconComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v3; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B2C434(0LL, v3);
+    sub_B0D97C(0LL);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -86,15 +85,14 @@ bool __fastcall EventUpValIconComponent__ParameterChange(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x2
+  const MethodInfo *v6; // x2
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B2C434(0LL, v6);
+    sub_B0D97C(0LL);
   if ( !UnityEngine_GameObject__get_activeSelf(gameObject, 0LL) )
     return 0;
-  EventUpValIconComponent__SetIconLabel(this, count, v7);
+  EventUpValIconComponent__SetIconLabel(this, count, v6);
   return 1;
 }
 
@@ -112,20 +110,19 @@ void __fastcall EventUpValIconComponent__Set(
   System_Int32_array *v7; // x7
   int32_t *p_servantId; // x0
   WebViewManager_o *Instance; // x0
-  __int64 v15; // x1
-  const MethodInfo *v16; // x2
-  const MethodInfo *v17; // x1
+  const MethodInfo *v15; // x2
+  const MethodInfo *v16; // x1
 
-  if ( (byte_41882B2 & 1) == 0 )
+  if ( (byte_4215124 & 1) == 0 )
   {
-    sub_B2C35C(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, eventUpValItemList);
-    byte_41882B2 = 1;
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, eventUpValItemList);
+    byte_4215124 = 1;
   }
   p_servantId = &this->fields.servantId;
   if ( eventUpValItemList )
   {
     *(_QWORD *)&this->fields.servantId = eventUpValItemList;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)p_servantId,
       (System_Int32_array **)eventUpValItemList,
       *(System_String_array ***)&servantId,
@@ -137,22 +134,22 @@ void __fastcall EventUpValIconComponent__Set(
     this->fields.equipSvtId = servantId;
     *(_DWORD *)&this->fields.invalid = servantRarity;
     LODWORD(this->fields.COLOR_NORMAL.fields.r) = equipSvtId;
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
     if ( !Instance
       || (SwitchParameterDisplayManager__AddComponent(
             (SwitchParameterDisplayManager_o *)Instance,
             (SwitchParameterDisplayComponent_o *)this,
             0LL),
-          (Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__)) == 0LL) )
+          (Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__)) == 0LL) )
     {
-      sub_B2C434(Instance, v15);
+      sub_B0D97C(Instance);
     }
-    EventUpValIconComponent__SetIconLabel(this, (int32_t)Instance->fields.webViewBase, v16);
+    EventUpValIconComponent__SetIconLabel(this, (int32_t)Instance->fields.webViewBase, v15);
   }
   else
   {
     *(_QWORD *)&this->fields.servantId = 0LL;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)p_servantId,
       0LL,
       *(System_String_array ***)&servantId,
@@ -161,7 +158,7 @@ void __fastcall EventUpValIconComponent__Set(
       (System_Int32_array **)method,
       v6,
       v7);
-    EventUpValIconComponent__ClearParam(this, v17);
+    EventUpValIconComponent__ClearParam(this, v16);
   }
 }
 
@@ -185,10 +182,10 @@ void __fastcall EventUpValIconComponent__SetAlpha(
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_41882B5 & 1) == 0 )
+  if ( (byte_4215127 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    byte_41882B5 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    byte_4215127 = 1;
   }
   paramLabel = (UIWidget_o *)this->fields.paramLabel;
   if ( !paramLabel || !this->fields.eventNameBackSprite )
@@ -248,7 +245,7 @@ void __fastcall EventUpValIconComponent__SetAlpha(
       return;
     }
 LABEL_28:
-    sub_B2C434(paramLabel, method);
+    sub_B0D97C(paramLabel);
   }
 }
 
@@ -265,10 +262,10 @@ void __fastcall EventUpValIconComponent__SetIconLabel(
   float v8; // s0
   WebViewManager_o *Instance; // x0
 
-  if ( (byte_41882B3 & 1) == 0 )
+  if ( (byte_4215125 & 1) == 0 )
   {
-    sub_B2C35C(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, *(_QWORD *)&count);
-    byte_41882B3 = 1;
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, *(_QWORD *)&count);
+    byte_4215125 = 1;
   }
   v5 = *(_QWORD *)&this->fields.servantId;
   if ( v5 && (v6 = *(_QWORD *)(v5 + 24)) != 0 )
@@ -281,9 +278,9 @@ void __fastcall EventUpValIconComponent__SetIconLabel(
     else
     {
       EventUpValIconComponent__SetParam(this, count % (int)v6, method);
-      Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
       if ( !Instance )
-        sub_B2C434(0LL, v7);
+        sub_B0D97C(0LL);
       v8 = *((float *)&Instance->fields.webViewBase + 1);
     }
     EventUpValIconComponent__SetAlpha(this, v8, v7);
@@ -301,7 +298,6 @@ void __fastcall EventUpValIconComponent__SetParam(
         int32_t num,
         const MethodInfo *method)
 {
-  int32_t v3; // w20
   EventUpValIconComponent_o *v4; // x19
   __int64 v5; // x1
   __int64 v6; // x1
@@ -313,104 +309,104 @@ void __fastcall EventUpValIconComponent__SetParam(
   __int64 v12; // x1
   __int64 v13; // x1
   __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x8
-  EventMargeItemUpValInfo_o *v17; // x20
+  __int64 v15; // x8
+  EventMargeItemUpValInfo_o *v16; // x20
   UIWidget_o *eventNameBackSprite; // x21
-  UILabel_o *v19; // x21
-  int v20; // s3
-  float v21; // s4
-  float v22; // s5
-  float v23; // s6
-  UIWidget_o *v24; // x21
-  float v25; // s0
-  int v26; // s2
-  float v27; // s1
-  UILabel_o *v28; // x21
-  int32_t v29; // w1
-  UIWidget_o *v30; // x21
-  float v31; // s0
-  float v32; // s1
-  float v33; // s2
-  UILabel_o *v34; // x21
-  float v35; // s0
-  float v36; // s1
-  float v37; // s2
-  float v38; // s10
-  float v39; // s8
-  float v40; // s9
+  UILabel_o *v18; // x21
+  int v19; // s3
+  float v20; // s4
+  float v21; // s5
+  float v22; // s6
+  UIWidget_o *v23; // x21
+  float v24; // s0
+  int v25; // s2
+  float v26; // s1
+  UILabel_o *v27; // x21
+  int32_t v28; // w1
+  UIWidget_o *v29; // x21
+  float v30; // s0
+  float v31; // s1
+  float v32; // s2
+  UILabel_o *v33; // x21
+  float v34; // s0
+  float v35; // s1
+  float v36; // s2
+  float v37; // s10
+  float v38; // s8
+  float v39; // s9
   unsigned int localPosition; // s0
-  float v42; // s11
-  float v43; // s0
-  UIWidget_o *v44; // x21
-  float v45; // s12
-  float v46; // s1
-  double v47; // d0
-  UILabel_o *v48; // x21
+  float v41; // s11
+  float v42; // s0
+  UIWidget_o *v43; // x21
+  float v44; // s12
+  float v45; // s1
+  double v46; // d0
+  UILabel_o *v47; // x21
+  int SERVANT_POINT_X_SIZE_MAX; // w1
   float v49; // s0
   float v50; // s1
   float v51; // s2
   UnityEngine_Transform_o *transform; // x21
   int v53; // s0
   UnityEngine_Object_o *v56; // x21
-  UISprite_o *v57; // x21
-  System_String_o *v58; // x22
-  bool v59; // w21
-  System_String_o *v60; // x0
+  int eventId; // w8
+  const char **p_name; // x0
+  UISprite_o *v59; // x21
+  bool v60; // w21
+  System_String_o *v61; // x0
+  System_String_o *v62; // x22
   UnityEngine_Object_o *eventLogoSprite; // x22
   int baseObject; // w8
   ServantSkillMaster_o *MasterData_WarQuestSelectionMaster; // x22
-  EventUpValIconComponent_o *v64; // x21
-  int v65; // w8
-  EventUpValIconComponent_o *v66; // x22
-  unsigned int v67; // w23
-  __int64 v68; // x8
+  EventUpValIconComponent_o *v66; // x21
+  int v67; // w8
+  EventUpValIconComponent_o *v68; // x22
+  unsigned int v69; // w23
+  __int64 v70; // x8
   struct FunctionGroupEntity_o *funcGroupEntity; // x8
-  __int64 v70; // x0
+  __int64 v72; // x0
   MethodInfo methoda; // [xsp+8h] [xbp-78h] BYREF
-  UnityEngine_Vector3_o v72; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v74; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Color_o v75; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v76; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v77; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  v3 = num;
   v4 = this;
-  if ( (byte_41882B4 & 1) == 0 )
+  if ( (byte_4215126 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Array_IndexOf_int___, *(_QWORD *)&num);
-    sub_B2C35C(&AtlasManager_TypeInfo, v5);
-    sub_B2C35C(&Method_DataManager_GetMasterData_ServantSkillMaster___, v6);
-    sub_B2C35C(&Method_DataManager_GetMasterData_SkillLvMaster___, v7);
-    sub_B2C35C(&EventUpValIconComponent_TypeInfo, v8);
-    sub_B2C35C(&System_Math_TypeInfo, v9);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v10);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_B2C35C(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v12);
-    sub_B2C35C(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v13);
-    sub_B2C35C(&StringLiteral_18529/*"event_logo_mini_"*/, v14);
-    this = (EventUpValIconComponent_o *)sub_B2C35C(&StringLiteral_18530/*"event_logo_mini_80368"*/, v15);
-    byte_41882B4 = 1;
+    sub_B0D8A4(&Method_System_Array_IndexOf_int___, *(_QWORD *)&num);
+    sub_B0D8A4(&AtlasManager_TypeInfo, v5);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_ServantSkillMaster___, v6);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_SkillLvMaster___, v7);
+    sub_B0D8A4(&EventUpValIconComponent_TypeInfo, v8);
+    sub_B0D8A4(&System_Math_TypeInfo, v9);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v10);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    sub_B0D8A4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v12);
+    sub_B0D8A4(&SingletonTemplate_PartyOrganizationUtility__TypeInfo, v13);
+    this = (EventUpValIconComponent_o *)sub_B0D8A4(&StringLiteral_18588/*"event_logo_mini_"*/, v14);
+    byte_4215126 = 1;
   }
   methoda.return_type = 0LL;
-  HIDWORD(methoda.name) = 0;
-  v16 = *(_QWORD *)&v4->fields.servantId;
+  methoda.name = 0LL;
+  v15 = *(_QWORD *)&v4->fields.servantId;
   LOBYTE(v4->fields.COLOR_NORMAL.fields.g) = 0;
-  if ( !v16 )
+  if ( !v15 )
     goto LABEL_120;
-  if ( *(_DWORD *)(v16 + 24) <= (unsigned int)v3 )
+  if ( *(_DWORD *)(v15 + 24) <= (unsigned int)num )
   {
 LABEL_121:
-    v70 = sub_B2C460(this);
-    sub_B2C400(v70, 0LL);
+    v72 = sub_B0D9A8(this);
+    sub_B0D948(v72, 0LL);
   }
-  v17 = *(EventMargeItemUpValInfo_o **)(v16 + 8LL * v3 + 32);
+  v16 = *(EventMargeItemUpValInfo_o **)(v15 + 8LL * num + 32);
   this = (EventUpValIconComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0LL);
   if ( !this )
     goto LABEL_120;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-  if ( !v17 )
+  if ( !v16 )
     goto LABEL_120;
-  EventMargeItemUpValInfo__SetIcon(v17, (UISprite_o *)v4->fields.paramLabel, 0LL);
+  EventMargeItemUpValInfo__SetIcon(v16, (UISprite_o *)v4->fields.paramLabel, 0LL);
   eventNameBackSprite = (UIWidget_o *)v4->fields.eventNameBackSprite;
   this = (EventUpValIconComponent_o *)EventUpValIconComponent_TypeInfo;
   if ( (BYTE3(EventUpValIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -421,55 +417,55 @@ LABEL_121:
   if ( !eventNameBackSprite )
     goto LABEL_120;
   UIWidget__set_width(eventNameBackSprite, EventUpValIconComponent_TypeInfo->static_fields->MESSAGE_X_SIZE_MAX, 0LL);
-  v19 = (UILabel_o *)v4->fields.eventNameBackSprite;
-  this = (EventUpValIconComponent_o *)EventMargeItemUpValInfo__GetEventUpString(v17, 0LL);
-  if ( !v19 )
+  v18 = (UILabel_o *)v4->fields.eventNameBackSprite;
+  this = (EventUpValIconComponent_o *)EventMargeItemUpValInfo__GetEventUpString(v16, 0LL);
+  if ( !v18 )
     goto LABEL_120;
-  UILabel__set_text(v19, (System_String_o *)this, 0LL);
-  if ( v17->fields.isFriendPointBonus )
+  UILabel__set_text(v18, (System_String_o *)this, 0LL);
+  if ( v16->fields.isFriendPointBonus )
   {
-    v24 = (UIWidget_o *)v4->fields.eventNameBackSprite;
-    v25 = 1.0;
-    v26 = 0;
-    v27 = 1.0;
+    v23 = (UIWidget_o *)v4->fields.eventNameBackSprite;
+    v24 = 1.0;
+    v25 = 0;
+    v26 = 1.0;
     methoda.methodPointer = 0LL;
     methoda.invoker_method = 0LL;
-    UnityEngine_Color___ctor_40633184(*(UnityEngine_Color_o *)(&v20 - 3), v21, v22, v23, &methoda);
-    if ( !v24 )
+    UnityEngine_Color___ctor_40757524(*(UnityEngine_Color_o *)(&v19 - 3), v20, v21, v22, &methoda);
+    if ( !v23 )
       goto LABEL_120;
-    *(_QWORD *)&v73.fields.r = methoda.methodPointer;
-    *(_QWORD *)&v73.fields.b = methoda.invoker_method;
-    UIWidget__set_color(v24, v73, 0LL);
+    *(_QWORD *)&v75.fields.r = methoda.methodPointer;
+    *(_QWORD *)&v75.fields.b = methoda.invoker_method;
+    UIWidget__set_color(v23, v75, 0LL);
     this = (EventUpValIconComponent_o *)v4->fields.eventNameBackSprite;
     if ( !this )
       goto LABEL_120;
     UILabel__set_fontSize((UILabel_o *)this, 13, 0LL);
     this = (EventUpValIconComponent_o *)EventUpValIconComponent_TypeInfo;
-    v28 = (UILabel_o *)v4->fields.eventNameBackSprite;
+    v27 = (UILabel_o *)v4->fields.eventNameBackSprite;
     if ( (BYTE3(EventUpValIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EventUpValIconComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventUpValIconComponent_TypeInfo);
     }
-    if ( !v28 )
+    if ( !v27 )
       goto LABEL_120;
-    UILabel__SetCondensedScale(v28, EventUpValIconComponent_TypeInfo->static_fields->MESSAGE_X_SIZE_MAX, 0LL);
+    UILabel__SetCondensedScale(v27, EventUpValIconComponent_TypeInfo->static_fields->MESSAGE_X_SIZE_MAX, 0LL);
     goto LABEL_20;
   }
-  v30 = (UIWidget_o *)v4->fields.eventNameBackSprite;
-  if ( !v17->fields.isNotClassBoard )
+  v29 = (UIWidget_o *)v4->fields.eventNameBackSprite;
+  if ( !v16->fields.isNotClassBoard )
   {
     v49 = 1.0;
     v50 = 1.0;
     v51 = 1.0;
     methoda.methodPointer = 0LL;
     methoda.invoker_method = 0LL;
-    UnityEngine_Color___ctor_40633184(*(UnityEngine_Color_o *)(&v20 - 3), v21, v22, v23, &methoda);
-    if ( !v30 )
+    UnityEngine_Color___ctor_40757524(*(UnityEngine_Color_o *)(&v19 - 3), v20, v21, v22, &methoda);
+    if ( !v29 )
       goto LABEL_120;
-    *(_QWORD *)&v75.fields.r = methoda.methodPointer;
-    *(_QWORD *)&v75.fields.b = methoda.invoker_method;
-    UIWidget__set_color(v30, v75, 0LL);
+    *(_QWORD *)&v77.fields.r = methoda.methodPointer;
+    *(_QWORD *)&v77.fields.b = methoda.invoker_method;
+    UIWidget__set_color(v29, v77, 0LL);
     this = (EventUpValIconComponent_o *)v4->fields.eventNameBackSprite;
     if ( !this )
       goto LABEL_120;
@@ -486,53 +482,53 @@ LABEL_20:
     this = (EventUpValIconComponent_o *)v4->fields.eventNameBackSprite;
     if ( !this )
       goto LABEL_120;
-    v29 = 1;
+    v28 = 1;
     goto LABEL_31;
   }
+  v30 = 1.0;
   v31 = 1.0;
   v32 = 1.0;
-  v33 = 1.0;
   methoda.methodPointer = 0LL;
   methoda.invoker_method = 0LL;
-  UnityEngine_Color___ctor_40633184(*(UnityEngine_Color_o *)(&v20 - 3), v21, v22, v23, &methoda);
-  if ( !v30 )
+  UnityEngine_Color___ctor_40757524(*(UnityEngine_Color_o *)(&v19 - 3), v20, v21, v22, &methoda);
+  if ( !v29 )
     goto LABEL_120;
-  *(_QWORD *)&v74.fields.r = methoda.methodPointer;
-  *(_QWORD *)&v74.fields.b = methoda.invoker_method;
-  UIWidget__set_color(v30, v74, 0LL);
+  *(_QWORD *)&v76.fields.r = methoda.methodPointer;
+  *(_QWORD *)&v76.fields.b = methoda.invoker_method;
+  UIWidget__set_color(v29, v76, 0LL);
   this = (EventUpValIconComponent_o *)v4->fields.eventNameBackSprite;
   if ( !this )
     goto LABEL_120;
   UILabel__set_fontSize((UILabel_o *)this, 13, 0LL);
   this = (EventUpValIconComponent_o *)EventUpValIconComponent_TypeInfo;
-  v34 = (UILabel_o *)v4->fields.eventNameBackSprite;
+  v33 = (UILabel_o *)v4->fields.eventNameBackSprite;
   if ( (BYTE3(EventUpValIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EventUpValIconComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventUpValIconComponent_TypeInfo);
   }
-  if ( !v34 )
+  if ( !v33 )
     goto LABEL_120;
-  UILabel__SetCondensedScale(v34, EventUpValIconComponent_TypeInfo->static_fields->MESSAGE_X_SIZE_MAX, 0LL);
+  UILabel__SetCondensedScale(v33, EventUpValIconComponent_TypeInfo->static_fields->MESSAGE_X_SIZE_MAX, 0LL);
   this = (EventUpValIconComponent_o *)v4->fields.eventNameBackSprite;
   if ( !this )
     goto LABEL_120;
-  v29 = 2;
+  v28 = 2;
 LABEL_31:
-  UILabel__set_alignment((UILabel_o *)this, v29, 0LL);
+  UILabel__set_alignment((UILabel_o *)this, v28, 0LL);
   this = (EventUpValIconComponent_o *)v4->fields.iconSprite;
   if ( !this )
     goto LABEL_120;
   this = (EventUpValIconComponent_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
   if ( !this )
     goto LABEL_120;
-  *(UnityEngine_Vector3_o *)&v35 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
+  *(UnityEngine_Vector3_o *)&v34 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
   this = (EventUpValIconComponent_o *)v4->fields.eventNameBackSprite;
   if ( !this )
     goto LABEL_120;
+  v37 = v34;
   v38 = v35;
   v39 = v36;
-  v40 = v37;
   this = (EventUpValIconComponent_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !this )
     goto LABEL_120;
@@ -540,36 +536,36 @@ LABEL_31:
   this = (EventUpValIconComponent_o *)v4->fields.eventNameBackSprite;
   if ( !this )
     goto LABEL_120;
-  v42 = *(float *)&localPosition;
-  LODWORD(v43) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)this, 0LL);
-  v44 = (UIWidget_o *)v4->fields.eventNameBackSprite;
-  v45 = v43;
+  v41 = *(float *)&localPosition;
+  LODWORD(v42) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)this, 0LL);
+  v43 = (UIWidget_o *)v4->fields.eventNameBackSprite;
+  v44 = v42;
   this = (EventUpValIconComponent_o *)System_Math_TypeInfo;
   if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  if ( !v44 )
+  if ( !v43 )
     goto LABEL_120;
-  v46 = ceilf(v45);
-  v47 = v46 == INFINITY ? -v46 : v46;
-  UIWidget__set_width(v44, (int)v47, 0LL);
-  if ( v17->fields.isServantPoint )
+  v45 = ceilf(v44);
+  v46 = v45 == INFINITY ? -v45 : v45;
+  UIWidget__set_width(v43, (int)v46, 0LL);
+  if ( v16->fields.isServantPoint )
   {
     this = (EventUpValIconComponent_o *)EventUpValIconComponent_TypeInfo;
-    v48 = (UILabel_o *)v4->fields.eventNameBackSprite;
+    v47 = (UILabel_o *)v4->fields.eventNameBackSprite;
     if ( (BYTE3(EventUpValIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EventUpValIconComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventUpValIconComponent_TypeInfo);
     }
-    if ( !v48 )
+    if ( !v47 )
       goto LABEL_120;
-    num = EventUpValIconComponent_TypeInfo->static_fields->SERVANT_POINT_X_SIZE_MAX;
+    SERVANT_POINT_X_SIZE_MAX = EventUpValIconComponent_TypeInfo->static_fields->SERVANT_POINT_X_SIZE_MAX;
   }
   else
   {
-    *(_QWORD *)&num = LODWORD(v4->fields.eventUpValItemList);
-    v48 = (UILabel_o *)v4->fields.eventNameBackSprite;
-    if ( num < 1 )
+    SERVANT_POINT_X_SIZE_MAX = (int)v4->fields.eventUpValItemList;
+    v47 = (UILabel_o *)v4->fields.eventNameBackSprite;
+    if ( SERVANT_POINT_X_SIZE_MAX < 1 )
     {
       this = (EventUpValIconComponent_o *)EventUpValIconComponent_TypeInfo;
       if ( (BYTE3(EventUpValIconComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -577,16 +573,16 @@ LABEL_31:
       {
         j_il2cpp_runtime_class_init_0(EventUpValIconComponent_TypeInfo);
       }
-      if ( !v48 )
+      if ( !v47 )
         goto LABEL_120;
-      num = EventUpValIconComponent_TypeInfo->static_fields->NORMAL_MESSAGE_MAX_WIDTH;
+      SERVANT_POINT_X_SIZE_MAX = EventUpValIconComponent_TypeInfo->static_fields->NORMAL_MESSAGE_MAX_WIDTH;
     }
-    else if ( !v48 )
+    else if ( !v47 )
     {
       goto LABEL_120;
     }
   }
-  UILabel__SetCondensedScale(v48, num, 0LL);
+  UILabel__SetCondensedScale(v47, SERVANT_POINT_X_SIZE_MAX, 0LL);
   v56 = *(UnityEngine_Object_o **)&v4->fields.messageMaxWidth;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -602,31 +598,32 @@ LABEL_31:
     if ( !this )
       goto LABEL_120;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-    v57 = *(UISprite_o **)&v4->fields.messageMaxWidth;
-    if ( v17->fields.isFriendshipUpForCampaign )
+    if ( v16->fields.isFriendshipUpForCampaign )
     {
-      if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !AtlasManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      }
-      v58 = (System_String_o *)StringLiteral_18530/*"event_logo_mini_80368"*/;
+      eventId = v16->fields.eventId;
+      p_name = &methoda.name;
+      if ( !eventId )
+        eventId = 80368;
+      LODWORD(methoda.name) = eventId;
+      v59 = *(UISprite_o **)&v4->fields.messageMaxWidth;
     }
     else
     {
-      v60 = System_Int32__ToString((int)v17 + 16, 0LL);
-      v58 = System_String__Concat_44305532((System_String_o *)StringLiteral_18529/*"event_logo_mini_"*/, v60, 0LL);
-      if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
-        && !AtlasManager_TypeInfo->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      }
+      v59 = *(UISprite_o **)&v4->fields.messageMaxWidth;
+      LODWORD(p_name) = (_DWORD)v16 + 16;
     }
-    v59 = AtlasManager__SetBanner(v57, v58, 0LL);
+    v61 = System_Int32__ToString((int32_t)p_name, 0LL);
+    v62 = System_String__Concat_43849904((System_String_o *)StringLiteral_18588/*"event_logo_mini_"*/, v61, 0LL);
+    if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
+      && !AtlasManager_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+    }
+    v60 = AtlasManager__SetBanner(v59, v62, 0LL);
   }
   else
   {
-    v59 = 0;
+    v60 = 0;
   }
   eventLogoSprite = (UnityEngine_Object_o *)v4->fields.eventLogoSprite;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -642,14 +639,14 @@ LABEL_31:
     this = (EventUpValIconComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !this )
       goto LABEL_120;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v59, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v60, 0LL);
   }
   baseObject = (int)v4->fields.baseObject;
   if ( baseObject )
   {
     if ( baseObject == 1 )
     {
-      v38 = 0.0;
+      v37 = 0.0;
     }
     else if ( baseObject == 2 )
     {
@@ -659,35 +656,35 @@ LABEL_31:
       this = (EventUpValIconComponent_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       if ( !this )
         goto LABEL_120;
-      v38 = -(float)(v42
-                   + (float)(v45
+      v37 = -(float)(v41
+                   + (float)(v44
                            * COERCE_FLOAT(UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0LL))));
     }
   }
   else
   {
-    v38 = (float)(v42 + v45) * -0.5;
+    v37 = (float)(v41 + v44) * -0.5;
   }
   this = (EventUpValIconComponent_o *)v4->fields.iconSprite;
-  if ( v17->fields.isNotClassBoard )
-    v38 = v38 + -0.5;
+  if ( v16->fields.isNotClassBoard )
+    v37 = v37 + -0.5;
   if ( !this )
     goto LABEL_120;
   this = (EventUpValIconComponent_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
   if ( !this )
     goto LABEL_120;
-  v72.fields.x = v38;
-  v72.fields.y = v39;
-  v72.fields.z = v40;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v72, 0LL);
-  if ( !v17->fields.funcGroupEntity )
+  v74.fields.x = v37;
+  v74.fields.y = v38;
+  v74.fields.z = v39;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v74, 0LL);
+  if ( !v16->fields.funcGroupEntity )
     return;
   if ( (BYTE3(SingletonTemplate_PartyOrganizationUtility__TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !SingletonTemplate_PartyOrganizationUtility__TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SingletonTemplate_PartyOrganizationUtility__TypeInfo);
   }
-  this = (EventUpValIconComponent_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_28419EC *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  this = (EventUpValIconComponent_o *)SingletonTemplate_clsQuestCheck___get_Instance((const MethodInfo_2A713E8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !this )
     goto LABEL_120;
   if ( !PartyOrganizationUtility__IsRarityRestriction(
@@ -697,64 +694,64 @@ LABEL_31:
           v4->fields.equipSvtId,
           *(_DWORD *)&v4->fields.invalid,
           LODWORD(v4->fields.COLOR_NORMAL.fields.r),
-          v17->fields.eventId,
+          v16->fields.eventId,
           0LL) )
     return;
-  this = (EventUpValIconComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (EventUpValIconComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (MasterData_WarQuestSelectionMaster = (ServantSkillMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                                        (DataManager_o *)this,
-                                                                       (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ServantSkillMaster___),
-        (this = (EventUpValIconComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+                                                                       (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ServantSkillMaster___),
+        (this = (EventUpValIconComponent_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (this = (EventUpValIconComponent_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                               (DataManager_o *)this,
-                                              (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_SkillLvMaster___),
+                                              (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_SkillLvMaster___),
         !MasterData_WarQuestSelectionMaster)
-    || (v64 = this,
+    || (v66 = this,
         (this = (EventUpValIconComponent_o *)ServantSkillMaster__getServantSkillList(
                                                MasterData_WarQuestSelectionMaster,
                                                LODWORD(v4->fields.COLOR_NORMAL.fields.r),
                                                0LL)) == 0LL) )
   {
 LABEL_120:
-    sub_B2C434(this, *(_QWORD *)&num);
+    sub_B0D97C(this);
   }
-  v65 = (int)this->fields.baseObject;
-  v66 = this;
-  if ( v65 >= 1 )
+  v67 = (int)this->fields.baseObject;
+  v68 = this;
+  if ( v67 >= 1 )
   {
-    v67 = 0;
+    v69 = 0;
     while ( 1 )
     {
-      if ( v67 >= v65 )
+      if ( v69 >= v67 )
         goto LABEL_121;
-      v68 = *((_QWORD *)&v66->fields.iconSprite + (int)v67);
-      if ( !v68 )
+      v70 = *((_QWORD *)&v68->fields.iconSprite + (int)v69);
+      if ( !v70 )
         goto LABEL_120;
-      if ( *(_DWORD *)(v68 + 48) )
+      if ( *(_DWORD *)(v70 + 48) )
       {
-        if ( !v64 )
+        if ( !v66 )
           goto LABEL_120;
         this = (EventUpValIconComponent_o *)SkillLvMaster__GetEntity(
-                                              (SkillLvMaster_o *)v64,
-                                              *(_DWORD *)(v68 + 28),
+                                              (SkillLvMaster_o *)v66,
+                                              *(_DWORD *)(v70 + 28),
                                               1,
                                               0LL);
         if ( this )
         {
-          funcGroupEntity = v17->fields.funcGroupEntity;
+          funcGroupEntity = v16->fields.funcGroupEntity;
           if ( !funcGroupEntity )
             goto LABEL_120;
           this = (EventUpValIconComponent_o *)System_Array__IndexOf_int_(
                                                 (System_Int32_array *)this->fields.iconSprite,
                                                 funcGroupEntity->fields.funcId,
-                                                (const MethodInfo_1FFD52C *)Method_System_Array_IndexOf_int___);
+                                                (const MethodInfo_1F69B20 *)Method_System_Array_IndexOf_int___);
           if ( ((unsigned int)this & 0x80000000) == 0 )
             break;
         }
       }
-      v65 = (int)v66->fields.baseObject;
-      if ( (int)++v67 >= v65 )
+      v67 = (int)v68->fields.baseObject;
+      if ( (int)++v69 >= v67 )
         return;
     }
     LOBYTE(v4->fields.COLOR_NORMAL.fields.g) = 1;

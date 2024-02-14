@@ -1,13 +1,13 @@
 void __fastcall OtherUserGameEntity___ctor(OtherUserGameEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_41851C6 & 1) == 0 )
+  if ( (byte_42120B0 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_long___ctor__, method);
-    byte_41851C6 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_long___ctor__, method);
+    byte_42120B0 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_24E3FD4 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_2669AD8 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -37,11 +37,11 @@ void __fastcall OtherUserGameEntity__GetAppendSkillInfo(
   __int64 v19; // x0
 
   v10 = this;
-  if ( (byte_41851C5 & 1) == 0 )
+  if ( (byte_42120AF & 1) == 0 )
   {
-    sub_B2C35C(&BalanceConfig_TypeInfo, skillInfoList);
-    this = (OtherUserGameEntity_o *)sub_B2C35C(&SkillInfo___TypeInfo, v11);
-    byte_41851C5 = 1;
+    sub_B0D8A4(&BalanceConfig_TypeInfo, skillInfoList);
+    this = (OtherUserGameEntity_o *)sub_B0D8A4(&SkillInfo___TypeInfo, v11);
+    byte_42120AF = 1;
   }
   v12 = 80LL;
   if ( !returnSupportServantType )
@@ -49,7 +49,7 @@ void __fastcall OtherUserGameEntity__GetAppendSkillInfo(
   v13 = *(__int64 *)((char *)&v10->klass + v12);
   if ( !v13 )
 LABEL_21:
-    sub_B2C434(this, skillInfoList);
+    sub_B0D97C(this);
   v14 = *(unsigned int *)(v13 + 24);
   if ( (__int64)(v14 << 32) >= 1 )
   {
@@ -59,8 +59,8 @@ LABEL_21:
     {
       if ( v15 >= v14 )
       {
-        v19 = sub_B2C460(this);
-        sub_B2C400(v19, 0LL);
+        v19 = sub_B0D9A8(this);
+        sub_B0D948(v19, 0LL);
       }
       this = *(OtherUserGameEntity_o **)(v16 + 8 * v15);
       if ( supportDeckId < 1 )
@@ -77,7 +77,7 @@ LABEL_21:
       }
       if ( this->fields.userLv == classPos )
       {
-        ServantLeaderInfo__GetAppendPassiveSkillInfo_29351980((ServantLeaderInfo_o *)this, skillInfoList, 0, 0LL);
+        ServantLeaderInfo__GetAppendPassiveSkillInfo_28164780((ServantLeaderInfo_o *)this, skillInfoList, 0, 0LL);
         return;
       }
 LABEL_15:
@@ -92,11 +92,11 @@ LABEL_15:
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v17 = BalanceConfig_TypeInfo;
   }
-  v18 = (SkillInfo_array *)sub_B2C374(
+  v18 = (SkillInfo_array *)sub_B0D8BC(
                              SkillInfo___TypeInfo,
                              (unsigned int)v17->static_fields->SvtAppendPassiveSkillListMax);
   *skillInfoList = v18;
-  sub_B2C2F8(skillInfoList, v18);
+  sub_B0D840(skillInfoList, v18);
 }
 
 
@@ -105,28 +105,27 @@ int32_t __fastcall OtherUserGameEntity__GetReturnTypeByQuestId(int32_t questId, 
   __int64 v3; // x1
   __int64 v4; // x1
   DataManager_o *Instance; // x0
-  __int64 v6; // x1
   QuestEntity_o *Entity; // x0
 
-  if ( (byte_41851BE & 1) == 0 )
+  if ( (byte_42120A8 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_QuestMaster___, method);
-    sub_B2C35C(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v3);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_41851BE = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_QuestMaster___, method);
+    sub_B0D8A4(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v3);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_42120A8 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_QuestMaster___)) == 0LL )
+                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0LL )
   {
-    sub_B2C434(Instance, v6);
+    sub_B0D97C(Instance);
   }
   Entity = (QuestEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                               (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                               questId,
-                              (const MethodInfo_24E40D0 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+                              (const MethodInfo_2669BD4 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   return Entity && QuestEntity__IsNeedUseEventQuestSupport(Entity, 0LL);
 }
 
@@ -153,29 +152,28 @@ bool __fastcall OtherUserGameEntity__IsSameSupportDeck(OtherUserGameEntity_o *th
   ServantLeaderInfo_o *ServantLeaderInfo; // x21
   const MethodInfo *v7; // x5
   int64_t v8; // x0
-  __int64 v9; // x1
-  int64_t v10; // x20
-  _BOOL4 v11; // w8
+  int64_t v9; // x20
+  _BOOL4 v10; // w8
   struct EquipTargetInfo_o *equipTarget1; // x8
-  __int128 v13; // q0
-  _BOOL4 v14; // w24
-  __int64 v15; // x8
-  __int128 v16; // q0
-  _BOOL4 v17; // w8
-  struct EquipTargetInfo_o *v18; // x8
-  __int128 v19; // q0
-  __int64 v20; // x8
-  __int128 v21; // q0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+0h] [xbp-D0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+20h] [xbp-B0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v25; // [xsp+40h] [xbp-90h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+60h] [xbp-70h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v27; // [xsp+80h] [xbp-50h]
+  __int128 v12; // q0
+  _BOOL4 v13; // w24
+  __int64 v14; // x8
+  __int128 v15; // q0
+  _BOOL4 v16; // w8
+  struct EquipTargetInfo_o *v17; // x8
+  __int128 v18; // q0
+  __int64 v19; // x8
+  __int128 v20; // q0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v22; // [xsp+0h] [xbp-D0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+20h] [xbp-B0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+40h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v25; // [xsp+60h] [xbp-70h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+80h] [xbp-50h]
 
-  if ( (byte_41851BF & 1) == 0 )
+  if ( (byte_42120A9 & 1) == 0 )
   {
-    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
-    byte_41851BF = 1;
+    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+    byte_42120A9 = 1;
   }
   v4 = -1;
   while ( 1 )
@@ -183,26 +181,26 @@ bool __fastcall OtherUserGameEntity__IsSameSupportDeck(OtherUserGameEntity_o *th
     v5 = 1;
     ServantLeaderInfo = OtherUserGameEntity__getServantLeaderInfo(this, v4 + 1, 1, 0, 0, v2);
     v8 = (int64_t)OtherUserGameEntity__getServantLeaderInfo(this, v4 + 1, 1, 1, 0, v7);
-    v10 = v8;
+    v9 = v8;
     if ( ServantLeaderInfo )
       v5 = ServantLeaderInfo->fields.userSvtId == 0;
     if ( v8 )
     {
-      v11 = *(_QWORD *)(v8 + 40) == 0LL;
+      v10 = *(_QWORD *)(v8 + 40) == 0LL;
       if ( v5 )
         goto LABEL_8;
     }
     else
     {
-      v11 = 1;
+      v10 = 1;
       if ( v5 )
       {
 LABEL_8:
-        if ( v11 )
+        if ( v10 )
           goto LABEL_15;
       }
     }
-    if ( v11 || v5 )
+    if ( v10 || v5 )
       return 0;
     if ( !ServantLeaderInfo || !v8 )
       goto LABEL_43;
@@ -214,75 +212,75 @@ LABEL_15:
     equipTarget1 = ServantLeaderInfo->fields.equipTarget1;
     if ( !equipTarget1 )
       break;
-    v13 = *(_OWORD *)&equipTarget1->fields.userSvtId.fields.fakeValue;
-    *(_OWORD *)&v27.fields.currentCryptoKey = *(_OWORD *)&equipTarget1->fields.userSvtId.fields.currentCryptoKey;
-    *(_OWORD *)&v27.fields.fakeValue = v13;
+    v12 = *(_OWORD *)&equipTarget1->fields.userSvtId.fields.fakeValue;
+    *(_OWORD *)&v26.fields.currentCryptoKey = *(_OWORD *)&equipTarget1->fields.userSvtId.fields.currentCryptoKey;
+    *(_OWORD *)&v26.fields.fakeValue = v12;
     if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     }
-    v26 = v27;
-    v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44761220(&v26, 0LL);
-    v14 = v8 == 0;
-    if ( v10 )
+    v25 = v26;
+    v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44165732(&v25, 0LL);
+    v13 = v8 == 0;
+    if ( v9 )
       goto LABEL_23;
 LABEL_30:
-    v17 = 1;
-    if ( !v14 )
+    v16 = 1;
+    if ( !v13 )
       goto LABEL_31;
 LABEL_28:
-    if ( !v17 )
+    if ( !v16 )
       goto LABEL_31;
 LABEL_40:
     if ( (unsigned int)++v4 >= 7 )
       return 1;
   }
-  v14 = 1;
+  v13 = 1;
   if ( !v8 )
     goto LABEL_30;
 LABEL_23:
-  v15 = *(_QWORD *)(v10 + 144);
-  if ( !v15 )
+  v14 = *(_QWORD *)(v9 + 144);
+  if ( !v14 )
     goto LABEL_30;
-  v16 = *(_OWORD *)(v15 + 40);
-  *(_OWORD *)&v27.fields.currentCryptoKey = *(_OWORD *)(v15 + 24);
-  *(_OWORD *)&v27.fields.fakeValue = v16;
+  v15 = *(_OWORD *)(v14 + 40);
+  *(_OWORD *)&v26.fields.currentCryptoKey = *(_OWORD *)(v14 + 24);
+  *(_OWORD *)&v26.fields.fakeValue = v15;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
-  v25 = v27;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44761220(&v25, 0LL);
-  v17 = v8 == 0;
-  if ( v14 )
+  v24 = v26;
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44165732(&v24, 0LL);
+  v16 = v8 == 0;
+  if ( v13 )
     goto LABEL_28;
 LABEL_31:
-  if ( v17 || v14 )
+  if ( v16 || v13 )
     return 0;
   if ( !ServantLeaderInfo )
     goto LABEL_43;
-  v18 = ServantLeaderInfo->fields.equipTarget1;
-  if ( !v18 )
+  v17 = ServantLeaderInfo->fields.equipTarget1;
+  if ( !v17 )
     goto LABEL_43;
-  v19 = *(_OWORD *)&v18->fields.userSvtId.fields.fakeValue;
-  *(_OWORD *)&v27.fields.currentCryptoKey = *(_OWORD *)&v18->fields.userSvtId.fields.currentCryptoKey;
-  *(_OWORD *)&v27.fields.fakeValue = v19;
+  v18 = *(_OWORD *)&v17->fields.userSvtId.fields.fakeValue;
+  *(_OWORD *)&v26.fields.currentCryptoKey = *(_OWORD *)&v17->fields.userSvtId.fields.currentCryptoKey;
+  *(_OWORD *)&v26.fields.fakeValue = v18;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
-  v24 = v27;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44761220(&v24, 0LL);
-  if ( !v10 || (v20 = *(_QWORD *)(v10 + 144)) == 0 )
+  v23 = v26;
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44165732(&v23, 0LL);
+  if ( !v9 || (v19 = *(_QWORD *)(v9 + 144)) == 0 )
 LABEL_43:
-    sub_B2C434(v8, v9);
-  v21 = *(_OWORD *)(v20 + 40);
-  *(_OWORD *)&v23.fields.currentCryptoKey = *(_OWORD *)(v20 + 24);
-  *(_OWORD *)&v23.fields.fakeValue = v21;
-  if ( v8 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44761220(&v23, 0LL) )
+    sub_B0D97C(v8);
+  v20 = *(_OWORD *)(v19 + 40);
+  *(_OWORD *)&v22.fields.currentCryptoKey = *(_OWORD *)(v19 + 24);
+  *(_OWORD *)&v22.fields.fakeValue = v20;
+  if ( v8 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44165732(&v22, 0LL) )
     goto LABEL_40;
   return 0;
 }
@@ -309,7 +307,7 @@ int32_t __fastcall OtherUserGameEntity__getAdjustAtk(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_19:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v7 = *(unsigned int *)(v6 + 24);
   if ( (__int64)(v7 << 32) >= 1 )
   {
@@ -319,8 +317,8 @@ LABEL_19:
     {
       if ( v8 >= v7 )
       {
-        v12 = sub_B2C460(this);
-        sub_B2C400(v12, 0LL);
+        v12 = sub_B0D9A8(this);
+        sub_B0D948(v12, 0LL);
       }
       v10 = *(_QWORD *)(v9 + 8 * v8);
       if ( supportDeckId < 1 )
@@ -367,7 +365,7 @@ int32_t __fastcall OtherUserGameEntity__getAdjustHp(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_19:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v7 = *(unsigned int *)(v6 + 24);
   if ( (__int64)(v7 << 32) >= 1 )
   {
@@ -377,8 +375,8 @@ LABEL_19:
     {
       if ( v8 >= v7 )
       {
-        v12 = sub_B2C460(this);
-        sub_B2C400(v12, 0LL);
+        v12 = sub_B0D9A8(this);
+        sub_B0D948(v12, 0LL);
       }
       v10 = *(_QWORD *)(v9 + 8 * v8);
       if ( supportDeckId < 1 )
@@ -425,7 +423,7 @@ int32_t __fastcall OtherUserGameEntity__getAtk(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_19:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v7 = *(unsigned int *)(v6 + 24);
   if ( (__int64)(v7 << 32) >= 1 )
   {
@@ -435,8 +433,8 @@ LABEL_19:
     {
       if ( v8 >= v7 )
       {
-        v12 = sub_B2C460(this);
-        sub_B2C400(v12, 0LL);
+        v12 = sub_B0D9A8(this);
+        sub_B0D948(v12, 0LL);
       }
       v10 = *(_QWORD *)(v9 + 8 * v8);
       if ( supportDeckId < 1 )
@@ -484,7 +482,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipAtk(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_20:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v7 = *(unsigned int *)(v6 + 24);
   if ( (__int64)(v7 << 32) >= 1 )
   {
@@ -494,8 +492,8 @@ LABEL_20:
     {
       if ( v8 >= v7 )
       {
-        v13 = sub_B2C460(this);
-        sub_B2C400(v13, 0LL);
+        v13 = sub_B0D9A8(this);
+        sub_B0D948(v13, 0LL);
       }
       v10 = *(_QWORD *)(v9 + 8 * v8);
       if ( supportDeckId < 1 )
@@ -548,7 +546,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipExp(
   v5 = *(__int64 *)((char *)&this->klass + v4);
   if ( !v5 )
 LABEL_15:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v6 = *(_DWORD *)(v5 + 24);
   if ( v6 < 1 )
     return 0;
@@ -557,8 +555,8 @@ LABEL_15:
   {
     if ( v7 >= v6 )
     {
-      v11 = sub_B2C460(this);
-      sub_B2C400(v11, 0LL);
+      v11 = sub_B0D9A8(this);
+      sub_B0D948(v11, 0LL);
     }
     v8 = *(_QWORD *)(v5 + 8LL * (int)v7 + 32);
     if ( !v8 )
@@ -600,7 +598,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipHp(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_20:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v7 = *(unsigned int *)(v6 + 24);
   if ( (__int64)(v7 << 32) >= 1 )
   {
@@ -610,8 +608,8 @@ LABEL_20:
     {
       if ( v8 >= v7 )
       {
-        v13 = sub_B2C460(this);
-        sub_B2C400(v13, 0LL);
+        v13 = sub_B0D9A8(this);
+        sub_B0D948(v13, 0LL);
       }
       v10 = *(_QWORD *)(v9 + 8 * v8);
       if ( supportDeckId < 1 )
@@ -665,7 +663,7 @@ EquipTargetInfo_o *__fastcall OtherUserGameEntity__getEquipInfo(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_17:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v7 = *(unsigned int *)(v6 + 24);
   if ( (__int64)(v7 << 32) < 1 )
     return 0LL;
@@ -675,8 +673,8 @@ LABEL_17:
   {
     if ( v8 >= v7 )
     {
-      v12 = sub_B2C460(this);
-      sub_B2C400(v12, 0LL);
+      v12 = sub_B0D9A8(this);
+      sub_B0D948(v12, 0LL);
     }
     v10 = *(_QWORD *)(v9 + 8 * v8);
     if ( supportDeckId < 1 )
@@ -722,12 +720,12 @@ int32_t __fastcall OtherUserGameEntity__getEquipSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v20; // 0:x0.16
 
   v8 = this;
-  if ( (byte_41851C2 & 1) == 0 )
+  if ( (byte_42120AC & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_B2C35C(
+    this = (OtherUserGameEntity_o *)sub_B0D8A4(
                                       &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
                                       *(_QWORD *)&classPos);
-    byte_41851C2 = 1;
+    byte_42120AC = 1;
   }
   v9 = 80LL;
   if ( !returnSupportServantType )
@@ -735,7 +733,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipSvtId(
   v10 = *(__int64 *)((char *)&v8->klass + v9);
   if ( !v10 )
 LABEL_23:
-    sub_B2C434(this, *(_QWORD *)&classPos);
+    sub_B0D97C(this);
   v11 = *(unsigned int *)(v10 + 24);
   if ( (__int64)(v11 << 32) < 1 )
     return 0;
@@ -745,8 +743,8 @@ LABEL_23:
   {
     if ( v12 >= v11 )
     {
-      v19 = sub_B2C460(this);
-      sub_B2C400(v19, 0LL);
+      v19 = sub_B0D9A8(this);
+      sub_B0D948(v19, 0LL);
     }
     v14 = *(_QWORD *)(v13 + 8 * v12);
     if ( supportDeckId < 1 )
@@ -780,7 +778,7 @@ LABEL_16:
   }
   *(_QWORD *)&v20.fields.currentCryptoKey = v18;
   *(_QWORD *)&v20.fields.fakeValue = v17;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44758064(v20, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v20, 0LL);
 }
 
 
@@ -806,12 +804,12 @@ int64_t __fastcall OtherUserGameEntity__getEquipUserSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+20h] [xbp-50h]
 
   v8 = this;
-  if ( (byte_41851C1 & 1) == 0 )
+  if ( (byte_42120AB & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_B2C35C(
+    this = (OtherUserGameEntity_o *)sub_B0D8A4(
                                       &CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo,
                                       *(_QWORD *)&classPos);
-    byte_41851C1 = 1;
+    byte_42120AB = 1;
   }
   v9 = 80LL;
   if ( !returnSupportServantType )
@@ -819,7 +817,7 @@ int64_t __fastcall OtherUserGameEntity__getEquipUserSvtId(
   v10 = *(__int64 *)((char *)&v8->klass + v9);
   if ( !v10 )
 LABEL_24:
-    sub_B2C434(this, *(_QWORD *)&classPos);
+    sub_B0D97C(this);
   v11 = *(unsigned int *)(v10 + 24);
   if ( (__int64)(v11 << 32) < 1 )
     return 0LL;
@@ -829,8 +827,8 @@ LABEL_24:
   {
     if ( v12 >= v11 )
     {
-      v18 = sub_B2C460(this);
-      sub_B2C400(v18, 0LL);
+      v18 = sub_B0D9A8(this);
+      sub_B0D948(v18, 0LL);
     }
     v14 = *(_QWORD *)(v13 + 8 * v12);
     if ( supportDeckId < 1 )
@@ -864,7 +862,7 @@ LABEL_16:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   }
   v19 = v20;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44761220(&v19, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44165732(&v19, 0LL);
 }
 
 
@@ -889,7 +887,7 @@ int32_t __fastcall OtherUserGameEntity__getHp(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_19:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v7 = *(unsigned int *)(v6 + 24);
   if ( (__int64)(v7 << 32) >= 1 )
   {
@@ -899,8 +897,8 @@ LABEL_19:
     {
       if ( v8 >= v7 )
       {
-        v12 = sub_B2C460(this);
-        sub_B2C400(v12, 0LL);
+        v12 = sub_B0D9A8(this);
+        sub_B0D948(v12, 0LL);
       }
       v10 = *(_QWORD *)(v9 + 8 * v8);
       if ( supportDeckId < 1 )
@@ -945,7 +943,7 @@ int32_t __fastcall OtherUserGameEntity__getLimitCount(
   v5 = *(__int64 *)((char *)&this->klass + v4);
   if ( !v5 )
 LABEL_15:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v6 = *(_DWORD *)(v5 + 24);
   if ( v6 < 1 )
     return 0;
@@ -954,8 +952,8 @@ LABEL_15:
   {
     if ( v7 >= v6 )
     {
-      v10 = sub_B2C460(this);
-      sub_B2C400(v10, 0LL);
+      v10 = sub_B0D9A8(this);
+      sub_B0D948(v10, 0LL);
     }
     v8 = *(_QWORD *)(v5 + 8LL * (int)v7 + 32);
     if ( !v8 )
@@ -989,7 +987,7 @@ int32_t __fastcall OtherUserGameEntity__getLv(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_19:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v7 = *(unsigned int *)(v6 + 24);
   if ( (__int64)(v7 << 32) >= 1 )
   {
@@ -999,8 +997,8 @@ LABEL_19:
     {
       if ( v8 >= v7 )
       {
-        v12 = sub_B2C460(this);
-        sub_B2C400(v12, 0LL);
+        v12 = sub_B0D9A8(this);
+        sub_B0D948(v12, 0LL);
       }
       v10 = *(_QWORD *)(v9 + 8 * v8);
       if ( supportDeckId < 1 )
@@ -1046,7 +1044,7 @@ int32_t __fastcall OtherUserGameEntity__getMaxLv(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_18:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v7 = *(unsigned int *)(v6 + 24);
   if ( (__int64)(v7 << 32) < 1 )
     return 0;
@@ -1056,8 +1054,8 @@ LABEL_18:
   {
     if ( v8 >= v7 )
     {
-      v11 = sub_B2C460(this);
-      sub_B2C400(v11, 0LL);
+      v11 = sub_B0D9A8(this);
+      sub_B0D948(v11, 0LL);
     }
     this = *(OtherUserGameEntity_o **)(v9 + 8 * v8);
     if ( supportDeckId < 1 )
@@ -1109,8 +1107,8 @@ ServantLeaderInfo_o *__fastcall OtherUserGameEntity__getServantLeaderInfo(
     {
       if ( v9 >= v8 )
       {
-        v10 = sub_B2C460(this);
-        sub_B2C400(v10, 0LL);
+        v10 = sub_B0D9A8(this);
+        sub_B0D948(v10, 0LL);
       }
       this = *(OtherUserGameEntity_o **)(v7 + 8LL * (int)v9 + 32);
       if ( !this )
@@ -1125,7 +1123,7 @@ ServantLeaderInfo_o *__fastcall OtherUserGameEntity__getServantLeaderInfo(
         return 0LL;
     }
 LABEL_16:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   }
   return 0LL;
 }
@@ -1149,7 +1147,7 @@ System_Int32_array *__fastcall OtherUserGameEntity__getSkillIdList(
   v5 = *(__int64 *)((char *)&this->klass + v4);
   if ( !v5 )
 LABEL_14:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v6 = *(_DWORD *)(v5 + 24);
   if ( v6 < 1 )
     return 0LL;
@@ -1158,8 +1156,8 @@ LABEL_14:
   {
     if ( v7 >= v6 )
     {
-      v9 = sub_B2C460(this);
-      sub_B2C400(v9, 0LL);
+      v9 = sub_B0D9A8(this);
+      sub_B0D948(v9, 0LL);
     }
     this = *(OtherUserGameEntity_o **)(v5 + 8LL * (int)v7 + 32);
     if ( !this )
@@ -1192,11 +1190,11 @@ void __fastcall OtherUserGameEntity__getSkillInfo(
   __int64 v19; // x0
 
   v10 = this;
-  if ( (byte_41851C3 & 1) == 0 )
+  if ( (byte_42120AD & 1) == 0 )
   {
-    sub_B2C35C(&BalanceConfig_TypeInfo, skillInfoList);
-    this = (OtherUserGameEntity_o *)sub_B2C35C(&SkillInfo___TypeInfo, v11);
-    byte_41851C3 = 1;
+    sub_B0D8A4(&BalanceConfig_TypeInfo, skillInfoList);
+    this = (OtherUserGameEntity_o *)sub_B0D8A4(&SkillInfo___TypeInfo, v11);
+    byte_42120AD = 1;
   }
   v12 = 80LL;
   if ( !returnSupportServantType )
@@ -1204,7 +1202,7 @@ void __fastcall OtherUserGameEntity__getSkillInfo(
   v13 = *(__int64 *)((char *)&v10->klass + v12);
   if ( !v13 )
 LABEL_23:
-    sub_B2C434(this, skillInfoList);
+    sub_B0D97C(this);
   v14 = *(unsigned int *)(v13 + 24);
   if ( (__int64)(v14 << 32) >= 1 )
   {
@@ -1214,8 +1212,8 @@ LABEL_23:
     {
       if ( v15 >= v14 )
       {
-        v19 = sub_B2C460(this);
-        sub_B2C400(v19, 0LL);
+        v19 = sub_B0D9A8(this);
+        sub_B0D948(v19, 0LL);
       }
       this = *(OtherUserGameEntity_o **)(v16 + 8 * v15);
       if ( supportDeckId < 1 )
@@ -1247,9 +1245,9 @@ LABEL_16:
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v17 = BalanceConfig_TypeInfo;
   }
-  v18 = (SkillInfo_array *)sub_B2C374(SkillInfo___TypeInfo, (unsigned int)v17->static_fields->SvtSkillListMax);
+  v18 = (SkillInfo_array *)sub_B0D8BC(SkillInfo___TypeInfo, (unsigned int)v17->static_fields->SvtSkillListMax);
   *skillInfoList = v18;
-  sub_B2C2F8(skillInfoList, v18);
+  sub_B0D840(skillInfoList, v18);
 }
 
 
@@ -1271,7 +1269,7 @@ System_Int32_array *__fastcall OtherUserGameEntity__getSkillLevelList(
   v5 = *(__int64 *)((char *)&this->klass + v4);
   if ( !v5 )
 LABEL_14:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v6 = *(_DWORD *)(v5 + 24);
   if ( v6 < 1 )
     return 0LL;
@@ -1280,8 +1278,8 @@ LABEL_14:
   {
     if ( v7 >= v6 )
     {
-      v9 = sub_B2C460(this);
-      sub_B2C400(v9, 0LL);
+      v9 = sub_B0D9A8(this);
+      sub_B0D948(v9, 0LL);
     }
     this = *(OtherUserGameEntity_o **)(v5 + 8LL * (int)v7 + 32);
     if ( !this )
@@ -1315,12 +1313,12 @@ int32_t __fastcall OtherUserGameEntity__getSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
   v8 = this;
-  if ( (byte_41851C0 & 1) == 0 )
+  if ( (byte_42120AA & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_B2C35C(
+    this = (OtherUserGameEntity_o *)sub_B0D8A4(
                                       &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
                                       *(_QWORD *)&classPos);
-    byte_41851C0 = 1;
+    byte_42120AA = 1;
   }
   v9 = 80LL;
   if ( !returnSupportServantType )
@@ -1328,7 +1326,7 @@ int32_t __fastcall OtherUserGameEntity__getSvtId(
   v10 = *(__int64 *)((char *)&v8->klass + v9);
   if ( !v10 )
 LABEL_23:
-    sub_B2C434(this, *(_QWORD *)&classPos);
+    sub_B0D97C(this);
   v11 = *(unsigned int *)(v10 + 24);
   if ( (__int64)(v11 << 32) < 1 )
     return 0;
@@ -1338,8 +1336,8 @@ LABEL_23:
   {
     if ( v12 >= v11 )
     {
-      v18 = sub_B2C460(this);
-      sub_B2C400(v18, 0LL);
+      v18 = sub_B0D9A8(this);
+      sub_B0D948(v18, 0LL);
     }
     v14 = *(_QWORD *)(v13 + 8 * v12);
     if ( supportDeckId < 1 )
@@ -1369,10 +1367,11 @@ LABEL_16:
   }
   *(_QWORD *)&v19.fields.currentCryptoKey = v17;
   *(_QWORD *)&v19.fields.fakeValue = v16;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44758064(v19, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v19, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo(
         OtherUserGameEntity_o *this,
         TreasureDvcInfo_o **tdInfo,
@@ -1391,10 +1390,10 @@ bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo(
   __int64 v18; // x0
 
   v10 = this;
-  if ( (byte_41851C4 & 1) == 0 )
+  if ( (byte_42120AE & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_B2C35C(&TreasureDvcInfo_TypeInfo, tdInfo);
-    byte_41851C4 = 1;
+    this = (OtherUserGameEntity_o *)sub_B0D8A4(&TreasureDvcInfo_TypeInfo, tdInfo);
+    byte_42120AE = 1;
   }
   v11 = 80LL;
   if ( !returnSupportServantType )
@@ -1402,15 +1401,15 @@ bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo(
   v12 = *(__int64 *)((char *)&v10->klass + v11);
   if ( !v12 )
 LABEL_20:
-    sub_B2C434(this, tdInfo);
+    sub_B0D97C(this);
   v13 = *(unsigned int *)(v12 + 24);
   if ( (__int64)(v13 << 32) < 1 )
   {
 LABEL_17:
-    v16 = (TreasureDvcInfo_o *)sub_B2C42C(TreasureDvcInfo_TypeInfo);
+    v16 = (TreasureDvcInfo_o *)sub_B0D974(TreasureDvcInfo_TypeInfo, tdInfo, *(_QWORD *)&classPos);
     TreasureDvcInfo___ctor(v16, 0LL);
     *tdInfo = v16;
-    sub_B2C2F8(tdInfo, v16);
+    sub_B0D840(tdInfo, v16);
     return 0;
   }
   v14 = 0LL;
@@ -1419,8 +1418,8 @@ LABEL_17:
   {
     if ( v14 >= v13 )
     {
-      v18 = sub_B2C460(this);
-      sub_B2C400(v18, 0LL);
+      v18 = sub_B0D9A8(this);
+      sub_B0D948(v18, 0LL);
     }
     this = *(OtherUserGameEntity_o **)(v15 + 8 * v14);
     if ( supportDeckId < 1 )
@@ -1444,7 +1443,7 @@ LABEL_16:
 }
 
 
-bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo_20166884(
+bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo_19848560(
         OtherUserGameEntity_o *this,
         int32_t *tdLv,
         int32_t *tdMaxLv,
@@ -1464,7 +1463,7 @@ bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo_20166884(
   v7 = *(__int64 *)((char *)&this->klass + v6);
   if ( !v7 )
 LABEL_14:
-    sub_B2C434(this, tdLv);
+    sub_B0D97C(this);
   v8 = *(_DWORD *)(v7 + 24);
   if ( v8 < 1 )
   {
@@ -1480,14 +1479,14 @@ LABEL_11:
     {
       if ( v9 >= v8 )
       {
-        v11 = sub_B2C460(this);
-        sub_B2C400(v11, 0LL);
+        v11 = sub_B0D9A8(this);
+        sub_B0D948(v11, 0LL);
       }
       this = *(OtherUserGameEntity_o **)(v7 + 8LL * (int)v9 + 32);
       if ( !this )
         goto LABEL_14;
       if ( this->fields.userLv == classPos && this->fields.friendCode )
-        return ServantLeaderInfo__getTreasureDeviceInfo_29340648((ServantLeaderInfo_o *)this, tdLv, tdMaxLv, 0LL);
+        return ServantLeaderInfo__getTreasureDeviceInfo_28153448((ServantLeaderInfo_o *)this, tdLv, tdMaxLv, 0LL);
       if ( (int)++v9 >= v8 )
         goto LABEL_11;
     }
@@ -1515,7 +1514,7 @@ int32_t __fastcall OtherUserGameEntity__getTreasureDeviceLevelIcon(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_18:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v7 = *(unsigned int *)(v6 + 24);
   if ( (__int64)(v7 << 32) < 1 )
     return 0;
@@ -1525,8 +1524,8 @@ LABEL_18:
   {
     if ( v8 >= v7 )
     {
-      v11 = sub_B2C460(this);
-      sub_B2C400(v11, 0LL);
+      v11 = sub_B0D9A8(this);
+      sub_B0D948(v11, 0LL);
     }
     this = *(OtherUserGameEntity_o **)(v9 + 8 * v8);
     if ( supportDeckId < 1 )
@@ -1564,13 +1563,13 @@ int64_t __fastcall OtherUserGameEntity__getUpdatedAt(
     goto LABEL_5;
   if ( !userSvtLeaderHash->max_length )
   {
-    v6 = sub_B2C460(this);
-    sub_B2C400(v6, 0LL);
+    v6 = sub_B0D9A8(this);
+    sub_B0D948(v6, 0LL);
   }
   v4 = userSvtLeaderHash->m_Items[0];
   if ( !v4 )
 LABEL_5:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   return v4->fields.updatedAt;
 }
 
@@ -1594,7 +1593,7 @@ int64_t __fastcall OtherUserGameEntity__getUserSvtId(
   v5 = *(__int64 *)((char *)&this->klass + v4);
   if ( !v5 )
 LABEL_14:
-    sub_B2C434(this, classPos);
+    sub_B0D97C(this);
   v6 = *(_DWORD *)(v5 + 24);
   if ( v6 < 1 )
     return 0LL;
@@ -1603,8 +1602,8 @@ LABEL_14:
   {
     if ( v7 >= v6 )
     {
-      v10 = sub_B2C460(this);
-      sub_B2C400(v10, 0LL);
+      v10 = sub_B0D9A8(this);
+      sub_B0D948(v10, 0LL);
     }
     v8 = *(_QWORD *)(v5 + 8LL * (int)v7 + 32);
     if ( !v8 )

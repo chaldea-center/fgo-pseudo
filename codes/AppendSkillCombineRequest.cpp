@@ -14,16 +14,16 @@ void __fastcall AppendSkillCombineRequest__beginRequest(
   __int64 v9; // x1
   __int64 v10; // x1
 
-  if ( (byte_418A6A6 & 1) == 0 )
+  if ( (byte_42173CE & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_22144/*"skillNum"*/, baseUsrSvtId);
-    sub_B2C35C(&StringLiteral_16623/*"baseUserSvtId"*/, v9);
-    sub_B2C35C(&StringLiteral_17832/*"currentSkillLv"*/, v10);
-    byte_418A6A6 = 1;
+    sub_B0D8A4(&StringLiteral_22219/*"skillNum"*/, baseUsrSvtId);
+    sub_B0D8A4(&StringLiteral_16672/*"baseUserSvtId"*/, v9);
+    sub_B0D8A4(&StringLiteral_17888/*"currentSkillLv"*/, v10);
+    byte_42173CE = 1;
   }
-  RequestBase__addField_31051460((RequestBase_o *)this, (System_String_o *)StringLiteral_16623/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22144/*"skillNum"*/, skillNum, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17832/*"currentSkillLv"*/, currentSkillLv, 0LL);
+  RequestBase__addField_30435180((RequestBase_o *)this, (System_String_o *)StringLiteral_16672/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22219/*"skillNum"*/, skillNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17888/*"currentSkillLv"*/, currentSkillLv, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -35,11 +35,11 @@ System_String_o *__fastcall AppendSkillCombineRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_418A6A5 & 1) == 0 )
+  if ( (byte_42173CD & 1) == 0 )
   {
-    sub_B2C35C(&NetworkManager_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_17214/*"card/combineAppendPassiveSkill"*/, v2);
-    byte_418A6A5 = 1;
+    sub_B0D8A4(&NetworkManager_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_17266/*"card/combineAppendPassiveSkill"*/, v2);
+    byte_42173CD = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -47,7 +47,7 @@ System_String_o *__fastcall AppendSkillCombineRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44305532(BaseUrl, (System_String_o *)StringLiteral_17214/*"card/combineAppendPassiveSkill"*/, 0LL);
+  return System_String__Concat_43849904(BaseUrl, (System_String_o *)StringLiteral_17266/*"card/combineAppendPassiveSkill"*/, 0LL);
 }
 
 
@@ -63,12 +63,12 @@ void __fastcall AppendSkillCombineRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_418A6A7 & 1) == 0 )
+  if ( (byte_42173CF & 1) == 0 )
   {
-    sub_B2C35C(&JsonManager_TypeInfo, responseList);
-    sub_B2C35C(&ResponseCommandKind_TypeInfo, v5);
-    sub_B2C35C(&StringLiteral_21068/*"ng"*/, v6);
-    byte_418A6A7 = 1;
+    sub_B0D8A4(&JsonManager_TypeInfo, responseList);
+    sub_B0D8A4(&ResponseCommandKind_TypeInfo, v5);
+    sub_B0D8A4(&StringLiteral_21137/*"ng"*/, v6);
+    byte_42173CF = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -76,7 +76,7 @@ void __fastcall AppendSkillCombineRequest__requestCompleted(
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
   v7 = ResponseCommandKind__SearchData(107, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_31019724(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_30403444(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -85,7 +85,7 @@ void __fastcall AppendSkillCombineRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21068/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_21137/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

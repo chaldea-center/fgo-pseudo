@@ -16,7 +16,7 @@ void __fastcall FieldBuffDeleteProcess__Init(
   System_Int32_array *v7; // x7
 
   this->fields._FieldEnvData_k__BackingField = fieldEnvData;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)fieldEnvData,
     (System_String_array **)method,
@@ -48,7 +48,7 @@ void __fastcall FieldBuffDeleteProcess__set_FieldEnvData(
   System_Int32_array *v7; // x7
 
   this->fields._FieldEnvData_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields,
     (System_Int32_array **)value,
     (System_String_array **)method,

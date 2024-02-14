@@ -7,11 +7,10 @@ void __fastcall AutoBattleButtonComponent___ctor(AutoBattleButtonComponent_o *th
 void __fastcall AutoBattleButtonComponent__InitButton(AutoBattleButtonComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v3; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_B2C434(0LL, v3);
+    sub_B0D97C(0LL);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 

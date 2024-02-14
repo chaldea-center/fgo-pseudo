@@ -14,53 +14,54 @@ void __fastcall ServantCoinConfirmListViewManager__CreateList(
   __int64 v5; // x1
   UIScrollView_o *scrollView; // x0
   __int64 v7; // x1
-  __int64 v8; // x24
-  unsigned int v9; // w21
-  GetSvtCoin_o *v10; // x8
+  __int64 v8; // x2
+  __int64 v9; // x24
+  unsigned int v10; // w21
+  GetSvtCoin_o *v11; // x8
   struct System_Collections_Generic_List_ListViewItem__o *itemList; // x22
-  ListViewItem_c *v12; // x27
-  ListViewItem_o *v13; // x23
-  __int64 v14; // x0
+  ListViewItem_c *v13; // x27
+  ListViewItem_o *v14; // x23
+  __int64 v15; // x0
 
-  if ( (byte_4189E8C & 1) == 0 )
+  if ( (byte_4215EAF & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_ListViewItem__Add__, svtCoins);
-    sub_B2C35C(&ServantCoinConfirmListViewItem_TypeInfo, v5);
-    byte_4189E8C = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_ListViewItem__Add__, svtCoins);
+    sub_B0D8A4(&ServantCoinConfirmListViewItem_TypeInfo, v5);
+    byte_4215EAF = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   if ( !svtCoins )
     goto LABEL_13;
-  v8 = *(_QWORD *)&svtCoins->max_length;
-  if ( (int)v8 >= 1 )
+  v9 = *(_QWORD *)&svtCoins->max_length;
+  if ( (int)v9 >= 1 )
   {
-    v9 = 0;
+    v10 = 0;
     while ( 1 )
     {
-      v10 = svtCoins->m_Items[v9];
-      if ( !v10 )
+      v11 = svtCoins->m_Items[v10];
+      if ( !v11 )
         break;
       itemList = this->fields.itemList;
-      v12 = *(ListViewItem_c **)&v10->fields.itemId;
-      v13 = (ListViewItem_o *)sub_B2C42C(ServantCoinConfirmListViewItem_TypeInfo);
-      ListViewItem___ctor_24128628(v13, v9, 0LL);
-      v13[1].klass = v12;
+      v13 = *(ListViewItem_c **)&v11->fields.itemId;
+      v14 = (ListViewItem_o *)sub_B0D974(ServantCoinConfirmListViewItem_TypeInfo, v7, v8);
+      ListViewItem___ctor_23700744(v14, v10, 0LL);
+      v14[1].klass = v13;
       if ( !itemList )
         break;
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)itemList,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v13,
-        (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
-      if ( (int)++v9 >= (int)v8 )
+        (EventMissionProgressRequest_Argument_ProgressData_o *)v14,
+        (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_ListViewItem__Add__);
+      if ( (int)++v10 >= (int)v9 )
         goto LABEL_11;
-      if ( v9 >= svtCoins->max_length )
+      if ( v10 >= svtCoins->max_length )
       {
-        v14 = sub_B2C460(scrollView);
-        sub_B2C400(v14, 0LL);
+        v15 = sub_B0D9A8(scrollView);
+        sub_B0D948(v15, 0LL);
       }
     }
 LABEL_13:
-    sub_B2C434(scrollView, v7);
+    sub_B0D97C(scrollView);
   }
 LABEL_11:
   scrollView = this->fields.scrollView;
@@ -79,17 +80,17 @@ void __fastcall ServantCoinConfirmListViewManager__SetObjectItem(
 {
   __int64 v5; // x10
 
-  if ( (byte_4189E8D & 1) == 0 )
+  if ( (byte_4215EB0 & 1) == 0 )
   {
-    this = (ServantCoinConfirmListViewManager_o *)sub_B2C35C(&ServantCoinConfirmListViewObject_TypeInfo, obj);
-    byte_4189E8D = 1;
+    this = (ServantCoinConfirmListViewManager_o *)sub_B0D8A4(&ServantCoinConfirmListViewObject_TypeInfo, obj);
+    byte_4215EB0 = 1;
   }
   if ( !obj
     || (v5 = *(&ServantCoinConfirmListViewObject_TypeInfo->_2.bitflags2 + 1),
         *(&obj->klass->_2.bitflags2 + 1) < (unsigned int)v5)
     || (ServantCoinConfirmListViewObject_c *)obj->klass->_2.typeHierarchy[v5 - 1] != ServantCoinConfirmListViewObject_TypeInfo )
   {
-    sub_B2C434(this, obj);
+    sub_B0D97C(this);
   }
   ServantCoinConfirmListViewObject__SetupDisp((ServantCoinConfirmListViewObject_o *)obj, (const MethodInfo *)obj);
 }

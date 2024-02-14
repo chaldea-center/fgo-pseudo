@@ -1,9 +1,9 @@
 void __fastcall WarBoardSwapConfirmPopup___ctor(WarBoardSwapConfirmPopup_o *this, const MethodInfo *method)
 {
-  if ( (byte_4189326 & 1) == 0 )
+  if ( (byte_421660F & 1) == 0 )
   {
-    sub_B2C35C(&WarBoardInfoPopupBase_TypeInfo, method);
-    byte_4189326 = 1;
+    sub_B0D8A4(&WarBoardInfoPopupBase_TypeInfo, method);
+    byte_421660F = 1;
   }
   this->fields.nameLabelMaxWidth = 440.0;
   if ( (BYTE3(WarBoardInfoPopupBase_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -35,13 +35,13 @@ void __fastcall WarBoardSwapConfirmPopup__ClosePopup(
   WarBoardSwapConfirmPopup_o *v17; // x0
   const MethodInfo *v18; // x1
 
-  if ( (byte_4189325 & 1) == 0 )
+  if ( (byte_421660E & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, hideCallback);
-    byte_4189325 = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, hideCallback);
+    byte_421660E = 1;
   }
   this->fields.hideCompleteCallback = 0LL;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.hideCompleteCallback,
     0LL,
     (System_String_array **)method,
@@ -56,13 +56,13 @@ void __fastcall WarBoardSwapConfirmPopup__ClosePopup(
           0LL);
   if ( v10 && (System_Action_c *)v10->klass != System_Action_TypeInfo )
   {
-    v17 = (WarBoardSwapConfirmPopup_o *)sub_B2C728(v10);
+    v17 = (WarBoardSwapConfirmPopup_o *)sub_B0DC70(v10);
     WarBoardSwapConfirmPopup___ctor(v17, v18);
   }
   else
   {
     this->fields.hideCompleteCallback = (struct System_Action_o *)v10;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)&this->fields.hideCompleteCallback,
       (System_Int32_array **)v10,
       v11,
@@ -78,13 +78,12 @@ void __fastcall WarBoardSwapConfirmPopup__ClosePopup(
 
 void __fastcall WarBoardSwapConfirmPopup__Initialize(WarBoardSwapConfirmPopup_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UISkinSprite_o *windowBase; // x0
 
   WarBoardInfoPopupBase__Initialize((WarBoardInfoPopupBase_o *)this, 0LL);
   windowBase = this->fields.windowBase;
   if ( !windowBase )
-    sub_B2C434(0LL, v3);
+    sub_B0D97C(0LL);
   UISkinSprite__setupSprite(windowBase, 0LL);
 }
 
@@ -94,11 +93,11 @@ void __fastcall WarBoardSwapConfirmPopup__OnClickNo(WarBoardSwapConfirmPopup_o *
   __int64 v3; // x1
   System_Action_bool__o *clickCallback; // x0
 
-  if ( (byte_4189324 & 1) == 0 )
+  if ( (byte_421660D & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Action_bool__Invoke__, method);
-    sub_B2C35C(&SoundManager_TypeInfo, v3);
-    byte_4189324 = 1;
+    sub_B0D8A4(&Method_System_Action_bool__Invoke__, method);
+    sub_B0D8A4(&SoundManager_TypeInfo, v3);
+    byte_421660D = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, 0LL)
     && !WarBoardInfoPopupBase__get_isAnimating((WarBoardInfoPopupBase_o *)this, 0LL) )
@@ -111,7 +110,7 @@ void __fastcall WarBoardSwapConfirmPopup__OnClickNo(WarBoardSwapConfirmPopup_o *
     SoundManager__playSystemSe(1, 0LL);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
-      System_Action_bool___Invoke(clickCallback, 0, (const MethodInfo_24B7BA4 *)Method_System_Action_bool__Invoke__);
+      System_Action_bool___Invoke(clickCallback, 0, (const MethodInfo_246AB08 *)Method_System_Action_bool__Invoke__);
   }
 }
 
@@ -121,11 +120,11 @@ void __fastcall WarBoardSwapConfirmPopup__OnClickYes(WarBoardSwapConfirmPopup_o 
   __int64 v3; // x1
   System_Action_bool__o *clickCallback; // x0
 
-  if ( (byte_4189323 & 1) == 0 )
+  if ( (byte_421660C & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Action_bool__Invoke__, method);
-    sub_B2C35C(&SoundManager_TypeInfo, v3);
-    byte_4189323 = 1;
+    sub_B0D8A4(&Method_System_Action_bool__Invoke__, method);
+    sub_B0D8A4(&SoundManager_TypeInfo, v3);
+    byte_421660C = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, 0LL)
     && !WarBoardInfoPopupBase__get_isAnimating((WarBoardInfoPopupBase_o *)this, 0LL) )
@@ -138,7 +137,7 @@ void __fastcall WarBoardSwapConfirmPopup__OnClickYes(WarBoardSwapConfirmPopup_o 
     SoundManager__playSystemSe(8, 0LL);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
-      System_Action_bool___Invoke(clickCallback, 1, (const MethodInfo_24B7BA4 *)Method_System_Action_bool__Invoke__);
+      System_Action_bool___Invoke(clickCallback, 1, (const MethodInfo_246AB08 *)Method_System_Action_bool__Invoke__);
   }
 }
 
@@ -154,12 +153,11 @@ void __fastcall WarBoardSwapConfirmPopup__OpenConfirmPopup(
         const MethodInfo *method)
 {
   struct System_Action_bool__o **p_clickCallback; // x25
-  __int64 v15; // x1
   UILabel_o *nameLabel01; // x0
 
   this->fields.clickCallback = clickCallback;
   p_clickCallback = &this->fields.clickCallback;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.clickCallback,
     (System_Int32_array **)clickCallback,
     (System_String_array **)message,
@@ -184,12 +182,12 @@ void __fastcall WarBoardSwapConfirmPopup__OpenConfirmPopup(
   if ( !nameLabel01
     || (UILabel__set_text(nameLabel01, yesButton, 0LL), (nameLabel01 = this->fields.noButtonLabel) == 0LL)
     || (UILabel__set_text(nameLabel01, noButton, 0LL), (nameLabel01 = this->fields.nameLabel01) == 0LL)
-    || (UILabel__SetCondensedScale_41673556(nameLabel01, this->fields.nameLabelMaxWidth, 0LL),
+    || (UILabel__SetCondensedScale_41140248(nameLabel01, this->fields.nameLabelMaxWidth, 0LL),
         (nameLabel01 = this->fields.nameLabel02) == 0LL) )
   {
 LABEL_9:
-    sub_B2C434(nameLabel01, v15);
+    sub_B0D97C(nameLabel01);
   }
-  UILabel__SetCondensedScale_41673556(nameLabel01, this->fields.nameLabelMaxWidth, 0LL);
+  UILabel__SetCondensedScale_41140248(nameLabel01, this->fields.nameLabelMaxWidth, 0LL);
   WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, 0LL);
 }

@@ -10,7 +10,7 @@ void __fastcall BaseBattleInfoPosData__Init(
         const MethodInfo *method)
 {
   this->fields._Perf_k__BackingField = perf;
-  sub_B2C2F8(&this->fields, perf);
+  sub_B0D840(&this->fields, perf);
 }
 
 
@@ -57,5 +57,5 @@ void __fastcall BaseBattleInfoPosData__set_Perf(
         const MethodInfo *method)
 {
   this->fields._Perf_k__BackingField = value;
-  sub_B2C2F8(&this->fields, value);
+  sub_B0D840(&this->fields, value);
 }

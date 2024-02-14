@@ -2,7 +2,7 @@ void __fastcall BattleCallBack_object____ctor(
         BattleCallBack_T__o *this,
         Il2CppObject *argument,
         System_Action_T__o *callBack,
-        const MethodInfo_2D60054 *method)
+        const MethodInfo_2D54EA8 *method)
 {
   System_String_array **v7; // x2
   System_String_array **v8; // x3
@@ -18,12 +18,12 @@ void __fastcall BattleCallBack_object____ctor(
   System_Int32_array *v18; // x7
 
   if ( !this )
-    sub_B2C434(0LL, argument);
+    sub_B0D97C(0LL);
   BattleCallBackBase___ctor((BattleCallBackBase_o *)this, 0LL);
   this->fields.argument = argument;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)argument, v7, v8, v9, v10, v11, v12);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)argument, v7, v8, v9, v10, v11, v12);
   this->fields.callBack = callBack;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.callBack,
     (System_Int32_array **)callBack,
     v13,
@@ -35,13 +35,13 @@ void __fastcall BattleCallBack_object____ctor(
 }
 
 
-void __fastcall BattleCallBack_object___call(BattleCallBack_T__o *this, const MethodInfo_2D600AC *method)
+void __fastcall BattleCallBack_object___call(BattleCallBack_T__o *this, const MethodInfo_2D54F00 *method)
 {
   struct System_Action_T__o *callBack; // x0
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   ((void (__fastcall *)(struct System_Action_T__o *, Il2CppObject *))method->klass->rgctx_data->_0_System_Action_T__Invoke->methodPointer)(
     callBack,
     this->fields.argument);

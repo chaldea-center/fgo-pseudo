@@ -11,16 +11,16 @@ void __fastcall BattlePerformanceTurnSituationComponent___cctor(const MethodInfo
   BattleServantConfConponent_o *static_fields; // x0
   System_Int32_array **v10; // x1
 
-  if ( (byte_4188525 & 1) == 0 )
+  if ( (byte_4215203 & 1) == 0 )
   {
-    sub_B2C35C(&BattlePerformanceTurnSituationComponent_TypeInfo, v1);
-    sub_B2C35C(&StringLiteral_2535/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/, v8);
-    byte_4188525 = 1;
+    sub_B0D8A4(&BattlePerformanceTurnSituationComponent_TypeInfo, v1);
+    sub_B0D8A4(&StringLiteral_2546/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/, v8);
+    byte_4215203 = 1;
   }
   static_fields = (BattleServantConfConponent_o *)BattlePerformanceTurnSituationComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_2535/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
-  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2535/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
-  sub_B2C2F8(static_fields, v10, v2, v3, v4, v5, v6, v7);
+  v10 = (System_Int32_array **)StringLiteral_2546/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
+  static_fields->klass = (BattleServantConfConponent_c *)StringLiteral_2546/*"BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}"*/;
+  sub_B0D840(static_fields, v10, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -54,13 +54,13 @@ void __fastcall BattlePerformanceTurnSituationComponent__SetLabelWithRaidName(
   int64_t v20; // [xsp+8h] [xbp-38h] BYREF
   int32_t v21; // [xsp+1Ch] [xbp-24h] BYREF
 
-  if ( (byte_4188524 & 1) == 0 )
+  if ( (byte_4215202 & 1) == 0 )
   {
-    sub_B2C35C(&BattlePerformanceTurnSituationComponent_TypeInfo, *(_QWORD *)&situationNo);
-    sub_B2C35C(&int_TypeInfo, v9);
-    sub_B2C35C(&long_TypeInfo, v10);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v11);
-    byte_4188524 = 1;
+    sub_B0D8A4(&BattlePerformanceTurnSituationComponent_TypeInfo, *(_QWORD *)&situationNo);
+    sub_B0D8A4(&int_TypeInfo, v9);
+    sub_B0D8A4(&long_TypeInfo, v10);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v11);
+    byte_4215202 = 1;
   }
   v12 = BattlePerformanceTurnSituationComponent_TypeInfo;
   if ( (BYTE3(BattlePerformanceTurnSituationComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -81,7 +81,7 @@ void __fastcall BattlePerformanceTurnSituationComponent__SetLabelWithRaidName(
   v16 = LocalizationManager__Get(v15, 0LL);
   v20 = param;
   v17 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v20);
-  v18 = System_String__Format_44301068(v16, (Il2CppObject *)bossName, v17, 0LL);
+  v18 = System_String__Format_43845440(v16, (Il2CppObject *)bossName, v17, 0LL);
   BattlePerformanceTurnSituationComponent__setMessage(this, v18, v19);
 }
 
@@ -94,17 +94,16 @@ void __fastcall BattlePerformanceTurnSituationComponent__setMessage(
   __int64 v5; // x1
   UnityEngine_Object_o *Component_WebViewObject; // x20
   _BOOL8 v7; // x0
-  __int64 v8; // x1
 
-  if ( (byte_4188523 & 1) == 0 )
+  if ( (byte_4215201 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_UILabel___, message);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
-    byte_4188523 = 1;
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_UILabel___, message);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
+    byte_4215201 = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_UILabel___);
+                                                      (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_UILabel___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -114,7 +113,7 @@ void __fastcall BattlePerformanceTurnSituationComponent__setMessage(
   if ( !v7 )
   {
     if ( !Component_WebViewObject )
-      sub_B2C434(v7, v8);
+      sub_B0D97C(v7);
     UILabel__set_text((UILabel_o *)Component_WebViewObject, message, 0LL);
   }
 }

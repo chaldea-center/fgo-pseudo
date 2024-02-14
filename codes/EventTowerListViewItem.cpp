@@ -20,41 +20,40 @@ void __fastcall EventTowerListViewItem___ctor(
   System_Int32_array *v21; // x6
   System_Int32_array *v22; // x7
   DataManager_o *Instance; // x0
-  __int64 v24; // x1
   struct GiftEntity_o *DataById; // x0
   struct GiftEntity_o **p_clearReward; // x20
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
+  System_String_array **v26; // x2
+  System_String_array **v27; // x3
+  System_Boolean_array **v28; // x4
+  System_Int32_array **v29; // x5
+  System_Int32_array *v30; // x6
+  System_Int32_array *v31; // x7
   struct GiftEntity_o *clearReward; // x8
-  struct ServantEntity_o *v34; // x1
-  System_String_array **v35; // x2
-  System_String_array **v36; // x3
-  System_Boolean_array **v37; // x4
-  System_Int32_array **v38; // x5
-  System_Int32_array *v39; // x6
-  System_Int32_array *v40; // x7
+  struct ServantEntity_o *v33; // x1
+  System_String_array **v34; // x2
+  System_String_array **v35; // x3
+  System_Boolean_array **v36; // x4
+  System_Int32_array **v37; // x5
+  System_Int32_array *v38; // x6
+  System_Int32_array *v39; // x7
   BattleServantConfConponent_o *p_servantEntity; // x19
-  System_String_o *v42; // x21
-  System_String_o *v43; // x0
-  int32_t v44; // w20
-  System_String_o *v45; // x0
-  int32_t v46; // w21
+  System_String_o *v41; // x21
+  System_String_o *v42; // x0
+  int32_t v43; // w20
+  System_String_o *v44; // x0
+  int32_t v45; // w21
   ServantCostumeEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_418822C & 1) == 0 )
+  if ( (byte_421509E & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_GiftMaster___, targetEntity);
-    sub_B2C35C(&Method_DataManager_GetMasterData_ItemMaster___, v9);
-    sub_B2C35C(&Method_DataManager_GetMasterData_ServantCostumeMaster___, v10);
-    sub_B2C35C(&Method_DataManager_GetMasterData_ServantMaster___, v11);
-    sub_B2C35C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
-    sub_B2C35C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v13);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    byte_418822C = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_GiftMaster___, targetEntity);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_ItemMaster___, v9);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_ServantCostumeMaster___, v10);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_ServantMaster___, v11);
+    sub_B0D8A4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
+    sub_B0D8A4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v13);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_421509E = 1;
   }
   entity = 0LL;
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
@@ -63,7 +62,7 @@ void __fastcall EventTowerListViewItem___ctor(
   p_itemInfo = &this->fields.itemInfo;
   this->fields.isClearFloor = v15;
   this->fields.isOpenFloor = isOpenFloor;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.itemInfo,
     (System_Int32_array **)targetEntity,
     v17,
@@ -72,93 +71,93 @@ void __fastcall EventTowerListViewItem___ctor(
     v20,
     v21,
     v22);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_GiftMaster___);
+                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !*p_itemInfo || !Instance )
     goto LABEL_24;
   DataById = GiftMaster__getDataById((GiftMaster_o *)Instance, (*p_itemInfo)->fields.giftId, 0LL);
   this->fields.clearReward = DataById;
   p_clearReward = &this->fields.clearReward;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.clearReward,
     (System_Int32_array **)DataById,
+    v26,
     v27,
     v28,
     v29,
     v30,
-    v31,
-    v32);
+    v31);
   if ( !this->fields.clearReward )
     return;
   GiftEntity__GetInfo(this->fields.clearReward, &this->fields.rewardName, &this->fields.rewardNum, 0LL);
   clearReward = this->fields.clearReward;
   if ( !clearReward )
 LABEL_24:
-    sub_B2C434(Instance, v24);
+    sub_B0D97C(Instance);
   switch ( clearReward->fields.type )
   {
     case 1:
     case 6:
     case 7:
-      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_24;
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ServantMaster___);
+                                    (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( !*p_clearReward || !Instance )
         goto LABEL_24;
-      v34 = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+      v33 = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                         (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                         (*p_clearReward)->fields.objectId,
-                                        (const MethodInfo_24E40D0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-      this->fields.servantEntity = v34;
+                                        (const MethodInfo_2669BD4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+      this->fields.servantEntity = v33;
       p_servantEntity = (BattleServantConfConponent_o *)&this->fields.servantEntity;
       goto LABEL_22;
     case 2:
-      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_24;
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ItemMaster___);
+                                    (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ItemMaster___);
       if ( !*p_clearReward || !Instance )
         goto LABEL_24;
-      v34 = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
+      v33 = (struct ServantEntity_o *)DataMasterBase_WarMaster__WarEntity__int___GetEntity(
                                         (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
                                         (*p_clearReward)->fields.objectId,
-                                        (const MethodInfo_24E40D0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-      this->fields.itemEntity = (struct ItemEntity_o *)v34;
+                                        (const MethodInfo_2669BD4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+      this->fields.itemEntity = (struct ItemEntity_o *)v33;
       p_servantEntity = (BattleServantConfConponent_o *)&this->fields.itemEntity;
       goto LABEL_22;
     case 9:
       Instance = (DataManager_o *)System_Int32__ToString((int)clearReward + 24, 0LL);
       if ( !Instance )
         goto LABEL_24;
-      v42 = (System_String_o *)Instance;
-      v43 = System_String__Substring_44369268((System_String_o *)Instance, 0, Instance->fields.m_CachedPtr - 2, 0LL);
-      v44 = System_Int32__Parse(v43, 0LL);
-      v45 = System_String__Substring(v42, v42->fields.m_stringLength - 2, 0LL);
-      v46 = System_Int32__Parse(v45, 0LL);
-      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v41 = (System_String_o *)Instance;
+      v42 = System_String__Substring_43913640((System_String_o *)Instance, 0, Instance->fields.m_CachedPtr - 2, 0LL);
+      v43 = System_Int32__Parse(v42, 0LL);
+      v44 = System_String__Substring(v41, v41->fields.m_stringLength - 2, 0LL);
+      v45 = System_Int32__Parse(v44, 0LL);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_24;
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                                    (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
       if ( !Instance )
         goto LABEL_24;
-      if ( !ServantCostumeMaster__TryGetEntity((ServantCostumeMaster_o *)Instance, &entity, v44, v46, 0LL) )
+      if ( !ServantCostumeMaster__TryGetEntity((ServantCostumeMaster_o *)Instance, &entity, v43, v45, 0LL) )
         return;
-      v34 = (struct ServantEntity_o *)entity;
+      v33 = (struct ServantEntity_o *)entity;
       this->fields.servantCostumeEntity = entity;
       p_servantEntity = (BattleServantConfConponent_o *)&this->fields.servantCostumeEntity;
 LABEL_22:
-      sub_B2C2F8(p_servantEntity, (System_Int32_array **)v34, v35, v36, v37, v38, v39, v40);
+      sub_B0D840(p_servantEntity, (System_Int32_array **)v33, v34, v35, v36, v37, v38, v39);
       break;
     default:
       return;
@@ -177,7 +176,7 @@ bool __fastcall EventTowerListViewItem__SetSortValue(
   itemInfo = this->fields.itemInfo;
   *(_WORD *)&this->fields.isTermination = 0;
   if ( !itemInfo )
-    sub_B2C434(this, sort);
+    sub_B0D97C(this);
   this->fields.sortValue0 = -itemInfo->fields.towerId;
   result = 1;
   this->fields.sortValue1 = itemInfo->fields.floor;
@@ -191,7 +190,7 @@ int32_t __fastcall EventTowerListViewItem__get_BannerId(EventTowerListViewItem_o
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return itemInfo->fields.boardImageId;
 }
 
@@ -209,22 +208,22 @@ System_String_o *__fastcall EventTowerListViewItem__get_BoardMessage(
   int32_t floor; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
-  if ( (byte_418822D & 1) == 0 )
+  if ( (byte_421509F & 1) == 0 )
   {
-    sub_B2C35C(&int_TypeInfo, method);
-    this = (EventTowerListViewItem_o *)sub_B2C35C(&StringLiteral_23539/*"{0}"*/, v3);
-    byte_418822D = 1;
+    sub_B0D8A4(&int_TypeInfo, method);
+    this = (EventTowerListViewItem_o *)sub_B0D8A4(&StringLiteral_23617/*"{0}"*/, v3);
+    byte_421509F = 1;
   }
   itemInfo = v2->fields.itemInfo;
   if ( !itemInfo
     || (this = (EventTowerListViewItem_o *)itemInfo->fields.boardMessage) == 0LL
     || (this = (EventTowerListViewItem_o *)System_String__Contains(
                                              (System_String_o *)this,
-                                             (System_String_o *)StringLiteral_23539/*"{0}"*/,
+                                             (System_String_o *)StringLiteral_23617/*"{0}"*/,
                                              0LL),
         (v5 = v2->fields.itemInfo) == 0LL) )
   {
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   }
   boardMessage = v5->fields.boardMessage;
   if ( ((unsigned __int8)this & 1) != 0 )
@@ -243,7 +242,7 @@ int32_t __fastcall EventTowerListViewItem__get_EventId(EventTowerListViewItem_o 
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return itemInfo->fields.eventId;
 }
 
@@ -254,7 +253,7 @@ int32_t __fastcall EventTowerListViewItem__get_GiftType(EventTowerListViewItem_o
 
   clearReward = this->fields.clearReward;
   if ( !clearReward )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return clearReward->fields.type;
 }
 
@@ -265,7 +264,7 @@ int32_t __fastcall EventTowerListViewItem__get_IconId(EventTowerListViewItem_o *
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return itemInfo->fields.iconId;
 }
 
@@ -313,7 +312,7 @@ int32_t __fastcall EventTowerListViewItem__get_RewardNum(EventTowerListViewItem_
 
   clearReward = this->fields.clearReward;
   if ( !clearReward )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   num = clearReward->fields.num;
   if ( num < 2 )
     return -1;
@@ -328,7 +327,7 @@ int32_t __fastcall EventTowerListViewItem__get_RewardObjectId(EventTowerListView
 
   clearReward = this->fields.clearReward;
   if ( !clearReward )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return clearReward->fields.objectId;
 }
 

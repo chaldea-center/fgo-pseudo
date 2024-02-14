@@ -1,9 +1,9 @@
 void __fastcall BoostItemMenu___ctor(BoostItemMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4187E35 & 1) == 0 )
+  if ( (byte_4214C53 & 1) == 0 )
   {
-    sub_B2C35C(&BaseDialog_TypeInfo, method);
-    byte_4187E35 = 1;
+    sub_B0D8A4(&BaseDialog_TypeInfo, method);
+    byte_4214C53 = 1;
   }
   if ( (BYTE3(BaseDialog_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -19,30 +19,31 @@ void __fastcall BoostItemMenu__Callback(BoostItemMenu_o *this, int32_t result, i
   __int64 v9; // x1
   __int64 v10; // x21
   __int64 v11; // x0
-  __int64 v12; // x1
-  System_String_array **v13; // x2
-  System_String_array **v14; // x3
-  System_Boolean_array **v15; // x4
-  System_Int32_array **v16; // x5
-  System_Int32_array *v17; // x6
-  System_Int32_array *v18; // x7
+  System_String_array **v12; // x2
+  System_String_array **v13; // x3
+  System_Boolean_array **v14; // x4
+  System_Int32_array **v15; // x5
+  System_Int32_array *v16; // x6
+  System_Int32_array *v17; // x7
   _BOOL4 isBoostItemUseConfirm; // w19
-  System_Action_o *v20; // x19
+  __int64 v19; // x1
+  __int64 v20; // x2
+  System_Action_o *v21; // x19
 
-  if ( (byte_4187E32 & 1) == 0 )
+  if ( (byte_4214C50 & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, *(_QWORD *)&result);
-    sub_B2C35C(&OptionManager_TypeInfo, v7);
-    sub_B2C35C(&Method_BoostItemMenu___c__DisplayClass25_0__Callback_b__0__, v8);
-    sub_B2C35C(&BoostItemMenu___c__DisplayClass25_0_TypeInfo, v9);
-    byte_4187E32 = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, *(_QWORD *)&result);
+    sub_B0D8A4(&OptionManager_TypeInfo, v7);
+    sub_B0D8A4(&Method_BoostItemMenu___c__DisplayClass25_0__Callback_b__0__, v8);
+    sub_B0D8A4(&BoostItemMenu___c__DisplayClass25_0_TypeInfo, v9);
+    byte_4214C50 = 1;
   }
-  v10 = sub_B2C42C(BoostItemMenu___c__DisplayClass25_0_TypeInfo);
+  v10 = sub_B0D974(BoostItemMenu___c__DisplayClass25_0_TypeInfo, *(_QWORD *)&result, *(_QWORD *)&index);
   BoostItemMenu___c__DisplayClass25_0___ctor((BoostItemMenu___c__DisplayClass25_0_o *)v10, 0LL);
   if ( !v10 )
-    sub_B2C434(v11, v12);
+    sub_B0D97C(v11);
   *(_QWORD *)(v10 + 16) = this;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v10 + 16), (System_Int32_array **)this, v13, v14, v15, v16, v17, v18);
+  sub_B0D840((BattleServantConfConponent_o *)(v10 + 16), (System_Int32_array **)this, v12, v13, v14, v15, v16, v17);
   *(_DWORD *)(v10 + 24) = result;
   *(_DWORD *)(v10 + 28) = index;
   isBoostItemUseConfirm = this->fields.isBoostItemUseConfirm;
@@ -52,9 +53,9 @@ void __fastcall BoostItemMenu__Callback(BoostItemMenu_o *this, int32_t result, i
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   }
   OptionManager__SetBoostItemUseConfirm(isBoostItemUseConfirm, 0LL);
-  v20 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
-  System_Action___ctor(v20, (Il2CppObject *)v10, Method_BoostItemMenu___c__DisplayClass25_0__Callback_b__0__, 0LL);
-  OptionManager__SaveData(v20, 0LL);
+  v21 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v19, v20);
+  System_Action___ctor(v21, (Il2CppObject *)v10, Method_BoostItemMenu___c__DisplayClass25_0__Callback_b__0__, 0LL);
+  OptionManager__SaveData(v21, 0LL);
 }
 
 
@@ -62,11 +63,11 @@ void __fastcall BoostItemMenu__Close(BoostItemMenu_o *this, const MethodInfo *me
 {
   const MethodInfo *v2; // x2
 
-  BoostItemMenu__Close_25587912(this, 0LL, v2);
+  BoostItemMenu__Close_25131208(this, 0LL, v2);
 }
 
 
-void __fastcall BoostItemMenu__Close_25587912(
+void __fastcall BoostItemMenu__Close_25131208(
         BoostItemMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -79,20 +80,22 @@ void __fastcall BoostItemMenu__Close_25587912(
   System_Int32_array **v10; // x5
   System_Int32_array *v11; // x6
   System_Int32_array *v12; // x7
-  System_Action_o *v13; // x20
+  __int64 v13; // x1
+  __int64 v14; // x2
+  System_Action_o *v15; // x20
 
-  if ( (byte_4187E31 & 1) == 0 )
+  if ( (byte_4214C4F & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, callback);
-    sub_B2C35C(&Method_BoostItemMenu_EndClose__, v5);
-    byte_4187E31 = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, callback);
+    sub_B0D8A4(&Method_BoostItemMenu_EndClose__, v5);
+    byte_4214C4F = 1;
   }
   itemListViewManager = this->fields.itemListViewManager;
   if ( !itemListViewManager )
-    sub_B2C434(0LL, callback);
-  BoostItemListViewManager__SetMode_25582412(itemListViewManager, 1, method);
+    sub_B0D97C(0LL);
+  BoostItemListViewManager__SetMode_25125708(itemListViewManager, 1, method);
   this->fields.closeCallbackFunc = callback;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.closeCallbackFunc,
     (System_Int32_array **)callback,
     v7,
@@ -102,9 +105,9 @@ void __fastcall BoostItemMenu__Close_25587912(
     v11,
     v12);
   this->fields.state = 4;
-  v13 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
-  System_Action___ctor(v13, (Il2CppObject *)this, Method_BoostItemMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v13, 0LL);
+  v15 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v13, v14);
+  System_Action___ctor(v15, (Il2CppObject *)this, Method_BoostItemMenu_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v15, 0LL);
 }
 
 
@@ -127,7 +130,7 @@ void __fastcall BoostItemMenu__EndClose(BoostItemMenu_o *this, const MethodInfo 
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_B2C2F8(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_B0D840(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     System_Action__Invoke(v10, 0LL);
   }
 }
@@ -135,11 +138,11 @@ void __fastcall BoostItemMenu__EndClose(BoostItemMenu_o *this, const MethodInfo 
 
 void __fastcall BoostItemMenu__EndOpen(BoostItemMenu_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
+  __int64 v4; // x1
   struct BoostItemListViewManager_o *itemListViewManager; // x20
-  BoostItemListViewManager_CallbackFunc_o *v5; // x21
-  __int64 v6; // x0
-  __int64 v7; // x1
+  BoostItemListViewManager_CallbackFunc_o *v6; // x21
+  __int64 v7; // x0
   System_String_array **v8; // x2
   System_String_array **v9; // x3
   System_Boolean_array **v10; // x4
@@ -157,36 +160,36 @@ void __fastcall BoostItemMenu__EndOpen(BoostItemMenu_o *this, const MethodInfo *
   System_Action_o *v22; // x20
   struct System_Action_o *openCallbackFunc; // t1
 
-  if ( (byte_4187E30 & 1) == 0 )
+  if ( (byte_4214C4E & 1) == 0 )
   {
-    sub_B2C35C(&Method_BoostItemMenu_OnSelectItem__, method);
-    sub_B2C35C(&BoostItemListViewManager_CallbackFunc_TypeInfo, v3);
-    byte_4187E30 = 1;
+    sub_B0D8A4(&Method_BoostItemMenu_OnSelectItem__, method);
+    sub_B0D8A4(&BoostItemListViewManager_CallbackFunc_TypeInfo, v4);
+    byte_4214C4E = 1;
   }
   this->fields.state = 2;
   itemListViewManager = this->fields.itemListViewManager;
-  v5 = (BoostItemListViewManager_CallbackFunc_o *)sub_B2C42C(BoostItemListViewManager_CallbackFunc_TypeInfo);
-  BoostItemListViewManager_CallbackFunc___ctor(v5, (Il2CppObject *)this, Method_BoostItemMenu_OnSelectItem__, 0LL);
+  v6 = (BoostItemListViewManager_CallbackFunc_o *)sub_B0D974(BoostItemListViewManager_CallbackFunc_TypeInfo, method, v2);
+  BoostItemListViewManager_CallbackFunc___ctor(v6, (Il2CppObject *)this, Method_BoostItemMenu_OnSelectItem__, 0LL);
   if ( !itemListViewManager )
-    sub_B2C434(v6, v7);
-  itemListViewManager->fields.callbackFunc = v5;
-  sub_B2C2F8(
+    sub_B0D97C(v7);
+  itemListViewManager->fields.callbackFunc = v6;
+  sub_B0D840(
     (BattleServantConfConponent_o *)&itemListViewManager->fields.callbackFunc,
-    (System_Int32_array **)v5,
+    (System_Int32_array **)v6,
     v8,
     v9,
     v10,
     v11,
     v12,
     v13);
-  BoostItemListViewManager__SetMode_25582412(itemListViewManager, 2, v14);
+  BoostItemListViewManager__SetMode_25125708(itemListViewManager, 2, v14);
   openCallbackFunc = this->fields.openCallbackFunc;
   p_openCallbackFunc = (BattleServantConfConponent_o *)&this->fields.openCallbackFunc;
   v22 = openCallbackFunc;
   if ( openCallbackFunc )
   {
     p_openCallbackFunc->klass = 0LL;
-    sub_B2C2F8(p_openCallbackFunc, 0LL, v15, v16, v17, v18, v19, v20);
+    sub_B0D840(p_openCallbackFunc, 0LL, v15, v16, v17, v18, v19, v20);
     System_Action__Invoke(v22, 0LL);
   }
 }
@@ -201,7 +204,7 @@ BoostItemListViewItem_o *__fastcall BoostItemMenu__GetItem(
 
   itemListViewManager = this->fields.itemListViewManager;
   if ( !itemListViewManager )
-    sub_B2C434(0LL, index);
+    sub_B0D97C(0LL);
   return BoostItemListViewManager__GetItem(itemListViewManager, index, method);
 }
 
@@ -212,7 +215,7 @@ void __fastcall BoostItemMenu__Init(BoostItemMenu_o *this, const MethodInfo *met
 
   itemListViewManager = (ListViewManager_o *)this->fields.itemListViewManager;
   if ( !itemListViewManager )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   ListViewManager__DestroyList(itemListViewManager, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -259,17 +262,16 @@ void __fastcall BoostItemMenu__OnClickSetupConfirm(BoostItemMenu_o *this, const 
 {
   __int64 v3; // x1
   __int64 v4; // x1
-  __int64 v5; // x1
   _BOOL4 isBoostItemUseConfirm; // w8
   UISprite_o *setupConfirmSprite; // x0
-  __int64 *v8; // x8
+  __int64 *v7; // x8
 
-  if ( (byte_4187E34 & 1) == 0 )
+  if ( (byte_4214C52 & 1) == 0 )
   {
-    sub_B2C35C(&SoundManager_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_17006/*"btn_on"*/, v3);
-    sub_B2C35C(&StringLiteral_17005/*"btn_off"*/, v4);
-    byte_4187E34 = 1;
+    sub_B0D8A4(&SoundManager_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_17057/*"btn_on"*/, v3);
+    sub_B0D8A4(&StringLiteral_17056/*"btn_off"*/, v4);
+    byte_4214C52 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -283,12 +285,12 @@ void __fastcall BoostItemMenu__OnClickSetupConfirm(BoostItemMenu_o *this, const 
     setupConfirmSprite = this->fields.setupConfirmSprite;
     this->fields.isBoostItemUseConfirm = !isBoostItemUseConfirm;
     if ( !setupConfirmSprite )
-      sub_B2C434(0LL, v5);
+      sub_B0D97C(0LL);
     if ( isBoostItemUseConfirm )
-      v8 = &StringLiteral_17005/*"btn_off"*/;
+      v7 = &StringLiteral_17056/*"btn_off"*/;
     else
-      v8 = &StringLiteral_17006/*"btn_on"*/;
-    UISprite__set_spriteName(setupConfirmSprite, (System_String_o *)*v8, 0LL);
+      v7 = &StringLiteral_17057/*"btn_on"*/;
+    UISprite__set_spriteName(setupConfirmSprite, (System_String_o *)*v7, 0LL);
   }
 }
 
@@ -300,24 +302,26 @@ void __fastcall BoostItemMenu__OnSelectItem(BoostItemMenu_o *this, int32_t kind,
   __int64 v8; // x1
   BoostItemListViewManager_o *itemListViewManager; // x0
   struct BoostItemListViewManager_o *v10; // x20
-  BoostItemListViewManager_CallbackFunc_o *v11; // x21
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
-  const MethodInfo *v18; // x2
-  int32_t v19; // w2
-  BoostItemMenu_o *v20; // x0
-  int32_t v21; // w1
+  __int64 v11; // x1
+  __int64 v12; // x2
+  BoostItemListViewManager_CallbackFunc_o *v13; // x21
+  System_String_array **v14; // x2
+  System_String_array **v15; // x3
+  System_Boolean_array **v16; // x4
+  System_Int32_array **v17; // x5
+  System_Int32_array *v18; // x6
+  System_Int32_array *v19; // x7
+  const MethodInfo *v20; // x2
+  int32_t v21; // w2
+  BoostItemMenu_o *v22; // x0
+  int32_t v23; // w1
 
-  if ( (byte_4187E33 & 1) == 0 )
+  if ( (byte_4214C51 & 1) == 0 )
   {
-    sub_B2C35C(&Method_BoostItemMenu_OnSelectItem__, *(_QWORD *)&kind);
-    sub_B2C35C(&BoostItemListViewManager_CallbackFunc_TypeInfo, v7);
-    sub_B2C35C(&SoundManager_TypeInfo, v8);
-    byte_4187E33 = 1;
+    sub_B0D8A4(&Method_BoostItemMenu_OnSelectItem__, *(_QWORD *)&kind);
+    sub_B0D8A4(&BoostItemListViewManager_CallbackFunc_TypeInfo, v7);
+    sub_B0D8A4(&SoundManager_TypeInfo, v8);
+    byte_4214C51 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -348,43 +352,46 @@ void __fastcall BoostItemMenu__OnSelectItem(BoostItemMenu_o *this, int32_t kind,
         }
         SoundManager__playSystemSe(2, 0LL);
         v10 = this->fields.itemListViewManager;
-        v11 = (BoostItemListViewManager_CallbackFunc_o *)sub_B2C42C(BoostItemListViewManager_CallbackFunc_TypeInfo);
+        v13 = (BoostItemListViewManager_CallbackFunc_o *)sub_B0D974(
+                                                           BoostItemListViewManager_CallbackFunc_TypeInfo,
+                                                           v11,
+                                                           v12);
         BoostItemListViewManager_CallbackFunc___ctor(
-          v11,
+          v13,
           (Il2CppObject *)this,
           Method_BoostItemMenu_OnSelectItem__,
           0LL);
         if ( v10 )
         {
-          v10->fields.callbackFunc = v11;
-          sub_B2C2F8(
+          v10->fields.callbackFunc = v13;
+          sub_B0D840(
             (BattleServantConfConponent_o *)&v10->fields.callbackFunc,
-            (System_Int32_array **)v11,
-            v12,
-            v13,
+            (System_Int32_array **)v13,
             v14,
             v15,
             v16,
-            v17);
-          BoostItemListViewManager__SetMode_25582412(v10, 2, v18);
+            v17,
+            v18,
+            v19);
+          BoostItemListViewManager__SetMode_25125708(v10, 2, v20);
           return;
         }
 LABEL_20:
-        sub_B2C434(itemListViewManager, *(_QWORD *)&kind);
+        sub_B0D97C(itemListViewManager);
       }
-      v21 = 1;
-      v20 = this;
-      v19 = n;
+      v23 = 1;
+      v22 = this;
+      v21 = n;
       this->fields.state = 3;
     }
     else
     {
-      v19 = -1;
+      v21 = -1;
       this->fields.state = 3;
-      v20 = this;
-      v21 = 0;
+      v22 = this;
+      v23 = 0;
     }
-    BoostItemMenu__Callback(v20, v21, v19, method);
+    BoostItemMenu__Callback(v22, v23, v21, method);
   }
 }
 
@@ -424,61 +431,62 @@ void __fastcall BoostItemMenu__Open(
   System_Int32_array *v35; // x6
   System_Int32_array *v36; // x7
   DataManager_o *Instance; // x0
-  __int64 v38; // x1
-  System_String_array **v39; // x2
-  System_String_array **v40; // x3
-  System_Boolean_array **v41; // x4
-  System_Int32_array **v42; // x5
-  System_Int32_array *v43; // x6
-  System_Int32_array *v44; // x7
-  System_Int32_array *v45; // x21
+  System_String_array **v38; // x2
+  System_String_array **v39; // x3
+  System_Boolean_array **v40; // x4
+  System_Int32_array **v41; // x5
+  System_Int32_array *v42; // x6
+  System_Int32_array *v43; // x7
+  System_Int32_array *v44; // x21
   UILabel_o *titleLabel; // x23
   UILabel_o *titleDetailLabel; // x22
   UILabel_o *useConfirmOptionLabel; // x22
-  bool v49; // w1
-  System_String_array **v50; // x2
-  System_String_array **v51; // x3
-  System_Boolean_array **v52; // x4
-  System_Int32_array **v53; // x5
-  System_Int32_array *v54; // x6
-  System_Int32_array *v55; // x7
-  const MethodInfo *v56; // x1
+  bool v48; // w1
+  System_String_array **v49; // x2
+  System_String_array **v50; // x3
+  System_Boolean_array **v51; // x4
+  System_Int32_array **v52; // x5
+  System_Int32_array *v53; // x6
+  System_Int32_array *v54; // x7
+  const MethodInfo *v55; // x1
   struct System_Action_o *openCallbackFunc; // x8
+  UILabel_o *v57; // x22
   UILabel_o *v58; // x22
-  UILabel_o *v59; // x22
   UILabel_o *decideLabel; // x22
   UILabel_o *cancelLabel; // x22
-  const MethodInfo *v62; // x3
-  const MethodInfo *v63; // x2
-  __int64 *v64; // x8
-  System_Action_o *v65; // x20
+  const MethodInfo *v61; // x3
+  const MethodInfo *v62; // x2
+  __int64 *v63; // x8
+  __int64 v64; // x1
+  __int64 v65; // x2
+  System_Action_o *v66; // x20
 
-  if ( (byte_4187E2F & 1) == 0 )
+  if ( (byte_4214C4D & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, setupInfo);
-    sub_B2C35C(&Method_BoostItemMenu_EndOpen__, v14);
-    sub_B2C35C(&Method_DataManager_GetMasterData_ItemMaster___, v15);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v16);
-    sub_B2C35C(&OptionManager_TypeInfo, v17);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_B2C35C(&SoundManager_TypeInfo, v19);
-    sub_B2C35C(&StringLiteral_2594/*"BOOST_ITEM_USE_OPTION_FRIEND_CHOCOLATE"*/, v20);
-    sub_B2C35C(&StringLiteral_17006/*"btn_on"*/, v21);
-    sub_B2C35C(&StringLiteral_2596/*"BOOST_ITEM_USE_TITLE_FRIEND_CHOCOLATE"*/, v22);
-    sub_B2C35C(&StringLiteral_2591/*"BOOST_ITEM_USE_DETAIL"*/, v23);
-    sub_B2C35C(&StringLiteral_2584/*"BOOST_ITEM_USE_CANCEL"*/, v24);
-    sub_B2C35C(&StringLiteral_2590/*"BOOST_ITEM_USE_DECIDE"*/, v25);
-    sub_B2C35C(&StringLiteral_2593/*"BOOST_ITEM_USE_OPTION"*/, v26);
-    sub_B2C35C(&StringLiteral_2595/*"BOOST_ITEM_USE_TITILE"*/, v27);
-    sub_B2C35C(&StringLiteral_17005/*"btn_off"*/, v28);
-    sub_B2C35C(&StringLiteral_2592/*"BOOST_ITEM_USE_DETAIL_FRIEND_CHOCOLATE"*/, v29);
-    byte_4187E2F = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, setupInfo);
+    sub_B0D8A4(&Method_BoostItemMenu_EndOpen__, v14);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_ItemMaster___, v15);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v16);
+    sub_B0D8A4(&OptionManager_TypeInfo, v17);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
+    sub_B0D8A4(&SoundManager_TypeInfo, v19);
+    sub_B0D8A4(&StringLiteral_2605/*"BOOST_ITEM_USE_OPTION_FRIEND_CHOCOLATE"*/, v20);
+    sub_B0D8A4(&StringLiteral_17057/*"btn_on"*/, v21);
+    sub_B0D8A4(&StringLiteral_2607/*"BOOST_ITEM_USE_TITLE_FRIEND_CHOCOLATE"*/, v22);
+    sub_B0D8A4(&StringLiteral_2602/*"BOOST_ITEM_USE_DETAIL"*/, v23);
+    sub_B0D8A4(&StringLiteral_2595/*"BOOST_ITEM_USE_CANCEL"*/, v24);
+    sub_B0D8A4(&StringLiteral_2601/*"BOOST_ITEM_USE_DECIDE"*/, v25);
+    sub_B0D8A4(&StringLiteral_2604/*"BOOST_ITEM_USE_OPTION"*/, v26);
+    sub_B0D8A4(&StringLiteral_2606/*"BOOST_ITEM_USE_TITILE"*/, v27);
+    sub_B0D8A4(&StringLiteral_17056/*"btn_off"*/, v28);
+    sub_B0D8A4(&StringLiteral_2603/*"BOOST_ITEM_USE_DETAIL_FRIEND_CHOCOLATE"*/, v29);
+    byte_4214C4D = 1;
   }
   state = this->fields.state;
   if ( (unsigned int)(state - 2) < 2 )
   {
     this->fields.callbackFunc = callback;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)&this->fields.callbackFunc,
       (System_Int32_array **)callback,
       (System_String_array **)callback,
@@ -488,22 +496,22 @@ void __fastcall BoostItemMenu__Open(
       (System_Int32_array *)method,
       v7);
     this->fields.openCallbackFunc = openCallback;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)&this->fields.openCallbackFunc,
       (System_Int32_array **)openCallback,
+      v49,
       v50,
       v51,
       v52,
       v53,
-      v54,
-      v55);
-    BoostItemMenu__EndOpen(this, v56);
+      v54);
+    BoostItemMenu__EndOpen(this, v55);
     return;
   }
   if ( state == 4 || !state )
   {
     this->fields.callbackFunc = callback;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)&this->fields.callbackFunc,
       (System_Int32_array **)callback,
       (System_String_array **)callback,
@@ -513,7 +521,7 @@ void __fastcall BoostItemMenu__Open(
       (System_Int32_array *)method,
       v7);
     this->fields.openCallbackFunc = openCallback;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)&this->fields.openCallbackFunc,
       (System_Int32_array **)openCallback,
       v31,
@@ -528,39 +536,39 @@ void __fastcall BoostItemMenu__Open(
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
     }
     this->fields.isBoostItemUseConfirm = OptionManager__GetBoostItemUseConfirm(0LL);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                     Instance,
-                                    (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ItemMaster___);
+                                    (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ItemMaster___);
       if ( Instance )
       {
         Instance = (DataManager_o *)ItemMaster__GetBoostItemList((ItemMaster_o *)Instance, setupInfo, 0LL);
         if ( Instance )
         {
           if ( !IsAvailableFriendChocolate && IsFriendChocolate
-            || (v45 = (System_Int32_array *)Instance, !Instance->fields.datalist) )
+            || (v44 = (System_Int32_array *)Instance, !Instance->fields.datalist) )
           {
             openCallbackFunc = this->fields.openCallbackFunc;
             this->fields.state = 3;
             if ( openCallbackFunc )
             {
               this->fields.openCallbackFunc = 0LL;
-              sub_B2C2F8(
+              sub_B0D840(
                 (BattleServantConfConponent_o *)&this->fields.openCallbackFunc,
                 0LL,
+                v38,
                 v39,
                 v40,
                 v41,
                 v42,
-                v43,
-                v44);
+                v43);
               if ( !openCallback )
                 goto LABEL_56;
               System_Action__Invoke(openCallback, 0LL);
             }
-            BoostItemMenu__Callback(this, 1, -1, (const MethodInfo *)v40);
+            BoostItemMenu__Callback(this, 1, -1, (const MethodInfo *)v39);
             return;
           }
           if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -581,17 +589,17 @@ void __fastcall BoostItemMenu__Open(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2596/*"BOOST_ITEM_USE_TITLE_FRIEND_CHOCOLATE"*/, 0LL);
+              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2607/*"BOOST_ITEM_USE_TITLE_FRIEND_CHOCOLATE"*/, 0LL);
               if ( !titleLabel )
                 goto LABEL_56;
               UILabel__set_text(titleLabel, (System_String_o *)Instance, 0LL);
               titleDetailLabel = this->fields.titleDetailLabel;
-              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2592/*"BOOST_ITEM_USE_DETAIL_FRIEND_CHOCOLATE"*/, 0LL);
+              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2603/*"BOOST_ITEM_USE_DETAIL_FRIEND_CHOCOLATE"*/, 0LL);
               if ( !titleDetailLabel )
                 goto LABEL_56;
               UILabel__set_text(titleDetailLabel, (System_String_o *)Instance, 0LL);
               useConfirmOptionLabel = this->fields.useConfirmOptionLabel;
-              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2594/*"BOOST_ITEM_USE_OPTION_FRIEND_CHOCOLATE"*/, 0LL);
+              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2605/*"BOOST_ITEM_USE_OPTION_FRIEND_CHOCOLATE"*/, 0LL);
               if ( !useConfirmOptionLabel )
                 goto LABEL_56;
               UILabel__set_text(useConfirmOptionLabel, (System_String_o *)Instance, 0LL);
@@ -603,7 +611,7 @@ void __fastcall BoostItemMenu__Open(
                                             0LL);
               if ( !Instance )
                 goto LABEL_56;
-              v49 = 0;
+              v48 = 0;
             }
             else
             {
@@ -612,20 +620,20 @@ void __fastcall BoostItemMenu__Open(
               {
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               }
-              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2595/*"BOOST_ITEM_USE_TITILE"*/, 0LL);
+              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2606/*"BOOST_ITEM_USE_TITILE"*/, 0LL);
               if ( !titleLabel )
                 goto LABEL_56;
               UILabel__set_text(titleLabel, (System_String_o *)Instance, 0LL);
-              v58 = this->fields.titleDetailLabel;
-              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2591/*"BOOST_ITEM_USE_DETAIL"*/, 0LL);
+              v57 = this->fields.titleDetailLabel;
+              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2602/*"BOOST_ITEM_USE_DETAIL"*/, 0LL);
+              if ( !v57 )
+                goto LABEL_56;
+              UILabel__set_text(v57, (System_String_o *)Instance, 0LL);
+              v58 = this->fields.useConfirmOptionLabel;
+              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2604/*"BOOST_ITEM_USE_OPTION"*/, 0LL);
               if ( !v58 )
                 goto LABEL_56;
               UILabel__set_text(v58, (System_String_o *)Instance, 0LL);
-              v59 = this->fields.useConfirmOptionLabel;
-              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2593/*"BOOST_ITEM_USE_OPTION"*/, 0LL);
-              if ( !v59 )
-                goto LABEL_56;
-              UILabel__set_text(v59, (System_String_o *)Instance, 0LL);
               Instance = (DataManager_o *)this->fields.informationButton;
               if ( !Instance )
                 goto LABEL_56;
@@ -634,21 +642,21 @@ void __fastcall BoostItemMenu__Open(
                                             0LL);
               if ( !Instance )
                 goto LABEL_56;
-              v49 = 1;
+              v48 = 1;
             }
-            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, v49, 0LL);
+            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, v48, 0LL);
             decideLabel = this->fields.decideLabel;
             if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !LocalizationManager_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2590/*"BOOST_ITEM_USE_DECIDE"*/, 0LL);
+            Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2601/*"BOOST_ITEM_USE_DECIDE"*/, 0LL);
             if ( decideLabel )
             {
               UILabel__set_text(decideLabel, (System_String_o *)Instance, 0LL);
               cancelLabel = this->fields.cancelLabel;
-              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2584/*"BOOST_ITEM_USE_CANCEL"*/, 0LL);
+              Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2595/*"BOOST_ITEM_USE_CANCEL"*/, 0LL);
               if ( cancelLabel )
               {
                 UILabel__set_text(cancelLabel, (System_String_o *)Instance, 0LL);
@@ -659,25 +667,25 @@ void __fastcall BoostItemMenu__Open(
                   {
                     BoostItemListViewManager__CreateList(
                       (BoostItemListViewManager_o *)Instance,
-                      v45,
+                      v44,
                       setupInfo->fields.questId,
-                      v62);
+                      v61);
                     Instance = (DataManager_o *)this->fields.itemListViewManager;
                     if ( Instance )
                     {
-                      BoostItemListViewManager__SetMode_25582412((BoostItemListViewManager_o *)Instance, 1, v63);
+                      BoostItemListViewManager__SetMode_25125708((BoostItemListViewManager_o *)Instance, 1, v62);
                       Instance = (DataManager_o *)this->fields.setupConfirmSprite;
                       if ( Instance )
                       {
                         if ( this->fields.isBoostItemUseConfirm )
-                          v64 = &StringLiteral_17006/*"btn_on"*/;
+                          v63 = &StringLiteral_17057/*"btn_on"*/;
                         else
-                          v64 = &StringLiteral_17005/*"btn_off"*/;
-                        UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v64, 0LL);
+                          v63 = &StringLiteral_17056/*"btn_off"*/;
+                        UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v63, 0LL);
                         this->fields.state = 1;
-                        v65 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
-                        System_Action___ctor(v65, (Il2CppObject *)this, Method_BoostItemMenu_EndOpen__, 0LL);
-                        BaseDialog__Open((BaseDialog_o *)this, v65, 0, 0LL);
+                        v66 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v64, v65);
+                        System_Action___ctor(v66, (Il2CppObject *)this, Method_BoostItemMenu_EndOpen__, 0LL);
+                        BaseDialog__Open((BaseDialog_o *)this, v66, 0, 0LL);
                         return;
                       }
                     }
@@ -690,7 +698,7 @@ void __fastcall BoostItemMenu__Open(
       }
     }
 LABEL_56:
-    sub_B2C434(Instance, v38);
+    sub_B0D97C(Instance);
   }
 }
 
@@ -710,10 +718,10 @@ void __fastcall BoostItemMenu__add_callbackFunc(
   BoostItemMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4187E2D & 1) == 0 )
+  if ( (byte_4214C4B & 1) == 0 )
   {
-    sub_B2C35C(&BoostItemMenu_CallbackFunc_TypeInfo, value);
-    byte_4187E2D = 1;
+    sub_B0D8A4(&BoostItemMenu_CallbackFunc_TypeInfo, value);
+    byte_4214C4B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -726,13 +734,13 @@ void __fastcall BoostItemMenu__add_callbackFunc(
       if ( (BoostItemMenu_CallbackFunc_c *)v8->klass != BoostItemMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B20D74(p_callbackFunc, v8, v6);
+    v9 = sub_B022BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BoostItemMenu_o *)sub_B2C728(v8);
+  v11 = (BoostItemMenu_o *)sub_B0DC70(v8);
   BoostItemMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -752,10 +760,10 @@ void __fastcall BoostItemMenu__remove_callbackFunc(
   int32_t v12; // w1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4187E2E & 1) == 0 )
+  if ( (byte_4214C4C & 1) == 0 )
   {
-    sub_B2C35C(&BoostItemMenu_CallbackFunc_TypeInfo, value);
-    byte_4187E2E = 1;
+    sub_B0D8A4(&BoostItemMenu_CallbackFunc_TypeInfo, value);
+    byte_4214C4C = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -768,13 +776,13 @@ void __fastcall BoostItemMenu__remove_callbackFunc(
       if ( (BoostItemMenu_CallbackFunc_c *)v8->klass != BoostItemMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_B20D74(p_callbackFunc, v8, v6);
+    v9 = sub_B022BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BoostItemMenu_o *)sub_B2C728(v8);
+  v11 = (BoostItemMenu_o *)sub_B0DC70(v8);
   BoostItemMenu__GetItem(v11, v12, v13);
 }
 
@@ -794,7 +802,7 @@ void __fastcall BoostItemMenu_CallbackFunc___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B2C2F8(p_method, object);
+  sub_B0D840(p_method, object);
 }
 
 
@@ -814,16 +822,16 @@ System_IAsyncResult_o *__fastcall BoostItemMenu_CallbackFunc__BeginInvoke(
 
   v12 = index;
   v13 = result;
-  if ( (byte_4184EA7 & 1) == 0 )
+  if ( (byte_4211DD6 & 1) == 0 )
   {
-    sub_B2C35C(&int_TypeInfo, *(_QWORD *)&result);
-    sub_B2C35C(&BoostItemMenu_ResultKind_TypeInfo, v9);
-    byte_4184EA7 = 1;
+    sub_B0D8A4(&int_TypeInfo, *(_QWORD *)&result);
+    sub_B0D8A4(&BoostItemMenu_ResultKind_TypeInfo, v9);
+    byte_4211DD6 = 1;
   }
   v11[2] = 0LL;
   v11[0] = j_il2cpp_value_box_0(BoostItemMenu_ResultKind_TypeInfo, &v13);
   v11[1] = j_il2cpp_value_box_0(int_TypeInfo, &v12);
-  return (System_IAsyncResult_o *)sub_B2C300(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_B0D848(this, v11, callback, object);
 }
 
 
@@ -832,7 +840,7 @@ void __fastcall BoostItemMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B2C304(result, 0LL, method);
+  sub_B0D84C(result, 0LL, method);
 }
 
 
@@ -849,37 +857,35 @@ void __fastcall BoostItemMenu_CallbackFunc__Invoke(
   __int64 v9; // x27
   unsigned int v10; // w24
   __int64 class_0; // x0
-  __int64 v12; // x3
-  __int64 v13; // x8
-  unsigned int v14; // w23
-  unsigned __int64 v15; // x10
-  _DWORD *v16; // x11
+  __int64 v12; // x8
+  unsigned int v13; // w23
+  unsigned __int64 v14; // x10
+  _DWORD *v15; // x11
+  __int64 v16; // x0
   __int64 v17; // x0
   __int64 v18; // x0
-  __int64 v19; // x0
-  void (__fastcall **v20)(__int64 *, _QWORD, _QWORD, _QWORD); // x0
-  BoostItemMenu_CallbackFunc_o *v21; // x8
-  __int64 *v22; // x22
-  __int64 v23; // x23
-  void (__fastcall *v24)(unsigned int *, _QWORD, __int64); // x24
-  char v25; // w24
-  char v26; // w0
-  __int64 v27; // x3
-  unsigned int v28; // w24
-  __int64 v29; // x8
-  __int64 v30; // x1
-  __int64 v31; // x2
-  unsigned __int64 v32; // x10
-  _DWORD *v33; // x11
-  unsigned int v34; // [xsp+Ch] [xbp-54h] BYREF
-  BoostItemMenu_CallbackFunc_o *v35; // [xsp+18h] [xbp-48h] BYREF
+  void (__fastcall **v19)(__int64 *, _QWORD, _QWORD, _QWORD); // x0
+  BoostItemMenu_CallbackFunc_o *v20; // x8
+  __int64 *v21; // x22
+  __int64 v22; // x23
+  void (__fastcall *v23)(unsigned int *, _QWORD, __int64); // x24
+  char v24; // w24
+  char v25; // w0
+  unsigned int v26; // w24
+  __int64 v27; // x8
+  __int64 v28; // x1
+  __int64 v29; // x2
+  unsigned __int64 v30; // x10
+  _DWORD *v31; // x11
+  unsigned int v32; // [xsp+Ch] [xbp-54h] BYREF
+  BoostItemMenu_CallbackFunc_o *v33; // [xsp+18h] [xbp-48h] BYREF
 
-  v35 = this;
-  v34 = result;
+  v33 = this;
+  v32 = result;
   v4 = *(_QWORD *)&this[1].fields.method_ptr;
   if ( !v4 )
   {
-    v8 = &v35;
+    v8 = &v33;
     v7 = 1LL;
     goto LABEL_5;
   }
@@ -891,110 +897,110 @@ LABEL_5:
     v9 = 0LL;
     while ( 1 )
     {
-      v21 = v8[v9];
-      v22 = *(__int64 **)&v21->fields.method;
-      v23 = *(_QWORD *)&v21->fields.extra_arg;
-      v24 = *(void (__fastcall **)(unsigned int *, _QWORD, __int64))&v21->fields.method_ptr;
-      if ( *(__int16 *)(v23 + 72) == -1 )
-        sub_B2C418(*(_QWORD *)&v21->fields.extra_arg, *(_QWORD *)&result, *(_QWORD *)&index, method);
-      if ( (sub_B2C38C(v23) & 1) == 0 )
+      v20 = v8[v9];
+      v21 = *(__int64 **)&v20->fields.method;
+      v22 = *(_QWORD *)&v20->fields.extra_arg;
+      v23 = *(void (__fastcall **)(unsigned int *, _QWORD, __int64))&v20->fields.method_ptr;
+      if ( *(__int16 *)(v22 + 72) == -1 )
+        sub_B0D960(*(_QWORD *)&v20->fields.extra_arg, *(_QWORD *)&result, *(_QWORD *)&index, method);
+      if ( (sub_B0D8D4(v22) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v23 + 74) != 2 )
+      if ( *(_BYTE *)(v22 + 74) != 2 )
         goto LABEL_36;
-      v24((unsigned int *)v34, (unsigned int)index, v23);
+      v23((unsigned int *)v32, (unsigned int)index, v22);
 LABEL_38:
       if ( ++v9 == v7 )
         return;
     }
-    if ( !v22 )
+    if ( !v21 )
     {
-      v24(&v34 - 4, (unsigned int)index, v23);
+      v23(&v32 - 4, (unsigned int)index, v22);
       goto LABEL_38;
     }
-    if ( *(__int16 *)(v23 + 72) != -1 && (*(_BYTE *)(*v22 + 277) & 1) == 0 && this->fields.m_target )
+    if ( *(__int16 *)(v22 + 72) != -1 && (*(_BYTE *)(*v21 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v25 = sub_B2C384(v23);
-      v26 = sub_B2C788(v23);
-      if ( (v25 & 1) != 0 )
+      v24 = sub_B0D8CC(v22);
+      v25 = sub_B0DCD0(v22);
+      if ( (v24 & 1) != 0 )
       {
-        v28 = v34;
-        if ( (v26 & 1) != 0 )
+        v26 = v32;
+        if ( (v25 & 1) != 0 )
         {
-          v29 = *v22;
-          v30 = *(_QWORD *)(v23 + 24);
-          v31 = *(unsigned __int16 *)(v23 + 72);
-          if ( *(_WORD *)(*v22 + 298) )
+          v27 = *v21;
+          v28 = *(_QWORD *)(v22 + 24);
+          v29 = *(unsigned __int16 *)(v22 + 72);
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v32 = 0LL;
-            v33 = (_DWORD *)(*(_QWORD *)(v29 + 176) + 8LL);
-            while ( *((_QWORD *)v33 - 1) != v30 )
+            v30 = 0LL;
+            v31 = (_DWORD *)(*(_QWORD *)(v27 + 176) + 8LL);
+            while ( *((_QWORD *)v31 - 1) != v28 )
             {
-              ++v32;
-              v33 += 4;
-              if ( v32 >= *(unsigned __int16 *)(*v22 + 298) )
+              ++v30;
+              v31 += 4;
+              if ( v30 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_35;
             }
-            v19 = v29 + 16LL * (*v33 + (int)v31) + 312;
+            v18 = v27 + 16LL * (*v31 + (int)v29) + 312;
           }
           else
           {
 LABEL_35:
-            v19 = sub_AC5258(v22, v30, v31, v27);
+            v18 = sub_AA67A0(v21, v28, v29);
           }
-          v18 = *(_QWORD *)(v19 + 8);
+          v17 = *(_QWORD *)(v18 + 8);
         }
         else
         {
-          v18 = *(_QWORD *)(*v22 + 16LL * *(unsigned __int16 *)(v23 + 72) + 320);
+          v17 = *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320);
         }
-        v20 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))sub_B2C40C(v18, v23);
-        (*v20)(v22, v28, (unsigned int)index, v20);
+        v19 = (void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))sub_B0D954(v17, v22);
+        (*v19)(v21, v26, (unsigned int)index, v19);
       }
       else
       {
-        v10 = *(unsigned __int16 *)(v23 + 72);
-        if ( (v26 & 1) != 0 )
+        v10 = *(unsigned __int16 *)(v22 + 72);
+        if ( (v25 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v23);
-          v13 = *v22;
-          v14 = v34;
-          if ( *(_WORD *)(*v22 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v22);
+          v12 = *v21;
+          v13 = v32;
+          if ( *(_WORD *)(*v21 + 298) )
           {
-            v15 = 0LL;
-            v16 = (_DWORD *)(*(_QWORD *)(v13 + 176) + 8LL);
-            while ( *((_QWORD *)v16 - 1) != class_0 )
+            v14 = 0LL;
+            v15 = (_DWORD *)(*(_QWORD *)(v12 + 176) + 8LL);
+            while ( *((_QWORD *)v15 - 1) != class_0 )
             {
-              ++v15;
-              v16 += 4;
-              if ( v15 >= *(unsigned __int16 *)(*v22 + 298) )
+              ++v14;
+              v15 += 4;
+              if ( v14 >= *(unsigned __int16 *)(*v21 + 298) )
                 goto LABEL_11;
             }
-            v17 = v13 + 16LL * (int)(*v16 + v10) + 312;
+            v16 = v12 + 16LL * (int)(*v15 + v10) + 312;
           }
           else
           {
 LABEL_11:
-            v17 = sub_AC5258(v22, class_0, v10, v12);
+            v16 = sub_AA67A0(v21, class_0, v10);
           }
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))v17)(
-            v22,
-            v14,
+          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))v16)(
+            v21,
+            v13,
             (unsigned int)index,
-            *(_QWORD *)(v17 + 8));
+            *(_QWORD *)(v16 + 8));
         }
         else
         {
-          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))(*v22 + 16LL * *(unsigned __int16 *)(v23 + 72) + 312))(
-            v22,
-            v34,
+          (*(void (__fastcall **)(__int64 *, _QWORD, _QWORD, _QWORD))(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 312))(
+            v21,
+            v32,
             (unsigned int)index,
-            *(_QWORD *)(*v22 + 16LL * *(unsigned __int16 *)(v23 + 72) + 320));
+            *(_QWORD *)(*v21 + 16LL * *(unsigned __int16 *)(v22 + 72) + 320));
         }
       }
       goto LABEL_38;
     }
 LABEL_36:
-    ((void (__fastcall *)(__int64 *, _QWORD, _QWORD, __int64))v24)(v22, v34, (unsigned int)index, v23);
+    ((void (__fastcall *)(__int64 *, _QWORD, _QWORD, __int64))v23)(v21, v32, (unsigned int)index, v22);
     goto LABEL_38;
   }
 }
@@ -1020,12 +1026,12 @@ void __fastcall BoostItemMenu___c__DisplayClass25_0___Callback_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   callbackFunc = _4__this->fields.callbackFunc;
   p_callbackFunc = &_4__this->fields.callbackFunc;
   v5 = callbackFunc;
   *p_callbackFunc = 0LL;
-  sub_B2C2F8(p_callbackFunc, 0LL);
+  sub_B0D840(p_callbackFunc, 0LL);
   if ( callbackFunc )
     BoostItemMenu_CallbackFunc__Invoke(v5, this->fields.result, this->fields.index, v7);
 }

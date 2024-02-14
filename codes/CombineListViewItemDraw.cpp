@@ -13,16 +13,15 @@ void __fastcall CombineListViewItemDraw__SetItem(
   __int64 v7; // x1
   UnityEngine_Object_o *baseSprite; // x21
   UISprite_o *Component_WebViewObject; // x0
-  __int64 v10; // x1
   struct CombineListItemInfo_o *info; // x8
   UnityEngine_Object_o *baseButton; // x20
-  char v13; // w20
+  char v12; // w20
 
-  if ( (byte_41861EB & 1) == 0 )
+  if ( (byte_4210FD1 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v7);
-    byte_41861EB = 1;
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v7);
+    byte_4210FD1 = 1;
   }
   if ( item && mode )
   {
@@ -56,7 +55,7 @@ void __fastcall CombineListViewItemDraw__SetItem(
       {
         Component_WebViewObject = (UISprite_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                   (UnityEngine_Component_o *)Component_WebViewObject,
-                                                  (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                  (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Collider___);
         if ( Component_WebViewObject )
         {
           Component_WebViewObject = (UISprite_o *)UnityEngine_Collider__get_enabled(
@@ -64,10 +63,10 @@ void __fastcall CombineListViewItemDraw__SetItem(
                                                     0LL);
           if ( this->fields.baseButton )
           {
-            v13 = (char)Component_WebViewObject;
+            v12 = (char)Component_WebViewObject;
             Component_WebViewObject = (UISprite_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this->fields.baseButton,
-                                                      (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                      (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Collider___);
             if ( Component_WebViewObject )
             {
               UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, 1, 0LL);
@@ -84,10 +83,10 @@ void __fastcall CombineListViewItemDraw__SetItem(
                 {
                   Component_WebViewObject = (UISprite_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                             (UnityEngine_Component_o *)Component_WebViewObject,
-                                                            (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                            (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Collider___);
                   if ( Component_WebViewObject )
                   {
-                    UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, v13 & 1, 0LL);
+                    UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_WebViewObject, v12 & 1, 0LL);
                     return;
                   }
                 }
@@ -97,7 +96,7 @@ void __fastcall CombineListViewItemDraw__SetItem(
         }
       }
 LABEL_25:
-      sub_B2C434(Component_WebViewObject, v10);
+      sub_B0D97C(Component_WebViewObject);
     }
   }
 }

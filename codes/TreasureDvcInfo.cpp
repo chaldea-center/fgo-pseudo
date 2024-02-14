@@ -15,20 +15,20 @@ void __fastcall TreasureDvcInfo___ctor(TreasureDvcInfo_o *this, const MethodInfo
   System_Int32_array *v15; // x6
   System_Int32_array *v16; // x7
 
-  if ( (byte_41899D6 & 1) == 0 )
+  if ( (byte_4216842 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_1/*""*/, method);
-    byte_41899D6 = 1;
+    sub_B0D8A4(&StringLiteral_1/*""*/, method);
+    byte_4216842 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.id = 0LL;
   this->fields.maxLv = 0;
   v3 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.name, v3, v4, v5, v6, v7, v8, v9);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.name, v3, v4, v5, v6, v7, v8, v9);
   v10 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.explanation = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.explanation, v10, v11, v12, v13, v14, v15, v16);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.explanation, v10, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)&this->fields.guageCount = 0LL;
   *(_QWORD *)&this->fields.strengthStatus = 0LL;
   this->fields.isUse = 0;
@@ -61,44 +61,43 @@ System_String_o *__fastcall TreasureDvcInfo__GetName(TreasureDvcInfo_o *this, in
   __int64 v7; // x1
   __int64 v8; // x1
   DataManager_o *Instance; // x0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x3
-  TreasureDvcEntity_o *v12; // x0
-  __int64 v13; // x1
-  TreasureDvcEntity_o *v14; // x19
-  System_String_o *v15; // x0
-  LocalizationManager_c *v17; // x0
+  const MethodInfo *v10; // x3
+  TreasureDvcEntity_o *v11; // x0
+  __int64 v12; // x1
+  TreasureDvcEntity_o *v13; // x19
+  System_String_o *v14; // x0
+  LocalizationManager_c *v16; // x0
 
-  if ( (byte_41899D7 & 1) == 0 )
+  if ( (byte_4216843 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_TreasureDvcMaster___, *(_QWORD *)&svtId);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v5);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B2C35C(&StringLiteral_1/*""*/, v7);
-    sub_B2C35C(&StringLiteral_9383/*"NP_NAME"*/, v8);
-    byte_41899D7 = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_TreasureDvcMaster___, *(_QWORD *)&svtId);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v5);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v7);
+    sub_B0D8A4(&StringLiteral_9406/*"NP_NAME"*/, v8);
+    byte_4216843 = 1;
   }
   if ( this->fields.id < 1 )
     return (System_String_o *)StringLiteral_1/*""*/;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0LL )
+                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0LL )
   {
-    sub_B2C434(Instance, v10);
+    sub_B0D97C(Instance);
   }
-  v12 = TreasureDvcMaster__GetEntityCheckServantOverwrite((TreasureDvcMaster_o *)Instance, svtId, this->fields.id, v11);
-  if ( v12 )
+  v11 = TreasureDvcMaster__GetEntityCheckServantOverwrite((TreasureDvcMaster_o *)Instance, svtId, this->fields.id, v10);
+  if ( v11 )
   {
-    v14 = v12;
+    v13 = v11;
     if ( (WORD1(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_9383/*"NP_NAME"*/, 0LL);
-    return System_String__Format(v15, (Il2CppObject *)v14->fields.name, 0LL);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_9406/*"NP_NAME"*/, 0LL);
+    return System_String__Format(v14, (Il2CppObject *)v13->fields.name, 0LL);
   }
   else
   {
@@ -107,18 +106,18 @@ System_String_o *__fastcall TreasureDvcInfo__GetName(TreasureDvcInfo_o *this, in
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    if ( !byte_4185BC0 )
+    if ( !byte_4212885 )
     {
-      sub_B2C35C(&LocalizationManager_TypeInfo, v13);
-      byte_4185BC0 = 1;
+      sub_B0D8A4(&LocalizationManager_TypeInfo, v12);
+      byte_4212885 = 1;
     }
-    v17 = LocalizationManager_TypeInfo;
+    v16 = LocalizationManager_TypeInfo;
     if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !LocalizationManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v17 = LocalizationManager_TypeInfo;
+      v16 = LocalizationManager_TypeInfo;
     }
-    return v17->static_fields->unknownNameText;
+    return v16->static_fields->unknownNameText;
   }
 }

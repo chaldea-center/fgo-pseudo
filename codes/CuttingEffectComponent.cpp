@@ -24,10 +24,10 @@ void __fastcall CuttingEffectComponent__CuttingStart(
   float v16; // s3
   const MethodInfo *v17; // x1
 
-  if ( (byte_4189009 & 1) == 0 )
+  if ( (byte_4216030 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, texture);
-    byte_4189009 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, texture);
+    byte_4216030 = 1;
   }
   if ( this->fields.duration <= 0.0 )
     this->fields.duration = 0.5;
@@ -39,7 +39,7 @@ void __fastcall CuttingEffectComponent__CuttingStart(
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    UnityEngine_Object__Destroy_35314896(gameObject, 0LL);
+    UnityEngine_Object__Destroy_34935276(gameObject, 0LL);
   }
   else
   {
@@ -66,7 +66,7 @@ void __fastcall CuttingEffectComponent__CuttingStart(
           !rightMeshRenderer) )
     {
 LABEL_16:
-      sub_B2C434(leftMeshRenderer, texture);
+      sub_B0D97C(leftMeshRenderer);
     }
     ((void (__fastcall *)(struct ExUIMeshRenderer_o *, Il2CppMethodPointer, float, float, float, float))rightMeshRenderer->klass->vtable._39_SetTweenColor.method)(
       rightMeshRenderer,
@@ -118,10 +118,10 @@ void __fastcall CuttingEffectComponent__EffectResume(CuttingEffectComponent_o *t
   UnityEngine_Vector3_o v34; // 0:s1.4,4:s2.4,8:s3.4
   UnityEngine_Vector3_o v35; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_418900A & 1) == 0 )
+  if ( (byte_4216031 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_9999/*"OnEndEffect"*/, method);
-    byte_418900A = 1;
+    sub_B0D8A4(&StringLiteral_10023/*"OnEndEffect"*/, method);
+    byte_4216031 = 1;
   }
   leftMeshRenderer = (UnityEngine_Component_o *)this->fields.leftMeshRenderer;
   this->fields.isPause = 0;
@@ -167,16 +167,16 @@ void __fastcall CuttingEffectComponent__EffectResume(CuttingEffectComponent_o *t
     || (LODWORD(v17[1].klass) = 1, !leftMeshRenderer) )
   {
 LABEL_12:
-    sub_B2C434(leftMeshRenderer, method);
+    sub_B0D97C(leftMeshRenderer);
   }
   LODWORD(leftMeshRenderer[1].klass) = 1;
   v19 = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v17[3].klass = (UnityEngine_Component_c *)v19;
   v20 = v17 + 3;
-  sub_B2C2F8((BattleServantConfConponent_o *)v20, v19, v21, v22, v23, v24, v25, v26);
-  v27 = (System_Int32_array **)StringLiteral_9999/*"OnEndEffect"*/;
-  v20->monitor = (void *)StringLiteral_9999/*"OnEndEffect"*/;
-  sub_B2C2F8((BattleServantConfConponent_o *)&v20->monitor, v27, v28, v29, v30, v31, v32, v33);
+  sub_B0D840((BattleServantConfConponent_o *)v20, v19, v21, v22, v23, v24, v25, v26);
+  v27 = (System_Int32_array **)StringLiteral_10023/*"OnEndEffect"*/;
+  v20->monitor = (void *)StringLiteral_10023/*"OnEndEffect"*/;
+  sub_B0D840((BattleServantConfConponent_o *)&v20->monitor, v27, v28, v29, v30, v31, v32, v33);
 }
 
 
@@ -184,10 +184,10 @@ void __fastcall CuttingEffectComponent__OnEndEffect(CuttingEffectComponent_o *th
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_418900B & 1) == 0 )
+  if ( (byte_4216032 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    byte_418900B = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    byte_4216032 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -195,7 +195,7 @@ void __fastcall CuttingEffectComponent__OnEndEffect(CuttingEffectComponent_o *th
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  UnityEngine_Object__Destroy_35314896(gameObject, 0LL);
+  UnityEngine_Object__Destroy_34935276(gameObject, 0LL);
 }
 
 

@@ -19,13 +19,13 @@ void __fastcall WarBoardAPIMasterAttackRequestTask___ctor(
   System_Int32_array *v19; // x6
   System_Int32_array *v20; // x7
 
-  WarBoardAPIRequestTask___ctor_22725128(
+  WarBoardAPIRequestTask___ctor_21112220(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
     (const MethodInfo *)resultCallback);
   this->fields.attackPieceData = attacker;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.attackPieceData,
     (System_Int32_array **)attacker,
     v9,
@@ -35,7 +35,7 @@ void __fastcall WarBoardAPIMasterAttackRequestTask___ctor(
     v13,
     v14);
   this->fields.targetPieceData = target;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.targetPieceData,
     (System_Int32_array **)target,
     v15,
@@ -54,26 +54,25 @@ void __fastcall WarBoardAPIMasterAttackRequestTask__SetRequest(
   __int64 v3; // x1
   __int64 v4; // x1
   void *Instance; // x0
-  __int64 v6; // x1
   WarBoardData_o *warBoardData; // x20
-  WarBoardMasterAttackRequest_o *v8; // x21
+  WarBoardMasterAttackRequest_o *v7; // x21
   struct WarBoardPieceData_o *attackPieceData; // x8
   struct WarBoardPieceData_o *targetPieceData; // x9
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
 
-  if ( (byte_4186794 & 1) == 0 )
+  if ( (byte_4212B3A & 1) == 0 )
   {
-    sub_B2C35C(&Method_NetworkManager_getRequest_WarBoardMasterAttackRequest___, method);
-    sub_B2C35C(&NetworkManager_TypeInfo, v3);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_4186794 = 1;
+    sub_B0D8A4(&Method_NetworkManager_getRequest_WarBoardMasterAttackRequest___, method);
+    sub_B0D8A4(&NetworkManager_TypeInfo, v3);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_4212B3A = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   warBoardData = (WarBoardData_o *)*((_QWORD *)Instance + 54);
@@ -84,19 +83,19 @@ void __fastcall WarBoardAPIMasterAttackRequestTask__SetRequest(
   }
   Instance = NetworkManager__getRequest_WarBoardWallAttackRequest_(
                0LL,
-               (const MethodInfo_1AB4500 *)Method_NetworkManager_getRequest_WarBoardMasterAttackRequest___);
+               (const MethodInfo_2049D98 *)Method_NetworkManager_getRequest_WarBoardMasterAttackRequest___);
   if ( !warBoardData
-    || (v8 = (WarBoardMasterAttackRequest_o *)Instance,
+    || (v7 = (WarBoardMasterAttackRequest_o *)Instance,
         Instance = (void *)WarBoardData__get_id(warBoardData, 0LL),
         (attackPieceData = this->fields.attackPieceData) == 0LL)
     || (targetPieceData = this->fields.targetPieceData) == 0LL
-    || !v8 )
+    || !v7 )
   {
 LABEL_12:
-    sub_B2C434(Instance, v6);
+    sub_B0D97C(Instance);
   }
   WarBoardMasterAttackRequest__beginRequest(
-    v8,
+    v7,
     (int32_t)Instance,
     attackPieceData->fields._forceId_k__BackingField,
     attackPieceData->fields._groupId_k__BackingField,
@@ -108,14 +107,14 @@ LABEL_12:
     targetPieceData->fields._nowSquareIndex_k__BackingField,
     warBoardData,
     0LL);
-  this->fields.request = (struct RequestBase_o *)v8;
-  sub_B2C2F8(
+  this->fields.request = (struct RequestBase_o *)v7;
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.request,
-    (System_Int32_array **)v8,
+    (System_Int32_array **)v7,
+    v10,
     v11,
     v12,
     v13,
     v14,
-    v15,
-    v16);
+    v15);
 }

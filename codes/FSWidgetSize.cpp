@@ -28,10 +28,10 @@ int32_t __fastcall FSWidgetSize__GetSize(
   int32_t height; // w0
   float v12; // s0
 
-  if ( (byte_41885E3 & 1) == 0 )
+  if ( (byte_421545C & 1) == 0 )
   {
-    sub_B2C35C(&FSUtility_TypeInfo, *(_QWORD *)&size_16_9);
-    byte_41885E3 = 1;
+    sub_B0D8A4(&FSUtility_TypeInfo, *(_QWORD *)&size_16_9);
+    byte_421545C = 1;
   }
   if ( fix )
   {
@@ -62,20 +62,19 @@ void __fastcall FSWidgetSize__SetSize(FSWidgetSize_o *this, const MethodInfo *me
   _BOOL8 v5; // x0
   const MethodInfo *v6; // x4
   __int64 Size; // x0
-  __int64 v8; // x1
-  FSWidgetSize_o *v9; // x0
-  const MethodInfo *v10; // x4
-  int32_t v11; // w1
+  FSWidgetSize_o *v8; // x0
+  const MethodInfo *v9; // x4
+  int32_t v10; // w1
 
-  if ( (byte_41885E2 & 1) == 0 )
+  if ( (byte_421545B & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v3);
-    byte_41885E2 = 1;
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
+    byte_421545B = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                                      (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -91,14 +90,14 @@ void __fastcall FSWidgetSize__SetSize(FSWidgetSize_o *this, const MethodInfo *me
              (bool)this[1].klass,
              v6);
     if ( !Component_WebViewObject )
-      sub_B2C434(Size, v8);
+      sub_B0D97C(Size);
     UIWidget__set_width((UIWidget_o *)Component_WebViewObject, Size, 0LL);
-    v11 = FSWidgetSize__GetSize(
-            v9,
+    v10 = FSWidgetSize__GetSize(
+            v8,
             this->fields.size_21_9.fields.m_X,
             *(_DWORD *)&this->fields.fixWidth,
             BYTE1(this[1].klass),
-            v10);
-    UIWidget__set_height((UIWidget_o *)Component_WebViewObject, v11, 0LL);
+            v9);
+    UIWidget__set_height((UIWidget_o *)Component_WebViewObject, v10, 0LL);
   }
 }

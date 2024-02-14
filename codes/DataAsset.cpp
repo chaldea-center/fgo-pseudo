@@ -7,10 +7,10 @@ void __fastcall DataAsset___ctor(DataAsset_o *this, System_Byte_array *bytes, co
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
 
-  if ( (byte_4189038 & 1) == 0 )
+  if ( (byte_421605F & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, bytes);
-    byte_4189038 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, bytes);
+    byte_421605F = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -19,7 +19,7 @@ void __fastcall DataAsset___ctor(DataAsset_o *this, System_Byte_array *bytes, co
   }
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0LL);
   this->fields.byteData = bytes;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.byteData,
     (System_Int32_array **)bytes,
     v5,
@@ -31,7 +31,7 @@ void __fastcall DataAsset___ctor(DataAsset_o *this, System_Byte_array *bytes, co
 }
 
 
-void __fastcall DataAsset___ctor_27465432(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
+void __fastcall DataAsset___ctor_27233336(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
 {
   System_String_array **v5; // x2
   System_String_array **v6; // x3
@@ -40,10 +40,10 @@ void __fastcall DataAsset___ctor_27465432(DataAsset_o *this, System_String_o *te
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
 
-  if ( (byte_4189039 & 1) == 0 )
+  if ( (byte_4216060 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, text);
-    byte_4189039 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, text);
+    byte_4216060 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -52,7 +52,7 @@ void __fastcall DataAsset___ctor_27465432(DataAsset_o *this, System_String_o *te
   }
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0LL);
   this->fields.textData = text;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.textData,
     (System_Int32_array **)text,
     v5,

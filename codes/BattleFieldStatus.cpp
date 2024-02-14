@@ -2,14 +2,14 @@ void __fastcall BattleFieldStatus___ctor(BattleFieldStatus_o *this, const Method
 {
   struct System_Double_array *v3; // x0
 
-  if ( (byte_4184BA3 & 1) == 0 )
+  if ( (byte_42117E3 & 1) == 0 )
   {
-    sub_B2C35C(&double___TypeInfo, method);
-    byte_4184BA3 = 1;
+    sub_B0D8A4(&double___TypeInfo, method);
+    byte_42117E3 = 1;
   }
-  v3 = (struct System_Double_array *)sub_B2C374(double___TypeInfo, 1LL);
+  v3 = (struct System_Double_array *)sub_B0D8BC(double___TypeInfo, 1LL);
   this->fields.wkZeroParam = v3;
-  sub_B2C2F8(&this->fields, v3);
+  sub_B0D840(&this->fields, v3);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -30,15 +30,15 @@ int32_t __fastcall BattleFieldStatus__CommonAliveCount(
   Il2CppObject *v12; // x21
   struct BattleFieldStatus___c_StaticFields *v13; // x0
 
-  if ( (byte_4184BA1 & 1) == 0 )
+  if ( (byte_42117E1 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_BattleServantData__FindAll__, datalist);
-    sub_B2C35C(&Method_System_Collections_Generic_List_BattleServantData__get_Count__, v4);
-    sub_B2C35C(&Method_System_Predicate_BattleServantData___ctor__, v5);
-    sub_B2C35C(&System_Predicate_BattleServantData__TypeInfo, v6);
-    sub_B2C35C(&Method_BattleFieldStatus___c__CommonAliveCount_b__3_0__, v7);
-    sub_B2C35C(&BattleFieldStatus___c_TypeInfo, v8);
-    byte_4184BA1 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleServantData__FindAll__, datalist);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleServantData__get_Count__, v4);
+    sub_B0D8A4(&Method_System_Predicate_BattleServantData___ctor__, v5);
+    sub_B0D8A4(&System_Predicate_BattleServantData__TypeInfo, v6);
+    sub_B0D8A4(&Method_BattleFieldStatus___c__CommonAliveCount_b__3_0__, v7);
+    sub_B0D8A4(&BattleFieldStatus___c_TypeInfo, v8);
+    byte_42117E1 = 1;
   }
   All = BattleFieldStatus___c_TypeInfo;
   if ( (BYTE3(BattleFieldStatus___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -57,23 +57,26 @@ int32_t __fastcall BattleFieldStatus__CommonAliveCount(
       static_fields = BattleFieldStatus___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__3_0 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B2C42C(System_Predicate_BattleServantData__TypeInfo);
+    _9__3_0 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B0D974(
+                                                                         System_Predicate_BattleServantData__TypeInfo,
+                                                                         datalist,
+                                                                         method);
     System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
       _9__3_0,
       v12,
       Method_BattleFieldStatus___c__CommonAliveCount_b__3_0__,
-      (const MethodInfo_2952BE4 *)Method_System_Predicate_BattleServantData___ctor__);
+      (const MethodInfo_2AF7E30 *)Method_System_Predicate_BattleServantData___ctor__);
     v13 = BattleFieldStatus___c_TypeInfo->static_fields;
     v13->__9__3_0 = (struct System_Predicate_BattleServantData__o *)_9__3_0;
-    sub_B2C2F8(&v13->__9__3_0, _9__3_0);
+    sub_B0D840(&v13->__9__3_0, _9__3_0);
   }
   if ( !datalist
     || (All = System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo___FindAll(
                 (System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__o *)datalist,
                 (System_Predicate_T__o *)_9__3_0,
-                (const MethodInfo_2EF4DE8 *)Method_System_Collections_Generic_List_BattleServantData__FindAll__)) == 0LL )
+                (const MethodInfo_2FC6070 *)Method_System_Collections_Generic_List_BattleServantData__FindAll__)) == 0LL )
   {
-    sub_B2C434(All, datalist);
+    sub_B0D97C(All);
   }
   return *((_DWORD *)All + 6);
 }
@@ -95,15 +98,15 @@ int32_t __fastcall BattleFieldStatus__CommonRestCount(
   Il2CppObject *v12; // x21
   struct BattleFieldStatus___c_StaticFields *v13; // x0
 
-  if ( (byte_4184BA2 & 1) == 0 )
+  if ( (byte_42117E2 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_BattleServantData__FindAll__, datalist);
-    sub_B2C35C(&Method_System_Collections_Generic_List_BattleServantData__get_Count__, v4);
-    sub_B2C35C(&Method_System_Predicate_BattleServantData___ctor__, v5);
-    sub_B2C35C(&System_Predicate_BattleServantData__TypeInfo, v6);
-    sub_B2C35C(&Method_BattleFieldStatus___c__CommonRestCount_b__4_0__, v7);
-    sub_B2C35C(&BattleFieldStatus___c_TypeInfo, v8);
-    byte_4184BA2 = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleServantData__FindAll__, datalist);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleServantData__get_Count__, v4);
+    sub_B0D8A4(&Method_System_Predicate_BattleServantData___ctor__, v5);
+    sub_B0D8A4(&System_Predicate_BattleServantData__TypeInfo, v6);
+    sub_B0D8A4(&Method_BattleFieldStatus___c__CommonRestCount_b__4_0__, v7);
+    sub_B0D8A4(&BattleFieldStatus___c_TypeInfo, v8);
+    byte_42117E2 = 1;
   }
   All = BattleFieldStatus___c_TypeInfo;
   if ( (BYTE3(BattleFieldStatus___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -122,23 +125,26 @@ int32_t __fastcall BattleFieldStatus__CommonRestCount(
       static_fields = BattleFieldStatus___c_TypeInfo->static_fields;
     }
     v12 = (Il2CppObject *)static_fields->__9;
-    _9__4_0 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B2C42C(System_Predicate_BattleServantData__TypeInfo);
+    _9__4_0 = (System_Predicate_peRenderTexture_ChangeLayerObject__o *)sub_B0D974(
+                                                                         System_Predicate_BattleServantData__TypeInfo,
+                                                                         datalist,
+                                                                         method);
     System_Predicate_peRenderTexture_ChangeLayerObject____ctor(
       _9__4_0,
       v12,
       Method_BattleFieldStatus___c__CommonRestCount_b__4_0__,
-      (const MethodInfo_2952BE4 *)Method_System_Predicate_BattleServantData___ctor__);
+      (const MethodInfo_2AF7E30 *)Method_System_Predicate_BattleServantData___ctor__);
     v13 = BattleFieldStatus___c_TypeInfo->static_fields;
     v13->__9__4_0 = (struct System_Predicate_BattleServantData__o *)_9__4_0;
-    sub_B2C2F8(&v13->__9__4_0, _9__4_0);
+    sub_B0D840(&v13->__9__4_0, _9__4_0);
   }
   if ( !datalist
     || (All = System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo___FindAll(
                 (System_Collections_Generic_List_MaterialBranchRouteManager_MaterialBranchInfo__o *)datalist,
                 (System_Predicate_T__o *)_9__4_0,
-                (const MethodInfo_2EF4DE8 *)Method_System_Collections_Generic_List_BattleServantData__FindAll__)) == 0LL )
+                (const MethodInfo_2FC6070 *)Method_System_Collections_Generic_List_BattleServantData__FindAll__)) == 0LL )
   {
-    sub_B2C434(All, datalist);
+    sub_B0D97C(All);
   }
   return *((_DWORD *)All + 6);
 }
@@ -172,25 +178,26 @@ bool __fastcall BattleFieldStatus__isAiTarget(
 void __fastcall BattleFieldStatus___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
+  __int64 v2; // x2
+  Il2CppObject *v3; // x19
   BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_4186A7A & 1) == 0 )
+  if ( (byte_4213907 & 1) == 0 )
   {
-    sub_B2C35C(&BattleFieldStatus___c_TypeInfo, v1);
-    byte_4186A7A = 1;
+    sub_B0D8A4(&BattleFieldStatus___c_TypeInfo, v1);
+    byte_4213907 = 1;
   }
-  v2 = (Il2CppObject *)sub_B2C42C(BattleFieldStatus___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
+  v3 = (Il2CppObject *)sub_B0D974(BattleFieldStatus___c_TypeInfo, v1, v2);
+  System_Object___ctor(v3, 0LL);
   static_fields = (BattleServantConfConponent_o *)BattleFieldStatus___c_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v2;
-  sub_B2C2F8(static_fields, (System_Int32_array **)v2, v4, v5, v6, v7, v8, v9);
+  static_fields->klass = (BattleServantConfConponent_c *)v3;
+  sub_B0D840(static_fields, (System_Int32_array **)v3, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -206,7 +213,7 @@ bool __fastcall BattleFieldStatus___c___CommonAliveCount_b__3_0(
         const MethodInfo *method)
 {
   if ( !p )
-    sub_B2C434(this, 0LL);
+    sub_B0D97C(this);
   if ( !p->fields.isEntry )
     return 0;
   if ( BattleServantData__isAlive(p, 0, 0LL) )
@@ -221,6 +228,6 @@ bool __fastcall BattleFieldStatus___c___CommonRestCount_b__4_0(
         const MethodInfo *method)
 {
   if ( !p )
-    sub_B2C434(this, 0LL);
+    sub_B0D97C(this);
   return BattleServantData__isAlive(p, 0, 0LL) || BattleServantData__isGuts(p, 0LL);
 }

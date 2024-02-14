@@ -1,7 +1,7 @@
 void __fastcall MapModelComponent___ctor(MapModelComponent_o *this, const MethodInfo *method)
 {
   this->fields.isMapCamera2DReset = 1;
-  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_319F7D0;
+  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_3201C90;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -21,70 +21,69 @@ UnityEngine_Vector3_o __fastcall MapModelComponent__GetCameraLocationPosition(
   System_String_o *locationPrefix; // x20
   System_String_o *v5; // x0
   System_String_o *v6; // x0
-  __int64 v7; // x1
   struct UnityEngine_GameObject_array *cameraLocationObjectList; // x8
-  System_String_o *v9; // x20
-  __int64 v10; // x21
+  System_String_o *v8; // x20
+  __int64 v9; // x21
   int max_length; // w9
-  il2cpp_array_size_t v12; // w22
+  il2cpp_array_size_t v11; // w22
   System_String_o *name; // x0
-  float v14; // s0
-  float v15; // s1
-  float v16; // s2
-  struct UnityEngine_GameObject_array *v17; // x8
-  __int64 v18; // x0
-  int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
+  float v13; // s0
+  float v14; // s1
+  float v15; // s2
+  struct UnityEngine_GameObject_array *v16; // x8
+  __int64 v17; // x0
+  int32_t v18; // [xsp+Ch] [xbp-24h] BYREF
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  v19 = layer;
+  v18 = layer;
   locationPrefix = this->fields.locationPrefix;
-  v5 = System_Int32__ToString((int32_t)&v19, 0LL);
-  v6 = System_String__Concat_44305532(locationPrefix, v5, 0LL);
+  v5 = System_Int32__ToString((int32_t)&v18, 0LL);
+  v6 = System_String__Concat_43849904(locationPrefix, v5, 0LL);
   cameraLocationObjectList = this->fields.cameraLocationObjectList;
   if ( !cameraLocationObjectList )
     goto LABEL_8;
-  v9 = v6;
-  v10 = 4LL;
+  v8 = v6;
+  v9 = 4LL;
   while ( 1 )
   {
     max_length = cameraLocationObjectList->max_length;
-    v12 = v10 - 4;
-    if ( (int)v10 - 4 >= max_length )
+    v11 = v9 - 4;
+    if ( (int)v9 - 4 >= max_length )
     {
-      *(UnityEngine_Vector3_o *)&v14 = UnityEngine_Vector3__get_zero(0LL);
+      *(UnityEngine_Vector3_o *)&v13 = UnityEngine_Vector3__get_zero(0LL);
       goto LABEL_15;
     }
-    if ( v12 >= max_length )
+    if ( v11 >= max_length )
       goto LABEL_14;
-    v6 = (System_String_o *)*((_QWORD *)&cameraLocationObjectList->obj.klass + v10);
+    v6 = (System_String_o *)*((_QWORD *)&cameraLocationObjectList->obj.klass + v9);
     if ( !v6 )
       goto LABEL_8;
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)v6, 0LL);
-    v6 = (System_String_o *)System_String__op_Inequality(name, v9, 0LL);
+    v6 = (System_String_o *)System_String__op_Inequality(name, v8, 0LL);
     if ( ((unsigned __int8)v6 & 1) == 0 )
       break;
     cameraLocationObjectList = this->fields.cameraLocationObjectList;
-    ++v10;
+    ++v9;
     if ( !cameraLocationObjectList )
       goto LABEL_8;
   }
-  v17 = this->fields.cameraLocationObjectList;
-  if ( !v17 )
+  v16 = this->fields.cameraLocationObjectList;
+  if ( !v16 )
 LABEL_8:
-    sub_B2C434(v6, v7);
-  if ( v12 >= v17->max_length )
+    sub_B0D97C(v6);
+  if ( v11 >= v16->max_length )
   {
 LABEL_14:
-    v18 = sub_B2C460(v6);
-    sub_B2C400(v18, 0LL);
+    v17 = sub_B0D9A8(v6);
+    sub_B0D948(v17, 0LL);
   }
-  *(UnityEngine_Vector3_o *)&v14 = GameObjectExtensions__GetLocalPosition(
-                                     (UnityEngine_GameObject_o *)*((_QWORD *)&v17->obj.klass + v10),
+  *(UnityEngine_Vector3_o *)&v13 = GameObjectExtensions__GetLocalPosition(
+                                     (UnityEngine_GameObject_o *)*((_QWORD *)&v16->obj.klass + v9),
                                      0LL);
 LABEL_15:
-  result.fields.z = v16;
-  result.fields.y = v15;
-  result.fields.x = v14;
+  result.fields.z = v15;
+  result.fields.y = v14;
+  result.fields.x = v13;
   return result;
 }
 
@@ -95,17 +94,29 @@ void __fastcall MapModelComponent__PlayAnimation(
         System_Action_o *endAction,
         const MethodInfo *method)
 {
-  SimpleAnimation_o *effectAction; // x0
+  System_Boolean_array **v4; // x4
+  System_Int32_array **v5; // x5
+  System_Int32_array *v6; // x6
+  System_Int32_array *v7; // x7
+  char *effectAction; // x0
 
-  effectAction = (SimpleAnimation_o *)this->fields.effectAction;
+  effectAction = (char *)this->fields.effectAction;
   if ( !effectAction
-    || (*(_QWORD *)&effectAction->fields.m_LayerMixer.fields.m_Version = endAction,
-        sub_B2C2F8(&effectAction->fields.m_LayerMixer.fields.m_Version, endAction),
-        (effectAction = this->fields.animationComponent) == 0LL) )
+    || (*((_QWORD *)effectAction + 4) = endAction,
+        sub_B0D840(
+          (BattleServantConfConponent_o *)(effectAction + 32),
+          (System_Int32_array **)endAction,
+          (System_String_array **)endAction,
+          (System_String_array **)method,
+          v4,
+          v5,
+          v6,
+          v7),
+        (effectAction = (char *)this->fields.animationComponent) == 0LL) )
   {
-    sub_B2C434(effectAction, animationName);
+    sub_B0D97C(effectAction);
   }
-  SimpleAnimation__Play_16486620(effectAction, animationName, 0LL);
+  SimpleAnimation__Play_50482404((SimpleAnimation_o *)effectAction, animationName, 0LL);
 }
 
 

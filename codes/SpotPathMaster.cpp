@@ -1,14 +1,14 @@
 void __fastcall SpotPathMaster___ctor(SpotPathMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4188BD8 & 1) == 0 )
+  if ( (byte_4215319 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__, method);
-    byte_4188BD8 = 1;
+    sub_B0D8A4(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__, method);
+    byte_4215319 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     215,
-    (const MethodInfo_24E4034 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
+    (const MethodInfo_2669B38 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
 }
 
 
@@ -51,19 +51,19 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
   int32_t v15; // w22
   __int64 v16; // x10
 
-  if ( (byte_4188BD9 & 1) == 0 )
+  if ( (byte_421531A & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
-    sub_B2C35C(&SpotPathEntity_TypeInfo, v10);
-    byte_4188BD9 = 1;
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v9);
+    sub_B0D8A4(&SpotPathEntity_TypeInfo, v10);
+    byte_421531A = 1;
   }
   result = (SpotPathEntity_o *)this->fields.list;
   if ( !result )
     goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
-            (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+            (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
   if ( Count >= 1 )
   {
     v13 = termId + 100 * eventId;
@@ -77,7 +77,7 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
       result = (SpotPathEntity_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                      (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)result,
                                      v15,
-                                     (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                     (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( !result )
         break;
       v16 = *(&SpotPathEntity_TypeInfo->_2.bitflags2 + 1);
@@ -92,7 +92,7 @@ SpotPathEntity_o *__fastcall SpotPathMaster__GetSpotPathEntity(
         return 0LL;
     }
 LABEL_16:
-    sub_B2C434(result, *(_QWORD *)&eventId);
+    sub_B0D97C(result);
   }
   return 0LL;
 }

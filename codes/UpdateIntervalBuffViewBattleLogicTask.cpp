@@ -13,11 +13,11 @@ void __fastcall UpdateIntervalBuffViewBattleLogicTask___ctor(
 
   v4 = (BattleServantConfConponent_o *)this;
   BattleLogicTask___ctor((BattleLogicTask_o *)this, 0LL);
-  v4->fields.BattleServantAbilityObj = (struct UnityEngine_GameObject_o *)actData;
-  v4 = (BattleServantConfConponent_o *)((char *)v4 + 224);
-  LODWORD(v4[-1].fields.CardAndCommandObj) = 58;
-  sub_B2C2F8(v4, (System_Int32_array **)actData, v5, v6, v7, v8, v9, v10);
-  BYTE1(v4[-1].fields.BattleAssetUIAtlas) = 1;
+  v4->fields.AbillityBtnBg = (struct UnityEngine_GameObject_o *)actData;
+  v4 = (BattleServantConfConponent_o *)((char *)v4 + 240);
+  LODWORD(v4[-1].fields.StateScrollView) = 58;
+  sub_B0D840(v4, (System_Int32_array **)actData, v5, v6, v7, v8, v9, v10);
+  LOBYTE(v4[-1].fields.BattleAssetUIAtlas) = 1;
 }
 
 
@@ -30,13 +30,13 @@ BattleActionData_o *__fastcall UpdateIntervalBuffViewBattleLogicTask__MakeAction
   UpdateViewIntervalBuffActionData_o *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_4188A78 & 1) == 0 )
+  if ( (byte_4215B39 & 1) == 0 )
   {
-    sub_B2C35C(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
-    byte_4188A78 = 1;
+    sub_B0D8A4(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
+    byte_4215B39 = 1;
   }
   baseActData = this->fields.baseActData;
-  v5 = (UpdateViewIntervalBuffActionData_o *)sub_B2C42C(UpdateViewIntervalBuffActionData_TypeInfo);
+  v5 = (UpdateViewIntervalBuffActionData_o *)sub_B0D974(UpdateViewIntervalBuffActionData_TypeInfo, logic, method);
   UpdateViewIntervalBuffActionData___ctor(v5, baseActData, v6);
   return (BattleActionData_o *)v5;
 }

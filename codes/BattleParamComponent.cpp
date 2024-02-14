@@ -2,15 +2,15 @@ void __fastcall BattleParamComponent___ctor(BattleParamComponent_o *this, const 
 {
   void *v3; // x1
 
-  if ( (byte_41843E9 & 1) == 0 )
+  if ( (byte_42111AB & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_1/*""*/, method);
-    byte_41843E9 = 1;
+    sub_B0D8A4(&StringLiteral_1/*""*/, method);
+    byte_42111AB = 1;
   }
   this->fields.nextStepTime = 1.5;
   v3 = StringLiteral_1/*""*/;
   this->fields.baseAnimationName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_B2C2F8(&this->fields.baseAnimationName, v3);
+  sub_B0D840(&this->fields.baseAnimationName, v3);
   this->fields.maxPhase = 1;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
@@ -24,29 +24,29 @@ void __fastcall BattleParamComponent__Init(BattleParamComponent_o *this, const M
   struct UnityEngine_Animation_o *v6; // x0
   WebViewObject_o *v7; // x1
 
-  if ( (byte_41843E4 & 1) == 0 )
+  if ( (byte_42111A6 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_Animation___, method);
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_CommonEffectComponent___, v3);
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v4);
-    byte_41843E4 = 1;
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Animation___, method);
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_CommonEffectComponent___, v3);
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v4);
+    byte_42111A6 = 1;
   }
   Component_WebViewObject = (struct SimpleAnimation_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                           (UnityEngine_Component_o *)this,
-                                                          (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                                                          (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   this->fields.simpleAnim = Component_WebViewObject;
-  sub_B2C2F8(&this->fields.simpleAnim, Component_WebViewObject);
+  sub_B0D840(&this->fields.simpleAnim, Component_WebViewObject);
   v6 = (struct UnityEngine_Animation_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                            (UnityEngine_Component_o *)this,
-                                           (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                                           (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Animation___);
   this->fields.anim = v6;
-  sub_B2C2F8(&this->fields.anim, v6);
+  sub_B0D840(&this->fields.anim, v6);
   *(_QWORD *)&this->fields.currentPhase = 1LL;
   v7 = UnityEngine_Component__GetComponent_WebViewObject_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_CommonEffectComponent___);
+         (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_CommonEffectComponent___);
   this->fields.commonEff = (struct CommonEffectComponent_o *)v7;
-  sub_B2C2F8(&this->fields.commonEff, v7);
+  sub_B0D840(&this->fields.commonEff, v7);
 }
 
 
@@ -60,7 +60,7 @@ void __fastcall BattleParamComponent__PlayStartEffect(
   System_Collections_IEnumerator_o *v6; // x1
 
   v6 = BattleParamComponent__playingEffect(this, start, end, callback, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_35309748((UnityEngine_MonoBehaviour_o *)this, v6, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_34930128((UnityEngine_MonoBehaviour_o *)this, v6, 0LL);
 }
 
 
@@ -70,16 +70,16 @@ void __fastcall BattleParamComponent__Release(BattleParamComponent_o *this, cons
   System_String_o *voicePath; // x0
   System_String_o *v5; // x19
 
-  if ( (byte_41843E6 & 1) == 0 )
+  if ( (byte_42111A8 & 1) == 0 )
   {
-    sub_B2C35C(&SoundManager_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_1/*""*/, v3);
-    byte_41843E6 = 1;
+    sub_B0D8A4(&SoundManager_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v3);
+    byte_42111A8 = 1;
   }
   this->fields.simpleAnim = 0LL;
-  sub_B2C2F8(&this->fields.simpleAnim, 0LL);
+  sub_B0D840(&this->fields.simpleAnim, 0LL);
   this->fields.anim = 0LL;
-  sub_B2C2F8(&this->fields.anim, 0LL);
+  sub_B0D840(&this->fields.anim, 0LL);
   voicePath = this->fields.voicePath;
   if ( voicePath && System_String__op_Inequality(voicePath, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
   {
@@ -99,13 +99,12 @@ void __fastcall BattleParamComponent__SetEndressFlg(BattleParamComponent_o *this
 {
   UnityEngine_Object_o *commonEff; // x21
   _BOOL8 v6; // x0
-  __int64 v7; // x1
-  struct CommonEffectComponent_o *v8; // x8
+  struct CommonEffectComponent_o *v7; // x8
 
-  if ( (byte_41843E8 & 1) == 0 )
+  if ( (byte_42111AA & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, flg);
-    byte_41843E8 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, flg);
+    byte_42111AA = 1;
   }
   commonEff = (UnityEngine_Object_o *)this->fields.commonEff;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -116,10 +115,10 @@ void __fastcall BattleParamComponent__SetEndressFlg(BattleParamComponent_o *this
   v6 = UnityEngine_Object__op_Inequality(commonEff, 0LL, 0LL);
   if ( v6 )
   {
-    v8 = this->fields.commonEff;
-    if ( !v8 )
-      sub_B2C434(v6, v7);
-    v8->fields.isEndless = flg;
+    v7 = this->fields.commonEff;
+    if ( !v7 )
+      sub_B0D97C(v6);
+    v7->fields.isEndless = flg;
   }
 }
 
@@ -134,37 +133,36 @@ void __fastcall BattleParamComponent__SetInfo(
   __int64 v9; // x1
   __int64 v10; // x1
   __int64 v11; // x0
-  __int64 v12; // x1
   Il2CppObject *voiceDataStr; // x22
-  Il2CppObject *v14; // x0
-  struct System_String_o *v15; // x0
+  Il2CppObject *v13; // x0
+  struct System_String_o *v14; // x0
   System_String_o *voicePath; // x20
-  int32_t v17; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_41843E5 & 1) == 0 )
+  if ( (byte_42111A7 & 1) == 0 )
   {
-    sub_B2C35C(&int_TypeInfo, animationIds);
-    sub_B2C35C(&SoundManager_TypeInfo, v9);
-    sub_B2C35C(&StringLiteral_23643/*"{0}_{1}"*/, v10);
-    byte_41843E5 = 1;
+    sub_B0D8A4(&int_TypeInfo, animationIds);
+    sub_B0D8A4(&SoundManager_TypeInfo, v9);
+    sub_B0D8A4(&StringLiteral_23721/*"{0}_{1}"*/, v10);
+    byte_42111A7 = 1;
   }
   BattleParamComponent__Init(this, (const MethodInfo *)animationIds);
   this->fields.animationIds = animationIds;
-  sub_B2C2F8(&this->fields.animationIds, animationIds);
+  sub_B0D840(&this->fields.animationIds, animationIds);
   if ( voiceId < 1 )
   {
     if ( !callback )
-      sub_B2C434(v11, v12);
+      sub_B0D97C(v11);
     System_Action__Invoke(callback, 0LL);
   }
   else
   {
     voiceDataStr = (Il2CppObject *)this->fields.voiceDataStr;
-    v17 = voiceId;
-    v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
-    v15 = System_String__Format_44301068((System_String_o *)StringLiteral_23643/*"{0}_{1}"*/, voiceDataStr, v14, 0LL);
-    this->fields.voicePath = v15;
-    sub_B2C2F8(&this->fields.voicePath, v15);
+    v16 = voiceId;
+    v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
+    v14 = System_String__Format_43845440((System_String_o *)StringLiteral_23721/*"{0}_{1}"*/, voiceDataStr, v13, 0LL);
+    this->fields.voicePath = v14;
+    sub_B0D840(&this->fields.voicePath, v14);
     voicePath = this->fields.voicePath;
     if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !SoundManager_TypeInfo->_2.cctor_finished )
@@ -186,23 +184,25 @@ System_Collections_IEnumerator_o *__fastcall BattleParamComponent__playingEffect
 {
   BattleParamComponent__playingEffect_d__17_o *v9; // x23
   __int64 v10; // x0
-  __int64 v11; // x1
 
-  if ( (byte_41843E7 & 1) == 0 )
+  if ( (byte_42111A9 & 1) == 0 )
   {
-    sub_B2C35C(&BattleParamComponent__playingEffect_d__17_TypeInfo, *(_QWORD *)&start);
-    byte_41843E7 = 1;
+    sub_B0D8A4(&BattleParamComponent__playingEffect_d__17_TypeInfo, *(_QWORD *)&start);
+    byte_42111A9 = 1;
   }
-  v9 = (BattleParamComponent__playingEffect_d__17_o *)sub_B2C42C(BattleParamComponent__playingEffect_d__17_TypeInfo);
+  v9 = (BattleParamComponent__playingEffect_d__17_o *)sub_B0D974(
+                                                        BattleParamComponent__playingEffect_d__17_TypeInfo,
+                                                        *(_QWORD *)&start,
+                                                        *(_QWORD *)&end);
   BattleParamComponent__playingEffect_d__17___ctor(v9, 0, 0LL);
   if ( !v9 )
-    sub_B2C434(v10, v11);
+    sub_B0D97C(v10);
   v9->fields.__4__this = this;
-  sub_B2C2F8(&v9->fields.__4__this, this);
+  sub_B0D840(&v9->fields.__4__this, this);
   v9->fields.start = start;
   v9->fields.end = end;
   v9->fields.callback = callback;
-  sub_B2C2F8(&v9->fields.callback, callback);
+  sub_B0D840(&v9->fields.callback, callback);
   return (System_Collections_IEnumerator_o *)v9;
 }
 
@@ -262,13 +262,13 @@ bool __fastcall BattleParamComponent__playingEffect_d__17__MoveNext(
   int v41; // [xsp+1Ch] [xbp-24h] BYREF
 
   v2 = this;
-  if ( (byte_41871D2 & 1) == 0 )
+  if ( (byte_4213BEE & 1) == 0 )
   {
-    sub_B2C35C(&int_TypeInfo, method);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v3);
-    sub_B2C35C(&StringLiteral_23657/*"{0}{1}_{2}"*/, v4);
-    this = (BattleParamComponent__playingEffect_d__17_o *)sub_B2C35C(&StringLiteral_23651/*"{0}{1}"*/, v5);
-    byte_41871D2 = 1;
+    sub_B0D8A4(&int_TypeInfo, method);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
+    sub_B0D8A4(&StringLiteral_23735/*"{0}{1}_{2}"*/, v4);
+    this = (BattleParamComponent__playingEffect_d__17_o *)sub_B0D8A4(&StringLiteral_23729/*"{0}{1}"*/, v5);
+    byte_4213BEE = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -291,7 +291,7 @@ bool __fastcall BattleParamComponent__playingEffect_d__17__MoveNext(
   v2->fields.__1__state = -1;
   if ( !_4__this )
 LABEL_44:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   for ( i = v2->fields.start; ; i = _4__this->fields.currentPhase + 1 )
   {
     _4__this->fields.currentPhase = i;
@@ -318,13 +318,13 @@ LABEL_44:
       if ( (unsigned int)v14 >= animationIds->max_length )
       {
 LABEL_45:
-        v37 = sub_B2C460(this);
-        sub_B2C400(v37, 0LL);
+        v37 = sub_B0D9A8(this);
+        sub_B0D948(v37, 0LL);
       }
       v15 = (Il2CppObject *)this;
       v40 = animationIds->m_Items[v14 + 1];
       v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v40);
-      v17 = System_String__Format_44306596((System_String_o *)StringLiteral_23657/*"{0}{1}_{2}"*/, baseAnimationName, v15, v16, 0LL);
+      v17 = System_String__Format_43850968((System_String_o *)StringLiteral_23735/*"{0}{1}_{2}"*/, baseAnimationName, v15, v16, 0LL);
       ++_4__this->fields.switchIndex;
     }
     else
@@ -333,7 +333,7 @@ LABEL_19:
       v18 = (Il2CppObject *)_4__this->fields.baseAnimationName;
       v39 = i;
       v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39);
-      v17 = System_String__Format_44301068((System_String_o *)StringLiteral_23651/*"{0}{1}"*/, v18, v19, 0LL);
+      v17 = System_String__Format_43845440((System_String_o *)StringLiteral_23729/*"{0}{1}"*/, v18, v19, 0LL);
     }
     simpleAnim = (UnityEngine_Object_o *)_4__this->fields.simpleAnim;
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -346,7 +346,7 @@ LABEL_19:
       this = (BattleParamComponent__playingEffect_d__17_o *)_4__this->fields.simpleAnim;
       if ( !this )
         goto LABEL_44;
-      SimpleAnimation__Play_16486620((SimpleAnimation_o *)this, v17, 0LL);
+      SimpleAnimation__Play_50482404((SimpleAnimation_o *)this, v17, 0LL);
 LABEL_26:
       this = (BattleParamComponent__playingEffect_d__17_o *)_4__this->fields.simpleAnim;
       if ( !this )
@@ -358,7 +358,7 @@ LABEL_26:
       {
         v2->fields.__2__current = 0LL;
         p__2__current = (BattleServantConfConponent_o *)&v2->fields.__2__current;
-        sub_B2C2F8(p__2__current, 0LL, v21, v22, v23, v24, v25, v26);
+        sub_B0D840(p__2__current, 0LL, v21, v22, v23, v24, v25, v26);
         LOBYTE(callback) = 1;
         *(_DWORD *)&p__2__current[-1].fields.isOpenAfter = 1;
         return (char)callback;
@@ -378,7 +378,7 @@ LABEL_26:
         this = (BattleParamComponent__playingEffect_d__17_o *)_4__this->fields.anim;
         if ( !this )
           goto LABEL_44;
-        UnityEngine_Animation__Play_50201580((UnityEngine_Animation_o *)this, v17, 0LL);
+        UnityEngine_Animation__Play_50564840((UnityEngine_Animation_o *)this, v17, 0LL);
 LABEL_35:
         this = (BattleParamComponent__playingEffect_d__17_o *)_4__this->fields.anim;
         if ( !this )
@@ -390,7 +390,7 @@ LABEL_35:
         {
           v2->fields.__2__current = 0LL;
           v36 = (BattleServantConfConponent_o *)&v2->fields.__2__current;
-          sub_B2C2F8(v36, 0LL, v30, v31, v32, v33, v34, v35);
+          sub_B0D840(v36, 0LL, v30, v31, v32, v33, v34, v35);
           *(_DWORD *)&v36[-1].fields.isOpenAfter = 2;
           LOBYTE(callback) = 1;
           return (char)callback;
@@ -421,14 +421,16 @@ void __fastcall __noreturn BattleParamComponent__playingEffect_d__17__System_Col
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_B2C360(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B2C42C(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B2C360(&Method_BattleParamComponent__playingEffect_d__17_System_Collections_IEnumerator_Reset__);
-  sub_B2C400(v3, v4);
+  v2 = sub_B0D8A8(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_B0D974(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_B0D8A8(&Method_BattleParamComponent__playingEffect_d__17_System_Collections_IEnumerator_Reset__);
+  sub_B0D948(v5, v6);
 }
 
 

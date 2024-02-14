@@ -33,13 +33,13 @@ void __fastcall FriendCodeComponent__ChangeDispState(
   struct UILabel_o *friendCodeLabel; // x21
   System_String_o *v20; // x0
 
-  if ( (byte_418A868 & 1) == 0 )
+  if ( (byte_421762B & 1) == 0 )
   {
-    sub_B2C35C(&LocalizationManager_TypeInfo, *(_QWORD *)&state);
-    sub_B2C35C(&StringLiteral_14745/*"USER_FRIEND_CODE"*/, v7);
-    sub_B2C35C(&StringLiteral_14746/*"USER_FRIEND_CODE_HIDDEN"*/, v8);
-    sub_B2C35C(&StringLiteral_1/*""*/, v9);
-    byte_418A868 = 1;
+    sub_B0D8A4(&LocalizationManager_TypeInfo, *(_QWORD *)&state);
+    sub_B0D8A4(&StringLiteral_14791/*"USER_FRIEND_CODE"*/, v7);
+    sub_B0D8A4(&StringLiteral_14792/*"USER_FRIEND_CODE_HIDDEN"*/, v8);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v9);
+    byte_421762B = 1;
   }
   switch ( state )
   {
@@ -50,7 +50,7 @@ void __fastcall FriendCodeComponent__ChangeDispState(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_14745/*"USER_FRIEND_CODE"*/, 0LL);
+      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_14791/*"USER_FRIEND_CODE"*/, 0LL);
       v10 = (UILabel_o *)System_String__Format(v20, (Il2CppObject *)code, 0LL);
       if ( !friendCodeLabel )
         goto LABEL_21;
@@ -68,8 +68,8 @@ LABEL_18:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v15 = LocalizationManager__Get((System_String_o *)StringLiteral_14745/*"USER_FRIEND_CODE"*/, 0LL);
-      v16 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_14746/*"USER_FRIEND_CODE_HIDDEN"*/, 0LL);
+      v15 = LocalizationManager__Get((System_String_o *)StringLiteral_14791/*"USER_FRIEND_CODE"*/, 0LL);
+      v16 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_14792/*"USER_FRIEND_CODE_HIDDEN"*/, 0LL);
       v10 = (UILabel_o *)System_String__Format(v15, v16, 0LL);
       if ( !v14 )
         goto LABEL_21;
@@ -88,7 +88,7 @@ LABEL_19:
         return;
       }
 LABEL_21:
-      sub_B2C434(v10, *(_QWORD *)&state);
+      sub_B0D97C(v10);
   }
 }
 
@@ -98,23 +98,22 @@ System_String_o *__fastcall FriendCodeComponent__GetFriendCodeFromNetworkManager
         const MethodInfo *method)
 {
   NetworkManager_o *Instance; // x0
-  __int64 v3; // x1
 
-  if ( (byte_418A869 & 1) == 0 )
+  if ( (byte_421762C & 1) == 0 )
   {
-    sub_B2C35C(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, method);
-    byte_418A869 = 1;
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, method);
+    byte_421762C = 1;
   }
-  Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   if ( NetworkManager__ReadFriendCode(Instance, 0LL) )
   {
-    Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
     if ( Instance )
       return NetworkManager__GetDispFriendCode(Instance, 0LL);
 LABEL_8:
-    sub_B2C434(Instance, v3);
+    sub_B0D97C(Instance);
   }
   return 0LL;
 }
@@ -126,10 +125,10 @@ void __fastcall FriendCodeComponent__OnClickFriendCode(FriendCodeComponent_o *th
   System_String_o *friendCode; // x2
   int32_t v5; // w1
 
-  if ( (byte_418A867 & 1) == 0 )
+  if ( (byte_421762A & 1) == 0 )
   {
-    sub_B2C35C(&SoundManager_TypeInfo, method);
-    byte_418A867 = 1;
+    sub_B0D8A4(&SoundManager_TypeInfo, method);
+    byte_421762A = 1;
   }
   if ( this->fields.dispState )
   {
@@ -157,13 +156,12 @@ void __fastcall FriendCodeComponent__SetTouchEnable(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *touchCollider; // x21
-  __int64 v6; // x1
-  UnityEngine_Collider_o *v7; // x0
+  UnityEngine_Collider_o *v6; // x0
 
-  if ( (byte_418A86B & 1) == 0 )
+  if ( (byte_421762E & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, isEnable);
-    byte_418A86B = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, isEnable);
+    byte_421762E = 1;
   }
   if ( this->fields.dispState )
   {
@@ -175,10 +173,10 @@ void __fastcall FriendCodeComponent__SetTouchEnable(
     }
     if ( !UnityEngine_Object__op_Equality(touchCollider, 0LL, 0LL) )
     {
-      v7 = (UnityEngine_Collider_o *)this->fields.touchCollider;
-      if ( !v7 )
-        sub_B2C434(0LL, v6);
-      UnityEngine_Collider__set_enabled(v7, isEnable, 0LL);
+      v6 = (UnityEngine_Collider_o *)this->fields.touchCollider;
+      if ( !v6 )
+        sub_B0D97C(0LL);
+      UnityEngine_Collider__set_enabled(v6, isEnable, 0LL);
     }
   }
 }
@@ -197,47 +195,46 @@ void __fastcall FriendCodeComponent__Setup(FriendCodeComponent_o *this, const Me
   System_Int32_array *v9; // x6
   System_Int32_array *v10; // x7
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v12; // x1
-  const MethodInfo *v13; // x3
+  const MethodInfo *v12; // x3
   System_String_o *friendCode; // x2
-  _BOOL4 v15; // w1
+  _BOOL4 v14; // w1
   int32_t *p_m_Handle; // x0
   System_String_o *name; // x20
   System_String_o *SceneName; // x0
   unsigned int StoryProgress; // w0
-  int v20; // s3
-  float v21; // s4
-  float v22; // s5
-  float v23; // s6
-  UIWidget_o *v24; // x20
-  int v25; // s0
-  UILabel_o *v29; // x19
-  float v30; // s4
-  float v31; // s5
-  float v32; // s6
-  UIWidget_o *v33; // x20
-  int v34; // s0
-  int v38; // s0
-  int v39; // s1
-  int v40; // s2
+  int v19; // s3
+  float v20; // s4
+  float v21; // s5
+  float v22; // s6
+  UIWidget_o *v23; // x20
+  int v24; // s0
+  UILabel_o *v28; // x19
+  float v29; // s4
+  float v30; // s5
+  float v31; // s6
+  UIWidget_o *v32; // x20
+  int v33; // s0
+  int v37; // s0
+  int v38; // s1
+  int v39; // s2
   UIWidget_o *friendCodeLabel; // x19
-  UnityEngine_Color_o v42; // [xsp+8h] [xbp-28h] BYREF
+  UnityEngine_Color_o v41; // [xsp+8h] [xbp-28h] BYREF
   int32_t m_Handle; // [xsp+18h] [xbp-18h] BYREF
-  UnityEngine_Color_o v44; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_418A866 & 1) == 0 )
+  if ( (byte_4217629 & 1) == 0 )
   {
-    sub_B2C35C(&SceneList_TypeInfo, method);
-    this = (FriendCodeComponent_o *)sub_B2C35C(&TitleRootComponent_TypeInfo, v3);
-    byte_418A866 = 1;
+    sub_B0D8A4(&SceneList_TypeInfo, method);
+    this = (FriendCodeComponent_o *)sub_B0D8A4(&TitleRootComponent_TypeInfo, v3);
+    byte_4217629 = 1;
   }
   m_Handle = 0;
   FriendCodeFromNetworkManager = (System_Int32_array **)FriendCodeComponent__GetFriendCodeFromNetworkManager(
                                                           this,
                                                           method);
   v2->fields.friendCode = (struct System_String_o *)FriendCodeFromNetworkManager;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v2->fields.friendCode,
     FriendCodeFromNetworkManager,
     v5,
@@ -249,9 +246,9 @@ void __fastcall FriendCodeComponent__Setup(FriendCodeComponent_o *this, const Me
   if ( !v2 )
     goto LABEL_24;
   friendCode = v2->fields.friendCode;
-  v15 = friendCode != 0LL;
-  v2->fields.dispState = v15;
-  FriendCodeComponent__ChangeDispState(v2, v15, friendCode, v13);
+  v14 = friendCode != 0LL;
+  v2->fields.dispState = v14;
+  FriendCodeComponent__ChangeDispState(v2, v14, friendCode, v12);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v2, 0LL);
   if ( !gameObject )
     goto LABEL_24;
@@ -271,52 +268,52 @@ void __fastcall FriendCodeComponent__Setup(FriendCodeComponent_o *this, const Me
     StoryProgress = TitleRootComponent__GetStoryProgress(0LL);
     if ( StoryProgress < 3 )
     {
-      v38 = 1033410713;
-      v39 = 1045483729;
-      v40 = 1058247572;
+      v37 = 1033410713;
+      v38 = 1045483729;
+      v39 = 1058247572;
       friendCodeLabel = (UIWidget_o *)v2->fields.friendCodeLabel;
-      v42 = (UnityEngine_Color_o)0LL;
-      UnityEngine_Color___ctor_40633184(*(UnityEngine_Color_o *)(&v20 - 3), v21, v22, v23, (const MethodInfo *)&v42);
+      v41 = (UnityEngine_Color_o)0LL;
+      UnityEngine_Color___ctor_40757524(*(UnityEngine_Color_o *)(&v19 - 3), v20, v21, v22, (const MethodInfo *)&v41);
       if ( !friendCodeLabel )
         goto LABEL_24;
-      UIWidget__set_color(friendCodeLabel, v42, 0LL);
+      UIWidget__set_color(friendCodeLabel, v41, 0LL);
     }
     else if ( StoryProgress == 3 )
     {
-      v24 = (UIWidget_o *)v2->fields.friendCodeLabel;
-      *(UnityEngine_Color_o *)&v25 = UnityEngine_Color__get_white(0LL);
-      if ( v24 )
+      v23 = (UIWidget_o *)v2->fields.friendCodeLabel;
+      *(UnityEngine_Color_o *)&v24 = UnityEngine_Color__get_white(0LL);
+      if ( v23 )
       {
-        UIWidget__set_color(v24, *(UnityEngine_Color_o *)&v25, 0LL);
+        UIWidget__set_color(v23, *(UnityEngine_Color_o *)&v24, 0LL);
         gameObject = (UnityEngine_GameObject_o *)v2->fields.friendCodeLabel;
         if ( gameObject )
         {
           UILabel__set_effectStyle((UILabel_o *)gameObject, 2, 0LL);
-          v44.fields.r = 0.0078431;
-          v44.fields.g = 0.45098;
-          v44.fields.b = 0.84706;
-          v29 = v2->fields.friendCodeLabel;
-          *(_QWORD *)&v42.fields.r = 0LL;
-          *(_QWORD *)&v42.fields.b = 0LL;
-          UnityEngine_Color___ctor_40633184(v44, v30, v31, v32, (const MethodInfo *)&v42);
-          if ( v29 )
+          v43.fields.r = 0.0078431;
+          v43.fields.g = 0.45098;
+          v43.fields.b = 0.84706;
+          v28 = v2->fields.friendCodeLabel;
+          *(_QWORD *)&v41.fields.r = 0LL;
+          *(_QWORD *)&v41.fields.b = 0LL;
+          UnityEngine_Color___ctor_40757524(v43, v29, v30, v31, (const MethodInfo *)&v41);
+          if ( v28 )
           {
-            UILabel__set_effectColor(v29, v42, 0LL);
+            UILabel__set_effectColor(v28, v41, 0LL);
             return;
           }
         }
       }
 LABEL_24:
-      sub_B2C434(gameObject, v12);
+      sub_B0D97C(gameObject);
     }
   }
   else
   {
-    v33 = (UIWidget_o *)v2->fields.friendCodeLabel;
-    *(UnityEngine_Color_o *)&v34 = UnityEngine_Color__get_white(0LL);
-    if ( !v33 )
+    v32 = (UIWidget_o *)v2->fields.friendCodeLabel;
+    *(UnityEngine_Color_o *)&v33 = UnityEngine_Color__get_white(0LL);
+    if ( !v32 )
       goto LABEL_24;
-    UIWidget__set_color(v33, *(UnityEngine_Color_o *)&v34, 0LL);
+    UIWidget__set_color(v32, *(UnityEngine_Color_o *)&v33, 0LL);
     gameObject = (UnityEngine_GameObject_o *)v2->fields.friendCodeLabel;
     if ( !gameObject )
       goto LABEL_24;
@@ -328,42 +325,41 @@ LABEL_24:
 void __fastcall FriendCodeComponent__UpdateFriendCode(FriendCodeComponent_o *this, const MethodInfo *method)
 {
   NetworkManager_o *Instance; // x0
-  __int64 v4; // x1
   struct System_String_o *DispFriendCode; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
-  const MethodInfo *v12; // x3
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
+  const MethodInfo *v11; // x3
   System_String_o *friendCode; // x2
-  _BOOL4 v14; // w1
+  _BOOL4 v13; // w1
 
-  if ( (byte_418A86A & 1) == 0 )
+  if ( (byte_421762D & 1) == 0 )
   {
-    sub_B2C35C(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, method);
-    byte_418A86A = 1;
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, method);
+    byte_421762D = 1;
   }
-  Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = (NetworkManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance
     || (DispFriendCode = NetworkManager__GetDispFriendCode(Instance, 0LL),
         this->fields.friendCode = DispFriendCode,
-        sub_B2C2F8(
+        sub_B0D840(
           (BattleServantConfConponent_o *)&this->fields.friendCode,
           (System_Int32_array **)DispFriendCode,
+          v5,
           v6,
           v7,
           v8,
           v9,
-          v10,
-          v11),
+          v10),
         !this) )
   {
-    sub_B2C434(Instance, v4);
+    sub_B0D97C(Instance);
   }
   friendCode = this->fields.friendCode;
-  v14 = friendCode != 0LL;
-  this->fields.dispState = v14;
-  FriendCodeComponent__ChangeDispState(this, v14, friendCode, v12);
+  v13 = friendCode != 0LL;
+  this->fields.dispState = v13;
+  FriendCodeComponent__ChangeDispState(this, v13, friendCode, v11);
 }

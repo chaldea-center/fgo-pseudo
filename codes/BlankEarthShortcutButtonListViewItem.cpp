@@ -33,10 +33,10 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
   System_Int32_array *v36; // x6
   System_Int32_array *v37; // x7
 
-  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23700744((ListViewItem_o *)this, index, 0LL);
   this->fields._IconId_k__BackingField = iconId;
   this->fields._Name_k__BackingField = name;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._Name_k__BackingField,
     (System_Int32_array **)name,
     v14,
@@ -46,7 +46,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
     v18,
     v19);
   this->fields._CommonUiAtlas_k__BackingField = commonUiAtlas;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (System_Int32_array **)commonUiAtlas,
     v20,
@@ -56,7 +56,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
     v24,
     v25);
   this->fields._IconAtlas_k__BackingField = iconAtlas;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._IconAtlas_k__BackingField,
     (System_Int32_array **)iconAtlas,
     v26,
@@ -66,7 +66,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem___ctor(
     v30,
     v31);
   this->fields._OnClickAction_k__BackingField = onClickAction;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._OnClickAction_k__BackingField,
     (System_Int32_array **)onClickAction,
     v32,
@@ -130,7 +130,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_CommonUiAtlas(
   System_Int32_array *v7; // x7
 
   this->fields._CommonUiAtlas_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -154,7 +154,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_IconAtlas(
   System_Int32_array *v7; // x7
 
   this->fields._IconAtlas_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._IconAtlas_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -187,7 +187,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_Name(
   System_Int32_array *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._Name_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -211,7 +211,7 @@ void __fastcall BlankEarthShortcutButtonListViewItem__set_OnClickAction(
   System_Int32_array *v7; // x7
 
   this->fields._OnClickAction_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._OnClickAction_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

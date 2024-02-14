@@ -4,7 +4,7 @@ void __fastcall UserMissionProgressInfo___ctor(UserMissionProgressInfo_o *this, 
 }
 
 
-void __fastcall UserMissionProgressInfo___ctor_24007156(
+void __fastcall UserMissionProgressInfo___ctor_22613488(
         UserMissionProgressInfo_o *this,
         int32_t eventId,
         int32_t missionId,
@@ -36,18 +36,18 @@ void __fastcall UserMissionProgressInfo__checkMissionCond(UserMissionProgressInf
   __int64 v9; // x21
   __int64 v10; // x0
 
-  if ( (byte_4187049 & 1) == 0 )
+  if ( (byte_421378F & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventMissionConditionMaster___, method);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4187049 = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventMissionConditionMaster___, method);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_421378F = 1;
   }
   this->fields.currentProgressType = 4;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventMissionConditionMaster___)) == 0LL
+                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___)) == 0LL
     || (Instance = (DataManager_o *)EventMissionConditionMaster__getMissionCondList(
                                       (EventMissionConditionMaster_o *)Instance,
                                       this->fields.eventId,
@@ -55,7 +55,7 @@ void __fastcall UserMissionProgressInfo__checkMissionCond(UserMissionProgressInf
                                       0LL)) == 0LL )
   {
 LABEL_17:
-    sub_B2C434(Instance, v5);
+    sub_B0D97C(Instance);
   }
   datalist = Instance->fields.datalist;
   v7 = Instance;
@@ -68,8 +68,8 @@ LABEL_17:
       {
         if ( (unsigned int)v8 >= (unsigned int)datalist )
         {
-          v10 = sub_B2C460(Instance);
-          sub_B2C400(v10, 0LL);
+          v10 = sub_B0D9A8(Instance);
+          sub_B0D948(v10, 0LL);
         }
         v9 = *((_QWORD *)&v7->fields.lookup + v8);
         if ( !v9 )
@@ -101,45 +101,43 @@ void __fastcall UserMissionProgressInfo__setMissionCondInfo(UserMissionProgressI
   __int64 v8; // x1
   __int64 v9; // x1
   DataManager_o *Instance; // x0
-  __int64 v11; // x1
   int32_t currentProgressType; // w8
-  int32_t v13; // w8
-  int32_t v14; // w9
+  int32_t v12; // w8
+  int32_t v13; // w9
   struct DataMasterBase_array *datalist; // x8
-  __int64 v16; // x9
-  __int64 v17; // x12
-  int32_t v18; // w8
+  __int64 v15; // x9
+  __int64 v16; // x12
+  int32_t v17; // w8
   int64_t *p_progNum; // x21
   int64_t *p_targetNum; // x22
   Il2CppObject *current; // x20
-  int64_t v22; // x24
+  int64_t v21; // x24
   int32_t ProgressNumByDateType; // w0
   int64_t *p_monitor; // x9
-  __int64 v25; // x8
-  _BOOL8 v26; // x0
-  __int64 v27; // x1
-  __int64 v28; // x0
-  System_Collections_Generic_List_Enumerator_T__o v29; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v24; // x8
+  _BOOL8 v25; // x0
+  __int64 v26; // x0
+  System_Collections_Generic_List_Enumerator_T__o v27; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_418704A & 1) == 0 )
+  if ( (byte_4213790 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventMissionConditionMaster___, method);
-    sub_B2C35C(&Method_DataManager_GetMasterData_UserEventMissionMaster___, v3);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__, v4);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__, v5);
-    sub_B2C35C(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__get_Current__, v6);
-    sub_B2C35C(&Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__, v7);
-    sub_B2C35C(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__, v8);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_418704A = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventMissionConditionMaster___, method);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_UserEventMissionMaster___, v3);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__, v4);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__, v5);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__get_Current__, v6);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__, v7);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__, v8);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4213790 = 1;
   }
-  memset(&v29, 0, sizeof(v29));
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  memset(&v27, 0, sizeof(v27));
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
+                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
   if ( !Instance )
     goto LABEL_41;
   Instance = (DataManager_o *)UserEventMissionMaster__getUserEventMissionList(
@@ -156,41 +154,41 @@ void __fastcall UserMissionProgressInfo__setMissionCondInfo(UserMissionProgressI
       datalist = Instance->fields.datalist;
       if ( (int)datalist < 1 )
         goto LABEL_24;
-      v16 = 0LL;
+      v15 = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v16 >= (unsigned int)datalist )
+        if ( (unsigned int)v15 >= (unsigned int)datalist )
         {
-          v28 = sub_B2C460(Instance);
-          sub_B2C400(v28, 0LL);
+          v26 = sub_B0D9A8(Instance);
+          sub_B0D948(v26, 0LL);
         }
-        v17 = *((_QWORD *)&Instance->fields.lookup + v16);
-        if ( !v17 )
+        v16 = *((_QWORD *)&Instance->fields.lookup + v15);
+        if ( !v16 )
           break;
-        if ( *(_DWORD *)(v17 + 24) == this->fields.missionId )
+        if ( *(_DWORD *)(v16 + 24) == this->fields.missionId )
         {
-          if ( *(_DWORD *)(v17 + 32) == 4 )
-            v18 = 3;
+          if ( *(_DWORD *)(v16 + 32) == 4 )
+            v17 = 3;
           else
-            v18 = 4;
-          this->fields.currentProgStatus = v18;
+            v17 = 4;
+          this->fields.currentProgStatus = v17;
           datalist = Instance->fields.datalist;
         }
-        if ( (int)++v16 >= (int)datalist )
+        if ( (int)++v15 >= (int)datalist )
           goto LABEL_24;
       }
 LABEL_41:
-      sub_B2C434(Instance, v11);
+      sub_B0D97C(Instance);
     case 3:
-      v13 = 2;
-      v14 = 4;
+      v12 = 2;
+      v13 = 4;
       goto LABEL_10;
     case 2:
-      v13 = 1;
-      v14 = 3;
+      v12 = 1;
+      v13 = 3;
 LABEL_10:
-      this->fields.currentProgStatus = v13;
-      this->fields.condMsgType = v14;
+      this->fields.currentProgStatus = v12;
+      this->fields.condMsgType = v13;
       goto LABEL_24;
   }
   this->fields.currentProgStatus = 0;
@@ -198,12 +196,12 @@ LABEL_10:
 LABEL_24:
   if ( this->fields.currentProgStatus == 2 )
     this->fields.currentProgStatus = 5;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
   if ( !Instance )
     goto LABEL_41;
   Instance = (DataManager_o *)EventMissionConditionMaster__getMissionCondListByType(
@@ -221,45 +219,45 @@ LABEL_24:
   if ( SLODWORD(Instance->fields.datalist) >= 1 )
   {
     System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo___GetEnumerator(
-      &v29,
+      &v27,
       (System_Collections_Generic_List_BattleLogicBuff_ReduceHpProcess_BuffInfo__o *)Instance,
-      (const MethodInfo_2EF52DC *)Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__);
+      (const MethodInfo_2FC6564 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__);
     while ( 1 )
     {
-      v26 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
-              &v29,
-              (const MethodInfo_20EA42C *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__);
-      if ( !v26 )
+      v25 = System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___MoveNext(
+              &v27,
+              (const MethodInfo_2112550 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__);
+      if ( !v25 )
         break;
       if ( this->fields.currentProgStatus )
       {
-        current = v29.fields.current;
-        if ( !v29.fields.current )
-          sub_B2C434(v26, v27);
-        v22 = *p_progNum;
-        if ( LODWORD(v29.fields.current[2].monitor) == 12 )
+        current = v27.fields.current;
+        if ( !v27.fields.current )
+          sub_B0D97C(v25);
+        v21 = *p_progNum;
+        if ( LODWORD(v27.fields.current[2].monitor) == 12 )
         {
           ProgressNumByDateType = EventMissionConditionEntity__getProgressNumByDateType(
-                                    (EventMissionConditionEntity_o *)v29.fields.current,
+                                    (EventMissionConditionEntity_o *)v27.fields.current,
                                     0LL);
           p_monitor = &this->fields.targetNum;
-          *p_progNum = v22 + ProgressNumByDateType;
-          v25 = 1LL;
+          *p_progNum = v21 + ProgressNumByDateType;
+          v24 = 1LL;
         }
         else
         {
           *p_progNum = EventMissionConditionEntity__getProgressNum(
-                         (EventMissionConditionEntity_o *)v29.fields.current,
+                         (EventMissionConditionEntity_o *)v27.fields.current,
                          0LL)
-                     + v22;
-          v25 = *p_targetNum;
+                     + v21;
+          v24 = *p_targetNum;
           p_monitor = (int64_t *)&current[3].monitor;
         }
-        *p_targetNum = *p_monitor + v25;
+        *p_targetNum = *p_monitor + v24;
       }
     }
     System_Collections_Generic_List_Enumerator_BattleLogicBuff_ReduceHpProcess_BuffInfo___Dispose(
-      &v29,
-      (const MethodInfo_20EA428 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
+      &v27,
+      (const MethodInfo_211254C *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
   }
 }

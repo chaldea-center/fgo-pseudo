@@ -1,28 +1,28 @@
 void __fastcall EventRewardSceneEntity___ctor(EventRewardSceneEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_418A937 & 1) == 0 )
+  if ( (byte_4217930 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
-    byte_418A937 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4217930 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventRewardSceneEntity__CreatePK(int32_t eventId, int32_t slot, const MethodInfo *method)
 {
-  if ( (byte_418A935 & 1) == 0 )
+  if ( (byte_421792E & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&slot);
-    byte_418A935 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&slot);
+    byte_421792E = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            slot,
-           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_171341C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -42,39 +42,38 @@ int32_t __fastcall EventRewardSceneEntity__GetBgmId(EventRewardSceneEntity_o *th
   __int64 v4; // x1
   __int64 v5; // x1
   DataManager_o *Instance; // x0
-  __int64 v7; // x1
   WarEntity_o *Entity; // x0
-  WarEntity_o *v9; // x20
+  WarEntity_o *v8; // x20
 
-  if ( (byte_418A936 & 1) == 0 )
+  if ( (byte_421792F & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventMaster___, method);
-    sub_B2C35C(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v3);
-    sub_B2C35C(&NetworkManager_TypeInfo, v4);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_418A936 = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventMaster___, method);
+    sub_B0D8A4(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v3);
+    sub_B0D8A4(&NetworkManager_TypeInfo, v4);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_421792F = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL )
+                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL )
   {
-    sub_B2C434(Instance, v7);
+    sub_B0D97C(Instance);
   }
   Entity = DataMasterBase_WarMaster__WarEntity__int___GetEntity(
              (DataMasterBase_WarMaster__WarEntity__int__o *)Instance,
              this->fields.eventId,
-             (const MethodInfo_24E40D0 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+             (const MethodInfo_2669BD4 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   if ( Entity )
   {
-    v9 = Entity;
+    v8 = Entity;
     if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     }
-    if ( NetworkManager__getTime(0LL) <= *(_QWORD *)&v9->fields.eventId )
+    if ( NetworkManager__getTime(0LL) <= *(_QWORD *)&v8->fields.eventId )
       LODWORD(Entity) = this->fields.bgmId;
     else
       LODWORD(Entity) = this->fields.afterBgmId;

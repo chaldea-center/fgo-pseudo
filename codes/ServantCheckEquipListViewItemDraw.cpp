@@ -44,16 +44,16 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+20h] [xbp-50h]
 
   v6 = this;
-  if ( (byte_4187C50 & 1) == 0 )
+  if ( (byte_4215952 & 1) == 0 )
   {
-    sub_B2C35C(&AtlasManager_TypeInfo, item);
-    sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
-    sub_B2C35C(&Rarity_TypeInfo, v8);
-    sub_B2C35C(&StringLiteral_21828/*"ribbon_noblephantasmup_01"*/, v9);
-    sub_B2C35C(&StringLiteral_19356/*"icon_reinforced"*/, v10);
-    sub_B2C35C(&StringLiteral_19348/*"icon_noblephantasmup"*/, v11);
-    this = (ServantCheckEquipListViewItemDraw_o *)sub_B2C35C(&StringLiteral_19355/*"icon_rarity5"*/, v12);
-    byte_4187C50 = 1;
+    sub_B0D8A4(&AtlasManager_TypeInfo, item);
+    sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
+    sub_B0D8A4(&Rarity_TypeInfo, v8);
+    sub_B0D8A4(&StringLiteral_21899/*"ribbon_noblephantasmup_01"*/, v9);
+    sub_B0D8A4(&StringLiteral_19417/*"icon_reinforced"*/, v10);
+    sub_B0D8A4(&StringLiteral_19409/*"icon_noblephantasmup"*/, v11);
+    this = (ServantCheckEquipListViewItemDraw_o *)sub_B0D8A4(&StringLiteral_19416/*"icon_rarity5"*/, v12);
+    byte_4215952 = 1;
   }
   if ( item && mode )
   {
@@ -70,11 +70,11 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     }
     v25 = v26;
-    this = (ServantCheckEquipListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44761220(
+    this = (ServantCheckEquipListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_44165732(
                                                     &v25,
                                                     0LL);
     if ( !servantEquipIcon
-      || (ServantFaceIconComponent__Set_30793276(
+      || (ServantFaceIconComponent__Set_29626568(
             servantEquipIcon,
             (int64_t)this,
             item->fields.materialIconLabelInfo,
@@ -83,7 +83,7 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
           (v16 = item->fields.materialUserServantEntity) == 0LL) )
     {
 LABEL_53:
-      sub_B2C434(this, item);
+      sub_B0D97C(this);
     }
     subInfo = v6->fields.subInfo;
     rarity = item->fields.rarity;
@@ -143,7 +143,7 @@ LABEL_53:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.warningSprite;
         if ( !this )
           goto LABEL_53;
-        v22 = &StringLiteral_19356/*"icon_reinforced"*/;
+        v22 = &StringLiteral_19417/*"icon_reinforced"*/;
         goto LABEL_38;
       case 2:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.equipSprite;
@@ -174,7 +174,7 @@ LABEL_53:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.warningSprite;
         if ( !this )
           goto LABEL_53;
-        v22 = &StringLiteral_19355/*"icon_rarity5"*/;
+        v22 = &StringLiteral_19416/*"icon_rarity5"*/;
 LABEL_38:
         UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v22, 0LL);
 LABEL_39:
@@ -213,7 +213,7 @@ LABEL_39:
         {
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         }
-        AtlasManager__SetEventSprite(v24, (System_String_o *)StringLiteral_19348/*"icon_noblephantasmup"*/, 0LL);
+        AtlasManager__SetEventSprite(v24, (System_String_o *)StringLiteral_19409/*"icon_noblephantasmup"*/, 0LL);
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.materialTdSprite;
         if ( !this )
           goto LABEL_53;
@@ -223,7 +223,7 @@ LABEL_39:
         if ( !this )
           goto LABEL_53;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-        AtlasManager__SetEventSprite(v6->fields.materialTdSprite, (System_String_o *)StringLiteral_21828/*"ribbon_noblephantasmup_01"*/, 0LL);
+        AtlasManager__SetEventSprite(v6->fields.materialTdSprite, (System_String_o *)StringLiteral_21899/*"ribbon_noblephantasmup_01"*/, 0LL);
         return;
       default:
         return;

@@ -8,10 +8,10 @@ bool __fastcall TreasureDeviceConditionUtil__HasEnoughCriticalStar(
   const MethodInfo *v6; // x3
 
   v4 = servantData;
-  if ( (byte_41899AE & 1) == 0 )
+  if ( (byte_421681A & 1) == 0 )
   {
-    servantData = (BattleServantData_o *)sub_B2C35C(&StringLiteral_12363/*"STAR_HIGHER"*/, data);
-    byte_41899AE = 1;
+    servantData = (BattleServantData_o *)sub_B0D8A4(&StringLiteral_12401/*"STAR_HIGHER"*/, data);
+    byte_421681A = 1;
   }
   if ( !v4 )
     goto LABEL_11;
@@ -19,14 +19,14 @@ bool __fastcall TreasureDeviceConditionUtil__HasEnoughCriticalStar(
     return 1;
   if ( !data || (servantData = (BattleServantData_o *)data->fields.changePhaseNotify) == 0LL )
 LABEL_11:
-    sub_B2C434(servantData, data);
+    sub_B0D97C(servantData);
   if ( ChangeBattlePhaseNotify__get_Phase((ChangeBattlePhaseNotify_o *)servantData, 0LL) != 3 )
   {
     TDvcLv = BattleServantData__get_TDvcLv(v4, 0LL);
     if ( TDvcLv )
       return TreasureDeviceConditionUtil__HigherCondition(
                TDvcLv->fields.script,
-               (System_String_o *)StringLiteral_12363/*"STAR_HIGHER"*/,
+               (System_String_o *)StringLiteral_12401/*"STAR_HIGHER"*/,
                data->fields.totalCriticalStars,
                v6);
   }
@@ -42,22 +42,21 @@ bool __fastcall TreasureDeviceConditionUtil__HigherCondition(
 {
   __int64 v7; // x1
   UnityEngine_Purchasing_IStoreExtension_o *Item; // x0
-  __int64 v9; // x1
-  System_String_o *v10; // x0
+  System_String_o *v9; // x0
   int64_t result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_41899AD & 1) == 0 )
+  if ( (byte_4216819 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
-    byte_41899AD = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    byte_4216819 = 1;
   }
   result = 0LL;
   if ( !script
     || !System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject___ContainsKey(
           (System_Collections_Generic_Dictionary_XmlQualifiedName__XmlSchemaObject__o *)script,
           (System_Xml_XmlQualifiedName_o *)key,
-          (const MethodInfo_2DB1F34 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_2E4AEDC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return 1;
   }
@@ -65,13 +64,13 @@ bool __fastcall TreasureDeviceConditionUtil__HigherCondition(
   Item = System_Collections_Generic_Dictionary_Type__IStoreExtension___get_Item(
            (System_Collections_Generic_Dictionary_Type__IStoreExtension__o *)script,
            (System_Type_o *)key,
-           (const MethodInfo_2DB1BFC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_2E4ABA4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
-    sub_B2C434(0LL, v9);
-  v10 = (System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
-                             Item,
-                             Item->klass->vtable[4].methodPtr);
-  return !System_Int64__TryParse(v10, &result, 0LL) || (int)result <= val;
+    sub_B0D97C(0LL);
+  v9 = (System_String_o *)((__int64 (__fastcall *)(UnityEngine_Purchasing_IStoreExtension_o *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
+                            Item,
+                            Item->klass->vtable[4].methodPtr);
+  return !System_Int64__TryParse(v9, &result, 0LL) || (int)result <= val;
 }
 
 

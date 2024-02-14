@@ -17,20 +17,20 @@ System_String_o *__fastcall MasterMissionTab__GetButtonSpriteName(
   __int64 *v9; // x10
   System_String_o **v10; // x8
 
-  if ( (byte_4189CD5 & 1) == 0 )
+  if ( (byte_4216B27 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_16979/*"btn_bg_on_4"*/, isOn);
-    sub_B2C35C(&StringLiteral_16974/*"btn_bg_off_4"*/, v5);
-    sub_B2C35C(&StringLiteral_16975/*"btn_bg_off_5"*/, v6);
-    sub_B2C35C(&StringLiteral_16980/*"btn_bg_on_5"*/, v7);
-    byte_4189CD5 = 1;
+    sub_B0D8A4(&StringLiteral_17030/*"btn_bg_on_4"*/, isOn);
+    sub_B0D8A4(&StringLiteral_17025/*"btn_bg_off_4"*/, v5);
+    sub_B0D8A4(&StringLiteral_17026/*"btn_bg_off_5"*/, v6);
+    sub_B0D8A4(&StringLiteral_17031/*"btn_bg_on_5"*/, v7);
+    byte_4216B27 = 1;
   }
-  v8 = (System_String_o **)&StringLiteral_16975/*"btn_bg_off_5"*/;
+  v8 = (System_String_o **)&StringLiteral_17026/*"btn_bg_off_5"*/;
   if ( isOn )
-    v8 = (System_String_o **)&StringLiteral_16980/*"btn_bg_on_5"*/;
-  v9 = &StringLiteral_16974/*"btn_bg_off_4"*/;
+    v8 = (System_String_o **)&StringLiteral_17031/*"btn_bg_on_5"*/;
+  v9 = &StringLiteral_17025/*"btn_bg_off_4"*/;
   if ( isOn )
-    v9 = &StringLiteral_16979/*"btn_bg_on_4"*/;
+    v9 = &StringLiteral_17030/*"btn_bg_on_4"*/;
   if ( this->fields.isSmall )
     v10 = v8;
   else
@@ -43,23 +43,22 @@ void __fastcall MasterMissionTab__SetLargeTab(MasterMissionTab_o *this, const Me
 {
   _BOOL4 isViewLargeTab; // w8
   UnityEngine_Transform_o *transform; // x0
-  __int64 v5; // x1
   float x; // s0
-  double v7; // d0
+  double v6; // d0
   float y; // s0
-  double v9; // d0
-  float v10; // s0
-  double v11; // d0
-  float v12; // s0
-  double v13; // d0
-  float v14; // s0
-  double v15; // d0
-  float v16; // s0
-  double v17; // d0
-  float v18; // s0
-  double v19; // d0
-  float v20; // s0
-  double v21; // d0
+  double v8; // d0
+  float v9; // s0
+  double v10; // d0
+  float v11; // s0
+  double v12; // d0
+  float v13; // s0
+  double v14; // d0
+  float v15; // s0
+  double v16; // d0
+  float v17; // s0
+  double v18; // d0
+  float v19; // s0
+  double v20; // d0
 
   isViewLargeTab = this->fields.isViewLargeTab;
   this->fields.isSmall = 0;
@@ -94,14 +93,14 @@ void __fastcall MasterMissionTab__SetLargeTab(MasterMissionTab_o *this, const Me
               if ( transform )
               {
                 x = this->fields.tabBgSizeLarge.fields.x;
-                v7 = x == INFINITY ? -x : x;
-                UIWidget__set_width((UIWidget_o *)transform, (int)v7, 0LL);
+                v6 = x == INFINITY ? -x : x;
+                UIWidget__set_width((UIWidget_o *)transform, (int)v6, 0LL);
                 transform = (UnityEngine_Transform_o *)this->fields.tabBg;
                 if ( transform )
                 {
                   y = this->fields.tabBgSizeLarge.fields.y;
-                  v9 = y == INFINITY ? -INFINITY : y;
-                  UIWidget__set_height((UIWidget_o *)transform, (int)v9, 0LL);
+                  v8 = y == INFINITY ? -INFINITY : y;
+                  UIWidget__set_height((UIWidget_o *)transform, (int)v8, 0LL);
                   transform = (UnityEngine_Transform_o *)this->fields.tabBg;
                   if ( transform )
                   {
@@ -116,15 +115,15 @@ void __fastcall MasterMissionTab__SetLargeTab(MasterMissionTab_o *this, const Me
                         transform = (UnityEngine_Transform_o *)this->fields.labelBg;
                         if ( transform )
                         {
-                          v10 = this->fields.labelBgSizeLarge.fields.x;
-                          v11 = v10 == INFINITY ? -INFINITY : v10;
-                          UIWidget__set_width((UIWidget_o *)transform, (int)v11, 0LL);
+                          v9 = this->fields.labelBgSizeLarge.fields.x;
+                          v10 = v9 == INFINITY ? -INFINITY : v9;
+                          UIWidget__set_width((UIWidget_o *)transform, (int)v10, 0LL);
                           transform = (UnityEngine_Transform_o *)this->fields.labelBg;
                           if ( transform )
                           {
-                            v12 = this->fields.labelBgSizeLarge.fields.y;
-                            v13 = v12 == INFINITY ? -INFINITY : v12;
-                            UIWidget__set_height((UIWidget_o *)transform, (int)v13, 0LL);
+                            v11 = this->fields.labelBgSizeLarge.fields.y;
+                            v12 = v11 == INFINITY ? -INFINITY : v11;
+                            UIWidget__set_height((UIWidget_o *)transform, (int)v12, 0LL);
                             transform = (UnityEngine_Transform_o *)this->fields.labelBg;
                             if ( transform )
                             {
@@ -147,15 +146,15 @@ void __fastcall MasterMissionTab__SetLargeTab(MasterMissionTab_o *this, const Me
                                   transform = (UnityEngine_Transform_o *)this->fields.selectedTabBg;
                                   if ( transform )
                                   {
-                                    v14 = this->fields.selectedTabSizeLarge.fields.x;
-                                    v15 = v14 == INFINITY ? -INFINITY : v14;
-                                    UIWidget__set_width((UIWidget_o *)transform, (int)v15, 0LL);
+                                    v13 = this->fields.selectedTabSizeLarge.fields.x;
+                                    v14 = v13 == INFINITY ? -INFINITY : v13;
+                                    UIWidget__set_width((UIWidget_o *)transform, (int)v14, 0LL);
                                     transform = (UnityEngine_Transform_o *)this->fields.selectedTabBg;
                                     if ( transform )
                                     {
-                                      v16 = this->fields.selectedTabSizeLarge.fields.y;
-                                      v17 = v16 == INFINITY ? -INFINITY : v16;
-                                      UIWidget__set_height((UIWidget_o *)transform, (int)v17, 0LL);
+                                      v15 = this->fields.selectedTabSizeLarge.fields.y;
+                                      v16 = v15 == INFINITY ? -INFINITY : v15;
+                                      UIWidget__set_height((UIWidget_o *)transform, (int)v16, 0LL);
                                       transform = (UnityEngine_Transform_o *)this->fields.selectedTabBg;
                                       if ( transform )
                                       {
@@ -178,15 +177,15 @@ void __fastcall MasterMissionTab__SetLargeTab(MasterMissionTab_o *this, const Me
                                             transform = (UnityEngine_Transform_o *)this->fields.tabLabel;
                                             if ( transform )
                                             {
-                                              v18 = this->fields.tabLabelSizeLarge.fields.x;
-                                              v19 = v18 == INFINITY ? -INFINITY : v18;
-                                              UIWidget__set_width((UIWidget_o *)transform, (int)v19, 0LL);
+                                              v17 = this->fields.tabLabelSizeLarge.fields.x;
+                                              v18 = v17 == INFINITY ? -INFINITY : v17;
+                                              UIWidget__set_width((UIWidget_o *)transform, (int)v18, 0LL);
                                               transform = (UnityEngine_Transform_o *)this->fields.tabLabel;
                                               if ( transform )
                                               {
-                                                v20 = this->fields.tabLabelSizeLarge.fields.y;
-                                                v21 = v20 == INFINITY ? -INFINITY : v20;
-                                                UIWidget__set_height((UIWidget_o *)transform, (int)v21, 0LL);
+                                                v19 = this->fields.tabLabelSizeLarge.fields.y;
+                                                v20 = v19 == INFINITY ? -INFINITY : v19;
+                                                UIWidget__set_height((UIWidget_o *)transform, (int)v20, 0LL);
                                                 transform = (UnityEngine_Transform_o *)this->fields.noticeNumber;
                                                 if ( transform )
                                                 {
@@ -225,7 +224,7 @@ void __fastcall MasterMissionTab__SetLargeTab(MasterMissionTab_o *this, const Me
       }
     }
 LABEL_53:
-    sub_B2C434(transform, v5);
+    sub_B0D97C(transform);
   }
   transform = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
@@ -238,23 +237,22 @@ void __fastcall MasterMissionTab__SetSmallTab(MasterMissionTab_o *this, const Me
 {
   _BOOL4 isViewLargeTab; // w8
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v5; // x1
   float x; // s0
-  double v7; // d0
+  double v6; // d0
   float y; // s0
-  double v9; // d0
-  float v10; // s0
-  double v11; // d0
-  float v12; // s0
-  double v13; // d0
-  float v14; // s0
-  double v15; // d0
-  float v16; // s0
-  double v17; // d0
-  float v18; // s0
-  double v19; // d0
-  float v20; // s0
-  double v21; // d0
+  double v8; // d0
+  float v9; // s0
+  double v10; // d0
+  float v11; // s0
+  double v12; // d0
+  float v13; // s0
+  double v14; // d0
+  float v15; // s0
+  double v16; // d0
+  float v17; // s0
+  double v18; // d0
+  float v19; // s0
+  double v20; // d0
 
   isViewLargeTab = this->fields.isViewLargeTab;
   this->fields.isSmall = 1;
@@ -293,14 +291,14 @@ void __fastcall MasterMissionTab__SetSmallTab(MasterMissionTab_o *this, const Me
   if ( !gameObject )
     goto LABEL_53;
   x = this->fields.tabBgSizeSmall.fields.x;
-  v7 = x == INFINITY ? -x : x;
-  UIWidget__set_width((UIWidget_o *)gameObject, (int)v7, 0LL);
+  v6 = x == INFINITY ? -x : x;
+  UIWidget__set_width((UIWidget_o *)gameObject, (int)v6, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.tabBg;
   if ( !gameObject )
     goto LABEL_53;
   y = this->fields.tabBgSizeSmall.fields.y;
-  v9 = y == INFINITY ? -INFINITY : y;
-  UIWidget__set_height((UIWidget_o *)gameObject, (int)v9, 0LL);
+  v8 = y == INFINITY ? -INFINITY : y;
+  UIWidget__set_height((UIWidget_o *)gameObject, (int)v8, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.tabBg;
   if ( !gameObject )
     goto LABEL_53;
@@ -320,15 +318,15 @@ void __fastcall MasterMissionTab__SetSmallTab(MasterMissionTab_o *this, const Me
   gameObject = (UnityEngine_GameObject_o *)this->fields.labelBg;
   if ( !gameObject )
     goto LABEL_53;
-  v10 = this->fields.labelBgSizeSmall.fields.x;
-  v11 = v10 == INFINITY ? -INFINITY : v10;
-  UIWidget__set_width((UIWidget_o *)gameObject, (int)v11, 0LL);
+  v9 = this->fields.labelBgSizeSmall.fields.x;
+  v10 = v9 == INFINITY ? -INFINITY : v9;
+  UIWidget__set_width((UIWidget_o *)gameObject, (int)v10, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.labelBg;
   if ( !gameObject )
     goto LABEL_53;
-  v12 = this->fields.labelBgSizeSmall.fields.y;
-  v13 = v12 == INFINITY ? -INFINITY : v12;
-  UIWidget__set_height((UIWidget_o *)gameObject, (int)v13, 0LL);
+  v11 = this->fields.labelBgSizeSmall.fields.y;
+  v12 = v11 == INFINITY ? -INFINITY : v11;
+  UIWidget__set_height((UIWidget_o *)gameObject, (int)v12, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.labelBg;
   if ( !gameObject )
     goto LABEL_53;
@@ -348,15 +346,15 @@ void __fastcall MasterMissionTab__SetSmallTab(MasterMissionTab_o *this, const Me
   gameObject = (UnityEngine_GameObject_o *)this->fields.selectedTabBg;
   if ( !gameObject )
     goto LABEL_53;
-  v14 = this->fields.selectedTabSizeSmall.fields.x;
-  v15 = v14 == INFINITY ? -INFINITY : v14;
-  UIWidget__set_width((UIWidget_o *)gameObject, (int)v15, 0LL);
+  v13 = this->fields.selectedTabSizeSmall.fields.x;
+  v14 = v13 == INFINITY ? -INFINITY : v13;
+  UIWidget__set_width((UIWidget_o *)gameObject, (int)v14, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.selectedTabBg;
   if ( !gameObject )
     goto LABEL_53;
-  v16 = this->fields.selectedTabSizeSmall.fields.y;
-  v17 = v16 == INFINITY ? -INFINITY : v16;
-  UIWidget__set_height((UIWidget_o *)gameObject, (int)v17, 0LL);
+  v15 = this->fields.selectedTabSizeSmall.fields.y;
+  v16 = v15 == INFINITY ? -INFINITY : v15;
+  UIWidget__set_height((UIWidget_o *)gameObject, (int)v16, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.selectedTabBg;
   if ( !gameObject )
     goto LABEL_53;
@@ -376,20 +374,20 @@ void __fastcall MasterMissionTab__SetSmallTab(MasterMissionTab_o *this, const Me
   gameObject = (UnityEngine_GameObject_o *)this->fields.tabLabel;
   if ( !gameObject )
     goto LABEL_53;
-  v18 = this->fields.tabLabelSizeSmall.fields.x;
-  v19 = v18 == INFINITY ? -INFINITY : v18;
-  UIWidget__set_width((UIWidget_o *)gameObject, (int)v19, 0LL);
+  v17 = this->fields.tabLabelSizeSmall.fields.x;
+  v18 = v17 == INFINITY ? -INFINITY : v17;
+  UIWidget__set_width((UIWidget_o *)gameObject, (int)v18, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.tabLabel;
   if ( !gameObject
-    || ((v20 = this->fields.tabLabelSizeSmall.fields.y, v20 != INFINITY) ? (v21 = v20) : (v21 = -INFINITY),
-        (UIWidget__set_height((UIWidget_o *)gameObject, (int)v21, 0LL),
+    || ((v19 = this->fields.tabLabelSizeSmall.fields.y, v19 != INFINITY) ? (v20 = v19) : (v20 = -INFINITY),
+        (UIWidget__set_height((UIWidget_o *)gameObject, (int)v20, 0LL),
          (gameObject = (UnityEngine_GameObject_o *)this->fields.noticeNumber) == 0LL)
      || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)gameObject,
                                                     0LL)) == 0LL) )
   {
 LABEL_53:
-    sub_B2C434(gameObject, v5);
+    sub_B0D97C(gameObject);
   }
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)gameObject,

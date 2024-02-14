@@ -1,14 +1,14 @@
 void __fastcall ServantProfilePushMaster___ctor(ServantProfilePushMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4189BD6 & 1) == 0 )
+  if ( (byte_4216A28 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_ServantProfilePushMaster__ServantProfilePushEntity__string___ctor__, method);
-    byte_4189BD6 = 1;
+    sub_B0D8A4(&Method_DataMasterBase_ServantProfilePushMaster__ServantProfilePushEntity__string___ctor__, method);
+    byte_4216A28 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     470,
-    (const MethodInfo_24E4484 *)Method_DataMasterBase_ServantProfilePushMaster__ServantProfilePushEntity__string___ctor__);
+    (const MethodInfo_2669F88 *)Method_DataMasterBase_ServantProfilePushMaster__ServantProfilePushEntity__string___ctor__);
 }
 
 
@@ -31,68 +31,77 @@ ServantProfilePushEntity_array *__fastcall ServantProfilePushMaster__GetAvaiable
   __int64 v15; // x1
   struct System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o *list; // x0
   int32_t Count; // w21
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v18; // x20
-  int32_t v19; // w22
+  __int64 v18; // x1
+  __int64 v19; // x2
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v20; // x20
+  const MethodInfo *v21; // x1
+  __int64 v22; // x2
+  int32_t v23; // w22
   System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  EventMissionProgressRequest_Argument_ProgressData_o *v21; // x23
-  __int64 v22; // x10
-  ServantProfilePushMaster___c_c *v23; // x0
+  EventMissionProgressRequest_Argument_ProgressData_o *v25; // x23
+  __int64 v26; // x10
+  ServantProfilePushMaster___c_c *v27; // x0
   struct ServantProfilePushMaster___c_StaticFields *static_fields; // x8
   System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *_9__0_0; // x19
-  Il2CppObject *v26; // x21
-  struct ServantProfilePushMaster___c_StaticFields *v27; // x0
-  System_String_array **v28; // x2
-  System_String_array **v29; // x3
-  System_Boolean_array **v30; // x4
-  System_Int32_array **v31; // x5
-  System_Int32_array *v32; // x6
-  System_Int32_array *v33; // x7
-  System_Linq_IOrderedEnumerable_TSource__o *v34; // x0
-  ServantProfilePushMaster___c_c *v35; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v36; // x19
-  struct ServantProfilePushMaster___c_StaticFields *v37; // x9
+  Il2CppObject *v30; // x21
+  struct ServantProfilePushMaster___c_StaticFields *v31; // x0
+  System_String_array **v32; // x2
+  System_String_array **v33; // x3
+  System_Boolean_array **v34; // x4
+  System_Int32_array **v35; // x5
+  System_Int32_array *v36; // x6
+  System_Int32_array *v37; // x7
+  System_Linq_IOrderedEnumerable_TSource__o *v38; // x0
+  __int64 v39; // x1
+  __int64 v40; // x2
+  ServantProfilePushMaster___c_c *v41; // x8
+  System_Linq_IOrderedEnumerable_TSource__o *v42; // x19
+  struct ServantProfilePushMaster___c_StaticFields *v43; // x9
   System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *_9__0_1; // x20
-  Il2CppObject *v39; // x21
-  struct ServantProfilePushMaster___c_StaticFields *v40; // x0
-  System_String_array **v41; // x2
-  System_String_array **v42; // x3
-  System_Boolean_array **v43; // x4
-  System_Int32_array **v44; // x5
-  System_Int32_array *v45; // x6
-  System_Int32_array *v46; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v47; // x0
+  Il2CppObject *v45; // x21
+  struct ServantProfilePushMaster___c_StaticFields *v46; // x0
+  System_String_array **v47; // x2
+  System_String_array **v48; // x3
+  System_Boolean_array **v49; // x4
+  System_Int32_array **v50; // x5
+  System_Int32_array *v51; // x6
+  System_Int32_array *v52; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v53; // x0
 
-  if ( (byte_4189BD5 & 1) == 0 )
+  if ( (byte_4216A27 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
-    sub_B2C35C(&Method_System_Linq_Enumerable_OrderByDescending_ServantProfilePushEntity__int___, v4);
-    sub_B2C35C(&Method_System_Linq_Enumerable_ThenBy_ServantProfilePushEntity__int___, v5);
-    sub_B2C35C(&Method_System_Linq_Enumerable_ToArray_ServantProfilePushEntity___, v6);
-    sub_B2C35C(&Method_System_Func_ServantProfilePushEntity__int___ctor__, v7);
-    sub_B2C35C(&System_Func_ServantProfilePushEntity__int__TypeInfo, v8);
-    sub_B2C35C(&Method_System_Collections_Generic_List_ServantProfilePushEntity__Add__, v9);
-    sub_B2C35C(&Method_System_Collections_Generic_List_ServantProfilePushEntity___ctor__, v10);
-    sub_B2C35C(&System_Collections_Generic_List_ServantProfilePushEntity__TypeInfo, v11);
-    sub_B2C35C(&ServantProfilePushEntity_TypeInfo, v12);
-    sub_B2C35C(&Method_ServantProfilePushMaster___c__GetAvaiableEntities_b__0_0__, v13);
-    sub_B2C35C(&Method_ServantProfilePushMaster___c__GetAvaiableEntities_b__0_1__, v14);
-    sub_B2C35C(&ServantProfilePushMaster___c_TypeInfo, v15);
-    byte_4189BD5 = 1;
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, method);
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v3);
+    sub_B0D8A4(&Method_System_Linq_Enumerable_OrderByDescending_ServantProfilePushEntity__int___, v4);
+    sub_B0D8A4(&Method_System_Linq_Enumerable_ThenBy_ServantProfilePushEntity__int___, v5);
+    sub_B0D8A4(&Method_System_Linq_Enumerable_ToArray_ServantProfilePushEntity___, v6);
+    sub_B0D8A4(&Method_System_Func_ServantProfilePushEntity__int___ctor__, v7);
+    sub_B0D8A4(&System_Func_ServantProfilePushEntity__int__TypeInfo, v8);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_ServantProfilePushEntity__Add__, v9);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_ServantProfilePushEntity___ctor__, v10);
+    sub_B0D8A4(&System_Collections_Generic_List_ServantProfilePushEntity__TypeInfo, v11);
+    sub_B0D8A4(&ServantProfilePushEntity_TypeInfo, v12);
+    sub_B0D8A4(&Method_ServantProfilePushMaster___c__GetAvaiableEntities_b__0_0__, v13);
+    sub_B0D8A4(&Method_ServantProfilePushMaster___c__GetAvaiableEntities_b__0_1__, v14);
+    sub_B0D8A4(&ServantProfilePushMaster___c_TypeInfo, v15);
+    byte_4216A27 = 1;
   }
   list = this->fields.list;
   if ( !list )
     goto LABEL_31;
   Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
             (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-            (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-  v18 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_ServantProfilePushEntity__TypeInfo);
+            (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+  v20 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
+                                                                                                  System_Collections_Generic_List_ServantProfilePushEntity__TypeInfo,
+                                                                                                  v18,
+                                                                                                  v19);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v18,
-    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_ServantProfilePushEntity___ctor__);
+    v20,
+    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_ServantProfilePushEntity___ctor__);
   if ( Count >= 1 )
   {
-    v19 = 0;
+    v23 = 0;
     while ( 1 )
     {
       list = this->fields.list;
@@ -100,118 +109,124 @@ ServantProfilePushEntity_array *__fastcall ServantProfilePushMaster__GetAvaiable
         break;
       Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)list,
-               v19,
-               (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+               v23,
+               (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Item )
       {
-        v21 = (EventMissionProgressRequest_Argument_ProgressData_o *)Item;
-        v22 = *(&ServantProfilePushEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v22
-          && (ServantProfilePushEntity_c *)Item->klass->_2.typeHierarchy[v22 - 1] == ServantProfilePushEntity_TypeInfo )
+        v25 = (EventMissionProgressRequest_Argument_ProgressData_o *)Item;
+        v26 = *(&ServantProfilePushEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v26
+          && (ServantProfilePushEntity_c *)Item->klass->_2.typeHierarchy[v26 - 1] == ServantProfilePushEntity_TypeInfo )
         {
           list = (struct System_Collections_ObjectModel_ObservableCollection_DataEntityBase__o *)ServantProfilePushEntity__TimeCheck(
                                                                                                    (ServantProfilePushEntity_o *)Item,
-                                                                                                   method);
+                                                                                                   v21);
           if ( ((unsigned __int8)list & 1) != 0 )
           {
-            if ( !v18 )
+            if ( !v20 )
               break;
             System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
-              v18,
-              v21,
-              (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_ServantProfilePushEntity__Add__);
+              v20,
+              v25,
+              (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_ServantProfilePushEntity__Add__);
           }
         }
       }
-      if ( ++v19 >= Count )
+      if ( ++v23 >= Count )
         goto LABEL_14;
     }
 LABEL_31:
-    sub_B2C434(list, method);
+    sub_B0D97C(list);
   }
 LABEL_14:
-  v23 = ServantProfilePushMaster___c_TypeInfo;
+  v27 = ServantProfilePushMaster___c_TypeInfo;
   if ( (BYTE3(ServantProfilePushMaster___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ServantProfilePushMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantProfilePushMaster___c_TypeInfo);
-    v23 = ServantProfilePushMaster___c_TypeInfo;
+    v27 = ServantProfilePushMaster___c_TypeInfo;
   }
-  static_fields = v23->static_fields;
+  static_fields = v27->static_fields;
   _9__0_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)static_fields->__9__0_0;
   if ( !_9__0_0 )
   {
-    if ( (BYTE3(v23->vtable._0_Equals.methodPtr) & 4) != 0 && !v23->_2.cctor_finished )
+    if ( (BYTE3(v27->vtable._0_Equals.methodPtr) & 4) != 0 && !v27->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v23);
+      j_il2cpp_runtime_class_init_0(v27);
       static_fields = ServantProfilePushMaster___c_TypeInfo->static_fields;
     }
-    v26 = (Il2CppObject *)static_fields->__9;
-    _9__0_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B2C42C(System_Func_ServantProfilePushEntity__int__TypeInfo);
+    v30 = (Il2CppObject *)static_fields->__9;
+    _9__0_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B0D974(
+                                                                                System_Func_ServantProfilePushEntity__int__TypeInfo,
+                                                                                v21,
+                                                                                v22);
     System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
       _9__0_0,
-      v26,
-      Method_ServantProfilePushMaster___c__GetAvaiableEntities_b__0_0__,
-      (const MethodInfo_27127B0 *)Method_System_Func_ServantProfilePushEntity__int___ctor__);
-    v27 = ServantProfilePushMaster___c_TypeInfo->static_fields;
-    v27->__9__0_0 = (struct System_Func_ServantProfilePushEntity__int__o *)_9__0_0;
-    sub_B2C2F8(
-      (BattleServantConfConponent_o *)&v27->__9__0_0,
-      (System_Int32_array **)_9__0_0,
-      v28,
-      v29,
       v30,
-      v31,
+      Method_ServantProfilePushMaster___c__GetAvaiableEntities_b__0_0__,
+      (const MethodInfo_2619564 *)Method_System_Func_ServantProfilePushEntity__int___ctor__);
+    v31 = ServantProfilePushMaster___c_TypeInfo->static_fields;
+    v31->__9__0_0 = (struct System_Func_ServantProfilePushEntity__int__o *)_9__0_0;
+    sub_B0D840(
+      (BattleServantConfConponent_o *)&v31->__9__0_0,
+      (System_Int32_array **)_9__0_0,
       v32,
-      v33);
+      v33,
+      v34,
+      v35,
+      v36,
+      v37);
   }
-  v34 = System_Linq_Enumerable__OrderByDescending_WarBoardManager_TaskList__int_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)v18,
+  v38 = System_Linq_Enumerable__OrderByDescending_WarBoardManager_TaskList__int_(
+          (System_Collections_Generic_IEnumerable_TSource__o *)v20,
           (System_Func_TSource__TKey__o *)_9__0_0,
-          (const MethodInfo_1A93A04 *)Method_System_Linq_Enumerable_OrderByDescending_ServantProfilePushEntity__int___);
-  v35 = ServantProfilePushMaster___c_TypeInfo;
-  v36 = v34;
+          (const MethodInfo_1B4ECD0 *)Method_System_Linq_Enumerable_OrderByDescending_ServantProfilePushEntity__int___);
+  v41 = ServantProfilePushMaster___c_TypeInfo;
+  v42 = v38;
   if ( (BYTE3(ServantProfilePushMaster___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ServantProfilePushMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantProfilePushMaster___c_TypeInfo);
-    v35 = ServantProfilePushMaster___c_TypeInfo;
+    v41 = ServantProfilePushMaster___c_TypeInfo;
   }
-  v37 = v35->static_fields;
-  _9__0_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)v37->__9__0_1;
+  v43 = v41->static_fields;
+  _9__0_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)v43->__9__0_1;
   if ( !_9__0_1 )
   {
-    if ( (BYTE3(v35->vtable._0_Equals.methodPtr) & 4) != 0 && !v35->_2.cctor_finished )
+    if ( (BYTE3(v41->vtable._0_Equals.methodPtr) & 4) != 0 && !v41->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v35);
-      v37 = ServantProfilePushMaster___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v41);
+      v43 = ServantProfilePushMaster___c_TypeInfo->static_fields;
     }
-    v39 = (Il2CppObject *)v37->__9;
-    _9__0_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B2C42C(System_Func_ServantProfilePushEntity__int__TypeInfo);
+    v45 = (Il2CppObject *)v43->__9;
+    _9__0_1 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B0D974(
+                                                                                System_Func_ServantProfilePushEntity__int__TypeInfo,
+                                                                                v39,
+                                                                                v40);
     System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
       _9__0_1,
-      v39,
-      Method_ServantProfilePushMaster___c__GetAvaiableEntities_b__0_1__,
-      (const MethodInfo_27127B0 *)Method_System_Func_ServantProfilePushEntity__int___ctor__);
-    v40 = ServantProfilePushMaster___c_TypeInfo->static_fields;
-    v40->__9__0_1 = (struct System_Func_ServantProfilePushEntity__int__o *)_9__0_1;
-    sub_B2C2F8(
-      (BattleServantConfConponent_o *)&v40->__9__0_1,
-      (System_Int32_array **)_9__0_1,
-      v41,
-      v42,
-      v43,
-      v44,
       v45,
-      v46);
+      Method_ServantProfilePushMaster___c__GetAvaiableEntities_b__0_1__,
+      (const MethodInfo_2619564 *)Method_System_Func_ServantProfilePushEntity__int___ctor__);
+    v46 = ServantProfilePushMaster___c_TypeInfo->static_fields;
+    v46->__9__0_1 = (struct System_Func_ServantProfilePushEntity__int__o *)_9__0_1;
+    sub_B0D840(
+      (BattleServantConfConponent_o *)&v46->__9__0_1,
+      (System_Int32_array **)_9__0_1,
+      v47,
+      v48,
+      v49,
+      v50,
+      v51,
+      v52);
   }
-  v47 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenBy_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int_(
-                                                               v36,
+  v53 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenBy_ClassBoardEffectListDialogSkillListComponent_SkillDispData__int_(
+                                                               v42,
                                                                (System_Func_TSource__TKey__o *)_9__0_1,
-                                                               (const MethodInfo_1A9A820 *)Method_System_Linq_Enumerable_ThenBy_ServantProfilePushEntity__int___);
+                                                               (const MethodInfo_1B55AEC *)Method_System_Linq_Enumerable_ThenBy_ServantProfilePushEntity__int___);
   return (ServantProfilePushEntity_array *)System_Linq_Enumerable__ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData_(
-                                             v47,
-                                             (const MethodInfo_1A9AFC8 *)Method_System_Linq_Enumerable_ToArray_ServantProfilePushEntity___);
+                                             v53,
+                                             (const MethodInfo_1B56294 *)Method_System_Linq_Enumerable_ToArray_ServantProfilePushEntity___);
 }
 
 
@@ -224,18 +239,18 @@ ServantProfilePushEntity_o *__fastcall ServantProfilePushMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4189BD7 & 1) == 0 )
+  if ( (byte_4216A29 & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_DataMasterBase_ServantProfilePushMaster__ServantProfilePushEntity__string__GetEntity__,
       *(_QWORD *)&svtId);
-    byte_4189BD7 = 1;
+    byte_4216A29 = 1;
   }
   PK = ServantProfilePushEntity__CreatePK(svtId, idx, *(const MethodInfo **)&idx);
   return (ServantProfilePushEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                          (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                          PK,
-                                         (const MethodInfo_24E4520 *)Method_DataMasterBase_ServantProfilePushMaster__ServantProfilePushEntity__string__GetEntity__);
+                                         (const MethodInfo_266A024 *)Method_DataMasterBase_ServantProfilePushMaster__ServantProfilePushEntity__string__GetEntity__);
 }
 
 
@@ -249,38 +264,39 @@ bool __fastcall ServantProfilePushMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4189BD8 & 1) == 0 )
+  if ( (byte_4216A2A & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_DataMasterBase_ServantProfilePushMaster__ServantProfilePushEntity__string__TryGetEntity__,
       entity);
-    byte_4189BD8 = 1;
+    byte_4216A2A = 1;
   }
   PK = ServantProfilePushEntity__CreatePK(svtId, idx, *(const MethodInfo **)&svtId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_24E4578 *)Method_DataMasterBase_ServantProfilePushMaster__ServantProfilePushEntity__string__TryGetEntity__);
+           (const MethodInfo_266A07C *)Method_DataMasterBase_ServantProfilePushMaster__ServantProfilePushEntity__string__TryGetEntity__);
 }
 
 
 void __fastcall ServantProfilePushMaster___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
+  __int64 v2; // x2
+  Il2CppObject *v3; // x19
   struct ServantProfilePushMaster___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4185400 & 1) == 0 )
+  if ( (byte_4212247 & 1) == 0 )
   {
-    sub_B2C35C(&ServantProfilePushMaster___c_TypeInfo, v1);
-    byte_4185400 = 1;
+    sub_B0D8A4(&ServantProfilePushMaster___c_TypeInfo, v1);
+    byte_4212247 = 1;
   }
-  v2 = (Il2CppObject *)sub_B2C42C(ServantProfilePushMaster___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
+  v3 = (Il2CppObject *)sub_B0D974(ServantProfilePushMaster___c_TypeInfo, v1, v2);
+  System_Object___ctor(v3, 0LL);
   static_fields = ServantProfilePushMaster___c_TypeInfo->static_fields;
-  static_fields->__9 = (struct ServantProfilePushMaster___c_o *)v2;
-  sub_B2C2F8(static_fields, v2);
+  static_fields->__9 = (struct ServantProfilePushMaster___c_o *)v3;
+  sub_B0D840(static_fields, v3);
 }
 
 
@@ -296,7 +312,7 @@ int32_t __fastcall ServantProfilePushMaster___c___GetAvaiableEntities_b__0_0(
         const MethodInfo *method)
 {
   if ( !a )
-    sub_B2C434(this, 0LL);
+    sub_B0D97C(this);
   return a->fields.priority;
 }
 
@@ -307,6 +323,6 @@ int32_t __fastcall ServantProfilePushMaster___c___GetAvaiableEntities_b__0_1(
         const MethodInfo *method)
 {
   if ( !a )
-    sub_B2C434(this, 0LL);
+    sub_B0D97C(this);
   return a->fields.idx;
 }

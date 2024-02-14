@@ -1,14 +1,14 @@
 void __fastcall TreasureDvcDetailMaster___ctor(TreasureDvcDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_41899B9 & 1) == 0 )
+  if ( (byte_4216825 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__, method);
-    byte_41899B9 = 1;
+    sub_B0D8A4(&Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__, method);
+    byte_4216825 = 1;
   }
   DataMasterBase_WarMaster__WarEntity__int____ctor(
     (DataMasterBase_WarMaster__WarEntity__int__o *)this,
     91,
-    (const MethodInfo_24E4034 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
+    (const MethodInfo_2669B38 *)Method_DataMasterBase_TreasureDvcDetailMaster__TreasureDvcDetailEntity__int___ctor__);
 }
 
 
@@ -19,137 +19,127 @@ System_String_o *__fastcall TreasureDvcDetailMaster__getDetail(int32_t id, const
   __int64 v4; // x1
   __int64 v5; // x1
   DataManager_o *Instance; // x0
-  const MethodInfo *v7; // x1
   DataMasterBase_o *MasterData_WarQuestSelectionMaster; // x20
-  DataManager_o *v9; // x19
-  __int64 v10; // x3
+  DataManager_o *v8; // x19
   DataManager_c *klass; // x8
-  DataManager_o *v12; // x21
-  unsigned __int64 v13; // x10
+  DataManager_o *v10; // x21
+  unsigned __int64 v11; // x10
   int32_t *p_offset; // x11
-  __int64 v15; // x0
-  __int64 v16; // x1
-  __int64 v17; // x3
-  DataManager_c *v18; // x8
-  DataManager_o *v19; // x20
-  unsigned __int64 v20; // x10
-  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v21; // x11
-  __int64 v22; // x0
-  LocalizationManager_c *v23; // x0
-  __int64 v25; // x10
-  int32_t v26; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v13; // x0
+  __int64 v14; // x1
+  DataManager_c *v15; // x8
+  DataManager_o *v16; // x20
+  unsigned __int64 v17; // x10
+  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v18; // x11
+  __int64 v19; // x0
+  LocalizationManager_c *v20; // x0
+  const MethodInfo *v22; // x1
+  __int64 v23; // x10
+  int32_t v24; // [xsp+Ch] [xbp-24h] BYREF
 
-  v26 = id;
-  if ( (byte_41899BA & 1) == 0 )
+  v24 = id;
+  if ( (byte_4216826 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___, method);
-    sub_B2C35C(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, v2);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v3);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_B2C35C(&TreasureDvcDetailEntity_TypeInfo, v5);
-    byte_41899BA = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___, method);
+    sub_B0D8A4(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, v2);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v3);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    sub_B0D8A4(&TreasureDvcDetailEntity_TypeInfo, v5);
+    byte_4216826 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              Instance,
-                                                             (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
-  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v26, 0LL);
+                                                             (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v24, 0LL);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_34;
-  v9 = Instance;
+  v8 = Instance;
   Instance = (DataManager_o *)DataMasterBase__get_lookup(MasterData_WarQuestSelectionMaster, 0LL);
   if ( !Instance )
     goto LABEL_34;
   klass = Instance->klass;
-  v12 = Instance;
+  v10 = Instance;
   if ( *(_WORD *)&Instance->klass->_2.bitflags1 )
   {
-    v13 = 0LL;
+    v11 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)p_offset - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
     {
-      ++v13;
+      ++v11;
       p_offset += 4;
-      if ( v13 >= *(unsigned __int16 *)&Instance->klass->_2.bitflags1 )
+      if ( v11 >= *(unsigned __int16 *)&Instance->klass->_2.bitflags1 )
         goto LABEL_10;
     }
-    v15 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v13 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_10:
-    v15 = sub_AC5258(
-            Instance,
-            System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
-            0LL,
-            v10);
+    v13 = sub_AA67A0(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
   }
-  if ( ((*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v15)(v12, v9, *(_QWORD *)(v15 + 8)) & 1) != 0 )
+  if ( ((*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v13)(v10, v8, *(_QWORD *)(v13 + 8)) & 1) != 0 )
   {
     Instance = (DataManager_o *)DataMasterBase__get_lookup(MasterData_WarQuestSelectionMaster, 0LL);
     if ( Instance )
     {
-      v18 = Instance->klass;
-      v19 = Instance;
+      v15 = Instance->klass;
+      v16 = Instance;
       if ( *(_WORD *)&Instance->klass->_2.bitflags1 )
       {
-        v20 = 0LL;
-        v21 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)&v18->_1.interfaceOffsets->offset;
-        while ( *(v21 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
+        v17 = 0LL;
+        v18 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)&v15->_1.interfaceOffsets->offset;
+        while ( *(v18 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
         {
-          ++v20;
-          v21 += 2;
-          if ( v20 >= *(unsigned __int16 *)&Instance->klass->_2.bitflags1 )
+          ++v17;
+          v18 += 2;
+          if ( v17 >= *(unsigned __int16 *)&Instance->klass->_2.bitflags1 )
             goto LABEL_18;
         }
-        v22 = (__int64)(&v18->vtable._2_GetHashCode.method + 2 * *(_DWORD *)v21);
+        v19 = (__int64)(&v15->vtable._2_GetHashCode.method + 2 * *(_DWORD *)v18);
       }
       else
       {
 LABEL_18:
-        v22 = sub_AC5258(
-                Instance,
-                System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
-                2LL,
-                v17);
+        v19 = sub_AA67A0(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 2LL);
       }
-      Instance = (DataManager_o *)(*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v22)(
-                                    v19,
-                                    v9,
-                                    *(_QWORD *)(v22 + 8));
+      Instance = (DataManager_o *)(*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v19)(
+                                    v16,
+                                    v8,
+                                    *(_QWORD *)(v19 + 8));
       if ( Instance )
       {
-        v25 = *(&TreasureDvcDetailEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&Instance->klass->_2.bitflags2 + 1) >= (unsigned int)v25
-          && (TreasureDvcDetailEntity_c *)Instance->klass->_2.typeHierarchy[v25 - 1] == TreasureDvcDetailEntity_TypeInfo )
+        v23 = *(&TreasureDvcDetailEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&Instance->klass->_2.bitflags2 + 1) >= (unsigned int)v23
+          && (TreasureDvcDetailEntity_c *)Instance->klass->_2.typeHierarchy[v23 - 1] == TreasureDvcDetailEntity_TypeInfo )
         {
-          return TreasureDvcDetailEntity__getDetail((TreasureDvcDetailEntity_o *)Instance, v7);
+          return TreasureDvcDetailEntity__getDetail((TreasureDvcDetailEntity_o *)Instance, v22);
         }
       }
     }
 LABEL_34:
-    sub_B2C434(Instance, v7);
+    sub_B0D97C(Instance);
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( !byte_4185BC0 )
+  if ( !byte_4212885 )
   {
-    sub_B2C35C(&LocalizationManager_TypeInfo, v16);
-    byte_4185BC0 = 1;
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v14);
+    byte_4212885 = 1;
   }
-  v23 = LocalizationManager_TypeInfo;
+  v20 = LocalizationManager_TypeInfo;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v23 = LocalizationManager_TypeInfo;
+    v20 = LocalizationManager_TypeInfo;
   }
-  return v23->static_fields->unknownNameText;
+  return v20->static_fields->unknownNameText;
 }
 
 
@@ -160,135 +150,125 @@ System_String_o *__fastcall TreasureDvcDetailMaster__getDetailShort(int32_t id, 
   __int64 v4; // x1
   __int64 v5; // x1
   DataManager_o *Instance; // x0
-  const MethodInfo *v7; // x1
   DataMasterBase_o *MasterData_WarQuestSelectionMaster; // x20
-  DataManager_o *v9; // x19
-  __int64 v10; // x3
+  DataManager_o *v8; // x19
   DataManager_c *klass; // x8
-  DataManager_o *v12; // x21
-  unsigned __int64 v13; // x10
+  DataManager_o *v10; // x21
+  unsigned __int64 v11; // x10
   int32_t *p_offset; // x11
-  __int64 v15; // x0
-  __int64 v16; // x1
-  __int64 v17; // x3
-  DataManager_c *v18; // x8
-  DataManager_o *v19; // x20
-  unsigned __int64 v20; // x10
-  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v21; // x11
-  __int64 v22; // x0
-  LocalizationManager_c *v23; // x0
-  __int64 v25; // x10
-  int32_t v26; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v13; // x0
+  __int64 v14; // x1
+  DataManager_c *v15; // x8
+  DataManager_o *v16; // x20
+  unsigned __int64 v17; // x10
+  System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **v18; // x11
+  __int64 v19; // x0
+  LocalizationManager_c *v20; // x0
+  const MethodInfo *v22; // x1
+  __int64 v23; // x10
+  int32_t v24; // [xsp+Ch] [xbp-24h] BYREF
 
-  v26 = id;
-  if ( (byte_41899BB & 1) == 0 )
+  v24 = id;
+  if ( (byte_4216827 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___, method);
-    sub_B2C35C(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, v2);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v3);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_B2C35C(&TreasureDvcDetailEntity_TypeInfo, v5);
-    byte_41899BB = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_TreasureDvcDetailMaster___, method);
+    sub_B0D8A4(&System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, v2);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v3);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    sub_B0D8A4(&TreasureDvcDetailEntity_TypeInfo, v5);
+    byte_4216827 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   MasterData_WarQuestSelectionMaster = (DataMasterBase_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              Instance,
-                                                             (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
-  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v26, 0LL);
+                                                             (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_TreasureDvcDetailMaster___);
+  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v24, 0LL);
   if ( !MasterData_WarQuestSelectionMaster )
     goto LABEL_34;
-  v9 = Instance;
+  v8 = Instance;
   Instance = (DataManager_o *)DataMasterBase__get_lookup(MasterData_WarQuestSelectionMaster, 0LL);
   if ( !Instance )
     goto LABEL_34;
   klass = Instance->klass;
-  v12 = Instance;
+  v10 = Instance;
   if ( *(_WORD *)&Instance->klass->_2.bitflags1 )
   {
-    v13 = 0LL;
+    v11 = 0LL;
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)p_offset - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
     {
-      ++v13;
+      ++v11;
       p_offset += 4;
-      if ( v13 >= *(unsigned __int16 *)&Instance->klass->_2.bitflags1 )
+      if ( v11 >= *(unsigned __int16 *)&Instance->klass->_2.bitflags1 )
         goto LABEL_10;
     }
-    v15 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v13 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_10:
-    v15 = sub_AC5258(
-            Instance,
-            System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
-            0LL,
-            v10);
+    v13 = sub_AA67A0(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 0LL);
   }
-  if ( ((*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v15)(v12, v9, *(_QWORD *)(v15 + 8)) & 1) != 0 )
+  if ( ((*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v13)(v10, v8, *(_QWORD *)(v13 + 8)) & 1) != 0 )
   {
     Instance = (DataManager_o *)DataMasterBase__get_lookup(MasterData_WarQuestSelectionMaster, 0LL);
     if ( Instance )
     {
-      v18 = Instance->klass;
-      v19 = Instance;
+      v15 = Instance->klass;
+      v16 = Instance;
       if ( *(_WORD *)&Instance->klass->_2.bitflags1 )
       {
-        v20 = 0LL;
-        v21 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)&v18->_1.interfaceOffsets->offset;
-        while ( *(v21 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
+        v17 = 0LL;
+        v18 = (System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__c **)&v15->_1.interfaceOffsets->offset;
+        while ( *(v18 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo )
         {
-          ++v20;
-          v21 += 2;
-          if ( v20 >= *(unsigned __int16 *)&Instance->klass->_2.bitflags1 )
+          ++v17;
+          v18 += 2;
+          if ( v17 >= *(unsigned __int16 *)&Instance->klass->_2.bitflags1 )
             goto LABEL_18;
         }
-        v22 = (__int64)(&v18->vtable._2_GetHashCode.method + 2 * *(_DWORD *)v21);
+        v19 = (__int64)(&v15->vtable._2_GetHashCode.method + 2 * *(_DWORD *)v18);
       }
       else
       {
 LABEL_18:
-        v22 = sub_AC5258(
-                Instance,
-                System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo,
-                2LL,
-                v17);
+        v19 = sub_AA67A0(Instance, System_Collections_Generic_IReadOnlyDictionary_string__DataEntityBase__TypeInfo, 2LL);
       }
-      Instance = (DataManager_o *)(*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v22)(
-                                    v19,
-                                    v9,
-                                    *(_QWORD *)(v22 + 8));
+      Instance = (DataManager_o *)(*(__int64 (__fastcall **)(DataManager_o *, DataManager_o *, _QWORD))v19)(
+                                    v16,
+                                    v8,
+                                    *(_QWORD *)(v19 + 8));
       if ( Instance )
       {
-        v25 = *(&TreasureDvcDetailEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&Instance->klass->_2.bitflags2 + 1) >= (unsigned int)v25
-          && (TreasureDvcDetailEntity_c *)Instance->klass->_2.typeHierarchy[v25 - 1] == TreasureDvcDetailEntity_TypeInfo )
+        v23 = *(&TreasureDvcDetailEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&Instance->klass->_2.bitflags2 + 1) >= (unsigned int)v23
+          && (TreasureDvcDetailEntity_c *)Instance->klass->_2.typeHierarchy[v23 - 1] == TreasureDvcDetailEntity_TypeInfo )
         {
-          return TreasureDvcDetailEntity__getDetailShort((TreasureDvcDetailEntity_o *)Instance, v7);
+          return TreasureDvcDetailEntity__getDetailShort((TreasureDvcDetailEntity_o *)Instance, v22);
         }
       }
     }
 LABEL_34:
-    sub_B2C434(Instance, v7);
+    sub_B0D97C(Instance);
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  if ( !byte_4185BC0 )
+  if ( !byte_4212885 )
   {
-    sub_B2C35C(&LocalizationManager_TypeInfo, v16);
-    byte_4185BC0 = 1;
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v14);
+    byte_4212885 = 1;
   }
-  v23 = LocalizationManager_TypeInfo;
+  v20 = LocalizationManager_TypeInfo;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v23 = LocalizationManager_TypeInfo;
+    v20 = LocalizationManager_TypeInfo;
   }
-  return v23->static_fields->unknownNameText;
+  return v20->static_fields->unknownNameText;
 }

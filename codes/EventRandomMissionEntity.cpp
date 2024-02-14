@@ -1,26 +1,26 @@
 void __fastcall EventRandomMissionEntity___ctor(EventRandomMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_418873B & 1) == 0 )
+  if ( (byte_42149F7 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
-    byte_418873B = 1;
+    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
+    byte_42149F7 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall EventRandomMissionEntity__CreatePK(int32_t missionId, const MethodInfo *method)
 {
-  if ( (byte_418873A & 1) == 0 )
+  if ( (byte_42149F6 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int___, method);
-    byte_418873A = 1;
+    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int___, method);
+    byte_42149F6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int_(
            missionId,
-           (const MethodInfo_173289C *)Method_DataEntityBase_CreateMultiplePK_int___);
+           (const MethodInfo_17133B0 *)Method_DataEntityBase_CreateMultiplePK_int___);
 }
 
 

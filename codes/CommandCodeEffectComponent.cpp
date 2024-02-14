@@ -1,9 +1,9 @@
 void __fastcall CommandCodeEffectComponent___ctor(CommandCodeEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_41880FA & 1) == 0 )
+  if ( (byte_421483F & 1) == 0 )
   {
-    sub_B2C35C(&CommonEffectComponent_TypeInfo, method);
-    byte_41880FA = 1;
+    sub_B0D8A4(&CommonEffectComponent_TypeInfo, method);
+    byte_421483F = 1;
   }
   if ( (BYTE3(CommonEffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !CommonEffectComponent_TypeInfo->_2.cctor_finished )
@@ -31,21 +31,20 @@ void __fastcall CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectCompo
   UnityEngine_Object_o *Component_WebViewObject; // x20
   UnityEngine_Object_o *v6; // x19
   _BOOL8 v7; // x0
-  __int64 v8; // x1
 
-  if ( (byte_41880F9 & 1) == 0 )
+  if ( (byte_421483E & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_Animation___, method);
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v3);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v4);
-    byte_41880F9 = 1;
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Animation___, method);
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v3);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v4);
+    byte_421483E = 1;
   }
   Component_WebViewObject = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                       (UnityEngine_Component_o *)this,
-                                                      (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                                                      (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   v6 = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                  (UnityEngine_Component_o *)this,
-                                 (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                                 (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -60,7 +59,7 @@ void __fastcall CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectCompo
       return;
     }
 LABEL_16:
-    sub_B2C434(v7, v8);
+    sub_B0D97C(v7);
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -99,11 +98,11 @@ void __fastcall CommandCodeEffectComponent__SetCommandCodeImg(
   UnityEngine_Object_o *commandCodeImg; // x21
   UISprite_o *v7; // x20
 
-  if ( (byte_41880F8 & 1) == 0 )
+  if ( (byte_421483D & 1) == 0 )
   {
-    sub_B2C35C(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
-    byte_41880F8 = 1;
+    sub_B0D8A4(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
+    byte_421483D = 1;
   }
   commandCodeImg = (UnityEngine_Object_o *)this->fields.commandCodeImg;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -138,7 +137,7 @@ void __fastcall CommandCodeEffectComponent__SetDetachEffect(
   if ( action )
   {
     this->fields.commandCodeDetachAction = action;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)&this->fields.commandCodeDetachAction,
       (System_Int32_array **)action,
       (System_String_array **)method,
@@ -165,7 +164,7 @@ void __fastcall CommandCodeEffectComponent__SetEndEffectCallbak(
   if ( callback )
   {
     this->fields.endEffectCallback = callback;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)&this->fields.endEffectCallback,
       (System_Int32_array **)callback,
       (System_String_array **)method,

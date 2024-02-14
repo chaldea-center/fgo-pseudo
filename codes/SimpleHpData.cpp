@@ -1,11 +1,10 @@
 void __fastcall SimpleHpData___ctor(SimpleHpData_o *this, BattleServantData_o *svtData, const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !svtData )
-    sub_B2C434(v5, v6);
+    sub_B0D97C(v5);
   this->fields._Hp_k__BackingField = BattleServantData__getNowHp(svtData, 0LL);
   this->fields._MaxHp_k__BackingField = BattleServantData__getMaxHp(svtData, 0LL);
 }

@@ -13,14 +13,13 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *baseButton; // x21
-  __int64 v6; // x1
-  struct UICommonButton_o *v7; // x0
-  __int64 v8; // x1
+  struct UICommonButton_o *v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4189D70 & 1) == 0 )
+  if ( (byte_4216BC2 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, isEnable);
-    byte_4189D70 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, isEnable);
+    byte_4216BC2 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -30,25 +29,25 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
   }
   if ( !UnityEngine_Object__op_Equality(baseButton, 0LL, 0LL) )
   {
-    v7 = this->fields.baseButton;
-    if ( !v7
-      || (((void (__fastcall *)(struct UICommonButton_o *, bool, Il2CppMethodPointer))v7->klass->vtable._5_set_isEnabled.method)(
-            v7,
+    v6 = this->fields.baseButton;
+    if ( !v6
+      || (((void (__fastcall *)(struct UICommonButton_o *, bool, Il2CppMethodPointer))v6->klass->vtable._5_set_isEnabled.method)(
+            v6,
             isEnable,
-            v7->klass->vtable._6_OnInit.methodPtr),
-          (v7 = this->fields.baseButton) == 0LL) )
+            v6->klass->vtable._6_OnInit.methodPtr),
+          (v6 = this->fields.baseButton) == 0LL) )
     {
-      sub_B2C434(v7, v6);
+      sub_B0D97C(v6);
     }
     if ( isEnable )
-      v8 = 0LL;
+      v7 = 0LL;
     else
-      v8 = 3LL;
-    ((void (__fastcall *)(struct UICommonButton_o *, __int64, __int64, Il2CppMethodPointer))v7->klass->vtable._14_SetState.method)(
+      v7 = 3LL;
+    ((void (__fastcall *)(struct UICommonButton_o *, __int64, __int64, Il2CppMethodPointer))v6->klass->vtable._14_SetState.method)(
+      v6,
       v7,
-      v8,
       1LL,
-      v7->klass->vtable._15_OnPress.methodPtr);
+      v6->klass->vtable._15_OnPress.methodPtr);
   }
 }
 
@@ -81,20 +80,20 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
   UILabel_o *maskLabel; // x20
   __int64 *v16; // x8
 
-  if ( (byte_4189D6F & 1) == 0 )
+  if ( (byte_4216BC1 & 1) == 0 )
   {
-    sub_B2C35C(&LocalizationManager_TypeInfo, item);
-    sub_B2C35C(&StringLiteral_1/*""*/, v7);
-    sub_B2C35C(&StringLiteral_8658/*"MATERIAL_FIND_SERVANT"*/, v8);
-    sub_B2C35C(&StringLiteral_8657/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
-    byte_4189D6F = 1;
+    sub_B0D8A4(&LocalizationManager_TypeInfo, item);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v7);
+    sub_B0D8A4(&StringLiteral_8680/*"MATERIAL_FIND_SERVANT"*/, v8);
+    sub_B0D8A4(&StringLiteral_8679/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
+    byte_4216BC1 = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( !servantFaceIcon )
       goto LABEL_35;
-    ServantFaceIconComponent__Set_30797084(
+    ServantFaceIconComponent__Set_29630376(
       servantFaceIcon,
       item->fields._userSvtCollectionEntity_k__BackingField,
       item->fields._svtCostumeEntity_k__BackingField,
@@ -127,7 +126,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v16 = &StringLiteral_8658/*"MATERIAL_FIND_SERVANT"*/;
+      v16 = &StringLiteral_8680/*"MATERIAL_FIND_SERVANT"*/;
     }
     else
     {
@@ -175,7 +174,7 @@ LABEL_13:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v16 = &StringLiteral_8657/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
+      v16 = &StringLiteral_8679/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
     }
     servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v16, 0LL);
     if ( maskLabel )
@@ -189,6 +188,6 @@ LABEL_13:
       }
     }
 LABEL_35:
-    sub_B2C434(servantFaceIcon, item);
+    sub_B0D97C(servantFaceIcon);
   }
 }

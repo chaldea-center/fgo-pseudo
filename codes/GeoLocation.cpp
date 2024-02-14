@@ -2,10 +2,10 @@ void __fastcall GeoLocation___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_418B048 & 1) == 0 )
+  if ( (byte_42180C1 & 1) == 0 )
   {
-    sub_B2C35C(&GeoLocation_TypeInfo, v1);
-    byte_418B048 = 1;
+    sub_B0D8A4(&GeoLocation_TypeInfo, v1);
+    byte_42180C1 = 1;
   }
   GeoLocation_TypeInfo->static_fields->TIME_OUT = 20;
   GeoLocation_TypeInfo->static_fields->TEST_COUNT = 3;
@@ -63,10 +63,10 @@ UnityEngine_LocationInfo_o *__fastcall GeoLocation__GetAppropriateOne(
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v36; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_418B047 & 1) == 0 )
+  if ( (byte_42180C0 & 1) == 0 )
   {
-    sub_B2C35C(&GeoLocation_TypeInfo, v2);
-    byte_418B047 = 1;
+    sub_B0D8A4(&GeoLocation_TypeInfo, v2);
+    byte_42180C0 = 1;
   }
   v4 = 180.0;
   result = (UnityEngine_LocationInfo_o *)GeoLocation_TypeInfo;
@@ -163,12 +163,12 @@ UnityEngine_LocationInfo_o *__fastcall GeoLocation__GetAppropriateOne(
   v31 = v30->infoArray;
   if ( !v31 )
 LABEL_40:
-    sub_B2C434(result, v2);
+    sub_B0D97C(result);
   if ( v7 >= v31->max_length )
   {
 LABEL_41:
-    v34 = sub_B2C460(result);
-    sub_B2C400(v34, 0LL);
+    v34 = sub_B0D9A8(result);
+    sub_B0D948(v34, 0LL);
   }
   v32 = (char *)v31 + 32 * (int)v7;
   v33 = *((_OWORD *)v32 + 3);
@@ -193,12 +193,12 @@ void __fastcall GeoLocation__GetLocation(
   GeoLocation_c *v11; // x0
   struct GeoLocation_StaticFields *static_fields; // x0
 
-  if ( (byte_418B045 & 1) == 0 )
+  if ( (byte_42180BE & 1) == 0 )
   {
-    sub_B2C35C(&GeoLocation_TypeInfo, someMonoForCoroutine);
-    sub_B2C35C(&UnityEngine_LocationInfo___TypeInfo, v9);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
-    byte_418B045 = 1;
+    sub_B0D8A4(&GeoLocation_TypeInfo, someMonoForCoroutine);
+    sub_B0D8A4(&UnityEngine_LocationInfo___TypeInfo, v9);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
+    byte_42180BE = 1;
   }
   v11 = GeoLocation_TypeInfo;
   if ( (BYTE3(GeoLocation_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !GeoLocation_TypeInfo->_2.cctor_finished )
@@ -208,7 +208,7 @@ void __fastcall GeoLocation__GetLocation(
   }
   static_fields = v11->static_fields;
   static_fields->callBack = locDel;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&static_fields->callBack,
     (System_Int32_array **)locDel,
     (System_String_array **)method,
@@ -225,16 +225,17 @@ void __fastcall GeoLocation__GetLocation(
 System_Collections_IEnumerator_o *__fastcall GeoLocation__GetLocationCoroutine(const MethodInfo *method)
 {
   __int64 v1; // x1
-  GeoLocation__GetLocationCoroutine_d__9_o *v2; // x19
+  __int64 v2; // x2
+  GeoLocation__GetLocationCoroutine_d__9_o *v3; // x19
 
-  if ( (byte_418B046 & 1) == 0 )
+  if ( (byte_42180BF & 1) == 0 )
   {
-    sub_B2C35C(&GeoLocation__GetLocationCoroutine_d__9_TypeInfo, v1);
-    byte_418B046 = 1;
+    sub_B0D8A4(&GeoLocation__GetLocationCoroutine_d__9_TypeInfo, v1);
+    byte_42180BF = 1;
   }
-  v2 = (GeoLocation__GetLocationCoroutine_d__9_o *)sub_B2C42C(GeoLocation__GetLocationCoroutine_d__9_TypeInfo);
-  GeoLocation__GetLocationCoroutine_d__9___ctor(v2, 0, 0LL);
-  return (System_Collections_IEnumerator_o *)v2;
+  v3 = (GeoLocation__GetLocationCoroutine_d__9_o *)sub_B0D974(GeoLocation__GetLocationCoroutine_d__9_TypeInfo, v1, v2);
+  GeoLocation__GetLocationCoroutine_d__9___ctor(v3, 0, 0LL);
+  return (System_Collections_IEnumerator_o *)v3;
 }
 
 
@@ -259,7 +260,7 @@ void __fastcall GeoLocation_LocationDelegate___ctor(
   p_method = &this->fields.method;
   *((_QWORD *)p_method + 1) = *(_QWORD *)&method;
   *((_QWORD *)p_method - 2) = v4;
-  sub_B2C2F8(p_method, object);
+  sub_B0D840(p_method, object);
 }
 
 
@@ -277,16 +278,16 @@ System_IAsyncResult_o *__fastcall GeoLocation_LocationDelegate__BeginInvoke(
   int32_t v13; // [xsp+2Ch] [xbp-24h] BYREF
 
   v13 = result;
-  if ( (byte_41841F5 & 1) == 0 )
+  if ( (byte_4210F76 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_LocationInfo_TypeInfo, *(_QWORD *)&result);
-    sub_B2C35C(&GeoLocation_ResultState_TypeInfo, v10);
-    byte_41841F5 = 1;
+    sub_B0D8A4(&UnityEngine_LocationInfo_TypeInfo, *(_QWORD *)&result);
+    sub_B0D8A4(&GeoLocation_ResultState_TypeInfo, v10);
+    byte_4210F76 = 1;
   }
   v12[2] = 0LL;
   v12[0] = j_il2cpp_value_box_0(GeoLocation_ResultState_TypeInfo, &v13);
   v12[1] = j_il2cpp_value_box_0(UnityEngine_LocationInfo_TypeInfo, locInfo);
-  return (System_IAsyncResult_o *)sub_B2C300(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_B0D848(this, v12, callback, object);
 }
 
 
@@ -295,7 +296,7 @@ void __fastcall GeoLocation_LocationDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_B2C304(result, 0LL, method);
+  sub_B0D84C(result, 0LL, method);
 }
 
 
@@ -312,67 +313,65 @@ void __fastcall GeoLocation_LocationDelegate__Invoke(
   __int64 v9; // x27
   unsigned int v10; // w24
   __int64 class_0; // x0
-  __int64 v12; // x3
-  __int128 v13; // q0
-  unsigned int v14; // w23
-  __int64 v15; // x8
-  unsigned __int64 v16; // x10
-  _DWORD *v17; // x11
-  __int64 v18; // x0
-  __int128 v19; // q0
-  void (__fastcall **v20)(__int64 *, _QWORD, __int128 *, _QWORD); // x0
-  __int128 v21; // q0
-  __int128 v22; // q1
-  __int128 v23; // q0
-  __int64 v24; // x8
-  void (__fastcall *v25)(__int64 *, _QWORD, __int128 *, _QWORD); // x9
-  __int64 v26; // x0
+  __int128 v12; // q0
+  unsigned int v13; // w23
+  __int64 v14; // x8
+  unsigned __int64 v15; // x10
+  _DWORD *v16; // x11
+  __int64 v17; // x0
+  __int128 v18; // q0
+  void (__fastcall **v19)(__int64 *, _QWORD, __int128 *, _QWORD); // x0
+  __int128 v20; // q0
+  __int128 v21; // q1
+  __int128 v22; // q0
+  __int64 v23; // x8
+  void (__fastcall *v24)(__int64 *, _QWORD, __int128 *, _QWORD); // x9
+  __int64 v25; // x0
+  void (__fastcall *v26)(__int64 *, _QWORD, __int128 *, _QWORD); // x8
   void (__fastcall *v27)(__int64 *, _QWORD, __int128 *, _QWORD); // x8
-  void (__fastcall *v28)(__int64 *, _QWORD, __int128 *, _QWORD); // x8
-  GeoLocation_LocationDelegate_o *v29; // x8
-  __int64 *v30; // x22
-  __int64 v31; // x23
-  void (__fastcall *v32)(__int64 *, __int64, __int128 *, __int64); // x24
-  __int128 v33; // q0
-  char v34; // w24
-  char v35; // w0
-  __int64 v36; // x3
-  unsigned int v37; // w24
-  __int128 v38; // q0
-  __int64 v39; // x8
-  __int64 v40; // x1
-  __int64 v41; // x2
-  unsigned __int64 v42; // x10
-  _DWORD *v43; // x11
-  __int128 v44; // q0
-  __int64 v45; // x1
-  __int128 *v46; // x2
-  __int128 v47; // q0
-  __int128 v48; // q0
-  __int128 v49[2]; // [xsp+0h] [xbp-190h] BYREF
-  __int128 v50[2]; // [xsp+20h] [xbp-170h] BYREF
-  __int128 v51; // [xsp+40h] [xbp-150h]
-  __int128 v52; // [xsp+50h] [xbp-140h]
-  __int128 v53; // [xsp+60h] [xbp-130h]
-  __int128 v54; // [xsp+70h] [xbp-120h]
-  __int128 v55; // [xsp+80h] [xbp-110h]
-  __int128 v56; // [xsp+90h] [xbp-100h]
-  __int128 v57; // [xsp+A0h] [xbp-F0h]
-  __int128 v58; // [xsp+B0h] [xbp-E0h]
-  __int128 v59[2]; // [xsp+C0h] [xbp-D0h] BYREF
-  __int128 v60; // [xsp+E0h] [xbp-B0h] BYREF
-  __int128 v61; // [xsp+F0h] [xbp-A0h] BYREF
-  unsigned int v62; // [xsp+104h] [xbp-8Ch]
-  GeoLocation_LocationDelegate_o *v63; // [xsp+108h] [xbp-88h] BYREF
-  __int128 v64; // [xsp+110h] [xbp-80h] BYREF
-  __int128 v65; // [xsp+120h] [xbp-70h]
+  GeoLocation_LocationDelegate_o *v28; // x8
+  __int64 *v29; // x22
+  __int64 v30; // x23
+  void (__fastcall *v31)(__int64 *, __int64, __int128 *, __int64); // x24
+  __int128 v32; // q0
+  char v33; // w24
+  char v34; // w0
+  unsigned int v35; // w24
+  __int128 v36; // q0
+  __int64 v37; // x8
+  __int64 v38; // x1
+  __int64 v39; // x2
+  unsigned __int64 v40; // x10
+  _DWORD *v41; // x11
+  __int128 v42; // q0
+  __int64 v43; // x1
+  __int128 *v44; // x2
+  __int128 v45; // q0
+  __int128 v46; // q0
+  __int128 v47[2]; // [xsp+0h] [xbp-190h] BYREF
+  __int128 v48[2]; // [xsp+20h] [xbp-170h] BYREF
+  __int128 v49; // [xsp+40h] [xbp-150h]
+  __int128 v50; // [xsp+50h] [xbp-140h]
+  __int128 v51; // [xsp+60h] [xbp-130h]
+  __int128 v52; // [xsp+70h] [xbp-120h]
+  __int128 v53; // [xsp+80h] [xbp-110h]
+  __int128 v54; // [xsp+90h] [xbp-100h]
+  __int128 v55; // [xsp+A0h] [xbp-F0h]
+  __int128 v56; // [xsp+B0h] [xbp-E0h]
+  __int128 v57[2]; // [xsp+C0h] [xbp-D0h] BYREF
+  __int128 v58; // [xsp+E0h] [xbp-B0h] BYREF
+  __int128 v59; // [xsp+F0h] [xbp-A0h] BYREF
+  unsigned int v60; // [xsp+104h] [xbp-8Ch]
+  GeoLocation_LocationDelegate_o *v61; // [xsp+108h] [xbp-88h] BYREF
+  __int128 v62; // [xsp+110h] [xbp-80h] BYREF
+  __int128 v63; // [xsp+120h] [xbp-70h]
 
-  v63 = this;
-  v62 = result;
+  v61 = this;
+  v60 = result;
   v4 = *(_QWORD *)&this[1].fields.method_ptr;
   if ( !v4 )
   {
-    v8 = &v63;
+    v8 = &v61;
     v7 = 1LL;
     goto LABEL_5;
   }
@@ -384,150 +383,150 @@ LABEL_5:
     v9 = 0LL;
     while ( 1 )
     {
-      v29 = v8[v9];
-      v30 = *(__int64 **)&v29->fields.method;
-      v31 = *(_QWORD *)&v29->fields.extra_arg;
-      v32 = *(void (__fastcall **)(__int64 *, __int64, __int128 *, __int64))&v29->fields.method_ptr;
-      if ( *(__int16 *)(v31 + 72) == -1 )
-        sub_B2C418(*(_QWORD *)&v29->fields.extra_arg, *(_QWORD *)&result, locInfo, method);
-      if ( (sub_B2C38C(v31) & 1) == 0 )
+      v28 = v8[v9];
+      v29 = *(__int64 **)&v28->fields.method;
+      v30 = *(_QWORD *)&v28->fields.extra_arg;
+      v31 = *(void (__fastcall **)(__int64 *, __int64, __int128 *, __int64))&v28->fields.method_ptr;
+      if ( *(__int16 *)(v30 + 72) == -1 )
+        sub_B0D960(*(_QWORD *)&v28->fields.extra_arg, *(_QWORD *)&result, locInfo, method);
+      if ( (sub_B0D8D4(v30) & 1) == 0 )
         break;
-      if ( *(_BYTE *)(v31 + 74) != 2 )
+      if ( *(_BYTE *)(v30 + 74) != 2 )
       {
-        v47 = *(_OWORD *)&locInfo->fields.m_Altitude;
-        v45 = v62;
-        v46 = v59;
-        v59[0] = *(_OWORD *)&locInfo->fields.m_Timestamp;
-        v59[1] = v47;
+        v45 = *(_OWORD *)&locInfo->fields.m_Altitude;
+        v43 = v60;
+        v44 = v57;
+        v57[0] = *(_OWORD *)&locInfo->fields.m_Timestamp;
+        v57[1] = v45;
 LABEL_38:
-        v32(v30, v45, v46, v31);
+        v31(v29, v43, v44, v30);
         goto LABEL_40;
       }
-      v33 = *(_OWORD *)&locInfo->fields.m_Altitude;
-      v60 = *(_OWORD *)&locInfo->fields.m_Timestamp;
-      v61 = v33;
-      ((void (__fastcall *)(_QWORD, __int128 *, __int64))v32)(v62, &v60, v31);
+      v32 = *(_OWORD *)&locInfo->fields.m_Altitude;
+      v58 = *(_OWORD *)&locInfo->fields.m_Timestamp;
+      v59 = v32;
+      ((void (__fastcall *)(_QWORD, __int128 *, __int64))v31)(v60, &v58, v30);
 LABEL_40:
       if ( ++v9 == v7 )
         return;
     }
-    if ( !v30 )
+    if ( !v29 )
     {
-      v48 = *(_OWORD *)&locInfo->fields.m_Altitude;
-      v50[0] = *(_OWORD *)&locInfo->fields.m_Timestamp;
-      v50[1] = v48;
-      ((void (__fastcall *)(char *, __int128 *, __int64))v32)((char *)&v61 + 4, v50, v31);
+      v46 = *(_OWORD *)&locInfo->fields.m_Altitude;
+      v48[0] = *(_OWORD *)&locInfo->fields.m_Timestamp;
+      v48[1] = v46;
+      ((void (__fastcall *)(char *, __int128 *, __int64))v31)((char *)&v59 + 4, v48, v30);
       goto LABEL_40;
     }
-    if ( *(__int16 *)(v31 + 72) != -1 && (*(_BYTE *)(*v30 + 277) & 1) == 0 && this->fields.m_target )
+    if ( *(__int16 *)(v30 + 72) != -1 && (*(_BYTE *)(*v29 + 277) & 1) == 0 && this->fields.m_target )
     {
-      v34 = sub_B2C384(v31);
-      v35 = sub_B2C788(v31);
-      if ( (v34 & 1) != 0 )
+      v33 = sub_B0D8CC(v30);
+      v34 = sub_B0DCD0(v30);
+      if ( (v33 & 1) != 0 )
       {
-        v37 = v62;
-        if ( (v35 & 1) != 0 )
+        v35 = v60;
+        if ( (v34 & 1) != 0 )
         {
-          v38 = *(_OWORD *)&locInfo->fields.m_Altitude;
-          v57 = *(_OWORD *)&locInfo->fields.m_Timestamp;
-          v58 = v38;
-          v39 = *v30;
-          v40 = *(_QWORD *)(v31 + 24);
-          v41 = *(unsigned __int16 *)(v31 + 72);
-          if ( *(_WORD *)(*v30 + 298) )
+          v36 = *(_OWORD *)&locInfo->fields.m_Altitude;
+          v55 = *(_OWORD *)&locInfo->fields.m_Timestamp;
+          v56 = v36;
+          v37 = *v29;
+          v38 = *(_QWORD *)(v30 + 24);
+          v39 = *(unsigned __int16 *)(v30 + 72);
+          if ( *(_WORD *)(*v29 + 298) )
           {
-            v42 = 0LL;
-            v43 = (_DWORD *)(*(_QWORD *)(v39 + 176) + 8LL);
-            while ( *((_QWORD *)v43 - 1) != v40 )
+            v40 = 0LL;
+            v41 = (_DWORD *)(*(_QWORD *)(v37 + 176) + 8LL);
+            while ( *((_QWORD *)v41 - 1) != v38 )
             {
-              ++v42;
-              v43 += 4;
-              if ( v42 >= *(unsigned __int16 *)(*v30 + 298) )
+              ++v40;
+              v41 += 4;
+              if ( v40 >= *(unsigned __int16 *)(*v29 + 298) )
                 goto LABEL_35;
             }
-            v26 = v39 + 16LL * (*v43 + (int)v41) + 312;
+            v25 = v37 + 16LL * (*v41 + (int)v39) + 312;
           }
           else
           {
 LABEL_35:
-            v26 = sub_AC5258(v30, v40, v41, v36);
+            v25 = sub_AA67A0(v29, v38, v39);
           }
-          v20 = (void (__fastcall **)(__int64 *, _QWORD, __int128 *, _QWORD))sub_B2C40C(*(_QWORD *)(v26 + 8), v31);
-          v22 = v57;
-          v21 = v58;
+          v19 = (void (__fastcall **)(__int64 *, _QWORD, __int128 *, _QWORD))sub_B0D954(*(_QWORD *)(v25 + 8), v30);
+          v21 = v55;
+          v20 = v56;
         }
         else
         {
-          v19 = *(_OWORD *)&locInfo->fields.m_Altitude;
-          v55 = *(_OWORD *)&locInfo->fields.m_Timestamp;
-          v56 = v19;
-          v20 = (void (__fastcall **)(__int64 *, _QWORD, __int128 *, _QWORD))sub_B2C40C(
-                                                                               *(_QWORD *)(*v30
+          v18 = *(_OWORD *)&locInfo->fields.m_Altitude;
+          v53 = *(_OWORD *)&locInfo->fields.m_Timestamp;
+          v54 = v18;
+          v19 = (void (__fastcall **)(__int64 *, _QWORD, __int128 *, _QWORD))sub_B0D954(
+                                                                               *(_QWORD *)(*v29
                                                                                          + 16LL
-                                                                                         * *(unsigned __int16 *)(v31 + 72)
+                                                                                         * *(unsigned __int16 *)(v30 + 72)
                                                                                          + 320),
-                                                                               v31);
-          v22 = v55;
-          v21 = v56;
+                                                                               v30);
+          v21 = v53;
+          v20 = v54;
         }
-        v27 = *v20;
-        v64 = v22;
-        v65 = v21;
-        v27(v30, v37, &v64, v20);
+        v26 = *v19;
+        v62 = v21;
+        v63 = v20;
+        v26(v29, v35, &v62, v19);
       }
       else
       {
-        v10 = *(unsigned __int16 *)(v31 + 72);
-        if ( (v35 & 1) != 0 )
+        v10 = *(unsigned __int16 *)(v30 + 72);
+        if ( (v34 & 1) != 0 )
         {
-          class_0 = j_il2cpp_method_get_class_0(v31);
-          v13 = *(_OWORD *)&locInfo->fields.m_Altitude;
-          v14 = v62;
-          v53 = *(_OWORD *)&locInfo->fields.m_Timestamp;
-          v54 = v13;
-          v15 = *v30;
-          if ( *(_WORD *)(*v30 + 298) )
+          class_0 = j_il2cpp_method_get_class_0(v30);
+          v12 = *(_OWORD *)&locInfo->fields.m_Altitude;
+          v13 = v60;
+          v51 = *(_OWORD *)&locInfo->fields.m_Timestamp;
+          v52 = v12;
+          v14 = *v29;
+          if ( *(_WORD *)(*v29 + 298) )
           {
-            v16 = 0LL;
-            v17 = (_DWORD *)(*(_QWORD *)(v15 + 176) + 8LL);
-            while ( *((_QWORD *)v17 - 1) != class_0 )
+            v15 = 0LL;
+            v16 = (_DWORD *)(*(_QWORD *)(v14 + 176) + 8LL);
+            while ( *((_QWORD *)v16 - 1) != class_0 )
             {
-              ++v16;
-              v17 += 4;
-              if ( v16 >= *(unsigned __int16 *)(*v30 + 298) )
+              ++v15;
+              v16 += 4;
+              if ( v15 >= *(unsigned __int16 *)(*v29 + 298) )
                 goto LABEL_11;
             }
-            v18 = v15 + 16LL * (int)(*v17 + v10) + 312;
+            v17 = v14 + 16LL * (int)(*v16 + v10) + 312;
           }
           else
           {
 LABEL_11:
-            v18 = sub_AC5258(v30, class_0, v10, v12);
+            v17 = sub_AA67A0(v29, class_0, v10);
           }
-          v28 = *(void (__fastcall **)(__int64 *, _QWORD, __int128 *, _QWORD))v18;
-          v64 = v53;
-          v65 = v54;
-          v28(v30, v14, &v64, *(_QWORD *)(v18 + 8));
+          v27 = *(void (__fastcall **)(__int64 *, _QWORD, __int128 *, _QWORD))v17;
+          v62 = v51;
+          v63 = v52;
+          v27(v29, v13, &v62, *(_QWORD *)(v17 + 8));
         }
         else
         {
-          v23 = *(_OWORD *)&locInfo->fields.m_Altitude;
-          v51 = *(_OWORD *)&locInfo->fields.m_Timestamp;
-          v52 = v23;
-          v24 = *v30 + 16LL * v10;
-          v25 = *(void (__fastcall **)(__int64 *, _QWORD, __int128 *, _QWORD))(v24 + 312);
-          v64 = v51;
-          v65 = v23;
-          v25(v30, v62, &v64, *(_QWORD *)(v24 + 320));
+          v22 = *(_OWORD *)&locInfo->fields.m_Altitude;
+          v49 = *(_OWORD *)&locInfo->fields.m_Timestamp;
+          v50 = v22;
+          v23 = *v29 + 16LL * v10;
+          v24 = *(void (__fastcall **)(__int64 *, _QWORD, __int128 *, _QWORD))(v23 + 312);
+          v62 = v49;
+          v63 = v22;
+          v24(v29, v60, &v62, *(_QWORD *)(v23 + 320));
         }
       }
       goto LABEL_40;
     }
-    v44 = *(_OWORD *)&locInfo->fields.m_Altitude;
-    v45 = v62;
-    v46 = v49;
-    v49[0] = *(_OWORD *)&locInfo->fields.m_Timestamp;
-    v49[1] = v44;
+    v42 = *(_OWORD *)&locInfo->fields.m_Altitude;
+    v43 = v60;
+    v44 = v47;
+    v47[0] = *(_OWORD *)&locInfo->fields.m_Timestamp;
+    v47[1] = v42;
     goto LABEL_38;
   }
 }
@@ -566,14 +565,16 @@ void __fastcall __noreturn GeoLocation__GetLocationCoroutine_d__9__System_Collec
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_B2C360(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B2C42C(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B2C360(&Method_GeoLocation__GetLocationCoroutine_d__9_System_Collections_IEnumerator_Reset__);
-  sub_B2C400(v3, v4);
+  v2 = sub_B0D8A8(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_B0D974(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_B0D8A8(&Method_GeoLocation__GetLocationCoroutine_d__9_System_Collections_IEnumerator_Reset__);
+  sub_B0D948(v5, v6);
 }
 
 

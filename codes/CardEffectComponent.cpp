@@ -1,9 +1,9 @@
 void __fastcall CardEffectComponent___ctor(CardEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_418A0A5 & 1) == 0 )
+  if ( (byte_4215DA0 & 1) == 0 )
   {
-    sub_B2C35C(&EffectComponent_TypeInfo, method);
-    byte_418A0A5 = 1;
+    sub_B0D8A4(&EffectComponent_TypeInfo, method);
+    byte_4215DA0 = 1;
   }
   if ( (BYTE3(EffectComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !EffectComponent_TypeInfo->_2.cctor_finished )
@@ -14,7 +14,6 @@ void __fastcall CardEffectComponent___ctor(CardEffectComponent_o *this, const Me
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall CardEffectComponent__SetCardEffectDepth(
         CardEffectComponent_o *this,
         int32_t onBaseDepth,
@@ -52,14 +51,14 @@ void __fastcall CardEffectComponent__SetCardEffectDepth(
         goto LABEL_7;
     }
 LABEL_14:
-    v14 = sub_B2C460(this);
-    sub_B2C400(v14, 0LL);
+    v14 = sub_B0D9A8(this);
+    sub_B0D948(v14, 0LL);
   }
 LABEL_7:
   klass = v7[1].klass;
   if ( !klass )
 LABEL_15:
-    sub_B2C434(this, *(_QWORD *)&onBaseDepth);
+    sub_B0D97C(this);
   namespaze = (int)klass->_1.namespaze;
   if ( namespaze >= 1 )
   {

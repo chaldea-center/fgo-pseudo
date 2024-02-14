@@ -1,10 +1,10 @@
 void __fastcall ChangeBattlePhaseNotify___ctor(ChangeBattlePhaseNotify_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  __int64 v2; // x2
   __int64 v4; // x1
-  System_Collections_Generic_Dictionary_TitleInfoControl_TitleKind__TutorialFlag_ImageId__o *v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
+  __int64 v5; // x1
+  System_Collections_Generic_Dictionary_TitleInfoControl_TitleKind__TutorialFlag_ImageId__o *v6; // x20
+  __int64 v7; // x0
   System_String_array **v8; // x2
   System_String_array **v9; // x3
   System_Boolean_array **v10; // x4
@@ -12,34 +12,34 @@ void __fastcall ChangeBattlePhaseNotify___ctor(ChangeBattlePhaseNotify_o *this, 
   System_Int32_array *v12; // x6
   System_Int32_array *v13; // x7
 
-  if ( (byte_418A110 & 1) == 0 )
+  if ( (byte_4215E0B & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__Add__,
       method);
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___ctor__,
-      v3);
-    sub_B2C35C(
-      &System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__TypeInfo,
       v4);
-    byte_418A110 = 1;
+    sub_B0D8A4(
+      &System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__TypeInfo,
+      v5);
+    byte_4215E0B = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_TitleInfoControl_TitleKind__TutorialFlag_ImageId__o *)sub_B2C42C(System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__TypeInfo);
+  v6 = (System_Collections_Generic_Dictionary_TitleInfoControl_TitleKind__TutorialFlag_ImageId__o *)sub_B0D974(System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__TypeInfo, method, v2);
   System_Collections_Generic_Dictionary_TitleInfoControl_TitleKind__TutorialFlag_ImageId____ctor(
-    v5,
-    (const MethodInfo_2E76880 *)Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___ctor__);
-  if ( !v5 )
-    sub_B2C434(v6, v7);
+    v6,
+    (const MethodInfo_2EA255C *)Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___ctor__);
+  if ( !v6 )
+    sub_B0D97C(v7);
   System_Collections_Generic_Dictionary_TitleInfoControl_TitleKind__TutorialFlag_ImageId___Add(
-    v5,
+    v6,
     4,
     3,
-    (const MethodInfo_2E77424 *)Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__Add__);
-  this->fields.dicDetailToPhase = (struct System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__o *)v5;
-  sub_B2C2F8(
+    (const MethodInfo_2EA3100 *)Method_System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__Add__);
+  this->fields.dicDetailToPhase = (struct System_Collections_Generic_Dictionary_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType__o *)v6;
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.dicDetailToPhase,
-    (System_Int32_array **)v5,
+    (System_Int32_array **)v6,
     v8,
     v9,
     v10,
@@ -68,18 +68,18 @@ int32_t __fastcall ChangeBattlePhaseNotify__get_DetailPhase(ChangeBattlePhaseNot
 
 int32_t __fastcall ChangeBattlePhaseNotify__get_Phase(ChangeBattlePhaseNotify_o *this, const MethodInfo *method)
 {
-  if ( (byte_418A10F & 1) == 0 )
+  if ( (byte_4215E0A & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_BasicHelper_GetValue_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___,
       method);
-    byte_418A10F = 1;
+    byte_4215E0A = 1;
   }
   return BasicHelper__GetValue_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType_(
            (System_Collections_Generic_Dictionary_K__V__o *)this->fields.dicDetailToPhase,
            this->fields._DetailPhase_k__BackingField,
            this->fields._DetailPhase_k__BackingField,
-           (const MethodInfo_172861C *)Method_BasicHelper_GetValue_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___);
+           (const MethodInfo_17090A8 *)Method_BasicHelper_GetValue_ServantAnimationOverwriteEntity_PhaseType__ServantAnimationOverwriteEntity_PhaseType___);
 }
 
 

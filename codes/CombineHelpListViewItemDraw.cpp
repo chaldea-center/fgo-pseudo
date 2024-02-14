@@ -17,10 +17,10 @@ void __fastcall CombineHelpListViewItemDraw__Awake(CombineHelpListViewItemDraw_o
 
   baseImageSprite = this->fields.baseImageSprite;
   if ( !baseImageSprite )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   mAtlas = baseImageSprite->fields.mAtlas;
   this->fields.baseImageBasicAtlas = mAtlas;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.baseImageBasicAtlas,
     (System_Int32_array **)mAtlas,
     v2,
@@ -45,9 +45,9 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
   __int64 v10; // x1
   UnityEngine_Object_o *rangeSprite; // x22
   UnityEngine_Component_o *gameObject; // x0
-  const MethodInfo *v13; // x1
   struct CombineHelpInfo_o *info; // x8
   System_String_o *imageName; // x21
+  const MethodInfo *v15; // x1
   UILabel_o *infoTextLabel; // x22
   System_String_o *v17; // x1
   struct CombineHelpInfo_o *v18; // x8
@@ -71,14 +71,14 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
   float v36; // s9
   UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_41861A9 & 1) == 0 )
+  if ( (byte_421444D & 1) == 0 )
   {
-    sub_B2C35C(&AtlasManager_TypeInfo, item);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v7);
-    sub_B2C35C(&StringLiteral_19606/*"img_shop_0"*/, v8);
-    sub_B2C35C(&StringLiteral_1/*""*/, v9);
-    sub_B2C35C(&StringLiteral_19653/*"img_tutorial_txtbg"*/, v10);
-    byte_41861A9 = 1;
+    sub_B0D8A4(&AtlasManager_TypeInfo, item);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v7);
+    sub_B0D8A4(&StringLiteral_19668/*"img_shop_0"*/, v8);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v9);
+    sub_B0D8A4(&StringLiteral_19715/*"img_tutorial_txtbg"*/, v10);
+    byte_421444D = 1;
   }
   if ( item )
   {
@@ -111,12 +111,12 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
       {
         if ( !infoTextLabel )
           goto LABEL_54;
-        imageName = (System_String_o *)StringLiteral_19606/*"img_shop_0"*/;
+        imageName = (System_String_o *)StringLiteral_19668/*"img_shop_0"*/;
         v17 = (System_String_o *)StringLiteral_1/*""*/;
       }
       else
       {
-        gameObject = (UnityEngine_Component_o *)CombineHelpListViewItem__get_InfoText(item, v13);
+        gameObject = (UnityEngine_Component_o *)CombineHelpListViewItem__get_InfoText(item, v15);
         if ( !infoTextLabel )
           goto LABEL_54;
         v17 = (System_String_o *)gameObject;
@@ -232,7 +232,7 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
         gameObject = (UnityEngine_Component_o *)this->fields.baseTextSprite;
         if ( gameObject )
         {
-          UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_19653/*"img_tutorial_txtbg"*/, 0LL);
+          UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_19715/*"img_tutorial_txtbg"*/, 0LL);
           gameObject = (UnityEngine_Component_o *)this->fields.infoTextLabel;
           if ( gameObject )
           {
@@ -262,7 +262,7 @@ void __fastcall CombineHelpListViewItemDraw__SetItem(
         }
       }
 LABEL_54:
-      sub_B2C434(gameObject, v13);
+      sub_B0D97C(gameObject);
     }
   }
 }

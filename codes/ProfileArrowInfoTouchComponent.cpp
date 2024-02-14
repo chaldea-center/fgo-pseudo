@@ -41,38 +41,37 @@ void __fastcall ProfileArrowInfoTouchComponent__OnDragEnd(
   float v11; // s8
   float v12; // s0
   float v13; // s0
-  __int64 v14; // x1
   ConnectMark_o *connectMark; // x0
-  struct UnityEngine_Vector2_o v16; // [xsp+0h] [xbp-30h] BYREF
-  UnityEngine_Vector2_o v17; // [xsp+8h] [xbp-28h] BYREF
-  UnityEngine_Vector2_o v18; // 0:s0.4,4:s1.4
+  struct UnityEngine_Vector2_o v15; // [xsp+0h] [xbp-30h] BYREF
+  UnityEngine_Vector2_o v16; // [xsp+8h] [xbp-28h] BYREF
+  UnityEngine_Vector2_o v17; // 0:s0.4,4:s1.4
 
-  if ( (byte_4187A55 & 1) == 0 )
+  if ( (byte_42144AD & 1) == 0 )
   {
-    sub_B2C35C(&SoundManager_TypeInfo, method);
-    byte_4187A55 = 1;
+    sub_B0D8A4(&SoundManager_TypeInfo, method);
+    byte_42144AD = 1;
   }
   up = UnityEngine_Vector2__get_up(0LL);
   y = up.fields.y;
   x = up.fields.x;
   vec = this->fields.vec;
-  v17 = up;
-  v16 = vec;
-  if ( !byte_4186C20 )
+  v16 = up;
+  v15 = vec;
+  if ( !byte_42139D7 )
   {
-    sub_B2C35C(&System_Math_TypeInfo, v3);
-    byte_4186C20 = 1;
+    sub_B0D8A4(&System_Math_TypeInfo, v3);
+    byte_42139D7 = 1;
   }
-  v18.fields.x = UnityEngine_Vector2__get_sqrMagnitude(*(UnityEngine_Vector2_o *)&x, (const MethodInfo *)&v17);
-  v8 = v18.fields.x;
-  sqrMagnitude = UnityEngine_Vector2__get_sqrMagnitude(v18, (const MethodInfo *)&v16);
+  v17.fields.x = UnityEngine_Vector2__get_sqrMagnitude(*(UnityEngine_Vector2_o *)&x, (const MethodInfo *)&v16);
+  v8 = v17.fields.x;
+  sqrMagnitude = UnityEngine_Vector2__get_sqrMagnitude(v17, (const MethodInfo *)&v15);
   if ( (BYTE3(System_Math_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   v10 = sqrtf(v8 * sqrMagnitude);
   if ( v10 >= 1.0e-15 )
   {
     v11 = UnityEngine_Mathf__Clamp(
-            (float)((float)(v17.fields.x * v16.fields.x) + (float)(v17.fields.y * v16.fields.y)) / v10,
+            (float)((float)(v16.fields.x * v15.fields.x) + (float)(v16.fields.y * v15.fields.y)) / v10,
             -1.0,
             1.0,
             0LL);
@@ -97,7 +96,7 @@ void __fastcall ProfileArrowInfoTouchComponent__OnDragEnd(
           return;
         }
 LABEL_26:
-        sub_B2C434(connectMark, v14);
+        sub_B0D97C(connectMark);
       }
       if ( (WORD1(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 0x400) != 0
         && !SoundManager_TypeInfo->_2.cctor_finished )

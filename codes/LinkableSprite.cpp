@@ -18,7 +18,7 @@ void __fastcall LinkableSprite__MakePixelPerfect(LinkableSprite_o *this, const M
         (v4 = this->fields.mCollider) == 0LL)
     || (mCollider = (UnityEngine_BoxCollider_o *)this[1].klass) == 0LL )
   {
-    sub_B2C434(mCollider, method);
+    sub_B0D97C(mCollider);
   }
   v5.fields.y = (float)*((int *)&v4[6].fields + 1);
   v5.fields.x = (float)v4[6].fields.m_CachedPtr;
@@ -27,7 +27,6 @@ void __fastcall LinkableSprite__MakePixelPerfect(LinkableSprite_o *this, const M
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall LinkableSprite__SetSize(LinkableSprite_o *this, int32_t w, int32_t h, const MethodInfo *method)
 {
   UIWidget_o *mCollider; // x0
@@ -38,7 +37,7 @@ void __fastcall LinkableSprite__SetSize(LinkableSprite_o *this, int32_t w, int32
     || (UIWidget__set_width(mCollider, w, 0LL), (mCollider = (UIWidget_o *)this->fields.mCollider) == 0LL)
     || (UIWidget__set_height(mCollider, h, 0LL), (mCollider = (UIWidget_o *)this[1].klass) == 0LL) )
   {
-    sub_B2C434(mCollider, *(_QWORD *)&w);
+    sub_B0D97C(mCollider);
   }
   v8.fields.y = (float)h;
   v8.fields.x = (float)w;
@@ -62,7 +61,7 @@ void __fastcall LinkableSprite__SetUp(
   this->fields.mUiSprite = (struct UISprite_o *)lnkUrl;
   p_mUiSprite = &this->fields.mUiSprite;
   *((_DWORD *)p_mUiSprite - 2) = lnkType;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)p_mUiSprite,
     (System_Int32_array **)lnkUrl,
     (System_String_array **)lnkUrl,

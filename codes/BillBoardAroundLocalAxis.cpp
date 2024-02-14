@@ -16,7 +16,7 @@ void __fastcall BillBoardAroundLocalAxis__SetTargetTransform(
   System_Int32_array *v7; // x7
 
   this->fields.targetTrans = trans;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.targetTrans,
     (System_Int32_array **)trans,
     (System_String_array **)method,
@@ -33,10 +33,10 @@ void __fastcall BillBoardAroundLocalAxis__Update(BillBoardAroundLocalAxis_o *thi
   UnityEngine_Object_o *targetTrans; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_41875D3 & 1) == 0 )
+  if ( (byte_4214096 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    byte_41875D3 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    byte_4214096 = 1;
   }
   targetTrans = (UnityEngine_Object_o *)this->fields.targetTrans;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -136,6 +136,6 @@ void __fastcall BillBoardAroundLocalAxis__UpdateAngles(BillBoardAroundLocalAxis_
   targetTrans = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !targetTrans )
 LABEL_11:
-    sub_B2C434(targetTrans, method);
+    sub_B0D97C(targetTrans);
   UnityEngine_Transform__set_localRotation(targetTrans, v20, 0LL);
 }

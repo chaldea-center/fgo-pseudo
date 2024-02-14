@@ -20,13 +20,13 @@ void __fastcall EventMissionActionInfo___ctor(
     this->fields.missionActionType = eventMissionActionEntity->fields.missionActionType;
     vals = eventMissionActionEntity->fields.vals;
     this->fields.vals = vals;
-    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.vals, (System_Int32_array **)vals, v5, v6, v7, v8, v9, v10);
+    sub_B0D840((BattleServantConfConponent_o *)&this->fields.vals, (System_Int32_array **)vals, v5, v6, v7, v8, v9, v10);
     this->fields.optionId = eventMissionActionEntity->fields.optionId;
   }
 }
 
 
-void __fastcall EventMissionActionInfo___ctor_27194656(
+void __fastcall EventMissionActionInfo___ctor_26645076(
         EventMissionActionInfo_o *this,
         EventMissionActionAddEntity_o *eventMissionActionAddEntity,
         const MethodInfo *method)
@@ -48,7 +48,7 @@ void __fastcall EventMissionActionInfo___ctor_27194656(
     this->fields.missionActionType = eventMissionActionAddEntity->fields.missionActionType;
     vals = eventMissionActionAddEntity->fields.vals;
     this->fields.vals = vals;
-    sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.vals, (System_Int32_array **)vals, v5, v6, v7, v8, v9, v10);
+    sub_B0D840((BattleServantConfConponent_o *)&this->fields.vals, (System_Int32_array **)vals, v5, v6, v7, v8, v9, v10);
     this->fields.optionId = eventMissionActionAddEntity->fields.optionId;
   }
 }
@@ -75,8 +75,8 @@ int32_t __fastcall EventMissionActionInfo__getValID(EventMissionActionInfo_o *th
     {
       if ( !(_DWORD)v3 )
       {
-        v6 = sub_B2C460(0xFFFFFFFFLL);
-        sub_B2C400(v6, 0LL);
+        v6 = sub_B0D9A8(0xFFFFFFFFLL);
+        sub_B0D948(v6, 0LL);
       }
       if ( System_Int32__TryParse(vals->m_Items[0], &result, 0LL) )
         return result;
@@ -99,18 +99,18 @@ System_String_o *__fastcall EventMissionActionInfo__getValMessage(
   __int64 v7; // x0
 
   v2 = this;
-  if ( (byte_4188DAC & 1) == 0 )
+  if ( (byte_4215A55 & 1) == 0 )
   {
-    this = (EventMissionActionInfo_o *)sub_B2C35C(&StringLiteral_1/*""*/, method);
-    byte_4188DAC = 1;
+    this = (EventMissionActionInfo_o *)sub_B0D8A4(&StringLiteral_1/*""*/, method);
+    byte_4215A55 = 1;
   }
   vals = v2->fields.vals;
   if ( vals && (v4 = *(_QWORD *)&vals->max_length) != 0 && (unsigned int)(v2->fields.missionActionType - 1) <= 1 )
   {
     if ( !(_DWORD)v4 )
     {
-      v7 = sub_B2C460(this);
-      sub_B2C400(v7, 0LL);
+      v7 = sub_B0D9A8(this);
+      sub_B0D948(v7, 0LL);
     }
     m_Items = vals->m_Items;
   }

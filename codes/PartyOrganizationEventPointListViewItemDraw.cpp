@@ -57,51 +57,50 @@ void __fastcall PartyOrganizationEventPointListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
-  float v7; // s0
-  float v8; // s1
-  float v9; // s2
-  float v10; // s3
+  float v6; // s0
+  float v7; // s1
+  float v8; // s2
+  float v9; // s3
   UIWidget_o *titleLabel; // x0
-  float v12; // s8
-  float v13; // s9
-  float v14; // s10
-  float v15; // s11
-  UILabel_o *v16; // x21
-  const MethodInfo *v17; // x1
+  float v11; // s8
+  float v12; // s9
+  float v13; // s10
+  float v14; // s11
+  UILabel_o *v15; // x21
+  const MethodInfo *v16; // x1
   struct System_String_o *titleName; // x21
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v20; // x1
+  const MethodInfo *v19; // x1
   UILabel_o *dataLabel; // x20
-  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( item && mode )
   {
-    *(UnityEngine_Color_o *)&v7 = PartyOrganizationEventPointListViewItemDraw__GetLabelColor(
+    *(UnityEngine_Color_o *)&v6 = PartyOrganizationEventPointListViewItemDraw__GetLabelColor(
                                     this,
                                     item,
                                     *(const MethodInfo **)&mode);
     titleLabel = (UIWidget_o *)this->fields.titleLabel;
     if ( titleLabel )
     {
+      v11 = v6;
       v12 = v7;
       v13 = v8;
       v14 = v9;
-      v15 = v10;
-      UIWidget__set_color(titleLabel, *(UnityEngine_Color_o *)&v7, 0LL);
+      UIWidget__set_color(titleLabel, *(UnityEngine_Color_o *)&v6, 0LL);
       titleLabel = (UIWidget_o *)this->fields.dataLabel;
       if ( titleLabel )
       {
-        v22.fields.r = v12;
-        v22.fields.g = v13;
-        v22.fields.b = v14;
-        v22.fields.a = v15;
-        UIWidget__set_color(titleLabel, v22, 0LL);
-        v16 = this->fields.titleLabel;
-        titleLabel = (UIWidget_o *)PartyOrganizationEventPointListViewItem__GetTitleString(item, v17);
-        if ( v16 )
+        v21.fields.r = v11;
+        v21.fields.g = v12;
+        v21.fields.b = v13;
+        v21.fields.a = v14;
+        UIWidget__set_color(titleLabel, v21, 0LL);
+        v15 = this->fields.titleLabel;
+        titleLabel = (UIWidget_o *)PartyOrganizationEventPointListViewItem__GetTitleString(item, v16);
+        if ( v15 )
         {
-          UILabel__set_text(v16, (System_String_o *)titleLabel, 0LL);
+          UILabel__set_text(v15, (System_String_o *)titleLabel, 0LL);
           titleLabel = (UIWidget_o *)this->fields.titleLabel;
           if ( titleLabel )
           {
@@ -120,7 +119,7 @@ void __fastcall PartyOrganizationEventPointListViewItemDraw__SetItem(
               UILabel__SetCondensedScale((UILabel_o *)titleLabel, 510, 0LL);
             }
             dataLabel = this->fields.dataLabel;
-            titleLabel = (UIWidget_o *)PartyOrganizationEventPointListViewItem__GetDataString(item, v20);
+            titleLabel = (UIWidget_o *)PartyOrganizationEventPointListViewItem__GetDataString(item, v19);
             if ( dataLabel )
             {
               UILabel__set_text(dataLabel, (System_String_o *)titleLabel, 0LL);
@@ -131,6 +130,6 @@ void __fastcall PartyOrganizationEventPointListViewItemDraw__SetItem(
       }
     }
 LABEL_14:
-    sub_B2C434(titleLabel, v6);
+    sub_B0D97C(titleLabel);
   }
 }

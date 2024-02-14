@@ -1,14 +1,14 @@
 void __fastcall WarBoardMessageMaster___ctor(WarBoardMessageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4186529 & 1) == 0 )
+  if ( (byte_42132DB & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_WarBoardMessageMaster__WarBoardMessageEntity__string___ctor__, method);
-    byte_4186529 = 1;
+    sub_B0D8A4(&Method_DataMasterBase_WarBoardMessageMaster__WarBoardMessageEntity__string___ctor__, method);
+    byte_42132DB = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     411,
-    (const MethodInfo_24E4484 *)Method_DataMasterBase_WarBoardMessageMaster__WarBoardMessageEntity__string___ctor__);
+    (const MethodInfo_2669F88 *)Method_DataMasterBase_WarBoardMessageMaster__WarBoardMessageEntity__string___ctor__);
 }
 
 
@@ -27,7 +27,7 @@ bool __fastcall WarBoardMessageMaster__CheckCondition(
 
   if ( !entity )
 LABEL_24:
-    sub_B2C434(this, entity);
+    sub_B0D97C(this);
   this = (WarBoardMessageMaster_o *)BasicHelper__IsNullOrEmpty(
                                       (System_Collections_ICollection_o *)entity->fields.playCondValues,
                                       0LL);
@@ -81,8 +81,8 @@ LABEL_21:
       if ( !v11->max_length )
       {
 LABEL_25:
-        v12 = sub_B2C460(this);
-        sub_B2C400(v12, 0LL);
+        v12 = sub_B0D9A8(this);
+        sub_B0D948(v12, 0LL);
       }
       result = v11->m_Items[0] <= checkValue;
       break;
@@ -113,78 +113,76 @@ System_Collections_Generic_List_WarBoardTaskBase__o *__fastcall WarBoardMessageM
   __int64 v19; // x1
   __int64 v20; // x1
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v21; // x19
-  __int64 v22; // x1
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  __int64 v24; // x1
-  __int64 v25; // x3
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
-  bool v27; // w24
+  bool v24; // w24
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  unsigned __int64 v29; // x10
+  unsigned __int64 v26; // x10
   int32_t *p_offset; // x11
   __int64 p_method; // x0
-  __int64 v32; // x3
-  System_Collections_Generic_IEnumerator_T__c *v33; // x8
-  unsigned __int64 v34; // x10
-  int32_t *v35; // x11
-  __int64 v36; // x0
-  __int64 v37; // x0
-  __int64 v38; // x1
-  const MethodInfo *v39; // x4
-  EventMissionProgressRequest_Argument_ProgressData_o *v40; // x25
-  __int64 v41; // x9
+  System_Collections_Generic_IEnumerator_T__c *v29; // x8
+  unsigned __int64 v30; // x10
+  int32_t *v31; // x11
+  __int64 v32; // x0
+  __int64 v33; // x0
+  const MethodInfo *v34; // x4
+  EventMissionProgressRequest_Argument_ProgressData_o *v35; // x25
+  __int64 v36; // x9
+  _BOOL8 v37; // x0
+  System_Collections_Generic_IEnumerator_T__c *v38; // x8
+  unsigned __int64 v39; // x10
+  int32_t *v40; // x11
+  __int64 v41; // x0
   _BOOL8 v42; // x0
   __int64 v43; // x1
-  System_Collections_Generic_IEnumerator_T__c *v44; // x8
-  unsigned __int64 v45; // x10
-  int32_t *v46; // x11
-  __int64 v47; // x0
-  _BOOL8 v48; // x0
-  const MethodInfo *v49; // x2
-  WarBoardMessageEntity_o *v50; // x0
-  const MethodInfo *v51; // x2
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v52; // x19
+  const MethodInfo *v44; // x2
+  WarBoardMessageEntity_o *v45; // x0
+  const MethodInfo *v46; // x2
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v47; // x19
 
-  if ( (byte_418652A & 1) == 0 )
+  if ( (byte_42132DC & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&stageId);
-    sub_B2C35C(&Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___, v11);
-    sub_B2C35C(&System_IDisposable_TypeInfo, v12);
-    sub_B2C35C(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v13);
-    sub_B2C35C(&System_Collections_IEnumerator_TypeInfo, v14);
-    sub_B2C35C(&Method_System_Collections_Generic_List_WarBoardMessageEntity__Add__, v15);
-    sub_B2C35C(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__, v16);
-    sub_B2C35C(&Method_System_Collections_Generic_List_WarBoardMessageEntity___ctor__, v17);
-    sub_B2C35C(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo, v18);
-    sub_B2C35C(&System_Collections_Generic_List_WarBoardMessageEntity__TypeInfo, v19);
-    sub_B2C35C(&WarBoardMessageEntity_TypeInfo, v20);
-    byte_418652A = 1;
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__, *(_QWORD *)&stageId);
+    sub_B0D8A4(&Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___, v11);
+    sub_B0D8A4(&System_IDisposable_TypeInfo, v12);
+    sub_B0D8A4(&System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, v13);
+    sub_B0D8A4(&System_Collections_IEnumerator_TypeInfo, v14);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_WarBoardMessageEntity__Add__, v15);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__, v16);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_WarBoardMessageEntity___ctor__, v17);
+    sub_B0D8A4(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo, v18);
+    sub_B0D8A4(&System_Collections_Generic_List_WarBoardMessageEntity__TypeInfo, v19);
+    sub_B0D8A4(&WarBoardMessageEntity_TypeInfo, v20);
+    byte_42132DC = 1;
   }
-  v21 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_WarBoardMessageEntity__TypeInfo);
+  v21 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
+                                                                                                  System_Collections_Generic_List_WarBoardMessageEntity__TypeInfo,
+                                                                                                  *(_QWORD *)&stageId,
+                                                                                                  *(_QWORD *)&type);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v21,
-    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_WarBoardMessageEntity___ctor__);
+    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_WarBoardMessageEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
-    sub_B2C434(0LL, v22);
+    sub_B0D97C(0LL);
   Enumerator = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___GetEnumerator(
                  list,
-                 (const MethodInfo_2A0E96C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
+                 (const MethodInfo_2AB5D9C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__GetEnumerator__);
   if ( !Enumerator )
-    sub_B2C434(0LL, v24);
-  v27 = isValueByPlayer;
+    sub_B0D97C(0LL);
+  v24 = isValueByPlayer;
   while ( 1 )
   {
     klass = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v29 = 0LL;
+      v26 = 0LL;
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        ++v29;
+        ++v26;
         p_offset += 4;
-        if ( v29 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        if ( v26 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_10;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -192,103 +190,106 @@ System_Collections_Generic_List_WarBoardTaskBase__o *__fastcall WarBoardMessageM
     else
     {
 LABEL_10:
-      p_method = sub_AC5258(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL, v25);
+      p_method = sub_AA67A0(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v33 = Enumerator->klass;
+    v29 = Enumerator->klass;
     if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
     {
-      v34 = 0LL;
-      v35 = &v33->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v35 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
+      v30 = 0LL;
+      v31 = &v29->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_DataEntityBase__c **)v31 - 1) != System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo )
       {
-        ++v34;
-        v35 += 4;
-        if ( v34 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+        ++v30;
+        v31 += 4;
+        if ( v30 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
           goto LABEL_17;
       }
-      v36 = (__int64)&v33->vtable[*v35].method;
+      v32 = (__int64)&v29->vtable[*v31].method;
     }
     else
     {
 LABEL_17:
-      v36 = sub_AC5258(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL, v32);
+      v32 = sub_AA67A0(Enumerator, System_Collections_Generic_IEnumerator_DataEntityBase__TypeInfo, 0LL);
     }
-    v37 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v36)(
+    v33 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(
             Enumerator,
-            *(_QWORD *)(v36 + 8));
-    v40 = (EventMissionProgressRequest_Argument_ProgressData_o *)v37;
-    if ( !v37 )
+            *(_QWORD *)(v32 + 8));
+    v35 = (EventMissionProgressRequest_Argument_ProgressData_o *)v33;
+    if ( !v33 )
       goto LABEL_38;
-    v41 = *(&WarBoardMessageEntity_TypeInfo->_2.bitflags2 + 1);
-    if ( *(unsigned __int8 *)(*(_QWORD *)v37 + 300LL) < (unsigned int)v41
-      || *(WarBoardMessageEntity_c **)(*(_QWORD *)(*(_QWORD *)v37 + 200LL) + 8 * v41 - 8) != WarBoardMessageEntity_TypeInfo )
+    v36 = *(&WarBoardMessageEntity_TypeInfo->_2.bitflags2 + 1);
+    if ( *(unsigned __int8 *)(*(_QWORD *)v33 + 300LL) < (unsigned int)v36
+      || *(WarBoardMessageEntity_c **)(*(_QWORD *)(*(_QWORD *)v33 + 200LL) + 8 * v36 - 8) != WarBoardMessageEntity_TypeInfo )
     {
-      v37 = sub_B2C728(v37);
+      v33 = sub_B0DC70(v33);
 LABEL_38:
-      sub_B2C434(v37, v38);
+      sub_B0D97C(v33);
     }
-    if ( *(_DWORD *)(v37 + 16) == stageId && *(_DWORD *)(v37 + 20) == type )
+    if ( *(_DWORD *)(v33 + 16) == stageId && *(_DWORD *)(v33 + 20) == type )
     {
-      v42 = WarBoardMessageMaster__CheckCondition(
-              (WarBoardMessageMaster_o *)v37,
-              (WarBoardMessageEntity_o *)v37,
+      v37 = WarBoardMessageMaster__CheckCondition(
+              (WarBoardMessageMaster_o *)v33,
+              (WarBoardMessageEntity_o *)v33,
               checkValue,
-              v27,
-              v39);
-      if ( v42 )
+              v24,
+              v34);
+      if ( v37 )
       {
         if ( !v21 )
-          sub_B2C434(v42, v43);
+          sub_B0D97C(v37);
         System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
           v21,
-          v40,
-          (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_WarBoardMessageEntity__Add__);
+          v35,
+          (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_WarBoardMessageEntity__Add__);
       }
     }
   }
-  v44 = Enumerator->klass;
+  v38 = Enumerator->klass;
   if ( *(_WORD *)&Enumerator->klass->_2.bitflags1 )
   {
-    v45 = 0LL;
-    v46 = &v44->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v46 - 1) != System_IDisposable_TypeInfo )
+    v39 = 0LL;
+    v40 = &v38->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v40 - 1) != System_IDisposable_TypeInfo )
     {
-      ++v45;
-      v46 += 4;
-      if ( v45 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
+      ++v39;
+      v40 += 4;
+      if ( v39 >= *(unsigned __int16 *)&Enumerator->klass->_2.bitflags1 )
         goto LABEL_31;
     }
-    v47 = (__int64)&v44->vtable[*v46].method;
+    v41 = (__int64)&v38->vtable[*v40].method;
   }
   else
   {
 LABEL_31:
-    v47 = sub_AC5258(Enumerator, System_IDisposable_TypeInfo, 0LL, v32);
+    v41 = sub_AA67A0(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v47)(Enumerator, *(_QWORD *)(v47 + 8));
-  v48 = System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v41)(Enumerator, *(_QWORD *)(v41 + 8));
+  v42 = System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v21,
-          (const MethodInfo_17385C0 *)Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___);
-  if ( v48 )
+          (const MethodInfo_17194B0 *)Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___);
+  if ( v42 )
   {
-    v50 = WarBoardMessageMaster__Lottery(
-            (WarBoardMessageMaster_o *)v48,
+    v45 = WarBoardMessageMaster__Lottery(
+            (WarBoardMessageMaster_o *)v42,
             (System_Collections_Generic_List_WarBoardMessageEntity__o *)v21,
-            v49);
-    return WarBoardMessageMaster__GetTaskList((WarBoardMessageMaster_o *)v50, v50, v51);
+            v44);
+    return WarBoardMessageMaster__GetTaskList((WarBoardMessageMaster_o *)v45, v45, v46);
   }
   else
   {
-    v52 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+    v47 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
+                                                                                                    System_Collections_Generic_List_WarBoardTaskBase__TypeInfo,
+                                                                                                    v43,
+                                                                                                    v44);
     System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-      v52,
-      (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+      v47,
+      (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
   }
-  return (System_Collections_Generic_List_WarBoardTaskBase__o *)v52;
+  return (System_Collections_Generic_List_WarBoardTaskBase__o *)v47;
 }
 
 
@@ -303,60 +304,64 @@ System_Collections_Generic_List_WarBoardTaskBase__o *__fastcall WarBoardMessageM
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v7; // x20
   __int64 v8; // x0
   __int64 v9; // x1
+  __int64 v10; // x2
   struct System_Int64_array *scriptIds; // x25
-  __int64 v11; // x8
-  unsigned __int64 v12; // x26
-  int64_t v13; // x22
+  __int64 v12; // x8
+  unsigned __int64 v13; // x26
+  int64_t v14; // x22
   int32_t stageId; // w23
   int32_t sceneType; // w24
-  WarBoardFaceMessagePerformance_o *v16; // x21
-  __int64 v18; // x0
+  WarBoardFaceMessagePerformance_o *v17; // x21
+  __int64 v19; // x0
 
-  if ( (byte_418652C & 1) == 0 )
+  if ( (byte_42132DE & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__, result);
-    sub_B2C35C(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__, v4);
-    sub_B2C35C(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo, v5);
-    sub_B2C35C(&WarBoardFaceMessagePerformance_TypeInfo, v6);
-    byte_418652C = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_WarBoardTaskBase__Add__, result);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__, v4);
+    sub_B0D8A4(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo, v5);
+    sub_B0D8A4(&WarBoardFaceMessagePerformance_TypeInfo, v6);
+    byte_42132DE = 1;
   }
-  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+  v7 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
+                                                                                                 System_Collections_Generic_List_WarBoardTaskBase__TypeInfo,
+                                                                                                 result,
+                                                                                                 method);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
     v7,
-    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
   if ( !result )
     goto LABEL_12;
   scriptIds = result->fields.scriptIds;
   if ( !scriptIds )
     goto LABEL_12;
-  v11 = *(_QWORD *)&scriptIds->max_length;
-  if ( (int)v11 >= 1 )
+  v12 = *(_QWORD *)&scriptIds->max_length;
+  if ( (int)v12 >= 1 )
   {
-    v12 = 0LL;
+    v13 = 0LL;
     while ( 1 )
     {
-      if ( v12 >= (unsigned int)v11 )
+      if ( v13 >= (unsigned int)v12 )
       {
-        v18 = sub_B2C460(v8);
-        sub_B2C400(v18, 0LL);
+        v19 = sub_B0D9A8(v8);
+        sub_B0D948(v19, 0LL);
       }
-      v13 = scriptIds->m_Items[v12];
+      v14 = scriptIds->m_Items[v13];
       stageId = result->fields.stageId;
       sceneType = result->fields.sceneType;
-      v16 = (WarBoardFaceMessagePerformance_o *)sub_B2C42C(WarBoardFaceMessagePerformance_TypeInfo);
-      WarBoardFaceMessagePerformance___ctor(v16, stageId, sceneType, v13, 0LL);
+      v17 = (WarBoardFaceMessagePerformance_o *)sub_B0D974(WarBoardFaceMessagePerformance_TypeInfo, v9, v10);
+      WarBoardFaceMessagePerformance___ctor(v17, stageId, sceneType, v14, 0LL);
       if ( !v7 )
         break;
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         v7,
-        (EventMissionProgressRequest_Argument_ProgressData_o *)v16,
-        (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
-      LODWORD(v11) = scriptIds->max_length;
-      if ( (__int64)++v12 >= (int)v11 )
+        (EventMissionProgressRequest_Argument_ProgressData_o *)v17,
+        (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_WarBoardTaskBase__Add__);
+      LODWORD(v12) = scriptIds->max_length;
+      if ( (__int64)++v13 >= (int)v12 )
         return (System_Collections_Generic_List_WarBoardTaskBase__o *)v7;
     }
 LABEL_12:
-    sub_B2C434(v8, v9);
+    sub_B0D97C(v8);
   }
   return (System_Collections_Generic_List_WarBoardTaskBase__o *)v7;
 }
@@ -374,85 +379,89 @@ WarBoardMessageEntity_o *__fastcall WarBoardMessageMaster__Lottery(
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  WarBoardMessageMaster___c_c *v11; // x0
+  __int64 v11; // x1
+  __int64 v12; // x2
+  WarBoardMessageMaster___c_c *v13; // x0
   struct WarBoardMessageMaster___c_StaticFields *static_fields; // x8
   System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *_9__4_0; // x20
-  Il2CppObject *v14; // x21
-  struct WarBoardMessageMaster___c_StaticFields *v15; // x0
-  System_String_array **v16; // x2
-  System_String_array **v17; // x3
-  System_Boolean_array **v18; // x4
-  System_Int32_array **v19; // x5
-  System_Int32_array *v20; // x6
-  System_Int32_array *v21; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
-  System_Int32_array *v23; // x0
+  Il2CppObject *v16; // x21
+  struct WarBoardMessageMaster___c_StaticFields *v17; // x0
+  System_String_array **v18; // x2
+  System_String_array **v19; // x3
+  System_Boolean_array **v20; // x4
+  System_Int32_array **v21; // x5
+  System_Int32_array *v22; // x6
+  System_Int32_array *v23; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
+  System_Int32_array *v25; // x0
   __int64 RandomRangeIndex; // x0
-  __int64 v25; // x1
 
-  if ( (byte_418652B & 1) == 0 )
+  if ( (byte_42132DD & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___, entities);
-    sub_B2C35C(&Method_System_Linq_Enumerable_Select_WarBoardMessageEntity__int___, v4);
-    sub_B2C35C(&Method_System_Linq_Enumerable_ToArray_int___, v5);
-    sub_B2C35C(&Method_System_Func_WarBoardMessageEntity__int___ctor__, v6);
-    sub_B2C35C(&System_Func_WarBoardMessageEntity__int__TypeInfo, v7);
-    sub_B2C35C(&Method_System_Collections_Generic_List_WarBoardMessageEntity__get_Item__, v8);
-    sub_B2C35C(&Method_WarBoardMessageMaster___c__Lottery_b__4_0__, v9);
-    sub_B2C35C(&WarBoardMessageMaster___c_TypeInfo, v10);
-    byte_418652B = 1;
+    sub_B0D8A4(&Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___, entities);
+    sub_B0D8A4(&Method_System_Linq_Enumerable_Select_WarBoardMessageEntity__int___, v4);
+    sub_B0D8A4(&Method_System_Linq_Enumerable_ToArray_int___, v5);
+    sub_B0D8A4(&Method_System_Func_WarBoardMessageEntity__int___ctor__, v6);
+    sub_B0D8A4(&System_Func_WarBoardMessageEntity__int__TypeInfo, v7);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_WarBoardMessageEntity__get_Item__, v8);
+    sub_B0D8A4(&Method_WarBoardMessageMaster___c__Lottery_b__4_0__, v9);
+    sub_B0D8A4(&WarBoardMessageMaster___c_TypeInfo, v10);
+    byte_42132DD = 1;
   }
   if ( !System_Linq_Enumerable__Any_WarBoardMovieHistoryManager_HistoryInfo_(
           (System_Collections_Generic_IEnumerable_TSource__o *)entities,
-          (const MethodInfo_17385C0 *)Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___) )
+          (const MethodInfo_17194B0 *)Method_System_Linq_Enumerable_Any_WarBoardMessageEntity___) )
     return 0LL;
-  v11 = WarBoardMessageMaster___c_TypeInfo;
+  v13 = WarBoardMessageMaster___c_TypeInfo;
   if ( (BYTE3(WarBoardMessageMaster___c_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !WarBoardMessageMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardMessageMaster___c_TypeInfo);
-    v11 = WarBoardMessageMaster___c_TypeInfo;
+    v13 = WarBoardMessageMaster___c_TypeInfo;
   }
-  static_fields = v11->static_fields;
+  static_fields = v13->static_fields;
   _9__4_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)static_fields->__9__4_0;
   if ( !_9__4_0 )
   {
-    if ( (BYTE3(v11->vtable._0_Equals.methodPtr) & 4) != 0 && !v11->_2.cctor_finished )
+    if ( (BYTE3(v13->vtable._0_Equals.methodPtr) & 4) != 0 && !v13->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v11);
+      j_il2cpp_runtime_class_init_0(v13);
       static_fields = WarBoardMessageMaster___c_TypeInfo->static_fields;
     }
-    v14 = (Il2CppObject *)static_fields->__9;
-    _9__4_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B2C42C(System_Func_WarBoardMessageEntity__int__TypeInfo);
+    v16 = (Il2CppObject *)static_fields->__9;
+    _9__4_0 = (System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int__o *)sub_B0D974(
+                                                                                System_Func_WarBoardMessageEntity__int__TypeInfo,
+                                                                                v11,
+                                                                                v12);
     System_Func_BattleLogicBuff_ReduceHpProcess_BuffInfo__int____ctor(
       _9__4_0,
-      v14,
-      Method_WarBoardMessageMaster___c__Lottery_b__4_0__,
-      (const MethodInfo_27127B0 *)Method_System_Func_WarBoardMessageEntity__int___ctor__);
-    v15 = WarBoardMessageMaster___c_TypeInfo->static_fields;
-    v15->__9__4_0 = (struct System_Func_WarBoardMessageEntity__int__o *)_9__4_0;
-    sub_B2C2F8(
-      (BattleServantConfConponent_o *)&v15->__9__4_0,
-      (System_Int32_array **)_9__4_0,
       v16,
-      v17,
+      Method_WarBoardMessageMaster___c__Lottery_b__4_0__,
+      (const MethodInfo_2619564 *)Method_System_Func_WarBoardMessageEntity__int___ctor__);
+    v17 = WarBoardMessageMaster___c_TypeInfo->static_fields;
+    v17->__9__4_0 = (struct System_Func_WarBoardMessageEntity__int__o *)_9__4_0;
+    sub_B0D840(
+      (BattleServantConfConponent_o *)&v17->__9__4_0,
+      (System_Int32_array **)_9__4_0,
       v18,
       v19,
       v20,
-      v21);
+      v21,
+      v22,
+      v23);
   }
-  v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_BattleLogicBuff_ReduceHpProcess_BuffInfo__int_(
+  v24 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_BattleLogicBuff_ReduceHpProcess_BuffInfo__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)entities,
                                                                (System_Func_TSource__TResult__o *)_9__4_0,
-                                                               (const MethodInfo_1A967E8 *)Method_System_Linq_Enumerable_Select_WarBoardMessageEntity__int___);
-  v23 = System_Linq_Enumerable__ToArray_int_(
-          v22,
-          (const MethodInfo_1A9AE24 *)Method_System_Linq_Enumerable_ToArray_int___);
-  RandomRangeIndex = RandomUtility__GetRandomRangeIndex(v23, 0, 0LL);
+                                                               (const MethodInfo_1B51AB4 *)Method_System_Linq_Enumerable_Select_WarBoardMessageEntity__int___);
+  v25 = System_Linq_Enumerable__ToArray_int_(
+          v24,
+          (const MethodInfo_1B560F0 *)Method_System_Linq_Enumerable_ToArray_int___);
+  RandomRangeIndex = RandomUtility__GetRandomRangeIndex(v25, 0, 0LL);
   if ( !entities )
-    sub_B2C434(RandomRangeIndex, v25);
+    sub_B0D97C(RandomRangeIndex);
   if ( entities->fields._size <= (unsigned int)RandomRangeIndex )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
   return entities->fields._items->m_Items[(int)RandomRangeIndex];
 }
 
@@ -460,25 +469,26 @@ WarBoardMessageEntity_o *__fastcall WarBoardMessageMaster__Lottery(
 void __fastcall WarBoardMessageMaster___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  Il2CppObject *v2; // x19
+  __int64 v2; // x2
+  Il2CppObject *v3; // x19
   BattleServantConfConponent_o *static_fields; // x0
-  System_String_array **v4; // x2
-  System_String_array **v5; // x3
-  System_Boolean_array **v6; // x4
-  System_Int32_array **v7; // x5
-  System_Int32_array *v8; // x6
-  System_Int32_array *v9; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_41866F3 & 1) == 0 )
+  if ( (byte_421386E & 1) == 0 )
   {
-    sub_B2C35C(&WarBoardMessageMaster___c_TypeInfo, v1);
-    byte_41866F3 = 1;
+    sub_B0D8A4(&WarBoardMessageMaster___c_TypeInfo, v1);
+    byte_421386E = 1;
   }
-  v2 = (Il2CppObject *)sub_B2C42C(WarBoardMessageMaster___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
+  v3 = (Il2CppObject *)sub_B0D974(WarBoardMessageMaster___c_TypeInfo, v1, v2);
+  System_Object___ctor(v3, 0LL);
   static_fields = (BattleServantConfConponent_o *)WarBoardMessageMaster___c_TypeInfo->static_fields;
-  static_fields->klass = (BattleServantConfConponent_c *)v2;
-  sub_B2C2F8(static_fields, (System_Int32_array **)v2, v4, v5, v6, v7, v8, v9);
+  static_fields->klass = (BattleServantConfConponent_c *)v3;
+  sub_B0D840(static_fields, (System_Int32_array **)v3, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -494,6 +504,6 @@ int32_t __fastcall WarBoardMessageMaster___c___Lottery_b__4_0(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_B2C434(this, 0LL);
+    sub_B0D97C(this);
   return ent->fields.playProbabirity;
 }

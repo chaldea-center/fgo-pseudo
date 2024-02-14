@@ -1,13 +1,13 @@
 void __fastcall SvtCoinEntity___ctor(SvtCoinEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_418B375 & 1) == 0 )
+  if ( (byte_421A058 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_int___ctor__, method);
-    byte_418B375 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_int___ctor__, method);
+    byte_421A058 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_24E3F7C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2669A80 *)Method_DataEntityBase_int___ctor__);
 }
 
 

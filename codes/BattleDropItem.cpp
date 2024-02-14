@@ -97,7 +97,7 @@ void __fastcall BattleDropItem__setData(BattleDropItem_o *this, DropInfo_o *info
   int32_t num; // w8
 
   if ( !info )
-    sub_B2C434(this, 0LL);
+    sub_B0D97C(this);
   this->fields.type = info->fields.type;
   this->fields.objectId = info->fields.objectId;
   this->fields.limitCount = info->fields.limitCount;

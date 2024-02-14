@@ -10,7 +10,7 @@ void __fastcall LimitCountIconComponent__Clear(LimitCountIconComponent_o *this, 
 
   limitCountBase = this->fields.limitCountBase;
   if ( !limitCountBase )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   UnityEngine_GameObject__SetActive(limitCountBase, 0, 0LL);
 }
 
@@ -32,11 +32,11 @@ void __fastcall LimitCountIconComponent__Set(
   __int64 v13; // x0
 
   v6 = this;
-  if ( (byte_418711E & 1) == 0 )
+  if ( (byte_4213ED6 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_19347/*"icon_limit_on"*/, *(_QWORD *)&limitCount);
-    this = (LimitCountIconComponent_o *)sub_B2C35C(&StringLiteral_19346/*"icon_limit_off"*/, v7);
-    byte_418711E = 1;
+    sub_B0D8A4(&StringLiteral_19408/*"icon_limit_on"*/, *(_QWORD *)&limitCount);
+    this = (LimitCountIconComponent_o *)sub_B0D8A4(&StringLiteral_19407/*"icon_limit_off"*/, v7);
+    byte_4213ED6 = 1;
   }
   if ( limitMax <= 0 )
   {
@@ -65,28 +65,28 @@ void __fastcall LimitCountIconComponent__Set(
           break;
         if ( (unsigned int)v10 >= v11->max_length )
         {
-          v13 = sub_B2C460(this);
-          sub_B2C400(v13, 0LL);
+          v13 = sub_B0D9A8(this);
+          sub_B0D948(v13, 0LL);
         }
         this = (LimitCountIconComponent_o *)v11->m_Items[v10];
         if ( !this )
           break;
         if ( (int)v10 >= limitCount )
-          v12 = (System_String_o **)&StringLiteral_19346/*"icon_limit_off"*/;
+          v12 = (System_String_o **)&StringLiteral_19407/*"icon_limit_off"*/;
         else
-          v12 = (System_String_o **)&StringLiteral_19347/*"icon_limit_on"*/;
+          v12 = (System_String_o **)&StringLiteral_19408/*"icon_limit_on"*/;
         UISprite__set_spriteName((UISprite_o *)this, *v12, 0LL);
         if ( (int)++v10 >= max_length )
           return;
       }
 LABEL_18:
-      sub_B2C434(this, *(_QWORD *)&limitCount);
+      sub_B0D97C(this);
     }
   }
 }
 
 
-void __fastcall LimitCountIconComponent__Set_24110344(
+void __fastcall LimitCountIconComponent__Set_23682460(
         LimitCountIconComponent_o *this,
         LimitCountIconComponent_o *limitCountIcon,
         const MethodInfo *method)
@@ -132,8 +132,8 @@ void __fastcall LimitCountIconComponent__Set_24110344(
       if ( (unsigned int)(v8 - 4) >= v10->max_length )
       {
 LABEL_16:
-        v12 = sub_B2C460(this);
-        sub_B2C400(v12, 0LL);
+        v12 = sub_B0D9A8(this);
+        sub_B0D948(v12, 0LL);
       }
       v11 = *((_QWORD *)&v10->obj.klass + v8);
       if ( !v11 )
@@ -146,6 +146,6 @@ LABEL_16:
         return;
     }
 LABEL_15:
-    sub_B2C434(this, limitCountIcon);
+    sub_B0D97C(this);
   }
 }

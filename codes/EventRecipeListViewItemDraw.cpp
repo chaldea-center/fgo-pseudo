@@ -43,44 +43,43 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
   System_String_o *v22; // x22
   int32_t v23; // w21
   UISprite_o *maskSprite; // x22
-  __int64 v25; // x1
   int64_t gameObject; // x0
   struct EventRecipeEntity_o *eventRecipeEntity; // x8
-  int32_t v28; // w21
+  int32_t v27; // w21
   UISprite_o *itemIcon; // x22
-  Il2CppObject *v30; // x0
-  System_String_o *v31; // x23
-  struct EventRecipeEntity_o *v32; // x8
+  Il2CppObject *v29; // x0
+  System_String_o *v30; // x23
+  struct EventRecipeEntity_o *v31; // x8
   UILabel_o *messageTextLabel; // x21
-  struct EventRecipeEntity_o *v34; // x8
-  const MethodInfo *v35; // x2
-  UISprite_o *v36; // x21
+  struct EventRecipeEntity_o *v33; // x8
+  const MethodInfo *v34; // x2
+  UISprite_o *v35; // x21
   UILabel_o *nameTextLabel; // x21
-  struct EventRecipeEntity_o *v38; // x8
+  struct EventRecipeEntity_o *v37; // x8
   struct System_Single_array *coordinate; // x22
   UILabel_o *restTimeLabel; // x21
   int64_t Time; // x23
-  const MethodInfo *v42; // x2
+  const MethodInfo *v41; // x2
   int32_t currentEventId; // [xsp+4h] [xbp-3Ch] BYREF
   WarEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_41887A5 & 1) == 0 )
+  if ( (byte_4214A61 & 1) == 0 )
   {
-    sub_B2C35C(&AtlasManager_TypeInfo, item);
-    sub_B2C35C(&Method_DataManager_GetMaster_EventMaster___, v7);
-    sub_B2C35C(&DataManager_TypeInfo, v8);
-    sub_B2C35C(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v9);
-    sub_B2C35C(&EventRewardRootComponent_TypeInfo, v10);
-    sub_B2C35C(&int_TypeInfo, v11);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v12);
-    sub_B2C35C(&NetworkManager_TypeInfo, v13);
-    sub_B2C35C(&StringLiteral_19379/*"icon_{0}"*/, v14);
-    sub_B2C35C(&StringLiteral_22113/*"shop_item_menu_{0}_2"*/, v15);
-    sub_B2C35C(&StringLiteral_22112/*"shop_item_menu_mask"*/, v16);
-    sub_B2C35C(&StringLiteral_13378/*"TIME_REST2_NONE"*/, v17);
-    sub_B2C35C(&StringLiteral_11039/*"RECIPE_EVENT_BOARD_MESSAGE"*/, v18);
-    sub_B2C35C(&StringLiteral_11040/*"RECIPE_EVENT_BOARD_UNRELEASED_NAME"*/, v19);
-    byte_41887A5 = 1;
+    sub_B0D8A4(&AtlasManager_TypeInfo, item);
+    sub_B0D8A4(&Method_DataManager_GetMaster_EventMaster___, v7);
+    sub_B0D8A4(&DataManager_TypeInfo, v8);
+    sub_B0D8A4(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v9);
+    sub_B0D8A4(&EventRewardRootComponent_TypeInfo, v10);
+    sub_B0D8A4(&int_TypeInfo, v11);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v12);
+    sub_B0D8A4(&NetworkManager_TypeInfo, v13);
+    sub_B0D8A4(&StringLiteral_19440/*"icon_{0}"*/, v14);
+    sub_B0D8A4(&StringLiteral_22188/*"shop_item_menu_{0}_2"*/, v15);
+    sub_B0D8A4(&StringLiteral_22187/*"shop_item_menu_mask"*/, v16);
+    sub_B0D8A4(&StringLiteral_13422/*"TIME_REST2_NONE"*/, v17);
+    sub_B0D8A4(&StringLiteral_11066/*"RECIPE_EVENT_BOARD_MESSAGE"*/, v18);
+    sub_B0D8A4(&StringLiteral_11067/*"RECIPE_EVENT_BOARD_UNRELEASED_NAME"*/, v19);
+    byte_4214A61 = 1;
   }
   entity = 0LL;
   if ( item && mode )
@@ -88,7 +87,7 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
     baseSprite = this->fields.baseSprite;
     currentEventId = item->fields.currentEventId;
     v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId);
-    v22 = System_String__Format((System_String_o *)StringLiteral_22113/*"shop_item_menu_{0}_2"*/, v21, 0LL);
+    v22 = System_String__Format((System_String_o *)StringLiteral_22188/*"shop_item_menu_{0}_2"*/, v21, 0LL);
     if ( (BYTE3(EventRewardRootComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
     {
@@ -102,7 +101,7 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
     {
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     }
-    AtlasManager__SetEventUI_28451336(v23, maskSprite, (System_String_o *)StringLiteral_22112/*"shop_item_menu_mask"*/, 0LL);
+    AtlasManager__SetEventUI_27921852(v23, maskSprite, (System_String_o *)StringLiteral_22187/*"shop_item_menu_mask"*/, 0LL);
     gameObject = (int64_t)this->fields.maskSprite;
     if ( gameObject )
     {
@@ -115,37 +114,37 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
           eventRecipeEntity = item->fields.eventRecipeEntity;
           if ( !eventRecipeEntity )
             goto LABEL_63;
-          v28 = item->fields.currentEventId;
+          v27 = item->fields.currentEventId;
           itemIcon = this->fields.itemIcon;
           currentEventId = eventRecipeEntity->fields.iconId;
-          v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId);
-          v31 = System_String__Format((System_String_o *)StringLiteral_19379/*"icon_{0}"*/, v30, 0LL);
+          v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentEventId);
+          v30 = System_String__Format((System_String_o *)StringLiteral_19440/*"icon_{0}"*/, v29, 0LL);
           if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !AtlasManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
           }
-          gameObject = AtlasManager__SetEventUI_28451336(v28, itemIcon, v31, 0LL);
-          v32 = item->fields.eventRecipeEntity;
-          if ( !v32 )
+          gameObject = AtlasManager__SetEventUI_27921852(v27, itemIcon, v30, 0LL);
+          v31 = item->fields.eventRecipeEntity;
+          if ( !v31 )
             goto LABEL_63;
           gameObject = (int64_t)this->fields.nameTextLabel;
           if ( !gameObject )
             goto LABEL_63;
-          UILabel__set_text((UILabel_o *)gameObject, v32->fields.name, 0LL);
+          UILabel__set_text((UILabel_o *)gameObject, v31->fields.name, 0LL);
           messageTextLabel = this->fields.messageTextLabel;
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          gameObject = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_11039/*"RECIPE_EVENT_BOARD_MESSAGE"*/, 0LL);
-          v34 = item->fields.eventRecipeEntity;
-          if ( !v34 )
+          gameObject = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_11066/*"RECIPE_EVENT_BOARD_MESSAGE"*/, 0LL);
+          v33 = item->fields.eventRecipeEntity;
+          if ( !v33 )
             goto LABEL_63;
           gameObject = (int64_t)System_String__Format(
                                   (System_String_o *)gameObject,
-                                  (Il2CppObject *)v34->fields.name,
+                                  (Il2CppObject *)v33->fields.name,
                                   0LL);
           if ( !messageTextLabel )
             goto LABEL_63;
@@ -153,30 +152,30 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
         }
         else
         {
-          v36 = this->fields.itemIcon;
+          v35 = this->fields.itemIcon;
           if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !AtlasManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
           }
-          AtlasManager__SetItem(v36, 8007, 0LL);
+          AtlasManager__SetItem(v35, 8007, 0LL);
           nameTextLabel = (UILabel_o *)this->fields.nameTextLabel;
           if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
             && !LocalizationManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           }
-          gameObject = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_11040/*"RECIPE_EVENT_BOARD_UNRELEASED_NAME"*/, 0LL);
+          gameObject = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_11067/*"RECIPE_EVENT_BOARD_UNRELEASED_NAME"*/, 0LL);
           if ( !nameTextLabel )
             goto LABEL_63;
           UILabel__set_text(nameTextLabel, (System_String_o *)gameObject, 0LL);
-          v38 = item->fields.eventRecipeEntity;
-          if ( !v38 )
+          v37 = item->fields.eventRecipeEntity;
+          if ( !v37 )
             goto LABEL_63;
           gameObject = (int64_t)this->fields.messageTextLabel;
           if ( !gameObject )
             goto LABEL_63;
-          UILabel__set_text((UILabel_o *)gameObject, v38->fields.closedMessage, 0LL);
+          UILabel__set_text((UILabel_o *)gameObject, v37->fields.closedMessage, 0LL);
           gameObject = (int64_t)this->fields.maskSprite;
           if ( !gameObject )
             goto LABEL_63;
@@ -192,18 +191,18 @@ void __fastcall EventRecipeListViewItemDraw__SetItem(
         {
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
         }
-        gameObject = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_173398C *)Method_DataManager_GetMaster_EventMaster___);
+        gameObject = (int64_t)DataManager__GetMaster_WarQuestSelectionMaster_((const MethodInfo_1714548 *)Method_DataManager_GetMaster_EventMaster___);
         if ( !gameObject )
           goto LABEL_63;
         if ( !DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
                 (DataMasterBase_WarMaster__WarEntity__int__o *)gameObject,
                 &entity,
                 item->fields.currentEventId,
-                (const MethodInfo_24E412C *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+                (const MethodInfo_2669C30 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
         {
 LABEL_57:
-          EventRecipeListViewItemDraw__SetPriceIconText(this, item, v35);
-          EventRecipeListViewItemDraw__SetRewardIconText(this, item, v42);
+          EventRecipeListViewItemDraw__SetPriceIconText(this, item, v34);
+          EventRecipeListViewItemDraw__SetRewardIconText(this, item, v41);
           return;
         }
         if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -223,7 +222,7 @@ LABEL_57:
             {
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             }
-            gameObject = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13378/*"TIME_REST2_NONE"*/, 0LL);
+            gameObject = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13422/*"TIME_REST2_NONE"*/, 0LL);
             if ( restTimeLabel )
               goto LABEL_56;
           }
@@ -252,7 +251,7 @@ LABEL_56:
       }
     }
 LABEL_63:
-    sub_B2C434(gameObject, v25);
+    sub_B0D97C(gameObject);
   }
 }
 
@@ -264,12 +263,11 @@ void __fastcall EventRecipeListViewItemDraw__SetItemIcon(
         const MethodInfo *method)
 {
   _BOOL8 v6; // x0
-  __int64 v7; // x1
 
-  if ( (byte_41887A7 & 1) == 0 )
+  if ( (byte_4214A63 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, itemIcon);
-    byte_41887A7 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, itemIcon);
+    byte_4214A63 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -287,7 +285,7 @@ void __fastcall EventRecipeListViewItemDraw__SetItemIcon(
         return;
       }
 LABEL_12:
-      sub_B2C434(v6, v7);
+      sub_B0D97C(v6);
     }
     if ( !itemIcon )
       goto LABEL_12;
@@ -500,8 +498,8 @@ void __fastcall EventRecipeListViewItemDraw__SetPriceIconText(
                             goto LABEL_52;
                           }
 LABEL_54:
-                          v38 = sub_B2C460(priceInfo1);
-                          sub_B2C400(v38, 0LL);
+                          v38 = sub_B0D9A8(priceInfo1);
+                          sub_B0D948(v38, 0LL);
                         }
                       }
                     }
@@ -512,7 +510,7 @@ LABEL_54:
           }
         }
 LABEL_53:
-        sub_B2C434(priceInfo1, item);
+        sub_B0D97C(priceInfo1);
       case 1u:
         priceInfo1 = (CommonConsumeEntity_o *)this->fields.priceInfo1;
         if ( priceInfo1 )
@@ -574,42 +572,42 @@ void __fastcall EventRecipeListViewItemDraw__SetRewardIconText(
   __int64 v12; // x1
   __int64 v13; // x1
   int64_t Instance; // x0
-  System_String_o *v15; // x1
   struct EventRecipeGiftEntity_array *eventRecipeGiftEntity; // x8
-  EventRecipeGiftEntity_o *v17; // x8
+  EventRecipeGiftEntity_o *v16; // x8
   GiftEntity_array *GiftListById; // x21
   UserItemMaster_o *MasterData_WarQuestSelectionMaster; // x22
-  GiftEntity_o *v20; // x8
+  GiftEntity_o *v19; // x8
   UILabel_o *rewardNumTextLabel; // x22
-  GiftEntity_o *v22; // x8
+  GiftEntity_o *v21; // x8
   UILabel_o *rewardNumTitleLabel; // x21
-  struct EventRecipeGiftEntity_array *v24; // x8
-  EventRecipeGiftEntity_o *v25; // x8
+  struct EventRecipeGiftEntity_array *v23; // x8
+  EventRecipeGiftEntity_o *v24; // x8
   UILabel_o *probabilityLabel; // x19
+  System_String_o *v26; // x1
   __int64 v27; // x0
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_41887A6 & 1) == 0 )
+  if ( (byte_4214A62 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_GiftMaster___, item);
-    sub_B2C35C(&Method_DataManager_GetMasterData_UserItemMaster___, v5);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v6);
-    sub_B2C35C(&NetworkManager_TypeInfo, v7);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_B2C35C(&StringLiteral_11042/*"RECIPE_EVENT_HAVE_NUM"*/, v9);
-    sub_B2C35C(&StringLiteral_340/*"#,0"*/, v10);
-    sub_B2C35C(&StringLiteral_11046/*"RECIPE_EVENT_PROBABILITY_MESSAGE"*/, v11);
-    sub_B2C35C(&StringLiteral_1/*""*/, v12);
-    sub_B2C35C(&StringLiteral_953/*"0"*/, v13);
-    byte_41887A6 = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_GiftMaster___, item);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_UserItemMaster___, v5);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v6);
+    sub_B0D8A4(&NetworkManager_TypeInfo, v7);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_B0D8A4(&StringLiteral_11069/*"RECIPE_EVENT_HAVE_NUM"*/, v9);
+    sub_B0D8A4(&StringLiteral_345/*"#,0"*/, v10);
+    sub_B0D8A4(&StringLiteral_11073/*"RECIPE_EVENT_PROBABILITY_MESSAGE"*/, v11);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v12);
+    sub_B0D8A4(&StringLiteral_960/*"0"*/, v13);
+    byte_4214A62 = 1;
   }
   entity = 0LL;
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   Instance = (int64_t)DataManager__GetMasterData_WarQuestSelectionMaster_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_GiftMaster___);
+                        (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !item )
     goto LABEL_41;
   eventRecipeGiftEntity = item->fields.eventRecipeGiftEntity;
@@ -617,18 +615,18 @@ void __fastcall EventRecipeListViewItemDraw__SetRewardIconText(
     goto LABEL_41;
   if ( !eventRecipeGiftEntity->max_length )
     goto LABEL_42;
-  v17 = eventRecipeGiftEntity->m_Items[0];
-  if ( !v17 )
+  v16 = eventRecipeGiftEntity->m_Items[0];
+  if ( !v16 )
     goto LABEL_41;
   if ( !Instance )
     goto LABEL_41;
-  GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)Instance, v17->fields.giftId, 0LL);
-  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)Instance, v16->fields.giftId, 0LL);
+  Instance = (int64_t)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   MasterData_WarQuestSelectionMaster = (UserItemMaster_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                                              (DataManager_o *)Instance,
-                                                             (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                                             (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
   {
@@ -639,21 +637,21 @@ void __fastcall EventRecipeListViewItemDraw__SetRewardIconText(
     goto LABEL_41;
   if ( !GiftListById->max_length )
     goto LABEL_42;
-  v20 = GiftListById->m_Items[0];
-  if ( !v20 || !MasterData_WarQuestSelectionMaster )
+  v19 = GiftListById->m_Items[0];
+  if ( !v19 || !MasterData_WarQuestSelectionMaster )
     goto LABEL_41;
   Instance = UserItemMaster__TryGetEntity(
                MasterData_WarQuestSelectionMaster,
                &entity,
                Instance,
-               v20->fields.objectId,
+               v19->fields.objectId,
                0LL);
   rewardNumTextLabel = this->fields.rewardNumTextLabel;
   if ( (Instance & 1) != 0 )
   {
     if ( !entity )
       goto LABEL_41;
-    Instance = (int64_t)System_Int32__ToString_38381416((int)entity + 28, (System_String_o *)StringLiteral_340/*"#,0"*/, 0LL);
+    Instance = (int64_t)System_Int32__ToString_38473032((int)entity + 28, (System_String_o *)StringLiteral_345/*"#,0"*/, 0LL);
     if ( !rewardNumTextLabel )
       goto LABEL_41;
     UILabel__set_text(rewardNumTextLabel, (System_String_o *)Instance, 0LL);
@@ -666,57 +664,57 @@ void __fastcall EventRecipeListViewItemDraw__SetRewardIconText(
   {
     if ( !rewardNumTextLabel )
       goto LABEL_41;
-    UILabel__set_text(this->fields.rewardNumTextLabel, (System_String_o *)StringLiteral_953/*"0"*/, 0LL);
+    UILabel__set_text(this->fields.rewardNumTextLabel, (System_String_o *)StringLiteral_960/*"0"*/, 0LL);
   }
   if ( !GiftListById->max_length )
     goto LABEL_42;
-  v22 = GiftListById->m_Items[0];
-  if ( !v22 )
+  v21 = GiftListById->m_Items[0];
+  if ( !v21 )
     goto LABEL_41;
   Instance = (int64_t)this->fields.rewardItemIcon;
   if ( !Instance )
     goto LABEL_41;
-  ItemIconComponent__SetItem((ItemIconComponent_o *)Instance, v22->fields.objectId, -1, 0LL);
+  ItemIconComponent__SetItem((ItemIconComponent_o *)Instance, v21->fields.objectId, -1, 0LL);
   rewardNumTitleLabel = this->fields.rewardNumTitleLabel;
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_11042/*"RECIPE_EVENT_HAVE_NUM"*/, 0LL);
+  Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_11069/*"RECIPE_EVENT_HAVE_NUM"*/, 0LL);
   if ( !rewardNumTitleLabel )
     goto LABEL_41;
   UILabel__set_text(rewardNumTitleLabel, (System_String_o *)Instance, 0LL);
-  v24 = item->fields.eventRecipeGiftEntity;
-  if ( !v24 )
+  v23 = item->fields.eventRecipeGiftEntity;
+  if ( !v23 )
     goto LABEL_41;
-  if ( !v24->max_length )
+  if ( !v23->max_length )
   {
 LABEL_42:
-    v27 = sub_B2C460(Instance);
-    sub_B2C400(v27, 0LL);
+    v27 = sub_B0D9A8(Instance);
+    sub_B0D948(v27, 0LL);
   }
-  v25 = v24->m_Items[0];
-  if ( !v25 )
+  v24 = v23->m_Items[0];
+  if ( !v24 )
     goto LABEL_41;
   probabilityLabel = (UILabel_o *)this->fields.probabilityLabel;
-  if ( v25->fields.topIconId <= 0 )
+  if ( v24->fields.topIconId <= 0 )
   {
-    v15 = (System_String_o *)StringLiteral_1/*""*/;
+    v26 = (System_String_o *)StringLiteral_1/*""*/;
     if ( probabilityLabel )
       goto LABEL_39;
 LABEL_41:
-    sub_B2C434(Instance, v15);
+    sub_B0D97C(Instance);
   }
   if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   }
-  Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_11046/*"RECIPE_EVENT_PROBABILITY_MESSAGE"*/, 0LL);
-  v15 = (System_String_o *)Instance;
+  Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_11073/*"RECIPE_EVENT_PROBABILITY_MESSAGE"*/, 0LL);
+  v26 = (System_String_o *)Instance;
   if ( !probabilityLabel )
     goto LABEL_41;
 LABEL_39:
-  UILabel__set_text(probabilityLabel, v15, 0LL);
+  UILabel__set_text(probabilityLabel, v26, 0LL);
 }

@@ -23,13 +23,13 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
   int32_t v14; // w21
   EventPointGroupEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4186B57 & 1) == 0 )
+  if ( (byte_4213A83 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventPointGroupMaster___, param);
-    sub_B2C35C(&RaceResultEffectParam_TypeInfo, v5);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_B2C35C(&StringLiteral_1/*""*/, v7);
-    byte_4186B57 = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventPointGroupMaster___, param);
+    sub_B0D8A4(&RaceResultEffectParam_TypeInfo, v5);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v7);
+    byte_4213A83 = 1;
   }
   entity = 0LL;
   if ( param )
@@ -48,12 +48,12 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
           {
             v13 = *((_DWORD *)monitor + 8);
             v14 = *((_DWORD *)monitor + 12);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                           Instance,
-                                          (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                                          (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventPointGroupMaster__TryGetEntity(
@@ -74,7 +74,7 @@ void __fastcall PointGroupNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_B2C434(Instance, param);
+              sub_B0D97C(Instance);
             }
           }
         }

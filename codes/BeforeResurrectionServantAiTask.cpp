@@ -16,6 +16,6 @@ bool __fastcall BeforeResurrectionServantAiTask__IsActable(
   BattleLogicReaction_o *logicReaction; // x8
 
   if ( !logic || (logicReaction = logic->fields.logicReaction) == 0LL )
-    sub_B2C434(this, logic);
+    sub_B0D97C(this);
   return BattleLogicReaction__CheckExecutableResurrection(logicReaction, this->fields.svtData, 0LL);
 }

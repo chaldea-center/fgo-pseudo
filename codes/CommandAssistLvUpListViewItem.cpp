@@ -38,12 +38,12 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
   System_Int32_array *v41; // x7
 
   v17 = this;
-  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23700744((ListViewItem_o *)this, index, 0LL);
   v17->fields._EventId_k__BackingField = eventId;
   v17->fields._AssistId_k__BackingField = assistId;
   v17->fields._IconImageId_k__BackingField = iconImageId;
   v17->fields._Name_k__BackingField = name;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v17->fields._Name_k__BackingField,
     (System_Int32_array **)name,
     v18,
@@ -53,7 +53,7 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
     v22,
     v23);
   v17->fields._Detail_k__BackingField = detail;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v17->fields._Detail_k__BackingField,
     (System_Int32_array **)detail,
     v24,
@@ -63,7 +63,7 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
     v28,
     v29);
   v17->fields._BeforeName_k__BackingField = beforeName;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v17->fields._BeforeName_k__BackingField,
     (System_Int32_array **)beforeName,
     v30,
@@ -74,7 +74,7 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
     v35);
   v17->fields._BeforeDetail_k__BackingField = beforeDetail;
   v17 = (CommandAssistLvUpListViewItem_o *)((char *)v17 + 152);
-  sub_B2C2F8((BattleServantConfConponent_o *)v17, (System_Int32_array **)beforeDetail, v36, v37, v38, v39, v40, v41);
+  sub_B0D840((BattleServantConfConponent_o *)v17, (System_Int32_array **)beforeDetail, v36, v37, v38, v39, v40, v41);
   LOBYTE(v17->monitor) = isLast;
 }
 
@@ -164,7 +164,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_BeforeDetail(
   System_Int32_array *v7; // x7
 
   this->fields._BeforeDetail_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._BeforeDetail_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -188,7 +188,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_BeforeName(
   System_Int32_array *v7; // x7
 
   this->fields._BeforeName_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._BeforeName_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -212,7 +212,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_Detail(
   System_Int32_array *v7; // x7
 
   this->fields._Detail_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._Detail_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -263,7 +263,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_Name(
   System_Int32_array *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._Name_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

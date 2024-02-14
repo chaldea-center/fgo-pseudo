@@ -1,14 +1,14 @@
 void __fastcall UserEventDeckMaster___ctor(UserEventDeckMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4188B45 & 1) == 0 )
+  if ( (byte_4215C06 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string___ctor__, method);
-    byte_4188B45 = 1;
+    sub_B0D8A4(&Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string___ctor__, method);
+    byte_4215C06 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     231,
-    (const MethodInfo_24E4484 *)Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string___ctor__);
+    (const MethodInfo_2669F88 *)Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ UserEventDeckEntity_o *__fastcall UserEventDeckMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_4188B43 & 1) == 0 )
+  if ( (byte_4215C04 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string__GetEntity__, userId);
-    byte_4188B43 = 1;
+    sub_B0D8A4(&Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string__GetEntity__, userId);
+    byte_4215C04 = 1;
   }
   PK = UserEventDeckEntity__CreatePK(userId, eventId, deckNo, *(const MethodInfo **)&deckNo);
   return (UserEventDeckEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                     (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                     PK,
-                                    (const MethodInfo_24E4520 *)Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string__GetEntity__);
+                                    (const MethodInfo_266A024 *)Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool __fastcall UserEventDeckMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_4188B44 & 1) == 0 )
+  if ( (byte_4215C05 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string__TryGetEntity__, entity);
-    byte_4188B44 = 1;
+    sub_B0D8A4(&Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string__TryGetEntity__, entity);
+    byte_4215C05 = 1;
   }
   PK = UserEventDeckEntity__CreatePK(userId, eventId, deckNo, *(const MethodInfo **)&eventId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_24E4578 *)Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string__TryGetEntity__);
+           (const MethodInfo_266A07C *)Method_DataMasterBase_UserEventDeckMaster__UserEventDeckEntity__string__TryGetEntity__);
 }
 
 
@@ -90,42 +90,41 @@ UserEventDeckEntity_array *__fastcall UserEventDeckMaster__getDeckList(
   __int64 v12; // x1
   __int64 v13; // x1
   DataManager_o *Instance; // x0
-  __int64 v15; // x1
   int32_t UserEventDeckNo; // w0
-  const MethodInfo *v17; // x5
-  int32_t v18; // w4
-  System_Int32_array **v19; // x19
-  System_String_array **v20; // x2
-  System_String_array **v21; // x3
-  System_Boolean_array **v22; // x4
-  System_Int32_array **v23; // x5
-  System_Int32_array *v24; // x6
-  System_Int32_array *v25; // x7
-  DataManager_o *v26; // x20
+  const MethodInfo *v16; // x5
+  int32_t v17; // w4
+  System_Int32_array **v18; // x19
+  System_String_array **v19; // x2
+  System_String_array **v20; // x3
+  System_Boolean_array **v21; // x4
+  System_Int32_array **v22; // x5
+  System_Int32_array *v23; // x6
+  System_Int32_array *v24; // x7
+  DataManager_o *v25; // x20
+  __int64 v27; // x0
   __int64 v28; // x0
-  __int64 v29; // x0
   QuestRestrictionInfoEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
-  QuestPhaseEntity_o *v31; // [xsp+10h] [xbp-40h] BYREF
-  UserEventDeckEntity_o *v32; // [xsp+18h] [xbp-38h] BYREF
+  QuestPhaseEntity_o *v30; // [xsp+10h] [xbp-40h] BYREF
+  UserEventDeckEntity_o *v31; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4188B46 & 1) == 0 )
+  if ( (byte_4215C07 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_QuestPhaseMaster___, userId);
-    sub_B2C35C(&Method_DataManager_GetMasterData_QuestRestrictionInfoMaster___, v11);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_B2C35C(&UserEventDeckEntity___TypeInfo, v13);
-    byte_4188B46 = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_QuestPhaseMaster___, userId);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_QuestRestrictionInfoMaster___, v11);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_B0D8A4(&UserEventDeckEntity___TypeInfo, v13);
+    byte_4215C07 = 1;
   }
   entity = 0LL;
-  v31 = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v30 = 0LL;
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                       Instance,
-                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_QuestRestrictionInfoMaster___)) == 0LL )
+                                      (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_QuestRestrictionInfoMaster___)) == 0LL )
   {
 LABEL_23:
-    sub_B2C434(Instance, v15);
+    sub_B0D97C(Instance);
   }
   if ( QuestRestrictionInfoMaster__TryGetEntity(
          (QuestRestrictionInfoMaster_o *)Instance,
@@ -139,53 +138,53 @@ LABEL_23:
       goto LABEL_23;
     UserEventDeckNo = QuestRestrictionInfoEntity__GetUserEventDeckNo(entity, 0LL);
 LABEL_13:
-    v18 = UserEventDeckNo;
+    v17 = UserEventDeckNo;
     goto LABEL_15;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_23;
   Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                 Instance,
-                                (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+                                (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
   if ( !Instance )
     goto LABEL_23;
-  if ( QuestPhaseMaster__TryGetEntity((QuestPhaseMaster_o *)Instance, &v31, questId, questPhase, 0LL) )
+  if ( QuestPhaseMaster__TryGetEntity((QuestPhaseMaster_o *)Instance, &v30, questId, questPhase, 0LL) )
   {
-    Instance = (DataManager_o *)v31;
-    if ( !v31 )
+    Instance = (DataManager_o *)v30;
+    if ( !v30 )
       goto LABEL_23;
-    UserEventDeckNo = QuestPhaseEntity__GetUserEventDeckNo(v31, 0LL);
+    UserEventDeckNo = QuestPhaseEntity__GetUserEventDeckNo(v30, 0LL);
     goto LABEL_13;
   }
-  v18 = 1;
+  v17 = 1;
 LABEL_15:
-  v32 = 0LL;
-  if ( UserEventDeckMaster__TryGetEntity(this, &v32, userId, eventId, v18, v17) )
-    v19 = (System_Int32_array **)v32;
+  v31 = 0LL;
+  if ( UserEventDeckMaster__TryGetEntity(this, &v31, userId, eventId, v17, v16) )
+    v18 = (System_Int32_array **)v31;
   else
-    v19 = 0LL;
-  Instance = (DataManager_o *)sub_B2C374(UserEventDeckEntity___TypeInfo, 1LL);
+    v18 = 0LL;
+  Instance = (DataManager_o *)sub_B0D8BC(UserEventDeckEntity___TypeInfo, 1LL);
   if ( !Instance )
     goto LABEL_23;
-  v26 = Instance;
-  if ( v19 )
+  v25 = Instance;
+  if ( v18 )
   {
-    Instance = (DataManager_o *)sub_B2C41C(v19, Instance->klass->_1.element_class);
+    Instance = (DataManager_o *)sub_B0D964(v18, Instance->klass->_1.element_class);
     if ( !Instance )
     {
-      v29 = sub_B2C454(0LL);
-      sub_B2C400(v29, 0LL);
+      v28 = sub_B0D99C(0LL);
+      sub_B0D948(v28, 0LL);
     }
   }
-  if ( !LODWORD(v26->fields.datalist) )
+  if ( !LODWORD(v25->fields.datalist) )
   {
-    v28 = sub_B2C460(Instance);
-    sub_B2C400(v28, 0LL);
+    v27 = sub_B0D9A8(Instance);
+    sub_B0D948(v27, 0LL);
   }
-  v26->fields.lookup = (struct System_Collections_Generic_Dictionary_int__DataMasterBase__o *)v19;
-  sub_B2C2F8((BattleServantConfConponent_o *)&v26->fields.lookup, v19, v20, v21, v22, v23, v24, v25);
-  return (UserEventDeckEntity_array *)v26;
+  v25->fields.lookup = (struct System_Collections_Generic_Dictionary_int__DataMasterBase__o *)v18;
+  sub_B0D840((BattleServantConfConponent_o *)&v25->fields.lookup, v18, v19, v20, v21, v22, v23, v24);
+  return (UserEventDeckEntity_array *)v25;
 }
 
 
@@ -206,97 +205,106 @@ void __fastcall UserEventDeckMaster__getEventPartyList(
   __int64 v16; // x1
   __int64 v17; // x1
   void *Instance; // x0
-  __int64 v19; // x1
-  int v20; // w21
-  char *v21; // x23
+  int v19; // w21
+  char *v20; // x23
   int32_t Count; // w25
-  System_Collections_Generic_List_long__o *v23; // x24
-  int32_t v24; // w27
-  char *v25; // x19
+  __int64 v22; // x1
+  __int64 v23; // x2
+  __int64 v24; // x1
+  __int64 v25; // x2
+  System_Collections_Generic_List_long__o *v26; // x24
+  int32_t v27; // w27
+  char *v28; // x19
   System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v27; // x28
-  __int64 v28; // x10
-  char *v29; // x24
-  int64_t v30; // x23
+  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v30; // x28
+  __int64 v31; // x10
+  char *v32; // x24
+  int64_t v33; // x23
   int monitor_high; // w26
-  bool v32; // cc
-  __int64 v33; // x10
-  __int64 v34; // x11
-  System_Int32_array **v35; // x0
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  System_Int64_array *v42; // x0
-  System_String_array **v43; // x2
-  System_String_array **v44; // x3
-  System_Boolean_array **v45; // x4
-  System_Int32_array **v46; // x5
-  System_Int32_array *v47; // x6
-  System_Int32_array *v48; // x7
-  System_Int64_array *v49; // x0
-  System_String_array **v50; // x2
-  System_String_array **v51; // x3
-  System_Boolean_array **v52; // x4
-  System_Int32_array **v53; // x5
-  System_Int32_array *v54; // x6
-  System_Int32_array *v55; // x7
-  __int64 v56; // x0
+  bool v35; // cc
+  __int64 v36; // x10
+  __int64 v37; // x11
+  System_Int32_array **v38; // x0
+  System_String_array **v39; // x2
+  System_String_array **v40; // x3
+  System_Boolean_array **v41; // x4
+  System_Int32_array **v42; // x5
+  System_Int32_array *v43; // x6
+  System_Int32_array *v44; // x7
+  System_Int64_array *v45; // x0
+  System_String_array **v46; // x2
+  System_String_array **v47; // x3
+  System_Boolean_array **v48; // x4
+  System_Int32_array **v49; // x5
+  System_Int32_array *v50; // x6
+  System_Int32_array *v51; // x7
+  System_Int64_array *v52; // x0
+  System_String_array **v53; // x2
+  System_String_array **v54; // x3
+  System_Boolean_array **v55; // x4
+  System_Int32_array **v56; // x5
+  System_Int32_array *v57; // x6
+  System_Int32_array *v58; // x7
+  __int64 v59; // x0
   System_Collections_Generic_List_long__o *equipCollectList; // [xsp+0h] [xbp-70h]
-  BattleServantConfConponent_o *v58; // [xsp+8h] [xbp-68h]
+  BattleServantConfConponent_o *v61; // [xsp+8h] [xbp-68h]
   System_Collections_Generic_List_long__o *svtCollectList; // [xsp+18h] [xbp-58h]
 
-  if ( (byte_4188B47 & 1) == 0 )
+  if ( (byte_4215C08 & 1) == 0 )
   {
-    sub_B2C35C(&BalanceConfig_TypeInfo, svtIdList);
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v9);
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v10);
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventMaster___, v11);
-    sub_B2C35C(&long___TypeInfo, v12);
-    sub_B2C35C(&Method_System_Collections_Generic_List_long__ToArray__, v13);
-    sub_B2C35C(&Method_System_Collections_Generic_List_long___ctor__, v14);
-    sub_B2C35C(&System_Collections_Generic_List_long__TypeInfo, v15);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_B2C35C(&UserEventDeckEntity_TypeInfo, v17);
-    byte_4188B47 = 1;
+    sub_B0D8A4(&BalanceConfig_TypeInfo, svtIdList);
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v9);
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v10);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventMaster___, v11);
+    sub_B0D8A4(&long___TypeInfo, v12);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_long__ToArray__, v13);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_long___ctor__, v14);
+    sub_B0D8A4(&System_Collections_Generic_List_long__TypeInfo, v15);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    sub_B0D8A4(&UserEventDeckEntity_TypeInfo, v17);
+    byte_4215C08 = 1;
   }
-  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_35;
   Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
                (DataManager_o *)Instance,
-               (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventMaster___);
+               (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_35;
   Instance = EventMaster__GetEnableEntityList((EventMaster_o *)Instance, 12, 0, 0LL);
   if ( !Instance )
     goto LABEL_35;
-  v20 = *((_DWORD *)Instance + 6);
-  v21 = (char *)Instance;
-  if ( v20 )
+  v19 = *((_DWORD *)Instance + 6);
+  v20 = (char *)Instance;
+  if ( v19 )
   {
-    v58 = (BattleServantConfConponent_o *)svtIdList;
+    v61 = (BattleServantConfConponent_o *)svtIdList;
     Instance = this->fields.list;
     if ( !Instance )
       goto LABEL_35;
     Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
               (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Instance,
-              (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    svtCollectList = (System_Collections_Generic_List_long__o *)sub_B2C42C(System_Collections_Generic_List_long__TypeInfo);
+              (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    svtCollectList = (System_Collections_Generic_List_long__o *)sub_B0D974(
+                                                                  System_Collections_Generic_List_long__TypeInfo,
+                                                                  v22,
+                                                                  v23);
     System_Collections_Generic_List_long____ctor(
       svtCollectList,
-      (const MethodInfo_2F6C24C *)Method_System_Collections_Generic_List_long___ctor__);
-    v23 = (System_Collections_Generic_List_long__o *)sub_B2C42C(System_Collections_Generic_List_long__TypeInfo);
+      (const MethodInfo_2FB5154 *)Method_System_Collections_Generic_List_long___ctor__);
+    v26 = (System_Collections_Generic_List_long__o *)sub_B0D974(
+                                                       System_Collections_Generic_List_long__TypeInfo,
+                                                       v24,
+                                                       v25);
     System_Collections_Generic_List_long____ctor(
-      v23,
-      (const MethodInfo_2F6C24C *)Method_System_Collections_Generic_List_long___ctor__);
+      v26,
+      (const MethodInfo_2FB5154 *)Method_System_Collections_Generic_List_long___ctor__);
     if ( Count >= 1 )
     {
-      v24 = 0;
-      v25 = v21 + 32;
-      equipCollectList = v23;
+      v27 = 0;
+      v28 = v20 + 32;
+      equipCollectList = v26;
       while ( 1 )
       {
         Instance = this->fields.list;
@@ -304,18 +312,18 @@ void __fastcall UserEventDeckMaster__getEventPartyList(
           break;
         Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Instance,
-                 v24,
-                 (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                 v27,
+                 (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
         if ( Item )
         {
-          v27 = Item;
-          v28 = *(&UserEventDeckEntity_TypeInfo->_2.bitflags2 + 1);
-          if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v28
-            && (UserEventDeckEntity_c *)Item->klass->_2.typeHierarchy[v28 - 1] == UserEventDeckEntity_TypeInfo
+          v30 = Item;
+          v31 = *(&UserEventDeckEntity_TypeInfo->_2.bitflags2 + 1);
+          if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v31
+            && (UserEventDeckEntity_c *)Item->klass->_2.typeHierarchy[v31 - 1] == UserEventDeckEntity_TypeInfo
             && Item[1].klass == (System_Net_NetworkInformation_UnicastIPAddressInformation_c *)userId )
           {
-            v29 = v21;
-            v30 = userId;
+            v32 = v20;
+            v33 = userId;
             monitor_high = HIDWORD(Item[1].monitor);
             Instance = BalanceConfig_TypeInfo;
             if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -324,29 +332,29 @@ void __fastcall UserEventDeckMaster__getEventPartyList(
               j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
               Instance = BalanceConfig_TypeInfo;
             }
-            v32 = monitor_high <= *(_DWORD *)(*((_QWORD *)Instance + 23) + 148LL);
-            userId = v30;
-            v21 = v29;
-            v23 = equipCollectList;
-            if ( v32 && v20 >= 1 )
+            v35 = monitor_high <= *(_DWORD *)(*((_QWORD *)Instance + 23) + 148LL);
+            userId = v33;
+            v20 = v32;
+            v26 = equipCollectList;
+            if ( v35 && v19 >= 1 )
             {
-              v33 = 0LL;
+              v36 = 0LL;
               while ( 1 )
               {
-                if ( (unsigned int)v33 >= *((_DWORD *)v21 + 6) )
+                if ( (unsigned int)v36 >= *((_DWORD *)v20 + 6) )
                 {
-                  v56 = sub_B2C460(Instance);
-                  sub_B2C400(v56, 0LL);
+                  v59 = sub_B0D9A8(Instance);
+                  sub_B0D948(v59, 0LL);
                 }
-                v34 = *(_QWORD *)&v25[8 * v33];
-                if ( !v34 )
+                v37 = *(_QWORD *)&v28[8 * v36];
+                if ( !v37 )
                   goto LABEL_35;
-                if ( LODWORD(v27[1].monitor) == *(_DWORD *)(v34 + 16) )
+                if ( LODWORD(v30[1].monitor) == *(_DWORD *)(v37 + 16) )
                   break;
-                if ( (int)++v33 >= v20 )
+                if ( (int)++v36 >= v19 )
                   goto LABEL_29;
               }
-              Instance = v27[2].klass;
+              Instance = v30[2].klass;
               if ( !Instance )
                 break;
               DeckServant__CollectUserSvtId((DeckServant_o *)Instance, svtCollectList, equipCollectList, 0LL);
@@ -354,40 +362,40 @@ void __fastcall UserEventDeckMaster__getEventPartyList(
           }
         }
 LABEL_29:
-        if ( ++v24 >= Count )
+        if ( ++v27 >= Count )
           goto LABEL_30;
       }
 LABEL_35:
-      sub_B2C434(Instance, v19);
+      sub_B0D97C(Instance);
     }
 LABEL_30:
     Instance = svtCollectList;
     if ( !svtCollectList )
       goto LABEL_35;
-    v35 = (System_Int32_array **)System_Collections_Generic_List_long___ToArray(
+    v38 = (System_Int32_array **)System_Collections_Generic_List_long___ToArray(
                                    svtCollectList,
-                                   (const MethodInfo_2F6F0B4 *)Method_System_Collections_Generic_List_long__ToArray__);
-    v58->klass = (BattleServantConfConponent_c *)v35;
-    sub_B2C2F8(v58, v35, v36, v37, v38, v39, v40, v41);
-    if ( !v23 )
+                                   (const MethodInfo_2FB7FBC *)Method_System_Collections_Generic_List_long__ToArray__);
+    v61->klass = (BattleServantConfConponent_c *)v38;
+    sub_B0D840(v61, v38, v39, v40, v41, v42, v43, v44);
+    if ( !v26 )
       goto LABEL_35;
-    v42 = System_Collections_Generic_List_long___ToArray(
-            v23,
-            (const MethodInfo_2F6F0B4 *)Method_System_Collections_Generic_List_long__ToArray__);
+    v45 = System_Collections_Generic_List_long___ToArray(
+            v26,
+            (const MethodInfo_2FB7FBC *)Method_System_Collections_Generic_List_long__ToArray__);
   }
   else
   {
-    v49 = (System_Int64_array *)sub_B2C374(long___TypeInfo, 0LL);
-    *svtIdList = v49;
-    sub_B2C2F8((BattleServantConfConponent_o *)svtIdList, (System_Int32_array **)v49, v50, v51, v52, v53, v54, v55);
-    v42 = (System_Int64_array *)sub_B2C374(long___TypeInfo, 0LL);
+    v52 = (System_Int64_array *)sub_B0D8BC(long___TypeInfo, 0LL);
+    *svtIdList = v52;
+    sub_B0D840((BattleServantConfConponent_o *)svtIdList, (System_Int32_array **)v52, v53, v54, v55, v56, v57, v58);
+    v45 = (System_Int64_array *)sub_B0D8BC(long___TypeInfo, 0LL);
   }
-  *equipIdList = v42;
-  sub_B2C2F8((BattleServantConfConponent_o *)equipIdList, (System_Int32_array **)v42, v43, v44, v45, v46, v47, v48);
+  *equipIdList = v45;
+  sub_B0D840((BattleServantConfConponent_o *)equipIdList, (System_Int32_array **)v45, v46, v47, v48, v49, v50, v51);
 }
 
 
-void __fastcall UserEventDeckMaster__getEventPartyList_26980000(
+void __fastcall UserEventDeckMaster__getEventPartyList_26732332(
         UserEventDeckMaster_o *this,
         System_Collections_Generic_List_long__o **svtCollectList,
         System_Collections_Generic_List_long__o **equipCollectList,
@@ -400,60 +408,59 @@ void __fastcall UserEventDeckMaster__getEventPartyList_26980000(
   __int64 v10; // x1
   __int64 v11; // x1
   char *Instance; // x0
-  __int64 v13; // x1
-  int v14; // w27
-  char *v15; // x23
+  int v13; // w27
+  char *v14; // x23
   int32_t Count; // w0
-  int32_t v17; // w24
-  int32_t v18; // w25
-  char *v19; // x28
+  int32_t v16; // w24
+  int32_t v17; // w25
+  char *v18; // x28
   System_Net_NetworkInformation_UnicastIPAddressInformation_o *Item; // x0
-  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v21; // x26
-  __int64 v22; // x10
-  char *v23; // x21
-  int64_t v24; // x23
+  System_Net_NetworkInformation_UnicastIPAddressInformation_o *v20; // x26
+  __int64 v21; // x10
+  char *v22; // x21
+  int64_t v23; // x23
   int monitor_high; // w19
-  bool v26; // cc
-  __int64 v27; // x10
-  __int64 v28; // x11
-  __int64 v29; // x0
+  bool v25; // cc
+  __int64 v26; // x10
+  __int64 v27; // x11
+  __int64 v28; // x0
 
-  if ( (byte_4188B48 & 1) == 0 )
+  if ( (byte_4215C09 & 1) == 0 )
   {
-    sub_B2C35C(&BalanceConfig_TypeInfo, svtCollectList);
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v7);
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v8);
-    sub_B2C35C(&Method_DataManager_GetMasterData_EventMaster___, v9);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_B2C35C(&UserEventDeckEntity_TypeInfo, v11);
-    byte_4188B48 = 1;
+    sub_B0D8A4(&BalanceConfig_TypeInfo, svtCollectList);
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, v7);
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v8);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_EventMaster___, v9);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_B0D8A4(&UserEventDeckEntity_TypeInfo, v11);
+    byte_4215C09 = 1;
   }
-  Instance = (char *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (char *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   Instance = (char *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_EventMaster___);
+                       (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_31;
   Instance = (char *)EventMaster__GetEnableEntityList((EventMaster_o *)Instance, 12, 0, 0LL);
   if ( !Instance )
     goto LABEL_31;
-  v14 = *((_DWORD *)Instance + 6);
-  v15 = Instance;
-  if ( v14 )
+  v13 = *((_DWORD *)Instance + 6);
+  v14 = Instance;
+  if ( v13 )
   {
     Instance = (char *)this->fields.list;
     if ( !Instance )
       goto LABEL_31;
     Count = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
               (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Instance,
-              (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+              (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
     if ( Count >= 1 )
     {
-      v17 = Count;
-      v18 = 0;
-      v19 = v15 + 32;
+      v16 = Count;
+      v17 = 0;
+      v18 = v14 + 32;
       while ( 1 )
       {
         Instance = (char *)this->fields.list;
@@ -461,18 +468,18 @@ void __fastcall UserEventDeckMaster__getEventPartyList_26980000(
           break;
         Item = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                  (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Instance,
-                 v18,
-                 (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                 v17,
+                 (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
         if ( Item )
         {
-          v21 = Item;
-          v22 = *(&UserEventDeckEntity_TypeInfo->_2.bitflags2 + 1);
-          if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v22
-            && (UserEventDeckEntity_c *)Item->klass->_2.typeHierarchy[v22 - 1] == UserEventDeckEntity_TypeInfo
+          v20 = Item;
+          v21 = *(&UserEventDeckEntity_TypeInfo->_2.bitflags2 + 1);
+          if ( *(&Item->klass->_2.bitflags2 + 1) >= (unsigned int)v21
+            && (UserEventDeckEntity_c *)Item->klass->_2.typeHierarchy[v21 - 1] == UserEventDeckEntity_TypeInfo
             && Item[1].klass == (System_Net_NetworkInformation_UnicastIPAddressInformation_c *)userId )
           {
-            v23 = v15;
-            v24 = userId;
+            v22 = v14;
+            v23 = userId;
             monitor_high = HIDWORD(Item[1].monitor);
             Instance = (char *)BalanceConfig_TypeInfo;
             if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -481,28 +488,28 @@ void __fastcall UserEventDeckMaster__getEventPartyList_26980000(
               j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
               Instance = (char *)BalanceConfig_TypeInfo;
             }
-            v26 = monitor_high <= *(_DWORD *)(*((_QWORD *)Instance + 23) + 148LL);
-            userId = v24;
-            v15 = v23;
-            if ( v26 && v14 >= 1 )
+            v25 = monitor_high <= *(_DWORD *)(*((_QWORD *)Instance + 23) + 148LL);
+            userId = v23;
+            v14 = v22;
+            if ( v25 && v13 >= 1 )
             {
-              v27 = 0LL;
+              v26 = 0LL;
               while ( 1 )
               {
-                if ( (unsigned int)v27 >= *((_DWORD *)v23 + 6) )
+                if ( (unsigned int)v26 >= *((_DWORD *)v22 + 6) )
                 {
-                  v29 = sub_B2C460(Instance);
-                  sub_B2C400(v29, 0LL);
+                  v28 = sub_B0D9A8(Instance);
+                  sub_B0D948(v28, 0LL);
                 }
-                v28 = *(_QWORD *)&v19[8 * v27];
-                if ( !v28 )
+                v27 = *(_QWORD *)&v18[8 * v26];
+                if ( !v27 )
                   goto LABEL_31;
-                if ( LODWORD(v21[1].monitor) == *(_DWORD *)(v28 + 16) )
+                if ( LODWORD(v20[1].monitor) == *(_DWORD *)(v27 + 16) )
                   break;
-                if ( (int)++v27 >= v14 )
+                if ( (int)++v26 >= v13 )
                   goto LABEL_29;
               }
-              Instance = (char *)v21[2].klass;
+              Instance = (char *)v20[2].klass;
               if ( !Instance )
                 break;
               DeckServant__CollectUserSvtId((DeckServant_o *)Instance, *svtCollectList, *equipCollectList, 0LL);
@@ -510,11 +517,11 @@ void __fastcall UserEventDeckMaster__getEventPartyList_26980000(
           }
         }
 LABEL_29:
-        if ( ++v18 >= v17 )
+        if ( ++v17 >= v16 )
           return;
       }
 LABEL_31:
-      sub_B2C434(Instance, v13);
+      sub_B0D97C(Instance);
     }
   }
 }

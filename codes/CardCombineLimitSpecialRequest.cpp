@@ -9,12 +9,12 @@ void __fastcall CardCombineLimitSpecialRequest__beginRequest(
         int64_t userServantId,
         const MethodInfo *method)
 {
-  if ( (byte_418A0A3 & 1) == 0 )
+  if ( (byte_4215D9E & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_16623/*"baseUserSvtId"*/, userServantId);
-    byte_418A0A3 = 1;
+    sub_B0D8A4(&StringLiteral_16672/*"baseUserSvtId"*/, userServantId);
+    byte_4215D9E = 1;
   }
-  RequestBase__addField_31051460((RequestBase_o *)this, (System_String_o *)StringLiteral_16623/*"baseUserSvtId"*/, userServantId, 0LL);
+  RequestBase__addField_30435180((RequestBase_o *)this, (System_String_o *)StringLiteral_16672/*"baseUserSvtId"*/, userServantId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -26,11 +26,11 @@ System_String_o *__fastcall CardCombineLimitSpecialRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_418A0A2 & 1) == 0 )
+  if ( (byte_4215D9D & 1) == 0 )
   {
-    sub_B2C35C(&NetworkManager_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_17218/*"card/combineLimitSpecial"*/, v2);
-    byte_418A0A2 = 1;
+    sub_B0D8A4(&NetworkManager_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_17270/*"card/combineLimitSpecial"*/, v2);
+    byte_4215D9D = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -38,7 +38,7 @@ System_String_o *__fastcall CardCombineLimitSpecialRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44305532(BaseUrl, (System_String_o *)StringLiteral_17218/*"card/combineLimitSpecial"*/, 0LL);
+  return System_String__Concat_43849904(BaseUrl, (System_String_o *)StringLiteral_17270/*"card/combineLimitSpecial"*/, 0LL);
 }
 
 
@@ -54,12 +54,12 @@ void __fastcall CardCombineLimitSpecialRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_418A0A4 & 1) == 0 )
+  if ( (byte_4215D9F & 1) == 0 )
   {
-    sub_B2C35C(&JsonManager_TypeInfo, responseList);
-    sub_B2C35C(&ResponseCommandKind_TypeInfo, v5);
-    sub_B2C35C(&StringLiteral_21068/*"ng"*/, v6);
-    byte_418A0A4 = 1;
+    sub_B0D8A4(&JsonManager_TypeInfo, responseList);
+    sub_B0D8A4(&ResponseCommandKind_TypeInfo, v5);
+    sub_B0D8A4(&StringLiteral_21137/*"ng"*/, v6);
+    byte_4215D9F = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -67,7 +67,7 @@ void __fastcall CardCombineLimitSpecialRequest__requestCompleted(
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
   v7 = ResponseCommandKind__SearchData(84, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_31019724(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_30403444(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -76,7 +76,7 @@ void __fastcall CardCombineLimitSpecialRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21068/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_21137/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

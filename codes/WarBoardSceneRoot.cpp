@@ -16,23 +16,22 @@ WarBoardDataEntity_o *__fastcall WarBoardSceneRoot__GetWarBoardDataEntity(
   System_String_c *klass; // x8
   __int64 v8; // x10
   TerminalPramsManager_ClearData_o *v9; // x0
-  __int64 v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  WarBoardDataEntity_o *v17; // x20
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  WarBoardDataEntity_o *v16; // x20
 
   v3 = data;
-  if ( (byte_4189269 & 1) == 0 )
+  if ( (byte_4216552 & 1) == 0 )
   {
-    sub_B2C35C(&Method_JsonManager_Deserialize_WarBoardDataEntity___, data);
-    sub_B2C35C(&JsonManager_TypeInfo, v4);
-    sub_B2C35C(&string_TypeInfo, v5);
-    sub_B2C35C(&WarBoardDataEntity_TypeInfo, v6);
-    byte_4189269 = 1;
+    sub_B0D8A4(&Method_JsonManager_Deserialize_WarBoardDataEntity___, data);
+    sub_B0D8A4(&JsonManager_TypeInfo, v4);
+    sub_B0D8A4(&string_TypeInfo, v5);
+    sub_B0D8A4(&WarBoardDataEntity_TypeInfo, v6);
+    byte_4216552 = 1;
   }
   if ( v3 )
   {
@@ -50,21 +49,21 @@ WarBoardDataEntity_o *__fastcall WarBoardSceneRoot__GetWarBoardDataEntity(
         }
         v9 = JsonManager__Deserialize_TerminalPramsManager_ClearData_(
                v3,
-               (const MethodInfo_1AACF6C *)Method_JsonManager_Deserialize_WarBoardDataEntity___);
+               (const MethodInfo_1B68238 *)Method_JsonManager_Deserialize_WarBoardDataEntity___);
         if ( !v9 )
-          sub_B2C434(0LL, v10);
-        v17 = (WarBoardDataEntity_o *)v9;
+          sub_B0D97C(0LL);
+        v16 = (WarBoardDataEntity_o *)v9;
         v9->fields.warClearReward = (struct WarClearReward_array *)v3;
-        sub_B2C2F8(
+        sub_B0D840(
           (BattleServantConfConponent_o *)&v9->fields.warClearReward,
           (System_Int32_array **)v3,
+          v10,
           v11,
           v12,
           v13,
           v14,
-          v15,
-          v16);
-        return v17;
+          v15);
+        return v16;
       }
       else
       {
@@ -78,29 +77,28 @@ WarBoardDataEntity_o *__fastcall WarBoardSceneRoot__GetWarBoardDataEntity(
 
 void __fastcall WarBoardSceneRoot____n__0(WarBoardSceneRoot_o *this, const MethodInfo *method)
 {
-  SceneRootComponent__beginStartUp_17297004((SceneRootComponent_o *)this, 0LL);
+  SceneRootComponent__beginStartUp_16655688((SceneRootComponent_o *)this, 0LL);
 }
 
 
 void __fastcall WarBoardSceneRoot___beginResume_b__3_0(WarBoardSceneRoot_o *this, const MethodInfo *method)
 {
   CommonUI_o *Instance; // x0
-  __int64 v4; // x1
 
-  if ( (byte_418926A & 1) == 0 )
+  if ( (byte_4216553 & 1) == 0 )
   {
-    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_418926A = 1;
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4216553 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__SetLoadMode(Instance, 0, 0LL),
-        (Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
-    sub_B2C434(Instance, v4);
+    sub_B0D97C(Instance);
   }
   CommonUI__SetConnect(Instance, 0, 0LL);
-  SceneRootComponent__beginStartUp_17297004((SceneRootComponent_o *)this, 0LL);
+  SceneRootComponent__beginStartUp_16655688((SceneRootComponent_o *)this, 0LL);
   SceneRootComponent__resumeMainMenuBar((SceneRootComponent_o *)this, 0LL);
 }
 
@@ -111,7 +109,7 @@ void __fastcall WarBoardSceneRoot__beginFinish(WarBoardSceneRoot_o *this, const 
 
   manager = this->fields.manager;
   if ( !manager )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   WarBoardManager__Finish(manager, 0LL);
   SceneRootComponent__beginFinish((SceneRootComponent_o *)this, 0LL);
 }
@@ -120,17 +118,16 @@ void __fastcall WarBoardSceneRoot__beginFinish(WarBoardSceneRoot_o *this, const 
 void __fastcall WarBoardSceneRoot__beginInitialize(WarBoardSceneRoot_o *this, const MethodInfo *method)
 {
   AvalonSceneManager_o *Instance; // x0
-  __int64 v4; // x1
 
-  if ( (byte_4189266 & 1) == 0 )
+  if ( (byte_421654F & 1) == 0 )
   {
-    sub_B2C35C(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4189266 = 1;
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_421654F = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
-  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_B2C434(0LL, v4);
+    sub_B0D97C(0LL);
   AvalonSceneManager__endInitialize(Instance, (SceneRootComponent_o *)this, 0LL);
 }
 
@@ -151,33 +148,35 @@ void __fastcall WarBoardSceneRoot__beginResume(WarBoardSceneRoot_o *this, Il2Cpp
   __int64 v16; // x20
   WarBoardDataEntity_o *WarBoardDataEntity; // x20
   WarBoardManager_o *manager; // x21
-  System_Action_o *v19; // x22
+  __int64 v19; // x1
+  __int64 v20; // x2
+  System_Action_o *v21; // x22
 
-  if ( (byte_4189268 & 1) == 0 )
+  if ( (byte_4216551 & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, data);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v5);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_B2C35C(&Method_WarBoardSceneRoot__beginResume_b__3_0__, v7);
-    byte_4189268 = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, data);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__, v5);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_B0D8A4(&Method_WarBoardSceneRoot__beginResume_b__3_0__, v7);
+    byte_4216551 = 1;
   }
   v8 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3);
   if ( (*(_BYTE *)(v8 + 306) & 1) == 0 )
-    sub_AC505C(*((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3));
+    sub_AA65A4(*((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3));
   v9 = **(_QWORD **)(v8 + 192);
   if ( (*(_BYTE *)(v9 + 306) & 1) == 0 )
-    sub_AC505C(v9);
+    sub_AA65A4(v9);
   Instance = **(WebViewManager_o ***)(v9 + 184);
   if ( !Instance )
     goto LABEL_26;
   WarBoardManager__ResumeBgm((WarBoardManager_o *)Instance, 0LL);
   v12 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3);
   if ( (*(_BYTE *)(v12 + 306) & 1) == 0 )
-    Instance = (WebViewManager_o *)sub_AC505C(*((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__
+    Instance = (WebViewManager_o *)sub_AA65A4(*((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__
                                               + 3));
   v13 = **(_QWORD **)(v12 + 192);
   if ( (*(_BYTE *)(v13 + 306) & 1) == 0 )
-    Instance = (WebViewManager_o *)sub_AC505C(v13);
+    Instance = (WebViewManager_o *)sub_AA65A4(v13);
   v14 = **(_QWORD **)(v13 + 184);
   if ( !v14 )
     goto LABEL_26;
@@ -185,10 +184,10 @@ void __fastcall WarBoardSceneRoot__beginResume(WarBoardSceneRoot_o *this, Il2Cpp
   {
     v15 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3);
     if ( (*(_BYTE *)(v15 + 306) & 1) == 0 )
-      sub_AC505C(*((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3));
+      sub_AA65A4(*((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 3));
     v16 = **(_QWORD **)(v15 + 192);
     if ( (*(_BYTE *)(v16 + 306) & 1) == 0 )
-      sub_AC505C(v16);
+      sub_AA65A4(v16);
     Instance = **(WebViewManager_o ***)(v16 + 184);
     if ( Instance )
     {
@@ -200,25 +199,25 @@ void __fastcall WarBoardSceneRoot__beginResume(WarBoardSceneRoot_o *this, Il2Cpp
       return;
     }
 LABEL_26:
-    sub_B2C434(Instance, data);
+    sub_B0D97C(Instance);
   }
   if ( data )
   {
     WarBoardDataEntity = WarBoardSceneRoot__GetWarBoardDataEntity((WarBoardSceneRoot_o *)Instance, data, v11);
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_26;
     CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0LL);
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_26;
     CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0LL);
     manager = this->fields.manager;
-    v19 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
-    System_Action___ctor(v19, (Il2CppObject *)this, Method_WarBoardSceneRoot__beginResume_b__3_0__, 0LL);
+    v21 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v19, v20);
+    System_Action___ctor(v21, (Il2CppObject *)this, Method_WarBoardSceneRoot__beginResume_b__3_0__, 0LL);
     if ( !manager )
       goto LABEL_26;
-    WarBoardManager__Resume(manager, WarBoardDataEntity, v19, 0LL);
+    WarBoardManager__Resume(manager, WarBoardDataEntity, v21, 0LL);
   }
   else
   {
@@ -237,67 +236,68 @@ void __fastcall WarBoardSceneRoot__beginStartUp(
   __int64 v7; // x1
   __int64 v8; // x20
   CommonUI_o *Instance; // x0
-  __int64 v10; // x1
-  System_String_array **v11; // x2
-  System_String_array **v12; // x3
-  System_Boolean_array **v13; // x4
-  System_Int32_array **v14; // x5
-  System_Int32_array *v15; // x6
-  System_Int32_array *v16; // x7
-  WarBoardDataEntity_o **v17; // x21
-  WarBoardSceneRoot_o *v18; // x0
-  const MethodInfo *v19; // x2
+  System_String_array **v10; // x2
+  System_String_array **v11; // x3
+  System_Boolean_array **v12; // x4
+  System_Int32_array **v13; // x5
+  System_Int32_array *v14; // x6
+  System_Int32_array *v15; // x7
+  WarBoardDataEntity_o **v16; // x21
+  WarBoardSceneRoot_o *v17; // x0
+  const MethodInfo *v18; // x2
   System_Int32_array **WarBoardDataEntity; // x0
-  System_String_array **v21; // x2
-  System_String_array **v22; // x3
-  System_Boolean_array **v23; // x4
-  System_Int32_array **v24; // x5
-  System_Int32_array *v25; // x6
-  System_Int32_array *v26; // x7
-  WarBoardDataEntity_o *v27; // x22
+  System_String_array **v20; // x2
+  System_String_array **v21; // x3
+  System_Boolean_array **v22; // x4
+  System_Int32_array **v23; // x5
+  System_Int32_array *v24; // x6
+  System_Int32_array *v25; // x7
+  __int64 v26; // x1
+  __int64 v27; // x2
+  WarBoardDataEntity_o *v28; // x22
   WarBoardManager_o *manager; // x19
-  System_Action_o *v29; // x21
+  System_Action_o *v30; // x21
 
-  if ( (byte_4189267 & 1) == 0 )
+  if ( (byte_4216550 & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, data);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_B2C35C(&Method_WarBoardSceneRoot___c__DisplayClass2_0__beginStartUp_b__0__, v6);
-    sub_B2C35C(&WarBoardSceneRoot___c__DisplayClass2_0_TypeInfo, v7);
-    byte_4189267 = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, data);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_B0D8A4(&Method_WarBoardSceneRoot___c__DisplayClass2_0__beginStartUp_b__0__, v6);
+    sub_B0D8A4(&WarBoardSceneRoot___c__DisplayClass2_0_TypeInfo, v7);
+    byte_4216550 = 1;
   }
-  v8 = sub_B2C42C(WarBoardSceneRoot___c__DisplayClass2_0_TypeInfo);
+  v8 = sub_B0D974(WarBoardSceneRoot___c__DisplayClass2_0_TypeInfo, data, method);
   WarBoardSceneRoot___c__DisplayClass2_0___ctor((WarBoardSceneRoot___c__DisplayClass2_0_o *)v8, 0LL);
   if ( !v8 )
     goto LABEL_11;
   *(_QWORD *)(v8 + 24) = this;
-  v17 = (WarBoardDataEntity_o **)(v8 + 16);
-  sub_B2C2F8((BattleServantConfConponent_o *)(v8 + 24), (System_Int32_array **)this, v11, v12, v13, v14, v15, v16);
-  WarBoardDataEntity = (System_Int32_array **)WarBoardSceneRoot__GetWarBoardDataEntity(v18, data, v19);
+  v16 = (WarBoardDataEntity_o **)(v8 + 16);
+  sub_B0D840((BattleServantConfConponent_o *)(v8 + 24), (System_Int32_array **)this, v10, v11, v12, v13, v14, v15);
+  WarBoardDataEntity = (System_Int32_array **)WarBoardSceneRoot__GetWarBoardDataEntity(v17, data, v18);
   *(_QWORD *)(v8 + 16) = WarBoardDataEntity;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v8 + 16), WarBoardDataEntity, v21, v22, v23, v24, v25, v26);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_B0D840((BattleServantConfConponent_o *)(v8 + 16), WarBoardDataEntity, v20, v21, v22, v23, v24, v25);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   CommonUI__SetConnect(Instance, 1, 0LL);
-  v27 = *v17;
-  if ( !*v17 )
+  v28 = *v16;
+  if ( !*v16 )
     goto LABEL_11;
-  if ( v27->fields.progressType != 2 )
+  if ( v28->fields.progressType != 2 )
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_11;
     CommonUI__SetLoadMode(Instance, 1, 0LL);
-    v27 = *v17;
+    v28 = *v16;
   }
   manager = this->fields.manager;
-  v29 = (System_Action_o *)sub_B2C42C(System_Action_TypeInfo);
-  System_Action___ctor(v29, (Il2CppObject *)v8, Method_WarBoardSceneRoot___c__DisplayClass2_0__beginStartUp_b__0__, 0LL);
+  v30 = (System_Action_o *)sub_B0D974(System_Action_TypeInfo, v26, v27);
+  System_Action___ctor(v30, (Il2CppObject *)v8, Method_WarBoardSceneRoot___c__DisplayClass2_0__beginStartUp_b__0__, 0LL);
   if ( !manager )
 LABEL_11:
-    sub_B2C434(Instance, v10);
-  WarBoardManager__Initialize(manager, v27, v29, 0LL);
+    sub_B0D97C(Instance);
+  WarBoardManager__Initialize(manager, v28, v30, 0LL);
 }
 
 
@@ -319,35 +319,35 @@ void __fastcall WarBoardSceneRoot___c__DisplayClass2_0___beginStartUp_b__0(
   int32_t progressType; // w21
 
   v2 = this;
-  if ( (byte_4186718 & 1) == 0 )
+  if ( (byte_4213893 & 1) == 0 )
   {
-    sub_B2C35C(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)sub_B2C35C(
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)sub_B0D8A4(
                                                          &Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
                                                          v3);
-    byte_4186718 = 1;
+    byte_4213893 = 1;
   }
   warBoardData = v2->fields.warBoardData;
   if ( !warBoardData )
     goto LABEL_11;
   progressType = warBoardData->fields.progressType;
-  this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_11;
   if ( progressType == 2 )
   {
     CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL);
-    this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( this )
     {
       AvalonSceneManager__pushScene((AvalonSceneManager_o *)this, 10, 2, 0LL, 0LL);
       return;
     }
 LABEL_11:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   }
   CommonUI__SetLoadMode((CommonUI_o *)this, 0, 0LL);
-  this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (WarBoardSceneRoot___c__DisplayClass2_0_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_11;
   CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL);

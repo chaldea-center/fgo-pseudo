@@ -2,10 +2,10 @@ void __fastcall RetryConfirmItem___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_418BB9A & 1) == 0 )
+  if ( (byte_4218746 & 1) == 0 )
   {
-    sub_B2C35C(&RetryConfirmItem_TypeInfo, v1);
-    byte_418BB9A = 1;
+    sub_B0D8A4(&RetryConfirmItem_TypeInfo, v1);
+    byte_4218746 = 1;
   }
   RetryConfirmItem_TypeInfo->static_fields->PROSSESSION_AMOUNT_MAX_WIDTH = 130;
 }
@@ -79,7 +79,7 @@ void __fastcall RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this,
         }
       }
 LABEL_15:
-      sub_B2C434(useAmount, method);
+      sub_B0D97C(useAmount);
     }
   }
 }
@@ -128,7 +128,7 @@ void __fastcall RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem
         (this = (RetryConfirmItem_o *)v4->fields.possessionAmount) == 0LL) )
   {
 LABEL_15:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   }
   v12 = LocalPositionX;
   if ( v7 + mWidth >= v9 + v8 )
@@ -148,9 +148,9 @@ System_Collections_IEnumerator_o *__fastcall RetryConfirmItem__SetCondensedScale
         RetryConfirmItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
+  __int64 v2; // x2
+  __int64 v4; // x20
+  __int64 v5; // x0
   System_String_array **v6; // x2
   System_String_array **v7; // x3
   System_Boolean_array **v8; // x4
@@ -158,21 +158,21 @@ System_Collections_IEnumerator_o *__fastcall RetryConfirmItem__SetCondensedScale
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_418BB99 & 1) == 0 )
+  if ( (byte_4218745 & 1) == 0 )
   {
-    sub_B2C35C(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo, method);
-    byte_418BB99 = 1;
+    sub_B0D8A4(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo, method);
+    byte_4218745 = 1;
   }
-  v3 = sub_B2C42C(RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo);
+  v4 = sub_B0D974(RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_TypeInfo, method, v2);
   RetryConfirmItem__SetCondensedScalePossessionAmount_d__7___ctor(
-    (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)v3,
+    (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)v4,
     0,
     0LL);
-  if ( !v3 )
-    sub_B2C434(v4, v5);
-  *(_QWORD *)(v3 + 32) = this;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
-  return (System_Collections_IEnumerator_o *)v3;
+  if ( !v4 )
+    sub_B0D97C(v5);
+  *(_QWORD *)(v4 + 32) = this;
+  sub_B0D840((BattleServantConfConponent_o *)(v4 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_IEnumerator_o *)v4;
 }
 
 
@@ -200,10 +200,10 @@ bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__7__MoveNe
   UILabel_o *v9; // x19
 
   v2 = this;
-  if ( (byte_4185668 & 1) == 0 )
+  if ( (byte_4212539 & 1) == 0 )
   {
-    this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)sub_B2C35C(&RetryConfirmItem_TypeInfo, method);
-    byte_4185668 = 1;
+    this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_o *)sub_B0D8A4(&RetryConfirmItem_TypeInfo, method);
+    byte_4212539 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -244,14 +244,14 @@ bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__7__MoveNe
         UILabel__set_overflowMethod((UILabel_o *)this, 2, 0LL);
         v2->fields.__2__current = 0LL;
         p__2__current = &v2->fields.__2__current;
-        sub_B2C2F8(p__2__current, 0LL);
+        sub_B0D840(p__2__current, 0LL);
         result = 1;
         *((_DWORD *)p__2__current - 2) = 1;
         return result;
       }
     }
 LABEL_20:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   }
   return 0;
 }
@@ -270,14 +270,16 @@ void __fastcall __noreturn RetryConfirmItem__SetCondensedScalePossessionAmount_d
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_B2C360(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B2C42C(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B2C360(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_System_Collections_IEnumerator_Reset__);
-  sub_B2C400(v3, v4);
+  v2 = sub_B0D8A8(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_B0D974(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_B0D8A8(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__7_System_Collections_IEnumerator_Reset__);
+  sub_B0D948(v5, v6);
 }
 
 

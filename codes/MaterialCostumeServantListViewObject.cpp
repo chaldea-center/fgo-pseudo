@@ -2,10 +2,10 @@ void __fastcall MaterialCostumeServantListViewObject___ctor(
         MaterialCostumeServantListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_418815B & 1) == 0 )
+  if ( (byte_4214D95 & 1) == 0 )
   {
-    sub_B2C35C(&ListViewObject_TypeInfo, method);
-    byte_418815B = 1;
+    sub_B0D8A4(&ListViewObject_TypeInfo, method);
+    byte_4214D95 = 1;
   }
   if ( (BYTE3(ListViewObject_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -20,38 +20,37 @@ void __fastcall MaterialCostumeServantListViewObject__Awake(
         MaterialCostumeServantListViewObject_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   struct MaterialCostumeServantListViewItemDraw_o *Component_srcLineSprite; // x0
-  System_String_array **v6; // x2
-  System_String_array **v7; // x3
-  System_Boolean_array **v8; // x4
-  System_Int32_array **v9; // x5
-  System_Int32_array *v10; // x6
-  System_Int32_array *v11; // x7
+  System_String_array **v5; // x2
+  System_String_array **v6; // x3
+  System_Boolean_array **v7; // x4
+  System_Int32_array **v8; // x5
+  System_Int32_array *v9; // x6
+  System_Int32_array *v10; // x7
 
-  if ( (byte_4188148 & 1) == 0 )
+  if ( (byte_4214D82 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewItemDraw___, method);
-    byte_4188148 = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewItemDraw___, method);
+    byte_4214D82 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_B2C434(0LL, v3);
+    sub_B0D97C(0LL);
   Component_srcLineSprite = (struct MaterialCostumeServantListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                                  dispObject,
-                                                                                 (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewItemDraw___);
+                                                                                 (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewItemDraw___);
   this->fields.itemDraw = Component_srcLineSprite;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.itemDraw,
     (System_Int32_array **)Component_srcLineSprite,
+    v5,
     v6,
     v7,
     v8,
     v9,
-    v10,
-    v11);
+    v10);
 }
 
 
@@ -61,32 +60,31 @@ UnityEngine_GameObject_o *__fastcall MaterialCostumeServantListViewObject__Creat
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *DragObject; // x0
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *v5; // x19
-  MaterialCostumeServantListViewObject_o *v6; // x20
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
+  UnityEngine_GameObject_o *v4; // x19
+  MaterialCostumeServantListViewObject_o *v5; // x20
+  const MethodInfo *v6; // x3
+  const MethodInfo *v7; // x1
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_418814C & 1) == 0 )
+  if ( (byte_4214D86 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___, method);
-    byte_418814C = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___, method);
+    byte_4214D86 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
-    || (v5 = DragObject,
+    || (v4 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                     DragObject,
-                                                    (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___)) == 0LL) )
   {
-    sub_B2C434(DragObject, v4);
+    sub_B0D97C(DragObject);
   }
-  v6 = (MaterialCostumeServantListViewObject_o *)DragObject;
+  v5 = (MaterialCostumeServantListViewObject_o *)DragObject;
   zero = UnityEngine_Vector3__get_zero(0LL);
-  MaterialCostumeServantListViewObject__Init(v6, 2, 0LL, 0.0, *(UnityEngine_Vector3_o *)&zero.fields.y, v7);
-  MaterialCostumeServantListViewObject__SetupDisp(v6, v8);
-  return v5;
+  MaterialCostumeServantListViewObject__Init(v5, 2, 0LL, 0.0, *(UnityEngine_Vector3_o *)&zero.fields.y, v6);
+  MaterialCostumeServantListViewObject__SetupDisp(v5, v7);
+  return v4;
 }
 
 
@@ -122,11 +120,11 @@ void __fastcall MaterialCostumeServantListViewObject__EventEnterMove(
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4188153 & 1) == 0 )
+  if ( (byte_4214D8D & 1) == 0 )
   {
-    sub_B2C35C(&ListViewObject_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_6158/*"EventEnterMove2"*/, v3);
-    byte_4188153 = 1;
+    sub_B0D8A4(&ListViewObject_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_6175/*"EventEnterMove2"*/, v3);
+    byte_4214D8D = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -159,15 +157,15 @@ void __fastcall MaterialCostumeServantListViewObject__EventEnterMove(
   dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v9, v10->static_fields->BASE_MOVE_TIME, v30, 0LL);
   if ( !dragObject )
 LABEL_12:
-    sub_B2C434(dragObject, method);
+    sub_B0D97C(dragObject);
   v14 = dragObject;
   LODWORD(dragObject[1].klass) = 3;
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v14[3].klass = (UnityEngine_GameObject_c *)gameObject;
-  sub_B2C2F8((BattleServantConfConponent_o *)&v14[3], gameObject, v16, v17, v18, v19, v20, v21);
-  v22 = (System_Int32_array **)StringLiteral_6158/*"EventEnterMove2"*/;
-  v14[3].monitor = (void *)StringLiteral_6158/*"EventEnterMove2"*/;
-  sub_B2C2F8((BattleServantConfConponent_o *)&v14[3].monitor, v22, v23, v24, v25, v26, v27, v28);
+  sub_B0D840((BattleServantConfConponent_o *)&v14[3], gameObject, v16, v17, v18, v19, v20, v21);
+  v22 = (System_Int32_array **)StringLiteral_6175/*"EventEnterMove2"*/;
+  v14[3].monitor = (void *)StringLiteral_6175/*"EventEnterMove2"*/;
+  sub_B0D840((BattleServantConfConponent_o *)&v14[3].monitor, v22, v23, v24, v25, v26, v27, v28);
 }
 
 
@@ -184,17 +182,17 @@ void __fastcall MaterialCostumeServantListViewObject__EventEnterMove2(
   System_Int32_array *v9; // x7
   const MethodInfo *v10; // x1
 
-  if ( (byte_4188154 & 1) == 0 )
+  if ( (byte_4214D8E & 1) == 0 )
   {
-    sub_B2C35C(&NGUITools_TypeInfo, method);
-    byte_4188154 = 1;
+    sub_B0D8A4(&NGUITools_TypeInfo, method);
+    byte_4214D8E = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0LL);
   this->fields.dragObject = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.dragObject, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.dragObject, 0LL, v4, v5, v6, v7, v8, v9);
   MaterialCostumeServantListViewObject__EventMoveEnd(this, v10);
 }
 
@@ -213,17 +211,16 @@ void __fastcall MaterialCostumeServantListViewObject__EventEnterStart(
   System_Int32_array **v10; // x5
   System_Int32_array *v11; // x6
   System_Int32_array *v12; // x7
-  __int64 v13; // x1
   UnityEngine_GameObject_o *dragObject; // x0
-  MaterialCostumeServantListViewObject_o *v15; // x20
-  const MethodInfo *v16; // x3
+  MaterialCostumeServantListViewObject_o *v14; // x20
+  const MethodInfo *v15; // x3
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4188152 & 1) == 0 )
+  if ( (byte_4214D8C & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___, method);
-    sub_B2C35C(&StringLiteral_6157/*"EventEnterMove"*/, v5);
-    byte_4188152 = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___, method);
+    sub_B0D8A4(&StringLiteral_6174/*"EventEnterMove"*/, v5);
+    byte_4214D8C = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -233,7 +230,7 @@ void __fastcall MaterialCostumeServantListViewObject__EventEnterStart(
                                             this,
                                             this->klass->vtable._9_SetInput.methodPtr);
   this->fields.dragObject = v6;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.dragObject,
     (System_Int32_array **)v6,
     v7,
@@ -246,16 +243,16 @@ void __fastcall MaterialCostumeServantListViewObject__EventEnterStart(
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    dragObject,
-                                                   (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___)) == 0LL )
+                                                   (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___)) == 0LL )
   {
-    sub_B2C434(dragObject, v13);
+    sub_B0D97C(dragObject);
   }
-  v15 = (MaterialCostumeServantListViewObject_o *)dragObject;
+  v14 = (MaterialCostumeServantListViewObject_o *)dragObject;
   zero = UnityEngine_Vector3__get_zero(0LL);
-  MaterialCostumeServantListViewObject__Init(v15, 2, 0LL, 0.0, *(UnityEngine_Vector3_o *)&zero.fields.y, v16);
+  MaterialCostumeServantListViewObject__Init(v14, 2, 0LL, 0.0, *(UnityEngine_Vector3_o *)&zero.fields.y, v15);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6157/*"EventEnterMove"*/,
+    (System_String_o *)StringLiteral_6174/*"EventEnterMove"*/,
     delay,
     0LL);
 }
@@ -296,12 +293,12 @@ void __fastcall MaterialCostumeServantListViewObject__EventExitMove(
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v33; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4188156 & 1) == 0 )
+  if ( (byte_4214D90 & 1) == 0 )
   {
-    sub_B2C35C(&ListViewObject_TypeInfo, method);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v3);
-    sub_B2C35C(&StringLiteral_6160/*"EventExitMove2"*/, v4);
-    byte_4188156 = 1;
+    sub_B0D8A4(&ListViewObject_TypeInfo, method);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
+    sub_B0D8A4(&StringLiteral_6177/*"EventExitMove2"*/, v4);
+    byte_4214D90 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -346,15 +343,15 @@ void __fastcall MaterialCostumeServantListViewObject__EventExitMove(
     transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v12, v13->static_fields->BASE_MOVE_TIME, v33, 0LL);
     if ( !transform )
 LABEL_17:
-      sub_B2C434(transform, v6);
+      sub_B0D97C(transform);
     v17 = transform;
     LODWORD(transform[1].klass) = 3;
     gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     v17[3].klass = (UnityEngine_GameObject_c *)gameObject;
-    sub_B2C2F8((BattleServantConfConponent_o *)&v17[3], gameObject, v19, v20, v21, v22, v23, v24);
-    v25 = (System_Int32_array **)StringLiteral_6160/*"EventExitMove2"*/;
-    v17[3].monitor = (void *)StringLiteral_6160/*"EventExitMove2"*/;
-    sub_B2C2F8((BattleServantConfConponent_o *)&v17[3].monitor, v25, v26, v27, v28, v29, v30, v31);
+    sub_B0D840((BattleServantConfConponent_o *)&v17[3], gameObject, v19, v20, v21, v22, v23, v24);
+    v25 = (System_Int32_array **)StringLiteral_6177/*"EventExitMove2"*/;
+    v17[3].monitor = (void *)StringLiteral_6177/*"EventExitMove2"*/;
+    sub_B0D840((BattleServantConfConponent_o *)&v17[3].monitor, v25, v26, v27, v28, v29, v30, v31);
   }
 }
 
@@ -372,17 +369,17 @@ void __fastcall MaterialCostumeServantListViewObject__EventExitMove2(
   System_Int32_array *v9; // x7
   const MethodInfo *v10; // x1
 
-  if ( (byte_4188157 & 1) == 0 )
+  if ( (byte_4214D91 & 1) == 0 )
   {
-    sub_B2C35C(&NGUITools_TypeInfo, method);
-    byte_4188157 = 1;
+    sub_B0D8A4(&NGUITools_TypeInfo, method);
+    byte_4214D91 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( (BYTE3(NGUITools_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0LL);
   this->fields.dragObject = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.dragObject, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.dragObject, 0LL, v4, v5, v6, v7, v8, v9);
   MaterialCostumeServantListViewObject__EventMoveEnd(this, v10);
 }
 
@@ -402,18 +399,18 @@ void __fastcall MaterialCostumeServantListViewObject__EventExitStart(
   System_Int32_array **v11; // x5
   System_Int32_array *v12; // x6
   System_Int32_array *v13; // x7
-  const MethodInfo *v14; // x1
   UnityEngine_GameObject_o *dragObject; // x0
   UnityEngine_Object_o *Component_srcLineSprite; // x20
+  const MethodInfo *v16; // x1
   const MethodInfo *v17; // x3
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4188155 & 1) == 0 )
+  if ( (byte_4214D8F & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___, method);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
-    sub_B2C35C(&StringLiteral_6159/*"EventExitMove"*/, v6);
-    byte_4188155 = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___, method);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
+    sub_B0D8A4(&StringLiteral_6176/*"EventExitMove"*/, v6);
+    byte_4214D8F = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -423,7 +420,7 @@ void __fastcall MaterialCostumeServantListViewObject__EventExitStart(
                                             this,
                                             this->klass->vtable._9_SetInput.methodPtr);
   this->fields.dragObject = v7;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.dragObject,
     (System_Int32_array **)v7,
     v8,
@@ -437,7 +434,7 @@ void __fastcall MaterialCostumeServantListViewObject__EventExitStart(
     goto LABEL_11;
   Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                       dragObject,
-                                                      (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___);
+                                                      (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -446,12 +443,12 @@ void __fastcall MaterialCostumeServantListViewObject__EventExitStart(
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(Component_srcLineSprite, 0LL, 0LL);
   if ( ((unsigned __int8)dragObject & 1) != 0 )
   {
-    MaterialCostumeServantListViewObject__EventMoveEnd(this, v14);
+    MaterialCostumeServantListViewObject__EventMoveEnd(this, v16);
     return;
   }
   if ( !Component_srcLineSprite )
 LABEL_11:
-    sub_B2C434(dragObject, v14);
+    sub_B0D97C(dragObject);
   zero = UnityEngine_Vector3__get_zero(0LL);
   MaterialCostumeServantListViewObject__Init(
     (MaterialCostumeServantListViewObject_o *)Component_srcLineSprite,
@@ -462,7 +459,7 @@ LABEL_11:
     v17);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6159/*"EventExitMove"*/,
+    (System_String_o *)StringLiteral_6176/*"EventExitMove"*/,
     delay,
     0LL);
 }
@@ -500,11 +497,11 @@ void __fastcall MaterialCostumeServantListViewObject__EventIntoMove(
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4188150 & 1) == 0 )
+  if ( (byte_4214D8A & 1) == 0 )
   {
-    sub_B2C35C(&ListViewObject_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_6170/*"EventIntoMove2"*/, v3);
-    byte_4188150 = 1;
+    sub_B0D8A4(&ListViewObject_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_6187/*"EventIntoMove2"*/, v3);
+    byte_4214D8A = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -537,15 +534,15 @@ void __fastcall MaterialCostumeServantListViewObject__EventIntoMove(
   dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v9, v12->static_fields->BASE_MOVE_TIME, v30, 0LL);
   if ( !dragObject )
 LABEL_12:
-    sub_B2C434(dragObject, method);
+    sub_B0D97C(dragObject);
   v14 = dragObject;
   LODWORD(dragObject[1].klass) = 3;
   gameObject = (System_Int32_array **)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v14[3].klass = (UnityEngine_GameObject_c *)gameObject;
-  sub_B2C2F8((BattleServantConfConponent_o *)&v14[3], gameObject, v16, v17, v18, v19, v20, v21);
-  v22 = (System_Int32_array **)StringLiteral_6170/*"EventIntoMove2"*/;
-  v14[3].monitor = (void *)StringLiteral_6170/*"EventIntoMove2"*/;
-  sub_B2C2F8((BattleServantConfConponent_o *)&v14[3].monitor, v22, v23, v24, v25, v26, v27, v28);
+  sub_B0D840((BattleServantConfConponent_o *)&v14[3], gameObject, v16, v17, v18, v19, v20, v21);
+  v22 = (System_Int32_array **)StringLiteral_6187/*"EventIntoMove2"*/;
+  v14[3].monitor = (void *)StringLiteral_6187/*"EventIntoMove2"*/;
+  sub_B0D840((BattleServantConfConponent_o *)&v14[3].monitor, v22, v23, v24, v25, v26, v27, v28);
 }
 
 
@@ -563,10 +560,10 @@ void __fastcall MaterialCostumeServantListViewObject__EventIntoMove2(
   System_Int32_array *v10; // x7
   const MethodInfo *v11; // x1
 
-  if ( (byte_4188151 & 1) == 0 )
+  if ( (byte_4214D8B & 1) == 0 )
   {
-    sub_B2C35C(&NGUITools_TypeInfo, method);
-    byte_4188151 = 1;
+    sub_B0D8A4(&NGUITools_TypeInfo, method);
+    byte_4214D8B = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0LL);
   this->fields.dispMode = 2;
@@ -576,7 +573,7 @@ void __fastcall MaterialCostumeServantListViewObject__EventIntoMove2(
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0LL);
   this->fields.dragObject = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.dragObject, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.dragObject, 0LL, v5, v6, v7, v8, v9, v10);
   MaterialCostumeServantListViewObject__EventMoveEnd(this, v11);
 }
 
@@ -596,19 +593,18 @@ void __fastcall MaterialCostumeServantListViewObject__EventIntoStart(
   System_Int32_array **v11; // x5
   System_Int32_array *v12; // x6
   System_Int32_array *v13; // x7
-  __int64 v14; // x1
   UnityEngine_GameObject_o *dragObject; // x0
-  MaterialCostumeServantListViewObject_o *v16; // x21
-  const MethodInfo *v17; // x3
+  MaterialCostumeServantListViewObject_o *v15; // x21
+  const MethodInfo *v16; // x3
   UnityEngine_Transform_o *transform; // x20
-  int v19; // s0
+  int v18; // s0
   UnityEngine_Vector3_o zero; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_418814F & 1) == 0 )
+  if ( (byte_4214D89 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___, method);
-    sub_B2C35C(&StringLiteral_6169/*"EventIntoMove"*/, v5);
-    byte_418814F = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___, method);
+    sub_B0D8A4(&StringLiteral_6186/*"EventIntoMove"*/, v5);
+    byte_4214D89 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -619,7 +615,7 @@ void __fastcall MaterialCostumeServantListViewObject__EventIntoStart(
                                             this->klass->vtable._9_SetInput.methodPtr);
   p_dragObject = &this->fields.dragObject;
   this->fields.dragObject = v6;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.dragObject,
     (System_Int32_array **)v6,
     v8,
@@ -633,17 +629,17 @@ void __fastcall MaterialCostumeServantListViewObject__EventIntoStart(
     goto LABEL_9;
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                              dragObject,
-                                             (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___);
+                                             (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_MaterialCostumeServantListViewObject___);
   if ( !dragObject
-    || (v16 = (MaterialCostumeServantListViewObject_o *)dragObject,
+    || (v15 = (MaterialCostumeServantListViewObject_o *)dragObject,
         zero = UnityEngine_Vector3__get_zero(0LL),
-        MaterialCostumeServantListViewObject__Init(v16, 2, 0LL, 0.0, *(UnityEngine_Vector3_o *)&zero.fields.y, v17),
+        MaterialCostumeServantListViewObject__Init(v15, 2, 0LL, 0.0, *(UnityEngine_Vector3_o *)&zero.fields.y, v16),
         (dragObject = *p_dragObject) == 0LL)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0LL),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0LL)) == 0LL)
-    || (*(UnityEngine_Vector3_o *)&v19 = UnityEngine_Transform__TransformPoint_35438660(
+    || (*(UnityEngine_Vector3_o *)&v18 = UnityEngine_Transform__TransformPoint_35059040(
                                            (UnityEngine_Transform_o *)dragObject,
                                            1000.0,
                                            0.0,
@@ -652,12 +648,12 @@ void __fastcall MaterialCostumeServantListViewObject__EventIntoStart(
         !transform) )
   {
 LABEL_9:
-    sub_B2C434(dragObject, v14);
+    sub_B0D97C(dragObject);
   }
-  UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v19, 0LL);
+  UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v18, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6169/*"EventIntoMove"*/,
+    (System_String_o *)StringLiteral_6186/*"EventIntoMove"*/,
     delay,
     0LL);
 }
@@ -685,7 +681,7 @@ void __fastcall MaterialCostumeServantListViewObject__EventMoveEnd(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_B2C2F8(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_B0D840(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
     System_Action__Invoke(v9, 0LL);
   }
 }
@@ -698,10 +694,10 @@ MaterialCostumeServantListViewItem_o *__fastcall MaterialCostumeServantListViewO
   struct ListViewItem_o *linkItem; // x8
   __int64 v4; // x11
 
-  if ( (byte_418814A & 1) == 0 )
+  if ( (byte_4214D84 & 1) == 0 )
   {
-    sub_B2C35C(&MaterialCostumeServantListViewItem_TypeInfo, method);
-    byte_418814A = 1;
+    sub_B0D8A4(&MaterialCostumeServantListViewItem_TypeInfo, method);
+    byte_4214D84 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -730,29 +726,28 @@ void __fastcall MaterialCostumeServantListViewObject__Init(
   __int64 v13; // x10
   int32_t v14; // w24
   UnityEngine_Transform_o *transform; // x0
-  __int64 v16; // x1
   BattleServantConfConponent_o *p_callbackFunc; // x21
-  System_String_array **v18; // x2
-  System_String_array **v19; // x3
-  System_Boolean_array **v20; // x4
-  System_Int32_array **v21; // x5
-  System_Int32_array *v22; // x6
-  System_Int32_array *v23; // x7
-  const MethodInfo *v24; // x1
-  System_String_array **v25; // x2
-  System_String_array **v26; // x3
-  System_Boolean_array **v27; // x4
-  System_Int32_array **v28; // x5
-  System_Int32_array *v29; // x6
-  System_Int32_array *v30; // x7
-  int32_t v31; // w9
-  int32_t v32; // w8
+  System_String_array **v17; // x2
+  System_String_array **v18; // x3
+  System_Boolean_array **v19; // x4
+  System_Int32_array **v20; // x5
+  System_Int32_array *v21; // x6
+  System_Int32_array *v22; // x7
+  const MethodInfo *v23; // x1
+  System_String_array **v24; // x2
+  System_String_array **v25; // x3
+  System_Boolean_array **v26; // x4
+  System_Int32_array **v27; // x5
+  System_Int32_array *v28; // x6
+  System_Int32_array *v29; // x7
+  int32_t v30; // w9
+  int32_t v31; // w8
   System_Action_o *klass; // x19
 
-  if ( (byte_418814D & 1) == 0 )
+  if ( (byte_4214D87 & 1) == 0 )
   {
-    sub_B2C35C(&MaterialCostumeServantListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_418814D = 1;
+    sub_B0D8A4(&MaterialCostumeServantListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4214D87 = 1;
   }
   linkItem = this->fields.linkItem;
   dispMode = this->fields.dispMode;
@@ -780,37 +775,37 @@ void __fastcall MaterialCostumeServantListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_B2C434(transform, v16);
+    sub_B0D97C(transform);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (BattleServantConfConponent_o *)&this->fields.callbackFunc;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.callbackFunc,
     (System_Int32_array **)callbackFunc,
+    v17,
     v18,
     v19,
     v20,
     v21,
-    v22,
-    v23);
-  v31 = 1;
-  v32 = v14;
+    v22);
+  v30 = 1;
+  v31 = v14;
   switch ( v14 )
   {
     case 0:
     case 2:
       goto LABEL_16;
     case 1:
-      v32 = v14;
+      v31 = v14;
       goto LABEL_15;
     case 3:
-      v32 = 2;
+      v31 = 2;
 LABEL_15:
-      v31 = v14;
+      v30 = v14;
 LABEL_16:
-      this->fields.dispMode = v32;
-      this->fields.state = v31;
+      this->fields.dispMode = v31;
+      this->fields.state = v30;
       goto LABEL_17;
     case 4:
       this->fields.dispMode = 2;
@@ -819,23 +814,23 @@ LABEL_16:
     case 5:
       this->fields.dispMode = 0;
       this->fields.state = 2;
-      MaterialCostumeServantListViewObject__EventIntoStart(this, delay, v24);
+      MaterialCostumeServantListViewObject__EventIntoStart(this, delay, v23);
       return;
     case 7:
       this->fields.dispMode = 2;
       this->fields.state = 2;
-      MaterialCostumeServantListViewObject__EventExitStart(this, delay, v24);
+      MaterialCostumeServantListViewObject__EventExitStart(this, delay, v23);
       return;
     default:
 LABEL_17:
       if ( !state || dispMode != this->fields.dispMode )
 LABEL_21:
-        MaterialCostumeServantListViewObject__SetupDisp(this, v24);
+        MaterialCostumeServantListViewObject__SetupDisp(this, v23);
       klass = (System_Action_o *)p_callbackFunc->klass;
       if ( p_callbackFunc->klass )
       {
         p_callbackFunc->klass = 0LL;
-        sub_B2C2F8(p_callbackFunc, 0LL, v25, v26, v27, v28, v29, v30);
+        sub_B0D840(p_callbackFunc, 0LL, v24, v25, v26, v27, v28, v29);
         System_Action__Invoke(klass, 0LL);
       }
       return;
@@ -852,7 +847,7 @@ void __fastcall MaterialCostumeServantListViewObject__InitItem(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MaterialCostumeServantListViewObject__Init_25911496(
+void __fastcall MaterialCostumeServantListViewObject__Init_25259204(
         MaterialCostumeServantListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -866,7 +861,7 @@ void __fastcall MaterialCostumeServantListViewObject__Init_25911496(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MaterialCostumeServantListViewObject__Init_25913036(
+void __fastcall MaterialCostumeServantListViewObject__Init_25260744(
         MaterialCostumeServantListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -888,7 +883,7 @@ void __fastcall MaterialCostumeServantListViewObject__Init_25913036(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MaterialCostumeServantListViewObject__Init_25913116(
+void __fastcall MaterialCostumeServantListViewObject__Init_25260824(
         MaterialCostumeServantListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -917,12 +912,12 @@ void __fastcall MaterialCostumeServantListViewObject__OnClickSelect(
   MaterialCostumeServantListViewItem_o *linkItem; // x0
   __int64 v6; // x10
 
-  if ( (byte_4188159 & 1) == 0 )
+  if ( (byte_4214D93 & 1) == 0 )
   {
-    sub_B2C35C(&MaterialCostumeServantListViewItem_TypeInfo, method);
-    sub_B2C35C(&SoundManager_TypeInfo, v3);
-    sub_B2C35C(&StringLiteral_9970/*"OnClickSelectListView"*/, v4);
-    byte_4188159 = 1;
+    sub_B0D8A4(&MaterialCostumeServantListViewItem_TypeInfo, method);
+    sub_B0D8A4(&SoundManager_TypeInfo, v3);
+    sub_B0D8A4(&StringLiteral_9994/*"OnClickSelectListView"*/, v4);
+    byte_4214D93 = 1;
   }
   linkItem = (MaterialCostumeServantListViewItem_o *)this->fields.linkItem;
   if ( linkItem )
@@ -952,13 +947,13 @@ void __fastcall MaterialCostumeServantListViewObject__OnClickSelect(
       {
         UnityEngine_Component__SendMessage(
           (UnityEngine_Component_o *)linkItem,
-          (System_String_o *)StringLiteral_9970/*"OnClickSelectListView"*/,
+          (System_String_o *)StringLiteral_9994/*"OnClickSelectListView"*/,
           (Il2CppObject *)this,
           0LL);
         return;
       }
     }
-    sub_B2C434(linkItem, method);
+    sub_B0D97C(linkItem);
   }
 }
 
@@ -979,11 +974,11 @@ void __fastcall MaterialCostumeServantListViewObject__OnDestroy(
   System_Int32_array *v12; // x6
   System_Int32_array *v13; // x7
 
-  if ( (byte_4188149 & 1) == 0 )
+  if ( (byte_4214D83 & 1) == 0 )
   {
-    sub_B2C35C(&NGUITools_TypeInfo, method);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4188149 = 1;
+    sub_B0D8A4(&NGUITools_TypeInfo, method);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4214D83 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (BattleServantConfConponent_o *)&this->fields.dragObject;
@@ -1000,7 +995,7 @@ void __fastcall MaterialCostumeServantListViewObject__OnDestroy(
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_B2C2F8(p_dragObject, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_B0D840(p_dragObject, 0LL, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -1011,26 +1006,25 @@ void __fastcall MaterialCostumeServantListViewObject__OnLongPush(
 {
   __int64 v3; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v5; // x1
 
-  if ( (byte_418815A & 1) == 0 )
+  if ( (byte_4214D94 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_10023/*"OnLongPushListView"*/, method);
-    sub_B2C35C(&StringLiteral_10041/*"OnPressCancel"*/, v3);
-    byte_418815A = 1;
+    sub_B0D8A4(&StringLiteral_10047/*"OnLongPushListView"*/, method);
+    sub_B0D8A4(&StringLiteral_10065/*"OnPressCancel"*/, v3);
+    byte_4214D94 = 1;
   }
   if ( this->fields.linkItem )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject
-      || (UnityEngine_GameObject__SendMessage_40660564(gameObject, (System_String_o *)StringLiteral_10041/*"OnPressCancel"*/, 0LL),
+      || (UnityEngine_GameObject__SendMessage_40784904(gameObject, (System_String_o *)StringLiteral_10065/*"OnPressCancel"*/, 0LL),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.manager) == 0LL) )
     {
-      sub_B2C434(gameObject, v5);
+      sub_B0D97C(gameObject);
     }
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)gameObject,
-      (System_String_o *)StringLiteral_10023/*"OnLongPushListView"*/,
+      (System_String_o *)StringLiteral_10047/*"OnLongPushListView"*/,
       (Il2CppObject *)this,
       0LL);
   }
@@ -1050,11 +1044,11 @@ void __fastcall MaterialCostumeServantListViewObject__SetInput(
   struct ListViewItem_o *v9; // x1
   MaterialCostumeServantListViewItemDraw_o *v10; // x0
 
-  if ( (byte_418814B & 1) == 0 )
+  if ( (byte_4214D85 & 1) == 0 )
   {
-    sub_B2C35C(&MaterialCostumeServantListViewItem_TypeInfo, isInput);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
-    byte_418814B = 1;
+    sub_B0D8A4(&MaterialCostumeServantListViewItem_TypeInfo, isInput);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
+    byte_4214D85 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -1081,7 +1075,7 @@ void __fastcall MaterialCostumeServantListViewObject__SetInput(
     }
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_B2C434(0LL, v9);
+      sub_B0D97C(0LL);
     MaterialCostumeServantListViewItemDraw__SetInput(v10, (MaterialCostumeServantListViewItem_o *)v9, isInput, 0LL);
   }
 }
@@ -1093,12 +1087,12 @@ void __fastcall MaterialCostumeServantListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_33907092((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_32816272((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall MaterialCostumeServantListViewObject__SetItem_25911048(
+void __fastcall MaterialCostumeServantListViewObject__SetItem_25258756(
         MaterialCostumeServantListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -1117,14 +1111,13 @@ void __fastcall MaterialCostumeServantListViewObject__SetupDisp(
   __int64 v5; // x10
   bool v6; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v8; // x1
-  MaterialCostumeServantListViewItemDraw_o *v9; // x0
+  MaterialCostumeServantListViewItemDraw_o *v8; // x0
 
-  if ( (byte_418814E & 1) == 0 )
+  if ( (byte_4214D88 & 1) == 0 )
   {
-    sub_B2C35C(&MaterialCostumeServantListViewItem_TypeInfo, method);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v3);
-    byte_418814E = 1;
+    sub_B0D8A4(&MaterialCostumeServantListViewItem_TypeInfo, method);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4214D88 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -1149,11 +1142,11 @@ LABEL_8:
   }
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_B2C434(0LL, v8);
+    v8 = this->fields.itemDraw;
+    if ( !v8 )
+      sub_B0D97C(0LL);
     MaterialCostumeServantListViewItemDraw__SetItem(
-      v9,
+      v8,
       (MaterialCostumeServantListViewItem_o *)linkItem,
       this->fields.dispMode,
       0LL);
@@ -1167,40 +1160,39 @@ System_String_o *__fastcall MaterialCostumeServantListViewObject__ToString(
 {
   __int64 v3; // x1
   __int64 v4; // x0
-  __int64 v5; // x1
-  __int64 v6; // x20
-  System_String_o *v7; // x21
-  int32_t *v8; // x0
-  __int64 v9; // x9
+  __int64 v5; // x20
+  System_String_o *v6; // x21
+  int32_t *v7; // x0
+  __int64 v8; // x9
   float z; // w10
-  System_String_o *v11; // x0
-  __int64 v13; // [xsp+0h] [xbp-30h] BYREF
-  float v14; // [xsp+8h] [xbp-28h]
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  System_String_o *v10; // x0
+  __int64 v12; // [xsp+0h] [xbp-30h] BYREF
+  float v13; // [xsp+8h] [xbp-28h]
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4188158 & 1) == 0 )
+  if ( (byte_4214D92 & 1) == 0 )
   {
-    sub_B2C35C(&MaterialCostumeServantListViewItemDraw_DispMode_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_80/*" "*/, v3);
-    byte_4188158 = 1;
+    sub_B0D8A4(&MaterialCostumeServantListViewItemDraw_DispMode_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_80/*" "*/, v3);
+    byte_4214D92 = 1;
   }
-  v14 = 0.0;
-  v13 = 0LL;
+  v13 = 0.0;
+  v12 = 0LL;
   v4 = j_il2cpp_value_box_0(MaterialCostumeServantListViewItemDraw_DispMode_TypeInfo, &this->fields.dispMode);
   if ( !v4 )
-    sub_B2C434(0LL, v5);
-  v6 = v4;
-  v7 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v4 + 360LL))(
+    sub_B0D97C(0LL);
+  v5 = v4;
+  v6 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v4 + 360LL))(
                             v4,
                             *(_QWORD *)(*(_QWORD *)v4 + 368LL));
-  v8 = (int32_t *)j_il2cpp_object_unbox_0(v6);
-  v9 = *(_QWORD *)&this->fields.basePosition.fields.x;
+  v7 = (int32_t *)j_il2cpp_object_unbox_0(v5);
+  v8 = *(_QWORD *)&this->fields.basePosition.fields.x;
   z = this->fields.basePosition.fields.z;
-  this->fields.dispMode = *v8;
-  v13 = v9;
-  v14 = z;
-  v11 = UnityEngine_Vector3__ToString(v15, (const MethodInfo *)&v13);
-  return System_String__Concat_44307816(v7, (System_String_o *)StringLiteral_80/*" "*/, v11, 0LL);
+  this->fields.dispMode = *v7;
+  v12 = v8;
+  v13 = z;
+  v10 = UnityEngine_Vector3__ToString(v14, (const MethodInfo *)&v12);
+  return System_String__Concat_43852188(v6, (System_String_o *)StringLiteral_80/*" "*/, v10, 0LL);
 }
 
 
@@ -1219,10 +1211,10 @@ void __fastcall MaterialCostumeServantListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4188146 & 1) == 0 )
+  if ( (byte_4214D80 & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, value);
-    byte_4188146 = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, value);
+    byte_4214D80 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1235,13 +1227,13 @@ void __fastcall MaterialCostumeServantListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B20D74(p_callbackFunc, v8, v6);
+    v9 = sub_B022BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (MaterialCostumeServantListViewObject_o *)sub_B2C728(v8);
+  v11 = (MaterialCostumeServantListViewObject_o *)sub_B0DC70(v8);
   MaterialCostumeServantListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1260,10 +1252,10 @@ void __fastcall MaterialCostumeServantListViewObject__remove_callbackFunc(
   MaterialCostumeServantListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4188147 & 1) == 0 )
+  if ( (byte_4214D81 & 1) == 0 )
   {
-    sub_B2C35C(&System_Action_TypeInfo, value);
-    byte_4188147 = 1;
+    sub_B0D8A4(&System_Action_TypeInfo, value);
+    byte_4214D81 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1276,12 +1268,12 @@ void __fastcall MaterialCostumeServantListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_B20D74(p_callbackFunc, v8, v6);
+    v9 = sub_B022BC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (MaterialCostumeServantListViewObject_o *)sub_B2C728(v8);
+  v11 = (MaterialCostumeServantListViewObject_o *)sub_B0DC70(v8);
   MaterialCostumeServantListViewObject__Awake(v11, v12);
 }

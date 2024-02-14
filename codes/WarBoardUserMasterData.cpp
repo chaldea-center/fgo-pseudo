@@ -13,19 +13,19 @@ WarBoardUserMasterData_o *__fastcall WarBoardUserMasterData__FromJson(System_Str
   __int64 v7; // x8
   __int64 v8; // x0
 
-  if ( (byte_41888EC & 1) == 0 )
+  if ( (byte_4215657 & 1) == 0 )
   {
-    sub_B2C35C(&Method_JsonManager_DeserializeArray_WarBoardUserMasterData___, method);
-    sub_B2C35C(&JsonManager_TypeInfo, v3);
-    sub_B2C35C(&StringLiteral_15827/*"[{0}]"*/, v4);
-    byte_41888EC = 1;
+    sub_B0D8A4(&Method_JsonManager_DeserializeArray_WarBoardUserMasterData___, method);
+    sub_B0D8A4(&JsonManager_TypeInfo, v3);
+    sub_B0D8A4(&StringLiteral_15874/*"[{0}]"*/, v4);
+    byte_4215657 = 1;
   }
-  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_15827/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
+  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_15874/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   result = (WarBoardUserMasterData_o *)JsonManager__DeserializeArray_UserPresentBoxWindow_resData_(
                                          v5,
-                                         (const MethodInfo_1AACFE4 *)Method_JsonManager_DeserializeArray_WarBoardUserMasterData___);
+                                         (const MethodInfo_1B682B0 *)Method_JsonManager_DeserializeArray_WarBoardUserMasterData___);
   if ( result )
   {
     v7 = *(_QWORD *)&result->fields.skill1Ct;
@@ -33,8 +33,8 @@ WarBoardUserMasterData_o *__fastcall WarBoardUserMasterData__FromJson(System_Str
     {
       if ( !(_DWORD)v7 )
       {
-        v8 = sub_B2C460(result);
-        sub_B2C400(v8, 0LL);
+        v8 = sub_B0D9A8(result);
+        sub_B0D948(v8, 0LL);
       }
       return *(WarBoardUserMasterData_o **)&result->fields.skill3Ct;
     }
@@ -63,13 +63,13 @@ void __fastcall WarBoardUserMasterData__SetBattleData(
   BattleSkillInfoData_o *v12; // x8
 
   v4 = this;
-  if ( (byte_41888EA & 1) == 0 )
+  if ( (byte_4215655 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__, battleData);
-    this = (WarBoardUserMasterData_o *)sub_B2C35C(
+    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__, battleData);
+    this = (WarBoardUserMasterData_o *)sub_B0D8A4(
                                          &Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__,
                                          v5);
-    byte_41888EA = 1;
+    byte_4215655 = 1;
   }
   *(_QWORD *)&v4->fields.skill1Ct = 0LL;
   v4->fields.skill3Ct = 0;
@@ -91,7 +91,7 @@ void __fastcall WarBoardUserMasterData__SetBattleData(
   if ( !v9 )
     goto LABEL_19;
   if ( v9->fields._size <= 1u )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
   v10 = v9->fields._items->m_Items[1];
   if ( !v10 )
     goto LABEL_19;
@@ -102,11 +102,11 @@ void __fastcall WarBoardUserMasterData__SetBattleData(
   if ( !v11 )
     goto LABEL_19;
   if ( v11->fields._size <= 2u )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
   v12 = v11->fields._items->m_Items[2];
   if ( !v12 )
 LABEL_19:
-    sub_B2C434(this, battleData);
+    sub_B0D97C(this);
   v4->fields.skill3Ct = v12->fields.chargeTurn;
 }
 
@@ -117,7 +117,7 @@ void __fastcall WarBoardUserMasterData__SetSaveData(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_B2C434(this, 0LL);
+    sub_B0D97C(this);
   this->fields.currentLimitActionPoint = saveData->fields.actionCount;
   this->fields.squareIndex = saveData->fields.squareIndex;
   this->fields.currentForceActionPoint = saveData->fields.currentForceActionPoint;
@@ -129,10 +129,10 @@ void __fastcall WarBoardUserMasterData__SetSaveData(
 
 System_String_o *__fastcall WarBoardUserMasterData__ToJson(WarBoardUserMasterData_o *this, const MethodInfo *method)
 {
-  if ( (byte_41888EB & 1) == 0 )
+  if ( (byte_4215656 & 1) == 0 )
   {
-    sub_B2C35C(&JsonManager_TypeInfo, method);
-    byte_41888EB = 1;
+    sub_B0D8A4(&JsonManager_TypeInfo, method);
+    byte_4215656 = 1;
   }
   if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

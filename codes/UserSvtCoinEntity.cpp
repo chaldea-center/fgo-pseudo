@@ -1,28 +1,28 @@
 void __fastcall UserSvtCoinEntity___ctor(UserSvtCoinEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_418D291 & 1) == 0 )
+  if ( (byte_421A275 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
-    byte_418D291 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
+    byte_421A275 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserSvtCoinEntity__CreatePK(int64_t userId, int32_t svtId, const MethodInfo *method)
 {
-  if ( (byte_418D290 & 1) == 0 )
+  if ( (byte_421A274 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&svtId);
-    byte_418D290 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&svtId);
+    byte_421A274 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            svtId,
-           (const MethodInfo_1732A38 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_171354C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

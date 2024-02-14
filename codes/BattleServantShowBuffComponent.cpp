@@ -1,27 +1,31 @@
 void __fastcall BattleServantShowBuffComponent___ctor(BattleServantShowBuffComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v4; // x20
-  System_String_array **v5; // x2
-  System_String_array **v6; // x3
-  System_Boolean_array **v7; // x4
-  System_Int32_array **v8; // x5
-  System_Int32_array *v9; // x6
-  System_Int32_array *v10; // x7
+  __int64 v2; // x2
+  __int64 v4; // x1
+  System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *v5; // x20
+  System_String_array **v6; // x2
+  System_String_array **v7; // x3
+  System_Boolean_array **v8; // x4
+  System_Int32_array **v9; // x5
+  System_Int32_array *v10; // x6
+  System_Int32_array *v11; // x7
 
-  if ( (byte_418A56E & 1) == 0 )
+  if ( (byte_4217296 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
-    sub_B2C35C(&System_Collections_Generic_List_GameObject__TypeInfo, v3);
-    byte_418A56E = 1;
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
+    sub_B0D8A4(&System_Collections_Generic_List_GameObject__TypeInfo, v4);
+    byte_4217296 = 1;
   }
   this->fields.maxLine = 2;
-  v4 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B2C42C(System_Collections_Generic_List_GameObject__TypeInfo);
+  v5 = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)sub_B0D974(
+                                                                                                 System_Collections_Generic_List_GameObject__TypeInfo,
+                                                                                                 method,
+                                                                                                 v2);
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData____ctor(
-    v4,
-    (const MethodInfo_2EF379C *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.objList = (struct System_Collections_Generic_List_GameObject__o *)v4;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.objList, (System_Int32_array **)v4, v5, v6, v7, v8, v9, v10);
+    v5,
+    (const MethodInfo_2FC4A24 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.objList = (struct System_Collections_Generic_List_GameObject__o *)v5;
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.objList, (System_Int32_array **)v5, v6, v7, v8, v9, v10, v11);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -36,15 +40,14 @@ void __fastcall BattleServantShowBuffComponent__CreateBuffObj(
   UnityEngine_GameObject_o *Object; // x21
   const MethodInfo *v7; // x3
   BattleServantBuffIconComponent_o *Component_srcLineSprite; // x0
-  __int64 v9; // x1
   struct BattleBuffData_ShowBuffData_array *datalist; // x8
-  __int64 v11; // x0
+  __int64 v10; // x0
 
-  if ( (byte_418A569 & 1) == 0 )
+  if ( (byte_4217291 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, *(_QWORD *)&index);
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__Add__, v5);
-    byte_418A569 = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, *(_QWORD *)&index);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__Add__, v5);
+    byte_4217291 = 1;
   }
   Object = BaseMonoBehaviour__createObject(
              (BaseMonoBehaviour_o *)this,
@@ -58,26 +61,26 @@ void __fastcall BattleServantShowBuffComponent__CreateBuffObj(
   UnityEngine_GameObject__SetActive(Object, 1, 0LL);
   Component_srcLineSprite = (BattleServantBuffIconComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                   Object,
-                                                                  (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                                  (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
   datalist = this->fields.datalist;
   if ( !datalist )
     goto LABEL_9;
   if ( datalist->max_length <= index )
   {
-    v11 = sub_B2C460(Component_srcLineSprite);
-    sub_B2C400(v11, 0LL);
+    v10 = sub_B0D9A8(Component_srcLineSprite);
+    sub_B0D948(v10, 0LL);
   }
   if ( !Component_srcLineSprite
-    || (BattleServantBuffIconComponent__setIcon_21208020(Component_srcLineSprite, datalist->m_Items[index], 0LL),
+    || (BattleServantBuffIconComponent__setIcon_20694856(Component_srcLineSprite, datalist->m_Items[index], 0LL),
         (Component_srcLineSprite = (BattleServantBuffIconComponent_o *)this->fields.objList) == 0LL) )
   {
 LABEL_9:
-    sub_B2C434(Component_srcLineSprite, v9);
+    sub_B0D97C(Component_srcLineSprite);
   }
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
     (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)Component_srcLineSprite,
     (EventMissionProgressRequest_Argument_ProgressData_o *)Object,
-    (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_GameObject__Add__);
+    (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_GameObject__Add__);
 }
 
 
@@ -100,14 +103,14 @@ void __fastcall BattleServantShowBuffComponent__HideBuffObject(
   __int64 v14; // x0
 
   v2 = this;
-  if ( (byte_418A56A & 1) == 0 )
+  if ( (byte_4217292 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, method);
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
-    this = (BattleServantShowBuffComponent_o *)sub_B2C35C(
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, method);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
+    this = (BattleServantShowBuffComponent_o *)sub_B0D8A4(
                                                  &Method_System_Collections_Generic_List_GameObject__get_Item__,
                                                  v4);
-    byte_418A56A = 1;
+    byte_4217292 = 1;
   }
   objList = v2->fields.objList;
   if ( !objList )
@@ -119,13 +122,13 @@ void __fastcall BattleServantShowBuffComponent__HideBuffObject(
     if ( (int)v6 >= size )
       break;
     if ( size <= v6 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
     this = (BattleServantShowBuffComponent_o *)objList->fields._items->m_Items[v6];
     if ( !this )
       goto LABEL_20;
     this = (BattleServantShowBuffComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                  (UnityEngine_GameObject_o *)this,
-                                                 (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                 (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
     if ( !this )
       goto LABEL_20;
     monitor = this[1].monitor;
@@ -143,8 +146,8 @@ void __fastcall BattleServantShowBuffComponent__HideBuffObject(
         {
           if ( v12 >= max_length )
           {
-            v14 = sub_B2C460(this);
-            sub_B2C400(v14, 0LL);
+            v14 = sub_B0D9A8(this);
+            sub_B0D948(v14, 0LL);
           }
           v13 = datalist->m_Items[v12];
           if ( !v13 )
@@ -155,10 +158,10 @@ void __fastcall BattleServantShowBuffComponent__HideBuffObject(
             goto LABEL_18;
         }
 LABEL_20:
-        sub_B2C434(this, method);
+        sub_B0D97C(this);
       }
 LABEL_18:
-      BattleServantBuffIconComponent__setIcon_21208020((BattleServantBuffIconComponent_o *)this, 0LL, 0LL);
+      BattleServantBuffIconComponent__setIcon_20694856((BattleServantBuffIconComponent_o *)this, 0LL, 0LL);
     }
 LABEL_19:
     objList = v2->fields.objList;
@@ -188,14 +191,14 @@ void __fastcall BattleServantShowBuffComponent__NewBuff(
   __int64 v14; // x0
 
   v4 = this;
-  if ( (byte_418A56C & 1) == 0 )
+  if ( (byte_4217294 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, *(_QWORD *)&index);
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
-    this = (BattleServantShowBuffComponent_o *)sub_B2C35C(
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, *(_QWORD *)&index);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
+    this = (BattleServantShowBuffComponent_o *)sub_B0D8A4(
                                                  &Method_System_Collections_Generic_List_GameObject__get_Item__,
                                                  v6);
-    byte_418A56C = 1;
+    byte_4217294 = 1;
   }
   objList = v4->fields.objList;
   if ( !objList )
@@ -211,13 +214,13 @@ void __fastcall BattleServantShowBuffComponent__NewBuff(
       return;
     }
     if ( size <= v10 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
     this = (BattleServantShowBuffComponent_o *)*((_QWORD *)&objList->fields._items->obj.klass + v8);
     if ( !this )
       goto LABEL_12;
     this = (BattleServantShowBuffComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                  (UnityEngine_GameObject_o *)this,
-                                                 (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                 (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
     if ( !this )
       goto LABEL_12;
     if ( !this[1].monitor )
@@ -232,19 +235,19 @@ void __fastcall BattleServantShowBuffComponent__NewBuff(
     goto LABEL_12;
   if ( datalist->max_length <= index )
   {
-    v14 = sub_B2C460(this);
-    sub_B2C400(v14, 0LL);
+    v14 = sub_B0D9A8(this);
+    sub_B0D948(v14, 0LL);
   }
-  BattleServantBuffIconComponent__setIcon_21208020(
+  BattleServantBuffIconComponent__setIcon_20694856(
     (BattleServantBuffIconComponent_o *)this,
     datalist->m_Items[index],
     0LL);
   v13 = v4->fields.objList;
   if ( !v13 )
 LABEL_12:
-    sub_B2C434(this, *(_QWORD *)&index);
+    sub_B0D97C(this);
   if ( v13->fields._size <= v10 )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
   BattleServantShowBuffComponent__UpdatePosition(
     v4,
     *((UnityEngine_GameObject_o **)&v13->fields._items->obj.klass + v8),
@@ -265,19 +268,19 @@ void __fastcall BattleServantShowBuffComponent__UpdateActiveBuffList(
   int size; // w8
 
   v2 = this;
-  if ( (byte_418A56D & 1) == 0 )
+  if ( (byte_4217295 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, method);
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
-    this = (BattleServantShowBuffComponent_o *)sub_B2C35C(
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, method);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
+    this = (BattleServantShowBuffComponent_o *)sub_B0D8A4(
                                                  &Method_System_Collections_Generic_List_GameObject__get_Item__,
                                                  v4);
-    byte_418A56D = 1;
+    byte_4217295 = 1;
   }
   objList = v2->fields.objList;
   if ( !objList )
 LABEL_13:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   v6 = 0LL;
   while ( 1 )
   {
@@ -285,13 +288,13 @@ LABEL_13:
     if ( (int)v6 >= size )
       break;
     if ( size <= (unsigned int)v6 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
     this = (BattleServantShowBuffComponent_o *)objList->fields._items->m_Items[v6];
     if ( this )
     {
       this = (BattleServantShowBuffComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                    (UnityEngine_GameObject_o *)this,
-                                                   (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                   (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
       if ( this )
       {
         if ( this[1].monitor )
@@ -313,7 +316,6 @@ bool __fastcall BattleServantShowBuffComponent__UpdateBuff(
         int32_t index,
         const MethodInfo *method)
 {
-  int32_t v3; // w19
   BattleServantShowBuffComponent_o *v4; // x20
   __int64 v5; // x1
   __int64 v6; // x1
@@ -323,20 +325,20 @@ bool __fastcall BattleServantShowBuffComponent__UpdateBuff(
   unsigned int v10; // w24
   _DWORD *monitor; // x8
   struct BattleBuffData_ShowBuffData_array *datalist; // x9
-  const MethodInfo *v14; // x3
-  struct System_Collections_Generic_List_GameObject__o *v15; // x22
-  __int64 v16; // x0
+  BattleBuffData_ShowBuffData_o *v13; // x1
+  const MethodInfo *v15; // x3
+  struct System_Collections_Generic_List_GameObject__o *v16; // x22
+  __int64 v17; // x0
 
-  v3 = index;
   v4 = this;
-  if ( (byte_418A56B & 1) == 0 )
+  if ( (byte_4217293 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, *(_QWORD *)&index);
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
-    this = (BattleServantShowBuffComponent_o *)sub_B2C35C(
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, *(_QWORD *)&index);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
+    this = (BattleServantShowBuffComponent_o *)sub_B0D8A4(
                                                  &Method_System_Collections_Generic_List_GameObject__get_Item__,
                                                  v6);
-    byte_418A56B = 1;
+    byte_4217293 = 1;
   }
   objList = v4->fields.objList;
   if ( !objList )
@@ -349,13 +351,13 @@ bool __fastcall BattleServantShowBuffComponent__UpdateBuff(
     if ( (int)v8 - 4 >= size )
       return 0;
     if ( size <= v10 )
-      System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+      System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
     this = (BattleServantShowBuffComponent_o *)*((_QWORD *)&objList->fields._items->obj.klass + v8);
     if ( !this )
       goto LABEL_16;
     this = (BattleServantShowBuffComponent_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                  (UnityEngine_GameObject_o *)this,
-                                                 (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                 (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
     if ( !this )
       goto LABEL_16;
     monitor = this[1].monitor;
@@ -364,15 +366,15 @@ bool __fastcall BattleServantShowBuffComponent__UpdateBuff(
       datalist = v4->fields.datalist;
       if ( !datalist )
         goto LABEL_16;
-      if ( datalist->max_length <= v3 )
+      if ( datalist->max_length <= index )
       {
-        v16 = sub_B2C460(this);
-        sub_B2C400(v16, 0LL);
+        v17 = sub_B0D9A8(this);
+        sub_B0D948(v17, 0LL);
       }
-      *(_QWORD *)&index = datalist->m_Items[v3];
-      if ( !*(_QWORD *)&index )
+      v13 = datalist->m_Items[index];
+      if ( !v13 )
         goto LABEL_16;
-      if ( *(_DWORD *)(*(_QWORD *)&index + 36LL) == monitor[9] )
+      if ( v13->fields.addOrder == monitor[9] )
         break;
     }
     objList = v4->fields.objList;
@@ -380,21 +382,18 @@ bool __fastcall BattleServantShowBuffComponent__UpdateBuff(
     if ( !objList )
       goto LABEL_16;
   }
-  BattleServantBuffIconComponent__setIcon_21208020(
-    (BattleServantBuffIconComponent_o *)this,
-    *(BattleBuffData_ShowBuffData_o **)&index,
-    0LL);
-  v15 = v4->fields.objList;
-  if ( !v15 )
+  BattleServantBuffIconComponent__setIcon_20694856((BattleServantBuffIconComponent_o *)this, v13, 0LL);
+  v16 = v4->fields.objList;
+  if ( !v16 )
 LABEL_16:
-    sub_B2C434(this, *(_QWORD *)&index);
-  if ( v15->fields._size <= v10 )
-    System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
+    sub_B0D97C(this);
+  if ( v16->fields._size <= v10 )
+    System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
   BattleServantShowBuffComponent__UpdatePosition(
     v4,
-    *((UnityEngine_GameObject_o **)&v15->fields._items->obj.klass + v8),
-    v3,
-    v14);
+    *((UnityEngine_GameObject_o **)&v16->fields._items->obj.klass + v8),
+    index,
+    v15);
   return 1;
 }
 
@@ -417,7 +416,7 @@ void __fastcall BattleServantShowBuffComponent__UpdatePosition(
         v6 = this,
         (this = (BattleServantShowBuffComponent_o *)UnityEngine_GameObject__get_transform(obj, 0LL)) == 0LL) )
   {
-    sub_B2C434(this, obj);
+    sub_B0D97C(this);
   }
   v8 = index / maxCount;
   if ( index / maxCount > maxLine )
@@ -444,33 +443,32 @@ void __fastcall BattleServantShowBuffComponent__setBuffList(
   struct BattleBuffData_ShowBuffData_array **p_datalist; // x20
   const MethodInfo *v13; // x1
   UnityEngine_GameObject_o *updated; // x0
-  __int64 v15; // x1
-  const MethodInfo *v16; // x2
+  const MethodInfo *v15; // x2
   struct BattleBuffData_ShowBuffData_array *datalist; // x8
-  int32_t v18; // w21
-  __int64 v19; // x8
+  int32_t v17; // w21
+  __int64 v18; // x8
   struct System_Collections_Generic_List_GameObject__o *objList; // x9
   int32_t size; // w9
-  int v22; // w10
-  int v23; // w22
-  struct System_Collections_Generic_List_GameObject__o *v24; // x26
-  __int64 v25; // x24
-  int v26; // w8
+  int v21; // w10
+  int v22; // w22
+  struct System_Collections_Generic_List_GameObject__o *v23; // x26
+  __int64 v24; // x24
+  int v25; // w8
   _DWORD *monitor; // x8
-  struct BattleBuffData_ShowBuffData_array *v28; // x9
-  BattleBuffData_ShowBuffData_o *v29; // x9
-  __int64 v30; // x0
+  struct BattleBuffData_ShowBuffData_array *v27; // x9
+  BattleBuffData_ShowBuffData_o *v28; // x9
+  __int64 v29; // x0
 
-  if ( (byte_418A568 & 1) == 0 )
+  if ( (byte_4217290 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, buffList);
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__get_Count__, v10);
-    sub_B2C35C(&Method_System_Collections_Generic_List_GameObject__get_Item__, v11);
-    byte_418A568 = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, buffList);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__get_Count__, v10);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_GameObject__get_Item__, v11);
+    byte_4217290 = 1;
   }
   this->fields.datalist = buffList;
   p_datalist = &this->fields.datalist;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.datalist,
     (System_Int32_array **)buffList,
     (System_String_array **)method,
@@ -483,91 +481,91 @@ void __fastcall BattleServantShowBuffComponent__setBuffList(
   datalist = this->fields.datalist;
   if ( !datalist )
     goto LABEL_35;
-  v18 = 0;
+  v17 = 0;
   while ( 1 )
   {
-    v19 = *(_QWORD *)&datalist->max_length;
-    if ( v18 >= (int)v19 )
+    v18 = *(_QWORD *)&datalist->max_length;
+    if ( v17 >= (int)v18 )
       return;
     objList = this->fields.objList;
     if ( !objList )
       goto LABEL_35;
     size = objList->fields._size;
-    v22 = this->fields.maxLine * this->fields.maxCount;
-    if ( v22 <= v18 )
+    v21 = this->fields.maxLine * this->fields.maxCount;
+    if ( v21 <= v17 )
       break;
-    if ( size <= v18 )
+    if ( size <= v17 )
     {
-      BattleServantShowBuffComponent__CreateBuffObj(this, v18, v16);
+      BattleServantShowBuffComponent__CreateBuffObj(this, v17, v15);
     }
     else
     {
-      updated = (UnityEngine_GameObject_o *)BattleServantShowBuffComponent__UpdateBuff(this, v18, v16);
+      updated = (UnityEngine_GameObject_o *)BattleServantShowBuffComponent__UpdateBuff(this, v17, v15);
       if ( ((unsigned __int8)updated & 1) == 0 )
-        BattleServantShowBuffComponent__NewBuff(this, v18, v16);
+        BattleServantShowBuffComponent__NewBuff(this, v17, v15);
     }
     datalist = *p_datalist;
-    ++v18;
+    ++v17;
     if ( !*p_datalist )
       goto LABEL_35;
   }
-  v23 = size - v22;
-  if ( size - v22 >= 1 && v18 < (int)v19 )
+  v22 = size - v21;
+  if ( size - v21 >= 1 && v17 < (int)v18 )
   {
     while ( 1 )
     {
-      v24 = this->fields.objList;
-      if ( !v24 )
+      v23 = this->fields.objList;
+      if ( !v23 )
         break;
-      v25 = 0LL;
+      v24 = 0LL;
       while ( 1 )
       {
-        v26 = v24->fields._size;
-        if ( (int)v25 >= v26 )
+        v25 = v23->fields._size;
+        if ( (int)v24 >= v25 )
           break;
-        if ( v26 <= (unsigned int)v25 )
-          System_ThrowHelper__ThrowArgumentOutOfRangeException_41710740(0LL);
-        updated = v24->fields._items->m_Items[v25];
+        if ( v25 <= (unsigned int)v24 )
+          System_ThrowHelper__ThrowArgumentOutOfRangeException_41496008(0LL);
+        updated = v23->fields._items->m_Items[v24];
         if ( !updated )
           goto LABEL_35;
         updated = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                 updated,
-                                                (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
+                                                (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___);
         if ( !updated )
           goto LABEL_35;
         monitor = updated[3].monitor;
         if ( monitor )
         {
-          v28 = *p_datalist;
+          v27 = *p_datalist;
           if ( !*p_datalist )
             goto LABEL_35;
-          if ( v18 >= v28->max_length )
+          if ( v17 >= v27->max_length )
           {
-            v30 = sub_B2C460(updated);
-            sub_B2C400(v30, 0LL);
+            v29 = sub_B0D9A8(updated);
+            sub_B0D948(v29, 0LL);
           }
-          v29 = v28->m_Items[v18];
-          if ( !v29 )
+          v28 = v27->m_Items[v17];
+          if ( !v28 )
             goto LABEL_35;
-          if ( monitor[9] == v29->fields.addOrder )
+          if ( monitor[9] == v28->fields.addOrder )
           {
-            BattleServantBuffIconComponent__setIcon_21208020((BattleServantBuffIconComponent_o *)updated, 0LL, 0LL);
-            --v23;
+            BattleServantBuffIconComponent__setIcon_20694856((BattleServantBuffIconComponent_o *)updated, 0LL, 0LL);
+            --v22;
             break;
           }
         }
-        v24 = this->fields.objList;
-        ++v25;
-        if ( !v24 )
+        v23 = this->fields.objList;
+        ++v24;
+        if ( !v23 )
           goto LABEL_35;
       }
       if ( !*p_datalist )
         break;
-      if ( v23 >= 1 && ++v18 < (signed int)(*p_datalist)->max_length )
+      if ( v22 >= 1 && ++v17 < (signed int)(*p_datalist)->max_length )
         continue;
       return;
     }
 LABEL_35:
-    sub_B2C434(updated, v15);
+    sub_B0D97C(updated);
   }
 }

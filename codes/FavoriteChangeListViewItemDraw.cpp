@@ -21,11 +21,11 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
   UnityEngine_Object_o *maskSprite; // x21
   const MethodInfo *v16; // x2
 
-  if ( (byte_4186942 & 1) == 0 )
+  if ( (byte_42131E8 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v7);
-    byte_4186942 = 1;
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v7);
+    byte_42131E8 = 1;
   }
   if ( item )
   {
@@ -49,7 +49,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetInput(
             goto LABEL_48;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                 maskLb,
-                                                (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
             goto LABEL_48;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0LL);
@@ -147,7 +147,7 @@ LABEL_46:
       }
     }
 LABEL_48:
-    sub_B2C434(maskLb, item);
+    sub_B0D97C(maskLb);
   }
 }
 
@@ -163,28 +163,29 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
   ServantFaceIconComponent_o *servantFaceIcon; // x0
   UnityEngine_Object_o *partyIcon; // x21
   FlashingIconComponent_o *v11; // x21
+  const MethodInfo *v12; // x1
   UnityEngine_Object_o *lockSprite; // x21
   UnityEngine_GameObject_o *gameObject; // x21
   UnityEngine_Object_o *choiceSprite; // x21
-  UnityEngine_GameObject_o *v15; // x21
+  UnityEngine_GameObject_o *v16; // x21
   UnityEngine_Object_o *pushSprite; // x21
   UnityEngine_Object_o *maskSprite; // x21
-  const MethodInfo *v18; // x2
+  const MethodInfo *v19; // x2
   UILabel_o *statusLb; // x21
 
-  if ( (byte_4186941 & 1) == 0 )
+  if ( (byte_42131E7 & 1) == 0 )
   {
-    sub_B2C35C(&LocalizationManager_TypeInfo, item);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v7);
-    sub_B2C35C(&StringLiteral_8858/*"MYROOM_FAVORITE_STATUS"*/, v8);
-    byte_4186941 = 1;
+    sub_B0D8A4(&LocalizationManager_TypeInfo, item);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v7);
+    sub_B0D8A4(&StringLiteral_8881/*"MYROOM_FAVORITE_STATUS"*/, v8);
+    byte_42131E7 = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_30719352(
+      ServantFaceIconComponent__Set_29552540(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -221,9 +222,9 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
                 if ( !v11 )
                   goto LABEL_56;
                 if ( ((unsigned __int8)servantFaceIcon & 1) != 0 )
-                  FlashingIconComponent__Set(v11, (const MethodInfo *)item);
+                  FlashingIconComponent__Set(v11, v12);
                 else
-                  FlashingIconComponent__Clear(v11, (const MethodInfo *)item);
+                  FlashingIconComponent__Clear(v11, v12);
               }
               lockSprite = (UnityEngine_Object_o *)this->fields.lockSprite;
               if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -253,11 +254,11 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.choiceSprite;
                 if ( !servantFaceIcon )
                   goto LABEL_56;
-                v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantFaceIcon, 0LL);
+                v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantFaceIcon, 0LL);
                 servantFaceIcon = (ServantFaceIconComponent_o *)FavoriteChangeListViewItem__get_IsDispChoice(item, 0LL);
-                if ( !v15 )
+                if ( !v16 )
                   goto LABEL_56;
-                UnityEngine_GameObject__SetActive(v15, (unsigned __int8)servantFaceIcon & 1, 0LL);
+                UnityEngine_GameObject__SetActive(v16, (unsigned __int8)servantFaceIcon & 1, 0LL);
               }
               pushSprite = (UnityEngine_Object_o *)this->fields.pushSprite;
               if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -298,7 +299,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetItem(
               if ( !item->fields.isFavorite )
               {
 LABEL_55:
-                FavoriteChangeListViewItemDraw__SetMaskInfo(this, item, v18);
+                FavoriteChangeListViewItemDraw__SetMaskInfo(this, item, v19);
                 return;
               }
               servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.statusLb;
@@ -317,7 +318,7 @@ LABEL_55:
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   }
                   servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_8858/*"MYROOM_FAVORITE_STATUS"*/,
+                                                                    (System_String_o *)StringLiteral_8881/*"MYROOM_FAVORITE_STATUS"*/,
                                                                     0LL);
                   if ( statusLb )
                   {
@@ -332,7 +333,7 @@ LABEL_55:
       }
     }
 LABEL_56:
-    sub_B2C434(servantFaceIcon, item);
+    sub_B0D97C(servantFaceIcon);
   }
 }
 
@@ -349,12 +350,12 @@ void __fastcall FavoriteChangeListViewItemDraw__SetMaskInfo(
   __int64 *v8; // x8
 
   v4 = (FavoriteChangeListViewItemDraw_o **)this;
-  if ( (byte_4186943 & 1) == 0 )
+  if ( (byte_42131E9 & 1) == 0 )
   {
-    sub_B2C35C(&LocalizationManager_TypeInfo, item);
-    sub_B2C35C(&StringLiteral_11620/*"SELECT_CANNOT"*/, v5);
-    this = (FavoriteChangeListViewItemDraw_o *)sub_B2C35C(&StringLiteral_11643/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
-    byte_4186943 = 1;
+    sub_B0D8A4(&LocalizationManager_TypeInfo, item);
+    sub_B0D8A4(&StringLiteral_11647/*"SELECT_CANNOT"*/, v5);
+    this = (FavoriteChangeListViewItemDraw_o *)sub_B0D8A4(&StringLiteral_11670/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
+    byte_42131E9 = 1;
   }
   if ( !item )
     goto LABEL_40;
@@ -398,7 +399,7 @@ void __fastcall FavoriteChangeListViewItemDraw__SetMaskInfo(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v8 = &StringLiteral_11643/*"SELECT_SERVANT_EVENT_JOIN"*/;
+      v8 = &StringLiteral_11670/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_37:
       this = (FavoriteChangeListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v8, 0LL);
       if ( v7 )
@@ -407,7 +408,7 @@ LABEL_37:
         return;
       }
 LABEL_40:
-      sub_B2C434(this, item);
+      sub_B0D97C(this);
     }
     if ( FavoriteChangeListViewItem__get_IsHerioneReave(item, 0LL) )
     {
@@ -448,7 +449,7 @@ LABEL_31:
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v8 = &StringLiteral_11620/*"SELECT_CANNOT"*/;
+      v8 = &StringLiteral_11647/*"SELECT_CANNOT"*/;
       goto LABEL_37;
     }
   }

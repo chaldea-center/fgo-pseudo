@@ -31,25 +31,25 @@ float __fastcall ShortestDistanceFromAllyServant__GetRatingBase(
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v11 = (WarBoardRatingBase_o *)this;
-  if ( (byte_4186D20 & 1) == 0 )
+  if ( (byte_421549E & 1) == 0 )
   {
-    sub_B2C35C(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
-    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__, v12);
-    sub_B2C35C(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__, v13);
-    this = (ShortestDistanceFromAllyServant_o *)sub_B2C35C(&WarBoardAIManager_TypeInfo, v14);
-    byte_4186D20 = 1;
+    sub_B0D8A4(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
+    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__, v12);
+    sub_B0D8A4(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__, v13);
+    this = (ShortestDistanceFromAllyServant_o *)sub_B0D8A4(&WarBoardAIManager_TypeInfo, v14);
+    byte_421549E = 1;
   }
   if ( !targetSquare || !dicPiecePlaceData )
     goto LABEL_24;
   if ( System_Collections_Generic_Dictionary_int__uint___ContainsKey(
          dicPiecePlaceData,
          targetSquare->fields._squareIndex_k__BackingField,
-         (const MethodInfo_2E6C1B8 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
+         (const MethodInfo_2E97E94 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_int__uint___get_Item(
              dicPiecePlaceData,
              targetSquare->fields._squareIndex_k__BackingField,
-             (const MethodInfo_2E6BE94 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+             (const MethodInfo_2E97B70 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
     if ( (BYTE3(WarBoardAIManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !WarBoardAIManager_TypeInfo->_2.cctor_finished )
     {
@@ -91,7 +91,7 @@ float __fastcall ShortestDistanceFromAllyServant__GetRatingBase(
                                   - ratingBase->fields.adjustmentValueA2 * (max_length - 1)),
                        0.0);
 LABEL_24:
-            sub_B2C434(this, *(_QWORD *)&forceId);
+            sub_B0D97C(this);
           }
           WarBoardRatingBase__DebugLog(v11, calcSquare, targetSquare, 0LL);
         }

@@ -1,13 +1,13 @@
 void __fastcall GachaReleaseEntity___ctor(GachaReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_418B004 & 1) == 0 )
+  if ( (byte_421807B & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
-    byte_418B004 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
+    byte_421807B = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall GachaReleaseEntity__CreatePK(
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_418B002 & 1) == 0 )
+  if ( (byte_4218079 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
-    byte_418B002 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
+    byte_4218079 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            gachaId,
            type,
            targetId,
-           (const MethodInfo_1732D30 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_1713844 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -45,10 +45,10 @@ bool __fastcall GachaReleaseEntity__IsEnable(GachaReleaseEntity_o *this, const M
   int32_t targetId; // w21
   int64_t value; // x20
 
-  if ( (byte_418B003 & 1) == 0 )
+  if ( (byte_421807A & 1) == 0 )
   {
-    sub_B2C35C(&CondType_TypeInfo, method);
-    byte_418B003 = 1;
+    sub_B0D8A4(&CondType_TypeInfo, method);
+    byte_421807A = 1;
   }
   type = this->fields.type;
   if ( type != 46 && type != 1 )

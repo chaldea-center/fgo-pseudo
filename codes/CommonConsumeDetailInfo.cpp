@@ -13,18 +13,18 @@ void __fastcall CommonConsumeDetailInfo___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.CommonConsumeEntity = commonConsumeEntity;
-  sub_B2C2F8(&this->fields, commonConsumeEntity);
+  sub_B0D840(&this->fields, commonConsumeEntity);
   this->fields.targetEntity = targetEntity;
-  sub_B2C2F8(&this->fields.targetEntity, targetEntity);
+  sub_B0D840(&this->fields.targetEntity, targetEntity);
   this->fields.userOwnStatusEntity = userOwnStatusEntity;
-  sub_B2C2F8(&this->fields.userOwnStatusEntity, userOwnStatusEntity);
+  v9 = sub_B0D840(&this->fields.userOwnStatusEntity, userOwnStatusEntity);
   v11 = this->fields.CommonConsumeEntity;
   if ( !v11 )
-    sub_B2C434(v9, v10);
+    sub_B0D97C(v9);
   this->fields._Num_k__BackingField = v11->fields.num;
   TargetName = CommonConsumeDetailInfo__GetTargetName(this, v10);
   this->fields._Name_k__BackingField = TargetName;
-  sub_B2C2F8(&this->fields._Name_k__BackingField, TargetName);
+  sub_B0D840(&this->fields._Name_k__BackingField, TargetName);
   this->fields._IsOwnedEnoughly_k__BackingField = CommonConsumeDetailInfo__CheckIsOwnedEnoughly(this, v13);
 }
 
@@ -40,11 +40,11 @@ bool __fastcall CommonConsumeDetailInfo__CheckIsOwnedEnoughly(
   Il2CppObject *userOwnStatusEntity; // x8
   __int64 v8; // x11
 
-  if ( (byte_4183E1B & 1) == 0 )
+  if ( (byte_42108C0 & 1) == 0 )
   {
-    sub_B2C35C(&ItemEntity_TypeInfo, method);
-    sub_B2C35C(&UserItemEntity_TypeInfo, v3);
-    byte_4183E1B = 1;
+    sub_B0D8A4(&ItemEntity_TypeInfo, method);
+    sub_B0D8A4(&UserItemEntity_TypeInfo, v3);
+    byte_42108C0 = 1;
   }
   targetEntity = this->fields.targetEntity;
   result = targetEntity
@@ -68,11 +68,11 @@ System_String_o *__fastcall CommonConsumeDetailInfo__GetTargetName(
   __int64 v5; // x11
   System_String_o **p_monitor; // x8
 
-  if ( (byte_4183E1A & 1) == 0 )
+  if ( (byte_42108BF & 1) == 0 )
   {
-    sub_B2C35C(&ItemEntity_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_1/*""*/, v3);
-    byte_4183E1A = 1;
+    sub_B0D8A4(&ItemEntity_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v3);
+    byte_42108BF = 1;
   }
   targetEntity = this->fields.targetEntity;
   if ( targetEntity
@@ -124,7 +124,7 @@ void __fastcall CommonConsumeDetailInfo__set_Name(
         const MethodInfo *method)
 {
   this->fields._Name_k__BackingField = value;
-  sub_B2C2F8(&this->fields._Name_k__BackingField, value);
+  sub_B0D840(&this->fields._Name_k__BackingField, value);
 }
 
 

@@ -3,10 +3,10 @@ void __fastcall WarBoardSimplePopup___cctor(const MethodInfo *method)
   __int64 v1; // x1
   WarBoardSimplePopup_c *v2; // x8
 
-  if ( (byte_41892A2 & 1) == 0 )
+  if ( (byte_421658B & 1) == 0 )
   {
-    sub_B2C35C(&WarBoardSimplePopup_TypeInfo, v1);
-    byte_41892A2 = 1;
+    sub_B0D8A4(&WarBoardSimplePopup_TypeInfo, v1);
+    byte_421658B = 1;
   }
   WarBoardSimplePopup_TypeInfo->static_fields->LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE = 20;
   WarBoardSimplePopup_TypeInfo->static_fields->RIGHT_MARGIN_WHEN_LOCATING_ON_RIGHT_SIDE = 20;
@@ -22,10 +22,10 @@ void __fastcall WarBoardSimplePopup___cctor(const MethodInfo *method)
 
 void __fastcall WarBoardSimplePopup___ctor(WarBoardSimplePopup_o *this, const MethodInfo *method)
 {
-  if ( (byte_41892A1 & 1) == 0 )
+  if ( (byte_421658A & 1) == 0 )
   {
-    sub_B2C35C(&WarBoardInfoPopupBase_TypeInfo, method);
-    byte_41892A1 = 1;
+    sub_B0D8A4(&WarBoardInfoPopupBase_TypeInfo, method);
+    byte_421658A = 1;
   }
   this->fields.targetPiecePosition = UnityEngine_Vector3__get_zero(0LL);
   if ( (BYTE3(WarBoardInfoPopupBase_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -46,15 +46,15 @@ UnityEngine_GameObject_o *__fastcall WarBoardSimplePopup__AddElement(
   UnityEngine_GameObject_o *mainView; // x0
   UnityEngine_Transform_o *transform; // x20
 
-  if ( (byte_418929D & 1) == 0 )
+  if ( (byte_4216586 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Object_Instantiate_GameObject____67450600, elemPrefab);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
-    byte_418929D = 1;
+    sub_B0D8A4(&Method_UnityEngine_Object_Instantiate_GameObject____68025336, elemPrefab);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
+    byte_4216586 = 1;
   }
   mainView = this->fields.mainView;
   if ( !mainView )
-    sub_B2C434(0LL, elemPrefab);
+    sub_B0D97C(0LL);
   transform = UnityEngine_GameObject__get_transform(mainView, 0LL);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -64,7 +64,7 @@ UnityEngine_GameObject_o *__fastcall WarBoardSimplePopup__AddElement(
   return (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_UILabel_(
                                        (UILabel_o *)elemPrefab,
                                        transform,
-                                       (const MethodInfo_2095F74 *)Method_UnityEngine_Object_Instantiate_GameObject____67450600);
+                                       (const MethodInfo_204AAC0 *)Method_UnityEngine_Object_Instantiate_GameObject____68025336);
 }
 
 
@@ -133,22 +133,22 @@ void __fastcall WarBoardSimplePopup__AdjustMainViewPosition(WarBoardSimplePopup_
   int v63; // w8
   struct UnityEngine_Transform_o *v64; // x8
 
-  if ( (byte_418929F & 1) == 0 )
+  if ( (byte_4216588 & 1) == 0 )
   {
-    sub_B2C35C(&FSUtility_TypeInfo, method);
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v3);
-    sub_B2C35C(&ManagerConfig_TypeInfo, v4);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v5);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
-    sub_B2C35C(&WarBoardSimplePopup_TypeInfo, v7);
-    byte_418929F = 1;
+    sub_B0D8A4(&FSUtility_TypeInfo, method);
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v3);
+    sub_B0D8A4(&ManagerConfig_TypeInfo, v4);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v5);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
+    sub_B0D8A4(&WarBoardSimplePopup_TypeInfo, v7);
+    byte_4216588 = 1;
   }
   mainView = this->fields.mainView;
   if ( !mainView )
     goto LABEL_146;
   Component_srcLineSprite = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                               mainView,
-                              (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                              (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -207,7 +207,7 @@ void __fastcall WarBoardSimplePopup__AdjustMainViewPosition(WarBoardSimplePopup_
       if ( v30 )
       {
         *(&v30->fields.m_state + 1) = WarBoardSimplePopup_TypeInfo->static_fields->LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE;
-        mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+        mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
         if ( mainView )
         {
           if ( LODWORD(mainView[21].klass) == 1 )
@@ -289,7 +289,7 @@ LABEL_144:
               if ( !v42 )
                 goto LABEL_146;
               HIDWORD(v42[1].klass) = WarBoardSimplePopup_TypeInfo->static_fields->BOTTOM_MARGIN;
-              mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+              mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
               if ( !mainView )
                 goto LABEL_146;
               if ( LODWORD(mainView[21].klass) != 1 )
@@ -326,14 +326,14 @@ LABEL_141:
         }
       }
 LABEL_146:
-      sub_B2C434(mainView, method);
+      sub_B0D97C(mainView);
     }
     mainView = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !mainView )
       goto LABEL_146;
     v17 = (UIWidget_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                           mainView,
-                          (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                          (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
@@ -393,7 +393,7 @@ LABEL_146:
         if ( !v48 )
           goto LABEL_146;
         *(&v48->fields.m_state + 1) = WarBoardSimplePopup_TypeInfo->static_fields->FS_LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE;
-        mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+        mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
         if ( !mainView )
           goto LABEL_146;
         if ( LODWORD(mainView[21].klass) == 1 )
@@ -506,10 +506,10 @@ void __fastcall WarBoardSimplePopup__CleanPopup(WarBoardSimplePopup_o *this, con
   int32_t v4; // w20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_41892A0 & 1) == 0 )
+  if ( (byte_4216589 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    byte_41892A0 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    byte_4216589 = 1;
   }
   mainView = this->fields.mainView;
   if ( !mainView )
@@ -542,12 +542,12 @@ void __fastcall WarBoardSimplePopup__CleanPopup(WarBoardSimplePopup_o *this, con
       {
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       }
-      UnityEngine_Object__DestroyImmediate_35315108(gameObject, 0LL);
+      UnityEngine_Object__DestroyImmediate_34935488(gameObject, 0LL);
       if ( --v4 < 0 )
         return;
     }
 LABEL_14:
-    sub_B2C434(mainView, method);
+    sub_B0D97C(mainView);
   }
 }
 
@@ -569,19 +569,19 @@ void __fastcall WarBoardSimplePopup__MainViewContentsFit(WarBoardSimplePopup_o *
   struct System_Action_string__o *v15; // x8
   struct System_Action_string__o *v16; // x9
 
-  if ( (byte_418929E & 1) == 0 )
+  if ( (byte_4216587 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v3);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v4);
-    byte_418929E = 1;
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v3);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v4);
+    byte_4216587 = 1;
   }
   mainView = this->fields.mainView;
   if ( !mainView )
     goto LABEL_28;
   Component_srcLineSprite = (UIWidget_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                             mainView,
-                                            (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                                            (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
   {
@@ -619,7 +619,7 @@ LABEL_26:
               goto LABEL_28;
             Component_WebViewObject = UnityEngine_Component__GetComponent_WebViewObject_(
                                         (UnityEngine_Component_o *)mainView,
-                                        (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                        (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
             if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             {
@@ -634,7 +634,7 @@ LABEL_26:
               if ( !Component_WebViewObject )
                 goto LABEL_28;
               onStarted_high = HIDWORD(Component_WebViewObject[1].fields.onStarted);
-              UIRect__SetAnchor_37816404((UIRect_o *)Component_WebViewObject, this->fields.mainView, 0LL);
+              UIRect__SetAnchor_37523768((UIRect_o *)Component_WebViewObject, this->fields.mainView, 0LL);
               onStarted = Component_WebViewObject->fields.onStarted;
               if ( !onStarted )
                 goto LABEL_28;
@@ -665,7 +665,7 @@ LABEL_26:
       }
     }
 LABEL_28:
-    sub_B2C434(mainView, method);
+    sub_B0D97C(mainView);
   }
 }
 

@@ -96,23 +96,23 @@ void __fastcall EventMapManagerBase__Finish(EventMapManagerBase_o *this, const M
     this,
     this->klass->vtable._28_Finish.methodPtr);
   this->fields.terminalMap = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.terminalMap, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.terminalMap, 0LL, v3, v4, v5, v6, v7, v8);
   this->fields.mapCamera = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.mapCamera, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.mapCamera, 0LL, v9, v10, v11, v12, v13, v14);
   this->fields.rootRoadP = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.rootRoadP, 0LL, v15, v16, v17, v18, v19, v20);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.rootRoadP, 0LL, v15, v16, v17, v18, v19, v20);
   this->fields.rootSpotP = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.rootSpotP, 0LL, v21, v22, v23, v24, v25, v26);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.rootSpotP, 0LL, v21, v22, v23, v24, v25, v26);
   this->fields.rootPathP = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.rootPathP, 0LL, v27, v28, v29, v30, v31, v32);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.rootPathP, 0LL, v27, v28, v29, v30, v31, v32);
   this->fields.rootGimmickP = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.rootGimmickP, 0LL, v33, v34, v35, v36, v37, v38);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.rootGimmickP, 0LL, v33, v34, v35, v36, v37, v38);
   this->fields.rootEffectP = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.rootEffectP, 0LL, v39, v40, v41, v42, v43, v44);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.rootEffectP, 0LL, v39, v40, v41, v42, v43, v44);
   this->fields.warInfo = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.warInfo, 0LL, v45, v46, v47, v48, v49, v50);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.warInfo, 0LL, v45, v46, v47, v48, v49, v50);
   this->fields.mapInfo = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.mapInfo, 0LL, v51, v52, v53, v54, v55, v56);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.mapInfo, 0LL, v51, v52, v53, v54, v55, v56);
 }
 
 
@@ -148,20 +148,20 @@ void __fastcall EventMapManagerBase__LocateDialogToUiRoot(
   UnityEngine_GameObject_o *mInstance; // x0
   System_Nullable_Vector3__o v6; // 0:x2.16
 
-  if ( (byte_4188D74 & 1) == 0 )
+  if ( (byte_4215A1C & 1) == 0 )
   {
-    sub_B2C35C(&TerminalSceneComponent_TypeInfo, dialog);
-    byte_4188D74 = 1;
+    sub_B0D8A4(&TerminalSceneComponent_TypeInfo, dialog);
+    byte_4215A1C = 1;
   }
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
   }
-  if ( !byte_4183C65 )
+  if ( !byte_421083D )
   {
-    sub_B2C35C(&TerminalSceneComponent_TypeInfo, dialog);
-    byte_4183C65 = 1;
+    sub_B0D8A4(&TerminalSceneComponent_TypeInfo, dialog);
+    byte_421083D = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( (BYTE3(TerminalSceneComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -178,7 +178,7 @@ void __fastcall EventMapManagerBase__LocateDialogToUiRoot(
         !dialog)
     || (mInstance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)dialog, 0LL)) == 0LL )
   {
-    sub_B2C434(mInstance, dialog);
+    sub_B0D97C(mInstance);
   }
   UnityEngine_GameObject__SetActive(mInstance, 0, 0LL);
 }
@@ -234,18 +234,18 @@ void __fastcall EventMapManagerBase__SetAllTouchBlock(
   int v6; // w9
 
   v4 = this;
-  if ( (byte_4188D72 & 1) == 0 )
+  if ( (byte_4215A1A & 1) == 0 )
   {
-    this = (EventMapManagerBase_o *)sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, value);
-    byte_4188D72 = 1;
+    this = (EventMapManagerBase_o *)sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, value);
+    byte_4215A1A = 1;
   }
   if ( !v4
     || ((touchBlockNum = v4->fields.touchBlockNum, value) ? (v6 = 1) : (v6 = -1),
         v4->fields.touchBlockNum = touchBlockNum + v6,
-        v4->fields.touchBlockNum = UnityEngine_Mathf__Max_40694800(touchBlockNum + v6, 0, 0LL),
-        (this = (EventMapManagerBase_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        v4->fields.touchBlockNum = UnityEngine_Mathf__Max_40819140(touchBlockNum + v6, 0, 0LL),
+        (this = (EventMapManagerBase_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
-    sub_B2C434(this, value);
+    sub_B0D97C(this);
   }
   CommonUI__SetEventFadeMaskCollider((CommonUI_o *)this, v4->fields.touchBlockNum > 0, 0LL);
   ((void (__fastcall *)(EventMapManagerBase_o *, bool, Il2CppMethodPointer))v4->klass->vtable._31_SetCameraWorkBlock.method)(
@@ -268,10 +268,10 @@ void __fastcall EventMapManagerBase__SetCameraWorkBlock(
   struct MapCamera_o *v8; // x8
 
   v4 = this;
-  if ( (byte_4188D73 & 1) == 0 )
+  if ( (byte_4215A1B & 1) == 0 )
   {
-    this = (EventMapManagerBase_o *)sub_B2C35C(&UnityEngine_Object_TypeInfo, value);
-    byte_4188D73 = 1;
+    this = (EventMapManagerBase_o *)sub_B0D8A4(&UnityEngine_Object_TypeInfo, value);
+    byte_4215A1B = 1;
   }
   if ( !v4 )
     goto LABEL_14;
@@ -281,7 +281,7 @@ void __fastcall EventMapManagerBase__SetCameraWorkBlock(
   else
     v6 = -1;
   v4->fields.cameraWorkBlockNum = cameraWorkBlockNum + v6;
-  v4->fields.cameraWorkBlockNum = UnityEngine_Mathf__Max_40694800(cameraWorkBlockNum + v6, 0, 0LL);
+  v4->fields.cameraWorkBlockNum = UnityEngine_Mathf__Max_40819140(cameraWorkBlockNum + v6, 0, 0LL);
   mapCamera = (UnityEngine_Object_o *)v4->fields.mapCamera;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -298,7 +298,7 @@ void __fastcall EventMapManagerBase__SetCameraWorkBlock(
       return;
     }
 LABEL_14:
-    sub_B2C434(this, value);
+    sub_B0D97C(this);
   }
 }
 
@@ -375,7 +375,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
   System_Int32_array *v65; // x7
 
   this->fields.terminalMap = terminalMap;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.terminalMap,
     (System_Int32_array **)terminalMap,
     (System_String_array **)mapInfo,
@@ -385,7 +385,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     (System_Int32_array *)rootGimmickP,
     (System_Int32_array *)rootPathP);
   this->fields.mapInfo = mapInfo;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.mapInfo,
     (System_Int32_array **)mapInfo,
     v18,
@@ -395,7 +395,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     v22,
     v23);
   this->fields.warInfo = warInfo;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.warInfo,
     (System_Int32_array **)warInfo,
     v24,
@@ -405,7 +405,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     v28,
     v29);
   this->fields.mapCamera = mapCamera;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.mapCamera,
     (System_Int32_array **)mapCamera,
     v30,
@@ -415,7 +415,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     v34,
     v35);
   this->fields.rootEffectP = rootEffectP;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.rootEffectP,
     (System_Int32_array **)rootEffectP,
     v36,
@@ -425,7 +425,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     v40,
     v41);
   this->fields.rootGimmickP = rootGimmickP;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.rootGimmickP,
     (System_Int32_array **)rootGimmickP,
     v42,
@@ -435,7 +435,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     v46,
     v47);
   this->fields.rootPathP = rootPathP;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.rootPathP,
     (System_Int32_array **)rootPathP,
     v48,
@@ -445,7 +445,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     v52,
     v53);
   this->fields.rootRoadP = rootRoadP;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.rootRoadP,
     (System_Int32_array **)rootRoadP,
     v54,
@@ -455,7 +455,7 @@ void __fastcall EventMapManagerBase__SetTerminalMapInfo(
     v58,
     v59);
   this->fields.rootSpotP = rootSpotP;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.rootSpotP,
     (System_Int32_array **)rootSpotP,
     v60,

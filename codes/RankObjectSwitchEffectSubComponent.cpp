@@ -24,10 +24,10 @@ void __fastcall RankObjectSwitchEffectSubComponent__RecvParam(
   __int64 v14; // x0
 
   v4 = this;
-  if ( (byte_41860EA & 1) == 0 )
+  if ( (byte_4212EF5 & 1) == 0 )
   {
-    this = (RankObjectSwitchEffectSubComponent_o *)sub_B2C35C(&RaceResultEffectParam_TypeInfo, param);
-    byte_41860EA = 1;
+    this = (RankObjectSwitchEffectSubComponent_o *)sub_B0D8A4(&RaceResultEffectParam_TypeInfo, param);
+    byte_4212EF5 = 1;
   }
   if ( param
     && (v5 = *(&RaceResultEffectParam_TypeInfo->_2.bitflags2 + 1), *(&param->klass->_2.bitflags2 + 1) >= (unsigned int)v5) )
@@ -44,7 +44,7 @@ void __fastcall RankObjectSwitchEffectSubComponent__RecvParam(
   switchObjectList = v4->fields.switchObjectList;
   if ( !switchObjectList )
 LABEL_27:
-    sub_B2C434(this, param);
+    sub_B0D97C(this);
   max_length = switchObjectList->max_length;
   if ( v6
     && (monitor = v6[1].monitor) != 0LL
@@ -86,7 +86,7 @@ LABEL_27:
         goto LABEL_27;
     }
 LABEL_29:
-    v14 = sub_B2C460(this);
-    sub_B2C400(v14, 0LL);
+    v14 = sub_B0D9A8(this);
+    sub_B0D948(v14, 0LL);
   }
 }

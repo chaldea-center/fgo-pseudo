@@ -1,28 +1,28 @@
 void __fastcall ServantChangeEntity___ctor(ServantChangeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4187C31 & 1) == 0 )
+  if ( (byte_4215923 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4187C31 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4215923 = 1;
   }
   DataEntityBase_string____ctor(
     (DataEntityBase_string__o *)this,
-    (const MethodInfo_24E401C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_2669B20 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantChangeEntity__CreatePK(int32_t svtId, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4187C2F & 1) == 0 )
+  if ( (byte_4215921 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
-    byte_4187C2F = 1;
+    sub_B0D8A4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
+    byte_4215921 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            priority,
-           (const MethodInfo_1732908 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_171341C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -72,8 +72,8 @@ int32_t __fastcall ServantChangeEntity__GetAfterTreasureDeviceId(
         {
           if ( (unsigned int)v8 >= v10 )
           {
-            v11 = sub_B2C460((unsigned int)treasureDeviceId);
-            sub_B2C400(v11, 0LL);
+            v11 = sub_B0D9A8((unsigned int)treasureDeviceId);
+            sub_B0D948(v11, 0LL);
           }
           return beforeTreasureDeviceIds->m_Items[v8 + 1];
         }
@@ -120,8 +120,8 @@ int32_t __fastcall ServantChangeEntity__GetBeforeTreasureDeviceId(
         {
           if ( (unsigned int)v8 >= v10 )
           {
-            v11 = sub_B2C460((unsigned int)treasureDeviceId);
-            sub_B2C400(v11, 0LL);
+            v11 = sub_B0D9A8((unsigned int)treasureDeviceId);
+            sub_B0D948(v11, 0LL);
           }
           return afterTreasureDeviceIds->m_Items[v8 + 1];
         }
@@ -144,10 +144,10 @@ bool __fastcall ServantChangeEntity__IsEnable(ServantChangeEntity_o *this, const
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_4187C30 & 1) == 0 )
+  if ( (byte_4215922 & 1) == 0 )
   {
-    sub_B2C35C(&CondType_TypeInfo, method);
-    byte_4187C30 = 1;
+    sub_B0D8A4(&CondType_TypeInfo, method);
+    byte_4215922 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

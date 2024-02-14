@@ -12,10 +12,10 @@ void __fastcall SoundLoadWrapper__LoadAudioAssetStorage(
         int32_t cueType,
         const MethodInfo *method)
 {
-  if ( (byte_418766D & 1) == 0 )
+  if ( (byte_4214AA4 & 1) == 0 )
   {
-    sub_B2C35C(&SoundManager_TypeInfo, path);
-    byte_418766D = 1;
+    sub_B0D8A4(&SoundManager_TypeInfo, path);
+    byte_4214AA4 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -26,10 +26,10 @@ void __fastcall SoundLoadWrapper__LoadAudioAssetStorage(
 
 void __fastcall SoundLoadWrapper__Release(SoundLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  if ( (byte_418766E & 1) == 0 )
+  if ( (byte_4214AA5 & 1) == 0 )
   {
-    sub_B2C35C(&SoundManager_TypeInfo, path);
-    byte_418766E = 1;
+    sub_B0D8A4(&SoundManager_TypeInfo, path);
+    byte_4214AA5 = 1;
   }
   if ( (BYTE3(SoundManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);

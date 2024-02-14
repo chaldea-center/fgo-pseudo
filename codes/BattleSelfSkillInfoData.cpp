@@ -15,46 +15,45 @@ System_Int32_array *__fastcall BattleSelfSkillInfoData__GetRankUpSkillIds(
   __int64 v7; // x1
   __int64 v8; // x1
   System_Int32_array *result; // x0
-  __int64 v10; // x1
-  __int64 v11; // x0
+  __int64 v10; // x0
   WarEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4184E3B & 1) == 0 )
+  if ( (byte_4211D6A & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
-    sub_B2C35C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v6);
-    sub_B2C35C(&int___TypeInfo, v7);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_4184E3B = 1;
+    sub_B0D8A4(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
+    sub_B0D8A4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v6);
+    sub_B0D8A4(&int___TypeInfo, v7);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4211D6A = 1;
   }
   entity = 0LL;
-  result = (System_Int32_array *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (System_Int32_array *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_11;
   result = (System_Int32_array *)DataManager__GetMasterData_WarQuestSelectionMaster_(
                                    (DataManager_o *)result,
-                                   (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_ServantMaster___);
+                                   (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !result )
     goto LABEL_11;
   if ( DataMasterBase_WarMaster__WarEntity__int___TryGetEntity(
          (DataMasterBase_WarMaster__WarEntity__int__o *)result,
          &entity,
          svtId,
-         (const MethodInfo_24E412C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+         (const MethodInfo_2669C30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
   {
     result = (System_Int32_array *)entity;
     if ( entity )
       return ServantEntity__GetRankUpSkillIds((ServantEntity_o *)entity, baseSkillId, 0LL);
 LABEL_11:
-    sub_B2C434(result, v10);
+    sub_B0D97C(result);
   }
-  result = (System_Int32_array *)sub_B2C374(int___TypeInfo, 1LL);
+  result = (System_Int32_array *)sub_B0D8BC(int___TypeInfo, 1LL);
   if ( !result )
     goto LABEL_11;
   if ( !result->max_length )
   {
-    v11 = sub_B2C460(result);
-    sub_B2C400(v11, 0LL);
+    v10 = sub_B0D9A8(result);
+    sub_B0D948(v10, 0LL);
   }
   result->m_Items[1] = baseSkillId;
   return result;
@@ -85,23 +84,25 @@ void __fastcall BattleSelfSkillInfoData__PreAddProcess(
   __int64 v10; // x22
   BattleSelfSkillInfoData_o *v11; // x0
   const MethodInfo *v12; // x3
-  __int64 v13; // x8
-  BattleSelfSkillInfoData_o *v14; // x21
-  unsigned __int64 v15; // x25
-  int32_t v16; // w23
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x8
+  BattleSelfSkillInfoData_o *v16; // x21
+  unsigned __int64 v17; // x25
+  int32_t v18; // w23
   System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *rankUpList; // x22
-  BattleSkillInfoData_o *v18; // x24
-  __int64 v19; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v20; // 0:x0.16
+  BattleSkillInfoData_o *v20; // x24
+  __int64 v21; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4184E3A & 1) == 0 )
+  if ( (byte_4211D69 & 1) == 0 )
   {
-    sub_B2C35C(&BattleSkillInfoData_TypeInfo, svtData);
-    sub_B2C35C(&Method_System_Collections_Generic_List_BattleSkillInfoData__Add__, v5);
-    sub_B2C35C(&Method_System_Collections_Generic_List_BattleSkillInfoData__Clear__, v6);
-    this = (BattleSelfSkillInfoData_o *)sub_B2C35C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
-    byte_4184E3A = 1;
+    sub_B0D8A4(&BattleSkillInfoData_TypeInfo, svtData);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleSkillInfoData__Add__, v5);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_BattleSkillInfoData__Clear__, v6);
+    this = (BattleSelfSkillInfoData_o *)sub_B0D8A4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
+    byte_4211D69 = 1;
   }
   if ( !svtData )
     goto LABEL_16;
@@ -110,13 +111,13 @@ void __fastcall BattleSelfSkillInfoData__PreAddProcess(
     goto LABEL_16;
   v8 = *(struct BattleBuffData_SkillRankChangeData_o **)&this->fields.commandAssistId;
   v4->fields.rankChangeData = v8;
-  sub_B2C2F8(&v4->fields.rankChangeData, v8);
+  sub_B0D840(&v4->fields.rankChangeData, v8);
   this = (BattleSelfSkillInfoData_o *)v4->fields.rankUpList;
   if ( !this )
     goto LABEL_16;
   System_Collections_Generic_List_XWeaponTrail_Element___Clear(
     (System_Collections_Generic_List_XWeaponTrail_Element__o *)this,
-    (const MethodInfo_2EF4868 *)Method_System_Collections_Generic_List_BattleSkillInfoData__Clear__);
+    (const MethodInfo_2FC5AF0 *)Method_System_Collections_Generic_List_BattleSkillInfoData__Clear__);
   v10 = *(_QWORD *)&svtData->fields.svtId.fields.currentCryptoKey;
   v9 = *(_QWORD *)&svtData->fields.svtId.fields.fakeValue;
   if ( (BYTE3(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -124,9 +125,9 @@ void __fastcall BattleSelfSkillInfoData__PreAddProcess(
   {
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   }
-  *(_QWORD *)&v20.fields.currentCryptoKey = v10;
-  *(_QWORD *)&v20.fields.fakeValue = v9;
-  v11 = (BattleSelfSkillInfoData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44758064(v20, 0LL);
+  *(_QWORD *)&v22.fields.currentCryptoKey = v10;
+  *(_QWORD *)&v22.fields.fakeValue = v9;
+  v11 = (BattleSelfSkillInfoData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_44162576(v22, 0LL);
   this = (BattleSelfSkillInfoData_o *)BattleSelfSkillInfoData__GetRankUpSkillIds(
                                         v11,
                                         (int32_t)v11,
@@ -134,28 +135,28 @@ void __fastcall BattleSelfSkillInfoData__PreAddProcess(
                                         v12);
   if ( !this )
     goto LABEL_16;
-  v13 = *(_QWORD *)&this->fields.svtUniqueId;
-  v14 = this;
-  if ( (int)v13 >= 1 )
+  v15 = *(_QWORD *)&this->fields.svtUniqueId;
+  v16 = this;
+  if ( (int)v15 >= 1 )
   {
-    v15 = 0LL;
+    v17 = 0LL;
     while ( 1 )
     {
-      if ( v15 >= (unsigned int)v13 )
+      if ( v17 >= (unsigned int)v15 )
       {
-        v19 = sub_B2C460(this);
-        sub_B2C400(v19, 0LL);
+        v21 = sub_B0D9A8(this);
+        sub_B0D948(v21, 0LL);
       }
-      v16 = *(&v14->fields._skillId + v15);
+      v18 = *(&v16->fields._skillId + v17);
       rankUpList = (System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__o *)v4->fields.rankUpList;
-      v18 = (BattleSkillInfoData_o *)sub_B2C42C(BattleSkillInfoData_TypeInfo);
-      BattleSkillInfoData___ctor(v18, 0LL);
+      v20 = (BattleSkillInfoData_o *)sub_B0D974(BattleSkillInfoData_TypeInfo, v13, v14);
+      BattleSkillInfoData___ctor(v20, 0LL);
       this = (BattleSelfSkillInfoData_o *)BattleServantData__SetSkillInfo(
                                             svtData,
-                                            v18,
+                                            v20,
                                             v4->fields.type,
                                             v4->fields.index,
-                                            v16,
+                                            v18,
                                             v4->fields.skilllv,
                                             v4->fields.userCommandCodeId,
                                             v4->fields.commandAssistId,
@@ -165,12 +166,12 @@ void __fastcall BattleSelfSkillInfoData__PreAddProcess(
       System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData___Add(
         rankUpList,
         (EventMissionProgressRequest_Argument_ProgressData_o *)this,
-        (const MethodInfo_2EF4460 *)Method_System_Collections_Generic_List_BattleSkillInfoData__Add__);
-      LODWORD(v13) = v14->fields.svtUniqueId;
-      if ( (__int64)++v15 >= (int)v13 )
+        (const MethodInfo_2FC56E8 *)Method_System_Collections_Generic_List_BattleSkillInfoData__Add__);
+      LODWORD(v15) = v16->fields.svtUniqueId;
+      if ( (__int64)++v17 >= (int)v15 )
         return;
     }
 LABEL_16:
-    sub_B2C434(this, svtData);
+    sub_B0D97C(this);
   }
 }

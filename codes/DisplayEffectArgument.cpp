@@ -40,16 +40,16 @@ void __fastcall DisplayEffectArgument___ctor(
   System_Int32_array *v44; // x6
   System_Int32_array *v45; // x7
 
-  if ( (byte_4189473 & 1) == 0 )
+  if ( (byte_42162D0 & 1) == 0 )
   {
-    sub_B2C35C(&int___TypeInfo, actObj);
-    sub_B2C35C(&StringLiteral_1/*""*/, v17);
-    byte_4189473 = 1;
+    sub_B0D8A4(&int___TypeInfo, actObj);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v17);
+    byte_42162D0 = 1;
   }
   v18 = (System_Int32_array **)StringLiteral_1/*""*/;
   this->fields.attachNodeName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_attachNodeName = (BattleServantConfConponent_o *)&this->fields.attachNodeName;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.attachNodeName,
     v18,
     *(System_String_array ***)&funcIndex,
@@ -60,9 +60,9 @@ void __fastcall DisplayEffectArgument___ctor(
     (System_Int32_array *)ispopAdjustment);
   this->fields.buffOffset = UnityEngine_Vector3__get_zero(0LL);
   this->fields.popupOffset = UnityEngine_Vector3__get_zero(0LL);
-  v20 = (struct System_Int32_array *)sub_B2C374(int___TypeInfo, 0LL);
+  v20 = (struct System_Int32_array *)sub_B0D8BC(int___TypeInfo, 0LL);
   this->fields.fieldIndiv = v20;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.fieldIndiv,
     (System_Int32_array **)v20,
     v21,
@@ -73,15 +73,15 @@ void __fastcall DisplayEffectArgument___ctor(
     v26);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.actObj = actObj;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)actObj, v27, v28, v29, v30, v31, v32);
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields, (System_Int32_array **)actObj, v27, v28, v29, v30, v31, v32);
   this->fields.actData = actData;
   p_actData = &this->fields.actData;
   *((_DWORD *)p_actData - 2) = funcIndex;
-  sub_B2C2F8((BattleServantConfConponent_o *)p_actData, (System_Int32_array **)actData, v34, v35, v36, v37, v38, v39);
+  sub_B0D840((BattleServantConfConponent_o *)p_actData, (System_Int32_array **)actData, v34, v35, v36, v37, v38, v39);
   *((_BYTE *)p_actData + 8) = isCommandAfter;
   *((_BYTE *)p_actData + 9) = isTreasureDevice;
   p_attachNodeName->klass = (BattleServantConfConponent_c *)attachNodeName;
-  sub_B2C2F8(p_attachNodeName, (System_Int32_array **)attachNodeName, v40, v41, v42, v43, v44, v45);
+  sub_B0D840(p_attachNodeName, (System_Int32_array **)attachNodeName, v40, v41, v42, v43, v44, v45);
   *((_BYTE *)p_actData + 24) = ispopAdjustment;
 }
 
@@ -92,13 +92,12 @@ bool __fastcall DisplayEffectArgument__IsDisplayablePopupEachActType(
         const MethodInfo *method)
 {
   _BOOL8 v5; // x0
-  __int64 v6; // x1
   struct BattleActionData_o *actData; // x8
 
-  if ( (byte_4189475 & 1) == 0 )
+  if ( (byte_42162D2 & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, targetObj);
-    byte_4189475 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, targetObj);
+    byte_42162D2 = 1;
   }
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -116,7 +115,7 @@ bool __fastcall DisplayEffectArgument__IsDisplayablePopupEachActType(
     if ( targetObj )
       return UnityEngine_GameObject__get_activeSelf(targetObj, 0LL);
 LABEL_14:
-    sub_B2C434(v5, v6);
+    sub_B0D97C(v5);
   }
   return 1;
 }
@@ -156,10 +155,10 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
   v15 = buffOffset.fields.z;
   v16 = buffOffset.fields.y;
   v17 = buffOffset.fields.x;
-  if ( (byte_4189474 & 1) == 0 )
+  if ( (byte_42162D1 & 1) == 0 )
   {
-    sub_B2C35C(&int___TypeInfo, overwriteEffectIds);
-    byte_4189474 = 1;
+    sub_B0D8A4(&int___TypeInfo, overwriteEffectIds);
+    byte_42162D1 = 1;
   }
   this->fields.overwriteEffectIds = overwriteEffectIds;
   this->fields.buffOffset.fields.x = v17;
@@ -168,7 +167,7 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
   this->fields.popupOffset.fields.x = x;
   this->fields.popupOffset.fields.y = y;
   this->fields.popupOffset.fields.z = z;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.overwriteEffectIds,
     (System_Int32_array **)overwriteEffectIds,
     (System_String_array **)fieldIndiv,
@@ -178,9 +177,9 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
     v8,
     v9);
   if ( !v10 )
-    v10 = (struct System_Int32_array *)sub_B2C374(int___TypeInfo, 0LL);
+    v10 = (struct System_Int32_array *)sub_B0D8BC(int___TypeInfo, 0LL);
   this->fields.fieldIndiv = v10;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.fieldIndiv,
     (System_Int32_array **)v10,
     v19,

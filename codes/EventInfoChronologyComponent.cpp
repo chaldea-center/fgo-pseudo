@@ -35,12 +35,12 @@ void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyCompone
   UnityEngine_Object_o *spriteLineH; // x21
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4189139 & 1) == 0 )
+  if ( (byte_4216229 & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___, method);
-    sub_B2C35C(&Method_UnityEngine_GameObject_GetComponent_UILabel___, v3);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v4);
-    byte_4189139 = 1;
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___, method);
+    sub_B0D8A4(&Method_UnityEngine_GameObject_GetComponent_UILabel___, v3);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v4);
+    byte_4216229 = 1;
   }
   objHistory = this->fields.objHistory;
   if ( !objHistory )
@@ -72,7 +72,7 @@ void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyCompone
           {
             Component_srcLineSprite = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_srcLineSprite_(
                                                                 objHistory,
-                                                                (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
+                                                                (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
             if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
               && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             {
@@ -98,7 +98,7 @@ void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyCompone
                   goto LABEL_44;
                 v6 = UnityEngine_GameObject__GetComponent_srcLineSprite_(
                        objHistory,
-                       (const MethodInfo_1AA78DC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                       (const MethodInfo_1B62BA8 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
               }
               objHistory = this->fields.objHistory;
               ++v7;
@@ -166,7 +166,7 @@ void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyCompone
         }
       }
 LABEL_44:
-      sub_B2C434(objHistory, method);
+      sub_B0D97C(objHistory);
     }
   }
 }
@@ -179,7 +179,7 @@ void __fastcall EventInfoChronologyComponent__SetSprite(
         const MethodInfo *method)
 {
   if ( !src || !dest )
-    sub_B2C434(this, src);
+    sub_B0D97C(this);
   UISprite__set_atlas(dest, src->fields.mAtlas, 0LL);
   UISprite__set_spriteName(dest, src->fields.mSpriteName, 0LL);
 }

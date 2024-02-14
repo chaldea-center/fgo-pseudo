@@ -1,14 +1,14 @@
 void __fastcall EventFatigueRecoveryMaster___ctor(EventFatigueRecoveryMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_418A3D3 & 1) == 0 )
+  if ( (byte_4216FB4 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataMasterBase_EventFatigueRecoveryMaster__EventFatigueRecoveryEntity__string___ctor__, method);
-    byte_418A3D3 = 1;
+    sub_B0D8A4(&Method_DataMasterBase_EventFatigueRecoveryMaster__EventFatigueRecoveryEntity__string___ctor__, method);
+    byte_4216FB4 = 1;
   }
   DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string____ctor(
     (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
     297,
-    (const MethodInfo_24E4484 *)Method_DataMasterBase_EventFatigueRecoveryMaster__EventFatigueRecoveryEntity__string___ctor__);
+    (const MethodInfo_2669F88 *)Method_DataMasterBase_EventFatigueRecoveryMaster__EventFatigueRecoveryEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ EventFatigueRecoveryEntity_o *__fastcall EventFatigueRecoveryMaster__GetEntity(
 {
   System_String_o *PK; // x1
 
-  if ( (byte_418A3D1 & 1) == 0 )
+  if ( (byte_4216FB2 & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_DataMasterBase_EventFatigueRecoveryMaster__EventFatigueRecoveryEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_418A3D1 = 1;
+    byte_4216FB2 = 1;
   }
   PK = EventFatigueRecoveryEntity__CreatePK(eventId, priority, *(const MethodInfo **)&priority);
   return (EventFatigueRecoveryEntity_o *)DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
                                            (DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *)this,
                                            PK,
-                                           (const MethodInfo_24E4520 *)Method_DataMasterBase_EventFatigueRecoveryMaster__EventFatigueRecoveryEntity__string__GetEntity__);
+                                           (const MethodInfo_266A024 *)Method_DataMasterBase_EventFatigueRecoveryMaster__EventFatigueRecoveryEntity__string__GetEntity__);
 }
 
 
@@ -47,46 +47,48 @@ EventFatigueRecoveryEntity_o *__fastcall EventFatigueRecoveryMaster__GetEntityDe
   __int64 v8; // x1
   EventFatigueRecoveryEntity_o *v9; // x22
   const MethodInfo *v10; // x1
-  __int64 v11; // x1
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  int32_t v13; // w23
-  __int64 v14; // x10
+  int32_t v12; // w23
+  __int64 v13; // x10
 
-  if ( (byte_418A3D4 & 1) == 0 )
+  if ( (byte_4216FB5 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
-    sub_B2C35C(&EventFatigueRecoveryEntity_TypeInfo, v8);
-    byte_418A3D4 = 1;
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v7);
+    sub_B0D8A4(&EventFatigueRecoveryEntity_TypeInfo, v8);
+    byte_4216FB5 = 1;
   }
-  v9 = (EventFatigueRecoveryEntity_o *)sub_B2C42C(EventFatigueRecoveryEntity_TypeInfo);
+  v9 = (EventFatigueRecoveryEntity_o *)sub_B0D974(
+                                         EventFatigueRecoveryEntity_TypeInfo,
+                                         *(_QWORD *)&eventId,
+                                         *(_QWORD *)&idx);
   EventFatigueRecoveryEntity___ctor(v9, v10);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
 LABEL_14:
-    sub_B2C434(list, v11);
-  v13 = 0;
-  while ( v13 < System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
+    sub_B0D97C(list);
+  v12 = 0;
+  while ( v12 < System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                   list,
-                  (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                  (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
   {
     list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
     if ( list )
     {
       list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                                                                            list,
-                                                                                           v13,
-                                                                                           (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                                           v12,
+                                                                                           (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
-        v14 = *(&EventFatigueRecoveryEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v14
-          && (EventFatigueRecoveryEntity_c *)list->klass->_2.typeHierarchy[v14 - 1] == EventFatigueRecoveryEntity_TypeInfo )
+        v13 = *(&EventFatigueRecoveryEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(&list->klass->_2.bitflags2 + 1) >= (unsigned int)v13
+          && (EventFatigueRecoveryEntity_c *)list->klass->_2.typeHierarchy[v13 - 1] == EventFatigueRecoveryEntity_TypeInfo )
         {
           if ( LODWORD(list->fields.items) == eventId && LODWORD(list->fields._syncRoot) == idx )
             v9 = (EventFatigueRecoveryEntity_o *)list;
           list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-          ++v13;
+          ++v12;
           if ( list )
             continue;
         }
@@ -111,45 +113,48 @@ System_Int32_array *__fastcall EventFatigueRecoveryMaster__GetOpenRecoveryNum(
   __int64 v9; // x1
   __int64 v10; // x1
   System_Collections_Generic_List_int__o *v11; // x21
-  const MethodInfo *v12; // x1
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x0
-  int32_t v14; // w22
+  int32_t v13; // w22
+  const MethodInfo *v14; // x1
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *v15; // x23
   __int64 v16; // x10
 
-  if ( (byte_418A3D5 & 1) == 0 )
+  if ( (byte_4216FB6 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_B2C35C(&EventFatigueRecoveryEntity_TypeInfo, v6);
-    sub_B2C35C(&Method_System_Collections_Generic_List_int__Add__, v7);
-    sub_B2C35C(&Method_System_Collections_Generic_List_int__ToArray__, v8);
-    sub_B2C35C(&Method_System_Collections_Generic_List_int___ctor__, v9);
-    sub_B2C35C(&System_Collections_Generic_List_int__TypeInfo, v10);
-    byte_418A3D5 = 1;
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_B0D8A4(&EventFatigueRecoveryEntity_TypeInfo, v6);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_int__Add__, v7);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_int__ToArray__, v8);
+    sub_B0D8A4(&Method_System_Collections_Generic_List_int___ctor__, v9);
+    sub_B0D8A4(&System_Collections_Generic_List_int__TypeInfo, v10);
+    byte_4216FB6 = 1;
   }
-  v11 = (System_Collections_Generic_List_int__o *)sub_B2C42C(System_Collections_Generic_List_int__TypeInfo);
+  v11 = (System_Collections_Generic_List_int__o *)sub_B0D974(
+                                                    System_Collections_Generic_List_int__TypeInfo,
+                                                    *(_QWORD *)&eventId,
+                                                    method);
   System_Collections_Generic_List_int____ctor(
     v11,
-    (const MethodInfo_2F6629C *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_2FAF1A4 *)Method_System_Collections_Generic_List_int___ctor__);
   list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
   if ( !list )
     goto LABEL_19;
-  v14 = 0;
+  v13 = 0;
   while ( 1 )
   {
     list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                                                                                          list,
-                                                                                         (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
-    if ( v14 >= (int)list )
+                                                                                         (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__);
+    if ( v13 >= (int)list )
       break;
     list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
     if ( list )
     {
       list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
                                                                                            list,
-                                                                                           v14,
-                                                                                           (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+                                                                                           v13,
+                                                                                           (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( list )
       {
         v15 = list;
@@ -163,7 +168,7 @@ System_Int32_array *__fastcall EventFatigueRecoveryMaster__GetOpenRecoveryNum(
             {
               list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)EventFatigueRecoveryEntity__IsOpen(
                                                                                                    (EventFatigueRecoveryEntity_o *)list,
-                                                                                                   v12);
+                                                                                                   v14);
               if ( ((unsigned __int8)list & 1) != 0 )
               {
                 if ( !v11 )
@@ -171,12 +176,12 @@ System_Int32_array *__fastcall EventFatigueRecoveryMaster__GetOpenRecoveryNum(
                 System_Collections_Generic_List_int___Add(
                   v11,
                   (int32_t)v15->fields._syncRoot,
-                  (const MethodInfo_2F66FF8 *)Method_System_Collections_Generic_List_int__Add__);
+                  (const MethodInfo_2FAFF00 *)Method_System_Collections_Generic_List_int__Add__);
               }
             }
           }
           list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-          ++v14;
+          ++v13;
           if ( list )
             continue;
         }
@@ -186,10 +191,10 @@ System_Int32_array *__fastcall EventFatigueRecoveryMaster__GetOpenRecoveryNum(
   }
   if ( !v11 )
 LABEL_19:
-    sub_B2C434(list, v12);
+    sub_B0D97C(list);
   return System_Collections_Generic_List_int___ToArray(
            v11,
-           (const MethodInfo_2F69104 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_2FB200C *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -203,77 +208,77 @@ int32_t __fastcall EventFatigueRecoveryMaster__GetRecoverydBgId(
   __int64 v6; // x1
   __int64 v7; // x1
   __int64 v8; // x1
-  DataManager_o *Instance; // x0
-  __int64 saveNameList_low; // x1
+  void *Instance; // x0
   System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *list; // x8
-  CommonReleaseMaster_o *v12; // x21
-  int32_t saveNameList_high; // w23
-  int v14; // w25
-  int32_t v15; // w22
-  DataManager_o *v16; // x24
-  __int64 v17; // x10
+  CommonReleaseMaster_o *v11; // x21
+  int32_t v12; // w23
+  int v13; // w25
+  int32_t v14; // w22
+  _DWORD *v15; // x24
+  __int64 v16; // x10
+  int32_t v17; // w1
 
-  if ( (byte_418A3D6 & 1) == 0 )
+  if ( (byte_4216FB7 & 1) == 0 )
   {
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
-    sub_B2C35C(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
-    sub_B2C35C(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v6);
-    sub_B2C35C(&EventFatigueRecoveryEntity_TypeInfo, v7);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_418A3D6 = 1;
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__, *(_QWORD *)&eventId);
+    sub_B0D8A4(&Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__, v5);
+    sub_B0D8A4(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v6);
+    sub_B0D8A4(&EventFatigueRecoveryEntity_TypeInfo, v7);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4216FB7 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
-    || (Instance = (DataManager_o *)DataManager__GetMasterData_WarQuestSelectionMaster_(
-                                      Instance,
-                                      (const MethodInfo_17339EC *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
+    || (Instance = DataManager__GetMasterData_WarQuestSelectionMaster_(
+                     (DataManager_o *)Instance,
+                     (const MethodInfo_17145A8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
         (list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list) == 0LL) )
   {
 LABEL_18:
-    sub_B2C434(Instance, saveNameList_low);
+    sub_B0D97C(Instance);
   }
-  v12 = (CommonReleaseMaster_o *)Instance;
-  saveNameList_high = 0;
+  v11 = (CommonReleaseMaster_o *)Instance;
+  v12 = 0;
+  v13 = 0;
   v14 = 0;
-  v15 = 0;
-  while ( v15 < System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
+  while ( v14 < System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Count(
                   list,
-                  (const MethodInfo_2A0E2E8 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
+                  (const MethodInfo_2AB5718 *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Count__) )
   {
-    Instance = (DataManager_o *)this->fields.list;
+    Instance = this->fields.list;
     if ( Instance )
     {
-      Instance = (DataManager_o *)System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
-                                    (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Instance,
-                                    v15,
-                                    (const MethodInfo_2A0E38C *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
+      Instance = System_Collections_ObjectModel_Collection_UnicastIPAddressInformation___get_Item(
+                   (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)Instance,
+                   v14,
+                   (const MethodInfo_2AB57BC *)Method_System_Collections_ObjectModel_Collection_DataEntityBase__get_Item__);
       if ( Instance )
       {
-        v16 = Instance;
-        v17 = *(&EventFatigueRecoveryEntity_TypeInfo->_2.bitflags2 + 1);
-        if ( *(&Instance->klass->_2.bitflags2 + 1) >= (unsigned int)v17
-          && (EventFatigueRecoveryEntity_c *)Instance->klass->_2.typeHierarchy[v17 - 1] == EventFatigueRecoveryEntity_TypeInfo )
+        v15 = Instance;
+        v16 = *(&EventFatigueRecoveryEntity_TypeInfo->_2.bitflags2 + 1);
+        if ( *(unsigned __int8 *)(*(_QWORD *)Instance + 300LL) >= (unsigned int)v16
+          && *(EventFatigueRecoveryEntity_c **)(*(_QWORD *)(*(_QWORD *)Instance + 200LL) + 8 * v16 - 8) == EventFatigueRecoveryEntity_TypeInfo )
         {
-          if ( Instance->fields.m_CachedPtr == eventId )
+          if ( *((_DWORD *)Instance + 4) == eventId )
           {
-            saveNameList_low = LODWORD(Instance->fields.saveNameList);
-            if ( (int)saveNameList_low < 1 )
+            v17 = *((_DWORD *)Instance + 12);
+            if ( v17 < 1 )
               goto LABEL_15;
-            if ( !v12 )
+            if ( !v11 )
               goto LABEL_18;
-            Instance = (DataManager_o *)CommonReleaseMaster__IsOpen(v12, saveNameList_low, 0LL, 0, 0LL);
+            Instance = (void *)CommonReleaseMaster__IsOpen(v11, v17, 0LL, 0, 0LL);
             if ( ((unsigned __int8)Instance & 1) != 0 )
             {
 LABEL_15:
-              if ( v14 < *(_DWORD *)&v16->fields._DispLog )
+              if ( v13 < v15[5] )
               {
-                saveNameList_high = HIDWORD(v16->fields.saveNameList);
-                v14 = *(_DWORD *)&v16->fields._DispLog;
+                v12 = v15[13];
+                v13 = v15[5];
               }
             }
           }
           list = (System_Collections_ObjectModel_Collection_UnicastIPAddressInformation__o *)this->fields.list;
-          ++v15;
+          ++v14;
           if ( list )
             continue;
         }
@@ -281,7 +286,7 @@ LABEL_15:
     }
     goto LABEL_18;
   }
-  return saveNameList_high;
+  return v12;
 }
 
 
@@ -295,17 +300,17 @@ bool __fastcall EventFatigueRecoveryMaster__TryGetEntity(
 {
   System_String_o *PK; // x2
 
-  if ( (byte_418A3D2 & 1) == 0 )
+  if ( (byte_4216FB3 & 1) == 0 )
   {
-    sub_B2C35C(
+    sub_B0D8A4(
       &Method_DataMasterBase_EventFatigueRecoveryMaster__EventFatigueRecoveryEntity__string__TryGetEntity__,
       entity);
-    byte_418A3D2 = 1;
+    byte_4216FB3 = 1;
   }
   PK = EventFatigueRecoveryEntity__CreatePK(eventId, priority, *(const MethodInfo **)&eventId);
   return DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string___TryGetEntity(
            (DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__o *)this,
            (WarQuestSelectionEntity_o **)entity,
            PK,
-           (const MethodInfo_24E4578 *)Method_DataMasterBase_EventFatigueRecoveryMaster__EventFatigueRecoveryEntity__string__TryGetEntity__);
+           (const MethodInfo_266A07C *)Method_DataMasterBase_EventFatigueRecoveryMaster__EventFatigueRecoveryEntity__string__TryGetEntity__);
 }

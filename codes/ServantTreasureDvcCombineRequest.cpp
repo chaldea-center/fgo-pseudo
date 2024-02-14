@@ -18,18 +18,18 @@ void __fastcall ServantTreasureDvcCombineRequest__beginRequest(
   __int64 v12; // x1
   __int64 v13; // x1
 
-  if ( (byte_418B0DB & 1) == 0 )
+  if ( (byte_4217773 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_16623/*"baseUserSvtId"*/, baseUsrSvtId);
-    sub_B2C35C(&StringLiteral_22785/*"treasureDeviceId"*/, v11);
-    sub_B2C35C(&StringLiteral_21171/*"num"*/, v12);
-    sub_B2C35C(&StringLiteral_20428/*"materialUserSvtIds"*/, v13);
-    byte_418B0DB = 1;
+    sub_B0D8A4(&StringLiteral_16672/*"baseUserSvtId"*/, baseUsrSvtId);
+    sub_B0D8A4(&StringLiteral_22861/*"treasureDeviceId"*/, v11);
+    sub_B0D8A4(&StringLiteral_21240/*"num"*/, v12);
+    sub_B0D8A4(&StringLiteral_20491/*"materialUserSvtIds"*/, v13);
+    byte_4217773 = 1;
   }
-  RequestBase__addField_31051460((RequestBase_o *)this, (System_String_o *)StringLiteral_16623/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21171/*"num"*/, selectTdIndex, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22785/*"treasureDeviceId"*/, selectTdId, 0LL);
-  RequestBase__addField_31051928((RequestBase_o *)this, (System_String_o *)StringLiteral_20428/*"materialUserSvtIds"*/, materialSvtIds, 0LL);
+  RequestBase__addField_30435180((RequestBase_o *)this, (System_String_o *)StringLiteral_16672/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21240/*"num"*/, selectTdIndex, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22861/*"treasureDeviceId"*/, selectTdId, 0LL);
+  RequestBase__addField_30435648((RequestBase_o *)this, (System_String_o *)StringLiteral_20491/*"materialUserSvtIds"*/, materialSvtIds, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -41,11 +41,11 @@ System_String_o *__fastcall ServantTreasureDvcCombineRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_418B0DA & 1) == 0 )
+  if ( (byte_4217772 & 1) == 0 )
   {
-    sub_B2C35C(&NetworkManager_TypeInfo, method);
-    sub_B2C35C(&StringLiteral_17220/*"card/combineTd"*/, v2);
-    byte_418B0DA = 1;
+    sub_B0D8A4(&NetworkManager_TypeInfo, method);
+    sub_B0D8A4(&StringLiteral_17272/*"card/combineTd"*/, v2);
+    byte_4217772 = 1;
   }
   if ( (BYTE3(NetworkManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -53,7 +53,7 @@ System_String_o *__fastcall ServantTreasureDvcCombineRequest__getURL(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   }
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_44305532(BaseUrl, (System_String_o *)StringLiteral_17220/*"card/combineTd"*/, 0LL);
+  return System_String__Concat_43849904(BaseUrl, (System_String_o *)StringLiteral_17272/*"card/combineTd"*/, 0LL);
 }
 
 
@@ -69,12 +69,12 @@ void __fastcall ServantTreasureDvcCombineRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_418B0DC & 1) == 0 )
+  if ( (byte_4217774 & 1) == 0 )
   {
-    sub_B2C35C(&JsonManager_TypeInfo, responseList);
-    sub_B2C35C(&ResponseCommandKind_TypeInfo, v5);
-    sub_B2C35C(&StringLiteral_21068/*"ng"*/, v6);
-    byte_418B0DC = 1;
+    sub_B0D8A4(&JsonManager_TypeInfo, responseList);
+    sub_B0D8A4(&ResponseCommandKind_TypeInfo, v5);
+    sub_B0D8A4(&StringLiteral_21137/*"ng"*/, v6);
+    byte_4217774 = 1;
   }
   if ( (BYTE3(ResponseCommandKind_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -82,7 +82,7 @@ void __fastcall ServantTreasureDvcCombineRequest__requestCompleted(
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   }
   v7 = ResponseCommandKind__SearchData(27, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_31019724(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_30403444(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( (BYTE3(JsonManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !JsonManager_TypeInfo->_2.cctor_finished )
@@ -91,7 +91,7 @@ void __fastcall ServantTreasureDvcCombineRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21068/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_21137/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

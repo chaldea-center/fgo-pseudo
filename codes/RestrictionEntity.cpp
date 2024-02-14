@@ -1,13 +1,13 @@
 void __fastcall RestrictionEntity___ctor(RestrictionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_418BB54 & 1) == 0 )
+  if ( (byte_4218700 & 1) == 0 )
   {
-    sub_B2C35C(&Method_DataEntityBase_int___ctor__, method);
-    byte_418BB54 = 1;
+    sub_B0D8A4(&Method_DataEntityBase_int___ctor__, method);
+    byte_4218700 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_24E3F7C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_2669A80 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -35,8 +35,8 @@ int32_t __fastcall RestrictionEntity__GetSpecifiedPosition(RestrictionEntity_o *
     return 0;
   if ( !(_DWORD)v4 )
   {
-    v6 = sub_B2C460(this);
-    sub_B2C400(v6, 0LL);
+    v6 = sub_B0D9A8(this);
+    sub_B0D948(v6, 0LL);
   }
   return targetVals2->m_Items[1];
 }
@@ -75,8 +75,8 @@ bool __fastcall RestrictionEntity__IsRestriction(RestrictionEntity_o *this, int3
         if ( !(_DWORD)v7 )
         {
 LABEL_15:
-          v9 = sub_B2C460(this);
-          sub_B2C400(v9, 0LL);
+          v9 = sub_B0D9A8(this);
+          sub_B0D948(v9, 0LL);
         }
         v3 = v6->m_Items[1] < v;
       }
@@ -93,7 +93,7 @@ LABEL_11:
 }
 
 
-bool __fastcall RestrictionEntity__IsRestriction_32861000(
+bool __fastcall RestrictionEntity__IsRestriction_32089632(
         RestrictionEntity_o *this,
         System_Int32_array *vList,
         const MethodInfo *method)
@@ -110,9 +110,9 @@ bool __fastcall RestrictionEntity__IsRestriction_32861000(
   switch ( this->fields.rangeType )
   {
     case 1:
-      return !RestrictionEntity__IsSearchVals_32860656(this, vList, method);
+      return !RestrictionEntity__IsSearchVals_32089288(this, vList, method);
     case 2:
-      return RestrictionEntity__IsSearchVals_32860656(this, vList, method);
+      return RestrictionEntity__IsSearchVals_32089288(this, vList, method);
     case 3:
       targetVals = this->fields.targetVals;
       if ( !targetVals )
@@ -146,8 +146,8 @@ bool __fastcall RestrictionEntity__IsRestriction_32861000(
         if ( !(_DWORD)v9 || !(_DWORD)v8 )
         {
 LABEL_21:
-          v11 = sub_B2C460(this);
-          sub_B2C400(v11, 0LL);
+          v11 = sub_B0D9A8(this);
+          sub_B0D948(v11, 0LL);
         }
         v3 = vList->m_Items[1] > v7->m_Items[1];
       }
@@ -184,8 +184,8 @@ bool __fastcall RestrictionEntity__IsSearchVals(RestrictionEntity_o *this, int32
   {
     if ( (unsigned int)v5 >= max_length )
     {
-      v8 = sub_B2C460(this);
-      sub_B2C400(v8, 0LL);
+      v8 = sub_B0D9A8(this);
+      sub_B0D948(v8, 0LL);
     }
     if ( v6[v5] == v )
       break;
@@ -196,7 +196,7 @@ bool __fastcall RestrictionEntity__IsSearchVals(RestrictionEntity_o *this, int32
 }
 
 
-bool __fastcall RestrictionEntity__IsSearchVals_32860656(
+bool __fastcall RestrictionEntity__IsSearchVals_32089288(
         RestrictionEntity_o *this,
         System_Int32_array *vList,
         const MethodInfo *method)
@@ -228,8 +228,8 @@ bool __fastcall RestrictionEntity__IsSearchVals_32860656(
           if ( v7 >= v6 )
           {
 LABEL_16:
-            v10 = sub_B2C460(0LL);
-            sub_B2C400(v10, 0LL);
+            v10 = sub_B0D9A8(0LL);
+            sub_B0D948(v10, 0LL);
           }
           max_length = vList->max_length;
           if ( max_length >= 1 )
@@ -264,29 +264,28 @@ System_Boolean_array *__fastcall RestrictionEntity__getDeckPositionList(
   __int64 v3; // x1
   BalanceConfig_c *v4; // x0
   BalanceConfig_c *v5; // x0
-  __int64 v6; // x1
   struct System_Int32_array *targetVals; // x8
-  System_Boolean_array *v8; // x19
+  System_Boolean_array *v7; // x19
   int max_length; // w22
-  unsigned __int64 v10; // x23
-  int v11; // w26
-  il2cpp_array_size_t v12; // w25
+  unsigned __int64 v9; // x23
+  int v10; // w26
+  il2cpp_array_size_t v11; // w25
+  unsigned __int64 v12; // x23
   unsigned __int64 v13; // x23
-  unsigned __int64 v14; // x23
-  struct System_Int32_array *v15; // x8
-  int v16; // w25
-  il2cpp_array_size_t v17; // w24
-  signed __int64 v18; // x22
-  signed __int64 v19; // x20
-  signed __int64 v20; // x22
-  signed __int64 v21; // x20
-  __int64 v23; // x0
+  struct System_Int32_array *v14; // x8
+  int v15; // w25
+  il2cpp_array_size_t v16; // w24
+  signed __int64 v17; // x22
+  signed __int64 v18; // x20
+  signed __int64 v19; // x22
+  signed __int64 v20; // x20
+  __int64 v22; // x0
 
-  if ( (byte_418BB53 & 1) == 0 )
+  if ( (byte_42186FF & 1) == 0 )
   {
-    sub_B2C35C(&BalanceConfig_TypeInfo, method);
-    sub_B2C35C(&bool___TypeInfo, v3);
-    byte_418BB53 = 1;
+    sub_B0D8A4(&BalanceConfig_TypeInfo, method);
+    sub_B0D8A4(&bool___TypeInfo, v3);
+    byte_42186FF = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -295,9 +294,9 @@ System_Boolean_array *__fastcall RestrictionEntity__getDeckPositionList(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (BalanceConfig_c *)sub_B2C374(bool___TypeInfo, (unsigned int)v4->static_fields->DeckMemberMax);
+  v5 = (BalanceConfig_c *)sub_B0D8BC(bool___TypeInfo, (unsigned int)v4->static_fields->DeckMemberMax);
   targetVals = this->fields.targetVals;
-  v8 = (System_Boolean_array *)v5;
+  v7 = (System_Boolean_array *)v5;
   if ( targetVals )
     max_length = targetVals->max_length;
   else
@@ -306,15 +305,15 @@ System_Boolean_array *__fastcall RestrictionEntity__getDeckPositionList(
   {
     case 1:
       if ( max_length < 1 )
-        return v8;
+        return v7;
       if ( !targetVals )
         goto LABEL_75;
-      v10 = 0LL;
-      while ( v10 < targetVals->max_length )
+      v9 = 0LL;
+      while ( v9 < targetVals->max_length )
       {
-        v11 = targetVals->m_Items[v10 + 1];
-        v12 = v11 - 1;
-        if ( v11 >= 1 )
+        v10 = targetVals->m_Items[v9 + 1];
+        v11 = v10 - 1;
+        if ( v10 >= 1 )
         {
           v5 = BalanceConfig_TypeInfo;
           if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -323,24 +322,24 @@ System_Boolean_array *__fastcall RestrictionEntity__getDeckPositionList(
             j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
             v5 = BalanceConfig_TypeInfo;
           }
-          if ( v11 <= v5->static_fields->DeckMemberMax )
+          if ( v10 <= v5->static_fields->DeckMemberMax )
           {
-            if ( !v8 )
+            if ( !v7 )
               goto LABEL_75;
-            if ( v12 >= v8->max_length )
+            if ( v11 >= v7->max_length )
               goto LABEL_76;
-            v8->m_Items[v12 + 4] = 1;
+            v7->m_Items[v11 + 4] = 1;
           }
         }
-        if ( (__int64)++v10 >= max_length )
-          return v8;
+        if ( (__int64)++v9 >= max_length )
+          return v7;
         targetVals = this->fields.targetVals;
         if ( !targetVals )
           goto LABEL_75;
       }
       goto LABEL_76;
     case 2:
-      v13 = 0LL;
+      v12 = 0LL;
       while ( 2 )
       {
         v5 = BalanceConfig_TypeInfo;
@@ -350,37 +349,37 @@ System_Boolean_array *__fastcall RestrictionEntity__getDeckPositionList(
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
           v5 = BalanceConfig_TypeInfo;
         }
-        if ( (__int64)v13 < v5->static_fields->DeckMemberMax )
+        if ( (__int64)v12 < v5->static_fields->DeckMemberMax )
         {
-          if ( v8 )
+          if ( v7 )
           {
-            if ( v13 < v8->max_length )
+            if ( v12 < v7->max_length )
             {
-              v8->m_Items[v13++ + 4] = 1;
+              v7->m_Items[v12++ + 4] = 1;
               continue;
             }
 LABEL_76:
-            v23 = sub_B2C460(v5);
-            sub_B2C400(v23, 0LL);
+            v22 = sub_B0D9A8(v5);
+            sub_B0D948(v22, 0LL);
           }
 LABEL_75:
-          sub_B2C434(v5, v6);
+          sub_B0D97C(v5);
         }
         break;
       }
       if ( max_length >= 1 )
       {
-        v14 = 0LL;
+        v13 = 0LL;
         while ( 1 )
         {
-          v15 = this->fields.targetVals;
-          if ( !v15 )
+          v14 = this->fields.targetVals;
+          if ( !v14 )
             goto LABEL_75;
-          if ( v14 >= v15->max_length )
+          if ( v13 >= v14->max_length )
             goto LABEL_76;
-          v16 = v15->m_Items[v14 + 1];
-          v17 = v16 - 1;
-          if ( v16 >= 1 )
+          v15 = v14->m_Items[v13 + 1];
+          v16 = v15 - 1;
+          if ( v15 >= 1 )
           {
             v5 = BalanceConfig_TypeInfo;
             if ( (BYTE3(BalanceConfig_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -389,29 +388,29 @@ LABEL_75:
               j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
               v5 = BalanceConfig_TypeInfo;
             }
-            if ( v16 <= v5->static_fields->DeckMemberMax )
+            if ( v15 <= v5->static_fields->DeckMemberMax )
             {
-              if ( !v8 )
+              if ( !v7 )
                 goto LABEL_75;
-              if ( v17 >= v8->max_length )
+              if ( v16 >= v7->max_length )
                 goto LABEL_76;
-              v8->m_Items[v17 + 4] = 0;
+              v7->m_Items[v16 + 4] = 0;
             }
           }
-          if ( (__int64)++v14 >= max_length )
-            return v8;
+          if ( (__int64)++v13 >= max_length )
+            return v7;
         }
       }
-      return v8;
+      return v7;
     case 3:
       if ( max_length < 1 )
-        return v8;
+        return v7;
       if ( !targetVals )
         goto LABEL_75;
       if ( !targetVals->max_length )
         goto LABEL_76;
-      v18 = targetVals->m_Items[1];
-      v19 = 0LL;
+      v17 = targetVals->m_Items[1];
+      v18 = 0LL;
       while ( 2 )
       {
         v5 = BalanceConfig_TypeInfo;
@@ -421,30 +420,30 @@ LABEL_75:
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
           v5 = BalanceConfig_TypeInfo;
         }
-        if ( v19 >= v5->static_fields->DeckMemberMax )
-          return v8;
-        if ( v19 < v18 )
+        if ( v18 >= v5->static_fields->DeckMemberMax )
+          return v7;
+        if ( v18 < v17 )
           goto LABEL_55;
-        if ( !v8 )
+        if ( !v7 )
           goto LABEL_75;
-        if ( v19 < (unsigned __int64)v8->max_length )
+        if ( v18 < (unsigned __int64)v7->max_length )
         {
-          v8->m_Items[v19 + 4] = 1;
+          v7->m_Items[v18 + 4] = 1;
 LABEL_55:
-          ++v19;
+          ++v18;
           continue;
         }
         goto LABEL_76;
       }
     case 4:
       if ( max_length < 1 )
-        return v8;
+        return v7;
       if ( !targetVals )
         goto LABEL_75;
       if ( !targetVals->max_length )
         goto LABEL_76;
-      v20 = targetVals->m_Items[1];
-      v21 = 0LL;
+      v19 = targetVals->m_Items[1];
+      v20 = 0LL;
       while ( 2 )
       {
         v5 = BalanceConfig_TypeInfo;
@@ -454,23 +453,23 @@ LABEL_55:
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
           v5 = BalanceConfig_TypeInfo;
         }
-        if ( v21 >= v5->static_fields->DeckMemberMax )
-          return v8;
-        if ( v21 >= v20 )
+        if ( v20 >= v5->static_fields->DeckMemberMax )
+          return v7;
+        if ( v20 >= v19 )
           goto LABEL_69;
-        if ( !v8 )
+        if ( !v7 )
           goto LABEL_75;
-        if ( v21 < (unsigned __int64)v8->max_length )
+        if ( v20 < (unsigned __int64)v7->max_length )
         {
-          v8->m_Items[v21 + 4] = 1;
+          v7->m_Items[v20 + 4] = 1;
 LABEL_69:
-          ++v21;
+          ++v20;
           continue;
         }
         goto LABEL_76;
       }
     default:
-      return v8;
+      return v7;
   }
 }
 
@@ -502,20 +501,20 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
   int v25; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
-  if ( (byte_418BB52 & 1) == 0 )
+  if ( (byte_42186FE & 1) == 0 )
   {
-    sub_B2C35C(&int_TypeInfo, method);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v3);
-    sub_B2C35C(&StringLiteral_6386/*"FOLLOWER_SELECT_QUEST_RESTRICTION_MY_SERVANT_NUM_MAIN_TITLE"*/, v4);
-    sub_B2C35C(&StringLiteral_6387/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE"*/, v5);
-    sub_B2C35C(&StringLiteral_6388/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE"*/, v6);
-    sub_B2C35C(&StringLiteral_6390/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE"*/, v7);
-    sub_B2C35C(&StringLiteral_6384/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE_TITLE"*/, v8);
-    sub_B2C35C(&StringLiteral_6383/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION_MAIN_TITLE"*/, v9);
-    sub_B2C35C(&StringLiteral_6391/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE"*/, v10);
-    sub_B2C35C(&StringLiteral_6389/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, v11);
-    this = (RestrictionEntity_o *)sub_B2C35C(&StringLiteral_6385/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION_TITLE"*/, v12);
-    byte_418BB52 = 1;
+    sub_B0D8A4(&int_TypeInfo, method);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v3);
+    sub_B0D8A4(&StringLiteral_6403/*"FOLLOWER_SELECT_QUEST_RESTRICTION_MY_SERVANT_NUM_MAIN_TITLE"*/, v4);
+    sub_B0D8A4(&StringLiteral_6404/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE"*/, v5);
+    sub_B0D8A4(&StringLiteral_6405/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE"*/, v6);
+    sub_B0D8A4(&StringLiteral_6407/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE"*/, v7);
+    sub_B0D8A4(&StringLiteral_6401/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE_TITLE"*/, v8);
+    sub_B0D8A4(&StringLiteral_6400/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION_MAIN_TITLE"*/, v9);
+    sub_B0D8A4(&StringLiteral_6408/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE"*/, v10);
+    sub_B0D8A4(&StringLiteral_6406/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/, v11);
+    this = (RestrictionEntity_o *)sub_B0D8A4(&StringLiteral_6402/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION_TITLE"*/, v12);
+    byte_42186FE = 1;
   }
   switch ( v2->fields.type )
   {
@@ -525,7 +524,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_6388/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE"*/;
+      v13 = &StringLiteral_6405/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE"*/;
       goto LABEL_40;
     case 6:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -533,7 +532,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_6390/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE"*/;
+      v13 = &StringLiteral_6407/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE"*/;
       goto LABEL_40;
     case 7:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -541,7 +540,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_6385/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION_TITLE"*/;
+      v13 = &StringLiteral_6402/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION_TITLE"*/;
       goto LABEL_40;
     case 8:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -549,7 +548,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_6383/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION_MAIN_TITLE"*/;
+      v13 = &StringLiteral_6400/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION_MAIN_TITLE"*/;
       goto LABEL_40;
     case 9:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -557,7 +556,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_6384/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE_TITLE"*/;
+      v13 = &StringLiteral_6401/*"FOLLOWER_SELECT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE_TITLE"*/;
       goto LABEL_40;
     case 0xA:
       targetVals = v2->fields.targetVals;
@@ -565,8 +564,8 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         if ( !(_DWORD)v15 )
         {
-          v24 = sub_B2C460(this);
-          sub_B2C400(v24, 0LL);
+          v24 = sub_B0D9A8(this);
+          sub_B0D948(v24, 0LL);
         }
         v16 = targetVals->m_Items[1];
       }
@@ -579,7 +578,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_6387/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE"*/, 0LL);
+      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_6404/*"FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE"*/, 0LL);
       name = v2->fields.name;
       v21 = v19;
       v25 = v16;
@@ -592,7 +591,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_6386/*"FOLLOWER_SELECT_QUEST_RESTRICTION_MY_SERVANT_NUM_MAIN_TITLE"*/;
+      v13 = &StringLiteral_6403/*"FOLLOWER_SELECT_QUEST_RESTRICTION_MY_SERVANT_NUM_MAIN_TITLE"*/;
       goto LABEL_40;
     case 0xF:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -600,7 +599,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_6391/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE"*/;
+      v13 = &StringLiteral_6408/*"FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE"*/;
       goto LABEL_40;
     default:
       if ( (BYTE3(LocalizationManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -608,7 +607,7 @@ System_String_o *__fastcall RestrictionEntity__getTitle(RestrictionEntity_o *thi
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      v13 = &StringLiteral_6389/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/;
+      v13 = &StringLiteral_6406/*"FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE"*/;
 LABEL_40:
       v17 = LocalizationManager__Get((System_String_o *)*v13, 0LL);
       return System_String__Format(v17, (Il2CppObject *)v2->fields.name, 0LL);
@@ -632,8 +631,8 @@ int32_t __fastcall RestrictionEntity__getTotalCost(RestrictionEntity_o *this, co
     return 0;
   if ( !(_DWORD)v3 )
   {
-    v5 = sub_B2C460(this);
-    sub_B2C400(v5, 0LL);
+    v5 = sub_B0D9A8(this);
+    sub_B0D948(v5, 0LL);
   }
   return targetVals->m_Items[1];
 }

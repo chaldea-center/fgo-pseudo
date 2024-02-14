@@ -4,7 +4,7 @@ void __fastcall QuestBoardListViewItem___ctor(QuestBoardListViewItem_o *this, co
 }
 
 
-void __fastcall QuestBoardListViewItem___ctor_29608036(
+void __fastcall QuestBoardListViewItem___ctor_28503896(
         QuestBoardListViewItem_o *this,
         int32_t index,
         int32_t ikind,
@@ -36,10 +36,10 @@ void __fastcall QuestBoardListViewItem___ctor_29608036(
   System_Int32_array *v33; // x7
 
   v15 = this;
-  ListViewItem___ctor_24128628((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_23700744((ListViewItem_o *)this, index, 0LL);
   v15->fields._info_kind_k__BackingField = ikind;
   v15->fields._quest_info_k__BackingField = qinf;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v15->fields._quest_info_k__BackingField,
     (System_Int32_array **)qinf,
     v16,
@@ -49,7 +49,7 @@ void __fastcall QuestBoardListViewItem___ctor_29608036(
     v20,
     v21);
   v15->fields._black_mark_prefab_k__BackingField = blackMarkPrefab;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&v15->fields._black_mark_prefab_k__BackingField,
     (System_Int32_array **)blackMarkPrefab,
     v22,
@@ -60,7 +60,7 @@ void __fastcall QuestBoardListViewItem___ctor_29608036(
     v27);
   v15->fields._white_mark_prefab_k__BackingField = whiteMarkPrefab;
   v15 = (QuestBoardListViewItem_o *)((char *)v15 + 136);
-  sub_B2C2F8((BattleServantConfConponent_o *)v15, (System_Int32_array **)whiteMarkPrefab, v28, v29, v30, v31, v32, v33);
+  sub_B0D840((BattleServantConfConponent_o *)v15, (System_Int32_array **)whiteMarkPrefab, v28, v29, v30, v31, v32, v33);
   LODWORD(v15->monitor) = overwriteBannerId;
   HIDWORD(v15->monitor) = recollectionWarId;
 }
@@ -142,7 +142,7 @@ void __fastcall QuestBoardListViewItem__set_black_mark_prefab(
   System_Int32_array *v7; // x7
 
   this->fields._black_mark_prefab_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._black_mark_prefab_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -175,7 +175,7 @@ void __fastcall QuestBoardListViewItem__set_quest_info(
   System_Int32_array *v7; // x7
 
   this->fields._quest_info_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._quest_info_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,
@@ -199,7 +199,7 @@ void __fastcall QuestBoardListViewItem__set_white_mark_prefab(
   System_Int32_array *v7; // x7
 
   this->fields._white_mark_prefab_k__BackingField = value;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields._white_mark_prefab_k__BackingField,
     (System_Int32_array **)value,
     (System_String_array **)method,

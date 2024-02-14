@@ -26,22 +26,22 @@ void __fastcall EventFortificationListViewItemDraw___ctor(
   System_Int32_array *v24; // x6
   System_Int32_array *v25; // x7
 
-  if ( (byte_418A3F5 & 1) == 0 )
+  if ( (byte_4216FD6 & 1) == 0 )
   {
-    sub_B2C35C(&StringLiteral_1102/*"1B2FA5"*/, method);
-    sub_B2C35C(&StringLiteral_1097/*"11814B"*/, v9);
-    sub_B2C35C(&StringLiteral_1613/*"A51B1B"*/, v10);
-    byte_418A3F5 = 1;
+    sub_B0D8A4(&StringLiteral_1109/*"1B2FA5"*/, method);
+    sub_B0D8A4(&StringLiteral_1104/*"11814B"*/, v9);
+    sub_B0D8A4(&StringLiteral_1621/*"A51B1B"*/, v10);
+    byte_4216FD6 = 1;
   }
-  v11 = (System_Int32_array **)StringLiteral_1613/*"A51B1B"*/;
-  this->fields.colorCodeMilitsry = (struct System_String_o *)StringLiteral_1613/*"A51B1B"*/;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.colorCodeMilitsry, v11, v2, v3, v4, v5, v6, v7);
-  v12 = (System_Int32_array **)StringLiteral_1102/*"1B2FA5"*/;
-  this->fields.colorCodeInternal = (struct System_String_o *)StringLiteral_1102/*"1B2FA5"*/;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.colorCodeInternal, v12, v13, v14, v15, v16, v17, v18);
-  v19 = (System_Int32_array **)StringLiteral_1097/*"11814B"*/;
-  this->fields.colorCodeFarmming = (struct System_String_o *)StringLiteral_1097/*"11814B"*/;
-  sub_B2C2F8((BattleServantConfConponent_o *)&this->fields.colorCodeFarmming, v19, v20, v21, v22, v23, v24, v25);
+  v11 = (System_Int32_array **)StringLiteral_1621/*"A51B1B"*/;
+  this->fields.colorCodeMilitsry = (struct System_String_o *)StringLiteral_1621/*"A51B1B"*/;
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.colorCodeMilitsry, v11, v2, v3, v4, v5, v6, v7);
+  v12 = (System_Int32_array **)StringLiteral_1109/*"1B2FA5"*/;
+  this->fields.colorCodeInternal = (struct System_String_o *)StringLiteral_1109/*"1B2FA5"*/;
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.colorCodeInternal, v12, v13, v14, v15, v16, v17, v18);
+  v19 = (System_Int32_array **)StringLiteral_1104/*"11814B"*/;
+  this->fields.colorCodeFarmming = (struct System_String_o *)StringLiteral_1104/*"11814B"*/;
+  sub_B0D840((BattleServantConfConponent_o *)&this->fields.colorCodeFarmming, v19, v20, v21, v22, v23, v24, v25);
   this->fields.colorCodeA = 156;
   *(_QWORD *)&this->fields.fortificationInfoRootObjOffsetY = 0x4100000041900000LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
@@ -71,13 +71,13 @@ void __fastcall EventFortificationListViewItemDraw__SetFatigueMask(
   const MethodInfo *v12; // x6
   UnityEngine_Color_o v13; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_418A3F4 & 1) == 0 )
+  if ( (byte_4216FD5 & 1) == 0 )
   {
-    sub_B2C35C(&AtlasManager_TypeInfo, item);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v5);
-    sub_B2C35C(&StringLiteral_6413/*"FORTIFICATION_APPOINTMENT"*/, v6);
-    sub_B2C35C(&StringLiteral_16703/*"bg_white"*/, v7);
-    byte_418A3F4 = 1;
+    sub_B0D8A4(&AtlasManager_TypeInfo, item);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v5);
+    sub_B0D8A4(&StringLiteral_6430/*"FORTIFICATION_APPOINTMENT"*/, v6);
+    sub_B0D8A4(&StringLiteral_16752/*"bg_white"*/, v7);
+    byte_4216FD5 = 1;
   }
   *(_QWORD *)&v13.fields.r = 0LL;
   *(_QWORD *)&v13.fields.b = 0LL;
@@ -99,7 +99,7 @@ void __fastcall EventFortificationListViewItemDraw__SetFatigueMask(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      teamNameLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6413/*"FORTIFICATION_APPOINTMENT"*/, 0LL);
+      teamNameLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6430/*"FORTIFICATION_APPOINTMENT"*/, 0LL);
       if ( !appointmentLabel )
         goto LABEL_33;
       UILabel__set_text(appointmentLabel, (System_String_o *)teamNameLabel, 0LL);
@@ -150,11 +150,11 @@ void __fastcall EventFortificationListViewItemDraw__SetFatigueMask(
                 {
                   j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
                 }
-                AtlasManager__SetEventUI_28451336(eventId, lineUpeer, (System_String_o *)StringLiteral_16703/*"bg_white"*/, 0LL);
-                AtlasManager__SetEventUI_28451336(
+                AtlasManager__SetEventUI_27921852(eventId, lineUpeer, (System_String_o *)StringLiteral_16752/*"bg_white"*/, 0LL);
+                AtlasManager__SetEventUI_27921852(
                   item->fields.eventId,
                   this->fields.lineBottom,
-                  (System_String_o *)StringLiteral_16703/*"bg_white"*/,
+                  (System_String_o *)StringLiteral_16752/*"bg_white"*/,
                   0LL);
                 teamNameLabel = (UILabel_o *)this->fields.lineUpeer;
                 if ( teamNameLabel )
@@ -180,10 +180,10 @@ void __fastcall EventFortificationListViewItemDraw__SetFatigueMask(
                           (UnityEngine_GameObject_o *)teamNameLabel,
                           item->fields.isAppointment,
                           0LL);
-                        AtlasManager__SetEventUI_28451336(
+                        AtlasManager__SetEventUI_27921852(
                           item->fields.eventId,
                           this->fields.fortificationMaskSprite,
-                          (System_String_o *)StringLiteral_16703/*"bg_white"*/,
+                          (System_String_o *)StringLiteral_16752/*"bg_white"*/,
                           0LL);
                         teamNameLabel = (UILabel_o *)this->fields.fortificationMaskSprite;
                         if ( teamNameLabel )
@@ -225,7 +225,7 @@ void __fastcall EventFortificationListViewItemDraw__SetFatigueMask(
       }
     }
 LABEL_33:
-    sub_B2C434(teamNameLabel, item);
+    sub_B0D97C(teamNameLabel);
   }
 }
 
@@ -250,13 +250,13 @@ void __fastcall EventFortificationListViewItemDraw__SetFortificationPoint(
   Il2CppObject *v17; // x0
   int32_t Point; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_418A3F3 & 1) == 0 )
+  if ( (byte_4216FD4 & 1) == 0 )
   {
-    sub_B2C35C(&int_TypeInfo, item);
-    sub_B2C35C(&LocalizationManager_TypeInfo, v5);
-    sub_B2C35C(&StringLiteral_6429/*"FORTIFICATION_GET_POINT_TEXT"*/, v6);
-    sub_B2C35C(&StringLiteral_11620/*"SELECT_CANNOT"*/, v7);
-    byte_418A3F3 = 1;
+    sub_B0D8A4(&int_TypeInfo, item);
+    sub_B0D8A4(&LocalizationManager_TypeInfo, v5);
+    sub_B0D8A4(&StringLiteral_6446/*"FORTIFICATION_GET_POINT_TEXT"*/, v6);
+    sub_B0D8A4(&StringLiteral_11647/*"SELECT_CANNOT"*/, v7);
+    byte_4216FD4 = 1;
   }
   if ( item )
   {
@@ -268,7 +268,7 @@ void __fastcall EventFortificationListViewItemDraw__SetFortificationPoint(
       {
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       }
-      maskObject = LocalizationManager__Get((System_String_o *)StringLiteral_11620/*"SELECT_CANNOT"*/, 0LL);
+      maskObject = LocalizationManager__Get((System_String_o *)StringLiteral_11647/*"SELECT_CANNOT"*/, 0LL);
       if ( statusLabel )
       {
         UILabel__set_text(statusLabel, maskObject, 0LL);
@@ -297,7 +297,7 @@ void __fastcall EventFortificationListViewItemDraw__SetFortificationPoint(
         }
       }
 LABEL_24:
-      sub_B2C434(maskObject, item);
+      sub_B0D97C(maskObject);
     }
     maskObject = (System_String_o *)this->fields.maskObject;
     if ( !maskObject )
@@ -309,7 +309,7 @@ LABEL_24:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6429/*"FORTIFICATION_GET_POINT_TEXT"*/, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6446/*"FORTIFICATION_GET_POINT_TEXT"*/, 0LL);
     userServantEntity = item->fields.userServantEntity;
     eventId = item->fields.eventId;
     v15 = v12;
@@ -364,12 +364,12 @@ void __fastcall EventFortificationListViewItemDraw__SetItem(
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_418A3F2 & 1) == 0 )
+  if ( (byte_4216FD3 & 1) == 0 )
   {
-    sub_B2C35C(&AtlasManager_TypeInfo, item);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v7);
-    sub_B2C35C(&StringLiteral_19345/*"icon_guest"*/, v8);
-    byte_418A3F2 = 1;
+    sub_B0D8A4(&AtlasManager_TypeInfo, item);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v7);
+    sub_B0D8A4(&StringLiteral_19406/*"icon_guest"*/, v8);
+    byte_4216FD3 = 1;
   }
   if ( !item || !mode )
     return;
@@ -400,7 +400,7 @@ void __fastcall EventFortificationListViewItemDraw__SetItem(
   lockImg = (UnityEngine_Component_o *)this->fields.servantIcon;
   if ( !lockImg )
     goto LABEL_67;
-  ServantFaceIconComponent__Set_30719352(
+  ServantFaceIconComponent__Set_29552540(
     (ServantFaceIconComponent_o *)lockImg,
     item->fields.userServantEntity,
     item->fields.iconLabelInfo1,
@@ -425,7 +425,7 @@ void __fastcall EventFortificationListViewItemDraw__SetItem(
   guestSprite = this->fields.guestSprite;
   if ( (BYTE3(AtlasManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_28451336(eventId, guestSprite, (System_String_o *)StringLiteral_19345/*"icon_guest"*/, 0LL);
+  AtlasManager__SetEventUI_27921852(eventId, guestSprite, (System_String_o *)StringLiteral_19406/*"icon_guest"*/, 0LL);
   lockImg = (UnityEngine_Component_o *)this->fields.guestSprite;
   if ( !lockImg )
     goto LABEL_67;
@@ -441,7 +441,7 @@ void __fastcall EventFortificationListViewItemDraw__SetItem(
     lockImg = (UnityEngine_Component_o *)this->fields.iconLabel;
     if ( !lockImg )
       goto LABEL_67;
-    UIIconLabel__Set_41609428((UIIconLabel_o *)lockImg, 2, userServantEntity->fields.lv, 0, 0, 0LL, 0, 0, 0, 0LL);
+    UIIconLabel__Set_41076120((UIIconLabel_o *)lockImg, 2, userServantEntity->fields.lv, 0, 0, 0LL, 0, 0, 0, 0LL);
   }
   pushImg = (UnityEngine_Object_o *)this->fields.pushImg;
   if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
@@ -556,6 +556,6 @@ LABEL_44:
       }
     }
 LABEL_67:
-    sub_B2C434(lockImg, item);
+    sub_B0D97C(lockImg);
   }
 }

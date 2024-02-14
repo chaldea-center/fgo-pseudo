@@ -23,8 +23,8 @@ void __fastcall PresentBoxNotificationListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   UILabel_o *nameTextLabel; // x0
-  PresentBoxNotificationListViewItem_o *v6; // x19
   struct UserPresentBoxEntity_o *entity; // x8
+  int32_t giftType; // w1
   int32_t objectId; // w2
 
   if ( item && mode )
@@ -32,37 +32,36 @@ void __fastcall PresentBoxNotificationListViewItemDraw__SetItem(
     nameTextLabel = this->fields.nameTextLabel;
     if ( !nameTextLabel )
       goto LABEL_13;
-    v6 = item;
     UILabel__set_text(nameTextLabel, item->fields.presentName, 0LL);
     nameTextLabel = this->fields.countTextLabel;
     if ( !nameTextLabel )
       goto LABEL_13;
-    UILabel__set_text(nameTextLabel, v6->fields.presentCount, 0LL);
-    entity = v6->fields.entity;
+    UILabel__set_text(nameTextLabel, item->fields.presentCount, 0LL);
+    entity = item->fields.entity;
     nameTextLabel = (UILabel_o *)this->fields.itemIcon;
     if ( entity )
     {
-      item = (PresentBoxNotificationListViewItem_o *)(unsigned int)entity->fields.giftType;
+      giftType = entity->fields.giftType;
       objectId = entity->fields.objectId;
       if ( !nameTextLabel )
         goto LABEL_13;
     }
     else
     {
-      item = 0LL;
+      giftType = 0;
       objectId = 0;
       if ( !nameTextLabel )
         goto LABEL_13;
     }
-    ItemIconComponent__SetGift((ItemIconComponent_o *)nameTextLabel, (int32_t)item, objectId, -1, 0, 0LL);
+    ItemIconComponent__SetGift((ItemIconComponent_o *)nameTextLabel, giftType, objectId, -1, 0, 0LL);
     nameTextLabel = this->fields.nameTextLabel;
     if ( !nameTextLabel
-      || (UILabel__set_text(nameTextLabel, v6->fields.presentName, 0LL),
+      || (UILabel__set_text(nameTextLabel, item->fields.presentName, 0LL),
           (nameTextLabel = this->fields.countTextLabel) == 0LL) )
     {
 LABEL_13:
-      sub_B2C434(nameTextLabel, item);
+      sub_B0D97C(nameTextLabel);
     }
-    UILabel__set_text(nameTextLabel, v6->fields.presentCount, 0LL);
+    UILabel__set_text(nameTextLabel, item->fields.presentCount, 0LL);
   }
 }

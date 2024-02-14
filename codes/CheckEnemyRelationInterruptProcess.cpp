@@ -16,7 +16,7 @@ void __fastcall CheckEnemyRelationInterruptProcess__AfterCreateAction(
   if ( this->fields.isClearTempDead )
   {
     if ( !logic || (this = (CheckEnemyRelationInterruptProcess_o *)logic->fields.logicEnemyAi) == 0LL )
-      sub_B2C434(this, logic);
+      sub_B0D97C(this);
     BattleLogicEnemyAi__ClearTempDeadSvt((BattleLogicEnemyAi_o *)this, 0LL);
   }
 }

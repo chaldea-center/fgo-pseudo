@@ -11,18 +11,18 @@ void __fastcall BattleServantConfSkillComponent___cctor(const MethodInfo *method
   struct BattleServantConfSkillComponent_StaticFields *static_fields; // x0
   System_Int32_array **v10; // x1
 
-  if ( (byte_4185AE5 & 1) == 0 )
+  if ( (byte_42127A9 & 1) == 0 )
   {
-    sub_B2C35C(&BattleServantConfSkillComponent_TypeInfo, v1);
-    sub_B2C35C(&StringLiteral_19629/*"img_skillclass_0"*/, v8);
-    byte_4185AE5 = 1;
+    sub_B0D8A4(&BattleServantConfSkillComponent_TypeInfo, v1);
+    sub_B0D8A4(&StringLiteral_19691/*"img_skillclass_0"*/, v8);
+    byte_42127A9 = 1;
   }
   BattleServantConfSkillComponent_TypeInfo->static_fields->MAX_HEIGHT = 500;
   BattleServantConfSkillComponent_TypeInfo->static_fields->ADJUST_HEIGHT = 40;
   static_fields = BattleServantConfSkillComponent_TypeInfo->static_fields;
-  v10 = (System_Int32_array **)StringLiteral_19629/*"img_skillclass_0"*/;
-  static_fields->SKILL_NO_FILE_PREFIX = (struct System_String_o *)StringLiteral_19629/*"img_skillclass_0"*/;
-  sub_B2C2F8((BattleServantConfConponent_o *)&static_fields->SKILL_NO_FILE_PREFIX, v10, v2, v3, v4, v5, v6, v7);
+  v10 = (System_Int32_array **)StringLiteral_19691/*"img_skillclass_0"*/;
+  static_fields->SKILL_NO_FILE_PREFIX = (struct System_String_o *)StringLiteral_19691/*"img_skillclass_0"*/;
+  sub_B0D840((BattleServantConfConponent_o *)&static_fields->SKILL_NO_FILE_PREFIX, v10, v2, v3, v4, v5, v6, v7);
   BattleServantConfSkillComponent_TypeInfo->static_fields->MAX_LEVEL = 10;
 }
 
@@ -52,7 +52,7 @@ int32_t __fastcall BattleServantConfSkillComponent__GetHeight(
 
   skillExplanationLabel = this->fields.skillExplanationLabel;
   if ( !skillExplanationLabel )
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   return skillExplanationLabel->fields.mHeight;
 }
 
@@ -74,46 +74,45 @@ void __fastcall BattleServantConfSkillComponent__SetItem(
   System_String_o *v17; // x25
   System_String_o *v18; // x0
   System_String_o *titleNumSecondSprite; // x0
-  __int64 v20; // x1
-  struct UISprite_o *v21; // x24
-  System_String_o *v22; // x25
-  System_String_o *v23; // x0
-  System_String_o *v24; // x1
+  struct UISprite_o *v20; // x24
+  System_String_o *v21; // x25
+  System_String_o *v22; // x0
+  System_String_o *v23; // x1
   UISprite_o *titleNumFirstSprite; // x24
-  BattleServantConfSkillComponent_c *v26; // x0
+  BattleServantConfSkillComponent_c *v25; // x0
   System_String_o *SKILL_NO_FILE_PREFIX; // x25
-  System_String_o *v28; // x0
+  System_String_o *v27; // x0
   UILabel_o *skillExplanationLabel; // x25
   int32_t DETAIL_FONT_SIZE; // w24
-  BattleServantConfSkillComponent_c *v31; // x0
+  BattleServantConfSkillComponent_c *v30; // x0
   UIRangeLabel_o *skillTitleRangeLabel; // x21
-  int v33; // s0
-  UIWidget_o *v37; // x20
-  int v38; // s0
-  unsigned int v42; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v43; // [xsp+Ch] [xbp-44h] BYREF
+  int v32; // s0
+  UIWidget_o *v36; // x20
+  int v37; // s0
+  unsigned int v41; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v42; // [xsp+Ch] [xbp-44h] BYREF
 
-  v43 = num;
-  if ( (byte_4185AE4 & 1) == 0 )
+  v42 = num;
+  if ( (byte_42127A8 & 1) == 0 )
   {
-    sub_B2C35C(&BattleServantConfSkillComponent_TypeInfo, *(_QWORD *)&num);
-    sub_B2C35C(&StringLiteral_1/*""*/, v14);
-    byte_4185AE4 = 1;
+    sub_B0D8A4(&BattleServantConfSkillComponent_TypeInfo, *(_QWORD *)&num);
+    sub_B0D8A4(&StringLiteral_1/*""*/, v14);
+    byte_42127A8 = 1;
   }
-  v42 = 0;
+  v41 = 0;
   if ( num <= 9 )
   {
     titleNumFirstSprite = this->fields.titleNumFirstSprite;
-    v26 = BattleServantConfSkillComponent_TypeInfo;
+    v25 = BattleServantConfSkillComponent_TypeInfo;
     if ( (BYTE3(BattleServantConfSkillComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !BattleServantConfSkillComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BattleServantConfSkillComponent_TypeInfo);
-      v26 = BattleServantConfSkillComponent_TypeInfo;
+      v25 = BattleServantConfSkillComponent_TypeInfo;
     }
-    SKILL_NO_FILE_PREFIX = v26->static_fields->SKILL_NO_FILE_PREFIX;
-    v28 = System_Int32__ToString((int32_t)&v43, 0LL);
-    titleNumSecondSprite = System_String__Concat_44305532(SKILL_NO_FILE_PREFIX, v28, 0LL);
+    SKILL_NO_FILE_PREFIX = v25->static_fields->SKILL_NO_FILE_PREFIX;
+    v27 = System_Int32__ToString((int32_t)&v42, 0LL);
+    titleNumSecondSprite = System_String__Concat_43849904(SKILL_NO_FILE_PREFIX, v27, 0LL);
     if ( titleNumFirstSprite )
     {
       UISprite__set_spriteName(titleNumFirstSprite, titleNumSecondSprite, 0LL);
@@ -129,17 +128,17 @@ void __fastcall BattleServantConfSkillComponent__SetItem(
           titleNumSecondSprite = (System_String_o *)this->fields.titleNumSecondSprite;
           if ( titleNumSecondSprite )
           {
-            v24 = (System_String_o *)StringLiteral_1/*""*/;
+            v23 = (System_String_o *)StringLiteral_1/*""*/;
             goto LABEL_20;
           }
         }
       }
     }
 LABEL_36:
-    sub_B2C434(titleNumSecondSprite, v20);
+    sub_B0D97C(titleNumSecondSprite);
   }
   v15 = BattleServantConfSkillComponent_TypeInfo;
-  v42 = num / 0xAu;
+  v41 = num / 0xAu;
   v16 = this->fields.titleNumFirstSprite;
   if ( (BYTE3(BattleServantConfSkillComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleServantConfSkillComponent_TypeInfo->_2.cctor_finished )
@@ -148,8 +147,8 @@ LABEL_36:
     v15 = BattleServantConfSkillComponent_TypeInfo;
   }
   v17 = v15->static_fields->SKILL_NO_FILE_PREFIX;
-  v18 = System_Int32__ToString((int32_t)&v42, 0LL);
-  titleNumSecondSprite = System_String__Concat_44305532(v17, v18, 0LL);
+  v18 = System_Int32__ToString((int32_t)&v41, 0LL);
+  titleNumSecondSprite = System_String__Concat_43849904(v17, v18, 0LL);
   if ( !v16 )
     goto LABEL_36;
   UISprite__set_spriteName(v16, titleNumSecondSprite, 0LL);
@@ -162,36 +161,36 @@ LABEL_36:
   if ( !titleNumSecondSprite )
     goto LABEL_36;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleNumSecondSprite, 1, 0LL);
-  v42 = v43 % 10;
-  v21 = this->fields.titleNumSecondSprite;
-  v22 = BattleServantConfSkillComponent_TypeInfo->static_fields->SKILL_NO_FILE_PREFIX;
-  v23 = System_Int32__ToString((int32_t)&v42, 0LL);
-  titleNumSecondSprite = System_String__Concat_44305532(v22, v23, 0LL);
-  if ( !v21 )
+  v41 = v42 % 10;
+  v20 = this->fields.titleNumSecondSprite;
+  v21 = BattleServantConfSkillComponent_TypeInfo->static_fields->SKILL_NO_FILE_PREFIX;
+  v22 = System_Int32__ToString((int32_t)&v41, 0LL);
+  titleNumSecondSprite = System_String__Concat_43849904(v21, v22, 0LL);
+  if ( !v20 )
     goto LABEL_36;
-  v24 = titleNumSecondSprite;
-  titleNumSecondSprite = (System_String_o *)v21;
+  v23 = titleNumSecondSprite;
+  titleNumSecondSprite = (System_String_o *)v20;
 LABEL_20:
-  UISprite__set_spriteName((UISprite_o *)titleNumSecondSprite, v24, 0LL);
+  UISprite__set_spriteName((UISprite_o *)titleNumSecondSprite, v23, 0LL);
   titleNumSecondSprite = (System_String_o *)this->fields.skillExplanationLabel;
   if ( !titleNumSecondSprite )
     goto LABEL_36;
   UIWidget__set_height((UIWidget_o *)titleNumSecondSprite, this->fields.DEFAULT_HEIGHT, 0LL);
   skillExplanationLabel = this->fields.skillExplanationLabel;
   DETAIL_FONT_SIZE = this->fields.DETAIL_FONT_SIZE;
-  v31 = BattleServantConfSkillComponent_TypeInfo;
+  v30 = BattleServantConfSkillComponent_TypeInfo;
   if ( (BYTE3(BattleServantConfSkillComponent_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
     && !BattleServantConfSkillComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleServantConfSkillComponent_TypeInfo);
-    v31 = BattleServantConfSkillComponent_TypeInfo;
+    v30 = BattleServantConfSkillComponent_TypeInfo;
   }
   WrapControlText__textAdjust(
     skillExplanationLabel,
     explanationMessage,
     DETAIL_FONT_SIZE,
     DETAIL_FONT_SIZE,
-    v31->static_fields->MAX_HEIGHT,
+    v30->static_fields->MAX_HEIGHT,
     0LL);
   titleNumSecondSprite = (System_String_o *)this->fields.skillIcon;
   if ( !titleNumSecondSprite )
@@ -208,29 +207,29 @@ LABEL_20:
   skillTitleRangeLabel = this->fields.skillTitleRangeLabel;
   if ( releaseState )
   {
-    *(UnityEngine_Color_o *)&v33 = UnityEngine_Color__get_white(0LL);
+    *(UnityEngine_Color_o *)&v32 = UnityEngine_Color__get_white(0LL);
     if ( !skillTitleRangeLabel )
       goto LABEL_36;
   }
   else
   {
-    *(UnityEngine_Color_o *)&v33 = UnityEngine_Color__get_gray(0LL);
+    *(UnityEngine_Color_o *)&v32 = UnityEngine_Color__get_gray(0LL);
     if ( !skillTitleRangeLabel )
       goto LABEL_36;
   }
-  UIRangeLabel__set_color(skillTitleRangeLabel, *(UnityEngine_Color_o *)&v33, 0LL);
-  v37 = (UIWidget_o *)this->fields.skillExplanationLabel;
+  UIRangeLabel__set_color(skillTitleRangeLabel, *(UnityEngine_Color_o *)&v32, 0LL);
+  v36 = (UIWidget_o *)this->fields.skillExplanationLabel;
   if ( releaseState )
   {
-    *(UnityEngine_Color_o *)&v38 = UnityEngine_Color__get_white(0LL);
-    if ( !v37 )
+    *(UnityEngine_Color_o *)&v37 = UnityEngine_Color__get_white(0LL);
+    if ( !v36 )
       goto LABEL_36;
   }
   else
   {
-    *(UnityEngine_Color_o *)&v38 = UnityEngine_Color__get_gray(0LL);
-    if ( !v37 )
+    *(UnityEngine_Color_o *)&v37 = UnityEngine_Color__get_gray(0LL);
+    if ( !v36 )
       goto LABEL_36;
   }
-  UIWidget__set_color(v37, *(UnityEngine_Color_o *)&v38, 0LL);
+  UIWidget__set_color(v36, *(UnityEngine_Color_o *)&v37, 0LL);
 }

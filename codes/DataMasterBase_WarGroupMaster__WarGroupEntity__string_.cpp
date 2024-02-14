@@ -1,7 +1,7 @@
 WarGroupEntity_o *__fastcall DataMasterBase_WarGroupMaster__WarGroupEntity__string___GetEntity(
         DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *this,
         System_String_o *key,
-        const MethodInfo_24E4520 *method)
+        const MethodInfo_266A024 *method)
 {
   DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *v3; // x19
 
@@ -12,7 +12,7 @@ WarGroupEntity_o *__fastcall DataMasterBase_WarGroupMaster__WarGroupEntity__stri
                                                                              key->klass->vtable._4_CompareTo.methodPtr),
         !v3) )
   {
-    sub_B2C434(this, key);
+    sub_B0D97C(this);
   }
   return (WarGroupEntity_o *)((__int64 (__fastcall *)(DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *, DataMasterBase_WarGroupMaster__WarGroupEntity__string__o *))method->klass->rgctx_data->_2_DataMasterBase_getEntityFromKey_TEntity_->methodPointer)(
                                v3,

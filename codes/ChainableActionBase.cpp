@@ -17,10 +17,10 @@ void __fastcall ChainableActionBase___ctor(ChainableActionBase_o *this, const Me
   v2 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v2->fields.endCallback = 0LL;
-  sub_B2C2F8((BattleServantConfConponent_o *)&v2->fields, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_B0D840((BattleServantConfConponent_o *)&v2->fields, 0LL, v3, v4, v5, v6, v7, v8);
   v2->fields.nextAction = 0LL;
   v2 = (ChainableActionBase_o *)((char *)v2 + 24);
-  sub_B2C2F8((BattleServantConfConponent_o *)v2, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_B0D840((BattleServantConfConponent_o *)v2, 0LL, v9, v10, v11, v12, v13, v14);
   LOBYTE(v2->monitor) = 0;
 }
 
@@ -66,10 +66,10 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
   __int64 v16; // x0
 
   v4 = this;
-  if ( (byte_418A10B & 1) == 0 )
+  if ( (byte_4215E06 & 1) == 0 )
   {
-    this = (ChainableActionBase_o *)sub_B2C35C(&System_Action_TypeInfo, endCallbacks);
-    byte_418A10B = 1;
+    this = (ChainableActionBase_o *)sub_B0D8A4(&System_Action_TypeInfo, endCallbacks);
+    byte_4215E06 = 1;
   }
   if ( !v4->fields._IsExecuted_k__BackingField )
   {
@@ -84,8 +84,8 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
       {
         if ( v6 >= (unsigned int)v5 )
         {
-          v16 = sub_B2C460(this);
-          sub_B2C400(v16, 0LL);
+          v16 = sub_B0D9A8(this);
+          sub_B0D948(v16, 0LL);
         }
         v8 = (System_Int32_array **)System_Delegate__Combine(
                                       *p_fields,
@@ -97,14 +97,14 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
             break;
         }
         *p_fields = (System_Delegate_o *)v8;
-        sub_B2C2F8((BattleServantConfConponent_o *)&v4->fields, v8, v9, v10, v11, v12, v13, v14);
+        sub_B0D840((BattleServantConfConponent_o *)&v4->fields, v8, v9, v10, v11, v12, v13, v14);
         LODWORD(v5) = endCallbacks->max_length;
         if ( (__int64)++v6 >= (int)v5 )
           return v4;
       }
-      sub_B2C728(v8);
+      this = (ChainableActionBase_o *)sub_B0DC70(v8);
 LABEL_14:
-      sub_B2C434(this, endCallbacks);
+      sub_B0D97C(this);
     }
   }
   return v4;
@@ -123,7 +123,7 @@ void __fastcall ChainableActionBase__SetNextAction(
   System_Int32_array *v7; // x7
 
   this->fields.nextAction = nextAction;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this->fields.nextAction,
     (System_Int32_array **)nextAction,
     (System_String_array **)method,

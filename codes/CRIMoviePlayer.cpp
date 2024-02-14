@@ -10,15 +10,17 @@ void __fastcall CRIMoviePlayer__CreateTexture(CRIMoviePlayer_o *this, const Meth
   __int64 v3; // x1
   UnityEngine_Behaviour_o *touch; // x0
   UnityEngine_Object_o *v5; // x20
-  UnityEngine_Texture2D_o *v6; // x20
-  UIWidget_o *v7; // x20
-  int v8; // s0
+  __int64 v6; // x1
+  __int64 v7; // x2
+  UnityEngine_Texture2D_o *v8; // x20
+  UIWidget_o *v9; // x20
+  int v10; // s0
 
-  if ( (byte_418978C & 1) == 0 )
+  if ( (byte_42163FB & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    sub_B2C35C(&UnityEngine_Texture2D_TypeInfo, v3);
-    byte_418978C = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    sub_B0D8A4(&UnityEngine_Texture2D_TypeInfo, v3);
+    byte_42163FB = 1;
   }
   touch = (UnityEngine_Behaviour_o *)this->fields.touch;
   if ( !touch )
@@ -33,25 +35,25 @@ void __fastcall CRIMoviePlayer__CreateTexture(CRIMoviePlayer_o *this, const Meth
   }
   if ( UnityEngine_Object__op_Equality(v5, 0LL, 0LL) )
   {
-    v6 = (UnityEngine_Texture2D_o *)sub_B2C42C(UnityEngine_Texture2D_TypeInfo);
-    UnityEngine_Texture2D___ctor_35417420(v6, 128, 128, 1, 0, 0LL);
+    v8 = (UnityEngine_Texture2D_o *)sub_B0D974(UnityEngine_Texture2D_TypeInfo, v6, v7);
+    UnityEngine_Texture2D___ctor_35037800(v8, 128, 128, 1, 0, 0LL);
     touch = (UnityEngine_Behaviour_o *)this->fields.touch;
     if ( touch )
     {
       ((void (__fastcall *)(UnityEngine_Behaviour_o *, UnityEngine_Texture2D_o *, const char *))touch->klass[2]._1.gc_desc)(
         touch,
-        v6,
+        v8,
         touch->klass[2]._1.name);
-      v7 = (UIWidget_o *)this->fields.touch;
-      *(UnityEngine_Color_o *)&v8 = UnityEngine_Color__get_black(0LL);
-      if ( v7 )
+      v9 = (UIWidget_o *)this->fields.touch;
+      *(UnityEngine_Color_o *)&v10 = UnityEngine_Color__get_black(0LL);
+      if ( v9 )
       {
-        UIWidget__set_color(v7, *(UnityEngine_Color_o *)&v8, 0LL);
+        UIWidget__set_color(v9, *(UnityEngine_Color_o *)&v10, 0LL);
         goto LABEL_11;
       }
     }
 LABEL_13:
-    sub_B2C434(touch, method);
+    sub_B0D97C(touch);
   }
 LABEL_11:
   touch = (UnityEngine_Behaviour_o *)this->fields.touch;
@@ -61,7 +63,6 @@ LABEL_11:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall CRIMoviePlayer__DispTexture(CRIMoviePlayer_o *this, bool flag, const MethodInfo *method)
 {
   UnityEngine_Component_o *touch; // x0
@@ -73,7 +74,7 @@ void __fastcall CRIMoviePlayer__DispTexture(CRIMoviePlayer_o *this, bool flag, c
         (touch = (UnityEngine_Component_o *)this->fields.busyAnim) == 0LL)
     || (touch = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(touch, 0LL)) == 0LL )
   {
-    sub_B2C434(touch, flag);
+    sub_B0D97C(touch);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)touch, !flag, 0LL);
 }
@@ -89,10 +90,10 @@ void __fastcall CRIMoviePlayer__Dispose(CRIMoviePlayer_o *this, const MethodInfo
   UnityEngine_Object_o *v7; // x19
 
   v2 = this;
-  if ( (byte_4189788 & 1) == 0 )
+  if ( (byte_42163F7 & 1) == 0 )
   {
-    this = (CRIMoviePlayer_o *)sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    byte_4189788 = 1;
+    this = (CRIMoviePlayer_o *)sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    byte_42163F7 = 1;
   }
   v3 = *(_QWORD *)&v2->fields.renderMode;
   if ( !v3 )
@@ -118,12 +119,12 @@ void __fastcall CRIMoviePlayer__Dispose(CRIMoviePlayer_o *this, const MethodInfo
         {
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         }
-        UnityEngine_Object__Destroy_35314896(gameObject, 0LL);
+        UnityEngine_Object__Destroy_34935276(gameObject, 0LL);
         goto LABEL_14;
       }
     }
 LABEL_19:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   }
 LABEL_14:
   this = *(CRIMoviePlayer_o **)&v2->fields.renderMode;
@@ -138,7 +139,7 @@ LABEL_14:
   {
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   }
-  UnityEngine_Object__Destroy_35314896(v7, 0LL);
+  UnityEngine_Object__Destroy_34935276(v7, 0LL);
 }
 
 
@@ -165,7 +166,7 @@ void __fastcall CRIMoviePlayer__EndCallBack(CRIMoviePlayer_o *this, const Method
   {
     System_Action__Invoke(v4, 0LL);
     p_isPlaying->klass = 0LL;
-    sub_B2C2F8(p_isPlaying, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_B0D840(p_isPlaying, 0LL, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -199,38 +200,39 @@ void __fastcall CRIMoviePlayer__Initialize(
   __int64 v22; // x1
   __int64 v23; // x1
   CRIMoviePlayer_o *v24; // x27
+  __int64 v25; // x1
+  __int64 v26; // x2
   CinemascopeSideFrame_o *klass; // x0
-  CinemascopeSideFrame_o *v26; // x26
-  System_String_array **v27; // x2
-  System_String_array **v28; // x3
-  System_Boolean_array **v29; // x4
-  System_Int32_array **v30; // x5
-  System_Int32_array *v31; // x6
-  System_Int32_array *v32; // x7
-  __int64 v33; // x1
+  CinemascopeSideFrame_o *v28; // x26
+  System_String_array **v29; // x2
+  System_String_array **v30; // x3
+  System_Boolean_array **v31; // x4
+  System_Int32_array **v32; // x5
+  System_Int32_array *v33; // x6
+  System_Int32_array *v34; // x7
   UIWidget_o *touch; // x25
-  bool v35; // w24
-  System_String_array **v36; // x2
-  System_String_array **v37; // x3
-  System_Boolean_array **v38; // x4
-  System_Int32_array **v39; // x5
-  System_Int32_array *v40; // x6
-  System_Int32_array *v41; // x7
-  System_Nullable_int__o v42; // [xsp+8h] [xbp-58h] BYREF
-  System_Nullable_int__o v43; // 0:x0.8
+  bool v36; // w24
+  System_String_array **v37; // x2
+  System_String_array **v38; // x3
+  System_Boolean_array **v39; // x4
+  System_Int32_array **v40; // x5
+  System_Int32_array *v41; // x6
+  System_Int32_array *v42; // x7
+  System_Nullable_int__o v43; // [xsp+8h] [xbp-58h] BYREF
+  System_Nullable_int__o v44; // 0:x0.8
 
-  if ( (byte_4189787 & 1) == 0 )
+  if ( (byte_42163F6 & 1) == 0 )
   {
-    sub_B2C35C(&CinemascopeSideFrame_TypeInfo, name);
-    sub_B2C35C(&Method_System_Nullable_int__get_HasValue__, v22);
-    sub_B2C35C(&Method_System_Nullable_int__get_Value__, v23);
-    byte_4189787 = 1;
+    sub_B0D8A4(&CinemascopeSideFrame_TypeInfo, name);
+    sub_B0D8A4(&Method_System_Nullable_int__get_HasValue__, v22);
+    sub_B0D8A4(&Method_System_Nullable_int__get_Value__, v23);
+    byte_42163F6 = 1;
   }
-  v42 = 0LL;
+  v43 = 0LL;
   this[1].klass = (CRIMoviePlayer_c *)cinemascopeSideFrame;
   v24 = this + 1;
   BYTE2(this->fields.cinemascopeSideFrame) = isLoadModeToDefaultWhenDestory;
-  sub_B2C2F8(
+  sub_B0D840(
     (BattleServantConfConponent_o *)&this[1],
     (System_Int32_array **)cinemascopeSideFrame,
     (System_String_array **)path,
@@ -242,22 +244,22 @@ void __fastcall CRIMoviePlayer__Initialize(
   klass = (CinemascopeSideFrame_o *)this[1].klass;
   if ( !klass )
   {
-    v26 = (CinemascopeSideFrame_o *)sub_B2C42C(CinemascopeSideFrame_TypeInfo);
-    CinemascopeSideFrame___ctor(v26, 1, 1, 0LL);
-    v24->klass = (CRIMoviePlayer_c *)v26;
-    sub_B2C2F8((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)v26, v27, v28, v29, v30, v31, v32);
+    v28 = (CinemascopeSideFrame_o *)sub_B0D974(CinemascopeSideFrame_TypeInfo, v25, v26);
+    CinemascopeSideFrame___ctor(v28, 1, 1, 0LL);
+    v24->klass = (CRIMoviePlayer_c *)v28;
+    sub_B0D840((BattleServantConfConponent_o *)&this[1], (System_Int32_array **)v28, v29, v30, v31, v32, v33, v34);
     klass = (CinemascopeSideFrame_o *)v24->klass;
     if ( !v24->klass )
       goto LABEL_17;
   }
-  v42 = CinemascopeSideFrame__Show(klass, name, 0LL);
-  if ( (*(_QWORD *)&v42 & 0xFF00000000LL) != 0 )
+  v43 = CinemascopeSideFrame__Show(klass, name, 0LL);
+  if ( (*(_QWORD *)&v43 & 0xFF00000000LL) != 0 )
   {
     touch = (UIWidget_o *)this->fields.touch;
-    v43 = (System_Nullable_int__o)&v42;
+    v44 = (System_Nullable_int__o)&v43;
     klass = (CinemascopeSideFrame_o *)System_Nullable_int___get_Value(
-                                        v43,
-                                        (const MethodInfo_2151C34 *)Method_System_Nullable_int__get_Value__);
+                                        v44,
+                                        (const MethodInfo_297F990 *)Method_System_Nullable_int__get_Value__);
     if ( !touch )
       goto LABEL_17;
     UIWidget__set_width(touch, (int32_t)klass, 0LL);
@@ -268,9 +270,9 @@ void __fastcall CRIMoviePlayer__Initialize(
   klass = (CinemascopeSideFrame_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)klass, 0LL);
   if ( !klass )
     goto LABEL_17;
-  v35 = isCanSkip;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)klass, v35, 0LL);
-  LOBYTE(this->fields.cinemascopeSideFrame) = v35;
+  v36 = isCanSkip;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)klass, v36, 0LL);
+  LOBYTE(this->fields.cinemascopeSideFrame) = v36;
   BYTE1(this->fields.cinemascopeSideFrame) = isCanControl;
   CriManaMovieMaterial__set_applyTargetAlpha((CriManaMovieMaterial_o *)this, targetAlpha, 0LL);
   klass = *(CinemascopeSideFrame_o **)&this->fields.renderMode;
@@ -281,27 +283,27 @@ void __fastcall CRIMoviePlayer__Initialize(
   if ( CriMana_Player__SetFile((CriMana_Player_o *)klass, cpk, path, 0, 0LL) )
   {
     *(_QWORD *)&this->fields.isPlaying = callBack;
-    sub_B2C2F8(
+    sub_B0D840(
       (BattleServantConfConponent_o *)&this->fields.isPlaying,
       (System_Int32_array **)callBack,
-      v36,
       v37,
       v38,
       v39,
       v40,
-      v41);
+      v41,
+      v42);
     klass = *(CinemascopeSideFrame_o **)&this->fields.renderMode;
     if ( !klass )
       goto LABEL_17;
     CriMana_Player__SetVolume((CriMana_Player_o *)klass, volume, 0LL);
   }
-  CRIMoviePlayer__DispTexture(this, 0, (const MethodInfo *)v36);
+  CRIMoviePlayer__DispTexture(this, 0, (const MethodInfo *)v37);
   klass = (CinemascopeSideFrame_o *)this->fields.control;
   if ( !klass
     || (klass = (CinemascopeSideFrame_o *)UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)klass, 0LL)) == 0LL )
   {
 LABEL_17:
-    sub_B2C434(klass, v33);
+    sub_B0D97C(klass);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)klass, 0, 0LL);
 }
@@ -333,7 +335,7 @@ void __fastcall CRIMoviePlayer__MoviePlay(
   CriManaMovieMaterial__Stop((CriManaMovieMaterial_o *)this, 0LL);
   this->fields.isCanSkip = 0;
   v10 = CRIMoviePlayer__PlaySequence(this, isBgmPause, isSePause, isVoicePause, v9);
-  UnityEngine_MonoBehaviour__StartCoroutine_35309748((UnityEngine_MonoBehaviour_o *)this, v10, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_34930128((UnityEngine_MonoBehaviour_o *)this, v10, 0LL);
 }
 
 
@@ -348,7 +350,7 @@ void __fastcall CRIMoviePlayer__MovieSeekByFrame(CRIMoviePlayer_o *this, int32_t
   {
     this->fields.isCanSkip = 0;
     v7 = CRIMoviePlayer__SeekSequence(this, frame, v6);
-    UnityEngine_MonoBehaviour__StartCoroutine_35309748((UnityEngine_MonoBehaviour_o *)this, v7, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_34930128((UnityEngine_MonoBehaviour_o *)this, v7, 0LL);
   }
 }
 
@@ -356,11 +358,10 @@ void __fastcall CRIMoviePlayer__MovieSeekByFrame(CRIMoviePlayer_o *this, int32_t
 void __fastcall CRIMoviePlayer__MovieSeekByRelativeTime(CRIMoviePlayer_o *this, int32_t sec, const MethodInfo *method)
 {
   CriMana_Player_o *v4; // x0
-  __int64 v6; // x1
   CriMana_FrameInfo_o *frameInfo; // x0
   int32_t frameNo; // w21
-  const MethodInfo *v9; // x2
-  System_Collections_IEnumerator_o *v10; // x1
+  const MethodInfo *v8; // x2
+  System_Collections_IEnumerator_o *v9; // x1
 
   v4 = *(CriMana_Player_o **)&this->fields.renderMode;
   if ( v4 && CriMana_Player__get_status(v4, 0LL) == 5 && this->fields.isCanSkip )
@@ -373,10 +374,10 @@ void __fastcall CRIMoviePlayer__MovieSeekByRelativeTime(CRIMoviePlayer_o *this, 
       || (frameNo = frameInfo->fields.frameNo,
           (frameInfo = CriMana_Player__get_frameInfo(*(CriMana_Player_o **)&this->fields.renderMode, 0LL)) == 0LL) )
     {
-      sub_B2C434(frameInfo, v6);
+      sub_B0D97C(frameInfo);
     }
-    v10 = CRIMoviePlayer__SeekSequence(this, LODWORD(frameInfo->fields.tunit) * sec / 1000 + frameNo, v9);
-    UnityEngine_MonoBehaviour__StartCoroutine_35309748((UnityEngine_MonoBehaviour_o *)this, v10, 0LL);
+    v9 = CRIMoviePlayer__SeekSequence(this, LODWORD(frameInfo->fields.tunit) * sec / 1000 + frameNo, v8);
+    UnityEngine_MonoBehaviour__StartCoroutine_34930128((UnityEngine_MonoBehaviour_o *)this, v9, 0LL);
   }
 }
 
@@ -391,7 +392,7 @@ void __fastcall CRIMoviePlayer__MovieStop(CRIMoviePlayer_o *this, const MethodIn
   CriManaMovieMaterial__Stop((CriManaMovieMaterial_o *)this, 0LL);
   this->fields.isCanSkip = 0;
   v5 = CRIMoviePlayer__StopSequence(this, v4);
-  UnityEngine_MonoBehaviour__StartCoroutine_35309748((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_34930128((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
 }
 
 
@@ -400,24 +401,23 @@ void __fastcall CRIMoviePlayer__OnDestroy(CRIMoviePlayer_o *this, const MethodIn
   __int64 v3; // x1
   __int64 v4; // x1
   WebViewManager_o *Instance; // x0
-  __int64 v6; // x1
-  CRIMoviePlayer_o *v7; // x0
-  const MethodInfo *v8; // x4
-  __int64 v9; // x8
-  UnityEngine_Object_o *v10; // x20
-  __int64 v11; // x8
+  CRIMoviePlayer_o *v6; // x0
+  const MethodInfo *v7; // x4
+  __int64 v8; // x8
+  UnityEngine_Object_o *v9; // x20
+  __int64 v10; // x8
   UnityEngine_Object_o *gameObject; // x20
 
-  if ( (byte_418978D & 1) == 0 )
+  if ( (byte_42163FC & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_B2C35C(&TouchEffectManager_TypeInfo, v4);
-    byte_418978D = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_B0D8A4(&TouchEffectManager_TypeInfo, v4);
+    byte_42163FC = 1;
   }
   if ( BYTE2(this->fields.cinemascopeSideFrame) )
   {
-    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_21;
     CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0LL);
@@ -428,23 +428,23 @@ void __fastcall CRIMoviePlayer__OnDestroy(CRIMoviePlayer_o *this, const MethodIn
     j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
   }
   TouchEffectManager__SetBlock(0, 0LL);
-  CRIMoviePlayer__SetPauseSound(v7, 0, 0, 0, v8);
-  v9 = *(_QWORD *)&this->fields.renderMode;
-  if ( v9 )
+  CRIMoviePlayer__SetPauseSound(v6, 0, 0, 0, v7);
+  v8 = *(_QWORD *)&this->fields.renderMode;
+  if ( v8 )
   {
-    v10 = *(UnityEngine_Object_o **)(v9 + 208);
+    v9 = *(UnityEngine_Object_o **)(v8 + 208);
     if ( (BYTE3(UnityEngine_Object_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0
       && !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     }
-    Instance = (WebViewManager_o *)UnityEngine_Object__op_Inequality(v10, 0LL, 0LL);
+    Instance = (WebViewManager_o *)UnityEngine_Object__op_Inequality(v9, 0LL, 0LL);
     if ( ((unsigned __int8)Instance & 1) != 0 )
     {
-      v11 = *(_QWORD *)&this->fields.renderMode;
-      if ( v11 )
+      v10 = *(_QWORD *)&this->fields.renderMode;
+      if ( v10 )
       {
-        Instance = *(WebViewManager_o **)(v11 + 208);
+        Instance = *(WebViewManager_o **)(v10 + 208);
         if ( Instance )
         {
           gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
@@ -455,12 +455,12 @@ void __fastcall CRIMoviePlayer__OnDestroy(CRIMoviePlayer_o *this, const MethodIn
           {
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           }
-          UnityEngine_Object__Destroy_35314896(gameObject, 0LL);
+          UnityEngine_Object__Destroy_34935276(gameObject, 0LL);
           goto LABEL_20;
         }
       }
 LABEL_21:
-      sub_B2C434(Instance, v6);
+      sub_B0D97C(Instance);
     }
   }
 LABEL_20:
@@ -472,14 +472,13 @@ void __fastcall CRIMoviePlayer__OnMaterialAvailableChanged(CRIMoviePlayer_o *thi
 {
   struct System_String_o *moviePath; // x20
   UnityEngine_Object_o *touch; // x20
-  __int64 v5; // x1
-  UnityEngine_Texture_o *v6; // x0
-  struct System_String_o *v7; // x19
+  UnityEngine_Texture_o *v5; // x0
+  struct System_String_o *v6; // x19
 
-  if ( (byte_418978F & 1) == 0 )
+  if ( (byte_42163FE & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, method);
-    byte_418978F = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, method);
+    byte_42163FE = 1;
   }
   CriManaMovieController__OnMaterialAvailableChanged((CriManaMovieController_o *)this, 0LL);
   if ( BYTE3(this->fields.ambisonicSource) )
@@ -500,17 +499,17 @@ void __fastcall CRIMoviePlayer__OnMaterialAvailableChanged(CRIMoviePlayer_o *thi
       }
       if ( UnityEngine_Object__op_Inequality(touch, 0LL, 0LL) )
       {
-        v6 = (UnityEngine_Texture_o *)this->fields.touch;
-        if ( !v6
-          || (v7 = this->fields._moviePath,
-              v6 = (UnityEngine_Texture_o *)(*(__int64 (__fastcall **)(UnityEngine_Texture_o *, _QWORD))&v6->klass[1]._2.thread_static_fields_offset)(
-                                              v6,
-                                              *(_QWORD *)&v6->klass[1]._2.token),
-              !v7) )
+        v5 = (UnityEngine_Texture_o *)this->fields.touch;
+        if ( !v5
+          || (v6 = this->fields._moviePath,
+              v5 = (UnityEngine_Texture_o *)(*(__int64 (__fastcall **)(UnityEngine_Texture_o *, _QWORD))&v5->klass[1]._2.thread_static_fields_offset)(
+                                              v5,
+                                              *(_QWORD *)&v5->klass[1]._2.token),
+              !v6) )
         {
-          sub_B2C434(v6, v5);
+          sub_B0D97C(v5);
         }
-        UnityEngine_Material__set_mainTexture((UnityEngine_Material_o *)v7, v6, 0LL);
+        UnityEngine_Material__set_mainTexture((UnityEngine_Material_o *)v6, v5, 0LL);
       }
     }
   }
@@ -527,25 +526,24 @@ System_Collections_IEnumerator_o *__fastcall CRIMoviePlayer__PlaySequence(
 {
   __int64 v9; // x23
   __int64 v10; // x0
-  __int64 v11; // x1
-  System_String_array **v12; // x2
-  System_String_array **v13; // x3
-  System_Boolean_array **v14; // x4
-  System_Int32_array **v15; // x5
-  System_Int32_array *v16; // x6
-  System_Int32_array *v17; // x7
+  System_String_array **v11; // x2
+  System_String_array **v12; // x3
+  System_Boolean_array **v13; // x4
+  System_Int32_array **v14; // x5
+  System_Int32_array *v15; // x6
+  System_Int32_array *v16; // x7
 
-  if ( (byte_4189789 & 1) == 0 )
+  if ( (byte_42163F8 & 1) == 0 )
   {
-    sub_B2C35C(&CRIMoviePlayer__PlaySequence_d__24_TypeInfo, isBgmPause);
-    byte_4189789 = 1;
+    sub_B0D8A4(&CRIMoviePlayer__PlaySequence_d__24_TypeInfo, isBgmPause);
+    byte_42163F8 = 1;
   }
-  v9 = sub_B2C42C(CRIMoviePlayer__PlaySequence_d__24_TypeInfo);
+  v9 = sub_B0D974(CRIMoviePlayer__PlaySequence_d__24_TypeInfo, isBgmPause, isSePause);
   CRIMoviePlayer__PlaySequence_d__24___ctor((CRIMoviePlayer__PlaySequence_d__24_o *)v9, 0, 0LL);
   if ( !v9 )
-    sub_B2C434(v10, v11);
+    sub_B0D97C(v10);
   *(_QWORD *)(v9 + 32) = this;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v9 + 32), (System_Int32_array **)this, v12, v13, v14, v15, v16, v17);
+  sub_B0D840((BattleServantConfConponent_o *)(v9 + 32), (System_Int32_array **)this, v11, v12, v13, v14, v15, v16);
   *(_BYTE *)(v9 + 41) = isBgmPause;
   *(_BYTE *)(v9 + 42) = isSePause;
   *(_BYTE *)(v9 + 40) = isVoicePause;
@@ -561,25 +559,24 @@ System_Collections_IEnumerator_o *__fastcall CRIMoviePlayer__SeekSequence(
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  __int64 v7; // x1
-  System_String_array **v8; // x2
-  System_String_array **v9; // x3
-  System_Boolean_array **v10; // x4
-  System_Int32_array **v11; // x5
-  System_Int32_array *v12; // x6
-  System_Int32_array *v13; // x7
+  System_String_array **v7; // x2
+  System_String_array **v8; // x3
+  System_Boolean_array **v9; // x4
+  System_Int32_array **v10; // x5
+  System_Int32_array *v11; // x6
+  System_Int32_array *v12; // x7
 
-  if ( (byte_418978B & 1) == 0 )
+  if ( (byte_42163FA & 1) == 0 )
   {
-    sub_B2C35C(&CRIMoviePlayer__SeekSequence_d__26_TypeInfo, *(_QWORD *)&frame);
-    byte_418978B = 1;
+    sub_B0D8A4(&CRIMoviePlayer__SeekSequence_d__26_TypeInfo, *(_QWORD *)&frame);
+    byte_42163FA = 1;
   }
-  v5 = sub_B2C42C(CRIMoviePlayer__SeekSequence_d__26_TypeInfo);
+  v5 = sub_B0D974(CRIMoviePlayer__SeekSequence_d__26_TypeInfo, *(_QWORD *)&frame, method);
   CRIMoviePlayer__SeekSequence_d__26___ctor((CRIMoviePlayer__SeekSequence_d__26_o *)v5, 0, 0LL);
   if ( !v5 )
-    sub_B2C434(v6, v7);
+    sub_B0D97C(v6);
   *(_QWORD *)(v5 + 40) = this;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)this, v8, v9, v10, v11, v12, v13);
+  sub_B0D840((BattleServantConfConponent_o *)(v5 + 40), (System_Int32_array **)this, v7, v8, v9, v10, v11, v12);
   *(_DWORD *)(v5 + 32) = frame;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -595,7 +592,7 @@ void __fastcall CRIMoviePlayer__SetBackgroundColor(
 
   busyAnim = this->fields.busyAnim;
   if ( !busyAnim )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   UIWidget__set_color((UIWidget_o *)busyAnim, color, 0LL);
 }
 
@@ -610,11 +607,11 @@ void __fastcall CRIMoviePlayer__SetPauseSound(
 {
   __int64 v8; // x1
 
-  if ( (byte_418978E & 1) == 0 )
+  if ( (byte_42163FD & 1) == 0 )
   {
-    sub_B2C35C(&BgmManager_TypeInfo, isVoicePause);
-    sub_B2C35C(&SeManager_TypeInfo, v8);
-    byte_418978E = 1;
+    sub_B0D8A4(&BgmManager_TypeInfo, isVoicePause);
+    sub_B0D8A4(&SeManager_TypeInfo, v8);
+    byte_42163FD = 1;
   }
   if ( (BYTE3(BgmManager_TypeInfo->vtable._0_Equals.methodPtr) & 4) != 0 && !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -632,7 +629,7 @@ void __fastcall CRIMoviePlayer__SetVolume(CRIMoviePlayer_o *this, float volume, 
 
   v3 = *(CriMana_Player_o **)&this->fields.renderMode;
   if ( !v3 )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   CriMana_Player__SetVolume(v3, volume, 0LL);
 }
 
@@ -641,9 +638,9 @@ System_Collections_IEnumerator_o *__fastcall CRIMoviePlayer__StopSequence(
         CRIMoviePlayer_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
+  __int64 v2; // x2
+  __int64 v4; // x20
+  __int64 v5; // x0
   System_String_array **v6; // x2
   System_String_array **v7; // x3
   System_Boolean_array **v8; // x4
@@ -651,18 +648,18 @@ System_Collections_IEnumerator_o *__fastcall CRIMoviePlayer__StopSequence(
   System_Int32_array *v10; // x6
   System_Int32_array *v11; // x7
 
-  if ( (byte_418978A & 1) == 0 )
+  if ( (byte_42163F9 & 1) == 0 )
   {
-    sub_B2C35C(&CRIMoviePlayer__StopSequence_d__25_TypeInfo, method);
-    byte_418978A = 1;
+    sub_B0D8A4(&CRIMoviePlayer__StopSequence_d__25_TypeInfo, method);
+    byte_42163F9 = 1;
   }
-  v3 = sub_B2C42C(CRIMoviePlayer__StopSequence_d__25_TypeInfo);
-  CRIMoviePlayer__StopSequence_d__25___ctor((CRIMoviePlayer__StopSequence_d__25_o *)v3, 0, 0LL);
-  if ( !v3 )
-    sub_B2C434(v4, v5);
-  *(_QWORD *)(v3 + 32) = this;
-  sub_B2C2F8((BattleServantConfConponent_o *)(v3 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
-  return (System_Collections_IEnumerator_o *)v3;
+  v4 = sub_B0D974(CRIMoviePlayer__StopSequence_d__25_TypeInfo, method, v2);
+  CRIMoviePlayer__StopSequence_d__25___ctor((CRIMoviePlayer__StopSequence_d__25_o *)v4, 0, 0LL);
+  if ( !v4 )
+    sub_B0D97C(v5);
+  *(_QWORD *)(v4 + 32) = this;
+  sub_B0D840((BattleServantConfConponent_o *)(v4 + 32), (System_Int32_array **)this, v6, v7, v8, v9, v10, v11);
+  return (System_Collections_IEnumerator_o *)v4;
 }
 
 
@@ -706,7 +703,7 @@ LABEL_5:
         return;
       }
 LABEL_14:
-      sub_B2C434(v5, v4);
+      sub_B0D97C(v5);
     }
   }
 }
@@ -718,7 +715,7 @@ bool __fastcall CRIMoviePlayer___SeekSequence_b__26_0(CRIMoviePlayer_o *this, co
 
   v2 = *(CriMana_Player_o **)&this->fields.renderMode;
   if ( !v2 )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   return CriMana_Player__get_frameInfo(v2, 0LL) != 0LL;
 }
 
@@ -729,7 +726,7 @@ bool __fastcall CRIMoviePlayer___SeekSequence_b__26_1(CRIMoviePlayer_o *this, co
 
   v2 = *(CriMana_Player_o **)&this->fields.renderMode;
   if ( !v2 )
-    sub_B2C434(0LL, method);
+    sub_B0D97C(0LL);
   return CriMana_Player__get_status(v2, 0LL) == 0;
 }
 
@@ -771,18 +768,18 @@ bool __fastcall CRIMoviePlayer__PlaySequence_d__24__MoveNext(
   Il2CppObject **p__2__current; // x19
 
   v2 = this;
-  if ( (byte_4184EB3 & 1) == 0 )
+  if ( (byte_4211DE2 & 1) == 0 )
   {
-    sub_B2C35C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    this = (CRIMoviePlayer__PlaySequence_d__24_o *)sub_B2C35C(&TouchEffectManager_TypeInfo, v3);
-    byte_4184EB3 = 1;
+    sub_B0D8A4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    this = (CRIMoviePlayer__PlaySequence_d__24_o *)sub_B0D8A4(&TouchEffectManager_TypeInfo, v3);
+    byte_4211DE2 = 1;
   }
   _4__this = v2->fields.__4__this;
   switch ( v2->fields.__1__state )
   {
     case 0:
       v2->fields.__1__state = -1;
-      this = (CRIMoviePlayer__PlaySequence_d__24_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (CRIMoviePlayer__PlaySequence_d__24_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_56;
       CommonUI__SetLoadMode((CommonUI_o *)this, 8, 0LL);
@@ -806,7 +803,7 @@ LABEL_14:
       {
         v2->fields.__2__current = 0LL;
         p__2__current = &v2->fields.__2__current;
-        sub_B2C2F8(p__2__current, 0LL);
+        sub_B0D840(p__2__current, 0LL);
         v5 = 1;
         *((_DWORD *)p__2__current - 2) = 1;
         return v5;
@@ -832,13 +829,13 @@ LABEL_20:
         TouchEffectManager__SetBlock(1, 0LL);
         v2->fields.__2__current = 0LL;
         v6 = &v2->fields.__2__current;
-        sub_B2C2F8(v6, 0LL);
+        sub_B0D840(v6, 0LL);
         v7 = 3;
         goto LABEL_46;
       }
       v2->fields.__2__current = 0LL;
       v8 = &v2->fields.__2__current;
-      sub_B2C2F8(v8, 0LL);
+      sub_B0D840(v8, 0LL);
       v9 = 2;
       goto LABEL_54;
     case 2:
@@ -891,7 +888,7 @@ LABEL_34:
           {
             v2->fields.__2__current = 0LL;
             v8 = &v2->fields.__2__current;
-            sub_B2C2F8(v8, 0LL);
+            sub_B0D840(v8, 0LL);
             v9 = 4;
 LABEL_54:
             *((_DWORD *)v8 - 2) = v9;
@@ -906,7 +903,7 @@ LABEL_54:
           0LL);
         if ( LOBYTE(_4__this->fields.cinemascopeSideFrame) )
         {
-          this = (CRIMoviePlayer__PlaySequence_d__24_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2841668 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          this = (CRIMoviePlayer__PlaySequence_d__24_o *)SingletonMonoBehaviour_WebViewManager___get_Instance((const MethodInfo_2A71064 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           if ( !this )
             goto LABEL_56;
           CommonUI__SetLoadMode((CommonUI_o *)this, 0, 0LL);
@@ -930,7 +927,7 @@ LABEL_54:
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
               v2->fields.__2__current = 0LL;
               v6 = &v2->fields.__2__current;
-              sub_B2C2F8(v6, 0LL);
+              sub_B0D840(v6, 0LL);
               v7 = 5;
 LABEL_46:
               *((_DWORD *)v6 - 2) = v7;
@@ -939,7 +936,7 @@ LABEL_46:
           }
         }
 LABEL_56:
-        sub_B2C434(this, method);
+        sub_B0D97C(this);
       }
 LABEL_31:
       CRIMoviePlayer__EndCallBack(_4__this, 0LL);
@@ -979,14 +976,16 @@ void __fastcall __noreturn CRIMoviePlayer__PlaySequence_d__24__System_Collection
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_B2C360(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B2C42C(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B2C360(&Method_CRIMoviePlayer__PlaySequence_d__24_System_Collections_IEnumerator_Reset__);
-  sub_B2C400(v3, v4);
+  v2 = sub_B0D8A8(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_B0D974(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_B0D8A8(&Method_CRIMoviePlayer__PlaySequence_d__24_System_Collections_IEnumerator_Reset__);
+  sub_B0D948(v5, v6);
 }
 
 
@@ -1030,26 +1029,36 @@ bool __fastcall CRIMoviePlayer__SeekSequence_d__26__MoveNext(
   int32_t frame; // w21
   Il2CppObject **p__2__current; // x19
   int v11; // w8
-  UnityEngine_WaitForEndOfFrame_o *v12; // x21
+  __int64 v12; // x1
+  __int64 v13; // x2
+  UnityEngine_WaitForEndOfFrame_o *v14; // x21
   bool *p_retry_5__3; // x22
   bool result; // w0
   Il2CppObject *waitForEOF_5__4; // x1
-  System_Func_bool__o *v16; // x21
-  UnityEngine_WaitUntil_o *v17; // x20
-  Il2CppObject **v18; // x19
-  System_Func_bool__o *v19; // x21
-  UnityEngine_WaitUntil_o *v20; // x20
+  __int64 v18; // x1
+  __int64 v19; // x2
+  __int64 v20; // x1
+  __int64 v21; // x2
+  System_Func_bool__o *v22; // x21
+  __int64 v23; // x1
+  __int64 v24; // x2
+  UnityEngine_WaitUntil_o *v25; // x20
+  Il2CppObject **v26; // x19
+  System_Func_bool__o *v27; // x21
+  __int64 v28; // x1
+  __int64 v29; // x2
+  UnityEngine_WaitUntil_o *v30; // x20
 
   v2 = this;
-  if ( (byte_4184EB4 & 1) == 0 )
+  if ( (byte_4211DE3 & 1) == 0 )
   {
-    sub_B2C35C(&Method_CRIMoviePlayer__SeekSequence_b__26_0__, method);
-    sub_B2C35C(&Method_CRIMoviePlayer__SeekSequence_b__26_1__, v3);
-    sub_B2C35C(&Method_System_Func_bool___ctor__, v4);
-    sub_B2C35C(&System_Func_bool__TypeInfo, v5);
-    sub_B2C35C(&UnityEngine_WaitForEndOfFrame_TypeInfo, v6);
-    this = (CRIMoviePlayer__SeekSequence_d__26_o *)sub_B2C35C(&UnityEngine_WaitUntil_TypeInfo, v7);
-    byte_4184EB4 = 1;
+    sub_B0D8A4(&Method_CRIMoviePlayer__SeekSequence_b__26_0__, method);
+    sub_B0D8A4(&Method_CRIMoviePlayer__SeekSequence_b__26_1__, v3);
+    sub_B0D8A4(&Method_System_Func_bool___ctor__, v4);
+    sub_B0D8A4(&System_Func_bool__TypeInfo, v5);
+    sub_B0D8A4(&UnityEngine_WaitForEndOfFrame_TypeInfo, v6);
+    this = (CRIMoviePlayer__SeekSequence_d__26_o *)sub_B0D8A4(&UnityEngine_WaitUntil_TypeInfo, v7);
+    byte_4211DE3 = 1;
   }
   _4__this = v2->fields.__4__this;
   switch ( v2->fields.__1__state )
@@ -1065,7 +1074,7 @@ bool __fastcall CRIMoviePlayer__SeekSequence_d__26__MoveNext(
       this = (CRIMoviePlayer__SeekSequence_d__26_o *)CriMana_Player__get_movieInfo((CriMana_Player_o *)this, 0LL);
       if ( !this )
         goto LABEL_38;
-      v2->fields.frame = UnityEngine_Mathf__Clamp_40637828(frame, 0, *(_DWORD *)&this->fields._isPaused_5__2 - 1, 0LL);
+      v2->fields.frame = UnityEngine_Mathf__Clamp_40762168(frame, 0, *(_DWORD *)&this->fields._isPaused_5__2 - 1, 0LL);
       this = *(CRIMoviePlayer__SeekSequence_d__26_o **)&_4__this->fields.renderMode;
       if ( !this )
         goto LABEL_38;
@@ -1093,10 +1102,10 @@ bool __fastcall CRIMoviePlayer__SeekSequence_d__26__MoveNext(
       if ( v2->fields._isPaused_5__2 )
         CriManaMovieMaterial__Pause((CriManaMovieMaterial_o *)_4__this, 1, 0LL);
       CriManaMovieMaterial__Play((CriManaMovieMaterial_o *)_4__this, 0LL);
-      v12 = (UnityEngine_WaitForEndOfFrame_o *)sub_B2C42C(UnityEngine_WaitForEndOfFrame_TypeInfo);
-      UnityEngine_WaitForEndOfFrame___ctor(v12, 0LL);
-      v2->fields._waitForEOF_5__4 = v12;
-      sub_B2C2F8(&v2->fields._waitForEOF_5__4, v12);
+      v14 = (UnityEngine_WaitForEndOfFrame_o *)sub_B0D974(UnityEngine_WaitForEndOfFrame_TypeInfo, v12, v13);
+      UnityEngine_WaitForEndOfFrame___ctor(v14, 0LL);
+      v2->fields._waitForEOF_5__4 = v14;
+      sub_B0D840(&v2->fields._waitForEOF_5__4, v14);
       v2->fields._prevTime_5__5 = UnityEngine_Time__get_realtimeSinceStartup(0LL);
       goto LABEL_21;
     case 2:
@@ -1110,7 +1119,7 @@ bool __fastcall CRIMoviePlayer__SeekSequence_d__26__MoveNext(
       {
         if ( !_4__this )
 LABEL_38:
-          sub_B2C434(this, method);
+          sub_B0D97C(this);
 LABEL_21:
         this = *(CRIMoviePlayer__SeekSequence_d__26_o **)&_4__this->fields.renderMode;
         if ( !this )
@@ -1119,27 +1128,27 @@ LABEL_21:
         {
           waitForEOF_5__4 = (Il2CppObject *)v2->fields._waitForEOF_5__4;
           v2->fields.__2__current = waitForEOF_5__4;
-          sub_B2C2F8(&v2->fields.__2__current, waitForEOF_5__4);
+          sub_B0D840(&v2->fields.__2__current, waitForEOF_5__4);
           v2->fields.__1__state = 2;
           return 1;
         }
         p_retry_5__3 = &v2->fields._retry_5__3;
       }
       v2->fields._waitForEOF_5__4 = 0LL;
-      sub_B2C2F8(&v2->fields._waitForEOF_5__4, 0LL);
+      sub_B0D840(&v2->fields._waitForEOF_5__4, 0LL);
       if ( !v2->fields._retry_5__3 )
       {
-        v19 = (System_Func_bool__o *)sub_B2C42C(System_Func_bool__TypeInfo);
+        v27 = (System_Func_bool__o *)sub_B0D974(System_Func_bool__TypeInfo, v18, v19);
         System_Func_bool____ctor(
-          v19,
+          v27,
           (Il2CppObject *)_4__this,
           Method_CRIMoviePlayer__SeekSequence_b__26_0__,
-          (const MethodInfo_26FE8F8 *)Method_System_Func_bool___ctor__);
-        v20 = (UnityEngine_WaitUntil_o *)sub_B2C42C(UnityEngine_WaitUntil_TypeInfo);
-        UnityEngine_WaitUntil___ctor(v20, v19, 0LL);
-        v2->fields.__2__current = (Il2CppObject *)v20;
+          (const MethodInfo_26056AC *)Method_System_Func_bool___ctor__);
+        v30 = (UnityEngine_WaitUntil_o *)sub_B0D974(UnityEngine_WaitUntil_TypeInfo, v28, v29);
+        UnityEngine_WaitUntil___ctor(v30, v27, 0LL);
+        v2->fields.__2__current = (Il2CppObject *)v30;
         p__2__current = &v2->fields.__2__current;
-        sub_B2C2F8(p__2__current, v20);
+        sub_B0D840(p__2__current, v30);
         v11 = 3;
 LABEL_35:
         *((_DWORD *)p__2__current - 2) = v11;
@@ -1150,32 +1159,32 @@ LABEL_35:
         goto LABEL_38;
 LABEL_33:
       CriManaMovieMaterial__Stop((CriManaMovieMaterial_o *)_4__this, 0LL);
-      v16 = (System_Func_bool__o *)sub_B2C42C(System_Func_bool__TypeInfo);
+      v22 = (System_Func_bool__o *)sub_B0D974(System_Func_bool__TypeInfo, v20, v21);
       System_Func_bool____ctor(
-        v16,
+        v22,
         (Il2CppObject *)_4__this,
         Method_CRIMoviePlayer__SeekSequence_b__26_1__,
-        (const MethodInfo_26FE8F8 *)Method_System_Func_bool___ctor__);
-      v17 = (UnityEngine_WaitUntil_o *)sub_B2C42C(UnityEngine_WaitUntil_TypeInfo);
-      UnityEngine_WaitUntil___ctor(v17, v16, 0LL);
-      v2->fields.__2__current = (Il2CppObject *)v17;
-      v18 = &v2->fields.__2__current;
-      sub_B2C2F8(v18, v17);
+        (const MethodInfo_26056AC *)Method_System_Func_bool___ctor__);
+      v25 = (UnityEngine_WaitUntil_o *)sub_B0D974(UnityEngine_WaitUntil_TypeInfo, v23, v24);
+      UnityEngine_WaitUntil___ctor(v25, v22, 0LL);
+      v2->fields.__2__current = (Il2CppObject *)v25;
+      v26 = &v2->fields.__2__current;
+      sub_B0D840(v26, v25);
       result = 1;
-      *((_DWORD *)v18 - 2) = 1;
+      *((_DWORD *)v26 - 2) = 1;
       return result;
     case 3:
       v2->fields.__2__current = 0LL;
       p__2__current = &v2->fields.__2__current;
       *((_DWORD *)p__2__current - 2) = -1;
-      sub_B2C2F8(p__2__current, 0LL);
+      sub_B0D840(p__2__current, 0LL);
       v11 = 4;
       goto LABEL_35;
     case 4:
       v2->fields.__2__current = 0LL;
       p__2__current = &v2->fields.__2__current;
       *((_DWORD *)p__2__current - 2) = -1;
-      sub_B2C2F8(p__2__current, 0LL);
+      sub_B0D840(p__2__current, 0LL);
       v11 = 5;
       goto LABEL_35;
     case 5:
@@ -1214,14 +1223,16 @@ void __fastcall __noreturn CRIMoviePlayer__SeekSequence_d__26__System_Collection
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_B2C360(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B2C42C(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B2C360(&Method_CRIMoviePlayer__SeekSequence_d__26_System_Collections_IEnumerator_Reset__);
-  sub_B2C400(v3, v4);
+  v2 = sub_B0D8A8(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_B0D974(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_B0D8A8(&Method_CRIMoviePlayer__SeekSequence_d__26_System_Collections_IEnumerator_Reset__);
+  sub_B0D948(v5, v6);
 }
 
 
@@ -1279,12 +1290,12 @@ LABEL_7:
   this = *(CRIMoviePlayer__StopSequence_d__25_o **)&_4__this->fields.renderMode;
   if ( !this )
 LABEL_10:
-    sub_B2C434(this, method);
+    sub_B0D97C(this);
   if ( CriMana_Player__get_status((CriMana_Player_o *)this, 0LL) == 6 )
     goto LABEL_7;
   v3->fields.__2__current = 0LL;
   p__2__current = &v3->fields.__2__current;
-  sub_B2C2F8(p__2__current, 0LL);
+  sub_B0D840(p__2__current, 0LL);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -1304,14 +1315,16 @@ void __fastcall __noreturn CRIMoviePlayer__StopSequence_d__25__System_Collection
         const MethodInfo *method)
 {
   __int64 v2; // x0
-  System_NotSupportedException_o *v3; // x19
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x2
+  System_NotSupportedException_o *v5; // x19
+  __int64 v6; // x0
 
-  v2 = sub_B2C360(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_B2C42C(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_B2C360(&Method_CRIMoviePlayer__StopSequence_d__25_System_Collections_IEnumerator_Reset__);
-  sub_B2C400(v3, v4);
+  v2 = sub_B0D8A8(&System_NotSupportedException_TypeInfo);
+  v5 = (System_NotSupportedException_o *)sub_B0D974(v2, v3, v4);
+  System_NotSupportedException___ctor(v5, 0LL);
+  v6 = sub_B0D8A8(&Method_CRIMoviePlayer__StopSequence_d__25_System_Collections_IEnumerator_Reset__);
+  sub_B0D948(v5, v6);
 }
 
 

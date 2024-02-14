@@ -20,11 +20,11 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
   UnityEngine_Object_o *removeObject; // x21
   const MethodInfo *v15; // x2
 
-  if ( (byte_4186AD3 & 1) == 0 )
+  if ( (byte_42139FF & 1) == 0 )
   {
-    sub_B2C35C(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, v7);
-    byte_4186AD3 = 1;
+    sub_B0D8A4(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, v7);
+    byte_42139FF = 1;
   }
   if ( item )
   {
@@ -48,7 +48,7 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
             goto LABEL_50;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_WebViewObject_(
                                                 maskLb,
-                                                (const MethodInfo_172DB90 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_170E6A4 *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
             goto LABEL_50;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0LL);
@@ -150,7 +150,7 @@ LABEL_48:
       }
     }
 LABEL_50:
-    sub_B2C434(maskLb, item);
+    sub_B0D97C(maskLb);
   }
 }
 
@@ -170,17 +170,17 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
   UnityEngine_Object_o *removeObject; // x21
   const MethodInfo *v14; // x2
 
-  if ( (byte_4186AD2 & 1) == 0 )
+  if ( (byte_42139FE & 1) == 0 )
   {
-    sub_B2C35C(&UnityEngine_Object_TypeInfo, item);
-    byte_4186AD2 = 1;
+    sub_B0D8A4(&UnityEngine_Object_TypeInfo, item);
+    byte_42139FE = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_30719352(
+      ServantFaceIconComponent__Set_29552540(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -215,7 +215,7 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
                 if ( !servantFaceIcon )
                   goto LABEL_52;
-                FlashingIconComponent__Set_23093612(
+                FlashingIconComponent__Set_21845332(
                   (FlashingIconComponent_o *)servantFaceIcon,
                   item->fields.partyIndex >= 0,
                   0LL);
@@ -323,7 +323,7 @@ LABEL_50:
       }
     }
 LABEL_52:
-    sub_B2C434(servantFaceIcon, item);
+    sub_B0D97C(servantFaceIcon);
   }
 }
 
@@ -342,13 +342,13 @@ void __fastcall PhotoCampaignListViewItemDraw__SetMaskInfo(
   __int64 *v10; // x8
 
   v4 = this;
-  if ( (byte_4186AD4 & 1) == 0 )
+  if ( (byte_4213A00 & 1) == 0 )
   {
-    sub_B2C35C(&LocalizationManager_TypeInfo, item);
-    sub_B2C35C(&StringLiteral_11620/*"SELECT_CANNOT"*/, v5);
-    sub_B2C35C(&StringLiteral_11643/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
-    this = (PhotoCampaignListViewItemDraw_o *)sub_B2C35C(&StringLiteral_10437/*"PHOTO_SERVANT_SELECTED_SERVANT"*/, v7);
-    byte_4186AD4 = 1;
+    sub_B0D8A4(&LocalizationManager_TypeInfo, item);
+    sub_B0D8A4(&StringLiteral_11647/*"SELECT_CANNOT"*/, v5);
+    sub_B0D8A4(&StringLiteral_11670/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
+    this = (PhotoCampaignListViewItemDraw_o *)sub_B0D8A4(&StringLiteral_10462/*"PHOTO_SERVANT_SELECTED_SERVANT"*/, v7);
+    byte_4213A00 = 1;
   }
   if ( !item )
     goto LABEL_40;
@@ -382,7 +382,7 @@ void __fastcall PhotoCampaignListViewItemDraw__SetMaskInfo(
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         }
-        v10 = &StringLiteral_10437/*"PHOTO_SERVANT_SELECTED_SERVANT"*/;
+        v10 = &StringLiteral_10462/*"PHOTO_SERVANT_SELECTED_SERVANT"*/;
         goto LABEL_35;
       }
       if ( !item->fields.isSelectedSvtId && !item->fields.isSelectedMax )
@@ -413,7 +413,7 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = &StringLiteral_11620/*"SELECT_CANNOT"*/;
+    v10 = &StringLiteral_11647/*"SELECT_CANNOT"*/;
     goto LABEL_35;
   }
   userSvtEntity = item->fields.userSvtEntity;
@@ -443,7 +443,7 @@ LABEL_18:
     {
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v10 = &StringLiteral_11643/*"SELECT_SERVANT_EVENT_JOIN"*/;
+    v10 = &StringLiteral_11670/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_35:
     this = (PhotoCampaignListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v10, 0LL);
     if ( maskLb )
@@ -452,7 +452,7 @@ LABEL_35:
       return;
     }
 LABEL_40:
-    sub_B2C434(this, item);
+    sub_B0D97C(this);
   }
   if ( PhotoCampaignListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
     goto LABEL_18;
